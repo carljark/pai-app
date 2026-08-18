@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # Base de Datos MongoDB
+  db:
+    image: mongo:latest
+    container_name: pai_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  # Backend Express/Node
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pai_backend
+    ports:
+      - "3000:3000"
+    environment:
+      # Conectamos con el servicio de base de datos 'db'
+      - MONGO_URI=mongodb://db:27017/pai_db
+    volumes:
+      # Montamos el código fuente local para recarga en caliente
+      - ./backend:/app
+      # Evitamos sobreescribir la carpeta node_modules del contenedor con la local
+      - /app/node_modules
+    depends_on:
+      - db
+
+  # Frontend Angular
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: pai_frontend
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:

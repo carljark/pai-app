@@ -22,6 +22,9 @@ services:
     environment:
       # Conectamos con el servicio de base de datos 'db'
       - MONGO_URI=mongodb://db:27017/pai_db
+      # Forzamos el modo Polling para que Mac detecte los cambios de archivos
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
     volumes:
       # Montamos el código fuente local para recarga en caliente
       - ./backend:/app

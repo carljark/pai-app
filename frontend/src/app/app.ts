@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PaiService } from './services/pai.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MarkdownComponent } from 'ngx-markdown';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MarkdownComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -21,12 +22,36 @@ export class App implements OnInit {
   isGenerating = signal<boolean>(false);
   generatedProject = signal<string>('');
 
+  // Historial
+  showHistory = signal<boolean>(false);
+  projectsHistory = signal<any[]>([]);
+
   ngOnInit() {
     // Al iniciar, cargamos los RAs desde el backend
     this.paiService.getRas().subscribe({
       next: (data) => this.ras.set(data),
       error: (err) => console.error('Error fetching RAs:', err),
     });
+    this.loadHistory();
+  }
+
+  loadHistory() {
+    this.paiService.getProjects().subscribe({
+      next: (data) => this.projectsHistory.set(data),
+      error: (err) => console.error('Error fetching history:', err),
+    });
+  }
+
+  toggleView() {
+    this.showHistory.set(!this.showHistory());
+    if (this.showHistory()) {
+      this.loadHistory();
+    }
+  }
+
+  viewPastProject(project: any) {
+    this.generatedProject.set(project.generatedContent?.rawText || 'Sin contenido');
+    this.showHistory.set(false);
   }
 
   toggleRa(raDesc: string) {

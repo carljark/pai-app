@@ -14,4 +14,8 @@ export class PaiService {
   generateProject(selectedRas: string[], methodology: string): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/projects/generate`, { selectedRas, methodology });
   }
+
+  getProjects(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/projects`);
+  }
 }

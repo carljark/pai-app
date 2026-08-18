@@ -22,15 +22,53 @@ const ProjectSchema = new mongoose.Schema({
 });
 const Project = mongoose.model('Project', ProjectSchema);
 
-// Endpoint 1: Obtener RAs (Simulados para el MVP)
-app.get('/api/ras', (req, res) => {
-  res.json([
-    { id: 'RA1', module: 'Atención al Cliente', description: 'Aplica técnicas de comunicación verbal.' },
-    { id: 'RA2', module: 'Maquillaje', description: 'Elabora bocetos y diseños según especificaciones.' }
-  ]);
+// Modelo de Resultados de Aprendizaje (BOE)
+const RaSchema = new mongoose.Schema({
+  id: String,
+  module: String,
+  description: String
+});
+const RA = mongoose.model('RA', RaSchema);
+
+// Sembrado inicial de datos (Seeder)
+async function seedDB() {
+  const count = await RA.countDocuments();
+  if (count === 0) {
+    await RA.insertMany([
+      { id: 'RA1', module: 'Atención al Cliente', description: 'Aplica técnicas de comunicación verbal y no verbal en la atención.' },
+      { id: 'RA2', module: 'Atención al Cliente', description: 'Atiende consultas, quejas y reclamaciones según protocolo.' },
+      { id: 'RA1', module: 'Maquillaje', description: 'Elabora bocetos y diseños según especificaciones técnicas.' },
+      { id: 'RA2', module: 'Maquillaje', description: 'Aplica técnicas de maquillaje de día adaptadas al cliente.' },
+      { id: 'RA1', module: 'Ciencias Aplicadas', description: 'Resuelve problemas matemáticos vinculados al sector profesional.' },
+      { id: 'RA1', module: 'Comunicación y Sociedad', description: 'Elabora textos y exposiciones orales persuasivas sobre el ámbito laboral.' }
+    ]);
+    console.log('✅ Base de datos inicializada con el currículo del BOE.');
+  }
+}
+mongoose.connection.once('open', () => seedDB());
+
+// Endpoint 1: Obtener RAs (Desde MongoDB)
+app.get('/api/ras', async (req, res) => {
+  try {
+    const ras = await RA.find();
+    res.json(ras);
+  } catch (error) {
+    res.status(500).json({ error: "Error obteniendo los RAs" });
+  }
 });
 
-// Endpoint 2: Generar y Guardar Proyecto con Gemini
+// Endpoint 2: Historial de Proyectos
+app.get('/api/projects', async (req, res) => {
+  try {
+    const projects = await Project.find().sort({ createdAt: -1 });
+    res.json(projects);
+  } catch (error) {
+    console.error("Error al obtener proyectos:", error);
+    res.status(500).json({ error: "Error al recuperar historial" });
+  }
+});
+
+// Endpoint 3: Generar y Guardar Proyecto con Gemini
 app.post('/api/projects/generate', async (req, res) => {
   try {
     const { modules, selectedRas, methodology } = req.body;

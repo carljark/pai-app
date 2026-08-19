@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class PaiService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = '/api';
 
   getRas(lang: string = 'castellano'): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/ras?lang=${lang}`);

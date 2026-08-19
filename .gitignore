@@ -33,3 +33,9 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# User Uploads
+backend/uploads/
+
+# Raw Curriculum Data
+Proyecto_FPB_PAI/

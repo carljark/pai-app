@@ -1,8 +1,7 @@
-import { Component, OnInit, inject, signal, computed } from '@angular/core';
+import { Component, OnInit, inject, signal, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PaiService } from './services/pai.service';
-import { HttpClientModule } from '@angular/common/http';
 import { MarkdownComponent } from 'ngx-markdown';
 // @ts-ignore
 import html2pdf from 'html2pdf.js';
@@ -63,11 +62,12 @@ export class App implements OnInit {
     element.style.overflowY = 'visible';
 
     const opt: any = {
-      margin:       10,
+      margin:       15,
       filename:     'proyecto_intermodular.pdf',
       image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      html2canvas:  { scale: 2, useCORS: true },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak:    { mode: 'css', avoid: ['h1', 'h2', 'h3', 'h4', 'table', 'tr', 'li', 'blockquote'] }
     };
     
     html2pdf().set(opt).from(element).save().then(() => {
@@ -113,44 +113,246 @@ export class App implements OnInit {
   }
 
   // Agrupación por asignaturas
-  groupedRas = computed(() => {
-    const list = this.ras();
-    const groups: { [key: string]: any[] } = {};
-    for (const ra of list) {
-      if (!groups[ra.module]) groups[ra.module] = [];
-      groups[ra.module].push(ra);
+  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'>('FP_BASICA');
+  courseLevel = signal<string>('1º Curso');
+  language = signal<'castellano' | 'catalan'>('castellano');
+  ces = signal<any[]>([]);
+  projectFiles = signal<any[]>([]);
+  isUploading = signal<boolean>(false);
+  
+  historyTab = signal<'FP_BASICA' | 'ESO'>('FP_BASICA');
+
+  selectedItemsDetails = computed(() => {
+    const isFP = this.tipoNivel() === 'FP_BASICA';
+    const sourceList = isFP ? this.ras() : this.ces();
+    return this.selectedRas().map(desc => {
+      const item = sourceList.find(x => x.description === desc);
+      const subject = item ? (isFP ? item.module : `${item.area} - ${item.subject}`) : 'Desconocido';
+      let shortDesc = desc.substring(0, 60);
+      if (desc.length > 60) shortDesc += '...';
+      return { subject, shortDesc, fullDesc: desc };
+    });
+  });
+
+  fpProjects = computed(() => this.projectsHistory().filter(p => p.tipoNivel === 'FP_BASICA' || !p.tipoNivel));
+  esoProjects = computed(() => this.projectsHistory().filter(p => p.tipoNivel === 'DIVERSIFICACION_CURRICULAR'));
+
+  t = computed(() => {
+    if (this.language() === 'catalan') {
+      return {
+        subtitle: 'Disseny de Projectes d\'Aprenentatge Intermodular',
+        backGenerator: '⬅️ Tornar al Generador',
+        historyBtn: '📚 Veure Historial de Projectes',
+        historyTitle: 'Historial de Projectes Generats',
+        noProjects: 'No hi ha projectes guardats encara.',
+        cross: 'Encreuament',
+        generatedOn: 'Generat el',
+        status: 'Estat',
+        viewProject: '👁️ Veure Projecte',
+        configTitle: 'Configuració del Disseny',
+        whatToDesign: 'Què dissenyaràs avui?',
+        fpBtn: '🔧 Projecte FP Bàsica',
+        esoBtn: '🏫 Situació d\'Aprenentatge (ESO)',
+        generalConfig: '1. Configuració General',
+        methodology: 'Metodologia',
+        langLabel: 'Idioma de la Interfície i Sortida',
+        courseLevelLabel: 'Curs / Nivell',
+        firstYearFP: '1r FP Bàsica',
+        secondYearFP: '2n FP Bàsica',
+        thirdYearESO: '3r ESO (PDC)',
+        fourthYearESO: '4t ESO (PDC)',
+        curricularSelection: '2. Selecció Curricular',
+        selectItemsFP: 'Selecciona els Resultats d\'Aprenentatge que formaran part del disseny.',
+        selectItemsESO: 'Selecciona les Competències Específiques que formaran part del disseny.',
+        generateBtn: '✨ Generar Projecte Intermodular',
+        generatingBtn: '⚙️ Generant... (pot trigar 1 minut)',
+        selectedItemsTitle: 'Selecció Actual',
+        noItemsSelected: 'Encara no has seleccionat cap ítem.',
+        noFP: 'No hi ha projectes de Formació Professional a l\'historial.',
+        noESO: 'No hi ha Situacions d\'Aprenentatge de Diversificació a l\'historial.',
+        workshopTitle: 'Taller de Projectes',
+        endEdit: '👁️ Acabar Edició',
+        manualEdit: '✏️ Editar Manualment',
+        resources: 'Recursos del Projecte',
+        dragFiles: 'Arrossega arxius aquí o fes clic',
+        uploading: 'Pujant...',
+        deleteFile: 'Esborrar arxiu',
+        fileUploaded: 'Arxiu pujat',
+        saveDraft: '💾 Guardar Esborrany',
+        publish: '✅ Validar i Publicar',
+        exportPDF: '📄 Exportar PDF',
+        aiAssistant: 'Assistent IA',
+        aiIntro: 'Hola! Soc el teu assistent pedagògic. Segueix aquests passos per editar el projecte:',
+        aiStep1: '1. Escriu a sota què vols canviar (ex. "Fes-ho més curt").',
+        aiStep2: '2. Selecciona/Subratlla el text a modificar en el llenç de l\'esquerra.',
+        aiStep3: '3. Fes clic a "✨ Reescriure amb IA".',
+        aiPlaceholder: 'Demana a la IA que modifiqui el projecte...',
+        rewriteBtn: '✨ Reescriure amb IA',
+        thinking: '✨ Pensant...'
+      };
+    } else {
+      return {
+        subtitle: 'Diseño de Proyectos de Aprendizaje Intermodular',
+        backGenerator: '⬅️ Volver al Generador',
+        historyBtn: '📚 Ver Historial de Proyectos',
+        historyTitle: 'Historial de Proyectos Generados',
+        noProjects: 'No hay proyectos guardados aún.',
+        cross: 'Cruce',
+        generatedOn: 'Generado el',
+        status: 'Estado',
+        viewProject: '👁️ Ver Proyecto',
+        configTitle: 'Configuración del Diseño',
+        whatToDesign: '¿Qué vas a diseñar hoy?',
+        fpBtn: '🔧 Proyecto FP Básica',
+        esoBtn: '🏫 Situación de Aprendizaje (ESO)',
+        generalConfig: '1. Configuración General',
+        methodology: 'Metodología',
+        langLabel: 'Idioma de la Interfaz y Salida',
+        courseLevelLabel: 'Curso / Nivel',
+        firstYearFP: '1º FP Básica',
+        secondYearFP: '2º FP Básica',
+        thirdYearESO: '3º ESO (PDC)',
+        fourthYearESO: '4º ESO (PDC)',
+        curricularSelection: '2. Selección Curricular',
+        selectItemsFP: 'Selecciona los Resultados de Aprendizaje que formarán part del diseño.',
+        selectItemsESO: 'Selecciona las Competencias Específicas que formarán part del diseño.',
+        generateBtn: '✨ Generar Proyecto Intermodular',
+        generatingBtn: '⚙️ Generando... (puede tardar 1 minuto)',
+        selectedItemsTitle: 'Selección Actual',
+        noItemsSelected: 'Aún no has seleccionado ningún ítem.',
+        noFP: 'No hay proyectos de Formación Profesional en el historial.',
+        noESO: 'No hay Situaciones de Aprendizaje de Diversificación en el historial.',
+        workshopTitle: 'Taller de Proyectos',
+        endEdit: '👁️ Terminar Edición',
+        manualEdit: '✏️ Editar Manualmente',
+        resources: 'Recursos del Proyecto',
+        dragFiles: 'Arrastra archivos aquí o haz clic',
+        uploading: 'Subiendo...',
+        deleteFile: 'Borrar archivo',
+        fileUploaded: 'Archivo subido',
+        saveDraft: '💾 Guardar Borrador',
+        publish: '✅ Validar y Publicar',
+        exportPDF: '📄 Exportar PDF',
+        aiAssistant: 'Asistente IA',
+        aiIntro: '¡Hola! Soy tu asistente pedagógico. Sigue estos pasos para editar el proyecto:',
+        aiStep1: '1. Escribe abajo qué quieres cambiar (ej. "Hazlo más corto").',
+        aiStep2: '2. Selecciona/Subraya el text a modificar en el lienzo de la izquierda.',
+        aiStep3: '3. Haz clic en "✨ Reescribir con IA".',
+        aiPlaceholder: 'Pide a la IA que modifique el proyecto...',
+        rewriteBtn: '✨ Reescribir con IA',
+        thinking: '✨ Pensando...'
+      };
     }
-    return Object.keys(groups).map(key => ({
-      module: key,
-      ras: groups[key]
-    }));
+  });
+
+  groupedItems = computed(() => {
+    if (this.tipoNivel() === 'FP_BASICA') {
+      const list = this.ras();
+      const groups: { [key: string]: any[] } = {};
+      for (const ra of list) {
+        // Unificar I y II para Ciencias Aplicadas y Comunicación y Sociedad
+        let moduleName = ra.module;
+        if (moduleName.includes('Ciencias aplicadas') || moduleName.includes('Ciències aplicades') ||
+            moduleName.includes('Comunicación y sociedad') || moduleName.includes('Comunicació i societat')) {
+          moduleName = moduleName.replace(/ (I|II)$/, '');
+        }
+
+        if (!groups[moduleName]) groups[moduleName] = [];
+        groups[moduleName].push(ra);
+      }
+      return Object.keys(groups).map(key => ({
+        category: key,
+        items: groups[key].map((ra: any) => ra.description)
+      }));
+    } else {
+      const list = this.ces();
+      const groups: { [key: string]: any[] } = {};
+      for (const ce of list) {
+        const groupName = `${ce.area} - ${ce.subject}`;
+        if (!groups[groupName]) groups[groupName] = [];
+        groups[groupName].push(ce);
+      }
+      return Object.keys(groups).map(key => ({
+        category: key,
+        items: groups[key].map((ce: any) => ce.description)
+      }));
+    }
   });
 
   // Historial
   currentView = signal<'generator' | 'history' | 'taller'>('generator');
   projectsHistory = signal<any[]>([]);
 
-  ngOnInit() {
-    this.paiService.getRas().subscribe({
-      next: (data) => this.ras.set(data),
-      error: (err) => console.error('Error fetching RAs:', err),
+  constructor() {
+    // Restaurar estado guardado
+    const savedView = localStorage.getItem('pai_view') as any;
+    if (savedView) this.currentView.set(savedView);
+    
+    const savedTab = localStorage.getItem('pai_historyTab') as any;
+    if (savedTab) this.historyTab.set(savedTab);
+    
+    const savedProjectId = localStorage.getItem('pai_projectId');
+    if (savedProjectId) this.currentProjectId.set(savedProjectId);
+
+    effect(() => {
+      // Guardar preferencias visuales automáticamente
+      localStorage.setItem('pai_view', this.currentView());
+      localStorage.setItem('pai_historyTab', this.historyTab());
+      if (this.currentProjectId()) {
+        localStorage.setItem('pai_projectId', this.currentProjectId()!);
+      }
     });
+
+    effect(() => {
+      const currentLang = this.language();
+      this.paiService.getRas(currentLang).subscribe((res) => this.ras.set(res));
+      this.paiService.getCes(currentLang).subscribe((res) => this.ces.set(res));
+    });
+
+    this.paiService.getProjects().subscribe((res) => this.projectsHistory.set(res));
+  }
+
+  ngOnInit() {
     this.loadHistory();
+    // Prevenir que Chrome/Safari intente restaurar el scroll de la sesión anterior al refrescar
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // Forzar scroll arriba del todo cuando se refresca la página (F5)
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
   }
 
   loadHistory() {
     this.paiService.getProjects().subscribe({
-      next: (data) => this.projectsHistory.set(data),
+      next: (data) => {
+        this.projectsHistory.set(data);
+        
+        // Si estábamos en el taller y recargamos la página, recuperamos el contenido del proyecto
+        if (this.currentView() === 'taller' && this.currentProjectId()) {
+          const proj = data.find((p: any) => p._id === this.currentProjectId());
+          if (proj) {
+            this.generatedProject.set(proj.generatedContent?.rawText || 'Sin contenido');
+            this.selectedRas.set(proj.ras || []);
+            this.tipoNivel.set(proj.tipoNivel || 'FP_BASICA');
+            this.loadProjectFiles(proj._id);
+          }
+        }
+      },
       error: (err) => console.error('Error fetching history:', err),
     });
   }
 
+  switchView(view: 'generator' | 'taller' | 'history') {
+    this.currentView.set(view);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   toggleView() {
     if (this.currentView() === 'history') {
-      this.currentView.set('generator');
+      this.switchView('generator');
     } else {
       this.loadHistory();
-      this.currentView.set('history');
+      this.switchView('history');
     }
   }
 
@@ -158,39 +360,45 @@ export class App implements OnInit {
     this.currentProjectId.set(project._id);
     this.generatedProject.set(project.generatedContent?.rawText || 'Sin contenido');
     this.selectedRas.set(project.ras || []);
-    this.currentView.set('taller');
+    this.tipoNivel.set(project.tipoNivel || 'FP_BASICA');
+    this.loadProjectFiles(project._id);
+    this.switchView('taller');
   }
 
-  toggleRa(raDesc: string) {
+  toggleRa(itemDesc: string) {
     const current = this.selectedRas();
-    if (current.includes(raDesc)) {
-      this.selectedRas.set(current.filter((r) => r !== raDesc));
+    if (current.includes(itemDesc)) {
+      this.selectedRas.set(current.filter((r) => r !== itemDesc));
     } else {
-      this.selectedRas.set([...current, raDesc]);
+      this.selectedRas.set([...current, itemDesc]);
     }
   }
 
   generateProject() {
     if (this.selectedRas().length === 0) {
-      alert('Por favor, selecciona al menos un Resultado de Aprendizaje.');
+      alert('Por favor, selecciona al menos un elemento de la lista.');
       return;
     }
     
-    const selectedDescriptions = this.selectedRas();
-    const involvedModules = Array.from(new Set(
-      this.ras()
-        .filter(ra => selectedDescriptions.includes(ra.description))
-        .map(ra => ra.module)
-    ));
-
     this.isGenerating.set(true);
 
-    this.paiService.generateProject(this.selectedRas(), this.methodology(), involvedModules).subscribe({
+    let involvedModules: string[] = [];
+    if (this.tipoNivel() === 'FP_BASICA') {
+      const selected = this.ras().filter(ra => this.selectedRas().includes(ra.description));
+      involvedModules = Array.from(new Set(selected.map(ra => ra.module)));
+    } else {
+      const selected = this.ces().filter(ce => this.selectedRas().includes(ce.description));
+      involvedModules = Array.from(new Set(selected.map(ce => ce.subject)));
+    }
+
+    this.paiService.generateProject(this.selectedRas(), this.methodology(), involvedModules, this.tipoNivel(), this.language(), this.courseLevel()).subscribe({
       next: (res) => {
         this.currentProjectId.set(res._id);
         this.generatedProject.set(res.generatedContent?.rawText || 'Proyecto generado sin contenido.');
+        this.loadProjectFiles(res._id);
         this.isGenerating.set(false);
-        this.currentView.set('taller');
+        this.switchView('taller');
+        this.loadHistory(); // Refrescar historial
       },
       error: (err) => {
         console.error('Error:', err);
@@ -198,5 +406,68 @@ export class App implements OnInit {
         this.isGenerating.set(false);
       },
     });
+  }
+
+  // --- GESTIÓN DE ARCHIVOS ---
+
+  loadProjectFiles(projectId: string) {
+    this.paiService.getProjectFiles(projectId).subscribe({
+      next: (files) => this.projectFiles.set(files),
+      error: (err) => console.error("Error al cargar archivos", err)
+    });
+  }
+
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file && this.currentProjectId()) {
+      this.uploadFile(file);
+    }
+  }
+
+  onDragOver(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    // Podríamos añadir una señal isDragging para cambiar el fondo
+  }
+
+  onDragLeave(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  onDrop(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    const file = event.dataTransfer?.files[0];
+    if (file && this.currentProjectId()) {
+      this.uploadFile(file);
+    }
+  }
+
+  uploadFile(file: File) {
+    this.isUploading.set(true);
+    this.paiService.uploadFile(this.currentProjectId()!, file).subscribe({
+      next: () => {
+        this.loadProjectFiles(this.currentProjectId()!);
+        this.isUploading.set(false);
+      },
+      error: (err) => {
+        console.error("Error al subir archivo", err);
+        this.isUploading.set(false);
+      }
+    });
+  }
+
+  deleteFile(filename: string) {
+    if (confirm(this.t().deleteFile + ' ' + filename + '?')) {
+      this.paiService.deleteFile(this.currentProjectId()!, filename).subscribe({
+        next: () => this.loadProjectFiles(this.currentProjectId()!),
+        error: (err) => console.error("Error al borrar archivo", err)
+      });
+    }
+  }
+
+  getDownloadUrl(filename: string): string {
+    return this.paiService.getDownloadUrl(this.currentProjectId()!, filename);
   }
 }

@@ -1,0 +1,37 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: pai_mongodb_prod
+    restart: always
+    ports:
+      - "27017:27017" # Ajusta si en tu EC2 el puerto de Mongo ya está ocupado
+    volumes:
+      - ./mongo_data:/data/db
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pai_backend_prod
+    restart: always
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://mongodb:27017/pai_db
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    ports:
+      - "3000:3000" # Este es el puerto que Nginx escuchará internamente
+    volumes:
+      - ./backend/uploads:/app/uploads
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: pai_frontend_prod
+    restart: always
+    ports:
+      - "8080:80" # Nginx HOST apuntará al 8080 de este contenedor
+    depends_on:
+      - backend

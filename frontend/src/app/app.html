@@ -1,42 +1,92 @@
 <main style="max-width: 1400px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
   
-  <header style="text-align: center; margin-bottom: 40px; position: relative;">
-    <h1 style="color: #2c3e50; font-size: 2.5rem; margin-bottom: 10px;">Plataforma PAI</h1>
-    <p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 0;">Diseño de Proyectos de Aprendizaje Intermodular</p>
+  <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; flex-wrap: wrap; gap: 20px;">
+    <div>
+      <h1 style="color: #2c3e50; font-size: 2.2rem; margin: 0;">Plataforma de Proyectos Interdisciplinares</h1>
+    </div>
     
-    <div style="position: absolute; right: 0; top: 10px; display: flex; gap: 10px;">
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <select [ngModel]="language()" (ngModelChange)="language.set($event)" style="padding: 8px 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px; background: white; cursor: pointer; color: #2c3e50; font-weight: bold;">
+        <option value="castellano">🇪🇸 Castellano</option>
+        <option value="catalan">󠁥󠁳󠁣󠁴󠁿 Català</option>
+      </select>
+      
       @if (currentView() === 'taller') {
-        <button (click)="currentView.set('generator')" style="background: #bdc3c7; color: #2c3e50; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold;">
-          ⬅️ Volver al Generador
+        <button (click)="switchView('generator')" style="background: #bdc3c7; color: #2c3e50; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold;">
+          {{ t().backGenerator }}
         </button>
       }
       <button (click)="toggleView()" style="background: #2c3e50; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
-        {{ currentView() === 'history' ? 'Volver al Generador' : '📚 Ver Historial de Proyectos' }}
+        {{ currentView() === 'history' ? t().backGenerator : t().historyBtn }}
       </button>
     </div>
   </header>
 
   @if (currentView() === 'history') {
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
-      <h2 style="color: #2c3e50; margin-top: 0;">Historial de Proyectos Generados</h2>
+      <h2 style="color: #2c3e50; margin-top: 0;">{{ t().historyTitle }}</h2>
+      
       @if (projectsHistory().length === 0) {
-        <p>No hay proyectos guardados aún.</p>
+        <p>{{ t().noProjects }}</p>
       } @else {
-        <div style="display: grid; gap: 15px;">
-          @for (proj of projectsHistory(); track proj._id) {
-            <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
-              <div>
-                <strong style="color: #2c3e50; font-size: 1.1rem;">Cruce: {{ proj.modules?.join(' + ') || 'Atención al Cliente + Maquillaje' }}</strong>
-                <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
-                  Generado el: {{ proj.createdAt | date:'short' }} | Estado: {{ proj.status || 'borrador' }}
-                </p>
-              </div>
-              <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-                👁️ Ver Proyecto
-              </button>
-            </div>
-          }
+        <div style="display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">
+          <button (click)="historyTab.set('FP_BASICA')" 
+                  [style.background]="historyTab() === 'FP_BASICA' ? '#3498db' : 'transparent'"
+                  [style.color]="historyTab() === 'FP_BASICA' ? 'white' : '#7f8c8d'"
+                  style="border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: bold; transition: all 0.2s;">
+            {{ t().fpBtn }} ({{ fpProjects().length }})
+          </button>
+          <button (click)="historyTab.set('ESO')" 
+                  [style.background]="historyTab() === 'ESO' ? '#9b59b6' : 'transparent'"
+                  [style.color]="historyTab() === 'ESO' ? 'white' : '#7f8c8d'"
+                  style="border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: bold; transition: all 0.2s;">
+            {{ t().esoBtn }} ({{ esoProjects().length }})
+          </button>
         </div>
+
+        @if (historyTab() === 'FP_BASICA') {
+          @if (fpProjects().length > 0) {
+            <div style="display: grid; gap: 15px;">
+              @for (proj of fpProjects(); track proj._id) {
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3498db'" onmouseout="this.style.borderColor='#e0e0e0'">
+                  <div>
+                    <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
+                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }}
+                    </p>
+                  </div>
+                  <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                    {{ t().viewProject }}
+                  </button>
+                </div>
+              }
+            </div>
+          } @else {
+            <p style="color: #7f8c8d; font-style: italic;">{{ t().noFP }}</p>
+          }
+        }
+
+        @if (historyTab() === 'ESO') {
+          @if (esoProjects().length > 0) {
+            <div style="display: grid; gap: 15px;">
+              @for (proj of esoProjects(); track proj._id) {
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#9b59b6'" onmouseout="this.style.borderColor='#e0e0e0'">
+                  <div>
+                    <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
+                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }}
+                    </p>
+                  </div>
+                  <button (click)="viewPastProject(proj)" style="background: #9b59b6; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                    {{ t().viewProject }}
+                  </button>
+                </div>
+              }
+            </div>
+          } @else {
+            <p style="color: #7f8c8d; font-style: italic;">{{ t().noESO }}</p>
+          }
+        }
       }
     </section>
   }
@@ -44,46 +94,110 @@
   @if (currentView() === 'generator') {
     <section style="background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <h2 style="margin-top: 0; color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
-        Configuración del Proyecto
+        {{ t().configTitle }}
       </h2>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="color: #34495e;">{{ t().whatToDesign }}</h3>
+        <div style="display: flex; gap: 15px;">
+          <button (click)="tipoNivel.set('FP_BASICA'); courseLevel.set('1º Curso'); selectedRas.set([])"
+                  [style.background]="tipoNivel() === 'FP_BASICA' ? '#3498db' : '#ecf0f1'"
+                  [style.color]="tipoNivel() === 'FP_BASICA' ? 'white' : '#2c3e50'"
+                  style="flex: 1; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
+            {{ t().fpBtn }}
+          </button>
+          <button (click)="tipoNivel.set('DIVERSIFICACION_CURRICULAR'); courseLevel.set('3º ESO'); selectedRas.set([])"
+                  [style.background]="tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? '#9b59b6' : '#ecf0f1'"
+                  [style.color]="tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? 'white' : '#2c3e50'"
+                  style="flex: 1; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
+            {{ t().esoBtn }}
+          </button>
+        </div>
+      </div>
       
       <div style="margin-bottom: 20px;">
-        <h3 style="color: #34495e;">1. Metodología</h3>
-        <select [ngModel]="methodology()" (ngModelChange)="methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
-          <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
-          <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
-        </select>
-      </div>
-
-      <div style="margin-bottom: 30px;">
-        <h3 style="color: #34495e;">2. Selección de Resultados de Aprendizaje</h3>
-        <p style="color: #7f8c8d; font-size: 0.95rem;">Selecciona los RAs que formarán parte del proyecto intermodular.</p>
-        
-        <div style="display: grid; gap: 15px;">
-          @for (group of groupedRas(); track group.module) {
-            <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-              <summary style="padding: 15px; background: #e8f4f8; font-weight: bold; cursor: pointer; user-select: none; color: #2c3e50;">
-                📘 {{ group.module }} ({{ group.ras.length }} RAs)
-              </summary>
-              <div style="padding: 15px;">
-                @for (ra of group.ras; track ra.description) {
-                  <label style="display: block; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f1f2f6'" onmouseout="this.style.background='transparent'">
-                    <input type="checkbox" 
-                          [checked]="selectedRas().includes(ra.description)"
-                          (change)="toggleRa(ra.description)"
-                          style="margin-right: 10px; transform: scale(1.2);">
-                    <span style="font-size: 0.95rem;">{{ ra.description }}</span>
-                  </label>
-                }
-              </div>
-            </details>
-          }
+        <h3 style="color: #34495e;">{{ t().generalConfig }}</h3>
+        <div style="display: flex; gap: 15px;">
+          <div style="flex: 1;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px;">{{ t().methodology }}</label>
+            <select [ngModel]="methodology()" (ngModelChange)="methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+              <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
+              <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
+            </select>
+          </div>
+          <div style="flex: 1;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px;">{{ t().courseLevelLabel }}</label>
+            <select [ngModel]="courseLevel()" (ngModelChange)="courseLevel.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+              @if (tipoNivel() === 'FP_BASICA') {
+                <option value="1º Curso">{{ t().firstYearFP }}</option>
+                <option value="2º Curso">{{ t().secondYearFP }}</option>
+              } @else {
+                <option value="3º ESO">{{ t().thirdYearESO }}</option>
+                <option value="4º ESO">{{ t().fourthYearESO }}</option>
+              }
+            </select>
+          </div>
         </div>
       </div>
 
-      <button (click)="generateProject()" [disabled]="isGenerating()" style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
-        {{ isGenerating() ? 'Generando propuesta con IA...' : '🚀 Generar Proyecto Intermodular' }}
-      </button>
+      <div style="margin-bottom: 30px;">
+        <h3 style="color: #34495e;">{{ t().curricularSelection }}</h3>
+        <p style="color: #7f8c8d; font-size: 0.95rem;">{{ tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO }}</p>
+        
+        <div style="display: flex; gap: 30px; align-items: flex-start;">
+          
+          <!-- Lado Izquierdo: Acordeones de Selección -->
+          <div style="flex: 1; display: grid; gap: 15px;">
+            @for (group of groupedItems(); track group.category) {
+              <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 15px; background: #e8f4f8; font-weight: bold; cursor: pointer; user-select: none; color: #2c3e50;">
+                  📘 {{ group.category }} ({{ group.items.length }})
+                </summary>
+                <div style="padding: 15px;">
+                  @for (item of group.items; track item) {
+                    <label style="display: block; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f1f2f6'" onmouseout="this.style.background='transparent'">
+                      <input type="checkbox" 
+                            [checked]="selectedRas().includes(item)"
+                            (change)="toggleRa(item)"
+                            style="margin-right: 10px; transform: scale(1.2);">
+                      <span style="font-size: 0.95rem;">{{ item }}</span>
+                    </label>
+                  }
+                </div>
+              </details>
+            }
+          </div>
+
+          <!-- Lado Derecho: Carrito Fijo (Sticky) -->
+          <div style="width: 350px; position: sticky; top: 20px; background: white; border: 1px solid #bdc3c7; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <h4 style="margin-top: 0; margin-bottom: 15px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
+              🎯 {{ t().selectedItemsTitle }} ({{ selectedItemsDetails().length }})
+            </h4>
+
+            <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; max-height: 400px; overflow-y: auto;">
+              @for (sel of selectedItemsDetails(); track sel.fullDesc) {
+                <li style="margin-bottom: 12px; font-size: 0.85rem; border-bottom: 1px solid #eee; padding-bottom: 8px;">
+                  <strong style="color: #3498db; display: block; margin-bottom: 3px;">{{ sel.subject }}</strong>
+                  <span style="color: #7f8c8d;" [title]="sel.fullDesc">{{ sel.shortDesc }}</span>
+                </li>
+              }
+              @if (selectedItemsDetails().length === 0) {
+                <li style="color: #95a5a6; font-size: 0.9rem; font-style: italic; text-align: center; padding: 20px 0;">
+                  {{ t().noItemsSelected }}
+                </li>
+              }
+            </ul>
+
+            <button (click)="generateProject()" 
+                    [disabled]="isGenerating() || selectedItemsDetails().length === 0" 
+                    [style.opacity]="selectedItemsDetails().length === 0 ? '0.6' : '1'"
+                    style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
+              {{ isGenerating() ? t().generatingBtn : t().generateBtn }}
+            </button>
+          </div>
+
+        </div>
+      </div>
     </section>
   }
 
@@ -92,14 +206,14 @@
     <section style="margin-top: 20px;">
       <!-- Barra Superior de Acciones -->
       <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #bdc3c7;">
-        <h2 style="margin: 0; color: #8e44ad; font-size: 1.4rem;">Taller de Proyectos</h2>
+        <h2 style="margin: 0; color: #8e44ad; font-size: 1.4rem;">{{ t().workshopTitle }}</h2>
         <div style="display: flex; gap: 10px;">
           <button (click)="toggleEditMode()" style="background: #f39c12; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-            {{ isEditMode() ? '👁️ Terminar Edición' : '✏️ Editar Manualmente' }}
+            {{ isEditMode() ? t().endEdit : t().manualEdit }}
           </button>
-          <button (click)="saveDraft()" style="background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">💾 Guardar Borrador</button>
-          <button (click)="publishProject()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">✅ Validar y Publicar</button>
-          <button (click)="exportPDF()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">📄 Exportar PDF</button>
+          <button (click)="saveDraft()" style="background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().saveDraft }}</button>
+          <button (click)="publishProject()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().publish }}</button>
+          <button (click)="exportPDF()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().exportPDF }}</button>
         </div>
       </div>
 
@@ -120,26 +234,63 @@
         <!-- Barra Lateral Derecha (El Asistente IA) -->
         <div style="flex: 1; background: #f8f9fa; border: 1px solid #bdc3c7; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
           <h3 style="margin-top: 0; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-            <span>🤖</span> Asistente IA
+            <span>🤖</span> {{ t().aiAssistant }}
           </h3>
           
           <div style="flex: 1; background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; overflow-y: auto; font-size: 0.9rem; color: #555;">
-            <p style="background: #e8f4f8; padding: 10px; border-radius: 8px; margin-top: 0;">¡Hola! Soy tu asistente pedagógico. Sigue estos pasos para editar el proyecto:</p>
+            <p style="background: #e8f4f8; padding: 10px; border-radius: 8px; margin-top: 0;">{{ t().aiIntro }}</p>
             <ol style="padding-left: 20px; margin-bottom: 0; line-height: 1.6;">
-              <li><strong>Escribe</strong> abajo qué quieres cambiar (ej. <em>"Hazlo más corto"</em> o <em>"Añade rúbrica"</em>).</li>
-              <li><strong>Selecciona/Subraya</strong> el texto a modificar en el lienzo de la izquierda.</li>
-              <li>Haz clic en <strong>"✨ Reescribir con IA"</strong>.</li>
+              <li [innerHTML]="t().aiStep1"></li>
+              <li [innerHTML]="t().aiStep2"></li>
+              <li [innerHTML]="t().aiStep3"></li>
             </ol>
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 10px;">
-            <textarea [ngModel]="aiPrompt()" (ngModelChange)="aiPrompt.set($event)" placeholder="Pide a la IA que modifique el proyecto..." style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-family: inherit; resize: none;"></textarea>
+            <textarea [ngModel]="aiPrompt()" (ngModelChange)="aiPrompt.set($event)" [placeholder]="t().aiPlaceholder" style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-family: inherit; resize: none;"></textarea>
             <button (click)="rewriteWithAI()" [disabled]="isRewriting()" style="background: #3498db; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s;">
-              {{ isRewriting() ? '✨ Pensando...' : '✨ Reescribir con IA' }}
+              {{ isRewriting() ? t().thinking : t().rewriteBtn }}
             </button>
-            </div>
+          </div>
+
+          <!-- Archivos Adjuntos -->
+          <h3 style="margin-top: 25px; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span>📁</span> {{ t().resources }}
+          </h3>
+          
+          <div style="background: white; border: 2px dashed #bdc3c7; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 15px; cursor: pointer; transition: background 0.2s;" 
+               onmouseover="this.style.background='#f8f9fa'" 
+               onmouseout="this.style.background='white'" 
+               onclick="document.getElementById('fileInput').click()"
+               (dragover)="onDragOver($event)"
+               (dragleave)="onDragLeave($event)"
+               (drop)="onDrop($event)">
+            <span style="font-size: 2rem; color: #95a5a6;">☁️</span>
+            <p style="color: #7f8c8d; margin: 10px 0 0 0; font-size: 0.95rem; font-weight: bold;">
+              {{ isUploading() ? t().uploading : t().dragFiles }}
+            </p>
+            <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
+          </div>
+
+          <div style="flex: 1; overflow-y: auto;">
+            @for (file of projectFiles(); track file.name) {
+              <div style="display: flex; justify-content: space-between; align-items: center; background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 8px;">
+                <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%;">
+                  <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; font-size: 0.9rem;">
+                    📄 {{ file.name }}
+                  </a>
+                  <span style="display: block; font-size: 0.75rem; color: #95a5a6; margin-top: 2px;">
+                    {{ (file.size / 1024 / 1024).toFixed(2) }} MB
+                  </span>
+                </div>
+                <button (click)="deleteFile(file.name)" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #e74c3c; padding: 5px;" [title]="t().deleteFile">
+                  ❌
+                </button>
+              </div>
+            }
           </div>
         </div>
+      </div>
       </section>
     }
 

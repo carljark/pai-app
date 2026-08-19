@@ -4,7 +4,7 @@ services:
     container_name: pai_mongodb_prod
     restart: always
     ports:
-      - "27017:27017" # Ajusta si en tu EC2 el puerto de Mongo ya está ocupado
+      - "27018:27017" # Ajusta si en tu EC2 el puerto de Mongo ya está ocupado
     volumes:
       - ./mongo_data:/data/db
 

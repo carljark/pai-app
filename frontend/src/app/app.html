@@ -1,98 +1,37 @@
-<main style="max-width: 800px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
+<main style="max-width: 1400px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
   
   <header style="text-align: center; margin-bottom: 40px; position: relative;">
     <h1 style="color: #2c3e50; font-size: 2.5rem; margin-bottom: 10px;">Plataforma PAI</h1>
-    <p style="font-size: 1.2rem; color: #7f8c8d;">Generador de Proyectos Intermodulares con IA</p>
-    <button (click)="toggleView()" style="position: absolute; top: 0; right: 0; padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: bold;">
-      {{ showHistory() ? '🔙 Volver al Generador' : '📂 Ver Historial' }}
-    </button>
+    <p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 0;">Diseño de Proyectos de Aprendizaje Intermodular</p>
+    
+    <div style="position: absolute; right: 0; top: 10px; display: flex; gap: 10px;">
+      @if (currentView() === 'taller') {
+        <button (click)="currentView.set('generator')" style="background: #bdc3c7; color: #2c3e50; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold;">
+          ⬅️ Volver al Generador
+        </button>
+      }
+      <button (click)="toggleView()" style="background: #2c3e50; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
+        {{ currentView() === 'history' ? 'Volver al Generador' : '📚 Ver Historial de Proyectos' }}
+      </button>
+    </div>
   </header>
 
-  @if (!showHistory()) {
-    <!-- Panel de Selección -->
-    <section style="background: #f8f9fa; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-      
-      <h2 style="margin-top: 0; color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
-        1. Configuración del Proyecto
-      </h2>
-
-      <div style="margin-bottom: 25px;">
-        <label style="font-weight: bold; display: block; margin-bottom: 10px;">Metodología Activa:</label>
-        <select [ngModel]="methodology()" (ngModelChange)="methodology.set($event)" 
-                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-size: 1rem;">
-          <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
-          <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
-          <option value="ApS (Aprendizaje-Servicio)">ApS (Aprendizaje-Servicio)</option>
-        </select>
-      </div>
-
-      <div style="margin-bottom: 25px;">
-        <label style="font-weight: bold; display: block; margin-bottom: 10px;">Resultados de Aprendizaje a Integrar:</label>
-        <p style="font-size: 0.9rem; color: #7f8c8d; margin-bottom: 15px;">Selecciona los RAs de distintos módulos que el alumno debe cruzar.</p>
-        
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          @for (ra of ras(); track ra.id) {
-            <label style="display: flex; align-items: flex-start; gap: 10px; padding: 12px; background: white; border: 1px solid #e0e0e0; border-radius: 6px; cursor: pointer;">
-              <input type="checkbox" 
-                    [checked]="selectedRas().includes(ra.description)"
-                    (change)="toggleRa(ra.description)" 
-                    style="margin-top: 5px; cursor: pointer; width: 18px; height: 18px;" />
-              <div>
-                <strong style="color: #2c3e50;">{{ra.module}} ({{ra.id}}):</strong> 
-                <span style="color: #555;">{{ra.description}}</span>
-              </div>
-            </label>
-          }
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 30px;">
-        <button (click)="generateProject()" 
-                [disabled]="isGenerating() || selectedRas().length === 0"
-                style="background-color: #2ecc71; color: white; border: none; padding: 12px 30px; font-size: 1.1rem; border-radius: 30px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(46, 204, 113, 0.3); transition: all 0.2s;">
-          @if (isGenerating()) {
-            🧠 Pensando proyecto...
-          } @else {
-            ✨ Generar Puente Curricular
-          }
-        </button>
-      </div>
-
-    </section>
-
-    <!-- Resultados de la IA -->
-    @if (generatedProject()) {
-      <section style="margin-top: 40px; background: white; border: 1px solid #bdc3c7; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
-        <h2 style="margin-top: 0; color: #8e44ad; border-bottom: 2px solid #9b59b6; padding-bottom: 10px;">
-          Propuesta Intermodular Generada
-        </h2>
-        
-        <!-- Renderizamos el texto markdown usando la librería ngx-markdown -->
-        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.05rem; background: #fdfbfd; padding: 25px; border-radius: 8px; border: 1px solid #f3e5f5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); line-height: 1.7;">
-          <markdown [data]="generatedProject()"></markdown>
-        </div>
-        
-      </section>
-    }
-  } @else {
-    <!-- Panel de Historial -->
-    <section style="background: #f8f9fa; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-      <h2 style="margin-top: 0; color: #e67e22; border-bottom: 2px solid #f39c12; padding-bottom: 10px;">
-        Historial de Proyectos (MongoDB)
-      </h2>
-      
+  @if (currentView() === 'history') {
+    <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
+      <h2 style="color: #2c3e50; margin-top: 0;">Historial de Proyectos Generados</h2>
       @if (projectsHistory().length === 0) {
-        <p style="text-align: center; color: #7f8c8d; padding: 20px;">No hay proyectos guardados aún en la base de datos.</p>
+        <p>No hay proyectos guardados aún.</p>
       } @else {
-        <div style="display: flex; flex-direction: column; gap: 15px;">
+        <div style="display: grid; gap: 15px;">
           @for (proj of projectsHistory(); track proj._id) {
-            <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
               <div>
-                <strong style="color: #2c3e50; font-size: 1.1rem;">Cruce: {{ proj.modules.join(' + ') }}</strong><br>
-                <small style="color: #7f8c8d;">Fecha: {{ proj.createdAt | date:'medium' }}</small>
-                <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #555;">{{ proj.ras.length }} RAs integrados.</p>
+                <strong style="color: #2c3e50; font-size: 1.1rem;">Cruce: {{ proj.modules?.join(' + ') || 'Atención al Cliente + Maquillaje' }}</strong>
+                <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
+                  Generado el: {{ proj.createdAt | date:'short' }} | Estado: {{ proj.status || 'borrador' }}
+                </p>
               </div>
-              <button (click)="viewPastProject(proj)" style="padding: 10px 20px; background: #9b59b6; color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: bold;">
+              <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
                 👁️ Ver Proyecto
               </button>
             </div>
@@ -101,5 +40,107 @@
       }
     </section>
   }
+
+  @if (currentView() === 'generator') {
+    <section style="background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+      <h2 style="margin-top: 0; color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
+        Configuración del Proyecto
+      </h2>
+      
+      <div style="margin-bottom: 20px;">
+        <h3 style="color: #34495e;">1. Metodología</h3>
+        <select [ngModel]="methodology()" (ngModelChange)="methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+          <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
+          <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <h3 style="color: #34495e;">2. Selección de Resultados de Aprendizaje</h3>
+        <p style="color: #7f8c8d; font-size: 0.95rem;">Selecciona los RAs que formarán parte del proyecto intermodular.</p>
+        
+        <div style="display: grid; gap: 15px;">
+          @for (group of groupedRas(); track group.module) {
+            <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+              <summary style="padding: 15px; background: #e8f4f8; font-weight: bold; cursor: pointer; user-select: none; color: #2c3e50;">
+                📘 {{ group.module }} ({{ group.ras.length }} RAs)
+              </summary>
+              <div style="padding: 15px;">
+                @for (ra of group.ras; track ra.description) {
+                  <label style="display: block; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f1f2f6'" onmouseout="this.style.background='transparent'">
+                    <input type="checkbox" 
+                          [checked]="selectedRas().includes(ra.description)"
+                          (change)="toggleRa(ra.description)"
+                          style="margin-right: 10px; transform: scale(1.2);">
+                    <span style="font-size: 0.95rem;">{{ ra.description }}</span>
+                  </label>
+                }
+              </div>
+            </details>
+          }
+        </div>
+      </div>
+
+      <button (click)="generateProject()" [disabled]="isGenerating()" style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
+        {{ isGenerating() ? 'Generando propuesta con IA...' : '🚀 Generar Proyecto Intermodular' }}
+      </button>
+    </section>
+  }
+
+  <!-- Resultados de la IA -->
+  @if (currentView() === 'taller' && generatedProject()) {
+    <section style="margin-top: 20px;">
+      <!-- Barra Superior de Acciones -->
+      <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #bdc3c7;">
+        <h2 style="margin: 0; color: #8e44ad; font-size: 1.4rem;">Taller de Proyectos</h2>
+        <div style="display: flex; gap: 10px;">
+          <button (click)="toggleEditMode()" style="background: #f39c12; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            {{ isEditMode() ? '👁️ Terminar Edición' : '✏️ Editar Manualmente' }}
+          </button>
+          <button (click)="saveDraft()" style="background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">💾 Guardar Borrador</button>
+          <button (click)="publishProject()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">✅ Validar y Publicar</button>
+          <button (click)="exportPDF()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">📄 Exportar PDF</button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px;">
+        <!-- Lienzo Central (El Editor) -->
+        <div style="flex: 2; background: white; border: 1px solid #bdc3c7; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
+          <div id="pdf-content" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.05rem; background: #fdfbfd; padding: 25px; border-radius: 8px; border: 1px solid #f3e5f5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); line-height: 1.7; height: 600px; overflow-y: auto;">
+            @if (isEditMode()) {
+              <textarea [ngModel]="generatedProject()" (ngModelChange)="generatedProject.set($event)" 
+                        style="width: 100%; height: 100%; min-height: 550px; padding: 15px; font-family: monospace; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 8px; resize: vertical; box-sizing: border-box; background: #fff;">
+              </textarea>
+            } @else {
+              <markdown [data]="generatedProject()"></markdown>
+            }
+          </div>
+        </div>
+
+        <!-- Barra Lateral Derecha (El Asistente IA) -->
+        <div style="flex: 1; background: #f8f9fa; border: 1px solid #bdc3c7; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          <h3 style="margin-top: 0; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span>🤖</span> Asistente IA
+          </h3>
+          
+          <div style="flex: 1; background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; overflow-y: auto; font-size: 0.9rem; color: #555;">
+            <p style="background: #e8f4f8; padding: 10px; border-radius: 8px; margin-top: 0;">¡Hola! Soy tu asistente pedagógico. Sigue estos pasos para editar el proyecto:</p>
+            <ol style="padding-left: 20px; margin-bottom: 0; line-height: 1.6;">
+              <li><strong>Escribe</strong> abajo qué quieres cambiar (ej. <em>"Hazlo más corto"</em> o <em>"Añade rúbrica"</em>).</li>
+              <li><strong>Selecciona/Subraya</strong> el texto a modificar en el lienzo de la izquierda.</li>
+              <li>Haz clic en <strong>"✨ Reescribir con IA"</strong>.</li>
+            </ol>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <textarea [ngModel]="aiPrompt()" (ngModelChange)="aiPrompt.set($event)" placeholder="Pide a la IA que modifique el proyecto..." style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-family: inherit; resize: none;"></textarea>
+            <button (click)="rewriteWithAI()" [disabled]="isRewriting()" style="background: #3498db; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s;">
+              {{ isRewriting() ? '✨ Pensando...' : '✨ Reescribir con IA' }}
+            </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    }
 
 </main>

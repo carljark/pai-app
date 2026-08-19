@@ -1,0 +1,95 @@
+PARTE I: WIREFRAMES DETALLADOS (Diseño de Interfaz de Usuario - UI)
+La plataforma se dividirá en un panel de navegación lateral (menú principal) y una zona central de trabajo. A continuación, se detallan las 4 pantallas clave:
+Pantalla 1: El "Match" Curricular (Configuración)
+	•	Cabecera: Saludo personalizado y selector del grupo-clase (ej. 1º FPB Peluquería).
+Seleccionar lengua (Castellano/Catalán)
+	•	Columna Izquierda (Mi Asignatura):
+	•	Menú desplegable con el módulo del usuario (ej. Ciencias Aplicadas I).
+	•	Lista de Competencias Específicas (“CE” que sólo están en las asignaturas teóricas de ciencias y lenguas) o resultados de aprendizaje ( “RA” que solo están en las asignaturas prácticas)  con checkboxes. Al marcar una CE o RA se despliegan automáticamente sus Criterios de Evaluación asociados para seleccionarlos.
+	•	Columna Derecha (Módulo a Vincular):
+	•	Buscador para seleccionar el módulo o módulos con los que se va a hacer el proyecto (ej. Lavado y cambios de forma).
+	•	Lista de Competencias Específicas (“CE” que sólo están en las asignaturas teóricas de ciencias y lenguas) o resultados de aprendizaje ( “RA” que solo están en las asignaturas prácticas)  con checkboxes. Al marcar una CE o RA se despliegan automáticamente sus Criterios de Evaluación asociados para seleccionarlos.
+	•	
+	•	Panel Inferior (Contexto):
+	•	Switches (interruptores) para añadir filtros: "Vincular con ODS", "Contexto de Menorca", "Incluir vocabulario en Inglés".
+	•	Botón principal (Call to Action): "Generar Proyecto Intermodular".
+Pantalla 2: El Taller de Proyectos (Edición y Motor IA)
+	•	Lienzo Central (El Editor):
+	•	El ejemplo aparece en un editor de texto enriquecido (tipo Notion o Google Docs) dividido en bloques:  
+IDENTIDAD DEL PROYECTO
+Título
+Centro
+Ciclo formativo
+Curso
+Estrategia metodológica
+INTEGRACIÓN CURRICULAR
+Módulos implicados y resultados de aprendizaje vinculados
+CONTEXTO Y RETO
+Necesidad detectada
+Conexión con el entorno y valor que aporta a la comunidad
+Empresa, entidad o contexto profesional
+DESARROLLO Y FASES
+Secuenciación
+Duración estimada
+Fases
+ACTIVIDAD DEL ALUMNADO
+Agrupamiento / Organización
+Qué investiga / diseña / produce / evalúa
+EVALUACIÓN
+Producto final
+Formativa
+Instrumentos y evidencias del proceso
+DIFUSIÓN
+COORDINACIÓN DOCENTE
+VIABILIDAD REAL / RECURSOS NECESARIOS
+
+	•	El docente puede hacer clic en cualquier párrafo y reescribirlo manualmente.
+
+	•	Barra Lateral Derecha (El Asistente IA):
+	•	Un chat flotante. El docente puede seleccionar un bloque del texto central y decirle al chat: "Haz esta fase más corta" o "Cambia la actividad 2.1 por una que use la pizarra digital". La IA reescribe solo esa parte.
+	•	Barra Superior (Acciones):
+	•	Botones: "Guardar Borrador", "Generar Rúbricas" y "Validar y Publicar en el Repositorio".
+Pantalla 3: Centro de Evaluación 
+	•	Lienzo Central (Matriz de Rúbrica):
+	•	Una tabla generada por la IA. En las filas aparecen los criterios de evaluación técnicos y teóricos de los módulos implicados. En las columnas, los 4 niveles de logro (No superado, Básico, Adecuado, Excelente) con sus descripciones. Esta tabla ha de ser editable, y tiene que ser aprobada antes de poder guardarse.
+	•	Pestañas de Vista (Arriba):
+	•	Vista Docente: La tabla estándar para calificar.
+	•	(Esto solo seria necesario si hay una versión de la plataforma para que el alumnado pueda tener una carpeta de aprendizaje en la que subir las evidencias (archivos, fotos, etc) y autoevaluarse)
+ Vista Alumnado: La misma tabla, pero el texto cambia automáticamente a primera persona ("He conseguido...", "Me cuesta...") para imprimir como Diana de Autoevaluación.
+	•	Panel Derecho (Exportación):
+	•	Botones: "Descargar PDF" y "Exportar CSV (Formato GestIB (esto probablemente sería complicado)".
+Pantalla 4: El Repositorio Dinámico (El "Cerebro Colectivo") 
+Es para poder navegar directamente por el repositorio y ver proyectos que ya están “aprobados” o que han sido subidos por los profesores.
+	•	Barra de Búsqueda Superior: Para buscar por palabras clave (ej. "champú", "desinfección").
+	•	Filtros Laterales: Filtrar por Módulos implicados, Curso, o Metodología (ABP/ABR).
+	•	Rejilla Central (Tarjetas de Proyecto):
+	•	Cada proyecto se muestra como una "tarjeta" visual con el título, el autor (el docente/s que lo validó) y etiquetas de colores con las asignaturas cruzadas.
+	•	Acción Principal: Al abrir una tarjeta, aparece el botón "Clonar Proyecto". Esto copia el proyecto al "Taller de Proyectos" del usuario para que lo use como base.
+PARTE II: ESPECIFICACIONES TÉCNICAS (El Tech Stack)
+Para el desarrollador, estas son las tecnologías de código abierto más recomendadas actualmente para construir plataformas EdTech (Tecnología Educativa) con Inteligencia Artificial:
+1. Frontend (La interfaz visual que ve el docente)
+	•	Framework: React.js (utilizando Next.js) o Vue.js (Nuxt.js). Son los estándares de la industria, rápidos y escalables.
+	•	Estilos: Tailwind CSS. Permite hacer interfaces muy limpias y modernas rápidamente.
+	•	Editor de Texto: Integrar una librería como TipTap o Slate.js para que el "Lienzo Central" del Taller de Proyectos funcione por bloques editables de forma fluida.
+2. Backend (El servidor y la lógica)
+	•	Lenguaje: Python. Es absolutamente obligatorio que el backend esté en Python, ya que es el lenguaje rey de la Inteligencia Artificial.
+	•	Framework: FastAPI. Es ultrarrápido y perfecto para gestionar las peticiones entre la base de datos, la IA y el Frontend.
+3. Bases de Datos
+	•	Relacional (Para los currículos y usuarios): PostgreSQL. Aquí irán los archivos CSV que hemos creado con los Módulos, RA y CE.
+	•	Vectorial (¡Crucial para la IA y el Repositorio!): El informático debe instalar la extensión pgvector en PostgreSQL o usar una base de datos vectorial separada como ChromaDB. ¿Por qué? Porque las IAs no leen bases de datos normales, leen "vectores" para entender qué proyectos del repositorio se parecen más a lo que el profesor está pidiendo.
+PARTE III: INTEGRACIÓN DE LA IA GENERATIVA (Arquitectura RAG)
+Esta es la parte donde la magia ocurre. Dile a tu informático que la plataforma debe utilizar una arquitectura RAG (Retrieval-Augmented Generation) impulsada por el framework LangChain.
+El flujo exacto de programación debe ser este:
+	•	El Input del Usuario: El profesor elige "Ciencias" y "Peluquería" y pulsa "Generar".
+	•	El Retrieval (Recuperación): El backend en Python busca en la base de datos vectorial (el Repositorio de proyectos validados) si algún otro profesor ya hizo un proyecto de Ciencias + Peluquería.
+	•	El Prompting (Ensamblaje): LangChain coge:
+	•	El Prompt de Sistema (las reglas pedagógicas inquebrantables que definimos antes).
+	•	Los RA y CE seleccionados de los CSV.
+	•	Los proyectos similares encontrados en el Repositorio.
+	•	La Generación (LLM Local): Se le envía todo ese paquete de información al Motor de IA.
+	•	Recomendación de Modelos Locales: Utilizar modelos de código abierto como Llama 3 (Meta) o Mistral.
+	•	Ejecución Local: Se pueden correr en el servidor local del instituto usando herramientas como Ollama o vLLM, lo que garantiza que los datos no viajan a internet.
+PARTE IV: CONSEJOS CLAVE PARA EL DESARROLLO (Buenas Prácticas)
+	•	Estrategia MVP (Producto Mínimo Viable): Montar una IA local (Llama 3) desde el día 1 requiere servidores con tarjetas gráficas (GPUs) potentes y mucho tiempo de configuración. Dile a tu informático que en la Fase 1 conecte la plataforma a la API de OpenAI (ChatGPT) o Anthropic (Claude). Una vez que la plataforma funcione, los botones hagan clic y los profesores la validen, entonces haced el "desenchufe" y migrad a la IA local para la Fase 2 de tu tesis.
+	•	Cumplimiento RGPD (Privacidad por Diseño): Al diseñar la base de datos, aseguraos de que en ningún momento se introduzcan nombres, apellidos o datos médicos de los alumnos reales en el asistente de IA. La IA solo debe procesar texto del currículo oficial y actividades.
+	•	Exportación a GestIB: Que el informático estudie en qué formato de Excel o CSV importa las notas el sistema GestIB (el sistema educativo balear). Si la plataforma genera un Excel con las columnas exactas que requiere GestIB, los docentes os adorarán, ya que les ahorraréis horas de pasar notas a mano.

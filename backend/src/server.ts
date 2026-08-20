@@ -83,7 +83,7 @@ const CESchema = new mongoose.Schema({
 });
 const CE = mongoose.model('CE', CESchema);
 
-const subjectTranslations: Record<string, string> = {
+const esToCa: Record<string, string> = {
   "Biología y Geología": "Biologia i Geologia",
   "Economía y Emprendimiento": "Economia i Emprenedoria",
   "Física y Química": "Física i Química",
@@ -92,12 +92,15 @@ const subjectTranslations: Record<string, string> = {
   "Lengua Catalana y Literatura": "Llengua Catalana i Literatura",
   "Matemáticas": "Matemàtiques",
   "Tecnología y Digitalización": "Tecnologia i Digitalització",
-  "Ámbito Científico-Tecnológico": "Àmbit Científic-Tecnològic",
+  "Ámbito Científico y Tecnológico": "Àmbit Científic i Tecnològic",
   "Ámbito Lingüístico y Social": "Àmbit Lingüístic i Social",
-  "Formación Profesional": "Formació Professional",
-  "Ciencias de la Naturaleza": "Ciències de la Naturalesa",
-  "Ciencias Sociales": "Ciències Socials"
+  "Formación Profesional": "Formació Professional"
 };
+
+const caToEs: Record<string, string> = Object.entries(esToCa).reduce((acc, [es, ca]) => {
+  acc[ca] = es;
+  return acc;
+}, {} as Record<string, string>);
 
 // Endpoint 1b: Obtener todas las CEs (ESO - Diversificación)
 app.get('/api/ces', async (req, res) => {
@@ -105,13 +108,30 @@ app.get('/api/ces', async (req, res) => {
     const lang = req.query.lang === 'catalan' ? 'ca' : 'es';
     const ces = await CE.find();
     
-    const mapped = ces.map(c => ({
-      area: lang === 'ca' ? (subjectTranslations[c.area] || c.area) : c.area,
-      subject: lang === 'ca' ? (subjectTranslations[c.subject] || c.subject) : c.subject,
-      ce_id: c.ce_id,
-      description: lang === 'ca' && c.description_ca ? c.description_ca : c.description_es || c.get('description'),
-      criterios: lang === 'ca' && c.criterios_ca ? c.criterios_ca : c.criterios_es || c.get('criterios')
-    }));
+    const mapped = ces.map(c => {
+      // Base (asumiendo que viene en catalán)
+      let subjectBase = c.subject;
+      let areaBase = c.area;
+
+      // Agrupar Matemáticas
+      if (subjectBase.startsWith('Matemàtiques')) {
+        subjectBase = 'Matemàtiques';
+      }
+
+      const subjectCa = subjectBase;
+      const subjectEs = caToEs[subjectBase] || subjectBase;
+      
+      const areaCa = areaBase;
+      const areaEs = caToEs[areaBase] || areaBase;
+
+      return {
+        area: lang === 'ca' ? areaCa : areaEs,
+        subject: lang === 'ca' ? subjectCa : subjectEs,
+        ce_id: c.ce_id,
+        description: lang === 'ca' && c.description_ca ? c.description_ca : c.description_es || c.get('description'),
+        criterios: lang === 'ca' && c.criterios_ca ? c.criterios_ca : c.criterios_es || c.get('criterios')
+      };
+    });
     res.json(mapped);
   } catch (error) {
     console.error("Error cargando CEs:", error);

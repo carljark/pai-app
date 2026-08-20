@@ -17,7 +17,10 @@ const CE = mongoose.model('CE', CESchema);
 
 async function run() {
   await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db');
-  const rawData = fs.readFileSync(path.join(process.cwd(), 'backend', 'ces_eso_bilingual.json'), 'utf-8');
+  const jsonPath = fs.existsSync(path.join(process.cwd(), 'ces_eso_bilingual.json')) 
+    ? path.join(process.cwd(), 'ces_eso_bilingual.json') 
+    : path.join(process.cwd(), 'backend', 'ces_eso_bilingual.json');
+  const rawData = fs.readFileSync(jsonPath, 'utf-8');
   const ces = JSON.parse(rawData);
 
   await CE.deleteMany({});

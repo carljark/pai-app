@@ -262,33 +262,64 @@ export class App implements OnInit {
     if (this.tipoNivel() === 'FP_BASICA') {
       const list = this.ras();
       const groups: { [key: string]: any[] } = {};
+      
       for (const ra of list) {
-        // Unificar I y II para Ciencias Aplicadas y Comunicación y Sociedad
-        let moduleName = ra.module;
-        if (moduleName.includes('Ciencias aplicadas') || moduleName.includes('Ciències aplicades') ||
-            moduleName.includes('Comunicación y sociedad') || moduleName.includes('Comunicació i societat')) {
-          moduleName = moduleName.replace(/ (I|II)$/, '');
+        let categoryName = ra.module;
+        if (categoryName.includes('Ciencias aplicadas') || categoryName.includes('Ciències aplicades') ||
+            categoryName.includes('Comunicación y sociedad') || categoryName.includes('Comunicació i societat')) {
+          categoryName = categoryName.replace(/ (I|II)$/, '');
         }
-
-        if (!groups[moduleName]) groups[moduleName] = [];
-        groups[moduleName].push(ra);
+        if (!groups[categoryName]) groups[categoryName] = [];
+        groups[categoryName].push(ra);
       }
-      return Object.keys(groups).map(key => ({
-        category: key,
-        items: groups[key].map((ra: any) => ra.description)
-      }));
+      
+      return Object.keys(groups).map(key => {
+        const moduleItems = groups[key];
+        const subgroupsMap: { [title: string]: string[] } = {};
+        let totalItems = 0;
+        
+        for (const ra of moduleItems) {
+          const isMerged = key !== ra.module; // e.g. "Comunicación y sociedad" !== "Comunicación y sociedad I"
+          const title = isMerged ? (ra.module.endsWith('I') ? 'I' : 'II') : '';
+          
+          if (!subgroupsMap[title]) subgroupsMap[title] = [];
+          
+          // Deduplication
+          if (!subgroupsMap[title].includes(ra.description)) {
+            // Check if it exists in subgroup 'I' when we are in 'II'
+            if (title === 'II' && subgroupsMap['I'] && subgroupsMap['I'].includes(ra.description)) {
+              continue; // Skip exact duplicates from module I
+            }
+            subgroupsMap[title].push(ra.description);
+            totalItems++;
+          }
+        }
+        
+        const subgroups = Object.keys(subgroupsMap).map(t => ({ title: t, items: subgroupsMap[t] }));
+        // Sort subgroups so 'I' comes before 'II'
+        subgroups.sort((a, b) => a.title.localeCompare(b.title));
+
+        return { category: key, subgroups, totalItems };
+      });
+      
     } else {
       const list = this.ces();
       const groups: { [key: string]: any[] } = {};
+      
       for (const ce of list) {
         const groupName = `${ce.area} - ${ce.subject}`;
         if (!groups[groupName]) groups[groupName] = [];
         groups[groupName].push(ce);
       }
-      return Object.keys(groups).map(key => ({
-        category: key,
-        items: groups[key].map((ce: any) => ce.description)
-      }));
+      
+      return Object.keys(groups).map(key => {
+        const uniqueItems = Array.from(new Set(groups[key].map((ce: any) => ce.description)));
+        return {
+          category: key,
+          subgroups: [{ title: '', items: uniqueItems }],
+          totalItems: uniqueItems.length
+        };
+      });
     }
   });
 

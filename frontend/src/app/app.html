@@ -1,5 +1,16 @@
+<style>
+  .continuous-num {
+    counter-increment: item-counter;
+    font-size: 0.95rem; line-height: 1.4;
+  }
+  .continuous-num::before {
+    content: counter(item-counter) ". ";
+    font-weight: bold;
+    color: #2980b9;
+    margin-right: 5px;
+  }
+</style>
 <main style="max-width: 1400px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
-  
   <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; flex-wrap: wrap; gap: 20px;">
     <div>
       <h1 style="color: #2c3e50; font-size: 2.2rem; margin: 0;">Plataforma de Proyectos Interdisciplinares</h1>
@@ -151,17 +162,26 @@
             @for (group of groupedItems(); track group.category) {
               <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 15px; background: #e8f4f8; font-weight: bold; cursor: pointer; user-select: none; color: #2c3e50;">
-                  📘 {{ group.category }} ({{ group.items.length }})
+                  📘 {{ group.category }} ({{ group.totalItems }})
                 </summary>
-                <div style="padding: 15px;">
-                  @for (item of group.items; track item) {
-                    <label style="display: block; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f1f2f6'" onmouseout="this.style.background='transparent'">
-                      <input type="checkbox" 
-                            [checked]="selectedRas().includes(item)"
-                            (change)="toggleRa(item)"
-                            style="margin-right: 10px; transform: scale(1.2);">
-                      <span style="font-size: 0.95rem;">{{ item }}</span>
-                    </label>
+                <div style="padding: 15px; counter-reset: item-counter;">
+                  @for (sub of group.subgroups; track sub.title) {
+                    @if (sub.title) {
+                      <h5 style="color: #34495e; border-bottom: 1px solid #bdc3c7; padding-bottom: 5px; margin-top: 10px; margin-bottom: 10px;">
+                        Módulo {{ sub.title }}
+                      </h5>
+                    }
+                    @for (item of sub.items; track item) {
+                      <label style="display: flex; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f1f2f6'" onmouseout="this.style.background='transparent'">
+                        <input type="checkbox" 
+                              [checked]="selectedRas().includes(item)"
+                              (change)="toggleRa(item)"
+                              style="margin-right: 10px; margin-top: 5px; transform: scale(1.2);">
+                        <span class="continuous-num">
+                          {{ item }}
+                        </span>
+                      </label>
+                    }
                   }
                 </div>
               </details>

@@ -49,4 +49,13 @@ export class PaiService {
   getDownloadUrl(projectId: string, filename: string): string {
     return `${this.apiUrl}/projects/${projectId}/files/${filename}`;
   }
+
+  // Admin
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/admin/users`);
+  }
+
+  updateUserRole(userId: string, role: string): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/admin/users/${userId}/role`, { role });
+  }
 }

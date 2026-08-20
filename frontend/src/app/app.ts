@@ -6,6 +6,8 @@ import { MarkdownComponent } from 'ngx-markdown';
 // @ts-ignore
 import html2pdf from 'html2pdf.js';
 
+import { AuthService } from './services/auth.service';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,6 +17,12 @@ import html2pdf from 'html2pdf.js';
 })
 export class App implements OnInit {
   private paiService = inject(PaiService);
+  authService = inject(AuthService);
+
+  // Estado de Autenticación
+  authMode = signal<'login' | 'register'>('login');
+  authForm = signal({ email: '', password: '', name: '' });
+  authError = signal('');
 
   // Señales para manejar el estado reactivo
   ras = signal<any[]>([]);
@@ -24,6 +32,34 @@ export class App implements OnInit {
   isEditMode = signal<boolean>(false);
   generatedProject = signal<string>('');
   currentProjectId = signal<string | null>(null);
+
+  login() {
+    this.authError.set('');
+    this.authService.login(this.authForm()).subscribe({
+      next: () => {
+        this.loadHistory();
+      },
+      error: (err) => this.authError.set(err.error?.error || 'Error al iniciar sesión')
+    });
+  }
+
+  register() {
+    this.authError.set('');
+    this.authService.register(this.authForm()).subscribe({
+      next: () => {
+        this.authMode.set('login');
+        this.authError.set('Registro exitoso. Ahora inicia sesión.');
+      },
+      error: (err) => this.authError.set(err.error?.error || 'Error al registrarse')
+    });
+  }
+
+  logout() {
+    this.authService.logout();
+    this.ras.set([]);
+    this.ces.set([]);
+    this.projectsHistory.set([]);
+  }
 
   toggleEditMode() {
     this.isEditMode.set(!this.isEditMode());
@@ -152,8 +188,31 @@ export class App implements OnInit {
     }));
   });
 
-  fpProjects = computed(() => this.projectsHistory().filter(p => p.tipoNivel === 'FP_BASICA' || !p.tipoNivel));
-  esoProjects = computed(() => this.projectsHistory().filter(p => p.tipoNivel === 'DIVERSIFICACION_CURRICULAR'));
+  searchQuery = signal<string>('');
+
+  fpProjects = computed(() => {
+    const q = this.searchQuery().toLowerCase();
+    return this.projectsHistory().filter(p => {
+      const matchLevel = p.tipoNivel === 'FP_BASICA' || !p.tipoNivel;
+      if (!matchLevel) return false;
+      if (!q) return true;
+      const titleMatch = p.title?.toLowerCase().includes(q);
+      const textMatch = p.generatedContent?.rawText?.toLowerCase().includes(q);
+      return titleMatch || textMatch;
+    });
+  });
+
+  esoProjects = computed(() => {
+    const q = this.searchQuery().toLowerCase();
+    return this.projectsHistory().filter(p => {
+      const matchLevel = p.tipoNivel === 'DIVERSIFICACION_CURRICULAR';
+      if (!matchLevel) return false;
+      if (!q) return true;
+      const titleMatch = p.title?.toLowerCase().includes(q);
+      const textMatch = p.generatedContent?.rawText?.toLowerCase().includes(q);
+      return titleMatch || textMatch;
+    });
+  });
 
   t = computed(() => {
     if (this.language() === 'catalan') {
@@ -332,8 +391,22 @@ export class App implements OnInit {
   });
 
   // Historial
-  currentView = signal<'generator' | 'history' | 'taller'>('generator');
+  // Vistas e Historial
+  currentView = signal<'generator' | 'history' | 'taller' | 'admin'>('generator');
   projectsHistory = signal<any[]>([]);
+
+  // Admin
+  usersList = signal<any[]>([]);
+
+  loadUsers() {
+    this.paiService.getUsers().subscribe(users => this.usersList.set(users));
+  }
+
+  approveUser(userId: string) {
+    this.paiService.updateUserRole(userId, 'teacher').subscribe(() => {
+      this.loadUsers();
+    });
+  }
 
   constructor() {
     // Restaurar estado guardado
@@ -357,15 +430,19 @@ export class App implements OnInit {
 
     effect(() => {
       const currentLang = this.language();
-      this.paiService.getRas(currentLang).subscribe((res) => this.ras.set(res));
-      this.paiService.getCes(currentLang).subscribe((res) => this.ces.set(res));
+      const user = this.authService.currentUser();
+      if (user) {
+        this.paiService.getRas(currentLang).subscribe((res) => this.ras.set(res));
+        this.paiService.getCes(currentLang).subscribe((res) => this.ces.set(res));
+        this.paiService.getProjects().subscribe((res) => this.projectsHistory.set(res));
+      }
     });
-
-    this.paiService.getProjects().subscribe((res) => this.projectsHistory.set(res));
   }
 
   ngOnInit() {
-    this.loadHistory();
+    if (this.authService.isAuthenticated()) {
+      this.loadHistory();
+    }
     // Prevenir que Chrome/Safari intente restaurar el scroll de la sesión anterior al refrescar
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -394,7 +471,7 @@ export class App implements OnInit {
     });
   }
 
-  switchView(view: 'generator' | 'taller' | 'history') {
+  switchView(view: 'generator' | 'taller' | 'history' | 'admin') {
     this.currentView.set(view);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

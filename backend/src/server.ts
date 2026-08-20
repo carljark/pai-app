@@ -5,6 +5,10 @@ import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
 
+import { authMiddleware, JWT_SECRET } from './auth';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -15,6 +19,15 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db')
   .catch(err => console.error(err));
 
 // --- Esquemas de MongoDB ---
+const UserSchema = new mongoose.Schema({
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  name: { type: String, required: true },
+  role: { type: String, enum: ['pending', 'teacher', 'admin'], default: 'pending' },
+  createdAt: { type: Date, default: Date.now }
+});
+const User = mongoose.model('User', UserSchema);
+
 const ProjectSchema = new mongoose.Schema({
   title: String,
   modules: [String],
@@ -26,9 +39,79 @@ const ProjectSchema = new mongoose.Schema({
     rawText: String,
     jsonStructure: Object
   },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   createdAt: { type: Date, default: Date.now }
 });
 const Project = mongoose.model('Project', ProjectSchema);
+
+// Aplicar middleware de autenticación a toda la API
+app.use('/api', authMiddleware);
+
+// Endpoint Auth: Registrar
+app.post('/api/auth/register', async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    const existingUser = await User.findOne({ email });
+    if (existingUser) return res.status(400).json({ error: 'El email ya está registrado' });
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    const newUser = new User({ name, email, password: hashedPassword });
+    await newUser.save();
+    res.json({ message: 'Usuario registrado correctamente' });
+  } catch (err) {
+    res.status(500).json({ error: 'Error al registrar usuario' });
+  }
+});
+
+// Endpoint Auth: Login
+app.post('/api/auth/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).json({ error: 'Credenciales inválidas' });
+
+    const validPassword = await bcrypt.compare(password, user.password);
+    if (!validPassword) return res.status(400).json({ error: 'Credenciales inválidas' });
+
+    const token = jwt.sign({ _id: user._id, role: user.role, name: user.name }, JWT_SECRET, { expiresIn: '7d' });
+    res.json({ token, user: { name: user.name, email: user.email, role: user.role } });
+  } catch (err) {
+    res.status(500).json({ error: 'Error al iniciar sesión' });
+  }
+});
+
+// Middleware de roles
+const requireAdmin = (req: any, res: any, next: any) => {
+  if (req.user?.role !== 'admin') return res.status(403).json({ error: 'Requiere permisos de administrador' });
+  next();
+};
+
+const requireApproved = (req: any, res: any, next: any) => {
+  if (req.user?.role === 'pending') return res.status(403).json({ error: 'Tu cuenta está pendiente de aprobación por un administrador.' });
+  next();
+};
+
+// Endpoints Admin: Gestión de Usuarios
+app.get('/api/admin/users', requireAdmin, async (req, res) => {
+  try {
+    const users = await User.find().select('-password');
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: 'Error obteniendo usuarios' });
+  }
+});
+
+app.put('/api/admin/users/:id/role', requireAdmin, async (req, res) => {
+  try {
+    const { role } = req.body;
+    await User.findByIdAndUpdate(req.params.id, { role });
+    res.json({ message: 'Rol actualizado' });
+  } catch (err) {
+    res.status(500).json({ error: 'Error actualizando rol' });
+  }
+});
 
 // Modelo de Resultados de Aprendizaje (BOE)
 const RaSchema = new mongoose.Schema({
@@ -140,79 +223,17 @@ app.get('/api/ces', async (req, res) => {
 });
 
 // Sembrado inicial de datos (Seeder)
-async function seedDB() {
-  const count = await RA.countDocuments();
-  if (count > 0) {
-    console.log('✅ Base de datos ya inicializada. Omitiendo seed.');
-    return;
-  }
-  await RA.deleteMany({}); // Purgar mock data anterior
-  await RA.insertMany([
-    // Preparación del entorno profesional
-    { id: 'RA_PEP_1', module: 'Preparación del entorno profesional', description: '1. Muestra una imagen personal y profesional adecuada en el entorno de trabajo relacionándola con la higiene corporal y la estética personal.' },
-    { id: 'RA_PEP_2', module: 'Preparación del entorno profesional', description: '2. Prepara las instalaciones, aplicando las técnicas de higienización.' },
-    { id: 'RA_PEP_3', module: 'Preparación del entorno profesional', description: '3. Recepciona material de peluquería y estética, identificando sus características y aplicaciones.' },
-    { id: 'RA_PEP_4', module: 'Preparación del entorno profesional', description: '4. Acomoda y protege al cliente en función de las características del servicio previsto, aplicando las técnicas y las normas de comportamiento apropiadas en condiciones de calidad, higiene y seguridad.' },
-    // Cuidados estéticos básicos de uñas
-    { id: 'RA_CEN_1', module: 'Cuidados estéticos básicos de uñas', description: '1. Prepara equipos, útiles y productos de manicura y pedicura, reconociendo sus características y aplicaciones.' },
-    { id: 'RA_CEN_2', module: 'Cuidados estéticos básicos de uñas', description: '2. Observa las uñas, reconociendo las alteraciones más relevantes.' },
-    { id: 'RA_CEN_3', module: 'Cuidados estéticos básicos de uñas', description: '3. Aplica técnicas básicas de manicura, relacionando las características morfológicas de las manos y de las uñas con la forma final de éstas últimas.' },
-    { id: 'RA_CEN_4', module: 'Cuidados estéticos básicos de uñas', description: '4. Aplica técnicas básicas de pedicura, relacionando las características morfológicas de los pies y de las uñas con la forma final de éstas últimas.' },
-    // Maquillaje
-    { id: 'RA_MAQ_1', module: 'Maquillaje', description: '1. Prepara útiles y productos de maquillaje, reconociendo sus características y aplicaciones.' },
-    { id: 'RA_MAQ_2', module: 'Maquillaje', description: '2. Prepara la piel del cliente, aplicando técnicas de higiene y protección.' },
-    { id: 'RA_MAQ_3', module: 'Maquillaje', description: '3. Aplica técnicas de maquillaje social, relacionado el tipo de maquillaje con las necesidades del cliente.' },
-    { id: 'RA_MAQ_4', module: 'Maquillaje', description: '4. Realiza maquillajes básicos de fantasía facial, determinando la armonía estética y cromática de los mismos.' },
-    // Comunicación y sociedad I (9 RAs)
-    { id: 'CE_CS1_1', module: 'Comunicación y sociedad I', description: '1. Valora la importancia de la comunicación oral y escrita, reconociendo su papel en situaciones de aprendizaje y en su entorno social y profesional.' },
-    { id: 'CE_CS1_2', module: 'Comunicación y sociedad I', description: '2. Comprende textos orales identificando la intención comunicativa y el sentido global del mensaje.' },
-    { id: 'CE_CS1_3', module: 'Comunicación y sociedad I', description: '3. Utiliza estrategias comunicativas para interpretar y comunicar información oral en lengua castellana, aplicando los principios de la escucha activa, estrategias sencillas de composición y las normas lingüísticas básicas.' },
-    { id: 'CE_CS1_4', module: 'Comunicación y sociedad I', description: '4. Comprende textos escritos extraídos de su entorno personal y profesional.' },
-    { id: 'CE_CS1_5', module: 'Comunicación y sociedad I', description: '5. Redacta textos escritos sencillos relacionados con su entorno académico y profesional.' },
-    { id: 'CE_CS1_6', module: 'Comunicación y sociedad I', description: '6. Utiliza estrategias para comunicar información oral en lengua inglesa, elaborando presentaciones orales de poca extensión, bien estructuradas, relativas a situaciones habituales de comunicación cotidiana y frecuente de ámbito personal o profesional.' },
-    { id: 'CE_CS1_7', module: 'Comunicación y sociedad I', description: '7. Participa en conversaciones en lengua inglesa utilizando un lenguaje sencillo y claro en situaciones habituales frecuentes del ámbito personal o profesional, activando estrategias de comunicación básicas.' },
-    { id: 'CE_CS1_8', module: 'Comunicación y sociedad I', description: '8. Elabora textos escritos en lengua inglesa, breves y sencillos de situaciones de comunicación habituales y frecuentes del ámbito personal o profesional, aplicando estrategias de lectura comprensiva y desarrollando estrategias estructuradas de composición.' },
-    { id: 'CE_CS1_9', module: 'Comunicación y sociedad I', description: '9. Utiliza de forma guiada las tecnologías de la información y la comunicación.' },
-    // Ciencias aplicadas I
-    { id: 'CE_CA1_1', module: 'Ciencias aplicadas I', description: '1. Resuelve problemas matemáticos en situaciones cotidianas, utilizando los elementos básicos del lenguaje matemático y sus operaciones.' },
-    { id: 'CE_CA1_2', module: 'Ciencias aplicadas I', description: '2. Reconoce las instalaciones y el material de laboratorio.' },
-    { id: 'CE_CA1_3', module: 'Ciencias aplicadas I', description: '3. Identifica la materia y la energía, valorando sus usos.' },
-    { id: 'CE_CA1_4', module: 'Ciencias aplicadas I', description: '4. Reconoce los cambios en la materia, relacionándolos con su estructura térmica.' },
-    { id: 'CE_CA1_5', module: 'Ciencias aplicadas I', description: '5. Identifica las partes de la célula y sus funciones.' },
-    { id: 'CE_CA1_6', module: 'Ciencias aplicadas I', description: '6. Reconoce hábitos de vida saludables.' },
-    { id: 'CE_CA1_7', module: 'Ciencias aplicadas I', description: '7. Relaciona la salud con el medio ambiente.' },
-    // Depilación mecánica y decoloración del vello superfluo
-    { id: 'RA_DEP_1', module: 'Depilación mecánica y decoloración del vello superfluo', description: '1. Observa las características del pelo y de la zona a tratar, relacionándolo con las técnicas que pueden ser empleadas.' },
-    { id: 'RA_DEP_2', module: 'Depilación mecánica y decoloración del vello superfluo', description: '2. Prepara equipos, útiles y productos de depilación y decoloración, reconociendo sus características y aplicaciones.' },
-    { id: 'RA_DEP_3', module: 'Depilación mecánica y decoloración del vello superfluo', description: '3. Depila de forma mecánica, relacionando la técnica seleccionada con los efectos finales.' },
-    { id: 'RA_DEP_4', module: 'Depilación mecánica y decoloración del vello superfluo', description: '4. Decolora el vello, reconociendo el efecto de los productos sobre el vello y la piel.' },
-    // Lavado y cambios de forma del cabello
-    { id: 'RA_LCC_1', module: 'Lavado y cambios de forma del cabello', description: '1. Observa el estado del cuero cabelludo y cabello, reconociendo las alteraciones más relevantes.' },
-    { id: 'RA_LCC_2', module: 'Lavado y cambios de forma del cabello', description: '2. Prepara equipos y útiles de lavado y cambios de forma, reconociendo sus características y aplicaciones.' },
-    { id: 'RA_LCC_3', module: 'Lavado y cambios de forma del cabello', description: '3. Lava/acondiciona el cabello, relacionándolo con las características del mismo.' },
-    { id: 'RA_LCC_4', module: 'Lavado y cambios de forma del cabello', description: '4. Cambia la forma del cabello de manera temporal, relacionando las técnicas de cambios temporal seleccionada con el efecto final.' },
-    { id: 'RA_LCC_5', module: 'Lavado y cambios de forma del cabello', description: '5. Cambia la forma del cabello de manera permanente, relacionando las técnicas de cambio permanente seleccionadas con el efecto final.' },
-    // Cambio de color del cabello
-    { id: 'RA_CCC_1', module: 'Cambio de color del cabello', description: '1. Prepara equipos y útiles de cambio de color reconociendo sus características y aplicaciones.' },
-    { id: 'RA_CCC_2', module: 'Cambio de color del cabello', description: '2. Decolora el cabello reconociendo el efecto de los productos sobre el cabello.' },
-    { id: 'RA_CCC_3', module: 'Cambio de color del cabello', description: '3. Colorea el conjunto del cabello, relacionando la técnica seleccionada con los efectos finales.' },
-    { id: 'RA_CCC_4', module: 'Cambio de color del cabello', description: '4. Colorea parcialmente el cabello, relacionando la técnica seleccionada con los efectos finales.' },
-    // Atención al cliente
-    { id: 'RA_ATC_1', module: 'Atención al cliente', description: '1. Atiende a posibles clientes, reconociendo las diferentes técnicas de comunicación.' },
-    { id: 'RA_ATC_2', module: 'Atención al cliente', description: '2. Comunica al posible cliente las diferentes posibilidades del servicio, justificándolas desde el punto de vista técnico.' },
-    // Comunicación y sociedad II
-    { id: 'CE_CS2_1', module: 'Comunicación y sociedad II', description: '1. Utiliza estrategias de comunicación para interpretar y comunicar información oral en diferentes contextos.' },
-    // Ciencias aplicadas II
-    { id: 'CE_CA2_1', module: 'Ciencias aplicadas II', description: '1. Aplica métodos científicos y matemáticos para resolver problemas del entorno profesional y social.' }
-  ]);
-  console.log('✅ Base de datos inicializada y actualizada con el currículo del BOE (FPB).');
-}
-mongoose.connection.once('open', () => seedDB());
+import { runMigrations } from './migrations/runner';
+
+mongoose.connection.once('open', () => {
+  // Ahora usamos el motor de migraciones
+  runMigrations();
+});
 
 // Endpoint 2: Historial de Proyectos
-app.get('/api/projects', async (req, res) => {
+app.get('/api/projects', async (req: any, res) => {
   try {
-    const projects = await Project.find().sort({ createdAt: -1 });
+    const projects = await Project.find().populate('userId', 'name').sort({ createdAt: -1 });
     res.json(projects);
   } catch (error) {
     console.error("Error al obtener proyectos:", error);
@@ -221,7 +242,7 @@ app.get('/api/projects', async (req, res) => {
 });
 
 // Endpoint 3: Generar y Guardar Proyecto con Gemini
-app.post('/api/projects/generate', async (req, res) => {
+app.post('/api/projects/generate', requireApproved, async (req: any, res) => {
   try {
     const { modules, selectedRas, methodology, tipoNivel, courseLevel } = req.body;
     
@@ -336,6 +357,7 @@ RECUERDA: Genera la respuesta ÍNTEGRAMENTE en idioma ${lang.toUpperCase()}.`;
       ras: selectedRas,
       methodology,
       tipoNivel: tipoNivel || 'FP_BASICA',
+      userId: (req as any).user?._id,
       generatedContent: {
         rawText: response.text
       }

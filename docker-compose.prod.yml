@@ -18,6 +18,9 @@ services:
       - PORT=3000
       - MONGO_URI=mongodb://mongodb:27017/pai_db
       - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
     ports:
       - "3000:3000" # Este es el puerto que Nginx escuchará internamente
     volumes:

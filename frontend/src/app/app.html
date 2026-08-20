@@ -1,14 +1,59 @@
 <main style="max-width: 1400px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
+  @if (!authService.currentUser()) {
+    <div style="max-width: 400px; margin: 100px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 style="text-align: center; color: #2c3e50; margin-top: 0;">Plataforma PAI</h2>
+      <p style="text-align: center; color: #7f8c8d; margin-bottom: 25px;">
+        {{ authMode() === 'login' ? 'Inicia sesión para continuar' : 'Crea una cuenta' }}
+      </p>
+
+      @if (authError()) {
+        <div style="background: #fde5e5; color: #c0392b; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 0.9rem; text-align: center;">
+          {{ authError() }}
+        </div>
+      }
+
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        @if (authMode() === 'register') {
+          <input type="text" [ngModel]="authForm().name" (ngModelChange)="authForm.set({ ...authForm(), name: $event })" placeholder="Nombre completo" style="padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 1rem;">
+        }
+        <input type="email" [ngModel]="authForm().email" (ngModelChange)="authForm.set({ ...authForm(), email: $event })" placeholder="Correo electrónico" style="padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 1rem;">
+        <input type="password" [ngModel]="authForm().password" (ngModelChange)="authForm.set({ ...authForm(), password: $event })" placeholder="Contraseña" style="padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 1rem;">
+        
+        <button (click)="authMode() === 'login' ? login() : register()" style="background: #2980b9; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.2s;">
+          {{ authMode() === 'login' ? 'Entrar' : 'Registrarse' }}
+        </button>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button (click)="authMode.set(authMode() === 'login' ? 'register' : 'login')" style="background: none; border: none; color: #2980b9; text-decoration: underline; cursor: pointer; font-size: 0.95rem;">
+          {{ authMode() === 'login' ? '¿No tienes cuenta? Regístrate' : '¿Ya tienes cuenta? Inicia sesión' }}
+        </button>
+      </div>
+    </div>
+  } @else {
   <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; flex-wrap: wrap; gap: 20px;">
     <div>
       <h1 style="color: #2c3e50; font-size: 2.2rem; margin: 0;">Plataforma de Proyectos Interdisciplinares</h1>
     </div>
     
     <div style="display: flex; gap: 15px; align-items: center;">
-      <select [ngModel]="language()" (ngModelChange)="language.set($event)" style="padding: 8px 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px; background: white; cursor: pointer; color: #2c3e50; font-weight: bold;">
-        <option value="castellano">🇪🇸 Castellano</option>
-        <option value="catalan">🔴🟡 Català</option>
-      </select>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        @if (language() === 'castellano') {
+          <span style="font-size: 1.5rem;">🇪🇸</span>
+        } @else {
+          <svg width="24" height="16" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd; border-radius: 2px;">
+            <rect width="900" height="600" fill="#fcd116"/>
+            <rect width="900" height="67" y="67" fill="#ce1126"/>
+            <rect width="900" height="67" y="200" fill="#ce1126"/>
+            <rect width="900" height="67" y="333" fill="#ce1126"/>
+            <rect width="900" height="67" y="467" fill="#ce1126"/>
+          </svg>
+        }
+        <select [ngModel]="language()" (ngModelChange)="language.set($event)" style="padding: 8px 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px; background: white; cursor: pointer; color: #2c3e50; font-weight: bold;">
+          <option value="castellano">Castellano</option>
+          <option value="catalan">Català</option>
+        </select>
+      </div>
       
       @if (currentView() === 'taller') {
         <button (click)="switchView('generator')" style="background: #bdc3c7; color: #2c3e50; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold;">
@@ -18,13 +63,23 @@
       <button (click)="toggleView()" style="background: #2c3e50; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
         {{ currentView() === 'history' ? t().backGenerator : t().historyBtn }}
       </button>
+      @if (authService.currentUser()?.role === 'admin') {
+        <button (click)="switchView('admin'); loadUsers()" style="background: #f39c12; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
+          ⚙️ Admin
+        </button>
+      }
+      <button (click)="logout()" style="background: #e74c3c; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
+        Salir
+      </button>
     </div>
   </header>
 
   @if (currentView() === 'history') {
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
-      <h2 style="color: #2c3e50; margin-top: 0;">{{ t().historyTitle }}</h2>
-      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="color: #2c3e50; margin: 0;">{{ t().historyTitle }}</h2>
+        <input type="text" [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)" placeholder="🔍 Buscar por palabra clave..." style="padding: 10px 15px; border: 1px solid #bdc3c7; border-radius: 6px; width: 300px; font-size: 1rem;">
+      </div>
       @if (projectsHistory().length === 0) {
         <p>{{ t().noProjects }}</p>
       } @else {
@@ -51,7 +106,7 @@
                   <div>
                     <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
                     <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
-                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }}
+                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }} | Por: {{ proj.userId?.name || 'Anónimo' }}
                     </p>
                   </div>
                   <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
@@ -73,7 +128,7 @@
                   <div>
                     <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
                     <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
-                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }}
+                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }} | Por: {{ proj.userId?.name || 'Anónimo' }}
                     </p>
                   </div>
                   <button (click)="viewPastProject(proj)" style="background: #9b59b6; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
@@ -91,6 +146,12 @@
   }
 
   @if (currentView() === 'generator') {
+    @if (authService.currentUser()?.role === 'pending') {
+      <div style="background: #fff3cd; color: #856404; padding: 20px; border-radius: 8px; border: 1px solid #ffeeba; text-align: center; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">⏳ Cuenta pendiente de aprobación</h3>
+        <p>Tu cuenta ha sido registrada pero aún no tienes permisos para generar nuevos proyectos. Por favor, avisa a un administrador para que te active. Mientras tanto, puedes explorar el <b>Archivo</b> para ver los proyectos de tus compañeros.</p>
+      </div>
+    } @else {
     <section style="background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       <h2 style="margin-top: 0; color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
         {{ t().configTitle }}
@@ -211,6 +272,7 @@
         </div>
       </div>
     </section>
+    }
   }
 
   <!-- Resultados de la IA -->
@@ -306,4 +368,35 @@
       </section>
     }
 
+
+  @if (currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
+    <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
+      <h2 style="color: #2c3e50; margin-top: 0;">Panel de Administración: Usuarios Registrados</h2>
+      <button (click)="loadUsers()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;">🔄 Refrescar lista</button>
+      
+      <div style="display: grid; gap: 15px;">
+        @for (u of usersList(); track u._id) {
+          <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
+            <div>
+              <strong style="color: #2c3e50; font-size: 1.1rem;">{{ u.name }}</strong> ({{ u.email }})
+              <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
+                Rol actual: 
+                <span [style.color]="u.role === 'admin' ? '#e74c3c' : (u.role === 'teacher' ? '#27ae60' : '#f39c12')" style="font-weight: bold;">
+                  {{ u.role | uppercase }}
+                </span>
+                | Registrado el: {{ u.createdAt | date:'shortDate' }}
+              </p>
+            </div>
+            
+            @if (u.role === 'pending') {
+              <button (click)="approveUser(u._id)" style="background: #27ae60; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s;" onmouseover="this.style.background='#219653'" onmouseout="this.style.background='#27ae60'">
+                ✅ Aprobar (Hacer Profesor)
+              </button>
+            }
+          </div>
+        }
+      </div>
+    </section>
+  }
+  }
 </main>

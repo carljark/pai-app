@@ -134,6 +134,19 @@ export class App implements OnInit {
     });
   });
 
+  groupedSelectedItems = computed(() => {
+    const list = this.selectedItemsDetails();
+    const groups: { [key: string]: typeof list } = {};
+    for (const item of list) {
+      if (!groups[item.subject]) groups[item.subject] = [];
+      groups[item.subject].push(item);
+    }
+    return Object.keys(groups).map(key => ({
+      subject: key,
+      items: groups[key]
+    }));
+  });
+
   fpProjects = computed(() => this.projectsHistory().filter(p => p.tipoNivel === 'FP_BASICA' || !p.tipoNivel));
   esoProjects = computed(() => this.projectsHistory().filter(p => p.tipoNivel === 'DIVERSIFICACION_CURRICULAR'));
 

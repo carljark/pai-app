@@ -144,10 +144,10 @@
         <h3 style="color: #34495e;">{{ t().curricularSelection }}</h3>
         <p style="color: #7f8c8d; font-size: 0.95rem;">{{ tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO }}</p>
         
-        <div style="display: flex; gap: 30px; align-items: flex-start;">
+        <div style="display: block; padding-bottom: 80px;">
           
           <!-- Lado Izquierdo: Acordeones de Selección -->
-          <div style="flex: 1; display: grid; gap: 15px;">
+          <div style="display: grid; gap: 15px;">
             @for (group of groupedItems(); track group.category) {
               <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 15px; background: #e8f4f8; font-weight: bold; cursor: pointer; user-select: none; color: #2c3e50;">
@@ -168,33 +168,42 @@
             }
           </div>
 
-          <!-- Lado Derecho: Carrito Fijo (Sticky) -->
-          <div style="width: 350px; position: sticky; top: 20px; background: white; border: 1px solid #bdc3c7; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-            <h4 style="margin-top: 0; margin-bottom: 15px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
-              🎯 {{ t().selectedItemsTitle }} ({{ selectedItemsDetails().length }})
-            </h4>
+          <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
+          <details open style="position: fixed; bottom: 20px; right: 20px; width: 340px; max-width: calc(100vw - 40px); background: white; border: 1px solid #bdc3c7; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); z-index: 9999; overflow: hidden;">
+            <summary style="padding: 15px 20px; background: #2c3e50; color: white; font-weight: bold; font-size: 1.05rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+              <span>🎯 {{ t().selectedItemsTitle }} ({{ selectedItemsDetails().length }})</span>
+              <span style="font-size: 0.8rem; opacity: 0.8;">▲/▼</span>
+            </summary>
 
-            <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; max-height: 400px; overflow-y: auto;">
-              @for (sel of selectedItemsDetails(); track sel.fullDesc) {
-                <li style="margin-bottom: 12px; font-size: 0.85rem; border-bottom: 1px solid #eee; padding-bottom: 8px;">
-                  <strong style="color: #3498db; display: block; margin-bottom: 3px;">{{ sel.subject }}</strong>
-                  <span style="color: #7f8c8d;" [title]="sel.fullDesc">{{ sel.shortDesc }}</span>
-                </li>
-              }
-              @if (selectedItemsDetails().length === 0) {
-                <li style="color: #95a5a6; font-size: 0.9rem; font-style: italic; text-align: center; padding: 20px 0;">
-                  {{ t().noItemsSelected }}
-                </li>
-              }
-            </ul>
+            <div style="padding: 20px;">
+              <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; max-height: 40vh; overflow-y: auto;">
+                @for (group of groupedSelectedItems(); track group.subject) {
+                  <li style="margin-bottom: 12px; font-size: 0.85rem; border-bottom: 1px solid #eee; padding-bottom: 8px;">
+                    <strong style="color: #3498db; display: block; margin-bottom: 6px;">{{ group.subject }}</strong>
+                    <ul style="list-style: none; padding-left: 5px; margin: 0;">
+                      @for (item of group.items; track item.fullDesc) {
+                        <li style="color: #7f8c8d; margin-bottom: 6px; padding-left: 10px; border-left: 2px solid #bdc3c7;" [title]="item.fullDesc">
+                          {{ item.shortDesc }}
+                        </li>
+                      }
+                    </ul>
+                  </li>
+                }
+                @if (selectedItemsDetails().length === 0) {
+                  <li style="color: #95a5a6; font-size: 0.9rem; font-style: italic; text-align: center; padding: 20px 0;">
+                    {{ t().noItemsSelected }}
+                  </li>
+                }
+              </ul>
 
-            <button (click)="generateProject()" 
-                    [disabled]="isGenerating() || selectedItemsDetails().length === 0" 
-                    [style.opacity]="selectedItemsDetails().length === 0 ? '0.6' : '1'"
-                    style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
-              {{ isGenerating() ? t().generatingBtn : t().generateBtn }}
-            </button>
-          </div>
+              <button (click)="generateProject()" 
+                      [disabled]="isGenerating() || selectedItemsDetails().length === 0" 
+                      [style.opacity]="selectedItemsDetails().length === 0 ? '0.6' : '1'"
+                      style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
+                {{ isGenerating() ? t().generatingBtn : t().generateBtn }}
+              </button>
+            </div>
+          </details>
 
         </div>
       </div>

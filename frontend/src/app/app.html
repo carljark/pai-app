@@ -7,7 +7,7 @@
     <div style="display: flex; gap: 15px; align-items: center;">
       <select [ngModel]="language()" (ngModelChange)="language.set($event)" style="padding: 8px 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px; background: white; cursor: pointer; color: #2c3e50; font-weight: bold;">
         <option value="castellano">🇪🇸 Castellano</option>
-        <option value="catalan">󠁥󠁳󠁣󠁴󠁿 Català</option>
+        <option value="catalan">🔴🟡 Català</option>
       </select>
       
       @if (currentView() === 'taller') {
@@ -122,6 +122,7 @@
             <select [ngModel]="methodology()" (ngModelChange)="methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
               <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
               <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
+              <option value="Aprendizaje Basado en Problemas">Aprendizaje Basado en Problemas</option>
             </select>
           </div>
           <div style="flex: 1;">
@@ -149,8 +150,8 @@
           <div style="display: grid; gap: 15px;">
             @for (group of groupedItems(); track group.category) {
               <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-                <summary style="padding: 15px; background: #e8f4f8; font-weight: bold; cursor: pointer; user-select: none; color: #2c3e50;">
-                  📘 {{ group.category }} ({{ group.totalItems }})
+                <summary [style.background]="getCategoryStyle(group.category).bg" [style.color]="getCategoryStyle(group.category).text" style="padding: 15px; font-weight: bold; cursor: pointer; user-select: none;">
+                  {{ getCategoryStyle(group.category).icon }} {{ group.category }} ({{ group.totalItems }})
                 </summary>
                 <div style="padding: 15px;">
                   @for (item of group.items; track item.text) {

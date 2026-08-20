@@ -44,3 +44,18 @@ Actualmente, el archivo `docker-compose.yml` está optimizado para **desarrollo 
 *   Compilará Angular estáticamente (`ng build`).
 *   Servirá el frontend mediante un contenedor **Nginx** de alto rendimiento (Reverse Proxy).
 *   Conectará el backend a modelos de lenguaje locales (LLM) alojados en el servidor en lugar de usar la API comercial de Gemini.
+
+## Motor Pedagógico e Inteligencia Artificial
+
+La plataforma no solo junta textos de un formulario, sino que utiliza a Gemini como un "Motor Pedagógico" alineado con la **LOMLOE**.
+
+El comportamiento de la IA cambia radicalmente dependiendo de la metodología seleccionada en la interfaz:
+*   **ABP (Aprendizaje Basado en Proyectos):** La IA asume que el objetivo principal es planificar y desarrollar un **producto final tangible** (un objeto, una campaña, un dossier).
+*   **ABR (Aprendizaje Basado en Retos):** La IA orienta la narrativa hacia un desafío del mundo real (frecuentemente ligado a los ODS), requiriendo una **solución accionable y comunitaria**.
+*   **Aprendizaje Basado en Problemas:** La IA modifica el enfoque hacia la **investigación teórica-práctica**. Plantea un interrogante inicial donde los alumnos deben deducir qué necesitan investigar y cómo aplicar el conocimiento (los Resultados de Aprendizaje) para resolverlo.
+
+### 💡 Personalización del Centro (La "Biblia Metodológica")
+La arquitectura del backend incluye un archivo especial llamado `backend/knowledge_base.md`. 
+Este archivo actúa como un marco de RAG (Retrieval-Augmented Generation) que se inyecta en cada petición a la IA. 
+
+Si el claustro decide que sus metodologías o herramientas de evaluación deben seguir unas fases muy específicas (ej: *"En nuestro centro, el Aprendizaje Basado en Problemas siempre debe tener una fase llamada 'Divergencia'"*), basta con escribirlo en texto plano en ese archivo `knowledge_base.md`. La IA lo leerá e incorporará esas reglas automáticamente en todos los nuevos proyectos generados, **sin necesidad de reprogramar el código**.

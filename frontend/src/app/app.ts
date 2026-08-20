@@ -263,6 +263,25 @@ export class App implements OnInit {
     }
   });
 
+  getCategoryStyle(category: string): { bg: string, text: string, icon: string } {
+    const name = category.toLowerCase();
+    if (name.includes('ciencia') || name.includes('ciència') || 
+        name.includes('científico') || name.includes('científic') ||
+        name.includes('biología') || name.includes('biologia') ||
+        name.includes('física') || name.includes('matemática') || name.includes('matemàtique') ||
+        name.includes('tecnología') || name.includes('tecnologia')) {
+      return { bg: '#e8f4f8', text: '#2c3e50', icon: '🔬' }; // Azul clarito (Ciencias)
+    } else if (name.includes('lengua') || name.includes('llengua') || 
+               name.includes('lingüístico') || name.includes('lingüístic') ||
+               name.includes('comunicación') || name.includes('comunicació') ||
+               name.includes('geografía') || name.includes('geografia') ||
+               name.includes('social')) {
+      return { bg: '#fcf3cf', text: '#7d6608', icon: '📚' }; // Amarillo/Naranja clarito (Letras/Sociales)
+    } else {
+      return { bg: '#ebdef0', text: '#512e5f', icon: '📘' }; // Morado clarito (Otros/FP)
+    }
+  }
+
   groupedItems = computed(() => {
     if (this.tipoNivel() === 'FP_BASICA') {
       const list = this.ras();

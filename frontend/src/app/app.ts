@@ -123,14 +123,19 @@ export class App implements OnInit {
   historyTab = signal<'FP_BASICA' | 'ESO'>('FP_BASICA');
 
   selectedItemsDetails = computed(() => {
-    const isFP = this.tipoNivel() === 'FP_BASICA';
-    const sourceList = isFP ? this.ras() : this.ces();
+    // Build a lookup map from the grouped items so we get the exact computed category and index
+    const lookup = new Map<string, { subject: string, index: number }>();
+    for (const group of this.groupedItems()) {
+      for (const item of group.items) {
+        lookup.set(item.text, { subject: group.category, index: item.index });
+      }
+    }
+    
     return this.selectedRas().map(desc => {
-      const item = sourceList.find(x => x.description === desc);
-      const subject = item ? (isFP ? item.module : `${item.area} - ${item.subject}`) : 'Desconocido';
+      const info = lookup.get(desc) || { subject: 'Desconocido', index: 0 };
       let shortDesc = desc.substring(0, 60);
       if (desc.length > 60) shortDesc += '...';
-      return { subject, shortDesc, fullDesc: desc };
+      return { subject: info.subject, index: info.index, shortDesc, fullDesc: desc };
     });
   });
 
@@ -275,31 +280,18 @@ export class App implements OnInit {
       
       return Object.keys(groups).map(key => {
         const moduleItems = groups[key];
-        const subgroupsMap: { [title: string]: string[] } = {};
-        let totalItems = 0;
+        const isMerged = moduleItems.some(ra => ra.module !== key);
+        const finalCategory = isMerged ? key + ' I y II' : key;
         
+        const uniqueTexts: string[] = [];
         for (const ra of moduleItems) {
-          const isMerged = key !== ra.module; // e.g. "Comunicación y sociedad" !== "Comunicación y sociedad I"
-          const title = isMerged ? (ra.module.endsWith('I') ? 'I' : 'II') : '';
-          
-          if (!subgroupsMap[title]) subgroupsMap[title] = [];
-          
-          // Deduplication
-          if (!subgroupsMap[title].includes(ra.description)) {
-            // Check if it exists in subgroup 'I' when we are in 'II'
-            if (title === 'II' && subgroupsMap['I'] && subgroupsMap['I'].includes(ra.description)) {
-              continue; // Skip exact duplicates from module I
-            }
-            subgroupsMap[title].push(ra.description);
-            totalItems++;
+          if (!uniqueTexts.includes(ra.description)) {
+            uniqueTexts.push(ra.description);
           }
         }
         
-        const subgroups = Object.keys(subgroupsMap).map(t => ({ title: t, items: subgroupsMap[t] }));
-        // Sort subgroups so 'I' comes before 'II'
-        subgroups.sort((a, b) => a.title.localeCompare(b.title));
-
-        return { category: key, subgroups, totalItems };
+        const items = uniqueTexts.map((text, idx) => ({ index: idx + 1, text }));
+        return { category: finalCategory, items, totalItems: items.length };
       });
       
     } else {
@@ -313,12 +305,9 @@ export class App implements OnInit {
       }
       
       return Object.keys(groups).map(key => {
-        const uniqueItems = Array.from(new Set(groups[key].map((ce: any) => ce.description)));
-        return {
-          category: key,
-          subgroups: [{ title: '', items: uniqueItems }],
-          totalItems: uniqueItems.length
-        };
+        const uniqueTexts = Array.from(new Set(groups[key].map((ce: any) => ce.description)));
+        const items = uniqueTexts.map((text, idx) => ({ index: idx + 1, text }));
+        return { category: key, items, totalItems: items.length };
       });
     }
   });

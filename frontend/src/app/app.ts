@@ -32,6 +32,7 @@ export class App implements OnInit {
   isEditMode = signal<boolean>(false);
   generatedProject = signal<string>('');
   currentProjectId = signal<string | null>(null);
+  currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
 
   login() {
     this.authError.set('');

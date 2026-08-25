@@ -7,7 +7,7 @@ import path from 'path';
 
 export const generateProject = async (req: any, res: Response) => {
   try {
-    const { modules, selectedRas, methodology, tipoNivel, courseLevel, title } = req.body;
+    const { modules, selectedRas, methodology, tipoNivel, courseLevel, title, language } = req.body;
     
     const settings = await Settings.findOne();
     const { schoolContextStr, intefExamplesContext } = buildContexts(settings);
@@ -20,9 +20,35 @@ export const generateProject = async (req: any, res: Response) => {
     }
 
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
-REGLA CRÍTICA INQUEBRANTABLE:
+REGLA CRÍTICA INQUEBRANTABLE SOBRE EVALUACIÓN:
 Cuando diseñes el proyecto y llegues al apartado de Evaluación, DEBES contemplar los criterios de evaluación aplicables a CADA UNO de los Resultados de Aprendizaje (RA) o Competencias Específicas (CE) seleccionados por el usuario.
 NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODOS han de aparecer obligatoriamente en el proyecto con sus criterios de evaluación correspondientes (debes deducir sus criterios si no se proporcionan, pero siempre en relación al currículo oficial).
+
+REGLA CRÍTICA INQUEBRANTABLE SOBRE EL DETALLE DE ACTIVIDADES/FASES:
+Es ABSOLUTAMENTE CRÍTICO que el apartado de "Actividades" o "Fases del proyecto" sea extremadamente detallado, profundo y minucioso. 
+NO te limites a enumerar las fases brevemente. Para cada fase o actividad, debes especificar claramente:
+- Descripción exhaustiva paso a paso de lo que hará el alumnado.
+- El rol del docente en esa actividad.
+- Metodología y dinámicas de aula (trabajo individual, pequeño grupo, debate, etc.).
+- Entregables o productos intermedios esperados.
+- Materiales, herramientas o recursos concretos que necesitarán.
+Desarrolla el proyecto con un alto nivel de detalle técnico y pedagógico, sin importar lo largo que sea el texto resultante. Un buen proyecto requiere instrucciones ricas y detalladas para que cualquier docente pueda aplicarlo.
+
+REGLA CRÍTICA DE ESTRUCTURA DEL DOCUMENTO:
+Tu respuesta DEBE organizarse estrictamente con los siguientes apartados y subapartados (usa formato Markdown con cabeceras):
+1. IDENTIDAD DEL PROYECTO (Título, Centro, Ciclo formativo, Curso, Estrategia metodológica)
+2. INTEGRACIÓN CURRICULAR (Módulos implicados y resultados de aprendizaje vinculados)
+3. CONTEXTO Y RETO (Necesidad detectada, Conexión con el entorno, Empresa/entidad)
+4. DESARROLLO Y FASES (Secuenciación, Duración estimada, Fases super detalladas)
+5. ACTIVIDAD DEL ALUMNADO (Agrupamiento, Qué investiga/diseña/produce/evalúa)
+6. EVALUACIÓN (Producto final, Formativa, Instrumentos y evidencias del proceso, con TODOS los criterios de los RA/CE)
+7. DIFUSIÓN (Cómo, dónde y a quién se presentará o difundirá el proyecto)
+8. COORDINACIÓN DOCENTE (Cómo se coordinarán los profesores implicados)
+9. VIABILIDAD REAL / RECURSOS NECESARIOS (Presupuesto aproximado, espacios específicos, materiales consumibles, viabilidad temporal)
+
+REGLA DE IDIOMA:
+Es OBLIGATORIO que redactes el proyecto entero en ${language === 'catalan' ? 'Catalán' : 'Castellano'}, ya que el usuario ha solicitado la plataforma en ese idioma.
+
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}`;
     
     const userPrompt = `Diseña la propuesta integrando OBLIGATORIAMENTE todos y cada uno de los siguientes Resultados de Aprendizaje/Competencias:

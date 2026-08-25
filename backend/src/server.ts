@@ -18,6 +18,7 @@ app.use(express.json());
 import { runMigrations } from './migrations/runner';
 
 // Conexión a Base de Datos local
+/* istanbul ignore next */
 if (process.env.NODE_ENV !== 'test') {
   mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db')
     .then(() => {
@@ -38,6 +39,7 @@ app.use('/api/projects', projectRoutes);
 app.use('/api', curriculumRoutes);
 
 const PORT = process.env.PORT || 3000;
+/* istanbul ignore next */
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => console.log(`Backend PAI escuchando en puerto ${PORT}`));
 }

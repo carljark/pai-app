@@ -250,6 +250,9 @@ export class App implements OnInit {
   t = computed(() => {
     if (this.language() === 'catalan') {
       return {
+        logout: 'Sortir',
+        downloadWord: 'Descarregar com a Word',
+        uploadWord: 'Pujar Word editat',
         subtitle: 'Disseny de Projectes d\'Aprenentatge Intermodular',
         backGenerator: '⬅️ Tornar al Generador',
         historyBtn: 'Veure Historial de Projectes',
@@ -275,7 +278,7 @@ export class App implements OnInit {
         selectItemsFP: 'Selecciona els Resultats d\'Aprenentatge que formaran part del disseny.',
         selectItemsESO: 'Selecciona les Competències Específiques que formaran part del disseny.',
         generateBtn: 'Generar Projecte Intermodular',
-        generatingBtn: 'Generant... (pot trigar 1 minut)',
+        generatingBtn: 'Generant... (pot trigar 1-2 minuts)',
         selectedItemsTitle: 'Selecció Actual',
         noItemsSelected: 'Encara no has seleccionat cap ítem.',
         noFP: 'No hi ha projectes de Formació Professional a l\'historial.',
@@ -302,6 +305,9 @@ export class App implements OnInit {
       };
     } else {
       return {
+        logout: 'Salir',
+        downloadWord: 'Bajar como Word',
+        uploadWord: 'Subir Word editado',
         subtitle: 'Diseño de Proyectos de Aprendizaje Intermodular',
         backGenerator: '⬅️ Volver al Generador',
         historyBtn: 'Ver Historial de Proyectos',
@@ -327,7 +333,7 @@ export class App implements OnInit {
         selectItemsFP: 'Selecciona los Resultados de Aprendizaje que formarán part del diseño.',
         selectItemsESO: 'Selecciona las Competencias Específicas que formarán part del diseño.',
         generateBtn: 'Generar Proyecto Intermodular',
-        generatingBtn: 'Generando... (puede tardar 1 minuto)',
+        generatingBtn: 'Generando... (puede tardar 1-2 minutos)',
         selectedItemsTitle: 'Selección Actual',
         noItemsSelected: 'Aún no has seleccionado ningún ítem.',
         noFP: 'No hay proyectos de Formación Profesional en el historial.',

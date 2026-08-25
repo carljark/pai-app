@@ -7,11 +7,12 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
+      exclude: ['src/migrations/**'],
       thresholds: {
-        statements: 70,
-        branches: 30,
-        functions: 70,
-        lines: 70
+        statements: 90,
+        branches: 70,
+        functions: 90,
+        lines: 90
       }
     }
   }

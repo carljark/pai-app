@@ -47,4 +47,26 @@ describe('Admin Endpoints', () => {
     const updatedUser = await User.findById(targetUser._id);
     expect(updatedUser?.role).toBe('teacher');
   });
+
+  it('Errores 404 y 500 en endpoints de admin', async () => {
+    const { token } = await createTestUser('admin', 'admin3@plappin.org');
+    const User = mongoose.model('User');
+
+    // 404
+    const fakeId = new mongoose.Types.ObjectId();
+    const res404 = await request(app).put(`/api/admin/users/${fakeId}/permissions`).set('Authorization', `Bearer ${token}`).send({ role: 'admin' });
+    expect(res404.status).toBe(404);
+
+    // 500 en getUsers
+    const spyFind = vi.spyOn(User, 'find').mockRejectedValueOnce(new Error('DB'));
+    const res500get = await request(app).get('/api/admin/users').set('Authorization', `Bearer ${token}`);
+    expect(res500get.status).toBe(500);
+    spyFind.mockRestore();
+
+    // 500 en updateUserPermissions
+    const spyUpdate = vi.spyOn(User, 'findByIdAndUpdate').mockRejectedValueOnce(new Error('DB'));
+    const res500put = await request(app).put(`/api/admin/users/${fakeId}/permissions`).set('Authorization', `Bearer ${token}`).send({ role: 'teacher' });
+    expect(res500put.status).toBe(500);
+    spyUpdate.mockRestore();
+  });
 });

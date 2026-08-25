@@ -38,12 +38,32 @@ Este repositorio contiene la versión MVP (Fase I) de la Plataforma PAI, diseña
     docker compose down
     ```
 
-## Despliegue en Producción (Próximos Pasos - Fase II)
+## Despliegue en Producción (AWS EC2)
 
-Actualmente, el archivo `docker-compose.yml` está optimizado para **desarrollo ágil** (Hot Reloading). Para desplegar en un servidor de producción real (como un servidor físico en el instituto para la Fase II de IA Local), se creará una arquitectura distinta mediante un `docker-compose.prod.yml` que:
-*   Compilará Angular estáticamente (`ng build`).
-*   Servirá el frontend mediante un contenedor **Nginx** de alto rendimiento (Reverse Proxy).
-*   Conectará el backend a modelos de lenguaje locales (LLM) alojados en el servidor en lugar de usar la API comercial de Gemini.
+La aplicación cuenta con una arquitectura optimizada para producción (usando Nginx como reverse proxy y compilación estática de Angular) definida en el archivo `docker-compose.prod.yml`.
+
+### Pasos para desplegar o actualizar en producción:
+
+1.  **Configurar Variables de Entorno Globales**:
+    En el servidor (EC2), el archivo `.env` debe colocarse **en la raíz del proyecto** (no dentro de la carpeta `backend/`) para que Docker Compose pueda leerlo correctamente. Debe contener, como mínimo:
+    ```env
+    GEMINI_API_KEY=tu_clave_aqui
+    ADMIN_EMAIL=admin@tucentro.edu
+    ADMIN_PASSWORD=contraseña_segura
+    JWT_SECRET=tu_secreto_jwt
+    ```
+
+2.  **Actualizar y levantar el servicio**:
+    Para aplicar los últimos cambios de la rama correspondiente (ej. `develop` o `main`) y reconstruir los contenedores sin detener el servidor bruscamente, ejecuta:
+    ```bash
+    git pull origin develop  # O la rama que uses en producción
+    docker compose -f docker-compose.prod.yml up -d --build
+    ```
+
+3.  **Comandos útiles de mantenimiento**:
+    *   **Reiniciar rápido (sin reconstruir):** `docker compose -f docker-compose.prod.yml restart`
+    *   **Ver logs del backend en vivo:** `docker compose -f docker-compose.prod.yml logs -f backend`
+    *   **Detener la aplicación:** `docker compose -f docker-compose.prod.yml down`
 
 ## Motor Pedagógico e Inteligencia Artificial
 

@@ -252,17 +252,17 @@ export class App implements OnInit {
       return {
         subtitle: 'Disseny de Projectes d\'Aprenentatge Intermodular',
         backGenerator: '⬅️ Tornar al Generador',
-        historyBtn: '📚 Veure Historial de Projectes',
+        historyBtn: 'Veure Historial de Projectes',
         historyTitle: 'Historial de Projectes Generats',
         noProjects: 'No hi ha projectes guardats encara.',
         cross: 'Encreuament',
         generatedOn: 'Generat el',
         status: 'Estat',
-        viewProject: '👁️ Veure Projecte',
+        viewProject: '️ Veure Projecte',
         configTitle: 'Configuració del Disseny',
         whatToDesign: 'Què dissenyaràs avui?',
-        fpBtn: '🔧 Projecte FP Bàsica',
-        esoBtn: '🏫 Situació d\'Aprenentatge (ESO)',
+        fpBtn: ' Projecte FP Bàsica',
+        esoBtn: ' Situació d\'Aprenentatge (ESO)',
         generalConfig: '1. Configuració General',
         methodology: 'Metodologia',
         langLabel: 'Idioma de la Interfície i Sortida',
@@ -274,47 +274,47 @@ export class App implements OnInit {
         curricularSelection: '2. Selecció Curricular',
         selectItemsFP: 'Selecciona els Resultats d\'Aprenentatge que formaran part del disseny.',
         selectItemsESO: 'Selecciona les Competències Específiques que formaran part del disseny.',
-        generateBtn: '✨ Generar Projecte Intermodular',
-        generatingBtn: '⚙️ Generant... (pot trigar 1 minut)',
+        generateBtn: 'Generar Projecte Intermodular',
+        generatingBtn: 'Generant... (pot trigar 1 minut)',
         selectedItemsTitle: 'Selecció Actual',
         noItemsSelected: 'Encara no has seleccionat cap ítem.',
         noFP: 'No hi ha projectes de Formació Professional a l\'historial.',
         noESO: 'No hi ha Situacions d\'Aprenentatge de Diversificació a l\'historial.',
         workshopTitle: 'Taller de Projectes',
-        endEdit: '👁️ Acabar Edició',
-        manualEdit: '✏️ Editar Manualment',
+        endEdit: '️ Acabar Edició',
+        manualEdit: '️ Editar Manualment',
         resources: 'Recursos del Projecte',
         dragFiles: 'Arrossega arxius aquí o fes clic',
         uploading: 'Pujant...',
         deleteFile: 'Esborrar arxiu',
         fileUploaded: 'Arxiu pujat',
-        saveDraft: '💾 Guardar Esborrany',
-        publish: '✅ Validar i Publicar',
-        exportPDF: '📄 Exportar PDF',
+        saveDraft: 'Guardar Esborrany',
+        publish: ' Validar i Publicar',
+        exportPDF: ' Exportar PDF',
         aiAssistant: 'Assistent IA',
         aiIntro: 'Hola! Soc el teu assistent pedagògic. Segueix aquests passos per editar el projecte:',
         aiStep1: '1. Escriu a sota què vols canviar (ex. "Fes-ho més curt").',
         aiStep2: '2. Selecciona/Subratlla el text a modificar en el llenç de l\'esquerra.',
-        aiStep3: '3. Fes clic a "✨ Reescriure amb IA".',
+        aiStep3: '3. Fes clic a "Reescriure amb IA".',
         aiPlaceholder: 'Demana a la IA que modifiqui el projecte...',
-        rewriteBtn: '✨ Reescriure amb IA',
-        thinking: '✨ Pensant...'
+        rewriteBtn: 'Reescriure amb IA',
+        thinking: 'Pensant...'
       };
     } else {
       return {
         subtitle: 'Diseño de Proyectos de Aprendizaje Intermodular',
         backGenerator: '⬅️ Volver al Generador',
-        historyBtn: '📚 Ver Historial de Proyectos',
+        historyBtn: 'Ver Historial de Proyectos',
         historyTitle: 'Historial de Proyectos Generados',
         noProjects: 'No hay proyectos guardados aún.',
         cross: 'Cruce',
         generatedOn: 'Generado el',
         status: 'Estado',
-        viewProject: '👁️ Ver Proyecto',
+        viewProject: '️ Ver Proyecto',
         configTitle: 'Configuración del Diseño',
         whatToDesign: '¿Qué vas a diseñar hoy?',
-        fpBtn: '🔧 Proyecto FP Básica',
-        esoBtn: '🏫 Situación de Aprendizaje (ESO)',
+        fpBtn: ' Proyecto FP Básica',
+        esoBtn: ' Situación de Aprendizaje (ESO)',
         generalConfig: '1. Configuración General',
         methodology: 'Metodología',
         langLabel: 'Idioma de la Interfaz y Salida',
@@ -326,31 +326,31 @@ export class App implements OnInit {
         curricularSelection: '2. Selección Curricular',
         selectItemsFP: 'Selecciona los Resultados de Aprendizaje que formarán part del diseño.',
         selectItemsESO: 'Selecciona las Competencias Específicas que formarán part del diseño.',
-        generateBtn: '✨ Generar Proyecto Intermodular',
-        generatingBtn: '⚙️ Generando... (puede tardar 1 minuto)',
+        generateBtn: 'Generar Proyecto Intermodular',
+        generatingBtn: 'Generando... (puede tardar 1 minuto)',
         selectedItemsTitle: 'Selección Actual',
         noItemsSelected: 'Aún no has seleccionado ningún ítem.',
         noFP: 'No hay proyectos de Formación Profesional en el historial.',
         noESO: 'No hay Situaciones de Aprendizaje de Diversificación en el historial.',
         workshopTitle: 'Taller de Proyectos',
-        endEdit: '👁️ Terminar Edición',
-        manualEdit: '✏️ Editar Manualmente',
+        endEdit: '️ Terminar Edición',
+        manualEdit: '️ Editar Manualmente',
         resources: 'Recursos del Proyecto',
         dragFiles: 'Arrastra archivos aquí o haz clic',
         uploading: 'Subiendo...',
         deleteFile: 'Borrar archivo',
         fileUploaded: 'Archivo subido',
-        saveDraft: '💾 Guardar Borrador',
-        publish: '✅ Validar y Publicar',
-        exportPDF: '📄 Exportar PDF',
+        saveDraft: 'Guardar Borrador',
+        publish: ' Validar y Publicar',
+        exportPDF: ' Exportar PDF',
         aiAssistant: 'Asistente IA',
         aiIntro: '¡Hola! Soy tu asistente pedagógico. Sigue estos pasos para editar el proyecto:',
         aiStep1: '1. Escribe abajo qué quieres cambiar (ej. "Hazlo más corto").',
         aiStep2: '2. Selecciona/Subraya el text a modificar en el lienzo de la izquierda.',
-        aiStep3: '3. Haz clic en "✨ Reescribir con IA".',
+        aiStep3: '3. Haz clic en "Reescribir con IA".',
         aiPlaceholder: 'Pide a la IA que modifique el proyecto...',
-        rewriteBtn: '✨ Reescribir con IA',
-        thinking: '✨ Pensando...'
+        rewriteBtn: 'Reescribir con IA',
+        thinking: 'Pensando...'
       };
     }
   });
@@ -362,15 +362,15 @@ export class App implements OnInit {
         name.includes('biología') || name.includes('biologia') ||
         name.includes('física') || name.includes('matemática') || name.includes('matemàtique') ||
         name.includes('tecnología') || name.includes('tecnologia')) {
-      return { bg: '#e8f4f8', text: '#2c3e50', icon: '🔬' }; // Azul clarito (Ciencias)
+      return { bg: '#e8f4f8', text: '#2c3e50', icon: '' }; // Azul clarito (Ciencias)
     } else if (name.includes('lengua') || name.includes('llengua') || 
                name.includes('lingüístico') || name.includes('lingüístic') ||
                name.includes('comunicación') || name.includes('comunicació') ||
                name.includes('geografía') || name.includes('geografia') ||
                name.includes('social')) {
-      return { bg: '#fcf3cf', text: '#7d6608', icon: '📚' }; // Amarillo/Naranja clarito (Letras/Sociales)
+      return { bg: '#fcf3cf', text: '#7d6608', icon: '' }; // Amarillo/Naranja clarito (Letras/Sociales)
     } else {
-      return { bg: '#ebdef0', text: '#512e5f', icon: '📘' }; // Morado clarito (Otros/FP)
+      return { bg: '#ebdef0', text: '#512e5f', icon: '' }; // Morado clarito (Otros/FP)
     }
   }
 

@@ -41,7 +41,7 @@
     <div style="display: flex; gap: 15px; align-items: center;">
       <div style="display: flex; align-items: center; gap: 8px;">
         @if (language() === 'castellano') {
-          <span style="font-size: 1.5rem;">🇪🇸</span>
+          <span style="font-size: 1.5rem;"></span>
         } @else {
           <svg width="24" height="16" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd; border-radius: 2px;">
             <rect width="900" height="600" fill="#fcd116"/>
@@ -67,7 +67,7 @@
       </button>
       @if (authService.currentUser()?.role === 'admin') {
         <button (click)="switchView('admin'); loadUsers()" style="background: #f39c12; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
-          ⚙️ Admin
+          Admin
         </button>
       }
       <button (click)="logout()" style="background: #e74c3c; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
@@ -80,7 +80,7 @@
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <h2 style="color: #2c3e50; margin: 0;">{{ t().historyTitle }}</h2>
-        <input type="text" [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)" placeholder="🔍 Buscar por palabra clave..." style="padding: 10px 15px; border: 1px solid #bdc3c7; border-radius: 6px; width: 300px; font-size: 1rem;">
+        <input type="text" [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)" placeholder=" Buscar por palabra clave..." style="padding: 10px 15px; border: 1px solid #bdc3c7; border-radius: 6px; width: 300px; font-size: 1rem;">
       </div>
       @if (projectsHistory().length === 0) {
         <p>{{ t().noProjects }}</p>
@@ -150,7 +150,7 @@
   @if (currentView() === 'generator') {
     @if (authService.currentUser()?.role === 'pending') {
       <div style="background: #fff3cd; color: #856404; padding: 20px; border-radius: 8px; border: 1px solid #ffeeba; text-align: center; margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">⏳ Cuenta pendiente de aprobación</h3>
+        <h3 style="margin-top: 0;"> Cuenta pendiente de aprobación</h3>
         <p>Tu cuenta ha sido registrada pero aún no tienes permisos para generar nuevos proyectos. Por favor, avisa a un administrador para que te active. Mientras tanto, puedes explorar el <b>Archivo</b> para ver los proyectos de tus compañeros.</p>
       </div>
     } @else {
@@ -237,7 +237,7 @@
           <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
           <details open style="position: fixed; bottom: 20px; right: 20px; width: 340px; max-width: calc(100vw - 40px); background: white; border: 1px solid #bdc3c7; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); z-index: 9999; overflow: hidden;">
             <summary style="padding: 15px 20px; background: #2c3e50; color: white; font-weight: bold; font-size: 1.05rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
-              <span>🎯 {{ t().selectedItemsTitle }} ({{ selectedItemsDetails().length }})</span>
+              <span> {{ t().selectedItemsTitle }} ({{ selectedItemsDetails().length }})</span>
               <span style="font-size: 0.8rem; opacity: 0.8;">▲/▼</span>
             </summary>
 
@@ -285,12 +285,12 @@
         <h2 style="margin: 0; color: #8e44ad; font-size: 1.4rem;">{{ t().workshopTitle }}</h2>
         <div style="display: flex; gap: 10px;">
           <button (click)="downloadWord()" style="background: #2980b9; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-            📥 Bajar como Word
+             Bajar como Word
           </button>
           
           <input type="file" id="docxUpload" accept=".docx" (change)="uploadWord($event)" style="display: none;">
           <button (click)="triggerUpload()" style="background: #f39c12; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-            📤 Subir Word editado
+             Subir Word editado
           </button>
 
           <button (click)="saveDraft()" style="background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().saveDraft }}</button>
@@ -310,7 +310,7 @@
         <!-- Barra Lateral Derecha (El Asistente IA) -->
         <div style="flex: 1; background: #f8f9fa; border: 1px solid #bdc3c7; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
           <h3 style="margin-top: 0; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-            <span>🤖</span> {{ t().aiAssistant }}
+            <span></span> {{ t().aiAssistant }}
           </h3>
           
           <div style="flex: 1; background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; overflow-y: auto; font-size: 0.9rem; color: #555;">
@@ -331,7 +331,7 @@
 
           <!-- Archivos Adjuntos -->
           <h3 style="margin-top: 25px; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-            <span>📁</span> {{ t().resources }}
+            <span></span> {{ t().resources }}
           </h3>
           
           <div style="background: white; border: 2px dashed #bdc3c7; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 15px; cursor: pointer; transition: background 0.2s;" 
@@ -341,7 +341,7 @@
                (dragover)="onDragOver($event)"
                (dragleave)="onDragLeave($event)"
                (drop)="onDrop($event)">
-            <span style="font-size: 2rem; color: #95a5a6;">☁️</span>
+            <span style="font-size: 2rem; color: #95a5a6;">️</span>
             <p style="color: #7f8c8d; margin: 10px 0 0 0; font-size: 0.95rem; font-weight: bold;">
               {{ isUploading() ? t().uploading : t().dragFiles }}
             </p>
@@ -353,14 +353,14 @@
               <div style="display: flex; justify-content: space-between; align-items: center; background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 8px;">
                 <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%;">
                   <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; font-size: 0.9rem;">
-                    📄 {{ file.name }}
+                     {{ file.name }}
                   </a>
                   <span style="display: block; font-size: 0.75rem; color: #95a5a6; margin-top: 2px;">
                     {{ (file.size / 1024 / 1024).toFixed(2) }} MB
                   </span>
                 </div>
                 <button (click)="deleteFile(file.name)" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #e74c3c; padding: 5px;" [title]="t().deleteFile">
-                  ❌
+                  
                 </button>
               </div>
             }
@@ -392,7 +392,7 @@
         </div>
         <div>
           <button type="submit" [disabled]="isSavingSettings()" style="background: #27ae60; color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: background 0.3s;">
-            {{ isSavingSettings() ? 'Guardando...' : '💾 Guardar Configuración' }}
+            {{ isSavingSettings() ? 'Guardando...' : 'Guardar Configuración' }}
           </button>
         </div>
       </form>
@@ -401,7 +401,7 @@
     <!-- Panel de Usuarios -->
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <h2 style="color: #2c3e50; margin-top: 0;">Panel de Administración: Usuarios Registrados</h2>
-      <button (click)="loadUsers()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;">🔄 Refrescar lista</button>
+      <button (click)="loadUsers()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;"> Refrescar lista</button>
       
       <div style="display: grid; gap: 15px;">
         @for (u of usersList(); track u._id) {
@@ -419,7 +419,7 @@
             
             @if (u.role === 'pending') {
               <button (click)="approveUser(u._id)" style="background: #27ae60; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s;" onmouseover="this.style.background='#219653'" onmouseout="this.style.background='#27ae60'">
-                ✅ Aprobar (Hacer Profesor)
+                 Aprobar (Hacer Profesor)
               </button>
             }
           </div>

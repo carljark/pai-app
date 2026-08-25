@@ -58,4 +58,24 @@ export class PaiService {
   updateUserRole(userId: string, role: string): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/admin/users/${userId}/role`, { role });
   }
+
+  // Settings del Centro
+  getSettings(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/settings`);
+  }
+
+  updateSettings(data: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/settings`, data);
+  }
+
+  // DOCX Import/Export
+  exportDocx(projectId: string): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/projects/${projectId}/export-docx`, { responseType: 'blob' });
+  }
+
+  importDocx(projectId: string, file: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('file', file);
+    return this.http.post<any>(`${this.apiUrl}/projects/${projectId}/import-docx`, formData);
+  }
 }

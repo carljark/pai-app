@@ -61,8 +61,41 @@ export class App implements OnInit {
     this.projectsHistory.set([]);
   }
 
-  toggleEditMode() {
-    this.isEditMode.set(!this.isEditMode());
+  downloadWord() {
+    if (!this.currentProjectId()) return;
+    this.paiService.exportDocx(this.currentProjectId()!).subscribe({
+      next: (blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Proyecto.docx`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        a.remove();
+      },
+      error: () => alert('Error al descargar el archivo Word.')
+    });
+  }
+
+  triggerUpload() {
+    const fileInput = document.getElementById('docxUpload') as HTMLInputElement;
+    if (fileInput) fileInput.click();
+  }
+
+  uploadWord(event: any) {
+    const file = event.target.files[0];
+    if (!file || !this.currentProjectId()) return;
+    
+    this.paiService.importDocx(this.currentProjectId()!, file).subscribe({
+      next: (res) => {
+        this.generatedProject.set(res.project.generatedContent.rawText);
+        alert('Archivo procesado correctamente. ¡El diseño se ha purificado a Markdown!');
+      },
+      error: () => alert('Error al procesar el archivo Word.')
+    });
+    // Limpiar input
+    event.target.value = '';
   }
 
   saveDraft() {
@@ -397,9 +430,36 @@ export class App implements OnInit {
 
   // Admin
   usersList = signal<any[]>([]);
+  schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
+  isSavingSettings = signal(false);
 
   loadUsers() {
     this.paiService.getUsers().subscribe(users => this.usersList.set(users));
+  }
+
+  loadSettings() {
+    this.paiService.getSettings().subscribe(settings => {
+      this.schoolSettings.set({
+        schoolName: settings.schoolName || '',
+        schoolCity: settings.schoolCity || '',
+        schoolContext: settings.schoolContext || ''
+      });
+    });
+  }
+
+  saveSettings(e: Event) {
+    e.preventDefault();
+    this.isSavingSettings.set(true);
+    this.paiService.updateSettings(this.schoolSettings()).subscribe({
+      next: () => {
+        alert('Configuración guardada correctamente.');
+        this.isSavingSettings.set(false);
+      },
+      error: () => {
+        alert('Error al guardar la configuración.');
+        this.isSavingSettings.set(false);
+      }
+    });
   }
 
   approveUser(userId: string) {
@@ -473,6 +533,10 @@ export class App implements OnInit {
 
   switchView(view: 'generator' | 'taller' | 'history' | 'admin') {
     this.currentView.set(view);
+    if (view === 'admin') {
+      this.loadUsers();
+      this.loadSettings();
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 

@@ -5,6 +5,15 @@ import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
 
+import multer from 'multer';
+import mammoth from 'mammoth';
+import TurndownService from 'turndown';
+import { marked } from 'marked';
+import HTMLtoDOCX from 'html-to-docx';
+
+const upload = multer({ storage: multer.memoryStorage() });
+const turndownService = new TurndownService({ headingStyle: 'atx' });
+
 import { authMiddleware, JWT_SECRET } from './auth';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
@@ -43,6 +52,14 @@ const ProjectSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 const Project = mongoose.model('Project', ProjectSchema);
+
+const SettingsSchema = new mongoose.Schema({
+  schoolName: { type: String, default: '' },
+  schoolCity: { type: String, default: '' },
+  schoolContext: { type: String, default: '' },
+  isSingleton: { type: Boolean, default: true, unique: true }
+});
+const Settings = mongoose.model('Settings', SettingsSchema);
 
 // Aplicar middleware de autenticación a toda la API
 app.use('/api', authMiddleware);
@@ -241,6 +258,36 @@ app.get('/api/projects', async (req: any, res) => {
   }
 });
 
+// Endpoints de Configuración del Centro
+app.get('/api/settings', async (req, res) => {
+  try {
+    let settings = await Settings.findOne({ isSingleton: true });
+    if (!settings) {
+      settings = await Settings.create({ schoolName: '', schoolCity: '', schoolContext: '' });
+    }
+    res.json(settings);
+  } catch (err) {
+    res.status(500).json({ error: 'Error obteniendo settings' });
+  }
+});
+
+app.put('/api/settings', requireAdmin, async (req: any, res) => {
+  try {
+    const { schoolName, schoolCity, schoolContext } = req.body;
+    let settings = await Settings.findOne({ isSingleton: true });
+    if (!settings) {
+      settings = new Settings({ isSingleton: true });
+    }
+    settings.schoolName = schoolName;
+    settings.schoolCity = schoolCity;
+    settings.schoolContext = schoolContext;
+    await settings.save();
+    res.json(settings);
+  } catch (err) {
+    res.status(500).json({ error: 'Error guardando settings' });
+  }
+});
+
 // Endpoint 3: Generar y Guardar Proyecto con Gemini
 app.post('/api/projects/generate', requireApproved, async (req: any, res) => {
   try {
@@ -287,6 +334,23 @@ app.post('/api/projects/generate', requireApproved, async (req: any, res) => {
       console.warn("Error cargando proyectos aprobados de la base de datos", e);
     }
     
+    // Cargar Configuración del Centro
+    let schoolContextStr = '';
+    try {
+      const settings = await Settings.findOne({ isSingleton: true });
+      if (settings && (settings.schoolName || settings.schoolCity || settings.schoolContext)) {
+        schoolContextStr = `
+CONTEXTO ESPECÍFICO DEL CENTRO EDUCATIVO:
+- Nombre del Centro: ${settings.schoolName || 'No especificado'}
+- Ubicación/Ciudad: ${settings.schoolCity || 'No especificada'}
+- Contexto socioeconómico y características: ${settings.schoolContext || 'No especificado'}
+IMPORTANTE: Debes tener en cuenta este contexto para proponer recursos viables, conexiones con el entorno local y adaptar la narrativa del proyecto a la realidad de este centro.
+`;
+      }
+    } catch (e) {
+      console.warn("Error cargando settings", e);
+    }
+    
     let baseInstruction = `ROL Y CONTEXTO:
 Eres el "Motor Pedagógico" de la Plataforma de Aprendizaje Intermodular (PAI), un experto de máximo nivel en diseño instruccional, metodologías activas (ABP, ABR, ApS).
 Tu objetivo es ayudar a los docentes a diseñar proyectos/situaciones que conecten diferentes áreas.
@@ -301,6 +365,8 @@ REGLAS PEDAGÓGICAS INQUEBRANTABLES:
 CONTEXTO DE EVALUACIÓN DEL CENTRO (BIBLIA METODOLÓGICA):
 Aplica imperativamente estas reglas para estructurar la evaluación y las rúbricas:
 ${knowledgeBase}
+
+${schoolContextStr}
 
 ${intefExamplesContext}
 
@@ -539,6 +605,63 @@ app.delete('/api/projects/:id/files/:filename', (req, res) => {
     }
   } else {
     res.status(404).json({ error: "Archivo no encontrado" });
+  }
+});
+
+// Endpoint: Exportar Markdown a DOCX
+app.get('/api/projects/:id/export-docx', requireApproved, async (req: any, res) => {
+  try {
+    const project = await Project.findOne({ _id: req.params.id, userId: req.user.userId });
+    if (!project || !project.generatedContent?.rawText) {
+      return res.status(404).json({ error: 'Proyecto no encontrado o sin contenido' });
+    }
+    
+    // Markdown a HTML
+    const html = await marked.parse(project.generatedContent.rawText);
+    
+    // HTML a DOCX
+    const fileBuffer = await HTMLtoDOCX(html, null, {
+      table: { row: { cantSplit: true } },
+      footer: true,
+      pageNumber: true,
+    });
+    
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+    res.setHeader('Content-Disposition', `attachment; filename="Proyecto_${project.title || 'PAI'}.docx"`);
+    res.send(fileBuffer);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error exportando a DOCX' });
+  }
+});
+
+// Endpoint: Importar DOCX y limpiar estilos
+app.post('/api/projects/:id/import-docx', requireApproved, upload.single('file'), async (req: any, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: 'No se ha subido ningún archivo' });
+    }
+
+    // 1. Extraer HTML semántico limpio (ignorando basura visual del Word)
+    const result = await mammoth.convertToHtml({ buffer: req.file.buffer });
+    const cleanHtml = result.value;
+
+    // 2. Convertir ese HTML de nuevo a Markdown puro
+    const newMarkdown = turndownService.turndown(cleanHtml);
+
+    // 3. Guardar en la base de datos
+    const project = await Project.findOne({ _id: req.params.id, userId: req.user.userId });
+    if (!project) {
+      return res.status(404).json({ error: 'Proyecto no encontrado' });
+    }
+
+    project.generatedContent.rawText = newMarkdown;
+    await project.save();
+
+    res.json({ message: 'Documento procesado correctamente', project });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error importando el archivo DOCX' });
   }
 });
 

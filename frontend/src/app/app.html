@@ -282,9 +282,15 @@
       <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #bdc3c7;">
         <h2 style="margin: 0; color: #8e44ad; font-size: 1.4rem;">{{ t().workshopTitle }}</h2>
         <div style="display: flex; gap: 10px;">
-          <button (click)="toggleEditMode()" style="background: #f39c12; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-            {{ isEditMode() ? t().endEdit : t().manualEdit }}
+          <button (click)="downloadWord()" style="background: #2980b9; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            📥 Bajar como Word
           </button>
+          
+          <input type="file" id="docxUpload" accept=".docx" (change)="uploadWord($event)" style="display: none;">
+          <button (click)="triggerUpload()" style="background: #f39c12; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            📤 Subir Word editado
+          </button>
+
           <button (click)="saveDraft()" style="background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().saveDraft }}</button>
           <button (click)="publishProject()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().publish }}</button>
           <button (click)="exportPDF()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().exportPDF }}</button>
@@ -295,13 +301,7 @@
         <!-- Lienzo Central (El Editor) -->
         <div style="flex: 2; background: white; border: 1px solid #bdc3c7; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
           <div id="pdf-content" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.05rem; background: #fdfbfd; padding: 25px; border-radius: 8px; border: 1px solid #f3e5f5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); line-height: 1.7; height: 600px; overflow-y: auto;">
-            @if (isEditMode()) {
-              <textarea [ngModel]="generatedProject()" (ngModelChange)="generatedProject.set($event)" 
-                        style="width: 100%; height: 100%; min-height: 550px; padding: 15px; font-family: monospace; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 8px; resize: vertical; box-sizing: border-box; background: #fff;">
-              </textarea>
-            } @else {
-              <markdown [data]="generatedProject()"></markdown>
-            }
+            <markdown [data]="generatedProject()"></markdown>
           </div>
         </div>
 
@@ -370,6 +370,33 @@
 
 
   @if (currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
+    <!-- Panel de Configuración del Centro -->
+    <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
+      <h2 style="color: #2c3e50; margin-top: 0;">Configuración del Centro Educativo</h2>
+      <p style="color: #7f8c8d; font-size: 0.95rem;">Estos datos se inyectarán en la IA para que adapte todos los proyectos a vuestro contexto particular.</p>
+      
+      <form (submit)="saveSettings($event)" style="display: grid; gap: 15px; max-width: 600px;">
+        <div>
+          <label style="display: block; font-weight: bold; margin-bottom: 5px;">Nombre del Centro</label>
+          <input type="text" [ngModel]="schoolSettings().schoolName" (ngModelChange)="schoolSettings.set({...schoolSettings(), schoolName: $event})" name="schoolName" placeholder="Ej: IES Antonio Machado" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+        </div>
+        <div>
+          <label style="display: block; font-weight: bold; margin-bottom: 5px;">Ciudad / Localidad</label>
+          <input type="text" [ngModel]="schoolSettings().schoolCity" (ngModelChange)="schoolSettings.set({...schoolSettings(), schoolCity: $event})" name="schoolCity" placeholder="Ej: Alcalá de Henares, Madrid" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+        </div>
+        <div>
+          <label style="display: block; font-weight: bold; margin-bottom: 5px;">Contexto Socioeconómico (Opcional)</label>
+          <textarea [ngModel]="schoolSettings().schoolContext" (ngModelChange)="schoolSettings.set({...schoolSettings(), schoolContext: $event})" name="schoolContext" rows="3" placeholder="Ej: Entorno rural con predominio del sector agrícola, o barrio periférico con alumnado multicultural." style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px; font-family: inherit; resize: vertical;"></textarea>
+        </div>
+        <div>
+          <button type="submit" [disabled]="isSavingSettings()" style="background: #27ae60; color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: background 0.3s;">
+            {{ isSavingSettings() ? 'Guardando...' : '💾 Guardar Configuración' }}
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Panel de Usuarios -->
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <h2 style="color: #2c3e50; margin-top: 0;">Panel de Administración: Usuarios Registrados</h2>
       <button (click)="loadUsers()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;">🔄 Refrescar lista</button>

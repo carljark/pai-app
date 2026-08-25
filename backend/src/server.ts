@@ -258,6 +258,34 @@ app.post('/api/projects/generate', requireApproved, async (req: any, res) => {
     } catch (e) {
       console.warn("No se pudo cargar knowledge_base.md, omitiendo contexto metodológico extra.");
     }
+
+    // Cargar ejemplos de INTEF (RAG de proyectos)
+    let intefExamplesContext = '';
+    try {
+      const examplesPath = path.join(process.cwd(), 'src/data/intef_examples.json');
+      if (fs.existsSync(examplesPath)) {
+        const examplesData = JSON.parse(fs.readFileSync(examplesPath, 'utf-8'));
+        if (examplesData.length > 0) {
+          // Cargamos TODOS los ejemplos sin límite
+          intefExamplesContext = '\n\nEJEMPLOS INSPIRADORES DE PROYECTOS REALES (INTEF):\nInspírate en la riqueza de actividades y la estructura de estos proyectos modelo:\n' + 
+            examplesData.map((ex: any) => `### PROYECTO: ${ex.title}\nDESCRIPCIÓN: ${ex.description}\nEXTRACTO DE ACTIVIDADES: ${ex.content_sample}`).join('\n\n');
+        }
+      }
+    } catch (e) {
+      console.warn("No se pudo cargar intef_examples.json, omitiendo ejemplos INTEF.", e);
+    }
+    
+    // Cargar Proyectos Aprobados de la plataforma
+    let approvedProjectsContext = '';
+    try {
+      const approvedProjects = await Project.find({ status: 'aprobado' });
+      if (approvedProjects.length > 0) {
+        approvedProjectsContext = '\n\nPROYECTOS APROBADOS DE LA PLATAFORMA (Usa esto para entender el tono y el éxito pasado):\n' +
+          approvedProjects.map((p: any) => `### PROYECTO APROBADO: ${p.title || 'Sin Título'}\nCONTENIDO:\n${p.rawText}`).join('\n\n');
+      }
+    } catch (e) {
+      console.warn("Error cargando proyectos aprobados de la base de datos", e);
+    }
     
     let baseInstruction = `ROL Y CONTEXTO:
 Eres el "Motor Pedagógico" de la Plataforma de Aprendizaje Intermodular (PAI), un experto de máximo nivel en diseño instruccional, metodologías activas (ABP, ABR, ApS).
@@ -272,7 +300,11 @@ REGLAS PEDAGÓGICAS INQUEBRANTABLES:
 
 CONTEXTO DE EVALUACIÓN DEL CENTRO (BIBLIA METODOLÓGICA):
 Aplica imperativamente estas reglas para estructurar la evaluación y las rúbricas:
-${knowledgeBase}`;
+${knowledgeBase}
+
+${intefExamplesContext}
+
+${approvedProjectsContext}`;
 
     let formatInstruction = '';
     

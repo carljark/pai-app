@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import type { Response } from 'express';
 import { User } from '../models/User';
 
 export const getUsers = async (req: any, res: Response) => {

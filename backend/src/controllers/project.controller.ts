@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import type { Response } from 'express';
 import { Project } from '../models/Project';
 import { Settings } from '../models/Settings';
 import { buildContexts, generateGeminiContent } from '../services/ai.service';

@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import type { Response } from 'express';
 import { RA } from '../models/RA';
 import { CE } from '../models/CE';
 

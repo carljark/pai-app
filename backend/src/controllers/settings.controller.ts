@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import type { Response } from 'express';
 import { Settings } from '../models/Settings';
 
 export const getSettings = async (req: any, res: Response) => {

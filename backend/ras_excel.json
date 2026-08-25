@@ -1,0 +1,367 @@
+[
+  {
+    "module": "Preparació de l'entorn professional",
+    "id": "RA1",
+    "description": "Mostra una imatge personal i professional adecuada en l'entorn de treball, relacionant-la amb la higiene corporal i l'estètica personal."
+  },
+  {
+    "module": "Preparació de l'entorn professional",
+    "id": "RA2",
+    "description": "Prepara les instal·lacions, aplicant les tècniques d'higienització."
+  },
+  {
+    "module": "Preparació de l'entorn professional",
+    "id": "RA3",
+    "description": "Recepciona material de perruqueria i estètica, identificant les seves característiques i aplicacions."
+  },
+  {
+    "module": "Preparació de l'entorn professional",
+    "id": "RA4",
+    "description": "Acomoda i protegeix al client en funció de les característiques del servei previst, aplicant les tècniques i les normes de comportament apropiades en condicions de qualitat, higiene i seguretat."
+  },
+  {
+    "module": "Cures estètiques bàsiques de mans i ungles",
+    "id": "RA1",
+    "description": "Prepara equipaments, estris i productes manicura i pedicura, reconeixent les seves característiques i aplicacions."
+  },
+  {
+    "module": "Cures estètiques bàsiques de mans i ungles",
+    "id": "RA2",
+    "description": "Observar les ungles, reconeixent les alteracions més rellevants."
+  },
+  {
+    "module": "Cures estètiques bàsiques de mans i ungles",
+    "id": "RA3",
+    "description": "Aplica tècniques bàsiques de manicura, relacionant les característiques morfològiques de les mans i de les ungles amb la forma final d'aquests últimes."
+  },
+  {
+    "module": "Cures estètiques bàsiques de mans i ungles",
+    "id": "RA4",
+    "description": "Aplica tècniques bàsiques de pedicura, relacionant les característiques morfològiques de peus i ungles amb la forma final d'auestes últimes. ."
+  },
+  {
+    "module": "Depil·lació mecànica i decoloració mecànica del borrissol superflu",
+    "id": "RA1",
+    "description": "Observa les característiques del cabell i de la zona a tractar, relacionant-lo amb les tècniques que poden ser emprades."
+  },
+  {
+    "module": "Depil·lació mecànica i decoloració mecànica del borrissol superflu",
+    "id": "RA2",
+    "description": "Prepara equipaments, estris i productes de depil·lació i decoloració, reconeixent les seves característiques i aplicacions."
+  },
+  {
+    "module": "Depil·lació mecànica i decoloració mecànica del borrissol superflu",
+    "id": "RA3",
+    "description": "Depila de forma mecànica, relacionant la tècnica seleccionada amb els efectes finals."
+  },
+  {
+    "module": "Depil·lació mecànica i decoloració mecànica del borrissol superflu",
+    "id": "RA4",
+    "description": "Decolora el pèl, recononexienet l'efecte dels productes sobre el pèl i la pell."
+  },
+  {
+    "module": "Maquillatge",
+    "id": "RA1",
+    "description": "Prepara estris i productes de maquillatge reconeixent les seves característiques i aplicacions."
+  },
+  {
+    "module": "Maquillatge",
+    "id": "RA2",
+    "description": "Prepara la pell del client aplicant tècniques d'higiene i protecció."
+  },
+  {
+    "module": "Maquillatge",
+    "id": "RA3",
+    "description": "Aplica tècniques de maquillatge social, relacionant el tipus de maquillatge amb les necessitats del client."
+  },
+  {
+    "module": "Maquillatge",
+    "id": "RA4",
+    "description": "Realitza maquillatges bàsics de fantasia facial determinant l'harmonia estètica i cromàtica dels mateixos."
+  },
+  {
+    "module": "Rentat i canvis de forma del cabell",
+    "id": "RA1",
+    "description": "Observa l'estat del cuir del cabell i cabell reconeixent les alteracions més rellevants."
+  },
+  {
+    "module": "Rentat i canvis de forma del cabell",
+    "id": "RA2",
+    "description": "Prepara equips i útils de rentat i canvis de forma reconeixent les seves característiques i aplicacions"
+  },
+  {
+    "module": "Rentat i canvis de forma del cabell",
+    "id": "RA3",
+    "description": "Renta/condiciona el cabell relacionant-lo amb les seves característiques."
+  },
+  {
+    "module": "Rentat i canvis de forma del cabell",
+    "id": "RA4",
+    "description": "Canvia la forma del cabell de forma temporal, relacionant les tècniques de canvi temporal seleccionades amb l'efecte final."
+  },
+  {
+    "module": "Rentat i canvis de forma del cabell",
+    "id": "RA5",
+    "description": "Canvia la forma del cabell de manera permanent, relacionant les tècniques de canvi permanent seleccionades amb l'efecte final."
+  },
+  {
+    "module": "Canvis de color del cabell",
+    "id": "RA1",
+    "description": "Prepara equips i útils de canvi de color reconeixent les seves característiques i aplicacions"
+  },
+  {
+    "module": "Canvis de color del cabell",
+    "id": "RA2",
+    "description": "Decolora el cabell reconeixent l'efecte dels productes sobre ell."
+  },
+  {
+    "module": "Canvis de color del cabell",
+    "id": "RA3",
+    "description": "Acoloreix el conjunt del cabell relacionant la tècnica seleccionada amb els efectes finals."
+  },
+  {
+    "module": "Canvis de color del cabell",
+    "id": "RA4",
+    "description": "Acoloreix parcialment el cabell relacionant la tècnica seleccionada amb els efectes finals."
+  },
+  {
+    "module": "Atenció al client",
+    "id": "RA1",
+    "description": "Aten a possibles clients reconeixent les diferents tècniques de comunicació."
+  },
+  {
+    "module": "Atenció al client",
+    "id": "RA2",
+    "description": "Comunica al possible al client les diferents possibilitats del servei, justificant-les des del punt de vista tècnic."
+  },
+  {
+    "module": "Atenció al client",
+    "id": "RA3",
+    "description": "Informa al probable client del servei realitzat, justificant les operacions executades."
+  },
+  {
+    "module": "Atenció al client",
+    "id": "RA4",
+    "description": "Atén reclamacions de client, reconeixent el protocol d'actuació."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA1",
+    "description": "Resol problemes matemàtics en situacions quotidianes, utilitzant els elements bàsics del llenguatge matemàtic i les seves operacions."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA2",
+    "description": "Reconeix les instalacions i el material de laboratori valorant-los com a recursos necessaris per a la realització de les pràctiques."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA3",
+    "description": "Identifica propietats fonamentals de la matèria en les diferents formes en que se presenta en la naturta, manejant les magnituds físiques i les unitats fonamentals en unitats del sistema mètric decimal."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA4",
+    "description": "Utilitza el mètode més adequat pèr a la separació de components de mescles senzilles relacionant-ho amb el procés físic o químic en què es basa."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA5",
+    "description": "Reconeix com l'energia estar present en els processos naturals descrivint fenòmens simples de la vida real."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA6",
+    "description": "Localitza les estructures anatòmiques bàsiques discriminant els sistemes o aparells als que pertanyen i associant-los a les funcions que produeixen a l'organisme."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA7",
+    "description": "Diferencia la salut de la malaltia, relacionant els hàbits de vids amb les malalties més freqüents reconeixent els principis bàsics de defensa contra les mateixes."
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA8",
+    "description": "Elabora menus i dietes equilibrades senzilles diferenciant els nutrients que contenen i adaptant-los als diferents paràmetres corporals i a situacions diverses"
+  },
+  {
+    "module": "Ciències aplicades I",
+    "id": "RA9",
+    "description": "Resol situacions quotidianes utilitzant expressions algebraiques senzilles i aplicant els mètodes de resolució més adequats."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA1",
+    "description": "Resol situacions quotidianes aplicant els mètodes de resolució d'equacions i sistemes i valorant la precisió, simplicitat i utilitat del llenguatge algebraic."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA2",
+    "description": "Resol problemes senzills d'índole diversa, mitjançant el seu anàlisi contrastat i aplicant les fases del mètode científic."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA3",
+    "description": "Realitza mesures directes i indirectes de figures geomètriques presents en contextos reals, utilitzant instruments, les fòrmules i les tècniques necessàries."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA4",
+    "description": "Interpreta gràfiques de dos magnituds calculant els paràmetres significatius de les mateixes i relacionant-lo amb funcions matemàtiques elementals i els principals valors estadístics."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA5",
+    "description": "Aplica tècniques físiques i químiques, utilutzant el material necessari, per a la realització de pràctiques de laboratori senzilles, medint les magnituds implicades."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA6",
+    "description": "Reconeix reaccions químiques que es produeixen en els processos biològics i en la indústria argumentant las seva importància en la vida quotidiana i descrivint els canvis que es produeixen."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA7",
+    "description": "Identifica aspectes positius i negatius de l'ús de l'energia nuclear descrivint els efectes de la contaminació generada en la seva aplicació."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA8",
+    "description": "Identifica els canvis que es produeixen en el planeta terra argumentant les seves causes i tenint en compte les diferències que existeixen entre relleu i paisatge."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA9",
+    "description": "Categoritza contaminants atmosfèrics principals identificant els seus orígens i relacionant-los amb els efectes que produeixen."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA10",
+    "description": "Identifica els contaminants de l'aigua relaconant el seu efecte en el medi ambient amb el seu tractament de depuració."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA11",
+    "description": "Contribueix a l'equilibri mediambiental analitzant i argumentant les línies bàsiques sobre el desenvolupament sostenible i proposant accions de millora i conservació."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA12",
+    "description": "Relaciona les forces que apareixen en situacions habituals amb els efectes produits tenint en compte la seva contribució al moviment o repòs dels objectes i les magnituds posades en joc."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA13",
+    "description": "Identifica els aspectes bàsics de la producció, transport i utilització de l'energia elèctrica i els factors que intervenen en el consum, descrivint els canvis produïts i les magnituds i valors característics."
+  },
+  {
+    "module": "Ciències aplicades II",
+    "id": "RA14",
+    "description": "Preveu la possibilitat d'aparició d'enfermetats bàsiques, emprant tècniques de manteniment i desinfecció dels utensilis i aparells empreats en es seves actuacins derivades de la seva professió"
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA1",
+    "description": "Valora l'evolució històrica de les societats prehistòriques i de l'Edat Antiga i les seves relacions amb els paisatges naturals, analitzant els factors i elements implicats, i desenvolupant actituds i valor d'apreci del patrimoni natural i artístic."
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA2",
+    "description": "Valora la construcció de l'espai europeu fins a les primeres transformacions industrials i societats agràries, analitzant les carascterístiques principals i valorant la seva pervivència en la societat actusal i en l'entorn immediat."
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA3",
+    "description": "Utilitza estratègies comunicatives per a interpretar i comunicar informació oral en llengua castellana catalana, aplicant els principis de l'escolta activa, estratègies senzilles de composició i les normes lingüistiques bàsiques"
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA4",
+    "description": "Utilitza estratègies comunicatives per a interpretar i comunicar informació escrita en llengua castellana i catalana, aplicant estratègies de lectura comprensiva i aplicant estratègies d'anàlisi, síntesi i classificació de forma estructurada i progresivas a la composició autònoma de textos breus seleccionats."
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA5",
+    "description": "Realitza la lectura de textos literaris representatius de la Literatura en llengua castellana i catalana anteriors al segle XIX, generant criteris estètics per a la construcció del gust personal."
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA6",
+    "description": "Empra estratègies per a comunicar informació oral en llengua anglesa, elaborant presentacions orals de poca extensió, ben estrcuturades, relatives a situacions habituals de comunicació quaotidiana i freqüent d'àmbit personal o professional-"
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA7",
+    "description": "Participa en conversacions en llengua anglesa emprant un llenguatge senzill i clar en situacions habituals freqüents de l'àmbit personal o professional, activant estratègies de comunicació bàsiques."
+  },
+  {
+    "module": "Comunicació i societat I",
+    "id": "RA8",
+    "description": "Elabora textos escrits en llengua anglesa, breus i senzills de situacions de comunicació habituals i freqüents de l'àmbit personal o professional, aplicant estratègies de lectura comprensiva i desenvolupant estratègies estructurades de composició."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA1",
+    "description": "Infereix les característiques essencials de les societats contemporànies a partir d'l'estudi de la seva evolució històrica, analitzant els trets bàsics de la seva organització social, política i econòmica."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA2",
+    "description": "Valora els principis bàsics de sistema democràtic analitzant-ne les institucions i les diferents organitzacions polítiques i econòmiques en què es manifesta i inferint pautes d'actuació per a acomodar el seu comportament a l'acompliment d'aquests principis."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA3",
+    "description": "Utilitza estratègies comunicatives per a interpretar i comunicar informació oral en llengua castellana i catalana, aplicant els principis de l'escolta activa, estratègies raonades de composició i les normes lingüístiques correctes en cada cas."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA4",
+    "description": "Utilitza estratègies comunicatives per comunicar informació escrita en llengua castellana, aplicant estratègies d'anàlisi, síntesi i classificació de forma estructurada a la composició autònoma de textos de progressiva complexitat."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA5",
+    "description": "Interpreta textos literaris representatius de la Literatura en llengua castellana i catalana des del siglo XIX fins a l'actualitat, reconeixent la intenció de l'autor i relacionant-lo amb el seu context històric, sociocultural i literari."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA6",
+    "description": "Utilitza estratègies per a interpretar i comunicar informació oral en llengua anglesa, aplicant els principis de l'escolta activa i elaborant presentacions orals de poca extensió, clares i estructurades, relatives a temes i aspectes concrets, freqüents i quotidians, de l'àmbit personal i professional."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA7",
+    "description": "Manté converses senzilles en llengua anglesa en situacions habituals i concretes de l'àmbit personal i professional, utilitzant estratègies de comunicació bàsiques."
+  },
+  {
+    "module": "Comunicació i societat II",
+    "id": "RA8",
+    "description": "Elabora textos breus i senzills amb certs detalls en llengua anglesa, relatius a situacions de comunicació habituals de l'àmbit personal i\nprofessional, aplicant estratègies de lectura comprensiva i desenvolupant estratègies sistemàtiques de composició."
+  },
+  {
+    "module": "Itinerari per l'ocupabilitat",
+    "id": "RA1",
+    "description": "Desenvolupa activitats d'autoconeixement que li permeten orientar-se a camps professionals motivadors en els quals pot desplegar totes les seves capacitats."
+  },
+  {
+    "module": "Itinerari per l'ocupabilitat",
+    "id": "RA2",
+    "description": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo."
+  },
+  {
+    "module": "Itinerari per l'ocupabilitat",
+    "id": "RA3",
+    "description": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la recerca i la reflexió lliure d'estereotips vocacionals."
+  },
+  {
+    "module": "Itinerari per l'ocupabilitat",
+    "id": "RA4",
+    "description": "Posa en marxa un itinerari propi. analitza les diferents opcions educatives i professionals, valora els avantatges i inconvenients de cadascuna d'elles i examina aquells fets que millor s'ajusten a les seves possibilitats i preferències."
+  },
+  {
+    "module": "Itinerari per l'ocupabilitat",
+    "id": "RA5",
+    "description": "Coneix les estratègies d'accés al mercat de treball per compte d'altri i utilitza les eines necessàries per al procés d'inserció laboral."
+  }
+]

@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Estilos globales para las tablas generadas por Markdown */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  border: 1px solid #d1d5db;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+  color: #374151;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+table tr:hover {
+  background-color: #f3f4f6;
+}

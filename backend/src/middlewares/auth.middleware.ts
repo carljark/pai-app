@@ -27,3 +27,19 @@ export const authMiddleware = (req: AuthRequest, res: Response, next: NextFuncti
     return;
   }
 };
+
+export const requireAdmin = (req: AuthRequest, res: Response, next: NextFunction): void => {
+  if (req.user?.role !== 'admin') {
+    res.status(403).json({ error: 'Requiere permisos de administrador' });
+    return;
+  }
+  next();
+};
+
+export const requireApproved = (req: AuthRequest, res: Response, next: NextFunction): void => {
+  if (req.user?.role === 'pending') {
+    res.status(403).json({ error: 'Tu cuenta está pendiente de aprobación por un administrador.' });
+    return;
+  }
+  next();
+};

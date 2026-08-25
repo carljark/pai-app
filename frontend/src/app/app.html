@@ -33,7 +33,9 @@
   } @else {
   <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; flex-wrap: wrap; gap: 20px;">
     <div>
-      <h1 style="color: #2c3e50; font-size: 2.2rem; margin: 0;">Plataforma de Proyectos Interdisciplinares</h1>
+      <h1 style="color: #2c3e50; font-size: 2.2rem; margin: 0;">
+        {{ language() === 'catalan' ? 'Plataforma de projectes interdisciplinars' : 'Plataforma de Proyectos Interdisciplinares' }}
+      </h1>
     </div>
     
     <div style="display: flex; gap: 15px; align-items: center;">

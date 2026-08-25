@@ -1,22 +1,557 @@
 [
   {
-    "title": "¿Existe el cambio climático?",
-    "description": "Investigación científica guiada para evaluar la existencia del cambio climático mediante el análisis de evidencias y el trabajo de campo.",
-    "content_sample": "El alumnado asume el rol de investigadores para demostrar la existencia del cambio climático. Construyen una maqueta a escala atmosférica, simulan el efecto invernadero en el laboratorio con botellas y termómetros, y analizan datos satelitales de la NASA. Tras calcular su huella de carbono personal y desmontar bulos en debates grupales, diseñan un póster de concienciación. El reto final consiste en la redacción de un informe de investigación y una exposición oral defendida en la Semana de la Ciencia del instituto."
-  },
-  {
-    "title": "En primera persona: diario, autobiografía, autoficción",
-    "description": "Itinerario de lectura guiada y creación literaria para explorar la identidad y el testimonio histórico a través de relatos autobiográficos.",
-    "content_sample": "El alumnado explora la literatura como testimonio histórico analizando obras clave en primera persona. Realiza investigaciones breves expresándose en el rol de las autoras y participa en tertulias dialógicas comparando recursos gráficos y narrativos. El reto final exige elegir y redactar una obra creativa 'a la manera de' una de las autoras: escribir un diario personal sobre dilemas actuales (como redes sociales), diseñar un capítulo de cómic utilizando la ironía y el lenguaje visual, o redactar cartas ficcionadas con voz adolescente sobre problemáticas sociales."
-  },
-  {
-    "title": "No fake: sacando partido al caos informativo",
-    "description": "Desarrollar el pensamiento crítico del alumnado frente a la desinformación y los bulos mediante investigación digital y Design Thinking.",
-    "content_sample": "El alumnado asume el rol de 'fact-checkers' investigando deepfakes, trolls y sesgos cognitivos mediante herramientas de verificación digital como Google Lens, Fotoforensics y el método PANTERA. A través de una dinámica gamificada (Newsgame) combinada con Design Thinking, los equipos resuelven candados verificando noticias falsas para avanzar por etapas. El reto final consiste en prototipar colaborativamente una 'Agencia de Investigación Escolar #nofake' para organizar y filtrar la información del propio centro educativo."
+    "title": "Érase una vez... un estuche",
+    "description": "Secuencia didáctica multidisciplinar en la que el alumnado investiga el origen, la fabricación, el transporte y el impacto ambiental del material escolar, culminando con la redacción literaria de la biografía de uno de estos objetos.",
+    "modules": [
+      "¿De qué está hecho?",
+      "Etiquetas que dicen mucho",
+      "Primero fue la madera",
+      "Made in somewhere",
+      "Vivo en un estuche"
+    ],
+    "ras": [
+      "Utilizar recursos digitales para buscar información y trabajar de forma individual y en equipo",
+      "Identificar problemas ecosociales y proponer estilos de vida sostenibles",
+      "Comprender e interpretar textos escritos y multimodales (como etiquetas e infografías)",
+      "Producir textos orales y escritos, aplicando estrategias de planificación y revisión",
+      "Crear textos con intención literaria usando recursos como la personificación",
+      "Realizar cálculos de la vida cotidiana y leer mapas sobre el transporte de mercancías"
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) interdisciplinar y Aprendizaje Cooperativo",
+    "originalContent": "El proyecto invita al alumnado a investigar el ciclo de vida de su material escolar a través de varias fases. Comienza analizando los materiales que componen sus útiles y creando un entorno de trabajo digital (carpetas de Drive y blog de aula). Posteriormente, analizan las etiquetas y envases para interpretar sus símbolos de reciclaje y advertencia, creando pósteres informativos digitales. A continuación, estudian los procesos de fabricación (como el del papel) estructurando la información en cronogramas visuales que luego exponen oralmente. Después investigan el transporte global de las materias primas utilizando mapas interactivos, calculando costes y reflexionando sobre el impacto medioambiental mediante la creación de eslóganes. Como producto final, el alumnado aplica la personificación para escribir de forma individual la biografía de un objeto de su estuche, relatando su origen, fabricación y viaje. Este texto pasa por una revisión cooperativa y se publica en un libro digital o blog. La evaluación es continua e incluye el uso de rúbricas para las tareas intermedias y el producto final, cuestionarios de revisión por pares, y un Diario de reflexiones para fomentar la metacognición al término de cada fase."
   },
   {
     "title": "Un mundo en crisis. El fin de siglo",
-    "description": "Preservar el legado literario de finales del siglo XIX y principios del XX mediante creaciones culturales para una cápsula del tiempo.",
-    "content_sample": "Los estudiantes se convierten en salvadores de la literatura frente a un futuro distópico. En equipos cooperativos, interpretan y conectan la crisis de fin de siglo con la actualidad grabando un canal de podcast literario en SoundCloud, diseñan una exposición fotográfica interactiva enriquecida con audios y códigos QR, y redactan descripciones subjetivas plasmadas en collages digitales para Instagram sobre 'El paisaje de mi vida'. Como producto final, seleccionan y empaquetan todas sus producciones creativas e investigaciones en una cápsula del tiempo física o digital para la biblioteca del centro."
+    "description": "Proyecto educativo centrado en la literatura de finales del siglo XIX y principios del XX (Generación del 98 y Modernismo). El alumnado lee, investiga y crea textos para preservarlos en una cápsula del tiempo.",
+    "modules": [
+      "Nuestro proyecto",
+      "Leemos y hablamos sobre Literatura",
+      "Investigamos y aplicamos",
+      "Creamos y recreamos",
+      "Nuestro legado para el futuro"
+    ],
+    "ras": [
+      "Comprender, interpretar y valorar obras o fragmentos literarios de la Generación del 98 y el Modernismo.",
+      "Producir textos orales y multimodales (pódcast, exposiciones) con coherencia y adecuación.",
+      "Buscar, seleccionar y contrastar información sobre el contexto histórico y social.",
+      "Crear textos con intención literaria, aplicando la descripción subjetiva de un paisaje.",
+      "Participar en interacciones orales mediante el trabajo cooperativo y la resolución dialogada."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Aprendizaje Cooperativo y enfoque de Educación literaria",
+    "originalContent": "El proyecto arranca planteando un reto distópico: salvar la literatura de su destrucción. Para ello, el alumnado debe crear una cápsula del tiempo con los mejores exponentes literarios del fin de siglo. En la primera fase ('Leemos y hablamos sobre Literatura'), analizan textos modernistas y noventayochistas abordando temas como la crítica social o la visión de la mujer, y elaboran un pódcast literario. Posteriormente ('Investigamos y aplicamos'), estudian el contexto histórico-social de la época (Revolución Industrial, papel de la mujer, pérdida de las colonias) y montan una exposición fotográfica y audiovisual. En la fase 'Creamos y recreamos', se centran en la descripción subjetiva del paisaje como recurso literario, redactando textos propios y diseñando collages digitales en herramientas como Canva. Finalmente, en 'Nuestro legado para el futuro', deciden qué textos y productos intermedios introducir en la cápsula del tiempo para la posteridad. El proceso se acompaña de un portafolio, rúbricas de evaluación (para el pódcast, la exposición y el collage) y el 'Semáforo de mi aprendizaje', una rutina de pensamiento metacognitiva que se aplica al término de cada secuencia."
+  },
+  {
+    "title": "Parada 6: Marca tu rumbo | Itinerario para la empleabilidad I",
+    "description": "Este proyecto de orientación profesional se centra en el autoconocimiento para la empleabilidad. Utiliza la metáfora de una brújula profesional para analizar competencias, intereses, valores y autoestima de cara a la inserción laboral.",
+    "modules": [
+      "Norte: Soft skills",
+      "Sur: Hard Skills",
+      "Este: Intereses y valores",
+      "Oeste: Autoestima",
+      "Reto: Marca tu rumbo",
+      "Glosario visual"
+    ],
+    "ras": [
+      "RA4. Analiza y evalúa su potencial profesional y sus intereses para guiarse en el proceso de auto orientación y elabora una hoja de ruta para la inserción profesional en base al análisis de las competencias, intereses y destrezas personales."
+    ],
+    "methodology": "Aprendizaje Basado en Retos, con un enfoque de desarrollo de capacidades personales mediante un proceso iterativo de trabajo-revisión-aprendizaje-mejora.",
+    "originalContent": "El proyecto guía a los estudiantes a través del diseño de una 'brújula profesional' cuyos puntos cardinales son las Soft Skills (Norte), Hard Skills (Sur), Intereses y Valores (Este), y Autoestima (Oeste). El proceso incluye autoevaluaciones, el test de intereses de Holland, la recopilación de evidencias de habilidades técnicas, y el análisis de aspectos psicológicos como las distorsiones cognitivas y el upskilling/reskilling. El reto final consiste en alinear estos cuatro puntos en una plantilla y redactar un Manifiesto Personal para guiar su futuro laboral. Las actividades se recopilan en un Diario de viaje digital y un Glosario visual, que son evaluados integralmente mediante rúbricas, mientras que el progreso se certifica con insignias en un Pasaporte de empleabilidad."
+  },
+  {
+    "title": "¿Cómo somos los jóvenes europeos?",
+    "description": "Proyecto educativo gamificado centrado en el ODS 10, donde el alumnado actúa como una ONG para investigar y concienciar sobre las desigualdades socioeconómicas de los jóvenes en la Unión Europea.",
+    "modules": [
+      "Misión: Reducción de las desigualdades",
+      "Conocimiento previo",
+      "¡¡¡Investigamos!!!",
+      "Comparamos resultados",
+      "Proyecto en ArcGIS"
+    ],
+    "ras": [
+      "Buscar, seleccionar y organizar información usando fuentes históricas y geográficas para crear productos propios",
+      "Entender y afrontar desafíos ecosociales como la desigualdad, conociendo los Objetivos de Desarrollo Sostenible (ODS 10)",
+      "Producir textos orales, escritos y multimodales (textos expositivos, encuestas, informes) coherentes y adecuados",
+      "Utilizar tecnologías digitales para recabar datos, elaborar encuestas, presentaciones y mapas (ArcGIS)"
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) gamificado y aprendizaje cooperativo",
+    "originalContent": "El proyecto se enmarca en una narrativa gamificada donde el alumnado viaja en el tiempo para salvar a la humanidad cumpliendo el ODS 10 sobre la reducción de las desigualdades. Las actividades comienzan con la fase de 'Conocimiento previo' analizando la historia y economía de la Unión Europea y elaborando productos visuales como mapas mentales o reportajes. Posteriormente, en la etapa investigativa, el alumnado crea y envía encuestas (Formularios de Drive) a compañeros del centro para recabar datos sociológicos. Luego comparan estos datos propios con la infografía e información estadística oficial de Eurostat sobre los jóvenes europeos, elaborando un texto expositivo e informe final que presenta las diferencias y propone soluciones basadas en los fondos de desarrollo regional. El aprendizaje se evalúa continuamente a través de un Diario de aprendizaje, porfolios, rúbricas específicas para cada tarea y un sistema de insignias gamificadas."
+  },
+  {
+    "title": "La imaginación al poder",
+    "description": "Proyecto educativo de Lengua Castellana y Literatura (4º de ESO) sobre la literatura del periodo de entreguerras, las Vanguardias y la Generación del 27. El alumnado lee, investiga y redacta textos poéticos propios para preservarlos en una cápsula del tiempo.",
+    "modules": [
+      "Nuestro proyecto",
+      "Leemos y hablamos sobre Literatura",
+      "Investigamos y aplicamos",
+      "Creamos y recreamos",
+      "Nuestro legado para el futuro"
+    ],
+    "ras": [
+      "Comprender e interpretar textos orales y multimodales",
+      "Producir textos orales y multimodales con fluidez, coherencia, cohesión y registro adecuado",
+      "Comprender, interpretar y valorar textos escritos, con sentido crítico y diferentes propósitos de lectura",
+      "Producir textos escritos y multimodales coherentes, cohesionados, adecuados y correctos",
+      "Seleccionar y contrastar información procedente de diferentes fuentes de manera progresivamente autónoma",
+      "Leer, interpretar y valorar obras o fragmentos literarios del patrimonio nacional y universal para crear textos de intención literaria"
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Educación literaria, Diseño Universal de Aprendizaje (DUA) y Aprendizaje cooperativo",
+    "originalContent": "El proyecto propone crear una cápsula del tiempo para salvaguardar la literatura frente a distopías que prohíben los libros. En 'Leemos y hablamos sobre Literatura', el alumnado lee textos del periodo de entreguerras y crea un poema compuesto por fragmentos ajenos llamado 'Centón'. En 'Investigamos y aplicamos', analizan las vanguardias, la Generación del 27 y a 'Las Sinsombrero', documentándose para preparar, escenificar y grabar en vídeo entrevistas simuladas a dichos escritores. En 'Creamos y recreamos', el alumnado escribe un poema de estilo surrealista poniendo en práctica recursos como el verso libre y la metáfora de libre asociación. Por último, en 'Nuestro legado para el futuro', deciden y acuerdan qué textos conservar en su cápsula. Todo el proceso de aprendizaje es monitorizado a través de un portafolio personal, la herramienta de autorregulación 'Semáforo de mi aprendizaje' y rúbricas de evaluación."
+  },
+  {
+    "title": "La honra a debate",
+    "description": "Proyecto educativo de Lengua Castellana y Literatura (3º de ESO) sobre el concepto de la honra y su impacto en las desigualdades de género. Se analizan textos clásicos y contemporáneos, y culmina con la creación de un cómic.",
+    "modules": [
+      "Nuestro proyecto",
+      "El curioso impertinente",
+      "El verdugo de su esposa",
+      "Bordados",
+      "Nuestro cómic"
+    ],
+    "ras": [
+      "Comprender, interpretar y valorar textos escritos, orales y multimodales con sentido crítico y diferentes propósitos de lectura.",
+      "Producir textos orales, escritos y multimodales con fluidez, coherencia y adecuación, participando en interacciones con respeto.",
+      "Seleccionar y contrastar información de diferentes fuentes, evitando la desinformación y respetando la propiedad intelectual.",
+      "Leer, interpretar y valorar obras del patrimonio nacional y universal, estableciendo vínculos entre textos diversos para crear textos con intención literaria.",
+      "Movilizar el conocimiento lingüístico para reflexionar sobre usos discursivos y aplicar prácticas comunicativas éticas y no discriminatorias."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), aprendizaje cooperativo y educación literaria",
+    "originalContent": "El proyecto articula la lectura y el debate sobre el concepto de la honra utilizando tres obras principales: 'El curioso impertinente' de Miguel de Cervantes, 'El verdugo de su esposa' de María de Zayas y la novela gráfica 'Bordados' de Marjane Satrapi. Durante las fases iniciales, el alumnado interpreta de forma compartida estos textos, analizando su contexto sociohistórico y la estructura narrativa (planteamiento, nudo y desenlace). También participan en actividades como la escritura creativa de un desenlace para la novela de Cervantes y juegos de roles ('El pueblo duerme'). En la fase de investigación, abordan los roles de género históricos y su pervivencia en problemáticas actuales (por ejemplo, crímenes de honor, sexting o matrimonios infantiles), realizando una exposición oral y un collage. Como producto final ('Nuestro cómic'), el alumnado aplica sus conocimientos para diseñar el guion, boceto y versión definitiva de un cómic sobre la honra. Todo el proceso incorpora herramientas de coevaluación, rúbricas del docente y un diario de aprendizaje recopilado en un portafolio personal y grupal."
+  },
+  {
+    "title": "La vida de las palabras",
+    "description": "Proyecto educativo enfocado en la reflexión sobre el léxico, donde el alumnado investiga la formación, origen y variedades de las palabras, culminando con la elaboración de un libro digital sobre la jerga juvenil.",
+    "modules": [
+      "Nuestro proyecto",
+      "Construyendo palabras",
+      "¿De dónde vienen las palabras?",
+      "¿Hablamos siempre igual?",
+      "Las palabras se enredan",
+      "Ponemos en juego lo aprendido",
+      "¿Cómo hablamos nosotros y nosotras?"
+    ],
+    "ras": [
+      "Participar de manera activa y adecuada en interacciones orales formales e informales con actitud cooperativa.",
+      "Comprender, interpretar y valorar textos escritos y multimodales reconociendo su sentido global e intención.",
+      "Producir textos escritos y multimodales coherentes, planificando la redacción y revisando borradores.",
+      "Seleccionar, contrastar e integrar información procedente de diferentes fuentes de manera autónoma.",
+      "Formular generalizaciones sobre el funcionamiento de la lengua y revisar textos propios a partir de la reflexión metalingüística.",
+      "Identificar y desterrar usos discriminatorios de la lengua y los abusos de poder a través de la palabra."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), aprendizaje cooperativo y Diseño Universal de Aprendizaje (DUA)",
+    "originalContent": "El proyecto propone a los estudiantes el reto de investigar el funcionamiento del léxico para mejorar la comunicación intergeneracional. Comienza con la fase 'Construyendo palabras', donde se estudia la morfología, raíces y afijos, culminando con la creación de un diccionario de 'palabras locas' en un tablón virtual. La fase 'Todo lo que siempre quisiste saber sobre las palabras' se divide en investigar el origen del léxico (préstamos, voces patrimoniales), las variedades sociales y situacionales de la lengua, y las relaciones semánticas (denotación, connotación, eufemismos). Todos estos conocimientos se integran en los 'Ejercicios de estilo', donde transforman un texto original aplicando anglicismos, jerga, sinónimos y eufemismos usando Genially. El producto final se desarrolla en '¿Cómo hablamos nosotros y nosotras?', consistente en seleccionar términos de la jerga juvenil actual, analizarlos morfológica y semánticamente, y redactar un informe expositivo dirigido a los adultos, el cual se publica en forma de libro digital en Calameo. El proceso incluye autoevaluación sistemática mediante 'La escalera de mi aprendizaje', portafolios (analógicos o en Drive) y rúbricas de evaluación del docente y coevaluación."
+  },
+  {
+    "title": "El salario y la nómina",
+    "description": "Unidad didáctica para trabajar el recibo de salarios y sus principales elementos con el alumnado de Formación y Orientación Laboral, utilizando vídeos y casos prácticos.",
+    "modules": [
+      "El salario",
+      "Garantías del salario",
+      "Nómina I: Encabezado y periodo de liquidación",
+      "Nómina II: Devengos",
+      "Nómina III: Base de cotización por contingencias comunes",
+      "Nómina IV: Bases de cotización por contingencias profesionales, horas extra e IRPF",
+      "Nómina V: Deducciones y líquido total a percibir",
+      "Reto",
+      "Repaso final"
+    ],
+    "ras": [
+      "Identificar los conceptos relacionados con el salario y sus garantías.",
+      "Interpretar y calcular los diferentes elementos que componen el recibo de salarios."
+    ],
+    "methodology": "Flipped Classroom (Clase Invertida)",
+    "originalContent": "El proyecto utiliza la metodología Flipped Classroom, donde el alumnado visualiza vídeos explicativos en casa (con herramientas como Edpuzzle) y realiza las actividades o resolución de dudas en el aula. Las fases cubren teóricamente el salario, sus garantías y el cálculo paso a paso de una nómina: encabezado, devengos, bases de cotización y deducciones. El aprendizaje culmina en un 'Reto' final consistente en la confección de dos recibos de salarios completos a partir de supuestos prácticos. Paralelamente, los estudiantes mantienen un portafolio personal en formato blog donde escriben un 'Diario de aprendizaje' para reflexionar sobre su progreso en cada apartado. El módulo concluye con un concurso de preguntas de repaso a través de Kahoot. La evaluación formativa y sumativa se apoya en rúbricas que valoran el portafolio y los retos prácticos."
+  },
+  {
+    "title": "Unidad 4: El salario y la nómina",
+    "description": "Unidad didáctica del módulo de Formación y Orientación Laboral (FOL) centrada en el estudio del salario, sus garantías y el cálculo práctico de los elementos que componen el recibo de salarios.",
+    "modules": [
+      "El salario",
+      "Garantías del salario",
+      "Nómina I: Encabezado y periodo de liquidación",
+      "Nómina II: Devengos",
+      "Nómina III: Base de cotización por contingencias comunes",
+      "Nómina IV: Bases de cotización por contingencias profesionales, horas extra e IRPF",
+      "Nómina V: Deducciones y líquido total a percibir",
+      "Reto",
+      "Repaso final"
+    ],
+    "ras": [
+      "Identificar los conceptos relacionados con el salario y sus garantías.",
+      "Interpretar y calcular los diferentes elementos que componen el recibo de salarios."
+    ],
+    "methodology": "Flipped Classroom (Clase Invertida)",
+    "originalContent": "El proyecto emplea la metodología de Flipped Classroom, donde el alumnado visualiza vídeos explicativos en casa (utilizando herramientas como Edpuzzle) sobre el concepto de salario, sus garantías y las diferentes partes de la nómina (encabezado, devengos, bases de cotización y deducciones). Posteriormente, en el aula se resuelven dudas y se realizan actividades prácticas. A lo largo de la unidad, el alumnado elabora un portafolio personal en formato blog, que incluye un 'Diario de aprendizaje' para la reflexión continua. El aprendizaje culmina en un 'Reto' final que consiste en confeccionar dos recibos de salario a partir de casos prácticos concretos, evaluado mediante rúbricas, y un juego de repaso final utilizando Kahoot."
+  },
+  {
+    "title": "Unidad 4: El salario y la nómina",
+    "description": "Unidad didáctica de Formación y Orientación Laboral (FOL) para el estudio del recibo de salarios y sus elementos (devengos, cotizaciones, deducciones) empleando Flipped Classroom.",
+    "modules": [
+      "El salario",
+      "Garantías del salario",
+      "Nómina I: Encabezado y periodo de liquidación",
+      "Nómina II: Devengos",
+      "Nómina III: Base de cotización por contingencias comunes",
+      "Nómina IV: Bases de cotización por contingencias profesionales, horas extra e IRPF",
+      "Nómina V: Deducciones y líquido total a percibir",
+      "Reto",
+      "Repaso final"
+    ],
+    "ras": [
+      "Identificar los conceptos relacionados con el salario y sus garantías",
+      "Interpretar y calcular los diferentes elementos que componen el recibo de salarios"
+    ],
+    "methodology": "Flipped Classroom o Clase Invertida",
+    "originalContent": "La unidad didáctica emplea la metodología Flipped Classroom, requiriendo que el alumnado visualice en casa vídeos explicativos sobre conceptos laborales (salario, bases de cotización, devengos, IRPF, etc.) y posteriormente resuelva dudas y realice actividades prácticas en clase. A lo largo del proyecto, los estudiantes deben mantener un portafolio personal en un blog donde completan un 'Diario de aprendizaje'. La fase central es el 'Reto', donde el alumnado debe confeccionar de manera individual dos recibos de salarios completos a partir de supuestos prácticos definidos (incluyendo salario base, antigüedad, horas extras y retenciones correspondientes). El aprendizaje concluye con un concurso interactivo de repaso utilizando Kahoot y se evalúa formativamente a través de rúbricas (para el portafolio y los recibos elaborados)."
+  },
+  {
+    "title": "El poema del Mio Cid y los desterrados",
+    "description": "Proyecto educativo gamificado centrado en el ODS 1 (Fin de la pobreza) y el fenómeno de la migración. A través del estudio de la Edad Media y el Poema de Mio Cid, el alumnado reflexiona sobre el destierro y crea mapas, cómics y relatos.",
+    "modules": [
+      "Misión: Erradicar la pobreza",
+      "Conocimiento previo",
+      "Ruta digital del Mio Cid",
+      "Hacemos un cómic",
+      "Los desterrados",
+      "Desarrollo del proyecto en ArcGIS"
+    ],
+    "ras": [
+      "Buscar, seleccionar y organizar información sobre contextos históricos como la Edad Media y los Cantares de Gesta.",
+      "Conocer y promover los Objetivos de Desarrollo Sostenible (ODS 1) analizando problemas ecosociales como la migración.",
+      "Comprender, interpretar y valorar textos literarios clásicos como el Poema de Mio Cid.",
+      "Producir textos escritos y multimodales (relatos, cómics) con fluidez, coherencia y adecuación.",
+      "Utilizar herramientas digitales para el tratamiento de información geográfica y creación de productos (ArcGIS, Google Drive, Genially)."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Gamificación y Aprendizaje cooperativo",
+    "originalContent": "El proyecto se sitúa en una narrativa gamificada en la que el alumnado viaja desde el año 2075 para evitar la destrucción del planeta cumpliendo los ODS, asumiendo el rol de miembro del Consejo de Seguridad de la ONU enfocado en el ODS 1 y las migraciones forzosas. La fase de 'Conocimiento previo' aborda la Edad Media y los Cantares de Gesta mediante visual thinking o reportajes. En 'Ruta digital del Mio Cid', los estudiantes trazan los itinerarios del poema utilizando ArcGIS o Google Maps. Posteriormente, en 'Hacemos un cómic', adaptan fragmentos del Cantar al formato gráfico. La fase final, 'Los desterrados', los conecta con la actualidad mediante la redacción de relatos sobre migrantes o desplazados climáticos. El proceso cuenta con evaluación continua apoyada en un diario de aprendizaje, rúbricas de evaluación, portafolios y un sistema motivacional de insignias y recompensas."
+  },
+  {
+    "title": "Mujeres que dejan huella",
+    "description": "Proyecto educativo de Lengua Castellana y Literatura para 4º de ESO centrado en visibilizar la aportación histórica y social de mujeres mediante la creación y difusión de vídeos documentales.",
+    "modules": [
+      "Figuras ocultas",
+      "Las mujeres y la Historia",
+      "Nuestras imprescindibles",
+      "Preparando nuestro documental",
+      "Visibilizando a las mujeres"
+    ],
+    "ras": [
+      "Comprender e interpretar textos orales y multimodales, valorando su forma y contenido.",
+      "Producir textos orales, escritos y multimodales con fluidez, coherencia, cohesión y registro adecuado.",
+      "Seleccionar y contrastar información de diferentes fuentes evaluando su fiabilidad.",
+      "Movilizar el conocimiento sobre la estructura de la lengua y desterrar usos discriminatorios."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) y aprendizaje cooperativo",
+    "originalContent": "El proyecto propone al alumnado investigar y visibilizar a mujeres relevantes de su entorno. Inicia con la fase 'Figuras ocultas', que plantea el reto mediante rutinas de pensamiento. En 'Las mujeres y la Historia', analizan la invisibilidad femenina en libros de texto y elaboran un texto expositivo. Posteriormente, en 'Nuestras imprescindibles', seleccionan mujeres de su entorno local, investigan en fuentes analógicas y digitales, y presentan oralmente los hallazgos. En 'Preparando nuestro documental', escogen entre dos opciones (Biografía o Entrevista), redactan los guiones y diseñan un 'storyboard' buscando recursos libres de derechos. Finalmente, en 'Visibilizando a las mujeres', graban, editan y publican los documentales en un canal de YouTube creado colaborativamente. El proceso incluye autoevaluación ('Escalera de mi aprendizaje'), coevaluación con rúbricas y uso de un portafolio digital o físico."
+  },
+  {
+    "title": "Unidad 1. Prevención de riesgos laborales. Conceptos básicos",
+    "description": "Unidad didáctica para el módulo de Formación y Orientación Laboral (FOL) que aborda los conceptos esenciales de prevención de riesgos, medidas de prevención y protección, y señalización de seguridad, mediante vídeos explicativos y actividades prácticas.",
+    "modules": [
+      "Conceptos básicos en prevención",
+      "Medidas de prevención",
+      "Medidas de protección",
+      "Señalización de seguridad",
+      "EL RETO",
+      "Repaso final"
+    ],
+    "ras": [
+      "Valorar la importancia de trabajar en condiciones de seguridad para evitar posibles daños que afecten a nuestra salud.",
+      "Comprender los principales conceptos en Prevención de Riesgos Profesionales.",
+      "Identificar y clasificar los diferentes daños que puede ocasionar el trabajo.",
+      "Aplicar los principios básicos en prevención de riesgos laborales.",
+      "Diferenciar entre las distintas técnicas de prevención y protección de riesgos.",
+      "Determinar las principales medidas de protección individual y colectiva.",
+      "Reconocer el significado de los diferentes tipos de señalización de seguridad."
+    ],
+    "methodology": "Flipped Classroom (Clase Invertida)",
+    "originalContent": "La unidad utiliza la metodología Flipped Classroom, donde el alumnado visualiza en casa vídeos explicativos sobre conceptos como accidente laboral (in itinere), enfermedades profesionales, ergonomía, medidas de prevención/protección y señales de seguridad, empleando herramientas como Edpuzzle. En el aula, el profesor resuelve dudas y guía la realización de actividades colaborativas e individuales (como debates sobre casos reales, diferenciación de AT y EP o identificación de señales). Durante todo el proceso, los estudiantes mantienen un portafolio personal en formato blog, donde publican un 'Diario de aprendizaje'. Al final de la unidad, el alumnado aplica lo aprendido en 'EL RETO', consistente en crear y exponer una presentación con diapositivas sobre los equipos de protección (colectiva e individual) y la señalización específica de su sector profesional. La unidad concluye con un concurso de repaso mediante Kahoot y es evaluada a través de rúbricas."
+  },
+  {
+    "title": "¿Qué tenemos en común el Renacimiento y yo? Quijotes, Lazarillos y Celestinas",
+    "description": "Unidad didáctica sobre la literatura del Renacimiento español (s. XVI) que conecta temas clásicos como el abuso de poder o la desigualdad con la actualidad.",
+    "modules": [
+      "0. El Renacimiento",
+      "1. El Lazarillo de Tormes",
+      "1.1 La novela en el siglo XVI",
+      "1.2. El Lazarillo de Tormes",
+      "1.3. Actividades",
+      "2. El Quijote",
+      "2. 1. Vida de Cervantes",
+      "2.2. El Quijote",
+      "2.3. Actividades",
+      "3. La Celestina",
+      "3.1. Contexto y autor",
+      "3.2. Temas y Personajes",
+      "3.3. Actividades"
+    ],
+    "ras": [
+      "Fomentar la comprensión lectora, oral y escrita mediante textos guiados y recursos audiovisuales.",
+      "Promover la reflexión ética y social debatiendo sobre situaciones de represión, injusticias y 'molinos' actuales como el bullying o las noticias falsas.",
+      "Desarrollar la competencia digital mediante actividades interactivas y la creación de productos digitales."
+    ],
+    "methodology": "No se especifica una metodología como ABP de manera explícita, pero incluye elementos interactivos, debate social, y uso de herramientas digitales.",
+    "originalContent": "La unidad didáctica abarca el Renacimiento y Humanismo, la prosa renacentista (con énfasis en la novela picaresca y el Lazarillo de Tormes), la obra de Miguel de Cervantes (su vida y El Quijote), y La Celestina de Fernando de Rojas. El contenido se presenta mediante textos explicativos estructurados sobre el contexto, argumento, temas, personajes y estilo de las obras. Para facilitar el aprendizaje, integra actividades interactivas como vídeos enriquecidos, ejercicios de Verdadero o Falso, selección de respuestas, juegos de completar huecos con menús desplegables (actividad 'Las dos caras de La Celestina') y un 'Rosco' interactivo ('Salva el manuscrito de Cervantes'). Las actividades buscan no solo la asimilación de conceptos literarios, sino también relacionar las obras clásicas con problemáticas vigentes."
+  },
+  {
+    "title": "¿Qué tenemos en común el Renacimiento y yo? Quijotes, Lazarillos y Celestinas",
+    "description": "Unidad didáctica sobre la literatura del Renacimiento español, que explora obras como el Quijote, el Lazarillo de Tormes y La Celestina, vinculando sus temas con la actualidad.",
+    "modules": [
+      "0. El Renacimiento",
+      "1. El Lazarillo de Tormes",
+      "1.1 La novela en el siglo XVI",
+      "1.2. El Lazarillo de Tormes",
+      "1.3. Actividades",
+      "Un libro antiguo...",
+      "Hoja de ruta",
+      "Descubrimos el libro",
+      "Aprendemos sobre el autor",
+      "Conocemos los personajes",
+      "Vivimos las aventuras",
+      "Recreamos los lugares",
+      "Abrimos nuestro museo"
+    ],
+    "ras": [
+      "Fomentar la comprensión lectora, oral y escrita mediante textos guiados y recursos audiovisuales.",
+      "Promover la reflexión ética y social debatiendo sobre situaciones de represión, injusticias y 'molinos' actuales como el bullying o las noticias falsas.",
+      "Desarrollar la competencia digital mediante actividades interactivas y la creación de productos digitales."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP)",
+    "originalContent": "El proyecto guía a los estudiantes a través de la literatura renacentista, con un enfoque práctico y creativo centrado en 'El Quijote'. Los alumnos asumen el reto de crear un 'Quijotemuseo' (analógico o virtual) como producto final. El proceso se divide en varias fases: descubrimiento del libro mediante vídeos interactivos y lectura de fragmentos; investigación sobre Miguel de Cervantes creando pódcasts; caracterización de personajes como Sancho Panza mediante fichas; narración de aventuras (molinos y ovejas) a través de cómics; y recreación de escenarios construyendo maquetas de molinos. El trabajo se realiza de manera cooperativa, asignando roles en equipos. La evaluación es formativa y sumativa, apoyándose en rúbricas para cada tarea, un 'Quijotediario' o portafolio personal para la reflexión y autoevaluación, y un juego interactivo final para consolidar aprendizajes."
+  },
+  {
+    "title": "Entre la realidad y el deseo. ¿Eres romántico o realista?",
+    "description": "Proyecto educativo de Lengua Castellana y Literatura para 4º de ESO centrado en el estudio de la literatura del siglo XIX, abordando los movimientos del Romanticismo y el Realismo.",
+    "modules": [
+      "Nuestro proyecto",
+      "Leemos y hablamos sobre Literatura",
+      "Investigamos y aplicamos",
+      "Creamos y recreamos",
+      "Nuestro legado para el futuro"
+    ],
+    "ras": [
+      "Comprender, interpretar y valorar textos orales, escritos y multimodales con sentido crítico.",
+      "Producir textos escritos y orales con coherencia, cohesión y adecuación al género discursivo.",
+      "Seleccionar y contrastar información procedente de diferentes fuentes evaluando su fiabilidad.",
+      "Leer, interpretar y valorar fragmentos literarios para crear textos de intención literaria y debatir en tertulias."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Educación literaria y Aprendizaje cooperativo.",
+    "originalContent": "El proyecto propone al alumnado el reto de convertirse en lector, investigador y creador para salvaguardar la literatura del siglo XIX en una cápsula del tiempo. Comienza con la fase 'Leemos y hablamos sobre Literatura', donde se leen textos de autores románticos (Bécquer, Espronceda, Rosalía de Castro) y realistas (Galdós, Clarín, Pardo Bazán) y se organiza una tertulia literaria. En 'Investigamos y aplicamos', los estudiantes buscan información sobre el contexto histórico y literario para elaborar y maquetar una revista literaria digital. En 'Creamos y recreamos', el alumnado escribe un relato corto asumiendo las características del estilo romántico o realista. Por último, en 'Nuestro legado para el futuro', deciden qué textos y producciones conservar en la cápsula del tiempo. La evaluación es formativa y continua, apoyada en el uso de un portafolio (digital o analógico), la herramienta de autorregulación 'Semáforo de mi aprendizaje' y rúbricas de coevaluación y heteroevaluación."
+  },
+  {
+    "title": "La Ruleta de las Palabras",
+    "description": "Proyecto educativo gamificado centrado en el ODS 4 (Educación de Calidad). El alumnado, asumiendo el rol de docente, crea juegos interactivos para enseñar categorías gramaticales, recursos literarios y textos instructivos.",
+    "modules": [
+      "Misión: Educación de Calidad",
+      "Conocimiento previo",
+      "Creamos nuestro juego",
+      "¿Todo claro?",
+      "Jornada de juegos",
+      "Desarrollo del proyecto en ArcGIS"
+    ],
+    "ras": [
+      "Conocimiento y uso progresivamente autónomo de las estrategias necesarias para la producción y evaluación de textos orales, así como hablar en público.",
+      "Escritura e interpretación de textos narrativos, descriptivos, instructivos, expositivos y argumentativos.",
+      "Reconocimiento, uso y explicación de las categorías gramaticales y recursos de modalización o estilísticos."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Gamificación y Aprendizaje-Servicio",
+    "originalContent": "Enmarcado en una narrativa temporal donde la humanidad viaja del año 2075 al 2015 para evitar su extinción cumpliendo los ODS, el alumnado actúa como delegado de la ONU. En este proyecto se trabaja el ODS 4 mediante la creación de Recursos Educativos Abiertos (REA). Durante el 'Conocimiento previo', los equipos elaboran un Visual Thinking sobre textos instructivos, categorías gramaticales y recursos estilísticos. En 'Creamos nuestro juego', desarrollan una ruleta interactiva (digital con Genially/H5P o física). La fase '¿Todo claro?' exige redactar de forma precisa las instrucciones (texto instructivo) de dichos juegos. Finalmente, en la 'Jornada de juegos' organizan un evento lúdico-educativo para probar los materiales creados con otros estudiantes, grabando y editando un vídeo-reportaje de la experiencia. La evaluación combina el trabajo cooperativo, diarios de aprendizaje (portafolio) evaluados con rúbricas, y un sistema gamificado con puntos, insignias y medallas de privilegio."
+  },
+  {
+    "title": "Ser o no ser románticos. Esa es la cuestión.",
+    "description": "Proyecto educativo de Lengua Castellana y Literatura (Educación Secundaria) que aborda el Romanticismo español, cuestionando sus mitos, analizando sus características y reivindicando el papel de la mujer en la literatura de la época.",
+    "modules": [
+      "Desmontando mitos",
+      "¿Somos románticos? ¿Cuestión de género?",
+      "Leemos, analizamos y aprendemos a expresar emociones",
+      "Nos ponemos en su voz",
+      "¿Jugamos un poco?"
+    ],
+    "ras": [
+      "Comprender e interpretar textos orales y multimodales, recogiendo el sentido general y la información más relevante.",
+      "Producir textos orales y multimodales con fluidez, coherencia, cohesión y registro adecuado.",
+      "Comprender, interpretar y valorar textos escritos, con sentido crítico y diferentes propósitos de lectura.",
+      "Producir textos escritos y multimodales coherentes, cohesionados, adecuados y correctos.",
+      "Seleccionar y contrastar información procedente de diferentes fuentes de manera progresivamente autónoma.",
+      "Leer, interpretar y valorar obras o fragmentos literarios del patrimonio nacional y universal, utilizando un metalenguaje específico.",
+      "Poner las propias prácticas comunicativas al servicio de la convivencia democrática, la resolución dialogada de los conflictos y la igualdad de derechos de todas las personas."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Flipped Classroom y Trabajo Cooperativo",
+    "originalContent": "El proyecto se articula en cinco secuencias didácticas donde el alumnado asume un rol activo. Comienza con la fase 'Desmontando mitos', donde mediante rutinas de pensamiento y visualización de vídeos (trabajados en formato Flipped Classroom con 'Notas Cornell') se analizan los prejuicios sobre el Romanticismo. Continúa con '¿Somos románticos? ¿Cuestión de género?', fase dedicada a investigar sobre las mujeres escritoras invisibilizadas de la época, elaborando infografías y textos argumentativos sobre el papel de la educación en la igualdad de género. En la fase 'Leemos, analizamos y aprendemos a expresar emociones', los estudiantes se adentran en la obra de Bécquer, Espronceda, Rosalía de Castro, Carolina Coronado y Larra, realizando comentarios de texto y análisis literarios a través de dinámicas como el folio giratorio y lápices al centro. La secuencia 'Nos ponemos en su voz' fomenta la creatividad mediante la creación de un diálogo programado en Scratch entre autores románticos, la grabación de pódcasts recitando rimas y la dramatización de leyendas. Por último, en '¿Jugamos un poco?', los alumnos diseñan juegos interactivos para repasar lo aprendido. El proceso incluye la creación de un portafolio personal (blog) y un 'Diario de aprendizaje' para la autoevaluación continua."
+  },
+  {
+    "title": "Somos investigadores del lenguaje",
+    "description": "Proyecto educativo de Lengua Castellana y Literatura basado en la investigación y reflexión sintáctica. El alumnado asume el rol de investigador en una agencia del lenguaje para aprender sobre la oración simple, sujetos, predicados y complementos.",
+    "modules": [
+      "Iniciamos nuestra investigación",
+      "Sujetos que vamos a investigar",
+      "El sujeto de nuestra investigación",
+      "Investigando otros sujetos",
+      "Investigando 'predicados y complementos'",
+      "Los misteriosos predicados",
+      "Los cómplices perfectos",
+      "Etapa final de la investigación"
+    ],
+    "ras": [
+      "Comprender e interpretar el sentido general y los detalles más relevantes de textos orales, escritos y multimodales.",
+      "Producir textos originales (como infografías, píldoras informativas y lapbooks) de extensión media, con organización clara y adecuada al propósito comunicativo.",
+      "Interactuar usando estrategias de cooperación y recursos analógicos o digitales para el intercambio comunicativo.",
+      "Distinguir la forma y función de las palabras y elaborar conclusiones sobre el funcionamiento del sistema lingüístico (análisis sintáctico y reflexión gramatical)."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) con elementos de Gamificación y Aprendizaje Cooperativo",
+    "originalContent": "El proyecto sitúa al estudiante como aspirante a investigador en la agencia 'Lettera&Cía'. Comienza con una entrevista de trabajo y una autoevaluación de fortalezas. A lo largo del itinerario, el alumnado recoge sus reflexiones en un 'cuaderno de campo' y supera 'tareas de paso de nivel' (creación de una infografía y una píldora informativa en vídeo) para ascender en la agencia. Aprende progresivamente sobre la oración, el sujeto y la concordancia, para luego adentrarse en los tipos de sujeto, transformaciones a pasiva, y la estructura del predicado (núcleos verbales simples, compuestos, perífrasis, locuciones, tipos de predicado y complementos argumentales y adjuntos). Se emplean dinámicas cooperativas (como '1-2-4', 'lápices al centro' o 'grupo de expertos') y ejercicios interactivos. En la etapa final, los estudiantes demuestran sus conocimientos en un rosco interactivo, elaboran un 'lapbook' con toda la información gramatical y realizan una exposición oral para obtener su diploma de investigador."
+  },
+  {
+    "title": "Un informe sobre la Lengua",
+    "description": "Secuencia didáctica del proyecto 'SOS... ¡Salvemos la Lengua!' en la que el alumnado investiga sobre unidades y procedimientos lingüísticos para redactar un informe normativo al estilo de una Academia de la Lengua.",
+    "modules": [
+      "¿Qué sabemos de la Lengua?",
+      "Y después de corregir ¿qué podemos hacer?",
+      "Necesitamos saber más",
+      "Escribo el acta de mi aprendizaje"
+    ],
+    "ras": [
+      "Participar de manera activa y adecuada en interacciones orales formales e informales en el trabajo en equipo.",
+      "Comprender, interpretar y valorar textos escritos y multimodales reconociendo el sentido global y la información relevante.",
+      "Producir textos escritos y multimodales coherentes y cohesionados, planificando la redacción de informes.",
+      "Seleccionar y contrastar información de diferentes fuentes evaluando su fiabilidad e integrándola en esquemas y textos propios.",
+      "Elaborar conclusiones propias sobre el funcionamiento del sistema lingüístico, revisando textos y utilizando terminología específica."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) y Aprendizaje por tareas con enfoque colaborativo y uso del Diseño Universal de Aprendizaje (DUA)",
+    "originalContent": "La secuencia, diseñada para 3º de ESO, propone al alumnado convertirse en 'académicos' y 'vigilantes de la lengua'. Inicia evaluando conocimientos previos con un juego de Kahoot ('¿Qué sabemos de la Lengua?'). Posteriormente, el alumnado debe investigar en grupos cooperativos sobre diversos aspectos gramaticales y textuales (deixis, conectores, tiempos verbales, etc.) consultando fuentes digitales y analógicas ('Necesitamos saber más...'). Con esta información, deben redactar un texto expositivo en forma de informe lingüístico que defina los conceptos y ofrezca consejos de uso ('Y después de corregir ¿qué podemos hacer?'). Los informes individuales de cada grupo se compilan finalmente en un libro digital utilizando Calameo, acompañado de actividades lúdicas creadas por ellos mismos. El proceso concluye con una reflexión metacognitiva obligatoria plasmada en el 'Acta de mi aprendizaje' e integrada en el portafolio. La evaluación se apoya en rúbricas tanto del informe como de las actividades interactivas."
+  },
+  {
+    "title": "Un informe sobre la Lengua",
+    "description": "Secuencia didáctica del proyecto 'SOS... ¡Salvemos la Lengua!' en la que el alumnado investiga sobre unidades y procedimientos lingüísticos para elaborar juegos educativos e informes normativos.",
+    "modules": [
+      "¿Qué sabemos de la Lengua?",
+      "Y después de corregir ¿qué podemos hacer?",
+      "Toca crear las actividades...",
+      "Ahora a jugar",
+      "Escribo el acta de mi aprendizaje"
+    ],
+    "ras": [
+      "Participar de manera activa y adecuada en interacciones orales formales e informales en el trabajo en equipo.",
+      "Producir textos escritos coherentes, planificando la redacción, revisando borradores y enriqueciendo los textos (precisión léxica y ortográfica).",
+      "Movilizar el conocimiento sobre la estructura de la lengua, formulando generalizaciones sobre el funcionamiento del sistema lingüístico.",
+      "Revisar textos propios argumentando propuestas de mejora a partir de la reflexión metalingüística.",
+      "Explicar y argumentar la interrelación entre el propósito comunicativo y las elecciones lingüísticas utilizando metalenguaje específico."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) y Aprendizaje por tareas con enfoque colaborativo y uso del Diseño Universal de Aprendizaje (DUA)",
+    "originalContent": "La secuencia, diseñada para 3º de ESO, propone al alumnado convertirse en 'académicos de la lengua'. Inicia evaluando conocimientos previos con un juego de Kahoot ('¿Qué sabemos de la Lengua?'). A continuación, los estudiantes deben asumir el rol de expertos y redactar un breve informe expositivo sobre procedimientos lingüísticos y gramaticales (como la deixis, los conectores o la formación del léxico) basándose en fuentes de información proporcionadas ('Y después de corregir ¿qué podemos hacer?'). En la fase 'Toca crear las actividades...', el alumnado diseña 12 ejercicios prácticos sobre lo aprendido y los transforma en un juego interactivo tipo Trivial utilizando herramientas como Genially, acompañándolo de un texto instructivo con las normas del juego. El proyecto culmina con una sesión grupal donde todos prueban los juegos ('Ahora a jugar'), obteniendo insignias según su nivel de aciertos. El proceso concluye con una reflexión metacognitiva obligatoria en el 'Acta de mi aprendizaje', evaluada mediante rúbricas y el uso de un portafolio personal y grupal."
+  },
+  {
+    "title": "Preparamos juegos para aprender Lengua",
+    "description": "Secuencia didáctica para 3º de ESO en la que el alumnado crea juegos interactivos y reglas de juego para afianzar y evaluar conocimientos sobre unidades y procedimientos lingüísticos.",
+    "modules": [
+      "Y después de corregir ¿qué podemos hacer?",
+      "Toca crear las actividades...",
+      "Escribo el acta de mi aprendizaje"
+    ],
+    "ras": [
+      "Participar de manera activa y adecuada en interacciones orales informales y en el trabajo en equipo, con actitud de escucha activa y cooperación.",
+      "Producir textos escritos y multimodales coherentes y cohesionados, planificando, redactando y revisando borradores, y aplicando normas ortográficas y gramaticales.",
+      "Movilizar el conocimiento sobre la estructura de la lengua para revisar textos propios y ajenos, proponiendo mejoras basadas en la reflexión metalingüística.",
+      "Explicar y argumentar la interrelación entre el propósito comunicativo y las elecciones lingüísticas utilizando terminología específica."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) y Aprendizaje por tareas con enfoque cooperativo.",
+    "originalContent": "El proyecto sitúa a los estudiantes en el rol de 'vigilantes de la lengua' o académicos. Tras haber investigado y detectado errores lingüísticos en secuencias previas, en esta fase ('Toca crear las actividades...') los alumnos trabajan en grupos heterogéneos para redactar al menos 12 preguntas que evalúen aspectos como categorías gramaticales, relaciones semánticas, conectores o sintaxis. Estas preguntas se diseñan siguiendo una guía de redacción y se coevalúan antes de transformarse en un juego interactivo, como un Trivial digital (usando Genially) o un cuestionario estilo 'Saber y Ganar'. Además, los equipos deben redactar un texto instructivo claro con las normas de su juego. Finalmente, todo el proceso culmina con una reflexión metacognitiva obligatoria en el 'Acta de mi aprendizaje', que se incorpora al diario de sesiones (portafolio) para autoevaluar el progreso y las dificultades superadas."
+  },
+  {
+    "title": "Un mundo de poesía",
+    "description": "Proyecto educativo enfocado en la lírica donde el alumnado investiga, lee, interpreta y crea textos poéticos, combinándolos con música e imágenes para inundar su centro educativo de poesía.",
+    "modules": [
+      "Lo que necesitas es... poesía",
+      "El lenguaje poético",
+      "Un paseo poético por la Historia",
+      "Creamos, recreamos... la poesía",
+      "Inundamos el centro de poesía"
+    ],
+    "ras": [
+      "Valorar la forma y el contenido de textos orales y multimodales de cierta complejidad, evaluando su calidad y eficacia comunicativa.",
+      "Realizar exposiciones y argumentaciones orales de cierta extensión y complejidad sobre temas de interés personal, social o educativo.",
+      "Planificar la redacción de textos escritos y multimodales coherentes, cohesionados, adecuados y correctos.",
+      "Localizar, seleccionar y contrastar información procedente de diferentes fuentes, organizándola e integrándola con sentido crítico.",
+      "Leer de manera autónoma obras diversas como fuente de placer y conocimiento, compartiendo la experiencia lectora.",
+      "Crear textos personales o colectivos con intención literaria y conciencia de estilo a partir de modelos dados."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Aprendizaje Cooperativo y Diseño Universal de Aprendizaje (DUA)",
+    "originalContent": "El proyecto se organiza en varias fases interconectadas destinadas a acercar la poesía al alumnado de secundaria desde un enfoque emocional y creativo. En la primera fase ('Lo que necesitas es... poesía'), se motiva al alumnado mediante una reflexión sobre las emociones y la necesidad de la poesía, estableciendo un 'Diario-blog poético' personal. En la segunda fase ('El lenguaje poético'), se analizan los elementos característicos del género lírico, el ritmo (métrica y rima), y el lenguaje figurado (metáforas, sinestesias, personificaciones) mediante dinámicas de folio giratorio y un tablón colaborativo en Padlet. La tercera fase ('Un paseo poético por la Historia') introduce un recorrido por la literatura clásica española (Edad Media, Renacimiento y Barroco) a través de la técnica de 'Grupos de expertos' y la elaboración de una línea del tiempo digital con Timetoast. En la cuarta fase ('Creamos, recreamos... la poesía'), los estudiantes seleccionan un poema de la antología para recitarlo de forma expresiva y crear un vídeo-poema utilizando herramientas de edición audiovisual y storyboards. Finalmente, en 'Inundamos el centro de poesía', se da cumplimiento al reto del proyecto mediante la creación de un 'Árbol de la poesía' físico o interactivo (con Thinglink), planteando además estrategias de difusión digital en redes sociales (Twitter, Facebook) y propuestas para celebrar el Día de la Poesía. La evaluación es procesual y formativa, apoyándose en un portafolio en blog, rúbricas específicas para cada tarea y autoevaluaciones con plantillas de la escalera de aprendizaje."
+  },
+  {
+    "title": "Viaje a la Alta Edad Media",
+    "description": "Proyecto educativo interdisciplinar (Ámbito Sociolingüístico - Geografía e Historia y Lengua Castellana y Literatura) para 2º de ESO que explora la Alta Edad Media y el Imperio Bizantino a través de la creación de juegos didácticos y textos descriptivos, narrativos e instructivos.",
+    "modules": [
+      "¿Cómo vivían en la Alta Edad Media? Contamos historias",
+      "Una sociedad rodeada de arte. Describimos",
+      "En Oriente todo es distinto. Elaboramos una guía turística",
+      "Nuestro dominó medieval"
+    ],
+    "ras": [
+      "Elaborar, expresar y presentar contenidos propios en forma de esquemas, tablas informativas y otros formatos mediante estrategias de búsqueda, selección y tratamiento de información.",
+      "Contrastar y argumentar sobre acontecimientos de la historia medieval localizando y analizando fuentes.",
+      "Incorporar y utilizar adecuadamente términos, conceptos y acontecimientos históricos en textos escritos y orales.",
+      "Participar de manera activa y adecuada en interacciones orales formales e informales en el trabajo en equipo.",
+      "Comprender e interpretar textos escritos y multimodales de diferentes tipologías (descriptivos, narrativos, instructivos).",
+      "Planificar y producir textos escritos coherentes y cohesionados aplicando normas lingüísticas y ortográficas."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) y Aprendizaje Cooperativo",
+    "originalContent": "El proyecto sitúa al alumnado en el papel de un viajero medieval que recorre la Alta Edad Media y el Imperio Bizantino. Se organiza en secuencias interdisciplinares que combinan Geografía e Historia con Lengua Castellana y Literatura. En la primera fase, investigan la política, la economía y la sociedad occidental, analizan textos narrativos y elaboran una infografía y un lapbook. En la segunda fase, estudian el arte prerrománico y mozárabe, profundizan en los textos descriptivos y crean un juego tipo 'Quién es quién' medieval. La tercera fase se centra en el Imperio Bizantino y Constantinopla, donde analizan guías turísticas para redactar una propia y elaboran un bingo oriental. Como producto final integrador ('Nuestro dominó medieval'), los estudiantes construyen un dominó didáctico con 27 fichas que combinan imágenes y conceptos históricos, acompañado de su manual de instrucciones redactado como texto instructivo. La evaluación es formativa, basada en portafolios personales (blogs), cuadernos de equipo, diarios de viaje y rúbricas específicas para cada tarea y producto final."
+  },
+  {
+    "title": "Viaje a la Baja Edad Media",
+    "description": "Proyecto educativo interdisciplinar (Ámbito Sociolingüístico - Geografía e Historia y Lengua Castellana y Literatura) para 2º de ESO que profundiza en la crisis y recuperación de la Baja Edad Media mediante la creación de libros de viajes, cómics, romances y una experiencia inmersiva final.",
+    "modules": [
+      "La crisis bajomedieval. Los libros de viajes",
+      "La crisis y el arte peninsular en la Baja Edad Media. El mundo del cómic",
+      "La recuperación de la crisis. Taller de romances",
+      "Organizamos una escape room o un BreakOutEdu medieval"
+    ],
+    "ras": [
+      "Elaborar, expresar y presentar contenidos propios mediante estrategias de búsqueda, selección y tratamiento de información de acontecimientos históricos.",
+      "Contrastar y argumentar sobre temas y acontecimientos de la Edad Media analizando fuentes de información.",
+      "Comprender, interpretar y valorar textos escritos y multimodales de diferentes tipologías (descriptivos, narrativos, expositivos, poéticos).",
+      "Producir textos escritos y multimodales coherentes, cohesionados y correctos, atendiendo a las convenciones de los géneros discursivos elegidos."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP) y Aprendizaje Cooperativo",
+    "originalContent": "El proyecto sitúa al alumnado como un viajero que recorre la Baja Edad Media (siglos XIV y XV). Se estructura en tres bloques principales que combinan contenidos de Geografía e Historia con Lengua Castellana y Literatura. En la primera fase ('La crisis bajomedieval. Los libros de viajes'), investigan la crisis agrícola, demográfica, la peste negra y la crisis urbana, elaborando un abanico o mapa visual en acordeón, un libro de viajes ilustrado imitando un manuscrito antiguo y un juego de palabras prohibidas tipo Tabú. En la segunda fase ('La crisis y el arte peninsular en la Baja Edad Media'), estudian el impacto de la crisis en la península ibérica, el arte gótico y el mudéjar mediante imágenes explicativas, y crean cómics basados en la historia o el arte peninsular medieval, apoyándose en la creación de Story Cubes. En la tercera fase ('La recuperación de la crisis. Taller de romances'), abordan la superación de la crisis hacia la Edad Moderna, crean un Pictionary histórico, analizan y recitan romances tradicionales, componen sus propios romances y diseñan un juego tipo Wordle. Como producto final integrador ('Organizamos un escape room o un BreakOutEdu medieval'), los equipos diseñan y ponen en práctica una experiencia inmersiva con pruebas de historia y lengua para poner a prueba a toda la clase. El proceso formativo se evalúa de manera continua mediante portafolios personales (blogs), cuadernos de equipo, diarios de viaje y rúbricas específicas para cada tarea."
+  },
+  {
+    "title": "Isabel o Teresa y la violencia de género",
+    "description": "Proyecto educativo gamificado centrado en el ODS 5 (Igualdad de género), donde el alumnado investiga la literatura de los siglos XV y XVI, la vida de figuras como Isabel de Villena o Santa Teresa de Jesús, y el análisis de la violencia de género.",
+    "modules": [
+      "Misión: La igualdad de género",
+      "Conocimiento previo",
+      "Creamos una aplicación web sobre Isabel de Villena o Santa Teresa de Jesús",
+      "¡¡STOP a la violencia de género!!",
+      "Desarrollo del proyecto en ArcGIS"
+    ],
+    "ras": [
+      "Buscar, seleccionar y organizar información sobre temas relevantes usando fuentes históricas y geográficas.",
+      "Comprender, interpretar y valorar textos escritos y multimodales de diferentes ámbitos.",
+      "Producir textos escritos y multimodales coherentes y adecuados a demandas comunicativas concretas.",
+      "Conocer y proponer iniciativas para el logro de los Objetivos de Desarrollo Sostenible (ODS 5), rechazando actitudes discriminatorias."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Gamificación y Aprendizaje Cooperativo",
+    "originalContent": "El proyecto se sitúa en una narrativa gamificada en la que el alumnado viaja en el tiempo para cumplir los Objetivos de Desarrollo Sostenible de la ONU, asumiendo en esta misión el rol de Presidente de la Asamblea General para lograr el ODS 5: Igualdad de Género. La primera fase, 'Conocimiento previo', explora la evolución histórica y producción literaria de los siglos XV y XVI mediante un mapa visual o Visual Thinking. En la segunda fase, 'Creamos una aplicación web sobre Isabel de Villena o Santa Teresa de Jesús', los equipos investigan la vida y obra de una de estas escritoras para elaborar un mapa interactivo o aplicación web con ArcGIS Online. La tercera fase, '¡¡STOP a la violencia de género!!', plantea el análisis de datos estadísticos del Instituto Nacional de Estadística (INE) sobre violencia de género para diseñar una presentación con propuestas de erradicación. El proceso formativo se evalúa de forma formativa mediante portafolios (blogs), diarios de aprendizaje, rúbricas y un sistema de insignias y medallas gamificadas."
+  },
+  {
+    "title": "Y tú... ¿qué harías para mejorar el mundo?",
+    "description": "Proyecto educativo enfocado en los Objetivos de Desarrollo Sostenible (ODS), donde el alumnado investiga sobre los retos globales y desarrolla habilidades de comunicación oral y argumentación para debatir y proponer soluciones a través de un 'World Café'.",
+    "modules": [
+      "Pensando de manera global...",
+      "¿ Y nuestros retos?",
+      "Hablamos y dialogamos",
+      "¿Somos capaces de opinar...?",
+      "Celebramos el 'World Café'"
+    ],
+    "ras": [
+      "Comprender e interpretar textos orales y multimodales de cierta complejidad, valorando su forma, contenido y la intención del emisor.",
+      "Realizar exposiciones y argumentaciones orales con fluidez, coherencia y cohesión, empleando recursos verbales y no verbales adecuados.",
+      "Localizar, seleccionar y contrastar información procedente de diferentes fuentes evaluando su fiabilidad e integrándola en esquemas propios.",
+      "Movilizar el conocimiento sobre la estructura de la lengua (oraciones subordinadas sustantivas, concesivas y coordinadas adversativas) para argumentar y opinar.",
+      "Utilizar estrategias para la resolución dialogada de conflictos y la búsqueda de consensos en el ámbito social."
+    ],
+    "methodology": "Aprendizaje Basado en Proyectos (ABP), Aprendizaje Cooperativo y Conversación Dialógica (World Café)",
+    "originalContent": "El proyecto se divide en cinco secuencias didácticas diseñadas para que los estudiantes de 4º de la ESO reflexionen y actúen frente a los desafíos globales de la Agenda 2030. En la primera fase ('Pensando de manera global...'), se explora el concepto de reto global mediante lluvias de ideas y el análisis de figuras como Greta Thunberg. En la segunda fase ('¿Y nuestros retos?'), los equipos eligen uno de los Objetivos de Desarrollo Sostenible (ODS) y realizan búsquedas avanzadas de información para elaborar una infografía o mural explicativo. La tercera fase ('Hablamos y dialogamos') se centra en la lingüística de la lengua oral: se diferencian los textos orales y escritos, se profundiza en la comunicación no verbal (paralingüística, kinésica y proxémica) y se introduce la técnica de diálogo grupal 'World Café'. En la cuarta fase ('¿Somos capaces de opinar...?'), se estudian las propiedades de los textos argumentativos, la expresión de la opinión personal, el uso de subordinadas sustantivas de CD, concesivas y adversativas, culminando con sesiones de debates espontáneos en el aula. Finalmente, en 'Celebramos el World Café', el alumnado planifica y ejecuta una sesión plenaria de debate rotatorio al estilo de la ONU para llegar a acuerdos y propuestas de actuación sobre los ODS elegidos. La evaluación es procesual y formativa, apoyándose en un portafolio personal en Google Drive, una 'Diana de mi aprendizaje' para la metacognición, y rúbricas específicas para el debate, la infografía y el evento final."
   }
 ]

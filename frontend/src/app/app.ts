@@ -381,18 +381,16 @@ export class App implements OnInit {
       
       for (const ra of list) {
         let categoryName = ra.module;
-        if (categoryName.includes('Ciencias aplicadas') || categoryName.includes('Ciències aplicades') ||
-            categoryName.includes('Comunicación y sociedad') || categoryName.includes('Comunicació i societat')) {
-          categoryName = categoryName.replace(/ (I|II)$/, '');
-        }
+        // Se ha eliminado la lógica de unificación de Ciencias Aplicadas y Comunicación y Sociedad
+        // para que aparezcan I y II por separado en el desplegable de FP Básica, según el Word de mejoras.
+        
         if (!groups[categoryName]) groups[categoryName] = [];
         groups[categoryName].push(ra);
       }
       
       return Object.keys(groups).map(key => {
         const moduleItems = groups[key];
-        const isMerged = moduleItems.some(ra => ra.module !== key);
-        const finalCategory = isMerged ? key + ' I y II' : key;
+        const finalCategory = key;
         
         const uniqueTexts: string[] = [];
         for (const ra of moduleItems) {

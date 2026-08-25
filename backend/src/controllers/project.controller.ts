@@ -85,9 +85,10 @@ export const listProjects = async (req: any, res: Response) => {
 
 export const getProject = async (req: any, res: Response) => {
   try {
-    const project = await Project.findById(req.params.id);
+    const project = await Project.findById(req.params.id).populate('userId', 'name email');
     if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
-    if (req.user?.role !== 'admin' && project.userId?.toString() !== req.user?._id) {
+    const authorId = (project.userId as any)?._id?.toString();
+    if (req.user?.role !== 'admin' && authorId !== req.user?._id) {
       return res.status(403).json({ error: "Acceso denegado" });
     }
     res.json(project);

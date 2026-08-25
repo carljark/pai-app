@@ -143,10 +143,15 @@ describe('Projects Endpoints', () => {
     const res404 = await request(app).delete(`/api/projects/${fakeId}`).set('Authorization', `Bearer ${token}`);
     expect(res404.status).toBe(404);
 
-    // 403 (intentar borrar proyecto de otro)
+    // 403 (intentar borrar proyecto de otro siendo teacher)
     const proj = await new Project({ title: 'No tocar', userId: user2._id }).save();
     const res403 = await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
     expect(res403.status).toBe(403);
+
+    // 200 (admin borra el proyecto de otro profesor)
+    const { token: adminToken } = await createTestUser('admin', 'el_admin@test.com');
+    const resAdmin = await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${adminToken}`);
+    expect(resAdmin.status).toBe(200);
   });
 
   it('Cobertura de bifurcaciones en Projects', async () => {

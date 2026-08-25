@@ -10,6 +10,6 @@ export const createTestUser = async (role: 'pending' | 'teacher' | 'admin', emai
   const user = new User({ name: 'Test User', email, password: 'hashedpassword', role });
   await user.save();
   
-  const token = jwt.sign({ _id: user._id, role: user.role, name: user.name }, JWT_SECRET, { expiresIn: '1h' });
-  return { token, user: { _id: user._id, name: user.name, email: user.email, role: user.role } };
+  const token = jwt.sign({ _id: user._id, role: user.role, name: user.name, canUseAi: user.canUseAi }, JWT_SECRET, { expiresIn: '1h' });
+  return { token, user: { _id: user._id, name: user.name, email: user.email, role: user.role, canUseAi: user.canUseAi } };
 };

@@ -28,3 +28,85 @@ table tr:nth-child(even) {
 table tr:hover {
   background-color: #f3f4f6;
 }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  /* Fix header */
+  header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center;
+  }
+  header > div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Fix configuration buttons (FP / ESO / Levels) */
+  .config-buttons {
+    flex-direction: column !important;
+  }
+  
+  /* Fix workshop container (Project Editor) */
+  .workshop-container {
+    flex-direction: column !important;
+  }
+  
+  /* Fix Toolbar inside workshop */
+  .toolbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 15px !important;
+  }
+  
+  /* Make all sub-flex elements wrap */
+  .action-buttons {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  /* History Project Items */
+  .history-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* History buttons container inside history items */
+  .history-card > div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Title inputs */
+  input[type="text"] {
+    width: 100% !important;
+  }
+  
+  /* General padding resets para exprimir la pantalla en móvil */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  main {
+    padding: 5px !important;
+    margin: 0 !important;
+  }
+  section {
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+  }
+  .toolbar, .history-card {
+    padding: 10px !important;
+  }
+  header {
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+  }
+}

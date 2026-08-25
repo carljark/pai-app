@@ -36,7 +36,7 @@ Desarrolla el proyecto con un alto nivel de detalle técnico y pedagógico, sin 
 
 REGLA CRÍTICA DE ESTRUCTURA DEL DOCUMENTO:
 Tu respuesta DEBE organizarse estrictamente con los siguientes apartados y subapartados (usa formato Markdown con cabeceras):
-1. IDENTIDAD DEL PROYECTO (Título, Centro, Ciclo formativo, Curso, Estrategia metodológica)
+1. IDENTIDAD DEL PROYECTO (Título, Centro, Ciclo formativo, Curso, Estrategia metodológica, Autoría y validación (si está validado): ${req.user?.name || 'Profesor/a'})
 2. INTEGRACIÓN CURRICULAR (Módulos implicados y resultados de aprendizaje vinculados)
 3. CONTEXTO Y RETO (Necesidad detectada, Conexión con el entorno, Empresa/entidad)
 4. DESARROLLO Y FASES (Secuenciación, Duración estimada, Fases super detalladas)
@@ -106,5 +106,21 @@ export const updateProject = async (req: any, res: Response) => {
     res.json(updated);
   } catch (error) {
     res.status(500).json({ error: "Error al actualizar" });
+  }
+};
+
+export const deleteProject = async (req: any, res: Response) => {
+  try {
+    const project = await Project.findById(req.params.id);
+    if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
+    
+    if (req.user?.role !== 'admin' && project.userId?.toString() !== req.user?._id) {
+      return res.status(403).json({ error: "Acceso denegado: solo el autor puede borrarlo" });
+    }
+    
+    await Project.findByIdAndDelete(req.params.id);
+    res.json({ message: "Proyecto borrado exitosamente" });
+  } catch (error) {
+    res.status(500).json({ error: "Error al borrar proyecto" });
   }
 };

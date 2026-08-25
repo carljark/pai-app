@@ -38,7 +38,7 @@ describe('Admin Endpoints', () => {
     await targetUser.save();
 
     const res = await request(app)
-      .put(`/api/admin/users/${targetUser._id}/role`)
+      .put(`/api/admin/users/${targetUser._id}/permissions`)
       .set('Authorization', `Bearer ${token}`)
       .send({ role: 'teacher' });
     

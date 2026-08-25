@@ -10,14 +10,20 @@ export const getUsers = async (req: any, res: Response) => {
   }
 };
 
-export const updateUserRole = async (req: any, res: Response) => {
+export const updateUserPermissions = async (req: any, res: Response) => {
   try {
     const { id } = req.params;
-    const { role } = req.body;
-    const user = await User.findByIdAndUpdate(id, { role }, { new: true });
+    const { role, canUseAi } = req.body;
+    
+    // Solo actualizar los campos que se envíen
+    const updateData: any = {};
+    if (role !== undefined) updateData.role = role;
+    if (canUseAi !== undefined) updateData.canUseAi = canUseAi;
+
+    const user = await User.findByIdAndUpdate(id, updateData, { new: true }).select('-password');
     if (!user) return res.status(404).json({ error: 'Usuario no encontrado' });
     res.json(user);
   } catch (err) {
-    res.status(500).json({ error: 'Error al actualizar rol' });
+    res.status(500).json({ error: 'Error al actualizar permisos' });
   }
 };

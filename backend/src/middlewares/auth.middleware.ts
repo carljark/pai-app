@@ -43,3 +43,11 @@ export const requireApproved = (req: AuthRequest, res: Response, next: NextFunct
   }
   next();
 };
+
+export const requireAiAccess = (req: AuthRequest, res: Response, next: NextFunction): void => {
+  if (req.user?.role !== 'admin' && !req.user?.canUseAi) {
+    res.status(403).json({ error: 'No tienes permisos para usar las funciones de IA. Solicítalos a un administrador.' });
+    return;
+  }
+  next();
+};

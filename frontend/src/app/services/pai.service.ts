@@ -27,6 +27,10 @@ export class PaiService {
     return this.http.put<any>(`${this.apiUrl}/projects/${id}`, { rawText, status });
   }
 
+  deleteProject(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/projects/${id}`);
+  }
+
   rewriteSection(context: string, selectedText: string, instruction: string): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/projects/rewrite`, { context, selectedText, instruction });
   }
@@ -55,8 +59,8 @@ export class PaiService {
     return this.http.get<any[]>(`${this.apiUrl}/admin/users`);
   }
 
-  updateUserRole(userId: string, role: string): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/admin/users/${userId}/role`, { role });
+  updateUserPermissions(id: string, data: { role?: string; canUseAi?: boolean }): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/admin/users/${id}/permissions`, data);
   }
 
   // Settings del Centro

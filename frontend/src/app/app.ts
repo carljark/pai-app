@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal, computed, effect } from '@angular/core';
+import { Component, OnInit, inject, signal, computed, effect, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PaiService } from './services/pai.service';
@@ -296,9 +296,9 @@ export class App implements OnInit {
         exportPDF: ' Exportar PDF',
         aiAssistant: 'Assistent IA',
         aiIntro: 'Hola! Soc el teu assistent pedagògic. Segueix aquests passos per editar el projecte:',
-        aiStep1: '1. Escriu a sota què vols canviar (ex. "Fes-ho més curt").',
-        aiStep2: '2. Selecciona/Subratlla el text a modificar en el llenç de l\'esquerra.',
-        aiStep3: '3. Fes clic a "Reescriure amb IA".',
+        aiStep1: 'Escriu a sota què vols canviar (ex. "Fes-ho més curt").',
+        aiStep2: 'Selecciona/Subratlla el text a modificar en el llenç de l\'esquerra.',
+        aiStep3: 'Fes clic a "Reescriure amb IA".',
         aiPlaceholder: 'Demana a la IA que modifiqui el projecte...',
         rewriteBtn: 'Reescriure amb IA',
         thinking: 'Pensant...'
@@ -351,9 +351,9 @@ export class App implements OnInit {
         exportPDF: ' Exportar PDF',
         aiAssistant: 'Asistente IA',
         aiIntro: '¡Hola! Soy tu asistente pedagógico. Sigue estos pasos para editar el proyecto:',
-        aiStep1: '1. Escribe abajo qué quieres cambiar (ej. "Hazlo más corto").',
-        aiStep2: '2. Selecciona/Subraya el text a modificar en el lienzo de la izquierda.',
-        aiStep3: '3. Haz clic en "Reescribir con IA".',
+        aiStep1: 'Escribe abajo qué quieres cambiar (ej. "Hazlo más corto").',
+        aiStep2: 'Selecciona/Subraya el text a modificar en el lienzo de la izquierda.',
+        aiStep3: 'Haz clic en "Reescribir con IA".',
         aiPlaceholder: 'Pide a la IA que modifique el proyecto...',
         rewriteBtn: 'Reescribir con IA',
         thinking: 'Pensando...'
@@ -434,6 +434,15 @@ export class App implements OnInit {
 
   // Admin
   usersList = signal<any[]>([]);
+
+  // Señal para detectar vista móvil
+  isMobile = signal<boolean>(window.innerWidth <= 768);
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile.set(window.innerWidth <= 768);
+  }
+
   schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
   isSavingSettings = signal(false);
 
@@ -467,7 +476,13 @@ export class App implements OnInit {
   }
 
   approveUser(userId: string) {
-    this.paiService.updateUserRole(userId, 'teacher').subscribe(() => {
+    this.paiService.updateUserPermissions(userId, { role: 'teacher' }).subscribe(() => {
+      this.loadUsers();
+    });
+  }
+
+  toggleAiAccess(userId: string, currentStatus: boolean) {
+    this.paiService.updateUserPermissions(userId, { canUseAi: !currentStatus }).subscribe(() => {
       this.loadUsers();
     });
   }
@@ -513,6 +528,18 @@ export class App implements OnInit {
     }
     // Forzar scroll arriba del todo cuando se refresca la página (F5)
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
+  }
+
+  deleteProject(projectId: string) {
+    if (!confirm('¿Seguro que quieres borrar este proyecto?')) return;
+    this.paiService.deleteProject(projectId).subscribe({
+      next: () => {
+        this.loadHistory(); // Recargar la lista
+      },
+      error: (err) => {
+        alert(err.error?.error || 'Error al borrar el proyecto');
+      }
+    });
   }
 
   loadHistory() {

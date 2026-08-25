@@ -35,7 +35,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       res.status(400).json({ error: 'Credenciales inválidas' });
       return;
     }
-    const token = jwt.sign({ _id: user._id, role: user.role, name: user.name }, JWT_SECRET, { expiresIn: '7d' });
+    const token = jwt.sign({ _id: user._id, role: user.role, name: user.name, canUseAi: user.canUseAi }, JWT_SECRET, { expiresIn: '7d' });
     res.json({ token, user: { name: user.name, email: user.email, role: user.role } });
   } catch (err) {
     res.status(500).json({ error: 'Error al iniciar sesión' });

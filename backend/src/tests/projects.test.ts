@@ -114,5 +114,38 @@ describe('Projects Endpoints', () => {
     res = await request(app).put(`/api/projects/${fakeId}`).set('Authorization', `Bearer ${token}`).send({ rawText: 'A' });
     expect(res.status).toBe(500);
     spy.mockRestore();
+
+    spy = vi.spyOn(Project, 'findById').mockRejectedValueOnce(new Error('DB'));
+    res = await request(app).delete(`/api/projects/${fakeId}`).set('Authorization', `Bearer ${token}`);
+    expect(res.status).toBe(500);
+    spy.mockRestore();
+  });
+
+  it('DELETE /api/projects/:id - Debería borrar el proyecto si es el autor', async () => {
+    const { token, user } = await createTestUser('teacher', 'prof8@test.com');
+    const Project = mongoose.model('Project');
+    const proj = await new Project({ title: 'A borrar', userId: user._id }).save();
+
+    const res = await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
+    expect(res.status).toBe(200);
+    
+    const check = await Project.findById(proj._id);
+    expect(check).toBeNull();
+  });
+
+  it('DELETE /api/projects/:id - 404 y 403', async () => {
+    const { token, user } = await createTestUser('teacher', 'prof9@test.com');
+    const { user: user2 } = await createTestUser('teacher', 'prof10@test.com');
+    const Project = mongoose.model('Project');
+    
+    // 404
+    const fakeId = new mongoose.Types.ObjectId();
+    const res404 = await request(app).delete(`/api/projects/${fakeId}`).set('Authorization', `Bearer ${token}`);
+    expect(res404.status).toBe(404);
+
+    // 403 (intentar borrar proyecto de otro)
+    const proj = await new Project({ title: 'No tocar', userId: user2._id }).save();
+    const res403 = await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
+    expect(res403.status).toBe(403);
   });
 });

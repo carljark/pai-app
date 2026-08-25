@@ -7,7 +7,7 @@ export class AuthService {
   private http = inject(HttpClient);
   private apiUrl = '/api/auth';
 
-  currentUser = signal<{name: string, email: string, role?: string} | null>(null);
+  currentUser = signal<{ _id?: string; name: string; email: string; role?: string; canUseAi?: boolean } | null>(null);
 
   constructor() {
     const userStr = localStorage.getItem('pai_user');

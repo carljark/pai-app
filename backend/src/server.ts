@@ -4,14 +4,13 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
-
 import multer from 'multer';
 import mammoth from 'mammoth';
 import TurndownService from 'turndown';
 import { marked } from 'marked';
 import HTMLtoDOCX from 'html-to-docx';
 
-const upload = multer({ storage: multer.memoryStorage() });
+const uploadMemory = multer({ storage: multer.memoryStorage() });
 const turndownService = new TurndownService({ headingStyle: 'atx' });
 
 import { authMiddleware, JWT_SECRET } from './auth';
@@ -23,9 +22,11 @@ app.use(cors());
 app.use(express.json());
 
 // Conexión a Base de Datos local
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db')
-  .then(() => console.log('MongoDB Conectado'))
-  .catch(err => console.error(err));
+if (process.env.NODE_ENV !== 'test') {
+  mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db')
+    .then(() => console.log('MongoDB Conectado'))
+    .catch(err => console.error(err));
+}
 
 // --- Esquemas de MongoDB ---
 const UserSchema = new mongoose.Schema({
@@ -526,7 +527,6 @@ TAREA:
   }
 });
 
-import multer from 'multer';
 
 // Configuración de Multer para almacenar en la carpeta "uploads"
 const storage = multer.diskStorage({
@@ -636,7 +636,7 @@ app.get('/api/projects/:id/export-docx', requireApproved, async (req: any, res) 
 });
 
 // Endpoint: Importar DOCX y limpiar estilos
-app.post('/api/projects/:id/import-docx', requireApproved, upload.single('file'), async (req: any, res) => {
+app.post('/api/projects/:id/import-docx', requireApproved, uploadMemory.single('file'), async (req: any, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No se ha subido ningún archivo' });
@@ -666,4 +666,8 @@ app.post('/api/projects/:id/import-docx', requireApproved, upload.single('file')
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Backend PAI escuchando en puerto ${PORT}`));
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => console.log(`Backend PAI escuchando en puerto ${PORT}`));
+}
+
+export { app };

@@ -148,4 +148,27 @@ describe('Projects Endpoints', () => {
     const res403 = await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
     expect(res403.status).toBe(403);
   });
+
+  it('Cobertura de bifurcaciones en Projects', async () => {
+    const { token } = await createTestUser('admin', 'admin@projects.com');
+    const Project = mongoose.model('Project');
+    
+    // 1. generateProject sin parámetros opcionales y con proyectos publicados previos
+    await new Project({ title: 'Pub', status: 'publicado', generatedContent: { rawText: 'A' } }).save();
+    const resGen = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ language: 'catalan' });
+    expect(resGen.status).toBe(200);
+    expect(resGen.body.title).toBe('Proyecto Generado');
+    expect(resGen.body.tipoNivel).toBe('FP_BASICA');
+    
+    // 2. updateProject sin status
+    const proj = await new Project({ title: 'UpdateMe' }).save();
+    const resUpd = await request(app).put(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`).send({ rawText: 'B' });
+    expect(resUpd.status).toBe(200);
+    expect(resUpd.body.status).toBe('borrador');
+
+    // 3. listProjects como admin
+    const resList = await request(app).get('/api/projects').set('Authorization', `Bearer ${token}`);
+    expect(resList.status).toBe(200);
+    expect(resList.body.length).toBeGreaterThan(0);
+  });
 });

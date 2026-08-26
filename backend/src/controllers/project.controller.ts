@@ -22,7 +22,8 @@ export const generateProject = async (req: any, res: Response) => {
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EVALUACIÓN:
 Cuando diseñes el proyecto y llegues al apartado de Evaluación, DEBES contemplar los criterios de evaluación aplicables a CADA UNO de los Resultados de Aprendizaje (RA) o Competencias Específicas (CE) seleccionados por el usuario.
-NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODOS han de aparecer obligatoriamente en el proyecto con sus criterios de evaluación correspondientes (debes deducir sus criterios si no se proporcionan, pero siempre en relación al currículo oficial).
+NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODOS han de aparecer obligatoriamente en el proyecto.
+MUY IMPORTANTE: Cuando listes los RAs o las CEs y sus criterios de evaluación correspondientes, DEBES mantener estrictamente su NUMERACIÓN y NOMENCLATURA OFICIAL (por ejemplo, "RA 1", "CE 3", y para los criterios usar sus letras o números oficiales como "a)", "b)", "1.1", "3.2"). Usa tu conocimiento interno del currículo oficial para recuperar la numeración exacta de cada uno de ellos y lístalos con su número/letra original.
 
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EL DETALLE DE ACTIVIDADES/FASES:
 Es ABSOLUTAMENTE CRÍTICO que el apartado de "Actividades" o "Fases del proyecto" sea extremadamente detallado, profundo y minucioso. 
@@ -37,11 +38,11 @@ Desarrolla el proyecto con un alto nivel de detalle técnico y pedagógico, sin 
 REGLA CRÍTICA DE ESTRUCTURA DEL DOCUMENTO:
 Tu respuesta DEBE organizarse estrictamente con los siguientes apartados y subapartados (usa formato Markdown con cabeceras):
 1. IDENTIDAD DEL PROYECTO (Título, Centro, Ciclo formativo, Curso, Estrategia metodológica, Autoría y validación (si está validado): ${req.user?.name || 'Profesor/a'})
-2. INTEGRACIÓN CURRICULAR (Módulos implicados y resultados de aprendizaje vinculados)
+2. INTEGRACIÓN CURRICULAR (Módulos implicados y resultados de aprendizaje vinculados con su NUMERACIÓN OFICIAL)
 3. CONTEXTO Y RETO (Necesidad detectada, Conexión con el entorno, Empresa/entidad)
 4. DESARROLLO Y FASES (Secuenciación, Duración estimada, Fases super detalladas)
 5. ACTIVIDAD DEL ALUMNADO (Agrupamiento, Qué investiga/diseña/produce/evalúa)
-6. EVALUACIÓN (Producto final, Formativa, Instrumentos y evidencias del proceso, con TODOS los criterios de los RA/CE)
+6. EVALUACIÓN (Producto final, Formativa, Instrumentos y evidencias del proceso, con TODOS los criterios de los RA/CE manteniendo su NUMERACIÓN/LETRA OFICIAL original)
 7. DIFUSIÓN (Cómo, dónde y a quién se presentará o difundirá el proyecto)
 8. COORDINACIÓN DOCENTE (Cómo se coordinarán los profesores implicados)
 9. VIABILIDAD REAL / RECURSOS NECESARIOS (Presupuesto aproximado, espacios específicos, materiales consumibles, viabilidad temporal)

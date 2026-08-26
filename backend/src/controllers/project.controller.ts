@@ -1,4 +1,5 @@
 import type { Response } from 'express';
+import mongoose from 'mongoose';
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { Settings } from '../models/Settings';
@@ -53,8 +54,20 @@ Es OBLIGATORIO que redactes el proyecto entero en ${language === 'catalan' ? 'Ca
 
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}`;
     
+    // Enriquecer los RAs con sus criterios de evaluación oficiales si existen
+    const allRas = await mongoose.models.RA.find();
+    const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
+      const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
+      
+      if (raDoc && raDoc.criterios_es && raDoc.criterios_es.length > 0) {
+        const critList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0) ? raDoc.criterios_ca : raDoc.criterios_es;
+        return `- ${selectedStr}\n  CRITERIOS DE EVALUACIÓN OFICIALES (Utiliza EXACTAMENTE estas letras/números):\n  ${critList.map((c: string) => `  ${c}`).join('\n')}`;
+      }
+      return `- ${selectedStr}`;
+    });
+
     const userPrompt = `Diseña la propuesta integrando OBLIGATORIAMENTE todos y cada uno de los siguientes Resultados de Aprendizaje/Competencias:
-${selectedRas ? selectedRas.join('\n- ') : ''}`;
+${enrichedRas.join('\n')}`;
     
     const startTime = Date.now();
     const text = await generateGeminiContent(userPrompt, baseInstruction);

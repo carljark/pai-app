@@ -69,4 +69,23 @@ describe('Admin Endpoints', () => {
     expect(res500put.status).toBe(500);
     spyUpdate.mockRestore();
   });
+
+  it('GET /api/admin/logs - Debería obtener logs y manejar errores', async () => {
+    const { token } = await createTestUser('admin', 'admin4@plappin.org');
+    const ActivityLog = mongoose.model('ActivityLog');
+    
+    // Test éxito
+    await new ActivityLog({ userId: new mongoose.Types.ObjectId(), action: 'TEST' }).save();
+    const res = await request(app).get('/api/admin/logs').set('Authorization', `Bearer ${token}`);
+    expect(res.status).toBe(200);
+    expect(res.body.length).toBeGreaterThan(0);
+
+    // Test error 500
+    const spyFind = vi.spyOn(ActivityLog, 'find').mockImplementationOnce(() => {
+      throw new Error('DB Error logs');
+    });
+    const resErr = await request(app).get('/api/admin/logs').set('Authorization', `Bearer ${token}`);
+    expect(resErr.status).toBe(500);
+    spyFind.mockRestore();
+  });
 });

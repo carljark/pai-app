@@ -7,7 +7,9 @@ const RaSchema = new mongoose.Schema({
   module_ca: String,
   description: String,
   description_es: String,
-  description_ca: String
+  description_ca: String,
+  criterios_es: [String],
+  criterios_ca: [String]
 });
 
 export const RA = mongoose.model('RA', RaSchema);

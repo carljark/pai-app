@@ -176,4 +176,32 @@ describe('Projects Endpoints', () => {
     expect(resList.status).toBe(200);
     expect(resList.body.length).toBeGreaterThan(0);
   });
+
+  it('Cobertura de ActivityLog y criterios RA', async () => {
+    const { token } = await createTestUser('teacher', 'actlog@test.com');
+    const RA = mongoose.model('RA');
+    const Project = mongoose.model('Project');
+    
+    // Crear RAs simulados con criterios_es y criterios_ca
+    await new RA({ description: 'RA ES', description_es: 'RA ES', criterios_es: ['a)', 'b)'] }).save();
+    await new RA({ description_ca: 'RA CA', criterios_es: ['1)', '2)'], criterios_ca: ['cat1', 'cat2'] }).save();
+    await new RA({ description_es: 'RA Nulo' }).save();
+
+    // Generar proyecto con esos RAs
+    const res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({
+      selectedRas: ['RA ES', 'RA CA', 'RA Nulo', 'RA Inventado'],
+      language: 'catalan'
+    });
+    expect(res.status).toBe(200);
+
+    // Test ActivityLog error
+    const spy = vi.spyOn(Project.prototype, 'save').mockRejectedValueOnce(new Error('Fallo simulado para log'));
+    const resErr = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ selectedRas: [] });
+    expect(resErr.status).toBe(500);
+    spy.mockRestore();
+
+    // Test Delete Project con log nulo
+    const proj = await new Project({ title: 'A borrar con log' }).save();
+    await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
+  });
 });

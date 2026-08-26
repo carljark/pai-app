@@ -54,20 +54,41 @@ Es OBLIGATORIO que redactes el proyecto entero en ${language === 'catalan' ? 'Ca
 
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}`;
     
-    // Enriquecer los RAs con sus criterios de evaluación oficiales si existen
+    // Enriquecer los RAs o CEs con sus criterios de evaluación oficiales y su asignatura si existen
     const allRas = await mongoose.models.RA.find();
+    const allCes = mongoose.models.CE ? await mongoose.models.CE.find() : [];
+    
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
+      // Buscar primero si es un RA de FP
       const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
-      
-      if (raDoc && raDoc.criterios_es && raDoc.criterios_es.length > 0) {
-        const critList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0) ? raDoc.criterios_ca : raDoc.criterios_es;
-        return `- ${selectedStr}\n  CRITERIOS DE EVALUACIÓN OFICIALES (Utiliza EXACTAMENTE estas letras/números):\n  ${critList.map((c: string) => `  ${c}`).join('\n')}`;
+      if (raDoc) {
+        const moduleName = (language === 'catalan' && raDoc.module_ca) ? raDoc.module_ca : (raDoc.module_es || raDoc.module);
+        let text = `- Módulo/Asignatura: ${moduleName}\n  Resultado de Aprendizaje (RA): ${selectedStr}`;
+        if (raDoc.criterios_es && raDoc.criterios_es.length > 0) {
+          const critList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0) ? raDoc.criterios_ca : raDoc.criterios_es;
+          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES (Utiliza EXACTAMENTE estas letras/números):\n  ${critList.map((c: string) => `  ${c}`).join('\n')}`;
+        }
+        return text;
       }
+
+      // Si no es un RA, buscar si es un CE de ESO
+      const ceDoc = allCes.find(c => c.description_es === selectedStr || c.description_ca === selectedStr || c.ce_id === selectedStr);
+      if (ceDoc) {
+        const subjectName = ceDoc.subject || ceDoc.area;
+        let text = `- Asignatura: ${subjectName}\n  Competencia Específica (CE): ${selectedStr}`;
+        if (ceDoc.criterios_es && ceDoc.criterios_es.length > 0) {
+          const critList = (language === 'catalan' && ceDoc.criterios_ca && ceDoc.criterios_ca.length > 0) ? ceDoc.criterios_ca : ceDoc.criterios_es;
+          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES (Utiliza EXACTAMENTE estas viñetas/números):\n  ${critList.map((c: string) => `  ${c}`).join('\n')}`;
+        }
+        return text;
+      }
+      
+      // Fallback si no se encuentra en DB
       return `- ${selectedStr}`;
     });
 
-    const userPrompt = `Diseña la propuesta integrando OBLIGATORIAMENTE todos y cada uno de los siguientes Resultados de Aprendizaje/Competencias:
-${enrichedRas.join('\n')}`;
+    const userPrompt = `Diseña la propuesta integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
+${enrichedRas.join('\n\n')}`;
     
     const startTime = Date.now();
     const text = await generateGeminiContent(userPrompt, baseInstruction);

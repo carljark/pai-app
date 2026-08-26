@@ -180,16 +180,22 @@ describe('Projects Endpoints', () => {
   it('Cobertura de ActivityLog y criterios RA', async () => {
     const { token } = await createTestUser('teacher', 'actlog@test.com');
     const RA = mongoose.model('RA');
+    const CE = mongoose.model('CE');
     const Project = mongoose.model('Project');
     
     // Crear RAs simulados con criterios_es y criterios_ca
-    await new RA({ description: 'RA ES', description_es: 'RA ES', criterios_es: ['a)', 'b)'] }).save();
-    await new RA({ description_ca: 'RA CA', criterios_es: ['1)', '2)'], criterios_ca: ['cat1', 'cat2'] }).save();
-    await new RA({ description_es: 'RA Nulo' }).save();
+    await new RA({ description: 'RA ES', description_es: 'RA ES', criterios_es: ['a)', 'b)'], module: 'Mod A' }).save();
+    await new RA({ description_ca: 'RA CA', criterios_es: ['1)', '2)'], criterios_ca: ['cat1', 'cat2'], module_ca: 'Mod B' }).save();
+    await new RA({ description_es: 'RA Nulo', module_es: 'Mod C' }).save();
 
-    // Generar proyecto con esos RAs
+    // Crear CEs simulados
+    await new CE({ description_es: 'CE ES', subject: 'Sub A', criterios_es: ['x', 'y'] }).save();
+    await new CE({ description_ca: 'CE CA', area: 'Area B', criterios_ca: ['z'], criterios_es: ['z_es'] }).save();
+    await new CE({ description_es: 'CE Nulo', subject: 'Sub C' }).save();
+
+    // Generar proyecto con esos RAs y CEs
     const res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({
-      selectedRas: ['RA ES', 'RA CA', 'RA Nulo', 'RA Inventado'],
+      selectedRas: ['RA ES', 'RA CA', 'RA Nulo', 'CE ES', 'CE CA', 'CE Nulo', 'RA Inventado'],
       language: 'catalan'
     });
     expect(res.status).toBe(200);

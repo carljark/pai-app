@@ -1,5 +1,19 @@
 import type { Response } from 'express';
 import { User } from '../models/User';
+import { ActivityLog } from '../models/ActivityLog';
+
+export const getLogs = async (req: any, res: Response) => {
+  try {
+    const logs = await ActivityLog.find()
+      .populate('userId', 'name email role')
+      .populate('projectId', 'title')
+      .sort({ createdAt: -1 })
+      .limit(100);
+    res.json(logs);
+  } catch (err) {
+    res.status(500).json({ error: 'Error al obtener los registros de actividad' });
+  }
+};
 
 export const getUsers = async (req: any, res: Response) => {
   try {

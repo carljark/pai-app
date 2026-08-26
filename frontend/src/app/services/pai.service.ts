@@ -11,6 +11,10 @@ export class PaiService {
     return this.http.get<any[]>(`${this.apiUrl}/ras?lang=${lang}`);
   }
 
+  getLogs(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/admin/logs`);
+  }
+
   getCes(lang: string = 'castellano'): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/ces?lang=${lang}`);
   }

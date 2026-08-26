@@ -8,11 +8,12 @@ import html2pdf from 'html2pdf.js';
 
 import { AuthService } from './services/auth.service';
 import { ErrorModalComponent } from './components/error-modal.component';
+import { AdminDashboardComponent } from './components/admin-dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent],
+  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent, AdminDashboardComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -437,9 +438,7 @@ export class App implements OnInit {
   currentView = signal<'generator' | 'history' | 'taller' | 'admin'>('generator');
   projectsHistory = signal<any[]>([]);
 
-  // Admin
-  usersList = signal<any[]>([]);
-
+  // Admin variables moved to component
   // Señal para detectar vista móvil
   isMobile = signal<boolean>(window.innerWidth <= 768);
 
@@ -448,50 +447,7 @@ export class App implements OnInit {
     this.isMobile.set(window.innerWidth <= 768);
   }
 
-  schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
-  isSavingSettings = signal(false);
-
-  loadUsers() {
-    this.paiService.getUsers().subscribe(users => this.usersList.set(users));
-  }
-
-  loadSettings() {
-    this.paiService.getSettings().subscribe(settings => {
-      this.schoolSettings.set({
-        schoolName: settings.schoolName || '',
-        schoolCity: settings.schoolCity || '',
-        schoolContext: settings.schoolContext || ''
-      });
-    });
-  }
-
-  saveSettings(e: Event) {
-    e.preventDefault();
-    this.isSavingSettings.set(true);
-    this.paiService.updateSettings(this.schoolSettings()).subscribe({
-      next: () => {
-        alert('Configuración guardada correctamente.');
-        this.isSavingSettings.set(false);
-      },
-      error: () => {
-        alert('Error al guardar la configuración.');
-        this.isSavingSettings.set(false);
-      }
-    });
-  }
-
-  approveUser(userId: string) {
-    this.paiService.updateUserPermissions(userId, { role: 'teacher' }).subscribe(() => {
-      this.loadUsers();
-    });
-  }
-
-  toggleAiAccess(userId: string, currentStatus: boolean) {
-    this.paiService.updateUserPermissions(userId, { canUseAi: !currentStatus }).subscribe(() => {
-      this.loadUsers();
-    });
-  }
-
+  // Admin panel moved to AdminDashboardComponent
   constructor() {
     // Restaurar estado guardado
     const savedView = localStorage.getItem('pai_view') as any;
@@ -570,8 +526,6 @@ export class App implements OnInit {
   switchView(view: 'generator' | 'taller' | 'history' | 'admin') {
     this.currentView.set(view);
     if (view === 'admin') {
-      this.loadUsers();
-      this.loadSettings();
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

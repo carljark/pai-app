@@ -1,5 +1,6 @@
 import type { Response } from 'express';
 import { Project } from '../models/Project';
+import { ActivityLog } from '../models/ActivityLog';
 import { Settings } from '../models/Settings';
 import { buildContexts, generateGeminiContent } from '../services/ai.service';
 import fs from 'fs';
@@ -55,7 +56,9 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}`;
     const userPrompt = `Diseña la propuesta integrando OBLIGATORIAMENTE todos y cada uno de los siguientes Resultados de Aprendizaje/Competencias:
 ${selectedRas ? selectedRas.join('\n- ') : ''}`;
     
+    const startTime = Date.now();
     const text = await generateGeminiContent(userPrompt, baseInstruction);
+    const generationTimeMs = Date.now() - startTime;
 
     const newProject = new Project({
       title: title || 'Proyecto Generado',
@@ -68,9 +71,21 @@ ${selectedRas ? selectedRas.join('\n- ') : ''}`;
     });
     const savedProject = await newProject.save();
 
+    await new ActivityLog({
+      userId: req.user?._id,
+      action: 'GENERATE_PROJECT',
+      projectId: savedProject._id,
+      details: { generationTimeMs, title: savedProject.title }
+    }).save();
+
     res.json(savedProject);
-  } catch (error) {
-    res.status(500).json({ error: "Error en el motor de IA intermodular" });
+  } catch (error: any) {
+    await new ActivityLog({
+      userId: req.user?._id,
+      action: 'ERROR_GENERATE_PROJECT',
+      details: { error: error.message || error.toString() }
+    }).save();
+    res.status(500).json({ error: "Error en el motor de IA intermodular", details: error.message });
   }
 };
 
@@ -105,6 +120,14 @@ export const updateProject = async (req: any, res: Response) => {
       'generatedContent.rawText': rawText,
       status: status || 'borrador'
     }, { returnDocument: 'after' });
+    
+    await new ActivityLog({
+      userId: req.user?._id,
+      action: status ? `UPDATE_STATUS_${status.toUpperCase()}` : 'UPDATE_PROJECT',
+      projectId: updated?._id,
+      details: { title: updated?.title }
+    }).save();
+
     res.json(updated);
   } catch (error) {
     res.status(500).json({ error: "Error al actualizar" });
@@ -121,6 +144,14 @@ export const deleteProject = async (req: any, res: Response) => {
     }
     
     await Project.findByIdAndDelete(req.params.id);
+    
+    await new ActivityLog({
+      userId: req.user?._id,
+      action: 'DELETE_PROJECT',
+      projectId: project._id,
+      details: { title: project.title }
+    }).save();
+
     res.json({ message: "Proyecto borrado exitosamente" });
   } catch (error) {
     res.status(500).json({ error: "Error al borrar proyecto" });

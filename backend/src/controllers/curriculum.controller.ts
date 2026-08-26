@@ -2,30 +2,22 @@ import type { Response } from 'express';
 import { RA } from '../models/RA';
 import { CE } from '../models/CE';
 
-const moduleTranslations: Record<string, string> = {
-  "Atención al cliente": "Atenció a possibles clients", // El excel lo llama así o 'Atenció al client'
-  "Atención al cliente": "Atenció al client",
-  "Cambio de color del cabello": "Canvi de color del cabell",
-  "Ciencias aplicadas I": "Ciències aplicades I",
-  "Ciencias aplicadas II": "Ciències aplicades II",
-  "Comunicación y sociedad I": "Comunicació i societat I",
-  "Comunicación y sociedad II": "Comunicació i societat II",
-  "Cuidados estéticos básicos de manos y uñas": "Cures estètiques bàsiques de mans i ungles",
-  "Depilación mecánica y decoloración del vello superfluo": "Depil·lació mecànica i decoloració mecànica del borrissol superflu",
-  "Lavado y cambios de forma del cabello": "Rentat i canvis de forma del cabell",
-  "Maquillaje": "Maquillatge",
-  "Preparación del entorno profesional": "Preparació de l'entorn professional",
-  "Itinerario para la empleabilidad": "Itinerari per l'ocupabilitat"
+const caToEsModules: Record<string, string> = {
+  "Atenció a possibles clients": "Atención al cliente",
+  "Atenció al client": "Atención al cliente",
+  "Canvi de color del cabell": "Cambio de color del cabello",
+  "Canvis de color del cabell": "Cambio de color del cabello",
+  "Ciències aplicades I": "Ciencias aplicadas I",
+  "Ciències aplicades II": "Ciencias aplicadas II",
+  "Comunicació i societat I": "Comunicación y sociedad I",
+  "Comunicació i societat II": "Comunicación y sociedad II",
+  "Cures estètiques bàsiques de mans i ungles": "Cuidados estéticos básicos de manos y uñas",
+  "Depil·lació mecànica i decoloració mecànica del borrissol superflu": "Depilación mecánica y decoloración del vello superfluo",
+  "Rentat i canvis de forma del cabell": "Lavado y cambios de forma del cabello",
+  "Maquillatge": "Maquillaje",
+  "Preparació de l'entorn professional": "Preparación del entorno profesional",
+  "Itinerari per l'ocupabilitat": "Itinerario para la empleabilidad"
 };
-
-const caToEsModules: Record<string, string> = Object.entries(moduleTranslations).reduce((acc, [es, ca]) => {
-  acc[ca] = es;
-  return acc;
-}, {} as Record<string, string>);
-
-// Y añadir esto para capturar pequeñas variaciones del excel
-caToEsModules["Cures estètiques bàsiques de mans i ungles"] = "Cuidados estéticos básicos de manos y uñas";
-caToEsModules["Depil·lació mecànica i decoloració mecànica del borrissol superflu"] = "Depilación mecánica y decoloración mecánica del vello superfluo";
 
 const esToCa: Record<string, string> = {
   // ... (se mantiene igual, no lo toco)

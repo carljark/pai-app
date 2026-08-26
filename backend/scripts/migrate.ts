@@ -6,7 +6,7 @@ import { Migration } from '../src/models/Migration';
 
 dotenv.config();
 
-const migrationsDir = path.join(__dirname, '../migrations');
+const migrationsDir = path.join(process.cwd(), 'migrations');
 
 async function runMigrations() {
   await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db');

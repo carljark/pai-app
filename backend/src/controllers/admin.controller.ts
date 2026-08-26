@@ -20,7 +20,7 @@ export const updateUserPermissions = async (req: any, res: Response) => {
     if (role !== undefined) updateData.role = role;
     if (canUseAi !== undefined) updateData.canUseAi = canUseAi;
 
-    const user = await User.findByIdAndUpdate(id, updateData, { new: true }).select('-password');
+    const user = await User.findByIdAndUpdate(id, updateData, { returnDocument: 'after' }).select('-password');
     if (!user) return res.status(404).json({ error: 'Usuario no encontrado' });
     res.json(user);
   } catch (err) {

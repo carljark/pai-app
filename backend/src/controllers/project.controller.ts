@@ -103,7 +103,7 @@ export const updateProject = async (req: any, res: Response) => {
     const updated = await Project.findByIdAndUpdate(req.params.id, {
       'generatedContent.rawText': rawText,
       status: status || 'borrador'
-    }, { new: true });
+    }, { returnDocument: 'after' });
     res.json(updated);
   } catch (error) {
     res.status(500).json({ error: "Error al actualizar" });

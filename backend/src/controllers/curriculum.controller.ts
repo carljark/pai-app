@@ -16,7 +16,9 @@ const caToEsModules: Record<string, string> = {
   "Rentat i canvis de forma del cabell": "Lavado y cambios de forma del cabello",
   "Maquillatge": "Maquillaje",
   "Preparació de l'entorn professional": "Preparación del entorno profesional",
-  "Itinerari per l'ocupabilitat": "Itinerario para la empleabilidad"
+  "Itinerari per l'ocupabilitat": "Itinerario para la empleabilidad",
+  "Projecte inter modular d'aprenentatge col·laboratiu": "Proyecto inter modular de aprendizaje colaborativo",
+  "Proyecto inter modular de aprendizaje colaborativo": "Proyecto inter modular de aprendizaje colaborativo"
 };
 
 const esToCa: Record<string, string> = {

@@ -29,6 +29,7 @@ services:
       # Forzamos el modo Polling para que Mac detecte los cambios de archivos
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
+    command: npm run dev
     volumes:
       # Montamos el código fuente local para recarga en caliente
       - ./backend:/app

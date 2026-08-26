@@ -7,11 +7,12 @@ import { MarkdownComponent } from 'ngx-markdown';
 import html2pdf from 'html2pdf.js';
 
 import { AuthService } from './services/auth.service';
+import { ErrorModalComponent } from './components/error-modal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, MarkdownComponent],
+  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -218,12 +219,15 @@ export class App implements OnInit {
     }
     return Object.keys(groups).map(key => ({
       subject: key,
-      items: groups[key]
-    }));
+      items: groups[key].sort((a, b) => a.index - b.index)
+    })).sort((a, b) => a.subject.localeCompare(b.subject));
   });
 
   searchQuery = signal<string>('');
 
+  errorMessage = signal<string>('');
+  showErrorModal = signal<boolean>(false);
+  
   fpProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
     return this.projectsHistory().filter(p => {
@@ -627,7 +631,9 @@ export class App implements OnInit {
       },
       error: (err) => {
         console.error('Error:', err);
-        alert('Hubo un error al generar el proyecto. Revisa la consola y que hayas configurado tu API Key en el backend.');
+        const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
+        this.errorMessage.set(`El servidor devolvió el siguiente error:\n\n${serverMsg}`);
+        this.showErrorModal.set(true);
         this.isGenerating.set(false);
       },
     });

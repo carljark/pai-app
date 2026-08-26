@@ -471,4 +471,13 @@
     </section>
   }
   }
+
+  <!-- Error Modal -->
+  @if (showErrorModal()) {
+    <app-error-modal 
+      [message]="errorMessage()" 
+      (close)="showErrorModal.set(false)">
+    </app-error-modal>
+  }
+
 </main>

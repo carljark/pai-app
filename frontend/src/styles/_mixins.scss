@@ -1,9 +1,9 @@
-@import 'variables';
+@use 'variables';
 
 @mixin mq($breakpoint) {
-  @if $breakpoint == sm { @media (min-width: $bp-sm) { @content; } }
-  @else if $breakpoint == md { @media (min-width: $bp-md) { @content; } }
-  @else if $breakpoint == lg { @media (min-width: $bp-lg) { @content; } }
+  @if $breakpoint == sm { @media (min-width: variables.$bp-sm) { @content; } }
+  @else if $breakpoint == md { @media (min-width: variables.$bp-md) { @content; } }
+  @else if $breakpoint == lg { @media (min-width: variables.$bp-lg) { @content; } }
 }
 
 @mixin flex-center { display: flex; align-items: center; justify-content: center; }
@@ -11,32 +11,32 @@
 @mixin flex-col { display: flex; flex-direction: column; }
 
 @mixin card {
-  background-color: $color-surface;
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow-sm;
-  border: 1px solid $color-border;
-  padding: $spacing-4;
-  @include mq(md) { padding: $spacing-6; }
+  background-color: variables.$color-surface;
+  border-radius: variables.$border-radius-lg;
+  box-shadow: variables.$shadow-sm;
+  border: 1px solid variables.$color-border;
+  padding: variables.$spacing-4;
+  @include mq(md) { padding: variables.$spacing-6; }
 }
 
 @mixin form-input {
   width: 100%;
-  padding: $spacing-2 $spacing-3;
-  font-size: $font-size-sm;
-  color: $color-text-main;
-  background-color: $color-surface;
-  border: 1px solid $color-border;
-  border-radius: $border-radius-md;
+  padding: variables.$spacing-2 variables.$spacing-3;
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-main;
+  background-color: variables.$color-surface;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
   transition: all 0.2s;
-  &:focus { outline: none; border-color: $color-primary; box-shadow: 0 0 0 3px rgba($color-primary, 0.1); }
-  &:disabled { background-color: $color-background; cursor: not-allowed; }
+  &:focus { outline: none; border-color: variables.$color-primary; box-shadow: 0 0 0 3px rgba(variables.$color-primary, 0.1); }
+  &:disabled { background-color: variables.$color-background; cursor: not-allowed; }
 }
 
 @mixin btn {
   display: inline-flex; align-items: center; justify-content: center;
-  padding: $spacing-2 $spacing-4; font-size: $font-size-sm; font-weight: $font-weight-medium;
-  border-radius: $border-radius-md; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; gap: $spacing-2;
+  padding: variables.$spacing-2 variables.$spacing-4; font-size: variables.$font-size-sm; font-weight: variables.$font-weight-medium;
+  border-radius: variables.$border-radius-md; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; gap: variables.$spacing-2;
   &:disabled { opacity: 0.6; cursor: not-allowed; }
 }
-@mixin btn-primary { @include btn; background-color: $color-primary; color: white; &:hover:not(:disabled) { background-color: $color-primary-dark; } }
-@mixin btn-secondary { @include btn; background-color: white; color: $color-text-main; border-color: $color-border; &:hover:not(:disabled) { background-color: $color-background; } }
+@mixin btn-primary { @include btn; background-color: variables.$color-primary; color: white; &:hover:not(:disabled) { background-color: variables.$color-primary-dark; } }
+@mixin btn-secondary { @include btn; background-color: white; color: variables.$color-text-main; border-color: variables.$color-border; &:hover:not(:disabled) { background-color: variables.$color-background; } }

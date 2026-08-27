@@ -1,30 +1,30 @@
-@import 'variables';
-@import 'mixins';
-.card { @include card; }
-.form-group { margin-bottom: $spacing-4; label { display: block; margin-bottom: $spacing-2; font-size: $font-size-sm; font-weight: $font-weight-medium; color: $color-text-main; } }
-.form-input { @include form-input; }
-.form-select { @include form-input; appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right $spacing-3 center; padding-right: $spacing-10; }
-.btn-primary { @include btn-primary; }
-.btn-secondary { @include btn-secondary; }
-.btn-danger { @include btn; background-color: $color-danger; color: white; &:hover:not(:disabled) { background-color: $color-primary-dark; } }
-.tabs { display: flex; border-bottom: 1px solid $color-border; margin-bottom: $spacing-6; overflow-x: auto; &-item { padding: $spacing-3 $spacing-4; cursor: pointer; font-weight: $font-weight-medium; color: $color-text-muted; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; &:hover { color: $color-text-main; } &.active { color: $color-primary; border-bottom-color: $color-primary; } } }
-.badge { display: inline-block; padding: 2px $spacing-2; border-radius: $border-radius-full; font-size: $font-size-xs; font-weight: $font-weight-medium; &-info { background-color: $color-info-bg; color: $color-info; } &-success { background-color: $color-success-bg; color: $color-success; } &-warning { background-color: $color-warning-bg; color: $color-warning; } &-danger { background-color: $color-danger-bg; color: $color-danger; } }
+@use 'variables';
+@use 'mixins';
+.card { @include mixins.card; }
+.form-group { margin-bottom: variables.$spacing-4; label { display: block; margin-bottom: variables.$spacing-2; font-size: variables.$font-size-sm; font-weight: variables.$font-weight-medium; color: variables.$color-text-main; } }
+.form-input { @include mixins.form-input; }
+.form-select { @include mixins.form-input; appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right variables.$spacing-3 center; padding-right: variables.$spacing-10; }
+.btn-primary { @include mixins.btn-primary; }
+.btn-secondary { @include mixins.btn-secondary; }
+.btn-danger { @include mixins.btn; background-color: variables.$color-danger; color: white; &:hover:not(:disabled) { background-color: variables.$color-primary-dark; } }
+.tabs { display: flex; border-bottom: 1px solid variables.$color-border; margin-bottom: variables.$spacing-6; overflow-x: auto; &-item { padding: variables.$spacing-3 variables.$spacing-4; cursor: pointer; font-weight: variables.$font-weight-medium; color: variables.$color-text-muted; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; &:hover { color: variables.$color-text-main; } &.active { color: variables.$color-primary; border-bottom-color: variables.$color-primary; } } }
+.badge { display: inline-block; padding: 2px variables.$spacing-2; border-radius: variables.$border-radius-full; font-size: variables.$font-size-xs; font-weight: variables.$font-weight-medium; &-info { background-color: variables.$color-info-bg; color: variables.$color-info; } &-success { background-color: variables.$color-success-bg; color: variables.$color-success; } &-warning { background-color: variables.$color-warning-bg; color: variables.$color-warning; } &-danger { background-color: variables.$color-danger-bg; color: variables.$color-danger; } }
 .table-container { overflow-x: auto; width: 100%; }
-.table { width: 100%; border-collapse: collapse; th, td { padding: $spacing-3 $spacing-4; text-align: left; border-bottom: 1px solid $color-border; font-size: $font-size-sm; } th { background-color: $color-background; font-weight: $font-weight-semibold; color: $color-text-muted; } tr:hover { background-color: rgba($color-background, 0.5); } }
+.table { width: 100%; border-collapse: collapse; th, td { padding: variables.$spacing-3 variables.$spacing-4; text-align: left; border-bottom: 1px solid variables.$color-border; font-size: variables.$font-size-sm; } th { background-color: variables.$color-background; font-weight: variables.$font-weight-semibold; color: variables.$color-text-muted; } tr:hover { background-color: rgba(variables.$color-background, 0.5); } }
 
 /* SIDEBAR NAV ITEMS */
 .nav-item {
   display: flex;
   align-items: center;
   position: relative;
-  gap: $spacing-3;
-  padding: $spacing-3;
+  gap: variables.$spacing-3;
+  padding: variables.$spacing-3;
   background: transparent;
   border: none;
-  border-radius: $border-radius-md;
-  color: $color-text-muted;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-medium;
+  border-radius: variables.$border-radius-md;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-medium;
   cursor: pointer;
   transition: all 0.2s;
   text-align: left;
@@ -32,25 +32,25 @@
   white-space: nowrap;
   justify-content: center;
 
-  @include mq(md) {
-    padding: $spacing-2 $spacing-3;
+  @include mixins.mq(md) {
+    padding: variables.$spacing-2 variables.$spacing-3;
     justify-content: flex-start;
   }
 
   &:hover {
-    background-color: rgba($color-primary, 0.05);
-    color: $color-primary-dark;
+    background-color: rgba(variables.$color-primary, 0.05);
+    color: variables.$color-primary-dark;
   }
 
   &.active {
-    background-color: rgba($color-primary, 0.1);
-    color: $color-primary;
-    font-weight: $font-weight-semibold;
+    background-color: rgba(variables.$color-primary, 0.1);
+    color: variables.$color-primary;
+    font-weight: variables.$font-weight-semibold;
   }
 
   .nav-text {
     display: none;
-    @include mq(md) {
+    @include mixins.mq(md) {
       display: block;
     }
   }
@@ -63,7 +63,7 @@
 
 .app-sidebar.collapsed .nav-item {
   justify-content: center;
-  padding: $spacing-3;
+  padding: variables.$spacing-3;
   .nav-text { display: none; }
 }
 

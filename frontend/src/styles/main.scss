@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'mixins';
-@import 'reset';
-@import 'layout';
-@import 'components';
+@use 'variables';
+@use 'mixins';
+@use 'reset';
+@use 'layout';
+@use 'components';
 
-markdown { table { @extend .table; border: 1px solid $color-border; margin: $spacing-4 0; } }
+markdown { table { @extend .table; border: 1px solid variables.$color-border; margin: variables.$spacing-4 0; } }

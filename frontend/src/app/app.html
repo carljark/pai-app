@@ -1,371 +1,239 @@
-<main style="max-width: 1400px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
-  @if (!authService.currentUser()) {
-    <app-auth-form></app-auth-form>
-  } @else {
-  <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; flex-wrap: wrap; gap: 20px;">
-    <div>
-      <h1 style="color: #2c3e50; font-size: 2.2rem; margin: 0;">
-        {{ language() === 'catalan' ? 'Plataforma de projectes interdisciplinars' : 'Plataforma de Proyectos Interdisciplinares' }}
-      </h1>
-    </div>
-    
-    <div style="display: flex; gap: 15px; align-items: center;">
-      <app-notifications-badge [projects]="projectsFacade.projectsHistory()"></app-notifications-badge>
-      <div style="display: flex; align-items: center; gap: 8px;">
-        @if (language() === 'castellano') {
-          <svg width="24" height="16" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd; border-radius: 2px;">
-            <rect width="900" height="600" fill="#AA151B"/>
-            <rect width="900" height="300" y="150" fill="#F1BF00"/>
-          </svg>
-        } @else {
-          <svg width="24" height="16" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd; border-radius: 2px;">
-            <rect width="900" height="600" fill="#fcd116"/>
-            <rect width="900" height="67" y="67" fill="#ce1126"/>
-            <rect width="900" height="67" y="200" fill="#ce1126"/>
-            <rect width="900" height="67" y="333" fill="#ce1126"/>
-            <rect width="900" height="67" y="467" fill="#ce1126"/>
-          </svg>
-        }
-        <select [ngModel]="language()" (ngModelChange)="language.set($event)" style="padding: 8px 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px; background: white; cursor: pointer; color: #2c3e50; font-weight: bold;">
-          <option value="castellano">Castellano</option>
-          <option value="catalan">Català</option>
-        </select>
+
+<div class="app-layout">
+  @if (authService.currentUser()) {
+    <!-- SIDEBAR (Desktop) / TOP MENU (Mobile) -->
+    <aside class="app-sidebar">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+        <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="#3f5e51" />
+          <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h1 style="font-size: 1.2rem; font-weight: 700; color: #1f2937; margin: 0;">
+          {{ language() === 'catalan' ? 'Projectes' : 'Proyectos' }}
+        </h1>
       </div>
+
+      <!-- Navigation Tabs -->
+      <nav style="display: flex; flex-direction: column; gap: 8px;">
+        <button (click)="switchView('generator')" [class.active]="currentView() === 'generator'" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Nuevo Proyecto
+        </button>
+        <button (click)="projectsFacade.loadHistory(); switchView('history')" [class.active]="currentView() === 'history'" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Historial
+        </button>
+        @if (projectsFacade.currentProjectId()) {
+          <button (click)="switchView('taller')" [class.active]="currentView() === 'taller'" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Taller Editor
+          </button>
+        }
+        @if (authService.currentUser()?.role === 'admin') {
+          <button (click)="switchView('admin')" [class.active]="currentView() === 'admin'" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Admin Panel
+          </button>
+        }
+      </nav>
+
+      <div style="flex-grow: 1;"></div>
       
-      <div style="display: flex; gap: 5px; background: #ecf0f1; padding: 4px; border-radius: 8px;">
-        <button (click)="switchView('generator')" 
-                [style.background]="currentView() === 'generator' ? '#2c3e50' : 'transparent'"
-                [style.color]="currentView() === 'generator' ? 'white' : '#2c3e50'"
-                style="border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: all 0.2s;">
-          Generador
-        </button>
-        <button (click)="switchView('history')"
-                [style.background]="currentView() === 'history' ? '#2c3e50' : 'transparent'"
-                [style.color]="currentView() === 'history' ? 'white' : '#2c3e50'"
-                style="border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: all 0.2s;">
-          {{ language() === 'castellano' ? 'Historial' : 'Historial' }}
-        </button>
-      </div>
-      @if (authService.currentUser()?.role === 'admin') {
-        <button (click)="switchView('admin')" style="background: #f39c12; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
-          Admin
-        </button>
-      }
-      <button (click)="logout()" style="background: #e74c3c; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
-        {{ t().logout }}
-      </button>
-    </div>
-  </header>
-
-  @if (currentView() === 'history') {
-    <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <h2 style="color: #2c3e50; margin: 0;">{{ t().historyTitle }}</h2>
-        <input type="text" [ngModel]="projectsFacade.searchQuery()" (ngModelChange)="projectsFacade.searchQuery.set($event)" placeholder=" Buscar por palabra clave..." style="padding: 10px 15px; border: 1px solid #bdc3c7; border-radius: 6px; width: 300px; font-size: 1rem;">
-      </div>
-      @if (projectsFacade.projectsHistory().length === 0) {
-        <p>{{ t().noProjects }}</p>
-      } @else {
-        <div style="display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">
-          <button (click)="projectsFacade.historyTab.set('FP_BASICA')" 
-                  [style.background]="projectsFacade.historyTab() === 'FP_BASICA' ? '#3498db' : 'transparent'"
-                  [style.color]="projectsFacade.historyTab() === 'FP_BASICA' ? 'white' : '#7f8c8d'"
-                  style="border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: bold; transition: all 0.2s;">
-            {{ t().fpBtn }} ({{ projectsFacade.fpProjects().length }})
-          </button>
-          <button (click)="projectsFacade.historyTab.set('ESO')" 
-                  [style.background]="projectsFacade.historyTab() === 'ESO' ? '#9b59b6' : 'transparent'"
-                  [style.color]="projectsFacade.historyTab() === 'ESO' ? 'white' : '#7f8c8d'"
-                  style="border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: bold; transition: all 0.2s;">
-            {{ t().esoBtn }} ({{ projectsFacade.esoProjects().length }})
-          </button>
+      <!-- Footer Actions -->
+      <div style="border-top: 1px solid #e5e7eb; padding-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <app-notifications-badge [projects]="projectsFacade.projectsHistory()"></app-notifications-badge>
+          <div style="display: flex; align-items: center; gap: 8px; cursor: pointer;" (click)="language.set(language() === 'castellano' ? 'catalan' : 'castellano')">
+            @if (language() === 'castellano') {
+              <svg width="24" height="16" viewBox="0 0 900 600"><rect width="900" height="600" fill="#AA151B"/><rect width="900" height="300" y="150" fill="#F1BF00"/></svg>
+            } @else {
+              <svg width="24" height="16" viewBox="0 0 900 600"><rect width="900" height="600" fill="#fcd116"/><rect width="900" height="67" y="67" fill="#ce1126"/><rect width="900" height="67" y="200" fill="#ce1126"/><rect width="900" height="67" y="333" fill="#ce1126"/><rect width="900" height="67" y="467" fill="#ce1126"/></svg>
+            }
+          </div>
         </div>
-
-        @if (projectsFacade.historyTab() === 'FP_BASICA') {
-          @if (projectsFacade.fpProjects().length > 0) {
-            <div style="display: grid; gap: 15px;">
-              @for (proj of projectsFacade.fpProjects(); track proj._id) {
-                <div class="history-card" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3498db'" onmouseout="this.style.borderColor='#e0e0e0'">
-                  <div>
-                    <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
-                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }} | Por: {{ proj.userId?.name || 'Anónimo' }}
-                    </p>
-                  </div>
-                  <div style="display: flex; gap: 10px;">
-                    @if (proj.status === 'en_cola' || proj.status === 'generando') {
-                      <span style="padding: 8px 15px; font-weight: bold; color: #f39c12;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {{ proj.status === 'en_cola' ? 'En cola' : 'Generando...' }}
-                      </span>
-                    } @else if (proj.status === 'error') {
-                      <span style="padding: 8px 15px; font-weight: bold; color: #e74c3c;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Error</span>
-                    } @else {
-                      <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-                        {{ t().viewProject }}
-                      </button>
-                    }
-                    @if (proj.userId?._id === authService.currentUser()?._id || authService.currentUser()?.role === 'admin') {
-                      <button (click)="deleteProject(proj._id)" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;" title="Eliminar Proyecto">
-                        Eliminar
-                      </button>
-                    }
-                  </div>
-                </div>
-              }
-            </div>
-          } @else {
-            <p style="color: #7f8c8d; font-style: italic;">{{ t().noFP }}</p>
-          }
-        }
-
-        @if (projectsFacade.historyTab() === 'ESO') {
-          @if (projectsFacade.esoProjects().length > 0) {
-            <div style="display: grid; gap: 15px;">
-              @for (proj of projectsFacade.esoProjects(); track proj._id) {
-                <div class="history-card" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#9b59b6'" onmouseout="this.style.borderColor='#e0e0e0'">
-                  <div>
-                    <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #7f8c8d;">
-                      {{ t().generatedOn }}: {{ proj.createdAt | date:'short' }} | {{ t().status }}: {{ proj.status || 'borrador' }} | Por: {{ proj.userId?.name || 'Anónimo' }}
-                    </p>
-                  </div>
-                  <div style="display: flex; gap: 10px;">
-                    @if (proj.status === 'en_cola' || proj.status === 'generando') {
-                      <span style="padding: 8px 15px; font-weight: bold; color: #f39c12;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {{ proj.status === 'en_cola' ? 'En cola' : 'Generando...' }}
-                      </span>
-                    } @else if (proj.status === 'error') {
-                      <span style="padding: 8px 15px; font-weight: bold; color: #e74c3c;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Error</span>
-                    } @else {
-                      <button (click)="viewPastProject(proj)" style="background: #9b59b6; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-                        {{ t().viewProject }}
-                      </button>
-                    }
-                    @if (proj.userId?._id === authService.currentUser()?._id || authService.currentUser()?.role === 'admin') {
-                      <button (click)="deleteProject(proj._id)" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;" title="Eliminar Proyecto">
-                        Eliminar
-                      </button>
-                    }
-                  </div>
-                </div>
-              }
-            </div>
-          } @else {
-            <p style="color: #7f8c8d; font-style: italic;">{{ t().noESO }}</p>
-          }
-        }
-      }
-    </section>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.85rem; color: #6b7280; font-weight: 500;">{{ authService.currentUser()?.name }}</span>
+          <button (click)="logout()" class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">Salir</button>
+        </div>
+      </div>
+    </aside>
   }
 
-  @if (currentView() === 'generator') {
-    @if (authService.currentUser()?.role === 'pending') {
-      <div style="background: #fff3cd; color: #856404; padding: 20px; border-radius: 8px; border: 1px solid #ffeeba; text-align: center; margin-bottom: 20px;">
-        <h3 style="margin-top: 0;"> Cuenta pendiente de aprobación</h3>
-        <p>Tu cuenta ha sido registrada pero aún no tienes permisos para generar nuevos proyectos. Por favor, avisa a un administrador para que te active. Mientras tanto, puedes explorar el <b>Archivo</b> para ver los proyectos de tus compañeros.</p>
+  <main class="app-main">
+    @if (!authService.currentUser()) {
+      <div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+        <app-auth-form></app-auth-form>
       </div>
     } @else {
-    <section style="background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-      <h2 style="margin-top: 0; color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
-        {{ t().configTitle }}
-      </h2>
-
-      <div style="margin-bottom: 25px;">
-        <h3 style="color: #34495e;">{{ t().whatToDesign }}</h3>
-        <div class="config-buttons" style="display: flex; gap: 15px;">
-          <button (click)="curriculumFacade.tipoNivel.set('FP_BASICA'); projectsFacade.courseLevel.set('1º Curso'); curriculumFacade.clearSelection()"
-                  [style.background]="curriculumFacade.tipoNivel() === 'FP_BASICA' ? '#3498db' : '#ecf0f1'"
-                  [style.color]="curriculumFacade.tipoNivel() === 'FP_BASICA' ? 'white' : '#2c3e50'"
-                  style="flex: 1; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
-            {{ t().fpBtn }}
-          </button>
-          <button (click)="curriculumFacade.tipoNivel.set('DIVERSIFICACION_CURRICULAR'); projectsFacade.courseLevel.set('3º ESO'); curriculumFacade.clearSelection()"
-                  [style.background]="curriculumFacade.tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? '#9b59b6' : '#ecf0f1'"
-                  [style.color]="curriculumFacade.tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? 'white' : '#2c3e50'"
-                  style="flex: 1; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
-            {{ t().esoBtn }}
-          </button>
-        </div>
-      </div>
       
-      <div style="margin-bottom: 20px;">
-        <h3 style="color: #34495e;">{{ t().generalConfig }}</h3>
-        <div class="config-buttons" style="display: flex; gap: 15px;">
-          <div style="flex: 1;">
-            <label style="display: block; font-weight: bold; margin-bottom: 5px;">{{ t().methodology }}</label>
-            <select [ngModel]="projectsFacade.methodology()" (ngModelChange)="projectsFacade.methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
-              <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
-              <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
-              <option value="Aprendizaje Basado en Problemas">Aprendizaje Basado en Problemas</option>
-            </select>
+      @if (currentView() === 'generator') {
+        <div class="app-header">
+          <h2 class="app-header-title">{{ t().subtitle }}</h2>
+        </div>
+        <div class="card">
+
+          
+          <div class="form-group">
+            <label>Nivel Educativo</label>
+            <div class="tabs">
+              <div class="tabs-item" [class.active]="curriculumFacade.tipoNivel() === 'FP_BASICA'" (click)="curriculumFacade.tipoNivel.set('FP_BASICA')">FP Básica</div>
+              <div class="tabs-item" [class.active]="curriculumFacade.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculumFacade.tipoNivel.set('DIVERSIFICACION_CURRICULAR')">Diversificación Curricular</div>
+            </div>
           </div>
-          <div style="flex: 1;">
-            <label style="display: block; font-weight: bold; margin-bottom: 5px;">{{ t().courseLevelLabel }}</label>
-            <select [ngModel]="projectsFacade.courseLevel()" (ngModelChange)="projectsFacade.courseLevel.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
-              @if (curriculumFacade.tipoNivel() === 'FP_BASICA') {
-                <option value="1º Curso">{{ t().firstYearFP }}</option>
-                <option value="2º Curso">{{ t().secondYearFP }}</option>
-              } @else {
-                <option value="3º ESO">{{ t().thirdYearESO }}</option>
-                <option value="4º ESO">{{ t().fourthYearESO }}</option>
-              }
-            </select>
+          
+          <app-curriculum-selector [title]="t().subtitle" [generateText]="t().generateBtn" [generatingText]="t().generatingBtn"></app-curriculum-selector>
+          
+
+          
+          <div style="display: flex; justify-content: flex-end; margin-top: 24px;">
+            <button (click)="generateProject()" [disabled]="projectsFacade.isGenerating()" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              {{ projectsFacade.isGenerating() ? t().generatingBtn : t().generateBtn }}
+            </button>
           </div>
         </div>
-      </div>
+      }
 
-      <div style="margin-bottom: 30px;">
-        <h3 style="color: #34495e;">{{ t().curricularSelection }}</h3>
-        <p style="color: #7f8c8d; font-size: 0.95rem;">{{ curriculumFacade.tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO }}</p>
+      @if (currentView() === 'history') {
+        <div class="app-header">
+          <h2 class="app-header-title">Historial de Proyectos</h2>
+
+        </div>
         
-        <div style="display: block; padding-bottom: 80px;">
-          
-          <app-curriculum-selector [title]="curriculumFacade.tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO" [isGenerating]="projectsFacade.isGenerating()" [generateText]="t().generateBtn" [generatingText]="t().generatingBtn" (generate)="generateProject()"></app-curriculum-selector>
-
-        </div>
-      </div>
-    </section>
-    }
-  }
-
-  <!-- Resultados de la IA -->
-  @if (currentView() === 'taller' && projectsFacade.generatedProject()) {
-    <section style="margin-top: 20px;">
-      <!-- Barra Superior de Acciones -->
-      <div class="toolbar" style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #bdc3c7;">
-        <h2 style="margin: 0; color: #8e44ad; font-size: 1.4rem;">{{ t().workshopTitle }}</h2>
-        <div class="action-buttons" style="display: flex; gap: 10px;">
-          <button (click)="downloadWord()" style="background: #2980b9; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-            {{ t().downloadWord }}
-          </button>
-          
-          <input type="file" id="docxUpload" accept=".docx" (change)="uploadWord($event)" style="display: none;">
-          <button (click)="triggerUpload()" style="background: #f39c12; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-            {{ t().uploadWord }}
-          </button>
-
-          <button (click)="saveDraft()" style="background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().saveDraft }}</button>
-          <button (click)="publishProject()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().publish }}</button>
-          <button (click)="exportPDF()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">{{ t().exportPDF }}</button>
-        </div>
-      </div>
-
-      <div class="workshop-container" style="display: flex; gap: 20px;">
-        <!-- Lienzo Central (El Editor) -->
-        <div style="flex: 2; background: white; border: 1px solid #bdc3c7; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
-          <div id="pdf-content" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.05rem; background: #fdfbfd; padding: 25px; border-radius: 8px; border: 1px solid #f3e5f5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); line-height: 1.7; height: 600px; overflow-y: auto;">
-            @if (projectsFacade.currentProject()?.userId?.name) {
-              <div style="background: #e8f4f8; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.95rem; color: #2c3e50; border-left: 4px solid #3498db;">
-                <strong>Autoría:</strong> {{ projectsFacade.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projectsFacade.currentProject().userId.email }}
-              </div>
-            }
-            <markdown [data]="projectsFacade.generatedProject()"></markdown>
-          </div>
-        </div>
-
-        <!-- Barra Lateral Derecha -->
-        <div style="flex: 1; background: #f8f9fa; border: 1px solid #bdc3c7; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-          
-          @if (authService.currentUser()?.canUseAi || authService.currentUser()?.role === 'admin') {
-            <h3 style="margin-top: 0; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-              <span></span> {{ t().aiAssistant }}
-            </h3>
-            
-            <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; font-size: 0.9rem; color: #555;">
-              <p style="background: #e8f4f8; padding: 10px; border-radius: 8px; margin-top: 0;">{{ t().aiIntro }}</p>
-              <ol style="padding-left: 20px; margin-bottom: 0; line-height: 1.6;">
-                <li [innerHTML]="t().aiStep1"></li>
-                <li [innerHTML]="t().aiStep2"></li>
-                <li [innerHTML]="t().aiStep3"></li>
-              </ol>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 10px;">
-              <textarea [ngModel]="projectsFacade.aiPrompt()" (ngModelChange)="projectsFacade.aiPrompt.set($event)" [placeholder]="t().aiPlaceholder" style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-family: inherit; resize: none;"></textarea>
-              <button (click)="rewriteWithAI()" [disabled]="isRewriting()" style="background: #3498db; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s;">
-                {{ isRewriting() ? t().thinking : t().rewriteBtn }}
-              </button>
-            </div>
-          } @else {
-            <div style="background: #fdfdfe; border: 1px solid #f5c6cb; border-radius: 8px; padding: 15px; text-align: center; color: #721c24; margin-bottom: 20px;">
-              <h3 style="margin-top: 0; font-size: 1.1rem;">IA Desactivada</h3>
-              <p style="font-size: 0.9rem; margin-bottom: 0;">El asistente de reescritura no está habilitado para tu cuenta.</p>
-            </div>
-          }
-
-          <!-- Archivos Adjuntos -->
-          <h3 style="margin-top: 25px; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-            <span></span> {{ t().resources }}
-          </h3>
-          
-          <div style="background: white; border: 2px dashed #bdc3c7; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 15px; cursor: pointer; transition: background 0.2s;" 
-               onmouseover="this.style.background='#f8f9fa'" 
-               onmouseout="this.style.background='white'" 
-               onclick="document.getElementById('fileInput').click()"
-               (dragover)="onDragOver($event)"
-               (dragleave)="onDragLeave($event)"
-               (drop)="onDrop($event)">
-            <span style="font-size: 2rem; color: #95a5a6;">️</span>
-            <p style="color: #7f8c8d; margin: 10px 0 0 0; font-size: 0.95rem; font-weight: bold;">
-              {{ projectsFacade.isUploading() ? t().uploading : t().dragFiles }}
-            </p>
-            <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
-          </div>
-
-          <div style="flex: 1; overflow-y: auto;">
-            @for (file of projectsFacade.projectFiles(); track file.name) {
-              <div style="display: flex; justify-content: space-between; align-items: center; background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 8px;">
-                <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%;">
-                  <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; font-size: 0.9rem;">
-                     {{ file.name }}
-                  </a>
-                  <span style="display: block; font-size: 0.75rem; color: #95a5a6; margin-top: 2px;">
-                    {{ (file.size / 1024 / 1024).toFixed(2) }} MB
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          @for (project of projectsFacade.projectsHistory(); track project._id) {
+            <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+              <div>
+                <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #1f2937;">{{ project.title || 'Proyecto sin título' }}</h3>
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                  <span class="badge" [class.badge-info]="project.status === 'borrador'" [class.badge-success]="project.status === 'publicado'" [class.badge-warning]="project.status === 'en_cola' || project.status === 'generando'" [class.badge-danger]="project.status === 'error'">
+                    {{ project.status | uppercase }}
                   </span>
+                  <span style="font-size: 0.85rem; color: #6b7280;">{{ project.createdAt | date:'short' }}</span>
+                  <span style="font-size: 0.85rem; color: #6b7280;">• {{ project.modules?.join(', ') || 'Varios' }}</span>
                 </div>
-                <button (click)="deleteFile(file.name)" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #e74c3c; padding: 5px;" [title]="t().deleteFile">
-                  
+              </div>
+              <div style="display: flex; gap: 10px;">
+                @if (project.status === 'error') {
+                  <button (click)="viewPastProject(project)" class="btn-secondary" style="color: #ef4444;">Ver Error</button>
+                } @else if (project.status === 'borrador' || project.status === 'publicado') {
+                  <button (click)="viewPastProject(project)" class="btn-primary">Abrir Editor</button>
+                }
+                <button (click)="deleteProject(project._id)" class="btn-secondary" style="color: #ef4444; padding: 4px 8px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
                 </button>
               </div>
-            }
+            </div>
+          } @empty {
+            <div style="text-align: center; padding: 40px; color: #6b7280;">
+              No hay proyectos en esta sección.
+            </div>
+          }
+        </div>
+      }
+
+      @if (currentView() === 'taller') {
+        <div class="app-header">
+          <h2 class="app-header-title">{{ t().workshopTitle }}</h2>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button (click)="downloadWord()" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              {{ t().downloadWord }}
+            </button>
+            <input type="file" id="docxUpload" accept=".docx" (change)="uploadWord($event)" style="display: none;">
+            <button (click)="triggerUpload()" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              {{ t().uploadWord }}
+            </button>
+            <button (click)="saveDraft()" class="btn-secondary">{{ t().saveDraft }}</button>
+            <button (click)="publishProject()" class="btn-primary">{{ t().publish }}</button>
+            <button (click)="exportPDF()" class="btn-danger">{{ t().exportPDF }}</button>
           </div>
         </div>
-      </div>
-      </section>
+
+        <div style="display: flex; gap: 24px; flex-direction: column; @media (min-width: 1024px) { flex-direction: row; }">
+          <!-- Editor Central -->
+          <div class="card" style="flex: 2;">
+            <div id="pdf-content" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; padding-right: 15px;">
+              @if (projectsFacade.currentProject()?.userId?.name) {
+                <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: #166534; font-size: 0.9rem;">
+                  <strong>Autoría:</strong> {{ projectsFacade.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projectsFacade.currentProject().userId.email }}
+                </div>
+              }
+              <markdown [data]="projectsFacade.generatedProject()"></markdown>
+            </div>
+          </div>
+
+          <!-- Barra Lateral Derecha -->
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 24px;">
+            @if (authService.currentUser()?.canUseAi || authService.currentUser()?.role === 'admin') {
+              <div class="card">
+                <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                  {{ t().aiAssistant }}
+                </h3>
+                <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
+                  <p style="margin: 0 0 8px 0; font-weight: 500;">{{ t().aiIntro }}</p>
+                  <ol style="margin: 0; padding-left: 16px;">
+                    <li [innerHTML]="t().aiStep1"></li>
+                    <li [innerHTML]="t().aiStep2"></li>
+                    <li [innerHTML]="t().aiStep3"></li>
+                  </ol>
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <textarea [ngModel]="projectsFacade.aiPrompt()" (ngModelChange)="projectsFacade.aiPrompt.set($event)" [placeholder]="t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
+                </div>
+                <button (click)="rewriteWithAI()" [disabled]="isRewriting()" class="btn-primary" style="width: 100%;">
+                  {{ isRewriting() ? t().thinking : t().rewriteBtn }}
+                </button>
+              </div>
+            } @else {
+              <div class="card" style="background-color: #fef2f2; border-color: #fecaca; text-align: center;">
+                <h3 style="margin: 0 0 8px 0; color: #991b1b; font-size: 1rem;">IA Desactivada</h3>
+                <p style="margin: 0; font-size: 0.85rem; color: #b91c1c;">El asistente no está habilitado.</p>
+              </div>
+            }
+
+            <div class="card" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937;">{{ t().resources }}</h3>
+              <div style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 24px; text-align: center; cursor: pointer; margin-bottom: 16px;" 
+                   onclick="document.getElementById('fileInput').click()" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" style="margin-bottom: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500;">{{ projectsFacade.isUploading() ? t().uploading : t().dragFiles }}</p>
+                <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
+              </div>
+              <div style="flex: 1; overflow-y: auto;">
+                @for (file of projectsFacade.projectFiles(); track file.name) {
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 8px;">
+                    <div style="overflow: hidden;">
+                      <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #3b82f6; font-size: 0.85rem; font-weight: 500; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ file.name }}</a>
+                      <span style="font-size: 0.75rem; color: #94a3b8;">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</span>
+                    </div>
+                    <button (click)="deleteFile(file.name)" style="background: none; border: none; cursor: pointer; color: #ef4444; padding: 4px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+
+      @if (currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
+        <app-admin-dashboard></app-admin-dashboard>
+      }
     }
+  </main>
+</div>
 
-
-  @if (currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
-    <app-admin-dashboard></app-admin-dashboard>
-  }
-  }
-
-  <!-- Info Modal -->
-  @if (showInfoModal()) {
-    <app-info-modal
-      [title]="infoTitle()"
-      [message]="infoMessage()"
-      [type]="infoType()"
-      (close)="showInfoModal.set(false)">
-    </app-info-modal>
-  }
-
-  <!-- Confirm Modal -->
-  @if (showConfirmModal()) {
-    <app-confirm-modal
-      [title]="confirmTitle()"
-      [message]="confirmMessage()"
-      (confirm)="confirmAction()()"
-      (cancel)="showConfirmModal.set(false)">
-    </app-confirm-modal>
-  }
-
-  <!-- Error Modal -->
-  @if (showErrorModal()) {
-    <app-error-modal 
-      [message]="errorMessage()" 
-      (close)="showErrorModal.set(false)">
-    </app-error-modal>
-  }
-
-</main>
+<!-- Modals -->
+@if (showInfoModal()) {
+  <app-info-modal [title]="infoTitle()" [message]="infoMessage()" [type]="infoType()" (close)="showInfoModal.set(false)"></app-info-modal>
+}
+@if (showConfirmModal()) {
+  <app-confirm-modal [title]="confirmTitle()" [message]="confirmMessage()" (confirm)="confirmAction()()" (cancel)="showConfirmModal.set(false)"></app-confirm-modal>
+}
+@if (showErrorModal()) {
+  <app-error-modal [message]="errorMessage()" (close)="showErrorModal.set(false)"></app-error-modal>
+}

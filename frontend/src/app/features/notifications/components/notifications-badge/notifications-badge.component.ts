@@ -1,4 +1,5 @@
-import { Component, input, signal, computed } from '@angular/core';
+import { Component, input, signal, computed, inject, effect } from '@angular/core';
+import { NotificationsFacade } from '../../services/notifications.facade';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,18 +10,24 @@ import { CommonModule } from '@angular/common';
     <div>
       <!-- Botón de Notificaciones -->
       <button 
-        (click)="isOpen.set(true)" 
-        [style.background]="activeCount() > 0 ? '#f39c12' : '#ecf0f1'"
-        [style.color]="activeCount() > 0 ? 'white' : '#7f8c8d'"
+        (click)="openNotifications()" 
+        [style.background]="(activeCount() > 0 || unreadCount() > 0) ? '#f39c12' : '#ecf0f1'"
+        [style.color]="(activeCount() > 0 || unreadCount() > 0) ? 'white' : '#7f8c8d'"
         style="border: none; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px;">
         
         @if (activeCount() > 0) {
+          @if(unreadCount() > 0) {
+            <span style="background: #e74c3c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.8rem; margin-right: 5px;">{{ unreadCount() }}</span>
+          }
           <span style="display: inline-block; animation: pulse 2s infinite;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
           </span>
           {{ activeCount() }} en proceso
+        } @else if (unreadCount() > 0) {
+          <span style="background: #e74c3c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.8rem; margin-right: 5px;">{{ unreadCount() }}</span>
+          Notificaciones
         } @else {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
@@ -101,12 +108,22 @@ import { CommonModule } from '@angular/common';
 })
 export class NotificationsBadgeComponent {
   projects = input.required<any[]>();
+  private notificationsFacade = inject(NotificationsFacade);
   
   isOpen = signal(false);
+
+  unreadCount = computed(() => 
+    this.notificationsFacade.notifications().filter(n => !n.read && n.type === 'COMPLETED').length
+  );
 
   activeCount = computed(() => 
     this.projects().filter(p => p.status === 'en_cola' || p.status === 'generando').length
   );
+
+  openNotifications() {
+    this.isOpen.set(true);
+    this.notificationsFacade.markAllAsRead();
+  }
 
   recentProjects = computed(() => {
     const now = new Date().getTime();

@@ -344,10 +344,14 @@ export class App {
           
           // Mostrar modal cuando llega una notificación del SSE
           if (notif.type === 'COMPLETED') {
-            this.infoTitle.set('¡Proyecto Generado!');
-            this.infoMessage.set(notif.message);
-            this.infoType.set('success');
-            this.showInfoModal.set(true);
+            // Retrasar ligeramente para asegurar que la UI se actualice, 
+            // especialmente si el usuario acaba de cerrar el modal previo.
+            setTimeout(() => {
+              this.infoTitle.set('¡Proyecto Generado!');
+              this.infoMessage.set(notif.message);
+              this.infoType.set('success');
+              this.showInfoModal.set(true);
+            }, 100);
           } else if (notif.type === 'ERROR') {
             this.errorMessage.set(notif.message);
             this.showErrorModal.set(true);

@@ -283,6 +283,8 @@ export class App {
   // Admin variables moved to component
   // Señal para detectar vista móvil
   isMobile = signal<boolean>(window.innerWidth <= 768);
+  isSidebarCollapsed = signal<boolean>(false);
+  toggleSidebar() { this.isSidebarCollapsed.update(v => !v); }
 
   @HostListener('window:resize')
   onResize() {

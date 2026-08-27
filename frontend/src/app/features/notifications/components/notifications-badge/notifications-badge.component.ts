@@ -11,28 +11,29 @@ import { CommonModule } from '@angular/common';
       <!-- Botón de Notificaciones -->
       <button 
         (click)="openNotifications()" 
-        [style.background]="(activeCount() > 0 || unreadCount() > 0) ? '#f39c12' : '#ecf0f1'"
-        [style.color]="(activeCount() > 0 || unreadCount() > 0) ? 'white' : '#7f8c8d'"
-        style="border: none; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px;">
+        class="nav-item" data-tooltip="Notificaciones"
+        [class.active]="activeCount() > 0 || unreadCount() > 0"
+        style="width: 100%;">
         
-        @if (activeCount() > 0) {
-          @if(unreadCount() > 0) {
-            <span style="background: #e74c3c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.8rem; margin-right: 5px;">{{ unreadCount() }}</span>
-          }
-          <span style="display: inline-block; animation: pulse 2s infinite;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </span>
-          {{ activeCount() }} en proceso
-        } @else if (unreadCount() > 0) {
-          <span style="background: #e74c3c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.8rem; margin-right: 5px;">{{ unreadCount() }}</span>
-          Notificaciones
-        } @else {
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px;">
+          <!-- Bell Icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
           </svg>
-          Notificaciones
+          
+          <!-- Red Indicator Dot for unread/active -->
+          @if(unreadCount() > 0 || activeCount() > 0) {
+            <span style="position: absolute; top: -2px; right: -2px; background: #e74c3c; border-radius: 50%; width: 8px; height: 8px; border: 2px solid white;"></span>
+          }
+        </div>
+        
+        <span class="nav-text">Notificaciones</span>
+        
+        <!-- Optional text pill for desktop when there's an active process -->
+        @if(unreadCount() > 0 || activeCount() > 0) {
+          <span class="nav-text" style="background: #e74c3c; color: white; border-radius: 20px; padding: 2px 8px; font-size: 0.75rem; margin-left: auto;">
+            {{ unreadCount() + activeCount() }}
+          </span>
         }
       </button>
 

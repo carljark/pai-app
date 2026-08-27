@@ -1,8 +1,14 @@
 @import 'variables';
 @import 'mixins';
-.app-layout { display: flex; flex-direction: column; min-height: 100vh; background-color: $color-background; @include mq(md) { flex-direction: row; } }
-.app-sidebar { width: 100%; background-color: $color-surface; border-bottom: 1px solid $color-border; padding: $spacing-4; display: flex; flex-direction: column; gap: $spacing-4; @include mq(md) { width: 280px; border-bottom: none; border-right: 1px solid $color-border; min-height: 100vh; padding: $spacing-6 $spacing-4; } }
-.app-main { flex: 1; padding: $spacing-4; display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; width: 100%; @include mq(md) { padding: $spacing-8; } }
+.app-layout { display: flex; flex-direction: row; min-height: 100vh; background-color: $color-background; }
+.app-sidebar { 
+  width: 72px; background-color: $color-surface; border-right: 1px solid $color-border; padding: $spacing-4 $spacing-2; display: flex; flex-direction: column; gap: $spacing-4; transition: width 0.3s ease, padding 0.3s ease; overflow-x: hidden; flex-shrink: 0; z-index: 10;
+  @include mq(md) { 
+    width: 250px; padding: $spacing-6 $spacing-4; 
+    &.collapsed { width: 72px; padding: $spacing-6 $spacing-2; }
+  } 
+}
+.app-main { flex: 1; padding: $spacing-4; display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; width: 100%; min-width: 0; @include mq(md) { padding: $spacing-8; } }
 .app-header { @include flex-between; padding-bottom: $spacing-4; margin-bottom: $spacing-6; border-bottom: 1px solid $color-border; flex-wrap: wrap; gap: $spacing-4; &-title { font-size: $font-size-xl; font-weight: $font-weight-semibold; color: $color-primary-dark; } }
 .desktop-only { display: none; @include mq(md) { display: flex; } }
 .mobile-only { display: flex; @include mq(md) { display: none; } }

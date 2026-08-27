@@ -72,6 +72,7 @@ export class TranslationService {
         // HOME
         homeTitle: 'Plataforma de Projectes Interdisciplinaris',
         homeGreeting: 'Benvingut',
+        defaultUser: 'Docent',
         homeDescription: 'Dissenya projectes curriculars interdisciplinaris assistits per intel·ligència artificial. Selecciona Resultats d\'Aprenentatge o Criteris d\'Avaluació, tria metodologia i deixa que la IA elabori un projecte complet llest per utilitzar a l\'aula.',
         homePill1: 'IA Generativa',
         homePill2: 'Exporta a Word',
@@ -156,6 +157,7 @@ export class TranslationService {
         // HOME
         homeTitle: 'Plataforma de Proyectos Interdisciplinares',
         homeGreeting: 'Bienvenido',
+        defaultUser: 'Docente',
         homeDescription: 'Diseña proyectos curriculares interdisciplinares asistidos por inteligencia artificial. Selecciona Resultados de Aprendizaje o Criterios de Evaluación, elige metodología y deja que la IA elabore un proyecto completo listo para usar en el aula.',
         homePill1: 'IA Generativa',
         homePill2: 'Exporta a Word',

@@ -76,8 +76,19 @@ NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODO
 MUY IMPORTANTE: Cuando listes los RAs o las CEs y sus criterios de evaluación correspondientes, DEBES mantener estrictamente su NUMERACIÓN y NOMENCLATURA OFICIAL.
 
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EL DETALLE DE ACTIVIDADES/FASES:
-NO puedes generar un proyecto corto o resumido. DEBES desarrollar CADA FASE Y CADA ACTIVIDAD con el MÁXIMO NIVEL DE DETALLE posible.
-El resultado debe ser un manual exhaustivo y listo para imprimir que cualquier docente pueda leer y aplicar directamente en el aula mañana mismo.
+NO puedes generar un proyecto corto, vago o resumido. DEBES desarrollar CADA FASE Y CADA ACTIVIDAD de forma pormenorizada y con el MÁXIMO NIVEL DE DETALLE posible.
+Para CADA UNA de las actividades que propongas en el proyecto, DEBES incluir OBLIGATORIAMENTE la siguiente estructura detallada:
+- **Título descriptivo** de la actividad.
+- **Duración estimada** (en sesiones o minutos).
+- **Agrupamiento** (individual, parejas, pequeño grupo, gran grupo).
+- **Objetivos específicos** vinculados directamente a los RA/CE seleccionados.
+- **Desarrollo paso a paso para el docente**: Instrucciones exactas de qué debe hacer el profesor, cómo introducir la actividad, qué explicar y cómo guiar.
+- **Desarrollo paso a paso para el alumnado**: Qué pasos siguen los alumnos para completarla con éxito.
+- **Materiales y recursos necesarios**: Herramientas digitales, plantillas, espacios físicos o material fungible.
+- **Entregable o producto esperado**: Qué deben generar los alumnos al final de la actividad.
+- **Evaluación formativa**: Cómo se evaluará esta actividad en concreto y con qué instrumento.
+
+El resultado debe ser un manual instruccional exhaustivo y listo para imprimir que cualquier docente pueda leer y aplicar directamente en el aula mañana mismo sin tener que inventar nada.
 
 Formatea el texto final como Markdown profesional (NO lo envuelvas en markdown \`\`\` o similares, escribe directamente el texto Markdown).
 MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII (como +-----, |    |, etc.) bajo ningún concepto para esquemas o secuencias. Si necesitas tabular información, utiliza ÚNICAMENTE el formato estándar de tablas Markdown (usando | y -). Para resaltar texto, usa bloques de cita (>).

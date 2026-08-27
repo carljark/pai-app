@@ -30,6 +30,11 @@ describe('HomeDashboardComponent', () => {
       homePill4: 'Pill4',
       homeNewProject: 'New Project',
       homeViewHistory: 'View History',
+      defaultUser: 'Docente',
+      courseLevelPDC: 'ESO (PDC)',
+      courseLevelFP: 'FP Básica',
+      workshopViewAll: 'Ver todos los proyectos',
+      
       homeRecentTitle: 'Recent',
       homeEmpty: 'Empty',
       homeStartNow: 'Start',

@@ -82,7 +82,7 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
                   {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || t().homeDefaultModules }}
                 </p>
                 <div class="home-project-card__footer">
-                  <span class="home-project-card__level">{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO (PDC)' : 'FP Básica' }}</span>
+                  <span class="home-project-card__level">{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? t().courseLevelPDC : t().courseLevelFP }}</span>
                   <span class="home-project-card__open">{{ t().homeOpen }}</span>
                 </div>
               </div>
@@ -91,7 +91,7 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
           @if (projectsFacade.projectsHistory().length > 5) {
             <div style="text-align: center; margin-top: 16px;">
               <button class="home-cta home-cta--ghost" (click)="navigate.emit('history')">
-                Ver todos los proyectos ({{ projectsFacade.projectsHistory().length }})
+                {{ t().workshopViewAll }} ({{ projectsFacade.projectsHistory().length }})
               </button>
             </div>
           }
@@ -365,7 +365,7 @@ export class HomeDashboardComponent {
   navigate = output<AppView>();
   openProject = output<any>();
 
-  userName = computed(() => this.authFacade.currentUser()?.name || 'Docente');
+  userName = computed(() => this.authFacade.currentUser()?.name || this.t().defaultUser);
 
   recentProjects = computed(() =>
     [...this.projectsFacade.projectsHistory()]

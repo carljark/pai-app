@@ -4,17 +4,17 @@
       <div style="display: inline-flex; background: #f1f5f9; border-radius: 16px; padding: 16px; margin-bottom: 16px;">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
       </div>
-      <h2 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 0 0 8px;">Taller de Edición</h2>
-      <p style="color: #64748b; margin: 0; max-width: 420px; margin: 0 auto 24px;">Selecciona un proyecto para empezar a editar, o crea uno nuevo desde el generador.</p>
+      <h2 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 0 0 8px;">{{ trans.t().workshopEmptyTitle }}</h2>
+      <p style="color: #64748b; margin: 0; max-width: 420px; margin: 0 auto 24px;">{{ trans.t().workshopEmptyDesc }}</p>
       <button class="btn-primary" (click)="layout.switchView('generator')" style="display: inline-flex; align-items: center; gap: 8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-        Crear Proyecto Nuevo
+        {{ trans.t().createProjectBtn }}
       </button>
     </div>
 
     @if (projects.projectsHistory().length > 0) {
       <div>
-        <p style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px;">— O continúa con un proyecto reciente —</p>
+        <p style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px;">{{ trans.t().workshopOrRecent }}</p>
         <div style="display: flex; flex-direction: column; gap: 10px;">
           @for (project of projects.projectsHistory().slice().sort(sortByDate).slice(0, 5); track project._id) {
             <button
@@ -26,10 +26,10 @@
               </div>
               <div style="flex: 1; min-width: 0;">
                 <div style="font-size: 0.95rem; font-weight: 600; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                  {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || 'Proyecto interdisciplinar' }}
+                  {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || trans.t().homeDefaultModules }}
                 </div>
                 <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">
-                  {{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO (PDC)' : 'FP Básica' }}
+                  {{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : trans.t().courseLevelFP }}
                   &nbsp;·&nbsp;
                   {{ project.createdAt | date:'d MMM yyyy, HH:mm' }}
                 </div>
@@ -40,13 +40,13 @@
         </div>
         @if (projects.projectsHistory().length > 5) {
           <button class="btn-secondary" (click)="projects.loadHistory(); layout.switchView('history')" style="margin-top: 12px; width: 100%;">
-            Ver todos los proyectos ({{ projects.projectsHistory().length }}) →
+            {{ trans.t().workshopViewAll }} ({{ projects.projectsHistory().length }}) →
           </button>
         }
       </div>
     } @else {
       <div style="text-align: center; padding: 24px; background: #f8fafc; border-radius: 12px; border: 1px dashed #e2e8f0;">
-        <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">Aún no hay proyectos generados. ¡Crea el primero!</p>
+        <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">{{ trans.t().homeEmpty }}</p>
       </div>
     }
   </div>

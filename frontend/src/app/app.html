@@ -146,7 +146,7 @@
       }
 
       @if (currentView() === 'taller') {
-        @if (!projectsFacade.currentProject()) {
+        @if (!projectsFacade.currentProject() || !projectsFacade.generatedProject()) {
           <div style="max-width: 720px; margin: 0 auto; padding: 32px 0;">
             <!-- Header del empty state -->
             <div style="text-align: center; margin-bottom: 32px;">
@@ -233,7 +233,7 @@
                   <strong>Autoría:</strong> {{ projectsFacade.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projectsFacade.currentProject().userId.email }}
                 </div>
               }
-              <markdown [data]="projectsFacade.generatedProject()"></markdown>
+              <markdown [data]="projectsFacade.formattedGeneratedProject()"></markdown>
             </div>
           </div>
 

@@ -34,6 +34,10 @@ export class ProjectsFacade {
   // --- COMPUTADOS ---
   currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
   
+  formattedGeneratedProject = computed(() => {
+    return this.generatedProject() || '';
+  });
+  
   fpProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
     return this.projectsHistory().filter(p => {

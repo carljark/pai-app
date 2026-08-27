@@ -80,6 +80,7 @@ NO puedes generar un proyecto corto o resumido. DEBES desarrollar CADA FASE Y CA
 El resultado debe ser un manual exhaustivo y listo para imprimir que cualquier docente pueda leer y aplicar directamente en el aula mañana mismo.
 
 Formatea el texto final como Markdown profesional (NO lo envuelvas en markdown \`\`\` o similares, escribe directamente el texto Markdown).
+MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII (como +-----, |    |, etc.) bajo ningún concepto para esquemas o secuencias. Si necesitas tabular información, utiliza ÚNICAMENTE el formato estándar de tablas Markdown (usando | y -). Para resaltar texto, usa bloques de cita (>).
 Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}`;

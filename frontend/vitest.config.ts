@@ -4,7 +4,13 @@ export default defineConfig({
   test: {
     coverage: {
       provider: 'v8',
-      include: ['src/app/services/**/*.ts'],
+      include: ['src/app/**/*.ts'],
+      exclude: [
+        'src/app/**/*.spec.ts',
+        'src/app/**/*.routes.ts',
+        'src/app/**/*.config.ts',
+        'src/app/app.config.server.ts'
+      ],
       thresholds: {
         statements: 90,
         branches: 90,

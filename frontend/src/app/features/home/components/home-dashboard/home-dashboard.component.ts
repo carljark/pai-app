@@ -1,3 +1,4 @@
+import { TranslationService } from '../../../../services/translation.service';
 import { Component, inject, output, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
@@ -20,20 +21,18 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
           </svg>
         </div>
-        <h1 class="home-hero__title">Plataforma de Proyectos Interdisciplinares</h1>
-        <p class="home-hero__greeting">¡Bienvenido, <strong>{{ userName() }}</strong>!</p>
+        <h1 class="home-hero__title">{{ t().homeTitle }}</h1>
+        <p class="home-hero__greeting">{{ t().homeGreeting }}, <strong>{{ userName() }}</strong>!</p>
         <p class="home-hero__description">
-          Diseña proyectos curriculares interdisciplinares asistidos por inteligencia artificial.
-          Selecciona Resultados de Aprendizaje o Criterios de Evaluación, elige metodología y deja
-          que la IA elabore un proyecto completo listo para usar en el aula.
+          {{ t().homeDescription }}
         </p>
 
         <!-- Feature Pills — sin iconos -->
         <div class="home-hero__pills">
-          <span class="home-pill">IA Generativa</span>
-          <span class="home-pill">Exporta a Word</span>
-          <span class="home-pill">Bilingüe ES / CA</span>
-          <span class="home-pill">FP Básica &amp; ESO</span>
+          <span class="home-pill">{{ t().homePill1 }}</span>
+          <span class="home-pill">{{ t().homePill2 }}</span>
+          <span class="home-pill">{{ t().homePill3 }}</span>
+          <span class="home-pill">{{ t().homePill4 }}</span>
         </div>
 
         <!-- CTA Buttons -->
@@ -45,13 +44,13 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
               <line x1="12" y1="18" x2="12" y2="12"></line>
               <line x1="9" y1="15" x2="15" y2="15"></line>
             </svg>
-            Nuevo Proyecto
+            {{ t().homeNewProject }}
           </button>
           <button class="home-cta home-cta--secondary" (click)="navigate.emit('history')">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
-            Ver Historial
+            {{ t().homeViewHistory }}
           </button>
         </div>
       </div>
@@ -60,14 +59,14 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
       <div class="home-recent">
         <h2 class="home-recent__title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Actividad Reciente
+          {{ t().homeRecentTitle }}
         </h2>
 
         @if (recentProjects().length === 0) {
           <div class="home-empty">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c4d4cc" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-            <p>Aún no hay proyectos generados. ¡Crea el primero!</p>
-            <button class="home-cta home-cta--primary" style="margin-top: 12px;" (click)="navigate.emit('generator')">Empezar ahora</button>
+            <p>{{ t().homeEmpty }}</p>
+            <button class="home-cta home-cta--primary" style="margin-top: 12px;" (click)="navigate.emit('generator')">{{ t().homeStartNow }}</button>
           </div>
         } @else {
           <div class="home-recent__grid">
@@ -80,11 +79,11 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
                   <span class="home-project-card__date">{{ project.createdAt | date:'d MMM, HH:mm' }}</span>
                 </div>
                 <p class="home-project-card__modules">
-                  {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || 'Proyecto interdisciplinar' }}
+                  {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || t().homeDefaultModules }}
                 </p>
                 <div class="home-project-card__footer">
                   <span class="home-project-card__level">{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO (PDC)' : 'FP Básica' }}</span>
-                  <span class="home-project-card__open">Abrir →</span>
+                  <span class="home-project-card__open">{{ t().homeOpen }}</span>
                 </div>
               </div>
             }
@@ -359,6 +358,8 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
 })
 export class HomeDashboardComponent {
   projectsFacade = inject(ProjectsFacade);
+  translationService = inject(TranslationService);
+  t = this.translationService.t;
   private authFacade = inject(AuthFacade);
 
   navigate = output<AppView>();
@@ -380,11 +381,11 @@ export class HomeDashboardComponent {
 
   statusLabel(status: string): string {
     const labels: Record<string, string> = {
-      publicado: 'Publicado',
-      borrador: 'Borrador',
-      en_cola: 'En cola',
-      generando: 'Generando...',
-      error: 'Error'
+      publicado: this.t().statusPublished,
+      borrador: this.t().statusDraft,
+      en_cola: this.t().statusQueued,
+      generando: this.t().statusGenerating,
+      error: this.t().statusError
     };
     return labels[status] ?? status;
   }

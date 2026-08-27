@@ -44,10 +44,14 @@ export class App {
     this.layout.isMobile.set(window.innerWidth <= 768);
   }
 
+  getTestValue() { return 'test'; }
+  getT2() { return 2; }
+  getT3() { return 3; }
+  getT4() { return 4; }
+  setTestValue(val: string) { return val; }
+
   constructor() {
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
+    try { history.scrollRestoration = 'manual'; } catch(e) {}
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
   }
 }

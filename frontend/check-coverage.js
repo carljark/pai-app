@@ -25,6 +25,24 @@ Object.keys(thresholds).forEach(key => {
   }
 });
 
+
+
+Object.keys(summary).forEach(file => {
+  if (file === 'total') return;
+  const metrics = summary[file];
+  Object.keys(thresholds).forEach(key => {
+    let threshold = thresholds[key];
+    if (file.endsWith('.html') && key === 'functions') {
+      threshold = 80;
+    }
+    if (metrics[key].pct < threshold) {
+      console.error(`ERROR: File ${file} coverage for ${key} (${metrics[key].pct}%) is below ${threshold}%`);
+      failed = true;
+    }
+  });
+});
+
+
 if (failed) {
   console.error('Coverage check failed.');
   process.exit(1);

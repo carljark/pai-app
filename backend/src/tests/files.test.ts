@@ -68,7 +68,7 @@ describe('DOCX & Files Endpoints', () => {
 
     // 2. Listar
     const getRes = await request(app).get(`/api/projects/${projectId}/files`).set('Authorization', `Bearer ${token}`);
-    expect(getRes.status).toBe(200);
+    console.log("getRes", getRes.status, getRes.body); expect(getRes.status).toBe(200);
     expect(getRes.body.length).toBe(1);
     expect(getRes.body[0].name).toBe('test.pdf');
 

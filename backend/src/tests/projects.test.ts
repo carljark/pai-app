@@ -200,6 +200,9 @@ describe('Projects Endpoints', () => {
     });
     expect(res.status).toBe(202);
 
+    // Limpiar proyectos en cola para evitar 429 (Límite de concurrencia de cola)
+    await Project.deleteMany({});
+
     // Test ActivityLog error
     const spy = vi.spyOn(Project.prototype, 'save').mockRejectedValueOnce(new Error('Fallo simulado para log'));
     const resErr = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ selectedRas: [] });

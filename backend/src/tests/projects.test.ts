@@ -4,6 +4,8 @@ import { app } from '../server';
 import { connectDB, closeDB, clearDB } from './testSetup';
 import { createTestUser } from './testUtils';
 import mongoose from 'mongoose';
+import { Project } from '../models/Project';
+import { ActivityLog } from '../models/ActivityLog';
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: class {
@@ -203,6 +205,7 @@ describe('Projects Endpoints', () => {
     // Limpiar proyectos en cola para evitar 429 (Límite de concurrencia de cola)
     await Project.deleteMany({});
 
+    await Project.deleteMany({});
     // Test ActivityLog error
     const spy = vi.spyOn(Project.prototype, 'save').mockRejectedValueOnce(new Error('Fallo simulado para log'));
     const resErr = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ selectedRas: [] });
@@ -213,4 +216,30 @@ describe('Projects Endpoints', () => {
     const proj = await new Project({ title: 'A borrar con log' }).save();
     await request(app).delete(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
   });
+
+  it('debería rechazar streamUpdates si no hay usuario', async () => {
+    const res = await request(app).get('/api/projects/stream');
+    expect(res.status).toBe(401);
+  });
+
+  it('debería responder 429 si ya hay un proyecto en cola', async () => {
+    const { token, user } = await createTestUser('teacher', 'teacher_queue@test.com');
+    await new Project({ title: 'En Cola', userId: user._id, status: 'en_cola' }).save();
+    
+    const res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ selectedRas: [] });
+    expect(res.status).toBe(429);
+  });
+
+  it('debería responder 429 si excedió el límite diario', async () => {
+    const { token, user } = await createTestUser('teacher', 'teacher_limit@test.com');
+    const promises = [];
+    for (let i = 0; i < 10; i++) {
+      promises.push(new ActivityLog({ userId: user._id, action: 'GENERATE_PROJECT' }).save());
+    }
+    await Promise.all(promises);
+    
+    const res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ selectedRas: [] });
+    expect(res.status).toBe(429);
+  });
+
 });

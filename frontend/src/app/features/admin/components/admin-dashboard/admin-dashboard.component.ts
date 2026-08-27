@@ -1,7 +1,7 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PaiService } from '../services/pai.service';
+import { AdminFacade } from '../../services/admin.facade';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -37,10 +37,10 @@ import { PaiService } from '../services/pai.service';
     <!-- Panel de Usuarios -->
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <h2 style="color: #2c3e50; margin-top: 0;">Panel de Administración: Usuarios Registrados</h2>
-      <button (click)="loadUsers()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;"> Refrescar lista</button>
+      <button (click)="adminFacade.loadUsers()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;"> Refrescar lista</button>
       
       <div style="display: grid; gap: 15px;">
-        @for (u of usersList(); track u._id) {
+        @for (u of adminFacade.users(); track u._id) {
           <div class="history-card" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa;">
             <div>
               <strong style="color: #2c3e50; font-size: 1.1rem;">{{ u.name }}</strong> ({{ u.email }})
@@ -73,10 +73,10 @@ import { PaiService } from '../services/pai.service';
     <!-- Panel de Registros de Actividad -->
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <h2 style="color: #2c3e50; margin-top: 0;">Registro de Actividad de la Aplicación</h2>
-      <button (click)="loadLogs()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;"> Refrescar registros</button>
+      <button (click)="adminFacade.loadLogs()" style="margin-bottom: 20px; background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;"> Refrescar registros</button>
       
       <div style="display: grid; gap: 15px; max-height: 500px; overflow-y: auto;">
-        @for (log of activityLogs(); track log._id) {
+        @for (log of adminFacade.logs(); track log._id) {
           <div class="history-card" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background: #fafafa; border-left: 5px solid #3498db;">
             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
               <strong style="color: #2c3e50;">{{ log.userId?.name || 'Desconocido' }} ({{ log.userId?.email || 'N/A' }})</strong>
@@ -105,69 +105,56 @@ import { PaiService } from '../services/pai.service';
             }
           </div>
         }
-        @if (activityLogs().length === 0) {
+        @if (adminFacade.logs().length === 0) {
           <div style="text-align: center; color: #7f8c8d; padding: 20px;">No hay actividad registrada aún.</div>
         }
       </div>
     </section>
   `
 })
-export class AdminDashboardComponent implements OnInit {
-  private paiService = inject(PaiService);
+export class AdminDashboardComponent {
+  adminFacade = inject(AdminFacade);
 
   schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
   isSavingSettings = signal(false);
-  usersList = signal<any[]>([]);
-  activityLogs = signal<any[]>([]);
+  saveSuccess = signal<boolean>(false);
+  
+  
 
-  ngOnInit() {
-    this.loadUsers();
-    this.loadSettings();
-    this.loadLogs();
-  }
-
-  loadUsers() {
-    this.paiService.getUsers().subscribe(users => this.usersList.set(users));
-  }
-
-  loadLogs() {
-    this.paiService.getLogs().subscribe(logs => this.activityLogs.set(logs));
-  }
-
-  loadSettings() {
-    this.paiService.getSettings().subscribe(settings => {
-      this.schoolSettings.set({
-        schoolName: settings.schoolName || '',
-        schoolCity: settings.schoolCity || '',
-        schoolContext: settings.schoolContext || ''
-      });
+  constructor() {
+    this.adminFacade.loadUsers();
+    this.adminFacade.loadSettings();
+    effect(() => {
+      const s = this.adminFacade.settings();
+      if (s) this.schoolSettings.set({schoolName: s.name, schoolCity: s.educationalLevel, schoolContext: s.context});
     });
+    this.adminFacade.loadLogs();
   }
 
   saveSettings(e: Event) {
     e.preventDefault();
     this.isSavingSettings.set(true);
-    this.paiService.updateSettings(this.schoolSettings()).subscribe({
+    this.adminFacade.saveSettings({name: this.schoolSettings().schoolName, educationalLevel: this.schoolSettings().schoolCity, context: this.schoolSettings().schoolContext}).subscribe({
       next: () => {
-        alert('Configuración guardada correctamente.');
+        this.saveSuccess.set(true); setTimeout(() => this.saveSuccess.set(false), 3000);
         this.isSavingSettings.set(false);
       },
       error: () => {
-        alert('Error al guardar la configuración.');
+        this.saveSuccess.set(false);
         this.isSavingSettings.set(false);
       }
     });
   }
 
   approveUser(userId: string) {
-    this.paiService.updateUserPermissions(userId, { role: 'teacher' }).subscribe(() => {
-      this.loadUsers();
+    this.adminFacade.updateUserRole(userId, 'teacher').subscribe(() => {
+      this.adminFacade.loadUsers();
     });
   }
 
   toggleAiAccess(userId: string, currentStatus: boolean) {
-    this.paiService.updateUserPermissions(userId, { canUseAi: !currentStatus }).subscribe(() => {
-      this.loadUsers();
+    this.adminFacade.updateUserAi(userId, !currentStatus).subscribe(() => {
+      this.adminFacade.loadUsers();
     });
   }
 }

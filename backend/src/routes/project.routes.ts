@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { generateProject, listProjects, getProject, updateProject, deleteProject } from '../controllers/project.controller';
+import { generateProject, listProjects, getProject, updateProject, deleteProject, streamUpdates } from '../controllers/project.controller';
 import { exportDocx, importDocx } from '../controllers/docx.controller';
 import filesRoutes from './files.routes';
 import { requireApproved, requireAiAccess } from '../middlewares/auth.middleware';
@@ -15,6 +15,7 @@ router.get('/:id/export-docx', requireApproved, exportDocx);
 router.post('/:id/import-docx', requireApproved, uploadMemory.single('file'), importDocx);
 
 // Rutas de Proyectos
+router.get('/stream', streamUpdates);
 router.post('/generate', requireApproved, requireAiAccess, generateProject);
 router.get('/', listProjects);
 router.get('/:id', getProject);

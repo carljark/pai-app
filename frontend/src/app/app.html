@@ -1,35 +1,6 @@
 <main style="max-width: 1400px; margin: 40px auto; font-family: system-ui, sans-serif; color: #333; line-height: 1.6; padding: 0 20px;">
   @if (!authService.currentUser()) {
-    <div style="max-width: 400px; margin: 100px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <h2 style="text-align: center; color: #2c3e50; margin-top: 0;">Plataforma PAI</h2>
-      <p style="text-align: center; color: #7f8c8d; margin-bottom: 25px;">
-        {{ authMode() === 'login' ? 'Inicia sesión para continuar' : 'Crea una cuenta' }}
-      </p>
-
-      @if (authError()) {
-        <div style="background: #fde5e5; color: #c0392b; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 0.9rem; text-align: center;">
-          {{ authError() }}
-        </div>
-      }
-
-      <div style="display: flex; flex-direction: column; gap: 15px;">
-        @if (authMode() === 'register') {
-          <input type="text" [ngModel]="authForm().name" (ngModelChange)="authForm.set({ ...authForm(), name: $event })" placeholder="Nombre completo" style="padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 1rem;">
-        }
-        <input type="email" [ngModel]="authForm().email" (ngModelChange)="authForm.set({ ...authForm(), email: $event })" placeholder="Correo electrónico" style="padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 1rem;">
-        <input type="password" [ngModel]="authForm().password" (ngModelChange)="authForm.set({ ...authForm(), password: $event })" placeholder="Contraseña" style="padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 1rem;">
-        
-        <button (click)="authMode() === 'login' ? login() : register()" style="background: #2980b9; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.2s;">
-          {{ authMode() === 'login' ? 'Entrar' : 'Registrarse' }}
-        </button>
-      </div>
-
-      <div style="text-align: center; margin-top: 20px;">
-        <button (click)="authMode.set(authMode() === 'login' ? 'register' : 'login')" style="background: none; border: none; color: #2980b9; text-decoration: underline; cursor: pointer; font-size: 0.95rem;">
-          {{ authMode() === 'login' ? '¿No tienes cuenta? Regístrate' : '¿Ya tienes cuenta? Inicia sesión' }}
-        </button>
-      </div>
-    </div>
+    <app-auth-form></app-auth-form>
   } @else {
   <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; flex-wrap: wrap; gap: 20px;">
     <div>
@@ -39,6 +10,7 @@
     </div>
     
     <div style="display: flex; gap: 15px; align-items: center;">
+      <app-notifications-badge [projects]="projectsFacade.projectsHistory()"></app-notifications-badge>
       <div style="display: flex; align-items: center; gap: 8px;">
         @if (language() === 'castellano') {
           <svg width="24" height="16" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd; border-radius: 2px;">
@@ -60,14 +32,20 @@
         </select>
       </div>
       
-      @if (currentView() === 'taller') {
-        <button (click)="switchView('generator')" style="background: #bdc3c7; color: #2c3e50; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold;">
-          {{ t().backGenerator }}
+      <div style="display: flex; gap: 5px; background: #ecf0f1; padding: 4px; border-radius: 8px;">
+        <button (click)="switchView('generator')" 
+                [style.background]="currentView() === 'generator' ? '#2c3e50' : 'transparent'"
+                [style.color]="currentView() === 'generator' ? 'white' : '#2c3e50'"
+                style="border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: all 0.2s;">
+          Generador
         </button>
-      }
-      <button (click)="toggleView()" style="background: #2c3e50; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
-        {{ currentView() === 'history' ? t().backGenerator : t().historyBtn }}
-      </button>
+        <button (click)="switchView('history')"
+                [style.background]="currentView() === 'history' ? '#2c3e50' : 'transparent'"
+                [style.color]="currentView() === 'history' ? 'white' : '#2c3e50'"
+                style="border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: all 0.2s;">
+          {{ language() === 'castellano' ? 'Historial' : 'Historial' }}
+        </button>
+      </div>
       @if (authService.currentUser()?.role === 'admin') {
         <button (click)="switchView('admin')" style="background: #f39c12; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.3s;">
           Admin
@@ -83,30 +61,30 @@
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <h2 style="color: #2c3e50; margin: 0;">{{ t().historyTitle }}</h2>
-        <input type="text" [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)" placeholder=" Buscar por palabra clave..." style="padding: 10px 15px; border: 1px solid #bdc3c7; border-radius: 6px; width: 300px; font-size: 1rem;">
+        <input type="text" [ngModel]="projectsFacade.searchQuery()" (ngModelChange)="projectsFacade.searchQuery.set($event)" placeholder=" Buscar por palabra clave..." style="padding: 10px 15px; border: 1px solid #bdc3c7; border-radius: 6px; width: 300px; font-size: 1rem;">
       </div>
-      @if (projectsHistory().length === 0) {
+      @if (projectsFacade.projectsHistory().length === 0) {
         <p>{{ t().noProjects }}</p>
       } @else {
         <div style="display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">
-          <button (click)="historyTab.set('FP_BASICA')" 
-                  [style.background]="historyTab() === 'FP_BASICA' ? '#3498db' : 'transparent'"
-                  [style.color]="historyTab() === 'FP_BASICA' ? 'white' : '#7f8c8d'"
+          <button (click)="projectsFacade.historyTab.set('FP_BASICA')" 
+                  [style.background]="projectsFacade.historyTab() === 'FP_BASICA' ? '#3498db' : 'transparent'"
+                  [style.color]="projectsFacade.historyTab() === 'FP_BASICA' ? 'white' : '#7f8c8d'"
                   style="border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: bold; transition: all 0.2s;">
-            {{ t().fpBtn }} ({{ fpProjects().length }})
+            {{ t().fpBtn }} ({{ projectsFacade.fpProjects().length }})
           </button>
-          <button (click)="historyTab.set('ESO')" 
-                  [style.background]="historyTab() === 'ESO' ? '#9b59b6' : 'transparent'"
-                  [style.color]="historyTab() === 'ESO' ? 'white' : '#7f8c8d'"
+          <button (click)="projectsFacade.historyTab.set('ESO')" 
+                  [style.background]="projectsFacade.historyTab() === 'ESO' ? '#9b59b6' : 'transparent'"
+                  [style.color]="projectsFacade.historyTab() === 'ESO' ? 'white' : '#7f8c8d'"
                   style="border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: bold; transition: all 0.2s;">
-            {{ t().esoBtn }} ({{ esoProjects().length }})
+            {{ t().esoBtn }} ({{ projectsFacade.esoProjects().length }})
           </button>
         </div>
 
-        @if (historyTab() === 'FP_BASICA') {
-          @if (fpProjects().length > 0) {
+        @if (projectsFacade.historyTab() === 'FP_BASICA') {
+          @if (projectsFacade.fpProjects().length > 0) {
             <div style="display: grid; gap: 15px;">
-              @for (proj of fpProjects(); track proj._id) {
+              @for (proj of projectsFacade.fpProjects(); track proj._id) {
                 <div class="history-card" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3498db'" onmouseout="this.style.borderColor='#e0e0e0'">
                   <div>
                     <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
@@ -115,9 +93,17 @@
                     </p>
                   </div>
                   <div style="display: flex; gap: 10px;">
-                    <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-                      {{ t().viewProject }}
-                    </button>
+                    @if (proj.status === 'en_cola' || proj.status === 'generando') {
+                      <span style="padding: 8px 15px; font-weight: bold; color: #f39c12;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {{ proj.status === 'en_cola' ? 'En cola' : 'Generando...' }}
+                      </span>
+                    } @else if (proj.status === 'error') {
+                      <span style="padding: 8px 15px; font-weight: bold; color: #e74c3c;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Error</span>
+                    } @else {
+                      <button (click)="viewPastProject(proj)" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                        {{ t().viewProject }}
+                      </button>
+                    }
                     @if (proj.userId?._id === authService.currentUser()?._id || authService.currentUser()?.role === 'admin') {
                       <button (click)="deleteProject(proj._id)" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;" title="Eliminar Proyecto">
                         Eliminar
@@ -132,10 +118,10 @@
           }
         }
 
-        @if (historyTab() === 'ESO') {
-          @if (esoProjects().length > 0) {
+        @if (projectsFacade.historyTab() === 'ESO') {
+          @if (projectsFacade.esoProjects().length > 0) {
             <div style="display: grid; gap: 15px;">
-              @for (proj of esoProjects(); track proj._id) {
+              @for (proj of projectsFacade.esoProjects(); track proj._id) {
                 <div class="history-card" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#9b59b6'" onmouseout="this.style.borderColor='#e0e0e0'">
                   <div>
                     <strong style="color: #2c3e50; font-size: 1.1rem;">{{ t().cross }}: {{ proj.modules?.join(' + ') || t().curricularSelection }}</strong>
@@ -144,9 +130,17 @@
                     </p>
                   </div>
                   <div style="display: flex; gap: 10px;">
-                    <button (click)="viewPastProject(proj)" style="background: #9b59b6; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-                      {{ t().viewProject }}
-                    </button>
+                    @if (proj.status === 'en_cola' || proj.status === 'generando') {
+                      <span style="padding: 8px 15px; font-weight: bold; color: #f39c12;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {{ proj.status === 'en_cola' ? 'En cola' : 'Generando...' }}
+                      </span>
+                    } @else if (proj.status === 'error') {
+                      <span style="padding: 8px 15px; font-weight: bold; color: #e74c3c;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Error</span>
+                    } @else {
+                      <button (click)="viewPastProject(proj)" style="background: #9b59b6; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                        {{ t().viewProject }}
+                      </button>
+                    }
                     @if (proj.userId?._id === authService.currentUser()?._id || authService.currentUser()?.role === 'admin') {
                       <button (click)="deleteProject(proj._id)" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;" title="Eliminar Proyecto">
                         Eliminar
@@ -179,15 +173,15 @@
       <div style="margin-bottom: 25px;">
         <h3 style="color: #34495e;">{{ t().whatToDesign }}</h3>
         <div class="config-buttons" style="display: flex; gap: 15px;">
-          <button (click)="tipoNivel.set('FP_BASICA'); courseLevel.set('1º Curso'); selectedRas.set([])"
-                  [style.background]="tipoNivel() === 'FP_BASICA' ? '#3498db' : '#ecf0f1'"
-                  [style.color]="tipoNivel() === 'FP_BASICA' ? 'white' : '#2c3e50'"
+          <button (click)="curriculumFacade.tipoNivel.set('FP_BASICA'); projectsFacade.courseLevel.set('1º Curso'); curriculumFacade.clearSelection()"
+                  [style.background]="curriculumFacade.tipoNivel() === 'FP_BASICA' ? '#3498db' : '#ecf0f1'"
+                  [style.color]="curriculumFacade.tipoNivel() === 'FP_BASICA' ? 'white' : '#2c3e50'"
                   style="flex: 1; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
             {{ t().fpBtn }}
           </button>
-          <button (click)="tipoNivel.set('DIVERSIFICACION_CURRICULAR'); courseLevel.set('3º ESO'); selectedRas.set([])"
-                  [style.background]="tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? '#9b59b6' : '#ecf0f1'"
-                  [style.color]="tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? 'white' : '#2c3e50'"
+          <button (click)="curriculumFacade.tipoNivel.set('DIVERSIFICACION_CURRICULAR'); projectsFacade.courseLevel.set('3º ESO'); curriculumFacade.clearSelection()"
+                  [style.background]="curriculumFacade.tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? '#9b59b6' : '#ecf0f1'"
+                  [style.color]="curriculumFacade.tipoNivel() === 'DIVERSIFICACION_CURRICULAR' ? 'white' : '#2c3e50'"
                   style="flex: 1; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
             {{ t().esoBtn }}
           </button>
@@ -199,7 +193,7 @@
         <div class="config-buttons" style="display: flex; gap: 15px;">
           <div style="flex: 1;">
             <label style="display: block; font-weight: bold; margin-bottom: 5px;">{{ t().methodology }}</label>
-            <select [ngModel]="methodology()" (ngModelChange)="methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+            <select [ngModel]="projectsFacade.methodology()" (ngModelChange)="projectsFacade.methodology.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
               <option value="ABP (Aprendizaje Basado en Proyectos)">ABP (Aprendizaje Basado en Proyectos)</option>
               <option value="ABR (Aprendizaje Basado en Retos)">ABR (Aprendizaje Basado en Retos)</option>
               <option value="Aprendizaje Basado en Problemas">Aprendizaje Basado en Problemas</option>
@@ -207,8 +201,8 @@
           </div>
           <div style="flex: 1;">
             <label style="display: block; font-weight: bold; margin-bottom: 5px;">{{ t().courseLevelLabel }}</label>
-            <select [ngModel]="courseLevel()" (ngModelChange)="courseLevel.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
-              @if (tipoNivel() === 'FP_BASICA') {
+            <select [ngModel]="projectsFacade.courseLevel()" (ngModelChange)="projectsFacade.courseLevel.set($event)" style="width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #bdc3c7; border-radius: 6px;">
+              @if (curriculumFacade.tipoNivel() === 'FP_BASICA') {
                 <option value="1º Curso">{{ t().firstYearFP }}</option>
                 <option value="2º Curso">{{ t().secondYearFP }}</option>
               } @else {
@@ -222,77 +216,11 @@
 
       <div style="margin-bottom: 30px;">
         <h3 style="color: #34495e;">{{ t().curricularSelection }}</h3>
-        <p style="color: #7f8c8d; font-size: 0.95rem;">{{ tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO }}</p>
+        <p style="color: #7f8c8d; font-size: 0.95rem;">{{ curriculumFacade.tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO }}</p>
         
         <div style="display: block; padding-bottom: 80px;">
           
-          <!-- Lado Izquierdo: Acordeones de Selección -->
-          <div style="display: grid; gap: 15px;">
-            @for (group of groupedItems(); track group.category) {
-              <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-                <summary [style.background]="getCategoryStyle(group.category).bg" [style.color]="getCategoryStyle(group.category).text" style="padding: 15px; font-weight: bold; cursor: pointer; user-select: none;">
-                  {{ getCategoryStyle(group.category).icon }} {{ group.category }} ({{ group.totalItems }})
-                </summary>
-                <div style="padding: 15px;">
-                  @for (item of group.items; track item.text) {
-                    <label style="display: flex; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f1f2f6'" onmouseout="this.style.background='transparent'">
-                      <input type="checkbox" 
-                            [checked]="selectedRas().includes(item.text)"
-                            (change)="toggleRa(item.text)"
-                            style="margin-right: 10px; margin-top: 5px; transform: scale(1.2);">
-                      <span style="font-size: 0.95rem; line-height: 1.4;">
-                        <span style="font-weight: bold; color: #2980b9; margin-right: 5px;">{{ item.index }}. </span>
-                        {{ item.text }}
-                      </span>
-                    </label>
-                  }
-                </div>
-              </details>
-            }
-          </div>
-
-          <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
-          <details [attr.open]="!isMobile() ? '' : null" style="position: fixed; bottom: 20px; right: 20px; width: 340px; max-width: calc(100vw - 40px); background: white; border: 1px solid #bdc3c7; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); z-index: 9999; overflow: hidden;">
-            <summary style="padding: 15px 20px; background: #2c3e50; color: white; font-weight: bold; font-size: 1.05rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
-              <span> {{ t().selectedItemsTitle }} ({{ selectedItemsDetails().length }})</span>
-              <span style="font-size: 0.8rem; opacity: 0.8;">▲/▼</span>
-            </summary>
-
-            <div style="padding: 20px;">
-              <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; max-height: 40vh; overflow-y: auto;">
-                @for (group of groupedSelectedItems(); track group.subject) {
-                  <li style="margin-bottom: 12px; font-size: 0.85rem; border-bottom: 1px solid #eee; padding-bottom: 8px;">
-                    <strong style="color: #3498db; display: block; margin-bottom: 6px;">{{ group.subject }}</strong>
-                    <ul style="list-style: none; padding-left: 5px; margin: 0;">
-                      @for (item of group.items; track item.fullDesc) {
-                        <li style="color: #7f8c8d; margin-bottom: 6px; padding-left: 10px; border-left: 2px solid #bdc3c7;" [title]="item.fullDesc">
-                          <strong style="color: #2980b9;">{{ item.index }}. </strong>{{ item.shortDesc }}
-                        </li>
-                      }
-                    </ul>
-                  </li>
-                }
-                @if (selectedItemsDetails().length === 0) {
-                  <li style="color: #95a5a6; font-size: 0.9rem; font-style: italic; text-align: center; padding: 20px 0;">
-                    {{ t().noItemsSelected }}
-                  </li>
-                }
-              </ul>
-
-              @if (!authService.currentUser()?.canUseAi && authService.currentUser()?.role !== 'admin') {
-                <div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center; border: 1px solid #f5c6cb; font-size: 0.95rem;">
-                  <strong>IA Desactivada:</strong> Solicita permisos a un administrador para usar el motor generativo.
-                </div>
-              } @else {
-                <button (click)="generateProject()" 
-                        [disabled]="isGenerating() || selectedItemsDetails().length === 0" 
-                        [style.opacity]="selectedItemsDetails().length === 0 ? '0.6' : '1'"
-                        style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
-                  {{ isGenerating() ? t().generatingBtn : t().generateBtn }}
-                </button>
-              }
-            </div>
-          </details>
+          <app-curriculum-selector [title]="curriculumFacade.tipoNivel() === 'FP_BASICA' ? t().selectItemsFP : t().selectItemsESO" [isGenerating]="projectsFacade.isGenerating()" [generateText]="t().generateBtn" [generatingText]="t().generatingBtn" (generate)="generateProject()"></app-curriculum-selector>
 
         </div>
       </div>
@@ -301,7 +229,7 @@
   }
 
   <!-- Resultados de la IA -->
-  @if (currentView() === 'taller' && generatedProject()) {
+  @if (currentView() === 'taller' && projectsFacade.generatedProject()) {
     <section style="margin-top: 20px;">
       <!-- Barra Superior de Acciones -->
       <div class="toolbar" style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #bdc3c7;">
@@ -326,12 +254,12 @@
         <!-- Lienzo Central (El Editor) -->
         <div style="flex: 2; background: white; border: 1px solid #bdc3c7; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
           <div id="pdf-content" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.05rem; background: #fdfbfd; padding: 25px; border-radius: 8px; border: 1px solid #f3e5f5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); line-height: 1.7; height: 600px; overflow-y: auto;">
-            @if (currentProject()?.userId?.name) {
+            @if (projectsFacade.currentProject()?.userId?.name) {
               <div style="background: #e8f4f8; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.95rem; color: #2c3e50; border-left: 4px solid #3498db;">
-                <strong>Autoría:</strong> {{ currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ currentProject().userId.email }}
+                <strong>Autoría:</strong> {{ projectsFacade.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projectsFacade.currentProject().userId.email }}
               </div>
             }
-            <markdown [data]="generatedProject()"></markdown>
+            <markdown [data]="projectsFacade.generatedProject()"></markdown>
           </div>
         </div>
 
@@ -353,7 +281,7 @@
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 10px;">
-              <textarea [ngModel]="aiPrompt()" (ngModelChange)="aiPrompt.set($event)" [placeholder]="t().aiPlaceholder" style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-family: inherit; resize: none;"></textarea>
+              <textarea [ngModel]="projectsFacade.aiPrompt()" (ngModelChange)="projectsFacade.aiPrompt.set($event)" [placeholder]="t().aiPlaceholder" style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-family: inherit; resize: none;"></textarea>
               <button (click)="rewriteWithAI()" [disabled]="isRewriting()" style="background: #3498db; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s;">
                 {{ isRewriting() ? t().thinking : t().rewriteBtn }}
               </button>
@@ -379,13 +307,13 @@
                (drop)="onDrop($event)">
             <span style="font-size: 2rem; color: #95a5a6;">️</span>
             <p style="color: #7f8c8d; margin: 10px 0 0 0; font-size: 0.95rem; font-weight: bold;">
-              {{ isUploading() ? t().uploading : t().dragFiles }}
+              {{ projectsFacade.isUploading() ? t().uploading : t().dragFiles }}
             </p>
             <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
           </div>
 
           <div style="flex: 1; overflow-y: auto;">
-            @for (file of projectFiles(); track file.name) {
+            @for (file of projectsFacade.projectFiles(); track file.name) {
               <div style="display: flex; justify-content: space-between; align-items: center; background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 8px;">
                 <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%;">
                   <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; font-size: 0.9rem;">
@@ -410,6 +338,26 @@
   @if (currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
     <app-admin-dashboard></app-admin-dashboard>
   }
+  }
+
+  <!-- Info Modal -->
+  @if (showInfoModal()) {
+    <app-info-modal
+      [title]="infoTitle()"
+      [message]="infoMessage()"
+      [type]="infoType()"
+      (close)="showInfoModal.set(false)">
+    </app-info-modal>
+  }
+
+  <!-- Confirm Modal -->
+  @if (showConfirmModal()) {
+    <app-confirm-modal
+      [title]="confirmTitle()"
+      [message]="confirmMessage()"
+      (confirm)="confirmAction()()"
+      (cancel)="showConfirmModal.set(false)">
+    </app-confirm-modal>
   }
 
   <!-- Error Modal -->

@@ -34,8 +34,8 @@ describe('Projects Endpoints', () => {
         contextInfo: 'Contexto'
       });
     
-    expect(res.status).toBe(200);
-    expect(res.body.generatedContent.rawText).toContain('Mocked Project');
+    expect(res.status).toBe(202);
+    expect(res.body.project.status).toBe('en_cola');
   });
 
   it('GET /api/projects - Debería listar los proyectos del usuario', async () => {
@@ -161,9 +161,9 @@ describe('Projects Endpoints', () => {
     // 1. generateProject sin parámetros opcionales y con proyectos publicados previos
     await new Project({ title: 'Pub', status: 'publicado', generatedContent: { rawText: 'A' } }).save();
     const resGen = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ language: 'catalan' });
-    expect(resGen.status).toBe(200);
-    expect(resGen.body.title).toBe('Proyecto Generado');
-    expect(resGen.body.tipoNivel).toBe('FP_BASICA');
+    expect(resGen.status).toBe(202);
+    expect(resGen.body.project.title).toBe('Proyecto Generado');
+    expect(resGen.body.project.tipoNivel).toBe('FP_BASICA');
     
     // 2. updateProject sin status
     const proj = await new Project({ title: 'UpdateMe' }).save();
@@ -198,7 +198,7 @@ describe('Projects Endpoints', () => {
       selectedRas: ['RA ES', 'RA CA', 'RA Nulo', 'CE ES', 'CE CA', 'CE Nulo', 'RA Inventado'],
       language: 'catalan'
     });
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(202);
 
     // Test ActivityLog error
     const spy = vi.spyOn(Project.prototype, 'save').mockRejectedValueOnce(new Error('Fallo simulado para log'));

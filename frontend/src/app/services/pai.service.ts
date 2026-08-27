@@ -19,8 +19,31 @@ export class PaiService {
     return this.http.get<any[]>(`${this.apiUrl}/ces?lang=${lang}`);
   }
 
-  generateProject(selectedRas: string[], methodology: string, modules: string[], tipoNivel: string, language: string, courseLevel: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/projects/generate`, { selectedRas, methodology, modules, tipoNivel, language, courseLevel });
+  generateProject(selectedRas: string[], methodology: string, modules: string[], tipoNivel: string, language: string, courseLevel: string, title?: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/projects/generate`, { selectedRas, methodology, modules, tipoNivel, language, courseLevel, title });
+  }
+
+  listenToProjectUpdates(): Observable<any> {
+    return new Observable((observer) => {
+      const token = localStorage.getItem('pai_token');
+      // Enviar token por query parameter o usar interceptor? EventSource no soporta headers.
+      // Así que lo pasamos por URL
+      const eventSource = new EventSource(`${this.apiUrl}/projects/stream?token=${token}`);
+      
+      eventSource.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        observer.next(data);
+      };
+
+      eventSource.onerror = (error) => {
+        console.error('SSE Error:', error);
+        // observer.error(error); // Mejor no cerrarlo por desconexiones puntuales
+      };
+
+      return () => {
+        eventSource.close();
+      };
+    });
   }
 
   getProjects(): Observable<any[]> {

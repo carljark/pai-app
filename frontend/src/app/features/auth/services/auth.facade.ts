@@ -1,37 +1,35 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
+import { User, AuthResponse, LoginCredentials, RegisterData } from '../models/auth.model';
+import { AuthMapper } from '../mappers/auth.mapper';
 
 @Injectable({ providedIn: 'root' })
-export class AuthService {
+export class AuthFacade {
   private http = inject(HttpClient);
   private apiUrl = '/api/auth';
 
-  currentUser = signal<{ _id?: string; name: string; email: string; role?: string; canUseAi?: boolean } | null>(null);
+  currentUser = signal<User | null>(null);
 
   constructor() {
     const userStr = localStorage.getItem('pai_user');
-    if (userStr) {
-      try {
-        this.currentUser.set(JSON.parse(userStr));
-      } catch (e) {}
-    }
+    this.currentUser.set(AuthMapper.fromStorage(userStr));
   }
 
-  login(credentials: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/login`, credentials).pipe(
+  login(credentials: LoginCredentials): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/login`, credentials).pipe(
       tap(res => {
         if (res.token) {
           localStorage.setItem('pai_token', res.token);
-          localStorage.setItem('pai_user', JSON.stringify(res.user));
+          localStorage.setItem('pai_user', AuthMapper.toStorage(res.user));
           this.currentUser.set(res.user);
         }
       })
     );
   }
 
-  register(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/register`, data);
+  register(data: RegisterData): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/register`, data);
   }
 
   logout() {

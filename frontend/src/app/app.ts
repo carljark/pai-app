@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal, computed, effect, HostListener } from '@angular/core';
+import { Component, inject, signal, computed, effect, HostListener, untracked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PaiService } from './services/pai.service';
@@ -6,78 +6,51 @@ import { MarkdownComponent } from 'ngx-markdown';
 // @ts-ignore
 import html2pdf from 'html2pdf.js';
 
-import { AuthService } from './services/auth.service';
+import { AuthFacade } from './features/auth/services/auth.facade';
+import { AuthFormComponent } from './features/auth/components/auth-form/auth-form.component';
+import { NotificationsFacade } from './features/notifications/services/notifications.facade';
+import { NotificationsBadgeComponent } from './features/notifications/components/notifications-badge/notifications-badge.component';
+import { CurriculumFacade } from './features/curriculum/services/curriculum.facade';
+import { ProjectsFacade } from './features/projects/services/projects.facade';
+import { CurriculumSelectorComponent } from './features/curriculum/components/curriculum-selector/curriculum-selector.component';
 import { ErrorModalComponent } from './components/error-modal.component';
-import { AdminDashboardComponent } from './components/admin-dashboard.component';
+import { InfoModalComponent } from './components/info-modal.component';
+import { ConfirmModalComponent } from './components/confirm-modal.component';
+import { AdminDashboardComponent } from './features/admin/components/admin-dashboard/admin-dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent, AdminDashboardComponent],
+  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent, InfoModalComponent, ConfirmModalComponent, AdminDashboardComponent, AuthFormComponent, NotificationsBadgeComponent, CurriculumSelectorComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements OnInit {
+export class App {
   private paiService = inject(PaiService);
-  authService = inject(AuthService);
+  authService = inject(AuthFacade);
+  notificationsFacade = inject(NotificationsFacade);
+  curriculumFacade = inject(CurriculumFacade);
+  projectsFacade = inject(ProjectsFacade);
 
   // Estado de Autenticación
-  authMode = signal<'login' | 'register'>('login');
-  authForm = signal({ email: '', password: '', name: '' });
-  authError = signal('');
 
   // Señales para manejar el estado reactivo
-  ras = signal<any[]>([]);
-  selectedRas = signal<string[]>([]);
-  methodology = signal<string>('ABP (Aprendizaje Basado en Proyectos)');
-  isGenerating = signal<boolean>(false);
-  isEditMode = signal<boolean>(false);
-  generatedProject = signal<string>('');
-  currentProjectId = signal<string | null>(null);
-  currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
 
-  login() {
-    this.authError.set('');
-    this.authService.login(this.authForm()).subscribe({
-      next: () => {
-        this.loadHistory();
-      },
-      error: (err) => this.authError.set(err.error?.error || 'Error al iniciar sesión')
-    });
-  }
 
-  register() {
-    this.authError.set('');
-    this.authService.register(this.authForm()).subscribe({
-      next: () => {
-        this.authMode.set('login');
-        this.authError.set('Registro exitoso. Ahora inicia sesión.');
-      },
-      error: (err) => this.authError.set(err.error?.error || 'Error al registrarse')
-    });
-  }
 
   logout() {
     this.authService.logout();
-    this.ras.set([]);
-    this.ces.set([]);
-    this.projectsHistory.set([]);
   }
 
   downloadWord() {
-    if (!this.currentProjectId()) return;
-    this.paiService.exportDocx(this.currentProjectId()!).subscribe({
-      next: (blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `Proyecto.docx`;
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        a.remove();
-      },
-      error: () => alert('Error al descargar el archivo Word.')
+    this.projectsFacade.exportDocx()?.subscribe(blob => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Proyecto_Generado.docx';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
     });
   }
 
@@ -88,170 +61,107 @@ export class App implements OnInit {
 
   uploadWord(event: any) {
     const file = event.target.files[0];
-    if (!file || !this.currentProjectId()) return;
+    if (!file || !this.projectsFacade.currentProjectId()) return;
     
-    this.paiService.importDocx(this.currentProjectId()!, file).subscribe({
+    this.paiService.importDocx(this.projectsFacade.currentProjectId()!, file).subscribe({
       next: (res) => {
-        this.generatedProject.set(res.project.generatedContent.rawText);
-        alert('Archivo procesado correctamente. ¡El diseño se ha purificado a Markdown!');
+        this.projectsFacade.generatedProject.set(res.project.generatedContent.rawText);
+        this.infoTitle.set('Archivo Procesado');
+        this.infoMessage.set('El diseño se ha purificado a Markdown exitosamente.');
+        this.infoType.set('success');
+        this.showInfoModal.set(true);
       },
-      error: () => alert('Error al procesar el archivo Word.')
+      error: () => {
+        this.errorMessage.set('Error al procesar el archivo Word.');
+        this.showErrorModal.set(true);
+      }
     });
     // Limpiar input
     event.target.value = '';
   }
 
   saveDraft() {
-    if(!this.currentProjectId()) return;
-    this.paiService.updateProject(this.currentProjectId()!, this.generatedProject(), 'borrador').subscribe({
-      next: () => alert('Borrador guardado correctamente.'),
-      error: (e) => alert('Error al guardar el borrador.')
+    this.projectsFacade.updateProjectStatus('borrador')?.subscribe({
+      next: () => {
+        this.projectsFacade.loadHistory();
+        this.infoTitle.set('Guardado');
+        this.infoMessage.set(this.language() === 'castellano' ? 'Borrador guardado correctamente.' : 'Esborrany guardat correctament.');
+        this.infoType.set('success');
+        this.showInfoModal.set(true);
+      },
+      error: (err) => console.error('Error saving draft:', err),
     });
   }
 
   publishProject() {
-    if(!this.currentProjectId()) return;
-    this.paiService.updateProject(this.currentProjectId()!, this.generatedProject(), 'publicado').subscribe({
-      next: () => alert('¡Proyecto Validado y Publicado! Estará disponible en el Repositorio (Futuro).'),
-      error: (e) => alert('Error al publicar.')
+    this.projectsFacade.updateProjectStatus('publicado')?.subscribe({
+      next: () => {
+        this.projectsFacade.loadHistory();
+        this.infoTitle.set('Publicado');
+        this.infoMessage.set(this.language() === 'castellano' ? 'Proyecto publicado y validado correctamente.' : 'Projecte publicat i validat correctament.');
+        this.infoType.set('success');
+        this.showInfoModal.set(true);
+      },
+      error: (err) => console.error('Error publishing project:', err),
     });
   }
 
   exportPDF() {
-    if (this.isEditMode()) {
-      alert('Por favor, haz clic en "Terminar Edición" antes de exportar el PDF.');
-      return;
+    const element = document.querySelector('markdown');
+    if (element) {
+      html2pdf().from(element as HTMLElement).save('Proyecto.pdf');
     }
-    const element = document.getElementById('pdf-content');
-    if (!element) return;
-    
-    // Guardar estilos originales
-    const originalHeight = element.style.height;
-    const originalOverflow = element.style.overflowY;
-    
-    // Expandir el div para que html2pdf capture el documento entero
-    element.style.height = 'auto';
-    element.style.overflowY = 'visible';
-
-    const opt: any = {
-      margin:       15,
-      filename:     'proyecto_intermodular.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, useCORS: true },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak:    { mode: 'css', avoid: ['h1', 'h2', 'h3', 'h4', 'table', 'tr', 'li', 'blockquote'] }
-    };
-    
-    html2pdf().set(opt).from(element).save().then(() => {
-      // Restaurar el scroll una vez exportado
-      element.style.height = originalHeight;
-      element.style.overflowY = originalOverflow;
-    });
   }
 
-  aiPrompt = signal<string>('');
   isRewriting = signal<boolean>(false);
 
   rewriteWithAI() {
-    const selection = window.getSelection();
-    if (!selection || selection.toString().trim() === '') {
-      alert('Por favor, selecciona (subraya) con el ratón el texto del documento que quieres que la IA modifique.');
+    const selectedText = window.getSelection()?.toString();
+    const instruction = this.projectsFacade.aiPrompt();
+    
+    if (!selectedText || !instruction) {
+      this.infoTitle.set('Atención');
+      this.infoMessage.set('Selecciona texto en el documento e introduce una instrucción para la IA.');
+      this.infoType.set('info');
+      this.showInfoModal.set(true);
       return;
     }
 
-    const selectedText = selection.toString();
-    const instruction = this.aiPrompt();
-
-    if (!instruction.trim()) {
-      alert('Por favor, escribe una instrucción en la caja de texto (ej. "Hazlo más corto").');
-      return;
-    }
-
-    this.isRewriting.set(true);
-
-    this.paiService.rewriteSection(this.generatedProject(), selectedText, instruction).subscribe({
+    this.projectsFacade.isThinking.set(true);
+    this.projectsFacade.rewriteSection(selectedText, instruction).subscribe({
       next: (res) => {
-        // Ahora el backend nos devuelve el documento completo ya modificado
-        this.generatedProject.set(res.newText);
-        this.isRewriting.set(false);
-        this.aiPrompt.set('');
+        this.projectsFacade.generatedProject.set(res.newText);
+        this.projectsFacade.aiPrompt.set('');
+        this.projectsFacade.isThinking.set(false);
+        this.projectsFacade.updateProjectStatus('borrador')?.subscribe();
       },
       error: (err) => {
-        console.error('Error reescribiendo:', err);
-        alert('Hubo un error al reescribir con IA.');
-        this.isRewriting.set(false);
+        console.error("Error en IA", err);
+        this.projectsFacade.isThinking.set(false);
       }
     });
   }
 
   // Agrupación por asignaturas
-  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'>('FP_BASICA');
-  courseLevel = signal<string>('1º Curso');
   language = signal<'castellano' | 'catalan'>('castellano');
-  ces = signal<any[]>([]);
-  projectFiles = signal<any[]>([]);
-  isUploading = signal<boolean>(false);
   
-  historyTab = signal<'FP_BASICA' | 'ESO'>('FP_BASICA');
 
-  selectedItemsDetails = computed(() => {
-    // Build a lookup map from the grouped items so we get the exact computed category and index
-    const lookup = new Map<string, { subject: string, index: number }>();
-    for (const group of this.groupedItems()) {
-      for (const item of group.items) {
-        lookup.set(item.text, { subject: group.category, index: item.index });
-      }
-    }
-    
-    return this.selectedRas().map(desc => {
-      const info = lookup.get(desc) || { subject: 'Desconocido', index: 0 };
-      let shortDesc = desc.substring(0, 60);
-      if (desc.length > 60) shortDesc += '...';
-      return { subject: info.subject, index: info.index, shortDesc, fullDesc: desc };
-    });
-  });
-
-  groupedSelectedItems = computed(() => {
-    const list = this.selectedItemsDetails();
-    const groups: { [key: string]: typeof list } = {};
-    for (const item of list) {
-      if (!groups[item.subject]) groups[item.subject] = [];
-      groups[item.subject].push(item);
-    }
-    return Object.keys(groups).map(key => ({
-      subject: key,
-      items: groups[key].sort((a, b) => a.index - b.index)
-    })).sort((a, b) => a.subject.localeCompare(b.subject));
-  });
-
-  searchQuery = signal<string>('');
 
   errorMessage = signal<string>('');
   showErrorModal = signal<boolean>(false);
   
-  fpProjects = computed(() => {
-    const q = this.searchQuery().toLowerCase();
-    return this.projectsHistory().filter(p => {
-      const matchLevel = p.tipoNivel === 'FP_BASICA' || !p.tipoNivel;
-      if (!matchLevel) return false;
-      if (!q) return true;
-      const titleMatch = p.title?.toLowerCase().includes(q);
-      const textMatch = p.generatedContent?.rawText?.toLowerCase().includes(q);
-      return titleMatch || textMatch;
-    });
-  });
+  infoMessage = signal<string>('');
+  infoTitle = signal<string>('Información');
+  infoType = signal<'info'|'success'>('info');
+  showInfoModal = signal<boolean>(false);
+  
+  showConfirmModal = signal<boolean>(false);
+  confirmTitle = signal<string>('');
+  confirmMessage = signal<string>('');
+  confirmAction = signal<() => void>(() => {});
 
-  esoProjects = computed(() => {
-    const q = this.searchQuery().toLowerCase();
-    return this.projectsHistory().filter(p => {
-      const matchLevel = p.tipoNivel === 'DIVERSIFICACION_CURRICULAR';
-      if (!matchLevel) return false;
-      if (!q) return true;
-      const titleMatch = p.title?.toLowerCase().includes(q);
-      const textMatch = p.generatedContent?.rawText?.toLowerCase().includes(q);
-      return titleMatch || textMatch;
-    });
-  });
+  
+
 
   t = computed(() => {
     if (this.language() === 'catalan') {
@@ -367,77 +277,9 @@ export class App implements OnInit {
     }
   });
 
-  getCategoryStyle(category: string): { bg: string, text: string, icon: string } {
-    const name = category.toLowerCase();
-    if (name.includes('ciencia') || name.includes('ciència') || 
-        name.includes('científico') || name.includes('científic') ||
-        name.includes('biología') || name.includes('biologia') ||
-        name.includes('física') || name.includes('matemática') || name.includes('matemàtique') ||
-        name.includes('tecnología') || name.includes('tecnologia')) {
-      return { bg: '#e8f4f8', text: '#2c3e50', icon: '' }; // Azul clarito (Ciencias)
-    } else if (name.includes('lengua') || name.includes('llengua') || 
-               name.includes('lingüístico') || name.includes('lingüístic') ||
-               name.includes('comunicación') || name.includes('comunicació') ||
-               name.includes('geografía') || name.includes('geografia') ||
-               name.includes('social')) {
-      return { bg: '#fcf3cf', text: '#7d6608', icon: '' }; // Amarillo/Naranja clarito (Letras/Sociales)
-    } else {
-      return { bg: '#ebdef0', text: '#512e5f', icon: '' }; // Morado clarito (Otros/FP)
-    }
-  }
-
-  groupedItems = computed(() => {
-    if (this.tipoNivel() === 'FP_BASICA') {
-      const list = this.ras();
-      const groups: { [key: string]: any[] } = {};
-      
-      for (const ra of list) {
-        let categoryName = ra.module;
-        // Se ha eliminado la lógica de unificación de Ciencias Aplicadas y Comunicación y Sociedad
-        // para que aparezcan I y II por separado en el desplegable de FP Básica, según el Word de mejoras.
-        
-        if (!groups[categoryName]) groups[categoryName] = [];
-        groups[categoryName].push(ra);
-      }
-      
-      return Object.keys(groups).map(key => {
-        const moduleItems = groups[key];
-        const finalCategory = key;
-        
-        const uniqueTexts: string[] = [];
-        for (const ra of moduleItems) {
-          if (!uniqueTexts.includes(ra.description)) {
-            uniqueTexts.push(ra.description);
-          }
-        }
-        
-        const items = uniqueTexts.map((text, idx) => ({ index: idx + 1, text }));
-        return { category: finalCategory, items, totalItems: items.length };
-      });
-      
-    } else {
-      const list = this.ces();
-      const groups: { [key: string]: any[] } = {};
-      
-      for (const ce of list) {
-        const groupName = `${ce.area} - ${ce.subject}`;
-        if (!groups[groupName]) groups[groupName] = [];
-        groups[groupName].push(ce);
-      }
-      
-      return Object.keys(groups).map(key => {
-        const uniqueTexts = Array.from(new Set(groups[key].map((ce: any) => ce.description)));
-        const items = uniqueTexts.map((text, idx) => ({ index: idx + 1, text }));
-        return { category: key, items, totalItems: items.length };
-      });
-    }
-  });
-
   // Historial
   // Vistas e Historial
   currentView = signal<'generator' | 'history' | 'taller' | 'admin'>('generator');
-  projectsHistory = signal<any[]>([]);
-
   // Admin variables moved to component
   // Señal para detectar vista móvil
   isMobile = signal<boolean>(window.innerWidth <= 768);
@@ -454,17 +296,17 @@ export class App implements OnInit {
     if (savedView) this.currentView.set(savedView);
     
     const savedTab = localStorage.getItem('pai_historyTab') as any;
-    if (savedTab) this.historyTab.set(savedTab);
+    if (savedTab) this.projectsFacade.historyTab.set(savedTab);
     
     const savedProjectId = localStorage.getItem('pai_projectId');
-    if (savedProjectId) this.currentProjectId.set(savedProjectId);
+    if (savedProjectId) this.projectsFacade.currentProjectId.set(savedProjectId);
 
     effect(() => {
       // Guardar preferencias visuales automáticamente
       localStorage.setItem('pai_view', this.currentView());
-      localStorage.setItem('pai_historyTab', this.historyTab());
-      if (this.currentProjectId()) {
-        localStorage.setItem('pai_projectId', this.currentProjectId()!);
+      localStorage.setItem('pai_historyTab', this.projectsFacade.historyTab());
+      if (this.projectsFacade.currentProjectId()) {
+        localStorage.setItem('pai_projectId', this.projectsFacade.currentProjectId()!);
       }
     });
 
@@ -472,56 +314,69 @@ export class App implements OnInit {
       const currentLang = this.language();
       const user = this.authService.currentUser();
       if (user) {
-        this.paiService.getRas(currentLang).subscribe((res) => this.ras.set(res));
-        this.paiService.getCes(currentLang).subscribe((res) => this.ces.set(res));
-        this.paiService.getProjects().subscribe((res) => this.projectsHistory.set(res));
+        this.curriculumFacade.loadRas(currentLang);
+        this.curriculumFacade.loadCes(currentLang);
+        this.paiService.getProjects().subscribe((res) => this.projectsFacade.projectsHistory.set(res));
       }
     });
-  }
 
-  ngOnInit() {
-    if (this.authService.isAuthenticated()) {
-      this.loadHistory();
-    }
-    // Prevenir que Chrome/Safari intente restaurar el scroll de la sesión anterior al refrescar
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
-    // Forzar scroll arriba del todo cuando se refresca la página (F5)
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
-  }
 
-  deleteProject(projectId: string) {
-    if (!confirm('¿Seguro que quieres borrar este proyecto?')) return;
-    this.paiService.deleteProject(projectId).subscribe({
-      next: () => {
-        this.loadHistory(); // Recargar la lista
-      },
-      error: (err) => {
-        alert(err.error?.error || 'Error al borrar el proyecto');
+    effect(() => {
+      const user = this.authService.currentUser();
+      untracked(() => {
+        if (user) {
+          this.projectsFacade.loadHistory();
+        }
+      });
+    });
+
+    effect(() => {
+      const notif = this.notificationsFacade.latestNotification();
+      if (notif) {
+        untracked(() => {
+          if (notif.type === 'COMPLETED' || notif.type === 'ERROR' || notif.type === 'STATUS') {
+            this.projectsFacade.loadHistory();
+          }
+          
+          // Mostrar modal cuando llega una notificación del SSE
+          if (notif.type === 'COMPLETED') {
+            this.infoTitle.set('¡Proyecto Generado!');
+            this.infoMessage.set(notif.message);
+            this.infoType.set('success');
+            this.showInfoModal.set(true);
+          } else if (notif.type === 'ERROR') {
+            this.errorMessage.set(notif.message);
+            this.showErrorModal.set(true);
+          }
+        });
       }
     });
   }
 
-  loadHistory() {
-    this.paiService.getProjects().subscribe({
-      next: (data) => {
-        this.projectsHistory.set(data);
-        
-        // Si estábamos en el taller y recargamos la página, recuperamos el contenido del proyecto
-        if (this.currentView() === 'taller' && this.currentProjectId()) {
-          const proj = data.find((p: any) => p._id === this.currentProjectId());
-          if (proj) {
-            this.generatedProject.set(proj.generatedContent?.rawText || 'Sin contenido');
-            this.selectedRas.set(proj.ras || []);
-            this.tipoNivel.set(proj.tipoNivel || 'FP_BASICA');
-            this.loadProjectFiles(proj._id);
-          }
+
+  deleteProject(projectId: string) {
+    this.confirmTitle.set('Eliminar Proyecto');
+    this.confirmMessage.set('¿Seguro que quieres borrar este proyecto? Esta acción no se puede deshacer.');
+    this.confirmAction.set(() => {
+      this.projectsFacade.deleteProject(projectId).subscribe({
+        next: () => {
+          this.projectsFacade.loadHistory();
+          this.showConfirmModal.set(false);
+        },
+        error: (err) => {
+          this.errorMessage.set(err.error?.error || 'Error al borrar el proyecto');
+          this.showErrorModal.set(true);
+          this.showConfirmModal.set(false);
         }
-      },
-      error: (err) => console.error('Error fetching history:', err),
+      });
     });
+    this.showConfirmModal.set(true);
   }
+
 
   switchView(view: 'generator' | 'taller' | 'history' | 'admin') {
     this.currentView.set(view);
@@ -534,77 +389,66 @@ export class App implements OnInit {
     if (this.currentView() === 'history') {
       this.switchView('generator');
     } else {
-      this.loadHistory();
+      this.projectsFacade.loadHistory();
       this.switchView('history');
     }
   }
 
   viewPastProject(project: any) {
-    this.currentProjectId.set(project._id);
-    this.generatedProject.set(project.generatedContent?.rawText || 'Sin contenido');
-    this.selectedRas.set(project.ras || []);
-    this.tipoNivel.set(project.tipoNivel || 'FP_BASICA');
-    this.loadProjectFiles(project._id);
+    this.projectsFacade.currentProjectId.set(project._id);
+    this.projectsFacade.generatedProject.set(project.generatedContent?.rawText || 'Sin contenido');
+    this.curriculumFacade.selectedRas.set(project.ras || []);
+    this.curriculumFacade.tipoNivel.set(project.tipoNivel || 'FP_BASICA');
+    this.projectsFacade.loadProjectFiles();
     this.switchView('taller');
   }
 
-  toggleRa(itemDesc: string) {
-    const current = this.selectedRas();
-    if (current.includes(itemDesc)) {
-      this.selectedRas.set(current.filter((r) => r !== itemDesc));
-    } else {
-      this.selectedRas.set([...current, itemDesc]);
-    }
-  }
 
   generateProject() {
-    if (this.selectedRas().length === 0) {
-      alert('Por favor, selecciona al menos un elemento de la lista.');
+    if (this.curriculumFacade.selectedRas().length === 0) {
+      this.infoTitle.set('Atención');
+      this.infoMessage.set('Por favor, selecciona al menos un elemento de la lista.');
+      this.infoType.set('info');
+      this.showInfoModal.set(true);
       return;
     }
     
-    this.isGenerating.set(true);
-
-    let involvedModules: string[] = [];
-    if (this.tipoNivel() === 'FP_BASICA') {
-      const selected = this.ras().filter(ra => this.selectedRas().includes(ra.description));
-      involvedModules = Array.from(new Set(selected.map(ra => ra.module)));
-    } else {
-      const selected = this.ces().filter(ce => this.selectedRas().includes(ce.description));
-      involvedModules = Array.from(new Set(selected.map(ce => ce.subject)));
-    }
-
-    this.paiService.generateProject(this.selectedRas(), this.methodology(), involvedModules, this.tipoNivel(), this.language(), this.courseLevel()).subscribe({
+    this.projectsFacade.isGenerating.set(true);
+    this.projectsFacade.generateProject(this.language()).subscribe({
       next: (res) => {
-        this.currentProjectId.set(res._id);
-        this.generatedProject.set(res.generatedContent?.rawText || 'Proyecto generado sin contenido.');
-        this.loadProjectFiles(res._id);
-        this.isGenerating.set(false);
-        this.switchView('taller');
-        this.loadHistory(); // Refrescar historial
+        // 'res' es ahora { message: '...', project: { ... } } debido al sistema de colas
+        const newProject = res.project || res;
+        
+        this.projectsFacade.isGenerating.set(false);
+        this.curriculumFacade.clearSelection();
+        
+        this.infoTitle.set('Proyecto en Cola');
+        this.infoMessage.set('Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.');
+        this.infoType.set('info');
+        this.showInfoModal.set(true);
+        
+        this.projectsFacade.loadHistory();
+        // Cambiamos al historial para que el usuario pueda ver el estado de carga
+        this.switchView('history');
       },
       error: (err) => {
         console.error('Error:', err);
         const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
-        this.errorMessage.set(`El servidor devolvió el siguiente error:\n\n${serverMsg}`);
+        this.errorMessage.set(`El servidor devolvió el siguiente error:
+
+${serverMsg}`);
         this.showErrorModal.set(true);
-        this.isGenerating.set(false);
+        this.projectsFacade.isGenerating.set(false);
       },
     });
   }
 
   // --- GESTIÓN DE ARCHIVOS ---
 
-  loadProjectFiles(projectId: string) {
-    this.paiService.getProjectFiles(projectId).subscribe({
-      next: (files) => this.projectFiles.set(files),
-      error: (err) => console.error("Error al cargar archivos", err)
-    });
-  }
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
-    if (file && this.currentProjectId()) {
+    if (file && this.projectsFacade.currentProjectId()) {
       this.uploadFile(file);
     }
   }
@@ -624,35 +468,44 @@ export class App implements OnInit {
     event.preventDefault();
     event.stopPropagation();
     const file = event.dataTransfer?.files[0];
-    if (file && this.currentProjectId()) {
+    if (file && this.projectsFacade.currentProjectId()) {
       this.uploadFile(file);
     }
   }
 
   uploadFile(file: File) {
-    this.isUploading.set(true);
-    this.paiService.uploadFile(this.currentProjectId()!, file).subscribe({
+    this.projectsFacade.isUploading.set(true);
+    this.projectsFacade.uploadFile(file)?.subscribe({
       next: () => {
-        this.loadProjectFiles(this.currentProjectId()!);
-        this.isUploading.set(false);
+        this.projectsFacade.loadProjectFiles();
+        this.projectsFacade.isUploading.set(false);
       },
       error: (err) => {
         console.error("Error al subir archivo", err);
-        this.isUploading.set(false);
+        this.projectsFacade.isUploading.set(false);
       }
     });
   }
 
   deleteFile(filename: string) {
-    if (confirm(this.t().deleteFile + ' ' + filename + '?')) {
-      this.paiService.deleteFile(this.currentProjectId()!, filename).subscribe({
-        next: () => this.loadProjectFiles(this.currentProjectId()!),
-        error: (err) => console.error("Error al borrar archivo", err)
+    this.confirmTitle.set('Eliminar Archivo');
+    this.confirmMessage.set(this.t().deleteFile + ' ' + filename + '?');
+    this.confirmAction.set(() => {
+      this.projectsFacade.deleteFile(filename)?.subscribe({
+        next: () => {
+          this.projectsFacade.loadProjectFiles();
+          this.showConfirmModal.set(false);
+        },
+        error: (err) => {
+          console.error("Error al borrar archivo", err);
+          this.showConfirmModal.set(false);
+        }
       });
-    }
+    });
+    this.showConfirmModal.set(true);
   }
 
   getDownloadUrl(filename: string): string {
-    return this.paiService.getDownloadUrl(this.currentProjectId()!, filename);
+    return this.projectsFacade.getDownloadUrl(filename);
   }
 }

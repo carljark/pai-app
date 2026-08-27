@@ -11,6 +11,7 @@ export default defineConfig({
         'src/app/**/*.config.ts',
         'src/app/app.config.server.ts'
       ],
+      reporter: ['text', 'json-summary'],
       thresholds: {
         statements: 90,
         branches: 90,

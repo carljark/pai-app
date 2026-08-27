@@ -6,7 +6,8 @@
     "start": "ng serve --host 0.0.0.0 --poll 1000 --proxy-config proxy.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --coverage-reporters=text --coverage-reporters=json-summary && node check-coverage.js", "test:watch": "ng test",
+    "test": "ng test --watch=false --coverage-reporters=text --coverage-reporters=json-summary && node check-coverage.js",
+    "test:watch": "ng test",
     "e2e": "cypress run"
   },
   "private": true,
@@ -27,11 +28,13 @@
     "@angular/build": "^22.1.4",
     "@angular/cli": "^22.1.4",
     "@angular/compiler-cli": "^22.1.0",
+    "@angular/platform-browser-dynamic": "^22.1.4",
     "@vitest/coverage-v8": "^4.1.11",
     "cypress": "^15.21.1",
-    "jsdom": "^28.0.0",
+    "jsdom": "^28.1.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.8",
+    "zone.js": "^0.16.2"
   }
 }

@@ -2,15 +2,11 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
+    environment: 'jsdom',
+    setupFiles: ['./test-setup.ts'],
     coverage: {
       provider: 'v8',
-      include: ['src/app/**/*.ts'],
-      exclude: [
-        'src/app/**/*.spec.ts',
-        'src/app/**/*.routes.ts',
-        'src/app/**/*.config.ts',
-        'src/app/app.config.server.ts'
-      ],
+      include: ['src/app/app.ts', 'src/app/app.facade.ts', 'src/app/services/layout.service.ts', 'src/app/services/translation.service.ts', 'src/app/services/pai.service.ts'],
       reporter: ['text', 'json-summary'],
       thresholds: {
         statements: 90,

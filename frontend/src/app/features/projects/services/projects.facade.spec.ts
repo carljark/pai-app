@@ -1,0 +1,238 @@
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { ProjectsFacade } from './projects.facade';
+import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { vi } from 'vitest';
+
+describe('ProjectsFacade', () => {
+  let facade: ProjectsFacade;
+  let httpMock: HttpTestingController;
+  let mockCurriculumFacade: any;
+
+  beforeEach(() => {
+    mockCurriculumFacade = {
+      selectedRas: vi.fn(),
+      tipoNivel: vi.fn(),
+      ras: vi.fn(),
+      ces: vi.fn()
+    };
+    
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [
+        ProjectsFacade,
+        { provide: CurriculumFacade, useValue: mockCurriculumFacade }
+      ]
+    });
+    
+    facade = TestBed.inject(ProjectsFacade);
+    httpMock = TestBed.inject(HttpTestingController);
+  });
+
+  afterEach(() => {
+    httpMock.verify();
+  });
+
+  it('should load history and update projectsHistory signal', () => {
+    const mockProjects = [{ _id: '1', title: 'Test Project' }];
+    facade.loadHistory();
+    
+    const req = httpMock.expectOne('/api/projects');
+    expect(req.request.method).toBe('GET');
+    req.flush(mockProjects);
+    
+    expect(facade.projectsHistory()).toEqual(mockProjects);
+  });
+
+  it('should handle error when loading history', () => {
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    facade.loadHistory();
+    
+    const req = httpMock.expectOne('/api/projects');
+    req.flush('Error', { status: 500, statusText: 'Internal Server Error' });
+    
+    expect(errorSpy).toHaveBeenCalled();
+  });
+
+  it('should compute currentProject correctly', () => {
+    facade.projectsHistory.set([{ _id: '1', title: 'P1' }, { _id: '2', title: 'P2' }]);
+    facade.currentProjectId.set('2');
+    
+    expect(facade.currentProject()?.title).toBe('P2');
+  });
+
+  it('should compute fpProjects and esoProjects based on search and level', () => {
+    facade.projectsHistory.set([
+      { _id: '1', title: 'FP Proy', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text1' } },
+      { _id: '2', title: 'ESO Proy', tipoNivel: 'DIVERSIFICACION_CURRICULAR', generatedContent: { rawText: 'text2' } },
+      { _id: '3', title: 'Otro FP', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text3' } }
+    ]);
+    
+    expect(facade.fpProjects().length).toBe(2);
+    expect(facade.esoProjects().length).toBe(1);
+    
+    facade.searchQuery.set('otro');
+    expect(facade.fpProjects().length).toBe(1);
+    expect(facade.esoProjects().length).toBe(0);
+  });
+
+  it('should delete project via HTTP', () => {
+    facade.deleteProject('123').subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/123');
+    expect(req.request.method).toBe('DELETE');
+    req.flush({});
+  });
+
+  it('should generate project (FP_BASICA)', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
+    
+    facade.methodology.set('ABP');
+    facade.courseLevel.set('2');
+    
+    facade.generateProject('castellano', 'Custom Title').subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual({
+      selectedRas: ['RA1'],
+      methodology: 'ABP',
+      modules: ['ModA'],
+      tipoNivel: 'FP_BASICA',
+      language: 'castellano',
+      courseLevel: '2',
+      title: 'Custom Title'
+    });
+    req.flush({});
+  });
+
+  it('should generate project (DIVERSIFICACION_CURRICULAR)', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('DIVERSIFICACION_CURRICULAR');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['CE1']);
+    mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
+    
+    facade.generateProject('catalan').subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['Math']);
+    expect(req.request.body.title).toBe('Proyecto de Diversificación');
+    req.flush({});
+  });
+
+  it('should update project status', () => {
+    facade.currentProjectId.set('123');
+    facade.generatedProject.set('some content');
+    
+    facade.updateProjectStatus('publicado')?.subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/123');
+    expect(req.request.method).toBe('PUT');
+    expect(req.request.body).toEqual({ rawText: 'some content', status: 'publicado' });
+    req.flush({});
+  });
+  
+  it('should not update project status if no currentProjectId', () => {
+    facade.currentProjectId.set(null);
+    expect(facade.updateProjectStatus('publicado')).toBeUndefined();
+  });
+
+  it('should rewrite section', () => {
+    facade.generatedProject.set('full text');
+    facade.rewriteSection('text', 'rewrite this').subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/rewrite');
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual({
+      context: 'full text',
+      selectedText: 'text',
+      instruction: 'rewrite this'
+    });
+    req.flush({});
+  });
+
+  it('should load project files', () => {
+    facade.currentProjectId.set('123');
+    facade.loadProjectFiles();
+    
+    const req = httpMock.expectOne('/api/projects/123/files');
+    expect(req.request.method).toBe('GET');
+    req.flush([{ name: 'test.pdf' }]);
+    
+    expect(facade.projectFiles().length).toBe(1);
+    expect(facade.projectFiles()[0].name).toBe('test.pdf');
+  });
+
+  it('should handle error when loading files', () => {
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    facade.currentProjectId.set('123');
+    facade.loadProjectFiles();
+    
+    const req = httpMock.expectOne('/api/projects/123/files');
+    req.flush('Error', { status: 500, statusText: 'Internal Server Error' });
+    
+    expect(errorSpy).toHaveBeenCalled();
+  });
+  
+  it('should not load files if no currentProjectId', () => {
+    facade.currentProjectId.set(null);
+    facade.loadProjectFiles();
+    httpMock.expectNone('/api/projects/null/files');
+  });
+
+  it('should upload file', () => {
+    facade.currentProjectId.set('123');
+    const file = new File([''], 'test.txt');
+    facade.uploadFile(file)?.subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/123/files');
+    expect(req.request.method).toBe('POST');
+    req.flush({});
+  });
+
+  it('should delete file', () => {
+    facade.currentProjectId.set('123');
+    facade.deleteFile('test.txt')?.subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/123/files/test.txt');
+    expect(req.request.method).toBe('DELETE');
+    req.flush({});
+  });
+
+  it('should get download URL', () => {
+    facade.currentProjectId.set('123');
+    expect(facade.getDownloadUrl('test.txt')).toBe('/api/projects/123/files/test.txt');
+    
+    facade.currentProjectId.set(null);
+    expect(facade.getDownloadUrl('test.txt')).toBe('');
+  });
+
+  it('should export docx', () => {
+    facade.currentProjectId.set('123');
+    facade.exportDocx()?.subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/123/export-docx');
+    expect(req.request.method).toBe('GET');
+    expect(req.request.responseType).toBe('blob');
+    req.flush(new Blob());
+  });
+
+  it('should import docx', () => {
+    facade.currentProjectId.set('123');
+    const file = new File([''], 'test.docx');
+    facade.importDocx(file)?.subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/123/import-docx');
+    expect(req.request.method).toBe('POST');
+    req.flush({});
+  });
+
+  it('should return undefined for file operations if no currentProjectId', () => {
+    facade.currentProjectId.set(null);
+    expect(facade.uploadFile(new File([''], 'test.txt'))).toBeUndefined();
+    expect(facade.deleteFile('test.txt')).toBeNull();
+    expect(facade.exportDocx()).toBeUndefined();
+    expect(facade.importDocx(new File([''], 'test.docx'))).toBeUndefined();
+  });
+});

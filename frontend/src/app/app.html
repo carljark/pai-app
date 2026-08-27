@@ -15,7 +15,11 @@
 
       <!-- Navigation Tabs -->
       <nav style="display: flex; flex-direction: column; gap: 8px;">
-        <button (click)="switchView('generator')" [class.active]="currentView() === 'generator'" class="nav-item">
+        <button (click)="switchView('home')" [class.active]="currentView() === 'home'" class="nav-item" data-tooltip="Inicio">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span class="nav-text">Inicio</span>
+        </button>
+        <button (click)="switchView('generator')" [class.active]="currentView() === 'generator'" class="nav-item" data-tooltip="Nuevo Proyecto">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
           <span class="nav-text">Nuevo Proyecto</span>
         </button>
@@ -67,7 +71,15 @@
       </div>
     } @else {
       
+      @if (currentView() === 'home') {
+        <app-home-dashboard
+          (navigate)="switchView($event)"
+          (openProject)="viewPastProject($event)">
+        </app-home-dashboard>
+      }
+
       @if (currentView() === 'generator') {
+
         <div class="app-header">
           <h2 class="app-header-title">{{ t().subtitle }}</h2>
         </div>
@@ -82,7 +94,7 @@
             </div>
           </div>
           
-          <app-curriculum-selector [title]="t().subtitle" [generateText]="t().generateBtn" [generatingText]="t().generatingBtn"></app-curriculum-selector>
+          <app-curriculum-selector [title]="t().selectedItemsTitle" [generateText]="t().generateBtn" [generatingText]="t().generatingBtn"></app-curriculum-selector>
           
 
           
@@ -135,14 +147,63 @@
 
       @if (currentView() === 'taller') {
         @if (!projectsFacade.currentProject()) {
-          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; text-align: center;">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 16px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            <h2 style="font-size: 1.25rem; font-weight: 600; color: #374151; margin-bottom: 8px;">Ningún proyecto seleccionado</h2>
-            <p style="color: #6b7280; max-width: 400px; margin-bottom: 24px;">Selecciona un proyecto del historial o crea uno nuevo para empezar a editar en el taller.</p>
-            <div style="display: flex; gap: 16px;">
-              <button class="btn-primary" (click)="switchView('generator')">Crear Proyecto</button>
-              <button class="btn-secondary" (click)="projectsFacade.loadHistory(); switchView('history')">Ver Historial</button>
+          <div style="max-width: 720px; margin: 0 auto; padding: 32px 0;">
+            <!-- Header del empty state -->
+            <div style="text-align: center; margin-bottom: 32px;">
+              <div style="display: inline-flex; background: #f1f5f9; border-radius: 16px; padding: 16px; margin-bottom: 16px;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+              <h2 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 0 0 8px;">Taller de Edición</h2>
+              <p style="color: #64748b; margin: 0; max-width: 420px; margin: 0 auto 24px;">Selecciona un proyecto para empezar a editar, o crea uno nuevo desde el generador.</p>
+              <button class="btn-primary" (click)="switchView('generator')" style="display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Crear Proyecto Nuevo
+              </button>
             </div>
+
+            <!-- Lista de proyectos recientes -->
+            @if (projectsFacade.projectsHistory().length > 0) {
+              <div>
+                <p style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px;">— O continúa con un proyecto reciente —</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  @for (project of projectsFacade.projectsHistory().slice().sort(sortByDate).slice(0, 5); track project._id) {
+                    <button
+                      (click)="viewPastProject(project)"
+                      style="display: flex; align-items: center; gap: 16px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; cursor: pointer; text-align: left; transition: all 0.18s; width: 100%;"
+                      onmouseover="this.style.borderColor='#818cf8'; this.style.boxShadow='0 4px 12px rgba(79,70,229,0.1)'; this.style.transform='translateY(-1px)'"
+                      onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'; this.style.transform='none'">
+                      <!-- Icono estado -->
+                      <div style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"
+                        [style.background]="project.status === 'publicado' ? '#dcfce7' : project.status === 'error' ? '#fee2e2' : project.status === 'en_cola' || project.status === 'generando' ? '#dbeafe' : '#f1f5f9'">
+                        {{ project.status === 'publicado' ? '✅' : project.status === 'error' ? '❌' : project.status === 'en_cola' || project.status === 'generando' ? '⏳' : '📝' }}
+                      </div>
+                      <!-- Info -->
+                      <div style="flex: 1; min-width: 0;">
+                        <div style="font-size: 0.95rem; font-weight: 600; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                          {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || 'Proyecto interdisciplinar' }}
+                        </div>
+                        <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">
+                          {{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO (PDC)' : 'FP Básica' }}
+                          &nbsp;·&nbsp;
+                          {{ project.createdAt | date:'d MMM yyyy, HH:mm' }}
+                        </div>
+                      </div>
+                      <!-- Flecha -->
+                      <svg style="flex-shrink: 0; color: #c7d2fe;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                  }
+                </div>
+                @if (projectsFacade.projectsHistory().length > 5) {
+                  <button class="btn-secondary" (click)="projectsFacade.loadHistory(); switchView('history')" style="margin-top: 12px; width: 100%;">
+                    Ver todos los proyectos ({{ projectsFacade.projectsHistory().length }}) →
+                  </button>
+                }
+              </div>
+            } @else {
+              <div style="text-align: center; padding: 24px; background: #f8fafc; border-radius: 12px; border: 1px dashed #e2e8f0;">
+                <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">Aún no hay proyectos generados. ¡Crea el primero!</p>
+              </div>
+            }
           </div>
         } @else {
         <div class="app-header">

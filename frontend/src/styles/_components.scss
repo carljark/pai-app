@@ -6,9 +6,9 @@
 .form-select { @include form-input; appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right $spacing-3 center; padding-right: $spacing-10; }
 .btn-primary { @include btn-primary; }
 .btn-secondary { @include btn-secondary; }
-.btn-danger { @include btn; background-color: $color-danger; color: white; &:hover:not(:disabled) { background-color: darken($color-danger, 10%); } }
+.btn-danger { @include btn; background-color: $color-danger; color: white; &:hover:not(:disabled) { background-color: $color-primary-dark; } }
 .tabs { display: flex; border-bottom: 1px solid $color-border; margin-bottom: $spacing-6; overflow-x: auto; &-item { padding: $spacing-3 $spacing-4; cursor: pointer; font-weight: $font-weight-medium; color: $color-text-muted; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; &:hover { color: $color-text-main; } &.active { color: $color-primary; border-bottom-color: $color-primary; } } }
-.badge { display: inline-block; padding: 2px $spacing-2; border-radius: $border-radius-full; font-size: $font-size-xs; font-weight: $font-weight-medium; &-info { background-color: rgba($color-info, 0.1); color: $color-info; } &-success { background-color: rgba($color-success, 0.1); color: $color-success; } &-warning { background-color: rgba($color-warning, 0.1); color: darken($color-warning, 15%); } &-danger { background-color: rgba($color-danger, 0.1); color: $color-danger; } }
+.badge { display: inline-block; padding: 2px $spacing-2; border-radius: $border-radius-full; font-size: $font-size-xs; font-weight: $font-weight-medium; &-info { background-color: $color-info-bg; color: $color-info; } &-success { background-color: $color-success-bg; color: $color-success; } &-warning { background-color: $color-warning-bg; color: $color-warning; } &-danger { background-color: $color-danger-bg; color: $color-danger; } }
 .table-container { overflow-x: auto; width: 100%; }
 .table { width: 100%; border-collapse: collapse; th, td { padding: $spacing-3 $spacing-4; text-align: left; border-bottom: 1px solid $color-border; font-size: $font-size-sm; } th { background-color: $color-background; font-weight: $font-weight-semibold; color: $color-text-muted; } tr:hover { background-color: rgba($color-background, 0.5); } }
 
@@ -67,23 +67,28 @@
   .nav-text { display: none; }
 }
 
+/* Tooltips — only visible when sidebar is collapsed on desktop */
+.app-sidebar.collapsed .nav-item[data-tooltip] {
+  position: relative;
+}
 
 .app-sidebar.collapsed .nav-item[data-tooltip]:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  left: 100%;
+  left: calc(100% + 12px);
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 12px;
-  background-color: $color-text-main;
-  color: $color-surface;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
   white-space: nowrap;
-  z-index: 50;
+  z-index: 9999;
   pointer-events: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  letter-spacing: 0.01em;
 }
 
 .app-sidebar.collapsed .nav-item[data-tooltip]:hover::before {
@@ -93,9 +98,46 @@
   top: 50%;
   transform: translateY(-50%);
   margin-left: 4px;
-  border-width: 4px;
+  border-width: 5px;
   border-style: solid;
-  border-color: transparent $color-text-main transparent transparent;
-  z-index: 50;
+  border-color: transparent #1e293b transparent transparent;
+  z-index: 9999;
   pointer-events: none;
+}
+
+/* Mobile: sidebar is always in icon-only mode, show tooltips too */
+@media (max-width: 767px) {
+  .app-sidebar .nav-item[data-tooltip] {
+    position: relative;
+  }
+  .app-sidebar .nav-item[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 9999;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .app-sidebar .nav-item[data-tooltip]:hover::before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 4px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #1e293b transparent transparent;
+    z-index: 9999;
+    pointer-events: none;
+  }
 }

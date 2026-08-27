@@ -1,16 +1,32 @@
-$color-primary: #3f5e51;
-$color-primary-dark: #2c4239;
-$color-background: #f8fafc;
-$color-surface: #ffffff;
-$color-text-main: #1f2937;
-$color-text-muted: #6b7280;
-$color-text-light: #9ca3af;
-$color-border: #e5e7eb;
-$color-border-focus: #9ca3af;
-$color-success: #10b981;
-$color-danger: #ef4444;
-$color-warning: #f59e0b;
-$color-info: #3b82f6;
+// ─── Colores Primarios ───────────────────────────────────────────────────────
+// Sage-green pastel: referencia histórico, suavizado
+$color-primary:       #4a7c65;
+$color-primary-dark:  #345a49;
+$color-primary-light: #e8f2ee;
+
+// ─── Superficies y Fondo ────────────────────────────────────────────────────
+$color-background:    #f5f7f6;
+$color-surface:       #ffffff;
+$color-surface-alt:   #f0f4f2;
+
+// ─── Texto ──────────────────────────────────────────────────────────────────
+$color-text-main:     #1f2937;
+$color-text-muted:    #6b7280;
+$color-text-light:    #9ca3af;
+
+// ─── Bordes ─────────────────────────────────────────────────────────────────
+$color-border:        #dde5e2;
+$color-border-focus:  #4a7c65;
+
+// ─── Estados semánticos (versión pastel) ─────────────────────────────────────
+$color-success:       #5a9e7c;   // Verde pastel
+$color-success-bg:    #eaf4ee;
+$color-danger:        #b05c5c;   // Rojo ladrillo pastel (no chillón)
+$color-danger-bg:     #f8eded;
+$color-warning:       #c49a3c;   // Ámbar apagado
+$color-warning-bg:    #fdf4e0;
+$color-info:          #4d7a9e;   // Azul acero pastel
+$color-info-bg:       #eaf1f8;
 
 $font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 $font-size-xs: 0.75rem;

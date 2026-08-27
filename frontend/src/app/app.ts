@@ -17,11 +17,12 @@ import { ErrorModalComponent } from './components/error-modal.component';
 import { InfoModalComponent } from './components/info-modal.component';
 import { ConfirmModalComponent } from './components/confirm-modal.component';
 import { AdminDashboardComponent } from './features/admin/components/admin-dashboard/admin-dashboard.component';
+import { HomeDashboardComponent } from './features/home/components/home-dashboard/home-dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent, InfoModalComponent, ConfirmModalComponent, AdminDashboardComponent, AuthFormComponent, NotificationsBadgeComponent, CurriculumSelectorComponent],
+  imports: [CommonModule, FormsModule, MarkdownComponent, ErrorModalComponent, InfoModalComponent, ConfirmModalComponent, AdminDashboardComponent, HomeDashboardComponent, AuthFormComponent, NotificationsBadgeComponent, CurriculumSelectorComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -169,7 +170,7 @@ export class App {
         logout: 'Sortir',
         downloadWord: 'Descarregar com a Word',
         uploadWord: 'Pujar Word editat',
-        subtitle: 'Disseny de Projectes d\'Aprenentatge Intermodular',
+        subtitle: 'Generador de Projectes Interdisciplinaris',
         backGenerator: '⬅️ Tornar al Generador',
         historyBtn: 'Veure Historial de Projectes',
         historyTitle: 'Historial de Projectes Generats',
@@ -193,7 +194,7 @@ export class App {
         curricularSelection: '2. Selecció Curricular',
         selectItemsFP: 'Selecciona els Resultats d\'Aprenentatge que formaran part del disseny.',
         selectItemsESO: 'Selecciona les Competències Específiques que formaran part del disseny.',
-        generateBtn: 'Generar Projecte Intermodular',
+        generateBtn: 'Generar Projecte Interdisciplinari',
         generatingBtn: 'Generant... (pot trigar 1-2 minuts)',
         selectedItemsTitle: 'Selecció Actual',
         noItemsSelected: 'Encara no has seleccionat cap ítem.',
@@ -224,7 +225,7 @@ export class App {
         logout: 'Salir',
         downloadWord: 'Bajar como Word',
         uploadWord: 'Subir Word editado',
-        subtitle: 'Diseño de Proyectos de Aprendizaje Intermodular',
+        subtitle: 'Generador de Proyectos Interdisciplinares',
         backGenerator: '⬅️ Volver al Generador',
         historyBtn: 'Ver Historial de Proyectos',
         historyTitle: 'Historial de Proyectos Generados',
@@ -248,7 +249,7 @@ export class App {
         curricularSelection: '2. Selección Curricular',
         selectItemsFP: 'Selecciona los Resultados de Aprendizaje que formarán part del diseño.',
         selectItemsESO: 'Selecciona las Competencias Específicas que formarán part del diseño.',
-        generateBtn: 'Generar Proyecto Intermodular',
+        generateBtn: 'Generar Proyecto Interdisciplinar',
         generatingBtn: 'Generando... (puede tardar 1-2 minutos)',
         selectedItemsTitle: 'Selección Actual',
         noItemsSelected: 'Aún no has seleccionado ningún ítem.',
@@ -279,7 +280,7 @@ export class App {
 
   // Historial
   // Vistas e Historial
-  currentView = signal<'generator' | 'history' | 'taller' | 'admin'>('generator');
+  currentView = signal<'home' | 'generator' | 'history' | 'taller' | 'admin'>('home');
   // Admin variables moved to component
   // Señal para detectar vista móvil
   isMobile = signal<boolean>(window.innerWidth <= 768);
@@ -384,12 +385,14 @@ export class App {
   }
 
 
-  switchView(view: 'generator' | 'taller' | 'history' | 'admin') {
+  switchView(view: 'home' | 'generator' | 'taller' | 'history' | 'admin') {
     this.currentView.set(view);
     if (view === 'admin') {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  sortByDate = (a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
 
   toggleView() {
     if (this.currentView() === 'history') {

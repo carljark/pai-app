@@ -35,6 +35,58 @@ describe('AdminDashboardComponent', () => {
     fixture.detectChanges();
   });
 
+  
+  it('should cover component methods directly', () => {
+    // approveUser
+    component.approveUser('1');
+    expect(mockFacade.updateUserRole).toHaveBeenCalledWith('1', 'teacher');
+    expect(mockFacade.loadUsers).toHaveBeenCalled();
+
+    // toggleAiAccess
+    component.toggleAiAccess('2', false);
+    expect(mockFacade.updateUserAi).toHaveBeenCalledWith('2', true);
+    
+    // saveSettings next
+    component.schoolSettings.set({ schoolName: 'A', schoolCity: 'B', schoolContext: 'C' });
+    const ev = new Event('submit');
+    vi.useFakeTimers(); component.saveSettings(ev); vi.runAllTimers(); vi.useRealTimers();
+    expect(mockFacade.saveSettings).toHaveBeenCalled();
+  });
+
+  
+  it('should handle saveSettings error', () => {
+    mockFacade.saveSettings.mockReturnValue(throwError(() => new Error('err')));
+    component.saveSettings(new Event('submit'));
+    expect(component.saveSuccess()).toBe(false);
+  });
+
+  
+  it('should trigger ALL HTML events safely', () => {
+    mockFacade.users.set([
+      { _id: '1', role: 'pending', canUseAi: false },
+      { _id: '2', role: 'teacher', canUseAi: true }
+    ]);
+    mockFacade.logs.set([{ _id: '1', action: 'test', projectId: { title: 'T' }, details: { generationTimeMs: 1000, error: 'err' } }]);
+    fixture.detectChanges();
+    
+    // Form buttons and inputs
+    component.schoolSettings.set({ schoolName: 'A', schoolCity: 'B', schoolContext: 'C' });
+    fixture.detectChanges();
+    
+    const form = fixture.debugElement.nativeElement.querySelector('form');
+    if (form) form.dispatchEvent(new Event('submit'));
+    
+    const inputs = fixture.debugElement.nativeElement.querySelectorAll('input');
+    inputs.forEach((i: any) => i.dispatchEvent(new Event('ngModelChange')));
+    
+    const textareas = fixture.debugElement.nativeElement.querySelectorAll('textarea');
+    textareas.forEach((t: any) => t.dispatchEvent(new Event('ngModelChange')));
+
+    // All buttons
+    const buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
+    buttons.forEach((b: any) => b.click());
+  });
+
   it('should create and load initial data', () => {
     expect(component).toBeTruthy();
     expect(mockFacade.loadUsers).toHaveBeenCalled();

@@ -9,12 +9,18 @@ if (!fs.existsSync(summaryPath)) {
 const summary = JSON.parse(fs.readFileSync(summaryPath, 'utf8'));
 const total = summary.total;
 
-const threshold = 90;
+const thresholds = {
+  lines: 90,
+  statements: 90,
+  functions: 90,
+  branches: 90
+};
+
 let failed = false;
 
-['lines', 'statements', 'functions', 'branches'].forEach(key => {
-  if (total[key].pct < threshold) {
-    console.error(`ERROR: Coverage for ${key} (${total[key].pct}%) is below the threshold of ${threshold}%`);
+Object.keys(thresholds).forEach(key => {
+  if (total[key].pct < thresholds[key]) {
+    console.error(`ERROR: Coverage for ${key} (${total[key].pct}%) is below the threshold of ${thresholds[key]}%`);
     failed = true;
   }
 });

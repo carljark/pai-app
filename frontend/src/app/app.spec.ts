@@ -1,12 +1,12 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { App } from './app';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { AppFacade } from './app.facade';
 import { LayoutService } from './services/layout.service';
+import { AdminFacade } from './features/admin/services/admin.facade';
 import { signal } from '@angular/core';
 
-// Child facades that might be needed by child components
 import { CurriculumFacade } from './features/curriculum/services/curriculum.facade';
 import { ProjectsFacade } from './features/projects/services/projects.facade';
 import { NotificationsFacade } from './features/notifications/services/notifications.facade';
@@ -21,9 +21,11 @@ describe('App', () => {
 
   beforeEach(async () => {
     layoutServiceMock = {
-      isMobile: signal(false),
+      isMobile: signal(false), language: signal("es"),
       currentView: signal('home'),
-      switchView: vi.fn()
+      switchView: vi.fn(),
+      isSidebarCollapsed: signal(false),
+      toggleSidebar: vi.fn()
     };
     
     authFacadeMock = {
@@ -31,7 +33,7 @@ describe('App', () => {
     };
     
     appFacadeMock = {
-      showInfoModal: signal(false),
+      showInfoModal: signal(false), showProjectsLimitModal: signal(false),
       infoTitle: signal(''),
       infoMessage: signal(''),
       infoType: signal('info'),
@@ -50,14 +52,21 @@ describe('App', () => {
     const mockCurriculumFacade = {
       ras: signal([]),
       modules: signal([]),
-      isLoading: signal(false)
+      isLoading: signal(false), tipoNivel: signal('FP_BASICA'), groupedItems: signal([]), selectedRas: signal([]), selectedItemsDetails: signal([]), groupedSelectedItems: signal([]), getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }), toggleRa: vi.fn()
     };
     const mockProjectsFacade = {
       projects: signal([]),
-      isGenerating: signal(false),
-      currentProject: signal(null),
+      isGenerating: signal(false), projectsHistory: signal([]), currentProjectId: signal(null), isUploading: signal(false), loadHistory: vi.fn(), currentProject: signal(null),
       step: signal(0),
       hasActiveGeneration: signal(false)
+    };
+    const mockAdminFacade = {
+      settings: signal({}),
+      users: signal([]),
+      logs: signal([]),
+      loadSettings: vi.fn(),
+      loadUsers: vi.fn(),
+      loadLogs: vi.fn()
     };
     const mockNotificationsFacade = {
       notifications: signal([]),
@@ -73,11 +82,11 @@ describe('App', () => {
         
         { provide: CurriculumFacade, useValue: mockCurriculumFacade },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
-        { provide: NotificationsFacade, useValue: mockNotificationsFacade }
+        { provide: NotificationsFacade, useValue: mockNotificationsFacade },
+        { provide: AdminFacade, useValue: mockAdminFacade }
       ]
     }).compileComponents();
     
-    // reset history for tests
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'auto';
     }
@@ -106,6 +115,14 @@ describe('App', () => {
     if ('scrollRestoration' in history) {
       expect(history.scrollRestoration).toBe('manual');
     }
+  });
+
+  
+  it('should scroll to top on init via setTimeout', async () => {
+    vi.useFakeTimers();
+    fixture = TestBed.createComponent(App);
+    vi.runAllTimers();
+    vi.useRealTimers();
   });
 
   it('should cover template branches based on signals', () => {

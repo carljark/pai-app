@@ -118,9 +118,11 @@ describe('CurriculumSelectorComponent', () => {
     
     expect(component.isOpen()).toBe(true);
     header.click();
+    fixture.detectChanges();
     expect(component.isOpen()).toBe(false);
     
     header.click();
+    fixture.detectChanges();
     expect(component.isOpen()).toBe(true);
   });
 });

@@ -70,8 +70,8 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
           <div class="floating-cart__footer" style="padding: 20px; border-top: 1px solid #ecf0f1;">
             <button (click)="generate.emit()" 
                     [disabled]="isGenerating()" 
-                    [style.opacity]="isGenerating() ? '0.7' : '1'"
-                    style="width: 100%; background: #27ae60; color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);">
+                    class="btn-primary"
+                    style="width: 100%; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 8px;">
               @if (isGenerating()) {
                 <span style="display: flex; justify-content: center; align-items: center; gap: 8px;">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 2s linear infinite;">

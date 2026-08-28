@@ -235,4 +235,60 @@ describe('ProjectsFacade', () => {
     expect(facade.exportDocx()).toBeUndefined();
     expect(facade.importDocx(new File([''], 'test.docx'))).toBeUndefined();
   });
+
+  describe('formattedGeneratedProject (sanitizeMath)', () => {
+    it('should return empty string when generatedProject is empty', () => {
+      facade.generatedProject.set('');
+      expect(facade.formattedGeneratedProject()).toBe('');
+    });
+
+    it('should pass through well-formed LaTeX unchanged', () => {
+      const input = 'Masa ($\\text{kg}, \\text{g}, \\text{mg}$) y volumen ($\\text{L}$).';
+      facade.generatedProject.set(input);
+      // $ count per line is even → no changes expected
+      expect(facade.formattedGeneratedProject()).toBe(input);
+    });
+
+    it('should remove spurious $ after comma: "$A, $B, C$" → "$A, B, C$"', () => {
+      const input = 'masa ($\\text{kg}, $\\text{g}, \\text{mg}$)';
+      facade.generatedProject.set(input);
+      const result = facade.formattedGeneratedProject();
+      // The extra $ before \text{g} should be removed
+      expect(result).not.toContain(', $\\text{g}');
+    });
+
+    it('should remove spurious $ after semicolon', () => {
+      const input = 'unidades ($\\text{L}; $\\text{mL}$)';
+      facade.generatedProject.set(input);
+      const result = facade.formattedGeneratedProject();
+      expect(result).not.toContain('; $\\text{mL}');
+    });
+
+    it('should remove orphan $ when count is odd on a line', () => {
+      const input = 'Línea con un dólar $suelto';
+      facade.generatedProject.set(input);
+      const result = facade.formattedGeneratedProject();
+      // Odd $ count → last orphan $ removed
+      const dollarCount = (result.match(/\$/g) || []).length;
+      expect(dollarCount % 2).toBe(0);
+    });
+
+    it('should handle multiline content line by line', () => {
+      const firstLine = 'Primera línea $a = b$';
+      const secondLine = 'Segunda línea $c, $d, e$';
+      const input = `${firstLine}\n${secondLine}`;
+      facade.generatedProject.set(input);
+      const result = facade.formattedGeneratedProject();
+      // First line is even (2 $) → unchanged
+      expect(result.split('\n')[0]).toBe(firstLine);
+      // Second line has 3 $ → spurious comma-$ removed
+      expect(result.split('\n')[1]).not.toContain(', $d');
+    });
+
+    it('should not alter $$ block math delimiters', () => {
+      const input = '$$E = mc^2$$';
+      facade.generatedProject.set(input);
+      expect(facade.formattedGeneratedProject()).toBe(input);
+    });
+  });
 });

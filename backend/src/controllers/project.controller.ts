@@ -128,6 +128,7 @@ El resultado debe ser un manual instruccional exhaustivo y listo para imprimir q
 
 Formatea el texto final como Markdown profesional (NO lo envuelvas en markdown \`\`\` o similares, escribe directamente el texto Markdown).
 MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII (como +-----, |    |, etc.) bajo ningún concepto para esquemas o secuencias. Si necesitas tabular información, utiliza ÚNICAMENTE el formato estándar de tablas Markdown (usando | y -). Para resaltar texto, usa bloques de cita (>).
+REGLA CRÍTICA SOBRE EXPRESIONES MATEMÁTICAS: Cuando incluyas fórmulas, unidades o notación matemática, usa SIEMPRE la sintaxis LaTeX entre delimitadores $. CADA expresión matemática debe tener exactamente UN $ de apertura y UN $ de cierre: correcto→ $\text{kg}$, incorrecto→ $\text{kg}. Si quieres listar varias unidades dentro de una misma expresión matemática agrúpalas dentro de UN SOLO par de delimitadores, por ejemplo: $\text{kg}, \text{g}, \text{mg}$ (un solo par de $). NUNCA pongas un $ adicional antes de cada elemento de la lista.
 Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}`;

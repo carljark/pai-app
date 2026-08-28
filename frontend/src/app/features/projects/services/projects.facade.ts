@@ -35,7 +35,7 @@ export class ProjectsFacade {
   currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
   
   formattedGeneratedProject = computed(() => {
-    return this.generatedProject() || '';
+    return sanitizeMath(this.generatedProject() || '');
   });
   
   fpProjects = computed(() => {
@@ -154,4 +154,54 @@ export class ProjectsFacade {
     formData.append('file', file);
     return this.http.post<any>(`${this.apiUrl}/${id}/import-docx`, formData);
   }
+}
+
+/**
+ * Repara delimitadores LaTeX $ desbalanceados generados por la IA.
+ *
+ * Problemas comunes que corrige:
+ *  1. Listas como `$\text{kg}, $\text{g}, \text{mg}$` → tres $ → el parser falla.
+ *     Se corrige eliminando el $ "suelto" que empieza una nueva expresión dentro
+ *     de un contexto de texto normal (no está al principio de un bloque math).
+ *  2. `$ expr $` con espacios justo al lado del delimitador → se compactan.
+ *  3. Un único $ que no tiene pareja al final de la línea → se elimina.
+ */
+function sanitizeMath(text: string): string {
+  // Paso 1: normalizar "$ expr$" → "$expr$" (solo espacios horizontales, no newlines)
+  // Solo eliminamos el espacio que está JUSTO DESPUÉS de un $ de apertura
+  // (precedido por un no-$) o JUSTO ANTES de un $ de cierre (seguido de no-alfanum).
+  text = text.replace(/(?<!\$)\$[^\S\n]+(?=[\\A-Za-z{])/g, '$');
+  text = text.replace(/[^\S\n]+\$(?![A-Za-z\\{])/g, '$');
+
+  // Paso 2: separar las líneas para procesar cada una individualmente
+  return text.split('\n').map(line => fixDollarDelimiters(line)).join('\n');
+}
+
+/**
+ * En una línea, cuenta el número de $ (excluyendo $$).
+ * Si el número es impar, el último $ huérfano se elimina.
+ * También repara el patrón ",$\text" dentro de una expresión ya abierta,
+ * que debería ser ",\text" (la coma va fuera del bloque math).
+ */
+function fixDollarDelimiters(line: string): string {
+  // Reemplaza patrones del tipo: `$A, $B, C$` → `$A, B, C$`
+  // Solo aplica cuando el $ aparece DESPUÉS de una coma o punto y coma
+  // (nunca después de paréntesis abierto, porque "($..." es una apertura legítima).
+  line = line.replace(/([,;]\s*)\$(?=[\\A-Za-z])/g, '$1');
+
+  // Contar $ simples que no son $$ (bloques)
+  // Eliminamos los $$ temporalmente para no contarlos
+  const withoutDouble = line.replace(/\$\$/g, '');
+  const count = (withoutDouble.match(/\$/g) || []).length;
+
+  // Si hay número impar de $, el último $ suelto se elimina
+  if (count % 2 !== 0) {
+    const lastIdx = line.lastIndexOf('$');
+    // Solo lo eliminamos si no forma parte de $$
+    if (lastIdx >= 0 && line[lastIdx - 1] !== '$' && line[lastIdx + 1] !== '$') {
+      line = line.slice(0, lastIdx) + line.slice(lastIdx + 1);
+    }
+  }
+
+  return line;
 }

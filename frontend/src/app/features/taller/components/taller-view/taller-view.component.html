@@ -70,36 +70,58 @@
   </div>
   <div class="taller-layout">
     <div class="card taller-content">
-      <div id="pdf-content" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; padding-right: 15px;">
+      <div id="pdf-content" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
         @if (projects.currentProject()?.userId?.name) {
           <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: #166534; font-size: 0.9rem;">
             <strong>Autoría:</strong> {{ projects.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projects.currentProject().userId.email }}
           </div>
         }
-        <markdown [data]="projects.formattedGeneratedProject()" [katex]="true"></markdown>
+        <div style="min-width: 0; width: max-content; max-width: 100%;">
+          <markdown [data]="projects.formattedGeneratedProject()" [katex]="true"></markdown>
+        </div>
       </div>
     </div>
     <div class="taller-sidebar">
       @if (auth.currentUser()?.canUseAi || auth.currentUser()?.role === 'admin') {
-        <div class="card ai-assistant-panel">
-          <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-            {{ trans.t().aiAssistant }}
-          </h3>
-          <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
-            <p style="margin: 0 0 8px 0; font-weight: 500;">{{ trans.t().aiIntro }}</p>
-            <ol style="margin: 0; padding-left: 16px;">
-              <li [innerHTML]="trans.t().aiStep1"></li>
-              <li [innerHTML]="trans.t().aiStep2"></li>
-              <li [innerHTML]="trans.t().aiStep3"></li>
-            </ol>
+        <div class="card ai-assistant-panel" [class.collapsed]="isAiCollapsed()">
+          <!-- Header siempre visible con toggle -->
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0;">
+            <h3 style="margin: 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              {{ trans.t().aiAssistant }}
+            </h3>
+            <button
+              (click)="isAiCollapsed.set(!isAiCollapsed())"
+              style="background: none; border: none; cursor: pointer; color: #64748b; padding: 4px 8px; border-radius: 6px; display: flex; align-items: center; gap: 4px; font-size: 0.8rem; transition: background 0.15s;"
+              onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='none'"
+              [attr.title]="isAiCollapsed() ? 'Expandir' : 'Colapsar'">
+              @if (isAiCollapsed()) {
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+              } @else {
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              }
+            </button>
           </div>
-          <div class="form-group" style="margin-bottom: 16px;">
-            <textarea [ngModel]="projects.aiPrompt()" (ngModelChange)="projects.aiPrompt.set($event)" [placeholder]="trans.t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
-          </div>
-          <button (click)="rewriteWithAI()" [disabled]="isRewriting()" class="btn-primary" style="width: 100%;">
-            {{ isRewriting() ? trans.t().thinking : trans.t().rewriteBtn }}
-          </button>
+
+          <!-- Cuerpo colapsable -->
+          @if (!isAiCollapsed()) {
+            <div style="margin-top: 16px;">
+              <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
+                <p style="margin: 0 0 8px 0; font-weight: 500;">{{ trans.t().aiIntro }}</p>
+                <ol style="margin: 0; padding-left: 16px;">
+                  <li [innerHTML]="trans.t().aiStep1"></li>
+                  <li [innerHTML]="trans.t().aiStep2"></li>
+                  <li [innerHTML]="trans.t().aiStep3"></li>
+                </ol>
+              </div>
+              <div class="form-group" style="margin-bottom: 16px;">
+                <textarea [ngModel]="projects.aiPrompt()" (ngModelChange)="projects.aiPrompt.set($event)" [placeholder]="trans.t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
+              </div>
+              <button (click)="rewriteWithAI()" [disabled]="isRewriting()" class="btn-primary" style="width: 100%;">
+                {{ isRewriting() ? trans.t().thinking : trans.t().rewriteBtn }}
+              </button>
+            </div>
+          }
         </div>
       } @else {
         <div class="card ai-assistant-panel" style="background-color: #fef2f2; border-color: #fecaca; text-align: center;">

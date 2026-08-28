@@ -63,3 +63,18 @@
     padding: variables.$spacing-4;
   }
 }
+
+/* MARKDOWN TABLE — horizontal scroll para tablas anchas generadas por la IA */
+markdown table,
+.taller-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+/* AI ASSISTANT PANEL — collapsed state padding adjustment */
+.ai-assistant-panel.collapsed {
+  padding-bottom: 16px;
+}

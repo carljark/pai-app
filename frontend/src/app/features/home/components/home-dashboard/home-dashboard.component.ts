@@ -23,9 +23,7 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
         </div>
         <h1 class="home-hero__title">{{ t().homeTitle }}</h1>
         <p class="home-hero__greeting">{{ t().homeGreeting }}, <strong>{{ userName() }}</strong>!</p>
-        <p class="home-hero__description">
-          {{ t().homeDescription }}
-        </p>
+        <div class="home-hero__description" [innerHTML]="t().homeDescription"></div>
 
         <!-- CTA Buttons -->
         <div class="home-hero__actions">
@@ -160,7 +158,7 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     .home-hero__description {
       font-size: 1rem;
       color: var(--c-text-muted);
-      max-width: 580px;
+      max-width: 760px;
       line-height: 1.7;
       margin: 0;
     }

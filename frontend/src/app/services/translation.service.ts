@@ -83,9 +83,9 @@ export class TranslationService {
 
         // HOME
         homeTitle: 'Plataforma de Projectes Interdisciplinaris',
-        homeGreeting: 'Benvingut',
+        homeGreeting: 'Hola',
         defaultUser: 'Docent',
-        homeDescription: 'Dissenya projectes curriculars interdisciplinaris assistits per intel·ligència artificial. Selecciona Resultats d\'Aprenentatge o Criteris d\'Avaluació, tria metodologia i deixa que la IA elabori un projecte complet llest per utilitzar a l\'aula.',
+        homeDescription: `<p>Plappin és el teu entorn virtual dissenyat per simplificar la creació de projectes intermodulars, reduint la càrrega burocràtica i facilitant la coordinació entre departaments.</p><ul style="text-align: left; margin: 16px auto; max-width: 680px;"><li><strong>Encreuament curricular àgil:</strong> A l'FP bàsica, connecta Resultats d'Aprenentatge (RA) dels mòduls pràctics amb les Competències Específiques (CE) dels àmbits teòrics amb pocs clics. També ho pots utilitzar a Diversificació Curricular.</li><li><strong>Disseny de reptes a mida:</strong> Genera propostes base estructurades per a metodologies actives (ABP, ABR o ApS) adaptades a la realitat del teu cicle formatiu o grup d'ESO.</li><li><strong>Rúbriques compartides:</strong> Crea instruments d'avaluació formativa triangulada, a punt perquè tot l'equip docent avaluï el procés de forma coherent i unificada.</li></ul><p><strong>La Intel·ligència Artificial proposa, tu decideixes.</strong><br>Plappin integra un motor d'IA concebut estrictament com un "copilot" organitzatiu per estalviar-te hores davant del full en blanc. Tanmateix, el criteri pedagògic humà és insubstituïble. La tecnologia estructura les dades i suggereix connexions, però tu tens la responsabilitat final de revisar, editar i validar cada proposta. L'eina et proporciona la bastida; tu aportes l'experiència, l'empatia i el sentit educatiu perquè el projecte encaixi perfectament amb el teu alumnat.</p>`,
         homePill1: 'IA Generativa',
         homePill2: 'Exporta a Word',
         homePill3: 'Bilingüe ES / CA',
@@ -180,9 +180,9 @@ export class TranslationService {
 
         // HOME
         homeTitle: 'Plataforma de Proyectos Interdisciplinares',
-        homeGreeting: 'Bienvenido',
+        homeGreeting: 'Hola',
         defaultUser: 'Docente',
-        homeDescription: 'Diseña proyectos curriculares interdisciplinares asistidos por inteligencia artificial. Selecciona Resultados de Aprendizaje o Criterios de Evaluación, elige metodología y deja que la IA elabore un proyecto completo listo para usar en el aula.',
+        homeDescription: `<p>Plappin es tu entorno virtual diseñado para simplificar la creación de proyectos intermodulares, reduciendo la carga burocrática y facilitando la coordinación entre departamentos.</p><ul style="text-align: left; margin: 16px auto; max-width: 680px;"><li><strong>Cruce curricular ágil:</strong> En FP básica, conecta Resultados de Aprendizaje (RA) de los módulos prácticos con las Competencias Específicas (CE) de los ámbitos teóricos en pocos clics. También lo puedes usar en Diversificación Curricular.</li><li><strong>Diseño de retos a medida:</strong> Genera propuestas base estructuradas para metodologías activas (ABP, ABR o ApS) adaptadas a la realidad de tu ciclo formativo o grupo de ESO.</li><li><strong>Rúbricas compartidas:</strong> Crea instrumentos de evaluación formativa triangulada, listos para que todo el equipo docente evalúe el proceso de forma coherente y unificada.</li></ul><p><strong>La Inteligencia Artificial propone, tú decides.</strong><br>Plappin integra un motor de IA concebido estrictamente como un "copiloto" organizativo para ahorrarte horas frente al folio en blanco. Sin embargo, el criterio pedagógico humano es insustituible. La tecnología estructura los datos y sugiere conexiones, pero tú tienes la responsabilidad final de revisar, editar y validar cada propuesta. La herramienta te proporciona el andamiaje; tú aportas la experiencia, la empatía y el sentido educativo para que el proyecto encaje perfectamente con tu alumnado.</p>`,
         homePill1: 'IA Generativa',
         homePill2: 'Exporta a Word',
         homePill3: 'Bilingüe ES / CA',

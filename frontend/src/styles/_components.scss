@@ -141,3 +141,13 @@
     pointer-events: none;
   }
 }
+
+/* Hide username in collapsed state and on mobile */
+.app-sidebar.collapsed .sidebar-username {
+  display: none;
+}
+@media (max-width: 767px) {
+  .app-sidebar .sidebar-username {
+    display: none;
+  }
+}

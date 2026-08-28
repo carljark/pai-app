@@ -2,13 +2,14 @@
 @use 'mixins';
 .app-layout { display: flex; flex-direction: row; min-height: 100vh; background-color: variables.$color-background; }
 .app-sidebar { 
+  position: sticky; top: 0; height: 100vh;
   width: 72px; background-color: variables.$color-surface; border-right: 1px solid variables.$color-border; padding: variables.$spacing-4 variables.$spacing-2; display: flex; flex-direction: column; gap: variables.$spacing-4; transition: width 0.3s ease, padding 0.3s ease; overflow: hidden; flex-shrink: 0; z-index: 100;
   @include mixins.mq(md) { 
     width: 250px; padding: variables.$spacing-6 variables.$spacing-4; 
     &.collapsed { width: 72px; padding: variables.$spacing-6 variables.$spacing-2; overflow: visible; }
   } 
 }
-.app-main { flex: 1; padding: variables.$spacing-4; display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; width: 100%; min-width: 0; @include mixins.mq(md) { padding: variables.$spacing-8; } }
+.app-main { flex: 1; padding: variables.$spacing-4; display: flex; flex-direction: column; width: 100%; min-width: 0; @include mixins.mq(md) { padding: variables.$spacing-8; } }
 .app-header { @include mixins.flex-between; padding-bottom: variables.$spacing-4; margin-bottom: variables.$spacing-6; border-bottom: 1px solid variables.$color-border; flex-wrap: wrap; gap: variables.$spacing-4; &-title { font-size: variables.$font-size-xl; font-weight: variables.$font-weight-semibold; color: variables.$color-primary-dark; } }
 .desktop-only { display: none; @include mixins.mq(md) { display: flex; } }
 .mobile-only { display: flex; @include mixins.mq(md) { display: none; } }

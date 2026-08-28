@@ -66,7 +66,7 @@ import { NotificationsBadgeComponent } from '../../../features/notifications/com
       </nav>
       
       <div style="flex-grow: 1;"></div>
-      <div style="text-align: center; color: #9ca3af; font-size: 0.75rem;">
+      <div class="sidebar-username" style="text-align: center; color: #9ca3af; font-size: 0.75rem;">
         {{ auth.currentUser()?.name }}
       </div>
     </aside>

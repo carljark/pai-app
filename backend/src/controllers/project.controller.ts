@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { Settings } from '../models/Settings';
+import { FpbMatch } from '../models/FpbMatch';
 import { buildContexts, generateGeminiContent } from '../services/ai.service';
 import fs from 'fs';
 import path from 'path';
@@ -57,7 +58,7 @@ export const generateProject = async (req: any, res: Response) => {
       return res.status(429).json({ error: 'Has alcanzado el límite de 10 generaciones diarias. Inténtalo de nuevo mañana.' });
     }
 
-    // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes)
+    // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes, enriquecido con coincidencias de FPB)
     const { modules, selectedRas, methodology, tipoNivel, title, language } = req.body;
     const settings = await Settings.findOne();
     const { schoolContextStr, intefExamplesContext } = buildContexts(settings);
@@ -67,6 +68,41 @@ export const generateProject = async (req: any, res: Response) => {
     if (approvedProjects.length > 0) {
       approvedProjectsContext = "\n--- PROYECTOS APROBADOS DE LA PLATAFORMA ---\n" + 
         JSON.stringify(approvedProjects.map(p => ({ title: p.title, text: p.generatedContent?.rawText })));
+    }
+
+    // Obtener RAs y CEs para el enriquecimiento y extracción de códigos
+    const allRas = await mongoose.models.RA.find();
+    const allCes = mongoose.models.CE ? await mongoose.models.CE.find() : [];
+
+    // Extraer códigos de los RAs seleccionados
+    const selectedCodes = new Set<string>();
+    for (const selectedStr of selectedRas || []) {
+      const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
+      if (raDoc && raDoc.id) {
+        const code = raDoc.id.split('_')[0];
+        if (code) selectedCodes.add(code);
+      }
+    }
+
+    // Buscar coincidencias y orientaciones curriculares de FPB si procede
+    let fpbMatchesContext = '';
+    let coincidenciaInstructions = '';
+    if (tipoNivel === 'FP_BASICA') {
+      const generalPromptDoc = await FpbMatch.findOne({ type: 'prompt_coincidencias' });
+      if (generalPromptDoc) {
+        coincidenciaInstructions = `\n\n--- INSTRUCCIONES ESPECÍFICAS DE DISEÑO PARA FP BÁSICA ---\n${generalPromptDoc.rawText}`;
+      }
+
+      if (selectedCodes.size > 0) {
+        const matches = await FpbMatch.find({
+          code: { $in: Array.from(selectedCodes) },
+          type: { $in: ['coincidencia', 'actividad_ampliada', 'relacion_criterios'] }
+        });
+        if (matches.length > 0) {
+          fpbMatchesContext = "\n\n--- COINCIDENCIAS Y ACTIVIDADES DE REFERENCIA DE FP BÁSICA (INSPIRACIÓN OBLIGATORIA) ---\n" +
+            matches.map(m => `[Archivo: ${m.fileName} - Tipo: ${m.type} - Módulo: ${m.code || 'Transversal'}]\n${m.rawText}`).join('\n\n');
+        }
+      }
     }
 
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
@@ -94,12 +130,9 @@ Formatea el texto final como Markdown profesional (NO lo envuelvas en markdown \
 MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII (como +-----, |    |, etc.) bajo ningún concepto para esquemas o secuencias. Si necesitas tabular información, utiliza ÚNICAMENTE el formato estándar de tablas Markdown (usando | y -). Para resaltar texto, usa bloques de cita (>).
 Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
-${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}`;
+${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}`;
     
     // Enriquecer RAs
-    const allRas = await mongoose.models.RA.find();
-    const allCes = mongoose.models.CE ? await mongoose.models.CE.find() : [];
-    
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
       const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
       if (raDoc) {

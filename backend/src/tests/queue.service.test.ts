@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { processQueue } from '../services/queue.service';
+import { processQueue, initQueue } from '../services/queue.service';
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import * as aiService from '../services/ai.service';
@@ -71,5 +71,22 @@ describe('Queue Service', () => {
     expect((mockProject as any).errorDetail).toBe('AI failed');
     expect(mockProject.save).toHaveBeenCalled();
     expect(sseService.sendToUser).toHaveBeenCalledWith('user2', expect.objectContaining({ type: 'PROJECT_ERROR' }));
+  });
+
+  it('debería restaurar proyectos en estado generando a en_cola al inicializar', async () => {
+    vi.spyOn(Project, 'updateMany').mockResolvedValueOnce({ modifiedCount: 1 } as any);
+    vi.spyOn(Project, 'findOneAndUpdate').mockResolvedValueOnce(null); // Evita loop en processQueue
+
+    await expect(initQueue()).resolves.not.toThrow();
+    expect(Project.updateMany).toHaveBeenCalledWith({ status: 'generando' }, { status: 'en_cola' });
+  });
+
+  it('debería capturar errores al inicializar la cola', async () => {
+    vi.spyOn(Project, 'updateMany').mockRejectedValueOnce(new Error('DB connection failed'));
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    await expect(initQueue()).resolves.not.toThrow();
+    expect(consoleSpy).toHaveBeenCalled();
+    consoleSpy.mockRestore();
   });
 });

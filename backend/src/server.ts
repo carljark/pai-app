@@ -21,9 +21,11 @@ import { runMigrations } from './migrations/runner';
 /* istanbul ignore next */
 if (process.env.NODE_ENV !== 'test') {
   mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/pai_db')
-    .then(() => {
+    .then(async () => {
       console.log('MongoDB Conectado');
-      runMigrations();
+      await runMigrations();
+      const { initQueue } = await import('./services/queue.service');
+      await initQueue();
     })
     .catch(err => console.error(err));
 }

@@ -5,6 +5,9 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     fileParallelism: false,
+    sequence: {
+      concurrent: false
+    },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],

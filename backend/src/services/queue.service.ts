@@ -5,6 +5,21 @@ import { sendToUser } from './sse.service';
 
 let isProcessing = false;
 
+export async function initQueue() {
+  try {
+    const restored = await Project.updateMany(
+      { status: 'generando' },
+      { status: 'en_cola' }
+    );
+    if (restored.modifiedCount > 0) {
+      console.log(`[Queue] Restaurados ${restored.modifiedCount} proyectos atascados en 'generando' a 'en_cola'.`);
+    }
+    processQueue().catch(console.error);
+  } catch (err) {
+    console.error('[Queue] Error al inicializar la cola:', err);
+  }
+}
+
 export async function processQueue() {
   if (isProcessing) return;
   isProcessing = true;

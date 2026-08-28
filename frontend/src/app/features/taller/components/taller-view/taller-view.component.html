@@ -76,7 +76,7 @@
             <strong>Autoría:</strong> {{ projects.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projects.currentProject().userId.email }}
           </div>
         }
-        <markdown [data]="projects.formattedGeneratedProject()"></markdown>
+        <markdown [data]="projects.formattedGeneratedProject()" [katex]="true"></markdown>
       </div>
     </div>
     <div class="taller-sidebar">

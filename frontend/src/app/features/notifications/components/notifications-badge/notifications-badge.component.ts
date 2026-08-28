@@ -1,6 +1,7 @@
 import { Component, input, signal, computed, inject, effect } from '@angular/core';
 import { NotificationsFacade } from '../../services/notifications.facade';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../../../services/translation.service';
 
 @Component({
   selector: 'app-notifications-badge',
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
       <!-- Botón de Notificaciones -->
       <button 
         (click)="openNotifications()" 
-        class="nav-item" data-tooltip="Notificaciones"
+        class="nav-item" [attr.data-tooltip]="trans.t().sidebarNotifications"
         [class.active]="activeCount() > 0 || unreadCount() > 0"
         style="width: 100%;">
         
@@ -27,7 +28,7 @@ import { CommonModule } from '@angular/common';
           }
         </div>
         
-        <span class="nav-text">Notificaciones</span>
+        <span class="nav-text">{{ trans.t().sidebarNotifications }}</span>
         
         <!-- Optional text pill for desktop when there's an active process -->
         @if(unreadCount() > 0 || activeCount() > 0) {
@@ -110,6 +111,7 @@ import { CommonModule } from '@angular/common';
 export class NotificationsBadgeComponent {
   projects = input.required<any[]>();
   private notificationsFacade = inject(NotificationsFacade);
+  trans = inject(TranslationService);
   
   isOpen = signal(false);
 

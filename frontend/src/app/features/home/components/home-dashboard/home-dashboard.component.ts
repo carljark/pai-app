@@ -27,14 +27,6 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
           {{ t().homeDescription }}
         </p>
 
-        <!-- Feature Pills — sin iconos -->
-        <div class="home-hero__pills">
-          <span class="home-pill">{{ t().homePill1 }}</span>
-          <span class="home-pill">{{ t().homePill2 }}</span>
-          <span class="home-pill">{{ t().homePill3 }}</span>
-          <span class="home-pill">{{ t().homePill4 }}</span>
-        </div>
-
         <!-- CTA Buttons -->
         <div class="home-hero__actions">
           <button class="home-cta home-cta--primary" (click)="navigate.emit('generator')">

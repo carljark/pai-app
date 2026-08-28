@@ -214,7 +214,7 @@ describe('TallerViewComponent', () => {
 
   it('should toggle AI panel collapsed state', () => {
     // Initial state is false
-    expect(component.isAiCollapsed()).toBe(false);
+    expect(component.isSidebarCollapsed()).toBe(false);
     
     // Set up auth and project state so the AI panel is rendered
     mockAuthFacade.currentUser = signal({ role: 'admin', canUseAi: true });
@@ -223,18 +223,18 @@ describe('TallerViewComponent', () => {
     
     // Find the toggle button in the header
     const de = fixture.debugElement;
-    const buttons = de.queryAll(By.css('.ai-assistant-panel button'));
-    // The first button in the AI panel is the toggle button
+    const buttons = de.queryAll(By.css('.app-header button'));
+    // The first button in the app header is the toggle button
     const toggleBtn = buttons[0];
     
     // Click it to collapse
     toggleBtn.triggerEventHandler('click', null);
-    expect(component.isAiCollapsed()).toBe(true);
-    fixture.detectChanges(); // This will evaluate the true branch of the @if (!isAiCollapsed()) and the ternary [attr.title]
+    expect(component.isSidebarCollapsed()).toBe(true);
+    fixture.detectChanges(); // This will evaluate the true branch of the @if (!isSidebarCollapsed()) and the ternary [attr.title]
 
     // Click again to expand
     toggleBtn.triggerEventHandler('click', null);
-    expect(component.isAiCollapsed()).toBe(false);
+    expect(component.isSidebarCollapsed()).toBe(false);
     fixture.detectChanges(); // This will evaluate the false branch again
   });
 

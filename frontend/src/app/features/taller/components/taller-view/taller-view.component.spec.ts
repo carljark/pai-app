@@ -212,6 +212,32 @@ describe('TallerViewComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should toggle AI panel collapsed state', () => {
+    // Initial state is false
+    expect(component.isAiCollapsed()).toBe(false);
+    
+    // Set up auth and project state so the AI panel is rendered
+    mockAuthFacade.currentUser = signal({ role: 'admin', canUseAi: true });
+    mockProjectsFacade.generatedProject.set('content');
+    fixture.detectChanges();
+    
+    // Find the toggle button in the header
+    const de = fixture.debugElement;
+    const buttons = de.queryAll(By.css('.ai-assistant-panel button'));
+    // The first button in the AI panel is the toggle button
+    const toggleBtn = buttons[0];
+    
+    // Click it to collapse
+    toggleBtn.triggerEventHandler('click', null);
+    expect(component.isAiCollapsed()).toBe(true);
+    fixture.detectChanges(); // This will evaluate the true branch of the @if (!isAiCollapsed()) and the ternary [attr.title]
+
+    // Click again to expand
+    toggleBtn.triggerEventHandler('click', null);
+    expect(component.isAiCollapsed()).toBe(false);
+    fixture.detectChanges(); // This will evaluate the false branch again
+  });
+
   it('should sort by date', () => {
     const a = { createdAt: '2023-01-01' };
     const b = { createdAt: '2023-01-02' };

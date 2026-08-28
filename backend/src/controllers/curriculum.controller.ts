@@ -22,7 +22,6 @@ const caToEsModules: Record<string, string> = {
 };
 
 const esToCa: Record<string, string> = {
-  // ... (se mantiene igual, no lo toco)
   "Biología y Geología": "Biologia i Geologia",
   "Economía y Emprendimiento": "Economia i Emprenedoria",
   "Física y Química": "Física i Química",
@@ -51,9 +50,9 @@ export const getRas = async (req: any, res: Response) => {
       module: lang === 'ca' ? r.module : (caToEsModules[r.module] || r.module_es || r.module),
       description: lang === 'ca' ? (r.description_ca || r.description) : (r.description_es || r.description)
     }));
-    res.json(mapped);
+    return res.json(mapped);
   } catch (error) {
-    res.status(500).json({ error: "No se pudieron cargar los RAs" });
+    return res.status(500).json({ error: "No se pudieron cargar los RAs" });
   }
 };
 
@@ -81,8 +80,8 @@ export const getCes = async (req: any, res: Response) => {
         criterios: lang === 'ca' && c.criterios_ca ? c.criterios_ca : c.criterios_es || c.get('criterios')
       };
     });
-    res.json(mapped);
+    return res.json(mapped);
   } catch (error) {
-    res.status(500).json({ error: "No se pudieron cargar las CEs" });
+    return res.status(500).json({ error: "No se pudieron cargar las CEs" });
   }
 };

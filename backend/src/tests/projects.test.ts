@@ -6,6 +6,7 @@ import { createTestUser } from './testUtils';
 import mongoose from 'mongoose';
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
+import { FpbMatch } from '../models/FpbMatch';
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: class {
@@ -242,4 +243,34 @@ describe('Projects Endpoints', () => {
     expect(res.status).toBe(429);
   });
 
+  it('debería consultar e inyectar coincidencias de FPB si tipoNivel es FP_BASICA', async () => {
+    const { token } = await createTestUser('teacher', 'teacher_fpb@test.com');
+    const RA = mongoose.model('RA');
+    const FpbMatch = mongoose.model('FpbMatch');
+
+    // Crear RAs para FP Básica
+    await new RA({ id: '3060_RA1', description: 'RA 3060', module: 'Módulo 3060' }).save();
+
+    // Crear FpbMatch
+    await new FpbMatch({
+      fileName: 'Prompt Coincidencias.docx',
+      title: 'Instrucciones generales',
+      rawText: 'Instrucciones generales de prueba',
+      type: 'prompt_coincidencias'
+    }).save();
+
+    await new FpbMatch({
+      fileName: 'Coincidencias_3060.docx',
+      title: 'Coincidencias de 3060',
+      code: '3060',
+      rawText: 'Contenido de coincidencia de prueba',
+      type: 'coincidencia'
+    }).save();
+
+    const res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({
+      selectedRas: ['RA 3060'],
+      tipoNivel: 'FP_BASICA'
+    });
+    expect(res.status).toBe(202);
+  });
 });

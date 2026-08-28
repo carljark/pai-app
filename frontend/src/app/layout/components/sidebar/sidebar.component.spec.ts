@@ -31,7 +31,21 @@ describe('SidebarComponent', () => {
     logout: vi.fn()
   };
   
-  const mockTrans = {};
+  const mockTrans = {
+    t: signal({
+      sidebarExpand: 'Expandir',
+      sidebarCollapse: 'Colapsar',
+      sidebarHome: 'Inicio',
+      sidebarNewProject: 'Nuevo Proyecto',
+      sidebarHistory: 'Historial',
+      sidebarTaller: 'Taller Editor',
+      sidebarAdmin: 'Admin Panel',
+      sidebarLangTooltip: 'Cambiar Idioma',
+      sidebarLangLabel: 'Idioma',
+      sidebarLogoutTooltip: 'Cerrar Sesión',
+      logout: 'Salir'
+    })
+  };
 
   const mockAuth = {
     currentUser: signal({ name: 'Admin', role: 'admin' })

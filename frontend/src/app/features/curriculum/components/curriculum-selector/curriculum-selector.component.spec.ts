@@ -76,17 +76,17 @@ describe('CurriculumSelectorComponent', () => {
 
   it('should display selected items in the cart', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const cartSummary = compiled.querySelector('details[open] summary');
-    expect(cartSummary?.textContent).toContain('Select Curriculum (1)');
+    const cartHeader = compiled.querySelector('.floating-cart__header');
+    expect(cartHeader?.textContent).toContain('Select Curriculum (1)');
     
-    const cartItems = compiled.querySelectorAll('details[open] li li');
+    const cartItems = compiled.querySelectorAll('.floating-cart__body li li');
     expect(cartItems.length).toBe(1);
     expect(cartItems[0].textContent).toContain('RA1');
   });
 
   it('should call toggleRa when removing from cart', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const removeBtn = compiled.querySelector('details[open] li li button') as HTMLButtonElement;
+    const removeBtn = compiled.querySelector('.floating-cart__body li li button') as HTMLButtonElement;
     removeBtn.click();
     expect(mockFacade.toggleRa).toHaveBeenCalledWith('RA1');
   });
@@ -94,13 +94,9 @@ describe('CurriculumSelectorComponent', () => {
   it('should emit generate event on button click', () => {
     const generateSpy = vi.spyOn(component.generate, 'emit');
     const compiled = fixture.nativeElement as HTMLElement;
-    const generateBtn = compiled.querySelector('details[open] button:last-of-type') as HTMLButtonElement; // Assuming it's the main button
+    const generateBtn = compiled.querySelector('.floating-cart__footer button') as HTMLButtonElement;
     
-    // There are 2 buttons. The remove button and the generate button.
-    const buttons = compiled.querySelectorAll('button');
-    const genBtn = buttons[buttons.length - 1];
-    
-    genBtn.click();
+    generateBtn.click();
     expect(generateSpy).toHaveBeenCalled();
   });
 
@@ -114,5 +110,17 @@ describe('CurriculumSelectorComponent', () => {
     
     expect(genBtn.disabled).toBe(true);
     expect(genBtn.textContent).toContain('Generating...');
+  });
+
+  it('should toggle isOpen signal when header is clicked', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const header = compiled.querySelector('.floating-cart__header') as HTMLElement;
+    
+    expect(component.isOpen()).toBe(true);
+    header.click();
+    expect(component.isOpen()).toBe(false);
+    
+    header.click();
+    expect(component.isOpen()).toBe(true);
   });
 });

@@ -1,4 +1,4 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, inject, input, output, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurriculumFacade } from '../../services/curriculum.facade';
 
@@ -8,7 +8,7 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
   imports: [CommonModule],
   template: `
     <!-- Lado Izquierdo: Acordeones de Selección -->
-    <div style="display: grid; gap: 15px;">
+    <div style="display: grid; gap: 15px; position: sticky; top: 20px; align-self: start;">
       @for (group of facade.groupedItems(); track group.category) {
         <details style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
           <summary [style.background]="facade.getCategoryStyle(group.category).bg" [style.color]="facade.getCategoryStyle(group.category).text" style="padding: 15px; font-weight: bold; cursor: pointer; user-select: none;">
@@ -33,37 +33,41 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
     </div>
 
     <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
-    <details open style="position: fixed; bottom: 20px; right: 20px; width: 420px; max-width: calc(100vw - 40px); background: white; border: 1px solid #bdc3c7; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); z-index: 9999; overflow: hidden;">
-      <summary style="padding: 15px 20px; background: #2c3e50; color: white; font-weight: bold; font-size: 1rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; user-select: none; line-height: 1.4;">
+    <div class="floating-cart" style="position: fixed; bottom: 20px; right: 20px; width: 420px; max-width: calc(100vw - 40px); background: white; border: 1px solid #bdc3c7; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); z-index: 9999; overflow: hidden; display: flex; flex-direction: column;">
+      <div class="floating-cart__header" (click)="isOpen.set(!isOpen())" style="padding: 15px 20px; background: #2c3e50; color: white; font-weight: bold; font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; user-select: none; line-height: 1.4;">
         <span style="flex: 1;"> {{ title() }} ({{ facade.selectedItemsDetails().length }})</span>
-        <span style="font-size: 0.8rem; opacity: 0.8; margin-top: 4px; flex-shrink: 0;">▲/▼</span>
-      </summary>
+        <span style="font-size: 0.8rem; opacity: 0.8; margin-top: 4px; flex-shrink: 0;">{{ isOpen() ? '▼' : '▲' }}</span>
+      </div>
 
-      <div style="padding: 20px;">
-        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; max-height: 40vh; overflow-y: auto;">
-          @for (group of facade.groupedSelectedItems(); track group.subject) {
-            <li style="margin-bottom: 15px; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden;">
-              <div [style.background]="facade.getCategoryStyle(group.subject).bg" [style.color]="facade.getCategoryStyle(group.subject).text" style="padding: 8px 12px; font-size: 0.85rem; font-weight: bold; border-bottom: 1px solid #e0e0e0;">
-                {{ group.subject }} ({{ group.items.length }})
-              </div>
-              <ul style="list-style: none; padding: 10px; margin: 0;">
-                @for (item of group.items; track item.fullDesc) {
-                  <li style="margin-bottom: 8px; font-size: 0.85rem; display: flex; align-items: flex-start; justify-content: space-between;">
-                    <div>
-                      <strong style="color: #2980b9;">{{ item.index }}.</strong> {{ item.shortDesc }}
-                    </div>
-                    <button (click)="facade.toggleRa(item.fullDesc)" style="background: none; border: none; color: #e74c3c; cursor: pointer; padding: 0 5px;" title="Quitar">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    </button>
-                  </li>
-                }
-              </ul>
-            </li>
-          }
-        </ul>
+      <div style="display: flex; flex-direction: column; background: white;">
+        @if (isOpen()) {
+          <div class="floating-cart__body" style="padding: 20px 20px 0 20px; max-height: 40vh; overflow-y: auto;">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              @for (group of facade.groupedSelectedItems(); track group.subject) {
+                <li style="margin-bottom: 15px; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden;">
+                  <div [style.background]="facade.getCategoryStyle(group.subject).bg" [style.color]="facade.getCategoryStyle(group.subject).text" style="padding: 8px 12px; font-size: 0.85rem; font-weight: bold; border-bottom: 1px solid #e0e0e0;">
+                    {{ group.subject }} ({{ group.items.length }})
+                  </div>
+                  <ul style="list-style: none; padding: 10px; margin: 0;">
+                    @for (item of group.items; track item.fullDesc) {
+                      <li style="margin-bottom: 8px; font-size: 0.85rem; display: flex; align-items: flex-start; justify-content: space-between;">
+                        <div>
+                          <strong style="color: #2980b9;">{{ item.index }}.</strong> {{ item.shortDesc }}
+                        </div>
+                        <button (click)="facade.toggleRa(item.fullDesc)" style="background: none; border: none; color: #e74c3c; cursor: pointer; padding: 0 5px;" title="Quitar">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        </button>
+                      </li>
+                    }
+                  </ul>
+                </li>
+              }
+            </ul>
+          </div>
+        }
 
         @if (facade.selectedItemsDetails().length > 0) {
-          <div style="margin-top: 15px; border-top: 2px solid #ecf0f1; padding-top: 15px;">
+          <div class="floating-cart__footer" style="padding: 20px; border-top: 1px solid #ecf0f1;">
             <button (click)="generate.emit()" 
                     [disabled]="isGenerating()" 
                     [style.opacity]="isGenerating() ? '0.7' : '1'"
@@ -86,12 +90,13 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
           </div>
         }
       </div>
-    </details>
+    </div>
   `
 })
 export class CurriculumSelectorComponent {
   facade = inject(CurriculumFacade);
   title = input.required<string>();
+  isOpen = signal(true);
   
   // Novedades para el botón
   isGenerating = input<boolean>(false);

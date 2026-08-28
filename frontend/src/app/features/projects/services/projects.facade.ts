@@ -93,7 +93,7 @@ export class ProjectsFacade {
       tipoNivel,
       language,
       courseLevel: this.courseLevel(),
-      title: title || (tipoNivel === 'FP_BASICA' ? 'Proyecto Integrador' : 'Proyecto de Diversificación')
+      title: title || (tipoNivel === 'FP_BASICA' ? 'Proyecto Integrador' : 'Proyecto de ESO')
     });
   }
 

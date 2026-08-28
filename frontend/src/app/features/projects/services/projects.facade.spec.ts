@@ -117,7 +117,7 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['Math']);
-    expect(req.request.body.title).toBe('Proyecto de Diversificación');
+    expect(req.request.body.title).toBe('Proyecto de ESO');
     req.flush({});
   });
 

@@ -142,4 +142,14 @@ describe('CurriculumFacade', () => {
     expect(grouped[0].subject).toBe('SubjectA');
     expect(grouped[0].items.length).toBe(2);
   });
+
+  it('should clear selection when setTipoNivel changes level', () => {
+    facade.tipoNivel.set('FP_BASICA');
+    facade.toggleRa('RA1');
+    expect(facade.selectedRas()).toContain('RA1');
+    
+    facade.setTipoNivel('DIVERSIFICACION_CURRICULAR');
+    expect(facade.tipoNivel()).toBe('DIVERSIFICACION_CURRICULAR');
+    expect(facade.selectedRas()).not.toContain('RA1');
+  });
 });

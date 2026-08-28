@@ -13,3 +13,53 @@
 .app-header { @include mixins.flex-between; padding-bottom: variables.$spacing-4; margin-bottom: variables.$spacing-6; border-bottom: 1px solid variables.$color-border; flex-wrap: wrap; gap: variables.$spacing-4; &-title { font-size: variables.$font-size-xl; font-weight: variables.$font-weight-semibold; color: variables.$color-primary-dark; } }
 .desktop-only { display: none; @include mixins.mq(md) { display: flex; } }
 .mobile-only { display: flex; @include mixins.mq(md) { display: none; } }
+
+/* WORKSHOP (TALLER) LAYOUT */
+.taller-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 1023px) {
+    padding-bottom: 320px; /* Espacio para el panel de IA fijo abajo */
+  }
+}
+
+.taller-content {
+  flex: 2;
+  min-width: 0;
+}
+
+.taller-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ai-assistant-panel {
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    z-index: 10;
+  }
+  
+  @media (max-width: 1023px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-radius: 16px 16px 0 0 !important;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15) !important;
+    margin: 0 !important;
+    border-top: 1px solid variables.$color-border;
+    background-color: variables.$color-surface;
+    padding: variables.$spacing-4;
+  }
+}

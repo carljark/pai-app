@@ -95,7 +95,7 @@ describe('SidebarComponent', () => {
   });
 
   it('should toggle sidebar', () => {
-    const btn = fixture.debugElement.nativeElement.querySelector('.desktop-only button');
+    const btn = fixture.debugElement.nativeElement.querySelector('button.desktop-only');
     btn.click();
     expect(mockLayout.toggleSidebar).toHaveBeenCalled();
   });

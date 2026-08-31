@@ -140,13 +140,13 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     }
     
     .home-hero__word {
-      height: 64px;
+      height: 88px;
       width: auto;
       object-fit: contain;
     }
 
     .home-hero__logo {
-      height: 96px;
+      height: 72px;
       width: auto;
       object-fit: contain;
     }
@@ -376,7 +376,7 @@ export class HomeDashboardComponent {
   constructor() {
     effect(() => {
       this.projectsFacade.loadHistory();
-    }, { allowSignalWrites: false });
+    });
   }
 
   statusLabel(status: string): string {

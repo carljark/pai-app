@@ -23,6 +23,16 @@ TestBed.configureCompiler({
 
 global.self = global as any;
 
+class MockEventSource {
+  onmessage: any = null;
+  onerror: any = null;
+  constructor(public url: string) {}
+  addEventListener() {}
+  removeEventListener() {}
+  close() {}
+}
+(globalThis as any).EventSource = MockEventSource;
+
 afterEach(() => {
   TestBed.resetTestingModule();
 });

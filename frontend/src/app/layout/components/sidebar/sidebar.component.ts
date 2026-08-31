@@ -12,8 +12,13 @@ import { NotificationsBadgeComponent } from '../../../features/notifications/com
   imports: [CommonModule, NotificationsBadgeComponent],
   template: `
     <aside class="app-sidebar" [class.collapsed]="layout.isSidebarCollapsed()">
-      <div class="desktop-only" style="justify-content: flex-end; margin-bottom: 8px;">
-        <button class="nav-item" [attr.data-tooltip]="layout.isSidebarCollapsed() ? trans.t().sidebarExpand : trans.t().sidebarCollapse" style="width: auto; padding: 8px; justify-content: center;" (click)="layout.toggleSidebar()">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 4px; min-height: 40px;">
+        @if (!layout.isSidebarCollapsed()) {
+          <img src="logo-transparent.png" alt="Plappin" style="height: 36px; object-fit: contain; margin-left: 4px;">
+        } @else {
+          <img src="logo-transparent.png" alt="Plappin" class="desktop-only" style="height: 24px; object-fit: contain; margin-left: 4px;">
+        }
+        <button class="nav-item desktop-only" [attr.data-tooltip]="layout.isSidebarCollapsed() ? trans.t().sidebarExpand : trans.t().sidebarCollapse" style="width: auto; padding: 8px; justify-content: center; margin-left: auto;" (click)="layout.toggleSidebar()">
           @if(layout.isSidebarCollapsed()) {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           } @else {

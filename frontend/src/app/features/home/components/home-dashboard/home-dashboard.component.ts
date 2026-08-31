@@ -15,11 +15,9 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
 
       <!-- Hero Section -->
       <div class="home-hero">
-        <div class="home-hero__icon">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
+        <div class="home-hero__logo-container">
+          <img src="word-transparent.png" alt="Plappin" class="home-hero__word">
+          <img src="logo-transparent.png" alt="Logo" class="home-hero__logo">
         </div>
         <h1 class="home-hero__title">{{ t().homeTitle }}</h1>
         <p class="home-hero__greeting">{{ t().homeGreeting }}, <strong>{{ userName() }}</strong>!</p>
@@ -134,11 +132,23 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
       border: 1px solid var(--c-border);
     }
 
-    .home-hero__icon {
-      color: var(--c-primary);
-      background: var(--c-primary-light);
-      padding: 16px;
-      border-radius: 16px;
+    .home-hero__logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    
+    .home-hero__word {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .home-hero__logo {
+      height: 96px;
+      width: auto;
+      object-fit: contain;
     }
 
     .home-hero__title {

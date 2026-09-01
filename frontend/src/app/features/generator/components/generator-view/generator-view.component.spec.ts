@@ -106,25 +106,20 @@ describe('GeneratorViewComponent', () => {
     expect(mockAppFacade.generateProject).toHaveBeenCalled();
   });
 
-  it('should change curso on click', () => {
+  it('should change curso on select change', () => {
     mockCurriculum.tipoNivel.set('FP_BASICA');
     fixture.detectChanges();
-    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
+    const courseSelect = fixture.debugElement.query(By.css('#generator-course-select')).nativeElement;
     
-    tabs[3].click(); // click '2º'
+    courseSelect.value = '2º';
+    courseSelect.dispatchEvent(new Event('change'));
     expect(mockCurriculum.setCurso).toHaveBeenCalledWith('2º');
-    
-    tabs[2].click(); // click '1º'
-    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('1º');
     
     mockCurriculum.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
     fixture.detectChanges();
-    const newTabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
     
-    newTabs[2].click(); // click '3º'
-    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('3º');
-    
-    newTabs[3].click(); // click '4º'
+    courseSelect.value = '4º';
+    courseSelect.dispatchEvent(new Event('change'));
     expect(mockCurriculum.setCurso).toHaveBeenCalledWith('4º');
   });
 
@@ -136,17 +131,12 @@ describe('GeneratorViewComponent', () => {
     expect((selectorInstance as any).isGenerating()).toBe(true);
   });
 
-  it('should change methodology on click', () => {
+  it('should change methodology on select change', () => {
     fixture.detectChanges();
-    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
-    if (tabs.length >= 7) {
-      tabs[4].click();
-      fixture.detectChanges();
-      tabs[5].click();
-      fixture.detectChanges();
-      tabs[6].click();
-      fixture.detectChanges();
-      expect(mockProjects.methodology()).toContain('ApS');
-    }
+    const methodologySelect = fixture.debugElement.query(By.css('#generator-methodology-select')).nativeElement;
+    
+    methodologySelect.value = 'ABR (Aprendizaje Basado en Retos)';
+    methodologySelect.dispatchEvent(new Event('change'));
+    expect(mockProjects.methodology()).toContain('ABR');
   });
 });

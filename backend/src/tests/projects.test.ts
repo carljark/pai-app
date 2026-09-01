@@ -277,17 +277,39 @@ describe('Projects Endpoints', () => {
   it('POST /api/projects/rewrite - Debería reescribir una sección del proyecto', async () => {
     const { token } = await createTestUser('teacher', 'teacher_rewrite@test.com');
     
-    // Caso éxito
+    // Caso éxito con coincidencia exacta
     const res = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
       .send({
-        context: '# Proyecto Actual',
+        context: '# Proyecto Actual con Texto a cambiar aquí',
         selectedText: 'Texto a cambiar',
         instruction: 'Hazlo más corto'
       });
     expect(res.status).toBe(200);
     expect(res.body.newText).toBeDefined();
+
+    // Caso coincidencia tras trim
+    const resTrim = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        context: '# Proyecto Actual con TextoTrim aquí',
+        selectedText: '  TextoTrim  ',
+        instruction: 'Hazlo más corto'
+      });
+    expect(resTrim.status).toBe(200);
+
+    // Caso sin coincidencia (contexto no contiene la selección) o sin contexto
+    const resNoMatch = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        context: '',
+        selectedText: 'Inexistente',
+        instruction: 'Hazlo más corto'
+      });
+    expect(resNoMatch.status).toBe(200);
 
     // Caso 400 (falta texto seleccionado o instrucción)
     const res400 = await request(app)

@@ -134,6 +134,9 @@ export class TallerViewComponent {
       error: (err) => {
         console.error("Error en IA", err);
         this.projects.isThinking.set(false);
+        const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
+        this.appFacade.errorMessage.set(serverMsg);
+        this.appFacade.showErrorModal.set(true);
       }
     });
   }

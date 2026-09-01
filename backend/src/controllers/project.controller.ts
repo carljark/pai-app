@@ -268,30 +268,42 @@ export const rewriteSection = async (req: any, res: Response) => {
       return res.status(400).json({ error: "Falta texto seleccionado o instrucción" });
     }
 
-    const prompt = `Eres el Motor Pedagógico PAI. El profesor está editando un proyecto intermodular.
-Este es el PROYECTO ACTUAL (en formato Markdown):
-${context}
+    const prompt = `Eres el Motor Pedagógico PAI. El profesor está editando un fragmento de un proyecto intermodular.
 
-El profesor ha seleccionado el siguiente texto:
+CONTEXTO DEL PROYECTO (referencia):
+${context ? context.slice(0, 2000) : ''}
+
+FRAGMENTO SELECCIONADO POR EL PROFESOR:
 """
 ${selectedText}
 """
 
-INSTRUCCIÓN DEL PROFESOR para ese fragmento:
+INSTRUCCIÓN DEL PROFESOR:
 ${instruction}
 
 TAREA:
-1. Localiza a qué parte del PROYECTO ACTUAL corresponde el texto seleccionado.
-2. Reescribe esa parte según la instrucción del profesor.
-3. Devuelve el PROYECTO COMPLETO con el cambio ya integrado.
+Reescribe ÚNICAMENTE el fragmento seleccionado aplicando la instrucción del profesor.
 
 REGLAS ESTRICTAS:
-- Mantén el resto del proyecto EXACTAMENTE IGUAL.
-- Escribe en texto plano Markdown normal. NUNCA uses notación LaTeX, comandos \\text{...} ni símbolos de dólar ($) para números, cantidades o minutos.
-- Devuelve ÚNICAMENTE el texto Markdown resultante sin bloques de código tipo \`\`\`markdown, sin saludos ni explicaciones.`;
+- Devuelve EXCLUSIVAMENTE el fragmento reescrito en formato Markdown.
+- NO devuelvas el proyecto entero, únicamente el fragmento modificado.
+- NO incluyas saludos, preámbulos ni bloques de código tipo \`\`\`markdown.
+- Escribe en texto plano Markdown estándar. NUNCA uses notación LaTeX ni el símbolo $ para números o minutos.`;
 
-    const text = await generateGeminiContent(prompt, "Eres un asistente pedagógico de edición curricular.");
-    res.json({ newText: text });
+    const newFragment = await generateGeminiContent(prompt, "Eres un asistente pedagógico de edición curricular conciso y directo.");
+    
+    let newFullText = context || '';
+    const cleanFragment = (newFragment || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
+    
+    if (context && context.includes(selectedText)) {
+      newFullText = context.replace(selectedText, cleanFragment);
+    } else if (context && context.includes(selectedText.trim())) {
+      newFullText = context.replace(selectedText.trim(), cleanFragment);
+    } else {
+      newFullText = cleanFragment;
+    }
+
+    res.json({ newText: newFullText, rewrittenPart: cleanFragment });
   } catch (error: any) {
     console.error("Error en reescritura IA:", error);
     res.status(500).json({ error: "Error al contactar con la IA para reescribir" });

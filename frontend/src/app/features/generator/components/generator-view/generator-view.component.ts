@@ -25,26 +25,34 @@ import { AppFacade } from '../../../../app.facade'; // Will be created to hold g
           </div>
         </div>
         
-        <div class="form-group" style="flex: 1; min-width: 200px; margin-bottom: 0;">
-          <label>{{ trans.t().generatorCourseLabel }}</label>
-          <div class="tabs">
+        <div class="form-group" style="flex: 1; min-width: 180px; margin-bottom: 0;">
+          <label for="generator-course-select">{{ trans.t().generatorCourseLabel }}</label>
+          <select 
+            id="generator-course-select"
+            class="form-select" 
+            [value]="curriculum.curso()" 
+            (change)="onCourseChange($event)">
             @if (curriculum.tipoNivel() === 'FP_BASICA') {
-              <div class="tabs-item" [class.active]="curriculum.curso() === '1º'" (click)="curriculum.setCurso('1º')">1º</div>
-              <div class="tabs-item" [class.active]="curriculum.curso() === '2º'" (click)="curriculum.setCurso('2º')">2º</div>
+              <option value="1º">1º</option>
+              <option value="2º">2º</option>
             } @else {
-              <div class="tabs-item" [class.active]="curriculum.curso() === '3º'" (click)="curriculum.setCurso('3º')">3º</div>
-              <div class="tabs-item" [class.active]="curriculum.curso() === '4º'" (click)="curriculum.setCurso('4º')">4º</div>
+              <option value="3º">3º</option>
+              <option value="4º">4º</option>
             }
-          </div>
+          </select>
         </div>
 
-        <div class="form-group" style="flex: 2; min-width: 320px; margin-bottom: 0;">
-          <label>{{ trans.t().generatorMethodologyLabel }}</label>
-          <div class="tabs">
-            <div class="tabs-item" [class.active]="projects.methodology().includes('ABP')" (click)="projects.methodology.set('ABP (Aprendizaje Basado en Problemas / Proyectos)')">{{ trans.t().methodologyABP }}</div>
-            <div class="tabs-item" [class.active]="projects.methodology().includes('ABR')" (click)="projects.methodology.set('ABR (Aprendizaje Basado en Retos)')">{{ trans.t().methodologyABR }}</div>
-            <div class="tabs-item" [class.active]="projects.methodology().includes('ApS')" (click)="projects.methodology.set('ApS (Aprendizaje y Servicio)')">{{ trans.t().methodologyApS }}</div>
-          </div>
+        <div class="form-group" style="flex: 2; min-width: 280px; margin-bottom: 0;">
+          <label for="generator-methodology-select">{{ trans.t().generatorMethodologyLabel }}</label>
+          <select 
+            id="generator-methodology-select"
+            class="form-select" 
+            [value]="projects.methodology()" 
+            (change)="onMethodologyChange($event)">
+            <option value="ABP (Aprendizaje Basado en Problemas / Proyectos)">{{ trans.t().methodologyABP }}</option>
+            <option value="ABR (Aprendizaje Basado en Retos)">{{ trans.t().methodologyABR }}</option>
+            <option value="ApS (Aprendizaje y Servicio)">{{ trans.t().methodologyApS }}</option>
+          </select>
         </div>
       </div>
       
@@ -64,6 +72,16 @@ export class GeneratorViewComponent {
   curriculum = inject(CurriculumFacade);
   projects = inject(ProjectsFacade);
   appFacade = inject(AppFacade);
+
+  onCourseChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    this.curriculum.setCurso(value);
+  }
+
+  onMethodologyChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    this.projects.methodology.set(value);
+  }
 
   generateProject() {
     this.appFacade.generateProject();

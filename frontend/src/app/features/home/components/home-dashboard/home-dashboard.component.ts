@@ -85,11 +85,6 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
           }
         }
       </div>
-
-      <!-- Footer with IES Logo -->
-      <div class="home-footer">
-        <img src="logo-ies.png" alt="IES Cap de Llevant" class="home-footer__ies-logo">
-      </div>
     </div>
   `,
   styles: [`
@@ -140,20 +135,37 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     .home-hero__logo-container {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 16px;
+      justify-content: center;
+      width: 100%;
+      gap: 28px;
+      margin: 8px 0 12px 0;
+      flex-wrap: wrap;
     }
     
     .home-hero__word {
-      height: 80px;
+      height: 115px;
       width: auto;
+      max-width: 65%;
       object-fit: contain;
     }
 
     .home-hero__logo {
-      height: 64px;
+      height: 90px;
       width: auto;
+      max-width: 30%;
       object-fit: contain;
+    }
+
+    @media (max-width: 640px) {
+      .home-hero__logo-container {
+        gap: 16px;
+      }
+      .home-hero__word {
+        height: 75px;
+      }
+      .home-hero__logo {
+        height: 60px;
+      }
     }
 
     .home-hero__greeting {
@@ -191,20 +203,6 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
       flex-wrap: wrap;
       justify-content: flex-start;
       margin-top: 8px;
-    }
-
-    .home-footer {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding-top: 16px;
-      margin-top: -10px;
-    }
-
-    .home-footer__ies-logo {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
     }
 
     /* ─── CTA Buttons ──────────────────────────────────────────────────────── */

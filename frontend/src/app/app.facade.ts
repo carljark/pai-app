@@ -33,10 +33,11 @@ export class AppFacade {
   constructor() {
     effect(() => {
       const user = this.auth.currentUser();
+      const lang = this.layout.language();
       if (user) {
+        this.curriculum.loadRas(lang);
+        this.curriculum.loadCes(lang);
         untracked(() => {
-          this.curriculum.loadRas(this.layout.language());
-          this.curriculum.loadCes(this.layout.language());
           this.projects.loadHistory();
         });
       }

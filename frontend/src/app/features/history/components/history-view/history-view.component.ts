@@ -71,7 +71,7 @@ import { TranslationService } from '../../../../services/translation.service';
       @for (project of filteredProjects(); track project._id) {
         <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
           <div>
-            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: var(--c-text);">{{ project.title || 'Proyecto sin título' }}</h3>
+            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: var(--c-text);">{{ project.title || trans.t().untitledProject }}</h3>
             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
               <span class="badge" [class.badge-info]="project.status === 'borrador'" [class.badge-success]="project.status === 'publicado'" [class.badge-warning]="project.status === 'en_cola' || project.status === 'generando'" [class.badge-danger]="project.status === 'error'">
                 {{ project.status | uppercase }}
@@ -82,18 +82,18 @@ import { TranslationService } from '../../../../services/translation.service';
           </div>
           <div style="display: flex; gap: 10px;">
             @if (project.status === 'error') {
-              <button (click)="appFacade.viewPastProject(project)" class="btn-secondary" style="color: #ef4444;">Ver Error</button>
+              <button (click)="appFacade.viewPastProject(project)" class="btn-secondary" style="color: #ef4444;">{{ trans.t().viewError }}</button>
             } @else if (project.status === 'borrador' || project.status === 'publicado') {
-              <button (click)="appFacade.viewPastProject(project)" class="btn-primary">Abrir Editor</button>
+              <button (click)="appFacade.viewPastProject(project)" class="btn-primary">{{ trans.t().openEditor }}</button>
             }
-            <button (click)="appFacade.deleteProject(project._id)" class="btn-secondary" style="color: #ef4444; padding: 4px 8px;">
+            <button (click)="appFacade.deleteProject(project._id)" class="btn-secondary" style="color: #ef4444; padding: 4px 8px;" [title]="trans.t().deleteFile">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
             </button>
           </div>
         </div>
       } @empty {
         <div style="text-align: center; padding: 40px; color: var(--c-text-muted);">
-          No hay proyectos en esta sección.
+          {{ trans.t().noProjectsInSection }}
         </div>
       }
     </div>

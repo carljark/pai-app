@@ -4,12 +4,21 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
 import { ComponentRef, signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
+import { TranslationService } from '../../../../services/translation.service';
+
 describe('CurriculumSelectorComponent', () => {
   let component: CurriculumSelectorComponent;
   let fixture: ComponentFixture<CurriculumSelectorComponent>;
   let mockFacade: Partial<CurriculumFacade>;
+  let mockTrans: any;
 
   beforeEach(async () => {
+    mockTrans = {
+      t: signal({
+        removeTooltip: 'Quitar'
+      })
+    };
+
     mockFacade = {
       groupedItems: signal([
         {
@@ -33,7 +42,8 @@ describe('CurriculumSelectorComponent', () => {
     await TestBed.configureTestingModule({
       imports: [CurriculumSelectorComponent],
       providers: [
-        { provide: CurriculumFacade, useValue: mockFacade }
+        { provide: CurriculumFacade, useValue: mockFacade },
+        { provide: TranslationService, useValue: mockTrans }
       ]
     }).compileComponents();
 

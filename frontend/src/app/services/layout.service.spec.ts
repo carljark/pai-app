@@ -32,10 +32,12 @@ describe('LayoutService', () => {
     expect(service.language()).toBe('castellano');
   });
 
-  it('should load saved view from localStorage', () => {
+  it('should load saved view and language from localStorage', () => {
     localStorage.setItem('pai_view', 'generator');
+    localStorage.setItem('pai_lang', 'catalan');
     service = TestBed.inject(LayoutService);
     expect(service.currentView()).toBe('generator');
+    expect(service.language()).toBe('catalan');
   });
 
   it('should toggle sidebar', () => {

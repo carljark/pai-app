@@ -14,8 +14,14 @@ export class LayoutService {
     const savedView = localStorage.getItem('pai_view') as any;
     if (savedView) this.currentView.set(savedView);
     
+    const savedLang = localStorage.getItem('pai_lang') as any;
+    if (savedLang === 'catalan' || savedLang === 'castellano') {
+      this.language.set(savedLang);
+    }
+    
     effect(() => {
       localStorage.setItem('pai_view', this.currentView());
+      localStorage.setItem('pai_lang', this.language());
     });
   }
 

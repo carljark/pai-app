@@ -28,7 +28,12 @@ describe('HistoryViewComponent', () => {
         historyTitle: 'History',
         courseLevelFP: 'FPB',
         courseLevelPDC: 'ESO',
-        searchProjects: 'Search'
+        searchProjects: 'Search',
+        noProjectsInSection: 'No hay proyectos en esta sección.',
+        untitledProject: 'Proyecto sin título',
+        viewError: 'Ver Error',
+        openEditor: 'Abrir Editor',
+        deleteFile: 'Borrar archivo'
       })
     };
 

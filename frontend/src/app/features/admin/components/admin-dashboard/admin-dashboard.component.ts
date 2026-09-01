@@ -55,14 +55,25 @@ import { AdminFacade } from '../../services/admin.facade';
               </p>
             </div>
             
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
               @if (u.role === 'pending') {
-                <button (click)="approveUser(u._id)" style="background: #27ae60; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
-                  Aprobar (Hacer Profesor)
+                <button (click)="approveUser(u._id)" style="background: #27ae60; color: white; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85rem;">
+                  Aprobar (Profesor)
+                </button>
+              } @else if (u.role === 'teacher') {
+                <button (click)="changeRole(u._id, 'admin')" style="background: #8e44ad; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85rem;">
+                  Hacer Admin
+                </button>
+              } @else if (u.role === 'admin') {
+                <button (click)="changeRole(u._id, 'teacher')" style="background: #f39c12; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85rem;">
+                  Hacer Profesor
                 </button>
               }
-              <button (click)="toggleAiAccess(u._id, u.canUseAi)" [style.background]="u.canUseAi ? '#e74c3c' : '#3498db'" style="color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+              <button (click)="toggleAiAccess(u._id, u.canUseAi)" [style.background]="u.canUseAi ? '#e74c3c' : '#3498db'" style="color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85rem;">
                 {{ u.canUseAi ? 'Desactivar IA' : 'Activar IA' }}
+              </button>
+              <button (click)="deleteUser(u._id)" style="background: #ef4444; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85rem;">
+                Eliminar
               </button>
             </div>
           </div>
@@ -118,8 +129,6 @@ export class AdminDashboardComponent {
   schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
   isSavingSettings = signal(false);
   saveSuccess = signal<boolean>(false);
-  
-  
 
   constructor() {
     this.adminFacade.loadUsers();
@@ -147,14 +156,18 @@ export class AdminDashboardComponent {
   }
 
   approveUser(userId: string) {
-    this.adminFacade.updateUserRole(userId, 'teacher').subscribe(() => {
-      this.adminFacade.loadUsers();
-    });
+    this.adminFacade.updateUserRole(userId, 'teacher').subscribe();
+  }
+
+  changeRole(userId: string, newRole: string) {
+    this.adminFacade.updateUserRole(userId, newRole).subscribe();
   }
 
   toggleAiAccess(userId: string, currentStatus: boolean) {
-    this.adminFacade.updateUserAi(userId, !currentStatus).subscribe(() => {
-      this.adminFacade.loadUsers();
-    });
+    this.adminFacade.updateUserAi(userId, !currentStatus).subscribe();
+  }
+
+  deleteUser(userId: string) {
+    this.adminFacade.deleteUser(userId).subscribe();
   }
 }

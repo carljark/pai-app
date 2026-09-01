@@ -41,3 +41,17 @@ export const updateUserPermissions = async (req: any, res: Response) => {
     res.status(500).json({ error: 'Error al actualizar permisos' });
   }
 };
+
+export const deleteUser = async (req: any, res: Response) => {
+  try {
+    const { id } = req.params;
+    if (req.user?._id?.toString() === id) {
+      return res.status(400).json({ error: 'No puedes eliminar tu propia cuenta de administrador' });
+    }
+    const user = await User.findByIdAndDelete(id);
+    if (!user) return res.status(404).json({ error: 'Usuario no encontrado' });
+    res.json({ message: 'Usuario eliminado exitosamente' });
+  } catch (err) {
+    res.status(500).json({ error: 'Error al eliminar usuario' });
+  }
+};

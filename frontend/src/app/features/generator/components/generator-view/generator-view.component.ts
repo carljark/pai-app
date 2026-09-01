@@ -33,11 +33,11 @@ import { AppFacade } from '../../../../app.facade'; // Will be created to hold g
             [value]="curriculum.curso()" 
             (change)="onCourseChange($event)">
             @if (curriculum.tipoNivel() === 'FP_BASICA') {
-              <option value="1º">1º</option>
-              <option value="2º">2º</option>
+              <option value="1º">{{ trans.t().firstYearOption }}</option>
+              <option value="2º">{{ trans.t().secondYearOption }}</option>
             } @else {
-              <option value="3º">3º</option>
-              <option value="4º">4º</option>
+              <option value="3º">{{ trans.t().thirdYearOption }}</option>
+              <option value="4º">{{ trans.t().fourthYearOption }}</option>
             }
           </select>
         </div>

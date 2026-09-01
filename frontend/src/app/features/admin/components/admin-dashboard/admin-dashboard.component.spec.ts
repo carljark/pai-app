@@ -20,6 +20,7 @@ describe('AdminDashboardComponent', () => {
       loadLogs: vi.fn(),
       updateUserRole: vi.fn().mockReturnValue(of({})),
       updateUserAi: vi.fn().mockReturnValue(of({})),
+      deleteUser: vi.fn().mockReturnValue(of({})),
       saveSettings: vi.fn().mockReturnValue(of({}))
     };
 
@@ -35,12 +36,18 @@ describe('AdminDashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  
   it('should cover component methods directly', () => {
     // approveUser
     component.approveUser('1');
     expect(mockFacade.updateUserRole).toHaveBeenCalledWith('1', 'teacher');
-    expect(mockFacade.loadUsers).toHaveBeenCalled();
+
+    // changeRole
+    component.changeRole('1', 'admin');
+    expect(mockFacade.updateUserRole).toHaveBeenCalledWith('1', 'admin');
+
+    // deleteUser
+    component.deleteUser('1');
+    expect(mockFacade.deleteUser).toHaveBeenCalledWith('1');
 
     // toggleAiAccess
     component.toggleAiAccess('2', false);
@@ -53,18 +60,17 @@ describe('AdminDashboardComponent', () => {
     expect(mockFacade.saveSettings).toHaveBeenCalled();
   });
 
-  
   it('should handle saveSettings error', () => {
     mockFacade.saveSettings.mockReturnValue(throwError(() => new Error('err')));
     component.saveSettings(new Event('submit'));
     expect(component.saveSuccess()).toBe(false);
   });
 
-  
   it('should trigger ALL HTML events safely', () => {
     mockFacade.users.set([
       { _id: '1', role: 'pending', canUseAi: false },
-      { _id: '2', role: 'teacher', canUseAi: true }
+      { _id: '2', role: 'teacher', canUseAi: true },
+      { _id: '3', role: 'admin', canUseAi: false }
     ]);
     mockFacade.logs.set([{ _id: '1', action: 'test', projectId: { title: 'T' }, details: { generationTimeMs: 1000, error: 'err' } }]);
     fixture.detectChanges();
@@ -132,19 +138,17 @@ describe('AdminDashboardComponent', () => {
   it('should approve user', () => {
     component.approveUser('1');
     expect(mockFacade.updateUserRole).toHaveBeenCalledWith('1', 'teacher');
-    expect(mockFacade.loadUsers).toHaveBeenCalled();
   });
 
   it('should toggle AI access', () => {
     component.toggleAiAccess('1', false);
     expect(mockFacade.updateUserAi).toHaveBeenCalledWith('1', true);
-    expect(mockFacade.loadUsers).toHaveBeenCalled();
   });
 
   it('should render users', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Test User');
-    expect(compiled.textContent).toContain('Aprobar (Hacer Profesor)');
+    expect(compiled.textContent).toContain('Aprobar (Profesor)');
     expect(compiled.textContent).toContain('Activar IA');
   });
 

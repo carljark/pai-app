@@ -1,6 +1,7 @@
 import { Component, inject, input, output, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurriculumFacade } from '../../services/curriculum.facade';
+import { TranslationService } from '../../../../services/translation.service';
 
 @Component({
   selector: 'app-curriculum-selector',
@@ -54,7 +55,7 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
                         <div>
                           <strong style="color: #2980b9;">{{ item.index }}.</strong> {{ item.shortDesc }}
                         </div>
-                        <button (click)="facade.toggleRa(item.fullDesc)" style="background: none; border: none; color: #e74c3c; cursor: pointer; padding: 0 5px;" title="Quitar">
+                        <button (click)="facade.toggleRa(item.fullDesc)" style="background: none; border: none; color: #e74c3c; cursor: pointer; padding: 0 5px;" [title]="trans.t().removeTooltip">
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                         </button>
                       </li>
@@ -95,6 +96,7 @@ import { CurriculumFacade } from '../../services/curriculum.facade';
 })
 export class CurriculumSelectorComponent {
   facade = inject(CurriculumFacade);
+  trans = inject(TranslationService);
   title = input.required<string>();
   isOpen = signal(true);
   

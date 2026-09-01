@@ -88,4 +88,53 @@ describe('Admin Endpoints', () => {
     expect(resErr.status).toBe(500);
     spyFind.mockRestore();
   });
+
+  it('Debería poder actualizar permisos vía /role, /ai y eliminar usuario vía DELETE', async () => {
+    const { token, user: adminUser } = await createTestUser('admin', 'admin5@plappin.org');
+    const { user: targetUser } = await createTestUser('pending', 'target@test.com');
+
+    // PUT /role
+    const resRole = await request(app)
+      .put(`/api/admin/users/${targetUser._id}/role`)
+      .set('Authorization', `Bearer ${token}`)
+      .send({ role: 'teacher' });
+    expect(resRole.status).toBe(200);
+    expect(resRole.body.role).toBe('teacher');
+
+    // PUT /ai
+    const resAi = await request(app)
+      .put(`/api/admin/users/${targetUser._id}/ai`)
+      .set('Authorization', `Bearer ${token}`)
+      .send({ canUseAi: true });
+    expect(resAi.status).toBe(200);
+    expect(resAi.body.canUseAi).toBe(true);
+
+    // DELETE propio admin (error 400)
+    const resDelSelf = await request(app)
+      .delete(`/api/admin/users/${adminUser._id}`)
+      .set('Authorization', `Bearer ${token}`);
+    expect(resDelSelf.status).toBe(400);
+
+    // DELETE usuario existente (éxito 200)
+    const resDel = await request(app)
+      .delete(`/api/admin/users/${targetUser._id}`)
+      .set('Authorization', `Bearer ${token}`);
+    expect(resDel.status).toBe(200);
+
+    // DELETE usuario inexistente (404)
+    const fakeId = new mongoose.Types.ObjectId();
+    const resDel404 = await request(app)
+      .delete(`/api/admin/users/${fakeId}`)
+      .set('Authorization', `Bearer ${token}`);
+    expect(resDel404.status).toBe(404);
+
+    // DELETE error 500
+    const User = mongoose.model('User');
+    const spyDelete = vi.spyOn(User, 'findByIdAndDelete').mockRejectedValueOnce(new Error('DB'));
+    const resDel500 = await request(app)
+      .delete(`/api/admin/users/${fakeId}`)
+      .set('Authorization', `Bearer ${token}`);
+    expect(resDel500.status).toBe(500);
+    spyDelete.mockRestore();
+  });
 });

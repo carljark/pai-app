@@ -71,11 +71,11 @@ import { NotificationsBadgeComponent } from '../../../features/notifications/com
       </nav>
       
       <div style="flex-grow: 1;"></div>
-      <div class="sidebar-ies-logo-container" style="display: flex; align-items: center; justify-content: center; margin: 12px 0 8px 0;">
+      <div class="sidebar-ies-logo-container" style="display: flex; align-items: center; justify-content: center; margin: 16px 0 12px 0; padding: 0 4px; width: 100%; box-sizing: border-box;">
         @if (!layout.isSidebarCollapsed()) {
-          <img src="logo-ies.png" alt="IES Cap de Llevant" style="max-height: 52px; max-width: 140px; object-fit: contain; width: 100%;">
+          <img src="logo-ies.png" alt="IES Cap de Llevant" style="max-height: 150px; max-width: 100%; width: 100%; object-fit: contain;">
         } @else {
-          <img src="logo-ies.png" alt="IES Cap de Llevant" class="desktop-only" style="max-height: 24px; max-width: 32px; object-fit: contain;">
+          <img src="logo-ies.png" alt="IES Cap de Llevant" class="desktop-only" style="max-height: 28px; max-width: 36px; object-fit: contain;">
         }
       </div>
       <div class="sidebar-username" style="text-align: center; color: #9ca3af; font-size: 0.75rem;">

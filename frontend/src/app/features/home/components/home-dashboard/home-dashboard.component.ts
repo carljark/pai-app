@@ -17,7 +17,6 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
       <div class="home-hero">
         <div class="home-hero__logo-container">
           <img src="word-transparent.png" alt="plappin" class="home-hero__word">
-          <img src="logo-transparent.png" alt="Logo" class="home-hero__logo">
         </div>
         <p class="home-hero__greeting">{{ t().homeGreeting }}, <strong>{{ userName() }}</strong>!</p>
         <div class="home-hero__description" [innerHTML]="t().homeDescription"></div>
@@ -137,34 +136,20 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
       align-items: center;
       justify-content: center;
       width: 100%;
-      gap: 28px;
-      margin: 8px 0 12px 0;
-      flex-wrap: wrap;
+      margin: 8px 0 16px 0;
     }
     
     .home-hero__word {
-      height: 115px;
-      width: auto;
-      max-width: 65%;
-      object-fit: contain;
-    }
-
-    .home-hero__logo {
-      height: 90px;
-      width: auto;
-      max-width: 30%;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 180px;
       object-fit: contain;
     }
 
     @media (max-width: 640px) {
-      .home-hero__logo-container {
-        gap: 16px;
-      }
       .home-hero__word {
-        height: 75px;
-      }
-      .home-hero__logo {
-        height: 60px;
+        max-height: 110px;
       }
     }
 

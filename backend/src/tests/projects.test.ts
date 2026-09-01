@@ -273,4 +273,67 @@ describe('Projects Endpoints', () => {
     });
     expect(res.status).toBe(202);
   });
+
+  it('POST /api/projects/rewrite - Debería reescribir una sección del proyecto', async () => {
+    const { token } = await createTestUser('teacher', 'teacher_rewrite@test.com');
+    
+    // Caso éxito
+    const res = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        context: '# Proyecto Actual',
+        selectedText: 'Texto a cambiar',
+        instruction: 'Hazlo más corto'
+      });
+    expect(res.status).toBe(200);
+    expect(res.body.newText).toBeDefined();
+
+    // Caso 400 (falta texto seleccionado o instrucción)
+    const res400 = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({ context: '# Proyecto' });
+    expect(res400.status).toBe(400);
+
+    // Caso 500
+    const aiModule = await import('../services/ai.service');
+    const spy = vi.spyOn(aiModule, 'generateGeminiContent').mockRejectedValueOnce(new Error('AI Failure'));
+    const res500 = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        context: '# Proyecto',
+        selectedText: 'Texto',
+        instruction: 'Cambiar'
+      });
+    expect(res500.status).toBe(500);
+    spy.mockRestore();
+  });
+
+  it('GET /api/projects/stream - Debería establecer SSE para usuario autenticado', async () => {
+    const { user } = await createTestUser('teacher', 'teacher_stream@test.com');
+    const { streamUpdates } = await import('../controllers/project.controller');
+    
+    let closeCallback: any;
+    const mockReq = {
+      user: user,
+      on: vi.fn((event, cb) => {
+        if (event === 'close') closeCallback = cb;
+      })
+    };
+    const mockRes = {
+      setHeader: vi.fn(),
+      flushHeaders: vi.fn(),
+      write: vi.fn(),
+      status: vi.fn().mockReturnThis(),
+      json: vi.fn()
+    };
+
+    streamUpdates(mockReq as any, mockRes as any);
+
+    expect(mockRes.setHeader).toHaveBeenCalledWith('Content-Type', 'text/event-stream');
+    expect(mockRes.write).toHaveBeenCalled();
+    if (closeCallback) closeCallback();
+  });
 });

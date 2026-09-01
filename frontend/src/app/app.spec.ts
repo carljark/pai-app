@@ -59,7 +59,8 @@ describe('App', () => {
       projects: signal([]),
       isGenerating: signal(false), projectsHistory: signal([]), currentProjectId: signal(null), isUploading: signal(false), loadHistory: vi.fn(), currentProject: signal(null),
       step: signal(0),
-      hasActiveGeneration: signal(false)
+      hasActiveGeneration: signal(false),
+      methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)')
     };
     const mockAdminFacade = {
       settings: signal({}),

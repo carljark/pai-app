@@ -16,12 +16,12 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
       <!-- Hero Section -->
       <div class="home-hero">
         <div class="home-hero__logo-container">
-          <img src="word-transparent.png" alt="Plappin" class="home-hero__word">
+          <img src="word-transparent.png" alt="plappin" class="home-hero__word">
           <img src="logo-transparent.png" alt="Logo" class="home-hero__logo">
         </div>
-        <h1 class="home-hero__title">{{ t().homeTitle }}</h1>
         <p class="home-hero__greeting">{{ t().homeGreeting }}, <strong>{{ userName() }}</strong>!</p>
         <div class="home-hero__description" [innerHTML]="t().homeDescription"></div>
+        <div class="home-hero__disclaimer" [innerHTML]="t().homeAiDisclaimer"></div>
 
         <!-- CTA Buttons -->
         <div class="home-hero__actions">
@@ -85,6 +85,11 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
           }
         }
       </div>
+
+      <!-- Footer with IES Logo -->
+      <div class="home-footer">
+        <img src="logo-ies.png" alt="IES Cap de Llevant" class="home-footer__ies-logo">
+      </div>
     </div>
   `,
   styles: [`
@@ -113,7 +118,7 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     .home-dashboard {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 36px;
       max-width: 900px;
       margin: 0 auto;
       padding: 24px 0;
@@ -123,10 +128,10 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     .home-hero {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
       gap: 16px;
-      padding: 40px 24px;
+      padding: 36px 28px;
       background: linear-gradient(135deg, var(--c-primary-light) 0%, var(--c-surface) 100%);
       border-radius: 16px;
       border: 1px solid var(--c-border);
@@ -135,32 +140,24 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     .home-hero__logo-container {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 16px;
     }
     
     .home-hero__word {
-      height: 88px;
+      height: 80px;
       width: auto;
       object-fit: contain;
     }
 
     .home-hero__logo {
-      height: 72px;
+      height: 64px;
       width: auto;
       object-fit: contain;
     }
 
-    .home-hero__title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--c-text);
-      line-height: 1.2;
-      margin: 0;
-    }
-
     .home-hero__greeting {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--c-text-muted);
       margin: 0;
     }
@@ -168,34 +165,46 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
     .home-hero__description {
       font-size: 1rem;
       color: var(--c-text-muted);
-      max-width: 760px;
+      width: 100%;
       line-height: 1.7;
       margin: 0;
+      text-align: left;
     }
 
-    .home-hero__pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-    }
-
-    .home-pill {
-      background: var(--c-surface);
-      border: 1px solid var(--c-border);
-      color: var(--c-primary-dark);
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 500;
+    .home-hero__disclaimer {
+      font-style: italic;
+      width: 100%;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.75);
+      border-left: 4px solid var(--c-primary);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--c-text);
+      text-align: left;
+      box-sizing: border-box;
     }
 
     .home-hero__actions {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       margin-top: 8px;
+    }
+
+    .home-footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 16px;
+      margin-top: -10px;
+    }
+
+    .home-footer__ies-logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
     }
 
     /* ─── CTA Buttons ──────────────────────────────────────────────────────── */

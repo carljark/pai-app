@@ -128,7 +128,7 @@ El resultado debe ser un manual instruccional exhaustivo y listo para imprimir q
 
 Formatea el texto final como Markdown profesional (NO lo envuelvas en markdown \`\`\` o similares, escribe directamente el texto Markdown).
 MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII (como +-----, |    |, etc.) bajo ningún concepto para esquemas o secuencias. Si necesitas tabular información, utiliza ÚNICAMENTE el formato estándar de tablas Markdown (usando | y -). Para resaltar texto, usa bloques de cita (>).
-REGLA CRÍTICA SOBRE EXPRESIONES MATEMÁTICAS: Cuando incluyas fórmulas, unidades o notación matemática, usa SIEMPRE la sintaxis LaTeX entre delimitadores $. CADA expresión matemática debe tener exactamente UN $ de apertura y UN $ de cierre: correcto→ $\text{kg}$, incorrecto→ $\text{kg}. Si quieres listar varias unidades dentro de una misma expresión matemática agrúpalas dentro de UN SOLO par de delimitadores, por ejemplo: $\text{kg}, \text{g}, \text{mg}$ (un solo par de $). NUNCA pongas un $ adicional antes de cada elemento de la lista.
+REGLA ESTRICTA SOBRE TEXTO, NÚMEROS Y UNIDADES (PROHIBIDO LATEX): Escribe SIEMPRE los números, minutos, horas, unidades (kg, g, m, etc.), paréntesis y acotaciones en TEXTO PLANO NORMAL de Markdown (por ejemplo: "(165 minutos totales)", "50 kg", "2 horas"). NUNCA utilices notación LaTeX, comandos \\text{...}, ni delimitadores con el símbolo de dólar ($) bajo ningún concepto para números, duraciones o texto estándar.
 Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}`;
@@ -258,5 +258,42 @@ export const deleteProject = async (req: any, res: Response) => {
     res.json({ message: "Proyecto borrado exitosamente" });
   } catch (error) {
     res.status(500).json({ error: "Error al borrar proyecto" });
+  }
+};
+
+export const rewriteSection = async (req: any, res: Response) => {
+  try {
+    const { context, selectedText, instruction } = req.body;
+    if (!selectedText || !instruction) {
+      return res.status(400).json({ error: "Falta texto seleccionado o instrucción" });
+    }
+
+    const prompt = `Eres el Motor Pedagógico PAI. El profesor está editando un proyecto intermodular.
+Este es el PROYECTO ACTUAL (en formato Markdown):
+${context}
+
+El profesor ha seleccionado el siguiente texto:
+"""
+${selectedText}
+"""
+
+INSTRUCCIÓN DEL PROFESOR para ese fragmento:
+${instruction}
+
+TAREA:
+1. Localiza a qué parte del PROYECTO ACTUAL corresponde el texto seleccionado.
+2. Reescribe esa parte según la instrucción del profesor.
+3. Devuelve el PROYECTO COMPLETO con el cambio ya integrado.
+
+REGLAS ESTRICTAS:
+- Mantén el resto del proyecto EXACTAMENTE IGUAL.
+- Escribe en texto plano Markdown normal. NUNCA uses notación LaTeX, comandos \\text{...} ni símbolos de dólar ($) para números, cantidades o minutos.
+- Devuelve ÚNICAMENTE el texto Markdown resultante sin bloques de código tipo \`\`\`markdown, sin saludos ni explicaciones.`;
+
+    const text = await generateGeminiContent(prompt, "Eres un asistente pedagógico de edición curricular.");
+    res.json({ newText: text });
+  } catch (error: any) {
+    console.error("Error en reescritura IA:", error);
+    res.status(500).json({ error: "Error al contactar con la IA para reescribir" });
   }
 };

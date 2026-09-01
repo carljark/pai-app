@@ -83,7 +83,17 @@
   </div>
 
   <div class="taller-layout" [class.resources-collapsed]="isMobileResourcesCollapsed()">
-    <div class="card taller-content" style="flex: 1; min-width: 0;">
+    <div class="card taller-content" style="flex: 1; min-width: 0; position: relative;">
+      @if (projects.isThinking()) {
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(3px); z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border-radius: 12px;">
+          <div style="width: 48px; height: 48px; border: 4px solid #e2e8f0; border-top: 4px solid #4a7c65; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+          <div style="font-weight: 600; color: #1e293b; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            {{ trans.t().thinking }}
+          </div>
+          <p style="margin: 0; font-size: 0.9rem; color: #64748b;">La IA está aplicando los cambios solicitados al documento...</p>
+        </div>
+      }
       <div id="pdf-content" (mouseup)="captureSelection()" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
         @if (projects.currentProject()?.userId?.name) {
           <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: #166534; font-size: 0.9rem;">

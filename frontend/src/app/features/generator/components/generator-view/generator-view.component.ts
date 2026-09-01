@@ -25,7 +25,7 @@ import { AppFacade } from '../../../../app.facade'; // Will be created to hold g
           </div>
         </div>
         
-        <div class="form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
+        <div class="form-group" style="flex: 1; min-width: 200px; margin-bottom: 0;">
           <label>{{ trans.t().generatorCourseLabel }}</label>
           <div class="tabs">
             @if (curriculum.tipoNivel() === 'FP_BASICA') {
@@ -35,6 +35,15 @@ import { AppFacade } from '../../../../app.facade'; // Will be created to hold g
               <div class="tabs-item" [class.active]="curriculum.curso() === '3º'" (click)="curriculum.setCurso('3º')">3º</div>
               <div class="tabs-item" [class.active]="curriculum.curso() === '4º'" (click)="curriculum.setCurso('4º')">4º</div>
             }
+          </div>
+        </div>
+
+        <div class="form-group" style="flex: 2; min-width: 320px; margin-bottom: 0;">
+          <label>{{ trans.t().generatorMethodologyLabel }}</label>
+          <div class="tabs">
+            <div class="tabs-item" [class.active]="projects.methodology().includes('ABP')" (click)="projects.methodology.set('ABP (Aprendizaje Basado en Problemas / Proyectos)')">{{ trans.t().methodologyABP }}</div>
+            <div class="tabs-item" [class.active]="projects.methodology().includes('ABR')" (click)="projects.methodology.set('ABR (Aprendizaje Basado en Retos)')">{{ trans.t().methodologyABR }}</div>
+            <div class="tabs-item" [class.active]="projects.methodology().includes('ApS')" (click)="projects.methodology.set('ApS (Aprendizaje y Servicio)')">{{ trans.t().methodologyApS }}</div>
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ describe('TranslationService', () => {
   it('should return castellano translations by default', () => {
     expect(service.t().logout).toBe('Salir');
     expect(service.t().downloadWord).toBe('Bajar como Word');
-    expect(service.t().homeTitle).toBe('Plataforma de Proyectos Interdisciplinares');
+    expect(service.t().homeTitle).toBe('plappin');
   });
 
   it('should return catalan translations when language is set to catalan', () => {
@@ -38,6 +38,6 @@ describe('TranslationService', () => {
     
     expect(service.t().logout).toBe('Sortir');
     expect(service.t().downloadWord).toBe('Descarregar com a Word');
-    expect(service.t().homeTitle).toBe('Plataforma de Projectes Interdisciplinaris');
+    expect(service.t().homeTitle).toBe('plappin');
   });
 });

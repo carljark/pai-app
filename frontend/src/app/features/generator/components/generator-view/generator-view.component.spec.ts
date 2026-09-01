@@ -56,7 +56,8 @@ describe('GeneratorViewComponent', () => {
   mockCurriculum.tipoNivel.set = mockSet;
 
   const mockProjects = {
-    isGenerating: signal(false)
+    isGenerating: signal(false),
+    methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)')
   };
 
   const mockAppFacade = {
@@ -133,5 +134,19 @@ describe('GeneratorViewComponent', () => {
     const selectorDe = fixture.debugElement.query(By.css('app-curriculum-selector'));
     const selectorInstance = selectorDe.componentInstance as MockCurriculumSelectorComponent;
     expect((selectorInstance as any).isGenerating()).toBe(true);
+  });
+
+  it('should change methodology on click', () => {
+    fixture.detectChanges();
+    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
+    if (tabs.length >= 7) {
+      tabs[4].click();
+      fixture.detectChanges();
+      tabs[5].click();
+      fixture.detectChanges();
+      tabs[6].click();
+      fixture.detectChanges();
+      expect(mockProjects.methodology()).toContain('ApS');
+    }
   });
 });

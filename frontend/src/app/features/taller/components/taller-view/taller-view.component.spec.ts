@@ -208,11 +208,14 @@ describe('TallerViewComponent', () => {
 
     // Set selection to cover clearSelection branch
     component.capturedSelection.set('Texto seleccionado');
+    mockProjectsFacade.isThinking.set(true);
     fixture.detectChanges();
     buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
     buttons.forEach((b: any) => {
       try { b.click(); } catch(e) {}
     });
+    mockProjectsFacade.isThinking.set(false);
+    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -12,12 +12,18 @@ export class CurriculumFacade {
 
   // Configuración base que afecta al currículum
   tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'>('FP_BASICA');
+  curso = signal<string>('1º');
 
   setTipoNivel(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR') {
     if (this.tipoNivel() !== nivel) {
       this.tipoNivel.set(nivel);
+      this.curso.set(nivel === 'FP_BASICA' ? '1º' : '3º');
       this.clearSelection();
     }
+  }
+
+  setCurso(c: string) {
+    this.curso.set(c);
   }
 
   // Estado UI de la selección (usamos selectedRas para ambos niveles temporalmente por legado)

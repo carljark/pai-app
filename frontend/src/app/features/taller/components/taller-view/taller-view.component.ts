@@ -25,8 +25,8 @@ export class TallerViewComponent {
   auth = inject(AuthFacade);
   paiService = inject(PaiService);
 
-  isRewriting = signal<boolean>(false);
   isSidebarCollapsed = signal<boolean>(false);
+  isMobileResourcesCollapsed = signal<boolean>(typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
 
   sortByDate = (a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
 
@@ -99,8 +99,21 @@ export class TallerViewComponent {
     }
   }
 
+  capturedSelection = signal<string>('');
+
+  captureSelection() {
+    const text = window.getSelection()?.toString().trim();
+    if (text) {
+      this.capturedSelection.set(text);
+    }
+  }
+
+  clearSelection() {
+    this.capturedSelection.set('');
+  }
+
   rewriteWithAI() {
-    const selectedText = window.getSelection()?.toString();
+    const selectedText = this.capturedSelection();
     const instruction = this.projects.aiPrompt();
     if (!selectedText || !instruction) {
       this.appFacade.infoTitle.set('Atención');
@@ -114,6 +127,7 @@ export class TallerViewComponent {
       next: (res) => {
         this.projects.generatedProject.set(res.newText);
         this.projects.aiPrompt.set('');
+        this.capturedSelection.set('');
         this.projects.isThinking.set(false);
         this.projects.updateProjectStatus('borrador')?.subscribe();
       },

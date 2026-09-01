@@ -13,6 +13,7 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade = {
       selectedRas: vi.fn(),
       tipoNivel: vi.fn(),
+      curso: vi.fn(),
       ras: vi.fn(),
       ces: vi.fn()
     };
@@ -86,12 +87,11 @@ describe('ProjectsFacade', () => {
 
   it('should generate project (FP_BASICA)', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
+    mockCurriculumFacade.curso.mockReturnValue('2º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
     mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
     
     facade.methodology.set('ABP');
-    facade.courseLevel.set('2');
-    
     facade.generateProject('castellano', 'Custom Title').subscribe();
     
     const req = httpMock.expectOne('/api/projects/generate');
@@ -102,7 +102,7 @@ describe('ProjectsFacade', () => {
       modules: ['ModA'],
       tipoNivel: 'FP_BASICA',
       language: 'castellano',
-      courseLevel: '2',
+      courseLevel: '2º',
       title: 'Custom Title'
     });
     req.flush({});
@@ -110,6 +110,7 @@ describe('ProjectsFacade', () => {
 
   it('should generate project (DIVERSIFICACION_CURRICULAR)', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('DIVERSIFICACION_CURRICULAR');
+    mockCurriculumFacade.curso.mockReturnValue('4º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['CE1']);
     mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
     
@@ -236,57 +237,20 @@ describe('ProjectsFacade', () => {
     expect(facade.importDocx(new File([''], 'test.docx'))).toBeUndefined();
   });
 
-  describe('formattedGeneratedProject (sanitizeMath)', () => {
+  describe('formattedGeneratedProject', () => {
     it('should return empty string when generatedProject is empty', () => {
       facade.generatedProject.set('');
       expect(facade.formattedGeneratedProject()).toBe('');
     });
 
-    it('should pass through well-formed LaTeX unchanged', () => {
+    it('should pass through content unchanged', () => {
       const input = 'Masa ($\\text{kg}, \\text{g}, \\text{mg}$) y volumen ($\\text{L}$).';
       facade.generatedProject.set(input);
-      // $ count per line is even → no changes expected
       expect(facade.formattedGeneratedProject()).toBe(input);
     });
 
-    it('should remove spurious $ after comma: "$A, $B, C$" → "$A, B, C$"', () => {
-      const input = 'masa ($\\text{kg}, $\\text{g}, \\text{mg}$)';
-      facade.generatedProject.set(input);
-      const result = facade.formattedGeneratedProject();
-      // The extra $ before \text{g} should be removed
-      expect(result).not.toContain(', $\\text{g}');
-    });
-
-    it('should remove spurious $ after semicolon', () => {
-      const input = 'unidades ($\\text{L}; $\\text{mL}$)';
-      facade.generatedProject.set(input);
-      const result = facade.formattedGeneratedProject();
-      expect(result).not.toContain('; $\\text{mL}');
-    });
-
-    it('should remove orphan $ when count is odd on a line', () => {
-      const input = 'Línea con un dólar $suelto';
-      facade.generatedProject.set(input);
-      const result = facade.formattedGeneratedProject();
-      // Odd $ count → last orphan $ removed
-      const dollarCount = (result.match(/\$/g) || []).length;
-      expect(dollarCount % 2).toBe(0);
-    });
-
-    it('should handle multiline content line by line', () => {
-      const firstLine = 'Primera línea $a = b$';
-      const secondLine = 'Segunda línea $c, $d, e$';
-      const input = `${firstLine}\n${secondLine}`;
-      facade.generatedProject.set(input);
-      const result = facade.formattedGeneratedProject();
-      // First line is even (2 $) → unchanged
-      expect(result.split('\n')[0]).toBe(firstLine);
-      // Second line has 3 $ → spurious comma-$ removed
-      expect(result.split('\n')[1]).not.toContain(', $d');
-    });
-
-    it('should not alter $$ block math delimiters', () => {
-      const input = '$$E = mc^2$$';
+    it('should handle multiline content', () => {
+      const input = 'Primera línea\nSegunda línea';
       facade.generatedProject.set(input);
       expect(facade.formattedGeneratedProject()).toBe(input);
     });

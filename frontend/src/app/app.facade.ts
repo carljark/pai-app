@@ -117,7 +117,10 @@ export class AppFacade {
 
   viewPastProject(project: any) {
     this.projects.currentProjectId.set(project._id);
-    this.projects.generatedProject.set(project.generatedContent?.rawText || 'Sin contenido');
+    const rawText = typeof project.generatedContent === 'string' 
+      ? project.generatedContent 
+      : project.generatedContent?.rawText;
+    this.projects.generatedProject.set(rawText || 'Sin contenido');
     this.curriculum.selectedRas.set(project.ras || []);
     this.curriculum.tipoNivel.set(project.tipoNivel || 'FP_BASICA');
     this.projects.loadProjectFiles();

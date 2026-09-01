@@ -53,7 +53,7 @@ describe('App', () => {
     const mockCurriculumFacade = {
       ras: signal([]),
       modules: signal([]),
-      isLoading: signal(false), tipoNivel: signal('FP_BASICA'), groupedItems: signal([]), selectedRas: signal([]), selectedItemsDetails: signal([]), groupedSelectedItems: signal([]), getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }), toggleRa: vi.fn()
+      isLoading: signal(false), tipoNivel: signal('FP_BASICA'), curso: signal('1º'), groupedItems: signal([]), selectedRas: signal([]), selectedItemsDetails: signal([]), groupedSelectedItems: signal([]), getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }), toggleRa: vi.fn()
     };
     const mockProjectsFacade = {
       projects: signal([]),

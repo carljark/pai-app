@@ -41,13 +41,15 @@ describe('GeneratorViewComponent', () => {
 
   const mockCurriculum = {
     tipoNivel: signal('FP_BASICA'),
+    curso: signal('1º'),
     groupedItems: signal([]),
     selectedRas: signal([]),
     selectedItemsDetails: signal([]),
     groupedSelectedItems: signal([]),
     getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }),
     toggleRa: vi.fn(),
-    setTipoNivel: vi.fn((val) => mockCurriculum.tipoNivel.set(val))
+    setTipoNivel: vi.fn((val) => mockCurriculum.tipoNivel.set(val)),
+    setCurso: vi.fn((val) => mockCurriculum.curso.set(val))
   };
   mockCurriculum.tipoNivel.set = vi.fn((val) => mockCurriculum.tipoNivel.set(val));
   const mockSet = vi.fn((v) => { mockCurriculum.tipoNivel = signal(v); mockCurriculum.tipoNivel.set = mockSet; });
@@ -101,6 +103,28 @@ describe('GeneratorViewComponent', () => {
     const selectorDe = fixture.debugElement.query(By.css('app-curriculum-selector'));
     selectorDe.triggerEventHandler('generate', null);
     expect(mockAppFacade.generateProject).toHaveBeenCalled();
+  });
+
+  it('should change curso on click', () => {
+    mockCurriculum.tipoNivel.set('FP_BASICA');
+    fixture.detectChanges();
+    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
+    
+    tabs[3].click(); // click '2º'
+    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('2º');
+    
+    tabs[2].click(); // click '1º'
+    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('1º');
+    
+    mockCurriculum.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
+    fixture.detectChanges();
+    const newTabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
+    
+    newTabs[2].click(); // click '3º'
+    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('3º');
+    
+    newTabs[3].click(); // click '4º'
+    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('4º');
   });
 
   it('should disable generate button if generating', () => {

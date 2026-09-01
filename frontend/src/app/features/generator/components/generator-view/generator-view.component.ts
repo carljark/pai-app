@@ -16,11 +16,26 @@ import { AppFacade } from '../../../../app.facade'; // Will be created to hold g
       <h2 class="app-header-title">{{ trans.t().subtitle }}</h2>
     </div>
     <div class="card">
-      <div class="form-group">
-        <label>{{ trans.t().generatorLevelLabel }}</label>
-        <div class="tabs">
-          <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
-          <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">ESO</div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
+        <div class="form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
+          <label>{{ trans.t().generatorLevelLabel }}</label>
+          <div class="tabs">
+            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
+            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">ESO</div>
+          </div>
+        </div>
+        
+        <div class="form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
+          <label>{{ trans.t().generatorCourseLabel }}</label>
+          <div class="tabs">
+            @if (curriculum.tipoNivel() === 'FP_BASICA') {
+              <div class="tabs-item" [class.active]="curriculum.curso() === '1º'" (click)="curriculum.setCurso('1º')">1º</div>
+              <div class="tabs-item" [class.active]="curriculum.curso() === '2º'" (click)="curriculum.setCurso('2º')">2º</div>
+            } @else {
+              <div class="tabs-item" [class.active]="curriculum.curso() === '3º'" (click)="curriculum.setCurso('3º')">3º</div>
+              <div class="tabs-item" [class.active]="curriculum.curso() === '4º'" (click)="curriculum.setCurso('4º')">4º</div>
+            }
+          </div>
         </div>
       </div>
       

@@ -59,7 +59,7 @@ export const generateProject = async (req: any, res: Response) => {
     }
 
     // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes, enriquecido con coincidencias de FPB)
-    const { modules, selectedRas, methodology, tipoNivel, title, language } = req.body;
+    const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel } = req.body;
     const settings = await Settings.findOne();
     const { schoolContextStr, intefExamplesContext } = buildContexts(settings);
 
@@ -158,8 +158,10 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
       return `- ${selectedStr}`;
     });
 
-    const userPrompt = `Diseña la propuesta integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
-${enrichedRas.join('\n\n')}`;
+    const userPrompt = `Diseña la propuesta para alumnos de ${courseLevel || 'un curso a determinar'}, integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
+${enrichedRas.join('\n\n')}
+
+INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un apartado o epígrafe inicial titulado "Identidad del Proyecto" donde indiques explícitamente el curso al que va dirigido (${courseLevel || 'un curso a determinar'}), junto con otros datos identificativos que consideres oportunos (título, duración, etc.).`;
 
     // 4. GUARDAR EN COLA EN LUGAR DE LLAMAR A LA IA
     const newProject = new Project({

@@ -54,16 +54,6 @@
   <div class="app-header">
     <h2 class="app-header-title">{{ trans.t().workshopTitle }}</h2>
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <button (click)="isSidebarCollapsed.set(!isSidebarCollapsed())" class="btn-secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          @if (isSidebarCollapsed()) {
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line>
-          } @else {
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="15" y1="3" x2="15" y2="21"></line>
-          }
-        </svg>
-        {{ isSidebarCollapsed() ? trans.t().sidebarExpand : trans.t().sidebarCollapse }}
-      </button>
       <button (click)="downloadWord()" class="btn-secondary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         {{ trans.t().downloadWord }}
@@ -78,71 +68,124 @@
       <button (click)="exportPDF()" class="btn-danger">{{ trans.t().exportPDF }}</button>
     </div>
   </div>
-  <div class="taller-layout">
-    <div class="card taller-content">
-      <div id="pdf-content" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
+
+  <div class="taller-desktop-toggle">
+    <button (click)="isSidebarCollapsed.set(!isSidebarCollapsed())" class="btn-secondary" style="display: flex; align-items: center; gap: 6px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        @if (isSidebarCollapsed()) {
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line>
+        } @else {
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="15" y1="3" x2="15" y2="21"></line>
+        }
+      </svg>
+      {{ isSidebarCollapsed() ? trans.t().sidebarExpand : trans.t().sidebarCollapse }}
+    </button>
+  </div>
+
+  <div class="taller-layout" [class.resources-collapsed]="isMobileResourcesCollapsed()">
+    <div class="card taller-content" style="flex: 1; min-width: 0;">
+      <div id="pdf-content" (mouseup)="captureSelection()" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
         @if (projects.currentProject()?.userId?.name) {
           <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: #166534; font-size: 0.9rem;">
             <strong>Autoría:</strong> {{ projects.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projects.currentProject().userId.email }}
           </div>
         }
-        <div style="min-width: 0; width: max-content; max-width: 100%;">
-          <markdown [data]="projects.formattedGeneratedProject()" [katex]="true"></markdown>
+        <div style="min-width: 0; flex: 1; display: flex; flex-direction: column;">
+          <markdown [data]="projects.formattedGeneratedProject()" style="display: block; width: 100%; flex: 1;"></markdown>
         </div>
       </div>
     </div>
     
     @if (!isSidebarCollapsed()) {
-      <div class="taller-sidebar">
-        @if (auth.currentUser()?.canUseAi || auth.currentUser()?.role === 'admin') {
-          <div class="card ai-assistant-panel">
-            <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-              {{ trans.t().aiAssistant }}
-            </h3>
-            <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
-              <p style="margin: 0 0 8px 0; font-weight: 500;">{{ trans.t().aiIntro }}</p>
-              <ol style="margin: 0; padding-left: 16px;">
-                <li [innerHTML]="trans.t().aiStep1"></li>
-                <li [innerHTML]="trans.t().aiStep2"></li>
-                <li [innerHTML]="trans.t().aiStep3"></li>
-              </ol>
-            </div>
-            <div class="form-group" style="margin-bottom: 16px;">
-              <textarea [ngModel]="projects.aiPrompt()" (ngModelChange)="projects.aiPrompt.set($event)" [placeholder]="trans.t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
-            </div>
-            <button (click)="rewriteWithAI()" [disabled]="isRewriting()" class="btn-primary" style="width: 100%;">
-              {{ isRewriting() ? trans.t().thinking : trans.t().rewriteBtn }}
+      <div class="taller-sidebar-container" style="flex: 1; width: 100%; max-width: 400px;">
+        <div class="card taller-sidebar" [class.collapsed]="isMobileResourcesCollapsed()">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px;"
+               [style.margin-bottom]="isMobileResourcesCollapsed() ? '0' : '20px'"
+               [style.border-bottom]="isMobileResourcesCollapsed() ? 'none' : '1px solid #e2e8f0'">
+            <h2 style="margin: 0; font-size: 1.3rem; color: #1e293b; display: flex; align-items: center; gap: 8px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7c65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              Recursos
+            </h2>
+            <button
+              type="button"
+              (click)="isMobileResourcesCollapsed.set(!isMobileResourcesCollapsed())"
+              class="mobile-only-toggle"
+              style="background: none; border: none; cursor: pointer; color: #64748b; padding: 4px 8px; border-radius: 6px; display: flex; align-items: center; gap: 4px; font-size: 0.85rem; transition: background 0.15s;"
+              [attr.aria-label]="isMobileResourcesCollapsed() ? 'Expandir recursos' : 'Colapsar recursos'">
+              @if (isMobileResourcesCollapsed()) {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+              } @else {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              }
             </button>
           </div>
-        } @else {
-          <div class="card ai-assistant-panel" style="background-color: #fef2f2; border-color: #fecaca; text-align: center;">
-            <h3 style="margin: 0 0 8px 0; color: #991b1b; font-size: 1rem;">IA Desactivada</h3>
-            <p style="margin: 0; font-size: 0.85rem; color: #b91c1c;">El asistente no está habilitado.</p>
-          </div>
-        }
-      <div class="card" style="flex-grow: 1; display: flex; flex-direction: column;">
-        <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937;">{{ trans.t().resources }}</h3>
-        <div style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 24px; text-align: center; cursor: pointer; margin-bottom: 16px;" 
-             onclick="document.getElementById('fileInput').click()" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" style="margin-bottom: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500;">{{ projects.isUploading() ? trans.t().uploading : trans.t().dragFiles }}</p>
-          <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
-        </div>
-        <div style="flex: 1; overflow-y: auto;">
-          @for (file of projects.projectFiles(); track file.name) {
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 8px;">
-              <div style="overflow: hidden;">
-                <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #3b82f6; font-size: 0.85rem; font-weight: 500; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ file.name }}</a>
-                <span style="font-size: 0.75rem; color: #94a3b8;">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</span>
+          
+          @if (!isMobileResourcesCollapsed()) {
+            @if (auth.currentUser()?.canUseAi || auth.currentUser()?.role === 'admin') {
+              <div class="ai-assistant-panel" style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px dashed #e2e8f0;">
+                <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                  {{ trans.t().aiAssistant }}
+                </h3>
+                <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
+                  <p style="margin: 0 0 8px 0; font-weight: 500;">{{ trans.t().aiIntro }}</p>
+                  <ol style="margin: 0; padding-left: 16px;">
+                    <li [innerHTML]="trans.t().aiStep1"></li>
+                    <li [innerHTML]="trans.t().aiStep2"></li>
+                    <li [innerHTML]="trans.t().aiStep3"></li>
+                  </ol>
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                  @if (capturedSelection()) {
+                    <div style="margin-bottom: 8px; padding: 8px; background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 4px; font-size: 0.8rem; color: #0369a1; display: flex; justify-content: space-between; align-items: flex-start;">
+                      <div style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                        <strong>Selección:</strong> "{{ capturedSelection() }}"
+                      </div>
+                      <button (click)="clearSelection()" style="background: none; border: none; color: #0284c7; cursor: pointer; padding: 2px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                      </button>
+                    </div>
+                  }
+                  <textarea [ngModel]="projects.aiPrompt()" (ngModelChange)="projects.aiPrompt.set($event)" [placeholder]="trans.t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
+                </div>
+                <button (click)="rewriteWithAI()" [disabled]="projects.isThinking()" class="btn-primary" style="width: 100%;">
+                  {{ projects.isThinking() ? trans.t().thinking : trans.t().rewriteBtn }}
+                </button>
               </div>
-              <button (click)="deleteFile(file.name)" style="background: none; border: none; cursor: pointer; color: #ef4444; padding: 4px;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              </button>
+            } @else {
+              <div class="ai-assistant-panel" style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 24px;">
+                <h3 style="margin: 0 0 8px 0; color: #991b1b; font-size: 1rem;">IA Desactivada</h3>
+                <p style="margin: 0; font-size: 0.85rem; color: #b91c1c;">El asistente no está habilitado.</p>
+              </div>
+            }
+
+            <div style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937;">Archivos Adjuntos</h3>
+              <div style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 24px; text-align: center; cursor: pointer; margin-bottom: 16px;" 
+                   onclick="document.getElementById('fileInput').click()" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" style="margin-bottom: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500;">{{ projects.isUploading() ? trans.t().uploading : trans.t().dragFiles }}</p>
+                <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
+              </div>
+              <div style="flex: 1; overflow-y: auto;">
+                @for (file of projects.projectFiles(); track file.name) {
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 8px;">
+                    <div style="overflow: hidden;">
+                      <a [href]="getDownloadUrl(file.name)" target="_blank" style="color: #3b82f6; font-size: 0.85rem; font-weight: 500; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ file.name }}</a>
+                      <span style="font-size: 0.75rem; color: #94a3b8;">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</span>
+                    </div>
+                    <button (click)="deleteFile(file.name)" style="background: none; border: none; cursor: pointer; color: #ef4444; padding: 4px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                  </div>
+                }
+              </div>
             </div>
           }
         </div>
-      </div>
       </div>
     }
   </div>

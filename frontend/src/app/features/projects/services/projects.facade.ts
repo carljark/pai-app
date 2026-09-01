@@ -17,7 +17,7 @@ export class ProjectsFacade {
 
   // --- ESTADO DEL GENERADOR ---
   methodology = signal<string>('ABP (Aprendizaje Basado en Proyectos)');
-  courseLevel = signal<string>('1º Curso');
+
   isGenerating = signal<boolean>(false);
 
   // --- ESTADO DEL TALLER (Proyecto Activo) ---
@@ -35,7 +35,7 @@ export class ProjectsFacade {
   currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
   
   formattedGeneratedProject = computed(() => {
-    return sanitizeMath(this.generatedProject() || '');
+    return this.generatedProject() || '';
   });
   
   fpProjects = computed(() => {
@@ -92,7 +92,7 @@ export class ProjectsFacade {
       modules: involvedModules,
       tipoNivel,
       language,
-      courseLevel: this.courseLevel(),
+      courseLevel: this.curriculumFacade.curso(),
       title: title || (tipoNivel === 'FP_BASICA' ? 'Proyecto Integrador' : 'Proyecto de ESO')
     });
   }
@@ -167,10 +167,10 @@ export class ProjectsFacade {
  *  3. Un único $ que no tiene pareja al final de la línea → se elimina.
  */
 function sanitizeMath(text: string): string {
-  // Paso 1: normalizar "$ expr$" → "$expr$" (solo espacios horizontales, no newlines)
-  // Solo eliminamos el espacio que está JUSTO DESPUÉS de un $ de apertura
-  // (precedido por un no-$) o JUSTO ANTES de un $ de cierre (seguido de no-alfanum).
-  text = text.replace(/(?<!\$)\$[^\S\n]+(?=[\\A-Za-z{])/g, '$');
+  // Paso 1: normalizar "$ expr$" → "$expr$" sin usar lookbehinds
+  // Reemplazar espacios después del $ de apertura
+  text = text.replace(/(^|[^$])\$[^\S\n]+(?=[\\A-Za-z{])/g, '$1$');
+  // Reemplazar espacios antes del $ de cierre
   text = text.replace(/[^\S\n]+\$(?![A-Za-z\\{])/g, '$');
 
   // Paso 2: separar las líneas para procesar cada una individualmente

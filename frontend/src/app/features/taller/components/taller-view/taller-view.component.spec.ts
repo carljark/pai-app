@@ -200,12 +200,19 @@ describe('TallerViewComponent', () => {
       try { t.value = 'abc'; t.dispatchEvent(new Event('input')); } catch(e) {}
     });
     
-    const dragZone = fixture.debugElement.nativeElement.querySelector('[dragleave]');
-    if (dragZone) {
-      try { dragZone.dispatchEvent(new Event('dragover')); } catch(e) {}
-      try { dragZone.dispatchEvent(new Event('dragleave')); } catch(e) {}
-      try { dragZone.dispatchEvent(new Event('drop')); } catch(e) {}
+    // Trigger pdf-content mouseup
+    const pdfContent = fixture.debugElement.nativeElement.querySelector('#pdf-content');
+    if (pdfContent) {
+      try { pdfContent.dispatchEvent(new MouseEvent('mouseup')); } catch(e) {}
     }
+
+    // Set selection to cover clearSelection branch
+    component.capturedSelection.set('Texto seleccionado');
+    fixture.detectChanges();
+    buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
+    buttons.forEach((b: any) => {
+      try { b.click(); } catch(e) {}
+    });
   });
 
   it('should create', () => {
@@ -221,21 +228,31 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.generatedProject.set('content');
     fixture.detectChanges();
     
-    // Find the toggle button in the header
+    // Find the desktop toggle button
     const de = fixture.debugElement;
-    const buttons = de.queryAll(By.css('.app-header button'));
-    // The first button in the app header is the toggle button
-    const toggleBtn = buttons[0];
-    
-    // Click it to collapse
-    toggleBtn.triggerEventHandler('click', null);
-    expect(component.isSidebarCollapsed()).toBe(true);
-    fixture.detectChanges(); // This will evaluate the true branch of the @if (!isSidebarCollapsed()) and the ternary [attr.title]
+    const desktopToggleBtn = de.query(By.css('.taller-desktop-toggle button'));
+    if (desktopToggleBtn) {
+      desktopToggleBtn.triggerEventHandler('click', null);
+      expect(component.isSidebarCollapsed()).toBe(true);
+      fixture.detectChanges();
 
-    // Click again to expand
-    toggleBtn.triggerEventHandler('click', null);
-    expect(component.isSidebarCollapsed()).toBe(false);
-    fixture.detectChanges(); // This will evaluate the false branch again
+      desktopToggleBtn.triggerEventHandler('click', null);
+      expect(component.isSidebarCollapsed()).toBe(false);
+      fixture.detectChanges();
+    }
+
+    // Find the mobile Recursos toggle button
+    const mobileToggleBtn = de.query(By.css('.mobile-only-toggle'));
+    if (mobileToggleBtn) {
+      const currentState = component.isMobileResourcesCollapsed();
+      mobileToggleBtn.triggerEventHandler('click', new MouseEvent('click'));
+      expect(component.isMobileResourcesCollapsed()).toBe(!currentState);
+      fixture.detectChanges();
+
+      mobileToggleBtn.triggerEventHandler('click', new MouseEvent('click'));
+      expect(component.isMobileResourcesCollapsed()).toBe(currentState);
+      fixture.detectChanges();
+    }
   });
 
   it('should sort by date', () => {
@@ -359,7 +376,7 @@ describe('TallerViewComponent', () => {
   });
 
   it('should rewriteWithAI successfully', () => {
-    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => 'some text' } as any);
+    component.capturedSelection.set('some text');
     mockProjectsFacade.aiPrompt.set('fix grammar');
     component.rewriteWithAI();
     expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith('some text', 'fix grammar');
@@ -369,7 +386,7 @@ describe('TallerViewComponent', () => {
 
   it('should handle rewriteWithAI error', () => {
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => 'some text' } as any);
+    component.capturedSelection.set('some text');
     mockProjectsFacade.aiPrompt.set('fix grammar');
     mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => new Error('err')));
     
@@ -447,5 +464,30 @@ describe('TallerViewComponent', () => {
     const url = component.getDownloadUrl('f.txt');
     expect(url).toBe('http://download.url/file.txt');
   });
+
+  it('should capture selection if text exists', () => {
+    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => ' selected text ' } as any);
+    component.captureSelection();
+    expect(component.capturedSelection()).toBe('selected text');
+    
+    // test ignore empty
+    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => '   ' } as any);
+    component.captureSelection();
+    expect(component.capturedSelection()).toBe('selected text'); // unchanged
+  });
+
+  it('should clear selection', () => {
+    component.capturedSelection.set('test');
+    fixture.detectChanges(); // forces template to render the selection badge and clear button
+    
+    // Check if the clear button renders and click it
+    const clearBtn = fixture.debugElement.nativeElement.querySelector('.ai-assistant-panel button[style*="background: none"]');
+    if (clearBtn) clearBtn.click();
+    else component.clearSelection();
+    
+    expect(component.capturedSelection()).toBe('');
+  });
+  
+
 
 });

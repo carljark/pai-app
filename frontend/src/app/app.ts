@@ -14,6 +14,7 @@ import { SidebarComponent } from './layout/components/sidebar/sidebar.component'
 import { GeneratorViewComponent } from './features/generator/components/generator-view/generator-view.component';
 import { HistoryViewComponent } from './features/history/components/history-view/history-view.component';
 import { TallerViewComponent } from './features/taller/components/taller-view/taller-view.component';
+import { MapaIntermodularViewComponent } from './features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ import { TallerViewComponent } from './features/taller/components/taller-view/ta
     SidebarComponent,
     GeneratorViewComponent,
     HistoryViewComponent,
-    TallerViewComponent
+    TallerViewComponent,
+    MapaIntermodularViewComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

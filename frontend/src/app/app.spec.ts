@@ -213,6 +213,9 @@ describe('App', () => {
     layoutServiceMock.currentView.set('taller');
     fixture.detectChanges();
 
+    layoutServiceMock.currentView.set('mapa');
+    fixture.detectChanges();
+
     // Modals
     appFacadeMock.showInfoModal.set(true);
     appFacadeMock.showConfirmModal.set(true);

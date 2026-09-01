@@ -39,6 +39,7 @@ describe('SidebarComponent', () => {
       sidebarNewProject: 'Nuevo Proyecto',
       sidebarHistory: 'Historial',
       sidebarTaller: 'Taller Editor',
+      sidebarMapa: 'Mapa Intermodular',
       sidebarAdmin: 'Admin Panel',
       sidebarLangTooltip: 'Cambiar Idioma',
       sidebarLangLabel: 'Idioma',

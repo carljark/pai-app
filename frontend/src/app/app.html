@@ -30,6 +30,10 @@
         <app-taller-view></app-taller-view>
       }
 
+      @if (layout.currentView() === 'mapa') {
+        <app-mapa-intermodular-view></app-mapa-intermodular-view>
+      }
+
       @if (layout.currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
         <app-admin-dashboard></app-admin-dashboard>
       }

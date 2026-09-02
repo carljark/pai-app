@@ -7,6 +7,7 @@ export class MapaIntermodularFacade {
   modules = signal<FPBModule[]>(FPB_MODULES_SEED);
   selectedModuleCode = signal<string>('3060');
   selectedRaId = signal<string>('3060_RA1');
+  selectedCriterion = signal<string | null>(null);
   searchQuery = signal<string>('');
   selectedTypeFilter = signal<string>('all');
   selectedRelationFilter = signal<string>('all');
@@ -23,6 +24,30 @@ export class MapaIntermodularFacade {
     if (!mod || !mod.learningOutcomes) return null;
     const raId = this.selectedRaId();
     return mod.learningOutcomes.find((r: LearningOutcome) => r.id === raId) || mod.learningOutcomes[0] || null;
+  });
+
+  filteredConnections = computed<IntermodularConnection[]>(() => {
+    const ra = this.selectedRa();
+    if (!ra) return [];
+    const crit = this.selectedCriterion();
+    if (!crit) return ra.connections;
+
+    const targetCrit = crit.toLowerCase().trim();
+    const letterMatch = targetCrit.match(/^[a-z0-9\-\s\.]*?([a-z])[\)\.\s]/) || targetCrit.match(/([a-z])/);
+    const letter = letterMatch ? letterMatch[1] : targetCrit;
+
+    const filtered = ra.connections.filter(c => {
+      if (c.criteriaKeys && (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))) {
+        return true;
+      }
+      if (c.sourceCriteria) {
+        const sc = c.sourceCriteria.toLowerCase();
+        if (sc.includes(letter)) return true;
+      }
+      return false;
+    });
+
+    return filtered.length > 0 ? filtered : ra.connections;
   });
 
   filteredModules = computed(() => {
@@ -83,6 +108,7 @@ export class MapaIntermodularFacade {
 
   selectModule(code: string) {
     this.selectedModuleCode.set(code);
+    this.selectedCriterion.set(null);
     const mod = this.modules().find(m => m.code === code);
     if (mod && mod.learningOutcomes && mod.learningOutcomes.length > 0) {
       this.selectedRaId.set(mod.learningOutcomes[0].id);
@@ -91,6 +117,25 @@ export class MapaIntermodularFacade {
 
   selectRa(raId: string) {
     this.selectedRaId.set(raId);
+    this.selectedCriterion.set(null);
+  }
+
+  selectCriterion(criterion: string | null) {
+    this.selectedCriterion.set(criterion);
+  }
+
+  getConnectionsCountForCriterion(critText: string): number {
+    const ra = this.selectedRa();
+    if (!ra || !ra.connections) return 0;
+    const targetCrit = critText.toLowerCase().trim();
+    const letterMatch = targetCrit.match(/^[a-z0-9\-\s\.]*?([a-z])[\)\.\s]/) || targetCrit.match(/([a-z])/);
+    const letter = letterMatch ? letterMatch[1] : targetCrit;
+
+    return ra.connections.filter(c => {
+      if (c.criteriaKeys && (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))) return true;
+      if (c.sourceCriteria && c.sourceCriteria.toLowerCase().includes(letter)) return true;
+      return false;
+    }).length;
   }
 
   setSearch(query: string | any) {

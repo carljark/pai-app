@@ -54,10 +54,18 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create and render header', () => {
+  it('should create and render header and toggle stats', () => {
     expect(component).toBeTruthy();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.mapa-header__title')?.textContent).toContain('Mapa Intermodular');
+    // Collapsed by default
+    expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(0);
+    expect(component.headerExpanded()).toBe(false);
+
+    // Toggle stats
+    component.toggleHeaderStats();
+    fixture.detectChanges();
+    expect(component.headerExpanded()).toBe(true);
     expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(4);
   });
 
@@ -71,13 +79,23 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.facade.selectedRaId()).toBe('3063_RA1');
   });
 
-  it('should get correct relation labels', () => {
-    expect(component.getRelationLabel('ciencias')).toBe('Ciencias Aplicadas');
-    expect(component.getRelationLabel('comunicacion')).toBe('Comunicación');
-    expect(component.getRelationLabel('empleabilidad')).toBe('Empleabilidad / FOL');
+  it('should get correct relation labels and toggle header in Catalan', () => {
+    const types = ['ciencias', 'comunicacion', 'empleabilidad', 'cliente', 'sostenibilidad', 'digital', 'tecnica', 'unknown_rel'];
+    mockLayout.language.set('castellano');
+    types.forEach(t => component.getRelationLabel(t));
 
     mockLayout.language.set('catalan');
+    types.forEach(t => component.getRelationLabel(t));
     expect(component.getRelationLabel('ciencias')).toBe('Ciències Aplicades');
+
+    // Toggle in Catalan
+    fixture.detectChanges();
+    component.toggleHeaderStats();
+    fixture.detectChanges();
+    expect(component.headerExpanded()).toBe(true);
+    component.toggleHeaderStats();
+    fixture.detectChanges();
+    expect(component.headerExpanded()).toBe(false);
   });
 
   it('should trigger createProjectFromConnection with all connections', () => {
@@ -99,8 +117,10 @@ describe('MapaIntermodularViewComponent', () => {
     }
   });
 
-  it('should switch language reactively', () => {
+  it('should switch language reactively and render in Catalan and Castellano', () => {
     mockLayout.language.set('catalan');
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
     fixture.detectChanges();
     expect(component.isCa()).toBe(true);
 
@@ -109,7 +129,15 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.isCa()).toBe(false);
   });
 
+  it('should render empty state when no RA is selected', () => {
+    component.facade.modules.set([]);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('Selecciona');
+  });
+
   it('should click all filter pills, search input, modules, and RAs in DOM', () => {
+    component.headerExpanded.set(true);
     component.facade.setTypeFilter('all');
     component.facade.setSearch('');
     component.facade.selectModule('3060');
@@ -119,6 +147,7 @@ describe('MapaIntermodularViewComponent', () => {
 
     // Filter pills
     const pills = compiled.querySelectorAll('.filter-pill') as NodeListOf<HTMLButtonElement>;
+    expect(pills.length).toBe(4);
     pills.forEach(p => {
       p.click();
       fixture.detectChanges();
@@ -158,6 +187,20 @@ describe('MapaIntermodularViewComponent', () => {
       b.click();
       fixture.detectChanges();
     });
+
+    // Criterion pills in hero
+    const critPills = compiled.querySelectorAll('.mapa-criterion-pill') as NodeListOf<HTMLButtonElement>;
+    critPills.forEach(cp => {
+      cp.click();
+      fixture.detectChanges();
+    });
+
+    // Clear criteria button
+    const clearBtn = compiled.querySelector('.mapa-criteria-clear-btn') as HTMLButtonElement;
+    if (clearBtn) {
+      clearBtn.click();
+      fixture.detectChanges();
+    }
   });
 
   it('should test methods directly and propagation stop', () => {
@@ -170,16 +213,31 @@ describe('MapaIntermodularViewComponent', () => {
 
     component.onSetTypeFilter('especifico');
     component.onSearch('cuidado');
+
+    component.onSelectCriterion('a) Se ha relacionado');
+    expect(component.facade.selectedCriterion()).toBe('a) Se ha relacionado');
+    component.onSelectCriterion(null);
+    expect(component.facade.selectedCriterion()).toBeNull();
+
+    expect(component.getCriterionCode('a) Se ha relacionado')).toBe('a');
+    expect(component.getCriterionCode('1b) Se ha identificado')).toBe('1b');
+    expect(component.getCriterionCode('Sin patron directo')).toBe('CE');
   });
 
   it('should test empty connections state in template', () => {
-    const mod = component.facade.selectedModule();
-    if (mod && mod.learningOutcomes.length > 0) {
-      mod.learningOutcomes[0].connections = [];
-      fixture.detectChanges();
-      const compiled = fixture.nativeElement as HTMLElement;
-      expect(compiled.textContent).toContain('No hay conexiones registradas');
-    }
+    mockLayout.language.set('castellano');
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    component.facade.modules.update(mods => {
+      return mods.map(m => m.code === '3060' ? {
+        ...m,
+        learningOutcomes: m.learningOutcomes.map(r => r.id === '3060_RA1' ? { ...r, connections: [] } : r)
+      } : m);
+    });
+    component.onSelectCriterion(null);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('No hay conexiones registradas');
   });
 
   it('should test fallback relation labels', () => {

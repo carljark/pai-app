@@ -31,7 +31,7 @@
     }
   } 
 }
-.app-main { flex: 1; padding: variables.$spacing-4; display: flex; flex-direction: column; width: 100%; min-width: 0; @include mixins.mq(md) { padding: variables.$spacing-8; } }
+.app-main { flex: 1; padding: 1rem; display: flex; flex-direction: column; width: 100%; min-width: 0; }
 .app-header { @include mixins.flex-between; border-bottom: 1px solid variables.$color-border; flex-wrap: wrap; gap: variables.$spacing-4; &-title { font-size: variables.$font-size-xl; font-weight: variables.$font-weight-semibold; color: variables.$color-primary-dark; } }
 .desktop-only { display: none; @include mixins.mq(md) { display: flex; } }
 .mobile-only { display: flex; @include mixins.mq(md) { display: none; } }

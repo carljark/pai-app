@@ -33,6 +33,7 @@ export interface IntermodularConnection {
   targetRaText_es: string;
   targetRaText_ca: string;
   sourceCriteria?: string;
+  criteriaKeys?: string[];
   relatedCriteria?: RelatedCriteriaItem[];
   targetCriteria_es?: string;
   targetCriteria_ca?: string;

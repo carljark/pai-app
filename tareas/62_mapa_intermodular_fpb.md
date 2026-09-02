@@ -50,41 +50,46 @@ graph TD
 
 ### 3. Fachada de Estado Reactiva (`services/mapa-intermodular.facade.ts`)
 - Estado gestionado exclusivamente con **Angular 18 Signals** (`signal`, `computed`).
+- **Selector de Criterios de Evaluación (`selectedCriterion`):** Permite filtrar dinámicamente las coincidencias curriculares seleccionando un criterio específico del RA activo (o viendo todos).
+- **Conexiones Filtradas (`filteredConnections`):** Computa en tiempo real las coincidencias que trabajan el criterio seleccionado a través de `criteriaKeys` y `sourceCriteria`.
+- **Contadores por Criterio (`getConnectionsCountForCriterion`):** Informa al profesor de cuántas coincidencias interdisciplinares existen para cada criterio de evaluación.
 - Filtros reactivos por búsqueda de texto y tipo de módulo (`all`, `especifico`, `transversal`), así como por tipo de relación competencial.
-- Estadísticas computadas en tiempo real (9 módulos, 115 conexiones, 805 actividades).
-- Generación de resúmenes textuales para portapapeles y exportación bilingüe.
 
 ### 4. Vista de Usuario (`components/mapa-intermodular-view/mapa-intermodular-view.component.ts`)
-- Componente standalone con plantilla y estilos encapsulados.
-- Header informativo con contadores estadísticos en tiempo real.
-- Selector de módulos con filtrado rápido e indicador de RAs.
-- Panel principal con detalle del RA seleccionado, badges temáticos, tarjetas de interconexión con justificación didáctica y desglose completo de las 7 actividades prácticas.
-- Botones de acción: Copiar resumen pedagógico al portapapeles y saltar al Generador de Proyectos.
+- Componente standalone con plantilla y estilos encapsulados bajo una distribución en **2 niveles (Master-Detail en "T")**:
+  - **Header Ultra-Colapsado por Defecto:** Barra superior delgada donde únicamente se visualiza el icono, el título *"Mapa Intermodular FPB"* y un botón interactivo `[▼ Filtros y Estadísticas]`. Al pulsar sobre él o sobre la barra, se despliega con animación el buscador, los filtros por tipo de módulo y las 4 tarjetas de estadísticas globales.
+  - **Fila Superior Compacta (~32vh / 220-320px de Altura):**
+    - **Columna Izquierda (`mapa-sidebar-panel`):** Listado de módulos y RAs con scroll vertical independiente.
+    - **Columna Derecha (`mapa-ra-panel`):** Panel del Resultado de Aprendizaje activo con botón *"Crear Proyecto"* y la rejilla interactiva de **Criterios de Evaluación** con pastillas seleccionables y contadores de coincidencias.
+  - **Fila Inferior (100% Ancho Pantalla, Máximo Espacio Vertical):**
+    - **Sección de Conexiones (`mapa-connections-section`):** Ocupa todo el ancho de la pantalla inmediatamente debajo de los paneles superiores, ofreciendo máxima legibilidad para el desglose curricular, justificación didáctica y las 7 actividades propuestas con adaptación DUA.
+- **Botón "Crear Proyecto con esta conexión":** Preselecciona automáticamente el RA de origen, el RA destino y los RAs de los módulos relacionados en el generador y navega directamente a la vista de "Nuevo Proyecto".
 
 ---
 
 ## Archivos Modificados / Creados
 
 1. `frontend/src/app/features/mapa-intermodular/models/mapa-intermodular.model.ts` (Creado)
-2. `frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts` (Generado con los 9 módulos, 115 coincidencias y 805 actividades)
+2. `frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts` (Generado con los 11 módulos, 139 coincidencias y 973 actividades con `criteriaKeys`)
 3. `frontend/src/app/features/mapa-intermodular/services/mapa-intermodular.facade.ts` (Creado)
 4. `frontend/src/app/features/mapa-intermodular/services/mapa-intermodular.facade.spec.ts` (Creado)
-5. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.ts` (Creado)
+5. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.ts` (Creado / Rediseñado en 2 niveles)
 6. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.spec.ts` (Creado)
 7. `frontend/src/app/layout/components/sidebar/sidebar.component.ts` (Modificado: añadido botón de navegación con icono)
 8. `frontend/src/app/layout/components/sidebar/sidebar.component.spec.ts` (Modificado: mock de traducción)
-9. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'`)
-10. `frontend/src/app/services/translation.service.ts` (Modificado: etiquetas bilingües de navegación)
-11. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista)
+9. `frontend/src/styles/_layout.scss` (Modificado: ajuste de padding a 1rem constante en `.app-main`)
+10. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'`)
+11. `frontend/src/app/services/translation.service.ts` (Modificado: etiquetas bilingües de navegación)
+12. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista)
 
 ---
 
 ## Cobertura y Verificación
-- **Frontend Vitest:** 26 archivos de test, **268 tests pasados (100%)**.
-  - Statements: 99.04%
-  - Branches: 95.79%
-  - Functions: 97.37%
-  - Lines: 99.58%
+- **Frontend Vitest:** 26 archivos de test, **272 tests pasados (100%)**.
+  - Statements: 99.06%
+  - Branches: 94.67%
+  - Functions: 97.19%
+  - Lines: 99.61%
 - **Backend Vitest:** 11 archivos de test, **61 tests pasados (100%)**.
   - Branches: 95.55%
   - Functions: 97.64%

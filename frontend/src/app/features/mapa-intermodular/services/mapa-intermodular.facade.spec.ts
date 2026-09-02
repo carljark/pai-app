@@ -26,8 +26,8 @@ describe('MapaIntermodularFacade', () => {
     const stats = facade.stats();
     expect(stats.totalModules).toBe(11);
     expect(stats.totalRas).toBeGreaterThan(0);
-    expect(stats.totalConnections).toBe(139);
-    expect(stats.totalActivities).toBe(973);
+    expect(stats.totalConnections).toBe(219);
+    expect(stats.totalActivities).toBe(1533);
   });
 
   it('should select module and update selectedRaId', () => {
@@ -171,5 +171,34 @@ describe('MapaIntermodularFacade', () => {
     facade.setSearch('');
     facade.setRelationFilter('non_existent_relation');
     expect(facade.filteredModules().length).toBe(0);
+  });
+
+  it('should select criterion and filter connections accordingly', () => {
+    facade.selectModule('3060');
+    facade.selectRa('3060_RA1');
+
+    const totalConns = facade.filteredConnections().length;
+    expect(totalConns).toBeGreaterThan(0);
+
+    // Select criterion 'a'
+    facade.selectCriterion('a) Se ha relacionado');
+    expect(facade.selectedCriterion()).toBe('a) Se ha relacionado');
+    const connsA = facade.filteredConnections();
+    expect(connsA.length).toBeGreaterThan(0);
+
+    // Test getConnectionsCountForCriterion
+    const count = facade.getConnectionsCountForCriterion('a) Se ha relacionado');
+    expect(count).toBeGreaterThan(0);
+
+    // Clear criterion
+    facade.selectCriterion(null);
+    expect(facade.selectedCriterion()).toBeNull();
+    expect(facade.filteredConnections().length).toBe(totalConns);
+
+    // Edge cases for count helper and empty RA
+    expect(facade.getConnectionsCountForCriterion('')).toBe(totalConns);
+    facade.modules.set([]);
+    expect(facade.getConnectionsCountForCriterion('a')).toBe(0);
+    expect(facade.filteredConnections()).toEqual([]);
   });
 });

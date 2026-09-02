@@ -192,9 +192,20 @@ describe('AppFacade', () => {
       expect(facade.errorMessage()).toContain('General msg');
       expect(facade.showErrorModal()).toBe(true);
     });
+
+    it('should show error modal on generate project unknown error', () => {
+      curriculumFacadeMock.selectedRas.set(['ra1']);
+      projectsFacadeMock.generateProject.mockReturnValue(throwError(() => ({})));
+      
+      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      
+      facade.generateProject();
+      
+      expect(facade.errorMessage()).toContain('Error desconocido');
+      expect(facade.showErrorModal()).toBe(true);
+    });
   });
 
-  
   it('should cover initial confirmAction', () => {
     facade.confirmAction()();
     expect(true).toBe(true);
@@ -251,7 +262,7 @@ describe('AppFacade', () => {
       facade = TestBed.inject(AppFacade);
     });
 
-    it('should populate fields and switch view', () => {
+    it('should populate fields and switch view with object content', () => {
       const proj = {
         _id: '123',
         generatedContent: { rawText: 'content' },
@@ -263,8 +274,20 @@ describe('AppFacade', () => {
       
       expect(projectsFacadeMock.currentProjectId()).toBe('123');
       expect(projectsFacadeMock.generatedProject()).toBe('content');
-      expect(curriculumFacadeMock.selectedRas()).toEqual(['ra1']);
-      expect(curriculumFacadeMock.tipoNivel()).toBe('ESO');
+      expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+    });
+
+    it('should populate fields and switch view with string content', () => {
+      const proj = {
+        _id: '123-str',
+        generatedContent: 'string content text'
+      };
+      
+      facade.viewPastProject(proj);
+      
+      expect(projectsFacadeMock.currentProjectId()).toBe('123-str');
+      expect(projectsFacadeMock.generatedProject()).toBe('string content text');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
     });
@@ -275,8 +298,8 @@ describe('AppFacade', () => {
       facade.viewPastProject(proj);
       
       expect(projectsFacadeMock.generatedProject()).toBe('Sin contenido');
-      expect(curriculumFacadeMock.selectedRas()).toEqual([]);
-      expect(curriculumFacadeMock.tipoNivel()).toBe('FP_BASICA');
+      expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
     });
   });
 });

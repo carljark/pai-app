@@ -122,8 +122,6 @@ export class AppFacade {
       ? project.generatedContent 
       : project.generatedContent?.rawText;
     this.projects.generatedProject.set(rawText || 'Sin contenido');
-    this.curriculum.selectedRas.set(project.ras || []);
-    this.curriculum.tipoNivel.set(project.tipoNivel || 'FP_BASICA');
     this.projects.loadProjectFiles();
     this.layout.switchView('taller');
   }

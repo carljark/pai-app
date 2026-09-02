@@ -12,6 +12,8 @@ describe('MapaIntermodularFacade', () => {
     });
     facade = TestBed.inject(MapaIntermodularFacade);
     facade.modules.set([...FPB_MODULES_SEED]);
+    facade.selectModule('3060');
+    facade.selectRa('3060_RA1');
   });
 
   it('should be created and load seed modules', () => {
@@ -30,11 +32,19 @@ describe('MapaIntermodularFacade', () => {
     expect(stats.totalActivities).toBe(1533);
   });
 
-  it('should select module and update selectedRaId', () => {
+  it('should select module and update selectedRaId, and collapse when clicked again', () => {
     facade.selectModule('3063');
     expect(facade.selectedModuleCode()).toBe('3063');
     expect(facade.selectedModule()?.code).toBe('3063');
     expect(facade.selectedRa()?.id).toBe('3063_RA1');
+
+    // Re-click same module to collapse
+    facade.selectModule('3063');
+    expect(facade.selectedModuleCode()).toBe('');
+    expect(facade.selectedRaId()).toBe('');
+    expect(facade.selectedModule()).toBeNull();
+    expect(facade.selectedRa()).toBeNull();
+    expect(facade.filteredConnections()).toEqual([]);
   });
 
   it('should select RA by id', () => {
@@ -87,10 +97,10 @@ describe('MapaIntermodularFacade', () => {
 
   it('should test fallbacks for unknown module or RA and empty list', () => {
     facade.selectedModuleCode.set('non_existent');
-    expect(facade.selectedModule()).toBeTruthy();
+    expect(facade.selectedModule()).toBeNull();
 
     facade.selectedRaId.set('non_existent_ra');
-    expect(facade.selectedRa()).toBeTruthy();
+    expect(facade.selectedRa()).toBeNull();
 
     facade.setSearch({ target: { value: '3060' } });
     expect(facade.searchQuery()).toBe('3060');
@@ -106,6 +116,7 @@ describe('MapaIntermodularFacade', () => {
     expect(facade.selectedModule()).toBeNull();
     expect(facade.selectedRa()).toBeNull();
     expect(facade.exportConnectionSummary('castellano')).toBe('');
+    facade.modules.set([...FPB_MODULES_SEED]);
   });
 
   it('should cover module with empty learning outcomes', () => {

@@ -358,6 +358,10 @@ import { IntermodularConnection } from '../../models/mapa-intermodular.model';
               }
             </div>
           </div>
+        } @else {
+          <div class="mapa-empty-state">
+            {{ isCa() ? 'Selecciona un mòdul de la llista superior per a visualitzar les seves connexions.' : 'Selecciona un módulo de la lista superior para visualizar sus conexiones.' }}
+          </div>
         }
       </main>
     </div>
@@ -424,21 +428,43 @@ export class MapaIntermodularViewComponent {
     const activeModule = this.facade.selectedModule();
     const selected: string[] = [];
 
-    if (activeRa) {
-      const matchSource = allRas.find(r => 
-        (r.id && activeModule && r.id.includes(activeModule.code) && r.id.includes(activeRa.code)) ||
-        (r.description && r.description.includes(activeRa.text_es.substring(0, 30)))
-      );
-      selected.push(matchSource ? matchSource.description : (this.isCa() ? activeRa.text_ca : activeRa.text_es));
+    const findMatch = (modCode: string, modName: string, raCode: string, raTextEs: string, raTextCa: string) => {
+      // 1. Exact match
+      const exact = allRas.find(r => r.description === raTextEs || r.description === raTextCa);
+      if (exact) return exact.description;
 
-      const conns = connection ? [connection] : activeRa.connections;
+      // 2. Partial substring / normalized match
+      const normEs = raTextEs.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 30);
+      const normCa = raTextCa.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 30);
+      const textMatch = allRas.find(r => {
+        const normDesc = (r.description || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        return (normEs && normDesc.includes(normEs)) || (normCa && normDesc.includes(normCa)) ||
+               (normDesc && normEs.includes(normDesc.substring(0, 25)));
+      });
+      if (textMatch) return textMatch.description;
+
+      // 3. Module + RA index matching
+      const raIdx = raCode.replace(/\D/g, '');
+      const modMatch = allRas.find(r => {
+        const modStr = ((r.module || (r as any).subject || '') + ' ' + (r.id || '')).toLowerCase();
+        return (modStr.includes(modCode.toLowerCase()) || modStr.includes(modName.toLowerCase().substring(0, 8))) &&
+               ((r.id && r.id.toLowerCase().includes(raCode.toLowerCase())) || (r.id && r.id.replace(/\D/g, '') === raIdx));
+      });
+      if (modMatch) return modMatch.description;
+
+      // 4. Default to current language text
+      return this.isCa() ? (raTextCa || raTextEs) : (raTextEs || raTextCa);
+    };
+
+    if (activeRa && activeModule) {
+      const sourceDesc = findMatch(activeModule.code, activeModule.name_es, activeRa.code, activeRa.text_es, activeRa.text_ca);
+      if (sourceDesc) selected.push(sourceDesc);
+
+      const conns = connection ? [connection] : this.facade.filteredConnections();
       for (const c of conns) {
-        const match = allRas.find(r => 
-          (r.id && r.id.includes(c.targetModuleCode) && r.id.includes(c.targetRaCode)) ||
-          (r.description && r.description.includes(c.targetRaText_es.substring(0, 30)))
-        );
-        if (match && !selected.includes(match.description)) {
-          selected.push(match.description);
+        const targetDesc = findMatch(c.targetModuleCode, c.targetModuleName_es, c.targetRaCode, c.targetRaText_es, c.targetRaText_ca);
+        if (targetDesc && !selected.includes(targetDesc)) {
+          selected.push(targetDesc);
         }
       }
     }

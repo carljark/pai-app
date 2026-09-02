@@ -6,6 +6,7 @@ import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { signal } from '@angular/core';
+import { FPB_MODULES_SEED } from '../../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('MapaIntermodularViewComponent', () => {
@@ -44,6 +45,10 @@ describe('MapaIntermodularViewComponent', () => {
     mockFacade = TestBed.inject(MapaIntermodularFacade);
     curriculum = TestBed.inject(CurriculumFacade);
     
+    mockFacade.modules.set([...FPB_MODULES_SEED]);
+    mockFacade.selectModule('3060');
+    mockFacade.selectRa('3060_RA1');
+
     // Seed curriculum ras for testing matching
     curriculum.ras.set([
       { id: '3060-RA1', module: 'Preparación del entorno profesional', description: 'Muestra una imagen personal y profesional adecuada en el entorno de trabajo' },
@@ -69,7 +74,7 @@ describe('MapaIntermodularViewComponent', () => {
     expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(4);
   });
 
-  it('should select module and RA on user click', () => {
+  it('should select module and RA on user click and collapse when clicking module again', () => {
     component.facade.selectModule('3063');
     fixture.detectChanges();
     expect(component.facade.selectedModuleCode()).toBe('3063');
@@ -77,6 +82,14 @@ describe('MapaIntermodularViewComponent', () => {
     component.facade.selectRa('3063_RA1');
     fixture.detectChanges();
     expect(component.facade.selectedRaId()).toBe('3063_RA1');
+
+    // Collapse module
+    component.onSelectModule('3063');
+    fixture.detectChanges();
+    expect(component.facade.selectedModuleCode()).toBe('');
+    expect(component.facade.selectedRa()).toBeNull();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('Selecciona un');
   });
 
   it('should get correct relation labels and toggle header in Catalan', () => {
@@ -117,6 +130,23 @@ describe('MapaIntermodularViewComponent', () => {
     }
   });
 
+  it('should match curriculum RAs by exact, partial, and module index in createProjectFromConnection', () => {
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+
+    curriculum.ras.set([
+      { _id: '1', id: 'RA1', module: '3060 - Ciencias', description: 'Exact description' },
+      { _id: '2', id: 'RA2', module: '3059 - Comunicación', description: 'Otra descripción parcial' }
+    ]);
+
+    component.createProjectFromConnection();
+    expect(curriculum.selectedRas().length).toBeGreaterThan(0);
+
+    mockLayout.language.set('catalan');
+    component.createProjectFromConnection();
+    expect(curriculum.selectedRas().length).toBeGreaterThan(0);
+  });
+
   it('should switch language reactively and render in Catalan and Castellano', () => {
     mockLayout.language.set('catalan');
     component.facade.selectModule('3060');
@@ -134,6 +164,10 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Selecciona');
+    component.facade.modules.set([...FPB_MODULES_SEED]);
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    fixture.detectChanges();
   });
 
   it('should click all filter pills, search input, modules, and RAs in DOM', () => {
@@ -174,29 +208,35 @@ describe('MapaIntermodularViewComponent', () => {
       fixture.detectChanges();
     });
 
+    // Re-select 3060 to ensure criteria are visible for pill testing
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    fixture.detectChanges();
+
     // RA item click
-    const raItems = compiled.querySelectorAll('.mapa-ra-item') as NodeListOf<HTMLElement>;
+    const raItems = fixture.nativeElement.querySelectorAll('.mapa-ra-item') as NodeListOf<HTMLElement>;
     raItems.forEach(r => {
       r.click();
       fixture.detectChanges();
     });
 
     // Action buttons in hero
-    const actionBtns = compiled.querySelectorAll('.mapa-btn-action') as NodeListOf<HTMLButtonElement>;
+    const actionBtns = fixture.nativeElement.querySelectorAll('.mapa-btn-action') as NodeListOf<HTMLButtonElement>;
     actionBtns.forEach(b => {
       b.click();
       fixture.detectChanges();
     });
 
     // Criterion pills in hero
-    const critPills = compiled.querySelectorAll('.mapa-criterion-pill') as NodeListOf<HTMLButtonElement>;
+    const critPills = fixture.nativeElement.querySelectorAll('.mapa-criterion-pill') as NodeListOf<HTMLButtonElement>;
+    expect(critPills.length).toBeGreaterThan(0);
     critPills.forEach(cp => {
       cp.click();
       fixture.detectChanges();
     });
 
     // Clear criteria button
-    const clearBtn = compiled.querySelector('.mapa-criteria-clear-btn') as HTMLButtonElement;
+    const clearBtn = fixture.nativeElement.querySelector('.mapa-criteria-clear-btn') as HTMLButtonElement;
     if (clearBtn) {
       clearBtn.click();
       fixture.detectChanges();

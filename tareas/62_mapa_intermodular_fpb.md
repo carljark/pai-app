@@ -59,8 +59,8 @@ graph TD
 - Componente standalone con plantilla y estilos encapsulados bajo una distribución en **2 niveles (Master-Detail en "T")**:
   - **Header Ultra-Colapsado por Defecto:** Barra superior delgada donde únicamente se visualiza el icono, el título *"Mapa Intermodular FPB"* y un botón interactivo `[▼ Filtros y Estadísticas]`. Al pulsar sobre él o sobre la barra, se despliega con animación el buscador, los filtros por tipo de módulo y las 4 tarjetas de estadísticas globales.
   - **Fila Superior Compacta (~32vh / 220-320px de Altura):**
-    - **Columna Izquierda (`mapa-sidebar-panel`):** Listado de módulos y RAs con scroll vertical independiente.
-    - **Columna Derecha (`mapa-ra-panel`):** Panel del Resultado de Aprendizaje activo con botón *"Crear Proyecto"* y la rejilla interactiva de **Criterios de Evaluación** con pastillas seleccionables y contadores de coincidencias.
+    - **Columna Izquierda (`mapa-sidebar-panel`):** Listado de módulos y RAs con scroll vertical independiente y comportamiento **toggle/acordeón interactivo**: hacer clic en un módulo seleccionado lo pliega/colapsa libremente.
+    - **Columna Derecha (`mapa-ra-panel`):** Panel del Resultado de Aprendizaje activo con botón *"Crear Proyecto"* y la rejilla interactiva de **Criterios de Evaluación** con pastillas seleccionables y contadores de coincidencias (o estado de espera elegante cuando el módulo está colapsado).
   - **Fila Inferior (100% Ancho Pantalla, Máximo Espacio Vertical):**
     - **Sección de Conexiones (`mapa-connections-section`):** Ocupa todo el ancho de la pantalla inmediatamente debajo de los paneles superiores, ofreciendo máxima legibilidad para el desglose curricular, justificación didáctica y las 7 actividades propuestas con adaptación DUA.
 - **Botón "Crear Proyecto con esta conexión":** Preselecciona automáticamente el RA de origen, el RA destino y los RAs de los módulos relacionados en el generador y navega directamente a la vista de "Nuevo Proyecto".
@@ -82,16 +82,17 @@ graph TD
 11. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'`)
 12. `frontend/src/app/services/translation.service.ts` (Modificado: etiquetas bilingües de navegación)
 13. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista)
-14. `frontend/angular.json` (Modificado: ajuste de budgets de bundle y estilos de componentes para el dataset de 11 módulos FPB y dependencias permitidas)
+14. `frontend/src/app/features/curriculum/services/curriculum.facade.ts` & `.spec.ts` (Modificado: resolución robusta y tolerante a fallos para items preseleccionados sin mostrar 'Desconocido')
+15. `frontend/angular.json` (Modificado: ajuste de budgets de bundle y estilos de componentes para el dataset de 11 módulos FPB y dependencias permitidas)
 
 ---
 
 ## Cobertura y Verificación
-- **Frontend Vitest:** 26 archivos de test, **272 tests pasados (100%)**.
-  - Statements: 99.06%
-  - Branches: 94.67%
-  - Functions: 97.19%
-  - Lines: 99.61%
+- **Frontend Vitest:** 26 archivos de test, **275 tests pasados (100%)**.
+  - Statements: 98.98%
+  - Branches: 94.74%
+  - Functions: 97.22%
+  - Lines: 99.68%
 - **Backend Vitest:** 11 archivos de test, **61 tests pasados (100%)**.
   - Branches: 95.55%
   - Functions: 97.64%

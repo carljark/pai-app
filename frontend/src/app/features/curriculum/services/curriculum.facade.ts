@@ -115,10 +115,27 @@ export class CurriculumFacade {
     }
     
     return this.selectedRas().map(desc => {
-      const info = lookup.get(desc) || { subject: 'Desconocido', index: 0 };
+      let info = lookup.get(desc);
+      if (!info) {
+        // Fallback: normalized substring match against available curriculum items
+        const normDesc = desc.toLowerCase().replace(/[^a-z0-9]/g, '');
+        for (const group of this.groupedItems()) {
+          for (const item of group.items) {
+            const normItem = item.text.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (normItem === normDesc || 
+                (normDesc.length > 20 && (normItem.includes(normDesc.substring(0, 30)) || normDesc.includes(normItem.substring(0, 30))))) {
+              info = { subject: group.category, index: item.index };
+              break;
+            }
+          }
+          if (info) break;
+        }
+      }
+
+      const finalInfo = info || { subject: 'FP Básica', index: 1 };
       let shortDesc = desc.substring(0, 60);
       if (desc.length > 60) shortDesc += '...';
-      return { subject: info.subject, index: info.index, shortDesc, fullDesc: desc };
+      return { subject: finalInfo.subject, index: finalInfo.index, shortDesc, fullDesc: desc };
     });
   });
 

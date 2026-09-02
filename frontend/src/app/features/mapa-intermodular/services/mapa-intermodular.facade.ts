@@ -15,15 +15,16 @@ export class MapaIntermodularFacade {
   selectedModule = computed<FPBModule | null>(() => {
     const code = this.selectedModuleCode();
     const list = this.modules();
-    if (!list || list.length === 0) return null;
-    return list.find(m => m.code === code) || list[0] || null;
+    if (!list || list.length === 0 || !code) return null;
+    return list.find(m => m.code === code) || null;
   });
 
   selectedRa = computed<LearningOutcome | null>(() => {
     const mod = this.selectedModule();
     if (!mod || !mod.learningOutcomes) return null;
     const raId = this.selectedRaId();
-    return mod.learningOutcomes.find((r: LearningOutcome) => r.id === raId) || mod.learningOutcomes[0] || null;
+    if (!raId) return null;
+    return mod.learningOutcomes.find((r: LearningOutcome) => r.id === raId) || null;
   });
 
   filteredConnections = computed<IntermodularConnection[]>(() => {
@@ -107,6 +108,12 @@ export class MapaIntermodularFacade {
   });
 
   selectModule(code: string) {
+    if (this.selectedModuleCode() === code) {
+      this.selectedModuleCode.set('');
+      this.selectedRaId.set('');
+      this.selectedCriterion.set(null);
+      return;
+    }
     this.selectedModuleCode.set(code);
     this.selectedCriterion.set(null);
     const mod = this.modules().find(m => m.code === code);
@@ -118,6 +125,13 @@ export class MapaIntermodularFacade {
   selectRa(raId: string) {
     this.selectedRaId.set(raId);
     this.selectedCriterion.set(null);
+    const currentMod = this.selectedModule();
+    if (!currentMod || !currentMod.learningOutcomes.some(r => r.id === raId)) {
+      const foundMod = this.modules().find(m => m.learningOutcomes.some(r => r.id === raId));
+      if (foundMod) {
+        this.selectedModuleCode.set(foundMod.code);
+      }
+    }
   }
 
   selectCriterion(criterion: string | null) {

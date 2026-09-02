@@ -143,6 +143,28 @@ describe('CurriculumFacade', () => {
     expect(grouped[0].items.length).toBe(2);
   });
 
+  it('should set curso correctly', () => {
+    facade.setCurso('2º');
+    expect(facade.curso()).toBe('2º');
+  });
+
+  it('should fallback to normalized match or default subject when description is not exact', () => {
+    facade.tipoNivel.set('FP_BASICA');
+    facade.ras.set([
+      { _id: '1', description: 'Resuelve problemas cotidianos aplicando algebra elemental.', subject: 'Ciencias' }
+    ]);
+    
+    // Partial/normalized match
+    facade.selectedRas.set(['Resuelve problemas cotidianos aplicando algebra elemental']);
+    let details = facade.selectedItemsDetails();
+    expect(details[0].subject).toBe('Ciencias');
+
+    // Complete mismatch fallback
+    facade.selectedRas.set(['Algo totalmente desconocido']);
+    details = facade.selectedItemsDetails();
+    expect(details[0].subject).toBe('FP Básica');
+  });
+
   it('should clear selection when setTipoNivel changes level', () => {
     facade.tipoNivel.set('FP_BASICA');
     facade.toggleRa('RA1');

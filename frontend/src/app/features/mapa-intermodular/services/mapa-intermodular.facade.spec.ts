@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
+import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach } from 'vitest';
 
 describe('MapaIntermodularFacade', () => {
@@ -10,6 +11,7 @@ describe('MapaIntermodularFacade', () => {
       providers: [MapaIntermodularFacade]
     });
     facade = TestBed.inject(MapaIntermodularFacade);
+    facade.modules.set([...FPB_MODULES_SEED]);
   });
 
   it('should be created and load seed modules', () => {
@@ -96,7 +98,78 @@ describe('MapaIntermodularFacade', () => {
     facade.setSearch({ target: null });
     expect(facade.searchQuery()).toBe('');
 
+    facade.setSearch(123 as any);
+    expect(facade.searchQuery()).toBe('');
+
+    // Empty modules
     facade.modules.set([]);
+    expect(facade.selectedModule()).toBeNull();
+    expect(facade.selectedRa()).toBeNull();
     expect(facade.exportConnectionSummary('castellano')).toBe('');
+  });
+
+  it('should cover module with empty learning outcomes', () => {
+    facade.modules.set([
+      {
+        code: 'TEST',
+        name_es: 'Modulo Test',
+        name_ca: 'Mòdul Test',
+        type: 'especifico',
+        color: '#333',
+        icon: 'test',
+        learningOutcomes: []
+      }
+    ]);
+    facade.selectModule('TEST');
+    expect(facade.selectedRa()).toBeNull();
+
+    // selectModule with non-existent code
+    facade.selectModule('UNKNOWN_CODE');
+    expect(facade.selectedModuleCode()).toBe('UNKNOWN_CODE');
+
+    // Module with undefined learningOutcomes
+    facade.modules.set([
+      {
+        code: 'TEST2',
+        name_es: 'Modulo Test 2',
+        name_ca: 'Mòdul Test 2',
+        type: 'especifico',
+        color: '#333',
+        icon: 'test2'
+      } as any
+    ]);
+    facade.selectModule('TEST2');
+    expect(facade.selectedRa()).toBeNull();
+  });
+
+  it('should cover all search match branches and relation filtering', () => {
+    // Search match by name_es
+    facade.setSearch('maquillaje');
+    expect(facade.filteredModules().some(m => m.code === '3063')).toBe(true);
+
+    // Search match by name_ca
+    facade.setSearch('entorn');
+    expect(facade.filteredModules().length).toBeGreaterThan(0);
+
+    // Search match by RA code
+    facade.setSearch('RA1');
+    expect(facade.filteredModules().length).toBeGreaterThan(0);
+
+    // Search match by RA text_es
+    facade.setSearch('instalaciones');
+    expect(facade.filteredModules().length).toBeGreaterThan(0);
+
+    // Search match by RA text_ca
+    facade.setSearch('instal·lacions');
+    expect(facade.filteredModules().length).toBeGreaterThan(0);
+
+    // Search no match
+    facade.setSearch('xyz_no_match_possible_999');
+    expect(facade.filteredModules().length).toBe(0);
+
+    // Relation filter with non-matching relation
+    facade.setSearch('');
+    facade.setRelationFilter('non_existent_relation');
+    expect(facade.filteredModules().length).toBe(0);
   });
 });

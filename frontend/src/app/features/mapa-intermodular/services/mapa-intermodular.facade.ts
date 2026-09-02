@@ -84,7 +84,7 @@ export class MapaIntermodularFacade {
   selectModule(code: string) {
     this.selectedModuleCode.set(code);
     const mod = this.modules().find(m => m.code === code);
-    if (mod && mod.learningOutcomes.length > 0) {
+    if (mod && mod.learningOutcomes && mod.learningOutcomes.length > 0) {
       this.selectedRaId.set(mod.learningOutcomes[0].id);
     }
   }

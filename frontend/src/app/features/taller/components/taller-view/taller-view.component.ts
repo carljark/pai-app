@@ -99,46 +99,60 @@ export class TallerViewComponent {
     }
   }
 
-  capturedSelection = signal<string>('');
-
-  captureSelection() {
-    const text = window.getSelection()?.toString().trim();
-    if (text) {
-      this.capturedSelection.set(text);
-    }
-  }
-
-  clearSelection() {
-    this.capturedSelection.set('');
-  }
-
   rewriteWithAI() {
-    const selectedText = this.capturedSelection();
-    const instruction = this.projects.aiPrompt();
-    if (!selectedText || !instruction) {
-      this.appFacade.infoTitle.set('Atención');
-      this.appFacade.infoMessage.set('Selecciona texto en el documento e introduce una instrucción para la IA.');
+    const instruction = this.projects.aiPrompt().trim();
+    if (!instruction) {
+      this.appFacade.infoTitle.set(this.layout.language() === 'castellano' ? 'Atención' : 'Atenció');
+      this.appFacade.infoMessage.set(
+        this.layout.language() === 'castellano' 
+          ? 'Por favor, introduce una instrucción para la IA.' 
+          : 'Per favor, introdueix una instrucció per a la IA.'
+      );
       this.appFacade.infoType.set('info');
       this.appFacade.showInfoModal.set(true);
       return;
     }
+
+    if (!this.projects.generatedProject()) {
+      return;
+    }
+
+    // Guardar estado actual en la pila de undo ANTES de pedir a la IA
+    this.projects.pushUndo();
+
     this.projects.isThinking.set(true);
-    this.projects.rewriteSection(selectedText, instruction).subscribe({
+    this.projects.rewriteSection(instruction).subscribe({
       next: (res) => {
-        this.projects.generatedProject.set(res.newText);
+        const newFullText = res.newText || res.rewrittenPart || '';
+        this.projects.generatedProject.set(newFullText);
+
         this.projects.aiPrompt.set('');
-        this.capturedSelection.set('');
         this.projects.isThinking.set(false);
         this.projects.updateProjectStatus('borrador')?.subscribe();
       },
       error: (err) => {
         console.error("Error en IA", err);
         this.projects.isThinking.set(false);
+        // Revertir el undo push si la IA falló
+        this.projects.undoStack.update(s => s.slice(0, -1));
         const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
         this.appFacade.errorMessage.set(serverMsg);
         this.appFacade.showErrorModal.set(true);
       }
     });
+  }
+
+  undoAI() {
+    if (!this.projects.canUndo()) return;
+    this.projects.undoLastChange();
+    this.appFacade.infoTitle.set(this.layout.language() === 'castellano' ? 'Deshecho' : 'Desfet');
+    this.appFacade.infoMessage.set(
+      this.layout.language() === 'castellano'
+        ? 'Se ha restaurado la versión anterior del proyecto.'
+        : 'S\'ha restaurat la versió anterior del projecte.'
+    );
+    this.appFacade.infoType.set('success');
+    this.appFacade.showInfoModal.set(true);
   }
 
   onFileSelected(event: any) {

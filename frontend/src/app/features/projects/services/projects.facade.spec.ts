@@ -141,13 +141,12 @@ describe('ProjectsFacade', () => {
 
   it('should rewrite section', () => {
     facade.generatedProject.set('full text');
-    facade.rewriteSection('text', 'rewrite this').subscribe();
+    facade.rewriteSection('rewrite this').subscribe();
     
     const req = httpMock.expectOne('/api/projects/rewrite');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({
       context: 'full text',
-      selectedText: 'text',
       instruction: 'rewrite this'
     });
     req.flush({});
@@ -253,6 +252,50 @@ describe('ProjectsFacade', () => {
       const input = 'Primera línea\nSegunda línea';
       facade.generatedProject.set(input);
       expect(facade.formattedGeneratedProject()).toBe(input);
+    });
+  });
+
+  describe('Undo Stack', () => {
+    it('should push current state and pop on undo', () => {
+      facade.generatedProject.set('version1');
+      facade.pushUndo();
+      expect(facade.undoStack().length).toBe(1);
+      expect(facade.canUndo()).toBe(true);
+
+      facade.generatedProject.set('version2');
+      facade.pushUndo();
+      expect(facade.undoStack().length).toBe(2);
+
+      // Mock updateProjectStatus to avoid HTTP call
+      facade.currentProjectId.set('123');
+
+      facade.undoLastChange();
+      expect(facade.generatedProject()).toBe('version2');
+      expect(facade.undoStack().length).toBe(1);
+
+      // Flush the PUT request from undoLastChange
+      const req = httpMock.expectOne('/api/projects/123');
+      req.flush({});
+
+      facade.undoLastChange();
+      expect(facade.generatedProject()).toBe('version1');
+      expect(facade.undoStack().length).toBe(0);
+      expect(facade.canUndo()).toBe(false);
+
+      const req2 = httpMock.expectOne('/api/projects/123');
+      req2.flush({});
+    });
+
+    it('should not push empty content', () => {
+      facade.generatedProject.set('');
+      facade.pushUndo();
+      expect(facade.undoStack().length).toBe(0);
+    });
+
+    it('should not undo when stack is empty', () => {
+      facade.generatedProject.set('current');
+      facade.undoLastChange();
+      expect(facade.generatedProject()).toBe('current');
     });
   });
 });

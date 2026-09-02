@@ -31,6 +31,10 @@ export class ProjectsFacade {
   aiPrompt = signal<string>('');
   isThinking = signal<boolean>(false);
 
+  // --- UNDO STACK (historial local de versiones para deshacer cambios IA) ---
+  undoStack = signal<string[]>([]);
+  canUndo = computed(() => this.undoStack().length > 0);
+
   // --- COMPUTADOS ---
   currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
   
@@ -103,12 +107,33 @@ export class ProjectsFacade {
     return this.http.put<any>(`${this.apiUrl}/${id}`, { rawText: this.generatedProject(), status });
   }
 
-  rewriteSection(selectedText: string, instruction: string) {
+  rewriteSection(instruction: string) {
     return this.http.post<any>(`${this.apiUrl}/rewrite`, {
       context: this.generatedProject(),
-      selectedText,
       instruction
     });
+  }
+
+  /**
+   * Guarda el estado actual del proyecto en la pila de undo antes de un cambio IA.
+   */
+  pushUndo() {
+    const current = this.generatedProject();
+    if (current) {
+      this.undoStack.update(stack => [...stack, current]);
+    }
+  }
+
+  /**
+   * Deshace el último cambio IA, restaurando el estado anterior del proyecto.
+   */
+  undoLastChange() {
+    const stack = this.undoStack();
+    if (stack.length === 0) return;
+    const previous = stack[stack.length - 1];
+    this.generatedProject.set(previous);
+    this.undoStack.update(s => s.slice(0, -1));
+    this.updateProjectStatus('borrador')?.subscribe();
   }
 
   // --- ARCHIVOS ---

@@ -180,10 +180,10 @@ describe('PaiService', () => {
   });
 
   it('should rewriteSection', () => {
-    service.rewriteSection('context', 'selected', 'instruction').subscribe();
+    service.rewriteSection('context', 'instruction').subscribe();
     const req = httpMock.expectOne('/api/projects/rewrite');
     expect(req.request.method).toBe('POST');
-    expect(req.request.body).toEqual({ context: 'context', selectedText: 'selected', instruction: 'instruction' });
+    expect(req.request.body).toEqual({ context: 'context', instruction: 'instruction' });
     req.flush({});
   });
 

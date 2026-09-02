@@ -16,18 +16,18 @@ describe('MapaIntermodularFacade', () => {
 
   it('should be created and load seed modules', () => {
     expect(facade).toBeTruthy();
-    expect(facade.modules().length).toBeGreaterThanOrEqual(12);
-    expect(facade.selectedModuleCode()).toBe('3060');
-    expect(facade.selectedModule()?.name_es).toContain('entorno profesional');
+    expect(facade.modules().length).toBe(9);
+    expect(facade.selectedModuleCode()).toBe('3005');
+    expect(facade.selectedModule()?.name_es).toContain('Atención al cliente');
     expect(facade.selectedRa()).toBeTruthy();
   });
 
   it('should calculate global statistics', () => {
     const stats = facade.stats();
-    expect(stats.totalModules).toBeGreaterThanOrEqual(12);
+    expect(stats.totalModules).toBe(9);
     expect(stats.totalRas).toBeGreaterThan(0);
-    expect(stats.totalConnections).toBeGreaterThan(0);
-    expect(stats.totalActivities).toBeGreaterThan(0);
+    expect(stats.totalConnections).toBe(115);
+    expect(stats.totalActivities).toBe(805);
   });
 
   it('should select module and update selectedRaId', () => {
@@ -38,8 +38,8 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should select RA by id', () => {
-    facade.selectRa('3060_RA1');
-    expect(facade.selectedRaId()).toBe('3060_RA1');
+    facade.selectRa('3005_RA1');
+    expect(facade.selectedRaId()).toBe('3005_RA1');
     expect(facade.selectedRa()?.code).toBe('RA1');
   });
 
@@ -62,7 +62,7 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should filter modules by search query', () => {
-    facade.setSearch('peluquería');
+    facade.setSearch('maquillaje');
     const res = facade.filteredModules();
     expect(res).toBeDefined();
 
@@ -75,13 +75,13 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should export connection summary in Castellano and Catalan', () => {
-    facade.selectModule('3060');
+    facade.selectModule('3005');
     const summaryEs = facade.exportConnectionSummary('castellano');
-    expect(summaryEs).toContain('3060');
+    expect(summaryEs).toContain('3005');
     expect(summaryEs).toContain('CONEXIONES INTERMODULARES');
 
     const summaryCa = facade.exportConnectionSummary('catalan');
-    expect(summaryCa).toContain('3060');
+    expect(summaryCa).toContain('3005');
     expect(summaryCa).toContain('CONNEXIONS INTERMODULARS');
   });
 
@@ -148,7 +148,7 @@ describe('MapaIntermodularFacade', () => {
     expect(facade.filteredModules().some(m => m.code === '3063')).toBe(true);
 
     // Search match by name_ca
-    facade.setSearch('entorn');
+    facade.setSearch('atenció');
     expect(facade.filteredModules().length).toBeGreaterThan(0);
 
     // Search match by RA code
@@ -156,11 +156,11 @@ describe('MapaIntermodularFacade', () => {
     expect(facade.filteredModules().length).toBeGreaterThan(0);
 
     // Search match by RA text_es
-    facade.setSearch('instalaciones');
+    facade.setSearch('cliente');
     expect(facade.filteredModules().length).toBeGreaterThan(0);
 
     // Search match by RA text_ca
-    facade.setSearch('instal·lacions');
+    facade.setSearch('client');
     expect(facade.filteredModules().length).toBeGreaterThan(0);
 
     // Search no match

@@ -102,7 +102,7 @@ describe('MapaIntermodularViewComponent', () => {
   it('should click all filter pills, search input, modules, and RAs in DOM', () => {
     component.facade.setTypeFilter('all');
     component.facade.setSearch('');
-    component.facade.selectModule('3060');
+    component.facade.selectModule('3005');
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
@@ -116,15 +116,15 @@ describe('MapaIntermodularViewComponent', () => {
 
     // Reset filter
     component.facade.setTypeFilter('all');
-    component.facade.selectModule('3060');
+    component.facade.selectModule('3005');
     fixture.detectChanges();
 
     // Search input
     const input = compiled.querySelector('input');
     if (input) {
-      input.value = '3060';
+      input.value = '3005';
       input.dispatchEvent(new Event('input'));
-      component.onSearch('3060');
+      component.onSearch('3005');
       fixture.detectChanges();
     }
 

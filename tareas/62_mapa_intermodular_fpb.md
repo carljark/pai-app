@@ -3,10 +3,10 @@
 ## Propósito
 Implementar un módulo visual interactivo denominado **"Mapa Intermodular"** en la aplicación Plappin, siguiendo las especificaciones pedagógicas de `Plantillas coincidencias FPB/` y `Propmpt MAPA INTERMODULAR.docx`.
 
-El objetivo es permitir al equipo docente de FP Básica (Peluquería y Estética) explorar de forma visual, ágil y estructurada las interconexiones curriculares entre los 13 módulos del ciclo formativo:
-1. Conectar Resultados de Aprendizaje (RA) y Criterios de Evaluación (CE) técnicos con los ámbitos transversales (Ciencias Aplicadas I y II, Comunicación y Sociedad I y II, Itinerario Personal para la Empleabilidad I y II, y Proyecto Intermodular).
-2. Justificar pedagógicamente cada cruce formativo.
-3. Proponer actividades interdisciplinares contextualizadas y adaptadas al perfil del alumnado de FPB (~15 años, riesgo de abandono escolar, necesidad de aprendizajes prácticos y significativos).
+El objetivo es permitir al equipo docente de FP Básica (Peluquería y Estética) explorar de forma visual, ágil y estructurada las interconexiones curriculares a partir de los 9 documentos oficiales de relación de criterios y actividades:
+1. Conectar Resultados de Aprendizaje (RA) y Criterios de Evaluación (CE) técnicos con los ámbitos transversales y el resto de módulos del ciclo (3005, 3065, 3042, 3009, 3011, 3062, 3159, 3064, 3063).
+2. Estructurar las **115 coincidencias intermodulares** (puntos de cruce curricular) y sus justificaciones pedagógicas bilingües.
+3. Incorporar las **805 propuestas de actividades y proyectos interdisciplinares** (7 actividades desarrolladas por cada una de las 115 coincidencias), adaptadas al perfil del alumnado de FPB (~15 años, con instrucciones paso a paso, medidas de atención a la diversidad, evidencias y factores motivadores).
 4. Facilitar el salto directo a la creación de proyectos mediante un botón de exportación/generación conectado con el generador base.
 
 ---
@@ -18,33 +18,41 @@ graph TD
     Sidebar[Sidebar Navigation Item 'Mapa Intermodular'] -->|switchView('mapa')| AppHTML[app.html conditional view]
     AppHTML --> MapaComp[MapaIntermodularViewComponent]
     MapaComp --> MapaFacade[MapaIntermodularFacade]
-    MapaFacade --> MapaSeed[Seed Data: 13 Módulos FPB, RAs, Conexiones y Actividades]
+    MapaFacade --> MapaSeed[Seed Data: 9 Módulos FPB, 115 Conexiones y 805 Actividades]
     MapaFacade --> LayoutService[LayoutService: language & navigation]
     MapaComp -->|createProjectFromConnection| LayoutService
 ```
 
 ### 1. Modelos de Datos (`models/mapa-intermodular.model.ts`)
-- `FPBModule`: Estructura del módulo (código, nombre en castellano/valenciano, tipo `especifico`/`transversal`, horas, curso, color distintivo, RAs).
+- `FPBModule`: Estructura del módulo (código, nombre en castellano/valenciano, tipo `especifico`/`transversal`, color distintivo, icono, RAs).
 - `LearningOutcome`: RA con código, descripción bilingüe, criterios asociados y lista de conexiones intermodulares.
-- `IntermodularConnection`: Conexión entre el RA del módulo de origen y otro módulo diana, con tipo de relación (`ciencias`, `comunicacion`, `empleabilidad`, `tecnica`, `sostenibilidad`, `digital`, `cliente`), justificación pedagógica bilingüe y actividades sugeridas.
-- `IntermodularActivity`: Propuesta didáctica con título, descripción, competencias clave y productos entregables.
+- `IntermodularConnection`: Conexión entre el RA del módulo de origen y otro módulo diana, con tipo de relación (`ciencias`, `comunicacion`, `empleabilidad`, `tecnica`, `sostenibilidad`, `digital`, `cliente`), justificación pedagógica bilingüe y 7 actividades sugeridas.
+- `IntermodularActivity`: Propuesta didáctica con título, descripción, pasos, evidencias, factores motivadores y medidas DUA/atención a la diversidad.
 
 ### 2. Capa de Datos Estática (`data/mapa-intermodular.seed.ts`)
-- Ingesta estructurada y completa de los 13 módulos oficiales de FPB Peluquería y Estética:
-  - Módulos específicos: 3060 (Lavado y cambios de forma), 3061 (Cambios de color), 3062 (Cuidado de uñas), 3063 (Maquillaje), 3064 (Depilación), 3065 (Atención al cliente), 3066 (Preparación del entorno).
-  - Módulos transversales: 3009 (Ciencias Aplicadas I), 3010 (Ciencias Aplicadas II), 3011 (Comunicación y Sociedad I), 3012 (Comunicación y Sociedad II), 3013 (Itinerario Personal para la Empleabilidad I), 3014 (Itinerario Personal para la Empleabilidad II / Proyecto).
+- Ingesta estructurada y completa de los 9 módulos oficiales de la carpeta `Plantillas coincidencias FPB`:
+  1. `3005` Atención al cliente (14 coincidencias, 98 actividades)
+  2. `3065` Cambios de color del cabello (15 coincidencias, 105 actividades)
+  3. `3042` Ciencias aplicadas II (12 coincidencias, 84 actividades)
+  4. `3009` Ciencias aplicadas I (11 coincidencias, 77 actividades)
+  5. `3011` Comunicación y sociedad I (10 coincidencias, 70 actividades)
+  6. `3062` Depilación mecánica y decoloración del vello superfluo (12 coincidencias, 84 actividades)
+  7. `3159` Itinerario personal para la empleabilidad (12 coincidencias, 84 actividades)
+  8. `3064` Lavado y cambios de forma del cabello (15 coincidencias, 105 actividades)
+  9. `3063` Maquillaje (14 coincidencias, 98 actividades)
+- **Total:** 9 módulos, 115 coincidencias curriculares y 805 actividades desarrolladas.
 
 ### 3. Fachada de Estado Reactiva (`services/mapa-intermodular.facade.ts`)
 - Estado gestionado exclusivamente con **Angular 18 Signals** (`signal`, `computed`).
-- Filtros reactivos por búsqueda de texto y tipo de módulo (`all`, `especifico`, `transversal`).
-- Estadísticas computadas en tiempo real (módulos totales, RAs totales, conexiones totales, actividades disponibles).
-- Generación de resúmenes textuales para portapapeles.
+- Filtros reactivos por búsqueda de texto y tipo de módulo (`all`, `especifico`, `transversal`), así como por tipo de relación competencial.
+- Estadísticas computadas en tiempo real (9 módulos, 115 conexiones, 805 actividades).
+- Generación de resúmenes textuales para portapapeles y exportación bilingüe.
 
 ### 4. Vista de Usuario (`components/mapa-intermodular-view/mapa-intermodular-view.component.ts`)
 - Componente standalone con plantilla y estilos encapsulados.
-- Header informativo con contadores estadísticos.
-- Selector lateral de módulos con acordeón para explorar sus RAs.
-- Panel principal con detalle del RA seleccionado, badges temáticos por tipo de competencia/módulo, tarjetas de interconexión con justificación didáctica y desglose de actividades paso a paso.
+- Header informativo con contadores estadísticos en tiempo real.
+- Selector de módulos con filtrado rápido e indicador de RAs.
+- Panel principal con detalle del RA seleccionado, badges temáticos, tarjetas de interconexión con justificación didáctica y desglose completo de las 7 actividades prácticas.
 - Botones de acción: Copiar resumen pedagógico al portapapeles y saltar al Generador de Proyectos.
 
 ---
@@ -52,22 +60,26 @@ graph TD
 ## Archivos Modificados / Creados
 
 1. `frontend/src/app/features/mapa-intermodular/models/mapa-intermodular.model.ts` (Creado)
-2. `frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts` (Creado)
+2. `frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts` (Generado con los 9 módulos, 115 coincidencias y 805 actividades)
 3. `frontend/src/app/features/mapa-intermodular/services/mapa-intermodular.facade.ts` (Creado)
 4. `frontend/src/app/features/mapa-intermodular/services/mapa-intermodular.facade.spec.ts` (Creado)
 5. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.ts` (Creado)
 6. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.spec.ts` (Creado)
-7. `frontend/src/app/layout/components/sidebar/sidebar.component.ts` (Modificado: añadido botón de navegación con icono de nodos interconectados)
-8. `frontend/src/app/layout/components/sidebar/sidebar.component.spec.ts` (Modificado: añadido mock de traducción `sidebarMapa`)
-9. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'` a `currentView`)
-10. `frontend/src/app/services/translation.service.ts` (Modificado: añadidas etiquetas de navegación bilingües)
-11. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista `@if (layout.currentView() === 'mapa')`)
+7. `frontend/src/app/layout/components/sidebar/sidebar.component.ts` (Modificado: añadido botón de navegación con icono)
+8. `frontend/src/app/layout/components/sidebar/sidebar.component.spec.ts` (Modificado: mock de traducción)
+9. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'`)
+10. `frontend/src/app/services/translation.service.ts` (Modificado: etiquetas bilingües de navegación)
+11. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista)
 
 ---
 
 ## Cobertura y Verificación
-- **Frontend Vitest:** 26 archivos de test, **263 tests pasados (100%)**.
-  - Statements: 98.93%
+- **Frontend Vitest:** 26 archivos de test, **268 tests pasados (100%)**.
+  - Statements: 99.04%
+  - Branches: 95.79%
+  - Functions: 97.37%
+  - Lines: 99.58%
+- **Backend Vitest:** 11 archivos de test, **61 tests pasados (100%)**.
   - Branches: 95.55%
   - Functions: 97.64%
   - Lines: 99.44%

@@ -302,6 +302,7 @@ describe('Projects Endpoints', () => {
     expect(res400_2.status).toBe(400);
 
     // Caso 500
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const aiModule = await import('../services/ai.service');
     const spy = vi.spyOn(aiModule, 'generateGeminiContent').mockRejectedValueOnce(new Error('AI Failure'));
     const res500 = await request(app)
@@ -313,6 +314,7 @@ describe('Projects Endpoints', () => {
       });
     expect(res500.status).toBe(500);
     spy.mockRestore();
+    consoleSpy.mockRestore();
   });
 
   it('GET /api/projects/stream - Debería establecer SSE para usuario autenticado', async () => {

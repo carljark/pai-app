@@ -134,7 +134,7 @@ export class TallerViewComponent {
         console.error("Error en IA", err);
         this.projects.isThinking.set(false);
         // Revertir el undo push si la IA falló
-        this.projects.undoStack.update(s => s.slice(0, -1));
+        this.projects.popUndo();
         const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
         this.appFacade.errorMessage.set(serverMsg);
         this.appFacade.showErrorModal.set(true);

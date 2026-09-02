@@ -31,8 +31,12 @@ export class ProjectsFacade {
   aiPrompt = signal<string>('');
   isThinking = signal<boolean>(false);
 
-  // --- UNDO STACK (historial local de versiones para deshacer cambios IA) ---
-  undoStack = signal<string[]>([]);
+  // --- UNDO STACKS (historial local de versiones por proyecto para deshacer cambios IA de forma aislada) ---
+  undoStacksByProject = signal<Record<string, string[]>>({});
+  undoStack = computed(() => {
+    const id = this.currentProjectId() || '__temp__';
+    return this.undoStacksByProject()[id] || [];
+  });
   canUndo = computed(() => this.undoStack().length > 0);
 
   // --- COMPUTADOS ---
@@ -74,6 +78,11 @@ export class ProjectsFacade {
   }
 
   deleteProject(projectId: string) {
+    this.undoStacksByProject.update(map => {
+      const copy = { ...map };
+      delete copy[projectId];
+      return copy;
+    });
     return this.http.delete<any>(`${this.apiUrl}/${projectId}`);
   }
 
@@ -115,24 +124,45 @@ export class ProjectsFacade {
   }
 
   /**
-   * Guarda el estado actual del proyecto en la pila de undo antes de un cambio IA.
+   * Guarda el estado actual del proyecto en la pila de undo del proyecto activo antes de un cambio IA.
    */
   pushUndo() {
     const current = this.generatedProject();
+    const id = this.currentProjectId() || '__temp__';
     if (current) {
-      this.undoStack.update(stack => [...stack, current]);
+      this.undoStacksByProject.update(map => ({
+        ...map,
+        [id]: [...(map[id] || []), current]
+      }));
     }
   }
 
   /**
-   * Deshace el último cambio IA, restaurando el estado anterior del proyecto.
+   * Elimina la última versión guardada en la pila del proyecto activo (por ejemplo si la llamada a la IA falló).
+   */
+  popUndo() {
+    const id = this.currentProjectId() || '__temp__';
+    const stack = this.undoStacksByProject()[id] || [];
+    if (stack.length === 0) return;
+    this.undoStacksByProject.update(map => ({
+      ...map,
+      [id]: stack.slice(0, -1)
+    }));
+  }
+
+  /**
+   * Deshace el último cambio IA, restaurando el estado anterior del proyecto activo.
    */
   undoLastChange() {
-    const stack = this.undoStack();
+    const id = this.currentProjectId() || '__temp__';
+    const stack = this.undoStacksByProject()[id] || [];
     if (stack.length === 0) return;
     const previous = stack[stack.length - 1];
     this.generatedProject.set(previous);
-    this.undoStack.update(s => s.slice(0, -1));
+    this.undoStacksByProject.update(map => ({
+      ...map,
+      [id]: stack.slice(0, -1)
+    }));
     this.updateProjectStatus('borrador')?.subscribe();
   }
 

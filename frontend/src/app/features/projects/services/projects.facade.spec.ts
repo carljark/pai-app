@@ -256,7 +256,8 @@ describe('ProjectsFacade', () => {
   });
 
   describe('Undo Stack', () => {
-    it('should push current state and pop on undo', () => {
+    it('should push current state and pop on undo for active project', () => {
+      facade.currentProjectId.set('123');
       facade.generatedProject.set('version1');
       facade.pushUndo();
       expect(facade.undoStack().length).toBe(1);
@@ -265,9 +266,6 @@ describe('ProjectsFacade', () => {
       facade.generatedProject.set('version2');
       facade.pushUndo();
       expect(facade.undoStack().length).toBe(2);
-
-      // Mock updateProjectStatus to avoid HTTP call
-      facade.currentProjectId.set('123');
 
       facade.undoLastChange();
       expect(facade.generatedProject()).toBe('version2');
@@ -284,6 +282,71 @@ describe('ProjectsFacade', () => {
 
       const req2 = httpMock.expectOne('/api/projects/123');
       req2.flush({});
+    });
+
+    it('should maintain independent undo stacks per project', () => {
+      // Project A
+      facade.currentProjectId.set('proj-A');
+      facade.generatedProject.set('A-v1');
+      facade.pushUndo();
+      expect(facade.undoStack().length).toBe(1);
+      expect(facade.canUndo()).toBe(true);
+
+      // Switch to Project B
+      facade.currentProjectId.set('proj-B');
+      facade.generatedProject.set('B-v1');
+      // Stack for B is empty initially
+      expect(facade.undoStack().length).toBe(0);
+      expect(facade.canUndo()).toBe(false);
+
+      // Modify Project B
+      facade.pushUndo();
+      expect(facade.undoStack().length).toBe(1);
+      expect(facade.canUndo()).toBe(true);
+
+      // Switch back to Project A
+      facade.currentProjectId.set('proj-A');
+      expect(facade.undoStack().length).toBe(1);
+      expect(facade.canUndo()).toBe(true);
+
+      // Undo Project A
+      facade.undoLastChange();
+      expect(facade.generatedProject()).toBe('A-v1');
+      expect(facade.undoStack().length).toBe(0);
+
+      const reqA = httpMock.expectOne('/api/projects/proj-A');
+      reqA.flush({});
+
+      // Project B still has its own stack intact
+      facade.currentProjectId.set('proj-B');
+      expect(facade.undoStack().length).toBe(1);
+    });
+
+    it('should popUndo correctly on error', () => {
+      facade.currentProjectId.set('proj-1');
+      facade.generatedProject.set('v1');
+      facade.pushUndo();
+      expect(facade.undoStack().length).toBe(1);
+
+      facade.popUndo();
+      expect(facade.undoStack().length).toBe(0);
+
+      // popUndo on empty stack does not crash
+      facade.popUndo();
+      expect(facade.undoStack().length).toBe(0);
+    });
+
+    it('should clean up undo stack when project is deleted', () => {
+      facade.currentProjectId.set('proj-to-delete');
+      facade.generatedProject.set('v1');
+      facade.pushUndo();
+      expect(facade.undoStacksByProject()['proj-to-delete']?.length).toBe(1);
+
+      facade.deleteProject('proj-to-delete').subscribe();
+      const req = httpMock.expectOne('/api/projects/proj-to-delete');
+      req.flush({});
+
+      expect(facade.undoStacksByProject()['proj-to-delete']).toBeUndefined();
     });
 
     it('should not push empty content', () => {

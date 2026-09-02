@@ -75,6 +75,7 @@ describe('TallerViewComponent', () => {
       undoStack: signal([] as string[]),
       canUndo: signal(false),
       pushUndo: vi.fn(),
+      popUndo: vi.fn(),
       undoLastChange: vi.fn(),
     };
 

@@ -126,16 +126,23 @@ export class MapaIntermodularFacade {
       const targetName = isCa ? c.targetModuleName_ca : c.targetModuleName_es;
       const targetRa = isCa ? c.targetRaText_ca : c.targetRaText_es;
       const just = isCa ? c.justification_ca : c.justification_es;
+      const title = isCa ? (c.title_ca || c.title_es) : c.title_es;
 
-      summary += `\n[${idx + 1}] Mòdul ${c.targetModuleCode}: ${targetName} (${c.targetRaCode})\n`;
-      summary += `    ${targetRa}\n`;
-      summary += `    Justificació: ${just}\n`;
+      summary += `\n[${idx + 1}] ${title || (c.targetModuleCode + ' - ' + targetName)}\n`;
+      if (c.sourceCriteria) {
+        summary += `    ${isCa ? 'Criteris propis:' : 'Criterios propios:'} ${c.sourceCriteria}\n`;
+      }
+      if (c.relatedCriteria && c.relatedCriteria.length > 0) {
+        const relStr = c.relatedCriteria.map(r => `${r.moduleCode}: ${r.criteria}`).join(' | ');
+        summary += `    ${isCa ? 'Criteris relacionats:' : 'Criterios relacionados:'} ${relStr}\n`;
+      }
+      summary += `    ${isCa ? 'Justificació:' : 'Justificación:'} ${just}\n`;
 
       c.activities.forEach((act: IntermodularActivity) => {
-        const title = isCa ? act.title_ca : act.title_es;
-        const desc = isCa ? act.description_ca : act.description_es;
-        const div = isCa ? act.diversitySupport_ca : act.diversitySupport_es;
-        summary += `    * Activitat: ${title}\n      Descripció: ${desc}\n      Atenció Diversitat: ${div}\n`;
+        const aTitle = isCa ? act.title_ca : act.title_es;
+        const aDesc = isCa ? act.description_ca : act.description_es;
+        const aDiv = isCa ? act.diversitySupport_ca : act.diversitySupport_es;
+        summary += `    * ${isCa ? 'Activitat:' : 'Actividad:'} ${aTitle}\n      ${isCa ? 'Desenvolupament:' : 'Desarrollo:'} ${aDesc}\n      ${isCa ? 'Atenció Diversitat:' : 'Atención Diversidad:'} ${aDiv}\n`;
       });
     });
 

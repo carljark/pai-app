@@ -16,13 +16,24 @@ export interface IntermodularActivity {
   motivatingFactor_ca?: string;
 }
 
+export interface RelatedCriteriaItem {
+  moduleCode: string;
+  moduleName_es: string;
+  moduleName_ca: string;
+  criteria: string;
+}
+
 export interface IntermodularConnection {
+  title_es?: string;
+  title_ca?: string;
   targetModuleCode: string;
   targetModuleName_es: string;
   targetModuleName_ca: string;
   targetRaCode: string;
   targetRaText_es: string;
   targetRaText_ca: string;
+  sourceCriteria?: string;
+  relatedCriteria?: RelatedCriteriaItem[];
   targetCriteria_es?: string;
   targetCriteria_ca?: string;
   relationType: CompetenceType;

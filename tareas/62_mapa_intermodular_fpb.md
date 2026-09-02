@@ -23,12 +23,11 @@ graph TD
     MapaComp -->|createProjectFromConnection| LayoutService
 ```
 
-### 1. Modelos de Datos (`models/mapa-intermodular.model.ts`)
-- `FPBModule`: Estructura del módulo (código, nombre en castellano/valenciano, tipo `especifico`/`transversal`, color distintivo, icono, RAs).
-- `LearningOutcome`: RA con código, descripción bilingüe, criterios asociados y lista de conexiones intermodulares.
-- `IntermodularConnection`: Conexión entre el RA del módulo de origen y otro módulo diana, con tipo de relación (`ciencias`, `comunicacion`, `empleabilidad`, `tecnica`, `sostenibilidad`, `digital`, `cliente`), justificación pedagógica bilingüe y 7 actividades sugeridas.
-- `IntermodularActivity`: Propuesta didáctica rica con:
-  - `title_es` / `title_ca`: Título descriptivo de la actividad.
+### 1.- **Modelos de Datos (`models/mapa-intermodular.model.ts`):**
+  - `FPBModule`: Código, nombre (ES/CA), tipo (específico/transversal), color, icono y lista de RAs (`learningOutcomes`).
+  - `LearningOutcome`: Identificador, código (`RA1`..`RA4`), texto oficial (ES/CA), criterios de evaluación oficiales (`criteria_es` / `criteria_ca`) y conexiones intermodulares (`connections`).
+  - `IntermodularConnection`: Título de coincidencia, módulo destino, texto del RA destino, criterios propios implicados (`sourceCriteria`), lista de módulos y criterios relacionados (`relatedCriteria: RelatedCriteriaItem[]`), justificación curricular y 7 actividades prácticas.
+  - `IntermodularActivity`: Título, contexto/idea motivadora (`motivatingFactor`), desarrollo real pautado (`description`), producto/evidencia (`evidence`) y medidas de atención a la diversidad FPB (`diversitySupport`).
   - `motivatingFactor_es` / `motivatingFactor_ca`: Idea motivadora, contexto profesional o toque actual.
   - `description_es` / `description_ca`: **Desarrollo completo y detallado** de la actividad extraído de los documentos de trabajo.
   - `evidence_es` / `evidence_ca`: Producto final, entregable evaluable o evidencia de aprendizaje.

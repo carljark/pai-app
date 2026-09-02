@@ -6,10 +6,12 @@ export interface EvaluativeCriteria {
 }
 
 export interface LearningOutcome {
-  _id: string;
+  _id?: string;
+  id?: string;
   description: string;
   number?: string;
   subject?: string;
+  module?: string;
   criterios_es?: string[];
   criterios_ca?: string[];
 }

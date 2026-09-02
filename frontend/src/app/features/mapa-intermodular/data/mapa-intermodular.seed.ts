@@ -2,8 +2,8 @@ import { FPBModule } from '../models/mapa-intermodular.model';
 
 /**
  * Seed data oficial con los 11 módulos de FPB Peluquería y Estética,
- * coincidencias intermodulares y actividades prácticas desarrolladas
- * basadas en todos los documentos de la carpeta 'Plantillas coincidencias FPB'.
+ * criterios de evaluación implicados, criterios relacionados de otros módulos,
+ * justificaciones pedagógicas y actividades prácticas desarrolladas.
  */
 export const FPB_MODULES_SEED: FPBModule[] = [
   {
@@ -37,19 +37,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "f) Se han descrito las cualidades y aptitudes que debe presentar un buen professional.",
           "g) Se han identificado las normas de deontología professional."
         ],
-        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Imagen personal y profesional: “cómo me presento también forma parte del servicio”",
+            "title_ca": "Imagen personal y professional: “cómo me presento también forma parte del servei”",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 1",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Producto final: semáforo de imagen profesional. Evaluación: justificación, relación con PRL, higiene, respeto y deontología.",
+            "justification_ca": "Producte final: semáforo de imagen professional. Evaluación: justificación, relación con PRL, higiene, respeto y deontología.",
             "activities": [
               {
                 "id": "act_3060_c1_1",
@@ -145,15 +147,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Acomodación, ergonomía y protección del cliente",
+            "title_ca": "Acomodación, ergonomía y protección del client",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 5",
+            "relatedCriteria": [],
             "relationType": "cliente",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c5_1",
@@ -249,15 +255,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, roles, convivencia y simulación de salón",
+            "title_ca": "Trabajo en equipo, roles, convivencia y simulación de saló",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 9",
+            "relatedCriteria": [],
             "relationType": "digital",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c9_1",
@@ -383,19 +393,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "i) Se ha justificado la ventaja de utilizar material de un solo uso en determinados procesos con relación a la higiene.",
           "j) Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Preparación, limpieza, desinfección y esterilización de instalaciones",
+            "title_ca": "Preparación, limpieza, desinfección y esterilización de instal·lacions",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 2",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c2_1",
@@ -491,15 +503,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Seguridad, PRL, EPI y actuación ante incidencias",
+            "title_ca": "Seguridad, PRL, EPI y actuación ante incidencias",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 6",
+            "relatedCriteria": [],
             "relationType": "digital",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Producto final: tabla EPI-servicio-riesgo. Evaluación: adecuación y justificación.",
+            "justification_ca": "Producte final: tabla EPI-servei-riesgo. Evaluación: adecuación y justificación.",
             "activities": [
               {
                 "id": "act_3060_c6_1",
@@ -595,15 +611,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Preparación para FCT, empleabilidad y emprendimiento",
+            "title_ca": "Preparación para FCT, empleabilidad y emprendimiento",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 10",
+            "relatedCriteria": [],
             "relationType": "empleabilidad",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c10_1",
@@ -731,19 +751,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "j) Se han controlado las existencias, asegurando un stock óptimo.",
           "k) Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Recepción, almacenamiento, conservación y control de materiales y productos",
+            "title_ca": "Recepción, almacenamiento, conservación y control de materiales y productes",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 3",
+            "relatedCriteria": [],
             "relationType": "cliente",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c3_1",
@@ -839,15 +861,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Sostenibilidad, residuos y consumo responsable",
+            "title_ca": "Sostenibilidad, residuos y consumo responsable",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 7",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c7_1",
@@ -969,19 +995,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "g) Se han identificado los equips de protección del client según el servei previsto.",
           "h) Se han identificado las causas que pueden originar insatisfacción del client."
         ],
-        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Recepción, agenda, ficha de cliente y primera atención",
+            "title_ca": "Recepción, agenda, ficha de client y primera atención",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 4",
+            "relatedCriteria": [],
             "relationType": "cliente",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c4_1",
@@ -1077,15 +1105,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "TIC, documentación, comunicación escrita y portfolio profesional",
+            "title_ca": "TIC, documentación, comunicación escrita y portfolio professional",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Preparación del entorno profesional para la coincidencia 8",
+            "relatedCriteria": [],
             "relationType": "comunicacion",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Preparación del entorno profesional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Preparació de l’entorn professional y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3060_c8_1",
@@ -1227,19 +1259,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "l) Se ha descrito la conservación adecuada de los útiles de corte.",
           "m) Se han aplicado las medidas de prevenció de riscos laborales y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Imagen profesional, preparación personal, actitud y deontología",
+            "title_ca": "Imagen professional, preparación personal, actitud y deontología",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 1",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c1_1",
@@ -1335,15 +1369,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Selección de cosméticos, esmaltes, útiles y técnicas según características del cliente",
+            "title_ca": "Selección de cosméticos, esmaltes, útiles y técnicas según características del client",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 5",
+            "relatedCriteria": [],
             "relationType": "cliente",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Producto final: moodboard con justificación.",
+            "justification_ca": "Producte final: moodboard con justificación.",
             "activities": [
               {
                 "id": "act_3061_c5_1",
@@ -1439,15 +1477,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ergonomía, acomodación, protección y confort del cliente y del profesional",
+            "title_ca": "Ergonomía, acomodación, protección y confort del client y del professional",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 9",
+            "relatedCriteria": [],
             "relationType": "cliente",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c9_1",
@@ -1543,15 +1585,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Limpieza final, conservación, residuos, sostenibilidad y consumo responsable",
+            "title_ca": "Limpieza final, conservación, residuos, sostenibilidad y consumo responsable",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 13",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c13_1",
@@ -1677,19 +1723,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "i) Se han relacionado las características morfológicas de las manos y/o los pies y de las ungles para seleccionar la forma final más adecuada.",
           "j) Se ha cumplimentado la ficha técnica del servei con los datos más relevantes."
         ],
-        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Preparación de equipos, útiles, productos y mesa de trabajo",
+            "title_ca": "Preparación de equips, útiles, productes y mesa de trabajo",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 2",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c2_1",
@@ -1785,15 +1833,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ejecución técnica de manicura: fases, destreza manual, limado, cutículas, pulido, masaje y esmaltado",
+            "title_ca": "Ejecución técnica de manicura: fases, destreza manual, limado, cutículas, pulido, masaje y esmaltado",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 6",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c6_1",
@@ -1889,15 +1941,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación, atención al cliente, satisfacción, cuidados posteriores y reclamaciones",
+            "title_ca": "Comunicación, atenció al client, satisfacción, cuidados posteriores y reclamaciones",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 10",
+            "relatedCriteria": [],
             "relationType": "cliente",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c10_1",
@@ -1993,15 +2049,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
+            "title_ca": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 14",
+            "relatedCriteria": [],
             "relationType": "empleabilidad",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c14_1",
@@ -2131,19 +2191,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "k) Se han realizado preguntas para conocer el grado de satisfacción del client.",
           "l) Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Higiene, desinfección, esterilización y prevención de infecciones",
+            "title_ca": "Higiene, desinfección, esterilización y prevención de infecciones",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 3",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c3_1",
@@ -2239,15 +2301,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ejecución técnica de pedicura: higiene, durezas superficiales, limado, cutículas, masaje y esmaltado",
+            "title_ca": "Ejecución técnica de pedicura: higiene, durezas superficiales, limado, cutículas, masaje y esmaltado",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 7",
+            "relatedCriteria": [],
             "relationType": "digital",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c7_1",
@@ -2343,15 +2409,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Documentación profesional, fichas técnicas, TIC, portfolio y confidencialidad",
+            "title_ca": "Documentación professional, fichas técnicas, TIC, portfolio y confidencialidad",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 11",
+            "relatedCriteria": [],
             "relationType": "digital",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c11_1",
@@ -2485,19 +2555,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "m) Se han realizado preguntas tipo que permitan conocer el grado de satisfacción del client, tanto respecto al resultado del servei como de la atención personal.",
           "n) Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Observación de uñas, piel, alteraciones, contraindicaciones y derivación",
+            "title_ca": "Observación de ungles, pell, alteraciones, contraindicaciones y derivación",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 4",
+            "relatedCriteria": [],
             "relationType": "tecnica",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c4_1",
@@ -2593,15 +2665,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Diseño, nail art, creatividad, color, armonía estética e imagen global",
+            "title_ca": "Diseño, nail art, creatividad, color, armonía estética e imagen global",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 8",
+            "relatedCriteria": [],
             "relationType": "digital",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c8_1",
@@ -2697,15 +2773,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Control de tiempos, calidad, eficiencia y mejora del servicio",
+            "title_ca": "Control de tiempos, calidad, eficiencia y mejora del servei",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Cuidados estéticos básicos de uñas para la coincidencia 12",
+            "relatedCriteria": [],
             "relationType": "ciencias",
-            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
-            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral.",
+            "justification_ca": "Conexión competencial y curricular entre los criterios de evaluación de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo formativo para garantizar una formación integral.",
             "activities": [
               {
                 "id": "act_3061_c12_1",
@@ -2839,16 +2919,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3005-1h. Se ha mantenido una actitud conciliadora y sensible a los demás, demostrando cordialidad y amabilidad en el trato.",
           "3005-1i. Se ha transmitido información con claridad, de manera ordenada, estructura clara y precisa."
         ],
-        "importance_es": "Competencia clave de Atención al cliente para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Atenció al client per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Recepción, acogida, comportamiento profesional y primera impresión",
+            "title_ca": "Recepció, acollida, comportamiento professional y primera impresión",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a, 1b, 1d, 1h, 1i, 3e, 3f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "Preparación del entorno profesional: 1a-1g, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Cuidados estéticos básicos de uñas: 1a, 2f-2h, 3d, 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación y decoloración: 1h, 3a-3b, 4a, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "Maquillaje: 2a-2c, 3b-3c, 4c-4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "Lavado y cambios de forma: 1e, 1g, 1i, 3c-3d, 4d, 5d"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "Cambios de color: 2e-2f, 3d-3f, 4c-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "Ciencias aplicadas I: 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "Formación en Centros de Trabajo: 2d-2h, 7a-7f"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "la acogida del cliente condiciona la calidad percibida del servicio. La imagen personal, la actitud cordial, la adaptación del discurso, el respeto y la escucha activa son comunes a la recepción en cabina, tocador, lavacabezas, manicura, depilación, maquillaje, coloración y FCT. Comunicación y sociedad aporta estrategias orales, conversación, escucha activa y atención en inglés.",
             "justification_ca": "la acogida del client condiciona la calidad percibida del servei. La imagen personal, la actitud cordial, la adaptación del discurso, el respeto y la escucha activa son comunes a la recepción en cabina, tocador, lavacabezas, manicura, depilación, maquillaje, coloración y FCT. Comunicació i societat aporta estrategias orales, conversación, escucha activa y atención en inglés.",
@@ -2920,12 +3069,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c1_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Recepción, acogida, comportamiento profesional y primera impresión.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Recepció, acollida, comportamiento professional y primera impresión.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Recepción, acogida, comportamiento profesional y primera impresión en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Recepció, acollida, comportamiento professional y primera impresión al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Recepción, acogida, comportamiento profesional y primera impresión en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Recepció, acollida, comportamiento professional y primera impresión en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Recepción, acogida, comportamiento profesional y primera impresión.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Recepció, acollida, comportamiento professional y primera impresión.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -2933,12 +3082,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c1_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Recepción, acogida, comportamiento profesional y primera impresión.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Recepció, acollida, comportamiento professional y primera impresión.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Recepción, acogida, comportamiento profesional y primera impresión en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Recepció, acollida, comportamiento professional y primera impresión al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Recepción, acogida, comportamiento profesional y primera impresión en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Recepció, acollida, comportamiento professional y primera impresión en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Recepción, acogida, comportamiento profesional y primera impresión.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Recepció, acollida, comportamiento professional y primera impresión.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -2947,12 +3096,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo",
+            "title_ca": "Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1d-1i, 2c, 2e-2g, 3a-3b.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4a-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f, 2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 3c, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 5g, 5j"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3d, 3m, 4e, 4l"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4g, 6g, 8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 5e, 6f, 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i, 7d-7e"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "la comunicación oral atraviesa todos los módulos: explicar un diagnóstico, un tiempo de exposición, un acabado, un cuidado posterior o una incidencia. Comunicación y sociedad I y II son el soporte principal de la escucha activa, la expresión oral y la conversación en castellano e inglés.",
             "justification_ca": "la comunicació oral atraviesa todos los módulos: explicar un diagnóstico, un tiempo de exposición, un acabado, un cuidado posterior o una incidencia. Comunicació i societat I y II son el soporte principal de la escucha activa, la expresión oral y la conversación en castellano e inglés.",
@@ -3024,12 +3244,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c5_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3037,12 +3257,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c5_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3051,12 +3271,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Satisfacción, conformidad, fidelización, calidad y mejora continua",
+            "title_ca": "Satisfacción, conformidad, fidelización, calidad y mejora continua",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3d, 3g, 4a, 4f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3j, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "4j-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3k, 4k, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2k-2l, 3j-3m, 4j-4l"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 4g-4h, 5e"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2i, 3i, 5g, 7f"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "la calidad no termina con la ejecución técnica. Debe recogerse conformidad, detectar objeciones, corregir deficiencias, fidelizar y compartir información con el equipo. Este ciclo de mejora aparece en todos los servicios prácticos y puede analizarse con encuestas, tablas y gráficos.",
             "justification_ca": "la calidad no termina con la ejecución técnica. Debe recogerse conformidad, detectar objeciones, corregir deficiencias, fidelizar y compartir información con el equipo. Este ciclo de mejora aparece en todos los serveis prácticos y puede analizarse con encuestas, tablas y gráficos.",
@@ -3128,12 +3419,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c9_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Satisfacción, conformidad, fidelización, calidad y mejora continua.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Satisfacción, conformidad, fidelización, calidad y mejora continua.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Satisfacción, conformidad, fidelización, calidad y mejora continua en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Satisfacción, conformidad, fidelización, calidad y mejora continua al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Satisfacción, conformidad, fidelización, calidad y mejora continua en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Satisfacción, conformidad, fidelización, calidad y mejora continua en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Satisfacción, conformidad, fidelización, calidad y mejora continua.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Satisfacción, conformidad, fidelización, calidad y mejora continua.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3141,12 +3432,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c9_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Satisfacción, conformidad, fidelización, calidad y mejora continua.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Satisfacción, conformidad, fidelización, calidad y mejora continua.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Satisfacción, conformidad, fidelización, calidad y mejora continua en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Satisfacción, conformidad, fidelización, calidad y mejora continua al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Satisfacción, conformidad, fidelización, calidad y mejora continua en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Satisfacción, conformidad, fidelización, calidad y mejora continua en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Satisfacción, conformidad, fidelización, calidad y mejora continua.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Satisfacción, conformidad, fidelización, calidad y mejora continua.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3155,12 +3446,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, comunicación interna y coordinación profesional",
+            "title_ca": "Trabajo en equipo, comunicación interna y coordinación professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "4f, 1h-1i, 3d, 3g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 2g-2j, 3d-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 2d-2e, 3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1k, 2b-2k, 3a-3n, 4a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1e-1i, 2a-2l, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g-1i, 2b-2j, 3c-3l, 4d-4k, 5c-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1a-1g, 2d-2m, 3d-3n, 4c-4m"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "4g, 7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d, 3d, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "la atención al cliente no depende solo de quien recibe; requiere coordinación con quien realiza el servicio, con almacén, con agenda, con responsables técnicos y con el equipo en caso de incidencias o reclamaciones. La FCT consolida esta competencia en contexto real.",
             "justification_ca": "la atenció al client no depende solo de quien recibe; requiere coordinación con quien realiza el servei, con almacén, con agenda, con responsables técnicos y con el equipo en caso de incidencias o reclamaciones. La FCT consolida esta competencia en contexto real.",
@@ -3232,12 +3594,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c13_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Trabajo en equipo, comunicación interna y coordinación profesional.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Trabajo en equipo, comunicación interna y coordinación professional.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, comunicación interna y coordinación profesional en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, comunicación interna y coordinación professional al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, comunicación interna y coordinación profesional en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Trabajo en equipo, comunicación interna y coordinación professional en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, comunicación interna y coordinación profesional.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, comunicación interna y coordinación professional.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3245,12 +3607,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c13_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Trabajo en equipo, comunicación interna y coordinación profesional.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Trabajo en equipo, comunicación interna y coordinación professional.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, comunicación interna y coordinación profesional en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, comunicación interna y coordinación professional al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, comunicación interna y coordinación profesional en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Trabajo en equipo, comunicación interna y coordinación professional en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, comunicación interna y coordinación profesional.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, comunicación interna y coordinación professional.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3285,16 +3647,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3005-2g. Se ha asesorado al client sobre la opción más recomendable, cuando existen varias posibilidades, informándole de las características y acabados previsibles de cada una de ellas.",
           "3005-2h. Se ha solicitado al client que comunique la elección de la opción elegida."
         ],
-        "importance_es": "Competencia clave de Atención al cliente para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Atenció al client per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Entrevista, escucha activa y recogida de información previa",
+            "title_ca": "Entrevista, escolta activa y recogida de información previa",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a, 1c, 1d, 1e, 1f, 1i, 2e.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4c-4d, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f, 2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 1j-1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 2k, 3c, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 3k, 5g, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f-4g, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 4e-4h, 5e, 6f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2h-2i, 3a-3b, 4a-4b, 5a-5b, 7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "todos los servicios necesitan obtener información: demanda, expectativas, alergias, hábitos, historial, contraindicaciones, preferencias y satisfacción. La entrevista profesional convierte la comunicación en una herramienta técnica para decidir el servicio adecuado y registrar datos fiables.",
             "justification_ca": "todos los serveis necesitan obtener información: demanda, expectativas, alergias, hábitos, historial, contraindicaciones, preferencias y satisfacción. La entrevista professional convierte la comunicación en una herramienta técnica para decidir el servei adecuado y registrar datos fiables.",
@@ -3366,12 +3797,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c2_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Entrevista, escucha activa y recogida de información previa.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Entrevista, escolta activa y recogida de información previa.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Entrevista, escucha activa y recogida de información previa en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Entrevista, escolta activa y recogida de información previa al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Entrevista, escucha activa y recogida de información previa en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Entrevista, escolta activa y recogida de información previa en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Entrevista, escucha activa y recogida de información previa.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Entrevista, escolta activa y recogida de información previa.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3379,12 +3810,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c2_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Entrevista, escucha activa y recogida de información previa.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Entrevista, escolta activa y recogida de información previa.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Entrevista, escucha activa y recogida de información previa en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Entrevista, escolta activa y recogida de información previa al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Entrevista, escucha activa y recogida de información previa en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Entrevista, escolta activa y recogida de información previa en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Entrevista, escucha activa y recogida de información previa.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Entrevista, escolta activa y recogida de información previa.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3393,12 +3824,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación escrita, documentos de servicio, fichas, formularios y TIC",
+            "title_ca": "Comunicación escrita, documentos de servei, fichas, formularios y TIC",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1i, 2c, 3c-3d, 4c-4e.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4b-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2j, 3k, 4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h, 2k, 4e, 4j, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 5g"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j, 3d, 3k, 4e, 4i"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 3e, 4g-4h, 5e, 6f, 7e, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a, 1c, 2e, 2h-2i, 3a, 3g, 5a-5g, 7a"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "la atención al cliente se apoya en documentos: citas, fichas técnicas, consentimientos, presupuestos, encuestas, hojas de reclamación, justificantes e informes. La competencia escrita y digital permite registrar correctamente el servicio y compartir información con el equipo.",
             "justification_ca": "la atenció al client se apoya en documentos: citas, fichas técnicas, consentimientos, presupuestos, encuestas, hojas de reclamación, justificantes e informes. La competencia escrita y digital permite registrar correctamente el servei y compartir información con el equipo.",
@@ -3470,12 +3972,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c6_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Comunicación escrita, documentos de servicio, fichas, formularios y TIC.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Comunicación escrita, documentos de servei, fichas, formularios y TIC.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación escrita, documentos de servicio, fichas, formularios y TIC en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación escrita, documentos de servei, fichas, formularios y TIC al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación escrita, documentos de servicio, fichas, formularios y TIC en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Comunicación escrita, documentos de servei, fichas, formularios y TIC en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación escrita, documentos de servicio, fichas, formularios y TIC.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación escrita, documentos de servei, fichas, formularios y TIC.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3483,12 +3985,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c6_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Comunicación escrita, documentos de servicio, fichas, formularios y TIC.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Comunicación escrita, documentos de servei, fichas, formularios y TIC.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación escrita, documentos de servicio, fichas, formularios y TIC en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación escrita, documentos de servei, fichas, formularios y TIC al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación escrita, documentos de servicio, fichas, formularios y TIC en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Comunicación escrita, documentos de servei, fichas, formularios y TIC en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación escrita, documentos de servicio, fichas, formularios y TIC.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Comunicación escrita, documentos de servei, fichas, formularios y TIC.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3497,12 +3999,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos",
+            "title_ca": "Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3d, 3h, 4a-4f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1g, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2e, 3k-3l, 4l-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "3j-3l, 4j-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3k, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2l, 3l-3m, 4k-4l"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2i, 7a-7f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "las reclamaciones pueden surgir por expectativas no cumplidas, irritaciones, errores técnicos, tiempos de espera o falta de información. El alumnado debe actuar con calma, ofrecer alternativas, conocer documentos básicos y compartir la incidencia con el equipo. Comunicación y sociedad aporta argumentación, respeto y comprensión de derechos/deberes.",
             "justification_ca": "las reclamaciones pueden surgir por expectativas no cumplidas, irritaciones, errores técnicos, tiempos de espera o falta de información. El alumnat debe actuar con calma, ofrecer alternativas, conocer documentos básicos y compartir la incidencia con el equipo. Comunicació i societat aporta argumentación, respeto y comprensión de derechos/deberes.",
@@ -3574,12 +4147,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c10_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3587,12 +4160,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c10_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3601,12 +4174,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Calidad, seguridad, sostenibilidad y responsabilidad legal en la prestación del servicio",
+            "title_ca": "Calidad, seguridad, sostenibilidad y responsabilidad legal en la prestación del servei",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2f, 3h, 4a-4e.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1g, 2g-2j, 3k, 4g-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j, 2i-2k, 3l-3m, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 2l, 3e, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2h-2j, 3i, 3l, 5c-5i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2e-2m, 3e-3n, 4c-4m"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 5a-5g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "6a-6f, 9a-9d, 10a-10d, 11a-11d, 13a-13f, 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2j, 3h, 4h, 5c, 6a-6h"
+              }
+            ],
             "relationType": "sostenibilidad",
             "justification_es": "informar al cliente de características, garantías, obligaciones y reclamaciones exige que el servicio se realice con calidad, seguridad, higiene, prevención de riesgos y respeto medioambiental. Ciencias aplicadas aporta conocimientos sobre energía, electricidad, química, contaminación, desinfección y salud.",
             "justification_ca": "informar al client de características, garantías, obligaciones y reclamaciones exige que el servei se realice con calidad, seguridad, higiene, prevenció de riscos y respeto medioambiental. Ciències aplicades aporta conocimientos sobre energía, electricidad, química, contaminación, desinfección y salud.",
@@ -3731,16 +4375,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3005-3g. Se ha intentado la fidelización del client con el buen resultado del trabajo.",
           "3005-3h. Se ha definido periodo de garantía y las obligaciones legales aparejadas."
         ],
-        "importance_es": "Competencia clave de Atención al cliente para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Atenció al client per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Diagnóstico técnico y detección de necesidades antes del servicio",
+            "title_ca": "Diagnòstic tècnic y detección de necesidades antes del servei",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a-1c, 2e-2g, 3d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4c-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2a-2j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1a-1k, 4f"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c-2e, 2k, 3a, 3c, 3j-3k, 4d, 4j"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1a-1i, 3b, 3k, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a-2l, 3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "6a-6g, 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 5d-5e, 14a-14d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2h-2i, 3a-3b, 4a-4b, 5a-5c"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el asesoramiento al cliente no es posible sin diagnóstico. Las preguntas comerciales y técnicas deben apoyarse en la observación de piel, cabello, cuero cabelludo, uñas, vello, rostro, sensibilidad, alergias y resultados esperados. Ciencias aporta salud y anatomía; los módulos prácticos aportan criterios técnicos específicos.",
             "justification_ca": "el asesoramiento al client no es posible sin diagnóstico. Las preguntas comerciales y técnicas deben apoyarse en la observación de pell, cabell, cuir cabellut, ungles, vello, rostro, sensibilidad, alergias y resultados esperados. Ciencias aporta salud y anatomía; los módulos prácticos aportan criterios técnicos específicos.",
@@ -3812,12 +4525,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c3_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Diagnóstico técnico y detección de necesidades antes del servicio.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Diagnòstic tècnic y detección de necesidades antes del servei.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diagnóstico técnico y detección de necesidades antes del servicio en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diagnòstic tècnic y detección de necesidades antes del servei al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diagnóstico técnico y detección de necesidades antes del servicio en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Diagnòstic tècnic y detección de necesidades antes del servei en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diagnóstico técnico y detección de necesidades antes del servicio.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diagnòstic tècnic y detección de necesidades antes del servei.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3825,12 +4538,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c3_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Diagnóstico técnico y detección de necesidades antes del servicio.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Diagnòstic tècnic y detección de necesidades antes del servei.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diagnóstico técnico y detección de necesidades antes del servicio en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diagnòstic tècnic y detección de necesidades antes del servei al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diagnóstico técnico y detección de necesidades antes del servicio en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Diagnòstic tècnic y detección de necesidades antes del servei en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diagnóstico técnico y detección de necesidades antes del servicio.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diagnòstic tècnic y detección de necesidades antes del servei.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3839,12 +4552,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional",
+            "title_ca": "Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1b, 1h, 3e, 3f, 3g, 4f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1a-1g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1a, 3d, 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3a, 4a"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2a, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1i, 3i, 5c"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2e, 3e, 4c"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2d, 7a-7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "la pulcritud, el respeto y la actitud profesional son parte del servicio. En peluquería y estética el profesional trabaja con la imagen, la intimidad y la confianza del cliente, por lo que debe mostrar higiene, responsabilidad, discreción, cordialidad y colaboración con el equipo.",
             "justification_ca": "la pulcritud, el respeto y la actitud professional son parte del servei. En peluquería y estética el professional trabaja con la imagen, la intimidad y la confianza del client, por lo que debe mostrar higiene, responsabilidad, discreción, cordialidad y colaboración con el equipo.",
@@ -3916,12 +4700,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c7_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3929,12 +4713,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c7_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología professional.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -3943,12 +4727,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes",
+            "title_ca": "Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "2c, 2d, 2f, 2g, 3g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1i-1k, 3i-3j, 4j-4k"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1i, 2g-2h, 4c-4d"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h, 3f-3i, 4f-4i"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3a-3b, 4c, 5b"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a-2d, 3a-3c, 4a-4b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f, 8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 6f, 7e"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i, 7d-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "el profesional debe informar con rigor y no confundir asesoramiento técnico con publicidad. Esta competencia es esencial al hablar de cosméticos, tintes, ceras, fijadores, productos de uñas o maquillaje, cuyos mensajes comerciales pueden generar expectativas poco realistas.",
             "justification_ca": "el professional debe informar con rigor y no confundir asesoramiento técnico con publicidad. Esta competencia es esencial al hablar de cosméticos, tintes, ceras, fijadores, productes de ungles o maquillaje, cuyos mensajes comerciales pueden generar expectativas poco realistas.",
@@ -4020,12 +4869,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c11_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4033,12 +4882,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c11_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4069,16 +4918,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3005-4e. Se ha cumplimentado una hoja de reclamación.",
           "3005-4f. Se ha compartido información con el equipo de trabajo."
         ],
-        "importance_es": "Competencia clave de Atención al cliente para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Atenció al client per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles",
+            "title_ca": "Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2a-2h, 3a-3b, 3g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1c, 1i-1k, 2i, 3b-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1d-1j, 2d, 2g-2h, 3d, 4c-4d"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1f-1h, 2d-2j, 3a, 3f-3i, 4a, 4f, 4i"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 3a-3b, 3j, 4c-4h, 5b-5f"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a-2d, 3a-3c, 4a-4b, 4d"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1g-1i, 3a-3j, 4a-4g, 5a-5g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e, 3a-3e, 4e-4h, 5b, 6a-6f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3f, 4a-4e, 5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el cliente debe comprender las distintas opciones y sus resultados: tipo de manicura, depilación, maquillaje, peinado, coloración o tratamiento capilar. La atención al cliente exige traducir conocimientos técnicos a un lenguaje claro, honesto y adaptado, diferenciando información de publicidad.",
             "justification_ca": "el client debe comprender las distintas opciones y sus resultados: tipo de manicura, depilación, maquillaje, peinado, coloración o tratamiento capilar. La atenció al client exige traducir conocimientos técnicos a un lenguaje claro, honesto y adaptado, diferenciando información de publicidad.",
@@ -4150,12 +5068,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c4_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4163,12 +5081,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c4_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4177,12 +5095,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Información sobre tiempos, fases del servicio, resultados y cuidados posteriores",
+            "title_ca": "Información sobre tiempos, fases del servei, resultados y cuidados posteriores",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "2f-2h, 3a-3b, 3d, 3g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3a, 3j-3k, 4b, 4k-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1d-1j, 3j, 3n, 4h, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2i-2j, 4i-4k, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2e, 3k, 4i-4k, 5f, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2h, 2k-2l, 3h, 3m, 4g, 4l"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 3b-3d, 5e"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e, 3a-3e, 4a-4j, 5b"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3i, 4i, 5g"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "el cliente debe conocer qué se le va a realizar, cuánto durará, qué resultado puede esperar y qué cuidados debe seguir después. Esta información depende de los tiempos técnicos de exposición, secado, aplicación, acabado y mantenimiento, presentes en los módulos prácticos y apoyados por matemáticas básicas.",
             "justification_ca": "el client debe conocer qué se le va a realizar, cuánto durará, qué resultado puede esperar y qué cuidados debe seguir después. Esta información depende de los tiempos técnicos de exposición, secado, aplicación, acabado y mantenimiento, presentes en los módulos prácticos y apoyados por matemáticas básicas.",
@@ -4254,12 +5237,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c8_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Información sobre tiempos, fases del servicio, resultados y cuidados posteriores.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Información sobre tiempos, fases del servei, resultados y cuidados posteriores.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Información sobre tiempos, fases del servei, resultados y cuidados posteriores al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Información sobre tiempos, fases del servei, resultados y cuidados posteriores en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Información sobre tiempos, fases del servei, resultados y cuidados posteriores.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4267,12 +5250,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c8_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Información sobre tiempos, fases del servicio, resultados y cuidados posteriores.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Información sobre tiempos, fases del servei, resultados y cuidados posteriores.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Información sobre tiempos, fases del servei, resultados y cuidados posteriores al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Información sobre tiempos, fases del servei, resultados y cuidados posteriores en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Información sobre tiempos, fases del servei, resultados y cuidados posteriores.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4281,12 +5264,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Tipologías de público, diversidad, inclusión y adaptación del trato",
+            "title_ca": "Tipologías de público, diversidad, inclusión y adaptación del trato",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a-1b, 1h, 2a-2b, 2e, 3f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f-2h, 3d, 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1h, 3b, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2a-2c, 3c, 4d"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1e, 1i, 3c-3d, 4d, 5d"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2f, 3f, 4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "7h, 8a-8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "11a-11d, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a-1i, 2a-2i, 3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2f-2i, 7a-7f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "el alumnado debe adaptar la comunicación a distintos públicos: cliente joven, mayor, indeciso, extranjero, con discapacidad, proveedor o público general. La diversidad cultural, lingüística y social trabajada en Comunicación y sociedad se aplica directamente al trato profesional.",
             "justification_ca": "el alumnat debe adaptar la comunicación a distintos públicos: client joven, mayor, indeciso, extranjero, con discapacidad, proveedor o público general. La diversidad cultural, lingüística y social trabajada en Comunicació i societat se aplica directamente al trato professional.",
@@ -4358,12 +5412,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c12_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Tipologías de público, diversidad, inclusión y adaptación del trato.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Tipologías de público, diversidad, inclusión y adaptación del trato.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Tipologías de público, diversidad, inclusión y adaptación del trato en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Tipologías de público, diversidad, inclusión y adaptación del trato al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Tipologías de público, diversidad, inclusión y adaptación del trato en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Tipologías de público, diversidad, inclusión y adaptación del trato en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Tipologías de público, diversidad, inclusión y adaptación del trato.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Tipologías de público, diversidad, inclusión y adaptación del trato.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4371,12 +5425,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3005_c12_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Tipologías de público, diversidad, inclusión y adaptación del trato.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Tipologías de público, diversidad, inclusión y adaptación del trato.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Tipologías de público, diversidad, inclusión y adaptación del trato en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Tipologías de público, diversidad, inclusión y adaptación del trato al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Tipologías de público, diversidad, inclusión y adaptación del trato en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Tipologías de público, diversidad, inclusión y adaptación del trato en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Tipologías de público, diversidad, inclusión y adaptación del trato.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Tipologías de público, diversidad, inclusión y adaptación del trato.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
@@ -4419,16 +5473,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3065-1f. Se ha identificado la composición del equipo personal de peluquería para la ejecución técnica del cambio de color.",
           "3065-1g. Se han aplicado las medidas de prevenció de riscos laborales y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cambios de color del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Canvis de color del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Preparación del espacio, equipos, útiles, accesorios y material profesional",
+            "title_ca": "Preparación del espacio, equips, útiles, accesorios y material professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a, 1b, 1c, 1d, 1e, 1f, 2g, 3c, 3g, 4d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "Preparación del entorno profesional: 2a-2j, 3a-3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Cuidados estéticos básicos de uñas: 1b-1m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación y decoloración: 2a-2h, 3c-3f, 4b-4d"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "Maquillaje: 1a-1i, 3a, 4a, 4l"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "Lavado y cambios de forma: 2a-2j, 3a-3b, 4c, 5b"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "Atención al cliente: 2f-2g, 3b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "Ciencias aplicadas I: 1a-1j, 2a-2c, 3a-3j, 4a-4g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 3a-3e, 5a-5e, 6a-6f, 13a-13f, 14g-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "Formación en Centros de Trabajo: 1a-1g, 2a-2c, 3c, 5b-5f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el cambio de color exige organizar un puesto técnico con boles, paletinas, guantes, capas, toallas, peines, papel de aluminio, gorro, protectores, productos colorantes y oxidantes. Esta preparación coincide con todos los módulos prácticos porque todos requieren seleccionar, ordenar, higienizar y conservar materiales. Ciencias aplicadas permite trabajar unidades, mezclas, materia, material de laboratorio y electricidad; Comunicación y sociedad ayuda a interpretar etiquetas, instrucciones y protocolos.",
             "justification_ca": "el cambio de color exige organizar un puesto técnico con boles, paletinas, guantes, capas, toallas, peines, papel de aluminio, gorro, protectores, productes colorantes y oxidantes. Esta preparación coincide con todos los módulos prácticos porque todos requieren seleccionar, ordenar, higienizar y conservar materiales. Ciències aplicades permite trabajar unidades, mezclas, materia, material de laboratorio y electricidad; Comunicació i societat ayuda a interpretar etiquetas, instrucciones y protocolos.",
@@ -4527,12 +5650,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Selección de técnica y producto según objetivo, cabello y resultado final",
+            "title_ca": "Selección de técnica y producto según objetivo, cabell y resultado final",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2a-2d, 3a-3c, 4a-4b, 4d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1c, 1i-1k, 2i, 3b-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1d-1j, 2d, 2g-2h, 3d, 4c-4d"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1f-1h, 2d-2j, 3a, 3f-3i, 4a, 4f, 4i"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 3a-3b, 3j, 4c-4h, 5b-5f"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2a-2h, 3a-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1g-1i, 3a-3j, 4a-4g, 5a-5g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e, 3a-3e, 4e-4h, 5b, 6a-6f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3f, 4a-4e, 5a-5e"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "elegir entre coloración global, parcial, mechas, decoloración o retoque de raíz exige analizar objetivo, tipo de cabello, tono natural, técnica, producto, duración del resultado y expectativas del cliente. Esta toma de decisiones se relaciona con la selección de productos y técnicas en todos los módulos técnicos y con la argumentación/comunicación de la propuesta.",
             "justification_ca": "elegir entre coloración global, parcial, mechas, decoloración o retoque de raíz exige analizar objetivo, tipo de cabell, tono natural, técnica, producto, duración del resultado y expectativas del client. Esta toma de decisiones se relaciona con la selección de productes y técnicas en todos los módulos técnicos y con la argumentación/comunicación de la propuesta.",
@@ -4631,12 +5825,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ejecución técnica de decoloración, coloración global y coloración parcial",
+            "title_ca": "Ejecución técnica de decoloración, coloración global y coloración parcial",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "2g-2i, 3g-3j, 4d, 4g-4j.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3a-3i, 4b-4j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3g-3i, 4g-4i"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2f-2j, 3g-3i, 4g-4j"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3e-3j, 4h-4j, 5e-5f"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3a-3d, 3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1b, 1h-1i, 3d, 4e-4g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2c-2f, 3a-3d, 5b, 5e, 12a-12g"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3f, 5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "aplicar color requiere destreza, orden, particiones, distribución uniforme, control visual, pulcritud y adaptación del lavado posterior. Estos aprendizajes procedimentales coinciden con la ejecución de depilación, maquillaje, manicura, cambios de forma y servicios en empresa.",
             "justification_ca": "aplicar color requiere destreza, orden, particiones, distribución uniforme, control visual, pulcritud y adaptación del lavado posterior. Estos aprendizajes procedimentales coinciden con la ejecución de depilación, maquillaje, manicura, cambios de forma y serveis en empresa.",
@@ -4735,12 +5994,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Evaluación de resultados, calidad, deficiencias y mejora del servicio",
+            "title_ca": "Evaluación de resultados, calidad, deficiencias y mejora del servei",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2k-2l, 3j-3m, 4j-4l.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3j, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "4j-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3k, 4k, 5j-5k"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2f-2h, 3d-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 4g-4h, 5e"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2i, 3i, 5g, 7f"
+              }
+            ],
             "relationType": "ciencias",
             "justification_es": "tras colorear hay que valorar si el tono, reflejo, cobertura, uniformidad, brillo y satisfacción responden al objetivo. Si existen desviaciones, deben identificarse causas y proponer correcciones. Esto conecta con calidad, atención al cliente, informes, análisis de datos y mejora continua.",
             "justification_ca": "tras colorear hay que valorar si el tono, reflejo, cobertura, uniformidad, brillo y satisfacción responden al objetivo. Si existen desviaciones, deben identificarse causas y proponer correcciones. Esto conecta con calidad, atenció al client, informes, análisis de datos y mejora continua.",
@@ -4875,16 +6205,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3065-2l. Se han detectado las causas que originan deficiencias en el servei y las medidas para subsanarlas.",
           "3065-2m. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cambios de color del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Canvis de color del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Higiene, desinfección, mantenimiento de equipos y prevención de infecciones",
+            "title_ca": "Higiene, desinfección, mantenimiento de equips y prevención de infecciones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1c, 1d, 1e, 1g, 2e, 2m, 3e, 3n, 4c, 4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2a-2j"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1d-1f, 1m, 4a, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b, 3e, 3k-3m, 4e, 4j-4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a-1b, 1e, 3d-3e, 4b, 4l-4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2b, 2f-2h, 3g, 3l, 5h-5i"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e-3f, 4b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2a-2b, 2j, 3g-3h, 4f, 4h, 5f, 6a-6h"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "la coloración capilar se realiza sobre cabello y cuero cabelludo, usando útiles reutilizables y productos químicos. La higiene y el mantenimiento evitan contaminación, irritaciones y deficiencias del servicio. Ciencias aplicadas explica microorganismos, contagios y desinfección; Comunicación permite elaborar y seguir protocolos.",
             "justification_ca": "la coloración capilar se realiza sobre cabell y cuir cabellut, usando útiles reutilizables y productes químicos. La higiene y el mantenimiento evitan contaminación, irritaciones y deficiencias del servei. Ciències aplicades explica microorganismos, contagios y desinfección; Comunicación permite elaborar y seguir protocolos.",
@@ -4983,12 +6382,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Colorimetría, armonía estética, visagismo e imagen global",
+            "title_ca": "Colorimetría, armonía estética, visagismo e imagen global",
             "targetModuleCode": "3063",
             "targetModuleName_es": "Maquillaje",
             "targetModuleName_ca": "Maquillatge",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Maquillaje.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Maquillatge.",
+            "sourceCriteria": "2a, 3a-3c, 4a-4b, 4g, 4j.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "Maquillaje: 3a, 3c, 3f-3i, 4e-4j"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "Lavado y cambios de forma: 4e-4h, 5e, 5j"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Uñas: 2i, 3f, 3i, 4g, 4j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación: 1e-1f, 3g-3h"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "Atención al cliente: 2f-2g, 3d, 3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "Ciencias aplicadas I: 1g-1i, 3b-3d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 3a-3e, 4a-4j"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 1a-1i, 2a-2i, 5a-5e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 1a-1j, 2a-2f, 5a-5e"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "FCT: 3a-3i, 5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el color del cabello condiciona la imagen global, el maquillaje, el peinado, el tono de piel, la ropa y el estilo. Se vincula con el visagismo, la armonía cromática, la creatividad, la geometría y la cultura visual trabajadas especialmente en Maquillaje y Comunicación y sociedad.",
             "justification_ca": "el color del cabell condiciona la imagen global, el maquillaje, el peinado, el tono de pell, la ropa y el estilo. Se vincula con el visagismo, la armonía cromática, la creatividad, la geometría y la cultura visual trabajadas especialmente en Maquillaje y Comunicació i societat.",
@@ -5087,12 +6551,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Control de tiempos, exposición, proporciones, medidas, temperatura y eficiencia",
+            "title_ca": "Control de tiempos, exposición, proporciones, medidas, temperatura y eficiencia",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "2g-2h, 3g-3h, 4g, 2k-2l, 3m, 4l.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3j, 4k"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1i, 2e-2f, 3f, 3j, 4h"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2i-2j, 4i-4k"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2e, 4i-4j, 5f"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3b, 3d, 4a"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 3b-3d, 3i-3j, 5e"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e, 3a-3e, 4a-4j, 5b, 13a-13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3i, 4i, 5g"
+              }
+            ],
             "relationType": "ciencias",
             "justification_es": "la coloración depende del cálculo correcto de mezclas, proporciones, tiempos de exposición, duración del servicio y organización de agenda. Matemáticas y Ciencias aplicadas permiten trabajar proporcionalidad, unidades, gráficas, medidas y eficiencia.",
             "justification_ca": "la coloración depende del cálculo correcto de mezclas, proporciones, tiempos de exposición, duración del servei y organización de agenda. Matemáticas y Ciències aplicades permiten trabajar proporcionalidad, unidades, gráficas, medidas y eficiencia.",
@@ -5191,12 +6720,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Limpieza final, orden, almacenamiento, residuos, sostenibilidad y consumo responsable",
+            "title_ca": "Limpieza final, orden, almacenamiento, residuos, sostenibilidad y consumo responsable",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1c-1g, 2m, 3j, 3n, 4j, 4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2e-2j, 3c-3f, 3i-3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1e, 1l-1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b, 3k-3m, 4j-4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a, 1e, 1i, 4l-4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2g, 3g, 5h-5i"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e, 3g-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "5b-5d, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "9a-9d, 10a-10d, 11a-11d, 13b, 13d, 14g-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a, 1i, 2h, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1d-1g, 2j, 3g-3h, 4f, 4h, 5f, 6g-6h"
+              }
+            ],
             "relationType": "sostenibilidad",
             "justification_es": "la coloración genera residuos específicos: restos de mezcla, envases, guantes, papel de aluminio, algodón, toallas y agua contaminada por productos. La sostenibilidad y el orden final conectan con Ciencias aplicadas, medioambiente, normativa, ahorro de agua/energía y calidad profesional.",
             "justification_ca": "la coloración genera residuos específicos: restos de mezcla, envases, guantes, papel de aluminio, algodón, toallas y agua contaminada por productes. La sostenibilidad y el orden final conectan con Ciències aplicades, medioambiente, normativa, ahorro de agua/energía y calidad professional.",
@@ -5333,16 +6933,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3065-3m. Se ha estudiado el grado de satisfacción del client, tanto en la prestación del servei como en la atención personal, y se han corregido las deficiencias.",
           "3065-3n. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cambios de color del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Canvis de color del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Diagnóstico capilar, estudio del color natural, cuero cabelludo, alergias y prueba de tolerancia",
+            "title_ca": "Diagnóstico capilar, estudio del color natural, cuir cabellut, alergias y prueba de tolerancia",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2a, 2j, 2k, 2l, 3d, 3k-3m, 4e, 4i-4l.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4c-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2a-2j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1a-1k, 3n, 4f, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c-2e, 2k, 3a, 3c, 3j-3k, 4d, 4j, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1a-1i, 3h, 3k, 5g, 5j-5k"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3d"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "6a-6g, 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 5d-5e, 14a-14d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2h-2i, 3a-3b, 5a-5c, 7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "antes de aplicar color o decoloración hay que estudiar el color natural, estado del cabello, cuero cabelludo, historial de productos, alergias y prueba de tolerancia. Coincide con el diagnóstico de piel, vello, uñas y rostro en estética y con la atención profesional al cliente. Ciencias aporta anatomía, salud, prevención y método científico; Comunicación permite formular preguntas y registrar información.",
             "justification_ca": "antes de aplicar color o decoloración hay que estudiar el color natural, estado del cabell, cuir cabellut, historial de productes, alergias y prueba de tolerancia. Coincide con el diagnóstico de pell, vello, ungles y rostro en estética y con la atención professional al client. Ciencias aporta anatomía, salud, prevención y método científico; Comunicación permite formular preguntas y registrar información.",
@@ -5441,12 +7110,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Acomodación, ergonomía, protección de piel/ropa y confort del cliente/profesional",
+            "title_ca": "Acomodación, ergonomía, protección de pell/ropa y confort del client/professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2e-2f, 3e-3f, 4c, 4f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 4e-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2g-2h, 3d, 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3a-3b, 4a, 4e"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2a-2b, 3b, 3j-3k, 4c"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1e, 3c-3d, 3i, 4d, 5c-5d"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h, 3e-3f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "6a-6g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "12a-12g, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2g, 3d-3e, 4d, 4g, 5d"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "en coloración es imprescindible proteger al cliente con capa, toalla, crema barrera y correcta posición, además de proteger al profesional con guantes y postura adecuada. Esta competencia es común en lavacabezas, camilla, tocador y mesa de manicura.",
             "justification_ca": "en coloración es imprescindible proteger al client con capa, toalla, crema barrera y correcta posición, además de proteger al professional con guantes y postura adecuada. Esta competencia es común en lavacabezas, camilla, tocador y mesa de manicura.",
@@ -5545,12 +7285,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Documentación profesional, ficha técnica, registros, informes y confidencialidad",
+            "title_ca": "Documentación professional, ficha técnica, registros, informes y confidencialidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2j, 3d, 3k, 4e, 4i.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4b-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2j, 3k, 4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h, 2k, 3c, 4e, 4j, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 5g"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1i, 2c, 3c-3d, 4c-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 3e, 4g-4h, 5e, 6f, 7e, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a, 1c, 2e, 2h-2i, 3a, 3g, 5a-5g, 7a"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "los cambios de color requieren registrar prueba de tolerancia, cosméticos, mezclas, tiempos, observaciones, técnica y resultado. La documentación protege al cliente y al profesional, mejora la continuidad del servicio y exige expresión escrita, síntesis, TIC y confidencialidad.",
             "justification_ca": "los cambios de color requieren registrar prueba de tolerancia, cosméticos, mezclas, tiempos, observaciones, técnica y resultado. La documentación protege al client y al professional, mejora la continuidad del servei y exige expresión escrita, síntesis, TIC y confidencialidad.",
@@ -5649,12 +7460,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
+            "title_ca": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "todos los criterios del módulo, especialmente 1a-1g, 2d-2m, 3d-3n y 4c-4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 2g-2j, 3d-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 2d-2e, 3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1k, 2b-2k, 3a-3n, 4a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1e-1i, 2a-2l, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g-1i, 2b-2j, 3c-3l, 4d-4k, 5c-5k"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h-1i, 3f-3g, 4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "4g, 7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d, 3d, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "empleabilidad",
             "justification_es": "el cambio de color se realiza habitualmente en coordinación con otros servicios: recepción, diagnóstico, lavado, aplicación, control, retirada, peinado, explicación de cuidados y limpieza. Requiere seguir instrucciones del técnico responsable, colaborar con el equipo y actuar con responsabilidad. La FCT integra todo ello en contexto real.",
             "justification_ca": "el cambio de color se realiza habitualmente en coordinación con otros serveis: recepción, diagnóstico, lavado, aplicación, control, retirada, peinado, explicación de cuidados y limpieza. Requiere seguir instrucciones del técnico responsable, colaborar con el equipo y actuar con responsabilidad. La FCT integra todo ello en contexto real.",
@@ -5789,16 +7671,79 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3065-4l. Se ha estudiado el grado de satisfacción del client, tanto en la prestación del servei como en la atención personal y se han corregido las deficiencias.",
           "3065-4m. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Cambios de color del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Canvis de color del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Química cosmética, decoloración, oxidación, mezclas y acción de los productos",
+            "title_ca": "Química cosmética, decoloración, oxidación, mezclas y acción de los productes",
             "targetModuleCode": "3062",
             "targetModuleName_es": "Depilación mecánica y decoloración del vello superfluo",
             "targetModuleName_ca": "Depilació mecànica i decoloració del pèl superflu",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Depilación mecánica y decoloración del vello superfluo.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Depilació mecànica i decoloració del pèl superflu.",
+            "sourceCriteria": "2b, 2c, 2d, 2g, 2h, 3a, 3b, 3g, 3h, 4d, 4g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1d, 1f, 2d, 4c-4h"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h, 2d-2j, 3a, 4a, 4i"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3a-3b, 4c, 5a-5f"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1i-1k, 3b-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3c, 3f-3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "3a-3j, 4a-4g, 5a-5g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "5a-5e, 6a-6f, 14e"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3i, 4a-4i, 5b-5c"
+              }
+            ],
             "relationType": "ciencias",
             "justification_es": "la coloración y decoloración capilar dependen de procesos químicos: oxidación, aclaración, depósito de pigmentos, mezclas con oxidante, tiempos de exposición y neutralización o retirada. Ciencias aplicadas I y II proporcionan la base de materia, mezclas, reacciones químicas, temperatura, mediciones y prácticas de laboratorio.",
             "justification_ca": "la coloración y decoloración capilar dependen de procesos químicos: oxidación, aclaración, depósito de pigmentos, mezclas con oxidante, tiempos de exposición y neutralización o retirada. Ciències aplicades I y II proporcionan la base de materia, mezclas, reacciones químicas, temperatura, mediciones y prácticas de laboratorio.",
@@ -5897,12 +7842,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Seguridad, PRL, productos químicos, prueba de tolerancia y responsabilidad profesional",
+            "title_ca": "Seguridad, PRL, productes químicos, prueba de tolerancia y responsabilidad professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1g, 2d-2h, 2m, 3d-3h, 3n, 4c-4g, 4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1g, 2g-2j, 3k, 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j, 2i-2k, 3a-3b, 3l-3m, 4a, 4d, 4f, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 2l, 3e, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2h-2j, 3i, 3l, 5c-5d, 5f, 5h-5i"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3f, 4b-4c"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 5a-5g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "6a-6f, 9a-9d, 10a-10d, 11a-11d, 13a-13f, 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3h, 4h, 5c, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "los cambios de color implican riesgo químico, posibles alergias, irritaciones, contacto con ojos/piel, residuos y exposición a productos oxidantes. La prevención de riesgos laborales y medioambientales atraviesa todos los módulos; Ciencias aplicadas II refuerza reacciones químicas, contaminación, electricidad y desinfección, y Comunicación ayuda a entender normas e informar al cliente.",
             "justification_ca": "los cambios de color implican riesgo químico, posibles alergias, irritaciones, contacto con ojos/pell, residuos y exposición a productes oxidantes. La prevenció de riscos laborales y medioambientales atraviesa todos los módulos; Ciències aplicades II refuerza reacciones químicas, contaminación, electricidad y desinfección, y Comunicación ayuda a entender normas e informar al client.",
@@ -6001,12 +8017,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación profesional, atención al cliente, asesoramiento, satisfacción y reclamaciones",
+            "title_ca": "Comunicación professional, atenció al client, asesoramiento, satisfacción y reclamaciones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3d, 3m, 4e, 4l, 2k, 2l, 3l, 4k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4a-4d, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f, 2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 2k, 3c, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 3k, 5g, 5j-5k"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f-4g, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 4e-4h, 5e, 6f, 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i, 3a-3i, 5a-5g, 7a-7f"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "el cambio de color exige informar del procedimiento, prueba de tolerancia, resultado posible, mantenimiento, tiempos, riesgos y alternativas. También requiere comprobar satisfacción y corregir deficiencias. Atención al cliente y Comunicación y sociedad son esenciales para expresar con claridad, escuchar y resolver objeciones.",
             "justification_ca": "el cambio de color exige informar del procedimiento, prueba de tolerancia, resultado posible, mantenimiento, tiempos, riesgos y alternativas. También requiere comprobar satisfacción y corregir deficiencias. Atenció al client y Comunicació i societat son esenciales para expresar con claridad, escuchar y resolver objeciones.",
@@ -6135,16 +8222,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-1d. Se han resuelto problemas cotidianos y de otras áreas de conocimiento mediante ecuaciones y sistemas.",
           "3042-1e. Se ha valorado la precisión, simplicidad y utilidad del lenguaje algebraico para representar situaciones planteadas en la vida real."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3009",
-            "targetModuleName_es": "Ciencias aplicadas I",
-            "targetModuleName_ca": "Ciències aplicades I",
+            "title_es": "Álgebra, ecuaciones, proporcionalidad y resolución de problemas reales del salón",
+            "title_ca": "Álgebra, ecuaciones, proporcionalidad y resolución de problemas reales del saló",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 1",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "el álgebra ayuda a resolver problemas profesionales: mezclar productos, calcular tiempos, organizar agenda, controlar stock, estimar costes, interpretar resultados y decidir con datos. En peluquería y estética, las matemáticas dejan de ser abstractas cuando sirven para no desperdiciar producto, no retrasar citas y mejorar la calidad del servicio.",
             "justification_ca": "el álgebra ayuda a resolver problemas professionales: mezclar productes, calcular tiempos, organizar agenda, controlar stock, estimar costes, interpretar resultados y decidir con datos. En peluquería y estética, las matemáticas dejan de ser abstractas cuando sirven para no desperdiciar producto, no retrasar citas y mejorar la calidad del servei.",
@@ -6265,16 +8354,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-2e. Se han recopilado los resultados de los ensayos de verificación y plasmado en un documento de forma coherente.",
           "3042-2f. Se ha defendido el resultado con argumentaciones y pruebas las verificaciones o refutaciones de las hipótesis emitidas."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3009",
-            "targetModuleName_es": "Ciencias aplicadas I",
-            "targetModuleName_ca": "Ciències aplicades I",
+            "title_es": "Método científico, investigación, hipótesis, datos, informes y argumentación",
+            "title_ca": "Método científico, investigación, hipótesis, datos, informes y argumentación",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 2",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "el método científico enseña a observar, plantear hipótesis, comprobar, registrar y defender conclusiones. En el taller se aplica al diagnóstico de piel/cabello/uñas, comparación de productos, evaluación de satisfacción y mejora de protocolos.",
             "justification_ca": "el método científico enseña a observar, plantear hipótesis, comprobar, registrar y defender conclusiones. En el taller se aplica al diagnóstico de pell/cabell/ungles, comparación de productes, evaluación de satisfacción y mejora de protocolos.",
@@ -6393,16 +8484,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-3d. Se ha trabajado en equipo en la obtención de medidas.",
           "3042-3e. Se han utilizado las TIC para representar distintas figuras."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3061",
-            "targetModuleName_es": "Cuidados estéticos básicos de uñas",
-            "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
+            "title_es": "Medidas, geometría, proporción, diseño, visagismo, gráficos y estadística",
+            "title_ca": "Medidas, geometría, proporción, diseño, visagismo, gráficos y estadística",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 3",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "la geometría y la estadística son útiles para cejas, visagismo, simetría, diseño de fantasía, uñas, peinados, particiones de color, medición de resultados y análisis de preferencias. Permiten unir ciencia, estética y creatividad.",
             "justification_ca": "la geometría y la estadística son útiles para cejas, visagismo, simetría, diseño de fantasía, ungles, peinados, particiones de color, medición de resultados y análisis de preferencias. Permiten unir ciencia, estética y creatividad.",
@@ -6531,16 +8624,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-4i. Se han aplicado propiedades de los sucesos y la probabilidad.",
           "3042-4j. Se han resuelto problemas cotidianos mediante cálculos de probabilidad sencillos."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3009",
-            "targetModuleName_es": "Ciencias aplicadas I",
-            "targetModuleName_ca": "Ciències aplicades I",
+            "title_es": "Laboratorio, magnitudes, biomoléculas, células, tejidos y relación con piel, cabello y uñas",
+            "title_ca": "Laboratorio, magnitudes, biomoléculas, células, tejidos y relación con pell, cabell y ungles",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 4",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "la estética se aplica sobre tejidos vivos: piel, cabello, uñas y cuero cabelludo. Comprender biomoléculas, tejidos, células y magnitudes ayuda a elegir productos, prevenir daños y explicar límites profesionales.",
             "justification_ca": "la estética se aplica sobre tejidos vivos: pell, cabell, ungles y cuir cabellut. Comprender biomoléculas, tejidos, células y magnitudes ayuda a elegir productes, prevenir daños y explicar límites professionales.",
@@ -6659,16 +8754,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-5d. Se ha descrito la célula y tejidos animales y vegetales mediante observación con instrumentos ópticos.",
           "3042-5e. Se han elaborado informes de ensayos con procedimiento, resultados y conclusiones."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3065",
-            "targetModuleName_es": "Cambios de color del cabello",
-            "targetModuleName_ca": "Canvis de color del cabell",
+            "title_es": "Química de cosméticos, reacciones, oxidación, decoloración, neutralización y seguridad química",
+            "title_ca": "Química de cosméticos, reacciones, oxidación, decoloración, neutralización y seguridad química",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cambios de color del cabello.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Canvis de color del cabell.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 5",
+            "relatedCriteria": [],
             "relationType": "ciencias",
             "justification_es": "muchos servicios del ciclo son procesos químicos controlados: coloración, decoloración, permanentes, desinfección, fijación, limpieza, cosméticos de higiene y productos de uñas. Ciencias II permite comprender por qué se respetan proporciones, tiempos, pruebas de tolerancia y normas de fabricante.",
             "justification_ca": "muchos serveis del ciclo son procesos químicos controlados: coloración, decoloración, permanentes, desinfección, fijación, limpieza, cosméticos de higiene y productes de ungles. Ciencias II permite comprender por qué se respetan proporciones, tiempos, pruebas de tolerancia y normas de fabricante.",
@@ -6789,16 +8886,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-6e. Se han identificado componentes y procesos de reacciones químicas sencillas mediante ensayos de laboratorio.",
           "3042-6f. Se han elaborado informes con TIC sobre industrias relevantes —alimentarias, cosmética, reciclaje— describiendo procesos sencillos."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Energía eléctrica, aparatos, calor, consumo, ahorro y seguridad",
+            "title_ca": "Energía eléctrica, aparatos, calor, consumo, ahorro y seguridad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 6",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
             "justification_es": "secadores, planchas, tenacillas, fundidores de cera, iluminación y agua caliente forman parte del taller. El alumnado debe entender consumo eléctrico, ahorro, seguridad y origen de la energía para trabajar de forma profesional y sostenible.",
             "justification_ca": "secadores, planchas, tenacillas, fundidores de cera, iluminación y agua caliente forman parte del taller. El alumnat debe entender consumo eléctrico, ahorro, seguridad y origen de la energía para trabajar de forma professional y sostenible.",
@@ -6917,16 +9016,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-7d. Se ha argumentado sobre la problemática de los residuos nucleares.",
           "3042-7e. Se ha trabajado en equipo y utilizado las TIC."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Fuerzas, movimiento, ergonomía, postura profesional y prevención de lesiones",
+            "title_ca": "Fuerzas, movimiento, ergonomía, postura professional y prevención de lesiones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 7",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "la ergonomía se basa en fuerzas, movimientos, posturas, palancas, distancias y repeticiones. En peluquería y estética hay riesgo de dolor de espalda, muñeca, cuello y hombros; por eso la física se conecta directamente con empleabilidad y PRL.",
             "justification_ca": "la ergonomía se basa en fuerzas, movimientos, posturas, palancas, distancias y repeticiones. En peluquería y estética hay riesgo de dolor de espalda, muñeca, cuello y hombros; por eso la física se conecta directamente con empleabilidad y PRL.",
@@ -7045,16 +9146,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-8d. Se ha descrito el proceso de transporte.",
           "3042-8e. Se ha analizado el proceso de sedimentación."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Microorganismos, enfermedades, desinfección, esterilización y lavado de manos",
+            "title_ca": "Microorganismos, enfermedades, desinfección, esterilización y lavado de manos",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 8",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "la higiene es una competencia nuclear de todo el ciclo. Ciencias II aporta explicación científica de microorganismos, contagios, infecciones, lavado de manos, desinfectantes y esterilización; los módulos prácticos aplican estos protocolos en útiles, superficies y clientes.",
             "justification_ca": "la higiene es una competencia nuclear de todo el ciclo. Ciencias II aporta explicación científica de microorganismos, contagios, infecciones, lavado de manos, desinfectantes y esterilización; los módulos prácticos aplican estos protocolos en útiles, superficies y clients.",
@@ -7171,16 +9274,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-9c. Se ha descrito el efecto invernadero, sus causas y medidas de minoración.",
           "3042-9d. Se ha descrito la pérdida de capa de ozono y consecuencias para salud, hidrosfera y poblaciones."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Medioambiente, contaminación atmosférica, agua, residuos y desarrollo sostenible",
+            "title_ca": "Medioambiente, contaminación atmosférica, agua, residuos y desarrollo sostenible",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 9",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
             "justification_es": "el salón consume agua y energía y genera residuos —envases, guantes, algodón, papel de aluminio, restos de productos—. Ciencias II permite comprender impactos ambientales y diseñar acciones sostenibles reales aplicables al taller y a empresas.",
             "justification_ca": "el saló consume agua y energía y genera residuos —envases, guantes, algodón, papel de aluminio, restos de productes—. Ciencias II permite comprender impactos ambientales y diseñar acciones sostenibles reales aplicables al taller y a empresas.",
@@ -7297,16 +9402,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-10c. Se han identificado posibles contaminantes en muestras de agua planificando ensayos de laboratorio.",
           "3042-10d. Se han analizado efectos de la contaminación del agua y uso responsable."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3011",
-            "targetModuleName_es": "Comunicación y sociedad I",
-            "targetModuleName_ca": "Comunicació i societat I",
+            "title_es": "Entorno natural, paisaje, ciudadanía, patrimonio y sostenibilidad local",
+            "title_ca": "Entorno natural, paisaje, ciudadanía, patrimonio y sostenibilidad local",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Comunicación y sociedad I.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Comunicació i societat I.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 10",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
             "justification_es": "el alumnado puede conectar el ciclo con su entorno cercano: agua, costa, residuos, turismo, consumo, paisaje y empresas locales. Esto favorece ciudadanía activa, conciencia ambiental y sentido de pertenencia.",
             "justification_ca": "el alumnat puede conectar el ciclo con su entorno cercano: agua, costa, residuos, turismo, consumo, paisaje y empresas locales. Esto favorece ciudadanía activa, conciencia ambiental y sentido de pertenencia.",
@@ -7423,16 +9530,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-11c. Se han diseñado estrategias básicas para posibilitar el mantenimiento del medioambiente.",
           "3042-11d. Se ha trabajado en equipo en la identificación de objetivos para la mejora del medioambiente."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3011",
-            "targetModuleName_es": "Comunicación y sociedad I",
-            "targetModuleName_ca": "Comunicació i societat I",
+            "title_es": "Comunicación científica y profesional, lectura crítica, informes, exposición e inglés aplicado",
+            "title_ca": "Comunicación científica y professional, lectura crítica, informes, exposición e inglés aplicado",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Comunicación y sociedad I.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Comunicació i societat I.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 11",
+            "relatedCriteria": [],
             "relationType": "comunicacion",
             "justification_es": "la ciencia debe comunicarse: informes, gráficos, explicaciones a clientes, etiquetas, protocolos, entrevistas, presentaciones e incluso atención en inglés. La competencia comunicativa transforma el conocimiento científico en práctica profesional comprensible y segura.",
             "justification_ca": "la ciencia debe comunicarse: informes, gráficos, explicaciones a clients, etiquetas, protocolos, entrevistas, presentaciones e incluso atención en inglés. La competencia comunicativa transforma el conocimiento científico en práctica professional comprensible y segura.",
@@ -7555,16 +9664,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-12f. Se ha descrito la relación causa-efecto en distintas situaciones para relacionar fuerzas y movimientos.",
           "3042-12g. Se han aplicado las leyes de Newton en situaciones de la vida cotidiana."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales",
+            "title_ca": "Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Ciencias aplicadas II para la coincidencia 12",
+            "relatedCriteria": [],
             "relationType": "empleabilidad",
             "justification_es": "Ciencias aplicadas II no se aprende solo en papel: se aplica en equipo, en taller y en empresa. Resolver problemas científicos y profesionales exige autonomía, cooperación, comunicación, adaptación, seguridad y mejora continua, competencias clave para la FCT y el empleo.",
             "justification_ca": "Ciències aplicades II no se aprende solo en papel: se aplica en equipo, en taller y en empresa. Resolver problemas científicos y professionales exige autonomía, cooperación, comunicación, adaptación, seguridad y mejora continua, competencias clave para la FCT y el empleo.",
@@ -7610,12 +9721,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3042_c12_4",
-                "title_es": "Escape Room de salón 4",
-                "title_ca": "Escape Room de saló 4",
-                "description_es": "Resolución de pistas y retos colaborativos aplicando Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales antes de abrir el taller al público.",
-                "description_ca": "Resolució de pistes i reptes col·laboratius aplicant Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales abans d’obrir el taller al públic.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "title_es": "Reto integrado de salón 4",
+                "title_ca": "Repte integrat de saló 4",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
@@ -7623,12 +9734,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3042_c12_5",
-                "title_es": "Vídeo-tutorial demostrativo en parejas 5",
-                "title_ca": "Vídeo-tutorial demostratiu en parelles 5",
-                "description_es": "Grabación de un vídeo corto educativo demostrando la técnica y las medidas de seguridad de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
-                "description_ca": "Enregistrament d’un vídeo curt educatiu demostrant la tècnica i les mesures de seguretat de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "title_es": "Reto integrado de salón 5",
+                "title_ca": "Repte integrat de saló 5",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
@@ -7636,12 +9747,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3042_c12_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
@@ -7649,12 +9760,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3042_c12_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
@@ -7685,8 +9796,6 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-13e. Se han descrito etapas de distribución de energía eléctrica.",
           "3042-13f. Se ha trabajado en equipo recopilando información sobre centrales eléctricas en España."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": []
       },
       {
@@ -7714,8 +9823,6 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3042-14g. Se han identificado y tipificado desinfectantes y métodos de esterilización.",
           "3042-14h. Se han analizado y experimentado diversos procedimientos de desinfección y esterilización."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas II para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades II per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": []
       }
     ]
@@ -7757,16 +9864,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-1i. Se ha utilizado la regla de tres para resolver problemas en los que intervienen magnitudes directa e inversamente proporcionales.",
           "3009-1j. Se ha aplicado el interés simple y compuesto en actividades cotidianas."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Cálculo, proporcionalidad, unidades, mediciones y resolución de problemas profesionales",
+            "title_ca": "Cálculo, proporcionalidad, unidades, mediciones y resolución de problemas professionales",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-1a, 1b, 1d, 1e, 1f, 1g, 1h, 1i, 1j, 3b, 3c, 3d, 5e, 8e, 8f, 9a, 9b, 9c, 9d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "Preparación del entorno profesional: 3h-3j, 4b"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Cuidados estéticos básicos de uñas: 1c, 1g-1k, 3j, 4k"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación y decoloración: 1i, 2e-2h, 3f, 3j, 4d, 4h"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "Maquillaje: 2i-2j, 3a, 4e-4k"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "Lavado y cambios de forma: 2e, 4f, 4i-4j, 5f"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "Cambios de color: 2g-2h, 3g-3h, 4g"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "Atención al cliente: 3b, 4a"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 1a-1e, 3a-3e, 4a-4j, 5b, 13a"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "FCT: 1a-1g, 3i, 4i, 5g"
+              }
+            ],
             "relationType": "ciencias",
             "justification_es": "las matemáticas de Ciencias aplicadas I se aplican de forma directa al taller: cálculo de proporciones, cantidades de producto, tiempos de exposición, control de agenda, unidades de masa/capacidad, presupuestos, stock, caducidades y consumos. Sin estas destrezas, el alumnado no puede preparar mezclas, estimar tiempos ni organizar servicios con calidad.",
             "justification_ca": "las matemáticas de Ciències aplicades I se aplican de forma directa al taller: cálculo de proporciones, cantidades de producto, tiempos de exposición, control de agenda, unidades de masa/capacidad, presupuestos, stock, caducidades y consumos. Sin estas destrezas, el alumnat no puede preparar mezclas, estimar tiempos ni organizar serveis con calidad.",
@@ -7865,12 +10041,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación científica y profesional: interpretar, argumentar, explicar y presentar información",
+            "title_ca": "Comunicación científica y professional: interpretar, argumentar, explicar y presentar información",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-1c, 4f, 4g, 6g, 8g, 9d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4a-4d, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f, 2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 2k, 3c, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 3k, 5g, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 5e, 6f, 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i, 7d-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "Ciencias aplicadas I requiere buscar, interpretar y comunicar información. En el ciclo, esta habilidad se transforma en atención al cliente, explicación de técnicas, presentación de productos, informes de prácticas, cuidados posteriores, fichas técnicas y comunicación con el equipo.",
             "justification_ca": "Ciències aplicades I requiere buscar, interpretar y comunicar información. En el ciclo, esta habilidad se transforma en atenció al client, explicación de técnicas, presentación de productes, informes de prácticas, cuidados posteriores, fichas técnicas y comunicación con el equipo.",
@@ -7985,16 +10232,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-2b. Se han manipulado adecuadamente los materiales instrumentales del laboratorio.",
           "3009-2c. Se han tenido en cuenta las condiciones de higiene y seguridad para cada una de las técnicas experimentales que se van a realizar."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "TIC, búsqueda de información, tratamiento de datos y documentación profesional",
+            "title_ca": "TIC, búsqueda de información, tratamiento de datos y documentación professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-1c, 4f, 6g, 8g, 9d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4b-4d, 3f-3j"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2j, 3k, 4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h, 2k, 4e, 4j, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 5g"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j, 3d, 3k, 4e, 4i"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1i, 2c, 3c-3d, 4c-4f"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 3e, 4g-4h, 5e, 6f, 7e, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a, 1c, 2e, 2h-2i, 3a, 3g, 5a-5g, 7a"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el uso de TIC no se limita a buscar información científica; también permite elaborar fichas técnicas, consultar etiquetas, crear formularios de cliente, registrar resultados, diseñar encuestas, representar datos y preparar exposiciones. Comunicación y sociedad complementa la corrección, comprensión y estructura de los textos.",
             "justification_ca": "el uso de TIC no se limita a buscar información científica; también permite elaborar fichas técnicas, consultar etiquetas, crear formularios de client, registrar resultados, diseñar encuestas, representar datos y preparar exposiciones. Comunicació i societat complementa la corrección, comprensión y estructura de los textos.",
@@ -8093,12 +10409,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, método práctico, autonomía y aprendizaje aplicado",
+            "title_ca": "Trabajo en equipo, método práctico, autonomía y aprendizaje aplicado",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-2a-2c, 4e-4g, 7h, 8g, 9d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 2g-2j, 3d-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 2d-2e, 3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1k, 2b-2k, 3a-3n, 4a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1e-1i, 2a-2l, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g-1i, 2b-2j, 3c-3l, 4d-4k, 5c-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1a-1g, 2d-2m, 3d-3n, 4c-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h-1i, 3f-3g, 4f"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 3d, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "Ciencias aplicadas I trabaja problemas, prácticas, búsqueda de información y tareas en equipo. Estos aprendizajes son transferibles al salón: organización, cooperación, responsabilidad, reparto de roles, comunicación interna, seguridad y mejora continua, especialmente en la FCT.",
             "justification_ca": "Ciències aplicades I trabaja problemas, prácticas, búsqueda de información y tareas en equipo. Estos aprendizajes son transferibles al saló: organización, cooperación, responsabilidad, reparto de roles, comunicación interna, seguridad y mejora continua, especialmente en la FCT.",
@@ -8227,16 +10614,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-3i. Se han reconocido los distintos estados de agregación de una sustancia dadas su temperatura de fusión y ebullición.",
           "3009-3j. Se han establecido diferencias entre ebullición y evaporación utilizando ejemplos sencillos."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Material de laboratorio, manipulación segura, higiene y prevención de riesgos",
+            "title_ca": "Material de laboratorio, manipulación segura, higiene y prevenció de riscos",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-2a, 2b, 2c, 7g, 7h.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2a-2j, 3b-3k, 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1d-1f, 1m, 3l, 4a, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b, 2i-2k, 3e, 3k-3m, 4e, 4j-4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a-1b, 1e, 1i, 3e, 3j-3l, 4b, 4l-4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2b, 2f-2j, 3i, 3l, 5c, 5h-5i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1c-1g, 2e, 2m, 3e, 3n, 4c, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e-3f, 4b-4c"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "5a-5e, 6a-6f, 13a-13f, 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2a-2j, 3h, 4h, 5f, 6a-6h"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el laboratorio y el taller comparten normas de manipulación segura: identificar materiales, preparar espacios, usar EPI, evitar contaminación, respetar instrucciones y mantener higiene. En peluquería y estética esto se concreta en desinfección, productos químicos, aparatos eléctricos, superficies, útiles y protección del cliente/profesional.",
             "justification_ca": "el laboratorio y el taller comparten normas de manipulación segura: identificar materiales, preparar espacios, usar EPI, evitar contaminación, respetar instrucciones y mantener higiene. En peluquería y estética esto se concreta en desinfección, productes químicos, aparatos eléctricos, superficies, útiles y protección del client/professional.",
@@ -8359,16 +10815,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-4f. Se han descrito las características generales básicas de materiales relacionados con las profesiones, utilizando las TIC.",
           "3009-4g. Se ha trabajado en equipo en la realización de tareas."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Materia, estados, mezclas, sustancias, materiales y productos cosméticos",
+            "title_ca": "Materia, estados, mezclas, sustancias, materiales y productes cosméticos",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-3a-3j, 4a-4f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1i-1l, 3b-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1i, 2d, 2g-2h, 3d, 4c-4d"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1f-1h, 2d-2j, 3a, 4a, 4i"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3a-3b, 4c, 5b"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2b-2d, 2g-2h, 3a-3b, 3g-3h, 4d, 4g"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2d, 2f-2g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "5a-5e, 6a-6f, 14e"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1d-1g, 3a-3i, 4a-4i, 5b-5f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "los cosméticos son materiales y mezclas: emulsiones, soluciones, suspensiones, ceras, champús, acondicionadores, tintes, oxidantes, esmaltes, maquillajes y desinfectantes. Conocer estados de la materia, cambios de estado, mezclas homogéneas/heterogéneas y unidades ayuda a usarlos y conservarlos correctamente.",
             "justification_ca": "los cosméticos son materiales y mezclas: emulsiones, soluciones, suspensiones, ceras, champús, acondicionadores, tintes, oxidantes, esmaltes, maquillajes y desinfectantes. Conocer estados de la materia, cambios de estado, mezclas homogéneas/heterogéneas y unidades ayuda a usarlos y conservarlos correctamente.",
@@ -8491,16 +11016,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-5f. Se han mostrado en diferentes sistemas la conservación de la energía.",
           "3009-5g. Se han descrito procesos relacionados con el mantenimiento del organismo y de la vida en los que se aprecia claramente el papel de la energía."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Energía, calor, electricidad, temperatura y consumo responsable en el taller",
+            "title_ca": "Energía, calor, electricidad, temperatura y consumo responsable en el taller",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-5a, 5b, 5c, 5d, 5e, 5f, 5g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2j, 3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2e-2k, 3f, 3l, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 2l, 4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2f-2j, 4i-4j, 5f"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2h, 2m, 3h, 3n, 4g, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f, 3b, 4a"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "13a-13f, 9a-9d, 10a-10d, 11a-11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a-1i, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3h, 4h, 6e-6h"
+              }
+            ],
             "relationType": "sostenibilidad",
             "justification_es": "en peluquería y estética se utiliza energía constantemente: secadores, planchas, fundidores de cera, aparatos de calor, iluminación, agua caliente y climatización. Ciencias aplicadas I permite comprender fuentes de energía, cambios de unidades, conservación y consumo responsable, conectando con PRL y sostenibilidad.",
             "justification_ca": "en peluquería y estética se utiliza energía constantemente: secadores, planchas, fundidores de cera, aparatos de calor, iluminación, agua caliente y climatización. Ciències aplicades I permite comprender fuentes de energía, cambios de unidades, conservación y consumo responsable, conectando con PRL y sostenibilidad.",
@@ -8623,16 +11217,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-6f. Se ha detallado cómo funciona el proceso de relación.",
           "3009-6g. Se han utilizado herramientas informáticas para describir adecuadamente los aparatos y sistemas."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Anatomía, piel, cabello, uñas, vello, organismo y funciones corporales",
+            "title_ca": "Anatomía, pell, cabell, ungles, vello, organismo y funciones corporales",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-6a, 6b, 6c, 6d, 6e, 6f, 6g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1a, 1d-1e, 4c-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2a-2j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1a-1k, 4f, 4i"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1b, 2a-2e, 2f-2k, 3a, 3c, 3j-3k"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1a-1i, 3a-3b, 3j, 5b"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a, 2j-2l, 3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1c, 2e-2g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "5d, 14a-14d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2h-2i, 3a-3b, 4a-4b, 5a-5c"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "los servicios de imagen personal se aplican sobre piel, uñas, cabello, cuero cabelludo y vello. Conocer estructuras anatómicas y funciones corporales permite observar alteraciones, adaptar productos y técnicas, prevenir daños y explicar al cliente las decisiones profesionales.",
             "justification_ca": "los serveis de imagen personal se aplican sobre pell, ungles, cabell, cuir cabellut y vello. Conocer estructuras anatómicas y funciones corporales permite observar alteraciones, adaptar productes y técnicas, prevenir daños y explicar al client las decisiones professionales.",
@@ -8757,16 +11420,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-7g. Se han reconocido situaciones de riesgo para la salud relacionadas con su entorno professional más cercano.",
           "3009-7h. Se han diseñado pautas de hábitos saludables relacionados con situaciones cotidianas."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Salud, enfermedad, defensas, contagio, higiene y hábitos saludables en el entorno profesional",
+            "title_ca": "Salud, enfermedad, defensas, contagio, higiene y hábitos saludables en el entorno professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-7a, 7b, 7c, 7d, 7e, 7f, 7g, 7h.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2a-2j, 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1d-1f, 1m, 2c-2e, 4a, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j-1k, 2a-2b, 3e, 3l, 4e-4f, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a-1b, 1e, 1i, 2l, 3e, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1d, 2b, 2h-2j, 3l, 5c-5d"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2d-2f, 2m, 3d-3f, 3n, 4c-4f, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h, 3e-3f, 4b-4c"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2a-2j, 3h, 4h, 5c, 6a-6h"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "la seguridad higiénico-sanitaria del salón depende de comprender salud/enfermedad, contagio, defensas, prevención, lavado de manos, desinfección, hábitos saludables y riesgos profesionales. Este bloque es transversal a todos los servicios y especialmente importante en contacto con piel, uñas, ojos, labios, vello y cuero cabelludo.",
             "justification_ca": "la seguridad higiénico-sanitaria del saló depende de comprender salud/enfermedad, contagio, defensas, prevención, lavado de manos, desinfección, hábitos saludables y riesgos professionales. Este bloque es transversal a todos los serveis y especialmente importante en contacto con pell, ungles, ojos, labios, vello y cuir cabellut.",
@@ -8889,16 +11621,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-8f. Se ha calculado el metabolismo basal y sus resultados se han representado en un diagrama, estableciendo comparaciones y conclusiones.",
           "3009-8g. Se han elaborado menús para situaciones concretas, investigando en la red las propiedades de los alimentos."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Alimentación, nutrición, ejercicio, bienestar e imagen personal saludable",
+            "title_ca": "Alimentación, nutrición, ejercicio, bienestar e imagen personal saludable",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-8a, 8b, 8c, 8d, 8e, 8f, 8g.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1a-1g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2c-2e, 2i"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1c, 1j, 4i"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2d-2j, 3a, 3c"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1a-1d, 1g, 3b"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j-2l, 3d, 3m, 4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2g, 3e-3g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "14a-14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2d, 2f-2i, 7a-7f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "aunque el alumnado de FPB no prescribe dietas, sí debe comprender la relación entre hábitos saludables, piel, cabello, uñas, energía, bienestar e imagen personal. Esto favorece una actitud profesional responsable y permite comunicar recomendaciones generales no sanitarias y derivar cuando corresponda.",
             "justification_ca": "aunque el alumnat de FPB no prescribe dietas, sí debe comprender la relación entre hábitos saludables, pell, cabell, ungles, energía, bienestar e imagen personal. Esto favorece una actitud professional responsable y permite comunicar recomendaciones generales no sanitarias y derivar cuando corresponda.",
@@ -9015,16 +11816,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3009-9c. Se han resuelto problemas de la vida cotidiana en los que se precise el planteamiento y resolución de ecuaciones de primer grado.",
           "3009-9d. Se han resuelto problemas sencillos utilizando el método gráfico y las TIC."
         ],
-        "importance_es": "Competencia clave de Ciencias aplicadas I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Ciències aplicades I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Medioambiente, fuentes de energía, consumo responsable, residuos y sostenibilidad",
+            "title_ca": "Medioambiente, fuentes de energía, consumo responsable, residuos y sostenibilidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3009-5b, 5c, 5d, 5e, 5f, 7g, 7h.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2h, 2j, 3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2j, 3l-3m, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 4l-4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2j, 3l, 5h-5i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2m, 3n, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f, 3g-3h, 4b"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "9a-9d, 10a-10d, 11a-11d, 13b-13d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a-1i, 2h, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1e, 2j, 3h, 4h, 6c, 6h"
+              }
+            ],
             "relationType": "sostenibilidad",
             "justification_es": "los servicios de peluquería y estética consumen agua, energía y productos, y generan residuos. Ciencias aplicadas I introduce energía y hábitos saludables; Ciencias II profundiza en contaminación y sostenibilidad. Los módulos técnicos concretan estas medidas en el taller y la FCT en empresa.",
             "justification_ca": "los serveis de peluquería y estética consumen agua, energía y productes, y generan residuos. Ciències aplicades I introduce energía y hábitos saludables; Ciencias II profundiza en contaminación y sostenibilidad. Los módulos técnicos concretan estas medidas en el taller y la FCT en empresa.",
@@ -9161,16 +12031,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-1h. Se han elaborado instrumentos sencillos de recogida de información mediante estrategias de composición protocolizadas y TIC.",
           "3011-1i. Se han desarrollado comportamientos acordes con el esfuerzo propio y el trabajo colaborativo."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3005",
-            "targetModuleName_es": "Atención al cliente",
-            "targetModuleName_ca": "Atenció al client",
+            "title_es": "Comunicación oral en castellano: escucha activa, exposición, lenguaje no verbal y atención profesional",
+            "title_ca": "Comunicación oral en castellano: escucha activa, exposición, lenguaje no verbal y atención professional",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Atención al cliente.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Atenció al client.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 1",
+            "relatedCriteria": [],
             "relationType": "comunicacion",
             "justification_es": "la comunicación oral es imprescindible en un salón: recibir, preguntar, explicar, asesorar, tranquilizar, recoger satisfacción y resolver conflictos. Comunicación y sociedad I aporta escucha activa, exposición clara, lenguaje no verbal y revisión de usos discriminatorios, lo que conecta directamente con Atención al cliente, FCT y todos los módulos técnicos.",
             "justification_ca": "la comunicació oral es imprescindible en un saló: recibir, preguntar, explicar, asesorar, tranquilizar, recoger satisfacción y resolver conflictos. Comunicació i societat I aporta escucha activa, exposición clara, lenguaje no verbal y revisión de usos discriminatorios, lo que conecta directamente con Atenció al client, FCT y todos los módulos técnicos.",
@@ -9269,12 +12141,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3063",
-            "targetModuleName_es": "Maquillaje",
-            "targetModuleName_ca": "Maquillatge",
+            "title_es": "Literatura, storytelling, creatividad, identidad y expresión personal aplicada a imagen personal",
+            "title_ca": "Literatura, storytelling, creatividad, identidad y expresión personal aplicada a imagen personal",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Maquillaje.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Maquillatge.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 9",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "la literatura permite trabajar creatividad, emociones, identidad, estética y comunicación. Un personaje, mito o tema literario puede convertirse en maquillaje, peinado, color o diseño de uñas, fomentando lectura, expresión y proyectos interdisciplinares.",
             "justification_ca": "la literatura permite trabajar creatividad, emociones, identidad, estética y comunicación. Un personaje, mito o tema literario puede convertirse en maquillaje, peinado, color o diseño de ungles, fomentando lectura, expresión y proyectos interdisciplinares.",
@@ -9401,16 +12277,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-2h. Se han elaborado instrumentos sencillos de recogida de información mediante TIC.",
           "3011-2i. Se han desarrollado comportamientos acordes con el esfuerzo propio y el treball en equip."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3005",
-            "targetModuleName_es": "Atención al cliente",
-            "targetModuleName_ca": "Atenció al client",
+            "title_es": "Comunicación escrita en castellano: fichas, informes, protocolos, reclamaciones y portfolio",
+            "title_ca": "Comunicación escrita en castellano: fichas, informes, protocolos, reclamaciones y portfolio",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Atención al cliente.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Atenció al client.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 2",
+            "relatedCriteria": [],
             "relationType": "comunicacion",
             "justification_es": "en Imagen Personal se documenta todo: fichas técnicas, diagnósticos, consentimientos, instrucciones de cuidado, presupuestos, informes, incidencias y reclamaciones. La competencia escrita permite precisión, seguridad, continuidad del servicio y empleabilidad.",
             "justification_ca": "en Imagen Personal se documenta todo: fichas técnicas, diagnósticos, consentimientos, instrucciones de cuidado, presupuestos, informes, incidencias y reclamaciones. La competencia escrita permite precisión, seguridad, continuidad del servei y empleabilidad.",
@@ -9509,12 +12387,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3009",
-            "targetModuleName_es": "Ciencias aplicadas I",
-            "targetModuleName_ca": "Ciències aplicades I",
+            "title_es": "TIC, investigación, recogida de información, presentación digital y portfolio",
+            "title_ca": "TIC, investigación, recogida de información, presentación digital y portfolio",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 10",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "las TIC permiten buscar, seleccionar, organizar y presentar información. En el ciclo sirven para fichas, portfolios, investigación de productos, currículum, carta de presentación, reservas, catálogos, campañas y evidencias de aprendizaje.",
             "justification_ca": "las TIC permiten buscar, seleccionar, organizar y presentar información. En el ciclo sirven para fichas, portfolios, investigación de productes, currículum, carta de presentación, reservas, catálogos, campañas y evidencias de aprendizaje.",
@@ -9560,12 +12442,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3011_c10_4",
-                "title_es": "Escape Room de salón 4",
-                "title_ca": "Escape Room de saló 4",
-                "description_es": "Resolución de pistas y retos colaborativos aplicando TIC, investigación, recogida de información, presentación digital y portfolio antes de abrir el taller al público.",
-                "description_ca": "Resolució de pistes i reptes col·laboratius aplicant TIC, investigación, recogida de información, presentación digital y portfolio abans d’obrir el taller al públic.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "title_es": "Reto integrado de salón 4",
+                "title_ca": "Repte integrat de saló 4",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de TIC, investigación, recogida de información, presentación digital y portfolio en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de TIC, investigación, recogida de información, presentación digital y portfolio en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
@@ -9573,12 +12455,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3011_c10_5",
-                "title_es": "Vídeo-tutorial demostrativo en parejas 5",
-                "title_ca": "Vídeo-tutorial demostratiu en parelles 5",
-                "description_es": "Grabación de un vídeo corto educativo demostrando la técnica y las medidas de seguridad de TIC, investigación, recogida de información, presentación digital y portfolio.",
-                "description_ca": "Enregistrament d’un vídeo curt educatiu demostrant la tècnica i les mesures de seguretat de TIC, investigación, recogida de información, presentación digital y portfolio.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "title_es": "Reto integrado de salón 5",
+                "title_ca": "Repte integrat de saló 5",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de TIC, investigación, recogida de información, presentación digital y portfolio en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de TIC, investigación, recogida de información, presentación digital y portfolio en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
@@ -9586,12 +12468,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3011_c10_6",
-                "title_es": "Role-play con clientes diversos 6",
-                "title_ca": "Role-play amb clients diversos 6",
-                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
-                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "title_es": "Reto integrado de salón 6",
+                "title_ca": "Repte integrat de saló 6",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de TIC, investigación, recogida de información, presentación digital y portfolio en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de TIC, investigación, recogida de información, presentación digital y portfolio en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
@@ -9599,12 +12481,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               },
               {
                 "id": "act_3011_c10_7",
-                "title_es": "Portfolio de evidencias de aprendizaje 7",
-                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
-                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
-                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
-                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
-                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "title_es": "Reto integrado de salón 7",
+                "title_ca": "Repte integrat de saló 7",
+                "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de TIC, investigación, recogida de información, presentación digital y portfolio en un entorno simulado de trabajo.",
+                "description_ca": "Aplicació pràctica de les tècniques i mesures de seguretat de TIC, investigación, recogida de información, presentación digital y portfolio en un entorn simulat de treball.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio.",
                 "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
                 "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
                 "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
@@ -9633,16 +12515,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-3d. Se han analizado usos y niveles de la lengua y normas lingüísticas, revisando usos discriminatorios, específicamente en relaciones de género.",
           "3011-3e. Se ha utilizado la terminología gramatical apropiada en la comprensión y resolución de actividades gramaticales."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3005",
-            "targetModuleName_es": "Atención al cliente",
-            "targetModuleName_ca": "Atenció al client",
+            "title_es": "Inglés oral y escrito para atención básica, FCT, turismo y empleabilidad",
+            "title_ca": "Inglés oral y escrito para atención básica, FCT, turismo y empleabilidad",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Atención al cliente.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Atenció al client.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 3",
+            "relatedCriteria": [],
             "relationType": "comunicacion",
             "justification_es": "en el sector, especialmente en zonas turísticas, el alumnado puede atender clientes extranjeros. No necesita un inglés complejo, sino frases funcionales: saludar, preguntar alergias, confirmar servicio, explicar duración, precio básico y cuidados.",
             "justification_ca": "en el sector, especialmente en zonas turísticas, el alumnat puede atender clients extranjeros. No necesita un inglés complejo, sino frases funcionales: saludar, preguntar alergias, confirmar servei, explicar duración, precio básico y cuidados.",
@@ -9769,16 +12653,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-4h. Se han observado pautas de presentación de trabajos escritos según contenido, formato y público destinatario.",
           "3011-4i. Se han resuelto actividades de comprensión y análisis de estructuras gramaticales."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3005",
-            "targetModuleName_es": "Atención al cliente",
-            "targetModuleName_ca": "Atenció al client",
+            "title_es": "Lectura crítica de medios, redes sociales, publicidad, consumo responsable y desinformación beauty",
+            "title_ca": "Lectura crítica de medios, redes sociales, publicidad, consumo responsable y desinformación beauty",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Atención al cliente.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Atenció al client.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 4",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "el alumnado consume contenidos de redes sobre maquillaje, color, skincare, uñas y peinados. Comunicación y sociedad I permite diferenciar información, opinión, publicidad, estereotipos y mensajes discriminatorios. Esto es clave para asesorar de forma ética y no reproducir mitos o promesas falsas.",
             "justification_ca": "el alumnat consume contenidos de redes sobre maquillaje, color, skincare, ungles y peinados. Comunicació i societat I permite diferenciar información, opinión, publicidad, estereotipos y mensajes discriminatorios. Esto es clave para asesorar de forma ética y no reproducir mitos o promesas falsas.",
@@ -9897,16 +12783,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-5d. Se han aplicado estrategias de comprensión de textos literarios, atendiendo a temas y motivos básicos.",
           "3011-5e. Se ha presentado información sobre periodos, autores y obras de la literatura en lengua castellana."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3063",
-            "targetModuleName_es": "Maquillaje",
-            "targetModuleName_ca": "Maquillatge",
+            "title_es": "Historia, arte, estética, cultura visual e imagen personal",
+            "title_ca": "Historia, arte, estética, cultura visual e imagen personal",
+            "targetModuleCode": "3060",
+            "targetModuleName_es": "Preparación del entorno profesional",
+            "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Maquillaje.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Maquillatge.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 5",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "la imagen personal siempre ha estado ligada a cultura, arte, estatus, identidad, ritos y estética. El maquillaje de fantasía, la colorimetría, los peinados y el diseño de uñas pueden inspirarse en épocas históricas, obras artísticas y literatura, desarrollando gusto personal y creatividad.",
             "justification_ca": "la imagen personal siempre ha estado ligada a cultura, arte, estatus, identidad, ritos y estética. El maquillaje de fantasía, la colorimetría, los peinados y el diseño de ungles pueden inspirarse en épocas históricas, obras artísticas y literatura, desarrollando gusto personal y creatividad.",
@@ -10035,16 +12923,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-6i. Se han identificado normas de relación social básicas de países de lengua extranjera.",
           "3011-6j. Se han identificado costumbres o actividades cotidianas de la comunidad de lengua extranjera."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Paisaje, entorno, sostenibilidad, ciudadanía y responsabilidad ambiental del salón",
+            "title_ca": "Paisaje, entorno, sostenibilidad, ciudadanía y responsabilidad ambiental del saló",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 6",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
             "justification_es": "Comunicación y sociedad I trabaja paisaje, sociedades y evolución de sectores productivos. Esto conecta con el impacto ambiental de los salones: agua, energía, residuos, envases, aluminio, productos químicos y consumo responsable. También permite relacionar estética, turismo y entorno local.",
             "justification_ca": "Comunicació i societat I trabaja paisaje, sociedades y evolución de sectores productivos. Esto conecta con el impacto ambiental de los salones: agua, energía, residuos, envases, aluminio, productes químicos y consumo responsable. También permite relacionar estética, turismo y entorno local.",
@@ -10163,16 +13053,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-7d. Se han utilizado estructuras gramaticales básicas y repertorio esencial de expresiones y marcadores.",
           "3011-7e. Se ha expresado con cierta claridad, entonación y pronunciación comprensible."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Evolución del sector profesional, tecnología, organización del trabajo y empleabilidad",
+            "title_ca": "Evolución del sector professional, tecnología, organización del trabajo y empleabilidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 7",
+            "relatedCriteria": [],
             "relationType": "empleabilidad",
             "justification_es": "el currículo pide analizar la evolución de los sectores productivos propios del título. En Imagen Personal el sector ha cambiado por tecnología, redes sociales, reservas online, nuevos productos, sostenibilidad, especialización, barbería, uñas, colorimetría y atención digital. Esto se relaciona directamente con itinerarios de empleo y FCT.",
             "justification_ca": "el currículo pide analizar la evolución de los sectores productivos propios del título. En Imagen Personal el sector ha cambiado por tecnología, redes sociales, reservas online, nuevos productes, sostenibilidad, especialización, barbería, ungles, colorimetría y atención digital. Esto se relaciona directamente con itinerarios de empleo y FCT.",
@@ -10299,16 +13191,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3011-8h. Se han utilizado diccionarios impresos y online y correctores ortográficos.",
           "3011-8i. Se ha mostrado actitud reflexiva ante información discriminatoria."
         ],
-        "importance_es": "Competencia clave de Comunicación y sociedad I para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Comunicació i societat I per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Trabajo colaborativo, esfuerzo, convivencia, igualdad y respeto a la diversidad",
+            "title_ca": "Trabajo colaborativo, esfuerzo, convivencia, igualdad y respeto a la diversidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "Criterios nucleares de Comunicación y sociedad I para la coincidencia 8",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "el trabajo colaborativo y el respeto son esenciales en el aula-taller y en empresa. Comunicación y sociedad I permite revisar lenguaje discriminatorio, cooperación, convivencia e igualdad; esto se aplica al trato con clientes, compañeros y responsables.",
             "justification_ca": "el trabajo colaborativo y el respeto son esenciales en el aula-taller y en empresa. Comunicació i societat I permite revisar lenguaje discriminatorio, cooperación, convivencia e igualdad; esto se aplica al trato con clients, compañeros y responsables.",
@@ -10449,16 +13343,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3062-1j. Se han definido las precauciones y contraindicaciones en el uso adecuado de la técnica de decoloración y de depilación según las características del vello.",
           "3062-1k. Se han expuesto los criterios para derivar el client a otros professionales."
         ],
-        "importance_es": "Competencia clave de Depilación mecánica y decoloración del vello superfluo para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Depilació mecànica i decoloració del pèl superflu per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Diagnóstico, observación anatómica, análisis de piel/vello y toma de decisiones",
+            "title_ca": "Diagnóstico, observación anatómica, análisis de pell/vello y toma de decisiones",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 1",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "la depilación y la decoloración no pueden aplicarse mecánicamente sin observar el vello, la piel, posibles alteraciones, sensibilidad, alergias, demandas y expectativas. Ciencias aplicadas aporta anatomía, fisiología, salud, enfermedad, método científico y prevención de infecciones; Comunicación y sociedad aporta comprensión de la información, entrevista, escucha activa, expresión oral/escrita y, si procede, comunicación básica en inglés.",
             "justification_ca": "la depilación y la decoloración no pueden aplicarse mecánicamente sin observar el vello, la pell, posibles alteraciones, sensibilidad, alergias, demandas y expectativas. Ciències aplicades aporta anatomía, fisiología, salud, enfermedad, método científico y prevención de infecciones; Comunicació i societat aporta comprensión de la información, entrevista, escucha activa, expresión oral/escrita y, si procede, comunicación básica en inglés.",
@@ -10557,12 +13453,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Selección de técnica y producto según características, resultado esperado y asesoramiento",
+            "title_ca": "Selección de técnica y producto según características, resultado esperado y asesoramiento",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 5",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "elegir cera caliente, tibia, pinzas o decolorante implica interpretar datos, comparar ventajas e inconvenientes, calcular cantidades, prever efectos y explicar al cliente la opción más recomendable. Matemáticas, química, comunicación oral y escrita y atención comercial sostienen la decisión técnica.",
             "justification_ca": "elegir cera caliente, tibia, pinzas o decolorante implica interpretar datos, comparar ventajas e inconvenientes, calcular cantidades, prever efectos y explicar al client la opción más recomendable. Matemáticas, química, comunicació oral y escrita y atención comercial sostienen la decisión técnica.",
@@ -10661,12 +13561,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Comunicación profesional, atención, asesoramiento, satisfacción y reclamaciones",
+            "title_ca": "Comunicación professional, atención, asesoramiento, satisfacción y reclamaciones",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 9",
+            "relatedCriteria": [],
             "relationType": "cliente",
             "justification_es": "la relación con el cliente atraviesa todo el ciclo: preguntar, escuchar, informar, justificar la técnica, recoger satisfacción, fidelizar y gestionar reclamaciones. Comunicación y sociedad es aquí esencial porque trabaja comprensión, expresión oral y escrita, conversación y textos profesionales; Atención al cliente concreta esas destrezas en el salón.",
             "justification_ca": "la relación con el client atraviesa todo el ciclo: preguntar, escuchar, informar, justificar la técnica, recoger satisfacción, fidelizar y gestionar reclamaciones. Comunicació i societat es aquí esencial porque trabaja comprensión, expresión oral y escrita, conversación y textos professionales; Atenció al client concreta esas destrezas en el saló.",
@@ -10797,16 +13701,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3062-2j. Se han aplicado las medidas de prevenció de riscos laborales y medioambientales requeridas.",
           "3062-2k. Se han aplicado las normas de seguridad en la manipulación de los aparatos eléctricos."
         ],
-        "importance_es": "Competencia clave de Depilación mecánica y decoloración del vello superfluo para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Depilació mecànica i decoloració del pèl superflu per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Preparación de útiles, equipos, productos y zona de trabajo",
+            "title_ca": "Preparación de útiles, equips, productes y zona de trabajo",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 2",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "preparar una cabina de depilación exige seleccionar y ordenar materiales, manipular productos, comprobar aparatos y respetar higiene. Ciencias permite comprender materia, mezclas, temperatura, material de laboratorio, productos químicos y electricidad; Comunicación permite leer etiquetas, instrucciones, fichas técnicas y redactar protocolos.",
             "justification_ca": "preparar una cabina de depilación exige seleccionar y ordenar materiales, manipular productes, comprobar aparatos y respetar higiene. Ciencias permite comprender materia, mezclas, temperatura, material de laboratorio, productes químicos y electricidad; Comunicación permite leer etiquetas, instrucciones, fichas técnicas y redactar protocolos.",
@@ -10905,12 +13811,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3061",
-            "targetModuleName_es": "Cuidados estéticos básicos de uñas",
-            "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
+            "title_es": "Ejecución técnica, secuenciación, destreza manual, control de producto y acabado",
+            "title_ca": "Ejecución técnica, secuenciación, destreza manual, control de producto y acabado",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 6",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "aplicar cera en la dirección correcta, controlar grosor, retirar a contrapelo, evitar goteos, aplicar cuidados posteriores y obtener un acabado limpio requiere procedimiento ordenado, coordinación manual, medición, observación, registro y comunicación del resultado.",
             "justification_ca": "aplicar cera en la dirección correcta, controlar grosor, retirar a contrapelo, evitar goteos, aplicar cuidados posteriores y obtener un acabado limpio requiere procedimiento ordenado, coordinación manual, medición, observación, registro y comunicación del resultado.",
@@ -11009,12 +13919,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Registro documental, ficha técnica, informes, TIC y tratamiento de información",
+            "title_ca": "Registro documental, ficha técnica, informes, TIC y tratamiento de información",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 10",
+            "relatedCriteria": [],
             "relationType": "digital",
             "justification_es": "la ficha técnica es un documento profesional. Exige seleccionar información relevante, escribir de forma clara, respetar datos personales, usar TIC, registrar resultados y compartir información con el equipo. Ciencias aporta representación de datos, tablas, gráficas e informes experimentales.",
             "justification_ca": "la ficha técnica es un documento professional. Exige seleccionar información relevante, escribir de forma clara, respetar datos personales, usar TIC, registrar resultados y compartir información con el equipo. Ciencias aporta representación de datos, tablas, gráficas e informes experimentales.",
@@ -11151,16 +14065,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3062-3m. Se han eliminado los residuos siguiendo la normativa vigente.",
           "3062-3n. Se han formulado preguntas que permitan conocer el grado de satisfacción del client."
         ],
-        "importance_es": "Competencia clave de Depilación mecánica y decoloración del vello superfluo para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Depilació mecànica i decoloració del pèl superflu per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
+            "title_ca": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 3",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "la higiene no es solo un procedimiento técnico, sino un contenido científico ligado a microorganismos, contagio, piel, parasitosis y salud pública. Además, debe comunicarse y documentarse correctamente mediante instrucciones, protocolos y registros.",
             "justification_ca": "la higiene no es solo un procedimiento técnico, sino un contenido científico ligado a microorganismos, contagio, pell, parasitosis y salud pública. Además, debe comunicarse y documentarse correctamente mediante instrucciones, protocolos y registros.",
@@ -11259,12 +14175,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Ergonomía, acomodación y protección del cliente y del profesional",
+            "title_ca": "Ergonomía, acomodación y protección del client y del professional",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 7",
+            "relatedCriteria": [],
             "relationType": "cliente",
             "justification_es": "una buena acomodación exige conocimientos anatómicos, prevención de lesiones posturales, respeto, comunicación clara y protección de piel, ropa y zonas sensibles. Es transferible a cabina, mesa de manicura, lavacabezas y tocador.",
             "justification_ca": "una buena acomodación exige conocimientos anatómicos, prevención de lesiones posturales, respeto, comunicación clara y protección de pell, ropa y zonas sensibles. Es transferible a cabina, mesa de manicura, lavacabezas y tocador.",
@@ -11363,12 +14283,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Medioambiente, sostenibilidad, residuos y consumo responsable",
+            "title_ca": "Medioambiente, sostenibilidad, residuos y consumo responsable",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 11",
+            "relatedCriteria": [],
             "relationType": "sostenibilidad",
             "justification_es": "la gestión de residuos de cera, bandas, espátulas, algodones, envases y productos químicos conecta con educación ambiental, consumo energético, contaminación y desarrollo sostenible. Comunicación y sociedad permite argumentar y sensibilizar sobre prácticas responsables.",
             "justification_ca": "la gestión de residuos de cera, bandas, espátulas, algodones, envases y productes químicos conecta con educación ambiental, consumo energético, contaminación y desarrollo sostenible. Comunicació i societat permite argumentar y sensibilizar sobre prácticas responsables.",
@@ -11501,16 +14425,18 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3062-4k. Se han aplicado las medidas de seguridad y medioambientales requeridas.",
           "3062-4l. Se han realizado preguntas tipo que permitan conocer el grado de satisfacción del client, tanto respecto al resultado del servei como de la atención personal."
         ],
-        "importance_es": "Competencia clave de Depilación mecánica y decoloración del vello superfluo para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Depilació mecànica i decoloració del pèl superflu per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Prevención de riesgos laborales, seguridad eléctrica, química, térmica y medioambiental",
+            "title_ca": "Prevención de riesgos laborales, seguridad eléctrica, química, térmica y medioambiental",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 4",
+            "relatedCriteria": [],
             "relationType": "comunicacion",
             "justification_es": "la depilación con cera introduce riesgos térmicos; los decolorantes, riesgos químicos; los fundidores, riesgos eléctricos; y las bandas, espátulas y envases, residuos. Ciencias aplicadas II refuerza electricidad, energía, contaminación, química, fuerzas/posturas y desarrollo sostenible. Comunicación y sociedad permite comprender normativa, instrucciones y derechos/deberes.",
             "justification_ca": "la depilación con cera introduce riesgos térmicos; los decolorantes, riesgos químicos; los fundidores, riesgos eléctricos; y las bandas, espátulas y envases, residuos. Ciències aplicades II refuerza electricidad, energía, contaminación, química, fuerzas/posturas y desarrollo sostenible. Comunicació i societat permite comprender normativa, instrucciones y derechos/deberes.",
@@ -11609,12 +14535,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3061",
-            "targetModuleName_es": "Cuidados estéticos básicos de uñas",
-            "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
+            "title_es": "Control de tiempos, temperatura, exposición, medidas y cálculos profesionales",
+            "title_ca": "Control de tiempos, temperatura, exposición, medidas y cálculos professionales",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 8",
+            "relatedCriteria": [],
             "relationType": "ciencias",
             "justification_es": "la depilación y decoloración requieren controlar temperatura de cera, tiempos de exposición, proporciones de mezcla, duración del servicio y registros. Ciencias aplicadas permite trabajar magnitudes, unidades, proporcionalidad, gráficas, temperatura y consumo eléctrico.",
             "justification_ca": "la depilación y decoloración requieren controlar temperatura de cera, tiempos de exposición, proporciones de mezcla, duración del servei y registros. Ciències aplicades permite trabajar magnitudes, unidades, proporcionalidad, gráficas, temperatura y consumo eléctrico.",
@@ -11713,12 +14643,16 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Trabajo en equipo, autonomía, responsabilidad y aprendizaje en contexto real",
+            "title_ca": "Trabajo en equipo, autonomía, responsabilidad y aprendizaje en contexto real",
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "sourceCriteria": "Criterios nucleares de Depilación mecánica y decoloración del vello superfluo para la coincidencia 12",
+            "relatedCriteria": [],
             "relationType": "tecnica",
             "justification_es": "el módulo 3062 se consolida en situaciones profesionales integradas: trabajo con otros, respeto a instrucciones, coordinación, calidad, seguridad, comunicación y responsabilidad. La FCT sintetiza todos estos aprendizajes en empresa.",
             "justification_ca": "el módulo 3062 se consolida en situaciones professionales integradas: trabajo con otros, respeto a instrucciones, coordinación, calidad, seguridad, comunicación y responsabilidad. La FCT sintetiza todos estos aprendizajes en empresa.",
@@ -11847,16 +14781,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción professional, así como las estrategias para sacarles el mayor aprovechamiento.",
           "3159-1e. Se han identificado expectativas de futuro para la inserción professional analizando competencias, intereses y destrezas personales."
         ],
-        "importance_es": "Competencia clave de Itinerario personal para la empleabilidad para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Itinerari personal per a l’ocupabilitat per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Autoconocimiento, intereses, motivaciones, autoestima y marca personal profesional",
+            "title_ca": "Autoconocimiento, intereses, motivaciones, autoestima y marca personal professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a, 1b, 1c, 1d, 1e, 4b, 4c.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "Preparación del entorno profesional: 1a-1g, especialmente imagen personal, cualidades profesionales y deontología"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Cuidados estéticos básicos de uñas: 1a, 2f-2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación y decoloración: 1g-1h, 3a, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "Maquillaje: 2c, 2k, 3c, 3j, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "Lavado y cambios de forma: 1g-1i, 3h, 5g, 5j"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "Cambios de color: 3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "Atención al cliente: 1a-1i, 2a-2h, 3e-3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "Ciencias aplicadas I: 1c, 6g, 7g-7h, 8c-8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 2a-2f, 11d, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "FCT: 2d-2i, 7a-7f"
+              }
+            ],
             "relationType": "empleabilidad",
             "justification_es": "el autoconocimiento y la autoestima son esenciales para construir una identidad profesional. En Peluquería y Estética el alumnado debe reconocer qué se le da bien, qué le motiva —maquillaje, uñas, barbería, color, atención, redes, creatividad— y cómo convertir esas fortalezas en empleabilidad. Se relaciona con imagen profesional, atención al cliente, comunicación, trabajo en empresa y reflexión sobre hábitos saludables.",
             "justification_ca": "el autoconocimiento y la autoestima son esenciales para construir una identidad professional. En Peluquería y Estética el alumnat debe reconocer qué se le da bien, qué le motiva —maquillaje, ungles, barbería, color, atención, redes, creatividad— y cómo convertir esas fortalezas en empleabilidad. Se relaciona con imagen professional, atenció al client, comunicación, trabajo en empresa y reflexión sobre hábitos saludables.",
@@ -11955,12 +14964,89 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Investigación del entorno sociolaboral, profesiones, empresas, tendencias y sectores emergentes",
+            "title_ca": "Investigación del entorno sociolaboral, profesiones, empresas, tendencias y sectores emergentes",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3a, 3b, 3c, 4a, 4b.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "todos los criterios vinculados a manicura/pedicura básica, especialmente 1b-1m, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "todos los criterios vinculados a depilación/decoloración, especialmente 1a-1k y 3a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "todos los criterios de maquillaje social y fantasía, especialmente 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "todos los criterios de lavado y cambios de forma, especialmente 1a-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "todos los criterios de coloración y decoloración, especialmente 1a-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f, 5d, 6g, 8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 6f, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 6a-6j, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 4a-4i, 6a-6k, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 7a-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "la orientación profesional debe partir del conocimiento real del sector: salones de peluquería, barberías, centros de estética, uñas, maquillaje, hoteles, spas, redes sociales, servicios a domicilio, franquicias, emprendimiento y nuevas tendencias. Los módulos técnicos muestran qué tareas se realizan; Comunicación, Ciencias y Atención al cliente ayudan a investigar, analizar y presentar la información.",
             "justification_ca": "la orientación professional debe partir del conocimiento real del sector: salones de peluquería, barberías, centros de estética, ungles, maquillaje, hoteles, spas, redes sociales, serveis a domicilio, franquicias, emprendimiento y nuevas tendencias. Los módulos técnicos muestran qué tareas se realizan; Comunicación, Ciencias y Atenció al client ayudan a investigar, analizar y presentar la información.",
@@ -12059,12 +15145,89 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Seguridad, salud laboral, autocuidado, hábitos saludables y sostenibilidad como empleabilidad",
+            "title_ca": "Seguridad, salud laboral, autocuidado, hábitos saludables y sostenibilidad como empleabilidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1b, 2a, 2e, 3c, 5a.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2a-2j, 3k, 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j, 2i-2k, 3l-3m, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 2l, 3e, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2h-2j, 3i, 3l, 5c-5i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2e-2m, 3e-3n, 4c-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e-3h, 4b-4c"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 5a-5g, 7a-7h, 8a-8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "6a-6f, 9a-9d, 10a-10d, 11a-11d, 13a-13f, 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2j, 3h, 4h, 5c, 6a-6h"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "una persona empleable debe cuidar su salud, cumplir normas de PRL, trabajar de forma sostenible y evitar riesgos para clientes, compañeros y medioambiente. En el sector de Imagen Personal esto implica higiene, ergonomía, productos químicos, electricidad, residuos, autocuidado y hábitos saludables.",
             "justification_ca": "una persona empleable debe cuidar su salud, cumplir normas de PRL, trabajar de forma sostenible y evitar riesgos para clients, compañeros y medioambiente. En el sector de Imagen Personal esto implica higiene, ergonomía, productes químicos, electricidad, residuos, autocuidado y hábitos saludables.",
@@ -12183,16 +15346,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3159-2d. Se han identificado los beneficios del treball en equip, así como las diferentes formas de llevarlo a cabo.",
           "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
         ],
-        "importance_es": "Competencia clave de Itinerario personal para la empleabilidad para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Itinerari personal per a l’ocupabilitat per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Competencias personales y sociales para la empleabilidad: responsabilidad, puntualidad, respeto y actitud profesional",
+            "title_ca": "Competencias personales y sociales para la empleabilidad: responsabilidad, puntualidad, respeto y actitud professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1b, 2a, 2d, 2e, 5a.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1a-1g, 2g-2j, 3d-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 2d-2e, 3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2j-2k, 3a, 3j-3n, 4k-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 2l, 3j-3l, 4j-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2j, 3i-3l, 5c-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2e-2m, 3e-3n, 4c-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h-1i, 3e-3g, 4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "4g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d, 3d, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "empleabilidad",
             "justification_es": "mantener un empleo no depende solo de saber realizar una técnica; requiere puntualidad, respeto, autonomía, responsabilidad, cumplimiento de normas, orden, capacidad de aprender y actitud positiva ante correcciones. Estos criterios aparecen de forma transversal en todos los servicios y se consolidan en la FCT.",
             "justification_ca": "mantener un empleo no depende solo de saber realizar una técnica; requiere puntualidad, respeto, autonomía, responsabilidad, cumplimiento de normas, orden, capacidad de aprender y actitud positiva ante correcciones. Estos criterios aparecen de forma transversal en todos los serveis y se consolidan en la FCT.",
@@ -12291,12 +15529,53 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Itinerarios académicos, formación permanente y toma de decisiones sobre el propio proyecto profesional",
+            "title_ca": "Itinerarios académicos, formación permanente y toma de decisiones sobre el propio proyecto professional",
+            "targetModuleCode": "3005",
+            "targetModuleName_es": "Atención al cliente",
+            "targetModuleName_ca": "Atenció al client",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Atención al cliente.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Atenció al client.",
+            "sourceCriteria": "3b, 3c, 4a, 4b, 4c.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3e-3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 6g, 7h, 8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 6f, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i, 6a-6k, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "especialmente 7a-7f, adaptación a la empresa y aprendizaje ante observaciones"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "el alumnado necesita conocer opciones después del Grado Básico: continuidad formativa, Grado Medio, certificados profesionales, cursos de especialización no formal, empleo, FCT, formación permanente y competencias digitales. La decisión debe basarse en preferencias, capacidades, expectativas y realidad laboral, no en estereotipos o decisiones impulsivas.",
             "justification_ca": "el alumnat necesita conocer opciones después del Grado Básico: continuidad formativa, Grado Medio, certificados professionales, cursos de especialización no formal, empleo, FCT, formación permanente y competencias digitales. La decisión debe basarse en preferencias, capacidades, expectativas y realidad laboral, no en estereotipos o decisiones impulsivas.",
@@ -12395,12 +15674,53 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
+            "title_es": "Formación en Centros de Trabajo, adaptación a empresa, aprendizaje permanente y transición real al empleo",
+            "title_ca": "Formació en Centres de Treball, adaptación a empresa, aprendizaje permanente y transición real al empleo",
+            "targetModuleCode": "3005",
+            "targetModuleName_es": "Atención al cliente",
+            "targetModuleName_ca": "Atenció al client",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Atención al cliente.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Atenció al client.",
+            "sourceCriteria": "2a-2e, 3a-3c, 4a-4c, 5a-5d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d-2f, 11d, 13f, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "empleabilidad",
             "justification_es": "el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral.",
             "justification_ca": "el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral.",
@@ -12515,16 +15835,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3159-3b. Se han identificado los itinerarios académicos y professionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles professionales y sus preferencias.",
           "3159-3c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
         ],
-        "importance_es": "Competencia clave de Itinerario personal para la empleabilidad para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Itinerari personal per a l’ocupabilitat per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Comunicación efectiva, afectiva, oral, escrita y digital para el empleo",
+            "title_ca": "Comunicación efectiva, afectiva, oral, escrita y digital para el empleo",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2b, 2c, 2e, 5c, 5d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4a-4d, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f, 2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 2k, 3c, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g, 1i, 3h, 3k, 5g, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f-4g, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 5e, 6f, 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i, 7d-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "buscar empleo, superar una entrevista y mantener un puesto exige comunicarse con claridad, respeto y seguridad. En el ciclo, estas habilidades se aplican en atención al cliente, fichas técnicas, explicaciones de servicios, reclamaciones, trabajo en equipo, inglés básico y comunicación con responsables en FCT.",
             "justification_ca": "buscar empleo, superar una entrevista y mantener un puesto exige comunicarse con claridad, respeto y seguridad. En el ciclo, estas habilidades se aplican en atenció al client, fichas técnicas, explicaciones de serveis, reclamaciones, treball en equip, inglés básico y comunicación con responsables en FCT.",
@@ -12623,12 +16018,59 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Búsqueda de empleo, fuentes de información, CV, carta, entrevista y herramientas digitales",
+            "title_ca": "Búsqueda de empleo, fuentes de información, CV, carta, entrevista y herramientas digitales",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "5a, 5b, 5c, 5d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1a-1g, 4a-4d"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 3e, 4g-4h, 5e, 6f, 7e, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2d-2i, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "empleabilidad",
             "justification_es": "el acceso al empleo exige conocer dónde buscar, cómo presentarse, cómo demostrar habilidades, cómo preparar una entrevista y cómo utilizar herramientas digitales de forma profesional. Los módulos técnicos aportan evidencias para el CV y portfolio; Comunicación y Atención al cliente aportan expresión, entrevista y trato.",
             "justification_ca": "el acceso al empleo exige conocer dónde buscar, cómo presentarse, cómo demostrar habilidades, cómo preparar una entrevista y cómo utilizar herramientas digitales de forma professional. Los módulos técnicos aportan evidencias para el CV y portfolio; Comunicación y Atenció al client aportan expresión, entrevista y trato.",
@@ -12743,16 +16185,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles professionales.",
           "3159-4c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y professional personal, a partir de sus preferencias professionales, intereses y metas en el marco de un proyecto professional."
         ],
-        "importance_es": "Competencia clave de Itinerario personal para la empleabilidad para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Itinerari personal per a l’ocupabilitat per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Inteligencia emocional, asertividad, gestión de conflictos y resiliencia",
+            "title_ca": "Inteligencia emocional, asertividad, gestión de conflictos y resiliencia",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2b, 2d, 2e.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2d-2f, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1h, 1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 3c, 3j, 4d, 4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g-1i, 3k, 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3d, 3l-3m, 4e, 4k-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 3d-3f, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "7g-7h, 8c-8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d-2f, 11d, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2i, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el entorno laboral exige gestionar nervios, correcciones, conflictos con clientes o compañeros y cambios inesperados. En estética y peluquería esto es frecuente: retrasos, resultados no esperados, reclamaciones, presión de tiempo o inseguridad del cliente. La inteligencia emocional mejora la convivencia, la calidad y la empleabilidad.",
             "justification_ca": "el entorno laboral exige gestionar nervios, correcciones, conflictos con clients o compañeros y cambios inesperados. En estética y peluquería esto es frecuente: retrasos, resultados no esperados, reclamaciones, presión de tiempo o inseguridad del client. La inteligencia emocional mejora la convivencia, la calidad y la empleabilidad.",
@@ -12851,12 +16368,89 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Emprendimiento, iniciativa, creatividad, comunicación comercial y proyecto de salón",
+            "title_ca": "Emprendimiento, iniciativa, creatividad, comunicación comercial y proyecto de saló",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1d, 1e, 3a, 3b, 4a, 4b, 4c, 5a-5d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1b-1m, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1a-1k, 2a-2k, 3a-3n, 4a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a-1i, 2a-2l, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1a-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1a-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 1c, 4f-4g, 5a-5g, 9a-9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 4g-4h, 11a-11d, 13a-13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i, 6a-6k, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "aunque el módulo se centre en empleabilidad, el emprendimiento y la iniciativa ayudan al alumnado a comprender cómo funciona un negocio de imagen personal: servicios, clientes, precios, comunicación, sostenibilidad, calidad y diferenciación. Esta visión aumenta la motivación y conecta con sus intereses en redes, estética y marca personal.",
             "justification_ca": "aunque el módulo se centre en empleabilidad, el emprendimiento y la iniciativa ayudan al alumnat a comprender cómo funciona un negocio de imagen personal: serveis, clients, precios, comunicación, sostenibilidad, calidad y diferenciación. Esta visión aumenta la motivación y conecta con sus intereses en redes, estética y marca personal.",
@@ -12973,16 +16567,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena.",
           "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
         ],
-        "importance_es": "Competencia clave de Itinerario personal para la empleabilidad para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Itinerari personal per a l’ocupabilitat per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Trabajo en equipo, cooperación, roles profesionales y convivencia",
+            "title_ca": "Trabajo en equipo, cooperación, roles professionales y convivencia",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2a, 2d, 2e.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2g-2j, 3d-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 2d-2e, 3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2b-2k, 3a-3n, 4a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1e-1i, 2a-2l, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2b-2j, 3c-3l, 4d-4k, 5c-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1a-1g, 2d-2m, 3d-3n, 4c-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h-1i, 3f-3g, 4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "4g, 7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d, 3d, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "en un salón se trabaja en equipo: recepción, almacén, preparación, higiene, técnica, atención y cierre. El alumnado debe aprender a asumir roles, coordinarse, comunicar incidencias, colaborar y respetar normas compartidas. La FCT evalúa de forma directa la adaptación al equipo de empresa.",
             "justification_ca": "en un saló se trabaja en equipo: recepción, almacén, preparación, higiene, técnica, atención y cierre. El alumnat debe aprender a asumir roles, coordinarse, comunicar incidencias, colaborar y respetar normas compartidas. La FCT evalúa de forma directa la adaptación al equipo de empresa.",
@@ -13081,12 +16750,89 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Igualdad, diversidad, ruptura de estereotipos y orientación libre de prejuicios",
+            "title_ca": "Igualdad, diversidad, ruptura de estereotipos y orientación libre de prejuicios",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a-1e, 2a-2e, 3b, 4a-4c.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f-2h, 3d, 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1h, 3b, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2a-2c, 3c, 4d"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1e, 1i, 3c-3d, 4d, 5d"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2f, 3f, 4f"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1b, 1h, 2a-2b, 2e, 3f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "7h, 8a-8g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "11a-11d, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a-1i, 2a-2i, 3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2f-2i, 7a-7f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "la orientación profesional debe estar libre de estereotipos de género, origen, nivel académico, imagen corporal o expectativas familiares. En Imagen Personal es fundamental atender con respeto a clientes diversos y permitir que el alumnado se imagine en cualquier rol profesional sin prejuicios: barbería, maquillaje, uñas, peluquería, atención, emprendimiento o formación posterior.",
             "justification_ca": "la orientación professional debe estar libre de estereotipos de género, origen, nivel académico, imagen corporal o expectativas familiares. En Imagen Personal es fundamental atender con respeto a clients diversos y permitir que el alumnat se imagine en cualquier rol professional sin prejuicios: barbería, maquillaje, ungles, peluquería, atención, emprendimiento o formación posterior.",
@@ -13223,16 +16969,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3064-1h. Se han identificado los componentes que constituyen la suciedad del cabell y cuir cabellut.",
           "3064-1i. Se ha realizado el proceso de análisis con la discreción requerida, respetando la confidencialidad."
         ],
-        "importance_es": "Competencia clave de Lavado y cambios de forma del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Rentat i canvis de forma del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Diagnóstico capilar, observación anatómica, alteraciones y toma de decisiones",
+            "title_ca": "Diagnóstico capilar, observación anatómica, alteraciones y toma de decisiones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1a, 1b, 1c, 1d, 1f, 1g, 1h, 1i, 3b, 3j, 3k, 4e, 5b, 5j, 5k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "Preparación del entorno profesional: 4c, 4d, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Cuidados estéticos básicos de uñas: 2a-2j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación y decoloración: 1a-1k, 3n, 4f, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "Maquillaje: 2c-2e, 2k, 3a, 3c, 4d, 4j"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "Cambios de color: 2a-2d, 2j-2l, 3d, 3k-3m, 4e, 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "Atención al cliente: 1a-1i, 2a-2h, 3d"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "Ciencias aplicadas I: 6a-6g, 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 2a-2f, 5d-5e, 14a-14d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "Formación en Centros de Trabajo: 2h-2i, 3a-3b, 4a-4b, 5a-5c"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "antes de lavar, acondicionar o modificar la forma del cabello, el alumnado debe observar piel, cuero cabelludo y cabello, reconocer anomalías, respetar la confidencialidad y tomar decisiones técnicas. Este proceso coincide con la observación de uñas, piel, vello y rostro en los módulos de estética, y se apoya en Ciencias aplicadas mediante anatomía, salud, enfermedad, microorganismos y método científico. Comunicación y sociedad aporta la capacidad de preguntar, comprender, explicar y registrar la información.",
             "justification_ca": "antes de lavar, acondicionar o modificar la forma del cabell, el alumnat debe observar pell, cuir cabellut y cabell, reconocer anomalías, respetar la confidencialidad y tomar decisiones técnicas. Este proceso coincide con la observación de ungles, pell, vello y rostro en los módulos de estética, y se apoya en Ciències aplicades mediante anatomía, salud, enfermedad, microorganismos y método científico. Comunicació i societat aporta la capacidad de preguntar, comprender, explicar y registrar la información.",
@@ -13331,12 +17146,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Cambio de forma temporal: física del cabello, calor, humedad, moldes y acabado",
+            "title_ca": "Cambio de forma temporal: física del cabell, calor, humedad, moldes y acabado",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2c, 2d, 2e, 2f, 4a, 4b, 4c, 4d, 4e, 4f, 4g, 4h, 4i, 4j, 4k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2j, 4e-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3f-3k, 4g-4l"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1e-1f, 3g-3j, 4h"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "3a, 3f-3i, 4e-4k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a, 3a-3c, 4a-4b, 4g-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f-2h, 3a-3d"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 3b-3j, 5a-5g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "3a-3e, 4a-4j, 12a-12g, 13a-13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3i"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "el cambio temporal depende de fenómenos físicos: humedad, temperatura, evaporación, tensión, dirección, tiempo de secado, distancia del secador y tamaño del molde. Se relaciona con física, medidas, energía, seguridad eléctrica, geometría, coordinación estética y comunicación del resultado al cliente.",
             "justification_ca": "el cambio temporal depende de fenómenos físicos: humedad, temperatura, evaporación, tensión, dirección, tiempo de secado, distancia del secador y tamaño del molde. Se relaciona con física, medidas, energía, seguridad eléctrica, geometría, coordinación estética y comunicación del resultado al client.",
@@ -13435,12 +17321,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Documentación profesional, ficha técnica, TIC, informes y confidencialidad",
+            "title_ca": "Documentación professional, ficha técnica, TIC, informes y confidencialidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1g, 1i, 3h, 5g, 5j, 5k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4b-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2j, 3k, 4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h, 2k, 3c, 4e, 4j, 4n"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j, 3k, 4i"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1i, 2c, 3c-3d, 4c-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 3e, 4g-4h, 5e, 6f, 7e, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a, 1c, 2e, 2h-2i, 3a, 3g, 5a-5g, 7a"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "la ficha técnica capilar recoge diagnóstico, productos, técnica, incidencias, tiempos y resultado. Además, exige discreción y confidencialidad. Comunicación y sociedad aporta redacción, síntesis y comprensión; Ciencias aporta informes, tablas, gráficos y TIC.",
             "justification_ca": "la ficha técnica capilar recoge diagnóstico, productes, técnica, incidencias, tiempos y resultado. Además, exige discreción y confidencialidad. Comunicació i societat aporta redacción, síntesis y comprensión; Ciencias aporta informes, tablas, gráficos y TIC.",
@@ -13569,16 +17526,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3064-2i. Se ha demostrado seguridad a la hora de elegir los útiles más adecuados para el proceso técnico que se va a realizar.",
           "3064-2j. Se han aplicado las medidas de prevenció de riscos laborales requeridas."
         ],
-        "importance_es": "Competencia clave de Lavado y cambios de forma del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Rentat i canvis de forma del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Preparación de equipos, útiles, accesorios, productos y zona de trabajo",
+            "title_ca": "Preparación de equips, útiles, accesorios, productes y zona de trabajo",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2a, 2b, 2c, 2d, 2f, 2g, 2h, 2i, 3a, 3b, 4c, 4e, 4f, 4g, 5b, 5e, 5h, 5i.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2a-2j, 3a-3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1b-1m, 3b-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2h, 3c-3f, 4b-4d, 4j"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a-1i, 3a, 4a, 4l"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1a-1g, 2g, 3g, 4d"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f-2g, 3b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 2a-2c, 3a-3j, 4a-4g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "3a-3e, 5a-5e, 6a-6f, 13a-13f, 14g-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2c, 3c, 4c, 5b, 5f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "el lavado y los cambios de forma precisan lavacabezas, toallas, capas, peines, cepillos, moldes, rulos, pinzas, secadores, aparatos de calor, cosméticos de higiene, acondicionadores y fijadores. La organización de material y producto es común a manicura, depilación, maquillaje y coloración. Ciencias aplicadas permite comprender materia, unidades, temperatura, electricidad y mezclas; Comunicación permite interpretar instrucciones y etiquetas.",
             "justification_ca": "el lavado y los cambios de forma precisan lavacabezas, toallas, capas, peines, cepillos, moldes, rulos, pinzas, secadores, aparatos de calor, cosméticos de higiene, acondicionadores y fijadores. La organización de material y producto es común a manicura, depilación, maquillaje y coloración. Ciències aplicades permite comprender materia, unidades, temperatura, electricidad y mezclas; Comunicación permite interpretar instrucciones y etiquetas.",
@@ -13677,12 +17703,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Cambio de forma permanente: química, fases, protección, exposición y resultado",
+            "title_ca": "Cambio de forma permanente: química, fases, protección, exposición y resultado",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "5a, 5b, 5c, 5d, 5e, 5f, 5g, 5h, 5i, 5j, 5k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2g-2j, 3b-3k, 4c-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j, 2d, 2i-2k, 3l, 4a, 4d, 4f, 4h, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1h-1i, 2l, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2b-2m, 3a-3n, 4a-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 3a-3j, 4a-4g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f, 5a-5e, 6a-6f, 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3i, 6a-6h"
+              }
+            ],
             "relationType": "ciencias",
             "justification_es": "la permanente requiere comprender fases, cosméticos reductores/neutralizantes, tiempos de exposición, protección de piel y profesional, selección de moldes, control del proceso, ficha técnica y evaluación del resultado. Se vincula especialmente con química, seguridad, coloración, decoloración, documentación y atención al cliente.",
             "justification_ca": "la permanente requiere comprender fases, cosméticos reductores/neutralizantes, tiempos de exposición, protección de pell y professional, selección de moldes, control del proceso, ficha técnica y evaluación del resultado. Se vincula especialmente con química, seguridad, coloración, decoloración, documentación y atenció al client.",
@@ -13781,12 +17878,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación profesional, atención al cliente, asesoramiento, satisfacción y reclamaciones",
+            "title_ca": "Comunicación professional, atenció al client, asesoramiento, satisfacción y reclamaciones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1g, 1i, 3h, 3k, 5g, 5j, 5k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4a-4d, 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f, 2j, 3k, 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h, 1k, 3n, 4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2c, 2k, 3c, 4d, 4n"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j-2l, 3k-3m, 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2a-2h, 3a-3h, 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c, 4f-4g, 6g, 8g, 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f, 4e-4h, 5e, 6f, 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i, 3a-3i, 7a-7f"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "el servicio capilar exige escuchar, preguntar, informar, asesorar, explicar el resultado, comunicar posibles deficiencias, recoger satisfacción y atender objeciones. Atención al cliente y Comunicación y sociedad son esenciales para desarrollar vocabulario profesional, escucha activa, claridad, respeto e incluso atención básica en inglés.",
             "justification_ca": "el servei capilar exige escuchar, preguntar, informar, asesorar, explicar el resultado, comunicar posibles deficiencias, recoger satisfacción y atender objeciones. Atenció al client y Comunicació i societat son esenciales para desarrollar vocabulario professional, escucha activa, claridad, respeto e incluso atención básica en inglés.",
@@ -13919,16 +18087,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3064-3k. Se han detectado las causas que originan deficiencias en el servei y las medidas para subsanarlas.",
           "3064-3l. Se han aplicado las especificaciones de seguridad requeridas."
         ],
-        "importance_es": "Competencia clave de Lavado y cambios de forma del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Rentat i canvis de forma del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
+            "title_ca": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2b, 2f, 2g, 3e, 3g, 3l, 5c, 5h, 5i.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2a-2j"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1d-1f, 1m, 4a, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b, 3e, 3k-3m, 4e, 4j-4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a-1b, 1e, 3d-3e, 4b, 4l-4m"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1c-1g, 2e, 2m, 3e, 3n, 4c, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e-3f, 4b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2a-2b, 2j, 3g-3h, 4f, 4h, 5f, 6a-6h"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "lavar y acondicionar el cabello no solo limpia, también exige prevenir contagios y mantener útiles, lavacabezas, toallas y zona de trabajo en condiciones higiénicas. La prevención de infecciones conecta directamente con Ciencias aplicadas, mientras que los protocolos escritos y explicaciones al cliente conectan con Comunicación y sociedad.",
             "justification_ca": "lavar y acondicionar el cabell no solo limpia, también exige prevenir contagios y mantener útiles, lavacabezas, toallas y zona de trabajo en condiciones higiénicas. La prevención de infecciones conecta directamente con Ciències aplicades, mientras que los protocolos escritos y explicaciones al client conectan con Comunicació i societat.",
@@ -14027,12 +18264,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ergonomía, acomodación, protección y confort del cliente/profesional",
+            "title_ca": "Ergonomía, acomodación, protección y confort del client/professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1e, 3c, 3d, 3i, 4d, 5c, 5d.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 4e-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2g-2h, 3d, 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3a-3b, 4a, 4e"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2a-2b, 3b, 3j-3k, 4c"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2e-2f, 3e-3f, 4c, 4f"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h, 3e-3f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "6a-6g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "12a-12g, 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2g, 3d-3e, 4d, 4g, 5d"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "el lavacabezas, el secador, los moldes y los cambios permanentes exigen postura adecuada, protección de ropa y piel, control del confort y prevención de sobrecargas del profesional. La ergonomía es transversal en todos los servicios de estética y peluquería.",
             "justification_ca": "el lavacabezas, el secador, los moldes y los cambios permanentes exigen postura adecuada, protección de ropa y pell, control del confort y prevención de sobrecargas del professional. La ergonomía es transversal en todos los serveis de estética y peluquería.",
@@ -14131,12 +18439,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Coordinación estética: peinado, rostro, maquillaje, color, uñas e imagen global",
+            "title_ca": "Coordinación estética: peinado, rostro, maquillaje, color, ungles e imagen global",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "4e, 4f, 4h, 5e, 5j.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2i, 3f, 3h-3i, 4g, 4i-4j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1e-1f, 3g-3h"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "3a, 3c, 3f-3i, 4e-4j"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a, 3a-3c, 4a-4b, 4g-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f-2g, 3d, 3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1g-1i, 3b-3d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "3a-3e, 4a-4j"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a-1i, 2a-2i, 5a-5e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 5a-5e"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3i, 5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "los cambios de forma del cabello se diseñan según estilo, rostro, longitud, evento, color del cabello, maquillaje, uñas y vestuario. Esta coincidencia permite integrar criterios estéticos, visagismo, proporción, geometría, cultura visual y creatividad.",
             "justification_ca": "los cambios de forma del cabell se diseñan según estilo, rostro, longitud, evento, color del cabell, maquillaje, ungles y vestuario. Esta coincidencia permite integrar criterios estéticos, visagismo, proporción, geometría, cultura visual y creatividad.",
@@ -14267,16 +18640,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3064-4j. Se ha adaptado la temperatura y la distancia del secador de mano al tipo de cabell y al grado de humedad.",
           "3064-4k. Se han detectado las causas que originan deficiencias en el servei y las medidas para subsanarlas."
         ],
-        "importance_es": "Competencia clave de Lavado y cambios de forma del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Rentat i canvis de forma del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Selección de cosméticos y productos según tipo de cabello, cuero cabelludo y resultado previsto",
+            "title_ca": "Selección de cosméticos y productes según tipo de cabell, cuir cabellut y resultado previsto",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "1c, 1g, 1h, 3a, 3b, 3j, 4c, 4g, 5b, 5f.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1c, 1i-1k, 2i, 3b-3c, 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1d-1j, 2d, 2g-2h, 3d, 4c-4d"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1f-1h, 2d-2j, 3a, 3f-3i, 4a, 4f, 4i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a-2d, 2g-2i, 3a-3c, 3g-3i, 4a-4b, 4d, 4g-4h"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2a-2h, 3a-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1g-1i, 3a-3j, 4a-4g, 5a-5g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e, 5b, 6a-6f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3f, 4a-4e, 5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "seleccionar champú, acondicionador, fijador o producto de permanente requiere relacionar composición, acción, tipo de cabello, estado del cuero cabelludo y resultado deseado. Esta competencia es paralela a elegir ceras, decolorantes, cosméticos de maquillaje, esmaltes o colorantes capilares, e implica asesoramiento técnico al cliente.",
             "justification_ca": "seleccionar champú, acondicionador, fijador o producto de permanente requiere relacionar composición, acción, tipo de cabell, estado del cuir cabellut y resultado deseado. Esta competencia es paralela a elegir ceras, decolorantes, cosméticos de maquillaje, esmaltes o colorantes capilares, e implica asesoramiento técnico al client.",
@@ -14375,12 +18817,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Prevención de riesgos laborales, seguridad eléctrica, térmica, química y medioambiental",
+            "title_ca": "Prevención de riesgos laborales, seguridad eléctrica, térmica, química y medioambiental",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2f, 2h, 2j, 3i, 3l, 4i, 4j, 5c, 5d, 5f, 5h, 5i.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2g-2j, 3k, 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j, 2i-2k, 3a-3b, 3l-3m, 4a, 4f, 4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1i, 2l, 3e, 3j-3l, 4b, 4m"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g, 2e-2f, 2h, 2m, 3e-3f, 3h, 3n, 4c, 4f-4g, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3f, 4b-4c"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c, 5a-5g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "6a-6f, 9a-9d, 10a-10d, 11a-11d, 12a-12g, 13a-13f, 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f, 3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3h, 4h, 5c, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "comunicacion",
             "justification_es": "el módulo combina agua, electricidad, calor y productos químicos. Por ello se relaciona con la prevención de riesgos, uso de EPI, detección de aparatos defectuosos, seguridad química en permanentes y sostenibilidad en consumo de agua, energía y residuos.",
             "justification_ca": "el módulo combina agua, electricidad, calor y productes químicos. Por ello se relaciona con la prevenció de riscos, uso de EPI, detección de aparatos defectuosos, seguridad química en permanentes y sostenibilidad en consumo de agua, energía y residuos.",
@@ -14479,12 +18992,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Limpieza final, mantenimiento, orden, almacenamiento, residuos y sostenibilidad",
+            "title_ca": "Limpieza final, mantenimiento, orden, almacenamiento, residuos y sostenibilidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "2g, 3g, 5h, 5i.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2e-2j, 3c-3f, 3i-3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1e, 1l-1m, 3l, 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b, 3k-3m, 4j-4k"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1a, 1e, 1i, 4l-4m"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1c-1d, 1g, 3j, 3n, 4j, 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e, 3g-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "5b-5d, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "9a-9d, 10a-10d, 11a-11d, 13b, 13d, 14g-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a, 1i, 2h, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j, 2a-2f, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1d-1g, 2j, 3g-3h, 4f, 4h, 5f, 6g-6h"
+              }
+            ],
             "relationType": "sostenibilidad",
             "justification_es": "tras lavar, marcar o realizar una permanente, es imprescindible limpiar el puesto, almacenar moldes y aparatos, retirar toallas, conservar cosméticos y gestionar residuos. Esta competencia conecta con calidad, sostenibilidad, consumo responsable de agua/energía y prevención de contaminación.",
             "justification_ca": "tras lavar, marcar o realizar una permanente, es imprescindible limpiar el puesto, almacenar moldes y aparatos, retirar toallas, conservar cosméticos y gestionar residuos. Esta competencia conecta con calidad, sostenibilidad, consumo responsable de agua/energía y prevención de contaminación.",
@@ -14615,16 +19199,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3064-5j. Se ha evaluado el resultado del cambio de forma del cabell, formulando las preguntas tipo.",
           "3064-5k. Se han detectado las causas que originan deficiencias en el servei y las medidas para subsanarlas."
         ],
-        "importance_es": "Competencia clave de Lavado y cambios de forma del cabello para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Rentat i canvis de forma del cabell per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Ejecución técnica del lavado y acondicionado capilar",
+            "title_ca": "Ejecución técnica del lavado y acondicionado capilar",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3a, 3b, 3c, 3d, 3e, 3f, 3g, 3h, 3i, 3j, 3k, 3l.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e, 2e-2j, 4e-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3a-3h, 4a-4h"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3a-3i, 4a-4i"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2a-2j, 3b, 3e, 4b-4c"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2i, 3i, 4h"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i, 2f-2h, 3a-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 3b-3d, 4e-4g, 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2c-2f, 5b, 5e, 14f-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3i"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "lavar y acondicionar implica acomodar, mojar, aplicar champú, masajear, aclarar, acondicionar, eliminar restos, proteger al cliente y registrar productos. Comparte con otros módulos la secuenciación de fases, la destreza manual, la higiene, el trato al cliente, la seguridad y la evaluación de deficiencias.",
             "justification_ca": "lavar y acondicionar implica acomodar, mojar, aplicar champú, masajear, aclarar, acondicionar, eliminar restos, proteger al client y registrar productes. Comparte con otros módulos la secuenciación de fases, la destreza manual, la higiene, el trato al client, la seguridad y la evaluación de deficiencias.",
@@ -14723,12 +19376,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Control de tiempos, temperatura, distancia, medidas, cálculos y calidad del proceso",
+            "title_ca": "Control de tiempos, temperatura, distancia, medidas, cálculos y calidad del proceso",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "2e, 4i, 4j, 5f, 5j, 5k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3j, 4k"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1i, 2e-2f, 3f, 3j, 4h"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "2i, 2j, 4i-4k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2h, 3h, 4g"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3b, 3d, 4a"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j, 3b-3d, 3i-3j, 5e"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e, 3a-3e, 4a-4j, 5b, 12b-12e, 13a-13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3i, 4i, 5g"
+              }
+            ],
             "relationType": "ciencias",
             "justification_es": "el alumno debe estimar el tiempo de montaje, controlar secado, adaptar temperatura y distancia del secador, controlar tiempos de exposición en cambios permanentes y evaluar deficiencias. Matemáticas y ciencias permiten trabajar unidades, proporcionalidad, temperatura, gráficas, energía y consumo.",
             "justification_ca": "el alumno debe estimar el tiempo de montaje, controlar secado, adaptar temperatura y distancia del secador, controlar tiempos de exposición en cambios permanentes y evaluar deficiencias. Matemáticas y ciencias permiten trabajar unidades, proporcionalidad, temperatura, gráficas, energía y consumo.",
@@ -14827,12 +19545,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en la Formación en Centros de Trabajo",
+            "title_ca": "Trabajo en equipo, autonomía, responsabilidad y aplicación en la Formació en Centres de Treball",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "todos los criterios del módulo, especialmente 1g-1i, 2b-2j, 3c-3l, 4d-4k y 5c-5k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g, 2g-2j, 3d-3k, 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m, 2d-2e, 3j-3l, 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1k, 2b-2k, 3a-3n, 4a-4l"
+              },
+              {
+                "moduleCode": "3063",
+                "moduleName_es": "Maquillaje",
+                "moduleName_ca": "Maquillatge",
+                "criteria": "1e-1i, 2a-2l, 3a-3l, 4a-4n"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3j-3n, 4j-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h-1i, 3f-3g, 4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "4g, 7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d, 3d, 7e, 11d, 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e, 6a-6j, 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e, 6a-6k, 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "el lavado y los cambios de forma se desarrollan en un entorno profesional donde el alumnado debe seguir instrucciones, trabajar con otros, comunicarse, respetar tiempos, aplicar seguridad, atender al cliente, limpiar y evaluar el resultado. La FCT integra todos estos aprendizajes en una empresa real.",
             "justification_ca": "el lavado y los cambios de forma se desarrollan en un entorno professional donde el alumnat debe seguir instrucciones, trabajar con otros, comunicarse, respetar tiempos, aplicar seguridad, atender al client, limpiar y evaluar el resultado. La FCT integra todos estos aprendizajes en una empresa real.",
@@ -14969,16 +19758,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3063-1h. Se han reconocido las etiquetas de los diferentes productes, familiarizándose con su composición.",
           "3063-1i. Se han aplicado las medidas de prevenció de riscos laborales y medioambientales requeridas."
         ],
-        "importance_es": "Competencia clave de Maquillaje para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Maquillatge per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Preparación de útiles, materiales, productos y puesto de trabajo",
+            "title_ca": "Preparación de útiles, materiales, productes y puesto de trabajo",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-1c, 1d, 1e, 1f, 1g, 1h, 3a, 4a, 4h, 4l.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "Preparación del entorno profesional: 2a-2j; 3a-3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "Cuidados estéticos básicos de uñas: 1b-1m; 3b-3c; 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "Depilación y decoloración del vello: 2a-2h; 3c-3f; 4b-4d; 4j"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "Lavado y cambios de forma: 2a-2j; 3a-3b; 5b"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "Cambios de color: 1a-1g; 2g; 3g; 4d"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "Atención al cliente: 2f-2g; 3b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "Ciencias aplicadas I: 1a-1j; 2a-2c; 3a-3j; 4a-4g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "Ciencias aplicadas II: 3a-3e; 5a-5e; 6a-6f; 13a-13f; 14g-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 4a-4i; 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 4a-4i; 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "Formación en Centros de Trabajo: 1a-1g; 2a-2c; 4c; 5b; 5f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el maquillaje requiere preparar pinceles, esponjas, borlas, cosméticos, fijadores, desmaquillantes, productos de higiene y zona de trabajo. Esta preparación coincide con la organización de instalaciones, almacén, material de manicura, depilación, peluquería y coloración. Ciencias aplicadas aporta medidas, materia, mezclas, composición y electricidad; Comunicación permite leer etiquetas, instrucciones, protocolos y fichas técnicas.",
             "justification_ca": "el maquillaje requiere preparar pinceles, esponjas, borlas, cosméticos, fijadores, desmaquillantes, productes de higiene y zona de trabajo. Esta preparación coincide con la organización de instal·lacions, almacén, material de manicura, depilación, peluquería y coloración. Ciències aplicades aporta medidas, materia, mezclas, composición y electricidad; Comunicación permite leer etiquetas, instrucciones, protocolos y fichas técnicas.",
@@ -15077,12 +19935,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Visagismo, armonía estética, diseño, proporción, geometría y color",
+            "title_ca": "Visagismo, armonía estética, diseño, proporción, geometría y color",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "3063-3a, 3c, 3d, 3f, 3g, 3h, 3i, 4e, 4f, 4g, 4h, 4j.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2i; 3f; 3h-3i; 4g; 4i-4j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1e-1f; 3g-3h"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "4e-4h; 5e"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a; 3a-3c; 4a-4b; 4g"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f-2g; 3d; 3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1g-1i; 3b-3d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "3a-3e; 4a-4j"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i; 5a-5e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i; 5a-5e"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "4a-4e; 5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el visagismo exige analizar el rostro, corregir mediante claros y oscuros, diseñar cejas, adaptar fantasía al espacio facial, bocetar y armonizar colores. Se relaciona con geometría, proporción, coloración capilar, diseño de uñas, peinados, comunicación visual y apreciación estética.",
             "justification_ca": "el visagismo exige analizar el rostro, corregir mediante claros y oscuros, diseñar cejas, adaptar fantasía al espacio facial, bocetar y armonizar colores. Se relaciona con geometría, proporción, coloración capilar, diseño de ungles, peinados, comunicación visual y apreciación estética.",
@@ -15181,12 +20104,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Comunicación, entrevista, asesoramiento, atención al cliente y satisfacción",
+            "title_ca": "Comunicación, entrevista, asesoramiento, atenció al client y satisfacción",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-2c, 2k, 3c, 4d, 4n.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4a-4d; 4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2f; 2j; 3k; 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1h; 1k; 3n; 4l"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g; 1i; 3h; 5g; 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j-2l; 3k-3m; 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i; 2a-2h; 3a-3h; 4a-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c; 4f-4g; 6g; 8g; 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f; 4e-4h; 5e; 6f; 11d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 4a-4i; 6a-6j; 7a-7e; 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 4a-4i; 6a-6k; 7a-7f; 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2e-2i; 5a-5g; 7a-7f"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "el maquillaje social y de fantasía se adapta a la persona, evento, estilo y expectativas; por ello se necesita preguntar, escuchar, explicar, asesorar y comprobar satisfacción. Atención al cliente y Comunicación y sociedad son módulos clave para desarrollar lenguaje profesional, escucha activa, escritura y conversación básica en inglés.",
             "justification_ca": "el maquillaje social y de fantasía se adapta a la persona, evento, estilo y expectativas; por ello se necesita preguntar, escuchar, explicar, asesorar y comprobar satisfacción. Atenció al client y Comunicació i societat son módulos clave para desarrollar lenguaje professional, escucha activa, escritura y conversación básica en inglés.",
@@ -15285,12 +20279,71 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Creatividad, cultura visual, expresión artística e imagen social",
+            "title_ca": "Creatividad, cultura visual, expresión artística e imagen social",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "3063-3f, 3g, 3h, 3i, 4e, 4f, 4g, 4h, 4i, 4j.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3i; 4j"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "4e-4h; 5e"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3a-3c; 4a-4b; 4g"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2f-2g; 3g"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "Comunicación y sociedad I: 1a-1i; 2a-2i; 5a-5e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "Comunicación y sociedad II: 1a-1j; 2a-2f; 5a-5e"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c; 4f"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "3a-3e; 4g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el maquillaje, especialmente el de fantasía, permite trabajar referentes culturales, históricos, artísticos y sociales. Comunicación y sociedad aporta el análisis de contextos históricos, manifestaciones culturales, textos e imágenes; los módulos técnicos aportan la aplicación estética en rostro, uñas y cabello.",
             "justification_ca": "el maquillaje, especialmente el de fantasía, permite trabajar referentes culturales, históricos, artísticos y sociales. Comunicació i societat aporta el análisis de contextos históricos, manifestaciones culturales, textos e imágenes; los módulos técnicos aportan la aplicación estética en rostro, ungles y cabell.",
@@ -15423,16 +20476,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3063-2k. Se ha cumplimentado la ficha técnica del servei con los datos personales, los cosméticos aplicados y las observaciones realizadas.",
           "3063-2l. Se han aplicado las medidas de seguridad requeridas."
         ],
-        "importance_es": "Competencia clave de Maquillaje para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Maquillatge per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Higiene, desinfección, esterilización y prevención de alteraciones dermatológicas u oculares",
+            "title_ca": "Higiene, desinfección, esterilización y prevención de alteraciones dermatológicas u oculares",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-1a, 1b, 1e, 1i, 2f, 2g, 3d, 3e, 4b, 4l, 4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2a-2j; 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1d-1f; 1m; 4a; 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b; 3e; 3k-3m; 4e; 4j-4k"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2b; 2f; 2h; 3l; 5c; 5h-5i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1c-1g; 2e; 2m; 3e; 3n; 4c; 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e-3f; 4b"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c; 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2a-2b; 2j; 3h; 4f; 4h; 5f; 6a-6h"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "el maquillaje trabaja zonas sensibles, especialmente ojos y labios. Una mala higiene puede provocar alteraciones dermatológicas u oculares, por lo que comparte con todos los módulos la necesidad de limpieza, desinfección, material de uso individual, lavado de manos, prevención de contagios y mantenimiento de útiles.",
             "justification_ca": "el maquillaje trabaja zonas sensibles, especialmente ojos y labios. Una mala higiene puede provocar alteraciones dermatológicas u oculares, por lo que comparte con todos los módulos la necesidad de limpieza, desinfección, material de uso individual, lavado de manos, prevención de contagios y mantenimiento de útiles.",
@@ -15531,12 +20653,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ejecución técnica, secuenciación, destreza manual y acabado limpio",
+            "title_ca": "Ejecución técnica, secuenciación, destreza manual y acabado limpio",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "3063-2f, 2g, 2h, 2i, 2j, 3g, 3h, 3i, 4g, 4h, 4i, 4j, 4k.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3a-3i; 4b-4j"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3g-3i; 4g-4i"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3e-3g; 4h-4j; 5e-5f"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2h; 3h-3j; 4g-4j"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3a-3d; 3g"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1b; 1h-1i; 3d; 4e; 4g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2c-2f; 3a-3d; 5b; 5e; 12a-12g"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3f; 4e; 5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "maquillar implica ejecutar fases ordenadas: preparar piel, aplicar productos de higiene, base, correcciones, ojos, labios, mejillas, fijación y acabado. Comparte con depilación, uñas y peluquería la destreza manual, dirección de aplicación, control de cantidad, limpieza, evaluación y corrección de desviaciones.",
             "justification_ca": "maquillar implica ejecutar fases ordenadas: preparar pell, aplicar productes de higiene, base, correcciones, ojos, labios, mejillas, fijación y acabado. Comparte con depilación, ungles y peluquería la destreza manual, dirección de aplicación, control de cantidad, limpieza, evaluación y corrección de desviaciones.",
@@ -15635,12 +20822,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ficha técnica, documentación, TIC, informes y tratamiento de la información",
+            "title_ca": "Ficha técnica, documentación, TIC, informes y tratamiento de la información",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-1h, 2k, 3c, 4e, 4j, 4n.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4b-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2j; 3k; 4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g; 1h; 3n; 4l"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1g; 1i; 3h; 5g"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2j; 3k; 4i"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1i; 2c; 3c-3d; 4c-4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1c; 4f; 6g; 8g; 9d"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2e-2f; 3e; 4g-4h; 5e; 6f; 7e; 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i; 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i; 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a; 1c; 2e; 2h-2i; 5a-5g; 7a"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el maquillaje requiere registrar datos personales, cosméticos aplicados, observaciones, alergias, boceto, resultado y satisfacción. Esta documentación conecta con la competencia lingüística, TIC, atención al cliente, informes científicos y registros profesionales.",
             "justification_ca": "el maquillaje requiere registrar datos personales, cosméticos aplicados, observaciones, alergias, boceto, resultado y satisfacción. Esta documentación conecta con la competencia lingüística, TIC, atenció al client, informes científicos y registros professionales.",
@@ -15739,12 +20997,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Trabajo en equipo, autonomía, responsabilidad y transferencia a la FCT",
+            "title_ca": "Trabajo en equipo, autonomía, responsabilidad y transferencia a la FCT",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "todos, especialmente 1e-1i, 2a-2l, 3a-3l, 4a-4n.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1f-1g; 2g-2j; 3d-3k; 4a-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m; 2d-2e; 3j-3l; 4k-4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1g-1k; 2b-2k; 3a-3n; 4a-4l"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "3k-3l; 5h-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "3j-3n; 4j-4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h-1i; 3f-3g; 4f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "4g; 7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2d; 3d; 7e; 11d; 13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 6a-6j; 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 6a-6k; 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1a-1g; 2a-2j; 3a-3i; 4a-4i; 5a-5g; 6a-6h; 7a-7f"
+              }
+            ],
             "relationType": "empleabilidad",
             "justification_es": "el maquillaje se integra en situaciones reales de salón: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo.",
             "justification_ca": "el maquillaje se integra en situaciones reales de saló: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo.",
@@ -15877,16 +21206,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3063-3k. Se han realizado las precauciones oportunas retirando lentes de contacto u otras prótesis que puedan resultar peligrosas en el desarrollo de la técnica de maquillaje.",
           "3063-3l. Se han aplicado las medidas de seguridad requeridas."
         ],
-        "importance_es": "Competencia clave de Maquillaje para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Maquillatge per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Observación, diagnóstico de piel/rostro, detección de necesidades, alergias y contraindicaciones",
+            "title_ca": "Observación, diagnóstico de pell/rostro, detección de necesidades, alergias y contraindicaciones",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-2a, 2c, 2d, 2e, 2k, 3a, 3c, 3j, 3k, 4d, 4j.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "4c-4h"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2a-2j; 3f; 4g"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1a-1k; 3n; 4f; 4l"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1a-1i; 3h; 3k; 5g; 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a-2l; 3d; 3k-3m; 4e; 4i-4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1a-1i; 2a-2h; 3d"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "6a-6g; 7a-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "2a-2f; 5d-5e; 14a-14d"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 4a-4i; 6a-6j; 7a-7e; 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 4a-4i; 6a-6k; 7a-7f; 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2h-2i; 4a-4b; 5a-5c; 7f"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "antes de maquillar hay que observar la piel, rostro, tono, óvalo, alergias, lentillas, prótesis, estilo, ropa, evento y expectativas. Coincide con el diagnóstico de uñas, vello, cabello y cuero cabelludo, y con la atención al cliente. Ciencias aporta anatomía, piel, salud y método científico; Comunicación aporta entrevista, escucha activa y registro claro.",
             "justification_ca": "antes de maquillar hay que observar la pell, rostro, tono, óvalo, alergias, lentillas, prótesis, estilo, ropa, evento y expectativas. Coincide con el diagnóstico de ungles, vello, cabell y cuir cabellut, y con la atenció al client. Ciencias aporta anatomía, pell, salud y método científico; Comunicación aporta entrevista, escucha activa y registro claro.",
@@ -15985,12 +21383,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Ergonomía, acomodación, protección y confort del cliente y del profesional",
+            "title_ca": "Ergonomía, acomodación, protección y confort del client y del professional",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-2a, 2b, 3b, 3j, 3k, 4c.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1e; 4e-4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "2g-2h; 3d; 4e"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "3a-3b; 4a; 4e"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "1e; 3c-3d; 4d; 5d"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2f; 3f; 4f"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "1h; 3e-3f"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "6a-6g; 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "12a-12g; 14f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 7a-7e"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 7a-7f"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "2g; 3d-3e; 4d; 4g; 5d"
+              }
+            ],
             "relationType": "cliente",
             "justification_es": "el maquillaje exige buena postura del profesional, correcta altura del sillón, protección del cliente, retirada de lentes o prótesis peligrosas y control del confort. La ergonomía y la protección aparecen en todos los servicios de imagen personal.",
             "justification_ca": "el maquillaje exige buena postura del professional, correcta altura del sillón, protección del client, retirada de lentes o prótesis peligrosas y control del confort. La ergonomía y la protección aparecen en todos los serveis de imagen personal.",
@@ -16089,12 +21558,77 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Control de tiempos, exposición, duración, permanencia del resultado y calidad",
+            "title_ca": "Control de tiempos, exposición, duración, permanencia del resultado y calidad",
             "targetModuleCode": "3061",
             "targetModuleName_es": "Cuidados estéticos básicos de uñas",
             "targetModuleName_ca": "Cures estètiques bàsiques d’ungles",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Cuidados estéticos básicos de uñas.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Cures estètiques bàsiques d’ungles.",
+            "sourceCriteria": "3063-2i, 2j, 4i, 4j, 4k, 4n.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "3j; 4k; 3k; 4l-4m"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2e-2f; 3f; 3j; 4h; 4l"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2e; 4i-4j; 5f; 5j-5k"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2h; 3h; 3m; 4g; 4l"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3b; 3d; 4a"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1a-1j; 3b-3d; 5e"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e; 3a-3e; 4a-4j; 5b; 13a-13f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3i; 4i; 5g"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "el maquillaje debe completarse en un tiempo adecuado, respetar tiempos de exposición de mascarillas, conseguir duración mediante fijador y evaluar la calidad. Los módulos científicos permiten trabajar unidades, tiempo, datos y gráficas; los módulos técnicos comparten la exigencia de finalizar con calidad y eficiencia.",
             "justification_ca": "el maquillaje debe completarse en un tiempo adecuado, respetar tiempos de exposición de mascarillas, conseguir duración mediante fijador y evaluar la calidad. Los módulos científicos permiten trabajar unidades, tiempo, datos y gráficas; los módulos técnicos comparten la exigencia de finalizar con calidad y eficiencia.",
@@ -16231,16 +21765,85 @@ export const FPB_MODULES_SEED: FPBModule[] = [
           "3063-4m. Se han aplicado las medidas de seguridad requeridas.",
           "3063-4n. Se han realizado preguntas tipo que permitan conocer el grado de satisfacción del client."
         ],
-        "importance_es": "Competencia clave de Maquillaje para la práctica profesional y la empleabilidad en FPB.",
-        "importance_ca": "Competència clau de Maquillatge per a la pràctica professional i l'ocupabilitat en FPB.",
         "connections": [
           {
+            "title_es": "Selección de cosméticos, productos y técnicas según piel, estilo, armonía y resultado esperado",
+            "title_ca": "Selección de cosméticos, productes y técnicas según pell, estilo, armonía y resultado esperado",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-1f, 1g, 1h, 2d, 2e, 2h, 2i, 2j, 3a, 3f, 3g, 3h, 3i, 4a, 4f, 4i.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "3a-3c; 4c-4d"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1c; 1i-1k; 2i; 3b-3c; 4c-4d"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1d-1j; 2d; 2g-2h; 3d; 4c-4d"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2c-2f; 2i; 3a-3b; 3j; 4a-4h; 5a-5f"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "2a-2d; 2g-2i; 3a-3c; 3g-3i; 4a-4b; 4d; 4g-4h"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "2a-2h; 3a-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "1g-1i; 3a-3j; 4a-4g; 5a-5g"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "1a-1e; 3a-3e; 4e-4h; 5b; 6a-6f"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 4a-4i; 6a-6j; 7a-7e; 8a-8i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "3a-3e; 4a-4i; 6a-6k; 7a-7f; 8a-8g"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3a-3f; 4a-4e; 5a-5e"
+              }
+            ],
             "relationType": "digital",
             "justification_es": "la selección de fondo, correctores, sombras, colorete, labial, fijador, productos de higiene o fantasía depende del tipo de piel, tono, textura, armonía cromática, estilo personal y finalidad. Esta lógica coincide con la selección de ceras, decolorantes, tintes, champús, esmaltes y técnicas capilares.",
             "justification_ca": "la selección de fondo, correctores, sombras, colorete, labial, fijador, productes de higiene o fantasía depende del tipo de pell, tono, textura, armonía cromática, estilo personal y finalidad. Esta lógica coincide con la selección de ceras, decolorantes, tintes, champús, esmaltes y técnicas capilares.",
@@ -16339,12 +21942,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Seguridad, PRL, responsabilidad profesional y zonas sensibles",
+            "title_ca": "Seguridad, PRL, responsabilidad professional y zonas sensibles",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-1i, 2l, 3e, 3j, 3k, 3l, 4b, 4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "1d-1g; 2g-2j; 3k; 4g"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1m; 3l; 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "1j; 2i-2k; 3a-3b; 3l; 4a; 4f; 4k"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2h; 2j; 3i; 3l; 5c-5d; 5h"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1g; 2e-2f; 2h; 2m; 3e-3f; 3h; 3n; 4c; 4f-4g; 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3f; 4b-4c"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "2c; 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "6a-6f; 9a-9d; 10a-10d; 11a-11d; 13a-13f; 14a-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "3a-3e; 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "2a-2f; 3a-3e; 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "3h; 4h; 5c; 6a-6h; 7a-7f"
+              }
+            ],
             "relationType": "tecnica",
             "justification_es": "las técnicas de maquillaje se aplican en ojos, labios y rostro, por lo que exigen responsabilidad profesional, prevención de alergias, precauciones con lentes de contacto, higiene, uso seguro de productos y respeto a instrucciones del fabricante. Coincide con la seguridad química del color y decoloración, la seguridad térmica de depilación y la prevención general del taller.",
             "justification_ca": "las técnicas de maquillaje se aplican en ojos, labios y rostro, por lo que exigen responsabilidad professional, prevención de alergias, precauciones con lentes de contacto, higiene, uso seguro de productes y respeto a instrucciones del fabricante. Coincide con la seguridad química del color y decoloración, la seguridad térmica de depilación y la prevención general del taller.",
@@ -16443,12 +22117,83 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
+            "title_es": "Limpieza final, conservación, orden, residuos y sostenibilidad",
+            "title_ca": "Limpieza final, conservación, orden, residuos y sostenibilidad",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
+            "sourceCriteria": "3063-1a, 1e, 1i, 4h, 4l, 4m.",
+            "relatedCriteria": [
+              {
+                "moduleCode": "3060",
+                "moduleName_es": "Preparación del entorno profesional",
+                "moduleName_ca": "Preparació de l’entorn professional",
+                "criteria": "2e-2j; 3c-3f; 3i-3k"
+              },
+              {
+                "moduleCode": "3061",
+                "moduleName_es": "Cuidados estéticos básicos de uñas",
+                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
+                "criteria": "1e; 1l-1m; 3l; 4n"
+              },
+              {
+                "moduleCode": "3062",
+                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
+                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
+                "criteria": "2a-2b; 3k-3m; 4j-4k"
+              },
+              {
+                "moduleCode": "3064",
+                "moduleName_es": "Lavado y cambios de forma del cabello",
+                "moduleName_ca": "Rentat i canvis de forma del cabell",
+                "criteria": "2g; 5h-5i"
+              },
+              {
+                "moduleCode": "3065",
+                "moduleName_es": "Cambios de color del cabello",
+                "moduleName_ca": "Canvis de color del cabell",
+                "criteria": "1c-1d; 1g; 3j; 3n; 4j; 4m"
+              },
+              {
+                "moduleCode": "3005",
+                "moduleName_es": "Atención al cliente",
+                "moduleName_ca": "Atenció al client",
+                "criteria": "3e; 3g-3h"
+              },
+              {
+                "moduleCode": "3009",
+                "moduleName_es": "Ciencias aplicadas I",
+                "moduleName_ca": "Ciències aplicades I",
+                "criteria": "5b-5d; 7g-7h"
+              },
+              {
+                "moduleCode": "3042",
+                "moduleName_es": "Ciencias aplicadas II",
+                "moduleName_ca": "Ciències aplicades II",
+                "criteria": "9a-9d; 10a-10d; 11a-11d; 13b; 13d; 14g-14h"
+              },
+              {
+                "moduleCode": "3011",
+                "moduleName_es": "Comunicación y sociedad I",
+                "moduleName_ca": "Comunicació i societat I",
+                "criteria": "1a; 1i; 2h; 4a-4i"
+              },
+              {
+                "moduleCode": "3012",
+                "moduleName_es": "Comunicación y sociedad II",
+                "moduleName_ca": "Comunicació i societat II",
+                "criteria": "1a-1j; 2a-2f; 4a-4i"
+              },
+              {
+                "moduleCode": "3067",
+                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
+                "moduleName_ca": "Formació en Centres de Treball (FCT)",
+                "criteria": "1d-1g; 2j; 3g-3h; 4f; 4h; 5f; 6g-6h"
+              }
+            ],
             "relationType": "sostenibilidad",
             "justification_es": "al finalizar el maquillaje deben limpiarse pinceles y útiles, conservar productos, cerrar envases, ordenar el puesto y gestionar residuos como algodones, bastoncillos, toallitas, envases o material desechable. Esto conecta con sostenibilidad, salud, prevención de infecciones y calidad profesional.",
             "justification_ca": "al finalizar el maquillaje deben limpiarse pinceles y útiles, conservar productes, cerrar envases, ordenar el puesto y gestionar residuos como algodones, bastoncillos, toallitas, envases o material desechable. Esto conecta con sostenibilidad, salud, prevención de infecciones y calidad professional.",

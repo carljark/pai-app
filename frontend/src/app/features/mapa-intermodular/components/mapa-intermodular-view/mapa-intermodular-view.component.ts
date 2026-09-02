@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { MapaIntermodularFacade } from '../../services/mapa-intermodular.facade';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
+import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
+import { IntermodularConnection } from '../../models/mapa-intermodular.model';
 
 @Component({
   selector: 'app-mapa-intermodular-view',
@@ -149,19 +151,21 @@ import { TranslationService } from '../../../../services/translation.service';
                 <span class="mapa-active-ra-module">{{ isCa() ? facade.selectedModule()?.name_ca : facade.selectedModule()?.name_es }}</span>
               </div>
               <h3 class="mapa-active-ra-title">{{ isCa() ? ra.text_ca : ra.text_es }}</h3>
-              @if (ra.importance_es) {
-                <p class="mapa-active-ra-importance">
-                  <strong>{{ isCa() ? 'Importància a FPB:' : 'Importancia en FPB:' }}</strong> 
-                  {{ isCa() ? ra.importance_ca : ra.importance_es }}
-                </p>
+
+              @if (ra.criteria_es && ra.criteria_es.length > 0) {
+                <div class="mapa-ra-criteria-box">
+                  <div class="mapa-ra-criteria-title">{{ isCa() ? 'Criteris d’Avaluació d’aquest RA:' : 'Criterios de Evaluación de este RA:' }}</div>
+                  <ul class="mapa-ra-criteria-list-items">
+                    @for (crit of (isCa() ? (ra.criteria_ca || ra.criteria_es) : ra.criteria_es); track crit) {
+                      <li>{{ crit }}</li>
+                    }
+                  </ul>
+                </div>
               }
 
               <div class="mapa-actions-bar">
                 <button class="mapa-btn-action mapa-btn-action--primary" (click)="createProjectFromConnection()">
-                  {{ isCa() ? 'Crear Projecte amb aquesta connexió' : 'Crear Proyecto con esta conexión' }}
-                </button>
-                <button class="mapa-btn-action mapa-btn-action--secondary" (click)="copySummary()">
-                  {{ copied() ? (isCa() ? 'Copiat!' : '¡Copiado!') : (isCa() ? 'Copiar Resum' : 'Copiar Resumen') }}
+                  {{ isCa() ? 'Crear Projecte amb aquestes connexions' : 'Crear Proyecto con estas conexiones' }}
                 </button>
               </div>
             </div>
@@ -174,27 +178,66 @@ import { TranslationService } from '../../../../services/translation.service';
               </h3>
 
               <div class="mapa-connections-list">
-                @for (conn of ra.connections; track conn.targetModuleCode + conn.targetRaCode) {
+                @for (conn of ra.connections; track $index) {
                   <div class="mapa-connection-card">
                     <!-- Target Header -->
                     <div class="mapa-conn-header">
                       <div class="mapa-conn-target">
                         <span class="mapa-conn-badge">{{ conn.targetModuleCode }}</span>
-                        <strong>{{ isCa() ? conn.targetModuleName_ca : conn.targetModuleName_es }}</strong>
+                        <div>
+                          <strong class="mapa-conn-mod-name">{{ isCa() ? conn.targetModuleName_ca : conn.targetModuleName_es }}</strong>
+                          @if (conn.title_es) {
+                            <div class="mapa-conn-coincidence-subtitle">{{ isCa() ? (conn.title_ca || conn.title_es) : conn.title_es }}</div>
+                          }
+                        </div>
                         <span class="mapa-target-ra-pill">{{ conn.targetRaCode }}</span>
                       </div>
-                      <span class="mapa-relation-type-tag" [class]="'tag-' + conn.relationType">
-                        {{ getRelationLabel(conn.relationType) }}
-                      </span>
+                      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <span class="mapa-relation-type-tag" [class]="'tag-' + conn.relationType">
+                          {{ getRelationLabel(conn.relationType) }}
+                        </span>
+                        <button class="mapa-btn-action mapa-btn-action--primary mapa-btn-action--sm" (click)="createProjectFromConnection(conn)">
+                          {{ isCa() ? 'Crear Projecte' : 'Crear Proyecto' }}
+                        </button>
+                      </div>
                     </div>
 
                     <p class="mapa-target-ra-desc">
                       {{ isCa() ? conn.targetRaText_ca : conn.targetRaText_es }}
                     </p>
 
+                    <!-- Criteria Analysis & Relations -->
+                    <div class="mapa-criteria-breakdown">
+                      @if (conn.sourceCriteria) {
+                        <div class="mapa-crit-row">
+                          <span class="mapa-crit-badge-label mapa-crit-badge--source">
+                            {{ isCa() ? 'Criteris propis implicats:' : 'Criterios propios implicados:' }}
+                          </span>
+                          <span class="mapa-crit-badge-text">{{ conn.sourceCriteria }}</span>
+                        </div>
+                      }
+
+                      @if (conn.relatedCriteria && conn.relatedCriteria.length > 0) {
+                        <div class="mapa-crit-row mapa-crit-row--related">
+                          <span class="mapa-crit-badge-label mapa-crit-badge--target">
+                            {{ isCa() ? 'Criteris d’altres mòduls relacionats:' : 'Criterios de otros módulos relacionados:' }}
+                          </span>
+                          <div class="mapa-related-chips-wrap">
+                            @for (rel of conn.relatedCriteria; track rel.moduleCode + rel.criteria) {
+                              <div class="mapa-related-chip-item">
+                                <span class="mapa-related-code-tag">{{ rel.moduleCode }}</span>
+                                <span class="mapa-related-name-tag">{{ isCa() ? rel.moduleName_ca : rel.moduleName_es }}:</span>
+                                <strong class="mapa-related-crit-tag">{{ rel.criteria }}</strong>
+                              </div>
+                            }
+                          </div>
+                        </div>
+                      }
+                    </div>
+
                     <!-- Justification -->
                     <div class="mapa-justification-box">
-                      <span class="mapa-just-label">{{ isCa() ? 'Justificació Curricular:' : 'Justificación Curricular:' }}</span>
+                      <span class="mapa-just-label">{{ isCa() ? 'Justificació Curricular i Anàlisi de Coincidència:' : 'Justificación Curricular y Análisis de Coincidencia:' }}</span>
                       <p>{{ isCa() ? conn.justification_ca : conn.justification_es }}</p>
                     </div>
 
@@ -562,14 +605,28 @@ import { TranslationService } from '../../../../services/translation.service';
       margin: 0 0 10px 0;
     }
 
-    .mapa-active-ra-importance {
-      font-size: 0.85rem;
-      color: #475569;
+    .mapa-ra-criteria-box {
+      margin: 12px 0 16px 0;
       background: #f8fafc;
-      padding: 8px 12px;
-      border-left: 3px solid #0284c7;
-      border-radius: 4px;
-      margin: 0 0 16px 0;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+
+    .mapa-ra-criteria-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0369a1;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .mapa-ra-criteria-list-items {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.85rem;
+      color: #334155;
+      line-height: 1.5;
     }
 
     .mapa-actions-bar {
@@ -668,8 +725,95 @@ import { TranslationService } from '../../../../services/translation.service';
       margin: 0 0 12px 0;
     }
 
-    .mapa-justification-box {
+    .mapa-conn-coincidence-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 1px;
+    }
+
+    .mapa-criteria-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
       background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .mapa-crit-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+    }
+
+    .mapa-crit-badge-label {
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 0.76rem;
+    }
+
+    .mapa-crit-badge--source {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .mapa-crit-badge--target {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+    }
+
+    .mapa-crit-badge-text {
+      color: #1e293b;
+      font-weight: 600;
+      align-self: center;
+    }
+
+    .mapa-related-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .mapa-related-chip-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+    }
+
+    .mapa-related-code-tag {
+      background: #64748b;
+      color: white;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+    }
+
+    .mapa-related-name-tag {
+      color: #64748b;
+    }
+
+    .mapa-related-crit-tag {
+      color: #0f172a;
+    }
+
+    .mapa-justification-box {
+      background: #ffffff;
       border: 1px dashed #cbd5e1;
       border-radius: 8px;
       padding: 12px;
@@ -777,8 +921,7 @@ export class MapaIntermodularViewComponent {
   facade = inject(MapaIntermodularFacade);
   layout = inject(LayoutService);
   trans = inject(TranslationService);
-
-  copied = signal(false);
+  curriculum = inject(CurriculumFacade);
 
   isCa = computed(() => this.layout.language() === 'catalan');
 
@@ -812,16 +955,36 @@ export class MapaIntermodularViewComponent {
     this.facade.setSearch(query);
   }
 
-  copySummary() {
-    const summary = this.facade.exportConnectionSummary(this.layout.language());
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(summary);
-      this.copied.set(true);
-      setTimeout(() => this.copied.set(false), 2500);
-    }
-  }
+  createProjectFromConnection(connection?: IntermodularConnection) {
+    this.curriculum.setTipoNivel('FP_BASICA');
+    const allRas = this.curriculum.ras();
+    const activeRa = this.facade.selectedRa();
+    const activeModule = this.facade.selectedModule();
+    const selected: string[] = [];
 
-  createProjectFromConnection() {
+    if (activeRa) {
+      const matchSource = allRas.find(r => 
+        (r.id && activeModule && r.id.includes(activeModule.code) && r.id.includes(activeRa.code)) ||
+        (r.description && r.description.includes(activeRa.text_es.substring(0, 30)))
+      );
+      selected.push(matchSource ? matchSource.description : (this.isCa() ? activeRa.text_ca : activeRa.text_es));
+
+      const conns = connection ? [connection] : activeRa.connections;
+      for (const c of conns) {
+        const match = allRas.find(r => 
+          (r.id && r.id.includes(c.targetModuleCode) && r.id.includes(c.targetRaCode)) ||
+          (r.description && r.description.includes(c.targetRaText_es.substring(0, 30)))
+        );
+        if (match && !selected.includes(match.description)) {
+          selected.push(match.description);
+        }
+      }
+    }
+
+    if (selected.length > 0) {
+      this.curriculum.selectedRas.set(selected);
+    }
+
     this.layout.switchView('generator');
   }
 }

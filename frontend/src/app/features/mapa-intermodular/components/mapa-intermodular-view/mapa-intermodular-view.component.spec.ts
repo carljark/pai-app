@@ -3,6 +3,8 @@ import { MapaIntermodularViewComponent } from './mapa-intermodular-view.componen
 import { MapaIntermodularFacade } from '../../services/mapa-intermodular.facade';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
+import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
@@ -12,6 +14,7 @@ describe('MapaIntermodularViewComponent', () => {
   let mockLayout: any;
   let mockFacade: any;
   let mockTrans: any;
+  let curriculum: CurriculumFacade;
 
   beforeEach(async () => {
     mockLayout = {
@@ -27,9 +30,10 @@ describe('MapaIntermodularViewComponent', () => {
     };
 
     await TestBed.configureTestingModule({
-      imports: [MapaIntermodularViewComponent],
+      imports: [MapaIntermodularViewComponent, HttpClientTestingModule],
       providers: [
         MapaIntermodularFacade,
+        CurriculumFacade,
         { provide: LayoutService, useValue: mockLayout },
         { provide: TranslationService, useValue: mockTrans }
       ]
@@ -38,6 +42,15 @@ describe('MapaIntermodularViewComponent', () => {
     fixture = TestBed.createComponent(MapaIntermodularViewComponent);
     component = fixture.componentInstance;
     mockFacade = TestBed.inject(MapaIntermodularFacade);
+    curriculum = TestBed.inject(CurriculumFacade);
+    
+    // Seed curriculum ras for testing matching
+    curriculum.ras.set([
+      { id: '3060-RA1', module: 'Preparación del entorno profesional', description: 'Muestra una imagen personal y profesional adecuada en el entorno de trabajo' },
+      { id: '3005-RA1', module: 'Atención al cliente', description: 'Atiende a posibles clientes' },
+      { id: '3009-RA1', module: 'Ciencias aplicadas I', description: 'Resuelve problemas matemáticos' }
+    ]);
+    
     fixture.detectChanges();
   });
 
@@ -67,26 +80,23 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.getRelationLabel('ciencias')).toBe('Ciències Aplicades');
   });
 
-  it('should trigger createProjectFromConnection', () => {
+  it('should trigger createProjectFromConnection with all connections', () => {
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
     component.createProjectFromConnection();
+    expect(curriculum.tipoNivel()).toBe('FP_BASICA');
+    expect(curriculum.selectedRas().length).toBeGreaterThan(0);
     expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
   });
 
-  it('should copy summary to clipboard', () => {
-    Object.assign(navigator, {
-      clipboard: {
-        writeText: vi.fn().mockResolvedValue(undefined)
-      }
-    });
-
-    vi.useFakeTimers();
-    component.copySummary();
-    expect(navigator.clipboard.writeText).toHaveBeenCalled();
-    expect(component.copied()).toBe(true);
-
-    vi.advanceTimersByTime(3000);
-    expect(component.copied()).toBe(false);
-    vi.useRealTimers();
+  it('should trigger createProjectFromConnection for a specific connection', () => {
+    const activeRa = component.facade.selectedRa();
+    const conn = activeRa?.connections[0];
+    if (conn) {
+      component.createProjectFromConnection(conn);
+      expect(curriculum.selectedRas().length).toBeGreaterThan(0);
+      expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
+    }
   });
 
   it('should switch language reactively', () => {
@@ -102,7 +112,7 @@ describe('MapaIntermodularViewComponent', () => {
   it('should click all filter pills, search input, modules, and RAs in DOM', () => {
     component.facade.setTypeFilter('all');
     component.facade.setSearch('');
-    component.facade.selectModule('3005');
+    component.facade.selectModule('3060');
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
@@ -116,15 +126,15 @@ describe('MapaIntermodularViewComponent', () => {
 
     // Reset filter
     component.facade.setTypeFilter('all');
-    component.facade.selectModule('3005');
+    component.facade.selectModule('3060');
     fixture.detectChanges();
 
     // Search input
     const input = compiled.querySelector('input');
     if (input) {
-      input.value = '3005';
+      input.value = '3060';
       input.dispatchEvent(new Event('input'));
-      component.onSearch('3005');
+      component.onSearch('3060');
       fixture.detectChanges();
     }
 
@@ -150,7 +160,7 @@ describe('MapaIntermodularViewComponent', () => {
     });
   });
 
-  it('should test methods directly and handle clipboard edge cases', () => {
+  it('should test methods directly and propagation stop', () => {
     component.onSelectModule('3063');
     component.onSelectRa('3063_RA1');
     const ev = new Event('click');
@@ -160,12 +170,6 @@ describe('MapaIntermodularViewComponent', () => {
 
     component.onSetTypeFilter('especifico');
     component.onSearch('cuidado');
-
-    // Clipboard undefined
-    const origClipboard = navigator.clipboard;
-    Object.defineProperty(navigator, 'clipboard', { value: undefined, configurable: true, writable: true });
-    component.copySummary();
-    Object.defineProperty(navigator, 'clipboard', { value: origClipboard, configurable: true, writable: true });
   });
 
   it('should test empty connections state in template', () => {

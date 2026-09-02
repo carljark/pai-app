@@ -1,11 +1,2790 @@
 import { FPBModule } from '../models/mapa-intermodular.model';
 
 /**
- * Seed data oficial con los 9 módulos de FPB Peluquería y Estética,
- * 115 coincidencias intermodulares y 805 actividades prácticas desarrolladas
- * basadas en los documentos oficiales de la carpeta 'Plantillas coincidencias FPB'.
+ * Seed data oficial con los 11 módulos de FPB Peluquería y Estética,
+ * coincidencias intermodulares y actividades prácticas desarrolladas
+ * basadas en todos los documentos de la carpeta 'Plantillas coincidencias FPB'.
  */
 export const FPB_MODULES_SEED: FPBModule[] = [
+  {
+    "code": "3060",
+    "name_es": "Preparación del entorno profesional",
+    "name_ca": "Preparació de l’entorn professional",
+    "type": "especifico",
+    "color": "#64748b",
+    "icon": "layout",
+    "learningOutcomes": [
+      {
+        "id": "3060_RA1",
+        "code": "RA1",
+        "text_es": "· Muestra una imagen personal y profesional adecuada en el entorno de trabajo, relacionándola con la higiene corporal y la estética personal.",
+        "text_ca": "· Muestra una imagen personal y professional adecuada en el entorno de trabajo, relacionándola con la higiene corporal y la estética personal.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c1_1",
+                "title_es": "Manual visual de imagen profesional: “Antes de entrar al salón”",
+                "title_ca": "Manual visual de imagen professional: “Antes de entrar al saló”",
+                "description_es": "El grupo observa ejemplos de imagen profesional correcta e incorrecta, mediante fotografías simuladas o casos descritos.",
+                "description_ca": "El grupo observa ejemplos de imagen professional correcta e incorrecta, mediante fotografías simuladas o casos descritos.",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "el alumnado crea una guía visual que podría estar en el vestuario o entrada del aula-taller. Objetivo: identificar la imagen personal adecuada para trabajar en peluquería y estética: higiene, uniforme, calzado, cabello, manos, uñas, postura y actitud. Desarrollo: | formato carrusel de Instagram o póster tipo “Get ready with me profesional”, pero sin frivolizar la seguridad. Producto final: manual visual de imagen profesional. Evaluación: claridad, rigor, presentación, lenguaje inclusivo, relación con seguridad e higiene.",
+                "motivatingFactor_ca": "el alumnat crea una guía visual que podría estar en el vestuario o entrada del aula-taller. Objetivo: identificar la imagen personal adecuada para trabajar en peluquería y estética: higiene, uniforme, calzado, cabell, manos, ungles, postura y actitud. Desenvolupament: | formato carrusel de Instagram o póster tipo “Get ready with me professional”, pero sin frivolizar la seguridad. Producte final: manual visual de imagen professional. Evaluación: claridad, rigor, presentación, lenguaje inclusivo, relación con seguridad e higiene."
+              },
+              {
+                "id": "act_3060_c1_2",
+                "title_es": "“GRWM profesional”: prepárate conmigo para la FCT",
+                "title_ca": "“GRWM professional”: prepárate conmigo para la FCT",
+                "description_es": "El alumnado prepara un guion breve: qué hago antes de entrar al taller, qué reviso, qué llevo, qué no debo llevar.",
+                "description_ca": "El alumnat prepara un guion breve: qué hago antes de entrar al taller, qué reviso, qué llevo, qué no debo llevar.",
+                "evidence_es": "vídeo interno o storyboard del “GRWM profesional”. Evaluación: comprensión de normas de imagen, comunicación oral, uso responsable de vídeo e identificación de mejoras.",
+                "evidence_ca": "vídeo interno o storyboard del “GRWM professional”. Evaluación: comprensión de normas de imagen, comunicació oral, uso responsable de vídeo e identificación de mejoras.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "adaptar el formato “Get Ready With Me” de redes sociales al contexto profesional. Objetivo: reflexionar sobre cómo prepararse para una jornada de prácticas o de taller. Desarrollo:",
+                "motivatingFactor_ca": "adaptar el formato “Get Ready With Me” de redes sociales al contexto professional. Objetivo: reflexionar sobre cómo prepararse para una jornada de prácticas o de taller. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c1_3",
+                "title_es": "Semáforo de imagen profesional",
+                "title_ca": "Semáforo de imagen professional",
+                "description_es": "Se entregan tarjetas con situaciones: “llevo anillos para depilar”, “uso calzado abierto”, “tengo el uniforme limpio”, “llevo el móvil en la mano durante la recepción”.",
+                "description_ca": "Se entregan tarjetas con situaciones: “llevo anillos para depilar”, “uso calzado abierto”, “tengo el uniforme limpio”, “llevo el móvil en la mano durante la recepción”.",
+                "evidence_es": "semáforo de imagen profesional. Evaluación: justificación, relación con PRL, higiene, respeto y deontología.",
+                "evidence_ca": "semáforo de imagen professional. Evaluación: justificación, relación con PRL, higiene, respeto y deontología.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "convertir la revisión de imagen en una dinámica rápida y visual. Objetivo: distinguir entre conductas aptas, mejorables o no aptas para el entorno profesional. Desarrollo:",
+                "motivatingFactor_ca": "convertir la revisión de imagen en una dinámica rápida y visual. Objetivo: distinguir entre conductas aptas, mejorables o no aptas para el entorno professional. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c1_4",
+                "title_es": "Mi marca personal profesional",
+                "title_ca": "Mi marca personal professional",
+                "description_es": "Cada alumno elige 4 valores: limpio/a, puntual, creativo/a, amable, responsable, cuidadoso/a, ordenado/a, rápido/a, paciente.",
+                "description_ca": "Cada alumno elige 4 valores: limpio/a, puntual, creativo/a, amable, responsable, cuidadoso/a, ordenado/a, rápido/a, paciente.",
+                "evidence_es": "tarjeta de marca personal para el portfolio. Evaluación: autoconocimiento, realismo, relación con empleabilidad y actitud profesional.",
+                "evidence_ca": "tarjeta de marca personal para el portfolio. Evaluación: autoconocimiento, realismo, relación con empleabilidad y actitud professional.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "conectar el módulo con identidad, autoestima y empleabilidad. Objetivo: que el alumnado defina qué valores quiere transmitir como futuro profesional. Desarrollo:",
+                "motivatingFactor_ca": "conectar el módulo con identidad, autoestima y empleabilidad. Objetivo: que el alumnat defina qué valores quiere transmitir como futuro professional. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c1_5",
+                "title_es": "Debate ético: redes, fotos, comentarios y respeto corporal",
+                "title_ca": "Debate ético: redes, fotos, comentarios y respeto corporal",
+                "description_es": "Se presentan casos: subir una foto sin permiso, comentar el cuerpo de un cliente, reírse de unas uñas, contar una alergia de un cliente, grabar un vídeo en cabina.",
+                "description_ca": "Se presentan casos: subir una foto sin permiso, comentar el cuerpo de un client, reírse de unas ungles, contar una alergia de un client, grabar un vídeo en cabina.",
+                "evidence_es": "decálogo de ética y privacidad en el salón. Evaluación: argumentación, sensibilidad, respeto y aplicación a situaciones reales.",
+                "evidence_ca": "decálogo de ética y privacidad en el saló. Evaluación: argumentación, sensibilidad, respeto y aplicación a situaciones reales.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "tratar situaciones reales del mundo actual y de las redes. Objetivo: comprender la deontología profesional, la privacidad y el respeto al cliente. Desarrollo:",
+                "motivatingFactor_ca": "tratar situaciones reales del mundo actual y de las redes. Objetivo: comprender la deontología professional, la privacidad y el respeto al client. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c1_6",
+                "title_es": "Cliente misterioso: imagen y actitud",
+                "title_ca": "Cliente misterioso: imagen y actitud",
+                "description_es": "Un alumno o docente actúa como cliente misterioso.",
+                "description_ca": "Un alumno o docente actúa como client misterioso.",
+                "evidence_es": "informe de cliente misterioso. Evaluación: actitud, recepción, imagen profesional y capacidad de mejora.",
+                "evidence_ca": "informe de client misterioso. Evaluación: actitud, recepción, imagen professional y capacidad de mejora.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "simular una evaluación real de atención e imagen. Objetivo: comprobar cómo percibe el cliente la actitud profesional. Desarrollo:",
+                "motivatingFactor_ca": "simular una evaluación real de atención e imagen. Objetivo: comprobar cómo percibe el client la actitud professional. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c1_7",
+                "title_es": "Pasarela de uniformidad profesional",
+                "title_ca": "Pasarela de uniformidad professional",
+                "description_es": "Equipos diseñan un “look profesional” para peluquería, estética, manicura, maquillaje o recepción.",
+                "description_ca": "Equipos diseñan un “look professional” para peluquería, estética, manicura, maquillaje o recepción.",
+                "evidence_es": "ficha de uniformidad profesional por servicio. Evaluación: justificación técnica, PRL, higiene, claridad oral.",
+                "evidence_ca": "ficha de uniformidad professional por servei. Evaluación: justificación técnica, PRL, higiene, claridad oral.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "trabajar la imagen profesional de forma creativa sin convertirla en desfile estético superficial. Objetivo: distinguir imagen profesional de moda personal. Desarrollo:",
+                "motivatingFactor_ca": "trabajar la imagen professional de forma creativa sin convertirla en desfile estético superficial. Objetivo: distinguir imagen professional de moda personal. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA2",
+        "code": "RA2",
+        "text_es": "· Prepara las instalaciones aplicando las técnicas de higienización.",
+        "text_ca": "· Prepara las instal·lacions aplicando las técnicas de higienización.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c2_1",
+                "title_es": "Escape room “salón contaminado”",
+                "title_ca": "Escape room “saló contaminado”",
+                "description_es": "El aula se prepara con errores simulados: camilla sin limpiar, peine usado, papelera llena, producto abierto, toalla mal ubicada.",
+                "description_ca": "El aula se prepara con errores simulados: camilla sin limpiar, peine usado, papelera llena, producto abierto, toalla mal ubicada.",
+                "evidence_es": "protocolo de higiene corregido. Evaluación: detección de riesgos, vocabulario técnico, trabajo en equipo y solución propuesta.",
+                "evidence_ca": "protocolo de higiene corregido. Evaluación: detección de riesgos, vocabulario técnico, treball en equip y solución propuesta.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "resolver un reto con pistas en el aula-taller. Objetivo: identificar errores de higiene y aplicar conceptos de limpieza, desinfección, esterilización y asepsia. Desarrollo:",
+                "motivatingFactor_ca": "resolver un reto con pistas en el aula-taller. Objetivo: identificar errores de higiene y aplicar conceptos de limpieza, desinfección, esterilización y asepsia. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c2_2",
+                "title_es": "Laboratorio de limpieza: ¿limpiar es lo mismo que desinfectar?",
+                "title_ca": "Laboratorio de limpieza: ¿limpiar es lo mismo que desinfectar?",
+                "description_es": "Se usan tarjetas, imágenes o simuladores seguros para representar contaminación.",
+                "description_ca": "Se usan tarjetas, imágenes o simuladores seguros para representar contaminación.",
+                "evidence_es": "tabla comparativa de limpieza, desinfección y esterilización. Evaluación: precisión conceptual y aplicación a útiles reales.",
+                "evidence_ca": "tabla comparativa de limpieza, desinfección y esterilización. Evaluación: precisión conceptual y aplicación a útiles reales.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "experimentar de forma visual y segura. Objetivo: diferenciar limpieza, desinfección y esterilización. Desarrollo:",
+                "motivatingFactor_ca": "experimentar de forma visual y segura. Objetivo: diferenciar limpieza, desinfección y esterilización. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c2_3",
+                "title_es": "Protocolo QR de higiene por zonas",
+                "title_ca": "Protocolo QR de higiene por zonas",
+                "description_es": "Cada equipo se encarga de una zona.",
+                "description_ca": "Cada equipo se encarga de una zona.",
+                "evidence_es": "señalética QR de higiene. Evaluación: claridad, utilidad, presentación, corrección lingüística y rigor técnico.",
+                "evidence_ca": "señalética QR de higiene. Evaluación: claridad, utilidad, presentación, corrección lingüística y rigor técnico.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "usar tecnología sencilla y útil. Objetivo: crear protocolos accesibles para lavacabezas, tocador, camilla, mesa de manicura y zona de color. Desarrollo:",
+                "motivatingFactor_ca": "usar tecnología sencilla y útil. Objetivo: crear protocolos accesibles para lavacabezas, tocador, camilla, mesa de manicura y zona de color. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c2_4",
+                "title_es": "Auditoría higiénica entre equipos",
+                "title_ca": "Auditoría higiénica entre equips",
+                "description_es": "Un equipo prepara una zona de trabajo.",
+                "description_ca": "Un equipo prepara una zona de trabajo.",
+                "evidence_es": "informe de auditoría. Evaluación: observación, respeto, rigor y mejora aplicada.",
+                "evidence_ca": "informe de auditoría. Evaluación: observación, respeto, rigor y mejora aplicada.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "aprender evaluando a otros de forma respetuosa. Objetivo: aplicar criterios de higiene y seguridad en un puesto preparado por compañeros. Desarrollo:",
+                "motivatingFactor_ca": "aprender evaluando a otros de forma respetuosa. Objetivo: aplicar criterios de higiene y seguridad en un puesto preparado por compañeros. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c2_5",
+                "title_es": "Simulación de cadena de contaminación",
+                "title_ca": "Simulación de cadena de contaminación",
+                "description_es": "Con polvo fluorescente o tarjetas simuladas, una “mano contaminada” toca varios objetos.",
+                "description_ca": "Con polvo fluorescente o tarjetas simuladas, una “mano contaminada” toca varios objetos.",
+                "evidence_es": "mapa de contaminación cruzada. Evaluación: análisis causal, prevención y comunicación visual.",
+                "evidence_ca": "mapa de contaminación cruzada. Evaluación: análisis causal, prevención y comunicación visual.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "ver cómo se propaga un error invisible. Objetivo: comprender la contaminación cruzada. Desarrollo:",
+                "motivatingFactor_ca": "ver cómo se propaga un error invisible. Objetivo: comprender la contaminación cruzada. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c2_6",
+                "title_es": "Reto “puesto impecable en tiempo realista”",
+                "title_ca": "Reto “puesto impecable en tiempo realista”",
+                "description_es": "Cada equipo recibe una zona usada simulada.",
+                "description_ca": "Cada equipo recibe una zona usada simulada.",
+                "evidence_es": "checklist de cierre y apertura. Evaluación: higiene, orden, seguridad, eficiencia y trabajo cooperativo.",
+                "evidence_ca": "checklist de cierre y apertura. Evaluación: higiene, orden, seguridad, eficiencia y trabajo cooperativo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "trabajar rapidez sin perder calidad. Objetivo: limpiar y preparar una zona en tiempo razonable siguiendo protocolo. Desarrollo:",
+                "motivatingFactor_ca": "trabajar rapidez sin perder calidad. Objetivo: limpiar y preparar una zona en tiempo razonable siguiendo protocolo. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c2_7",
+                "title_es": "“Higiene en modo meme educativo”",
+                "title_ca": "“Higiene en modo meme educativo”",
+                "description_es": "Equipos eligen un error frecuente: no lavarse manos, mezclar material limpio/sucio, dejar producto abierto.",
+                "description_ca": "Equipos eligen un error frecuente: no lavarse manos, mezclar material limpio/sucio, dejar producto abierto.",
+                "evidence_es": "galería de memes/carteles educativos. Evaluación: rigor, creatividad, claridad y adecuación al entorno educativo.",
+                "evidence_ca": "galería de memes/carteles educativos. Evaluación: rigor, creatividad, claridad y adecuación al entorno educativo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "aprovechar humor visual sin perder rigor. Objetivo: crear mensajes de higiene que el alumnado recuerde. Desarrollo:",
+                "motivatingFactor_ca": "aprovechar humor visual sin perder rigor. Objetivo: crear mensajes de higiene que el alumnat recuerde. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA3",
+        "code": "RA3",
+        "text_es": "· Recepciona material de peluquería y estética, identificando sus características y aplicaciones.",
+        "text_ca": "· Recepciona material de peluquería y estética, identificando sus características y aplicaciones.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "cliente",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c3_1",
+                "title_es": "Inventario digital del salón: “stock bajo control”",
+                "title_ca": "Inventario digital del saló: “stock bajo control”",
+                "description_es": "Se clasifican productos: maquillaje, uñas, depilación, lavado, color, higiene y desechables.",
+                "description_ca": "Se clasifican productes: maquillaje, ungles, depilación, lavado, color, higiene y desechables.",
+                "evidence_es": "inventario digital o en hoja de cálculo. Evaluación: orden, precisión, uso de TIC y comprensión de conservación.",
+                "evidence_ca": "inventario digital o en hoja de cálculo. Evaluación: orden, precisión, uso de TIC y comprensión de conservación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "gestionar el aula como si fuera un salón real. Objetivo: identificar productos, controlar existencias, caducidad, conservación y reposición. Desarrollo:",
+                "motivatingFactor_ca": "gestionar el aula como si fuera un saló real. Objetivo: identificar productes, controlar existencias, caducidad, conservación y reposición. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c3_2",
+                "title_es": "Escape room de almacén: “encuentra el producto correcto”",
+                "title_ca": "Escape room de almacén: “encuentra el producto correcto”",
+                "description_es": "Cada pista describe un producto: “se usa tras depilar”, “requiere prueba de tolerancia”, “no debe estar caducado”.",
+                "description_ca": "Cada pista describe un producto: “se usa tras depilar”, “requiere prueba de tolerancia”, “no debe estar caducado”.",
+                "evidence_es": "mapa de almacén organizado. Evaluación: identificación, razonamiento y trabajo en equipo.",
+                "evidence_ca": "mapa de almacén organizado. Evaluación: identificación, razonamiento y treball en equip.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "gamificar el almacén. Objetivo: relacionar producto, uso, conservación y seguridad. Desarrollo:",
+                "motivatingFactor_ca": "gamificar el almacén. Objetivo: relacionar producto, uso, conservación y seguridad. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c3_3",
+                "title_es": "Etiquetas inteligentes con QR",
+                "title_ca": "Etiquetas inteligentes con QR",
+                "description_es": "Cada equipo ficha varios productos.",
+                "description_ca": "Cada equipo ficha varios productes.",
+                "evidence_es": "sistema de etiquetado QR. Evaluación: claridad, TIC, seguridad y utilidad.",
+                "evidence_ca": "sistema de etiquetado QR. Evaluación: claridad, TIC, seguridad y utilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "crear un almacén moderno. Objetivo: mejorar identificación de productos y seguridad. Desarrollo:",
+                "motivatingFactor_ca": "crear un almacén moderno. Objetivo: mejorar identificación de productes y seguridad. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c3_4",
+                "title_es": "Albarán y pedido simulado",
+                "title_ca": "Albarán y pedido simulado",
+                "description_es": "El docente prepara un pedido ficticio con albarán.",
+                "description_ca": "El docente prepara un pedido ficticio con albarán.",
+                "evidence_es": "albarán revisado y parte de incidencia. Evaluación: atención al detalle, comunicación escrita y organización.",
+                "evidence_ca": "albarán revisado y parte de incidencia. Evaluación: atención al detalle, comunicación escrita y organización.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "trabajar documentación real de empresa. Objetivo: relacionar mercancía recibida con albarán y detectar errores. Desarrollo:",
+                "motivatingFactor_ca": "trabajar documentación real de empresa. Objetivo: relacionar mercancía recibida con albarán y detectar errores. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c3_5",
+                "title_es": "“Producto viral: ¿lo compro para el salón?”",
+                "title_ca": "“Producto viral: ¿lo compro para el saló?”",
+                "description_es": "El alumnado elige un producto de belleza viral.",
+                "description_ca": "El alumnat elige un producto de belleza viral.",
+                "evidence_es": "ficha de compra responsable. Evaluación: pensamiento crítico, lectura de información y comunicación oral.",
+                "evidence_ca": "ficha de compra responsable. Evaluación: pensamiento crítico, lectura de información y comunicació oral.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "conectar con redes y consumo crítico. Objetivo: analizar si un producto popular es adecuado para uso profesional. Desarrollo:",
+                "motivatingFactor_ca": "conectar con redes y consumo crítico. Objetivo: analizar si un producto popular es adecuado para uso professional. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c3_6",
+                "title_es": "Semáforo de caducidades y PAO",
+                "title_ca": "Semáforo de caducidades y PAO",
+                "description_es": "Se revisan envases y símbolos PAO.",
+                "description_ca": "Se revisan envases y símbolos PAO.",
+                "evidence_es": "registro de caducidades del aula. Evaluación: seguridad, observación y responsabilidad.",
+                "evidence_ca": "registro de caducidades del aula. Evaluación: seguridad, observación y responsabilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "trabajar fechas de apertura y seguridad. Objetivo: comprender la importancia de caducidad y periodo después de apertura. Desarrollo:",
+                "motivatingFactor_ca": "trabajar fechas de apertura y seguridad. Objetivo: comprender la importancia de caducidad y periodo después de apertura. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c3_7",
+                "title_es": "Diseño del almacén ideal",
+                "title_ca": "Diseño del almacén ideal",
+                "description_es": "Equipos dibujan un plano del almacén.",
+                "description_ca": "Equipos dibujan un plano del almacén.",
+                "evidence_es": "plano del almacén ideal. Evaluación: organización, seguridad, sostenibilidad y presentación.",
+                "evidence_ca": "plano del almacén ideal. Evaluación: organización, seguridad, sostenibilidad y presentación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "unir organización, estética y funcionalidad. Objetivo: proponer una distribución eficiente y segura del almacén. Desarrollo:",
+                "motivatingFactor_ca": "unir organización, estética y funcionalidad. Objetivo: proponer una distribución eficiente y segura del almacén. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA4",
+        "code": "RA4",
+        "text_es": "· Acomoda y protege al cliente en función de las características del servicio previsto, aplicando las técnicas y normas de comportamiento apropiadas en condiciones de calidad, higiene y seguridad.",
+        "text_ca": "· Acomoda y protege al client en función de las características del servei previsto, aplicando las técnicas y normas de comportamiento apropiadas en condiciones de calidad, higiene y seguridad.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "cliente",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c4_1",
+                "title_es": "Role-play de recepción: “primer minuto, primera impresión”",
+                "title_ca": "Role-play de recepción: “primer minuto, primera impresión”",
+                "description_es": "Un alumno hace de cliente y otro de recepcionista.",
+                "description_ca": "Un alumno hace de client y otro de recepcionista.",
+                "evidence_es": "diálogo profesional evaluado. Evaluación: claridad, cortesía, escucha, postura y respeto.",
+                "evidence_ca": "diálogo professional evaluado. Evaluación: claridad, cortesía, escucha, postura y respeto.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "simular una situación real de salón. Objetivo: aplicar normas de comportamiento, saludo, escucha y registro. Desarrollo:",
+                "motivatingFactor_ca": "simular una situación real de saló. Objetivo: aplicar normas de comportamiento, saludo, escucha y registro. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c4_2",
+                "title_es": "Agenda digital del salón",
+                "title_ca": "Agenda digital del saló",
+                "description_es": "Se ofrecen tarjetas de clientes con servicios: manicura, maquillaje, color, lavado, depilación.",
+                "description_ca": "Se ofrecen tarjetas de clients con serveis: manicura, maquillaje, color, lavado, depilación.",
+                "evidence_es": "agenda digital o mural semanal. Evaluación: organización, cálculo de tiempos y comunicación.",
+                "evidence_ca": "agenda digital o mural semanal. Evaluación: organización, cálculo de tiempos y comunicación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "gestionar citas como un negocio real. Objetivo: registrar citas y organizar tiempos según servicios. Desarrollo:",
+                "motivatingFactor_ca": "gestionar citas como un negocio real. Objetivo: registrar citas y organizar tiempos según serveis. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c4_3",
+                "title_es": "Ficha de cliente 360º",
+                "title_ca": "Ficha de client 360º",
+                "description_es": "Diseñan ficha con datos básicos, alergias, preferencias, historial, servicio solicitado y observaciones.",
+                "description_ca": "Diseñan ficha con datos básicos, alergias, preferencias, historial, servei solicitado y observaciones.",
+                "evidence_es": "ficha de cliente del aula-taller. Evaluación: claridad, protección de datos, utilidad y corrección escrita.",
+                "evidence_ca": "ficha de client del aula-taller. Evaluación: claridad, protección de datos, utilidad y corrección escrita.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "personalizar la atención. Objetivo: recoger información necesaria de forma clara y segura. Desarrollo:",
+                "motivatingFactor_ca": "personalizar la atención. Objetivo: recoger información necesaria de forma clara y segura. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c4_4",
+                "title_es": "WhatsApp profesional de citas",
+                "title_ca": "WhatsApp professional de citas",
+                "description_es": "Se muestran mensajes mal redactados.",
+                "description_ca": "Se muestran mensajes mal redactados.",
+                "evidence_es": "guía de mensajes profesionales. Evaluación: ortografía, tono, claridad y adecuación al contexto.",
+                "evidence_ca": "guía de mensajes professionales. Evaluación: ortografía, tono, claridad y adecuación al contexto.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "usar una herramienta cotidiana de forma profesional. Objetivo: diferenciar comunicación informal y comunicación profesional. Desarrollo:",
+                "motivatingFactor_ca": "usar una herramienta cotidiana de forma professional. Objetivo: diferenciar comunicación informal y comunicación professional. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c4_5",
+                "title_es": "Cliente indeciso o con prisa",
+                "title_ca": "Cliente indeciso o con prisa",
+                "description_es": "Tarjetas de perfil: indeciso, nervioso, con prisa, enfadado, tímido, extranjero.",
+                "description_ca": "Tarjetas de perfil: indeciso, nervioso, con prisa, enfadado, tímido, extranjero.",
+                "evidence_es": "rúbrica de atención a perfiles. Evaluación: empatía, claridad, asertividad y solución.",
+                "evidence_ca": "rúbrica de atención a perfiles. Evaluación: empatía, claridad, asertividad y solución.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "practicar situaciones reales y difíciles. Objetivo: adaptar actitud y discurso al cliente. Desarrollo:",
+                "motivatingFactor_ca": "practicar situaciones reales y difíciles. Objetivo: adaptar actitud y discurso al client. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c4_6",
+                "title_es": "Recepción bilingüe básica",
+                "title_ca": "Recepción bilingüe básica",
+                "description_es": "Se crean tarjetas: appointment, name, service, allergies, wait, thank you.",
+                "description_ca": "Se crean tarjetas: appointment, name, service, allergies, wait, thank you.",
+                "evidence_es": "tarjeta bilingüe de recepción. Evaluación: uso funcional del inglés y actitud comunicativa.",
+                "evidence_ca": "tarjeta bilingüe de recepción. Evaluación: uso funcional del inglés y actitud comunicativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "conectar con turismo y empleabilidad. Objetivo: practicar frases básicas en inglés. Desarrollo:",
+                "motivatingFactor_ca": "conectar con turismo y empleabilidad. Objetivo: practicar frases básicas en inglés. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c4_7",
+                "title_es": "Reseña online y respuesta profesional",
+                "title_ca": "Reseña online y respuesta professional",
+                "description_es": "Se presentan reseñas ficticias positivas y negativas.",
+                "description_ca": "Se presentan reseñas ficticias positivas y negativas.",
+                "evidence_es": "banco de respuestas a reseñas. Evaluación: tono, respeto, solución y comunicación escrita.",
+                "evidence_ca": "banco de respuestas a reseñas. Evaluación: tono, respeto, solución y comunicación escrita.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "trabajar reputación digital. Objetivo: responder a comentarios de clientes con respeto. Desarrollo:",
+                "motivatingFactor_ca": "trabajar reputación digital. Objetivo: responder a comentarios de clients con respeto. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA1",
+        "code": "RA1",
+        "text_es": "a, b, c, f, g",
+        "text_ca": "a, b, c, f, g",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "cliente",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c5_1",
+                "title_es": "Circuito de acomodación por servicios",
+                "title_ca": "Circuito de acomodación por serveis",
+                "description_es": "Cada estación representa un servicio.",
+                "description_ca": "Cada estación representa un servei.",
+                "evidence_es": "checklist de acomodación por servicio. Evaluación: ergonomía, protección y trato.",
+                "evidence_ca": "checklist de acomodación por servei. Evaluación: ergonomía, protección y trato.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "rotar por puestos como en un salón real. Objetivo: adaptar la acomodación al servicio: lavado, maquillaje, depilación, manicura, pedicura, color. Desarrollo:",
+                "motivatingFactor_ca": "rotar por puestos como en un saló real. Objetivo: adaptar la acomodación al servei: lavado, maquillaje, depilación, manicura, pedicura, color. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c5_2",
+                "title_es": "Mapa postural del salón",
+                "title_ca": "Mapa postural del saló",
+                "description_es": "Se observan imágenes simuladas.",
+                "description_ca": "Se observan imágenes simuladas.",
+                "evidence_es": "mapa de ergonomía del taller. Evaluación: identificación de riesgos y propuestas realistas.",
+                "evidence_ca": "mapa de ergonomía del taller. Evaluación: identificación de riesgos y propuestas realistas.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "prevenir lesiones desde el inicio. Objetivo: identificar posturas correctas e incorrectas del profesional y cliente. Desarrollo:",
+                "motivatingFactor_ca": "prevenir lesiones desde el inicio. Objetivo: identificar posturas correctas e incorrectas del professional y client. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c5_3",
+                "title_es": "Termómetro de confort del cliente",
+                "title_ca": "Termómetro de confort del client",
+                "description_es": "Diseñan una tarjeta con preguntas: ¿estás cómodo/a?, ¿la temperatura está bien?, ¿necesitas ajustar la postura?",
+                "description_ca": "Diseñan una tarjeta con preguntas: ¿estás cómodo/a?, ¿la temperatura está bien?, ¿necesitas ajustar la postura?",
+                "evidence_es": "tarjeta de confort. Evaluación: empatía, comunicación y prevención.",
+                "evidence_ca": "tarjeta de confort. Evaluación: empatía, comunicación y prevención.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "aprender a preguntar sin incomodar. Objetivo: comprobar comodidad, temperatura, postura y privacidad. Desarrollo:",
+                "motivatingFactor_ca": "aprender a preguntar sin incomodar. Objetivo: comprobar comodidad, temperatura, postura y privacidad. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c5_4",
+                "title_es": "Protocolo de protección del cliente",
+                "title_ca": "Protocolo de protección del client",
+                "description_es": "Tarjetas de servicio.",
+                "description_ca": "Tarjetas de servei.",
+                "evidence_es": "protocolo visual de protección. Evaluación: adecuación, seguridad e higiene.",
+                "evidence_ca": "protocolo visual de protección. Evaluación: adecuación, seguridad e higiene.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "comprender que proteger es parte de la calidad. Objetivo: seleccionar capas, toallas, guantes, cremas barrera, bandas, papel camilla o protectores según servicio. Desarrollo:",
+                "motivatingFactor_ca": "comprender que proteger es parte de la calidad. Objetivo: seleccionar capas, toallas, guantes, cremas barrera, bandas, papel camilla o protectores según servei. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c5_5",
+                "title_es": "Atención adaptada a clientes diversos",
+                "title_ca": "Atención adaptada a clients diversos",
+                "description_es": "Equipos reciben perfiles de cliente.",
+                "description_ca": "Equipos reciben perfiles de client.",
+                "evidence_es": "guía de atención inclusiva. Evaluación: respeto, sensibilidad y viabilidad.",
+                "evidence_ca": "guía de atención inclusiva. Evaluación: respeto, sensibilidad y viabilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "trabajar inclusión y respeto. Objetivo: adaptar la acomodación a personas mayores, movilidad reducida, ansiedad, vergüenza, sensibilidad o dificultad idiomática. Desarrollo:",
+                "motivatingFactor_ca": "trabajar inclusión y respeto. Objetivo: adaptar la acomodación a personas mayores, movilidad reducida, ansiedad, vergüenza, sensibilidad o dificultad idiomática. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c5_6",
+                "title_es": "Reto “comodidad cinco estrellas”",
+                "title_ca": "Reto “comodidad cinco estrellas”",
+                "description_es": "Equipos proponen mejoras: tono de voz, música, iluminación, toalla, postura, explicación.",
+                "description_ca": "Equipos proponen mejoras: tono de voz, música, iluminación, toalla, postura, explicación.",
+                "evidence_es": "protocolo de experiencia de cliente. Evaluación: creatividad, realismo, respeto y calidad.",
+                "evidence_ca": "protocolo de experiencia de client. Evaluación: creatividad, realismo, respeto y calidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "mejorar experiencia del cliente con recursos sencillos. Objetivo: diseñar una experiencia cómoda sin perder profesionalidad. Desarrollo:",
+                "motivatingFactor_ca": "mejorar experiencia del client con recursos sencillos. Objetivo: diseñar una experiencia cómoda sin perder professionalidad. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c5_7",
+                "title_es": "Micro-pausas del profesional",
+                "title_ca": "Micro-pausas del professional",
+                "description_es": "Investigan estiramientos seguros y breves.",
+                "description_ca": "Investigan estiramientos seguros y breves.",
+                "evidence_es": "vídeo o póster de micro-pausas. Evaluación: claridad, seguridad y aplicación real.",
+                "evidence_ca": "vídeo o póster de micro-pausas. Evaluación: claridad, seguridad y aplicación real.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "relacionar ergonomía con salud laboral. Objetivo: prevenir fatiga de espalda, cuello, hombros y muñecas. Desarrollo:",
+                "motivatingFactor_ca": "relacionar ergonomía con salud laboral. Objetivo: prevenir fatiga de espalda, cuello, hombros y muñecas. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA2",
+        "code": "RA2",
+        "text_es": "a-g, i",
+        "text_ca": "a-g, i",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "digital",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c6_1",
+                "title_es": "Mapa de riesgos del aula-taller",
+                "title_ca": "Mapa de riesgos del aula-taller",
+                "description_es": "Recorren el aula con una plantilla.",
+                "description_ca": "Recorren el aula con una plantilla.",
+                "evidence_es": "mapa de riesgos del taller. Evaluación: observación, prevención y presentación visual.",
+                "evidence_ca": "mapa de riesgos del taller. Evaluación: observación, prevención y presentación visual.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "convertirse en inspectores de seguridad. Objetivo: identificar riesgos físicos, químicos, eléctricos, biológicos, posturales y ambientales. Desarrollo:",
+                "motivatingFactor_ca": "convertirse en inspectores de seguridad. Objetivo: identificar riesgos físicos, químicos, eléctricos, biológicos, posturales y ambientales. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c6_2",
+                "title_es": "Carnet de seguridad profesional",
+                "title_ca": "Carnet de seguridad professional",
+                "description_es": "Prueba por estaciones: EPI, electricidad, químicos, residuos, ergonomía, higiene.",
+                "description_ca": "Prueba por estaciones: EPI, electricidad, químicos, residuos, ergonomía, higiene.",
+                "evidence_es": "carnet de seguridad del aula. Evaluación: aciertos, razonamiento y actitud responsable.",
+                "evidence_ca": "carnet de seguridad del aula. Evaluación: aciertos, razonamiento y actitud responsable.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "superar pruebas antes de prácticas complejas. Objetivo: demostrar conocimientos básicos de PRL. Desarrollo:",
+                "motivatingFactor_ca": "superar pruebas antes de prácticas complejas. Objetivo: demostrar conocimientos básicos de PRL. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c6_3",
+                "title_es": "Simulación de incidente: “actúa sin bloquearte”",
+                "title_ca": "Simulación de incidente: “actúa sin bloquearte”",
+                "description_es": "Casos: quemadura leve, producto derramado, cliente mareado, alergia, cable defectuoso, caída de agua.",
+                "description_ca": "Casos: quemadura leve, producto derramado, client mareado, alergia, cable defectuoso, caída de agua.",
+                "evidence_es": "parte de incidencia. Evaluación: calma, seguridad, comunicación y registro.",
+                "evidence_ca": "parte de incidencia. Evaluación: calma, seguridad, comunicación y registro.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "practicar respuestas ante problemas reales. Objetivo: saber comunicar y actuar ante incidencias. Desarrollo:",
+                "motivatingFactor_ca": "practicar respuestas ante problemas reales. Objetivo: saber comunicar y actuar ante incidencias. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c6_4",
+                "title_es": "EPI challenge",
+                "title_ca": "EPI challenge",
+                "description_es": "Tarjetas de servicios: color, depilación, limpieza, manicura, maquillaje.",
+                "description_ca": "Tarjetas de serveis: color, depilación, limpieza, manicura, maquillaje.",
+                "evidence_es": "tabla EPI-servicio-riesgo. Evaluación: adecuación y justificación.",
+                "evidence_ca": "tabla EPI-servei-riesgo. Evaluación: adecuación y justificación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "seleccionar protección correcta según servicio. Objetivo: relacionar EPI con técnica y riesgo. Desarrollo:",
+                "motivatingFactor_ca": "seleccionar protección correcta según servei. Objetivo: relacionar EPI con técnica y riesgo. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c6_5",
+                "title_es": "“Encuentra el error antes del accidente”",
+                "title_ca": "“Encuentra el error antes del accidente”",
+                "description_es": "Se preparan puestos con errores simulados.",
+                "description_ca": "Se preparan puestos con errores simulados.",
+                "evidence_es": "lista de errores frecuentes. Evaluación: rapidez, rigor y prevención.",
+                "evidence_ca": "lista de errores frecuentes. Evaluación: rapidez, rigor y prevención.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "dinámica rápida de detección. Objetivo: prevenir riesgos antes de iniciar el servicio. Desarrollo:",
+                "motivatingFactor_ca": "dinámica rápida de detección. Objetivo: prevenir riesgos antes de iniciar el servei. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c6_6",
+                "title_es": "Historias de accidentes evitables",
+                "title_ca": "Historias de accidentes evitables",
+                "description_es": "Se presentan relatos breves: cera caliente, tinte en piel, resbalón, tijera mal ubicada.",
+                "description_ca": "Se presentan relatos breves: cera caliente, tinte en pell, resbalón, tijera mal ubicada.",
+                "evidence_es": "cómic o viñeta de PRL. Evaluación: análisis causal y creatividad.",
+                "evidence_ca": "cómic o viñeta de PRL. Evaluación: análisis causal y creatividad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "aprender de casos sin alarmismo. Objetivo: analizar causas y medidas preventivas. Desarrollo:",
+                "motivatingFactor_ca": "aprender de casos sin alarmismo. Objetivo: analizar causas y medidas preventivas. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c6_7",
+                "title_es": "Protocolo “STOP” ante dudas",
+                "title_ca": "Protocolo “STOP” ante dudas",
+                "description_es": "Se enseña regla STOP: parar, pensar, observar, preguntar.",
+                "description_ca": "Se enseña regla STOP: parar, pensar, observar, preguntar.",
+                "evidence_es": "tarjeta STOP para el taller. Evaluación: criterio, humildad profesional y comunicación.",
+                "evidence_ca": "tarjeta STOP para el taller. Evaluación: criterio, humildad professional y comunicación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "enseñar a pedir ayuda profesionalmente. Objetivo: que el alumnado sepa parar antes de cometer un error. Desarrollo:",
+                "motivatingFactor_ca": "enseñar a pedir ayuda professionalmente. Objetivo: que el alumnat sepa parar antes de cometer un error. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA2",
+        "code": "RA2",
+        "text_es": "h, j; RA3 k",
+        "text_ca": "h, j; RA3 k",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "sostenibilidad",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c7_1",
+                "title_es": "Ruta del residuo del salón",
+                "title_ca": "Ruta del residuo del saló",
+                "description_es": "Identifican residuos: algodón, guantes, papel aluminio, envases, toallas, bandas, restos de producto.",
+                "description_ca": "Identifican residuos: algodón, guantes, papel aluminio, envases, toallas, bandas, restos de producto.",
+                "evidence_es": "mapa de residuos del aula. Evaluación: clasificación, claridad y sostenibilidad.",
+                "evidence_ca": "mapa de residuos del aula. Evaluación: clasificación, claridad y sostenibilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "descubrir qué ocurre con lo que se tira. Objetivo: clasificar residuos generados en peluquería y estética. Desarrollo:",
+                "motivatingFactor_ca": "descubrir qué ocurre con lo que se tira. Objetivo: clasificar residuos generados en peluquería y estética. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c7_2",
+                "title_es": "Eco-salón FPB",
+                "title_ca": "Eco-saló FPB",
+                "description_es": "Equipos crean nombre, logo y valores de un eco-salón.",
+                "description_ca": "Equipos crean nombre, logo y valores de un eco-saló.",
+                "evidence_es": "proyecto de eco-salón. Evaluación: creatividad, viabilidad y argumentación.",
+                "evidence_ca": "proyecto de eco-saló. Evaluación: creatividad, viabilidad y argumentación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "diseñar un salón moderno y sostenible. Objetivo: proponer medidas de ahorro de agua, energía, productos y residuos. Desarrollo:",
+                "motivatingFactor_ca": "diseñar un saló moderno y sostenible. Objetivo: proponer medidas de ahorro de agua, energía, productes y residuos. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c7_3",
+                "title_es": "Auditoría de residuos de una práctica",
+                "title_ca": "Auditoría de residuos de una práctica",
+                "description_es": "Durante una práctica simulada se registran residuos.",
+                "description_ca": "Durante una práctica simulada se registran residuos.",
+                "evidence_es": "informe antes/después. Evaluación: datos, análisis y propuesta.",
+                "evidence_ca": "informe antes/después. Evaluación: datos, análisis y propuesta.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "medir para mejorar. Objetivo: calcular residuos generados y reducirlos. Desarrollo:",
+                "motivatingFactor_ca": "medir para mejorar. Objetivo: calcular residuos generados y reducirlos. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c7_4",
+                "title_es": "Cartelería ambiental juvenil",
+                "title_ca": "Cartelería ambiental juvenil",
+                "description_es": "Temas: apagar aparatos, separar residuos, cerrar grifos, dosificar producto.",
+                "description_ca": "Temas: apagar aparatos, separar residuos, cerrar grifos, dosificar producto.",
+                "evidence_es": "campaña visual. Evaluación: claridad, diseño y utilidad.",
+                "evidence_ca": "campaña visual. Evaluación: claridad, diseño y utilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "comunicar sostenibilidad con estética actual. Objetivo: crear mensajes claros para el aula. Desarrollo:",
+                "motivatingFactor_ca": "comunicar sostenibilidad con estética actual. Objetivo: crear mensajes claros para el aula. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c7_5",
+                "title_es": "Greenwashing beauty",
+                "title_ca": "Greenwashing beauty",
+                "description_es": "Analizan etiquetas y anuncios.",
+                "description_ca": "Analizan etiquetas y anuncios.",
+                "evidence_es": "semáforo de greenwashing. Evaluación: pensamiento crítico y lectura comprensiva.",
+                "evidence_ca": "semáforo de greenwashing. Evaluación: pensamiento crítico y lectura comprensiva.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "analizar productos “eco” de redes. Objetivo: distinguir sostenibilidad real de publicidad engañosa. Desarrollo:",
+                "motivatingFactor_ca": "analizar productes “eco” de redes. Objetivo: distinguir sostenibilidad real de publicidad engañosa. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c7_6",
+                "title_es": "Reto “30% menos desperdicio”",
+                "title_ca": "Reto “30% menos desperdicio”",
+                "description_es": "Se mide uso habitual de algodón, guantes, agua o producto.",
+                "description_ca": "Se mide uso habitual de algodón, guantes, agua o producto.",
+                "evidence_es": "plan de reducción responsable. Evaluación: datos, seguridad y sostenibilidad.",
+                "evidence_ca": "plan de reducción responsable. Evaluación: datos, seguridad y sostenibilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "aplicar sostenibilidad a la práctica. Objetivo: reducir consumo de producto y material. Desarrollo:",
+                "motivatingFactor_ca": "aplicar sostenibilidad a la práctica. Objetivo: reducir consumo de producto y material. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c7_7",
+                "title_es": "Podcast “belleza y planeta”",
+                "title_ca": "Podcast “belleza y planeta”",
+                "description_es": "En parejas preparan guion de 2 minutos.",
+                "description_ca": "En parejas preparan guion de 2 minutos.",
+                "evidence_es": "podcast breve. Evaluación: argumentación, claridad oral y conciencia ambiental.",
+                "evidence_ca": "podcast breve. Evaluación: argumentación, claridad oral y conciencia ambiental.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "comunicar conciencia ambiental en formato actual. Objetivo: argumentar sobre sostenibilidad en el sector. Desarrollo:",
+                "motivatingFactor_ca": "comunicar conciencia ambiental en formato actual. Objetivo: argumentar sobre sostenibilidad en el sector. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA1",
+        "code": "RA1",
+        "text_es": "d-e; RA2 j; RA3 k",
+        "text_ca": "d-e; RA2 j; RA3 k",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "comunicacion",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c8_1",
+                "title_es": "Portfolio digital de preparación profesional",
+                "title_ca": "Portfolio digital de preparación professional",
+                "description_es": "Cada alumno crea una carpeta digital.",
+                "description_ca": "Cada alumno crea una carpeta digital.",
+                "evidence_es": "portfolio digital. Evaluación: organización, evidencias, reflexión y presentación.",
+                "evidence_ca": "portfolio digital. Evaluación: organización, evidencias, reflexión y presentación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "crear evidencias útiles para FCT. Objetivo: recopilar pruebas de aprendizaje: fotos autorizadas, fichas, protocolos, inventarios y reflexiones. Desarrollo:",
+                "motivatingFactor_ca": "crear evidencias útiles para FCT. Objetivo: recopilar pruebas de aprendizaje: fotos autorizadas, fichas, protocolos, inventarios y reflexiones. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c8_2",
+                "title_es": "Formularios digitales de aula-taller",
+                "title_ca": "Formularios digitales de aula-taller",
+                "description_es": "Equipos diseñan un formulario.",
+                "description_ca": "Equipos diseñan un formulario.",
+                "evidence_es": "pack de formularios digitales. Evaluación: claridad, utilidad, protección de datos y diseño.",
+                "evidence_ca": "pack de formularios digitales. Evaluación: claridad, utilidad, protección de datos y diseño.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "usar herramientas digitales como un salón real. Objetivo: crear documentos funcionales: ficha cliente, inventario, parte de incidencia, encuesta. Desarrollo:",
+                "motivatingFactor_ca": "usar herramientas digitales como un saló real. Objetivo: crear documentos funcionales: ficha client, inventario, parte de incidencia, encuesta. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c8_3",
+                "title_es": "QR de protocolos profesionales",
+                "title_ca": "QR de protocolos professionales",
+                "description_es": "Se crean protocolos: higiene, almacén, recepción, residuos, PRL.",
+                "description_ca": "Se crean protocolos: higiene, almacén, recepción, residuos, PRL.",
+                "evidence_es": "sistema QR del aula. Evaluación: calidad del contenido y accesibilidad.",
+                "evidence_ca": "sistema QR del aula. Evaluación: calidad del contenido y accesibilidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "hacer el aula más tecnológica. Objetivo: facilitar consulta rápida de normas. Desarrollo:",
+                "motivatingFactor_ca": "hacer el aula más tecnológica. Objetivo: facilitar consulta rápida de normas. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c8_4",
+                "title_es": "Informe de práctica profesional",
+                "title_ca": "Informe de práctica professional",
+                "description_es": "Tras una práctica, completan informe breve.",
+                "description_ca": "Tras una práctica, completan informe breve.",
+                "evidence_es": "informe para portfolio. Evaluación: claridad, ortografía, síntesis y reflexión.",
+                "evidence_ca": "informe para portfolio. Evaluación: claridad, ortografía, síntesis y reflexión.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "aprender a escribir como en empresa. Objetivo: redactar de forma clara qué se hizo, con qué material, qué incidencias hubo y qué se mejora. Desarrollo:",
+                "motivatingFactor_ca": "aprender a escribir como en empresa. Objetivo: redactar de forma clara qué se hizo, con qué material, qué incidencias hubo y qué se mejora. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c8_5",
+                "title_es": "Dashboard del salón simulado",
+                "title_ca": "Dashboard del saló simulado",
+                "description_es": "Recogen datos ficticios o reales de aula.",
+                "description_ca": "Recogen datos ficticios o reales de aula.",
+                "evidence_es": "panel visual de gestión. Evaluación: datos, interpretación y propuesta de mejora.",
+                "evidence_ca": "panel visual de gestión. Evaluación: datos, interpretación y propuesta de mejora.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "visualizar datos como negocio real. Objetivo: interpretar datos de citas, stock, residuos o satisfacción. Desarrollo:",
+                "motivatingFactor_ca": "visualizar datos como negocio real. Objetivo: interpretar datos de citas, stock, residuos o satisfacción. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c8_6",
+                "title_es": "Manual de mensajes profesionales",
+                "title_ca": "Manual de mensajes professionales",
+                "description_es": "Casos: confirmar cita, avisar retraso, pedir material, comunicar incidencia.",
+                "description_ca": "Casos: confirmar cita, avisar retraso, pedir material, comunicar incidencia.",
+                "evidence_es": "banco de mensajes profesionales. Evaluación: adecuación, corrección y claridad.",
+                "evidence_ca": "banco de mensajes professionales. Evaluación: adecuación, corrección y claridad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "mejorar comunicación escrita digital. Objetivo: redactar mensajes para clientes, equipo y empresas. Desarrollo:",
+                "motivatingFactor_ca": "mejorar comunicación escrita digital. Objetivo: redactar mensajes para clients, equipo y empresas. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c8_7",
+                "title_es": "IA como asistente, no como sustituto",
+                "title_ca": "IA como asistente, no como sustituto",
+                "description_es": "Se pide a una IA un protocolo o mensaje.",
+                "description_ca": "Se pide a una IA un protocolo o mensaje.",
+                "evidence_es": "comparativa IA vs versión profesional corregida. Evaluación: pensamiento crítico, revisión y criterio técnico.",
+                "evidence_ca": "comparativa IA vs versión professional corregida. Evaluación: pensamiento crítico, revisión y criterio técnico.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "incorporar interés actual por IA. Objetivo: usar IA de forma crítica para mejorar textos o ideas. Desarrollo:",
+                "motivatingFactor_ca": "incorporar interés actual por IA. Objetivo: usar IA de forma crítica para mejorar textos o ideas. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA3",
+        "code": "RA3",
+        "text_es": "a-k",
+        "text_ca": "a-k",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "digital",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c9_1",
+                "title_es": "Salón simulado por roles",
+                "title_ca": "Salón simulado por roles",
+                "description_es": "Roles: recepción, almacén, higiene, técnico, cliente, PRL y calidad.",
+                "description_ca": "Roles: recepción, almacén, higiene, técnico, client, PRL y calidad.",
+                "evidence_es": "jornada simulada y rúbrica de roles. Evaluación: cooperación, responsabilidad y comunicación.",
+                "evidence_ca": "jornada simulada y rúbrica de roles. Evaluación: cooperación, responsabilidad y comunicación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "vivir una jornada de salón. Objetivo: coordinar recepción, almacén, higiene, atención y cierre. Desarrollo:",
+                "motivatingFactor_ca": "vivir una jornada de saló. Objetivo: coordinar recepción, almacén, higiene, atención y cierre. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c9_2",
+                "title_es": "Briefing de 5 minutos",
+                "title_ca": "Briefing de 5 minutos",
+                "description_es": "Equipo revisa agenda, materiales, riesgos, tiempos y clientes.",
+                "description_ca": "Equipo revisa agenda, materiales, riesgos, tiempos y clients.",
+                "evidence_es": "plantilla de briefing. Evaluación: planificación y comunicación.",
+                "evidence_ca": "plantilla de briefing. Evaluación: planificación y comunicación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "usar una dinámica real de empresa. Objetivo: planificar antes de la práctica. Desarrollo:",
+                "motivatingFactor_ca": "usar una dinámica real de empresa. Objetivo: planificar antes de la práctica. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c9_3",
+                "title_es": "Contrato de equipo",
+                "title_ca": "Contrato de equipo",
+                "description_es": "Equipos redactan normas: puntualidad, respeto, reparto, limpieza, móvil, ayuda.",
+                "description_ca": "Equipos redactan normas: puntualidad, respeto, reparto, limpieza, móvil, ayuda.",
+                "evidence_es": "contrato de equipo. Evaluación: realismo, compromiso y respeto.",
+                "evidence_ca": "contrato de equipo. Evaluación: realismo, compromiso y respeto.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "prevenir conflictos. Objetivo: acordar normas de convivencia y trabajo. Desarrollo:",
+                "motivatingFactor_ca": "prevenir conflictos. Objetivo: acordar normas de convivencia y trabajo. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c9_4",
+                "title_es": "Reunión postservicio",
+                "title_ca": "Reunión postservei",
+                "description_es": "Responden: qué salió bien, qué falló, qué aprendimos, qué cambiaremos.",
+                "description_ca": "Responden: qué salió bien, qué falló, qué aprendimos, qué cambiaremos.",
+                "evidence_es": "acta breve de mejora. Evaluación: autocrítica y propuestas concretas.",
+                "evidence_ca": "acta breve de mejora. Evaluación: autocrítica y propuestas concretas.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "mejorar como equipos profesionales. Objetivo: evaluar lo realizado y proponer mejoras. Desarrollo:",
+                "motivatingFactor_ca": "mejorar como equips professionales. Objetivo: evaluar lo realizado y proponer mejoras. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c9_5",
+                "title_es": "Cadena de servicio integral",
+                "title_ca": "Cadena de servei integral",
+                "description_es": "Cliente pasa por recepción, diagnóstico, preparación, técnica simulada, encuesta y cierre.",
+                "description_ca": "Cliente pasa por recepción, diagnóstico, preparación, técnica simulada, encuesta y cierre.",
+                "evidence_es": "mapa de cadena de servicio. Evaluación: coordinación y visión global.",
+                "evidence_ca": "mapa de cadena de servei. Evaluación: coordinación y visión global.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "entender que cada rol afecta al resultado final. Objetivo: coordinar varias fases del servicio. Desarrollo:",
+                "motivatingFactor_ca": "entender que cada rol afecta al resultado final. Objetivo: coordinar varias fases del servei. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c9_6",
+                "title_es": "Hackathon “mejora nuestro taller”",
+                "title_ca": "Hackathon “mejora nuestro taller”",
+                "description_es": "Equipos eligen problema.",
+                "description_ca": "Equipos eligen problema.",
+                "evidence_es": "propuesta de mejora del aula-taller. Evaluación: creatividad, viabilidad e impacto.",
+                "evidence_ca": "propuesta de mejora del aula-taller. Evaluación: creatividad, viabilidad e impacto.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "resolver un problema real en tiempo limitado. Objetivo: proponer soluciones a problemas de orden, higiene, residuos, agenda o comunicación. Desarrollo:",
+                "motivatingFactor_ca": "resolver un problema real en tiempo limitado. Objetivo: proponer soluciones a problemas de orden, higiene, residuos, agenda o comunicación. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c9_7",
+                "title_es": "Insignias de equipo profesional",
+                "title_ca": "Insignias de equipo professional",
+                "description_es": "Se crean insignias: equipo puntual, puesto impecable, comunicación clara, cero residuos mal clasificados.",
+                "description_ca": "Se crean insignias: equipo puntual, puesto impecable, comunicación clara, cero residuos mal clasificados.",
+                "evidence_es": "panel de logros cooperativos. Evaluación: mejora colectiva y motivación.",
+                "evidence_ca": "panel de logros cooperativos. Evaluación: mejora colectiva y motivación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "gamificar hábitos positivos. Objetivo: reconocer conductas profesionales. Desarrollo:",
+                "motivatingFactor_ca": "gamificar hábitos positivos. Objetivo: reconocer conductas professionales. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA4",
+        "code": "RA4",
+        "text_es": "a-d, h",
+        "text_ca": "a-d, h",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "empleabilidad",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Preparación del entorno profesional y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Preparació de l’entorn professional y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3060_c10_1",
+                "title_es": "Simulación “primer día de prácticas”",
+                "title_ca": "Simulación “primer día de prácticas”",
+                "description_es": "Reciben normas ficticias de un salón.",
+                "description_ca": "Reciben normas ficticias de un saló.",
+                "evidence_es": "rúbrica de primer día de FCT. Evaluación: puntualidad, respeto, iniciativa y comunicación.",
+                "evidence_ca": "rúbrica de primer día de FCT. Evaluación: puntualidad, respeto, iniciativa y comunicación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "preparar una situación real que vivirá el alumnado. Objetivo: aplicar normas de empresa, presentación, escucha y responsabilidad. Desarrollo:",
+                "motivatingFactor_ca": "preparar una situación real que vivirá el alumnat. Objetivo: aplicar normas de empresa, presentación, escucha y responsabilidad. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c10_2",
+                "title_es": "Kit de supervivencia para FCT",
+                "title_ca": "Kit de supervivencia para FCT",
+                "description_es": "Incluyen uniforme, higiene, libreta, preguntas, EPI, comunicación, actitud, gestión de errores.",
+                "description_ca": "Incluyen uniforme, higiene, libreta, preguntas, EPI, comunicación, actitud, gestión de errores.",
+                "evidence_es": "guía personal para FCT. Evaluación: utilidad y realismo.",
+                "evidence_ca": "guía personal para FCT. Evaluación: utilidad y realismo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "crear una herramienta personal útil. Objetivo: organizar consejos para prácticas. Desarrollo:",
+                "motivatingFactor_ca": "crear una herramienta personal útil. Objetivo: organizar consejos para prácticas. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c10_3",
+                "title_es": "CV de competencias del módulo",
+                "title_ca": "CV de competencias del módulo",
+                "description_es": "Identifican competencias: higiene, almacén, atención, agenda, PRL, trabajo en equipo.",
+                "description_ca": "Identifican competencias: higiene, almacén, atención, agenda, PRL, treball en equip.",
+                "evidence_es": "apartado de competencias para CV. Evaluación: adecuación al empleo y expresión escrita.",
+                "evidence_ca": "apartado de competencias para CV. Evaluación: adecuación al empleo y expresión escrita.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "demostrar que preparar el entorno también es empleabilidad. Objetivo: traducir aprendizajes a competencias para CV. Desarrollo:",
+                "motivatingFactor_ca": "demostrar que preparar el entorno también es empleabilidad. Objetivo: traducir aprendizajes a competencias para CV. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c10_4",
+                "title_es": "Crea tu salón ideal",
+                "title_ca": "Crea tu saló ideal",
+                "description_es": "Equipos diseñan nombre, público, servicios, recepción, almacén, higiene, sostenibilidad y estilo.",
+                "description_ca": "Equipos diseñan nombre, público, serveis, recepción, almacén, higiene, sostenibilidad y estilo.",
+                "evidence_es": "proyecto de salón. Evaluación: coherencia, organización y creatividad.",
+                "evidence_ca": "proyecto de saló. Evaluación: coherencia, organización y creatividad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "emprendimiento cercano. Objetivo: comprender organización básica de un salón. Desarrollo:",
+                "motivatingFactor_ca": "emprendimiento cercano. Objetivo: comprender organización básica de un saló. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c10_5",
+                "title_es": "Entrevista de empleo simulada",
+                "title_ca": "Entrevista de empleo simulada",
+                "description_es": "Preguntas: ¿qué sabes hacer?, ¿cómo preparas un puesto?, ¿qué harías ante un cliente difícil?",
+                "description_ca": "Preguntas: ¿qué sabes hacer?, ¿cómo preparas un puesto?, ¿qué harías ante un client difícil?",
+                "evidence_es": "entrevista simulada. Evaluación: expresión oral, actitud y seguridad.",
+                "evidence_ca": "entrevista simulada. Evaluación: expresión oral, actitud y seguridad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "practicar una situación de futuro próximo. Objetivo: comunicar competencias personales y técnicas. Desarrollo:",
+                "motivatingFactor_ca": "practicar una situación de futuro próximo. Objetivo: comunicar competencias personales y técnicas. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c10_6",
+                "title_es": "Portfolio “Estoy listo/a para prácticas”",
+                "title_ca": "Portfolio “Estoy listo/a para prácticas”",
+                "description_es": "Incluyen manual, checklist, inventario, protocolo, fotos autorizadas, reflexión y CV.",
+                "description_ca": "Incluyen manual, checklist, inventario, protocolo, fotos autorizadas, reflexión y CV.",
+                "evidence_es": "portfolio de preparación profesional. Evaluación: organización, reflexión y evidencias.",
+                "evidence_ca": "portfolio de preparación professional. Evaluación: organización, reflexión y evidencias.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "reunir evidencias finales. Objetivo: demostrar progreso en preparación profesional. Desarrollo:",
+                "motivatingFactor_ca": "reunir evidencias finales. Objetivo: demostrar progreso en preparación professional. Desenvolupament:"
+              },
+              {
+                "id": "act_3060_c10_7",
+                "title_es": "Feria de salones jóvenes",
+                "title_ca": "Feria de salones jóvenes",
+                "description_es": "Equipos montan stands de su salón: recepción, higiene, almacén, sostenibilidad, imagen y atención.",
+                "description_ca": "Equipos montan stands de su saló: recepción, higiene, almacén, sostenibilidad, imagen y atención.",
+                "evidence_es": "feria de proyectos. Evaluación: comunicación, creatividad, trabajo en equipo y aplicación del módulo.",
+                "evidence_ca": "feria de proyectos. Evaluación: comunicación, creatividad, treball en equip y aplicación del módulo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "exposición final motivadora. Objetivo: presentar proyectos integrados de salón. Desarrollo:",
+                "motivatingFactor_ca": "exposición final motivadora. Objetivo: presentar proyectos integrados de saló. Desenvolupament:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3060_RA4",
+        "code": "RA4",
+        "text_es": "e-g",
+        "text_ca": "e-g",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Preparación del entorno profesional para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Preparació de l’entorn professional per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": []
+      }
+    ]
+  },
+  {
+    "code": "3061",
+    "name_es": "Cuidados estéticos básicos de uñas",
+    "name_ca": "Cures estètiques bàsiques d’ungles",
+    "type": "especifico",
+    "color": "#f43f5e",
+    "icon": "hand",
+    "learningOutcomes": [
+      {
+        "id": "3061_RA1",
+        "code": "RA1",
+        "text_es": "· Prepara equipos, útiles y productos de manicura y pedicura, reconociendo sus características y aplicaciones.",
+        "text_ca": "· Prepara equips, útiles y productes de manicura y pedicura, reconociendo sus características y aplicaciones.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c1_1",
+                "title_es": "Manual visual del ayudante de manicura y pedicura: “Tus manos hablan de ti”",
+                "title_ca": "Manual visual del ayudante de manicura y pedicura: “Tus manos hablan de ti”",
+                "description_es": "se trabajan uniforme, calzado, cabello recogido, manos cuidadas, uñas limpias y cortas para trabajar, higiene personal, tono de voz, puntualidad y respeto.",
+                "description_ca": "se trabajan uniforme, calzado, cabell recogido, manos cuidadas, ungles limpias y cortas para trabajar, higiene personal, tono de voz, puntualidad y respeto.",
+                "evidence_es": "manual visual de imagen profesional para el aula-taller.",
+                "evidence_ca": "manual visual de imagen professional para el aula-taller.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "el alumnado crea una guía de imagen profesional adaptada al módulo de uñas. | formato carrusel de redes o cartel tipo “antes de empezar la práctica”.",
+                "motivatingFactor_ca": "el alumnat crea una guía de imagen professional adaptada al módulo de ungles. | formato carrusel de redes o cartel tipo “antes de empezar la práctica”."
+              },
+              {
+                "id": "act_3061_c1_2",
+                "title_es": "Role-play de bienvenida a mesa de manicura",
+                "title_ca": "Role-play de bienvenida a mesa de manicura",
+                "description_es": "por parejas, simulan recibir a un cliente, presentarse, explicar el servicio, acomodar manos o pies y confirmar preferencias.",
+                "description_ca": "por parejas, simulan recibir a un client, presentarse, explicar el servei, acomodar manos o pies y confirmar preferencias.",
+                "evidence_es": "rúbrica de primera impresión profesional.",
+                "evidence_ca": "rúbrica de primera impresión professional.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "grabación interna tipo vídeo corto para analizar postura, voz, lenguaje no verbal y seguridad.",
+                "motivatingFactor_ca": "grabación interna tipo vídeo corto para analizar postura, voz, lenguaje no verbal y seguridad."
+              },
+              {
+                "id": "act_3061_c1_3",
+                "title_es": "Checklist “lista para atender”",
+                "title_ca": "Llista de verificació “lista para atender”",
+                "description_es": "antes de cada práctica, el alumnado revisa su imagen: manos higienizadas, EPI, uniforme, puesto preparado, útiles ordenados y actitud adecuada.",
+                "description_ca": "antes de cada práctica, el alumnat revisa su imagen: manos higienizadas, EPI, uniforme, puesto preparado, útiles ordenados y actitud adecuada.",
+                "evidence_es": "checklist personal para prácticas y FCT.",
+                "evidence_ca": "checklist personal para prácticas y FCT.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c1_4",
+                "title_es": "Debate ético: fotos de uñas, permiso e imagen en redes",
+                "title_ca": "Debate ético: fotos de ungles, permiso e imagen en redes",
+                "description_es": "analizar si se pueden publicar fotos de manos/pies de clientes, cómo pedir autorización y qué datos no deben aparecer.",
+                "description_ca": "analizar si se pueden publicar fotos de manos/pies de clients, cómo pedir autorización y qué datos no deben aparecer.",
+                "evidence_es": "decálogo de ética, privacidad y redes.",
+                "evidence_ca": "decálogo de ética, privacidad y redes.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c1_5",
+                "title_es": "Rúbrica de actitud profesional",
+                "title_ca": "Rúbrica de actitud professional",
+                "description_es": "la clase define indicadores: puntualidad, higiene, trato, cuidado del material, respeto, discreción, colaboración y responsabilidad.",
+                "description_ca": "la clase define indicadores: puntualidad, higiene, trato, cuidado del material, respeto, discreción, colaboración y responsabilidad.",
+                "evidence_es": "rúbrica común para prácticas de manicura/pedicura.",
+                "evidence_ca": "rúbrica común para prácticas de manicura/pedicura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c1_6",
+                "title_es": "Mi marca personal como nail assistant",
+                "title_ca": "Mi marca personal como nail assistant",
+                "description_es": "elaboran una tarjeta de marca personal con fortalezas y objetivos de mejora.",
+                "description_ca": "elaboran una tarjeta de marca personal con fortalezas y objetivos de mejora.",
+                "evidence_es": "mini manifiesto profesional.",
+                "evidence_ca": "mini manifiesto professional.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "cada alumno define cómo quiere ser percibido: preciso/a, creativo/a, limpio/a, amable, responsable o detallista.",
+                "motivatingFactor_ca": "cada alumno define cómo quiere ser percibido: preciso/a, creativo/a, limpio/a, amable, responsable o detallista."
+              },
+              {
+                "id": "act_3061_c1_7",
+                "title_es": "Mesa de manicura “premium low cost”",
+                "title_ca": "Mesa de manicura “premium low cost”",
+                "description_es": "mejorar el puesto con orden, limpieza, música suave, comunicación, iluminación, comodidad y detalles visuales.",
+                "description_ca": "mejorar el puesto con orden, limpieza, música suave, comunicación, iluminación, comodidad y detalles visuales.",
+                "evidence_es": "propuesta de experiencia de cliente para manicura/pedicura.",
+                "evidence_ca": "propuesta de experiencia de client para manicura/pedicura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "diseñar una experiencia agradable sin gastar mucho.",
+                "motivatingFactor_ca": "diseñar una experiencia agradable sin gastar mucho."
+              }
+            ]
+          },
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "ciencias",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c12_1",
+                "title_es": "Cronograma de manicura básica",
+                "title_ca": "Cronograma de manicura básica",
+                "description_es": "recepción, diagnóstico, preparación, desmaquillado, limado, cutículas, masaje, esmaltado, encuesta y limpieza.",
+                "description_ca": "recepción, diagnóstico, preparación, desmaquillado, limado, cutículas, masaje, esmaltado, encuesta y limpieza.",
+                "evidence_es": "planning de servicio.",
+                "evidence_ca": "planning de servei.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c12_2",
+                "title_es": "Tabla de tiempos técnicos",
+                "title_ca": "Tabla de tiempos técnicos",
+                "description_es": "comparar manicura, pedicura, esmaltado, masaje, maquillaje, depilación y lavado.",
+                "description_ca": "comparar manicura, pedicura, esmaltado, masaje, maquillaje, depilación y lavado.",
+                "evidence_es": "tabla visual del taller.",
+                "evidence_ca": "tabla visual del taller.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c12_3",
+                "title_es": "Rúbrica de calidad",
+                "title_ca": "Rúbrica de calidad",
+                "description_es": "higiene, forma, limado, cutículas, pulido, esmaltado, comodidad, tiempo y satisfacción.",
+                "description_ca": "higiene, forma, limado, cutículas, pulido, esmaltado, comodidad, tiempo y satisfacción.",
+                "evidence_es": "rúbrica común.",
+                "evidence_ca": "rúbrica común.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c12_4",
+                "title_es": "Análisis de errores frecuentes",
+                "title_ca": "Análisis de errores frecuentes",
+                "description_es": "esmalte con burbujas, capas gruesas, forma irregular, cutícula dañada, producto mal retirado.",
+                "description_ca": "esmalte con burbujas, capas gruesas, forma irregular, cutícula dañada, producto mal retirado.",
+                "evidence_es": "tabla error-causa-solución.",
+                "evidence_ca": "tabla error-causa-solución.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c12_5",
+                "title_es": "Plan de mejora del servicio",
+                "title_ca": "Plan de mejora del servei",
+                "description_es": "tras cada práctica, proponer una mejora técnica, una comunicativa y una de higiene/orden.",
+                "description_ca": "tras cada práctica, proponer una mejora técnica, una comunicativa y una de higiene/orden.",
+                "evidence_es": "informe breve de mejora.",
+                "evidence_ca": "informe breve de mejora.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c12_6",
+                "title_es": "Temporizador creativo de manicura",
+                "title_ca": "Temporizador creativo de manicura",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "sistema visual de tiempos.",
+                "evidence_ca": "sistema visual de tiempos.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "crear tarjetas o alarmas para controlar fases sin correr.",
+                "motivatingFactor_ca": "crear tarjetas o alarmas para controlar fases sin correr."
+              },
+              {
+                "id": "act_3061_c12_7",
+                "title_es": "Reto “servicio eficiente, no acelerado”",
+                "title_ca": "Reto “servei eficiente, no acelerado”",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "evaluación comparativa.",
+                "evidence_ca": "evaluación comparativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "demostrar que eficiencia significa hacerlo bien, seguro y en tiempo razonable.",
+                "motivatingFactor_ca": "demostrar que eficiencia significa hacerlo bien, seguro y en tiempo razonable."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA2",
+        "code": "RA2",
+        "text_es": "· Observa las uñas, reconociendo las alteraciones más relevantes.",
+        "text_ca": "· Observa las ungles, reconociendo las alteraciones más relevantes.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c2_1",
+                "title_es": "Bandeja técnica de manicura y pedicura: “Todo en su sitio”",
+                "title_ca": "Bandeja técnica de manicura y pedicura: “Todo en su sitio”",
+                "description_es": "preparar limas, alicates, palitos de naranjo, pulidores, algodones, separadores, esmaltes, desmaquillante, cosméticos y recipiente de higiene.",
+                "description_ca": "preparar limas, alicates, palitos de naranjo, pulidores, algodones, separadores, esmaltes, desmaquillante, cosméticos y recipiente de higiene.",
+                "evidence_es": "bandeja ordenada según secuencia de uso.",
+                "evidence_ca": "bandeja ordenada según secuencia de uso.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "foto del setup para portfolio.",
+                "motivatingFactor_ca": "foto del setup para portfolio."
+              },
+              {
+                "id": "act_3061_c2_2",
+                "title_es": "Inventario del nail bar del aula",
+                "title_ca": "Inventario del nail bar del aula",
+                "description_es": "registrar esmaltes, bases, top coat, limas, cremas, separadores, útiles de corte, productos de higiene y desechables.",
+                "description_ca": "registrar esmaltes, bases, top coat, limas, cremas, separadores, útiles de corte, productes de higiene y desechables.",
+                "evidence_es": "inventario digital o impreso.",
+                "evidence_ca": "inventario digital o impreso.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "semáforo de stock: verde —suficiente—, amarillo —reponer pronto—, rojo —agotado/caducado—.",
+                "motivatingFactor_ca": "semáforo de stock: verde —suficiente—, amarillo —reponer pronto—, rojo —agotado/caducado—."
+              },
+              {
+                "id": "act_3061_c2_3",
+                "title_es": "Lectura de etiquetas de esmaltes y cosméticos",
+                "title_ca": "Lectura de etiquetas de esmaltes y cosméticos",
+                "description_es": "analizar composición básica, fecha de apertura, conservación, advertencias, modo de empleo y retirada.",
+                "description_ca": "analizar composición básica, fecha de apertura, conservación, advertencias, modo de empleo y retirada.",
+                "evidence_es": "guía sencilla de lectura de etiquetas.",
+                "evidence_ca": "guía sencilla de lectura de etiquetas.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c2_4",
+                "title_es": "Montaje de mesa para cliente real o simulado",
+                "title_ca": "Montaje de mesa para client real o simulado",
+                "description_es": "preparar mesa, silla, iluminación, papelera, toalla, protección, útiles y ficha antes de la llegada del cliente.",
+                "description_ca": "preparar mesa, silla, iluminación, papelera, toalla, protección, útiles y ficha antes de la llegada del client.",
+                "evidence_es": "checklist de montaje.",
+                "evidence_ca": "checklist de montaje.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c2_5",
+                "title_es": "Protocolo QR de preparación",
+                "title_ca": "Protocolo QR de preparación",
+                "description_es": "cada equipo redacta un protocolo de preparación y lo transforma en infografía o documento breve con QR.",
+                "description_ca": "cada equipo redacta un protocolo de preparación y lo transforma en infografía o documento breve con QR.",
+                "evidence_es": "señalética QR para la mesa de manicura.",
+                "evidence_ca": "señalética QR para la mesa de manicura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c2_6",
+                "title_es": "Maletín junior de manicura/pedicura",
+                "title_ca": "Maletín junior de manicura/pedicura",
+                "description_es": "seleccionar útiles imprescindibles, distinguir material desechable/reutilizable y calcular coste aproximado.",
+                "description_ca": "seleccionar útiles imprescindibles, distinguir material desechable/reutilizable y calcular coste aproximado.",
+                "evidence_es": "ficha del maletín profesional.",
+                "evidence_ca": "ficha del maletín professional.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "diseñar el kit básico para FCT o primer empleo.",
+                "motivatingFactor_ca": "diseñar el kit básico para FCT o primer empleo."
+              },
+              {
+                "id": "act_3061_c2_7",
+                "title_es": "Reto “mesa instagrameable, pero higiénica”",
+                "title_ca": "Reto “mesa instagrameable, pero higiénica”",
+                "description_es": "se valora estética, orden, accesibilidad, higiene, ergonomía y protección.",
+                "description_ca": "se valora estética, orden, accesibilidad, higiene, ergonomía y protección.",
+                "evidence_es": "foto autorizada del puesto y defensa oral.",
+                "evidence_ca": "foto autorizada del puesto y defensa oral.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "montar una mesa visualmente atractiva sin perder seguridad ni funcionalidad.",
+                "motivatingFactor_ca": "montar una mesa visualmente atractiva sin perder seguridad ni funcionalidad."
+              }
+            ]
+          },
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "sostenibilidad",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c13_1",
+                "title_es": "Cierre sostenible de la mesa",
+                "title_ca": "Cierre sostenible de la mesa",
+                "description_es": "limpiar útiles, cerrar esmaltes, ordenar productos, retirar residuos y preparar el puesto para el siguiente servicio.",
+                "description_ca": "limpiar útiles, cerrar esmaltes, ordenar productes, retirar residuos y preparar el puesto para el siguiente servei.",
+                "evidence_es": "checklist de cierre.",
+                "evidence_ca": "checklist de cierre.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c13_2",
+                "title_es": "Ruta del residuo de manicura/pedicura",
+                "title_ca": "Ruta del residuo de manicura/pedicura",
+                "description_es": "algodones, limas desechables, palitos, envases, toallas, guantes y restos de producto.",
+                "description_ca": "algodones, limas desechables, palitos, envases, toallas, guantes y restos de producto.",
+                "evidence_es": "mapa de residuos.",
+                "evidence_ca": "mapa de residuos.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c13_3",
+                "title_es": "Plan de reducción de desechables",
+                "title_ca": "Plan de reducción de desechables",
+                "description_es": "buscar alternativas seguras para reducir residuos sin comprometer higiene.",
+                "description_ca": "buscar alternativas seguras para reducir residuos sin comprometer higiene.",
+                "evidence_es": "plan de mejora sostenible.",
+                "evidence_ca": "plan de mejora sostenible.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c13_4",
+                "title_es": "Auditoría de productos caducados",
+                "title_ca": "Auditoría de productes caducados",
+                "description_es": "revisar esmaltes espesos, productos abiertos, envases dañados, olores o texturas alteradas.",
+                "description_ca": "revisar esmaltes espesos, productes abiertos, envases dañados, olores o texturas alteradas.",
+                "evidence_es": "informe de retirada.",
+                "evidence_ca": "informe de retirada.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c13_5",
+                "title_es": "Campaña de consumo responsable",
+                "title_ca": "Campaña de consumo responsable",
+                "description_es": "mensajes sobre uso racional de esmaltes, algodones, agua, energía y productos.",
+                "description_ca": "mensajes sobre uso racional de esmaltes, algodones, agua, energía y productes.",
+                "evidence_es": "cartel o vídeo.",
+                "evidence_ca": "cartel o vídeo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c13_6",
+                "title_es": "Eco-nail bar challenge",
+                "title_ca": "Eco-nail bar challenge",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "comparación antes/después.",
+                "evidence_ca": "comparación antes/después.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "reducir residuos en una práctica simulada sin perder higiene ni calidad.",
+                "motivatingFactor_ca": "reducir residuos en una práctica simulada sin perder higiene ni calidad."
+              },
+              {
+                "id": "act_3061_c13_7",
+                "title_es": "Señalética sostenible con QR",
+                "title_ca": "Señalética sostenible con QR",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "señalética para el aula.",
+                "evidence_ca": "señalética para el aula.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "crear carteles con QR sobre residuos, limpieza final, conservación de esmaltes y ahorro.",
+                "motivatingFactor_ca": "crear carteles con QR sobre residuos, limpieza final, conservación de esmaltes y ahorro."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA3",
+        "code": "RA3",
+        "text_es": "· Aplica técnicas básicas de manicura, relacionando las características morfológicas de las manos y de las uñas con la forma final de éstas últimas.",
+        "text_ca": "· Aplica técnicas básicas de manicura, relacionando las características morfológicas de las manos y de las ungles con la forma final de éstas últimas.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c3_1",
+                "title_es": "Protocolo de higiene de útiles de uñas",
+                "title_ca": "Protocolo de higiene de útiles de ungles",
+                "description_es": "diferenciar limpiar, desinfectar y esterilizar; aplicar el protocolo a alicates, limas, palitos, separadores y superficies.",
+                "description_ca": "diferenciar limpiar, desinfectar y esterilizar; aplicar el protocolo a alicates, limas, palitos, separadores y superficies.",
+                "evidence_es": "protocolo visual de higiene.",
+                "evidence_ca": "protocolo visual de higiene.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c3_2",
+                "title_es": "Práctica de desinfección comparada",
+                "title_ca": "Práctica de desinfección comparada",
+                "description_es": "comparar métodos según material: metal, cartón, plástico, algodón, toalla o madera.",
+                "description_ca": "comparar métodos según material: metal, cartón, plástico, algodón, toalla o madera.",
+                "evidence_es": "tabla útil-material-método.",
+                "evidence_ca": "tabla útil-material-método.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c3_3",
+                "title_es": "Campaña “no compartas riesgo”",
+                "title_ca": "Campaña “no compartas riesgo”",
+                "description_es": "trabajar riesgos de compartir limas, cortaúñas, alicates o esmaltes contaminados.",
+                "description_ca": "trabajar riesgos de compartir limas, cortaúñas, alicates o esmaltes contaminados.",
+                "evidence_es": "campaña visual de higiene.",
+                "evidence_ca": "campaña visual de higiene.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "cartel o carrusel estilo redes.",
+                "motivatingFactor_ca": "cartel o carrusel estilo redes."
+              },
+              {
+                "id": "act_3061_c3_4",
+                "title_es": "Auditoría higiénica de la mesa",
+                "title_ca": "Auditoría higiénica de la mesa",
+                "description_es": "un equipo monta el puesto y otro lo inspecciona con rúbrica: manos, útiles, superficies, desechables, productos y residuos.",
+                "description_ca": "un equipo monta el puesto y otro lo inspecciona con rúbrica: manos, útiles, superficies, desechables, productes y residuos.",
+                "evidence_es": "informe de auditoría con mejoras.",
+                "evidence_ca": "informe de auditoría con mejoras.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c3_5",
+                "title_es": "Glosario bilingüe de higiene y uñas",
+                "title_ca": "Glosario bilingüe de higiene y ungles",
+                "description_es": "nail, cuticle, file, disinfect, gloves, clean, hands, feet, polish, infection.",
+                "description_ca": "nail, cuticle, file, disinfect, gloves, clean, hands, feet, polish, infection.",
+                "evidence_es": "tarjetas bilingües para el aula-taller.",
+                "evidence_ca": "tarjetas bilingües para el aula-taller.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c3_6",
+                "title_es": "Simulación de contaminación invisible",
+                "title_ca": "Simulación de contaminación invisible",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "mapa de contaminación y protocolo preventivo.",
+                "evidence_ca": "mapa de contaminación y protocolo preventivo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a útiles y productos.",
+                "motivatingFactor_ca": "usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a útiles y productes."
+              },
+              {
+                "id": "act_3061_c3_7",
+                "title_es": "Escape room “salva el nail bar”",
+                "title_ca": "Escape room “salva el nail bar”",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "checklist final de higiene segura.",
+                "evidence_ca": "checklist final de higiene segura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "resolver pruebas sobre limas contaminadas, alicates sin desinfectar, producto caducado, toalla sucia y residuos mal gestionados.",
+                "motivatingFactor_ca": "resolver pruebas sobre limas contaminadas, alicates sin desinfectar, producto caducado, toalla sucia y residuos mal gestionados."
+              }
+            ]
+          },
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "empleabilidad",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c14_1",
+                "title_es": "Salón simulado de manicura/pedicura",
+                "title_ca": "Salón simulado de manicura/pedicura",
+                "description_es": "recepción, diagnóstico, servicio, encuesta, limpieza, documentación y cierre.",
+                "description_ca": "recepción, diagnóstico, servei, encuesta, limpieza, documentación y cierre.",
+                "evidence_es": "servicio integral evaluado.",
+                "evidence_ca": "servei integral evaluado.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c14_2",
+                "title_es": "Rotación de roles profesionales",
+                "title_ca": "Rotación de roles professionales",
+                "description_es": "cliente, profesional, observador de higiene, responsable de almacén, responsable de tiempos y responsable de comunicación.",
+                "description_ca": "client, professional, observador de higiene, responsable de almacén, responsable de tiempos y responsable de comunicación.",
+                "evidence_es": "registro de roles.",
+                "evidence_ca": "registro de roles.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c14_3",
+                "title_es": "Proyecto final de nail bar",
+                "title_ca": "Projecte final de nail bar",
+                "description_es": "diseñar un nail bar escolar con servicios, protocolos, fichas, catálogo, precios ficticios y medidas sostenibles.",
+                "description_ca": "diseñar un nail bar escolar con serveis, protocolos, fichas, catálogo, precios ficticios y medidas sostenibles.",
+                "evidence_es": "dossier de proyecto.",
+                "evidence_ca": "dossier de proyecto.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c14_4",
+                "title_es": "Diario de aprendizaje profesional",
+                "title_ca": "Diario de aprendizaje professional",
+                "description_es": "avances, errores, destrezas, actitud, seguridad, trato y objetivos semanales.",
+                "description_ca": "avances, errores, destrezas, actitud, seguridad, trato y objetivos semanales.",
+                "evidence_es": "diario individual.",
+                "evidence_ca": "diario individual.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c14_5",
+                "title_es": "Simulación de FCT",
+                "title_ca": "Simulación de FCT",
+                "description_es": "seguir instrucciones de empresa, uniformidad, tiempos, limpieza, comunicación y evaluación final.",
+                "description_ca": "seguir instrucciones de empresa, uniformidad, tiempos, limpieza, comunicación y evaluación final.",
+                "evidence_es": "rúbrica tipo empresa.",
+                "evidence_ca": "rúbrica tipo empresa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c14_6",
+                "title_es": "Hackathon “mejora el nail bar”",
+                "title_ca": "Hackathon “mejora el nail bar”",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "pitch de mejora.",
+                "evidence_ca": "pitch de mejora.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "resolver un problema real: desorden, residuos, tiempos, higiene, comunicación o satisfacción.",
+                "motivatingFactor_ca": "resolver un problema real: desorden, residuos, tiempos, higiene, comunicación o satisfacción."
+              },
+              {
+                "id": "act_3061_c14_7",
+                "title_es": "Certamen “nail assistant junior”",
+                "title_ca": "Certamen “nail assistant junior”",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "muestra de competencias con insignias.",
+                "evidence_ca": "muestra de competencias con insignias.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "exposición final de competencias: ficha, técnica, nail art, protocolo, portfolio o campaña.",
+                "motivatingFactor_ca": "exposición final de competencias: ficha, técnica, nail art, protocolo, portfolio o campaña."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA4",
+        "code": "RA4",
+        "text_es": "· Aplica técnicas básicas de pedicura, relacionando las características morfológicas de los pies y de las uñas con la forma final de éstas últimas.",
+        "text_ca": "· Aplica técnicas básicas de pedicura, relacionando las características morfológicas de los pies y de las ungles con la forma final de éstas últimas.",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c4_1",
+                "title_es": "Semáforo de uñas: verde, amarillo, rojo",
+                "title_ca": "Semáforo de ungles: verde, amarillo, rojo",
+                "description_es": "analizar casos educativos: uña normal, cutícula sensible, durezas superficiales, cambio de color, inflamación, herida o posible infección.",
+                "description_ca": "analizar casos educativos: uña normal, cutícula sensible, durezas superficiales, cambio de color, inflamación, herida o posible infección.",
+                "evidence_es": "panel de actuación: realizar, adaptar, consultar o derivar.",
+                "evidence_ca": "panel de actuación: realizar, adaptar, consultar o derivar.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c4_2",
+                "title_es": "Ficha de diagnóstico de manos y pies",
+                "title_ca": "Ficha de diagnóstico de manos y pies",
+                "description_es": "registrar forma de uña, piel, cutícula, durezas, sensibilidad, hábitos, alergias y servicio solicitado.",
+                "description_ca": "registrar forma de uña, pell, cutícula, durezas, sensibilidad, hábitos, alergias y servei solicitado.",
+                "evidence_es": "ficha técnica de manicura/pedicura.",
+                "evidence_ca": "ficha técnica de manicura/pedicura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c4_3",
+                "title_es": "Circuito de observación: “Detectives de uñas”",
+                "title_ca": "Circuito de observación: “Detectives de ungles”",
+                "description_es": "estaciones de forma, lámina ungular, cutícula, piel, durezas, higiene, preferencias y contraindicaciones.",
+                "description_ca": "estaciones de forma, lámina ungular, cutícula, pell, durezas, higiene, preferencias y contraindicaciones.",
+                "evidence_es": "informe de diagnóstico.",
+                "evidence_ca": "informe de diagnóstico.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c4_4",
+                "title_es": "Caso de derivación profesional",
+                "title_ca": "Caso de derivación professional",
+                "description_es": "trabajar situaciones donde el auxiliar debe avisar al técnico responsable o derivar: herida, inflamación, posible hongo, dolor o alteración marcada.",
+                "description_ca": "trabajar situaciones donde el auxiliar debe avisar al técnico responsable o derivar: herida, inflamación, posible hongo, dolor o alteración marcada.",
+                "evidence_es": "árbol de decisión.",
+                "evidence_ca": "árbol de decisión.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c4_5",
+                "title_es": "Entrevista previa al servicio",
+                "title_ca": "Entrevista previa al servei",
+                "description_es": "role-play para preguntar alergias, sensibilidad, estilo de vida, trabajo manual, evento, preferencia de forma/color y experiencias previas.",
+                "description_ca": "role-play para preguntar alergias, sensibilidad, estilo de vida, trabajo manual, evento, preferencia de forma/color y experiencias previas.",
+                "evidence_es": "diálogo evaluado y ficha cumplimentada.",
+                "evidence_ca": "diálogo evaluado y ficha cumplimentada.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c4_6",
+                "title_es": "Cliente trae una foto de Pinterest/TikTok",
+                "title_ca": "Cliente trae una foto de Pinterest/TikTok",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "respuesta profesional con alternativa segura.",
+                "evidence_ca": "respuesta professional con alternativa segura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "analizar si la forma, largo o diseño solicitado es viable para sus uñas naturales y nivel del servicio.",
+                "motivatingFactor_ca": "analizar si la forma, largo o diseño solicitado es viable para sus ungles naturales y nivel del servei."
+              },
+              {
+                "id": "act_3061_c4_7",
+                "title_es": "Diagnóstico con macrofotografía responsable",
+                "title_ca": "Diagnóstico con macrofotografía responsable",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "ficha de observación con criterios de confidencialidad.",
+                "evidence_ca": "ficha de observación con criterios de confidencialidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "usar fotografías autorizadas de manos o plantillas para observar detalles sin invadir privacidad.",
+                "motivatingFactor_ca": "usar fotografías autorizadas de manos o plantillas para observar detalles sin invadir privacidad."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA1",
+        "code": "RA1",
+        "text_es": "b-e, g, h, l; RA4 a",
+        "text_ca": "b-e, g, h, l; RA4 a",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "cliente",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c5_1",
+                "title_es": "Árbol de decisión de manicura/pedicura",
+                "title_ca": "Árbol de decisión de manicura/pedicura",
+                "description_es": "elegir técnica, lima, forma, cosmético, esmalte o acabado según tipo de uña, piel, evento, edad, estilo y preferencias.",
+                "description_ca": "elegir técnica, lima, forma, cosmético, esmalte o acabado según tipo de uña, pell, evento, edad, estilo y preferencias.",
+                "evidence_es": "árbol visual de decisión.",
+                "evidence_ca": "árbol visual de decisión.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c5_2",
+                "title_es": "Comparativa de productos de uñas",
+                "title_ca": "Comparativa de productes de ungles",
+                "description_es": "base, esmalte, top coat, aceite de cutículas, crema, desmaquillante, pulidor y cosméticos de masaje.",
+                "description_ca": "base, esmalte, top coat, aceite de cutículas, crema, desmaquillante, pulidor y cosméticos de masaje.",
+                "evidence_es": "tabla función-uso-precaución.",
+                "evidence_ca": "tabla función-uso-precaución.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c5_3",
+                "title_es": "Asesoría de estilo de uñas para evento",
+                "title_ca": "Asesoría de estilo de ungles para evento",
+                "description_es": "diseñar uñas para graduación, entrevista, festival, boda familiar, día a día o prácticas en empresa.",
+                "description_ca": "diseñar ungles para graduación, entrevista, festival, boda familiar, día a día o prácticas en empresa.",
+                "evidence_es": "moodboard con justificación.",
+                "evidence_ca": "moodboard con justificación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c5_4",
+                "title_es": "Presupuesto de servicio básico",
+                "title_ca": "Presupuesto de servei básico",
+                "description_es": "calcular coste de consumibles, duración y precio ficticio de manicura, pedicura o pack combinado.",
+                "description_ca": "calcular coste de consumibles, duración y precio ficticio de manicura, pedicura o pack combinado.",
+                "evidence_es": "presupuesto sencillo.",
+                "evidence_ca": "presupuesto sencillo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c5_5",
+                "title_es": "Role-play de asesoramiento",
+                "title_ca": "Role-play de asesoramiento",
+                "description_es": "el cliente duda entre colores, forma o tratamiento. El alumno explica opciones y acabados previsibles.",
+                "description_ca": "el client duda entre colores, forma o tratamiento. El alumno explica opciones y acabados previsibles.",
+                "evidence_es": "diálogo profesional.",
+                "evidence_ca": "diálogo professional.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c5_6",
+                "title_es": "Ranking “producto viral pero ¿profesional?”",
+                "title_ca": "Ranking “producto viral pero ¿professional?”",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "ranking razonado.",
+                "evidence_ca": "ranking razonado.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "analizar esmaltes, aceites o trucos de redes y valorar seguridad, utilidad, precio y expectativas.",
+                "motivatingFactor_ca": "analizar esmaltes, aceites o trucos de redes y valorar seguridad, utilidad, precio y expectativas."
+              },
+              {
+                "id": "act_3061_c5_7",
+                "title_es": "Consultoría express con cartas de cliente",
+                "title_ca": "Consultoría express con cartas de client",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "pitch de recomendación en 2 minutos.",
+                "evidence_ca": "pitch de recomendación en 2 minutos.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "tarjetas con perfiles: uñas frágiles, piel seca, evento formal, estilo urbano, presupuesto bajo, prisa o alergias.",
+                "motivatingFactor_ca": "tarjetas con perfiles: ungles frágiles, pell seca, evento formal, estilo urbano, presupuesto bajo, prisa o alergias."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA1",
+        "code": "RA1",
+        "text_es": "f, i, j, k; RA3 b, c; RA4 c, d",
+        "text_ca": "f, i, j, k; RA3 b, c; RA4 c, d",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "tecnica",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c6_1",
+                "title_es": "Servicio completo de manicura básica",
+                "title_ca": "Servicio completo de manicura básica",
+                "description_es": "preparación, diagnóstico, desmaquillado, limado, cutículas, pulido, masaje, esmaltado, encuesta y limpieza final.",
+                "description_ca": "preparación, diagnóstico, desmaquillado, limado, cutículas, pulido, masaje, esmaltado, encuesta y limpieza final.",
+                "evidence_es": "ficha de servicio y rúbrica técnica.",
+                "evidence_ca": "ficha de servei y rúbrica técnica.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c6_2",
+                "title_es": "Reto de limado simétrico",
+                "title_ca": "Reto de limado simétrico",
+                "description_es": "practicar formas en plantillas o uñas de práctica: cuadrada, ovalada, redonda o almendrada básica.",
+                "description_ca": "practicar formas en plantillas o ungles de práctica: cuadrada, ovalada, redonda o almendrada básica.",
+                "evidence_es": "panel antes/después.",
+                "evidence_ca": "panel antes/después.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c6_3",
+                "title_es": "Taller de masaje de manos",
+                "title_ca": "Taller de masaje de manos",
+                "description_es": "aprender orden, presión, ritmo, comodidad y respeto al cliente.",
+                "description_ca": "aprender orden, presión, ritmo, comodidad y respeto al client.",
+                "evidence_es": "secuencia ilustrada de masaje.",
+                "evidence_ca": "secuencia ilustrada de masaje.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c6_4",
+                "title_es": "Battle de esmaltado limpio",
+                "title_ca": "Battle de esmaltado limpio",
+                "description_es": "reto cooperativo de esmaltado en plantillas, valorando pulcritud, capas finas, borde libre y limpieza.",
+                "description_ca": "reto cooperativo de esmaltado en plantillas, valorando pulcritud, capas finas, borde libre y limpieza.",
+                "evidence_es": "rúbrica de acabado.",
+                "evidence_ca": "rúbrica de acabado.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c6_5",
+                "title_es": "Corrección de errores técnicos",
+                "title_ca": "Corrección de errores técnicos",
+                "description_es": "detectar esmalte en cutícula, limado desigual, exceso de producto, falta de higiene o masaje desordenado.",
+                "description_ca": "detectar esmalte en cutícula, limado desigual, exceso de producto, falta de higiene o masaje desordenado.",
+                "evidence_es": "tabla error-causa-solución.",
+                "evidence_ca": "tabla error-causa-solución.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c6_6",
+                "title_es": "Stop motion de manicura",
+                "title_ca": "Stop motion de manicura",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "stop motion del procedimiento correcto.",
+                "evidence_ca": "stop motion del procedimiento correcto.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "fotografiar cada fase para crear una animación didáctica.",
+                "motivatingFactor_ca": "fotografiar cada fase para crear una animación didáctica."
+              },
+              {
+                "id": "act_3061_c6_7",
+                "title_es": "Pasaporte de destrezas de manicura",
+                "title_ca": "Pasaporte de destrezas de manicura",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "pasaporte individual de competencias.",
+                "evidence_ca": "pasaporte individual de competencias.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "el alumnado consigue sellos por dominar fases: higiene, limado, masaje, pulido, esmaltado, limpieza y trato.",
+                "motivatingFactor_ca": "el alumnat consigue sellos por dominar fases: higiene, limado, masaje, pulido, esmaltado, limpieza y trato."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA2",
+        "code": "RA2",
+        "text_es": "a, b, c, i",
+        "text_ca": "a, b, c, i",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "digital",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c7_1",
+                "title_es": "Servicio completo de pedicura básica simulada",
+                "title_ca": "Servicio completo de pedicura básica simulada",
+                "description_es": "diagnóstico, higiene, tratamiento superficial de durezas, limado, cutículas, masaje, esmaltado y cuidados posteriores.",
+                "description_ca": "diagnóstico, higiene, tratamiento superficial de durezas, limado, cutículas, masaje, esmaltado y cuidados posteriores.",
+                "evidence_es": "ficha de servicio.",
+                "evidence_ca": "ficha de servei.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c7_2",
+                "title_es": "Protocolo de higiene en pedicura",
+                "title_ca": "Protocolo de higiene en pedicura",
+                "description_es": "trabajar especial atención a pies, toallas, recipientes, separadores, limas, guantes y desinfección.",
+                "description_ca": "trabajar especial atención a pies, toallas, recipientes, separadores, limas, guantes y desinfección.",
+                "evidence_es": "protocolo específico de pedicura.",
+                "evidence_ca": "protocolo específico de pedicura.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c7_3",
+                "title_es": "Taller de masaje de pies",
+                "title_ca": "Taller de masaje de pies",
+                "description_es": "practicar maniobras básicas en orden, con presión adecuada y respeto a la comodidad del cliente.",
+                "description_ca": "practicar maniobras básicas en orden, con presión adecuada y respeto a la comodidad del client.",
+                "evidence_es": "secuencia visual.",
+                "evidence_ca": "secuencia visual.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c7_4",
+                "title_es": "Caso “pies sensibles”",
+                "title_ca": "Caso “pies sensibles”",
+                "description_es": "cliente con cosquillas, vergüenza, piel sensible o durezas superficiales. Cómo comunicar y adaptar.",
+                "description_ca": "client con cosquillas, vergüenza, pell sensible o durezas superficiales. Cómo comunicar y adaptar.",
+                "evidence_es": "guía de atención sensible.",
+                "evidence_ca": "guía de atención sensible.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c7_5",
+                "title_es": "Reto de esmaltado con separadores",
+                "title_ca": "Reto de esmaltado con separadores",
+                "description_es": "practicar colocación, postura y esmaltado limpio en plantillas o modelos adecuados.",
+                "description_ca": "practicar colocación, postura y esmaltado limpio en plantillas o modelos adecuados.",
+                "evidence_es": "panel de resultados.",
+                "evidence_ca": "panel de resultados.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c7_6",
+                "title_es": "Pedicura para verano/festival de forma responsable",
+                "title_ca": "Pedicura para verano/festival de forma responsable",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "moodboard y tarjeta de cuidados.",
+                "evidence_ca": "moodboard y tarjeta de cuidados.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "diseñar una pedicura estética para sandalias o evento, con cuidados e higiene.",
+                "motivatingFactor_ca": "diseñar una pedicura estética para sandalias o evento, con cuidados e higiene."
+              },
+              {
+                "id": "act_3061_c7_7",
+                "title_es": "Semáforo de pedicura segura",
+                "title_ca": "Semáforo de pedicura segura",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "árbol de decisión visual.",
+                "evidence_ca": "árbol de decisión visual.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "identificar cuándo realizar, adaptar o derivar por heridas, dolor, infección, inflamación o alteraciones.",
+                "motivatingFactor_ca": "identificar cuándo realizar, adaptar o derivar por heridas, dolor, infección, inflamación o alteraciones."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA2",
+        "code": "RA2",
+        "text_es": "d, e; RA1 a",
+        "text_ca": "d, e; RA1 a",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "digital",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c8_1",
+                "title_es": "Moodboard de nail art para evento",
+                "title_ca": "Moodboard de nail art para evento",
+                "description_es": "crear diseños para graduación, festival, entrevista, boda familiar, estilo urbano, clean look o fantasía.",
+                "description_ca": "crear diseños para graduación, festival, entrevista, boda familiar, estilo urbano, clean look o fantasía.",
+                "evidence_es": "moodboard de estilos.",
+                "evidence_ca": "moodboard de estilos.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c8_2",
+                "title_es": "Arte en uñas inspirado en historia, música o cultura urbana",
+                "title_ca": "Arte en ungles inspirado en historia, música o cultura urbana",
+                "description_es": "tomar referencias de arte, épocas, canciones, videojuegos o cultura local y traducirlas a diseños sencillos.",
+                "description_ca": "tomar referencias de arte, épocas, canciones, videojuegos o cultura local y traducirlas a diseños sencillos.",
+                "evidence_es": "galería de nail art en plantillas.",
+                "evidence_ca": "galería de nail art en plantillas.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c8_3",
+                "title_es": "Coordinación uñas-maquillaje-peinado",
+                "title_ca": "Coordinación ungles-maquillaje-peinado",
+                "description_es": "diseñar un look integral con paleta cromática común.",
+                "description_ca": "diseñar un look integral con paleta cromática común.",
+                "evidence_es": "dossier de imagen global.",
+                "evidence_ca": "dossier de imagen global.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c8_4",
+                "title_es": "Rueda de color aplicada a uñas",
+                "title_ca": "Rueda de color aplicada a ungles",
+                "description_es": "trabajar colores complementarios, armonías cálidas/frías y combinaciones según piel y ropa.",
+                "description_ca": "trabajar colores complementarios, armonías cálidas/frías y combinaciones según pell y ropa.",
+                "evidence_es": "rueda cromática para nail art.",
+                "evidence_ca": "rueda cromática para nail art.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c8_5",
+                "title_es": "Face/nail chart challenge",
+                "title_ca": "Face/nail chart challenge",
+                "description_es": "diseñar uñas en plantillas antes de aplicar, justificando color, forma y estilo.",
+                "description_ca": "diseñar ungles en plantillas antes de aplicar, justificando color, forma y estilo.",
+                "evidence_es": "colección de diseños.",
+                "evidence_ca": "colección de diseños.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c8_6",
+                "title_es": "Filtros vs uñas reales",
+                "title_ca": "Filtros vs ungles reales",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "guía de fotografía honesta de trabajos.",
+                "evidence_ca": "guía de fotografía honesta de trabajos.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "analizar fotos editadas de nail art y expectativas irreales.",
+                "motivatingFactor_ca": "analizar fotos editadas de nail art y expectativas irreales."
+              },
+              {
+                "id": "act_3061_c8_7",
+                "title_es": "Certamen “nail artist junior”",
+                "title_ca": "Certamen “nail artist junior”",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "muestra de nail art con insignias.",
+                "evidence_ca": "muestra de nail art con insignias.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "exposición final de diseños en plantillas, con explicación técnica y creativa.",
+                "motivatingFactor_ca": "exposición final de diseños en plantillas, con explicación técnica y creativa."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA2",
+        "code": "RA2",
+        "text_es": "g, h; RA3 d; RA4 e",
+        "text_ca": "g, h; RA3 d; RA4 e",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "cliente",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c9_1",
+                "title_es": "Mapa postural de manicura y pedicura",
+                "title_ca": "Mapa postural de manicura y pedicura",
+                "description_es": "analizar altura de mesa, posición de espalda, cuello, muñeca, silla, reposapiés y distancia al cliente.",
+                "description_ca": "analizar altura de mesa, posición de espalda, cuello, muñeca, silla, reposapiés y distancia al client.",
+                "evidence_es": "cartel de ergonomía.",
+                "evidence_ca": "cartel de ergonomía.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c9_2",
+                "title_es": "Práctica de acomodación segura",
+                "title_ca": "Práctica de acomodación segura",
+                "description_es": "preparar al cliente en mesa de manicura y puesto de pedicura, garantizando comodidad, higiene y protección.",
+                "description_ca": "preparar al client en mesa de manicura y puesto de pedicura, garantizando comodidad, higiene y protección.",
+                "evidence_es": "checklist de acomodación.",
+                "evidence_ca": "checklist de acomodación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c9_3",
+                "title_es": "Termómetro de confort del cliente",
+                "title_ca": "Termómetro de confort del client",
+                "description_es": "crear una tarjeta para preguntar presión, postura, cosquillas, frío/calor, dolor o incomodidad.",
+                "description_ca": "crear una tarjeta para preguntar presión, postura, cosquillas, frío/calor, dolor o incomodidad.",
+                "evidence_es": "herramienta de comunicación durante el servicio.",
+                "evidence_ca": "herramienta de comunicación durante el servei.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c9_4",
+                "title_es": "Observación entre iguales",
+                "title_ca": "Observación entre iguales",
+                "description_es": "un alumno realiza la práctica y otro observa ergonomía, higiene, postura, comodidad y comunicación.",
+                "description_ca": "un alumno realiza la práctica y otro observa ergonomía, higiene, postura, comodidad y comunicación.",
+                "evidence_es": "ficha de coevaluación.",
+                "evidence_ca": "ficha de coevaluación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c9_5",
+                "title_es": "Adaptación a clientes diversos",
+                "title_ca": "Adaptación a clients diversos",
+                "description_es": "cliente mayor, movilidad reducida, uñas sensibles, vergüenza con los pies, dificultad idiomática o ansiedad.",
+                "description_ca": "client mayor, movilidad reducida, ungles sensibles, vergüenza con los pies, dificultad idiomática o ansiedad.",
+                "evidence_es": "guía de atención adaptada.",
+                "evidence_ca": "guía de atención adaptada.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c9_6",
+                "title_es": "Micro-pausas del nail assistant",
+                "title_ca": "Micro-pausas del nail assistant",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "vídeo o póster de micro-pausas.",
+                "evidence_ca": "vídeo o póster de micro-pausas.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "diseñar estiramientos breves de muñeca, cuello, espalda y hombros.",
+                "motivatingFactor_ca": "diseñar estiramientos breves de muñeca, cuello, espalda y hombros."
+              },
+              {
+                "id": "act_3061_c9_7",
+                "title_es": "Reto “ergonomía sin perder precisión”",
+                "title_ca": "Reto “ergonomía sin perder precisión”",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "rúbrica de postura y precisión.",
+                "evidence_ca": "rúbrica de postura y precisión.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "practicar limado/esmalte cuidando postura y apoyos, no solo resultado.",
+                "motivatingFactor_ca": "practicar limado/esmalte cuidando postura y apoyos, no solo resultado."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA3",
+        "code": "RA3",
+        "text_es": "a, e-h, i, j; RA4 b, f-j, k",
+        "text_ca": "a, e-h, i, j; RA4 b, f-j, k",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "cliente",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c10_1",
+                "title_es": "Role-play de asesoramiento de manicura/pedicura",
+                "title_ca": "Role-play de asesoramiento de manicura/pedicura",
+                "description_es": "entrevista, diagnóstico, propuesta de forma/color, explicación del servicio y despedida.",
+                "description_ca": "entrevista, diagnóstico, propuesta de forma/color, explicación del servei y despedida.",
+                "evidence_es": "diálogo evaluado.",
+                "evidence_ca": "diálogo evaluado.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c10_2",
+                "title_es": "Tarjeta de cuidados posteriores",
+                "title_ca": "Tarjeta de cuidados posteriores",
+                "description_es": "redactar consejos tras manicura/pedicura: evitar golpes, hidratación, cuidado de cutículas, calzado, retirada del esmalte y señales de alerta.",
+                "description_ca": "redactar consejos tras manicura/pedicura: evitar golpes, hidratación, cuidado de cutículas, calzado, retirada del esmalte y señales de alerta.",
+                "evidence_es": "tarjeta postservicio.",
+                "evidence_ca": "tarjeta postservei.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c10_3",
+                "title_es": "Encuesta de satisfacción",
+                "title_ca": "Encuesta de satisfacción",
+                "description_es": "preguntas sobre trato, higiene, comodidad, resultado, tiempo y explicación.",
+                "description_ca": "preguntas sobre trato, higiene, comodidad, resultado, tiempo y explicación.",
+                "evidence_es": "encuesta digital o impresa.",
+                "evidence_ca": "encuesta digital o impresa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "escala de emojis y análisis de resultados.",
+                "motivatingFactor_ca": "escala de emojis y análisis de resultados."
+              },
+              {
+                "id": "act_3061_c10_4",
+                "title_es": "Atención básica en inglés",
+                "title_ca": "Atención básica en inglés",
+                "description_es": "frases para preguntar color, shape, allergies, appointment, hands, feet, thank you.",
+                "description_ca": "frases para preguntar color, shape, allergies, appointment, hands, feet, thank you.",
+                "evidence_es": "tarjeta bilingüe.",
+                "evidence_ca": "tarjeta bilingüe.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c10_5",
+                "title_es": "Gestión de reclamaciones",
+                "title_ca": "Gestión de reclamaciones",
+                "description_es": "casos: esmalte levantado, forma desigual, color no esperado, espera larga o incomodidad.",
+                "description_ca": "casos: esmalte levantado, forma desigual, color no esperado, espera larga o incomodidad.",
+                "evidence_es": "hoja de incidencia y respuesta profesional.",
+                "evidence_ca": "hoja de incidencia y respuesta professional.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c10_6",
+                "title_es": "Respuesta a reseña negativa online",
+                "title_ca": "Respuesta a reseña negativa online",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "banco de respuestas profesionales.",
+                "evidence_ca": "banco de respuestas professionales.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "redactar respuesta respetuosa a una crítica ficticia sin discutir ni revelar datos.",
+                "motivatingFactor_ca": "redactar respuesta respetuosa a una crítica ficticia sin discutir ni revelar datos."
+              },
+              {
+                "id": "act_3061_c10_7",
+                "title_es": "Chatbot de preguntas frecuentes de uñas",
+                "title_ca": "Chatbot de preguntas frecuentes de ungles",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "guion de chatbot o folleto interactivo.",
+                "evidence_ca": "guion de chatbot o folleto interactivo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "crear FAQ sobre duración, cuidados, colores, higiene, precio, alergias y mantenimiento.",
+                "motivatingFactor_ca": "crear FAQ sobre duración, cuidados, colores, higiene, precio, alergias y mantenimiento."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3061_RA2",
+        "code": "RA2",
+        "text_es": "f, j; RA3 k; RA4 l, m",
+        "text_ca": "f, j; RA3 k; RA4 l, m",
+        "criteria_es": [],
+        "criteria_ca": [],
+        "importance_es": "Competencia clave de Cuidados estéticos básicos de uñas para la práctica profesional y la empleabilidad en FPB.",
+        "importance_ca": "Competència clau de Cures estètiques bàsiques d’ungles per a la pràctica professional i l'ocupabilitat en FPB.",
+        "connections": [
+          {
+            "targetModuleCode": "3009",
+            "targetModuleName_es": "Ciencias aplicadas I",
+            "targetModuleName_ca": "Ciències aplicades I",
+            "targetRaCode": "RA1",
+            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Ciencias aplicadas I.",
+            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Ciències aplicades I.",
+            "relationType": "digital",
+            "justification_es": "Conexión competencial y metodológica entre los aprendizajes de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo para el desarrollo integral del perfil profesional.",
+            "justification_ca": "Conexión competencial y metodológica entre los aprendizajes de Cures estètiques bàsiques d’ungles y el resto de módulos del ciclo para el desarrollo integral del perfil professional.",
+            "activities": [
+              {
+                "id": "act_3061_c11_1",
+                "title_es": "Ficha digital de manicura/pedicura",
+                "title_ca": "Ficha digital de manicura/pedicura",
+                "description_es": "datos, diagnóstico, servicio, forma, color, productos, incidencias, satisfacción y cuidados.",
+                "description_ca": "datos, diagnóstico, servei, forma, color, productes, incidencias, satisfacción y cuidados.",
+                "evidence_es": "formulario digital.",
+                "evidence_ca": "formulario digital.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c11_2",
+                "title_es": "Portfolio de nail art y prácticas",
+                "title_ca": "Portfolio de nail art y prácticas",
+                "description_es": "recopilar fotos autorizadas, diseños en plantillas, fichas, rúbricas y reflexión.",
+                "description_ca": "recopilar fotos autorizadas, diseños en plantillas, fichas, rúbricas y reflexión.",
+                "evidence_es": "portfolio digital.",
+                "evidence_ca": "portfolio digital.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c11_3",
+                "title_es": "Informe de práctica",
+                "title_ca": "Informe de práctica",
+                "description_es": "objetivo, materiales, procedimiento, resultado, errores y mejora.",
+                "description_ca": "objetivo, materiales, procedimiento, resultado, errores y mejora.",
+                "evidence_es": "informe para evaluación.",
+                "evidence_ca": "informe para evaluación.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c11_4",
+                "title_es": "Base de datos de esmaltes y productos",
+                "title_ca": "Base de datos de esmaltes y productes",
+                "description_es": "marca, color, uso, caducidad, conservación, advertencias y estado.",
+                "description_ca": "marca, color, uso, caducidad, conservación, advertencias y estado.",
+                "evidence_es": "base de datos del aula.",
+                "evidence_ca": "base de datos del aula.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c11_5",
+                "title_es": "Gráficos de preferencias",
+                "title_ca": "Gráficos de preferencias",
+                "description_es": "analizar colores, formas y estilos preferidos por el grupo o clientes simulados.",
+                "description_ca": "analizar colores, formas y estilos preferidos por el grupo o clients simulados.",
+                "evidence_es": "dashboard sencillo.",
+                "evidence_ca": "dashboard sencillo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
+              },
+              {
+                "id": "act_3061_c11_6",
+                "title_es": "QR de ficha y diseño",
+                "title_ca": "QR de ficha y diseño",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "portfolio interactivo.",
+                "evidence_ca": "portfolio interactivo.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "vincular cada diseño o práctica a su ficha técnica mediante QR.",
+                "motivatingFactor_ca": "vincular cada diseño o práctica a su ficha técnica mediante QR."
+              },
+              {
+                "id": "act_3061_c11_7",
+                "title_es": "Caso “manos en redes”",
+                "title_ca": "Caso “manos en redes”",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
+                "evidence_es": "protocolo de autorización y confidencialidad.",
+                "evidence_ca": "protocolo de autorización y confidencialidad.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "analizar privacidad en fotos de manos/pies, tatuajes, joyas o rasgos identificables.",
+                "motivatingFactor_ca": "analizar privacidad en fotos de manos/pies, tatuajes, joyas o rasgos identificables."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   {
     "code": "3005",
     "name_es": "Atención al cliente",
@@ -2857,7 +5636,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
-            "relationType": "tecnica",
+            "relationType": "empleabilidad",
             "justification_es": "el cambio de color se realiza habitualmente en coordinación con otros servicios: recepción, diagnóstico, lavado, aplicación, control, retirada, peinado, explicación de cuidados y limpieza. Requiere seguir instrucciones del técnico responsable, colaborar con el equipo y actuar con responsabilidad. La FCT integra todo ello en contexto real.",
             "justification_ca": "el cambio de color se realiza habitualmente en coordinación con otros serveis: recepción, diagnóstico, lavado, aplicación, control, retirada, peinado, explicación de cuidados y limpieza. Requiere seguir instrucciones del técnico responsable, colaborar con el equipo y actuar con responsabilidad. La FCT integra todo ello en contexto real.",
             "activities": [
@@ -4773,94 +7552,94 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "activities": [
               {
                 "id": "act_3042_c12_1",
-                "title_es": "Salón-laboratorio 360º",
-                "title_ca": "Salón-laboratorio 360º",
-                "description_es": "Cada equipo resuelve un caso completo: diagnóstico, cálculo, seguridad, técnica simulada, atención, residuos e informe.    Producto final: proyecto integral.",
-                "description_ca": "Cada equipo resuelve un caso completo: diagnóstico, cálculo, seguridad, técnica simulada, atención, residuos e informe.    Producte final: proyecto integral.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Salón-laboratorio 360º.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Salón-laboratorio 360º.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "actividades/proyectos desarrollados",
+                "title_ca": "actividades/proyectos desarrollados",
+                "description_es": "Salón-laboratorio 360º",
+                "description_ca": "Salón-laboratorio 360º",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3042_c12_2",
-                "title_es": "Roles profesionales rotativos",
-                "title_ca": "Roles professionales rotativos",
-                "description_es": "Roles: científico de datos, responsable de higiene, técnico, atención, sostenibilidad, documentación y PRL.    Producto final: rúbrica de roles.",
-                "description_ca": "Roles: científico de datos, responsable de higiene, técnico, atención, sostenibilidad, documentación y PRL.    Producte final: rúbrica de roles.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Roles profesionales rotativos.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Roles professionales rotativos.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "Síntesis de conexiones por módulos",
+                "title_ca": "Síntesis de conexiones por módulos",
+                "description_es": "Con 3060 Preparación del entorno profesional",
+                "description_ca": "Con 3060 Preparació de l’entorn professional",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3042_c12_3",
-                "title_es": "Simulación FCT con imprevistos",
-                "title_ca": "Simulación FCT con imprevistos",
-                "description_es": "Aparecen tarjetas: cliente alérgico, aparato defectuoso, falta producto, retraso, residuo mal clasificado.    Producto final: actuación y reflexión.",
-                "description_ca": "Aparecen tarjetas: client alérgico, aparato defectuoso, falta producto, retraso, residuo mal clasificado.    Producte final: actuación y reflexión.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Simulación FCT con imprevistos.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Simulación FCT con imprevistos.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "Conclusión",
+                "title_ca": "Conclusión",
+                "description_es": "El módulo 3042. Ciencias aplicadas II se relaciona con todos los demás módulos del ciclo porque proporciona herramientas científicas, matemáticas, ambientales y de salud imprescindibles para trabajar de forma segura y profesional en peluquería y estética.",
+                "description_ca": "El módulo 3042. Ciències aplicades II se relaciona con todos los demás módulos del ciclo porque proporciona herramientas científicas, matemáticas, ambientales y de salud imprescindibles para trabajar de forma segura y professional en peluquería y estética.",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3042_c12_4",
-                "title_es": "Portfolio ciencia-empleo",
-                "title_ca": "Portfolio ciencia-empleo",
-                "description_es": "Recopilan evidencias: informes, gráficos, protocolos, fotos autorizadas, CV de competencias científicas.    Producto final: portfolio.",
-                "description_ca": "Recopilan evidencias: informes, gráficos, protocolos, fotos autorizadas, CV de competencias científicas.    Producte final: portfolio.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Portfolio ciencia-empleo.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Portfolio ciencia-empleo.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "Escape Room de salón 4",
+                "title_ca": "Escape Room de saló 4",
+                "description_es": "Resolución de pistas y retos colaborativos aplicando Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales antes de abrir el taller al público.",
+                "description_ca": "Resolució de pistes i reptes col·laboratius aplicant Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales abans d’obrir el taller al públic.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Ciències aplicades II."
               },
               {
                 "id": "act_3042_c12_5",
-                "title_es": "Hackathon FPB: mejora el taller",
-                "title_ca": "Hackathon FPB: mejora el taller",
-                "description_es": "En una sesión larga, equipos proponen solución a un problema real: residuos, orden, consumo, higiene o comunicación.    Producto final: pitch de mejora.",
-                "description_ca": "En una sesión larga, equips proponen solución a un problema real: residuos, orden, consumo, higiene o comunicación.    Producte final: pitch de mejora.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Hackathon FPB: mejora el taller.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Hackathon FPB: mejora el taller.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "Vídeo-tutorial demostrativo en parejas 5",
+                "title_ca": "Vídeo-tutorial demostratiu en parelles 5",
+                "description_es": "Grabación de un vídeo corto educativo demostrando la técnica y las medidas de seguridad de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "description_ca": "Enregistrament d’un vídeo curt educatiu demostrant la tècnica i les mesures de seguretat de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Ciències aplicades II."
               },
               {
                 "id": "act_3042_c12_6",
-                "title_es": "Contrato de equipo científico-profesional",
-                "title_ca": "Contrato de equipo científico-professional",
-                "description_es": "Normas de cooperación, respeto, reparto de tareas y resolución de conflictos.    Producto final: contrato firmado.",
-                "description_ca": "Normas de cooperación, respeto, reparto de tareas y resolución de conflictos.    Producte final: contrato firmado.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Contrato de equipo científico-profesional.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Contrato de equipo científico-professional.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "Role-play con clientes diversos 6",
+                "title_ca": "Role-play amb clients diversos 6",
+                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Ciències aplicades II."
               },
               {
                 "id": "act_3042_c12_7",
-                "title_es": "Ceremonia “competencias listas para empresa”",
-                "title_ca": "Ceremonia “competencias listas para empresa”",
-                "description_es": "Cada alumno presenta una evidencia de que puede aplicar ciencia en el trabajo: cálculo, higiene, seguridad, comunicación o sostenibilidad.    Producto final: exposición final breve.",
-                "description_ca": "Cada alumno presenta una evidencia de que puede aplicar ciencia en el trabajo: cálculo, higiene, seguridad, comunicación o sostenibilidad.    Producte final: exposición final breve.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Ceremonia “competencias listas para empresa”.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Ceremonia “competencias listas para empresa”.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Ciencias aplicadas II.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Ciències aplicades II."
+                "title_es": "Portfolio de evidencias de aprendizaje 7",
+                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
+                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de Trabajo en equipo, autonomía, empleabilidad, FCT y resolución de situaciones reales al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Ciencias aplicadas II.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Ciències aplicades II."
               }
             ]
           }
@@ -6723,94 +9502,94 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "activities": [
               {
                 "id": "act_3011_c10_1",
-                "title_es": "Portfolio digital FPB",
-                "title_ca": "Portfolio digital FPB",
-                "description_es": "Crear un portfolio con fichas, textos, fotos autorizadas, reflexiones, vídeos y aprendizajes.    Producto final: portfolio personal.",
-                "description_ca": "Crear un portfolio con fichas, textos, fotos autorizadas, reflexiones, vídeos y aprendizajes.    Producte final: portfolio personal.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Portfolio digital FPB.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Portfolio digital FPB.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "actividades/proyectos desarrollados",
+                "title_ca": "actividades/proyectos desarrollados",
+                "description_es": "Portfolio digital FPB",
+                "description_ca": "Portfolio digital FPB",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3011_c10_2",
-                "title_es": "Investigación guiada de producto",
-                "title_ca": "Investigación guiada de producto",
-                "description_es": "Buscar información fiable sobre un cosmético y resumirla de forma clara.    Producto final: ficha de producto.",
-                "description_ca": "Buscar información fiable sobre un cosmético y resumirla de forma clara.    Producte final: ficha de producto.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Investigación guiada de producto.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Investigación guiada de producto.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "Síntesis de conexiones por módulos",
+                "title_ca": "Síntesis de conexiones por módulos",
+                "description_es": "Con 3060 Preparación del entorno profesional",
+                "description_ca": "Con 3060 Preparació de l’entorn professional",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3011_c10_3",
-                "title_es": "Infografía profesional",
-                "title_ca": "Infografía professional",
-                "description_es": "Diseñar infografía sobre higiene, color, depilación, maquillaje, energía o sostenibilidad.    Producto final: infografía digital.",
-                "description_ca": "Diseñar infografía sobre higiene, color, depilación, maquillaje, energía o sostenibilidad.    Producte final: infografía digital.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Infografía profesional.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Infografía professional.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "Conclusión",
+                "title_ca": "Conclusión",
+                "description_es": "El módulo 3011. Comunicación y sociedad I se relaciona con todos los demás módulos del ciclo porque proporciona las competencias comunicativas, sociales, culturales y lingüísticas necesarias para transformar los aprendizajes técnicos en servicios profesionales reales.",
+                "description_ca": "El módulo 3011. Comunicació i societat I se relaciona con todos los demás módulos del ciclo porque proporciona las competencias comunicativas, sociales, culturales y lingüísticas necesarias para transformar los aprendizajes técnicos en serveis professionales reales.",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3011_c10_4",
-                "title_es": "Currículum creativo pero profesional",
-                "title_ca": "Currículum creativo pero professional",
-                "description_es": "Elaborar un CV visual para buscar FCT o primer empleo.    Producto final: CV en Word/PDF.",
-                "description_ca": "Elaborar un CV visual para buscar FCT o primer empleo.    Producte final: CV en Word/PDF.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Currículum creativo pero profesional.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Currículum creativo pero professional.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "Escape Room de salón 4",
+                "title_ca": "Escape Room de saló 4",
+                "description_es": "Resolución de pistas y retos colaborativos aplicando TIC, investigación, recogida de información, presentación digital y portfolio antes de abrir el taller al público.",
+                "description_ca": "Resolució de pistes i reptes col·laboratius aplicant TIC, investigación, recogida de información, presentación digital y portfolio abans d’obrir el taller al públic.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Comunicació i societat I."
               },
               {
                 "id": "act_3011_c10_5",
-                "title_es": "Códigos QR de protocolos",
-                "title_ca": "Códigos QR de protocolos",
-                "description_es": "Crear protocolos del taller y enlazarlos mediante QR.    Producto final: señalética QR.",
-                "description_ca": "Crear protocolos del taller y enlazarlos mediante QR.    Producte final: señalética QR.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Códigos QR de protocolos.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Códigos QR de protocolos.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "Vídeo-tutorial demostrativo en parejas 5",
+                "title_ca": "Vídeo-tutorial demostratiu en parelles 5",
+                "description_es": "Grabación de un vídeo corto educativo demostrando la técnica y las medidas de seguridad de TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "description_ca": "Enregistrament d’un vídeo curt educatiu demostrant la tècnica i les mesures de seguretat de TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Comunicació i societat I."
               },
               {
                 "id": "act_3011_c10_6",
-                "title_es": "Presentación PechaKucha beauty",
-                "title_ca": "Presentación PechaKucha beauty",
-                "description_es": "Exposición rápida con diapositivas visuales sobre un tema del ciclo.    Producto final: presentación oral digital.",
-                "description_ca": "Exposición rápida con diapositivas visuales sobre un tema del ciclo.    Producte final: presentación oral digital.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Presentación PechaKucha beauty.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Presentación PechaKucha beauty.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "Role-play con clientes diversos 6",
+                "title_ca": "Role-play amb clients diversos 6",
+                "description_es": "Dramatización de casos reales de atención, diagnóstico y resolución de dudas sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "description_ca": "Dramatització de casos reals d’atenció, diagnòstic i resolució de dubtes sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Comunicació i societat I."
               },
               {
                 "id": "act_3011_c10_7",
-                "title_es": "Fact-checking de fuentes online",
-                "title_ca": "Fact-checking de fuentes online",
-                "description_es": "Comparar una web fiable, una tienda, un influencer y un foro sobre el mismo producto.    Producto final: ranking de fiabilidad.",
-                "description_ca": "Comparar una web fiable, una tienda, un influencer y un foro sobre el mismo producto.    Producte final: ranking de fiabilidad.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Fact-checking de fuentes online.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Fact-checking de fuentes online.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Comunicación y sociedad I.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Comunicació i societat I."
+                "title_es": "Portfolio de evidencias de aprendizaje 7",
+                "title_ca": "Portafoli d’evidències d’aprenentatge 7",
+                "description_es": "Compilación de fichas de trabajo, fotos de antes/después y reflexión personal guiada sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "description_ca": "Compilació de fitxes de treball, fotos d’abans/després i reflexió personal guiada sobre TIC, investigación, recogida de información, presentación digital y portfolio.",
+                "evidence_es": "Ficha de trabajo completada y producto demostrativo de TIC, investigación, recogida de información, presentación digital y portfolio en el taller.",
+                "evidence_ca": "Fitxa de treball completada i producte demostratiu de TIC, investigación, recogida de información, presentación digital y portfolio al taller.",
+                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil.",
+                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil.",
+                "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Comunicación y sociedad I.",
+                "motivatingFactor_ca": "Repte pràctic aplicable directament a la professió i entorn real de Comunicació i societat I."
               }
             ]
           }
@@ -7740,8 +10519,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "mini manifiesto professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "cada alumno define cómo quiere que le perciban profesionalmente: cuidadoso/a, limpio/a, amable, preciso/a, responsable.",
+                "motivatingFactor_ca": "cada alumno define cómo quiere que le perciban professionalmente: cuidadoso/a, limpio/a, amable, preciso/a, responsable."
               },
               {
                 "id": "act_3062_c1_7",
@@ -7753,8 +10532,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "propuesta de experiencia de cabina.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear una experiencia profesional y agradable sin materiales caros.",
+                "motivatingFactor_ca": "crear una experiencia professional y agradable sin materiales caros."
               }
             ]
           },
@@ -7844,8 +10623,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "mini pitch professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "el cliente necesita cejas y look para graduación, fiesta o entrevista.",
+                "motivatingFactor_ca": "el client necesita cejas y look para graduación, fiesta o entrevista."
               },
               {
                 "id": "act_3062_c5_7",
@@ -7857,8 +10636,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "infografía de recomendaciones.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "analizar modas como cejas laminadas, formas extremas o trucos caseros.",
+                "motivatingFactor_ca": "analizar modas como cejas laminadas, formas extremas o trucos caseros."
               }
             ]
           },
@@ -7948,21 +10727,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "banco de respuestas professionales.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "conectar con reputación digital.",
+                "motivatingFactor_ca": "conectar con reputación digital."
               },
               {
                 "id": "act_3062_c9_7",
                 "title_es": "Programa de fidelización responsable",
                 "title_ca": "Programa de fidelización responsable",
-                "description_es": "Idea añadida: diseñar recordatorios éticos de cuidados o próximas citas, sin presionar al cliente.",
-                "description_ca": "Idea añadida: diseñar recordatorios éticos de cuidados o próximas citas, sin presionar al client.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "tarjeta o mensaje de fidelización.",
                 "evidence_ca": "tarjeta o mensaje de fidelización.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar recordatorios éticos de cuidados o próximas citas, sin presionar al cliente.",
+                "motivatingFactor_ca": "diseñar recordatorios éticos de cuidados o próximas citas, sin presionar al client."
               }
             ]
           }
@@ -8088,8 +10867,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "respuesta professional argumentada.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "el cliente pide una forma de cejas o técnica vista en TikTok/Instagram.",
+                "motivatingFactor_ca": "el client pide una forma de cejas o técnica vista en TikTok/Instagram."
               },
               {
                 "id": "act_3062_c2_7",
@@ -8101,8 +10880,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "formulario digital y protocolo de uso responsable de datos.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear formularios digitales rápidos para cabina.",
+                "motivatingFactor_ca": "crear formularios digitales rápidos para cabina."
               }
             ]
           },
@@ -8192,8 +10971,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "stop motion educativo.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear una animación paso a paso con fotos.",
+                "motivatingFactor_ca": "crear una animación paso a paso con fotos."
               },
               {
                 "id": "act_3062_c6_7",
@@ -8205,8 +10984,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "rúbrica de destreza manual.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "reto gamificado en plantillas de cejas, no sobre piel real.",
+                "motivatingFactor_ca": "reto gamificado en plantillas de cejas, no sobre pell real."
               }
             ]
           },
@@ -8296,21 +11075,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "comparación antes/después.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "reducir residuos sin perder higiene.",
+                "motivatingFactor_ca": "reducir residuos sin perder higiene."
               },
               {
                 "id": "act_3062_c10_7",
                 "title_es": "Señalética sostenible con QR",
                 "title_ca": "Señalética sostenible con QR",
-                "description_es": "Idea añadida: crear carteles con QR sobre residuos, apagado de aparatos y conservación de productos.",
-                "description_ca": "Idea añadida: crear carteles con QR sobre residuos, apagado de aparatos y conservación de productes.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "señalética para el aula-taller.",
                 "evidence_ca": "señalética para el aula-taller.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear carteles con QR sobre residuos, apagado de aparatos y conservación de productos.",
+                "motivatingFactor_ca": "crear carteles con QR sobre residuos, apagado de aparatos y conservación de productes."
               }
             ]
           }
@@ -8442,8 +11221,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "foto autorizada del setup y defensa oral.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "montar una cabina visualmente atractiva sin sacrificar higiene.",
+                "motivatingFactor_ca": "montar una cabina visualmente atractiva sin sacrificar higiene."
               },
               {
                 "id": "act_3062_c3_7",
@@ -8455,8 +11234,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "señalética digital de cabina.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear códigos QR con vídeos o infografías de preparación.",
+                "motivatingFactor_ca": "crear códigos QR con vídeos o infografías de preparación."
               }
             ]
           },
@@ -8540,27 +11319,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3062_c7_6",
                 "title_es": "Termómetro de confort",
                 "title_ca": "Termómetro de confort",
-                "description_es": "Idea añadida: crear una tarjeta para preguntar dolor, temperatura, postura, privacidad y comodidad.",
-                "description_ca": "Idea añadida: crear una tarjeta para preguntar dolor, temperatura, postura, privacidad y comodidad.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "tarjeta de confort para cabina.",
                 "evidence_ca": "tarjeta de confort para cabina.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear una tarjeta para preguntar dolor, temperatura, postura, privacidad y comodidad.",
+                "motivatingFactor_ca": "crear una tarjeta para preguntar dolor, temperatura, postura, privacidad y comodidad."
               },
               {
                 "id": "act_3062_c7_7",
                 "title_es": "Micro-pausas del profesional de estética",
                 "title_ca": "Micro-pausas del professional de estética",
-                "description_es": "Idea añadida: diseñar estiramientos breves de espalda, cuello, muñecas y hombros.",
-                "description_ca": "Idea añadida: diseñar estiramientos breves de espalda, cuello, muñecas y hombros.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "vídeo o póster de micro-pausas.",
                 "evidence_ca": "vídeo o póster de micro-pausas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar estiramientos breves de espalda, cuello, muñecas y hombros.",
+                "motivatingFactor_ca": "diseñar estiramientos breves de espalda, cuello, muñecas y hombros."
               }
             ]
           },
@@ -8644,27 +11423,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3062_c11_6",
                 "title_es": "Campaña “piel cuidada, planeta cuidado”",
                 "title_ca": "Campaña “pell cuidada, planeta cuidado”",
-                "description_es": "Idea añadida: campaña juvenil para clientes sobre depilación responsable y residuos.",
-                "description_ca": "Idea añadida: campaña juvenil para clients sobre depilación responsable y residuos.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "vídeo, póster o carrusel.",
                 "evidence_ca": "vídeo, póster o carrusel.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "campaña juvenil para clientes sobre depilación responsable y residuos.",
+                "motivatingFactor_ca": "campaña juvenil para clients sobre depilación responsable y residuos."
               },
               {
                 "id": "act_3062_c11_7",
                 "title_es": "Diseño de cabina sostenible para jóvenes",
                 "title_ca": "Diseño de cabina sostenible para jóvenes",
-                "description_es": "Idea añadida: crear un concepto de cabina atractiva, inclusiva y ecológica.",
-                "description_ca": "Idea añadida: crear un concepto de cabina atractiva, inclusiva y ecológica.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "moodboard y medidas concretas.",
                 "evidence_ca": "moodboard y medidas concretas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear un concepto de cabina atractiva, inclusiva y ecológica.",
+                "motivatingFactor_ca": "crear un concepto de cabina atractiva, inclusiva y ecológica."
               }
             ]
           }
@@ -8792,8 +11571,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "carnet simbólico de “auxiliar seguro/a”.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "superar pruebas de seguridad antes de realizar prácticas con supervisión.",
+                "motivatingFactor_ca": "superar pruebas de seguridad antes de realizar prácticas con supervisión."
               },
               {
                 "id": "act_3062_c4_7",
@@ -8805,8 +11584,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "plan de reducción responsable.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "buscar formas de reducir residuos sin comprometer higiene.",
+                "motivatingFactor_ca": "buscar formas de reducir residuos sin comprometer higiene."
               }
             ]
           },
@@ -8890,14 +11669,14 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3062_c8_6",
                 "title_es": "Temporizador creativo de cabina",
                 "title_ca": "Temporizador creativo de cabina",
-                "description_es": "Idea añadida: diseñar alarmas, tarjetas o códigos de color para controlar tiempos de cera/decoloración.",
-                "description_ca": "Idea añadida: diseñar alarmas, tarjetas o códigos de color para controlar tiempos de cera/decoloración.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "sistema visual de control de tiempos.",
                 "evidence_ca": "sistema visual de control de tiempos.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar alarmas, tarjetas o códigos de color para controlar tiempos de cera/decoloración.",
+                "motivatingFactor_ca": "diseñar alarmas, tarjetas o códigos de color para controlar tiempos de cera/decoloración."
               },
               {
                 "id": "act_3062_c8_7",
@@ -8909,8 +11688,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "reflexión y checklist de calidad-tiempo.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "demostrar que hacerlo bien no es correr.",
+                "motivatingFactor_ca": "demostrar que hacerlo bien no es correr."
               }
             ]
           },
@@ -8994,27 +11773,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3062_c12_6",
                 "title_es": "Hackathon “mejora la cabina”",
                 "title_ca": "Hackathon “mejora la cabina”",
-                "description_es": "Idea añadida: resolver un problema real del aula: residuos, tiempos, orden, comunicación, confort o higiene.",
-                "description_ca": "Idea añadida: resolver un problema real del aula: residuos, tiempos, orden, comunicación, confort o higiene.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "pitch de mejora ante la clase.",
                 "evidence_ca": "pitch de mejora ante la clase.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "resolver un problema real del aula: residuos, tiempos, orden, comunicación, confort o higiene.",
+                "motivatingFactor_ca": "resolver un problema real del aula: residuos, tiempos, orden, comunicación, confort o higiene."
               },
               {
                 "id": "act_3062_c12_7",
                 "title_es": "Certamen “auxiliar de depilación junior”",
                 "title_ca": "Certamen “auxiliar de depilación junior”",
-                "description_es": "Idea añadida: exposición final de competencias: ficha, protocolo, role-play, técnica simulada, campaña o portfolio.",
-                "description_ca": "Idea añadida: exposición final de competencias: ficha, protocolo, role-play, técnica simulada, campaña o portfolio.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "muestra final con insignias de logro.",
                 "evidence_ca": "muestra final con insignias de logro.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "exposición final de competencias: ficha, protocolo, role-play, técnica simulada, campaña o portfolio.",
+                "motivatingFactor_ca": "exposición final de competencias: ficha, protocolo, role-play, técnica simulada, campaña o portfolio."
               }
             ]
           }
@@ -9059,7 +11838,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
-            "relationType": "tecnica",
+            "relationType": "empleabilidad",
             "justification_es": "el autoconocimiento y la autoestima son esenciales para construir una identidad profesional. En Peluquería y Estética el alumnado debe reconocer qué se le da bien, qué le motiva —maquillaje, uñas, barbería, color, atención, redes, creatividad— y cómo convertir esas fortalezas en empleabilidad. Se relaciona con imagen profesional, atención al cliente, comunicación, trabajo en empresa y reflexión sobre hábitos saludables.",
             "justification_ca": "el autoconocimiento y la autoestima son esenciales para construir una identidad professional. En Peluquería y Estética el alumnat debe reconocer qué se le da bien, qué le motiva —maquillaje, ungles, barbería, color, atención, redes, creatividad— y cómo convertir esas fortalezas en empleabilidad. Se relaciona con imagen professional, atenció al client, comunicación, trabajo en empresa y reflexión sobre hábitos saludables.",
             "activities": [
@@ -9609,94 +12388,94 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "activities": [
               {
                 "id": "act_3159_c12_1",
-                "title_es": "Simulación “primer día de FCT”",
-                "title_ca": "Simulación “primer día de FCT”",
-                "description_es": "El alumnado recibe instrucciones de empresa, horario, uniforme, normas y tareas. Debe presentarse, preguntar dudas, preparar puesto y actuar profesionalmente.    Producto final: rúbrica de adaptación inicial.",
-                "description_ca": "El alumnat recibe instrucciones de empresa, horario, uniforme, normas y tareas. Debe presentarse, preguntar dudas, preparar puesto y actuar professionalmente.    Producte final: rúbrica de adaptación inicial.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Simulación “primer día de FCT”.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Simulación “primer día de FCT”.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1a-1i, 2a-2h, 3a-3h, 4a-4f.",
+                "title_ca": "1a-1i, 2a-2h, 3a-3h, 4a-4f.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c12_2",
-                "title_es": "Manual del alumno en prácticas",
-                "title_ca": "Manual del alumno en prácticas",
-                "description_es": "Crear un manual con normas: puntualidad, actitud, móvil, higiene, preguntas, comunicación con tutor, confidencialidad y seguridad.    Producto final: manual FCT del grupo.",
-                "description_ca": "Crear un manual con normas: puntualidad, actitud, móvil, higiene, preguntas, comunicación con tutor, confidencialidad y seguridad.    Producte final: manual FCT del grupo.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Manual del alumno en prácticas.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Manual del alumno en prácticas.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1c, 4g, 7g-7h.",
+                "title_ca": "1c, 4g, 7g-7h.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c12_3",
-                "title_es": "Diario de prácticas anticipado",
-                "title_ca": "Diario de prácticas anticipado",
-                "description_es": "Antes de ir a empresa, practican cómo registrar lo aprendido: tarea, dificultad, ayuda recibida, mejora y emoción.    Producto final: plantilla de diario FCT.",
-                "description_ca": "Antes de ir a empresa, practican cómo registrar lo aprendido: tarea, dificultad, ayuda recibida, mejora y emoción.    Producte final: plantilla de diario FCT.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Diario de prácticas anticipado.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Diario de prácticas anticipado.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "2d-2f, 11d, 13f, 14f.",
+                "title_ca": "2d-2f, 11d, 13f, 14f.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c12_4",
-                "title_es": "Plan de mejora antes de FCT",
-                "title_ca": "Plan de mejora antes de FCT",
-                "description_es": "Cada alumno elige tres competencias a mejorar antes de empresa: hablar con clientes, orden, cálculo, técnica, puntualidad o seguridad.    Producto final: plan personal con seguimiento.",
-                "description_ca": "Cada alumno elige tres competencias a mejorar antes de empresa: hablar con clients, orden, cálculo, técnica, puntualidad o seguridad.    Producte final: plan personal con seguimiento.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Plan de mejora antes de FCT.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Plan de mejora antes de FCT.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i.",
+                "title_ca": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c12_5",
-                "title_es": "Entrevista con tutor de empresa simulada",
-                "title_ca": "Entrevista con tutor de empresa simulada",
-                "description_es": "Simular una entrevista previa a prácticas: intereses, disponibilidad, normas, puntos fuertes y aspectos a mejorar.    Producto final: ficha de preparación.",
-                "description_ca": "Simular una entrevista previa a prácticas: intereses, disponibilidad, normas, puntos fuertes y aspectos a mejorar.    Producte final: ficha de preparación.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Entrevista con tutor de empresa simulada.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Entrevista con tutor de empresa simulada.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "2a-2f, 3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g.",
+                "title_ca": "2a-2f, 3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c12_6",
-                "title_es": "Caja de imprevistos de empresa",
-                "title_ca": "Caja de imprevistos de empresa",
-                "description_es": "Tarjetas: cliente se retrasa, producto agotado, no entiendo una instrucción, cometo un error, cliente se queja, compañero no colabora. Deben actuar.    Producto final: protocolo de actuación ante imprevistos.",
-                "description_ca": "Tarjetas: client se retrasa, producto agotado, no entiendo una instrucción, cometo un error, client se queja, compañero no colabora. Deben actuar.    Producte final: protocolo de actuación ante imprevistos.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Caja de imprevistos de empresa.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Caja de imprevistos de empresa.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f.",
+                "title_ca": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f.",
+                "description_es": "Justificación: el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral.",
+                "description_ca": "Justificació: el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral.",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c12_7",
-                "title_es": "Ceremonia de competencias listas para FCT",
-                "title_ca": "Ceremonia de competencias listas para FCT",
-                "description_es": "Cada alumno presenta una evidencia de que está avanzando: CV, portfolio, ficha técnica, rúbrica, mejora de actitud o proyecto.    Producto final: portfolio final de empleabilidad.",
-                "description_ca": "Cada alumno presenta una evidencia de que está avanzando: CV, portfolio, ficha técnica, rúbrica, mejora de actitud o proyecto.    Producte final: portfolio final de empleabilidad.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Ceremonia de competencias listas para FCT.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Ceremonia de competencias listas para FCT.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "actividades o proyectos desarrollados",
+                "title_ca": "actividades o proyectos desarrollados",
+                "description_es": "Simulación “primer día de FCT”",
+                "description_ca": "Simulación “primer día de FCT”",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               }
             ]
           }
@@ -9961,94 +12740,94 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "activities": [
               {
                 "id": "act_3159_c4_1",
-                "title_es": "Semáforo emocional del taller",
-                "title_ca": "Semáforo emocional del taller",
-                "description_es": "Antes de una práctica, cada alumno marca cómo llega: verde —bien—, amarillo —nervioso—, rojo —bloqueado—. Se proponen estrategias breves: respiración, pedir ayuda, dividir la tarea.    Producto final: panel de estrategias emocionales.",
-                "description_ca": "Antes de una práctica, cada alumno marca cómo llega: verde —bien—, amarillo —nervioso—, rojo —bloqueado—. Se proponen estrategias breves: respiración, pedir ayuda, dividir la tarea.    Producte final: panel de estrategias emocionales.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Semáforo emocional del taller.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Semáforo emocional del taller.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1f-1g, 4a-4h.",
+                "title_ca": "1f-1g, 4a-4h.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c4_2",
-                "title_es": "Cliente enfadado, respuesta profesional",
-                "title_ca": "Cliente enfadado, respuesta professional",
-                "description_es": "Role-play con situaciones: retraso, resultado no esperado, dolor, irritación o malentendido. El alumnado practica escuchar, disculparse si procede, explicar y ofrecer alternativa.    Producto final: protocolo de respuesta calmada.",
-                "description_ca": "Role-play con situaciones: retraso, resultado no esperado, dolor, irritación o malentendido. El alumnat practica escuchar, disculparse si procede, explicar y ofrecer alternativa.    Producte final: protocolo de respuesta calmada.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Cliente enfadado, respuesta profesional.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Cliente enfadado, respuesta professional.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "2d-2f, 3k, 4l-4m.",
+                "title_ca": "2d-2f, 3k, 4l-4m.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c4_3",
-                "title_es": "Escape room de conflictos",
-                "title_ca": "Escape room de conflictos",
-                "description_es": "Para resolver un conflicto de equipo, deben superar pruebas: identificar emoción, elegir frase asertiva, ordenar pasos de solución y redactar acuerdo.    Producto final: código final y reflexión.",
-                "description_ca": "Para resolver un conflicto de equipo, deben superar pruebas: identificar emoción, elegir frase asertiva, ordenar pasos de solución y redactar acuerdo.    Producte final: código final y reflexión.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Escape room de conflictos.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Escape room de conflictos.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1h, 1k, 3n, 4l.",
+                "title_ca": "1h, 1k, 3n, 4l.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c4_4",
-                "title_es": "Del “no puedo” al “todavía no”",
-                "title_ca": "Del “no puedo” al “todavía no”",
-                "description_es": "Actividad de mentalidad de crecimiento: cada alumno identifica una técnica o habilidad que le cuesta y diseña tres microacciones para mejorarla.    Producto final: plan de mejora personal.",
-                "description_ca": "Activitat de mentalidad de crecimiento: cada alumno identifica una técnica o habilidad que le cuesta y diseña tres microacciones para mejorarla.    Producte final: plan de mejora personal.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Del “no puedo” al “todavía no”.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Del “no puedo” al “todavía no”.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "2c, 3c, 3j, 4d, 4n.",
+                "title_ca": "2c, 3c, 3j, 4d, 4n.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c4_5",
-                "title_es": "Historias de fracaso útil",
-                "title_ca": "Historias de fracaso útil",
-                "description_es": "Se analizan errores de taller —mancha, mal cálculo, olvido de material, nervios— y se transforman en aprendizaje.    Producto final: mural “errores que enseñan”.",
-                "description_ca": "Se analizan errores de taller —mancha, mal cálculo, olvido de material, nervios— y se transforman en aprendizaje.    Producte final: mural “errores que enseñan”.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Historias de fracaso útil.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Historias de fracaso útil.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1g-1i, 3k, 5j-5k.",
+                "title_ca": "1g-1i, 3k, 5j-5k.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c4_6",
-                "title_es": "Reto de feedback sin drama",
-                "title_ca": "Reto de feedback sin drama",
-                "description_es": "Practican dar y recibir feedback usando la fórmula: algo positivo, algo concreto a mejorar, propuesta de ayuda.    Producto final: tarjetas de feedback profesional.",
-                "description_ca": "Practican dar y recibir feedback usando la fórmula: algo positivo, algo concreto a mejorar, propuesta de ayuda.    Producte final: tarjetas de feedback professional.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Reto de feedback sin drama.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Reto de feedback sin drama.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "3d, 3l-3m, 4e, 4k-4l.",
+                "title_ca": "3d, 3l-3m, 4e, 4k-4l.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               },
               {
                 "id": "act_3159_c4_7",
-                "title_es": "Caja de herramientas anti-estrés para FCT",
-                "title_ca": "Caja de herramientas anti-estrés para FCT",
-                "description_es": "Cada alumno crea un kit de estrategias: respiración, pedir instrucciones, anotar pasos, confirmar dudas, organizar material, hablar con respeto.    Producto final: guía personal para prácticas.",
-                "description_ca": "Cada alumno crea un kit de estrategias: respiración, pedir instrucciones, anotar pasos, confirmar dudas, organizar material, hablar con respeto.    Producte final: guía personal para prácticas.",
-                "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Caja de herramientas anti-estrés para FCT.",
-                "evidence_ca": "Fitxa de treball, rúbrica d’execució i producte demostratiu de Caja de herramientas anti-estrés para FCT.",
-                "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas.",
-                "diversitySupport_ca": "Instruccions visuals pas a pas, modelatge previ pel docent, lectura fàcil i treball en parelles.",
-                "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
-                "motivatingFactor_ca": "Repte pràctic motivador connectat amb situacions reals del saló i Itinerari personal per a l’ocupabilitat."
+                "title_es": "1a-1i, 3d-3f, 4a-4f.",
+                "title_ca": "1a-1i, 3d-3f, 4a-4f.",
+                "description_es": "",
+                "description_ca": "",
+                "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+                "evidence_ca": "Rúbrica visual i producte d’avaluació formativa.",
+                "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
+                "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
+                "motivatingFactor_es": "",
+                "motivatingFactor_ca": ""
               }
             ]
           },
@@ -10618,21 +13397,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "rúbrica de ondas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "reto técnico con muñeca o mechones, buscando ondas limpias y seguras.",
+                "motivatingFactor_ca": "reto técnico con muñeca o mechones, buscando ondas limpias y seguras."
               },
               {
                 "id": "act_3064_c6_7",
                 "title_es": "Reel educativo “3 errores con el secador”",
                 "title_ca": "Reel educativo “3 errores con el secador”",
-                "description_es": "Idea añadida: crear un vídeo corto sobre distancia, temperatura y protección térmica.",
-                "description_ca": "Idea añadida: crear un vídeo corto sobre distancia, temperatura y protección térmica.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "vídeo interno o guion de Reel.",
                 "evidence_ca": "vídeo interno o guion de Reel.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear un vídeo corto sobre distancia, temperatura y protección térmica.",
+                "motivatingFactor_ca": "crear un vídeo corto sobre distancia, temperatura y protección térmica."
               }
             ]
           },
@@ -10716,14 +13495,14 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c11_6",
                 "title_es": "QR de ficha rápida",
                 "title_ca": "QR de ficha rápida",
-                "description_es": "Idea añadida: crear un acceso QR a la ficha o protocolo usado en el taller.",
-                "description_ca": "Idea añadida: crear un acceso QR a la ficha o protocolo usado en el taller.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "sistema de documentación rápida.",
                 "evidence_ca": "sistema de documentación rápida.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear un acceso QR a la ficha o protocolo usado en el taller.",
+                "motivatingFactor_ca": "crear un acceso QR a la ficha o protocolo usado en el taller."
               },
               {
                 "id": "act_3064_c11_7",
@@ -10735,8 +13514,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "decálogo de privacidad.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "trabajar confidencialidad e imagen.",
+                "motivatingFactor_ca": "trabajar confidencialidad e imagen."
               }
             ]
           }
@@ -10860,8 +13639,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "foto del puesto y defensa de por qué es professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "montar un puesto visualmente atractivo pero también seguro e higiénico.",
+                "motivatingFactor_ca": "montar un puesto visualmente atractivo pero también seguro e higiénico."
               },
               {
                 "id": "act_3064_c2_7",
@@ -10873,8 +13652,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "ficha del maletín professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar el kit básico para FCT o primer empleo.",
+                "motivatingFactor_ca": "diseñar el kit básico para FCT o primer empleo."
               }
             ]
           },
@@ -10958,27 +13737,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c7_6",
                 "title_es": "Simulador de permanente sin químicos",
                 "title_ca": "Simulador de permanente sin químicos",
-                "description_es": "Idea añadida: practicar particiones, moldes, tensión y orden con agua o producto inocuo.",
-                "description_ca": "Idea añadida: practicar particiones, moldes, tensión y orden con agua o producto inocuo.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "montaje en muñeca evaluado.",
                 "evidence_ca": "montaje en muñeca evaluado.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "practicar particiones, moldes, tensión y orden con agua o producto inocuo.",
+                "motivatingFactor_ca": "practicar particiones, moldes, tensión y orden con agua o producto inocuo."
               },
               {
                 "id": "act_3064_c7_7",
                 "title_es": "Cliente quiere rizos virales",
                 "title_ca": "Cliente quiere rizos virales",
-                "description_es": "Idea añadida: analizar una imagen de redes y explicar viabilidad, mantenimiento, riesgos y alternativas.",
-                "description_ca": "Idea añadida: analizar una imagen de redes y explicar viabilidad, mantenimiento, riesgos y alternativas.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "asesoramiento profesional escrito y oral.",
                 "evidence_ca": "asesoramiento professional escrito y oral.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "analizar una imagen de redes y explicar viabilidad, mantenimiento, riesgos y alternativas.",
+                "motivatingFactor_ca": "analizar una imagen de redes y explicar viabilidad, mantenimiento, riesgos y alternativas."
               }
             ]
           },
@@ -11062,27 +13841,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c12_6",
                 "title_es": "Respuesta a reseña online",
                 "title_ca": "Respuesta a reseña online",
-                "description_es": "Idea añadida: redactar respuesta profesional a una crítica ficticia.",
-                "description_ca": "Idea añadida: redactar respuesta professional a una crítica ficticia.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "banco de respuestas.",
                 "evidence_ca": "banco de respuestas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "redactar respuesta profesional a una crítica ficticia.",
+                "motivatingFactor_ca": "redactar respuesta professional a una crítica ficticia."
               },
               {
                 "id": "act_3064_c12_7",
                 "title_es": "Chatbot de preguntas frecuentes capilares",
                 "title_ca": "Chatbot de preguntas frecuentes capilares",
-                "description_es": "Idea añadida: crear FAQ sobre lavado, productos, secado, permanente, cuidados y duración.",
-                "description_ca": "Idea añadida: crear FAQ sobre lavado, productes, secado, permanente, cuidados y duración.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "guion de chatbot o folleto interactivo.",
                 "evidence_ca": "guion de chatbot o folleto interactivo.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear FAQ sobre lavado, productos, secado, permanente, cuidados y duración.",
+                "motivatingFactor_ca": "crear FAQ sobre lavado, productes, secado, permanente, cuidados y duración."
               }
             ]
           }
@@ -11210,21 +13989,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "mapa de transmisión y medidas preventivas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "usar polvo fluorescente o tarjetas de contaminación simulada.",
+                "motivatingFactor_ca": "usar polvo fluorescente o tarjetas de contaminación simulada."
               },
               {
                 "id": "act_3064_c3_7",
                 "title_es": "Escape room “salva el salón del contagio”",
                 "title_ca": "Escape room “salva el saló del contagio”",
-                "description_es": "Idea añadida: resolver pruebas sobre limpieza, desinfección, lavado de manos, toallas y útiles.",
-                "description_ca": "Idea añadida: resolver pruebas sobre limpieza, desinfección, lavado de manos, toallas y útiles.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "dossier de pruebas y protocolo final.",
                 "evidence_ca": "dossier de pruebas y protocolo final.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "resolver pruebas sobre limpieza, desinfección, lavado de manos, toallas y útiles.",
+                "motivatingFactor_ca": "resolver pruebas sobre limpieza, desinfección, lavado de manos, toallas y útiles."
               }
             ]
           },
@@ -11308,27 +14087,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c8_6",
                 "title_es": "Micro-pausas del peluquero/a",
                 "title_ca": "Micro-pausas del peluquero/a",
-                "description_es": "Idea añadida: diseñar pausas de cuello, hombros, muñeca y espalda.",
-                "description_ca": "Idea añadida: diseñar pausas de cuello, hombros, muñeca y espalda.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "vídeo o póster de estiramientos.",
                 "evidence_ca": "vídeo o póster de estiramientos.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar pausas de cuello, hombros, muñeca y espalda.",
+                "motivatingFactor_ca": "diseñar pausas de cuello, hombros, muñeca y espalda."
               },
               {
                 "id": "act_3064_c8_7",
                 "title_es": "Termómetro de confort del cliente",
                 "title_ca": "Termómetro de confort del client",
-                "description_es": "Idea añadida: crear una escala sencilla para preguntar temperatura, postura, presión y comodidad.",
-                "description_ca": "Idea añadida: crear una escala sencilla para preguntar temperatura, postura, presión y comodidad.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "tarjeta de confort para role-play.",
                 "evidence_ca": "tarjeta de confort para role-play.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear una escala sencilla para preguntar temperatura, postura, presión y comodidad.",
+                "motivatingFactor_ca": "crear una escala sencilla para preguntar temperatura, postura, presión y comodidad."
               }
             ]
           },
@@ -11412,27 +14191,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c13_6",
                 "title_es": "Avatar digital de cambio de look",
                 "title_ca": "Avatar digital de cambio de look",
-                "description_es": "Idea añadida: probar estilos sobre avatares o plantillas sin riesgo.",
-                "description_ca": "Idea añadida: probar estilos sobre avatares o plantillas sin riesgo.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "comparativa de tres looks.",
                 "evidence_ca": "comparativa de tres looks.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "probar estilos sobre avatares o plantillas sin riesgo.",
+                "motivatingFactor_ca": "probar estilos sobre avatares o plantillas sin riesgo."
               },
               {
                 "id": "act_3064_c13_7",
                 "title_es": "Reto “look festival / graduación”",
                 "title_ca": "Reto “look festival / graduación”",
-                "description_es": "Idea añadida: crear propuesta completa para una ocasión cercana al alumnado.",
-                "description_ca": "Idea añadida: crear propuesta completa para una ocasión cercana al alumnat.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "pitch de imagen global.",
                 "evidence_ca": "pitch de imagen global.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear propuesta completa para una ocasión cercana al alumnado.",
+                "motivatingFactor_ca": "crear propuesta completa para una ocasión cercana al alumnat."
               }
             ]
           }
@@ -11558,8 +14337,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "ranking razonado.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "revisar productos capilares populares en TikTok/Instagram.",
+                "motivatingFactor_ca": "revisar productes capilares populares en TikTok/Instagram."
               },
               {
                 "id": "act_3064_c4_7",
@@ -11571,8 +14350,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "catálogo de texturas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "explorar geles, espumas, cremas, sprays y mascarillas de forma sensorial y segura.",
+                "motivatingFactor_ca": "explorar geles, espumas, cremas, sprays y mascarillas de forma sensorial y segura."
               }
             ]
           },
@@ -11656,27 +14435,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c9_6",
                 "title_es": "Escape room PRL del salón",
                 "title_ca": "Escape room PRL del saló",
-                "description_es": "Idea añadida: detectar errores ocultos: cable cerca de agua, producto abierto, suelo mojado, guantes olvidados.",
-                "description_ca": "Idea añadida: detectar errores ocultos: cable cerca de agua, producto abierto, suelo mojado, guantes olvidados.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "lista de errores y soluciones.",
                 "evidence_ca": "lista de errores y soluciones.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "detectar errores ocultos: cable cerca de agua, producto abierto, suelo mojado, guantes olvidados.",
+                "motivatingFactor_ca": "detectar errores ocultos: cable cerca de agua, producto abierto, suelo mojado, guantes olvidados."
               },
               {
                 "id": "act_3064_c9_7",
                 "title_es": "Carnet de seguridad del lavacabezas",
                 "title_ca": "Carnet de seguridad del lavacabezas",
-                "description_es": "Idea añadida: superar pruebas breves sobre agua/electricidad, EPI, higiene, postura y productos.",
-                "description_ca": "Idea añadida: superar pruebas breves sobre agua/electricidad, EPI, higiene, postura y productes.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "carnet simbólico.",
                 "evidence_ca": "carnet simbólico.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "superar pruebas breves sobre agua/electricidad, EPI, higiene, postura y productos.",
+                "motivatingFactor_ca": "superar pruebas breves sobre agua/electricidad, EPI, higiene, postura y productes."
               }
             ]
           },
@@ -11760,27 +14539,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c14_6",
                 "title_es": "Reto “30% menos desperdicio”",
                 "title_ca": "Reto “30% menos desperdicio”",
-                "description_es": "Idea añadida: reducir producto, agua o energía en una práctica simulada sin perder calidad.",
-                "description_ca": "Idea añadida: reducir producto, agua o energía en una práctica simulada sin perder calidad.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "comparación antes/después.",
                 "evidence_ca": "comparación antes/después.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "reducir producto, agua o energía en una práctica simulada sin perder calidad.",
+                "motivatingFactor_ca": "reducir producto, agua o energía en una práctica simulada sin perder calidad."
               },
               {
                 "id": "act_3064_c14_7",
                 "title_es": "Eco-salón capilar",
                 "title_ca": "Eco-saló capilar",
-                "description_es": "Idea añadida: diseñar un salón sostenible especializado en lavado y peinado.",
-                "description_ca": "Idea añadida: diseñar un saló sostenible especializado en lavado y peinado.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "proyecto visual y medidas concretas.",
                 "evidence_ca": "proyecto visual y medidas concretas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar un salón sostenible especializado en lavado y peinado.",
+                "motivatingFactor_ca": "diseñar un saló sostenible especializado en lavado y peinado."
               }
             ]
           }
@@ -11906,8 +14685,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "protocolo de experiencia client.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "convertir el lavado en experiencia de bienestar profesional, sin perder técnica.",
+                "motivatingFactor_ca": "convertir el lavado en experiencia de bienestar professional, sin perder técnica."
               },
               {
                 "id": "act_3064_c5_7",
@@ -11919,8 +14698,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "guía de dosificación responsable.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "trabajar sostenibilidad y técnica.",
+                "motivatingFactor_ca": "trabajar sostenibilidad y técnica."
               }
             ]
           },
@@ -12004,27 +14783,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c10_6",
                 "title_es": "Temporizador creativo de taller",
                 "title_ca": "Temporizador creativo de taller",
-                "description_es": "Idea añadida: crear alarmas, tarjetas o códigos de color para controlar tiempos.",
-                "description_ca": "Idea añadida: crear alarmas, tarjetas o códigos de color para controlar tiempos.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "sistema visual de tiempos.",
                 "evidence_ca": "sistema visual de tiempos.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear alarmas, tarjetas o códigos de color para controlar tiempos.",
+                "motivatingFactor_ca": "crear alarmas, tarjetas o códigos de color para controlar tiempos."
               },
               {
                 "id": "act_3064_c10_7",
                 "title_es": "Reto “eficiente sin correr”",
                 "title_ca": "Reto “eficiente sin correr”",
-                "description_es": "Idea añadida: realizar una simulación equilibrando tiempo, higiene, seguridad y trato.",
-                "description_ca": "Idea añadida: realizar una simulación equilibrando tiempo, higiene, seguridad y trato.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "evaluación de eficiencia profesional.",
                 "evidence_ca": "evaluación de eficiencia professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "realizar una simulación equilibrando tiempo, higiene, seguridad y trato.",
+                "motivatingFactor_ca": "realizar una simulación equilibrando tiempo, higiene, seguridad y trato."
               }
             ]
           },
@@ -12108,27 +14887,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3064_c15_6",
                 "title_es": "Hackathon “mejora el lavacabezas”",
                 "title_ca": "Hackathon “mejora el lavacabezas”",
-                "description_es": "Idea añadida: proponer mejoras de organización, confort, higiene, ahorro o comunicación.",
-                "description_ca": "Idea añadida: proponer mejoras de organización, confort, higiene, ahorro o comunicación.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "pitch de mejora.",
                 "evidence_ca": "pitch de mejora.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "proponer mejoras de organización, confort, higiene, ahorro o comunicación.",
+                "motivatingFactor_ca": "proponer mejoras de organización, confort, higiene, ahorro o comunicación."
               },
               {
                 "id": "act_3064_c15_7",
                 "title_es": "Certamen “auxiliar capilar junior”",
                 "title_ca": "Certamen “auxiliar capilar junior”",
-                "description_es": "Idea añadida: exposición final de evidencias: lavado, peinado, ficha, protocolo, vídeo, portfolio o campaña sostenible.",
-                "description_ca": "Idea añadida: exposición final de evidencias: lavado, peinado, ficha, protocolo, vídeo, portfolio o campaña sostenible.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "muestra de competencias con insignias.",
                 "evidence_ca": "muestra de competencias con insignias.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "exposición final de evidencias: lavado, peinado, ficha, protocolo, vídeo, portfolio o campaña sostenible.",
+                "motivatingFactor_ca": "exposición final de evidencias: lavado, peinado, ficha, protocolo, vídeo, portfolio o campaña sostenible."
               }
             ]
           }
@@ -12260,8 +15039,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "ficha visual del maletín professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar un kit básico para FCT o primer empleo.",
+                "motivatingFactor_ca": "diseñar un kit básico para FCT o primer empleo."
               },
               {
                 "id": "act_3063_c1_7",
@@ -12273,8 +15052,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "evidence_ca": "foto del setup y rúbrica de professionalidad.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "montar un puesto atractivo para foto o vídeo, pero cumpliendo higiene y PRL.",
+                "motivatingFactor_ca": "montar un puesto atractivo para foto o vídeo, pero cumpliendo higiene y PRL."
               }
             ]
           },
@@ -12358,27 +15137,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c5_6",
                 "title_es": "Avatar de visagismo",
                 "title_ca": "Avatar de visagismo",
-                "description_es": "Idea añadida: probar correcciones sobre avatares digitales o plantillas de rostro.",
-                "description_ca": "Idea añadida: probar correcciones sobre avatares digitales o plantillas de rostro.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "antes/después en plantilla con explicación.",
                 "evidence_ca": "antes/después en plantilla con explicación.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "probar correcciones sobre avatares digitales o plantillas de rostro.",
+                "motivatingFactor_ca": "probar correcciones sobre avatares digitales o plantillas de rostro."
               },
               {
                 "id": "act_3063_c5_7",
                 "title_es": "Reto “simetría imposible”",
                 "title_ca": "Reto “simetría imposible”",
-                "description_es": "Idea añadida: gamificar el diseño de cejas, eyeliner o fantasía simétrica en papel/plantilla.",
-                "description_ca": "Idea añadida: gamificar el diseño de cejas, eyeliner o fantasía simétrica en papel/plantilla.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "panel de precisión y corrección.",
                 "evidence_ca": "panel de precisión y corrección.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "gamificar el diseño de cejas, eyeliner o fantasía simétrica en papel/plantilla.",
+                "motivatingFactor_ca": "gamificar el diseño de cejas, eyeliner o fantasía simétrica en papel/plantilla."
               }
             ]
           },
@@ -12462,27 +15241,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c9_6",
                 "title_es": "Respuesta a reseña negativa online",
                 "title_ca": "Respuesta a reseña negativa online",
-                "description_es": "Idea añadida: redactar respuesta profesional, sin discutir ni revelar datos.",
-                "description_ca": "Idea añadida: redactar respuesta professional, sin discutir ni revelar datos.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "banco de respuestas.",
                 "evidence_ca": "banco de respuestas.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "redactar respuesta profesional, sin discutir ni revelar datos.",
+                "motivatingFactor_ca": "redactar respuesta professional, sin discutir ni revelar datos."
               },
               {
                 "id": "act_3063_c9_7",
                 "title_es": "Chatbot de preguntas frecuentes de maquillaje",
                 "title_ca": "Chatbot de preguntas frecuentes de maquillaje",
-                "description_es": "Idea añadida: crear FAQ sobre duración, alergias, preparación de piel, precio, cuidados y retirada.",
-                "description_ca": "Idea añadida: crear FAQ sobre duración, alergias, preparación de pell, precio, cuidados y retirada.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "guion tipo chatbot o folleto interactivo.",
                 "evidence_ca": "guion tipo chatbot o folleto interactivo.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear FAQ sobre duración, alergias, preparación de piel, precio, cuidados y retirada.",
+                "motivatingFactor_ca": "crear FAQ sobre duración, alergias, preparación de pell, precio, cuidados y retirada."
               }
             ]
           },
@@ -12566,27 +15345,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c13_6",
                 "title_es": "Face chart challenge",
                 "title_ca": "Face chart challenge",
-                "description_es": "Idea añadida: crear diseños sobre plantillas de rostro antes de maquillar.",
-                "description_ca": "Idea añadida: crear diseños sobre plantillas de rostro antes de maquillar.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "galería de face charts.",
                 "evidence_ca": "galería de face charts.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "crear diseños sobre plantillas de rostro antes de maquillar.",
+                "motivatingFactor_ca": "crear diseños sobre plantillas de rostro antes de maquillar."
               },
               {
                 "id": "act_3063_c13_7",
                 "title_es": "Filtros vs maquillaje real",
                 "title_ca": "Filtros vs maquillaje real",
-                "description_es": "Idea añadida: analizar cómo los filtros modifican expectativas y autoestima.",
-                "description_ca": "Idea añadida: analizar cómo los filtros modifican expectativas y autoestima.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "campaña de imagen real y saludable.",
                 "evidence_ca": "campaña de imagen real y saludable.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "analizar cómo los filtros modifican expectativas y autoestima.",
+                "motivatingFactor_ca": "analizar cómo los filtros modifican expectativas y autoestima."
               }
             ]
           }
@@ -12708,27 +15487,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c2_6",
                 "title_es": "Simulación de contaminación invisible",
                 "title_ca": "Simulación de contaminación invisible",
-                "description_es": "Idea añadida: usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a producto y rostro.",
-                "description_ca": "Idea añadida: usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a producto y rostro.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "mapa de contaminación y medidas correctoras.",
                 "evidence_ca": "mapa de contaminación y medidas correctoras.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a producto y rostro.",
+                "motivatingFactor_ca": "usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a producto y rostro."
               },
               {
                 "id": "act_3063_c2_7",
                 "title_es": "Escape room “salva el maquillaje de la contaminación”",
                 "title_ca": "Escape room “salva el maquillaje de la contaminación”",
-                "description_es": "Idea añadida: resolver pistas sobre brochas sucias, producto caducado, aplicador compartido, manos sin lavar y material mal almacenado.",
-                "description_ca": "Idea añadida: resolver pistas sobre brochas sucias, producto caducado, aplicador compartido, manos sin lavar y material mal almacenado.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "checklist final de higiene segura.",
                 "evidence_ca": "checklist final de higiene segura.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "resolver pistas sobre brochas sucias, producto caducado, aplicador compartido, manos sin lavar y material mal almacenado.",
+                "motivatingFactor_ca": "resolver pistas sobre brochas sucias, producto caducado, aplicador compartido, manos sin lavar y material mal almacenado."
               }
             ]
           },
@@ -12812,27 +15591,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c6_6",
                 "title_es": "Stop motion de un maquillaje",
                 "title_ca": "Stop motion de un maquillaje",
-                "description_es": "Idea añadida: fotografiar paso a paso el proceso para crear una animación didáctica.",
-                "description_ca": "Idea añadida: fotografiar paso a paso el proceso para crear una animación didáctica.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "stop motion educativo.",
                 "evidence_ca": "stop motion educativo.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "fotografiar paso a paso el proceso para crear una animación didáctica.",
+                "motivatingFactor_ca": "fotografiar paso a paso el proceso para crear una animación didáctica."
               },
               {
                 "id": "act_3063_c6_7",
                 "title_es": "Battle de difuminado cooperativa",
                 "title_ca": "Battle de difuminado cooperativa",
-                "description_es": "Idea añadida: reto por equipos donde se valora suavidad, limpieza, simetría y técnica, no competitividad agresiva.",
-                "description_ca": "Idea añadida: reto por equips donde se valora suavidad, limpieza, simetría y técnica, no competitividad agresiva.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "rúbrica de acabado limpio.",
                 "evidence_ca": "rúbrica de acabado limpio.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "reto por equipos donde se valora suavidad, limpieza, simetría y técnica, no competitividad agresiva.",
+                "motivatingFactor_ca": "reto por equips donde se valora suavidad, limpieza, simetría y técnica, no competitividad agresiva."
               }
             ]
           },
@@ -12916,27 +15695,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c10_6",
                 "title_es": "QR de boceto y ficha técnica",
                 "title_ca": "QR de boceto y ficha técnica",
-                "description_es": "Idea añadida: vincular cada maquillaje a su ficha y boceto mediante QR en el portfolio.",
-                "description_ca": "Idea añadida: vincular cada maquillaje a su ficha y boceto mediante QR en el portfolio.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "portfolio interactivo.",
                 "evidence_ca": "portfolio interactivo.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "vincular cada maquillaje a su ficha y boceto mediante QR en el portfolio.",
+                "motivatingFactor_ca": "vincular cada maquillaje a su ficha y boceto mediante QR en el portfolio."
               },
               {
                 "id": "act_3063_c10_7",
                 "title_es": "Caso “no todo se sube a redes”",
                 "title_ca": "Caso “no todo se sube a redes”",
-                "description_es": "Idea añadida: trabajar permisos, imagen, privacidad y confidencialidad.",
-                "description_ca": "Idea añadida: trabajar permisos, imagen, privacidad y confidencialidad.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "decálogo de publicación responsable.",
                 "evidence_ca": "decálogo de publicación responsable.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "trabajar permisos, imagen, privacidad y confidencialidad.",
+                "motivatingFactor_ca": "trabajar permisos, imagen, privacidad y confidencialidad."
               }
             ]
           },
@@ -12947,7 +15726,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetRaCode": "RA1",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Preparación del entorno profesional.",
             "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Preparació de l’entorn professional.",
-            "relationType": "digital",
+            "relationType": "empleabilidad",
             "justification_es": "el maquillaje se integra en situaciones reales de salón: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo.",
             "justification_ca": "el maquillaje se integra en situaciones reales de saló: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo.",
             "activities": [
@@ -13020,27 +15799,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c14_6",
                 "title_es": "Hackathon “mejora el servicio de maquillaje”",
                 "title_ca": "Hackathon “mejora el servei de maquillaje”",
-                "description_es": "Idea añadida: resolver un problema: falta de higiene, mala gestión de tiempos, cliente insatisfecho, desorden o residuos.",
-                "description_ca": "Idea añadida: resolver un problema: falta de higiene, mala gestión de tiempos, client insatisfecho, desorden o residuos.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "pitch de mejora.",
                 "evidence_ca": "pitch de mejora.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "resolver un problema: falta de higiene, mala gestión de tiempos, cliente insatisfecho, desorden o residuos.",
+                "motivatingFactor_ca": "resolver un problema: falta de higiene, mala gestión de tiempos, client insatisfecho, desorden o residuos."
               },
               {
                 "id": "act_3063_c14_7",
                 "title_es": "Certamen “maquillador/a junior”",
                 "title_ca": "Certamen “maquillador/a junior”",
-                "description_es": "Idea añadida: exposición final de evidencias: face chart, ficha, técnica, portfolio, campaña o protocolo.",
-                "description_ca": "Idea añadida: exposición final de evidencias: face chart, ficha, técnica, portfolio, campaña o protocolo.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "muestra de competencias con insignias.",
                 "evidence_ca": "muestra de competencias con insignias.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "exposición final de evidencias: face chart, ficha, técnica, portfolio, campaña o protocolo.",
+                "motivatingFactor_ca": "exposición final de evidencias: face chart, ficha, técnica, portfolio, campaña o protocolo."
               }
             ]
           }
@@ -13162,27 +15941,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c3_6",
                 "title_es": "Diagnóstico con avatar digital",
                 "title_ca": "Diagnóstico con avatar digital",
-                "description_es": "Idea añadida: usar plantillas de rostro o avatares para decidir correcciones, tonos y estilo sin tocar piel real.",
-                "description_ca": "Idea añadida: usar plantillas de rostro o avatares para decidir correcciones, tonos y estilo sin tocar pell real.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "propuesta sobre avatar con justificación.",
                 "evidence_ca": "propuesta sobre avatar con justificación.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "usar plantillas de rostro o avatares para decidir correcciones, tonos y estilo sin tocar piel real.",
+                "motivatingFactor_ca": "usar plantillas de rostro o avatares para decidir correcciones, tonos y estilo sin tocar pell real."
               },
               {
                 "id": "act_3063_c3_7",
                 "title_es": "Semáforo de piel antes de maquillar",
                 "title_ca": "Semáforo de pell antes de maquillar",
-                "description_es": "Idea añadida: clasificar casos: verde —maquillaje posible—, amarillo —adaptar producto—, rojo —no realizar/consultar—.",
-                "description_ca": "Idea añadida: clasificar casos: verde —maquillaje posible—, amarillo —adaptar producto—, rojo —no realizar/consultar—.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "panel de actuación segura.",
                 "evidence_ca": "panel de actuación segura.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "clasificar casos: verde —maquillaje posible—, amarillo —adaptar producto—, rojo —no realizar/consultar—.",
+                "motivatingFactor_ca": "clasificar casos: verde —maquillaje posible—, amarillo —adaptar producto—, rojo —no realizar/consultar—."
               }
             ]
           },
@@ -13266,27 +16045,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c7_6",
                 "title_es": "Termómetro de confort facial",
                 "title_ca": "Termómetro de confort facial",
-                "description_es": "Idea añadida: tarjeta para preguntar comodidad, luz, postura, sensibilidad, picor o cansancio.",
-                "description_ca": "Idea añadida: tarjeta para preguntar comodidad, luz, postura, sensibilidad, picor o cansancio.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "herramienta de comunicación durante el servicio.",
                 "evidence_ca": "herramienta de comunicación durante el servei.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "tarjeta para preguntar comodidad, luz, postura, sensibilidad, picor o cansancio.",
+                "motivatingFactor_ca": "tarjeta para preguntar comodidad, luz, postura, sensibilidad, picor o cansancio."
               },
               {
                 "id": "act_3063_c7_7",
                 "title_es": "Micro-pausas del maquillador/a",
                 "title_ca": "Micro-pausas del maquillador/a",
-                "description_es": "Idea añadida: rutina breve para muñecas, cuello, hombros y espalda.",
-                "description_ca": "Idea añadida: rutina breve para muñecas, cuello, hombros y espalda.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "vídeo o póster de ergonomía activa.",
                 "evidence_ca": "vídeo o póster de ergonomía activa.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "rutina breve para muñecas, cuello, hombros y espalda.",
+                "motivatingFactor_ca": "rutina breve para muñecas, cuello, hombros y espalda."
               }
             ]
           },
@@ -13370,27 +16149,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c11_6",
                 "title_es": "Temporizador creativo de maquillaje",
                 "title_ca": "Temporizador creativo de maquillaje",
-                "description_es": "Idea añadida: diseñar tarjetas o alarmas para controlar fases y no alargar innecesariamente.",
-                "description_ca": "Idea añadida: diseñar tarjetas o alarmas para controlar fases y no alargar innecesariamente.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "sistema visual de tiempos.",
                 "evidence_ca": "sistema visual de tiempos.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar tarjetas o alarmas para controlar fases y no alargar innecesariamente.",
+                "motivatingFactor_ca": "diseñar tarjetas o alarmas para controlar fases y no alargar innecesariamente."
               },
               {
                 "id": "act_3063_c11_7",
                 "title_es": "Reto “glam en tiempo realista”",
                 "title_ca": "Reto “glam en tiempo realista”",
-                "description_es": "Idea añadida: realizar una simulación equilibrando tiempo, calma, higiene y acabado, sin correr.",
-                "description_ca": "Idea añadida: realizar una simulación equilibrando tiempo, calma, higiene y acabado, sin correr.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "evaluación de eficiencia profesional.",
                 "evidence_ca": "evaluación de eficiencia professional.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "realizar una simulación equilibrando tiempo, calma, higiene y acabado, sin correr.",
+                "motivatingFactor_ca": "realizar una simulación equilibrando tiempo, calma, higiene y acabado, sin correr."
               }
             ]
           }
@@ -13516,27 +16295,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c4_6",
                 "title_es": "Ranking “viral pero ¿me conviene?”",
                 "title_ca": "Ranking “viral pero ¿me conviene?”",
-                "description_es": "Idea añadida: analizar productos virales de redes y decidir para qué piel o servicio serían adecuados.",
-                "description_ca": "Idea añadida: analizar productes virales de redes y decidir para qué pell o servei serían adecuados.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "ranking razonado de productos.",
                 "evidence_ca": "ranking razonado de productes.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "analizar productos virales de redes y decidir para qué piel o servicio serían adecuados.",
+                "motivatingFactor_ca": "analizar productes virales de redes y decidir para qué pell o servei serían adecuados."
               },
               {
                 "id": "act_3063_c4_7",
                 "title_es": "Consultoría express con cartas de cliente",
                 "title_ca": "Consultoría express con cartas de client",
-                "description_es": "Idea añadida: tarjetas con perfiles: piel sensible, evento largo, presupuesto bajo, estilo natural, fantasía, alergias.",
-                "description_ca": "Idea añadida: tarjetas con perfiles: pell sensible, evento largo, presupuesto bajo, estilo natural, fantasía, alergias.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "pitch de recomendación en 2 minutos.",
                 "evidence_ca": "pitch de recomendación en 2 minutos.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "tarjetas con perfiles: piel sensible, evento largo, presupuesto bajo, estilo natural, fantasía, alergias.",
+                "motivatingFactor_ca": "tarjetas con perfiles: pell sensible, evento largo, presupuesto bajo, estilo natural, fantasía, alergias."
               }
             ]
           },
@@ -13620,27 +16399,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c8_6",
                 "title_es": "Carnet de seguridad para maquillaje",
                 "title_ca": "Carnet de seguridad para maquillaje",
-                "description_es": "Idea añadida: superar prueba breve sobre higiene ocular, brochas, alergias, caducidades, lentillas y zonas sensibles.",
-                "description_ca": "Idea añadida: superar prueba breve sobre higiene ocular, brochas, alergias, caducidades, lentillas y zonas sensibles.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "carnet simbólico de “maquillador/a seguro/a”.",
                 "evidence_ca": "carnet simbólico de “maquillador/a seguro/a”.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "superar prueba breve sobre higiene ocular, brochas, alergias, caducidades, lentillas y zonas sensibles.",
+                "motivatingFactor_ca": "superar prueba breve sobre higiene ocular, brochas, alergias, caducidades, lentillas y zonas sensibles."
               },
               {
                 "id": "act_3063_c8_7",
                 "title_es": "Escape room PRL del tocador",
                 "title_ca": "Escape room PRL del tocador",
-                "description_es": "Idea añadida: detectar errores simulados: máscara compartida, brochas sucias, producto caducado, ficha incompleta.",
-                "description_ca": "Idea añadida: detectar errores simulados: máscara compartida, brochas sucias, producto caducado, ficha incompleta.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "lista de errores y soluciones.",
                 "evidence_ca": "lista de errores y soluciones.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "detectar errores simulados: máscara compartida, brochas sucias, producto caducado, ficha incompleta.",
+                "motivatingFactor_ca": "detectar errores simulados: máscara compartida, brochas sucias, producto caducado, ficha incompleta."
               }
             ]
           },
@@ -13724,27 +16503,27 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "id": "act_3063_c12_6",
                 "title_es": "Eco-maletín de maquillaje",
                 "title_ca": "Eco-maletín de maquillaje",
-                "description_es": "Idea añadida: diseñar un maletín con productos duraderos, reutilizables seguros y buena conservación.",
-                "description_ca": "Idea añadida: diseñar un maletín con productes duraderos, reutilizables seguros y buena conservación.",
+                "description_es": "",
+                "description_ca": "",
                 "evidence_es": "propuesta de compra responsable.",
                 "evidence_ca": "propuesta de compra responsable.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "diseñar un maletín con productos duraderos, reutilizables seguros y buena conservación.",
+                "motivatingFactor_ca": "diseñar un maletín con productes duraderos, reutilizables seguros y buena conservación."
               },
               {
                 "id": "act_3063_c12_7",
                 "title_es": "Reto “menos residuo, mismo acabado”",
                 "title_ca": "Reto “menos residuo, mismo acabado”",
-                "description_es": "Idea añadida: practicar dosificación y uso racional de material desechable.",
-                "description_ca": "Idea añadida: practicar dosificación y uso racional de material desechable.",
+                "description_es": "────────────────────────────────────────────────────────────",
+                "description_ca": "────────────────────────────────────────────────────────────",
                 "evidence_es": "comparación de residuos antes/después.",
                 "evidence_ca": "comparación de residuos antes/después.",
                 "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas.",
                 "diversitySupport_ca": "Instruccions visuals, suports pautats i treball en parelles.",
-                "motivatingFactor_es": "",
-                "motivatingFactor_ca": ""
+                "motivatingFactor_es": "practicar dosificación y uso racional de material desechable.",
+                "motivatingFactor_ca": "practicar dosificación y uso racional de material desechable."
               }
             ]
           }

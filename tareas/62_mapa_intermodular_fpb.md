@@ -35,17 +35,19 @@ graph TD
   - `diversitySupport_es` / `diversitySupport_ca`: Medidas de atención a la diversidad FPB (DUA, lectura fácil, apoyos visuales y roles cooperativos).
 
 ### 2. Capa de Datos Estática (`data/mapa-intermodular.seed.ts`)
-- Ingesta estructurada y completa de los 9 módulos oficiales de la carpeta `Plantillas coincidencias FPB`:
-  1. `3005` Atención al cliente (14 coincidencias, 98 actividades)
-  2. `3065` Cambios de color del cabello (15 coincidencias, 105 actividades)
-  3. `3042` Ciencias aplicadas II (12 coincidencias, 84 actividades)
-  4. `3009` Ciencias aplicadas I (11 coincidencias, 77 actividades)
-  5. `3011` Comunicación y sociedad I (10 coincidencias, 70 actividades)
-  6. `3062` Depilación mecánica y decoloración del vello superfluo (12 coincidencias, 84 actividades)
-  7. `3159` Itinerario personal para la empleabilidad (12 coincidencias, 84 actividades)
-  8. `3064` Lavado y cambios de forma del cabello (15 coincidencias, 105 actividades)
-  9. `3063` Maquillaje (14 coincidencias, 98 actividades)
-- **Total:** 9 módulos, 115 coincidencias curriculares y 805 actividades desarrolladas de forma exhaustiva con su contenido original.
+- Ingesta estructurada y completa de los **11 módulos oficiales** de la carpeta `Plantillas coincidencias FPB`:
+  1. `3060` Preparación del entorno profesional (10 coincidencias, 70 actividades)
+  2. `3061` Cuidados estéticos básicos de uñas (14 coincidencias, 98 actividades)
+  3. `3005` Atención al cliente (14 coincidencias, 98 actividades)
+  4. `3065` Cambios de color del cabello (15 coincidencias, 105 actividades)
+  5. `3042` Ciencias aplicadas II (12 coincidencias, 84 actividades)
+  6. `3009` Ciencias aplicadas I (11 coincidencias, 77 actividades)
+  7. `3011` Comunicación y sociedad I (10 coincidencias, 70 actividades)
+  8. `3062` Depilación mecánica y decoloración del vello superfluo (12 coincidencias, 84 actividades)
+  9. `3159` Itinerario personal para la empleabilidad (12 coincidencias, 84 actividades)
+  10. `3064` Lavado y cambios de forma del cabello (15 coincidencias, 105 actividades)
+  11. `3063` Maquillaje (14 coincidencias, 98 actividades)
+- **Total:** 11 módulos, 139 coincidencias curriculares y 973 actividades desarrolladas de forma exhaustiva con su contenido original.
 
 ### 3. Fachada de Estado Reactiva (`services/mapa-intermodular.facade.ts`)
 - Estado gestionado exclusivamente con **Angular 18 Signals** (`signal`, `computed`).

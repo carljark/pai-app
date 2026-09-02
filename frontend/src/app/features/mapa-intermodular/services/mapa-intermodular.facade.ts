@@ -5,8 +5,8 @@ import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
   modules = signal<FPBModule[]>(FPB_MODULES_SEED);
-  selectedModuleCode = signal<string>('3005');
-  selectedRaId = signal<string>('3005_RA1');
+  selectedModuleCode = signal<string>('3060');
+  selectedRaId = signal<string>('3060_RA1');
   searchQuery = signal<string>('');
   selectedTypeFilter = signal<string>('all');
   selectedRelationFilter = signal<string>('all');

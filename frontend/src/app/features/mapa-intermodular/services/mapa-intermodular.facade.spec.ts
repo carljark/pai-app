@@ -16,18 +16,18 @@ describe('MapaIntermodularFacade', () => {
 
   it('should be created and load seed modules', () => {
     expect(facade).toBeTruthy();
-    expect(facade.modules().length).toBe(9);
-    expect(facade.selectedModuleCode()).toBe('3005');
-    expect(facade.selectedModule()?.name_es).toContain('Atención al cliente');
+    expect(facade.modules().length).toBe(11);
+    expect(facade.selectedModuleCode()).toBe('3060');
+    expect(facade.selectedModule()?.name_es).toContain('Preparación del entorno profesional');
     expect(facade.selectedRa()).toBeTruthy();
   });
 
   it('should calculate global statistics', () => {
     const stats = facade.stats();
-    expect(stats.totalModules).toBe(9);
+    expect(stats.totalModules).toBe(11);
     expect(stats.totalRas).toBeGreaterThan(0);
-    expect(stats.totalConnections).toBe(115);
-    expect(stats.totalActivities).toBe(805);
+    expect(stats.totalConnections).toBe(139);
+    expect(stats.totalActivities).toBe(973);
   });
 
   it('should select module and update selectedRaId', () => {

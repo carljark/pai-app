@@ -100,40 +100,54 @@ describe('MapaIntermodularViewComponent', () => {
   });
 
   it('should click all filter pills, search input, modules, and RAs in DOM', () => {
+    component.facade.setTypeFilter('all');
+    component.facade.setSearch('');
+    component.facade.selectModule('3060');
+    fixture.detectChanges();
+
     const compiled = fixture.nativeElement as HTMLElement;
 
     // Filter pills
     const pills = compiled.querySelectorAll('.filter-pill') as NodeListOf<HTMLButtonElement>;
-    pills.forEach(p => p.click());
+    pills.forEach(p => {
+      p.click();
+      fixture.detectChanges();
+    });
+
+    // Reset filter
+    component.facade.setTypeFilter('all');
+    component.facade.selectModule('3060');
     fixture.detectChanges();
 
     // Search input
     const input = compiled.querySelector('input');
     if (input) {
-      input.value = '3063';
+      input.value = '3060';
       input.dispatchEvent(new Event('input'));
-      input.dispatchEvent(new Event('ngModelChange'));
+      component.onSearch('3060');
       fixture.detectChanges();
     }
 
     // Module card click
-    const modCard = compiled.querySelector('.mapa-module-card') as HTMLElement;
-    if (modCard) {
-      modCard.click();
+    const modCards = compiled.querySelectorAll('.mapa-module-card') as NodeListOf<HTMLElement>;
+    modCards.forEach(c => {
+      c.click();
       fixture.detectChanges();
-    }
+    });
 
     // RA item click
-    const raItem = compiled.querySelector('.mapa-ra-item') as HTMLElement;
-    if (raItem) {
-      raItem.click();
+    const raItems = compiled.querySelectorAll('.mapa-ra-item') as NodeListOf<HTMLElement>;
+    raItems.forEach(r => {
+      r.click();
       fixture.detectChanges();
-    }
+    });
 
     // Action buttons in hero
     const actionBtns = compiled.querySelectorAll('.mapa-btn-action') as NodeListOf<HTMLButtonElement>;
-    actionBtns.forEach(b => b.click());
-    fixture.detectChanges();
+    actionBtns.forEach(b => {
+      b.click();
+      fixture.detectChanges();
+    });
   });
 
   it('should test methods directly and handle clipboard edge cases', () => {

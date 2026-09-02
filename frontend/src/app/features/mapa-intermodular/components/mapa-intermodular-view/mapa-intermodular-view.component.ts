@@ -151,17 +151,17 @@ import { TranslationService } from '../../../../services/translation.service';
               <h3 class="mapa-active-ra-title">{{ isCa() ? ra.text_ca : ra.text_es }}</h3>
               @if (ra.importance_es) {
                 <p class="mapa-active-ra-importance">
-                  💡 <strong>{{ isCa() ? 'Importància a FPB:' : 'Importancia en FPB:' }}</strong> 
+                  <strong>{{ isCa() ? 'Importància a FPB:' : 'Importancia en FPB:' }}</strong> 
                   {{ isCa() ? ra.importance_ca : ra.importance_es }}
                 </p>
               }
 
               <div class="mapa-actions-bar">
                 <button class="mapa-btn-action mapa-btn-action--primary" (click)="createProjectFromConnection()">
-                  🚀 {{ isCa() ? 'Crear Projecte amb aquesta connexió' : 'Crear Proyecto con esta conexión' }}
+                  {{ isCa() ? 'Crear Projecte amb aquesta connexió' : 'Crear Proyecto con esta conexión' }}
                 </button>
                 <button class="mapa-btn-action mapa-btn-action--secondary" (click)="copySummary()">
-                  📋 {{ copied() ? (isCa() ? 'Copiat!' : '¡Copiado!') : (isCa() ? 'Copiar Resum' : 'Copiar Resumen') }}
+                  {{ copied() ? (isCa() ? 'Copiat!' : '¡Copiado!') : (isCa() ? 'Copiar Resum' : 'Copiar Resumen') }}
                 </button>
               </div>
             </div>
@@ -169,7 +169,7 @@ import { TranslationService } from '../../../../services/translation.service';
             <!-- Connected Modules Section -->
             <div class="mapa-connections-section">
               <h3 class="mapa-section-title">
-                🔗 {{ isCa() ? 'Connexions Intermodulars Coincidents' : 'Conexiones Intermodulares Coincidentes' }}
+                {{ isCa() ? 'Connexions Intermodulars Coincidents' : 'Conexiones Intermodulares Coincidentes' }}
                 ({{ ra.connections.length }})
               </h3>
 
@@ -194,14 +194,14 @@ import { TranslationService } from '../../../../services/translation.service';
 
                     <!-- Justification -->
                     <div class="mapa-justification-box">
-                      <span class="mapa-just-label">🎯 {{ isCa() ? 'Justificació Curricular:' : 'Justificación Curricular:' }}</span>
+                      <span class="mapa-just-label">{{ isCa() ? 'Justificació Curricular:' : 'Justificación Curricular:' }}</span>
                       <p>{{ isCa() ? conn.justification_ca : conn.justification_es }}</p>
                     </div>
 
                     <!-- Activities -->
                     <div class="mapa-activities-container">
                       <h4 class="mapa-activities-title">
-                        ✨ {{ isCa() ? 'Propostes d’Activitats i Reptes FPB' : 'Propuestas de Actividades y Retos FPB' }}
+                        {{ isCa() ? 'Propostes d’Activitats i Reptes FPB' : 'Propuestas de Actividades y Retos FPB' }}
                       </h4>
 
                       @for (act of conn.activities; track act.id) {
@@ -225,12 +225,12 @@ import { TranslationService } from '../../../../services/translation.service';
 
                           <div class="mapa-act-meta">
                             <div class="mapa-meta-box mapa-meta-evidence">
-                              <strong>📦 {{ isCa() ? 'Evidència / Producte:' : 'Evidencia / Producto:' }}</strong>
+                              <strong>{{ isCa() ? 'Evidència / Producte:' : 'Evidencia / Producto:' }}</strong>
                               <span>{{ isCa() ? act.evidence_ca : act.evidence_es }}</span>
                             </div>
 
                             <div class="mapa-meta-box mapa-meta-diversity">
-                              <strong>🤝 {{ isCa() ? 'Atenció a la Diversitat FPB:' : 'Atención a la Diversidad FPB:' }}</strong>
+                              <strong>{{ isCa() ? 'Atenció a la Diversitat FPB:' : 'Atención a la Diversidad FPB:' }}</strong>
                               <span>{{ isCa() ? act.diversitySupport_ca : act.diversitySupport_es }}</span>
                             </div>
                           </div>

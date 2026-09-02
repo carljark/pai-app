@@ -95,6 +95,7 @@ export class TallerViewComponent {
   exportPDF() {
     const element = document.querySelector('markdown');
     if (element) {
+      this.appFacade.telemetry?.logEvent('EXPORT_PDF', this.projects.currentProjectId() || undefined)?.subscribe();
       html2pdf().from(element as HTMLElement).save('Proyecto.pdf');
     }
   }

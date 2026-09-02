@@ -1,7 +1,7 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { AdminUser, CenterSettings, ActivityLog } from '../models/admin.model';
+import { AdminUser, CenterSettings, ActivityLog, AnalyticsData } from '../models/admin.model';
 
 @Injectable({ providedIn: 'root' })
 export class AdminFacade {
@@ -10,6 +10,7 @@ export class AdminFacade {
   users = signal<AdminUser[]>([]);
   settings = signal<CenterSettings | null>(null);
   logs = signal<ActivityLog[]>([]);
+  analyticsData = signal<AnalyticsData | null>(null);
 
   loadUsers() {
     this.http.get<AdminUser[]>('/api/admin/users').subscribe(res => this.users.set(res));
@@ -21,6 +22,23 @@ export class AdminFacade {
 
   loadLogs() {
     this.http.get<ActivityLog[]>('/api/admin/logs').subscribe(res => this.logs.set(res));
+  }
+
+  loadAnalytics() {
+    this.http.get<AnalyticsData>('/api/admin/analytics').subscribe({
+      next: res => this.analyticsData.set(res),
+      error: () => {}
+    });
+  }
+
+  formatDuration(seconds: number): string {
+    const s = Math.max(0, Number(seconds) || 0);
+    if (s < 60) return `${s}s`;
+    const m = Math.floor(s / 60);
+    if (m < 60) return `${m}m ${s % 60}s`;
+    const h = Math.floor(m / 60);
+    const remM = m % 60;
+    return `${h}h ${remM}m`;
   }
 
   updateUserRole(userId: string, role: string) {

@@ -8,6 +8,7 @@ import { ProjectsFacade } from './features/projects/services/projects.facade';
 import { NotificationsFacade } from './features/notifications/services/notifications.facade';
 import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
+import { TelemetryService } from './services/telemetry.service';
 import { signal, WritableSignal } from '@angular/core';
 import { of, throwError } from 'rxjs';
 
@@ -46,11 +47,20 @@ describe('AppFacade', () => {
 
     layoutServiceMock = {
       language: signal('castellano'),
+      currentView: signal('home'),
       switchView: vi.fn()
     };
 
     notificationsFacadeMock = {
       latestNotification: signal(null)
+    };
+
+    const telemetryServiceMock = {
+      startTracking: vi.fn(),
+      stopTracking: vi.fn(),
+      setCurrentPage: vi.fn(),
+      flushHeartbeat: vi.fn(),
+      logEvent: vi.fn().mockReturnValue(of({ ok: true }))
     };
 
     translationServiceMock = {};
@@ -66,6 +76,7 @@ describe('AppFacade', () => {
         { provide: NotificationsFacade, useValue: notificationsFacadeMock },
         { provide: TranslationService, useValue: translationServiceMock },
         { provide: PaiService, useValue: paiServiceMock },
+        { provide: TelemetryService, useValue: telemetryServiceMock }
       ]
     });
 

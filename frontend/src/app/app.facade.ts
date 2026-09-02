@@ -6,6 +6,7 @@ import { ProjectsFacade } from './features/projects/services/projects.facade';
 import { NotificationsFacade } from './features/notifications/services/notifications.facade';
 import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
+import { TelemetryService } from './services/telemetry.service';
 
 @Injectable({ providedIn: 'root' })
 export class AppFacade {
@@ -16,6 +17,7 @@ export class AppFacade {
   notifications = inject(NotificationsFacade);
   paiService = inject(PaiService);
   auth = inject(AuthFacade);
+  telemetry = inject(TelemetryService);
 
   errorMessage = signal<string>('');
   showErrorModal = signal<boolean>(false);
@@ -35,12 +37,22 @@ export class AppFacade {
       const user = this.auth.currentUser();
       const lang = this.layout.language();
       if (user) {
+        this.telemetry.startTracking();
         this.curriculum.loadRas(lang);
         this.curriculum.loadCes(lang);
         untracked(() => {
           this.projects.loadHistory();
         });
+      } else {
+        this.telemetry.stopTracking();
       }
+    });
+
+    effect(() => {
+      const view = this.layout.currentView();
+      untracked(() => {
+        this.telemetry.setCurrentPage(view);
+      });
     });
 
     effect(() => {

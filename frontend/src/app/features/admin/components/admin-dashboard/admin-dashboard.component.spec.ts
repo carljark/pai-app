@@ -15,9 +15,16 @@ describe('AdminDashboardComponent', () => {
       users: signal([{ _id: '1', name: 'Test User', email: 'test@test.com', role: 'pending', canUseAi: false, createdAt: new Date() }]),
       settings: signal({ name: 'School A', educationalLevel: 'City A', context: 'Context A' }),
       logs: signal([{ _id: '1', action: 'LOGIN', createdAt: new Date(), userId: { name: 'Admin', email: 'admin@test.com' }, details: { generationTimeMs: 1000 } }]),
+      analyticsData: signal({
+        summary: { totalUsageSeconds: 3600, totalSessions: 5, totalDocxExports: 3, totalPdfExports: 2, totalProjectsGenerated: 4, totalUsers: 3 },
+        userMetrics: [{ userId: '1', name: 'Test User', email: 'test@test.com', role: 'teacher', canUseAi: true, createdAt: new Date().toISOString(), totalDurationSeconds: 1200, sessionCount: 2, lastActive: new Date().toISOString(), docxExportsCount: 2, pdfExportsCount: 1, projectsGeneratedCount: 3 }],
+        exportTimeline: [{ _id: '1', action: 'EXPORT_DOCX', createdAt: new Date().toISOString(), userId: { _id: '1', name: 'Test User', email: 'test@test.com' }, projectId: { _id: 'p1', title: 'Test Project' } }]
+      }),
       loadUsers: vi.fn(),
       loadSettings: vi.fn(),
       loadLogs: vi.fn(),
+      loadAnalytics: vi.fn(),
+      formatDuration: vi.fn().mockImplementation((s: number) => `${s}s`),
       updateUserRole: vi.fn().mockReturnValue(of({})),
       updateUserAi: vi.fn().mockReturnValue(of({})),
       deleteUser: vi.fn().mockReturnValue(of({})),
@@ -150,6 +157,39 @@ describe('AdminDashboardComponent', () => {
     expect(compiled.textContent).toContain('Test User');
     expect(compiled.textContent).toContain('Aprobar (Profesor)');
     expect(compiled.textContent).toContain('Activar IA');
+  });
+
+  it('should render analytics data and handle null/empty analytics states', () => {
+    // 1. With analytics data (Word and PDF items)
+    mockFacade.analyticsData.set({
+      summary: { totalUsageSeconds: 3600, totalSessions: 5, totalDocxExports: 3, totalPdfExports: 2, totalProjectsGenerated: 4, totalUsers: 3 },
+      userMetrics: [
+        { userId: '1', name: 'Test User', email: 'test@test.com', role: 'teacher', canUseAi: true, createdAt: new Date().toISOString(), totalDurationSeconds: 1200, sessionCount: 2, lastActive: '', docxExportsCount: 2, pdfExportsCount: 1, projectsGeneratedCount: 3 }
+      ],
+      exportTimeline: [
+        { _id: '1', action: 'EXPORT_DOCX', createdAt: new Date().toISOString(), userId: { _id: '1', name: 'Test User', email: 'test@test.com' }, projectId: { _id: 'p1', title: 'Test Project' } },
+        { _id: '2', action: 'EXPORT_PDF', createdAt: new Date().toISOString(), userId: { _id: '1', name: 'Test User', email: 'test@test.com' }, details: { projectTitle: 'Detalle' } }
+      ]
+    });
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('Analítica y Métricas de Uso');
+    expect(compiled.textContent).toContain('WORD (.docx)');
+    expect(compiled.textContent).toContain('PDF');
+
+    // 2. Empty timeline
+    mockFacade.analyticsData.set({
+      summary: { totalUsageSeconds: 0, totalSessions: 0, totalDocxExports: 0, totalPdfExports: 0, totalProjectsGenerated: 0, totalUsers: 0 },
+      userMetrics: [],
+      exportTimeline: []
+    });
+    fixture.detectChanges();
+    expect(compiled.textContent).toContain('No hay exportaciones registradas');
+
+    // 3. Null analyticsData
+    mockFacade.analyticsData.set(null);
+    fixture.detectChanges();
+    expect(compiled.textContent).toContain('Cargando analíticas');
   });
 
   it('should render logs', () => {

@@ -81,6 +81,107 @@ import { AdminFacade } from '../../services/admin.facade';
       </div>
     </section>
 
+    <!-- Panel de Métricas y Analítica de Uso -->
+    <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+        <h2 style="color: #2c3e50; margin: 0;">Analítica y Métricas de Uso</h2>
+        <button (click)="adminFacade.loadAnalytics()" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: 500;">
+          🔄 Actualizar Métricas
+        </button>
+      </div>
+
+      @if (adminFacade.analyticsData(); as analytics) {
+        <!-- Tarjetas Globales -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px;">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #2563eb;">{{ adminFacade.formatDuration(analytics.summary.totalUsageSeconds) }}</div>
+            <div style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-top: 4px;">⏱️ Tiempo Total de Uso</div>
+          </div>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #059669;">{{ analytics.summary.totalSessions }}</div>
+            <div style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-top: 4px;">👥 Sesiones Totales</div>
+          </div>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #2b579a;">{{ analytics.summary.totalDocxExports }}</div>
+            <div style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-top: 4px;">📝 Exportaciones a Word</div>
+          </div>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #dc2626;">{{ analytics.summary.totalPdfExports }}</div>
+            <div style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-top: 4px;">📑 Exportaciones a PDF</div>
+          </div>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: 800; color: #7c3aed;">{{ analytics.summary.totalProjectsGenerated }}</div>
+            <div style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-top: 4px;">✨ Proyectos con IA</div>
+          </div>
+        </div>
+
+        <!-- Tabla de Métricas por Usuario -->
+        <h3 style="color: #334155; margin-bottom: 15px; font-size: 1.1rem;">Tiempo de Uso y Exportaciones por Usuario</h3>
+        <div style="overflow-x: auto; margin-bottom: 30px;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: #f1f5f9; text-align: left; color: #475569; border-bottom: 2px solid #e2e8f0;">
+                <th style="padding: 10px 14px;">Usuario</th>
+                <th style="padding: 10px 14px;">Rol</th>
+                <th style="padding: 10px 14px;">Tiempo de Uso</th>
+                <th style="padding: 10px 14px;">Sesiones</th>
+                <th style="padding: 10px 14px;">Exportaciones Word</th>
+                <th style="padding: 10px 14px;">Última Actividad</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (um of analytics.userMetrics; track um.userId) {
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                  <td style="padding: 10px 14px;">
+                    <strong>{{ um.name }}</strong>
+                    <div style="font-size: 0.8rem; color: #64748b;">{{ um.email }}</div>
+                  </td>
+                  <td style="padding: 10px 14px;">
+                    <span style="font-weight: bold; text-transform: uppercase; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: #e2e8f0;">
+                      {{ um.role }}
+                    </span>
+                  </td>
+                  <td style="padding: 10px 14px; font-weight: 700; color: #1e293b;">
+                    {{ adminFacade.formatDuration(um.totalDurationSeconds) }}
+                  </td>
+                  <td style="padding: 10px 14px; color: #475569;">
+                    {{ um.sessionCount }}
+                  </td>
+                  <td style="padding: 10px 14px; font-weight: 600; color: #2b579a;">
+                    {{ um.docxExportsCount }}
+                  </td>
+                  <td style="padding: 10px 14px; color: #64748b; font-size: 0.85rem;">
+                    {{ um.lastActive ? (um.lastActive | date:'short') : 'Sin actividad' }}
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Timeline de Exportaciones Recientes -->
+        <h3 style="color: #334155; margin-bottom: 15px; font-size: 1.1rem;">Historial de Exportaciones Recientes (Word / PDF)</h3>
+        <div style="display: grid; gap: 10px; max-height: 280px; overflow-y: auto; padding-right: 5px;">
+          @for (item of analytics.exportTimeline; track item._id) {
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
+              <div>
+                <span [style.background]="item.action === 'EXPORT_DOCX' ? '#dbeafe' : '#fee2e2'" [style.color]="item.action === 'EXPORT_DOCX' ? '#1e40af' : '#991b1b'" style="font-weight: bold; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; margin-right: 8px;">
+                  {{ item.action === 'EXPORT_DOCX' ? 'WORD (.docx)' : 'PDF' }}
+                </span>
+                <strong style="color: #1e293b;">{{ item.projectId?.title || item.details?.projectTitle || 'Proyecto' }}</strong>
+                <span style="color: #64748b; font-size: 0.85rem; margin-left: 8px;">por {{ item.userId?.name || 'Profesor' }}</span>
+              </div>
+              <span style="color: #64748b; font-size: 0.8rem;">{{ item.createdAt | date:'short' }}</span>
+            </div>
+          } @empty {
+            <div style="text-align: center; color: #94a3b8; padding: 15px;">No hay exportaciones registradas aún.</div>
+          }
+        </div>
+      } @else {
+        <div style="text-align: center; color: #94a3b8; padding: 20px;">Cargando analíticas...</div>
+      }
+    </section>
+
     <!-- Panel de Registros de Actividad -->
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <h2 style="color: #2c3e50; margin-top: 0;">Registro de Actividad de la Aplicación</h2>
@@ -138,6 +239,7 @@ export class AdminDashboardComponent {
       if (s) this.schoolSettings.set({schoolName: s.name, schoolCity: s.educationalLevel, schoolContext: s.context});
     });
     this.adminFacade.loadLogs();
+    this.adminFacade.loadAnalytics();
   }
 
   saveSettings(e: Event) {

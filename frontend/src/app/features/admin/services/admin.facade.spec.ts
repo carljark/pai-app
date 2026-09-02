@@ -110,4 +110,28 @@ describe('AdminFacade', () => {
     const reqLoad = httpTestingController.expectOne('/api/settings');
     reqLoad.flush(mockSettings);
   });
+
+  it('should load analytics data and handle error without throw', () => {
+    facade.loadAnalytics();
+    const req = httpTestingController.expectOne('/api/admin/analytics');
+    expect(req.request.method).toBe('GET');
+    req.flush({
+      summary: { totalUsageSeconds: 120, totalSessions: 2, totalDocxExports: 1, totalPdfExports: 0, totalProjectsGenerated: 1, totalUsers: 2 },
+      userMetrics: [],
+      exportTimeline: []
+    });
+    expect(facade.analyticsData()?.summary.totalUsageSeconds).toBe(120);
+
+    // Error case
+    facade.loadAnalytics();
+    const reqErr = httpTestingController.expectOne('/api/admin/analytics');
+    reqErr.error(new ProgressEvent('error'));
+  });
+
+  it('should format duration nicely', () => {
+    expect(facade.formatDuration(0)).toBe('0s');
+    expect(facade.formatDuration(45)).toBe('45s');
+    expect(facade.formatDuration(75)).toBe('1m 15s');
+    expect(facade.formatDuration(3665)).toBe('1h 1m');
+  });
 });

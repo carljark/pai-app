@@ -6,6 +6,7 @@ import authRoutes from './routes/auth.routes';
 import adminRoutes from './routes/admin.routes';
 import settingsRoutes from './routes/settings.routes';
 import projectRoutes from './routes/project.routes';
+import telemetryRoutes from './routes/telemetry.routes';
 
 import { authMiddleware } from './middlewares/auth.middleware';
 
@@ -38,6 +39,7 @@ app.use('/api', authMiddleware);
 app.use('/api/admin', adminRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/projects', projectRoutes);
+app.use('/api/telemetry', telemetryRoutes);
 app.use('/api', curriculumRoutes);
 
 const PORT = process.env.PORT || 3000;

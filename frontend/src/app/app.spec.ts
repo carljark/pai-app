@@ -66,9 +66,12 @@ describe('App', () => {
       settings: signal({}),
       users: signal([]),
       logs: signal([]),
+      analyticsData: signal(null),
       loadSettings: vi.fn(),
       loadUsers: vi.fn(),
-      loadLogs: vi.fn()
+      loadLogs: vi.fn(),
+      loadAnalytics: vi.fn(),
+      formatDuration: vi.fn().mockReturnValue('1m')
     };
     const mockNotificationsFacade = {
       notifications: signal([]),

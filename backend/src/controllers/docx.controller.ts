@@ -1,5 +1,6 @@
 import type { Response } from 'express';
 import { Project } from '../models/Project';
+import { ActivityLog } from '../models/ActivityLog';
 import { marked } from 'marked';
 import HTMLtoDOCX from 'html-to-docx';
 import mammoth from 'mammoth';
@@ -13,6 +14,15 @@ export const exportDocx = async (req: any, res: Response) => {
     if (!project || !project.generatedContent?.rawText) {
       return res.status(404).json({ error: 'Proyecto no encontrado o sin contenido' });
     }
+
+    await ActivityLog.create({
+      userId: req.user._id,
+      action: 'EXPORT_DOCX',
+      projectId: project._id,
+      details: { projectTitle: project.title },
+      createdAt: new Date()
+    });
+
     const html = await marked.parse(project.generatedContent.rawText);
     const fileBuffer = await HTMLtoDOCX(html as string, null, { table: { row: { cantSplit: true } }, footer: true, pageNumber: true });
     

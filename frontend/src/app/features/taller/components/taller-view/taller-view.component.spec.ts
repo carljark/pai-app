@@ -46,6 +46,7 @@ describe('TallerViewComponent', () => {
       confirmMessage: signal(''),
       confirmAction: signal(() => {}),
       showConfirmModal: signal(false),
+      telemetry: { logEvent: vi.fn().mockReturnValue(of({ ok: true })) },
     };
 
     mockLayoutService = {

@@ -263,47 +263,36 @@ export const deleteProject = async (req: any, res: Response) => {
 
 export const rewriteSection = async (req: any, res: Response) => {
   try {
-    const { context, selectedText, instruction } = req.body;
-    if (!selectedText || !instruction) {
-      return res.status(400).json({ error: "Falta texto seleccionado o instrucción" });
+    const { context, instruction } = req.body;
+    if (!context || !instruction) {
+      return res.status(400).json({ error: "Falta el contenido del proyecto o la instrucción" });
     }
 
-    const prompt = `Eres el Motor Pedagógico PAI. El profesor está editando un fragmento de un proyecto intermodular.
+    const prompt = `Eres el Motor Pedagógico PAI. El profesor está solicitando una modificación o refinamiento sobre el documento completo del proyecto intermodular.
 
-CONTEXTO DEL PROYECTO (referencia):
-${context ? context.slice(0, 2000) : ''}
-
-FRAGMENTO SELECCIONADO POR EL PROFESOR:
+DOCUMENTO DEL PROYECTO ACTUAL (MARKDOWN COMPLETO):
 """
-${selectedText}
+${context}
 """
 
 INSTRUCCIÓN DEL PROFESOR:
+"""
 ${instruction}
+"""
 
 TAREA:
-Reescribe ÚNICAMENTE el fragmento seleccionado aplicando la instrucción del profesor.
+Reescribe y actualiza el documento completo del proyecto en formato Markdown aplicando de forma coherente y precisa la instrucción del profesor, manteniendo todas las demás secciones, formato y coherencia pedagógica.
 
 REGLAS ESTRICTAS:
-- Devuelve EXCLUSIVAMENTE el fragmento reescrito en formato Markdown.
-- NO devuelvas el proyecto entero, únicamente el fragmento modificado.
-- NO incluyas saludos, preámbulos ni bloques de código tipo \`\`\`markdown.
+- Devuelve el documento COMPLETO actualizado en formato Markdown.
+- NO devuelvas resúmenes, explicaciones ni fragmentos aislados, únicamente el documento Markdown completo resultante.
+- NO incluyas saludos, preámbulos ni bloques envolventes de código tipo \`\`\`markdown ni \`\`\`.
 - Escribe en texto plano Markdown estándar. NUNCA uses notación LaTeX ni el símbolo $ para números o minutos.`;
 
-    const newFragment = await generateGeminiContent(prompt, "Eres un asistente pedagógico de edición curricular conciso y directo.");
-    
-    let newFullText = context || '';
-    const cleanFragment = (newFragment || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
-    
-    if (context && context.includes(selectedText)) {
-      newFullText = context.replace(selectedText, cleanFragment);
-    } else if (context && context.includes(selectedText.trim())) {
-      newFullText = context.replace(selectedText.trim(), cleanFragment);
-    } else {
-      newFullText = cleanFragment;
-    }
+    const newFullText = await generateGeminiContent(prompt, "Eres un asistente pedagógico de edición curricular experto, directo y preciso.");
+    const cleanText = (newFullText || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
 
-    res.json({ newText: newFullText, rewrittenPart: cleanFragment });
+    res.json({ newText: cleanText, rewrittenPart: cleanText });
   } catch (error: any) {
     console.error("Error en reescritura IA:", error);
     res.status(500).json({ error: "Error al contactar con la IA para reescribir" });

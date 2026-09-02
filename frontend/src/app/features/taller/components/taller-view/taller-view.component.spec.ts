@@ -61,20 +61,26 @@ describe('TallerViewComponent', () => {
       projectFiles: signal([]), currentProjectId: signal('proj-123'),
       currentProject: signal({ id: 'proj-123', status: 'borrador', createdAt: new Date() }),
       projectsHistory: signal([]),
-      generatedProject: signal(''), formattedGeneratedProject: signal(''),
+      generatedProject: signal('# Project content'), formattedGeneratedProject: signal(''),
       updateProjectStatus: vi.fn().mockReturnValue(of({})),
       loadHistory: vi.fn(),
       aiPrompt: signal(''),
       isThinking: signal(false),
-      rewriteSection: vi.fn().mockReturnValue(of({ newText: 'Rewritten text' })),
+      rewriteSection: vi.fn().mockReturnValue(of({ newText: 'Rewritten full text' })),
       isUploading: signal(false),
       uploadFile: vi.fn().mockReturnValue(of({})),
       loadProjectFiles: vi.fn(),
       deleteFile: vi.fn().mockReturnValue(of({})),
       getDownloadUrl: vi.fn().mockReturnValue('http://download.url/file.txt'),
+      undoStack: signal([] as string[]),
+      canUndo: signal(false),
+      pushUndo: vi.fn(),
+      undoLastChange: vi.fn(),
     };
 
-    mockAuthFacade = {};
+    mockAuthFacade = {
+      currentUser: signal({ name: 'Test Docente', email: 'docente@test.com', canUseAi: true, role: 'admin' })
+    };
 
     mockPaiService = {
       importDocx: vi.fn().mockReturnValue(of({ project: { generatedContent: { rawText: 'Extracted text' } } })),
@@ -106,29 +112,46 @@ describe('TallerViewComponent', () => {
   it('should render template branches for coverage', () => {
     // Branch 1: empty state with history > 5
     mockProjectsFacade.currentProjectId.set(null);
+    mockProjectsFacade.currentProject.set(null);
+    mockProjectsFacade.generatedProject.set('');
     const arr = [
-      { status: 'publicado', modules: ['a'], tipoNivel: 'DIVERSIFICACION_CURRICULAR', createdAt: new Date() },
-      { status: 'error', generatedContent: { modules: ['b'] }, tipoNivel: 'FP_BASICA', createdAt: new Date() },
-      { status: 'en_cola' },
-      { status: 'otro' },
-      { status: 'publicado' },
-      { status: 'publicado' },
-      { status: 'publicado' }
+      { _id: '1', status: 'publicado', modules: ['a'], tipoNivel: 'DIVERSIFICACION_CURRICULAR', createdAt: new Date() },
+      { _id: '2', status: 'error', generatedContent: { modules: ['b'] }, tipoNivel: 'FP_BASICA', createdAt: new Date() },
+      { _id: '3', status: 'en_cola' },
+      { _id: '4', status: 'generando' },
+      { _id: '5', status: 'otro' },
+      { _id: '6', status: 'publicado' },
+      { _id: '7', status: 'publicado' }
     ];
     mockProjectsFacade.recentProjects = signal(arr);
     mockProjectsFacade.projectsHistory.set(arr);
+    fixture.detectChanges();
+
+    // Click items in empty state
+    const emptyButtons = fixture.debugElement.nativeElement.querySelectorAll('button');
+    emptyButtons.forEach((b: any) => {
+      try { b.click(); } catch(e) {}
+    });
+
+    // Branch 1b: empty state with 0 history items
+    mockProjectsFacade.projectsHistory.set([]);
     fixture.detectChanges();
 
     // Branch 2: current project with userId
     mockProjectsFacade.currentProjectId.set('123');
     mockProjectsFacade.currentProject.set({ userId: { name: 'Juan', email: 'juan@test' } });
     mockProjectsFacade.generatedProject.set('Some generated content');
-    mockProjectsFacade.projectFiles = signal([{ name: 'f.txt', size: 2000000 }]);
+    mockProjectsFacade.projectFiles.set([{ name: 'f.txt', size: 2000000 }]);
     mockProjectsFacade.isUploading.set(true);
+    mockProjectsFacade.canUndo.set(true);
     
     // Auth admin/ai
-    mockAuthFacade.currentUser = signal({ role: 'admin', canUseAi: true });
+    mockAuthFacade.currentUser.set({ role: 'admin', canUseAi: true });
     fixture.detectChanges();
+
+    // Click undo button in template
+    const undoBtn = fixture.debugElement.nativeElement.querySelector('.ai-assistant-panel button.btn-secondary');
+    if (undoBtn) undoBtn.click();
     
     // Auth no ai
     mockAuthFacade.currentUser.set({ role: 'user', canUseAi: false });
@@ -206,8 +229,7 @@ describe('TallerViewComponent', () => {
       try { pdfContent.dispatchEvent(new MouseEvent('mouseup')); } catch(e) {}
     }
 
-    // Set selection to cover clearSelection branch
-    component.capturedSelection.set('Texto seleccionado');
+    // Check thinking state buttons
     mockProjectsFacade.isThinking.set(true);
     fixture.detectChanges();
     buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
@@ -371,31 +393,65 @@ describe('TallerViewComponent', () => {
     // Doesn't crash
   });
 
-  it('should alert if rewriteWithAI called without selectedText or instruction', () => {
-    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => '' } as any);
+  it('should alert if rewriteWithAI called without instruction', () => {
+    mockProjectsFacade.aiPrompt.set('');
     component.rewriteWithAI();
     expect(mockAppFacade.showInfoModal()).toBe(true);
     expect(mockAppFacade.infoTitle()).toBe('Atención');
+
+    // Catala
+    mockLayoutService.language.set('catalan');
+    component.rewriteWithAI();
+    expect(mockAppFacade.infoTitle()).toBe('Atenció');
+    mockLayoutService.language.set('castellano');
+  });
+
+  it('should return if generatedProject is empty', () => {
+    mockProjectsFacade.generatedProject.set('');
+    mockProjectsFacade.aiPrompt.set('fix grammar');
+    component.rewriteWithAI();
+    expect(mockProjectsFacade.pushUndo).not.toHaveBeenCalled();
   });
 
   it('should rewriteWithAI successfully', () => {
-    component.capturedSelection.set('some text');
+    mockProjectsFacade.generatedProject.set('# Old Project');
     mockProjectsFacade.aiPrompt.set('fix grammar');
     component.rewriteWithAI();
-    expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith('some text', 'fix grammar');
-    expect(mockProjectsFacade.generatedProject()).toBe('Rewritten text');
+    expect(mockProjectsFacade.pushUndo).toHaveBeenCalled();
+    expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith('fix grammar');
+    expect(mockProjectsFacade.generatedProject()).toBe('Rewritten full text');
     expect(mockProjectsFacade.isThinking()).toBe(false);
   });
 
-  it('should handle rewriteWithAI error', () => {
+  it('should handle rewriteWithAI error and revert undo stack', () => {
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-    component.capturedSelection.set('some text');
+    mockProjectsFacade.generatedProject.set('# Old Project');
     mockProjectsFacade.aiPrompt.set('fix grammar');
-    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => new Error('err')));
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({ error: { error: 'Server Error' } })));
     
     component.rewriteWithAI();
-    expect(consoleSpy).toHaveBeenCalledWith('Error en IA', expect.any(Error));
+    expect(consoleSpy).toHaveBeenCalledWith('Error en IA', expect.any(Object));
+    expect(mockAppFacade.errorMessage()).toBe('Server Error');
     expect(mockProjectsFacade.isThinking()).toBe(false);
+  });
+
+  it('should undoAI and show success notification in Castellano and Catalan', () => {
+    mockProjectsFacade.canUndo.set(true);
+    component.undoAI();
+    expect(mockProjectsFacade.undoLastChange).toHaveBeenCalled();
+    expect(mockAppFacade.showInfoModal()).toBe(true);
+    expect(mockAppFacade.infoTitle()).toBe('Deshecho');
+
+    mockLayoutService.language.set('catalan');
+    component.undoAI();
+    expect(mockAppFacade.infoTitle()).toBe('Desfet');
+    mockLayoutService.language.set('castellano');
+  });
+
+  it('should not undo when canUndo is false', () => {
+    mockProjectsFacade.canUndo.set(false);
+    component.undoAI();
+    expect(mockProjectsFacade.undoLastChange).not.toHaveBeenCalled();
   });
 
   it('should handle onFileSelected', () => {
@@ -421,21 +477,64 @@ describe('TallerViewComponent', () => {
     expect(event.preventDefault).toHaveBeenCalled();
   });
 
-  it('should handle onDrop', () => {
-    const event = { preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any;
-    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onDrop(event);
-    expect(component.uploadFile).toHaveBeenCalledWith(event.dataTransfer.files[0]);
+  it('should handle rewriteWithAI error variants', () => {
+    mockProjectsFacade.generatedProject.set('# Old Project');
+    mockProjectsFacade.aiPrompt.set('fix grammar');
+    
+    // err.error.message
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({ error: { message: 'Err message' } })));
+    component.rewriteWithAI();
+    expect(mockAppFacade.errorMessage()).toBe('Err message');
+
+    // err.message
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => new Error('Direct error')));
+    component.rewriteWithAI();
+    expect(mockAppFacade.errorMessage()).toBe('Direct error');
+
+    // fallback string
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({})));
+    component.rewriteWithAI();
+    expect(mockAppFacade.errorMessage()).toBe('Error al conectar con la IA para reescribir.');
   });
 
-  it('should uploadFile success', () => {
+  it('should handle onDrop edge cases', () => {
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    
+    // No dataTransfer
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn() } as any);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+
+    // No files
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [] } } as any);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+
+    // No projectId
+    mockProjectsFacade.currentProjectId.set(null);
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+  });
+
+  it('should handle onFileSelected with no files', () => {
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    component.onFileSelected({ target: { files: [] } });
+    expect(component.uploadFile).not.toHaveBeenCalled();
+  });
+
+  it('should handle onDrop success', () => {
+    mockProjectsFacade.currentProjectId.set('123');
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    expect(component.uploadFile).toHaveBeenCalled();
+  });
+
+  it('should uploadFile success and error', () => {
+    // success
     component.uploadFile(new File([''], 'f.txt'));
     expect(mockProjectsFacade.uploadFile).toHaveBeenCalled();
     expect(mockProjectsFacade.loadProjectFiles).toHaveBeenCalled();
     expect(mockProjectsFacade.isUploading()).toBe(false);
-  });
 
-  it('should uploadFile error', () => {
+    // error
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     mockProjectsFacade.uploadFile.mockReturnValueOnce(throwError(() => new Error('err')));
     component.uploadFile(new File([''], 'f.txt'));
@@ -443,18 +542,16 @@ describe('TallerViewComponent', () => {
     expect(mockProjectsFacade.isUploading()).toBe(false);
   });
 
-  it('should ask for confirmation on deleteFile', () => {
+  it('should ask for confirmation and deleteFile', () => {
+    // success
     component.deleteFile('f.txt');
     expect(mockAppFacade.showConfirmModal()).toBe(true);
-    
-    // Call the action
     mockAppFacade.confirmAction()();
     expect(mockProjectsFacade.deleteFile).toHaveBeenCalledWith('f.txt');
     expect(mockProjectsFacade.loadProjectFiles).toHaveBeenCalled();
     expect(mockAppFacade.showConfirmModal()).toBe(false);
-  });
-  
-  it('should handle deleteFile error', () => {
+
+    // error
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     component.deleteFile('f.txt');
     mockProjectsFacade.deleteFile.mockReturnValueOnce(throwError(() => new Error('err')));
@@ -467,30 +564,4 @@ describe('TallerViewComponent', () => {
     const url = component.getDownloadUrl('f.txt');
     expect(url).toBe('http://download.url/file.txt');
   });
-
-  it('should capture selection if text exists', () => {
-    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => ' selected text ' } as any);
-    component.captureSelection();
-    expect(component.capturedSelection()).toBe('selected text');
-    
-    // test ignore empty
-    vi.spyOn(window, 'getSelection').mockReturnValue({ toString: () => '   ' } as any);
-    component.captureSelection();
-    expect(component.capturedSelection()).toBe('selected text'); // unchanged
-  });
-
-  it('should clear selection', () => {
-    component.capturedSelection.set('test');
-    fixture.detectChanges(); // forces template to render the selection badge and clear button
-    
-    // Check if the clear button renders and click it
-    const clearBtn = fixture.debugElement.nativeElement.querySelector('.ai-assistant-panel button[style*="background: none"]');
-    if (clearBtn) clearBtn.click();
-    else component.clearSelection();
-    
-    expect(component.capturedSelection()).toBe('');
-  });
-  
-
-
 });

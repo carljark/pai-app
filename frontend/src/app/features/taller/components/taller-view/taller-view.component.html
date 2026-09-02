@@ -94,7 +94,7 @@
           <p style="margin: 0; font-size: 0.9rem; color: #64748b;">{{ trans.t().aiThinkingDesc }}</p>
         </div>
       }
-      <div id="pdf-content" (mouseup)="captureSelection()" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
+      <div id="pdf-content" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
         @if (projects.currentProject()?.userId?.name) {
           <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: #166534; font-size: 0.9rem;">
             <strong>{{ trans.t().authorshipLabel }}:</strong> {{ projects.currentProject().userId.name }} &nbsp;|&nbsp; <strong>Email:</strong> {{ projects.currentProject().userId.email }}
@@ -149,21 +149,20 @@
                   </ol>
                 </div>
                 <div class="form-group" style="margin-bottom: 16px;">
-                  @if (capturedSelection()) {
-                    <div style="margin-bottom: 8px; padding: 8px; background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 4px; font-size: 0.8rem; color: #0369a1; display: flex; justify-content: space-between; align-items: flex-start;">
-                      <div style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
-                        <strong>{{ trans.t().selectionLabel }}:</strong> "{{ capturedSelection() }}"
-                      </div>
-                      <button (click)="clearSelection()" style="background: none; border: none; color: #0284c7; cursor: pointer; padding: 2px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                      </button>
-                    </div>
-                  }
                   <textarea [ngModel]="projects.aiPrompt()" (ngModelChange)="projects.aiPrompt.set($event)" [placeholder]="trans.t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
                 </div>
                 <button (click)="rewriteWithAI()" [disabled]="projects.isThinking()" class="btn-primary" style="width: 100%;">
                   {{ projects.isThinking() ? trans.t().thinking : trans.t().rewriteBtn }}
                 </button>
+                @if (projects.canUndo()) {
+                  <button (click)="undoAI()" class="btn-secondary" style="width: 100%; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="1 4 1 10 7 10"></polyline>
+                      <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                    </svg>
+                    {{ trans.t().undoAiBtn }}
+                  </button>
+                }
               </div>
             } @else {
               <div class="ai-assistant-panel" style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 24px;">

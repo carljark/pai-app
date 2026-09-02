@@ -274,49 +274,32 @@ describe('Projects Endpoints', () => {
     expect(res.status).toBe(202);
   });
 
-  it('POST /api/projects/rewrite - Debería reescribir una sección del proyecto', async () => {
+  it('POST /api/projects/rewrite - Debería reescribir el proyecto completo con IA', async () => {
     const { token } = await createTestUser('teacher', 'teacher_rewrite@test.com');
     
-    // Caso éxito con coincidencia exacta
+    // Caso éxito: devuelve el nuevo markdown completo
     const res = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
       .send({
         context: '# Proyecto Actual con Texto a cambiar aquí',
-        selectedText: 'Texto a cambiar',
-        instruction: 'Hazlo más corto'
+        instruction: 'Añade una sección de evaluación'
       });
     expect(res.status).toBe(200);
     expect(res.body.newText).toBeDefined();
 
-    // Caso coincidencia tras trim
-    const resTrim = await request(app)
-      .post('/api/projects/rewrite')
-      .set('Authorization', `Bearer ${token}`)
-      .send({
-        context: '# Proyecto Actual con TextoTrim aquí',
-        selectedText: '  TextoTrim  ',
-        instruction: 'Hazlo más corto'
-      });
-    expect(resTrim.status).toBe(200);
-
-    // Caso sin coincidencia (contexto no contiene la selección) o sin contexto
-    const resNoMatch = await request(app)
-      .post('/api/projects/rewrite')
-      .set('Authorization', `Bearer ${token}`)
-      .send({
-        context: '',
-        selectedText: 'Inexistente',
-        instruction: 'Hazlo más corto'
-      });
-    expect(resNoMatch.status).toBe(200);
-
-    // Caso 400 (falta texto seleccionado o instrucción)
-    const res400 = await request(app)
+    // Caso 400 (falta contexto o instrucción)
+    const res400_1 = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
       .send({ context: '# Proyecto' });
-    expect(res400.status).toBe(400);
+    expect(res400_1.status).toBe(400);
+
+    const res400_2 = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({ instruction: 'Mejorar' });
+    expect(res400_2.status).toBe(400);
 
     // Caso 500
     const aiModule = await import('../services/ai.service');
@@ -326,7 +309,6 @@ describe('Projects Endpoints', () => {
       .set('Authorization', `Bearer ${token}`)
       .send({
         context: '# Proyecto',
-        selectedText: 'Texto',
         instruction: 'Cambiar'
       });
     expect(res500.status).toBe(500);

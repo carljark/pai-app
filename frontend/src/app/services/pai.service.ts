@@ -58,8 +58,8 @@ export class PaiService {
     return this.http.delete<any>(`${this.apiUrl}/projects/${id}`);
   }
 
-  rewriteSection(context: string, selectedText: string, instruction: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/projects/rewrite`, { context, selectedText, instruction });
+  rewriteSection(context: string, instruction: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/projects/rewrite`, { context, instruction });
   }
 
   // Archivos adjuntos

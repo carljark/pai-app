@@ -210,27 +210,26 @@ import { TranslationService } from '../../../../services/translation.service';
                             <strong class="mapa-act-title">{{ isCa() ? act.title_ca : act.title_es }}</strong>
                           </div>
 
-                          <p class="mapa-act-desc">{{ isCa() ? act.description_ca : act.description_es }}</p>
-
-                          @if (act.stepByStep_es && act.stepByStep_es.length > 0) {
-                            <div class="mapa-act-steps">
-                              <strong>{{ isCa() ? 'Desenvolupament pas a pas:' : 'Desarrollo paso a paso:' }}</strong>
-                              <ul>
-                                @for (step of (isCa() ? act.stepByStep_ca : act.stepByStep_es); track step) {
-                                  <li>{{ step }}</li>
-                                }
-                              </ul>
-                            </div>
+                          @if (act.motivatingFactor_es) {
+                            <p class="mapa-act-idea" style="font-size: 0.88rem; color: #475569; margin: 6px 0 8px 0; background: #f8fafc; padding: 6px 10px; border-radius: 6px; border-left: 3px solid #6366f1;">
+                              <strong style="color: #4338ca;">{{ isCa() ? 'Context / Idea motivadora:' : 'Contexto / Idea motivadora:' }}</strong>
+                              {{ isCa() ? act.motivatingFactor_ca : act.motivatingFactor_es }}
+                            </p>
                           }
+
+                          <p class="mapa-act-desc">
+                            <strong style="color: #1e293b;">{{ isCa() ? 'Desenvolupament:' : 'Desarrollo:' }}</strong>
+                            {{ isCa() ? act.description_ca : act.description_es }}
+                          </p>
 
                           <div class="mapa-act-meta">
                             <div class="mapa-meta-box mapa-meta-evidence">
-                              <strong>{{ isCa() ? 'Evidència / Producte:' : 'Evidencia / Producto:' }}</strong>
+                              <strong>{{ isCa() ? 'Producte / Evidència:' : 'Producto / Evidencia:' }}</strong>
                               <span>{{ isCa() ? act.evidence_ca : act.evidence_es }}</span>
                             </div>
 
                             <div class="mapa-meta-box mapa-meta-diversity">
-                              <strong>{{ isCa() ? 'Atenció a la Diversitat FPB:' : 'Atención a la Diversidad FPB:' }}</strong>
+                              <strong>{{ isCa() ? 'Aprenentatges i Diversitat FPB:' : 'Aprendizajes y Diversidad FPB:' }}</strong>
                               <span>{{ isCa() ? act.diversitySupport_ca : act.diversitySupport_es }}</span>
                             </div>
                           </div>

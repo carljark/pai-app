@@ -27,7 +27,12 @@ graph TD
 - `FPBModule`: Estructura del módulo (código, nombre en castellano/valenciano, tipo `especifico`/`transversal`, color distintivo, icono, RAs).
 - `LearningOutcome`: RA con código, descripción bilingüe, criterios asociados y lista de conexiones intermodulares.
 - `IntermodularConnection`: Conexión entre el RA del módulo de origen y otro módulo diana, con tipo de relación (`ciencias`, `comunicacion`, `empleabilidad`, `tecnica`, `sostenibilidad`, `digital`, `cliente`), justificación pedagógica bilingüe y 7 actividades sugeridas.
-- `IntermodularActivity`: Propuesta didáctica con título, descripción, pasos, evidencias, factores motivadores y medidas DUA/atención a la diversidad.
+- `IntermodularActivity`: Propuesta didáctica rica con:
+  - `title_es` / `title_ca`: Título descriptivo de la actividad.
+  - `motivatingFactor_es` / `motivatingFactor_ca`: Idea motivadora, contexto profesional o toque actual.
+  - `description_es` / `description_ca`: **Desarrollo completo y detallado** de la actividad extraído de los documentos de trabajo.
+  - `evidence_es` / `evidence_ca`: Producto final, entregable evaluable o evidencia de aprendizaje.
+  - `diversitySupport_es` / `diversitySupport_ca`: Medidas de atención a la diversidad FPB (DUA, lectura fácil, apoyos visuales y roles cooperativos).
 
 ### 2. Capa de Datos Estática (`data/mapa-intermodular.seed.ts`)
 - Ingesta estructurada y completa de los 9 módulos oficiales de la carpeta `Plantillas coincidencias FPB`:
@@ -40,7 +45,7 @@ graph TD
   7. `3159` Itinerario personal para la empleabilidad (12 coincidencias, 84 actividades)
   8. `3064` Lavado y cambios de forma del cabello (15 coincidencias, 105 actividades)
   9. `3063` Maquillaje (14 coincidencias, 98 actividades)
-- **Total:** 9 módulos, 115 coincidencias curriculares y 805 actividades desarrolladas.
+- **Total:** 9 módulos, 115 coincidencias curriculares y 805 actividades desarrolladas de forma exhaustiva con su contenido original.
 
 ### 3. Fachada de Estado Reactiva (`services/mapa-intermodular.facade.ts`)
 - Estado gestionado exclusivamente con **Angular 18 Signals** (`signal`, `computed`).

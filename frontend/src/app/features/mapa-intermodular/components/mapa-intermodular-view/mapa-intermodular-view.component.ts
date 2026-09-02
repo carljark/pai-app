@@ -394,6 +394,11 @@ import { TranslationService } from '../../../../services/translation.service';
       }
     }
 
+    .mapa-sidebar {
+      position: sticky;
+      top: 20px;
+    }
+
     .mapa-section-title {
       font-size: 1.1rem;
       font-weight: 700;
@@ -405,9 +410,27 @@ import { TranslationService } from '../../../../services/translation.service';
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 700px;
+      max-height: calc(100vh - 120px);
       overflow-y: auto;
-      padding-right: 4px;
+      padding-right: 6px;
+    }
+
+    .mapa-modules-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .mapa-modules-list::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 4px;
+    }
+
+    .mapa-modules-list::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .mapa-modules-list::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
     }
 
     .mapa-module-card {

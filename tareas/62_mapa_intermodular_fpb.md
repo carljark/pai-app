@@ -74,13 +74,15 @@ graph TD
 3. `frontend/src/app/features/mapa-intermodular/services/mapa-intermodular.facade.ts` (Creado)
 4. `frontend/src/app/features/mapa-intermodular/services/mapa-intermodular.facade.spec.ts` (Creado)
 5. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.ts` (Creado / Rediseñado en 2 niveles)
-6. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.spec.ts` (Creado)
-7. `frontend/src/app/layout/components/sidebar/sidebar.component.ts` (Modificado: añadido botón de navegación con icono)
-8. `frontend/src/app/layout/components/sidebar/sidebar.component.spec.ts` (Modificado: mock de traducción)
-9. `frontend/src/styles/_layout.scss` (Modificado: ajuste de padding a 1rem constante en `.app-main`)
-10. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'`)
-11. `frontend/src/app/services/translation.service.ts` (Modificado: etiquetas bilingües de navegación)
-12. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista)
+6. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.scss` (Creado: estilos modulares optimizados)
+7. `frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.spec.ts` (Creado)
+8. `frontend/src/app/layout/components/sidebar/sidebar.component.ts` (Modificado: añadido botón de navegación con icono)
+9. `frontend/src/app/layout/components/sidebar/sidebar.component.spec.ts` (Modificado: mock de traducción)
+10. `frontend/src/styles/_layout.scss` (Modificado: ajuste de padding a 1rem constante en `.app-main`)
+11. `frontend/src/app/services/layout.service.ts` (Modificado: añadido tipo `'mapa'`)
+12. `frontend/src/app/services/translation.service.ts` (Modificado: etiquetas bilingües de navegación)
+13. `frontend/src/app/app.html` & `app.ts` & `app.spec.ts` (Modificado: enrutamiento de vista)
+14. `frontend/angular.json` (Modificado: ajuste de budgets de bundle y estilos de componentes para el dataset de 11 módulos FPB y dependencias permitidas)
 
 ---
 

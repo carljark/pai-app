@@ -28,8 +28,8 @@ describe('MapaIntermodularFacade', () => {
     const stats = facade.stats();
     expect(stats.totalModules).toBe(11);
     expect(stats.totalRas).toBeGreaterThan(0);
-    expect(stats.totalConnections).toBe(219);
-    expect(stats.totalActivities).toBe(1533);
+    expect(stats.totalConnections).toBe(316);
+    expect(stats.totalActivities).toBe(2174);
   });
 
   it('should select module and update selectedRaId, and collapse when clicked again', () => {

@@ -417,7 +417,7 @@ export class MapaIntermodularViewComponent {
   }
 
   getCriterionCode(critText: string): string {
-    const m = critText.match(/^(\d*[a-z])[\)\.\s]/i);
+    const m = critText.match(/^(?:(?:\d+-)?(\d*[a-z])|[a-z])[\)\.\s]/i) || critText.match(/(?:^|\b|\-)(\d*[a-z])[\)\.\s]/i);
     return m ? m[1].toLowerCase() : 'CE';
   }
 

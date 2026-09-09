@@ -157,6 +157,17 @@ describe('PaiService', () => {
     window.EventSource = OriginalEventSource;
   });
 
+  it('should return no-op when EventSource is not defined on window', () => {
+    const OriginalEventSource = window.EventSource;
+    delete (window as any).EventSource;
+
+    const sub = service.listenToProjectUpdates().subscribe();
+    expect(sub).toBeDefined();
+    sub.unsubscribe();
+
+    window.EventSource = OriginalEventSource;
+  });
+
   it('should getProjects', () => {
     service.getProjects().subscribe();
     const req = httpMock.expectOne('/api/projects');

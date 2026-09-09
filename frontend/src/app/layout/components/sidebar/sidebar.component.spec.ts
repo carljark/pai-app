@@ -4,19 +4,9 @@ import { LayoutService } from '../../../services/layout.service';
 import { TranslationService } from '../../../services/translation.service';
 import { AuthFacade } from '../../../features/auth/services/auth.facade';
 import { ProjectsFacade } from '../../../features/projects/services/projects.facade';
-import { NotificationsBadgeComponent } from '../../../features/notifications/components/notifications-badge/notifications-badge.component';
+import { NotificationsFacade } from '../../../features/notifications/services/notifications.facade';
 import { signal } from '@angular/core';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
-import { Component, Input } from '@angular/core';
-
-@Component({
-  selector: 'app-notifications-badge',
-  standalone: true,
-  template: '<div></div>'
-})
-class MockNotificationsBadgeComponent {
-  @Input() projects: any[] = [];
-}
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -57,6 +47,13 @@ describe('SidebarComponent', () => {
     projectsHistory: signal([])
   };
 
+  const mockNotifications = {
+    notifications: signal([]),
+    latestNotification: signal(null),
+    markAllAsRead: vi.fn(),
+    markAsRead: vi.fn()
+  };
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SidebarComponent],
@@ -64,7 +61,8 @@ describe('SidebarComponent', () => {
         { provide: LayoutService, useValue: mockLayout },
         { provide: TranslationService, useValue: mockTrans },
         { provide: AuthFacade, useValue: mockAuth },
-        { provide: ProjectsFacade, useValue: mockProjects }
+        { provide: ProjectsFacade, useValue: mockProjects },
+        { provide: NotificationsFacade, useValue: mockNotifications }
       ]
     })
     .compileComponents();

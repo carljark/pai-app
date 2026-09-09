@@ -25,17 +25,23 @@ export class PaiService {
 
   listenToProjectUpdates(): Observable<any> {
     return new Observable((observer) => {
+      const EventSourceImpl = (window as any)?.EventSource;
+
+      if (!EventSourceImpl) {
+        return () => {};
+      }
+
       const token = localStorage.getItem('pai_token');
       // Enviar token por query parameter o usar interceptor? EventSource no soporta headers.
       // Así que lo pasamos por URL
-      const eventSource = new EventSource(`${this.apiUrl}/projects/stream?token=${token}`);
+      const eventSource = new EventSourceImpl(`${this.apiUrl}/projects/stream?token=${token}`);
       
-      eventSource.onmessage = (event) => {
+      eventSource.onmessage = (event: any) => {
         const data = JSON.parse(event.data);
         observer.next(data);
       };
 
-      eventSource.onerror = (error) => {
+      eventSource.onerror = (error: any) => {
         console.error('SSE Error:', error);
         // observer.error(error); // Mejor no cerrarlo por desconexiones puntuales
       };

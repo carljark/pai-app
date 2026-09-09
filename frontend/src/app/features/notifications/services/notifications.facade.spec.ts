@@ -88,10 +88,12 @@ describe('NotificationsFacade', () => {
     TestBed.flushEffects();
 
     updatesSubject.next({ type: 'PROJECT_COMPLETED', projectId: '1' });
+    updatesSubject.next({ type: 'PROJECT_COMPLETED', projectId: '2' });
     const id = facade.notifications()[0].id;
     
     facade.markAsRead(id);
     expect(facade.notifications()[0].read).toBe(true);
+    expect(facade.notifications()[1].read).toBe(false);
   });
 
   it('markAllAsRead should set read to true for all notifications', () => {
@@ -106,5 +108,40 @@ describe('NotificationsFacade', () => {
     
     facade.markAllAsRead();
     expect(facade.notifications().every(n => n.read)).toBe(true);
+  });
+
+  it('should handle SSE error in facade', () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    TestBed.runInInjectionContext(() => {
+      facade = new NotificationsFacade();
+    });
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+
+    updatesSubject.error('Test SSE Error');
+    expect(consoleSpy).toHaveBeenCalledWith('SSE Error in facade', 'Test SSE Error');
+    consoleSpy.mockRestore();
+  });
+
+  it('should not re-subscribe if already subscribed', () => {
+    TestBed.runInInjectionContext(() => {
+      facade = new NotificationsFacade();
+    });
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    expect(paiServiceMock.listenToProjectUpdates).toHaveBeenCalledTimes(1);
+
+    authFacadeMock.currentUser.set({ _id: '2' });
+    TestBed.flushEffects();
+    expect(paiServiceMock.listenToProjectUpdates).toHaveBeenCalledTimes(1);
+  });
+
+  it('should handle logout when already not subscribed', () => {
+    TestBed.runInInjectionContext(() => {
+      facade = new NotificationsFacade();
+    });
+    authFacadeMock.currentUser.set(null);
+    TestBed.flushEffects();
+    expect(facade.notifications()).toEqual([]);
   });
 });

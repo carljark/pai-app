@@ -19,6 +19,7 @@ export class AppFacade {
   auth = inject(AuthFacade);
   telemetry = inject(TelemetryService);
 
+  errorTitle = signal<string>('Ha ocurrido un error');
   errorMessage = signal<string>('');
   showErrorModal = signal<boolean>(false);
   
@@ -70,6 +71,7 @@ export class AppFacade {
               this.showInfoModal.set(true);
             }, 100);
           } else if (notif.type === 'ERROR') {
+            this.errorTitle.set('Error en la Generación');
             this.errorMessage.set(notif.message);
             this.showErrorModal.set(true);
           }
@@ -101,8 +103,9 @@ export class AppFacade {
       },
       error: (err) => {
         console.error('Error:', err);
+        this.errorTitle.set('Error al Iniciar Generación');
         const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
-        this.errorMessage.set(`El servidor devolvió el siguiente error:\n\n${serverMsg}`);
+        this.errorMessage.set(serverMsg);
         this.showErrorModal.set(true);
         this.projects.isGenerating.set(false);
       },
@@ -119,6 +122,7 @@ export class AppFacade {
           this.showConfirmModal.set(false);
         },
         error: (err) => {
+          this.errorTitle.set('Error al Borrar Proyecto');
           this.errorMessage.set(err.error?.error || 'Error al borrar el proyecto');
           this.showErrorModal.set(true);
           this.showConfirmModal.set(false);

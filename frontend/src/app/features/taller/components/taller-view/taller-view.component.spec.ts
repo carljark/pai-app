@@ -41,6 +41,7 @@ describe('TallerViewComponent', () => {
       infoType: signal(''),
       showInfoModal: signal(false),
       errorMessage: signal(''), viewPastProject: vi.fn(),
+      errorTitle: signal(''),
       showErrorModal: signal(false),
       confirmTitle: signal(''),
       confirmMessage: signal(''),
@@ -480,6 +481,7 @@ describe('TallerViewComponent', () => {
   });
 
   it('should handle rewriteWithAI error variants', () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     mockProjectsFacade.generatedProject.set('# Old Project');
     mockProjectsFacade.aiPrompt.set('fix grammar');
     
@@ -487,6 +489,7 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({ error: { message: 'Err message' } })));
     component.rewriteWithAI();
     expect(mockAppFacade.errorMessage()).toBe('Err message');
+    expect(mockAppFacade.errorTitle()).toBe('Error en el Asistente IA');
 
     // err.message
     mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => new Error('Direct error')));
@@ -497,6 +500,8 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({})));
     component.rewriteWithAI();
     expect(mockAppFacade.errorMessage()).toBe('Error al conectar con la IA para reescribir.');
+
+    consoleSpy.mockRestore();
   });
 
   it('should handle onDrop edge cases', () => {

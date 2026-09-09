@@ -22,12 +22,14 @@ describe('ErrorModalComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render message input', () => {
+  it('should render message and title input', () => {
+    componentRef.setInput('title', 'Custom Error Title');
     componentRef.setInput('message', 'Test Error Message');
     fixture.detectChanges();
     
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('p')?.textContent).toContain('Test Error Message');
+    expect(compiled.querySelector('h2')?.textContent).toContain('Custom Error Title');
+    expect(compiled.textContent).toContain('Test Error Message');
   });
 
   it('should emit close event when button is clicked', () => {

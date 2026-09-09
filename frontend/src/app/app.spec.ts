@@ -45,6 +45,7 @@ describe('App', () => {
       confirmAction: signal(() => {}),
       
       showErrorModal: signal(false),
+      errorTitle: signal(''),
       errorMessage: signal(''),
       
       viewPastProject: vi.fn()

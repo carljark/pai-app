@@ -132,10 +132,11 @@ export class TallerViewComponent {
         this.projects.updateProjectStatus('borrador')?.subscribe();
       },
       error: (err) => {
-        console.error("Error en IA", err);
+        console.error('Error en IA', err);
         this.projects.isThinking.set(false);
         // Revertir el undo push si la IA falló
         this.projects.popUndo();
+        this.appFacade.errorTitle.set(this.layout.language() === 'catalan' ? "Error a l'Assistent IA" : 'Error en el Asistente IA');
         const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
         this.appFacade.errorMessage.set(serverMsg);
         this.appFacade.showErrorModal.set(true);

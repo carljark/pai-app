@@ -49,5 +49,5 @@
   <app-confirm-modal [title]="appFacade.confirmTitle()" [message]="appFacade.confirmMessage()" (confirm)="appFacade.confirmAction()()" (cancel)="appFacade.showConfirmModal.set(false)"></app-confirm-modal>
 }
 @if (appFacade.showErrorModal()) {
-  <app-error-modal [message]="appFacade.errorMessage()" (close)="appFacade.showErrorModal.set(false)"></app-error-modal>
+  <app-error-modal [title]="appFacade.errorTitle()" [message]="appFacade.errorMessage()" (close)="appFacade.showErrorModal.set(false)"></app-error-modal>
 }

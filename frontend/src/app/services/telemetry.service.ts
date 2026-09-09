@@ -88,7 +88,7 @@ export class TelemetryService {
     };
 
     if (isClosing && typeof navigator !== "undefined" && navigator.sendBeacon) {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("pai_token") || localStorage.getItem("token");
       if (token) {
         const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
         navigator.sendBeacon("/api/telemetry/heartbeat", blob);

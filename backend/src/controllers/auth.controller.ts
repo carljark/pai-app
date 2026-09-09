@@ -24,7 +24,11 @@ export const register = async (req: Request, res: Response) => {
 export const login = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const normalizedEmail = (email || '').trim().toLowerCase();
+    const queryEmail = (normalizedEmail === 'eva@plapping.org' || normalizedEmail === 'eva@plappin.org')
+      ? { $in: ['eva@plappin.org', 'eva@plapping.org'] }
+      : email;
+    const user = await User.findOne({ email: queryEmail });
     if (!user) {
       return res.status(400).json({ error: 'Credenciales inválidas' });
     }
@@ -33,7 +37,16 @@ export const login = async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Credenciales inválidas' });
     }
     const token = jwt.sign({ _id: user._id, role: user.role, name: user.name, canUseAi: user.canUseAi }, JWT_SECRET, { expiresIn: '7d' });
-    return res.json({ token, user: { name: user.name, email: user.email, role: user.role } });
+    return res.json({ 
+      token, 
+      user: { 
+        _id: user._id, 
+        name: user.name, 
+        email: user.email, 
+        role: user.role, 
+        canUseAi: user.canUseAi !== false 
+      } 
+    });
   } catch (err) {
     return res.status(500).json({ error: 'Error al iniciar sesión' });
   }

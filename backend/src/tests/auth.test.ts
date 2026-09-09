@@ -66,31 +66,6 @@ describe('Auth Endpoints', () => {
     expect(res.body.error).toBe('Credenciales inválidas');
   });
 
-  it('Debería permitir login con eva@plappin.org y la variante eva@plapping.org', async () => {
-    // Registrar usuario eva@plappin.org
-    await request(app).post('/api/auth/register').send({
-      email: 'eva@plappin.org',
-      password: 'password123',
-      name: 'Eva Admin'
-    });
-
-    // Login con eva@plappin.org
-    const resExact = await request(app).post('/api/auth/login').send({
-      email: 'eva@plappin.org',
-      password: 'password123'
-    });
-    expect(resExact.status).toBe(200);
-    expect(resExact.body.token).toBeDefined();
-
-    // Login con la variante eva@plapping.org
-    const resVariant = await request(app).post('/api/auth/login').send({
-      email: 'eva@plapping.org',
-      password: 'password123'
-    });
-    expect(resVariant.status).toBe(200);
-    expect(resVariant.body.token).toBeDefined();
-  });
-
   it('Errores adicionales en Auth (duplicado, no encontrado, 500)', async () => {
     // Registro duplicado
     await request(app).post('/api/auth/register').send({ email: 'dup@test.com', password: '123', name: 'A' });

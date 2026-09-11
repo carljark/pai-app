@@ -14,8 +14,11 @@ const ProjectSchema = new mongoose.Schema({
   aiPrompt: String,
   aiInstruction: String,
   errorDetail: String,
+  generationStartedAt: Date,
+  generationTimeMs: Number,
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
 });
 
 export const Project = mongoose.model('Project', ProjectSchema);

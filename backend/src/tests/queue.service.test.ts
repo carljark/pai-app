@@ -42,19 +42,29 @@ describe('Queue Service', () => {
     vi.spyOn(aiService, 'generateGeminiContent').mockResolvedValue('Contenido AI');
     vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
 
+    const consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
     await processQueue();
 
     expect(mockProject.status).toBe('borrador');
     expect(mockProject.generatedContent?.rawText).toBe('Contenido AI');
+    expect((mockProject as any).generationTimeMs).toBeDefined();
+    expect((mockProject as any).generationTimeMs).toBeGreaterThanOrEqual(0);
     expect(mockProject.save).toHaveBeenCalled();
-    expect(sseService.sendToUser).toHaveBeenCalledWith('user1', expect.objectContaining({ type: 'PROJECT_COMPLETED' }));
+    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('[Queue/AI]'));
+    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('generado por la IA en'));
+    expect(sseService.sendToUser).toHaveBeenCalledWith('user1', expect.objectContaining({
+      type: 'PROJECT_COMPLETED',
+      generationTimeMs: expect.any(Number)
+    }));
+    consoleLogSpy.mockRestore();
   });
 
-  it('debería manejar errores de la IA', async () => {
+  it('debería manejar errores de la IA y registrar el tiempo transcurrido en el log', async () => {
     const mockProject = {
       _id: 'proj2',
       userId: 'user2',
       status: 'en_cola',
+      title: 'Proyecto Fallido',
       save: vi.fn().mockResolvedValue(true)
     };
     
@@ -64,13 +74,21 @@ describe('Queue Service', () => {
       
     vi.spyOn(aiService, 'generateGeminiContent').mockRejectedValue(new Error('AI failed'));
     vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
     await processQueue();
 
     expect(mockProject.status).toBe('error');
     expect((mockProject as any).errorDetail).toBe('AI failed');
+    expect((mockProject as any).generationTimeMs).toBeDefined();
+    expect((mockProject as any).generationTimeMs).toBeGreaterThanOrEqual(0);
     expect(mockProject.save).toHaveBeenCalled();
-    expect(sseService.sendToUser).toHaveBeenCalledWith('user2', expect.objectContaining({ type: 'PROJECT_ERROR' }));
+    expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining('[Queue/AI] Error al generar proyecto'), expect.any(Error));
+    expect(sseService.sendToUser).toHaveBeenCalledWith('user2', expect.objectContaining({
+      type: 'PROJECT_ERROR',
+      generationTimeMs: expect.any(Number)
+    }));
+    consoleErrorSpy.mockRestore();
   });
 
   it('debería restaurar proyectos en estado generando a en_cola al inicializar', async () => {

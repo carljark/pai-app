@@ -9,6 +9,7 @@ import fs from 'fs';
 import path from 'path';
 import { addClient, removeClient } from "../services/sse.service";
 import { processQueue } from "../services/queue.service";
+import { syncProjectNotification, deleteProjectNotification } from "../services/notification.service";
 
 // Endpoint para el SSE
 export const streamUpdates = (req: any, res: Response) => {
@@ -177,6 +178,13 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
     });
     const savedProject = await newProject.save();
 
+    await syncProjectNotification(savedProject, {
+      type: 'PROJECT_STATUS',
+      title: 'Proyecto en Cola',
+      message: 'Proyecto añadido a la cola de generación',
+      userName: req.user?.name
+    });
+
     // 5. DISPARAR PROCESAMIENTO DE COLA (no esperamos a que termine)
     if (process.env.NODE_ENV !== 'test') {
       processQueue().catch(console.error);
@@ -247,7 +255,8 @@ export const deleteProject = async (req: any, res: Response) => {
     }
     
     await Project.findByIdAndDelete(req.params.id);
-    
+    await deleteProjectNotification(req.params.id);
+
     await new ActivityLog({
       userId: req.user?._id,
       action: 'DELETE_PROJECT',
@@ -319,14 +328,25 @@ async function hasPendingGeneration(userId: any): Promise<boolean> {
   return count > 0;
 }
 
-async function reenqueueProject(project: any): Promise<void> {
+async function reenqueueProject(project: any, userName?: string): Promise<void> {
   if (!project.aiPrompt) {
     project.aiPrompt = `Genera un proyecto educativo para ${project.tipoNivel}.`;
     project.aiInstruction = 'Experto pedagógico.';
   }
   project.status = 'en_cola';
   project.errorDetail = undefined;
+  project.generationStartedAt = undefined;
+  project.generationTimeMs = undefined;
+  project.updatedAt = new Date();
   await project.save();
+
+  await syncProjectNotification(project, {
+    type: 'PROJECT_STATUS',
+    title: 'Proyecto en Cola (Reintento)',
+    message: 'Proyecto reencolado para su generación.',
+    userName
+  });
+
   processQueue().catch(console.error);
 }
 
@@ -341,7 +361,7 @@ export const retryProject = async (req: any, res: Response) => {
       return res.status(429).json({ error: 'Ya tienes un proyecto en la cola o generándose. Por favor, espera a que termine.' });
     }
 
-    await reenqueueProject(project);
+    await reenqueueProject(project, req.user?.name);
     return res.json({ message: 'Proyecto reencolado exitosamente', project });
   } catch (error: any) {
     return res.status(500).json({ error: error.message });

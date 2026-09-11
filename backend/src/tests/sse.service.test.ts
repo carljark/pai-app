@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { addClient, removeClient, sendToUser } from '../services/sse.service';
+import { addClient, removeClient, sendToUser, broadcast } from '../services/sse.service';
 
 describe('SSE Service', () => {
   it('debería agregar un cliente', () => {
@@ -43,4 +43,28 @@ describe('SSE Service', () => {
   it('no debería fallar al eliminar un cliente inexistente', () => {
     expect(() => removeClient('user3', 'client3')).not.toThrow();
   });
+
+  it('debería hacer broadcast a todos los clientes de todos los usuarios', () => {
+    const resMock1 = { write: vi.fn() } as any;
+    const resMock2 = { write: vi.fn() } as any;
+    addClient('u1', 'c1', resMock1);
+    addClient('u2', 'c2', resMock2);
+
+    broadcast({ type: 'ALL_EVENT' });
+    expect(resMock1.write).toHaveBeenCalledWith('data: {"type":"ALL_EVENT"}\n\n');
+    expect(resMock2.write).toHaveBeenCalledWith('data: {"type":"ALL_EVENT"}\n\n');
+  });
+
+  it('broadcast debería capturar errores en res.write sin fallar', () => {
+    const resMockErr = {
+      write: vi.fn().mockImplementation(() => {
+        throw new Error('Socket closed');
+      })
+    } as any;
+    addClient('u3', 'c3', resMockErr);
+
+    expect(() => broadcast({ type: 'ERROR_EVENT' })).not.toThrow();
+    expect(resMockErr.write).toHaveBeenCalled();
+  });
 });
+

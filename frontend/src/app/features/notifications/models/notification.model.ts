@@ -5,6 +5,12 @@ export interface RawNotificationEvent {
   error?: string;
   status?: string;
   message?: string;
+  title?: string;
+  userName?: string;
+  modules?: string[];
+  generationTimeMs?: number;
+  generationStartedAt?: Date | string;
+  notification?: any;
 }
 
 export interface AppNotification {
@@ -13,6 +19,14 @@ export interface AppNotification {
   title: string;
   message: string;
   projectId?: string;
+  userId?: string;
+  userName?: string;
+  modules?: string[];
+  status?: string;
+  generationTimeMs?: number;
+  generationStartedAt?: Date | string;
   timestamp: Date;
+  updatedAt?: Date;
   read: boolean;
 }
+

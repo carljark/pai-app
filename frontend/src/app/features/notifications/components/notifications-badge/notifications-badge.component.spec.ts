@@ -95,4 +95,74 @@ describe('NotificationsBadgeComponent', () => {
     backdrop.click();
     expect(component.isOpen()).toBe(false);
   });
+
+  it('should format elapsed time and duration correctly', () => {
+    expect(component.formatElapsed(0)).toBe('00:00');
+    expect(component.formatElapsed(15)).toBe('00:15');
+    expect(component.formatElapsed(75)).toBe('01:15');
+    expect(component.formatDurationMs(14500)).toBe('14.5s');
+    expect(component.formatDurationMs(undefined)).toBe('');
+    expect(component.getElapsedTime(null)).toBe('00:00');
+  });
+
+  it('should calculate elapsed time based on generationStartedAt or createdAt and display in DOM', () => {
+    component.now.set(1000000);
+    const startTime = new Date(1000000 - 35000).toISOString();
+    const projects = [
+      { _id: '1', status: 'generando', generationStartedAt: startTime, createdAt: startTime },
+      { _id: '2', status: 'borrador', generationTimeMs: 12400, createdAt: startTime }
+    ];
+
+    componentRef.setInput('projects', projects);
+    component.openNotifications();
+    fixture.detectChanges();
+
+    expect(component.generatingProject()).toBeDefined();
+    expect(component.getElapsedTime(projects[0])).toBe('00:35');
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('00:35');
+    expect(compiled.textContent).toContain('12.4s');
+  });
+
+  it('should update now periodically when a project is generating', () => {
+    vi.useFakeTimers();
+    const startTime = 1000000;
+    vi.setSystemTime(startTime);
+
+    const projects = [
+      { _id: '1', status: 'generando', createdAt: new Date(startTime).toISOString() }
+    ];
+    componentRef.setInput('projects', projects);
+    TestBed.flushEffects();
+    fixture.detectChanges();
+
+    component.now.set(startTime);
+    vi.advanceTimersByTime(2000);
+    expect(component.now()).toBeGreaterThanOrEqual(startTime + 2000);
+    vi.useRealTimers();
+  });
+
+  it('should render notifications directly from NotificationsFacade including author', () => {
+    notificationsFacadeMock.notifications.set([
+      {
+        id: 'n1',
+        title: 'Proyecto Ciencias',
+        userName: 'María',
+        status: 'borrador',
+        modules: ['3060'],
+        generationTimeMs: 15400,
+        timestamp: new Date()
+      }
+    ]);
+    component.openNotifications();
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('3060');
+    expect(compiled.textContent).toContain('por María');
+    expect(compiled.textContent).toContain('Completado');
+    expect(compiled.textContent).toContain('15.4s');
+  });
 });
+

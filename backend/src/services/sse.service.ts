@@ -31,3 +31,13 @@ export const sendToUser = (userId: string, data: any) => {
     });
   }
 };
+
+export const broadcast = (data: any) => {
+  Object.values(clients).forEach(userClients => {
+    userClients.forEach(client => {
+      try {
+        client.res.write(`data: ${JSON.stringify(data)}\n\n`);
+      } catch (err) {}
+    });
+  });
+};

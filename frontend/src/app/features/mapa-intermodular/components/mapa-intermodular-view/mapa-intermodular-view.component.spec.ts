@@ -302,39 +302,52 @@ describe('MapaIntermodularViewComponent', () => {
     expect(header2).toBeTruthy();
     expect(header3).toBeTruthy();
 
-    // Toggle step 1 via DOM click
-    header1.click();
+    const btnToggle1 = header1.querySelector('.mapa-step-toggle-btn') as HTMLButtonElement;
+    const btnToggle2 = header2.querySelector('.mapa-step-toggle-btn') as HTMLButtonElement;
+    const btnToggle3 = header3.querySelector('.mapa-step-toggle-btn') as HTMLButtonElement;
+
+    expect(btnToggle1).toBeTruthy();
+    expect(btnToggle2).toBeTruthy();
+    expect(btnToggle3).toBeTruthy();
+
+    // Toggle step 1 via button click
+    btnToggle1.click();
     fixture.detectChanges();
     expect(component.step1Open()).toBe(false);
     expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain('collapsed');
 
+    // Clicking header1 directly (outside toggle btn) should ACTIVATE (open) step 1
     header1.click();
     fixture.detectChanges();
     expect(component.step1Open()).toBe(true);
     expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).not.toContain('collapsed');
 
-    // Toggle step 2 via DOM click
-    header2.click();
+    // Toggle step 2 via button click
+    btnToggle2.click();
     fixture.detectChanges();
     expect(component.step2Open()).toBe(false);
     expect(fixture.nativeElement.querySelector('.mapa-step-body--2').classList).toContain('collapsed');
 
+    // Clicking header2 directly should activate step 2
     header2.click();
     fixture.detectChanges();
     expect(component.step2Open()).toBe(true);
 
-    // Toggle step 3 via DOM click
-    header3.click();
+    // Toggle step 3 via button click
+    btnToggle3.click();
     fixture.detectChanges();
     expect(component.step3Open()).toBe(false);
     expect(fixture.nativeElement.querySelector('.mapa-step-body--3').classList).toContain('collapsed');
 
+    // Clicking header3 directly should activate step 3
     header3.click();
     fixture.detectChanges();
     expect(component.step3Open()).toBe(true);
 
-    // Test toggleStep direct method calls
-    component.toggleStep(1);
+    // Test toggleStep direct method calls with event stopPropagation
+    const mockEvent = { stopPropagation: vi.fn() } as unknown as Event;
+    component.toggleStep(1, mockEvent);
+    expect(mockEvent.stopPropagation).toHaveBeenCalled();
     expect(component.step1Open()).toBe(false);
     component.toggleStep(1);
     expect(component.step1Open()).toBe(true);
@@ -348,6 +361,38 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.step3Open()).toBe(false);
     component.toggleStep(3);
     expect(component.step3Open()).toBe(true);
+  });
+
+  it('should activate and scroll steps when activateStep is called', () => {
+    vi.useFakeTimers();
+    const scrollMock = vi.fn();
+    const focusMock = vi.fn();
+    const mockEl = { scrollIntoView: scrollMock, focus: focusMock } as any;
+    const querySpy = vi.spyOn(document, 'querySelector').mockReturnValue(mockEl);
+
+    component.step1Open.set(false);
+    component.activateStep(1);
+    expect(component.step1Open()).toBe(true);
+
+    component.step2Open.set(false);
+    component.activateStep(2);
+    expect(component.step2Open()).toBe(true);
+
+    component.step3Open.set(false);
+    component.activateStep(3);
+    expect(component.step3Open()).toBe(true);
+
+    vi.advanceTimersByTime(100);
+    expect(scrollMock).toHaveBeenCalledTimes(3);
+    expect(focusMock).toHaveBeenCalledTimes(3);
+
+    // When target element is null
+    querySpy.mockReturnValue(null);
+    component.activateStep(1);
+    vi.advanceTimersByTime(100);
+
+    querySpy.mockRestore();
+    vi.useRealTimers();
   });
 
   it('should auto-expand step 2 and step 3 when onSelectRa is called', () => {

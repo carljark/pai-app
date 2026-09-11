@@ -105,10 +105,18 @@
     <div 
       class="mapa-step-header mapa-step-header--1" 
       [class.open]="step1Open()"
-      (click)="toggleStep(1)"
-      [attr.aria-expanded]="step1Open()">
+      (click)="activateStep(1)"
+      [attr.aria-expanded]="step1Open()"
+      [title]="isCa() ? 'Activar i desplaçar al Pas 1' : 'Activar y desplazar al Paso 1'">
       <div class="mapa-step-header__left">
-        <span class="mapa-step-chevron" [class.rotated]="step1Open()">▼</span>
+        <button 
+          type="button" 
+          class="mapa-step-toggle-btn"
+          (click)="toggleStep(1, $event)"
+          [attr.aria-label]="step1Open() ? (isCa() ? 'Col·lapsar Pas 1' : 'Colapsar Paso 1') : (isCa() ? 'Expandir Pas 1' : 'Expandir Paso 1')"
+          [title]="step1Open() ? (isCa() ? 'Col·lapsar Pas 1' : 'Colapsar Paso 1') : (isCa() ? 'Expandir Pas 1' : 'Expandir Paso 1')">
+          <span class="mapa-step-chevron" [class.rotated]="step1Open()">▼</span>
+        </button>
         <h2 class="mapa-step-title">
           {{ isCa() ? '1. Mòduls i Resultats d’Aprenentatge' : '1. Módulos y Resultados de Aprendizaje' }}
         </h2>
@@ -122,7 +130,7 @@
     </div>
 
     <!-- PASO 1: CONTENIDO (Acordeón 1) -->
-    <div class="mapa-step-body mapa-step-body--1" [class.collapsed]="!step1Open()">
+    <div tabindex="-1" class="mapa-step-body mapa-step-body--1" [class.collapsed]="!step1Open()">
       <div class="mapa-modules-list">
         @for (mod of facade.filteredModules(); track mod.code) {
           <div 
@@ -165,10 +173,18 @@
     <div 
       class="mapa-step-header mapa-step-header--2" 
       [class.open]="step2Open()"
-      (click)="toggleStep(2)"
-      [attr.aria-expanded]="step2Open()">
+      (click)="activateStep(2)"
+      [attr.aria-expanded]="step2Open()"
+      [title]="isCa() ? 'Activar i desplaçar al Pas 2' : 'Activar y desplazar al Paso 2'">
       <div class="mapa-step-header__left">
-        <span class="mapa-step-chevron" [class.rotated]="step2Open()">▼</span>
+        <button 
+          type="button" 
+          class="mapa-step-toggle-btn"
+          (click)="toggleStep(2, $event)"
+          [attr.aria-label]="step2Open() ? (isCa() ? 'Col·lapsar Pas 2' : 'Colapsar Paso 2') : (isCa() ? 'Expandir Pas 2' : 'Expandir Paso 2')"
+          [title]="step2Open() ? (isCa() ? 'Col·lapsar Pas 2' : 'Colapsar Paso 2') : (isCa() ? 'Expandir Pas 2' : 'Expandir Paso 2')">
+          <span class="mapa-step-chevron" [class.rotated]="step2Open()">▼</span>
+        </button>
         <h2 class="mapa-step-title">
           {{ isCa() ? '2. RA i Criteris d’Avaluació' : '2. RA y Criterios de Evaluación' }}
         </h2>
@@ -181,7 +197,7 @@
     </div>
 
     <!-- PASO 2: CONTENIDO (Acordeón 2) -->
-    <div class="mapa-step-body mapa-step-body--2" [class.collapsed]="!step2Open()">
+    <div tabindex="-1" class="mapa-step-body mapa-step-body--2" [class.collapsed]="!step2Open()">
       @if (facade.selectedRa(); as ra) {
         <!-- Active RA Hero Card -->
         <div class="mapa-active-ra-hero">
@@ -247,10 +263,18 @@
     <div 
       class="mapa-step-header mapa-step-header--3" 
       [class.open]="step3Open()"
-      (click)="toggleStep(3)"
-      [attr.aria-expanded]="step3Open()">
+      (click)="activateStep(3)"
+      [attr.aria-expanded]="step3Open()"
+      [title]="isCa() ? 'Activar i desplaçar al Pas 3' : 'Activar y desplazar al Paso 3'">
       <div class="mapa-step-header__left">
-        <span class="mapa-step-chevron" [class.rotated]="step3Open()">▼</span>
+        <button 
+          type="button" 
+          class="mapa-step-toggle-btn"
+          (click)="toggleStep(3, $event)"
+          [attr.aria-label]="step3Open() ? (isCa() ? 'Col·lapsar Pas 3' : 'Colapsar Paso 3') : (isCa() ? 'Expandir Pas 3' : 'Expandir Paso 3')"
+          [title]="step3Open() ? (isCa() ? 'Col·lapsar Pas 3' : 'Colapsar Paso 3') : (isCa() ? 'Expandir Pas 3' : 'Expandir Paso 3')">
+          <span class="mapa-step-chevron" [class.rotated]="step3Open()">▼</span>
+        </button>
         <h2 class="mapa-step-title">
           {{ isCa() ? '3. Connexions Intermodulars Coincidents' : '3. Conexiones Intermodulares Coincidentes' }}
           <span class="mapa-step-count-badge">({{ facade.filteredConnections().length }})</span>
@@ -266,7 +290,7 @@
     </div>
 
     <!-- PASO 3: CONTENIDO (Acordeón 3) -->
-    <div class="mapa-step-body mapa-step-body--3" [class.collapsed]="!step3Open()">
+    <div tabindex="-1" class="mapa-step-body mapa-step-body--3" [class.collapsed]="!step3Open()">
       @if (facade.selectedRa(); as ra) {
         <div class="mapa-connections-section">
           <div class="mapa-connections-list">

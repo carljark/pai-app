@@ -252,6 +252,24 @@
   }
 }
 
+.mapa-step-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #64748b;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+}
+
 .mapa-step-chevron {
   display: inline-block;
   font-size: 0.72rem;

@@ -63,10 +63,25 @@ export class MapaIntermodularViewComponent {
     this.headerExpanded.update(v => !v);
   }
 
-  toggleStep(step: 1 | 2 | 3) {
+  toggleStep(step: 1 | 2 | 3, event?: Event) {
+    if (event) event.stopPropagation();
     if (step === 1) this.step1Open.update(v => !v);
     if (step === 2) this.step2Open.update(v => !v);
     if (step === 3) this.step3Open.update(v => !v);
+  }
+
+  activateStep(step: 1 | 2 | 3) {
+    if (step === 1) this.step1Open.set(true);
+    if (step === 2) this.step2Open.set(true);
+    if (step === 3) this.step3Open.set(true);
+
+    setTimeout(() => {
+      const target = document.querySelector(`.mapa-step-body--${step}`) as HTMLElement | null;
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.focus?.();
+      }
+    }, 50);
   }
 
   getRelationLabel(type: string): string {
@@ -118,22 +133,16 @@ export class MapaIntermodularViewComponent {
     const selected: string[] = [];
 
     if (activeRa && activeModule) {
-      const sourceDesc = findCurriculumMatch(allRas, this.isCa(), activeModule.code, activeModule.name_es, activeRa.code, activeRa.text_es, activeRa.text_ca);
-      if (sourceDesc) selected.push(sourceDesc);
+      const srcDesc = findCurriculumMatch(allRas, this.isCa(), activeModule.code, activeModule.name_es, activeRa.code, activeRa.text_es, activeRa.text_ca);
+      if (srcDesc) selected.push(srcDesc);
 
       const conns = connection ? [connection] : this.facade.filteredConnections();
       for (const c of conns) {
-        const targetDesc = findCurriculumMatch(allRas, this.isCa(), c.targetModuleCode, c.targetModuleName_es, c.targetRaCode, c.targetRaText_es, c.targetRaText_ca);
-        if (targetDesc && !selected.includes(targetDesc)) {
-          selected.push(targetDesc);
-        }
+        const tgtDesc = findCurriculumMatch(allRas, this.isCa(), c.targetModuleCode, c.targetModuleName_es, c.targetRaCode, c.targetRaText_es, c.targetRaText_ca);
+        if (tgtDesc && !selected.includes(tgtDesc)) selected.push(tgtDesc);
       }
     }
-
-    if (selected.length > 0) {
-      this.curriculum.selectedRas.set(selected);
-    }
-
+    if (selected.length > 0) this.curriculum.selectedRas.set(selected);
     this.layout.switchView('generator');
   }
 }

@@ -103,7 +103,12 @@ Al colocar los 3 headers y sus 3 bodies como hijos directos de `.mapa-vertical-a
 - Al apilarse en una única columna vertical al 100% de ancho, cada módulo se muestra cerrado por defecto o abierto según la selección activa.
 - La cabecera del módulo muestra un indicador chevron (`▼`/`▶`), el badge con el código coloreado, el nombre descriptivo y una píldora con el recuento de RAs contenidos.
 
-### 3. Métricas y Cobertura de Tests
+### 3. Separación de Responsabilidades en Cabeceras: Botón Colapsar vs Activación/Desplazamiento
+- **Botón Exclusivo de Colapso (`.mapa-step-toggle-btn`):** Es el único punto interactivo que alterna el estado plegado/desplegado (`toggleStep(step, $event)`). Ejecuta `$event.stopPropagation()` para evitar que el clic se propague a la cabecera.
+- **Activación y Enfoque (`activateStep(step)`):** El clic en cualquier otra parte del encabezado `.mapa-step-header` garantiza la apertura del paso (`stepOpen.set(true)`), desplazando suavemente el scroll hacia el cuerpo correspondiente (`scrollIntoView({ behavior: 'smooth', block: 'start' })`) y aplicando el foco accesible (`focus()`).
+- **Atributos de Accesibilidad:** Los cuerpos cuentan con `tabindex="-1"` para permitir el foco programático, y los botones incluyen `aria-expanded` y `aria-label` dinámicos bilingües.
+
+### 4. Métricas y Cobertura de Tests
 - **Backend:** 76/76 tests superados, Statements: 97.59%, Branches: 90.74%, Functions: 100%, Lines: 98.24%.
-- **Frontend:** 298/298 tests superados, Statements: 99.1%, Branches: 95.2%, Functions: 97.5%, Lines: 99.72%.
+- **Frontend:** 299/299 tests superados, Statements: 99.11%, Branches: 95.11%, Functions: 97.53%, Lines: 99.72%.
 - **Pre-push Hook:** Ejecución automática de ambas suites validada con código de salida 0.

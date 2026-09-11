@@ -61,7 +61,8 @@ describe('App', () => {
       isGenerating: signal(false), projectsHistory: signal([]), currentProjectId: signal(null), isUploading: signal(false), loadHistory: vi.fn(), currentProject: signal(null),
       step: signal(0),
       hasActiveGeneration: signal(false),
-      methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)')
+      methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
+      selectedAi: signal('gemini')
     };
     const mockAdminFacade = {
       settings: signal({}),

@@ -6,6 +6,7 @@ import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AppFacade } from '../../../../app.facade';
+import { AuthFacade } from '../../../auth/services/auth.facade';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { signal } from '@angular/core';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
@@ -57,14 +58,20 @@ describe('GeneratorViewComponent', () => {
 
   const mockProjects = {
     isGenerating: signal(false),
-    methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)')
+    methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
+    selectedAi: signal<'gemini' | 'openrouter'>('gemini')
   };
 
   const mockAppFacade = {
     generateProject: vi.fn()
   };
 
+  const mockAuthFacade = {
+    currentUser: signal<any>({ role: 'admin' })
+  };
+
   beforeEach(async () => {
+    mockAuthFacade.currentUser.set({ role: 'admin' });
     await TestBed.configureTestingModule({
       imports: [GeneratorViewComponent],
       providers: [
@@ -72,7 +79,8 @@ describe('GeneratorViewComponent', () => {
         { provide: TranslationService, useValue: mockTrans },
         { provide: CurriculumFacade, useValue: mockCurriculum },
         { provide: ProjectsFacade, useValue: mockProjects },
-        { provide: AppFacade, useValue: mockAppFacade }
+        { provide: AppFacade, useValue: mockAppFacade },
+        { provide: AuthFacade, useValue: mockAuthFacade }
       ]
     })
     .compileComponents();
@@ -138,5 +146,22 @@ describe('GeneratorViewComponent', () => {
     methodologySelect.value = 'ABR (Aprendizaje Basado en Retos)';
     methodologySelect.dispatchEvent(new Event('change'));
     expect(mockProjects.methodology()).toContain('ABR');
+  });
+
+  it('should change selectedAi on select change when admin', () => {
+    mockAuthFacade.currentUser.set({ role: 'admin' });
+    fixture.detectChanges();
+    const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select')).nativeElement;
+    
+    aiSelect.value = 'openrouter';
+    aiSelect.dispatchEvent(new Event('change'));
+    expect(mockProjects.selectedAi()).toBe('openrouter');
+  });
+
+  it('should not show generator-ai-select for non-admin users', () => {
+    mockAuthFacade.currentUser.set({ role: 'teacher' });
+    fixture.detectChanges();
+    const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select'));
+    expect(aiSelect).toBeNull();
   });
 });

@@ -69,6 +69,12 @@ import { TranslationService } from '../../../../services/translation.service';
 
         @if (facade.selectedItemsDetails().length > 0) {
           <div class="floating-cart__footer" style="padding: 20px; border-top: 1px solid #ecf0f1;">
+            @if (facade.selectedItemsDetails().length > 2) {
+              <div style="margin-bottom: 12px; font-size: 0.85rem; color: #b45309; background: #fef3c7; border: 1px solid #fde68a; padding: 8px 12px; border-radius: 6px; display: flex; align-items: center; gap: 6px;">
+                <span>⚠️</span>
+                <span>{{ trans.t().longGenerationNoticePlural }}</span>
+              </div>
+            }
             <button (click)="generate.emit()" 
                     [disabled]="isGenerating()" 
                     class="btn-primary"

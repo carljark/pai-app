@@ -47,7 +47,9 @@ app.use('/api', curriculumRoutes);
 const PORT = process.env.PORT || 3000;
 /* istanbul ignore next */
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => console.log(`Backend PAI escuchando en puerto ${PORT}`));
+  const server = app.listen(PORT, () => console.log(`Backend PAI escuchando en puerto ${PORT}`));
+  server.requestTimeout = 660_000; // 11 minutos para tolerar respuestas IA de hasta 10 minutos
+  server.headersTimeout = 670_000;
 }
 
 export { app };

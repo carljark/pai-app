@@ -6,14 +6,19 @@ interface NotificationExtra {
   title?: string;
   message?: string;
   userName?: string;
+  phase?: string;
+  rasCount?: number;
 }
 
 function buildUpdateData(project: any, extra?: NotificationExtra) {
+  const rasCount = extra?.rasCount ?? (project.ras ? project.ras.length : 0);
   return {
     projectId: project._id,
     userId: project.userId?._id || project.userId,
     userName: extra?.userName || (project.userId as any)?.name || 'Profesor',
     modules: project.modules || [],
+    rasCount,
+    phase: extra?.phase ?? project.phase,
     status: project.status,
     generationTimeMs: project.generationTimeMs,
     generationStartedAt: project.generationStartedAt,
@@ -39,6 +44,8 @@ export async function syncProjectNotification(project: any, extra?: Notification
       type: extra?.type || 'PROJECT_STATUS',
       projectId,
       status: project.status,
+      phase: updateData.phase,
+      rasCount: updateData.rasCount,
       project,
       notification: notif,
       generationTimeMs: project.generationTimeMs,

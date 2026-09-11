@@ -79,6 +79,7 @@ describe('TallerViewComponent', () => {
       pushUndo: vi.fn(),
       popUndo: vi.fn(),
       undoLastChange: vi.fn(),
+      selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
     };
 
     mockAuthFacade = {
@@ -570,5 +571,38 @@ describe('TallerViewComponent', () => {
   it('should getDownloadUrl', () => {
     const url = component.getDownloadUrl('f.txt');
     expect(url).toBe('http://download.url/file.txt');
+  });
+
+  it('should update selectedAi on onAiChange', () => {
+    const event = { target: { value: 'openrouter' } } as any;
+    component.onAiChange(event);
+    expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
+  });
+
+  it('should switch selectedAi if fallback was used in rewriteWithAI', () => {
+    mockProjectsFacade.generatedProject.set('# Old Project');
+    mockProjectsFacade.aiPrompt.set('fix grammar');
+    mockProjectsFacade.selectedAi.set('gemini');
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(of({
+      newText: 'Rewritten with openrouter',
+      fallbackUsed: true,
+      provider: 'openrouter'
+    }));
+
+    component.rewriteWithAI();
+    expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
+    expect(mockProjectsFacade.generatedProject()).toBe('Rewritten with openrouter');
+  });
+
+  it('should show taller-ai-select for admin and hide for non-admin', () => {
+    mockAuthFacade.currentUser.set({ role: 'admin', canUseAi: true });
+    fixture.detectChanges();
+    let select = fixture.nativeElement.querySelector('#taller-ai-select');
+    expect(select).toBeTruthy();
+
+    mockAuthFacade.currentUser.set({ role: 'teacher', canUseAi: true });
+    fixture.detectChanges();
+    select = fixture.nativeElement.querySelector('#taller-ai-select');
+    expect(select).toBeNull();
   });
 });

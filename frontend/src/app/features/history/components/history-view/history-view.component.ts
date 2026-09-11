@@ -71,7 +71,7 @@ import { TranslationService } from '../../../../services/translation.service';
       @for (project of filteredProjects(); track project._id) {
         <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
           <div>
-            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: var(--c-text);">{{ project.title || trans.t().untitledProject }}</h3>
+            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: var(--c-text);">{{ getDisplayTitle(project) }}</h3>
             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
               <span class="badge" [class.badge-info]="project.status === 'borrador'" [class.badge-success]="project.status === 'publicado'" [class.badge-warning]="project.status === 'en_cola' || project.status === 'generando'" [class.badge-danger]="project.status === 'error'">
                 {{ project.status | uppercase }}
@@ -108,10 +108,21 @@ export class HistoryViewComponent {
   activeTab = signal<'FPB' | 'ESO'>('FPB');
   searchQuery = signal<string>('');
 
+  getDisplayTitle(project: any): string {
+    const isGeneric = !project.title || 
+      project.title === 'Proyecto Integrador' || 
+      project.title === 'Proyecto de ESO' || 
+      project.title === 'Proyecto Generado';
+    if (isGeneric && project.modules && project.modules.length > 0) {
+      return project.modules.join(' + ');
+    }
+    return project.title || this.trans.t().untitledProject;
+  }
+
   filteredProjects = computed(() => {
     let list = this.projects.projectsHistory() || [];
     
-    // Filtro de Pestaña (Nivel)
+    // Filtro por Nivel / Pestaña
     list = list.filter(p => {
       if (this.activeTab() === 'FPB') {
         return p.tipoNivel === 'FP_BASICA';

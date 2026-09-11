@@ -6,6 +6,7 @@ import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { AppFacade } from '../../../../app.facade'; // Will be created to hold global methods
+import { AuthFacade } from '../../../auth/services/auth.facade';
 
 @Component({
   selector: 'app-generator-view',
@@ -54,6 +55,20 @@ import { AppFacade } from '../../../../app.facade'; // Will be created to hold g
             <option value="ApS (Aprendizaje y Servicio)">{{ trans.t().methodologyApS }}</option>
           </select>
         </div>
+
+        @if (auth.currentUser()?.role === 'admin') {
+          <div class="form-group" style="flex: 1.5; min-width: 240px; margin-bottom: 0;">
+            <label for="generator-ai-select">{{ trans.t().generatorAiLabel }}</label>
+            <select 
+              id="generator-ai-select"
+              class="form-select" 
+              [value]="projects.selectedAi()" 
+              (change)="onAiChange($event)">
+              <option value="gemini">{{ trans.t().aiGemini }}</option>
+              <option value="openrouter">{{ trans.t().aiOpenRouter }}</option>
+            </select>
+          </div>
+        }
       </div>
       
       <app-curriculum-selector 
@@ -72,6 +87,7 @@ export class GeneratorViewComponent {
   curriculum = inject(CurriculumFacade);
   projects = inject(ProjectsFacade);
   appFacade = inject(AppFacade);
+  auth = inject(AuthFacade);
 
   onCourseChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value;
@@ -81,6 +97,11 @@ export class GeneratorViewComponent {
   onMethodologyChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value;
     this.projects.methodology.set(value);
+  }
+
+  onAiChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
+    this.projects.selectedAi.set(value);
   }
 
   generateProject() {

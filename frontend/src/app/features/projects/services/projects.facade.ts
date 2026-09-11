@@ -17,6 +17,7 @@ export class ProjectsFacade {
 
   // --- ESTADO DEL GENERADOR ---
   methodology = signal<string>('ABP (Aprendizaje Basado en Proyectos)');
+  selectedAi = signal<'gemini' | 'openrouter'>('gemini');
 
   isGenerating = signal<boolean>(false);
 
@@ -90,27 +91,30 @@ export class ProjectsFacade {
     return this.http.post<any>(`${this.apiUrl}/${projectId}/retry`, {});
   }
 
+  private getInvolvedModules(tipoNivel: string, selectedRas: string[]): string[] {
+    if (tipoNivel === 'FP_BASICA') {
+      const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
+      return Array.from(new Set(selected.map((ra: any) => ra.module)));
+    }
+    const selected = this.curriculumFacade.ces().filter(ce => selectedRas.includes(ce.description));
+    return Array.from(new Set(selected.map((ce: any) => ce.subject || '')));
+  }
+
   generateProject(language: string, title?: string) {
     const selectedRas = this.curriculumFacade.selectedRas();
     const tipoNivel = this.curriculumFacade.tipoNivel();
-    
-    let involvedModules: string[] = [];
-    if (tipoNivel === 'FP_BASICA') {
-      const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
-      involvedModules = Array.from(new Set(selected.map((ra: any) => ra.module)));
-    } else {
-      const selected = this.curriculumFacade.ces().filter(ce => selectedRas.includes(ce.description));
-      involvedModules = Array.from(new Set(selected.map((ce: any) => ce.subject || '')));
-    }
+    const modules = this.getInvolvedModules(tipoNivel, selectedRas);
+    const defaultTitle = modules.length > 0 ? modules.join(' + ') : 'Proyecto Integrador';
 
     return this.http.post<any>(`${this.apiUrl}/generate`, {
       selectedRas,
       methodology: this.methodology(),
-      modules: involvedModules,
+      modules,
       tipoNivel,
       language,
+      aiProvider: this.selectedAi(),
       courseLevel: this.curriculumFacade.curso(),
-      title: title || (tipoNivel === 'FP_BASICA' ? 'Proyecto Integrador' : 'Proyecto de ESO')
+      title: title || defaultTitle
     });
   }
 
@@ -120,10 +124,11 @@ export class ProjectsFacade {
     return this.http.put<any>(`${this.apiUrl}/${id}`, { rawText: this.generatedProject(), status });
   }
 
-  rewriteSection(instruction: string) {
+  rewriteSection(instruction: string, aiProvider?: 'gemini' | 'openrouter') {
     return this.http.post<any>(`${this.apiUrl}/rewrite`, {
       context: this.generatedProject(),
-      instruction
+      instruction,
+      aiProvider: aiProvider || this.selectedAi()
     });
   }
 

@@ -4,7 +4,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { Settings } from '../models/Settings';
 import { FpbMatch } from '../models/FpbMatch';
-import { buildContexts, generateGeminiContent } from '../services/ai.service';
+import { buildContexts, generateAiContentWithFallback } from '../services/ai.service';
 import fs from 'fs';
 import path from 'path';
 import { addClient, removeClient } from "../services/sse.service";
@@ -164,9 +164,13 @@ ${enrichedRas.join('\n\n')}
 
 INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un apartado o epígrafe inicial titulado "Identidad del Proyecto" donde indiques explícitamente el curso al que va dirigido (${courseLevel || 'un curso a determinar'}), junto con otros datos identificativos que consideres oportunos (título, duración, etc.).`;
 
+    const defaultTitle = (modules && modules.length > 0)
+      ? modules.join(' + ')
+      : (selectedRas && selectedRas.length > 0 ? selectedRas.slice(0, 2).join(' + ') : 'Proyecto Generado');
+
     // 4. GUARDAR EN COLA EN LUGAR DE LLAMAR A LA IA
     const newProject = new Project({
-      title: title || 'Proyecto Generado',
+      title: title || defaultTitle,
       modules,
       ras: selectedRas,
       methodology,
@@ -174,7 +178,8 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
       userId: req.user?._id,
       status: 'en_cola', // Nuevo estado
       aiPrompt: userPrompt, // Guardamos el prompt para el worker
-      aiInstruction: baseInstruction // Guardamos el system prompt
+      aiInstruction: baseInstruction, // Guardamos el system prompt
+      aiProvider: req.body.aiProvider === 'openrouter' ? 'openrouter' : 'gemini'
     });
     const savedProject = await newProject.save();
 
@@ -270,14 +275,8 @@ export const deleteProject = async (req: any, res: Response) => {
   }
 };
 
-export const rewriteSection = async (req: any, res: Response) => {
-  try {
-    const { context, instruction } = req.body;
-    if (!context || !instruction) {
-      return res.status(400).json({ error: "Falta el contenido del proyecto o la instrucción" });
-    }
-
-    const prompt = `Eres el Motor Pedagógico PAI. El profesor está solicitando una modificación o refinamiento sobre el documento completo del proyecto intermodular.
+function buildRewritePrompt(context: string, instruction: string): string {
+  return `Eres el Motor Pedagógico PAI. El profesor está solicitando una modificación o refinamiento sobre el documento completo del proyecto intermodular.
 
 DOCUMENTO DEL PROYECTO ACTUAL (MARKDOWN COMPLETO):
 """
@@ -297,11 +296,32 @@ REGLAS ESTRICTAS:
 - NO devuelvas resúmenes, explicaciones ni fragmentos aislados, únicamente el documento Markdown completo resultante.
 - NO incluyas saludos, preámbulos ni bloques envolventes de código tipo \`\`\`markdown ni \`\`\`.
 - Escribe en texto plano Markdown estándar. NUNCA uses notación LaTeX ni el símbolo $ para números o minutos.`;
+}
 
-    const newFullText = await generateGeminiContent(prompt, "Eres un asistente pedagógico de edición curricular experto, directo y preciso.");
-    const cleanText = (newFullText || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
+export const rewriteSection = async (req: any, res: Response) => {
+  try {
+    const { context, instruction, aiProvider } = req.body;
+    if (!context || !instruction) {
+      return res.status(400).json({ error: "Falta el contenido del proyecto o la instrucción" });
+    }
 
-    res.json({ newText: cleanText, rewrittenPart: cleanText });
+    const prompt = buildRewritePrompt(context, instruction);
+    const preferredProvider: 'gemini' | 'openrouter' = aiProvider === 'openrouter' ? 'openrouter' : 'gemini';
+    const result = await generateAiContentWithFallback(
+      prompt,
+      "Eres un asistente pedagógico de edición curricular experto, directo y preciso.",
+      preferredProvider
+    );
+    const cleanText = (result.text || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
+    console.log(`[Project/Rewrite] Reescritura completada con proveedor ${result.provider} (modelo: ${result.model})`);
+
+    res.json({
+      newText: cleanText,
+      rewrittenPart: cleanText,
+      provider: result.provider,
+      model: result.model,
+      fallbackUsed: result.fallbackUsed
+    });
   } catch (error: any) {
     console.error("Error en reescritura IA:", error);
     res.status(500).json({ error: "Error al contactar con la IA para reescribir" });
@@ -328,10 +348,13 @@ async function hasPendingGeneration(userId: any): Promise<boolean> {
   return count > 0;
 }
 
-async function reenqueueProject(project: any, userName?: string): Promise<void> {
+async function reenqueueProject(project: any, userName?: string, aiProvider?: string): Promise<void> {
   if (!project.aiPrompt) {
     project.aiPrompt = `Genera un proyecto educativo para ${project.tipoNivel}.`;
     project.aiInstruction = 'Experto pedagógico.';
+  }
+  if (aiProvider) {
+    project.aiProvider = aiProvider === 'openrouter' ? 'openrouter' : 'gemini';
   }
   project.status = 'en_cola';
   project.errorDetail = undefined;
@@ -361,7 +384,7 @@ export const retryProject = async (req: any, res: Response) => {
       return res.status(429).json({ error: 'Ya tienes un proyecto en la cola o generándose. Por favor, espera a que termine.' });
     }
 
-    await reenqueueProject(project, req.user?.name);
+    await reenqueueProject(project, req.user?.name, req.body?.aiProvider);
     return res.json({ message: 'Proyecto reencolado exitosamente', project });
   } catch (error: any) {
     return res.status(500).json({ error: error.message });

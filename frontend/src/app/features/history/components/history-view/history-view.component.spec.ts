@@ -64,6 +64,12 @@ describe('HistoryViewComponent', () => {
     expect(element.textContent).toContain('No hay proyectos en esta sección.');
   });
 
+  it('should resolve display title using selected modules when title is generic', () => {
+    expect(component.getDisplayTitle({ title: 'Proyecto Integrador', modules: ['ModA', 'ModB'] })).toBe('ModA + ModB');
+    expect(component.getDisplayTitle({ title: 'Mi Proyecto', modules: ['ModA'] })).toBe('Mi Proyecto');
+    expect(component.getDisplayTitle({ title: '', modules: [] })).toBe('Proyecto sin título');
+  });
+
   it('should render FP_BASICA projects by default', () => {
     mockProjectsFacade.projectsHistory.set([
       { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },

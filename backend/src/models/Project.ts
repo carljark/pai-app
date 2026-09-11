@@ -16,6 +16,10 @@ const ProjectSchema = new mongoose.Schema({
   errorDetail: String,
   generationStartedAt: Date,
   generationTimeMs: Number,
+  aiProvider: { type: String, enum: ['gemini', 'openrouter'], default: 'gemini' },
+  usedAiProvider: String,
+  usedModel: String,
+  phase: String,
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }

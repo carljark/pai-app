@@ -80,7 +80,7 @@ describe('NotificationsBadgeComponent', () => {
     expect(compiled.textContent).toContain('RA1');
     expect(compiled.textContent).toContain('Múltiples RA/CE');
     expect(compiled.textContent).toContain('En cola...');
-    expect(compiled.textContent).toContain('Generando IA...');
+    expect(compiled.textContent).toContain('Analizando...');
     expect(compiled.textContent).toContain('Error');
     expect(compiled.textContent).toContain('Completado');
   });

@@ -4,6 +4,8 @@ export interface RawNotificationEvent {
   project?: any;
   error?: string;
   status?: string;
+  phase?: string;
+  rasCount?: number;
   message?: string;
   title?: string;
   userName?: string;
@@ -22,6 +24,8 @@ export interface AppNotification {
   userId?: string;
   userName?: string;
   modules?: string[];
+  rasCount?: number;
+  phase?: string;
   status?: string;
   generationTimeMs?: number;
   generationStartedAt?: Date | string;

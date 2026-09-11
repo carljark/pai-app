@@ -53,10 +53,7 @@ export class TallerViewComponent {
     this.paiService.importDocx(this.projects.currentProjectId()!, file).subscribe({
       next: (res) => {
         this.projects.generatedProject.set(res.project.generatedContent.rawText);
-        this.appFacade.infoTitle.set('Archivo Procesado');
-        this.appFacade.infoMessage.set('El diseño se ha purificado a Markdown exitosamente.');
-        this.appFacade.infoType.set('success');
-        this.appFacade.showInfoModal.set(true);
+        this.showInfoModal('Archivo Procesado', 'El diseño se ha purificado a Markdown exitosamente.');
       },
       error: () => {
         this.appFacade.errorMessage.set('Error al procesar el archivo Word.');
@@ -66,14 +63,18 @@ export class TallerViewComponent {
     event.target.value = '';
   }
 
+  private showInfoModal(title: string, message: string) {
+    this.appFacade.infoTitle.set(title);
+    this.appFacade.infoMessage.set(message);
+    this.appFacade.infoType.set('success');
+    this.appFacade.showInfoModal.set(true);
+  }
+
   saveDraft() {
     this.projects.updateProjectStatus('borrador')?.subscribe({
       next: () => {
         this.projects.loadHistory();
-        this.appFacade.infoTitle.set('Guardado');
-        this.appFacade.infoMessage.set(this.layout.language() === 'castellano' ? 'Borrador guardado correctamente.' : 'Esborrany guardat correctament.');
-        this.appFacade.infoType.set('success');
-        this.appFacade.showInfoModal.set(true);
+        this.showInfoModal('Guardado', this.layout.language() === 'castellano' ? 'Borrador guardado correctamente.' : 'Esborrany guardat correctament.');
       },
       error: (err) => console.error('Error saving draft:', err),
     });
@@ -83,10 +84,7 @@ export class TallerViewComponent {
     this.projects.updateProjectStatus('publicado')?.subscribe({
       next: () => {
         this.projects.loadHistory();
-        this.appFacade.infoTitle.set('Publicado');
-        this.appFacade.infoMessage.set(this.layout.language() === 'castellano' ? 'Proyecto publicado y validado correctamente.' : 'Projecte publicat i validat correctament.');
-        this.appFacade.infoType.set('success');
-        this.appFacade.showInfoModal.set(true);
+        this.showInfoModal('Publicado', this.layout.language() === 'castellano' ? 'Proyecto publicado y validado correctamente.' : 'Projecte publicat i validat correctament.');
       },
       error: (err) => console.error('Error publishing project:', err),
     });
@@ -100,61 +98,63 @@ export class TallerViewComponent {
     }
   }
 
+  onAiChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
+    this.projects.selectedAi.set(value);
+  }
+
+  private handleRewriteSuccess(res: any) {
+    if (res.fallbackUsed && res.provider) {
+      this.projects.selectedAi.set(res.provider);
+    }
+    this.projects.generatedProject.set(res.newText || res.rewrittenPart || '');
+    this.projects.aiPrompt.set('');
+    this.projects.isThinking.set(false);
+    this.projects.updateProjectStatus('borrador')?.subscribe();
+  }
+
+  private handleRewriteError(err: any) {
+    console.error('Error en IA', err);
+    this.projects.isThinking.set(false);
+    this.projects.popUndo();
+    this.appFacade.errorTitle.set(this.layout.language() === 'catalan' ? "Error a l'Assistent IA" : 'Error en el Asistente IA');
+    const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
+    this.appFacade.errorMessage.set(serverMsg);
+    this.appFacade.showErrorModal.set(true);
+  }
+
+  private showMissingInstructionAlert() {
+    this.appFacade.infoTitle.set(this.layout.language() === 'castellano' ? 'Atención' : 'Atenció');
+    this.appFacade.infoMessage.set(
+      this.layout.language() === 'castellano' 
+        ? 'Por favor, introduce una instrucción para la IA.' 
+        : 'Per favor, introdueix una instrucció per a la IA.'
+    );
+    this.appFacade.infoType.set('info');
+    this.appFacade.showInfoModal.set(true);
+  }
+
   rewriteWithAI() {
     const instruction = this.projects.aiPrompt().trim();
-    if (!instruction) {
-      this.appFacade.infoTitle.set(this.layout.language() === 'castellano' ? 'Atención' : 'Atenció');
-      this.appFacade.infoMessage.set(
-        this.layout.language() === 'castellano' 
-          ? 'Por favor, introduce una instrucción para la IA.' 
-          : 'Per favor, introdueix una instrucció per a la IA.'
-      );
-      this.appFacade.infoType.set('info');
-      this.appFacade.showInfoModal.set(true);
-      return;
-    }
+    if (!instruction) return this.showMissingInstructionAlert();
+    if (!this.projects.generatedProject()) return;
 
-    if (!this.projects.generatedProject()) {
-      return;
-    }
-
-    // Guardar estado actual en la pila de undo ANTES de pedir a la IA
     this.projects.pushUndo();
-
     this.projects.isThinking.set(true);
     this.projects.rewriteSection(instruction).subscribe({
-      next: (res) => {
-        const newFullText = res.newText || res.rewrittenPart || '';
-        this.projects.generatedProject.set(newFullText);
-
-        this.projects.aiPrompt.set('');
-        this.projects.isThinking.set(false);
-        this.projects.updateProjectStatus('borrador')?.subscribe();
-      },
-      error: (err) => {
-        console.error('Error en IA', err);
-        this.projects.isThinking.set(false);
-        // Revertir el undo push si la IA falló
-        this.projects.popUndo();
-        this.appFacade.errorTitle.set(this.layout.language() === 'catalan' ? "Error a l'Assistent IA" : 'Error en el Asistente IA');
-        const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
-        this.appFacade.errorMessage.set(serverMsg);
-        this.appFacade.showErrorModal.set(true);
-      }
+      next: (res) => this.handleRewriteSuccess(res),
+      error: (err) => this.handleRewriteError(err)
     });
   }
 
   undoAI() {
     if (!this.projects.canUndo()) return;
     this.projects.undoLastChange();
-    this.appFacade.infoTitle.set(this.layout.language() === 'castellano' ? 'Deshecho' : 'Desfet');
-    this.appFacade.infoMessage.set(
-      this.layout.language() === 'castellano'
-        ? 'Se ha restaurado la versión anterior del proyecto.'
-        : 'S\'ha restaurat la versió anterior del projecte.'
-    );
-    this.appFacade.infoType.set('success');
-    this.appFacade.showInfoModal.set(true);
+    const title = this.layout.language() === 'castellano' ? 'Deshecho' : 'Desfet';
+    const msg = this.layout.language() === 'castellano'
+      ? 'Se ha restaurado la versión anterior del proyecto.'
+      : 'S\'ha restaurat la versió anterior del projecte.';
+    this.showInfoModal(title, msg);
   }
 
   onFileSelected(event: any) {
@@ -173,14 +173,8 @@ export class TallerViewComponent {
   uploadFile(file: File) {
     this.projects.isUploading.set(true);
     this.projects.uploadFile(file)?.subscribe({
-      next: () => {
-        this.projects.loadProjectFiles();
-        this.projects.isUploading.set(false);
-      },
-      error: (err) => {
-        console.error("Error al subir archivo", err);
-        this.projects.isUploading.set(false);
-      }
+      next: () => { this.projects.loadProjectFiles(); this.projects.isUploading.set(false); },
+      error: (err) => { console.error("Error al subir archivo", err); this.projects.isUploading.set(false); }
     });
   }
 
@@ -189,14 +183,8 @@ export class TallerViewComponent {
     this.appFacade.confirmMessage.set(this.trans.t().deleteFile + ' ' + filename + '?');
     this.appFacade.confirmAction.set(() => {
       this.projects.deleteFile(filename)?.subscribe({
-        next: () => {
-          this.projects.loadProjectFiles();
-          this.appFacade.showConfirmModal.set(false);
-        },
-        error: (err) => {
-          console.error("Error al borrar archivo", err);
-          this.appFacade.showConfirmModal.set(false);
-        }
+        next: () => { this.projects.loadProjectFiles(); this.appFacade.showConfirmModal.set(false); },
+        error: (err) => { console.error("Error al borrar archivo", err); this.appFacade.showConfirmModal.set(false); }
       });
     });
     this.appFacade.showConfirmModal.set(true);

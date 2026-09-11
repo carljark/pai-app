@@ -8,6 +8,8 @@ const NotificationSchema = new mongoose.Schema({
   title: { type: String, required: true },
   message: { type: String, required: true },
   modules: [String],
+  rasCount: { type: Number, default: 0 },
+  phase: { type: String }, // 'analizando' | 'reintentando'
   status: { type: String, required: true }, // 'en_cola' | 'generando' | 'borrador' | 'error' | 'publicado'
   generationTimeMs: { type: Number },
   generationStartedAt: { type: Date },

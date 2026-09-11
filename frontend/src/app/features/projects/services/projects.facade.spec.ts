@@ -109,6 +109,7 @@ describe('ProjectsFacade', () => {
       modules: ['ModA'],
       tipoNivel: 'FP_BASICA',
       language: 'castellano',
+      aiProvider: 'gemini',
       courseLevel: '2º',
       title: 'Custom Title'
     });
@@ -121,11 +122,36 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.selectedRas.mockReturnValue(['CE1']);
     mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
     
+    facade.selectedAi.set('openrouter');
     facade.generateProject('catalan').subscribe();
     
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['Math']);
-    expect(req.request.body.title).toBe('Proyecto de ESO');
+    expect(req.request.body.aiProvider).toBe('openrouter');
+    expect(req.request.body.title).toBe('Math');
+    req.flush({});
+  });
+
+  it('should use fallback title when no modules match', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_UNKNOWN']);
+    mockCurriculumFacade.ras.mockReturnValue([]);
+
+    facade.generateProject('castellano').subscribe();
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.title).toBe('Proyecto Integrador');
+    req.flush({});
+  });
+
+  it('should handle ce without subject in getInvolvedModules', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('ESO');
+    mockCurriculumFacade.curso.mockReturnValue('3º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['CE_NO_SUBJ']);
+    mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE_NO_SUBJ' }]);
+
+    facade.generateProject('castellano').subscribe();
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['']);
     req.flush({});
   });
 
@@ -146,17 +172,23 @@ describe('ProjectsFacade', () => {
     expect(facade.updateProjectStatus('publicado')).toBeUndefined();
   });
 
-  it('should rewrite section', () => {
+  it('should rewrite section with default and explicit aiProvider', () => {
     facade.generatedProject.set('full text');
     facade.rewriteSection('rewrite this').subscribe();
     
-    const req = httpMock.expectOne('/api/projects/rewrite');
-    expect(req.request.method).toBe('POST');
-    expect(req.request.body).toEqual({
+    const req1 = httpMock.expectOne('/api/projects/rewrite');
+    expect(req1.request.method).toBe('POST');
+    expect(req1.request.body).toEqual({
       context: 'full text',
-      instruction: 'rewrite this'
+      instruction: 'rewrite this',
+      aiProvider: 'gemini'
     });
-    req.flush({});
+    req1.flush({});
+
+    facade.rewriteSection('rewrite this', 'openrouter').subscribe();
+    const req2 = httpMock.expectOne('/api/projects/rewrite');
+    expect(req2.request.body.aiProvider).toBe('openrouter');
+    req2.flush({});
   });
 
   it('should load project files', () => {

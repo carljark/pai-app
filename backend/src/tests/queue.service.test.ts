@@ -39,7 +39,12 @@ describe('Queue Service', () => {
       .mockResolvedValueOnce(mockProject as any)
       .mockResolvedValueOnce(null); // Termina el bucle
       
-    vi.spyOn(aiService, 'generateGeminiContent').mockResolvedValue('Contenido AI');
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockResolvedValue({
+      text: 'Contenido AI',
+      provider: 'gemini',
+      model: 'gemini-3.6-flash',
+      fallbackUsed: false
+    });
     vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
 
     const consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
@@ -47,15 +52,50 @@ describe('Queue Service', () => {
 
     expect(mockProject.status).toBe('borrador');
     expect(mockProject.generatedContent?.rawText).toBe('Contenido AI');
+    expect((mockProject as any).usedModel).toBe('gemini-3.6-flash');
     expect((mockProject as any).generationTimeMs).toBeDefined();
     expect((mockProject as any).generationTimeMs).toBeGreaterThanOrEqual(0);
     expect(mockProject.save).toHaveBeenCalled();
     expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('[Queue/AI]'));
-    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('generado por la IA en'));
+    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('generado por (gemini | modelo: gemini-3.6-flash)'));
     expect(sseService.sendToUser).toHaveBeenCalledWith('user1', expect.objectContaining({
       type: 'PROJECT_COMPLETED',
       generationTimeMs: expect.any(Number)
     }));
+    consoleLogSpy.mockRestore();
+  });
+
+  it('debería procesar con fallback activado', async () => {
+    const mockProject = {
+      _id: 'proj_fallback',
+      userId: 'user_fb',
+      aiPrompt: 'prompt',
+      aiInstruction: 'instruction',
+      aiProvider: 'gemini',
+      status: 'en_cola',
+      title: 'test fallback',
+      save: vi.fn().mockResolvedValue(true)
+    };
+    
+    vi.spyOn(Project, 'findOneAndUpdate')
+      .mockResolvedValueOnce(mockProject as any)
+      .mockResolvedValueOnce(null);
+      
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockResolvedValue({
+      text: 'Contenido OpenRouter',
+      provider: 'openrouter',
+      model: 'meta-llama/llama-3.3-70b-instruct:free',
+      fallbackUsed: true
+    });
+    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+
+    const consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+    await processQueue();
+
+    expect(mockProject.status).toBe('borrador');
+    expect((mockProject as any).usedAiProvider).toBe('openrouter');
+    expect((mockProject as any).usedModel).toBe('meta-llama/llama-3.3-70b-instruct:free');
+    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('fallback: openrouter | modelo: meta-llama/llama-3.3-70b-instruct:free'));
     consoleLogSpy.mockRestore();
   });
 
@@ -72,7 +112,7 @@ describe('Queue Service', () => {
       .mockResolvedValueOnce(mockProject as any)
       .mockResolvedValueOnce(null);
       
-    vi.spyOn(aiService, 'generateGeminiContent').mockRejectedValue(new Error('AI failed'));
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockRejectedValue(new Error('AI failed'));
     vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
     const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
@@ -96,8 +136,9 @@ describe('Queue Service', () => {
     vi.spyOn(Project, 'findOneAndUpdate').mockResolvedValueOnce(null); // Evita loop en processQueue
 
     await expect(initQueue()).resolves.not.toThrow();
-    expect(Project.updateMany).toHaveBeenCalledWith({ status: 'generando' }, { status: 'en_cola' });
+    expect(Project.updateMany).toHaveBeenCalledWith({ status: 'generando' }, { status: 'en_cola', $unset: { generationStartedAt: 1 } });
   });
+
 
   it('debería capturar errores al inicializar la cola', async () => {
     vi.spyOn(Project, 'updateMany').mockRejectedValueOnce(new Error('DB connection failed'));

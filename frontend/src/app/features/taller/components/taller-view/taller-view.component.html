@@ -136,10 +136,23 @@
           @if (!isMobileResourcesCollapsed()) {
             @if (auth.currentUser()?.canUseAi || auth.currentUser()?.role === 'admin') {
               <div class="ai-assistant-panel" style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px dashed #e2e8f0;">
-                <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                  {{ trans.t().aiAssistant }}
-                </h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px;">
+                  <h3 style="margin: 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    {{ trans.t().aiAssistant }}
+                  </h3>
+                  @if (auth.currentUser()?.role === 'admin') {
+                    <select 
+                      id="taller-ai-select"
+                      class="form-select" 
+                      style="padding: 4px 8px; font-size: 0.8rem; width: auto; max-width: 140px; margin: 0; height: 32px;"
+                      [value]="projects.selectedAi()" 
+                      (change)="onAiChange($event)">
+                      <option value="gemini">{{ trans.t().aiGemini }}</option>
+                      <option value="openrouter">{{ trans.t().aiOpenRouter }}</option>
+                    </select>
+                  }
+                </div>
                 <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
                   <p style="margin: 0 0 8px 0; font-weight: 500;">{{ trans.t().aiIntro }}</p>
                   <ol style="margin: 0; padding-left: 16px;">

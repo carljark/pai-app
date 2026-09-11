@@ -269,10 +269,13 @@ describe('Projects Endpoints', () => {
 
     const res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({
       selectedRas: ['RA 3060'],
-      tipoNivel: 'FP_BASICA'
+      tipoNivel: 'FP_BASICA',
+      aiProvider: 'openrouter'
     });
     expect(res.status).toBe(202);
+    expect(res.body.project.aiProvider).toBe('openrouter');
   });
+
 
   it('POST /api/projects/rewrite - Debería reescribir el proyecto completo con IA', async () => {
     const { token } = await createTestUser('teacher', 'teacher_rewrite@test.com');
@@ -287,6 +290,22 @@ describe('Projects Endpoints', () => {
       });
     expect(res.status).toBe(200);
     expect(res.body.newText).toBeDefined();
+    expect(res.body.provider).toBeDefined();
+    expect(res.body.model).toBeDefined();
+    expect(typeof res.body.fallbackUsed).toBe('boolean');
+
+    // Caso éxito con openrouter
+    const resOpenRouter = await request(app)
+      .post('/api/projects/rewrite')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        context: '# Proyecto Actual',
+        instruction: 'Añade resumen',
+        aiProvider: 'openrouter'
+      });
+    expect(resOpenRouter.status).toBe(200);
+    expect(resOpenRouter.body.provider).toBeDefined();
+    expect(resOpenRouter.body.model).toBeDefined();
 
     // Caso 400 (falta contexto o instrucción)
     const res400_1 = await request(app)
@@ -304,7 +323,7 @@ describe('Projects Endpoints', () => {
     // Caso 500
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const aiModule = await import('../services/ai.service');
-    const spy = vi.spyOn(aiModule, 'generateGeminiContent').mockRejectedValueOnce(new Error('AI Failure'));
+    const spy = vi.spyOn(aiModule, 'generateAiContentWithFallback').mockRejectedValueOnce(new Error('AI Failure'));
     const res500 = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
@@ -439,11 +458,14 @@ describe('Projects Endpoints', () => {
 
       const res = await request(app)
         .post(`/api/projects/${proj._id}/retry`)
-        .set('Authorization', `Bearer ${adminToken}`);
+        .set('Authorization', `Bearer ${adminToken}`)
+        .send({ aiProvider: 'openrouter' });
 
       expect(res.status).toBe(200);
       expect(res.body.project.status).toBe('en_cola');
+      expect(res.body.project.aiProvider).toBe('openrouter');
       expect(res.body.project.aiPrompt).toBe('Prompt previo existente');
+
     });
 
     it('debería devolver 500 si ocurre un fallo en base de datos', async () => {

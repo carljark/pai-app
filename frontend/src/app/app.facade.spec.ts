@@ -40,6 +40,7 @@ describe('AppFacade', () => {
       isGenerating: signal(false),
       generateProject: vi.fn(),
       deleteProject: vi.fn(),
+      retryProject: vi.fn(),
       currentProjectId: signal(''),
       generatedProject: signal(''),
       loadProjectFiles: vi.fn()
@@ -311,6 +312,49 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.generatedProject()).toBe('Sin contenido');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+    });
+  });
+
+  describe('retryProject', () => {
+    beforeEach(() => {
+      facade = TestBed.inject(AppFacade);
+    });
+
+    it('should retry project successfully and show info modal', () => {
+      projectsFacadeMock.retryProject.mockReturnValue(of({ message: 'ok' }));
+      const proj = { _id: 'proj-error-1' };
+
+      facade.retryProject(proj);
+
+      expect(projectsFacadeMock.retryProject).toHaveBeenCalledWith('proj-error-1');
+      expect(facade.infoTitle()).toBe('Proyecto en Cola');
+      expect(facade.showInfoModal()).toBe(true);
+      expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
+    });
+
+    it('should handle retry error with server error object', () => {
+      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      projectsFacadeMock.retryProject.mockReturnValue(throwError(() => ({ error: { error: 'Error del servidor' } })));
+      const proj = { _id: 'proj-error-2' };
+
+      facade.retryProject(proj);
+
+      expect(facade.errorTitle()).toBe('Error al Reintentar');
+      expect(facade.errorMessage()).toBe('Error del servidor');
+      expect(facade.showErrorModal()).toBe(true);
+      consoleSpy.mockRestore();
+    });
+
+    it('should handle retry error with fallback message', () => {
+      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      projectsFacadeMock.retryProject.mockReturnValue(throwError(() => ({})));
+      const proj = { _id: 'proj-error-3' };
+
+      facade.retryProject(proj);
+
+      expect(facade.errorMessage()).toBe('Error desconocido');
+      expect(facade.showErrorModal()).toBe(true);
+      consoleSpy.mockRestore();
     });
   });
 });

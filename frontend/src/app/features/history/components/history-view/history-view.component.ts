@@ -82,6 +82,7 @@ import { TranslationService } from '../../../../services/translation.service';
           </div>
           <div style="display: flex; gap: 10px;">
             @if (project.status === 'error') {
+              <button (click)="appFacade.retryProject(project)" class="btn-primary" style="background-color: #f59e0b; border-color: #d97706; padding: 6px 12px; font-size: 0.85rem;">{{ trans.t().retryBtn }}</button>
               <button (click)="appFacade.viewPastProject(project)" class="btn-secondary" style="color: #ef4444;">{{ trans.t().viewError }}</button>
             } @else if (project.status === 'borrador' || project.status === 'publicado') {
               <button (click)="appFacade.viewPastProject(project)" class="btn-primary">{{ trans.t().openEditor }}</button>

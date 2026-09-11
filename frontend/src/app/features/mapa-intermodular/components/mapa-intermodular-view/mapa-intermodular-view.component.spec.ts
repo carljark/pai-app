@@ -287,4 +287,124 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.getRelationLabel('tecnica')).toBe('Técnica Práctica');
     expect(component.getRelationLabel('cliente')).toBe('Atención al Cliente');
   });
+
+  it('should toggle accordion steps 1, 2 and 3 and update classes in DOM', () => {
+    // Initial state: all 3 steps open
+    expect(component.step1Open()).toBe(true);
+    expect(component.step2Open()).toBe(true);
+    expect(component.step3Open()).toBe(true);
+
+    const header1 = fixture.nativeElement.querySelector('.mapa-step-header--1') as HTMLElement;
+    const header2 = fixture.nativeElement.querySelector('.mapa-step-header--2') as HTMLElement;
+    const header3 = fixture.nativeElement.querySelector('.mapa-step-header--3') as HTMLElement;
+
+    expect(header1).toBeTruthy();
+    expect(header2).toBeTruthy();
+    expect(header3).toBeTruthy();
+
+    // Toggle step 1 via DOM click
+    header1.click();
+    fixture.detectChanges();
+    expect(component.step1Open()).toBe(false);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain('collapsed');
+
+    header1.click();
+    fixture.detectChanges();
+    expect(component.step1Open()).toBe(true);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).not.toContain('collapsed');
+
+    // Toggle step 2 via DOM click
+    header2.click();
+    fixture.detectChanges();
+    expect(component.step2Open()).toBe(false);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--2').classList).toContain('collapsed');
+
+    header2.click();
+    fixture.detectChanges();
+    expect(component.step2Open()).toBe(true);
+
+    // Toggle step 3 via DOM click
+    header3.click();
+    fixture.detectChanges();
+    expect(component.step3Open()).toBe(false);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--3').classList).toContain('collapsed');
+
+    header3.click();
+    fixture.detectChanges();
+    expect(component.step3Open()).toBe(true);
+
+    // Test toggleStep direct method calls
+    component.toggleStep(1);
+    expect(component.step1Open()).toBe(false);
+    component.toggleStep(1);
+    expect(component.step1Open()).toBe(true);
+
+    component.toggleStep(2);
+    expect(component.step2Open()).toBe(false);
+    component.toggleStep(2);
+    expect(component.step2Open()).toBe(true);
+
+    component.toggleStep(3);
+    expect(component.step3Open()).toBe(false);
+    component.toggleStep(3);
+    expect(component.step3Open()).toBe(true);
+  });
+
+  it('should auto-expand step 2 and step 3 when onSelectRa is called', () => {
+    component.step2Open.set(false);
+    component.step3Open.set(false);
+    fixture.detectChanges();
+
+    component.onSelectRa('3060_RA1');
+    fixture.detectChanges();
+
+    expect(component.step2Open()).toBe(true);
+    expect(component.step3Open()).toBe(true);
+  });
+
+  it('should test findCurriculumMatch edge cases and fallbacks in createProjectFromConnection', () => {
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+
+    // Test with empty curriculum ras so fallbacks are hit
+    curriculum.ras.set([]);
+    mockLayout.language.set('castellano');
+    component.createProjectFromConnection();
+    expect(curriculum.selectedRas().length).toBeGreaterThan(0);
+
+    mockLayout.language.set('catalan');
+    component.createProjectFromConnection();
+    expect(curriculum.selectedRas().length).toBeGreaterThan(0);
+
+    // Partial substring fallback
+    curriculum.ras.set([
+      { description: 'muestra una imagen personal y profesional', module: '3060' }
+    ]);
+    component.createProjectFromConnection();
+    expect(curriculum.selectedRas()).toContain('muestra una imagen personal y profesional');
+  });
+
+  it('should handle createProjectFromConnection when no RA is selected and with duplicates', () => {
+    // 1. When no active RA or module
+    component.facade.selectedModuleCode.set('');
+    component.facade.selectedRaId.set('');
+    component.createProjectFromConnection();
+    expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
+
+    // 2. When target description matches source description (duplicate branch)
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    const desc = component.facade.selectedRa()?.text_es || '';
+    curriculum.ras.set([
+      { id: 'RA1', description: desc, module: '3060' }
+    ]);
+    const mockConn: any = {
+      targetModuleCode: '3060',
+      targetModuleName_es: 'Prep',
+      targetRaCode: 'RA1',
+      targetRaText_es: desc,
+      targetRaText_ca: desc
+    };
+    component.createProjectFromConnection(mockConn);
+  });
 });

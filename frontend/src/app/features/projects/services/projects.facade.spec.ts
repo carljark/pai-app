@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ProjectsFacade } from './projects.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
-import { vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 describe('ProjectsFacade', () => {
   let facade: ProjectsFacade;
@@ -82,6 +82,13 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/123');
     expect(req.request.method).toBe('DELETE');
+    req.flush({});
+  });
+
+  it('should retry project via HTTP', () => {
+    facade.retryProject('123').subscribe();
+    const req = httpMock.expectOne('/api/projects/123/retry');
+    expect(req.request.method).toBe('POST');
     req.flush({});
   });
 

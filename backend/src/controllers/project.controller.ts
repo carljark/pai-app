@@ -298,3 +298,53 @@ REGLAS ESTRICTAS:
     res.status(500).json({ error: "Error al contactar con la IA para reescribir" });
   }
 };
+
+function validateRetryAccess(project: any, user: any): { status: number; message: string } | null {
+  if (!project) return { status: 404, message: 'Proyecto no encontrado' };
+  const isOwner = project.userId?.toString() === user?._id?.toString();
+  if (user?.role !== 'admin' && !isOwner) {
+    return { status: 403, message: 'Acceso denegado' };
+  }
+  if (project.status !== 'error') {
+    return { status: 400, message: 'Solo se pueden reintentar proyectos con estado de error' };
+  }
+  return null;
+}
+
+async function hasPendingGeneration(userId: any): Promise<boolean> {
+  const count = await Project.countDocuments({
+    userId,
+    status: { $in: ['en_cola', 'generando'] }
+  });
+  return count > 0;
+}
+
+async function reenqueueProject(project: any): Promise<void> {
+  if (!project.aiPrompt) {
+    project.aiPrompt = `Genera un proyecto educativo para ${project.tipoNivel}.`;
+    project.aiInstruction = 'Experto pedagógico.';
+  }
+  project.status = 'en_cola';
+  project.errorDetail = undefined;
+  await project.save();
+  processQueue().catch(console.error);
+}
+
+export const retryProject = async (req: any, res: Response) => {
+  try {
+    const project = await Project.findById(req.params.id);
+    const authError = validateRetryAccess(project, req.user);
+    if (authError) return res.status(authError.status).json({ error: authError.message });
+
+    const hasPending = await hasPendingGeneration(req.user?._id);
+    if (hasPending) {
+      return res.status(429).json({ error: 'Ya tienes un proyecto en la cola o generándose. Por favor, espera a que termine.' });
+    }
+
+    await reenqueueProject(project);
+    return res.json({ message: 'Proyecto reencolado exitosamente', project });
+  } catch (error: any) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+

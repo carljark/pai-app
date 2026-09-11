@@ -17,6 +17,7 @@ describe('HistoryViewComponent', () => {
     mockAppFacade = {
       viewPastProject: vi.fn(),
       deleteProject: vi.fn(),
+      retryProject: vi.fn(),
     };
 
     mockProjectsFacade = {
@@ -31,6 +32,7 @@ describe('HistoryViewComponent', () => {
         searchProjects: 'Search',
         noProjectsInSection: 'No hay proyectos en esta sección.',
         untitledProject: 'Proyecto sin título',
+        retryBtn: 'Reintentar',
         viewError: 'Ver Error',
         openEditor: 'Abrir Editor',
         deleteFile: 'Borrar archivo'
@@ -109,7 +111,7 @@ describe('HistoryViewComponent', () => {
     expect(fixture.nativeElement.textContent).toContain('Proyecto sin título');
   });
 
-  it('should call viewPastProject when Open Editor or View Error is clicked', () => {
+  it('should call viewPastProject and retryProject when buttons are clicked', () => {
     mockProjectsFacade.projectsHistory.set([
       { _id: '1', title: 'Proj 1', status: 'borrador', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },
       { _id: '2', title: 'Proj 2', status: 'error', createdAt: new Date().toISOString(), tipoNivel: 'FP_BASICA' },
@@ -120,7 +122,10 @@ describe('HistoryViewComponent', () => {
     buttons[0].click(); // Open Editor for borrador
     expect(mockAppFacade.viewPastProject).toHaveBeenCalledWith(mockProjectsFacade.projectsHistory()[0]);
     
-    buttons[2].click(); // View Error
+    buttons[2].click(); // Retry for error
+    expect(mockAppFacade.retryProject).toHaveBeenCalledWith(mockProjectsFacade.projectsHistory()[1]);
+
+    buttons[3].click(); // View Error for error
     expect(mockAppFacade.viewPastProject).toHaveBeenCalledWith(mockProjectsFacade.projectsHistory()[1]);
   });
 

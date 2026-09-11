@@ -342,4 +342,121 @@ describe('Projects Endpoints', () => {
     expect(mockRes.write).toHaveBeenCalled();
     if (closeCallback) closeCallback();
   });
+
+  describe('POST /api/projects/:id/retry', () => {
+    it('debería reintentar exitosamente un proyecto con error', async () => {
+      const { token, user } = await createTestUser('teacher', 'retry_user@test.com');
+      const proj = await new Project({
+        title: 'Proyecto Fallido',
+        userId: user._id,
+        status: 'error',
+        errorDetail: 'Timeout en IA',
+        tipoNivel: 'FP_BASICA',
+        modules: ['M1']
+      }).save();
+
+      const res = await request(app)
+        .post(`/api/projects/${proj._id}/retry`)
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body.project.status).toBe('en_cola');
+      expect(res.body.project.errorDetail).toBeUndefined();
+    });
+
+    it('debería devolver 404 si el proyecto no existe', async () => {
+      const { token } = await createTestUser('teacher', 'retry_404@test.com');
+      const fakeId = new mongoose.Types.ObjectId();
+      const res = await request(app)
+        .post(`/api/projects/${fakeId}/retry`)
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(404);
+    });
+
+    it('debería devolver 403 si el usuario no es el dueño', async () => {
+      const { user: owner } = await createTestUser('teacher', 'retry_owner@test.com');
+      const { token: otherToken } = await createTestUser('teacher', 'retry_other@test.com');
+      const proj = await new Project({
+        title: 'Proyecto Ajeno',
+        userId: owner._id,
+        status: 'error'
+      }).save();
+
+      const res = await request(app)
+        .post(`/api/projects/${proj._id}/retry`)
+        .set('Authorization', `Bearer ${otherToken}`);
+
+      expect(res.status).toBe(403);
+    });
+
+    it('debería devolver 400 si el estado no es error', async () => {
+      const { token, user } = await createTestUser('teacher', 'retry_not_error@test.com');
+      const proj = await new Project({
+        title: 'Proyecto OK',
+        userId: user._id,
+        status: 'borrador'
+      }).save();
+
+      const res = await request(app)
+        .post(`/api/projects/${proj._id}/retry`)
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(400);
+    });
+
+    it('debería devolver 429 si ya tiene un proyecto en cola', async () => {
+      const { token, user } = await createTestUser('teacher', 'retry_429@test.com');
+      await new Project({
+        title: 'Proyecto En Curso',
+        userId: user._id,
+        status: 'en_cola'
+      }).save();
+
+      const failedProj = await new Project({
+        title: 'Proyecto Fallido',
+        userId: user._id,
+        status: 'error'
+      }).save();
+
+      const res = await request(app)
+        .post(`/api/projects/${failedProj._id}/retry`)
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(429);
+    });
+
+    it('debería permitir a un admin reintentar el proyecto de otro usuario con aiPrompt existente', async () => {
+      const { user: owner } = await createTestUser('teacher', 'retry_owner2@test.com');
+      const { token: adminToken } = await createTestUser('admin', 'retry_admin@test.com');
+      const proj = await new Project({
+        title: 'Proyecto con Prompt',
+        userId: owner._id,
+        status: 'error',
+        aiPrompt: 'Prompt previo existente',
+        aiInstruction: 'Instruccion previa'
+      }).save();
+
+      const res = await request(app)
+        .post(`/api/projects/${proj._id}/retry`)
+        .set('Authorization', `Bearer ${adminToken}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body.project.status).toBe('en_cola');
+      expect(res.body.project.aiPrompt).toBe('Prompt previo existente');
+    });
+
+    it('debería devolver 500 si ocurre un fallo en base de datos', async () => {
+      const { token } = await createTestUser('teacher', 'retry_err@test.com');
+      const spy = vi.spyOn(Project, 'findById').mockRejectedValueOnce(new Error('DB connection lost'));
+
+      const res = await request(app)
+        .post('/api/projects/64b1f2e8e4b0a1a2b3c4d5e6/retry')
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(500);
+      expect(res.body.error).toBe('DB connection lost');
+      spy.mockRestore();
+    });
+  });
 });

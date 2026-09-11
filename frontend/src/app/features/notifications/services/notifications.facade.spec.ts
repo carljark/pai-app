@@ -144,4 +144,18 @@ describe('NotificationsFacade', () => {
     TestBed.flushEffects();
     expect(facade.notifications()).toEqual([]);
   });
+
+  it('should unsubscribe and reset notifications on logout', () => {
+    TestBed.runInInjectionContext(() => {
+      facade = new NotificationsFacade();
+    });
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    expect(paiServiceMock.listenToProjectUpdates).toHaveBeenCalledTimes(1);
+
+    authFacadeMock.currentUser.set(null);
+    TestBed.flushEffects();
+    expect(facade.notifications()).toEqual([]);
+    expect(facade.latestNotification()).toBeNull();
+  });
 });

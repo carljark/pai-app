@@ -86,6 +86,10 @@ export class ProjectsFacade {
     return this.http.delete<any>(`${this.apiUrl}/${projectId}`);
   }
 
+  retryProject(projectId: string) {
+    return this.http.post<any>(`${this.apiUrl}/${projectId}/retry`, {});
+  }
+
   generateProject(language: string, title?: string) {
     const selectedRas = this.curriculumFacade.selectedRas();
     const tipoNivel = this.curriculumFacade.tipoNivel();

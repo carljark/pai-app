@@ -132,6 +132,25 @@ export class AppFacade {
     this.showConfirmModal.set(true);
   }
 
+  retryProject(project: any) {
+    this.projects.retryProject(project._id).subscribe({
+      next: () => {
+        this.infoTitle.set('Proyecto en Cola');
+        this.infoMessage.set('El proyecto ha sido vuelto a poner en la cola de generación.');
+        this.infoType.set('info');
+        this.showInfoModal.set(true);
+        this.projects.loadHistory();
+      },
+      error: (err) => {
+        console.error('Error al reintentar proyecto:', err);
+        this.errorTitle.set('Error al Reintentar');
+        const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
+        this.errorMessage.set(serverMsg);
+        this.showErrorModal.set(true);
+      }
+    });
+  }
+
   viewPastProject(project: any) {
     this.projects.currentProjectId.set(project._id);
     const rawText = typeof project.generatedContent === 'string' 

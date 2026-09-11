@@ -130,8 +130,12 @@
             [class.selected]="facade.selectedModuleCode() === mod.code"
             (click)="onSelectModule(mod.code)">
             <div class="mapa-module-header">
-              <span class="mapa-badge-code" [style.background]="mod.color">{{ mod.code }}</span>
-              <strong class="mapa-module-name">{{ isCa() ? mod.name_ca : mod.name_es }}</strong>
+              <div class="mapa-module-header__title">
+                <span class="mapa-module-chevron">{{ facade.selectedModuleCode() === mod.code ? '▼' : '▶' }}</span>
+                <span class="mapa-badge-code" [style.background]="mod.color">{{ mod.code }}</span>
+                <strong class="mapa-module-name">{{ isCa() ? mod.name_ca : mod.name_es }}</strong>
+              </div>
+              <span class="mapa-module-count-badge">{{ mod.learningOutcomes.length }} RAs</span>
             </div>
 
             @if (facade.selectedModuleCode() === mod.code) {

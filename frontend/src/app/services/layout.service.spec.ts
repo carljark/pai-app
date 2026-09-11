@@ -28,7 +28,7 @@ describe('LayoutService', () => {
     expect(service).toBeTruthy();
     expect(service.currentView()).toBe('home');
     expect(service.isMobile()).toBeDefined();
-    expect(service.isSidebarCollapsed()).toBe(false);
+    expect(service.isSidebarCollapsed()).toBe(true);
     expect(service.language()).toBe('castellano');
   });
 
@@ -42,11 +42,11 @@ describe('LayoutService', () => {
 
   it('should toggle sidebar', () => {
     service = TestBed.inject(LayoutService);
-    expect(service.isSidebarCollapsed()).toBe(false);
-    service.toggleSidebar();
     expect(service.isSidebarCollapsed()).toBe(true);
     service.toggleSidebar();
     expect(service.isSidebarCollapsed()).toBe(false);
+    service.toggleSidebar();
+    expect(service.isSidebarCollapsed()).toBe(true);
   });
 
   it('should switch view and save to localStorage (via effect) and scroll to top', () => {

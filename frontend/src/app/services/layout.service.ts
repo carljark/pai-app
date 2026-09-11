@@ -7,7 +7,7 @@ export class LayoutService {
   
   currentView = signal<'home' | 'generator' | 'history' | 'taller' | 'admin' | 'mapa'>('home');
   isMobile = signal<boolean>(window.innerWidth <= 768);
-  isSidebarCollapsed = signal<boolean>(false);
+  isSidebarCollapsed = signal<boolean>(true);
   language = signal<'castellano' | 'catalan'>('castellano');
 
   constructor() {

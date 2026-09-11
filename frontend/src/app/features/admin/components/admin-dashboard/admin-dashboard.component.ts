@@ -210,6 +210,20 @@ import { AdminFacade } from '../../services/admin.facade';
                 ⏱️ Tiempo de generación de la IA: <strong>{{ (log.details.generationTimeMs / 1000).toFixed(1) }}s</strong>
               </p>
             }
+            @if (getLogModel(log) || getLogProviderLabel(log)) {
+              <p style="margin: 3px 0 0 0; font-size: 0.85rem; color: #475569;">
+                🤖 Modelo IA: 
+                @if (getLogModel(log)) {
+                  <strong style="font-family: monospace; color: #1e293b; background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">{{ getLogModel(log) }}</strong>
+                }
+                @if (getLogProviderLabel(log)) {
+                  <span style="color: #64748b; margin-left: 6px;">({{ getLogProviderLabel(log) }})</span>
+                }
+                @if (log.details?.fallbackUsed) {
+                  <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; background: #fef3c7; color: #92400e; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Fallback</span>
+                }
+              </p>
+            }
             @if (log.details?.error) {
               <p style="margin: 0; font-size: 0.85rem; color: #e74c3c;">
                 ⚠️ Error: {{ log.details.error }}
@@ -271,5 +285,21 @@ export class AdminDashboardComponent {
 
   deleteUser(userId: string) {
     this.adminFacade.deleteUser(userId).subscribe();
+  }
+
+  getLogModel(log: any): string | null {
+    if (log.details?.model) return log.details.model;
+    if (log.projectId?.usedModel) return log.projectId.usedModel;
+    const p = log.details?.provider || log.projectId?.usedAiProvider;
+    if (p === 'openrouter') return 'openrouter/free';
+    if (p === 'gemini') return 'gemini-3.6-flash';
+    return null;
+  }
+
+  getLogProviderLabel(log: any): string | null {
+    const p = log.details?.provider || log.projectId?.usedAiProvider;
+    if (p === 'openrouter') return 'Secundario';
+    if (p === 'gemini') return 'Primario';
+    return null;
   }
 }

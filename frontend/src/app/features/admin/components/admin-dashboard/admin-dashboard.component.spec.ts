@@ -192,10 +192,93 @@ describe('AdminDashboardComponent', () => {
     expect(compiled.textContent).toContain('Cargando analíticas');
   });
 
-  it('should render logs', () => {
+  it('should render logs and AI model information covering all branches', () => {
+    mockFacade.logs.set([
+      {
+        _id: '1',
+        action: 'GENERATE_PROJECT',
+        createdAt: new Date(),
+        userId: { name: 'Admin', email: 'admin@test.com' },
+        projectId: { title: 'Proyecto Con Titulo' },
+        details: {
+          generationTimeMs: 1500,
+          model: 'meta-llama/llama-3.3-70b-instruct:free',
+          provider: 'openrouter',
+          fallbackUsed: true
+        }
+      },
+      {
+        _id: '2',
+        action: 'GENERATE_PROJECT',
+        createdAt: new Date(),
+        userId: null,
+        projectId: {
+          title: 'Proyecto 2',
+          usedModel: 'gemini-3.6-flash',
+          usedAiProvider: 'gemini'
+        },
+        details: {
+          generationTimeMs: 2000
+        }
+      },
+      {
+        _id: '3',
+        action: 'GENERATE_PROJECT',
+        createdAt: new Date(),
+        userId: { name: 'Profesor', email: 'profe@test.com' },
+        projectId: null,
+        details: {
+          title: 'Proyecto Detalle Fallido',
+          error: 'Error de cuota agotada'
+        }
+      },
+      {
+        _id: '4',
+        action: 'CUSTOM',
+        createdAt: new Date(),
+        projectId: { usedModel: 'custom-ai-engine' }
+      }
+    ]);
+    fixture.detectChanges();
+
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Admin');
-    expect(compiled.textContent).toContain('LOGIN');
-    expect(compiled.textContent).toContain('1.0s');
+    expect(compiled.textContent).toContain('Desconocido');
+    expect(compiled.textContent).toContain('N/A');
+    expect(compiled.textContent).toContain('GENERATE_PROJECT');
+    expect(compiled.textContent).toContain('Proyecto Con Titulo');
+    expect(compiled.textContent).toContain('Proyecto Detalle Fallido');
+    expect(compiled.textContent).toContain('1.5s');
+    expect(compiled.textContent).toContain('meta-llama/llama-3.3-70b-instruct:free');
+    expect(compiled.textContent).toContain('Secundario');
+    expect(compiled.textContent).toContain('Fallback');
+    expect(compiled.textContent).toContain('gemini-3.6-flash');
+    expect(compiled.textContent).toContain('Primario');
+    expect(compiled.textContent).toContain('custom-ai-engine');
+    expect(compiled.textContent).toContain('Error: Error de cuota agotada');
+  });
+
+  it('getLogModel and getLogProviderLabel should handle all branches', () => {
+    // details.model
+    expect(component.getLogModel({ details: { model: 'exact-model' } })).toBe('exact-model');
+    // projectId.usedModel
+    expect(component.getLogModel({ projectId: { usedModel: 'proj-model' } })).toBe('proj-model');
+    // provider openrouter in details and in projectId
+    expect(component.getLogModel({ details: { provider: 'openrouter' } })).toBe('openrouter/free');
+    expect(component.getLogModel({ projectId: { usedAiProvider: 'openrouter' } })).toBe('openrouter/free');
+    // provider gemini in details and in projectId
+    expect(component.getLogModel({ details: { provider: 'gemini' } })).toBe('gemini-3.6-flash');
+    expect(component.getLogModel({ projectId: { usedAiProvider: 'gemini' } })).toBe('gemini-3.6-flash');
+    // null / other
+    expect(component.getLogModel({ details: { provider: 'other' } })).toBeNull();
+    expect(component.getLogModel({})).toBeNull();
+
+    // getLogProviderLabel
+    expect(component.getLogProviderLabel({ details: { provider: 'openrouter' } })).toBe('Secundario');
+    expect(component.getLogProviderLabel({ projectId: { usedAiProvider: 'openrouter' } })).toBe('Secundario');
+    expect(component.getLogProviderLabel({ details: { provider: 'gemini' } })).toBe('Primario');
+    expect(component.getLogProviderLabel({ projectId: { usedAiProvider: 'gemini' } })).toBe('Primario');
+    expect(component.getLogProviderLabel({ details: { provider: 'other' } })).toBeNull();
+    expect(component.getLogProviderLabel({})).toBeNull();
   });
 });

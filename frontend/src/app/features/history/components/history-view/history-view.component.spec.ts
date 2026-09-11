@@ -36,7 +36,9 @@ describe('HistoryViewComponent', () => {
         retryBtn: 'Reintentar',
         viewError: 'Ver Error',
         openEditor: 'Abrir Editor',
-        deleteFile: 'Borrar archivo'
+        deleteFile: 'Borrar archivo',
+        aiGemini: 'Primario',
+        aiOpenRouter: 'Secundario'
       })
     };
 
@@ -73,13 +75,28 @@ describe('HistoryViewComponent', () => {
 
   it('should render FP_BASICA projects by default', () => {
     mockProjectsFacade.projectsHistory.set([
-      { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },
+      { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA', usedModel: 'gemini-3.6-flash' },
       { _id: '2', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
     const element = fixture.nativeElement;
     expect(element.textContent).toContain('Proj FPB');
+    expect(element.textContent).toContain('Primario');
+    expect(element.textContent).not.toContain('gemini-3.6-flash');
     expect(element.textContent).not.toContain('Proj ESO');
+  });
+
+  it('should return correct provider label or null in getAiProviderLabel', () => {
+    // usedAiProvider openrouter
+    expect(component.getAiProviderLabel({ usedAiProvider: 'openrouter' })).toBe('Secundario');
+    // aiProvider gemini
+    expect(component.getAiProviderLabel({ aiProvider: 'gemini' })).toBe('Primario');
+    // usedModel gemini
+    expect(component.getAiProviderLabel({ usedModel: 'gemini-3.6-flash' })).toBe('Primario');
+    // usedModel openrouter / meta-llama
+    expect(component.getAiProviderLabel({ usedModel: 'meta-llama/llama-3.3-70b-instruct:free' })).toBe('Secundario');
+    // none
+    expect(component.getAiProviderLabel({})).toBeNull();
   });
 
   it('should switch to ESO tab and show ESO projects via click', () => {

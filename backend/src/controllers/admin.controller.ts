@@ -7,7 +7,7 @@ export const getLogs = async (req: any, res: Response) => {
   try {
     const logs = await ActivityLog.find()
       .populate('userId', 'name email role')
-      .populate('projectId', 'title')
+      .populate('projectId', 'title usedModel usedAiProvider')
       .sort({ createdAt: -1 })
       .limit(100);
     res.json(logs);

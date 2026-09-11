@@ -78,6 +78,11 @@ import { TranslationService } from '../../../../services/translation.service';
               </span>
               <span style="font-size: 0.85rem; color: var(--c-text-muted);">{{ project.createdAt | date:'short' }}</span>
               <span style="font-size: 0.85rem; color: var(--c-text-muted);">• {{ project.modules?.join(', ') || project.generatedContent?.modules?.join(', ') || 'Varios' }}</span>
+              @if (getAiProviderLabel(project)) {
+                <span style="font-size: 0.75rem; background: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
+                  {{ getAiProviderLabel(project) }}
+                </span>
+              }
             </div>
           </div>
           <div style="display: flex; gap: 10px;">
@@ -117,6 +122,18 @@ export class HistoryViewComponent {
       return project.modules.join(' + ');
     }
     return project.title || this.trans.t().untitledProject;
+  }
+
+  getAiProviderLabel(project: any): string | null {
+    const p = project.usedAiProvider || project.aiProvider;
+    if (p === 'openrouter') return this.trans.t().aiOpenRouter;
+    if (p === 'gemini') return this.trans.t().aiGemini;
+    if (project.usedModel) {
+      return project.usedModel.toLowerCase().includes('gemini')
+        ? this.trans.t().aiGemini
+        : this.trans.t().aiOpenRouter;
+    }
+    return null;
   }
 
   filteredProjects = computed(() => {

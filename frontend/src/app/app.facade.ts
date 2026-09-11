@@ -89,6 +89,8 @@ export class AppFacade {
       return;
     }
     
+    const nivel = this.curriculum.tipoNivel();
+    this.projects.historyTab.set(nivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO' : 'FPB');
     this.projects.isGenerating.set(true);
     this.projects.generateProject(this.layout.language()).subscribe({
       next: (res) => {

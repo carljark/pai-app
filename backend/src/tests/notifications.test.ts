@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeAll, afterAll, beforeEach } from 'vitest';
 import request from 'supertest';
+import mongoose from 'mongoose';
 import { app } from '../server';
 import { connectDB, closeDB, clearDB } from './testSetup';
 import { createTestUser } from './testUtils';
@@ -136,7 +137,7 @@ describe('Notifications API and Service', () => {
     const spy = vi.spyOn(Notification, 'findOneAndUpdate').mockRejectedValueOnce(new Error('DB Failed'));
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
-    const result = await syncProjectNotification({ _id: 'dummy' });
+    const result = await syncProjectNotification({ _id: new mongoose.Types.ObjectId() });
     expect(result).toBeNull();
     expect(consoleSpy).toHaveBeenCalled();
     spy.mockRestore();
@@ -145,7 +146,7 @@ describe('Notifications API and Service', () => {
 
   it('deleteProjectNotification should delete by projectId and catch errors', async () => {
     const notif = await new Notification({
-      projectId: '507f1f77bcf86cd799439011',
+      projectId: new mongoose.Types.ObjectId(),
       type: 'INFO',
       title: 'A borrar',
       message: 'Msg',
@@ -156,11 +157,19 @@ describe('Notifications API and Service', () => {
     const count = await Notification.countDocuments({ projectId: notif.projectId });
     expect(count).toBe(0);
 
-    const spy = vi.spyOn(Notification, 'deleteMany').mockRejectedValueOnce(new Error('Delete error'));
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    // Invalid string projectId should log warning and skip deletion
+    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     await deleteProjectNotification('dummy');
-    expect(consoleSpy).toHaveBeenCalled();
+    expect(consoleWarnSpy).toHaveBeenCalled();
+    consoleWarnSpy.mockRestore();
+
+    // Valid string projectId should proceed to deletion and log error on failure
+    const spy = vi.spyOn(Notification, 'deleteMany').mockRejectedValueOnce(new Error('Delete error'));
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const validId = new mongoose.Types.ObjectId().toString();
+    await deleteProjectNotification(validId);
+    expect(consoleErrorSpy).toHaveBeenCalled();
     spy.mockRestore();
-    consoleSpy.mockRestore();
+    consoleErrorSpy.mockRestore();
   });
 });

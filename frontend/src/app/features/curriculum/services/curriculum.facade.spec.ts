@@ -10,6 +10,7 @@ describe('CurriculumFacade', () => {
   let httpTestingController: HttpTestingController;
 
   beforeEach(() => {
+    localStorage.clear();
     TestBed.configureTestingModule({
       providers: [
         CurriculumFacade,
@@ -22,6 +23,7 @@ describe('CurriculumFacade', () => {
   });
 
   afterEach(() => {
+    localStorage.clear();
     httpTestingController.verify();
   });
 
@@ -165,13 +167,81 @@ describe('CurriculumFacade', () => {
     expect(details[0].subject).toBe('FP Básica');
   });
 
-  it('should clear selection when setTipoNivel changes level', () => {
+  it('should clear selection and persist to localStorage when setTipoNivel changes level', () => {
     facade.tipoNivel.set('FP_BASICA');
     facade.toggleRa('RA1');
     expect(facade.selectedRas()).toContain('RA1');
     
     facade.setTipoNivel('DIVERSIFICACION_CURRICULAR');
     expect(facade.tipoNivel()).toBe('DIVERSIFICACION_CURRICULAR');
+    expect(facade.curso()).toBe('3º');
     expect(facade.selectedRas()).not.toContain('RA1');
+    expect(localStorage.getItem('pai_tipo_nivel')).toBe('DIVERSIFICACION_CURRICULAR');
+    expect(localStorage.getItem('pai_curso')).toBe('3º');
+
+    // Changing back to FP_BASICA
+    facade.setTipoNivel('FP_BASICA');
+    expect(facade.tipoNivel()).toBe('FP_BASICA');
+    expect(facade.curso()).toBe('1º');
+    expect(localStorage.getItem('pai_tipo_nivel')).toBe('FP_BASICA');
+    expect(localStorage.getItem('pai_curso')).toBe('1º');
+
+    // Calling setTipoNivel with same level should be no-op
+    facade.setTipoNivel('FP_BASICA');
+    expect(facade.tipoNivel()).toBe('FP_BASICA');
+  });
+
+  it('should persist curso to localStorage when setCurso is called', () => {
+    facade.setCurso('2º');
+    expect(facade.curso()).toBe('2º');
+    expect(localStorage.getItem('pai_curso')).toBe('2º');
+  });
+
+  it('should restore tipoNivel and curso from localStorage upon instantiation', () => {
+    localStorage.setItem('pai_tipo_nivel', 'DIVERSIFICACION_CURRICULAR');
+    localStorage.setItem('pai_curso', '4º');
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [
+        CurriculumFacade,
+        provideHttpClient(),
+        provideHttpClientTesting(),
+      ]
+    });
+    const restoredFacade = TestBed.inject(CurriculumFacade);
+    expect(restoredFacade.tipoNivel()).toBe('DIVERSIFICACION_CURRICULAR');
+    expect(restoredFacade.curso()).toBe('4º');
+
+    // Test restoring FP_BASICA with 2º
+    localStorage.setItem('pai_tipo_nivel', 'FP_BASICA');
+    localStorage.setItem('pai_curso', '2º');
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [
+        CurriculumFacade,
+        provideHttpClient(),
+        provideHttpClientTesting(),
+      ]
+    });
+    const fpFacade = TestBed.inject(CurriculumFacade);
+    expect(fpFacade.tipoNivel()).toBe('FP_BASICA');
+    expect(fpFacade.curso()).toBe('2º');
+
+    // Test restoring invalid curso for level fallbacks to default
+    localStorage.setItem('pai_tipo_nivel', 'FP_BASICA');
+    localStorage.setItem('pai_curso', '4º'); // 4º invalid for FP_BASICA
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [
+        CurriculumFacade,
+        provideHttpClient(),
+        provideHttpClientTesting(),
+      ]
+    });
+    const fallbackFacade = TestBed.inject(CurriculumFacade);
+    expect(fallbackFacade.curso()).toBe('1º');
   });
 });

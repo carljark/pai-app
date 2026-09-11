@@ -105,7 +105,7 @@ export class HistoryViewComponent {
   projects = inject(ProjectsFacade);
   trans = inject(TranslationService);
 
-  activeTab = signal<'FPB' | 'ESO'>('FPB');
+  activeTab = this.projects.historyTab;
   searchQuery = signal<string>('');
 
   getDisplayTitle(project: any): string {
@@ -125,9 +125,9 @@ export class HistoryViewComponent {
     // Filtro por Nivel / Pestaña
     list = list.filter(p => {
       if (this.activeTab() === 'FPB') {
-        return p.tipoNivel === 'FP_BASICA';
+        return p.tipoNivel === 'FP_BASICA' || !p.tipoNivel;
       } else {
-        return p.tipoNivel === 'DIVERSIFICACION_CURRICULAR';
+        return p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO';
       }
     });
 

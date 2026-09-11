@@ -1,5 +1,6 @@
 import { Notification } from '../models/Notification';
 import { broadcast } from './sse.service';
+import mongoose from 'mongoose';
 
 interface NotificationExtra {
   type?: string;
@@ -8,6 +9,16 @@ interface NotificationExtra {
   userName?: string;
   phase?: string;
   rasCount?: number;
+}
+
+function isValidObjectId(value: any): boolean {
+  // mongoose.isValidObjectId is available in Mongoose 5.0+
+  // It returns true for ObjectId instances and valid 24-character hex strings
+  return typeof mongoose.isValidObjectId === 'function'
+    ? mongoose.isValidObjectId(value)
+    : // Fallback for older versions
+      (value instanceof mongoose.Types.ObjectId ||
+        (typeof value === 'string' && mongoose.Types.ObjectId.isValid(value)));
 }
 
 function buildUpdateData(project: any, extra?: NotificationExtra) {
@@ -32,6 +43,13 @@ function buildUpdateData(project: any, extra?: NotificationExtra) {
 export async function syncProjectNotification(project: any, extra?: NotificationExtra) {
   try {
     const projectId = project._id;
+
+    // Skip notification sync if projectId is not a valid ObjectId
+    if (!isValidObjectId(projectId)) {
+      console.warn(`[NotificationService] Skipping sync: invalid projectId "${projectId}"`);
+      return null;
+    }
+
     const updateData = buildUpdateData(project, extra);
 
     const notif = await Notification.findOneAndUpdate(
@@ -62,6 +80,12 @@ export async function syncProjectNotification(project: any, extra?: Notification
 
 export async function deleteProjectNotification(projectId: any) {
   try {
+    // Skip deletion if projectId is not a valid ObjectId
+    if (!isValidObjectId(projectId)) {
+      console.warn(`[NotificationService] Skipping delete: invalid projectId "${projectId}"`);
+      return;
+    }
+
     await Notification.deleteMany({ projectId });
   } catch (err) {
     console.error('[NotificationService] Error deleting notification:', err);

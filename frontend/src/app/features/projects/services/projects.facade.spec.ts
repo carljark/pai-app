@@ -100,6 +100,7 @@ describe('ProjectsFacade', () => {
     
     facade.methodology.set('ABP');
     facade.generateProject('castellano', 'Custom Title').subscribe();
+    expect(facade.historyTab()).toBe('FPB');
     
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.method).toBe('POST');
@@ -124,6 +125,7 @@ describe('ProjectsFacade', () => {
     
     facade.selectedAi.set('openrouter');
     facade.generateProject('catalan').subscribe();
+    expect(facade.historyTab()).toBe('ESO');
     
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['Math']);

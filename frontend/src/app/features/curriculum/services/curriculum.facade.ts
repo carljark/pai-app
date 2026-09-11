@@ -2,6 +2,27 @@ import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
 
+function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' {
+  if (typeof localStorage !== 'undefined') {
+    const saved = localStorage.getItem('pai_tipo_nivel');
+    if (saved === 'DIVERSIFICACION_CURRICULAR' || saved === 'FP_BASICA') {
+      return saved;
+    }
+  }
+  return 'FP_BASICA';
+}
+
+function getStoredCurso(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'): string {
+  if (typeof localStorage !== 'undefined') {
+    const savedCurso = localStorage.getItem('pai_curso');
+    const valid = nivel === 'FP_BASICA' ? ['1º', '2º'] : ['3º', '4º'];
+    if (savedCurso && valid.includes(savedCurso)) {
+      return savedCurso;
+    }
+  }
+  return nivel === 'FP_BASICA' ? '1º' : '3º';
+}
+
 @Injectable({ providedIn: 'root' })
 export class CurriculumFacade {
   private http = inject(HttpClient);
@@ -11,19 +32,27 @@ export class CurriculumFacade {
   ces = signal<EvaluativeCriteria[]>([]);
 
   // Configuración base que afecta al currículum
-  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'>('FP_BASICA');
-  curso = signal<string>('1º');
+  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'>(getStoredTipoNivel());
+  curso = signal<string>(getStoredCurso(this.tipoNivel()));
 
   setTipoNivel(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR') {
     if (this.tipoNivel() !== nivel) {
       this.tipoNivel.set(nivel);
-      this.curso.set(nivel === 'FP_BASICA' ? '1º' : '3º');
+      const defaultCurso = nivel === 'FP_BASICA' ? '1º' : '3º';
+      this.curso.set(defaultCurso);
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('pai_tipo_nivel', nivel);
+        localStorage.setItem('pai_curso', defaultCurso);
+      }
       this.clearSelection();
     }
   }
 
   setCurso(c: string) {
     this.curso.set(c);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('pai_curso', c);
+    }
   }
 
   // Estado UI de la selección (usamos selectedRas para ambos niveles temporalmente por legado)

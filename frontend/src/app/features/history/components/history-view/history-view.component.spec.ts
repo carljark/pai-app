@@ -22,6 +22,7 @@ describe('HistoryViewComponent', () => {
 
     mockProjectsFacade = {
       projectsHistory: signal([]),
+      historyTab: signal('FPB'),
     };
 
     mockTranslationService = {

@@ -12,7 +12,7 @@ export class ProjectsFacade {
 
   // --- ESTADO GLOBAL DE PROYECTOS ---
   projectsHistory = signal<any[]>([]);
-  historyTab = signal<'FP_BASICA' | 'ESO'>('FP_BASICA');
+  historyTab = signal<'FPB' | 'ESO'>('FPB');
   searchQuery = signal<string>('');
 
   // --- ESTADO DEL GENERADOR ---
@@ -103,6 +103,7 @@ export class ProjectsFacade {
   generateProject(language: string, title?: string) {
     const selectedRas = this.curriculumFacade.selectedRas();
     const tipoNivel = this.curriculumFacade.tipoNivel();
+    this.historyTab.set(tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO' : 'FPB');
     const modules = this.getInvolvedModules(tipoNivel, selectedRas);
     const defaultTitle = modules.length > 0 ? modules.join(' + ') : 'Proyecto Integrador';
 

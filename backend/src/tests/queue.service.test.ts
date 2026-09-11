@@ -39,11 +39,17 @@ describe('Queue Service', () => {
       .mockResolvedValueOnce(mockProject as any)
       .mockResolvedValueOnce(null); // Termina el bucle
       
-    vi.spyOn(aiService, 'generateAiContentWithFallback').mockResolvedValue({
-      text: 'Contenido AI',
-      provider: 'gemini',
-      model: 'gemini-3.6-flash',
-      fallbackUsed: false
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockImplementation(async (_prompt, _instr, _prov, notify) => {
+      if (notify) {
+        await notify('analizando', 'gemini');
+        await notify('reintentando', 'openrouter');
+      }
+      return {
+        text: 'Contenido AI',
+        provider: 'gemini',
+        model: 'gemini-3.6-flash',
+        fallbackUsed: false
+      };
     });
     vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
 
@@ -146,6 +152,15 @@ describe('Queue Service', () => {
 
     await expect(initQueue()).resolves.not.toThrow();
     expect(consoleSpy).toHaveBeenCalled();
+    consoleSpy.mockRestore();
+  });
+
+  it('debería capturar errores inesperados en processQueue', async () => {
+    vi.spyOn(Project, 'findOneAndUpdate').mockRejectedValueOnce(new Error('Fatal DB error'));
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    await processQueue();
+    expect(consoleSpy).toHaveBeenCalledWith('Error in Queue Worker:', expect.any(Error));
     consoleSpy.mockRestore();
   });
 });

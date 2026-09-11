@@ -370,7 +370,9 @@ async function reenqueueProject(project: any, userName?: string, aiProvider?: st
     userName
   });
 
-  processQueue().catch(console.error);
+  if (process.env.NODE_ENV !== 'test') {
+    processQueue().catch(console.error);
+  }
 }
 
 export const retryProject = async (req: any, res: Response) => {

@@ -94,6 +94,12 @@ describe("TelemetryService", () => {
     service.flushHeartbeat(true);
     expect(beaconSpy).toHaveBeenCalled();
     localStorage.clear();
+
+    localStorage.setItem("pai_token", "test-pai-token");
+    service.flushHeartbeat(true);
+    expect(beaconSpy).toHaveBeenCalledTimes(2);
+    localStorage.clear();
+
     Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
   });
 

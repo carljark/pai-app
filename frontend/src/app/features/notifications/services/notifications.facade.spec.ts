@@ -35,21 +35,17 @@ describe('NotificationsFacade', () => {
         { provide: HttpClient, useValue: httpMock }
       ]
     });
+
+    facade = TestBed.inject(NotificationsFacade);
   });
 
   it('should initialize and not subscribe if user is null', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     TestBed.flushEffects();
     expect(paiServiceMock.listenToProjectUpdates).not.toHaveBeenCalled();
     expect(httpMock.get).not.toHaveBeenCalled();
   });
 
   it('should subscribe and load notifications when user becomes available', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -61,9 +57,6 @@ describe('NotificationsFacade', () => {
     const mockItems = [{ _id: 'n1', title: 'Notif DB', status: 'borrador', type: 'PROJECT_COMPLETED' }];
     httpMock.get.mockReturnValueOnce(of(mockItems));
 
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     facade.loadNotifications();
     expect(facade.notifications().length).toBe(1);
     expect(facade.notifications()[0].title).toBe('Notif DB');
@@ -80,11 +73,7 @@ describe('NotificationsFacade', () => {
     expect(facade.notifications()).toEqual([]);
   });
 
-
   it('handleSseEvent should update existing notification and sort by date', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -101,6 +90,14 @@ describe('NotificationsFacade', () => {
     expect(facade.notifications().length).toBe(2);
     expect(facade.notifications()[0].projectId).toBe('p1');
 
+    updatesSubject.next({
+      type: 'PROJECT_STATUS',
+      projectId: 'p2',
+      status: 'generando',
+      notification: { _id: 'n2', projectId: 'p2' }
+    });
+    expect(facade.notifications().length).toBe(2);
+
     updatesSubject.next({ type: 'CONNECTED' });
     expect(facade.notifications().length).toBe(3);
 
@@ -109,12 +106,7 @@ describe('NotificationsFacade', () => {
     expect(facade.notifications().length).toBe(4);
   });
 
-
-
   it('should clear notifications and unsubscribe on logout', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -129,9 +121,6 @@ describe('NotificationsFacade', () => {
   });
 
   it('markAsRead should set read to true for specific notification', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -145,9 +134,6 @@ describe('NotificationsFacade', () => {
   });
 
   it('markAllAsRead should set read to true for all and call backend', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -166,9 +152,6 @@ describe('NotificationsFacade', () => {
 
   it('should handle SSE error in facade', () => {
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -178,9 +161,6 @@ describe('NotificationsFacade', () => {
   });
 
   it('should not re-subscribe if already subscribed', () => {
-    TestBed.runInInjectionContext(() => {
-      facade = new NotificationsFacade();
-    });
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
     expect(paiServiceMock.listenToProjectUpdates).toHaveBeenCalledTimes(1);

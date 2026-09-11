@@ -87,19 +87,27 @@ describe("TelemetryService", () => {
 
   it("should handle beforeunload with sendBeacon if token exists", () => {
     localStorage.setItem("token", "test-token");
+    const originalSendBeacon = (navigator as any).sendBeacon;
     const beaconSpy = vi.fn().mockReturnValue(true);
     Object.defineProperty(navigator, "sendBeacon", { value: beaconSpy, configurable: true });
 
     service.flushHeartbeat(true);
     expect(beaconSpy).toHaveBeenCalled();
-    localStorage.removeItem("token");
+    localStorage.clear();
+    Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
   });
 
   it("should handle beforeunload window event directly", () => {
+    localStorage.clear();
+    const originalSendBeacon = (navigator as any).sendBeacon;
+    Object.defineProperty(navigator, "sendBeacon", { value: undefined, configurable: true });
+
     service.startTracking();
     window.dispatchEvent(new Event("beforeunload"));
     const req = httpTestingController.expectOne("/api/telemetry/heartbeat");
     req.flush({ ok: true, durationSeconds: 60 });
     service.stopTracking(false);
+
+    Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
   });
 });

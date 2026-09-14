@@ -28,8 +28,8 @@ describe('MapaIntermodularFacade', () => {
     const stats = facade.stats();
     expect(stats.totalModules).toBe(11);
     expect(stats.totalRas).toBeGreaterThan(0);
-    expect(stats.totalConnections).toBe(316);
-    expect(stats.totalActivities).toBe(2174);
+    expect(stats.totalConnections).toBe(491);
+    expect(stats.totalActivities).toBe(3399);
   });
 
   it('should select module and update selectedRaId, and collapse when clicked again', () => {
@@ -211,5 +211,59 @@ describe('MapaIntermodularFacade', () => {
     facade.modules.set([]);
     expect(facade.getConnectionsCountForCriterion('a')).toBe(0);
     expect(facade.filteredConnections()).toEqual([]);
+  });
+
+  it('should guarantee bidirectional (retroactive) relations across modules', () => {
+    facade.modules.set([...FPB_MODULES_SEED]);
+
+    // Test 1: From 3005, 3005-1e connects with 3011-3a
+    facade.selectModule('3005');
+    facade.selectRa('3005_RA1');
+    facade.selectCriterion('e) Se ha mantenido una conversación');
+    const conns3005 = facade.filteredConnections();
+    const conn1e = conns3005.find(c => c.sourceCriteria === '3005-1e');
+    expect(conn1e).toBeDefined();
+    expect(conn1e?.relatedCriteria?.some(r => r.moduleCode === '3011' && r.criteria.includes('3011-3a'))).toBe(true);
+
+    // Test 2: Inversely from 3011, 3011-3a shows relation with 3005-1e
+    facade.selectModule('3011');
+    facade.selectRa('3011_RA3');
+    facade.selectCriterion('3011-3a');
+    const conns3011 = facade.filteredConnections();
+    const conn3a = conns3011.find(c => c.sourceCriteria?.includes('3011-3a'));
+    expect(conn3a).toBeDefined();
+    expect(conn3a?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-1e'))).toBe(true);
+
+    // Test 3: From 3005, 3005-2g connects with 3062-1f
+    facade.selectModule('3005');
+    facade.selectRa('3005_RA2');
+    facade.selectCriterion('g) Se ha asesorado al cliente');
+    const conn2g = facade.filteredConnections().find(c => c.sourceCriteria === '3005-2g');
+    expect(conn2g).toBeDefined();
+    expect(conn2g?.relatedCriteria?.some(r => r.moduleCode === '3062' && r.criteria.includes('3062-1f'))).toBe(true);
+
+    // Test 4: Inversely from 3062, 3062-1f shows relation with 3005-2g
+    facade.selectModule('3062');
+    facade.selectRa('3062_RA1');
+    facade.selectCriterion('f) Se han justificado las causas');
+    const conn1f = facade.filteredConnections().find(c => c.sourceCriteria === '3062-1f');
+    expect(conn1f).toBeDefined();
+    expect(conn1f?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-2g'))).toBe(true);
+
+    // Test 5: From 3005, 3005-3d connects with 3042-4g
+    facade.selectModule('3005');
+    facade.selectRa('3005_RA3');
+    facade.selectCriterion('d) Se ha recogido la conformidad');
+    const conn3d = facade.filteredConnections().find(c => c.sourceCriteria === '3005-3d');
+    expect(conn3d).toBeDefined();
+    expect(conn3d?.relatedCriteria?.some(r => r.moduleCode === '3042' && r.criteria.includes('3042-4g'))).toBe(true);
+
+    // Test 6: Inversely from 3042, 3042-4g shows relation with 3005-3d
+    facade.selectModule('3042');
+    facade.selectRa('3042_RA4');
+    facade.selectCriterion('3042-4g');
+    const conn4g = facade.filteredConnections().find(c => c.sourceCriteria?.includes('3042-4g'));
+    expect(conn4g).toBeDefined();
+    expect(conn4g?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-3d'))).toBe(true);
   });
 });

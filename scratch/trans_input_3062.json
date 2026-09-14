@@ -1,0 +1,826 @@
+{
+  "code": "3062",
+  "name_es": "Depilación mecánica y decoloración del vello superfluo",
+  "criteria": [
+    "3062-1a. Se ha descrito la morfología del pelo.",
+    "3062-1b. Se han indicado las fases del ciclo piloso.",
+    "3062-1c. Se han relacionado los factores que influyen en el crecimiento del vello con las características del vello del cliente.",
+    "3062-1d. Se han descrito los efectos de la depilación mecánica y de la decoloración del vello.",
+    "3062-1e. Se han relacionado las características del vello y de la zona a depilar para seleccionar la técnica más adecuada.",
+    "3062-1f. Se han justificado las causas que determinan la elección de la técnica de decoloración y/o de depilación mecánica.",
+    "3062-1g. Se ha cumplimentado la ficha técnica del servicio con los datos personales y los relativos al estudio de la zona a depilar o decolorar.",
+    "3062-1h. Se han formulado preguntas que permiten detectar las demandas y necesidades que debe cubrir el servicio.",
+    "3062-1i. Se han descrito las ventajas e inconvenientes de los productos depilatorios según su temperatura de aplicación.",
+    "3062-1j. Se han definido las precauciones y contraindicaciones en el uso adecuado de la técnica de decoloración y de depilación según las características del vello.",
+    "3062-1k. Se han expuesto los criterios para derivar el cliente a otros profesionales.",
+    "3062-2a. Se ha descrito el procedimiento de limpieza del material y de los aparatos.",
+    "3062-2b. Se han preparado los equipos, útiles y productos, aplicando técnicas de higiene y desinfección necesarias.",
+    "3062-2c. Se han identificado los útiles necesarios y se ordenan correctamente.",
+    "3062-2d. Se ha explicado correctamente el método de preparación y precauciones de los productos decolorantes del vello.",
+    "3062-2e. Se han revisado los aparatos, comprobando el uso correcto de termostatos y conexión a la red.",
+    "3062-2f. Se han seleccionado y preparado los aparatos utilizados en la depilación de cera caliente y tibia en condiciones adecuadas para su utilización y mantenimiento.",
+    "3062-2g. Se han identificado las características de cada tipo de cera.",
+    "3062-2h. Se ha descrito el uso adecuado de cada tipo de cera y su técnica de aplicación.",
+    "3062-2i. Se reconocen los peligros asociados a las actividades con aparatos eléctricos.",
+    "3062-2j. Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas.",
+    "3062-2k. Se han aplicado las normas de seguridad en la manipulación de los aparatos eléctricos.",
+    "3062-3a. Se ha recogido el cabello, quitado las joyas y usado la ropa de trabajo y calzado establecido, higienizándose las manos posteriormente.",
+    "3062-3b. Se ha preparado al cliente para el servicio que se va a realizar garantizando su seguridad.",
+    "3062-3c. Se han preparado los útiles y materiales necesarios para los diferentes procesos de depilación mecánica: espátulas, bandas de papel, guantes, entre otros.",
+    "3062-3d. Se han relacionado correctamente los cosméticos, el material y los aparatos necesarios para realizar la depilación mecánica seleccionada.",
+    "3062-3e. Se ha efectuado la limpieza y desinfección de la zona a tratar.",
+    "3062-3f. Se ha preparado y revisado los aparatos y si la cera caliente y tibia se encuentra en las condiciones adecuadas para su aplicación en procesos de depilación.",
+    "3062-3g. Se han aplicado las tiras de cera en la dirección del crecimiento del vello, con el grosor adecuado y retirándose a contrapelo.",
+    "3062-3h. Se han retirado los restos de vello con la ayuda de pinzas y los de cera, aplicando los cosméticos específicos adecuados.",
+    "3062-3i. Se han realizado maniobras de masaje de efecto calmante y descongestivo para aplicar los cosméticos posteriores a los procesos de depilación mecánica.",
+    "3062-3j. Se ha completado el proceso en un tiempo adecuado.",
+    "3062-3k. Se ha realizado la limpieza de los aparatos con los productos específicos, respetando las normas de seguridad indicadas por el fabricante.",
+    "3062-3l. Se han aplicado las medidas de seguridad y medioambientales requeridas.",
+    "3062-3m. Se han eliminado los residuos siguiendo la normativa vigente.",
+    "3062-3n. Se han formulado preguntas que permitan conocer el grado de satisfacción del cliente.",
+    "3062-4a. Se ha realizado la protección personal adecuada.",
+    "3062-4b. Se ha seleccionado y preparado de forma adecuada el material de uso exclusivo para cada cliente.",
+    "3062-4c. Se han relacionado correctamente los cosméticos y el material necesarios para realizar la técnica de decoloración del vello facial y corporal.",
+    "3062-4d. Se ha preparado el producto decolorante con la debida precaución.",
+    "3062-4e. Se ha efectuado la limpieza y desinfección de la zona a tratar.",
+    "3062-4f. Se ha realizado la prueba de sensibilidad al producto decolorante.",
+    "3062-4g. Se ha aplicado el producto con destreza, con el grosor adecuado y evitando goteos.",
+    "3062-4h. Se han vigilado los tiempos de exposición y retirado los restos adecuadamente, sin producir alteraciones en la piel.",
+    "3062-4i. Se han aplicado cuidados posteriores para restituir la emulsión epicutánea.",
+    "3062-4j. Se ha realizado la limpieza de los utensilios utilizados respetando las normas de seguridad indicadas por el fabricante.",
+    "3062-4k. Se han aplicado las medidas de seguridad y medioambientales requeridas.",
+    "3062-4l. Se han realizado preguntas tipo que permitan conocer el grado de satisfacción del cliente, tanto respecto al resultado del servicio como de la atención personal."
+  ],
+  "connections": [
+    {
+      "title_es": "Diagnóstico, observación anatómica, análisis de piel/vello y toma de decisiones",
+      "justification_es": "la depilación y la decoloración no pueden aplicarse mecánicamente sin observar el vello, la piel, posibles alteraciones, sensibilidad, alergias, demandas y expectativas. Ciencias aplicadas aporta anatomía, fisiología, salud, enfermedad, método científico y prevención de infecciones; Comunicación y sociedad aporta comprensión de la información, entrevista, escucha activa, expresión oral/escrita y, si procede, comunicación básica en inglés."
+    },
+    {
+      "title_es": "Preparación de útiles, equipos, productos y zona de trabajo",
+      "justification_es": "preparar una cabina de depilación exige seleccionar y ordenar materiales, manipular productos, comprobar aparatos y respetar higiene. Ciencias permite comprender materia, mezclas, temperatura, material de laboratorio, productos químicos y electricidad; Comunicación permite leer etiquetas, instrucciones, fichas técnicas y redactar protocolos."
+    },
+    {
+      "title_es": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
+      "justification_es": "la higiene no es solo un procedimiento técnico, sino un contenido científico ligado a microorganismos, contagio, piel, parasitosis y salud pública. Además, debe comunicarse y documentarse correctamente mediante instrucciones, protocolos y registros."
+    },
+    {
+      "title_es": "Prevención de riesgos laborales, seguridad eléctrica, química, térmica y medioambiental",
+      "justification_es": "la depilación con cera introduce riesgos térmicos; los decolorantes, riesgos químicos; los fundidores, riesgos eléctricos; y las bandas, espátulas y envases, residuos. Ciencias aplicadas II refuerza electricidad, energía, contaminación, química, fuerzas/posturas y desarrollo sostenible. Comunicación y sociedad permite comprender normativa, instrucciones y derechos/deberes."
+    },
+    {
+      "title_es": "Selección de técnica y producto según características, resultado esperado y asesoramiento",
+      "justification_es": "elegir cera caliente, tibia, pinzas o decolorante implica interpretar datos, comparar ventajas e inconvenientes, calcular cantidades, prever efectos y explicar al cliente la opción más recomendable. Matemáticas, química, comunicación oral y escrita y atención comercial sostienen la decisión técnica."
+    },
+    {
+      "title_es": "Ejecución técnica, secuenciación, destreza manual, control de producto y acabado",
+      "justification_es": "aplicar cera en la dirección correcta, controlar grosor, retirar a contrapelo, evitar goteos, aplicar cuidados posteriores y obtener un acabado limpio requiere procedimiento ordenado, coordinación manual, medición, observación, registro y comunicación del resultado."
+    },
+    {
+      "title_es": "Ergonomía, acomodación y protección del cliente y del profesional",
+      "justification_es": "una buena acomodación exige conocimientos anatómicos, prevención de lesiones posturales, respeto, comunicación clara y protección de piel, ropa y zonas sensibles. Es transferible a cabina, mesa de manicura, lavacabezas y tocador."
+    },
+    {
+      "title_es": "Control de tiempos, temperatura, exposición, medidas y cálculos profesionales",
+      "justification_es": "la depilación y decoloración requieren controlar temperatura de cera, tiempos de exposición, proporciones de mezcla, duración del servicio y registros. Ciencias aplicadas permite trabajar magnitudes, unidades, proporcionalidad, gráficas, temperatura y consumo eléctrico."
+    },
+    {
+      "title_es": "Comunicación profesional, atención, asesoramiento, satisfacción y reclamaciones",
+      "justification_es": "la relación con el cliente atraviesa todo el ciclo: preguntar, escuchar, informar, justificar la técnica, recoger satisfacción, fidelizar y gestionar reclamaciones. Comunicación y sociedad es aquí esencial porque trabaja comprensión, expresión oral y escrita, conversación y textos profesionales; Atención al cliente concreta esas destrezas en el salón."
+    },
+    {
+      "title_es": "Registro documental, ficha técnica, informes, TIC y tratamiento de información",
+      "justification_es": "la ficha técnica es un documento profesional. Exige seleccionar información relevante, escribir de forma clara, respetar datos personales, usar TIC, registrar resultados y compartir información con el equipo. Ciencias aporta representación de datos, tablas, gráficas e informes experimentales."
+    },
+    {
+      "title_es": "Medioambiente, sostenibilidad, residuos y consumo responsable",
+      "justification_es": "la gestión de residuos de cera, bandas, espátulas, algodones, envases y productos químicos conecta con educación ambiental, consumo energético, contaminación y desarrollo sostenible. Comunicación y sociedad permite argumentar y sensibilizar sobre prácticas responsables."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y aprendizaje en contexto real",
+      "justification_es": "el módulo 3062 se consolida en situaciones profesionales integradas: trabajo con otros, respeto a instrucciones, coordinación, calidad, seguridad, comunicación y responsabilidad. La FCT sintetiza todos estos aprendizajes en empresa."
+    },
+    {
+      "title_es": "Diagnóstico, observación anatómica, análisis de piel/vello y toma de decisiones",
+      "justification_es": "la depilación y la decoloración no pueden aplicarse mecánicamente sin observar el vello, la piel, posibles alteraciones, sensibilidad, alergias, demandas y expectativas. Ciencias aplicadas aporta anatomía, fisiología, salud, enfermedad, método científico y prevención de infecciones; Comunicación y sociedad aporta comprensión de la información, entrevista, escucha activa, expresión oral/escrita y, si procede, comunicación básica en inglés."
+    },
+    {
+      "title_es": "Preparación de útiles, equipos, productos y zona de trabajo",
+      "justification_es": "preparar una cabina de depilación exige seleccionar y ordenar materiales, manipular productos, comprobar aparatos y respetar higiene. Ciencias permite comprender materia, mezclas, temperatura, material de laboratorio, productos químicos y electricidad; Comunicación permite leer etiquetas, instrucciones, fichas técnicas y redactar protocolos."
+    },
+    {
+      "title_es": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
+      "justification_es": "la higiene no es solo un procedimiento técnico, sino un contenido científico ligado a microorganismos, contagio, piel, parasitosis y salud pública. Además, debe comunicarse y documentarse correctamente mediante instrucciones, protocolos y registros."
+    },
+    {
+      "title_es": "Prevención de riesgos laborales, seguridad eléctrica, química, térmica y medioambiental",
+      "justification_es": "la depilación con cera introduce riesgos térmicos; los decolorantes, riesgos químicos; los fundidores, riesgos eléctricos; y las bandas, espátulas y envases, residuos. Ciencias aplicadas II refuerza electricidad, energía, contaminación, química, fuerzas/posturas y desarrollo sostenible. Comunicación y sociedad permite comprender normativa, instrucciones y derechos/deberes."
+    },
+    {
+      "title_es": "Selección de técnica y producto según características, resultado esperado y asesoramiento",
+      "justification_es": "elegir cera caliente, tibia, pinzas o decolorante implica interpretar datos, comparar ventajas e inconvenientes, calcular cantidades, prever efectos y explicar al cliente la opción más recomendable. Matemáticas, química, comunicación oral y escrita y atención comercial sostienen la decisión técnica."
+    },
+    {
+      "title_es": "Ejecución técnica, secuenciación, destreza manual, control de producto y acabado",
+      "justification_es": "aplicar cera en la dirección correcta, controlar grosor, retirar a contrapelo, evitar goteos, aplicar cuidados posteriores y obtener un acabado limpio requiere procedimiento ordenado, coordinación manual, medición, observación, registro y comunicación del resultado."
+    },
+    {
+      "title_es": "Ergonomía, acomodación y protección del cliente y del profesional",
+      "justification_es": "una buena acomodación exige conocimientos anatómicos, prevención de lesiones posturales, respeto, comunicación clara y protección de piel, ropa y zonas sensibles. Es transferible a cabina, mesa de manicura, lavacabezas y tocador."
+    },
+    {
+      "title_es": "Control de tiempos, temperatura, exposición, medidas y cálculos profesionales",
+      "justification_es": "la depilación y decoloración requieren controlar temperatura de cera, tiempos de exposición, proporciones de mezcla, duración del servicio y registros. Ciencias aplicadas permite trabajar magnitudes, unidades, proporcionalidad, gráficas, temperatura y consumo eléctrico."
+    },
+    {
+      "title_es": "Comunicación profesional, atención, asesoramiento, satisfacción y reclamaciones",
+      "justification_es": "la relación con el cliente atraviesa todo el ciclo: preguntar, escuchar, informar, justificar la técnica, recoger satisfacción, fidelizar y gestionar reclamaciones. Comunicación y sociedad es aquí esencial porque trabaja comprensión, expresión oral y escrita, conversación y textos profesionales; Atención al cliente concreta esas destrezas en el salón."
+    },
+    {
+      "title_es": "Registro documental, ficha técnica, informes, TIC y tratamiento de información",
+      "justification_es": "la ficha técnica es un documento profesional. Exige seleccionar información relevante, escribir de forma clara, respetar datos personales, usar TIC, registrar resultados y compartir información con el equipo. Ciencias aporta representación de datos, tablas, gráficas e informes experimentales."
+    },
+    {
+      "title_es": "Medioambiente, sostenibilidad, residuos y consumo responsable",
+      "justification_es": "la gestión de residuos de cera, bandas, espátulas, algodones, envases y productos químicos conecta con educación ambiental, consumo energético, contaminación y desarrollo sostenible. Comunicación y sociedad permite argumentar y sensibilizar sobre prácticas responsables."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y aprendizaje en contexto real",
+      "justification_es": "el módulo 3062 se consolida en situaciones profesionales integradas: trabajo con otros, respeto a instrucciones, coordinación, calidad, seguridad, comunicación y responsabilidad. La FCT sintetiza todos estos aprendizajes en empresa."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3062_c1_1",
+      "title_es": "Manual de imagen del auxiliar de estética: “Tu presencia también comunica”",
+      "motivatingFactor_es": "crear una guía visual de cómo debe presentarse un profesional en cabina de depilación. | formato carrusel de redes o póster tipo “antes de entrar a cabina”.",
+      "description_es": "el alumnado diseña normas sobre uniforme, calzado, cabello recogido, manos, uñas, higiene, EPI, tono de voz y actitud.",
+      "evidence_es": "manual visual de imagen profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c1_2",
+      "title_es": "Role-play de apertura de cabina: “Primer minuto con el cliente”",
+      "motivatingFactor_es": "grabación interna en formato vídeo corto para analizar gestos, postura y claridad.",
+      "description_es": "simulan recibir al cliente, presentarse, explicar brevemente el servicio y preparar la cabina.",
+      "evidence_es": "rúbrica de primera impresión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c1_3",
+      "title_es": "Checklist fotográfico de imagen profesional",
+      "motivatingFactor_es": "",
+      "description_es": "antes de una práctica, cada equipo revisa puesto, uniforme, EPI, útiles y orden. Se toman fotos autorizadas del puesto, no de personas si no procede.",
+      "evidence_es": "checklist visual “cabina lista”.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c1_4",
+      "title_es": "Debate de casos éticos: “Lo que no se comenta”",
+      "motivatingFactor_es": "",
+      "description_es": "casos sobre confidencialidad, respeto corporal, comentarios inadecuados, fotos en redes, vergüenza del cliente o límites del auxiliar.",
+      "evidence_es": "decálogo ético para depilación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c1_5",
+      "title_es": "Rúbrica compartida de actitud profesional",
+      "motivatingFactor_es": "",
+      "description_es": "el grupo define indicadores: puntualidad, respeto, higiene, lenguaje, seguridad, responsabilidad, discreción y colaboración.",
+      "evidence_es": "rúbrica de actitud para prácticas y FCT.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c1_6",
+      "title_es": "Mi marca personal en cabina",
+      "motivatingFactor_es": "cada alumno define cómo quiere que le perciban profesionalmente: cuidadoso/a, limpio/a, amable, preciso/a, responsable.",
+      "description_es": "crean una tarjeta de marca personal con valores y compromisos.",
+      "evidence_es": "mini manifiesto profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c1_7",
+      "title_es": "Reto “cabina premium con bajo presupuesto”",
+      "motivatingFactor_es": "crear una experiencia profesional y agradable sin materiales caros.",
+      "description_es": "mejorar ambiente con orden, limpieza, iluminación, música suave, comunicación y detalles de confort.",
+      "evidence_es": "propuesta de experiencia de cabina.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_1",
+      "title_es": "Ficha integral de cliente: “No depiles sin preguntar”",
+      "motivatingFactor_es": "incluir imagen de referencia o preferencia estética de cejas vista en redes.",
+      "description_es": "diseñar ficha con datos, zona a tratar, tipo de vello, piel, alergias, medicación relevante si procede, sensibilidad, experiencias previas y expectativas.",
+      "evidence_es": "ficha técnica de depilación/decoloración.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_2",
+      "title_es": "Circuito de diagnóstico por estaciones: “Beauty detective”",
+      "motivatingFactor_es": "",
+      "description_es": "estaciones de piel, vello, cejas, contraindicaciones, expectativas y técnica recomendada.",
+      "evidence_es": "expediente de cliente con decisión final.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_3",
+      "title_es": "Simulación de entrevista previa",
+      "motivatingFactor_es": "",
+      "description_es": "por parejas, uno es cliente y otro profesional. Se preguntan alergias, sensibilidad, zona, dolor, cuidados previos y resultado deseado.",
+      "evidence_es": "role-play evaluado con rúbrica de escucha activa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_4",
+      "title_es": "Caso de derivación: “¿Realizar, adaptar o derivar?”",
+      "motivatingFactor_es": "",
+      "description_es": "analizar casos con irritación, herida, quemadura solar, dermatitis, alergia, varices evidentes o lesión cutánea.",
+      "evidence_es": "semáforo de actuación: verde, amarillo, rojo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_5",
+      "title_es": "Comparativa de contraindicaciones",
+      "motivatingFactor_es": "",
+      "description_es": "mural que compare depilación, decoloración, maquillaje, coloración, manicura y pedicura.",
+      "evidence_es": "panel de contraindicaciones del aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_6",
+      "title_es": "Cliente trae un vídeo viral",
+      "motivatingFactor_es": "el cliente pide una forma de cejas o técnica vista en TikTok/Instagram.",
+      "description_es": "el alumnado analiza si es viable, segura y adecuada al rostro/piel del cliente.",
+      "evidence_es": "respuesta profesional argumentada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c2_7",
+      "title_es": "Diagnóstico con código QR",
+      "motivatingFactor_es": "crear formularios digitales rápidos para cabina.",
+      "description_es": "diseñan un cuestionario online de predepilación y lo enlazan con QR.",
+      "evidence_es": "formulario digital y protocolo de uso responsable de datos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_1",
+      "title_es": "Montaje de cabina polivalente",
+      "motivatingFactor_es": "",
+      "description_es": "preparar camilla para depilación y reconvertirla para decoloración o maquillaje, justificando cambios.",
+      "evidence_es": "fotos del antes/después del montaje y checklist.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_2",
+      "title_es": "Práctica de bandejas técnicas",
+      "motivatingFactor_es": "",
+      "description_es": "bandeja de cera tibia, cera caliente, pinzas, decoloración y cuidados posteriores.",
+      "evidence_es": "bandejas etiquetadas con orden de uso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_3",
+      "title_es": "Protocolo de desinfección cruzado",
+      "motivatingFactor_es": "",
+      "description_es": "aplicar protocolo a pinzas, espátulas, fundidor, camilla, superficies y útiles compartidos.",
+      "evidence_es": "tabla útil-material-método-tiempo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_4",
+      "title_es": "Auditoría de almacén",
+      "motivatingFactor_es": "",
+      "description_es": "revisar stock, caducidad, conservación y etiquetado de ceras, decolorantes, bandas, espátulas, guantes y cosméticos postdepilatorios.",
+      "evidence_es": "inventario con semáforo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_5",
+      "title_es": "Escape room de higiene: “Cabina contaminada”",
+      "motivatingFactor_es": "",
+      "description_es": "el aula tiene errores simulados: pinzas sin desinfectar, producto abierto, camilla sin papel, guantes ausentes. Deben detectarlos.",
+      "evidence_es": "lista de errores y protocolo corregido.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_6",
+      "title_es": "Setup de cabina instagrameable, pero seguro",
+      "motivatingFactor_es": "montar una cabina visualmente atractiva sin sacrificar higiene.",
+      "description_es": "valorar orden, estética, seguridad, privacidad y funcionalidad.",
+      "evidence_es": "foto autorizada del setup y defensa oral.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c3_7",
+      "title_es": "QR “prepara tu bandeja”",
+      "motivatingFactor_es": "crear códigos QR con vídeos o infografías de preparación.",
+      "description_es": "cada equipo produce un protocolo breve y lo enlaza con QR para el taller.",
+      "evidence_es": "señalética digital de cabina.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_1",
+      "title_es": "Mapa de riesgos del taller",
+      "motivatingFactor_es": "",
+      "description_es": "identificar riesgos térmicos, eléctricos, químicos, biológicos, ergonómicos y ambientales en depilación/decoloración.",
+      "evidence_es": "mapa visual de riesgos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_2",
+      "title_es": "Simulación de incidente",
+      "motivatingFactor_es": "",
+      "description_es": "casos: cera sobrecalentada, reacción a decolorante, aparato defectuoso, mareo del cliente o contacto con producto.",
+      "evidence_es": "parte de incidencia y actuación segura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_3",
+      "title_es": "Taller de EPI",
+      "motivatingFactor_es": "",
+      "description_es": "elegir guantes, uniforme, protección de cliente, mascarilla si procede y medidas de higiene según técnica.",
+      "evidence_es": "guía de EPI por servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_4",
+      "title_es": "Gestión de residuos reales o simulados",
+      "motivatingFactor_es": "",
+      "description_es": "clasificar bandas, espátulas, algodones, envases y restos de producto según contenedor/protocolo del centro.",
+      "evidence_es": "ruta del residuo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_5",
+      "title_es": "Inspección de aparatos",
+      "motivatingFactor_es": "",
+      "description_es": "revisar fundidores, cables, termostatos, enchufes y condiciones de uso antes de la práctica.",
+      "evidence_es": "checklist de aparato seguro.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_6",
+      "title_es": "Carnet de seguridad de cabina",
+      "motivatingFactor_es": "superar pruebas de seguridad antes de realizar prácticas con supervisión.",
+      "description_es": "preguntas sobre temperatura, EPI, higiene, prueba de sensibilidad, residuos y electricidad.",
+      "evidence_es": "carnet simbólico de “auxiliar seguro/a”.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c4_7",
+      "title_es": "Eco-reto “menos residuos en depilación”",
+      "motivatingFactor_es": "buscar formas de reducir residuos sin comprometer higiene.",
+      "description_es": "calcular bandas/espátulas usadas y proponer uso racional, dosificación y separación.",
+      "evidence_es": "plan de reducción responsable.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_1",
+      "title_es": "Árbol de decisión de depilación/decoloración",
+      "motivatingFactor_es": "",
+      "description_es": "elegir pinzas, cera tibia, cera caliente o decoloración según zona, piel, vello, sensibilidad y preferencias.",
+      "evidence_es": "árbol visual para consulta rápida.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_2",
+      "title_es": "Asesoría estética combinada",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar propuesta de cejas, maquillaje de día y manicura según rostro, tono de piel, estilo y evento.",
+      "evidence_es": "moodboard de asesoría.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_3",
+      "title_es": "Comparativa de cosméticos oxidantes",
+      "motivatingFactor_es": "",
+      "description_es": "comparar decolorante de vello, decolorante capilar y tinte: finalidad, zona, tiempo, riesgo y prueba previa.",
+      "evidence_es": "tabla comparativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_4",
+      "title_es": "Caso de cliente con varias opciones",
+      "motivatingFactor_es": "",
+      "description_es": "explicar ventajas, inconvenientes, acabado esperado, duración y cuidados de cada técnica.",
+      "evidence_es": "role-play de asesoramiento.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_5",
+      "title_es": "Ficha de selección de producto",
+      "motivatingFactor_es": "",
+      "description_es": "justificar cera, cosmético limpiador, decolorante o producto postdepilatorio según diagnóstico.",
+      "evidence_es": "ficha técnica razonada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_6",
+      "title_es": "Consultoría express “cejas para evento”",
+      "motivatingFactor_es": "el cliente necesita cejas y look para graduación, fiesta o entrevista.",
+      "description_es": "en 5 minutos deben proponer depilación de cejas, maquillaje y cuidados previos/posteriores.",
+      "evidence_es": "mini pitch profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c5_7",
+      "title_es": "“Lo viral vs lo seguro” en cejas y depilación",
+      "motivatingFactor_es": "analizar modas como cejas laminadas, formas extremas o trucos caseros.",
+      "description_es": "valorar riesgos, límites del auxiliar y alternativas seguras.",
+      "evidence_es": "infografía de recomendaciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_1",
+      "title_es": "Secuencia grabada de servicio",
+      "motivatingFactor_es": "",
+      "description_es": "grabar internamente una simulación de depilación de antebrazo/pierna o cejas en soporte adecuado, analizando dirección, grosor y retirada.",
+      "evidence_es": "vídeo técnico comentado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_2",
+      "title_es": "Taller de maniobras manuales",
+      "motivatingFactor_es": "",
+      "description_es": "masaje calmante postdepilación, aplicación de cosméticos posteriores y maniobras suaves.",
+      "evidence_es": "secuencia de maniobras.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_3",
+      "title_es": "Reto de precisión",
+      "motivatingFactor_es": "",
+      "description_es": "practicar depilación de cejas en plantilla, delineado de maquillaje y esmaltado para mejorar pulso y simetría.",
+      "evidence_es": "panel de precisión antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_4",
+      "title_es": "Servicio estético completo",
+      "motivatingFactor_es": "",
+      "description_es": "depilación de cejas, higiene superficial, maquillaje social y manicura básica para un evento.",
+      "evidence_es": "ficha y fotografía autorizada del resultado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_5",
+      "title_es": "Corrección de errores técnicos",
+      "motivatingFactor_es": "",
+      "description_es": "detectar goteos, restos de cera, dirección incorrecta, exceso de producto o acabado irregular.",
+      "evidence_es": "tabla error-causa-solución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_6",
+      "title_es": "Stop motion de una depilación correcta",
+      "motivatingFactor_es": "crear una animación paso a paso con fotos.",
+      "description_es": "preparación, higiene, aplicación, retirada, cuidados y limpieza final.",
+      "evidence_es": "stop motion educativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c6_7",
+      "title_es": "Batalla de precisión con pinzas",
+      "motivatingFactor_es": "reto gamificado en plantillas de cejas, no sobre piel real.",
+      "description_es": "valorar simetría, limpieza, orden, postura y cuidado del material.",
+      "evidence_es": "rúbrica de destreza manual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_1",
+      "title_es": "Mapa postural por servicio",
+      "motivatingFactor_es": "",
+      "description_es": "comparar postura en camilla, tocador, lavacabezas, manicura, pedicura y depilación.",
+      "evidence_es": "cartel de ergonomía.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_2",
+      "title_es": "Práctica de acomodación segura",
+      "motivatingFactor_es": "",
+      "description_es": "preparar al cliente para depilación facial, piernas, brazos, decoloración, pedicura o maquillaje.",
+      "evidence_es": "checklist de acomodación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_3",
+      "title_es": "Diseño de protocolo de protección",
+      "motivatingFactor_es": "",
+      "description_es": "toallas, bandas, guantes, retirada de joyas, protección de ropa y privacidad.",
+      "evidence_es": "protocolo visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_4",
+      "title_es": "Observación entre iguales",
+      "motivatingFactor_es": "",
+      "description_es": "un alumno realiza simulación y otro evalúa postura, comunicación, comodidad y seguridad.",
+      "evidence_es": "ficha de coevaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_5",
+      "title_es": "Adaptación a necesidades especiales",
+      "motivatingFactor_es": "",
+      "description_es": "cliente mayor, movilidad reducida, piel sensible, vergüenza corporal o dificultad idiomática.",
+      "evidence_es": "guía de atención adaptada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_6",
+      "title_es": "Termómetro de confort",
+      "motivatingFactor_es": "crear una tarjeta para preguntar dolor, temperatura, postura, privacidad y comodidad.",
+      "description_es": "",
+      "evidence_es": "tarjeta de confort para cabina.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c7_7",
+      "title_es": "Micro-pausas del profesional de estética",
+      "motivatingFactor_es": "diseñar estiramientos breves de espalda, cuello, muñecas y hombros.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "vídeo o póster de micro-pausas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_1",
+      "title_es": "Cronograma de cabina",
+      "motivatingFactor_es": "",
+      "description_es": "planificar recepción, preparación, prueba, aplicación, exposición, retirada, cuidados, encuesta y limpieza.",
+      "evidence_es": "cronograma visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_2",
+      "title_es": "Control de temperatura de cera",
+      "motivatingFactor_es": "",
+      "description_es": "práctica con datos simulados o supervisados de termostato, temperatura segura y prueba previa.",
+      "evidence_es": "tabla de temperatura segura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_3",
+      "title_es": "Comparativa de tiempos químicos",
+      "motivatingFactor_es": "",
+      "description_es": "decoloración del vello, tinte capilar, decoloración capilar, mascarilla y permanente.",
+      "evidence_es": "tabla de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_4",
+      "title_es": "Simulación de agenda",
+      "motivatingFactor_es": "",
+      "description_es": "encadenar manicura, depilación de cejas, maquillaje y lavado respetando tiempos.",
+      "evidence_es": "agenda del salón.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_5",
+      "title_es": "Rúbrica de eficiencia",
+      "motivatingFactor_es": "",
+      "description_es": "valorar si el servicio se completa a tiempo sin perder higiene, seguridad ni calidad.",
+      "evidence_es": "rúbrica de eficiencia profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_6",
+      "title_es": "Temporizador creativo de cabina",
+      "motivatingFactor_es": "diseñar alarmas, tarjetas o códigos de color para controlar tiempos de cera/decoloración.",
+      "description_es": "",
+      "evidence_es": "sistema visual de control de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c8_7",
+      "title_es": "Reto “rápido no, profesional sí”",
+      "motivatingFactor_es": "demostrar que hacerlo bien no es correr.",
+      "description_es": "comparar una ejecución precipitada simulada con una profesional y segura.",
+      "evidence_es": "reflexión y checklist de calidad-tiempo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_1",
+      "title_es": "Encuesta postservicio",
+      "motivatingFactor_es": "escala de emojis y posterior análisis de datos.",
+      "description_es": "diseñar preguntas breves sobre trato, dolor, resultado, higiene, tiempo y explicación recibida.",
+      "evidence_es": "encuesta digital o impresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_2",
+      "title_es": "Role-play de objeciones",
+      "motivatingFactor_es": "",
+      "description_es": "cliente insatisfecho por rojez, dolor, restos de cera, cejas demasiado finas o decoloración insuficiente.",
+      "evidence_es": "diálogo profesional y hoja de incidencia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_3",
+      "title_es": "Informe de calidad",
+      "motivatingFactor_es": "",
+      "description_es": "comparar resultado esperado y obtenido, detectar causas de desviación y proponer mejoras.",
+      "evidence_es": "informe de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_4",
+      "title_es": "Tarjeta de cuidados posteriores",
+      "motivatingFactor_es": "",
+      "description_es": "pautas tras depilación/decoloración: sol, calor, exfoliación, hidratación, irritación y cuándo consultar.",
+      "evidence_es": "tarjeta postservicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_5",
+      "title_es": "Protocolo de reclamaciones",
+      "motivatingFactor_es": "",
+      "description_es": "cumplimentar hoja, ofrecer alternativa viable y comunicar incidencia al equipo.",
+      "evidence_es": "protocolo de reclamaciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_6",
+      "title_es": "Respuesta a reseña negativa online",
+      "motivatingFactor_es": "conectar con reputación digital.",
+      "description_es": "redactar respuesta a una reseña ficticia sin discutir ni revelar datos personales.",
+      "evidence_es": "banco de respuestas profesionales.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c9_7",
+      "title_es": "Programa de fidelización responsable",
+      "motivatingFactor_es": "diseñar recordatorios éticos de cuidados o próximas citas, sin presionar al cliente.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "tarjeta o mensaje de fidelización.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_1",
+      "title_es": "Cierre de cabina cronometrado",
+      "motivatingFactor_es": "",
+      "description_es": "limpiar fundidor, pinzas, camilla, superficies y útiles respetando normas de seguridad.",
+      "evidence_es": "checklist de cierre.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_2",
+      "title_es": "Plan semanal de mantenimiento",
+      "motivatingFactor_es": "",
+      "description_es": "revisar aparatos, útiles, productos, caducidades, cables, almacén y limpieza profunda.",
+      "evidence_es": "calendario de mantenimiento.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_3",
+      "title_es": "Etiquetado y almacenaje",
+      "motivatingFactor_es": "",
+      "description_es": "ordenar ceras, decolorantes, bandas, espátulas, guantes y cosméticos según conservación y seguridad.",
+      "evidence_es": "sistema de etiquetado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_4",
+      "title_es": "Ruta del residuo",
+      "motivatingFactor_es": "",
+      "description_es": "desde bandas, algodones, espátulas y envases hasta el contenedor correspondiente.",
+      "evidence_es": "mapa de residuos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_5",
+      "title_es": "Auditoría final de puesto",
+      "motivatingFactor_es": "",
+      "description_es": "comprobar que todo queda limpio, seco, apagado, almacenado y registrado.",
+      "evidence_es": "informe de cierre.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_6",
+      "title_es": "Eco-cabina challenge",
+      "motivatingFactor_es": "reducir residuos sin perder higiene.",
+      "description_es": "medir materiales usados en una práctica y buscar mejoras responsables.",
+      "evidence_es": "comparación antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c10_7",
+      "title_es": "Señalética sostenible con QR",
+      "motivatingFactor_es": "crear carteles con QR sobre residuos, apagado de aparatos y conservación de productos.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "señalética para el aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_1",
+      "title_es": "Plan verde del salón",
+      "motivatingFactor_es": "",
+      "description_es": "reducir plásticos, clasificar residuos, ahorrar energía y comprar productos de forma responsable.",
+      "evidence_es": "plan de sostenibilidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_2",
+      "title_es": "Cartelería ambiental",
+      "motivatingFactor_es": "",
+      "description_es": "mensajes sobre reciclaje, ahorro, residuos y uso correcto de productos.",
+      "evidence_es": "campaña visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_3",
+      "title_es": "Cálculo de residuos por servicio",
+      "motivatingFactor_es": "",
+      "description_es": "estimar bandas, espátulas, algodón y envases usados por cliente y por semana.",
+      "evidence_es": "gráfico de residuos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_4",
+      "title_es": "Debate sobre cosmética sostenible",
+      "motivatingFactor_es": "",
+      "description_es": "analizar productos eco, veganos, naturales o con envases reciclables sin caer en greenwashing.",
+      "evidence_es": "semáforo de publicidad ambiental.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_5",
+      "title_es": "Auditoría de energía y agua",
+      "motivatingFactor_es": "",
+      "description_es": "estimar uso de fundidor, agua de limpieza, lavados asociados y electricidad.",
+      "evidence_es": "informe de ahorro.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_6",
+      "title_es": "Campaña “piel cuidada, planeta cuidado”",
+      "motivatingFactor_es": "campaña juvenil para clientes sobre depilación responsable y residuos.",
+      "description_es": "",
+      "evidence_es": "vídeo, póster o carrusel.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c11_7",
+      "title_es": "Diseño de cabina sostenible para jóvenes",
+      "motivatingFactor_es": "crear un concepto de cabina atractiva, inclusiva y ecológica.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "moodboard y medidas concretas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_1",
+      "title_es": "Salón simulado por equipos",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, diagnóstico, cabina, técnica simulada, atención, limpieza, satisfacción y documentación.",
+      "evidence_es": "servicio integral evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_2",
+      "title_es": "Rotación de roles",
+      "motivatingFactor_es": "",
+      "description_es": "profesional, cliente, observador de higiene, responsable de almacén, responsable de PRL y responsable de comunicación.",
+      "evidence_es": "registro de roles.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_3",
+      "title_es": "Proyecto final de cabina estética",
+      "motivatingFactor_es": "",
+      "description_es": "depilación/decoloración integrada con maquillaje, manicura o asesoramiento capilar.",
+      "evidence_es": "dossier de proyecto.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_4",
+      "title_es": "Diario de aprendizaje",
+      "motivatingFactor_es": "",
+      "description_es": "reflexión semanal sobre autonomía, errores, mejoras, seguridad y trato al cliente.",
+      "evidence_es": "diario individual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_5",
+      "title_es": "Simulación de FCT",
+      "motivatingFactor_es": "",
+      "description_es": "procedimientos reales de empresa, instrucciones del responsable, uniformidad, tiempos, trato y evaluación.",
+      "evidence_es": "rúbrica tipo empresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_6",
+      "title_es": "Hackathon “mejora la cabina”",
+      "motivatingFactor_es": "resolver un problema real del aula: residuos, tiempos, orden, comunicación, confort o higiene.",
+      "description_es": "",
+      "evidence_es": "pitch de mejora ante la clase.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3062_c12_7",
+      "title_es": "Certamen “auxiliar de depilación junior”",
+      "motivatingFactor_es": "exposición final de competencias: ficha, protocolo, role-play, técnica simulada, campaña o portfolio.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "muestra final con insignias de logro.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    }
+  ]
+}

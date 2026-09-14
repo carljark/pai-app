@@ -1,6 +1,7 @@
 import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
+import { LayoutService } from '../../../services/layout.service';
 
 function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' {
   if (typeof localStorage !== 'undefined') {
@@ -26,6 +27,7 @@ function getStoredCurso(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'): stri
 @Injectable({ providedIn: 'root' })
 export class CurriculumFacade {
   private http = inject(HttpClient);
+  private layoutService = inject(LayoutService, { optional: true });
   private apiUrl = '/api';
 
   ras = signal<LearningOutcome[]>([]);
@@ -161,7 +163,9 @@ export class CurriculumFacade {
         }
       }
 
-      const finalInfo = info || { subject: 'FP Básica', index: 1 };
+      const isCa = this.layoutService?.language() === 'catalan' ||
+        (typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan');
+      const finalInfo = info || { subject: isCa ? 'FP Bàsica' : 'FP Básica', index: 1 };
       let shortDesc = desc.substring(0, 60);
       if (desc.length > 60) shortDesc += '...';
       return { subject: finalInfo.subject, index: finalInfo.index, shortDesc, fullDesc: desc };

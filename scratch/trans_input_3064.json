@@ -1,0 +1,967 @@
+{
+  "code": "3064",
+  "name_es": "Lavado y cambios de forma del cabello",
+  "criteria": [
+    "3064-1a. Se ha descrito la estructura de la piel.",
+    "3064-1b. Se ha explicado la estructura y los tipos de cabello.",
+    "3064-1c. Se ha determinado el tipo y el estado del cuero cabelludo.",
+    "3064-1d. Se han descrito las anomalías más frecuentes de cabello y cuero cabelludo.",
+    "3064-1e. Se ha acomodado al cliente teniendo en cuenta las posiciones ergonómicas más idóneas para el proceso.",
+    "3064-1f. Se han identificado las pautas a seguir para realizar la observación del cabello y del cuero cabelludo.",
+    "3064-1g. Se ha realizado el estudio básico del cabello y cuero cabelludo, exponiendo sus resultados con discreción en caso necesario y seleccionando cosméticos adecuados.",
+    "3064-1h. Se han identificado los componentes que constituyen la suciedad del cabello y cuero cabelludo.",
+    "3064-1i. Se ha realizado el proceso de análisis con la discreción requerida, respetando la confidencialidad.",
+    "3064-2a. Se han descrito los equipos y accesorios necesarios para realizar el proceso de higiene capilar.",
+    "3064-2b. Se ha preparado la zona de trabajo en condiciones de higiene para la realización del servicio de higiene capilar.",
+    "3064-2c. Se han clasificado los útiles y accesorios para realizar un montaje de cambio de forma en función del tipo de cabello y el peinado que se va a realizar.",
+    "3064-2d. Se han identificado las clases de moldes y útiles para realizar los diferentes cambios de forma temporal y permanente.",
+    "3064-2e. Se ha indicado el grado de dificultad asociado al tipo de molde que hay que utilizar y se ha estimado el tiempo de ejecución del montaje.",
+    "3064-2f. Se han clasificado los aparatos utilizados como fuentes de calor en las técnicas para el cambio de forma del cabello, indicando su modo de utilización e higienización.",
+    "3064-2g. Se han distinguido los desperfectos que pueden presentarse en los útiles y accesorios y que pueden originar deficiencias en el resultado final.",
+    "3064-2h. Se han detectado las anomalías que pueden presentar los aparatos y que pueden causar riesgos, tanto para el cliente como para el profesional.",
+    "3064-2i. Se ha demostrado seguridad a la hora de elegir los útiles más adecuados para el proceso técnico que se va a realizar.",
+    "3064-2j. Se han aplicado las medidas de prevención de riesgos laborales requeridas.",
+    "3064-3a. Se han descrito de forma básica la composición y el mecanismo de actuación de un champú y de un acondicionador capilar.",
+    "3064-3b. Se han seleccionado los cosméticos a emplear en el lavado y acondicionado del cabello teniendo en cuenta el tipo de cabello.",
+    "3064-3c. Se ha acomodado y preparado al cliente para la realización del servicio de higiene capilar.",
+    "3064-3d. Se ha adoptado la posición ergonómica del cliente y del profesional para la aplicación de las técnicas de higiene capilar.",
+    "3064-3e. Se ha asegurado que el cabello y cuero cabelludo queda mojado antes de la aplicación champú.",
+    "3064-3f. Se han realizado las maniobras de aplicación de los productos con la intensidad y ritmos requeridos.",
+    "3064-3g. Se ha asegurado la eliminación de los cosméticos aplicados.",
+    "3064-3h. Se ha reflejado en la ficha del cliente y en la ficha de servicio los productos cosméticos utilizados.",
+    "3064-3i. Se han empleado los equipos de protección individual.",
+    "3064-3j. Se ha adaptado el proceso de higiene capilar a los cambios de forma temporal y permanente del cabello.",
+    "3064-3k. Se han detectado las causas que originan deficiencias en el servicio y las medidas para subsanarlas.",
+    "3064-3l. Se han aplicado las especificaciones de seguridad requeridas.",
+    "3064-4a. Se han identificado las modificaciones que se originan en el cabello durante el proceso de cambio temporal.",
+    "3064-4b. Se han enumerado los procedimientos físicos implicados en la modificación de la forma del cabello de manera temporal.",
+    "3064-4c. Se han descrito los cosméticos que facilitan y mantienen el peinado, su composición básica y su forma de actuar.",
+    "3064-4d. Se ha acomodado y preparado al cliente para la realización del servicio de cambio temporal del cabello.",
+    "3064-4e. Se ha elegido la técnica de cambio de forma en función del tipo de peinado a realizar y la longitud del cabello, así como los equipos necesarios para ejecutarla.",
+    "3064-4f. Se ha elegido el tipo y tamaño de molde o accesorio necesario para realizar el cambio de forma.",
+    "3064-4g. Se ha elegido y aplicado el cosmético fijador previo a la realización del marcado.",
+    "3064-4h. Se han colocado los accesorios y/o moldes en función del resultado pretendido, adaptando perfectamente el tallo capilar y siguiendo las direcciones correctas, en función del largo del cabello y el estilo del peinado.",
+    "3064-4i. Se ha controlado el tiempo de exposición requerido en el proceso de secado.",
+    "3064-4j. Se ha adaptado la temperatura y la distancia del secador de mano al tipo de cabello y al grado de humedad.",
+    "3064-4k. Se han detectado las causas que originan deficiencias en el servicio y las medidas para subsanarlas.",
+    "3064-5a. Se han descrito las fases que tienen lugar en un cambio de forma permanente, así como las modificaciones asociadas.",
+    "3064-5b. Se han identificado los cosméticos que se emplean en cada una de las fases, su relación con el tipo de cabello y su forma de utilización.",
+    "3064-5c. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene.",
+    "3064-5d. Se ha preparado al cliente y se le han aplicado los productos necesarios para la protección de la piel.",
+    "3064-5e. Se ha elegido el tipo y tamaño de molde más adecuado para el cambio de forma permanente que se pretende realizar y se han colocado con habilidad y destreza en la dirección indicada.",
+    "3064-5f. Se han aplicado los cosméticos seleccionados, controlando el proceso y el tiempo de exposición.",
+    "3064-5g. Se han reflejado en la ficha del cliente los productos cosméticos utilizados y, en la ficha de servicio, la técnica realizada.",
+    "3064-5h. Se ha mantenido el área de trabajo con el grado apropiado de orden y limpieza.",
+    "3064-5i. Se ha recogido y almacenado todo el material una vez terminado el proceso realizado.",
+    "3064-5j. Se ha evaluado el resultado del cambio de forma del cabello, formulando las preguntas tipo.",
+    "3064-5k. Se han detectado las causas que originan deficiencias en el servicio y las medidas para subsanarlas."
+  ],
+  "connections": [
+    {
+      "title_es": "Diagnóstico capilar, observación anatómica, alteraciones y toma de decisiones",
+      "justification_es": "antes de lavar, acondicionar o modificar la forma del cabello, el alumnado debe observar piel, cuero cabelludo y cabello, reconocer anomalías, respetar la confidencialidad y tomar decisiones técnicas. Este proceso coincide con la observación de uñas, piel, vello y rostro en los módulos de estética, y se apoya en Ciencias aplicadas mediante anatomía, salud, enfermedad, microorganismos y método científico. Comunicación y sociedad aporta la capacidad de preguntar, comprender, explicar y registrar la información."
+    },
+    {
+      "title_es": "Documentación profesional, ficha técnica, TIC, informes y confidencialidad",
+      "justification_es": "la ficha técnica capilar recoge diagnóstico, productos, técnica, incidencias, tiempos y resultado. Además, exige discreción y confidencialidad. Comunicación y sociedad aporta redacción, síntesis y comprensión; Ciencias aporta informes, tablas, gráficos y TIC."
+    },
+    {
+      "title_es": "Preparación de equipos, útiles, accesorios, productos y zona de trabajo",
+      "justification_es": "el lavado y los cambios de forma precisan lavacabezas, toallas, capas, peines, cepillos, moldes, rulos, pinzas, secadores, aparatos de calor, cosméticos de higiene, acondicionadores y fijadores. La organización de material y producto es común a manicura, depilación, maquillaje y coloración. Ciencias aplicadas permite comprender materia, unidades, temperatura, electricidad y mezclas; Comunicación permite interpretar instrucciones y etiquetas."
+    },
+    {
+      "title_es": "Comunicación profesional, atención al cliente, asesoramiento, satisfacción y reclamaciones",
+      "justification_es": "el servicio capilar exige escuchar, preguntar, informar, asesorar, explicar el resultado, comunicar posibles deficiencias, recoger satisfacción y atender objeciones. Atención al cliente y Comunicación y sociedad son esenciales para desarrollar vocabulario profesional, escucha activa, claridad, respeto e incluso atención básica en inglés."
+    },
+    {
+      "title_es": "Preparación de equipos, útiles, accesorios, productos y zona de trabajo",
+      "justification_es": "el lavado y los cambios de forma precisan lavacabezas, toallas, capas, peines, cepillos, moldes, rulos, pinzas, secadores, aparatos de calor, cosméticos de higiene, acondicionadores y fijadores. La organización de material y producto es común a manicura, depilación, maquillaje y coloración. Ciencias aplicadas permite comprender materia, unidades, temperatura, electricidad y mezclas; Comunicación permite interpretar instrucciones y etiquetas."
+    },
+    {
+      "title_es": "Higiene, desinfección, esterilización, salud y prevención de infecciones",
+      "justification_es": "lavar y acondicionar el cabello no solo limpia, también exige prevenir contagios y mantener útiles, lavacabezas, toallas y zona de trabajo en condiciones higiénicas. La prevención de infecciones conecta directamente con Ciencias aplicadas, mientras que los protocolos escritos y explicaciones al cliente conectan con Comunicación y sociedad."
+    },
+    {
+      "title_es": "Selección de cosméticos y productos según tipo de cabello, cuero cabelludo y resultado previsto",
+      "justification_es": "seleccionar champú, acondicionador, fijador o producto de permanente requiere relacionar composición, acción, tipo de cabello, estado del cuero cabelludo y resultado deseado. Esta competencia es paralela a elegir ceras, decolorantes, cosméticos de maquillaje, esmaltes o colorantes capilares, e implica asesoramiento técnico al cliente."
+    },
+    {
+      "title_es": "Ejecución técnica del lavado y acondicionado capilar",
+      "justification_es": "lavar y acondicionar implica acomodar, mojar, aplicar champú, masajear, aclarar, acondicionar, eliminar restos, proteger al cliente y registrar productos. Comparte con otros módulos la secuenciación de fases, la destreza manual, la higiene, el trato al cliente, la seguridad y la evaluación de deficiencias."
+    },
+    {
+      "title_es": "Ergonomía, acomodación, protección y confort del cliente/profesional",
+      "justification_es": "el lavacabezas, el secador, los moldes y los cambios permanentes exigen postura adecuada, protección de ropa y piel, control del confort y prevención de sobrecargas del profesional. La ergonomía es transversal en todos los servicios de estética y peluquería."
+    },
+    {
+      "title_es": "Coordinación estética: peinado, rostro, maquillaje, color, uñas e imagen global",
+      "justification_es": "los cambios de forma del cabello se diseñan según estilo, rostro, longitud, evento, color del cabello, maquillaje, uñas y vestuario. Esta coincidencia permite integrar criterios estéticos, visagismo, proporción, geometría, cultura visual y creatividad."
+    },
+    {
+      "title_es": "Cambio de forma temporal: física del cabello, calor, humedad, moldes y acabado",
+      "justification_es": "el cambio temporal depende de fenómenos físicos: humedad, temperatura, evaporación, tensión, dirección, tiempo de secado, distancia del secador y tamaño del molde. Se relaciona con física, medidas, energía, seguridad eléctrica, geometría, coordinación estética y comunicación del resultado al cliente."
+    },
+    {
+      "title_es": "Prevención de riesgos laborales, seguridad eléctrica, térmica, química y medioambiental",
+      "justification_es": "el módulo combina agua, electricidad, calor y productos químicos. Por ello se relaciona con la prevención de riesgos, uso de EPI, detección de aparatos defectuosos, seguridad química en permanentes y sostenibilidad en consumo de agua, energía y residuos."
+    },
+    {
+      "title_es": "Limpieza final, mantenimiento, orden, almacenamiento, residuos y sostenibilidad",
+      "justification_es": "tras lavar, marcar o realizar una permanente, es imprescindible limpiar el puesto, almacenar moldes y aparatos, retirar toallas, conservar cosméticos y gestionar residuos. Esta competencia conecta con calidad, sostenibilidad, consumo responsable de agua/energía y prevención de contaminación."
+    },
+    {
+      "title_es": "Cambio de forma permanente: química, fases, protección, exposición y resultado",
+      "justification_es": "la permanente requiere comprender fases, cosméticos reductores/neutralizantes, tiempos de exposición, protección de piel y profesional, selección de moldes, control del proceso, ficha técnica y evaluación del resultado. Se vincula especialmente con química, seguridad, coloración, decoloración, documentación y atención al cliente."
+    },
+    {
+      "title_es": "Control de tiempos, temperatura, distancia, medidas, cálculos y calidad del proceso",
+      "justification_es": "el alumno debe estimar el tiempo de montaje, controlar secado, adaptar temperatura y distancia del secador, controlar tiempos de exposición en cambios permanentes y evaluar deficiencias. Matemáticas y ciencias permiten trabajar unidades, proporcionalidad, temperatura, gráficas, energía y consumo."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en la Formación en Centros de Trabajo",
+      "justification_es": "el lavado y los cambios de forma se desarrollan en un entorno profesional donde el alumnado debe seguir instrucciones, trabajar con otros, comunicarse, respetar tiempos, aplicar seguridad, atender al cliente, limpiar y evaluar el resultado. La FCT integra todos estos aprendizajes en una empresa real."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3064_c1_1",
+      "title_es": "Ficha integral de diagnóstico de imagen personal: “Conoce antes de tocar”",
+      "motivatingFactor_es": "trabajar como profesionales que no aplican un servicio sin conocer antes al cliente. | incluir un apartado “inspiración de redes” para que el cliente enseñe una foto de referencia y el alumnado valore si es viable.",
+      "description_es": "el alumnado diseña una ficha que recoja cabello, cuero cabelludo, piel, vello, uñas, alergias, hábitos de lavado, uso de planchas/secador, productos anteriores y expectativas.",
+      "evidence_es": "ficha digital o impresa para el aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c1_2",
+      "title_es": "Circuito de observación por estaciones: “Detectives del salón”",
+      "motivatingFactor_es": "convertir el diagnóstico en una investigación con pistas. | formato expediente de caso, con tarjetas de cliente y códigos de color.",
+      "description_es": "estaciones de cuero cabelludo, cabello, piel facial, cejas/vello, uñas y estilo personal. En cada estación completan una parte del informe.",
+      "evidence_es": "informe integral y recomendación de servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c1_3",
+      "title_es": "Estudio de alteraciones frecuentes: “Semáforo capilar”",
+      "motivatingFactor_es": "aprender cuándo realizar, adaptar, consultar o derivar. | semáforo visual: verde —servicio posible—, amarillo —precaución—, rojo —consultar/derivar—.",
+      "description_es": "trabajan con casos o imágenes educativas de caspa, grasa, sequedad, sensibilidad, pediculosis, irritación o cabello sensibilizado.",
+      "evidence_es": "panel de alteraciones y actuación profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c1_4",
+      "title_es": "Entrevista técnica simulada: “Preguntar bien evita errores”",
+      "motivatingFactor_es": "simular una consulta real antes del lavacabezas o del peinado. | grabación breve para analizar escucha activa, lenguaje no verbal y claridad.",
+      "description_es": "por parejas, uno hace de cliente y otro de profesional. Preguntan por hábitos, productos, alergias, sensibilidad, expectativas, tiempo disponible y evento.",
+      "evidence_es": "role-play evaluado y ficha completada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c1_5",
+      "title_es": "Informe científico-profesional: “Del diagnóstico a la decisión”",
+      "motivatingFactor_es": "unir ciencia y taller. | presentación tipo “caso clínico beauty”, con imágenes, datos y recomendación.",
+      "description_es": "tras observar un caso, formulan hipótesis sobre el estado capilar, seleccionan cosmético y justifican el servicio.",
+      "evidence_es": "informe con observación, hipótesis, decisión y cuidados.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c1_6",
+      "title_es": "Test de hábitos capilares: “¿Qué le haces a tu pelo?”",
+      "motivatingFactor_es": "",
+      "description_es": "crean un cuestionario anónimo o ficticio sobre hábitos capilares y analizan cómo influyen en el estado del cabello.",
+      "evidence_es": "infografía de hábitos capilares saludables y errores frecuentes.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c1_7",
+      "title_es": "Diagnóstico con IA responsable: “La IA ayuda, no decide”",
+      "motivatingFactor_es": "",
+      "description_es": "comparan una recomendación generada por IA o buscador con el diagnóstico profesional aprendido, detectando aciertos, errores y límites.",
+      "evidence_es": "decálogo de uso responsable de IA en asesoramiento capilar.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_1",
+      "title_es": "Ficha digital capilar",
+      "motivatingFactor_es": "",
+      "description_es": "diagnóstico, productos, técnica, moldes, tiempos, incidencias, resultado y satisfacción.",
+      "evidence_es": "formulario digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_2",
+      "title_es": "Informe de práctica de lavado o marcado",
+      "motivatingFactor_es": "",
+      "description_es": "procedimiento, materiales, resultados, errores y propuestas de mejora.",
+      "evidence_es": "informe para portfolio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_3",
+      "title_es": "Base de datos de productos capilares",
+      "motivatingFactor_es": "",
+      "description_es": "uso, composición básica, caducidad, lote, precauciones y conservación.",
+      "evidence_es": "base de datos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_4",
+      "title_es": "Portfolio técnico",
+      "motivatingFactor_es": "",
+      "description_es": "fotos autorizadas, fichas, rúbricas, reflexiones y evolución del aprendizaje.",
+      "evidence_es": "portfolio digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_5",
+      "title_es": "Gráficos de servicios realizados",
+      "motivatingFactor_es": "",
+      "description_es": "tiempos medios, satisfacción, técnicas más demandadas y productos utilizados.",
+      "evidence_es": "dashboard sencillo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_6",
+      "title_es": "QR de ficha rápida",
+      "motivatingFactor_es": "crear un acceso QR a la ficha o protocolo usado en el taller.",
+      "description_es": "",
+      "evidence_es": "sistema de documentación rápida.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c11_7",
+      "title_es": "Caso “no todo se sube a redes”",
+      "motivatingFactor_es": "trabajar confidencialidad e imagen.",
+      "description_es": "analizar cuándo se puede fotografiar un trabajo y qué permisos hacen falta.",
+      "evidence_es": "decálogo de privacidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_1",
+      "title_es": "Bandejas y puestos técnicos comparados: “Cada servicio tiene su setup”",
+      "motivatingFactor_es": "fotografían el setup para crear un catálogo visual interno.",
+      "description_es": "equipos preparan puestos de lavado, marcado, permanente, maquillaje, depilación, manicura y color. Justifican cada útil y producto.",
+      "evidence_es": "checklist comparativo de puestos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_2",
+      "title_es": "Inventario de taller de peluquería-estética: “Stock bajo control”",
+      "motivatingFactor_es": "semáforo digital de stock y caducidad.",
+      "description_es": "registran champús, acondicionadores, moldes, pinzas, peines, toallas, secadores, fijadores y productos técnicos.",
+      "evidence_es": "inventario del aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_3",
+      "title_es": "Lectura de etiquetas capilares: “No uses nada que no entiendas”",
+      "motivatingFactor_es": "comparan productos populares o virales con productos profesionales.",
+      "description_es": "analizan instrucciones, ingredientes, advertencias, conservación y modo de empleo de champús, mascarillas, fijadores y permanentes.",
+      "evidence_es": "guía de lectura de etiquetas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_4",
+      "title_es": "Checklist de revisión de aparatos: “Antes de enchufar”",
+      "motivatingFactor_es": "",
+      "description_es": "revisan cable, enchufe, temperatura, limpieza, accesorios, seguridad y estado de secadores, planchas, tenacillas o difusores.",
+      "evidence_es": "lista de control de aparatología.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_5",
+      "title_es": "Protocolo de montaje del servicio: “Listo en 7 pasos”",
+      "motivatingFactor_es": "convertirlo en cartel QR para el taller.",
+      "description_es": "redactan el procedimiento para preparar lavacabezas, tocador o puesto de cambio de forma.",
+      "evidence_es": "protocolo visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_6",
+      "title_es": "Reto “setup de influencer profesional”",
+      "motivatingFactor_es": "montar un puesto visualmente atractivo pero también seguro e higiénico.",
+      "description_es": "preparan un puesto “instagrameable” sin descuidar ergonomía, higiene, material imprescindible y orden.",
+      "evidence_es": "foto del puesto y defensa de por qué es profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c2_7",
+      "title_es": "Maletín junior de peluquería",
+      "motivatingFactor_es": "diseñar el kit básico para FCT o primer empleo.",
+      "description_es": "seleccionan útiles mínimos, calculan coste aproximado y explican conservación e higiene.",
+      "evidence_es": "ficha del maletín profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_1",
+      "title_es": "Role-play de salón",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, diagnóstico capilar, explicación del servicio, consentimiento, despedida y satisfacción.",
+      "evidence_es": "diálogo evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_2",
+      "title_es": "Hoja de cuidados posteriores",
+      "motivatingFactor_es": "",
+      "description_es": "recomendaciones tras lavado, marcado, permanente, color o decoloración.",
+      "evidence_es": "tarjeta postservicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_3",
+      "title_es": "Atención básica en inglés",
+      "motivatingFactor_es": "",
+      "description_es": "preguntar servicio, sensibilidad, preferencias, longitud, estilo y acabado.",
+      "evidence_es": "frases bilingües.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_4",
+      "title_es": "Gestión de reclamación",
+      "motivatingFactor_es": "",
+      "description_es": "cliente insatisfecho con forma, encrespamiento, duración o irritación.",
+      "evidence_es": "hoja de incidencia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_5",
+      "title_es": "Presentación oral de técnicas",
+      "motivatingFactor_es": "",
+      "description_es": "explicar lavado, marcado, secado y permanente con vocabulario técnico.",
+      "evidence_es": "exposición breve.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_6",
+      "title_es": "Respuesta a reseña online",
+      "motivatingFactor_es": "redactar respuesta profesional a una crítica ficticia.",
+      "description_es": "",
+      "evidence_es": "banco de respuestas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c12_7",
+      "title_es": "Chatbot de preguntas frecuentes capilares",
+      "motivatingFactor_es": "crear FAQ sobre lavado, productos, secado, permanente, cuidados y duración.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "guion de chatbot o folleto interactivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_1",
+      "title_es": "Protocolo de higiene del lavacabezas",
+      "motivatingFactor_es": "",
+      "description_es": "limpieza antes/después, superficies, grifería, cuello del lavacabezas, toallas, peines y recogida de residuos.",
+      "evidence_es": "protocolo higiénico del lavacabezas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_2",
+      "title_es": "Práctica de desinfección de útiles",
+      "motivatingFactor_es": "",
+      "description_es": "comparar higiene de peines, cepillos, pinzas, moldes, pinceles, pinzas de depilar y útiles de uñas.",
+      "evidence_es": "tabla útil-material-método.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_3",
+      "title_es": "Campaña de salud capilar",
+      "motivatingFactor_es": "formato carrusel de redes o cartel de aula.",
+      "description_es": "crear mensajes sobre contagios, pediculosis, caspa, higiene y uso individual de útiles.",
+      "evidence_es": "campaña visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_4",
+      "title_es": "Rúbrica de higiene del servicio",
+      "motivatingFactor_es": "",
+      "description_es": "evaluar manos, toallas, puesto, útiles, cosméticos, protección, limpieza final y residuos.",
+      "evidence_es": "rúbrica común.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_5",
+      "title_es": "Glosario técnico bilingüe",
+      "motivatingFactor_es": "",
+      "description_es": "shampoo, conditioner, scalp, towel, comb, clean, disinfect, infection, gloves, dryer.",
+      "evidence_es": "tarjetas bilingües para el taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_6",
+      "title_es": "Simulación de contaminación invisible",
+      "motivatingFactor_es": "usar polvo fluorescente o tarjetas de contaminación simulada.",
+      "description_es": "visualizan cómo una mala higiene transmite contaminación de manos a útiles y cliente.",
+      "evidence_es": "mapa de transmisión y medidas preventivas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c3_7",
+      "title_es": "Escape room “salva el salón del contagio”",
+      "motivatingFactor_es": "resolver pruebas sobre limpieza, desinfección, lavado de manos, toallas y útiles.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "dossier de pruebas y protocolo final.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_1",
+      "title_es": "Árbol de decisión cosmético",
+      "motivatingFactor_es": "",
+      "description_es": "elegir champú, acondicionador, mascarilla, fijador o protector según cabello seco, graso, fino, rizado, teñido o sensible.",
+      "evidence_es": "árbol visual para el taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_2",
+      "title_es": "Comparativa de cosméticos",
+      "motivatingFactor_es": "",
+      "description_es": "comparar champú, acondicionador, fijador, tinte, decolorante, cera y base de maquillaje: función, textura, riesgo y uso.",
+      "evidence_es": "tabla comparativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_3",
+      "title_es": "Asesoría de rutina capilar",
+      "motivatingFactor_es": "",
+      "description_es": "recomendar rutina básica a un cliente ficticio, sin invadir competencias sanitarias.",
+      "evidence_es": "tarjeta de rutina capilar.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_4",
+      "title_es": "Lectura crítica de publicidad cosmética",
+      "motivatingFactor_es": "",
+      "description_es": "analizar anuncios de champús milagro, sérums virales o productos antiencrespamiento.",
+      "evidence_es": "ficha “promete / puede / no sabemos”.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_5",
+      "title_es": "Presupuesto de servicio capilar",
+      "motivatingFactor_es": "",
+      "description_es": "calcular consumibles y explicar al cliente la opción técnica elegida.",
+      "evidence_es": "presupuesto básico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_6",
+      "title_es": "Ranking “viral pero ¿útil?”",
+      "motivatingFactor_es": "revisar productos capilares populares en TikTok/Instagram.",
+      "description_es": "valorar si son adecuados según cabello, etiqueta, precio, evidencia y seguridad.",
+      "evidence_es": "ranking razonado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c4_7",
+      "title_es": "Laboratorio de texturas capilares",
+      "motivatingFactor_es": "explorar geles, espumas, cremas, sprays y mascarillas de forma sensorial y segura.",
+      "description_es": "describen textura, uso, cantidad recomendada y tipo de cabello.",
+      "evidence_es": "catálogo de texturas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_1",
+      "title_es": "Servicio completo de higiene capilar",
+      "motivatingFactor_es": "",
+      "description_es": "diagnóstico, selección de producto, acomodación, lavado, masaje, aclarado, acondicionado, ficha y valoración.",
+      "evidence_es": "servicio simulado evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_2",
+      "title_es": "Taller de maniobras manuales",
+      "motivatingFactor_es": "",
+      "description_es": "practicar masaje capilar, presión, ritmo, direcciones y comodidad del cliente.",
+      "evidence_es": "secuencia de maniobras.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_3",
+      "title_es": "Vídeo-tutorial del lavado profesional",
+      "motivatingFactor_es": "",
+      "description_es": "elaborar guion, grabar fases, explicar seguridad, producto y ergonomía.",
+      "evidence_es": "vídeo interno para repaso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_4",
+      "title_es": "Comparativa de resultados",
+      "motivatingFactor_es": "",
+      "description_es": "comparar lavado antes de color, antes de cambio de forma y como servicio independiente.",
+      "evidence_es": "tabla de adaptación del lavado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_5",
+      "title_es": "Corrección de errores",
+      "motivatingFactor_es": "",
+      "description_es": "detectar exceso de champú, mal aclarado, mala postura, agua inadecuada o falta de protección.",
+      "evidence_es": "lista error-causa-solución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_6",
+      "title_es": "Spa capilar sensorial responsable",
+      "motivatingFactor_es": "convertir el lavado en experiencia de bienestar profesional, sin perder técnica.",
+      "description_es": "cuidar música suave, tono de voz, temperatura, ritmo y comodidad, evaluando calidad del servicio.",
+      "evidence_es": "protocolo de experiencia cliente.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c5_7",
+      "title_es": "Reto “menos producto, mismo resultado”",
+      "motivatingFactor_es": "trabajar sostenibilidad y técnica.",
+      "description_es": "practicar dosificación adecuada de champú/acondicionador para evitar desperdicio sin perder calidad.",
+      "evidence_es": "guía de dosificación responsable.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_1",
+      "title_es": "Mapa postural del taller",
+      "motivatingFactor_es": "",
+      "description_es": "analizar posturas en lavacabezas, tocador, camilla, mesa de manicura y puesto de color.",
+      "evidence_es": "cartel de ergonomía.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_2",
+      "title_es": "Práctica de acomodación segura",
+      "motivatingFactor_es": "",
+      "description_es": "preparar al cliente para lavado, marcado, permanente, maquillaje, depilación y pedicura.",
+      "evidence_es": "checklist de acomodación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_3",
+      "title_es": "Protocolo de protección",
+      "motivatingFactor_es": "",
+      "description_es": "capas, toallas, guantes, barreras, retirada de joyas y protección de piel/ropa.",
+      "evidence_es": "protocolo visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_4",
+      "title_es": "Observación entre iguales",
+      "motivatingFactor_es": "",
+      "description_es": "un alumno realiza y otro evalúa postura, distancia, comodidad y seguridad.",
+      "evidence_es": "ficha de coevaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_5",
+      "title_es": "Adaptación a clientes diversos",
+      "motivatingFactor_es": "",
+      "description_es": "personas mayores, movilidad reducida, sensibilidad cervical, ansiedad o dificultad idiomática.",
+      "evidence_es": "guía de atención adaptada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_6",
+      "title_es": "Micro-pausas del peluquero/a",
+      "motivatingFactor_es": "diseñar pausas de cuello, hombros, muñeca y espalda.",
+      "description_es": "",
+      "evidence_es": "vídeo o póster de estiramientos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c8_7",
+      "title_es": "Termómetro de confort del cliente",
+      "motivatingFactor_es": "crear una escala sencilla para preguntar temperatura, postura, presión y comodidad.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "tarjeta de confort para role-play.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_1",
+      "title_es": "Proyecto de imagen completa para evento",
+      "motivatingFactor_es": "",
+      "description_es": "peinado temporal, maquillaje social, manicura y asesoramiento de color.",
+      "evidence_es": "dossier de look.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_2",
+      "title_es": "Estudio rostro-peinado-maquillaje",
+      "motivatingFactor_es": "",
+      "description_es": "adaptar forma del cabello y maquillaje al óvalo facial.",
+      "evidence_es": "boceto comparativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_3",
+      "title_es": "Desfile temático histórico o cultural",
+      "motivatingFactor_es": "",
+      "description_es": "peinado, maquillaje, uñas y explicación del contexto.",
+      "evidence_es": "pasarela educativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_4",
+      "title_es": "Catálogo de estilos",
+      "motivatingFactor_es": "",
+      "description_es": "recogidos, ondas, liso, volumen, maquillaje y color para distintas ocasiones.",
+      "evidence_es": "catálogo visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_5",
+      "title_es": "Boceto de look integral",
+      "motivatingFactor_es": "",
+      "description_es": "representar peinado, maquillaje, uñas y paleta cromática.",
+      "evidence_es": "moodboard.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_6",
+      "title_es": "Avatar digital de cambio de look",
+      "motivatingFactor_es": "probar estilos sobre avatares o plantillas sin riesgo.",
+      "description_es": "",
+      "evidence_es": "comparativa de tres looks.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c13_7",
+      "title_es": "Reto “look festival / graduación”",
+      "motivatingFactor_es": "crear propuesta completa para una ocasión cercana al alumnado.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "pitch de imagen global.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_1",
+      "title_es": "Experimento humedad-calor-forma",
+      "motivatingFactor_es": "",
+      "description_es": "comparar secado natural, secador, rulos y cepillo en mechones de práctica.",
+      "evidence_es": "tabla de resultados.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_2",
+      "title_es": "Tabla de moldes y efectos",
+      "motivatingFactor_es": "",
+      "description_es": "relacionar diámetro del molde, longitud del cabello, dirección y resultado de onda/rizo.",
+      "evidence_es": "muestrario visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_3",
+      "title_es": "Peinado coordinado con maquillaje",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar look para evento, graduación o festival coordinando peinado, maquillaje y ropa.",
+      "evidence_es": "moodboard.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_4",
+      "title_es": "Gráfica de secado",
+      "motivatingFactor_es": "",
+      "description_es": "registrar tiempo, temperatura, distancia y grado de humedad.",
+      "evidence_es": "gráfica y conclusión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_5",
+      "title_es": "Simulación de agenda de peinados",
+      "motivatingFactor_es": "",
+      "description_es": "estimar duración según dificultad, longitud y técnica.",
+      "evidence_es": "agenda organizada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_6",
+      "title_es": "Challenge “ondas sin drama”",
+      "motivatingFactor_es": "reto técnico con muñeca o mechones, buscando ondas limpias y seguras.",
+      "description_es": "se valora protección, dirección, temperatura, acabado y explicación.",
+      "evidence_es": "rúbrica de ondas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c6_7",
+      "title_es": "Reel educativo “3 errores con el secador”",
+      "motivatingFactor_es": "crear un vídeo corto sobre distancia, temperatura y protección térmica.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "vídeo interno o guion de Reel.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_1",
+      "title_es": "Mapa de riesgos del lavacabezas y tocador",
+      "motivatingFactor_es": "",
+      "description_es": "agua, cables, calor, productos químicos, suelo mojado, posturas y residuos.",
+      "evidence_es": "mapa de riesgos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_2",
+      "title_es": "Simulación de incidente",
+      "motivatingFactor_es": "",
+      "description_es": "quemadura leve, cable defectuoso, irritación por producto, caída por suelo mojado.",
+      "evidence_es": "parte de incidencia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_3",
+      "title_es": "Checklist de seguridad eléctrica",
+      "motivatingFactor_es": "",
+      "description_es": "revisar secadores, planchas, tenacillas, enchufes y distancia al agua.",
+      "evidence_es": "lista de control.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_4",
+      "title_es": "Plan de ahorro de agua y energía",
+      "motivatingFactor_es": "",
+      "description_es": "medir o estimar hábitos de lavado/secado y proponer mejoras.",
+      "evidence_es": "plan de ahorro.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_5",
+      "title_es": "Análisis de fichas de seguridad",
+      "motivatingFactor_es": "",
+      "description_es": "productos de permanente, coloración, fijadores y desinfectantes.",
+      "evidence_es": "resumen visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_6",
+      "title_es": "Escape room PRL del salón",
+      "motivatingFactor_es": "detectar errores ocultos: cable cerca de agua, producto abierto, suelo mojado, guantes olvidados.",
+      "description_es": "",
+      "evidence_es": "lista de errores y soluciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c9_7",
+      "title_es": "Carnet de seguridad del lavacabezas",
+      "motivatingFactor_es": "superar pruebas breves sobre agua/electricidad, EPI, higiene, postura y productos.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "carnet simbólico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_1",
+      "title_es": "Cierre sostenible del lavacabezas",
+      "motivatingFactor_es": "",
+      "description_es": "limpieza, orden, retirada de toallas, ahorro de agua y residuos.",
+      "evidence_es": "checklist de cierre.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_2",
+      "title_es": "Plan semanal de mantenimiento",
+      "motivatingFactor_es": "",
+      "description_es": "secadores, planchas, moldes, peines, cepillos, lavacabezas y productos.",
+      "evidence_es": "calendario de mantenimiento.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_3",
+      "title_es": "Ruta del residuo capilar",
+      "motivatingFactor_es": "",
+      "description_es": "envases, restos de producto, papel, guantes, toallas desechables y químicos.",
+      "evidence_es": "mapa de residuos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_4",
+      "title_es": "Auditoría de almacén",
+      "motivatingFactor_es": "",
+      "description_es": "conservación, caducidad, stock y seguridad de productos capilares.",
+      "evidence_es": "informe de almacén.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_5",
+      "title_es": "Campaña de ahorro de agua y energía",
+      "motivatingFactor_es": "",
+      "description_es": "carteles, medición de consumos y propuestas de mejora.",
+      "evidence_es": "campaña ambiental.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_6",
+      "title_es": "Reto “30% menos desperdicio”",
+      "motivatingFactor_es": "reducir producto, agua o energía en una práctica simulada sin perder calidad.",
+      "description_es": "",
+      "evidence_es": "comparación antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c14_7",
+      "title_es": "Eco-salón capilar",
+      "motivatingFactor_es": "diseñar un salón sostenible especializado en lavado y peinado.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "proyecto visual y medidas concretas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_1",
+      "title_es": "Protocolo de permanente segura",
+      "motivatingFactor_es": "",
+      "description_es": "fases, productos, protección, moldes, tiempos, ficha, retirada y neutralización.",
+      "evidence_es": "protocolo paso a paso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_2",
+      "title_es": "Comparativa química",
+      "motivatingFactor_es": "",
+      "description_es": "permanente, tinte, decoloración capilar y decoloración del vello: finalidad, reacción, riesgos y cuidados.",
+      "evidence_es": "tabla comparativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_3",
+      "title_es": "Prueba de selección de moldes",
+      "motivatingFactor_es": "",
+      "description_es": "elegir moldes según longitud, estilo y resultado deseado.",
+      "evidence_es": "muestrario de efectos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_4",
+      "title_es": "Caso de contraindicación química",
+      "motivatingFactor_es": "",
+      "description_es": "analizar cabello sensibilizado, cuero cabelludo irritado, alergias o servicios previos.",
+      "evidence_es": "decisión justificada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_5",
+      "title_es": "Informe de control del proceso",
+      "motivatingFactor_es": "",
+      "description_es": "registrar tiempos, productos, incidencias, resultado, satisfacción y mejoras.",
+      "evidence_es": "informe técnico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_6",
+      "title_es": "Simulador de permanente sin químicos",
+      "motivatingFactor_es": "practicar particiones, moldes, tensión y orden con agua o producto inocuo.",
+      "description_es": "",
+      "evidence_es": "montaje en muñeca evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c7_7",
+      "title_es": "Cliente quiere rizos virales",
+      "motivatingFactor_es": "analizar una imagen de redes y explicar viabilidad, mantenimiento, riesgos y alternativas.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "asesoramiento profesional escrito y oral.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_1",
+      "title_es": "Cronograma de servicio capilar",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, diagnóstico, lavado, montaje, secado, acabado, ficha y limpieza.",
+      "evidence_es": "cronograma visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_2",
+      "title_es": "Gráfica tiempo-temperatura-humedad",
+      "motivatingFactor_es": "",
+      "description_es": "registrar secado con distintas distancias y temperaturas.",
+      "evidence_es": "gráfica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_3",
+      "title_es": "Cálculo de duración de agenda",
+      "motivatingFactor_es": "",
+      "description_es": "organizar lavado, peinado, permanente, color y maquillaje.",
+      "evidence_es": "agenda profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_4",
+      "title_es": "Comparativa de exposiciones químicas",
+      "motivatingFactor_es": "",
+      "description_es": "permanente, tinte, decoloración capilar y decoloración del vello.",
+      "evidence_es": "tabla de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_5",
+      "title_es": "Indicadores de calidad",
+      "motivatingFactor_es": "",
+      "description_es": "tiempo, comodidad, brillo, limpieza, forma obtenida, satisfacción y seguridad.",
+      "evidence_es": "rúbrica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_6",
+      "title_es": "Temporizador creativo de taller",
+      "motivatingFactor_es": "crear alarmas, tarjetas o códigos de color para controlar tiempos.",
+      "description_es": "",
+      "evidence_es": "sistema visual de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c10_7",
+      "title_es": "Reto “eficiente sin correr”",
+      "motivatingFactor_es": "realizar una simulación equilibrando tiempo, higiene, seguridad y trato.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "evaluación de eficiencia profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_1",
+      "title_es": "Salón simulado integral",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, diagnóstico, lavado, marcado, maquillaje, manicura, calidad y cierre.",
+      "evidence_es": "servicio integral evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_2",
+      "title_es": "Rotación de roles profesionales",
+      "motivatingFactor_es": "",
+      "description_es": "cliente, profesional, ayudante, almacén, higiene y observador de PRL.",
+      "evidence_es": "registro de roles.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_3",
+      "title_es": "Proyecto final de peluquería-estética",
+      "motivatingFactor_es": "",
+      "description_es": "servicio combinado con ficha técnica, presupuesto, ejecución, satisfacción y reflexión.",
+      "evidence_es": "dossier final.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_4",
+      "title_es": "Diario de aprendizaje",
+      "motivatingFactor_es": "",
+      "description_es": "autonomía, errores detectados, mejoras, relación con cliente y equipo.",
+      "evidence_es": "diario individual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_5",
+      "title_es": "Simulación de FCT",
+      "motivatingFactor_es": "",
+      "description_es": "procedimientos reales de empresa, uniformidad, tiempos, atención, seguridad, documentación y evaluación final.",
+      "evidence_es": "rúbrica tipo empresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_6",
+      "title_es": "Hackathon “mejora el lavacabezas”",
+      "motivatingFactor_es": "proponer mejoras de organización, confort, higiene, ahorro o comunicación.",
+      "description_es": "",
+      "evidence_es": "pitch de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3064_c15_7",
+      "title_es": "Certamen “auxiliar capilar junior”",
+      "motivatingFactor_es": "exposición final de evidencias: lavado, peinado, ficha, protocolo, vídeo, portfolio o campaña sostenible.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "muestra de competencias con insignias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    }
+  ]
+}

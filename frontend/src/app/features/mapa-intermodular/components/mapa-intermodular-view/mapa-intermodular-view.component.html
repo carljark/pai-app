@@ -155,7 +155,7 @@
                     (click)="onSelectRa(ra.id, $event)">
                     <span class="mapa-ra-code">{{ ra.code }}</span>
                     <span class="mapa-ra-text">{{ isCa() ? ra.text_ca : ra.text_es }}</span>
-                    <span class="mapa-ra-count" title="Connexions">{{ ra.connections.length }}</span>
+                    <span class="mapa-ra-count" [title]="isCa() ? 'Connexions' : 'Conexiones'">{{ ra.connections.length }}</span>
                   </button>
                 }
               </div>
@@ -342,7 +342,7 @@
                         @for (rel of conn.relatedCriteria; track rel.moduleCode + rel.criteria) {
                           <div class="mapa-related-chip-item">
                             <span class="mapa-related-code-tag">{{ rel.moduleCode }}</span>
-                            <span class="mapa-related-name-tag">{{ isCa() ? rel.moduleName_ca : rel.moduleName_es }}:</span>
+                            <span class="mapa-related-name-tag">{{ isCa() ? (rel.moduleName_ca || rel.moduleName_es) : rel.moduleName_es }}:</span>
                             <strong class="mapa-related-crit-tag">{{ rel.criteria }}</strong>
                           </div>
                         }

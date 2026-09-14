@@ -1,0 +1,889 @@
+{
+  "code": "3005",
+  "name_es": "Atención al cliente",
+  "criteria": [
+    "3005-1a. Se ha analizado el comportamiento del posible cliente.",
+    "3005-1b. Se han adaptado adecuadamente la actitud y discurso a la situación de la que se parte.",
+    "3005-1c. Se ha obtenido la información necesaria del posible cliente.",
+    "3005-1d. Se ha favorecido la comunicación con el empleo de las técnicas y actitudes apropiadas al desarrollo de la misma.",
+    "3005-1e. Se ha mantenido una conversación, utilizando las fórmulas, léxico comercial y nexos de comunicación —pedir aclaraciones, solicitar información, pedir a alguien que repita y otros—.",
+    "3005-1f. Se ha dado respuesta a una pregunta de fácil solución, utilizando el léxico comercial adecuado.",
+    "3005-1g. Se ha expresado un tema prefijado de forma oral delante de un grupo o en una relación de comunicación en la que intervienen dos interlocutores.",
+    "3005-1h. Se ha mantenido una actitud conciliadora y sensible a los demás, demostrando cordialidad y amabilidad en el trato.",
+    "3005-1i. Se ha transmitido información con claridad, de manera ordenada, estructura clara y precisa.",
+    "3005-2a. Se han analizado las diferentes tipologías de público.",
+    "3005-2b. Se han diferenciado clientes de proveedores, y éstos del público en general.",
+    "3005-2c. Se ha reconocido la terminología básica de comunicación comercial.",
+    "3005-2d. Se ha diferenciado entre información y publicidad.",
+    "3005-2e. Se han adecuado las respuestas en función de las preguntas del público.",
+    "3005-2f. Se ha informado al cliente de las características del servicio, especialmente de las calidades esperables.",
+    "3005-2g. Se ha asesorado al cliente sobre la opción más recomendable, cuando existen varias posibilidades, informándole de las características y acabados previsibles de cada una de ellas.",
+    "3005-2h. Se ha solicitado al cliente que comunique la elección de la opción elegida.",
+    "3005-3a. Se ha hecho entrega al cliente de los artículos procesados, informando de los servicios realizados en los artículos.",
+    "3005-3b. Se han transmitido al cliente, de modo oportuno, las operaciones a llevar a cabo en los artículos entregados y los tiempos previstos para ello.",
+    "3005-3c. Se han identificado los documentos de entrega asociados al servicio o producto.",
+    "3005-3d. Se ha recogido la conformidad del cliente con el acabado obtenido, tomando nota, en caso contrario, de sus objeciones, de modo adecuado.",
+    "3005-3e. Se ha valorado la pulcritud y corrección, tanto en el vestir como en la imagen corporal, elementos clave en la atención al cliente.",
+    "3005-3f. Se ha mantenido en todo momento el respeto hacia el cliente.",
+    "3005-3g. Se ha intentado la fidelización del cliente con el buen resultado del trabajo.",
+    "3005-3h. Se ha definido periodo de garantía y las obligaciones legales aparejadas.",
+    "3005-4a. Se han ofrecido alternativas al cliente ante reclamaciones fácilmente subsanables, exponiendo claramente los tiempos y condiciones de las operaciones a realizar, así como del nivel de probabilidad de modificación esperable.",
+    "3005-4b. Se han reconocido los aspectos principales en los que incide la legislación vigente, en relación con las reclamaciones.",
+    "3005-4c. Se ha suministrado la información y documentación necesaria al cliente para la presentación de una reclamación escrita, si éste fuera el caso.",
+    "3005-4d. Se han recogido los formularios presentados por el cliente para la realización de una reclamación.",
+    "3005-4e. Se ha cumplimentado una hoja de reclamación.",
+    "3005-4f. Se ha compartido información con el equipo de trabajo."
+  ],
+  "connections": [
+    {
+      "title_es": "Recepción, acogida, comportamiento profesional y primera impresión",
+      "justification_es": "la acogida del cliente condiciona la calidad percibida del servicio. La imagen personal, la actitud cordial, la adaptación del discurso, el respeto y la escucha activa son comunes a la recepción en cabina, tocador, lavacabezas, manicura, depilación, maquillaje, coloración y FCT. Comunicación y sociedad aporta estrategias orales, conversación, escucha activa y atención en inglés."
+    },
+    {
+      "title_es": "Entrevista, escucha activa y recogida de información previa",
+      "justification_es": "todos los servicios necesitan obtener información: demanda, expectativas, alergias, hábitos, historial, contraindicaciones, preferencias y satisfacción. La entrevista profesional convierte la comunicación en una herramienta técnica para decidir el servicio adecuado y registrar datos fiables."
+    },
+    {
+      "title_es": "Diagnóstico técnico y detección de necesidades antes del servicio",
+      "justification_es": "el asesoramiento al cliente no es posible sin diagnóstico. Las preguntas comerciales y técnicas deben apoyarse en la observación de piel, cabello, cuero cabelludo, uñas, vello, rostro, sensibilidad, alergias y resultados esperados. Ciencias aporta salud y anatomía; los módulos prácticos aportan criterios técnicos específicos."
+    },
+    {
+      "title_es": "Tipologías de público, diversidad, inclusión y adaptación del trato",
+      "justification_es": "el alumnado debe adaptar la comunicación a distintos públicos: cliente joven, mayor, indeciso, extranjero, con discapacidad, proveedor o público general. La diversidad cultural, lingüística y social trabajada en Comunicación y sociedad se aplica directamente al trato profesional."
+    },
+    {
+      "title_es": "Trabajo en equipo, comunicación interna y coordinación profesional",
+      "justification_es": "la atención al cliente no depende solo de quien recibe; requiere coordinación con quien realiza el servicio, con almacén, con agenda, con responsables técnicos y con el equipo en caso de incidencias o reclamaciones. La FCT consolida esta competencia en contexto real."
+    },
+    {
+      "title_es": "Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles",
+      "justification_es": "el cliente debe comprender las distintas opciones y sus resultados: tipo de manicura, depilación, maquillaje, peinado, coloración o tratamiento capilar. La atención al cliente exige traducir conocimientos técnicos a un lenguaje claro, honesto y adaptado, diferenciando información de publicidad."
+    },
+    {
+      "title_es": "Comunicación escrita, documentos de servicio, fichas, formularios y TIC",
+      "justification_es": "la atención al cliente se apoya en documentos: citas, fichas técnicas, consentimientos, presupuestos, encuestas, hojas de reclamación, justificantes e informes. La competencia escrita y digital permite registrar correctamente el servicio y compartir información con el equipo."
+    },
+    {
+      "title_es": "Tipologías de público, diversidad, inclusión y adaptación del trato",
+      "justification_es": "el alumnado debe adaptar la comunicación a distintos públicos: cliente joven, mayor, indeciso, extranjero, con discapacidad, proveedor o público general. La diversidad cultural, lingüística y social trabajada en Comunicación y sociedad se aplica directamente al trato profesional."
+    },
+    {
+      "title_es": "Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles",
+      "justification_es": "el cliente debe comprender las distintas opciones y sus resultados: tipo de manicura, depilación, maquillaje, peinado, coloración o tratamiento capilar. La atención al cliente exige traducir conocimientos técnicos a un lenguaje claro, honesto y adaptado, diferenciando información de publicidad."
+    },
+    {
+      "title_es": "Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo",
+      "justification_es": "la comunicación oral atraviesa todos los módulos: explicar un diagnóstico, un tiempo de exposición, un acabado, un cuidado posterior o una incidencia. Comunicación y sociedad I y II son el soporte principal de la escucha activa, la expresión oral y la conversación en castellano e inglés."
+    },
+    {
+      "title_es": "Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional",
+      "justification_es": "la pulcritud, el respeto y la actitud profesional son parte del servicio. En peluquería y estética el profesional trabaja con la imagen, la intimidad y la confianza del cliente, por lo que debe mostrar higiene, responsabilidad, discreción, cordialidad y colaboración con el equipo."
+    },
+    {
+      "title_es": "Información sobre tiempos, fases del servicio, resultados y cuidados posteriores",
+      "justification_es": "el cliente debe conocer qué se le va a realizar, cuánto durará, qué resultado puede esperar y qué cuidados debe seguir después. Esta información depende de los tiempos técnicos de exposición, secado, aplicación, acabado y mantenimiento, presentes en los módulos prácticos y apoyados por matemáticas básicas."
+    },
+    {
+      "title_es": "Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes",
+      "justification_es": "el profesional debe informar con rigor y no confundir asesoramiento técnico con publicidad. Esta competencia es esencial al hablar de cosméticos, tintes, ceras, fijadores, productos de uñas o maquillaje, cuyos mensajes comerciales pueden generar expectativas poco realistas."
+    },
+    {
+      "title_es": "Satisfacción, conformidad, fidelización, calidad y mejora continua",
+      "justification_es": "la calidad no termina con la ejecución técnica. Debe recogerse conformidad, detectar objeciones, corregir deficiencias, fidelizar y compartir información con el equipo. Este ciclo de mejora aparece en todos los servicios prácticos y puede analizarse con encuestas, tablas y gráficos."
+    },
+    {
+      "title_es": "Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos",
+      "justification_es": "las reclamaciones pueden surgir por expectativas no cumplidas, irritaciones, errores técnicos, tiempos de espera o falta de información. El alumnado debe actuar con calma, ofrecer alternativas, conocer documentos básicos y compartir la incidencia con el equipo. Comunicación y sociedad aporta argumentación, respeto y comprensión de derechos/deberes."
+    },
+    {
+      "title_es": "Calidad, seguridad, sostenibilidad y responsabilidad legal en la prestación del servicio",
+      "justification_es": "informar al cliente de características, garantías, obligaciones y reclamaciones exige que el servicio se realice con calidad, seguridad, higiene, prevención de riesgos y respeto medioambiental. Ciencias aplicadas aporta conocimientos sobre energía, electricidad, química, contaminación, desinfección y salud."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3005_c1_1",
+      "title_es": "Role-play de recepción en salón: “Primera impresión en 30 segundos”",
+      "motivatingFactor_es": "el alumnado comprueba cómo cambia la percepción del cliente en los primeros segundos de contacto. | grabar una versión breve tipo Reel educativo —sin publicar si no hay autorización— y analizar lenguaje verbal, mirada, postura y tono.",
+      "description_es": "por parejas, una persona hace de cliente y otra de profesional. Deben saludar, sonreír, preguntar el servicio, confirmar cita y acompañar al puesto.",
+      "evidence_es": "vídeo interno o demostración en clase con rúbrica de acogida.",
+      "diversitySupport_es": "saludo profesional, cortesía, seguridad, comunicación no verbal e imagen personal.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c1_2",
+      "title_es": "Manual de bienvenida al cliente: “Así se atiende en nuestro salón”",
+      "motivatingFactor_es": "crear una guía visual como si el aula-taller fuera un salón real con marca propia. | formato carrusel de Instagram o guía de bienvenida con iconos y frases cortas.",
+      "description_es": "equipos diseñan normas de recepción: cómo saludar, cómo preguntar, cómo acompañar, cómo actuar si el cliente llega tarde o está nervioso.",
+      "evidence_es": "manual visual impreso o digital para el aula-taller.",
+      "diversitySupport_es": "comunicación clara, identidad de empresa, protocolos y trato profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c1_3",
+      "title_es": "Simulación de recepción bilingüe: “Cliente turista en el salón”",
+      "motivatingFactor_es": "conectar con situaciones reales de zonas turísticas y clientes extranjeros. | tarjetas de frases rápidas tipo “survival kit” para el mostrador.",
+      "description_es": "preparar diálogos sencillos en castellano e inglés: saludo, servicio solicitado, hora, alergias, duración aproximada y despedida.",
+      "evidence_es": "mini guía bilingüe de recepción.",
+      "diversitySupport_es": "inglés funcional, seguridad comunicativa, atención inclusiva y vocabulario profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c1_4",
+      "title_es": "Observación de primeras impresiones: “¿Qué transmite tu imagen?”",
+      "motivatingFactor_es": "analizar cómo uniforme, higiene, postura y actitud influyen en la confianza del cliente. | crear un semáforo visual de imagen profesional: verde, amarillo y rojo.",
+      "description_es": "el alumnado observa fotos o situaciones simuladas y valora aspectos positivos y mejorables.",
+      "evidence_es": "rúbrica de imagen profesional y checklist personal antes de entrar al taller.",
+      "diversitySupport_es": "pulcritud, autocuidado, deontología, respeto y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c1_5",
+      "title_es": "Circuito de acogida por servicios: “Cada cliente necesita algo distinto”",
+      "motivatingFactor_es": "trabajar con clientes ficticios muy variados: maquillaje para fiesta, corte urgente, depilación de cejas, manicura para evento, coloración. | formato “misión de salón”, con puntos por rapidez, claridad, respeto y acierto.",
+      "description_es": "cada equipo recibe tarjetas de cliente y debe decidir cómo recibirlo, qué preguntar y a qué zona derivarlo.",
+      "evidence_es": "circuito representado en el aula con roles rotativos.",
+      "diversitySupport_es": "adaptación, escucha, organización del servicio y atención personalizada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c1_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Recepción, acogida, comportamiento profesional y primera impresión en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Recepción, acogida, comportamiento profesional y primera impresión.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c1_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Recepción, acogida, comportamiento profesional y primera impresión en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Recepción, acogida, comportamiento profesional y primera impresión.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_1",
+      "title_es": "Guion de entrevista por servicios: “Preguntar bien evita problemas”",
+      "motivatingFactor_es": "mostrar que una buena pregunta puede prevenir alergias, malos resultados o reclamaciones. | tarjetas tipo chatbot con preguntas y posibles respuestas del cliente.",
+      "description_es": "crear guiones para maquillaje, coloración, depilación, uñas, lavado y peinado.",
+      "evidence_es": "banco de preguntas profesionales para el aula-taller.",
+      "diversitySupport_es": "escucha activa, formulación de preguntas, seguridad y diagnóstico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_2",
+      "title_es": "Ficha única de cliente: “Conoce a tu cliente como un profesional”",
+      "motivatingFactor_es": "simular una ficha digital de salón moderno. | incluir apartado “imagen de referencia” para que el cliente muestre un look visto en redes.",
+      "description_es": "diseñar una ficha con datos, alergias, historial, preferencias, redes de inspiración, servicio solicitado y observaciones.",
+      "evidence_es": "formulario digital o impreso.",
+      "diversitySupport_es": "recogida de información, orden, confidencialidad, TIC y atención personalizada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_3",
+      "title_es": "Escucha activa con reformulación: “Lo que el cliente dice… y lo que quiere decir”",
+      "motivatingFactor_es": "trabajar malentendidos habituales: “quiero algo natural”, “solo las puntas”, “no muy corto”, “un maquillaje sencillo”. | usar audios breves o mensajes simulados de WhatsApp para interpretar solicitudes.",
+      "description_es": "el profesional debe reformular: “Entonces, ¿quieres…?” antes de iniciar el servicio.",
+      "evidence_es": "lista de frases de confirmación profesional.",
+      "diversitySupport_es": "escucha, empatía, precisión, prevención de errores y comunicación clara.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_4",
+      "title_es": "Entrevista con cliente difícil: “Mantén la calma”",
+      "motivatingFactor_es": "simular situaciones reales: cliente con prisa, indeciso, enfadado, que no sabe explicar lo que quiere o que trae expectativas imposibles. | dinámica tipo reality profesional, pero evaluando respeto y solución, no dramatismo.",
+      "description_es": "role-play con tarjetas de personalidad y objetivos ocultos.",
+      "evidence_es": "rúbrica de actuación ante cliente complejo.",
+      "diversitySupport_es": "autocontrol, empatía, adaptación del discurso y resolución de conflictos.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_5",
+      "title_es": "Análisis de casos: “Detecta la pregunta clave”",
+      "motivatingFactor_es": "resolver pequeños casos de salón en equipos. | gamificación con cartas de “pregunta correcta”, “pregunta incompleta” y “riesgo”.",
+      "description_es": "ante cada caso, deben elegir tres preguntas imprescindibles antes de actuar: alergias, eventos, historial, sensibilidad, tiempo disponible.",
+      "evidence_es": "árbol de preguntas previas según servicio.",
+      "diversitySupport_es": "razonamiento profesional, diagnóstico, seguridad y toma de decisiones.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Entrevista, escucha activa y recogida de información previa en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Entrevista, escucha activa y recogida de información previa.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c2_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Entrevista, escucha activa y recogida de información previa en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Entrevista, escucha activa y recogida de información previa.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_1",
+      "title_es": "Circuito de diagnóstico integral: “Beauty detective”",
+      "motivatingFactor_es": "convertir al alumnado en detectives de imagen personal. | expediente visual de cliente, como si fuera un caso de investigación.",
+      "description_es": "estaciones de cabello, piel, uñas, cejas/vello y estilo personal. En cada una recogen pistas.",
+      "evidence_es": "informe de diagnóstico y propuesta de servicio.",
+      "diversitySupport_es": "observación, análisis, comunicación, salud y coordinación entre módulos.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_2",
+      "title_es": "Caso de cliente nuevo: “Diseña su primera experiencia”",
+      "motivatingFactor_es": "simular la llegada de un cliente que nunca ha estado en el salón. | moodboard con referencias de estilo, colores y preferencias.",
+      "description_es": "equipos reciben un perfil: adolescente para graduación, persona mayor, cliente con alergia, cliente que quiere cambio de look.",
+      "evidence_es": "propuesta personalizada con pasos, precauciones y servicio recomendado.",
+      "diversitySupport_es": "asesoramiento, empatía, diagnóstico técnico y comunicación comercial.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_3",
+      "title_es": "Panel de contraindicaciones: “Señales de alerta”",
+      "motivatingFactor_es": "aprender a decir “no” o “mejor consultarlo” de forma profesional. | semáforo visual: realizar, adaptar, consultar o derivar.",
+      "description_es": "elaborar un panel con lesiones, alergias, infecciones, irritaciones, cabello dañado, pediculosis o alteraciones ungulares.",
+      "evidence_es": "panel de seguridad del taller.",
+      "diversitySupport_es": "prevención, límites profesionales, responsabilidad y atención segura.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_4",
+      "title_es": "Entrevista y observación combinada: “Pregunta, mira y confirma”",
+      "motivatingFactor_es": "unir comunicación y técnica en una simulación realista. | grabación breve para autoevaluarse y mejorar el lenguaje corporal.",
+      "description_es": "el alumno entrevista y observa antes de recomendar un servicio; otro compañero evalúa si hizo preguntas suficientes.",
+      "evidence_es": "ficha completada y autoevaluación.",
+      "diversitySupport_es": "escucha activa, diagnóstico, seguridad y mejora profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_5",
+      "title_es": "Informe breve de diagnóstico: “Lo importante en una página”",
+      "motivatingFactor_es": "aprender a sintetizar, habilidad útil en empresa. | plantilla visual tipo ficha de app.",
+      "description_es": "tras el diagnóstico, redactan una página con necesidad, observaciones, riesgos, técnica recomendada y cuidados.",
+      "evidence_es": "informe profesional simplificado.",
+      "diversitySupport_es": "síntesis, documentación, comunicación escrita y criterio técnico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diagnóstico técnico y detección de necesidades antes del servicio en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diagnóstico técnico y detección de necesidades antes del servicio.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c3_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diagnóstico técnico y detección de necesidades antes del servicio en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diagnóstico técnico y detección de necesidades antes del servicio.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_1",
+      "title_es": "Atención a perfiles distintos: “Cada persona, una atención”",
+      "motivatingFactor_es": "trabajar con personajes variados y realistas. | tarjetas de personaje con necesidades y emociones.",
+      "description_es": "cliente adolescente, mayor, extranjero, con prisa, indeciso, tímido, con discapacidad o proveedor.",
+      "evidence_es": "simulaciones con feedback.",
+      "diversitySupport_es": "adaptación, empatía, comunicación y diversidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_2",
+      "title_es": "Guía de lenguaje inclusivo en salón: “Hablar con respeto”",
+      "motivatingFactor_es": "evitar comentarios que pueden incomodar sobre cuerpo, edad, género, piel o cabello. | dinámica “cambia la frase”.",
+      "description_es": "transformar frases poco adecuadas en frases profesionales y respetuosas.",
+      "evidence_es": "guía de lenguaje inclusivo.",
+      "diversitySupport_es": "respeto, igualdad, atención personalizada y convivencia.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_3",
+      "title_es": "Servicio adaptado: “Accesibilidad también es calidad”",
+      "motivatingFactor_es": "comprender que un buen servicio debe poder adaptarse. | reto de rediseñar el recorrido del cliente en el salón.",
+      "description_es": "diseñar cómo atender a una persona con movilidad reducida, dificultad auditiva, ansiedad o sensibilidad cutánea.",
+      "evidence_es": "protocolo de accesibilidad básica.",
+      "diversitySupport_es": "inclusión, ergonomía, comunicación y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_4",
+      "title_es": "Situaciones interculturales: “Belleza en distintas culturas”",
+      "motivatingFactor_es": "reconocer diversidad de gustos, costumbres y preferencias. | moodboard multicultural respetuoso.",
+      "description_es": "investigar estilos de peinado, maquillaje, cuidado personal o normas de trato en distintos contextos culturales.",
+      "evidence_es": "presentación breve por equipos.",
+      "diversitySupport_es": "diversidad cultural, respeto, comunicación y estética.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_5",
+      "title_es": "Mapa de públicos del salón: “No todos son clientes”",
+      "motivatingFactor_es": "entender quién entra en contacto con un salón: clientes, proveedores, público, equipo, responsables, repartidores. | mapa visual de relaciones tipo red social profesional.",
+      "description_es": "identificar cómo cambia el lenguaje y la información según la persona.",
+      "evidence_es": "mapa de públicos y normas de comunicación.",
+      "diversitySupport_es": "comunicación comercial, roles, adaptación y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Tipologías de público, diversidad, inclusión y adaptación del trato en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Tipologías de público, diversidad, inclusión y adaptación del trato.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c12_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Tipologías de público, diversidad, inclusión y adaptación del trato en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Tipologías de público, diversidad, inclusión y adaptación del trato.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_1",
+      "title_es": "Salón simulado por roles: “Un día real de trabajo”",
+      "motivatingFactor_es": "vivir una jornada de salón con papeles diferentes. | cada equipo tiene una agenda con imprevistos.",
+      "description_es": "roles: recepción, técnico, ayudante, almacén, higiene, calidad y reclamaciones.",
+      "evidence_es": "servicio simulado completo.",
+      "diversitySupport_es": "coordinación, responsabilidad, comunicación interna y trabajo en equipo.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_2",
+      "title_es": "Parte interno de incidencia: “El equipo debe saberlo”",
+      "motivatingFactor_es": "aprender a comunicar problemas sin culpar. | formato de mensaje profesional interno, no informal.",
+      "description_es": "redactar incidencias: alergia, retraso, producto agotado, queja, aparato defectuoso.",
+      "evidence_es": "parte de incidencia.",
+      "diversitySupport_es": "documentación, comunicación, solución de problemas y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_3",
+      "title_es": "Reunión breve de equipo: “Briefing de salón”",
+      "motivatingFactor_es": "simular reuniones rápidas como en empresas reales. | reunión de pie de 5 minutos estilo equipo profesional.",
+      "description_es": "antes de la práctica, revisar agenda, clientes, materiales, riesgos y tiempos.",
+      "evidence_es": "acta breve o checklist.",
+      "diversitySupport_es": "planificación, escucha, liderazgo y organización.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_4",
+      "title_es": "Rotación de puestos: “Hoy no haces lo de siempre”",
+      "motivatingFactor_es": "evitar que siempre participen los mismos de la misma manera. | insignias por rol superado.",
+      "description_es": "cada alumno pasa por atención, técnica, higiene, documentación y observación.",
+      "evidence_es": "tabla de roles y autoevaluación.",
+      "diversitySupport_es": "autonomía, inclusión, responsabilidad y visión global del salón.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_5",
+      "title_es": "Simulación de FCT: “Primer día en empresa”",
+      "motivatingFactor_es": "preparar una experiencia que vivirán en prácticas. | ambiente realista con uniforme, agenda, fichas y evaluación profesional.",
+      "description_es": "seguir instrucciones de un responsable, atender, registrar, preparar, informar y comunicar incidencias.",
+      "evidence_es": "rúbrica de desempeño y reflexión.",
+      "diversitySupport_es": "empleabilidad, normas de empresa, comunicación y madurez profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, comunicación interna y coordinación profesional en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, comunicación interna y coordinación profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c13_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Trabajo en equipo, comunicación interna y coordinación profesional en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Trabajo en equipo, comunicación interna y coordinación profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_1",
+      "title_es": "Catálogo de servicios explicado: “Menú beauty realista”",
+      "motivatingFactor_es": "diseñar una carta de servicios atractiva, como la de un salón moderno. | diseño tipo carta digital con iconos, precios ficticios y advertencias claras.",
+      "description_es": "incluir manicura, maquillaje, depilación, lavado, coloración y peinados con duración, resultado y cuidados.",
+      "evidence_es": "catálogo de servicios del aula-taller.",
+      "diversitySupport_es": "comunicación comercial, síntesis técnica, información veraz y diseño.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_2",
+      "title_es": "Role-play de asesoramiento: “Elige la mejor opción”",
+      "motivatingFactor_es": "trabajar situaciones donde el cliente no sabe qué servicio elegir. | usar imágenes de inspiración de redes y aprender a ajustar expectativas.",
+      "description_es": "el alumno ofrece dos o tres opciones, explica ventajas, limitaciones, tiempo, mantenimiento y resultado.",
+      "evidence_es": "diálogo profesional evaluado.",
+      "diversitySupport_es": "argumentación, escucha, asesoramiento y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_3",
+      "title_es": "Comparativa información-publicidad: “No vendas humo”",
+      "motivatingFactor_es": "analizar mensajes de cosmética viral. | dinámica “red flags” de anuncios exagerados.",
+      "description_es": "distinguir promesas publicitarias de información técnica real: duración, cobertura, acabado, riesgos, mantenimiento.",
+      "evidence_es": "ficha de publicidad responsable.",
+      "diversitySupport_es": "pensamiento crítico, ética, comunicación y consumo responsable.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_4",
+      "title_es": "Presupuesto orientativo: “Pack evento”",
+      "motivatingFactor_es": "crear un paquete para graduación, festival, entrevista, boda familiar o sesión de fotos. | presentación tipo pitch de emprendimiento joven.",
+      "description_es": "calcular precio ficticio, tiempo y servicios incluidos, explicando por qué conviene al cliente.",
+      "evidence_es": "presupuesto visual y defensa oral.",
+      "diversitySupport_es": "cálculo básico, comunicación, emprendimiento y atención personalizada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_5",
+      "title_es": "Asesoría integral de imagen: “Look completo para una ocasión”",
+      "motivatingFactor_es": "diseñar una experiencia completa de salón. | moodboard digital con estética elegida: urbano, natural, glam, festival, minimalista.",
+      "description_es": "combinar peinado, color, maquillaje, uñas y depilación de cejas según evento, estilo y presupuesto.",
+      "evidence_es": "propuesta de imagen integral.",
+      "diversitySupport_es": "coordinación entre módulos, creatividad, comunicación y justificación técnica.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c4_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Asesoramiento técnico sobre opciones, características, calidades y acabados previsibles.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_1",
+      "title_es": "Formulario digital de cliente: “Registro profesional en 5 minutos”",
+      "motivatingFactor_es": "usar herramientas digitales como un salón actual. | diseño responsive y visual con iconos.",
+      "description_es": "crear formulario con datos, servicio, alergias, preferencias, consentimiento y satisfacción.",
+      "evidence_es": "ficha digital del aula-taller.",
+      "diversitySupport_es": "TIC, escritura clara, orden y documentación profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_2",
+      "title_es": "Hoja de reclamación simulada: “Documentar sin ponerse nervioso”",
+      "motivatingFactor_es": "practicar una situación incómoda de forma segura. | caso simulado a partir de una reseña negativa ficticia en internet.",
+      "description_es": "rellenar hoja de reclamación con datos de cliente, motivo, respuesta ofrecida y firma.",
+      "evidence_es": "hoja cumplimentada correctamente.",
+      "diversitySupport_es": "documentación, legislación básica, calma y precisión.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_3",
+      "title_es": "Ficha técnica por servicio: “Cada técnica deja huella”",
+      "motivatingFactor_es": "comprender que un buen registro evita errores futuros. | plantilla tipo app con apartados desplegables o códigos de color.",
+      "description_es": "fichas para uñas, depilación, maquillaje, lavado, permanente y coloración.",
+      "evidence_es": "pack de fichas técnicas del ciclo.",
+      "diversitySupport_es": "comunicación escrita, memoria profesional, seguridad y continuidad del servicio.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_4",
+      "title_es": "Base de datos de servicios: “Panel de control del salón”",
+      "motivatingFactor_es": "simular la gestión de un negocio real. | dashboard sencillo con tablas y gráficos.",
+      "description_es": "registrar citas, duración, productos, incidencias, satisfacción y responsable del servicio.",
+      "evidence_es": "panel de gestión del salón simulado.",
+      "diversitySupport_es": "TIC, datos, organización, matemáticas y calidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_5",
+      "title_es": "Informe de práctica: “Qué hice, qué salió bien y qué mejoro”",
+      "motivatingFactor_es": "convertir cada práctica en aprendizaje consciente. | formato portfolio profesional con fotos autorizadas.",
+      "description_es": "redactar objetivo, materiales, procedimiento, resultado, error y mejora.",
+      "evidence_es": "informe individual o de equipo.",
+      "diversitySupport_es": "reflexión, escritura, autoevaluación y mejora continua.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación escrita, documentos de servicio, fichas, formularios y TIC en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación escrita, documentos de servicio, fichas, formularios y TIC.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c6_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación escrita, documentos de servicio, fichas, formularios y TIC en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación escrita, documentos de servicio, fichas, formularios y TIC.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_1",
+      "title_es": "Presentación oral de un servicio: “Explícalo como profesional”",
+      "motivatingFactor_es": "practicar hablar en público con un tema cercano y práctico. | formato vídeo de 60 segundos o presentación estilo pitch.",
+      "description_es": "cada equipo presenta un servicio: maquillaje social, depilación, lavado, color o manicura.",
+      "evidence_es": "exposición con vocabulario técnico y visual.",
+      "diversitySupport_es": "expresión oral, seguridad, orden del discurso y vocabulario profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_2",
+      "title_es": "Minidiálogos técnicos: “Frases que salvan servicios”",
+      "motivatingFactor_es": "aprender frases útiles para evitar malentendidos. | tarjetas coleccionables de frases profesionales.",
+      "description_es": "practicar expresiones: “¿Puedes explicarme un poco más?”, “voy a comprobarlo”, “el resultado esperado es…”.",
+      "evidence_es": "repertorio de frases para el taller.",
+      "diversitySupport_es": "claridad, cortesía, escucha activa y resolución de dudas.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_3",
+      "title_es": "Atención telefónica simulada: “Coge la llamada”",
+      "motivatingFactor_es": "superar el miedo a hablar por teléfono, frecuente en adolescentes. | también se simulan mensajes de WhatsApp profesional, diferenciando lenguaje formal e informal.",
+      "description_es": "llamadas simuladas para pedir cita, preguntar precio, cambiar hora o consultar un servicio.",
+      "evidence_es": "guion de atención telefónica y digital.",
+      "diversitySupport_es": "comunicación oral, registro adecuado, agenda y cortesía.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_4",
+      "title_es": "Exposición de productos: “Unboxing profesional”",
+      "motivatingFactor_es": "aprovechar el formato de unboxing, pero con rigor técnico. | estilo reseña responsable, no publicidad engañosa.",
+      "description_es": "presentar un producto: qué es, para qué sirve, cómo se aplica, precauciones, conservación y para qué cliente conviene.",
+      "evidence_es": "presentación o vídeo interno.",
+      "diversitySupport_es": "vocabulario, ciencia aplicada, comunicación comercial y ética.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_5",
+      "title_es": "Debate de atención profesional: “¿Qué harías si…?”",
+      "motivatingFactor_es": "debatir casos reales y cercanos. | tarjetas de dilemas y votación con argumentos.",
+      "description_es": "situaciones: cliente llega tarde, habla mal, quiere resultado imposible, se queja, usa el móvil durante el servicio.",
+      "evidence_es": "decálogo de actuación profesional.",
+      "diversitySupport_es": "argumentación, respeto, empatía y toma de decisiones.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c5_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Comunicación oral clara, vocabulario comercial y técnico, expresión ante grupo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_1",
+      "title_es": "Código de conducta del salón: “Nuestra forma de trabajar”",
+      "motivatingFactor_es": "que el grupo cree sus propias normas profesionales. | diseño de póster tipo manifiesto de marca.",
+      "description_es": "consensuar normas de respeto, confidencialidad, higiene, puntualidad, lenguaje y trato inclusivo.",
+      "evidence_es": "código de conducta firmado por la clase.",
+      "diversitySupport_es": "deontología, convivencia, responsabilidad y trabajo en equipo.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_2",
+      "title_es": "Rúbrica de actitud profesional: “Más que técnica”",
+      "motivatingFactor_es": "visibilizar que la actitud también se evalúa y mejora. | insignias de progreso: actitud pro, comunicación top, equipo responsable.",
+      "description_es": "crear indicadores: puntualidad, uniforme, tono, escucha, higiene, colaboración y respeto.",
+      "evidence_es": "rúbrica de autoevaluación y coevaluación.",
+      "diversitySupport_es": "profesionalidad, autoestima, hábitos y mejora.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_3",
+      "title_es": "Debate de dilemas éticos: “No todo vale”",
+      "motivatingFactor_es": "tratar temas cercanos: comentarios sobre cuerpos, confidencialidad, fotos, redes, burlas o presión estética. | casos relacionados con subir fotos de trabajos a redes sin permiso.",
+      "description_es": "analizar dilemas y decidir actuación profesional.",
+      "evidence_es": "protocolo de respeto e imagen en redes.",
+      "diversitySupport_es": "ética, privacidad, respeto, diversidad y ciudadanía.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_4",
+      "title_es": "Simulación de cliente vulnerable: “Atender con sensibilidad”",
+      "motivatingFactor_es": "desarrollar empatía real. | role-play con observadores de lenguaje inclusivo y trato respetuoso.",
+      "description_es": "perfiles: cliente tímido, mayor, con inseguridad, con discapacidad, adolescente nervioso o persona que no habla bien español.",
+      "evidence_es": "guía de atención sensible.",
+      "diversitySupport_es": "empatía, inclusión, comunicación y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_5",
+      "title_es": "Autoevaluación de imagen profesional: “Mi marca personal”",
+      "motivatingFactor_es": "conectar imagen profesional con empleabilidad. | crear un “perfil profesional” ficticio, no público, con fortalezas y objetivos.",
+      "description_es": "cada alumno revisa su presentación para taller: higiene, uniforme, cabello, manos, actitud y lenguaje.",
+      "evidence_es": "plan personal de mejora profesional.",
+      "diversitySupport_es": "autoconocimiento, responsabilidad, empleabilidad y cuidado personal.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c7_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Imagen personal, pulcritud, respeto, actitud conciliadora y deontología profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_1",
+      "title_es": "Hoja de cuidados posteriores: “Que el resultado dure”",
+      "motivatingFactor_es": "crear consejos útiles que el cliente se llevaría a casa. | tarjeta con QR a vídeo explicativo creado por el alumnado.",
+      "description_es": "cuidados tras coloración, depilación, maquillaje, manicura, lavado o permanente.",
+      "evidence_es": "pack de tarjetas postservicio.",
+      "diversitySupport_es": "comunicación escrita, seguridad, fidelización y claridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_2",
+      "title_es": "Cronograma de servicio integral: “Todo a tiempo para el evento”",
+      "motivatingFactor_es": "simular preparación para graduación, fiesta, festival o sesión de fotos. | plantilla visual tipo calendario digital.",
+      "description_es": "organizar servicios en orden lógico, calculando duración y tiempos de espera.",
+      "evidence_es": "planning de servicio integral.",
+      "diversitySupport_es": "organización, tiempos, coordinación y atención al cliente.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_3",
+      "title_es": "Explicación de tiempos al cliente: “Sin estrés ni falsas promesas”",
+      "motivatingFactor_es": "aprender a gestionar expectativas. | audios simulados de WhatsApp profesional.",
+      "description_es": "practicar frases para comunicar duración, retrasos o tiempos de exposición.",
+      "evidence_es": "banco de respuestas para explicar tiempos.",
+      "diversitySupport_es": "comunicación, honestidad, gestión de espera y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_4",
+      "title_es": "Comparativa de mantenimiento: “¿Cuánto dura cada servicio?”",
+      "motivatingFactor_es": "responder preguntas frecuentes del cliente. | infografía estilo “ranking de duración”.",
+      "description_es": "comparar duración de maquillaje, peinado, color, manicura, depilación y decoloración.",
+      "evidence_es": "tabla visual de mantenimiento.",
+      "diversitySupport_es": "información técnica, asesoramiento y fidelización.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_5",
+      "title_es": "Infografía de fases del servicio: “Paso a paso sin tecnicismos”",
+      "motivatingFactor_es": "explicar procesos de forma sencilla y visual. | diseño tipo carrusel de redes.",
+      "description_es": "elegir un servicio y representar fases: preparación, aplicación, tiempo, acabado, cuidados.",
+      "evidence_es": "infografía para el cliente.",
+      "diversitySupport_es": "síntesis, comunicación visual y claridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c8_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Información sobre tiempos, fases del servicio, resultados y cuidados posteriores.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_1",
+      "title_es": "Análisis de anuncios de cosmética: “¿Promesa o realidad?”",
+      "motivatingFactor_es": "analizar mensajes que ven en redes, tiendas o influencers. | dinámica de “red flags” publicitarias.",
+      "description_es": "revisar anuncios ficticios o reales y separar datos técnicos, emociones, exageraciones y omisiones.",
+      "evidence_es": "ficha de análisis crítico.",
+      "diversitySupport_es": "pensamiento crítico, comunicación, consumo responsable y ética.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_2",
+      "title_es": "Ficha objetiva de producto: “Traductor profesional”",
+      "motivatingFactor_es": "convertir lenguaje publicitario en información útil para un cliente. | formato “lo que promete / lo que realmente puedo decir”.",
+      "description_es": "elegir un producto y redactar qué hace, cómo se usa, para quién, límites y precauciones.",
+      "evidence_es": "ficha técnica simplificada.",
+      "diversitySupport_es": "síntesis, veracidad, atención al cliente y lectura de etiquetas.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_3",
+      "title_es": "Comparativa de etiquetas: “Lee antes de recomendar”",
+      "motivatingFactor_es": "trabajar con productos del taller. | ranking de etiquetas más claras y menos claras.",
+      "description_es": "comparar ingredientes, precauciones, modo de empleo, duración y conservación.",
+      "evidence_es": "tabla comparativa.",
+      "diversitySupport_es": "lectura comprensiva, ciencia aplicada, seguridad y comunicación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_4",
+      "title_es": "Campaña comercial ética: “Vender sin engañar”",
+      "motivatingFactor_es": "crear publicidad atractiva pero responsable. | spot de 30 segundos para redes, con información clara.",
+      "description_es": "diseñar folleto, cartel o vídeo de un servicio evitando promesas imposibles.",
+      "evidence_es": "campaña comercial ética.",
+      "diversitySupport_es": "creatividad, ética, comunicación comercial y diseño.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_5",
+      "title_es": "Debate sobre influencers y estética: “No todo lo viral sirve para todos”",
+      "motivatingFactor_es": "conectar con referentes digitales del alumnado. | debate con ejemplos de filtros, retoques y tendencias.",
+      "description_es": "analizar cómo las redes influyen en expectativas sobre piel, cabello, cuerpo y belleza.",
+      "evidence_es": "decálogo para consumir contenido beauty con criterio.",
+      "diversitySupport_es": "ciudadanía digital, autoestima, diversidad y pensamiento crítico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c11_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Diferenciación entre información y publicidad, comunicación comercial y uso crítico de mensajes.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_1",
+      "title_es": "Encuesta de satisfacción común: “Tu opinión mejora el salón”",
+      "motivatingFactor_es": "recoger opiniones como hacen los negocios reales. | encuesta digital con gráficos automáticos.",
+      "description_es": "crear encuesta breve con escala de emojis y preguntas sobre trato, tiempo, higiene y resultado.",
+      "evidence_es": "encuesta común del taller.",
+      "diversitySupport_es": "calidad, datos, escucha al cliente y mejora.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_2",
+      "title_es": "Rúbrica de calidad percibida: “Lo técnico y lo emocional”",
+      "motivatingFactor_es": "entender que la calidad incluye resultado y experiencia. | comparar “servicio correcto” frente a “experiencia memorable”.",
+      "description_es": "valorar comodidad, trato, explicación, limpieza, tiempo, acabado y confianza.",
+      "evidence_es": "rúbrica de calidad de servicio.",
+      "diversitySupport_es": "empatía, atención, análisis y mejora continua.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_3",
+      "title_es": "Análisis de resultados: “Datos que hablan”",
+      "motivatingFactor_es": "usar gráficos para tomar decisiones. | panel visual tipo dashboard.",
+      "description_es": "recopilar encuestas simuladas y representar resultados: satisfacción media, aspectos mejor valorados y peor valorados.",
+      "evidence_es": "informe de satisfacción del salón.",
+      "diversitySupport_es": "matemáticas, TIC, calidad y toma de decisiones.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_4",
+      "title_es": "Plan de mejora del salón: “Subimos de nivel”",
+      "motivatingFactor_es": "proponer mejoras reales para el aula-taller. | formato pitch ante la clase.",
+      "description_es": "a partir de encuestas, cada equipo propone tres mejoras: higiene, tiempos, comunicación, organización o ambiente.",
+      "evidence_es": "plan de mejora votado.",
+      "diversitySupport_es": "iniciativa, análisis, comunicación y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_5",
+      "title_es": "Tarjeta de fidelización simulada: “Vuelve, pero con ética”",
+      "motivatingFactor_es": "diseñar estrategias comerciales responsables. | diseño de app o tarjeta digital.",
+      "description_es": "crear una tarjeta con beneficios realistas: revisión, consejo, descuento ficticio, recordatorio de cuidados.",
+      "evidence_es": "propuesta de fidelización ética.",
+      "diversitySupport_es": "marketing responsable, atención, fidelización e información veraz.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Satisfacción, conformidad, fidelización, calidad y mejora continua en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Satisfacción, conformidad, fidelización, calidad y mejora continua.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c9_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Satisfacción, conformidad, fidelización, calidad y mejora continua en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Satisfacción, conformidad, fidelización, calidad y mejora continua.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_1",
+      "title_es": "Role-play de reclamación: “Cliente enfadado, profesional tranquilo”",
+      "motivatingFactor_es": "practicar conflictos sin miedo. | simular también reseña negativa online y respuesta profesional.",
+      "description_es": "casos: color no esperado, maquillaje que no duró, irritación, retraso, manicura defectuosa.",
+      "evidence_es": "actuación grabada o representada con rúbrica.",
+      "diversitySupport_es": "calma, escucha, alternativas y resolución.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_2",
+      "title_es": "Cumplimentación de hoja de reclamación: “Papel importante”",
+      "motivatingFactor_es": "desmitificar documentos legales. | caso basado en chat o mensaje de cliente.",
+      "description_es": "rellenar una hoja con datos, motivo, fecha, respuesta y documentación adjunta.",
+      "evidence_es": "hoja correcta y checklist de documentación.",
+      "diversitySupport_es": "legislación básica, escritura, orden y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_3",
+      "title_es": "Protocolo de objeciones frecuentes: “Responder sin discutir”",
+      "motivatingFactor_es": "preparar respuestas para situaciones incómodas. | tarjetas de respuesta rápida para mostrador.",
+      "description_es": "crear respuestas ante frases como “es muy caro”, “no era lo que quería”, “en TikTok sale mejor”, “tengo prisa”.",
+      "evidence_es": "protocolo de objeciones.",
+      "diversitySupport_es": "comunicación, empatía, argumentación y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_4",
+      "title_es": "Debate sobre derechos del consumidor: “Cliente y profesional tienen derechos”",
+      "motivatingFactor_es": "entender normas desde casos reales y cercanos. | juicio simulado con roles: cliente, profesional, empresa y mediador.",
+      "description_es": "debatir garantías, información veraz, publicidad, reclamaciones y límites del servicio.",
+      "evidence_es": "conclusiones y decálogo legal básico.",
+      "diversitySupport_es": "ciudadanía, legislación, respeto y pensamiento crítico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_5",
+      "title_es": "Informe de incidencia al equipo: “Que no vuelva a pasar”",
+      "motivatingFactor_es": "transformar quejas en aprendizaje. | formato breve tipo parte interno digital.",
+      "description_es": "redactar qué ocurrió, por qué, cómo se actuó y qué mejora se propone.",
+      "evidence_es": "informe de incidencia.",
+      "diversitySupport_es": "comunicación interna, documentación, calidad y prevención.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_6",
+      "title_es": "Reto integrado de salón 6",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c10_7",
+      "title_es": "Reto integrado de salón 7",
+      "motivatingFactor_es": "Reto práctico aplicable directamente a la profesión y entorno real de Atención al cliente.",
+      "description_es": "Aplicación práctica de las técnicas y medidas de seguridad de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos en un entorno simulado de trabajo.",
+      "evidence_es": "Ficha de trabajo completada y producto demostrativo de Reclamaciones, objeciones, legislación básica, garantías y resolución de conflictos.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil."
+    },
+    {
+      "id": "act_3005_c14_1",
+      "title_es": "Carta de calidad del salón: “Lo que prometemos cumplir”",
+      "motivatingFactor_es": "crear compromisos reales como empresa. | diseñar la carta como manifiesto de marca joven.",
+      "description_es": "definir compromisos sobre higiene, seguridad, información, tiempos, trato, sostenibilidad y reclamaciones.",
+      "evidence_es": "carta de calidad visible en el aula.",
+      "diversitySupport_es": "calidad, ética, comunicación y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c14_2",
+      "title_es": "Mapa de riesgos y garantías: “Prevenir también es atender”",
+      "motivatingFactor_es": "relacionar seguridad con confianza del cliente. | mapa visual con iconos por servicio.",
+      "description_es": "identificar riesgos de cada servicio y qué información preventiva debe darse.",
+      "evidence_es": "panel de riesgos e información al cliente.",
+      "diversitySupport_es": "PRL, atención, seguridad y prevención.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c14_3",
+      "title_es": "Plan de sostenibilidad comunicado al cliente: “Eco sin postureo”",
+      "motivatingFactor_es": "crear medidas sostenibles reales y explicables. | campaña tipo “salón eco responsable”, evitando greenwashing.",
+      "description_es": "ahorro de agua, energía, reducción de residuos, reciclaje, uso responsable de productos.",
+      "evidence_es": "plan de sostenibilidad y cartel informativo.",
+      "diversitySupport_es": "medioambiente, comunicación, consumo crítico y responsabilidad social.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c14_4",
+      "title_es": "Caso legal básico: “¿Quién tiene razón?”",
+      "motivatingFactor_es": "resolver un caso como mediadores. | juicio simulado con pruebas: ficha, mensajes, fotos, presupuesto.",
+      "description_es": "situación de falta de información, publicidad exagerada, resultado no esperado o reclamación.",
+      "evidence_es": "resolución razonada del caso.",
+      "diversitySupport_es": "legislación básica, documentación, argumentación y ética.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c14_5",
+      "title_es": "Checklist de calidad integral: “Antes de dar por terminado”",
+      "motivatingFactor_es": "asegurar que el servicio no acaba hasta revisar todo. | lista de control tipo app con niveles: básico, correcto, excelente.",
+      "description_es": "comprobar atención, diagnóstico, seguridad, técnica, higiene, resultado, satisfacción y limpieza final.",
+      "evidence_es": "checklist final del servicio.",
+      "diversitySupport_es": "calidad, autonomía, responsabilidad y mejora continua.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3005_c14_6",
+      "title_es": "Síntesis de conexiones por módulos",
+      "motivatingFactor_es": "",
+      "description_es": "Con 3060 Preparación del entorno profesional",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3005_c14_7",
+      "title_es": "Conclusión",
+      "motivatingFactor_es": "",
+      "description_es": "El módulo 3005. Atención al cliente se relaciona con todos los demás módulos del ciclo porque actúa como eje transversal de la profesionalidad en peluquería y estética. Permite que los conocimientos técnicos se conviertan en un servicio real, comprensible, seguro y satisfactorio para el cliente.",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    }
+  ]
+}

@@ -1,0 +1,891 @@
+{
+  "code": "3011",
+  "name_es": "Comunicación y sociedad I",
+  "criteria": [
+    "3011-1a. Se han descrito mediante el análisis de fuentes gráficas las principales características de un paisaje natural, reconociendo dichos elementos en el entorno más cercano.",
+    "3011-1b. Se han explicado la ubicación, el desplazamiento y la adaptación al medio de los grupos humanos del periodo de la hominización hasta el dominio técnico de los metales de las principales culturas que lo ejemplifican.",
+    "3011-1c. Se han relacionado las características de los hitos artísticos más significativos del periodo prehistórico con la organización social y el cuerpo de creencias, valorando sus diferencias con las sociedades actuales.",
+    "3011-1d. Se ha valorado la pervivencia de estas sociedades en las sociedades actuales, comparado sus principales características.",
+    "3011-1e. Se han discriminado las principales características que requiere el análisis de las obras arquitectónicas y escultóricas mediante ejemplos arquetípicos, diferenciando estilos canónicos.",
+    "3011-1f. Se ha juzgado el impacto de las primeras sociedades humanas en el paisaje natural, analizando las características de las ciudades antiguas y su evolución en la actualidad.",
+    "3011-1g. Se ha analizado la pervivencia en la Península Ibérica y los territorios extrapeninsulares españoles de las sociedades prehistóricas y de la Edad Antigua.",
+    "3011-1h. Se han elaborado instrumentos sencillos de recogida de información mediante estrategias de composición protocolizadas, utilizando tecnologías de la información y la comunicación.",
+    "3011-1i. Se han desarrollado comportamientos acordes con el desarrollo del propio esfuerzo y el trabajo colaborativo.",
+    "3011-2a. Se ha analizado la transformación del mundo antiguo al medieval, analizando la evolución del espacio europeo, sus relaciones con el espacio extraeuropeo y las características más significativas de las sociedades medievales.",
+    "3011-2b. Se han valorado las características de los paisajes agrarios medievales y su pervivencia en las sociedades actuales, identificando sus elementos principales.",
+    "3011-2c. Se han valorado las consecuencias de la construcción de los imperios coloniales en América en las culturas autóctonas y en la europea.",
+    "3011-2d. Se ha analizado el modelo político y social de la monarquía absoluta durante la Edad Moderna en las principales potencias europeas.",
+    "3011-2e. Se han valorado los indicadores demográficos básicos de las transformaciones en la población europea durante el periodo analizado.",
+    "3011-2f. Se han descrito las principales características del análisis de las obras pictóricas a través del estudio de ejemplos arquetípicos de las escuelas y estilos que se suceden en Europa desde el Renacimiento hasta la irrupción de las vanguardias históricas.",
+    "3011-2g. Se ha analizado la evolución del sector o de los sectores productivos propios del perfil del título, analizando sus transformaciones y principales hitos de evolución en sus sistemas organizativos y tecnológicos.",
+    "3011-2h. Se han elaborado instrumentos sencillos de recogida de información mediante estrategias de composición protocolizadas, utilizando las tecnologías de la información y la comunicación.",
+    "3011-2i. Se han desarrollado comportamientos acordes con el desarrollo del propio esfuerzo y el trabajo en equipo.",
+    "3011-3a. Se ha analizado la estructura de textos orales procedentes de los medios de comunicación de actualidad, identificando sus características principales.",
+    "3011-3b. Se han aplicado las habilidades básicas para realizar una escucha activa, identificando el sentido global y contenidos específicos de un mensaje oral.",
+    "3011-3c. Se ha realizado un buen uso de los elementos de comunicación no verbal en las argumentaciones y exposiciones.",
+    "3011-3d. Se han analizado los usos y niveles de la lengua y las normas lingüísticas en la comprensión y composición de mensajes orales, valorando y revisando los usos discriminatorios, específicamente en las relaciones de género.",
+    "3011-3e. Se ha utilizado la terminología gramatical apropiada en la comprensión de las actividades gramaticales propuestas y en la resolución de las mismas.",
+    "3011-4a. Se han valorado y analizado las características principales de los tipos en relación con su idoneidad para el trabajo que desea realizar.",
+    "3011-4b. Se han utilizado herramientas de búsqueda diversas en la comprensión de un texto escrito, aplicando estrategias de reinterpretación de contenidos.",
+    "3011-4c. Se han aplicado, de forma sistemática, estrategias de lectura comprensiva en la comprensión de los textos, extrayendo conclusiones para su aplicación en las actividades de aprendizaje y reconociendo posibles usos discriminatorios desde la perspectiva de género.",
+    "3011-4d. Se ha resumido el contenido de un texto escrito, extrayendo la idea principal, las secundarias y el propósito comunicativo, revisando y reformulando las conclusiones obtenidas.",
+    "3011-4e. Se ha analizado la estructura de distintos textos escritos de utilización diaria, reconociendo usos y niveles de la lengua y pautas de elaboración.",
+    "3011-4f. Se han aplicado las principales normas gramaticales y ortográficas en la redacción de textos de modo que el texto final resulte claro y preciso.",
+    "3011-4g. Se han desarrollado pautas sistemáticas en la elaboración de textos escritos que permitan la valoración de los aprendizajes desarrollados y la reformulación de las necesidades de aprendizaje para mejorar la comunicación escrita.",
+    "3011-4h. Se han observado pautas de presentación de trabajos escritos teniendo en cuenta el contenido, el formato y el público destinatario, utilizando un vocabulario adecuado al contexto.",
+    "3011-4i. Se han resuelto actividades de comprensión y análisis de las estructuras gramaticales, comprobando la validez de las inferencias realizadas.",
+    "3011-5a. Se han contrastado las etapas de evolución de la literatura en lengua castellana en el periodo considerado y reconociendo las obras mayores más representativas.",
+    "3011-5b. Se ha valorado la estructura y el uso del lenguaje de una lectura personal de una obra literaria adecuada al nivel, situándola en su contexto y utilizando instrumentos protocolizados de recogida de información.",
+    "3011-5c. Se han expresado opiniones personales razonadas sobre los aspectos más apreciados y menos apreciados de una obra y sobre la implicación entre su contenido y las propias experiencias vitales.",
+    "3011-5d. Se han aplicado estrategias para la comprensión de textos literarios, teniendo en cuenta de los temas y motivos básicos.",
+    "3011-5e. Se ha presentado información sobre periodos, autores y obras de la literatura en lengua castellana a partir de textos literarios.",
+    "3011-6a. Se han aplicado las estrategias de escucha activa para la comprensión precisa de los mensajes recibidos.",
+    "3011-6b. Se ha identificado la intención comunicativa básica de mensajes directos o recibidos mediante formatos electrónicos, valorando las situaciones de comunicación y sus implicaciones en el uso del vocabulario empleado.",
+    "3011-6c. Se ha identificado el sentido global del texto oral que presenta la información de forma secuenciada y progresiva en situaciones habituales frecuentes y de contenido predecible.",
+    "3011-6d. Se han identificado rasgos fonéticos y de entonación comunes y evidentes que ayudan a entender el sentido general del mensaje.",
+    "3011-6e. Se han realizado presentaciones orales breves de textos descriptivos, narrativos e instructivos, de ámbito personal o profesional, de acuerdo con un guión sencillo, aplicando la estructura de cada tipo de texto y utilizando, en su caso, medios informáticos.",
+    "3011-6f. Se han utilizado estructuras gramaticales básicas y un repertorio esencial y restringido de expresiones, frases y palabras de situaciones habituales frecuentes y de contenido altamente predecible según el propósito comunicativo del texto.",
+    "3011-6g. Se ha expresado con cierta claridad, usando una entonación y pronunciación comprensible, aceptándose las pausas y dudas frecuentes.",
+    "3011-6h. Se ha mostrado una actitud reflexiva y acerca de la información que suponga cualquier tipo de discriminación.",
+    "3011-6i. Se han identificado las normas de relación social básicas y estandarizadas de los países donde se habla la lengua extranjera.",
+    "3011-6j. Se han identificado las costumbres o actividades cotidianas de la comunidad donde se habla la lengua extranjera.",
+    "3011-7a. Se ha dialogado, de forma dirigida y siguiendo un guión bien estructurado utilizando un repertorio memorizado de modelos de oraciones y conversaciones breves y básicas, sobre situaciones habituales frecuentes y de contenido altamente predecible.",
+    "3011-7b. Se ha mantenido la interacción utilizando estrategias de comunicación sencillas para mostrar el interés y la comprensión.",
+    "3011-7c. Se han utilizado estrategias básicas de compensación para suplir carencias en la lengua extranjera.",
+    "3011-7d. Se han utilizado estructuras gramaticales básicas y un repertorio esencial y restringido de expresiones, frases, palabras y marcadores de discurso lineales, según el propósito comunicativo del texto.",
+    "3011-7e. Se ha expresado con cierta claridad, utilizando una entonación y pronunciación comprensible, aceptándose las pausas y dudas frecuentes.",
+    "3011-8a. Se ha leído de forma comprensiva el texto, reconociendo sus rasgos básicos y su contenido global.",
+    "3011-8b. Se han identificado las ideas fundamentales y la intención comunicativa básica del texto.",
+    "3011-8c. Se han identificado estructuras gramaticales básicas y un repertorio limitado de expresiones, frases y palabras y marcadores de discurso lineales, en situaciones habituales frecuentes, de contenido muy predecible.",
+    "3011-8d. Se han completado y reorganizado frases y oraciones, atendiendo al propósito comunicativo, a normas gramaticales básicas.",
+    "3011-8e. Se ha elaborado textos breves, adecuados a un propósito comunicativo, siguiendo modelos estructurados.",
+    "3011-8f. Se ha utilizado el léxico esencial apropiado a situaciones frecuentes y al contexto del ámbito personal o profesional",
+    "3011-8g. Se ha mostrado interés por la buena presentación de los textos escritos, respetado las normas gramaticales, ortográficas y tipográficas y siguiendo sencillas pautas de revisión.",
+    "3011-8h. Se han utilizado diccionarios impresos y online y correctores ortográficos de los procesadores de textos en la composición de los mismos.",
+    "3011-8i. Se ha mostrado una actitud reflexiva y acerca de la información que suponga cualquier tipo de discriminación."
+  ],
+  "connections": [
+    {
+      "title_es": "Conexión curricular: 3011-1a ↔ 3042-8a (Ciencias aplicadas II)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1b ↔ 3042-8a (Ciencias aplicadas II)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1c ↔ 3063-4f (Maquillaje)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1d ↔ 3012-1c (Comunicación y sociedad II)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1e ↔ 3063-4e (Maquillaje)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1f ↔ 3042-11c (Ciencias aplicadas II)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1g ↔ 3012-1e (Comunicación y sociedad II)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1h ↔ 3042-2e (Ciencias aplicadas II)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-1i ↔ 3159-2d (Itinerario personal para la empleabilidad)",
+      "justification_es": "La lectura histórica y artística permite comprender cómo el ser humano se adapta al entorno, transforma paisajes y crea códigos estéticos. Se relaciona con ciencias, sostenibilidad, diseño estético, trabajo colaborativo y cultura profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2a ↔ 3012-1b (Comunicación y sociedad II)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2b ↔ 3042-8a (Ciencias aplicadas II)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2c ↔ 3012-1d (Comunicación y sociedad II)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2d ↔ 3012-2b (Comunicación y sociedad II)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2e ↔ 3042-4g (Ciencias aplicadas II)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2f ↔ 3063-4f (Maquillaje)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2g ↔ 3159-3a (Itinerario personal para la empleabilidad)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2h ↔ 3042-2e (Ciencias aplicadas II)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-2i ↔ 3159-2d (Itinerario personal para la empleabilidad)",
+      "justification_es": "El estudio de Europa, los paisajes agrarios, las transformaciones productivas y los cambios sociales se conecta con el análisis del sector profesional, los datos, la tecnología, la sostenibilidad y la empleabilidad."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-3a ↔ 3005-1d (Atención al cliente)",
+      "justification_es": "La comunicación oral en castellano es imprescindible para escuchar, explicar, argumentar, atender al cliente, trabajar en equipo y utilizar un lenguaje profesional respetuoso e inclusivo."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-3b ↔ 3005-1d (Atención al cliente)",
+      "justification_es": "La comunicación oral en castellano es imprescindible para escuchar, explicar, argumentar, atender al cliente, trabajar en equipo y utilizar un lenguaje profesional respetuoso e inclusivo."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-3c ↔ 3005-1g (Atención al cliente)",
+      "justification_es": "La comunicación oral en castellano es imprescindible para escuchar, explicar, argumentar, atender al cliente, trabajar en equipo y utilizar un lenguaje profesional respetuoso e inclusivo."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-3d ↔ 3005-1h (Atención al cliente)",
+      "justification_es": "La comunicación oral en castellano es imprescindible para escuchar, explicar, argumentar, atender al cliente, trabajar en equipo y utilizar un lenguaje profesional respetuoso e inclusivo."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-3e ↔ 3005-1i (Atención al cliente)",
+      "justification_es": "La comunicación oral en castellano es imprescindible para escuchar, explicar, argumentar, atender al cliente, trabajar en equipo y utilizar un lenguaje profesional respetuoso e inclusivo."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4a ↔ 3042-2e (Ciencias aplicadas II)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4b ↔ 3042-2e (Ciencias aplicadas II)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4c ↔ 3042-2f (Ciencias aplicadas II)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4d ↔ 3064-1g (Lavado y cambios de forma del cabello)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4e ↔ 3005-1i (Atención al cliente)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4f ↔ 3005-4e (Atención al cliente)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4g ↔ 3159-4c (Itinerario personal para la empleabilidad)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4h ↔ 3060-4b (Preparación del entorno profesional)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-4i ↔ 3042-1e (Ciencias aplicadas II)",
+      "justification_es": "La comunicación escrita en castellano se vincula con la búsqueda de información, fichas técnicas, informes, textos profesionales, reclamaciones, presentación de trabajos y reflexión sobre el aprendizaje."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-5a ↔ 3063-4f (Maquillaje)",
+      "justification_es": "La literatura y la construcción del gusto personal pueden conectarse con la estética, la creatividad, el relato de marca, la interpretación de imágenes, la expresión de opiniones y la autoestima profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-5b ↔ 3063-4e (Maquillaje)",
+      "justification_es": "La literatura y la construcción del gusto personal pueden conectarse con la estética, la creatividad, el relato de marca, la interpretación de imágenes, la expresión de opiniones y la autoestima profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-5c ↔ 3159-1c (Itinerario personal para la empleabilidad)",
+      "justification_es": "La literatura y la construcción del gusto personal pueden conectarse con la estética, la creatividad, el relato de marca, la interpretación de imágenes, la expresión de opiniones y la autoestima profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-5d ↔ 3063-4f (Maquillaje)",
+      "justification_es": "La literatura y la construcción del gusto personal pueden conectarse con la estética, la creatividad, el relato de marca, la interpretación de imágenes, la expresión de opiniones y la autoestima profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-5e ↔ 3012-4d (Comunicación y sociedad II)",
+      "justification_es": "La literatura y la construcción del gusto personal pueden conectarse con la estética, la creatividad, el relato de marca, la interpretación de imágenes, la expresión de opiniones y la autoestima profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6a ↔ 3005-1e (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6b ↔ 3005-1e (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6c ↔ 3005-2f (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6d ↔ 3005-3b (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6e ↔ 3060-4c (Preparación del entorno profesional)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6f ↔ 3005-1e (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6g ↔ 3067-7d (Formación en Centros de Trabajo)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6h ↔ 3005-1h (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6i ↔ 3005-1e (Atención al cliente)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-6j ↔ 3159-3a (Itinerario personal para la empleabilidad)",
+      "justification_es": "El inglés oral se relaciona con situaciones profesionales previsibles: recibir clientes, explicar servicios, comprender mensajes sencillos, presentar instrucciones y atender de forma respetuosa en contextos multiculturales."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-7a ↔ 3005-1d (Atención al cliente)",
+      "justification_es": "La conversación en inglés se conecta con la atención al cliente, el trabajo en equipo, la FCT y la resolución de necesidades básicas mediante estrategias de comunicación sencillas y compensación lingüística."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-7b ↔ 3005-1d (Atención al cliente)",
+      "justification_es": "La conversación en inglés se conecta con la atención al cliente, el trabajo en equipo, la FCT y la resolución de necesidades básicas mediante estrategias de comunicación sencillas y compensación lingüística."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-7c ↔ 3005-1e (Atención al cliente)",
+      "justification_es": "La conversación en inglés se conecta con la atención al cliente, el trabajo en equipo, la FCT y la resolución de necesidades básicas mediante estrategias de comunicación sencillas y compensación lingüística."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-7d ↔ 3005-1i (Atención al cliente)",
+      "justification_es": "La conversación en inglés se conecta con la atención al cliente, el trabajo en equipo, la FCT y la resolución de necesidades básicas mediante estrategias de comunicación sencillas y compensación lingüística."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-7e ↔ 3067-7d (Formación en Centros de Trabajo)",
+      "justification_es": "La conversación en inglés se conecta con la atención al cliente, el trabajo en equipo, la FCT y la resolución de necesidades básicas mediante estrategias de comunicación sencillas y compensación lingüística."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8a ↔ 3060-4b (Preparación del entorno profesional)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8b ↔ 3060-4b (Preparación del entorno profesional)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8c ↔ 3005-2c (Atención al cliente)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8d ↔ 3005-4e (Atención al cliente)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8e ↔ 3062-1g (Depilación mecánica y decoloración del vello superfluo)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8f ↔ 3063-2k (Maquillaje)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8g ↔ 3067-1c (Formación en Centros de Trabajo)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8h ↔ 3012-4e (Comunicación y sociedad II)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    },
+    {
+      "title_es": "Conexión curricular: 3011-8i ↔ 3065-3m (Cambios de color del cabello)",
+      "justification_es": "La escritura en inglés permite elaborar mensajes, fichas, carteles, instrucciones, respuestas breves y textos profesionales sencillos relacionados con servicios de peluquería y estética."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3011_ra1_1",
+      "title_es": "Ruta beauty por la Prehistoria y la Edad Antigua",
+      "motivatingFactor_es": "Reto de museo vivo: investigar cómo se cuidaban, decoraban o peinaban distintas sociedades antiguas.",
+      "description_es": "Equipos eligen una cultura, localizan información visual, identifican relación con paisaje, creencias y materiales, y preparan una parada de museo para explicar al grupo. (Aprendizajes: 3011-1b/1c + 3063-4f. Historia, paisaje, códigos estéticos y armonía cromática.)",
+      "evidence_es": "Mini exposición con cartel, objeto simulado o ficha visual.",
+      "diversitySupport_es": "Fuentes seleccionadas, lectura fácil, imágenes, roles, plantilla de cartel y exposición breve en pareja."
+    },
+    {
+      "id": "act_3011_ra1_2",
+      "title_es": "Mapa “del paisaje al estilo”",
+      "motivatingFactor_es": "Problema: ¿cómo influyen clima, recursos y paisaje en la imagen personal?",
+      "description_es": "Analizan imágenes de paisajes y sociedades antiguas; conectan materiales, colores, peinados y adornos con el entorno. (Aprendizajes: 3011-1b/1f + 3042-8a/11c. Paisaje, adaptación y sostenibilidad.)",
+      "evidence_es": "Mapa visual causa-consecuencia.",
+      "diversitySupport_es": "Tarjetas de causa/efecto, pictogramas, trabajo manipulativo y vocabulario clave."
+    },
+    {
+      "id": "act_3011_ra1_3",
+      "title_es": "Taller de iconos antiguos para un salón actual",
+      "motivatingFactor_es": "Desafío creativo: diseñar un logo de salón inspirado en arte antiguo sin copiar estereotipos.",
+      "description_es": "Observan hitos artísticos, extraen formas y símbolos, crean bocetos y explican su elección. (Aprendizajes: 3011-1e + 3063-4e. Análisis de obra y boceto estético.)",
+      "evidence_es": "Logo y justificación breve.",
+      "diversitySupport_es": "Plantillas de boceto, ejemplos visuales, elección entre dibujo manual o digital y rúbrica simple."
+    },
+    {
+      "id": "act_3011_ra1_4",
+      "title_es": "Ciudades antiguas, eco-salones actuales",
+      "motivatingFactor_es": "Aprendizaje basado en problema: comparar cómo una ciudad organiza agua, residuos y espacios con un salón actual.",
+      "description_es": "Equipos comparan ciudad antigua y salón de estética: higiene, residuos, zonas y convivencia. (Aprendizajes: 3011-1f + 3060-2j. Impacto en paisaje y seguridad medioambiental.)",
+      "evidence_es": "Infografía comparativa.",
+      "diversitySupport_es": "Tabla comparativa, textos cortos, imágenes y reparto de roles."
+    },
+    {
+      "id": "act_3011_ra1_5",
+      "title_es": "Podcast “lo antiguo sigue vivo”",
+      "motivatingFactor_es": "Reto oral: explicar en 2 minutos una práctica estética o cultural antigua que aún pervive.",
+      "description_es": "Investigan, preparan guion y graban audio interno o lo exponen en clase. (Aprendizajes: 3011-1d/1g + 3012-1e. Pervivencia histórica y espacio social actual.)",
+      "evidence_es": "Podcast o guion oral.",
+      "diversitySupport_es": "Guion con frases iniciadoras, opción de leer, ensayo previo y parejas de apoyo."
+    },
+    {
+      "id": "act_3011_ra1_6",
+      "title_es": "Banco de datos visual del patrimonio",
+      "motivatingFactor_es": "Crear un instrumento de recogida de información sobre imágenes de patrimonio natural y artístico.",
+      "description_es": "Cada equipo diseña una ficha con autor/cultura, lugar, materiales, colores, uso social y relación estética. (Aprendizajes: 3011-1h + 3042-2e. Recogida de información y registro coherente.)",
+      "evidence_es": "Ficha digital o papel.",
+      "diversitySupport_es": "Ficha semicompletada, fuentes dadas, iconos y modelo resuelto."
+    },
+    {
+      "id": "act_3011_ra1_7",
+      "title_es": "Galería inclusiva de belleza histórica",
+      "motivatingFactor_es": "Aprendizaje-servicio interno: montar una galería que muestre diversidad de belleza en la historia.",
+      "description_es": "Seleccionan ejemplos variados y escriben mensajes respetuosos contra estereotipos. (Aprendizajes: 3011-1c/1d + 3005-1h. Valoración cultural y trato respetuoso.)",
+      "evidence_es": "Galería de aula o pasillo.",
+      "diversitySupport_es": "Normas de lenguaje inclusivo, revisión docente, elección de formato y trabajo cooperativo."
+    },
+    {
+      "id": "act_3011_ra1_8",
+      "title_es": "Escape room “arqueólogos del salón”",
+      "motivatingFactor_es": "Resolver pistas sobre materiales, paisajes, sociedades y estética antigua.",
+      "description_es": "Cada pista conecta un objeto antiguo con una práctica profesional actual. (Aprendizajes: 3011-1b/1i + 3159-2d. Historia, cooperación y trabajo en equipo.)",
+      "evidence_es": "Pasaporte de pistas completado.",
+      "diversitySupport_es": "Pistas graduadas, códigos de color, ayuda visual y roles rotativos."
+    },
+    {
+      "id": "act_3011_ra1_9",
+      "title_es": "Debate: ¿qué belleza heredamos?",
+      "motivatingFactor_es": "Debatir si los ideales de belleza son naturales, culturales o históricos.",
+      "description_es": "Tras ver ejemplos históricos, cada equipo prepara argumentos y normas de respeto. (Aprendizajes: 3011-1d/1i + 3159-2e. Comparación histórica, convivencia y gestión de opiniones.)",
+      "evidence_es": "Tabla de argumentos y conclusión personal.",
+      "diversitySupport_es": "Tarjetas de opinión, frases para discrepar, turno de palabra y posibilidad de respuesta escrita."
+    },
+    {
+      "id": "act_3011_ra2_1",
+      "title_es": "Línea del tiempo del sector belleza",
+      "motivatingFactor_es": "Desafío: explicar cómo han cambiado peluquería y estética desde oficios tradicionales hasta salones actuales.",
+      "description_es": "Equipos investigan hitos, herramientas y organización del trabajo; elaboran una línea del tiempo visual. (Aprendizajes: 3011-2g + 3159-3a. Evolución sectorial e itinerarios sociolaborales.)",
+      "evidence_es": "Línea del tiempo mural o digital.",
+      "diversitySupport_es": "Plantilla temporal, imágenes, fuentes guiadas y tareas por roles."
+    },
+    {
+      "id": "act_3011_ra2_2",
+      "title_es": "Paisaje agrario y cosmética natural",
+      "motivatingFactor_es": "Problema: ¿de dónde vienen ingredientes como aceite, plantas aromáticas o ceras?",
+      "description_es": "Relacionan paisaje agrario con materias primas usadas en cuidados básicos. (Aprendizajes: 3011-2b + 3061-1i. Paisaje agrario y cosméticos de uñas/manos/pies.)",
+      "evidence_es": "Mapa ingrediente-origen-uso.",
+      "diversitySupport_es": "Muestras seguras, tarjetas, glosario visual y actividad manipulativa."
+    },
+    {
+      "id": "act_3011_ra2_3",
+      "title_es": "Colonialismo y consumo responsable",
+      "motivatingFactor_es": "Reto crítico: analizar cómo la historia influye en productos actuales.",
+      "description_es": "Con textos adaptados, identifican materias primas, comercio global y consumo ético. (Aprendizajes: 3011-2c + 3042-11a. Historia global y desarrollo sostenible.)",
+      "evidence_es": "Semáforo de consumo responsable.",
+      "diversitySupport_es": "Textos en lectura fácil, preguntas cerradas, apoyo visual y debate guiado."
+    },
+    {
+      "id": "act_3011_ra2_4",
+      "title_es": "Europa en datos sencillos",
+      "motivatingFactor_es": "Transformar indicadores demográficos en gráficos comprensibles.",
+      "description_es": "Usan datos simplificados de población, migraciones o trabajo para crear gráficos. (Aprendizajes: 3011-2e + 3042-4g. Indicadores demográficos y representación estadística.)",
+      "evidence_es": "Gráfico comentado.",
+      "diversitySupport_es": "Datos preparados, hoja de cálculo guiada, calculadora y parejas."
+    },
+    {
+      "id": "act_3011_ra2_5",
+      "title_es": "Arte del Renacimiento a un maquillaje actual",
+      "motivatingFactor_es": "Crear un moodboard inspirado en una obra pictórica europea.",
+      "description_es": "Analizan color, luz y composición de una obra y diseñan maquillaje o peinado inspirado. (Aprendizajes: 3011-2f + 3063-4f. Obra pictórica y armonía estética/cromática.)",
+      "evidence_es": "Moodboard y explicación.",
+      "diversitySupport_es": "Imágenes seleccionadas, plantilla de análisis y opción de boceto sin aplicación en piel."
+    },
+    {
+      "id": "act_3011_ra2_6",
+      "title_es": "Del gremio al salón moderno",
+      "motivatingFactor_es": "Aprendizaje basado en problema: comparar organización laboral medieval/moderna con un salón actual.",
+      "description_es": "Identifican roles, normas, aprendizaje del oficio y tecnología. (Aprendizajes: 3011-2g + 3060-1f. Evolución productiva y cualidades profesionales.)",
+      "evidence_es": "Tabla comparativa.",
+      "diversitySupport_es": "Tabla con ejemplos, imágenes, roles y explicación oral opcional."
+    },
+    {
+      "id": "act_3011_ra2_7",
+      "title_es": "Mini feria de oficios europeos",
+      "motivatingFactor_es": "Cada equipo presenta un oficio histórico y su conexión con una profesión actual.",
+      "description_es": "Investigan, preparan stand y responden preguntas del grupo. (Aprendizajes: 3011-2h/2i + 3159-2d. TIC, recogida de información y trabajo en equipo.)",
+      "evidence_es": "Stand breve con tarjeta profesional.",
+      "diversitySupport_es": "Plantilla de stand, guion, reparto de tareas y coevaluación sencilla."
+    },
+    {
+      "id": "act_3011_ra2_8",
+      "title_es": "Mapa tecnológico del salón",
+      "motivatingFactor_es": "Identificar qué tecnologías han transformado el sector: secador, plancha, tintes, agenda digital.",
+      "description_es": "Crean un mapa de antes/después y sus efectos en organización y calidad. (Aprendizajes: 3011-2g + 3065-1c. Transformaciones tecnológicas y mantenimiento de aparatos.)",
+      "evidence_es": "Mapa tecnológico.",
+      "diversitySupport_es": "Imágenes antes/después, tarjetas de tecnología y apoyo de vocabulario."
+    },
+    {
+      "id": "act_3011_ra2_9",
+      "title_es": "Consejo de jóvenes consumidores",
+      "motivatingFactor_es": "Simulación: decidir qué valores debe tener un salón actual: sostenibilidad, inclusión, calidad, precio.",
+      "description_es": "Equipos argumentan propuestas y pactan un decálogo. (Aprendizajes: 3011-2i + 3005-2g. Trabajo en equipo y asesoramiento responsable.)",
+      "evidence_es": "Decálogo de salón responsable.",
+      "diversitySupport_es": "Roles, frases para argumentar, votación visual y acuerdos por consenso."
+    },
+    {
+      "id": "act_3011_ra3_1",
+      "title_es": "Cliente con emoción difícil",
+      "motivatingFactor_es": "Role-play con cliente nervioso, enfadado, tímido o con expectativas irreales.",
+      "description_es": "Se practica escucha activa, reformulación y respuesta asertiva; se analizan gestos, tono y palabras que ayudan. (Aprendizajes: 3011-3b/3c + 3005-1d/1h. Escucha, comunicación no verbal y atención cordial.)",
+      "evidence_es": "Banco de frases calmadas y profesionales.",
+      "diversitySupport_es": "Modelaje docente, tarjetas de emoción, guiones breves, parejas y opción de observador."
+    },
+    {
+      "id": "act_3011_ra3_2",
+      "title_es": "Recepción en 90 segundos",
+      "motivatingFactor_es": "Desafío: recibir a un cliente, confirmar cita y explicar el primer paso.",
+      "description_es": "Por parejas, practican saludo, pregunta de necesidad y cierre amable. (Aprendizajes: 3011-3b + 3060-4b/4c. Mensaje oral y registro de servicio.)",
+      "evidence_es": "Rúbrica de role-play.",
+      "diversitySupport_es": "Guion con frases, pictogramas, ensayo previo y feedback positivo."
+    },
+    {
+      "id": "act_3011_ra3_3",
+      "title_es": "Explica el servicio sin tecnicismos",
+      "motivatingFactor_es": "Problema: el cliente no entiende un tratamiento.",
+      "description_es": "El alumnado transforma una explicación técnica en lenguaje claro. (Aprendizajes: 3011-3e + 3005-2f. Terminología adecuada e información del servicio.)",
+      "evidence_es": "Tarjeta “explicación fácil”.",
+      "diversitySupport_es": "Banco de palabras prohibidas/técnicas, ejemplos y trabajo cooperativo."
+    },
+    {
+      "id": "act_3011_ra3_4",
+      "title_es": "Semáforo de lenguaje inclusivo",
+      "motivatingFactor_es": "Analizar frases discriminatorias o poco profesionales y transformarlas.",
+      "description_es": "En equipos, clasifican frases en rojo/ámbar/verde y reformulan con respeto. (Aprendizajes: 3011-3d + 3005-1h. Normas lingüísticas y trato sensible.)",
+      "evidence_es": "Cartel de comunicación inclusiva.",
+      "diversitySupport_es": "Tarjetas, normas de respeto, ejemplos y opción anónima."
+    },
+    {
+      "id": "act_3011_ra3_5",
+      "title_es": "Reunión de equipo express",
+      "motivatingFactor_es": "Simular una coordinación antes de abrir el salón.",
+      "description_es": "Cada rol informa de tareas, material, tiempos y dudas. (Aprendizajes: 3011-3b/3c + 3067-7d/7e. Escucha, comunicación de equipo y colaboración.)",
+      "evidence_es": "Acta oral breve o checklist.",
+      "diversitySupport_es": "Roles visuales, cronómetro, frases de turno y observador con checklist."
+    },
+    {
+      "id": "act_3011_ra3_6",
+      "title_es": "Elevator pitch de una técnica",
+      "motivatingFactor_es": "Presentar una técnica de maquillaje, uñas, lavado o depilación en 45 segundos.",
+      "description_es": "Preparan estructura: qué es, para quién, ventajas y precaución. (Aprendizajes: 3011-3c/3e + 3159-2c. Presentación oral y empleabilidad.)",
+      "evidence_es": "Pitch oral.",
+      "diversitySupport_es": "Guion sencillo, ensayo en pareja, lectura permitida y rúbrica corta."
+    },
+    {
+      "id": "act_3011_ra3_7",
+      "title_es": "Detectives del tono",
+      "motivatingFactor_es": "Escuchar mensajes y decidir si suenan amables, bruscos, inseguros o profesionales.",
+      "description_es": "Analizan audios o frases leídas por el docente y proponen mejoras. (Aprendizajes: 3011-3b + 3005-1e. Escucha activa y conversación comercial.)",
+      "evidence_es": "Lista de recursos de tono profesional.",
+      "diversitySupport_es": "Audios cortos, opciones múltiples, repetición permitida y apoyos visuales."
+    },
+    {
+      "id": "act_3011_ra3_8",
+      "title_es": "Debate: redes y belleza sin presión",
+      "motivatingFactor_es": "Debatir cómo influyen redes sociales en expectativas de imagen.",
+      "description_es": "Preparan argumentos, escuchan y responden con respeto. (Aprendizajes: 3011-3d + 3159-1c. Lenguaje no discriminatorio y autoestima.)",
+      "evidence_es": "Conclusión grupal.",
+      "diversitySupport_es": "Normas de debate, tarjetas de turno, opción de escribir y cuidado emocional."
+    },
+    {
+      "id": "act_3011_ra3_9",
+      "title_es": "Tutoría entre iguales: te explico la tarea",
+      "motivatingFactor_es": "Un alumno explica a otro una tarea de taller usando lenguaje claro.",
+      "description_es": "Se practica explicar, comprobar comprensión y reformular. (Aprendizajes: 3011-3b/3e + 3159-2d. Comunicación oral y trabajo en equipo.)",
+      "evidence_es": "Checklist de tutoría.",
+      "diversitySupport_es": "Parejas asignadas, frase “¿me explicas qué harás primero?”, rúbrica visual."
+    },
+    {
+      "id": "act_3011_ra4_1",
+      "title_es": "Ficha técnica clara",
+      "motivatingFactor_es": "Reto: convertir información oral de un cliente en una ficha escrita ordenada.",
+      "description_es": "Tras un role-play, completan datos, servicio, observaciones, productos y precauciones. (Aprendizajes: 3011-4e/4f + 3062-1g o 3063-2k. Texto profesional y registro técnico.)",
+      "evidence_es": "Ficha técnica.",
+      "diversitySupport_es": "Plantilla, palabras clave, ejemplo completado y revisión por parejas."
+    },
+    {
+      "id": "act_3011_ra4_2",
+      "title_es": "Informe breve de práctica",
+      "motivatingFactor_es": "Escribir en una página qué se ha hecho, con qué productos y qué se puede mejorar.",
+      "description_es": "Después de una práctica, completan objetivo, pasos, resultado y mejora. (Aprendizajes: 3011-4g/4h + 3042-5e. Texto para valorar aprendizajes e informe de ensayo.)",
+      "evidence_es": "Informe de práctica.",
+      "diversitySupport_es": "Estructura fija, banco de verbos, opción dictado por voz y rúbrica simple."
+    },
+    {
+      "id": "act_3011_ra4_3",
+      "title_es": "Manual de instrucciones para un compañero",
+      "motivatingFactor_es": "Crear instrucciones de una técnica sencilla en lectura fácil.",
+      "description_es": "Eligen técnica: lavado, manicura, limpieza de útiles; escriben pasos numerados. (Aprendizajes: 3011-4f/4h + 3060-2e. Redacción clara y procedimiento de higiene.)",
+      "evidence_es": "Manual con pasos e iconos.",
+      "diversitySupport_es": "Plantilla, pictogramas, máximo 6 pasos y revisión de claridad."
+    },
+    {
+      "id": "act_3011_ra4_4",
+      "title_es": "Búsqueda con lupa: producto seguro",
+      "motivatingFactor_es": "Investigar una etiqueta o ficha de producto.",
+      "description_es": "Buscan información, subrayan advertencias y resumen uso seguro. (Aprendizajes: 3011-4b/4c + 3063-1h. Búsqueda, lectura comprensiva y composición de productos.)",
+      "evidence_es": "Ficha “uso seguro”.",
+      "diversitySupport_es": "Etiquetas ampliadas, colores, preguntas guía y lectura compartida."
+    },
+    {
+      "id": "act_3011_ra4_5",
+      "title_es": "Reclamación bien escrita",
+      "motivatingFactor_es": "Aprendizaje basado en problema: un cliente no está conforme.",
+      "description_es": "Analizan el caso y redactan una respuesta o hoja sencilla de reclamación. (Aprendizajes: 3011-4e/4f + 3005-4e. Estructura textual y reclamaciones.)",
+      "evidence_es": "Modelo de respuesta profesional.",
+      "diversitySupport_es": "Modelo, frases de cortesía, checklist legal básico y trabajo en pareja."
+    },
+    {
+      "id": "act_3011_ra4_6",
+      "title_es": "Resumen de diagnóstico capilar",
+      "motivatingFactor_es": "Transformar observaciones técnicas en un resumen comprensible.",
+      "description_es": "A partir de una ficha simulada, extraen idea principal, secundarias y recomendación. (Aprendizajes: 3011-4d + 3064-1g. Resumen y exposición discreta de resultados.)",
+      "evidence_es": "Resumen para el cliente.",
+      "diversitySupport_es": "Subrayado guiado, plantilla “veo-recomiendo”, texto corto."
+    },
+    {
+      "id": "act_3011_ra4_7",
+      "title_es": "Portfolio de aprendizaje",
+      "motivatingFactor_es": "Recoger evidencias de prácticas y explicar qué se ha aprendido.",
+      "description_es": "Cada alumno selecciona fotos no identificativas, escribe pie de foto y mejora. (Aprendizajes: 3011-4g/4h + 3159-4c. Reflexión escrita e itinerario personal.)",
+      "evidence_es": "Portfolio físico o digital.",
+      "diversitySupport_es": "Plantilla, frases iniciadoras, opción audio y revisión docente."
+    },
+    {
+      "id": "act_3011_ra4_8",
+      "title_es": "Cartel profesional de cita",
+      "motivatingFactor_es": "Redactar un cartel o mensaje de confirmación de cita con información clara.",
+      "description_es": "Incluyen fecha, hora, servicio, material que traer y normas de puntualidad. (Aprendizajes: 3011-4h + 3060-4b. Presentación escrita y registro de citas.)",
+      "evidence_es": "Cartel/mensaje modelo.",
+      "diversitySupport_es": "Plantilla visual, ejemplos, iconos y corrección ortográfica asistida."
+    },
+    {
+      "id": "act_3011_ra4_9",
+      "title_es": "Gramática en contexto beauty",
+      "motivatingFactor_es": "Corregir frases reales de atención o fichas técnicas.",
+      "description_es": "Detectan errores de concordancia, ortografía o puntuación en textos profesionales simulados. (Aprendizajes: 3011-4i + 3005-1i. Inferencias gramaticales y claridad informativa.)",
+      "evidence_es": "Texto corregido con explicación.",
+      "diversitySupport_es": "Errores resaltados, opciones de respuesta, corrector digital y trabajo cooperativo."
+    },
+    {
+      "id": "act_3011_ra5_1",
+      "title_es": "Booktrailer estético de un clásico",
+      "motivatingFactor_es": "Conectar una lectura anterior al XIX con estética visual actual.",
+      "description_es": "Tras leer fragmentos adaptados, diseñan un booktrailer o storyboard con colores, música y atmósfera. (Aprendizajes: 3011-5b/5e + 3063-4e. Lectura, contexto y boceto creativo.)",
+      "evidence_es": "Storyboard o vídeo interno.",
+      "diversitySupport_es": "Fragmentos adaptados, audiotexto, plantilla de storyboard y trabajo en equipo."
+    },
+    {
+      "id": "act_3011_ra5_2",
+      "title_es": "Mi opinión con respeto",
+      "motivatingFactor_es": "Expresar qué gusta y qué no de un texto y relacionarlo con experiencias propias.",
+      "description_es": "Usan tarjetas “me gusta porque…”, “me cuesta porque…”, “lo conecto con…”. (Aprendizajes: 3011-5c + 3159-1c. Gusto personal, autoestima y expresión respetuosa.)",
+      "evidence_es": "Opinión razonada breve.",
+      "diversitySupport_es": "Frases iniciadoras, opción oral, no obligar a experiencias personales sensibles."
+    },
+    {
+      "id": "act_3011_ra5_3",
+      "title_es": "Maquillaje de personaje literario",
+      "motivatingFactor_es": "Diseñar un look inspirado en un personaje o escena.",
+      "description_es": "Identifican rasgos, emociones y época; hacen boceto de maquillaje o peinado. (Aprendizajes: 3011-5d + 3063-4f. Comprensión de motivos y armonía estética.)",
+      "evidence_es": "Boceto y explicación.",
+      "diversitySupport_es": "Opciones de personajes, plantilla facial, ejemplos y elección de nivel."
+    },
+    {
+      "id": "act_3011_ra5_4",
+      "title_es": "Lectura dramatizada en salón",
+      "motivatingFactor_es": "Representar un diálogo adaptado como si fuera una escena de atención al cliente.",
+      "description_es": "Practican entonación, lenguaje no verbal y comprensión del conflicto. (Aprendizajes: 3011-5b + 3011-3c + 3005-1d. Lectura, comunicación no verbal y atención.)",
+      "evidence_es": "Lectura dramatizada.",
+      "diversitySupport_es": "Papeles cortos, ensayo, lectura permitida y roles no expuestos."
+    },
+    {
+      "id": "act_3011_ra5_5",
+      "title_es": "Galería de frases poderosas",
+      "motivatingFactor_es": "Seleccionar frases de una obra y convertirlas en mensajes visuales.",
+      "description_es": "Explican significado y relación con valores actuales: respeto, autoestima, esfuerzo. (Aprendizajes: 3011-5c/5e + 3159-2c. Opinión y presentación comunicativa.)",
+      "evidence_es": "Mural de frases comentadas.",
+      "diversitySupport_es": "Frases preseleccionadas, iconos, opción dibujo y explicación de 30 segundos."
+    },
+    {
+      "id": "act_3011_ra5_6",
+      "title_es": "Del texto al moodboard",
+      "motivatingFactor_es": "Interpretar ambiente, colores y emociones de un fragmento literario.",
+      "description_es": "Subrayan palabras sensoriales y crean un moodboard estético. (Aprendizajes: 3011-5d + 3063-4f. Comprensión y criterio estético.)",
+      "evidence_es": "Moodboard literario.",
+      "diversitySupport_es": "Texto corto, lectura en voz alta por docente, banco de imágenes y parejas."
+    },
+    {
+      "id": "act_3011_ra5_7",
+      "title_es": "Podcast “un clásico en mi vida”",
+      "motivatingFactor_es": "Relacionar un tema literario con la vida adolescente actual sin exposición íntima.",
+      "description_es": "Preparan guion con tema, ejemplo actual ficticio y opinión. (Aprendizajes: 3011-5c + 3012-3c. Opinión fundamentada y comunicación oral.)",
+      "evidence_es": "Audio o guion.",
+      "diversitySupport_es": "Guion pautado, grabación opcional, trabajo en parejas y feedback amable."
+    },
+    {
+      "id": "act_3011_ra5_8",
+      "title_es": "Estética de épocas",
+      "motivatingFactor_es": "Crear tarjetas de época con vestuario, peinado, maquillaje y valores sociales.",
+      "description_es": "Investigan imágenes y textos de distintas épocas anteriores al XIX. (Aprendizajes: 3011-5e + 3064-4b. Literatura/contexto y cambios de forma temporal.)",
+      "evidence_es": "Tarjetas comparativas.",
+      "diversitySupport_es": "Plantilla, imágenes, reparto de tareas y fuente guiada."
+    },
+    {
+      "id": "act_3011_ra5_9",
+      "title_es": "Reto “comprender para crear”",
+      "motivatingFactor_es": "Resolver preguntas de comprensión antes de crear una propuesta estética.",
+      "description_es": "Sólo se puede diseñar el producto final si el equipo justifica con evidencias del texto. (Aprendizajes: 3011-5d + 3063-4j. Comprensión y corrección de desviaciones.)",
+      "evidence_es": "Ficha de evidencias + boceto.",
+      "diversitySupport_es": "Preguntas tipo test, subrayado por colores, pistas graduadas y roles."
+    },
+    {
+      "id": "act_3011_ra6_1",
+      "title_es": "Welcome to the salon",
+      "motivatingFactor_es": "Role-play de bienvenida a un cliente extranjero.",
+      "description_es": "Practican saludo, cita, servicio solicitado y frase de cortesía en inglés. (Aprendizajes: 3011-6e/6g + 3005-1e. Presentación oral y conversación comercial.)",
+      "evidence_es": "Diálogo oral breve.",
+      "diversitySupport_es": "Tarjetas con frases, pronunciación modelada, parejas, pausas aceptadas y pictogramas."
+    },
+    {
+      "id": "act_3011_ra6_2",
+      "title_es": "Service menu in English",
+      "motivatingFactor_es": "Presentar oralmente un menú de servicios básico.",
+      "description_es": "Equipos preparan 4 servicios con precio ficticio, duración y recomendación sencilla. (Aprendizajes: 3011-6c/6f + 3005-2f. Comprensión oral secuenciada e información del servicio.)",
+      "evidence_es": "Menú oral o audio.",
+      "diversitySupport_es": "Vocabulario con imágenes, estructura “We offer…”, lectura permitida."
+    },
+    {
+      "id": "act_3011_ra6_3",
+      "title_es": "Safety questions in English",
+      "motivatingFactor_es": "Formular preguntas básicas de seguridad antes de maquillaje/color/depilación.",
+      "description_es": "Practican preguntas: allergies, sensitive skin, contact lenses, previous reactions. (Aprendizajes: 3011-6e + 3060-4c. Presentación instructiva y preguntas de seguridad.)",
+      "evidence_es": "Tarjeta de preguntas profesionales.",
+      "diversitySupport_es": "Banco de frases, pronunciación por repetición, role-play guiado y apoyo visual."
+    },
+    {
+      "id": "act_3011_ra6_4",
+      "title_es": "The client is late",
+      "motivatingFactor_es": "Comprender y responder a un audio o mensaje sencillo sobre retraso.",
+      "description_es": "Escuchan mensajes breves y deciden qué información contiene y qué responder. (Aprendizajes: 3011-6b/6c + 3060-4b. Mensajes electrónicos y registro de cita.)",
+      "evidence_es": "Respuesta oral corta.",
+      "diversitySupport_es": "Audio repetible, transcripción parcial, opciones múltiples y respuesta modelo."
+    },
+    {
+      "id": "act_3011_ra6_5",
+      "title_es": "Explain aftercare",
+      "motivatingFactor_es": "Explicar cuidados posteriores en inglés sencillo.",
+      "description_es": "Preparan instrucciones de cuidado tras color, maquillaje o depilación. (Aprendizajes: 3011-6e/6f + 3065-3m. Instrucciones y satisfacción/corrección de deficiencias.)",
+      "evidence_es": "Mini presentación de aftercare.",
+      "diversitySupport_es": "Plantilla: First/Then/Do not, pictogramas, parejas y lectura permitida."
+    },
+    {
+      "id": "act_3011_ra6_6",
+      "title_es": "Pronunciation clinic beauty words",
+      "motivatingFactor_es": "Practicar pronunciación de vocabulario técnico básico.",
+      "description_es": "Juego de tarjetas con palabras: shampoo, colour, brush, appointment, skin, nails. (Aprendizajes: 3011-6d/6g + 3067-7d. Pronunciación comprensible y comunicación eficaz.)",
+      "evidence_es": "Audio o lectura en pareja.",
+      "diversitySupport_es": "Repetición coral, QR de pronunciación, no penalizar acento, feedback positivo."
+    },
+    {
+      "id": "act_3011_ra6_7",
+      "title_es": "Inclusive beauty messages",
+      "motivatingFactor_es": "Detectar mensajes discriminatorios en publicidad beauty y reformularlos en inglés básico.",
+      "description_es": "Analizan frases simples y crean alternativas inclusivas. (Aprendizajes: 3011-6h + 3005-1h. Reflexión sobre discriminación y trato sensible.)",
+      "evidence_es": "Cartel bilingüe inclusivo.",
+      "diversitySupport_es": "Ejemplos seguros, glosario, frases modelo y revisión docente."
+    },
+    {
+      "id": "act_3011_ra6_8",
+      "title_es": "Culture tips for international clients",
+      "motivatingFactor_es": "Investigar normas sociales básicas en países anglófonos.",
+      "description_es": "Preparan consejos: personal space, please/thank you, punctuality, small talk. (Aprendizajes: 3011-6i/6j + 3159-3a. Costumbres e investigación del entorno sociolaboral.)",
+      "evidence_es": "Tarjetas culturales.",
+      "diversitySupport_es": "Fuentes guiadas, tarjetas con iconos, presentación de 1 minuto."
+    },
+    {
+      "id": "act_3011_ra6_9",
+      "title_es": "Beauty tutorial in simple English",
+      "motivatingFactor_es": "Grabar o representar un tutorial de 4 pasos.",
+      "description_es": "Explican una técnica segura: wash your hands, prepare tools, apply, clean. (Aprendizajes: 3011-6e/6g + 3060-2e. Presentación instructiva y limpieza de superficies/útiles.)",
+      "evidence_es": "Tutorial interno o guion.",
+      "diversitySupport_es": "Guion por pasos, demostración previa, posibilidad de hacerlo en grupo."
+    },
+    {
+      "id": "act_3011_ra7_1",
+      "title_es": "Can I help you?",
+      "motivatingFactor_es": "Conversación básica de atención a un cliente.",
+      "description_es": "Practican interés y comprensión: asking, repeating, confirming. (Aprendizajes: 3011-7b + 3005-1d. Interacción y técnicas de comunicación.)",
+      "evidence_es": "Role-play con rúbrica.",
+      "diversitySupport_es": "Tarjetas de diálogo, frases comodín, pareja estable y ensayo."
+    },
+    {
+      "id": "act_3011_ra7_2",
+      "title_es": "I don’t understand: strategies",
+      "motivatingFactor_es": "Usar estrategias de compensación cuando falta vocabulario.",
+      "description_es": "Juegan a resolver una situación usando gestos, dibujos, paráfrasis y “Can you repeat?”. (Aprendizajes: 3011-7c + 3005-1e. Compensación y conversación comercial.)",
+      "evidence_es": "Lista de estrategias útiles.",
+      "diversitySupport_es": "Tarjetas de ayuda, ejemplos, permiso para dibujar y refuerzo de intentos."
+    },
+    {
+      "id": "act_3011_ra7_3",
+      "title_es": "Choose your look",
+      "motivatingFactor_es": "Cliente elige entre dos opciones de servicio.",
+      "description_es": "El alumno explica opciones sencillas y confirma elección. (Aprendizajes: 3011-7d/7e + 3005-2g/2h. Marcadores simples y asesoramiento.)",
+      "evidence_es": "Diálogo elección-servicio.",
+      "diversitySupport_es": "Menú visual, frases “I recommend… because…”, lectura permitida."
+    },
+    {
+      "id": "act_3011_ra7_4",
+      "title_es": "Team briefing in English",
+      "motivatingFactor_es": "Mini reunión de equipo para repartir tareas de taller.",
+      "description_es": "Usan frases básicas: I prepare..., you clean..., we need... (Aprendizajes: 3011-7b/7d + 3067-7d/7e. Interacción y coordinación profesional.)",
+      "evidence_es": "Checklist de equipo.",
+      "diversitySupport_es": "Roles, vocabulario en tarjetas, apoyo del docente y actividad corta."
+    },
+    {
+      "id": "act_3011_ra7_5",
+      "title_es": "Complaint calm down",
+      "motivatingFactor_es": "Cliente extranjero presenta una queja sencilla.",
+      "description_es": "Practican escuchar, disculparse y ofrecer solución básica. (Aprendizajes: 3011-7b/7e + 3005-4c. Diálogo y documentación de reclamación.)",
+      "evidence_es": "Banco de frases de reclamación.",
+      "diversitySupport_es": "Guion con tres pasos, emoción graduada, modelaje y trabajo en pareja."
+    },
+    {
+      "id": "act_3011_ra7_6",
+      "title_es": "Appointment by phone",
+      "motivatingFactor_es": "Simular una llamada breve para pedir cita.",
+      "description_es": "Practican nombre, día, hora, servicio y confirmación. (Aprendizajes: 3011-7d + 3060-4b. Conversación en inglés y cita profesional.)",
+      "evidence_es": "Registro de cita.",
+      "diversitySupport_es": "Calendario visual, tarjetas de días/horas, frases modelo y repetición."
+    },
+    {
+      "id": "act_3011_ra7_7",
+      "title_es": "Find the right product",
+      "motivatingFactor_es": "Conversación para elegir producto según necesidad.",
+      "description_es": "Cliente dice “dry hair”, “sensitive skin”, “red nails”; se recomienda producto básico. (Aprendizajes: 3011-7b/7d + 3063-2d. Comprensión y elección de cosméticos.)",
+      "evidence_es": "Ficha de recomendación.",
+      "diversitySupport_es": "Imágenes de productos, vocabulario limitado, opciones cerradas."
+    },
+    {
+      "id": "act_3011_ra7_8",
+      "title_es": "Peer coach English",
+      "motivatingFactor_es": "Parejas se ayudan a mejorar una conversación.",
+      "description_es": "Uno hace de cliente, otro de profesional y otro observa con checklist si hay trío. (Aprendizajes: 3011-7c/7e + 3159-2d. Estrategias y trabajo en equipo.)",
+      "evidence_es": "Checklist de mejora.",
+      "diversitySupport_es": "Feedback “two stars and a wish”, frases modelo y no grabar si incomoda."
+    },
+    {
+      "id": "act_3011_ra7_9",
+      "title_es": "Small talk respectful",
+      "motivatingFactor_es": "Practicar conversación social básica sin invadir privacidad.",
+      "description_es": "El alumnado diferencia preguntas adecuadas/inadecuadas y ensaya small talk profesional. (Aprendizajes: 3011-7b + 3005-1h. Relación social y cordialidad.)",
+      "evidence_es": "Tarjeta de small talk seguro.",
+      "diversitySupport_es": "Semáforo de preguntas, normas de respeto, role-play breve."
+    },
+    {
+      "id": "act_3011_ra8_1",
+      "title_es": "Appointment message",
+      "motivatingFactor_es": "Escribir un mensaje breve de confirmación de cita en inglés.",
+      "description_es": "Completan y adaptan modelos: day, time, service, please arrive on time. (Aprendizajes: 3011-8e/8g + 3060-4b. Texto breve y registro de citas.)",
+      "evidence_es": "Mensaje escrito.",
+      "diversitySupport_es": "Modelo rellenable, corrector online, banco de vocabulario y revisión por parejas."
+    },
+    {
+      "id": "act_3011_ra8_2",
+      "title_es": "Beauty service card",
+      "motivatingFactor_es": "Crear una tarjeta bilingüe de un servicio.",
+      "description_es": "Incluyen name, duration, price, aftercare y one warning. (Aprendizajes: 3011-8c/8f + 3005-2c/2f. Léxico profesional y comunicación comercial.)",
+      "evidence_es": "Tarjeta de servicio.",
+      "diversitySupport_es": "Plantilla, iconos, lista de palabras y elección de servicio."
+    },
+    {
+      "id": "act_3011_ra8_3",
+      "title_es": "Client file in English",
+      "motivatingFactor_es": "Completar una ficha sencilla de cliente.",
+      "description_es": "Datos básicos, service, products used, observations. (Aprendizajes: 3011-8d/8e + 3062-1g/3063-2k. Frases reorganizadas y ficha técnica.)",
+      "evidence_es": "Ficha de cliente.",
+      "diversitySupport_es": "Campos cerrados, ejemplos, vocabulario visual y lectura fácil."
+    },
+    {
+      "id": "act_3011_ra8_4",
+      "title_es": "Aftercare mini leaflet",
+      "motivatingFactor_es": "Redactar instrucciones posteriores tras un servicio.",
+      "description_es": "Usan estructura: Do / Don’t / If you notice... / Come back... (Aprendizajes: 3011-8e/8f + 3065-3m. Texto instructivo y satisfacción del cliente.)",
+      "evidence_es": "Folleto breve.",
+      "diversitySupport_es": "Frases modelo, pictogramas, máximo 6 recomendaciones."
+    },
+    {
+      "id": "act_3011_ra8_5",
+      "title_es": "Complaint response email",
+      "motivatingFactor_es": "Responder a una queja sencilla en inglés.",
+      "description_es": "Ordenan frases: saludo, disculpa, solución y despedida. (Aprendizajes: 3011-8d/8g + 3005-4e. Reorganización textual y reclamación.)",
+      "evidence_es": "Email breve.",
+      "diversitySupport_es": "Tarjetas recortables, modelo, corrector y revisión docente."
+    },
+    {
+      "id": "act_3011_ra8_6",
+      "title_es": "Poster: hygiene rules",
+      "motivatingFactor_es": "Crear cartel de normas de higiene en inglés sencillo.",
+      "description_es": "Escriben normas: wash hands, clean tools, use gloves, keep area tidy. (Aprendizajes: 3011-8e/8i + 3060-2g. Escritura y prevención de infecciones.)",
+      "evidence_es": "Cartel visual.",
+      "diversitySupport_es": "Iconos, frases cortas, plantilla y trabajo cooperativo."
+    },
+    {
+      "id": "act_3011_ra8_7",
+      "title_es": "Vocabulary QR wall",
+      "motivatingFactor_es": "Crear códigos QR o tarjetas de vocabulario técnico inglés-español/catalán.",
+      "description_es": "Cada equipo prepara 10 palabras con imagen y ejemplo. (Aprendizajes: 3011-8h + 3067-7f. Diccionarios online y actualización profesional.)",
+      "evidence_es": "Muro de vocabulario.",
+      "diversitySupport_es": "Diccionarios guiados, imágenes, revisión de pronunciación y roles."
+    },
+    {
+      "id": "act_3011_ra8_8",
+      "title_es": "Inclusive salon bio",
+      "motivatingFactor_es": "Escribir una mini biografía del salón con mensaje inclusivo.",
+      "description_es": "Incluyen valores: respect, diversity, safe space, professional care. (Aprendizajes: 3011-8i + 3005-1h. Reflexión anti-discriminación y trato respetuoso.)",
+      "evidence_es": "Bio para web/red interna.",
+      "diversitySupport_es": "Banco de frases, ejemplos, revisión sensible y opción bilingüe."
+    },
+    {
+      "id": "act_3011_ra8_9",
+      "title_es": "Before/after caption",
+      "motivatingFactor_es": "Escribir pie de foto profesional para un trabajo simulado.",
+      "description_es": "Describen proceso, producto y cuidado sin promesas falsas ni exposición de imagen real. (Aprendizajes: 3011-8b/8f + 3065-3m. Intención comunicativa y satisfacción/corrección.)",
+      "evidence_es": "Caption profesional.",
+      "diversitySupport_es": "Fotos de maniquí o soporte, modelo de caption, normas de privacidad."
+    }
+  ]
+}

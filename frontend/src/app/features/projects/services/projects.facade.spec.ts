@@ -34,6 +34,10 @@ describe('ProjectsFacade', () => {
     httpMock.verify();
   });
 
+  it('should have initial methodology set to ABP (Aprendizaje Basado en Problemas / Proyectos)', () => {
+    expect(facade.methodology()).toBe('ABP (Aprendizaje Basado en Problemas / Proyectos)');
+  });
+
   it('should load history and update projectsHistory signal', () => {
     const mockProjects = [{ _id: '1', title: 'Test Project' }];
     facade.loadHistory();

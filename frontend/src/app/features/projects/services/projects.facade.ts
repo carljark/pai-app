@@ -16,7 +16,7 @@ export class ProjectsFacade {
   searchQuery = signal<string>('');
 
   // --- ESTADO DEL GENERADOR ---
-  methodology = signal<string>('ABP (Aprendizaje Basado en Proyectos)');
+  methodology = signal<string>('ABP (Aprendizaje Basado en Problemas / Proyectos)');
   selectedAi = signal<'gemini' | 'openrouter'>('gemini');
 
   isGenerating = signal<boolean>(false);

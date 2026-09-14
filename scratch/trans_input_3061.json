@@ -1,0 +1,963 @@
+{
+  "code": "3061",
+  "name_es": "Cuidados estéticos básicos de uñas",
+  "criteria": [
+    "a) Se ha descrito la imagen que debe presentar el ayudante de manicura.",
+    "b) Se han descrito e identificado los útiles y aparatos necesarios para realizar los procesos de manicura y pedicura.",
+    "c) Se han explicado los factores a tener en cuenta para la selección de los útiles de acuerdo con el proceso que se desea realizar.",
+    "d) Se han identificado los métodos de higiene, desinfección y esterilización previos a la aplicación de la técnica.",
+    "e) Se han realizado los procesos de higiene, desinfección y esterilización de los aparatos según el fin al que estén destinados.",
+    "f) Se ha seleccionado de forma adecuada el material de uso exclusivo para cada cliente.",
+    "g) Se han preparado los útiles necesarios para la técnica que se va a realizar.",
+    "h) Se han ordenado los útiles de forma correcta según su orden de utilización.",
+    "i) Se han identificado los cosméticos generales utilizados en el cuidado de las uñas de manos y pies.",
+    "j) Se han seleccionado adecuadamente los cosméticos según la técnica que se va a realizar.",
+    "k) Se ha comprobado que los cosméticos a utilizar estén en buen estado.",
+    "l) Se ha descrito la conservación adecuada de los útiles de corte.",
+    "m) Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas.",
+    "a) Se ha descrito la estructura de la uña.",
+    "b) Se han identificado las alteraciones más relevantes de las uñas de las manos y los pies.",
+    "c) Se han detectado desviaciones del patrón de normalidad en el aspecto de las uñas y la piel que deben ser consultadas con el técnico responsable.",
+    "d) Se ha transmitido la información al técnico responsable si se ha considerado necesario.",
+    "e) Se ha organizado el servicio atendiendo a las alteraciones detectadas y derivando su atención a otros profesionales, si resultase necesario.",
+    "f) Se han formulado preguntas tipo que permiten detectar las demandas y necesidades que debe cubrir el servicio.",
+    "g) Se ha preparado al cliente para el servicio que se va a realizar garantizando su seguridad.",
+    "h) Se ha descrito la posición ergonómica del cliente y del profesional para realizar las técnicas de manicura y/o pedicura.",
+    "i) Se han relacionado las características morfológicas de las manos y/o los pies y de las uñas para seleccionar la forma final más adecuada.",
+    "j) Se ha cumplimentado la ficha técnica del servicio con los datos más relevantes.",
+    "a) Se han explicado las fases del proceso de manicura y se han indicado las operaciones técnicas que se realizan en cada una de ellas.",
+    "b) Se han relacionado los cosméticos que se van a utilizar de acuerdo con cada una de las fases del proceso.",
+    "c) Se ha identificado la forma de manipularlos adecuadamente.",
+    "d) Se ha preparado y protegido al cliente y al profesional de forma correcta.",
+    "e) Se ha practicado la técnica de desmaquillado en dos fases: lámina ungular y pliegues ungulares.",
+    "f) Se han realizado las técnicas de limado y acondicionamiento de cutículas adecuadas a las características de las uñas y al servicio solicitado por el cliente.",
+    "g) Se han definido las maniobras de masaje de manos en el orden correcto con destreza y respetando las características de cada cliente.",
+    "h) Se han aplicado técnicas de pulido de uñas utilizando los útiles y productos adecuados, respetando las características de las uñas.",
+    "i) Se han descrito las técnicas de aplicación de cosméticos decorativos sobre las uñas.",
+    "j) Se ha completado el proceso en un tiempo adecuado.",
+    "k) Se han realizado preguntas para conocer el grado de satisfacción del cliente.",
+    "l) Se han aplicado las especificaciones de seguridad y medioambientales requeridas.",
+    "a) Se han identificado los métodos de higiene previos a la aplicación de la técnica de pedicura.",
+    "b) Se han explicado las fases del proceso de pedicura y se han indicado las operaciones técnicas que se realizan en cada una de ellas.",
+    "c) Se han relacionado los cosméticos utilizados con cada una de las fases del proceso.",
+    "d) Se ha identificado la forma de manipularlos adecuadamente.",
+    "e) Se ha preparado y protegido al cliente y al profesional de forma correcta.",
+    "f) Se ha practicado la técnica de tratamiento de durezas superficiales de forma adecuada.",
+    "g) Se han realizado las técnicas de desmaquillado, de limado y acondicionamiento de cutículas adecuadas a las características de las uñas y al servicio solicitado por el cliente.",
+    "h) Se han definido las maniobras de masaje de pies en el orden correcto con destreza y respetando las características de cada cliente.",
+    "i) Se han aplicado técnicas de pulido de uñas, utilizando los útiles y productos adecuados, respetando las características de las uñas.",
+    "j) Se han descrito las técnicas de aplicación de cosméticos decorativos sobre las uñas.",
+    "k) Se ha completado el proceso en un tiempo adecuado.",
+    "l) Se han realizado preguntas para conocer el grado de satisfacción del cliente.",
+    "m) Se han realizado preguntas tipo que permitan conocer el grado de satisfacción del cliente, tanto respecto al resultado del servicio como de la atención personal.",
+    "n) Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
+  ],
+  "connections": [
+    {
+      "title_es": "Imagen profesional, preparación personal, actitud y deontología",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Preparación de equipos, útiles, productos y mesa de trabajo",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Observación de uñas, piel, alteraciones, contraindicaciones y derivación",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Diseño, nail art, creatividad, color, armonía estética e imagen global",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Ergonomía, acomodación, protección y confort del cliente y del profesional",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Comunicación, atención al cliente, satisfacción, cuidados posteriores y reclamaciones",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Documentación profesional, fichas técnicas, TIC, portfolio y confidencialidad",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Control de tiempos, calidad, eficiencia y mejora del servicio",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Limpieza final, conservación, residuos, sostenibilidad y consumo responsable",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Higiene, desinfección, esterilización y prevención de infecciones",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Observación de uñas, piel, alteraciones, contraindicaciones y derivación",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Selección de cosméticos, esmaltes, útiles y técnicas según características del cliente",
+      "justification_es": "Producto final: moodboard con justificación."
+    },
+    {
+      "title_es": "Ejecución técnica de pedicura: higiene, durezas superficiales, limado, cutículas, masaje y esmaltado",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Diseño, nail art, creatividad, color, armonía estética e imagen global",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Ergonomía, acomodación, protección y confort del cliente y del profesional",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Comunicación, atención al cliente, satisfacción, cuidados posteriores y reclamaciones",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Documentación profesional, fichas técnicas, TIC, portfolio y confidencialidad",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Control de tiempos, calidad, eficiencia y mejora del servicio",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Limpieza final, conservación, residuos, sostenibilidad y consumo responsable",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Preparación de equipos, útiles, productos y mesa de trabajo",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Selección de cosméticos, esmaltes, útiles y técnicas según características del cliente",
+      "justification_es": "Producto final: moodboard con justificación."
+    },
+    {
+      "title_es": "Ejecución técnica de manicura: fases, destreza manual, limado, cutículas, pulido, masaje y esmaltado",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Ejecución técnica de pedicura: higiene, durezas superficiales, limado, cutículas, masaje y esmaltado",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Imagen profesional, preparación personal, actitud y deontología",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Preparación de equipos, útiles, productos y mesa de trabajo",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Selección de cosméticos, esmaltes, útiles y técnicas según características del cliente",
+      "justification_es": "Producto final: moodboard con justificación."
+    },
+    {
+      "title_es": "Ejecución técnica de manicura: fases, destreza manual, limado, cutículas, pulido, masaje y esmaltado",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    },
+    {
+      "title_es": "Ejecución técnica de pedicura: higiene, durezas superficiales, limado, cutículas, masaje y esmaltado",
+      "justification_es": "Conexión competencial y curricular entre los criterios de evaluación de Cuidados estéticos básicos de uñas y el resto de módulos del ciclo formativo para garantizar una formación integral."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3061_c1_1",
+      "title_es": "Manual visual del ayudante de manicura y pedicura: “Tus manos hablan de ti”",
+      "motivatingFactor_es": "el alumnado crea una guía de imagen profesional adaptada al módulo de uñas. | formato carrusel de redes o cartel tipo “antes de empezar la práctica”.",
+      "description_es": "se trabajan uniforme, calzado, cabello recogido, manos cuidadas, uñas limpias y cortas para trabajar, higiene personal, tono de voz, puntualidad y respeto.",
+      "evidence_es": "manual visual de imagen profesional para el aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c1_2",
+      "title_es": "Role-play de bienvenida a mesa de manicura",
+      "motivatingFactor_es": "grabación interna tipo vídeo corto para analizar postura, voz, lenguaje no verbal y seguridad.",
+      "description_es": "por parejas, simulan recibir a un cliente, presentarse, explicar el servicio, acomodar manos o pies y confirmar preferencias.",
+      "evidence_es": "rúbrica de primera impresión profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c1_3",
+      "title_es": "Checklist “lista para atender”",
+      "motivatingFactor_es": "",
+      "description_es": "antes de cada práctica, el alumnado revisa su imagen: manos higienizadas, EPI, uniforme, puesto preparado, útiles ordenados y actitud adecuada.",
+      "evidence_es": "checklist personal para prácticas y FCT.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c1_4",
+      "title_es": "Debate ético: fotos de uñas, permiso e imagen en redes",
+      "motivatingFactor_es": "",
+      "description_es": "analizar si se pueden publicar fotos de manos/pies de clientes, cómo pedir autorización y qué datos no deben aparecer.",
+      "evidence_es": "decálogo de ética, privacidad y redes.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c1_5",
+      "title_es": "Rúbrica de actitud profesional",
+      "motivatingFactor_es": "",
+      "description_es": "la clase define indicadores: puntualidad, higiene, trato, cuidado del material, respeto, discreción, colaboración y responsabilidad.",
+      "evidence_es": "rúbrica común para prácticas de manicura/pedicura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c1_6",
+      "title_es": "Mi marca personal como nail assistant",
+      "motivatingFactor_es": "cada alumno define cómo quiere ser percibido: preciso/a, creativo/a, limpio/a, amable, responsable o detallista.",
+      "description_es": "elaboran una tarjeta de marca personal con fortalezas y objetivos de mejora.",
+      "evidence_es": "mini manifiesto profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c1_7",
+      "title_es": "Mesa de manicura “premium low cost”",
+      "motivatingFactor_es": "diseñar una experiencia agradable sin gastar mucho.",
+      "description_es": "mejorar el puesto con orden, limpieza, música suave, comunicación, iluminación, comodidad y detalles visuales.",
+      "evidence_es": "propuesta de experiencia de cliente para manicura/pedicura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_1",
+      "title_es": "Bandeja técnica de manicura y pedicura: “Todo en su sitio”",
+      "motivatingFactor_es": "foto del setup para portfolio.",
+      "description_es": "preparar limas, alicates, palitos de naranjo, pulidores, algodones, separadores, esmaltes, desmaquillante, cosméticos y recipiente de higiene.",
+      "evidence_es": "bandeja ordenada según secuencia de uso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_2",
+      "title_es": "Inventario del nail bar del aula",
+      "motivatingFactor_es": "semáforo de stock: verde —suficiente—, amarillo —reponer pronto—, rojo —agotado/caducado—.",
+      "description_es": "registrar esmaltes, bases, top coat, limas, cremas, separadores, útiles de corte, productos de higiene y desechables.",
+      "evidence_es": "inventario digital o impreso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_3",
+      "title_es": "Lectura de etiquetas de esmaltes y cosméticos",
+      "motivatingFactor_es": "",
+      "description_es": "analizar composición básica, fecha de apertura, conservación, advertencias, modo de empleo y retirada.",
+      "evidence_es": "guía sencilla de lectura de etiquetas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_4",
+      "title_es": "Montaje de mesa para cliente real o simulado",
+      "motivatingFactor_es": "",
+      "description_es": "preparar mesa, silla, iluminación, papelera, toalla, protección, útiles y ficha antes de la llegada del cliente.",
+      "evidence_es": "checklist de montaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_5",
+      "title_es": "Protocolo QR de preparación",
+      "motivatingFactor_es": "",
+      "description_es": "cada equipo redacta un protocolo de preparación y lo transforma en infografía o documento breve con QR.",
+      "evidence_es": "señalética QR para la mesa de manicura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_6",
+      "title_es": "Maletín junior de manicura/pedicura",
+      "motivatingFactor_es": "diseñar el kit básico para FCT o primer empleo.",
+      "description_es": "seleccionar útiles imprescindibles, distinguir material desechable/reutilizable y calcular coste aproximado.",
+      "evidence_es": "ficha del maletín profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c2_7",
+      "title_es": "Reto “mesa instagrameable, pero higiénica”",
+      "motivatingFactor_es": "montar una mesa visualmente atractiva sin perder seguridad ni funcionalidad.",
+      "description_es": "se valora estética, orden, accesibilidad, higiene, ergonomía y protección.",
+      "evidence_es": "foto autorizada del puesto y defensa oral.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_1",
+      "title_es": "Semáforo de uñas: verde, amarillo, rojo",
+      "motivatingFactor_es": "",
+      "description_es": "analizar casos educativos: uña normal, cutícula sensible, durezas superficiales, cambio de color, inflamación, herida o posible infección.",
+      "evidence_es": "panel de actuación: realizar, adaptar, consultar o derivar.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_2",
+      "title_es": "Ficha de diagnóstico de manos y pies",
+      "motivatingFactor_es": "",
+      "description_es": "registrar forma de uña, piel, cutícula, durezas, sensibilidad, hábitos, alergias y servicio solicitado.",
+      "evidence_es": "ficha técnica de manicura/pedicura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_3",
+      "title_es": "Circuito de observación: “Detectives de uñas”",
+      "motivatingFactor_es": "",
+      "description_es": "estaciones de forma, lámina ungular, cutícula, piel, durezas, higiene, preferencias y contraindicaciones.",
+      "evidence_es": "informe de diagnóstico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_4",
+      "title_es": "Caso de derivación profesional",
+      "motivatingFactor_es": "",
+      "description_es": "trabajar situaciones donde el auxiliar debe avisar al técnico responsable o derivar: herida, inflamación, posible hongo, dolor o alteración marcada.",
+      "evidence_es": "árbol de decisión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_5",
+      "title_es": "Entrevista previa al servicio",
+      "motivatingFactor_es": "",
+      "description_es": "role-play para preguntar alergias, sensibilidad, estilo de vida, trabajo manual, evento, preferencia de forma/color y experiencias previas.",
+      "evidence_es": "diálogo evaluado y ficha cumplimentada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_6",
+      "title_es": "Cliente trae una foto de Pinterest/TikTok",
+      "motivatingFactor_es": "analizar si la forma, largo o diseño solicitado es viable para sus uñas naturales y nivel del servicio.",
+      "description_es": "",
+      "evidence_es": "respuesta profesional con alternativa segura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c4_7",
+      "title_es": "Diagnóstico con macrofotografía responsable",
+      "motivatingFactor_es": "usar fotografías autorizadas de manos o plantillas para observar detalles sin invadir privacidad.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "ficha de observación con criterios de confidencialidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_1",
+      "title_es": "Moodboard de nail art para evento",
+      "motivatingFactor_es": "",
+      "description_es": "crear diseños para graduación, festival, entrevista, boda familiar, estilo urbano, clean look o fantasía.",
+      "evidence_es": "moodboard de estilos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_2",
+      "title_es": "Arte en uñas inspirado en historia, música o cultura urbana",
+      "motivatingFactor_es": "",
+      "description_es": "tomar referencias de arte, épocas, canciones, videojuegos o cultura local y traducirlas a diseños sencillos.",
+      "evidence_es": "galería de nail art en plantillas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_3",
+      "title_es": "Coordinación uñas-maquillaje-peinado",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar un look integral con paleta cromática común.",
+      "evidence_es": "dossier de imagen global.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_4",
+      "title_es": "Rueda de color aplicada a uñas",
+      "motivatingFactor_es": "",
+      "description_es": "trabajar colores complementarios, armonías cálidas/frías y combinaciones según piel y ropa.",
+      "evidence_es": "rueda cromática para nail art.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_5",
+      "title_es": "Face/nail chart challenge",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar uñas en plantillas antes de aplicar, justificando color, forma y estilo.",
+      "evidence_es": "colección de diseños.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_6",
+      "title_es": "Filtros vs uñas reales",
+      "motivatingFactor_es": "analizar fotos editadas de nail art y expectativas irreales.",
+      "description_es": "",
+      "evidence_es": "guía de fotografía honesta de trabajos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c8_7",
+      "title_es": "Certamen “nail artist junior”",
+      "motivatingFactor_es": "exposición final de diseños en plantillas, con explicación técnica y creativa.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "muestra de nail art con insignias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_1",
+      "title_es": "Mapa postural de manicura y pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "analizar altura de mesa, posición de espalda, cuello, muñeca, silla, reposapiés y distancia al cliente.",
+      "evidence_es": "cartel de ergonomía.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_2",
+      "title_es": "Práctica de acomodación segura",
+      "motivatingFactor_es": "",
+      "description_es": "preparar al cliente en mesa de manicura y puesto de pedicura, garantizando comodidad, higiene y protección.",
+      "evidence_es": "checklist de acomodación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_3",
+      "title_es": "Termómetro de confort del cliente",
+      "motivatingFactor_es": "",
+      "description_es": "crear una tarjeta para preguntar presión, postura, cosquillas, frío/calor, dolor o incomodidad.",
+      "evidence_es": "herramienta de comunicación durante el servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_4",
+      "title_es": "Observación entre iguales",
+      "motivatingFactor_es": "",
+      "description_es": "un alumno realiza la práctica y otro observa ergonomía, higiene, postura, comodidad y comunicación.",
+      "evidence_es": "ficha de coevaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_5",
+      "title_es": "Adaptación a clientes diversos",
+      "motivatingFactor_es": "",
+      "description_es": "cliente mayor, movilidad reducida, uñas sensibles, vergüenza con los pies, dificultad idiomática o ansiedad.",
+      "evidence_es": "guía de atención adaptada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_6",
+      "title_es": "Micro-pausas del nail assistant",
+      "motivatingFactor_es": "diseñar estiramientos breves de muñeca, cuello, espalda y hombros.",
+      "description_es": "",
+      "evidence_es": "vídeo o póster de micro-pausas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c9_7",
+      "title_es": "Reto “ergonomía sin perder precisión”",
+      "motivatingFactor_es": "practicar limado/esmalte cuidando postura y apoyos, no solo resultado.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "rúbrica de postura y precisión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_1",
+      "title_es": "Role-play de asesoramiento de manicura/pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "entrevista, diagnóstico, propuesta de forma/color, explicación del servicio y despedida.",
+      "evidence_es": "diálogo evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_2",
+      "title_es": "Tarjeta de cuidados posteriores",
+      "motivatingFactor_es": "",
+      "description_es": "redactar consejos tras manicura/pedicura: evitar golpes, hidratación, cuidado de cutículas, calzado, retirada del esmalte y señales de alerta.",
+      "evidence_es": "tarjeta postservicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_3",
+      "title_es": "Encuesta de satisfacción",
+      "motivatingFactor_es": "escala de emojis y análisis de resultados.",
+      "description_es": "preguntas sobre trato, higiene, comodidad, resultado, tiempo y explicación.",
+      "evidence_es": "encuesta digital o impresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_4",
+      "title_es": "Atención básica en inglés",
+      "motivatingFactor_es": "",
+      "description_es": "frases para preguntar color, shape, allergies, appointment, hands, feet, thank you.",
+      "evidence_es": "tarjeta bilingüe.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_5",
+      "title_es": "Gestión de reclamaciones",
+      "motivatingFactor_es": "",
+      "description_es": "casos: esmalte levantado, forma desigual, color no esperado, espera larga o incomodidad.",
+      "evidence_es": "hoja de incidencia y respuesta profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_6",
+      "title_es": "Respuesta a reseña negativa online",
+      "motivatingFactor_es": "redactar respuesta respetuosa a una crítica ficticia sin discutir ni revelar datos.",
+      "description_es": "",
+      "evidence_es": "banco de respuestas profesionales.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c10_7",
+      "title_es": "Chatbot de preguntas frecuentes de uñas",
+      "motivatingFactor_es": "crear FAQ sobre duración, cuidados, colores, higiene, precio, alergias y mantenimiento.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "guion de chatbot o folleto interactivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_1",
+      "title_es": "Ficha digital de manicura/pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "datos, diagnóstico, servicio, forma, color, productos, incidencias, satisfacción y cuidados.",
+      "evidence_es": "formulario digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_2",
+      "title_es": "Portfolio de nail art y prácticas",
+      "motivatingFactor_es": "",
+      "description_es": "recopilar fotos autorizadas, diseños en plantillas, fichas, rúbricas y reflexión.",
+      "evidence_es": "portfolio digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_3",
+      "title_es": "Informe de práctica",
+      "motivatingFactor_es": "",
+      "description_es": "objetivo, materiales, procedimiento, resultado, errores y mejora.",
+      "evidence_es": "informe para evaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_4",
+      "title_es": "Base de datos de esmaltes y productos",
+      "motivatingFactor_es": "",
+      "description_es": "marca, color, uso, caducidad, conservación, advertencias y estado.",
+      "evidence_es": "base de datos del aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_5",
+      "title_es": "Gráficos de preferencias",
+      "motivatingFactor_es": "",
+      "description_es": "analizar colores, formas y estilos preferidos por el grupo o clientes simulados.",
+      "evidence_es": "dashboard sencillo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_6",
+      "title_es": "QR de ficha y diseño",
+      "motivatingFactor_es": "vincular cada diseño o práctica a su ficha técnica mediante QR.",
+      "description_es": "",
+      "evidence_es": "portfolio interactivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c11_7",
+      "title_es": "Caso “manos en redes”",
+      "motivatingFactor_es": "analizar privacidad en fotos de manos/pies, tatuajes, joyas o rasgos identificables.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "protocolo de autorización y confidencialidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_1",
+      "title_es": "Cronograma de manicura básica",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, diagnóstico, preparación, desmaquillado, limado, cutículas, masaje, esmaltado, encuesta y limpieza.",
+      "evidence_es": "planning de servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_2",
+      "title_es": "Tabla de tiempos técnicos",
+      "motivatingFactor_es": "",
+      "description_es": "comparar manicura, pedicura, esmaltado, masaje, maquillaje, depilación y lavado.",
+      "evidence_es": "tabla visual del taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_3",
+      "title_es": "Rúbrica de calidad",
+      "motivatingFactor_es": "",
+      "description_es": "higiene, forma, limado, cutículas, pulido, esmaltado, comodidad, tiempo y satisfacción.",
+      "evidence_es": "rúbrica común.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_4",
+      "title_es": "Análisis de errores frecuentes",
+      "motivatingFactor_es": "",
+      "description_es": "esmalte con burbujas, capas gruesas, forma irregular, cutícula dañada, producto mal retirado.",
+      "evidence_es": "tabla error-causa-solución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_5",
+      "title_es": "Plan de mejora del servicio",
+      "motivatingFactor_es": "",
+      "description_es": "tras cada práctica, proponer una mejora técnica, una comunicativa y una de higiene/orden.",
+      "evidence_es": "informe breve de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_6",
+      "title_es": "Temporizador creativo de manicura",
+      "motivatingFactor_es": "crear tarjetas o alarmas para controlar fases sin correr.",
+      "description_es": "",
+      "evidence_es": "sistema visual de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c12_7",
+      "title_es": "Reto “servicio eficiente, no acelerado”",
+      "motivatingFactor_es": "demostrar que eficiencia significa hacerlo bien, seguro y en tiempo razonable.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "evaluación comparativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_1",
+      "title_es": "Cierre sostenible de la mesa",
+      "motivatingFactor_es": "",
+      "description_es": "limpiar útiles, cerrar esmaltes, ordenar productos, retirar residuos y preparar el puesto para el siguiente servicio.",
+      "evidence_es": "checklist de cierre.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_2",
+      "title_es": "Ruta del residuo de manicura/pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "algodones, limas desechables, palitos, envases, toallas, guantes y restos de producto.",
+      "evidence_es": "mapa de residuos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_3",
+      "title_es": "Plan de reducción de desechables",
+      "motivatingFactor_es": "",
+      "description_es": "buscar alternativas seguras para reducir residuos sin comprometer higiene.",
+      "evidence_es": "plan de mejora sostenible.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_4",
+      "title_es": "Auditoría de productos caducados",
+      "motivatingFactor_es": "",
+      "description_es": "revisar esmaltes espesos, productos abiertos, envases dañados, olores o texturas alteradas.",
+      "evidence_es": "informe de retirada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_5",
+      "title_es": "Campaña de consumo responsable",
+      "motivatingFactor_es": "",
+      "description_es": "mensajes sobre uso racional de esmaltes, algodones, agua, energía y productos.",
+      "evidence_es": "cartel o vídeo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_6",
+      "title_es": "Eco-nail bar challenge",
+      "motivatingFactor_es": "reducir residuos en una práctica simulada sin perder higiene ni calidad.",
+      "description_es": "",
+      "evidence_es": "comparación antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c13_7",
+      "title_es": "Señalética sostenible con QR",
+      "motivatingFactor_es": "crear carteles con QR sobre residuos, limpieza final, conservación de esmaltes y ahorro.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "señalética para el aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_1",
+      "title_es": "Salón simulado de manicura/pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, diagnóstico, servicio, encuesta, limpieza, documentación y cierre.",
+      "evidence_es": "servicio integral evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_2",
+      "title_es": "Rotación de roles profesionales",
+      "motivatingFactor_es": "",
+      "description_es": "cliente, profesional, observador de higiene, responsable de almacén, responsable de tiempos y responsable de comunicación.",
+      "evidence_es": "registro de roles.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_3",
+      "title_es": "Proyecto final de nail bar",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar un nail bar escolar con servicios, protocolos, fichas, catálogo, precios ficticios y medidas sostenibles.",
+      "evidence_es": "dossier de proyecto.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_4",
+      "title_es": "Diario de aprendizaje profesional",
+      "motivatingFactor_es": "",
+      "description_es": "avances, errores, destrezas, actitud, seguridad, trato y objetivos semanales.",
+      "evidence_es": "diario individual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_5",
+      "title_es": "Simulación de FCT",
+      "motivatingFactor_es": "",
+      "description_es": "seguir instrucciones de empresa, uniformidad, tiempos, limpieza, comunicación y evaluación final.",
+      "evidence_es": "rúbrica tipo empresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_6",
+      "title_es": "Hackathon “mejora el nail bar”",
+      "motivatingFactor_es": "resolver un problema real: desorden, residuos, tiempos, higiene, comunicación o satisfacción.",
+      "description_es": "",
+      "evidence_es": "pitch de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c14_7",
+      "title_es": "Certamen “nail assistant junior”",
+      "motivatingFactor_es": "exposición final de competencias: ficha, técnica, nail art, protocolo, portfolio o campaña.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "muestra de competencias con insignias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_1",
+      "title_es": "Protocolo de higiene de útiles de uñas",
+      "motivatingFactor_es": "",
+      "description_es": "diferenciar limpiar, desinfectar y esterilizar; aplicar el protocolo a alicates, limas, palitos, separadores y superficies.",
+      "evidence_es": "protocolo visual de higiene.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_2",
+      "title_es": "Práctica de desinfección comparada",
+      "motivatingFactor_es": "",
+      "description_es": "comparar métodos según material: metal, cartón, plástico, algodón, toalla o madera.",
+      "evidence_es": "tabla útil-material-método.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_3",
+      "title_es": "Campaña “no compartas riesgo”",
+      "motivatingFactor_es": "cartel o carrusel estilo redes.",
+      "description_es": "trabajar riesgos de compartir limas, cortaúñas, alicates o esmaltes contaminados.",
+      "evidence_es": "campaña visual de higiene.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_4",
+      "title_es": "Auditoría higiénica de la mesa",
+      "motivatingFactor_es": "",
+      "description_es": "un equipo monta el puesto y otro lo inspecciona con rúbrica: manos, útiles, superficies, desechables, productos y residuos.",
+      "evidence_es": "informe de auditoría con mejoras.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_5",
+      "title_es": "Glosario bilingüe de higiene y uñas",
+      "motivatingFactor_es": "",
+      "description_es": "nail, cuticle, file, disinfect, gloves, clean, hands, feet, polish, infection.",
+      "evidence_es": "tarjetas bilingües para el aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_6",
+      "title_es": "Simulación de contaminación invisible",
+      "motivatingFactor_es": "usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a útiles y productos.",
+      "description_es": "",
+      "evidence_es": "mapa de contaminación y protocolo preventivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c3_7",
+      "title_es": "Escape room “salva el nail bar”",
+      "motivatingFactor_es": "resolver pruebas sobre limas contaminadas, alicates sin desinfectar, producto caducado, toalla sucia y residuos mal gestionados.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "checklist final de higiene segura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_1",
+      "title_es": "Árbol de decisión de manicura/pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "elegir técnica, lima, forma, cosmético, esmalte o acabado según tipo de uña, piel, evento, edad, estilo y preferencias.",
+      "evidence_es": "árbol visual de decisión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_2",
+      "title_es": "Comparativa de productos de uñas",
+      "motivatingFactor_es": "",
+      "description_es": "base, esmalte, top coat, aceite de cutículas, crema, desmaquillante, pulidor y cosméticos de masaje.",
+      "evidence_es": "tabla función-uso-precaución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_3",
+      "title_es": "Asesoría de estilo de uñas para evento",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar uñas para graduación, entrevista, festival, boda familiar, día a día o prácticas en empresa.",
+      "evidence_es": "moodboard con justificación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_4",
+      "title_es": "Presupuesto de servicio básico",
+      "motivatingFactor_es": "",
+      "description_es": "calcular coste de consumibles, duración y precio ficticio de manicura, pedicura o pack combinado.",
+      "evidence_es": "presupuesto sencillo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_5",
+      "title_es": "Role-play de asesoramiento",
+      "motivatingFactor_es": "",
+      "description_es": "el cliente duda entre colores, forma o tratamiento. El alumno explica opciones y acabados previsibles.",
+      "evidence_es": "diálogo profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_6",
+      "title_es": "Ranking “producto viral pero ¿profesional?”",
+      "motivatingFactor_es": "analizar esmaltes, aceites o trucos de redes y valorar seguridad, utilidad, precio y expectativas.",
+      "description_es": "",
+      "evidence_es": "ranking razonado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c5_7",
+      "title_es": "Consultoría express con cartas de cliente",
+      "motivatingFactor_es": "tarjetas con perfiles: uñas frágiles, piel seca, evento formal, estilo urbano, presupuesto bajo, prisa o alergias.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "pitch de recomendación en 2 minutos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_1",
+      "title_es": "Servicio completo de pedicura básica simulada",
+      "motivatingFactor_es": "",
+      "description_es": "diagnóstico, higiene, tratamiento superficial de durezas, limado, cutículas, masaje, esmaltado y cuidados posteriores.",
+      "evidence_es": "ficha de servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_2",
+      "title_es": "Protocolo de higiene en pedicura",
+      "motivatingFactor_es": "",
+      "description_es": "trabajar especial atención a pies, toallas, recipientes, separadores, limas, guantes y desinfección.",
+      "evidence_es": "protocolo específico de pedicura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_3",
+      "title_es": "Taller de masaje de pies",
+      "motivatingFactor_es": "",
+      "description_es": "practicar maniobras básicas en orden, con presión adecuada y respeto a la comodidad del cliente.",
+      "evidence_es": "secuencia visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_4",
+      "title_es": "Caso “pies sensibles”",
+      "motivatingFactor_es": "",
+      "description_es": "cliente con cosquillas, vergüenza, piel sensible o durezas superficiales. Cómo comunicar y adaptar.",
+      "evidence_es": "guía de atención sensible.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_5",
+      "title_es": "Reto de esmaltado con separadores",
+      "motivatingFactor_es": "",
+      "description_es": "practicar colocación, postura y esmaltado limpio en plantillas o modelos adecuados.",
+      "evidence_es": "panel de resultados.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_6",
+      "title_es": "Pedicura para verano/festival de forma responsable",
+      "motivatingFactor_es": "diseñar una pedicura estética para sandalias o evento, con cuidados e higiene.",
+      "description_es": "",
+      "evidence_es": "moodboard y tarjeta de cuidados.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c7_7",
+      "title_es": "Semáforo de pedicura segura",
+      "motivatingFactor_es": "identificar cuándo realizar, adaptar o derivar por heridas, dolor, infección, inflamación o alteraciones.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "árbol de decisión visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_1",
+      "title_es": "Servicio completo de manicura básica",
+      "motivatingFactor_es": "",
+      "description_es": "preparación, diagnóstico, desmaquillado, limado, cutículas, pulido, masaje, esmaltado, encuesta y limpieza final.",
+      "evidence_es": "ficha de servicio y rúbrica técnica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_2",
+      "title_es": "Reto de limado simétrico",
+      "motivatingFactor_es": "",
+      "description_es": "practicar formas en plantillas o uñas de práctica: cuadrada, ovalada, redonda o almendrada básica.",
+      "evidence_es": "panel antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_3",
+      "title_es": "Taller de masaje de manos",
+      "motivatingFactor_es": "",
+      "description_es": "aprender orden, presión, ritmo, comodidad y respeto al cliente.",
+      "evidence_es": "secuencia ilustrada de masaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_4",
+      "title_es": "Battle de esmaltado limpio",
+      "motivatingFactor_es": "",
+      "description_es": "reto cooperativo de esmaltado en plantillas, valorando pulcritud, capas finas, borde libre y limpieza.",
+      "evidence_es": "rúbrica de acabado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_5",
+      "title_es": "Corrección de errores técnicos",
+      "motivatingFactor_es": "",
+      "description_es": "detectar esmalte en cutícula, limado desigual, exceso de producto, falta de higiene o masaje desordenado.",
+      "evidence_es": "tabla error-causa-solución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_6",
+      "title_es": "Stop motion de manicura",
+      "motivatingFactor_es": "fotografiar cada fase para crear una animación didáctica.",
+      "description_es": "",
+      "evidence_es": "stop motion del procedimiento correcto.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3061_c6_7",
+      "title_es": "Pasaporte de destrezas de manicura",
+      "motivatingFactor_es": "el alumnado consigue sellos por dominar fases: higiene, limado, masaje, pulido, esmaltado, limpieza y trato.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "pasaporte individual de competencias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    }
+  ]
+}

@@ -1,0 +1,970 @@
+{
+  "code": "3042",
+  "name_es": "Ciencias aplicadas II",
+  "criteria": [
+    "3042-1a. Se han utilizado identidades notables en las operaciones con polinomios",
+    "3042-1b. Se han obtenido valores numéricos a partir de una expresión algebraica.",
+    "3042-1c. Se han resuelto ecuaciones de primer y segundo grado sencillas de modo algebraico y gráfico.",
+    "3042-1d. Se han resuelto problemas cotidianos y de otras áreas de conocimiento mediante ecuaciones y sistemas.",
+    "3042-1e. Se ha valorado la precisión, simplicidad y utilidad del lenguaje algebraico para representar situaciones planteadas en la vida real.",
+    "3042-2a. Se han planteado hipótesis sencillas, a partir de observaciones directas o indirectas recopiladas por distintos medios.",
+    "3042-2b. Se han analizado las diversas hipótesis y se ha emitido una primera aproximación a su explicación.",
+    "3042-2c. Se han planificado métodos y procedimientos experimentales sencillos de diversa índole para refutar o no su hipótesis.",
+    "3042-2d. Se ha trabajado en equipo en el planteamiento de la solución.",
+    "3042-2e. Se han recopilado los resultados de los ensayos de verificación y plasmado en un documento de forma coherente.",
+    "3042-2f. Se ha defendido el resultado con argumentaciones y pruebas las verificaciones o refutaciones de las hipótesis emitidas.",
+    "3042-3a. Se han utilizado instrumentos apropiados para medir ángulos, longitudes, áreas y volúmenes de cuerpos y figuras geométricas interpretando las escalas de medida.",
+    "3042-3b. Se han utilizado distintas estrategias (semejanzas, descomposición en figuras más sencillas, entre otros) para estimar o calcular medidas indirectas en el mundo físico.",
+    "3042-3c. Se han utilizado las fórmulas para calcular perímetros, áreas y volúmenes y se han asignado las unidades correctas.",
+    "3042-3d. Se ha trabajado en equipo en la obtención de medidas.",
+    "3042-3e. Se han utilizado las TIC para representar distintas figuras.",
+    "3042-4a. Se ha expresado la ecuación de la recta de diversas formas.",
+    "3042-4b. Se ha representado gráficamente la función cuadrática aplicando métodos sencillos para su representación.",
+    "3042-4c. Se ha representado gráficamente la función inversa.",
+    "3042-4d. Se ha representado gráficamente la función exponencial.",
+    "3042-4e. Se ha extraído información de gráficas que representen los distintos tipos de funciones asociadas a situaciones reales.",
+    "3042-4f. Se ha utilizado el vocabulario adecuado para la descripción de situaciones relacionadas con el azar y la estadística.",
+    "3042-4g. Se han elaborado e interpretado tablas y gráficos estadísticos.",
+    "3042-4h. Se han analizado características de la distribución estadística obteniendo medidas de centralización y dispersión.",
+    "3042-4i. Se han aplicado las propiedades de los sucesos y la probabilidad.",
+    "3042-4j. Se han resueltos problemas cotidianos mediante cálculos de probabilidad sencillos.",
+    "3042-5a. Se ha verificado la disponibilidad del material básico utilizado en un laboratorio.",
+    "3042-5b. Se han identificado y medido magnitudes básicas, entre otras, masa, peso, volumen, densidad, temperatura.",
+    "3042-5c. Se han identificado distintos tipos de biomoléculas presentes en materiales orgánicos.",
+    "3042-5d. Se ha descrito la célula y tejidos animales y vegetales mediante su observación a través de instrumentos ópticos.",
+    "3042-5e. Se han elaborado informes de ensayos en los que se incluye el procedimiento seguido, los resultados obtenidos y las conclusiones finales.",
+    "3042-6a. Se han identificado reacciones químicas principales de la vida cotidiana, la naturaleza y la industria.",
+    "3042-6b. Se han descrito las manifestaciones de reacciones químicas.",
+    "3042-6c. Se han descrito los componentes principales de una reacción química y la intervención de la energía en la misma.",
+    "3042-6d. Se han reconocido algunas reacciones químicas tipo, como combustión, oxidación, descomposición, neutralización, síntesis, aeróbica, anaeróbica.",
+    "3042-6e. Se han identificado los componente y el proceso de reacciones químicas sencillas mediante ensayos de laboratorio.",
+    "3042-6f. Se han elaborado informes utilizando las TIC sobre las industrias más relevantes: alimentarias, cosmética, reciclaje, describiendo de forma sencilla los procesos que tienen lugar en las mismas.",
+    "3042-7a. Se han analizado efectos positivos y negativos del uso de la energía nuclear.",
+    "3042-7b. Se ha diferenciado el proceso de fusión y fisión nuclear.",
+    "3042-7c. Se han identificado algunos problemas sobre vertidos nucleares producto de catástrofes naturales o de mala gestión y mantenimiento de las centrales nucleares.",
+    "3042-7d. Se ha argumentado sobre la problemática de los residuos nucleares.",
+    "3042-7e. Se ha trabajado en equipo y utilizado las TIC.",
+    "3042-8a. Se han identificado los agentes geológicos externos y cuál es su acción sobre el relieve.",
+    "3042-8b. Se han diferenciado los tipos de meteorización e identificado sus consecuencias en el relieve.",
+    "3042-8c. Se ha analizado el proceso de erosión, reconociendo los agentes geológicos externos que intervienen y las consecuencias en el relieve.",
+    "3042-8d. Se ha descrito el proceso de transporte discriminando los agentes geológicos externos que intervienen y las consecuencias en el relieve.",
+    "3042-8e. Se ha analizado el proceso de sedimentación discriminado los agentes geológicos externos que intervienen, las situaciones y las consecuencias en el relieve.",
+    "3042-9a. Se han reconocido los fenómenos de la contaminación atmosférica y los principales agentes causantes de la misma.",
+    "3042-9b. Se ha investigado sobre el fenómeno de la lluvia acida, sus consecuencias inmediatas y futuras y como sería posible evitarla.",
+    "3042-9c. Se ha descrito el efecto invernadero argumentando las causas que lo originan o contribuyen y las medidas para su minoración.",
+    "3042-9d. Se ha descrito la problemática que ocasiona la pérdida paulatina de la capa de ozono, las consecuencias para la salud de las personas, el equilibrio de la hidrosfera y las poblaciones.",
+    "3042-10a. Se ha reconocido y valorado el papel del agua en la existencia y supervivencia de la vida en el planeta.",
+    "3042-10b. Se ha identificado el efecto nocivo que tienen para las poblaciones de seres vivos de la contaminación de los acuíferos.",
+    "3042-10c. Se han identificación posibles contaminantes en muestras de agua de distinto origen planificado y realizando ensayos de laboratorio.",
+    "3042-10d. Se ha analizado los efectos producidos por la contaminación del agua y el uso responsable de la misma.",
+    "3042-11a. Se ha analizado las implicaciones positivas de un desarrollo sostenible.",
+    "3042-11b. Se han propuesto medidas elementales encaminadas a favorecer el desarrollo sostenible.",
+    "3042-11c. Se han diseñado estrategias básicas para posibilitar el mantenimiento del medioambiente.",
+    "3042-11d. Se ha trabajado en equipo en la identificación de los objetivos para la mejora del medioambiente.",
+    "3042-12a. Se han discriminado movimientos cotidianos en función de su trayectoria y de su celeridad.",
+    "3042-12b. Se ha relacionado entre sí la distancia recorrida, la velocidad, el tiempo y la aceleración, expresándolas en unidades de uso habitual.",
+    "3042-12c. Se han representado vectorialmente a determinadas magnitudes como la velocidad y la aceleración.",
+    "3042-12d. Se han relacionado los parámetros que definen el movimiento rectilíneo uniforme utilizando las expresiones gráficas y matemática.",
+    "3042-12e. Se han realizado cálculos sencillos de velocidades en movimientos con aceleración constante.",
+    "3042-12f. Se ha descrito la relación causa-efecto en distintas situaciones, para encontrar la relación entre Fuerzas y movimientos.",
+    "3042-12g. Se han aplicado las leyes de Newton en situaciones de la vida cotidiana.",
+    "3042-13a. Se han identificado y manejado las magnitudes físicas básicas a tener en cuenta en el consumo de electricidad en la vida cotidiana.",
+    "3042-13b. Se han analizado los hábitos de consumo y ahorro eléctrico y establecido líneas de mejora en los mismos.",
+    "3042-13c. Se han clasificado las centrales eléctricas y descrito la trasformación energética en las mismas.",
+    "3042-13d. Se han analizado las ventajas y desventajas de las distintas centrales eléctricas.",
+    "3042-13e. Se han descrito básicamente las etapas de la distribución de la energía eléctrica desde su génesis al usuario.",
+    "3042-13f. Se trabajado en equipo en la recopilación de información sobre centrales eléctricas en España.",
+    "3042-14a. Se han caracterizado los microorganismos y parásitos más comunes que afectan a la piel y al aparato digestivo.",
+    "3042-14b. Se han categorizado los principales agentes causantes de infecciones por contacto con materiales infectados o contaminados.",
+    "3042-14c. Se han reconocido las enfermedades infecciosas y parasitarias más frecuentes que afectan a la piel y al aparato digestivo.",
+    "3042-14d. Se han propuesto formas de prevención de infecciones y parasitosis que afectan a la piel y al aparato digestivo.",
+    "3042-14e. Se han identifica las principales sustancias utilizadas en el procesamiento de los alimentos que pueden actuar como tóxicos.",
+    "3042-14f. Se ha analizado y protocolizado el procedimiento de lavado de las manos antes y después de cualquier manipulación, con objeto de prevenir la transmisión de enfermedades.",
+    "3042-14g. Se han identificado y tipificado distintos tipos de desinfectantes y métodos de esterilización.",
+    "3042-14h. Se han analizado y experimentado diversos procedimientos de desinfección y esterilización."
+  ],
+  "connections": [
+    {
+      "title_es": "Conexión curricular: 3042-1a ↔ 3009-1d (Ciencias aplicadas I)",
+      "justification_es": "El criterio matemático se vincula con situaciones profesionales en las que el alumnado debe calcular, ajustar cantidades, organizar tiempos, controlar stock o explicar datos al cliente con precisión."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-1b ↔ 3065-3g (Cambios de color del cabello)",
+      "justification_es": "El criterio matemático se vincula con situaciones profesionales en las que el alumnado debe calcular, ajustar cantidades, organizar tiempos, controlar stock o explicar datos al cliente con precisión."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-1c ↔ 3009-1i (Ciencias aplicadas I)",
+      "justification_es": "El criterio matemático se vincula con situaciones profesionales en las que el alumnado debe calcular, ajustar cantidades, organizar tiempos, controlar stock o explicar datos al cliente con precisión."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-1d ↔ 3060-3j (Preparación del entorno profesional)",
+      "justification_es": "El criterio matemático se vincula con situaciones profesionales en las que el alumnado debe calcular, ajustar cantidades, organizar tiempos, controlar stock o explicar datos al cliente con precisión."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-1e ↔ 3005-1i (Atención al cliente)",
+      "justification_es": "El criterio matemático se vincula con situaciones profesionales en las que el alumnado debe calcular, ajustar cantidades, organizar tiempos, controlar stock o explicar datos al cliente con precisión."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-2a ↔ 3064-1f (Lavado y cambios de forma del cabello)",
+      "justification_es": "La competencia científica conecta con la observación profesional, la formulación de preguntas, la comprobación de hipótesis, el registro de resultados y la argumentación de decisiones técnicas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-2b ↔ 3063-2d (Maquillaje)",
+      "justification_es": "La competencia científica conecta con la observación profesional, la formulación de preguntas, la comprobación de hipótesis, el registro de resultados y la argumentación de decisiones técnicas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-2c ↔ 3062-1e (Depilación mecánica y decoloración del vello superfluo)",
+      "justification_es": "La competencia científica conecta con la observación profesional, la formulación de preguntas, la comprobación de hipótesis, el registro de resultados y la argumentación de decisiones técnicas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-2d ↔ 3159-2d (Itinerario personal para la empleabilidad)",
+      "justification_es": "La competencia científica conecta con la observación profesional, la formulación de preguntas, la comprobación de hipótesis, el registro de resultados y la argumentación de decisiones técnicas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-2e ↔ 3012-4d (Comunicación y sociedad II)",
+      "justification_es": "La competencia científica conecta con la observación profesional, la formulación de preguntas, la comprobación de hipótesis, el registro de resultados y la argumentación de decisiones técnicas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-2f ↔ 3012-3c (Comunicación y sociedad II)",
+      "justification_es": "La competencia científica conecta con la observación profesional, la formulación de preguntas, la comprobación de hipótesis, el registro de resultados y la argumentación de decisiones técnicas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-3a ↔ 3063-3d (Maquillaje)",
+      "justification_es": "Las medidas y la geometría se aplican al diseño estético, al visagismo, a la organización del espacio, al uso de moldes, a la simetría y a la representación visual de propuestas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-3b ↔ 3064-2d (Lavado y cambios de forma del cabello)",
+      "justification_es": "Las medidas y la geometría se aplican al diseño estético, al visagismo, a la organización del espacio, al uso de moldes, a la simetría y a la representación visual de propuestas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-3c ↔ 3061-2i (Cuidados estéticos básicos de uñas)",
+      "justification_es": "Las medidas y la geometría se aplican al diseño estético, al visagismo, a la organización del espacio, al uso de moldes, a la simetría y a la representación visual de propuestas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-3d ↔ 3067-7d (Formación en Centros de Trabajo)",
+      "justification_es": "Las medidas y la geometría se aplican al diseño estético, al visagismo, a la organización del espacio, al uso de moldes, a la simetría y a la representación visual de propuestas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-3e ↔ 3009-1c (Ciencias aplicadas I)",
+      "justification_es": "Las medidas y la geometría se aplican al diseño estético, al visagismo, a la organización del espacio, al uso de moldes, a la simetría y a la representación visual de propuestas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4a ↔ 3060-4b (Preparación del entorno profesional)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4b ↔ 3063-4e (Maquillaje)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4c ↔ 3065-4g (Cambios de color del cabello)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4d ↔ 3064-4i (Lavado y cambios de forma del cabello)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4e ↔ 3005-3b (Atención al cliente)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4f ↔ 3012-3b (Comunicación y sociedad II)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4g ↔ 3005-3d (Atención al cliente)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4h ↔ 3005-3d (Atención al cliente)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4i ↔ 3005-4f (Atención al cliente)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-4j ↔ 3005-2g (Atención al cliente)",
+      "justification_es": "La interpretación de gráficos, tablas, funciones y datos permite analizar tiempos, satisfacción, tendencias, consumo, calidad del servicio y toma de decisiones basada en evidencias."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-5a ↔ 3060-3b (Preparación del entorno profesional)",
+      "justification_es": "Las técnicas de laboratorio se relacionan con el manejo seguro de productos, magnitudes, etiquetado, observación de piel/cabello/uñas y elaboración de informes de prácticas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-5b ↔ 3065-3g (Cambios de color del cabello)",
+      "justification_es": "Las técnicas de laboratorio se relacionan con el manejo seguro de productos, magnitudes, etiquetado, observación de piel/cabello/uñas y elaboración de informes de prácticas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-5c ↔ 3063-1h (Maquillaje)",
+      "justification_es": "Las técnicas de laboratorio se relacionan con el manejo seguro de productos, magnitudes, etiquetado, observación de piel/cabello/uñas y elaboración de informes de prácticas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-5d ↔ 3064-1a (Lavado y cambios de forma del cabello)",
+      "justification_es": "Las técnicas de laboratorio se relacionan con el manejo seguro de productos, magnitudes, etiquetado, observación de piel/cabello/uñas y elaboración de informes de prácticas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-5e ↔ 3012-4e (Comunicación y sociedad II)",
+      "justification_es": "Las técnicas de laboratorio se relacionan con el manejo seguro de productos, magnitudes, etiquetado, observación de piel/cabello/uñas y elaboración de informes de prácticas profesionales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-6a ↔ 3065-2c (Cambios de color del cabello)",
+      "justification_es": "Las reacciones químicas ayudan a comprender procesos habituales del sector: coloración, decoloración, oxidación, neutralización, actuación de cosméticos y reciclaje de residuos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-6b ↔ 3065-2b (Cambios de color del cabello)",
+      "justification_es": "Las reacciones químicas ayudan a comprender procesos habituales del sector: coloración, decoloración, oxidación, neutralización, actuación de cosméticos y reciclaje de residuos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-6c ↔ 3065-3c (Cambios de color del cabello)",
+      "justification_es": "Las reacciones químicas ayudan a comprender procesos habituales del sector: coloración, decoloración, oxidación, neutralización, actuación de cosméticos y reciclaje de residuos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-6d ↔ 3062-4d (Depilación mecánica y decoloración del vello superfluo)",
+      "justification_es": "Las reacciones químicas ayudan a comprender procesos habituales del sector: coloración, decoloración, oxidación, neutralización, actuación de cosméticos y reciclaje de residuos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-6e ↔ 3065-2j (Cambios de color del cabello)",
+      "justification_es": "Las reacciones químicas ayudan a comprender procesos habituales del sector: coloración, decoloración, oxidación, neutralización, actuación de cosméticos y reciclaje de residuos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-6f ↔ 3012-4e (Comunicación y sociedad II)",
+      "justification_es": "Las reacciones químicas ayudan a comprender procesos habituales del sector: coloración, decoloración, oxidación, neutralización, actuación de cosméticos y reciclaje de residuos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-7a ↔ 3012-1d (Comunicación y sociedad II)",
+      "justification_es": "El análisis de la energía nuclear y sus riesgos favorece el pensamiento crítico, la búsqueda de información fiable, el debate argumentado y la comparación con hábitos energéticos responsables."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-7b ↔ 3012-4d (Comunicación y sociedad II)",
+      "justification_es": "El análisis de la energía nuclear y sus riesgos favorece el pensamiento crítico, la búsqueda de información fiable, el debate argumentado y la comparación con hábitos energéticos responsables."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-7c ↔ 3012-4b (Comunicación y sociedad II)",
+      "justification_es": "El análisis de la energía nuclear y sus riesgos favorece el pensamiento crítico, la búsqueda de información fiable, el debate argumentado y la comparación con hábitos energéticos responsables."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-7d ↔ 3012-3c (Comunicación y sociedad II)",
+      "justification_es": "El análisis de la energía nuclear y sus riesgos favorece el pensamiento crítico, la búsqueda de información fiable, el debate argumentado y la comparación con hábitos energéticos responsables."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-7e ↔ 3159-2d (Itinerario personal para la empleabilidad)",
+      "justification_es": "El análisis de la energía nuclear y sus riesgos favorece el pensamiento crítico, la búsqueda de información fiable, el debate argumentado y la comparación con hábitos energéticos responsables."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-8a ↔ 3011-1a (Comunicación y sociedad I)",
+      "justification_es": "Los cambios del relieve y del paisaje se conectan con la lectura del entorno, la sostenibilidad, la comunicación de información ambiental y la interpretación de fenómenos naturales cercanos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-8b ↔ 3011-1a (Comunicación y sociedad I)",
+      "justification_es": "Los cambios del relieve y del paisaje se conectan con la lectura del entorno, la sostenibilidad, la comunicación de información ambiental y la interpretación de fenómenos naturales cercanos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-8c ↔ 3012-4d (Comunicación y sociedad II)",
+      "justification_es": "Los cambios del relieve y del paisaje se conectan con la lectura del entorno, la sostenibilidad, la comunicación de información ambiental y la interpretación de fenómenos naturales cercanos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-8d ↔ 3012-4b (Comunicación y sociedad II)",
+      "justification_es": "Los cambios del relieve y del paisaje se conectan con la lectura del entorno, la sostenibilidad, la comunicación de información ambiental y la interpretación de fenómenos naturales cercanos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-8e ↔ 3012-4e (Comunicación y sociedad II)",
+      "justification_es": "Los cambios del relieve y del paisaje se conectan con la lectura del entorno, la sostenibilidad, la comunicación de información ambiental y la interpretación de fenómenos naturales cercanos."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-9a ↔ 3067-6c (Formación en Centros de Trabajo)",
+      "justification_es": "La contaminación atmosférica se relaciona con ventilación, aerosoles, salud, seguridad ambiental en espacios profesionales y comunicación responsable de medidas preventivas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-9b ↔ 3012-4b (Comunicación y sociedad II)",
+      "justification_es": "La contaminación atmosférica se relaciona con ventilación, aerosoles, salud, seguridad ambiental en espacios profesionales y comunicación responsable de medidas preventivas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-9c ↔ 3060-2j (Preparación del entorno profesional)",
+      "justification_es": "La contaminación atmosférica se relaciona con ventilación, aerosoles, salud, seguridad ambiental en espacios profesionales y comunicación responsable de medidas preventivas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-9d ↔ 3063-3j (Maquillaje)",
+      "justification_es": "La contaminación atmosférica se relaciona con ventilación, aerosoles, salud, seguridad ambiental en espacios profesionales y comunicación responsable de medidas preventivas."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-10a ↔ 3060-2j (Preparación del entorno profesional)",
+      "justification_es": "La contaminación y el uso responsable del agua conectan directamente con el lavado capilar, la limpieza, la gestión de residuos líquidos y la sostenibilidad del salón."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-10b ↔ 3060-2h (Preparación del entorno profesional)",
+      "justification_es": "La contaminación y el uso responsable del agua conectan directamente con el lavado capilar, la limpieza, la gestión de residuos líquidos y la sostenibilidad del salón."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-10c ↔ 3060-2b (Preparación del entorno profesional)",
+      "justification_es": "La contaminación y el uso responsable del agua conectan directamente con el lavado capilar, la limpieza, la gestión de residuos líquidos y la sostenibilidad del salón."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-10d ↔ 3067-6c (Formación en Centros de Trabajo)",
+      "justification_es": "La contaminación y el uso responsable del agua conectan directamente con el lavado capilar, la limpieza, la gestión de residuos líquidos y la sostenibilidad del salón."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-11a ↔ 3067-6c (Formación en Centros de Trabajo)",
+      "justification_es": "El desarrollo sostenible se vincula con prácticas profesionales responsables: reducción de residuos, consumo eficiente, selección de productos, trabajo en equipo y mejora del entorno."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-11b ↔ 3060-2h (Preparación del entorno profesional)",
+      "justification_es": "El desarrollo sostenible se vincula con prácticas profesionales responsables: reducción de residuos, consumo eficiente, selección de productos, trabajo en equipo y mejora del entorno."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-11c ↔ 3060-2j (Preparación del entorno profesional)",
+      "justification_es": "El desarrollo sostenible se vincula con prácticas profesionales responsables: reducción de residuos, consumo eficiente, selección de productos, trabajo en equipo y mejora del entorno."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-11d ↔ 3159-2d (Itinerario personal para la empleabilidad)",
+      "justification_es": "El desarrollo sostenible se vincula con prácticas profesionales responsables: reducción de residuos, consumo eficiente, selección de productos, trabajo en equipo y mejora del entorno."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12a ↔ 3064-4b (Lavado y cambios de forma del cabello)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12b ↔ 3064-4i (Lavado y cambios de forma del cabello)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12c ↔ 3061-3g (Cuidados estéticos básicos de uñas)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12d ↔ 3064-4i (Lavado y cambios de forma del cabello)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12e ↔ 3067-6b (Formación en Centros de Trabajo)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12f ↔ 3060-1d (Preparación del entorno profesional)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-12g ↔ 3060-1d (Preparación del entorno profesional)",
+      "justification_es": "Las fuerzas y movimientos permiten comprender ergonomía, postura, desplazamiento de útiles, secado, masaje, manejo de carros y prevención de riesgos laborales."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-13a ↔ 3065-1c (Cambios de color del cabello)",
+      "justification_es": "La energía eléctrica se relaciona con aparatos de peluquería y estética, consumo responsable, mantenimiento, seguridad, ahorro energético y comparación de fuentes de energía."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-13b ↔ 3060-2j (Preparación del entorno profesional)",
+      "justification_es": "La energía eléctrica se relaciona con aparatos de peluquería y estética, consumo responsable, mantenimiento, seguridad, ahorro energético y comparación de fuentes de energía."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-13c ↔ 3012-4b (Comunicación y sociedad II)",
+      "justification_es": "La energía eléctrica se relaciona con aparatos de peluquería y estética, consumo responsable, mantenimiento, seguridad, ahorro energético y comparación de fuentes de energía."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-13d ↔ 3012-3c (Comunicación y sociedad II)",
+      "justification_es": "La energía eléctrica se relaciona con aparatos de peluquería y estética, consumo responsable, mantenimiento, seguridad, ahorro energético y comparación de fuentes de energía."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-13e ↔ 3012-4d (Comunicación y sociedad II)",
+      "justification_es": "La energía eléctrica se relaciona con aparatos de peluquería y estética, consumo responsable, mantenimiento, seguridad, ahorro energético y comparación de fuentes de energía."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-13f ↔ 3159-2d (Itinerario personal para la empleabilidad)",
+      "justification_es": "La energía eléctrica se relaciona con aparatos de peluquería y estética, consumo responsable, mantenimiento, seguridad, ahorro energético y comparación de fuentes de energía."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14a ↔ 3064-1d (Lavado y cambios de forma del cabello)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14b ↔ 3060-2b (Preparación del entorno profesional)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14c ↔ 3063-1b (Maquillaje)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14d ↔ 3060-2g (Preparación del entorno profesional)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14e ↔ 3063-1h (Maquillaje)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14f ↔ 3060-2g (Preparación del entorno profesional)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14g ↔ 3060-2c (Preparación del entorno profesional)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    },
+    {
+      "title_es": "Conexión curricular: 3042-14h ↔ 3061-1e (Cuidados estéticos básicos de uñas)",
+      "justification_es": "La prevención de enfermedades conecta de forma directa con higiene, desinfección, esterilización, lavado de manos, uso de materiales, protección del cliente y seguridad profesional."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3042_ra1_5",
+      "title_es": "Promoción 2x1 sin perder dinero",
+      "motivatingFactor_es": "Analizar si una promoción de salón es viable.",
+      "description_es": "Calculan coste por servicio, descuento, número de clientes necesario y beneficio ficticio. Defienden si la promoción conviene o no. (Aprendizajes: 3042-1a/1e + 3005-1i. Uso de expresiones, explicación clara y toma de decisiones.)",
+      "evidence_es": "Infografía “promoción viable/no viable”.",
+      "diversitySupport_es": "Problemas graduados por dificultad, banco de operaciones, apoyo visual y exposición opcional en pareja."
+    },
+    {
+      "id": "act_3042_ra1_1",
+      "title_es": "Cálculo de mezclas cosméticas simuladas: “El laboratorio del color sin riesgo”",
+      "motivatingFactor_es": "Trabajar como coloristas profesionales usando agua, colorantes alimentarios o témperas diluidas en lugar de productos reales.",
+      "description_es": "El alumnado recibe tarjetas con retos: preparar mezclas 1:1, 1:1,5 o 1:2; aumentar o reducir una fórmula; calcular producto para melena corta, media o larga; comprobar si la cantidad obtenida coincide con la tarjeta de cliente. (Aprendizajes: 3042-1b/1d + 3065-3g/3h. Proporciones, regla de tres, unidades de capacidad, precisión, vocabulario técnico y trabajo seguro.)",
+      "evidence_es": "Tabla de mezclas con cantidades, proporciones y fotografía del resultado cromático.",
+      "diversitySupport_es": "Tarjetas con pictogramas, ejemplos resueltos, calculadora permitida, vasos graduados de colores, parejas cooperativas y plantilla de tabla en lectura fácil."
+    },
+    {
+      "id": "act_3042_ra1_2",
+      "title_es": "Agenda anti-caos del salón joven",
+      "motivatingFactor_es": "Resolver el reto de organizar varias citas de peluquería y estética sin solapar tiempos.",
+      "description_es": "Por equipos, reciben clientes ficticios con servicios, duración, tiempos de espera y limpieza entre servicios. Deben construir una agenda viable y justificar cambios cuando aparece un imprevisto. (Aprendizajes: 3042-1c/1d + 3060-4b y 3005-3b. Ecuaciones sencillas, cálculo de tiempos y comunicación profesional.)",
+      "evidence_es": "Agenda visual con horarios, tiempos de exposición y explicación de decisiones.",
+      "diversitySupport_es": "Relojes visuales, línea del tiempo, tarjetas de cliente, pasos numerados y posibilidad de manipular piezas antes de escribir."
+    },
+    {
+      "id": "act_3042_ra1_3",
+      "title_es": "Presupuesto beauty para graduación",
+      "motivatingFactor_es": "Crear un pack de servicios para un evento realista: peinado, maquillaje, uñas o lavado.",
+      "description_es": "Calculan costes simulados de producto, tiempo de trabajo, precio final y descuento. Comparan distintas opciones y recomiendan una al cliente. (Aprendizajes: 3042-1d/1e + 3005-2f/2g. Lenguaje algebraico aplicado, consumo responsable y asesoramiento.)",
+      "evidence_es": "Presupuesto claro y cartel de oferta responsable.",
+      "diversitySupport_es": "Plantilla de presupuesto, menú de precios, ejemplos, trabajo por roles y apoyo con calculadora."
+    },
+    {
+      "id": "act_3042_ra1_4",
+      "title_es": "Stock mínimo: que no falte nada",
+      "motivatingFactor_es": "Calcular cuántos productos deben quedar en almacén para una semana de prácticas.",
+      "description_es": "A partir de consumos medios, el alumnado estima necesidades, detecta faltantes y decide pedidos simulados. (Aprendizajes: 3042-1b/1d + 3060-3j y 3067-1b. Cálculo, control de existencias y responsabilidad profesional.)",
+      "evidence_es": "Ficha de stock mínimo y aviso de reposición.",
+      "diversitySupport_es": "Tabla semicompletada, códigos de color para stock bajo/medio/alto y reparto de roles."
+    },
+    {
+      "id": "act_3042_ra2_1",
+      "title_es": "Mito beauty: ¿verdad o postureo?",
+      "motivatingFactor_es": "Analizar afirmaciones virales sobre belleza con mirada científica.",
+      "description_es": "Eligen un mito de redes, plantean hipótesis, buscan información fiable y explican si se confirma o se refuta. (Aprendizajes: 3042-2a/2b/2f + 3012-4b/3c. Hipótesis, fuentes, argumentación y comunicación.)",
+      "evidence_es": "Póster o vídeo breve “mito vs realidad”.",
+      "diversitySupport_es": "Plantilla de búsqueda guiada, lista de fuentes sugeridas, opción de audio/vídeo y vocabulario clave."
+    },
+    {
+      "id": "act_3042_ra2_4",
+      "title_es": "Protocolo mejorado a partir de evidencias",
+      "motivatingFactor_es": "Revisar una práctica del taller y mejorarla con datos.",
+      "description_es": "Observan un protocolo, detectan un punto débil, proponen hipótesis de mejora y comprueban si funciona. (Aprendizajes: 3042-2a/2c + 3067-6f. Método científico y prevención en contexto profesional.)",
+      "evidence_es": "Antes/después del protocolo en checklist.",
+      "diversitySupport_es": "Checklist visual, una hipótesis por equipo, feedback inmediato y ejemplos de formulación."
+    },
+    {
+      "id": "act_3042_ra2_2",
+      "title_es": "Prueba de duración del maquillaje",
+      "motivatingFactor_es": "Comparar dos técnicas de fijación en soporte de práctica.",
+      "description_es": "Definen variables, registran resultados por intervalos y elaboran una conclusión razonada. (Aprendizajes: 3042-2c/2e + 3063-4i/4j. Ensayo, registro y corrección de desviaciones.)",
+      "evidence_es": "Informe breve con tabla de observación.",
+      "diversitySupport_es": "Tabla ya diseñada, pictogramas de pasos, cronómetro compartido y grupos de tres."
+    },
+    {
+      "id": "act_3042_ra2_3",
+      "title_es": "Encuesta de satisfacción exprés",
+      "motivatingFactor_es": "Investigar qué valora más un cliente joven: rapidez, trato, resultado, higiene o precio.",
+      "description_es": "Diseñan una encuesta sencilla, recogen respuestas simuladas y extraen conclusiones. (Aprendizajes: 3042-2d/2e + 3005-3d. Trabajo en equipo, datos y satisfacción del cliente.)",
+      "evidence_es": "Gráfico e informe de mejora del servicio.",
+      "diversitySupport_es": "Encuesta con opciones cerradas, lectura fácil, herramientas digitales sencillas y roles."
+    },
+    {
+      "id": "act_3042_ra2_5",
+      "title_es": "Mini congreso científico del salón",
+      "motivatingFactor_es": "Compartir investigaciones breves entre equipos.",
+      "description_es": "Cada equipo presenta en 2 minutos qué investigó, qué datos obtuvo y qué recomienda. (Aprendizajes: 3042-2f + 3159-2c. Defensa con pruebas y comunicación para la empleabilidad.)",
+      "evidence_es": "Presentación oral con una evidencia visual.",
+      "diversitySupport_es": "Guion oral con frases iniciadoras, opción de leer apoyos, ensayo previo y coevaluación amable."
+    },
+    {
+      "id": "act_3042_ra3_1",
+      "title_es": "Mapa del salón a escala",
+      "motivatingFactor_es": "Diseñar la distribución segura de un salón pequeño.",
+      "description_es": "Miden el aula/taller, calculan espacios de paso y dibujan un plano a escala con zonas de trabajo. (Aprendizajes: 3042-3a/3c/3e + 3060-2e/4g. Medidas, espacio, higiene y protección del cliente.)",
+      "evidence_es": "Plano a escala con leyenda.",
+      "diversitySupport_es": "Cinta métrica, plantilla cuadriculada, ejemplo de plano, roles de medición/dibujo/revisión."
+    },
+    {
+      "id": "act_3042_ra3_2",
+      "title_es": "Visagismo geométrico de cejas",
+      "motivatingFactor_es": "Relacionar geometría del rostro con maquillaje y depilación de cejas.",
+      "description_es": "Sobre plantillas de rostro, trazan líneas de proporción, comparan formas y justifican correcciones. (Aprendizajes: 3042-3a/3b + 3063-3d/3f. Medición, simetría, visagismo y seguridad.)",
+      "evidence_es": "Guía visual de cejas y proporciones.",
+      "diversitySupport_es": "Plantillas grandes, reglas, colores, pasos numerados y no trabajar sobre rostros reales si incomoda."
+    },
+    {
+      "id": "act_3042_ra3_5",
+      "title_es": "Ergonomía medida",
+      "motivatingFactor_es": "Medir posturas y distancias para trabajar con seguridad.",
+      "description_es": "Analizan altura de silla, distancia al cliente y ángulos de brazos en una práctica simulada. (Aprendizajes: 3042-3a/3d + 3060-1d. Medición, equipo y prevención de riesgos.)",
+      "evidence_es": "Checklist ergonómico con fotos no identificativas.",
+      "diversitySupport_es": "Uso de muñeco o compañero voluntario, imágenes modelo, rúbrica simple y roles."
+    },
+    {
+      "id": "act_3042_ra3_3",
+      "title_es": "Nail art simétrico",
+      "motivatingFactor_es": "Crear diseños de uñas basados en simetría, áreas y patrones.",
+      "description_es": "Diseñan bocetos con formas geométricas, calculan distribución y ejecutan en rueda de prácticas. (Aprendizajes: 3042-3c + 3061-2i/3i. Forma, proporción y decoración de uñas.)",
+      "evidence_es": "Rueda de uñas con boceto y explicación.",
+      "diversitySupport_es": "Modelos visuales, opciones de dificultad, pegatinas/plantillas y trabajo por parejas."
+    },
+    {
+      "id": "act_3042_ra3_4",
+      "title_es": "Particiones de color en modo plano técnico",
+      "motivatingFactor_es": "Representar mechas o zonas de color mediante líneas, ángulos y secciones.",
+      "description_es": "Dibujan cabezas esquemáticas, planifican particiones y explican cómo afectará al resultado. (Aprendizajes: 3042-3e + 3065-4g. TIC/representación y aplicación de color parcial.)",
+      "evidence_es": "Ficha técnica de particiones.",
+      "diversitySupport_es": "Plantillas de cabeza, app sencilla o papel, códigos de color y ejemplo paso a paso."
+    },
+    {
+      "id": "act_3042_ra4_4",
+      "title_es": "Funciones del consumo",
+      "motivatingFactor_es": "Representar cómo crece el consumo de agua o electricidad según número de clientes.",
+      "description_es": "Construyen tablas y gráficas lineales o no lineales con datos sencillos del salón. (Aprendizajes: 3042-4a/4d + 3060-2j. Funciones y sostenibilidad.)",
+      "evidence_es": "Gráfica de consumo con medidas de ahorro.",
+      "diversitySupport_es": "Plantilla de ejes, calculadora, colores para pendientes y preguntas guiadas."
+    },
+    {
+      "id": "act_3042_ra4_1",
+      "title_es": "Dashboard de tendencias del grupo",
+      "motivatingFactor_es": "Convertir preferencias de estética en datos útiles.",
+      "description_es": "Encuestan sobre estilos, colores, peinados o uñas; crean tablas, gráficos y conclusiones. (Aprendizajes: 3042-4g/4h + 3005-2g. Estadística y asesoramiento al cliente.)",
+      "evidence_es": "Panel de tendencias para un salón juvenil.",
+      "diversitySupport_es": "Preguntas cerradas, gráficos automáticos, plantilla y reparto de tareas."
+    },
+    {
+      "id": "act_3042_ra4_2",
+      "title_es": "Gráfica tiempo-satisfacción",
+      "motivatingFactor_es": "Explorar si más tiempo de servicio siempre significa más satisfacción.",
+      "description_es": "Usan datos simulados de servicios, hacen una nube de puntos sencilla y extraen conclusiones. (Aprendizajes: 3042-4e/4g + 3005-3d. Interpretación de datos y satisfacción.)",
+      "evidence_es": "Gráfica con recomendación profesional.",
+      "diversitySupport_es": "Datos ya preparados, guía de lectura de gráficos y exposición breve en pareja."
+    },
+    {
+      "id": "act_3042_ra4_3",
+      "title_es": "Probabilidad de imprevistos",
+      "motivatingFactor_es": "Aprender a anticipar retrasos, faltas de material o cambios de cliente.",
+      "description_es": "Con tarjetas de azar, calculan probabilidades sencillas y diseñan planes B. (Aprendizajes: 3042-4i/4j + 3005-4f. Probabilidad, coordinación y respuesta profesional.)",
+      "evidence_es": "Tabla de probabilidades y plan de actuación.",
+      "diversitySupport_es": "Tarjetas visuales, dados, ejemplos y grupos cooperativos."
+    },
+    {
+      "id": "act_3042_ra4_5",
+      "title_es": "Informe estadístico en formato Reel educativo",
+      "motivatingFactor_es": "Comunicar datos de manera breve y atractiva.",
+      "description_es": "Preparan un guion de vídeo explicando un gráfico de forma comprensible para otros jóvenes. (Aprendizajes: 3042-4f/4g + 3012-3b/3c. Vocabulario estadístico y comunicación oral.)",
+      "evidence_es": "Guion o vídeo interno no publicable.",
+      "diversitySupport_es": "Guion con frases iniciales, opción de audio, pictogramas y evaluación por rúbrica sencilla."
+    },
+    {
+      "id": "act_3042_ra5_1",
+      "title_es": "Laboratorio de magnitudes cosméticas",
+      "motivatingFactor_es": "Medir masa, volumen, temperatura y densidad con materiales seguros.",
+      "description_es": "Rotan por estaciones de medida usando agua, gel, aceite vegetal y recipientes graduados. (Aprendizajes: 3042-5a/5b/5e + 3060-3b. Material, magnitudes y manipulación segura.)",
+      "evidence_es": "Hoja de resultados e informe breve.",
+      "diversitySupport_es": "Estaciones con pictogramas, demostración previa, parejas y tabla con unidades ya indicadas."
+    },
+    {
+      "id": "act_3042_ra5_2",
+      "title_es": "Densidad: ¿qué flota y qué se mezcla?",
+      "motivatingFactor_es": "Comprender densidad con líquidos cotidianos.",
+      "description_es": "Comparan agua, aceite, gel y mezclas coloreadas; predicen y observan resultados. (Aprendizajes: 3042-5b/5e + 3063-1h. Magnitudes, observación e interpretación de etiquetas/composición.)",
+      "evidence_es": "Foto del ensayo y conclusión.",
+      "diversitySupport_es": "Material manipulativo, hipótesis con opciones, vocabulario visual y respuesta oral permitida."
+    },
+    {
+      "id": "act_3042_ra5_3",
+      "title_es": "Detectives de biomoléculas en etiquetas",
+      "motivatingFactor_es": "Relacionar biomoléculas y productos de cuidado.",
+      "description_es": "Buscan ingredientes en etiquetas simuladas o reales: aceites, proteínas, azúcares, alcoholes. (Aprendizajes: 3042-5c + 3063-1h/3061-1i. Biomoléculas y cosméticos.)",
+      "evidence_es": "Ficha “ingrediente y función”.",
+      "diversitySupport_es": "Etiquetas ampliadas, subrayado por colores, glosario y ejemplo resuelto."
+    },
+    {
+      "id": "act_3042_ra5_4",
+      "title_es": "Piel y cabello al microscopio visual",
+      "motivatingFactor_es": "Observar imágenes o preparaciones seguras de tejidos/cabello.",
+      "description_es": "Analizan láminas, fotos aumentadas o microscopia digital para relacionar estructura y cuidado. (Aprendizajes: 3042-5d + 3064-1a/1b. Observación de tejidos, piel y cabello.)",
+      "evidence_es": "Dibujo rotulado o foto comentada.",
+      "diversitySupport_es": "Imágenes claras, etiquetas recortables, lupa digital y plantilla de dibujo."
+    },
+    {
+      "id": "act_3042_ra5_5",
+      "title_es": "Informe de laboratorio en una página",
+      "motivatingFactor_es": "Aprender a escribir informes sencillos y útiles.",
+      "description_es": "Tras una práctica, completan: objetivo, material, pasos, resultados, conclusión y mejora. (Aprendizajes: 3042-5e + 3012-4e. Informe técnico y texto profesional.)",
+      "evidence_es": "Informe de una página.",
+      "diversitySupport_es": "Plantilla cerrada, banco de verbos, ejemplo modelo y revisión por parejas."
+    },
+    {
+      "id": "act_3042_ra6_1",
+      "title_es": "Oxidación y color sin riesgo",
+      "motivatingFactor_es": "Comprender la idea de oxidación con ejemplos cotidianos y relación con coloración.",
+      "description_es": "Observan cambios en manzana, té o materiales seguros y lo comparan con procesos cosméticos explicados por el docente. (Aprendizajes: 3042-6a/6b + 3065-2c/3c. Reacciones y acción de cosméticos.)",
+      "evidence_es": "Tabla de observación y analogía profesional.",
+      "diversitySupport_es": "Material visual, analogías, prohibición de manipular productos reales sin supervisión y resumen guiado."
+    },
+    {
+      "id": "act_3042_ra6_2",
+      "title_es": "pH y neutralización con indicadores naturales",
+      "motivatingFactor_es": "Usar col lombarda u otro indicador seguro para observar cambios de color.",
+      "description_es": "Prueban sustancias domésticas seguras diluidas, clasifican ácido/básico y relacionan con cuidado de piel/cabello. (Aprendizajes: 3042-6d/6e + 3062-4d. Neutralización y precaución en productos.)",
+      "evidence_es": "Escala de pH visual.",
+      "diversitySupport_es": "Guantes, cantidades pequeñas, tarjetas de seguridad, roles y instrucciones pictográficas."
+    },
+    {
+      "id": "act_3042_ra6_3",
+      "title_es": "Cocina química de cosméticos simulados",
+      "motivatingFactor_es": "Preparar una emulsión sencilla no cosmética de aula y observar fases.",
+      "description_es": "Mezclan agua/aceite con emulsionante alimentario seguro y registran cambios. (Aprendizajes: 3042-6c/6e + 3063-1h. Componentes de una reacción/mezcla y composición de productos.)",
+      "evidence_es": "Ficha de proceso y conclusión.",
+      "diversitySupport_es": "Vídeo modelo, pasos numerados, material medido y vocabulario adaptado."
+    },
+    {
+      "id": "act_3042_ra6_4",
+      "title_es": "Reciclaje cosmético: qué pasa con los residuos",
+      "motivatingFactor_es": "Investigar procesos de reciclaje vinculados a envases del sector.",
+      "description_es": "Clasifican envases, investigan símbolos y explican qué transformación sufren los materiales. (Aprendizajes: 3042-6f + 3060-2h. Informe TIC y recogida selectiva.)",
+      "evidence_es": "Infografía de reciclaje.",
+      "diversitySupport_es": "Iconos de contenedores, plantilla Canva/PowerPoint, fuentes dadas y lectura fácil."
+    },
+    {
+      "id": "act_3042_ra6_5",
+      "title_es": "Cliente curioso: explica la química fácil",
+      "motivatingFactor_es": "Role-play: un cliente pregunta por qué hay tiempo de exposición o prueba de sensibilidad.",
+      "description_es": "Preparan una explicación sencilla, profesional y segura sin tecnicismos innecesarios. (Aprendizajes: 3042-6b/6c + 3005-1i/2f. Ciencia y comunicación al cliente.)",
+      "evidence_es": "Diálogo grabado o representado.",
+      "diversitySupport_es": "Guion con frases, opción de parejas, tarjetas de vocabulario y ensayo previo."
+    },
+    {
+      "id": "act_3042_ra7_1",
+      "title_es": "Debate: energía nuclear, sí/no/depende",
+      "motivatingFactor_es": "Analizar ventajas e inconvenientes de una fuente energética desde evidencias.",
+      "description_es": "Equipos con roles buscan argumentos, preparan postura y debaten respetando turnos. (Aprendizajes: 3042-7a/7d + 3012-3c. Argumentación, pensamiento crítico y comunicación oral.)",
+      "evidence_es": "Tabla de argumentos y conclusión personal.",
+      "diversitySupport_es": "Textos adaptados, roles claros, semáforo de argumentos y posibilidad de leer la intervención."
+    },
+    {
+      "id": "act_3042_ra7_5",
+      "title_es": "Energía responsable en mi futuro trabajo",
+      "motivatingFactor_es": "Comparar energía nuclear, renovables y consumo del salón.",
+      "description_es": "El alumnado conecta el tema energético con decisiones cotidianas: apagar aparatos, elegir eficiencia, revisar hábitos. (Aprendizajes: 3042-7a/7e + 3067-6c. TIC, equipo y actitud medioambiental.)",
+      "evidence_es": "Compromiso energético de aula-taller.",
+      "diversitySupport_es": "Lista de acciones simples, elección individual, apoyo visual y coevaluación positiva."
+    },
+    {
+      "id": "act_3042_ra7_2",
+      "title_es": "Fisión y fusión en cómic",
+      "motivatingFactor_es": "Diferenciar fisión y fusión mediante lenguaje visual.",
+      "description_es": "Crean una viñeta o storyboard donde dos personajes explican ambos procesos de forma sencilla. (Aprendizajes: 3042-7b + 3012-4d. Comprensión, resumen y representación visual.)",
+      "evidence_es": "Cómic científico.",
+      "diversitySupport_es": "Plantilla de cómic, banco de palabras, ejemplos y opción digital o papel."
+    },
+    {
+      "id": "act_3042_ra7_3",
+      "title_es": "Mapa de riesgos ambientales",
+      "motivatingFactor_es": "Investigar un caso de mala gestión o accidente y ubicar causas/consecuencias.",
+      "description_es": "Usan fuentes guiadas para crear un mapa de problema: origen, efectos, prevención. (Aprendizajes: 3042-7c + 3012-4b. Búsqueda de información e interpretación.)",
+      "evidence_es": "Mapa causal.",
+      "diversitySupport_es": "Fuentes seleccionadas, esquema causa-efecto y trabajo por parejas."
+    },
+    {
+      "id": "act_3042_ra7_4",
+      "title_es": "Comité de residuos difíciles",
+      "motivatingFactor_es": "Simular una reunión sobre qué hacer con residuos peligrosos.",
+      "description_es": "Cada grupo representa un rol: ciudadanía, empresa, científicos, administración. Deben llegar a acuerdos. (Aprendizajes: 3042-7d/7e + 3159-2d/2e. Trabajo en equipo y gestión de conflictos.)",
+      "evidence_es": "Acta de acuerdos.",
+      "diversitySupport_es": "Tarjetas de rol, normas de debate, frases útiles y mediador docente."
+    },
+    {
+      "id": "act_3042_ra8_1",
+      "title_es": "El paisaje de Menorca como aula",
+      "motivatingFactor_es": "Relacionar erosión, transporte y sedimentación con paisajes cercanos.",
+      "description_es": "Analizan imágenes de playas, acantilados o barrancos y señalan agentes geológicos. (Aprendizajes: 3042-8a/8c/8e + 3011-1a. Paisaje natural y lectura del entorno.)",
+      "evidence_es": "Mapa visual del paisaje.",
+      "diversitySupport_es": "Fotos cercanas, tarjetas de agentes geológicos, mapa simple y trabajo oral."
+    },
+    {
+      "id": "act_3042_ra8_3",
+      "title_es": "Beauty look inspirado en el paisaje",
+      "motivatingFactor_es": "Diseñar un maquillaje, uñas o peinado inspirado en un paisaje natural.",
+      "description_es": "Primero analizan colores y formas del paisaje; después hacen boceto estético respetuoso. (Aprendizajes: 3042-8a/8b + 3063-4e/4f. Observación del relieve y armonía estética.)",
+      "evidence_es": "Moodboard geoestético.",
+      "diversitySupport_es": "Opciones de producto, imágenes de inspiración, rúbrica visual y no obligatoriedad de aplicarlo en piel."
+    },
+    {
+      "id": "act_3042_ra8_5",
+      "title_es": "Maqueta rápida de relieve",
+      "motivatingFactor_es": "Modelar relieve con plastilina, arena o papel y simular lluvia/arrastre de sedimentos.",
+      "description_es": "Observan cambios y describen proceso con vocabulario básico. (Aprendizajes: 3042-8a-8e + 3159-2d. Procesos geológicos y equipo.)",
+      "evidence_es": "Maqueta y ficha de observación.",
+      "diversitySupport_es": "Aprendizaje manipulativo, roles, vocabulario visual y evaluación por observación."
+    },
+    {
+      "id": "act_3042_ra8_2",
+      "title_es": "Storymap del cambio del paisaje",
+      "motivatingFactor_es": "Crear una historia visual de cómo cambia un paisaje con el tiempo.",
+      "description_es": "Ordenan imágenes y explican qué proceso ocurre: meteorización, erosión, transporte o sedimentación. (Aprendizajes: 3042-8b/8d + 3012-4d. Resumen y comunicación escrita.)",
+      "evidence_es": "Línea temporal visual.",
+      "diversitySupport_es": "Secuencias recortables, frases incompletas y apoyo de pictogramas."
+    },
+    {
+      "id": "act_3042_ra8_4",
+      "title_es": "Erosión y turismo responsable",
+      "motivatingFactor_es": "Investigar cómo el uso humano afecta a playas y paisaje.",
+      "description_es": "Elaboran una campaña breve de buenas prácticas para jóvenes. (Aprendizajes: 3042-8c + 3012-4b/4e. Investigación y texto profesional/divulgativo.)",
+      "evidence_es": "Cartel o carrusel educativo.",
+      "diversitySupport_es": "Fuentes seleccionadas, plantilla de cartel, lectura fácil y roles."
+    },
+    {
+      "id": "act_3042_ra9_1",
+      "title_es": "Calidad del aire en el aula-taller",
+      "motivatingFactor_es": "Pensar cómo la ventilación afecta a salud y trabajo profesional.",
+      "description_es": "Detectan situaciones de mala ventilación, aerosoles u olores; proponen mejoras realistas. (Aprendizajes: 3042-9a + 3067-6c. Contaminación y minimización de riesgos.)",
+      "evidence_es": "Checklist de aire saludable.",
+      "diversitySupport_es": "Checklist con iconos, debate corto, ejemplos reales y acuerdos visibles."
+    },
+    {
+      "id": "act_3042_ra9_5",
+      "title_es": "Noticiario ambiental en 60 segundos",
+      "motivatingFactor_es": "Explicar una noticia ambiental sin alarmismo y con datos.",
+      "description_es": "Seleccionan una noticia guiada, identifican causa, efecto y medida de prevención. (Aprendizajes: 3042-9a/9c + 3012-3b/3c. Comunicación oral y pensamiento crítico.)",
+      "evidence_es": "Guion de noticiario.",
+      "diversitySupport_es": "Plantilla de guion, roles de presentador/técnico, ensayo y lectura permitida."
+    },
+    {
+      "id": "act_3042_ra9_2",
+      "title_es": "Lluvia ácida en mini laboratorio seguro",
+      "motivatingFactor_es": "Simular el efecto de ácidos suaves sobre tiza o cáscara de huevo.",
+      "description_es": "Observan cambios y relacionan con lluvia ácida y materiales del entorno. (Aprendizajes: 3042-9b + 3012-4b. Investigación y consecuencias ambientales.)",
+      "evidence_es": "Ficha de ensayo y conclusión.",
+      "diversitySupport_es": "Material seguro, gafas si procede, pasos numerados y hipótesis con opciones."
+    },
+    {
+      "id": "act_3042_ra9_3",
+      "title_es": "Eco-salón contra el efecto invernadero",
+      "motivatingFactor_es": "Diseñar medidas para reducir emisiones indirectas del salón.",
+      "description_es": "Analizan electricidad, agua caliente, transporte y residuos; priorizan tres acciones. (Aprendizajes: 3042-9c + 3060-2j. Efecto invernadero y medidas medioambientales.)",
+      "evidence_es": "Plan de mejora del eco-salón.",
+      "diversitySupport_es": "Tarjetas de acciones, votación con gomets, plantilla de plan y trabajo en equipo."
+    },
+    {
+      "id": "act_3042_ra9_4",
+      "title_es": "Capa de ozono y protección de la piel",
+      "motivatingFactor_es": "Relacionar ozono, radiación y cuidado responsable de la piel.",
+      "description_es": "Preparan recomendaciones para clientes jóvenes sobre protección solar y hábitos seguros. (Aprendizajes: 3042-9d + 3063-3j. Salud, responsabilidad profesional y zonas sensibles.)",
+      "evidence_es": "Infografía de protección.",
+      "diversitySupport_es": "Infografías modelo, glosario, frases cortas y opción de audio explicativo."
+    },
+    {
+      "id": "act_3042_ra10_1",
+      "title_es": "El agua que se va por el lavabo",
+      "motivatingFactor_es": "Calcular y reducir el consumo de agua en un lavado capilar simulado.",
+      "description_es": "Miden litros por minuto, comparan tiempos y proponen protocolos de ahorro. (Aprendizajes: 3042-10a/10d + 3060-2j. Valor del agua y uso responsable.)",
+      "evidence_es": "Tabla de consumo y decálogo de ahorro.",
+      "diversitySupport_es": "Medición con botellas, calculadora, pictogramas y actividad manipulativa."
+    },
+    {
+      "id": "act_3042_ra10_5",
+      "title_es": "Comparativa de hábitos de agua",
+      "motivatingFactor_es": "Analizar hábitos antes/después de aplicar una medida de ahorro.",
+      "description_es": "Registran consumo estimado durante una semana simulada y comparan resultados. (Aprendizajes: 3042-10a/10d + 3042-4g + 3067-6c. Datos, agua y riesgos ambientales.)",
+      "evidence_es": "Gráfico antes/después.",
+      "diversitySupport_es": "Tabla sencilla, datos ficticios si hace falta, apoyo matemático y roles."
+    },
+    {
+      "id": "act_3042_ra10_2",
+      "title_es": "Detectives de contaminantes del agua",
+      "motivatingFactor_es": "Identificar qué no debe ir al desagüe del salón.",
+      "description_es": "Clasifican tarjetas de residuos: cabello, tintes, envases, papel, restos de producto; deciden gestión adecuada. (Aprendizajes: 3042-10b + 3060-2h. Contaminación y recogida selectiva.)",
+      "evidence_es": "Mapa de residuos líquidos/sólidos.",
+      "diversitySupport_es": "Tarjetas visuales, colores de contenedor, trabajo cooperativo y lectura fácil."
+    },
+    {
+      "id": "act_3042_ra10_3",
+      "title_es": "Depuradora casera",
+      "motivatingFactor_es": "Construir un filtro simple con arena, grava y algodón para entender depuración.",
+      "description_es": "Filtran agua con tierra; observan límites del proceso y hablan de contaminantes invisibles. (Aprendizajes: 3042-10c + 3012-4e. Ensayo y texto técnico.)",
+      "evidence_es": "Foto del filtro e informe breve.",
+      "diversitySupport_es": "Pasos con imágenes, materiales preparados, equipos pequeños y conclusión guiada."
+    },
+    {
+      "id": "act_3042_ra10_4",
+      "title_es": "Campaña “un lavado, menos agua”",
+      "motivatingFactor_es": "Crear una campaña interna para ahorrar agua en prácticas.",
+      "description_es": "Diseñan mensajes claros para lavabo, taller o redes internas del centro. (Aprendizajes: 3042-10d + 3005-1i. Comunicación clara y responsabilidad ambiental.)",
+      "evidence_es": "Carteles o códigos QR con consejos.",
+      "diversitySupport_es": "Plantillas, frases cortas, iconos y opción de hacer cartel visual sin mucho texto."
+    },
+    {
+      "id": "act_3042_ra11_1",
+      "title_es": "Eco-salón FPB",
+      "motivatingFactor_es": "Diseñar un salón de peluquería y estética sostenible e inclusivo.",
+      "description_es": "Equipos crean nombre, normas de consumo, gestión de residuos, productos responsables y atención al cliente. (Aprendizajes: 3042-11a-11d + 3060-2h/2j. Desarrollo sostenible y medidas profesionales.)",
+      "evidence_es": "Panel o maqueta de eco-salón.",
+      "diversitySupport_es": "Roles, plantillas visuales, reparto de tareas por nivel y elección de formato final."
+    },
+    {
+      "id": "act_3042_ra11_4",
+      "title_es": "Compra responsable",
+      "motivatingFactor_es": "Comparar productos por precio, duración, envase, seguridad y sostenibilidad.",
+      "description_es": "Analizan fichas ficticias de productos y deciden cuál comprarían para el salón. (Aprendizajes: 3042-11a/11c + 3005-2g. Decisión razonada y asesoramiento.)",
+      "evidence_es": "Matriz de decisión.",
+      "diversitySupport_es": "Fichas con pictogramas, escala de valoración, ejemplo y trabajo en equipo."
+    },
+    {
+      "id": "act_3042_ra11_2",
+      "title_es": "Auditoría verde del aula-taller",
+      "motivatingFactor_es": "Observar puntos de mejora ambiental del espacio de trabajo.",
+      "description_es": "Con checklist, revisan luces, agua, residuos, orden y materiales de un solo uso. (Aprendizajes: 3042-11b/11c + 3067-6c. Estrategias de mejora y actitud ambiental.)",
+      "evidence_es": "Informe con tres mejoras priorizadas.",
+      "diversitySupport_es": "Checklist con iconos, recorrido por estaciones y votación para priorizar."
+    },
+    {
+      "id": "act_3042_ra11_3",
+      "title_es": "Reto cero derroche",
+      "motivatingFactor_es": "Reducir desperdicio en una práctica simulada.",
+      "description_es": "Calculan material necesario, preparan sólo lo justo y registran sobrantes. (Aprendizajes: 3042-11b + 3060-3j. Sostenibilidad y stock óptimo.)",
+      "evidence_es": "Registro de reducción de residuos.",
+      "diversitySupport_es": "Recipientes medidores, tabla simple, parejas y feedback inmediato."
+    },
+    {
+      "id": "act_3042_ra11_5",
+      "title_es": "Manifiesto sostenible de grupo",
+      "motivatingFactor_es": "Crear compromisos realistas para el taller.",
+      "description_es": "Cada equipo propone una norma sostenible; se debate y se acuerda un manifiesto común. (Aprendizajes: 3042-11d + 3159-2d. Trabajo en equipo y objetivos ambientales.)",
+      "evidence_es": "Manifiesto visible del aula.",
+      "diversitySupport_es": "Dinámica de votación, frases iniciadoras, roles y acuerdo por consenso."
+    },
+    {
+      "id": "act_3042_ra12_4",
+      "title_es": "Carrito seguro",
+      "motivatingFactor_es": "Analizar empuje, frenado y transporte de material.",
+      "description_es": "Simulan desplazamiento de carrito o bandeja y proponen normas para evitar accidentes. (Aprendizajes: 3042-12a/12e + 3067-6b. Movimiento, velocidad y riesgos.)",
+      "evidence_es": "Protocolo de transporte seguro.",
+      "diversitySupport_es": "Espacio controlado, roles, observación con checklist y actividad práctica."
+    },
+    {
+      "id": "act_3042_ra12_1",
+      "title_es": "Ergonomía y fuerzas invisibles",
+      "motivatingFactor_es": "Entender cómo postura y fuerza afectan al cuerpo profesional.",
+      "description_es": "Simulan posiciones de trabajo y analizan qué fuerzas o movimientos pueden causar fatiga. (Aprendizajes: 3042-12f/12g + 3060-1d. Fuerzas y prevención de problemas físicos.)",
+      "evidence_es": "Checklist de postura segura.",
+      "diversitySupport_es": "Fotos modelo, voluntariado, no ridiculizar posturas, rúbrica visual."
+    },
+    {
+      "id": "act_3042_ra12_2",
+      "title_es": "Secador en movimiento",
+      "motivatingFactor_es": "Relacionar distancia, tiempo, velocidad y resultado del secado.",
+      "description_es": "Miden desplazamientos del secador sobre un mechón de práctica y comparan tiempos. (Aprendizajes: 3042-12b/12d + 3064-4i. Movimiento y control de exposición.)",
+      "evidence_es": "Tabla y recomendación técnica.",
+      "diversitySupport_es": "Cronómetro, mechones de práctica, roles y datos simples."
+    },
+    {
+      "id": "act_3042_ra12_3",
+      "title_es": "Masaje con vectores",
+      "motivatingFactor_es": "Representar dirección e intensidad de maniobras de masaje.",
+      "description_es": "Dibujan flechas sobre plantillas de manos/pies para indicar dirección y presión segura. (Aprendizajes: 3042-12c + 3061-3g/4h. Vectores y maniobras.)",
+      "evidence_es": "Mapa vectorial de masaje.",
+      "diversitySupport_es": "Plantillas grandes, flechas adhesivas, demostración y lenguaje sencillo."
+    },
+    {
+      "id": "act_3042_ra12_5",
+      "title_es": "Rulos, tensión y forma",
+      "motivatingFactor_es": "Comprender cómo la tensión y la dirección influyen en cambios de forma.",
+      "description_es": "Sobre maniquí, comparan enrollado suave/firme y dirección de moldes, registrando efecto esperado. (Aprendizajes: 3042-12f + 3064-4b. Causa-efecto y procedimiento físico.)",
+      "evidence_es": "Ficha técnica de tensión y dirección.",
+      "diversitySupport_es": "Maniquíes, pasos visuales, apoyo del docente y evaluación del proceso, no sólo resultado."
+    },
+    {
+      "id": "act_3042_ra13_1",
+      "title_es": "Auditoría eléctrica del salón",
+      "motivatingFactor_es": "Identificar aparatos, potencia y hábitos de consumo.",
+      "description_es": "Listan secadores, planchas, luces y cargadores; calculan uso aproximado y proponen ahorro. (Aprendizajes: 3042-13a/13b + 3065-1c. Magnitudes y uso/mantenimiento de aparatos.)",
+      "evidence_es": "Plan de ahorro eléctrico.",
+      "diversitySupport_es": "Etiquetas ampliadas, calculadora, tabla semicompletada y equipos."
+    },
+    {
+      "id": "act_3042_ra13_4",
+      "title_es": "Etiqueta energética para jóvenes",
+      "motivatingFactor_es": "Aprender a leer etiquetas de eficiencia.",
+      "description_es": "Interpretan etiquetas ficticias de aparatos de salón y deciden cuál comprar. (Aprendizajes: 3042-13a/13b + 3005-2g. Consumo y asesoramiento.)",
+      "evidence_es": "Recomendación de compra responsable.",
+      "diversitySupport_es": "Etiquetas simplificadas, pictogramas, comparación por colores y decisión en pareja."
+    },
+    {
+      "id": "act_3042_ra13_2",
+      "title_es": "Ruta de la electricidad hasta el secador",
+      "motivatingFactor_es": "Representar producción, transporte y uso de la energía.",
+      "description_es": "Crean un mapa desde central eléctrica hasta enchufe del aula-taller. (Aprendizajes: 3042-13c/13e + 3012-4d. Transformación, distribución y resumen.)",
+      "evidence_es": "Infografía de la ruta energética.",
+      "diversitySupport_es": "Plantilla de mapa, iconos, fuentes seleccionadas y lectura fácil."
+    },
+    {
+      "id": "act_3042_ra13_3",
+      "title_es": "Comparador de centrales eléctricas",
+      "motivatingFactor_es": "Analizar ventajas e inconvenientes de distintas centrales.",
+      "description_es": "Cada equipo investiga una fuente y presenta beneficios, límites y relación con sostenibilidad. (Aprendizajes: 3042-13d/13f + 3012-3c. Argumentación y trabajo en equipo.)",
+      "evidence_es": "Tabla comparativa.",
+      "diversitySupport_es": "Textos adaptados, roles, semáforo de ventajas/inconvenientes y presentación breve."
+    },
+    {
+      "id": "act_3042_ra13_5",
+      "title_es": "Apaga y gana",
+      "motivatingFactor_es": "Gamificar hábitos de ahorro energético.",
+      "description_es": "Durante una semana, equipos registran acciones: apagar luces, desenchufar, agrupar usos. (Aprendizajes: 3042-13b + 3067-6c. Ahorro y actitud medioambiental.)",
+      "evidence_es": "Marcador de hábitos sostenibles.",
+      "diversitySupport_es": "Registro visual, metas pequeñas, refuerzo positivo y no competitividad excesiva."
+    },
+    {
+      "id": "act_3042_ra14_1",
+      "title_es": "Cadena de higiene del servicio",
+      "motivatingFactor_es": "Comprender cómo se evita la transmisión de infecciones.",
+      "description_es": "Ordenan tarjetas desde recepción del cliente hasta limpieza final: manos, EPI, útiles, superficies, residuos. (Aprendizajes: 3042-14a-14d + 3060-2b/2g. Microorganismos, infección y prevención.)",
+      "evidence_es": "Protocolo visual de higiene.",
+      "diversitySupport_es": "Tarjetas con dibujos, secuencia manipulativa, vocabulario clave y roles."
+    },
+    {
+      "id": "act_3042_ra14_2",
+      "title_es": "Lavado de manos con luz negra",
+      "motivatingFactor_es": "Comprobar de forma visual la importancia del lavado correcto.",
+      "description_es": "Con gel fluorescente seguro, practican lavado, observan zonas olvidadas y corrigen técnica. (Aprendizajes: 3042-14f + 3060-2g. Protocolo de manos y seguridad.)",
+      "evidence_es": "Checklist de lavado de manos.",
+      "diversitySupport_es": "Demostración, pasos en pictogramas, práctica individual no evaluada de forma punitiva."
+    },
+    {
+      "id": "act_3042_ra14_3",
+      "title_es": "Desinfectante correcto para cada útil",
+      "motivatingFactor_es": "Elegir método de limpieza/desinfección según material.",
+      "description_es": "Clasifican útiles de maquillaje, uñas, depilación o cabello y seleccionan método adecuado. (Aprendizajes: 3042-14g/14h + 3061-1d/1e. Desinfectantes y esterilización.)",
+      "evidence_es": "Tabla útil-método-tiempo.",
+      "diversitySupport_es": "Fotos de útiles, etiquetas de colores, tabla modelo y consulta al docente."
+    },
+    {
+      "id": "act_3042_ra14_4",
+      "title_es": "Caso simulado: “algo no va bien en la piel”",
+      "motivatingFactor_es": "Aprender a detectar señales y derivar al técnico responsable.",
+      "description_es": "Analizan casos ficticios con imágenes no sensibles y deciden si se puede realizar el servicio o no. (Aprendizajes: 3042-14c/14d + 3063-1b/3061-2c. Alteraciones, prevención y derivación.)",
+      "evidence_es": "Ficha de decisión segura.",
+      "diversitySupport_es": "Casos graduados, lenguaje respetuoso, no usar imágenes impactantes y decisión en grupo."
+    },
+    {
+      "id": "act_3042_ra14_5",
+      "title_es": "Kit higiene para FCT",
+      "motivatingFactor_es": "Preparar un kit y una explicación para prácticas en empresa.",
+      "description_es": "Diseñan lista de materiales, normas y justificación de higiene para el primer día de FCT. (Aprendizajes: 3042-14f/14g + 3067-2a/6f. Higiene, prevención y actuación en empresa.)",
+      "evidence_es": "Kit visual o infografía.",
+      "diversitySupport_es": "Plantilla de kit, checklist, apoyo visual y presentación opcional en pareja."
+    }
+  ]
+}

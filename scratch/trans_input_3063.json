@@ -1,0 +1,917 @@
+{
+  "code": "3063",
+  "name_es": "Maquillaje",
+  "criteria": [
+    "3063-1a. Se han definido y realizado los procesos de higiene, desinfección y esterilización de los materiales de uso en las técnicas de maquillaje.",
+    "3063-1b. Se han descrito las posibles alteraciones dermatológicas y oculares más frecuentes derivadas de una mala higiene de útiles y productos.",
+    "3063-1c. Se ha realizado la identificación de los útiles adecuados para cada tipo de trabajo.",
+    "3063-1d. Se ha descrito el uso adecuado de cada pincel en la técnica de maquillaje.",
+    "3063-1e. Se han preparado los útiles, materiales y productos, aplicando técnicas de seguridad e higiene necesarias.",
+    "3063-1f. Se han identificado los útiles y productos necesarios para las técnicas de maquillaje social y fantasía facial.",
+    "3063-1g. Se han señalado los usos correctos y más habituales de los distintos productos.",
+    "3063-1h. Se han reconocido las etiquetas de los diferentes productos, familiarizándose con su composición.",
+    "3063-1i. Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas.",
+    "3063-2a. Se ha preparado al cliente para el servicio a realizar garantizando su seguridad.",
+    "3063-2b. Se ha descrito la posición ergonómica del cliente y del profesional para realizar la higiene superficial del rostro.",
+    "3063-2c. Se han formulado preguntas tipo que permiten detectar las demandas y necesidades que debe cubrir el servicio.",
+    "3063-2d. Se han relacionado las características de la piel con el uso de los cosméticos más adecuados.",
+    "3063-2e. Se han valorado las causas que determinan la elección de los cosméticos de higiene en relación con las técnicas de maquillaje que se van a realizar.",
+    "3063-2f. Se ha realizado la aplicación de los cosméticos de higiene describiendo las direcciones correctas en función de la zona del rostro: ojos, labios, cuello, escote.",
+    "3063-2g. Se han retirado completamente los restos de cosmético limpiador y aplicado el tónico, evitando la zona orbicular.",
+    "3063-2h. Se ha valorado si es necesaria la aplicación de un cosmético exfoliante y, en caso afirmativo, se aplica y retira adecuadamente.",
+    "3063-2i. Se ha valorado y realizado la aplicación de una mascarilla en el rostro siguiendo las direcciones correctas, respetando el tiempo de exposición y retirándola completamente.",
+    "3063-2j. Se ha aplicado el cosmético hidratante o tensor siguiendo las normas señaladas por el fabricante.",
+    "3063-2k. Se ha cumplimentado la ficha técnica del servicio con los datos personales, los cosméticos aplicados y las observaciones realizadas.",
+    "3063-2l. Se han aplicado las medidas de seguridad requeridas.",
+    "3063-3a. Se han seleccionado y preparado de forma adecuada el material y cosméticos de uso para cada cliente atendiendo al tipo de piel y en función del tono de la misma, color de ojos y tipo de ropa.",
+    "3063-3b. Se ha descrito la posición ergonómica del cliente y del profesional para realizar el maquillaje social demandado.",
+    "3063-3c. Se ha observado el rostro del cliente y realizado preguntas que permitan conocer su estilo personal y posibles alergias de contacto.",
+    "3063-3d. Se ha realizado la depilación de cejas corrigiendo su forma, de acuerdo a la configuración del rostro, aplicando las medidas de higiene necesarias.",
+    "3063-3e. Se han descrito las normas de seguridad e higiene que se deben aplicar en la realización de maquillajes sociales.",
+    "3063-3f. Se ha determinado correctamente la armonía de colores a utilizar y las técnicas de visagismo a emplear.",
+    "3063-3g. Se han aplicado adecuadamente las correcciones claras, fondo de maquillaje indicado al tipo de piel y la técnica específica que requiera la textura del producto.",
+    "3063-3h. Se han realizado las correcciones oscuras oportunas según las técnicas de visagismo adaptadas al óvalo del cliente y al tipo de maquillaje social que se va a realizar.",
+    "3063-3i. Se han aplicado diestramente y mediante las técnicas apropiadas de visagismo los cosméticos decorativos de ojos, labios, cejas, pestañas y mejillas.",
+    "3063-3j. Se ha valorado la responsabilidad asociada a las actividades profesionales del maquillador al desarrollar su actividad en zonas sensibles como los ojos y labios.",
+    "3063-3k. Se han realizado las precauciones oportunas retirando lentes de contacto u otras prótesis que puedan resultar peligrosas en el desarrollo de la técnica de maquillaje.",
+    "3063-3l. Se han aplicado las medidas de seguridad requeridas.",
+    "3063-4a. Se han seleccionado y preparado de forma adecuada el material y cosméticos utilizados en los maquillajes de fantasía.",
+    "3063-4b. Se han considerado las normas de seguridad e higiene que se deben aplicar en la realización de maquillajes de fantasía.",
+    "3063-4c. Se ha descrito la posición ergonómica del cliente y del profesional para realizar el maquillaje de fantasía facial seleccionado.",
+    "3063-4d. Se han formulado preguntas tipo que permiten detectar las demandas y necesidades que debe cubrir el servicio.",
+    "3063-4e. Se ha realizado un boceto previo sobre la fantasía a realizar que facilite su ejecución.",
+    "3063-4f. Se ha determinado correctamente la armonía estética y cromática que permita un buen resultado.",
+    "3063-4g. Se ha comenzado con el dibujo sobre la piel con un lápiz blanco que permita corregir, si no se ha logrado la adaptación correcta del diseño al espacio que debe ocupar.",
+    "3063-4h. Se ha considerado la necesidad de utilizar un pincel para cada color para conseguir una limpieza de ejecución y acabado del maquillaje.",
+    "3063-4i. Se ha aplicado una sustancia fijadora que permita mantener inalterable el maquillaje durante más tiempo.",
+    "3063-4j. Se han identificado las fases del proceso y resultado de los maquillajes realizados, aplicando las medidas necesarias para la corrección de posibles desviaciones.",
+    "3063-4k. Se ha completado el proceso en un tiempo adecuado.",
+    "3063-4l. Se ha realizado la limpieza de los útiles con los productos específicos, respetando las normas de seguridad indicadas por el fabricante, conservándolos en buen estado para el próximo uso.",
+    "3063-4m. Se han aplicado las medidas de seguridad requeridas.",
+    "3063-4n. Se han realizado preguntas tipo que permitan conocer el grado de satisfacción del cliente."
+  ],
+  "connections": [
+    {
+      "title_es": "Higiene, desinfección, esterilización y prevención de alteraciones dermatológicas u oculares",
+      "justification_es": "el maquillaje trabaja zonas sensibles, especialmente ojos y labios. Una mala higiene puede provocar alteraciones dermatológicas u oculares, por lo que comparte con todos los módulos la necesidad de limpieza, desinfección, material de uso individual, lavado de manos, prevención de contagios y mantenimiento de útiles."
+    },
+    {
+      "title_es": "Comunicación, entrevista, asesoramiento, atención al cliente y satisfacción",
+      "justification_es": "el maquillaje social y de fantasía se adapta a la persona, evento, estilo y expectativas; por ello se necesita preguntar, escuchar, explicar, asesorar y comprobar satisfacción. Atención al cliente y Comunicación y sociedad son módulos clave para desarrollar lenguaje profesional, escucha activa, escritura y conversación básica en inglés."
+    },
+    {
+      "title_es": "Limpieza final, conservación, orden, residuos y sostenibilidad",
+      "justification_es": "al finalizar el maquillaje deben limpiarse pinceles y útiles, conservar productos, cerrar envases, ordenar el puesto y gestionar residuos como algodones, bastoncillos, toallitas, envases o material desechable. Esto conecta con sostenibilidad, salud, prevención de infecciones y calidad profesional."
+    },
+    {
+      "title_es": "Creatividad, cultura visual, expresión artística e imagen social",
+      "justification_es": "el maquillaje, especialmente el de fantasía, permite trabajar referentes culturales, históricos, artísticos y sociales. Comunicación y sociedad aporta el análisis de contextos históricos, manifestaciones culturales, textos e imágenes; los módulos técnicos aportan la aplicación estética en rostro, uñas y cabello."
+    },
+    {
+      "title_es": "Observación, diagnóstico de piel/rostro, detección de necesidades, alergias y contraindicaciones",
+      "justification_es": "antes de maquillar hay que observar la piel, rostro, tono, óvalo, alergias, lentillas, prótesis, estilo, ropa, evento y expectativas. Coincide con el diagnóstico de uñas, vello, cabello y cuero cabelludo, y con la atención al cliente. Ciencias aporta anatomía, piel, salud y método científico; Comunicación aporta entrevista, escucha activa y registro claro."
+    },
+    {
+      "title_es": "Ejecución técnica, secuenciación, destreza manual y acabado limpio",
+      "justification_es": "maquillar implica ejecutar fases ordenadas: preparar piel, aplicar productos de higiene, base, correcciones, ojos, labios, mejillas, fijación y acabado. Comparte con depilación, uñas y peluquería la destreza manual, dirección de aplicación, control de cantidad, limpieza, evaluación y corrección de desviaciones."
+    },
+    {
+      "title_es": "Ergonomía, acomodación, protección y confort del cliente y del profesional",
+      "justification_es": "el maquillaje exige buena postura del profesional, correcta altura del sillón, protección del cliente, retirada de lentes o prótesis peligrosas y control del confort. La ergonomía y la protección aparecen en todos los servicios de imagen personal."
+    },
+    {
+      "title_es": "Ficha técnica, documentación, TIC, informes y tratamiento de la información",
+      "justification_es": "el maquillaje requiere registrar datos personales, cosméticos aplicados, observaciones, alergias, boceto, resultado y satisfacción. Esta documentación conecta con la competencia lingüística, TIC, atención al cliente, informes científicos y registros profesionales."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y transferencia a la FCT",
+      "justification_es": "el maquillaje se integra en situaciones reales de salón: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo."
+    },
+    {
+      "title_es": "Preparación de útiles, materiales, productos y puesto de trabajo",
+      "justification_es": "el maquillaje requiere preparar pinceles, esponjas, borlas, cosméticos, fijadores, desmaquillantes, productos de higiene y zona de trabajo. Esta preparación coincide con la organización de instalaciones, almacén, material de manicura, depilación, peluquería y coloración. Ciencias aplicadas aporta medidas, materia, mezclas, composición y electricidad; Comunicación permite leer etiquetas, instrucciones, protocolos y fichas técnicas."
+    },
+    {
+      "title_es": "Observación, diagnóstico de piel/rostro, detección de necesidades, alergias y contraindicaciones",
+      "justification_es": "antes de maquillar hay que observar la piel, rostro, tono, óvalo, alergias, lentillas, prótesis, estilo, ropa, evento y expectativas. Coincide con el diagnóstico de uñas, vello, cabello y cuero cabelludo, y con la atención al cliente. Ciencias aporta anatomía, piel, salud y método científico; Comunicación aporta entrevista, escucha activa y registro claro."
+    },
+    {
+      "title_es": "Selección de cosméticos, productos y técnicas según piel, estilo, armonía y resultado esperado",
+      "justification_es": "la selección de fondo, correctores, sombras, colorete, labial, fijador, productos de higiene o fantasía depende del tipo de piel, tono, textura, armonía cromática, estilo personal y finalidad. Esta lógica coincide con la selección de ceras, decolorantes, tintes, champús, esmaltes y técnicas capilares."
+    },
+    {
+      "title_es": "Visagismo, armonía estética, diseño, proporción, geometría y color",
+      "justification_es": "el visagismo exige analizar el rostro, corregir mediante claros y oscuros, diseñar cejas, adaptar fantasía al espacio facial, bocetar y armonizar colores. Se relaciona con geometría, proporción, coloración capilar, diseño de uñas, peinados, comunicación visual y apreciación estética."
+    },
+    {
+      "title_es": "Control de tiempos, exposición, duración, permanencia del resultado y calidad",
+      "justification_es": "el maquillaje debe completarse en un tiempo adecuado, respetar tiempos de exposición de mascarillas, conseguir duración mediante fijador y evaluar la calidad. Los módulos científicos permiten trabajar unidades, tiempo, datos y gráficas; los módulos técnicos comparten la exigencia de finalizar con calidad y eficiencia."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y transferencia a la FCT",
+      "justification_es": "el maquillaje se integra en situaciones reales de salón: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo."
+    },
+    {
+      "title_es": "Preparación de útiles, materiales, productos y puesto de trabajo",
+      "justification_es": "el maquillaje requiere preparar pinceles, esponjas, borlas, cosméticos, fijadores, desmaquillantes, productos de higiene y zona de trabajo. Esta preparación coincide con la organización de instalaciones, almacén, material de manicura, depilación, peluquería y coloración. Ciencias aplicadas aporta medidas, materia, mezclas, composición y electricidad; Comunicación permite leer etiquetas, instrucciones, protocolos y fichas técnicas."
+    },
+    {
+      "title_es": "Selección de cosméticos, productos y técnicas según piel, estilo, armonía y resultado esperado",
+      "justification_es": "la selección de fondo, correctores, sombras, colorete, labial, fijador, productos de higiene o fantasía depende del tipo de piel, tono, textura, armonía cromática, estilo personal y finalidad. Esta lógica coincide con la selección de ceras, decolorantes, tintes, champús, esmaltes y técnicas capilares."
+    },
+    {
+      "title_es": "Seguridad, PRL, responsabilidad profesional y zonas sensibles",
+      "justification_es": "las técnicas de maquillaje se aplican en ojos, labios y rostro, por lo que exigen responsabilidad profesional, prevención de alergias, precauciones con lentes de contacto, higiene, uso seguro de productos y respeto a instrucciones del fabricante. Coincide con la seguridad química del color y decoloración, la seguridad térmica de depilación y la prevención general del taller."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y transferencia a la FCT",
+      "justification_es": "el maquillaje se integra en situaciones reales de salón: atención, diagnóstico, preparación, ejecución, seguridad, satisfacción, limpieza y trabajo coordinado. La FCT recoge estos aprendizajes en un entorno productivo real y exige responsabilidad, cumplimiento de normas y colaboración con el equipo."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3063_c2_1",
+      "title_es": "Protocolo anti-contaminación cruzada: “Una brocha limpia evita problemas”",
+      "motivatingFactor_es": "",
+      "description_es": "crear protocolo de uso de espátulas, paletas, brochas limpias, aplicadores desechables y desinfección entre clientes.",
+      "evidence_es": "protocolo visual para el tocador.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c2_2",
+      "title_es": "Campaña de higiene ocular: “No compartas máscara de pestañas”",
+      "motivatingFactor_es": "campaña tipo carrusel de redes con mensajes breves.",
+      "description_es": "investigar riesgos de compartir maquillaje de ojos, lápices, esponjas o labiales.",
+      "evidence_es": "cartel o vídeo interno.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c2_3",
+      "title_es": "Práctica de desinfección comparada",
+      "motivatingFactor_es": "",
+      "description_es": "comparar higiene de pinceles, esponjas, pinzas, alicates, paletinas y peines; decidir qué se lava, desinfecta o desecha.",
+      "evidence_es": "tabla útil-material-método.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c2_4",
+      "title_es": "Estudio de microorganismos y piel",
+      "motivatingFactor_es": "",
+      "description_es": "trabajar con imágenes, casos y explicaciones sencillas sobre infecciones, irritaciones, conjuntivitis y prevención.",
+      "evidence_es": "semáforo de riesgos en maquillaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c2_5",
+      "title_es": "Rúbrica de higiene del servicio",
+      "motivatingFactor_es": "",
+      "description_es": "evaluar manos, puesto, útiles, producto, protección, limpieza durante el proceso y cierre.",
+      "evidence_es": "rúbrica común del módulo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c2_6",
+      "title_es": "Simulación de contaminación invisible",
+      "motivatingFactor_es": "usar polvo fluorescente o tarjetas de contaminación para ver cómo se transmite de manos a producto y rostro.",
+      "description_es": "",
+      "evidence_es": "mapa de contaminación y medidas correctoras.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c2_7",
+      "title_es": "Escape room “salva el maquillaje de la contaminación”",
+      "motivatingFactor_es": "resolver pistas sobre brochas sucias, producto caducado, aplicador compartido, manos sin lavar y material mal almacenado.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "checklist final de higiene segura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_1",
+      "title_es": "Role-play de asesoramiento",
+      "motivatingFactor_es": "",
+      "description_es": "entrevista, propuesta de maquillaje, explicación de productos, consentimiento, ejecución y cierre.",
+      "evidence_es": "diálogo evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_2",
+      "title_es": "Encuesta de satisfacción postmaquillaje",
+      "motivatingFactor_es": "escala de emojis y gráficos.",
+      "description_es": "preguntas sobre trato, higiene, resultado, duración, comodidad y adecuación al estilo.",
+      "evidence_es": "encuesta digital o impresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_3",
+      "title_es": "Atención a cliente extranjero",
+      "motivatingFactor_es": "",
+      "description_es": "frases básicas en inglés sobre alergias, evento, colores, duración y cuidados.",
+      "evidence_es": "tarjeta bilingüe.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_4",
+      "title_es": "Gestión de reclamaciones",
+      "motivatingFactor_es": "",
+      "description_es": "cliente insatisfecho por tono, duración, irritación o diferencia con la foto de referencia.",
+      "evidence_es": "hoja de incidencia y respuesta.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_5",
+      "title_es": "Presentación oral de tendencias",
+      "motivatingFactor_es": "",
+      "description_es": "exponer estilos de maquillaje social y explicar para qué cliente o evento conviene.",
+      "evidence_es": "presentación breve.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_6",
+      "title_es": "Respuesta a reseña negativa online",
+      "motivatingFactor_es": "redactar respuesta profesional, sin discutir ni revelar datos.",
+      "description_es": "",
+      "evidence_es": "banco de respuestas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c9_7",
+      "title_es": "Chatbot de preguntas frecuentes de maquillaje",
+      "motivatingFactor_es": "crear FAQ sobre duración, alergias, preparación de piel, precio, cuidados y retirada.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "guion tipo chatbot o folleto interactivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_1",
+      "title_es": "Cierre sostenible del tocador",
+      "motivatingFactor_es": "",
+      "description_es": "limpiar brochas, cerrar envases, ordenar productos, retirar residuos y conservar útiles.",
+      "evidence_es": "checklist de cierre.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_2",
+      "title_es": "Ruta del residuo cosmético",
+      "motivatingFactor_es": "",
+      "description_es": "algodones, bastoncillos, toallitas, envases, aplicadores y restos de producto.",
+      "evidence_es": "mapa de residuos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_3",
+      "title_es": "Plan de reducción de desechables",
+      "motivatingFactor_es": "",
+      "description_es": "buscar alternativas seguras para reducir toallitas, algodones y plásticos sin comprometer higiene.",
+      "evidence_es": "plan de mejora sostenible.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_4",
+      "title_es": "Auditoría de productos caducados",
+      "motivatingFactor_es": "",
+      "description_es": "revisar maletines, tocador y almacén; detectar caducidad, mal olor, textura alterada o envases dañados.",
+      "evidence_es": "informe de retirada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_5",
+      "title_es": "Campaña de consumo responsable",
+      "motivatingFactor_es": "",
+      "description_es": "uso racional de cosméticos, agua, energía y materiales.",
+      "evidence_es": "cartel o vídeo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_6",
+      "title_es": "Eco-maletín de maquillaje",
+      "motivatingFactor_es": "diseñar un maletín con productos duraderos, reutilizables seguros y buena conservación.",
+      "description_es": "",
+      "evidence_es": "propuesta de compra responsable.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c12_7",
+      "title_es": "Reto “menos residuo, mismo acabado”",
+      "motivatingFactor_es": "practicar dosificación y uso racional de material desechable.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "comparación de residuos antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_1",
+      "title_es": "Maquillaje inspirado en una época histórica",
+      "motivatingFactor_es": "",
+      "description_es": "Egipto, Grecia, Roma, Edad Media, Renacimiento, años 90 o Y2K, adaptado de forma actual.",
+      "evidence_es": "moodboard y exposición.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_2",
+      "title_es": "Proyecto cultural de fantasía facial",
+      "motivatingFactor_es": "",
+      "description_es": "maquillaje inspirado en patrimonio, fiestas locales, cine, música, videojuegos o arte urbano.",
+      "evidence_es": "boceto y presentación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_3",
+      "title_es": "Caracterización literaria",
+      "motivatingFactor_es": "",
+      "description_es": "crear maquillaje de un personaje de una obra leída o tema literario.",
+      "evidence_es": "ficha de personaje y diseño.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_4",
+      "title_es": "Catálogo de tendencias",
+      "motivatingFactor_es": "",
+      "description_es": "investigar estilos actuales: clean girl, glam, euphoria, editorial, festival, natural, gótico suave.",
+      "evidence_es": "catálogo con análisis crítico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_5",
+      "title_es": "Desfile temático interdisciplinar",
+      "motivatingFactor_es": "",
+      "description_es": "maquillaje, peinado, uñas, texto explicativo y presentación oral.",
+      "evidence_es": "pasarela educativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_6",
+      "title_es": "Face chart challenge",
+      "motivatingFactor_es": "crear diseños sobre plantillas de rostro antes de maquillar.",
+      "description_es": "",
+      "evidence_es": "galería de face charts.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c13_7",
+      "title_es": "Filtros vs maquillaje real",
+      "motivatingFactor_es": "analizar cómo los filtros modifican expectativas y autoestima.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "campaña de imagen real y saludable.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_1",
+      "title_es": "Ficha de diagnóstico facial integral",
+      "motivatingFactor_es": "apartado “imagen de inspiración” de redes y análisis de viabilidad.",
+      "description_es": "recoger tipo de piel, tono, óvalo, ojos, labios, alergias, lentillas, sensibilidad, evento, estilo y preferencias.",
+      "evidence_es": "ficha técnica de maquillaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_2",
+      "title_es": "Entrevista previa al maquillaje",
+      "motivatingFactor_es": "",
+      "description_es": "role-play con preguntas sobre alergias, rutina facial, evento, duración, colores preferidos, comodidad y expectativas.",
+      "evidence_es": "diálogo evaluado con rúbrica de escucha activa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_3",
+      "title_es": "Caso de contraindicación",
+      "motivatingFactor_es": "",
+      "description_es": "analizar conjuntivitis, dermatitis, heridas, alergias, irritación, lentillas o piel muy reactiva. Decidir realizar, adaptar o derivar.",
+      "evidence_es": "árbol de decisión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_4",
+      "title_es": "Mapa de zonas sensibles",
+      "motivatingFactor_es": "",
+      "description_es": "identificar ojos, labios, contorno orbicular, piel sensible y zonas con riesgo de irritación.",
+      "evidence_es": "infografía de zonas sensibles y precauciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_5",
+      "title_es": "Comparativa de diagnósticos",
+      "motivatingFactor_es": "",
+      "description_es": "comparar diagnóstico de rostro para maquillaje, cejas para depilación, uñas para manicura, cuero cabelludo para lavado y color.",
+      "evidence_es": "tabla de diagnóstico integral.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_6",
+      "title_es": "Diagnóstico con avatar digital",
+      "motivatingFactor_es": "usar plantillas de rostro o avatares para decidir correcciones, tonos y estilo sin tocar piel real.",
+      "description_es": "",
+      "evidence_es": "propuesta sobre avatar con justificación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c3_7",
+      "title_es": "Semáforo de piel antes de maquillar",
+      "motivatingFactor_es": "clasificar casos: verde —maquillaje posible—, amarillo —adaptar producto—, rojo —no realizar/consultar—.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "panel de actuación segura.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_1",
+      "title_es": "Servicio completo de imagen",
+      "motivatingFactor_es": "",
+      "description_es": "higiene facial superficial, maquillaje social, depilación de cejas y manicura básica en servicio encadenado.",
+      "evidence_es": "ficha técnica y evaluación del acabado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_2",
+      "title_es": "Reto de precisión",
+      "motivatingFactor_es": "",
+      "description_es": "delineado de ojos, perfilado de labios, depilación de cejas en plantilla, esmaltado y difuminado.",
+      "evidence_es": "panel de destreza antes/después.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_3",
+      "title_es": "Vídeo-tutorial de maquillaje social",
+      "motivatingFactor_es": "",
+      "description_es": "grabar fases: preparación, base, correcciones, ojos, labios, mejillas, fijación y limpieza.",
+      "evidence_es": "vídeo interno con guion técnico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_4",
+      "title_es": "Estaciones técnicas rotativas",
+      "motivatingFactor_es": "",
+      "description_es": "cada estación practica una fase: higiene, base, corrector, ojos, labios, cejas, fijación y limpieza.",
+      "evidence_es": "pasaporte de estaciones completado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_5",
+      "title_es": "Corrección de errores",
+      "motivatingFactor_es": "",
+      "description_es": "identificar exceso de producto, mala elección de tono, falta de difuminado, asimetría, manchas o restos.",
+      "evidence_es": "tabla error-causa-solución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_6",
+      "title_es": "Stop motion de un maquillaje",
+      "motivatingFactor_es": "fotografiar paso a paso el proceso para crear una animación didáctica.",
+      "description_es": "",
+      "evidence_es": "stop motion educativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c6_7",
+      "title_es": "Battle de difuminado cooperativa",
+      "motivatingFactor_es": "reto por equipos donde se valora suavidad, limpieza, simetría y técnica, no competitividad agresiva.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "rúbrica de acabado limpio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_1",
+      "title_es": "Mapa postural del salón",
+      "motivatingFactor_es": "",
+      "description_es": "comparar ergonomía en maquillaje, depilación, manicura, lavado y coloración.",
+      "evidence_es": "cartel de posturas correctas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_2",
+      "title_es": "Simulación de acomodación segura",
+      "motivatingFactor_es": "",
+      "description_es": "preparar al cliente para maquillaje social, fantasía, depilación facial y lavado capilar.",
+      "evidence_es": "checklist de acomodación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_3",
+      "title_es": "Protocolo de retirada de elementos de riesgo",
+      "motivatingFactor_es": "",
+      "description_es": "lentillas, gafas, joyas, pendientes, ropa delicada, prótesis y protección de ropa.",
+      "evidence_es": "protocolo visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_4",
+      "title_es": "Observación entre iguales",
+      "motivatingFactor_es": "",
+      "description_es": "un alumno maquilla y otro evalúa postura, protección, distancia, iluminación, comodidad y comunicación.",
+      "evidence_es": "ficha de coevaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_5",
+      "title_es": "Adaptación a clientes diversos",
+      "motivatingFactor_es": "",
+      "description_es": "cliente con movilidad reducida, piel sensible, edad avanzada, dificultad idiomática o inseguridad.",
+      "evidence_es": "guía de atención adaptada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_6",
+      "title_es": "Termómetro de confort facial",
+      "motivatingFactor_es": "tarjeta para preguntar comodidad, luz, postura, sensibilidad, picor o cansancio.",
+      "description_es": "",
+      "evidence_es": "herramienta de comunicación durante el servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c7_7",
+      "title_es": "Micro-pausas del maquillador/a",
+      "motivatingFactor_es": "rutina breve para muñecas, cuello, hombros y espalda.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "vídeo o póster de ergonomía activa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_1",
+      "title_es": "Ficha digital de maquillaje",
+      "motivatingFactor_es": "",
+      "description_es": "datos, diagnóstico, cosméticos, tono, alergias, boceto, incidencias, satisfacción y resultado.",
+      "evidence_es": "formulario digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_2",
+      "title_es": "Portfolio de maquillajes",
+      "motivatingFactor_es": "",
+      "description_es": "fotografías autorizadas, bocetos, fichas técnicas, reflexión y autoevaluación.",
+      "evidence_es": "portfolio digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_3",
+      "title_es": "Informe de práctica",
+      "motivatingFactor_es": "",
+      "description_es": "procedimiento, productos, tiempos, resultado, dificultades y propuesta de mejora.",
+      "evidence_es": "informe técnico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_4",
+      "title_es": "Base de datos de cosméticos",
+      "motivatingFactor_es": "",
+      "description_es": "marca, uso, composición básica, caducidad, precauciones, conservación y zona de aplicación.",
+      "evidence_es": "base de datos del aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_5",
+      "title_es": "Gráficos de preferencias",
+      "motivatingFactor_es": "",
+      "description_es": "analizar colores, estilos o satisfacción de clientes simulados mediante tablas y gráficos.",
+      "evidence_es": "dashboard sencillo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_6",
+      "title_es": "QR de boceto y ficha técnica",
+      "motivatingFactor_es": "vincular cada maquillaje a su ficha y boceto mediante QR en el portfolio.",
+      "description_es": "",
+      "evidence_es": "portfolio interactivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c10_7",
+      "title_es": "Caso “no todo se sube a redes”",
+      "motivatingFactor_es": "trabajar permisos, imagen, privacidad y confidencialidad.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "decálogo de publicación responsable.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_1",
+      "title_es": "Salón simulado de maquillaje y estética",
+      "motivatingFactor_es": "",
+      "description_es": "roles de recepción, diagnóstico, maquillador/a, auxiliar, control de calidad, higiene y limpieza.",
+      "evidence_es": "servicio integral evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_2",
+      "title_es": "Proyecto final de imagen completa",
+      "motivatingFactor_es": "",
+      "description_es": "maquillaje, peinado, uñas, depilación de cejas, ficha técnica, presupuesto y atención al cliente.",
+      "evidence_es": "dossier final.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_3",
+      "title_es": "Rotación de roles profesionales",
+      "motivatingFactor_es": "",
+      "description_es": "cliente, profesional, observador de seguridad, responsable de almacén y responsable de comunicación.",
+      "evidence_es": "registro de roles.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_4",
+      "title_es": "Diario de aprendizaje profesional",
+      "motivatingFactor_es": "",
+      "description_es": "avances, dificultades, correcciones, autonomía, seguridad y trato al cliente.",
+      "evidence_es": "diario individual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_5",
+      "title_es": "Simulación de FCT",
+      "motivatingFactor_es": "",
+      "description_es": "procedimientos de empresa, tiempos reales, uniformidad, comunicación y evaluación final.",
+      "evidence_es": "rúbrica tipo empresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_6",
+      "title_es": "Hackathon “mejora el servicio de maquillaje”",
+      "motivatingFactor_es": "resolver un problema: falta de higiene, mala gestión de tiempos, cliente insatisfecho, desorden o residuos.",
+      "description_es": "",
+      "evidence_es": "pitch de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c14_7",
+      "title_es": "Certamen “maquillador/a junior”",
+      "motivatingFactor_es": "exposición final de evidencias: face chart, ficha, técnica, portfolio, campaña o protocolo.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "muestra de competencias con insignias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_1",
+      "title_es": "Bandeja técnica de maquillaje social y fantasía: “Setup de maquillador/a profesional”",
+      "motivatingFactor_es": "preparar el puesto como si fueran a maquillar para una graduación, festival, sesión de fotos o evento escolar.",
+      "description_es": "por equipos seleccionan brochas, esponjas, paletas, productos de higiene, bases, correctores, sombras, labiales, fijador, algodones, bastoncillos y material desechable. Justifican qué se usa, por qué y en qué orden.",
+      "evidence_es": "bandeja montada, fotografía autorizada del puesto y checklist de preparación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_2",
+      "title_es": "Inventario profesional del tocador: “Controla tu beauty room”",
+      "motivatingFactor_es": "semáforo digital: verde —apto—, amarillo —revisar—, rojo —retirar—.",
+      "description_es": "registran productos reales o simulados: nombre, uso, caducidad, estado, conservación, higiene, zona de aplicación y riesgo.",
+      "evidence_es": "inventario del tocador o maletín de maquillaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_3",
+      "title_es": "Lectura de etiquetas cosméticas: “No uses nada que no entiendas”",
+      "motivatingFactor_es": "comparar productos virales con productos profesionales.",
+      "description_es": "analizan ingredientes, fecha PAO, advertencias, modo de empleo, zona de aplicación, alérgenos posibles y símbolos.",
+      "evidence_es": "guía rápida de lectura de etiquetas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_4",
+      "title_es": "Montaje de cabina polivalente",
+      "motivatingFactor_es": "",
+      "description_es": "transformar un puesto de depilación o manicura en puesto de maquillaje, respetando higiene, iluminación, espejo, silla, papelera, útiles y comodidad.",
+      "evidence_es": "antes/después del montaje y defensa oral.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_5",
+      "title_es": "Protocolo escrito de preparación",
+      "motivatingFactor_es": "",
+      "description_es": "redactar paso a paso cómo preparar el servicio: higiene, selección de útiles, organización del producto, protección, ficha y bienvenida.",
+      "evidence_es": "protocolo con formato QR para el aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_6",
+      "title_es": "Maletín de maquillador/a junior",
+      "motivatingFactor_es": "diseñar un kit básico para FCT o primer empleo.",
+      "description_es": "cada alumno elige productos y útiles imprescindibles, calcula coste aproximado y diferencia entre material propio, del salón y desechable.",
+      "evidence_es": "ficha visual del maletín profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c1_7",
+      "title_es": "Reto “tocador instagrameable, pero seguro”",
+      "motivatingFactor_es": "montar un puesto atractivo para foto o vídeo, pero cumpliendo higiene y PRL.",
+      "description_es": "se valora estética, orden, seguridad, accesibilidad de útiles, iluminación y limpieza.",
+      "evidence_es": "foto del setup y rúbrica de profesionalidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_1",
+      "title_es": "Asesoría integral de imagen para un evento",
+      "motivatingFactor_es": "",
+      "description_es": "diseñar maquillaje, manicura, cejas, peinado y color armónico para graduación, festival, entrevista o celebración.",
+      "evidence_es": "moodboard y explicación técnica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_2",
+      "title_es": "Paleta cromática personal",
+      "motivatingFactor_es": "",
+      "description_es": "relacionar tono de piel, ojos, ropa, cabello y maquillaje. Crear paletas cálidas, frías, naturales, glam o fantasía.",
+      "evidence_es": "paleta visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_3",
+      "title_es": "Comparativa de cosméticos",
+      "motivatingFactor_es": "",
+      "description_es": "base, corrector, sombra, labial, fijador, esmalte, tinte, cera y decolorante: textura, función, riesgo y uso.",
+      "evidence_es": "tabla comparativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_4",
+      "title_es": "Árbol de decisión de productos",
+      "motivatingFactor_es": "",
+      "description_es": "elegir cosméticos según piel seca, grasa, sensible, joven, madura, con rojeces o con tendencia acneica.",
+      "evidence_es": "árbol visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_5",
+      "title_es": "Presupuesto de servicio combinado",
+      "motivatingFactor_es": "",
+      "description_es": "calcular coste y tiempo de maquillaje, manicura y depilación de cejas para un evento.",
+      "evidence_es": "presupuesto sencillo y ético.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_6",
+      "title_es": "Ranking “viral pero ¿me conviene?”",
+      "motivatingFactor_es": "analizar productos virales de redes y decidir para qué piel o servicio serían adecuados.",
+      "description_es": "",
+      "evidence_es": "ranking razonado de productos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c4_7",
+      "title_es": "Consultoría express con cartas de cliente",
+      "motivatingFactor_es": "tarjetas con perfiles: piel sensible, evento largo, presupuesto bajo, estilo natural, fantasía, alergias.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "pitch de recomendación en 2 minutos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_1",
+      "title_es": "Boceto de maquillaje de fantasía",
+      "motivatingFactor_es": "",
+      "description_es": "crear un diseño con simetría, color, formas geométricas y adaptación al rostro antes de maquillar.",
+      "evidence_es": "boceto técnico-creativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_2",
+      "title_es": "Estudio de óvalos y correcciones",
+      "motivatingFactor_es": "",
+      "description_es": "aplicar claros y oscuros en plantillas según óvalo facial y relacionarlo con peinado favorecedor.",
+      "evidence_es": "lámina de correcciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_3",
+      "title_es": "Diseño coordinado rostro-uñas-cabello",
+      "motivatingFactor_es": "",
+      "description_es": "crear una propuesta estética con maquillaje, esmaltado, cejas y peinado.",
+      "evidence_es": "dossier de look integral.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_4",
+      "title_es": "Galería de estilos históricos o culturales",
+      "motivatingFactor_es": "",
+      "description_es": "investigar una época, cultura o tendencia y traducirla a maquillaje, peinado y comunicación visual.",
+      "evidence_es": "galería o exposición.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_5",
+      "title_es": "Taller de colorimetría básica",
+      "motivatingFactor_es": "",
+      "description_es": "armonizar maquillaje con tono de piel, ojos, ropa y cabello usando rueda de color.",
+      "evidence_es": "rueda cromática aplicada al maquillaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_6",
+      "title_es": "Avatar de visagismo",
+      "motivatingFactor_es": "probar correcciones sobre avatares digitales o plantillas de rostro.",
+      "description_es": "",
+      "evidence_es": "antes/después en plantilla con explicación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c5_7",
+      "title_es": "Reto “simetría imposible”",
+      "motivatingFactor_es": "gamificar el diseño de cejas, eyeliner o fantasía simétrica en papel/plantilla.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "panel de precisión y corrección.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_1",
+      "title_es": "Cronograma de maquillaje social",
+      "motivatingFactor_es": "",
+      "description_es": "recepción, higiene, preparación, base, ojos, labios, fijación, encuesta y limpieza.",
+      "evidence_es": "planning de servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_2",
+      "title_es": "Prueba de permanencia",
+      "motivatingFactor_es": "",
+      "description_es": "comparar técnicas o fijadores en soporte de práctica, registrando duración y resultado.",
+      "evidence_es": "tabla de permanencia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_3",
+      "title_es": "Tabla de tiempos técnicos",
+      "motivatingFactor_es": "",
+      "description_es": "maquillaje, decoloración del vello, tinte, mascarilla, manicura y secado.",
+      "evidence_es": "tabla visual del taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_4",
+      "title_es": "Simulación de agenda de salón",
+      "motivatingFactor_es": "",
+      "description_es": "organizar maquillaje, peinado, manicura y depilación de cejas para un evento.",
+      "evidence_es": "agenda profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_5",
+      "title_es": "Indicadores de calidad",
+      "motivatingFactor_es": "",
+      "description_es": "tiempo, higiene, acabado, satisfacción, seguridad, adecuación al estilo y duración.",
+      "evidence_es": "rúbrica de calidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_6",
+      "title_es": "Temporizador creativo de maquillaje",
+      "motivatingFactor_es": "diseñar tarjetas o alarmas para controlar fases y no alargar innecesariamente.",
+      "description_es": "",
+      "evidence_es": "sistema visual de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c11_7",
+      "title_es": "Reto “glam en tiempo realista”",
+      "motivatingFactor_es": "realizar una simulación equilibrando tiempo, calma, higiene y acabado, sin correr.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "evaluación de eficiencia profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_1",
+      "title_es": "Mapa de riesgos en maquillaje",
+      "motivatingFactor_es": "",
+      "description_es": "ojos, labios, alergias, contaminación, cosméticos caducados, posturas, residuos y productos irritantes.",
+      "evidence_es": "mapa visual de riesgos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_2",
+      "title_es": "Simulación de reacción adversa",
+      "motivatingFactor_es": "",
+      "description_es": "picor ocular, enrojecimiento, alergia, lagrimeo o irritación. Deben parar, retirar, avisar y registrar.",
+      "evidence_es": "parte de incidencia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_3",
+      "title_es": "Análisis de fichas de seguridad",
+      "motivatingFactor_es": "",
+      "description_es": "cosméticos, fijadores, desinfectantes, tintes y decolorantes: advertencias, conservación y actuación.",
+      "evidence_es": "resumen visual de seguridad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_4",
+      "title_es": "Checklist de PRL antes del servicio",
+      "motivatingFactor_es": "",
+      "description_es": "EPI, útiles limpios, producto correcto, cliente protegido, lentillas retiradas si procede y puesto ordenado.",
+      "evidence_es": "checklist plastificable o QR.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_5",
+      "title_es": "Debate ético-profesional",
+      "motivatingFactor_es": "",
+      "description_es": "confidencialidad, fotos en redes, límites del auxiliar, comentarios sobre el cuerpo y derivación.",
+      "evidence_es": "decálogo de responsabilidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_6",
+      "title_es": "Carnet de seguridad para maquillaje",
+      "motivatingFactor_es": "superar prueba breve sobre higiene ocular, brochas, alergias, caducidades, lentillas y zonas sensibles.",
+      "description_es": "",
+      "evidence_es": "carnet simbólico de “maquillador/a seguro/a”.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3063_c8_7",
+      "title_es": "Escape room PRL del tocador",
+      "motivatingFactor_es": "detectar errores simulados: máscara compartida, brochas sucias, producto caducado, ficha incompleta.",
+      "description_es": "────────────────────────────────────────────────────────────",
+      "evidence_es": "lista de errores y soluciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    }
+  ]
+}

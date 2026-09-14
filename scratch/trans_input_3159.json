@@ -1,0 +1,790 @@
+{
+  "code": "3159",
+  "name_es": "Itinerario personal para la empleabilidad",
+  "criteria": [
+    "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
+    "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo.",
+    "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo.",
+    "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento.",
+    "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales.",
+    "3159-2a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad.",
+    "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas.",
+    "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad.",
+    "3159-2d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo.",
+    "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional.",
+    "3159-3a. Se ha determinado la realidad del entorno sociolaboral actual.",
+    "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias.",
+    "3159-3c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio.",
+    "3159-4a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles.",
+    "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales.",
+    "3159-4c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional.",
+    "3159-5a. Se ha analizado la búsqueda de empleo como un proceso.",
+    "3159-5b. Se han identificado las diferentes fuentes de información de acceso al empleo.",
+    "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena.",
+    "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
+  ],
+  "connections": [
+    {
+      "title_es": "Autoconocimiento, intereses, motivaciones, autoestima y marca personal profesional",
+      "justification_es": "el autoconocimiento y la autoestima son esenciales para construir una identidad profesional. En Peluquería y Estética el alumnado debe reconocer qué se le da bien, qué le motiva —maquillaje, uñas, barbería, color, atención, redes, creatividad— y cómo convertir esas fortalezas en empleabilidad. Se relaciona con imagen profesional, atención al cliente, comunicación, trabajo en empresa y reflexión sobre hábitos saludables."
+    },
+    {
+      "title_es": "Igualdad, diversidad, ruptura de estereotipos y orientación libre de prejuicios",
+      "justification_es": "la orientación profesional debe estar libre de estereotipos de género, origen, nivel académico, imagen corporal o expectativas familiares. En Imagen Personal es fundamental atender con respeto a clientes diversos y permitir que el alumnado se imagine en cualquier rol profesional sin prejuicios: barbería, maquillaje, uñas, peluquería, atención, emprendimiento o formación posterior."
+    },
+    {
+      "title_es": "Competencias personales y sociales para la empleabilidad: responsabilidad, puntualidad, respeto y actitud profesional",
+      "justification_es": "mantener un empleo no depende solo de saber realizar una técnica; requiere puntualidad, respeto, autonomía, responsabilidad, cumplimiento de normas, orden, capacidad de aprender y actitud positiva ante correcciones. Estos criterios aparecen de forma transversal en todos los servicios y se consolidan en la FCT."
+    },
+    {
+      "title_es": "Trabajo en equipo, cooperación, roles profesionales y convivencia",
+      "justification_es": "en un salón se trabaja en equipo: recepción, almacén, preparación, higiene, técnica, atención y cierre. El alumnado debe aprender a asumir roles, coordinarse, comunicar incidencias, colaborar y respetar normas compartidas. La FCT evalúa de forma directa la adaptación al equipo de empresa."
+    },
+    {
+      "title_es": "Igualdad, diversidad, ruptura de estereotipos y orientación libre de prejuicios",
+      "justification_es": "la orientación profesional debe estar libre de estereotipos de género, origen, nivel académico, imagen corporal o expectativas familiares. En Imagen Personal es fundamental atender con respeto a clientes diversos y permitir que el alumnado se imagine en cualquier rol profesional sin prejuicios: barbería, maquillaje, uñas, peluquería, atención, emprendimiento o formación posterior."
+    },
+    {
+      "title_es": "Seguridad, salud laboral, autocuidado, hábitos saludables y sostenibilidad como empleabilidad",
+      "justification_es": "una persona empleable debe cuidar su salud, cumplir normas de PRL, trabajar de forma sostenible y evitar riesgos para clientes, compañeros y medioambiente. En el sector de Imagen Personal esto implica higiene, ergonomía, productos químicos, electricidad, residuos, autocuidado y hábitos saludables."
+    },
+    {
+      "title_es": "Formación en Centros de Trabajo, adaptación a empresa, aprendizaje permanente y transición real al empleo",
+      "justification_es": "el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral."
+    },
+    {
+      "title_es": "Comunicación efectiva, afectiva, oral, escrita y digital para el empleo",
+      "justification_es": "buscar empleo, superar una entrevista y mantener un puesto exige comunicarse con claridad, respeto y seguridad. En el ciclo, estas habilidades se aplican en atención al cliente, fichas técnicas, explicaciones de servicios, reclamaciones, trabajo en equipo, inglés básico y comunicación con responsables en FCT."
+    },
+    {
+      "title_es": "Investigación del entorno sociolaboral, profesiones, empresas, tendencias y sectores emergentes",
+      "justification_es": "la orientación profesional debe partir del conocimiento real del sector: salones de peluquería, barberías, centros de estética, uñas, maquillaje, hoteles, spas, redes sociales, servicios a domicilio, franquicias, emprendimiento y nuevas tendencias. Los módulos técnicos muestran qué tareas se realizan; Comunicación, Ciencias y Atención al cliente ayudan a investigar, analizar y presentar la información."
+    },
+    {
+      "title_es": "Emprendimiento, iniciativa, creatividad, comunicación comercial y proyecto de salón",
+      "justification_es": "aunque el módulo se centre en empleabilidad, el emprendimiento y la iniciativa ayudan al alumnado a comprender cómo funciona un negocio de imagen personal: servicios, clientes, precios, comunicación, sostenibilidad, calidad y diferenciación. Esta visión aumenta la motivación y conecta con sus intereses en redes, estética y marca personal."
+    },
+    {
+      "title_es": "Formación en Centros de Trabajo, adaptación a empresa, aprendizaje permanente y transición real al empleo",
+      "justification_es": "el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral."
+    },
+    {
+      "title_es": "Inteligencia emocional, asertividad, gestión de conflictos y resiliencia",
+      "justification_es": "el entorno laboral exige gestionar nervios, correcciones, conflictos con clientes o compañeros y cambios inesperados. En estética y peluquería esto es frecuente: retrasos, resultados no esperados, reclamaciones, presión de tiempo o inseguridad del cliente. La inteligencia emocional mejora la convivencia, la calidad y la empleabilidad."
+    },
+    {
+      "title_es": "Investigación del entorno sociolaboral, profesiones, empresas, tendencias y sectores emergentes",
+      "justification_es": "la orientación profesional debe partir del conocimiento real del sector: salones de peluquería, barberías, centros de estética, uñas, maquillaje, hoteles, spas, redes sociales, servicios a domicilio, franquicias, emprendimiento y nuevas tendencias. Los módulos técnicos muestran qué tareas se realizan; Comunicación, Ciencias y Atención al cliente ayudan a investigar, analizar y presentar la información."
+    },
+    {
+      "title_es": "Itinerarios académicos, formación permanente y toma de decisiones sobre el propio proyecto profesional",
+      "justification_es": "el alumnado necesita conocer opciones después del Grado Básico: continuidad formativa, Grado Medio, certificados profesionales, cursos de especialización no formal, empleo, FCT, formación permanente y competencias digitales. La decisión debe basarse en preferencias, capacidades, expectativas y realidad laboral, no en estereotipos o decisiones impulsivas."
+    },
+    {
+      "title_es": "Emprendimiento, iniciativa, creatividad, comunicación comercial y proyecto de salón",
+      "justification_es": "aunque el módulo se centre en empleabilidad, el emprendimiento y la iniciativa ayudan al alumnado a comprender cómo funciona un negocio de imagen personal: servicios, clientes, precios, comunicación, sostenibilidad, calidad y diferenciación. Esta visión aumenta la motivación y conecta con sus intereses en redes, estética y marca personal."
+    },
+    {
+      "title_es": "Igualdad, diversidad, ruptura de estereotipos y orientación libre de prejuicios",
+      "justification_es": "la orientación profesional debe estar libre de estereotipos de género, origen, nivel académico, imagen corporal o expectativas familiares. En Imagen Personal es fundamental atender con respeto a clientes diversos y permitir que el alumnado se imagine en cualquier rol profesional sin prejuicios: barbería, maquillaje, uñas, peluquería, atención, emprendimiento o formación posterior."
+    },
+    {
+      "title_es": "Formación en Centros de Trabajo, adaptación a empresa, aprendizaje permanente y transición real al empleo",
+      "justification_es": "el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral."
+    },
+    {
+      "title_es": "Competencias personales y sociales para la empleabilidad: responsabilidad, puntualidad, respeto y actitud profesional",
+      "justification_es": "mantener un empleo no depende solo de saber realizar una técnica; requiere puntualidad, respeto, autonomía, responsabilidad, cumplimiento de normas, orden, capacidad de aprender y actitud positiva ante correcciones. Estos criterios aparecen de forma transversal en todos los servicios y se consolidan en la FCT."
+    },
+    {
+      "title_es": "Búsqueda de empleo, fuentes de información, CV, carta, entrevista y herramientas digitales",
+      "justification_es": "el acceso al empleo exige conocer dónde buscar, cómo presentarse, cómo demostrar habilidades, cómo preparar una entrevista y cómo utilizar herramientas digitales de forma profesional. Los módulos técnicos aportan evidencias para el CV y portfolio; Comunicación y Atención al cliente aportan expresión, entrevista y trato."
+    },
+    {
+      "title_es": "Emprendimiento, iniciativa, creatividad, comunicación comercial y proyecto de salón",
+      "justification_es": "aunque el módulo se centre en empleabilidad, el emprendimiento y la iniciativa ayudan al alumnado a comprender cómo funciona un negocio de imagen personal: servicios, clientes, precios, comunicación, sostenibilidad, calidad y diferenciación. Esta visión aumenta la motivación y conecta con sus intereses en redes, estética y marca personal."
+    },
+    {
+      "title_es": "Seguridad, salud laboral, autocuidado, hábitos saludables y sostenibilidad como empleabilidad",
+      "justification_es": "una persona empleable debe cuidar su salud, cumplir normas de PRL, trabajar de forma sostenible y evitar riesgos para clientes, compañeros y medioambiente. En el sector de Imagen Personal esto implica higiene, ergonomía, productos químicos, electricidad, residuos, autocuidado y hábitos saludables."
+    },
+    {
+      "title_es": "Formación en Centros de Trabajo, adaptación a empresa, aprendizaje permanente y transición real al empleo",
+      "justification_es": "el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3159_c1_1",
+      "title_es": "Mapa de talentos beauty: “¿Qué se me da bien?”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "El alumnado completa un mapa visual con sus habilidades: trato al cliente, creatividad, precisión manual, orden, maquillaje, peinados, uñas, color, redes sociales o trabajo en equipo. Después lo conecta con puestos reales: auxiliar de peluquería, ayudante de manicura, auxiliar de depilación, ayudante de maquillaje o atención en salón.    Producto final: mapa personal de talentos y breve presentación oral.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mapa de talentos beauty: “¿Qué se me da bien?”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c1_2",
+      "title_es": "DAFO personal con estética de videojuego: “Mi personaje profesional”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Cada alumno crea un avatar profesional y define sus “poderes” —fortalezas—, “zonas a entrenar” —debilidades—, “oportunidades del mapa” y “amenazas”.    Toque motivador: se presenta como ficha de personaje de videojuego o perfil de creador.    Producto final: DAFO visual con una estrategia de mejora realista.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de DAFO personal con estética de videojuego: “Mi personaje profesional”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c1_3",
+      "title_es": "Mi marca personal sin postureo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Se trabaja la diferencia entre aparentar y mostrar profesionalidad. El alumnado diseña una marca personal: valores, estilo, forma de hablar al cliente, imagen profesional, especialidad que le gustaría desarrollar y límites éticos.    Producto final: mini manifiesto profesional: “Así quiero que me recuerden como profesional”.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mi marca personal sin postureo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c1_4",
+      "title_es": "Playlist de motivación profesional",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Cada alumno elige una canción que le motive y explica qué emoción o valor le transmite para su futuro laboral: constancia, seguridad, calma, energía, creatividad.    Relación curricular: autoestima, autoconocimiento, comunicación oral e inteligencia emocional.    Producto final: playlist grupal y reflexión escrita breve.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Playlist de motivación profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c1_5",
+      "title_es": "Moodboard de futuro profesional",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Con imágenes, colores, palabras y referencias visuales, cada alumno representa cómo imagina su futuro: salón, barbería, estética, maquillaje, uñas, redes, formación posterior o emprendimiento.    Producto final: moodboard físico o digital y explicación de 1 minuto.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Moodboard de futuro profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c1_6",
+      "title_es": "Reto “3 fortalezas y una mejora”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "En parejas, se observan durante una práctica técnica —lavado, maquillaje, manicura, recepción— y cada compañero señala tres fortalezas y una mejora con lenguaje respetuoso.    Producto final: ficha de feedback positivo y objetivo semanal.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Reto “3 fortalezas y una mejora”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c1_7",
+      "title_es": "Elevator pitch personal: “Preséntate en 45 segundos”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "El alumnado prepara una presentación breve para una entrevista: quién soy, qué estudio, qué se me da bien, qué quiero aprender y qué puedo aportar.    Toque actual: grabación tipo vídeo de candidatura, analizando postura, voz y claridad.    Producto final: pitch oral y versión escrita.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Elevator pitch personal: “Preséntate en 45 segundos”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_1",
+      "title_es": "Campaña “La FPB también tiene futuro”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Crear mensajes positivos contra prejuicios sobre FPB y sobre profesiones de imagen personal.    Producto final: cartel, vídeo o mural motivador.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Campaña “La FPB también tiene futuro”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_2",
+      "title_es": "Profesiones sin género",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Investigar hombres en maquillaje/uñas, mujeres en barbería/color, personas referentes diversas del sector.    Producto final: galería de referentes.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Profesiones sin género.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_3",
+      "title_es": "Role-play de atención inclusiva",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Simular clientes con diferentes edades, estilos, culturas, identidades, necesidades o idiomas.    Producto final: guía de trato respetuoso.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Role-play de atención inclusiva.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_4",
+      "title_es": "Detectores de estereotipos en publicidad beauty",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Analizar anuncios y redes: cuerpos irreales, filtros, género, edad, piel, cabello.    Producto final: decálogo de publicidad respetuosa.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Detectores de estereotipos en publicidad beauty.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_5",
+      "title_es": "Mi camino, mi decisión",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Reflexión sobre decisiones vocacionales: qué quiero yo, qué esperan otros, qué opciones reales tengo.    Producto final: carta de decisión personal.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mi camino, mi decisión.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_6",
+      "title_es": "Mapa de accesibilidad del salón",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Diseñar un salón que atienda a personas con movilidad reducida, dificultades auditivas, ansiedad o barrera idiomática.    Producto final: propuesta de salón inclusivo.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mapa de accesibilidad del salón.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c10_7",
+      "title_es": "Debate “belleza y autoestima”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Conversar sobre filtros, presión estética, comentarios sobre cuerpos y responsabilidad profesional.    Producto final: normas de comunicación respetuosa en el taller.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Debate “belleza y autoestima”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_1",
+      "title_es": "Pasaporte de competencias profesionales",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Cada alumno recibe un pasaporte con competencias: puntualidad, higiene, respeto, orden, escucha, seguridad, trabajo en equipo y autonomía. En cada práctica puede conseguir sellos si demuestra la competencia.    Producto final: pasaporte de progreso individual.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Pasaporte de competencias profesionales.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_2",
+      "title_es": "Ranking cooperativo de hábitos de taller",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "No se compite por ser “el mejor”, sino por mejorar como grupo: puntualidad, limpieza del puesto, uso de EPI, trato respetuoso y finalización de tareas.    Toque motivador: insignias de equipo: “salón seguro”, “equipo puntual”, “cero residuos mal clasificados”.    Producto final: panel de evolución del grupo.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Ranking cooperativo de hábitos de taller.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_3",
+      "title_es": "Contrato de equipo de salón",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Cada grupo redacta un contrato de funcionamiento: cómo se reparten tareas, cómo se avisan retrasos, cómo se corrigen errores y cómo se cuida el material.    Producto final: contrato firmado por el equipo y revisado cada trimestre.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Contrato de equipo de salón.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_4",
+      "title_es": "El cliente misterioso",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Un profesor o alumno hace de cliente y observa actitud, saludo, higiene, orden, explicación y despedida. El grupo no sabe cuándo será evaluado.    Producto final: informe de cliente misterioso con mejoras.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de El cliente misterioso.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_5",
+      "title_es": "Reto “profesional por un día”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Durante una sesión, cada alumno debe comportarse como si estuviera en empresa: uniforme, puntualidad, móvil guardado, comunicación correcta, limpieza y registro.    Producto final: autoevaluación de empleabilidad.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Reto “profesional por un día”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_6",
+      "title_es": "Semáforo de actitud ante correcciones",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Se trabajan respuestas a una corrección: defensiva, pasiva o profesional. El alumnado practica frases como “lo reviso”, “gracias, lo corrijo”, “¿puedes explicarme cómo mejorarlo?”.    Producto final: cartel de respuestas profesionales.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Semáforo de actitud ante correcciones.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c2_7",
+      "title_es": "Diario de hábitos que dan empleo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Durante varias semanas, anotan una acción profesional realizada y una mejora: llegar a tiempo, preparar material, ayudar a un compañero, preguntar una duda o terminar el puesto limpio.    Producto final: reflexión final: “qué hábito me acerca a trabajar”.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Diario de hábitos que dan empleo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_1",
+      "title_es": "Salón simulado por roles",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Roles rotativos: recepción, auxiliar técnico, responsable de higiene, almacén, responsable de tiempos, calidad y comunicación.    Producto final: servicio integral simulado con evaluación de roles.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Salón simulado por roles.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_2",
+      "title_es": "Reto “un salón, una misión”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "El grupo debe preparar un evento ficticio: graduación, festival o sesión de fotos. Cada equipo se ocupa de una parte: peinado, maquillaje, uñas, color, atención y documentación.    Producto final: presentación del look completo.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Reto “un salón, una misión”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_3",
+      "title_es": "Briefing de 5 minutos",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Antes de cada práctica, el equipo revisa agenda, material, riesgos, tiempos y reparto de tareas.    Producto final: checklist de briefing.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Briefing de 5 minutos.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_4",
+      "title_es": "Cadena de servicio",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Un cliente pasa por varios puestos: recepción, diagnóstico, lavado, maquillaje, uñas y despedida. Si un equipo falla, afecta al resultado global.    Producto final: análisis de coordinación.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Cadena de servicio.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_5",
+      "title_es": "Insignias de equipo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Se otorgan insignias por conductas: ayuda sin invadir, comunicación clara, puesto limpio, solución de conflicto, puntualidad.    Producto final: panel de logros colectivos.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Insignias de equipo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_6",
+      "title_es": "Reunión de mejora postservicio",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Tras una práctica, el equipo responde: qué salió bien, qué se puede mejorar, quién necesita ayuda, qué cambiaremos.    Producto final: acta breve de mejora.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Reunión de mejora postservicio.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c5_7",
+      "title_es": "Proyecto “equipo inclusivo”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Diseñan normas para que todos participen, incluyendo alumnado tímido, con dificultades de comunicación o con menos seguridad técnica.    Producto final: protocolo de cooperación inclusiva.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Proyecto “equipo inclusivo”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_1",
+      "title_es": "Kit de supervivencia para FCT",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Crear una guía práctica: EPI, higiene, postura, gestión del estrés, descanso, puntualidad, comunicación y seguridad.    Producto final: guía personal de prácticas seguras.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Kit de supervivencia para FCT.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_2",
+      "title_es": "Mapa de riesgos de mi futuro trabajo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Identificar riesgos de peluquería y estética: químicos, térmicos, eléctricos, biológicos, posturales y emocionales.    Producto final: mapa con medidas preventivas.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mapa de riesgos de mi futuro trabajo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_3",
+      "title_es": "Reto ergonomía: “cuida tu espalda”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Practicar posturas en lavacabezas, manicura, maquillaje, depilación y color.    Producto final: infografía de ergonomía para el taller.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Reto ergonomía: “cuida tu espalda”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_4",
+      "title_es": "Plan de hábitos saludables del profesional",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Diseñar un plan realista de sueño, alimentación, hidratación, descanso digital, higiene y actividad física.    Producto final: compromiso personal de autocuidado.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Plan de hábitos saludables del profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_5",
+      "title_es": "Ecoempleabilidad",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Analizar cómo la sostenibilidad puede mejorar un CV: ahorro de agua, residuos, consumo responsable y productos seguros.    Producto final: competencia sostenible para incluir en portfolio.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Ecoempleabilidad.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_6",
+      "title_es": "Simulación de inspección de seguridad",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Equipos revisan puestos y detectan incumplimientos: cable, producto abierto, guantes, residuos, postura, toallas.    Producto final: informe de inspección.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Simulación de inspección de seguridad.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c11_7",
+      "title_es": "Campaña “trabajar bien es trabajar seguro”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Crear carteles o vídeos breves sobre PRL en estética y peluquería.    Producto final: campaña visual para aula-taller.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Campaña “trabajar bien es trabajar seguro”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_1",
+      "title_es": "1a-1i, 2a-2h, 3a-3h, 4a-4f.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_2",
+      "title_es": "1c, 4g, 7g-7h.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_3",
+      "title_es": "2d-2f, 11d, 13f, 14f.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_4",
+      "title_es": "3a-3e, 4a-4i, 6a-6j, 7a-7e, 8a-8i.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_5",
+      "title_es": "2a-2f, 3a-3e, 4a-4i, 6a-6k, 7a-7f, 8a-8g.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_6",
+      "title_es": "1a-1g, 2a-2j, 3a-3i, 4a-4i, 5a-5g, 6a-6h, 7a-7f.",
+      "motivatingFactor_es": "",
+      "description_es": "Justificación: el módulo 3159 prepara la transición a la FCT y al empleo. La empresa espera habilidades técnicas básicas, pero también actitud, aprendizaje, puntualidad, comunicación, respeto, seguridad, autonomía y capacidad de adaptación. Por eso este módulo actúa como puente entre el centro educativo y el mercado laboral.",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c12_7",
+      "title_es": "actividades o proyectos desarrollados",
+      "motivatingFactor_es": "",
+      "description_es": "Simulación “primer día de FCT”",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_1",
+      "title_es": "Videocurrículum de 60 segundos",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "El alumnado prepara un vídeo breve: presentación, formación, habilidades, intereses y disponibilidad para aprender. Se trabaja lenguaje, postura, fondo, tono y claridad.    Importante: no se publica; se usa como práctica interna.    Producto final: videocurrículum revisado con rúbrica.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Videocurrículum de 60 segundos.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_2",
+      "title_es": "Entrevista de trabajo tipo TikTok, pero profesional",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Se simulan entrevistas con preguntas rápidas: “háblame de ti”, “¿por qué quieres trabajar aquí?”, “¿qué harías con un cliente enfadado?”.    Toque motivador: formato dinámico, con cronómetro y feedback inmediato.    Producto final: banco de respuestas personales.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Entrevista de trabajo tipo TikTok, pero profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_3",
+      "title_es": "WhatsApp profesional vs WhatsApp informal",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Se comparan mensajes mal escritos con versiones profesionales para pedir prácticas, confirmar cita o responder a un cliente.    Producto final: guía de mensajes profesionales para empleo y salón.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de WhatsApp profesional vs WhatsApp informal.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_4",
+      "title_es": "Role-play de comunicación emocional",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Practican situaciones con nervios, vergüenza, enfado o inseguridad: pedir ayuda, aceptar corrección, hablar con cliente difícil o responder en entrevista.    Producto final: lista de frases asertivas.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Role-play de comunicación emocional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_5",
+      "title_es": "Carta de presentación visual",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "En lugar de una carta tradicional larga, crean una carta breve con diseño limpio: quién soy, qué formación tengo, qué aporto y qué busco.    Producto final: carta de presentación para enviar a salones.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Carta de presentación visual.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_6",
+      "title_es": "Atención básica en inglés para empleabilidad",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Simulan una entrevista sencilla o atención a cliente extranjero: greeting, appointment, service, allergies, thank you.    Producto final: tarjeta de frases útiles en inglés.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Atención básica en inglés para empleabilidad.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c3_7",
+      "title_es": "Podcast corto: “Mi primer empleo”",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "En parejas graban un audio de 2 minutos hablando de miedos, expectativas y habilidades necesarias para trabajar.    Producto final: podcast interno con reflexión grupal.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Podcast corto: “Mi primer empleo”.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_1",
+      "title_es": "Mapa de profesiones beauty 2026",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Investigar salidas del sector: auxiliar de peluquería, colorista, barbería, uñas, maquillaje social, redes para salones, atención en recepción, estética en hoteles.    Producto final: mapa visual de profesiones y competencias necesarias.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mapa de profesiones beauty 2026.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_2",
+      "title_es": "Ruta por empresas cercanas",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Buscar salones reales de la zona, analizar servicios, horarios, perfiles que podrían contratar y requisitos.    Producto final: directorio de posibles empresas de FCT o empleo.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Ruta por empresas cercanas.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_3",
+      "title_es": "Tendencias de TikTok vs realidad laboral",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Analizar tendencias beauty virales y decidir cuáles tienen aplicación profesional segura y cuáles no.    Producto final: informe “viral, viable o peligroso”.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Tendencias de TikTok vs realidad laboral.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_4",
+      "title_es": "Entrevista a un profesional",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Preparar preguntas a un peluquero, esteticista, maquillador, barbero o técnico de color. Puede ser presencial, por videollamada o cuestionario.    Producto final: resumen de aprendizajes y consejos para empezar.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Entrevista a un profesional.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_5",
+      "title_es": "Radar de empleo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Buscar ofertas reales o simuladas y analizar qué piden: actitud, experiencia, idiomas, disponibilidad, trato al cliente, técnica.    Producto final: tabla de requisitos más repetidos.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Radar de empleo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_6",
+      "title_es": "Salón del futuro",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Diseñar cómo será un salón dentro de 10 años: tecnología, sostenibilidad, reservas online, redes, IA, personalización y nuevas técnicas.    Producto final: presentación creativa o maqueta digital.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Salón del futuro.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c6_7",
+      "title_es": "Mitos y estereotipos vocacionales",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Debatir ideas como “la peluquería es solo para chicas”, “maquillaje no es trabajo serio” o “FPB no tiene futuro”.    Producto final: campaña contra estereotipos profesionales.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mitos y estereotipos vocacionales.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_1",
+      "title_es": "Crea tu salón ideal",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Equipos diseñan nombre, logo, servicios, público objetivo, valores, normas de calidad y estética del local.    Producto final: presentación tipo pitch de salón.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Crea tu salón ideal.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_2",
+      "title_es": "Pack de servicios para jóvenes",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Diseñar paquetes como “look graduación”, “festival”, “entrevista”, “cambio de imagen”, “barber day” o “uñas y makeup”.    Producto final: catálogo con servicios, tiempos y precio ficticio.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Pack de servicios para jóvenes.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_3",
+      "title_es": "Campaña en redes con ética",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Crear un anuncio de salón sin promesas falsas, cuidando diversidad, autoestima e información real.    Producto final: cartel, guion de Reel o carrusel informativo.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Campaña en redes con ética.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_4",
+      "title_es": "Presupuesto básico de microservicio",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Calcular coste de consumibles y precio orientativo de una manicura, maquillaje, lavado, depilación o coloración simulada.    Producto final: ficha de coste y precio.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Presupuesto básico de microservicio.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_5",
+      "title_es": "Cliente ideal y mapa de empatía",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Definir perfiles: estudiante para evento, cliente mayor, turista, cliente masculino, persona con poco tiempo.    Producto final: mapa de empatía y propuesta de atención.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Cliente ideal y mapa de empatía.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_6",
+      "title_es": "Eco-salón challenge",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Diseñar un salón atractivo y sostenible: ahorro de agua, energía, residuos, productos responsables y comunicación al cliente.    Producto final: plan verde de salón.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Eco-salón challenge.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c9_7",
+      "title_es": "Pitch ante inversores ficticios",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Presentar el proyecto ante compañeros que hacen preguntas sobre costes, clientes, seguridad, formación y diferenciación.    Producto final: defensa oral con rúbrica.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Pitch ante inversores ficticios.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_1",
+      "title_es": "1f-1g, 4a-4h.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_2",
+      "title_es": "2d-2f, 3k, 4l-4m.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_3",
+      "title_es": "1h, 1k, 3n, 4l.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_4",
+      "title_es": "2c, 3c, 3j, 4d, 4n.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_5",
+      "title_es": "1g-1i, 3k, 5j-5k.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_6",
+      "title_es": "3d, 3l-3m, 4e, 4k-4l.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c4_7",
+      "title_es": "1a-1i, 3d-3f, 4a-4f.",
+      "motivatingFactor_es": "",
+      "description_es": "",
+      "evidence_es": "Rúbrica visual y producto de evaluación formativa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_1",
+      "title_es": "Mi ruta después de FPB",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Cada alumno dibuja tres posibles caminos: seguir estudiando, trabajar, combinar formación y empleo. Analiza ventajas, inconvenientes y requisitos.    Producto final: mapa de itinerario personal.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mi ruta después de FPB.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_2",
+      "title_es": "Semáforo de decisiones",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Para cada opción profesional, clasifican: verde —me interesa y es viable—, amarillo —necesito más información—, rojo —no encaja ahora—.    Producto final: tabla de toma de decisiones.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Semáforo de decisiones.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_3",
+      "title_es": "Mentor por un día",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "El alumnado investiga a una persona referente del sector —profesional local, creador responsable, antiguo alumno— y analiza qué formación y competencias necesitó.    Producto final: ficha de referente profesional.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Mentor por un día.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_4",
+      "title_es": "Microcursos del futuro",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Investigar formaciones cortas útiles: colorimetría, barbería, uñas, atención digital, redes para negocios, inglés para atención al cliente, PRL.    Producto final: catálogo de formación permanente.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Microcursos del futuro.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_5",
+      "title_es": "Decisiones con cartas de vida",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Juego con cartas de situaciones: “quiero independencia económica”, “me cuesta hablar en público”, “me gusta maquillaje”, “necesito Grado Medio”. Deben construir un itinerario coherente.    Producto final: itinerario razonado.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Decisiones con cartas de vida.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_6",
+      "title_es": "Carta a mi yo de 20 años",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Redactan una carta con metas, miedos, acciones y compromisos. Se trabaja autoestima y visión de futuro.    Producto final: carta personal guardada en portfolio.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Carta a mi yo de 20 años.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c7_7",
+      "title_es": "Feria de itinerarios",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Equipos preparan stands sobre opciones: Grado Medio, empleo, FCT, cursos, emprendimiento, idiomas, redes profesionales.    Producto final: feria interna con pasaporte de visitas.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Feria de itinerarios.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_1",
+      "title_es": "CV visual para primer empleo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Crear un currículum claro para alguien sin experiencia formal, destacando formación, prácticas, habilidades técnicas, actitud, idiomas y disponibilidad.    Producto final: CV en formato Word/PDF.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de CV visual para primer empleo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_2",
+      "title_es": "Portfolio beauty de evidencias",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Recopilar trabajos autorizados: manicura, maquillaje, peinado, ficha técnica, informe, antes/después, rúbricas y reflexión.    Producto final: portfolio digital para entrevista o FCT.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Portfolio beauty de evidencias.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_3",
+      "title_es": "Búsqueda de empleo con mapa digital",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Localizar empresas del entorno, webs, redes sociales profesionales, portales de empleo y contactos posibles.    Producto final: mapa de oportunidades laborales.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Búsqueda de empleo con mapa digital.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_4",
+      "title_es": "Simulador de entrevista",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Practicar entrevista con preguntas reales y feedback: postura, claridad, ejemplos, actitud y cierre.    Producto final: rúbrica de entrevista y plan de mejora.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Simulador de entrevista.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_5",
+      "title_es": "Carta o email para pedir prácticas/empleo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Redactar un mensaje profesional breve para presentarse ante un salón.    Producto final: email revisado y listo para adaptar.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Carta o email para pedir prácticas/empleo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_6",
+      "title_es": "Perfil profesional seguro en redes",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Reflexionar sobre huella digital y crear pautas para separar cuenta personal y perfil profesional.    Producto final: decálogo de presencia digital responsable.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Perfil profesional seguro en redes.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    },
+    {
+      "id": "act_3159_c8_7",
+      "title_es": "Escape room de búsqueda de empleo",
+      "motivatingFactor_es": "Reto práctico motivador conectado con situaciones reales del salón y Itinerario personal para la empleabilidad.",
+      "description_es": "Resolver pruebas: encontrar oferta, detectar requisitos, adaptar CV, responder entrevista y elegir fuente fiable.    Producto final: dossier de búsqueda de empleo.",
+      "evidence_es": "Ficha de trabajo, rúbrica de ejecución y producto demostrativo de Escape room de búsqueda de empleo.",
+      "diversitySupport_es": "Instrucciones visuales paso a paso, modelado previo por el docente, lectura fácil y trabajo en parejas."
+    }
+  ]
+}

@@ -87,7 +87,7 @@ export class AppFacade {
     if (this.shownCompletedProjectIds.has(key)) return;
     this.shownCompletedProjectIds.add(key);
     setTimeout(() => {
-      this.infoTitle.set('¡Proyecto Generado!');
+      this.infoTitle.set(this.trans.t().modalProjectGenerated);
       this.infoMessage.set(notif.message);
       this.infoType.set('success');
       this.showInfoModal.set(true);
@@ -104,8 +104,8 @@ export class AppFacade {
 
   generateProject(): void {
     if (this.curriculum.selectedRas().length === 0) {
-      this.infoTitle.set('Atención');
-      this.infoMessage.set('Por favor, selecciona al menos un elemento de la lista.');
+      this.infoTitle.set(this.trans.t().modalAttention);
+      this.infoMessage.set(this.trans.t().modalSelectAtLeastOne);
       this.infoType.set('info');
       this.showInfoModal.set(true);
       return;
@@ -123,8 +123,8 @@ export class AppFacade {
   private onGenerateSuccess(): void {
     this.projects.isGenerating.set(false);
     this.curriculum.clearSelection();
-    this.infoTitle.set('Proyecto en Cola');
-    this.infoMessage.set('Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.');
+    this.infoTitle.set(this.trans.t().modalProjectQueued);
+    this.infoMessage.set(this.trans.t().modalProjectQueuedDesc);
     this.infoType.set('info');
     this.showInfoModal.set(true);
     this.projects.loadHistory();
@@ -133,7 +133,7 @@ export class AppFacade {
 
   private onGenerateError(err: any): void {
     console.error('Error:', err);
-    this.errorTitle.set('Error al Iniciar Generación');
+    this.errorTitle.set(this.trans.t().modalGenerationError);
     const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
     this.errorMessage.set(serverMsg);
     this.showErrorModal.set(true);
@@ -142,8 +142,8 @@ export class AppFacade {
 
   deleteProject(projectId: string): void {
     if (projectId) this.shownCompletedProjectIds.delete(projectId);
-    this.confirmTitle.set('Eliminar Proyecto');
-    this.confirmMessage.set('¿Seguro que quieres borrar este proyecto? Esta acción no se puede deshacer.');
+    this.confirmTitle.set(this.trans.t().modalDeleteProject);
+    this.confirmMessage.set(this.trans.t().modalDeleteConfirm);
     this.confirmAction.set(() => {
       this.projects.deleteProject(projectId).subscribe({
         next: () => {
@@ -151,7 +151,7 @@ export class AppFacade {
           this.showConfirmModal.set(false);
         },
         error: (err) => {
-          this.errorTitle.set('Error al Borrar Proyecto');
+          this.errorTitle.set(this.trans.t().modalDeleteError);
           this.errorMessage.set(err.error?.error || 'Error al borrar el proyecto');
           this.showErrorModal.set(true);
           this.showConfirmModal.set(false);

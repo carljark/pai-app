@@ -1,0 +1,741 @@
+{
+  "code": "3009",
+  "name_es": "Ciencias aplicadas I",
+  "criteria": [
+    "3009-1a. Se han identificado los distintos tipos de números y se han utilizado para interpretar adecuadamente la información cuantitativa.",
+    "3009-1b. Se han realizado cálculos con eficacia, bien mediante cálculo mental o mediante algoritmos de lápiz y calculadora —física o informática—.",
+    "3009-1c. Se han utilizado las TIC como fuente de búsqueda de información.",
+    "3009-1d. Se ha operado con potencias de exponente natural y entero aplicando las propiedades.",
+    "3009-1e. Se ha utilizado la notación científica para representar y operar con números muy grandes o muy pequeños.",
+    "3009-1f. Se han representado los distintos números reales sobre la recta numérica.",
+    "3009-1g. Se ha caracterizado la proporción como expresión matemática.",
+    "3009-1h. Se han comparado magnitudes estableciendo su tipo de proporcionalidad.",
+    "3009-1i. Se ha utilizado la regla de tres para resolver problemas en los que intervienen magnitudes directa e inversamente proporcionales.",
+    "3009-1j. Se ha aplicado el interés simple y compuesto en actividades cotidianas.",
+    "3009-2a. Se han identificado cada una de las técnicas experimentales que se van a realizar.",
+    "3009-2b. Se han manipulado adecuadamente los materiales instrumentales del laboratorio.",
+    "3009-2c. Se han tenido en cuenta las condiciones de higiene y seguridad para cada una de las técnicas experimentales que se van a realizar.",
+    "3009-3a. Se han descrito las propiedades de la materia.",
+    "3009-3b. Se han practicado cambios de unidades de longitud, masa y capacidad.",
+    "3009-3c. Se ha identificado la equivalencia entre unidades de volumen y capacidad.",
+    "3009-3d. Se han efectuado medidas en situaciones reales utilizando las unidades del sistema métrico decimal y utilizando la notación científica.",
+    "3009-3e. Se ha identificado la denominación de los cambios de estado de la materia.",
+    "3009-3f. Se han identificado con ejemplos sencillos diferentes sistemas materiales homogéneos y heterogéneos.",
+    "3009-3g. Se han identificado los diferentes estados de agregación en los que se presenta la materia utilizando modelos cinéticos para explicar los cambios de estado.",
+    "3009-3h. Se han identificado sistemas materiales relacionándolos con su estado en la naturaleza.",
+    "3009-3i. Se han reconocido los distintos estados de agregación de una sustancia dadas su temperatura de fusión y ebullición.",
+    "3009-3j. Se han establecido diferencias entre ebullición y evaporación utilizando ejemplos sencillos.",
+    "3009-4a. Se ha identificado y descrito lo que se considera sustancia pura y mezcla.",
+    "3009-4b. Se han establecido las diferencias fundamentales entre mezclas y compuestos.",
+    "3009-4c. Se han discriminado los procesos físicos y químicos.",
+    "3009-4d. Se han seleccionado, de un listado de sustancias, las mezclas, los compuestos y los elementos químicos.",
+    "3009-4e. Se han aplicado de forma práctica diferentes separaciones de mezclas por métodos sencillos.",
+    "3009-4f. Se han descrito las características generales básicas de materiales relacionados con las profesiones, utilizando las TIC.",
+    "3009-4g. Se ha trabajado en equipo en la realización de tareas.",
+    "3009-5a. Se han identificado situaciones de la vida cotidiana en las que queda de manifiesto la intervención de la energía.",
+    "3009-5b. Se han reconocido diferentes fuentes de energía.",
+    "3009-5c. Se han establecido grupos de fuentes de energía renovable y no renovable.",
+    "3009-5d. Se han mostrado las ventajas e inconvenientes —obtención, transporte y utilización— de las fuentes de energía renovables y no renovables, utilizando las TIC.",
+    "3009-5e. Se han aplicado cambios de unidades de la energía.",
+    "3009-5f. Se han mostrado en diferentes sistemas la conservación de la energía.",
+    "3009-5g. Se han descrito procesos relacionados con el mantenimiento del organismo y de la vida en los que se aprecia claramente el papel de la energía.",
+    "3009-6a. Se han identificado y descrito los órganos que configuran el cuerpo humano, asociándolos al sistema o aparato correspondiente.",
+    "3009-6b. Se ha relacionado cada órgano, sistema y aparato con su función y se han reseñado sus asociaciones.",
+    "3009-6c. Se ha descrito la fisiología del proceso de nutrición.",
+    "3009-6d. Se ha detallado la fisiología del proceso de excreción.",
+    "3009-6e. Se ha descrito la fisiología del proceso de reproducción.",
+    "3009-6f. Se ha detallado cómo funciona el proceso de relación.",
+    "3009-6g. Se han utilizado herramientas informáticas para describir adecuadamente los aparatos y sistemas.",
+    "3009-7a. Se han identificado situaciones de salud y de enfermedad para las personas.",
+    "3009-7b. Se han descrito los mecanismos encargados de la defensa del organismo.",
+    "3009-7c. Se han identificado y clasificado las enfermedades infecciosas y no infecciosas más comunes en la población, reconociendo sus causas, prevención y tratamientos.",
+    "3009-7d. Se han relacionado los agentes que causan las enfermedades infecciosas habituales con el contagio producido.",
+    "3009-7e. Se ha entendido la acción de vacunas, antibióticos y otras aportaciones de la ciencia médica para el tratamiento y prevención de enfermedades infecciosas.",
+    "3009-7f. Se han reconocido campañas de vacunación y actuaciones preventivas frente a enfermedades infecciosas.",
+    "3009-7g. Se han reconocido situaciones de riesgo para la salud relacionadas con su entorno profesional más cercano.",
+    "3009-7h. Se han diseñado pautas de hábitos saludables relacionados con situaciones cotidianas.",
+    "3009-8a. Se ha discriminado entre el proceso de nutrición y el de alimentación.",
+    "3009-8b. Se han diferenciado los nutrientes necesarios para el mantenimiento de la salud.",
+    "3009-8c. Se ha reconocido la importancia de una buena alimentación y del ejercicio físico en el cuidado del cuerpo humano.",
+    "3009-8d. Se han relacionado las dietas con la salud, diferenciando entre las necesarias para el mantenimiento de la salud y las que pueden conducir a un menoscabo de la misma.",
+    "3009-8e. Se ha realizado el cálculo sobre balances calóricos en situaciones habituales de su entorno.",
+    "3009-8f. Se ha calculado el metabolismo basal y sus resultados se han representado en un diagrama, estableciendo comparaciones y conclusiones.",
+    "3009-8g. Se han elaborado menús para situaciones concretas, investigando en la red las propiedades de los alimentos.",
+    "3009-9a. Se han concretado propiedades o relaciones de situaciones sencillas mediante expresiones algebraicas.",
+    "3009-9b. Se han simplificado expresiones algebraicas sencillas utilizando métodos de desarrollo y factorización.",
+    "3009-9c. Se han resuelto problemas de la vida cotidiana en los que se precise el planteamiento y resolución de ecuaciones de primer grado.",
+    "3009-9d. Se han resuelto problemas sencillos utilizando el método gráfico y las TIC."
+  ],
+  "connections": [
+    {
+      "title_es": "Cálculo, proporcionalidad, unidades, mediciones y resolución de problemas profesionales",
+      "justification_es": "las matemáticas de Ciencias aplicadas I se aplican de forma directa al taller: cálculo de proporciones, cantidades de producto, tiempos de exposición, control de agenda, unidades de masa/capacidad, presupuestos, stock, caducidades y consumos. Sin estas destrezas, el alumnado no puede preparar mezclas, estimar tiempos ni organizar servicios con calidad."
+    },
+    {
+      "title_es": "Comunicación científica y profesional: interpretar, argumentar, explicar y presentar información",
+      "justification_es": "Ciencias aplicadas I requiere buscar, interpretar y comunicar información. En el ciclo, esta habilidad se transforma en atención al cliente, explicación de técnicas, presentación de productos, informes de prácticas, cuidados posteriores, fichas técnicas y comunicación con el equipo."
+    },
+    {
+      "title_es": "TIC, búsqueda de información, tratamiento de datos y documentación profesional",
+      "justification_es": "el uso de TIC no se limita a buscar información científica; también permite elaborar fichas técnicas, consultar etiquetas, crear formularios de cliente, registrar resultados, diseñar encuestas, representar datos y preparar exposiciones. Comunicación y sociedad complementa la corrección, comprensión y estructura de los textos."
+    },
+    {
+      "title_es": "Material de laboratorio, manipulación segura, higiene y prevención de riesgos",
+      "justification_es": "el laboratorio y el taller comparten normas de manipulación segura: identificar materiales, preparar espacios, usar EPI, evitar contaminación, respetar instrucciones y mantener higiene. En peluquería y estética esto se concreta en desinfección, productos químicos, aparatos eléctricos, superficies, útiles y protección del cliente/profesional."
+    },
+    {
+      "title_es": "Trabajo en equipo, método práctico, autonomía y aprendizaje aplicado",
+      "justification_es": "Ciencias aplicadas I trabaja problemas, prácticas, búsqueda de información y tareas en equipo. Estos aprendizajes son transferibles al salón: organización, cooperación, responsabilidad, reparto de roles, comunicación interna, seguridad y mejora continua, especialmente en la FCT."
+    },
+    {
+      "title_es": "Materia, estados, mezclas, sustancias, materiales y productos cosméticos",
+      "justification_es": "los cosméticos son materiales y mezclas: emulsiones, soluciones, suspensiones, ceras, champús, acondicionadores, tintes, oxidantes, esmaltes, maquillajes y desinfectantes. Conocer estados de la materia, cambios de estado, mezclas homogéneas/heterogéneas y unidades ayuda a usarlos y conservarlos correctamente."
+    },
+    {
+      "title_es": "Materia, estados, mezclas, sustancias, materiales y productos cosméticos",
+      "justification_es": "los cosméticos son materiales y mezclas: emulsiones, soluciones, suspensiones, ceras, champús, acondicionadores, tintes, oxidantes, esmaltes, maquillajes y desinfectantes. Conocer estados de la materia, cambios de estado, mezclas homogéneas/heterogéneas y unidades ayuda a usarlos y conservarlos correctamente."
+    },
+    {
+      "title_es": "Energía, calor, electricidad, temperatura y consumo responsable en el taller",
+      "justification_es": "en peluquería y estética se utiliza energía constantemente: secadores, planchas, fundidores de cera, aparatos de calor, iluminación, agua caliente y climatización. Ciencias aplicadas I permite comprender fuentes de energía, cambios de unidades, conservación y consumo responsable, conectando con PRL y sostenibilidad."
+    },
+    {
+      "title_es": "Anatomía, piel, cabello, uñas, vello, organismo y funciones corporales",
+      "justification_es": "los servicios de imagen personal se aplican sobre piel, uñas, cabello, cuero cabelludo y vello. Conocer estructuras anatómicas y funciones corporales permite observar alteraciones, adaptar productos y técnicas, prevenir daños y explicar al cliente las decisiones profesionales."
+    },
+    {
+      "title_es": "Salud, enfermedad, defensas, contagio, higiene y hábitos saludables en el entorno profesional",
+      "justification_es": "la seguridad higiénico-sanitaria del salón depende de comprender salud/enfermedad, contagio, defensas, prevención, lavado de manos, desinfección, hábitos saludables y riesgos profesionales. Este bloque es transversal a todos los servicios y especialmente importante en contacto con piel, uñas, ojos, labios, vello y cuero cabelludo."
+    },
+    {
+      "title_es": "Alimentación, nutrición, ejercicio, bienestar e imagen personal saludable",
+      "justification_es": "aunque el alumnado de FPB no prescribe dietas, sí debe comprender la relación entre hábitos saludables, piel, cabello, uñas, energía, bienestar e imagen personal. Esto favorece una actitud profesional responsable y permite comunicar recomendaciones generales no sanitarias y derivar cuando corresponda."
+    },
+    {
+      "title_es": "Cálculo, proporcionalidad, unidades, mediciones y resolución de problemas profesionales",
+      "justification_es": "las matemáticas de Ciencias aplicadas I se aplican de forma directa al taller: cálculo de proporciones, cantidades de producto, tiempos de exposición, control de agenda, unidades de masa/capacidad, presupuestos, stock, caducidades y consumos. Sin estas destrezas, el alumnado no puede preparar mezclas, estimar tiempos ni organizar servicios con calidad."
+    },
+    {
+      "title_es": "Medioambiente, fuentes de energía, consumo responsable, residuos y sostenibilidad",
+      "justification_es": "los servicios de peluquería y estética consumen agua, energía y productos, y generan residuos. Ciencias aplicadas I introduce energía y hábitos saludables; Ciencias II profundiza en contaminación y sostenibilidad. Los módulos técnicos concretan estas medidas en el taller y la FCT en empresa."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3009_c1_1",
+      "title_es": "Cálculo de mezclas cosméticas simuladas: “El laboratorio del color sin riesgo”",
+      "motivatingFactor_es": "trabajar como si fueran coloristas profesionales, pero usando agua, colorantes alimentarios o témperas diluidas en lugar de productos reales.",
+      "description_es": "el alumnado recibe tarjetas con retos: preparar una mezcla 1:1, 1:1,5 o 1:2; aumentar o reducir una fórmula; calcular producto para una melena corta, media o larga.",
+      "evidence_es": "tabla de mezclas con cantidades, proporciones y fotografía del resultado cromático.",
+      "diversitySupport_es": "regla de tres, proporciones, unidades de capacidad, precisión, trabajo seguro y vocabulario técnico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c1_2",
+      "title_es": "Agenda matemática del salón: “Organiza el día de una influencer antes de un evento”",
+      "motivatingFactor_es": "simular que una creadora de contenido necesita maquillaje, peinado, manicura y retoque de color antes de grabar o asistir a un evento.",
+      "description_es": "cada equipo recibe una agenda con horas disponibles, duración de servicios y posibles imprevistos: retraso, producto agotado, cliente indecisa, secador ocupado.",
+      "evidence_es": "planning visual de la jornada con tiempos, orden de servicios y justificación.",
+      "diversitySupport_es": "suma/resta de tiempos, organización, toma de decisiones, atención al cliente y coordinación de servicios.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c1_3",
+      "title_es": "Inventario con unidades y caducidades: “Controla tu beauty room”",
+      "motivatingFactor_es": "partir de un espacio cercano a sus intereses: neceser, tocador, barbería, salón o kit de creador/a de contenido.",
+      "description_es": "revisar productos ficticios o reales del taller: champús, esmaltes, tintes, ceras, maquillajes, guantes, algodón. Deben registrar cantidad, unidad, caducidad y estado.",
+      "evidence_es": "inventario digital o en cartulina con semáforo: verde — correcto; amarillo — revisar; rojo — retirar.",
+      "diversitySupport_es": "unidades, orden, conservación, seguridad, TIC y responsabilidad profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c1_4",
+      "title_es": "Presupuesto de servicio integral: “Monta tu pack beauty low cost”",
+      "motivatingFactor_es": "diseñar un paquete de servicios atractivo para jóvenes: “look festival”, “graduación”, “cumpleaños”, “primer día de prácticas”, “cambio de imagen”.",
+      "description_es": "calcular coste de consumibles, tiempo de trabajo, posible descuento y precio final. Deben decidir si el precio es viable.",
+      "evidence_es": "cartel comercial con precio, servicios incluidos y explicación técnica.",
+      "diversitySupport_es": "operaciones básicas, porcentajes sencillos, comunicación comercial, ética e información frente a publicidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c1_5",
+      "title_es": "Conversión de unidades: “Del bote al servicio”",
+      "motivatingFactor_es": "descubrir cuántos servicios reales se pueden realizar con un producto.",
+      "description_es": "con envases simulados de 250 ml, 500 ml o 1 litro, calculan cuántas aplicaciones salen si se usan 10 ml, 20 ml o 35 ml por cliente.",
+      "evidence_es": "ficha “rendimiento del producto” para el almacén del taller.",
+      "diversitySupport_es": "capacidad, división, multiplicación, ahorro, sostenibilidad y control de stock.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c1_6",
+      "title_es": "Gráfica de tiempos de exposición: “No te pases del tiempo”",
+      "motivatingFactor_es": "relacionar el control del tiempo con resultados visibles: color, decoloración, mascarilla, fijador o secado.",
+      "description_es": "usar simulaciones con muestras no peligrosas, temporizadores y tablas. Después representan los datos en una gráfica.",
+      "evidence_es": "gráfico comparativo y conclusión: qué ocurre si falta o sobra tiempo.",
+      "diversitySupport_es": "interpretación de datos, gráficas, tiempo, seguridad, calidad y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c1_7",
+      "title_es": "Problemas algebraicos del taller: “Resuelve el caso antes de abrir el salón”",
+      "motivatingFactor_es": "convertir problemas matemáticos en misiones de un escape room.",
+      "description_es": "para abrir una caja con material, cada grupo debe resolver problemas: cantidad de producto, coste total, clientes atendidos, tiempo restante o stock necesario.",
+      "evidence_es": "hoja de resolución y código final del escape room.",
+      "diversitySupport_es": "ecuaciones sencillas, razonamiento lógico, cooperación, lectura comprensiva y motivación por reto.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_1",
+      "title_es": "Presentación oral de un producto cosmético: “Convénceme con ciencia”",
+      "motivatingFactor_es": "presentar un producto como si fueran profesionales, no como publicidad vacía.",
+      "description_es": "explicar qué es, para qué sirve, cómo se usa, precauciones y para qué cliente conviene.",
+      "evidence_es": "exposición de 2-3 minutos con apoyo visual.",
+      "diversitySupport_es": "comunicación oral, ciencia aplicada, atención al cliente y seguridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_2",
+      "title_es": "Informe de práctica con lenguaje técnico: “Lo hice, lo medí, lo explico”",
+      "motivatingFactor_es": "transformar una práctica sencilla en una evidencia profesional.",
+      "description_es": "escribir objetivo, materiales, procedimiento, resultados, errores y conclusión.",
+      "evidence_es": "informe breve con imagen o tabla.",
+      "diversitySupport_es": "escritura, método científico, síntesis y documentación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_3",
+      "title_es": "Debate sobre información y publicidad: “Promesas imposibles”",
+      "motivatingFactor_es": "analizar mensajes que consumen a diario en redes.",
+      "description_es": "comparar frases publicitarias con información técnica: “repara al 100%”, “elimina poros”, “crece el pelo en días”.",
+      "evidence_es": "lista de criterios para detectar publicidad engañosa.",
+      "diversitySupport_es": "pensamiento crítico, comunicación, salud y consumo responsable.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_4",
+      "title_es": "Exposición en inglés básico: “Beauty words”",
+      "motivatingFactor_es": "aplicar inglés a situaciones reales de clientes turistas o extranjeros.",
+      "description_es": "preparar frases básicas sobre servicios, alergias, tiempos y cuidados.",
+      "evidence_es": "mini diálogo o vídeo de atención en inglés.",
+      "diversitySupport_es": "lengua extranjera, atención al cliente, vocabulario profesional y confianza oral.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_5",
+      "title_es": "Guía de cuidados posteriores: “Después del servicio, sigue cuidándote”",
+      "motivatingFactor_es": "crear instrucciones útiles para clientes reales.",
+      "description_es": "redactar cuidados tras coloración, decoloración, depilación, maquillaje, manicura o lavado.",
+      "evidence_es": "folleto o tarjeta postservicio.",
+      "diversitySupport_es": "comunicación escrita, salud, seguridad, fidelización y claridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_6",
+      "title_es": "Póster científico-profesional: “Ciencia que se ve”",
+      "motivatingFactor_es": "decorar el taller con contenido creado por ellos.",
+      "description_es": "elegir tema: piel, higiene, mezclas, energía, desinfección, cabello o salud.",
+      "evidence_es": "póster visual con información rigurosa.",
+      "diversitySupport_es": "investigación, síntesis, diseño y ciencia aplicada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c10_7",
+      "title_es": "Defensa de una propuesta de servicio: “Yo recomiendo…”",
+      "motivatingFactor_es": "practicar una conversación profesional convincente y respetuosa.",
+      "description_es": "con un caso de cliente, deben justificar técnica, producto, tiempo, riesgos y cuidados.",
+      "evidence_es": "exposición o role-play evaluado con rúbrica.",
+      "diversitySupport_es": "argumentación, atención al cliente, ciencia, seguridad y toma de decisiones.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_1",
+      "title_es": "Ficha digital de cliente: “Tu primer CRM de salón”",
+      "motivatingFactor_es": "simular una herramienta profesional como las que usan salones reales para recordar gustos, alergias y servicios.",
+      "description_es": "diseñar un formulario digital con datos básicos, servicio solicitado, diagnóstico, productos usados, observaciones y satisfacción.",
+      "evidence_es": "plantilla de ficha digital lista para usar en el taller.",
+      "diversitySupport_es": "TIC, protección de datos básica, comunicación escrita, síntesis y atención personalizada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_2",
+      "title_es": "Base de datos de cosméticos: “Escanea antes de usar”",
+      "motivatingFactor_es": "crear un catálogo digital de productos como si fuera una app interna del salón.",
+      "description_es": "cada equipo ficha varios productos: nombre, uso, zona de aplicación, caducidad, precauciones, unidad, conservación y servicio relacionado.",
+      "evidence_es": "tabla digital o fichas con QR vinculadas a cada producto.",
+      "diversitySupport_es": "búsqueda de información, organización, lectura de etiquetas, seguridad y documentación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_3",
+      "title_es": "Investigación guiada de productos: “Verdad o marketing”",
+      "motivatingFactor_es": "analizar productos que ven en redes: champús milagro, sérums, maquillaje viral, esmaltes, ceras o tintes.",
+      "description_es": "el alumnado compara una promesa publicitaria con la información de la etiqueta y fuentes fiables.",
+      "evidence_es": "ficha “lo que promete / lo que sabemos / cómo lo explicaría a un cliente”.",
+      "diversitySupport_es": "pensamiento crítico, TIC, información frente a publicidad, comunicación y ciencia aplicada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_4",
+      "title_es": "Encuesta digital de satisfacción: “¿Volverías a nuestro salón?”",
+      "motivatingFactor_es": "usar encuestas como hacen las marcas y negocios reales.",
+      "description_es": "diseñar una encuesta breve después de un servicio simulado: trato, higiene, resultado, tiempo y explicación recibida.",
+      "evidence_es": "gráficos de satisfacción y propuestas de mejora.",
+      "diversitySupport_es": "estadística básica, gráficos, atención al cliente, calidad y mejora continua.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_5",
+      "title_es": "Portfolio profesional del alumno: “Mi book de aprendizaje”",
+      "motivatingFactor_es": "construir una carpeta digital parecida a un perfil profesional, pero segura y educativa.",
+      "description_es": "recopilar fotos autorizadas, fichas técnicas, cálculos, rúbricas, reflexiones y mejoras.",
+      "evidence_es": "portfolio digital o PDF de progreso.",
+      "diversitySupport_es": "autoevaluación, TIC, comunicación escrita, documentación y autoestima profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_6",
+      "title_es": "Infografía de seguridad e higiene: “Diseña para que todos lo entiendan”",
+      "motivatingFactor_es": "crear carteles visuales para el aula-taller, como si fueran señalética real de un salón moderno.",
+      "description_es": "seleccionar un tema: lavado de manos, desinfección, EPI, residuos, alergias, electricidad o productos químicos.",
+      "evidence_es": "infografía impresa o digital con iconos, pasos y mensajes breves.",
+      "diversitySupport_es": "síntesis, diseño, comunicación visual, seguridad y ciencia aplicada.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c2_7",
+      "title_es": "Informe de práctica científico-técnica: “Del experimento al servicio”",
+      "motivatingFactor_es": "que cada práctica de taller tenga formato de mini investigación.",
+      "description_es": "describir objetivo, materiales, procedimiento, medidas, resultados, errores y aplicación profesional.",
+      "evidence_es": "informe breve con fotos, tabla de datos y conclusión.",
+      "diversitySupport_es": "método científico básico, escritura, TIC, observación, evidencia y transferencia profesional.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_1",
+      "title_es": "Comparativa laboratorio-taller: “Dos mundos, mismas normas”",
+      "motivatingFactor_es": "descubrir que el salón de peluquería y estética funciona como un pequeño laboratorio profesional.",
+      "description_es": "comparar materiales de laboratorio con materiales de taller: vasos medidores/boles, espátulas/paletinas, guantes, etiquetas, desinfectantes.",
+      "evidence_es": "tabla comparativa y exposición breve.",
+      "diversitySupport_es": "seguridad, manipulación, higiene, material instrumental y transferencia de conocimientos.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_2",
+      "title_es": "Checklist de seguridad previa: “Antes de empezar, desbloquea el servicio”",
+      "motivatingFactor_es": "cada servicio solo puede comenzar si el equipo supera una lista de comprobación.",
+      "description_es": "comprobar manos, EPI, puesto, aparatos, producto correcto, caducidad, cliente protegido y residuos previstos.",
+      "evidence_es": "checklist común para taller.",
+      "diversitySupport_es": "PRL, orden, higiene, responsabilidad y calidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_3",
+      "title_es": "Práctica de manipulación segura: “Cero derrames”",
+      "motivatingFactor_es": "reto de precisión con líquidos coloreados y material de medición.",
+      "description_es": "medir, trasvasar y mezclar cantidades sin derramar, usando guantes y siguiendo instrucciones.",
+      "evidence_es": "registro de precisión y errores.",
+      "diversitySupport_es": "medición, motricidad fina, seguridad, limpieza y concentración.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_4",
+      "title_es": "Mapa de riesgos del taller: “Detectives de peligros”",
+      "motivatingFactor_es": "convertir al alumnado en inspectores de seguridad.",
+      "description_es": "recorrer el taller e identificar riesgos químicos, eléctricos, térmicos, biológicos, posturales y ambientales.",
+      "evidence_es": "mapa visual del aula-taller con señales y propuestas de mejora.",
+      "diversitySupport_es": "observación, PRL, prevención, comunicación y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_5",
+      "title_es": "Simulación de incidente: “Actúa en 3 minutos”",
+      "motivatingFactor_es": "trabajar situaciones realistas de forma dinámica.",
+      "description_es": "tarjetas de incidente: producto derramado, irritación, quemadura leve, aparato defectuoso, cliente mareado, contaminación de pinceles.",
+      "evidence_es": "protocolo de actuación y parte de incidencia.",
+      "diversitySupport_es": "reacción segura, comunicación, trabajo en equipo, calma y registro.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_6",
+      "title_es": "Cartel de normas de laboratorio y salón: “Normas que sí se leen”",
+      "motivatingFactor_es": "crear normas visuales y atractivas, no un listado aburrido.",
+      "description_es": "diseñar normas en formato meme educativo, cartel minimalista, cómic o carrusel de redes.",
+      "evidence_es": "cartelería del aula-taller.",
+      "diversitySupport_es": "seguridad, comunicación visual, creatividad y comprensión de normas.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c3_7",
+      "title_es": "Auditoría entre iguales: “Equipo inspector”",
+      "motivatingFactor_es": "los alumnos aprenden evaluando de forma respetuosa a otros equipos.",
+      "description_es": "un equipo monta el puesto y otro lo revisa con una rúbrica: higiene, seguridad, orden, EPI, productos y residuos.",
+      "evidence_es": "informe de auditoría y compromiso de mejora.",
+      "diversitySupport_es": "coevaluación, responsabilidad, comunicación, mejora continua y profesionalidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_1",
+      "title_es": "Salón-laboratorio por equipos: “Reto 360º”",
+      "motivatingFactor_es": "resolver un reto profesional completo, no ejercicios aislados.",
+      "description_es": "cada equipo recibe un caso de cliente y debe diagnosticar, calcular, preparar, comunicar y evaluar.",
+      "evidence_es": "servicio simulado completo con ficha, cálculos e informe.",
+      "diversitySupport_es": "integración de módulos, autonomía, cooperación y aplicación real.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_2",
+      "title_es": "Rotación de roles: “Todos importan”",
+      "motivatingFactor_es": "que cada alumno encuentre un papel en el equipo y no siempre lideren los mismos.",
+      "description_es": "roles rotativos: cálculo, higiene, atención, técnica, documentación, seguridad y calidad.",
+      "evidence_es": "servicio o práctica con registro de roles.",
+      "diversitySupport_es": "responsabilidad, inclusión, trabajo cooperativo y autoestima.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_3",
+      "title_es": "Proyecto final de imagen saludable: “Look con ciencia”",
+      "motivatingFactor_es": "unir imagen personal, ciencia y bienestar sin caer en estereotipos.",
+      "description_es": "diseñar un look o servicio integral explicando productos, higiene, hábitos saludables y sostenibilidad.",
+      "evidence_es": "presentación del look con ficha técnica y explicación científica.",
+      "diversitySupport_es": "ciencia aplicada, estética, comunicación, creatividad y salud.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_4",
+      "title_es": "Diario de aprendizaje científico-profesional: “Mi evolución”",
+      "motivatingFactor_es": "que el alumnado vea su progreso real.",
+      "description_es": "cada semana registran qué han aprendido, dónde lo han aplicado, qué error corrigieron y qué objetivo tienen.",
+      "evidence_es": "diario breve o portfolio reflexivo.",
+      "diversitySupport_es": "metacognición, autonomía, escritura, responsabilidad y mejora.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_5",
+      "title_es": "Resolución de problemas reales del taller: “SOS salón”",
+      "motivatingFactor_es": "trabajar con problemas auténticos: falta de stock, retrasos, producto caducado, mezcla mal calculada.",
+      "description_es": "equipos proponen soluciones justificadas con datos.",
+      "evidence_es": "plan de actuación.",
+      "diversitySupport_es": "resolución de problemas, cálculo, comunicación y pensamiento práctico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_6",
+      "title_es": "Simulación de FCT: “Primer día en empresa”",
+      "motivatingFactor_es": "prepararles para una situación real que vivirán.",
+      "description_es": "deben seguir instrucciones, preparar puesto, atender cliente, registrar datos, aplicar seguridad y comunicar al responsable.",
+      "evidence_es": "rúbrica de desempeño y reflexión final.",
+      "diversitySupport_es": "profesionalidad, autonomía, respeto a normas, comunicación y seguridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c11_7",
+      "title_es": "Evaluación cooperativa: “Feedback que ayuda”",
+      "motivatingFactor_es": "aprender a recibir y dar críticas sin conflicto.",
+      "description_es": "tras cada práctica, los equipos se dan feedback sobre cálculo, higiene, comunicación, técnica y resultado.",
+      "evidence_es": "ficha de coevaluación con dos logros y una mejora.",
+      "diversitySupport_es": "convivencia, comunicación, mejora continua, respeto y trabajo en equipo.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_1",
+      "title_es": "Clasificación de cosméticos como mezclas: “¿Qué hay dentro del bote?”",
+      "motivatingFactor_es": "analizar productos cotidianos del neceser o del taller.",
+      "description_es": "clasificar champús, esmaltes, ceras, bases, tintes, mascarillas y acondicionadores como mezclas, sustancias o materiales.",
+      "evidence_es": "mural de clasificación con ejemplos reales.",
+      "diversitySupport_es": "materia, mezcla, composición, vocabulario científico y cosmética básica.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_2",
+      "title_es": "Estados de la materia en estética: “Sólido, líquido, gel, espuma, polvo…”",
+      "motivatingFactor_es": "descubrir que la ciencia está en texturas que usan a diario.",
+      "description_es": "observar texturas cosméticas y relacionarlas con su uso: polvos compactos, gel fijador, espuma, cera, crema, aerosol.",
+      "evidence_es": "catálogo sensorial con textura, estado, uso y precaución.",
+      "diversitySupport_es": "estados de la materia, propiedades, función del producto y seguridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_3",
+      "title_es": "Experimento de evaporación y secado: “¿Por qué se seca antes?”",
+      "motivatingFactor_es": "conectar ciencia con secado de cabello, esmalte, fijador o desinfectante.",
+      "description_es": "comparar evaporación de agua, alcohol cosmético simulado y gel diluido en condiciones controladas.",
+      "evidence_es": "tabla de tiempos y conclusión.",
+      "diversitySupport_es": "evaporación, tiempo, temperatura, observación, datos y aplicaciones profesionales.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_4",
+      "title_es": "Lectura de composición básica: “Ingredientes bajo lupa”",
+      "motivatingFactor_es": "aprender a no usar productos sin entender mínimamente su etiqueta.",
+      "description_es": "localizar agua, alcoholes, aceites, pigmentos, conservantes o fragancias en etiquetas reales.",
+      "evidence_es": "ficha sencilla de ingredientes frecuentes y función.",
+      "diversitySupport_es": "lectura técnica, pensamiento crítico, seguridad y comunicación al cliente.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_5",
+      "title_es": "Conservación de productos: “Cosméticos que envejecen”",
+      "motivatingFactor_es": "muchos adolescentes usan cosméticos; se trabaja la importancia de caducidad e higiene.",
+      "description_es": "analizar cómo afectan luz, calor, humedad, envases abiertos y contaminación.",
+      "evidence_es": "guía de conservación para salón y neceser personal.",
+      "diversitySupport_es": "propiedades de la materia, salud, seguridad, responsabilidad y consumo responsable.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_6",
+      "title_es": "Separación de mezclas sencillas: “Filtra, decanta, observa”",
+      "motivatingFactor_es": "experimentar con mezclas visibles y seguras.",
+      "description_es": "separar mezclas de agua/arena, agua/aceite o pigmentos sencillos y relacionarlo con formulaciones cosméticas.",
+      "evidence_es": "informe con fotos y explicación del método.",
+      "diversitySupport_es": "mezclas, separación, método experimental y razonamiento científico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c4_7",
+      "title_es": "Mural de materiales profesionales: “Materiales con personalidad”",
+      "motivatingFactor_es": "dar identidad visual a materiales usados en el taller.",
+      "description_es": "cada grupo investiga un material: plástico, metal, vidrio, algodón, papel aluminio, látex/nitrilo, cerámica.",
+      "evidence_es": "mural con propiedades, usos, higiene, riesgos y reciclaje.",
+      "diversitySupport_es": "propiedades, seguridad, sostenibilidad, creatividad y comunicación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_1",
+      "title_es": "Medición de consumo de aparatos: “¿Cuánto cuesta estar guapa/o?”",
+      "motivatingFactor_es": "relacionar energía con aparatos reales: secador, plancha, fundidor de cera, lámparas.",
+      "description_es": "buscar potencia de aparatos y calcular consumo aproximado según tiempo de uso.",
+      "evidence_es": "tabla de consumo y consejos de ahorro.",
+      "diversitySupport_es": "energía, unidades, cálculo, sostenibilidad y economía doméstica.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_2",
+      "title_es": "Plan de ahorro energético del salón: “Beauty sostenible”",
+      "motivatingFactor_es": "diseñar un salón atractivo pero responsable con el planeta.",
+      "description_es": "identificar hábitos de derroche y proponer soluciones: apagar aparatos, aprovechar luz, optimizar lavados, mantenimiento.",
+      "evidence_es": "plan de ahorro con compromisos medibles.",
+      "diversitySupport_es": "energía, sostenibilidad, trabajo en equipo y comunicación persuasiva.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_3",
+      "title_es": "Gráfica de calentamiento de cera: “Temperatura segura”",
+      "motivatingFactor_es": "ver cómo una variable científica afecta a la seguridad real.",
+      "description_es": "con simulación o datos proporcionados, representar calentamiento/enfriamiento de cera y decidir cuándo sería segura.",
+      "evidence_es": "gráfica con zona de riesgo y zona segura.",
+      "diversitySupport_es": "temperatura, gráficas, prevención de quemaduras y análisis de datos.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_4",
+      "title_es": "Comparativa de secado: “El reto del secador inteligente”",
+      "motivatingFactor_es": "optimizar tiempo sin dañar cabello ni malgastar energía.",
+      "description_es": "comparar secado a distintas distancias, temperaturas y tiempos en mechones de práctica o datos simulados.",
+      "evidence_es": "recomendación profesional de uso del secador.",
+      "diversitySupport_es": "calor, evaporación, distancia, tiempo, seguridad y comunicación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_5",
+      "title_es": "Debate sobre fuentes de energía: “Tu salón también contamina”",
+      "motivatingFactor_es": "conectar estética con medioambiente y consumo actual.",
+      "description_es": "investigar fuentes renovables/no renovables y cómo afectan a un negocio de peluquería-estética.",
+      "evidence_es": "debate o mesa redonda con conclusiones.",
+      "diversitySupport_es": "fuentes de energía, argumentación, ciudadanía y sostenibilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_6",
+      "title_es": "Cartel de buenas prácticas energéticas: “Apaga, ahorra, cuida”",
+      "motivatingFactor_es": "diseñar mensajes que puedan colocarse en el aula-taller.",
+      "description_es": "elaborar carteles breves para secadores, planchas, luces, lavacabezas y cargadores.",
+      "evidence_es": "señalética energética del taller.",
+      "diversitySupport_es": "comunicación visual, energía, hábitos responsables y trabajo cooperativo.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c5_7",
+      "title_es": "Cálculo de coste energético: “Factura del salón”",
+      "motivatingFactor_es": "aprender algo útil para la vida adulta y el emprendimiento.",
+      "description_es": "estimar uso diario/semanal de aparatos y calcular coste aproximado con una tarifa ficticia.",
+      "evidence_es": "mini factura energética y propuesta de reducción.",
+      "diversitySupport_es": "operaciones, unidades, economía, sostenibilidad y emprendimiento.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_1",
+      "title_es": "Mapa anatómico aplicado a imagen personal: “Cuerpo en modo salón”",
+      "motivatingFactor_es": "estudiar anatomía desde lo que se toca en el taller: piel, pelo, uñas, ojos, labios, manos y cuero cabelludo.",
+      "description_es": "crear un mapa visual con cada estructura y el servicio profesional relacionado.",
+      "evidence_es": "póster o presentación interactiva.",
+      "diversitySupport_es": "anatomía, función, aplicación profesional y comunicación visual.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_2",
+      "title_es": "Diagnóstico integral del cliente: “Beauty detective”",
+      "motivatingFactor_es": "resolver un caso realista de cliente con necesidades varias.",
+      "description_es": "analizar tarjetas de cliente: piel grasa, cabello seco, uñas frágiles, alergia, cuero cabelludo sensible.",
+      "evidence_es": "propuesta de servicios y precauciones.",
+      "diversitySupport_es": "observación, anatomía, salud, diagnóstico y toma de decisiones.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_3",
+      "title_es": "Maqueta o infografía del folículo piloso: “La raíz del asunto”",
+      "motivatingFactor_es": "conectar crecimiento del pelo con depilación, coloración y cuero cabelludo.",
+      "description_es": "construir maqueta con materiales reciclados o infografía digital.",
+      "evidence_es": "maqueta explicativa con etiquetas.",
+      "diversitySupport_es": "folículo, vello, cabello, crecimiento, depilación y coloración.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_4",
+      "title_es": "Estudio de cuero cabelludo: “Semáforo capilar”",
+      "motivatingFactor_es": "aprender a decidir productos según el estado capilar.",
+      "description_es": "con casos simulados, clasificar cuero cabelludo/cabello: normal, seco, graso, sensible, con caspa, teñido.",
+      "evidence_es": "semáforo de recomendación de champús y precauciones.",
+      "diversitySupport_es": "piel, cabello, salud, selección cosmética y asesoramiento.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_5",
+      "title_es": "Relación uña-piel-salud: “Lo que las uñas cuentan”",
+      "motivatingFactor_es": "observar uñas desde una perspectiva de cuidado y prevención, no solo estética.",
+      "description_es": "estudiar imágenes de alteraciones no diagnosticables por el alumno, pero útiles para saber cuándo avisar o derivar.",
+      "evidence_es": "guía de señales de alerta para el auxiliar.",
+      "diversitySupport_es": "observación, límites profesionales, salud y derivación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_6",
+      "title_es": "Exposición oral con apoyo TIC: “Explica ciencia como creador/a de contenido”",
+      "motivatingFactor_es": "preparar una explicación clara y visual como si fuera contenido divulgativo.",
+      "description_es": "equipos eligen tema: piel, pelo, uñas, nutrición, defensas o higiene.",
+      "evidence_es": "presentación de 3 minutos o vídeo corto educativo.",
+      "diversitySupport_es": "comunicación oral, TIC, ciencia aplicada y seguridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c6_7",
+      "title_es": "Juego de correspondencias: “Conecta órgano, función y servicio”",
+      "motivatingFactor_es": "aprender jugando.",
+      "description_es": "cartas con órganos/sistemas, funciones y aplicaciones en peluquería-estética; deben formar tríos correctos.",
+      "evidence_es": "juego creado por el alumnado para repasar.",
+      "diversitySupport_es": "anatomía, función, memoria activa y colaboración.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_1",
+      "title_es": "Campaña de lavado de manos: “Manos limpias, servicio seguro”",
+      "motivatingFactor_es": "convertir un hábito básico en una campaña de impacto dentro del centro.",
+      "description_es": "comprobar errores comunes, diseñar pasos y explicar cuándo lavarse las manos en el taller.",
+      "evidence_es": "cartel, vídeo o demostración en directo.",
+      "diversitySupport_es": "prevención, salud, higiene, comunicación y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_2",
+      "title_es": "Protocolo de prevención de contagios: “No compartas el riesgo”",
+      "motivatingFactor_es": "relacionarlo con hábitos cercanos: compartir maquillaje, auriculares, toallas, peines o productos.",
+      "description_es": "elaborar normas para maquillaje, uñas, depilación, lavado y coloración.",
+      "evidence_es": "protocolo común de prevención.",
+      "diversitySupport_es": "contagio, higiene, seguridad, lectura clara y trabajo en equipo.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_3",
+      "title_es": "Casos de derivación sanitaria: “¿Lo hago o aviso?”",
+      "motivatingFactor_es": "decidir como profesionales ante situaciones límite.",
+      "description_es": "analizar casos: pediculosis, dermatitis, herida, alergia, conjuntivitis, uña alterada.",
+      "evidence_es": "árbol de decisión: realizar, adaptar, consultar o derivar.",
+      "diversitySupport_es": "salud/enfermedad, límites profesionales, ética y seguridad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_4",
+      "title_es": "Mapa de riesgos para la salud: “Puntos rojos del salón”",
+      "motivatingFactor_es": "detectar riesgos invisibles o normalizados.",
+      "description_es": "marcar en un plano del taller los lugares con posible riesgo: lavacabezas, tocador, camilla, almacén, enchufes.",
+      "evidence_es": "mapa y plan de prevención.",
+      "diversitySupport_es": "prevención, observación, higiene, comunicación y sostenibilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_5",
+      "title_es": "Simulación de reacción alérgica: “Mantén la calma”",
+      "motivatingFactor_es": "practicar una situación que puede ocurrir en coloración, maquillaje o decoloración.",
+      "description_es": "role-play: cliente nota picor o enrojecimiento. Deben detener, avisar, registrar e informar.",
+      "evidence_es": "parte de incidencia y reflexión.",
+      "diversitySupport_es": "salud, atención al cliente, PRL, registro y responsabilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_6",
+      "title_es": "Infografía sobre defensas del organismo: “Tu piel también protege”",
+      "motivatingFactor_es": "entender la piel como barrera natural.",
+      "description_es": "explicar de forma visual barreras, defensas, vacunas, higiene y prevención.",
+      "evidence_es": "infografía o mural para el taller.",
+      "diversitySupport_es": "defensas, piel, prevención, creatividad y divulgación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c7_7",
+      "title_es": "Plan personal de hábitos saludables del profesional: “Cuídate para cuidar”",
+      "motivatingFactor_es": "conectar salud con su futuro laboral y bienestar adolescente.",
+      "description_es": "cada alumno diseña un plan realista: sueño, hidratación, alimentación, ergonomía, higiene, descanso digital.",
+      "evidence_es": "compromiso personal semanal.",
+      "diversitySupport_es": "salud, autocuidado, responsabilidad, hábitos y bienestar.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_1",
+      "title_es": "Semana de bienestar e imagen personal: “Glow up saludable”",
+      "motivatingFactor_es": "usar el concepto de “glow up” desde una perspectiva sana, no basada en presión estética.",
+      "description_es": "actividades sobre higiene, piel, cabello, uñas, descanso, alimentación, ejercicio y autoestima.",
+      "evidence_es": "feria de bienestar con stands creados por equipos.",
+      "diversitySupport_es": "salud, hábitos, comunicación, trabajo en equipo y autoestima.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_2",
+      "title_es": "Menú equilibrado del profesional: “Energía para una mañana de taller”",
+      "motivatingFactor_es": "diseñar un desayuno/almuerzo que dé energía para prácticas sin caer en dietas restrictivas.",
+      "description_es": "calcular balance sencillo y relacionar nutrientes con energía y concentración.",
+      "evidence_es": "menú saludable, económico y realista.",
+      "diversitySupport_es": "nutrientes, cálculo, salud, consumo responsable y autonomía.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_3",
+      "title_es": "Mural piel-cabello-nutrición: “Lo que haces se nota”",
+      "motivatingFactor_es": "relacionar hábitos cotidianos con imagen personal sin culpabilizar.",
+      "description_es": "investigar hidratación, sueño, alimentación, estrés, higiene y ejercicio.",
+      "evidence_es": "mural de hábitos que ayudan al bienestar general.",
+      "diversitySupport_es": "nutrición, piel, cabello, comunicación visual y pensamiento crítico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_4",
+      "title_es": "Role-play de límites profesionales: “Consejo sí, dieta no”",
+      "motivatingFactor_es": "aprender a actuar con responsabilidad ante preguntas de clientes.",
+      "description_es": "situaciones: cliente pregunta por dieta para mejorar la piel, caída del cabello o uñas débiles. El alumno da consejos generales y deriva si procede.",
+      "evidence_es": "guion de respuesta profesional.",
+      "diversitySupport_es": "ética, límites profesionales, salud y comunicación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_5",
+      "title_es": "Infografía para clientes: “Cuidados básicos sin postureo”",
+      "motivatingFactor_es": "crear mensajes útiles y realistas frente a tendencias extremas.",
+      "description_es": "elaborar consejos generales sobre hidratación, descanso, higiene, alimentación equilibrada y protección de la piel.",
+      "evidence_es": "folleto o cartel para el salón.",
+      "diversitySupport_es": "salud, comunicación escrita, diseño y atención al cliente.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_6",
+      "title_es": "Cálculo de balance calórico sencillo: “Energía que entra y sale”",
+      "motivatingFactor_es": "comprender energía corporal de forma objetiva y sin fomentar obsesiones.",
+      "description_es": "trabajar ejemplos ficticios, no datos personales, para calcular energía aproximada y reflexionar sobre equilibrio.",
+      "evidence_es": "ejercicios resueltos y conclusión saludable.",
+      "diversitySupport_es": "cálculo, nutrición, salud, respeto corporal y pensamiento crítico.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c8_7",
+      "title_es": "Debate sobre publicidad y dietas milagro: “No todo lo viral es verdad”",
+      "motivatingFactor_es": "conectar con redes, influencers y mensajes sobre cuerpo e imagen.",
+      "description_es": "analizar anuncios o mensajes ficticios de dietas, suplementos o cosméticos milagro.",
+      "evidence_es": "decálogo de consumo crítico.",
+      "diversitySupport_es": "salud, comunicación, ciudadanía, respeto e información fiable.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_1",
+      "title_es": "Plan verde del salón: “Eco Beauty Lab”",
+      "motivatingFactor_es": "diseñar un salón moderno, bonito y sostenible.",
+      "description_es": "analizar consumo de agua, energía, plásticos, aluminio, algodón y productos químicos.",
+      "evidence_es": "plan de mejora con acciones medibles.",
+      "diversitySupport_es": "sostenibilidad, energía, residuos, emprendimiento y comunicación.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_2",
+      "title_es": "Auditoría de residuos: “¿Qué tiramos en una semana?”",
+      "motivatingFactor_es": "hacer visible lo que normalmente se tira sin pensar.",
+      "description_es": "registrar residuos simulados o reales controlados: guantes, envases, papel aluminio, algodón, bandas, envoltorios.",
+      "evidence_es": "tabla de residuos y propuesta de reducción.",
+      "diversitySupport_es": "clasificación, datos, sostenibilidad, responsabilidad y matemáticas.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_3",
+      "title_es": "Cálculo de consumo energético: “Salón eficiente”",
+      "motivatingFactor_es": "competir por diseñar el salón que gasta menos sin perder calidad.",
+      "description_es": "estimar consumo de aparatos y proponer cambios de hábitos.",
+      "evidence_es": "ranking de medidas de ahorro.",
+      "diversitySupport_es": "energía, cálculo, toma de decisiones y sostenibilidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_4",
+      "title_es": "Campaña de reciclaje en el taller: “Cada residuo en su sitio”",
+      "motivatingFactor_es": "crear una campaña real para mejorar el aula.",
+      "description_es": "diseñar contenedores, carteles e instrucciones de separación.",
+      "evidence_es": "sistema de reciclaje visible en el taller.",
+      "diversitySupport_es": "medioambiente, comunicación visual, trabajo en equipo y hábitos.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_5",
+      "title_es": "Comparativa de productos sostenibles: “Eco o postureo”",
+      "motivatingFactor_es": "analizar productos que se anuncian como naturales, veganos, eco o sostenibles.",
+      "description_es": "comparar envases, ingredientes, certificaciones, precio y publicidad.",
+      "evidence_es": "ficha de compra responsable.",
+      "diversitySupport_es": "pensamiento crítico, sostenibilidad, lectura de etiquetas y atención al cliente.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_6",
+      "title_es": "Ruta del agua en el salón: “Cada gota cuenta”",
+      "motivatingFactor_es": "conectar lavado capilar y limpieza con ahorro de agua.",
+      "description_es": "estimar agua usada en lavados y limpieza de útiles, y proponer reducción.",
+      "evidence_es": "protocolo de uso responsable del agua.",
+      "diversitySupport_es": "recursos naturales, cálculo, sostenibilidad y calidad.. Medidas DUA con apoyos visuales y lectura fácil."
+    },
+    {
+      "id": "act_3009_c9_7",
+      "title_es": "Informe de mejora sostenible: “Del diagnóstico a la acción”",
+      "motivatingFactor_es": "sentirse capaces de cambiar su entorno inmediato.",
+      "description_es": "cada equipo detecta un problema ambiental del taller y propone solución realista.",
+      "evidence_es": "informe con problema, datos, propuesta, coste y beneficio.",
+      "diversitySupport_es": "investigación, datos, comunicación, ciudadanía y emprendimiento.. Medidas DUA con apoyos visuales y lectura fácil."
+    }
+  ]
+}

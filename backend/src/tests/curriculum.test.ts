@@ -70,6 +70,22 @@ describe('Curriculum Endpoints', () => {
       expect(res.body[0].description).toBe('Desc cat');
     });
 
+    it('debería traducir módulo de castellano a catalán', async () => {
+      const ra = new RA({
+        id: 'RA3160',
+        module: 'Proyecto inter modular de aprendizaje colaborativo',
+        description: 'Desc'
+      });
+      await ra.save();
+
+      const res = await request(app)
+        .get('/api/ras?lang=catalan')
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body[0].module).toBe("Projecte inter modular d'aprenentatge col·laboratiu");
+    });
+
     it('debería manejar errores de base de datos en RAs', async () => {
       // Forzar error mockeando find
       const spy = vi.spyOn(RA, 'find').mockRejectedValueOnce(new Error('DB Error'));
@@ -123,6 +139,24 @@ describe('Curriculum Endpoints', () => {
       expect(res.body[0].subject).toBe('Matemàtiques');
       expect(res.body[0].description).toBe('Desc CA');
       expect(res.body[0].criterios[0]).toBe('Crit CA');
+    });
+
+    it('debería traducir Ámbito Sociolingüístico al catalán', async () => {
+      const ce = new CE({
+        area: 'Ámbito Sociolingüístico',
+        subject: 'Llengua Catalana i Literatura',
+        ce_id: 'CE3',
+        description: 'Desc',
+        description_ca: 'Desc CA'
+      });
+      await ce.save();
+
+      const res = await request(app)
+        .get('/api/ces?lang=catalan')
+        .set('Authorization', `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body[0].area).toBe('Àmbit Sociolingüístic');
     });
 
     it('debería manejar errores de base de datos en CEs', async () => {

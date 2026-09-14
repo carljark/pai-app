@@ -1,0 +1,973 @@
+{
+  "code": "3065",
+  "name_es": "Cambios de color del cabello",
+  "criteria": [
+    "3065-1a. Se han descrito las instalaciones utilizadas en los procesos de cambio de color del cabello.",
+    "3065-1b. Se han identificado los equipos, aparatos, útiles y accesorios necesarios para la realización de las distintas técnicas de cambio de color del cabello.",
+    "3065-1c. Se han descrito la utilización y el mantenimiento de los equipos y aparatos empleados en el proceso, teniendo en cuenta criterios de higiene y seguridad.",
+    "3065-1d. Se han preparado los útiles y accesorios aplicando las técnicas de higiene y desinfección necesarias.",
+    "3065-1e. Se ha preparado la zona de trabajo, en condiciones de higiene, para la realización del servicio de cambio de color del cabello.",
+    "3065-1f. Se ha identificado la composición del equipo personal de peluquería para la ejecución técnica del cambio de color.",
+    "3065-1g. Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas.",
+    "3065-2a. Se ha estudiado el color natural del cabello y la escala de tonos.",
+    "3065-2b. Se ha descrito el proceso de decoloración capilar.",
+    "3065-2c. Se ha identificado la forma de actuar de los cosméticos decolorantes.",
+    "3065-2d. Se han descrito las normas de utilización de los productos decolorantes.",
+    "3065-2e. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene.",
+    "3065-2f. Se ha acomodado, protegido y preparado al cliente, aplicándole los productos necesarios para proteger la piel.",
+    "3065-2g. Se ha preparado el producto siguiendo las indicaciones del técnico responsable.",
+    "3065-2h. Se ha aplicado el producto total o parcialmente sobre el cabello, cumpliendo las normas de seguridad, vigilando el proceso y controlando el tiempo de exposición.",
+    "3065-2i. Se ha adaptado el servicio de higiene capilar al proceso de decoloración capilar.",
+    "3065-2j. Se ha reflejado en la ficha del cliente los cosméticos aplicados y las observaciones relativas al proceso y, en la ficha de servicio, la técnica realizada.",
+    "3065-2k. Se ha evaluado el resultado del proceso de decoloración, formulando las preguntas tipo.",
+    "3065-2l. Se han detectado las causas que originan deficiencias en el servicio y las medidas para subsanarlas.",
+    "3065-2m. Se han aplicado las especificaciones de seguridad y medioambientales requeridas.",
+    "3065-3a. Se han clasificado los productos colorantes capilares en función de su naturaleza, de la duración del resultado, de su aplicación y de su composición general.",
+    "3065-3b. Se ha identificado la forma de actuar de los distintos cosméticos colorantes, su finalidad y su acción sobre el cabello.",
+    "3065-3c. Se han identificado las operaciones técnicas previas a los cambios de coloración capilar.",
+    "3065-3d. Se ha informado al cliente y realizado la prueba de tolerancia, determinando los resultados y teniendo en cuenta los parámetros aconsejados por el laboratorio fabricante del cosmético.",
+    "3065-3e. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene.",
+    "3065-3f. Se ha acomodado, protegido y preparado al cliente, aplicándole los productos necesarios para proteger la piel.",
+    "3065-3g. Se han identificado las mezclas correctas de los productos colorantes, siguiendo las indicaciones del fabricante y del técnico responsable.",
+    "3065-3h. Se ha aplicado el producto en raíces y/o sobre todo el cabello, cumpliendo las normas de seguridad, vigilando el proceso y controlando el tiempo de exposición.",
+    "3065-3i. Se ha adaptado el servicio de higiene capilar al proceso de coloración capilar.",
+    "3065-3j. Se ha operado de forma ordenada, con pulcritud y seguridad, aplicando los procedimientos y técnicas adecuados y evaluando correctamente los resultados.",
+    "3065-3k. Se ha reflejado en la ficha del cliente todos los datos relativos a la prueba de tolerancia, el cosmético aplicado y las observaciones relativas al proceso.",
+    "3065-3l. Se han enumerado las causas que pueden originar deficiencias en la prestación del servicio y se han propuesto medidas que permitan evitarlas.",
+    "3065-3m. Se ha estudiado el grado de satisfacción del cliente, tanto en la prestación del servicio como en la atención personal, y se han corregido las deficiencias.",
+    "3065-3n. Se han aplicado las especificaciones de seguridad y medioambientales requeridas.",
+    "3065-4a. Se han descrito las técnicas que se emplean para colorear parcialmente el cabello.",
+    "3065-4b. Se ha seleccionado la técnica a realizar en función de los efectos finales que se desean conseguir.",
+    "3065-4c. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene.",
+    "3065-4d. Se ha determinado el tipo de cosmético siguiendo las indicaciones del técnico responsable.",
+    "3065-4e. Se ha informado al cliente y realizado la prueba de tolerancia, determinando los resultados y teniendo en cuenta los parámetros aconsejados por el laboratorio fabricante del cosmético.",
+    "3065-4f. Se ha acomodado, protegido y preparado al cliente, aplicándole los productos necesarios para proteger la piel.",
+    "3065-4g. Se ha aplicado el producto para coloración parcial: mechas con peine, gorro, papel de aluminio y otras técnicas, vigilando el proceso y controlando el tiempo de exposición.",
+    "3065-4h. Se ha adaptado el servicio de higiene capilar al proceso de coloración parcial del cabello.",
+    "3065-4i. Se han reflejado en la ficha del cliente los cosméticos aplicados y las observaciones relativas al proceso y en la ficha de servicio la técnica realizada.",
+    "3065-4j. Se ha operado de forma ordenada, con pulcritud y seguridad, aplicando los procedimientos y técnicas adecuados y evaluando correctamente los resultados y la calidad del proceso.",
+    "3065-4k. Se han enumerado las causas que pueden originar deficiencias en la prestación del servicio y se han propuesto medidas que permitan evitarlas.",
+    "3065-4l. Se ha estudiado el grado de satisfacción del cliente, tanto en la prestación del servicio como en la atención personal y se han corregido las deficiencias.",
+    "3065-4m. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
+  ],
+  "connections": [
+    {
+      "title_es": "Preparación del espacio, equipos, útiles, accesorios y material profesional",
+      "justification_es": "el cambio de color exige organizar un puesto técnico con boles, paletinas, guantes, capas, toallas, peines, papel de aluminio, gorro, protectores, productos colorantes y oxidantes. Esta preparación coincide con todos los módulos prácticos porque todos requieren seleccionar, ordenar, higienizar y conservar materiales. Ciencias aplicadas permite trabajar unidades, mezclas, materia, material de laboratorio y electricidad; Comunicación y sociedad ayuda a interpretar etiquetas, instrucciones y protocolos."
+    },
+    {
+      "title_es": "Ejecución técnica de decoloración, coloración global y coloración parcial",
+      "justification_es": "aplicar color requiere destreza, orden, particiones, distribución uniforme, control visual, pulcritud y adaptación del lavado posterior. Estos aprendizajes procedimentales coinciden con la ejecución de depilación, maquillaje, manicura, cambios de forma y servicios en empresa."
+    },
+    {
+      "title_es": "Evaluación de resultados, calidad, deficiencias y mejora del servicio",
+      "justification_es": "tras colorear hay que valorar si el tono, reflejo, cobertura, uniformidad, brillo y satisfacción responden al objetivo. Si existen desviaciones, deben identificarse causas y proponer correcciones. Esto conecta con calidad, atención al cliente, informes, análisis de datos y mejora continua."
+    },
+    {
+      "title_es": "Trabajo en equipo, autonomía, responsabilidad y aplicación en FCT",
+      "justification_es": "el cambio de color se realiza habitualmente en coordinación con otros servicios: recepción, diagnóstico, lavado, aplicación, control, retirada, peinado, explicación de cuidados y limpieza. Requiere seguir instrucciones del técnico responsable, colaborar con el equipo y actuar con responsabilidad. La FCT integra todo ello en contexto real."
+    },
+    {
+      "title_es": "Higiene, desinfección, mantenimiento de equipos y prevención de infecciones",
+      "justification_es": "la coloración capilar se realiza sobre cabello y cuero cabelludo, usando útiles reutilizables y productos químicos. La higiene y el mantenimiento evitan contaminación, irritaciones y deficiencias del servicio. Ciencias aplicadas explica microorganismos, contagios y desinfección; Comunicación permite elaborar y seguir protocolos."
+    },
+    {
+      "title_es": "Diagnóstico capilar, estudio del color natural, cuero cabelludo, alergias y prueba de tolerancia",
+      "justification_es": "antes de aplicar color o decoloración hay que estudiar el color natural, estado del cabello, cuero cabelludo, historial de productos, alergias y prueba de tolerancia. Coincide con el diagnóstico de piel, vello, uñas y rostro en estética y con la atención profesional al cliente. Ciencias aporta anatomía, salud, prevención y método científico; Comunicación permite formular preguntas y registrar información."
+    },
+    {
+      "title_es": "Selección de técnica y producto según objetivo, cabello y resultado final",
+      "justification_es": "elegir entre coloración global, parcial, mechas, decoloración o retoque de raíz exige analizar objetivo, tipo de cabello, tono natural, técnica, producto, duración del resultado y expectativas del cliente. Esta toma de decisiones se relaciona con la selección de productos y técnicas en todos los módulos técnicos y con la argumentación/comunicación de la propuesta."
+    },
+    {
+      "title_es": "Colorimetría, armonía estética, visagismo e imagen global",
+      "justification_es": "el color del cabello condiciona la imagen global, el maquillaje, el peinado, el tono de piel, la ropa y el estilo. Se vincula con el visagismo, la armonía cromática, la creatividad, la geometría y la cultura visual trabajadas especialmente en Maquillaje y Comunicación y sociedad."
+    },
+    {
+      "title_es": "Control de tiempos, exposición, proporciones, medidas, temperatura y eficiencia",
+      "justification_es": "la coloración depende del cálculo correcto de mezclas, proporciones, tiempos de exposición, duración del servicio y organización de agenda. Matemáticas y Ciencias aplicadas permiten trabajar proporcionalidad, unidades, gráficas, medidas y eficiencia."
+    },
+    {
+      "title_es": "Limpieza final, orden, almacenamiento, residuos, sostenibilidad y consumo responsable",
+      "justification_es": "la coloración genera residuos específicos: restos de mezcla, envases, guantes, papel de aluminio, algodón, toallas y agua contaminada por productos. La sostenibilidad y el orden final conectan con Ciencias aplicadas, medioambiente, normativa, ahorro de agua/energía y calidad profesional."
+    },
+    {
+      "title_es": "Química cosmética, decoloración, oxidación, mezclas y acción de los productos",
+      "justification_es": "la coloración y decoloración capilar dependen de procesos químicos: oxidación, aclaración, depósito de pigmentos, mezclas con oxidante, tiempos de exposición y neutralización o retirada. Ciencias aplicadas I y II proporcionan la base de materia, mezclas, reacciones químicas, temperatura, mediciones y prácticas de laboratorio."
+    },
+    {
+      "title_es": "Selección de técnica y producto según objetivo, cabello y resultado final",
+      "justification_es": "elegir entre coloración global, parcial, mechas, decoloración o retoque de raíz exige analizar objetivo, tipo de cabello, tono natural, técnica, producto, duración del resultado y expectativas del cliente. Esta toma de decisiones se relaciona con la selección de productos y técnicas en todos los módulos técnicos y con la argumentación/comunicación de la propuesta."
+    },
+    {
+      "title_es": "Colorimetría, armonía estética, visagismo e imagen global",
+      "justification_es": "el color del cabello condiciona la imagen global, el maquillaje, el peinado, el tono de piel, la ropa y el estilo. Se vincula con el visagismo, la armonía cromática, la creatividad, la geometría y la cultura visual trabajadas especialmente en Maquillaje y Comunicación y sociedad."
+    },
+    {
+      "title_es": "Acomodación, ergonomía, protección de piel/ropa y confort del cliente/profesional",
+      "justification_es": "en coloración es imprescindible proteger al cliente con capa, toalla, crema barrera y correcta posición, además de proteger al profesional con guantes y postura adecuada. Esta competencia es común en lavacabezas, camilla, tocador y mesa de manicura."
+    },
+    {
+      "title_es": "Documentación profesional, ficha técnica, registros, informes y confidencialidad",
+      "justification_es": "los cambios de color requieren registrar prueba de tolerancia, cosméticos, mezclas, tiempos, observaciones, técnica y resultado. La documentación protege al cliente y al profesional, mejora la continuidad del servicio y exige expresión escrita, síntesis, TIC y confidencialidad."
+    },
+    {
+      "title_es": "Selección de técnica y producto según objetivo, cabello y resultado final",
+      "justification_es": "elegir entre coloración global, parcial, mechas, decoloración o retoque de raíz exige analizar objetivo, tipo de cabello, tono natural, técnica, producto, duración del resultado y expectativas del cliente. Esta toma de decisiones se relaciona con la selección de productos y técnicas en todos los módulos técnicos y con la argumentación/comunicación de la propuesta."
+    },
+    {
+      "title_es": "Colorimetría, armonía estética, visagismo e imagen global",
+      "justification_es": "el color del cabello condiciona la imagen global, el maquillaje, el peinado, el tono de piel, la ropa y el estilo. Se vincula con el visagismo, la armonía cromática, la creatividad, la geometría y la cultura visual trabajadas especialmente en Maquillaje y Comunicación y sociedad."
+    },
+    {
+      "title_es": "Seguridad, PRL, productos químicos, prueba de tolerancia y responsabilidad profesional",
+      "justification_es": "los cambios de color implican riesgo químico, posibles alergias, irritaciones, contacto con ojos/piel, residuos y exposición a productos oxidantes. La prevención de riesgos laborales y medioambientales atraviesa todos los módulos; Ciencias aplicadas II refuerza reacciones químicas, contaminación, electricidad y desinfección, y Comunicación ayuda a entender normas e informar al cliente."
+    },
+    {
+      "title_es": "Comunicación profesional, atención al cliente, asesoramiento, satisfacción y reclamaciones",
+      "justification_es": "el cambio de color exige informar del procedimiento, prueba de tolerancia, resultado posible, mantenimiento, tiempos, riesgos y alternativas. También requiere comprobar satisfacción y corregir deficiencias. Atención al cliente y Comunicación y sociedad son esenciales para expresar con claridad, escuchar y resolver objeciones."
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_3065_c1_1",
+      "title_es": "Bandeja técnica de coloración: “Preparados para el cambio de look”",
+      "motivatingFactor_es": "el alumnado prepara una bandeja profesional como si fuera a atender a una clienta o cliente que quiere un cambio de imagen para una graduación, festival o sesión de fotos.",
+      "description_es": "por equipos seleccionan bol, paletina, guantes, capa, toalla, pinzas, peine, papel de aluminio, protector de piel, producto simulado y ficha técnica. Deben justificar qué material es imprescindible, cuál es opcional y qué riesgos evita.",
+      "evidence_es": "bandeja montada, foto para portfolio y checklist de preparación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c1_2",
+      "title_es": "Comparativa de puestos técnicos: “Del tocador al laboratorio beauty”",
+      "motivatingFactor_es": "comparar cómo cambia un puesto de trabajo según el servicio: color, maquillaje, uñas, lavado o depilación.",
+      "description_es": "cada equipo monta un puesto diferente y luego rota para evaluarlo con una rúbrica común: higiene, orden, seguridad, material, comodidad y estética visual.",
+      "evidence_es": "tabla comparativa y conclusiones de mejora para el aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c1_3",
+      "title_es": "Inventario de productos de color: “Controla tu almacén como un salón real”",
+      "motivatingFactor_es": "trabajar como responsables de almacén de un salón moderno.",
+      "description_es": "registran productos reales o simulados: tintes, oxidantes, decolorantes, guantes, papel de aluminio y protectores. Anotan cantidad, caducidad, lote, estado, conservación y reposición necesaria.",
+      "evidence_es": "inventario digital con semáforo de uso: correcto, revisar o retirar.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c1_4",
+      "title_es": "Lectura de etiquetas y fichas: “No uses nada que no entiendas”",
+      "motivatingFactor_es": "conectar con productos que ven en redes y tiendas, pero aprendiendo a leerlos profesionalmente.",
+      "description_es": "analizan etiquetas de productos de coloración: modo de empleo, advertencias, tiempo, proporciones, prueba de tolerancia, conservación y pictogramas.",
+      "evidence_es": "guía visual de lectura de etiquetas para el taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c1_5",
+      "title_es": "Simulación de apertura de salón: “10 minutos antes del primer cliente”",
+      "motivatingFactor_es": "crear una situación de presión realista, pero segura.",
+      "description_es": "el profesor entrega una agenda con tres clientes ficticios. El equipo debe preparar espacio, material, fichas, productos simulados y limpieza inicial antes de “abrir”.",
+      "evidence_es": "evaluación de apertura con rúbrica de rapidez, orden, seguridad y comunicación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c1_6",
+      "title_es": "Maletín del auxiliar de color: “Mi kit profesional básico”",
+      "motivatingFactor_es": "",
+      "description_es": "selecciona útiles esenciales, explica su función y calcula un presupuesto aproximado. Debe distinguir material propio, material del salón y material desechable.",
+      "evidence_es": "ficha visual del kit profesional, con coste estimado y normas de conservación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c1_7",
+      "title_es": "QR de preparación rápida: “Escanea antes de empezar”",
+      "motivatingFactor_es": "",
+      "description_es": "cada equipo redacta un protocolo de coloración, lo convierte en una infografía o documento breve y genera un QR para colocarlo en el aula-taller.",
+      "evidence_es": "protocolo digital accesible por QR y exposición de uso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_1",
+      "title_es": "Práctica de particiones y aplicación simulada",
+      "motivatingFactor_es": "entrenar antes de aplicar productos reales.",
+      "description_es": "en muñeca o plantilla, aplican crema coloreada siguiendo particiones, cantidad, orden, saturación y limpieza.",
+      "evidence_es": "evidencia fotográfica y rúbrica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_2",
+      "title_es": "Taller de mechas con peine, gorro y papel",
+      "motivatingFactor_es": "probar técnicas visuales que conectan con tendencias actuales.",
+      "description_es": "practican separación, grosor, distancia, orden y colocación usando materiales simulados.",
+      "evidence_es": "muestra comparativa de técnicas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_3",
+      "title_es": "Servicio encadenado color-lavado-peinado",
+      "motivatingFactor_es": "ver el servicio completo, no fases aisladas.",
+      "description_es": "aplican color simulado, controlan tiempo ficticio, retiran, lavan, acondicionan y finalizan con peinado sencillo.",
+      "evidence_es": "ficha completa de servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_4",
+      "title_es": "Vídeo-tutorial técnico",
+      "motivatingFactor_es": "usar formato de redes con rigor profesional.",
+      "description_es": "graban pasos de una técnica simulada, explicando seguridad, material, orden y resultado.",
+      "evidence_es": "vídeo interno de aprendizaje.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_5",
+      "title_es": "Rúbrica de ejecución",
+      "motivatingFactor_es": "que el alumnado sepa exactamente qué significa “hacerlo bien”.",
+      "description_es": "evalúan orden, postura, cantidad, protección, saturación, tiempos, limpieza y comunicación.",
+      "evidence_es": "rúbrica común del módulo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_6",
+      "title_es": "Batalla de precisión: “Mecha perfecta”",
+      "motivatingFactor_es": "",
+      "description_es": "los equipos compiten de forma saludable por lograr mechas regulares en grosor, separación y limpieza, con producto simulado.",
+      "evidence_es": "panel de ejemplos correctos y errores comunes.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c9_7",
+      "title_es": "Stop motion de una técnica",
+      "motivatingFactor_es": "",
+      "description_es": "fotografían cada fase: preparación, partición, aplicación, espera, retirada y acabado.",
+      "evidence_es": "stop motion explicativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_1",
+      "title_es": "Rúbrica de calidad del color",
+      "motivatingFactor_es": "definir qué se evalúa en un buen resultado.",
+      "description_es": "incluyen uniformidad, cobertura, tono, brillo, limpieza, protección, satisfacción y comunicación.",
+      "evidence_es": "rúbrica de calidad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_2",
+      "title_es": "Análisis de errores frecuentes",
+      "motivatingFactor_es": "aprender de fallos sin miedo.",
+      "description_es": "estudian casos: manchas, raíces sin cubrir, tono no deseado, mala mezcla, sobreexposición o mala protección.",
+      "evidence_es": "tabla error-causa-solución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_3",
+      "title_es": "Encuesta postservicio",
+      "motivatingFactor_es": "escuchar al cliente como parte de la calidad.",
+      "description_es": "diseñan encuesta con escala de emojis y preguntas sobre trato, resultado, tiempo e información.",
+      "evidence_es": "encuesta común del taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_4",
+      "title_es": "Informe de mejora",
+      "motivatingFactor_es": "transformar una deficiencia en aprendizaje.",
+      "description_es": "cada equipo analiza una práctica y propone medidas para mejorar preparación, comunicación, técnica o seguridad.",
+      "evidence_es": "informe breve de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_5",
+      "title_es": "Galería antes/después",
+      "motivatingFactor_es": "crear evidencias visuales responsables.",
+      "description_es": "con muñecas, plantillas o fotos autorizadas, registran proceso y resultado, evitando filtros engañosos.",
+      "evidence_es": "galería para portfolio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_6",
+      "title_es": "Comité de calidad joven",
+      "motivatingFactor_es": "",
+      "description_es": "revisan evidencias y deciden si el servicio cumple estándares de calidad.",
+      "evidence_es": "acta de calidad con mejoras.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c13_7",
+      "title_es": "Reto “sin filtros”",
+      "motivatingFactor_es": "",
+      "description_es": "comparan fotos con distinta luz o filtros y reflexionan sobre expectativas del cliente.",
+      "evidence_es": "guía de fotografía honesta de trabajos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_1",
+      "title_es": "Salón simulado de color",
+      "motivatingFactor_es": "reproducir una jornada real.",
+      "description_es": "recepción, diagnóstico, prueba, preparación, aplicación simulada, lavado, peinado, satisfacción y limpieza.",
+      "evidence_es": "servicio integral evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_2",
+      "title_es": "Rotación de roles",
+      "motivatingFactor_es": "que todo el alumnado pruebe responsabilidades distintas.",
+      "description_es": "cliente, auxiliar de color, técnico responsable, higiene, almacén, atención y documentación.",
+      "evidence_es": "registro de roles y autoevaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_3",
+      "title_es": "Proyecto final de cambio de imagen",
+      "motivatingFactor_es": "crear un proyecto atractivo y cercano a sus intereses.",
+      "description_es": "color, peinado, maquillaje, uñas, ficha técnica, presupuesto, cuidados y presentación oral.",
+      "evidence_es": "dossier de cambio de imagen.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_4",
+      "title_es": "Diario de aprendizaje profesional",
+      "motivatingFactor_es": "ver el progreso personal.",
+      "description_es": "cada semana registran qué aprendieron, qué error corrigieron, qué habilidad mejoraron y qué necesitan practicar.",
+      "evidence_es": "diario individual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_5",
+      "title_es": "Simulación de FCT",
+      "motivatingFactor_es": "preparar el salto a empresa.",
+      "description_es": "siguen instrucciones, respetan tiempos, comunican dudas, preparan material, aplican PRL y registran el servicio.",
+      "evidence_es": "rúbrica tipo empresa.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_6",
+      "title_es": "Hackathon “mejora el servicio de color”",
+      "motivatingFactor_es": "",
+      "description_es": "equipos proponen soluciones a retrasos, residuos, errores de mezcla, comunicación con cliente o desorden de almacén.",
+      "evidence_es": "pitch de mejora.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c15_7",
+      "title_es": "Certamen “Colorista junior”",
+      "motivatingFactor_es": "",
+      "description_es": "cada alumno presenta una evidencia: ficha, práctica simulada, portfolio, propuesta de color, protocolo de seguridad o campaña sostenible.",
+      "evidence_es": "exposición final con insignias de competencias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_1",
+      "title_es": "Protocolo de higiene en coloración: “Color bonito, puesto limpio”",
+      "motivatingFactor_es": "mostrar que un resultado profesional empieza antes de aplicar producto.",
+      "description_es": "elaboran y practican un protocolo de limpieza de boles, paletinas, peines, pinzas, capas, lavacabezas y superficies, diferenciando limpiar, desinfectar y conservar.",
+      "evidence_es": "protocolo de higiene paso a paso para coloración.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_2",
+      "title_es": "Práctica de desinfección comparada: “Cada útil tiene su método”",
+      "motivatingFactor_es": "descubrir que no se desinfecta igual un pincel, un peine, una paletina o una pinza.",
+      "description_es": "equipos investigan el método adecuado para distintos útiles del ciclo y explican por qué se usa uno u otro.",
+      "evidence_es": "tabla de útil, material, método de higiene y precaución.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_3",
+      "title_es": "Campaña de prevención de infecciones: “No compartas el riesgo”",
+      "motivatingFactor_es": "conectar con hábitos adolescentes como compartir peines, maquillaje, gomas o productos.",
+      "description_es": "diseñan carteles o carruseles educativos sobre higiene de manos, útiles limpios, toallas, productos abiertos y contacto con cuero cabelludo.",
+      "evidence_es": "campaña visual para aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_4",
+      "title_es": "Auditoría higiénica del taller: “Equipo inspector”",
+      "motivatingFactor_es": "el alumnado adopta el rol de inspector profesional.",
+      "description_es": "con rúbrica, revisan puestos de trabajo preparados por otros equipos: limpieza, EPI, residuos, útiles desinfectados y productos cerrados.",
+      "evidence_es": "informe de auditoría con dos fortalezas y dos mejoras.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_5",
+      "title_es": "Glosario técnico bilingüe de higiene y color",
+      "motivatingFactor_es": "preparar vocabulario útil para FCT y clientes extranjeros.",
+      "description_es": "elaboran tarjetas con términos en castellano e inglés: dye, bleach, gloves, disinfect, scalp, allergy, patch test, towel, clean.",
+      "evidence_es": "mini diccionario visual para el taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_6",
+      "title_es": "Simulación de contaminación cruzada: “La mancha invisible”",
+      "motivatingFactor_es": "",
+      "description_es": "un alumno toca varios objetos con “contaminación” simulada; después el grupo detecta rutas de transmisión y propone soluciones.",
+      "evidence_es": "mapa de contaminación y protocolo preventivo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c2_7",
+      "title_es": "Reto “puesto impecable en 7 minutos”",
+      "motivatingFactor_es": "",
+      "description_es": "tras una práctica simulada de color, el equipo debe dejar el puesto limpio, ordenado y seguro en un tiempo concreto, siguiendo checklist.",
+      "evidence_es": "puntuación de calidad, no solo de rapidez.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_1",
+      "title_es": "Ficha de diagnóstico capilar y cromático: “Conoce antes de colorear”",
+      "motivatingFactor_es": "trabajar como coloristas que no aplican producto sin estudiar antes.",
+      "description_es": "diseñan una ficha con tono natural, altura de tono, reflejos, estado del cabello, cuero cabelludo, historial químico, alergias y objetivo del cliente.",
+      "evidence_es": "ficha profesional de diagnóstico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_2",
+      "title_es": "Entrevista previa al cambio de color: “Preguntar evita problemas”",
+      "motivatingFactor_es": "simular una consulta real de salón.",
+      "description_es": "por parejas, uno hace de cliente con una historia concreta y otro de profesional. Debe preguntar por alergias, tintes previos, decoloraciones, expectativas, tiempo y mantenimiento.",
+      "evidence_es": "role-play grabado o representado con rúbrica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_3",
+      "title_es": "Caso de reacción alérgica: “¿Paramos o seguimos?”",
+      "motivatingFactor_es": "trabajar la responsabilidad profesional ante una situación delicada.",
+      "description_es": "reciben casos de prueba de tolerancia positiva, picor, enrojecimiento o historial alérgico. Deben decidir si se realiza, se aplaza o se deriva.",
+      "evidence_es": "árbol de decisión ante alergias.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_4",
+      "title_es": "Circuito de diagnóstico integral: “Detectives del cabello y la piel”",
+      "motivatingFactor_es": "unir color, lavado, maquillaje, depilación y uñas.",
+      "description_es": "estaciones de diagnóstico: cabello, cuero cabelludo, piel, cejas, uñas y estilo personal. En cada estación recogen pistas.",
+      "evidence_es": "informe integral de cliente.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_5",
+      "title_es": "Informe de prueba de tolerancia: “Todo queda registrado”",
+      "motivatingFactor_es": "entender la importancia legal y profesional del registro.",
+      "description_es": "simulan la realización documental de una prueba de tolerancia: producto, fecha, zona, resultado, observaciones y decisión.",
+      "evidence_es": "modelo de informe de prueba de tolerancia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_6",
+      "title_es": "Moodboard del deseo vs realidad técnica",
+      "motivatingFactor_es": "",
+      "description_es": "el cliente trae una imagen de TikTok/Instagram. El alumnado analiza si es viable según tono inicial, estado del cabello, tiempo, mantenimiento y presupuesto.",
+      "evidence_es": "comparación “inspiración / posibilidad real / alternativa segura”.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c3_7",
+      "title_es": "Semáforo capilar: “Verde, amarillo o rojo”",
+      "motivatingFactor_es": "",
+      "description_es": "con casos o mechones de práctica, determinan si el cabello está en condiciones de coloración: verde —apto—, amarillo —con precaución—, rojo —no realizar o consultar—.",
+      "evidence_es": "semáforo de diagnóstico para el aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_1",
+      "title_es": "Árbol de decisión de color: “Elige sin improvisar”",
+      "motivatingFactor_es": "convertir la elección técnica en un juego de decisiones.",
+      "description_es": "según tono inicial, objetivo, estado del cabello, historial y tiempo disponible, el alumnado elige decoloración, color global, raíz, mechas o alternativa.",
+      "evidence_es": "árbol de decisión visual.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_2",
+      "title_es": "Asesoría de imagen completa: “Cambio de look con sentido”",
+      "motivatingFactor_es": "diseñar un look para un evento actual: graduación, festival, entrevista, comunión familiar o sesión de fotos.",
+      "description_es": "proponen color, peinado, maquillaje, uñas y cejas, justificando armonía, mantenimiento y viabilidad.",
+      "evidence_es": "propuesta integral con moodboard.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_3",
+      "title_es": "Catálogo de técnicas parciales: “Mechas para todos los estilos”",
+      "motivatingFactor_es": "conectar con tendencias como money piece, balayage, face framing o mechas suaves, explicadas con límites de FPB.",
+      "description_es": "investigan técnicas y las adaptan a nivel auxiliar: preparación, separación, soporte y resultado esperado.",
+      "evidence_es": "catálogo visual de técnicas parciales.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_4",
+      "title_es": "Comparativa de resultados: “Temporal, semipermanente o permanente”",
+      "motivatingFactor_es": "responder dudas frecuentes de clientes jóvenes.",
+      "description_es": "comparan duración, mantenimiento, intensidad, riesgo, coste y expectativas de distintos tipos de coloración.",
+      "evidence_es": "infografía para clientes.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_5",
+      "title_es": "Diálogo de asesoramiento: “No prometas lo imposible”",
+      "motivatingFactor_es": "trabajar honestidad profesional ante imágenes irreales de redes.",
+      "description_es": "role-play donde el cliente quiere un cambio difícil. El profesional explica opciones, tiempos, riesgos y alternativa segura.",
+      "evidence_es": "diálogo evaluado con rúbrica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_6",
+      "title_es": "Reto “look low maintenance”",
+      "motivatingFactor_es": "",
+      "description_es": "deben proponer técnicas que no requieran retoques continuos, pensando en presupuesto, tiempo y salud capilar.",
+      "evidence_es": "ficha de propuesta de color de bajo mantenimiento.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c5_7",
+      "title_es": "Consultoría express con cartas de cliente",
+      "motivatingFactor_es": "",
+      "description_es": "en 5 minutos el equipo debe elegir técnica, justificarla y comunicarla al cliente.",
+      "evidence_es": "mini pitch técnico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_1",
+      "title_es": "Proyecto de cambio de imagen: “Antes y después responsable”",
+      "motivatingFactor_es": "crear una transformación visual sin caer en expectativas irreales.",
+      "description_es": "diseñan una propuesta de color, peinado, maquillaje y uñas según tono de piel, ojos, estilo, evento y mantenimiento.",
+      "evidence_es": "dossier antes/después simulado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_2",
+      "title_es": "Paleta cromática personal: “Colores que favorecen”",
+      "motivatingFactor_es": "conectar color de cabello con ropa, maquillaje y estilo personal.",
+      "description_es": "crean paletas cálidas, frías, neutras o fantasía, relacionando cabello, ojos, piel, maquillaje y uñas.",
+      "evidence_es": "paleta visual personalizada o ficticia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_3",
+      "title_es": "Desfile temático: “Color, historia y estilo”",
+      "motivatingFactor_es": "unir peluquería, maquillaje, uñas y comunicación.",
+      "description_es": "equipos eligen tema: años 90, Y2K, festival, urbano, cine, cultura local. Diseñan look coherente y lo presentan.",
+      "evidence_es": "desfile o exposición de looks.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_4",
+      "title_es": "Boceto de imagen global: “Diseña antes de aplicar”",
+      "motivatingFactor_es": "trabajar como estilistas.",
+      "description_es": "dibujan o montan digitalmente una propuesta de color, forma, maquillaje y complementos antes de ejecutar nada.",
+      "evidence_es": "boceto técnico-creativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_5",
+      "title_es": "Análisis de tendencias: “Viral, viable o arriesgado”",
+      "motivatingFactor_es": "analizar colores y técnicas vistas en redes.",
+      "description_es": "valoran si la tendencia es segura, adecuada al cliente, mantenible y profesional.",
+      "evidence_es": "tabla de tendencias con valoración.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_6",
+      "title_es": "Rueda de color gigante para el taller",
+      "motivatingFactor_es": "",
+      "description_es": "relacionan tonos, reflejos, neutralizaciones básicas y armonías con ejemplos visuales.",
+      "evidence_es": "recurso visual permanente para el aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c6_7",
+      "title_es": "Avatar digital de cliente",
+      "motivatingFactor_es": "",
+      "description_es": "diseñan tres propuestas para un mismo perfil y justifican cuál elegirían y por qué.",
+      "evidence_es": "comparativa de avatares con explicación técnica.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_1",
+      "title_es": "Cálculo de mezclas de color",
+      "motivatingFactor_es": "resolver situaciones reales de salón.",
+      "description_es": "ejercicios con proporciones tinte/oxidante, cantidad para raíz, melena corta o media, y reducción de fórmula.",
+      "evidence_es": "hoja de cálculo de mezclas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_2",
+      "title_es": "Tabla de tiempos de exposición",
+      "motivatingFactor_es": "evitar errores por olvidar tiempos.",
+      "description_es": "comparan tiempos de tinte, decoloración capilar, permanente, mascarilla y decoloración del vello.",
+      "evidence_es": "tabla visual para el taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_3",
+      "title_es": "Cronograma de servicio",
+      "motivatingFactor_es": "organizar un servicio completo como en una agenda real.",
+      "description_es": "diagnóstico, prueba, preparación, aplicación, exposición, retirada, lavado, acabado y limpieza.",
+      "evidence_es": "planning del servicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_4",
+      "title_es": "Gráfica tiempo-resultado",
+      "motivatingFactor_es": "visualizar cómo cambia un resultado cuando cambia el tiempo.",
+      "description_es": "con muestras simuladas, representan intensidad de color o resultado esperado según tiempo.",
+      "evidence_es": "gráfica y conclusión.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_5",
+      "title_es": "Planificación de agenda",
+      "motivatingFactor_es": "resolver una jornada con varios clientes.",
+      "description_es": "organizan coloración, lavado, peinado, maquillaje y manicura evitando solapamientos y esperas excesivas.",
+      "evidence_es": "agenda profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_6",
+      "title_es": "Temporizador creativo del salón",
+      "motivatingFactor_es": "",
+      "description_es": "crean tarjetas, sonidos o avisos visuales para no olvidar tiempos de exposición.",
+      "evidence_es": "sistema de control de tiempos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c10_7",
+      "title_es": "Reto “servicio eficiente, no acelerado”",
+      "motivatingFactor_es": "",
+      "description_es": "realizan una simulación valorando equilibrio entre tiempo, seguridad, higiene, trato y acabado.",
+      "evidence_es": "rúbrica de eficiencia profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_1",
+      "title_es": "Ruta del residuo de coloración",
+      "motivatingFactor_es": "visibilizar todo lo que se genera en un servicio.",
+      "description_es": "clasifican envases, guantes, papel de aluminio, restos de producto, algodón, toallas y material contaminado.",
+      "evidence_es": "mapa de residuos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_2",
+      "title_es": "Plan de reducción de residuos",
+      "motivatingFactor_es": "diseñar un salón más sostenible.",
+      "description_es": "proponen medidas: calcular mejor mezclas, reducir aluminio, usar dispensadores, separar residuos y evitar desperdicio.",
+      "evidence_es": "plan de reducción.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_3",
+      "title_es": "Auditoría de agua y energía",
+      "motivatingFactor_es": "descubrir el coste ambiental del lavado y secado posterior al color.",
+      "description_es": "estiman consumo de agua y electricidad en un servicio completo.",
+      "evidence_es": "informe de consumo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_4",
+      "title_es": "Cartelería ambiental del taller",
+      "motivatingFactor_es": "crear mensajes visuales útiles.",
+      "description_es": "diseñan carteles sobre reciclaje, ahorro de agua, energía, uso responsable de producto y seguridad química.",
+      "evidence_es": "carteles para aula-taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_5",
+      "title_es": "Cierre sostenible del puesto",
+      "motivatingFactor_es": "convertir el cierre en parte del servicio.",
+      "description_es": "limpieza, orden, almacenamiento, residuos, revisión de productos y registro de incidencias.",
+      "evidence_es": "checklist de cierre.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_6",
+      "title_es": "Eco-reto del aluminio",
+      "motivatingFactor_es": "",
+      "description_es": "investigan alternativas, reutilización en simulación, reducción de tamaño y correcta separación.",
+      "evidence_es": "propuesta de uso responsable.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c14_7",
+      "title_es": "Campaña “color bonito, planeta limpio”",
+      "motivatingFactor_es": "",
+      "description_es": "equipos crean un vídeo, cartel o carrusel sobre sostenibilidad en coloración.",
+      "evidence_es": "campaña para el centro.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_1",
+      "title_es": "Laboratorio de mezclas simuladas: “Química sin riesgo”",
+      "motivatingFactor_es": "experimentar con color usando materiales seguros.",
+      "description_es": "preparan mezclas con agua, colorante alimentario o témpera diluida para comprender proporciones y cambios visuales, sin usar químicos reales.",
+      "evidence_es": "tabla de proporciones y resultados.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_2",
+      "title_es": "Comparativa de oxidación: “Cabello, vello y color”",
+      "motivatingFactor_es": "conectar coloración capilar con decoloración del vello.",
+      "description_es": "comparan finalidad, zona, producto, tiempo, riesgo, prueba de sensibilidad y cuidados posteriores.",
+      "evidence_es": "tabla comparativa entre procesos.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_3",
+      "title_es": "Mapa conceptual de productos: “Quién hace qué”",
+      "motivatingFactor_es": "ordenar ideas sobre tintes, oxidantes, decolorantes, champús, acondicionadores y protectores.",
+      "description_es": "cada equipo crea un mapa visual donde conecta producto, función, precaución y servicio.",
+      "evidence_es": "mapa conceptual expuesto en clase.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_4",
+      "title_es": "Informe científico de color: “Hipótesis, prueba y resultado”",
+      "motivatingFactor_es": "convertir una práctica de color en una mini investigación.",
+      "description_es": "plantean una hipótesis sobre una mezcla simulada, la prueban, registran resultados y sacan conclusiones.",
+      "evidence_es": "informe científico-profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_5",
+      "title_es": "Análisis de seguridad química: “Lee antes de mezclar”",
+      "motivatingFactor_es": "comprender por qué no se improvisa con productos químicos.",
+      "description_es": "analizan advertencias, pictogramas, tiempos, proporciones y EPI en etiquetas o fichas de seguridad.",
+      "evidence_es": "guía rápida de seguridad química.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_6",
+      "title_es": "Escape room de pictogramas químicos",
+      "motivatingFactor_es": "",
+      "description_es": "para avanzar deben identificar pictogramas, elegir EPI, ordenar pasos y detectar errores en una mezcla ficticia.",
+      "evidence_es": "dossier de pruebas resueltas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c4_7",
+      "title_es": "Vídeo “La química del color en 60 segundos”",
+      "motivatingFactor_es": "",
+      "description_es": "elaboran un guion sencillo sobre oxidación, decoloración o mezcla, usando lenguaje comprensible para clientes.",
+      "evidence_es": "vídeo interno o presentación tipo Reel educativo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_1",
+      "title_es": "Protocolo de protección para coloración",
+      "motivatingFactor_es": "convertir la protección en una rutina profesional visible.",
+      "description_es": "practican capa, toalla, guantes, crema barrera, protección de contornos, postura del cliente y comodidad.",
+      "evidence_es": "protocolo fotográfico paso a paso.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_2",
+      "title_es": "Mapa postural de peluquería-estética",
+      "motivatingFactor_es": "evitar dolores desde el inicio de la profesión.",
+      "description_es": "comparan posturas en color, lavado, maquillaje, depilación y manicura, señalando errores comunes.",
+      "evidence_es": "mapa de ergonomía del taller.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_3",
+      "title_es": "Role-play de confort: “¿Estás cómodo/a?”",
+      "motivatingFactor_es": "aprender a preguntar sin incomodar.",
+      "description_es": "simulan conversaciones durante la aplicación: picor, frío, calor, cuello incómodo, olor fuerte o espera larga.",
+      "evidence_es": "banco de frases de confort.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_4",
+      "title_es": "Observación entre iguales",
+      "motivatingFactor_es": "aprender viendo trabajar a otros.",
+      "description_es": "mientras un alumno aplica producto simulado, otro observa postura, protección, comunicación y seguridad.",
+      "evidence_es": "ficha de coevaluación.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_5",
+      "title_es": "Adaptación a clientes diversos",
+      "motivatingFactor_es": "trabajar inclusión real.",
+      "description_es": "casos de cliente mayor, movilidad reducida, sensibilidad cutánea, ansiedad, barrera idiomática o cliente adolescente inseguro.",
+      "evidence_es": "protocolo de atención adaptada.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_6",
+      "title_es": "Reto “cero manchas”",
+      "motivatingFactor_es": "",
+      "description_es": "con producto simulado coloreado, deben aplicar sin manchar piel, ropa ni puesto. Se valora preparación y precisión, no velocidad.",
+      "evidence_es": "rúbrica de protección y limpieza.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c7_7",
+      "title_es": "Micro-pausas del profesional",
+      "motivatingFactor_es": "",
+      "description_es": "diseñan pausas de 30 segundos para manos, cuello, hombros y espalda durante servicios largos.",
+      "evidence_es": "cartel o vídeo de micro-pausas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_1",
+      "title_es": "Ficha digital de coloración",
+      "motivatingFactor_es": "crear una herramienta similar a la de un salón real.",
+      "description_es": "incluye datos, diagnóstico, prueba de tolerancia, producto, mezcla, tiempo, técnica, resultado y satisfacción.",
+      "evidence_es": "formulario digital o plantilla Word.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_2",
+      "title_es": "Historial capilar",
+      "motivatingFactor_es": "entender que cada servicio afecta al siguiente.",
+      "description_es": "registran servicios anteriores, productos, tonos, reacciones, mantenimiento y recomendaciones.",
+      "evidence_es": "historial ficticio de cliente.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_3",
+      "title_es": "Informe de práctica de color",
+      "motivatingFactor_es": "convertir la práctica en evidencia para portfolio.",
+      "description_es": "describen procedimiento, materiales, cálculos, incidencias, resultados, errores y mejoras.",
+      "evidence_es": "informe técnico.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_4",
+      "title_es": "Base de datos de productos",
+      "motivatingFactor_es": "usar TIC de forma profesional.",
+      "description_es": "registran marca, tono, oxidante, lote, caducidad, advertencias, conservación y servicio asociado.",
+      "evidence_es": "base de datos del aula.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_5",
+      "title_es": "Gráficos de satisfacción y resultados",
+      "motivatingFactor_es": "tomar decisiones con datos.",
+      "description_es": "recogen valoraciones simuladas de clientes y representan satisfacción, tonos más pedidos y tiempos medios.",
+      "evidence_es": "dashboard sencillo.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_6",
+      "title_es": "Portfolio digital de colorista junior",
+      "motivatingFactor_es": "",
+      "description_es": "cada alumno guarda fichas, fotos autorizadas, muestras, rúbricas, reflexiones y mejoras.",
+      "evidence_es": "portfolio personal.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c11_7",
+      "title_es": "Caso de confidencialidad: “Lo que pasa en el salón no se publica”",
+      "motivatingFactor_es": "",
+      "description_es": "analizan si se pueden compartir fotos, datos, alergias o comentarios de clientes en redes.",
+      "evidence_es": "decálogo de confidencialidad y redes.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_1",
+      "title_es": "Mapa de riesgos del color",
+      "motivatingFactor_es": "convertir al alumnado en técnicos de prevención.",
+      "description_es": "identifican riesgos: alergias, oxidantes, irritación, electricidad, manchas, ventilación, resbalones, residuos y posturas.",
+      "evidence_es": "mapa visual con medidas preventivas.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_2",
+      "title_es": "Simulación de reacción adversa",
+      "motivatingFactor_es": "aprender a actuar con calma.",
+      "description_es": "role-play: cliente nota picor o enrojecimiento. Deben parar, avisar, retirar si procede, registrar y comunicar.",
+      "evidence_es": "parte de incidencia.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_3",
+      "title_es": "Lectura de fichas de seguridad",
+      "motivatingFactor_es": "descubrir que las instrucciones protegen al profesional.",
+      "description_es": "analizan fichas o etiquetas de productos, identificando EPI, riesgos, almacenamiento y actuación ante contacto.",
+      "evidence_es": "resumen visual de seguridad.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_4",
+      "title_es": "Checklist de PRL antes del servicio",
+      "motivatingFactor_es": "crear una lista que pueda usarse antes de prácticas reales.",
+      "description_es": "EPI, prueba de tolerancia, ventilación, productos identificados, cliente protegido, puesto limpio y residuos previstos.",
+      "evidence_es": "checklist plastificable o digital.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_5",
+      "title_es": "Debate de responsabilidad profesional",
+      "motivatingFactor_es": "tratar límites reales del auxiliar de FPB.",
+      "description_es": "analizan casos: improvisar mezcla, saltarse prueba, copiar tutorial de redes, no avisar de error o prometer resultado imposible.",
+      "evidence_es": "decálogo de responsabilidad profesional.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_6",
+      "title_es": "Escape room PRL: “Encuentra el error antes del accidente”",
+      "motivatingFactor_es": "",
+      "description_es": "equipos deben detectarlos y corregirlos en tiempo limitado.",
+      "evidence_es": "lista de errores y soluciones.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c8_7",
+      "title_es": "Carnet de seguridad química",
+      "motivatingFactor_es": "",
+      "description_es": "preguntas sobre EPI, etiqueta, prueba de tolerancia, mezcla, residuos y actuación ante incidente.",
+      "evidence_es": "carnet simbólico de “auxiliar seguro/a de color”.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_1",
+      "title_es": "Role-play de asesoramiento de color",
+      "motivatingFactor_es": "simular una consulta profesional completa.",
+      "description_es": "entrevista, diagnóstico, propuesta, prueba de tolerancia, explicación de tiempos, riesgos, mantenimiento y cierre.",
+      "evidence_es": "diálogo evaluado.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_2",
+      "title_es": "Hoja de cuidados posteriores",
+      "motivatingFactor_es": "crear instrucciones que el cliente se llevaría a casa.",
+      "description_es": "redactan cuidados tras tinte, mechas o decoloración: lavado, sol, calor, productos, retoques y señales de alerta.",
+      "evidence_es": "tarjeta postservicio.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_3",
+      "title_es": "Atención en inglés básico",
+      "motivatingFactor_es": "preparar situaciones con turismo o clientes extranjeros.",
+      "description_es": "frases para preguntar color deseado, alergias, historial, tiempo y cuidados.",
+      "evidence_es": "tarjeta bilingüe de atención.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_4",
+      "title_es": "Gestión de reclamación",
+      "motivatingFactor_es": "practicar situaciones incómodas con seguridad.",
+      "description_es": "casos: color demasiado oscuro, manchas, irritación, retraso, expectativa irreal. Deben escuchar, registrar y ofrecer alternativa.",
+      "evidence_es": "hoja de incidencia y role-play.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_5",
+      "title_es": "Presentación oral de técnicas",
+      "motivatingFactor_es": "hablar con seguridad ante grupo.",
+      "description_es": "exponen diferencias entre coloración global, parcial y decoloración con lenguaje comprensible.",
+      "evidence_es": "presentación breve.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_6",
+      "title_es": "Respuesta profesional a una reseña negativa",
+      "motivatingFactor_es": "",
+      "description_es": "redactan respuesta respetuosa a una reseña ficticia, sin discutir ni revelar datos.",
+      "evidence_es": "banco de respuestas profesionales.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    },
+    {
+      "id": "act_3065_c12_7",
+      "title_es": "Chatbot de preguntas frecuentes",
+      "motivatingFactor_es": "",
+      "description_es": "preguntas sobre duración, precio, alergias, cuidados, mantenimiento, prueba de tolerancia y resultados.",
+      "evidence_es": "FAQ de coloración para clientes.",
+      "diversitySupport_es": "Instrucciones visuales, apoyos pautados y trabajo en parejas."
+    }
+  ]
+}

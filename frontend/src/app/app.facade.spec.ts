@@ -11,6 +11,7 @@ import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
 import { signal, WritableSignal } from '@angular/core';
 import { of, throwError } from 'rxjs';
+import { TRANSLATIONS_ES } from './services/translations.es';
 
 describe('AppFacade', () => {
   let facade: AppFacade;
@@ -66,7 +67,9 @@ describe('AppFacade', () => {
       logEvent: vi.fn().mockReturnValue(of({ ok: true }))
     };
 
-    translationServiceMock = {};
+    translationServiceMock = {
+      t: vi.fn().mockReturnValue(TRANSLATIONS_ES)
+    };
     paiServiceMock = {};
 
     TestBed.configureTestingModule({

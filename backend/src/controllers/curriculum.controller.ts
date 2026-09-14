@@ -21,6 +21,22 @@ const caToEsModules: Record<string, string> = {
   "Proyecto inter modular de aprendizaje colaborativo": "Proyecto inter modular de aprendizaje colaborativo"
 };
 
+const esToCaModules: Record<string, string> = {
+  "Proyecto inter modular de aprendizaje colaborativo": "Projecte inter modular d'aprenentatge col·laboratiu",
+  "Ciencias aplicadas I": "Ciències aplicades I",
+  "Ciencias aplicadas II": "Ciències aplicades II",
+  "Comunicación y sociedad I": "Comunicació i societat I",
+  "Comunicación y sociedad II": "Comunicació i societat II",
+  "Atención al cliente": "Atenció al client",
+  "Cambio de color del cabello": "Canvis de color del cabell",
+  "Cuidados estéticos básicos de manos y uñas": "Cures estètiques bàsiques de mans i ungles",
+  "Depilación mecánica y decoloración del vello superfluo": "Depil·lació mecànica i decoloració mecànica del borrissol superflu",
+  "Lavado y cambios de forma del cabello": "Rentat i canvis de forma del cabell",
+  "Maquillaje": "Maquillatge",
+  "Preparación del entorno profesional": "Preparació de l'entorn professional",
+  "Itinerario para la empleabilidad": "Itinerari per l'ocupabilitat"
+};
+
 const esToCa: Record<string, string> = {
   "Biología y Geología": "Biologia i Geologia",
   "Economía y Emprendimiento": "Economia i Emprenedoria",
@@ -32,6 +48,7 @@ const esToCa: Record<string, string> = {
   "Tecnología y Digitalización": "Tecnologia i Digitalització",
   "Ámbito Científico y Tecnológico": "Àmbit Científic i Tecnològic",
   "Ámbito Lingüístico y Social": "Àmbit Lingüístic i Social",
+  "Ámbito Sociolingüístico": "Àmbit Sociolingüístic",
   "Formación Profesional": "Formació Professional"
 };
 
@@ -40,47 +57,36 @@ const caToEs: Record<string, string> = Object.entries(esToCa).reduce((acc, [es, 
   return acc;
 }, {} as Record<string, string>);
 
+function mapRa(r: any, lang: 'ca' | 'es') {
+  const module = lang === 'ca' ? (esToCaModules[r.module] || r.module) : (caToEsModules[r.module] || r.module_es || r.module);
+  const description = lang === 'ca' ? (r.description_ca || r.description) : (r.description_es || r.description);
+  return { id: r.id, module, description };
+}
+
 export const getRas = async (req: any, res: Response) => {
   try {
     const lang = req.query.lang === 'catalan' ? 'ca' : 'es';
     const ras = await RA.find();
-    
-    const mapped = ras.map(r => ({
-      id: r.id,
-      module: lang === 'ca' ? r.module : (caToEsModules[r.module] || r.module_es || r.module),
-      description: lang === 'ca' ? (r.description_ca || r.description) : (r.description_es || r.description)
-    }));
-    return res.json(mapped);
+    return res.json(ras.map(r => mapRa(r, lang)));
   } catch (error) {
     return res.status(500).json({ error: "No se pudieron cargar los RAs" });
   }
 };
 
+function mapCe(c: any, lang: 'ca' | 'es') {
+  const subjectBase = c.subject.startsWith('Matemàtiques') ? 'Matemàtiques' : c.subject;
+  const area = lang === 'ca' ? (esToCa[c.area] || c.area) : (caToEs[c.area] || c.area);
+  const subject = lang === 'ca' ? (esToCa[subjectBase] || subjectBase) : (caToEs[subjectBase] || subjectBase);
+  const description = lang === 'ca' && c.description_ca ? c.description_ca : (c.description_es || c.get('description'));
+  const criterios = lang === 'ca' && c.criterios_ca ? c.criterios_ca : (c.criterios_es || c.get('criterios'));
+  return { area, subject, ce_id: c.ce_id, description, criterios };
+}
+
 export const getCes = async (req: any, res: Response) => {
   try {
     const lang = req.query.lang === 'catalan' ? 'ca' : 'es';
     const ces = await CE.find();
-    
-    const mapped = ces.map(c => {
-      let subjectBase = c.subject;
-      let areaBase = c.area;
-
-      if (subjectBase.startsWith('Matemàtiques')) subjectBase = 'Matemàtiques';
-
-      const subjectCa = subjectBase;
-      const subjectEs = caToEs[subjectBase] || subjectBase;
-      const areaCa = areaBase;
-      const areaEs = caToEs[areaBase] || areaBase;
-
-      return {
-        area: lang === 'ca' ? areaCa : areaEs,
-        subject: lang === 'ca' ? subjectCa : subjectEs,
-        ce_id: c.ce_id,
-        description: lang === 'ca' && c.description_ca ? c.description_ca : c.description_es || c.get('description'),
-        criterios: lang === 'ca' && c.criterios_ca ? c.criterios_ca : c.criterios_es || c.get('criterios')
-      };
-    });
-    return res.json(mapped);
+    return res.json(ces.map(c => mapCe(c, lang)));
   } catch (error) {
     return res.status(500).json({ error: "No se pudieron cargar las CEs" });
   }

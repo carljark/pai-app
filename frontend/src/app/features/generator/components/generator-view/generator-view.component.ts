@@ -22,7 +22,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
           <label>{{ trans.t().generatorLevelLabel }}</label>
           <div class="tabs">
             <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
-            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">ESO</div>
+            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">{{ trans.t().courseLevelPDC }}</div>
           </div>
         </div>
         

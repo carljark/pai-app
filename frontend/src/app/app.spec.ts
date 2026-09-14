@@ -38,6 +38,7 @@ describe('App', () => {
       infoTitle: signal(''),
       infoMessage: signal(''),
       infoType: signal('info'),
+      closeInfoModal: vi.fn(),
       
       showConfirmModal: signal(false),
       confirmTitle: signal(''),

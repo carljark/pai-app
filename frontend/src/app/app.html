@@ -43,7 +43,7 @@
 
 <!-- Modals -->
 @if (appFacade.showInfoModal()) {
-  <app-info-modal [title]="appFacade.infoTitle()" [message]="appFacade.infoMessage()" [type]="appFacade.infoType()" (close)="appFacade.showInfoModal.set(false)"></app-info-modal>
+  <app-info-modal [title]="appFacade.infoTitle()" [message]="appFacade.infoMessage()" [type]="appFacade.infoType()" (close)="appFacade.closeInfoModal()"></app-info-modal>
 }
 @if (appFacade.showConfirmModal()) {
   <app-confirm-modal [title]="appFacade.confirmTitle()" [message]="appFacade.confirmMessage()" (confirm)="appFacade.confirmAction()()" (cancel)="appFacade.showConfirmModal.set(false)"></app-confirm-modal>

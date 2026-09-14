@@ -169,5 +169,13 @@ describe('NotificationsFacade', () => {
     TestBed.flushEffects();
     expect(paiServiceMock.listenToProjectUpdates).toHaveBeenCalledTimes(1);
   });
+
+  it('clearLatestNotification should set latestNotification to null', () => {
+    facade.latestNotification.set({ type: 'COMPLETED' } as any);
+    expect(facade.latestNotification()).toBeTruthy();
+
+    facade.clearLatestNotification();
+    expect(facade.latestNotification()).toBeNull();
+  });
 });
 

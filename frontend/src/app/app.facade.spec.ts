@@ -54,7 +54,8 @@ describe('AppFacade', () => {
     };
 
     notificationsFacadeMock = {
-      latestNotification: signal(null)
+      latestNotification: signal(null),
+      clearLatestNotification: vi.fn()
     };
 
     const telemetryServiceMock = {
@@ -110,6 +111,14 @@ describe('AppFacade', () => {
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
   });
 
+  it('should ignore notification type INFO', () => {
+    facade = TestBed.inject(AppFacade);
+    projectsFacadeMock.loadHistory.mockClear();
+    notificationsFacadeMock.latestNotification.set({ type: 'INFO', message: 'connected' });
+    TestBed.flushEffects();
+    expect(projectsFacadeMock.loadHistory).not.toHaveBeenCalled();
+  });
+
   it('should react to latestNotification ERROR', () => {
     facade = TestBed.inject(AppFacade);
     
@@ -138,6 +147,44 @@ describe('AppFacade', () => {
     expect(facade.showInfoModal()).toBe(true);
     
     vi.useRealTimers();
+  });
+
+  it('should not show duplicate COMPLETED modal for the same project', () => {
+    vi.useFakeTimers();
+    facade = TestBed.inject(AppFacade);
+    
+    notificationsFacadeMock.latestNotification.set({ type: 'COMPLETED', projectId: 'p1', message: 'done 1' });
+    TestBed.flushEffects();
+    vi.advanceTimersByTime(100);
+    expect(facade.infoMessage()).toBe('done 1');
+    
+    facade.closeInfoModal();
+    expect(facade.showInfoModal()).toBe(false);
+    expect(notificationsFacadeMock.clearLatestNotification).toHaveBeenCalled();
+    
+    notificationsFacadeMock.latestNotification.set({ type: 'COMPLETED', projectId: 'p1', message: 'done duplicate' });
+    TestBed.flushEffects();
+    vi.advanceTimersByTime(100);
+    expect(facade.showInfoModal()).toBe(false);
+    expect(facade.infoMessage()).toBe('');
+    
+    vi.useRealTimers();
+  });
+
+  it('closeInfoModal should reset fields and clear latest notification', () => {
+    facade = TestBed.inject(AppFacade);
+    facade.showInfoModal.set(true);
+    facade.infoTitle.set('Test Title');
+    facade.infoMessage.set('Test Message');
+    facade.infoType.set('success');
+
+    facade.closeInfoModal();
+
+    expect(facade.showInfoModal()).toBe(false);
+    expect(facade.infoTitle()).toBe('Información');
+    expect(facade.infoMessage()).toBe('');
+    expect(facade.infoType()).toBe('info');
+    expect(notificationsFacadeMock.clearLatestNotification).toHaveBeenCalled();
   });
 
   describe('generateProject', () => {
@@ -282,6 +329,12 @@ describe('AppFacade', () => {
       
       expect(facade.errorMessage()).toBe('Error al borrar el proyecto');
     });
+
+    it('should handle empty projectId in deleteProject', () => {
+      facade.deleteProject('');
+      expect(facade.confirmTitle()).toBe('Eliminar Proyecto');
+      expect(facade.showConfirmModal()).toBe(true);
+    });
   });
 
   describe('viewPastProject', () => {
@@ -370,6 +423,13 @@ describe('AppFacade', () => {
       expect(facade.errorMessage()).toBe('Error desconocido');
       expect(facade.showErrorModal()).toBe(true);
       consoleSpy.mockRestore();
+    });
+
+    it('should handle retry for project without _id', () => {
+      projectsFacadeMock.retryProject.mockReturnValue(of({ message: 'ok' }));
+      facade.retryProject({});
+      expect(projectsFacadeMock.retryProject).toHaveBeenCalledWith(undefined);
+      expect(facade.infoTitle()).toBe('Proyecto en Cola');
     });
   });
 });

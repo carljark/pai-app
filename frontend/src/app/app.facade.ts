@@ -33,7 +33,15 @@ export class AppFacade {
   confirmMessage = signal<string>('');
   confirmAction = signal<() => void>(() => {});
 
+  private shownCompletedProjectIds = new Set<string>();
+
   constructor() {
+    this.initAuthEffect();
+    this.initViewEffect();
+    this.initNotificationEffect();
+  }
+
+  private initAuthEffect(): void {
     effect(() => {
       const user = this.auth.currentUser();
       const lang = this.layout.language();
@@ -41,46 +49,60 @@ export class AppFacade {
         this.telemetry.startTracking();
         this.curriculum.loadRas(lang);
         this.curriculum.loadCes(lang);
-        untracked(() => {
-          this.projects.loadHistory();
-        });
+        untracked(() => this.projects.loadHistory());
       } else {
         this.telemetry.stopTracking();
       }
     });
+  }
 
+  private initViewEffect(): void {
     effect(() => {
       const view = this.layout.currentView();
-      untracked(() => {
-        this.telemetry.setCurrentPage(view);
-      });
-    });
-
-    effect(() => {
-      const notif = this.notifications.latestNotification();
-      if (notif) {
-        untracked(() => {
-          if (['COMPLETED', 'ERROR', 'STATUS'].includes(notif.type)) {
-            this.projects.loadHistory();
-          }
-          if (notif.type === 'COMPLETED') {
-            setTimeout(() => {
-              this.infoTitle.set('¡Proyecto Generado!');
-              this.infoMessage.set(notif.message);
-              this.infoType.set('success');
-              this.showInfoModal.set(true);
-            }, 100);
-          } else if (notif.type === 'ERROR') {
-            this.errorTitle.set('Error en la Generación');
-            this.errorMessage.set(notif.message);
-            this.showErrorModal.set(true);
-          }
-        });
-      }
+      untracked(() => this.telemetry.setCurrentPage(view));
     });
   }
 
-  generateProject() {
+  private initNotificationEffect(): void {
+    effect(() => {
+      const notif = this.notifications.latestNotification();
+      if (!notif) return;
+      untracked(() => {
+        if (['COMPLETED', 'ERROR', 'STATUS'].includes(notif.type)) {
+          this.projects.loadHistory();
+        }
+        if (notif.type === 'COMPLETED') {
+          this.handleCompletedNotification(notif);
+        } else if (notif.type === 'ERROR') {
+          this.errorTitle.set('Error en la Generación');
+          this.errorMessage.set(notif.message);
+          this.showErrorModal.set(true);
+        }
+      });
+    });
+  }
+
+  private handleCompletedNotification(notif: any): void {
+    const key = notif.projectId || notif.id || notif.message;
+    if (this.shownCompletedProjectIds.has(key)) return;
+    this.shownCompletedProjectIds.add(key);
+    setTimeout(() => {
+      this.infoTitle.set('¡Proyecto Generado!');
+      this.infoMessage.set(notif.message);
+      this.infoType.set('success');
+      this.showInfoModal.set(true);
+    }, 100);
+  }
+
+  closeInfoModal(): void {
+    this.showInfoModal.set(false);
+    this.infoTitle.set('Información');
+    this.infoMessage.set('');
+    this.infoType.set('info');
+    this.notifications.clearLatestNotification?.();
+  }
+
+  generateProject(): void {
     if (this.curriculum.selectedRas().length === 0) {
       this.infoTitle.set('Atención');
       this.infoMessage.set('Por favor, selecciona al menos un elemento de la lista.');
@@ -88,33 +110,38 @@ export class AppFacade {
       this.showInfoModal.set(true);
       return;
     }
-    
+    this.notifications.clearLatestNotification?.();
     const nivel = this.curriculum.tipoNivel();
     this.projects.historyTab.set(nivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO' : 'FPB');
     this.projects.isGenerating.set(true);
     this.projects.generateProject(this.layout.language()).subscribe({
-      next: (res) => {
-        this.projects.isGenerating.set(false);
-        this.curriculum.clearSelection();
-        this.infoTitle.set('Proyecto en Cola');
-        this.infoMessage.set('Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.');
-        this.infoType.set('info');
-        this.showInfoModal.set(true);
-        this.projects.loadHistory();
-        this.layout.switchView('history');
-      },
-      error: (err) => {
-        console.error('Error:', err);
-        this.errorTitle.set('Error al Iniciar Generación');
-        const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
-        this.errorMessage.set(serverMsg);
-        this.showErrorModal.set(true);
-        this.projects.isGenerating.set(false);
-      },
+      next: () => this.onGenerateSuccess(),
+      error: (err) => this.onGenerateError(err)
     });
   }
 
-  deleteProject(projectId: string) {
+  private onGenerateSuccess(): void {
+    this.projects.isGenerating.set(false);
+    this.curriculum.clearSelection();
+    this.infoTitle.set('Proyecto en Cola');
+    this.infoMessage.set('Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.');
+    this.infoType.set('info');
+    this.showInfoModal.set(true);
+    this.projects.loadHistory();
+    this.layout.switchView('history');
+  }
+
+  private onGenerateError(err: any): void {
+    console.error('Error:', err);
+    this.errorTitle.set('Error al Iniciar Generación');
+    const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
+    this.errorMessage.set(serverMsg);
+    this.showErrorModal.set(true);
+    this.projects.isGenerating.set(false);
+  }
+
+  deleteProject(projectId: string): void {
+    if (projectId) this.shownCompletedProjectIds.delete(projectId);
     this.confirmTitle.set('Eliminar Proyecto');
     this.confirmMessage.set('¿Seguro que quieres borrar este proyecto? Esta acción no se puede deshacer.');
     this.confirmAction.set(() => {
@@ -134,7 +161,8 @@ export class AppFacade {
     this.showConfirmModal.set(true);
   }
 
-  retryProject(project: any) {
+  retryProject(project: any): void {
+    if (project?._id) this.shownCompletedProjectIds.delete(project._id);
     this.projects.retryProject(project._id).subscribe({
       next: () => {
         this.infoTitle.set('Proyecto en Cola');
@@ -153,7 +181,7 @@ export class AppFacade {
     });
   }
 
-  viewPastProject(project: any) {
+  viewPastProject(project: any): void {
     this.projects.currentProjectId.set(project._id);
     const rawText = typeof project.generatedContent === 'string' 
       ? project.generatedContent 

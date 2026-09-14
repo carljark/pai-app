@@ -89,5 +89,9 @@ export class NotificationsFacade {
       error: (err) => console.error('Error marking notifications read in backend', err)
     });
   }
+
+  clearLatestNotification() {
+    this.latestNotification.set(null);
+  }
 }
 

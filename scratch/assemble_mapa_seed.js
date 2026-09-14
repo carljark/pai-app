@@ -1,13 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const SEED_PATH = path.resolve('frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts');
-const BAK_PATH = path.resolve('frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts.bak');
+const SEED_INPUT = path.resolve('scratch/seed_baa42bd.ts');
+const SEED_TARGET = path.resolve('frontend/src/app/features/mapa-intermodular/data/mapa-intermodular.seed.ts');
 
-console.log('Loading seed and caches...');
-const seedRaw = fs.readFileSync(SEED_PATH, 'utf8');
-fs.writeFileSync(BAK_PATH, seedRaw);
-console.log('Created backup at', BAK_PATH);
+console.log('Loading input seed from', SEED_INPUT);
+const seedRaw = fs.readFileSync(SEED_INPUT, 'utf8');
 
 const startIdx = seedRaw.indexOf('= [') + 2;
 const endIdx = seedRaw.lastIndexOf(']');
@@ -16,6 +14,14 @@ const modules = JSON.parse(seedRaw.substring(startIdx, endIdx + 1));
 const officialRas = JSON.parse(fs.readFileSync('scratch/official_ras_ca.json', 'utf8'));
 const cache = JSON.parse(fs.readFileSync('scratch/translation_cache.json', 'utf8'));
 const masterDict = JSON.parse(fs.readFileSync('scratch/master_dictionary.json', 'utf8'));
+
+// Additional vocabulary mappings
+Object.assign(masterDict, {
+  "importancia": "importància",
+  "sanitario": "sanitari", "sanitaria": "sanitària", "sanitarios": "sanitaris", "sanitarias": "sanitàries",
+  "acondicionamiento": "condicionament",
+  "desmaquillado": "desmaquillatge"
+});
 
 const MODULE_NAMES_CA = {
   "3060": "Preparació de l’entorn professional",
@@ -69,6 +75,12 @@ const PHRASE_REPLACEMENTS = [
   [/Instrucciones visuales paso a paso, modelado previo del docente, roles cooperativos y lectura fácil\./gi, "Instruccions visuals pas a pas, modelatge previ del docent, rols cooperatius i lectura fàcil."],
   [/Problemas graduados por dificultad, banco de operaciones, apoyo visual y exposición opcional en pareja\./gi, "Problemes graduats per dificultat, banc d'operacions, suport visual i exposició opcional en parella."],
   [/Fuentes seleccionadas, lectura fácil, imágenes, roles, plantilla de cartel y exposición breve en pareja\./gi, "Fonts seleccionades, lectura fàcil, imatges, rols, plantilla de cartell i exposició breu en parella."],
+
+  // Passive criteria formulas
+  [/^([a-z]\))\s*Se ha\b/gi, "$1 S'ha"],
+  [/^([a-z]\))\s*Se han\b/gi, "$1 S'han"],
+  [/\bse ha\b/gi, "s'ha"],
+  [/\bse han\b/gi, "s'han"],
 
   // Section labels inside text
   [/Contexto \/ idea motivadora:/gi, "Context / idea motivadora:"],
@@ -238,6 +250,12 @@ function translateText(text) {
   // de + els -> dels
   res = res.replace(/\bde\s+els\b/g, "dels");
   res = res.replace(/\bDe\s+els\b/g, "Dels");
+  // d'els -> dels
+  res = res.replace(/\bd'els\b/g, "dels");
+  res = res.replace(/\bD'els\b/g, "Dels");
+  // d'el -> del
+  res = res.replace(/\bd'el\b/g, "del");
+  res = res.replace(/\bD'el\b/g, "Del");
   // per + el -> pel
   res = res.replace(/\bper\s+el\b/g, "pel");
   res = res.replace(/\bPer\s+el\b/g, "Pel");
@@ -258,7 +276,7 @@ function translateText(text) {
   return res;
 }
 
-console.log('Processing modules, learning outcomes, connections, and activities...');
+console.log('Processing modules, learning outcomes, connections, and activities from seed_baa42bd...');
 const actCache = new Map();
 let totalRAs = 0;
 let totalCriteria = 0;
@@ -369,5 +387,5 @@ const outputTs = `import { FPBModule } from '../models/mapa-intermodular.model';
 export const FPB_MODULES_SEED: FPBModule[] = ${JSON.stringify(modules, null, 2)};
 `;
 
-fs.writeFileSync(SEED_PATH, outputTs, 'utf8');
-console.log('Successfully written updated seed to', SEED_PATH);
+fs.writeFileSync(SEED_TARGET, outputTs, 'utf8');
+console.log('Successfully written updated seed to', SEED_TARGET);

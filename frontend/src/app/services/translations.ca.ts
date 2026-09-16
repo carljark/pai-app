@@ -152,5 +152,51 @@ export const TRANSLATIONS_CA = {
   modalRecentActivityTitle: 'Activitat Recent',
   modalRecentActivityEmpty: 'No hi ha projectes recents a la cua ni completats avui.',
   byAuthorPrefix: 'per',
-  statusCompletedText: 'Completat'
+  statusCompletedText: 'Completat',
+
+  // ÀREA PERSONAL
+  sidebarPersonal: 'Àrea Personal',
+  personalTitle: 'Àrea Personal',
+  personalSubtitle: 'Gestiona els teus projectes propis, esborranys i creacions',
+  personalTotalProjects: 'Projectes Propis',
+  personalDrafts: 'En Esborrany',
+  personalPublished: 'Publicats',
+  personalInQueue: 'En Cua / Generant',
+  personalEmpty: 'Encara no has creat cap projecte propi.',
+  personalEmptyCta: 'Crear el meu primer projecte',
+  personalFilterAll: 'Tots',
+  personalFilterDrafts: 'Esborranys',
+  personalFilterPublished: 'Publicats',
+  personalFilterErrors: 'Amb Error',
+  personalSearchPlaceholder: 'Cercar en els meus projectes...',
+
+  // BÚSTIA DE SUGGERIMENTS I ERRORS
+  sidebarFeedback: 'Bústia de Suggeriments',
+  feedbackTitle: 'Bústia de Suggeriments i Errors',
+  feedbackSubtitle: 'Envia les teues propostes de millora o reporta incidències tècniques',
+  feedbackType: 'Tipus de missatge',
+  feedbackTypeSuggestion: '💡 Suggeriment de millora',
+  feedbackTypeError: "⚠️ Report d'error o fallada",
+  feedbackSubject: 'Assumpte o títol',
+  feedbackSubjectPlaceholder: 'Ex: Afegir opció per a exportar en PDF...',
+  feedbackDesc: 'Descripció detallada',
+  feedbackDescPlaceholder: "Explica amb el màxim detall possible la teua idea o els passos que van causar l'error...",
+  feedbackSend: 'Enviar Missatge',
+  feedbackSending: 'Enviant...',
+  feedbackSuccess: "Missatge enviat amb èxit! Gràcies per ajudar-nos a millorar Plappin.",
+  feedbackErrorSending: "Error en enviar el missatge. Torna-ho a provar.",
+  feedbackMySubmissions: 'Els meus enviaments anteriors',
+  feedbackNoSubmissions: 'Encara no has enviat cap suggeriment o report.',
+  feedbackStatusPending: 'Pendent',
+  feedbackStatusReviewing: 'En revisió',
+  feedbackStatusResolved: 'Resolt',
+  feedbackStatusDismissed: 'Descartat',
+  feedbackAdminTitle: 'Bústia de Suggeriments i Reports d\'Errors',
+  feedbackChangeStatus: 'Canviar estat',
+
+  // HISTORIAL EXPANDIT
+  historyAllProjects: 'Tots els projectes del centre',
+  historyMyProjects: 'Només els meus projectes',
+  historyAuthorLabel: 'Creat per',
+  historyMyProjectBadge: 'Meu'
 };

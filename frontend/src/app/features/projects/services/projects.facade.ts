@@ -1,6 +1,7 @@
 import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { AuthFacade } from '../../auth/services/auth.facade';
 
 @Injectable({ providedIn: 'root' })
 export class ProjectsFacade {
@@ -9,11 +10,22 @@ export class ProjectsFacade {
   
   // Dependencias cruzadas (opcional, pero útil si queremos leer datos de selección directamente)
   private curriculumFacade = inject(CurriculumFacade);
+  private authFacade = inject(AuthFacade);
 
   // --- ESTADO GLOBAL DE PROYECTOS ---
   projectsHistory = signal<any[]>([]);
   historyTab = signal<'FPB' | 'ESO'>('FPB');
   searchQuery = signal<string>('');
+
+  myProjects = computed(() => {
+    const user = this.authFacade.currentUser();
+    if (!user) return [];
+    const uid = user._id || (user as any).id;
+    return this.projectsHistory().filter(p => {
+      const pAuthorId = (p.userId as any)?._id || p.userId;
+      return pAuthorId?.toString() === uid?.toString();
+    });
+  });
 
   // --- ESTADO DEL GENERADOR ---
   methodology = signal<string>('ABP (Aprendizaje Basado en Problemas / Proyectos)');

@@ -32,7 +32,7 @@ export const login = async (req: Request, res: Response) => {
     if (!validPassword) {
       return res.status(400).json({ error: 'Credenciales inválidas' });
     }
-    const token = jwt.sign({ _id: user._id, role: user.role, name: user.name, canUseAi: user.canUseAi }, JWT_SECRET, { expiresIn: '7d' });
+    const token = jwt.sign({ _id: user._id, role: user.role, name: user.name, email: user.email, canUseAi: user.canUseAi }, JWT_SECRET, { expiresIn: '7d' });
     return res.json({ 
       token, 
       user: { 

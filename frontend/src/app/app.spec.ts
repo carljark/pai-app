@@ -11,6 +11,8 @@ import { signal } from '@angular/core';
 import { CurriculumFacade } from './features/curriculum/services/curriculum.facade';
 import { ProjectsFacade } from './features/projects/services/projects.facade';
 import { NotificationsFacade } from './features/notifications/services/notifications.facade';
+import { FeedbackService } from './features/feedback/services/feedback.service';
+import { of } from 'rxjs';
 
 describe('App', () => {
   let fixture: ComponentFixture<App>;
@@ -59,7 +61,7 @@ describe('App', () => {
     };
     const mockProjectsFacade = {
       projects: signal([]),
-      isGenerating: signal(false), projectsHistory: signal([]), currentProjectId: signal(null), isUploading: signal(false), loadHistory: vi.fn(), currentProject: signal(null),
+      isGenerating: signal(false), projectsHistory: signal([]), myProjects: signal([]), currentProjectId: signal(null), isUploading: signal(false), loadHistory: vi.fn(), currentProject: signal(null),
       step: signal(0),
       hasActiveGeneration: signal(false),
       methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
@@ -82,6 +84,14 @@ describe('App', () => {
       notifications: signal([]),
       unreadCount: signal(0)
     };
+    const mockFeedbackService = {
+      feedbacks: signal([]),
+      isSubmitting: signal(false),
+      isLoading: signal(false),
+      loadFeedbacks: vi.fn().mockReturnValue(of([])),
+      sendFeedback: vi.fn().mockReturnValue(of({})),
+      deleteFeedback: vi.fn().mockReturnValue(of({}))
+    };
 
     await TestBed.configureTestingModule({
       imports: [App],
@@ -93,7 +103,8 @@ describe('App', () => {
         { provide: CurriculumFacade, useValue: mockCurriculumFacade },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: NotificationsFacade, useValue: mockNotificationsFacade },
-        { provide: AdminFacade, useValue: mockAdminFacade }
+        { provide: AdminFacade, useValue: mockAdminFacade },
+        { provide: FeedbackService, useValue: mockFeedbackService }
       ]
     }).compileComponents();
     
@@ -219,6 +230,12 @@ describe('App', () => {
     fixture.detectChanges();
     
     layoutServiceMock.currentView.set('taller');
+    fixture.detectChanges();
+
+    layoutServiceMock.currentView.set('personal');
+    fixture.detectChanges();
+
+    layoutServiceMock.currentView.set('feedback');
     fixture.detectChanges();
 
     layoutServiceMock.currentView.set('mapa');

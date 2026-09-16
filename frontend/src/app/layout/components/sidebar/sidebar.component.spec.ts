@@ -27,9 +27,11 @@ describe('SidebarComponent', () => {
       sidebarCollapse: 'Colapsar',
       sidebarHome: 'Inicio',
       sidebarNewProject: 'Nuevo Proyecto',
+      sidebarPersonal: 'Área Personal',
       sidebarHistory: 'Historial',
       sidebarTaller: 'Taller Editor',
       sidebarMapa: 'Mapa Intermodular',
+      sidebarFeedback: 'Buzón de sugerencias',
       sidebarAdmin: 'Admin Panel',
       sidebarLangTooltip: 'Cambiar Idioma',
       sidebarLangLabel: 'Idioma',
@@ -108,17 +110,29 @@ describe('SidebarComponent', () => {
 
   it('should switch view on nav click', () => {
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
-    // Index 1 is the second button (Nuevo Proyecto) -> view 'generator'
-    buttons[2].click();
+    const generatorBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Nuevo Proyecto')) as HTMLElement;
+    generatorBtn.click();
     expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
   });
 
   it('should load history and switch view on history nav click', () => {
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
-    // Index 2 is Historial
-    buttons[3].click();
+    const historyBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Historial')) as HTMLElement;
+    historyBtn.click();
     expect(mockProjects.loadHistory).toHaveBeenCalled();
     expect(mockLayout.switchView).toHaveBeenCalledWith('history');
+  });
+
+  it('should switch view on personal and feedback nav clicks', () => {
+    const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
+    const personalBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Área Personal')) as HTMLElement;
+    personalBtn.click();
+    expect(mockProjects.loadHistory).toHaveBeenCalled();
+    expect(mockLayout.switchView).toHaveBeenCalledWith('personal');
+
+    const feedbackBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Buzón de sugerencias')) as HTMLElement;
+    feedbackBtn.click();
+    expect(mockLayout.switchView).toHaveBeenCalledWith('feedback');
   });
 
   it('should show admin panel if user is admin', () => {

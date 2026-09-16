@@ -2,6 +2,7 @@ import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 
 @Component({
@@ -45,15 +46,42 @@ import { TranslationService } from '../../../../services/translation.service';
       outline: none; transition: border-color 0.2s;
     }
     .search-input:focus { border-color: var(--c-primary); }
+    .filter-pill {
+      padding: 4px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--c-border);
+      background: var(--c-surface);
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--c-text-muted);
+      transition: all 0.2s;
+    }
+    .filter-pill.active {
+      background: var(--c-primary);
+      color: #ffffff;
+      border-color: var(--c-primary);
+    }
   `],
   template: `
     <div class="app-header" style="flex-direction: column; align-items: flex-start; gap: 8px; border-bottom: none; padding-bottom: 0;">
       <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; flex-wrap: wrap; gap: 16px;">
         <h2 class="app-header-title" style="margin: 0;">{{ trans.t().historyTitle }}</h2>
         
-        <div class="search-wrapper">
-          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" [placeholder]="trans.t().searchProjects" (input)="onSearch($event)" [value]="searchQuery()" class="search-input">
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <div style="display: flex; gap: 6px;">
+            <button class="filter-pill" [class.active]="!onlyMine()" (click)="onlyMine.set(false)">
+              {{ trans.t().historyAllProjects }}
+            </button>
+            <button class="filter-pill" [class.active]="onlyMine()" (click)="onlyMine.set(true)">
+              {{ trans.t().historyMyProjects }}
+            </button>
+          </div>
+
+          <div class="search-wrapper">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" [placeholder]="trans.t().searchProjects" (input)="onSearch($event)" [value]="searchQuery()" class="search-input">
+          </div>
         </div>
       </div>
       
@@ -71,13 +99,24 @@ import { TranslationService } from '../../../../services/translation.service';
       @for (project of filteredProjects(); track project._id) {
         <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
           <div>
-            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: var(--c-text);">{{ getDisplayTitle(project) }}</h3>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <h3 style="margin: 0; font-size: 1.1rem; color: var(--c-text);">{{ getDisplayTitle(project) }}</h3>
+              @if (isMyProject(project)) {
+                <span style="font-size: 0.7rem; background: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
+                  {{ trans.t().historyMyProjectBadge }}
+                </span>
+              }
+            </div>
+            
             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
               <span class="badge" [class.badge-info]="project.status === 'borrador'" [class.badge-success]="project.status === 'publicado'" [class.badge-warning]="project.status === 'en_cola' || project.status === 'generando'" [class.badge-danger]="project.status === 'error'">
                 {{ project.status | uppercase }}
               </span>
               <span style="font-size: 0.85rem; color: var(--c-text-muted);">{{ project.createdAt | date:'short' }}</span>
               <span style="font-size: 0.85rem; color: var(--c-text-muted);">• {{ project.modules?.join(', ') || project.generatedContent?.modules?.join(', ') || 'Varios' }}</span>
+              @if (getAuthorName(project)) {
+                <span style="font-size: 0.85rem; color: var(--c-text-muted);">• 👤 {{ getAuthorName(project) }}</span>
+              }
               @if (getAiProviderLabel(project)) {
                 <span style="font-size: 0.75rem; background: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
                   {{ getAiProviderLabel(project) }}
@@ -113,10 +152,24 @@ import { TranslationService } from '../../../../services/translation.service';
 export class HistoryViewComponent {
   appFacade = inject(AppFacade);
   projects = inject(ProjectsFacade);
+  auth = inject(AuthFacade);
   trans = inject(TranslationService);
 
   activeTab = this.projects.historyTab;
+  onlyMine = signal<boolean>(false);
   searchQuery = signal<string>('');
+
+  getAuthorName(project: any): string | null {
+    return project.userId?.name || null;
+  }
+
+  isMyProject(project: any): boolean {
+    const user = this.auth.currentUser();
+    if (!user) return false;
+    const uid = user._id || (user as any).id;
+    const authorId = project.userId?._id || project.userId;
+    return authorId?.toString() === uid?.toString();
+  }
 
   getDisplayTitle(project: any): string {
     const isGeneric = !project.title || 
@@ -153,6 +206,11 @@ export class HistoryViewComponent {
       }
     });
 
+    // Filtro Solo Proyectos Propios
+    if (this.onlyMine()) {
+      list = list.filter(p => this.isMyProject(p));
+    }
+
     // Filtro de Búsqueda
     const q = this.searchQuery().toLowerCase().trim();
     if (q) {
@@ -160,7 +218,8 @@ export class HistoryViewComponent {
         const title = (p.title || 'Proyecto sin título').toLowerCase();
         const modules = (p.modules?.join(', ') || p.generatedContent?.modules?.join(', ') || 'Varios').toLowerCase();
         const status = (p.status || '').toLowerCase();
-        return title.includes(q) || modules.includes(q) || status.includes(q);
+        const author = (this.getAuthorName(p) || '').toLowerCase();
+        return title.includes(q) || modules.includes(q) || status.includes(q) || author.includes(q);
       });
     }
 

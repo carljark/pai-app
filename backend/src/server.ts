@@ -8,6 +8,7 @@ import settingsRoutes from './routes/settings.routes';
 import projectRoutes from './routes/project.routes';
 import telemetryRoutes from './routes/telemetry.routes';
 import notificationRoutes from './routes/notification.routes';
+import feedbackRoutes from './routes/feedback.routes';
 
 import { authMiddleware } from './middlewares/auth.middleware';
 
@@ -41,6 +42,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/feedback', feedbackRoutes);
 app.use('/api/telemetry', telemetryRoutes);
 app.use('/api', curriculumRoutes);
 

@@ -62,15 +62,82 @@ describe('Projects Endpoints', () => {
     expect(res.body.project.aiInstruction).toContain('REGLA SOBRE INSTRUCCIONES EXTRA DEL DOCENTE');
   });
 
-  it('GET /api/projects - Debería listar los proyectos del usuario', async () => {
-    const { token, user } = await createTestUser('teacher', 'prof2@test.com');
-    const Project = mongoose.model('Project');
-    await new Project({ title: 'Mi Proyecto', userId: user._id, status: 'borrador' }).save();
+  it('POST /api/projects/generate - Debería incluir instrucción de Carpeta de Aprendizaje (CA) para FPB', async () => {
+    const { token } = await createTestUser('teacher', 'prof_fpb_ca@test.com');
+    
+    // Castellano
+    let res = await request(app)
+      .post('/api/projects/generate')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        title: 'Proyecto FPB CA',
+        modules: ['M1'],
+        selectedRas: ['RA1'],
+        methodology: 'ABP',
+        tipoNivel: 'FP_BASICA',
+        language: 'castellano'
+      });
+    expect(res.status).toBe(202);
+    expect(res.body.project.aiInstruction).toContain('CARPETA DE APRENDIZAJE (CA)');
+    expect(res.body.project.aiInstruction).toContain('Evidencia o documento a archivar');
 
-    const res = await request(app).get('/api/projects').set('Authorization', `Bearer ${token}`);
+    await Project.deleteMany({});
+
+    // Catalán
+    res = await request(app)
+      .post('/api/projects/generate')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        title: 'Projecte FPB CA Valencià',
+        modules: ['M1'],
+        selectedRas: ['RA1'],
+        methodology: 'ABP',
+        tipoNivel: 'FP_BASICA',
+        language: 'catalan'
+      });
+    expect(res.status).toBe(202);
+    expect(res.body.project.aiInstruction).toContain("CARPETA D'APRENENTATGE (CA)");
+    expect(res.body.project.aiInstruction).toContain('Evidència o document a arxivar');
+
+    await Project.deleteMany({});
+
+    // ESO no debe incluir la regla específica de FPB
+    res = await request(app)
+      .post('/api/projects/generate')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        title: 'Proyecto ESO',
+        modules: ['M1'],
+        selectedRas: ['CE1'],
+        methodology: 'ABP',
+        tipoNivel: 'DIVERSIFICACION_CURRICULAR'
+      });
+    expect(res.status).toBe(202);
+    expect(res.body.project.aiInstruction).not.toContain('CARPETA DE APRENDIZAJE (CA)');
+  });
+
+  it('GET /api/projects - Debería listar los proyectos del usuario y soportar mine=true', async () => {
+    const { token, user } = await createTestUser('teacher', 'prof2@test.com');
+    const { user: otherUser } = await createTestUser('teacher', 'prof_other@test.com');
+    const Project = mongoose.model('Project');
+    
+    await new Project({ title: 'Mi Proyecto Borrador', userId: user._id, status: 'borrador' }).save();
+    await new Project({ title: 'Proyecto Publicado Ajeno', userId: otherUser._id, status: 'publicado' }).save();
+    await new Project({ title: 'Proyecto Borrador Ajeno', userId: otherUser._id, status: 'borrador' }).save();
+
+    // Sin mine=true: ve el suyo y el publicado ajeno (2 proyectos)
+    let res = await request(app).get('/api/projects').set('Authorization', `Bearer ${token}`);
+    expect(res.status).toBe(200);
+    expect(res.body.length).toBe(2);
+    expect(res.body.some((p: any) => p.title === 'Mi Proyecto Borrador')).toBe(true);
+    expect(res.body.some((p: any) => p.title === 'Proyecto Publicado Ajeno')).toBe(true);
+    expect(res.body.some((p: any) => p.title === 'Proyecto Borrador Ajeno')).toBe(false);
+
+    // Con mine=true: SOLO ve el suyo (1 proyecto)
+    res = await request(app).get('/api/projects?mine=true').set('Authorization', `Bearer ${token}`);
     expect(res.status).toBe(200);
     expect(res.body.length).toBe(1);
-    expect(res.body[0].title).toBe('Mi Proyecto');
+    expect(res.body[0].title).toBe('Mi Proyecto Borrador');
   });
 
   it('PUT /api/projects/:id - Debería actualizar un proyecto', async () => {
@@ -112,6 +179,12 @@ describe('Projects Endpoints', () => {
     const proj = await new Project({ title: 'Otro', userId: user2._id }).save();
     const res403 = await request(app).get(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
     expect(res403.status).toBe(403);
+
+    // 200 si el proyecto de otro profesor está publicado
+    const projPub = await new Project({ title: 'Compartido', userId: user2._id, status: 'publicado' }).save();
+    const resPub = await request(app).get(`/api/projects/${projPub._id}`).set('Authorization', `Bearer ${token}`);
+    expect(resPub.status).toBe(200);
+    expect(resPub.body.title).toBe('Compartido');
   });
 
   it('Errores 500 en endpoints de proyectos', async () => {

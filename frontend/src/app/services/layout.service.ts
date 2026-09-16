@@ -5,7 +5,7 @@ import { AuthFacade } from '../features/auth/services/auth.facade';
 export class LayoutService {
   authService = inject(AuthFacade);
   
-  currentView = signal<'home' | 'generator' | 'history' | 'taller' | 'admin' | 'mapa'>('home');
+  currentView = signal<'home' | 'generator' | 'history' | 'taller' | 'admin' | 'mapa' | 'personal' | 'feedback'>('home');
   isMobile = signal<boolean>(window.innerWidth <= 768);
   isSidebarCollapsed = signal<boolean>(true);
   language = signal<'castellano' | 'catalan'>('castellano');
@@ -29,7 +29,7 @@ export class LayoutService {
     this.isSidebarCollapsed.update(v => !v);
   }
 
-  switchView(view: 'home' | 'generator' | 'taller' | 'history' | 'admin' | 'mapa') {
+  switchView(view: 'home' | 'generator' | 'taller' | 'history' | 'admin' | 'mapa' | 'personal' | 'feedback') {
     this.currentView.set(view);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

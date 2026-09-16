@@ -22,6 +22,10 @@
         <app-generator-view></app-generator-view>
       }
 
+      @if (layout.currentView() === 'personal') {
+        <app-personal-view></app-personal-view>
+      }
+
       @if (layout.currentView() === 'history') {
         <app-history-view></app-history-view>
       }
@@ -32,6 +36,10 @@
 
       @if (layout.currentView() === 'mapa') {
         <app-mapa-intermodular-view></app-mapa-intermodular-view>
+      }
+
+      @if (layout.currentView() === 'feedback') {
+        <app-feedback-view></app-feedback-view>
       }
 
       @if (layout.currentView() === 'admin' && authService.currentUser()?.role === 'admin') {

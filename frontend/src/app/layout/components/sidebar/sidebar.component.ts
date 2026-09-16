@@ -36,6 +36,10 @@ import { NotificationsBadgeComponent } from '../../../features/notifications/com
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
           <span class="nav-text">{{ trans.t().sidebarNewProject }}</span>
         </button>
+        <button (click)="projects.loadHistory(); layout.switchView('personal')" [class.active]="layout.currentView() === 'personal'" class="nav-item" [attr.data-tooltip]="trans.t().sidebarPersonal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="nav-text">{{ trans.t().sidebarPersonal }}</span>
+        </button>
         <button (click)="projects.loadHistory(); layout.switchView('history')" [class.active]="layout.currentView() === 'history'" class="nav-item" [attr.data-tooltip]="trans.t().sidebarHistory">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span class="nav-text">{{ trans.t().sidebarHistory }}</span>
@@ -54,6 +58,10 @@ import { NotificationsBadgeComponent } from '../../../features/notifications/com
             <line x1="16.5" y1="8.5" x2="13.5" y2="15.5"></line>
           </svg>
           <span class="nav-text">{{ trans.t().sidebarMapa }}</span>
+        </button>
+        <button (click)="layout.switchView('feedback')" [class.active]="layout.currentView() === 'feedback'" class="nav-item" [attr.data-tooltip]="trans.t().sidebarFeedback">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span class="nav-text">{{ trans.t().sidebarFeedback }}</span>
         </button>
         @if (auth.currentUser()?.role === 'admin') {
           <button (click)="layout.switchView('admin')" [class.active]="layout.currentView() === 'admin'" class="nav-item" [attr.data-tooltip]="trans.t().sidebarAdmin">

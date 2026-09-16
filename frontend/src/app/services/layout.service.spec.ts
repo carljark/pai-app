@@ -62,6 +62,14 @@ describe('LayoutService', () => {
     expect(scrollToSpy).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
     
     expect(localStorage.getItem('pai_view')).toBe('taller');
+
+    service.switchView('personal');
+    TestBed.flushEffects();
+    expect(service.currentView()).toBe('personal');
+
+    service.switchView('feedback');
+    TestBed.flushEffects();
+    expect(service.currentView()).toBe('feedback');
   });
 
   it('should call authService.logout when logout is called', () => {

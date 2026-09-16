@@ -106,6 +106,31 @@ export const generateProject = async (req: any, res: Response) => {
       }
     }
 
+    let fpbCaInstruction = '';
+    if (tipoNivel === 'FP_BASICA') {
+      if (language === 'catalan') {
+        fpbCaInstruction = `
+
+REGLA OBLIGATÒRIA PER A FP BÀSICA - PROPOSTA PER A LA CARPETA D'APRENENTATGE (CA):
+Com a element pedagògic clau de la Formació Professional Bàsica, has d'incloure OBLIGATÒRIAMENT en el projecte una secció o proposta destacada d'activitat clau que l'alumnat haurà de desar i arxivar a la seua Carpeta d'Aprenentatge (CA) / Portafolis d'evidències.
+Aquesta proposta ha d'especificar de manera detallada:
+- **Títol de l'activitat per a la Carpeta d'Aprenentatge (CA)**.
+- **Evidència o document a arxivar**: Descripció precisa del treball, fitxa de taller, registre fotogràfic, informe tècnic o reflexió que s'ha d'incorporar a la CA.
+- **Instruccions d'elaboració per a l'alumnat**: Pautes clares perquè l'alumnat sàpiga com realitzar, ordenar i conservar aquesta evidència.
+- **Criteris d'avaluació formativa**: Com valorarà el docent aquesta evidència dins de la Carpeta d'Aprenentatge i la seua relació amb els Resultats d'Aprenentatge.`;
+      } else {
+        fpbCaInstruction = `
+
+REGLA OBLIGATORIA PARA FP BÁSICA - PROPUESTA PARA CARPETA DE APRENDIZAJE (CA):
+Como elemento pedagógico clave de la Formación Profesional Básica, debes incluir OBLIGATORIAMENTE en el proyecto una sección o propuesta destacada de actividad clave que el alumnado deberá guardar y archivar en su Carpeta de Aprendizaje (CA) / Portafolio de evidencias.
+Esta propuesta debe especificar de manera detallada:
+- **Título de la actividad para la Carpeta de Aprendizaje (CA)**.
+- **Evidencia o documento a archivar**: Descripción precisa del trabajo, ficha de taller, registro fotográfico, informe técnico o reflexión que debe incorporarse a la CA.
+- **Instrucciones de elaboración para el alumnado**: Pautas claras para que el alumnado sepa cómo realizar, ordenar y conservar esta evidencia.
+- **Criterios de evaluación formativa**: Cómo valorará el docente esta evidencia dentro de la Carpeta de Aprendizaje y su relación con los Resultados de Aprendizaje.`;
+      }
+    }
+
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EVALUACIÓN:
 Cuando diseñes el proyecto y llegues al apartado de Evaluación, DEBES contemplar los criterios de evaluación aplicables a CADA UNO de los Resultados de Aprendizaje (RA) o Competencias Específicas (CE) seleccionados por el usuario.
@@ -135,7 +160,7 @@ MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII
 REGLA ESTRICTA SOBRE TEXTO, NÚMEROS Y UNIDADES (PROHIBIDO LATEX): Escribe SIEMPRE los números, minutos, horas, unidades (kg, g, m, etc.), paréntesis y acotaciones en TEXTO PLANO NORMAL de Markdown (por ejemplo: "(165 minutos totales)", "50 kg", "2 horas"). NUNCA utilices notación LaTeX, comandos \\text{...}, ni delimitadores con el símbolo de dólar ($) bajo ningún concepto para números, duraciones o texto estándar.
 Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
-${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}`;
+${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}${fpbCaInstruction}`;
     
     // Enriquecer RAs
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
@@ -215,7 +240,20 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
 
 export const listProjects = async (req: any, res: Response) => {
   try {
-    const filter = req.user?.role === 'admin' ? {} : { userId: req.user?._id };
+    const { mine } = req.query;
+    const userId = req.user?._id;
+    let filter: any = {};
+
+    if (mine === 'true') {
+      filter = { userId };
+    } else if (req.user?.role !== 'admin') {
+      filter = {
+        $or: [
+          { userId },
+          { status: 'publicado' }
+        ]
+      };
+    }
     const projects = await Project.find(filter).sort({ createdAt: -1 }).populate('userId', 'name email');
     res.json(projects);
   } catch (error) {
@@ -227,8 +265,11 @@ export const getProject = async (req: any, res: Response) => {
   try {
     const project = await Project.findById(req.params.id).populate('userId', 'name email');
     if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
-    const authorId = (project.userId as any)?._id?.toString();
-    if (req.user?.role !== 'admin' && authorId !== req.user?._id) {
+    const authorId = (project.userId as any)?._id?.toString() || project.userId?.toString();
+    const isAuthor = authorId === req.user?._id?.toString();
+    const isAdmin = req.user?.role === 'admin';
+    const isPublished = project.status === 'publicado';
+    if (!isAdmin && !isAuthor && !isPublished) {
       return res.status(403).json({ error: "Acceso denegado" });
     }
     res.json(project);
@@ -263,7 +304,8 @@ export const deleteProject = async (req: any, res: Response) => {
     const project = await Project.findById(req.params.id);
     if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
     
-    if (req.user?.role !== 'admin' && project.userId?.toString() !== req.user?._id) {
+    const authorId = (project.userId as any)?._id?.toString() || project.userId?.toString();
+    if (req.user?.role !== 'admin' && authorId !== req.user?._id?.toString()) {
       return res.status(403).json({ error: "Acceso denegado: solo el autor puede borrarlo" });
     }
     

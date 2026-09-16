@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AdminDashboardComponent } from './admin-dashboard.component';
 import { AdminFacade } from '../../services/admin.facade';
+import { FeedbackService } from '../../../feedback/services/feedback.service';
 import { of, throwError } from 'rxjs';
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
@@ -9,6 +10,7 @@ describe('AdminDashboardComponent', () => {
   let component: AdminDashboardComponent;
   let fixture: ComponentFixture<AdminDashboardComponent>;
   let mockFacade: any;
+  let mockFeedbackService: any;
 
   beforeEach(async () => {
     mockFacade = {
@@ -31,10 +33,20 @@ describe('AdminDashboardComponent', () => {
       saveSettings: vi.fn().mockReturnValue(of({}))
     };
 
+    mockFeedbackService = {
+      feedbacks: signal([
+        { _id: 'fb1', title: 'Bug 1', status: 'pendiente', type: 'error', userName: 'Carlos', userEmail: 'c@test.com', description: 'Desc 1', createdAt: new Date() }
+      ]),
+      loadFeedbacks: vi.fn().mockReturnValue(of([])),
+      updateFeedbackStatus: vi.fn().mockReturnValue(of({})),
+      deleteFeedback: vi.fn().mockReturnValue(of({}))
+    };
+
     await TestBed.configureTestingModule({
       imports: [AdminDashboardComponent],
       providers: [
-        { provide: AdminFacade, useValue: mockFacade }
+        { provide: AdminFacade, useValue: mockFacade },
+        { provide: FeedbackService, useValue: mockFeedbackService }
       ]
     }).compileComponents();
 
@@ -286,5 +298,64 @@ describe('AdminDashboardComponent', () => {
     expect(component.getLogGenerationTime({ projectId: { generationTimeMs: 8300 } })).toBe(8300);
     expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 }, projectId: { generationTimeMs: 8300 } })).toBe(12500);
     expect(component.getLogGenerationTime({})).toBeNull();
+  });
+
+  it('should handle feedback administration methods and error type feedback', () => {
+    mockFeedbackService.feedbacks.set([
+      {
+        _id: 'fb1',
+        title: 'Sugerencia 1',
+        type: 'sugerencia',
+        status: 'pendiente'
+      },
+      {
+        _id: 'fb2',
+        title: 'Error grave',
+        type: 'error',
+        status: 'en_revision',
+        userName: 'Carlos',
+        userEmail: 'carlos@test.com',
+        adminNotes: 'En proceso',
+        createdAt: new Date().toISOString()
+      }
+    ]);
+    fixture.detectChanges();
+
+    expect(component.pendingFeedbackCount()).toBe(1);
+    expect(fixture.nativeElement.textContent).toContain('⚠️ ERROR');
+    expect(fixture.nativeElement.textContent).toContain('💡 SUGERENCIA');
+
+    component.updateFeedbackStatus('fb1', 'en_revision');
+    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith('fb1', 'en_revision');
+
+    const mockEvent = { target: { value: 'Nueva nota' } } as any;
+    component.saveAdminNotes('fb1', mockEvent);
+    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith('fb1', 'pendiente', 'Nueva nota');
+
+    // Test saveAdminNotes with unknown feedback id (falls back to pendiente)
+    component.saveAdminNotes('fb_unknown', mockEvent);
+    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith('fb_unknown', 'pendiente', 'Nueva nota');
+
+    component.deleteFeedback('fb1');
+    expect(mockFeedbackService.deleteFeedback).toHaveBeenCalledWith('fb1');
+  });
+
+  it('should render logs with model only (no provider label) and handle null settings', () => {
+    mockFacade.logs.set([
+      {
+        _id: 'log1',
+        action: 'PROJECT_GENERATE',
+        createdAt: new Date().toISOString(),
+        details: { model: 'custom-model-only' }, // getLogModel is string, getLogProviderLabel is null
+        user: { name: 'Teacher' }
+      }
+    ]);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('custom-model-only');
+
+    // Test settings effect when settings is null
+    mockFacade.settings.set(null);
+    fixture.detectChanges();
+    expect(mockFacade.settings()).toBeNull();
   });
 });

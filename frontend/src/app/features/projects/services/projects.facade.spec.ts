@@ -2,12 +2,15 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ProjectsFacade } from './projects.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { AuthFacade } from '../../auth/services/auth.facade';
+import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 describe('ProjectsFacade', () => {
   let facade: ProjectsFacade;
   let httpMock: HttpTestingController;
   let mockCurriculumFacade: any;
+  let mockAuthFacade: any;
 
   beforeEach(() => {
     mockCurriculumFacade = {
@@ -17,12 +20,17 @@ describe('ProjectsFacade', () => {
       ras: vi.fn(),
       ces: vi.fn()
     };
+
+    mockAuthFacade = {
+      currentUser: signal({ _id: 'u1', name: 'User 1' })
+    };
     
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
         ProjectsFacade,
-        { provide: CurriculumFacade, useValue: mockCurriculumFacade }
+        { provide: CurriculumFacade, useValue: mockCurriculumFacade },
+        { provide: AuthFacade, useValue: mockAuthFacade }
       ]
     });
     
@@ -47,6 +55,18 @@ describe('ProjectsFacade', () => {
     req.flush(mockProjects);
     
     expect(facade.projectsHistory()).toEqual(mockProjects);
+  });
+
+  it('should compute myProjects correctly based on currentUser id', () => {
+    facade.projectsHistory.set([
+      { _id: '1', title: 'P1', userId: 'u1' },
+      { _id: '2', title: 'P2', userId: { _id: 'u1', name: 'User 1' } },
+      { _id: '3', title: 'P3', userId: 'u2' }
+    ]);
+    expect(facade.myProjects().length).toBe(2);
+
+    mockAuthFacade.currentUser.set(null);
+    expect(facade.myProjects().length).toBe(0);
   });
 
   it('should handle error when loading history', () => {

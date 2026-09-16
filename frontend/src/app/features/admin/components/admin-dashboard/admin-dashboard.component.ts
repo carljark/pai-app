@@ -1,7 +1,8 @@
-import { Component, inject, signal, effect } from '@angular/core';
+import { Component, inject, signal, effect, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AdminFacade } from '../../services/admin.facade';
+import { FeedbackService } from '../../../feedback/services/feedback.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -182,6 +183,56 @@ import { AdminFacade } from '../../services/admin.facade';
       }
     </section>
 
+    <!-- Panel del Buzón de Sugerencias y Errores -->
+    <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <h2 style="color: #2c3e50; margin: 0;">📬 Buzón de Sugerencias y Reportes de Errores ({{ pendingFeedbackCount() }} pendientes)</h2>
+        <button (click)="feedbackService.loadFeedbacks().subscribe()" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;">Refrescar buzón</button>
+      </div>
+      
+      <div style="display: grid; gap: 16px; max-height: 500px; overflow-y: auto;">
+        @for (fb of feedbackService.feedbacks(); track fb._id) {
+          <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; background: #fafafa; border-left: 5px solid;"
+               [style.border-left-color]="fb.type === 'error' ? '#ef4444' : '#3b82f6'">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+              <div>
+                <span style="font-size: 0.8rem; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-right: 8px;"
+                      [style.background]="fb.type === 'error' ? '#fee2e2' : '#eff6ff'"
+                      [style.color]="fb.type === 'error' ? '#b91c1c' : '#1d4ed8'">
+                  {{ fb.type === 'error' ? '⚠️ ERROR' : '💡 SUGERENCIA' }}
+                </span>
+                <strong style="color: #2c3e50; font-size: 1.05rem;">{{ fb.title }}</strong>
+                <span style="color: #7f8c8d; font-size: 0.85rem; margin-left: 8px;">por {{ fb.userName }} ({{ fb.userEmail }})</span>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <span style="color: #7f8c8d; font-size: 0.85rem;">{{ fb.createdAt | date:'short' }}</span>
+                <select [ngModel]="fb.status" (ngModelChange)="updateFeedbackStatus(fb._id!, $event)"
+                        style="padding: 4px 8px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.85rem;">
+                  <option value="pendiente">Pendiente</option>
+                  <option value="en_revision">En revisión</option>
+                  <option value="resuelto">Resuelto</option>
+                  <option value="descartado">Descartado</option>
+                </select>
+                <button (click)="deleteFeedback(fb._id!)" style="background: none; border: none; cursor: pointer; color: #ef4444; padding: 4px;" title="Eliminar">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <p style="margin: 0 0 8px 0; font-size: 0.95rem; color: #334155; white-space: pre-wrap;">{{ fb.description }}</p>
+
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 8px;">
+              <input type="text" [placeholder]="'Nota o respuesta de admin...'" [ngModel]="fb.adminNotes" (blur)="saveAdminNotes(fb._id!, $event)"
+                     style="flex: 1; padding: 6px 10px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+            </div>
+          </div>
+        }
+        @if (feedbackService.feedbacks().length === 0) {
+          <div style="text-align: center; color: #7f8c8d; padding: 20px;">No hay sugerencias o reportes recibidos aún.</div>
+        }
+      </div>
+    </section>
+
     <!-- Panel de Registros de Actividad -->
     <section style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px;">
       <h2 style="color: #2c3e50; margin-top: 0;">Registro de Actividad de la Aplicación</h2>
@@ -240,10 +291,13 @@ import { AdminFacade } from '../../services/admin.facade';
 })
 export class AdminDashboardComponent {
   adminFacade = inject(AdminFacade);
+  feedbackService = inject(FeedbackService);
 
   schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
   isSavingSettings = signal(false);
   saveSuccess = signal<boolean>(false);
+
+  pendingFeedbackCount = computed(() => this.feedbackService.feedbacks().filter(f => f.status === 'pendiente').length);
 
   constructor() {
     this.adminFacade.loadUsers();
@@ -254,6 +308,21 @@ export class AdminDashboardComponent {
     });
     this.adminFacade.loadLogs();
     this.adminFacade.loadAnalytics();
+    this.feedbackService.loadFeedbacks().subscribe({ error: () => {} });
+  }
+
+  updateFeedbackStatus(id: string, status: string) {
+    this.feedbackService.updateFeedbackStatus(id, status).subscribe();
+  }
+
+  saveAdminNotes(id: string, event: Event) {
+    const notes = (event.target as HTMLInputElement).value;
+    const currentStatus = this.feedbackService.feedbacks().find(f => f._id === id)?.status || 'pendiente';
+    this.feedbackService.updateFeedbackStatus(id, currentStatus, notes).subscribe();
+  }
+
+  deleteFeedback(id: string) {
+    this.feedbackService.deleteFeedback(id).subscribe();
   }
 
   saveSettings(e: Event) {

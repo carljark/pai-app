@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HistoryViewComponent } from './history-view.component';
 import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { signal } from '@angular/core';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
@@ -11,6 +12,7 @@ describe('HistoryViewComponent', () => {
   let fixture: ComponentFixture<HistoryViewComponent>;
   let mockAppFacade: any;
   let mockProjectsFacade: any;
+  let mockAuthFacade: any;
   let mockTranslationService: any;
 
   beforeEach(async () => {
@@ -23,6 +25,10 @@ describe('HistoryViewComponent', () => {
     mockProjectsFacade = {
       projectsHistory: signal([]),
       historyTab: signal('FPB'),
+    };
+
+    mockAuthFacade = {
+      currentUser: signal({ _id: 'user1', name: 'Eva' })
     };
 
     mockTranslationService = {
@@ -38,7 +44,11 @@ describe('HistoryViewComponent', () => {
         openEditor: 'Abrir Editor',
         deleteFile: 'Borrar archivo',
         aiGemini: 'Primario',
-        aiOpenRouter: 'Secundario'
+        aiOpenRouter: 'Secundario',
+        historyAllProjects: 'Todos los proyectos',
+        historyMyProjects: 'Solo mis proyectos',
+        historyAuthorLabel: 'Creado por',
+        historyMyProjectBadge: 'Mío'
       })
     };
 
@@ -47,6 +57,7 @@ describe('HistoryViewComponent', () => {
       providers: [
         { provide: AppFacade, useValue: mockAppFacade },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
+        { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: TranslationService, useValue: mockTranslationService }
       ],
     }).compileComponents();
@@ -169,5 +180,55 @@ describe('HistoryViewComponent', () => {
     input.value = 'test search';
     input.dispatchEvent(new Event('input'));
     expect(component.searchQuery()).toBe('test search');
+  });
+
+  it('should handle author name, isMyProject, and onlyMine filtering', () => {
+    const projOwn = { _id: '1', title: 'Own Project', tipoNivel: 'FP_BASICA', userId: { _id: 'user1', name: 'Eva' } };
+    const projOther = { _id: '2', title: 'Other Project', tipoNivel: 'FP_BASICA', userId: { _id: 'user2', name: 'Pepe' } };
+    mockProjectsFacade.projectsHistory.set([projOwn, projOther]);
+    fixture.detectChanges();
+
+    expect(component.getAuthorName(projOwn)).toBe('Eva');
+    expect(component.getAuthorName({})).toBeNull();
+    expect(component.isMyProject(projOwn)).toBe(true);
+    expect(component.isMyProject(projOther)).toBe(false);
+
+    expect(component.filteredProjects().length).toBe(2);
+
+    // Toggle onlyMine via DOM button clicks
+    const pills = fixture.nativeElement.querySelectorAll('.filter-pill');
+    pills[1].click(); // Solo mis proyectos
+    fixture.detectChanges();
+    expect(component.onlyMine()).toBe(true);
+    expect(component.filteredProjects().length).toBe(1);
+    expect(component.filteredProjects()[0].title).toBe('Own Project');
+
+    pills[0].click(); // Todos los proyectos
+    fixture.detectChanges();
+    expect(component.onlyMine()).toBe(false);
+    expect(component.filteredProjects().length).toBe(2);
+
+    // Switch tabs via DOM
+    const tabs = fixture.nativeElement.querySelectorAll('.history-tab');
+    tabs[0].click(); // FPB
+    fixture.detectChanges();
+    expect(component.activeTab()).toBe('FPB');
+
+    // Search by author
+    component.searchQuery.set('pepe');
+    expect(component.filteredProjects().length).toBe(1);
+    expect(component.filteredProjects()[0].title).toBe('Other Project');
+  });
+
+  it('should handle isMyProject with null user or id fallback', () => {
+    const proj = { _id: '1', userId: 'user99' };
+    
+    // User null
+    mockAuthFacade.currentUser.set(null);
+    expect(component.isMyProject(proj)).toBe(false);
+
+    // User with id instead of _id and string userId
+    mockAuthFacade.currentUser.set({ id: 'user99' });
+    expect(component.isMyProject(proj)).toBe(true);
   });
 });

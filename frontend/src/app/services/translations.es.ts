@@ -152,5 +152,51 @@ export const TRANSLATIONS_ES = {
   modalRecentActivityTitle: 'Actividad Reciente',
   modalRecentActivityEmpty: 'No hay proyectos recientes en cola ni completados hoy.',
   byAuthorPrefix: 'por',
-  statusCompletedText: 'Completado'
+  statusCompletedText: 'Completado',
+
+  // ÁREA PERSONAL
+  sidebarPersonal: 'Área Personal',
+  personalTitle: 'Área Personal',
+  personalSubtitle: 'Gestiona tus proyectos propios, borradores y creaciones',
+  personalTotalProjects: 'Proyectos Propios',
+  personalDrafts: 'En Borrador',
+  personalPublished: 'Publicados',
+  personalInQueue: 'En Cola / Generando',
+  personalEmpty: 'Aún no has creado ningún proyecto propio.',
+  personalEmptyCta: 'Crear mi primer proyecto',
+  personalFilterAll: 'Todos',
+  personalFilterDrafts: 'Borradores',
+  personalFilterPublished: 'Publicados',
+  personalFilterErrors: 'Con Error',
+  personalSearchPlaceholder: 'Buscar en mis proyectos...',
+
+  // BUZÓN DE SUGERENCIAS Y ERRORES
+  sidebarFeedback: 'Buzón de Sugerencias',
+  feedbackTitle: 'Buzón de Sugerencias y Errores',
+  feedbackSubtitle: 'Envía tus propuestas de mejora o reporta incidencias técnicas',
+  feedbackType: 'Tipo de mensaje',
+  feedbackTypeSuggestion: '💡 Sugerencia de mejora',
+  feedbackTypeError: '⚠️ Reporte de fallo o error',
+  feedbackSubject: 'Asunto o título',
+  feedbackSubjectPlaceholder: 'Ej: Añadir opción para exportar en PDF...',
+  feedbackDesc: 'Descripción detallada',
+  feedbackDescPlaceholder: 'Explica con el mayor detalle posible tu idea o los pasos que causaron el error...',
+  feedbackSend: 'Enviar Mensaje',
+  feedbackSending: 'Enviando...',
+  feedbackSuccess: '¡Mensaje enviado con éxito! Gracias por ayudarnos a mejorar Plappin.',
+  feedbackErrorSending: 'Error al enviar el mensaje. Inténtalo de nuevo.',
+  feedbackMySubmissions: 'Mis envíos anteriores',
+  feedbackNoSubmissions: 'Aún no has enviado ninguna sugerencia o reporte.',
+  feedbackStatusPending: 'Pendiente',
+  feedbackStatusReviewing: 'En revisión',
+  feedbackStatusResolved: 'Resuelto',
+  feedbackStatusDismissed: 'Descartado',
+  feedbackAdminTitle: 'Buzón de Sugerencias y Reportes de Errores',
+  feedbackChangeStatus: 'Cambiar estado',
+
+  // HISTORIAL EXPANDIDO
+  historyAllProjects: 'Todos los proyectos del centro',
+  historyMyProjects: 'Solo mis proyectos',
+  historyAuthorLabel: 'Creado por',
+  historyMyProjectBadge: 'Mío'
 };

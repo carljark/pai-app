@@ -15,6 +15,8 @@ import { GeneratorViewComponent } from './features/generator/components/generato
 import { HistoryViewComponent } from './features/history/components/history-view/history-view.component';
 import { TallerViewComponent } from './features/taller/components/taller-view/taller-view.component';
 import { MapaIntermodularViewComponent } from './features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component';
+import { PersonalViewComponent } from './features/personal/components/personal-view/personal-view.component';
+import { FeedbackViewComponent } from './features/feedback/components/feedback-view/feedback-view.component';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +32,8 @@ import { MapaIntermodularViewComponent } from './features/mapa-intermodular/comp
     SidebarComponent,
     GeneratorViewComponent,
     HistoryViewComponent,
+    PersonalViewComponent,
+    FeedbackViewComponent,
     TallerViewComponent,
     MapaIntermodularViewComponent
   ],

@@ -33,6 +33,7 @@ const withTimeout = <T>(promise: Promise<T>, timeoutMs: number, errorMsg: string
 export interface SingleAiResult {
   text: string;
   model: string;
+  cascadeLog?: string[];
 }
 
 export const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
@@ -53,12 +54,15 @@ export const generateGeminiContent = async (
   const ai = new GoogleGenAI({ httpOptions: { timeout: timeoutMs } });
   const modelsToTry = [preferredModel, ...GEMINI_MODEL_CASCADE.filter(m => m !== preferredModel)];
   let lastError: any = null;
+  const cascadeLog: string[] = [];
 
   for (let i = 0; i < modelsToTry.length; i++) {
     const modelName = modelsToTry[i];
     try {
       if (i > 0) {
         console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
+      } else {
+        console.log(`[Gemini] Iniciando generación con modelo ${modelName}...`);
       }
       const request = ai.models.generateContent({
         model: modelName,
@@ -66,12 +70,16 @@ export const generateGeminiContent = async (
         config: { systemInstruction }
       });
       const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
+      cascadeLog.push(`${modelName}: OK`);
       return {
         text: response.text,
-        model: (response as any).modelVersion || modelName
+        model: (response as any).modelVersion || modelName,
+        cascadeLog
       };
     } catch (err: any) {
       lastError = err;
+      const errorMsg = err.status ? `HTTP ${err.status}` : (err.message || 'error');
+      cascadeLog.push(`${modelName}: ${errorMsg}`);
       console.warn(`[Gemini] Fallo con modelo ${modelName}:`, err.message || err);
     }
   }
@@ -135,6 +143,7 @@ export interface AiGenerationResult {
   provider: 'gemini' | 'openrouter';
   model: string;
   fallbackUsed: boolean;
+  cascadeLog?: string[];
 }
 
 export type PhaseCallback = (phase: 'analizando' | 'reintentando', provider: 'gemini' | 'openrouter') => Promise<void> | void;
@@ -160,9 +169,9 @@ const tryProvider = async (
 ): Promise<AiGenerationResult> => {
   if (isFallback) console.warn(`[AI Service] Fallback activado: intentando con ${provider} tras fallo.`);
   await onPhaseChange?.(isFallback ? 'reintentando' : 'analizando', provider);
-  const { text, model } = await executeProvider(provider, prompt, instruction, isFallback ? undefined : preferredModel);
+  const { text, model, cascadeLog } = await executeProvider(provider, prompt, instruction, isFallback ? undefined : preferredModel);
   console.log(`[AI Service] Respuesta obtenida de ${provider} (modelo exacto: ${model})${isFallback ? ' tras fallback' : ''}`);
-  return { text, provider, model, fallbackUsed: isFallback };
+  return { text, provider, model, fallbackUsed: isFallback, cascadeLog };
 };
 
 export const generateAiContentWithFallback = async (

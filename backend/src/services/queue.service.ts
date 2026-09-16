@@ -26,7 +26,8 @@ async function saveProjectSuccess(
   text: string,
   generationTimeMs: number,
   fallbackUsed = false,
-  model?: string
+  model?: string,
+  cascadeLog?: string[]
 ) {
   const modelNote = model ? ` | modelo: ${model}` : '';
   const providerNote = fallbackUsed ? `(fallback: ${project.usedAiProvider}${modelNote})` : `(${project.usedAiProvider || 'gemini'}${modelNote})`;
@@ -45,7 +46,7 @@ async function saveProjectSuccess(
     userId: project.userId,
     action: 'GENERATE_PROJECT',
     projectId: project._id,
-    details: { generationTimeMs, title: project.title, provider: project.usedAiProvider, fallbackUsed, model }
+    details: { generationTimeMs, title: project.title, provider: project.usedAiProvider, fallbackUsed, model, cascadeLog }
   }).save();
 }
 
@@ -66,9 +67,10 @@ async function handleProjectSuccess(
   text: string,
   generationTimeMs: number,
   fallbackUsed = false,
-  model?: string
+  model?: string,
+  cascadeLog?: string[]
 ) {
-  await saveProjectSuccess(project, text, generationTimeMs, fallbackUsed, model);
+  await saveProjectSuccess(project, text, generationTimeMs, fallbackUsed, model, cascadeLog);
   await notifyProjectSuccess(project, generationTimeMs);
 }
 
@@ -157,7 +159,7 @@ async function executeProjectGeneration(project: any) {
       project.aiModel
     );
     project.usedAiProvider = result.provider;
-    await handleProjectSuccess(project, result.text, Date.now() - startTime, result.fallbackUsed, result.model);
+    await handleProjectSuccess(project, result.text, Date.now() - startTime, result.fallbackUsed, result.model, result.cascadeLog);
   } catch (error: any) {
     await handleProjectError(project, error, Date.now() - startTime);
   }

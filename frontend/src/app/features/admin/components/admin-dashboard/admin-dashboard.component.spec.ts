@@ -279,8 +279,8 @@ describe('AdminDashboardComponent', () => {
     expect(component.getLogModel({ details: { provider: 'openrouter' } })).toBe('openrouter/free');
     expect(component.getLogModel({ projectId: { usedAiProvider: 'openrouter' } })).toBe('openrouter/free');
     // provider gemini in details and in projectId
-    expect(component.getLogModel({ details: { provider: 'gemini' } })).toBe('gemini-3.6-flash');
-    expect(component.getLogModel({ projectId: { usedAiProvider: 'gemini' } })).toBe('gemini-3.6-flash');
+    expect(component.getLogModel({ details: { provider: 'gemini' } })).toBe('gemini-3.8-flash');
+    expect(component.getLogModel({ projectId: { usedAiProvider: 'gemini' } })).toBe('gemini-3.8-flash');
     // null / other
     expect(component.getLogModel({ details: { provider: 'other' } })).toBeNull();
     expect(component.getLogModel({})).toBeNull();

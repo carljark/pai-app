@@ -30,6 +30,7 @@ export class ProjectsFacade {
   // --- ESTADO DEL GENERADOR ---
   methodology = signal<string>('ABP (Aprendizaje Basado en Problemas / Proyectos)');
   selectedAi = signal<'gemini' | 'openrouter'>('gemini');
+  selectedModel = signal<string>('gemini-3.8-flash');
   extraInstructions = signal<string>('');
 
   isGenerating = signal<boolean>(false);
@@ -127,6 +128,7 @@ export class ProjectsFacade {
       tipoNivel,
       language,
       aiProvider: this.selectedAi(),
+      aiModel: this.selectedModel(),
       courseLevel: this.curriculumFacade.curso(),
       title: title || defaultTitle
     };
@@ -143,11 +145,12 @@ export class ProjectsFacade {
     return this.http.put<any>(`${this.apiUrl}/${id}`, { rawText: this.generatedProject(), status });
   }
 
-  rewriteSection(instruction: string, aiProvider?: 'gemini' | 'openrouter') {
+  rewriteSection(instruction: string, aiProvider?: 'gemini' | 'openrouter', aiModel?: string) {
     return this.http.post<any>(`${this.apiUrl}/rewrite`, {
       context: this.generatedProject(),
       instruction,
-      aiProvider: aiProvider || this.selectedAi()
+      aiProvider: aiProvider || this.selectedAi(),
+      aiModel: aiModel || this.selectedModel()
     });
   }
 

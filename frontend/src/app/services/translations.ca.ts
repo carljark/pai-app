@@ -49,6 +49,7 @@ export const TRANSLATIONS_CA = {
   methodologyABR: 'Reptes (ABR)',
   methodologyApS: 'Aprenentatge i Servei (ApS)',
   generatorAiLabel: 'Motor d\'IA',
+  generatorModelLabel: 'Model d\'IA',
   aiGemini: 'Primari',
   aiOpenRouter: 'Secundari',
   generatorExtraInstructionsLabel: 'Instruccions addicionals per a la IA',

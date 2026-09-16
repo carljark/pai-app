@@ -80,6 +80,7 @@ describe('TallerViewComponent', () => {
       popUndo: vi.fn(),
       undoLastChange: vi.fn(),
       selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
+      selectedModel: signal<string>('gemini-3.8-flash'),
     };
 
     mockAuthFacade = {
@@ -422,7 +423,7 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.aiPrompt.set('fix grammar');
     component.rewriteWithAI();
     expect(mockProjectsFacade.pushUndo).toHaveBeenCalled();
-    expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith('fix grammar');
+    expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith('fix grammar', 'gemini', 'gemini-3.8-flash');
     expect(mockProjectsFacade.generatedProject()).toBe('Rewritten full text');
     expect(mockProjectsFacade.isThinking()).toBe(false);
   });
@@ -573,10 +574,22 @@ describe('TallerViewComponent', () => {
     expect(url).toBe('http://download.url/file.txt');
   });
 
-  it('should update selectedAi on onAiChange', () => {
-    const event = { target: { value: 'openrouter' } } as any;
-    component.onAiChange(event);
+  it('should update selectedAi and selectedModel on onAiChange', () => {
+    const eventOpenRouter = { target: { value: 'openrouter' } } as any;
+    component.onAiChange(eventOpenRouter);
     expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
+    expect(mockProjectsFacade.selectedModel()).toBe('openrouter/free');
+
+    const eventGemini = { target: { value: 'gemini' } } as any;
+    component.onAiChange(eventGemini);
+    expect(mockProjectsFacade.selectedAi()).toBe('gemini');
+    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.8-flash');
+  });
+
+  it('should update selectedModel on onModelChange', () => {
+    const event = { target: { value: 'gemini-3.7-flash' } } as any;
+    component.onModelChange(event);
+    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.7-flash');
   });
 
   it('should switch selectedAi if fallback was used in rewriteWithAI', () => {
@@ -594,15 +607,47 @@ describe('TallerViewComponent', () => {
     expect(mockProjectsFacade.generatedProject()).toBe('Rewritten with openrouter');
   });
 
-  it('should show taller-ai-select for admin and hide for non-admin', () => {
+  it('should show taller-ai-select and taller-model-select for admin, handle template change events, and hide for non-admin', () => {
     mockAuthFacade.currentUser.set({ role: 'admin', canUseAi: true });
+    mockProjectsFacade.selectedAi.set('gemini');
     fixture.detectChanges();
-    let select = fixture.nativeElement.querySelector('#taller-ai-select');
-    expect(select).toBeTruthy();
+    let aiSelect = fixture.nativeElement.querySelector('#taller-ai-select');
+    let modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
+    expect(aiSelect).toBeTruthy();
+    expect(modelSelect).toBeTruthy();
 
+    // Trigger change event on taller-model-select in DOM
+    modelSelect.value = 'gemini-3.7-flash';
+    modelSelect.dispatchEvent(new Event('change'));
+    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.7-flash');
+
+    // Trigger change event on taller-ai-select in DOM (switch to openrouter)
+    aiSelect.value = 'openrouter';
+    aiSelect.dispatchEvent(new Event('change'));
+    expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
+    expect(mockProjectsFacade.selectedModel()).toBe('openrouter/free');
+
+    // Detect changes to render the @else branch in template with OpenRouter options
+    fixture.detectChanges();
+    modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
+    expect(modelSelect).toBeTruthy();
+    modelSelect.value = 'anthropic/claude-3.5-sonnet';
+    modelSelect.dispatchEvent(new Event('change'));
+    expect(mockProjectsFacade.selectedModel()).toBe('anthropic/claude-3.5-sonnet');
+
+    // Switch back to gemini in DOM
+    aiSelect.value = 'gemini';
+    aiSelect.dispatchEvent(new Event('change'));
+    expect(mockProjectsFacade.selectedAi()).toBe('gemini');
+    fixture.detectChanges();
+
+    // Switch to non-admin
     mockAuthFacade.currentUser.set({ role: 'teacher', canUseAi: true });
     fixture.detectChanges();
-    select = fixture.nativeElement.querySelector('#taller-ai-select');
-    expect(select).toBeNull();
+    aiSelect = fixture.nativeElement.querySelector('#taller-ai-select');
+    modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
+    expect(aiSelect).toBeNull();
+    expect(modelSelect).toBeNull();
   });
 });
+

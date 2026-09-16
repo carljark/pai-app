@@ -34,11 +34,13 @@ describe('Projects Endpoints', () => {
         ras: ['RA1'],
         methodology: 'ABP',
         tipoNivel: 'FP_BASICA',
-        contextInfo: 'Contexto'
+        contextInfo: 'Contexto',
+        aiModel: 'gemini-3.8-flash'
       });
     
     expect(res.status).toBe(202);
     expect(res.body.project.status).toBe('en_cola');
+    expect(res.body.project.aiModel).toBe('gemini-3.8-flash');
   });
 
   it('POST /api/projects/generate - Debería incluir extraInstructions en el prompt y en el modelo', async () => {
@@ -395,7 +397,8 @@ describe('Projects Endpoints', () => {
       .send({
         context: '# Proyecto Actual',
         instruction: 'Añade resumen',
-        aiProvider: 'openrouter'
+        aiProvider: 'openrouter',
+        aiModel: 'mistralai/mistral-7b-instruct:free'
       });
     expect(resOpenRouter.status).toBe(200);
     expect(resOpenRouter.body.provider).toBeDefined();

@@ -35,31 +35,51 @@ export interface SingleAiResult {
   model: string;
 }
 
+export const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
+export const GEMINI_MODEL_CASCADE = [
+  'gemini-3.8-flash',
+  'gemini-3.7-flash',
+  'gemini-3.6-flash',
+  'gemini-2.5-flash'
+];
+
 export const generateGeminiContent = async (
   userPrompt: string,
   systemInstruction: string,
+  preferredModel = DEFAULT_GEMINI_MODEL,
   timeoutMs = 600_000
 ): Promise<SingleAiResult> => {
   const { GoogleGenAI } = await import('@google/genai');
   const ai = new GoogleGenAI({ httpOptions: { timeout: timeoutMs } });
-  const modelName = 'gemini-3.6-flash';
-  try {
-    const request = ai.models.generateContent({
-      model: modelName,
-      contents: userPrompt,
-      config: { systemInstruction }
-    });
-    const response = await withTimeout(request, timeoutMs, 'Timeout en Gemini (10m): el proveedor no respondió a tiempo');
-    return {
-      text: response.text,
-      model: (response as any).modelVersion || modelName
-    };
-  } catch (err: any) {
-    if (err.name === 'TimeoutError' || err.message?.includes('Timeout en Gemini')) {
-      throw new Error('Timeout en Gemini (10m): el proveedor no respondió a tiempo');
+  const modelsToTry = [preferredModel, ...GEMINI_MODEL_CASCADE.filter(m => m !== preferredModel)];
+  let lastError: any = null;
+
+  for (let i = 0; i < modelsToTry.length; i++) {
+    const modelName = modelsToTry[i];
+    try {
+      if (i > 0) {
+        console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
+      }
+      const request = ai.models.generateContent({
+        model: modelName,
+        contents: userPrompt,
+        config: { systemInstruction }
+      });
+      const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
+      return {
+        text: response.text,
+        model: (response as any).modelVersion || modelName
+      };
+    } catch (err: any) {
+      lastError = err;
+      console.warn(`[Gemini] Fallo con modelo ${modelName}:`, err.message || err);
     }
-    throw err;
   }
+
+  if (lastError?.name === 'TimeoutError' || lastError?.message?.includes('Timeout en Gemini')) {
+    throw new Error('Timeout en Gemini (10m): el proveedor no respondió a tiempo');
+  }
+  throw lastError || new Error('Fallaron todos los modelos de Gemini');
 };
 
 const requestOpenRouterApi = async (apiKey: string, payload: any, timeoutMs = 600_000) => {
@@ -122,11 +142,12 @@ export type PhaseCallback = (phase: 'analizando' | 'reintentando', provider: 'ge
 const executeProvider = async (
   provider: 'gemini' | 'openrouter',
   userPrompt: string,
-  systemInstruction: string
+  systemInstruction: string,
+  preferredModel?: string
 ): Promise<SingleAiResult> => {
   return provider === 'gemini'
-    ? generateGeminiContent(userPrompt, systemInstruction)
-    : generateOpenRouterContent(userPrompt, systemInstruction);
+    ? generateGeminiContent(userPrompt, systemInstruction, preferredModel)
+    : generateOpenRouterContent(userPrompt, systemInstruction, preferredModel);
 };
 
 const tryProvider = async (
@@ -134,11 +155,12 @@ const tryProvider = async (
   isFallback: boolean,
   prompt: string,
   instruction: string,
-  onPhaseChange?: PhaseCallback
+  onPhaseChange?: PhaseCallback,
+  preferredModel?: string
 ): Promise<AiGenerationResult> => {
   if (isFallback) console.warn(`[AI Service] Fallback activado: intentando con ${provider} tras fallo.`);
   await onPhaseChange?.(isFallback ? 'reintentando' : 'analizando', provider);
-  const { text, model } = await executeProvider(provider, prompt, instruction);
+  const { text, model } = await executeProvider(provider, prompt, instruction, isFallback ? undefined : preferredModel);
   console.log(`[AI Service] Respuesta obtenida de ${provider} (modelo exacto: ${model})${isFallback ? ' tras fallback' : ''}`);
   return { text, provider, model, fallbackUsed: isFallback };
 };
@@ -147,7 +169,8 @@ export const generateAiContentWithFallback = async (
   userPrompt: string,
   systemInstruction: string,
   preferredProvider: 'gemini' | 'openrouter' = 'gemini',
-  onPhaseChange?: PhaseCallback
+  onPhaseChange?: PhaseCallback,
+  preferredModel?: string
 ): Promise<AiGenerationResult> => {
   const order: Array<'gemini' | 'openrouter'> = preferredProvider === 'openrouter'
     ? ['openrouter', 'gemini']
@@ -157,7 +180,7 @@ export const generateAiContentWithFallback = async (
   for (let i = 0; i < order.length; i++) {
     const provider = order[i];
     try {
-      return await tryProvider(provider, i > 0, userPrompt, systemInstruction, onPhaseChange);
+      return await tryProvider(provider, i > 0, userPrompt, systemInstruction, onPhaseChange, preferredModel);
     } catch (err: any) {
       lastError = err;
       console.error(`[AI Service] Error con proveedor ${provider}:`, err.message || err);

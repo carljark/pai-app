@@ -212,7 +212,8 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
       aiPrompt: userPrompt, // Guardamos el prompt para el worker
       aiInstruction: baseInstruction, // Guardamos el system prompt
       extraInstructions: typeof extraInstructions === 'string' && extraInstructions.trim() ? extraInstructions.trim() : undefined,
-      aiProvider: req.body.aiProvider === 'openrouter' ? 'openrouter' : 'gemini'
+      aiProvider: req.body.aiProvider === 'openrouter' ? 'openrouter' : 'gemini',
+      aiModel: req.body.aiModel ? String(req.body.aiModel).trim() : undefined
     });
     const savedProject = await newProject.save();
 
@@ -350,7 +351,7 @@ REGLAS ESTRICTAS:
 
 export const rewriteSection = async (req: any, res: Response) => {
   try {
-    const { context, instruction, aiProvider } = req.body;
+    const { context, instruction, aiProvider, aiModel } = req.body;
     if (!context || !instruction) {
       return res.status(400).json({ error: "Falta el contenido del proyecto o la instrucción" });
     }
@@ -360,7 +361,9 @@ export const rewriteSection = async (req: any, res: Response) => {
     const result = await generateAiContentWithFallback(
       prompt,
       "Eres un asistente pedagógico de edición curricular experto, directo y preciso.",
-      preferredProvider
+      preferredProvider,
+      undefined,
+      aiModel
     );
     const cleanText = (result.text || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
     console.log(`[Project/Rewrite] Reescritura completada con proveedor ${result.provider} (modelo: ${result.model})`);

@@ -101,6 +101,12 @@ export class TallerViewComponent {
   onAiChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
     this.projects.selectedAi.set(value);
+    this.projects.selectedModel.set(value === 'gemini' ? 'gemini-3.8-flash' : 'openrouter/free');
+  }
+
+  onModelChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    this.projects.selectedModel.set(value);
   }
 
   private handleRewriteSuccess(res: any) {
@@ -141,7 +147,7 @@ export class TallerViewComponent {
 
     this.projects.pushUndo();
     this.projects.isThinking.set(true);
-    this.projects.rewriteSection(instruction).subscribe({
+    this.projects.rewriteSection(instruction, this.projects.selectedAi(), this.projects.selectedModel()).subscribe({
       next: (res) => this.handleRewriteSuccess(res),
       error: (err) => this.handleRewriteError(err)
     });

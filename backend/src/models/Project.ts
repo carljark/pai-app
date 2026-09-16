@@ -18,6 +18,7 @@ const ProjectSchema = new mongoose.Schema({
   generationStartedAt: Date,
   generationTimeMs: Number,
   aiProvider: { type: String, enum: ['gemini', 'openrouter'], default: 'gemini' },
+  aiModel: String,
   usedAiProvider: String,
   usedModel: String,
   phase: String,

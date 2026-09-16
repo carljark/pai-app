@@ -49,6 +49,7 @@ export const TRANSLATIONS_ES = {
   methodologyABR: 'Retos (ABR)',
   methodologyApS: 'Aprendizaje y Servicio (ApS)',
   generatorAiLabel: 'Motor de IA',
+  generatorModelLabel: 'Modelo de IA',
   aiGemini: 'Primario',
   aiOpenRouter: 'Secundario',
   generatorExtraInstructionsLabel: 'Instrucciones adicionales para la IA',

@@ -153,7 +153,8 @@ async function executeProjectGeneration(project: any) {
       project.aiPrompt || '',
       project.aiInstruction || '',
       project.aiProvider || 'gemini',
-      notifyPhase
+      notifyPhase,
+      project.aiModel
     );
     project.usedAiProvider = result.provider;
     await handleProjectSuccess(project, result.text, Date.now() - startTime, result.fallbackUsed, result.model);

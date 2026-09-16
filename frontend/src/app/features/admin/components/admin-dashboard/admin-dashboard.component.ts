@@ -361,7 +361,7 @@ export class AdminDashboardComponent {
     if (log.projectId?.usedModel) return log.projectId.usedModel;
     const p = log.details?.provider || log.projectId?.usedAiProvider;
     if (p === 'openrouter') return 'openrouter/free';
-    if (p === 'gemini') return 'gemini-3.6-flash';
+    if (p === 'gemini') return 'gemini-3.8-flash';
     return null;
   }
 

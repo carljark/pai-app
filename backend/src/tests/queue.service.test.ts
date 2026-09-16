@@ -47,7 +47,7 @@ describe('Queue Service', () => {
       return {
         text: 'Contenido AI',
         provider: 'gemini',
-        model: 'gemini-3.6-flash',
+        model: 'gemini-3.8-flash',
         fallbackUsed: false
       };
     });
@@ -58,12 +58,12 @@ describe('Queue Service', () => {
 
     expect(mockProject.status).toBe('borrador');
     expect(mockProject.generatedContent?.rawText).toBe('Contenido AI');
-    expect((mockProject as any).usedModel).toBe('gemini-3.6-flash');
+    expect((mockProject as any).usedModel).toBe('gemini-3.8-flash');
     expect((mockProject as any).generationTimeMs).toBeDefined();
     expect((mockProject as any).generationTimeMs).toBeGreaterThanOrEqual(0);
     expect(mockProject.save).toHaveBeenCalled();
     expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('[Queue/AI]'));
-    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('generado por (gemini | modelo: gemini-3.6-flash)'));
+    expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('generado por (gemini | modelo: gemini-3.8-flash)'));
     expect(sseService.sendToUser).toHaveBeenCalledWith('user1', expect.objectContaining({
       type: 'PROJECT_COMPLETED',
       generationTimeMs: expect.any(Number)

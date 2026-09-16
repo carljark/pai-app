@@ -66,6 +66,7 @@ describe('App', () => {
       hasActiveGeneration: signal(false),
       methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
       selectedAi: signal('gemini'),
+      selectedModel: signal('gemini-3.8-flash'),
       historyTab: signal('FPB'),
       extraInstructions: signal('')
     };

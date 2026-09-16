@@ -57,7 +57,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
         </div>
 
         @if (auth.currentUser()?.role === 'admin') {
-          <div class="form-group" style="flex: 1.5; min-width: 240px; margin-bottom: 0;">
+          <div class="form-group" style="flex: 1.2; min-width: 180px; margin-bottom: 0;">
             <label for="generator-ai-select">{{ trans.t().generatorAiLabel }}</label>
             <select 
               id="generator-ai-select"
@@ -66,6 +66,30 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
               (change)="onAiChange($event)">
               <option value="gemini">{{ trans.t().aiGemini }}</option>
               <option value="openrouter">{{ trans.t().aiOpenRouter }}</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="flex: 1.8; min-width: 220px; margin-bottom: 0;">
+            <label for="generator-model-select">{{ trans.t().generatorModelLabel }}</label>
+            <select 
+              id="generator-model-select"
+              class="form-select" 
+              [value]="projects.selectedModel()" 
+              (change)="onModelChange($event)">
+              @if (projects.selectedAi() === 'gemini') {
+                <option value="gemini-3.8-flash">Gemini 3.8 Flash (Último)</option>
+                <option value="gemini-3.7-flash">Gemini 3.7 Flash</option>
+                <option value="gemini-3.6-flash">Gemini 3.6 Flash</option>
+                <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+                <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
+                <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro Preview</option>
+              } @else {
+                <option value="openrouter/free">Auto Gratuito (openrouter/free)</option>
+                <option value="meta-llama/llama-3.3-70b-instruct:free">Llama 3.3 70B (Free)</option>
+                <option value="mistralai/mistral-7b-instruct:free">Mistral 7B (Free)</option>
+                <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+                <option value="anthropic/claude-3.7-sonnet">Claude 3.7 Sonnet</option>
+              }
             </select>
           </div>
         }
@@ -118,6 +142,12 @@ export class GeneratorViewComponent {
   onAiChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
     this.projects.selectedAi.set(value);
+    this.projects.selectedModel.set(value === 'gemini' ? 'gemini-3.8-flash' : 'openrouter/free');
+  }
+
+  onModelChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    this.projects.selectedModel.set(value);
   }
 
   onExtraInstructionsChange(event: Event) {

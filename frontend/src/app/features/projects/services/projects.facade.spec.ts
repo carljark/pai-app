@@ -135,6 +135,7 @@ describe('ProjectsFacade', () => {
       tipoNivel: 'FP_BASICA',
       language: 'castellano',
       aiProvider: 'gemini',
+      aiModel: 'gemini-3.8-flash',
       courseLevel: '2º',
       title: 'Custom Title'
     });
@@ -212,7 +213,7 @@ describe('ProjectsFacade', () => {
     expect(facade.updateProjectStatus('publicado')).toBeUndefined();
   });
 
-  it('should rewrite section with default and explicit aiProvider', () => {
+  it('should rewrite section with default and explicit aiProvider and aiModel', () => {
     facade.generatedProject.set('full text');
     facade.rewriteSection('rewrite this').subscribe();
     
@@ -221,13 +222,15 @@ describe('ProjectsFacade', () => {
     expect(req1.request.body).toEqual({
       context: 'full text',
       instruction: 'rewrite this',
-      aiProvider: 'gemini'
+      aiProvider: 'gemini',
+      aiModel: 'gemini-3.8-flash'
     });
     req1.flush({});
 
-    facade.rewriteSection('rewrite this', 'openrouter').subscribe();
+    facade.rewriteSection('rewrite this', 'openrouter', 'mistralai/mistral-7b-instruct:free').subscribe();
     const req2 = httpMock.expectOne('/api/projects/rewrite');
     expect(req2.request.body.aiProvider).toBe('openrouter');
+    expect(req2.request.body.aiModel).toBe('mistralai/mistral-7b-instruct:free');
     req2.flush({});
   });
 

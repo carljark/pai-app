@@ -39,7 +39,8 @@ describe('GeneratorViewComponent', () => {
       generatingBtn: 'Generating',
       generatorExtraInstructionsLabel: 'Instrucciones adicionales para la IA',
       generatorExtraInstructionsOptional: '(Opcional)',
-      generatorExtraInstructionsPlaceholder: 'Ej: Enfocar...'
+      generatorExtraInstructionsPlaceholder: 'Ej: Enfocar...',
+      generatorModelLabel: 'Modelo de IA'
     })
   };
 
@@ -63,6 +64,7 @@ describe('GeneratorViewComponent', () => {
     isGenerating: signal(false),
     methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
     selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
+    selectedModel: signal('gemini-3.8-flash'),
     extraInstructions: signal('')
   };
 
@@ -152,21 +154,50 @@ describe('GeneratorViewComponent', () => {
     expect(mockProjects.methodology()).toContain('ABR');
   });
 
-  it('should change selectedAi on select change when admin', () => {
+  it('should change selectedAi and default selectedModel on select change when admin', () => {
     mockAuthFacade.currentUser.set({ role: 'admin' });
+    mockProjects.selectedAi.set('gemini');
+    mockProjects.selectedModel.set('gemini-3.8-flash');
     fixture.detectChanges();
     const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select')).nativeElement;
     
     aiSelect.value = 'openrouter';
     aiSelect.dispatchEvent(new Event('change'));
     expect(mockProjects.selectedAi()).toBe('openrouter');
+    expect(mockProjects.selectedModel()).toBe('openrouter/free');
+
+    aiSelect.value = 'gemini';
+    aiSelect.dispatchEvent(new Event('change'));
+    expect(mockProjects.selectedAi()).toBe('gemini');
+    expect(mockProjects.selectedModel()).toBe('gemini-3.8-flash');
   });
 
-  it('should not show generator-ai-select for non-admin users', () => {
+  it('should change selectedModel on model select change when admin', () => {
+    mockAuthFacade.currentUser.set({ role: 'admin' });
+    mockProjects.selectedAi.set('gemini');
+    fixture.detectChanges();
+
+    const modelSelect = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;
+    modelSelect.value = 'gemini-2.5-pro';
+    modelSelect.dispatchEvent(new Event('change'));
+    expect(mockProjects.selectedModel()).toBe('gemini-2.5-pro');
+
+    // Switch to OpenRouter and choose Claude model
+    mockProjects.selectedAi.set('openrouter');
+    fixture.detectChanges();
+    const modelSelectOR = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;
+    modelSelectOR.value = 'anthropic/claude-3.5-sonnet';
+    modelSelectOR.dispatchEvent(new Event('change'));
+    expect(mockProjects.selectedModel()).toBe('anthropic/claude-3.5-sonnet');
+  });
+
+  it('should not show generator-ai-select or generator-model-select for non-admin users', () => {
     mockAuthFacade.currentUser.set({ role: 'teacher' });
     fixture.detectChanges();
     const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select'));
+    const modelSelect = fixture.debugElement.query(By.css('#generator-model-select'));
     expect(aiSelect).toBeNull();
+    expect(modelSelect).toBeNull();
   });
 
   it('should update extraInstructions on textarea input', () => {

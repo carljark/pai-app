@@ -186,9 +186,9 @@ describe('GeneratorViewComponent', () => {
     mockProjects.selectedAi.set('openrouter');
     fixture.detectChanges();
     const modelSelectOR = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;
-    modelSelectOR.value = 'anthropic/claude-3.5-sonnet';
+    modelSelectOR.value = 'nex-agi/nex-n2.5-pro:free';
     modelSelectOR.dispatchEvent(new Event('change'));
-    expect(mockProjects.selectedModel()).toBe('anthropic/claude-3.5-sonnet');
+    expect(mockProjects.selectedModel()).toBe('nex-agi/nex-n2.5-pro:free');
   });
 
   it('should not show generator-ai-select or generator-model-select for non-admin users', () => {

@@ -631,9 +631,9 @@ describe('TallerViewComponent', () => {
     fixture.detectChanges();
     modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
     expect(modelSelect).toBeTruthy();
-    modelSelect.value = 'anthropic/claude-3.5-sonnet';
+    modelSelect.value = 'nex-agi/nex-n2.5-pro:free';
     modelSelect.dispatchEvent(new Event('change'));
-    expect(mockProjectsFacade.selectedModel()).toBe('anthropic/claude-3.5-sonnet');
+    expect(mockProjectsFacade.selectedModel()).toBe('nex-agi/nex-n2.5-pro:free');
 
     // Switch back to gemini in DOM
     aiSelect.value = 'gemini';

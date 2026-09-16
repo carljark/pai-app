@@ -84,11 +84,12 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
                 <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
                 <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro Preview</option>
               } @else {
-                <option value="openrouter/free">Auto Gratuito (openrouter/free)</option>
-                <option value="meta-llama/llama-3.3-70b-instruct:free">Llama 3.3 70B (Free)</option>
-                <option value="mistralai/mistral-7b-instruct:free">Mistral 7B (Free)</option>
-                <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
-                <option value="anthropic/claude-3.7-sonnet">Claude 3.7 Sonnet</option>
+                <option value="openrouter/free">Auto Gratuito (Recomendado)</option>
+                <option value="nex-agi/nex-n2.5-pro:free">Nex-N2.5 Pro (Razonamiento)</option>
+                <option value="dots-studio/dots-3-note-preview:free">Dots3 Note 512k (Documentos)</option>
+                <option value="inclusionai/ling-3.0-flash-vl:free">Ling 3.0 Flash (Rápido)</option>
+                <option value="cohere/north-mini-code:free">Cohere North Mini</option>
+                <option value="liquid/lfm-2.5-2.6b:free">LiquidAI LFM 2.5</option>
               }
             </select>
           </div>

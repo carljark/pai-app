@@ -75,13 +75,14 @@ describe('HistoryViewComponent', () => {
 
   it('should render FP_BASICA projects by default', () => {
     mockProjectsFacade.projectsHistory.set([
-      { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA', usedModel: 'gemini-3.6-flash' },
+      { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA', usedModel: 'gemini-3.6-flash', generationTimeMs: 12400 },
       { _id: '2', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
     const element = fixture.nativeElement;
     expect(element.textContent).toContain('Proj FPB');
     expect(element.textContent).toContain('Primario');
+    expect(element.textContent).toContain('12.4s');
     expect(element.textContent).not.toContain('gemini-3.6-flash');
     expect(element.textContent).not.toContain('Proj ESO');
   });

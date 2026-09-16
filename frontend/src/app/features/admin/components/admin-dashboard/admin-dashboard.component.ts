@@ -205,9 +205,9 @@ import { AdminFacade } from '../../services/admin.facade';
               }
             </p>
 
-            @if (log.details?.generationTimeMs) {
+            @if (getLogGenerationTime(log)) {
               <p style="margin: 0; font-size: 0.85rem; color: #27ae60;">
-                ⏱️ Tiempo de generación de la IA: <strong>{{ (log.details.generationTimeMs / 1000).toFixed(1) }}s</strong>
+                ⏱️ Tiempo de generación de la IA: <strong>{{ (getLogGenerationTime(log)! / 1000).toFixed(1) }}s</strong>
               </p>
             }
             @if (getLogModel(log) || getLogProviderLabel(log)) {
@@ -301,5 +301,9 @@ export class AdminDashboardComponent {
     if (p === 'openrouter') return 'Secundario';
     if (p === 'gemini') return 'Primario';
     return null;
+  }
+
+  getLogGenerationTime(log: any): number | null {
+    return log.details?.generationTimeMs || log.projectId?.generationTimeMs || null;
   }
 }

@@ -83,6 +83,11 @@ import { TranslationService } from '../../../../services/translation.service';
                   {{ getAiProviderLabel(project) }}
                 </span>
               }
+              @if (project.generationTimeMs) {
+                <span style="font-size: 0.75rem; background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">
+                  ⏱️ {{ (project.generationTimeMs / 1000).toFixed(1) }}s
+                </span>
+              }
             </div>
           </div>
           <div style="display: flex; gap: 10px;">

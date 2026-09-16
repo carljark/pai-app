@@ -280,5 +280,11 @@ describe('AdminDashboardComponent', () => {
     expect(component.getLogProviderLabel({ projectId: { usedAiProvider: 'gemini' } })).toBe('Primario');
     expect(component.getLogProviderLabel({ details: { provider: 'other' } })).toBeNull();
     expect(component.getLogProviderLabel({})).toBeNull();
+
+    // getLogGenerationTime
+    expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 } })).toBe(12500);
+    expect(component.getLogGenerationTime({ projectId: { generationTimeMs: 8300 } })).toBe(8300);
+    expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 }, projectId: { generationTimeMs: 8300 } })).toBe(12500);
+    expect(component.getLogGenerationTime({})).toBeNull();
   });
 });

@@ -76,9 +76,16 @@ describe('Admin Endpoints', () => {
     
     // Test éxito
     await new ActivityLog({ userId: new mongoose.Types.ObjectId(), action: 'TEST' }).save();
+    const Project = mongoose.model('Project');
+    const projWithTime = await new Project({ title: 'Proyecto Medido', generationTimeMs: 14500, usedAiProvider: 'openrouter', usedModel: 'openrouter/free' }).save();
+    await new ActivityLog({ userId: new mongoose.Types.ObjectId(), action: 'UPDATE_PROJECT', projectId: projWithTime._id, details: { title: 'Proyecto Medido' } }).save();
+
     const res = await request(app).get('/api/admin/logs').set('Authorization', `Bearer ${token}`);
     expect(res.status).toBe(200);
     expect(res.body.length).toBeGreaterThan(0);
+    const populatedLog = res.body.find((l: any) => l.projectId?._id === projWithTime._id.toString());
+    expect(populatedLog).toBeDefined();
+    expect(populatedLog.projectId.generationTimeMs).toBe(14500);
 
     // Test error 500
     const spyFind = vi.spyOn(ActivityLog, 'find').mockImplementationOnce(() => {

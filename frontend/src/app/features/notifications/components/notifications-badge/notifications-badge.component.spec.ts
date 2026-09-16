@@ -164,5 +164,25 @@ describe('NotificationsBadgeComponent', () => {
     expect(compiled.textContent).toContain('Completado');
     expect(compiled.textContent).toContain('15.4s');
   });
+
+  it('should render author using userEmail when present in notifications', () => {
+    notificationsFacadeMock.notifications.set([
+      {
+        id: 'n2',
+        title: 'Proyecto Matemáticas',
+        userEmail: 'eva@test.com',
+        userName: 'Eva',
+        status: 'borrador',
+        modules: ['3061'],
+        generationTimeMs: 12000,
+        timestamp: new Date()
+      }
+    ]);
+    component.openNotifications();
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('por eva@test.com');
+  });
 });
 

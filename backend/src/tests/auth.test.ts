@@ -1,7 +1,8 @@
-import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll, beforeEach, vi } from 'vitest';
 import request from 'supertest';
 import { app } from '../server';
 import { connectDB, closeDB, clearDB } from './testSetup';
+import { User } from '../models/User';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -77,15 +78,13 @@ describe('Auth Endpoints', () => {
     expect(resNo.status).toBe(400);
 
     // 500 Register
-    const mongoose = (await import('mongoose')).default;
-    const User = mongoose.model('User');
-    const spy = (await import('vitest')).vi.spyOn(User, 'findOne').mockRejectedValueOnce(new Error('DB'));
+    const spy = vi.spyOn(User, 'findOne').mockRejectedValueOnce(new Error('DB'));
     const res500reg = await request(app).post('/api/auth/register').send({ email: 'err@test.com', password: '123', name: 'A' });
     expect(res500reg.status).toBe(500);
     spy.mockRestore();
 
     // 500 Login
-    const spy2 = (await import('vitest')).vi.spyOn(User, 'findOne').mockRejectedValueOnce(new Error('DB'));
+    const spy2 = vi.spyOn(User, 'findOne').mockRejectedValueOnce(new Error('DB'));
     const res500log = await request(app).post('/api/auth/login').send({ email: 'err@test.com', password: '123' });
     expect(res500log.status).toBe(500);
     spy2.mockRestore();

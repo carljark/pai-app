@@ -36,8 +36,8 @@ import { TranslationService } from '../../../../services/translation.service';
                   <strong style="color: #2c3e50; font-size: 0.95rem; line-height: 1.3;">
                     {{ p.modules && p.modules.length > 0 ? p.modules.join(' + ') : (p.title || 'Múltiples RA/CE') }}
                   </strong>
-                  @if (p.userName) {
-                    <span style="font-size: 0.8rem; color: #7f8c8d; font-weight: normal; margin-left: 6px;">{{ trans.t().byAuthorPrefix }} {{ p.userName }}</span>
+                  @if (p.userEmail || p.userId?.email || p.userName) {
+                    <span style="font-size: 0.8rem; color: #7f8c8d; font-weight: normal; margin-left: 6px;">{{ trans.t().byAuthorPrefix }} {{ p.userEmail || p.userId?.email || p.userName }}</span>
                   }
                 </div>
                 <span style="font-size: 0.85rem; color: #95a5a6; white-space: nowrap; margin-left: 15px;">

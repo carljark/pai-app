@@ -34,11 +34,11 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
             [value]="curriculum.curso()" 
             (change)="onCourseChange($event)">
             @if (curriculum.tipoNivel() === 'FP_BASICA') {
-              <option value="1º">{{ trans.t().firstYearOption }}</option>
-              <option value="2º">{{ trans.t().secondYearOption }}</option>
+              <option value="1º" [selected]="curriculum.curso() === '1º'">{{ trans.t().firstYearOption }}</option>
+              <option value="2º" [selected]="curriculum.curso() === '2º'">{{ trans.t().secondYearOption }}</option>
             } @else {
-              <option value="3º">{{ trans.t().thirdYearOption }}</option>
-              <option value="4º">{{ trans.t().fourthYearOption }}</option>
+              <option value="3º" [selected]="curriculum.curso() === '3º'">{{ trans.t().thirdYearOption }}</option>
+              <option value="4º" [selected]="curriculum.curso() === '4º'">{{ trans.t().fourthYearOption }}</option>
             }
           </select>
         </div>

@@ -45,7 +45,10 @@ export class NotificationsFacade {
     const userId = user?._id;
     this.http.get<any[]>('/api/notifications').subscribe({
       next: (items) => {
-        const mapped = (items || []).map(i => NotificationMapper.fromDbEntity(i, userId));
+        const validItems = (items || []).filter(i =>
+          Boolean(i.projectId || (i.status && ['en_cola', 'generando', 'borrador', 'publicado', 'error'].includes(i.status)))
+        );
+        const mapped = validItems.map(i => NotificationMapper.fromDbEntity(i, userId));
         this.notifications.set(mapped);
       },
       error: (err) => console.error('Error loading notifications', err)
@@ -53,6 +56,10 @@ export class NotificationsFacade {
   }
 
   private handleSseEvent(raw: RawNotificationEvent) {
+    if (raw.type === 'CONNECTED' || (!raw.projectId && !raw.notification?.projectId)) {
+      return;
+    }
+
     const user = this.authService.currentUser();
     const userId = user?._id;
     const mapped = NotificationMapper.fromRawEvent(raw, userId);

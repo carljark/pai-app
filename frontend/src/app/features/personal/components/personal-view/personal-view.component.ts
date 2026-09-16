@@ -181,7 +181,7 @@ import { LayoutService } from '../../../../services/layout.service';
               <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
                 <h3 style="margin: 0; font-size: 1.15rem; color: var(--c-text);">{{ getDisplayTitle(project) }}</h3>
                 <span style="font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 12px; font-weight: 600;">
-                  {{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : trans.t().courseLevelFP }}
+                  {{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : trans.t().courseLevelFP }}
                 </span>
               </div>
               

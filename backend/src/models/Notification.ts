@@ -4,6 +4,7 @@ const NotificationSchema = new mongoose.Schema({
   projectId: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   userName: { type: String, default: 'Profesor' },
+  userEmail: { type: String },
   type: { type: String, required: true }, // 'PROJECT_STATUS' | 'PROJECT_COMPLETED' | 'PROJECT_ERROR' | 'INFO'
   title: { type: String, required: true },
   message: { type: String, required: true },

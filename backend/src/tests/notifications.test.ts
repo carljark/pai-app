@@ -36,6 +36,8 @@ describe('Notifications API and Service', () => {
     const titles = res.body.map((n: any) => n.title);
     expect(titles).toContain('Proyecto Backfill');
     expect(titles).toContain('Proyecto Educativo');
+    const backfilledWithUser = res.body.find((n: any) => n.title === 'Proyecto Backfill');
+    expect(backfilledWithUser.userEmail).toBe('notif_user1@test.com');
   });
 
 
@@ -122,14 +124,28 @@ describe('Notifications API and Service', () => {
 
     expect(result).toBeTruthy();
     expect(result?.title).toBe('Generando Test');
+    expect(result?.userEmail).toBe('notif_sync@test.com');
     expect(sseService.broadcast).toHaveBeenCalledWith(expect.objectContaining({
       type: 'PROJECT_STATUS',
-      projectId: project._id
+      projectId: project._id,
+      userEmail: 'notif_sync@test.com'
     }));
 
-    const result2 = await syncProjectNotification(project);
+    const result2 = await syncProjectNotification(project, { userEmail: 'custom@test.com' });
     expect(result2).toBeTruthy();
     expect(result2?.type).toBe('PROJECT_STATUS');
+    expect(result2?.userEmail).toBe('custom@test.com');
+
+    // Test with pre-populated project.userId object
+    const projectWithPopulatedUser = {
+      _id: new mongoose.Types.ObjectId(),
+      userId: { _id: user._id, email: 'populated@test.com', name: 'Populated User' },
+      status: 'borrador'
+    };
+    const result3 = await syncProjectNotification(projectWithPopulatedUser);
+    expect(result3).toBeTruthy();
+    expect(result3?.userEmail).toBe('populated@test.com');
+    expect(result3?.userName).toBe('Populated User');
   });
 
 

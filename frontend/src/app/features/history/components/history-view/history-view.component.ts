@@ -114,6 +114,11 @@ import { TranslationService } from '../../../../services/translation.service';
               </span>
               <span style="font-size: 0.85rem; color: var(--c-text-muted);">{{ project.createdAt | date:'short' }}</span>
               <span style="font-size: 0.85rem; color: var(--c-text-muted);">• {{ project.modules?.join(', ') || project.generatedContent?.modules?.join(', ') || 'Varios' }}</span>
+              @if (project.courseLevel) {
+                <span style="font-size: 0.75rem; background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
+                  {{ project.courseLevel }}
+                </span>
+              }
               @if (getAuthorName(project)) {
                 <span style="font-size: 0.85rem; color: var(--c-text-muted);">• 👤 {{ getAuthorName(project) }}</span>
               }

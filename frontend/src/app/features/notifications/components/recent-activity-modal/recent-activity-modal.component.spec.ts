@@ -70,4 +70,17 @@ describe('RecentActivityModalComponent', () => {
     expect(component.formatDurationMs(undefined)).toBe('');
     expect(component.getElapsedTime(null)).toBe('00:00');
   });
+
+  it('should display author using userEmail when available, falling back to userName', () => {
+    const projects = [
+      { _id: '1', status: 'borrador', userEmail: 'profesor@test.com', userName: 'Profesor' },
+      { _id: '2', status: 'borrador', userName: 'SoloNombre' }
+    ];
+    componentRef.setInput('recentProjects', projects);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('profesor@test.com');
+    expect(compiled.textContent).toContain('SoloNombre');
+  });
 });

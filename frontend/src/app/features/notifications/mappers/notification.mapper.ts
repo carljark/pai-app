@@ -37,14 +37,19 @@ export class NotificationMapper {
     const isRead = Boolean(currentUserId && Array.isArray(db.readBy) &&
       db.readBy.some((id: any) => id.toString() === currentUserId.toString()));
 
+    const user = db.userId && typeof db.userId === 'object' ? db.userId : null;
+    const userEmail = db.userEmail || user?.email;
+    const userName = db.userName || user?.name || 'Profesor';
+
     return {
       id: db._id?.toString() || db.id || Date.now().toString(),
       type: typeMap[db.type] || 'INFO',
       title: db.title || 'Proyecto Educativo',
       message: db.message || '',
       projectId: db.projectId?.toString(),
-      userId: db.userId?.toString(),
-      userName: db.userName || 'Profesor',
+      userId: user?._id?.toString() || db.userId?.toString(),
+      userName,
+      userEmail,
       modules: db.modules || [],
       rasCount: db.rasCount || 0,
       phase: db.phase,
@@ -62,13 +67,19 @@ export class NotificationMapper {
       return this.fromDbEntity(raw.notification, currentUserId);
     }
     const meta = resolveNotificationMeta(raw);
+    const user = raw.project?.userId && typeof raw.project.userId === 'object' ? raw.project.userId : null;
+    const userEmail = raw.userEmail || user?.email;
+    const userName = raw.userName || user?.name || 'Profesor';
+
     return {
       id: raw.projectId || (Date.now().toString() + Math.random().toString(36).substring(7)),
       type: meta.type,
       title: meta.title,
       message: meta.message,
       projectId: raw.projectId,
-      userName: raw.userName || raw.project?.userId?.name || 'Profesor',
+      userId: user?._id?.toString() || (typeof raw.project?.userId === 'string' ? raw.project.userId : undefined),
+      userName,
+      userEmail,
       modules: raw.modules || raw.project?.modules || [],
       rasCount: raw.rasCount ?? raw.project?.ras?.length ?? 0,
       phase: raw.phase || raw.project?.phase,

@@ -32,6 +32,38 @@ export const streamUpdates = (req: any, res: Response) => {
   });
 };
 
+export const formatCriterion = (c: any): string => {
+  if (!c) return '';
+  if (typeof c === 'string') return c.trim();
+  if (typeof c === 'object') {
+    const id = c.criterio_id || c.id || '';
+    const desc = c.description || c.desc || '';
+    if (id && desc) return `${id}: ${desc}`.trim();
+    return (desc || id || '').trim();
+  }
+  return String(c).trim();
+};
+
+export const filterCriteriaByCourse = (critList: any[], level?: string): any[] => {
+  if (!critList || !Array.isArray(critList) || critList.length === 0) return [];
+  const matchDigit = (level || '').match(/\d/);
+  if (!matchDigit) return critList;
+  const targetDigit = matchDigit[0];
+
+  return critList.filter(c => {
+    const text = typeof c === 'string' ? c : `${c.criterio_id || ''} ${c.description || ''}`;
+    // Revisa si especifica explícitamente curso de ESO o FP (ej: "3º ESO", "(4º ESO)", "1º FP", "(2º FP)")
+    const hasSpecificCourseMatch = text.match(/(?:[1-4])[º|ª|o|\.]?\s*(?:de\s*)?(?:ESO|FP)|\([1-4][º|o]?\s*(?:ESO|FP)\)/i);
+    if (hasSpecificCourseMatch) {
+      const critDigitMatch = hasSpecificCourseMatch[0].match(/\d/);
+      if (critDigitMatch && critDigitMatch[0] !== targetDigit) {
+        return false;
+      }
+    }
+    return true;
+  });
+};
+
 export const generateProject = async (req: any, res: Response) => {
   try {
     const userId = req.user?._id;
@@ -132,6 +164,9 @@ Esta propuesta debe especificar de manera detallada:
     }
 
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
+REGLA CRÍTICA INQUEBRANTABLE SOBRE EL CURSO Y NIVEL EDUCATIVO:
+El proyecto debe diseñarse rigurosa y exclusivamente para el curso y nivel educativo formalmente indicado en la solicitud del docente (por ejemplo: 3º de ESO en Diversificación Curricular / PDC). Si se solicita 3º de ESO, queda TERMINANTEMENTE PROHIBIDO cambiarlo a 4º de ESO o dirigirlo a otro curso. Los proyectos de referencia o ejemplos de repositorios (como INTEF) que pertenezcan a otros cursos (como 4º de ESO) deben usarse ÚNICAMENTE como inspiración de metodologías activas y estructura didáctica, pero NUNCA deben alterar el curso formalmente solicitado. En el apartado inicial "Identidad del Proyecto", debes consignar con total exactitud el curso y nivel educativo solicitado.
+
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EVALUACIÓN:
 Cuando diseñes el proyecto y llegues al apartado de Evaluación, DEBES contemplar los criterios de evaluación aplicables a CADA UNO de los Resultados de Aprendizaje (RA) o Competencias Específicas (CE) seleccionados por el usuario.
 NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODOS han de aparecer obligatoriamente en el proyecto.
@@ -162,15 +197,25 @@ Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}${fpbCaInstruction}`;
     
-    // Enriquecer RAs
+    // Determinación del curso efectivo y descripción
+    const defaultCourse = tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
+    const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCourse;
+    const targetCourseDescription = tipoNivel === 'DIVERSIFICACION_CURRICULAR'
+      ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
+      : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`;
+
+    // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
       const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
       if (raDoc) {
         const moduleName = (language === 'catalan' && raDoc.module_ca) ? raDoc.module_ca : (raDoc.module_es || raDoc.module);
         let text = `- Módulo/Asignatura: ${moduleName}\n  Resultado de Aprendizaje (RA): ${selectedStr}`;
-        if (raDoc.criterios_es && raDoc.criterios_es.length > 0) {
-          const critList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0) ? raDoc.criterios_ca : raDoc.criterios_es;
-          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${critList.map((c: string) => `  ${c}`).join('\n')}`;
+        const rawList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0)
+          ? raDoc.criterios_ca
+          : (raDoc.criterios_es && raDoc.criterios_es.length > 0 ? raDoc.criterios_es : []);
+        const filteredList = filterCriteriaByCourse(rawList, effectiveCourse);
+        if (filteredList.length > 0) {
+          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${filteredList.map((c: any) => `  ${formatCriterion(c)}`).join('\n')}`;
         }
         return text;
       }
@@ -178,19 +223,23 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
       if (ceDoc) {
         const subjectName = ceDoc.subject || ceDoc.area;
         let text = `- Asignatura: ${subjectName}\n  Competencia Específica (CE): ${selectedStr}`;
-        if (ceDoc.criterios_es && ceDoc.criterios_es.length > 0) {
-          const critList = (language === 'catalan' && ceDoc.criterios_ca && ceDoc.criterios_ca.length > 0) ? ceDoc.criterios_ca : ceDoc.criterios_es;
-          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${critList.map((c: string) => `  ${c}`).join('\n')}`;
+        const rawList = (language === 'catalan' && ceDoc.criterios_ca && ceDoc.criterios_ca.length > 0)
+          ? ceDoc.criterios_ca
+          : (ceDoc.criterios_es && ceDoc.criterios_es.length > 0 ? ceDoc.criterios_es : (ceDoc.criterios || []));
+        const filteredList = filterCriteriaByCourse(rawList, effectiveCourse);
+        if (filteredList.length > 0) {
+          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${filteredList.map((c: any) => `  ${formatCriterion(c)}`).join('\n')}`;
         }
         return text;
       }
       return `- ${selectedStr}`;
     });
 
-    let userPrompt = `Diseña la propuesta para alumnos de ${courseLevel || 'un curso a determinar'}, integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
+    let userPrompt = `Diseña la propuesta EXCLUSIVAMENTE para alumnado de ${targetCourseDescription}, integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
 ${enrichedRas.join('\n\n')}
 
-INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un apartado o epígrafe inicial titulado "Identidad del Proyecto" donde indiques explícitamente el curso al que va dirigido (${courseLevel || 'un curso a determinar'}), junto con otros datos identificativos que consideres oportunos (título, duración, etc.).`;
+INSTRUCCIÓN OBLIGATORIA DE CURSO Y NIVEL:
+En el documento generado, incluye obligatoriamente un apartado o epígrafe inicial titulado "Identidad del Proyecto" donde indiques explícitamente y con total exactitud que el curso al que va dirigido es "${targetCourseDescription}". Está TERMINANTEMENTE PROHIBIDO modificar o sugerir otro curso distinto (por ejemplo, si se indica 3º de ESO, NO utilices 4º de ESO bajo ningún concepto).`;
 
     if (extraInstructions && typeof extraInstructions === 'string' && extraInstructions.trim()) {
       userPrompt += `\n\n--- INSTRUCCIONES EXTRA DEL DOCENTE (OBLIGATORIAS) ---\n${extraInstructions.trim()}`;
@@ -207,6 +256,7 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
       ras: selectedRas,
       methodology,
       tipoNivel: tipoNivel || 'FP_BASICA',
+      courseLevel: effectiveCourse,
       userId: req.user?._id,
       status: 'en_cola', // Nuevo estado
       aiPrompt: userPrompt, // Guardamos el prompt para el worker
@@ -221,7 +271,8 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
       type: 'PROJECT_STATUS',
       title: 'Proyecto en Cola',
       message: 'Proyecto añadido a la cola de generación',
-      userName: req.user?.name
+      userName: req.user?.name,
+      userEmail: req.user?.email
     });
 
     // 5. DISPARAR PROCESAMIENTO DE COLA (no esperamos a que termine)
@@ -401,7 +452,7 @@ async function hasPendingGeneration(userId: any): Promise<boolean> {
   return count > 0;
 }
 
-async function reenqueueProject(project: any, userName?: string, aiProvider?: string): Promise<void> {
+async function reenqueueProject(project: any, userName?: string, aiProvider?: string, userEmail?: string): Promise<void> {
   if (!project.aiPrompt) {
     project.aiPrompt = `Genera un proyecto educativo para ${project.tipoNivel}.`;
     project.aiInstruction = 'Experto pedagógico.';
@@ -420,7 +471,8 @@ async function reenqueueProject(project: any, userName?: string, aiProvider?: st
     type: 'PROJECT_STATUS',
     title: 'Proyecto en Cola (Reintento)',
     message: 'Proyecto reencolado para su generación.',
-    userName
+    userName,
+    userEmail
   });
 
   if (process.env.NODE_ENV !== 'test') {
@@ -439,7 +491,7 @@ export const retryProject = async (req: any, res: Response) => {
       return res.status(429).json({ error: 'Ya tienes un proyecto en la cola o generándose. Por favor, espera a que termine.' });
     }
 
-    await reenqueueProject(project, req.user?.name, req.body?.aiProvider);
+    await reenqueueProject(project, req.user?.name, req.body?.aiProvider, req.user?.email);
     return res.json({ message: 'Proyecto reencolado exitosamente', project });
   } catch (error: any) {
     return res.status(500).json({ error: error.message });

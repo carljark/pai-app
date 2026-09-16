@@ -29,7 +29,7 @@
                   {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || trans.t().homeDefaultModules }}
                 </div>
                 <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">
-                  {{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : trans.t().courseLevelFP }}
+                  {{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : trans.t().courseLevelFP }}
                   &nbsp;·&nbsp;
                   {{ project.createdAt | date:'d MMM yyyy, HH:mm' }}
                 </div>

@@ -7,6 +7,8 @@ import mongoose from 'mongoose';
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { FpbMatch } from '../models/FpbMatch';
+import { CE } from '../models/CE';
+import { formatCriterion, filterCriteriaByCourse } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: class {
@@ -576,6 +578,131 @@ describe('Projects Endpoints', () => {
       expect(res.status).toBe(500);
       expect(res.body.error).toBe('DB connection lost');
       spy.mockRestore();
+    });
+  });
+
+  describe('Course Level & Criteria Filtering', () => {
+    it('formatCriterion debería formatear correctamente strings y objetos', () => {
+      expect(formatCriterion(null)).toBe('');
+      expect(formatCriterion(undefined)).toBe('');
+      expect(formatCriterion('  Criterio texto simple  ')).toBe('Criterio texto simple');
+      expect(formatCriterion({ criterio_id: '3º ESO - 1.1', description: 'Analizar conceptos' })).toBe('3º ESO - 1.1: Analizar conceptos');
+      expect(formatCriterion({ description: 'Solo descripción' })).toBe('Solo descripción');
+      expect(formatCriterion({ criterio_id: 'Solo ID' })).toBe('Solo ID');
+      expect(formatCriterion(123)).toBe('123');
+    });
+
+    it('filterCriteriaByCourse debería filtrar criterios según el curso correspondiente', () => {
+      const criteriaList = [
+        { criterio_id: '3º ESO - 1.1', description: 'Criterio para 3º' },
+        { criterio_id: '4º ESO - 1.1', description: 'Criterio para 4º' },
+        { criterio_id: '1.2 (3º ESO)', description: 'Criterio 1.2 tercero' },
+        { criterio_id: '1.2 (4º ESO)', description: 'Criterio 1.2 cuarto' },
+        { criterio_id: 'CA 1.1', description: 'Criterio transversal sin curso' },
+        'Texto libre sin curso'
+      ];
+
+      // Filtro para 3º ESO
+      const filtered3 = filterCriteriaByCourse(criteriaList, '3º');
+      expect(filtered3).toHaveLength(4);
+      expect(filtered3.map(c => typeof c === 'string' ? c : c.criterio_id)).toEqual([
+        '3º ESO - 1.1',
+        '1.2 (3º ESO)',
+        'CA 1.1',
+        'Texto libre sin curso'
+      ]);
+
+      // Filtro para 4º ESO
+      const filtered4 = filterCriteriaByCourse(criteriaList, '4º');
+      expect(filtered4).toHaveLength(4);
+      expect(filtered4.map(c => typeof c === 'string' ? c : c.criterio_id)).toEqual([
+        '4º ESO - 1.1',
+        '1.2 (4º ESO)',
+        'CA 1.1',
+        'Texto libre sin curso'
+      ]);
+
+      // Sin nivel o sin digito
+      expect(filterCriteriaByCourse(criteriaList, undefined)).toEqual(criteriaList);
+      expect(filterCriteriaByCourse(criteriaList, '')).toEqual(criteriaList);
+      expect(filterCriteriaByCourse([], '3º')).toEqual([]);
+    });
+
+    it('POST /api/projects/generate - Debería aplicar el curso 3º y excluir criterios de 4º en Diversificación Curricular', async () => {
+      const { token } = await createTestUser('teacher', 'teacher_course3@test.com');
+      
+      // Creamos una CE de prueba con criterios para 3º y 4º
+      await CE.create({
+        area: 'Ámbito Científico y Tecnológico',
+        subject: 'Biología y Geología',
+        ce_id: 'CE.TEST.1',
+        description_es: 'Competencia científica de prueba',
+        criterios_es: [
+          { criterio_id: '3º ESO - 1.1', description: 'Criterio exclusivo de 3º ESO' },
+          { criterio_id: '4º ESO - 1.1', description: 'Criterio exclusivo de 4º ESO' }
+        ]
+      });
+
+      const res = await request(app)
+        .post('/api/projects/generate')
+        .set('Authorization', `Bearer ${token}`)
+        .send({
+          title: 'Proyecto PDC 3º ESO',
+          modules: ['Ámbito Científico y Tecnológico'],
+          selectedRas: ['Competencia científica de prueba'],
+          methodology: 'ABP',
+          tipoNivel: 'DIVERSIFICACION_CURRICULAR',
+          courseLevel: '3º'
+        });
+
+      expect(res.status).toBe(202);
+      expect(res.body.project.courseLevel).toBe('3º');
+      expect(res.body.project.tipoNivel).toBe('DIVERSIFICACION_CURRICULAR');
+      
+      // Verificamos que el prompt explicita 3º de ESO y prohíbe 4º
+      expect(res.body.project.aiPrompt).toContain('3º de ESO (Diversificación Curricular / PDC)');
+      expect(res.body.project.aiPrompt).toContain('INSTRUCCIÓN OBLIGATORIA DE CURSO Y NIVEL');
+      expect(res.body.project.aiPrompt).toContain('NO utilices 4º de ESO bajo ningún concepto');
+      
+      // Verificamos que se incluye el criterio de 3º y NO el de 4º
+      expect(res.body.project.aiPrompt).toContain('3º ESO - 1.1: Criterio exclusivo de 3º ESO');
+      expect(res.body.project.aiPrompt).not.toContain('4º ESO - 1.1: Criterio exclusivo de 4º ESO');
+      expect(res.body.project.aiPrompt).not.toContain('[object Object]');
+    });
+
+    it('POST /api/projects/generate - Debería aplicar el curso 4º y excluir criterios de 3º en Diversificación Curricular', async () => {
+      const { token } = await createTestUser('teacher', 'teacher_course4@test.com');
+      
+      await CE.create({
+        area: 'Ámbito Científico y Tecnológico',
+        subject: 'Física y Química',
+        ce_id: 'CE.TEST.2',
+        description_es: 'Competencia física de prueba',
+        criterios_es: [
+          { criterio_id: '3º ESO - 2.1', description: 'Criterio exclusivo de 3º ESO para física' },
+          { criterio_id: '4º ESO - 2.1', description: 'Criterio exclusivo de 4º ESO para física' }
+        ]
+      });
+
+      const res = await request(app)
+        .post('/api/projects/generate')
+        .set('Authorization', `Bearer ${token}`)
+        .send({
+          title: 'Proyecto PDC 4º ESO',
+          modules: ['Ámbito Científico y Tecnológico'],
+          selectedRas: ['Competencia física de prueba'],
+          methodology: 'ABP',
+          tipoNivel: 'DIVERSIFICACION_CURRICULAR',
+          courseLevel: '4º'
+        });
+
+      expect(res.status).toBe(202);
+      expect(res.body.project.courseLevel).toBe('4º');
+      expect(res.body.project.tipoNivel).toBe('DIVERSIFICACION_CURRICULAR');
+      
+      expect(res.body.project.aiPrompt).toContain('4º de ESO (Diversificación Curricular / PDC)');
+      expect(res.body.project.aiPrompt).toContain('4º ESO - 2.1: Criterio exclusivo de 4º ESO para física');
+      expect(res.body.project.aiPrompt).not.toContain('3º ESO - 2.1: Criterio exclusivo de 3º ESO para física');
     });
   });
 });

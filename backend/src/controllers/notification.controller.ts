@@ -12,12 +12,13 @@ async function backfillNotificationsIfEmpty() {
   const count = await Notification.countDocuments();
   if (count > 0) return;
 
-  const existingProjects = await Project.find().populate('userId', 'name').limit(50);
+  const existingProjects = await Project.find().populate('userId', 'name email').limit(50);
   for (const p of existingProjects) {
     await Notification.create({
       projectId: p._id,
       userId: p.userId?._id || p.userId,
       userName: (p.userId as any)?.name || 'Profesor',
+      userEmail: (p.userId as any)?.email,
       modules: p.modules || [],
       status: p.status,
       type: getNotifType(p.status),
@@ -34,8 +35,19 @@ async function backfillNotificationsIfEmpty() {
 export const getNotifications = async (req: any, res: Response) => {
   try {
     await backfillNotificationsIfEmpty();
-    const notifications = await Notification.find().sort({ updatedAt: -1 }).limit(50);
-    res.json(notifications);
+    const notifications = await Notification.find().populate('userId', 'name email').sort({ updatedAt: -1 }).limit(50);
+    const result = notifications.map(n => {
+      const obj = n.toObject ? n.toObject() : { ...n };
+      const user = obj.userId as any;
+      if (!obj.userEmail && user?.email) {
+        obj.userEmail = user.email;
+      }
+      if ((!obj.userName || obj.userName === 'Profesor') && user?.name) {
+        obj.userName = user.name;
+      }
+      return obj;
+    });
+    res.json(result);
   } catch (err: any) {
     res.status(500).json({ error: 'Error al obtener notificaciones' });
   }

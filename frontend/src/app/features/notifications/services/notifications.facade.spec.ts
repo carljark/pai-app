@@ -99,11 +99,14 @@ describe('NotificationsFacade', () => {
     expect(facade.notifications().length).toBe(2);
 
     updatesSubject.next({ type: 'CONNECTED' });
-    expect(facade.notifications().length).toBe(3);
+    expect(facade.notifications().length).toBe(2);
+
+    updatesSubject.next({ type: 'OTHER_EVENT', message: 'No project' });
+    expect(facade.notifications().length).toBe(2);
 
     authFacadeMock.currentUser.set(null);
     updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'p3' });
-    expect(facade.notifications().length).toBe(4);
+    expect(facade.notifications().length).toBe(3);
   });
 
   it('should clear notifications and unsubscribe on logout', () => {

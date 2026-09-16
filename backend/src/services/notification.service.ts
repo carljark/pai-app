@@ -1,4 +1,5 @@
 import { Notification } from '../models/Notification';
+import { User } from '../models/User';
 import { broadcast } from './sse.service';
 import mongoose from 'mongoose';
 
@@ -7,6 +8,7 @@ interface NotificationExtra {
   title?: string;
   message?: string;
   userName?: string;
+  userEmail?: string;
   phase?: string;
   rasCount?: number;
 }
@@ -21,12 +23,39 @@ function isValidObjectId(value: any): boolean {
         (typeof value === 'string' && mongoose.Types.ObjectId.isValid(value)));
 }
 
-function buildUpdateData(project: any, extra?: NotificationExtra) {
+async function resolveUserDetails(project: any, extra?: NotificationExtra) {
+  let userEmail = extra?.userEmail;
+  let userName = extra?.userName;
+
+  if (project.userId) {
+    if (typeof project.userId === 'object' && (project.userId.email || project.userId.name)) {
+      userEmail = userEmail || project.userId.email;
+      userName = userName || project.userId.name;
+    } else if (isValidObjectId(project.userId)) {
+      try {
+        const u = await User.findById(project.userId).select('name email').lean();
+        if (u) {
+          userEmail = userEmail || u.email;
+          userName = userName || u.name;
+        }
+      } catch {
+        // ignore lookup error
+      }
+    }
+  }
+
+  return {
+    userName: userName || 'Profesor',
+    userEmail
+  };
+}
+
+function buildUpdateData(project: any, extra: NotificationExtra | undefined, resolvedUser: { userName: string; userEmail?: string }) {
   const rasCount = extra?.rasCount ?? (project.ras ? project.ras.length : 0);
   return {
     projectId: project._id,
     userId: project.userId?._id || project.userId,
-    userName: extra?.userName || (project.userId as any)?.name || 'Profesor',
+    userName: resolvedUser.userName,
     modules: project.modules || [],
     rasCount,
     phase: extra?.phase ?? project.phase,
@@ -34,6 +63,7 @@ function buildUpdateData(project: any, extra?: NotificationExtra) {
     generationTimeMs: project.generationTimeMs,
     generationStartedAt: project.generationStartedAt,
     updatedAt: new Date(),
+    ...(resolvedUser.userEmail ? { userEmail: resolvedUser.userEmail } : {}),
     ...(extra?.type ? { type: extra.type } : {}),
     ...(extra?.title ? { title: extra.title } : {}),
     ...(extra?.message ? { message: extra.message } : {})
@@ -50,7 +80,8 @@ export async function syncProjectNotification(project: any, extra?: Notification
       return null;
     }
 
-    const updateData = buildUpdateData(project, extra);
+    const resolvedUser = await resolveUserDetails(project, extra);
+    const updateData = buildUpdateData(project, extra, resolvedUser);
 
     const notif = await Notification.findOneAndUpdate(
       { projectId },
@@ -68,7 +99,9 @@ export async function syncProjectNotification(project: any, extra?: Notification
       notification: notif,
       generationTimeMs: project.generationTimeMs,
       generationStartedAt: project.generationStartedAt,
-      message: extra?.message
+      message: extra?.message,
+      userName: updateData.userName,
+      userEmail: updateData.userEmail
     });
 
     return notif;

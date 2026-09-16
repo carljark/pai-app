@@ -90,6 +90,7 @@ describe('NotificationMapper', () => {
       projectId: 'proj_1',
       userId: 'u_1',
       userName: 'Carlos',
+      userEmail: 'carlos@test.com',
       modules: ['3060'],
       status: 'borrador',
       type: 'PROJECT_COMPLETED',
@@ -105,8 +106,17 @@ describe('NotificationMapper', () => {
     expect(notifRead.id).toBe('db_1');
     expect(notifRead.type).toBe('COMPLETED');
     expect(notifRead.userName).toBe('Carlos');
+    expect(notifRead.userEmail).toBe('carlos@test.com');
     expect(notifRead.read).toBe(true);
     expect(notifRead.updatedAt).toBeDefined();
+
+    const notifPopulatedUser = NotificationMapper.fromDbEntity({
+      _id: 'db_2',
+      userId: { _id: 'u_2', name: 'Ana', email: 'ana@test.com' },
+      type: 'PROJECT_COMPLETED'
+    });
+    expect(notifPopulatedUser.userName).toBe('Ana');
+    expect(notifPopulatedUser.userEmail).toBe('ana@test.com');
 
     const notifUnread = NotificationMapper.fromDbEntity(dbEntity, 'u_other');
     expect(notifUnread.read).toBe(false);
@@ -114,8 +124,30 @@ describe('NotificationMapper', () => {
     const emptyEntity = { type: 'OTHER' };
     const notifFallback = NotificationMapper.fromDbEntity(emptyEntity);
     expect(notifFallback.userName).toBe('Profesor');
+    expect(notifFallback.userEmail).toBeUndefined();
     expect(notifFallback.type).toBe('INFO');
     expect(notifFallback.read).toBe(false);
+  });
+
+  it('fromRawEvent should map userEmail and userName correctly', () => {
+    const raw: RawNotificationEvent = {
+      type: 'PROJECT_STATUS',
+      projectId: 'p_raw',
+      userEmail: 'raw@test.com',
+      userName: 'Raw User'
+    };
+    const notif = NotificationMapper.fromRawEvent(raw);
+    expect(notif.userEmail).toBe('raw@test.com');
+    expect(notif.userName).toBe('Raw User');
+
+    const rawWithProjectUser: RawNotificationEvent = {
+      type: 'PROJECT_STATUS',
+      projectId: 'p_proj',
+      project: { userId: { name: 'Proj User', email: 'proj@test.com' } }
+    };
+    const notif2 = NotificationMapper.fromRawEvent(rawWithProjectUser);
+    expect(notif2.userEmail).toBe('proj@test.com');
+    expect(notif2.userName).toBe('Proj User');
   });
 
   it('fromRawEvent should use raw.notification if present', () => {

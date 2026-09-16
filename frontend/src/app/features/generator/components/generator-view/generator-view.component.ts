@@ -71,6 +71,22 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
         }
       </div>
       
+      <div class="form-group" style="margin-bottom: 24px;">
+        <label for="generator-extra-instructions" style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-weight: 500;">{{ trans.t().generatorExtraInstructionsLabel }}</span>
+          <span style="font-size: 0.8rem; color: #6b7280; font-weight: normal;">{{ trans.t().generatorExtraInstructionsOptional }}</span>
+        </label>
+        <textarea 
+          id="generator-extra-instructions"
+          class="form-input" 
+          rows="3"
+          [placeholder]="trans.t().generatorExtraInstructionsPlaceholder"
+          [value]="projects.extraInstructions()"
+          (input)="onExtraInstructionsChange($event)"
+          style="resize: vertical; min-height: 72px; line-height: 1.5; font-family: inherit;">
+        </textarea>
+      </div>
+
       <app-curriculum-selector 
         [title]="trans.t().selectedItemsTitle" 
         [generateText]="trans.t().generateBtn" 
@@ -102,6 +118,11 @@ export class GeneratorViewComponent {
   onAiChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
     this.projects.selectedAi.set(value);
+  }
+
+  onExtraInstructionsChange(event: Event) {
+    const value = (event.target as HTMLTextAreaElement).value;
+    this.projects.extraInstructions.set(value);
   }
 
   generateProject() {

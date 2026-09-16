@@ -64,7 +64,8 @@ describe('App', () => {
       hasActiveGeneration: signal(false),
       methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
       selectedAi: signal('gemini'),
-      historyTab: signal('FPB')
+      historyTab: signal('FPB'),
+      extraInstructions: signal('')
     };
     const mockAdminFacade = {
       settings: signal({}),

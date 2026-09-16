@@ -13,6 +13,7 @@ const ProjectSchema = new mongoose.Schema({
   },
   aiPrompt: String,
   aiInstruction: String,
+  extraInstructions: String,
   errorDetail: String,
   generationStartedAt: Date,
   generationTimeMs: Number,

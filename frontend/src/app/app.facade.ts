@@ -123,6 +123,7 @@ export class AppFacade {
   private onGenerateSuccess(): void {
     this.projects.isGenerating.set(false);
     this.curriculum.clearSelection();
+    this.projects.extraInstructions?.set('');
     this.infoTitle.set(this.trans.t().modalProjectQueued);
     this.infoMessage.set(this.trans.t().modalProjectQueuedDesc);
     this.infoType.set('info');

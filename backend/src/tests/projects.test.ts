@@ -41,6 +41,27 @@ describe('Projects Endpoints', () => {
     expect(res.body.project.status).toBe('en_cola');
   });
 
+  it('POST /api/projects/generate - Debería incluir extraInstructions en el prompt y en el modelo', async () => {
+    const { token } = await createTestUser('teacher', 'prof_extra@test.com');
+    const res = await request(app)
+      .post('/api/projects/generate')
+      .set('Authorization', `Bearer ${token}`)
+      .send({
+        title: 'Proyecto Con Extras',
+        modules: ['M1'],
+        selectedRas: ['RA1'],
+        methodology: 'ABP',
+        tipoNivel: 'FP_BASICA',
+        extraInstructions: 'Enfocar en sostenibilidad y uso de Canva'
+      });
+    
+    expect(res.status).toBe(202);
+    expect(res.body.project.extraInstructions).toBe('Enfocar en sostenibilidad y uso de Canva');
+    expect(res.body.project.aiPrompt).toContain('--- INSTRUCCIONES EXTRA DEL DOCENTE (OBLIGATORIAS) ---');
+    expect(res.body.project.aiPrompt).toContain('Enfocar en sostenibilidad y uso de Canva');
+    expect(res.body.project.aiInstruction).toContain('REGLA SOBRE INSTRUCCIONES EXTRA DEL DOCENTE');
+  });
+
   it('GET /api/projects - Debería listar los proyectos del usuario', async () => {
     const { token, user } = await createTestUser('teacher', 'prof2@test.com');
     const Project = mongoose.model('Project');

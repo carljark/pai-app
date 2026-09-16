@@ -60,7 +60,7 @@ export const generateProject = async (req: any, res: Response) => {
     }
 
     // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes, enriquecido con coincidencias de FPB)
-    const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel } = req.body;
+    const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel, extraInstructions } = req.body;
     const settings = await Settings.findOne();
     const { schoolContextStr, intefExamplesContext } = buildContexts(settings);
 
@@ -125,6 +125,9 @@ Para CADA UNA de las actividades que propongas en el proyecto, DEBES incluir OBL
 - **Entregable o producto esperado**: Qué deben generar los alumnos al final de la actividad.
 - **Evaluación formativa**: Cómo se evaluará esta actividad en concreto y con qué instrumento.
 
+REGLA SOBRE INSTRUCCIONES EXTRA DEL DOCENTE:
+Si en la solicitud se aportan "INSTRUCCIONES EXTRA DEL DOCENTE", debes integrarlas de forma obligatoria y prioritaria en el diseño del proyecto, adaptando temáticas, dinámicas pedagógicas, recursos o productos finales a lo especificado por el profesor.
+
 El resultado debe ser un manual instruccional exhaustivo y listo para imprimir que cualquier docente pueda leer y aplicar directamente en el aula mañana mismo sin tener que inventar nada.
 
 Formatea el texto final como Markdown profesional (NO lo envuelvas en markdown \`\`\` o similares, escribe directamente el texto Markdown).
@@ -159,10 +162,14 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
       return `- ${selectedStr}`;
     });
 
-    const userPrompt = `Diseña la propuesta para alumnos de ${courseLevel || 'un curso a determinar'}, integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
+    let userPrompt = `Diseña la propuesta para alumnos de ${courseLevel || 'un curso a determinar'}, integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
 ${enrichedRas.join('\n\n')}
 
 INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un apartado o epígrafe inicial titulado "Identidad del Proyecto" donde indiques explícitamente el curso al que va dirigido (${courseLevel || 'un curso a determinar'}), junto con otros datos identificativos que consideres oportunos (título, duración, etc.).`;
+
+    if (extraInstructions && typeof extraInstructions === 'string' && extraInstructions.trim()) {
+      userPrompt += `\n\n--- INSTRUCCIONES EXTRA DEL DOCENTE (OBLIGATORIAS) ---\n${extraInstructions.trim()}`;
+    }
 
     const defaultTitle = (modules && modules.length > 0)
       ? modules.join(' + ')
@@ -179,6 +186,7 @@ INSTRUCCIÓN OBLIGATORIA: En el documento generado, incluye obligatoriamente un 
       status: 'en_cola', // Nuevo estado
       aiPrompt: userPrompt, // Guardamos el prompt para el worker
       aiInstruction: baseInstruction, // Guardamos el system prompt
+      extraInstructions: typeof extraInstructions === 'string' && extraInstructions.trim() ? extraInstructions.trim() : undefined,
       aiProvider: req.body.aiProvider === 'openrouter' ? 'openrouter' : 'gemini'
     });
     const savedProject = await newProject.save();

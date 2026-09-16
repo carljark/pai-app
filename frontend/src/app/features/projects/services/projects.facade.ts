@@ -18,6 +18,7 @@ export class ProjectsFacade {
   // --- ESTADO DEL GENERADOR ---
   methodology = signal<string>('ABP (Aprendizaje Basado en Problemas / Proyectos)');
   selectedAi = signal<'gemini' | 'openrouter'>('gemini');
+  extraInstructions = signal<string>('');
 
   isGenerating = signal<boolean>(false);
 
@@ -106,8 +107,8 @@ export class ProjectsFacade {
     this.historyTab.set(tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO' : 'FPB');
     const modules = this.getInvolvedModules(tipoNivel, selectedRas);
     const defaultTitle = modules.length > 0 ? modules.join(' + ') : 'Proyecto Integrador';
-
-    return this.http.post<any>(`${this.apiUrl}/generate`, {
+    const extra = this.extraInstructions().trim();
+    const payload: any = {
       selectedRas,
       methodology: this.methodology(),
       modules,
@@ -116,7 +117,12 @@ export class ProjectsFacade {
       aiProvider: this.selectedAi(),
       courseLevel: this.curriculumFacade.curso(),
       title: title || defaultTitle
-    });
+    };
+    if (extra) {
+      payload.extraInstructions = extra;
+    }
+
+    return this.http.post<any>(`${this.apiUrl}/generate`, payload);
   }
 
   updateProjectStatus(status: 'borrador' | 'publicado') {

@@ -36,7 +36,10 @@ describe('GeneratorViewComponent', () => {
       subtitle: 'Subtitle',
       selectedItemsTitle: 'Selected Items',
       generateBtn: 'Generate',
-      generatingBtn: 'Generating'
+      generatingBtn: 'Generating',
+      generatorExtraInstructionsLabel: 'Instrucciones adicionales para la IA',
+      generatorExtraInstructionsOptional: '(Opcional)',
+      generatorExtraInstructionsPlaceholder: 'Ej: Enfocar...'
     })
   };
 
@@ -59,7 +62,8 @@ describe('GeneratorViewComponent', () => {
   const mockProjects = {
     isGenerating: signal(false),
     methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
-    selectedAi: signal<'gemini' | 'openrouter'>('gemini')
+    selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
+    extraInstructions: signal('')
   };
 
   const mockAppFacade = {
@@ -163,5 +167,13 @@ describe('GeneratorViewComponent', () => {
     fixture.detectChanges();
     const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select'));
     expect(aiSelect).toBeNull();
+  });
+
+  it('should update extraInstructions on textarea input', () => {
+    fixture.detectChanges();
+    const textarea = fixture.debugElement.query(By.css('#generator-extra-instructions')).nativeElement;
+    textarea.value = 'Enfocar en sostenibilidad y dinámicas DUA';
+    textarea.dispatchEvent(new Event('input'));
+    expect(mockProjects.extraInstructions()).toBe('Enfocar en sostenibilidad y dinámicas DUA');
   });
 });

@@ -138,6 +138,20 @@ describe('ProjectsFacade', () => {
     req.flush({});
   });
 
+  it('should include extraInstructions in generateProject payload when present', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
+    mockCurriculumFacade.curso.mockReturnValue('1º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
+    
+    facade.extraInstructions.set('Instrucciones personalizadas para la IA');
+    facade.generateProject('castellano').subscribe();
+    
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.extraInstructions).toBe('Instrucciones personalizadas para la IA');
+    req.flush({});
+  });
+
   it('should use fallback title when no modules match', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA_UNKNOWN']);

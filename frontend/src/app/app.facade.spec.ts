@@ -45,7 +45,8 @@ describe('AppFacade', () => {
       currentProjectId: signal(''),
       generatedProject: signal(''),
       loadProjectFiles: vi.fn(),
-      historyTab: signal('FPB')
+      historyTab: signal('FPB'),
+      extraInstructions: signal('')
     };
 
     layoutServiceMock = {

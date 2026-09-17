@@ -129,13 +129,13 @@ describe('Projects Endpoints', () => {
     await new Project({ title: 'Proyecto Publicado Ajeno', userId: otherUser._id, status: 'publicado' }).save();
     await new Project({ title: 'Proyecto Borrador Ajeno', userId: otherUser._id, status: 'borrador' }).save();
 
-    // Sin mine=true: ve el suyo y el publicado ajeno (2 proyectos)
+    // Sin mine=true: ve TODOS los proyectos (3 proyectos)
     let res = await request(app).get('/api/projects').set('Authorization', `Bearer ${token}`);
     expect(res.status).toBe(200);
-    expect(res.body.length).toBe(2);
+    expect(res.body.length).toBe(3);
     expect(res.body.some((p: any) => p.title === 'Mi Proyecto Borrador')).toBe(true);
     expect(res.body.some((p: any) => p.title === 'Proyecto Publicado Ajeno')).toBe(true);
-    expect(res.body.some((p: any) => p.title === 'Proyecto Borrador Ajeno')).toBe(false);
+    expect(res.body.some((p: any) => p.title === 'Proyecto Borrador Ajeno')).toBe(true);
 
     // Con mine=true: SOLO ve el suyo (1 proyecto)
     res = await request(app).get('/api/projects?mine=true').set('Authorization', `Bearer ${token}`);
@@ -169,7 +169,7 @@ describe('Projects Endpoints', () => {
     expect(res.body.title).toBe('Detalle');
   });
 
-  it('GET /api/projects/:id - 404 y 403', async () => {
+  it('GET /api/projects/:id - 404 y acceso global', async () => {
     const { token, user } = await createTestUser('teacher', 'prof5@test.com');
     const { user: user2 } = await createTestUser('teacher', 'prof6@test.com');
     const Project = mongoose.model('Project');
@@ -179,10 +179,11 @@ describe('Projects Endpoints', () => {
     const res404 = await request(app).get(`/api/projects/${fakeId}`).set('Authorization', `Bearer ${token}`);
     expect(res404.status).toBe(404);
 
-    // 403 Forbbiden (intentar ver el proyecto de otro profesor)
+    // 200 - Todos los usuarios pueden ver cualquier proyecto (incluso borradores ajenos)
     const proj = await new Project({ title: 'Otro', userId: user2._id }).save();
-    const res403 = await request(app).get(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
-    expect(res403.status).toBe(403);
+    const resOther = await request(app).get(`/api/projects/${proj._id}`).set('Authorization', `Bearer ${token}`);
+    expect(resOther.status).toBe(200);
+    expect(resOther.body.title).toBe('Otro');
 
     // 200 si el proyecto de otro profesor está publicado
     const projPub = await new Project({ title: 'Compartido', userId: user2._id, status: 'publicado' }).save();

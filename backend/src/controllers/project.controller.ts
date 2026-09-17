@@ -298,13 +298,6 @@ export const listProjects = async (req: any, res: Response) => {
 
     if (mine === 'true') {
       filter = { userId };
-    } else if (req.user?.role !== 'admin') {
-      filter = {
-        $or: [
-          { userId },
-          { status: 'publicado' }
-        ]
-      };
     }
     const projects = await Project.find(filter).sort({ createdAt: -1 }).populate('userId', 'name email');
     res.json(projects);
@@ -317,13 +310,6 @@ export const getProject = async (req: any, res: Response) => {
   try {
     const project = await Project.findById(req.params.id).populate('userId', 'name email');
     if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
-    const authorId = (project.userId as any)?._id?.toString() || project.userId?.toString();
-    const isAuthor = authorId === req.user?._id?.toString();
-    const isAdmin = req.user?.role === 'admin';
-    const isPublished = project.status === 'publicado';
-    if (!isAdmin && !isAuthor && !isPublished) {
-      return res.status(403).json({ error: "Acceso denegado" });
-    }
     res.json(project);
   } catch (error) {
     res.status(500).json({ error: "Error al cargar proyecto" });

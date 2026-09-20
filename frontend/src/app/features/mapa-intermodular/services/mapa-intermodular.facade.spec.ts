@@ -27,9 +27,40 @@ describe('MapaIntermodularFacade', () => {
   it('should calculate global statistics', () => {
     const stats = facade.stats();
     expect(stats.totalModules).toBe(11);
-    expect(stats.totalRas).toBeGreaterThan(0);
-    expect(stats.totalConnections).toBe(491);
-    expect(stats.totalActivities).toBe(3399);
+    expect(stats.totalRas).toBe(65);
+    expect(stats.totalConnections).toBe(485);
+    expect(stats.totalActivities).toBe(3357);
+  });
+
+  it('should verify module 3159 has exactly 5 RAs and 20 official criteria without RA6', () => {
+    const mod3159 = facade.modules().find(m => m.code === '3159');
+    expect(mod3159).toBeTruthy();
+    expect(mod3159!.learningOutcomes.length).toBe(5);
+    expect(mod3159!.learningOutcomes.map(lo => lo.code)).toEqual(['RA1', 'RA2', 'RA3', 'RA4', 'RA5']);
+    expect(mod3159!.learningOutcomes.some(lo => lo.code === 'RA6')).toBe(false);
+
+    // RA1: 5 criteria
+    expect(mod3159!.learningOutcomes[0].criteria_es?.length).toBe(5);
+    expect(mod3159!.learningOutcomes[0].criteria_ca?.length).toBe(5);
+
+    // RA2: 5 criteria
+    expect(mod3159!.learningOutcomes[1].criteria_es?.length).toBe(5);
+    expect(mod3159!.learningOutcomes[1].criteria_ca?.length).toBe(5);
+
+    // RA3: 3 criteria
+    expect(mod3159!.learningOutcomes[2].criteria_es?.length).toBe(3);
+    expect(mod3159!.learningOutcomes[2].criteria_ca?.length).toBe(3);
+
+    // RA4: 3 criteria
+    expect(mod3159!.learningOutcomes[3].criteria_es?.length).toBe(3);
+    expect(mod3159!.learningOutcomes[3].criteria_ca?.length).toBe(3);
+
+    // RA5: 4 criteria
+    expect(mod3159!.learningOutcomes[4].criteria_es?.length).toBe(4);
+    expect(mod3159!.learningOutcomes[4].criteria_ca?.length).toBe(4);
+
+    const totalCriteria = mod3159!.learningOutcomes.reduce((acc, lo) => acc + (lo.criteria_es?.length || 0), 0);
+    expect(totalCriteria).toBe(20);
   });
 
   it('should select module and update selectedRaId, and collapse when clicked again', () => {

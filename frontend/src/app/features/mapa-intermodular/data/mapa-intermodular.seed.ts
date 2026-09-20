@@ -76,7 +76,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
               },
               {
                 "moduleCode": "3012",
@@ -88,7 +88,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
               }
             ],
             "relationType": "tecnica",
@@ -370,7 +370,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
               },
               {
                 "moduleCode": "3061",
@@ -874,13 +874,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
+                "criteria": "3159-2a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
               },
               {
                 "moduleCode": "3067",
@@ -892,7 +892,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
               }
             ],
             "relationType": "tecnica",
@@ -1042,19 +1042,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
+                "criteria": "3159-2a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
               },
               {
                 "moduleCode": "3064",
@@ -2718,13 +2718,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional."
+                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               },
               {
                 "moduleCode": "3064",
@@ -6008,7 +6008,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
               },
               {
                 "moduleCode": "3012",
@@ -8656,7 +8656,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               }
             ],
             "relationType": "tecnica",
@@ -8794,7 +8794,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas."
+                "criteria": "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
               },
               {
                 "moduleCode": "3009",
@@ -13842,7 +13842,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               },
               {
                 "moduleCode": "3060",
@@ -13986,7 +13986,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva, diferenciándolas de conductas agresivas y/o pasivas."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               }
             ],
             "relationType": "comunicacion",
@@ -14274,7 +14274,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               },
               {
                 "moduleCode": "3067",
@@ -14742,7 +14742,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               },
               {
                 "moduleCode": "3159",
@@ -14880,7 +14880,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               },
               {
                 "moduleCode": "3067",
@@ -14910,7 +14910,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
+                "criteria": "3159-2a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
               }
             ],
             "relationType": "tecnica",
@@ -15084,7 +15084,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               },
               {
                 "moduleCode": "3159",
@@ -15250,7 +15250,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4a. Se ha determinado la realidad del entorno sociolaboral actual."
+                "criteria": "3159-3a. Se ha determinado la realidad del entorno sociolaboral actual."
               },
               {
                 "moduleCode": "3009",
@@ -15268,7 +15268,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               }
             ],
             "relationType": "comunicacion",
@@ -15838,7 +15838,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas."
+                "criteria": "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
               }
             ],
             "relationType": "comunicacion",
@@ -16126,7 +16126,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles."
+                "criteria": "3159-4a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles."
               },
               {
                 "moduleCode": "3042",
@@ -16150,13 +16150,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
+                "criteria": "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
+                "criteria": "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
               },
               {
                 "moduleCode": "3064",
@@ -16318,13 +16318,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
+                "criteria": "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
+                "criteria": "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
               }
             ],
             "relationType": "tecnica",
@@ -17120,7 +17120,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
               },
               {
                 "moduleCode": "3060",
@@ -17270,7 +17270,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               }
             ],
             "relationType": "comunicacion",
@@ -17702,7 +17702,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas."
+                "criteria": "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
               },
               {
                 "moduleCode": "3012",
@@ -18452,7 +18452,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
+                "criteria": "3159-2d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
               },
               {
                 "moduleCode": "3009",
@@ -26502,13 +26502,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
+                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
               },
               {
                 "moduleCode": "3159",
@@ -26632,13 +26632,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
+                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles."
+                "criteria": "3159-4a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles."
               }
             ],
             "relationType": "ciencias",
@@ -26780,13 +26780,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
+                "criteria": "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
+                "criteria": "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
               },
               {
                 "moduleCode": "3159",
@@ -26927,8 +26927,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA2",
-            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo",
-            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
+            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
             "sourceCriteria": "3042-2d",
             "criteriaKeys": [
               "d",
@@ -26952,7 +26952,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
+                "criteria": "3159-2d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
               }
             ],
             "relationType": "ciencias",
@@ -27176,19 +27176,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles."
+                "criteria": "3159-4a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
+                "criteria": "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional."
+                "criteria": "3159-4c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional."
               }
             ],
             "relationType": "ciencias",
@@ -30605,8 +30605,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA2",
-            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo",
-            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
+            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
             "sourceCriteria": "3042-7e",
             "criteriaKeys": [
               "e",
@@ -32214,7 +32214,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               },
               {
                 "moduleCode": "3063",
@@ -32413,8 +32413,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA2",
-            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo",
-            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
+            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
             "sourceCriteria": "3042-11d",
             "criteriaKeys": [
               "d",
@@ -33713,8 +33713,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA2",
-            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo",
-            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
+            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
             "sourceCriteria": "3042-13f",
             "criteriaKeys": [
               "f",
@@ -34398,7 +34398,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               }
             ],
             "relationType": "tecnica",
@@ -35182,55 +35182,55 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional."
+                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
+                "criteria": "3159-2d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4a. Se ha determinado la realidad del entorno sociolaboral actual."
+                "criteria": "3159-3a. Se ha determinado la realidad del entorno sociolaboral actual."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
+                "criteria": "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional."
+                "criteria": "3159-4c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional."
               },
               {
                 "moduleCode": "3159",
@@ -38572,8 +38572,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA2",
-            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo",
-            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
+            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
             "sourceCriteria": "3011-1i",
             "criteriaKeys": [
               "i",
@@ -38597,13 +38597,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
+                "criteria": "3159-2d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
+                "criteria": "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
               }
             ],
             "relationType": "sostenibilidad",
@@ -39644,8 +39644,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA3",
-            "targetRaText_es": "Accede a la información de los posibles itinerarios académicos y/o profesionales que tiene a su alcance a través de la investigación y la reflexión libre de estereotipos vocacionales",
-            "targetRaText_ca": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la recerca i la reflexió lliure d'estereotips vocacionals.",
+            "targetRaText_es": "Accede a la información de los posibles itinerarios académicos y/o profesionales que tiene a su alcance a través de la investigación y la reflexión libre de estereotipos vocacionales.",
+            "targetRaText_ca": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la investigació i la reflexió lliure d’estereotips vocacionals.",
             "sourceCriteria": "3011-2g",
             "criteriaKeys": [
               "g",
@@ -39675,19 +39675,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4a. Se ha determinado la realidad del entorno sociolaboral actual."
+                "criteria": "3159-3a. Se ha determinado la realidad del entorno sociolaboral actual."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
+                "criteria": "3159-3c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
               }
             ],
             "relationType": "comunicacion",
@@ -39966,8 +39966,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA2",
-            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo",
-            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
+            "targetRaText_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+            "targetRaText_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
             "sourceCriteria": "3011-2i",
             "criteriaKeys": [
               "i",
@@ -39985,7 +39985,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
+                "criteria": "3159-3c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
               }
             ],
             "relationType": "comunicacion",
@@ -40397,7 +40397,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               },
               {
                 "moduleCode": "3064",
@@ -40573,7 +40573,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               }
             ],
             "relationType": "comunicacion",
@@ -41067,7 +41067,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-4b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
+                "criteria": "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias."
               }
             ],
             "relationType": "comunicacion",
@@ -41425,7 +41425,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional."
+                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
               },
               {
                 "moduleCode": "3064",
@@ -41625,7 +41625,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
+                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento."
               },
               {
                 "moduleCode": "3064",
@@ -41837,7 +41837,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
               },
               {
                 "moduleCode": "3159",
@@ -42061,7 +42061,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               },
               {
                 "moduleCode": "3159",
@@ -42224,8 +42224,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA4",
-            "targetRaText_es": "Pone en marcha un itinerario propio analizando las distintas opciones educativas y profesionales, valorando las ventajas e inconvenientes de cada una de ellas y examinando aquellas que mejor se ajustan a sus posibilidades y preferencias",
-            "targetRaText_ca": "Posa en marxa un itinerari propi. analitza les diferents opcions educatives i professionals, valora els avantatges i inconvenients de cadascuna d'elles i examina aquells fets que millor s'ajusten a les seves possibilitats i preferències.",
+            "targetRaText_es": "Pone en marcha un itinerario propio analizando las diferentes opciones educativas y profesionales, valorando las ventajas e inconvenientes de cada una y examinando aquellas que mejor se ajustan a sus posibilidades y preferencias.",
+            "targetRaText_ca": "Posa en marxa un itinerari propi analitzant les diferents opcions educatives i professionals, valorant els avantatges i inconvenients de cadascuna i examinant aquelles que millor s’ajusten a les seves possibilitats i preferències.",
             "sourceCriteria": "3011-4g",
             "criteriaKeys": [
               "g",
@@ -42407,7 +42407,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               }
             ],
             "relationType": "comunicacion",
@@ -43002,8 +43002,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA1",
-            "targetRaText_es": "Desarrolla actividades de autoconocimiento que le permiten orientarse a campos profesionales motivadores en los que puede desplegar todas sus capacidades",
-            "targetRaText_ca": "Desenvolupa activitats d'autoconeixement que li permeten orientar-se a camps professionals motivadors en els quals pot desplegar totes les seves capacitats.",
+            "targetRaText_es": "Desarrolla actividades de autoconocimiento que le permiten orientarse hacia campos profesionales motivadores en los que puede desplegar todas sus capacidades.",
+            "targetRaText_ca": "Desenvolupa activitats d’autoconeixement que li permeten orientar-se cap a camps professionals motivadors en els quals pot desplegar totes les seves capacitats.",
             "sourceCriteria": "3011-5c",
             "criteriaKeys": [
               "c",
@@ -43039,13 +43039,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-2c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
               },
               {
                 "moduleCode": "3063",
@@ -44143,7 +44143,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
+                "criteria": "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad."
               }
             ],
             "relationType": "comunicacion",
@@ -44872,8 +44872,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "targetModuleName_es": "Itinerario personal para la empleabilidad",
             "targetModuleName_ca": "Itinerari personal per a l’ocupabilitat",
             "targetRaCode": "RA3",
-            "targetRaText_es": "Accede a la información de los posibles itinerarios académicos y/o profesionales que tiene a su alcance a través de la investigación y la reflexión libre de estereotipos vocacionales",
-            "targetRaText_ca": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la recerca i la reflexió lliure d'estereotips vocacionals.",
+            "targetRaText_es": "Accede a la información de los posibles itinerarios académicos y/o profesionales que tiene a su alcance a través de la investigación y la reflexión libre de estereotipos vocacionales.",
+            "targetRaText_ca": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la investigació i la reflexió lliure d’estereotips vocacionals.",
             "sourceCriteria": "3011-6j",
             "criteriaKeys": [
               "j",
@@ -54432,28 +54432,26 @@ export const FPB_MODULES_SEED: FPBModule[] = [
       {
         "id": "3159_RA1",
         "code": "RA1",
-        "text_es": "Analiza los riesgos derivados de su actividad, analizando las condiciones de trabajo y los factores de riesgo presentes en su entorno laboral.",
-        "text_ca": "Desenvolupa activitats d'autoconeixement que li permeten orientar-se a camps professionals motivadors en els quals pot desplegar totes les seves capacitats.",
+        "text_es": "Desarrolla actividades de autoconocimiento que le permiten orientarse hacia campos profesionales motivadores en los que puede desplegar todas sus capacidades.",
+        "text_ca": "Desenvolupa activitats d’autoconeixement que li permeten orientar-se cap a camps professionals motivadors en els quals pot desplegar totes les seves capacitats.",
         "criteria_es": [
-          "a) Se ha valorado la importancia de la cultura preventiva en todos los ámbitos o actividades de la empresa u organismo equiparado y se identifica la normativa básica de prevención de riesgos y organismos públicos relacionados.",
-          "b) Se han identificado y clasificado los factores de riesgo de la actividad derivado de las condiciones de trabajo y los daños derivados de los mismos, especialmente los relacionados con el título.",
-          "c) Se ha determinado la evaluación de riesgos en la empresa u organismo equiparado y definido las técnicas de prevención y de protección que deben aplicarse para evitar los daños en su origen y minimizar sus consecuencias e identificado la señalización en los lugares de trabajo.",
-          "d) Se han analizado los protocolos de actuación en caso de emergencia.",
-          "e) Se ha valorado la importancia de que exista un plan preventivo en la empresa que incluya la secuenciación de acciones a realizar en caso de emergencia, así como tiene conocimiento de la documentación básica en prevención de riesgos.",
-          "f) Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños."
+          "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
+          "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo.",
+          "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo.",
+          "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento.",
+          "3159-1e. Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
         ],
         "criteria_ca": [
-          "a) S'ha valorat l'importància de la cultura preventiva en tots els ámbitos o activitats de l'empresa o organismo equiparat i es identifica la normativa bàsica de prevenció de riscos i organismos públics relacionats.",
-          "b) S'han identificat i classificat els factors de risc de l'activitat derivat de les condicions de treball i els daños derivats dels mateixos, especialment els relacionats amb el título.",
-          "c) S'ha determinat l'evaluació de riscos en l'empresa o organismo equiparat i definit les tècniques de prevenció i de protecció que han d'aplicarse per a evitar els daños en el seu origen i minimizar els seus consecuencias i identificat la señalizació en els lugars de treball.",
-          "d) S'han analitzat els protocols d'actuació en cas d'emergencia.",
-          "i) S'ha valorat l'importància de que exista un pla preventiu en l'empresa que incluya la secuenciació d'accions a realitzar en cas d'emergencia, així com té conociment de la documentació bàsica en prevenció de riscos.",
-          "f) S'han identificat les tècniques bàsiques de primers auxilios que han de ser aplicades en el lugar del accidente davant de diferents tipus de daños."
+          "3159-1a. S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
+          "3159-1b. S'han determinat les competències personals i socials amb valor per a l'ocupació.",
+          "3159-1c. S'ha valorat el concepte d'autoestima en el procés de recerca de feina.",
+          "3159-1d. S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional, així com les estratègies per treure'n el màxim profit.",
+          "3159-1e. S'han identificat expectatives de futur per a la inserció professional, analitzant competències, interessos i destreses personals."
         ],
         "connections": [
           {
-            "title_es": "Conexión curricular: 3159-1a ↔ 3060-1d (Preparación del entorno profesional)",
-            "title_ca": "Connexió curricular: 3159-1a ↔ 3060-1d (Preparació de l’entorn professional)",
+            "title_es": "Conexión curricular: 3159-1a ↔ 3060-1f (Preparación del entorno profesional)",
+            "title_ca": "Connexió curricular: 3159-1a ↔ 3060-1f (Preparació de l’entorn professional)",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
@@ -54465,988 +54463,6 @@ export const FPB_MODULES_SEED: FPBModule[] = [
               "a",
               "1a",
               "3159-1a"
-            ],
-            "relatedCriteria": [
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-1d. Se han identificado las posturas más idóneas para prevenir problemas físicos, trabajar en condiciones de seguridad y prevenir riesgos laborales."
-              },
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6a. Se ha cumplido en todo momento la normativa general sobre prevención y seguridad, así como las establecidas por la empresa."
-              },
-              {
-                "moduleCode": "3009",
-                "moduleName_es": "Ciencias aplicadas I",
-                "moduleName_ca": "Ciències aplicades I",
-                "criteria": "3009-2c. Se han tenido en cuenta las condiciones de higiene y seguridad para cada una de las técnicas experimentales que se van a realizar."
-              },
-              {
-                "moduleCode": "3011",
-                "moduleName_es": "Comunicación y sociedad I",
-                "moduleName_ca": "Comunicació i societat I",
-                "criteria": "3011-4d. Se ha resumido el contenido de un texto escrito, extrayendo la idea principal, las secundarias y el propósito comunicativo."
-              },
-              {
-                "moduleCode": "3005",
-                "moduleName_es": "Atención al cliente",
-                "moduleName_ca": "Atenció al client",
-                "criteria": "3005-3h. Se ha definido periodo de garantía y las obligaciones legales aparejadas."
-              },
-              {
-                "moduleCode": "3005",
-                "moduleName_es": "Atención al cliente",
-                "moduleName_ca": "Atenció al client",
-                "criteria": "3005-4b. Se han reconocido los aspectos principales en los que incide la legislación vigente, en relación con las reclamaciones."
-              }
-            ],
-            "relationType": "tecnica",
-            "justification_es": "La cultura preventiva de la que habla el módulo es la misma que exigen los módulos de taller (posturas y seguridad de «Preparación del entorno profesional») y la FCT (normativa de prevención). Su base está en la seguridad e higiene de las Ciencias Aplicadas, y la lectura y el resumen de la normativa es competencia de Comunicación y Sociedad I.",
-            "justification_ca": "La cultura preventiva de la que habla el mòdul és la mateixa que exigeixen els mòduls de taller (postures i seguretat de «Preparació del entorn professional») i la FCT (normativa de prevenció). El seu base està en la seguretat i higiene de les Ciències Aplicades, i la lectura i el resum de la normativa és competència de Comunicació i Societat I.",
-            "activities": [
-              {
-                "id": "act_3159_ra1_5",
-                "title_es": "La normativa en lectura fácil",
-                "title_ca": "La normativa en lectura fàcil",
-                "motivatingFactor_es": "Leer y resumir la normativa básica de prevención de riesgos para entenderla de verdad.",
-                "motivatingFactor_ca": "Llegir i resumir la normativa bàsica de prevenció de riscos per a entenderla de vertat.",
-                "description_es": "A partir de un texto adaptado sobre la Ley de Prevención de Riesgos Laborales, subrayan las ideas clave, elaboran un resumen con sus palabras y lo convierten en un póster con dibujos. (Aprendizajes: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "description_ca": "A partir d'un text adaptat sobre la Ley de prevenció de riscos laborals, subrayan les idees clau, elaboren un resum amb els seus paraules i el converteixen en un pòster amb dibuixos. (Aprenentatges: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "evidence_es": "Resumen en lectura fácil y póster de la normativa.",
-                "evidence_ca": "Resum en lectura fàcil i pòster de la normativa.",
-                "diversitySupport_es": "Texto adaptado, técnica del subrayado guiada, plantilla de resumen y glosario de términos.",
-                "diversitySupport_ca": "Text adaptat, tècnica del subrayat guiada, plantilla de resum i glosari de términos."
-              },
-              {
-                "id": "act_3159_ra1_1",
-                "title_es": "Detectives del riesgo en el salón",
-                "title_ca": "Detectius del risc en el saló",
-                "motivatingFactor_es": "Convertirse en inspectores de seguridad que localizan peligros en un salón de peluquería y estética.",
-                "motivatingFactor_ca": "Convertirse en inspectors de seguretat que localizan peligros en un saló de perruqueria i estètica.",
-                "description_es": "Por equipos, reciben fotografías y un plano de un salón con riesgos (cables, cera caliente, productos, posturas) y clasifican cada riesgo con un semáforo (rojo/ámbar/verde), explicando el daño que puede causar. (Aprendizajes: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "description_ca": "per equips, reben fotografies i un plano d'un saló amb riscos (cables, cera caliente, productes, postures) i classifiquen cada risc amb un semàfor (roig/ámbar/verd), explicant el daño que pot causar. (Aprenentatges: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "evidence_es": "Plano del salón con los riesgos señalizados y clasificados.",
-                "evidence_ca": "Plano del saló amb els riscos señalizats i classificats.",
-                "diversitySupport_es": "Fotografías reales, semáforo de cartulina, tarjetas de riesgo, roles (detective/portavoz) y vocabulario con pictogramas.",
-                "diversitySupport_ca": "Fotografies reals, semàfor de cartulina, targetes de risc, rols (detectiu/portavoz) i vocabulari amb pictogrames."
-              },
-              {
-                "id": "act_3159_ra1_2",
-                "title_es": "Señaliza tu aula-taller",
-                "title_ca": "Señaliza el teu aula taller",
-                "motivatingFactor_es": "Diseñar y colocar la señalización de seguridad que falta en el taller.",
-                "motivatingFactor_ca": "Dissenyar i colocar la señalizació de seguretat que manca en el taller.",
-                "description_es": "Identifican los lugares del taller que necesitan señal (prohibición, obligación de EPI, peligro, emergencia), diseñan las señales con plantillas y las colocan, explicando su significado. (Aprendizajes: 3159-1c + 3060-1e + 3067-6e + 3042-14d + 3061-1m + 3063-1i.)",
-                "description_ca": "Identifiquen els lugars del taller que necessiten senyal (prohibició, obligació d'EPI, peligro, emergencia), dissenyen les senyals amb plantilles i les colocan, explicant el seu significat. (Aprenentatges: 3159-1c + 3060-1i + 3067-6i + 3042-14d + 3061-1m + 3063-1i.)",
-                "evidence_es": "Señales de seguridad colocadas y guía explicativa.",
-                "evidence_ca": "Senyals de seguretat colocades i guia explicativa.",
-                "diversitySupport_es": "Plantillas de señales, códigos de color (forma/color de cada señal), trabajo por parejas y explicación oral breve.",
-                "diversitySupport_ca": "Plantilles de senyals, codis de color (forma/color de cada senyal), treball per parelles i explicació oral breu."
-              },
-              {
-                "id": "act_3159_ra1_3",
-                "title_es": "Simulacro de emergencia",
-                "title_ca": "Simulacro d'emergencia",
-                "motivatingFactor_es": "Preparar y practicar el protocolo de actuación en caso de emergencia en el centro.",
-                "motivatingFactor_ca": "Preparar i practicar el protocol d'actuació en cas d'emergencia en el centro.",
-                "description_es": "Leen el protocolo de evacuación en lectura fácil, ensayan la secuencia (avisar, evacuar, punto de encuentro) y la representan, valorando después si se cumplió cada paso. (Aprendizajes: 3159-1d/1e + 3067-6f + 3009-2c + 3011-4c.)",
-                "description_ca": "Llegeixen el protocol d'evacuació en lectura fàcil, ensayan la seqüència (avisar, evacuar, punto d'encuentro) i la representen, valorant després si es cumplió cada pas. (Aprenentatges: 3159-1d/1i + 3067-6f + 3009-2c + 3011-4c.)",
-                "evidence_es": "Guion del simulacro y rúbrica de autoevaluación del protocolo.",
-                "evidence_ca": "Guió del simulacro i rúbrica d'autoavaluació del protocol.",
-                "diversitySupport_es": "Protocolo en lectura fácil, pasos numerados con pictogramas, cronómetro y reflexión en círculo.",
-                "diversitySupport_ca": "Protocol en lectura fàcil, pasos numerats amb pictogrames, cronómetro i reflexió en círculo."
-              },
-              {
-                "id": "act_3159_ra1_4",
-                "title_es": "Botiquín y primeros auxilios",
-                "title_ca": "Botiquín i primers auxilios",
-                "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
-                "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
-                "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
-                "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
-                "diversitySupport_ca": "Targetes amb casos ilustrats, vídeo demostratiu, dramatizació guiada i láminas d'anatomía bàsica."
-              },
-              {
-                "id": "act_3159_ra1_6",
-                "title_es": "Plan de prevención de nuestra aula",
-                "title_ca": "Pla de prevenció de la nostra aula",
-                "motivatingFactor_es": "Elaborar un mini-plan preventivo para el aula-taller como si fuera una empresa.",
-                "motivatingFactor_ca": "Elaborar un mini-pla preventiu per al aula taller com si fora una empresa.",
-                "description_es": "En equipos, redactan un plan sencillo: riesgos detectados, medidas preventivas, EPI necesarios y acciones en caso de emergencia, y lo presentan al resto de la clase. (Aprendizajes: 3159-1e + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "description_ca": "En equips, redacten un pla senzill: riscos detectats, mesures preventives, EPI necesarios i accions en cas d'emergencia, i el presenten al resta de la clase. (Aprenentatges: 3159-1i + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "evidence_es": "Mini-plan de prevención en cartel y exposición oral.",
-                "evidence_ca": "Mini-pla de prevenció en cartell i exposició oral.",
-                "diversitySupport_es": "Plantilla del plan, ejemplos resueltos, banco de medidas y presentación en pareja.",
-                "diversitySupport_ca": "Plantilla del pla, exemples resolts, banc de mesures i presentació en parella."
-              },
-              {
-                "id": "act_3159_ra1_7",
-                "title_es": "EPI en acción: quién usa qué",
-                "title_ca": "EPI en acció: qui usa què",
-                "motivatingFactor_es": "Relacionar cada técnica del taller con su equipo de protección individual.",
-                "motivatingFactor_ca": "Relacionar cada tècnica del taller amb el seu equip de protecció individual.",
-                "description_es": "Con un mural de las técnicas (depilación, decoloración, color, manicura), colocan los EPI correspondientes a cada una y justifican por qué protegen, probándose guantes, gafas y mascarillas. (Aprendizajes: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "description_ca": "Amb un mural de les tècniques (depilació, decoloració, color, manicura), colocan els EPI correspondients a cada una i justifican per què protegeixen, probándose guants, gafas i mascaretes. (Aprenentatges: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "evidence_es": "Mural técnica-EPI y demostración de colocación.",
-                "evidence_ca": "Mural tècnica-EPI i demostració de colocació.",
-                "diversitySupport_es": "Mural grande, tarjetas de técnicas y EPI, pictogramas y autocontrol con espejo.",
-                "diversitySupport_ca": "Mural gran, targetes de tècniques i EPI, pictogrames i autocontrol amb espill."
-              }
-            ]
-          },
-          {
-            "title_es": "Conexión curricular: 3159-1b ↔ 3062-2i (Depilación mecánica y decoloración del vello superfluo)",
-            "title_ca": "Connexió curricular: 3159-1b ↔ 3062-2i (Depilació mecànica i decoloració del pèl superflu)",
-            "targetModuleCode": "3062",
-            "targetModuleName_es": "Depilación mecánica y decoloración del vello superfluo",
-            "targetModuleName_ca": "Depilació mecànica i decoloració del pèl superflu",
-            "targetRaCode": "RA2",
-            "targetRaText_es": "Prepara equipos, útiles y productos de depilación y decoloración, reconociendo sus características y aplicaciones",
-            "targetRaText_ca": "Prepara equipaments, estris i productes de depil·lació i decoloració, reconeixent les seves característiques i aplicacions.",
-            "sourceCriteria": "3159-1b",
-            "criteriaKeys": [
-              "b",
-              "1b",
-              "3159-1b"
-            ],
-            "relatedCriteria": [
-              {
-                "moduleCode": "3062",
-                "moduleName_es": "Depilación mecánica y decoloración del vello superfluo",
-                "moduleName_ca": "Depilació mecànica i decoloració del pèl superflu",
-                "criteria": "3062-2i. Se reconocen los peligros asociados a las actividades con aparatos eléctricos."
-              },
-              {
-                "moduleCode": "3064",
-                "moduleName_es": "Lavado y cambios de forma del cabello",
-                "moduleName_ca": "Rentat i canvis de forma del cabell",
-                "criteria": "3064-2h. Se han detectado las anomalías que pueden presentar los aparatos y que pueden causar riesgos, tanto para el cliente como para el profesional."
-              },
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6b. Se han identificado los factores y situaciones de riesgo que se presentan en su ámbito de actuación en el centro de trabajo."
-              },
-              {
-                "moduleCode": "3009",
-                "moduleName_es": "Ciencias aplicadas I",
-                "moduleName_ca": "Ciències aplicades I",
-                "criteria": "3009-7g. Se han reconocido situaciones de riesgo para la salud relacionadas con su entorno profesional más cercano."
-              },
-              {
-                "moduleCode": "3042",
-                "moduleName_es": "Ciencias aplicadas II",
-                "moduleName_ca": "Ciències aplicades II",
-                "criteria": "3042-14b. Se han categorizado los principales agentes causantes de infecciones por contacto con materiales infectados o contaminados."
-              }
-            ],
-            "relationType": "tecnica",
-            "justification_es": "Identificar y clasificar riesgos es un saber que se aplica en cada taller (peligros eléctricos de la depilación, anomalías de los aparatos de calor) y que la FCT exige en el puesto real. Las Ciencias Aplicadas aportan la clasificación científica de los riesgos para la salud y de los agentes infecciosos.",
-            "justification_ca": "Identificar i classificar riscos és un saber que es aplica en cada taller (peligros elèctrics de la depilació, anomalías dels aparells de calor) i que la FCT exigeix en el posat real. Les Ciències Aplicades aporten la classificació científica dels riscos per a la salut i dels agents infecciosos.",
-            "activities": [
-              {
-                "id": "act_3159_ra1_1",
-                "title_es": "Detectives del riesgo en el salón",
-                "title_ca": "Detectius del risc en el saló",
-                "motivatingFactor_es": "Convertirse en inspectores de seguridad que localizan peligros en un salón de peluquería y estética.",
-                "motivatingFactor_ca": "Convertirse en inspectors de seguretat que localizan peligros en un saló de perruqueria i estètica.",
-                "description_es": "Por equipos, reciben fotografías y un plano de un salón con riesgos (cables, cera caliente, productos, posturas) y clasifican cada riesgo con un semáforo (rojo/ámbar/verde), explicando el daño que puede causar. (Aprendizajes: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "description_ca": "per equips, reben fotografies i un plano d'un saló amb riscos (cables, cera caliente, productes, postures) i classifiquen cada risc amb un semàfor (roig/ámbar/verd), explicant el daño que pot causar. (Aprenentatges: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "evidence_es": "Plano del salón con los riesgos señalizados y clasificados.",
-                "evidence_ca": "Plano del saló amb els riscos señalizats i classificats.",
-                "diversitySupport_es": "Fotografías reales, semáforo de cartulina, tarjetas de riesgo, roles (detective/portavoz) y vocabulario con pictogramas.",
-                "diversitySupport_ca": "Fotografies reals, semàfor de cartulina, targetes de risc, rols (detectiu/portavoz) i vocabulari amb pictogrames."
-              },
-              {
-                "id": "act_3159_ra1_6",
-                "title_es": "Plan de prevención de nuestra aula",
-                "title_ca": "Pla de prevenció de la nostra aula",
-                "motivatingFactor_es": "Elaborar un mini-plan preventivo para el aula-taller como si fuera una empresa.",
-                "motivatingFactor_ca": "Elaborar un mini-pla preventiu per al aula taller com si fora una empresa.",
-                "description_es": "En equipos, redactan un plan sencillo: riesgos detectados, medidas preventivas, EPI necesarios y acciones en caso de emergencia, y lo presentan al resto de la clase. (Aprendizajes: 3159-1e + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "description_ca": "En equips, redacten un pla senzill: riscos detectats, mesures preventives, EPI necesarios i accions en cas d'emergencia, i el presenten al resta de la clase. (Aprenentatges: 3159-1i + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "evidence_es": "Mini-plan de prevención en cartel y exposición oral.",
-                "evidence_ca": "Mini-pla de prevenció en cartell i exposició oral.",
-                "diversitySupport_es": "Plantilla del plan, ejemplos resueltos, banco de medidas y presentación en pareja.",
-                "diversitySupport_ca": "Plantilla del pla, exemples resolts, banc de mesures i presentació en parella."
-              },
-              {
-                "id": "act_3159_ra1_7",
-                "title_es": "EPI en acción: quién usa qué",
-                "title_ca": "EPI en acció: qui usa què",
-                "motivatingFactor_es": "Relacionar cada técnica del taller con su equipo de protección individual.",
-                "motivatingFactor_ca": "Relacionar cada tècnica del taller amb el seu equip de protecció individual.",
-                "description_es": "Con un mural de las técnicas (depilación, decoloración, color, manicura), colocan los EPI correspondientes a cada una y justifican por qué protegen, probándose guantes, gafas y mascarillas. (Aprendizajes: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "description_ca": "Amb un mural de les tècniques (depilació, decoloració, color, manicura), colocan els EPI correspondients a cada una i justifican per què protegeixen, probándose guants, gafas i mascaretes. (Aprenentatges: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "evidence_es": "Mural técnica-EPI y demostración de colocación.",
-                "evidence_ca": "Mural tècnica-EPI i demostració de colocació.",
-                "diversitySupport_es": "Mural grande, tarjetas de técnicas y EPI, pictogramas y autocontrol con espejo.",
-                "diversitySupport_ca": "Mural gran, targetes de tècniques i EPI, pictogrames i autocontrol amb espill."
-              },
-              {
-                "id": "act_3159_ra1_2",
-                "title_es": "Señaliza tu aula-taller",
-                "title_ca": "Señaliza el teu aula taller",
-                "motivatingFactor_es": "Diseñar y colocar la señalización de seguridad que falta en el taller.",
-                "motivatingFactor_ca": "Dissenyar i colocar la señalizació de seguretat que manca en el taller.",
-                "description_es": "Identifican los lugares del taller que necesitan señal (prohibición, obligación de EPI, peligro, emergencia), diseñan las señales con plantillas y las colocan, explicando su significado. (Aprendizajes: 3159-1c + 3060-1e + 3067-6e + 3042-14d + 3061-1m + 3063-1i.)",
-                "description_ca": "Identifiquen els lugars del taller que necessiten senyal (prohibició, obligació d'EPI, peligro, emergencia), dissenyen les senyals amb plantilles i les colocan, explicant el seu significat. (Aprenentatges: 3159-1c + 3060-1i + 3067-6i + 3042-14d + 3061-1m + 3063-1i.)",
-                "evidence_es": "Señales de seguridad colocadas y guía explicativa.",
-                "evidence_ca": "Senyals de seguretat colocades i guia explicativa.",
-                "diversitySupport_es": "Plantillas de señales, códigos de color (forma/color de cada señal), trabajo por parejas y explicación oral breve.",
-                "diversitySupport_ca": "Plantilles de senyals, codis de color (forma/color de cada senyal), treball per parelles i explicació oral breu."
-              },
-              {
-                "id": "act_3159_ra1_3",
-                "title_es": "Simulacro de emergencia",
-                "title_ca": "Simulacro d'emergencia",
-                "motivatingFactor_es": "Preparar y practicar el protocolo de actuación en caso de emergencia en el centro.",
-                "motivatingFactor_ca": "Preparar i practicar el protocol d'actuació en cas d'emergencia en el centro.",
-                "description_es": "Leen el protocolo de evacuación en lectura fácil, ensayan la secuencia (avisar, evacuar, punto de encuentro) y la representan, valorando después si se cumplió cada paso. (Aprendizajes: 3159-1d/1e + 3067-6f + 3009-2c + 3011-4c.)",
-                "description_ca": "Llegeixen el protocol d'evacuació en lectura fàcil, ensayan la seqüència (avisar, evacuar, punto d'encuentro) i la representen, valorant després si es cumplió cada pas. (Aprenentatges: 3159-1d/1i + 3067-6f + 3009-2c + 3011-4c.)",
-                "evidence_es": "Guion del simulacro y rúbrica de autoevaluación del protocolo.",
-                "evidence_ca": "Guió del simulacro i rúbrica d'autoavaluació del protocol.",
-                "diversitySupport_es": "Protocolo en lectura fácil, pasos numerados con pictogramas, cronómetro y reflexión en círculo.",
-                "diversitySupport_ca": "Protocol en lectura fàcil, pasos numerats amb pictogrames, cronómetro i reflexió en círculo."
-              },
-              {
-                "id": "act_3159_ra1_4",
-                "title_es": "Botiquín y primeros auxilios",
-                "title_ca": "Botiquín i primers auxilios",
-                "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
-                "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
-                "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
-                "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
-                "diversitySupport_ca": "Targetes amb casos ilustrats, vídeo demostratiu, dramatizació guiada i láminas d'anatomía bàsica."
-              },
-              {
-                "id": "act_3159_ra1_5",
-                "title_es": "La normativa en lectura fácil",
-                "title_ca": "La normativa en lectura fàcil",
-                "motivatingFactor_es": "Leer y resumir la normativa básica de prevención de riesgos para entenderla de verdad.",
-                "motivatingFactor_ca": "Llegir i resumir la normativa bàsica de prevenció de riscos per a entenderla de vertat.",
-                "description_es": "A partir de un texto adaptado sobre la Ley de Prevención de Riesgos Laborales, subrayan las ideas clave, elaboran un resumen con sus palabras y lo convierten en un póster con dibujos. (Aprendizajes: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "description_ca": "A partir d'un text adaptat sobre la Ley de prevenció de riscos laborals, subrayan les idees clau, elaboren un resum amb els seus paraules i el converteixen en un pòster amb dibuixos. (Aprenentatges: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "evidence_es": "Resumen en lectura fácil y póster de la normativa.",
-                "evidence_ca": "Resum en lectura fàcil i pòster de la normativa.",
-                "diversitySupport_es": "Texto adaptado, técnica del subrayado guiada, plantilla de resumen y glosario de términos.",
-                "diversitySupport_ca": "Text adaptat, tècnica del subrayat guiada, plantilla de resum i glosari de términos."
-              }
-            ]
-          },
-          {
-            "title_es": "Conexión curricular: 3159-1c ↔ 3060-1e (Preparación del entorno profesional)",
-            "title_ca": "Connexió curricular: 3159-1c ↔ 3060-1i (Preparació de l’entorn professional)",
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
-            "targetRaCode": "RA1",
-            "targetRaText_es": "Muestra una imagen personal y profesional adecuada en el entorno de trabajo, relacionándola con la higiene corporal y la estética personal.",
-            "targetRaText_ca": "Mostra una imatge personal i professional adecuada en l'entorn de treball, relacionant-la amb la higiene corporal i l'estètica personal.",
-            "sourceCriteria": "3159-1c",
-            "criteriaKeys": [
-              "c",
-              "1c",
-              "3159-1c"
-            ],
-            "relatedCriteria": [
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-1e. Se han descrito las medidas de protección que debe emplear el profesional, relacionándolas con la técnica que se va a realizar."
-              },
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6d. Se ha empleado el equipo de protección individual (EPI) establecido para las distintas operaciones."
-              },
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6e. Se han utilizado los dispositivos de protección de las máquinas, equipos e instalaciones en las distintas actividades."
-              },
-              {
-                "moduleCode": "3042",
-                "moduleName_es": "Ciencias aplicadas II",
-                "moduleName_ca": "Ciències aplicades II",
-                "criteria": "3042-14d. Se han propuesto formas de prevención de infecciones y parasitosis que afectan a la piel y al aparato digestivo."
-              },
-              {
-                "moduleCode": "3065",
-                "moduleName_es": "Cambios de color del cabello",
-                "moduleName_ca": "Canvis de color del cabell",
-                "criteria": "3065-1g. Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3061",
-                "moduleName_es": "Cuidados estéticos básicos de uñas",
-                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
-                "criteria": "3061-1m. Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3063",
-                "moduleName_es": "Maquillaje",
-                "moduleName_ca": "Maquillatge",
-                "criteria": "3063-1i. Se han aplicado las medidas de prevención de riesgos laborales y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-1d. Se han identificado las posturas más idóneas para prevenir problemas físicos, trabajar en condiciones de seguridad y prevenir riesgos laborales."
-              },
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-2j. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-4g. Se han identificado los equipos de protección del cliente según el servicio previsto."
-              },
-              {
-                "moduleCode": "3061",
-                "moduleName_es": "Cuidados estéticos básicos de uñas",
-                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
-                "criteria": "3061-2g. Se ha preparado al cliente para el servicio que se va a realizar garantizando su seguridad."
-              },
-              {
-                "moduleCode": "3061",
-                "moduleName_es": "Cuidados estéticos básicos de uñas",
-                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
-                "criteria": "3061-3d. Se ha preparado y protegido al cliente y al profesional de forma correcta."
-              },
-              {
-                "moduleCode": "3061",
-                "moduleName_es": "Cuidados estéticos básicos de uñas",
-                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
-                "criteria": "3061-3l. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3061",
-                "moduleName_es": "Cuidados estéticos básicos de uñas",
-                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
-                "criteria": "3061-4e. Se ha preparado y protegido al cliente y al profesional de forma correcta."
-              },
-              {
-                "moduleCode": "3061",
-                "moduleName_es": "Cuidados estéticos básicos de uñas",
-                "moduleName_ca": "Cures estètiques bàsiques d’ungles",
-                "criteria": "3061-4n. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3065",
-                "moduleName_es": "Cambios de color del cabello",
-                "moduleName_ca": "Canvis de color del cabell",
-                "criteria": "3065-1f. Se ha identificado la composición del equipo personal de peluquería para la ejecución técnica del cambio de color."
-              },
-              {
-                "moduleCode": "3065",
-                "moduleName_es": "Cambios de color del cabello",
-                "moduleName_ca": "Canvis de color del cabell",
-                "criteria": "3065-2e. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene."
-              },
-              {
-                "moduleCode": "3065",
-                "moduleName_es": "Cambios de color del cabello",
-                "moduleName_ca": "Canvis de color del cabell",
-                "criteria": "3065-3e. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene."
-              },
-              {
-                "moduleCode": "3065",
-                "moduleName_es": "Cambios de color del cabello",
-                "moduleName_ca": "Canvis de color del cabell",
-                "criteria": "3065-4c. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene."
-              },
-              {
-                "moduleCode": "3011",
-                "moduleName_es": "Comunicación y sociedad I",
-                "moduleName_ca": "Comunicació i societat I",
-                "criteria": "3011-5c"
-              },
-              {
-                "moduleCode": "3064",
-                "moduleName_es": "Lavado y cambios de forma del cabello",
-                "moduleName_ca": "Rentat i canvis de forma del cabell",
-                "criteria": "3064-2j. Se han aplicado las medidas de prevención de riesgos laborales requeridas."
-              },
-              {
-                "moduleCode": "3064",
-                "moduleName_es": "Lavado y cambios de forma del cabello",
-                "moduleName_ca": "Rentat i canvis de forma del cabell",
-                "criteria": "3064-3i. Se han empleado los equipos de protección individual."
-              },
-              {
-                "moduleCode": "3064",
-                "moduleName_es": "Lavado y cambios de forma del cabello",
-                "moduleName_ca": "Rentat i canvis de forma del cabell",
-                "criteria": "3064-5c. Se ha protegido el profesional con las medidas adecuadas para trabajar en condiciones de seguridad e higiene."
-              }
-            ],
-            "relationType": "tecnica",
-            "justification_es": "La evaluación de riesgos y las técnicas de prevención y protección (incluida la señalización) se concretan en las medidas de protección y en los EPI que exigen todos los módulos de taller (manicura, maquillaje, color) y la FCT. La prevención de infecciones de Ciencias Aplicadas II es su fundamento sanitario.",
-            "justification_ca": "L'evaluació de riscos i les tècniques de prevenció i protecció (incluida la señalizació) es concretan en les mesures de protecció i en els EPI que exigeixen tots els mòduls de taller (manicura, maquillatge, color) i la FCT. La prevenció d'infeccions de Ciències Aplicades II és el seu fundamento sanitari.",
-            "activities": [
-              {
-                "id": "act_3159_ra1_2",
-                "title_es": "Señaliza tu aula-taller",
-                "title_ca": "Señaliza el teu aula taller",
-                "motivatingFactor_es": "Diseñar y colocar la señalización de seguridad que falta en el taller.",
-                "motivatingFactor_ca": "Dissenyar i colocar la señalizació de seguretat que manca en el taller.",
-                "description_es": "Identifican los lugares del taller que necesitan señal (prohibición, obligación de EPI, peligro, emergencia), diseñan las señales con plantillas y las colocan, explicando su significado. (Aprendizajes: 3159-1c + 3060-1e + 3067-6e + 3042-14d + 3061-1m + 3063-1i.)",
-                "description_ca": "Identifiquen els lugars del taller que necessiten senyal (prohibició, obligació d'EPI, peligro, emergencia), dissenyen les senyals amb plantilles i les colocan, explicant el seu significat. (Aprenentatges: 3159-1c + 3060-1i + 3067-6i + 3042-14d + 3061-1m + 3063-1i.)",
-                "evidence_es": "Señales de seguridad colocadas y guía explicativa.",
-                "evidence_ca": "Senyals de seguretat colocades i guia explicativa.",
-                "diversitySupport_es": "Plantillas de señales, códigos de color (forma/color de cada señal), trabajo por parejas y explicación oral breve.",
-                "diversitySupport_ca": "Plantilles de senyals, codis de color (forma/color de cada senyal), treball per parelles i explicació oral breu."
-              },
-              {
-                "id": "act_3159_ra1_7",
-                "title_es": "EPI en acción: quién usa qué",
-                "title_ca": "EPI en acció: qui usa què",
-                "motivatingFactor_es": "Relacionar cada técnica del taller con su equipo de protección individual.",
-                "motivatingFactor_ca": "Relacionar cada tècnica del taller amb el seu equip de protecció individual.",
-                "description_es": "Con un mural de las técnicas (depilación, decoloración, color, manicura), colocan los EPI correspondientes a cada una y justifican por qué protegen, probándose guantes, gafas y mascarillas. (Aprendizajes: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "description_ca": "Amb un mural de les tècniques (depilació, decoloració, color, manicura), colocan els EPI correspondients a cada una i justifican per què protegeixen, probándose guants, gafas i mascaretes. (Aprenentatges: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "evidence_es": "Mural técnica-EPI y demostración de colocación.",
-                "evidence_ca": "Mural tècnica-EPI i demostració de colocació.",
-                "diversitySupport_es": "Mural grande, tarjetas de técnicas y EPI, pictogramas y autocontrol con espejo.",
-                "diversitySupport_ca": "Mural gran, targetes de tècniques i EPI, pictogrames i autocontrol amb espill."
-              },
-              {
-                "id": "act_3159_ra1_1",
-                "title_es": "Detectives del riesgo en el salón",
-                "title_ca": "Detectius del risc en el saló",
-                "motivatingFactor_es": "Convertirse en inspectores de seguridad que localizan peligros en un salón de peluquería y estética.",
-                "motivatingFactor_ca": "Convertirse en inspectors de seguretat que localizan peligros en un saló de perruqueria i estètica.",
-                "description_es": "Por equipos, reciben fotografías y un plano de un salón con riesgos (cables, cera caliente, productos, posturas) y clasifican cada riesgo con un semáforo (rojo/ámbar/verde), explicando el daño que puede causar. (Aprendizajes: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "description_ca": "per equips, reben fotografies i un plano d'un saló amb riscos (cables, cera caliente, productes, postures) i classifiquen cada risc amb un semàfor (roig/ámbar/verd), explicant el daño que pot causar. (Aprenentatges: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "evidence_es": "Plano del salón con los riesgos señalizados y clasificados.",
-                "evidence_ca": "Plano del saló amb els riscos señalizats i classificats.",
-                "diversitySupport_es": "Fotografías reales, semáforo de cartulina, tarjetas de riesgo, roles (detective/portavoz) y vocabulario con pictogramas.",
-                "diversitySupport_ca": "Fotografies reals, semàfor de cartulina, targetes de risc, rols (detectiu/portavoz) i vocabulari amb pictogrames."
-              },
-              {
-                "id": "act_3159_ra1_3",
-                "title_es": "Simulacro de emergencia",
-                "title_ca": "Simulacro d'emergencia",
-                "motivatingFactor_es": "Preparar y practicar el protocolo de actuación en caso de emergencia en el centro.",
-                "motivatingFactor_ca": "Preparar i practicar el protocol d'actuació en cas d'emergencia en el centro.",
-                "description_es": "Leen el protocolo de evacuación en lectura fácil, ensayan la secuencia (avisar, evacuar, punto de encuentro) y la representan, valorando después si se cumplió cada paso. (Aprendizajes: 3159-1d/1e + 3067-6f + 3009-2c + 3011-4c.)",
-                "description_ca": "Llegeixen el protocol d'evacuació en lectura fàcil, ensayan la seqüència (avisar, evacuar, punto d'encuentro) i la representen, valorant després si es cumplió cada pas. (Aprenentatges: 3159-1d/1i + 3067-6f + 3009-2c + 3011-4c.)",
-                "evidence_es": "Guion del simulacro y rúbrica de autoevaluación del protocolo.",
-                "evidence_ca": "Guió del simulacro i rúbrica d'autoavaluació del protocol.",
-                "diversitySupport_es": "Protocolo en lectura fácil, pasos numerados con pictogramas, cronómetro y reflexión en círculo.",
-                "diversitySupport_ca": "Protocol en lectura fàcil, pasos numerats amb pictogrames, cronómetro i reflexió en círculo."
-              },
-              {
-                "id": "act_3159_ra1_4",
-                "title_es": "Botiquín y primeros auxilios",
-                "title_ca": "Botiquín i primers auxilios",
-                "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
-                "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
-                "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
-                "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
-                "diversitySupport_ca": "Targetes amb casos ilustrats, vídeo demostratiu, dramatizació guiada i láminas d'anatomía bàsica."
-              },
-              {
-                "id": "act_3159_ra1_5",
-                "title_es": "La normativa en lectura fácil",
-                "title_ca": "La normativa en lectura fàcil",
-                "motivatingFactor_es": "Leer y resumir la normativa básica de prevención de riesgos para entenderla de verdad.",
-                "motivatingFactor_ca": "Llegir i resumir la normativa bàsica de prevenció de riscos per a entenderla de vertat.",
-                "description_es": "A partir de un texto adaptado sobre la Ley de Prevención de Riesgos Laborales, subrayan las ideas clave, elaboran un resumen con sus palabras y lo convierten en un póster con dibujos. (Aprendizajes: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "description_ca": "A partir d'un text adaptat sobre la Ley de prevenció de riscos laborals, subrayan les idees clau, elaboren un resum amb els seus paraules i el converteixen en un pòster amb dibuixos. (Aprenentatges: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "evidence_es": "Resumen en lectura fácil y póster de la normativa.",
-                "evidence_ca": "Resum en lectura fàcil i pòster de la normativa.",
-                "diversitySupport_es": "Texto adaptado, técnica del subrayado guiada, plantilla de resumen y glosario de términos.",
-                "diversitySupport_ca": "Text adaptat, tècnica del subrayat guiada, plantilla de resum i glosari de términos."
-              },
-              {
-                "id": "act_3159_ra1_6",
-                "title_es": "Plan de prevención de nuestra aula",
-                "title_ca": "Pla de prevenció de la nostra aula",
-                "motivatingFactor_es": "Elaborar un mini-plan preventivo para el aula-taller como si fuera una empresa.",
-                "motivatingFactor_ca": "Elaborar un mini-pla preventiu per al aula taller com si fora una empresa.",
-                "description_es": "En equipos, redactan un plan sencillo: riesgos detectados, medidas preventivas, EPI necesarios y acciones en caso de emergencia, y lo presentan al resto de la clase. (Aprendizajes: 3159-1e + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "description_ca": "En equips, redacten un pla senzill: riscos detectats, mesures preventives, EPI necesarios i accions en cas d'emergencia, i el presenten al resta de la clase. (Aprenentatges: 3159-1i + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "evidence_es": "Mini-plan de prevención en cartel y exposición oral.",
-                "evidence_ca": "Mini-pla de prevenció en cartell i exposició oral.",
-                "diversitySupport_es": "Plantilla del plan, ejemplos resueltos, banco de medidas y presentación en pareja.",
-                "diversitySupport_ca": "Plantilla del pla, exemples resolts, banc de mesures i presentació en parella."
-              }
-            ]
-          },
-          {
-            "title_es": "Conexión curricular: 3159-1d ↔ 3067-6f (Formación en Centros de Trabajo (FCT))",
-            "title_ca": "Connexió curricular: 3159-1d ↔ 3067-6f (Formació en Centres de Treball (FCT)))",
-            "targetModuleCode": "3067",
-            "targetModuleName_es": "Formación en Centros de Trabajo (FCT)",
-            "targetModuleName_ca": "Formació en Centres de Treball (FCT)",
-            "targetRaCode": "RA6",
-            "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Formación en Centros de Trabajo (FCT).",
-            "targetRaText_ca": "Aplica els criteris competencials i procediments tècnics de Formació en Centres de Treball.",
-            "sourceCriteria": "3159-1d",
-            "criteriaKeys": [
-              "d",
-              "1d",
-              "3159-1d"
-            ],
-            "relatedCriteria": [
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6f. Se ha actuado según el plan de prevención."
-              },
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-2j. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3009",
-                "moduleName_es": "Ciencias aplicadas I",
-                "moduleName_ca": "Ciències aplicades I",
-                "criteria": "3009-2c. Se han tenido en cuenta las condiciones de higiene y seguridad para cada una de las técnicas experimentales."
-              },
-              {
-                "moduleCode": "3011",
-                "moduleName_es": "Comunicación y sociedad I",
-                "moduleName_ca": "Comunicació i societat I",
-                "criteria": "3011-4c. Se han aplicado, de forma sistemática, estrategias de lectura comprensiva en la comprensión de los textos."
-              }
-            ],
-            "relationType": "tecnica",
-            "justification_es": "Los protocolos de emergencia se practican bajo el plan de prevención de la empresa (FCT) y las especificaciones de seguridad de «Preparación del entorno profesional»; su lectura y comprensión correcta corresponde a la comprensión lectora de Comunicación y Sociedad I.",
-            "justification_ca": "Els protocols d'emergencia es practiquen sota el pla de prevenció de l'empresa (FCT) i les especificacions de seguretat de «Preparació del entorn professional»; el seu lectura i comprensió correcta corresponde a la comprensió lectora de Comunicació i Societat I.",
-            "activities": [
-              {
-                "id": "act_3159_ra1_3",
-                "title_es": "Simulacro de emergencia",
-                "title_ca": "Simulacro d'emergencia",
-                "motivatingFactor_es": "Preparar y practicar el protocolo de actuación en caso de emergencia en el centro.",
-                "motivatingFactor_ca": "Preparar i practicar el protocol d'actuació en cas d'emergencia en el centro.",
-                "description_es": "Leen el protocolo de evacuación en lectura fácil, ensayan la secuencia (avisar, evacuar, punto de encuentro) y la representan, valorando después si se cumplió cada paso. (Aprendizajes: 3159-1d/1e + 3067-6f + 3009-2c + 3011-4c.)",
-                "description_ca": "Llegeixen el protocol d'evacuació en lectura fàcil, ensayan la seqüència (avisar, evacuar, punto d'encuentro) i la representen, valorant després si es cumplió cada pas. (Aprenentatges: 3159-1d/1i + 3067-6f + 3009-2c + 3011-4c.)",
-                "evidence_es": "Guion del simulacro y rúbrica de autoevaluación del protocolo.",
-                "evidence_ca": "Guió del simulacro i rúbrica d'autoavaluació del protocol.",
-                "diversitySupport_es": "Protocolo en lectura fácil, pasos numerados con pictogramas, cronómetro y reflexión en círculo.",
-                "diversitySupport_ca": "Protocol en lectura fàcil, pasos numerats amb pictogrames, cronómetro i reflexió en círculo."
-              },
-              {
-                "id": "act_3159_ra1_5",
-                "title_es": "La normativa en lectura fácil",
-                "title_ca": "La normativa en lectura fàcil",
-                "motivatingFactor_es": "Leer y resumir la normativa básica de prevención de riesgos para entenderla de verdad.",
-                "motivatingFactor_ca": "Llegir i resumir la normativa bàsica de prevenció de riscos per a entenderla de vertat.",
-                "description_es": "A partir de un texto adaptado sobre la Ley de Prevención de Riesgos Laborales, subrayan las ideas clave, elaboran un resumen con sus palabras y lo convierten en un póster con dibujos. (Aprendizajes: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "description_ca": "A partir d'un text adaptat sobre la Ley de prevenció de riscos laborals, subrayan les idees clau, elaboren un resum amb els seus paraules i el converteixen en un pòster amb dibuixos. (Aprenentatges: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "evidence_es": "Resumen en lectura fácil y póster de la normativa.",
-                "evidence_ca": "Resum en lectura fàcil i pòster de la normativa.",
-                "diversitySupport_es": "Texto adaptado, técnica del subrayado guiada, plantilla de resumen y glosario de términos.",
-                "diversitySupport_ca": "Text adaptat, tècnica del subrayat guiada, plantilla de resum i glosari de términos."
-              },
-              {
-                "id": "act_3159_ra1_1",
-                "title_es": "Detectives del riesgo en el salón",
-                "title_ca": "Detectius del risc en el saló",
-                "motivatingFactor_es": "Convertirse en inspectores de seguridad que localizan peligros en un salón de peluquería y estética.",
-                "motivatingFactor_ca": "Convertirse en inspectors de seguretat que localizan peligros en un saló de perruqueria i estètica.",
-                "description_es": "Por equipos, reciben fotografías y un plano de un salón con riesgos (cables, cera caliente, productos, posturas) y clasifican cada riesgo con un semáforo (rojo/ámbar/verde), explicando el daño que puede causar. (Aprendizajes: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "description_ca": "per equips, reben fotografies i un plano d'un saló amb riscos (cables, cera caliente, productes, postures) i classifiquen cada risc amb un semàfor (roig/ámbar/verd), explicant el daño que pot causar. (Aprenentatges: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "evidence_es": "Plano del salón con los riesgos señalizados y clasificados.",
-                "evidence_ca": "Plano del saló amb els riscos señalizats i classificats.",
-                "diversitySupport_es": "Fotografías reales, semáforo de cartulina, tarjetas de riesgo, roles (detective/portavoz) y vocabulario con pictogramas.",
-                "diversitySupport_ca": "Fotografies reals, semàfor de cartulina, targetes de risc, rols (detectiu/portavoz) i vocabulari amb pictogrames."
-              },
-              {
-                "id": "act_3159_ra1_2",
-                "title_es": "Señaliza tu aula-taller",
-                "title_ca": "Señaliza el teu aula taller",
-                "motivatingFactor_es": "Diseñar y colocar la señalización de seguridad que falta en el taller.",
-                "motivatingFactor_ca": "Dissenyar i colocar la señalizació de seguretat que manca en el taller.",
-                "description_es": "Identifican los lugares del taller que necesitan señal (prohibición, obligación de EPI, peligro, emergencia), diseñan las señales con plantillas y las colocan, explicando su significado. (Aprendizajes: 3159-1c + 3060-1e + 3067-6e + 3042-14d + 3061-1m + 3063-1i.)",
-                "description_ca": "Identifiquen els lugars del taller que necessiten senyal (prohibició, obligació d'EPI, peligro, emergencia), dissenyen les senyals amb plantilles i les colocan, explicant el seu significat. (Aprenentatges: 3159-1c + 3060-1i + 3067-6i + 3042-14d + 3061-1m + 3063-1i.)",
-                "evidence_es": "Señales de seguridad colocadas y guía explicativa.",
-                "evidence_ca": "Senyals de seguretat colocades i guia explicativa.",
-                "diversitySupport_es": "Plantillas de señales, códigos de color (forma/color de cada señal), trabajo por parejas y explicación oral breve.",
-                "diversitySupport_ca": "Plantilles de senyals, codis de color (forma/color de cada senyal), treball per parelles i explicació oral breu."
-              },
-              {
-                "id": "act_3159_ra1_4",
-                "title_es": "Botiquín y primeros auxilios",
-                "title_ca": "Botiquín i primers auxilios",
-                "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
-                "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
-                "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
-                "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
-                "diversitySupport_ca": "Targetes amb casos ilustrats, vídeo demostratiu, dramatizació guiada i láminas d'anatomía bàsica."
-              },
-              {
-                "id": "act_3159_ra1_6",
-                "title_es": "Plan de prevención de nuestra aula",
-                "title_ca": "Pla de prevenció de la nostra aula",
-                "motivatingFactor_es": "Elaborar un mini-plan preventivo para el aula-taller como si fuera una empresa.",
-                "motivatingFactor_ca": "Elaborar un mini-pla preventiu per al aula taller com si fora una empresa.",
-                "description_es": "En equipos, redactan un plan sencillo: riesgos detectados, medidas preventivas, EPI necesarios y acciones en caso de emergencia, y lo presentan al resto de la clase. (Aprendizajes: 3159-1e + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "description_ca": "En equips, redacten un pla senzill: riscos detectats, mesures preventives, EPI necesarios i accions en cas d'emergencia, i el presenten al resta de la clase. (Aprenentatges: 3159-1i + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "evidence_es": "Mini-plan de prevención en cartel y exposición oral.",
-                "evidence_ca": "Mini-pla de prevenció en cartell i exposició oral.",
-                "diversitySupport_es": "Plantilla del plan, ejemplos resueltos, banco de medidas y presentación en pareja.",
-                "diversitySupport_ca": "Plantilla del pla, exemples resolts, banc de mesures i presentació en parella."
-              },
-              {
-                "id": "act_3159_ra1_7",
-                "title_es": "EPI en acción: quién usa qué",
-                "title_ca": "EPI en acció: qui usa què",
-                "motivatingFactor_es": "Relacionar cada técnica del taller con su equipo de protección individual.",
-                "motivatingFactor_ca": "Relacionar cada tècnica del taller amb el seu equip de protecció individual.",
-                "description_es": "Con un mural de las técnicas (depilación, decoloración, color, manicura), colocan los EPI correspondientes a cada una y justifican por qué protegen, probándose guantes, gafas y mascarillas. (Aprendizajes: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "description_ca": "Amb un mural de les tècniques (depilació, decoloració, color, manicura), colocan els EPI correspondients a cada una i justifican per què protegeixen, probándose guants, gafas i mascaretes. (Aprenentatges: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "evidence_es": "Mural técnica-EPI y demostración de colocación.",
-                "evidence_ca": "Mural tècnica-EPI i demostració de colocació.",
-                "diversitySupport_es": "Mural grande, tarjetas de técnicas y EPI, pictogramas y autocontrol con espejo.",
-                "diversitySupport_ca": "Mural gran, targetes de tècniques i EPI, pictogrames i autocontrol amb espill."
-              }
-            ]
-          },
-          {
-            "title_es": "Conexión curricular: 3159-1e ↔ 3060-2j (Preparación del entorno profesional)",
-            "title_ca": "Connexió curricular: 3159-1i ↔ 3060-2j (Preparació de l’entorn professional)",
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
-            "targetRaCode": "RA2",
-            "targetRaText_es": "Prepara las instalaciones aplicando las técnicas de higienización.",
-            "targetRaText_ca": "Prepara les instal·lacions, aplicant les tècniques d'higienització.",
-            "sourceCriteria": "3159-1e",
-            "criteriaKeys": [
-              "e",
-              "1e",
-              "3159-1e"
-            ],
-            "relatedCriteria": [
-              {
-                "moduleCode": "3060",
-                "moduleName_es": "Preparación del entorno profesional",
-                "moduleName_ca": "Preparació de l’entorn professional",
-                "criteria": "3060-2j. Se han aplicado las especificaciones de seguridad y medioambientales requeridas."
-              },
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6f. Se ha actuado según el plan de prevención."
-              },
-              {
-                "moduleCode": "3042",
-                "moduleName_es": "Ciencias aplicadas II",
-                "moduleName_ca": "Ciències aplicades II",
-                "criteria": "3042-11b. Se han propuesto medidas elementales encaminadas a favorecer el desarrollo sostenible."
-              },
-              {
-                "moduleCode": "3011",
-                "moduleName_es": "Comunicación y sociedad I",
-                "moduleName_ca": "Comunicació i societat I",
-                "criteria": "3011-4e. Se ha analizado la estructura de distintos textos escritos de utilización diaria, reconociendo usos y niveles de la lengua y pautas de elaboración."
-              }
-            ],
-            "relationType": "sostenibilidad",
-            "justification_es": "Valorar el plan preventivo y su documentación conecta con la seguridad de «Preparación del entorno profesional», con el plan de prevención de la FCT, con la sostenibilidad de Ciencias Aplicadas II y con el análisis de la documentación escrita de Comunicación y Sociedad I.",
-            "justification_ca": "Valorar el pla preventiu i el seu documentació connecta amb la seguretat de «Preparació del entorn professional», amb el pla de prevenció de la FCT, amb la sostenibilitat de Ciències Aplicades II i amb l'anàlisi de la documentació escrita de Comunicació i Societat I.",
-            "activities": [
-              {
-                "id": "act_3159_ra1_2",
-                "title_es": "Señaliza tu aula-taller",
-                "title_ca": "Señaliza el teu aula taller",
-                "motivatingFactor_es": "Diseñar y colocar la señalización de seguridad que falta en el taller.",
-                "motivatingFactor_ca": "Dissenyar i colocar la señalizació de seguretat que manca en el taller.",
-                "description_es": "Identifican los lugares del taller que necesitan señal (prohibición, obligación de EPI, peligro, emergencia), diseñan las señales con plantillas y las colocan, explicando su significado. (Aprendizajes: 3159-1c + 3060-1e + 3067-6e + 3042-14d + 3061-1m + 3063-1i.)",
-                "description_ca": "Identifiquen els lugars del taller que necessiten senyal (prohibició, obligació d'EPI, peligro, emergencia), dissenyen les senyals amb plantilles i les colocan, explicant el seu significat. (Aprenentatges: 3159-1c + 3060-1i + 3067-6i + 3042-14d + 3061-1m + 3063-1i.)",
-                "evidence_es": "Señales de seguridad colocadas y guía explicativa.",
-                "evidence_ca": "Senyals de seguretat colocades i guia explicativa.",
-                "diversitySupport_es": "Plantillas de señales, códigos de color (forma/color de cada señal), trabajo por parejas y explicación oral breve.",
-                "diversitySupport_ca": "Plantilles de senyals, codis de color (forma/color de cada senyal), treball per parelles i explicació oral breu."
-              },
-              {
-                "id": "act_3159_ra1_3",
-                "title_es": "Simulacro de emergencia",
-                "title_ca": "Simulacro d'emergencia",
-                "motivatingFactor_es": "Preparar y practicar el protocolo de actuación en caso de emergencia en el centro.",
-                "motivatingFactor_ca": "Preparar i practicar el protocol d'actuació en cas d'emergencia en el centro.",
-                "description_es": "Leen el protocolo de evacuación en lectura fácil, ensayan la secuencia (avisar, evacuar, punto de encuentro) y la representan, valorando después si se cumplió cada paso. (Aprendizajes: 3159-1d/1e + 3067-6f + 3009-2c + 3011-4c.)",
-                "description_ca": "Llegeixen el protocol d'evacuació en lectura fàcil, ensayan la seqüència (avisar, evacuar, punto d'encuentro) i la representen, valorant després si es cumplió cada pas. (Aprenentatges: 3159-1d/1i + 3067-6f + 3009-2c + 3011-4c.)",
-                "evidence_es": "Guion del simulacro y rúbrica de autoevaluación del protocolo.",
-                "evidence_ca": "Guió del simulacro i rúbrica d'autoavaluació del protocol.",
-                "diversitySupport_es": "Protocolo en lectura fácil, pasos numerados con pictogramas, cronómetro y reflexión en círculo.",
-                "diversitySupport_ca": "Protocol en lectura fàcil, pasos numerats amb pictogrames, cronómetro i reflexió en círculo."
-              },
-              {
-                "id": "act_3159_ra1_6",
-                "title_es": "Plan de prevención de nuestra aula",
-                "title_ca": "Pla de prevenció de la nostra aula",
-                "motivatingFactor_es": "Elaborar un mini-plan preventivo para el aula-taller como si fuera una empresa.",
-                "motivatingFactor_ca": "Elaborar un mini-pla preventiu per al aula taller com si fora una empresa.",
-                "description_es": "En equipos, redactan un plan sencillo: riesgos detectados, medidas preventivas, EPI necesarios y acciones en caso de emergencia, y lo presentan al resto de la clase. (Aprendizajes: 3159-1e + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "description_ca": "En equips, redacten un pla senzill: riscos detectats, mesures preventives, EPI necesarios i accions en cas d'emergencia, i el presenten al resta de la clase. (Aprenentatges: 3159-1i + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "evidence_es": "Mini-plan de prevención en cartel y exposición oral.",
-                "evidence_ca": "Mini-pla de prevenció en cartell i exposició oral.",
-                "diversitySupport_es": "Plantilla del plan, ejemplos resueltos, banco de medidas y presentación en pareja.",
-                "diversitySupport_ca": "Plantilla del pla, exemples resolts, banc de mesures i presentació en parella."
-              },
-              {
-                "id": "act_3159_ra1_1",
-                "title_es": "Detectives del riesgo en el salón",
-                "title_ca": "Detectius del risc en el saló",
-                "motivatingFactor_es": "Convertirse en inspectores de seguridad que localizan peligros en un salón de peluquería y estética.",
-                "motivatingFactor_ca": "Convertirse en inspectors de seguretat que localizan peligros en un saló de perruqueria i estètica.",
-                "description_es": "Por equipos, reciben fotografías y un plano de un salón con riesgos (cables, cera caliente, productos, posturas) y clasifican cada riesgo con un semáforo (rojo/ámbar/verde), explicando el daño que puede causar. (Aprendizajes: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "description_ca": "per equips, reben fotografies i un plano d'un saló amb riscos (cables, cera caliente, productes, postures) i classifiquen cada risc amb un semàfor (roig/ámbar/verd), explicant el daño que pot causar. (Aprenentatges: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "evidence_es": "Plano del salón con los riesgos señalizados y clasificados.",
-                "evidence_ca": "Plano del saló amb els riscos señalizats i classificats.",
-                "diversitySupport_es": "Fotografías reales, semáforo de cartulina, tarjetas de riesgo, roles (detective/portavoz) y vocabulario con pictogramas.",
-                "diversitySupport_ca": "Fotografies reals, semàfor de cartulina, targetes de risc, rols (detectiu/portavoz) i vocabulari amb pictogrames."
-              },
-              {
-                "id": "act_3159_ra1_4",
-                "title_es": "Botiquín y primeros auxilios",
-                "title_ca": "Botiquín i primers auxilios",
-                "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
-                "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
-                "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
-                "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
-                "diversitySupport_ca": "Targetes amb casos ilustrats, vídeo demostratiu, dramatizació guiada i láminas d'anatomía bàsica."
-              },
-              {
-                "id": "act_3159_ra1_5",
-                "title_es": "La normativa en lectura fácil",
-                "title_ca": "La normativa en lectura fàcil",
-                "motivatingFactor_es": "Leer y resumir la normativa básica de prevención de riesgos para entenderla de verdad.",
-                "motivatingFactor_ca": "Llegir i resumir la normativa bàsica de prevenció de riscos per a entenderla de vertat.",
-                "description_es": "A partir de un texto adaptado sobre la Ley de Prevención de Riesgos Laborales, subrayan las ideas clave, elaboran un resumen con sus palabras y lo convierten en un póster con dibujos. (Aprendizajes: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "description_ca": "A partir d'un text adaptat sobre la Ley de prevenció de riscos laborals, subrayan les idees clau, elaboren un resum amb els seus paraules i el converteixen en un pòster amb dibuixos. (Aprenentatges: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "evidence_es": "Resumen en lectura fácil y póster de la normativa.",
-                "evidence_ca": "Resum en lectura fàcil i pòster de la normativa.",
-                "diversitySupport_es": "Texto adaptado, técnica del subrayado guiada, plantilla de resumen y glosario de términos.",
-                "diversitySupport_ca": "Text adaptat, tècnica del subrayat guiada, plantilla de resum i glosari de términos."
-              },
-              {
-                "id": "act_3159_ra1_7",
-                "title_es": "EPI en acción: quién usa qué",
-                "title_ca": "EPI en acció: qui usa què",
-                "motivatingFactor_es": "Relacionar cada técnica del taller con su equipo de protección individual.",
-                "motivatingFactor_ca": "Relacionar cada tècnica del taller amb el seu equip de protecció individual.",
-                "description_es": "Con un mural de las técnicas (depilación, decoloración, color, manicura), colocan los EPI correspondientes a cada una y justifican por qué protegen, probándose guantes, gafas y mascarillas. (Aprendizajes: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "description_ca": "Amb un mural de les tècniques (depilació, decoloració, color, manicura), colocan els EPI correspondients a cada una i justifican per què protegeixen, probándose guants, gafas i mascaretes. (Aprenentatges: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "evidence_es": "Mural técnica-EPI y demostración de colocación.",
-                "evidence_ca": "Mural tècnica-EPI i demostració de colocació.",
-                "diversitySupport_es": "Mural grande, tarjetas de técnicas y EPI, pictogramas y autocontrol con espejo.",
-                "diversitySupport_ca": "Mural gran, targetes de tècniques i EPI, pictogrames i autocontrol amb espill."
-              }
-            ]
-          },
-          {
-            "title_es": "Conexión curricular: 3159-1c ↔ 3009-7a (Ciencias aplicadas I)",
-            "title_ca": "Connexió curricular: 3159-1c ↔ 3009-7a (Ciències aplicades I)",
-            "targetModuleCode": "3009",
-            "targetModuleName_es": "Ciencias aplicadas I",
-            "targetModuleName_ca": "Ciències aplicades I",
-            "targetRaCode": "RA7",
-            "targetRaText_es": "Diferencia la salud de la enfermedad, relacionando los hábitos de vida con las enfermedades más frecuentes y reconociendo los principios básicos de defensa contra las mismas",
-            "targetRaText_ca": "Diferencia la salut de la malaltia, relacionant els hàbits de vids amb les malalties més freqüents reconeixent els principis bàsics de defensa contra les mateixes.",
-            "sourceCriteria": "3159-1c",
-            "criteriaKeys": [
-              "f",
-              "1f",
-              "3159-1c"
-            ],
-            "relatedCriteria": [
-              {
-                "moduleCode": "3009",
-                "moduleName_es": "Ciencias aplicadas I",
-                "moduleName_ca": "Ciències aplicades I",
-                "criteria": "3009-7a. Se han identificado situaciones de salud y de enfermedad para las personas."
-              },
-              {
-                "moduleCode": "3009",
-                "moduleName_es": "Ciencias aplicadas I",
-                "moduleName_ca": "Ciències aplicades I",
-                "criteria": "3009-7b. Se han descrito los mecanismos encargados de la defensa del organismo."
-              },
-              {
-                "moduleCode": "3042",
-                "moduleName_es": "Ciencias aplicadas II",
-                "moduleName_ca": "Ciències aplicades II",
-                "criteria": "3042-14f. Se ha analizado y protocolizado el procedimiento de lavado de las manos antes y después de cualquier manipulación, con objeto de prevenir la transmisión de enfermedades."
-              },
-              {
-                "moduleCode": "3067",
-                "moduleName_es": "Formación en Centros de Trabajo (FCT)",
-                "moduleName_ca": "Formació en Centres de Treball (FCT)",
-                "criteria": "3067-6b. Se han identificado los factores y situaciones de riesgo que se presentan en su ámbito de actuación."
-              }
-            ],
-            "relationType": "ciencias",
-            "justification_es": "Los primeros auxilios se apoyan en el conocimiento del cuerpo sano y enfermo de Ciencias Aplicadas I (salud, defensa del organismo) y en los protocolos sanitarios de Ciencias Aplicadas II, y se aplican ante los riesgos reales identificados en la FCT.",
-            "justification_ca": "Els primers auxilios es apoyan en el conociment del cuerpo sano i enfermo de Ciències Aplicades I (salut, defensa del organismo) i en els protocols sanitaris de Ciències Aplicades II, i es apliquen davant dels riscos reals identificats en la FCT.",
-            "activities": [
-              {
-                "id": "act_3159_ra1_4",
-                "title_es": "Botiquín y primeros auxilios",
-                "title_ca": "Botiquín i primers auxilios",
-                "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
-                "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
-                "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
-                "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
-                "diversitySupport_ca": "Targetes amb casos ilustrats, vídeo demostratiu, dramatizació guiada i láminas d'anatomía bàsica."
-              },
-              {
-                "id": "act_3159_ra1_1",
-                "title_es": "Detectives del riesgo en el salón",
-                "title_ca": "Detectius del risc en el saló",
-                "motivatingFactor_es": "Convertirse en inspectores de seguridad que localizan peligros en un salón de peluquería y estética.",
-                "motivatingFactor_ca": "Convertirse en inspectors de seguretat que localizan peligros en un saló de perruqueria i estètica.",
-                "description_es": "Por equipos, reciben fotografías y un plano de un salón con riesgos (cables, cera caliente, productos, posturas) y clasifican cada riesgo con un semáforo (rojo/ámbar/verde), explicando el daño que puede causar. (Aprendizajes: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "description_ca": "per equips, reben fotografies i un plano d'un saló amb riscos (cables, cera caliente, productes, postures) i classifiquen cada risc amb un semàfor (roig/ámbar/verd), explicant el daño que pot causar. (Aprenentatges: 3159-1b + 3062-2i + 3064-2h + 3067-6b + 3009-7g.)",
-                "evidence_es": "Plano del salón con los riesgos señalizados y clasificados.",
-                "evidence_ca": "Plano del saló amb els riscos señalizats i classificats.",
-                "diversitySupport_es": "Fotografías reales, semáforo de cartulina, tarjetas de riesgo, roles (detective/portavoz) y vocabulario con pictogramas.",
-                "diversitySupport_ca": "Fotografies reals, semàfor de cartulina, targetes de risc, rols (detectiu/portavoz) i vocabulari amb pictogrames."
-              },
-              {
-                "id": "act_3159_ra1_2",
-                "title_es": "Señaliza tu aula-taller",
-                "title_ca": "Señaliza el teu aula taller",
-                "motivatingFactor_es": "Diseñar y colocar la señalización de seguridad que falta en el taller.",
-                "motivatingFactor_ca": "Dissenyar i colocar la señalizació de seguretat que manca en el taller.",
-                "description_es": "Identifican los lugares del taller que necesitan señal (prohibición, obligación de EPI, peligro, emergencia), diseñan las señales con plantillas y las colocan, explicando su significado. (Aprendizajes: 3159-1c + 3060-1e + 3067-6e + 3042-14d + 3061-1m + 3063-1i.)",
-                "description_ca": "Identifiquen els lugars del taller que necessiten senyal (prohibició, obligació d'EPI, peligro, emergencia), dissenyen les senyals amb plantilles i les colocan, explicant el seu significat. (Aprenentatges: 3159-1c + 3060-1i + 3067-6i + 3042-14d + 3061-1m + 3063-1i.)",
-                "evidence_es": "Señales de seguridad colocadas y guía explicativa.",
-                "evidence_ca": "Senyals de seguretat colocades i guia explicativa.",
-                "diversitySupport_es": "Plantillas de señales, códigos de color (forma/color de cada señal), trabajo por parejas y explicación oral breve.",
-                "diversitySupport_ca": "Plantilles de senyals, codis de color (forma/color de cada senyal), treball per parelles i explicació oral breu."
-              },
-              {
-                "id": "act_3159_ra1_3",
-                "title_es": "Simulacro de emergencia",
-                "title_ca": "Simulacro d'emergencia",
-                "motivatingFactor_es": "Preparar y practicar el protocolo de actuación en caso de emergencia en el centro.",
-                "motivatingFactor_ca": "Preparar i practicar el protocol d'actuació en cas d'emergencia en el centro.",
-                "description_es": "Leen el protocolo de evacuación en lectura fácil, ensayan la secuencia (avisar, evacuar, punto de encuentro) y la representan, valorando después si se cumplió cada paso. (Aprendizajes: 3159-1d/1e + 3067-6f + 3009-2c + 3011-4c.)",
-                "description_ca": "Llegeixen el protocol d'evacuació en lectura fàcil, ensayan la seqüència (avisar, evacuar, punto d'encuentro) i la representen, valorant després si es cumplió cada pas. (Aprenentatges: 3159-1d/1i + 3067-6f + 3009-2c + 3011-4c.)",
-                "evidence_es": "Guion del simulacro y rúbrica de autoevaluación del protocolo.",
-                "evidence_ca": "Guió del simulacro i rúbrica d'autoavaluació del protocol.",
-                "diversitySupport_es": "Protocolo en lectura fácil, pasos numerados con pictogramas, cronómetro y reflexión en círculo.",
-                "diversitySupport_ca": "Protocol en lectura fàcil, pasos numerats amb pictogrames, cronómetro i reflexió en círculo."
-              },
-              {
-                "id": "act_3159_ra1_5",
-                "title_es": "La normativa en lectura fácil",
-                "title_ca": "La normativa en lectura fàcil",
-                "motivatingFactor_es": "Leer y resumir la normativa básica de prevención de riesgos para entenderla de verdad.",
-                "motivatingFactor_ca": "Llegir i resumir la normativa bàsica de prevenció de riscos per a entenderla de vertat.",
-                "description_es": "A partir de un texto adaptado sobre la Ley de Prevención de Riesgos Laborales, subrayan las ideas clave, elaboran un resumen con sus palabras y lo convierten en un póster con dibujos. (Aprendizajes: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "description_ca": "A partir d'un text adaptat sobre la Ley de prevenció de riscos laborals, subrayan les idees clau, elaboren un resum amb els seus paraules i el converteixen en un pòster amb dibuixos. (Aprenentatges: 3159-1a + 3060-1d + 3067-6a + 3011-4d.)",
-                "evidence_es": "Resumen en lectura fácil y póster de la normativa.",
-                "evidence_ca": "Resum en lectura fàcil i pòster de la normativa.",
-                "diversitySupport_es": "Texto adaptado, técnica del subrayado guiada, plantilla de resumen y glosario de términos.",
-                "diversitySupport_ca": "Text adaptat, tècnica del subrayat guiada, plantilla de resum i glosari de términos."
-              },
-              {
-                "id": "act_3159_ra1_6",
-                "title_es": "Plan de prevención de nuestra aula",
-                "title_ca": "Pla de prevenció de la nostra aula",
-                "motivatingFactor_es": "Elaborar un mini-plan preventivo para el aula-taller como si fuera una empresa.",
-                "motivatingFactor_ca": "Elaborar un mini-pla preventiu per al aula taller com si fora una empresa.",
-                "description_es": "En equipos, redactan un plan sencillo: riesgos detectados, medidas preventivas, EPI necesarios y acciones en caso de emergencia, y lo presentan al resto de la clase. (Aprendizajes: 3159-1e + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "description_ca": "En equips, redacten un pla senzill: riscos detectats, mesures preventives, EPI necesarios i accions en cas d'emergencia, i el presenten al resta de la clase. (Aprenentatges: 3159-1i + 3060-2j + 3067-6f/6g + 3042-11b.)",
-                "evidence_es": "Mini-plan de prevención en cartel y exposición oral.",
-                "evidence_ca": "Mini-pla de prevenció en cartell i exposició oral.",
-                "diversitySupport_es": "Plantilla del plan, ejemplos resueltos, banco de medidas y presentación en pareja.",
-                "diversitySupport_ca": "Plantilla del pla, exemples resolts, banc de mesures i presentació en parella."
-              },
-              {
-                "id": "act_3159_ra1_7",
-                "title_es": "EPI en acción: quién usa qué",
-                "title_ca": "EPI en acció: qui usa què",
-                "motivatingFactor_es": "Relacionar cada técnica del taller con su equipo de protección individual.",
-                "motivatingFactor_ca": "Relacionar cada tècnica del taller amb el seu equip de protecció individual.",
-                "description_es": "Con un mural de las técnicas (depilación, decoloración, color, manicura), colocan los EPI correspondientes a cada una y justifican por qué protegen, probándose guantes, gafas y mascarillas. (Aprendizajes: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "description_ca": "Amb un mural de les tècniques (depilació, decoloració, color, manicura), colocan els EPI correspondients a cada una i justifican per què protegeixen, probándose guants, gafas i mascaretes. (Aprenentatges: 3159-1b/1c + 3065-1g + 3062-2k + 3042-13a.)",
-                "evidence_es": "Mural técnica-EPI y demostración de colocación.",
-                "evidence_ca": "Mural tècnica-EPI i demostració de colocació.",
-                "diversitySupport_es": "Mural grande, tarjetas de técnicas y EPI, pictogramas y autocontrol con espejo.",
-                "diversitySupport_ca": "Mural gran, targetes de tècniques i EPI, pictogrames i autocontrol amb espill."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3159_RA2",
-        "code": "RA2",
-        "text_es": "Desarrolla actividades de autoconocimiento que le permiten orientarse a campos profesionales motivadores en los que puede desplegar todas sus capacidades.",
-        "text_ca": "Desenvolupa habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar una ocupació i mantenir-lo.",
-        "criteria_es": [
-          "a) Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
-          "b) Se han determinado las competencias personales y sociales con valor para el empleo.",
-          "c) Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo.",
-          "d) Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional, así como las estrategias para sacarles el mayor aprovechamiento.",
-          "e) Se han identificado expectativas de futuro para la inserción profesional analizando competencias, intereses y destrezas personales."
-        ],
-        "criteria_ca": [
-          "a) S'han avaluat els propis intereses, motivacions, habilitats i destreses en el marco d'un procés d'autoconociment.",
-          "b) S'han determinat les competències personals i socials amb valor per al ocupació.",
-          "c) S'ha valorat el concepto d'autoestima en el procés de cerca d'ocupació.",
-          "d) S'han identificat les fortalezas, debilitats, amenazas i oportunitats pròpies per a l'inserció professional, així com les estratègies per a sacarles el major aprovechament.",
-          "i) S'han identificat expectatives de futur per a l'inserció professional analitzant competències, intereses i destreses personals."
-        ],
-        "connections": [
-          {
-            "title_es": "Conexión curricular: 3159-2a ↔ 3060-1f (Preparación del entorno profesional)",
-            "title_ca": "Connexió curricular: 3159-2a ↔ 3060-1f (Preparació de l’entorn professional)",
-            "targetModuleCode": "3060",
-            "targetModuleName_es": "Preparación del entorno profesional",
-            "targetModuleName_ca": "Preparació de l’entorn professional",
-            "targetRaCode": "RA1",
-            "targetRaText_es": "Muestra una imagen personal y profesional adecuada en el entorno de trabajo, relacionándola con la higiene corporal y la estética personal.",
-            "targetRaText_ca": "Mostra una imatge personal i professional adecuada en l'entorn de treball, relacionant-la amb la higiene corporal i l'estètica personal.",
-            "sourceCriteria": "3159-2a",
-            "criteriaKeys": [
-              "a",
-              "2a",
-              "3159-2a"
             ],
             "relatedCriteria": [
               {
@@ -55479,91 +54495,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "L'autoconociment es construye amb la reflexió personal i l'expressió de la pròpia opinió (Comunicació i Societat I, a través de la literatura), amb el cura del propi cuerpo (Ciències Aplicades I) i amb un mètode d'auto-observació (hipòtesi sobre uno mateix, Ciències Aplicades II). Les cualitats del professional de «Preparació del entorn» donen el referente.",
             "activities": [
               {
-                "id": "act_3159_ra2_1",
+                "id": "act_3159_ra1_1",
                 "title_es": "Mi rueda de talentos",
                 "title_ca": "El meu rueda de talentos",
                 "motivatingFactor_es": "Descubrir los propios intereses y habilidades con una rueda visual.",
                 "motivatingFactor_ca": "Descubrir els propis intereses i habilitats amb una rueda visual.",
-                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
-                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
                 "evidence_es": "Rueda de talentos personal completada.",
                 "evidence_ca": "Rueda de talentos personal completada.",
                 "diversitySupport_es": "Plantilla de rueda, escala con emoticonos, conversación en parejas y frases iniciadoras.",
                 "diversitySupport_ca": "Plantilla de rueda, escala amb emoticonos, conversa en parelles i frases iniciadores."
               },
               {
-                "id": "act_3159_ra2_2",
+                "id": "act_3159_ra1_2",
                 "title_es": "Mi DAFO en cómic",
                 "title_ca": "El meu DAFO en cómic",
                 "motivatingFactor_es": "Convertir el análisis DAFO personal en un cómic de cuatro viñetas.",
                 "motivatingFactor_ca": "Convertir l'anàlisi DAFO personal en un cómic de cuatro vinyetes.",
-                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
-                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
                 "evidence_es": "Cómic DAFO de cuatro viñetas.",
                 "evidence_ca": "Cómic DAFO de cuatro vinyetes.",
                 "diversitySupport_es": "Plantilla de cuatro viñetas, ejemplos de DAFO, diccionario y revisión ortográfica por pares.",
                 "diversitySupport_ca": "Plantilla de cuatro vinyetes, exemples de DAFO, diccionario i revisió ortográfica per pars."
               },
               {
-                "id": "act_3159_ra2_6",
+                "id": "act_3159_ra1_6",
                 "title_es": "Entrevisto a un profesional",
                 "title_ca": "Entrevisto a un professional",
                 "motivatingFactor_es": "Preparar y realizar preguntas a un profesional del sector sobre su trabajo.",
                 "motivatingFactor_ca": "Preparar i realitzar preguntes a un professional del sector sobre el seu treball.",
-                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
-                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
                 "evidence_es": "Guion de entrevista y registro de respuestas.",
                 "evidence_ca": "Guió d'entrevista i registre de respostes.",
                 "diversitySupport_es": "Guion semiestructurado, escucha activa, grabación opcional y puesta en común.",
                 "diversitySupport_ca": "Guió semiestructurat, escolta activa, grabació opcional i posada en comú."
               },
               {
-                "id": "act_3159_ra2_7",
+                "id": "act_3159_ra1_7",
                 "title_es": "Mi carta de presentación personal",
                 "title_ca": "El meu carta de presentació personal",
                 "motivatingFactor_es": "Redactar una primera carta en la que se presenta y destaca lo mejor de sí mismo.",
                 "motivatingFactor_ca": "Redactar una primera carta en la que es presenta i destaca el millor de sí mateix.",
-                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
-                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
                 "evidence_es": "Carta de presentación personal corregida.",
                 "evidence_ca": "Carta de presentació personal corregida.",
                 "diversitySupport_es": "Modelo de carta, banco de frases, corrector ortográfico y revisión por pares.",
                 "diversitySupport_ca": "Model de carta, banc de frases, corrector ortográfic i revisió per pars."
               },
               {
-                "id": "act_3159_ra2_3",
+                "id": "act_3159_ra1_3",
                 "title_es": "Competencias que valen para trabajar",
                 "title_ca": "Competències que valen per a treballar",
                 "motivatingFactor_es": "Identificar y ordenar las competencias personales y sociales más valoradas en el sector.",
                 "motivatingFactor_ca": "Identificar i ordenar les competències personals i socials més valorades en el sector.",
-                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
-                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
                 "evidence_es": "Ranking de competencias justificado por escrito.",
                 "evidence_ca": "Ranking de competències justificat per escrit.",
                 "diversitySupport_es": "Tarjetas de competencias, plantilla de ranking, debate guiado y coevaluación.",
                 "diversitySupport_ca": "Targetes de competències, plantilla de ranking, debat guiat i coavaluació."
               },
               {
-                "id": "act_3159_ra2_4",
+                "id": "act_3159_ra1_4",
                 "title_es": "El espejo de la autoestima",
                 "title_ca": "L'espill de l'autoestima",
                 "motivatingFactor_es": "Fortalecer la autoestima reconociendo lo positivo de uno mismo y de los demás.",
                 "motivatingFactor_ca": "Fortalecer l'autoestima reconocint el positiu d'uno mateix i dels demás.",
-                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-2c + 3012-2e + 3060-1a + 3009-8c.)",
-                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-2c + 3012-2i + 3060-1a + 3009-8c.)",
+                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-1c + 3012-2e + 3060-1a + 3009-8c.)",
+                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-1c + 3012-2i + 3060-1a + 3009-8c.)",
                 "evidence_es": "Ficha «mis cualidades y las que ven en mí».",
                 "evidence_ca": "Fitxa «els meus cualitats i les que ven en mí».",
                 "diversitySupport_es": "Tarjetas de cualidades, frases iniciadoras, dinámica en círculo y clima de respeto pautado.",
                 "diversitySupport_ca": "Targetes de cualitats, frases iniciadores, dinámica en círculo i clima de respecte pautat."
               },
               {
-                "id": "act_3159_ra2_5",
+                "id": "act_3159_ra1_5",
                 "title_es": "Línea del tiempo de mi futuro",
                 "title_ca": "Línia del temps del meu futur",
                 "motivatingFactor_es": "Proyectar las expectativas de futuro profesional en una línea del tiempo visual.",
                 "motivatingFactor_ca": "Proyectar les expectatives de futur professional en una línia del temps visual.",
-                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-2e + 3011-2g + 3012-1h + 3009-1c.)",
-                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-2i + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-1e + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-1i + 3011-2g + 3012-1h + 3009-1c.)",
                 "evidence_es": "Línea del tiempo ilustrada con metas y pasos.",
                 "evidence_ca": "Línia del temps ilustrada amb metas i pasos.",
                 "diversitySupport_es": "Plantilla de línea del tiempo, búsqueda web guiada, imágenes de apoyo y presentación breve.",
@@ -55572,19 +54588,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-2b ↔ 3060-1f (Preparación del entorno profesional)",
-            "title_ca": "Connexió curricular: 3159-2b ↔ 3060-1f (Preparació de l’entorn professional)",
+            "title_es": "Conexión curricular: 3159-1b ↔ 3060-1f (Preparación del entorno profesional)",
+            "title_ca": "Connexió curricular: 3159-1b ↔ 3060-1f (Preparació de l’entorn professional)",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Muestra una imagen personal y profesional adecuada en el entorno de trabajo, relacionándola con la higiene corporal y la estética personal.",
             "targetRaText_ca": "Mostra una imatge personal i professional adecuada en l'entorn de treball, relacionant-la amb la higiene corporal i l'estètica personal.",
-            "sourceCriteria": "3159-2b",
+            "sourceCriteria": "3159-1b",
             "criteriaKeys": [
               "b",
-              "2b",
-              "3159-2b"
+              "1b",
+              "3159-1b"
             ],
             "relatedCriteria": [
               {
@@ -55641,91 +54657,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Determinar què competències valora l'ocupació és la mateixa reflexió sobre cualitats, aptitudes i deontologia de «Preparació del entorn professional», sobre l'imatge professional de «Atenció al client» i del ayudante de manicura, sobre les actituds professionals en anglés de Comunicació i Societat II i sobre les relacions en l'equip de la FCT.",
             "activities": [
               {
-                "id": "act_3159_ra2_2",
+                "id": "act_3159_ra1_2",
                 "title_es": "Mi DAFO en cómic",
                 "title_ca": "El meu DAFO en cómic",
                 "motivatingFactor_es": "Convertir el análisis DAFO personal en un cómic de cuatro viñetas.",
                 "motivatingFactor_ca": "Convertir l'anàlisi DAFO personal en un cómic de cuatro vinyetes.",
-                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
-                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
                 "evidence_es": "Cómic DAFO de cuatro viñetas.",
                 "evidence_ca": "Cómic DAFO de cuatro vinyetes.",
                 "diversitySupport_es": "Plantilla de cuatro viñetas, ejemplos de DAFO, diccionario y revisión ortográfica por pares.",
                 "diversitySupport_ca": "Plantilla de cuatro vinyetes, exemples de DAFO, diccionario i revisió ortográfica per pars."
               },
               {
-                "id": "act_3159_ra2_3",
+                "id": "act_3159_ra1_3",
                 "title_es": "Competencias que valen para trabajar",
                 "title_ca": "Competències que valen per a treballar",
                 "motivatingFactor_es": "Identificar y ordenar las competencias personales y sociales más valoradas en el sector.",
                 "motivatingFactor_ca": "Identificar i ordenar les competències personals i socials més valorades en el sector.",
-                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
-                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
                 "evidence_es": "Ranking de competencias justificado por escrito.",
                 "evidence_ca": "Ranking de competències justificat per escrit.",
                 "diversitySupport_es": "Tarjetas de competencias, plantilla de ranking, debate guiado y coevaluación.",
                 "diversitySupport_ca": "Targetes de competències, plantilla de ranking, debat guiat i coavaluació."
               },
               {
-                "id": "act_3159_ra2_6",
+                "id": "act_3159_ra1_6",
                 "title_es": "Entrevisto a un profesional",
                 "title_ca": "Entrevisto a un professional",
                 "motivatingFactor_es": "Preparar y realizar preguntas a un profesional del sector sobre su trabajo.",
                 "motivatingFactor_ca": "Preparar i realitzar preguntes a un professional del sector sobre el seu treball.",
-                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
-                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
                 "evidence_es": "Guion de entrevista y registro de respuestas.",
                 "evidence_ca": "Guió d'entrevista i registre de respostes.",
                 "diversitySupport_es": "Guion semiestructurado, escucha activa, grabación opcional y puesta en común.",
                 "diversitySupport_ca": "Guió semiestructurat, escolta activa, grabació opcional i posada en comú."
               },
               {
-                "id": "act_3159_ra2_1",
+                "id": "act_3159_ra1_1",
                 "title_es": "Mi rueda de talentos",
                 "title_ca": "El meu rueda de talentos",
                 "motivatingFactor_es": "Descubrir los propios intereses y habilidades con una rueda visual.",
                 "motivatingFactor_ca": "Descubrir els propis intereses i habilitats amb una rueda visual.",
-                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
-                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
                 "evidence_es": "Rueda de talentos personal completada.",
                 "evidence_ca": "Rueda de talentos personal completada.",
                 "diversitySupport_es": "Plantilla de rueda, escala con emoticonos, conversación en parejas y frases iniciadoras.",
                 "diversitySupport_ca": "Plantilla de rueda, escala amb emoticonos, conversa en parelles i frases iniciadores."
               },
               {
-                "id": "act_3159_ra2_4",
+                "id": "act_3159_ra1_4",
                 "title_es": "El espejo de la autoestima",
                 "title_ca": "L'espill de l'autoestima",
                 "motivatingFactor_es": "Fortalecer la autoestima reconociendo lo positivo de uno mismo y de los demás.",
                 "motivatingFactor_ca": "Fortalecer l'autoestima reconocint el positiu d'uno mateix i dels demás.",
-                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-2c + 3012-2e + 3060-1a + 3009-8c.)",
-                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-2c + 3012-2i + 3060-1a + 3009-8c.)",
+                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-1c + 3012-2e + 3060-1a + 3009-8c.)",
+                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-1c + 3012-2i + 3060-1a + 3009-8c.)",
                 "evidence_es": "Ficha «mis cualidades y las que ven en mí».",
                 "evidence_ca": "Fitxa «els meus cualitats i les que ven en mí».",
                 "diversitySupport_es": "Tarjetas de cualidades, frases iniciadoras, dinámica en círculo y clima de respeto pautado.",
                 "diversitySupport_ca": "Targetes de cualitats, frases iniciadores, dinámica en círculo i clima de respecte pautat."
               },
               {
-                "id": "act_3159_ra2_5",
+                "id": "act_3159_ra1_5",
                 "title_es": "Línea del tiempo de mi futuro",
                 "title_ca": "Línia del temps del meu futur",
                 "motivatingFactor_es": "Proyectar las expectativas de futuro profesional en una línea del tiempo visual.",
                 "motivatingFactor_ca": "Proyectar les expectatives de futur professional en una línia del temps visual.",
-                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-2e + 3011-2g + 3012-1h + 3009-1c.)",
-                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-2i + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-1e + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-1i + 3011-2g + 3012-1h + 3009-1c.)",
                 "evidence_es": "Línea del tiempo ilustrada con metas y pasos.",
                 "evidence_ca": "Línia del temps ilustrada amb metas i pasos.",
                 "diversitySupport_es": "Plantilla de línea del tiempo, búsqueda web guiada, imágenes de apoyo y presentación breve.",
                 "diversitySupport_ca": "Plantilla de línia del temps, cerca web guiada, imatges de suport i presentació breu."
               },
               {
-                "id": "act_3159_ra2_7",
+                "id": "act_3159_ra1_7",
                 "title_es": "Mi carta de presentación personal",
                 "title_ca": "El meu carta de presentació personal",
                 "motivatingFactor_es": "Redactar una primera carta en la que se presenta y destaca lo mejor de sí mismo.",
                 "motivatingFactor_ca": "Redactar una primera carta en la que es presenta i destaca el millor de sí mateix.",
-                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
-                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
                 "evidence_es": "Carta de presentación personal corregida.",
                 "evidence_ca": "Carta de presentació personal corregida.",
                 "diversitySupport_es": "Modelo de carta, banco de frases, corrector ortográfico y revisión por pares.",
@@ -55734,19 +54750,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-2c ↔ 3011-5c (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-2c ↔ 3011-5c (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-1c ↔ 3011-5c (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-1c ↔ 3011-5c (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA5",
             "targetRaText_es": "Realiza la lectura de textos literarios representativos de la Literatura en lengua castellana anteriores al siglo XIX, generando criterios estéticos para la construcción del gusto personal.",
             "targetRaText_ca": "Realitza la lectura de textos literaris representatius de la Literatura en llengua castellana i catalana anteriors al segle XIX, generant criteris estètics per a la construcció del gust personal.",
-            "sourceCriteria": "3159-2c",
+            "sourceCriteria": "3159-1c",
             "criteriaKeys": [
               "c",
-              "2c",
-              "3159-2c"
+              "1c",
+              "3159-1c"
             ],
             "relatedCriteria": [
               {
@@ -55779,91 +54795,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "L'autoestima es treballa des de l'autoaceptació i la no discriminació (Comunicació i Societat II), l'expressió razonada de la pròpia opinió (Comunicació i Societat I), el bienestar físic (Ciències Aplicades I) i l'imatge personal del professional (Preparació del entorn).",
             "activities": [
               {
-                "id": "act_3159_ra2_4",
+                "id": "act_3159_ra1_4",
                 "title_es": "El espejo de la autoestima",
                 "title_ca": "L'espill de l'autoestima",
                 "motivatingFactor_es": "Fortalecer la autoestima reconociendo lo positivo de uno mismo y de los demás.",
                 "motivatingFactor_ca": "Fortalecer l'autoestima reconocint el positiu d'uno mateix i dels demás.",
-                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-2c + 3012-2e + 3060-1a + 3009-8c.)",
-                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-2c + 3012-2i + 3060-1a + 3009-8c.)",
+                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-1c + 3012-2e + 3060-1a + 3009-8c.)",
+                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-1c + 3012-2i + 3060-1a + 3009-8c.)",
                 "evidence_es": "Ficha «mis cualidades y las que ven en mí».",
                 "evidence_ca": "Fitxa «els meus cualitats i les que ven en mí».",
                 "diversitySupport_es": "Tarjetas de cualidades, frases iniciadoras, dinámica en círculo y clima de respeto pautado.",
                 "diversitySupport_ca": "Targetes de cualitats, frases iniciadores, dinámica en círculo i clima de respecte pautat."
               },
               {
-                "id": "act_3159_ra2_7",
+                "id": "act_3159_ra1_7",
                 "title_es": "Mi carta de presentación personal",
                 "title_ca": "El meu carta de presentació personal",
                 "motivatingFactor_es": "Redactar una primera carta en la que se presenta y destaca lo mejor de sí mismo.",
                 "motivatingFactor_ca": "Redactar una primera carta en la que es presenta i destaca el millor de sí mateix.",
-                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
-                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
                 "evidence_es": "Carta de presentación personal corregida.",
                 "evidence_ca": "Carta de presentació personal corregida.",
                 "diversitySupport_es": "Modelo de carta, banco de frases, corrector ortográfico y revisión por pares.",
                 "diversitySupport_ca": "Model de carta, banc de frases, corrector ortográfic i revisió per pars."
               },
               {
-                "id": "act_3159_ra2_1",
+                "id": "act_3159_ra1_1",
                 "title_es": "Mi rueda de talentos",
                 "title_ca": "El meu rueda de talentos",
                 "motivatingFactor_es": "Descubrir los propios intereses y habilidades con una rueda visual.",
                 "motivatingFactor_ca": "Descubrir els propis intereses i habilitats amb una rueda visual.",
-                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
-                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
                 "evidence_es": "Rueda de talentos personal completada.",
                 "evidence_ca": "Rueda de talentos personal completada.",
                 "diversitySupport_es": "Plantilla de rueda, escala con emoticonos, conversación en parejas y frases iniciadoras.",
                 "diversitySupport_ca": "Plantilla de rueda, escala amb emoticonos, conversa en parelles i frases iniciadores."
               },
               {
-                "id": "act_3159_ra2_2",
+                "id": "act_3159_ra1_2",
                 "title_es": "Mi DAFO en cómic",
                 "title_ca": "El meu DAFO en cómic",
                 "motivatingFactor_es": "Convertir el análisis DAFO personal en un cómic de cuatro viñetas.",
                 "motivatingFactor_ca": "Convertir l'anàlisi DAFO personal en un cómic de cuatro vinyetes.",
-                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
-                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
                 "evidence_es": "Cómic DAFO de cuatro viñetas.",
                 "evidence_ca": "Cómic DAFO de cuatro vinyetes.",
                 "diversitySupport_es": "Plantilla de cuatro viñetas, ejemplos de DAFO, diccionario y revisión ortográfica por pares.",
                 "diversitySupport_ca": "Plantilla de cuatro vinyetes, exemples de DAFO, diccionario i revisió ortográfica per pars."
               },
               {
-                "id": "act_3159_ra2_3",
+                "id": "act_3159_ra1_3",
                 "title_es": "Competencias que valen para trabajar",
                 "title_ca": "Competències que valen per a treballar",
                 "motivatingFactor_es": "Identificar y ordenar las competencias personales y sociales más valoradas en el sector.",
                 "motivatingFactor_ca": "Identificar i ordenar les competències personals i socials més valorades en el sector.",
-                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
-                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
                 "evidence_es": "Ranking de competencias justificado por escrito.",
                 "evidence_ca": "Ranking de competències justificat per escrit.",
                 "diversitySupport_es": "Tarjetas de competencias, plantilla de ranking, debate guiado y coevaluación.",
                 "diversitySupport_ca": "Targetes de competències, plantilla de ranking, debat guiat i coavaluació."
               },
               {
-                "id": "act_3159_ra2_5",
+                "id": "act_3159_ra1_5",
                 "title_es": "Línea del tiempo de mi futuro",
                 "title_ca": "Línia del temps del meu futur",
                 "motivatingFactor_es": "Proyectar las expectativas de futuro profesional en una línea del tiempo visual.",
                 "motivatingFactor_ca": "Proyectar les expectatives de futur professional en una línia del temps visual.",
-                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-2e + 3011-2g + 3012-1h + 3009-1c.)",
-                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-2i + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-1e + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-1i + 3011-2g + 3012-1h + 3009-1c.)",
                 "evidence_es": "Línea del tiempo ilustrada con metas y pasos.",
                 "evidence_ca": "Línia del temps ilustrada amb metas i pasos.",
                 "diversitySupport_es": "Plantilla de línea del tiempo, búsqueda web guiada, imágenes de apoyo y presentación breve.",
                 "diversitySupport_ca": "Plantilla de línia del temps, cerca web guiada, imatges de suport i presentació breu."
               },
               {
-                "id": "act_3159_ra2_6",
+                "id": "act_3159_ra1_6",
                 "title_es": "Entrevisto a un profesional",
                 "title_ca": "Entrevisto a un professional",
                 "motivatingFactor_es": "Preparar y realizar preguntas a un profesional del sector sobre su trabajo.",
                 "motivatingFactor_ca": "Preparar i realitzar preguntes a un professional del sector sobre el seu treball.",
-                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
-                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
                 "evidence_es": "Guion de entrevista y registro de respuestas.",
                 "evidence_ca": "Guió d'entrevista i registre de respostes.",
                 "diversitySupport_es": "Guion semiestructurado, escucha activa, grabación opcional y puesta en común.",
@@ -55872,19 +54888,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-2d ↔ 3042-2a (Ciencias aplicadas II)",
-            "title_ca": "Connexió curricular: 3159-2d ↔ 3042-2a (Ciències aplicades II)",
+            "title_es": "Conexión curricular: 3159-1d ↔ 3042-2a (Ciencias aplicadas II)",
+            "title_ca": "Connexió curricular: 3159-1d ↔ 3042-2a (Ciències aplicades II)",
             "targetModuleCode": "3042",
             "targetModuleName_es": "Ciencias aplicadas II",
             "targetModuleName_ca": "Ciències aplicades II",
             "targetRaCode": "RA2",
             "targetRaText_es": "Resuelve problemas sencillos de diversa índole, a través de su análisis contrastado y aplicando las fases del método científico.",
             "targetRaText_ca": "Resol problemes senzills d'índole diversa, mitjançant el seu anàlisi contrastat i aplicant les fases del mètode científic.",
-            "sourceCriteria": "3159-2d",
+            "sourceCriteria": "3159-1d",
             "criteriaKeys": [
               "d",
-              "2d",
-              "3159-2d"
+              "1d",
+              "3159-1d"
             ],
             "relatedCriteria": [
               {
@@ -55953,91 +54969,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "L'anàlisi DAFO és un mètode d'anàlisi que reproduce les fases del mètode científic de Ciències Aplicades II (observar, plantear hipòtesi, analitzar), es plasma per escrit amb les normes de redacció de Comunicació i Societat i es sintetiza amb la tècnica del resum.",
             "activities": [
               {
-                "id": "act_3159_ra2_2",
+                "id": "act_3159_ra1_2",
                 "title_es": "Mi DAFO en cómic",
                 "title_ca": "El meu DAFO en cómic",
                 "motivatingFactor_es": "Convertir el análisis DAFO personal en un cómic de cuatro viñetas.",
                 "motivatingFactor_ca": "Convertir l'anàlisi DAFO personal en un cómic de cuatro vinyetes.",
-                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
-                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
                 "evidence_es": "Cómic DAFO de cuatro viñetas.",
                 "evidence_ca": "Cómic DAFO de cuatro vinyetes.",
                 "diversitySupport_es": "Plantilla de cuatro viñetas, ejemplos de DAFO, diccionario y revisión ortográfica por pares.",
                 "diversitySupport_ca": "Plantilla de cuatro vinyetes, exemples de DAFO, diccionario i revisió ortográfica per pars."
               },
               {
-                "id": "act_3159_ra2_1",
+                "id": "act_3159_ra1_1",
                 "title_es": "Mi rueda de talentos",
                 "title_ca": "El meu rueda de talentos",
                 "motivatingFactor_es": "Descubrir los propios intereses y habilidades con una rueda visual.",
                 "motivatingFactor_ca": "Descubrir els propis intereses i habilitats amb una rueda visual.",
-                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
-                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
                 "evidence_es": "Rueda de talentos personal completada.",
                 "evidence_ca": "Rueda de talentos personal completada.",
                 "diversitySupport_es": "Plantilla de rueda, escala con emoticonos, conversación en parejas y frases iniciadoras.",
                 "diversitySupport_ca": "Plantilla de rueda, escala amb emoticonos, conversa en parelles i frases iniciadores."
               },
               {
-                "id": "act_3159_ra2_3",
+                "id": "act_3159_ra1_3",
                 "title_es": "Competencias que valen para trabajar",
                 "title_ca": "Competències que valen per a treballar",
                 "motivatingFactor_es": "Identificar y ordenar las competencias personales y sociales más valoradas en el sector.",
                 "motivatingFactor_ca": "Identificar i ordenar les competències personals i socials més valorades en el sector.",
-                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
-                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
                 "evidence_es": "Ranking de competencias justificado por escrito.",
                 "evidence_ca": "Ranking de competències justificat per escrit.",
                 "diversitySupport_es": "Tarjetas de competencias, plantilla de ranking, debate guiado y coevaluación.",
                 "diversitySupport_ca": "Targetes de competències, plantilla de ranking, debat guiat i coavaluació."
               },
               {
-                "id": "act_3159_ra2_4",
+                "id": "act_3159_ra1_4",
                 "title_es": "El espejo de la autoestima",
                 "title_ca": "L'espill de l'autoestima",
                 "motivatingFactor_es": "Fortalecer la autoestima reconociendo lo positivo de uno mismo y de los demás.",
                 "motivatingFactor_ca": "Fortalecer l'autoestima reconocint el positiu d'uno mateix i dels demás.",
-                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-2c + 3012-2e + 3060-1a + 3009-8c.)",
-                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-2c + 3012-2i + 3060-1a + 3009-8c.)",
+                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-1c + 3012-2e + 3060-1a + 3009-8c.)",
+                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-1c + 3012-2i + 3060-1a + 3009-8c.)",
                 "evidence_es": "Ficha «mis cualidades y las que ven en mí».",
                 "evidence_ca": "Fitxa «els meus cualitats i les que ven en mí».",
                 "diversitySupport_es": "Tarjetas de cualidades, frases iniciadoras, dinámica en círculo y clima de respeto pautado.",
                 "diversitySupport_ca": "Targetes de cualitats, frases iniciadores, dinámica en círculo i clima de respecte pautat."
               },
               {
-                "id": "act_3159_ra2_5",
+                "id": "act_3159_ra1_5",
                 "title_es": "Línea del tiempo de mi futuro",
                 "title_ca": "Línia del temps del meu futur",
                 "motivatingFactor_es": "Proyectar las expectativas de futuro profesional en una línea del tiempo visual.",
                 "motivatingFactor_ca": "Proyectar les expectatives de futur professional en una línia del temps visual.",
-                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-2e + 3011-2g + 3012-1h + 3009-1c.)",
-                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-2i + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-1e + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-1i + 3011-2g + 3012-1h + 3009-1c.)",
                 "evidence_es": "Línea del tiempo ilustrada con metas y pasos.",
                 "evidence_ca": "Línia del temps ilustrada amb metas i pasos.",
                 "diversitySupport_es": "Plantilla de línea del tiempo, búsqueda web guiada, imágenes de apoyo y presentación breve.",
                 "diversitySupport_ca": "Plantilla de línia del temps, cerca web guiada, imatges de suport i presentació breu."
               },
               {
-                "id": "act_3159_ra2_6",
+                "id": "act_3159_ra1_6",
                 "title_es": "Entrevisto a un profesional",
                 "title_ca": "Entrevisto a un professional",
                 "motivatingFactor_es": "Preparar y realizar preguntas a un profesional del sector sobre su trabajo.",
                 "motivatingFactor_ca": "Preparar i realitzar preguntes a un professional del sector sobre el seu treball.",
-                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
-                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
                 "evidence_es": "Guion de entrevista y registro de respuestas.",
                 "evidence_ca": "Guió d'entrevista i registre de respostes.",
                 "diversitySupport_es": "Guion semiestructurado, escucha activa, grabación opcional y puesta en común.",
                 "diversitySupport_ca": "Guió semiestructurat, escolta activa, grabació opcional i posada en comú."
               },
               {
-                "id": "act_3159_ra2_7",
+                "id": "act_3159_ra1_7",
                 "title_es": "Mi carta de presentación personal",
                 "title_ca": "El meu carta de presentació personal",
                 "motivatingFactor_es": "Redactar una primera carta en la que se presenta y destaca lo mejor de sí mismo.",
                 "motivatingFactor_ca": "Redactar una primera carta en la que es presenta i destaca el millor de sí mateix.",
-                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
-                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
                 "evidence_es": "Carta de presentación personal corregida.",
                 "evidence_ca": "Carta de presentació personal corregida.",
                 "diversitySupport_es": "Modelo de carta, banco de frases, corrector ortográfico y revisión por pares.",
@@ -56046,19 +55062,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-2e ↔ 3011-2g (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-2i ↔ 3011-2g (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-1e ↔ 3011-2g (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-1i ↔ 3011-2g (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA2",
             "targetRaText_es": "Valora la construcción del espacio europeo hasta las primeras transformaciones industriales y sociedades agrarias, analizando sus características principales y valorando su pervivencia en la sociedad actual y en el entorno inmediato.",
             "targetRaText_ca": "Valora la construcció de l'espai europeu fins a les primeres transformacions industrials i societats agràries, analitzant les carascterístiques principals i valorant la seva pervivència en la societat actusal i en l'entorn immediat.",
-            "sourceCriteria": "3159-2e",
+            "sourceCriteria": "3159-1e",
             "criteriaKeys": [
               "e",
-              "2e",
-              "3159-2e"
+              "1e",
+              "3159-1e"
             ],
             "relatedCriteria": [
               {
@@ -56091,91 +55107,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Proyectar expectatives de futur exigeix conocer l'evolució del sector de l'imatge personal (Comunicació i Societat I i II), buscar informació amb les TIC (Ciències Aplicades I) i conocer els tipus de públic i mercat (Atenció al client).",
             "activities": [
               {
-                "id": "act_3159_ra2_4",
+                "id": "act_3159_ra1_4",
                 "title_es": "El espejo de la autoestima",
                 "title_ca": "L'espill de l'autoestima",
                 "motivatingFactor_es": "Fortalecer la autoestima reconociendo lo positivo de uno mismo y de los demás.",
                 "motivatingFactor_ca": "Fortalecer l'autoestima reconocint el positiu d'uno mateix i dels demás.",
-                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-2c + 3012-2e + 3060-1a + 3009-8c.)",
-                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-2c + 3012-2i + 3060-1a + 3009-8c.)",
+                "description_es": "En círculo, cada alumno escribe una cualidad propia y recibe una cualidad de cada compañero; después relacionan la actividad con la no discriminación y el cuidado del propio cuerpo. (Aprendizajes: 3159-1c + 3012-2e + 3060-1a + 3009-8c.)",
+                "description_ca": "En círculo, cada alumne escriu una cualitat pròpia i rep una cualitat de cada company; després relacionen l'activitat amb la no discriminació i el cura del propi cuerpo. (Aprenentatges: 3159-1c + 3012-2i + 3060-1a + 3009-8c.)",
                 "evidence_es": "Ficha «mis cualidades y las que ven en mí».",
                 "evidence_ca": "Fitxa «els meus cualitats i les que ven en mí».",
                 "diversitySupport_es": "Tarjetas de cualidades, frases iniciadoras, dinámica en círculo y clima de respeto pautado.",
                 "diversitySupport_ca": "Targetes de cualitats, frases iniciadores, dinámica en círculo i clima de respecte pautat."
               },
               {
-                "id": "act_3159_ra2_5",
+                "id": "act_3159_ra1_5",
                 "title_es": "Línea del tiempo de mi futuro",
                 "title_ca": "Línia del temps del meu futur",
                 "motivatingFactor_es": "Proyectar las expectativas de futuro profesional en una línea del tiempo visual.",
                 "motivatingFactor_ca": "Proyectar les expectatives de futur professional en una línia del temps visual.",
-                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-2e + 3011-2g + 3012-1h + 3009-1c.)",
-                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-2i + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_es": "Dibujan una línea del tiempo (ahora → en 2 años → en 5 años) con sus metas formativas y profesionales, investigando antes con las TIC cómo evoluciona el sector de la imagen personal. (Aprendizajes: 3159-1e + 3011-2g + 3012-1h + 3009-1c.)",
+                "description_ca": "Dibuixen una línia del temps (ahora → en 2 anys → en 5 anys) amb els seus metas formatives i professionals, investigant abans amb les TIC com evoluciona el sector de l'imatge personal. (Aprenentatges: 3159-1i + 3011-2g + 3012-1h + 3009-1c.)",
                 "evidence_es": "Línea del tiempo ilustrada con metas y pasos.",
                 "evidence_ca": "Línia del temps ilustrada amb metas i pasos.",
                 "diversitySupport_es": "Plantilla de línea del tiempo, búsqueda web guiada, imágenes de apoyo y presentación breve.",
                 "diversitySupport_ca": "Plantilla de línia del temps, cerca web guiada, imatges de suport i presentació breu."
               },
               {
-                "id": "act_3159_ra2_1",
+                "id": "act_3159_ra1_1",
                 "title_es": "Mi rueda de talentos",
                 "title_ca": "El meu rueda de talentos",
                 "motivatingFactor_es": "Descubrir los propios intereses y habilidades con una rueda visual.",
                 "motivatingFactor_ca": "Descubrir els propis intereses i habilitats amb una rueda visual.",
-                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
-                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-2a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_es": "Cada alumno completa una rueda dividida en áreas (manos, creatividad, trato con personas, técnica, estética…) puntuando sus intereses y habilidades, y la comparte en parejas. (Aprendizajes: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
+                "description_ca": "Cada alumne completa una rueda dividida en áreas (mans, creativitat, tracte amb persones, tècnica, estètica…) puntuant els seus intereses i habilitats, i la comparteix en parelles. (Aprenentatges: 3159-1a + 3060-1f + 3009-8c + 3011-5c.)",
                 "evidence_es": "Rueda de talentos personal completada.",
                 "evidence_ca": "Rueda de talentos personal completada.",
                 "diversitySupport_es": "Plantilla de rueda, escala con emoticonos, conversación en parejas y frases iniciadoras.",
                 "diversitySupport_ca": "Plantilla de rueda, escala amb emoticonos, conversa en parelles i frases iniciadores."
               },
               {
-                "id": "act_3159_ra2_2",
+                "id": "act_3159_ra1_2",
                 "title_es": "Mi DAFO en cómic",
                 "title_ca": "El meu DAFO en cómic",
                 "motivatingFactor_es": "Convertir el análisis DAFO personal en un cómic de cuatro viñetas.",
                 "motivatingFactor_ca": "Convertir l'anàlisi DAFO personal en un cómic de cuatro vinyetes.",
-                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
-                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-2d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_es": "Identifican una fortaleza, una debilidad, una amenaza y una oportunidad personales y dibujan una viñeta por cada una, con un bocadillo de texto, siguiendo el método de observación y análisis. (Aprendizajes: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
+                "description_ca": "Identifiquen una fortaleza, una debilitat, una amenaza i una oportunitat personals i dibuixen una vinyeta per cada una, amb un bocadillo de text, seguint el mètode d'observació i anàlisi. (Aprenentatges: 3159-1d + 3042-2a/2b + 3011-4d + 3012-4f.)",
                 "evidence_es": "Cómic DAFO de cuatro viñetas.",
                 "evidence_ca": "Cómic DAFO de cuatro vinyetes.",
                 "diversitySupport_es": "Plantilla de cuatro viñetas, ejemplos de DAFO, diccionario y revisión ortográfica por pares.",
                 "diversitySupport_ca": "Plantilla de cuatro vinyetes, exemples de DAFO, diccionario i revisió ortográfica per pars."
               },
               {
-                "id": "act_3159_ra2_3",
+                "id": "act_3159_ra1_3",
                 "title_es": "Competencias que valen para trabajar",
                 "title_ca": "Competències que valen per a treballar",
                 "motivatingFactor_es": "Identificar y ordenar las competencias personales y sociales más valoradas en el sector.",
                 "motivatingFactor_ca": "Identificar i ordenar les competències personals i socials més valorades en el sector.",
-                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
-                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-2b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_es": "Con un mazo de tarjetas de competencias (puntualidad, higiene, amabilidad, trabajo en equipo…), cada equipo las ordena por importancia para un salón de estética y justifica su ranking. (Aprendizajes: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
+                "description_ca": "Amb un mazo de targetes de competències (puntualitat, higiene, amabilitat, treball en equip…), cada equip les ordena per importància per a un saló d'estètica i justifica el seu ranking. (Aprenentatges: 3159-1b + 3060-1f/1g + 3012-6k + 3061-1a + 3067-7d.)",
                 "evidence_es": "Ranking de competencias justificado por escrito.",
                 "evidence_ca": "Ranking de competències justificat per escrit.",
                 "diversitySupport_es": "Tarjetas de competencias, plantilla de ranking, debate guiado y coevaluación.",
                 "diversitySupport_ca": "Targetes de competències, plantilla de ranking, debat guiat i coavaluació."
               },
               {
-                "id": "act_3159_ra2_6",
+                "id": "act_3159_ra1_6",
                 "title_es": "Entrevisto a un profesional",
                 "title_ca": "Entrevisto a un professional",
                 "motivatingFactor_es": "Preparar y realizar preguntas a un profesional del sector sobre su trabajo.",
                 "motivatingFactor_ca": "Preparar i realitzar preguntes a un professional del sector sobre el seu treball.",
-                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
-                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-2a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_es": "Elaboran un guion de preguntas (cómo empezó, qué le gusta, qué se le da bien, qué le costó) y lo utilizan en una entrevista real o grabada a un profesional invitado o a un familiar. (Aprendizajes: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
+                "description_ca": "Elaboren un guió de preguntes (com empezó, què li gusta, què es li dona bé, què li costó) i l'utilitzen en una entrevista real o grabada a un professional invitat o a un familiar. (Aprenentatges: 3159-1a/2b + 3011-3b + 3005-1c + 3011-1h.)",
                 "evidence_es": "Guion de entrevista y registro de respuestas.",
                 "evidence_ca": "Guió d'entrevista i registre de respostes.",
                 "diversitySupport_es": "Guion semiestructurado, escucha activa, grabación opcional y puesta en común.",
                 "diversitySupport_ca": "Guió semiestructurat, escolta activa, grabació opcional i posada en comú."
               },
               {
-                "id": "act_3159_ra2_7",
+                "id": "act_3159_ra1_7",
                 "title_es": "Mi carta de presentación personal",
                 "title_ca": "El meu carta de presentació personal",
                 "motivatingFactor_es": "Redactar una primera carta en la que se presenta y destaca lo mejor de sí mismo.",
                 "motivatingFactor_ca": "Redactar una primera carta en la que es presenta i destaca el millor de sí mateix.",
-                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
-                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-2a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_es": "Con un banco de frases y un modelo, escriben una carta breve presentando sus intereses, cualidades y qué les gustaría aprender, cuidando la ortografía y la presentación. (Aprendizajes: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
+                "description_ca": "Amb un banc de frases i un model, escriuen una carta breu presentant els seus intereses, cualitats i què els gustaría aprendre, cuidant l'ortografía i la presentació. (Aprenentatges: 3159-1a/2c + 3011-4f/4h + 3012-4f.)",
                 "evidence_es": "Carta de presentación personal corregida.",
                 "evidence_ca": "Carta de presentació personal corregida.",
                 "diversitySupport_es": "Modelo de carta, banco de frases, corrector ortográfico y revisión por pares.",
@@ -56186,39 +55202,39 @@ export const FPB_MODULES_SEED: FPBModule[] = [
         ]
       },
       {
-        "id": "3159_RA3",
-        "code": "RA3",
-        "text_es": "Desarrolla habilidades sociales concretas que se han demostrado como fundamentales a la hora de encontrar un empleo y mantenerlo.",
-        "text_ca": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la recerca i la reflexió lliure d'estereotips vocacionals.",
+        "id": "3159_RA2",
+        "code": "RA2",
+        "text_es": "Desarrolla habilidades sociales concretas que se han demostrado fundamentales a la hora de encontrar un empleo y mantenerlo.",
+        "text_ca": "Desenvolupa habilitats socials concretes que s’han demostrat fonamentals a l’hora de trobar una feina i mantenir-la.",
         "criteria_es": [
-          "a) Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad.",
-          "b) Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas.",
-          "c) Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad.",
-          "d) Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo.",
-          "e) Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
+          "3159-2a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad.",
+          "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas.",
+          "3159-2c. Se han puesto en práctica técnicas de presentación, orales y escritas, para una comunicación efectiva y afectiva valorando su importancia como recurso personal para la empleabilidad.",
+          "3159-2d. Se han identificado los beneficios del trabajo en equipo, así como las diferentes formas de llevarlo a cabo.",
+          "3159-2e. Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
         ],
         "criteria_ca": [
-          "a) S'ha valorat l'importància de les competències personals i socials en l'ocupabilitat.",
-          "b) S'han aplicat estratègies per a canalizar les emocions de manera assertiva en les relacions amb altres persones, diferenciándolas de conductas agresives i/o passives.",
-          "c) S'han posat en pràctica tècniques de presentació, orals i escrites, per a una comunicació efectiva i afectiva valorant el seu importància com recurso personal per a l'ocupabilitat.",
-          "d) S'han identificat els beneficios del treball en equip, així com les diferents formes de llevarlo a cabo.",
-          "i) S'ha reaccionat de forma flexible i positiva davant de conflictes i situacions noves, aprovechant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb l'inteligencia emocional."
+          "3159-2a. S'ha valorat la importància de les competències personals i socials en l'ocupabilitat.",
+          "3159-2b. S'han aplicat estratègies per canalitzar les emocions de manera assertiva en les relacions amb altres persones, diferenciant-les de conductes agressives i/o passives.",
+          "3159-2c. S'han posat en pràctica tècniques de presentació, orals i escrites, per a una comunicació efectiva i afectiva, valorant-ne la importància com a recurs personal per a l'ocupabilitat.",
+          "3159-2d. S'han identificat els beneficis del treball en equip, així com les diferents formes de dur-lo a terme.",
+          "3159-2e. S'ha reaccionat de manera flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats mitjançant estratègies relacionades amb la intel·ligència emocional."
         ],
         "connections": [
           {
-            "title_es": "Conexión curricular: 3159-3a ↔ 3060-1f (Preparación del entorno profesional)",
-            "title_ca": "Connexió curricular: 3159-3a ↔ 3060-1f (Preparació de l’entorn professional)",
+            "title_es": "Conexión curricular: 3159-2a ↔ 3060-1f (Preparación del entorno profesional)",
+            "title_ca": "Connexió curricular: 3159-2a ↔ 3060-1f (Preparació de l’entorn professional)",
             "targetModuleCode": "3060",
             "targetModuleName_es": "Preparación del entorno profesional",
             "targetModuleName_ca": "Preparació de l’entorn professional",
             "targetRaCode": "RA1",
             "targetRaText_es": "Muestra una imagen personal y profesional adecuada en el entorno de trabajo, relacionándola con la higiene corporal y la estética personal.",
             "targetRaText_ca": "Mostra una imatge personal i professional adecuada en l'entorn de treball, relacionant-la amb la higiene corporal i l'estètica personal.",
-            "sourceCriteria": "3159-3a",
+            "sourceCriteria": "3159-2a",
             "criteriaKeys": [
               "a",
-              "3a",
-              "3159-3a"
+              "2a",
+              "2159-2a"
             ],
             "relatedCriteria": [
               {
@@ -56275,91 +55291,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Valorar les competències personals i socials coincide amb les cualitats i la deontologia de «Preparació del entorn professional», amb l'actitud conciliadora de «Atenció al client», amb la responsabilitat professional del maquillador, amb les actituds professionals de Comunicació i Societat II i amb les relacions respectuoses de la FCT.",
             "activities": [
               {
-                "id": "act_3159_ra3_7",
+                "id": "act_3159_ra2_7",
                 "title_es": "Debate: ¿qué valora una empresa de mí?",
                 "title_ca": "Debat: ¿què valora una empresa de mí?",
                 "motivatingFactor_es": "Argumentar en un debate qué competencias personales y sociales son más importantes.",
                 "motivatingFactor_ca": "Argumentar en un debat què competències personals i socials són més importants.",
-                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
-                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
                 "evidence_es": "Acta del debate con argumentos y conclusión.",
                 "evidence_ca": "Acta del debat amb arguments i conclusió.",
                 "diversitySupport_es": "Turnos con tarjetas, roles (orador, jurado, moderador), frases de cortesía y rúbrica de respeto.",
                 "diversitySupport_ca": "Turnos amb targetes, rols (orador, jurat, moderador), frases de cortesia i rúbrica de respecte."
               },
               {
-                "id": "act_3159_ra3_1",
+                "id": "act_3159_ra2_1",
                 "title_es": "Role-play: asertivo, pasivo o agresivo",
                 "title_ca": "Role-play: assertiu, passiu o agresiu",
                 "motivatingFactor_es": "Reconocer y practicar las tres formas de responder ante una misma situación.",
                 "motivatingFactor_ca": "Reconocer i practicar les tres formes de respondre davant d'una mateixa situació.",
-                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
-                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
                 "evidence_es": "Tabla de situaciones con la respuesta asertiva correcta.",
                 "evidence_ca": "Taula de situacions amb la resposta assertiva correcta.",
                 "diversitySupport_es": "Tarjetas de situaciones, tarjetas de estilos comunicativos, espejo de comunicación no verbal.",
                 "diversitySupport_ca": "Targetes de situacions, targetes d'estils comunicatius, espill de comunicació no verbal."
               },
               {
-                "id": "act_3159_ra3_2",
+                "id": "act_3159_ra2_2",
                 "title_es": "Elevator pitch: me presento en un minuto",
                 "title_ca": "Elevator pitch: em presente en un minut",
                 "motivatingFactor_es": "Preparar y exponer una presentación personal breve y convincente.",
                 "motivatingFactor_ca": "Preparar i exponer una presentació personal breu i convincente.",
-                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6e.)",
-                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6i.)",
+                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6e.)",
+                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6i.)",
                 "evidence_es": "Grabación del elevator pitch y rúbrica de autoevaluación.",
                 "evidence_ca": "Grabació del elevator pitch i rúbrica d'autoavaluació.",
                 "diversitySupport_es": "Guion con frases iniciadoras, cronómetro visible, grabación en parejas y plantilla bilingüe.",
                 "diversitySupport_ca": "Guió amb frases iniciadores, cronómetro visible, grabació en parelles i plantilla bilingüe."
               },
               {
-                "id": "act_3159_ra3_3",
+                "id": "act_3159_ra2_3",
                 "title_es": "La torre cooperativa",
                 "title_ca": "La torre cooperativa",
                 "motivatingFactor_es": "Comprobar en una dinámica los beneficios del trabajo en equipo.",
                 "motivatingFactor_ca": "Comprovar en una dinámica els beneficios del treball en equip.",
-                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-3d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
-                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-3d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
+                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-2d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
+                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-2d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
                 "evidence_es": "Torre construida y reflexión escrita sobre el trabajo en equipo.",
                 "evidence_ca": "Torre construida i reflexió escrita sobre el treball en equip.",
                 "diversitySupport_es": "Materiales manipulativos, roles por tarjetas, guion de reflexión y puesta en común.",
                 "diversitySupport_ca": "Materials manipulatius, rols per targetes, guió de reflexió i posada en comú."
               },
               {
-                "id": "act_3159_ra3_4",
+                "id": "act_3159_ra2_4",
                 "title_es": "Mi perfil por escrito y en voz alta",
                 "title_ca": "El meu perfil per escrit i en veu alta",
                 "motivatingFactor_es": "Redactar el propio perfil profesional y presentarlo oralmente.",
                 "motivatingFactor_ca": "Redactar el propi perfil professional i presentarlo oralment.",
-                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
-                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
                 "evidence_es": "Perfil escrito presentado y coevaluado.",
                 "evidence_ca": "Perfil escrit presentat i coevaluat.",
                 "diversitySupport_es": "Plantilla de perfil, banco de vocabulario, pauta de presentación y coevaluación amable.",
                 "diversitySupport_ca": "Plantilla de perfil, banc de vocabulari, pauta de presentació i coavaluació amable."
               },
               {
-                "id": "act_3159_ra3_5",
+                "id": "act_3159_ra2_5",
                 "title_es": "Medio un conflicto en el salón",
                 "title_ca": "Medi un conflicte en el saló",
                 "motivatingFactor_es": "Aplicar pasos de mediación para resolver un conflicto laboral simulado.",
                 "motivatingFactor_ca": "Aplicar pasos de mediació per a resoldre un conflicte laboral simulat.",
-                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-3e + 3012-2c + 3005-4a + 3067-7c.)",
-                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-3i + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-2e + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-2i + 3012-2c + 3005-4a + 3067-7c.)",
                 "evidence_es": "Guion de mediación con las alternativas acordadas.",
                 "evidence_ca": "Guió de mediació amb les alternatives acordades.",
                 "diversitySupport_es": "Tarjetas de pasos de mediación, roles rotatorios y frases de parafraseo.",
                 "diversitySupport_ca": "Targetes de pasos de mediació, rols rotatorios i frases de parafraseo."
               },
               {
-                "id": "act_3159_ra3_6",
+                "id": "act_3159_ra2_6",
                 "title_es": "Mi emocionario profesional",
                 "title_ca": "El meu emocionario professional",
                 "motivatingFactor_es": "Identificar y nombrar las emociones que aparecen en el trabajo.",
                 "motivatingFactor_ca": "Identificar i nombrar les emocions que aparecen en el treball.",
-                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-3b/3e + 3012-2e + 3005-1h.)",
-                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-3b/3i + 3012-2i + 3005-1h.)",
+                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-2b/3e + 3012-2e + 3005-1h.)",
+                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-2b/3i + 3012-2i + 3005-1h.)",
                 "evidence_es": "Emocionario ilustrado con estrategias de gestión.",
                 "evidence_ca": "Emocionario ilustrat amb estratègies de gestió.",
                 "diversitySupport_es": "Tarjetas de emociones con pictogramas, banco de estrategias y trabajo en pequeño grupo.",
@@ -56368,19 +55384,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-3b ↔ 3005-1h (Atención al cliente)",
-            "title_ca": "Connexió curricular: 3159-3b ↔ 3005-1h (Atenció al client)",
+            "title_es": "Conexión curricular: 3159-2b ↔ 3005-1h (Atención al cliente)",
+            "title_ca": "Connexió curricular: 3159-2b ↔ 3005-1h (Atenció al client)",
             "targetModuleCode": "3005",
             "targetModuleName_es": "Atención al cliente",
             "targetModuleName_ca": "Atenció al client",
             "targetRaCode": "RA1",
             "targetRaText_es": "Atiende a posibles clientes, reconociendo las diferentes técnicas de comunicación",
             "targetRaText_ca": "Aten a possibles clients reconeixent les diferents tècniques de comunicació.",
-            "sourceCriteria": "3159-3b",
+            "sourceCriteria": "3159-2b",
             "criteriaKeys": [
               "b",
-              "3b",
-              "3159-3b"
+              "2b",
+              "2159-2b"
             ],
             "relatedCriteria": [
               {
@@ -56449,91 +55465,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "L'assertivitat i la gestió emocional es entrenan amb les mateixes habilitats de comunicació no verbal de Comunicació i Societat I i II, amb l'actitud conciliadora de «Atenció al client» i amb les estratègies de mediació i resolució de conflictes de Comunicació i Societat II.",
             "activities": [
               {
-                "id": "act_3159_ra3_1",
+                "id": "act_3159_ra2_1",
                 "title_es": "Role-play: asertivo, pasivo o agresivo",
                 "title_ca": "Role-play: assertiu, passiu o agresiu",
                 "motivatingFactor_es": "Reconocer y practicar las tres formas de responder ante una misma situación.",
                 "motivatingFactor_ca": "Reconocer i practicar les tres formes de respondre davant d'una mateixa situació.",
-                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
-                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
                 "evidence_es": "Tabla de situaciones con la respuesta asertiva correcta.",
                 "evidence_ca": "Taula de situacions amb la resposta assertiva correcta.",
                 "diversitySupport_es": "Tarjetas de situaciones, tarjetas de estilos comunicativos, espejo de comunicación no verbal.",
                 "diversitySupport_ca": "Targetes de situacions, targetes d'estils comunicatius, espill de comunicació no verbal."
               },
               {
-                "id": "act_3159_ra3_2",
+                "id": "act_3159_ra2_2",
                 "title_es": "Elevator pitch: me presento en un minuto",
                 "title_ca": "Elevator pitch: em presente en un minut",
                 "motivatingFactor_es": "Preparar y exponer una presentación personal breve y convincente.",
                 "motivatingFactor_ca": "Preparar i exponer una presentació personal breu i convincente.",
-                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6e.)",
-                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6i.)",
+                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6e.)",
+                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6i.)",
                 "evidence_es": "Grabación del elevator pitch y rúbrica de autoevaluación.",
                 "evidence_ca": "Grabació del elevator pitch i rúbrica d'autoavaluació.",
                 "diversitySupport_es": "Guion con frases iniciadoras, cronómetro visible, grabación en parejas y plantilla bilingüe.",
                 "diversitySupport_ca": "Guió amb frases iniciadores, cronómetro visible, grabació en parelles i plantilla bilingüe."
               },
               {
-                "id": "act_3159_ra3_6",
+                "id": "act_3159_ra2_6",
                 "title_es": "Mi emocionario profesional",
                 "title_ca": "El meu emocionario professional",
                 "motivatingFactor_es": "Identificar y nombrar las emociones que aparecen en el trabajo.",
                 "motivatingFactor_ca": "Identificar i nombrar les emocions que aparecen en el treball.",
-                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-3b/3e + 3012-2e + 3005-1h.)",
-                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-3b/3i + 3012-2i + 3005-1h.)",
+                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-2b/3e + 3012-2e + 3005-1h.)",
+                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-2b/3i + 3012-2i + 3005-1h.)",
                 "evidence_es": "Emocionario ilustrado con estrategias de gestión.",
                 "evidence_ca": "Emocionario ilustrat amb estratègies de gestió.",
                 "diversitySupport_es": "Tarjetas de emociones con pictogramas, banco de estrategias y trabajo en pequeño grupo.",
                 "diversitySupport_ca": "Targetes d'emocions amb pictogrames, banc d'estratègies i treball en xicotet grup."
               },
               {
-                "id": "act_3159_ra3_3",
+                "id": "act_3159_ra2_3",
                 "title_es": "La torre cooperativa",
                 "title_ca": "La torre cooperativa",
                 "motivatingFactor_es": "Comprobar en una dinámica los beneficios del trabajo en equipo.",
                 "motivatingFactor_ca": "Comprovar en una dinámica els beneficios del treball en equip.",
-                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-3d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
-                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-3d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
+                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-2d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
+                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-2d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
                 "evidence_es": "Torre construida y reflexión escrita sobre el trabajo en equipo.",
                 "evidence_ca": "Torre construida i reflexió escrita sobre el treball en equip.",
                 "diversitySupport_es": "Materiales manipulativos, roles por tarjetas, guion de reflexión y puesta en común.",
                 "diversitySupport_ca": "Materials manipulatius, rols per targetes, guió de reflexió i posada en comú."
               },
               {
-                "id": "act_3159_ra3_4",
+                "id": "act_3159_ra2_4",
                 "title_es": "Mi perfil por escrito y en voz alta",
                 "title_ca": "El meu perfil per escrit i en veu alta",
                 "motivatingFactor_es": "Redactar el propio perfil profesional y presentarlo oralmente.",
                 "motivatingFactor_ca": "Redactar el propi perfil professional i presentarlo oralment.",
-                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
-                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
                 "evidence_es": "Perfil escrito presentado y coevaluado.",
                 "evidence_ca": "Perfil escrit presentat i coevaluat.",
                 "diversitySupport_es": "Plantilla de perfil, banco de vocabulario, pauta de presentación y coevaluación amable.",
                 "diversitySupport_ca": "Plantilla de perfil, banc de vocabulari, pauta de presentació i coavaluació amable."
               },
               {
-                "id": "act_3159_ra3_5",
+                "id": "act_3159_ra2_5",
                 "title_es": "Medio un conflicto en el salón",
                 "title_ca": "Medi un conflicte en el saló",
                 "motivatingFactor_es": "Aplicar pasos de mediación para resolver un conflicto laboral simulado.",
                 "motivatingFactor_ca": "Aplicar pasos de mediació per a resoldre un conflicte laboral simulat.",
-                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-3e + 3012-2c + 3005-4a + 3067-7c.)",
-                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-3i + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-2e + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-2i + 3012-2c + 3005-4a + 3067-7c.)",
                 "evidence_es": "Guion de mediación con las alternativas acordadas.",
                 "evidence_ca": "Guió de mediació amb les alternatives acordades.",
                 "diversitySupport_es": "Tarjetas de pasos de mediación, roles rotatorios y frases de parafraseo.",
                 "diversitySupport_ca": "Targetes de pasos de mediació, rols rotatorios i frases de parafraseo."
               },
               {
-                "id": "act_3159_ra3_7",
+                "id": "act_3159_ra2_7",
                 "title_es": "Debate: ¿qué valora una empresa de mí?",
                 "title_ca": "Debat: ¿què valora una empresa de mí?",
                 "motivatingFactor_es": "Argumentar en un debate qué competencias personales y sociales son más importantes.",
                 "motivatingFactor_ca": "Argumentar en un debat què competències personals i socials són més importants.",
-                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
-                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
                 "evidence_es": "Acta del debate con argumentos y conclusión.",
                 "evidence_ca": "Acta del debat amb arguments i conclusió.",
                 "diversitySupport_es": "Turnos con tarjetas, roles (orador, jurado, moderador), frases de cortesía y rúbrica de respeto.",
@@ -56542,19 +55558,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-3c ↔ 3011-3b (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-3c ↔ 3011-3b (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-2c ↔ 3011-3b (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-2c ↔ 3011-3b (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA3",
             "targetRaText_es": "Utiliza estrategias comunicativas para interpretar y comunicar información oral en lengua castellana, aplicando los principios de la escucha activa, estrategias sencillas de composición y las normas lingüísticas básicas.",
             "targetRaText_ca": "Utilitza estratègies comunicatives per a interpretar i comunicar informació oral en llengua castellana catalana, aplicant els principis de l'escolta activa, estratègies senzilles de composició i les normes lingüistiques bàsiques",
-            "sourceCriteria": "3159-3c",
+            "sourceCriteria": "3159-2c",
             "criteriaKeys": [
               "c",
-              "3c",
-              "3159-3c"
+              "2c",
+              "2159-2c"
             ],
             "relatedCriteria": [
               {
@@ -56605,91 +55621,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Les tècniques de presentació oral i escrita són exactament la competència comunicativa de Comunicació i Societat I (oral, escrita i en anglés) i de «Atenció al client» (expresarse i transmitir informació amb claritat). Ací es apliquen a la presentació personal per al ocupació.",
             "activities": [
               {
-                "id": "act_3159_ra3_1",
+                "id": "act_3159_ra2_1",
                 "title_es": "Role-play: asertivo, pasivo o agresivo",
                 "title_ca": "Role-play: assertiu, passiu o agresiu",
                 "motivatingFactor_es": "Reconocer y practicar las tres formas de responder ante una misma situación.",
                 "motivatingFactor_ca": "Reconocer i practicar les tres formes de respondre davant d'una mateixa situació.",
-                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
-                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
                 "evidence_es": "Tabla de situaciones con la respuesta asertiva correcta.",
                 "evidence_ca": "Taula de situacions amb la resposta assertiva correcta.",
                 "diversitySupport_es": "Tarjetas de situaciones, tarjetas de estilos comunicativos, espejo de comunicación no verbal.",
                 "diversitySupport_ca": "Targetes de situacions, targetes d'estils comunicatius, espill de comunicació no verbal."
               },
               {
-                "id": "act_3159_ra3_2",
+                "id": "act_3159_ra2_2",
                 "title_es": "Elevator pitch: me presento en un minuto",
                 "title_ca": "Elevator pitch: em presente en un minut",
                 "motivatingFactor_es": "Preparar y exponer una presentación personal breve y convincente.",
                 "motivatingFactor_ca": "Preparar i exponer una presentació personal breu i convincente.",
-                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6e.)",
-                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6i.)",
+                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6e.)",
+                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6i.)",
                 "evidence_es": "Grabación del elevator pitch y rúbrica de autoevaluación.",
                 "evidence_ca": "Grabació del elevator pitch i rúbrica d'autoavaluació.",
                 "diversitySupport_es": "Guion con frases iniciadoras, cronómetro visible, grabación en parejas y plantilla bilingüe.",
                 "diversitySupport_ca": "Guió amb frases iniciadores, cronómetro visible, grabació en parelles i plantilla bilingüe."
               },
               {
-                "id": "act_3159_ra3_4",
+                "id": "act_3159_ra2_4",
                 "title_es": "Mi perfil por escrito y en voz alta",
                 "title_ca": "El meu perfil per escrit i en veu alta",
                 "motivatingFactor_es": "Redactar el propio perfil profesional y presentarlo oralmente.",
                 "motivatingFactor_ca": "Redactar el propi perfil professional i presentarlo oralment.",
-                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
-                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
                 "evidence_es": "Perfil escrito presentado y coevaluado.",
                 "evidence_ca": "Perfil escrit presentat i coevaluat.",
                 "diversitySupport_es": "Plantilla de perfil, banco de vocabulario, pauta de presentación y coevaluación amable.",
                 "diversitySupport_ca": "Plantilla de perfil, banc de vocabulari, pauta de presentació i coavaluació amable."
               },
               {
-                "id": "act_3159_ra3_3",
+                "id": "act_3159_ra2_3",
                 "title_es": "La torre cooperativa",
                 "title_ca": "La torre cooperativa",
                 "motivatingFactor_es": "Comprobar en una dinámica los beneficios del trabajo en equipo.",
                 "motivatingFactor_ca": "Comprovar en una dinámica els beneficios del treball en equip.",
-                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-3d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
-                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-3d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
+                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-2d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
+                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-2d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
                 "evidence_es": "Torre construida y reflexión escrita sobre el trabajo en equipo.",
                 "evidence_ca": "Torre construida i reflexió escrita sobre el treball en equip.",
                 "diversitySupport_es": "Materiales manipulativos, roles por tarjetas, guion de reflexión y puesta en común.",
                 "diversitySupport_ca": "Materials manipulatius, rols per targetes, guió de reflexió i posada en comú."
               },
               {
-                "id": "act_3159_ra3_5",
+                "id": "act_3159_ra2_5",
                 "title_es": "Medio un conflicto en el salón",
                 "title_ca": "Medi un conflicte en el saló",
                 "motivatingFactor_es": "Aplicar pasos de mediación para resolver un conflicto laboral simulado.",
                 "motivatingFactor_ca": "Aplicar pasos de mediació per a resoldre un conflicte laboral simulat.",
-                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-3e + 3012-2c + 3005-4a + 3067-7c.)",
-                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-3i + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-2e + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-2i + 3012-2c + 3005-4a + 3067-7c.)",
                 "evidence_es": "Guion de mediación con las alternativas acordadas.",
                 "evidence_ca": "Guió de mediació amb les alternatives acordades.",
                 "diversitySupport_es": "Tarjetas de pasos de mediación, roles rotatorios y frases de parafraseo.",
                 "diversitySupport_ca": "Targetes de pasos de mediació, rols rotatorios i frases de parafraseo."
               },
               {
-                "id": "act_3159_ra3_6",
+                "id": "act_3159_ra2_6",
                 "title_es": "Mi emocionario profesional",
                 "title_ca": "El meu emocionario professional",
                 "motivatingFactor_es": "Identificar y nombrar las emociones que aparecen en el trabajo.",
                 "motivatingFactor_ca": "Identificar i nombrar les emocions que aparecen en el treball.",
-                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-3b/3e + 3012-2e + 3005-1h.)",
-                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-3b/3i + 3012-2i + 3005-1h.)",
+                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-2b/3e + 3012-2e + 3005-1h.)",
+                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-2b/3i + 3012-2i + 3005-1h.)",
                 "evidence_es": "Emocionario ilustrado con estrategias de gestión.",
                 "evidence_ca": "Emocionario ilustrat amb estratègies de gestió.",
                 "diversitySupport_es": "Tarjetas de emociones con pictogramas, banco de estrategias y trabajo en pequeño grupo.",
                 "diversitySupport_ca": "Targetes d'emocions amb pictogrames, banc d'estratègies i treball en xicotet grup."
               },
               {
-                "id": "act_3159_ra3_7",
+                "id": "act_3159_ra2_7",
                 "title_es": "Debate: ¿qué valora una empresa de mí?",
                 "title_ca": "Debat: ¿què valora una empresa de mí?",
                 "motivatingFactor_es": "Argumentar en un debate qué competencias personales y sociales son más importantes.",
                 "motivatingFactor_ca": "Argumentar en un debat què competències personals i socials són més importants.",
-                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
-                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
                 "evidence_es": "Acta del debate con argumentos y conclusión.",
                 "evidence_ca": "Acta del debat amb arguments i conclusió.",
                 "diversitySupport_es": "Turnos con tarjetas, roles (orador, jurado, moderador), frases de cortesía y rúbrica de respeto.",
@@ -56698,19 +55714,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-3d ↔ 3009-4g (Ciencias aplicadas I)",
-            "title_ca": "Connexió curricular: 3159-3d ↔ 3009-4g (Ciències aplicades I)",
+            "title_es": "Conexión curricular: 3159-2d ↔ 3009-4g (Ciencias aplicadas I)",
+            "title_ca": "Connexió curricular: 3159-2d ↔ 3009-4g (Ciències aplicades I)",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA4",
             "targetRaText_es": "Utiliza el método más adecuado para la separación de componentes de mezclas sencillas relacionándolo con el proceso físico o químico en que se basa",
             "targetRaText_ca": "Utilitza el mètode més adequat pèr a la separació de components de mescles senzilles relacionant-ho amb el procés físic o químic en què es basa.",
-            "sourceCriteria": "3159-3d",
+            "sourceCriteria": "3159-2d",
             "criteriaKeys": [
               "d",
-              "3d",
-              "3159-3d"
+              "2d",
+              "2159-2d"
             ],
             "relatedCriteria": [
               {
@@ -56755,91 +55771,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "El treball en equip es practica de forma transversal en les Ciències Aplicades (tasques i solucions en equip), en Comunicació i Societat I i II (esfuerzo i treball col·laboratiu) i es profesionaliza en la coordinació amb l'equip de la FCT.",
             "activities": [
               {
-                "id": "act_3159_ra3_3",
+                "id": "act_3159_ra2_3",
                 "title_es": "La torre cooperativa",
                 "title_ca": "La torre cooperativa",
                 "motivatingFactor_es": "Comprobar en una dinámica los beneficios del trabajo en equipo.",
                 "motivatingFactor_ca": "Comprovar en una dinámica els beneficios del treball en equip.",
-                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-3d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
-                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-3d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
+                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-2d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
+                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-2d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
                 "evidence_es": "Torre construida y reflexión escrita sobre el trabajo en equipo.",
                 "evidence_ca": "Torre construida i reflexió escrita sobre el treball en equip.",
                 "diversitySupport_es": "Materiales manipulativos, roles por tarjetas, guion de reflexión y puesta en común.",
                 "diversitySupport_ca": "Materials manipulatius, rols per targetes, guió de reflexió i posada en comú."
               },
               {
-                "id": "act_3159_ra3_1",
+                "id": "act_3159_ra2_1",
                 "title_es": "Role-play: asertivo, pasivo o agresivo",
                 "title_ca": "Role-play: assertiu, passiu o agresiu",
                 "motivatingFactor_es": "Reconocer y practicar las tres formas de responder ante una misma situación.",
                 "motivatingFactor_ca": "Reconocer i practicar les tres formes de respondre davant d'una mateixa situació.",
-                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
-                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
                 "evidence_es": "Tabla de situaciones con la respuesta asertiva correcta.",
                 "evidence_ca": "Taula de situacions amb la resposta assertiva correcta.",
                 "diversitySupport_es": "Tarjetas de situaciones, tarjetas de estilos comunicativos, espejo de comunicación no verbal.",
                 "diversitySupport_ca": "Targetes de situacions, targetes d'estils comunicatius, espill de comunicació no verbal."
               },
               {
-                "id": "act_3159_ra3_2",
+                "id": "act_3159_ra2_2",
                 "title_es": "Elevator pitch: me presento en un minuto",
                 "title_ca": "Elevator pitch: em presente en un minut",
                 "motivatingFactor_es": "Preparar y exponer una presentación personal breve y convincente.",
                 "motivatingFactor_ca": "Preparar i exponer una presentació personal breu i convincente.",
-                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6e.)",
-                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6i.)",
+                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6e.)",
+                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6i.)",
                 "evidence_es": "Grabación del elevator pitch y rúbrica de autoevaluación.",
                 "evidence_ca": "Grabació del elevator pitch i rúbrica d'autoavaluació.",
                 "diversitySupport_es": "Guion con frases iniciadoras, cronómetro visible, grabación en parejas y plantilla bilingüe.",
                 "diversitySupport_ca": "Guió amb frases iniciadores, cronómetro visible, grabació en parelles i plantilla bilingüe."
               },
               {
-                "id": "act_3159_ra3_4",
+                "id": "act_3159_ra2_4",
                 "title_es": "Mi perfil por escrito y en voz alta",
                 "title_ca": "El meu perfil per escrit i en veu alta",
                 "motivatingFactor_es": "Redactar el propio perfil profesional y presentarlo oralmente.",
                 "motivatingFactor_ca": "Redactar el propi perfil professional i presentarlo oralment.",
-                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
-                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
                 "evidence_es": "Perfil escrito presentado y coevaluado.",
                 "evidence_ca": "Perfil escrit presentat i coevaluat.",
                 "diversitySupport_es": "Plantilla de perfil, banco de vocabulario, pauta de presentación y coevaluación amable.",
                 "diversitySupport_ca": "Plantilla de perfil, banc de vocabulari, pauta de presentació i coavaluació amable."
               },
               {
-                "id": "act_3159_ra3_5",
+                "id": "act_3159_ra2_5",
                 "title_es": "Medio un conflicto en el salón",
                 "title_ca": "Medi un conflicte en el saló",
                 "motivatingFactor_es": "Aplicar pasos de mediación para resolver un conflicto laboral simulado.",
                 "motivatingFactor_ca": "Aplicar pasos de mediació per a resoldre un conflicte laboral simulat.",
-                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-3e + 3012-2c + 3005-4a + 3067-7c.)",
-                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-3i + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-2e + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-2i + 3012-2c + 3005-4a + 3067-7c.)",
                 "evidence_es": "Guion de mediación con las alternativas acordadas.",
                 "evidence_ca": "Guió de mediació amb les alternatives acordades.",
                 "diversitySupport_es": "Tarjetas de pasos de mediación, roles rotatorios y frases de parafraseo.",
                 "diversitySupport_ca": "Targetes de pasos de mediació, rols rotatorios i frases de parafraseo."
               },
               {
-                "id": "act_3159_ra3_6",
+                "id": "act_3159_ra2_6",
                 "title_es": "Mi emocionario profesional",
                 "title_ca": "El meu emocionario professional",
                 "motivatingFactor_es": "Identificar y nombrar las emociones que aparecen en el trabajo.",
                 "motivatingFactor_ca": "Identificar i nombrar les emocions que aparecen en el treball.",
-                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-3b/3e + 3012-2e + 3005-1h.)",
-                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-3b/3i + 3012-2i + 3005-1h.)",
+                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-2b/3e + 3012-2e + 3005-1h.)",
+                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-2b/3i + 3012-2i + 3005-1h.)",
                 "evidence_es": "Emocionario ilustrado con estrategias de gestión.",
                 "evidence_ca": "Emocionario ilustrat amb estratègies de gestió.",
                 "diversitySupport_es": "Tarjetas de emociones con pictogramas, banco de estrategias y trabajo en pequeño grupo.",
                 "diversitySupport_ca": "Targetes d'emocions amb pictogrames, banc d'estratègies i treball en xicotet grup."
               },
               {
-                "id": "act_3159_ra3_7",
+                "id": "act_3159_ra2_7",
                 "title_es": "Debate: ¿qué valora una empresa de mí?",
                 "title_ca": "Debat: ¿què valora una empresa de mí?",
                 "motivatingFactor_es": "Argumentar en un debate qué competencias personales y sociales son más importantes.",
                 "motivatingFactor_ca": "Argumentar en un debat què competències personals i socials són més importants.",
-                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
-                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
                 "evidence_es": "Acta del debate con argumentos y conclusión.",
                 "evidence_ca": "Acta del debat amb arguments i conclusió.",
                 "diversitySupport_es": "Turnos con tarjetas, roles (orador, jurado, moderador), frases de cortesía y rúbrica de respeto.",
@@ -56848,19 +55864,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-3e ↔ 3012-2c (Comunicación y sociedad II)",
-            "title_ca": "Connexió curricular: 3159-3i ↔ 3012-2c (Comunicació i societat II)",
+            "title_es": "Conexión curricular: 3159-2e ↔ 3012-2c (Comunicación y sociedad II)",
+            "title_ca": "Connexió curricular: 3159-2i ↔ 3012-2c (Comunicació i societat II)",
             "targetModuleCode": "3012",
             "targetModuleName_es": "Comunicación y sociedad II",
             "targetModuleName_ca": "Comunicació i societat II",
             "targetRaCode": "RA2",
             "targetRaText_es": "Aplica los criterios competenciales y procedimientos técnicos de Comunicación y sociedad II.",
             "targetRaText_ca": "Valora els principis bàsics de sistema democràtic analitzant-ne les institucions i les diferents organitzacions polítiques i econòmiques en què es manifesta i inferint pautes d'actuació per a acomodar el seu comportament a l'acompliment d'aquests principis.",
-            "sourceCriteria": "3159-3e",
+            "sourceCriteria": "3159-2e",
             "criteriaKeys": [
               "e",
-              "3e",
-              "3159-3e"
+              "2e",
+              "2159-2e"
             ],
             "relatedCriteria": [
               {
@@ -56911,91 +55927,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "La flexibilitat i la gestió positiva dels conflictes coincide amb la mediació de Comunicació i Societat II, amb les alternatives davant de reclamacions de «Atenció al client» i amb la responsabilitat i l'actitud de millora que valora la FCT.",
             "activities": [
               {
-                "id": "act_3159_ra3_5",
+                "id": "act_3159_ra2_5",
                 "title_es": "Medio un conflicto en el salón",
                 "title_ca": "Medi un conflicte en el saló",
                 "motivatingFactor_es": "Aplicar pasos de mediación para resolver un conflicto laboral simulado.",
                 "motivatingFactor_ca": "Aplicar pasos de mediació per a resoldre un conflicte laboral simulat.",
-                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-3e + 3012-2c + 3005-4a + 3067-7c.)",
-                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-3i + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_es": "Con un conflicto planteado (dos compañeros, un cliente molesto), un alumno actúa de mediador siguiendo pasos (escuchar, parafrasear, buscar soluciones) y el grupo valora las alternativas propuestas. (Aprendizajes: 3159-2e + 3012-2c + 3005-4a + 3067-7c.)",
+                "description_ca": "Amb un conflicte planteat (dos companys, un client molesto), un alumne actúa de mediador seguint pasos (escoltar, parafrasear, buscar solucions) i el grup valora les alternatives propostes. (Aprenentatges: 3159-2i + 3012-2c + 3005-4a + 3067-7c.)",
                 "evidence_es": "Guion de mediación con las alternativas acordadas.",
                 "evidence_ca": "Guió de mediació amb les alternatives acordades.",
                 "diversitySupport_es": "Tarjetas de pasos de mediación, roles rotatorios y frases de parafraseo.",
                 "diversitySupport_ca": "Targetes de pasos de mediació, rols rotatorios i frases de parafraseo."
               },
               {
-                "id": "act_3159_ra3_6",
+                "id": "act_3159_ra2_6",
                 "title_es": "Mi emocionario profesional",
                 "title_ca": "El meu emocionario professional",
                 "motivatingFactor_es": "Identificar y nombrar las emociones que aparecen en el trabajo.",
                 "motivatingFactor_ca": "Identificar i nombrar les emocions que aparecen en el treball.",
-                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-3b/3e + 3012-2e + 3005-1h.)",
-                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-3b/3i + 3012-2i + 3005-1h.)",
+                "description_es": "Con tarjetas de emociones, asocian cada emoción a una situación laboral (nervios en una entrevista, alegría por un logro, enfado por un error) y proponen una forma asertiva de gestionarla. (Aprendizajes: 3159-2b/3e + 3012-2e + 3005-1h.)",
+                "description_ca": "Amb targetes d'emocions, asocian cada emoció a una situació laboral (nervios en una entrevista, alegría per un logro, enfat per un error) i proposen una forma assertiva de gestionarla. (Aprenentatges: 3159-2b/3i + 3012-2i + 3005-1h.)",
                 "evidence_es": "Emocionario ilustrado con estrategias de gestión.",
                 "evidence_ca": "Emocionario ilustrat amb estratègies de gestió.",
                 "diversitySupport_es": "Tarjetas de emociones con pictogramas, banco de estrategias y trabajo en pequeño grupo.",
                 "diversitySupport_ca": "Targetes d'emocions amb pictogrames, banc d'estratègies i treball en xicotet grup."
               },
               {
-                "id": "act_3159_ra3_1",
+                "id": "act_3159_ra2_1",
                 "title_es": "Role-play: asertivo, pasivo o agresivo",
                 "title_ca": "Role-play: assertiu, passiu o agresiu",
                 "motivatingFactor_es": "Reconocer y practicar las tres formas de responder ante una misma situación.",
                 "motivatingFactor_ca": "Reconocer i practicar les tres formes de respondre davant d'una mateixa situació.",
-                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
-                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-3b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_es": "Con tarjetas de situaciones laborales (una queja, una orden injusta, un error propio), representan la respuesta pasiva, agresiva y asertiva, y el grupo identifica cuál es cada una y por qué. (Aprendizajes: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
+                "description_ca": "Amb targetes de situacions laborals (una queixa, una ordre injusta, un error propi), representen la resposta passiva, agresiva i assertiva, i el grup identifica quin és cada una i per què. (Aprenentatges: 3159-2b + 3005-1h + 3012-2c + 3011-3c.)",
                 "evidence_es": "Tabla de situaciones con la respuesta asertiva correcta.",
                 "evidence_ca": "Taula de situacions amb la resposta assertiva correcta.",
                 "diversitySupport_es": "Tarjetas de situaciones, tarjetas de estilos comunicativos, espejo de comunicación no verbal.",
                 "diversitySupport_ca": "Targetes de situacions, targetes d'estils comunicatius, espill de comunicació no verbal."
               },
               {
-                "id": "act_3159_ra3_2",
+                "id": "act_3159_ra2_2",
                 "title_es": "Elevator pitch: me presento en un minuto",
                 "title_ca": "Elevator pitch: em presente en un minut",
                 "motivatingFactor_es": "Preparar y exponer una presentación personal breve y convincente.",
                 "motivatingFactor_ca": "Preparar i exponer una presentació personal breu i convincente.",
-                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6e.)",
-                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-3c + 3011-3b/3c + 3005-1g + 3011-6i.)",
+                "description_es": "Escriben un guion de un minuto (quién soy, qué sé hacer, qué busco) y lo exponen ante el grupo con apoyo de comunicación no verbal; se graba para revisar y, en una segunda ronda, se ensaya en inglés. (Aprendizajes: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6e.)",
+                "description_ca": "Escriuen un guió d'un minut (qui soy, què sé fer, què busco) i l'exponen davant del grup amb suport de comunicació no verbal; es graba per a revisar i, en una segona ronda, es ensaya en anglés. (Aprenentatges: 3159-2c + 3011-3b/3c + 3005-1g + 3011-6i.)",
                 "evidence_es": "Grabación del elevator pitch y rúbrica de autoevaluación.",
                 "evidence_ca": "Grabació del elevator pitch i rúbrica d'autoavaluació.",
                 "diversitySupport_es": "Guion con frases iniciadoras, cronómetro visible, grabación en parejas y plantilla bilingüe.",
                 "diversitySupport_ca": "Guió amb frases iniciadores, cronómetro visible, grabació en parelles i plantilla bilingüe."
               },
               {
-                "id": "act_3159_ra3_3",
+                "id": "act_3159_ra2_3",
                 "title_es": "La torre cooperativa",
                 "title_ca": "La torre cooperativa",
                 "motivatingFactor_es": "Comprobar en una dinámica los beneficios del trabajo en equipo.",
                 "motivatingFactor_ca": "Comprovar en una dinámica els beneficios del treball en equip.",
-                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-3d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
-                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-3d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
+                "description_es": "En equipos, construyen una torre con materiales sencillos con un objetivo común y roles asignados; después reflexionan sobre qué funcionó, qué no y qué aportó cada uno. (Aprendizajes: 3159-2d + 3009-4g + 3042-2d + 3067-7e + 3011-1i.)",
+                "description_ca": "En equips, construyen una torre amb materials senzills amb un objectiu comú i rols asignats; després reflexionan sobre què funcionó, què no i què aportó cada uno. (Aprenentatges: 3159-2d + 3009-4g + 3042-2d + 3067-7i + 3011-1i.)",
                 "evidence_es": "Torre construida y reflexión escrita sobre el trabajo en equipo.",
                 "evidence_ca": "Torre construida i reflexió escrita sobre el treball en equip.",
                 "diversitySupport_es": "Materiales manipulativos, roles por tarjetas, guion de reflexión y puesta en común.",
                 "diversitySupport_ca": "Materials manipulatius, rols per targetes, guió de reflexió i posada en comú."
               },
               {
-                "id": "act_3159_ra3_4",
+                "id": "act_3159_ra2_4",
                 "title_es": "Mi perfil por escrito y en voz alta",
                 "title_ca": "El meu perfil per escrit i en veu alta",
                 "motivatingFactor_es": "Redactar el propio perfil profesional y presentarlo oralmente.",
                 "motivatingFactor_ca": "Redactar el propi perfil professional i presentarlo oralment.",
-                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
-                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-3c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_es": "Elaboran un texto breve con su perfil (formación, cualidades, metas) cuidando la presentación y la ortografía, y lo leen ante un compañero aplicando escucha activa y claridad. (Aprendizajes: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
+                "description_ca": "Elaboren un text breu amb el seu perfil (formació, cualitats, metas) cuidant la presentació i l'ortografía, i el llegeixen davant d'un company aplicant escolta activa i claritat. (Aprenentatges: 3159-2c + 3011-4f/4h + 3012-4f + 3005-1i.)",
                 "evidence_es": "Perfil escrito presentado y coevaluado.",
                 "evidence_ca": "Perfil escrit presentat i coevaluat.",
                 "diversitySupport_es": "Plantilla de perfil, banco de vocabulario, pauta de presentación y coevaluación amable.",
                 "diversitySupport_ca": "Plantilla de perfil, banc de vocabulari, pauta de presentació i coavaluació amable."
               },
               {
-                "id": "act_3159_ra3_7",
+                "id": "act_3159_ra2_7",
                 "title_es": "Debate: ¿qué valora una empresa de mí?",
                 "title_ca": "Debat: ¿què valora una empresa de mí?",
                 "motivatingFactor_es": "Argumentar en un debate qué competencias personales y sociales son más importantes.",
                 "motivatingFactor_ca": "Argumentar en un debat què competències personals i socials són més importants.",
-                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
-                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-3a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_es": "Dos equipos defienden posturas opuestas (p. ej. «importa más la actitud que la técnica») con turnos pautados, escucha activa y respeto, y un jurado decide con criterios. (Aprendizajes: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
+                "description_ca": "Dos equips defienden postures opuestas (p. ej. «importa més l'actitud que la tècnica») amb turnos pautats, escolta activa i respecte, i un jurat decidix amb criteris. (Aprenentatges: 3159-2a + 3060-1f + 3012-6k + 3063-3j + 3067-7d.)",
                 "evidence_es": "Acta del debate con argumentos y conclusión.",
                 "evidence_ca": "Acta del debat amb arguments i conclusió.",
                 "diversitySupport_es": "Turnos con tarjetas, roles (orador, jurado, moderador), frases de cortesía y rúbrica de respeto.",
@@ -57006,35 +56022,35 @@ export const FPB_MODULES_SEED: FPBModule[] = [
         ]
       },
       {
-        "id": "3159_RA4",
-        "code": "RA4",
+        "id": "3159_RA3",
+        "code": "RA3",
         "text_es": "Accede a la información de los posibles itinerarios académicos y/o profesionales que tiene a su alcance a través de la investigación y la reflexión libre de estereotipos vocacionales.",
-        "text_ca": "Posa en marxa un itinerari propi. analitza les diferents opcions educatives i professionals, valora els avantatges i inconvenients de cadascuna d'elles i examina aquells fets que millor s'ajusten a les seves possibilitats i preferències.",
+        "text_ca": "Accedeix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la investigació i la reflexió lliure d’estereotips vocacionals.",
         "criteria_es": [
-          "a) Se ha determinado la realidad del entorno sociolaboral actual.",
-          "b) Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias.",
-          "c) Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
+          "3159-3a. Se ha determinado la realidad del entorno sociolaboral actual.",
+          "3159-3b. Se han identificado los itinerarios académicos y profesionales afines a sus intereses y se han valorado las opciones que mejor se ajustan a sus perfiles profesionales y sus preferencias.",
+          "3159-3c. Se ha valorado la importancia de la formación permanente como factor clave para el empleo y la adaptación al cambio."
         ],
         "criteria_ca": [
-          "a) S'ha determinat la realitat del entorn sociolaboral actual.",
-          "b) S'han identificat els itineraris acadèmics i professionals afines als seus intereses i s'han valorat les opcions que millor es ajusten als seus perfiles professionals i els seus preferències.",
-          "c) S'ha valorat l'importància de la formació permanent com factor clau per al ocupació i l'adaptació al canvi."
+          "3159-3a. S'ha determinat la realitat de l'entorn sociolaboral actual.",
+          "3159-3b. S'han identificat els itineraris acadèmics i professionals afins als seus interessos i s'han valorat les opcions que millor s'ajusten als seus perfils professionals i a les seves preferències.",
+          "3159-3c. S'ha valorat la importància de la formació permanent com a factor clau per a l'ocupació i l'adaptació al canvi."
         ],
         "connections": [
           {
-            "title_es": "Conexión curricular: 3159-4a ↔ 3011-2g (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-4a ↔ 3011-2g (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-3a ↔ 3011-2g (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-3a ↔ 3011-2g (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA2",
             "targetRaText_es": "Valora la construcción del espacio europeo hasta las primeras transformaciones industriales y sociedades agrarias, analizando sus características principales y valorando su pervivencia en la sociedad actual y en el entorno inmediato.",
             "targetRaText_ca": "Valora la construcció de l'espai europeu fins a les primeres transformacions industrials i societats agràries, analitzant les carascterístiques principals i valorant la seva pervivència en la societat actusal i en l'entorn immediat.",
-            "sourceCriteria": "3159-4a",
+            "sourceCriteria": "3159-3a",
             "criteriaKeys": [
               "a",
-              "4a",
-              "3159-4a"
+              "3a",
+              "3159-3a"
             ],
             "relatedCriteria": [
               {
@@ -57073,91 +56089,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Conocer l'entorn sociolaboral és analitzar l'evolució del sector de l'imatge personal (Comunicació i Societat I i II), el model económic actual (Comunicació i Societat II), els materials de la professió (Ciències Aplicades I) i els tipus de públic (Atenció al client).",
             "activities": [
               {
-                "id": "act_3159_ra4_1",
+                "id": "act_3159_ra3_1",
                 "title_es": "Mapa del sector de la imagen personal",
                 "title_ca": "Mapa del sector de l'imatge personal",
                 "motivatingFactor_es": "Investigar cómo ha evolucionado el sector de la peluquería y la estética.",
                 "motivatingFactor_ca": "Investigar com ha evolucionat el sector de la perruqueria i l'estètica.",
-                "description_es": "En equipos, buscan información sobre la evolución del sector (oficios, tecnologías, tipos de salón) y elaboran una infografía o mapa visual con los principales cambios. (Aprendizajes: 3159-4a + 3011-2g + 3012-1h + 3009-4f.)",
-                "description_ca": "En equips, busquen informació sobre l'evolució del sector (oficios, tecnologies, tipus de saló) i elaboren una infografia o mapa visual amb els principals canvis. (Aprenentatges: 3159-4a + 3011-2g + 3012-1h + 3009-4f.)",
+                "description_es": "En equipos, buscan información sobre la evolución del sector (oficios, tecnologías, tipos de salón) y elaboran una infografía o mapa visual con los principales cambios. (Aprendizajes: 3159-3a + 3011-2g + 3012-1h + 3009-4f.)",
+                "description_ca": "En equips, busquen informació sobre l'evolució del sector (oficios, tecnologies, tipus de saló) i elaboren una infografia o mapa visual amb els principals canvis. (Aprenentatges: 3159-3a + 3011-2g + 3012-1h + 3009-4f.)",
                 "evidence_es": "Infografía del sector y su evolución.",
                 "evidence_ca": "Infografia del sector i el seu evolució.",
                 "diversitySupport_es": "Búsqueda web guiada, plantilla de infografía, imágenes y exposición breve.",
                 "diversitySupport_ca": "Cerca web guiada, plantilla d'infografia, imatges i exposició breu."
               },
               {
-                "id": "act_3159_ra4_2",
+                "id": "act_3159_ra3_2",
                 "title_es": "Feria de itinerarios formativos",
                 "title_ca": "Feria d'itineraris formatius",
                 "motivatingFactor_es": "Montar una feria con las opciones académicas y profesionales tras el título.",
                 "motivatingFactor_ca": "Montar una feria amb les opcions acadèmiques i professionals després del título.",
-                "description_es": "Cada equipo investiga un itinerario (grado medio de estética, peluquería, otra FP, bachillerato) y prepara un póster con requisitos, salidas y a quién le puede encajar, para explicarlo a los visitantes. (Aprendizajes: 3159-4b + 3005-2g + 3011-4a + 3009-1c.)",
-                "description_ca": "Cada equip investiga un itinerari (grat medi d'estètica, perruqueria, altra FP, bachillerato) i prepara un pòster amb requisitos, salides i a qui li pot encajar, per a explicarlo als visitants. (Aprenentatges: 3159-4b + 3005-2g + 3011-4a + 3009-1c.)",
+                "description_es": "Cada equipo investiga un itinerario (grado medio de estética, peluquería, otra FP, bachillerato) y prepara un póster con requisitos, salidas y a quién le puede encajar, para explicarlo a los visitantes. (Aprendizajes: 3159-3b + 3005-2g + 3011-4a + 3009-1c.)",
+                "description_ca": "Cada equip investiga un itinerari (grat medi d'estètica, perruqueria, altra FP, bachillerato) i prepara un pòster amb requisitos, salides i a qui li pot encajar, per a explicarlo als visitants. (Aprenentatges: 3159-3b + 3005-2g + 3011-4a + 3009-1c.)",
                 "evidence_es": "Póster del itinerario y ronda de explicaciones.",
                 "evidence_ca": "Pòster del itinerari i ronda d'explicacions.",
                 "diversitySupport_es": "Plantilla de póster, fuentes sugeridas, roles (guía/visitante) y turnos de feria.",
                 "diversitySupport_ca": "Plantilla de pòster, fuents sugerides, rols (guia/visitante) i turnos de feria."
               },
               {
-                "id": "act_3159_ra4_3",
+                "id": "act_3159_ra3_3",
                 "title_es": "Profesiones del sector: ¿quién hace qué?",
                 "title_ca": "Profesions del sector: ¿qui fa què?",
                 "motivatingFactor_es": "Conocer los puestos de trabajo y perfiles del sector de la estética.",
                 "motivatingFactor_ca": "Conocer els puestos de treball i perfiles del sector de l'estètica.",
-                "description_es": "Con tarjetas de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionan cada perfil con sus tareas y requisitos, y debaten cuál encaja más con cada uno. (Aprendizajes: 3159-4a/4b + 3012-1h + 3005-2a + 3060-1f.)",
-                "description_ca": "Amb targetes de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionen cada perfil amb els seus tasques i requisitos, i debaten quin encaja més amb cada uno. (Aprenentatges: 3159-4a/4b + 3012-1h + 3005-2a + 3060-1f.)",
+                "description_es": "Con tarjetas de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionan cada perfil con sus tareas y requisitos, y debaten cuál encaja más con cada uno. (Aprendizajes: 3159-3a/4b + 3012-1h + 3005-2a + 3060-1f.)",
+                "description_ca": "Amb targetes de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionen cada perfil amb els seus tasques i requisitos, i debaten quin encaja més amb cada uno. (Aprenentatges: 3159-3a/4b + 3012-1h + 3005-2a + 3060-1f.)",
                 "evidence_es": "Tabla perfiles-tareas-requisitos completada.",
                 "evidence_ca": "Taula perfiles-tasques-requisitos completada.",
                 "diversitySupport_es": "Tarjetas de perfiles y tareas, plantilla de tabla y debate guiado.",
                 "diversitySupport_ca": "Targetes de perfiles i tasques, plantilla de taula i debat guiat."
               },
               {
-                "id": "act_3159_ra4_7",
+                "id": "act_3159_ra3_7",
                 "title_es": "El salón del futuro",
                 "title_ca": "El saló del futur",
                 "motivatingFactor_es": "Imaginar cómo será la profesión dentro de unos años.",
                 "motivatingFactor_ca": "Imaginar com será la professió dins d'unos anys.",
-                "description_es": "A partir de la evolución del sector y las innovaciones tecnológicas, dibujan o componen un collage del «salón del futuro» y explican qué formación hará falta para trabajar en él. (Aprendizajes: 3159-4a/4c + 3012-1h/1b + 3011-2g.)",
-                "description_ca": "A partir de l'evolució del sector i les innovacions tecnològiques, dibuixen o componen un collage del «saló del futur» i expliquen què formació hará manca per a treballar en él. (Aprenentatges: 3159-4a/4c + 3012-1h/1b + 3011-2g.)",
+                "description_es": "A partir de la evolución del sector y las innovaciones tecnológicas, dibujan o componen un collage del «salón del futuro» y explican qué formación hará falta para trabajar en él. (Aprendizajes: 3159-3a/4c + 3012-1h/1b + 3011-2g.)",
+                "description_ca": "A partir de l'evolució del sector i les innovacions tecnològiques, dibuixen o componen un collage del «saló del futur» i expliquen què formació hará manca per a treballar en él. (Aprenentatges: 3159-3a/4c + 3012-1h/1b + 3011-2g.)",
                 "evidence_es": "Collage o dibujo del salón del futuro con explicación.",
                 "evidence_ca": "Collage o dibuix del saló del futur amb explicació.",
                 "diversitySupport_es": "Revistas e imágenes, plantilla de collage, vocabulario de apoyo y exposición breve.",
                 "diversitySupport_ca": "Revistes i imatges, plantilla de collage, vocabulari de suport i exposició breu."
               },
               {
-                "id": "act_3159_ra4_4",
+                "id": "act_3159_ra3_4",
                 "title_es": "Entrevisto a un adulto sobre formación permanente",
                 "title_ca": "Entrevisto a un adulto sobre formació permanent",
                 "motivatingFactor_es": "Descubrir por qué la formación no acaba nunca a través de un testimonio real.",
                 "motivatingFactor_ca": "Descubrir per què la formació no acaba mai a través d'un testimonio real.",
-                "description_es": "Preparan y realizan una entrevista a un adulto (familiar o profesional) sobre su trayectoria formativa y cómo se ha ido reciclando, y extraen conclusiones sobre la formación permanente. (Aprendizajes: 3159-4c + 3011-2g + 3012-1b + 3067-7f.)",
-                "description_ca": "Preparen i realitzen una entrevista a un adulto (familiar o professional) sobre el seu trayectoria formativa i com s'ha anat reciclant, i extrauen conclusions sobre la formació permanent. (Aprenentatges: 3159-4c + 3011-2g + 3012-1b + 3067-7f.)",
+                "description_es": "Preparan y realizan una entrevista a un adulto (familiar o profesional) sobre su trayectoria formativa y cómo se ha ido reciclando, y extraen conclusiones sobre la formación permanente. (Aprendizajes: 3159-3c + 3011-2g + 3012-1b + 3067-7f.)",
+                "description_ca": "Preparen i realitzen una entrevista a un adulto (familiar o professional) sobre el seu trayectoria formativa i com s'ha anat reciclant, i extrauen conclusions sobre la formació permanent. (Aprenentatges: 3159-3c + 3011-2g + 3012-1b + 3067-7f.)",
                 "evidence_es": "Guion de entrevista y conclusiones compartidas.",
                 "evidence_ca": "Guió d'entrevista i conclusions compartides.",
                 "diversitySupport_es": "Guion de preguntas, grabación opcional, puesta en común en círculo.",
                 "diversitySupport_ca": "Guió de preguntes, grabació opcional, posada en comú en círculo."
               },
               {
-                "id": "act_3159_ra4_5",
+                "id": "act_3159_ra3_5",
                 "title_es": "Webquest: mi itinerario en la red",
                 "title_ca": "Webquest: el meu itinerari en la xarxa",
                 "motivatingFactor_es": "Buscar en la red los itinerarios formativos de forma guiada y segura.",
                 "motivatingFactor_ca": "Buscar en la xarxa els itineraris formatius de forma guiada i segura.",
-                "description_es": "Con una webquest pautada (páginas oficiales sugeridas), responden preguntas sobre los itinerarios que existen tras el ciclo y guardan las fuentes consultadas. (Aprendizajes: 3159-4b + 3009-1c + 3011-4b + 3012-1i.)",
-                "description_ca": "Amb una webquest pautada (pàgines oficials sugerides), responen preguntes sobre els itineraris que existen després del cicle i guarden les fuents consultades. (Aprenentatges: 3159-4b + 3009-1c + 3011-4b + 3012-1i.)",
+                "description_es": "Con una webquest pautada (páginas oficiales sugeridas), responden preguntas sobre los itinerarios que existen tras el ciclo y guardan las fuentes consultadas. (Aprendizajes: 3159-3b + 3009-1c + 3011-4b + 3012-1i.)",
+                "description_ca": "Amb una webquest pautada (pàgines oficials sugerides), responen preguntes sobre els itineraris que existen després del cicle i guarden les fuents consultades. (Aprenentatges: 3159-3b + 3009-1c + 3011-4b + 3012-1i.)",
                 "evidence_es": "Ficha de webquest completada con fuentes.",
                 "evidence_ca": "Fitxa de webquest completada amb fuents.",
                 "diversitySupport_es": "Webquest paso a paso, lista de webs oficiales, lectura fácil y trabajo en parejas.",
                 "diversitySupport_ca": "Webquest pas a pas, llista de webs oficials, lectura fàcil i treball en parelles."
               },
               {
-                "id": "act_3159_ra4_6",
+                "id": "act_3159_ra3_6",
                 "title_es": "Comparo opciones: pros y contras",
                 "title_ca": "Comparo opcions: pros i contras",
                 "motivatingFactor_es": "Comparar dos itinerarios posibles con una tabla de ventajas e inconvenientes.",
                 "motivatingFactor_ca": "Comparar dos itineraris possibles amb una taula d'avantatges i inconvenients.",
-                "description_es": "Eligen dos opciones que les atraigan y completan una tabla de pros y contras (acceso, duración, salidas, esfuerzo) y después la resumen en una frase de conclusión. (Aprendizajes: 3159-4b/5a + 3042-2b + 3012-4d + 3005-2g.)",
-                "description_ca": "Trien dos opcions que els atraigan i completen una taula de pros i contras (acceso, duració, salides, esfuerzo) i després la resum en una frase de conclusió. (Aprenentatges: 3159-4b/5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_es": "Eligen dos opciones que les atraigan y completan una tabla de pros y contras (acceso, duración, salidas, esfuerzo) y después la resumen en una frase de conclusión. (Aprendizajes: 3159-3b/5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_ca": "Trien dos opcions que els atraigan i completen una taula de pros i contras (acceso, duració, salides, esfuerzo) i després la resum en una frase de conclusió. (Aprenentatges: 3159-3b/5a + 3042-2b + 3012-4d + 3005-2g.)",
                 "evidence_es": "Tabla pros-contras y conclusión escrita.",
                 "evidence_ca": "Taula pros-contras i conclusió escrita.",
                 "diversitySupport_es": "Plantilla de tabla, banco de criterios, ejemplos resueltos y conclusión guiada.",
@@ -57166,19 +56182,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-4b ↔ 3005-2g (Atención al cliente)",
-            "title_ca": "Connexió curricular: 3159-4b ↔ 3005-2g (Atenció al client)",
+            "title_es": "Conexión curricular: 3159-3b ↔ 3005-2g (Atención al cliente)",
+            "title_ca": "Connexió curricular: 3159-3b ↔ 3005-2g (Atenció al client)",
             "targetModuleCode": "3005",
             "targetModuleName_es": "Atención al cliente",
             "targetModuleName_ca": "Atenció al client",
             "targetRaCode": "RA2",
             "targetRaText_es": "Comunica al posible cliente las diferentes posibilidades del servicio, justificándolas desde el punto de vista técnico",
             "targetRaText_ca": "Comunica al possible al client les diferents possibilitats del servei, justificant-les des del punt de vista tècnic.",
-            "sourceCriteria": "3159-4b",
+            "sourceCriteria": "3159-3b",
             "criteriaKeys": [
               "b",
-              "4b",
-              "3159-4b"
+              "3b",
+              "3159-3b"
             ],
             "relatedCriteria": [
               {
@@ -57217,91 +56233,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Identificar itineraris i valorar l'opció que millor es ajusta és el mateix asesorament sobre opcions de «Atenció al client», es documenta llegint i seleccionant tipus de text (Comunicació i Societat I), es planifica amb el mètode científic (Ciències Aplicades II) i es busca amb les TIC (Ciències Aplicades I).",
             "activities": [
               {
-                "id": "act_3159_ra4_2",
+                "id": "act_3159_ra3_2",
                 "title_es": "Feria de itinerarios formativos",
                 "title_ca": "Feria d'itineraris formatius",
                 "motivatingFactor_es": "Montar una feria con las opciones académicas y profesionales tras el título.",
                 "motivatingFactor_ca": "Montar una feria amb les opcions acadèmiques i professionals després del título.",
-                "description_es": "Cada equipo investiga un itinerario (grado medio de estética, peluquería, otra FP, bachillerato) y prepara un póster con requisitos, salidas y a quién le puede encajar, para explicarlo a los visitantes. (Aprendizajes: 3159-4b + 3005-2g + 3011-4a + 3009-1c.)",
-                "description_ca": "Cada equip investiga un itinerari (grat medi d'estètica, perruqueria, altra FP, bachillerato) i prepara un pòster amb requisitos, salides i a qui li pot encajar, per a explicarlo als visitants. (Aprenentatges: 3159-4b + 3005-2g + 3011-4a + 3009-1c.)",
+                "description_es": "Cada equipo investiga un itinerario (grado medio de estética, peluquería, otra FP, bachillerato) y prepara un póster con requisitos, salidas y a quién le puede encajar, para explicarlo a los visitantes. (Aprendizajes: 3159-3b + 3005-2g + 3011-4a + 3009-1c.)",
+                "description_ca": "Cada equip investiga un itinerari (grat medi d'estètica, perruqueria, altra FP, bachillerato) i prepara un pòster amb requisitos, salides i a qui li pot encajar, per a explicarlo als visitants. (Aprenentatges: 3159-3b + 3005-2g + 3011-4a + 3009-1c.)",
                 "evidence_es": "Póster del itinerario y ronda de explicaciones.",
                 "evidence_ca": "Pòster del itinerari i ronda d'explicacions.",
                 "diversitySupport_es": "Plantilla de póster, fuentes sugeridas, roles (guía/visitante) y turnos de feria.",
                 "diversitySupport_ca": "Plantilla de pòster, fuents sugerides, rols (guia/visitante) i turnos de feria."
               },
               {
-                "id": "act_3159_ra4_3",
+                "id": "act_3159_ra3_3",
                 "title_es": "Profesiones del sector: ¿quién hace qué?",
                 "title_ca": "Profesions del sector: ¿qui fa què?",
                 "motivatingFactor_es": "Conocer los puestos de trabajo y perfiles del sector de la estética.",
                 "motivatingFactor_ca": "Conocer els puestos de treball i perfiles del sector de l'estètica.",
-                "description_es": "Con tarjetas de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionan cada perfil con sus tareas y requisitos, y debaten cuál encaja más con cada uno. (Aprendizajes: 3159-4a/4b + 3012-1h + 3005-2a + 3060-1f.)",
-                "description_ca": "Amb targetes de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionen cada perfil amb els seus tasques i requisitos, i debaten quin encaja més amb cada uno. (Aprenentatges: 3159-4a/4b + 3012-1h + 3005-2a + 3060-1f.)",
+                "description_es": "Con tarjetas de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionan cada perfil con sus tareas y requisitos, y debaten cuál encaja más con cada uno. (Aprendizajes: 3159-3a/4b + 3012-1h + 3005-2a + 3060-1f.)",
+                "description_ca": "Amb targetes de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionen cada perfil amb els seus tasques i requisitos, i debaten quin encaja més amb cada uno. (Aprenentatges: 3159-3a/4b + 3012-1h + 3005-2a + 3060-1f.)",
                 "evidence_es": "Tabla perfiles-tareas-requisitos completada.",
                 "evidence_ca": "Taula perfiles-tasques-requisitos completada.",
                 "diversitySupport_es": "Tarjetas de perfiles y tareas, plantilla de tabla y debate guiado.",
                 "diversitySupport_ca": "Targetes de perfiles i tasques, plantilla de taula i debat guiat."
               },
               {
-                "id": "act_3159_ra4_5",
+                "id": "act_3159_ra3_5",
                 "title_es": "Webquest: mi itinerario en la red",
                 "title_ca": "Webquest: el meu itinerari en la xarxa",
                 "motivatingFactor_es": "Buscar en la red los itinerarios formativos de forma guiada y segura.",
                 "motivatingFactor_ca": "Buscar en la xarxa els itineraris formatius de forma guiada i segura.",
-                "description_es": "Con una webquest pautada (páginas oficiales sugeridas), responden preguntas sobre los itinerarios que existen tras el ciclo y guardan las fuentes consultadas. (Aprendizajes: 3159-4b + 3009-1c + 3011-4b + 3012-1i.)",
-                "description_ca": "Amb una webquest pautada (pàgines oficials sugerides), responen preguntes sobre els itineraris que existen després del cicle i guarden les fuents consultades. (Aprenentatges: 3159-4b + 3009-1c + 3011-4b + 3012-1i.)",
+                "description_es": "Con una webquest pautada (páginas oficiales sugeridas), responden preguntas sobre los itinerarios que existen tras el ciclo y guardan las fuentes consultadas. (Aprendizajes: 3159-3b + 3009-1c + 3011-4b + 3012-1i.)",
+                "description_ca": "Amb una webquest pautada (pàgines oficials sugerides), responen preguntes sobre els itineraris que existen després del cicle i guarden les fuents consultades. (Aprenentatges: 3159-3b + 3009-1c + 3011-4b + 3012-1i.)",
                 "evidence_es": "Ficha de webquest completada con fuentes.",
                 "evidence_ca": "Fitxa de webquest completada amb fuents.",
                 "diversitySupport_es": "Webquest paso a paso, lista de webs oficiales, lectura fácil y trabajo en parejas.",
                 "diversitySupport_ca": "Webquest pas a pas, llista de webs oficials, lectura fàcil i treball en parelles."
               },
               {
-                "id": "act_3159_ra4_6",
+                "id": "act_3159_ra3_6",
                 "title_es": "Comparo opciones: pros y contras",
                 "title_ca": "Comparo opcions: pros i contras",
                 "motivatingFactor_es": "Comparar dos itinerarios posibles con una tabla de ventajas e inconvenientes.",
                 "motivatingFactor_ca": "Comparar dos itineraris possibles amb una taula d'avantatges i inconvenients.",
-                "description_es": "Eligen dos opciones que les atraigan y completan una tabla de pros y contras (acceso, duración, salidas, esfuerzo) y después la resumen en una frase de conclusión. (Aprendizajes: 3159-4b/5a + 3042-2b + 3012-4d + 3005-2g.)",
-                "description_ca": "Trien dos opcions que els atraigan i completen una taula de pros i contras (acceso, duració, salides, esfuerzo) i després la resum en una frase de conclusió. (Aprenentatges: 3159-4b/5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_es": "Eligen dos opciones que les atraigan y completan una tabla de pros y contras (acceso, duración, salidas, esfuerzo) y después la resumen en una frase de conclusión. (Aprendizajes: 3159-3b/5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_ca": "Trien dos opcions que els atraigan i completen una taula de pros i contras (acceso, duració, salides, esfuerzo) i després la resum en una frase de conclusió. (Aprenentatges: 3159-3b/5a + 3042-2b + 3012-4d + 3005-2g.)",
                 "evidence_es": "Tabla pros-contras y conclusión escrita.",
                 "evidence_ca": "Taula pros-contras i conclusió escrita.",
                 "diversitySupport_es": "Plantilla de tabla, banco de criterios, ejemplos resueltos y conclusión guiada.",
                 "diversitySupport_ca": "Plantilla de taula, banc de criteris, exemples resolts i conclusió guiada."
               },
               {
-                "id": "act_3159_ra4_1",
+                "id": "act_3159_ra3_1",
                 "title_es": "Mapa del sector de la imagen personal",
                 "title_ca": "Mapa del sector de l'imatge personal",
                 "motivatingFactor_es": "Investigar cómo ha evolucionado el sector de la peluquería y la estética.",
                 "motivatingFactor_ca": "Investigar com ha evolucionat el sector de la perruqueria i l'estètica.",
-                "description_es": "En equipos, buscan información sobre la evolución del sector (oficios, tecnologías, tipos de salón) y elaboran una infografía o mapa visual con los principales cambios. (Aprendizajes: 3159-4a + 3011-2g + 3012-1h + 3009-4f.)",
-                "description_ca": "En equips, busquen informació sobre l'evolució del sector (oficios, tecnologies, tipus de saló) i elaboren una infografia o mapa visual amb els principals canvis. (Aprenentatges: 3159-4a + 3011-2g + 3012-1h + 3009-4f.)",
+                "description_es": "En equipos, buscan información sobre la evolución del sector (oficios, tecnologías, tipos de salón) y elaboran una infografía o mapa visual con los principales cambios. (Aprendizajes: 3159-3a + 3011-2g + 3012-1h + 3009-4f.)",
+                "description_ca": "En equips, busquen informació sobre l'evolució del sector (oficios, tecnologies, tipus de saló) i elaboren una infografia o mapa visual amb els principals canvis. (Aprenentatges: 3159-3a + 3011-2g + 3012-1h + 3009-4f.)",
                 "evidence_es": "Infografía del sector y su evolución.",
                 "evidence_ca": "Infografia del sector i el seu evolució.",
                 "diversitySupport_es": "Búsqueda web guiada, plantilla de infografía, imágenes y exposición breve.",
                 "diversitySupport_ca": "Cerca web guiada, plantilla d'infografia, imatges i exposició breu."
               },
               {
-                "id": "act_3159_ra4_4",
+                "id": "act_3159_ra3_4",
                 "title_es": "Entrevisto a un adulto sobre formación permanente",
                 "title_ca": "Entrevisto a un adulto sobre formació permanent",
                 "motivatingFactor_es": "Descubrir por qué la formación no acaba nunca a través de un testimonio real.",
                 "motivatingFactor_ca": "Descubrir per què la formació no acaba mai a través d'un testimonio real.",
-                "description_es": "Preparan y realizan una entrevista a un adulto (familiar o profesional) sobre su trayectoria formativa y cómo se ha ido reciclando, y extraen conclusiones sobre la formación permanente. (Aprendizajes: 3159-4c + 3011-2g + 3012-1b + 3067-7f.)",
-                "description_ca": "Preparen i realitzen una entrevista a un adulto (familiar o professional) sobre el seu trayectoria formativa i com s'ha anat reciclant, i extrauen conclusions sobre la formació permanent. (Aprenentatges: 3159-4c + 3011-2g + 3012-1b + 3067-7f.)",
+                "description_es": "Preparan y realizan una entrevista a un adulto (familiar o profesional) sobre su trayectoria formativa y cómo se ha ido reciclando, y extraen conclusiones sobre la formación permanente. (Aprendizajes: 3159-3c + 3011-2g + 3012-1b + 3067-7f.)",
+                "description_ca": "Preparen i realitzen una entrevista a un adulto (familiar o professional) sobre el seu trayectoria formativa i com s'ha anat reciclant, i extrauen conclusions sobre la formació permanent. (Aprenentatges: 3159-3c + 3011-2g + 3012-1b + 3067-7f.)",
                 "evidence_es": "Guion de entrevista y conclusiones compartidas.",
                 "evidence_ca": "Guió d'entrevista i conclusions compartides.",
                 "diversitySupport_es": "Guion de preguntas, grabación opcional, puesta en común en círculo.",
                 "diversitySupport_ca": "Guió de preguntes, grabació opcional, posada en comú en círculo."
               },
               {
-                "id": "act_3159_ra4_7",
+                "id": "act_3159_ra3_7",
                 "title_es": "El salón del futuro",
                 "title_ca": "El saló del futur",
                 "motivatingFactor_es": "Imaginar cómo será la profesión dentro de unos años.",
                 "motivatingFactor_ca": "Imaginar com será la professió dins d'unos anys.",
-                "description_es": "A partir de la evolución del sector y las innovaciones tecnológicas, dibujan o componen un collage del «salón del futuro» y explican qué formación hará falta para trabajar en él. (Aprendizajes: 3159-4a/4c + 3012-1h/1b + 3011-2g.)",
-                "description_ca": "A partir de l'evolució del sector i les innovacions tecnològiques, dibuixen o componen un collage del «saló del futur» i expliquen què formació hará manca per a treballar en él. (Aprenentatges: 3159-4a/4c + 3012-1h/1b + 3011-2g.)",
+                "description_es": "A partir de la evolución del sector y las innovaciones tecnológicas, dibujan o componen un collage del «salón del futuro» y explican qué formación hará falta para trabajar en él. (Aprendizajes: 3159-3a/4c + 3012-1h/1b + 3011-2g.)",
+                "description_ca": "A partir de l'evolució del sector i les innovacions tecnològiques, dibuixen o componen un collage del «saló del futur» i expliquen què formació hará manca per a treballar en él. (Aprenentatges: 3159-3a/4c + 3012-1h/1b + 3011-2g.)",
                 "evidence_es": "Collage o dibujo del salón del futuro con explicación.",
                 "evidence_ca": "Collage o dibuix del saló del futur amb explicació.",
                 "diversitySupport_es": "Revistas e imágenes, plantilla de collage, vocabulario de apoyo y exposición breve.",
@@ -57310,19 +56326,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-4c ↔ 3011-2g (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-4c ↔ 3011-2g (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-3c ↔ 3011-2g (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-3c ↔ 3011-2g (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA2",
             "targetRaText_es": "Valora la construcción del espacio europeo hasta las primeras transformaciones industriales y sociedades agrarias, analizando sus características principales y valorando su pervivencia en la sociedad actual y en el entorno inmediato.",
             "targetRaText_ca": "Valora la construcció de l'espai europeu fins a les primeres transformacions industrials i societats agràries, analitzant les carascterístiques principals i valorant la seva pervivència en la societat actusal i en l'entorn immediat.",
-            "sourceCriteria": "3159-4c",
+            "sourceCriteria": "3159-3c",
             "criteriaKeys": [
               "c",
-              "4c",
-              "3159-4c"
+              "3c",
+              "3159-3c"
             ],
             "relatedCriteria": [
               {
@@ -57367,91 +56383,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "La formació permanent es justifica per l'evolució del sector i les innovacions tecnològiques i organizatives (Comunicació i Societat I i II) i es reforça amb l'actitud d'aprenentatge i actualizació que exigeix la FCT.",
             "activities": [
               {
-                "id": "act_3159_ra4_4",
+                "id": "act_3159_ra3_4",
                 "title_es": "Entrevisto a un adulto sobre formación permanente",
                 "title_ca": "Entrevisto a un adulto sobre formació permanent",
                 "motivatingFactor_es": "Descubrir por qué la formación no acaba nunca a través de un testimonio real.",
                 "motivatingFactor_ca": "Descubrir per què la formació no acaba mai a través d'un testimonio real.",
-                "description_es": "Preparan y realizan una entrevista a un adulto (familiar o profesional) sobre su trayectoria formativa y cómo se ha ido reciclando, y extraen conclusiones sobre la formación permanente. (Aprendizajes: 3159-4c + 3011-2g + 3012-1b + 3067-7f.)",
-                "description_ca": "Preparen i realitzen una entrevista a un adulto (familiar o professional) sobre el seu trayectoria formativa i com s'ha anat reciclant, i extrauen conclusions sobre la formació permanent. (Aprenentatges: 3159-4c + 3011-2g + 3012-1b + 3067-7f.)",
+                "description_es": "Preparan y realizan una entrevista a un adulto (familiar o profesional) sobre su trayectoria formativa y cómo se ha ido reciclando, y extraen conclusiones sobre la formación permanente. (Aprendizajes: 3159-3c + 3011-2g + 3012-1b + 3067-7f.)",
+                "description_ca": "Preparen i realitzen una entrevista a un adulto (familiar o professional) sobre el seu trayectoria formativa i com s'ha anat reciclant, i extrauen conclusions sobre la formació permanent. (Aprenentatges: 3159-3c + 3011-2g + 3012-1b + 3067-7f.)",
                 "evidence_es": "Guion de entrevista y conclusiones compartidas.",
                 "evidence_ca": "Guió d'entrevista i conclusions compartides.",
                 "diversitySupport_es": "Guion de preguntas, grabación opcional, puesta en común en círculo.",
                 "diversitySupport_ca": "Guió de preguntes, grabació opcional, posada en comú en círculo."
               },
               {
-                "id": "act_3159_ra4_7",
+                "id": "act_3159_ra3_7",
                 "title_es": "El salón del futuro",
                 "title_ca": "El saló del futur",
                 "motivatingFactor_es": "Imaginar cómo será la profesión dentro de unos años.",
                 "motivatingFactor_ca": "Imaginar com será la professió dins d'unos anys.",
-                "description_es": "A partir de la evolución del sector y las innovaciones tecnológicas, dibujan o componen un collage del «salón del futuro» y explican qué formación hará falta para trabajar en él. (Aprendizajes: 3159-4a/4c + 3012-1h/1b + 3011-2g.)",
-                "description_ca": "A partir de l'evolució del sector i les innovacions tecnològiques, dibuixen o componen un collage del «saló del futur» i expliquen què formació hará manca per a treballar en él. (Aprenentatges: 3159-4a/4c + 3012-1h/1b + 3011-2g.)",
+                "description_es": "A partir de la evolución del sector y las innovaciones tecnológicas, dibujan o componen un collage del «salón del futuro» y explican qué formación hará falta para trabajar en él. (Aprendizajes: 3159-3a/4c + 3012-1h/1b + 3011-2g.)",
+                "description_ca": "A partir de l'evolució del sector i les innovacions tecnològiques, dibuixen o componen un collage del «saló del futur» i expliquen què formació hará manca per a treballar en él. (Aprenentatges: 3159-3a/4c + 3012-1h/1b + 3011-2g.)",
                 "evidence_es": "Collage o dibujo del salón del futuro con explicación.",
                 "evidence_ca": "Collage o dibuix del saló del futur amb explicació.",
                 "diversitySupport_es": "Revistas e imágenes, plantilla de collage, vocabulario de apoyo y exposición breve.",
                 "diversitySupport_ca": "Revistes i imatges, plantilla de collage, vocabulari de suport i exposició breu."
               },
               {
-                "id": "act_3159_ra4_1",
+                "id": "act_3159_ra3_1",
                 "title_es": "Mapa del sector de la imagen personal",
                 "title_ca": "Mapa del sector de l'imatge personal",
                 "motivatingFactor_es": "Investigar cómo ha evolucionado el sector de la peluquería y la estética.",
                 "motivatingFactor_ca": "Investigar com ha evolucionat el sector de la perruqueria i l'estètica.",
-                "description_es": "En equipos, buscan información sobre la evolución del sector (oficios, tecnologías, tipos de salón) y elaboran una infografía o mapa visual con los principales cambios. (Aprendizajes: 3159-4a + 3011-2g + 3012-1h + 3009-4f.)",
-                "description_ca": "En equips, busquen informació sobre l'evolució del sector (oficios, tecnologies, tipus de saló) i elaboren una infografia o mapa visual amb els principals canvis. (Aprenentatges: 3159-4a + 3011-2g + 3012-1h + 3009-4f.)",
+                "description_es": "En equipos, buscan información sobre la evolución del sector (oficios, tecnologías, tipos de salón) y elaboran una infografía o mapa visual con los principales cambios. (Aprendizajes: 3159-3a + 3011-2g + 3012-1h + 3009-4f.)",
+                "description_ca": "En equips, busquen informació sobre l'evolució del sector (oficios, tecnologies, tipus de saló) i elaboren una infografia o mapa visual amb els principals canvis. (Aprenentatges: 3159-3a + 3011-2g + 3012-1h + 3009-4f.)",
                 "evidence_es": "Infografía del sector y su evolución.",
                 "evidence_ca": "Infografia del sector i el seu evolució.",
                 "diversitySupport_es": "Búsqueda web guiada, plantilla de infografía, imágenes y exposición breve.",
                 "diversitySupport_ca": "Cerca web guiada, plantilla d'infografia, imatges i exposició breu."
               },
               {
-                "id": "act_3159_ra4_2",
+                "id": "act_3159_ra3_2",
                 "title_es": "Feria de itinerarios formativos",
                 "title_ca": "Feria d'itineraris formatius",
                 "motivatingFactor_es": "Montar una feria con las opciones académicas y profesionales tras el título.",
                 "motivatingFactor_ca": "Montar una feria amb les opcions acadèmiques i professionals després del título.",
-                "description_es": "Cada equipo investiga un itinerario (grado medio de estética, peluquería, otra FP, bachillerato) y prepara un póster con requisitos, salidas y a quién le puede encajar, para explicarlo a los visitantes. (Aprendizajes: 3159-4b + 3005-2g + 3011-4a + 3009-1c.)",
-                "description_ca": "Cada equip investiga un itinerari (grat medi d'estètica, perruqueria, altra FP, bachillerato) i prepara un pòster amb requisitos, salides i a qui li pot encajar, per a explicarlo als visitants. (Aprenentatges: 3159-4b + 3005-2g + 3011-4a + 3009-1c.)",
+                "description_es": "Cada equipo investiga un itinerario (grado medio de estética, peluquería, otra FP, bachillerato) y prepara un póster con requisitos, salidas y a quién le puede encajar, para explicarlo a los visitantes. (Aprendizajes: 3159-3b + 3005-2g + 3011-4a + 3009-1c.)",
+                "description_ca": "Cada equip investiga un itinerari (grat medi d'estètica, perruqueria, altra FP, bachillerato) i prepara un pòster amb requisitos, salides i a qui li pot encajar, per a explicarlo als visitants. (Aprenentatges: 3159-3b + 3005-2g + 3011-4a + 3009-1c.)",
                 "evidence_es": "Póster del itinerario y ronda de explicaciones.",
                 "evidence_ca": "Pòster del itinerari i ronda d'explicacions.",
                 "diversitySupport_es": "Plantilla de póster, fuentes sugeridas, roles (guía/visitante) y turnos de feria.",
                 "diversitySupport_ca": "Plantilla de pòster, fuents sugerides, rols (guia/visitante) i turnos de feria."
               },
               {
-                "id": "act_3159_ra4_3",
+                "id": "act_3159_ra3_3",
                 "title_es": "Profesiones del sector: ¿quién hace qué?",
                 "title_ca": "Profesions del sector: ¿qui fa què?",
                 "motivatingFactor_es": "Conocer los puestos de trabajo y perfiles del sector de la estética.",
                 "motivatingFactor_ca": "Conocer els puestos de treball i perfiles del sector de l'estètica.",
-                "description_es": "Con tarjetas de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionan cada perfil con sus tareas y requisitos, y debaten cuál encaja más con cada uno. (Aprendizajes: 3159-4a/4b + 3012-1h + 3005-2a + 3060-1f.)",
-                "description_ca": "Amb targetes de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionen cada perfil amb els seus tasques i requisitos, i debaten quin encaja més amb cada uno. (Aprenentatges: 3159-4a/4b + 3012-1h + 3005-2a + 3060-1f.)",
+                "description_es": "Con tarjetas de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionan cada perfil con sus tareas y requisitos, y debaten cuál encaja más con cada uno. (Aprendizajes: 3159-3a/4b + 3012-1h + 3005-2a + 3060-1f.)",
+                "description_ca": "Amb targetes de perfiles (ayudante, manicurista, esteticista, recepcionista, autónomo/a), relacionen cada perfil amb els seus tasques i requisitos, i debaten quin encaja més amb cada uno. (Aprenentatges: 3159-3a/4b + 3012-1h + 3005-2a + 3060-1f.)",
                 "evidence_es": "Tabla perfiles-tareas-requisitos completada.",
                 "evidence_ca": "Taula perfiles-tasques-requisitos completada.",
                 "diversitySupport_es": "Tarjetas de perfiles y tareas, plantilla de tabla y debate guiado.",
                 "diversitySupport_ca": "Targetes de perfiles i tasques, plantilla de taula i debat guiat."
               },
               {
-                "id": "act_3159_ra4_5",
+                "id": "act_3159_ra3_5",
                 "title_es": "Webquest: mi itinerario en la red",
                 "title_ca": "Webquest: el meu itinerari en la xarxa",
                 "motivatingFactor_es": "Buscar en la red los itinerarios formativos de forma guiada y segura.",
                 "motivatingFactor_ca": "Buscar en la xarxa els itineraris formatius de forma guiada i segura.",
-                "description_es": "Con una webquest pautada (páginas oficiales sugeridas), responden preguntas sobre los itinerarios que existen tras el ciclo y guardan las fuentes consultadas. (Aprendizajes: 3159-4b + 3009-1c + 3011-4b + 3012-1i.)",
-                "description_ca": "Amb una webquest pautada (pàgines oficials sugerides), responen preguntes sobre els itineraris que existen després del cicle i guarden les fuents consultades. (Aprenentatges: 3159-4b + 3009-1c + 3011-4b + 3012-1i.)",
+                "description_es": "Con una webquest pautada (páginas oficiales sugeridas), responden preguntas sobre los itinerarios que existen tras el ciclo y guardan las fuentes consultadas. (Aprendizajes: 3159-3b + 3009-1c + 3011-4b + 3012-1i.)",
+                "description_ca": "Amb una webquest pautada (pàgines oficials sugerides), responen preguntes sobre els itineraris que existen després del cicle i guarden les fuents consultades. (Aprenentatges: 3159-3b + 3009-1c + 3011-4b + 3012-1i.)",
                 "evidence_es": "Ficha de webquest completada con fuentes.",
                 "evidence_ca": "Fitxa de webquest completada amb fuents.",
                 "diversitySupport_es": "Webquest paso a paso, lista de webs oficiales, lectura fácil y trabajo en parejas.",
                 "diversitySupport_ca": "Webquest pas a pas, llista de webs oficials, lectura fàcil i treball en parelles."
               },
               {
-                "id": "act_3159_ra4_6",
+                "id": "act_3159_ra3_6",
                 "title_es": "Comparo opciones: pros y contras",
                 "title_ca": "Comparo opcions: pros i contras",
                 "motivatingFactor_es": "Comparar dos itinerarios posibles con una tabla de ventajas e inconvenientes.",
                 "motivatingFactor_ca": "Comparar dos itineraris possibles amb una taula d'avantatges i inconvenients.",
-                "description_es": "Eligen dos opciones que les atraigan y completan una tabla de pros y contras (acceso, duración, salidas, esfuerzo) y después la resumen en una frase de conclusión. (Aprendizajes: 3159-4b/5a + 3042-2b + 3012-4d + 3005-2g.)",
-                "description_ca": "Trien dos opcions que els atraigan i completen una taula de pros i contras (acceso, duració, salides, esfuerzo) i després la resum en una frase de conclusió. (Aprenentatges: 3159-4b/5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_es": "Eligen dos opciones que les atraigan y completan una tabla de pros y contras (acceso, duración, salidas, esfuerzo) y después la resumen en una frase de conclusión. (Aprendizajes: 3159-3b/5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_ca": "Trien dos opcions que els atraigan i completen una taula de pros i contras (acceso, duració, salides, esfuerzo) i després la resum en una frase de conclusió. (Aprenentatges: 3159-3b/5a + 3042-2b + 3012-4d + 3005-2g.)",
                 "evidence_es": "Tabla pros-contras y conclusión escrita.",
                 "evidence_ca": "Taula pros-contras i conclusió escrita.",
                 "diversitySupport_es": "Plantilla de tabla, banco de criterios, ejemplos resueltos y conclusión guiada.",
@@ -57462,35 +56478,35 @@ export const FPB_MODULES_SEED: FPBModule[] = [
         ]
       },
       {
-        "id": "3159_RA5",
-        "code": "RA5",
-        "text_es": "Pone en marcha un itinerario propio analizando las distintas opciones educativas y profesionales, valorando las ventajas e inconvenientes de cada una de ellas.",
-        "text_ca": "Coneix les estratègies d'accés al mercat de treball per compte d'altri i utilitza les eines necessàries per al procés d'inserció laboral.",
+        "id": "3159_RA4",
+        "code": "RA4",
+        "text_es": "Pone en marcha un itinerario propio analizando las diferentes opciones educativas y profesionales, valorando las ventajas e inconvenientes de cada una y examinando aquellas que mejor se ajustan a sus posibilidades y preferencias.",
+        "text_ca": "Posa en marxa un itinerari propi analitzant les diferents opcions educatives i professionals, valorant els avantatges i inconvenients de cadascuna i examinant aquelles que millor s’ajusten a les seves possibilitats i preferències.",
         "criteria_es": [
-          "a) Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles.",
-          "b) Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales.",
-          "c) Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional."
+          "3159-4a. Se han valorado las ventajas e inconvenientes de cada una de las opciones posibles.",
+          "3159-4b. Se han analizado y seleccionado las opciones que más se ajustan a sus perfiles profesionales.",
+          "3159-4c. Se ha realizado un proceso de toma de decisiones identificando el itinerario académico y profesional personal, a partir de sus preferencias profesionales, intereses y metas en el marco de un proyecto profesional."
         ],
         "criteria_ca": [
-          "a) S'han valorat les avantatges i inconvenients de cada una de les opcions possibles.",
-          "b) S'han analitzat i seleccionat les opcions que més es ajusten als seus perfiles professionals.",
-          "c) S'ha realitzat un procés de presa de decisions identificant l'itinerari acadèmic i professional personal, a partir dels seus preferències professionals, intereses i metas en el marco d'un projecte professional."
+          "3159-4a. S'han valorat els avantatges i inconvenients de cadascuna de les opcions possibles.",
+          "3159-4b. S'han analitzat i seleccionat les opcions que millor s'ajusten als seus perfils professionals.",
+          "3159-4c. S'ha realitzat un procés de presa de decisions identificant l'itinerari acadèmic i professional personal, a partir de les seves preferències professionals, interessos i metes en el marc d'un projecte professional."
         ],
         "connections": [
           {
-            "title_es": "Conexión curricular: 3159-5a ↔ 3042-2b (Ciencias aplicadas II)",
-            "title_ca": "Connexió curricular: 3159-5a ↔ 3042-2b (Ciències aplicades II)",
+            "title_es": "Conexión curricular: 3159-4a ↔ 3042-2b (Ciencias aplicadas II)",
+            "title_ca": "Connexió curricular: 3159-4a ↔ 3042-2b (Ciències aplicades II)",
             "targetModuleCode": "3042",
             "targetModuleName_es": "Ciencias aplicadas II",
             "targetModuleName_ca": "Ciències aplicades II",
             "targetRaCode": "RA2",
             "targetRaText_es": "Resuelve problemas sencillos de diversa índole, a través de su análisis contrastado y aplicando las fases del método científico.",
             "targetRaText_ca": "Resol problemes senzills d'índole diversa, mitjançant el seu anàlisi contrastat i aplicant les fases del mètode científic.",
-            "sourceCriteria": "3159-5a",
+            "sourceCriteria": "3159-4a",
             "criteriaKeys": [
               "a",
-              "5a",
-              "3159-5a"
+              "4a",
+              "3149-4a"
             ],
             "relatedCriteria": [
               {
@@ -57523,91 +56539,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Ponderar avantatges i inconvenients és analitzar hipòtesi i defender una conclusió amb arguments (mètode científic de Ciències Aplicades II), sintetizar l'informació (Comunicació i Societat II) i asesorar entre opcions (Atenció al client).",
             "activities": [
               {
-                "id": "act_3159_ra5_2",
+                "id": "act_3159_ra4_2",
                 "title_es": "Pros y contras de cada opción",
                 "title_ca": "Pros i contras de cada opció",
                 "motivatingFactor_es": "Ponderar las ventajas e inconvenientes de cada opción formativa y laboral.",
                 "motivatingFactor_ca": "Ponderar les avantatges i inconvenients de cada opció formativa i laboral.",
-                "description_es": "Completan una tabla de pros y contras para cada opción que barajan y defienden en una frase argumentada cuál pesa más, aplicando el análisis de hipótesis. (Aprendizajes: 3159-5a + 3042-2b + 3012-4d + 3005-2g.)",
-                "description_ca": "Completen una taula de pros i contras per a cada opció que barajan i defienden en una frase argumentada quin pesa més, aplicant l'anàlisi d'hipòtesi. (Aprenentatges: 3159-5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_es": "Completan una tabla de pros y contras para cada opción que barajan y defienden en una frase argumentada cuál pesa más, aplicando el análisis de hipótesis. (Aprendizajes: 3159-4a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_ca": "Completen una taula de pros i contras per a cada opció que barajan i defienden en una frase argumentada quin pesa més, aplicant l'anàlisi d'hipòtesi. (Aprenentatges: 3159-4a + 3042-2b + 3012-4d + 3005-2g.)",
                 "evidence_es": "Tabla de pros y contras con conclusión argumentada.",
                 "evidence_ca": "Taula de pros i contras amb conclusió argumentada.",
                 "diversitySupport_es": "Plantilla de tabla, banco de criterios, ejemplos y conclusión guiada.",
                 "diversitySupport_ca": "Plantilla de taula, banc de criteris, exemples i conclusió guiada."
               },
               {
-                "id": "act_3159_ra5_7",
+                "id": "act_3159_ra4_7",
                 "title_es": "Reviso mi DAFO con mi plan",
                 "title_ca": "Revise el meu DAFO amb el meu pla",
                 "motivatingFactor_es": "Conectar el análisis DAFO con las decisiones del proyecto profesional.",
                 "motivatingFactor_ca": "Connectar l'anàlisi DAFO amb les decisions del projecte professional.",
-                "description_es": "Releen su DAFO y comprueban si la opción elegida aprovecha sus fortalezas y oportunidades y reduce debilidades y amenazas, ajustando el plan si hace falta. (Aprendizajes: 3159-5a/5b + 3042-2a/2b + 3011-4d.)",
-                "description_ca": "Releen el seu DAFO i comproven si l'opció triada aprovecha els seus fortalezas i oportunitats i reduïx debilitats i amenazas, ajustant el pla si fa manca. (Aprenentatges: 3159-5a/5b + 3042-2a/2b + 3011-4d.)",
+                "description_es": "Releen su DAFO y comprueban si la opción elegida aprovecha sus fortalezas y oportunidades y reduce debilidades y amenazas, ajustando el plan si hace falta. (Aprendizajes: 3159-4a/5b + 3042-2a/2b + 3011-4d.)",
+                "description_ca": "Releen el seu DAFO i comproven si l'opció triada aprovecha els seus fortalezas i oportunitats i reduïx debilitats i amenazas, ajustant el pla si fa manca. (Aprenentatges: 3159-4a/5b + 3042-2a/2b + 3011-4d.)",
                 "evidence_es": "DAFO revisado y plan ajustado.",
                 "evidence_ca": "DAFO revisat i pla ajustat.",
                 "diversitySupport_es": "DAFO anterior, guion de preguntas de revisión y tutoría individual breve.",
                 "diversitySupport_ca": "DAFO anterior, guió de preguntes de revisió i tutoría individual breu."
               },
               {
-                "id": "act_3159_ra5_1",
+                "id": "act_3159_ra4_1",
                 "title_es": "Mi proyecto profesional en cinco pasos",
                 "title_ca": "El meu projecte professional en cinco pasos",
                 "motivatingFactor_es": "Estructurar el proyecto profesional personal con una plantilla sencilla.",
                 "motivatingFactor_ca": "Estructurar el projecte professional personal amb una plantilla senzilla.",
-                "description_es": "Con una plantilla de cinco apartados (quién soy, qué quiero, qué opciones tengo, cuál elijo, pasos siguientes), redactan su proyecto cuidando la presentación y la ortografía. (Aprendizajes: 3159-5c + 3012-4f/4h + 3011-4g + 3042-2f.)",
-                "description_ca": "Amb una plantilla de cinco apartats (qui soy, què quiero, què opcions tengo, quin elijo, pasos següents), redacten el seu projecte cuidant la presentació i l'ortografía. (Aprenentatges: 3159-5c + 3012-4f/4h + 3011-4g + 3042-2f.)",
+                "description_es": "Con una plantilla de cinco apartados (quién soy, qué quiero, qué opciones tengo, cuál elijo, pasos siguientes), redactan su proyecto cuidando la presentación y la ortografía. (Aprendizajes: 3159-4c + 3012-4f/4h + 3011-4g + 3042-2f.)",
+                "description_ca": "Amb una plantilla de cinco apartats (qui soy, què quiero, què opcions tengo, quin elijo, pasos següents), redacten el seu projecte cuidant la presentació i l'ortografía. (Aprenentatges: 3159-4c + 3012-4f/4h + 3011-4g + 3042-2f.)",
                 "evidence_es": "Proyecto profesional en borrador final.",
                 "evidence_ca": "Projecte professional en borrador final.",
                 "diversitySupport_es": "Plantilla de cinco pasos, banco de frases, corrector y revisión por pares.",
                 "diversitySupport_ca": "Plantilla de cinco pasos, banc de frases, corrector i revisió per pars."
               },
               {
-                "id": "act_3159_ra5_3",
+                "id": "act_3159_ra4_3",
                 "title_es": "Decido con criterios",
                 "title_ca": "Decit amb criteris",
                 "motivatingFactor_es": "Tomar una decisión sobre el itinerario usando una matriz de decisión.",
                 "motivatingFactor_ca": "Tomar una decisió sobre l'itinerari usant una matriz de decisió.",
-                "description_es": "Asignan pesos a criterios (me gusta, se me da bien, salidas, duración) y puntúan cada opción para ver cuál obtiene más puntos, justificando el resultado. (Aprendizajes: 3159-5b/5c + 3042-2c/2f + 3005-2h.)",
-                "description_ca": "Asignan pesos a criteris (em gusta, es em dona bé, salides, duració) i puntúan cada opció per a ver quin obtiene més puntos, justificant el resultat. (Aprenentatges: 3159-5b/5c + 3042-2c/2f + 3005-2h.)",
+                "description_es": "Asignan pesos a criterios (me gusta, se me da bien, salidas, duración) y puntúan cada opción para ver cuál obtiene más puntos, justificando el resultado. (Aprendizajes: 3159-4b/5c + 3042-2c/2f + 3005-2h.)",
+                "description_ca": "Asignan pesos a criteris (em gusta, es em dona bé, salides, duració) i puntúan cada opció per a ver quin obtiene més puntos, justificant el resultat. (Aprenentatges: 3159-4b/5c + 3042-2c/2f + 3005-2h.)",
                 "evidence_es": "Matriz de decisión completada y decisión justificada.",
                 "evidence_ca": "Matriz de decisió completada i decisió justificada.",
                 "diversitySupport_es": "Matriz con emoticonos, calculadora permitida, ejemplo resuelto y debate.",
                 "diversitySupport_ca": "Matriz amb emoticonos, calculadora permesa, exemple resolt i debat."
               },
               {
-                "id": "act_3159_ra5_4",
+                "id": "act_3159_ra4_4",
                 "title_es": "Defiendo mi plan ante el grupo",
                 "title_ca": "Defint el meu pla davant del grup",
                 "motivatingFactor_es": "Exponer el propio itinerario y defenderlo con argumentos.",
                 "motivatingFactor_ca": "Exponer el propi itinerari i defenderlo amb arguments.",
-                "description_es": "Cada alumno presenta su plan en dos minutos con apoyo visual y responde a las preguntas del grupo, cuidando la comunicación no verbal y el respeto. (Aprendizajes: 3159-5c + 3042-2f + 3012-3c + 3011-3b.)",
-                "description_ca": "Cada alumne presenta el seu pla en dos minuts amb suport visual i respon a les preguntes del grup, cuidant la comunicació no verbal i el respecte. (Aprenentatges: 3159-5c + 3042-2f + 3012-3c + 3011-3b.)",
+                "description_es": "Cada alumno presenta su plan en dos minutos con apoyo visual y responde a las preguntas del grupo, cuidando la comunicación no verbal y el respeto. (Aprendizajes: 3159-4c + 3042-2f + 3012-3c + 3011-3b.)",
+                "description_ca": "Cada alumne presenta el seu pla en dos minuts amb suport visual i respon a les preguntes del grup, cuidant la comunicació no verbal i el respecte. (Aprenentatges: 3159-4c + 3042-2f + 3012-3c + 3011-3b.)",
                 "evidence_es": "Presentación oral con rúbrica de argumentación.",
                 "evidence_ca": "Presentació oral amb rúbrica d'argumentació.",
                 "diversitySupport_es": "Guion oral con frases iniciadoras, apoyo visual, turno de preguntas y coevaluación.",
                 "diversitySupport_ca": "Guió oral amb frases iniciadores, suport visual, turno de preguntes i coavaluació."
               },
               {
-                "id": "act_3159_ra5_5",
+                "id": "act_3159_ra4_5",
                 "title_es": "Mi plan en póster digital",
                 "title_ca": "El meu pla en pòster digital",
                 "motivatingFactor_es": "Convertir el proyecto profesional en un póster digital sencillo.",
                 "motivatingFactor_ca": "Convertir el projecte professional en un pòster digital senzill.",
-                "description_es": "Con una herramienta digital de plantillas, maquetan su plan (objetivo, opciones, decisión, pasos) y lo comparten con la clase. (Aprendizajes: 3159-5c + 3009-1c + 3012-1i + 3011-4h.)",
-                "description_ca": "Amb una eina digital de plantilles, maquetan el seu pla (objectiu, opcions, decisió, pasos) i el comparteixen amb la clase. (Aprenentatges: 3159-5c + 3009-1c + 3012-1i + 3011-4h.)",
+                "description_es": "Con una herramienta digital de plantillas, maquetan su plan (objetivo, opciones, decisión, pasos) y lo comparten con la clase. (Aprendizajes: 3159-4c + 3009-1c + 3012-1i + 3011-4h.)",
+                "description_ca": "Amb una eina digital de plantilles, maquetan el seu pla (objectiu, opcions, decisió, pasos) i el comparteixen amb la clase. (Aprenentatges: 3159-4c + 3009-1c + 3012-1i + 3011-4h.)",
                 "evidence_es": "Póster digital del proyecto profesional.",
                 "evidence_ca": "Pòster digital del projecte professional.",
                 "diversitySupport_es": "Plantilla digital guiada, tutorial en pasos, trabajo por parejas y galería final.",
                 "diversitySupport_ca": "Plantilla digital guiada, tutorial en pasos, treball per parelles i galeria final."
               },
               {
-                "id": "act_3159_ra5_6",
+                "id": "act_3159_ra4_6",
                 "title_es": "Decisión en equipo: consensuamos",
                 "title_ca": "Decisió en equip: consensuamos",
                 "motivatingFactor_es": "Practicar la toma de decisiones compartida sobre un caso.",
                 "motivatingFactor_ca": "Practicar la presa de decisions compartida sobre un cas.",
-                "description_es": "En equipos, reciben el caso de un personaje que debe elegir itinerario y deben llegar a una decisión consensuada con turnos de palabra y argumentos. (Aprendizajes: 3159-5b + 3042-2d + 3011-1i + 3067-7e.)",
-                "description_ca": "En equips, reben el cas d'un personatge que ha de triar itinerari i han de llegar a una decisió consensuada amb turnos de paraula i arguments. (Aprenentatges: 3159-5b + 3042-2d + 3011-1i + 3067-7i.)",
+                "description_es": "En equipos, reciben el caso de un personaje que debe elegir itinerario y deben llegar a una decisión consensuada con turnos de palabra y argumentos. (Aprendizajes: 3159-4b + 3042-2d + 3011-1i + 3067-7e.)",
+                "description_ca": "En equips, reben el cas d'un personatge que ha de triar itinerari i han de llegar a una decisió consensuada amb turnos de paraula i arguments. (Aprenentatges: 3159-4b + 3042-2d + 3011-1i + 3067-7i.)",
                 "evidence_es": "Decisión consensuada con los argumentos del equipo.",
                 "evidence_ca": "Decisió consensuada amb els arguments del equip.",
                 "diversitySupport_es": "Tarjetas de caso, turnos pautados, roles (portavoz, moderador) y acta sencilla.",
@@ -57616,19 +56632,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-5b ↔ 3042-2c (Ciencias aplicadas II)",
-            "title_ca": "Connexió curricular: 3159-5b ↔ 3042-2c (Ciències aplicades II)",
+            "title_es": "Conexión curricular: 3159-4b ↔ 3042-2c (Ciencias aplicadas II)",
+            "title_ca": "Connexió curricular: 3159-4b ↔ 3042-2c (Ciències aplicades II)",
             "targetModuleCode": "3042",
             "targetModuleName_es": "Ciencias aplicadas II",
             "targetModuleName_ca": "Ciències aplicades II",
             "targetRaCode": "RA2",
             "targetRaText_es": "Resuelve problemas sencillos de diversa índole, a través de su análisis contrastado y aplicando las fases del método científico.",
             "targetRaText_ca": "Resol problemes senzills d'índole diversa, mitjançant el seu anàlisi contrastat i aplicant les fases del mètode científic.",
-            "sourceCriteria": "3159-5b",
+            "sourceCriteria": "3159-4b",
             "criteriaKeys": [
               "b",
-              "5b",
-              "3159-5b"
+              "4b",
+              "3149-4b"
             ],
             "relatedCriteria": [
               {
@@ -57667,91 +56683,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Seleccionar la millor opció exigeix planificar i argumentar amb proves (Ciències Aplicades II), asesorar i pedir l'elecció (Atenció al client) i defender la decisió amb comunicació no verbal adequada (Comunicació i Societat II).",
             "activities": [
               {
-                "id": "act_3159_ra5_3",
+                "id": "act_3159_ra4_3",
                 "title_es": "Decido con criterios",
                 "title_ca": "Decit amb criteris",
                 "motivatingFactor_es": "Tomar una decisión sobre el itinerario usando una matriz de decisión.",
                 "motivatingFactor_ca": "Tomar una decisió sobre l'itinerari usant una matriz de decisió.",
-                "description_es": "Asignan pesos a criterios (me gusta, se me da bien, salidas, duración) y puntúan cada opción para ver cuál obtiene más puntos, justificando el resultado. (Aprendizajes: 3159-5b/5c + 3042-2c/2f + 3005-2h.)",
-                "description_ca": "Asignan pesos a criteris (em gusta, es em dona bé, salides, duració) i puntúan cada opció per a ver quin obtiene més puntos, justificant el resultat. (Aprenentatges: 3159-5b/5c + 3042-2c/2f + 3005-2h.)",
+                "description_es": "Asignan pesos a criterios (me gusta, se me da bien, salidas, duración) y puntúan cada opción para ver cuál obtiene más puntos, justificando el resultado. (Aprendizajes: 3159-4b/5c + 3042-2c/2f + 3005-2h.)",
+                "description_ca": "Asignan pesos a criteris (em gusta, es em dona bé, salides, duració) i puntúan cada opció per a ver quin obtiene més puntos, justificant el resultat. (Aprenentatges: 3159-4b/5c + 3042-2c/2f + 3005-2h.)",
                 "evidence_es": "Matriz de decisión completada y decisión justificada.",
                 "evidence_ca": "Matriz de decisió completada i decisió justificada.",
                 "diversitySupport_es": "Matriz con emoticonos, calculadora permitida, ejemplo resuelto y debate.",
                 "diversitySupport_ca": "Matriz amb emoticonos, calculadora permesa, exemple resolt i debat."
               },
               {
-                "id": "act_3159_ra5_6",
+                "id": "act_3159_ra4_6",
                 "title_es": "Decisión en equipo: consensuamos",
                 "title_ca": "Decisió en equip: consensuamos",
                 "motivatingFactor_es": "Practicar la toma de decisiones compartida sobre un caso.",
                 "motivatingFactor_ca": "Practicar la presa de decisions compartida sobre un cas.",
-                "description_es": "En equipos, reciben el caso de un personaje que debe elegir itinerario y deben llegar a una decisión consensuada con turnos de palabra y argumentos. (Aprendizajes: 3159-5b + 3042-2d + 3011-1i + 3067-7e.)",
-                "description_ca": "En equips, reben el cas d'un personatge que ha de triar itinerari i han de llegar a una decisió consensuada amb turnos de paraula i arguments. (Aprenentatges: 3159-5b + 3042-2d + 3011-1i + 3067-7i.)",
+                "description_es": "En equipos, reciben el caso de un personaje que debe elegir itinerario y deben llegar a una decisión consensuada con turnos de palabra y argumentos. (Aprendizajes: 3159-4b + 3042-2d + 3011-1i + 3067-7e.)",
+                "description_ca": "En equips, reben el cas d'un personatge que ha de triar itinerari i han de llegar a una decisió consensuada amb turnos de paraula i arguments. (Aprenentatges: 3159-4b + 3042-2d + 3011-1i + 3067-7i.)",
                 "evidence_es": "Decisión consensuada con los argumentos del equipo.",
                 "evidence_ca": "Decisió consensuada amb els arguments del equip.",
                 "diversitySupport_es": "Tarjetas de caso, turnos pautados, roles (portavoz, moderador) y acta sencilla.",
                 "diversitySupport_ca": "Targetes de cas, turnos pautats, rols (portavoz, moderador) i acta senzilla."
               },
               {
-                "id": "act_3159_ra5_7",
+                "id": "act_3159_ra4_7",
                 "title_es": "Reviso mi DAFO con mi plan",
                 "title_ca": "Revise el meu DAFO amb el meu pla",
                 "motivatingFactor_es": "Conectar el análisis DAFO con las decisiones del proyecto profesional.",
                 "motivatingFactor_ca": "Connectar l'anàlisi DAFO amb les decisions del projecte professional.",
-                "description_es": "Releen su DAFO y comprueban si la opción elegida aprovecha sus fortalezas y oportunidades y reduce debilidades y amenazas, ajustando el plan si hace falta. (Aprendizajes: 3159-5a/5b + 3042-2a/2b + 3011-4d.)",
-                "description_ca": "Releen el seu DAFO i comproven si l'opció triada aprovecha els seus fortalezas i oportunitats i reduïx debilitats i amenazas, ajustant el pla si fa manca. (Aprenentatges: 3159-5a/5b + 3042-2a/2b + 3011-4d.)",
+                "description_es": "Releen su DAFO y comprueban si la opción elegida aprovecha sus fortalezas y oportunidades y reduce debilidades y amenazas, ajustando el plan si hace falta. (Aprendizajes: 3159-4a/5b + 3042-2a/2b + 3011-4d.)",
+                "description_ca": "Releen el seu DAFO i comproven si l'opció triada aprovecha els seus fortalezas i oportunitats i reduïx debilitats i amenazas, ajustant el pla si fa manca. (Aprenentatges: 3159-4a/5b + 3042-2a/2b + 3011-4d.)",
                 "evidence_es": "DAFO revisado y plan ajustado.",
                 "evidence_ca": "DAFO revisat i pla ajustat.",
                 "diversitySupport_es": "DAFO anterior, guion de preguntas de revisión y tutoría individual breve.",
                 "diversitySupport_ca": "DAFO anterior, guió de preguntes de revisió i tutoría individual breu."
               },
               {
-                "id": "act_3159_ra5_1",
+                "id": "act_3159_ra4_1",
                 "title_es": "Mi proyecto profesional en cinco pasos",
                 "title_ca": "El meu projecte professional en cinco pasos",
                 "motivatingFactor_es": "Estructurar el proyecto profesional personal con una plantilla sencilla.",
                 "motivatingFactor_ca": "Estructurar el projecte professional personal amb una plantilla senzilla.",
-                "description_es": "Con una plantilla de cinco apartados (quién soy, qué quiero, qué opciones tengo, cuál elijo, pasos siguientes), redactan su proyecto cuidando la presentación y la ortografía. (Aprendizajes: 3159-5c + 3012-4f/4h + 3011-4g + 3042-2f.)",
-                "description_ca": "Amb una plantilla de cinco apartats (qui soy, què quiero, què opcions tengo, quin elijo, pasos següents), redacten el seu projecte cuidant la presentació i l'ortografía. (Aprenentatges: 3159-5c + 3012-4f/4h + 3011-4g + 3042-2f.)",
+                "description_es": "Con una plantilla de cinco apartados (quién soy, qué quiero, qué opciones tengo, cuál elijo, pasos siguientes), redactan su proyecto cuidando la presentación y la ortografía. (Aprendizajes: 3159-4c + 3012-4f/4h + 3011-4g + 3042-2f.)",
+                "description_ca": "Amb una plantilla de cinco apartats (qui soy, què quiero, què opcions tengo, quin elijo, pasos següents), redacten el seu projecte cuidant la presentació i l'ortografía. (Aprenentatges: 3159-4c + 3012-4f/4h + 3011-4g + 3042-2f.)",
                 "evidence_es": "Proyecto profesional en borrador final.",
                 "evidence_ca": "Projecte professional en borrador final.",
                 "diversitySupport_es": "Plantilla de cinco pasos, banco de frases, corrector y revisión por pares.",
                 "diversitySupport_ca": "Plantilla de cinco pasos, banc de frases, corrector i revisió per pars."
               },
               {
-                "id": "act_3159_ra5_2",
+                "id": "act_3159_ra4_2",
                 "title_es": "Pros y contras de cada opción",
                 "title_ca": "Pros i contras de cada opció",
                 "motivatingFactor_es": "Ponderar las ventajas e inconvenientes de cada opción formativa y laboral.",
                 "motivatingFactor_ca": "Ponderar les avantatges i inconvenients de cada opció formativa i laboral.",
-                "description_es": "Completan una tabla de pros y contras para cada opción que barajan y defienden en una frase argumentada cuál pesa más, aplicando el análisis de hipótesis. (Aprendizajes: 3159-5a + 3042-2b + 3012-4d + 3005-2g.)",
-                "description_ca": "Completen una taula de pros i contras per a cada opció que barajan i defienden en una frase argumentada quin pesa més, aplicant l'anàlisi d'hipòtesi. (Aprenentatges: 3159-5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_es": "Completan una tabla de pros y contras para cada opción que barajan y defienden en una frase argumentada cuál pesa más, aplicando el análisis de hipótesis. (Aprendizajes: 3159-4a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_ca": "Completen una taula de pros i contras per a cada opció que barajan i defienden en una frase argumentada quin pesa més, aplicant l'anàlisi d'hipòtesi. (Aprenentatges: 3159-4a + 3042-2b + 3012-4d + 3005-2g.)",
                 "evidence_es": "Tabla de pros y contras con conclusión argumentada.",
                 "evidence_ca": "Taula de pros i contras amb conclusió argumentada.",
                 "diversitySupport_es": "Plantilla de tabla, banco de criterios, ejemplos y conclusión guiada.",
                 "diversitySupport_ca": "Plantilla de taula, banc de criteris, exemples i conclusió guiada."
               },
               {
-                "id": "act_3159_ra5_4",
+                "id": "act_3159_ra4_4",
                 "title_es": "Defiendo mi plan ante el grupo",
                 "title_ca": "Defint el meu pla davant del grup",
                 "motivatingFactor_es": "Exponer el propio itinerario y defenderlo con argumentos.",
                 "motivatingFactor_ca": "Exponer el propi itinerari i defenderlo amb arguments.",
-                "description_es": "Cada alumno presenta su plan en dos minutos con apoyo visual y responde a las preguntas del grupo, cuidando la comunicación no verbal y el respeto. (Aprendizajes: 3159-5c + 3042-2f + 3012-3c + 3011-3b.)",
-                "description_ca": "Cada alumne presenta el seu pla en dos minuts amb suport visual i respon a les preguntes del grup, cuidant la comunicació no verbal i el respecte. (Aprenentatges: 3159-5c + 3042-2f + 3012-3c + 3011-3b.)",
+                "description_es": "Cada alumno presenta su plan en dos minutos con apoyo visual y responde a las preguntas del grupo, cuidando la comunicación no verbal y el respeto. (Aprendizajes: 3159-4c + 3042-2f + 3012-3c + 3011-3b.)",
+                "description_ca": "Cada alumne presenta el seu pla en dos minuts amb suport visual i respon a les preguntes del grup, cuidant la comunicació no verbal i el respecte. (Aprenentatges: 3159-4c + 3042-2f + 3012-3c + 3011-3b.)",
                 "evidence_es": "Presentación oral con rúbrica de argumentación.",
                 "evidence_ca": "Presentació oral amb rúbrica d'argumentació.",
                 "diversitySupport_es": "Guion oral con frases iniciadoras, apoyo visual, turno de preguntas y coevaluación.",
                 "diversitySupport_ca": "Guió oral amb frases iniciadores, suport visual, turno de preguntes i coavaluació."
               },
               {
-                "id": "act_3159_ra5_5",
+                "id": "act_3159_ra4_5",
                 "title_es": "Mi plan en póster digital",
                 "title_ca": "El meu pla en pòster digital",
                 "motivatingFactor_es": "Convertir el proyecto profesional en un póster digital sencillo.",
                 "motivatingFactor_ca": "Convertir el projecte professional en un pòster digital senzill.",
-                "description_es": "Con una herramienta digital de plantillas, maquetan su plan (objetivo, opciones, decisión, pasos) y lo comparten con la clase. (Aprendizajes: 3159-5c + 3009-1c + 3012-1i + 3011-4h.)",
-                "description_ca": "Amb una eina digital de plantilles, maquetan el seu pla (objectiu, opcions, decisió, pasos) i el comparteixen amb la clase. (Aprenentatges: 3159-5c + 3009-1c + 3012-1i + 3011-4h.)",
+                "description_es": "Con una herramienta digital de plantillas, maquetan su plan (objetivo, opciones, decisión, pasos) y lo comparten con la clase. (Aprendizajes: 3159-4c + 3009-1c + 3012-1i + 3011-4h.)",
+                "description_ca": "Amb una eina digital de plantilles, maquetan el seu pla (objectiu, opcions, decisió, pasos) i el comparteixen amb la clase. (Aprenentatges: 3159-4c + 3009-1c + 3012-1i + 3011-4h.)",
                 "evidence_es": "Póster digital del proyecto profesional.",
                 "evidence_ca": "Pòster digital del projecte professional.",
                 "diversitySupport_es": "Plantilla digital guiada, tutorial en pasos, trabajo por parejas y galería final.",
@@ -57760,19 +56776,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-5c ↔ 3042-2f (Ciencias aplicadas II)",
-            "title_ca": "Connexió curricular: 3159-5c ↔ 3042-2f (Ciències aplicades II)",
+            "title_es": "Conexión curricular: 3159-4c ↔ 3042-2f (Ciencias aplicadas II)",
+            "title_ca": "Connexió curricular: 3159-4c ↔ 3042-2f (Ciències aplicades II)",
             "targetModuleCode": "3042",
             "targetModuleName_es": "Ciencias aplicadas II",
             "targetModuleName_ca": "Ciències aplicades II",
             "targetRaCode": "RA2",
             "targetRaText_es": "Resuelve problemas sencillos de diversa índole, a través de su análisis contrastado y aplicando las fases del método científico.",
             "targetRaText_ca": "Resol problemes senzills d'índole diversa, mitjançant el seu anàlisi contrastat i aplicant les fases del mètode científic.",
-            "sourceCriteria": "3159-5c",
+            "sourceCriteria": "3159-4c",
             "criteriaKeys": [
               "c",
-              "5c",
-              "3159-5c"
+              "4c",
+              "3149-4c"
             ],
             "relatedCriteria": [
               {
@@ -57811,91 +56827,91 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "El projecte professional personal es defiende amb arguments (Ciències Aplicades II), es redacta i presenta amb les normes de Comunicació i Societat II, es documenta amb instrumentos de recollida d'informació i es apoya en la cerca amb TIC (Ciències Aplicades I).",
             "activities": [
               {
-                "id": "act_3159_ra5_1",
+                "id": "act_3159_ra4_1",
                 "title_es": "Mi proyecto profesional en cinco pasos",
                 "title_ca": "El meu projecte professional en cinco pasos",
                 "motivatingFactor_es": "Estructurar el proyecto profesional personal con una plantilla sencilla.",
                 "motivatingFactor_ca": "Estructurar el projecte professional personal amb una plantilla senzilla.",
-                "description_es": "Con una plantilla de cinco apartados (quién soy, qué quiero, qué opciones tengo, cuál elijo, pasos siguientes), redactan su proyecto cuidando la presentación y la ortografía. (Aprendizajes: 3159-5c + 3012-4f/4h + 3011-4g + 3042-2f.)",
-                "description_ca": "Amb una plantilla de cinco apartats (qui soy, què quiero, què opcions tengo, quin elijo, pasos següents), redacten el seu projecte cuidant la presentació i l'ortografía. (Aprenentatges: 3159-5c + 3012-4f/4h + 3011-4g + 3042-2f.)",
+                "description_es": "Con una plantilla de cinco apartados (quién soy, qué quiero, qué opciones tengo, cuál elijo, pasos siguientes), redactan su proyecto cuidando la presentación y la ortografía. (Aprendizajes: 3159-4c + 3012-4f/4h + 3011-4g + 3042-2f.)",
+                "description_ca": "Amb una plantilla de cinco apartats (qui soy, què quiero, què opcions tengo, quin elijo, pasos següents), redacten el seu projecte cuidant la presentació i l'ortografía. (Aprenentatges: 3159-4c + 3012-4f/4h + 3011-4g + 3042-2f.)",
                 "evidence_es": "Proyecto profesional en borrador final.",
                 "evidence_ca": "Projecte professional en borrador final.",
                 "diversitySupport_es": "Plantilla de cinco pasos, banco de frases, corrector y revisión por pares.",
                 "diversitySupport_ca": "Plantilla de cinco pasos, banc de frases, corrector i revisió per pars."
               },
               {
-                "id": "act_3159_ra5_3",
+                "id": "act_3159_ra4_3",
                 "title_es": "Decido con criterios",
                 "title_ca": "Decit amb criteris",
                 "motivatingFactor_es": "Tomar una decisión sobre el itinerario usando una matriz de decisión.",
                 "motivatingFactor_ca": "Tomar una decisió sobre l'itinerari usant una matriz de decisió.",
-                "description_es": "Asignan pesos a criterios (me gusta, se me da bien, salidas, duración) y puntúan cada opción para ver cuál obtiene más puntos, justificando el resultado. (Aprendizajes: 3159-5b/5c + 3042-2c/2f + 3005-2h.)",
-                "description_ca": "Asignan pesos a criteris (em gusta, es em dona bé, salides, duració) i puntúan cada opció per a ver quin obtiene més puntos, justificant el resultat. (Aprenentatges: 3159-5b/5c + 3042-2c/2f + 3005-2h.)",
+                "description_es": "Asignan pesos a criterios (me gusta, se me da bien, salidas, duración) y puntúan cada opción para ver cuál obtiene más puntos, justificando el resultado. (Aprendizajes: 3159-4b/5c + 3042-2c/2f + 3005-2h.)",
+                "description_ca": "Asignan pesos a criteris (em gusta, es em dona bé, salides, duració) i puntúan cada opció per a ver quin obtiene més puntos, justificant el resultat. (Aprenentatges: 3159-4b/5c + 3042-2c/2f + 3005-2h.)",
                 "evidence_es": "Matriz de decisión completada y decisión justificada.",
                 "evidence_ca": "Matriz de decisió completada i decisió justificada.",
                 "diversitySupport_es": "Matriz con emoticonos, calculadora permitida, ejemplo resuelto y debate.",
                 "diversitySupport_ca": "Matriz amb emoticonos, calculadora permesa, exemple resolt i debat."
               },
               {
-                "id": "act_3159_ra5_4",
+                "id": "act_3159_ra4_4",
                 "title_es": "Defiendo mi plan ante el grupo",
                 "title_ca": "Defint el meu pla davant del grup",
                 "motivatingFactor_es": "Exponer el propio itinerario y defenderlo con argumentos.",
                 "motivatingFactor_ca": "Exponer el propi itinerari i defenderlo amb arguments.",
-                "description_es": "Cada alumno presenta su plan en dos minutos con apoyo visual y responde a las preguntas del grupo, cuidando la comunicación no verbal y el respeto. (Aprendizajes: 3159-5c + 3042-2f + 3012-3c + 3011-3b.)",
-                "description_ca": "Cada alumne presenta el seu pla en dos minuts amb suport visual i respon a les preguntes del grup, cuidant la comunicació no verbal i el respecte. (Aprenentatges: 3159-5c + 3042-2f + 3012-3c + 3011-3b.)",
+                "description_es": "Cada alumno presenta su plan en dos minutos con apoyo visual y responde a las preguntas del grupo, cuidando la comunicación no verbal y el respeto. (Aprendizajes: 3159-4c + 3042-2f + 3012-3c + 3011-3b.)",
+                "description_ca": "Cada alumne presenta el seu pla en dos minuts amb suport visual i respon a les preguntes del grup, cuidant la comunicació no verbal i el respecte. (Aprenentatges: 3159-4c + 3042-2f + 3012-3c + 3011-3b.)",
                 "evidence_es": "Presentación oral con rúbrica de argumentación.",
                 "evidence_ca": "Presentació oral amb rúbrica d'argumentació.",
                 "diversitySupport_es": "Guion oral con frases iniciadoras, apoyo visual, turno de preguntas y coevaluación.",
                 "diversitySupport_ca": "Guió oral amb frases iniciadores, suport visual, turno de preguntes i coavaluació."
               },
               {
-                "id": "act_3159_ra5_5",
+                "id": "act_3159_ra4_5",
                 "title_es": "Mi plan en póster digital",
                 "title_ca": "El meu pla en pòster digital",
                 "motivatingFactor_es": "Convertir el proyecto profesional en un póster digital sencillo.",
                 "motivatingFactor_ca": "Convertir el projecte professional en un pòster digital senzill.",
-                "description_es": "Con una herramienta digital de plantillas, maquetan su plan (objetivo, opciones, decisión, pasos) y lo comparten con la clase. (Aprendizajes: 3159-5c + 3009-1c + 3012-1i + 3011-4h.)",
-                "description_ca": "Amb una eina digital de plantilles, maquetan el seu pla (objectiu, opcions, decisió, pasos) i el comparteixen amb la clase. (Aprenentatges: 3159-5c + 3009-1c + 3012-1i + 3011-4h.)",
+                "description_es": "Con una herramienta digital de plantillas, maquetan su plan (objetivo, opciones, decisión, pasos) y lo comparten con la clase. (Aprendizajes: 3159-4c + 3009-1c + 3012-1i + 3011-4h.)",
+                "description_ca": "Amb una eina digital de plantilles, maquetan el seu pla (objectiu, opcions, decisió, pasos) i el comparteixen amb la clase. (Aprenentatges: 3159-4c + 3009-1c + 3012-1i + 3011-4h.)",
                 "evidence_es": "Póster digital del proyecto profesional.",
                 "evidence_ca": "Pòster digital del projecte professional.",
                 "diversitySupport_es": "Plantilla digital guiada, tutorial en pasos, trabajo por parejas y galería final.",
                 "diversitySupport_ca": "Plantilla digital guiada, tutorial en pasos, treball per parelles i galeria final."
               },
               {
-                "id": "act_3159_ra5_2",
+                "id": "act_3159_ra4_2",
                 "title_es": "Pros y contras de cada opción",
                 "title_ca": "Pros i contras de cada opció",
                 "motivatingFactor_es": "Ponderar las ventajas e inconvenientes de cada opción formativa y laboral.",
                 "motivatingFactor_ca": "Ponderar les avantatges i inconvenients de cada opció formativa i laboral.",
-                "description_es": "Completan una tabla de pros y contras para cada opción que barajan y defienden en una frase argumentada cuál pesa más, aplicando el análisis de hipótesis. (Aprendizajes: 3159-5a + 3042-2b + 3012-4d + 3005-2g.)",
-                "description_ca": "Completen una taula de pros i contras per a cada opció que barajan i defienden en una frase argumentada quin pesa més, aplicant l'anàlisi d'hipòtesi. (Aprenentatges: 3159-5a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_es": "Completan una tabla de pros y contras para cada opción que barajan y defienden en una frase argumentada cuál pesa más, aplicando el análisis de hipótesis. (Aprendizajes: 3159-4a + 3042-2b + 3012-4d + 3005-2g.)",
+                "description_ca": "Completen una taula de pros i contras per a cada opció que barajan i defienden en una frase argumentada quin pesa més, aplicant l'anàlisi d'hipòtesi. (Aprenentatges: 3159-4a + 3042-2b + 3012-4d + 3005-2g.)",
                 "evidence_es": "Tabla de pros y contras con conclusión argumentada.",
                 "evidence_ca": "Taula de pros i contras amb conclusió argumentada.",
                 "diversitySupport_es": "Plantilla de tabla, banco de criterios, ejemplos y conclusión guiada.",
                 "diversitySupport_ca": "Plantilla de taula, banc de criteris, exemples i conclusió guiada."
               },
               {
-                "id": "act_3159_ra5_6",
+                "id": "act_3159_ra4_6",
                 "title_es": "Decisión en equipo: consensuamos",
                 "title_ca": "Decisió en equip: consensuamos",
                 "motivatingFactor_es": "Practicar la toma de decisiones compartida sobre un caso.",
                 "motivatingFactor_ca": "Practicar la presa de decisions compartida sobre un cas.",
-                "description_es": "En equipos, reciben el caso de un personaje que debe elegir itinerario y deben llegar a una decisión consensuada con turnos de palabra y argumentos. (Aprendizajes: 3159-5b + 3042-2d + 3011-1i + 3067-7e.)",
-                "description_ca": "En equips, reben el cas d'un personatge que ha de triar itinerari i han de llegar a una decisió consensuada amb turnos de paraula i arguments. (Aprenentatges: 3159-5b + 3042-2d + 3011-1i + 3067-7i.)",
+                "description_es": "En equipos, reciben el caso de un personaje que debe elegir itinerario y deben llegar a una decisión consensuada con turnos de palabra y argumentos. (Aprendizajes: 3159-4b + 3042-2d + 3011-1i + 3067-7e.)",
+                "description_ca": "En equips, reben el cas d'un personatge que ha de triar itinerari i han de llegar a una decisió consensuada amb turnos de paraula i arguments. (Aprenentatges: 3159-4b + 3042-2d + 3011-1i + 3067-7i.)",
                 "evidence_es": "Decisión consensuada con los argumentos del equipo.",
                 "evidence_ca": "Decisió consensuada amb els arguments del equip.",
                 "diversitySupport_es": "Tarjetas de caso, turnos pautados, roles (portavoz, moderador) y acta sencilla.",
                 "diversitySupport_ca": "Targetes de cas, turnos pautats, rols (portavoz, moderador) i acta senzilla."
               },
               {
-                "id": "act_3159_ra5_7",
+                "id": "act_3159_ra4_7",
                 "title_es": "Reviso mi DAFO con mi plan",
                 "title_ca": "Revise el meu DAFO amb el meu pla",
                 "motivatingFactor_es": "Conectar el análisis DAFO con las decisiones del proyecto profesional.",
                 "motivatingFactor_ca": "Connectar l'anàlisi DAFO amb les decisions del projecte professional.",
-                "description_es": "Releen su DAFO y comprueban si la opción elegida aprovecha sus fortalezas y oportunidades y reduce debilidades y amenazas, ajustando el plan si hace falta. (Aprendizajes: 3159-5a/5b + 3042-2a/2b + 3011-4d.)",
-                "description_ca": "Releen el seu DAFO i comproven si l'opció triada aprovecha els seus fortalezas i oportunitats i reduïx debilitats i amenazas, ajustant el pla si fa manca. (Aprenentatges: 3159-5a/5b + 3042-2a/2b + 3011-4d.)",
+                "description_es": "Releen su DAFO y comprueban si la opción elegida aprovecha sus fortalezas y oportunidades y reduce debilidades y amenazas, ajustando el plan si hace falta. (Aprendizajes: 3159-4a/5b + 3042-2a/2b + 3011-4d.)",
+                "description_ca": "Releen el seu DAFO i comproven si l'opció triada aprovecha els seus fortalezas i oportunitats i reduïx debilitats i amenazas, ajustant el pla si fa manca. (Aprenentatges: 3159-4a/5b + 3042-2a/2b + 3011-4d.)",
                 "evidence_es": "DAFO revisado y plan ajustado.",
                 "evidence_ca": "DAFO revisat i pla ajustat.",
                 "diversitySupport_es": "DAFO anterior, guion de preguntas de revisión y tutoría individual breve.",
@@ -57906,21 +56922,21 @@ export const FPB_MODULES_SEED: FPBModule[] = [
         ]
       },
       {
-        "id": "3159_RA6",
-        "code": "RA6",
+        "id": "3159_RA5",
+        "code": "RA5",
         "text_es": "Conoce las estrategias de acceso al mercado de trabajo por cuenta ajena y utiliza las herramientas necesarias para el proceso de inserción laboral.",
-        "text_ca": "Coneix les estratègies d'accés al mercat de treball per compte d'altri i utilitza les eines necessàries per al procés d'inserció laboral.",
+        "text_ca": "Coneix les estratègies d’accés al mercat de treball per compte d’altri i utilitza les eines necessàries per al procés d’inserció laboral.",
         "criteria_es": [
-          "a) Se ha analizado la búsqueda de empleo como un proceso.",
-          "b) Se han identificado las diferentes fuentes de información de acceso al empleo.",
-          "c) Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena.",
-          "d) Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
+          "3159-5a. Se ha analizado la búsqueda de empleo como un proceso.",
+          "3159-5b. Se han identificado las diferentes fuentes de información de acceso al empleo.",
+          "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena.",
+          "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
         ],
         "criteria_ca": [
-          "a) S'ha analitzat la cerca d'ocupació com un procés.",
-          "b) S'han identificat les diferents fuents d'informació d'acceso al ocupació.",
-          "c) S'han analitzat les diferents tècniques utilitzades per a la cerca d'ocupació per cuenta aliena.",
-          "d) S'han posat en pràctica les diferents eines que permitan una cerca d'ocupació óptima."
+          "3159-5a. S'ha analitzat la recerca de feina com un procés.",
+          "3159-5b. S'han identificat les diferents fonts d'informació d'accés a l'ocupació.",
+          "3159-5c. S'han analitzat les diferents tècniques utilitzades per a la recerca de feina per compte d'altri.",
+          "3159-5d. S'han posat en pràctica les diferents eines que permeten una recerca de feina òptima."
         ],
         "connections": [
           {
@@ -57935,7 +56951,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "sourceCriteria": "3159-5a",
             "criteriaKeys": [
               "a",
-              "6a",
+              "5a",
               "3159-5a"
             ],
             "relatedCriteria": [
@@ -57969,7 +56985,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Entender la cerca d'ocupació com un procés amb fases reproduce les fases del mètode científic (planificar, ejecutar, avaluar) de Ciències Aplicades II, es enmarca en l'evolució del sector (Comunicació i Societat II) i es apoya en la cerca d'informació amb TIC (Ciències Aplicades I).",
             "activities": [
               {
-                "id": "act_3159_ra6_1",
+                "id": "act_3159_ra5_1",
                 "title_es": "El proceso de buscar empleo, paso a paso",
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
@@ -57982,7 +56998,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fases, diagrama en mural, pictogrames i posada en comú."
               },
               {
-                "id": "act_3159_ra6_2",
+                "id": "act_3159_ra5_2",
                 "title_es": "Cazadores de ofertas: fuentes de empleo",
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
@@ -57995,7 +57011,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fuents, mural, exemples reals adaptats i treball en parelles."
               },
               {
-                "id": "act_3159_ra6_3",
+                "id": "act_3159_ra5_3",
                 "title_es": "Mi currículum en lectura fácil",
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
@@ -58008,7 +57024,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla de currículum, banc de verbos i exemples, corrector i revisió."
               },
               {
-                "id": "act_3159_ra6_4",
+                "id": "act_3159_ra5_4",
                 "title_es": "Mi carta de presentación",
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
@@ -58021,7 +57037,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Model de carta, oferta simulada en lectura fàcil, banc de frases i correcció."
               },
               {
-                "id": "act_3159_ra6_5",
+                "id": "act_3159_ra5_5",
                 "title_es": "Entrevista de trabajo simulada",
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
@@ -58034,7 +57050,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Guió de preguntes, grabació en parelles, rúbrica amb emoticonos i visionat guiat."
               },
               {
-                "id": "act_3159_ra6_6",
+                "id": "act_3159_ra5_6",
                 "title_es": "Mi CV y mi entrevista en inglés",
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
@@ -58047,7 +57063,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla bilingüe, frases model, targetes de vocabulari i assaig per parelles."
               },
               {
-                "id": "act_3159_ra6_7",
+                "id": "act_3159_ra5_7",
                 "title_es": "Speed dating de empleo",
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
@@ -58073,7 +57089,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "sourceCriteria": "3159-5b",
             "criteriaKeys": [
               "b",
-              "6b",
+              "5b",
               "3159-5b"
             ],
             "relatedCriteria": [
@@ -58113,7 +57129,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Identificar fuents d'ocupació és buscar informació amb les TIC (Ciències Aplicades I), elaborar instrumentos de recollida d'informació (Comunicació i Societat I i II) i, clau per a ofertas de treball, diferenciar informació de publicitat (Atenció al client).",
             "activities": [
               {
-                "id": "act_3159_ra6_2",
+                "id": "act_3159_ra5_2",
                 "title_es": "Cazadores de ofertas: fuentes de empleo",
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
@@ -58126,7 +57142,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fuents, mural, exemples reals adaptats i treball en parelles."
               },
               {
-                "id": "act_3159_ra6_1",
+                "id": "act_3159_ra5_1",
                 "title_es": "El proceso de buscar empleo, paso a paso",
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
@@ -58139,7 +57155,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fases, diagrama en mural, pictogrames i posada en comú."
               },
               {
-                "id": "act_3159_ra6_3",
+                "id": "act_3159_ra5_3",
                 "title_es": "Mi currículum en lectura fácil",
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
@@ -58152,7 +57168,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla de currículum, banc de verbos i exemples, corrector i revisió."
               },
               {
-                "id": "act_3159_ra6_4",
+                "id": "act_3159_ra5_4",
                 "title_es": "Mi carta de presentación",
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
@@ -58165,7 +57181,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Model de carta, oferta simulada en lectura fàcil, banc de frases i correcció."
               },
               {
-                "id": "act_3159_ra6_5",
+                "id": "act_3159_ra5_5",
                 "title_es": "Entrevista de trabajo simulada",
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
@@ -58178,7 +57194,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Guió de preguntes, grabació en parelles, rúbrica amb emoticonos i visionat guiat."
               },
               {
-                "id": "act_3159_ra6_6",
+                "id": "act_3159_ra5_6",
                 "title_es": "Mi CV y mi entrevista en inglés",
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
@@ -58191,7 +57207,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla bilingüe, frases model, targetes de vocabulari i assaig per parelles."
               },
               {
-                "id": "act_3159_ra6_7",
+                "id": "act_3159_ra5_7",
                 "title_es": "Speed dating de empleo",
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
@@ -58217,7 +57233,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "sourceCriteria": "3159-5c",
             "criteriaKeys": [
               "c",
-              "6c",
+              "5c",
               "3159-5c"
             ],
             "relatedCriteria": [
@@ -58257,7 +57273,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Les tècniques de cerca d'ocupació (currículum, carta, autocandidatura) són textos d'ús diari i professional cuya estructura, redacció i ortografía es treballen en Comunicació i Societat I i II, es comunican amb claritat (Atenció al client) i es gestionan amb les TIC (Ciències Aplicades I).",
             "activities": [
               {
-                "id": "act_3159_ra6_3",
+                "id": "act_3159_ra5_3",
                 "title_es": "Mi currículum en lectura fácil",
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
@@ -58270,7 +57286,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla de currículum, banc de verbos i exemples, corrector i revisió."
               },
               {
-                "id": "act_3159_ra6_1",
+                "id": "act_3159_ra5_1",
                 "title_es": "El proceso de buscar empleo, paso a paso",
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
@@ -58283,7 +57299,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fases, diagrama en mural, pictogrames i posada en comú."
               },
               {
-                "id": "act_3159_ra6_2",
+                "id": "act_3159_ra5_2",
                 "title_es": "Cazadores de ofertas: fuentes de empleo",
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
@@ -58296,7 +57312,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fuents, mural, exemples reals adaptats i treball en parelles."
               },
               {
-                "id": "act_3159_ra6_4",
+                "id": "act_3159_ra5_4",
                 "title_es": "Mi carta de presentación",
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
@@ -58309,7 +57325,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Model de carta, oferta simulada en lectura fàcil, banc de frases i correcció."
               },
               {
-                "id": "act_3159_ra6_5",
+                "id": "act_3159_ra5_5",
                 "title_es": "Entrevista de trabajo simulada",
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
@@ -58322,7 +57338,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Guió de preguntes, grabació en parelles, rúbrica amb emoticonos i visionat guiat."
               },
               {
-                "id": "act_3159_ra6_6",
+                "id": "act_3159_ra5_6",
                 "title_es": "Mi CV y mi entrevista en inglés",
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
@@ -58335,7 +57351,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla bilingüe, frases model, targetes de vocabulari i assaig per parelles."
               },
               {
-                "id": "act_3159_ra6_7",
+                "id": "act_3159_ra5_7",
                 "title_es": "Speed dating de empleo",
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
@@ -58361,7 +57377,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "sourceCriteria": "3159-5d",
             "criteriaKeys": [
               "d",
-              "6d",
+              "5d",
               "3159-5d"
             ],
             "relatedCriteria": [
@@ -58401,7 +57417,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             "justification_ca": "Posar en pràctica el currículum, la carta i l'entrevista moviliza la redacció (Comunicació i Societat I), l'elaboració de textos en anglés (Comunicació i Societat I), les presentacions orals en anglés (Comunicació i Societat II), l'expressió oral (Atenció al client) i les TIC (Ciències Aplicades I).",
             "activities": [
               {
-                "id": "act_3159_ra6_3",
+                "id": "act_3159_ra5_3",
                 "title_es": "Mi currículum en lectura fácil",
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
@@ -58414,7 +57430,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla de currículum, banc de verbos i exemples, corrector i revisió."
               },
               {
-                "id": "act_3159_ra6_4",
+                "id": "act_3159_ra5_4",
                 "title_es": "Mi carta de presentación",
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
@@ -58427,7 +57443,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Model de carta, oferta simulada en lectura fàcil, banc de frases i correcció."
               },
               {
-                "id": "act_3159_ra6_5",
+                "id": "act_3159_ra5_5",
                 "title_es": "Entrevista de trabajo simulada",
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
@@ -58440,7 +57456,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Guió de preguntes, grabació en parelles, rúbrica amb emoticonos i visionat guiat."
               },
               {
-                "id": "act_3159_ra6_6",
+                "id": "act_3159_ra5_6",
                 "title_es": "Mi CV y mi entrevista en inglés",
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
@@ -58453,7 +57469,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Plantilla bilingüe, frases model, targetes de vocabulari i assaig per parelles."
               },
               {
-                "id": "act_3159_ra6_7",
+                "id": "act_3159_ra5_7",
                 "title_es": "Speed dating de empleo",
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
@@ -58466,7 +57482,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (RA5 de 3159). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
               },
               {
-                "id": "act_3159_ra6_1",
+                "id": "act_3159_ra5_1",
                 "title_es": "El proceso de buscar empleo, paso a paso",
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
@@ -58479,7 +57495,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "diversitySupport_ca": "Targetes de fases, diagrama en mural, pictogrames i posada en comú."
               },
               {
-                "id": "act_3159_ra6_2",
+                "id": "act_3159_ra5_2",
                 "title_es": "Cazadores de ofertas: fuentes de empleo",
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
@@ -59777,7 +58793,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3b. Se han aplicado estrategias para canalizar las emociones de manera asertiva."
+                "criteria": "3159-2b. Se han aplicado estrategias para canalizar las emociones de manera asertiva en las relaciones con otras personas, diferenciándolas de conductas agresivas y/o pasivas."
               },
               {
                 "moduleCode": "3005",
@@ -71131,7 +70147,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-3a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
+                "criteria": "3159-2a. Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad."
               },
               {
                 "moduleCode": "3012",

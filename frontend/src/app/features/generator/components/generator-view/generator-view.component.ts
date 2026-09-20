@@ -17,17 +17,19 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
       <h2 class="app-header-title">{{ trans.t().subtitle }}</h2>
     </div>
     <div class="card">
-      <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
-        <div class="form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
-          <label>{{ trans.t().generatorLevelLabel }}</label>
-          <div class="tabs">
-            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
-            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_ESTETICA'" (click)="curriculum.setTipoNivel('CFGM_ESTETICA')">{{ trans.t().courseLevelCFGM }}</div>
-            <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">{{ trans.t().courseLevelPDC }}</div>
-          </div>
+      <!-- Fila 1: Pestañas de titulación (ancho completo) -->
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label>{{ trans.t().generatorLevelLabel }}</label>
+        <div class="tabs">
+          <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
+          <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_ESTETICA'" (click)="curriculum.setTipoNivel('CFGM_ESTETICA')">{{ trans.t().courseLevelCFGM }}</div>
+          <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">{{ trans.t().courseLevelPDC }}</div>
         </div>
-        
-        <div class="form-group" style="flex: 1; min-width: 180px; margin-bottom: 0;">
+      </div>
+
+      <!-- Fila 2: Selects de curso, metodología y (si admin) IA/modelo -->
+      <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
+        <div class="form-group" style="flex: 1; min-width: 150px; margin-bottom: 0;">
           <label for="generator-course-select">{{ trans.t().generatorCourseLabel }}</label>
           <select 
             id="generator-course-select"
@@ -46,7 +48,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
           </select>
         </div>
 
-        <div class="form-group" style="flex: 2; min-width: 280px; margin-bottom: 0;">
+        <div class="form-group" style="flex: 2; min-width: 240px; margin-bottom: 0;">
           <label for="generator-methodology-select">{{ trans.t().generatorMethodologyLabel }}</label>
           <select 
             id="generator-methodology-select"
@@ -60,7 +62,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
         </div>
 
         @if (auth.currentUser()?.role === 'admin') {
-          <div class="form-group" style="flex: 1.2; min-width: 180px; margin-bottom: 0;">
+          <div class="form-group" style="flex: 1.2; min-width: 160px; margin-bottom: 0;">
             <label for="generator-ai-select">{{ trans.t().generatorAiLabel }}</label>
             <select 
               id="generator-ai-select"
@@ -72,7 +74,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
             </select>
           </div>
 
-          <div class="form-group" style="flex: 1.8; min-width: 220px; margin-bottom: 0;">
+          <div class="form-group" style="flex: 1.8; min-width: 200px; margin-bottom: 0;">
             <label for="generator-model-select">{{ trans.t().generatorModelLabel }}</label>
             <select 
               id="generator-model-select"

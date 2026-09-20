@@ -526,7 +526,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3042",
@@ -556,7 +556,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se ha valorado la importancia de la cultura preventiva en todos los ámbitos o actividades de la empresa u organismo equiparado y se identifica la normativa básica de prevención de riesgos y organismos públicos relacionados."
               }
             ],
             "relationType": "tecnica",
@@ -706,7 +706,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3061",
@@ -2640,7 +2640,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3042",
@@ -2718,13 +2718,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional."
+                "criteria": "3159-1d. Se han analizado los protocolos de actuación en caso de emergencia."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se ha valorado la importancia de que exista un plan preventivo en la empresa que incluya la secuenciación de acciones a realizar en caso de emergencia, así como tiene conocimiento de la documentación básica en prevención de riesgos."
               },
               {
                 "moduleCode": "3064",
@@ -5642,7 +5642,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3061",
@@ -7940,7 +7940,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3042",
@@ -9136,7 +9136,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3064",
@@ -10336,7 +10336,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y protección."
               }
             ],
             "relationType": "tecnica",
@@ -11602,7 +11602,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y protección."
               },
               {
                 "moduleCode": "3060",
@@ -12368,7 +12368,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y protección."
               }
             ],
             "relationType": "tecnica",
@@ -13664,7 +13664,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y protección."
               }
             ],
             "relationType": "sostenibilidad",
@@ -14748,7 +14748,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
+                "criteria": "3159-6d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
               }
             ],
             "relationType": "comunicacion",
@@ -15090,7 +15090,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
+                "criteria": "3159-6c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
               }
             ],
             "relationType": "comunicacion",
@@ -15320,8 +15320,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -15458,8 +15458,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -15602,8 +15602,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -15688,7 +15688,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han identificado las diferentes fuentes de información de acceso al empleo."
+                "criteria": "3159-6b. Se han identificado las diferentes fuentes de información de acceso al empleo."
               },
               {
                 "moduleCode": "3042",
@@ -15713,8 +15713,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -15903,8 +15903,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -16060,8 +16060,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -16245,8 +16245,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -16389,8 +16389,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "¿Informació o publicitat?",
                 "motivatingFactor_es": "Diferenciar información de publicidad en mensajes reales.",
                 "motivatingFactor_ca": "Diferenciar informació de publicitat en missatges reals.",
-                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
-                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-5b.)",
+                "description_es": "Con anuncios y folletos reales del sector, identifican qué es información (características, precios reales) y qué es publicidad (promesas, eslóganes), y lo argumentan. (Aprendizajes: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
+                "description_ca": "Amb anuncios i fullets reals del sector, identifiquen què és informació (característiques, preus reals) i què és publicitat (promesas, eslóganes), i l'argumenten. (Aprenentatges: 3005-2d + 3011-4b + 3012-1b + 3009-1c + 3159-6b.)",
                 "evidence_es": "Tabla información-publicidad con ejemplos.",
                 "evidence_ca": "Taula informació-publicitat amb exemples.",
                 "diversitySupport_es": "Anuncios y folletos, plantilla de tabla, debate guiado.",
@@ -17540,7 +17540,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se ha valorado la importancia de la cultura preventiva y se identifica la normativa básica de prevención de riesgos."
               },
               {
                 "moduleCode": "3042",
@@ -17906,7 +17906,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se ha valorado la importancia de la cultura preventiva y se identifica la normativa básica."
               },
               {
                 "moduleCode": "3011",
@@ -19400,7 +19400,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3012",
@@ -19550,7 +19550,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3042",
@@ -20338,7 +20338,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3042",
@@ -22436,7 +22436,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               }
             ],
             "relationType": "tecnica",
@@ -24358,7 +24358,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               }
             ],
             "relationType": "tecnica",
@@ -26514,7 +26514,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5a. Se ha analizado la búsqueda de empleo como un proceso."
+                "criteria": "3159-6a. Se ha analizado la búsqueda de empleo como un proceso."
               },
               {
                 "moduleCode": "3064",
@@ -26792,7 +26792,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5a. Se ha analizado la búsqueda de empleo como un proceso."
+                "criteria": "3159-6a. Se ha analizado la búsqueda de empleo como un proceso."
               },
               {
                 "moduleCode": "3064",
@@ -32214,7 +32214,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se ha valorado la importancia de que exista un plan preventivo en la empresa que incluya la secuenciación de acciones a realizar en caso de emergencia, así como tiene conocimiento de la documentación básica en prevención de riesgos."
               },
               {
                 "moduleCode": "3063",
@@ -33974,7 +33974,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han identificado y clasificado los factores de riesgo de la actividad derivado de las condiciones de trabajo y los daños derivados de los mismos, especialmente los relacionados con el título."
               }
             ],
             "relationType": "tecnica",
@@ -34192,7 +34192,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos en la empresa u organismo equiparado y definido las técnicas de prevención y de protección que deben aplicarse para evitar los daños en su origen y minimizar sus consecuencias e identificado la señalización en los lugares de trabajo."
               }
             ],
             "relationType": "tecnica",
@@ -34398,7 +34398,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1f. Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños."
               }
             ],
             "relationType": "tecnica",
@@ -35170,25 +35170,25 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se ha valorado la importancia de la cultura preventiva en todos los ámbitos o actividades de la empresa u organismo equiparado y se identifica la normativa básica de prevención de riesgos y organismos públicos relacionados."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han identificado y clasificado los factores de riesgo de la actividad derivado de las condiciones de trabajo y los daños derivados de los mismos, especialmente los relacionados con el título."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional."
+                "criteria": "3159-1d. Se han analizado los protocolos de actuación en caso de emergencia."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1f. Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños."
               },
               {
                 "moduleCode": "3159",
@@ -35236,25 +35236,25 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5a. Se ha analizado la búsqueda de empleo como un proceso."
+                "criteria": "3159-6a. Se ha analizado la búsqueda de empleo como un proceso."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han identificado las diferentes fuentes de información de acceso al empleo."
+                "criteria": "3159-6b. Se han identificado las diferentes fuentes de información de acceso al empleo."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
+                "criteria": "3159-6c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
+                "criteria": "3159-6d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
               },
               {
                 "moduleCode": "3064",
@@ -38439,7 +38439,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han identificado las diferentes fuentes de información de acceso al empleo."
+                "criteria": "3159-6b. Se han identificado las diferentes fuentes de información de acceso al empleo."
               }
             ],
             "relationType": "sostenibilidad",
@@ -41225,7 +41225,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5b. Se han identificado las diferentes fuentes de información de acceso al empleo."
+                "criteria": "3159-6b. Se han identificado las diferentes fuentes de información de acceso al empleo."
               },
               {
                 "moduleCode": "3063",
@@ -41425,7 +41425,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1d. Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional."
+                "criteria": "3159-1d. Se han analizado los protocolos de actuación en caso de emergencia."
               },
               {
                 "moduleCode": "3064",
@@ -41619,7 +41619,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1a. Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento."
+                "criteria": "3159-1a. Se ha valorado la importancia de la cultura preventiva en todos los ámbitos o actividades de la empresa u organismo equiparado y se identifica la normativa básica de prevención de riesgos y organismos públicos relacionados."
               },
               {
                 "moduleCode": "3159",
@@ -41837,13 +41837,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1e. Se han identificado expectativas de futuro para la inserción profesional, analizando competencias, intereses y destrezas personales."
+                "criteria": "3159-1e. Se ha valorado la importancia de que exista un plan preventivo en la empresa que incluya la secuenciación de acciones a realizar en caso de emergencia, así como tiene conocimiento de la documentación básica en prevención de riesgos."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
+                "criteria": "3159-6c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
               },
               {
                 "moduleCode": "3063",
@@ -42067,13 +42067,13 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
+                "criteria": "3159-6c. Se han analizado las distintas técnicas utilizadas para la búsqueda de empleo por cuenta ajena."
               },
               {
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
+                "criteria": "3159-6d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
               },
               {
                 "moduleCode": "3064",
@@ -46407,7 +46407,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-5d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
+                "criteria": "3159-6d. Se han puesto en práctica las diferentes herramientas que permitan una búsqueda de empleo óptima."
               }
             ],
             "relationType": "digital",
@@ -50125,7 +50125,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han identificado y clasificado los factores de riesgo de la actividad derivado de las condiciones de trabajo y los daños derivados de los mismos, especialmente los relacionados con el título."
               }
             ],
             "relationType": "tecnica",
@@ -54566,8 +54566,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Botiquín i primers auxilios",
                 "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
                 "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
                 "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
                 "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
                 "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
@@ -54723,8 +54723,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Botiquín i primers auxilios",
                 "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
                 "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
                 "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
                 "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
                 "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
@@ -54962,8 +54962,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Botiquín i primers auxilios",
                 "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
                 "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
                 "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
                 "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
                 "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
@@ -55100,8 +55100,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Botiquín i primers auxilios",
                 "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
                 "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
                 "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
                 "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
                 "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
@@ -55238,8 +55238,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Botiquín i primers auxilios",
                 "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
                 "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
                 "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
                 "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
                 "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
@@ -55274,19 +55274,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-1c ↔ 3009-7a (Ciencias aplicadas I)",
-            "title_ca": "Connexió curricular: 3159-1c ↔ 3009-7a (Ciències aplicades I)",
+            "title_es": "Conexión curricular: 3159-1f ↔ 3009-7a (Ciencias aplicadas I)",
+            "title_ca": "Connexió curricular: 3159-1f ↔ 3009-7a (Ciències aplicades I)",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA7",
             "targetRaText_es": "Diferencia la salud de la enfermedad, relacionando los hábitos de vida con las enfermedades más frecuentes y reconociendo los principios básicos de defensa contra las mismas",
             "targetRaText_ca": "Diferencia la salut de la malaltia, relacionant els hàbits de vids amb les malalties més freqüents reconeixent els principis bàsics de defensa contra les mateixes.",
-            "sourceCriteria": "3159-1c",
+            "sourceCriteria": "3159-1f",
             "criteriaKeys": [
               "f",
               "1f",
-              "3159-1c"
+              "3159-1f"
             ],
             "relatedCriteria": [
               {
@@ -55324,8 +55324,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Botiquín i primers auxilios",
                 "motivatingFactor_es": "Aprender las técnicas básicas de primeros auxilios ante accidentes típicos del salón.",
                 "motivatingFactor_ca": "Aprendre les tècniques bàsiques de primers auxilios davant d'accidents típics del saló.",
-                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
-                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1c + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_es": "Con tarjetas de casos (corte, quemadura por cera, caída, reacción alérgica), deciden la actuación de primeros auxilios y la simulan por parejas, explicando qué NO se debe hacer. (Aprendizajes: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
+                "description_ca": "Amb targetes de casos (tall, quemadura per cera, caída, reacció alérgica), decidixen l'actuació de primers auxilios i la simulen per parelles, explicant què NO es ha de fer. (Aprenentatges: 3159-1f + 3009-7a/7b + 3042-14f + 3067-6b.)",
                 "evidence_es": "Tarjetas de casos resueltas y demostración práctica.",
                 "evidence_ca": "Targetes de casos resoltes i demostració pràctica.",
                 "diversitySupport_es": "Tarjetas con casos ilustrados, vídeo demostrativo, dramatización guiada y láminas de anatomía básica.",
@@ -57924,19 +57924,19 @@ export const FPB_MODULES_SEED: FPBModule[] = [
         ],
         "connections": [
           {
-            "title_es": "Conexión curricular: 3159-5a ↔ 3042-2a (Ciencias aplicadas II)",
-            "title_ca": "Connexió curricular: 3159-5a ↔ 3042-2a (Ciències aplicades II)",
+            "title_es": "Conexión curricular: 3159-6a ↔ 3042-2a (Ciencias aplicadas II)",
+            "title_ca": "Connexió curricular: 3159-6a ↔ 3042-2a (Ciències aplicades II)",
             "targetModuleCode": "3042",
             "targetModuleName_es": "Ciencias aplicadas II",
             "targetModuleName_ca": "Ciències aplicades II",
             "targetRaCode": "RA2",
             "targetRaText_es": "Resuelve problemas sencillos de diversa índole, a través de su análisis contrastado y aplicando las fases del método científico.",
             "targetRaText_ca": "Resol problemes senzills d'índole diversa, mitjançant el seu anàlisi contrastat i aplicant les fases del mètode científic.",
-            "sourceCriteria": "3159-5a",
+            "sourceCriteria": "3159-6a",
             "criteriaKeys": [
               "a",
               "6a",
-              "3159-5a"
+              "3159-6a"
             ],
             "relatedCriteria": [
               {
@@ -57974,8 +57974,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
                 "motivatingFactor_ca": "Visualizar la cerca d'ocupació com un procés amb fases.",
-                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-5a + 3042-2a/2c + 3012-1h.)",
-                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-5a + 3042-2a/2c + 3012-1h.)",
+                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-6a + 3042-2a/2c + 3012-1h.)",
+                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-6a + 3042-2a/2c + 3012-1h.)",
                 "evidence_es": "Diagrama del proceso de búsqueda de empleo.",
                 "evidence_ca": "Diagrama del procés de cerca d'ocupació.",
                 "diversitySupport_es": "Tarjetas de fases, diagrama en mural, pictogramas y puesta en común.",
@@ -57987,8 +57987,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
                 "motivatingFactor_ca": "Identificar i classificar les fuents on es troben ofertas de treball.",
-                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
-                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
                 "evidence_es": "Mural de fuentes de empleo clasificadas.",
                 "evidence_ca": "Mural de fuents d'ocupació classificades.",
                 "diversitySupport_es": "Tarjetas de fuentes, mural, ejemplos reales adaptados y trabajo en parejas.",
@@ -58000,8 +58000,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
                 "motivatingFactor_ca": "Elaborar el primer currículum propi amb una plantilla guiada.",
-                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-5c/6d + 3011-4f + 3012-4e + 3009-1c.)",
-                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-5c/6d + 3011-4f + 3012-4i + 3009-1c.)",
+                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-6c/6d + 3011-4f + 3012-4e + 3009-1c.)",
+                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-6c/6d + 3011-4f + 3012-4i + 3009-1c.)",
                 "evidence_es": "Currículum personal en borrador final.",
                 "evidence_ca": "Currículum personal en borrador final.",
                 "diversitySupport_es": "Plantilla de currículum, banco de verbos y ejemplos, corrector y revisión.",
@@ -58013,8 +58013,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
                 "motivatingFactor_ca": "Redactar una carta de presentació per a una oferta concreta.",
-                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-5d + 3011-4e/4f + 3012-4f.)",
-                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-5d + 3011-4i/4f + 3012-4f.)",
+                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-6d + 3011-4e/4f + 3012-4f.)",
+                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-6d + 3011-4i/4f + 3012-4f.)",
                 "evidence_es": "Carta de presentación adaptada a la oferta.",
                 "evidence_ca": "Carta de presentació adaptada a l'oferta.",
                 "diversitySupport_es": "Modelo de carta, oferta simulada en lectura fácil, banco de frases y corrección.",
@@ -58026,8 +58026,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
                 "motivatingFactor_ca": "Practicar una entrevista de treball amb preguntes reals.",
-                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6e.)",
-                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6i.)",
+                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6e.)",
+                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6i.)",
                 "evidence_es": "Grabación de la entrevista y rúbrica de feedback.",
                 "evidence_ca": "Grabació de l'entrevista i rúbrica de feedback.",
                 "diversitySupport_es": "Guion de preguntas, grabación en parejas, rúbrica con emoticonos y visionado guiado.",
@@ -58039,8 +58039,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
                 "motivatingFactor_ca": "Preparar una versió breu del currículum i de la presentació en anglés.",
-                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-5d + 3011-8e + 3011-6e + 3012-8e.)",
-                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-5d + 3011-8i + 3011-6i + 3012-8i.)",
+                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-6d + 3011-8e + 3011-6e + 3012-8e.)",
+                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-6d + 3011-8i + 3011-6i + 3012-8i.)",
                 "evidence_es": "Currículum bilingüe y presentación oral en inglés.",
                 "evidence_ca": "Currículum bilingüe i presentació oral en anglés.",
                 "diversitySupport_es": "Plantilla bilingüe, frases modelo, tarjetas de vocabulario y ensayo por parejas.",
@@ -58052,29 +58052,29 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
                 "motivatingFactor_ca": "Simular microentrevistes rotatorias en un ambient dinámic.",
-                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
-                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
                 "evidence_es": "Fichas de valoración de los entrevistadores.",
                 "evidence_ca": "Fitxes de valoració dels entrevistadors.",
-                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (RA5 de 3159). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
-                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (RA5 de 3159). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
+                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (3159-6). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
+                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (3159-6). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
               }
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-5b ↔ 3009-1c (Ciencias aplicadas I)",
-            "title_ca": "Connexió curricular: 3159-5b ↔ 3009-1c (Ciències aplicades I)",
+            "title_es": "Conexión curricular: 3159-6b ↔ 3009-1c (Ciencias aplicadas I)",
+            "title_ca": "Connexió curricular: 3159-6b ↔ 3009-1c (Ciències aplicades I)",
             "targetModuleCode": "3009",
             "targetModuleName_es": "Ciencias aplicadas I",
             "targetModuleName_ca": "Ciències aplicades I",
             "targetRaCode": "RA1",
             "targetRaText_es": "Resuelve problemas matemáticos en situaciones cotidianas, utilizando los elementos básicos del lenguaje matemático y sus operaciones",
             "targetRaText_ca": "Resol problemes matemàtics en situacions quotidianes, utilitzant els elements bàsics del llenguatge matemàtic i les seves operacions.",
-            "sourceCriteria": "3159-5b",
+            "sourceCriteria": "3159-6b",
             "criteriaKeys": [
               "b",
               "6b",
-              "3159-5b"
+              "3159-6b"
             ],
             "relatedCriteria": [
               {
@@ -58118,8 +58118,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
                 "motivatingFactor_ca": "Identificar i classificar les fuents on es troben ofertas de treball.",
-                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
-                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
                 "evidence_es": "Mural de fuentes de empleo clasificadas.",
                 "evidence_ca": "Mural de fuents d'ocupació classificades.",
                 "diversitySupport_es": "Tarjetas de fuentes, mural, ejemplos reales adaptados y trabajo en parejas.",
@@ -58131,8 +58131,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
                 "motivatingFactor_ca": "Visualizar la cerca d'ocupació com un procés amb fases.",
-                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-5a + 3042-2a/2c + 3012-1h.)",
-                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-5a + 3042-2a/2c + 3012-1h.)",
+                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-6a + 3042-2a/2c + 3012-1h.)",
+                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-6a + 3042-2a/2c + 3012-1h.)",
                 "evidence_es": "Diagrama del proceso de búsqueda de empleo.",
                 "evidence_ca": "Diagrama del procés de cerca d'ocupació.",
                 "diversitySupport_es": "Tarjetas de fases, diagrama en mural, pictogramas y puesta en común.",
@@ -58144,8 +58144,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
                 "motivatingFactor_ca": "Elaborar el primer currículum propi amb una plantilla guiada.",
-                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-5c/6d + 3011-4f + 3012-4e + 3009-1c.)",
-                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-5c/6d + 3011-4f + 3012-4i + 3009-1c.)",
+                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-6c/6d + 3011-4f + 3012-4e + 3009-1c.)",
+                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-6c/6d + 3011-4f + 3012-4i + 3009-1c.)",
                 "evidence_es": "Currículum personal en borrador final.",
                 "evidence_ca": "Currículum personal en borrador final.",
                 "diversitySupport_es": "Plantilla de currículum, banco de verbos y ejemplos, corrector y revisión.",
@@ -58157,8 +58157,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
                 "motivatingFactor_ca": "Redactar una carta de presentació per a una oferta concreta.",
-                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-5d + 3011-4e/4f + 3012-4f.)",
-                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-5d + 3011-4i/4f + 3012-4f.)",
+                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-6d + 3011-4e/4f + 3012-4f.)",
+                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-6d + 3011-4i/4f + 3012-4f.)",
                 "evidence_es": "Carta de presentación adaptada a la oferta.",
                 "evidence_ca": "Carta de presentació adaptada a l'oferta.",
                 "diversitySupport_es": "Modelo de carta, oferta simulada en lectura fácil, banco de frases y corrección.",
@@ -58170,8 +58170,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
                 "motivatingFactor_ca": "Practicar una entrevista de treball amb preguntes reals.",
-                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6e.)",
-                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6i.)",
+                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6e.)",
+                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6i.)",
                 "evidence_es": "Grabación de la entrevista y rúbrica de feedback.",
                 "evidence_ca": "Grabació de l'entrevista i rúbrica de feedback.",
                 "diversitySupport_es": "Guion de preguntas, grabación en parejas, rúbrica con emoticonos y visionado guiado.",
@@ -58183,8 +58183,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
                 "motivatingFactor_ca": "Preparar una versió breu del currículum i de la presentació en anglés.",
-                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-5d + 3011-8e + 3011-6e + 3012-8e.)",
-                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-5d + 3011-8i + 3011-6i + 3012-8i.)",
+                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-6d + 3011-8e + 3011-6e + 3012-8e.)",
+                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-6d + 3011-8i + 3011-6i + 3012-8i.)",
                 "evidence_es": "Currículum bilingüe y presentación oral en inglés.",
                 "evidence_ca": "Currículum bilingüe i presentació oral en anglés.",
                 "diversitySupport_es": "Plantilla bilingüe, frases modelo, tarjetas de vocabulario y ensayo por parejas.",
@@ -58196,29 +58196,29 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
                 "motivatingFactor_ca": "Simular microentrevistes rotatorias en un ambient dinámic.",
-                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
-                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
                 "evidence_es": "Fichas de valoración de los entrevistadores.",
                 "evidence_ca": "Fitxes de valoració dels entrevistadors.",
-                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (RA5 de 3159). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
-                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (RA5 de 3159). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
+                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (3159-6). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
+                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (3159-6). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
               }
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-5c ↔ 3011-4e (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-5c ↔ 3011-4i (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-6c ↔ 3011-4e (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-6c ↔ 3011-4i (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA4",
             "targetRaText_es": "Utiliza estrategias comunicativas para interpretar y comunicar información escrita en lengua castellana, aplicando estrategias de lectura comprensiva y aplicando estrategias de análisis, síntesis y clasificación de forma estructurada y progresiva a la composición autónoma de textos breves seleccionados.",
             "targetRaText_ca": "Utilitza estratègies comunicatives per a interpretar i comunicar informació escrita en llengua castellana i catalana, aplicant estratègies de lectura comprensiva i aplicant estratègies d'anàlisi, síntesi i classificació de forma estructurada i progresivas a la composició autònoma de textos breus seleccionats.",
-            "sourceCriteria": "3159-5c",
+            "sourceCriteria": "3159-6c",
             "criteriaKeys": [
               "c",
               "6c",
-              "3159-5c"
+              "3159-6c"
             ],
             "relatedCriteria": [
               {
@@ -58262,8 +58262,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
                 "motivatingFactor_ca": "Elaborar el primer currículum propi amb una plantilla guiada.",
-                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-5c/6d + 3011-4f + 3012-4e + 3009-1c.)",
-                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-5c/6d + 3011-4f + 3012-4i + 3009-1c.)",
+                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-6c/6d + 3011-4f + 3012-4e + 3009-1c.)",
+                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-6c/6d + 3011-4f + 3012-4i + 3009-1c.)",
                 "evidence_es": "Currículum personal en borrador final.",
                 "evidence_ca": "Currículum personal en borrador final.",
                 "diversitySupport_es": "Plantilla de currículum, banco de verbos y ejemplos, corrector y revisión.",
@@ -58275,8 +58275,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
                 "motivatingFactor_ca": "Visualizar la cerca d'ocupació com un procés amb fases.",
-                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-5a + 3042-2a/2c + 3012-1h.)",
-                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-5a + 3042-2a/2c + 3012-1h.)",
+                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-6a + 3042-2a/2c + 3012-1h.)",
+                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-6a + 3042-2a/2c + 3012-1h.)",
                 "evidence_es": "Diagrama del proceso de búsqueda de empleo.",
                 "evidence_ca": "Diagrama del procés de cerca d'ocupació.",
                 "diversitySupport_es": "Tarjetas de fases, diagrama en mural, pictogramas y puesta en común.",
@@ -58288,8 +58288,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
                 "motivatingFactor_ca": "Identificar i classificar les fuents on es troben ofertas de treball.",
-                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
-                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
                 "evidence_es": "Mural de fuentes de empleo clasificadas.",
                 "evidence_ca": "Mural de fuents d'ocupació classificades.",
                 "diversitySupport_es": "Tarjetas de fuentes, mural, ejemplos reales adaptados y trabajo en parejas.",
@@ -58301,8 +58301,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
                 "motivatingFactor_ca": "Redactar una carta de presentació per a una oferta concreta.",
-                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-5d + 3011-4e/4f + 3012-4f.)",
-                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-5d + 3011-4i/4f + 3012-4f.)",
+                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-6d + 3011-4e/4f + 3012-4f.)",
+                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-6d + 3011-4i/4f + 3012-4f.)",
                 "evidence_es": "Carta de presentación adaptada a la oferta.",
                 "evidence_ca": "Carta de presentació adaptada a l'oferta.",
                 "diversitySupport_es": "Modelo de carta, oferta simulada en lectura fácil, banco de frases y corrección.",
@@ -58314,8 +58314,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
                 "motivatingFactor_ca": "Practicar una entrevista de treball amb preguntes reals.",
-                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6e.)",
-                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6i.)",
+                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6e.)",
+                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6i.)",
                 "evidence_es": "Grabación de la entrevista y rúbrica de feedback.",
                 "evidence_ca": "Grabació de l'entrevista i rúbrica de feedback.",
                 "diversitySupport_es": "Guion de preguntas, grabación en parejas, rúbrica con emoticonos y visionado guiado.",
@@ -58327,8 +58327,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
                 "motivatingFactor_ca": "Preparar una versió breu del currículum i de la presentació en anglés.",
-                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-5d + 3011-8e + 3011-6e + 3012-8e.)",
-                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-5d + 3011-8i + 3011-6i + 3012-8i.)",
+                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-6d + 3011-8e + 3011-6e + 3012-8e.)",
+                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-6d + 3011-8i + 3011-6i + 3012-8i.)",
                 "evidence_es": "Currículum bilingüe y presentación oral en inglés.",
                 "evidence_ca": "Currículum bilingüe i presentació oral en anglés.",
                 "diversitySupport_es": "Plantilla bilingüe, frases modelo, tarjetas de vocabulario y ensayo por parejas.",
@@ -58340,29 +58340,29 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
                 "motivatingFactor_ca": "Simular microentrevistes rotatorias en un ambient dinámic.",
-                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
-                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
                 "evidence_es": "Fichas de valoración de los entrevistadores.",
                 "evidence_ca": "Fitxes de valoració dels entrevistadors.",
-                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (RA5 de 3159). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
-                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (RA5 de 3159). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
+                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (3159-6). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
+                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (3159-6). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
               }
             ]
           },
           {
-            "title_es": "Conexión curricular: 3159-5d ↔ 3011-4f (Comunicación y sociedad I)",
-            "title_ca": "Connexió curricular: 3159-5d ↔ 3011-4f (Comunicació i societat I)",
+            "title_es": "Conexión curricular: 3159-6d ↔ 3011-4f (Comunicación y sociedad I)",
+            "title_ca": "Connexió curricular: 3159-6d ↔ 3011-4f (Comunicació i societat I)",
             "targetModuleCode": "3011",
             "targetModuleName_es": "Comunicación y sociedad I",
             "targetModuleName_ca": "Comunicació i societat I",
             "targetRaCode": "RA4",
             "targetRaText_es": "Utiliza estrategias comunicativas para interpretar y comunicar información escrita en lengua castellana, aplicando estrategias de lectura comprensiva y aplicando estrategias de análisis, síntesis y clasificación de forma estructurada y progresiva a la composición autónoma de textos breves seleccionados.",
             "targetRaText_ca": "Utilitza estratègies comunicatives per a interpretar i comunicar informació escrita en llengua castellana i catalana, aplicant estratègies de lectura comprensiva i aplicant estratègies d'anàlisi, síntesi i classificació de forma estructurada i progresivas a la composició autònoma de textos breus seleccionats.",
-            "sourceCriteria": "3159-5d",
+            "sourceCriteria": "3159-6d",
             "criteriaKeys": [
               "d",
               "6d",
-              "3159-5d"
+              "3159-6d"
             ],
             "relatedCriteria": [
               {
@@ -58406,8 +58406,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu currículum en lectura fàcil",
                 "motivatingFactor_es": "Elaborar el primer currículum propio con una plantilla guiada.",
                 "motivatingFactor_ca": "Elaborar el primer currículum propi amb una plantilla guiada.",
-                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-5c/6d + 3011-4f + 3012-4e + 3009-1c.)",
-                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-5c/6d + 3011-4f + 3012-4i + 3009-1c.)",
+                "description_es": "Con una plantilla de currículum en lectura fácil, completan datos personales, formación, experiencia y aficiones, cuidando la ortografía y el orden. (Aprendizajes: 3159-6c/6d + 3011-4f + 3012-4e + 3009-1c.)",
+                "description_ca": "Amb una plantilla de currículum en lectura fàcil, completen dades personals, formació, experiència i aficions, cuidant l'ortografía i l'ordre. (Aprenentatges: 3159-6c/6d + 3011-4f + 3012-4i + 3009-1c.)",
                 "evidence_es": "Currículum personal en borrador final.",
                 "evidence_ca": "Currículum personal en borrador final.",
                 "diversitySupport_es": "Plantilla de currículum, banco de verbos y ejemplos, corrector y revisión.",
@@ -58419,8 +58419,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu carta de presentació",
                 "motivatingFactor_es": "Redactar una carta de presentación para una oferta concreta.",
                 "motivatingFactor_ca": "Redactar una carta de presentació per a una oferta concreta.",
-                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-5d + 3011-4e/4f + 3012-4f.)",
-                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-5d + 3011-4i/4f + 3012-4f.)",
+                "description_es": "A partir de una oferta de empleo simulada del sector, escriben una carta breve siguiendo el modelo: presentación, por qué encajo, despedida. (Aprendizajes: 3159-6d + 3011-4e/4f + 3012-4f.)",
+                "description_ca": "A partir d'una oferta d'ocupació simulada del sector, escriuen una carta breu seguint el model: presentació, per què encajo, despedida. (Aprenentatges: 3159-6d + 3011-4i/4f + 3012-4f.)",
                 "evidence_es": "Carta de presentación adaptada a la oferta.",
                 "evidence_ca": "Carta de presentació adaptada a l'oferta.",
                 "diversitySupport_es": "Modelo de carta, oferta simulada en lectura fácil, banco de frases y corrección.",
@@ -58432,8 +58432,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Entrevista de treball simulada",
                 "motivatingFactor_es": "Practicar una entrevista de trabajo con preguntas reales.",
                 "motivatingFactor_ca": "Practicar una entrevista de treball amb preguntes reals.",
-                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6e.)",
-                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-5d + 3005-1g/1i + 3011-3b + 3012-6i.)",
+                "description_es": "Por parejas, uno hace de entrevistador con un guion de preguntas y otro de candidato; después se graban, se visionan y reciben feedback con una rúbrica. (Aprendizajes: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6e.)",
+                "description_ca": "per parelles, uno fa d'entrevistador amb un guió de preguntes i altre de candidato; després es graban, es visionan i reben feedback amb una rúbrica. (Aprenentatges: 3159-6d + 3005-1g/1i + 3011-3b + 3012-6i.)",
                 "evidence_es": "Grabación de la entrevista y rúbrica de feedback.",
                 "evidence_ca": "Grabació de l'entrevista i rúbrica de feedback.",
                 "diversitySupport_es": "Guion de preguntas, grabación en parejas, rúbrica con emoticonos y visionado guiado.",
@@ -58445,8 +58445,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El meu CV i el meu entrevista en anglés",
                 "motivatingFactor_es": "Preparar una versión breve del currículum y de la presentación en inglés.",
                 "motivatingFactor_ca": "Preparar una versió breu del currículum i de la presentació en anglés.",
-                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-5d + 3011-8e + 3011-6e + 3012-8e.)",
-                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-5d + 3011-8i + 3011-6i + 3012-8i.)",
+                "description_es": "Con una plantilla bilingüe, traducen su perfil y ensayan una presentación oral breve en inglés con frases modelo. (Aprendizajes: 3159-6d + 3011-8e + 3011-6e + 3012-8e.)",
+                "description_ca": "Amb una plantilla bilingüe, traducen el seu perfil i ensayan una presentació oral breu en anglés amb frases model. (Aprenentatges: 3159-6d + 3011-8i + 3011-6i + 3012-8i.)",
                 "evidence_es": "Currículum bilingüe y presentación oral en inglés.",
                 "evidence_ca": "Currículum bilingüe i presentació oral en anglés.",
                 "diversitySupport_es": "Plantilla bilingüe, frases modelo, tarjetas de vocabulario y ensayo por parejas.",
@@ -58458,12 +58458,12 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Speed dating d'ocupació",
                 "motivatingFactor_es": "Simular microentrevistas rotatorias en un ambiente dinámico.",
                 "motivatingFactor_ca": "Simular microentrevistes rotatorias en un ambient dinámic.",
-                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
-                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-5d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_es": "En filas enfrentadas, cada candidato dispone de dos minutos para presentarse antes de rotar; los entrevistadores anotan lo mejor de cada candidato y al final se elige un «fichaje». (Aprendizajes: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
+                "description_ca": "En filas enfrentades, cada candidato dispone de dos minuts per a presentarse abans de rotar; els entrevistadors anotan el millor de cada candidato i al final es tria un «fichatge». (Aprenentatges: 3159-6d + 3005-1g + 3011-3c + 3012-6k.)",
                 "evidence_es": "Fichas de valoración de los entrevistadores.",
                 "evidence_ca": "Fitxes de valoració dels entrevistadors.",
-                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (RA5 de 3159). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
-                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (RA5 de 3159). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
+                "diversitySupport_es": "Cronómetro visible, tarjetas de rol, ficha de valoración sencilla y ambiente de juego.\n\n\n# 3. Nota metodológica: superar el binomio 3060-3005 y qué es propio del módulo\n\n**3.1 · De dos módulos a todo el ciclo.**\nEste módulo suele relacionarse solo con «Preparación del entorno profesional» (3060) y «Atención al cliente» (3005). Ese recorte es insuficiente: la prevención de riesgos conecta con los riesgos concretos de los talleres (aparatos eléctricos de la depilación, fuentes de calor del lavado, productos del color), el autoconocimiento y las habilidades sociales conectan con la comunicación oral y escrita de Comunicación y Sociedad I y II, el método de análisis (DAFO, pros y contras, toma de decisiones) conecta con el método científico de Ciencias Aplicadas II, la búsqueda de información conecta con las TIC de Ciencias Aplicadas I, y la búsqueda de empleo conecta con la redacción de textos y con el inglés. La matriz y las actividades de este documento reflejan esas relaciones con la misma profundidad que en el resto de módulos.\n**3.2 · Competencia propia e irrenunciable del módulo.**\nLo específico de este módulo es la orientación personal y profesional: el autoconocimiento (3159-2), el plan de desarrollo individual (3159-5c) y el proceso de inserción laboral (3159-6). Esos criterios no los evalúa ningún otro módulo y deben preservarse como competencia propia, aunque se apoyen en la comunicación, el método científico o las TIC de las asignaturas.\n**3.3 · Distribución de la evaluación para evitar duplicidades.**\nLos contenidos de carácter general (prevención de riesgos, comunicación oral y escrita, método científico, búsqueda de información) se estudian en su módulo de referencia y se aplican aquí a la orientación profesional. Las actividades están diseñadas para evaluar cada criterio en el contexto del itinerario personal y del empleo, junto al módulo que aporta el fundamento, sin repetir la teoría. El formato de las actividades (juego, simulación, producto manipulable, lectura fácil y apoyos DUA) responde al perfil del alumnado de Grado Básico: unos 15 años, con dificultades de aprendizaje y poca motivación.",
+                "diversitySupport_ca": "Cronómetro visible, targetes de rol, fitxa de valoració senzilla i ambient de joc. # 3. Nota metodológica: superar el binomio 3060-3005 i què és propi del mòdul **3.1 · De dos mòduls a tot el cicle.** Aquest mòdul suele relacionarse només amb «Preparació del entorn professional» (3060) i «Atenció al client» (3005). Eixe recorte és insuficiente: la prevenció de riscos connecta amb els riscos concretos dels tallers (aparells elèctrics de la depilació, fuents de calor del rentat, productes del color), l'autoconociment i les habilitats socials connecten amb la comunicació oral i escrita de Comunicació i Societat I i II, el mètode d'anàlisi (DAFO, pros i contras, presa de decisions) connecta amb el mètode científic de Ciències Aplicades II, la cerca d'informació connecta amb les TIC de Ciències Aplicades I, i la cerca d'ocupació connecta amb la redacció de textos i amb l'anglés. La matriz i les activitats d'aquest documento reflejan eixes relacions amb la mateixa profunditat que en el resta de mòduls. **3.2 · Competència pròpia i irrenunciable del mòdul.** L'específic d'aquest mòdul és l'orientació personal i professional: l'autoconociment (3159-2), el pla de desenvolupament individual (3159-5c) i el procés d'inserció laboral (3159-6). Eixos criteris no els avalua ningún altre mòdul i han de preservarse com competència pròpia, aunque es apoyen en la comunicació, el mètode científic o les TIC de les asignaturas. **3.3 · Distribució de l'evaluació per a evitar duplicitats.** Els continguts de carácter general (prevenció de riscos, comunicació oral i escrita, mètode científic, cerca d'informació) es estudian en el seu mòdul de referencia i es apliquen ací a l'orientació professional. Les activitats estan dissenyades per a avaluar cada criteri en el context del itinerari personal i del ocupació, junto al mòdul que aporta el fundamento, sense repetir la teoría. El format de les activitats (joc, simulació, producte manipulable, lectura fàcil i suports DUA) respon al perfil del alumnat de Grat Bàsic: unos 15 anys, amb dificultats d'aprenentatge i poca motivació."
               },
               {
                 "id": "act_3159_ra6_1",
@@ -58471,8 +58471,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "El procés de buscar ocupació, pas a pas",
                 "motivatingFactor_es": "Visualizar la búsqueda de empleo como un proceso con fases.",
                 "motivatingFactor_ca": "Visualizar la cerca d'ocupació com un procés amb fases.",
-                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-5a + 3042-2a/2c + 3012-1h.)",
-                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-5a + 3042-2a/2c + 3012-1h.)",
+                "description_es": "Ordenan tarjetas con las fases del proceso (autoconocimiento, preparar documentos, buscar ofertas, responder, entrevista, seguimiento) y las colocan en un diagrama con flechas. (Aprendizajes: 3159-6a + 3042-2a/2c + 3012-1h.)",
+                "description_ca": "Ordenen targetes amb les fases del procés (autoconociment, preparar documentos, buscar ofertas, respondre, entrevista, seguiment) i les colocan en un diagrama amb flechas. (Aprenentatges: 3159-6a + 3042-2a/2c + 3012-1h.)",
                 "evidence_es": "Diagrama del proceso de búsqueda de empleo.",
                 "evidence_ca": "Diagrama del procés de cerca d'ocupació.",
                 "diversitySupport_es": "Tarjetas de fases, diagrama en mural, pictogramas y puesta en común.",
@@ -58484,8 +58484,8 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "title_ca": "Cazadors d'ofertas: fuents d'ocupació",
                 "motivatingFactor_es": "Identificar y clasificar las fuentes donde se encuentran ofertas de trabajo.",
                 "motivatingFactor_ca": "Identificar i classificar les fuents on es troben ofertas de treball.",
-                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
-                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-5b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_es": "Con tarjetas de fuentes (portales web, ETT, redes sociales, carteles, boca a boca), clasifican cuáles son fuentes reales y cuáles son publicidad, y explican sus ventajas. (Aprendizajes: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
+                "description_ca": "Amb targetes de fuents (portals web, ETT, xarxes socials, cartells, boca a boca), classifiquen quins són fuents reals i quins són publicitat, i expliquen els seus avantatges. (Aprenentatges: 3159-6b + 3009-1c + 3011-1h + 3005-2d.)",
                 "evidence_es": "Mural de fuentes de empleo clasificadas.",
                 "evidence_ca": "Mural de fuents d'ocupació classificades.",
                 "diversitySupport_es": "Tarjetas de fuentes, mural, ejemplos reales adaptados y trabajo en parejas.",
@@ -60961,7 +60961,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1b. Se han determinado las competencias personales y sociales con valor para el empleo."
+                "criteria": "3159-1b. Se han identificado y clasificado los factores de riesgo de la actividad."
               },
               {
                 "moduleCode": "3042",
@@ -61267,7 +61267,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3062",
@@ -62671,7 +62671,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               }
             ],
             "relationType": "tecnica",
@@ -65169,7 +65169,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               }
             ],
             "relationType": "tecnica",
@@ -67735,7 +67735,7 @@ export const FPB_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "3159",
                 "moduleName_es": "Itinerario personal para la empleabilidad",
                 "moduleName_ca": "Itinerari personal per a l’ocupabilitat",
-                "criteria": "3159-1c. Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo."
+                "criteria": "3159-1c. Se ha determinado la evaluación de riesgos y definido las técnicas de prevención y de protección."
               },
               {
                 "moduleCode": "3042",

@@ -3,25 +3,25 @@ import { HttpClient } from '@angular/common/http';
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
 import { LayoutService } from '../../../services/layout.service';
 
-function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' {
+function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' {
   if (typeof localStorage !== 'undefined') {
     const saved = localStorage.getItem('pai_tipo_nivel');
-    if (saved === 'DIVERSIFICACION_CURRICULAR' || saved === 'FP_BASICA') {
+    if (saved === 'DIVERSIFICACION_CURRICULAR' || saved === 'FP_BASICA' || saved === 'CFGM_ESTETICA') {
       return saved;
     }
   }
   return 'FP_BASICA';
 }
 
-function getStoredCurso(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'): string {
+function getStoredCurso(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA'): string {
   if (typeof localStorage !== 'undefined') {
     const savedCurso = localStorage.getItem('pai_curso');
-    const valid = nivel === 'FP_BASICA' ? ['1º', '2º'] : ['3º', '4º'];
+    const valid = nivel === 'DIVERSIFICACION_CURRICULAR' ? ['3º', '4º'] : ['1º', '2º'];
     if (savedCurso && valid.includes(savedCurso)) {
       return savedCurso;
     }
   }
-  return nivel === 'FP_BASICA' ? '1º' : '3º';
+  return nivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
 }
 
 @Injectable({ providedIn: 'root' })
@@ -34,13 +34,13 @@ export class CurriculumFacade {
   ces = signal<EvaluativeCriteria[]>([]);
 
   // Configuración base que afecta al currículum
-  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR'>(getStoredTipoNivel());
+  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA'>(getStoredTipoNivel());
   curso = signal<string>(getStoredCurso(this.tipoNivel()));
 
-  setTipoNivel(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR') {
+  setTipoNivel(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA') {
     if (this.tipoNivel() !== nivel) {
       this.tipoNivel.set(nivel);
-      const defaultCurso = nivel === 'FP_BASICA' ? '1º' : '3º';
+      const defaultCurso = nivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
       this.curso.set(defaultCurso);
       if (typeof localStorage !== 'undefined') {
         localStorage.setItem('pai_tipo_nivel', nivel);
@@ -98,8 +98,9 @@ export class CurriculumFacade {
   }
 
   groupedItems = computed(() => {
-    if (this.tipoNivel() === 'FP_BASICA') {
-      const list = this.ras();
+    if (this.tipoNivel() === 'FP_BASICA' || this.tipoNivel() === 'CFGM_ESTETICA') {
+      const rawList = this.ras();
+      const list = rawList.filter(ra => (ra as any).tipoNivel === this.tipoNivel() || (!((ra as any).tipoNivel) && this.tipoNivel() === 'FP_BASICA'));
       const groups: { [key: string]: any[] } = {};
       
       for (const ra of list) {

@@ -145,4 +145,8 @@ export class MapaIntermodularViewComponent {
     if (selected.length > 0) this.curriculum.selectedRas.set(selected);
     this.layout.switchView('generator');
   }
+
+  setTab(tab: 'FPB' | 'CFGM') {
+    this.facade.setTab(tab);
+  }
 }

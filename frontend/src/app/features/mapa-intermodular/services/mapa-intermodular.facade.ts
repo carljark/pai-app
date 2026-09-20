@@ -1,9 +1,11 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { FPBModule, LearningOutcome, IntermodularConnection, IntermodularActivity, CompetenceType } from '../models/mapa-intermodular.model';
 import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
+import { CFGM_MODULES_SEED } from '../data/mapa-intermodular-cfgm.seed';
 
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
+  activeTab = signal<'FPB' | 'CFGM'>('FPB');
   modules = signal<FPBModule[]>(FPB_MODULES_SEED);
   selectedModuleCode = signal<string>('3060');
   selectedRaId = signal<string>('3060_RA1');
@@ -206,5 +208,17 @@ export class MapaIntermodularFacade {
     });
 
     return summary;
+  }
+
+  setTab(tab: 'FPB' | 'CFGM') {
+    this.activeTab.set(tab);
+    if (tab === 'FPB') {
+      this.modules.set(FPB_MODULES_SEED);
+    } else {
+      this.modules.set(CFGM_MODULES_SEED);
+    }
+    this.selectedModuleCode.set('');
+    this.selectedRaId.set('');
+    this.selectedCriterion.set(null);
   }
 }

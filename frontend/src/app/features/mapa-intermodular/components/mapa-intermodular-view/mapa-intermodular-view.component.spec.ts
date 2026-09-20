@@ -10,6 +10,23 @@ import { FPB_MODULES_SEED } from '../../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('MapaIntermodularViewComponent', () => {
+
+  it('should switch to CFGM tab and test branches', () => {
+    // click CFGM
+    component.setTab('CFGM');
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('CFGM');
+
+    // toggle language
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(component.isCa()).toBe(true);
+    
+    component.layout.language.set('castellano');
+    fixture.detectChanges();
+    expect(component.isCa()).toBe(false);
+  });
+
   let component: MapaIntermodularViewComponent;
   let fixture: ComponentFixture<MapaIntermodularViewComponent>;
   let mockLayout: any;

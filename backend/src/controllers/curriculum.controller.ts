@@ -58,9 +58,17 @@ const caToEs: Record<string, string> = Object.entries(esToCa).reduce((acc, [es, 
 }, {} as Record<string, string>);
 
 function mapRa(r: any, lang: 'ca' | 'es') {
-  const module = lang === 'ca' ? (esToCaModules[r.module] || r.module) : (caToEsModules[r.module] || r.module_es || r.module);
+  const module = lang === 'ca' ? (r.module_ca || esToCaModules[r.module] || r.module) : (r.module_es || caToEsModules[r.module] || r.module);
   const description = lang === 'ca' ? (r.description_ca || r.description) : (r.description_es || r.description);
-  return { id: r.id, module, description };
+  const criterios = lang === 'ca' && r.criterios_ca && r.criterios_ca.length > 0 ? r.criterios_ca : (r.criterios_es || []);
+  return { 
+    id: r.id, 
+    module, 
+    description, 
+    criterios, 
+    tipoNivel: r.tipoNivel, 
+    moduleCode: r.moduleCode 
+  };
 }
 
 export const getRas = async (req: any, res: Response) => {

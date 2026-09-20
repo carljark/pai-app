@@ -1,4 +1,27 @@
 <div class="mapa-container">
+
+  <!-- Tabs FPB / CFGM -->
+  <div class="mapa-tabs" style="display: flex; gap: 1rem; padding: 1rem 1rem 0; background: var(--bg-card); border-bottom: 1px solid var(--border-color);">
+    <button 
+      class="mapa-tab-btn" 
+      [class.active]="facade.activeTab() === 'FPB'"
+      (click)="setTab('FPB')"
+      style="padding: 0.75rem 1.5rem; border: none; background: none; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;"
+      [style.border-bottom-color]="facade.activeTab() === 'FPB' ? 'var(--primary-color)' : 'transparent'"
+      [style.color]="facade.activeTab() === 'FPB' ? 'var(--primary-color)' : 'inherit'">
+      FPB
+    </button>
+    <button 
+      class="mapa-tab-btn" 
+      [class.active]="facade.activeTab() === 'CFGM'"
+      (click)="setTab('CFGM')"
+      style="padding: 0.75rem 1.5rem; border: none; background: none; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;"
+      [style.border-bottom-color]="facade.activeTab() === 'CFGM' ? 'var(--primary-color)' : 'transparent'"
+      [style.color]="facade.activeTab() === 'CFGM' ? 'var(--primary-color)' : 'inherit'">
+      {{ isCa() ? 'CFGM Estètica i Bellesa' : 'CFGM Estética y Belleza' }}
+    </button>
+  </div>
+
   <!-- Ultra-collapsed Header by default (Only title visible) -->
   <header class="mapa-header" [class.expanded]="headerExpanded()">
     <div class="mapa-header__main-row" (click)="toggleHeaderStats()">
@@ -14,7 +37,11 @@
           </svg>
         </div>
         <h1 class="mapa-header__title">
-          {{ isCa() ? 'Mapa Intermodular FPB' : 'Mapa Intermodular FPB' }}
+          @if (facade.activeTab() === 'FPB') {
+            {{ isCa() ? 'Mapa Intermodular FPB' : 'Mapa Intermodular FPB' }}
+          } @else {
+            {{ isCa() ? 'Mapa intermodular del CFGM Estètica i Bellesa' : 'Mapa intermodular del CFGM Estética y Belleza' }}
+          }
         </h1>
       </div>
 
@@ -30,9 +57,15 @@
     @if (headerExpanded()) {
       <div class="mapa-header__expanded-body">
         <p class="mapa-header__subtitle">
-          {{ isCa() 
-            ? 'Explorador interactiu de connexions curriculars, criteris i activitats FPB.' 
-            : 'Explorador interactivo de conexiones curriculares, criterios y actividades FPB.' }}
+          @if (facade.activeTab() === 'FPB') {
+            {{ isCa() 
+              ? 'Explorador interactiu de connexions curriculars, criteris i activitats FPB.' 
+              : 'Explorador interactivo de conexiones curriculares, criterios y actividades FPB.' }}
+          } @else {
+            {{ isCa()
+              ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 1r curs.'
+              : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 1.er curso.' }}
+          }
         </p>
 
         <!-- Controls in expanded header -->

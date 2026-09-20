@@ -267,7 +267,7 @@ export class PersonalViewComponent implements OnInit {
 
     // Filtro de Nivel
     if (this.levelFilter() === 'FPB') {
-      list = list.filter(p => p.tipoNivel === 'FP_BASICA' || !p.tipoNivel);
+      list = list.filter(p => p.tipoNivel === 'FP_BASICA' || p.tipoNivel === 'CFGM_ESTETICA' || !p.tipoNivel);
     } else if (this.levelFilter() === 'ESO') {
       list = list.filter(p => p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO');
     }

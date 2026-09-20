@@ -200,9 +200,11 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
     // Determinación del curso efectivo y descripción
     const defaultCourse = tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
     const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCourse;
-    const targetCourseDescription = tipoNivel === 'DIVERSIFICACION_CURRICULAR'
-      ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
-      : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`;
+    const targetCourseDescription = tipoNivel === 'CFGM_ESTETICA'
+      ? `${effectiveCourse} de CFGM Estètica i Bellesa`
+      : (tipoNivel === 'DIVERSIFICACION_CURRICULAR'
+        ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
+        : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`);
 
     // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {

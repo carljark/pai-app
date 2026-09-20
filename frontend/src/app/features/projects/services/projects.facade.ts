@@ -64,7 +64,7 @@ export class ProjectsFacade {
   fpProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
     return this.projectsHistory().filter(p => {
-      const matchLevel = p.tipoNivel === 'FP_BASICA' || !p.tipoNivel;
+      const matchLevel = p.tipoNivel === 'FP_BASICA' || p.tipoNivel === 'CFGM_ESTETICA' || !p.tipoNivel;
       if (!matchLevel) return false;
       if (!q) return true;
       return (p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q));
@@ -106,7 +106,7 @@ export class ProjectsFacade {
   }
 
   private getInvolvedModules(tipoNivel: string, selectedRas: string[]): string[] {
-    if (tipoNivel === 'FP_BASICA') {
+    if (tipoNivel === 'FP_BASICA' || tipoNivel === 'CFGM_ESTETICA') {
       const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
       return Array.from(new Set(selected.map((ra: any) => ra.module)));
     }

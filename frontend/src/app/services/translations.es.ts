@@ -40,6 +40,7 @@ export const TRANSLATIONS_ES = {
   workshopRecentProjects: 'Proyectos Recientes',
   workshopViewAll: 'Ver todos los proyectos',
   courseLevelFP: 'FP Básica',
+  courseLevelCFGM: 'CFGM Estética y Belleza',
   courseLevelPDC: 'ESO (PDC)',
   searchProjects: 'Buscar proyecto...',
   generatorLevelLabel: 'Nivel Educativo',

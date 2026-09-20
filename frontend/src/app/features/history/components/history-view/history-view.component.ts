@@ -205,7 +205,7 @@ export class HistoryViewComponent {
     // Filtro por Nivel / Pestaña
     list = list.filter(p => {
       if (this.activeTab() === 'FPB') {
-        return p.tipoNivel === 'FP_BASICA' || !p.tipoNivel;
+        return p.tipoNivel === 'FP_BASICA' || p.tipoNivel === 'CFGM_ESTETICA' || !p.tipoNivel;
       } else {
         return p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO';
       }

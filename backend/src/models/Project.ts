@@ -5,7 +5,7 @@ const ProjectSchema = new mongoose.Schema({
   modules: [String],
   ras: [String],
   methodology: String,
-  tipoNivel: { type: String, enum: ['FP_BASICA', 'DIVERSIFICACION_CURRICULAR'], default: 'FP_BASICA' },
+  tipoNivel: { type: String, enum: ['FP_BASICA', 'DIVERSIFICACION_CURRICULAR', 'CFGM_ESTETICA'], default: 'FP_BASICA' },
   courseLevel: String,
   status: { type: String, enum: ['en_cola', 'generando', 'borrador', 'publicado', 'error'], default: 'en_cola' },
   generatedContent: {

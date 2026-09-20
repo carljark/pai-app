@@ -2,6 +2,16 @@ import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
 import { LayoutService } from '../../../services/layout.service';
+import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
+
+export interface GroupedCurriculumItem {
+  category: string;
+  items: { index: number; text: string }[];
+  totalItems: number;
+  moduleCode?: string;
+}
+
+const CFGM_MODULE_ORDER = ['0633', '0635', '0636', '0638', '0640', '0641', '1664', '1709', '0156'];
 
 function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' {
   if (typeof localStorage !== 'undefined') {
@@ -97,19 +107,44 @@ export class CurriculumFacade {
     }
   }
 
-  groupedItems = computed(() => {
+  groupedItems = computed<GroupedCurriculumItem[]>(() => {
+    const isCa = this.layoutService?.language() === 'catalan' ||
+      (typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan');
+
     if (this.tipoNivel() === 'FP_BASICA' || this.tipoNivel() === 'CFGM_ESTETICA') {
       const rawList = this.ras();
-      const list = rawList.filter(ra => (ra as any).tipoNivel === this.tipoNivel() || (!((ra as any).tipoNivel) && this.tipoNivel() === 'FP_BASICA'));
+      let list = rawList.filter(ra => (ra as any).tipoNivel === this.tipoNivel() || (!((ra as any).tipoNivel) && this.tipoNivel() === 'FP_BASICA'));
+      
+      // Fallback robusto para CFGM_ESTETICA si la API aún no los devuelve
+      if (this.tipoNivel() === 'CFGM_ESTETICA' && list.length === 0) {
+        list = CFGM_ESTETICA_RAS_DATA.map(r => ({
+          id: r.id,
+          module: isCa ? `${r.moduleCode}. ${r.module_ca}` : `${r.moduleCode}. ${r.module_es}`,
+          subject: isCa ? `${r.moduleCode}. ${r.module_ca}` : `${r.moduleCode}. ${r.module_es}`,
+          description: isCa ? r.description_ca : r.description_es,
+          tipoNivel: 'CFGM_ESTETICA',
+          moduleCode: r.moduleCode,
+          criterios: isCa ? r.criterios_ca : r.criterios_es
+        } as any));
+      }
+
       const groups: { [key: string]: any[] } = {};
+      const moduleCodes: { [key: string]: string } = {};
       
       for (const ra of list) {
         let categoryName = ra.subject || (ra as any).module;
-        if (!groups[categoryName]) groups[categoryName] = [];
+        const code = (ra as any).moduleCode;
+        if (code && !categoryName.startsWith(code)) {
+          categoryName = `${code}. ${categoryName}`;
+        }
+        if (!groups[categoryName]) {
+          groups[categoryName] = [];
+          if (code) moduleCodes[categoryName] = code;
+        }
         groups[categoryName].push(ra);
       }
       
-      return Object.keys(groups).map(key => {
+      const result = Object.keys(groups).map(key => {
         const uniqueTexts: string[] = [];
         for (const ra of groups[key]) {
           if (!uniqueTexts.includes(ra.description)) {
@@ -117,9 +152,19 @@ export class CurriculumFacade {
           }
         }
         const items = uniqueTexts.map((text, idx) => ({ index: idx + 1, text }));
-        return { category: key, items, totalItems: items.length };
+        return { category: key, items, totalItems: items.length, moduleCode: moduleCodes[key] };
       });
-      
+
+      if (this.tipoNivel() === 'CFGM_ESTETICA') {
+        result.sort((a, b) => {
+          const idxA = CFGM_MODULE_ORDER.indexOf(a.moduleCode || '');
+          const idxB = CFGM_MODULE_ORDER.indexOf(b.moduleCode || '');
+          if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+          return a.category.localeCompare(b.category);
+        });
+      }
+
+      return result;
     } else {
       const list = this.ces();
       const groups: { [key: string]: any[] } = {};

@@ -249,4 +249,61 @@ describe('CurriculumFacade', () => {
     const fallbackFacade = TestBed.inject(CurriculumFacade);
     expect(fallbackFacade.curso()).toBe('1º');
   });
+
+  it('should group CFGM_ESTETICA items using fallback when ras is empty and sort by CFGM_MODULE_ORDER', () => {
+    facade.tipoNivel.set('CFGM_ESTETICA');
+    facade.ras.set([]);
+
+    const groups = facade.groupedItems();
+    expect(groups.length).toBe(9);
+    expect(groups[0].moduleCode).toBe('0633');
+    expect(groups[1].moduleCode).toBe('0635');
+    expect(groups[2].moduleCode).toBe('0636');
+    expect(groups[3].moduleCode).toBe('0638');
+    expect(groups[4].moduleCode).toBe('0640');
+    expect(groups[5].moduleCode).toBe('0641');
+    expect(groups[6].moduleCode).toBe('1664');
+    expect(groups[7].moduleCode).toBe('1709');
+    expect(groups[8].moduleCode).toBe('0156');
+    expect(groups[0].items.length).toBeGreaterThan(0);
+  });
+
+  it('should group CFGM_ESTETICA items from API ras array with moduleCode and sort them', () => {
+    facade.tipoNivel.set('CFGM_ESTETICA');
+    facade.ras.set([
+      { id: 'RA1', description: 'Desc 0635', module: 'Depilación', moduleCode: '0635', tipoNivel: 'CFGM_ESTETICA' } as any,
+      { id: 'RA1', description: 'Desc 0633', module: '0633. Higiene', moduleCode: '0633', tipoNivel: 'CFGM_ESTETICA' } as any,
+      { id: 'RA1', description: 'Desc Unknown', module: 'Otro módulo', tipoNivel: 'CFGM_ESTETICA' } as any
+    ]);
+
+    const groups = facade.groupedItems();
+    expect(groups.length).toBe(3);
+    expect(groups[0].moduleCode).toBe('0633');
+    expect(groups[1].moduleCode).toBe('0635');
+  });
+
+  it('should handle setTipoNivel to CFGM_ESTETICA and set default course to 1º', () => {
+    facade.setTipoNivel('CFGM_ESTETICA');
+    expect(facade.tipoNivel()).toBe('CFGM_ESTETICA');
+    expect(facade.curso()).toBe('1º');
+    expect(localStorage.getItem('pai_tipo_nivel')).toBe('CFGM_ESTETICA');
+    expect(localStorage.getItem('pai_curso')).toBe('1º');
+  });
+
+  it('should restore CFGM_ESTETICA from localStorage', () => {
+    localStorage.setItem('pai_tipo_nivel', 'CFGM_ESTETICA');
+    localStorage.setItem('pai_curso', '1º');
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [
+        CurriculumFacade,
+        provideHttpClient(),
+        provideHttpClientTesting(),
+      ]
+    });
+    const cfgmFacade = TestBed.inject(CurriculumFacade);
+    expect(cfgmFacade.tipoNivel()).toBe('CFGM_ESTETICA');
+    expect(cfgmFacade.curso()).toBe('1º');
+  });
 });

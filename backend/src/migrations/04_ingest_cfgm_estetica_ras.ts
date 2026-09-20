@@ -1,29 +1,19 @@
-import mongoose from 'mongoose';
 import { RA } from '../models/RA';
-import fs from 'fs';
-import path from 'path';
+import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 
 export const up = async () => {
-  console.log('Sincronizando RAs de CFGM Estética...');
-  
-  const filePath = path.join(process.cwd(), 'ras_cfgm_estetica.json');
-  if (!fs.existsSync(filePath)) {
-    console.log('No se encontró ras_cfgm_estetica.json. Saltando migración.');
-    return;
-  }
-
-  const rasData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  console.log('🔄 Sincronizando RAs de CFGM Estética i Bellesa...');
   
   await RA.deleteMany({ tipoNivel: 'CFGM_ESTETICA' });
   
-  const docs = rasData.map((ra: any) => ({
+  const docs = CFGM_ESTETICA_RAS_DATA.map((ra: any) => ({
     id: ra.id,
     module: ra.module,
     module_es: ra.module_es,
     module_ca: ra.module_ca,
     moduleCode: ra.moduleCode,
     tipoNivel: ra.tipoNivel,
-    description: ra.description_es,
+    description: ra.description_ca || ra.description,
     description_ca: ra.description_ca,
     description_es: ra.description_es,
     criterios_es: ra.criterios_es,

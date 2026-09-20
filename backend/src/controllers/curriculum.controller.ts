@@ -18,7 +18,18 @@ const caToEsModules: Record<string, string> = {
   "Preparació de l'entorn professional": "Preparación del entorno profesional",
   "Itinerari per l'ocupabilitat": "Itinerario para la empleabilidad",
   "Projecte inter modular d'aprenentatge col·laboratiu": "Proyecto inter modular de aprendizaje colaborativo",
-  "Proyecto inter modular de aprendizaje colaborativo": "Proyecto inter modular de aprendizaje colaborativo"
+  "Proyecto inter modular de aprendizaje colaborativo": "Proyecto inter modular de aprendizaje colaborativo",
+  "Tècniques d’higiene facial i corporal": "Técnicas de higiene facial y corporal",
+  "Tècniques d'higiene facial i corporal": "Técnicas de higiene facial y corporal",
+  "Depilació mecànica i decoloració del borrissol": "Depilación mecánica y decoloración del vello",
+  "Estètica de mans i peus": "Estética de manos y pies",
+  "Anàlisi estètica": "Análisis estético",
+  "Imatge corporal i hàbits saludables": "Imagen corporal y hábitos saludables",
+  "Cosmetologia per a estètica i bellesa": "Cosmetología para estética y belleza",
+  "Digitalització aplicada als sectors productius": "Digitalización aplicada a los sectores productivos",
+  "Itinerari personal per a l’ocupabilitat I": "Itinerario personal para la empleabilidad I",
+  "Itinerari personal per a l'ocupabilitat I": "Itinerario personal para la empleabilidad I",
+  "Anglès professional": "Inglés profesional"
 };
 
 const esToCaModules: Record<string, string> = {
@@ -34,7 +45,16 @@ const esToCaModules: Record<string, string> = {
   "Lavado y cambios de forma del cabello": "Rentat i canvis de forma del cabell",
   "Maquillaje": "Maquillatge",
   "Preparación del entorno profesional": "Preparació de l'entorn professional",
-  "Itinerario para la empleabilidad": "Itinerari per l'ocupabilitat"
+  "Itinerario para la empleabilidad": "Itinerari per l'ocupabilitat",
+  "Técnicas de higiene facial y corporal": "Tècniques d’higiene facial i corporal",
+  "Depilación mecánica y decoloración del vello": "Depilació mecànica i decoloració del borrissol",
+  "Estética de manos y pies": "Estètica de mans i peus",
+  "Análisis estético": "Anàlisi estètica",
+  "Imagen corporal y hábitos saludables": "Imatge corporal i hàbits saludables",
+  "Cosmetología para estética y belleza": "Cosmetologia per a estètica i bellesa",
+  "Digitalización aplicada a los sectores productivos": "Digitalització aplicada als sectors productius",
+  "Itinerario personal para la empleabilidad I": "Itinerari personal per a l’ocupabilitat I",
+  "Inglés profesional": "Anglès professional"
 };
 
 const esToCa: Record<string, string> = {

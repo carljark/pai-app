@@ -155,12 +155,53 @@ describe('Queue Service', () => {
     consoleSpy.mockRestore();
   });
 
-  it('debería capturar errores inesperados en processQueue', async () => {
-    vi.spyOn(Project, 'findOneAndUpdate').mockRejectedValueOnce(new Error('Fatal DB error'));
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+  it('debería manejar proyectos sin userId y errores sin message', async () => {
+    const mockProjectNoUser = {
+      _id: 'proj_no_user',
+      status: 'en_cola',
+      title: 'No User Proj',
+      save: vi.fn().mockResolvedValue(true)
+    };
+
+    vi.spyOn(Project, 'findOneAndUpdate')
+      .mockResolvedValueOnce(mockProjectNoUser as any)
+      .mockResolvedValueOnce(null);
+
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockRejectedValue('Error de texto plano');
+    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
     await processQueue();
-    expect(consoleSpy).toHaveBeenCalledWith('Error in Queue Worker:', expect.any(Error));
-    consoleSpy.mockRestore();
+
+    expect(mockProjectNoUser.status).toBe('error');
+    expect((mockProjectNoUser as any).errorDetail).toBe('Error de texto plano');
+    expect(sseService.sendToUser).not.toHaveBeenCalled();
+    consoleErrorSpy.mockRestore();
+  });
+
+  it('debería manejar proyectos sin userId en éxito', async () => {
+    const mockProjectSuccessNoUser = {
+      _id: 'proj_success_no_user',
+      status: 'en_cola',
+      title: 'Success No User',
+      save: vi.fn().mockResolvedValue(true)
+    };
+
+    vi.spyOn(Project, 'findOneAndUpdate')
+      .mockResolvedValueOnce(mockProjectSuccessNoUser as any)
+      .mockResolvedValueOnce(null);
+
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockResolvedValue({
+      text: 'Texto generado',
+      provider: 'gemini',
+      model: 'gemini-3.8-flash',
+      fallbackUsed: false
+    });
+    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+
+    await processQueue();
+
+    expect(mockProjectSuccessNoUser.status).toBe('borrador');
+    expect(sseService.sendToUser).not.toHaveBeenCalled();
   });
 });

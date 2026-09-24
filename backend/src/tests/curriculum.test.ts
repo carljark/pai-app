@@ -159,6 +159,63 @@ describe('Curriculum Endpoints', () => {
       expect(res.body[0].area).toBe('Àmbit Sociolingüístic');
     });
 
+    it('debería manejar RAs con criterios_ca y criterios_es', async () => {
+      const ra = new RA({
+        id: 'RA_EXP',
+        module: 'Custom Mod',
+        module_ca: 'Custom Mod CA',
+        module_es: 'Custom Mod ES',
+        description: 'Desc base',
+        criterios_ca: ['Crit CA 1'],
+        criterios_es: ['Crit ES 1']
+      });
+      await ra.save();
+
+      const resCa = await request(app)
+        .get('/api/ras?lang=catalan')
+        .set('Authorization', `Bearer ${token}`);
+      expect(resCa.status).toBe(200);
+      const itemCa = resCa.body.find((x: any) => x.id === 'RA_EXP');
+      expect(itemCa.module).toBe('Custom Mod CA');
+      expect(itemCa.criterios).toEqual(['Crit CA 1']);
+
+      const resEs = await request(app)
+        .get('/api/ras?lang=castellano')
+        .set('Authorization', `Bearer ${token}`);
+      expect(resEs.status).toBe(200);
+      const itemEs = resEs.body.find((x: any) => x.id === 'RA_EXP');
+      expect(itemEs.module).toBe('Custom Mod ES');
+      expect(itemEs.criterios).toEqual(['Crit ES 1']);
+    });
+
+    it('debería obtener CEs con fallbacks si faltan campos específicos', async () => {
+      const ce = new CE({
+        area: 'Área Desconocida',
+        subject: 'Física Clásica',
+        ce_id: 'CE_FALLBACK',
+        description_es: 'Desc default ES',
+        criterios_es: ['Crit default ES']
+      });
+      await ce.save();
+
+      const resEs = await request(app)
+        .get('/api/ces?lang=castellano')
+        .set('Authorization', `Bearer ${token}`);
+      expect(resEs.status).toBe(200);
+      const itemEs = resEs.body.find((x: any) => x.ce_id === 'CE_FALLBACK');
+      expect(itemEs.area).toBe('Área Desconocida');
+      expect(itemEs.subject).toBe('Física Clásica');
+      expect(itemEs.description).toBe('Desc default ES');
+
+      const resCa = await request(app)
+        .get('/api/ces?lang=catalan')
+        .set('Authorization', `Bearer ${token}`);
+      expect(resCa.status).toBe(200);
+      const itemCa = resCa.body.find((x: any) => x.ce_id === 'CE_FALLBACK');
+      expect(itemCa.area).toBe('Área Desconocida');
+      expect(itemCa.description).toBe('Desc default ES');
+    });
+
     it('debería manejar errores de base de datos en CEs', async () => {
       const spy = vi.spyOn(CE, 'find').mockRejectedValueOnce(new Error('DB Error'));
       const res = await request(app)

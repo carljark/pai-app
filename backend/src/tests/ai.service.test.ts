@@ -32,16 +32,18 @@ describe('AI Service', () => {
   });
 
   it('debería soportar preferredModel y fallback de modelos internos en Gemini', async () => {
-    // Primer intento falla (ej: 429 quota o 503 unavailable), segundo intento tiene éxito
+    // Primer intento falla con status HTTP (ej: 429 quota o 503 unavailable), segundo intento tiene éxito con modelVersion
+    const httpError = new Error('Quota limit 429');
+    (httpError as any).status = 429;
     generateContentMock
-      .mockRejectedValueOnce(new Error('Quota limit 429'))
-      .mockResolvedValueOnce({ text: 'Respuesta segundo modelo' });
+      .mockRejectedValueOnce(httpError)
+      .mockResolvedValueOnce({ text: 'Respuesta segundo modelo', modelVersion: 'gemini-3.8-flash-v2' });
 
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     const res = await generateGeminiContent('prompt', 'instruction', 'gemini-2.5-pro');
 
     expect(res.text).toBe('Respuesta segundo modelo');
-    expect(res.model).toBe('gemini-3.8-flash');
+    expect(res.model).toBe('gemini-3.8-flash-v2');
     expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('Fallback interno: intentando modelo gemini-3.8-flash'));
     warnSpy.mockRestore();
   });
@@ -173,13 +175,16 @@ describe('AI Service', () => {
     expect(phaseCalls).toEqual(['analizando:gemini', 'reintentando:openrouter']);
   });
 
-  it('generateAiContentWithFallback debería lanzar error si fallan ambos', async () => {
+  it('generateAiContentWithFallback debería lanzar error si fallan ambos (incluso con error en string)', async () => {
     process.env.OPENROUTER_API_KEY = 'test_key';
-    vi.stubGlobal('fetch', vi.fn().mockRejectedValueOnce(new Error('OR down')));
-    generateContentMock.mockRejectedValue(new Error('Gemini down'));
+    vi.stubGlobal('fetch', vi.fn().mockRejectedValueOnce('Error OR sin message'));
+    generateContentMock.mockRejectedValue('Error Gemini sin message');
 
     await expect(generateAiContentWithFallback('p', 'i', 'gemini')).rejects.toThrow('Fallaron todos los proveedores');
   });
 
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
 });
 

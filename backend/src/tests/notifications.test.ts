@@ -149,6 +149,41 @@ describe('Notifications API and Service', () => {
     expect(result3?.userEmail).toBe('populated@test.com');
     expect(result3?.userName).toBe('Populated User');
 
+    // Test with pre-populated project.userId with only email
+    const projectWithEmailOnly = {
+      _id: new mongoose.Types.ObjectId(),
+      userId: { email: 'only_email@test.com' },
+      status: 'borrador'
+    };
+    const resultEmailOnly = await syncProjectNotification(projectWithEmailOnly);
+    expect(resultEmailOnly?.userEmail).toBe('only_email@test.com');
+    expect(resultEmailOnly?.userName).toBe('Profesor');
+
+    // Test with non-existent user ObjectId
+    const nonExistentUserId = new mongoose.Types.ObjectId();
+    const projectWithUnknownUser = {
+      _id: new mongoose.Types.ObjectId(),
+      userId: nonExistentUserId,
+      status: 'borrador',
+      ras: ['RA1', 'RA2']
+    };
+    const resultUnknownUser = await syncProjectNotification(projectWithUnknownUser, { rasCount: 5 });
+    expect(resultUnknownUser?.userName).toBe('Profesor');
+    expect(resultUnknownUser?.rasCount).toBe(5);
+
+    // Test when User.findById throws inside resolveUserDetails
+    const userFindSpy = vi.spyOn(mongoose.model('User'), 'findById').mockImplementationOnce(() => {
+      throw new Error('User lookup failure');
+    });
+    const projectLookupError = {
+      _id: new mongoose.Types.ObjectId(),
+      userId: new mongoose.Types.ObjectId(),
+      status: 'borrador'
+    };
+    const resultLookupError = await syncProjectNotification(projectLookupError);
+    expect(resultLookupError?.userName).toBe('Profesor');
+    userFindSpy.mockRestore();
+
     // Test with error status and errorDetail
     const errorProject = await new Project({
       title: 'Error Proj',

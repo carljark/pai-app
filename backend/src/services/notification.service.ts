@@ -15,13 +15,7 @@ interface NotificationExtra {
 }
 
 function isValidObjectId(value: any): boolean {
-  // mongoose.isValidObjectId is available in Mongoose 5.0+
-  // It returns true for ObjectId instances and valid 24-character hex strings
-  return typeof mongoose.isValidObjectId === 'function'
-    ? mongoose.isValidObjectId(value)
-    : // Fallback for older versions
-      (value instanceof mongoose.Types.ObjectId ||
-        (typeof value === 'string' && mongoose.Types.ObjectId.isValid(value)));
+  return mongoose.isValidObjectId(value);
 }
 
 async function resolveUserDetails(project: any, extra?: NotificationExtra) {
@@ -53,9 +47,12 @@ async function resolveUserDetails(project: any, extra?: NotificationExtra) {
 
 function buildUpdateData(project: any, extra: NotificationExtra | undefined, resolvedUser: { userName: string; userEmail?: string }) {
   const rasCount = extra?.rasCount ?? (project.ras ? project.ras.length : 0);
+  const rawUserId = project.userId?._id || project.userId;
+  const userId = isValidObjectId(rawUserId) ? rawUserId : undefined;
+
   return {
     projectId: project._id,
-    userId: project.userId?._id || project.userId,
+    ...(userId ? { userId } : {}),
     userName: resolvedUser.userName,
     modules: project.modules || [],
     rasCount,

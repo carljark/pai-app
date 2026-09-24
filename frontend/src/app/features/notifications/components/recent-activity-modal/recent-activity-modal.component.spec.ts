@@ -58,7 +58,7 @@ describe('RecentActivityModalComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Analizando...');
     expect(compiled.textContent).toContain('Reintentando...');
-    expect(compiled.textContent).toContain('Tardará entre 2 y 10 minutos');
+    expect(compiled.textContent).toContain('Tardará entre 2 y 20 minutos');
     expect(compiled.textContent).toContain('Completado');
     expect(compiled.textContent).toContain('25.0s');
   });

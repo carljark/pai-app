@@ -50,8 +50,8 @@ const PORT = process.env.PORT || 3000;
 /* istanbul ignore next */
 if (process.env.NODE_ENV !== 'test') {
   const server = app.listen(PORT, () => console.log(`Backend PAI escuchando en puerto ${PORT}`));
-  server.requestTimeout = 660_000; // 11 minutos para tolerar respuestas IA de hasta 10 minutos
-  server.headersTimeout = 670_000;
+  server.requestTimeout = 1_260_000; // 21 minutos para tolerar respuestas IA de hasta 20 minutos
+  server.headersTimeout = 1_270_000;
 }
 
 export { app };

@@ -48,7 +48,7 @@ export const generateGeminiContent = async (
   userPrompt: string,
   systemInstruction: string,
   preferredModel = DEFAULT_GEMINI_MODEL,
-  timeoutMs = 600_000
+  timeoutMs = 1_200_000
 ): Promise<SingleAiResult> => {
   const { GoogleGenAI } = await import('@google/genai');
   const ai = new GoogleGenAI({ httpOptions: { timeout: timeoutMs } });
@@ -85,12 +85,12 @@ export const generateGeminiContent = async (
   }
 
   if (lastError?.name === 'TimeoutError' || lastError?.message?.includes('Timeout en Gemini')) {
-    throw new Error('Timeout en Gemini (10m): el proveedor no respondió a tiempo');
+    throw new Error('Timeout en Gemini (20m): el proveedor no respondió a tiempo');
   }
   throw lastError || new Error('Fallaron todos los modelos de Gemini');
 };
 
-const requestOpenRouterApi = async (apiKey: string, payload: any, timeoutMs = 600_000) => {
+const requestOpenRouterApi = async (apiKey: string, payload: any, timeoutMs = 1_200_000) => {
   return fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     signal: AbortSignal.timeout(timeoutMs),
@@ -132,7 +132,7 @@ export const generateOpenRouterContent = async (
     return await parseOpenRouterResponse(response, model);
   } catch (err: any) {
     if (err.name === 'TimeoutError' || err.name === 'AbortError') {
-      throw new Error('Timeout en OpenRouter (10m): el proveedor gratuito no respondió a tiempo');
+      throw new Error('Timeout en OpenRouter (20m): el proveedor gratuito no respondió a tiempo');
     }
     throw err;
   }

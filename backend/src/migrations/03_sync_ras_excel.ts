@@ -6,8 +6,15 @@ import path from 'path';
 export const up = async () => {
   console.log('Sincronizando todos los RAs desde el Excel oficial...');
   
-  const filePath = path.join(process.cwd(), 'ras_excel.json');
-  if (!fs.existsSync(filePath)) {
+  const possiblePaths = [
+    path.join(process.cwd(), 'ras_excel.json'),
+    path.join(process.cwd(), 'backend', 'ras_excel.json'),
+    path.join(__dirname, '..', '..', 'ras_excel.json'),
+    path.join(__dirname, '..', 'ras_excel.json')
+  ];
+
+  const filePath = possiblePaths.find(p => fs.existsSync(p));
+  if (!filePath) {
     console.log('No se encontró ras_excel.json. Saltando migración.');
     return;
   }

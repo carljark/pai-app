@@ -21,6 +21,8 @@ export interface RelatedCriteriaItem {
   moduleName_es: string;
   moduleName_ca: string;
   criteria: string;
+  criteria_es?: string;
+  criteria_ca?: string;
 }
 
 export interface IntermodularConnection {

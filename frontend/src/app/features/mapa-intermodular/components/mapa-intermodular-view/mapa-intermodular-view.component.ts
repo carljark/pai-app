@@ -126,7 +126,7 @@ export class MapaIntermodularViewComponent {
   }
 
   createProjectFromConnection(connection?: IntermodularConnection) {
-    this.curriculum.setTipoNivel('FP_BASICA');
+    this.curriculum.setTipoNivel(this.facade.activeTab() === 'CFGM' ? 'CFGM_ESTETICA' : 'FP_BASICA');
     const allRas = this.curriculum.ras();
     const activeRa = this.facade.selectedRa();
     const activeModule = this.facade.selectedModule();

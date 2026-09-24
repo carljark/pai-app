@@ -214,11 +214,13 @@ export class MapaIntermodularFacade {
     this.activeTab.set(tab);
     if (tab === 'FPB') {
       this.modules.set(FPB_MODULES_SEED);
+      this.selectedModuleCode.set('3060');
+      this.selectedRaId.set('3060_RA1');
     } else {
       this.modules.set(CFGM_MODULES_SEED);
+      this.selectedModuleCode.set('0633');
+      this.selectedRaId.set('0633_RA1');
     }
-    this.selectedModuleCode.set('');
-    this.selectedRaId.set('');
     this.selectedCriterion.set(null);
   }
 }

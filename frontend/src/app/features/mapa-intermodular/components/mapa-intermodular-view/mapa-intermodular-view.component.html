@@ -112,7 +112,7 @@
         <div class="mapa-stats">
           <div class="mapa-stat-card">
             <span class="mapa-stat-value">{{ facade.stats().totalModules }}</span>
-            <span class="mapa-stat-label">{{ isCa() ? 'Mòduls FPB' : 'Módulos FPB' }}</span>
+            <span class="mapa-stat-label">{{ isCa() ? (facade.activeTab() === 'CFGM' ? 'Mòduls CFGM' : 'Mòduls FPB') : (facade.activeTab() === 'CFGM' ? 'Módulos CFGM' : 'Módulos FPB') }}</span>
           </div>
           <div class="mapa-stat-card">
             <span class="mapa-stat-value">{{ facade.stats().totalRas }}</span>
@@ -376,7 +376,7 @@
                           <div class="mapa-related-chip-item">
                             <span class="mapa-related-code-tag">{{ rel.moduleCode }}</span>
                             <span class="mapa-related-name-tag">{{ isCa() ? (rel.moduleName_ca || rel.moduleName_es) : rel.moduleName_es }}:</span>
-                            <strong class="mapa-related-crit-tag">{{ rel.criteria }}</strong>
+                            <strong class="mapa-related-crit-tag">{{ isCa() ? (rel.criteria_ca || rel.criteria) : (rel.criteria_es || rel.criteria) }}</strong>
                           </div>
                         }
                       </div>
@@ -393,7 +393,7 @@
                 <!-- Activities -->
                 <div class="mapa-activities-container">
                   <h4 class="mapa-activities-title">
-                    {{ isCa() ? 'Propostes d’Activitats i Reptes FPB' : 'Propuestas de Actividades y Retos FPB' }}
+                    {{ isCa() ? (facade.activeTab() === 'CFGM' ? 'Propostes d’Activitats i Reptes CFGM' : 'Propostes d’Activitats i Reptes FPB') : (facade.activeTab() === 'CFGM' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
                   </h4>
 
                   <div class="mapa-activities-grid">
@@ -422,7 +422,7 @@
                           </div>
 
                           <div class="mapa-meta-box mapa-meta-diversity">
-                            <strong>{{ isCa() ? 'Aprenentatges i Diversitat FPB:' : 'Aprendizajes y Diversidad FPB:' }}</strong>
+                            <strong>{{ isCa() ? (facade.activeTab() === 'CFGM' ? 'Aprenentatges i Diversitat CFGM:' : 'Aprenentatges i Diversitat FPB:') : (facade.activeTab() === 'CFGM' ? 'Aprendizajes y Diversidad CFGM:' : 'Aprendizajes y Diversidad FPB:') }}</strong>
                             <span>{{ isCa() ? act.diversitySupport_ca : act.diversitySupport_es }}</span>
                           </div>
                         </div>

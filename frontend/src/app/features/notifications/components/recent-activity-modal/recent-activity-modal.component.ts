@@ -82,6 +82,12 @@ import { TranslationService } from '../../../../services/translation.service';
                   }
                 </div>
 
+                @if (p.status === 'error' && getErrorMessage(p)) {
+                  <div style="font-size: 0.8rem; color: #b91c1c; background: #fee2e2; border: 1px solid #fecaca; padding: 6px 10px; border-radius: 6px; margin-top: 4px; word-break: break-word;">
+                    ⚠️ Error: {{ getErrorMessage(p) }}
+                  </div>
+                }
+
                 @if ((p.status === 'generando' || p.status === 'en_cola') && ((p.rasCount && p.rasCount > 2) || (p.ras && p.ras.length > 2))) {
                   <div style="font-size: 0.78rem; color: #b45309; background: #fef3c7; border: 1px solid #fde68a; border-radius: 4px; padding: 2px 6px; display: inline-flex; align-items: center; gap: 4px; align-self: flex-start;">
                     <span>⚠️ {{ trans.t().longGenerationNotice }}</span>
@@ -132,5 +138,15 @@ export class RecentActivityModalComponent {
       d.getMonth() === nowDate.getMonth() &&
       d.getDate() === nowDate.getDate()
     );
+  }
+
+  getErrorMessage(p: any): string | null {
+    if (!p) return null;
+    if (p.errorDetail) return p.errorDetail;
+    if (p.error) return p.error;
+    if (p.status === 'error' && p.message && p.message !== p.title && p.message !== 'Proyecto Educativo') {
+      return p.message;
+    }
+    return null;
   }
 }

@@ -189,6 +189,13 @@ export class AppFacade {
   }
 
   viewPastProject(project: any): void {
+    if (project.status === 'error') {
+      const err = project.errorDetail || project.error || 'Error desconocido';
+      this.errorTitle.set(this.trans.t().viewError || 'Error de Generación');
+      this.errorMessage.set(err);
+      this.showErrorModal.set(true);
+      return;
+    }
     this.projects.currentProjectId.set(project._id);
     const rawText = typeof project.generatedContent === 'string' 
       ? project.generatedContent 

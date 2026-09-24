@@ -121,4 +121,25 @@ describe('RecentActivityModalComponent', () => {
     // For yesterday, the full date 23/09/2026 must be present
     expect(compiled.textContent).toContain('23/09/2026');
   });
+
+  it('should getErrorMessage correctly for various project structures', () => {
+    expect(component.getErrorMessage(null)).toBeNull();
+    expect(component.getErrorMessage({ status: 'borrador' })).toBeNull();
+    expect(component.getErrorMessage({ status: 'error', errorDetail: 'Error detallado' })).toBe('Error detallado');
+    expect(component.getErrorMessage({ status: 'error', error: 'Error simple' })).toBe('Error simple');
+    expect(component.getErrorMessage({ status: 'error', message: 'Mensaje de error custom', title: 'Otro' })).toBe('Mensaje de error custom');
+    expect(component.getErrorMessage({ status: 'error', message: 'Proyecto Educativo', title: 'Proyecto Educativo' })).toBeNull();
+  });
+
+  it('should render error banner in template when project has status error', () => {
+    const projects = [
+      { _id: 'p-err', status: 'error', title: 'Proyecto Fallido', errorDetail: 'El modelo IA ha agotado el tiempo de espera' }
+    ];
+    componentRef.setInput('recentProjects', projects);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('Error');
+    expect(compiled.textContent).toContain('El modelo IA ha agotado el tiempo de espera');
+  });
 });

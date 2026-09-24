@@ -397,6 +397,33 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
     });
+
+    it('should show error modal when project status is error with errorDetail', () => {
+      const proj = {
+        _id: 'err-1',
+        status: 'error',
+        errorDetail: 'Fallo al procesar con IA'
+      };
+
+      facade.viewPastProject(proj);
+
+      expect(facade.errorMessage()).toBe('Fallo al procesar con IA');
+      expect(facade.showErrorModal()).toBe(true);
+      expect(layoutServiceMock.switchView).not.toHaveBeenCalled();
+    });
+
+    it('should show error modal with fallback message when project status is error without errorDetail', () => {
+      const proj = {
+        _id: 'err-2',
+        status: 'error'
+      };
+
+      facade.viewPastProject(proj);
+
+      expect(facade.errorMessage()).toBe('Error desconocido');
+      expect(facade.showErrorModal()).toBe(true);
+      expect(layoutServiceMock.switchView).not.toHaveBeenCalled();
+    });
   });
 
   describe('retryProject', () => {

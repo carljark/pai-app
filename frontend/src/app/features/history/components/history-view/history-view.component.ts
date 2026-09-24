@@ -136,6 +136,11 @@ import { TranslationService } from '../../../../services/translation.service';
                 </span>
               }
             </div>
+            @if (project.status === 'error' && (project.errorDetail || project.error)) {
+              <div style="font-size: 0.85rem; color: #b91c1c; background: #fee2e2; border: 1px solid #fecaca; padding: 6px 12px; border-radius: 6px; margin-top: 8px; word-break: break-word; max-width: 600px;">
+                ⚠️ Error: {{ project.errorDetail || project.error }}
+              </div>
+            }
           </div>
           <div style="display: flex; gap: 10px;">
             @if (project.status === 'error') {

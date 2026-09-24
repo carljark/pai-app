@@ -164,5 +164,36 @@ describe('NotificationMapper', () => {
     expect(notif.id).toBe('embedded_1');
     expect(notif.title).toBe('Embedded Notif');
   });
+
+  it('should map errorDetail correctly in fromDbEntity and fromRawEvent', () => {
+    const dbErr = {
+      _id: 'db_err_1',
+      status: 'error',
+      type: 'PROJECT_ERROR',
+      errorDetail: 'Error de prueba en base de datos'
+    };
+    const mappedDb = NotificationMapper.fromDbEntity(dbErr);
+    expect(mappedDb.errorDetail).toBe('Error de prueba en base de datos');
+    expect(mappedDb.error).toBe('Error de prueba en base de datos');
+
+    const dbFallbackErr = {
+      _id: 'db_err_2',
+      status: 'error',
+      type: 'PROJECT_ERROR',
+      message: 'Mensaje de error fallback'
+    };
+    const mappedFallback = NotificationMapper.fromDbEntity(dbFallbackErr);
+    expect(mappedFallback.errorDetail).toBe('Mensaje de error fallback');
+
+    const rawErr: RawNotificationEvent = {
+      type: 'PROJECT_ERROR',
+      projectId: 'raw_p1',
+      status: 'error',
+      error: 'Error en crudo'
+    };
+    const mappedRaw = NotificationMapper.fromRawEvent(rawErr);
+    expect(mappedRaw.errorDetail).toBe('Error en crudo');
+    expect(mappedRaw.error).toBe('Error en crudo');
+  });
 });
 

@@ -14,6 +14,7 @@ const NotificationSchema = new mongoose.Schema({
   status: { type: String, required: true }, // 'en_cola' | 'generando' | 'borrador' | 'error' | 'publicado'
   generationTimeMs: { type: Number },
   generationStartedAt: { type: Date },
+  errorDetail: { type: String },
   readBy: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }

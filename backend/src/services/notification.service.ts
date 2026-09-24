@@ -11,6 +11,7 @@ interface NotificationExtra {
   userEmail?: string;
   phase?: string;
   rasCount?: number;
+  errorDetail?: string;
 }
 
 function isValidObjectId(value: any): boolean {
@@ -62,6 +63,7 @@ function buildUpdateData(project: any, extra: NotificationExtra | undefined, res
     status: project.status,
     generationTimeMs: project.generationTimeMs,
     generationStartedAt: project.generationStartedAt,
+    errorDetail: project.errorDetail || extra?.errorDetail,
     updatedAt: new Date(),
     ...(resolvedUser.userEmail ? { userEmail: resolvedUser.userEmail } : {}),
     ...(extra?.type ? { type: extra.type } : {}),
@@ -100,6 +102,8 @@ export async function syncProjectNotification(project: any, extra?: Notification
       generationTimeMs: project.generationTimeMs,
       generationStartedAt: project.generationStartedAt,
       message: extra?.message,
+      error: updateData.errorDetail,
+      errorDetail: updateData.errorDetail,
       userName: updateData.userName,
       userEmail: updateData.userEmail
     });

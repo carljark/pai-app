@@ -3,6 +3,7 @@ export interface RawNotificationEvent {
   projectId?: string;
   project?: any;
   error?: string;
+  errorDetail?: string;
   status?: string;
   phase?: string;
   rasCount?: number;
@@ -21,6 +22,8 @@ export interface AppNotification {
   type: 'COMPLETED' | 'ERROR' | 'STATUS' | 'INFO';
   title: string;
   message: string;
+  error?: string;
+  errorDetail?: string;
   projectId?: string;
   userId?: string;
   userName?: string;

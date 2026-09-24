@@ -21,7 +21,7 @@ describe('Notifications API and Service', () => {
     const { token, user } = await createTestUser('teacher', 'notif_user1@test.com');
     await Project.create([
       { title: 'Proyecto Backfill', modules: ['3060'], status: 'borrador', userId: user._id, generationTimeMs: 12000 },
-      { status: 'error' },
+      { status: 'error', errorDetail: 'Timeout al conectar con la IA' },
       { title: 'Publicado Test', status: 'publicado', userId: user._id },
       { title: 'Generando Test', status: 'generando', userId: user._id }
     ]);
@@ -38,6 +38,8 @@ describe('Notifications API and Service', () => {
     expect(titles).toContain('Proyecto Educativo');
     const backfilledWithUser = res.body.find((n: any) => n.title === 'Proyecto Backfill');
     expect(backfilledWithUser.userEmail).toBe('notif_user1@test.com');
+    const errorNotif = res.body.find((n: any) => n.status === 'error');
+    expect(errorNotif.errorDetail).toBe('Timeout al conectar con la IA');
   });
 
 
@@ -146,6 +148,27 @@ describe('Notifications API and Service', () => {
     expect(result3).toBeTruthy();
     expect(result3?.userEmail).toBe('populated@test.com');
     expect(result3?.userName).toBe('Populated User');
+
+    // Test with error status and errorDetail
+    const errorProject = await new Project({
+      title: 'Error Proj',
+      userId: user._id,
+      status: 'error',
+      errorDetail: 'Error fatal de API'
+    }).save();
+    const resultError = await syncProjectNotification(errorProject, {
+      type: 'PROJECT_ERROR',
+      title: 'Error de Generación',
+      message: 'Error al generar el proyecto: Error fatal de API',
+      errorDetail: 'Error fatal de API'
+    });
+    expect(resultError).toBeTruthy();
+    expect(resultError?.errorDetail).toBe('Error fatal de API');
+    expect(sseService.broadcast).toHaveBeenCalledWith(expect.objectContaining({
+      type: 'PROJECT_ERROR',
+      error: 'Error fatal de API',
+      errorDetail: 'Error fatal de API'
+    }));
   });
 
 

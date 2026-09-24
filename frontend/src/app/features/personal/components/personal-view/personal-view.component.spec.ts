@@ -253,6 +253,14 @@ describe('PersonalViewComponent', () => {
     expect(mockAppFacade.deleteProject).toHaveBeenCalledWith('2');
   });
 
+  it('debería mostrar mensaje de error cuando el estado es error y existe errorDetail', () => {
+    mockProjectsFacade.myProjects.set([
+      { _id: 'err1', title: 'Error Proj', status: 'error', errorDetail: 'Error de prueba en personal', createdAt: new Date().toISOString() }
+    ]);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('⚠️ Error: Error de prueba en personal');
+  });
+
   it('debería mostrar estado vacío y permitir click en el botón de creación', () => {
     mockProjectsFacade.myProjects.set([]);
     fixture.detectChanges();

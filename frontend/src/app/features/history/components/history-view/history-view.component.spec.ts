@@ -188,6 +188,14 @@ describe('HistoryViewComponent', () => {
     expect(mockAppFacade.viewPastProject).toHaveBeenCalledWith(mockProjectsFacade.projectsHistory()[1]);
   });
 
+  it('should display error message when project status is error and errorDetail exists', () => {
+    mockProjectsFacade.projectsHistory.set([
+      { _id: 'err1', title: 'Error Proj', status: 'error', errorDetail: 'Timeout conectando con API', createdAt: new Date().toISOString(), tipoNivel: 'FP_BASICA' }
+    ]);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('⚠️ Error: Timeout conectando con API');
+  });
+
   it('should call deleteProject when delete button is clicked', () => {
     mockProjectsFacade.projectsHistory.set([
       { _id: '1', title: 'Proj 1', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' }

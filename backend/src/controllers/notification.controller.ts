@@ -24,6 +24,7 @@ async function backfillNotificationsIfEmpty() {
       type: getNotifType(p.status),
       title: p.title || 'Proyecto Educativo',
       message: p.title || 'Proyecto Educativo',
+      errorDetail: p.errorDetail,
       generationTimeMs: p.generationTimeMs,
       generationStartedAt: p.generationStartedAt,
       createdAt: p.createdAt,

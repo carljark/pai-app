@@ -41,11 +41,15 @@ export class NotificationMapper {
     const userEmail = db.userEmail || user?.email;
     const userName = db.userName || user?.name || 'Profesor';
 
+    const errorDetail = db.errorDetail || db.error || (db.status === 'error' ? db.message : undefined);
+
     return {
       id: db._id?.toString() || db.id || Date.now().toString(),
       type: typeMap[db.type] || 'INFO',
       title: db.title || 'Proyecto Educativo',
       message: db.message || '',
+      error: errorDetail,
+      errorDetail,
       projectId: db.projectId?.toString(),
       userId: user?._id?.toString() || db.userId?.toString(),
       userName,
@@ -70,12 +74,15 @@ export class NotificationMapper {
     const user = raw.project?.userId && typeof raw.project.userId === 'object' ? raw.project.userId : null;
     const userEmail = raw.userEmail || user?.email;
     const userName = raw.userName || user?.name || 'Profesor';
+    const errorDetail = raw.errorDetail || raw.error || raw.project?.errorDetail || (raw.status === 'error' ? raw.message : undefined);
 
     return {
       id: raw.projectId || (Date.now().toString() + Math.random().toString(36).substring(7)),
       type: meta.type,
       title: meta.title,
       message: meta.message,
+      error: errorDetail,
+      errorDetail,
       projectId: raw.projectId,
       userId: user?._id?.toString() || (typeof raw.project?.userId === 'string' ? raw.project.userId : undefined),
       userName,

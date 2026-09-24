@@ -99,7 +99,8 @@ async function notifyProjectError(project: any, generationTimeMs: number) {
   await syncProjectNotification(project, {
     type: 'PROJECT_ERROR',
     title: 'Error de Generación',
-    message: `Error al generar el proyecto: ${project.errorDetail}`
+    message: `Error al generar el proyecto: ${project.errorDetail}`,
+    errorDetail: project.errorDetail
   });
 }
 

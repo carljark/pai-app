@@ -233,6 +233,18 @@ describe('AppFacade', () => {
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
     });
 
+    it('should generate project on success and set historyTab to CFGM for CFGM_ESTETICA', () => {
+      curriculumFacadeMock.tipoNivel.set('CFGM_ESTETICA');
+      curriculumFacadeMock.selectedRas.set(['ra_cfgm']);
+      projectsFacadeMock.generateProject.mockReturnValue(of({}));
+
+      facade.generateProject();
+
+      expect(projectsFacadeMock.historyTab()).toBe('CFGM');
+      expect(projectsFacadeMock.isGenerating()).toBe(false);
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
+    });
+
     it('should show error modal on generate project error', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
       projectsFacadeMock.generateProject.mockReturnValue(throwError(() => ({ error: { error: 'Server error' } })));

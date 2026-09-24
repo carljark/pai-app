@@ -83,4 +83,42 @@ describe('RecentActivityModalComponent', () => {
     expect(compiled.textContent).toContain('profesor@test.com');
     expect(compiled.textContent).toContain('SoloNombre');
   });
+
+  it('should check isToday accurately for today, yesterday, older and invalid dates', () => {
+    const fixedNow = new Date(2026, 8, 24, 12, 0, 0).getTime();
+    componentRef.setInput('now', fixedNow);
+    fixture.detectChanges();
+
+    const todayDate = new Date(2026, 8, 24, 8, 30, 0);
+    const yesterdayDate = new Date(2026, 8, 23, 23, 59, 0);
+    const olderDate = new Date(2026, 7, 10, 10, 0, 0);
+
+    expect(component.isToday(todayDate)).toBe(true);
+    expect(component.isToday(yesterdayDate)).toBe(false);
+    expect(component.isToday(olderDate)).toBe(false);
+    expect(component.isToday(null)).toBe(false);
+    expect(component.isToday(undefined)).toBe(false);
+    expect(component.isToday('invalid-date')).toBe(false);
+  });
+
+  it('should render shortTime for today and full date (dd/MM/yyyy) for yesterday or earlier in template', () => {
+    const fixedNow = new Date(2026, 8, 24, 12, 0, 0).getTime();
+    componentRef.setInput('now', fixedNow);
+
+    const todayDate = new Date(2026, 8, 24, 9, 15, 0);
+    const yesterdayDate = new Date(2026, 8, 23, 16, 45, 0);
+
+    const projects = [
+      { _id: 'p-today', status: 'borrador', title: 'Proyecto Hoy', createdAt: todayDate.toISOString() },
+      { _id: 'p-yesterday', status: 'borrador', title: 'Proyecto Ayer', createdAt: yesterdayDate.toISOString() }
+    ];
+    componentRef.setInput('recentProjects', projects);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('Proyecto Hoy');
+    expect(compiled.textContent).toContain('Proyecto Ayer');
+    // For yesterday, the full date 23/09/2026 must be present
+    expect(compiled.textContent).toContain('23/09/2026');
+  });
 });

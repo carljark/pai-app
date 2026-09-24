@@ -159,6 +159,21 @@ describe('ProjectsFacade', () => {
     req.flush({});
   });
 
+  it('should generate project (CFGM_ESTETICA) and set historyTab to CFGM', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_ESTETICA');
+    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_CFGM_1']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_CFGM_1', module: 'Estètica' }]);
+
+    facade.generateProject('castellano').subscribe();
+    expect(facade.historyTab()).toBe('CFGM');
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.tipoNivel).toBe('CFGM_ESTETICA');
+    expect(req.request.body.modules).toEqual(['Estètica']);
+    req.flush({});
+  });
+
   it('should include extraInstructions in generateProject payload when present', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
     mockCurriculumFacade.curso.mockReturnValue('1º');

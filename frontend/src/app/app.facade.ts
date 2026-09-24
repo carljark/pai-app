@@ -112,7 +112,13 @@ export class AppFacade {
     }
     this.notifications.clearLatestNotification?.();
     const nivel = this.curriculum.tipoNivel();
-    this.projects.historyTab.set(nivel === 'DIVERSIFICACION_CURRICULAR' ? 'ESO' : 'FPB');
+    if (nivel === 'DIVERSIFICACION_CURRICULAR') {
+      this.projects.historyTab.set('ESO');
+    } else if (nivel === 'CFGM_ESTETICA') {
+      this.projects.historyTab.set('CFGM');
+    } else {
+      this.projects.historyTab.set('FPB');
+    }
     this.projects.isGenerating.set(true);
     this.projects.generateProject(this.layout.language()).subscribe({
       next: () => this.onGenerateSuccess(),

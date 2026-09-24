@@ -48,6 +48,7 @@ describe('PersonalViewComponent', () => {
       personalSearchPlaceholder: 'Buscar...',
       createProjectBtn: 'Crear Proyecto',
       courseLevelFP: 'FP Básica',
+      courseLevelCFGM: 'CFGM',
       courseLevelPDC: 'ESO',
       untitledProject: 'Sin título',
       aiGemini: 'Primario',
@@ -102,15 +103,17 @@ describe('PersonalViewComponent', () => {
   it('debería filtrar por nivel educativo mediante clicks en el DOM', () => {
     mockProjectsFacade.myProjects.set([
       { _id: '1', title: 'P1 FPB', tipoNivel: 'FP_BASICA' },
-      { _id: '2', title: 'P2 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' }
+      { _id: '2', title: 'P2 CFGM', tipoNivel: 'CFGM_ESTETICA' },
+      { _id: '3', title: 'P3 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' }
     ]);
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Pills order: [ALL, FPB, ESO, ALL, borrador, publicado, error]
-    const fpbPill = pills[1];
-    const esoPill = pills[2];
+    // Pills order: [ALL, FPB, CFGM, ESO, ALL, borrador, publicado, error]
     const allPill = pills[0];
+    const fpbPill = pills[1];
+    const cfgmPill = pills[2];
+    const esoPill = pills[3];
 
     fpbPill.click();
     fixture.detectChanges();
@@ -118,16 +121,22 @@ describe('PersonalViewComponent', () => {
     expect(component.filteredMyProjects().length).toBe(1);
     expect(component.filteredMyProjects()[0].title).toBe('P1 FPB');
 
+    cfgmPill.click();
+    fixture.detectChanges();
+    expect(component.levelFilter()).toBe('CFGM');
+    expect(component.filteredMyProjects().length).toBe(1);
+    expect(component.filteredMyProjects()[0].title).toBe('P2 CFGM');
+
     esoPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ESO');
     expect(component.filteredMyProjects().length).toBe(1);
-    expect(component.filteredMyProjects()[0].title).toBe('P2 ESO');
+    expect(component.filteredMyProjects()[0].title).toBe('P3 ESO');
 
     allPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ALL');
-    expect(component.filteredMyProjects().length).toBe(2);
+    expect(component.filteredMyProjects().length).toBe(3);
   });
 
   it('debería filtrar por estado del proyecto mediante clicks en el DOM', () => {
@@ -139,11 +148,11 @@ describe('PersonalViewComponent', () => {
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Status pills are indexes 3 (ALL), 4 (borrador), 5 (publicado), 6 (error)
-    const borradorPill = pills[4];
-    const publicadoPill = pills[5];
-    const errorPill = pills[6];
-    const allStatusPill = pills[3];
+    // Status pills are indexes 4 (ALL), 5 (borrador), 6 (publicado), 7 (error)
+    const borradorPill = pills[5];
+    const publicadoPill = pills[6];
+    const errorPill = pills[7];
+    const allStatusPill = pills[4];
 
     borradorPill.click();
     fixture.detectChanges();

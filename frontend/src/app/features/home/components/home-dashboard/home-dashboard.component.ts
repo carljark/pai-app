@@ -70,7 +70,7 @@ type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
                   {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || t().homeDefaultModules }}
                 </p>
                 <div class="home-project-card__footer">
-                  <span class="home-project-card__level">{{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? t().courseLevelPDC : t().courseLevelFP }}</span>
+                  <span class="home-project-card__level">{{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? t().courseLevelPDC : (project.tipoNivel === 'CFGM_ESTETICA' ? t().courseLevelCFGM : t().courseLevelFP) }}</span>
                   <span class="home-project-card__open">{{ t().homeOpen }}</span>
                 </div>
               </div>

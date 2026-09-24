@@ -41,7 +41,11 @@ import { TranslationService } from '../../../../services/translation.service';
                   }
                 </div>
                 <span style="font-size: 0.85rem; color: #95a5a6; white-space: nowrap; margin-left: 15px;">
-                  {{ (p.updatedAt || p.createdAt || p.timestamp) | date:'shortTime' }}
+                  @if (isToday(p.updatedAt || p.createdAt || p.timestamp)) {
+                    {{ (p.updatedAt || p.createdAt || p.timestamp) | date:'shortTime' }}
+                  } @else {
+                    {{ (p.updatedAt || p.createdAt || p.timestamp) | date:'dd/MM/yyyy, HH:mm' }}
+                  }
                 </span>
               </div>
               
@@ -116,5 +120,17 @@ export class RecentActivityModalComponent {
   formatDurationMs(ms?: number): string {
     if (!ms) return '';
     return `${(ms / 1000).toFixed(1)}s`;
+  }
+
+  isToday(dateVal: any): boolean {
+    if (!dateVal) return false;
+    const d = new Date(dateVal);
+    if (isNaN(d.getTime())) return false;
+    const nowDate = new Date(this.now());
+    return (
+      d.getFullYear() === nowDate.getFullYear() &&
+      d.getMonth() === nowDate.getMonth() &&
+      d.getDate() === nowDate.getDate()
+    );
   }
 }

@@ -89,6 +89,9 @@ import { TranslationService } from '../../../../services/translation.service';
         <button class="history-tab" [class.active]="activeTab() === 'FPB'" (click)="activeTab.set('FPB')">
           {{ trans.t().courseLevelFP }}
         </button>
+        <button class="history-tab" [class.active]="activeTab() === 'CFGM'" (click)="activeTab.set('CFGM')">
+          {{ trans.t().courseLevelCFGM }}
+        </button>
         <button class="history-tab" [class.active]="activeTab() === 'ESO'" (click)="activeTab.set('ESO')">
           {{ trans.t().courseLevelPDC }}
         </button>
@@ -205,7 +208,9 @@ export class HistoryViewComponent {
     // Filtro por Nivel / Pestaña
     list = list.filter(p => {
       if (this.activeTab() === 'FPB') {
-        return p.tipoNivel === 'FP_BASICA' || p.tipoNivel === 'CFGM_ESTETICA' || !p.tipoNivel;
+        return p.tipoNivel === 'FP_BASICA' || (!p.tipoNivel && !p.courseLevel?.includes('CFGM'));
+      } else if (this.activeTab() === 'CFGM') {
+        return p.tipoNivel === 'CFGM_ESTETICA' || p.tipoNivel?.startsWith('CFGM');
       } else {
         return p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO';
       }

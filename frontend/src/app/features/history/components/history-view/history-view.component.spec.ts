@@ -35,6 +35,7 @@ describe('HistoryViewComponent', () => {
       t: signal({
         historyTitle: 'History',
         courseLevelFP: 'FPB',
+        courseLevelCFGM: 'CFGM',
         courseLevelPDC: 'ESO',
         searchProjects: 'Search',
         noProjectsInSection: 'No hay proyectos en esta sección.',
@@ -111,19 +112,41 @@ describe('HistoryViewComponent', () => {
     expect(component.getAiProviderLabel({})).toBeNull();
   });
 
-  it('should switch to ESO tab and show ESO projects via click', () => {
+  it('should switch to CFGM tab and show CFGM projects via click', () => {
     mockProjectsFacade.projectsHistory.set([
       { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },
-      { _id: '2', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
+      { _id: '2', title: 'Proj CFGM', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0633'], tipoNivel: 'CFGM_ESTETICA' },
+      { _id: '3', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
     const buttons = fixture.nativeElement.querySelectorAll('.history-tab');
-    buttons[1].click(); // Click on ESO tab
+    expect(buttons.length).toBe(3);
+    buttons[1].click(); // Click on CFGM tab
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement;
+    expect(component.activeTab()).toBe('CFGM');
+    expect(element.textContent).toContain('Proj CFGM');
+    expect(element.textContent).not.toContain('Proj FPB');
+    expect(element.textContent).not.toContain('Proj ESO');
+  });
+
+  it('should switch to ESO tab and show ESO projects via click', () => {
+    mockProjectsFacade.projectsHistory.set([
+      { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },
+      { _id: '2', title: 'Proj CFGM', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0633'], tipoNivel: 'CFGM_ESTETICA' },
+      { _id: '3', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
+    ]);
+    fixture.detectChanges();
+    const buttons = fixture.nativeElement.querySelectorAll('.history-tab');
+    buttons[2].click(); // Click on ESO tab
     fixture.detectChanges();
     
     const element = fixture.nativeElement;
     expect(component.activeTab()).toBe('ESO');
     expect(element.textContent).toContain('Proj ESO');
+    expect(element.textContent).not.toContain('Proj FPB');
+    expect(element.textContent).not.toContain('Proj CFGM');
   });
 
   it('should filter projects by search query and test fallbacks', () => {

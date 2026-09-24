@@ -33,6 +33,7 @@ describe('HomeDashboardComponent', () => {
       defaultUser: 'Docente',
       courseLevelPDC: 'ESO (PDC)',
       courseLevelFP: 'FP Básica',
+      courseLevelCFGM: 'CFGM Estética y Belleza',
       workshopViewAll: 'Ver todos los proyectos',
       
       homeRecentTitle: 'Recent',

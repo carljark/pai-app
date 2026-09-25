@@ -194,7 +194,7 @@ export class MapaIntermodularFacade {
         summary += `    ${isCa ? 'Criteris propis:' : 'Criterios propios:'} ${c.sourceCriteria}\n`;
       }
       if (c.relatedCriteria && c.relatedCriteria.length > 0) {
-        const relStr = c.relatedCriteria.map(r => `${r.moduleCode}: ${r.criteria}`).join(' | ');
+        const relStr = c.relatedCriteria.map(r => `${r.moduleCode}: ${isCa ? (r.criteria_ca || r.criteria) : (r.criteria_es || r.criteria)}`).join(' | ');
         summary += `    ${isCa ? 'Criteris relacionats:' : 'Criterios relacionados:'} ${relStr}\n`;
       }
       summary += `    ${isCa ? 'Justificació:' : 'Justificación:'} ${just}\n`;

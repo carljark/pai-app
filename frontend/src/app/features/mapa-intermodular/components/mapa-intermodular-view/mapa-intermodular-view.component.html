@@ -336,7 +336,9 @@
                     <div>
                       <strong class="mapa-conn-mod-name">{{ isCa() ? conn.targetModuleName_ca : conn.targetModuleName_es }}</strong>
                       @if (conn.title_es) {
-                        <div class="mapa-conn-coincidence-subtitle">{{ isCa() ? (conn.title_ca || conn.title_es) : conn.title_es }}</div>
+                        <div class="mapa-conn-coincidence-subtitle">
+                          {{ isCa() ? (conn.title_ca ?? conn.title_es) : conn.title_es }}
+                        </div>
                       }
                     </div>
                     <span class="mapa-target-ra-pill">{{ conn.targetRaCode }}</span>

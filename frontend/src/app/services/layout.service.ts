@@ -7,12 +7,15 @@ export class LayoutService {
   
   currentView = signal<'home' | 'generator' | 'history' | 'taller' | 'admin' | 'mapa' | 'personal' | 'feedback'>('home');
   isMobile = signal<boolean>(window.innerWidth <= 768);
-  isSidebarCollapsed = signal<boolean>(true);
+  isSidebarCollapsed = signal<boolean>(false);
   language = signal<'castellano' | 'catalan'>('castellano');
 
   constructor() {
     const savedView = localStorage.getItem('pai_view') as any;
-    if (savedView) this.currentView.set(savedView);
+    if (savedView) {
+      this.currentView.set(savedView);
+      this.isSidebarCollapsed.set(savedView !== 'home');
+    }
     
     const savedLang = localStorage.getItem('pai_lang') as any;
     if (savedLang === 'catalan' || savedLang === 'castellano') {
@@ -31,6 +34,7 @@ export class LayoutService {
 
   switchView(view: 'home' | 'generator' | 'taller' | 'history' | 'admin' | 'mapa' | 'personal' | 'feedback') {
     this.currentView.set(view);
+    this.isSidebarCollapsed.set(view !== 'home');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 

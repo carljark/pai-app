@@ -28,7 +28,7 @@ describe('LayoutService', () => {
     expect(service).toBeTruthy();
     expect(service.currentView()).toBe('home');
     expect(service.isMobile()).toBeDefined();
-    expect(service.isSidebarCollapsed()).toBe(true);
+    expect(service.isSidebarCollapsed()).toBe(false);
     expect(service.language()).toBe('castellano');
   });
 
@@ -37,16 +37,24 @@ describe('LayoutService', () => {
     localStorage.setItem('pai_lang', 'catalan');
     service = TestBed.inject(LayoutService);
     expect(service.currentView()).toBe('generator');
+    expect(service.isSidebarCollapsed()).toBe(true);
     expect(service.language()).toBe('catalan');
+  });
+
+  it('should uncollapse sidebar when saved view is home', () => {
+    localStorage.setItem('pai_view', 'home');
+    service = TestBed.inject(LayoutService);
+    expect(service.currentView()).toBe('home');
+    expect(service.isSidebarCollapsed()).toBe(false);
   });
 
   it('should toggle sidebar', () => {
     service = TestBed.inject(LayoutService);
-    expect(service.isSidebarCollapsed()).toBe(true);
-    service.toggleSidebar();
     expect(service.isSidebarCollapsed()).toBe(false);
     service.toggleSidebar();
     expect(service.isSidebarCollapsed()).toBe(true);
+    service.toggleSidebar();
+    expect(service.isSidebarCollapsed()).toBe(false);
   });
 
   it('should switch view and save to localStorage (via effect) and scroll to top', () => {
@@ -59,6 +67,7 @@ describe('LayoutService', () => {
     TestBed.flushEffects();
     
     expect(service.currentView()).toBe('taller');
+    expect(service.isSidebarCollapsed()).toBe(true);
     expect(scrollToSpy).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
     
     expect(localStorage.getItem('pai_view')).toBe('taller');
@@ -66,10 +75,17 @@ describe('LayoutService', () => {
     service.switchView('personal');
     TestBed.flushEffects();
     expect(service.currentView()).toBe('personal');
+    expect(service.isSidebarCollapsed()).toBe(true);
 
     service.switchView('feedback');
     TestBed.flushEffects();
     expect(service.currentView()).toBe('feedback');
+    expect(service.isSidebarCollapsed()).toBe(true);
+
+    service.switchView('home');
+    TestBed.flushEffects();
+    expect(service.currentView()).toBe('home');
+    expect(service.isSidebarCollapsed()).toBe(false);
   });
 
   it('should call authService.logout when logout is called', () => {

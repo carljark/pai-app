@@ -741,7 +741,7 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
           "d) Se han seleccionado los cosméticos que se van a emplear en la higiene facial y/o corporal, en función del tipo y el estado de la piel.",
           "e) Se han seleccionado los aparatos, útiles y materiales adecuados para la realización de la higiene facial y/o corporal.",
           "f) Se han dispuesto los materiales, cosméticos, útiles y aparatos de forma ordenada, para facilitar su utilización.",
-          "g) Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene."
+          "g) Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene."
         ],
         "criteria_ca": [
           "a) S'han identificat les necessitats de l'usuari per a adequar les tècniques d'higiene facial i corporal.",
@@ -10287,8 +10287,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               }
             ],
@@ -10443,8 +10443,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -13513,8 +13513,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -13599,8 +13599,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -13685,8 +13685,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -13779,8 +13779,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -13857,8 +13857,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -13943,8 +13943,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -14853,8 +14853,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -16893,11 +16893,11 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
               {
                 "id": "act_0640_2e_3",
                 "title_es": "Práctica guiada de taller",
-                "title_ca": "Cliente marejada",
+                "title_ca": "Clienta marejada",
                 "motivatingFactor_es": "Aplicar de forma práctica una parte del servicio respetando higiene, seguridad y calidad.",
                 "motivatingFactor_ca": "Simular una resposta professional davant malestar lleu durant un servei.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0640 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de imagen corporal, anatomía, hábitos saludables, higiene, desinfección y prevención, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: evidencia práctica observada con rúbrica, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0640-2e + 0633-2e + 0641-5d + 1709-5b)",
-                "description_ca": "1. Plantejament de l’activitat **Cliente marejada** a partir d'una situació de comunicació amb clientela: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Guió d’actuació**, incorporant necessitats de la clientela, cortesia i resposta professional i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular una resposta professional davant malestar lleu durant un servei», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0640-2e + 0633-2e + 0641-5d + 1709-5b)",
+                "description_ca": "1. Plantejament de l’activitat **Clienta marejada** a partir d'una situació de comunicació amb clientela: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Guió d’actuació**, incorporant necessitats de la clientela, cortesia i resposta professional i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular una resposta professional davant malestar lleu durant un servei», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0640-2e + 0633-2e + 0641-5d + 1709-5b)",
                 "evidence_es": "Evidencia práctica observada con rúbrica.",
                 "evidence_ca": "Guió d’actuació.",
                 "diversitySupport_es": "La práctica se divide en pasos cortos, con demostración previa y pareja de apoyo.",
@@ -16966,11 +16966,11 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
               {
                 "id": "act_0640_2f_2",
                 "title_es": "Práctica guiada de taller",
-                "title_ca": "Cliente marejada",
+                "title_ca": "Clienta marejada",
                 "motivatingFactor_es": "Aplicar de forma práctica una parte del servicio respetando higiene, seguridad y calidad.",
                 "motivatingFactor_ca": "Simular una resposta professional davant malestar lleu durant un servei.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0640 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de imagen corporal, anatomía, hábitos saludables, higiene, desinfección y prevención, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: evidencia práctica observada con rúbrica, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0640-2f + 0633-2e + 0641-5d + 1709-5b)",
-                "description_ca": "1. Plantejament de l’activitat **Cliente marejada** a partir d'una situació de comunicació amb clientela: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Guió d’actuació**, incorporant necessitats de la clientela, cortesia i resposta professional i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular una resposta professional davant malestar lleu durant un servei», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0640-2f + 0633-2e + 0641-5d + 1709-5b)",
+                "description_ca": "1. Plantejament de l’activitat **Clienta marejada** a partir d'una situació de comunicació amb clientela: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Guió d’actuació**, incorporant necessitats de la clientela, cortesia i resposta professional i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular una resposta professional davant malestar lleu durant un servei», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0640-2f + 0633-2e + 0641-5d + 1709-5b)",
                 "evidence_es": "Evidencia práctica observada con rúbrica.",
                 "evidence_ca": "Guió d’actuació.",
                 "diversitySupport_es": "La práctica se divide en pasos cortos, con demostración previa y pareja de apoyo.",
@@ -17039,11 +17039,11 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
               {
                 "id": "act_0640_2g_1",
                 "title_es": "Práctica guiada de taller",
-                "title_ca": "Cliente marejada",
+                "title_ca": "Clienta marejada",
                 "motivatingFactor_es": "Aplicar de forma práctica una parte del servicio respetando higiene, seguridad y calidad.",
                 "motivatingFactor_ca": "Simular una resposta professional davant malestar lleu durant un servei.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0640 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de imagen corporal, anatomía, hábitos saludables, higiene, desinfección y prevención, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: evidencia práctica observada con rúbrica, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0640-2g + 0633-2e + 0641-5d + 1709-5b)",
-                "description_ca": "1. Plantejament de l’activitat **Cliente marejada** a partir d'una situació de comunicació amb clientela: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Guió d’actuació**, incorporant necessitats de la clientela, cortesia i resposta professional i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular una resposta professional davant malestar lleu durant un servei», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0640-2g + 0633-2e + 0641-5d + 1709-5b)",
+                "description_ca": "1. Plantejament de l’activitat **Clienta marejada** a partir d'una situació de comunicació amb clientela: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Guió d’actuació**, incorporant necessitats de la clientela, cortesia i resposta professional i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular una resposta professional davant malestar lleu durant un servei», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0640-2g + 0633-2e + 0641-5d + 1709-5b)",
                 "evidence_es": "Evidencia práctica observada con rúbrica.",
                 "evidence_ca": "Guió d’actuació.",
                 "diversitySupport_es": "La práctica se divide en pasos cortos, con demostración previa y pareja de apoyo.",
@@ -19807,8 +19807,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               }
             ],
@@ -19979,8 +19979,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               }
             ],
@@ -20143,8 +20143,8 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "moduleCode": "0633",
                 "moduleName_es": "Técnicas de higiene facial y corporal",
                 "moduleName_ca": "Tècniques d’higiene facial i corporal",
-                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
-                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificando que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
+                "criteria_es": "0633-2g. Se ha revisado la aparatología que se va a emplear, verificant que se encuentra en óptimas condiciones de seguridad e higiene.",
                 "criteria_ca": "0633-2g. S'ha revisat l'aparatologia que s'emprarà, verificant que es troba en condicions òptimes de seguretat i higiene."
               },
               {
@@ -22375,11 +22375,11 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Análisis de caso",
                 "title_ca": "Mascareta a mida",
                 "motivatingFactor_es": "Resolver un caso breve aplicando el CE del módulo eje y los CE relacionados de otros módulos.",
-                "motivatingFactor_ca": "Relacionar principis actius de mascarilles amb necessitats cutànies.",
+                "motivatingFactor_ca": "Relacionar principis actius de mascaretes amb necessitats cutànies.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0641 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de cosméticos, laboratorio, etiquetado, formas cosméticas, seguridad y reacciones adversas, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: decisión técnica justificada, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0641-4a + 0633-2e + 0638-1h + 0636-2b)",
-                "description_ca": "1. Plantejament de l’activitat **Mascareta a mida** a partir de mostres o etiquetes de cosmètics reals o simulats: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Anàlisi del cas amb una pauta de decisió: dades disponibles, risc o necessitat detectada, alternatives i decisió final. 3. Elaboració de **Proposta de mascarilla**, incorporant composició, ús segur i adequació al tipus de pell o servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Relacionar principis actius de mascarilles amb necessitats cutànies», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0641-4a + 0633-2e + 0638-1h + 0636-2b)",
+                "description_ca": "1. Plantejament de l’activitat **Mascareta a mida** a partir de mostres o etiquetes de cosmètics reals o simulats: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Anàlisi del cas amb una pauta de decisió: dades disponibles, risc o necessitat detectada, alternatives i decisió final. 3. Elaboració de **Proposta de mascareta**, incorporant composició, ús segur i adequació al tipus de pell o servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Relacionar principis actius de mascaretes amb necessitats cutànies», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0641-4a + 0633-2e + 0638-1h + 0636-2b)",
                 "evidence_es": "Decisión técnica justificada.",
-                "evidence_ca": "Proposta de mascarilla.",
+                "evidence_ca": "Proposta de mascareta.",
                 "diversitySupport_es": "El caso se presenta con datos resaltados, árbol de decisión y vocabulario de apoyo.",
                 "diversitySupport_ca": "El cas es presenta en lectura fàcil amb dades importants ressaltades; l’alumnat utilitza un arbre de decisió i pot justificar primer oralment o amb paraules clau abans de redactar."
               }
@@ -22448,11 +22448,11 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Análisis de caso",
                 "title_ca": "Mascareta a mida",
                 "motivatingFactor_es": "Resolver un caso breve aplicando el CE del módulo eje y los CE relacionados de otros módulos.",
-                "motivatingFactor_ca": "Relacionar principis actius de mascarilles amb necessitats cutànies.",
+                "motivatingFactor_ca": "Relacionar principis actius de mascaretes amb necessitats cutànies.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0641 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de cosméticos, laboratorio, etiquetado, formas cosméticas, seguridad y reacciones adversas, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: decisión técnica justificada, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0641-4b + 0633-2e + 0636-2b + 0638-1h)",
-                "description_ca": "1. Plantejament de l’activitat **Mascareta a mida** a partir de mostres o etiquetes de cosmètics reals o simulats: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Anàlisi del cas amb una pauta de decisió: dades disponibles, risc o necessitat detectada, alternatives i decisió final. 3. Elaboració de **Proposta de mascarilla**, incorporant composició, ús segur i adequació al tipus de pell o servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Relacionar principis actius de mascarilles amb necessitats cutànies», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0641-4b + 0633-2e + 0636-2b + 0638-1h)",
+                "description_ca": "1. Plantejament de l’activitat **Mascareta a mida** a partir de mostres o etiquetes de cosmètics reals o simulats: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Anàlisi del cas amb una pauta de decisió: dades disponibles, risc o necessitat detectada, alternatives i decisió final. 3. Elaboració de **Proposta de mascareta**, incorporant composició, ús segur i adequació al tipus de pell o servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Relacionar principis actius de mascaretes amb necessitats cutànies», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0641-4b + 0633-2e + 0636-2b + 0638-1h)",
                 "evidence_es": "Decisión técnica justificada.",
-                "evidence_ca": "Proposta de mascarilla.",
+                "evidence_ca": "Proposta de mascareta.",
                 "diversitySupport_es": "El caso se presenta con datos resaltados, árbol de decisión y vocabulario de apoyo.",
                 "diversitySupport_ca": "El cas es presenta en lectura fàcil amb dades importants ressaltades; l’alumnat utilitza un arbre de decisió i pot justificar primer oralment o amb paraules clau abans de redactar."
               },
@@ -22521,11 +22521,11 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Análisis de caso",
                 "title_ca": "Mascareta a mida",
                 "motivatingFactor_es": "Resolver un caso breve aplicando el CE del módulo eje y los CE relacionados de otros módulos.",
-                "motivatingFactor_ca": "Relacionar principis actius de mascarilles amb necessitats cutànies.",
+                "motivatingFactor_ca": "Relacionar principis actius de mascaretes amb necessitats cutànies.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0641 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de cosméticos, laboratorio, etiquetado, formas cosméticas, seguridad y reacciones adversas, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: decisión técnica justificada, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0641-4c + 0633-2e + 0638-1b + 0636-2b)",
-                "description_ca": "1. Plantejament de l’activitat **Mascareta a mida** a partir de mostres o etiquetes de cosmètics reals o simulats: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Anàlisi del cas amb una pauta de decisió: dades disponibles, risc o necessitat detectada, alternatives i decisió final. 3. Elaboració de **Proposta de mascarilla**, incorporant composició, ús segur i adequació al tipus de pell o servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Relacionar principis actius de mascarilles amb necessitats cutànies», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0641-4c + 0633-2e + 0638-1b + 0636-2b)",
+                "description_ca": "1. Plantejament de l’activitat **Mascareta a mida** a partir de mostres o etiquetes de cosmètics reals o simulats: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Anàlisi del cas amb una pauta de decisió: dades disponibles, risc o necessitat detectada, alternatives i decisió final. 3. Elaboració de **Proposta de mascareta**, incorporant composició, ús segur i adequació al tipus de pell o servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Relacionar principis actius de mascaretes amb necessitats cutànies», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0641-4c + 0633-2e + 0638-1b + 0636-2b)",
                 "evidence_es": "Decisión técnica justificada.",
-                "evidence_ca": "Proposta de mascarilla.",
+                "evidence_ca": "Proposta de mascareta.",
                 "diversitySupport_es": "El caso se presenta con datos resaltados, árbol de decisión y vocabulario de apoyo.",
                 "diversitySupport_ca": "El cas es presenta en lectura fàcil amb dades importants ressaltades; l’alumnat utilitza un arbre de decisió i pot justificar primer oralment o amb paraules clau abans de redactar."
               },
@@ -27197,9 +27197,9 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "motivatingFactor_es": "Aplicar de forma práctica una parte del servicio respetando higiene, seguridad y calidad.",
                 "motivatingFactor_ca": "Decidir qui pot veure o editar diferents dades d’un saló.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 1664 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de digitalización del salón, datos, nube, tecnologías habilitadoras, sostenibilidad y mejora de procesos, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: evidencia práctica observada con rúbrica, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 1664-2e + 0633-1b + 1709-3f + 0635-6g)",
-                "description_ca": "1. Plantejament de l’activitat **Permisos d’accés** a partir d'una fitxa o registre professional del saló: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Matriz de permisos**, incorporant dades necessàries, privacitat i utilitat per al seguiment del servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Decidir qui pot veure o editar diferents dades d’un saló», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 1664-2e + 0633-1b + 1709-3f + 0635-6g)",
+                "description_ca": "1. Plantejament de l’activitat **Permisos d’accés** a partir d'una fitxa o registre professional del saló: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Matriu de permisos**, incorporant dades necessàries, privacitat i utilitat per al seguiment del servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Decidir qui pot veure o editar diferents dades d’un saló», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 1664-2e + 0633-1b + 1709-3f + 0635-6g)",
                 "evidence_es": "Evidencia práctica observada con rúbrica.",
-                "evidence_ca": "Matriz de permisos.",
+                "evidence_ca": "Matriu de permisos.",
                 "diversitySupport_es": "La práctica se divide en pasos cortos, con demostración previa y pareja de apoyo.",
                 "diversitySupport_ca": "S’ofereixen targetes de rol, frases d’inici i temps d’assaig; qui tingui dificultat per parlar davant el grup pot fer el rol d’observador/a, gravar un àudio o entregar la resposta escrita."
               }
@@ -27270,9 +27270,9 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "motivatingFactor_es": "Aplicar de forma práctica una parte del servicio respetando higiene, seguridad y calidad.",
                 "motivatingFactor_ca": "Decidir qui pot veure o editar diferents dades d’un saló.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 1664 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de digitalización del salón, datos, nube, tecnologías habilitadoras, sostenibilidad y mejora de procesos, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: evidencia práctica observada con rúbrica, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 1664-2f + 1709-5b + 0633-1b + 0640-2g)",
-                "description_ca": "1. Plantejament de l’activitat **Permisos d’accés** a partir d'una fitxa o registre professional del saló: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Matriz de permisos**, incorporant dades necessàries, privacitat i utilitat per al seguiment del servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Decidir qui pot veure o editar diferents dades d’un saló», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 1664-2f + 1709-5b + 0633-1b + 0640-2g)",
+                "description_ca": "1. Plantejament de l’activitat **Permisos d’accés** a partir d'una fitxa o registre professional del saló: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Matriu de permisos**, incorporant dades necessàries, privacitat i utilitat per al seguiment del servei i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Decidir qui pot veure o editar diferents dades d’un saló», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 1664-2f + 1709-5b + 0633-1b + 0640-2g)",
                 "evidence_es": "Evidencia práctica observada con rúbrica.",
-                "evidence_ca": "Matriz de permisos.",
+                "evidence_ca": "Matriu de permisos.",
                 "diversitySupport_es": "La práctica se divide en pasos cortos, con demostración previa y pareja de apoyo.",
                 "diversitySupport_ca": "S’ofereixen targetes de rol, frases d’inici i temps d’assaig; qui tingui dificultat per parlar davant el grup pot fer el rol d’observador/a, gravar un àudio o entregar la resposta escrita."
               },
@@ -36247,9 +36247,9 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Atención a la clientela",
                 "title_ca": "Respectful service",
                 "motivatingFactor_es": "Simular una situación de comunicación profesional relacionada con el servicio.",
-                "motivatingFactor_ca": "Simular un servei d’ungles verificando gustos sense fer judicis.",
+                "motivatingFactor_ca": "Simular un servei d’ungles verificant gustos sense fer judicis.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0156 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de comunicación profesional en inglés, textos del sector, atención a la clientela y correspondencia básica, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: guion de diálogo o respuesta profesional, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0156-4i + 1709-5c + 0635-3a + 0636-1e)",
-                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificando gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-4i + 1709-5c + 0635-3a + 0636-1e)",
+                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificant gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-4i + 1709-5c + 0635-3a + 0636-1e)",
                 "evidence_es": "Guion de diálogo o respuesta profesional.",
                 "evidence_ca": "Diàleg respectuós.",
                 "diversitySupport_es": "Se ofrecen tarjetas de rol, frases de inicio y posibilidad de representar en pareja o entregar audio.",
@@ -36320,9 +36320,9 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Atención a la clientela",
                 "title_ca": "Respectful service",
                 "motivatingFactor_es": "Simular una situación de comunicación profesional relacionada con el servicio.",
-                "motivatingFactor_ca": "Simular un servei d’ungles verificando gustos sense fer judicis.",
+                "motivatingFactor_ca": "Simular un servei d’ungles verificant gustos sense fer judicis.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0156 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de comunicación profesional en inglés, textos del sector, atención a la clientela y correspondencia básica, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: guion de diálogo o respuesta profesional, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0156-4j + 1664-3b + 0635-3b + 0641-7b)",
-                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificando gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-4j + 1664-3b + 0635-3b + 0641-7b)",
+                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificant gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-4j + 1664-3b + 0635-3b + 0641-7b)",
                 "evidence_es": "Guion de diálogo o respuesta profesional.",
                 "evidence_ca": "Diàleg respectuós.",
                 "diversitySupport_es": "Se ofrecen tarjetas de rol, frases de inicio y posibilidad de representar en pareja o entregar audio.",
@@ -36428,9 +36428,9 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Atención a la clientela",
                 "title_ca": "Respectful service",
                 "motivatingFactor_es": "Simular una situación de comunicación profesional relacionada con el servicio.",
-                "motivatingFactor_ca": "Simular un servei d’ungles verificando gustos sense fer judicis.",
+                "motivatingFactor_ca": "Simular un servei d’ungles verificant gustos sense fer judicis.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0156 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de comunicación profesional en inglés, textos del sector, atención a la clientela y correspondencia básica, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: guion de diálogo o respuesta profesional, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0156-5a + 0633-2a + 0638-2c + 0641-1e)",
-                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificando gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-5a + 0633-2a + 0638-2c + 0641-1e)",
+                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificant gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-5a + 0633-2a + 0638-2c + 0641-1e)",
                 "evidence_es": "Guion de diálogo o respuesta profesional.",
                 "evidence_ca": "Diàleg respectuós.",
                 "diversitySupport_es": "Se ofrecen tarjetas de rol, frases de inicio y posibilidad de representar en pareja o entregar audio.",
@@ -36501,9 +36501,9 @@ export const CFGM_MODULES_SEED: FPBModule[] = [
                 "title_es": "Atención a la clientela",
                 "title_ca": "Respectful service",
                 "motivatingFactor_es": "Simular una situación de comunicación profesional relacionada con el servicio.",
-                "motivatingFactor_ca": "Simular un servei d’ungles verificando gustos sense fer judicis.",
+                "motivatingFactor_ca": "Simular un servei d’ungles verificant gustos sense fer judicis.",
                 "description_es": "1. Localizar en la matriz el CE del módulo 0156 que se va a trabajar y leer los CE relacionados de otros módulos. 2. Plantear la situación profesional dentro de comunicación profesional en inglés, textos del sector, atención a la clientela y correspondencia básica, aclarando qué decisión, procedimiento o comunicación debe resolverse. 3. Elaborar el producto previsto: guion de diálogo o respuesta profesional, dejando constancia de las decisiones técnicas y de los CE utilizados. 4. Revisar la evidencia con una comprobación final: adecuación técnica, claridad profesional, seguridad, inclusión y posible mejora tras el feedback. (Aprendizajes: 0156-5b + 0638-2c + 1664-3c + 0641-1e)",
-                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificando gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-5b + 0638-2c + 1664-3c + 0641-1e)",
+                "description_ca": "1. Plantejament de l’activitat **Respectful service** a partir d'un cas de mans, peus o ungles: el grup identifica què demana el repte i quines dades necessita per resoldre’l. 2. Assaig de la situació per parelles, repartint els rols de professional, client/a i observador/a, amb una llista de frases o decisions clau. 3. Elaboració de **Diàleg respectuós**, incorporant morfologia, higiene, gustos de la clientela i resultat final i deixant constància de les decisions preses durant la tasca. 4. Revisió final del producte amb una comprovació específica: si respon al repte «Simular un servei d’ungles verificant gustos sense fer judicis», si és útil en una situació real de saló i quina millora concreta s’introduiria després del feedback. (Aprenentatges: 0156-5b + 0638-2c + 1664-3c + 0641-1e)",
                 "evidence_es": "Guion de diálogo o respuesta profesional.",
                 "evidence_ca": "Diàleg respectuós.",
                 "diversitySupport_es": "Se ofrecen tarjetas de rol, frases de inicio y posibilidad de representar en pareja o entregar audio.",

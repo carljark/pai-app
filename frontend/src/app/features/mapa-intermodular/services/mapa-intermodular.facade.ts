@@ -1,20 +1,56 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { FPBModule, LearningOutcome, IntermodularConnection, IntermodularActivity, CompetenceType } from '../models/mapa-intermodular.model';
-import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
-import { CFGM_MODULES_SEED } from '../data/mapa-intermodular-cfgm.seed';
-import { CFGM_PELUQUERIA_MODULES_SEED } from '../data/mapa-intermodular-cfgm-peluqueria.seed';
-import { CFGM_PELUQUERIA_2_MODULES_SEED } from '../data/mapa-intermodular-cfgm-peluqueria-2.seed';
+
+export type MapaTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2';
 
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
-  activeTab = signal<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'>('FPB');
-  modules = signal<FPBModule[]>(FPB_MODULES_SEED);
+  activeTab = signal<MapaTab>('FPB');
+  modules = signal<FPBModule[]>([]);
+  isLoadingSeed = signal<boolean>(false);
   selectedModuleCode = signal<string>('3060');
   selectedRaId = signal<string>('3060_RA1');
   selectedCriterion = signal<string | null>(null);
   searchQuery = signal<string>('');
   selectedTypeFilter = signal<string>('all');
   selectedRelationFilter = signal<string>('all');
+
+  private seedCache: Partial<Record<MapaTab, FPBModule[]>> = {};
+
+  constructor() {
+    this.setTab('FPB');
+  }
+
+  async loadSeed(tab: MapaTab): Promise<FPBModule[]> {
+    if (this.seedCache[tab]) {
+      return this.seedCache[tab]!;
+    }
+    let data: FPBModule[] = [];
+    switch (tab) {
+      case 'FPB': {
+        const m = await import('../data/mapa-intermodular.seed');
+        data = m.FPB_MODULES_SEED;
+        break;
+      }
+      case 'CFGM': {
+        const m = await import('../data/mapa-intermodular-cfgm.seed');
+        data = m.CFGM_MODULES_SEED;
+        break;
+      }
+      case 'CFGM_PELUQUERIA': {
+        const m = await import('../data/mapa-intermodular-cfgm-peluqueria.seed');
+        data = m.CFGM_PELUQUERIA_MODULES_SEED;
+        break;
+      }
+      case 'CFGM_PELUQUERIA_2': {
+        const m = await import('../data/mapa-intermodular-cfgm-peluqueria-2.seed');
+        data = m.CFGM_PELUQUERIA_2_MODULES_SEED;
+        break;
+      }
+    }
+    this.seedCache[tab] = data;
+    return data;
+  }
 
   selectedModule = computed<FPBModule | null>(() => {
     const code = this.selectedModuleCode();
@@ -213,25 +249,45 @@ export class MapaIntermodularFacade {
   }
 
 
-  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2') {
+  setTab(tab: MapaTab, directData?: FPBModule[]): Promise<FPBModule[]> {
     this.activeTab.set(tab);
     if (tab === 'FPB') {
-      this.modules.set(FPB_MODULES_SEED);
       this.selectedModuleCode.set('3060');
       this.selectedRaId.set('3060_RA1');
     } else if (tab === 'CFGM') {
-      this.modules.set(CFGM_MODULES_SEED);
       this.selectedModuleCode.set('0633');
       this.selectedRaId.set('0633_RA1');
     } else if (tab === 'CFGM_PELUQUERIA') {
-      this.modules.set(CFGM_PELUQUERIA_MODULES_SEED);
       this.selectedModuleCode.set('0845');
       this.selectedRaId.set('0845_RA1');
     } else if (tab === 'CFGM_PELUQUERIA_2') {
-      this.modules.set(CFGM_PELUQUERIA_2_MODULES_SEED);
       this.selectedModuleCode.set('0640');
       this.selectedRaId.set('0640_RA1');
     }
     this.selectedCriterion.set(null);
+
+    if (directData) {
+      this.seedCache[tab] = directData;
+      this.modules.set(directData);
+      return Promise.resolve(directData);
+    }
+
+    if (this.seedCache[tab]) {
+      this.modules.set(this.seedCache[tab]!);
+      return Promise.resolve(this.seedCache[tab]!);
+    }
+
+    this.isLoadingSeed.set(true);
+    return this.loadSeed(tab).then(data => {
+      if (this.activeTab() === tab) {
+        this.modules.set(data);
+      }
+      this.isLoadingSeed.set(false);
+      return data;
+    }).catch(err => {
+      console.error('Error loading seed for tab ' + tab, err);
+      this.isLoadingSeed.set(false);
+      return [];
+    });
   }
 }

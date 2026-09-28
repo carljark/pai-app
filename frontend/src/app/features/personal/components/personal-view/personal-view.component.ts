@@ -140,6 +140,10 @@ import { LayoutService } from '../../../../services/layout.service';
             <button class="filter-pill" [class.active]="levelFilter() === 'FPB'" (click)="levelFilter.set('FPB')">
               {{ trans.t().courseLevelFP }}
             </button>
+            <button class="filter-pill" [class.active]="levelFilter() === 'CFGM_PELUQUERIA'" (click)="levelFilter.set('CFGM_PELUQUERIA')">
+              {{ trans.t().courseLevelCFGMPeluqueria }}
+            </button>
+
             <button class="filter-pill" [class.active]="levelFilter() === 'CFGM'" (click)="levelFilter.set('CFGM')">
               {{ trans.t().courseLevelCFGM }}
             </button>
@@ -184,7 +188,7 @@ import { LayoutService } from '../../../../services/layout.service';
               <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
                 <h3 style="margin: 0; font-size: 1.15rem; color: var(--c-text);">{{ getDisplayTitle(project) }}</h3>
                 <span style="font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 12px; font-weight: 600;">
-                  {{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : (project.tipoNivel === 'CFGM_ESTETICA' ? trans.t().courseLevelCFGM : trans.t().courseLevelFP) }}
+                  {{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : (project.tipoNivel === 'CFGM_ESTETICA' ? trans.t().courseLevelCFGM : (project.tipoNivel === 'CFGM_PELUQUERIA' ? trans.t().courseLevelCFGMPeluqueria : trans.t().courseLevelFP)) }}
                 </span>
               </div>
               
@@ -256,7 +260,7 @@ export class PersonalViewComponent implements OnInit {
   trans = inject(TranslationService);
   layout = inject(LayoutService);
 
-  levelFilter = signal<'ALL' | 'FPB' | 'CFGM' | 'ESO'>('ALL');
+  levelFilter = signal<'ALL' | 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO'>('ALL');
   statusFilter = signal<'ALL' | 'borrador' | 'publicado' | 'error'>('ALL');
   searchQuery = signal<string>('');
 
@@ -277,7 +281,9 @@ export class PersonalViewComponent implements OnInit {
     if (this.levelFilter() === 'FPB') {
       list = list.filter(p => p.tipoNivel === 'FP_BASICA' || (!p.tipoNivel && !p.tipoNivel?.startsWith('CFGM')));
     } else if (this.levelFilter() === 'CFGM') {
-      list = list.filter(p => p.tipoNivel === 'CFGM_ESTETICA' || p.tipoNivel?.startsWith('CFGM'));
+      list = list.filter(p => p.tipoNivel === 'CFGM_ESTETICA');
+    } else if (this.levelFilter() === 'CFGM_PELUQUERIA') {
+      list = list.filter(p => p.tipoNivel === 'CFGM_PELUQUERIA');
     } else if (this.levelFilter() === 'ESO') {
       list = list.filter(p => p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO');
     }

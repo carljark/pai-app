@@ -41,6 +41,7 @@ export const TRANSLATIONS_CA = {
   workshopViewAll: 'Veure tots els projectes',
   courseLevelFP: 'FP Bàsica',
   courseLevelCFGM: 'CFGM Estètica i Bellesa',
+  courseLevelCFGMPeluqueria: 'CFGM Perruqueria i Cosmètica Capil·lar',
   courseLevelPDC: 'ESO (PDC)',
   searchProjects: 'Buscar projecte...',
   generatorLevelLabel: 'Nivell Educatiu',

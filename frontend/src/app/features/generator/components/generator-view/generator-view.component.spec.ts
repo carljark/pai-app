@@ -105,9 +105,13 @@ describe('GeneratorViewComponent', () => {
     
     expect(mockCurriculum.tipoNivel()).toBe('FP_BASICA');
     
-    // click Diversificación Curricular
+    // click CFGM_ESTETICA
     tabs[1].click();
     expect(mockSet).toHaveBeenCalledWith('CFGM_ESTETICA');
+
+    // click CFGM_PELUQUERIA
+    tabs[2].click();
+    expect(mockSet).toHaveBeenCalledWith('CFGM_PELUQUERIA');
 
     // click FP Básica
     tabs[0].click();

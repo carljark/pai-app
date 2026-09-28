@@ -89,6 +89,10 @@ import { TranslationService } from '../../../../services/translation.service';
         <button class="history-tab" [class.active]="activeTab() === 'FPB'" (click)="activeTab.set('FPB')">
           {{ trans.t().courseLevelFP }}
         </button>
+        <button class="history-tab" [class.active]="activeTab() === 'CFGM_PELUQUERIA'" (click)="activeTab.set('CFGM_PELUQUERIA')">
+          {{ trans.t().courseLevelCFGMPeluqueria }}
+        </button>
+
         <button class="history-tab" [class.active]="activeTab() === 'CFGM'" (click)="activeTab.set('CFGM')">
           {{ trans.t().courseLevelCFGM }}
         </button>
@@ -215,7 +219,9 @@ export class HistoryViewComponent {
       if (this.activeTab() === 'FPB') {
         return p.tipoNivel === 'FP_BASICA' || (!p.tipoNivel && !p.courseLevel?.includes('CFGM'));
       } else if (this.activeTab() === 'CFGM') {
-        return p.tipoNivel === 'CFGM_ESTETICA' || p.tipoNivel?.startsWith('CFGM');
+        return p.tipoNivel === 'CFGM_ESTETICA';
+      } else if (this.activeTab() === 'CFGM_PELUQUERIA') {
+        return p.tipoNivel === 'CFGM_PELUQUERIA';
       } else {
         return p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO';
       }

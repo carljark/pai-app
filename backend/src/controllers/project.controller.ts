@@ -201,10 +201,12 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
     const defaultCourse = tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
     const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCourse;
     const targetCourseDescription = tipoNivel === 'CFGM_ESTETICA'
-      ? `${effectiveCourse} de CFGM Estètica i Bellesa`
-      : (tipoNivel === 'DIVERSIFICACION_CURRICULAR'
-        ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
-        : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`);
+      ? (language === 'catalan' ? `${effectiveCourse} de CFGM Estètica i Bellesa` : `${effectiveCourse} de CFGM Estética y Belleza`)
+      : (tipoNivel === 'CFGM_PELUQUERIA'
+        ? (language === 'catalan' ? `${effectiveCourse} de CFGM Perruqueria i Cosmètica Capil·lar` : `${effectiveCourse} de CFGM Peluquería y Cosmética Capilar`)
+        : (tipoNivel === 'DIVERSIFICACION_CURRICULAR'
+          ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
+          : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`));
 
     // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {

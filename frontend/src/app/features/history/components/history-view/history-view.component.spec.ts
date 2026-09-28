@@ -115,13 +115,13 @@ describe('HistoryViewComponent', () => {
   it('should switch to CFGM tab and show CFGM projects via click', () => {
     mockProjectsFacade.projectsHistory.set([
       { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },
-      { _id: '2', title: 'Proj CFGM', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0633'], tipoNivel: 'CFGM_ESTETICA' },
+      { _id: '2', title: 'Proj CFGM', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0633'], tipoNivel: 'CFGM_ESTETICA' }, { _id: '2b', title: 'Proj CFGM Pel', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0845'], tipoNivel: 'CFGM_PELUQUERIA' },
       { _id: '3', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
     const buttons = fixture.nativeElement.querySelectorAll('.history-tab');
-    expect(buttons.length).toBe(3);
-    buttons[1].click(); // Click on CFGM tab
+    expect(buttons.length).toBe(4);
+    buttons[2].click(); // Click on CFGM tab
     fixture.detectChanges();
 
     const element = fixture.nativeElement;
@@ -134,12 +134,12 @@ describe('HistoryViewComponent', () => {
   it('should switch to ESO tab and show ESO projects via click', () => {
     mockProjectsFacade.projectsHistory.set([
       { _id: '1', title: 'Proj FPB', status: 'publicado', createdAt: new Date().toISOString(), modules: ['Mod1'], tipoNivel: 'FP_BASICA' },
-      { _id: '2', title: 'Proj CFGM', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0633'], tipoNivel: 'CFGM_ESTETICA' },
+      { _id: '2', title: 'Proj CFGM', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0633'], tipoNivel: 'CFGM_ESTETICA' }, { _id: '2b', title: 'Proj CFGM Pel', status: 'publicado', createdAt: new Date().toISOString(), modules: ['0845'], tipoNivel: 'CFGM_PELUQUERIA' },
       { _id: '3', title: 'Proj ESO', status: 'borrador', createdAt: new Date().toISOString(), tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
     const buttons = fixture.nativeElement.querySelectorAll('.history-tab');
-    buttons[2].click(); // Click on ESO tab
+    buttons[3].click(); // Click on ESO tab
     fixture.detectChanges();
     
     const element = fixture.nativeElement;

@@ -126,7 +126,7 @@ export class MapaIntermodularViewComponent {
   }
 
   createProjectFromConnection(connection?: IntermodularConnection) {
-    this.curriculum.setTipoNivel(this.facade.activeTab() === 'CFGM' ? 'CFGM_ESTETICA' : 'FP_BASICA');
+    this.curriculum.setTipoNivel(this.facade.activeTab() === 'CFGM' ? 'CFGM_ESTETICA' : (this.facade.activeTab() === 'CFGM_PELUQUERIA' ? 'CFGM_PELUQUERIA' : 'FP_BASICA'));
     const allRas = this.curriculum.ras();
     const activeRa = this.facade.selectedRa();
     const activeModule = this.facade.selectedModule();
@@ -146,7 +146,7 @@ export class MapaIntermodularViewComponent {
     this.layout.switchView('generator');
   }
 
-  setTab(tab: 'FPB' | 'CFGM') {
+  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA') {
     this.facade.setTab(tab);
   }
 }

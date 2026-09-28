@@ -116,6 +116,8 @@ export class AppFacade {
       this.projects.historyTab.set('ESO');
     } else if (nivel === 'CFGM_ESTETICA') {
       this.projects.historyTab.set('CFGM');
+    } else if (nivel === 'CFGM_PELUQUERIA') {
+      this.projects.historyTab.set('CFGM_PELUQUERIA');
     } else {
       this.projects.historyTab.set('FPB');
     }

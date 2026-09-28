@@ -306,4 +306,47 @@ describe('CurriculumFacade', () => {
     expect(cfgmFacade.tipoNivel()).toBe('CFGM_ESTETICA');
     expect(cfgmFacade.curso()).toBe('1º');
   });
+
+  it('should group CFGM_PELUQUERIA items using fallback when ras is empty', () => {
+    facade.tipoNivel.set('CFGM_PELUQUERIA');
+    facade.ras.set([]);
+    const groups = facade.groupedItems();
+    expect(groups.length).toBeGreaterThan(0);
+  });
+
+  it('should handle setTipoNivel to CFGM_PELUQUERIA and set default course to 1º', () => {
+    facade.setTipoNivel('CFGM_PELUQUERIA');
+    expect(facade.tipoNivel()).toBe('CFGM_PELUQUERIA');
+    expect(facade.curso()).toBe('1º');
+    expect(localStorage.getItem('pai_tipo_nivel')).toBe('CFGM_PELUQUERIA');
+    expect(localStorage.getItem('pai_curso')).toBe('1º');
+  });
+
+  it('should group CFGM_PELUQUERIA items using fallback with Catalan', () => {
+    facade.tipoNivel.set('CFGM_PELUQUERIA');
+    facade.ras.set([]);
+    localStorage.setItem('pai_lang', 'catalan');
+    const groups = facade.groupedItems();
+    expect(groups.length).toBeGreaterThan(0);
+  });
+
+  it('should group CFGM_ESTETICA items using fallback with Catalan', () => {
+    facade.tipoNivel.set('CFGM_ESTETICA');
+    facade.ras.set([]);
+    localStorage.setItem('pai_lang', 'catalan');
+    const groups = facade.groupedItems();
+    expect(groups.length).toBeGreaterThan(0);
+  });
+
+  it('should group DIVERSIFICACION_CURRICULAR items with ces', () => {
+    facade.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
+    facade.ces.set([
+      { id: '1', module: 'Mod1', subject: 'Sub1', description: 'desc1', index: 2, course: '3º' },
+      { id: '2', module: 'Mod1', subject: 'Sub1', description: 'desc2', index: 1, course: '3º' }
+    ] as any);
+    facade.curso.set('3º');
+    const groups = facade.groupedItems();
+    expect(groups.length).toBe(1);
+    expect((groups[0].items[0] as any).text).toBe('desc1');
+  });
 });

@@ -23,6 +23,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
         <div class="tabs">
           <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
           <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_ESTETICA'" (click)="curriculum.setTipoNivel('CFGM_ESTETICA')">{{ trans.t().courseLevelCFGM }}</div>
+          <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_PELUQUERIA'" (click)="curriculum.setTipoNivel('CFGM_PELUQUERIA')">{{ trans.t().courseLevelCFGMPeluqueria }}</div>
           <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">{{ trans.t().courseLevelPDC }}</div>
         </div>
       </div>
@@ -39,7 +40,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
             @if (curriculum.tipoNivel() === 'FP_BASICA') {
               <option value="1º" [selected]="curriculum.curso() === '1º'">{{ trans.t().firstYearOption }}</option>
               <option value="2º" [selected]="curriculum.curso() === '2º'">{{ trans.t().secondYearOption }}</option>
-            } @else if (curriculum.tipoNivel() === 'CFGM_ESTETICA') {
+            } @else if (curriculum.tipoNivel() === 'CFGM_ESTETICA' || curriculum.tipoNivel() === 'CFGM_PELUQUERIA') {
               <option value="1º" [selected]="curriculum.curso() === '1º'">{{ trans.t().firstYearOption }}</option>
             } @else {
               <option value="3º" [selected]="curriculum.curso() === '3º'">{{ trans.t().thirdYearOption }}</option>

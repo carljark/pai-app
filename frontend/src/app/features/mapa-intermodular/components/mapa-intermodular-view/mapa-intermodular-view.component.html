@@ -20,6 +20,10 @@
       [style.color]="facade.activeTab() === 'CFGM' ? 'var(--primary-color)' : 'inherit'">
       {{ isCa() ? 'CFGM Estètica i Bellesa' : 'CFGM Estética y Belleza' }}
     </button>
+    <button class="mapa-tab-btn" [class.active]="facade.activeTab() === 'CFGM_PELUQUERIA'" (click)="setTab('CFGM_PELUQUERIA')" style="padding: 0.75rem 1.5rem; border: none; background: none; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;" [style.border-bottom-color]="facade.activeTab() === 'CFGM_PELUQUERIA' ? 'var(--primary-color)' : 'transparent'" [style.color]="facade.activeTab() === 'CFGM_PELUQUERIA' ? 'var(--primary-color)' : 'inherit'">
+      {{ isCa() ? 'CFGM Perruqueria i Cosmètica Capil·lar' : 'CFGM Peluquería y Cosmética Capilar' }}
+    </button>
+
   </div>
 
   <!-- Ultra-collapsed Header by default (Only title visible) -->
@@ -40,7 +44,7 @@
           @if (facade.activeTab() === 'FPB') {
             {{ isCa() ? 'Mapa Intermodular FPB' : 'Mapa Intermodular FPB' }}
           } @else {
-            {{ isCa() ? 'Mapa intermodular del CFGM Estètica i Bellesa' : 'Mapa intermodular del CFGM Estética y Belleza' }}
+            {{ isCa() ? (facade.activeTab() === 'CFGM_PELUQUERIA' ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar' : 'Mapa intermodular del CFGM Estètica i Bellesa') : (facade.activeTab() === 'CFGM_PELUQUERIA' ? 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar' : 'Mapa intermodular del CFGM Estética y Belleza') }}
           }
         </h1>
       </div>
@@ -112,7 +116,7 @@
         <div class="mapa-stats">
           <div class="mapa-stat-card">
             <span class="mapa-stat-value">{{ facade.stats().totalModules }}</span>
-            <span class="mapa-stat-label">{{ isCa() ? (facade.activeTab() === 'CFGM' ? 'Mòduls CFGM' : 'Mòduls FPB') : (facade.activeTab() === 'CFGM' ? 'Módulos CFGM' : 'Módulos FPB') }}</span>
+            <span class="mapa-stat-label">{{ isCa() ? (facade.activeTab() !== 'FPB' ? 'Mòduls CFGM' : 'Mòduls FPB') : (facade.activeTab() !== 'FPB' ? 'Módulos CFGM' : 'Módulos FPB') }}</span>
           </div>
           <div class="mapa-stat-card">
             <span class="mapa-stat-value">{{ facade.stats().totalRas }}</span>
@@ -395,7 +399,7 @@
                 <!-- Activities -->
                 <div class="mapa-activities-container">
                   <h4 class="mapa-activities-title">
-                    {{ isCa() ? (facade.activeTab() === 'CFGM' ? 'Propostes d’Activitats i Reptes CFGM' : 'Propostes d’Activitats i Reptes FPB') : (facade.activeTab() === 'CFGM' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
+                    {{ isCa() ? (facade.activeTab() !== 'FPB' ? 'Propostes d’Activitats i Reptes CFGM' : 'Propostes d’Activitats i Reptes FPB') : (facade.activeTab() !== 'FPB' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
                   </h4>
 
                   <div class="mapa-activities-grid">
@@ -424,7 +428,7 @@
                           </div>
 
                           <div class="mapa-meta-box mapa-meta-diversity">
-                            <strong>{{ isCa() ? (facade.activeTab() === 'CFGM' ? 'Aprenentatges i Diversitat CFGM:' : 'Aprenentatges i Diversitat FPB:') : (facade.activeTab() === 'CFGM' ? 'Aprendizajes y Diversidad CFGM:' : 'Aprendizajes y Diversidad FPB:') }}</strong>
+                            <strong>{{ isCa() ? (facade.activeTab() !== 'FPB' ? 'Aprenentatges i Diversitat CFGM:' : 'Aprenentatges i Diversitat FPB:') : (facade.activeTab() !== 'FPB' ? 'Aprendizajes y Diversidad CFGM:' : 'Aprendizajes y Diversidad FPB:') }}</strong>
                             <span>{{ isCa() ? act.diversitySupport_ca : act.diversitySupport_es }}</span>
                           </div>
                         </div>

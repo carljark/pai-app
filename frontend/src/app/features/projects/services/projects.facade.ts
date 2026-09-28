@@ -14,7 +14,7 @@ export class ProjectsFacade {
 
   // --- ESTADO GLOBAL DE PROYECTOS ---
   projectsHistory = signal<any[]>([]);
-  historyTab = signal<'FPB' | 'CFGM' | 'ESO'>('FPB');
+  historyTab = signal<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO'>('FPB');
   searchQuery = signal<string>('');
 
   myProjects = computed(() => {
@@ -121,6 +121,8 @@ export class ProjectsFacade {
       this.historyTab.set('ESO');
     } else if (tipoNivel === 'CFGM_ESTETICA') {
       this.historyTab.set('CFGM');
+    } else if (tipoNivel === 'CFGM_PELUQUERIA') {
+      this.historyTab.set('CFGM_PELUQUERIA');
     } else {
       this.historyTab.set('FPB');
     }

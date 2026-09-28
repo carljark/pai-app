@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
 import { LayoutService } from '../../../services/layout.service';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
+import { CFGM_PELUQUERIA_RAS_DATA } from '../data/ras_cfgm_peluqueria.data';
 
 export interface GroupedCurriculumItem {
   category: string;
@@ -12,18 +13,19 @@ export interface GroupedCurriculumItem {
 }
 
 const CFGM_MODULE_ORDER = ['0633', '0635', '0636', '0638', '0640', '0641', '1664', '1709', '0156'];
+const CFGM_PELUQUERIA_MODULE_ORDER = ['0845', '0842', '0844', '0846', '0849', '1664', '1709', '0156'];
 
-function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' {
+function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' {
   if (typeof localStorage !== 'undefined') {
     const saved = localStorage.getItem('pai_tipo_nivel');
-    if (saved === 'DIVERSIFICACION_CURRICULAR' || saved === 'FP_BASICA' || saved === 'CFGM_ESTETICA') {
+    if (saved === 'DIVERSIFICACION_CURRICULAR' || saved === 'FP_BASICA' || saved === 'CFGM_ESTETICA' || saved === 'CFGM_PELUQUERIA') {
       return saved;
     }
   }
   return 'FP_BASICA';
 }
 
-function getStoredCurso(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA'): string {
+function getStoredCurso(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA'): string {
   if (typeof localStorage !== 'undefined') {
     const savedCurso = localStorage.getItem('pai_curso');
     const valid = nivel === 'DIVERSIFICACION_CURRICULAR' ? ['3º', '4º'] : ['1º', '2º'];
@@ -44,10 +46,10 @@ export class CurriculumFacade {
   ces = signal<EvaluativeCriteria[]>([]);
 
   // Configuración base que afecta al currículum
-  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA'>(getStoredTipoNivel());
+  tipoNivel = signal<'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA'>(getStoredTipoNivel());
   curso = signal<string>(getStoredCurso(this.tipoNivel()));
 
-  setTipoNivel(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA') {
+  setTipoNivel(nivel: 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA') {
     if (this.tipoNivel() !== nivel) {
       this.tipoNivel.set(nivel);
       const defaultCurso = nivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
@@ -111,7 +113,7 @@ export class CurriculumFacade {
     const isCa = this.layoutService?.language() === 'catalan' ||
       (typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan');
 
-    if (this.tipoNivel() === 'FP_BASICA' || this.tipoNivel() === 'CFGM_ESTETICA') {
+    if (this.tipoNivel() === 'FP_BASICA' || this.tipoNivel() === 'CFGM_ESTETICA' || this.tipoNivel() === 'CFGM_PELUQUERIA') {
       const rawList = this.ras();
       let list = rawList.filter(ra => (ra as any).tipoNivel === this.tipoNivel() || (!((ra as any).tipoNivel) && this.tipoNivel() === 'FP_BASICA'));
       
@@ -127,6 +129,27 @@ export class CurriculumFacade {
           criterios: isCa ? r.criterios_ca : r.criterios_es
         } as any));
       }
+
+      // Fallback robusto para CFGM_PELUQUERIA
+      if (this.tipoNivel() === 'CFGM_PELUQUERIA' && list.length === 0) {
+        list = CFGM_PELUQUERIA_RAS_DATA.map(r => ({
+          id: r.id,
+          module: isCa ? `${r.moduleCode}. ${r.module_ca}` : `${r.moduleCode}. ${r.module_es}`,
+          subject: isCa ? `${r.moduleCode}. ${r.module_ca}` : `${r.moduleCode}. ${r.module_es}`,
+          description: isCa ? r.description_ca : r.description_es,
+          tipoNivel: 'CFGM_PELUQUERIA',
+          moduleCode: r.moduleCode,
+          criterios: isCa ? r.criterios_ca : r.criterios_es
+        } as any));
+      }
+
+      list = list.map(r => ({
+        ...r,
+        module: isCa ? ((r as any).module_ca || r.module) : ((r as any).module_es || r.module),
+        subject: isCa ? ((r as any).module_ca || r.subject || r.module) : ((r as any).module_es || r.subject || r.module),
+        description: isCa ? ((r as any).description_ca || r.description) : ((r as any).description_es || r.description),
+        criterios: isCa ? ((r as any).criterios_ca || (r as any).criterios) : ((r as any).criterios_es || (r as any).criterios)
+      } as any));
 
       const groups: { [key: string]: any[] } = {};
       const moduleCodes: { [key: string]: string } = {};
@@ -155,10 +178,11 @@ export class CurriculumFacade {
         return { category: key, items, totalItems: items.length, moduleCode: moduleCodes[key] };
       });
 
-      if (this.tipoNivel() === 'CFGM_ESTETICA') {
+      if (this.tipoNivel() === 'CFGM_ESTETICA' || this.tipoNivel() === 'CFGM_PELUQUERIA') {
         result.sort((a, b) => {
-          const idxA = CFGM_MODULE_ORDER.indexOf(a.moduleCode || '');
-          const idxB = CFGM_MODULE_ORDER.indexOf(b.moduleCode || '');
+          const order = this.tipoNivel() === 'CFGM_ESTETICA' ? CFGM_MODULE_ORDER : CFGM_PELUQUERIA_MODULE_ORDER;
+          const idxA = order.indexOf(a.moduleCode || '');
+          const idxB = order.indexOf(b.moduleCode || '');
           if (idxA !== -1 && idxB !== -1) return idxA - idxB;
           return a.category.localeCompare(b.category);
         });

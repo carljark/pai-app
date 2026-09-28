@@ -10,23 +10,6 @@ import { FPB_MODULES_SEED } from '../../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 describe('MapaIntermodularViewComponent', () => {
-
-  it('should switch to CFGM tab and test branches', () => {
-    // click CFGM
-    component.setTab('CFGM');
-    fixture.detectChanges();
-    expect(component.facade.activeTab()).toBe('CFGM');
-
-    // toggle language
-    component.layout.language.set('catalan');
-    fixture.detectChanges();
-    expect(component.isCa()).toBe(true);
-    
-    component.layout.language.set('castellano');
-    fixture.detectChanges();
-    expect(component.isCa()).toBe(false);
-  });
-
   let component: MapaIntermodularViewComponent;
   let fixture: ComponentFixture<MapaIntermodularViewComponent>;
   let mockLayout: any;
@@ -76,6 +59,54 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should switch tabs via DOM click buttons and toggle language', () => {
+    const tabBtns = fixture.nativeElement.querySelectorAll('.mapa-tab-btn') as NodeListOf<HTMLButtonElement>;
+    expect(tabBtns.length).toBe(3);
+
+    // Click CFGM tab in DOM
+    tabBtns[1].click();
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('CFGM');
+
+    // Click CFGM_PELUQUERIA tab in DOM
+    tabBtns[2].click();
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA');
+
+    // Click FPB tab in DOM
+    tabBtns[0].click();
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('FPB');
+
+    // toggle language
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(component.isCa()).toBe(true);
+    
+    component.layout.language.set('castellano');
+    fixture.detectChanges();
+    expect(component.isCa()).toBe(false);
+  });
+
+  it('should click header main row and stats toggle button in DOM', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const mainRow = compiled.querySelector('.mapa-header__main-row') as HTMLElement;
+    expect(mainRow).toBeTruthy();
+    expect(component.headerExpanded()).toBe(false);
+
+    // Click main row to expand
+    mainRow.click();
+    fixture.detectChanges();
+    expect(component.headerExpanded()).toBe(true);
+
+    // Click toggle button inside main row
+    const toggleBtn = compiled.querySelector('.mapa-stats-toggle-btn') as HTMLButtonElement;
+    expect(toggleBtn).toBeTruthy();
+    toggleBtn.click();
+    fixture.detectChanges();
+    expect(component.headerExpanded()).toBe(false);
+  });
+
   it('should create and render header and toggle stats', () => {
     expect(component).toBeTruthy();
     const compiled = fixture.nativeElement as HTMLElement;
@@ -89,6 +120,230 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
     expect(component.headerExpanded()).toBe(true);
     expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(4);
+  });
+
+  
+  
+  it('should render activity details and motivating factor', () => {
+    component.facade.setTab('FPB');
+    
+    const dummyConn = {
+      title_es: 'title_es',
+      title_ca: 'title_ca',
+      targetModuleCode: '3061',
+      targetModuleName_es: 'mod_es',
+      targetModuleName_ca: 'mod_ca',
+      targetRaCode: 'RA2',
+      targetRaText_es: 'ra_es',
+      targetRaText_ca: 'ra_ca',
+      sourceCriteria: 'a, b',
+      relatedCriteria: [
+        { code: 'a', text_es: 'ce_es', text_ca: 'ce_ca' }
+      ],
+      activities: [
+        {
+          id: '1',
+          title_es: 'act_es',
+          title_ca: 'act_ca',
+          motivatingFactor_es: 'mot_es',
+          motivatingFactor_ca: 'mot_ca',
+          description_es: 'desc_es',
+          description_ca: 'desc_ca',
+          evidence_es: 'ev_es',
+          evidence_ca: 'ev_ca',
+          diversitySupport_es: 'div_es',
+          diversitySupport_ca: 'div_ca'
+        },
+        {
+          id: '2',
+          title_es: 'act2',
+          title_ca: 'act2',
+          description_es: 'desc',
+          description_ca: 'desc',
+          evidence_es: 'ev',
+          evidence_ca: 'ev',
+          diversitySupport_es: 'div',
+          diversitySupport_ca: 'div'
+        }
+      ]
+    };
+    const emptyConn = {
+      targetModuleCode: '3062',
+      targetModuleName_es: 'mod2',
+      targetModuleName_ca: 'mod2',
+      targetRaCode: 'RA3',
+      targetRaText_es: 'ra3',
+      targetRaText_ca: 'ra3',
+      relatedCriteria: [],
+      activities: []
+    };
+    
+    const customMod = {
+      code: '3060',
+      name_es: 'Mod',
+      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [dummyConn, emptyConn] }]
+    };
+    
+    component.facade.modules.set([customMod as any]);
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    component.facade.searchQuery.set('');
+    fixture.detectChanges();
+    
+    expect(fixture.nativeElement.textContent).toContain('mot_es');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('mot_ca');
+  });
+
+  it('should render empty state when no module is selected', () => {
+    component.facade.setTab('FPB');
+    component.facade.selectedModuleCode.set('');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('Selecciona un m');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('Selecciona un m');
+  });
+
+  it('should render empty state when RA has no connections', () => {
+    component.facade.setTab('FPB');
+    const customMod = {
+      code: '3060',
+      name_es: 'Mod',
+      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [] }]
+    };
+    component.facade.modules.set([customMod as any]);
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    fixture.detectChanges();
+    
+    expect(fixture.nativeElement.textContent).toContain('No hay conexiones registradas para este RA');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('No hi ha connexions registrades per a aquest RA');
+  });
+
+  
+  it('should render all template conditions in both languages for full coverage', () => {
+    // Check CFGM_PELUQUERIA tab button text
+    component.facade.setTab('CFGM_PELUQUERIA');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('CFGM Peluquer');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('CFGM Perruqueria');
+    component.layout.language.set('castellano');
+
+    component.facade.setTab('FPB');
+    
+    const dummyConn = {
+      title_es: 'title_es',
+      title_ca: 'title_ca',
+      targetModuleCode: '3061',
+      targetModuleName_es: 'mod_es',
+      targetModuleName_ca: 'mod_ca',
+      targetRaCode: 'RA2',
+      targetRaText_es: 'ra_es',
+      targetRaText_ca: 'ra_ca',
+      sourceCriteria: 'a, b',
+      relatedCriteria: [
+        { code: 'a', text_es: 'ce_es', text_ca: 'ce_ca' }
+      ],
+      activities: [
+        {
+          id: '1',
+          title_es: 'act_es',
+          title_ca: 'act_ca',
+          motivatingFactor_es: 'mot_es',
+          motivatingFactor_ca: 'mot_ca',
+          description_es: 'desc_es',
+          description_ca: 'desc_ca',
+          evidence_es: 'ev_es',
+          evidence_ca: 'ev_ca',
+          diversitySupport_es: 'div_es',
+          diversitySupport_ca: 'div_ca'
+        },
+        {
+          id: '2',
+          title_es: 'act2',
+          title_ca: 'act2',
+          description_es: 'desc',
+          description_ca: 'desc',
+          evidence_es: 'ev',
+          evidence_ca: 'ev',
+          diversitySupport_es: 'div',
+          diversitySupport_ca: 'div'
+        }
+      ]
+    };
+    const emptyConn = {
+      targetModuleCode: '3062',
+      targetModuleName_es: 'mod2',
+      targetModuleName_ca: 'mod2',
+      targetRaCode: 'RA3',
+      targetRaText_es: 'ra3',
+      targetRaText_ca: 'ra3',
+      relatedCriteria: [],
+      activities: []
+    };
+    
+    const customMod = {
+      code: '3060',
+      name_es: 'Mod',
+      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', text_ca: 'b', criteria_es: ['ce_1'], connections: [dummyConn, emptyConn] }]
+    };
+    
+    component.facade.modules.set([customMod as any]);
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    component.facade.searchQuery.set('');
+    fixture.detectChanges();
+    
+    expect(fixture.nativeElement.textContent).toContain('title_es');
+    expect(fixture.nativeElement.textContent).toContain('mot_es');
+    expect(fixture.nativeElement.textContent).toContain('Criterios propios');
+    
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    
+    expect(fixture.nativeElement.textContent).toContain('title_ca');
+    expect(fixture.nativeElement.textContent).toContain('mot_ca');
+    expect(fixture.nativeElement.textContent).toContain('Criteris propis');
+  });
+
+  
+  it('should render remaining edge cases in HTML (empty search, selected criterion)', () => {
+    // 1. Empty modules due to search
+    component.facade.searchQuery.set('GIBBERISH_NO_MATCH');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('No se encontr');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('No s’ha trobat');
+    
+    component.layout.language.set('castellano');
+    component.facade.searchQuery.set('');
+
+    // 2. Selected Criterion
+    const customMod = {
+      code: '3060',
+      name_es: 'Mod',
+      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [] }]
+    };
+    component.facade.modules.set([customMod as any]);
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    component.facade.selectedCriterion.set('crit_1');
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.textContent).toContain('Ver todos');
+    expect(fixture.nativeElement.textContent).toContain('Filtrado por criterio');
+    
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('Veure tots');
+    expect(fixture.nativeElement.textContent).toContain('Filtrat pel criteri');
   });
 
   it('should select module and RA on user click and collapse when clicking module again', () => {
@@ -107,6 +362,24 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.facade.selectedRa()).toBeNull();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Selecciona un');
+  });
+
+  it('should render header for CFGM in both languages', () => {
+    component.facade.setTab('CFGM');
+    component.headerExpanded.set(true);
+    fixture.detectChanges();
+    component.layout.language.set('castellano');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('1.er curso');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('1r curs');
+  });
+
+  it('should set curriculum level correctly for CFGM_PELUQUERIA on project creation', () => {
+    component.facade.setTab('CFGM_PELUQUERIA');
+    component.createProjectFromConnection();
+    expect(curriculum.tipoNivel()).toBe('CFGM_PELUQUERIA');
   });
 
   it('should get correct relation labels and toggle header in Catalan', () => {
@@ -468,5 +741,72 @@ describe('MapaIntermodularViewComponent', () => {
       targetRaText_ca: desc
     };
     component.createProjectFromConnection(mockConn);
+  });
+
+  it('should cover CFGM_PELUQUERIA header expanded branches and activity labels in both languages', () => {
+    // Expand header with CFGM_PELUQUERIA tab active to cover subtitle + stats h1 branches
+    component.facade.setTab('CFGM_PELUQUERIA');
+    component.headerExpanded.set(true);
+    fixture.detectChanges();
+
+    // ES: h1 title "Mapa intermodular del CFGM Peluquería"
+    expect(fixture.nativeElement.textContent).toContain('CFGM Peluquer');
+    // CA: same
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('Perruqueria i Cosm');
+
+    // Now set up a module+RA with activities while tab is CFGM_PELUQUERIA to cover activity labels
+    component.layout.language.set('castellano');
+    const dummyConn2 = {
+      title_es: 'conn_es',
+      title_ca: 'conn_ca',
+      targetModuleCode: '0842',
+      targetModuleName_es: 'Pentinats',
+      targetModuleName_ca: 'Pentinats',
+      targetRaCode: 'RA1',
+      targetRaText_es: 'ra_es',
+      targetRaText_ca: 'ra_ca',
+      sourceCriteria: 'a',
+      relatedCriteria: [],
+      activities: [
+        {
+          id: 'p1',
+          title_es: 'act_perruq_es',
+          title_ca: 'act_perruq_ca',
+          motivatingFactor_es: 'mot_perruq_es',
+          motivatingFactor_ca: 'mot_perruq_ca',
+          description_es: 'desc_perruq_es',
+          description_ca: 'desc_perruq_ca',
+          evidence_es: 'ev_perruq_es',
+          evidence_ca: 'ev_perruq_ca',
+          diversitySupport_es: 'div_perruq_es',
+          diversitySupport_ca: 'div_perruq_ca'
+        }
+      ]
+    };
+    const peluquerMod = {
+      code: '0845',
+      name_es: 'Tall de cabells',
+      name_ca: 'Tall de cabells',
+      learningOutcomes: [{ id: '0845_RA1', code: 'RA1', text_es: 'ra_es', text_ca: 'ra_ca', criteria_es: ['a) criteri'], connections: [dummyConn2] }]
+    };
+    component.facade.modules.set([peluquerMod as any]);
+    component.facade.selectModule('0845');
+    component.facade.selectRa('0845_RA1');
+    component.facade.searchQuery.set('');
+    fixture.detectChanges();
+
+    // Activity label should read "Propuestas de Actividades y Retos CFGM" (not FPB)
+    expect(fixture.nativeElement.textContent).toContain('Propuestas de Actividades');
+    expect(fixture.nativeElement.textContent).toContain('Aprendizajes y Diversidad CFGM');
+    expect(fixture.nativeElement.textContent).toContain('act_perruq_es');
+
+    // CA
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('Propostes d');
+    expect(fixture.nativeElement.textContent).toContain('Aprenentatges i Diversitat CFGM');
+    expect(fixture.nativeElement.textContent).toContain('act_perruq_ca');
   });
 });

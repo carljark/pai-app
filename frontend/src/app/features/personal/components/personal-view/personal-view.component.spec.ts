@@ -104,6 +104,7 @@ describe('PersonalViewComponent', () => {
     mockProjectsFacade.myProjects.set([
       { _id: '1', title: 'P1 FPB', tipoNivel: 'FP_BASICA' },
       { _id: '2', title: 'P2 CFGM', tipoNivel: 'CFGM_ESTETICA' },
+      { _id: '2b', title: 'P2b CFGM Pel', tipoNivel: 'CFGM_PELUQUERIA' },
       { _id: '3', title: 'P3 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' }
     ]);
     fixture.detectChanges();
@@ -112,8 +113,8 @@ describe('PersonalViewComponent', () => {
     // Pills order: [ALL, FPB, CFGM, ESO, ALL, borrador, publicado, error]
     const allPill = pills[0];
     const fpbPill = pills[1];
-    const cfgmPill = pills[2];
-    const esoPill = pills[3];
+    const cfgmPill = pills[3];
+    const cfgmPelPill = pills[2]; const esoPill = pills[4];
 
     fpbPill.click();
     fixture.detectChanges();
@@ -127,6 +128,12 @@ describe('PersonalViewComponent', () => {
     expect(component.filteredMyProjects().length).toBe(1);
     expect(component.filteredMyProjects()[0].title).toBe('P2 CFGM');
 
+    cfgmPelPill.click();
+    fixture.detectChanges();
+    expect(component.levelFilter()).toBe('CFGM_PELUQUERIA');
+    expect(component.filteredMyProjects().length).toBe(1);
+    expect(component.filteredMyProjects()[0].title).toBe('P2b CFGM Pel');
+
     esoPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ESO');
@@ -136,7 +143,7 @@ describe('PersonalViewComponent', () => {
     allPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ALL');
-    expect(component.filteredMyProjects().length).toBe(3);
+    expect(component.filteredMyProjects().length).toBe(4);
   });
 
   it('debería filtrar por estado del proyecto mediante clicks en el DOM', () => {
@@ -149,10 +156,10 @@ describe('PersonalViewComponent', () => {
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
     // Status pills are indexes 4 (ALL), 5 (borrador), 6 (publicado), 7 (error)
-    const borradorPill = pills[5];
-    const publicadoPill = pills[6];
-    const errorPill = pills[7];
-    const allStatusPill = pills[4];
+    const borradorPill = pills[6];
+    const publicadoPill = pills[7];
+    const errorPill = pills[8];
+    const allStatusPill = pills[5];
 
     borradorPill.click();
     fixture.detectChanges();

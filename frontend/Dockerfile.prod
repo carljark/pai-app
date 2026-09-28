@@ -2,8 +2,8 @@
 FROM node:22-alpine AS build
 WORKDIR /app
 
-# Asignar 2.5 GB de memoria al worker de compilación de Angular/TypeScript (óptimo para 2GB swap)
-ENV NODE_OPTIONS="--max-old-space-size=2560"
+# Asignar 512 MB de memoria al build (suficiente tras la migración del mapa a MongoDB)
+ENV NODE_OPTIONS="--max-old-space-size=512"
 
 COPY package*.json ./
 RUN npm install --legacy-peer-deps

@@ -1,26 +1,42 @@
 ---
 name: agregar-grado-medio
 description: >-
-  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Grado Medio (CFGM) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y carpeta de archivos curriculares). Gestiona la integración end-to-end en backend, frontend, mapa intermodular, migraciones, traducciones y suite de tests con cobertura >= 90%.
+  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Formación Profesional (tanto Grado Básico / FP Básica como Grado Medio / CFGM) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y carpeta de archivos curriculares). Gestiona la integración end-to-end en backend, frontend, mapa intermodular con bidireccionalidad completa, gestión de 1.er y 2.º curso, migraciones, traducciones y suite de tests con cobertura >= 90%.
 ---
 
-# Skill: Incorporación de Ciclos Formativos de Grado Medio (CFGM)
+# Skill: Incorporación de Ciclos Formativos de Formación Profesional (Grado Básico y Grado Medio)
 
-Esta skill permite integrar cualquier nuevo ciclo de Grado Medio en Plappin de forma sistemática, bilingüe y sin fricción, aprovechando el estándar validado en **CFGM Estética y Belleza** y **CFGM Peluquería y Cosmética Capilar**.
+Esta skill permite integrar cualquier nuevo ciclo de Formación Profesional —tanto de **Grado Básico (FP Básica / FPB)** como de **Grado Medio (CFGM)**— en Plappin de forma sistemática, bilingüe estricta (Castellano / Catalán) y sin fricción, aprovechando el estándar validado en **FP Básica**, **CFGM Estética y Belleza** y **CFGM Peluquería y Cosmética Capilar**.
 
 ---
 
-## 1. Información Mínima Requerida y Fuentes Bilingües
+## 1. Fuentes Oficiales de Referencia y Portales de FP
+
+Para cualquier consulta curricular, verificación de Resultados de Aprendizaje (RA), Criterios de Evaluación (CE) o denominaciones normativas oficiales, se debe recurrir a las fuentes gubernamentales de referencia:
+
+1. **Portal FP Illes Balears (Govern de les Illes Balears - CAIB):**
+   - **URL Oficial:** [https://www.caib.es/sites/fp/ca/inici/](https://www.caib.es/sites/fp/ca/inici/)
+   - **Uso:** Denominaciones oficiales autonómicas en catalán balear (`_ca`), currículos oficiales publicados en el BOIB, atribuciones docentes y distribución modular por cursos en las Islas Baleares.
+2. **TodoFP (Ministerio de Educación, Formación Profesional y Deportes de España):**
+   - **URL Oficial:** [https://www.todofp.es/inicio.html](https://www.todofp.es/inicio.html)
+   - **Uso:** Catálogo Nacional de Títulos de FP, Reales Decretos estatales del BOE, denominaciones oficiales en castellano (`_es`), Resultados de Aprendizaje (RA), Criterios de Evaluación (CE) estatales y códigos numéricos de los módulos.
+
+---
+
+## 2. Información Mínima Requerida y Niveles Educativos
 
 Para iniciar la integración, el asistente solo necesita:
 
-1. **Denominaciones oficiales del ciclo:**
-   - **En castellano:** Denominación oficial estatal del BOE (ej. *"Peluquería y Cosmética Capilar"*, *"Cocina y Gastronomía"*).
-   - **En catalán:** Denominación autonómica oficial de FP Illes Balears / CAIB (ej. *"Perruqueria i Cosmètica Capil·lar"*, *"Cuina i Gastronomia"*).
-2. **Identificador / Slug:** Una palabra clave corta en minúsculas (ej. `cocina`, `automocion`, `peluqueria`), que determina `tipoNivel = 'CFGM_<SLUG_MAYUSCULAS>'` (ej. `CFGM_PELUQUERIA`).
-3. **Carpeta de archivos curriculares:** Carpeta del ciclo formativo (ej. `add_mid_grades/Grado medio <nombre>/`). Debe contener:
-   - Archivos de RAs y Criterios oficiales del BOE en castellano (`lista_RA_CE_..._ES_...md` o `RA_CE_..._1er_curso_ES.md`).
-   - Archivos o traducciones normativas en catalán de los módulos y criterios.
+1. **Nivel del Ciclo:**
+   - **Grado Básico (FP Básica / FPB):** `tipoNivel = 'FP_BASICA'` (o subtipos específicos).
+   - **Grado Medio (CFGM):** `tipoNivel = 'CFGM_<SLUG_MAYUSCULAS>'` (ej. `CFGM_PELUQUERIA`, `CFGM_ESTETICA`, `CFGM_COCINA`).
+2. **Denominaciones oficiales del ciclo:**
+   - **En castellano:** Denominación oficial estatal del BOE / TodoFP (ej. *"Peluquería y Cosmética Capilar"*, *"Cocina y Gastronomía"*, *"Servicios Administrativos"*).
+   - **En catalán:** Denominación autonómica oficial de FP Illes Balears / CAIB (ej. *"Perruqueria i Cosmètica Capil·lar"*, *"Cuina i Gastronomia"*, *"Serveis Administratius"*).
+3. **Identificador / Slug:** Una palabra clave corta en minúsculas (ej. `peluqueria`, `cocina`, `automocion`, `servicios_admin`).
+4. **Carpeta de archivos curriculares:** Carpeta del ciclo formativo (ej. `add_mid_grades/Grado medio <nombre>/` o `FPB/`). Debe contener:
+   - Archivos de RAs y Criterios oficiales del BOE en castellano (`lista_RA_CE_..._ES_...md` o `RA_CE_..._curso_ES.md`).
+   - Archivos o traducciones normativas en catalán balear (`lista_RA_CE_..._CA_...md`).
    - Carpeta del Mapa Intermodular con los archivos pareados: `mapa_intermodular_*_ES_*.md` y `mapa_intermodular_*_CA_*.md`.
 
 > [!IMPORTANT]
@@ -28,7 +44,7 @@ Para iniciar la integración, el asistente solo necesita:
 
 ---
 
-## 2. Flujo de Ejecución Paso a Paso
+## 3. Flujo de Ejecución Paso a Paso
 
 ### Paso 1: Andamiaje Inicial (Scaffold)
 Ejecutar el script asistente para generar los archivos base y calcular automáticamente el siguiente número secuencial de migración:
@@ -49,7 +65,7 @@ Archivos generados:
 ---
 
 ### Paso 2: Extracción e Ingesta de RAs y Criterios (Bilingüe Estricto)
-1. Extraer los RAs y criterios oficiales desde los documentos normativos:
+1. Extraer los RAs y criterios oficiales desde los documentos normativos contrastando con **TodoFP** y **CAIB**:
    - **En castellano:** Extraer textualmente del BOE (`lista_RA_CE_..._ES_...md`). Criterios ordenados: `a) Se ha...`, `b) Se han...`.
    - **En catalán:** Extraer de las fuentes autonómicas o traducir siguiendo la terminología balear de FP (`a) S'ha...`, `b) S'han...`).
 2. Rellenar `backend/src/data/ras_cfgm_<slug>.data.ts` y sincronizar en `frontend/src/app/features/curriculum/data/ras_cfgm_<slug>.data.ts` con tipado `CfgmRaData`:
@@ -60,7 +76,7 @@ Archivos generados:
      module_es: "<Denominación oficial BOE en Castellano>",
      module_ca: "<Nombre oficial en Catalán>",
      moduleCode: "0845",
-     tipoNivel: "CFGM_<SLUG>",
+     tipoNivel: "CFGM_<SLUG>", // o "FP_BASICA"
      description: "<Descripción en Catalán>",
      description_es: "<Descripción oficial BOE en Castellano>",
      description_ca: "<Descripción oficial en Catalán>",
@@ -68,11 +84,12 @@ Archivos generados:
      criterios_ca: [ "a) S'ha...", "b) S'han..." ]
    }
    ```
+3. **Validación de Criterios Completos:** Verificar minuciosamente que no se omitan letras de criterios de evaluación (ej. `h`, `i`, etc.), asegurando coherencia total con las referencias cruzadas del mapa intermodular.
 
 ---
 
 ### Paso 3: Configuración en Backend y Prompt IA Bilingüe
-1. **`backend/src/models/Project.ts`**: Añadir `'CFGM_<SLUG>'` al enum de `tipoNivel`.
+1. **`backend/src/models/Project.ts`**: Añadir `'CFGM_<SLUG>'` al enum de `tipoNivel` (si es un nuevo grado medio).
 2. **`backend/src/controllers/project.controller.ts`**: En `targetCourseDescription`, respetar el idioma del proyecto para la IA:
    ```typescript
    : (tipoNivel === 'CFGM_<SLUG>'
@@ -87,7 +104,11 @@ Archivos generados:
 ### Paso 4: Configuración en Frontend (Curriculum & Generator)
 1. **`frontend/src/app/features/curriculum/services/curriculum.facade.ts`**:
    - Importar `CFGM_<SLUG>_RAS_DATA`.
-   - Definir `const CFGM_<SLUG>_MODULE_ORDER = ['cod1', 'cod2', ...];` (códigos de 1.er curso).
+   - Definir la ordenación de módulos por cursos:
+     ```typescript
+     const CFGM_<SLUG>_MODULE_ORDER = ['cod1', 'cod2', ...]; // 1.er curso
+     const CFGM_<SLUG>_MODULE_ORDER_2 = ['codA', 'codB', ...]; // 2.º curso
+     ```
    - Añadir `'CFGM_<SLUG>'` al tipo de unión de `tipoNivel`.
    - Actualizar `getStoredTipoNivel()` y el fallback estático en `loadRas()`.
    - **CRÍTICO:** Asegurar que `groupedItems` mapea reactivamente los campos según `isCa` para los RAs cargados desde la API:
@@ -103,32 +124,33 @@ Archivos generados:
 2. **Traducciones (`translations.es.ts` y `translations.ca.ts`)**:
    - `courseLevelCFGM<CapitalizedSlug>` en ES: `'CFGM <Nombre en Castellano>'`.
    - `courseLevelCFGM<CapitalizedSlug>` en CA: `'CFGM <Nombre en Catalán>'`.
-3. **`generator-view.component.ts`**: Añadir el tab de nivel en la vista del formulario de generación.
+3. **`generator-view.component.ts`**:
+   - Añadir el tab de nivel en la vista del formulario de generación.
+   - **Filtrado por Curso:** Asegurar que al seleccionar 1.er curso o 2.º curso, solo se muestren los módulos correspondientes a ese año.
 
 ---
 
-### Paso 5: Semilla y Vista del Mapa Intermodular (Bilingüe Completo)
-1. **Construcción de la semilla (`mapa-intermodular-cfgm-<slug>.seed.ts`):**
-   - Procesar los pares de archivos `mapa_intermodular_*_ES_*.md` y `mapa_intermodular_*_CA_*.md` de 1.er curso.
-   - Cada módulo debe incluir `name_es` y `name_ca`.
-   - Cada RA debe incluir `text_es`, `text_ca`, `criteria_es` y `criteria_ca`.
-   - Cada conexión debe incluir:
-     - `title_es` y `title_ca`
-     - `targetModuleName_es` y `targetModuleName_ca`
-     - `targetRaText_es` y `targetRaText_ca`
-     - `justification_es` y `justification_ca`
-     - `relatedCriteria`: array con `moduleName_es`/`moduleName_ca` y `criteria_es`/`criteria_ca`
-     - `activities`: array de actividades con `title_es`/`title_ca`, `motivatingFactor_es`/`motivatingFactor_ca`, `description_es`/`description_ca`, `evidence_es`/`evidence_ca`, `diversitySupport_es`/`diversitySupport_ca`.
-2. **`mapa-intermodular.facade.ts`**: Añadir `'CFGM_<SLUG>'` a `activeTab` y vincular la carga de la semilla en `setTab()`.
-3. **`mapa-intermodular-view.component.html`**:
-   - Añadir botón tab con interpolación condicional: `{{ isCa() ? 'CFGM <Nombre CA>' : 'CFGM <Nombre ES>' }}`.
-   - Ajustar títulos dinámicos en cabecera y etiquetas de actividades (`facade.activeTab() !== 'FPB'`).
-4. **`mapa-intermodular-view.component.ts`**: Asignar `'CFGM_<SLUG>'` en `createProjectFromConnection()`.
+### Paso 5: Semilla y Vista del Mapa Intermodular (Todas las Combinaciones, Bidireccionalidad y Optimización)
+1. **Inclusión Total de Combinaciones:** No utilizar actividades repetidas ni dummy. Extraer todas las combinaciones reales de los documentos pareados `*_ES_*.md` y `*_CA_*.md`.
+2. **Bidireccionalidad Cuádruple Completa:** Si una actividad vincula $CE_A$ con $CE_B$, $CE_C$, $CE_D$, debe generarse simétricamente la conexión desde cada uno de los 4 módulos hacia los demás con su correspondiente actividad y justificación.
+3. **Patrón de Optimización de Memoria (Evitar Heap Out of Memory en Vitest):**
+   - Cuando un ciclo formativo contiene miles de conexiones y actividades (ej. > 3.000 actividades y > 10.000 conexiones), serializar objetos completos en `.ts` produce archivos de > 70 MB que agotan la memoria de Node en Vitest (`Heap out of memory` / límite N-API string).
+   - **Estructura Normalizada Obligatoria:**
+     - Almacenar las actividades únicas en un diccionario centralizado: `const A: Record<string, IntermodularActivity>`.
+     - Almacenar las conexiones como tuplas compactas en disco: `{ s: string; t: string; k: string[]; rel: any; r: string[]; a: string[] }`.
+     - Pre-calcular `k` (criteriaKeys) y `rel` (relationType) en el script generador para que la función `expandConnection` no contenga ramas condicionales que degraden la cobertura de branches en los tests.
+     - En `expandConnection`, expandir dinámicamente en tiempo de carga usando `CRIT_LOOKUP` y `RA_LOOKUP`.
+     - Validar que todos los criterios referenciados existan en `ras_*.data.ts`.
+4. **Pestañas Separadas por Curso:**
+   - Si el ciclo dispone de mapa para 1.er y 2.º curso, generar dos semillas independientes:
+     - `mapa-intermodular-cfgm-<slug>.seed.ts` (1.er curso).
+     - `mapa-intermodular-cfgm-<slug>-2.seed.ts` (2.º curso).
+   - Configurar dos pestañas en `mapa-intermodular-view.component.html` (ej. `CFGM Peluquería y Cosmética Capilar` y `CFGM Peluquería y Cosmética Capilar 2n`).
 
 ---
 
 ### Paso 6: Ajuste de Vistas de Historial, Home y Perfil
-Verificar que se emplee la clave `trans.t().courseLevelCFGM<CapitalizedSlug>` o `t().courseLevelCFGM<CapitalizedSlug>` en:
+Verificar que se emplee la clave de traducción correspondiente en:
 - `history-view.component.ts`
 - `home-dashboard.component.ts`
 - `personal-view.component.ts`
@@ -149,35 +171,47 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
    - Probar conmutación de idioma en el header (`headerExpanded.set(true)`):
      - En Castellano: comprobar que contiene el nombre en castellano.
      - En Catalán: cambiar a `layout.language.set('catalan')` y comprobar el nombre en catalán.
-2. En los demás spec (`generator-view`, `curriculum.facade`, `history-view`, `personal-view`), añadir assertions para `CFGM_<SLUG>` tanto en ES como en CA.
+2. En los demás spec (`generator-view`, `curriculum.facade`, `history-view`, `personal-view`), añadir assertions para el nuevo ciclo tanto en ES como en CA.
 
 ---
 
 ### Paso 8: Verificación y Documentación
-1. Ejecutar el script de verificación integral:
-   ```bash
-   ./.agents/skills/agregar-grado-medio/scripts/verify_cfgm_integration.sh CFGM_<SLUG>
-   ```
-2. Comprobar que ambas suites pasan con el 100% de éxito:
-   - Frontend: `npm test` con umbral de funciones en HTML >= 80% (o 100%).
+1. Ejecutar el script de verificación integral o la suite completa:
+   - Frontend: `npm test` con umbral de funciones en HTML >= 80% (o 100%) y branch coverage >= 90%.
    - Backend: `npm test`.
-3. Documentar la tarea en `tareas/` siguiendo la regla global de `GEMINI.md` con el siguiente número secuencial (ej. `12X_incorporacion_cfgm_<slug>.md`).
+2. Documentar la tarea en `tareas/` siguiendo la regla global de `GEMINI.md` con el siguiente número secuencial (ej. `12X_incorporacion_cfgm_<slug>.md`).
 
 ---
 
-## 3. Plantilla de Prompt para Delegar a Subagente
+## 4. Prompt para la Generación de Conexiones y Actividades del Mapa Intermodular
+
+Cuando se encargue a la IA o a un subagente generar los documentos curriculares markdown del mapa intermodular a partir del currículo oficial, se debe utilizar exactamente la siguiente instrucción directriz:
 
 ```text
-Implementa el nuevo ciclo formativo CFGM <Nombre en Castellano> (<Nombre en Catalán>) con slug '<slug>' y tipoNivel 'CFGM_<SLUG>'.
-Sigue estrictamente la skill en .agents/skills/agregar-grado-medio/SKILL.md y la checklist en .agents/skills/agregar-grado-medio/references/checklist_archivos.md.
+Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema como hasta ahora, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). Has de proponer además, al menos 9 actividades en las que se trabaje con esta combinacion de CE, dirigidas a los alumnos de una edad correspondiente al curso (ej. 16-17 años para 1.er curso, 17-18 años para 2.º curso). Las actividades han de basarse en las metodologias activas de aprendizaje (Proyectos, problemas, servicio, etc.). Se ha de especificar las medidas DUA a tener en cuenta adaptadas a cada actividad. Todos los Criterios de evaluacion (CE) han de tener actividades relacionadas con otros modulos, y no se pueden contemplar mas de tres CE, a parte del propio del modulo, por actividad. No importa si son muchas combinaciones y actividades, hazlo asi. Además, ha de ser bidireccional, si hay una relacion y unas actividades entre los RA de dos modulos, han de aparecer en ambos. El documento ha de tener una version en catalan y otra en castellano sin faltas de ortografia y sin mezclar las dos lenguas.
+```
+
+---
+
+## 5. Plantilla de Prompt para Delegar la Integración Completa a un Subagente
+
+```text
+Implementa el ciclo formativo <Nivel: Grado Básico / Grado Medio> <Nombre en Castellano> (<Nombre en Catalán>) con slug '<slug>' y tipoNivel '<TIPO_NIVEL>'.
+Sigue estrictamente la skill en .agents/skills/agregar-grado-medio/SKILL.md y la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md.
 Los archivos fuente se encuentran en: <ruta_carpeta>.
 
-REQUISITOS BILINGÜES ESTRICTOS:
-1. Extrae los nombres, descripciones y criterios oficiales en castellano del BOE para los campos _es.
-2. Extrae o traduce al catalán balear de FP para los campos _ca. Nunca mezcles ambos idiomas.
+Fuentes oficiales de contraste:
+- TodoFP: https://www.todofp.es/inicio.html
+- FP Illes Balears: https://www.caib.es/sites/fp/ca/inici/
+
+REQUISITOS BILINGÜES Y TÉCNICOS ESTRICTOS:
+1. Extrae los nombres, descripciones y criterios oficiales en castellano del BOE/TodoFP para los campos _es.
+2. Extrae o traduce al catalán balear oficial de FP CAIB para los campos _ca. Nunca mezcles ambos idiomas.
 3. Asegura el mapeo reactivo isCa en curriculum.facade.ts y la condición de idioma en targetCourseDescription en project.controller.ts.
-4. Genera la semilla del mapa intermodular con conexiones y actividades completas en ambos idiomas (title_es/title_ca, etc.).
-5. Recuerda simular el click() en el DOM para el nuevo tab en mapa-intermodular-view.component.spec.ts para mantener el 100% de cobertura en plantillas.
+4. Genera la semilla del mapa intermodular con TODAS las combinaciones y actividades reales pareadas de los documentos markdown (sin actividades repetidas ni dummy).
+5. Aplica bidireccionalidad completa cuádruple y optimización de memoria (diccionario centralizado de actividades + tuplas de conexión normalizadas para no superar límites de heap en Vitest).
+6. Si hay 1.er y 2.º curso, separa los módulos adecuadamente en el generador y genera pestañas independientes en el mapa intermodular.
+7. Recuerda simular el click() en el DOM para el nuevo tab en mapa-intermodular-view.component.spec.ts para mantener el 100% de cobertura en plantillas.
 
 Al finalizar, ejecuta la suite de tests de frontend y backend, y documenta la tarea en tareas/.
 ```

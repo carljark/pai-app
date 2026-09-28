@@ -13,7 +13,9 @@ export interface GroupedCurriculumItem {
 }
 
 const CFGM_MODULE_ORDER = ['0633', '0635', '0636', '0638', '0640', '0641', '1664', '1709', '0156'];
-const CFGM_PELUQUERIA_MODULE_ORDER = ['0845', '0842', '0844', '0846', '0849', '1664', '1709', '0156'];
+export const CFGM_PELUQUERIA_1ST_ORDER = ['0845', '0842', '0844', '0846', '0849', '1664', '1709', '0156'];
+export const CFGM_PELUQUERIA_2ND_ORDER = ['0640', '0643', '0843', '0848', '0636', '1708', '1710', '1713'];
+const CFGM_PELUQUERIA_MODULE_ORDER = [...CFGM_PELUQUERIA_1ST_ORDER, ...CFGM_PELUQUERIA_2ND_ORDER];
 
 function getStoredTipoNivel(): 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' {
   if (typeof localStorage !== 'undefined') {
@@ -63,9 +65,12 @@ export class CurriculumFacade {
   }
 
   setCurso(c: string) {
-    this.curso.set(c);
-    if (typeof localStorage !== 'undefined') {
-      localStorage.setItem('pai_curso', c);
+    if (this.curso() !== c) {
+      this.curso.set(c);
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('pai_curso', c);
+      }
+      this.clearSelection();
     }
   }
 
@@ -151,6 +156,12 @@ export class CurriculumFacade {
         criterios: isCa ? ((r as any).criterios_ca || (r as any).criterios) : ((r as any).criterios_es || (r as any).criterios)
       } as any));
 
+      // Filtrado de módulos según el curso para CFGM_PELUQUERIA
+      if (this.tipoNivel() === 'CFGM_PELUQUERIA') {
+        const allowedModules = this.curso() === '2º' ? CFGM_PELUQUERIA_2ND_ORDER : CFGM_PELUQUERIA_1ST_ORDER;
+        list = list.filter(r => allowedModules.includes((r as any).moduleCode));
+      }
+
       const groups: { [key: string]: any[] } = {};
       const moduleCodes: { [key: string]: string } = {};
       
@@ -180,7 +191,10 @@ export class CurriculumFacade {
 
       if (this.tipoNivel() === 'CFGM_ESTETICA' || this.tipoNivel() === 'CFGM_PELUQUERIA') {
         result.sort((a, b) => {
-          const order = this.tipoNivel() === 'CFGM_ESTETICA' ? CFGM_MODULE_ORDER : CFGM_PELUQUERIA_MODULE_ORDER;
+          let order = CFGM_MODULE_ORDER;
+          if (this.tipoNivel() === 'CFGM_PELUQUERIA') {
+            order = this.curso() === '2º' ? CFGM_PELUQUERIA_2ND_ORDER : CFGM_PELUQUERIA_1ST_ORDER;
+          }
           const idxA = order.indexOf(a.moduleCode || '');
           const idxB = order.indexOf(b.moduleCode || '');
           if (idxA !== -1 && idxB !== -1) return idxA - idxB;

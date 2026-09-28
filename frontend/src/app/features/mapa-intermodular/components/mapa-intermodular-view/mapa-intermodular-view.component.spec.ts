@@ -61,7 +61,7 @@ describe('MapaIntermodularViewComponent', () => {
 
   it('should switch tabs via DOM click buttons and toggle language', () => {
     const tabBtns = fixture.nativeElement.querySelectorAll('.mapa-tab-btn') as NodeListOf<HTMLButtonElement>;
-    expect(tabBtns.length).toBe(3);
+    expect(tabBtns.length).toBe(4);
 
     // Click CFGM tab in DOM
     tabBtns[1].click();
@@ -72,6 +72,11 @@ describe('MapaIntermodularViewComponent', () => {
     tabBtns[2].click();
     fixture.detectChanges();
     expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA');
+
+    // Click CFGM_PELUQUERIA_2 tab in DOM
+    tabBtns[3].click();
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA_2');
 
     // Click FPB tab in DOM
     tabBtns[0].click();

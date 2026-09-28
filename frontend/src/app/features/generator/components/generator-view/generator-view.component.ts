@@ -37,10 +37,10 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
             class="form-select" 
             [value]="curriculum.curso()" 
             (change)="onCourseChange($event)">
-            @if (curriculum.tipoNivel() === 'FP_BASICA') {
+            @if (curriculum.tipoNivel() === 'FP_BASICA' || curriculum.tipoNivel() === 'CFGM_PELUQUERIA') {
               <option value="1º" [selected]="curriculum.curso() === '1º'">{{ trans.t().firstYearOption }}</option>
               <option value="2º" [selected]="curriculum.curso() === '2º'">{{ trans.t().secondYearOption }}</option>
-            } @else if (curriculum.tipoNivel() === 'CFGM_ESTETICA' || curriculum.tipoNivel() === 'CFGM_PELUQUERIA') {
+            } @else if (curriculum.tipoNivel() === 'CFGM_ESTETICA') {
               <option value="1º" [selected]="curriculum.curso() === '1º'">{{ trans.t().firstYearOption }}</option>
             } @else {
               <option value="3º" [selected]="curriculum.curso() === '3º'">{{ trans.t().thirdYearOption }}</option>

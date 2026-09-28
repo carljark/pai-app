@@ -33,14 +33,22 @@ Si deseas asegurar o forzar que el agente utilice estrictamente esta skill y sus
 
 ---
 
+### Fuentes Oficiales de Contraste
+Para contrastar normativas, códigos y denominaciones bilingües oficiales:
+- **TodoFP (Ministerio de Educación, FP y Deportes de España):** [https://www.todofp.es/inicio.html](https://www.todofp.es/inicio.html) (Títulos estatales, BOE y denominaciones oficiales en castellano).
+- **FP Illes Balears (CAIB):** [https://www.caib.es/sites/fp/ca/inici/](https://www.caib.es/sites/fp/ca/inici/) (Normativa autonómica balear, currículos autonómicos y denominaciones en catalán).
+
+---
+
 ## 3. Parámetros y Argumentos Mínimos
 
-La skill está optimizada para pedir el **mínimo de información posible**:
+La skill está optimizada para pedir el **mínimo de información posible** y soporta tanto **Grado Básico (FP Básica / FPB)** como **Grado Medio (CFGM)**:
 
 | Parámetro | Requerido | Formato / Ejemplo | Descripción |
 | :--- | :---: | :--- | :--- |
-| **Carpeta curricular** | **SÍ** | `@add_mid_grades/Grado medio farmacia/` | Ruta a la carpeta que contiene los documentos normativos oficiales (BOE estatal y CAIB autonómico). |
-| **Nombre del Grado** | Opcional | *"Farmacia y Parafarmacia"* | Si no lo indicas, la skill lo extrae del contenido de los documentos normativos. |
+| **Carpeta curricular** | **SÍ** | `@add_mid_grades/Grado medio farmacia/` o `@FPB/` | Ruta a la carpeta que contiene los documentos normativos oficiales (BOE estatal y CAIB autonómico). |
+| **Nivel Educativo** | Opcional | Grado Medio (`CFGM`) o Grado Básico (`FP_BASICA`) | Se detecta automáticamente por el contenido de los archivos curriculares. |
+| **Nombre del Ciclo** | Opcional | *"Farmacia y Parafarmacia"* / *"Farmàcia i Parafarmàcia"* | Si no se indica, la skill lo extrae de los documentos normativos o portales oficiales. |
 
 ### ¿Qué se deduce y automatiza automáticamente?
 - **Slug identificador:** Se genera en mayúsculas con prefijo estándar (ej. `CFGM_FARMACIA`).
@@ -64,6 +72,11 @@ Usa la skill agregar-grado-medio para integrar el ciclo:
 - Nombre ES: Grado Medio en Farmacia y Parafarmacia
 - Nombre CA: Grau Mitjà en Farmàcia i Parafarmàcia
 - Archivos: @add_mid_grades/Grado medio farmacia
+```
+
+### Ejemplo 3: Prompt para generar conexiones y actividades del mapa intermodular
+```text
+Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema como hasta ahora, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). Has de proponer además, al menos 9 actividades en las que se trabaje con esta combinacion de CE, dirigidas a los alumnos de una edad correspondiente al curso. años. Las actividades han de basarse en las metodologias activas de aprendizaje (Proyectos, problemas, servicio, etc.). Se ha de especificar las medidas DUA a tener en cuenta adaptadas a cada actividad. Todos los CRiterios de evaluacion (CE) han de tener actividades relacionadas con otros modulos, y no se pueden contemplar mas de tres CE, a parte del propio del modulo, por actividad. No importa si son muchas combinaciones y actividades, hazlo asi. Además, ha de ser bideccional, si hay una relacion y unas actividades entre los RA de dos modulos, han de aparecer en ambos. El documento ha de tener una version en catalan y otra en castellano sin faltas de ortografia y sin mezclar las dos lenguas.
 ```
 
 ---

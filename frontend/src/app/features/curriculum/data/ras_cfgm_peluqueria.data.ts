@@ -1199,7 +1199,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "d) Se han identificado los diferentes componentes del recibo de salario.",
       "e) Se han identificado los recursos laborales existentes ante las diferentes vicisitudes que se pueden dar en la relación laboral.",
       "f) Se ha valorado el papel de la Seguridad Social como pilar esencial para la mejora de la calidad de vida de los ciudadanos.",
-      "g) Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral."
+      "g) Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral.",
+      "h) Se ha analizado el contenido del derecho fundamental a la libertad sindical y las diferentes modalidades de representación de las personas trabajadoras en la empresa.",
+      "i) Se ha identificado el derecho fundamental a la huelga, las medidas de conflicto colectivo y los órganos y procedimientos para la resolución de conflictos."
     ],
     "criterios_ca": [
       "a) S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
@@ -1208,7 +1210,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "d) S'han identificat els diferents components del rebut de salari.",
       "e) S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral.",
       "f) S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
-      "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
+      "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral.",
+      "h) S'ha analitzat el contingut del dret fonamental a la llibertat sindical i les diferents modalitats de representació de les persones treballadores a l'empresa.",
+      "i) S'ha identificat el dret fonamental a la vaga, les mesures de conflicte col·lectiu i els òrgans i procediments per a la resolució de conflictes."
     ]
   },
   {
@@ -2690,9 +2694,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
   },
   {
     "id": "RA1",
-    "module": "Proyecto intermodular",
+    "module": "Projecte intermodular",
     "module_es": "Proyecto intermodular",
-    "module_ca": "Proyecto intermodular",
+    "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
     "description": "Caracteritza les empreses del sector atenent la seva organització i el tipus de producte o servei que ofereixen.",
@@ -2710,22 +2714,22 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han relacionado los productos o servicios con su posible contribución a los ODS."
     ],
     "criterios_ca": [
-      "a) S'",
-      "b) S'",
-      "c) S'",
-      "d) S",
-      "e) S'",
-      "f) S'",
-      "g) S'",
-      "h) S'",
-      "i) S'"
+      "a) S'han identificat les empreses tipus més representatives del sector.",
+      "b) S'ha descrit l'estructura organitzativa de les empreses.",
+      "c) S'han caracteritzat els departaments principals.",
+      "d) Shan determinat les funcions de cada departament.",
+      "e) S'ha avaluat el volum de negoci segons les necessitats dels clients.",
+      "f) S'ha definit l'estratègia per donar resposta a les demandes.",
+      "g) S'han valorat els recursos humans i materials necessaris.",
+      "h) S'han fet el seguiment dels resultats d'acord amb l'estratègia aplicada.",
+      "i) S'han relacionat els productes o serveis amb la possible contribució als ODS."
     ]
   },
   {
     "id": "RA2",
-    "module": "Proyecto intermodular",
+    "module": "Projecte intermodular",
     "module_es": "Proyecto intermodular",
-    "module_ca": "Proyecto intermodular",
+    "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
     "description": "Planteja solucions a les necessitats del sector tenint en compte la viabilitat de les mateixes, els costos associats i elaborant un petit projecte.",
@@ -2745,24 +2749,24 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "k) Se han presentado en público las ideas más relevantes de los proyectos propuestos."
     ],
     "criterios_ca": [
-      "a) S'",
-      "b) S'",
-      "c) S'",
-      "d) S'",
-      "e) S'",
-      "f) S'",
-      "g) S'",
-      "h) S'",
-      "i) S'",
-      "j) S'",
-      "k) S'"
+      "a) S'han identificat les necessitats.",
+      "b) S'han plantejat possibles solucions en grup.",
+      "c) S'ha obtingut la informació relativa a les solucions plantejades.",
+      "d) S'han identificat aspectes innovadors que es puguin aplicar.",
+      "e) S'ha fet l'estudi de viabilitat tècnica.",
+      "f) S'han identificat les parts que componen el projecte.",
+      "g) S'han previst els recursos materials i humans per fer-ho.",
+      "h) S'ha fet el pressupost econòmic corresponent.",
+      "i) S'ha definit i elaborat la documentació per dissenyar-la.",
+      "j) S'han identificat els aspectes relacionats amb la qualitat del projecte.",
+      "k) S'han presentat en públic les idees més rellevants dels projectes proposats."
     ]
   },
   {
     "id": "RA3",
-    "module": "Proyecto intermodular",
+    "module": "Projecte intermodular",
     "module_es": "Proyecto intermodular",
-    "module_ca": "Proyecto intermodular",
+    "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
     "description": "Planifica lexecució de les activitats proposades a la solució plantejada, determinant el pla dintervenció i elaborant la documentació corresponent.",
@@ -2780,22 +2784,22 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se ha elaborado la documentación necesaria."
     ],
     "criterios_ca": [
-      "a) S'",
-      "b) S'",
-      "c) S'",
-      "d) S'",
-      "e) S'",
-      "f) S'",
-      "g) S'",
-      "h) S'",
-      "i) S'"
+      "a) S'han temporitzat les seqüències de les activitats.",
+      "b) S'han determinat els recursos i la logística de cada activitat.",
+      "c) S'han identificat permisos i autoritzacions en cas que siguin necessaris.",
+      "d) S'han identificat les activitats que impliquen riscos en la seva execució.",
+      "e) S'ha tingut en compte el pla de prevenció de riscos i els mitjans i els equips necessaris.",
+      "f) S'han assignat recursos materials i humans a cada activitat.",
+      "g) S'han tingut en compte possibles imprevistos.",
+      "h) S'han proposat solucions als possibles imprevistos.",
+      "i) S'ha elaborat la documentació necessària."
     ]
   },
   {
     "id": "RA4",
-    "module": "Proyecto intermodular",
+    "module": "Projecte intermodular",
     "module_es": "Proyecto intermodular",
-    "module_ca": "Proyecto intermodular",
+    "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
     "description": "Realitza el seguiment de l'execució de les activitats plantejades i es verifica que es compleix amb la planificació.",
@@ -2810,19 +2814,19 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se ha definido y elaborado la documentación necesaria para la evaluación de las actividades y del proyecto en su conjunto."
     ],
     "criterios_ca": [
-      "a) S'",
-      "b) S'",
-      "c) S'",
-      "d) S'",
-      "e) S'",
-      "f) S'"
+      "a) S'ha definit el procediment de seguiment de les activitats.",
+      "b) S'ha verificat la qualitat dels resultats de les activitats.",
+      "c) S'han identificat possibles desviacions de la planificació i dels resultats esperats.",
+      "d) S'ha informat de les desviacions en cas que sigui necessari.",
+      "e) S'han solucionat les desviacions i se n'han documentat les intervencions.",
+      "f) S'ha definit i elaborat la documentació necessària per a l'avaluació de les activitats i del projecte en conjunt."
     ]
   },
   {
     "id": "RA5",
-    "module": "Proyecto intermodular",
+    "module": "Projecte intermodular",
     "module_es": "Proyecto intermodular",
-    "module_ca": "Proyecto intermodular",
+    "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
     "description": "Transmet informació amb claredat, de manera ordenada i estructurada.",
@@ -2835,10 +2839,10 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "d) Se han conocido los términos técnicos en otras lenguas que sean estándares del sector."
     ],
     "criterios_ca": [
-      "a) S'",
-      "b) S'",
-      "c) S'",
-      "d) S'"
+      "a) S'ha mantingut una actitud ordenada i metòdica en la transmissió de la informació.",
+      "b) S'ha transmès informació verbal tant horitzontalment com verticalment.",
+      "c) S'ha transmès informació entre els membres del grup fent servir mitjans informàtics.",
+      "d) S'han conegut els termes tècnics en altres llengües que siguin estàndards del sector."
     ]
   }
 ];

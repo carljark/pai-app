@@ -3,10 +3,11 @@ import { FPBModule, LearningOutcome, IntermodularConnection, IntermodularActivit
 import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
 import { CFGM_MODULES_SEED } from '../data/mapa-intermodular-cfgm.seed';
 import { CFGM_PELUQUERIA_MODULES_SEED } from '../data/mapa-intermodular-cfgm-peluqueria.seed';
+import { CFGM_PELUQUERIA_2_MODULES_SEED } from '../data/mapa-intermodular-cfgm-peluqueria-2.seed';
 
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
-  activeTab = signal<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA'>('FPB');
+  activeTab = signal<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'>('FPB');
   modules = signal<FPBModule[]>(FPB_MODULES_SEED);
   selectedModuleCode = signal<string>('3060');
   selectedRaId = signal<string>('3060_RA1');
@@ -212,7 +213,7 @@ export class MapaIntermodularFacade {
   }
 
 
-  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA') {
+  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2') {
     this.activeTab.set(tab);
     if (tab === 'FPB') {
       this.modules.set(FPB_MODULES_SEED);
@@ -223,10 +224,13 @@ export class MapaIntermodularFacade {
       this.selectedModuleCode.set('0633');
       this.selectedRaId.set('0633_RA1');
     } else if (tab === 'CFGM_PELUQUERIA') {
-      // Usaremos un getter importado, de momento asumo CFGM_PELUQUERIA_MODULES_SEED
       this.modules.set(CFGM_PELUQUERIA_MODULES_SEED);
       this.selectedModuleCode.set('0845');
       this.selectedRaId.set('0845_RA1');
+    } else if (tab === 'CFGM_PELUQUERIA_2') {
+      this.modules.set(CFGM_PELUQUERIA_2_MODULES_SEED);
+      this.selectedModuleCode.set('0640');
+      this.selectedRaId.set('0640_RA1');
     }
     this.selectedCriterion.set(null);
   }

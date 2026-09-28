@@ -14,6 +14,8 @@ export interface IntermodularActivity {
   diversitySupport_ca: string;
   motivatingFactor_es?: string;
   motivatingFactor_ca?: string;
+  justification_es?: string;
+  justification_ca?: string;
 }
 
 export interface RelatedCriteriaItem {

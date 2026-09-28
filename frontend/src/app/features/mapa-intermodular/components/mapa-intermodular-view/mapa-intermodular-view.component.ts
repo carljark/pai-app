@@ -126,7 +126,13 @@ export class MapaIntermodularViewComponent {
   }
 
   createProjectFromConnection(connection?: IntermodularConnection) {
-    this.curriculum.setTipoNivel(this.facade.activeTab() === 'CFGM' ? 'CFGM_ESTETICA' : (this.facade.activeTab() === 'CFGM_PELUQUERIA' ? 'CFGM_PELUQUERIA' : 'FP_BASICA'));
+    const isPeluqueria = this.facade.activeTab() === 'CFGM_PELUQUERIA' || this.facade.activeTab() === 'CFGM_PELUQUERIA_2';
+    this.curriculum.setTipoNivel(this.facade.activeTab() === 'CFGM' ? 'CFGM_ESTETICA' : (isPeluqueria ? 'CFGM_PELUQUERIA' : 'FP_BASICA'));
+    if (this.facade.activeTab() === 'CFGM_PELUQUERIA_2') {
+      this.curriculum.setCurso('2º');
+    } else if (this.facade.activeTab() === 'CFGM_PELUQUERIA') {
+      this.curriculum.setCurso('1º');
+    }
     const allRas = this.curriculum.ras();
     const activeRa = this.facade.selectedRa();
     const activeModule = this.facade.selectedModule();
@@ -146,7 +152,7 @@ export class MapaIntermodularViewComponent {
     this.layout.switchView('generator');
   }
 
-  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA') {
+  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2') {
     this.facade.setTab(tab);
   }
 }

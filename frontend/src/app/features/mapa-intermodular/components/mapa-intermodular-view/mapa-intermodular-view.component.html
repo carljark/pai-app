@@ -21,7 +21,10 @@
       {{ isCa() ? 'CFGM Estètica i Bellesa' : 'CFGM Estética y Belleza' }}
     </button>
     <button class="mapa-tab-btn" [class.active]="facade.activeTab() === 'CFGM_PELUQUERIA'" (click)="setTab('CFGM_PELUQUERIA')" style="padding: 0.75rem 1.5rem; border: none; background: none; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;" [style.border-bottom-color]="facade.activeTab() === 'CFGM_PELUQUERIA' ? 'var(--primary-color)' : 'transparent'" [style.color]="facade.activeTab() === 'CFGM_PELUQUERIA' ? 'var(--primary-color)' : 'inherit'">
-      {{ isCa() ? 'CFGM Perruqueria i Cosmètica Capil·lar' : 'CFGM Peluquería y Cosmética Capilar' }}
+      {{ isCa() ? 'CFGM Perruqueria i Cosmètica Capil·lar 1r' : 'CFGM Peluquería y Cosmética Capilar 1º' }}
+    </button>
+    <button class="mapa-tab-btn" [class.active]="facade.activeTab() === 'CFGM_PELUQUERIA_2'" (click)="setTab('CFGM_PELUQUERIA_2')" style="padding: 0.75rem 1.5rem; border: none; background: none; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;" [style.border-bottom-color]="facade.activeTab() === 'CFGM_PELUQUERIA_2' ? 'var(--primary-color)' : 'transparent'" [style.color]="facade.activeTab() === 'CFGM_PELUQUERIA_2' ? 'var(--primary-color)' : 'inherit'">
+      {{ isCa() ? 'CFGM Perruqueria i Cosmètica Capil·lar 2n' : 'CFGM Peluquería y Cosmètica Capilar 2n' }}
     </button>
 
   </div>
@@ -43,8 +46,12 @@
         <h1 class="mapa-header__title">
           @if (facade.activeTab() === 'FPB') {
             {{ isCa() ? 'Mapa Intermodular FPB' : 'Mapa Intermodular FPB' }}
+          } @else if (facade.activeTab() === 'CFGM') {
+            {{ isCa() ? 'Mapa intermodular del CFGM Estètica i Bellesa' : 'Mapa intermodular del CFGM Estética y Belleza' }}
+          } @else if (facade.activeTab() === 'CFGM_PELUQUERIA') {
+            {{ isCa() ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar 1r' : 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar 1º' }}
           } @else {
-            {{ isCa() ? (facade.activeTab() === 'CFGM_PELUQUERIA' ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar' : 'Mapa intermodular del CFGM Estètica i Bellesa') : (facade.activeTab() === 'CFGM_PELUQUERIA' ? 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar' : 'Mapa intermodular del CFGM Estética y Belleza') }}
+            {{ isCa() ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar 2n' : 'Mapa intermodular del CFGM Peluquería y Cosmètica Capilar 2n' }}
           }
         </h1>
       </div>

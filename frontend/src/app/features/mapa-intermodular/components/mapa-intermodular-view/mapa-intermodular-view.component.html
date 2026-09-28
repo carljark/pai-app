@@ -142,6 +142,16 @@
     }
   </header>
 
+  <!-- Skeleton de carga mientras se obtienen los datos del mapa -->
+  @if (facade.isLoadingSeed()) {
+    <div class="mapa-loading-skeleton">
+      <app-skeleton-loader
+        [lines]="6"
+        [text]="trans.t().loadingData"
+      />
+    </div>
+  } @else {
+
   <!-- 3 PASOS DISPUESTOS VERTICALMENTE CON HEADERS STICKY -->
   <div class="mapa-vertical-accordions">
 
@@ -459,4 +469,6 @@
     </div>
 
   </div>
+
+  } <!-- /@else (isLoadingSeed) -->
 </div>

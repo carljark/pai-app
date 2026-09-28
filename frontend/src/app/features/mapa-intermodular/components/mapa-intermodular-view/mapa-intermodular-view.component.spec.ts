@@ -26,7 +26,8 @@ describe('MapaIntermodularViewComponent', () => {
 
     mockTrans = {
       t: signal({
-        sidebarMapa: 'Mapa Intermodular'
+        sidebarMapa: 'Mapa Intermodular',
+        loadingData: 'Cargando datos...'
       })
     };
 
@@ -813,5 +814,28 @@ describe('MapaIntermodularViewComponent', () => {
     expect(fixture.nativeElement.textContent).toContain('Propostes d');
     expect(fixture.nativeElement.textContent).toContain('Aprenentatges i Diversitat CFGM');
     expect(fixture.nativeElement.textContent).toContain('act_perruq_ca');
+  });
+
+  it('should show skeleton loader when isLoadingSeed is true', () => {
+    mockFacade.isLoadingSeed.set(true);
+    fixture.detectChanges();
+
+    const skeleton = fixture.nativeElement.querySelector('app-skeleton-loader');
+    expect(skeleton).not.toBeNull();
+
+    // El contenido principal NO debe renderizarse mientras carga
+    const accordions = fixture.nativeElement.querySelector('.mapa-vertical-accordions');
+    expect(accordions).toBeNull();
+  });
+
+  it('should hide skeleton loader and show content when isLoadingSeed is false', () => {
+    mockFacade.isLoadingSeed.set(false);
+    fixture.detectChanges();
+
+    const skeleton = fixture.nativeElement.querySelector('app-skeleton-loader');
+    expect(skeleton).toBeNull();
+
+    const accordions = fixture.nativeElement.querySelector('.mapa-vertical-accordions');
+    expect(accordions).not.toBeNull();
   });
 });

@@ -1,0 +1,60 @@
+/* =====================================================
+   SKELETON LOADER — Shimmer animation
+   Reutilizable en cualquier sección asíncrona de la app
+   ===================================================== */
+
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.skeleton-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.skeleton-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 640px;
+}
+
+.skeleton-line {
+  height: 16px;
+  border-radius: 8px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--border-color, #e2e8f0) 25%,
+    var(--bg-hover, #f1f5f9)    50%,
+    var(--border-color, #e2e8f0) 75%
+  );
+  background-size: 1200px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* Variantes de anchura para dar aspecto más natural */
+.skeleton-line--medium {
+  width: 80%;
+}
+
+.skeleton-line--short {
+  width: 55%;
+}
+
+.skeleton-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted, #94a3b8);
+  letter-spacing: 0.02em;
+  animation: shimmer 2.4s infinite linear;
+  /* Texto también pulsa suavemente */
+  opacity: 0.8;
+}

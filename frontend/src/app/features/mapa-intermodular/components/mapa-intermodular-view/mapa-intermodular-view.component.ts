@@ -6,6 +6,7 @@ import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { IntermodularConnection } from '../../models/mapa-intermodular.model';
+import { SkeletonLoaderComponent } from '../../../../components/skeleton-loader/skeleton-loader.component';
 
 function findCurriculumMatch(
   allRas: any[],
@@ -42,7 +43,7 @@ function findCurriculumMatch(
 @Component({
   selector: 'app-mapa-intermodular-view',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, SkeletonLoaderComponent],
   templateUrl: './mapa-intermodular-view.component.html',
   styleUrl: './mapa-intermodular-view.component.scss'
 })

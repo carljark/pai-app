@@ -201,5 +201,8 @@ export const TRANSLATIONS_CA = {
   historyAllProjects: 'Tots els projectes del centre',
   historyMyProjects: 'Només els meus projectes',
   historyAuthorLabel: 'Creat per',
-  historyMyProjectBadge: 'Meu'
+  historyMyProjectBadge: 'Meu',
+
+  // SKELETON LOADER
+  loadingData: 'Carregant dades...'
 };

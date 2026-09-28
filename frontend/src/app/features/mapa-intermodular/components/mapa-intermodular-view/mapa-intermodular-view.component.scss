@@ -5,6 +5,15 @@
   font-family: inherit;
 }
 
+/* Skeleton de carga */
+.mapa-loading-skeleton {
+  padding: 2rem 1rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* 1. Header Styles (Ultra Compact & Expandable) */
 .mapa-header {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);

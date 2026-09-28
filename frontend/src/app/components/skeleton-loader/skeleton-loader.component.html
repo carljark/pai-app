@@ -1,0 +1,15 @@
+<div class="skeleton-wrapper" role="status" [attr.aria-label]="text() || 'Carregant...'">
+  <div class="skeleton-lines">
+    @for (i of lineArray; track i) {
+      <div
+        class="skeleton-line"
+        [class.skeleton-line--short]="i % 3 === 2"
+        [class.skeleton-line--medium]="i % 3 === 1"
+      ></div>
+    }
+  </div>
+
+  @if (text()) {
+    <p class="skeleton-text">{{ text() }}</p>
+  }
+</div>

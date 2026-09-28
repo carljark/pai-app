@@ -1,14 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
 import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { MapaIntermodularService } from './mapa-intermodular.service';
+import { of, throwError } from 'rxjs';
 
 describe('MapaIntermodularFacade', () => {
   let facade: MapaIntermodularFacade;
+  let mockMapaService: any;
 
   beforeEach(() => {
+    mockMapaService = {
+      getModules: vi.fn().mockReturnValue(of([...FPB_MODULES_SEED]))
+    };
+
     TestBed.configureTestingModule({
-      providers: [MapaIntermodularFacade]
+      providers: [
+        MapaIntermodularFacade,
+        { provide: MapaIntermodularService, useValue: mockMapaService }
+      ]
     });
     facade = TestBed.inject(MapaIntermodularFacade);
     facade.modules.set([...FPB_MODULES_SEED]);
@@ -296,5 +306,55 @@ describe('MapaIntermodularFacade', () => {
     const conn4g = facade.filteredConnections().find(c => c.sourceCriteria?.includes('3042-4g'));
     expect(conn4g).toBeDefined();
     expect(conn4g?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-3d'))).toBe(true);
+  });
+
+  it('should switch tabs and update selected module and RA', async () => {
+    mockMapaService.getModules.mockReturnValue(of([{ code: '0633', learningOutcomes: [] }]));
+    await facade.setTab('CFGM');
+    expect(facade.activeTab()).toBe('CFGM');
+    expect(facade.selectedModuleCode()).toBe('0633');
+    expect(facade.selectedRaId()).toBe('0633_RA1');
+
+    await facade.setTab('CFGM_PELUQUERIA');
+    expect(facade.activeTab()).toBe('CFGM_PELUQUERIA');
+    expect(facade.selectedModuleCode()).toBe('0845');
+    expect(facade.selectedRaId()).toBe('0845_RA1');
+
+    await facade.setTab('CFGM_PELUQUERIA_2');
+    expect(facade.activeTab()).toBe('CFGM_PELUQUERIA_2');
+    expect(facade.selectedModuleCode()).toBe('0640');
+    expect(facade.selectedRaId()).toBe('0640_RA1');
+
+    await facade.setTab('FPB');
+    expect(facade.activeTab()).toBe('FPB');
+    expect(facade.selectedModuleCode()).toBe('3060');
+    expect(facade.selectedRaId()).toBe('3060_RA1');
+  });
+
+  it('should use seedCache when tab is already loaded', async () => {
+    const dummy: any = [{ code: '9999' }];
+    await facade.setTab('FPB', dummy);
+    expect(facade.modules()).toBe(dummy);
+
+    // Call setTab again without directData, should resolve from seedCache
+    const cached = await facade.setTab('FPB');
+    expect(cached).toBe(dummy);
+  });
+
+  it('should handle loadSeed error gracefully', async () => {
+    mockMapaService.getModules.mockReturnValue(throwError(() => new Error('Network error')));
+    const res = await facade.setTab('CFGM_PELUQUERIA');
+    expect(res).toEqual([]);
+    expect(facade.isLoadingSeed()).toBe(false);
+  });
+
+  it('should handle tab race condition when tab changed before load completes', async () => {
+    facade.activeTab.set('FPB');
+    mockMapaService.getModules.mockReturnValue(of([{ code: '0845' } as any]));
+    const p = facade.setTab('CFGM_PELUQUERIA');
+    facade.activeTab.set('CFGM');
+    const res = await p;
+    expect(res.length).toBe(1);
+    expect(facade.activeTab()).toBe('CFGM');
   });
 });

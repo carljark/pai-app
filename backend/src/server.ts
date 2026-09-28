@@ -9,6 +9,7 @@ import projectRoutes from './routes/project.routes';
 import telemetryRoutes from './routes/telemetry.routes';
 import notificationRoutes from './routes/notification.routes';
 import feedbackRoutes from './routes/feedback.routes';
+import mapaRoutes from './routes/mapa.routes';
 
 import { authMiddleware } from './middlewares/auth.middleware';
 
@@ -35,6 +36,7 @@ if (process.env.NODE_ENV !== 'test') {
 
 // Rutas Públicas
 app.use('/api/auth', authRoutes);
+app.use('/api/mapa-intermodular', mapaRoutes);
 
 // Rutas Protegidas
 app.use('/api', authMiddleware);

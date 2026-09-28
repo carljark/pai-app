@@ -1,10 +1,14 @@
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal, computed, inject } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 import { FPBModule, LearningOutcome, IntermodularConnection, IntermodularActivity, CompetenceType } from '../models/mapa-intermodular.model';
+import { MapaIntermodularService } from './mapa-intermodular.service';
 
 export type MapaTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2';
 
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
+  private mapaService = inject(MapaIntermodularService);
+
   activeTab = signal<MapaTab>('FPB');
   modules = signal<FPBModule[]>([]);
   isLoadingSeed = signal<boolean>(false);
@@ -25,29 +29,7 @@ export class MapaIntermodularFacade {
     if (this.seedCache[tab]) {
       return this.seedCache[tab]!;
     }
-    let data: FPBModule[] = [];
-    switch (tab) {
-      case 'FPB': {
-        const m = await import('../data/mapa-intermodular.seed');
-        data = m.FPB_MODULES_SEED;
-        break;
-      }
-      case 'CFGM': {
-        const m = await import('../data/mapa-intermodular-cfgm.seed');
-        data = m.CFGM_MODULES_SEED;
-        break;
-      }
-      case 'CFGM_PELUQUERIA': {
-        const m = await import('../data/mapa-intermodular-cfgm-peluqueria.seed');
-        data = m.CFGM_PELUQUERIA_MODULES_SEED;
-        break;
-      }
-      case 'CFGM_PELUQUERIA_2': {
-        const m = await import('../data/mapa-intermodular-cfgm-peluqueria-2.seed');
-        data = m.CFGM_PELUQUERIA_2_MODULES_SEED;
-        break;
-      }
-    }
+    const data = await firstValueFrom(this.mapaService.getModules(tab));
     this.seedCache[tab] = data;
     return data;
   }

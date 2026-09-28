@@ -144,9 +144,10 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
   </div>
   ```
 
-### 2.5. Semilla del Mapa Intermodular (`mapa-intermodular-cfgm-<slug>.seed.ts`)
-- Debe generarse combinando los archivos `*_ES_*.md` y `*_CA_*.md`.
-- Cada elemento de la semilla debe tener propiedades simétricas:
+### 2.5. Dataset del Mapa Intermodular (`mapa_cfgm_<slug>.json` y migración MongoDB)
+- Debe generarse como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` combinando los archivos `*_ES_*.md` y `*_CA_*.md`.
+- Ingestarse en MongoDB mediante la migración correspondiente en la colección `mapa_modules`.
+- Cada elemento debe tener propiedades simétricas:
   - Módulos: `name_es`, `name_ca`.
   - RAs: `text_es`, `text_ca`, `criteria_es`, `criteria_ca`.
   - Conexiones: `title_es`, `title_ca`, `targetModuleName_es`, `targetModuleName_ca`, `targetRaText_es`, `targetRaText_ca`, `justification_es`, `justification_ca`.

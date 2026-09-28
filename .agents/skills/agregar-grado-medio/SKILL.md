@@ -60,7 +60,8 @@ Archivos generados:
 - `backend/src/data/ras_cfgm_<slug>.data.ts`
 - `backend/src/migrations/0X_ingest_cfgm_<slug>_ras.ts`
 - `frontend/src/app/features/curriculum/data/ras_cfgm_<slug>.data.ts`
-- `frontend/src/app/features/mapa-intermodular/data/mapa-intermodular-cfgm-<slug>.seed.ts`
+- `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `mapa_cfgm_<slug>_2.json` si tiene 2.º curso)
+- `backend/src/migrations/0X_ingest_mapa_intermodular.ts` (ingesta en MongoDB collection `mapa_modules`)
 
 ---
 
@@ -133,18 +134,13 @@ Archivos generados:
 ### Paso 5: Semilla y Vista del Mapa Intermodular (Todas las Combinaciones, Bidireccionalidad y Optimización)
 1. **Inclusión Total de Combinaciones:** No utilizar actividades repetidas ni dummy. Extraer todas las combinaciones reales de los documentos pareados `*_ES_*.md` y `*_CA_*.md`.
 2. **Bidireccionalidad Cuádruple Completa:** Si una actividad vincula $CE_A$ con $CE_B$, $CE_C$, $CE_D$, debe generarse simétricamente la conexión desde cada uno de los 4 módulos hacia los demás con su correspondiente actividad y justificación.
-3. **Patrón de Optimización de Memoria (Evitar Heap Out of Memory en Vitest):**
-   - Cuando un ciclo formativo contiene miles de conexiones y actividades (ej. > 3.000 actividades y > 10.000 conexiones), serializar objetos completos en `.ts` produce archivos de > 70 MB que agotan la memoria de Node en Vitest (`Heap out of memory` / límite N-API string).
-   - **Estructura Normalizada Obligatoria:**
-     - Almacenar las actividades únicas en un diccionario centralizado: `const A: Record<string, IntermodularActivity>`.
-     - Almacenar las conexiones como tuplas compactas en disco: `{ s: string; t: string; k: string[]; rel: any; r: string[]; a: string[] }`.
-     - Pre-calcular `k` (criteriaKeys) y `rel` (relationType) en el script generador para que la función `expandConnection` no contenga ramas condicionales que degraden la cobertura de branches en los tests.
-     - En `expandConnection`, expandir dinámicamente en tiempo de carga usando `CRIT_LOOKUP` y `RA_LOOKUP`.
-     - Validar que todos los criterios referenciados existan en `ras_*.data.ts`.
+3. **Persistencia en MongoDB y Servicio REST (Prevención de Out of Memory en Build):**
+   - **NUNCA** incrustar semillas gigantes de mapas intermodulares como archivos `.ts` en el frontend, ya que el compilador de TypeScript/esbuild agota la memoria del sistema en entornos limitados como EC2 (`ERR_WORKER_OUT_OF_MEMORY: JS heap out of memory`).
+   - Guardar los módulos completos como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `_2.json` si tiene 2.º curso).
+   - Ingestar los datos en MongoDB mediante una migración (ej. `08_ingest_mapa_intermodular.ts`) en el modelo `MapaModule` con los campos `{ tab, order, code, name_es, name_ca, type, color, icon, learningOutcomes }`.
+   - El frontend consume los módulos mediante `MapaIntermodularService.getModules(tab)` apuntando al endpoint `GET /api/mapa-intermodular?tab=...`.
 4. **Pestañas Separadas por Curso:**
-   - Si el ciclo dispone de mapa para 1.er y 2.º curso, generar dos semillas independientes:
-     - `mapa-intermodular-cfgm-<slug>.seed.ts` (1.er curso).
-     - `mapa-intermodular-cfgm-<slug>-2.seed.ts` (2.º curso).
+   - Si el ciclo dispone de mapa para 1.er y 2.º curso, generar dos datasets independientes en MongoDB con tabs distintos (ej. `CFGM_<SLUG>` y `CFGM_<SLUG>_2`).
    - Configurar dos pestañas en `mapa-intermodular-view.component.html` (ej. `CFGM Peluquería y Cosmética Capilar` y `CFGM Peluquería y Cosmética Capilar 2n`).
 
 ---

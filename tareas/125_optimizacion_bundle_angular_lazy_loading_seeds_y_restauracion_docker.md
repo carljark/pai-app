@@ -106,3 +106,12 @@ async loadSeed(tab: MapaTab): Promise<FPBModule[]> {
 - **Acción:** Se ejecutó `docker pull node:22-alpine` directamente hacia la caché del demonio local.
 - **Resultado:** Reconstrucción posterior completada en 0.7s con éxito absoluto (`docker compose up -d --build` exit code 0).
 
+### E. Optimización de Construcción en Producción (EC2) y Clarificación de esbuild
+- **Aclaración Arquitectónica:** El proyecto ya utiliza **esbuild** y **Vite** mediante el constructor `@angular/build:application` de Angular 22 (no utiliza Webpack).
+- **Causa del `ERR_WORKER_OUT_OF_MEMORY` en EC2:** En `@angular/build`, esbuild delega la compilación TypeScript y AOT al plugin `[plugin angular-compiler]` que corre en un `worker_thread` de Node.js. Al no estar configurado `NODE_OPTIONS` en `Dockerfile.prod`, Node asigna un límite de heap por defecto (~1 GB) que se agota al compilar las matrices curriculares.
+- **Solución implementada:**
+  - En [`frontend/Dockerfile.prod`](file:///Users/csgj/dev/pai-app/frontend/Dockerfile.prod), se introdujo `ENV NODE_OPTIONS="--max-old-space-size=4096"` para dotar al worker del compilador de memoria suficiente.
+  - En [`frontend/angular.json`](file:///Users/csgj/dev/pai-app/frontend/angular.json), se añadió `"extractLicenses": false` en la configuración de producción para evitar la lectura exhaustiva de licencias en disco durante el build.
+- **Recomendación para la máquina EC2:** Configuración de un swapfile de 4 GB (`fallocate -l 4G /swapfile`) para absorber picos de compilación en instancias con memoria física limitada ($\le 2$ GB RAM).
+
+

@@ -46,6 +46,13 @@ describe('MapaIntermodularViewComponent', () => {
     mockFacade = TestBed.inject(MapaIntermodularFacade);
     curriculum = TestBed.inject(CurriculumFacade);
     
+    mockFacade.seedCache = {
+      FPB: [...FPB_MODULES_SEED],
+      CFGM: [...FPB_MODULES_SEED],
+      CFGM_PELUQUERIA: [...FPB_MODULES_SEED],
+      CFGM_PELUQUERIA_2: [...FPB_MODULES_SEED]
+    };
+    mockFacade.isLoadingSeed.set(false);
     mockFacade.modules.set([...FPB_MODULES_SEED]);
     mockFacade.selectModule('3060');
     mockFacade.selectRa('3060_RA1');

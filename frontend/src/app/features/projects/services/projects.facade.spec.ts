@@ -103,7 +103,7 @@ describe('ProjectsFacade', () => {
     facade.loadHistory();
     
     const req = httpMock.expectOne('/api/projects');
-    req.flush('Error', { status: 500, statusText: 'Internal Server Error' });
+    req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
     
     expect(errorSpy).toHaveBeenCalled();
   });
@@ -138,14 +138,14 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/123');
     expect(req.request.method).toBe('DELETE');
-    req.flush({});
+    req.flush({ success: true });
   });
 
   it('should retry project via HTTP', () => {
     facade.retryProject('123').subscribe();
     const req = httpMock.expectOne('/api/projects/123/retry');
     expect(req.request.method).toBe('POST');
-    req.flush({});
+    req.flush({ _id: '123', title: 'Retried Project', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], generatedContent: { rawText: '' }, userId: 'u1', createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() });
   });
 
   it('should generate project (FP_BASICA)', () => {

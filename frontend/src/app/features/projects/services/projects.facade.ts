@@ -365,7 +365,7 @@ export class ProjectsFacade {
         next: (files) => this.projectFiles.set(files),
         error: (err) => console.error("Error al cargar archivos", err)
       })
-    ).subscribe();
+    ).subscribe({ error: () => { /* error already logged above */ } });
   }
 
   uploadFile(file: File) {

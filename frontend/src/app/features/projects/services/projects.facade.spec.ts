@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
 import { ProjectsFacade } from './projects.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
 import { AuthFacade } from '../../auth/services/auth.facade';
@@ -22,6 +22,18 @@ function createMockProject(overrides: Partial<Project> = {}): Project {
     updatedAt: new Date().toISOString(),
     ...overrides,
   };
+}
+
+/**
+ * Flushes a successful /api/projects/generate response and the follow-up
+ * GET /api/projects that the facade triggers via loadHistory().
+ */
+function flushGenerateSuccess(
+  httpMock: HttpTestingController,
+  req: TestRequest,
+): void {
+  req.flush({ project: createMockProject({ _id: 'gen-1' }), message: 'ok' });
+  httpMock.expectOne('/api/projects').flush([]);
 }
 
 describe('ProjectsFacade', () => {
@@ -152,7 +164,7 @@ describe('ProjectsFacade', () => {
     facade.retryProject('123').subscribe();
     const req = httpMock.expectOne('/api/projects/123/retry');
     expect(req.request.method).toBe('POST');
-    req.flush({ _id: '123', title: 'Retried Project', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], generatedContent: { rawText: '' }, userId: 'u1', createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() });
+    req.flush({ project: createMockProject({ _id: '123', title: 'Retried Project' }), message: 'ok' });
   });
 
   it('should generate project (FP_BASICA)', () => {
@@ -178,7 +190,7 @@ describe('ProjectsFacade', () => {
       courseLevel: '2º',
       title: 'Custom Title'
     });
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should generate project (DIVERSIFICACION_CURRICULAR)', () => {
@@ -195,7 +207,7 @@ describe('ProjectsFacade', () => {
     expect(req.request.body.modules).toEqual(['Math']);
     expect(req.request.body.aiProvider).toBe('openrouter');
     expect(req.request.body.title).toBe('Math');
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should generate project (CFGM_ESTETICA) and set historyTab to CFGM', () => {
@@ -210,7 +222,7 @@ describe('ProjectsFacade', () => {
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.tipoNivel).toBe('CFGM_ESTETICA');
     expect(req.request.body.modules).toEqual(['Estètica']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should include extraInstructions in generateProject payload when present', () => {
@@ -224,7 +236,7 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.extraInstructions).toBe('Instrucciones personalizadas para la IA');
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should use fallback title when no modules match', () => {
@@ -235,7 +247,7 @@ describe('ProjectsFacade', () => {
     facade.generateProject('castellano').subscribe();
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.title).toBe('Proyecto Integrador');
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should handle ce without subject in getInvolvedModules', () => {
@@ -247,7 +259,7 @@ describe('ProjectsFacade', () => {
     facade.generateProject('castellano').subscribe();
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should resolve CFGM_PELUQUERIA modules for 2º in castellano using subject_es, subject and module fallbacks', () => {
@@ -265,7 +277,7 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['0640. Módulo ES', '0643. Subject', '0843. Module']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should resolve CFGM_PELUQUERIA modules for 1r in catalan using subject_ca, subject and module fallbacks', () => {
@@ -283,7 +295,7 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['0845. Mòdul CA', '0842. Subject', '0844. Module']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should fall back to the generic CFGM_PELUQUERIA name in castellano when no module matches', () => {
@@ -296,7 +308,7 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['CFGM Peluquería y Cosmética Capilar']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should fall back to the generic CFGM_PELUQUERIA name in catalan when no module matches', () => {
@@ -310,7 +322,7 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['CFGM Peluqueria i Cosmètica Capilar']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should use an empty string when a CFGM module has neither subject nor module', () => {
@@ -323,7 +335,7 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['']);
-    req.flush({});
+    flushGenerateSuccess(httpMock, req);
   });
 
   it('should update project status', () => {
@@ -400,7 +412,10 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/123/files');
     expect(req.request.method).toBe('POST');
-    req.flush({});
+    req.flush({
+      file: { _id: 'f1', filename: 'test.txt', originalName: 'test.txt', mimeType: 'text/plain', size: 100, uploadedAt: new Date().toISOString(), projectId: '123' },
+      message: 'ok',
+    });
   });
 
   it('should delete file', () => {
@@ -681,7 +696,7 @@ describe('ProjectsFacade', () => {
       const file = new File([''], 'test.txt');
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
       
-      facade.uploadFile(file)?.subscribe();
+      facade.uploadFile(file)?.subscribe({ error: () => {} });
       
       const req = httpMock.expectOne('/api/projects/123/files');
       req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
@@ -713,7 +728,7 @@ describe('ProjectsFacade', () => {
     it('should handle delete file error', () => {
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
       facade.currentProjectId.set('123');
-      facade.deleteFile('test.txt')?.subscribe();
+      facade.deleteFile('test.txt')?.subscribe({ error: () => {} });
       
       const req = httpMock.expectOne('/api/projects/123/files/test.txt');
       req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
@@ -783,7 +798,7 @@ describe('ProjectsFacade', () => {
       const file = new File([''], 'test.docx');
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
       
-      facade.importDocx(file)?.subscribe();
+      facade.importDocx(file)?.subscribe({ error: () => {} });
       
       const req = httpMock.expectOne('/api/projects/123/import-docx');
       req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
@@ -861,7 +876,7 @@ describe('ProjectsFacade', () => {
       
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Math']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve modules for FP_BASICA from RAS', () => {
@@ -874,7 +889,7 @@ describe('ProjectsFacade', () => {
       
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['ModA']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve modules for CFGM_ESTETICA from RAS', () => {
@@ -888,7 +903,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Estètica']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve CFGM_PELUQUERIA modules for 2º in castellano using subject_es, subject and module fallbacks', () => {
@@ -906,7 +921,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['0640. Módulo ES', '0643. Subject', '0843. Module']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve CFGM_PELUQUERIA modules for 1r in catalan using subject_ca, subject and module fallbacks', () => {
@@ -924,7 +939,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['0845. Mòdul CA', '0842. Subject', '0844. Module']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should fall back to the generic CFGM_PELUQUERIA name in castellano when no module matches', () => {
@@ -937,7 +952,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['CFGM Peluquería y Cosmética Capilar']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should fall back to the generic CFGM_PELUQUERIA name in catalan when no module matches', () => {
@@ -951,7 +966,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['CFGM Peluqueria i Cosmètica Capilar']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should use an empty string when a CFGM module has neither subject nor module', () => {
@@ -964,7 +979,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve CFGM_ESTETICA modules using subject in catalan', () => {
@@ -978,7 +993,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Mòdul CA']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve CFGM_ESTETICA modules using subject in castellano', () => {
@@ -991,7 +1006,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Módulo ES']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should resolve CFGM_ESTETICA modules using module fallback', () => {
@@ -1004,7 +1019,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Módulo Module']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
 
     it('should use empty string when CFGM_ESTETICA module has neither subject nor module', () => {
@@ -1017,7 +1032,7 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['']);
-      req.flush({});
+      flushGenerateSuccess(httpMock, req);
     });
   });
 
@@ -1062,7 +1077,7 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
       
       facade.methodology.set('ABP');
-      facade.generateProject('castellano', 'Custom Title').subscribe();
+      facade.generateProject('castellano', 'Custom Title').subscribe({ error: () => {} });
       
       const req = httpMock.expectOne('/api/projects/generate');
       req.flush('error', { status: 500, statusText: 'Internal Server Error' });
@@ -1079,7 +1094,7 @@ describe('ProjectsFacade', () => {
       facade.generatedProject.set('some content');
       facade.projectsHistory.set([createMockProject({ _id: '123' })]);
       
-      facade.updateProjectStatus('publicado')?.subscribe();
+      facade.updateProjectStatus('publicado')?.subscribe({ error: () => {} });
       
       const req = httpMock.expectOne('/api/projects/123');
       req.flush('error', { status: 500, statusText: 'Internal Server Error' });
@@ -1105,7 +1120,7 @@ describe('ProjectsFacade', () => {
   describe('Rewrite Section', () => {
     it('should handle rewrite section error', () => {
       facade.generatedProject.set('original content');
-      facade.rewriteSection('make it better').subscribe();
+      facade.rewriteSection('make it better').subscribe({ error: () => {} });
       
       const req = httpMock.expectOne('/api/projects/rewrite');
       req.flush('error', { status: 500, statusText: 'Internal Server Error' });

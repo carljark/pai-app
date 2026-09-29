@@ -1,5 +1,5 @@
 import { Component, inject, computed, input, Output, EventEmitter } from '@angular/core';
-import { LayoutService } from '../../../../services/layout.service';
+import { LayoutService } from '../../../../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 import { IntermodularConnection } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
@@ -116,6 +116,10 @@ import { ActivitiesGridComponent } from '../activities-grid/activities-grid.comp
               </div>
             }
           </div>
+        </div>
+      } @else if (facade.selectedRa()) {
+        <div class="mapa-empty-state">
+          {{ isCa() ? 'No hi ha connexions registrades per a aquest RA.' : 'No hay conexiones registradas para este RA.' }}
         </div>
       } @else {
         <div class="mapa-empty-state">

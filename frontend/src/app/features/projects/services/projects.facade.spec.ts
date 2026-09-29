@@ -200,7 +200,7 @@ describe('ProjectsFacade', () => {
   });
 
   it('should handle ce without subject in getInvolvedModules', () => {
-    mockCurriculumFacade.tipoNivel.mockReturnValue('ESO');
+    mockCurriculumFacade.tipoNivel.mockReturnValue('DIVERSIFICACION_CURRICULAR');
     mockCurriculumFacade.curso.mockReturnValue('3º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['CE_NO_SUBJ']);
     mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE_NO_SUBJ' }]);

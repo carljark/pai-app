@@ -76,18 +76,18 @@ function findCurriculumMatch(
         (typeFilterChange)="onSetTypeFilter($event)">
       </app-mapa-header>
 
-      <app-modulo-list
-        [modules]="facade.modules()"
-        [selectedModuleCode]="facade.selectedModuleCode()"
-        [selectedRaId]="facade.selectedRaId()"
-        [step1Open]="step1Open()"
-        (onSelectModule)="onSelectModule($event)"
-        (onSelectRa)="onSelectRa($event)"
-        (toggleStepEvent)="toggleStep($event)"
-        (activateStepEvent)="activateStep($event)">
-      </app-modulo-list>
+      <div class="mapa-vertical-accordions">
+        <app-modulo-list
+          [modules]="facade.filteredModules()"
+          [selectedModuleCode]="facade.selectedModuleCode()"
+          [selectedRaId]="facade.selectedRaId()"
+          [step1Open]="step1Open()"
+          (onSelectModule)="onSelectModule($event)"
+          (onSelectRa)="onSelectRa($event)"
+          (toggleStepEvent)="toggleStep($event)"
+          (activateStepEvent)="activateStep($event)">
+        </app-modulo-list>
 
-      @if (facade.selectedModule()) {
         <app-ra-detail
           [step2Open]="step2Open()"
           [selectedCriterion]="facade.selectedCriterion()"
@@ -97,18 +97,16 @@ function findCurriculumMatch(
           (activateStepEvent)="activateStep($event)">
         </app-ra-detail>
 
-        @if (facade.selectedRa()) {
-          <app-connections-list
-            [connections]="facade.filteredConnections()"
-            [selectedCriterion]="facade.selectedCriterion()"
-            [step3Open]="step3Open()"
-            [activeTab]="facade.activeTab()"
-            (createProject)="createProjectFromConnection($event)"
-            (toggleStepEvent)="toggleStep($event)"
-            (activateStepEvent)="activateStep($event)">
-          </app-connections-list>
-        }
-      }
+        <app-connections-list
+          [connections]="facade.filteredConnections()"
+          [selectedCriterion]="facade.selectedCriterion()"
+          [step3Open]="step3Open()"
+          [activeTab]="facade.activeTab()"
+          (createProject)="createProjectFromConnection($event)"
+          (toggleStepEvent)="toggleStep($event)"
+          (activateStepEvent)="activateStep($event)">
+        </app-connections-list>
+      </div>
     } @else {
       <div class="mapa-loading-skeleton">
         <app-skeleton-loader

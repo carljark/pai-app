@@ -1,5 +1,5 @@
 import { Component, inject, computed, input } from '@angular/core';
-import { LayoutService } from '../../../../services/layout.service';
+import { LayoutService } from '../../../../../services/layout.service';
 import { IntermodularActivity } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
     @if (activities().length > 0) {
       <div class="mapa-activities-container">
         <h4 class="mapa-activities-title">
-          {{ isCa() ? (activeTab() !== 'FPB' ? 'Propostes d'Activitats i Reptes CFGM' : 'Propostes d'Activitats i Reptes FPB') : (activeTab() !== 'FPB' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
+          {{ isCa() ? (activeTab() !== 'FPB' ? 'Propostes d’Activitats i Reptes CFGM' : 'Propostes d’Activitats i Reptes FPB') : (activeTab() !== 'FPB' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
         </h4>
 
         <div class="mapa-activities-grid">

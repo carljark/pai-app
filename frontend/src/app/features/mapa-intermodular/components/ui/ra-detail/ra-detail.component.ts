@@ -1,6 +1,6 @@
 import { Component, inject, computed, input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutService } from '../../../../services/layout.service';
+import { LayoutService } from '../../../../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 
 @Component({
@@ -23,7 +23,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
           <span class="mapa-step-chevron" [class.rotated]="step2Open()">▼</span>
         </button>
         <h2 class="mapa-step-title">
-          {{ isCa() ? '2. RA i Criteris d\'Avaluació' : '2. RA y Criterios de Evaluación' }}
+          {{ isCa() ? '2. RA i Criteris d’Avaluació' : '2. RA y Criterios de Evaluación' }}
         </h2>
       </div>
       <div class="mapa-step-header__right">
@@ -58,7 +58,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
             <div class="mapa-ra-criteria-header">
               <span class="mapa-ra-criteria-title">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-                {{ isCa() ? 'Criteris d\'Avaluació (Filtra les coincidències):' : 'Criterios de Evaluación (Filtra las coincidencias):' }}
+                {{ isCa() ? 'Criteris d’Avaluació (Filtra les coincidències):' : 'Criterios de Evaluación (Filtra las coincidencias):' }}
               </span>
               @if (facade.selectedCriterion()) {
                 <button class="mapa-criteria-clear-btn" (click)="selectCriterion(null)">

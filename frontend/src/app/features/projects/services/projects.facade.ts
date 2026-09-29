@@ -108,7 +108,7 @@ export class ProjectsFacade {
   private getInvolvedModules(tipoNivel: string, selectedRas: string[]): string[] {
     const isCa = typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan';
     
-    if (tipoNivel === 'FP_BASICA' || tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
+    if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
       const selected = this.curriculumFacade.ces().filter(ce => selectedRas.includes(ce.description));
       return Array.from(new Set(selected.map((ce: any) => ce.subject || '')));
     }

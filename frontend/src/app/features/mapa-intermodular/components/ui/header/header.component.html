@@ -26,7 +26,7 @@
 
     <button 
       class="mapa-stats-toggle-btn" 
-      (click)="toggleHeaderStatsHandler()"
+      (click)="$event.stopPropagation(); toggleHeaderStatsHandler()"
       [title]="isCa() ? 'Mostrar o ocultar opcions' : 'Mostrar u ocultar opciones'">
       <span class="toggle-icon">{{ headerExpanded() ? '▲' : '▼' }}</span>
       <span>{{ headerExpanded() ? (isCa() ? 'Col·lapsar' : 'Colapsar') : (isCa() ? 'Filtres i Estadístiques' : 'Filtros y Estadísticas') }}</span>

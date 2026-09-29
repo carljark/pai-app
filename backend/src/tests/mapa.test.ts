@@ -4,6 +4,7 @@ import { app } from '../server';
 import { MapaModule } from '../models/MapaModule';
 import { connectDB, closeDB, clearDB } from './testSetup';
 import { up as runMigration08 } from '../migrations/08_ingest_mapa_intermodular';
+import { up as runMigration09 } from '../migrations/09_deduplicate_mapa_peluqueria';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -101,6 +102,39 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       const mod3060 = await MapaModule.findOne({ tab: 'FPB', code: '3060' });
       expect(mod3060).toBeTruthy();
       expect(mod3060?.learningOutcomes.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('Migration 09_deduplicate_mapa_peluqueria', () => {
+    it('debería ejecutar la deduplicación up de Peluquería 1º y 2º en MongoDB', async () => {
+      await runMigration09();
+
+      const pelu1 = await MapaModule.find({ tab: 'CFGM_PELUQUERIA' });
+      const pelu2 = await MapaModule.find({ tab: 'CFGM_PELUQUERIA_2' });
+
+      expect(pelu1.length).toBe(8);
+      expect(pelu2.length).toBe(8);
+
+      let actsPelu1 = 0;
+      pelu1.forEach(m => {
+        m.learningOutcomes.forEach((lo: any) => {
+          lo.connections.forEach((c: any) => {
+            actsPelu1 += (c.activities || []).length;
+          });
+        });
+      });
+
+      let actsPelu2 = 0;
+      pelu2.forEach(m => {
+        m.learningOutcomes.forEach((lo: any) => {
+          lo.connections.forEach((c: any) => {
+            actsPelu2 += (c.activities || []).length;
+          });
+        });
+      });
+
+      expect(actsPelu1).toBe(557);
+      expect(actsPelu2).toBe(417);
     });
   });
 });

@@ -293,7 +293,7 @@
                 <span class="mapa-crit-badge-count">{{ ra.connections.length }}</span>
               </button>
 
-              @for (crit of (isCa() ? (ra.criteria_ca || ra.criteria_es) : ra.criteria_es); track crit) {
+              @for (crit of (isCa() ? (ra.criteria_ca || ra.criteria_es) : ra.criteria_es); track $index) {
                 <button 
                   class="mapa-criterion-pill" 
                   [class.active]="facade.selectedCriterion() === crit"

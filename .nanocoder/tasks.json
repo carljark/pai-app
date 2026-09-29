@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "beade42a",
+    "title": "Configure tsconfig.json with path aliases for imports",
+    "status": "pending",
+    "createdAt": "2026-09-29T14:39:17.389Z",
+    "updatedAt": "2026-09-29T14:39:17.389Z"
+  },
+  {
+    "id": "8ad97c9b",
+    "title": "Update all imports to use @mapa-intermodular/ alias",
+    "status": "pending",
+    "createdAt": "2026-09-29T14:39:17.389Z",
+    "updatedAt": "2026-09-29T14:39:17.389Z"
+  },
+  {
+    "id": "426a91d6",
+    "title": "Verify tests and build pass",
+    "status": "pending",
+    "createdAt": "2026-09-29T14:39:17.389Z",
+    "updatedAt": "2026-09-29T14:39:17.389Z"
+  }
+]

@@ -1,0 +1,26 @@
+<div class="mapa-tabs">
+  <button 
+    class="mapa-tab-btn" 
+    [class.active]="activeTab() === 'FPB'"
+    (click)="setTab('FPB')">
+    FPB
+  </button>
+  <button 
+    class="mapa-tab-btn" 
+    [class.active]="activeTab() === 'CFGM'"
+    (click)="setTab('CFGM')">
+    {{ isCa() ? 'CFGM Estètica i Bellesa' : 'CFGM Estética y Belleza' }}
+  </button>
+  <button 
+    class="mapa-tab-btn" 
+    [class.active]="activeTab() === 'CFGM_PELUQUERIA'"
+    (click)="setTab('CFGM_PELUQUERIA')">
+    {{ isCa() ? 'CFGM Perruqueria i Cosmètica Capil·lar 1r' : 'CFGM Peluquería y Cosmética Capilar 1º' }}
+  </button>
+  <button 
+    class="mapa-tab-btn" 
+    [class.active]="activeTab() === 'CFGM_PELUQUERIA_2'"
+    (click)="setTab('CFGM_PELUQUERIA_2')">
+    {{ isCa() ? 'CFGM Perruqueria i Cosmètica Capil·lar 2n' : 'CFGM Peluquería y Cosmética Capilar 2º' }}
+  </button>
+</div>

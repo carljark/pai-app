@@ -1,12 +1,18 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MapaIntermodularFacade } from '../../services/mapa-intermodular.facade';
+import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { IntermodularConnection } from '../../models/mapa-intermodular.model';
 import { SkeletonLoaderComponent } from '../../../../components/skeleton-loader/skeleton-loader.component';
+
+// UI Components
+import { MapaTabsComponent } from '../ui/tabs/tabs.component';
+import { MapaHeaderComponent } from '../ui/header/header.component';
+import { ModuloListComponent } from '../ui/modulo-list/modulo-list.component';
+import { RaDetailComponent } from '../ui/ra-detail/ra-detail.component';
+import { ConnectionsListComponent } from '../ui/connections-list/connections-list.component';
 
 function findCurriculumMatch(
   allRas: any[],
@@ -43,8 +49,75 @@ function findCurriculumMatch(
 @Component({
   selector: 'app-mapa-intermodular-view',
   standalone: true,
-  imports: [CommonModule, FormsModule, SkeletonLoaderComponent],
-  templateUrl: './mapa-intermodular-view.component.html',
+  imports: [
+    CommonModule, 
+    SkeletonLoaderComponent,
+    MapaTabsComponent,
+    MapaHeaderComponent,
+    ModuloListComponent,
+    RaDetailComponent,
+    ConnectionsListComponent
+  ],
+  template: `
+    <app-mapa-tabs 
+      [activeTab]="facade.activeTab()" 
+      (tabChange)="setTab($event)">
+    </app-mapa-tabs>
+
+    @if (!facade.isLoadingSeed()) {
+      <app-mapa-header
+        [headerExpanded]="headerExpanded()"
+        [activeTab]="facade.activeTab()"
+        [searchQuery]="facade.searchQuery()"
+        [typeFilter]="facade.selectedTypeFilter()"
+        [stats]="facade.stats()"
+        (headerToggle)="toggleHeaderStats()"
+        (searchChange)="onSearch($event)"
+        (typeFilterChange)="onSetTypeFilter($event)">
+      </app-mapa-header>
+
+      <app-modulo-list
+        [modules]="facade.modules()"
+        [selectedModuleCode]="facade.selectedModuleCode()"
+        [selectedRaId]="facade.selectedRaId()"
+        [step1Open]="step1Open()"
+        (onSelectModule)="onSelectModule($event)"
+        (onSelectRa)="onSelectRa($event)"
+        (toggleStepEvent)="toggleStep($event)"
+        (activateStepEvent)="activateStep($event)">
+      </app-modulo-list>
+
+      @if (facade.selectedModule()) {
+        <app-ra-detail
+          [step2Open]="step2Open()"
+          [selectedCriterion]="facade.selectedCriterion()"
+          (onSelectCriterion)="onSelectCriterion($event)"
+          (createProject)="createProjectFromConnection()"
+          (toggleStepEvent)="toggleStep($event)"
+          (activateStepEvent)="activateStep($event)">
+        </app-ra-detail>
+
+        @if (facade.selectedRa()) {
+          <app-connections-list
+            [connections]="facade.filteredConnections()"
+            [selectedCriterion]="facade.selectedCriterion()"
+            [step3Open]="step3Open()"
+            [activeTab]="facade.activeTab()"
+            (createProject)="createProjectFromConnection($event)"
+            (toggleStepEvent)="toggleStep($event)"
+            (activateStepEvent)="activateStep($event)">
+          </app-connections-list>
+        }
+      }
+    } @else {
+      <div class="mapa-loading-skeleton">
+        <app-skeleton-loader
+          [lines]="6"
+          [text]="trans.t().loadingData"
+        />
+      </div>
+    }
+  `,
   styleUrl: './mapa-intermodular-view.component.scss'
 })
 export class MapaIntermodularViewComponent {
@@ -64,14 +137,14 @@ export class MapaIntermodularViewComponent {
     this.headerExpanded.update(v => !v);
   }
 
-  toggleStep(step: 1 | 2 | 3, event?: Event) {
+  toggleStep(step: number, event?: Event) {
     if (event) event.stopPropagation();
     if (step === 1) this.step1Open.update(v => !v);
     if (step === 2) this.step2Open.update(v => !v);
     if (step === 3) this.step3Open.update(v => !v);
   }
 
-  activateStep(step: 1 | 2 | 3) {
+  activateStep(step: number) {
     if (step === 1) this.step1Open.set(true);
     if (step === 2) this.step2Open.set(true);
     if (step === 3) this.step3Open.set(true);
@@ -83,19 +156,6 @@ export class MapaIntermodularViewComponent {
         target.focus?.();
       }
     }, 50);
-  }
-
-  getRelationLabel(type: string): string {
-    const labels: Record<string, { es: string; ca: string }> = {
-      ciencias: { es: 'Ciencias Aplicadas', ca: 'Ciències Aplicades' },
-      comunicacion: { es: 'Comunicación', ca: 'Comunicació' },
-      empleabilidad: { es: 'Empleabilidad / FOL', ca: 'Ocupabilitat / FOL' },
-      cliente: { es: 'Atención al Cliente', ca: 'Atenció al Client' },
-      sostenibilidad: { es: 'Sostenibilidad', ca: 'Sostenibilitat' },
-      digital: { es: 'Digital / Redes', ca: 'Digital / Xarxes' },
-      tecnica: { es: 'Técnica Práctica', ca: 'Tècnica Pràctica' }
-    };
-    return this.isCa() ? (labels[type]?.ca || type) : (labels[type]?.es || type);
   }
 
   onSelectModule(code: string) {

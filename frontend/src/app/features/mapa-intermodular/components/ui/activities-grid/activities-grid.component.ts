@@ -1,0 +1,60 @@
+import { Component, inject, computed, input } from '@angular/core';
+import { LayoutService } from '../../../services/layout.service';
+import { IntermodularActivity } from '@mapa-intermodular/models/mapa-intermodular.model';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-activities-grid',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    @if (activities().length > 0) {
+      <div class="mapa-activities-container">
+        <h4 class="mapa-activities-title">
+          {{ isCa() ? (activeTab() !== 'FPB' ? 'Propostes d'Activitats i Reptes CFGM' : 'Propostes d'Activitats i Reptes FPB') : (activeTab() !== 'FPB' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
+        </h4>
+
+        <div class="mapa-activities-grid">
+          @for (act of activities(); track act.id) {
+            <div class="mapa-activity-item">
+              <div class="mapa-activity-header">
+                <strong class="mapa-act-title">{{ isCa() ? act.title_ca : act.title_es }}</strong>
+              </div>
+
+              @if (act.motivatingFactor_es) {
+                <p class="mapa-act-idea">
+                  <strong>{{ isCa() ? 'Context / Idea motivadora:' : 'Contexto / Idea motivadora:' }}</strong>
+                  {{ isCa() ? act.motivatingFactor_ca : act.motivatingFactor_es }}
+                </p>
+              }
+
+              <p class="mapa-act-desc">
+                <strong>{{ isCa() ? 'Desenvolupament:' : 'Desarrollo:' }}</strong>
+                {{ isCa() ? act.description_ca : act.description_es }}
+              </p>
+
+              <div class="mapa-act-meta">
+                <div class="mapa-meta-box mapa-meta-evidence">
+                  <strong>{{ isCa() ? 'Producte / Evidència:' : 'Producto / Evidencia:' }}</strong>
+                  <span>{{ isCa() ? act.evidence_ca : act.evidence_es }}</span>
+                </div>
+
+                <div class="mapa-meta-box mapa-meta-diversity">
+                  <strong>{{ isCa() ? (activeTab() !== 'FPB' ? 'Aprenentatges i Diversitat CFGM:' : 'Aprenentatges i Diversitat FPB:') : (activeTab() !== 'FPB' ? 'Aprendizajes y Diversidad CFGM:' : 'Aprendizajes y Diversidad FPB:') }}</strong>
+                  <span>{{ isCa() ? act.diversitySupport_ca : act.diversitySupport_es }}</span>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  `
+})
+export class ActivitiesGridComponent {
+  layout = inject(LayoutService);
+  isCa = computed(() => this.layout.language() === 'catalan');
+
+  activities = input.required<IntermodularActivity[]>();
+  activeTab = input.required<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'>();
+}

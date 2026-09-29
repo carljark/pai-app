@@ -106,12 +106,35 @@ export class ProjectsFacade {
   }
 
   private getInvolvedModules(tipoNivel: string, selectedRas: string[]): string[] {
-    if (tipoNivel === 'FP_BASICA' || tipoNivel === 'CFGM_ESTETICA') {
-      const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
-      return Array.from(new Set(selected.map((ra: any) => ra.module)));
+    const isCa = typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan';
+    
+    if (tipoNivel === 'FP_BASICA' || tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
+      const selected = this.curriculumFacade.ces().filter(ce => selectedRas.includes(ce.description));
+      return Array.from(new Set(selected.map((ce: any) => ce.subject || '')));
     }
-    const selected = this.curriculumFacade.ces().filter(ce => selectedRas.includes(ce.description));
-    return Array.from(new Set(selected.map((ce: any) => ce.subject || '')));
+    
+    const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
+    
+    if (tipoNivel === 'CFGM_PELUQUERIA') {
+      // Usar el sistema de ordenación para obtener nombres descriptivos de módulos
+      const order = this.curriculumFacade.curso() === '2º' ? 
+        ['0640', '0643', '0843', '0848', '0636', '1708', '1710', '1713'] :
+        ['0845', '0842', '0844', '0846', '0849', '1664', '1709', '0156'];
+      
+      const moduleNames = [];
+      for (const modCode of order) {
+        const module = selected.find(ra => (ra as any).moduleCode === modCode);
+        if (module) {
+          // Extraer nombre del módulo del descriptor (ej: "0845. Módulo...")
+          const fullName = isCa ? (module as any).subject_ca || (module as any).subject || (module as any).module : (module as any).subject_es || (module as any).subject || (module as any).module;
+          moduleNames.push(fullName);
+        }
+      }
+      return moduleNames.length > 0 ? moduleNames : [isCa ? 'CFGM Peluqueria i Cosmètica Capilar' : 'CFGM Peluquería y Cosmética Capilar'];
+    } else {
+      // CFGM_ESTETICA y otros CFGM
+      return Array.from(new Set(selected.map((ra: any) => ra.subject || ra.module || '')));
+    }
   }
 
   generateProject(language: string, title?: string) {

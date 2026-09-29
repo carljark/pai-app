@@ -61,7 +61,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
                 {{ isCa() ? 'Criteris d\'Avaluació (Filtra les coincidències):' : 'Criterios de Evaluación (Filtra las coincidencias):' }}
               </span>
               @if (facade.selectedCriterion()) {
-                <button class="mapa-criteria-clear-btn" (click)="onSelectCriterion(null)">
+                <button class="mapa-criteria-clear-btn" (click)="selectCriterion(null)">
                   {{ isCa() ? '✕ Veure tots' : '✕ Ver todos' }}
                 </button>
               }
@@ -71,7 +71,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
               <button 
                 class="mapa-criterion-pill" 
                 [class.active]="facade.selectedCriterion() === null"
-                (click)="onSelectCriterion(null)">
+                (click)="selectCriterion(null)">
                 <span class="mapa-crit-letter">★</span>
                 <span class="mapa-crit-label">{{ isCa() ? 'Tots els Criteris del RA' : 'Todos los Criterios del RA' }}</span>
                 <span class="mapa-crit-badge-count">{{ ra.connections.length }}</span>
@@ -81,7 +81,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
                 <button 
                   class="mapa-criterion-pill" 
                   [class.active]="facade.selectedCriterion() === crit"
-                  (click)="onSelectCriterion(crit)">
+                  (click)="selectCriterion(crit)">
                   <span class="mapa-crit-letter">{{ getCriterionCode(crit) }}</span>
                   <span class="mapa-crit-label">{{ crit }}</span>
                   <span class="mapa-crit-badge-count">{{ facade.getConnectionsCountForCriterion(crit) }}</span>
@@ -118,6 +118,10 @@ export class RaDetailComponent {
 
   activateStep(step: number) {
     this.activateStepEvent.emit(step);
+  }
+
+  selectCriterion(criterion: string | null) {
+    this.onSelectCriterion.emit(criterion);
   }
 
   getCriterionCode(critText: string): string {

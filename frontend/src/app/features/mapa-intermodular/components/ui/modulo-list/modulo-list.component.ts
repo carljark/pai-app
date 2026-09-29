@@ -1,6 +1,6 @@
 import { Component, inject, computed, input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutService } from '../../../../services/layout.service';
+import { LayoutService } from '../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 
 @Component({

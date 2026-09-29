@@ -2,6 +2,7 @@ import { Component, inject, computed, input, Output, EventEmitter } from '@angul
 import { LayoutService } from '../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 import { IntermodularConnection } from '@mapa-intermodular/models/mapa-intermodular.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-connections-list',

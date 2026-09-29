@@ -12,6 +12,7 @@ import { CurriculumFacade } from './features/curriculum/services/curriculum.faca
 import { ProjectsFacade } from './features/projects/services/projects.facade';
 import { NotificationsFacade } from './features/notifications/services/notifications.facade';
 import { FeedbackService } from './features/feedback/services/feedback.service';
+import { MapaIntermodularFacade } from './features/mapa-intermodular/services/mapa-intermodular.facade';
 import { of } from 'rxjs';
 
 describe('App', () => {
@@ -93,6 +94,32 @@ describe('App', () => {
       sendFeedback: vi.fn().mockReturnValue(of({})),
       deleteFeedback: vi.fn().mockReturnValue(of({}))
     };
+    const mockMapaFacade = {
+      activeTab: signal('FPB'),
+      modules: signal([]),
+      isLoadingSeed: signal(false),
+      selectedModuleCode: signal('3060'),
+      selectedRaId: signal('3060_RA1'),
+      selectedCriterion: signal(null),
+      searchQuery: signal(''),
+      selectedTypeFilter: signal('all'),
+      selectedRelationFilter: signal('all'),
+      selectedModule: signal(null),
+      selectedRa: signal(null),
+      filteredModules: signal([]),
+      filteredConnections: signal([]),
+      uniqueActivities: signal([]),
+      stats: signal({ totalModules: 0, totalRas: 0, totalConnections: 0, totalActivities: 0 }),
+      setTab: vi.fn().mockResolvedValue([]),
+      loadSeed: vi.fn().mockResolvedValue([]),
+      selectModule: vi.fn(),
+      selectRa: vi.fn(),
+      selectCriterion: vi.fn(),
+      setSearch: vi.fn(),
+      setTypeFilter: vi.fn(),
+      setRelationFilter: vi.fn(),
+      getConnectionsCountForCriterion: vi.fn().mockReturnValue(0)
+    };
 
     await TestBed.configureTestingModule({
       imports: [App],
@@ -105,7 +132,8 @@ describe('App', () => {
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: NotificationsFacade, useValue: mockNotificationsFacade },
         { provide: AdminFacade, useValue: mockAdminFacade },
-        { provide: FeedbackService, useValue: mockFeedbackService }
+        { provide: FeedbackService, useValue: mockFeedbackService },
+        { provide: MapaIntermodularFacade, useValue: mockMapaFacade }
       ]
     }).compileComponents();
     

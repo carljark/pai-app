@@ -146,7 +146,11 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
 
 ### 2.5. Dataset del Mapa Intermodular (`mapa_cfgm_<slug>.json` y migración MongoDB)
 - Debe generarse como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` combinando los archivos `*_ES_*.md` y `*_CA_*.md`.
-- Ingestarse en MongoDB mediante la migración correspondiente en la colección `mapa_modules`.
+- Ingestarse en MongoDB mediante la migración correspondiente en la colección `mapamodules`.
+- **REGLAS CRÍTICAS DE CONEXIONES Y ACTIVIDADES:**
+  - **Cero conexiones vacías (`activities: []`):** Toda conexión DEBE incluir al menos una actividad formativa (`activities.length >= 1`). Nunca crear conexiones huérfanas sin actividades.
+  - **Rango equilibrado de conexiones:** Entre 6 y 15 conexiones por RA (300 a 600 conexiones totales por curso).
+  - **Deduplicación estricta:** Las actividades deben ser únicas dentro de cada RA (sin títulos repetidos).
 - Cada elemento debe tener propiedades simétricas:
   - Módulos: `name_es`, `name_ca`.
   - RAs: `text_es`, `text_ca`, `criteria_es`, `criteria_ca`.
@@ -169,7 +173,7 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
 
 ---
 
-## 3. Blindaje de Tests y Cobertura (100% en Plantillas)
+## 3. Blindaje de Tests, Cobertura y Limpieza de Consola
 
 1. **Simular clic en DOM:** En `mapa-intermodular-view.component.spec.ts`, simular el clic en el botón del nuevo ciclo para cubrir la función compilada del template:
    ```typescript
@@ -179,3 +183,6 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
    expect(component.facade.activeTab()).toBe('CFGM_<SLUG>');
    ```
 2. **Validación Bilingüe:** Verificar que al conmutar `layout.language.set('catalan')` y `layout.language.set('castellano')`, el DOM renderiza los textos en catalán y castellano respectivamente.
+3. **Supresión Limpia de Errores en Tests:**
+   - En pruebas que fuercen errores (`catch` / `throwError`), interceptar siempre `console.error` con `vi.spyOn(console, 'error')` para no ensuciar la salida `stderr` de Vitest.
+   - En `app.spec.ts`: Proporcionar `mockMapaFacade` para evitar peticiones HTTP accidentales durante las pruebas del componente raíz `App`.

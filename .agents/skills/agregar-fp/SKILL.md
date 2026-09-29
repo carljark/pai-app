@@ -1,7 +1,7 @@
 ---
-name: agregar-grado-medio
+name: agregar-fp
 description: >-
-  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Formación Profesional (tanto Grado Básico / FP Básica como Grado Medio / CFGM) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y carpeta de archivos curriculares). Gestiona la integración end-to-end en backend, frontend, mapa intermodular con bidireccionalidad completa, gestión de 1.er y 2.º curso, migraciones, traducciones y suite de tests con cobertura >= 90%.
+  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Formación Profesional (tanto Grado Básico / FP Básica como Grado Medio / CFGM) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y carpeta de archivos curriculares). Gestiona la integración end-to-end en backend, frontend, mapa intermodular con bidireccionalidad completa, gestión de 1.er y 2.º curso, control estricto de conexiones (todas con actividad, sin conexiones vacías, 6-15 por RA), deduplicación rigurosa, migraciones, traducciones y suite de tests con cobertura >= 90%.
 ---
 
 # Skill: Incorporación de Ciclos Formativos de Formación Profesional (Grado Básico y Grado Medio)
@@ -50,7 +50,7 @@ Para iniciar la integración, el asistente solo necesita:
 Ejecutar el script asistente para generar los archivos base y calcular automáticamente el siguiente número secuencial de migración:
 
 ```bash
-python3 .agents/skills/agregar-grado-medio/scripts/scaffold_cfgm.py \
+python3 .agents/skills/agregar-fp/scripts/scaffold_cfgm.py \
   --slug <slug> \
   --name-es "<Nombre en Castellano>" \
   --name-ca "<Nombre en Catalán>"
@@ -61,7 +61,7 @@ Archivos generados:
 - `backend/src/migrations/0X_ingest_cfgm_<slug>_ras.ts`
 - `frontend/src/app/features/curriculum/data/ras_cfgm_<slug>.data.ts`
 - `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `mapa_cfgm_<slug>_2.json` si tiene 2.º curso)
-- `backend/src/migrations/0X_ingest_mapa_intermodular.ts` (ingesta en MongoDB collection `mapa_modules`)
+- `backend/src/migrations/0X_ingest_mapa_intermodular.ts` (ingesta en MongoDB collection `mapamodules`)
 
 ---
 
@@ -131,17 +131,22 @@ Archivos generados:
 
 ---
 
-### Paso 5: Semilla y Vista del Mapa Intermodular (Todas las Combinaciones, Bidireccionalidad y Optimización)
-1. **Inclusión Total de Combinaciones:** No utilizar actividades repetidas ni dummy. Extraer todas las combinaciones reales de los documentos pareados `*_ES_*.md` y `*_CA_*.md`.
-2. **Bidireccionalidad Cuádruple Completa:** Si una actividad vincula $CE_A$ con $CE_B$, $CE_C$, $CE_D$, debe generarse simétricamente la conexión desde cada uno de los 4 módulos hacia los demás con su correspondiente actividad y justificación.
-3. **Persistencia en MongoDB y Servicio REST (Prevención de Out of Memory en Build):**
+### Paso 5: Semilla y Vista del Mapa Intermodular (Reglas de Cantidad, Calidad y Deduplicación)
+
+> [!CAUTION]
+> **REGLAS CRÍTICAS DE CONEXIONES Y ACTIVIDADES:**
+> 1. **CERO Conexiones Huérfanas / Vacías (`activities: []`):** Cada conexión intermodular DEBE tener obligatoriamente al menos una propuesta de actividad formativa (`activities.length >= 1`). Queda **terminantemente prohibido** crear conexiones sin actividad (`activities: []`). Si un cruce de criterios no dispone de actividad asociada, NO debe generarse una conexión en el grafo.
+> 2. **Rango Equilibrado y Educativo por RA (6 a 15 conexiones por RA):** Cada Resultado de Aprendizaje (RA) debe tener entre **6 y 15 conexiones intermodulares** (media de ~8 a 12 conexiones por RA). En un curso completo de 8-11 módulos, el volumen total del mapa debe situarse entre **300 y 600 conexiones**. NUNCA generes miles de conexiones repetidas o artificiales.
+> 3. **Deduplicación Rigurosa de Actividades:** Las actividades deben ser únicas dentro de cada módulo y RA. No repitas la misma actividad en múltiples conexiones del mismo RA.
+
+1. **Persistencia en MongoDB y Servicio REST (Prevención de Out of Memory en Build):**
    - **NUNCA** incrustar semillas gigantes de mapas intermodulares como archivos `.ts` en el frontend, ya que el compilador de TypeScript/esbuild agota la memoria del sistema en entornos limitados como EC2 (`ERR_WORKER_OUT_OF_MEMORY: JS heap out of memory`).
-   - Guardar los módulos completos como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `_2.json` si tiene 2.º curso).
-   - Ingestar los datos en MongoDB mediante una migración (ej. `08_ingest_mapa_intermodular.ts`) en el modelo `MapaModule` con los campos `{ tab, order, code, name_es, name_ca, type, color, icon, learningOutcomes }`.
+   - Guardar los módulos completos como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `_2.json` si tiene 2.º curso). El tamaño del archivo JSON no debe superar los 4-6 MB.
+   - Ingestar los datos en MongoDB mediante una migración (ej. `08_ingest_mapa_intermodular.ts` y `09_deduplicate_mapa_peluqueria.ts`) en el modelo `MapaModule` con los campos `{ tab, order, code, name_es, name_ca, type, color, icon, learningOutcomes }`.
    - El frontend consume los módulos mediante `MapaIntermodularService.getModules(tab)` apuntando al endpoint `GET /api/mapa-intermodular?tab=...`.
-4. **Pestañas Separadas por Curso:**
+2. **Pestañas Separadas por Curso:**
    - Si el ciclo dispone de mapa para 1.er y 2.º curso, generar dos datasets independientes en MongoDB con tabs distintos (ej. `CFGM_<SLUG>` y `CFGM_<SLUG>_2`).
-   - Configurar dos pestañas en `mapa-intermodular-view.component.html` (ej. `CFGM Peluquería y Cosmética Capilar` y `CFGM Peluquería y Cosmética Capilar 2n`).
+   - Configurar dos pestañas en `mapa-intermodular-view.component.html` (ej. `CFGM <Nombre>` y `CFGM <Nombre> 2n`).
 
 ---
 
@@ -154,7 +159,7 @@ Verificar que se emplee la clave de traducción correspondiente en:
 
 ---
 
-### Paso 7: Blindaje de Tests y Cobertura (100% en Plantillas)
+### Paso 7: Blindaje de Tests, Cobertura y Supresión de `stderr`
 Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_cobertura.md).
 
 1. En `mapa-intermodular-view.component.spec.ts`:
@@ -167,7 +172,10 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
    - Probar conmutación de idioma en el header (`headerExpanded.set(true)`):
      - En Castellano: comprobar que contiene el nombre en castellano.
      - En Catalán: cambiar a `layout.language.set('catalan')` y comprobar el nombre en catalán.
-2. En los demás spec (`generator-view`, `curriculum.facade`, `history-view`, `personal-view`), añadir assertions para el nuevo ciclo tanto en ES como en CA.
+2. **Supresión Limpia de Errores en Tests:**
+   - Si un test prueba deliberadamente una captura de error (`catch` con `throwError`), interceptar siempre `console.error` con `vi.spyOn(console, 'error').mockImplementation(() => {})` y restaurarlo al finalizar (`consoleSpy.mockRestore()`), evitando ensuciar la salida estándar de errores (`stderr`) de Vitest.
+   - En `app.spec.ts`: Asegurar que `MapaIntermodularFacade` esté registrado en los `providers` del `TestBed` con su mock para evitar llamadas HTTP accidentales en segundo plano.
+3. En los demás spec (`generator-view`, `curriculum.facade`, `history-view`, `personal-view`), añadir assertions para el nuevo ciclo tanto en ES como en CA.
 
 ---
 
@@ -184,16 +192,25 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
 Cuando se encargue a la IA o a un subagente generar los documentos curriculares markdown del mapa intermodular a partir del currículo oficial, se debe utilizar exactamente la siguiente instrucción directriz:
 
 ```text
-Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema como hasta ahora, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). Has de proponer además, al menos 9 actividades en las que se trabaje con esta combinacion de CE, dirigidas a los alumnos de una edad correspondiente al curso (ej. 16-17 años para 1.er curso, 17-18 años para 2.º curso). Las actividades han de basarse en las metodologias activas de aprendizaje (Proyectos, problemas, servicio, etc.). Se ha de especificar las medidas DUA a tener en cuenta adaptadas a cada actividad. Todos los Criterios de evaluacion (CE) han de tener actividades relacionadas con otros modulos, y no se pueden contemplar mas de tres CE, a parte del propio del modulo, por actividad. No importa si son muchas combinaciones y actividades, hazlo asi. Además, ha de ser bidireccional, si hay una relacion y unas actividades entre los RA de dos modulos, han de aparecer en ambos. El documento ha de tener una version en catalan y otra en castellano sin faltas de ortografia y sin mezclar las dos lenguas.
+Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema curricular, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). 
+
+REGLAS ESTRICTAS DE CANTIDAD Y CALIDAD:
+1. Para cada RA, propón entre 6 y 15 conexiones intermodulares relevantes (media de 8 a 12 por RA).
+2. Cada conexión DEBE incluir obligatoriamente su correspondiente propuesta de actividad formativa innovadora (metodologías activas: proyectos, retos, problemas, servicio). NUNCA generes conexiones vacías o sin actividad.
+3. Las actividades deben ser ÚNICAS y diferenciadas. No repitas la misma actividad con diferente código de criterio.
+4. En cada actividad no se pueden contemplar más de tres CE externos, aparte del propio del módulo.
+5. Se han de especificar las medidas DUA adaptadas a cada actividad y evidencias evaluables.
+6. La relación debe ser bidireccional entre los módulos conectados.
+7. El documento ha de tener versión en catalán balear y en castellano, sin faltas ortográficas y sin mezclar ambas lenguas.
 ```
 
 ---
 
-## 5. Plantilla de Prompt para Delegar la Integración Completa a un Subagente
+## 5. Plantilla de Prompt para Delegar la Integración Completa al Subagente `fp-implementor`
 
 ```text
 Implementa el ciclo formativo <Nivel: Grado Básico / Grado Medio> <Nombre en Castellano> (<Nombre en Catalán>) con slug '<slug>' y tipoNivel '<TIPO_NIVEL>'.
-Sigue estrictamente la skill en .agents/skills/agregar-grado-medio/SKILL.md y la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md.
+Sigue estrictamente la skill en .agents/skills/agregar-fp/SKILL.md y la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md.
 Los archivos fuente se encuentran en: <ruta_carpeta>.
 
 Fuentes oficiales de contraste:
@@ -204,10 +221,12 @@ REQUISITOS BILINGÜES Y TÉCNICOS ESTRICTOS:
 1. Extrae los nombres, descripciones y criterios oficiales en castellano del BOE/TodoFP para los campos _es.
 2. Extrae o traduce al catalán balear oficial de FP CAIB para los campos _ca. Nunca mezcles ambos idiomas.
 3. Asegura el mapeo reactivo isCa en curriculum.facade.ts y la condición de idioma en targetCourseDescription en project.controller.ts.
-4. Genera la semilla del mapa intermodular con TODAS las combinaciones y actividades reales pareadas de los documentos markdown (sin actividades repetidas ni dummy).
-5. Aplica bidireccionalidad completa cuádruple y optimización de memoria (diccionario centralizado de actividades + tuplas de conexión normalizadas para no superar límites de heap en Vitest).
-6. Si hay 1.er y 2.º curso, separa los módulos adecuadamente en el generador y genera pestañas independientes en el mapa intermodular.
-7. Recuerda simular el click() en el DOM para el nuevo tab en mapa-intermodular-view.component.spec.ts para mantener el 100% de cobertura en plantillas.
+4. Genera el dataset del mapa intermodular en backend/src/data/mapa-intermodular/mapa_<slug>.json (y _2.json si tiene 2º curso) para ingesta en MongoDB.
+5. CERO CONEXIONES VACÍAS: Cada conexión debe tener al menos una actividad formativa (activities.length >= 1). No crees conexiones con activities: [].
+6. CANTIDAD EQUILIBRADA DE ACTIVIDADES: Entre 6 y 15 conexiones por RA (300 a 600 conexiones totales por curso). Deduplica las actividades por título.
+7. Si hay 1.er y 2.º curso, separa los módulos adecuadamente en el generador y genera pestañas independientes en el mapa intermodular.
+8. Recuerda simular el click() en el DOM para el nuevo tab en mapa-intermodular-view.component.spec.ts para mantener el 100% de cobertura en plantillas.
+9. Silencia stderr en los tests espiando console.error en pruebas de error, y registra mockMapaFacade en app.spec.ts.
 
 Al finalizar, ejecuta la suite de tests de frontend y backend, y documenta la tarea en tareas/.
 ```

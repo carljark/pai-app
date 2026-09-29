@@ -1,6 +1,6 @@
 # Guía de Uso e Invocación de Skills en Antigravity CLI
 
-Esta guía describe cómo invocar y utilizar las **Skills** de Antigravity (tanto desde la línea de comandos con el CLI `agy` como desde el entorno IDE), con foco específico en la skill [`agregar-grado-medio`](../.agents/skills/agregar-grado-medio/).
+Esta guía describe cómo invocar y utilizar las **Skills** de Antigravity (tanto desde la línea de comandos con el CLI `agy` como desde el entorno IDE), con foco específico en la skill [`agregar-fp`](../.agents/skills/agregar-fp/).
 
 ---
 
@@ -24,12 +24,12 @@ No necesitas recordar nombres técnicos ni sintaxis de flags. Basta con expresar
 
 > *"Quiero añadir el nuevo grado medio que tengo en la carpeta @add_mid_grades/Grado medio farmacia"*
 
-El agente evalúa las descripciones de las skills activas, identifica que [`agregar-grado-medio`](../.agents/skills/agregar-grado-medio/SKILL.md) es la idónea, lee sus directrices y arranca el proceso automáticamente.
+El agente evalúa las descripciones de las skills activas, identifica que [`agregar-fp`](../.agents/skills/agregar-fp/SKILL.md) es la idónea, lee sus directrices y arranca el proceso automáticamente.
 
 ### B. Invocación Explícita (Mención directa)
 Si deseas asegurar o forzar que el agente utilice estrictamente esta skill y sus comprobaciones:
 
-> *"Usa la skill `agregar-grado-medio` para añadir el ciclo de Farmacia y Parafarmacia que está en @add_mid_grades/Grado medio farmacia"*
+> *"Usa la skill `agregar-fp` para añadir el ciclo de Farmacia y Parafarmacia que está en @add_mid_grades/Grado medio farmacia"*
 
 ---
 
@@ -63,12 +63,12 @@ La skill está optimizada para pedir el **mínimo de información posible** y so
 
 ### Ejemplo 1: En una sola línea (mínimo esfuerzo)
 ```text
-Añade el nuevo grado medio de la carpeta @add_mid_grades/Grado medio farmacia usando la skill agregar-grado-medio
+Añade el nuevo grado medio de la carpeta @add_mid_grades/Grado medio farmacia usando la skill agregar-fp
 ```
 
 ### Ejemplo 2: Indicando explícitamente nombres en Castellano y Catalán
 ```text
-Usa la skill agregar-grado-medio para integrar el ciclo:
+Usa la skill agregar-fp para integrar el ciclo:
 - Nombre ES: Grado Medio en Farmacia y Parafarmacia
 - Nombre CA: Grau Mitjà en Farmàcia i Parafarmàcia
 - Archivos: @add_mid_grades/Grado medio farmacia
@@ -87,7 +87,7 @@ Al recibir la petición, el agente ejecuta el siguiente flujo estandarizado:
 
 ```mermaid
 flowchart TD
-    Prompt["Prompt del usuario con @carpeta"] --> Detect["Detección / Activación de 'agregar-grado-medio'"]
+    Prompt["Prompt del usuario con @carpeta"] --> Detect["Detección / Activación de 'agregar-fp'"]
     Detect --> ReadSkill["Lectura de SKILL.md y checklist_archivos.md"]
     ReadSkill --> Scaffold["Ejecución de scaffold_cfgm.py (Calcula migración y genera plantillas)"]
     Scaffold --> Ingest["Extracción de RAs/CEs (BOE -> ES, CAIB -> CA)"]
@@ -108,7 +108,7 @@ Aunque la skill está diseñada para que el asistente la ejecute de forma autón
 ### 1. Generador de Scaffolding
 Calcula el siguiente número de migración disponible y crea los archivos de datos iniciales:
 ```bash
-python3 .agents/skills/agregar-grado-medio/scripts/scaffold_cfgm.py \
+python3 .agents/skills/agregar-fp/scripts/scaffold_cfgm.py \
   --slug CFGM_FARMACIA \
   --name-es "Farmacia y Parafarmacia" \
   --name-ca "Farmàcia i Parafarmàcia"
@@ -117,5 +117,5 @@ python3 .agents/skills/agregar-grado-medio/scripts/scaffold_cfgm.py \
 ### 2. Validador Integral de Integración y Paridad Bilingüe
 Comprueba estáticamente los 8 puntos clave (incluyendo que no haya textos clonados entre `_es` y `_ca`), lanza los tests unitarios de frontend (con comprobación de cobertura estricta `>= 80%` en HTML) y los tests de backend:
 ```bash
-bash .agents/skills/agregar-grado-medio/scripts/verify_cfgm_integration.sh CFGM_FARMACIA
+bash .agents/skills/agregar-fp/scripts/verify_cfgm_integration.sh CFGM_FARMACIA
 ```

@@ -342,10 +342,16 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should handle loadSeed error gracefully', async () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     mockMapaService.getModules.mockReturnValue(throwError(() => new Error('Network error')));
     const res = await facade.setTab('CFGM_PELUQUERIA');
     expect(res).toEqual([]);
     expect(facade.isLoadingSeed()).toBe(false);
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining('Error loading seed for tab CFGM_PELUQUERIA'),
+      expect.any(Error)
+    );
+    consoleSpy.mockRestore();
   });
 
   it('should handle tab race condition when tab changed before load completes', async () => {

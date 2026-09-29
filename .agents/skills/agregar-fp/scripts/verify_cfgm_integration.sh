@@ -81,18 +81,50 @@ else:
   echo "  ✅ Diferenciación lingüística en módulos (ES vs CA): $SAMPLE_CHECK módulos distintos"
 fi
 
-# 8. Semilla del Mapa Intermodular
-SEED_FILE="$ROOT_DIR/frontend/src/app/features/mapa-intermodular/data/mapa-intermodular-cfgm-${SLUG}.seed.ts"
-if [ -f "$SEED_FILE" ]; then
-  SEED_LINES=$(wc -l < "$SEED_FILE" | tr -d ' ')
-  echo "  ✅ Semilla del Mapa Intermodular presente ($SEED_LINES líneas)"
+# 8. Dataset del Mapa Intermodular y Validación de Actividades (Cero Conexiones Vacías)
+MAPA_FILE="$ROOT_DIR/backend/src/data/mapa-intermodular/mapa_cfgm_${SLUG}.json"
+if [ -f "$MAPA_FILE" ]; then
+  echo "  ✅ Dataset JSON del Mapa Intermodular presente: mapa_cfgm_${SLUG}.json"
+  python3 -c "
+import json, sys
+with open('$MAPA_FILE', 'r', encoding='utf-8') as f:
+    modules = json.load(f)
+
+total_ras = 0
+total_conns = 0
+empty_conns = 0
+total_acts = 0
+for m in modules:
+    for lo in m.get('learningOutcomes', []):
+        total_ras += 1
+        for c in lo.get('connections', []):
+            total_conns += 1
+            acts = c.get('activities', [])
+            if not acts or len(acts) == 0:
+                empty_conns += 1
+            total_acts += len(acts)
+
+avg_conns = round(total_conns / total_ras, 1) if total_ras > 0 else 0
+print(f'     • Módulos: {len(modules)}, RAs: {total_ras}')
+print(f'     • Conexiones totales: {total_conns} (Media: {avg_conns} por RA)')
+print(f'     • Actividades formativas: {total_acts}')
+
+if empty_conns > 0:
+    print(f'  ❌ ERROR: Existen {empty_conns} conexiones vacías sin actividades asociadas.')
+    sys.exit(1)
+else:
+    print('  ✅ Cero conexiones vacías: el 100% de las conexiones tiene al menos una actividad.')
+
+if avg_conns > 25:
+    print(f'  ⚠️ ADVERTENCIA: La media de conexiones por RA ({avg_conns}) es inusualmente alta.')
+"
 else
-  echo "  ❌ ERROR: Falta archivo de semilla mapa-intermodular-cfgm-${SLUG}.seed.ts"
+  echo "  ❌ ERROR: Falta archivo de dataset backend/src/data/mapa-intermodular/mapa_cfgm_${SLUG}.json"
 fi
 
 echo ""
 echo "🧪 Ejecutando suite de pruebas unitarias y verificación de cobertura..."
-cd "$ROOT_DIR/frontend" && npm test -- --watch=false --browsers=ChromeHeadless
+cd "$ROOT_DIR/frontend" && npm test
 cd "$ROOT_DIR/backend" && npm test
 
 echo ""

@@ -102,23 +102,15 @@ export const up = async () => {{
     return out_path
 
 def generate_mapa_seed(slug, name_es, name_ca, tipo_nivel):
-    out_path = os.path.join(ROOT_DIR, f"frontend/src/app/features/mapa-intermodular/data/mapa-intermodular-cfgm-{slug}.seed.ts")
+    out_path = os.path.join(ROOT_DIR, f"backend/src/data/mapa-intermodular/mapa_cfgm_{slug}.json")
     if os.path.exists(out_path):
         print(f"⚠️  El archivo ya existe: {out_path}")
         return out_path
     
-    content = f"""import {{ FPBModule }} from '../models/mapa-intermodular.model';
-
-/**
- * Semilla del Mapa Intermodular para {name_es} ({name_ca}).
- */
-export const CFGM_{slug.upper()}_MODULES_SEED: FPBModule[] = [
-  // Definir módulos de 1.er curso, RAs, criterios y conexiones
-];
-"""
+    content = "[\n  // Módulos con learningOutcomes y conexiones con actividades formativas (sin conexiones vacías)\n]\n"
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"✅ Creado seed mapa: {out_path}")
+    print(f"✅ Creado dataset JSON de mapa: {out_path}")
     return out_path
 
 def main():

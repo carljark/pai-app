@@ -357,4 +357,85 @@ describe('MapaIntermodularFacade', () => {
     expect(res.length).toBe(1);
     expect(facade.activeTab()).toBe('CFGM');
   });
+
+  describe('uniqueActivities', () => {
+    const makeAct = (id: string, title_es: string, title_ca = '') => ({
+      id, title_es, title_ca,
+      description_es: 'd_es', description_ca: 'd_ca',
+      evidence_es: 'e_es', evidence_ca: 'e_ca',
+      diversitySupport_es: 'ds_es', diversitySupport_ca: 'ds_ca'
+    });
+
+    it('should return empty array when no connections', () => {
+      facade.modules.set([]);
+      expect(facade.uniqueActivities()).toEqual([]);
+    });
+
+    it('should deduplicate activities with the same title_es across connections', () => {
+      const act1 = makeAct('1', 'Activitat A');
+      const act2 = makeAct('2', 'Activitat B');
+      const actDup = makeAct('3', 'Activitat A'); // duplicate title_es
+      const conn1 = {
+        targetModuleCode: 'X', targetModuleName_es: 'X', targetModuleName_ca: 'X',
+        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        relationType: 'tecnica' as const,
+        justification_es: '', justification_ca: '',
+        activities: [act1, act2]
+      };
+      const conn2 = {
+        targetModuleCode: 'Y', targetModuleName_es: 'Y', targetModuleName_ca: 'Y',
+        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        relationType: 'tecnica' as const,
+        justification_es: '', justification_ca: '',
+        activities: [actDup] // same title as act1
+      };
+      facade.modules.set([{
+        code: 'MOD', name_es: 'Mod', name_ca: 'Mod', type: 'especifico', color: '#000', icon: 'x',
+        learningOutcomes: [{ id: 'MOD_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn1, conn2] }]
+      }]);
+      facade.selectModule('MOD');
+      facade.selectRa('MOD_RA1');
+      const unique = facade.uniqueActivities();
+      expect(unique.length).toBe(2);
+      expect(unique.map(a => a.title_es)).toEqual(['Activitat A', 'Activitat B']);
+    });
+
+    it('should fall back to title_ca as dedup key when title_es is empty', () => {
+      const actNoEs1 = makeAct('a', '', 'Activitat CA');
+      const actNoEs2 = makeAct('b', '', 'Activitat CA'); // duplicate by title_ca
+      const conn = {
+        targetModuleCode: 'Z', targetModuleName_es: 'Z', targetModuleName_ca: 'Z',
+        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        relationType: 'tecnica' as const,
+        justification_es: '', justification_ca: '',
+        activities: [actNoEs1, actNoEs2]
+      };
+      facade.modules.set([{
+        code: 'MOD2', name_es: 'Mod2', name_ca: 'Mod2', type: 'especifico', color: '#000', icon: 'x',
+        learningOutcomes: [{ id: 'MOD2_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn] }]
+      }]);
+      facade.selectModule('MOD2');
+      facade.selectRa('MOD2_RA1');
+      const unique = facade.uniqueActivities();
+      expect(unique.length).toBe(1);
+    });
+
+    it('should skip activities with no title_es and no title_ca', () => {
+      const actNoTitle = makeAct('x', '', '');
+      const conn = {
+        targetModuleCode: 'W', targetModuleName_es: 'W', targetModuleName_ca: 'W',
+        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        relationType: 'tecnica' as const,
+        justification_es: '', justification_ca: '',
+        activities: [actNoTitle]
+      };
+      facade.modules.set([{
+        code: 'MOD3', name_es: 'Mod3', name_ca: 'Mod3', type: 'especifico', color: '#000', icon: 'x',
+        learningOutcomes: [{ id: 'MOD3_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn] }]
+      }]);
+      facade.selectModule('MOD3');
+      facade.selectRa('MOD3_RA1');
+      expect(facade.uniqueActivities()).toEqual([]);
+    });
+  });
 });

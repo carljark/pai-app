@@ -73,6 +73,26 @@ export class MapaIntermodularFacade {
     return filtered.length > 0 ? filtered : ra.connections;
   });
 
+  /**
+   * Actividades únicas (sin duplicados) de todas las conexiones filtradas.
+   * Deduplicación por `title_es` para evitar que la misma actividad aparezca
+   * repetida en decenas de conexiones (problema concreto en CFGM Peluquería).
+   */
+  uniqueActivities = computed<IntermodularActivity[]>(() => {
+    const seen = new Set<string>();
+    const result: IntermodularActivity[] = [];
+    for (const conn of this.filteredConnections()) {
+      for (const act of conn.activities) {
+        const key = act.title_es || act.title_ca;
+        if (key && !seen.has(key)) {
+          seen.add(key);
+          result.push(act);
+        }
+      }
+    }
+    return result;
+  });
+
   filteredModules = computed(() => {
     const raw = this.searchQuery();
     const q = typeof raw === 'string' ? raw.toLowerCase().trim() : '';

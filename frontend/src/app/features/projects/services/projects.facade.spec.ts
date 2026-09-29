@@ -40,6 +40,7 @@ describe('ProjectsFacade', () => {
 
   afterEach(() => {
     httpMock.verify();
+    localStorage.removeItem('pai_lang');
   });
 
   it('should have initial methodology set to ABP (Aprendizaje Basado en Problemas / Proyectos)', () => {
@@ -67,6 +68,17 @@ describe('ProjectsFacade', () => {
 
     mockAuthFacade.currentUser.set(null);
     expect(facade.myProjects().length).toBe(0);
+  });
+
+  it('should use the id fallback when currentUser has no _id', () => {
+    mockAuthFacade.currentUser.set({ id: 'u2', name: 'User 2' });
+    facade.projectsHistory.set([
+      { _id: '1', title: 'P1', userId: 'u2' },
+      { _id: '2', title: 'P2', userId: 'u3' }
+    ]);
+
+    expect(facade.myProjects().length).toBe(1);
+    expect(facade.myProjects()[0]._id).toBe('1');
   });
 
   it('should handle error when loading history', () => {
@@ -206,6 +218,82 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE_NO_SUBJ' }]);
 
     facade.generateProject('castellano').subscribe();
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['']);
+    req.flush({});
+  });
+
+  it('should resolve CFGM_PELUQUERIA modules for 2º in castellano using subject_es, subject and module fallbacks', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
+    mockCurriculumFacade.curso.mockReturnValue('2º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_A', 'RA_B', 'RA_C']);
+    mockCurriculumFacade.ras.mockReturnValue([
+      { description: 'RA_A', moduleCode: '0640', subject_es: '0640. Módulo ES' },
+      { description: 'RA_B', moduleCode: '0643', subject: '0643. Subject' },
+      { description: 'RA_C', moduleCode: '0843', module: '0843. Module' }
+    ]);
+
+    facade.generateProject('castellano').subscribe();
+    expect(facade.historyTab()).toBe('CFGM_PELUQUERIA');
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['0640. Módulo ES', '0643. Subject', '0843. Module']);
+    req.flush({});
+  });
+
+  it('should resolve CFGM_PELUQUERIA modules for 1r in catalan using subject_ca, subject and module fallbacks', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
+    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_A', 'RA_B', 'RA_C']);
+    mockCurriculumFacade.ras.mockReturnValue([
+      { description: 'RA_A', moduleCode: '0845', subject_ca: '0845. Mòdul CA' },
+      { description: 'RA_B', moduleCode: '0842', subject: '0842. Subject' },
+      { description: 'RA_C', moduleCode: '0844', module: '0844. Module' }
+    ]);
+
+    localStorage.setItem('pai_lang', 'catalan');
+    facade.generateProject('catalan').subscribe();
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['0845. Mòdul CA', '0842. Subject', '0844. Module']);
+    req.flush({});
+  });
+
+  it('should fall back to the generic CFGM_PELUQUERIA name in castellano when no module matches', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
+    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_X']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_X', moduleCode: '9999' }]);
+
+    facade.generateProject('castellano').subscribe();
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['CFGM Peluquería y Cosmética Capilar']);
+    req.flush({});
+  });
+
+  it('should fall back to the generic CFGM_PELUQUERIA name in catalan when no module matches', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
+    mockCurriculumFacade.curso.mockReturnValue('2º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_X']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_X', moduleCode: '9999' }]);
+
+    localStorage.setItem('pai_lang', 'catalan');
+    facade.generateProject('catalan').subscribe();
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['CFGM Peluqueria i Cosmètica Capilar']);
+    req.flush({});
+  });
+
+  it('should use an empty string when a CFGM module has neither subject nor module', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_ESTETICA');
+    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_NO_NAME']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_NO_NAME' }]);
+
+    facade.generateProject('castellano').subscribe();
+
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['']);
     req.flush({});
@@ -456,6 +544,16 @@ describe('ProjectsFacade', () => {
       facade.generatedProject.set('current');
       facade.undoLastChange();
       expect(facade.generatedProject()).toBe('current');
+    });
+
+    it('should handle popUndo when there is no active project or stack', () => {
+      facade.currentProjectId.set(null);
+      facade.popUndo();
+      expect(facade.undoStacksByProject()['__temp__']).toBeUndefined();
+
+      facade.currentProjectId.set('proj-empty');
+      facade.popUndo();
+      expect(facade.undoStacksByProject()['proj-empty']).toBeUndefined();
     });
   });
 });

@@ -116,12 +116,12 @@ export function toImportDocxFormData(file: File, projectId: string): FormData {
 // DTO → Domain (for receiving from API)
 // ============================================
 
-function mapStatus(status: string): ProjectStatus {
+export function mapStatus(status: string): ProjectStatus {
   const validStatuses: ProjectStatus[] = ['borrador', 'generando', 'en_cola', 'publicado', 'error'];
   return validStatuses.includes(status as ProjectStatus) ? status as ProjectStatus : 'borrador';
 }
 
-function mapTipoNivel(tipo: string): ProjectType {
+export function mapTipoNivel(tipo: string): ProjectType {
   const validTypes: ProjectType[] = ['FP_BASICA', 'CFGM_ESTETICA', 'CFGM_PELUQUERIA', 'DIVERSIFICACION_CURRICULAR'];
   return validTypes.includes(tipo as ProjectType) ? tipo as ProjectType : 'FP_BASICA';
 }

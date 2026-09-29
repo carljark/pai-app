@@ -6,8 +6,16 @@ export default defineConfig({
     setupFiles: ['./test-setup.ts'],
     coverage: {
       provider: 'v8',
-      include: ['src/app/app.ts', 'src/app/app.facade.ts', 'src/app/services/layout.service.ts', 'src/app/services/translation.service.ts', 'src/app/services/pai.service.ts'],
-      reporter: ['text', 'json-summary'],
+      include: [
+        'src/app/app.ts',
+        'src/app/app.facade.ts',
+        'src/app/services/layout.service.ts',
+        'src/app/services/translation.service.ts',
+        'src/app/services/pai.service.ts',
+        'src/app/features/projects/**/*.ts',
+        'src/app/features/taller/**/*.ts'
+      ],
+      reporter: ['text', 'json-summary', 'json'],
       thresholds: {
         statements: 90,
         branches: 90,

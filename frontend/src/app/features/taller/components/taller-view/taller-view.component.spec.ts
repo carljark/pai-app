@@ -688,5 +688,181 @@ describe('TallerViewComponent', () => {
     expect(aiSelect).toBeNull();
     expect(modelSelect).toBeNull();
   });
+
+  // Additional tests for branch coverage
+  it('should handle triggerUpload when fileInput is null', () => {
+    vi.spyOn(document, 'getElementById').mockReturnValue(null);
+    component.triggerUpload();
+    // Should not throw
+  });
+
+  it('should handle downloadWord when exportDocx returns null', () => {
+    mockProjectsFacade.currentProjectId.set('123');
+    mockProjectsFacade.exportDocx.mockReturnValue(null);
+    component.downloadWord();
+    // Should not throw
+  });
+
+  it('should handle uploadWord when no file selected', () => {
+    const event = { target: { files: [] } };
+    component.uploadWord(event);
+    expect(mockPaiService.importDocx).not.toHaveBeenCalled();
+  });
+
+  it('should handle uploadWord when no project id', () => {
+    mockProjectsFacade.currentProjectId.set(null);
+    const event = { target: { files: [new File([''], 'test.docx')] } };
+    component.uploadWord(event);
+    expect(mockPaiService.importDocx).not.toHaveBeenCalled();
+  });
+
+  it('should handle saveDraft error', () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    mockProjectsFacade.updateProjectStatus.mockReturnValueOnce(throwError(() => new Error('err')));
+    component.saveDraft();
+    expect(consoleSpy).toHaveBeenCalledWith('Error saving draft:', expect.any(Error));
+  });
+
+  it('should handle publishProject error', () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    mockProjectsFacade.updateProjectStatus.mockReturnValueOnce(throwError(() => new Error('err')));
+    component.publishProject();
+    expect(consoleSpy).toHaveBeenCalledWith('Error publishing project:', expect.any(Error));
+  });
+
+  it('should handle exportPDF when markdown element not found', () => {
+    vi.spyOn(document, 'querySelector').mockReturnValue(null);
+    component.exportPDF();
+    // Should not throw
+  });
+
+  it('should not undo when canUndo is false', () => {
+    mockProjectsFacade.canUndo.set(false);
+    component.undoAI();
+    expect(mockProjectsFacade.undoLastChange).not.toHaveBeenCalled();
+  });
+
+  it('should show missing instruction alert', () => {
+    mockProjectsFacade.aiPrompt.set('');
+    mockProjectsFacade.generatedProject.set('content');
+    component.rewriteWithAI();
+    expect(mockAppFacade.showInfoModal()).toBe(true);
+    expect(mockAppFacade.infoTitle()).toBe('Atención');
+  });
+
+  it('should return if generatedProject is empty in rewriteWithAI', () => {
+    mockProjectsFacade.generatedProject.set('');
+    mockProjectsFacade.aiPrompt.set('fix grammar');
+    component.rewriteWithAI();
+    expect(mockProjectsFacade.pushUndo).not.toHaveBeenCalled();
+    expect(mockProjectsFacade.rewriteSection).not.toHaveBeenCalled();
+  });
+
+  it('should handle onFileSelected with no files', () => {
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    component.onFileSelected({ target: { files: [] } });
+    expect(component.uploadFile).not.toHaveBeenCalled();
+  });
+
+  it('should handle onDragOver and onDragLeave', () => {
+    const event = { preventDefault: vi.fn(), stopPropagation: vi.fn() } as any;
+    component.onDragOver(event);
+    expect(event.preventDefault).toHaveBeenCalled();
+    expect(event.stopPropagation).toHaveBeenCalled();
+
+    component.onDragLeave(event);
+    expect(event.preventDefault).toHaveBeenCalled();
+    expect(event.stopPropagation).toHaveBeenCalled();
+  });
+
+  it('should handle onDrop edge cases', () => {
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+
+    // No dataTransfer
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn() } as any);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+
+    // No files
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [] } } as any);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+
+    // No projectId
+    mockProjectsFacade.currentProjectId.set(null);
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+  });
+
+  it('should handle onDrop success', () => {
+    mockProjectsFacade.currentProjectId.set('123');
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    expect(component.uploadFile).toHaveBeenCalled();
+  });
+
+  it('should handle onFileSelected with no files', () => {
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    component.onFileSelected({ target: { files: [] } });
+    expect(component.uploadFile).not.toHaveBeenCalled();
+  });
+
+  it('should handle onFileSelected without project id', () => {
+    mockProjectsFacade.currentProjectId.set(null);
+    const event = { target: { files: [new File([''], 'file.txt')] } };
+    vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
+    component.onFileSelected(event);
+    expect(component.uploadFile).not.toHaveBeenCalled();
+  });
+
+  it('should handle triggerUpload when fileInput is null', () => {
+    vi.spyOn(document, 'getElementById').mockReturnValue(null);
+    component.triggerUpload();
+    // Should not throw
+  });
+
+  it('should handle downloadWord when exportDocx returns null', () => {
+    mockProjectsFacade.currentProjectId.set('123');
+    mockProjectsFacade.exportDocx.mockReturnValue(null);
+    component.downloadWord();
+    // Should not throw
+  });
+
+  it('should handle uploadWord when no file selected', () => {
+    const event = { target: { files: [] } };
+    component.uploadWord(event);
+    expect(mockPaiService.importDocx).not.toHaveBeenCalled();
+  });
+
+  it('should handle uploadWord when no project id', () => {
+    mockProjectsFacade.currentProjectId.set(null);
+    const event = { target: { files: [new File([''], 'test.docx')] } };
+    component.uploadWord(event);
+    expect(mockPaiService.importDocx).not.toHaveBeenCalled();
+  });
+
+  it('should handle saveDraft error', () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    mockProjectsFacade.updateProjectStatus.mockReturnValueOnce(throwError(() => new Error('err')));
+    component.saveDraft();
+    expect(consoleSpy).toHaveBeenCalledWith('Error saving draft:', expect.any(Error));
+  });
+
+  it('should handle publishProject error', () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    mockProjectsFacade.updateProjectStatus.mockReturnValueOnce(throwError(() => new Error('err')));
+    component.publishProject();
+    expect(consoleSpy).toHaveBeenCalledWith('Error publishing project:', expect.any(Error));
+  });
+
+  it('should handle exportPDF when markdown element not found', () => {
+    vi.spyOn(document, 'querySelector').mockReturnValue(null);
+    component.exportPDF();
+    // Should not throw
+  });
+
+  it('should not undo when canUndo is false', () => {
+    mockProjectsFacade.canUndo.set(false);
+    component.undoAI();
+    expect(mockProjectsFacade.undoLastChange).not.toHaveBeenCalled();
+  });
 });
 

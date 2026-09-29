@@ -4,7 +4,24 @@ import { ProjectsFacade } from './projects.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
 import { AuthFacade } from '../../auth/services/auth.facade';
 import { signal } from '@angular/core';
+import { Project, ProjectStatus, ProjectType } from '../models/project.model';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+
+function createMockProject(overrides: Partial<Project> = {}): Project {
+  return {
+    _id: '1',
+    title: 'Test Project',
+    status: 'borrador' as ProjectStatus,
+    tipoNivel: 'FP_BASICA' as ProjectType,
+    courseLevel: '1º',
+    modules: [],
+    generatedContent: { rawText: '' },
+    userId: 'u1',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    ...overrides,
+  };
+}
 
 describe('ProjectsFacade', () => {
   let facade: ProjectsFacade;
@@ -48,7 +65,7 @@ describe('ProjectsFacade', () => {
   });
 
   it('should load history and update projectsHistory signal', () => {
-    const mockProjects = [{ _id: '1', title: 'Test Project' }];
+    const mockProjects = [createMockProject({ _id: '1', title: 'Test Project' })];
     facade.loadHistory();
     
     const req = httpMock.expectOne('/api/projects');
@@ -60,9 +77,9 @@ describe('ProjectsFacade', () => {
 
   it('should compute myProjects correctly based on currentUser id', () => {
     facade.projectsHistory.set([
-      { _id: '1', title: 'P1', userId: 'u1' },
-      { _id: '2', title: 'P2', userId: { _id: 'u1', name: 'User 1' } },
-      { _id: '3', title: 'P3', userId: 'u2' }
+      createMockProject({ _id: '1', title: 'P1', userId: 'u1' }),
+      createMockProject({ _id: '2', title: 'P2', userId: { _id: 'u1', name: 'User 1' } }),
+      createMockProject({ _id: '3', title: 'P3', userId: 'u2' })
     ]);
     expect(facade.myProjects().length).toBe(2);
 
@@ -73,8 +90,8 @@ describe('ProjectsFacade', () => {
   it('should use the id fallback when currentUser has no _id', () => {
     mockAuthFacade.currentUser.set({ id: 'u2', name: 'User 2' });
     facade.projectsHistory.set([
-      { _id: '1', title: 'P1', userId: 'u2' },
-      { _id: '2', title: 'P2', userId: 'u3' }
+      createMockProject({ _id: '1', title: 'P1', userId: 'u2' }),
+      createMockProject({ _id: '2', title: 'P2', userId: 'u3' })
     ]);
 
     expect(facade.myProjects().length).toBe(1);
@@ -92,7 +109,10 @@ describe('ProjectsFacade', () => {
   });
 
   it('should compute currentProject correctly', () => {
-    facade.projectsHistory.set([{ _id: '1', title: 'P1' }, { _id: '2', title: 'P2' }]);
+    facade.projectsHistory.set([
+      createMockProject({ _id: '1', title: 'P1' }),
+      createMockProject({ _id: '2', title: 'P2' })
+    ]);
     facade.currentProjectId.set('2');
     
     expect(facade.currentProject()?.title).toBe('P2');
@@ -100,9 +120,9 @@ describe('ProjectsFacade', () => {
 
   it('should compute fpProjects and esoProjects based on search and level', () => {
     facade.projectsHistory.set([
-      { _id: '1', title: 'FP Proy', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text1' } },
-      { _id: '2', title: 'ESO Proy', tipoNivel: 'DIVERSIFICACION_CURRICULAR', generatedContent: { rawText: 'text2' } },
-      { _id: '3', title: 'Otro FP', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text3' } }
+      createMockProject({ _id: '1', title: 'FP Proy', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text1' } }),
+      createMockProject({ _id: '2', title: 'ESO Proy', tipoNivel: 'DIVERSIFICACION_CURRICULAR', generatedContent: { rawText: 'text2' } }),
+      createMockProject({ _id: '3', title: 'Otro FP', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text3' } })
     ]);
     
     expect(facade.fpProjects().length).toBe(2);
@@ -343,10 +363,10 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/123/files');
     expect(req.request.method).toBe('GET');
-    req.flush([{ name: 'test.pdf' }]);
+    req.flush([{ _id: 'f1', filename: 'test.pdf', originalName: 'test.pdf', mimeType: 'application/pdf', size: 1024, uploadedAt: new Date().toISOString(), projectId: '123' }]);
     
     expect(facade.projectFiles().length).toBe(1);
-    expect(facade.projectFiles()[0].name).toBe('test.pdf');
+    expect(facade.projectFiles()[0].originalName).toBe('test.pdf');
   });
 
   it('should handle error when loading files', () => {
@@ -410,7 +430,21 @@ describe('ProjectsFacade', () => {
     
     const req = httpMock.expectOne('/api/projects/123/import-docx');
     expect(req.request.method).toBe('POST');
-    req.flush({});
+    req.flush({
+      project: {
+        _id: '123',
+        title: 'Imported Project',
+        status: 'borrador',
+        tipoNivel: 'FP_BASICA',
+        courseLevel: '1º',
+        modules: [],
+        generatedContent: { rawText: 'Imported content' },
+        userId: 'u1',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      },
+      message: 'Imported successfully',
+    });
   });
 
   it('should return undefined for file operations if no currentProjectId', () => {

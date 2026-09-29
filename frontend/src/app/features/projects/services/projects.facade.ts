@@ -1,21 +1,88 @@
-import { Injectable, inject, signal, computed } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+/**
+ * Projects Facade (Hexagonal Architecture - Application Layer)
+ * Orchestrates use cases, manages UI state, delegates HTTP to ProjectsService.
+ * No direct HTTP calls, no DTO handling.
+ */
+
+import { Injectable, inject, signal, computed, effect } from '@angular/core';
+import { tap } from 'rxjs/operators';
 import { AuthFacade } from '../../auth/services/auth.facade';
+import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { ProjectsService } from './projects.service';
+import {
+  Project,
+  ProjectStatus,
+  ProjectType,
+  HistoryTab,
+  CreateProjectPayload,
+  UpdateProjectPayload,
+  GenerateProjectResponse,
+  ProjectFile,
+  AIProvider,
+  AIModelOption,
+  MethodologyOption,
+  getModelsForProvider,
+  getDefaultModelForProvider,
+  getHistoryTabForTipoNivel,
+  isFPProject,
+  isESOProject,
+  METHODOLOGY_OPTIONS,
+  AI_PROVIDER_OPTIONS,
+} from '../models/project.model';
 
 @Injectable({ providedIn: 'root' })
 export class ProjectsFacade {
-  private http = inject(HttpClient);
-  private apiUrl = '/api/projects';
-  
-  // Dependencias cruzadas (opcional, pero útil si queremos leer datos de selección directamente)
+  private projectsService = inject(ProjectsService);
   private curriculumFacade = inject(CurriculumFacade);
   private authFacade = inject(AuthFacade);
 
-  // --- ESTADO GLOBAL DE PROYECTOS ---
-  projectsHistory = signal<any[]>([]);
-  historyTab = signal<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO'>('FPB');
+  // ============================================
+  // STATE - Historial
+  // ============================================
+  projectsHistory = signal<Project[]>([]);
+  historyTab = signal<HistoryTab>('FPB');
   searchQuery = signal<string>('');
+
+  // ============================================
+  // STATE - Generador
+  // ============================================
+  methodology = signal<string>(METHODOLOGY_OPTIONS[0].value);
+  selectedAi = signal<AIProvider>('gemini');
+  selectedModel = signal<string>('gemini-3.8-flash');
+  extraInstructions = signal<string>('');
+  isGenerating = signal<boolean>(false);
+
+  // ============================================
+  // STATE - Taller (Proyecto Activo)
+  // ============================================
+  currentProjectId = signal<string | null>(null);
+  generatedProject = signal<string>('');
+  projectFiles = signal<ProjectFile[]>([]);
+  isEditMode = signal<boolean>(false);
+  isUploading = signal<boolean>(false);
+
+  // ============================================
+  // STATE - Asistente IA
+  // ============================================
+  aiPrompt = signal<string>('');
+  isThinking = signal<boolean>(false);
+
+  // ============================================
+  // STATE - Undo Stacks (por proyecto)
+  // ============================================
+  undoStacksByProject = signal<Record<string, string[]>>({});
+  undoStack = computed(() => {
+    const id = this.currentProjectId() || '__temp__';
+    return this.undoStacksByProject()[id] || [];
+  });
+  canUndo = computed(() => this.undoStack().length > 0);
+
+  // ============================================
+  // COMPUTED - Derivados
+  // ============================================
+  currentProject = computed(() => 
+    this.projectsHistory().find(p => p._id === this.currentProjectId())
+  );
 
   myProjects = computed(() => {
     const user = this.authFacade.currentUser();
@@ -27,44 +94,12 @@ export class ProjectsFacade {
     });
   });
 
-  // --- ESTADO DEL GENERADOR ---
-  methodology = signal<string>('ABP (Aprendizaje Basado en Problemas / Proyectos)');
-  selectedAi = signal<'gemini' | 'openrouter'>('gemini');
-  selectedModel = signal<string>('gemini-3.8-flash');
-  extraInstructions = signal<string>('');
+  formattedGeneratedProject = computed(() => this.generatedProject() || '');
 
-  isGenerating = signal<boolean>(false);
-
-  // --- ESTADO DEL TALLER (Proyecto Activo) ---
-  currentProjectId = signal<string | null>(null);
-  generatedProject = signal<string>('');
-  projectFiles = signal<any[]>([]);
-  isEditMode = signal<boolean>(false);
-  isUploading = signal<boolean>(false);
-  
-  // --- ESTADO DEL ASISTENTE IA ---
-  aiPrompt = signal<string>('');
-  isThinking = signal<boolean>(false);
-
-  // --- UNDO STACKS (historial local de versiones por proyecto para deshacer cambios IA de forma aislada) ---
-  undoStacksByProject = signal<Record<string, string[]>>({});
-  undoStack = computed(() => {
-    const id = this.currentProjectId() || '__temp__';
-    return this.undoStacksByProject()[id] || [];
-  });
-  canUndo = computed(() => this.undoStack().length > 0);
-
-  // --- COMPUTADOS ---
-  currentProject = computed(() => this.projectsHistory().find(p => p._id === this.currentProjectId()));
-  
-  formattedGeneratedProject = computed(() => {
-    return this.generatedProject() || '';
-  });
-  
   fpProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
     return this.projectsHistory().filter(p => {
-      const matchLevel = p.tipoNivel === 'FP_BASICA' || p.tipoNivel === 'CFGM_ESTETICA' || !p.tipoNivel;
+      const matchLevel = isFPProject(p.tipoNivel);
       if (!matchLevel) return false;
       if (!q) return true;
       return (p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q));
@@ -74,38 +109,129 @@ export class ProjectsFacade {
   esoProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
     return this.projectsHistory().filter(p => {
-      const matchLevel = p.tipoNivel === 'DIVERSIFICACION_CURRICULAR';
+      const matchLevel = isESOProject(p.tipoNivel);
       if (!matchLevel) return false;
       if (!q) return true;
       return (p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q));
     });
   });
 
-  // --- METODOS ---
+  // ============================================
+  // OPTIONS - Para selects en UI
+  // ============================================
+  methodologyOptions = METHODOLOGY_OPTIONS;
+  aiProviderOptions = AI_PROVIDER_OPTIONS;
+  availableModels = computed(() => getModelsForProvider(this.selectedAi()));
 
-  loadHistory() {
-    this.http.get<any[]>(this.apiUrl).subscribe({
-      next: (data) => {
-        this.projectsHistory.set(data);
-      },
+  // ============================================
+  // EFFECTS - Sincronización automática
+  // ============================================
+  constructor() {
+    // Auto-actualizar modelo cuando cambia proveedor
+    effect(() => {
+      const provider = this.selectedAi();
+      this.selectedModel.set(getDefaultModelForProvider(provider));
+    });
+
+    // Auto-cargar historial cuando hay usuario autenticado
+    effect(() => {
+      const user = this.authFacade.currentUser();
+      if (user) {
+        this.loadHistory();
+      }
+    });
+  }
+
+  // ============================================
+  // USE CASES - Historial
+  // ============================================
+
+  /** Carga el historial de proyectos desde el backend */
+  loadHistory(): void {
+    this.projectsService.getHistory().subscribe({
+      next: (projects) => this.projectsHistory.set(projects),
       error: (err) => console.error('Error fetching history:', err),
     });
   }
 
+  /** Elimina un proyecto y limpia su undo stack */
   deleteProject(projectId: string) {
     this.undoStacksByProject.update(map => {
       const copy = { ...map };
       delete copy[projectId];
       return copy;
     });
-    return this.http.delete<any>(`${this.apiUrl}/${projectId}`);
+    return this.projectsService.deleteProject(projectId);
   }
 
+  /** Reintenta la generación de un proyecto fallido */
   retryProject(projectId: string) {
-    return this.http.post<any>(`${this.apiUrl}/${projectId}/retry`, {});
+    return this.projectsService.retryProject(projectId).pipe(
+      tap({
+        next: (res) => {
+          // Actualizar en historial
+          this.projectsHistory.update(list => 
+            list.map(p => p._id === projectId ? res.project : p)
+          );
+        },
+        error: (err) => console.error('Error retrying project:', err),
+      })
+    );
   }
 
-  private getInvolvedModules(tipoNivel: string, selectedRas: string[]): string[] {
+  // ============================================
+  // USE CASES - Generación
+  // ============================================
+
+  /** Genera un nuevo proyecto con la IA */
+  generateProject(language: string, title?: string) {
+    const selectedRas = this.curriculumFacade.selectedRas();
+    const tipoNivel = this.curriculumFacade.tipoNivel();
+    
+    // Actualizar pestaña de historial según tipo
+    this.historyTab.set(getHistoryTabForTipoNivel(tipoNivel));
+
+    // Resolver módulos implicados
+    const modules = this.getInvolvedModules(tipoNivel, selectedRas);
+    const defaultTitle = modules.length > 0 ? modules.join(' + ') : 'Proyecto Integrador';
+    const extra = this.extraInstructions().trim();
+
+    const payload: CreateProjectPayload = {
+      selectedRas,
+      methodology: this.methodology(),
+      modules,
+      tipoNivel,
+      language,
+      aiProvider: this.selectedAi(),
+      aiModel: this.selectedModel(),
+      courseLevel: this.curriculumFacade.curso(),
+      title: title || defaultTitle,
+      extraInstructions: extra || undefined,
+    };
+
+    this.isGenerating.set(true);
+    return this.projectsService.generateProject(payload).pipe(
+      tap({
+        next: (res: GenerateProjectResponse) => {
+          this.isGenerating.set(false);
+          // Abrir el proyecto generado en el taller
+          this.currentProjectId.set(res.project._id);
+          this.generatedProject.set(res.project.generatedContent?.rawText || '');
+          this.projectFiles.set([]);
+          this.undoStacksByProject.update(map => ({ ...map, [res.project._id]: [] }));
+          // Recargar historial para que aparezca
+          this.loadHistory();
+        },
+        error: (err) => {
+          this.isGenerating.set(false);
+          console.error('Error generating project:', err);
+        },
+      })
+    );
+  }
+
+  /** Resuelve los módulos implicados según tipo de nivel y RAs seleccionados */
+  private getInvolvedModules(tipoNivel: ProjectType, selectedRas: string[]): string[] {
     const isCa = typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan';
     
     if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
@@ -116,79 +242,81 @@ export class ProjectsFacade {
     const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
     
     if (tipoNivel === 'CFGM_PELUQUERIA') {
-      // Usar el sistema de ordenación para obtener nombres descriptivos de módulos
       const order = this.curriculumFacade.curso() === '2º' ? 
         ['0640', '0643', '0843', '0848', '0636', '1708', '1710', '1713'] :
         ['0845', '0842', '0844', '0846', '0849', '1664', '1709', '0156'];
       
-      const moduleNames = [];
+      const moduleNames: string[] = [];
       for (const modCode of order) {
         const module = selected.find(ra => (ra as any).moduleCode === modCode);
         if (module) {
-          // Extraer nombre del módulo del descriptor (ej: "0845. Módulo...")
-          const fullName = isCa ? (module as any).subject_ca || (module as any).subject || (module as any).module : (module as any).subject_es || (module as any).subject || (module as any).module;
+          const fullName = isCa 
+            ? (module as any).subject_ca || (module as any).subject || (module as any).module 
+            : (module as any).subject_es || (module as any).subject || (module as any).module;
           moduleNames.push(fullName);
         }
       }
-      return moduleNames.length > 0 ? moduleNames : [isCa ? 'CFGM Peluqueria i Cosmètica Capilar' : 'CFGM Peluquería y Cosmética Capilar'];
+      return moduleNames.length > 0 
+        ? moduleNames 
+        : [isCa ? 'CFGM Peluqueria i Cosmètica Capilar' : 'CFGM Peluquería y Cosmética Capilar'];
     } else {
-      // CFGM_ESTETICA y otros CFGM
       return Array.from(new Set(selected.map((ra: any) => ra.subject || ra.module || '')));
     }
   }
 
-  generateProject(language: string, title?: string) {
-    const selectedRas = this.curriculumFacade.selectedRas();
-    const tipoNivel = this.curriculumFacade.tipoNivel();
-    if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
-      this.historyTab.set('ESO');
-    } else if (tipoNivel === 'CFGM_ESTETICA') {
-      this.historyTab.set('CFGM');
-    } else if (tipoNivel === 'CFGM_PELUQUERIA') {
-      this.historyTab.set('CFGM_PELUQUERIA');
-    } else {
-      this.historyTab.set('FPB');
-    }
-    const modules = this.getInvolvedModules(tipoNivel, selectedRas);
-    const defaultTitle = modules.length > 0 ? modules.join(' + ') : 'Proyecto Integrador';
-    const extra = this.extraInstructions().trim();
-    const payload: any = {
-      selectedRas,
-      methodology: this.methodology(),
-      modules,
-      tipoNivel,
-      language,
-      aiProvider: this.selectedAi(),
-      aiModel: this.selectedModel(),
-      courseLevel: this.curriculumFacade.curso(),
-      title: title || defaultTitle
-    };
-    if (extra) {
-      payload.extraInstructions = extra;
-    }
-
-    return this.http.post<any>(`${this.apiUrl}/generate`, payload);
-  }
-
-  updateProjectStatus(status: 'borrador' | 'publicado') {
+  /** Actualiza el estado del proyecto actual (borrador/publicado) */
+  updateProjectStatus(status: ProjectStatus) {
     const id = this.currentProjectId();
     if (!id) return;
-    return this.http.put<any>(`${this.apiUrl}/${id}`, { rawText: this.generatedProject(), status });
+    
+    const payload: UpdateProjectPayload = {
+      rawText: this.generatedProject(),
+      status,
+    };
+    
+    return this.projectsService.updateProjectStatus(id, payload).pipe(
+      tap({
+        next: (updatedProject) => {
+          this.projectsHistory.update(list => 
+            list.map(p => p._id === id ? updatedProject : p)
+          );
+          this.generatedProject.set(updatedProject.generatedContent?.rawText || '');
+        },
+        error: (err) => console.error('Error updating project status:', err),
+      })
+    );
   }
 
-  rewriteSection(instruction: string, aiProvider?: 'gemini' | 'openrouter', aiModel?: string) {
-    return this.http.post<any>(`${this.apiUrl}/rewrite`, {
+  /** Reescribe una sección del proyecto con IA */
+  rewriteSection(instruction: string, aiProvider?: AIProvider, aiModel?: string) {
+    const payload = {
       context: this.generatedProject(),
       instruction,
       aiProvider: aiProvider || this.selectedAi(),
-      aiModel: aiModel || this.selectedModel()
-    });
+      aiModel: aiModel || this.selectedModel(),
+    };
+    
+    this.isThinking.set(true);
+    return this.projectsService.rewriteSection(payload).pipe(
+      tap({
+        next: (newText: string) => {
+          this.isThinking.set(false);
+          this.generatedProject.set(newText);
+        },
+        error: (err) => {
+          this.isThinking.set(false);
+          console.error('Error rewriting section:', err);
+        },
+      })
+    );
   }
 
-  /**
-   * Guarda el estado actual del proyecto en la pila de undo del proyecto activo antes de un cambio IA.
-   */
-  pushUndo() {
+  // ============================================
+  // USE CASES - Undo/Redo
+  // ============================================
+
+  /** Guarda estado actual en pila de undo del proyecto activo */
+  pushUndo(): void {
     const current = this.generatedProject();
     const id = this.currentProjectId() || '__temp__';
     if (current) {
@@ -199,10 +327,8 @@ export class ProjectsFacade {
     }
   }
 
-  /**
-   * Elimina la última versión guardada en la pila del proyecto activo (por ejemplo si la llamada a la IA falló).
-   */
-  popUndo() {
+  /** Elimina último estado de la pila (ej. si falló la IA) */
+  popUndo(): void {
     const id = this.currentProjectId() || '__temp__';
     const stack = this.undoStacksByProject()[id] || [];
     if (stack.length === 0) return;
@@ -212,13 +338,12 @@ export class ProjectsFacade {
     }));
   }
 
-  /**
-   * Deshace el último cambio IA, restaurando el estado anterior del proyecto activo.
-   */
-  undoLastChange() {
+  /** Deshace último cambio IA */
+  undoLastChange(): void {
     const id = this.currentProjectId() || '__temp__';
     const stack = this.undoStacksByProject()[id] || [];
     if (stack.length === 0) return;
+    
     const previous = stack[stack.length - 1];
     this.generatedProject.set(previous);
     this.undoStacksByProject.update(map => ({
@@ -228,97 +353,105 @@ export class ProjectsFacade {
     this.updateProjectStatus('borrador')?.subscribe();
   }
 
-  // --- ARCHIVOS ---
-  loadProjectFiles() {
+  // ============================================
+  // USE CASES - Archivos
+  // ============================================
+
+  loadProjectFiles(): void {
     const id = this.currentProjectId();
     if (!id) return;
-    this.http.get<any[]>(`${this.apiUrl}/${id}/files`).subscribe({
-      next: (files) => this.projectFiles.set(files),
-      error: (err) => console.error("Error al cargar archivos", err)
-    });
+    this.projectsService.getProjectFiles(id).pipe(
+      tap({
+        next: (files) => this.projectFiles.set(files),
+        error: (err) => console.error("Error al cargar archivos", err)
+      })
+    ).subscribe();
   }
 
   uploadFile(file: File) {
     const id = this.currentProjectId();
     if (!id) return;
-    const formData = new FormData();
-    formData.append('file', file);
-    return this.http.post<any>(`${this.apiUrl}/${id}/files`, formData);
+    this.isUploading.set(true);
+    return this.projectsService.uploadFile(id, file).pipe(
+      tap({
+        next: (res) => {
+          this.isUploading.set(false);
+          this.projectFiles.update(list => [...list, res.file]);
+        },
+        error: (err) => {
+          this.isUploading.set(false);
+          console.error('Error uploading file:', err);
+        },
+      })
+    );
   }
 
   deleteFile(filename: string) {
     const id = this.currentProjectId();
     if (!id) return null;
-    return this.http.delete<any>(`${this.apiUrl}/${id}/files/${filename}`);
+    return this.projectsService.deleteFile(id, filename).pipe(
+      tap({
+        next: () => {
+          this.projectFiles.update(list => list.filter(f => f.filename !== filename));
+        },
+        error: (err) => console.error('Error deleting file:', err),
+      })
+    );
   }
 
   getDownloadUrl(filename: string): string {
     const id = this.currentProjectId();
     if (!id) return '';
-    return `${this.apiUrl}/${id}/files/${filename}`;
+    return this.projectsService.getDownloadUrl(id, filename);
   }
 
   exportDocx() {
     const id = this.currentProjectId();
     if (!id) return;
-    return this.http.get(`${this.apiUrl}/${id}/export-docx`, { responseType: 'blob' });
+    return this.projectsService.exportDocx(id);
   }
 
   importDocx(file: File) {
     const id = this.currentProjectId();
     if (!id) return;
-    const formData = new FormData();
-    formData.append('file', file);
-    return this.http.post<any>(`${this.apiUrl}/${id}/import-docx`, formData);
-  }
-}
-
-/**
- * Repara delimitadores LaTeX $ desbalanceados generados por la IA.
- *
- * Problemas comunes que corrige:
- *  1. Listas como `$\text{kg}, $\text{g}, \text{mg}$` → tres $ → el parser falla.
- *     Se corrige eliminando el $ "suelto" que empieza una nueva expresión dentro
- *     de un contexto de texto normal (no está al principio de un bloque math).
- *  2. `$ expr $` con espacios justo al lado del delimitador → se compactan.
- *  3. Un único $ que no tiene pareja al final de la línea → se elimina.
- */
-function sanitizeMath(text: string): string {
-  // Paso 1: normalizar "$ expr$" → "$expr$" sin usar lookbehinds
-  // Reemplazar espacios después del $ de apertura
-  text = text.replace(/(^|[^$])\$[^\S\n]+(?=[\\A-Za-z{])/g, '$1$');
-  // Reemplazar espacios antes del $ de cierre
-  text = text.replace(/[^\S\n]+\$(?![A-Za-z\\{])/g, '$');
-
-  // Paso 2: separar las líneas para procesar cada una individualmente
-  return text.split('\n').map(line => fixDollarDelimiters(line)).join('\n');
-}
-
-/**
- * En una línea, cuenta el número de $ (excluyendo $$).
- * Si el número es impar, el último $ huérfano se elimina.
- * También repara el patrón ",$\text" dentro de una expresión ya abierta,
- * que debería ser ",\text" (la coma va fuera del bloque math).
- */
-function fixDollarDelimiters(line: string): string {
-  // Reemplaza patrones del tipo: `$A, $B, C$` → `$A, B, C$`
-  // Solo aplica cuando el $ aparece DESPUÉS de una coma o punto y coma
-  // (nunca después de paréntesis abierto, porque "($..." es una apertura legítima).
-  line = line.replace(/([,;]\s*)\$(?=[\\A-Za-z])/g, '$1');
-
-  // Contar $ simples que no son $$ (bloques)
-  // Eliminamos los $$ temporalmente para no contarlos
-  const withoutDouble = line.replace(/\$\$/g, '');
-  const count = (withoutDouble.match(/\$/g) || []).length;
-
-  // Si hay número impar de $, el último $ suelto se elimina
-  if (count % 2 !== 0) {
-    const lastIdx = line.lastIndexOf('$');
-    // Solo lo eliminamos si no forma parte de $$
-    if (lastIdx >= 0 && line[lastIdx - 1] !== '$' && line[lastIdx + 1] !== '$') {
-      line = line.slice(0, lastIdx) + line.slice(lastIdx + 1);
-    }
+    this.isUploading.set(true);
+    return this.projectsService.importDocx(id, file).pipe(
+      tap({
+        next: (res) => {
+          this.isUploading.set(false);
+          this.generatedProject.set(res.project.generatedContent?.rawText || '');
+          this.projectFiles.set([]);
+        },
+        error: (err) => {
+          this.isUploading.set(false);
+          console.error('Error importing docx:', err);
+        },
+      })
+    );
   }
 
-  return line;
+  // ============================================
+  // HELPERS PÚBLICOS
+  // ============================================
+
+  /** Limpia la selección de RAs del currículum */
+  clearSelection(): void {
+    this.curriculumFacade.clearSelection();
+  }
+
+  /** Establece el proyecto actual para edición en taller */
+  setCurrentProject(project: Project): void {
+    this.currentProjectId.set(project._id);
+    this.generatedProject.set(project.generatedContent?.rawText || '');
+    this.projectFiles.set([]);
+    this.undoStacksByProject.update(map => ({ ...map, [project._id]: [] }));
+  }
+
+  /** Limpia el proyecto actual */
+  clearCurrentProject(): void {
+    this.currentProjectId.set(null);
+    this.generatedProject.set('');
+    this.projectFiles.set([]);
+    this.isEditMode.set(false);
+  }
 }

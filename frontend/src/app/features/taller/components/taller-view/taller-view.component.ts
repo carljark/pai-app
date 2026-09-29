@@ -30,6 +30,23 @@ export class TallerViewComponent {
 
   sortByDate = (a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
 
+  /** Helpers para template - acceso seguro a userId */
+  getCurrentProjectUserName(): string | null {
+    const project = this.projects.currentProject();
+    if (!project) return null;
+    const userId = project.userId;
+    if (typeof userId === 'string') return null;
+    return userId.name || null;
+  }
+
+  getCurrentProjectUserEmail(): string | null {
+    const project = this.projects.currentProject();
+    if (!project) return null;
+    const userId = project.userId;
+    if (typeof userId === 'string') return null;
+    return (userId as any).email || null;
+  }
+
   downloadWord() {
     this.projects.exportDocx()?.subscribe(blob => {
       const url = window.URL.createObjectURL(blob);

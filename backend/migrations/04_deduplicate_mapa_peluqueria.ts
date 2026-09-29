@@ -41,6 +41,8 @@ export async function up() {
           c.activities = uniqueConnActs;
           totalActsAfter += uniqueConnActs.length;
         }
+        // Eliminar conexiones huérfanas que quedaron sin actividades asociadas
+        lo.connections = (lo.connections || []).filter((c: any) => c.activities && c.activities.length > 0);
       }
     }
 

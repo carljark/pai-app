@@ -18,7 +18,15 @@ export const getMapaModules = async (req: Request, res: Response) => {
       .select('-_id -__v -createdAt -updatedAt -tab -order')
       .lean();
 
-    return res.json(modules);
+    const sanitizedModules = modules.map((m: any) => ({
+      ...m,
+      learningOutcomes: (m.learningOutcomes || []).map((lo: any) => ({
+        ...lo,
+        connections: (lo.connections || []).filter((c: any) => c.activities && c.activities.length > 0)
+      }))
+    }));
+
+    return res.json(sanitizedModules);
   } catch (error: any) {
     console.error('Error al obtener módulos del mapa intermodular:', error);
     return res.status(500).json({ error: 'Error interno del servidor al recuperar los módulos' });

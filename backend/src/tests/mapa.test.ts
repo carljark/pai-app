@@ -116,25 +116,39 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(pelu2.length).toBe(8);
 
       let actsPelu1 = 0;
+      let connsPelu1 = 0;
+      let emptyConnsPelu1 = 0;
       pelu1.forEach(m => {
         m.learningOutcomes.forEach((lo: any) => {
+          connsPelu1 += lo.connections.length;
           lo.connections.forEach((c: any) => {
-            actsPelu1 += (c.activities || []).length;
+            const numActs = (c.activities || []).length;
+            actsPelu1 += numActs;
+            if (numActs === 0) emptyConnsPelu1++;
           });
         });
       });
 
       let actsPelu2 = 0;
+      let connsPelu2 = 0;
+      let emptyConnsPelu2 = 0;
       pelu2.forEach(m => {
         m.learningOutcomes.forEach((lo: any) => {
+          connsPelu2 += lo.connections.length;
           lo.connections.forEach((c: any) => {
-            actsPelu2 += (c.activities || []).length;
+            const numActs = (c.activities || []).length;
+            actsPelu2 += numActs;
+            if (numActs === 0) emptyConnsPelu2++;
           });
         });
       });
 
       expect(actsPelu1).toBe(557);
       expect(actsPelu2).toBe(417);
+      expect(connsPelu1).toBe(532);
+      expect(connsPelu2).toBe(412);
+      expect(emptyConnsPelu1).toBe(0);
+      expect(emptyConnsPelu2).toBe(0);
     });
   });
 });

@@ -25,11 +25,22 @@ export class MapaIntermodularFacade {
     this.setTab('FPB');
   }
 
+  private sanitizeModules(mods: FPBModule[]): FPBModule[] {
+    return (mods || []).map(m => ({
+      ...m,
+      learningOutcomes: (m.learningOutcomes || []).map(ra => ({
+        ...ra,
+        connections: (ra.connections || []).filter(c => c.activities && c.activities.length > 0)
+      }))
+    }));
+  }
+
   async loadSeed(tab: MapaTab): Promise<FPBModule[]> {
     if (this.seedCache[tab]) {
       return this.seedCache[tab]!;
     }
-    const data = await firstValueFrom(this.mapaService.getModules(tab));
+    const rawData = await firstValueFrom(this.mapaService.getModules(tab));
+    const data = this.sanitizeModules(rawData);
     this.seedCache[tab] = data;
     return data;
   }

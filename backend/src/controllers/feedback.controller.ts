@@ -77,7 +77,7 @@ export const updateFeedbackStatus = async (req: any, res: Response) => {
     const updated = await Feedback.findByIdAndUpdate(
       req.params.id,
       updateData,
-      { new: true }
+      { returnDocument: 'after' }
     );
 
     if (!updated) {

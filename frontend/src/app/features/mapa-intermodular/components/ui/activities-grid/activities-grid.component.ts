@@ -1,5 +1,5 @@
 import { Component, inject, computed, input } from '@angular/core';
-import { LayoutService } from '../../../services/layout.service';
+import { LayoutService } from '../../../../services/layout.service';
 import { IntermodularActivity } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
 

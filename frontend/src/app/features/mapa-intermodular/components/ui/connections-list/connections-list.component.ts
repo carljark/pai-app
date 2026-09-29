@@ -1,13 +1,14 @@
 import { Component, inject, computed, input, Output, EventEmitter } from '@angular/core';
-import { LayoutService } from '../../services/layout.service';
+import { LayoutService } from '../../../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 import { IntermodularConnection } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
+import { ActivitiesGridComponent } from '../activities-grid/activities-grid.component';
 
 @Component({
   selector: 'app-connections-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ActivitiesGridComponent],
   template: `
     <div 
       class="mapa-step-header mapa-step-header--3" 

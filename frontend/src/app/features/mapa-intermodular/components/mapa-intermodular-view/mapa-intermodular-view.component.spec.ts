@@ -769,6 +769,14 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('Perruqueria i Cosm');
 
+    // CFGM_PELUQUERIA_2 2nd year subtitle
+    component.facade.setTab('CFGM_PELUQUERIA_2');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('2n curs');
+    component.layout.language.set('castellano');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('2.º curso');
+
     // Now set up a module+RA with activities while tab is CFGM_PELUQUERIA to cover activity labels
     component.layout.language.set('castellano');
     const dummyConn2 = {

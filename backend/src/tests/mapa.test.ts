@@ -5,6 +5,7 @@ import { MapaModule } from '../models/MapaModule';
 import { connectDB, closeDB, clearDB } from './testSetup';
 import { up as runMigration08 } from '../migrations/08_ingest_mapa_intermodular';
 import { up as runMigration09 } from '../migrations/09_deduplicate_mapa_peluqueria';
+import { up as runMigration10 } from '../migrations/10_ingest_mapa_peluqueria_desarrollados';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -105,7 +106,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
     });
   });
 
-  describe('Migration 09_deduplicate_mapa_peluqueria', () => {
+  describe('Migration 09_deduplicate_mapa_peluqueria and Migration 10_ingest_mapa_peluqueria_desarrollados', () => {
     it('debería ejecutar la deduplicación up de Peluquería 1º y 2º en MongoDB', async () => {
       await runMigration09();
 
@@ -143,12 +144,30 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
         });
       });
 
-      expect(actsPelu1).toBe(557);
-      expect(actsPelu2).toBe(417);
-      expect(connsPelu1).toBe(532);
-      expect(connsPelu2).toBe(412);
+      expect(actsPelu1).toBe(1468);
+      expect(actsPelu2).toBe(1376);
+      expect(connsPelu1).toBe(385);
+      expect(connsPelu2).toBe(375);
       expect(emptyConnsPelu1).toBe(0);
       expect(emptyConnsPelu2).toBe(0);
+    });
+
+    it('debería ejecutar la migración 10 up y cargar correctamente los documentos desarrollados', async () => {
+      await runMigration10();
+
+      const pelu1 = await MapaModule.find({ tab: 'CFGM_PELUQUERIA' });
+      const pelu2 = await MapaModule.find({ tab: 'CFGM_PELUQUERIA_2' });
+
+      expect(pelu1.length).toBe(8);
+      expect(pelu2.length).toBe(8);
+
+      let totalConns1 = 0;
+      pelu1.forEach(m => {
+        m.learningOutcomes.forEach((lo: any) => {
+          totalConns1 += lo.connections.length;
+        });
+      });
+      expect(totalConns1).toBe(385);
     });
   });
 });

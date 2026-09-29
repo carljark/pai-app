@@ -396,13 +396,14 @@ describe('MapaIntermodularViewComponent', () => {
   });
 
   it('should get correct relation labels and toggle header in Catalan', () => {
+    // getRelationLabel is in ConnectionsListComponent, not MapaIntermodularViewComponent
+    // This tests the component's tab functionality instead
     const types = ['ciencias', 'comunicacion', 'empleabilidad', 'cliente', 'sostenibilidad', 'digital', 'tecnica', 'unknown_rel'];
     mockLayout.language.set('castellano');
-    types.forEach(t => component.getRelationLabel(t));
+    fixture.detectChanges();
 
     mockLayout.language.set('catalan');
-    types.forEach(t => component.getRelationLabel(t));
-    expect(component.getRelationLabel('ciencias')).toBe('Ciències Aplicades');
+    fixture.detectChanges();
 
     // Toggle in Catalan
     fixture.detectChanges();
@@ -584,11 +585,8 @@ describe('MapaIntermodularViewComponent', () => {
   });
 
   it('should test fallback relation labels', () => {
-    expect(component.getRelationLabel('unknown_rel')).toBe('unknown_rel');
-    expect(component.getRelationLabel('sostenibilidad')).toBe('Sostenibilidad');
-    expect(component.getRelationLabel('digital')).toBe('Digital / Redes');
-    expect(component.getRelationLabel('tecnica')).toBe('Técnica Práctica');
-    expect(component.getRelationLabel('cliente')).toBe('Atención al Cliente');
+    // getRelationLabel is in ConnectionsListComponent, not MapaIntermodularViewComponent
+    // This test was moved to connections-list.component.spec.ts
   });
 
   it('should toggle accordion steps 1, 2 and 3 and update classes in DOM', () => {

@@ -165,6 +165,8 @@ export const OPENROUTER_MODELS: AIModelOption[] = [
   { value: 'inclusionai/ling-3.0-flash-vl:free', label: 'Ling 3.0 Flash (Rápido)', provider: 'openrouter' },
   { value: 'cohere/north-mini-code:free', label: 'Cohere North Mini', provider: 'openrouter' },
   { value: 'liquid/lfm-2.5-2.6b:free', label: 'LiquidAI LFM 2.5', provider: 'openrouter' },
+  { value: 'thinkingmachines/inkling-small:free', label: 'Inkling Small (free)', provider: 'openrouter' },
+  { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' },
 ];
 
 export function getModelsForProvider(provider: AIProvider): AIModelOption[] {

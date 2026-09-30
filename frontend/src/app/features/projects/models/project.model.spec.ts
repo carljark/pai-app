@@ -19,7 +19,7 @@ describe('Project Model - Utility Functions', () => {
 
     it('should return OPENROUTER_MODELS for openrouter provider', () => {
       const models = getModelsForProvider('openrouter');
-      expect(models).toHaveLength(6);
+      expect(models).toHaveLength(8);
       expect(models[0].provider).toBe('openrouter');
       expect(models[0].value).toBe('openrouter/free');
     });

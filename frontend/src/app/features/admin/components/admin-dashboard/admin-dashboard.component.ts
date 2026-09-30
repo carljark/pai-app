@@ -280,6 +280,11 @@ import { FeedbackService } from '../../../feedback/services/feedback.service';
                 ⚠️ Error: {{ log.details.error }}
               </p>
             }
+            @if (log.projectId?.status === 'error' && (log.details?.errorCascadeLog || log.projectId?.errorCascadeLog)) {
+              <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #64748b; font-family: monospace; background: #f8f9fa; padding: 8px; border-radius: 4px; white-space: pre-wrap;">
+                📋 Modelos intentados: {{ log.details?.errorCascadeLog || log.projectId?.errorCascadeLog }}
+              </p>
+            }
           </div>
         }
         @if (adminFacade.logs().length === 0) {

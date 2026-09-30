@@ -71,13 +71,18 @@ import { TranslationService } from '../../../../services/translation.service';
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 
                       {{ trans.t().statusError }}
                     </span>
-                  } @else {
+                  } @else if (p.status === 'publicado' || p.status === 'borrador') {
                     <span style="color: #27ae60; display: flex; align-items: center; gap: 4px;">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 
                       {{ trans.t().statusCompletedText }}
                       @if (p.generationTimeMs) {
                         <span style="color: #166534; background: #dcfce7; padding: 1px 6px; border-radius: 10px; font-size: 0.75rem; font-weight: normal;">({{ formatDurationMs(p.generationTimeMs) }})</span>
                       }
+                    </span>
+                  } @else {
+                    <span style="color: #95a5a6; display: flex; align-items: center; gap: 4px;">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg> 
+                      {{ p.status || trans.t().statusUnknown }}
                     </span>
                   }
                 </div>

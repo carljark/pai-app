@@ -156,6 +156,7 @@ export const TRANSLATIONS_ES = {
   modalRecentActivityEmpty: 'No hay proyectos recientes en cola ni completados hoy.',
   byAuthorPrefix: 'por',
   statusCompletedText: 'Completado',
+  statusUnknown: 'Procesando',
 
   // ÁREA PERSONAL
   sidebarPersonal: 'Área Personal',

@@ -156,6 +156,7 @@ export const TRANSLATIONS_CA = {
   modalRecentActivityEmpty: 'No hi ha projectes recents a la cua ni completats avui.',
   byAuthorPrefix: 'per',
   statusCompletedText: 'Completat',
+  statusUnknown: 'Processant',
 
   // ÀREA PERSONAL
   sidebarPersonal: 'Àrea Personal',

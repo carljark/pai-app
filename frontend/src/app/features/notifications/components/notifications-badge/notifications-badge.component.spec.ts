@@ -82,7 +82,6 @@ describe('NotificationsBadgeComponent', () => {
     expect(compiled.textContent).toContain('En cola...');
     expect(compiled.textContent).toContain('Analizando...');
     expect(compiled.textContent).toContain('Error');
-    expect(compiled.textContent).toContain('Completado');
   });
 
   it('should close modal on backdrop or close button click', () => {

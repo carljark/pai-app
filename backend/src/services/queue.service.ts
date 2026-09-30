@@ -80,6 +80,7 @@ async function saveProjectError(project: any, error: any, generationTimeMs: numb
   project.phase = undefined;
   project.generationTimeMs = generationTimeMs;
   project.errorDetail = error?.message || error?.toString();
+  project.errorCascadeLog = error?.cascadeLog || JSON.stringify(error);
   project.updatedAt = new Date();
   await project.save();
 
@@ -87,7 +88,7 @@ async function saveProjectError(project: any, error: any, generationTimeMs: numb
     userId: project.userId,
     action: 'ERROR_GENERATE_PROJECT',
     projectId: project._id,
-    details: { error: project.errorDetail, generationTimeMs, title: project.title }
+    details: { error: project.errorDetail, generationTimeMs, title: project.title, errorCascadeLog: project.errorCascadeLog }
   }).save();
 }
 

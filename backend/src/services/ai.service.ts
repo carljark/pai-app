@@ -126,14 +126,19 @@ export const generateOpenRouterContent = async (
     { role: 'system', content: systemInstruction },
     { role: 'user', content: userPrompt }
   ];
+  const cascadeLog: string[] = [];
   try {
     const response = await requestOpenRouterApi(apiKey, { model, messages });
-    return await parseOpenRouterResponse(response, model);
+    const result = await parseOpenRouterResponse(response, model);
+    cascadeLog.push(`${model}: OK`);
+    return { ...result, cascadeLog };
   } catch (err: any) {
+    const errorMsg = err.status ? `HTTP ${err.status}` : (err.message || 'error');
+    cascadeLog.push(`${model}: ${errorMsg}`);
     if (err.name === 'TimeoutError' || err.name === 'AbortError') {
-      throw new Error('Timeout en OpenRouter (20m): el proveedor gratuito no respondió a tiempo');
+      throw Object.assign(new Error('Timeout en OpenRouter (20m): el proveedor gratuito no respondió a tiempo'), { cascadeLog });
     }
-    throw err;
+    throw Object.assign(err, { cascadeLog });
   }
 };
 
@@ -185,15 +190,34 @@ export const generateAiContentWithFallback = async (
     : ['gemini', 'openrouter'];
 
   let lastError: any = null;
+  let fullCascadeLog: string[] = [];
   for (let i = 0; i < order.length; i++) {
     const provider = order[i];
     try {
-      return await tryProvider(provider, i > 0, userPrompt, systemInstruction, onPhaseChange, preferredModel);
+      const result = await tryProvider(provider, i > 0, userPrompt, systemInstruction, onPhaseChange, preferredModel);
+      // Si tenemos éxito, añadimos los logs de intentos previos fallidos al cascadeLog del resultado
+      if (fullCascadeLog.length > 0) {
+        return { ...result, cascadeLog: [...fullCascadeLog, ...result.cascadeLog] };
+      }
+      return result;
     } catch (err: any) {
       lastError = err;
+      // Acumular el cascadeLog del error (si existe)
+      if (err.cascadeLog) {
+        fullCascadeLog = [...fullCascadeLog, ...err.cascadeLog];
+      } else {
+        // Si no hay cascadeLog en el error, crear uno básico
+        const providerModel = i === 0 && preferredModel ? preferredModel : 
+                           provider === 'gemini' ? (preferredModel || 'gemini-3.8-flash') : 
+                           'openrouter/free';
+        fullCascadeLog.push(`${providerModel}: ${err.message || 'Error desconocido'}`);
+      }
       console.error(`[AI Service] Error con proveedor ${provider}:`, err.message || err);
     }
   }
-  throw new Error(`Fallaron todos los proveedores de IA. Último error: ${lastError?.message || lastError}`);
+  // Si llegamos aquí, todos fallaron
+  const error = new Error(`Fallaron todos los proveedores de IA. Último error: ${lastError?.message || lastError}`);
+  Object.assign(error, { cascadeLog: fullCascadeLog });
+  throw error;
 };
 

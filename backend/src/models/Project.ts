@@ -23,6 +23,7 @@ const ProjectSchema = new mongoose.Schema({
   usedAiProvider: String,
   usedModel: String,
   phase: String,
+  errorCascadeLog: { type: String },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }

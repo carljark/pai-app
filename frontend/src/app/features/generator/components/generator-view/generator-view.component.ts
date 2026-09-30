@@ -86,7 +86,6 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
                 <option value="gemini-3.8-flash">Gemini 3.8 Flash (Último)</option>
                 <option value="gemini-3.7-flash">Gemini 3.7 Flash</option>
                 <option value="gemini-3.6-flash">Gemini 3.6 Flash</option>
-                <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
                 <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
                 <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro Preview</option>
               } @else {

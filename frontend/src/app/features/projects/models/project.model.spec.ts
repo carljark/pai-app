@@ -12,7 +12,7 @@ describe('Project Model - Utility Functions', () => {
   describe('getModelsForProvider', () => {
     it('should return GEMINI_MODELS for gemini provider', () => {
       const models = getModelsForProvider('gemini');
-      expect(models).toHaveLength(6);
+      expect(models).toHaveLength(5);
       expect(models[0].provider).toBe('gemini');
       expect(models[0].value).toBe('gemini-3.8-flash');
     });

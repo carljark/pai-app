@@ -96,7 +96,8 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
         </div>
       }
     </div>
-  `
+  `,
+  styleUrl: './ra-detail.component.scss'
 })
 export class RaDetailComponent {
   facade = inject(MapaIntermodularFacade);

@@ -49,7 +49,8 @@ import { CommonModule } from '@angular/common';
         </div>
       </div>
     }
-  `
+  `,
+  styleUrl: './activities-grid.component.scss'
 })
 export class ActivitiesGridComponent {
   layout = inject(LayoutService);

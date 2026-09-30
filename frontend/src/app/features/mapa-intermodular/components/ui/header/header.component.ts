@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-mapa-header',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss'
 })
 export class MapaHeaderComponent {
   layout = inject(LayoutService);

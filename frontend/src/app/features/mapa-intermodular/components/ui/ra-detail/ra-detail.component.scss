@@ -1,0 +1,166 @@
+@use '../step-shared';
+
+/* The host takes no box so the step header/body become direct flex items of
+   .mapa-vertical-accordions. This keeps the sticky containing block spanning
+   all steps, so the header stays stuck while scrolling. */
+:host {
+  display: contents;
+}
+
+/* Step 2 body specific constraints */
+.mapa-step-body--2 {
+  max-height: 520px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-track { background: #f8fafc; }
+  &::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+}
+
+/* Active RA Hero */
+.mapa-active-ra-hero {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.mapa-active-ra-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.mapa-pill-primary {
+  background: #0284c7;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.mapa-active-ra-module {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.mapa-active-ra-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  margin: 0 0 8px 0;
+}
+
+.mapa-actions-bar {
+  display: flex;
+  gap: 6px;
+}
+
+/* Criteria Selector */
+.mapa-ra-criteria-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.mapa-ra-criteria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.mapa-ra-criteria-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0369a1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.mapa-criteria-clear-btn {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mapa-criteria-selector-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mapa-criterion-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #334155;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+
+  &:hover {
+    border-color: #0284c7;
+    background: #f0f9ff;
+  }
+
+  &.active {
+    background: #0284c7;
+    color: white;
+    border-color: #0369a1;
+
+    .mapa-crit-letter {
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
+    }
+
+    .mapa-crit-badge-count {
+      background: white;
+      color: #0284c7;
+    }
+  }
+}
+
+.mapa-crit-letter {
+  background: rgba(0, 0, 0, 0.06);
+  font-weight: 800;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.mapa-crit-label {
+  flex: 1;
+  line-height: 1.35;
+}
+
+.mapa-crit-badge-count {
+  background: #f1f5f9;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}

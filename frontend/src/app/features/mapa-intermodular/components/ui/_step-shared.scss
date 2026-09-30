@@ -1,0 +1,189 @@
+/* Shared styles for the vertical accordion steps (Paso 1/2/3).
+   Used by modulo-list, ra-detail and connections-list. */
+
+.mapa-step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: var(--mapa-step-header-h);
+  min-height: var(--mapa-step-header-h);
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  margin-bottom: 8px;
+
+  &:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+  }
+
+  &.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+    border-bottom-color: #e2e8f0;
+    background: #f8fafc;
+  }
+
+  /* Desktop Sticky Configuration */
+  @media (min-width: 769px) {
+    position: -webkit-sticky;
+    position: sticky;
+
+    &--1 {
+      top: 0px;
+      z-index: 30;
+    }
+
+    &--2 {
+      top: var(--mapa-step-header-h);
+      z-index: 20;
+    }
+
+    &--3 {
+      top: calc(var(--mapa-step-header-h) * 2);
+      z-index: 10;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.mapa-step-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #64748b;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+}
+
+.mapa-step-chevron {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: #64748b;
+  transition: transform 0.2s ease;
+
+  &.rotated {
+    transform: rotate(0deg);
+  }
+
+  &:not(.rotated) {
+    transform: rotate(-90deg);
+  }
+}
+
+.mapa-step-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mapa-step-count-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.mapa-step-subtitle-hint {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 600;
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+.mapa-step-pill-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.mapa-step-body {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+  &.collapsed {
+    display: none;
+  }
+}
+
+.mapa-active-criterion-badge {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  padding: 3px 10px;
+  border-radius: 16px;
+  font-size: 0.78rem;
+}
+
+.mapa-btn-action {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+
+  &--primary {
+    background: #10b981;
+    color: white;
+  }
+
+  &--sm {
+    padding: 4px 8px;
+    font-size: 0.74rem;
+  }
+}
+
+.mapa-empty-state {
+  padding: 30px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}

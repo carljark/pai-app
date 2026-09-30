@@ -45,7 +45,8 @@ import { LayoutService } from '../../../../../services/layout.service';
         </div>
       </div>
     }
-  `
+  `,
+  styleUrl: './criterion-selector.component.scss'
 })
 export class CriterionSelectorComponent {
   facade = inject(MapaIntermodularFacade);

@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-modulo-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './modulo-list.component.html'
+  templateUrl: './modulo-list.component.html',
+  styleUrl: './modulo-list.component.scss'
 })
 export class ModuloListComponent {
   facade = inject(MapaIntermodularFacade);

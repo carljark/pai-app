@@ -127,7 +127,8 @@ import { ActivitiesGridComponent } from '../activities-grid/activities-grid.comp
         </div>
       }
     </div>
-  `
+  `,
+  styleUrl: './connections-list.component.scss'
 })
 export class ConnectionsListComponent {
   facade = inject(MapaIntermodularFacade);

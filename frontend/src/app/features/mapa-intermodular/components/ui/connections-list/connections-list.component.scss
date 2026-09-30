@@ -1,0 +1,192 @@
+@use '../step-shared';
+
+/* The host takes no box so the step header/body become direct flex items of
+   .mapa-vertical-accordions. This keeps the sticky containing block spanning
+   all steps, so the header stays stuck while scrolling. */
+:host {
+  display: contents;
+}
+
+.mapa-connections-section {
+  width: 100%;
+}
+
+.mapa-connections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mapa-connection-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  width: 100%;
+}
+
+.mapa-conn-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mapa-conn-target {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mapa-conn-badge {
+  background: #64748b;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.mapa-conn-mod-name {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.mapa-conn-coincidence-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.mapa-target-ra-pill {
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.mapa-relation-type-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 16px;
+  text-transform: uppercase;
+}
+
+.tag-ciencias { background: #dbeafe; color: #1e40af; }
+.tag-comunicacion { background: #dcfce7; color: #166534; }
+.tag-empleabilidad { background: #fee2e2; color: #991b1b; }
+.tag-cliente { background: #fef3c7; color: #92400e; }
+.tag-sostenibilidad { background: #ecfdf5; color: #065f46; }
+.tag-digital { background: #f3e8ff; color: #6b21a8; }
+.tag-tecnica { background: #e0f2fe; color: #075985; }
+
+.mapa-target-ra-desc {
+  font-size: 0.88rem;
+  color: #334155;
+  margin: 0 0 12px 0;
+}
+
+/* Criteria Breakdown in Card */
+.mapa-criteria-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.mapa-crit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+.mapa-crit-badge-label {
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+
+  &--source {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+  }
+
+  &--target {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+  }
+}
+
+.mapa-crit-badge-text {
+  color: #1e293b;
+  font-weight: 600;
+  align-self: center;
+}
+
+.mapa-related-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.mapa-related-chip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+}
+
+.mapa-related-code-tag {
+  background: #64748b;
+  color: white;
+  font-weight: 700;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.mapa-related-name-tag { color: #64748b; }
+.mapa-related-crit-tag { color: #0f172a; }
+
+.mapa-justification-box {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  color: #475569;
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.mapa-just-label {
+  font-weight: 700;
+  color: #1e293b;
+  display: block;
+  margin-bottom: 4px;
+}

@@ -16,6 +16,8 @@ Se añadieron dos modelos gratuitos adicionales a la lista de modelos de OpenRou
 | Inkling Small (free)          | `thinkingmachines/inkling-small:free` | Gratis  | Modelo de razonamiento multimodal      |
 | DeepSeek V4.1 Flash           | `deepseek/deepseek-v4.1-flash`      | Gratis  | Modelo de alto rendimiento (latencia)  |
 
+> **Actualización (30/09/2026):** `nex-agi/nex-n2.5-pro:free` fue retirado del tier gratuito de OpenRouter (ahora solo versión de pago; el slug `:free` devuelve `HTTP 404`), por lo que se eliminó de `OPENROUTER_MODELS` y de los selectores. `OPENROUTER_MODELS` pasa de 8 a **7** modelos.
+
 ---
 
 ## 2. Archivos modificados
@@ -55,16 +57,16 @@ Se añadieron dos modelos gratuitos adicionales a la lista de modelos de OpenRou
 
 ```
 project.model.ts
-├── GEMINI_MODELS: AIModelOption[] (4 modelos)
+├── GEMINI_MODELS: AIModelOption[] (5 modelos)
 │   ├── 'gemini-3.8-flash' (Último)
 │   ├── 'gemini-3.7-flash'
 │   ├── 'gemini-3.6-flash'
+│   ├── 'gemini-2.5-pro'
 │   └── 'gemini-3.1-pro-preview'
 │
-├── OPENROUTER_MODELS: AIModelOption[] (8 modelos)
+├── OPENROUTER_MODELS: AIModelOption[] (7 modelos)
 │   ├── 'openrouter/free' (Auto Gratuito - Recomendado)
 │   ├── 'thinkingmachines/inkling-small:free' ← NUEVO
-│   ├── 'nex-agi/nex-n2.5-pro:free'
 │   ├── 'dots-studio/dots-3-note-preview:free'
 │   ├── 'inclusionai/ling-3.0-flash-vl:free'
 │   ├── 'cohere/north-mini-code:free'

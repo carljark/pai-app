@@ -64,6 +64,47 @@ export const filterCriteriaByCourse = (critList: any[], level?: string): any[] =
   });
 };
 
+/** Nº máximo de proyectos publicados que se inyectan como referencia en el prompt. */
+export const MAX_APPROVED_PROJECTS = 5;
+/** Longitud máxima (caracteres) del texto de cada proyecto publicado inyectado. */
+export const APPROVED_PROJECT_TEXT_LIMIT = 4000;
+
+/**
+ * Construye el bloque de contexto con proyectos publicados de la plataforma.
+ * Filtra por el mismo tipoNivel y, cuando es posible, por el mismo curso; ordena
+ * por los más recientes y trunca el texto para no saturar el contexto del modelo.
+ */
+export const buildApprovedProjectsContext = async (criteria: {
+  tipoNivel?: string;
+  courseLevel?: string;
+}): Promise<string> => {
+  const baseFilter: Record<string, any> = { status: 'publicado' };
+  if (criteria.tipoNivel) baseFilter.tipoNivel = criteria.tipoNivel;
+
+  const query = {
+    ...baseFilter,
+    ...(criteria.courseLevel ? { courseLevel: criteria.courseLevel } : {})
+  };
+
+  let approvedProjects = await Project.find(query).sort({ updatedAt: -1 }).limit(MAX_APPROVED_PROJECTS);
+
+  // Si no hay coincidencia exacta de curso, ampliamos al mismo tipoNivel.
+  if (approvedProjects.length === 0 && criteria.courseLevel) {
+    approvedProjects = await Project.find(baseFilter).sort({ updatedAt: -1 }).limit(MAX_APPROVED_PROJECTS);
+  }
+
+  if (approvedProjects.length === 0) return '';
+
+  const payload = approvedProjects.map((p: any) => ({
+    title: p.title,
+    tipoNivel: p.tipoNivel,
+    courseLevel: p.courseLevel,
+    text: (p.generatedContent?.rawText || '').slice(0, APPROVED_PROJECT_TEXT_LIMIT)
+  }));
+
+  return '\n--- PROYECTOS APROBADOS DE LA PLATAFORMA (mismo nivel y curso, más recientes) ---\n' + JSON.stringify(payload);
+};
+
 export const generateProject = async (req: any, res: Response) => {
   try {
     const userId = req.user?._id;
@@ -94,14 +135,9 @@ export const generateProject = async (req: any, res: Response) => {
     // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes, enriquecido con coincidencias de FPB)
     const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel, extraInstructions } = req.body;
     const settings = await Settings.findOne();
-    const { schoolContextStr, intefExamplesContext } = buildContexts(settings);
+    const { schoolContextStr, intefExamplesContext } = buildContexts(settings, { tipoNivel, courseLevel, title, modules, selectedRas });
 
-    let approvedProjectsContext = '';
-    const approvedProjects = await Project.find({ status: 'publicado' }).limit(5);
-    if (approvedProjects.length > 0) {
-      approvedProjectsContext = "\n--- PROYECTOS APROBADOS DE LA PLATAFORMA ---\n" + 
-        JSON.stringify(approvedProjects.map(p => ({ title: p.title, text: p.generatedContent?.rawText })));
-    }
+    const approvedProjectsContext = await buildApprovedProjectsContext({ tipoNivel, courseLevel });
 
     // Obtener RAs y CEs para el enriquecimiento y extracción de códigos
     const allRas = await mongoose.models.RA.find();

@@ -1,8 +1,78 @@
 import fs from 'fs';
 import path from 'path';
 
-export const buildContexts = (settings: any) => {
-  const schoolContextStr = settings 
+/** Nº máximo de ejemplos de referencia que se inyectan en el prompt. */
+export const MAX_INTEF_EXAMPLES = 20;
+
+export interface ExampleCriteria {
+  tipoNivel?: string;
+  courseLevel?: string;
+  title?: string;
+  modules?: string[];
+  ras?: string[];
+}
+
+const STOPWORDS = new Set([
+  'para', 'con', 'los', 'las', 'una', 'uno', 'del', 'que', 'por', 'como', 'sus', 'este', 'esta', 'son',
+  'the', 'and', 'of', 'proyecto', 'proyectos', 'alumnado', 'alumnos', 'actividad', 'actividades',
+  'contenido', 'contenidos', 'resultado', 'resultados', 'aprendizaje', 'criterio', 'criterios',
+  'modulo', 'modulos', 'trabajo', 'realizar', 'utilizar', 'desarrollo', 'fase', 'fases', 'tarea',
+  'tareas', 'sobre', 'entre', 'desde', 'mediante', 'diferentes', 'cada', 'traves', 'sido', 'tiene'
+]);
+
+function tokenize(text: string): string[] {
+  return (text || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter(w => w.length >= 4 && !STOPWORDS.has(w));
+}
+
+/**
+ * Selecciona hasta {@link MAX_INTEF_EXAMPLES} ejemplos, priorizando los más
+ * relevantes para el proyecto solicitado según solapamiento de palabras clave
+ * con sus módulos, RAs/CEs, título y nivel/curso. Ante empate, prefiere los de
+ * contenido más completo.
+ */
+export const selectRelevantExamples = (examples: any[], criteria: ExampleCriteria = {}): any[] => {
+  if (!Array.isArray(examples)) return [];
+
+  const queryTokens = new Set(tokenize([
+    criteria.tipoNivel,
+    criteria.courseLevel,
+    criteria.title,
+    ...(criteria.modules || []),
+    ...(criteria.ras || [])
+  ].filter(Boolean).join(' ')));
+
+  const scored = examples.map((example, index) => {
+    const len = (example?.originalContent || example?.content_sample || '').length;
+    let score = 0;
+
+    if (queryTokens.size > 0) {
+      const rasTokens = new Set(tokenize((example?.ras || []).join(' ')));
+      const moduleTokens = new Set(tokenize((example?.modules || []).join(' ')));
+      const baseTokens = new Set(tokenize(
+        [example?.title, example?.description, example?.originalContent].filter(Boolean).join(' ')
+      ));
+
+      for (const token of queryTokens) {
+        if (rasTokens.has(token)) score += 3;
+        else if (moduleTokens.has(token)) score += 2;
+        else if (baseTokens.has(token)) score += 1;
+      }
+    }
+
+    return { example, index, score, len };
+  });
+
+  scored.sort((a, b) => b.score - a.score || b.len - a.len || a.index - b.index);
+  return scored.slice(0, MAX_INTEF_EXAMPLES).map(s => s.example);
+};
+
+export const buildContexts = (settings: any, criteria: ExampleCriteria = {}) => {
+  const schoolContextStr = settings
     ? `\n\n--- CONTEXTO DEL CENTRO EDUCATIVO ---\nNombre: ${settings.schoolName}\nCiudad: ${settings.schoolCity}\nContexto: ${settings.schoolContext}`
     : '';
 
@@ -10,8 +80,11 @@ export const buildContexts = (settings: any) => {
   try {
     const examplesPath = path.join(process.cwd(), 'src/data/intef_examples.json');
     if (fs.existsSync(examplesPath)) {
-      const examples = JSON.parse(fs.readFileSync(examplesPath, 'utf-8'));
-      intefExamplesContext = "\n--- EJEMPLOS DEL INTEF ---\n" + JSON.stringify(examples);
+      const allExamples = JSON.parse(fs.readFileSync(examplesPath, 'utf-8'));
+      const selected = selectRelevantExamples(allExamples, criteria);
+      if (selected.length > 0) {
+        intefExamplesContext = "\n--- EJEMPLOS DEL INTEF (más relevantes) ---\n" + JSON.stringify(selected);
+      }
     }
   } catch (e) { console.warn("No se cargaron los ejemplos del INTEF"); }
 

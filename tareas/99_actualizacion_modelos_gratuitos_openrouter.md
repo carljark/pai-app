@@ -1,5 +1,7 @@
 # Tarea 99: Verificación de Modelos de OpenRouter, Eliminación de Modelos de Pago / Inexistentes e Integración de Modelos Gratuitos Funcionales
 
+> **Actualización (30/09/2026):** `nex-agi/nex-n2.5-pro:free` ha dejado de estar disponible en el *Free Tier* de OpenRouter (ahora solo existe la versión de pago; el slug `:free` devuelve `HTTP 404`). Se ha **eliminado** del selector del Generador, del catálogo `OPENROUTER_MODELS` y de los tests. La lista vigente de modelos gratuitos queda en **5**.
+
 ## Propósito
 1. **Auditoría de Modelos del Motor Secundario (OpenRouter)**:
    - Comprobar el estado real de los modelos previamente configurados en el selector de OpenRouter: Claude (`anthropic/claude-3.5-sonnet`, `anthropic/claude-3.7-sonnet`), Mistral (`mistralai/mistral-7b-instruct:free`) y Llama (`meta-llama/llama-3.3-70b-instruct:free`).
@@ -33,7 +35,7 @@ Se probaron los modelos activos en el catálogo de OpenRouter mediante peticione
 - **`openrouter/free` (Auto Gratuito / Router Inteligente de Modelos Libres)**:
   - **Éxito**. Tiempo de respuesta: ~3,5 s. Enrutamiento automático hacia el modelo libre más óptimo. (Recomendado por defecto).
 - **`nex-agi/nex-n2.5-pro:free` (Nex-N2.5 Pro)**:
-  - **Éxito**. Modelo de alto razonamiento con 262.144 tokens de contexto. Excelente redacción curricular en español.
+  - ⚠️ **Retirado del tier gratuito (30/09/2026)**. Ahora solo existe la versión de pago (`nex-agi/nex-n2.5-pro`) y el slug `:free` responde `HTTP 404: This model is unavailable for free`. Eliminado del selector y del catálogo.
 - **`dots-studio/dots-3-note-preview:free` (Dots3 Note)**:
   - **Éxito**. Ventana de contexto masiva de 512.000 tokens. Especializado en documentos y notas extensas.
 - **`inclusionai/ling-3.0-flash-vl:free` (Ling 3.0 Flash)**:
@@ -48,11 +50,11 @@ Se probaron los modelos activos en el catálogo de OpenRouter mediante peticione
 ## Archivos Modificados
 
 1. [`frontend/src/app/features/generator/components/generator-view/generator-view.component.ts`](file:///Users/csgj/dev/pai-app/frontend/src/app/features/generator/components/generator-view/generator-view.component.ts):
-   - En el selector `#generator-model-select`, se reemplazaron los modelos de Claude, Mistral y Llama por los 6 modelos gratuitos verificados de OpenRouter.
+   - En el selector `#generator-model-select`, se reemplazaron los modelos de Claude, Mistral y Llama por los modelos gratuitos verificados de OpenRouter (5 vigentes tras retirar `nex-agi/nex-n2.5-pro:free`).
 2. [`frontend/src/app/features/taller/components/taller-view/taller-view.component.html`](file:///Users/csgj/dev/pai-app/frontend/src/app/features/taller/components/taller-view/taller-view.component.html):
    - En `#taller-model-select`, se actualizaron las opciones del motor secundario en consonancia.
 3. [`frontend/src/app/features/generator/components/generator-view/generator-view.component.spec.ts`](file:///Users/csgj/dev/pai-app/frontend/src/app/features/generator/components/generator-view/generator-view.component.spec.ts):
-   - Actualización del test para validar la selección de modelos gratuitos reales (`nex-agi/nex-n2.5-pro:free`).
+   - Actualización del test para validar la selección de modelos gratuitos reales (actualmente `dots-studio/dots-3-note-preview:free`).
 4. [`frontend/src/app/features/taller/components/taller-view/taller-view.component.spec.ts`](file:///Users/csgj/dev/pai-app/frontend/src/app/features/taller/components/taller-view/taller-view.component.spec.ts):
    - Actualización del test de selección de modelo en el taller.
 

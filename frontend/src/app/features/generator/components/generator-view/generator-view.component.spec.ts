@@ -190,9 +190,9 @@ describe('GeneratorViewComponent', () => {
     mockProjects.selectedAi.set('openrouter');
     fixture.detectChanges();
     const modelSelectOR = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;
-    modelSelectOR.value = 'nex-agi/nex-n2.5-pro:free';
+    modelSelectOR.value = 'dots-studio/dots-3-note-preview:free';
     modelSelectOR.dispatchEvent(new Event('change'));
-    expect(mockProjects.selectedModel()).toBe('nex-agi/nex-n2.5-pro:free');
+    expect(mockProjects.selectedModel()).toBe('dots-studio/dots-3-note-preview:free');
   });
 
   it('should not show generator-ai-select or generator-model-select for non-admin users', () => {

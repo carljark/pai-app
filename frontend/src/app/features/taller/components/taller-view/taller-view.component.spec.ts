@@ -675,8 +675,8 @@ describe('TallerViewComponent', () => {
     modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
     expect(modelSelect).toBeTruthy();
     // Directly test the component method instead of DOM event
-    component.onModelChange({ target: { value: 'nex-agi/nex-n2.5-pro:free' } } as unknown as Event);
-    expect(mockProjectsFacade.selectedModel()).toBe('nex-agi/nex-n2.5-pro:free');
+    component.onModelChange({ target: { value: 'deepseek/deepseek-v4.1-flash' } } as unknown as Event);
+    expect(mockProjectsFacade.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
 
     // Switch back to gemini in DOM
     aiSelect.value = 'gemini';

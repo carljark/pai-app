@@ -8,7 +8,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { FpbMatch } from '../models/FpbMatch';
 import { CE } from '../models/CE';
-import { formatCriterion, filterCriteriaByCourse } from '../controllers/project.controller';
+import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, APPROVED_PROJECT_TEXT_LIMIT } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: class {
@@ -705,5 +705,75 @@ describe('Projects Endpoints', () => {
       expect(res.body.project.aiPrompt).toContain('4º ESO - 2.1: Criterio exclusivo de 4º ESO para física');
       expect(res.body.project.aiPrompt).not.toContain('3º ESO - 2.1: Criterio exclusivo de 3º ESO para física');
     });
+  });
+});
+
+describe('buildApprovedProjectsContext', () => {
+  const parsePayload = (ctx: string) => JSON.parse(ctx.split('\n').pop() as string);
+
+  it('devuelve cadena vacía si no hay proyectos publicados', async () => {
+    await new Project({ title: 'SoloBorrador', status: 'borrador' }).save();
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA' });
+    expect(ctx).toBe('');
+  });
+
+  it('devuelve cadena vacía si no hay publicados del tipoNivel pedido (con curso)', async () => {
+    await new Project({ title: 'Estetica', status: 'publicado', tipoNivel: 'CFGM_ESTETICA' }).save();
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA', courseLevel: '1º' });
+    expect(ctx).toBe('');
+  });
+
+  it('filtra por tipoNivel, ordena por más reciente y trunca el texto', async () => {
+    const big = 'x'.repeat(APPROVED_PROJECT_TEXT_LIMIT + 500);
+    await new Project({ title: 'Antiguo', status: 'publicado', tipoNivel: 'FP_BASICA', updatedAt: new Date('2024-01-01'), generatedContent: { rawText: big } }).save();
+    await new Project({ title: 'Reciente', status: 'publicado', tipoNivel: 'FP_BASICA', updatedAt: new Date('2025-01-01'), generatedContent: { rawText: 'corto' } }).save();
+    await new Project({ title: 'OtroNivel', status: 'publicado', tipoNivel: 'CFGM_ESTETICA', updatedAt: new Date('2025-06-01'), generatedContent: { rawText: 'no' } }).save();
+
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA' });
+    expect(ctx).toContain('PROYECTOS APROBADOS');
+    const payload = parsePayload(ctx);
+    expect(payload.map((p: any) => p.title)).toEqual(['Reciente', 'Antiguo']);
+    expect(payload[1].text.length).toBe(APPROVED_PROJECT_TEXT_LIMIT);
+    expect(payload.some((p: any) => p.title === 'OtroNivel')).toBe(false);
+    expect(payload[0].tipoNivel).toBe('FP_BASICA');
+  });
+
+  it('prioriza la coincidencia exacta de curso', async () => {
+    await new Project({ title: 'Curso1', status: 'publicado', tipoNivel: 'FP_BASICA', courseLevel: '1º', updatedAt: new Date('2025-01-01'), generatedContent: { rawText: 'a' } }).save();
+    await new Project({ title: 'Curso2', status: 'publicado', tipoNivel: 'FP_BASICA', courseLevel: '2º', updatedAt: new Date('2025-02-01'), generatedContent: { rawText: 'b' } }).save();
+
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA', courseLevel: '2º' });
+    const payload = parsePayload(ctx);
+    expect(payload.map((p: any) => p.title)).toEqual(['Curso2']);
+    expect(payload[0].courseLevel).toBe('2º');
+  });
+
+  it('hace fallback al tipoNivel cuando no hay coincidencia de curso', async () => {
+    await new Project({ title: 'SinCurso', status: 'publicado', tipoNivel: 'FP_BASICA', updatedAt: new Date('2025-01-01'), generatedContent: { rawText: 'a' } }).save();
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA', courseLevel: '3º' });
+    const payload = parsePayload(ctx);
+    expect(payload.map((p: any) => p.title)).toEqual(['SinCurso']);
+  });
+
+  it('sin tipoNivel incluye publicados de cualquier nivel', async () => {
+    await new Project({ title: 'Cualquiera', status: 'publicado', tipoNivel: 'CFGM_ESTETICA', generatedContent: { rawText: 'a' } }).save();
+    const ctx = await buildApprovedProjectsContext({});
+    expect(ctx).toContain('Cualquiera');
+  });
+
+  it('limita a 5 proyectos publicados', async () => {
+    for (let i = 0; i < 7; i++) {
+      await new Project({ title: `P${i}`, status: 'publicado', tipoNivel: 'FP_BASICA', updatedAt: new Date(2025, 0, i + 1), generatedContent: { rawText: 't' } }).save();
+    }
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA' });
+    const payload = parsePayload(ctx);
+    expect(payload.length).toBe(5);
+  });
+
+  it('soporta publicados sin generatedContent', async () => {
+    await new Project({ title: 'SinContenido', status: 'publicado', tipoNivel: 'FP_BASICA' }).save();
+    const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA' });
+    const payload = parsePayload(ctx);
+    expect(payload[0].text).toBe('');
   });
 });

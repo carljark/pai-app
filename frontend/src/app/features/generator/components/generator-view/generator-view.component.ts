@@ -91,7 +91,6 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
               } @else {
                 <option value="openrouter/free">Auto Gratuito (Recomendado)</option>
                 <option value="thinkingmachines/inkling-small:free">Inkling Small (free)</option>
-                <option value="nex-agi/nex-n2.5-pro:free">Nex-N2.5 Pro (Razonamiento)</option>
                 <option value="dots-studio/dots-3-note-preview:free">Dots3 Note 512k (Documentos)</option>
                 <option value="inclusionai/ling-3.0-flash-vl:free">Ling 3.0 Flash (Rápido)</option>
                 <option value="cohere/north-mini-code:free">Cohere North Mini</option>

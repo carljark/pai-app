@@ -159,7 +159,6 @@ export const GEMINI_MODELS: AIModelOption[] = [
 
 export const OPENROUTER_MODELS: AIModelOption[] = [
   { value: 'openrouter/free', label: 'Auto Gratuito (Recomendado)', provider: 'openrouter' },
-  { value: 'nex-agi/nex-n2.5-pro:free', label: 'Nex-N2.5 Pro (Razonamiento)', provider: 'openrouter' },
   { value: 'dots-studio/dots-3-note-preview:free', label: 'Dots3 Note 512k (Documentos)', provider: 'openrouter' },
   { value: 'inclusionai/ling-3.0-flash-vl:free', label: 'Ling 3.0 Flash (Rápido)', provider: 'openrouter' },
   { value: 'cohere/north-mini-code:free', label: 'Cohere North Mini', provider: 'openrouter' },

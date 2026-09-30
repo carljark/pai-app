@@ -116,4 +116,24 @@ describe("TelemetryService", () => {
 
     Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
   });
+
+  it("should fall back to HTTP when closing and sendBeacon exists but there is no token", () => {
+    localStorage.clear();
+    const originalSendBeacon = (navigator as any).sendBeacon;
+    Object.defineProperty(navigator, "sendBeacon", { value: vi.fn().mockReturnValue(true), configurable: true });
+
+    service.flushHeartbeat(true);
+    const req = httpTestingController.expectOne("/api/telemetry/heartbeat");
+    expect(req.request.body.isClosing).toBe(true);
+    req.flush({ ok: true, durationSeconds: 0 });
+
+    Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
+  });
+
+  it("should stop tracking safely when there is no active interval", () => {
+    service.startTracking();
+    // Simulate a state where tracking started but the interval is gone
+    (service as any).heartbeatInterval = null;
+    service.stopTracking(false);
+  });
 });

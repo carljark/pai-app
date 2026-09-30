@@ -6,8 +6,9 @@
     "start": "ng serve --host 0.0.0.0 --poll 1000 --proxy-config proxy.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --coverage-reporters=text --coverage-reporters=json-summary && node check-coverage.js",
+    "test": "ng test --watch=false --coverage-reporters=text --coverage-reporters=json-summary && node check-coverage.js && node check-zoneless.js",
     "test:watch": "ng test",
+    "check:zoneless": "node check-zoneless.js",
     "e2e": "cypress run"
   },
   "private": true,
@@ -36,7 +37,6 @@
     "jsdom": "^28.1.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
-    "vitest": "^4.0.8",
-    "zone.js": "^0.16.2"
+    "vitest": "^4.0.8"
   }
 }

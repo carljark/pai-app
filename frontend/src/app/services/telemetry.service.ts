@@ -1,10 +1,9 @@
-import { Injectable, inject, NgZone } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable({ providedIn: "root" })
 export class TelemetryService {
   private http = inject(HttpClient);
-  private ngZone = inject(NgZone);
 
   private sessionId: string;
   private lastActiveTimestamp: number = Date.now();
@@ -31,13 +30,11 @@ export class TelemetryService {
     this.isTracking = true;
     this.lastActiveTimestamp = Date.now();
 
-    this.ngZone.runOutsideAngular(() => {
-      this.heartbeatInterval = setInterval(() => {
-        this.flushHeartbeat();
-      }, 60000);
+    this.heartbeatInterval = setInterval(() => {
+      this.flushHeartbeat();
+    }, 60000);
 
-      window.addEventListener("beforeunload", this.onBeforeUnload);
-    });
+    window.addEventListener("beforeunload", this.onBeforeUnload);
   }
 
   stopTracking(flush = false) {

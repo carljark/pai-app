@@ -39,6 +39,14 @@ export class NotificationsFacade {
         }
       });
     });
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible' && this.authService.currentUser()) {
+          this.loadNotifications();
+        }
+      });
+    }
   }
 
   loadNotifications() {
@@ -57,7 +65,13 @@ export class NotificationsFacade {
   }
 
   private handleSseEvent(raw: RawNotificationEvent) {
-    if (raw.type === 'CONNECTED' || (!raw.projectId && !raw.notification?.projectId)) {
+    if (raw.type === 'CONNECTED') {
+      // En cada (re)conexión resincronizamos con la base de datos para no perder
+      // eventos terminales ocurridos durante una desconexión.
+      this.loadNotifications();
+      return;
+    }
+    if (!raw.projectId && !raw.notification?.projectId) {
       return;
     }
 
@@ -99,6 +113,7 @@ export class NotificationsFacade {
   }
 
   openRecentActivity() {
+    this.loadNotifications();
     this.recentActivityOpen.set(true);
     this.markAllAsRead();
   }

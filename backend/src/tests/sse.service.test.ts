@@ -66,5 +66,20 @@ describe('SSE Service', () => {
     expect(() => broadcast({ type: 'ERROR_EVENT' })).not.toThrow();
     expect(resMockErr.write).toHaveBeenCalled();
   });
+
+  it('debería enviar heartbeats para mantener viva la conexión', () => {
+    vi.useFakeTimers();
+    const resMock = { write: vi.fn() } as any;
+    addClient('hb', 'hbc1', resMock);
+
+    vi.advanceTimersByTime(26000);
+    expect(resMock.write).toHaveBeenCalledWith(': ping\n\n');
+
+    removeClient('hb', 'hbc1');
+    resMock.write.mockClear();
+    vi.advanceTimersByTime(30000);
+    expect(resMock.write).not.toHaveBeenCalled();
+    vi.useRealTimers();
+  });
 });
 

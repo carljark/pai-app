@@ -98,15 +98,23 @@ describe('NotificationsFacade', () => {
     });
     expect(facade.notifications().length).toBe(2);
 
-    updatesSubject.next({ type: 'CONNECTED' });
-    expect(facade.notifications().length).toBe(2);
-
     updatesSubject.next({ type: 'OTHER_EVENT', message: 'No project' });
     expect(facade.notifications().length).toBe(2);
+  });
 
-    authFacadeMock.currentUser.set(null);
-    updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'p3' });
-    expect(facade.notifications().length).toBe(3);
+  it('should resync notifications from the database on SSE reconnect (CONNECTED)', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    httpMock.get.mockClear();
+    httpMock.get.mockReturnValueOnce(of([
+      { _id: 'n9', projectId: 'p9', status: 'borrador', type: 'PROJECT_COMPLETED' }
+    ]));
+
+    updatesSubject.next({ type: 'CONNECTED' });
+
+    expect(httpMock.get).toHaveBeenCalledWith('/api/notifications');
+    expect(facade.notifications().length).toBe(1);
+    expect(facade.notifications()[0].projectId).toBe('p9');
   });
 
   it('should clear notifications and unsubscribe on logout', () => {

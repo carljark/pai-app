@@ -69,6 +69,14 @@ function buildUpdateData(project: any, extra: NotificationExtra | undefined, res
   };
 }
 
+/** Resumen ligero del proyecto para SSE: evita enviar generatedContent/prompts. */
+export function toProjectSummary(project: any) {
+  const raw = typeof project?.toObject === 'function' ? project.toObject() : project;
+  if (!raw) return raw;
+  const { generatedContent, aiPrompt, aiInstruction, ...summary } = raw;
+  return summary;
+}
+
 export async function syncProjectNotification(project: any, extra?: NotificationExtra) {
   try {
     const projectId = project._id;
@@ -94,7 +102,7 @@ export async function syncProjectNotification(project: any, extra?: Notification
       status: project.status,
       phase: updateData.phase,
       rasCount: updateData.rasCount,
-      project,
+      project: toProjectSummary(project),
       notification: notif,
       generationTimeMs: project.generationTimeMs,
       generationStartedAt: project.generationStartedAt,

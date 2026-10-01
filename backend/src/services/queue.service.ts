@@ -2,7 +2,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { generateAiContentWithFallback } from '../services/ai.service';
 import { sendToUser } from './sse.service';
-import { syncProjectNotification } from './notification.service';
+import { syncProjectNotification, toProjectSummary } from './notification.service';
 
 let isProcessing = false;
 
@@ -53,7 +53,7 @@ async function saveProjectSuccess(
 async function notifyProjectSuccess(project: any, generationTimeMs: number) {
   const userId = project.userId?.toString();
   if (userId) {
-    sendToUser(userId, { type: 'PROJECT_COMPLETED', projectId: project._id, project, generationTimeMs });
+    sendToUser(userId, { type: 'PROJECT_COMPLETED', projectId: project._id, project: toProjectSummary(project), status: project.status, generationTimeMs });
   }
   await syncProjectNotification(project, {
     type: 'PROJECT_COMPLETED',

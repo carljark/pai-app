@@ -62,7 +62,14 @@ describe('AI Service', () => {
 
   it('generateGeminiContent debería relanzar otros errores cuando fallan todos los modelos', async () => {
     generateContentMock.mockRejectedValue(new Error('Internal Gemini Error'));
-    await expect(generateGeminiContent('p', 'i')).rejects.toThrow('Internal Gemini Error');
+    await expect(generateGeminiContent('p', 'i')).rejects.toMatchObject({
+      message: 'Internal Gemini Error',
+      cascadeLog: [
+        'gemini-3.8-flash: Internal Gemini Error',
+        'gemini-3.7-flash: Internal Gemini Error',
+        'gemini-3.6-flash: Internal Gemini Error'
+      ]
+    });
   });
 
   it('generateOpenRouterContent debería lanzar error si falta API key', async () => {
@@ -159,6 +166,12 @@ describe('AI Service', () => {
     expect(res.fallbackUsed).toBe(true);
     expect(res.text).toBe('Respuesta Fallback OpenRouter');
     expect(res.model).toBe(DEFAULT_OPENROUTER_MODEL);
+    expect(res.cascadeLog).toEqual([
+      'gemini-3.8-flash: Quota limit',
+      'gemini-3.7-flash: Quota limit',
+      'gemini-3.6-flash: Quota limit',
+      `${DEFAULT_OPENROUTER_MODEL}: OK`
+    ]);
     expect(mockFetch).toHaveBeenCalledWith('https://openrouter.ai/api/v1/chat/completions', expect.objectContaining({
       body: expect.stringContaining(DEFAULT_OPENROUTER_MODEL)
     }));

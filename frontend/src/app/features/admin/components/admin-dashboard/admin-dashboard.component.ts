@@ -280,6 +280,16 @@ import { FeedbackService } from '../../../feedback/services/feedback.service';
                 ⚠️ Error: {{ log.details.error }}
               </p>
             }
+            @if (getLogAttemptErrors(log).length > 0) {
+              <div style="margin-top: 6px; font-size: 0.85rem; color: #b91c1c;">
+                <strong>⚠️ Errores en reintentos:</strong>
+                <ul style="margin: 4px 0 0; padding-left: 22px;">
+                  @for (attemptError of getLogAttemptErrors(log); track $index) {
+                    <li style="font-family: monospace; white-space: pre-wrap; overflow-wrap: anywhere;">{{ attemptError }}</li>
+                  }
+                </ul>
+              </div>
+            }
             @if (log.projectId?.status === 'error' && (log.details?.errorCascadeLog || log.projectId?.errorCascadeLog)) {
               <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #64748b; font-family: monospace; background: #f8f9fa; padding: 8px; border-radius: 4px; white-space: pre-wrap;">
                 📋 Modelos intentados: {{ log.details?.errorCascadeLog || log.projectId?.errorCascadeLog }}
@@ -379,5 +389,13 @@ export class AdminDashboardComponent {
 
   getLogGenerationTime(log: any): number | null {
     return log.details?.generationTimeMs || log.projectId?.generationTimeMs || null;
+  }
+
+  getLogAttemptErrors(log: any): string[] {
+    const cascadeLog: unknown = log.details?.cascadeLog;
+    if (!Array.isArray(cascadeLog)) return [];
+    return cascadeLog.filter((entry: unknown): entry is string =>
+      typeof entry === 'string' && entry.trim().length > 0 && !entry.trim().endsWith(': OK')
+    );
   }
 }

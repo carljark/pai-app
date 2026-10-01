@@ -181,9 +181,12 @@ export const generateGeminiContent = async (
   }
 
   if (lastError?.name === 'TimeoutError' || lastError?.message?.includes('Timeout en Gemini')) {
-    throw new Error('Timeout en Gemini (20m): el proveedor no respondió a tiempo');
+    throw Object.assign(new Error('Timeout en Gemini (20m): el proveedor no respondió a tiempo'), { cascadeLog });
   }
-  throw lastError || new Error('Fallaron todos los modelos de Gemini');
+  const error = lastError instanceof Error
+    ? lastError
+    : new Error(String(lastError || 'Fallaron todos los modelos de Gemini'));
+  throw Object.assign(error, { cascadeLog });
 };
 
 const requestOpenRouterApi = async (apiKey: string, payload: any, timeoutMs = 1_200_000) => {

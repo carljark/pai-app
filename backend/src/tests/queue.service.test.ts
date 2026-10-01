@@ -91,9 +91,16 @@ describe('Queue Service', () => {
       text: 'Contenido OpenRouter',
       provider: 'openrouter',
       model: 'meta-llama/llama-3.3-70b-instruct:free',
-      fallbackUsed: true
+      fallbackUsed: true,
+      cascadeLog: ['gemini-3.8-flash: HTTP 503', 'meta-llama/llama-3.3-70b-instruct:free: OK']
     });
-    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+    vi.spyOn(ActivityLog.prototype, 'save').mockImplementation(function (this: any) {
+      expect(this.details.cascadeLog).toEqual([
+        'gemini-3.8-flash: HTTP 503',
+        'meta-llama/llama-3.3-70b-instruct:free: OK'
+      ]);
+      return Promise.resolve(this);
+    } as any);
 
     const consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
     await processQueue();
@@ -118,8 +125,18 @@ describe('Queue Service', () => {
       .mockResolvedValueOnce(mockProject as any)
       .mockResolvedValueOnce(null);
       
-    vi.spyOn(aiService, 'generateAiContentWithFallback').mockRejectedValue(new Error('AI failed'));
-    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+    vi.spyOn(aiService, 'generateAiContentWithFallback').mockRejectedValue(Object.assign(new Error('AI failed'), {
+      cascadeLog: ['gemini-3.8-flash: HTTP 503', 'gemini-3.7-flash: HTTP 503']
+    }));
+    vi.spyOn(ActivityLog.prototype, 'save').mockImplementation(function (this: any) {
+      if (this.action === 'ERROR_GENERATE_PROJECT') {
+        expect(this.details.cascadeLog).toEqual([
+          'gemini-3.8-flash: HTTP 503',
+          'gemini-3.7-flash: HTTP 503'
+        ]);
+      }
+      return Promise.resolve(this);
+    } as any);
     const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
     await processQueue();

@@ -88,7 +88,13 @@ async function saveProjectError(project: any, error: any, generationTimeMs: numb
     userId: project.userId,
     action: 'ERROR_GENERATE_PROJECT',
     projectId: project._id,
-    details: { error: project.errorDetail, generationTimeMs, title: project.title, errorCascadeLog: project.errorCascadeLog }
+    details: {
+      error: project.errorDetail,
+      generationTimeMs,
+      title: project.title,
+      errorCascadeLog: project.errorCascadeLog,
+      cascadeLog: Array.isArray(error?.cascadeLog) ? error.cascadeLog : undefined
+    }
   }).save();
 }
 

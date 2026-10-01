@@ -216,7 +216,8 @@ describe('AdminDashboardComponent', () => {
           generationTimeMs: 1500,
           model: 'meta-llama/llama-3.3-70b-instruct:free',
           provider: 'openrouter',
-          fallbackUsed: true
+          fallbackUsed: true,
+          cascadeLog: ['gemini-3.8-flash: HTTP 503', 'meta-llama/llama-3.3-70b-instruct:free: OK']
         }
       },
       {
@@ -241,7 +242,8 @@ describe('AdminDashboardComponent', () => {
         projectId: null,
         details: {
           title: 'Proyecto Detalle Fallido',
-          error: 'Error de cuota agotada'
+          error: 'Error de cuota agotada',
+          cascadeLog: ['gemini-3.8-flash: HTTP 503', 'gemini-3.7-flash: HTTP 429']
         }
       },
       {
@@ -264,10 +266,15 @@ describe('AdminDashboardComponent', () => {
     expect(compiled.textContent).toContain('meta-llama/llama-3.3-70b-instruct:free');
     expect(compiled.textContent).toContain('Secundario');
     expect(compiled.textContent).toContain('Fallback');
+    expect(compiled.textContent).toContain('Errores en reintentos');
+    expect(compiled.textContent).toContain('gemini-3.8-flash: HTTP 503');
+    expect(compiled.textContent).not.toContain('meta-llama/llama-3.3-70b-instruct:free: OK');
     expect(compiled.textContent).toContain('gemini-3.6-flash');
     expect(compiled.textContent).toContain('Primario');
     expect(compiled.textContent).toContain('custom-ai-engine');
     expect(compiled.textContent).toContain('Error: Error de cuota agotada');
+    expect(compiled.textContent).toContain('gemini-3.8-flash: HTTP 503');
+    expect(compiled.textContent).toContain('gemini-3.7-flash: HTTP 429');
   });
 
   it('getLogModel and getLogProviderLabel should handle all branches', () => {
@@ -298,6 +305,13 @@ describe('AdminDashboardComponent', () => {
     expect(component.getLogGenerationTime({ projectId: { generationTimeMs: 8300 } })).toBe(8300);
     expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 }, projectId: { generationTimeMs: 8300 } })).toBe(12500);
     expect(component.getLogGenerationTime({})).toBeNull();
+  });
+
+  it('should return only failed model attempts from the cascade log', () => {
+    expect(component.getLogAttemptErrors({ details: { cascadeLog: ['model-a: HTTP 503', 'model-b: OK'] } }))
+      .toEqual(['model-a: HTTP 503']);
+    expect(component.getLogAttemptErrors({ details: { cascadeLog: 'invalid' } })).toEqual([]);
+    expect(component.getLogAttemptErrors({})).toEqual([]);
   });
 
   it('should handle feedback administration methods and error type feedback', () => {

@@ -11,9 +11,17 @@ describe('NotificationsBadgeComponent', () => {
   let notificationsFacadeMock: any;
 
   beforeEach(async () => {
+    const recentActivityOpen = signal(false);
+    const markAllAsRead = vi.fn();
     notificationsFacadeMock = {
       notifications: signal([]),
-      markAllAsRead: vi.fn()
+      recentActivityOpen,
+      markAllAsRead,
+      openRecentActivity: vi.fn(() => {
+        recentActivityOpen.set(true);
+        markAllAsRead();
+      }),
+      closeRecentActivity: vi.fn(() => recentActivityOpen.set(false))
     };
 
     await TestBed.configureTestingModule({
@@ -57,7 +65,8 @@ describe('NotificationsBadgeComponent', () => {
 
   it('should open notifications modal and mark as read', () => {
     component.openNotifications();
-    expect(component.isOpen()).toBe(true);
+    expect(notificationsFacadeMock.recentActivityOpen()).toBe(true);
+    expect(notificationsFacadeMock.openRecentActivity).toHaveBeenCalledOnce();
     expect(notificationsFacadeMock.markAllAsRead).toHaveBeenCalled();
   });
 
@@ -85,14 +94,15 @@ describe('NotificationsBadgeComponent', () => {
   });
 
   it('should close modal on backdrop or close button click', () => {
-    component.isOpen.set(true);
+    notificationsFacadeMock.recentActivityOpen.set(true);
     fixture.detectChanges();
     
     const compiled = fixture.nativeElement as HTMLElement;
     const backdrop = compiled.querySelector('div[style*="rgba(0,0,0,0.5)"]') as HTMLElement;
     
     backdrop.click();
-    expect(component.isOpen()).toBe(false);
+    expect(notificationsFacadeMock.recentActivityOpen()).toBe(false);
+    expect(notificationsFacadeMock.closeRecentActivity).toHaveBeenCalledOnce();
   });
 
   it('should format elapsed time and duration correctly', () => {
@@ -184,4 +194,3 @@ describe('NotificationsBadgeComponent', () => {
     expect(compiled.textContent).toContain('por eva@test.com');
   });
 });
-

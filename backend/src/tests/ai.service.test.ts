@@ -2,13 +2,16 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import {
   generateGeminiContent,
   generateOpenRouterContent,
-  generateAiContentWithFallback
+  generateAiContentWithFallback,
+  DEFAULT_OPENROUTER_MODEL,
+  DEFAULT_REASONING_EFFORT
 } from '../services/ai.service';
 
 const generateContentMock = vi.fn().mockResolvedValue({ text: 'Respuesta simulada Gemini' });
 
 vi.mock('@google/genai', () => {
   return {
+    ThinkingLevel: { HIGH: 'HIGH' },
     GoogleGenAI: class {
       models = {
         generateContent: generateContentMock
@@ -29,6 +32,10 @@ describe('AI Service', () => {
     const res = await generateGeminiContent('prompt', 'instruction');
     expect(res.text).toBe('Respuesta simulada Gemini');
     expect(res.model).toBe('gemini-3.8-flash');
+    expect(generateContentMock).toHaveBeenCalledWith(expect.objectContaining({
+      model: 'gemini-3.8-flash',
+      config: expect.objectContaining({ thinkingConfig: { thinkingLevel: 'HIGH' } })
+    }));
   });
 
   it('debería soportar preferredModel y fallback de modelos internos en Gemini', async () => {
@@ -77,8 +84,29 @@ describe('AI Service', () => {
     expect(res.text).toBe('Respuesta OpenRouter');
     expect(res.model).toBe('meta-llama/llama-3.3-70b-instruct:free');
     expect(mockFetch).toHaveBeenCalledWith('https://openrouter.ai/api/v1/chat/completions', expect.objectContaining({
-      method: 'POST'
+      method: 'POST',
+      body: expect.stringContaining(DEFAULT_OPENROUTER_MODEL)
     }));
+    const requestBody = JSON.parse((mockFetch.mock.calls[0][1] as RequestInit).body as string);
+    expect(requestBody.reasoning_effort).toBe(DEFAULT_REASONING_EFFORT);
+  });
+
+  it('solo configura reasoning_effort en modelos OpenRouter que lo admiten', async () => {
+    process.env.OPENROUTER_API_KEY = 'test_key';
+    const mockFetch = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ choices: [{ message: { content: 'Respuesta' } }] })
+    });
+    vi.stubGlobal('fetch', mockFetch);
+
+    await generateOpenRouterContent('prompt', 'instruction', 'thinkingmachines/inkling-small:free');
+    await generateOpenRouterContent('prompt', 'instruction', 'dots-studio/dots-3-note-preview:free');
+    await generateOpenRouterContent('prompt', 'instruction', 'openrouter/free');
+
+    const bodies = mockFetch.mock.calls.map(call => JSON.parse((call[1] as RequestInit).body as string));
+    expect(bodies[0].reasoning_effort).toBe('high');
+    expect(bodies[1]).not.toHaveProperty('reasoning_effort');
+    expect(bodies[2]).not.toHaveProperty('reasoning_effort');
   });
 
   it('generateOpenRouterContent debería manejar respuesta fallida HTTP', async () => {
@@ -117,10 +145,11 @@ describe('AI Service', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({
-        model: 'mistralai/mistral-7b-instruct:free',
+        model: DEFAULT_OPENROUTER_MODEL,
         choices: [{ message: { content: 'Respuesta Fallback OpenRouter' } }]
       })
     }));
+    const mockFetch = vi.mocked(fetch);
 
     generateContentMock.mockRejectedValue(new Error('Quota limit'));
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
@@ -129,7 +158,12 @@ describe('AI Service', () => {
     expect(res.provider).toBe('openrouter');
     expect(res.fallbackUsed).toBe(true);
     expect(res.text).toBe('Respuesta Fallback OpenRouter');
-    expect(res.model).toBe('mistralai/mistral-7b-instruct:free');
+    expect(res.model).toBe(DEFAULT_OPENROUTER_MODEL);
+    expect(mockFetch).toHaveBeenCalledWith('https://openrouter.ai/api/v1/chat/completions', expect.objectContaining({
+      body: expect.stringContaining(DEFAULT_OPENROUTER_MODEL)
+    }));
+    const fallbackBody = JSON.parse((mockFetch.mock.calls[0][1] as RequestInit).body as string);
+    expect(fallbackBody.reasoning_effort).toBe(DEFAULT_REASONING_EFFORT);
     expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('Fallback activado'));
     warnSpy.mockRestore();
   });
@@ -187,4 +221,3 @@ describe('AI Service', () => {
     vi.unstubAllGlobals();
   });
 });
-

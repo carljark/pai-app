@@ -168,7 +168,7 @@ describe('GeneratorViewComponent', () => {
     aiSelect.value = 'openrouter';
     aiSelect.dispatchEvent(new Event('change'));
     expect(mockProjects.selectedAi()).toBe('openrouter');
-    expect(mockProjects.selectedModel()).toBe('openrouter/free');
+    expect(mockProjects.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
 
     aiSelect.value = 'gemini';
     aiSelect.dispatchEvent(new Event('change'));

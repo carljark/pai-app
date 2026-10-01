@@ -11,6 +11,7 @@ import { CE } from '../models/CE';
 import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, APPROVED_PROJECT_TEXT_LIMIT } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
+  ThinkingLevel: { HIGH: 'HIGH' },
   GoogleGenAI: class {
     models = {
       generateContent: vi.fn().mockResolvedValue({

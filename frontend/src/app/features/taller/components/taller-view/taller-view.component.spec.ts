@@ -617,7 +617,7 @@ describe('TallerViewComponent', () => {
     const eventOpenRouter = { target: { value: 'openrouter' } } as any;
     component.onAiChange(eventOpenRouter);
     expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
-    expect(mockProjectsFacade.selectedModel()).toBe('openrouter/free');
+    expect(mockProjectsFacade.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
 
     const eventGemini = { target: { value: 'gemini' } } as any;
     component.onAiChange(eventGemini);
@@ -666,7 +666,7 @@ describe('TallerViewComponent', () => {
     aiSelect.value = 'openrouter';
     aiSelect.dispatchEvent(new Event('change'));
     expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
-    expect(mockProjectsFacade.selectedModel()).toBe('openrouter/free');
+    expect(mockProjectsFacade.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
 
     // Detect changes to render the @else branch in template with OpenRouter options
     fixture.detectChanges();
@@ -869,4 +869,3 @@ describe('TallerViewComponent', () => {
     expect(mockProjectsFacade.undoLastChange).not.toHaveBeenCalled();
   });
 });
-

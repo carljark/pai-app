@@ -21,7 +21,7 @@ describe('Project Model - Utility Functions', () => {
       const models = getModelsForProvider('openrouter');
       expect(models).toHaveLength(7);
       expect(models[0].provider).toBe('openrouter');
-      expect(models[0].value).toBe('openrouter/free');
+      expect(models[0].value).toBe('deepseek/deepseek-v4.1-flash');
     });
   });
 
@@ -30,8 +30,8 @@ describe('Project Model - Utility Functions', () => {
       expect(getDefaultModelForProvider('gemini')).toBe('gemini-3.8-flash');
     });
 
-    it('should return openrouter/free for openrouter', () => {
-      expect(getDefaultModelForProvider('openrouter')).toBe('openrouter/free');
+    it('should return DeepSeek V4.1 Flash for openrouter', () => {
+      expect(getDefaultModelForProvider('openrouter')).toBe('deepseek/deepseek-v4.1-flash');
     });
   });
 

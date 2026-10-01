@@ -110,6 +110,25 @@ export interface SingleAiResult {
 }
 
 export const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
+export const DEFAULT_OPENROUTER_MODEL = 'deepseek/deepseek-v4.1-flash';
+export const DEFAULT_REASONING_EFFORT = 'high';
+
+// OpenRouter's catalog currently advertises explicit reasoning-effort support
+// for these selectable models. Do not send the setting to `openrouter/free`:
+// it can route to a different model on each request.
+export const OPENROUTER_MODELS_WITH_REASONING_EFFORT = new Set([
+  'deepseek/deepseek-v4.1-flash',
+  'thinkingmachines/inkling-small:free'
+]);
+
+// These Gemini models accept the native thinkingLevel setting in generateContent.
+const GEMINI_MODELS_WITH_THINKING_LEVEL = new Set([
+  'gemini-3.8-flash',
+  'gemini-3.7-flash',
+  'gemini-3.6-flash',
+  'gemini-2.5-pro',
+  'gemini-3.1-pro-preview'
+]);
 export const GEMINI_MODEL_CASCADE = [
   'gemini-3.8-flash',
   'gemini-3.7-flash',
@@ -122,7 +141,7 @@ export const generateGeminiContent = async (
   preferredModel = DEFAULT_GEMINI_MODEL,
   timeoutMs = 1_200_000
 ): Promise<SingleAiResult> => {
-  const { GoogleGenAI } = await import('@google/genai');
+  const { GoogleGenAI, ThinkingLevel } = await import('@google/genai');
   const ai = new GoogleGenAI({ httpOptions: { timeout: timeoutMs } });
   const modelsToTry = [preferredModel, ...GEMINI_MODEL_CASCADE.filter(m => m !== preferredModel)];
   let lastError: any = null;
@@ -139,7 +158,12 @@ export const generateGeminiContent = async (
       const request = ai.models.generateContent({
         model: modelName,
         contents: userPrompt,
-        config: { systemInstruction }
+        config: {
+          systemInstruction,
+          ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(modelName)
+            ? { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } }
+            : {})
+        }
       });
       const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
       cascadeLog.push(`${modelName}: OK`);
@@ -190,7 +214,7 @@ const parseOpenRouterResponse = async (response: Response, fallbackModel: string
 export const generateOpenRouterContent = async (
   userPrompt: string,
   systemInstruction: string,
-  model = 'openrouter/free'
+  model = DEFAULT_OPENROUTER_MODEL
 ): Promise<SingleAiResult> => {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new Error('OPENROUTER_API_KEY no está configurada');
@@ -199,9 +223,13 @@ export const generateOpenRouterContent = async (
     { role: 'system', content: systemInstruction },
     { role: 'user', content: userPrompt }
   ];
+  const payload: Record<string, any> = { model, messages };
+  if (OPENROUTER_MODELS_WITH_REASONING_EFFORT.has(model)) {
+    payload.reasoning_effort = DEFAULT_REASONING_EFFORT;
+  }
   const cascadeLog: string[] = [];
   try {
-    const response = await requestOpenRouterApi(apiKey, { model, messages });
+    const response = await requestOpenRouterApi(apiKey, payload);
     const result = await parseOpenRouterResponse(response, model);
     cascadeLog.push(`${model}: OK`);
     return { ...result, cascadeLog };
@@ -282,7 +310,7 @@ export const generateAiContentWithFallback = async (
         // Si no hay cascadeLog en el error, crear uno básico
         const providerModel = i === 0 && preferredModel ? preferredModel : 
                            provider === 'gemini' ? (preferredModel || 'gemini-3.8-flash') : 
-                           'openrouter/free';
+                            DEFAULT_OPENROUTER_MODEL;
         fullCascadeLog.push(`${providerModel}: ${err.message || 'Error desconocido'}`);
       }
       console.error(`[AI Service] Error con proveedor ${provider}:`, err.message || err);
@@ -293,4 +321,3 @@ export const generateAiContentWithFallback = async (
   Object.assign(error, { cascadeLog: fullCascadeLog });
   throw error;
 };
-

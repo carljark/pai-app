@@ -149,6 +149,8 @@ export const AI_PROVIDER_OPTIONS: { value: AIProvider; label: string }[] = [
   { value: 'openrouter', label: 'OpenRouter' },
 ];
 
+export const DEFAULT_OPENROUTER_MODEL = 'deepseek/deepseek-v4.1-flash';
+
 export const GEMINI_MODELS: AIModelOption[] = [
   { value: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash (Último)', provider: 'gemini' },
   { value: 'gemini-3.7-flash', label: 'Gemini 3.7 Flash', provider: 'gemini' },
@@ -158,13 +160,13 @@ export const GEMINI_MODELS: AIModelOption[] = [
 ];
 
 export const OPENROUTER_MODELS: AIModelOption[] = [
-  { value: 'openrouter/free', label: 'Auto Gratuito (Recomendado)', provider: 'openrouter' },
+  { value: DEFAULT_OPENROUTER_MODEL, label: 'DeepSeek V4.1 Flash', provider: 'openrouter' },
+  { value: 'openrouter/free', label: 'Auto Gratuito (Router automático)', provider: 'openrouter' },
   { value: 'dots-studio/dots-3-note-preview:free', label: 'Dots3 Note 512k (Documentos)', provider: 'openrouter' },
   { value: 'inclusionai/ling-3.0-flash-vl:free', label: 'Ling 3.0 Flash (Rápido)', provider: 'openrouter' },
   { value: 'cohere/north-mini-code:free', label: 'Cohere North Mini', provider: 'openrouter' },
   { value: 'liquid/lfm-2.5-2.6b:free', label: 'LiquidAI LFM 2.5', provider: 'openrouter' },
   { value: 'thinkingmachines/inkling-small:free', label: 'Inkling Small (free)', provider: 'openrouter' },
-  { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' },
 ];
 
 export function getModelsForProvider(provider: AIProvider): AIModelOption[] {
@@ -172,7 +174,7 @@ export function getModelsForProvider(provider: AIProvider): AIModelOption[] {
 }
 
 export function getDefaultModelForProvider(provider: AIProvider): string {
-  return provider === 'gemini' ? 'gemini-3.8-flash' : 'openrouter/free';
+  return provider === 'gemini' ? 'gemini-3.8-flash' : DEFAULT_OPENROUTER_MODEL;
 }
 
 export function getHistoryTabForTipoNivel(tipoNivel: ProjectType): HistoryTab {

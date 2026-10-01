@@ -7,6 +7,7 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { AppFacade } from '../../../../app.facade'; // Will be created to hold global methods
 import { AuthFacade } from '../../../auth/services/auth.facade';
+import { getDefaultModelForProvider } from '../../../projects/models/project.model';
 
 @Component({
   selector: 'app-generator-view',
@@ -89,7 +90,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
                 <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
                 <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro Preview</option>
               } @else {
-                <option value="openrouter/free">Auto Gratuito (Recomendado)</option>
+                <option value="openrouter/free">Auto Gratuito (Router automático)</option>
                 <option value="thinkingmachines/inkling-small:free">Inkling Small (free)</option>
                 <option value="dots-studio/dots-3-note-preview:free">Dots3 Note 512k (Documentos)</option>
                 <option value="inclusionai/ling-3.0-flash-vl:free">Ling 3.0 Flash (Rápido)</option>
@@ -149,7 +150,7 @@ export class GeneratorViewComponent {
   onAiChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
     this.projects.selectedAi.set(value);
-    this.projects.selectedModel.set(value === 'gemini' ? 'gemini-3.8-flash' : 'openrouter/free');
+    this.projects.selectedModel.set(getDefaultModelForProvider(value));
   }
 
   onModelChange(event: Event) {

@@ -51,6 +51,9 @@ describe('App', () => {
       showErrorModal: signal(false),
       errorTitle: signal(''),
       errorMessage: signal(''),
+      queueToastMessage: signal<string | null>(null),
+      queueToastRestartToken: signal(0),
+      dismissQueueToast: vi.fn(),
       
       viewPastProject: vi.fn()
     };

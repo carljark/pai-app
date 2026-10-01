@@ -33,6 +33,9 @@ export class AppFacade {
   confirmMessage = signal<string>('');
   confirmAction = signal<() => void>(() => {});
 
+  queueToastMessage = signal<string | null>(null);
+  queueToastRestartToken = signal(0);
+
   private shownCompletedProjectIds = new Set<string>();
 
   constructor() {
@@ -121,6 +124,8 @@ export class AppFacade {
     } else {
       this.projects.historyTab.set('FPB');
     }
+    this.notifications.openRecentActivity();
+    this.showQueueToast(this.trans.t().toastProjectQueued);
     this.projects.isGenerating.set(true);
     this.projects.generateProject(this.layout.language()).subscribe({
       next: () => this.onGenerateSuccess(),
@@ -134,7 +139,15 @@ export class AppFacade {
     this.projects.extraInstructions?.set('');
     this.projects.loadHistory();
     this.layout.switchView('history');
-    this.notifications.openRecentActivity();
+  }
+
+  private showQueueToast(message: string): void {
+    this.queueToastMessage.set(message);
+    this.queueToastRestartToken.update(token => token + 1);
+  }
+
+  dismissQueueToast(): void {
+    this.queueToastMessage.set(null);
   }
 
   private onGenerateError(err: any): void {

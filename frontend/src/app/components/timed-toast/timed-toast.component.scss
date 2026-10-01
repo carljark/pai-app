@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as variables;
+
+.timed-toast {
+  position: fixed;
+  z-index: 11000;
+  right: variables.$spacing-5;
+  bottom: variables.$spacing-5;
+  max-width: calc(100vw - #{variables.$spacing-10});
+  padding: variables.$spacing-3 variables.$spacing-5;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-primary-dark;
+  color: variables.$color-surface;
+  box-shadow: variables.$shadow-md;
+}

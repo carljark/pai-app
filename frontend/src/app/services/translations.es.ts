@@ -147,6 +147,7 @@ export const TRANSLATIONS_ES = {
   modalSelectAtLeastOne: 'Por favor, selecciona al menos un elemento de la lista.',
   modalProjectQueued: 'Proyecto en Cola',
   modalProjectQueuedDesc: 'Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.',
+  toastProjectQueued: 'Proyecto puesto en cola',
   modalGenerationError: 'Error al Iniciar Generación',
   modalProjectGenerated: '¡Proyecto Generado!',
   modalDeleteProject: 'Eliminar Proyecto',

@@ -5,6 +5,7 @@ import { AuthFormComponent } from './features/auth/components/auth-form/auth-for
 import { ErrorModalComponent } from './components/error-modal.component';
 import { InfoModalComponent } from './components/info-modal.component';
 import { ConfirmModalComponent } from './components/confirm-modal.component';
+import { TimedToastComponent } from './components/timed-toast/timed-toast.component';
 import { AdminDashboardComponent } from './features/admin/components/admin-dashboard/admin-dashboard.component';
 import { HomeDashboardComponent } from './features/home/components/home-dashboard/home-dashboard.component';
 
@@ -26,6 +27,7 @@ import { FeedbackViewComponent } from './features/feedback/components/feedback-v
     ErrorModalComponent, 
     InfoModalComponent, 
     ConfirmModalComponent, 
+    TimedToastComponent,
     AdminDashboardComponent, 
     HomeDashboardComponent, 
     AuthFormComponent, 

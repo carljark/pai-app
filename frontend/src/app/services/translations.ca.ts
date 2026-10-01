@@ -147,6 +147,7 @@ export const TRANSLATIONS_CA = {
   modalSelectAtLeastOne: 'Si us plau, selecciona almenys un element de la llista.',
   modalProjectQueued: 'Projecte a la Cua',
   modalProjectQueuedDesc: 'El teu projecte s\'ha posat a la cua de generació. S\'està processant en segon pla.\n\nPots veure\'n l\'estat des del botó de notificacions o l\'arxiu.',
+  toastProjectQueued: 'Projecte posat a la cua',
   modalGenerationError: 'Error al Iniciar la Generació',
   modalProjectGenerated: 'Projecte Generat!',
   modalDeleteProject: 'Eliminar Projecte',

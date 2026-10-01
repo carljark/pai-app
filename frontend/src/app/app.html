@@ -59,3 +59,10 @@
 @if (appFacade.showErrorModal()) {
   <app-error-modal [title]="appFacade.errorTitle()" [message]="appFacade.errorMessage()" (close)="appFacade.showErrorModal.set(false)"></app-error-modal>
 }
+@if (appFacade.queueToastMessage(); as toastMessage) {
+  <app-timed-toast
+    [message]="toastMessage"
+    [restartToken]="appFacade.queueToastRestartToken()"
+    (dismissed)="appFacade.dismissQueueToast()">
+  </app-timed-toast>
+}

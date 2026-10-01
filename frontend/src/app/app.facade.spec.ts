@@ -10,7 +10,7 @@ import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
 import { signal, WritableSignal } from '@angular/core';
-import { of, throwError } from 'rxjs';
+import { of, Subject, throwError } from 'rxjs';
 import { TRANSLATIONS_ES } from './services/translations.es';
 
 describe('AppFacade', () => {
@@ -219,6 +219,21 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
       expect(notificationsFacadeMock.openRecentActivity).toHaveBeenCalledOnce();
+    });
+
+    it('opens notifications and shows the queue toast before the request responds', () => {
+      const request = new Subject<unknown>();
+      curriculumFacadeMock.selectedRas.set(['ra1']);
+      projectsFacadeMock.generateProject.mockReturnValue(request);
+
+      facade.generateProject();
+
+      expect(notificationsFacadeMock.openRecentActivity).toHaveBeenCalledOnce();
+      expect(facade.queueToastMessage()).toBe('Proyecto puesto en cola');
+      expect(facade.queueToastRestartToken()).toBe(1);
+
+      request.next({});
+      expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
     });
 
     it('should generate project on success and set historyTab to ESO for DIVERSIFICACION_CURRICULAR', () => {

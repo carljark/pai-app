@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openrouter/mistralai/mistral-small-4",
+  "providers": {
+    "openrouter": {
+      "models": {
+        "mistral-small-4": {
+          "name": "Mistral Small 4",
+          "settings": {
+            "maxTokens": 8192, // Máximo de tokens de subida (ajusta según necesidad)
+            "costLimitPerSession": 5.00 // Tope de coste por sesión en USD (ejemplo: 5$)
+          }
+        }
+      }
+    }
+  },
+  "enabled_providers": [
+    "openrouter"
+  ],
+  "agents": {
+    "build": {
+      "system": "Actúa como un desarrollador experto en Angular y Node.js. Tus respuestas deben ser extremadamente directas. No saludes, no des introducciones ni resúmenes conceptuales al final. Si te pido modificar un componente, devuelve exclusivamente el bloque de código TS o HTML corregido. Usa TypeScript estricto. Si necesitas dar una explicación, limítala a una sola línea comentada dentro del código (//)."
+    }
+  }
+}

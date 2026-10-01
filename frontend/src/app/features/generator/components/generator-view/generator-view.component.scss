@@ -1,0 +1,59 @@
+@use '../../../../../styles/variables' as variables;
+
+.level-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+.form-group-course {
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-group-methodology {
+  flex: 2;
+  min-width: 240px;
+}
+
+.form-group-ai {
+  flex: 1.2;
+  min-width: 160px;
+}
+
+.form-group-model {
+  flex: 1.8;
+  min-width: 200px;
+}
+
+.extra-instructions-group {
+  margin-bottom: 24px;
+}
+
+.extra-instructions-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.optional-text {
+  font-size: 0.8rem;
+  color: variables.$color-text-muted;
+  font-weight: normal;
+}
+
+.extra-instructions-input {
+  resize: vertical;
+  min-height: 72px;
+  line-height: 1.5;
+  font-family: inherit;
+}

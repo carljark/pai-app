@@ -38,7 +38,7 @@ Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directri
 - Comprueba la compatibilidad zoneless de dependencias externas; por ejemplo, `<markdown>` de `ngx-markdown` es compatible, pero no se debe asumir lo mismo del pipe.
 - No importes `zone.js/testing` ni uses `fakeAsync`/`tick` o la utilidad de pruebas `async` de Angular. Para esperar la estabilidad, usa tests nativos `async`/`await` con `await fixture.whenStable()`.
 - **Zoneless no prohíbe `TestBed` ni `fixture.detectChanges()`:** úsalos cuando el test necesite crear el fixture o solicitar explícitamente una actualización de la vista.
-- Ejecuta `npm run build` y `npm test` del frontend cuando corresponda; ambos deben pasar. `npm test` también ejecuta `check-zoneless.js`.
+- **No ejecutes tests ni builds** (por ejemplo, `npm test`, `ng test`, `npm run build` o `ng build`) durante las tareas. Deja su ejecución al usuario, salvo que este lo solicite explícitamente.
 
 ## 7. Migraciones y modificaciones de datos
 

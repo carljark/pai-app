@@ -285,4 +285,18 @@ describe('App', () => {
     
     expect(component).toBeTruthy();
   });
+
+  it('should render the timed toast and handle its dismiss event', () => {
+    appFacadeMock.queueToastMessage.set('Proyecto puesto en cola');
+    appFacadeMock.queueToastRestartToken.set(1);
+    fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+
+    const toast = fixture.debugElement.query(By.css('app-timed-toast'));
+    expect(toast).toBeTruthy();
+    expect((fixture.nativeElement as HTMLElement).textContent).toContain('Proyecto puesto en cola');
+
+    toast.triggerEventHandler('dismissed', undefined);
+    expect(appFacadeMock.dismissQueueToast).toHaveBeenCalledOnce();
+  });
 });

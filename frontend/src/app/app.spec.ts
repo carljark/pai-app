@@ -84,7 +84,11 @@ describe('App', () => {
     };
     const mockNotificationsFacade = {
       notifications: signal([]),
-      unreadCount: signal(0)
+      unreadCount: signal(0),
+      recentActivityOpen: signal(false),
+      openRecentActivity: vi.fn(),
+      closeRecentActivity: vi.fn(),
+      markAllAsRead: vi.fn()
     };
     const mockFeedbackService = {
       feedbacks: signal([]),

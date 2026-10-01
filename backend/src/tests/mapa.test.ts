@@ -6,6 +6,7 @@ import { connectDB, closeDB, clearDB } from './testSetup';
 import { up as runMigration08 } from '../migrations/08_ingest_mapa_intermodular';
 import { up as runMigration09 } from '../migrations/09_deduplicate_mapa_peluqueria';
 import { up as runMigration10 } from '../migrations/10_ingest_mapa_peluqueria_desarrollados';
+import { up as runMigration11 } from '../migrations/11_ingest_mapa_peluqueria_actividades_corregidas';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -144,10 +145,10 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
         });
       });
 
-      expect(actsPelu1).toBe(1468);
-      expect(actsPelu2).toBe(1376);
-      expect(connsPelu1).toBe(385);
-      expect(connsPelu2).toBe(375);
+      expect(actsPelu1).toBe(846);
+      expect(actsPelu2).toBe(1407);
+      expect(connsPelu1).toBe(377);
+      expect(connsPelu2).toBe(367);
       expect(emptyConnsPelu1).toBe(0);
       expect(emptyConnsPelu2).toBe(0);
     });
@@ -167,7 +168,35 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
           totalConns1 += lo.connections.length;
         });
       });
-      expect(totalConns1).toBe(385);
+      expect(totalConns1).toBe(377);
+    });
+
+    it('debería ejecutar la migración 11 y cargar las actividades corregidas', async () => {
+      await runMigration11();
+
+      const pelu1 = await MapaModule.find({ tab: 'CFGM_PELUQUERIA' });
+      const pelu2 = await MapaModule.find({ tab: 'CFGM_PELUQUERIA_2' });
+
+      expect(pelu1.length).toBe(8);
+      expect(pelu2.length).toBe(8);
+
+      const mod848 = await MapaModule.findOne({ tab: 'CFGM_PELUQUERIA_2', code: '0848' });
+      expect(mod848).toBeTruthy();
+
+      let conns848 = 0;
+      let empty848 = 0;
+      const titles = new Set<string>();
+      mod848!.learningOutcomes.forEach((lo: any) => {
+        lo.connections.forEach((c: any) => {
+          conns848++;
+          if (!c.activities || c.activities.length === 0) empty848++;
+          c.activities.forEach((a: any) => titles.add(a.title_ca));
+        });
+      });
+
+      expect(conns848).toBe(51);
+      expect(empty848).toBe(0);
+      expect(titles.size).toBe(108);
     });
   });
 });

@@ -226,10 +226,10 @@ export class MapaIntermodularFacade {
     const isCa = lang === 'catalan';
     const modName = isCa ? mod.name_ca : mod.name_es;
     const raText = isCa ? ra.text_ca : ra.text_es;
-    
-    let summary = isCa 
-      ? `=== MAPA INTERMODULAR FPB: ${mod.code} - ${modName} ===\n\n`
-      : `=== MAPA INTERMODULAR FPB: ${mod.code} - ${modName} ===\n\n`;
+
+    const tabLabel = this.getMapaTabLabel(isCa);
+
+    let summary = `=== MAPA INTERMODULAR ${tabLabel}: ${mod.code} - ${modName} ===\n\n`;
 
     summary += `${ra.code}: ${raText}\n\n`;
     summary += isCa ? `--- CONNEXIONS INTERMODULARS ---\n` : `--- CONEXIONES INTERMODULARES ---\n`;
@@ -259,6 +259,20 @@ export class MapaIntermodularFacade {
     });
 
     return summary;
+  }
+
+  private getMapaTabLabel(isCa: boolean): string {
+    const tab = this.activeTab();
+    if (isCa) {
+      if (tab === 'FPB') return 'CFGB Perruqueria i Estètica';
+      if (tab === 'CFGM') return 'CFGM Estètica i Bellesa';
+      if (tab === 'CFGM_PELUQUERIA') return 'CFGM Perruqueria i Cosmètica Capil·lar 1r';
+      return 'CFGM Perruqueria i Cosmètica Capil·lar 2n';
+    }
+    if (tab === 'FPB') return 'CFGB Peluquería y Estética';
+    if (tab === 'CFGM') return 'CFGM Estética y Belleza';
+    if (tab === 'CFGM_PELUQUERIA') return 'CFGM Peluquería y Cosmética Capilar 1º';
+    return 'CFGM Peluquería y Cosmética Capilar 2º';
   }
 
 

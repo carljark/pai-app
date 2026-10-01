@@ -164,12 +164,12 @@ describe('CurriculumFacade', () => {
     // Complete mismatch fallback
     facade.selectedRas.set(['Algo totalmente desconocido']);
     details = facade.selectedItemsDetails();
-    expect(details[0].subject).toBe('FP Básica');
+    expect(details[0].subject).toBe('CFGB Peluquería y Estética');
 
     localStorage.setItem('pai_lang', 'catalan');
     facade.selectedRas.set(['Altre ítem totalment desconegut']);
     details = facade.selectedItemsDetails();
-    expect(details[0].subject).toBe('FP Bàsica');
+    expect(details[0].subject).toBe('CFGB Perruqueria i Estètica');
   });
 
   it('should clear selection and persist to localStorage when setTipoNivel changes level', () => {

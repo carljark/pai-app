@@ -1,7 +1,7 @@
 import { FPBModule } from '../models/mapa-intermodular.model';
 
 /**
- * Seed data oficial con los 11 módulos de FPB Peluquería y Estética,
+ * Seed data oficial con los 11 módulos de CFGB Peluquería y Estética,
  * criterios de evaluación implicados, criterios relacionados de otros módulos,
  * justificaciones pedagógicas y actividades prácticas desenvolupadas.
  */

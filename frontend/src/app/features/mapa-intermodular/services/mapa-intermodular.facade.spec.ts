@@ -136,6 +136,19 @@ describe('MapaIntermodularFacade', () => {
     expect(summaryCa).toContain('CONNEXIONS INTERMODULARS');
   });
 
+  it('should build the export summary header for every active tab and language', () => {
+    const tabs: Array<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'> =
+      ['FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2'];
+
+    for (const tab of tabs) {
+      facade.activeTab.set(tab);
+      expect(facade.exportConnectionSummary('castellano')).toContain('MAPA INTERMODULAR');
+      expect(facade.exportConnectionSummary('catalan')).toContain('MAPA INTERMODULAR');
+    }
+
+    facade.activeTab.set('FPB');
+  });
+
   it('should test fallbacks for unknown module or RA and empty list', () => {
     facade.selectedModuleCode.set('non_existent');
     expect(facade.selectedModule()).toBeNull();

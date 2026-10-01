@@ -188,5 +188,97 @@ describe('NotificationsFacade', () => {
     facade.clearLatestNotification();
     expect(facade.latestNotification()).toBeNull();
   });
+
+  it('loadNotifications should filter items by projectId or known status', () => {
+    httpMock.get.mockReturnValueOnce(of([
+      { _id: 'a', projectId: 'p1' },
+      { _id: 'b', status: 'generando' },
+      { _id: 'c', status: 'desconocido' },
+      { _id: 'd' }
+    ]));
+
+    facade.loadNotifications();
+
+    const ids = facade.notifications().map(n => n.id);
+    expect(ids).toContain('a');
+    expect(ids).toContain('b');
+    expect(ids).not.toContain('c');
+    expect(ids).not.toContain('d');
+    expect(ids.length).toBe(2);
+  });
+
+  it('handleSseEvent should accept events whose only projectId is inside the notification', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+
+    updatesSubject.next({
+      type: 'PROJECT_STATUS',
+      notification: { _id: 'n5', projectId: 'p5', status: 'generando' }
+    });
+
+    expect(facade.notifications().some(n => n.projectId === 'p5')).toBe(true);
+    expect(facade.latestNotification()?.projectId).toBe('p5');
+  });
+
+  it('handleSseEvent should handle a missing current user id', () => {
+    (facade as any).handleSseEvent({ type: 'PROJECT_STATUS', projectId: 'p7', status: 'en_cola' });
+
+    expect(facade.notifications().some(n => n.projectId === 'p7')).toBe(true);
+  });
+
+  it('mergeNotification should prepend notifications without projectId', () => {
+    const result = (facade as any).mergeNotification([], { id: 'x' });
+
+    expect(result.length).toBe(1);
+    expect(result[0].id).toBe('x');
+  });
+
+  it('openRecentActivity should resync, open and mark all as read; closeRecentActivity should close', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    httpMock.get.mockClear();
+
+    facade.openRecentActivity();
+
+    expect(httpMock.get).toHaveBeenCalledWith('/api/notifications');
+    expect(facade.recentActivityOpen()).toBe(true);
+    expect(httpMock.post).toHaveBeenCalledWith('/api/notifications/read-all', {});
+
+    facade.closeRecentActivity();
+    expect(facade.recentActivityOpen()).toBe(false);
+  });
+
+  it('should reload notifications when the tab becomes visible and there is a user', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    httpMock.get.mockClear();
+
+    Object.defineProperty(document, 'visibilityState', { value: 'visible', configurable: true });
+    document.dispatchEvent(new Event('visibilitychange'));
+
+    expect(httpMock.get).toHaveBeenCalledWith('/api/notifications');
+  });
+
+  it('should not reload notifications when the tab is hidden or there is no user', () => {
+    TestBed.flushEffects();
+    httpMock.get.mockClear();
+
+    Object.defineProperty(document, 'visibilityState', { value: 'hidden', configurable: true });
+    document.dispatchEvent(new Event('visibilitychange'));
+    expect(httpMock.get).not.toHaveBeenCalled();
+
+    Object.defineProperty(document, 'visibilityState', { value: 'visible', configurable: true });
+    document.dispatchEvent(new Event('visibilitychange'));
+    expect(httpMock.get).not.toHaveBeenCalled();
+  });
+
+  it('should construct without a document (SSR-safe)', () => {
+    vi.stubGlobal('document', undefined);
+    try {
+      expect(() => TestBed.runInInjectionContext(() => new NotificationsFacade())).not.toThrow();
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
 });
 

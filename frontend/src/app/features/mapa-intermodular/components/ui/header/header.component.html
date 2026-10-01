@@ -13,7 +13,7 @@
       </div>
       <h1 class="mapa-header__title">
         @if (activeTab() === 'FPB') {
-          {{ isCa() ? 'Mapa Intermodular FPB' : 'Mapa Intermodular FPB' }}
+          {{ isCa() ? 'Mapa Intermodular CFGB Perruqueria i Estètica' : 'Mapa Intermodular CFGB Peluquería y Estética' }}
         } @else if (activeTab() === 'CFGM') {
           {{ isCa() ? 'Mapa intermodular del CFGM Estètica i Bellesa' : 'Mapa intermodular del CFGM Estética y Belleza' }}
         } @else if (activeTab() === 'CFGM_PELUQUERIA') {
@@ -38,8 +38,8 @@
       <p class="mapa-header__subtitle">
         @if (activeTab() === 'FPB') {
           {{ isCa() 
-            ? 'Explorador interactiu de connexions curriculars, criteris i activitats FPB.' 
-            : 'Explorador interactivo de conexiones curriculares, criterios y actividades FPB.' }}
+            ? 'Explorador interactiu de connexions curriculars, criteris i activitats del CFGB Perruqueria i Estètica.'
+            : 'Explorador interactivo de conexiones curriculares, criterios y actividades del CFGB Peluquería y Estética.' }}
         } @else if (activeTab() === 'CFGM_PELUQUERIA_2') {
           {{ isCa()
             ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 2n curs.'
@@ -95,7 +95,7 @@
       <div class="mapa-stats">
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalModules }}</span>
-          <span class="mapa-stat-label">{{ isCa() ? (activeTab() !== 'FPB' ? 'Mòduls CFGM' : 'Mòduls FPB') : (activeTab() !== 'FPB' ? 'Módulos CFGM' : 'Módulos FPB') }}</span>
+          <span class="mapa-stat-label">{{ isCa() ? (activeTab() !== 'FPB' ? 'Mòduls CFGM' : 'Mòduls CFGB') : (activeTab() !== 'FPB' ? 'Módulos CFGM' : 'Módulos CFGB') }}</span>
         </div>
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalRas }}</span>

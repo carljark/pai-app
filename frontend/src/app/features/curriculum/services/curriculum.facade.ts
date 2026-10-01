@@ -249,7 +249,7 @@ export class CurriculumFacade {
 
       const isCa = this.layoutService?.language() === 'catalan' ||
         (typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan');
-      const finalInfo = info || { subject: isCa ? 'FP Bàsica' : 'FP Básica', index: 1 };
+      const finalInfo = info || { subject: isCa ? 'CFGB Perruqueria i Estètica' : 'CFGB Peluquería y Estética', index: 1 };
       let shortDesc = desc.substring(0, 60);
       if (desc.length > 60) shortDesc += '...';
       return { subject: finalInfo.subject, index: finalInfo.index, shortDesc, fullDesc: desc };

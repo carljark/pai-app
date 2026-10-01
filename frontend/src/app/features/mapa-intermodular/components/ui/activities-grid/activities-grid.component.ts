@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
     @if (activities().length > 0) {
       <div class="mapa-activities-container">
         <h4 class="mapa-activities-title">
-          {{ isCa() ? (activeTab() !== 'FPB' ? 'Propostes d’Activitats i Reptes CFGM' : 'Propostes d’Activitats i Reptes FPB') : (activeTab() !== 'FPB' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos FPB') }}
+          {{ isCa() ? (activeTab() !== 'FPB' ? 'Propostes d’Activitats i Reptes CFGM' : 'Propostes d’Activitats i Reptes CFGB') : (activeTab() !== 'FPB' ? 'Propuestas de Actividades y Retos CFGM' : 'Propuestas de Actividades y Retos CFGB') }}
         </h4>
 
         <div class="mapa-activities-grid">
@@ -40,7 +40,7 @@ import { CommonModule } from '@angular/common';
                 </div>
 
                 <div class="mapa-meta-box mapa-meta-diversity">
-                  <strong>{{ isCa() ? (activeTab() !== 'FPB' ? 'Aprenentatges i Diversitat CFGM:' : 'Aprenentatges i Diversitat FPB:') : (activeTab() !== 'FPB' ? 'Aprendizajes y Diversidad CFGM:' : 'Aprendizajes y Diversidad FPB:') }}</strong>
+                  <strong>{{ isCa() ? (activeTab() !== 'FPB' ? 'Aprenentatges i Diversitat CFGM:' : 'Aprenentatges i Diversitat CFGB:') : (activeTab() !== 'FPB' ? 'Aprendizajes y Diversidad CFGM:' : 'Aprendizajes y Diversidad CFGB:') }}</strong>
                   <span>{{ isCa() ? act.diversitySupport_ca : act.diversitySupport_es }}</span>
                 </div>
               </div>

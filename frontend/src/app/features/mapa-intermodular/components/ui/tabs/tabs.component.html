@@ -3,7 +3,7 @@
     class="mapa-tab-btn" 
     [class.active]="activeTab() === 'FPB'"
     (click)="setTab('FPB')">
-    FPB
+    {{ isCa() ? 'CFGB Perruqueria i Estètica' : 'CFGB Peluquería y Estética' }}
   </button>
   <button 
     class="mapa-tab-btn" 

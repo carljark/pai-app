@@ -57,7 +57,8 @@ describe('AppFacade', () => {
 
     notificationsFacadeMock = {
       latestNotification: signal(null),
-      clearLatestNotification: vi.fn()
+      clearLatestNotification: vi.fn(),
+      openRecentActivity: vi.fn()
     };
 
     const telemetryServiceMock = {
@@ -215,10 +216,9 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.historyTab()).toBe('FPB');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(curriculumFacadeMock.clearSelection).toHaveBeenCalled();
-      expect(facade.infoTitle()).toBe('Proyecto en Cola');
-      expect(facade.showInfoModal()).toBe(true);
       expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
+      expect(notificationsFacadeMock.openRecentActivity).toHaveBeenCalledOnce();
     });
 
     it('should generate project on success and set historyTab to ESO for DIVERSIFICACION_CURRICULAR', () => {

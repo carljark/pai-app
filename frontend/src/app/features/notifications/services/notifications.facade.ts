@@ -13,6 +13,7 @@ export class NotificationsFacade {
 
   notifications = signal<AppNotification[]>([]);
   latestNotification = signal<AppNotification | null>(null);
+  recentActivityOpen = signal(false);
 
   constructor() {
     let sseSub: any = null;
@@ -97,8 +98,16 @@ export class NotificationsFacade {
     });
   }
 
+  openRecentActivity() {
+    this.recentActivityOpen.set(true);
+    this.markAllAsRead();
+  }
+
+  closeRecentActivity() {
+    this.recentActivityOpen.set(false);
+  }
+
   clearLatestNotification() {
     this.latestNotification.set(null);
   }
 }
-

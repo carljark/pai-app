@@ -132,12 +132,9 @@ export class AppFacade {
     this.projects.isGenerating.set(false);
     this.curriculum.clearSelection();
     this.projects.extraInstructions?.set('');
-    this.infoTitle.set(this.trans.t().modalProjectQueued);
-    this.infoMessage.set(this.trans.t().modalProjectQueuedDesc);
-    this.infoType.set('info');
-    this.showInfoModal.set(true);
     this.projects.loadHistory();
     this.layout.switchView('history');
+    this.notifications.openRecentActivity();
   }
 
   private onGenerateError(err: any): void {

@@ -39,20 +39,19 @@ import { RecentActivityModalComponent } from '../recent-activity-modal/recent-ac
       </button>
 
       <app-recent-activity-modal 
-        [isOpen]="isOpen()" 
+        [isOpen]="notificationsFacade.recentActivityOpen()" 
         [recentProjects]="recentProjects()" 
         [now]="now()" 
-        (closeModal)="isOpen.set(false)">
+        (closeModal)="notificationsFacade.closeRecentActivity()">
       </app-recent-activity-modal>
     </div>
   `
 })
 export class NotificationsBadgeComponent {
   projects = input<any[]>([]);
-  private notificationsFacade = inject(NotificationsFacade);
+  notificationsFacade = inject(NotificationsFacade);
   trans = inject(TranslationService);
   
-  isOpen = signal(false);
   now = signal(Date.now());
 
   unreadCount = computed(() => 
@@ -89,8 +88,7 @@ export class NotificationsBadgeComponent {
   }
 
   openNotifications() {
-    this.isOpen.set(true);
-    this.notificationsFacade.markAllAsRead();
+    this.notificationsFacade.openRecentActivity();
   }
 
   formatElapsed(seconds: number): string {
@@ -113,4 +111,3 @@ export class NotificationsBadgeComponent {
     return `${(ms / 1000).toFixed(1)}s`;
   }
 }
-

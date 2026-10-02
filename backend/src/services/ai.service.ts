@@ -135,13 +135,23 @@ export {
 
 export const DEFAULT_REASONING_EFFORT = 'high';
 
+/** Petición a la Interactions API; `thinking_level` solo en modelos con soporte confirmado. */
+const buildGeminiInteraction = (model: string, input: string, systemInstruction: string): any => ({
+  model,
+  input,
+  system_instruction: systemInstruction,
+  ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(model)
+    ? { generation_config: { thinking_level: 'high' } }
+    : {})
+});
+
 export const generateGeminiContent = async (
   userPrompt: string,
   systemInstruction: string,
   preferredModel = DEFAULT_GEMINI_MODEL,
   timeoutMs = 1_200_000
 ): Promise<SingleAiResult> => {
-  const { GoogleGenAI, ThinkingLevel } = await import('@google/genai');
+  const { GoogleGenAI } = await import('@google/genai');
   const ai = new GoogleGenAI({ httpOptions: { timeout: timeoutMs } });
   const modelsToTry = [preferredModel, ...GEMINI_MODEL_CASCADE.filter(m => m !== preferredModel)];
   let lastError: any = null;
@@ -155,21 +165,13 @@ export const generateGeminiContent = async (
       } else {
         console.log(`[Gemini] Iniciando generación con modelo ${modelName}...`);
       }
-      const request = ai.models.generateContent({
-        model: modelName,
-        contents: userPrompt,
-        config: {
-          systemInstruction,
-          ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(modelName)
-            ? { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } }
-            : {})
-        }
-      });
+      // `generateContent` devuelve 404 a cuentas nuevas en los modelos 3.x: se usa la Interactions API
+      const request = ai.interactions.create(buildGeminiInteraction(modelName, userPrompt, systemInstruction));
       const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
       cascadeLog.push(`${modelName}: OK`);
       return {
-        text: response.text,
-        model: (response as any).modelVersion || modelName,
+        text: response.output_text ?? '',
+        model: response.model || modelName,
         cascadeLog
       };
     } catch (err: any) {

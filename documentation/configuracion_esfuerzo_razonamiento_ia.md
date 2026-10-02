@@ -11,13 +11,15 @@ El ajuste afecta al razonamiento interno del modelo; la aplicación sigue mostra
 
 ## Gemini
 
-En `backend/src/services/ai.service.ts`, las llamadas a Gemini incluyen:
+Desde el 2 de octubre de 2026, `backend/src/services/ai.service.ts` llama a Gemini mediante la **Interactions API** (`ai.interactions.create`, `POST /v1beta/interactions`) en lugar de `models.generateContent`. Con la clave actual, `generateContent` devuelve `404 NOT_FOUND` en todos los modelos Gemini 3.x (y en 2.5 indica "no longer available to new users"), aunque aparezcan en el listado de modelos. La Interactions API sí responde con los mismos modelos. El texto se lee de `output_text` y el modelo usado de `model`.
+
+Las peticiones incluyen:
 
 ```ts
-thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH }
+{ model, input, system_instruction, generation_config: { thinking_level: 'high' } }
 ```
 
-Se aplica a los modelos Gemini conocidos que admiten `thinkingLevel`. Actualmente el catálogo habilita únicamente `gemini-3.6-flash`, por lo que la cascada interna de Gemini usa ese único modelo. Los modelos `3.8` y `3.7` se retiraron al sufrir saturación de capacidad (HTTP 503) recurrente; el detalle está en `backend/src/data/ai-models.ts`.
+`generation_config.thinking_level` se aplica a los modelos Gemini conocidos que admiten razonamiento. Actualmente el catálogo habilita únicamente `gemini-3.6-flash`, por lo que la cascada interna de Gemini usa ese único modelo. Los modelos `3.8` y `3.7` se retiraron al sufrir saturación de capacidad (HTTP 503) recurrente; el detalle está en `backend/src/data/ai-models.ts`.
 
 ## Catálogo único de modelos
 
@@ -32,6 +34,7 @@ El backend añade `reasoning_effort: "high"` únicamente para los modelos del ca
 | Modelo | Esfuerzo enviado |
 |---|---|
 | `deepseek/deepseek-v4.1-flash` | `high` |
+| `openai/gpt-6-luna` | `high` (de pago: 0,10 $/M entrada, 0,50 $/M salida) |
 | `thinkingmachines/inkling-small:free` | `high` |
 | `dots-studio/dots-3-note-preview:free` | No se envía |
 | `inclusionai/ling-3.0-flash-vl:free` | No se envía |
@@ -68,9 +71,9 @@ Si vuelven a aparecer 503, es el primer sitio donde mirar: conviene reducir esto
 
 Los tests de `backend/src/tests/ai.service.test.ts` comprueban que:
 
-- Gemini recibe `thinkingLevel: HIGH` en un modelo compatible.
+- Gemini se llama por `interactions.create` con `system_instruction` y `generation_config.thinking_level: "high"` en un modelo compatible, y sin `generation_config` en uno desconocido.
 - DeepSeek recibe `reasoning_effort: "high"` como modelo por defecto y al entrar como fallback.
-- Inkling recibe el esfuerzo alto.
+- Inkling y GPT-6 Luna reciben el esfuerzo alto.
 - `dots-studio/dots-3-note-preview:free` y el router dinámico `openrouter/free` no reciben ese parámetro.
 
 Para ejecutar los tests del backend:

@@ -34,6 +34,7 @@ export const GEMINI_AVAILABLE_MODELS: AiModelCatalogEntry[] = [
 
 export const OPENROUTER_AVAILABLE_MODELS: AiModelCatalogEntry[] = [
   { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter', reasoningEffort: true },
+  { value: 'openai/gpt-6-luna', label: 'GPT-6 Luna (OpenAI)', provider: 'openrouter', reasoningEffort: true },
   { value: 'openrouter/free', label: 'Auto Gratuito (Router automático)', provider: 'openrouter' },
   { value: 'dots-studio/dots-3-note-preview:free', label: 'Dots3 Note 512k (Documentos)', provider: 'openrouter' },
   { value: 'inclusionai/ling-3.0-flash-vl:free', label: 'Ling 3.0 Flash (Rápido)', provider: 'openrouter' },

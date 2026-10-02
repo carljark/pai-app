@@ -11,11 +11,10 @@ import { CE } from '../models/CE';
 import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, APPROVED_PROJECT_TEXT_LIMIT, MAX_APPROVED_PROJECTS } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
-  ThinkingLevel: { HIGH: 'HIGH' },
   GoogleGenAI: class {
-    models = {
-      generateContent: vi.fn().mockResolvedValue({
-        text: '# Mocked Project\nEsto es un proyecto de prueba generado por IA.'
+    interactions = {
+      create: vi.fn().mockResolvedValue({
+        output_text: '# Mocked Project\nEsto es un proyecto de prueba generado por IA.'
       })
     }
   }

@@ -7,14 +7,13 @@ import {
   DEFAULT_REASONING_EFFORT
 } from '../services/ai.service';
 
-const generateContentMock = vi.fn().mockResolvedValue({ text: 'Respuesta simulada Gemini' });
+const interactionsCreateMock = vi.fn().mockResolvedValue({ output_text: 'Respuesta simulada Gemini' });
 
 vi.mock('@google/genai', () => {
   return {
-    ThinkingLevel: { HIGH: 'HIGH' },
     GoogleGenAI: class {
-      models = {
-        generateContent: generateContentMock
+      interactions = {
+        create: interactionsCreateMock
       };
     }
   };
@@ -24,27 +23,37 @@ describe('AI Service', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
     delete process.env.OPENROUTER_API_KEY;
-    generateContentMock.mockReset();
-    generateContentMock.mockResolvedValue({ text: 'Respuesta simulada Gemini' });
+    interactionsCreateMock.mockReset();
+    interactionsCreateMock.mockResolvedValue({ output_text: 'Respuesta simulada Gemini' });
   });
 
   it('debería generar contenido con Gemini usando modelo por defecto gemini-3.6-flash', async () => {
     const res = await generateGeminiContent('prompt', 'instruction');
     expect(res.text).toBe('Respuesta simulada Gemini');
     expect(res.model).toBe('gemini-3.6-flash');
-    expect(generateContentMock).toHaveBeenCalledWith(expect.objectContaining({
+    expect(interactionsCreateMock).toHaveBeenCalledWith(expect.objectContaining({
       model: 'gemini-3.6-flash',
-      config: expect.objectContaining({ thinkingConfig: { thinkingLevel: 'HIGH' } })
+      system_instruction: 'instruction',
+      generation_config: { thinking_level: 'high' }
     }));
   });
 
+  it('debería devolver texto vacío si la interacción no trae output_text', async () => {
+    interactionsCreateMock.mockResolvedValueOnce({ status: 'completed', steps: [] });
+    const res = await generateGeminiContent('prompt', 'instruction', 'gemini-2.5-pro');
+    expect(res.text).toBe('');
+    expect(interactionsCreateMock).toHaveBeenCalledWith(
+      expect.not.objectContaining({ generation_config: expect.anything() })
+    );
+  });
+
   it('debería soportar preferredModel y fallback de modelos internos en Gemini', async () => {
-    // Primer intento falla con status HTTP (ej: 429 quota o 503 unavailable), segundo intento tiene éxito con modelVersion
+    // Primer intento falla con status HTTP (ej: 429 quota o 503 unavailable), segundo intento tiene éxito con model
     const httpError = new Error('Quota limit 429');
     (httpError as any).status = 429;
-    generateContentMock
+    interactionsCreateMock
       .mockRejectedValueOnce(httpError)
-      .mockResolvedValueOnce({ text: 'Respuesta segundo modelo', modelVersion: 'gemini-3.6-flash-v2' });
+      .mockResolvedValueOnce({ output_text: 'Respuesta segundo modelo', model: 'gemini-3.6-flash-v2' });
 
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     const res = await generateGeminiContent('prompt', 'instruction', 'gemini-2.5-pro');
@@ -56,12 +65,12 @@ describe('AI Service', () => {
   });
 
   it('generateGeminiContent debería manejar timeout si tarda demasiado', async () => {
-    generateContentMock.mockImplementation(() => new Promise((resolve) => setTimeout(resolve, 50)));
+    interactionsCreateMock.mockImplementation(() => new Promise((resolve) => setTimeout(resolve, 50)));
     await expect(generateGeminiContent('p', 'i', 'gemini-3.6-flash', 10)).rejects.toThrow('Timeout en Gemini');
   });
 
   it('generateGeminiContent debería relanzar otros errores cuando fallan todos los modelos', async () => {
-    generateContentMock.mockRejectedValue(new Error('Internal Gemini Error'));
+    interactionsCreateMock.mockRejectedValue(new Error('Internal Gemini Error'));
     await expect(generateGeminiContent('p', 'i')).rejects.toMatchObject({
       message: 'Internal Gemini Error',
       cascadeLog: [
@@ -107,11 +116,13 @@ describe('AI Service', () => {
     await generateOpenRouterContent('prompt', 'instruction', 'thinkingmachines/inkling-small:free');
     await generateOpenRouterContent('prompt', 'instruction', 'dots-studio/dots-3-note-preview:free');
     await generateOpenRouterContent('prompt', 'instruction', 'openrouter/free');
+    await generateOpenRouterContent('prompt', 'instruction', 'openai/gpt-6-luna');
 
     const bodies = mockFetch.mock.calls.map(call => JSON.parse((call[1] as RequestInit).body as string));
     expect(bodies[0].reasoning_effort).toBe('high');
     expect(bodies[1]).not.toHaveProperty('reasoning_effort');
     expect(bodies[2]).not.toHaveProperty('reasoning_effort');
+    expect(bodies[3].reasoning_effort).toBe('high');
   });
 
   it('generateOpenRouterContent debería manejar respuesta fallida HTTP', async () => {
@@ -156,7 +167,7 @@ describe('AI Service', () => {
     }));
     const mockFetch = vi.mocked(fetch);
 
-    generateContentMock.mockRejectedValue(new Error('Quota limit'));
+    interactionsCreateMock.mockRejectedValue(new Error('Quota limit'));
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     const res = await generateAiContentWithFallback('p', 'i', 'gemini');
@@ -180,7 +191,7 @@ describe('AI Service', () => {
   it('generateAiContentWithFallback debería hacer fallback a Gemini si OpenRouter falla', async () => {
     process.env.OPENROUTER_API_KEY = 'test_key';
     vi.stubGlobal('fetch', vi.fn().mockRejectedValueOnce(new Error('Network error')));
-    generateContentMock.mockResolvedValueOnce({ text: 'Respuesta simulada Gemini' });
+    interactionsCreateMock.mockResolvedValueOnce({ output_text: 'Respuesta simulada Gemini' });
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     const res = await generateAiContentWithFallback('p', 'i', 'openrouter');
@@ -202,7 +213,7 @@ describe('AI Service', () => {
 
   it('generateAiContentWithFallback debería llamar a onPhaseChange', async () => {
     process.env.OPENROUTER_API_KEY = 'test_key';
-    generateContentMock.mockRejectedValue(new Error('Quota limit'));
+    interactionsCreateMock.mockRejectedValue(new Error('Quota limit'));
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({ choices: [{ message: { content: 'Respuesta' } }] })
@@ -221,7 +232,7 @@ describe('AI Service', () => {
   it('generateAiContentWithFallback debería lanzar error si fallan ambos (incluso con error en string)', async () => {
     process.env.OPENROUTER_API_KEY = 'test_key';
     vi.stubGlobal('fetch', vi.fn().mockRejectedValueOnce('Error OR sin message'));
-    generateContentMock.mockRejectedValue('Error Gemini sin message');
+    interactionsCreateMock.mockRejectedValue('Error Gemini sin message');
 
     await expect(generateAiContentWithFallback('p', 'i', 'gemini')).rejects.toThrow('Fallaron todos los proveedores');
   });

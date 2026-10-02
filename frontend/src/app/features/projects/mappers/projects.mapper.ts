@@ -29,6 +29,7 @@ interface ProjectDto {
   tipoNivel: string;
   courseLevel: string;
   modules: string[];
+  ras?: string[];
   generatedContent?: {
     rawText: string;
     modules?: string[];
@@ -38,6 +39,7 @@ interface ProjectDto {
     courseLevel?: string;
   };
   userId: string | { _id: string; name: string };
+  collaborators?: { userId: string | { _id: string; name: string; email?: string }; addedAt?: string }[];
   createdAt: string;
   updatedAt: string;
 }
@@ -89,6 +91,7 @@ export function toCreateProjectPayload(domain: CreateProjectPayload): CreateProj
     courseLevel: domain.courseLevel,
     title: domain.title,
     extraInstructions: domain.extraInstructions,
+    collaboratorIds: domain.collaboratorIds,
   };
 }
 
@@ -142,6 +145,11 @@ function mapUserId(userId: string | { _id: string; name: string }): string | { _
   return userId;
 }
 
+function mapCollaborators(dto: ProjectDto['collaborators']) {
+  if (!Array.isArray(dto)) return [];
+  return dto.map(c => ({ userId: c.userId, addedAt: c.addedAt }));
+}
+
 export function fromProjectDto(dto: ProjectDto): Project {
   return {
     _id: dto._id,
@@ -150,8 +158,10 @@ export function fromProjectDto(dto: ProjectDto): Project {
     tipoNivel: mapTipoNivel(dto.tipoNivel),
     courseLevel: dto.courseLevel || '',
     modules: Array.isArray(dto.modules) ? dto.modules : [],
+    ras: Array.isArray(dto.ras) ? dto.ras : [],
     generatedContent: mapGeneratedContent(dto.generatedContent),
     userId: mapUserId(dto.userId),
+    collaborators: mapCollaborators(dto.collaborators),
     createdAt: dto.createdAt,
     updatedAt: dto.updatedAt,
   };

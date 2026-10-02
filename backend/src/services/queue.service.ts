@@ -46,7 +46,16 @@ async function saveProjectSuccess(
     userId: project.userId,
     action: 'GENERATE_PROJECT',
     projectId: project._id,
-    details: { generationTimeMs, title: project.title, provider: project.usedAiProvider, fallbackUsed, model, cascadeLog }
+    details: {
+      generationTimeMs,
+      title: project.title,
+      provider: project.usedAiProvider,
+      fallbackUsed,
+      model,
+      cascadeLog,
+      promptChars: project.aiPromptChars,
+      instructionChars: project.aiInstructionChars
+    }
   }).save();
 }
 

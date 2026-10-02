@@ -53,6 +53,17 @@ El 2 de octubre de 2026 se comprobó que la clave de Gemini está en el **nivel 
 
 Por eso se dejó solo `gemini-3.6-flash`, se eliminaron los reintentos sobre el mismo modelo (consumían la cuota de 5/min) y se centralizó el catálogo. Si se necesita más capacidad, la solución de fondo es activar la facturación del proyecto de Google Cloud.
 
+## Tamaño del prompt y 503
+
+Un prompt extremadamente largo o pesado también puede provocar `503` (el proveedor rechaza la petición "compleja"). La construcción del prompt inyecta ejemplos INTEF, proyectos aprobados y documentos de coincidencias; en producción se midió un `aiInstruction` de ~76.000 caracteres. Para acotarlo:
+
+- `MAX_INTEF_EXAMPLES = 8` y cada ejemplo se recorta a `MAX_INTEF_EXAMPLE_CHARS = 1200` (`ai.service.ts`).
+- `MAX_COINCIDENCIA_INSTRUCTIONS_CHARS = 6000`, `MAX_FPB_MATCH_CHARS = 4000` y `MAX_FPB_MATCHES = 4` (`project.controller.ts`).
+- Los proyectos aprobados se limitan a `MAX_APPROVED_PROJECTS = 5` × `APPROVED_PROJECT_TEXT_LIMIT = 4000`.
+- Se registra `[Prompt] tipoNivel=... userPrompt=... chars, instruction=... chars` para vigilar el tamaño.
+
+Si vuelven a aparecer 503, es el primer sitio donde mirar: conviene reducir estos límites antes de cambiar de modelo.
+
 ## Verificación
 
 Los tests de `backend/src/tests/ai.service.test.ts` comprueban que:

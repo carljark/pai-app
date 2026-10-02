@@ -4,167 +4,23 @@ import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
+import { HistoryProjectCardComponent } from '../history-project-card/history-project-card.component';
+import { AppSelectComponent, SelectOption } from '../../../../components/app-select/app-select.component';
+import {
+  HistoryFilters,
+  HistoryTabId,
+  collectModuleOptions,
+  collectRaOptions,
+  matchesProjectFilters,
+  parseKeywords,
+} from '../../utils/history-filter';
 
 @Component({
   selector: 'app-history-view',
   standalone: true,
-  imports: [CommonModule],
-  styles: [`
-    .history-tabs {
-      display: flex; gap: 24px; border-bottom: 1px solid var(--c-border); width: 100%; margin-top: 16px;
-    }
-    .history-tab {
-      padding: 8px 16px;
-      cursor: pointer;
-      font-weight: 500;
-      color: var(--c-text-muted);
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s ease;
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      font-size: 1rem;
-    }
-    .history-tab:hover {
-      color: var(--c-text);
-    }
-    .history-tab.active {
-      color: var(--c-primary);
-      border-bottom-color: var(--c-primary);
-    }
-    .search-wrapper {
-      position: relative;
-      max-width: 320px;
-      width: 100%;
-    }
-    .search-icon {
-      position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--c-text-muted); pointer-events: none;
-    }
-    .search-input {
-      width: 100%; padding: 8px 16px 8px 36px; border: 1px solid var(--c-border); border-radius: 20px; font-size: 0.9rem;
-      outline: none; transition: border-color 0.2s;
-    }
-    .search-input:focus { border-color: var(--c-primary); }
-    .filter-pill {
-      padding: 4px 12px;
-      border-radius: 16px;
-      border: 1px solid var(--c-border);
-      background: var(--c-surface);
-      font-size: 0.8rem;
-      font-weight: 500;
-      cursor: pointer;
-      color: var(--c-text-muted);
-      transition: all 0.2s;
-    }
-    .filter-pill.active {
-      background: var(--c-primary);
-      color: #ffffff;
-      border-color: var(--c-primary);
-    }
-  `],
-  template: `
-    <div class="app-header" style="flex-direction: column; align-items: flex-start; gap: 8px; border-bottom: none; padding-bottom: 0;">
-      <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <h2 class="app-header-title" style="margin: 0;">{{ trans.t().historyTitle }}</h2>
-        
-        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-          <div style="display: flex; gap: 6px;">
-            <button class="filter-pill" [class.active]="!onlyMine()" (click)="onlyMine.set(false)">
-              {{ trans.t().historyAllProjects }}
-            </button>
-            <button class="filter-pill" [class.active]="onlyMine()" (click)="onlyMine.set(true)">
-              {{ trans.t().historyMyProjects }}
-            </button>
-          </div>
-
-          <div class="search-wrapper">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" [placeholder]="trans.t().searchProjects" (input)="onSearch($event)" [value]="searchQuery()" class="search-input">
-          </div>
-        </div>
-      </div>
-      
-      <div class="history-tabs">
-        <button class="history-tab" [class.active]="activeTab() === 'FPB'" (click)="activeTab.set('FPB')">
-          {{ trans.t().courseLevelFP }}
-        </button>
-        <button class="history-tab" [class.active]="activeTab() === 'CFGM_PELUQUERIA'" (click)="activeTab.set('CFGM_PELUQUERIA')">
-          {{ trans.t().courseLevelCFGMPeluqueria }}
-        </button>
-
-        <button class="history-tab" [class.active]="activeTab() === 'CFGM'" (click)="activeTab.set('CFGM')">
-          {{ trans.t().courseLevelCFGM }}
-        </button>
-        <button class="history-tab" [class.active]="activeTab() === 'ESO'" (click)="activeTab.set('ESO')">
-          {{ trans.t().courseLevelPDC }}
-        </button>
-      </div>
-    </div>
-
-    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
-      @for (project of filteredProjects(); track project._id) {
-        <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-              <h3 style="margin: 0; font-size: 1.1rem; color: var(--c-text);">{{ getDisplayTitle(project) }}</h3>
-              @if (isMyProject(project)) {
-                <span style="font-size: 0.7rem; background: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
-                  {{ trans.t().historyMyProjectBadge }}
-                </span>
-              }
-            </div>
-            
-            <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-              <span class="badge" [class.badge-info]="project.status === 'borrador'" [class.badge-success]="project.status === 'publicado'" [class.badge-warning]="project.status === 'en_cola' || project.status === 'generando'" [class.badge-danger]="project.status === 'error'">
-                {{ project.status | uppercase }}
-              </span>
-              <span style="font-size: 0.85rem; color: var(--c-text-muted);">{{ project.createdAt | date:'short' }}</span>
-              <span style="font-size: 0.85rem; color: var(--c-text-muted);">• {{ project.modules?.join(', ') || project.generatedContent?.modules?.join(', ') || 'Varios' }}</span>
-              @if (project.courseLevel) {
-                <span style="font-size: 0.75rem; background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
-                  {{ project.courseLevel }}
-                </span>
-              }
-              @if (getAuthorName(project)) {
-                <span style="font-size: 0.85rem; color: var(--c-text-muted);">• 👤 {{ getAuthorName(project) }}</span>
-              }
-              @if (getAiProviderLabel(project)) {
-                <span style="font-size: 0.75rem; background: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
-                  {{ getAiProviderLabel(project) }}
-                </span>
-              }
-              @if (project.generationTimeMs) {
-                <span style="font-size: 0.75rem; background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">
-                  ⏱️ {{ (project.generationTimeMs / 1000).toFixed(1) }}s
-                </span>
-              }
-            </div>
-            @if (project.status === 'error' && (project.errorDetail || project.error)) {
-              <div style="font-size: 0.85rem; color: #b91c1c; background: #fee2e2; border: 1px solid #fecaca; padding: 6px 12px; border-radius: 6px; margin-top: 8px; word-break: break-word; max-width: 600px;">
-                ⚠️ Error: {{ project.errorDetail || project.error }}
-              </div>
-            }
-          </div>
-          <div style="display: flex; gap: 10px;">
-            @if (project.status === 'error') {
-              <button (click)="appFacade.retryProject(project)" class="btn-primary" style="background-color: #f59e0b; border-color: #d97706; padding: 6px 12px; font-size: 0.85rem;">{{ trans.t().retryBtn }}</button>
-              <button (click)="appFacade.viewPastProject(project)" class="btn-secondary" style="color: #ef4444;">{{ trans.t().viewError }}</button>
-            } @else if (project.status === 'borrador' || project.status === 'publicado') {
-              <button (click)="appFacade.viewPastProject(project)" class="btn-primary">{{ trans.t().openEditor }}</button>
-            }
-            <button (click)="appFacade.deleteProject(project._id)" class="btn-secondary" style="color: #ef4444; padding: 4px 8px;" [title]="trans.t().deleteFile">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-            </button>
-          </div>
-        </div>
-      } @empty {
-        <div style="text-align: center; padding: 40px; color: var(--c-text-muted);">
-          {{ trans.t().noProjectsInSection }}
-        </div>
-      }
-    </div>
-  `
+  imports: [CommonModule, HistoryProjectCardComponent, AppSelectComponent],
+  templateUrl: './history-view.component.html',
+  styleUrls: ['./history-view.component.scss']
 })
 export class HistoryViewComponent {
   appFacade = inject(AppFacade);
@@ -175,79 +31,50 @@ export class HistoryViewComponent {
   activeTab = this.projects.historyTab;
   onlyMine = signal<boolean>(false);
   searchQuery = signal<string>('');
+  moduleFilter = signal<string | null>(null);
+  raFilter = signal<string | null>(null);
 
-  getAuthorName(project: any): string | null {
-    return project.userId?.name || null;
-  }
+  readonly tabs: { id: HistoryTabId; key: string }[] = [
+    { id: 'FPB', key: 'courseLevelFP' },
+    { id: 'CFGM_PELUQUERIA', key: 'courseLevelCFGMPeluqueria' },
+    { id: 'CFGM', key: 'courseLevelCFGM' },
+    { id: 'ESO', key: 'courseLevelPDC' },
+  ];
 
-  isMyProject(project: any): boolean {
-    const user = this.auth.currentUser();
-    if (!user) return false;
-    const uid = user._id || (user as any).id;
-    const authorId = project.userId?._id || project.userId;
-    return authorId?.toString() === uid?.toString();
-  }
+  moduleOptions = computed(() => collectModuleOptions(this.projects.projectsHistory() || []));
+  raOptions = computed(() => collectRaOptions(this.projects.projectsHistory() || [], this.moduleFilter()));
 
-  getDisplayTitle(project: any): string {
-    const isGeneric = !project.title || 
-      project.title === 'Proyecto Integrador' || 
-      project.title === 'Proyecto de ESO' || 
-      project.title === 'Proyecto Generado';
-    if (isGeneric && project.modules && project.modules.length > 0) {
-      return project.modules.join(' + ');
-    }
-    return project.title || this.trans.t().untitledProject;
-  }
-
-  getAiProviderLabel(project: any): string | null {
-    const p = project.usedAiProvider || project.aiProvider;
-    if (p === 'openrouter') return this.trans.t().aiOpenRouter;
-    if (p === 'gemini') return this.trans.t().aiGemini;
-    if (project.usedModel) {
-      return project.usedModel.toLowerCase().includes('gemini')
-        ? this.trans.t().aiGemini
-        : this.trans.t().aiOpenRouter;
-    }
-    return null;
-  }
+  moduleSelectOptions = computed<SelectOption[]>(() => this.moduleOptions().map(m => ({ value: m, label: m })));
+  raSelectOptions = computed<SelectOption[]>(() => this.raOptions().map(r => ({ value: r, label: r })));
 
   filteredProjects = computed(() => {
-    let list = this.projects.projectsHistory() || [];
-    
-    // Filtro por Nivel / Pestaña
-    list = list.filter(p => {
-      if (this.activeTab() === 'FPB') {
-        return p.tipoNivel === 'FP_BASICA' || (!p.tipoNivel && !p.courseLevel?.includes('CFGM'));
-      } else if (this.activeTab() === 'CFGM') {
-        return p.tipoNivel === 'CFGM_ESTETICA';
-      } else if (this.activeTab() === 'CFGM_PELUQUERIA') {
-        return p.tipoNivel === 'CFGM_PELUQUERIA';
-      } else {
-        return p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO';
-      }
-    });
-
-    // Filtro Solo Proyectos Propios
-    if (this.onlyMine()) {
-      list = list.filter(p => this.isMyProject(p));
-    }
-
-    // Filtro de Búsqueda
-    const q = this.searchQuery().toLowerCase().trim();
-    if (q) {
-      list = list.filter(p => {
-        const title = (p.title || 'Proyecto sin título').toLowerCase();
-        const modules = (p.modules?.join(', ') || p.generatedContent?.modules?.join(', ') || 'Varios').toLowerCase();
-        const status = (p.status || '').toLowerCase();
-        const author = (this.getAuthorName(p) || '').toLowerCase();
-        return title.includes(q) || modules.includes(q) || status.includes(q) || author.includes(q);
-      });
-    }
-
-    return list;
+    const owner = this.auth.currentUser();
+    const ownerId = owner ? (owner._id || (owner as any).id)?.toString() : undefined;
+    const filters: HistoryFilters = {
+      tab: this.activeTab() as HistoryTabId,
+      onlyMine: this.onlyMine(),
+      ownerId,
+      keywords: parseKeywords(this.searchQuery()),
+      module: this.moduleFilter(),
+      ra: this.raFilter(),
+    };
+    return (this.projects.projectsHistory() || []).filter(p => matchesProjectFilters(p, filters));
   });
 
   onSearch(event: Event) {
     this.searchQuery.set((event.target as HTMLInputElement).value);
+  }
+
+  labelFor(key: string): string {
+    return (this.trans.t() as any)[key] || key;
+  }
+
+  onModuleChange(value: string) {
+    this.moduleFilter.set(value || null);
+    this.raFilter.set(null);
+  }
+
+  onRaChange(value: string) {
+    this.raFilter.set(value || null);
   }
 }

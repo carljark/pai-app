@@ -305,6 +305,12 @@ describe('AdminDashboardComponent', () => {
     expect(component.getLogGenerationTime({ projectId: { generationTimeMs: 8300 } })).toBe(8300);
     expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 }, projectId: { generationTimeMs: 8300 } })).toBe(12500);
     expect(component.getLogGenerationTime({})).toBeNull();
+
+    // getLogPromptSize
+    expect(component.getLogPromptSize({ details: { promptChars: 1200, instructionChars: 8000 } })).toBe('prompt 1200 car. · instrucción 8000 car.');
+    expect(component.getLogPromptSize({ projectId: { aiPromptChars: 10 } })).toBe('prompt 10 car.');
+    expect(component.getLogPromptSize({ details: { instructionChars: 20 } })).toBe('instrucción 20 car.');
+    expect(component.getLogPromptSize({})).toBeNull();
   });
 
   it('should return only failed model attempts from the cascade log', () => {

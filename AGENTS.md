@@ -26,6 +26,8 @@ Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directri
 
 ## 5. Diseño visual homogéneo
 
+- **Plantillas y estilos siempre en archivos propios:** los componentes Angular deben declarar su vista con `templateUrl` y sus estilos con `styleUrls`/`styleUrl`. Queda prohibido incrustar HTML o CSS en el TypeScript mediante `template:`/`styles:`.
+- **Estilos con convención BEM:** las clases CSS/SCSS deben seguir BEM (`bloque`, `bloque__elemento`, `bloque--modificador`), usando el selector del componente como bloque (p. ej. `.history-view`, `.history-view__tab`, `.history-view__tab--active`). Evita clases genéricas o anidadas que rompan el aislamiento del bloque.
 - Evita colores arbitrarios hardcodeados en atributos `style` de las plantillas. Prefiere las clases existentes (`btn-primary`, `btn-secondary`, `btn-danger`, etc.). Se permiten excepciones cuando el estilo dinámico o la animación lo requieran realmente.
 - Si hace falta CSS personalizado, usa la paleta corporativa y las variables de `_variables.scss` (`$color-primary`, `$color-success`, etc.); no inventes colores nuevos.
 - Mantén el mismo aspecto para acciones equivalentes: los CTA principales deben seguir el patrón compartido, normalmente `btn-primary`.

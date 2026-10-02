@@ -51,11 +51,17 @@ describe('App', () => {
       showErrorModal: signal(false),
       errorTitle: signal(''),
       errorMessage: signal(''),
+      showDuplicateModal: signal(false),
+      duplicateProjects: signal([]),
+      cancelDuplicates: vi.fn(),
+      confirmDuplicates: vi.fn(),
+      openDuplicateProject: vi.fn(),
       queueToastMessage: signal<string | null>(null),
       queueToastRestartToken: signal(0),
       dismissQueueToast: vi.fn(),
       
-      viewPastProject: vi.fn()
+      viewPastProject: vi.fn(),
+      openProjectInNewWindow: vi.fn()
     };
 
     const mockCurriculumFacade = {
@@ -73,6 +79,15 @@ describe('App', () => {
       selectedModel: signal('gemini-3.6-flash'),
       availableModels: signal([]),
       defaultModelForProvider: vi.fn(),
+      matchingProjects: signal([]),
+      directory: signal([]),
+      selectedCollaborators: signal([]),
+      toggleCollaborator: vi.fn(),
+      getCollaboratorNames: vi.fn().mockReturnValue([]),
+      getCollaboratorIds: vi.fn().mockReturnValue([]),
+      isShared: vi.fn().mockReturnValue(false),
+      addCollaborator: vi.fn(),
+      removeCollaborator: vi.fn(),
       historyTab: signal('FPB'),
       extraInstructions: signal('')
     };

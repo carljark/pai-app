@@ -5,12 +5,14 @@ import { AuthFormComponent } from './features/auth/components/auth-form/auth-for
 import { ErrorModalComponent } from './components/error-modal.component';
 import { InfoModalComponent } from './components/info-modal.component';
 import { ConfirmModalComponent } from './components/confirm-modal.component';
+import { DuplicateProjectsModalComponent } from './components/duplicate-projects-modal/duplicate-projects-modal.component';
 import { TimedToastComponent } from './components/timed-toast/timed-toast.component';
 import { AdminDashboardComponent } from './features/admin/components/admin-dashboard/admin-dashboard.component';
 import { HomeDashboardComponent } from './features/home/components/home-dashboard/home-dashboard.component';
 
 import { AppFacade } from './app.facade';
 import { LayoutService } from './services/layout.service';
+import { TranslationService } from './services/translation.service';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 import { GeneratorViewComponent } from './features/generator/components/generator-view/generator-view.component';
 import { HistoryViewComponent } from './features/history/components/history-view/history-view.component';
@@ -27,6 +29,7 @@ import { FeedbackViewComponent } from './features/feedback/components/feedback-v
     ErrorModalComponent, 
     InfoModalComponent, 
     ConfirmModalComponent, 
+    DuplicateProjectsModalComponent,
     TimedToastComponent,
     AdminDashboardComponent, 
     HomeDashboardComponent, 
@@ -46,6 +49,7 @@ export class App {
   authService = inject(AuthFacade);
   appFacade = inject(AppFacade);
   layout = inject(LayoutService);
+  trans = inject(TranslationService);
 
   @HostListener('window:resize')
   onResize() {

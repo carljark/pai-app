@@ -42,14 +42,31 @@ export interface Project {
   tipoNivel: ProjectType;
   courseLevel: string;
   modules: string[];
+  ras?: string[];
   generatedContent?: GeneratedContent;
   userId: string | { _id: string; name: string; email?: string };
+  collaborators?: Collaborator[];
   createdAt: string | Date;
   updatedAt: string | Date;
   // Campos opcionales que puede devolver la API (legacy)
   error?: string;
   errorDetail?: string;
   generationTimeMs?: number;
+  usedAiProvider?: AIProvider;
+  usedModel?: string;
+  aiProvider?: AIProvider;
+}
+
+export interface Collaborator {
+  userId: string | { _id: string; name: string; email?: string };
+  addedAt?: string | Date;
+}
+
+export interface DirectoryUser {
+  _id: string;
+  name: string;
+  email: string;
+  role: string;
 }
 
 export interface CreateProjectPayload {
@@ -63,6 +80,7 @@ export interface CreateProjectPayload {
   courseLevel: string;
   title: string;
   extraInstructions?: string;
+  collaboratorIds?: string[];
 }
 
 export interface UpdateProjectPayload {

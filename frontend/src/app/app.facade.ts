@@ -7,6 +7,7 @@ import { NotificationsFacade } from './features/notifications/services/notificat
 import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
+import { findProjectsWithSameSelection } from './features/projects/utils/selection-match';
 
 @Injectable({ providedIn: 'root' })
 export class AppFacade {
@@ -33,17 +34,23 @@ export class AppFacade {
   confirmMessage = signal<string>('');
   confirmAction = signal<() => void>(() => {});
 
+  showDuplicateModal = signal<boolean>(false);
+  duplicateProjects = signal<any[]>([]);
+
   queueToastMessage = signal<string | null>(null);
   queueToastRestartToken = signal(0);
 
   private shownCompletedProjectIds = new Set<string>();
   private lastHistorySignature = '';
+  private pendingProjectId: string | null =
+    typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('project') : null;
 
   constructor() {
     this.initAuthEffect();
     this.initViewEffect();
     this.initNotificationEffect();
     this.initHistoryRefreshEffect();
+    this.initOpenProjectFromUrl();
   }
 
   private initAuthEffect(): void {
@@ -129,6 +136,59 @@ export class AppFacade {
       this.showInfoModal.set(true);
       return;
     }
+
+    // Aviso de duplicados: si ya hay proyectos con exactamente los mismos RAs/CEs.
+    const duplicates = this.findProjectsWithSameSelection();
+    if (duplicates.length > 0) {
+      this.duplicateProjects.set(duplicates);
+      this.showDuplicateModal.set(true);
+      return;
+    }
+
+    this.enqueueGeneration();
+  }
+
+  private findProjectsWithSameSelection(): any[] {
+    return findProjectsWithSameSelection(this.projects.projectsHistory() || [], this.curriculum.selectedRas());
+  }
+
+  /** Abre el editor de un proyecto en una pestaña/ventana nueva mediante `?project=<id>`. */
+  openProjectInNewWindow(project: any): void {
+    if (!project?._id) return;
+    const url = `${window.location.origin}${window.location.pathname}?project=${project._id}`;
+    window.open(url, '_blank');
+  }
+
+  /** Abre el proyecto indicado en la URL (`?project=<id>`) cuando el historial está disponible. */
+  private initOpenProjectFromUrl(): void {
+    effect(() => {
+      const id = this.pendingProjectId;
+      if (!id) return;
+      const project = (this.projects.projectsHistory() || []).find((p: any) => p._id === id);
+      if (!project) return;
+      untracked(() => {
+        this.pendingProjectId = null;
+        try { window.history.replaceState({}, '', window.location.pathname); } catch { /* no-op */ }
+        this.viewPastProject(project);
+      });
+    });
+  }
+
+  confirmDuplicates(): void {
+    this.showDuplicateModal.set(false);
+    this.enqueueGeneration();
+  }
+
+  cancelDuplicates(): void {
+    this.showDuplicateModal.set(false);
+  }
+
+  openDuplicateProject(project: any): void {
+    this.showDuplicateModal.set(false);
+    this.viewPastProject(project);
+  }
+
+  private enqueueGeneration(): void {
     this.notifications.clearLatestNotification?.();
     const nivel = this.curriculum.tipoNivel();
     if (nivel === 'DIVERSIFICACION_CURRICULAR') {

@@ -73,11 +73,16 @@ describe('GeneratorViewComponent', () => {
           { value: 'dots-studio/dots-3-note-preview:free', label: 'Dots3 Note 512k (Documentos)', provider: 'openrouter' },
           { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }
         ],
-    defaultModelForProvider: (p: string) => p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash'
+    defaultModelForProvider: (p: string) => p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash',
+    directory: signal([{ _id: 'u2', name: 'Compañero', email: 'comp@test.com', role: 'teacher' }]),
+    selectedCollaborators: signal<string[]>([]),
+    toggleCollaborator: vi.fn(),
+    matchingProjects: signal([])
   };
 
   const mockAppFacade = {
-    generateProject: vi.fn()
+    generateProject: vi.fn(),
+    openProjectInNewWindow: vi.fn()
   };
 
   const mockAuthFacade = {

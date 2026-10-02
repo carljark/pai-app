@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CurriculumSelectorComponent } from './curriculum-selector.component';
 import { CurriculumFacade } from '../../services/curriculum.facade';
+import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { AppFacade } from '../../../../app.facade';
 import { ComponentRef, signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
@@ -11,12 +13,23 @@ describe('CurriculumSelectorComponent', () => {
   let fixture: ComponentFixture<CurriculumSelectorComponent>;
   let mockFacade: Partial<CurriculumFacade>;
   let mockTrans: any;
+  let mockProjects: any;
+  let mockAppFacade: any;
 
   beforeEach(async () => {
     mockTrans = {
       t: signal({
-        removeTooltip: 'Quitar'
+        removeTooltip: 'Quitar',
+        matchingProjectsTitle: 'proyectos con esta selección'
       })
+    };
+
+    mockProjects = {
+      matchingProjects: signal<any[]>([])
+    };
+
+    mockAppFacade = {
+      openProjectInNewWindow: vi.fn()
     };
 
     mockFacade = {
@@ -43,6 +56,8 @@ describe('CurriculumSelectorComponent', () => {
       imports: [CurriculumSelectorComponent],
       providers: [
         { provide: CurriculumFacade, useValue: mockFacade },
+        { provide: ProjectsFacade, useValue: mockProjects },
+        { provide: AppFacade, useValue: mockAppFacade },
         { provide: TranslationService, useValue: mockTrans }
       ]
     }).compileComponents();
@@ -134,5 +149,25 @@ describe('CurriculumSelectorComponent', () => {
     header.click();
     fixture.detectChanges();
     expect(component.isOpen()).toBe(true);
+  });
+
+  it('should list matching existing projects and open them in a new window', () => {
+    mockProjects.matchingProjects.set([
+      { _id: 'p1', title: 'Proyecto existente', status: 'borrador', createdAt: new Date().toISOString() }
+    ]);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.floating-cart__matches-summary')?.textContent).toContain('proyectos con esta selección');
+
+    const link = compiled.querySelector('.floating-cart__match-link') as HTMLButtonElement;
+    link.click();
+    expect(mockAppFacade.openProjectInNewWindow).toHaveBeenCalledWith(expect.objectContaining({ _id: 'p1' }));
+  });
+
+  it('should not render the matching section when there are no matches', () => {
+    mockProjects.matchingProjects.set([]);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.floating-cart__matches')).toBeNull();
   });
 });

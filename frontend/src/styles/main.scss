@@ -4,4 +4,26 @@
 @use 'layout';
 @use 'components';
 
+:root {
+  --c-primary: #{variables.$color-primary};
+  --c-primary-dark: #{variables.$color-primary-dark};
+  --c-primary-light: #{variables.$color-primary-light};
+  --c-bg: #{variables.$color-background};
+  --c-surface: #{variables.$color-surface};
+  --c-surface-alt: #{variables.$color-surface-alt};
+  --c-border: #{variables.$color-border};
+  --c-border-focus: #{variables.$color-border-focus};
+  --c-text: #{variables.$color-text-main};
+  --c-text-muted: #{variables.$color-text-muted};
+  --c-text-light: #{variables.$color-text-light};
+  --c-success: #{variables.$color-success};
+  --c-success-bg: #{variables.$color-success-bg};
+  --c-danger: #{variables.$color-danger};
+  --c-danger-bg: #{variables.$color-danger-bg};
+  --c-warning: #{variables.$color-warning};
+  --c-warning-bg: #{variables.$color-warning-bg};
+  --c-info: #{variables.$color-info};
+  --c-info-bg: #{variables.$color-info-bg};
+}
+
 markdown { table { @extend .table; border: 1px solid variables.$color-border; margin: variables.$spacing-4 0; } }

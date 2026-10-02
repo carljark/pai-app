@@ -21,6 +21,7 @@ import {
   ImportDocxResponse,
   RetryProjectResponse,
   AiModelsResponse,
+  DirectoryUser,
 } from '../models/project.model';
 
 import {
@@ -48,6 +49,23 @@ export class ProjectsService {
   /** Catálogo de modelos de IA (fuente única en el backend). */
   getAiModels(): Observable<AiModelsResponse> {
     return this.http.get<AiModelsResponse>('/api/ai/models');
+  }
+
+  /** Directorio de usuarios para invitar como colaboradores. */
+  getUserDirectory(): Observable<DirectoryUser[]> {
+    return this.http.get<DirectoryUser[]>('/api/users/directory');
+  }
+
+  addCollaborator(projectId: string, userId: string): Observable<Project> {
+    return this.http.post<any>(`${this.apiUrl}/${projectId}/collaborators`, { userId }).pipe(
+      map(fromProjectDto)
+    );
+  }
+
+  removeCollaborator(projectId: string, userId: string): Observable<Project> {
+    return this.http.delete<any>(`${this.apiUrl}/${projectId}/collaborators/${userId}`).pipe(
+      map(fromProjectDto)
+    );
   }
 
   // ---- Historial ----

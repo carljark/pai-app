@@ -1,0 +1,75 @@
+<div class="history-view">
+  <div class="history-view__header">
+    <h2 class="history-view__title">{{ trans.t().historyTitle }}</h2>
+
+    <div class="history-view__toolbar">
+      <div class="history-view__scope-pills">
+        <button
+          type="button"
+          class="history-view__pill"
+          [class.history-view__pill--active]="!onlyMine()"
+          (click)="onlyMine.set(false)">{{ trans.t().historyAllProjects }}</button>
+        <button
+          type="button"
+          class="history-view__pill"
+          [class.history-view__pill--active]="onlyMine()"
+          (click)="onlyMine.set(true)">{{ trans.t().historyMyProjects }}</button>
+      </div>
+
+      <div class="history-view__search">
+        <svg class="history-view__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="text"
+          class="history-view__search-input"
+          [placeholder]="trans.t().historySearchPlaceholder"
+          (input)="onSearch($event)"
+          [value]="searchQuery()">
+      </div>
+    </div>
+
+    <div class="history-view__filters">
+      <label class="history-view__filter-label">
+        {{ trans.t().historyFilterModule }}:
+        <app-select
+          size="sm"
+          [options]="moduleSelectOptions()"
+          [value]="moduleFilter() || ''"
+          [placeholder]="trans.t().historyFilterAllModules"
+          (valueChange)="onModuleChange($event)">
+        </app-select>
+      </label>
+      <label class="history-view__filter-label">
+        {{ trans.t().historyFilterRa }}:
+        <app-select
+          size="sm"
+          [options]="raSelectOptions()"
+          [value]="raFilter() || ''"
+          [placeholder]="trans.t().historyFilterAllRas"
+          (valueChange)="onRaChange($event)">
+        </app-select>
+      </label>
+      <span class="history-view__results">{{ filteredProjects().length }} {{ trans.t().historyResultsCount }}</span>
+    </div>
+
+    <div class="history-view__tabs">
+      @for (tab of tabs; track tab.id) {
+        <button
+          type="button"
+          class="history-view__tab"
+          [class.history-view__tab--active]="activeTab() === tab.id"
+          (click)="activeTab.set(tab.id)">{{ labelFor(tab.key) }}</button>
+      }
+    </div>
+  </div>
+
+  <div class="history-view__list">
+    @for (project of filteredProjects(); track project._id) {
+      <app-history-project-card [project]="project"></app-history-project-card>
+    } @empty {
+      <div class="history-view__empty">{{ trans.t().noProjectsInSection }}</div>
+    }
+  </div>
+</div>

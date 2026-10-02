@@ -9,6 +9,7 @@ import { tap } from 'rxjs/operators';
 import { AuthFacade } from '../../auth/services/auth.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
 import { ProjectsService } from './projects.service';
+import { findProjectsWithSameSelection } from '../utils/selection-match';
 import {
   Project,
   ProjectStatus,
@@ -21,6 +22,7 @@ import {
   AIProvider,
   AIModelOption,
   AiModelOptionDto,
+  DirectoryUser,
   MethodologyOption,
   getHistoryTabForTipoNivel,
   isFPProject,
@@ -54,6 +56,10 @@ export class ProjectsFacade {
   /** Catálogo de modelos recibido del backend. */
   private allModels = signal<AiModelOptionDto[]>([]);
   private defaultModels = signal<Record<AIProvider, string>>({ gemini: '', openrouter: '' });
+
+  /** Colaboradores: directorio de usuarios y selección para el nuevo proyecto. */
+  directory = signal<DirectoryUser[]>([]);
+  selectedCollaborators = signal<string[]>([]);
 
   // ============================================
   // STATE - Taller (Proyecto Activo)
@@ -130,6 +136,11 @@ export class ProjectsFacade {
       .map(({ value, label, provider }) => ({ value, label, provider }))
   );
 
+  /** Proyectos generados cuya selección de RAs/CEs coincide exactamente con la actual. */
+  matchingProjects = computed(() =>
+    findProjectsWithSameSelection(this.projectsHistory(), this.curriculumFacade.selectedRas())
+  );
+
   // ============================================
   // EFFECTS - Sincronización automática
   // ============================================
@@ -151,8 +162,57 @@ export class ProjectsFacade {
       const user = this.authFacade.currentUser();
       if (user) {
         this.loadHistory();
+        this.loadDirectory();
       }
     });
+  }
+
+  /** Carga el directorio de usuarios para invitar como colaboradores. */
+  private loadDirectory(): void {
+    this.projectsService.getUserDirectory().subscribe({
+      next: (users) => this.directory.set(users || []),
+      error: (err) => console.error('Error loading user directory', err),
+    });
+  }
+
+  /** Añade o quita un usuario de la selección de colaboradores del nuevo proyecto. */
+  toggleCollaborator(userId: string): void {
+    this.selectedCollaborators.update(list =>
+      list.includes(userId) ? list.filter(id => id !== userId) : [...list, userId]
+    );
+  }
+
+  /** Nombres de los colaboradores de un proyecto (para mostrar e invitar). */
+  getCollaboratorNames(project: Project): string[] {
+    return (project?.collaborators || [])
+      .map(c => (typeof c.userId === 'object' ? c.userId?.name : ''))
+      .filter((name): name is string => Boolean(name));
+  }
+
+  getCollaboratorIds(project: Project): string[] {
+    return (project?.collaborators || [])
+      .map(c => (typeof c.userId === 'string' ? c.userId : c.userId?._id))
+      .filter((id): id is string => Boolean(id));
+  }
+
+  isShared(project: Project): boolean {
+    return (project?.collaborators?.length || 0) > 0;
+  }
+
+  addCollaborator(projectId: string, userId: string) {
+    return this.projectsService.addCollaborator(projectId, userId).pipe(
+      tap({ next: (updated) => this.replaceInHistory(updated) })
+    );
+  }
+
+  removeCollaborator(projectId: string, userId: string) {
+    return this.projectsService.removeCollaborator(projectId, userId).pipe(
+      tap({ next: (updated) => this.replaceInHistory(updated) })
+    );
+  }
+
+  private replaceInHistory(updated: Project): void {
+    this.projectsHistory.update(list => list.map(p => p._id === updated._id ? updated : p));
   }
 
   /** Carga el catálogo de modelos desde el backend (fuente única). */
@@ -240,6 +300,7 @@ export class ProjectsFacade {
       courseLevel: this.curriculumFacade.curso(),
       title: title || defaultTitle,
       extraInstructions: extra || undefined,
+      collaboratorIds: this.selectedCollaborators().length > 0 ? this.selectedCollaborators() : undefined,
     };
 
     this.isGenerating.set(true);
@@ -251,6 +312,7 @@ export class ProjectsFacade {
           this.currentProjectId.set(res.project._id);
           this.generatedProject.set(res.project.generatedContent?.rawText || '');
           this.projectFiles.set([]);
+          this.selectedCollaborators.set([]);
           this.undoStacksByProject.update(map => ({ ...map, [res.project._id]: [] }));
           // Recargar historial para que aparezca
           this.loadHistory();

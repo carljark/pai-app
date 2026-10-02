@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { generateProject, listProjects, getProject, updateProject, deleteProject, streamUpdates, rewriteSection, retryProject } from '../controllers/project.controller';
+import { generateProject, listProjects, getProject, updateProject, deleteProject, streamUpdates, rewriteSection, retryProject, addCollaborator, removeCollaborator } from '../controllers/project.controller';
 import { exportDocx, importDocx } from '../controllers/docx.controller';
 import filesRoutes from './files.routes';
 import { requireApproved, requireAiAccess } from '../middlewares/auth.middleware';
@@ -19,6 +19,8 @@ router.get('/stream', streamUpdates);
 router.post('/generate', requireApproved, requireAiAccess, generateProject);
 router.post('/rewrite', requireApproved, requireAiAccess, rewriteSection);
 router.post('/:id/retry', requireApproved, requireAiAccess, retryProject);
+router.post('/:id/collaborators', requireApproved, addCollaborator);
+router.delete('/:id/collaborators/:userId', requireApproved, removeCollaborator);
 router.get('/', listProjects);
 router.get('/:id', getProject);
 router.put('/:id', updateProject);

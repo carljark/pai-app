@@ -9,7 +9,9 @@ import {
 } from '../data/ai-models';
 
 /** Nº máximo de ejemplos de referencia que se inyectan en el prompt. */
-export const MAX_INTEF_EXAMPLES = 20;
+export const MAX_INTEF_EXAMPLES = 8;
+/** Recorte de cada ejemplo para no saturar el prompt (y evitar 503 del proveedor). */
+export const MAX_INTEF_EXAMPLE_CHARS = 1200;
 
 export interface ExampleCriteria {
   tipoNivel?: string;
@@ -90,7 +92,14 @@ export const buildContexts = (settings: any, criteria: ExampleCriteria = {}) => 
       const allExamples = JSON.parse(fs.readFileSync(examplesPath, 'utf-8'));
       const selected = selectRelevantExamples(allExamples, criteria);
       if (selected.length > 0) {
-        intefExamplesContext = "\n--- EJEMPLOS DEL INTEF (más relevantes) ---\n" + JSON.stringify(selected);
+        const compact = selected.map(example => ({
+          title: example?.title,
+          modules: example?.modules,
+          ras: example?.ras,
+          methodology: example?.methodology,
+          originalContent: String(example?.originalContent || example?.content_sample || '').slice(0, MAX_INTEF_EXAMPLE_CHARS)
+        }));
+        intefExamplesContext = "\n--- EJEMPLOS DEL INTEF (más relevantes) ---\n" + JSON.stringify(compact);
       }
     }
   } catch (e) { console.warn("No se cargaron los ejemplos del INTEF"); }

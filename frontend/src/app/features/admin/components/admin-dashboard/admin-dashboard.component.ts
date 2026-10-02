@@ -275,6 +275,11 @@ import { FeedbackService } from '../../../feedback/services/feedback.service';
                 }
               </p>
             }
+            @if (getLogPromptSize(log)) {
+              <p style="margin: 3px 0 0 0; font-size: 0.85rem; color: #475569;">
+                📏 Tamaño del prompt: {{ getLogPromptSize(log) }}
+              </p>
+            }
             @if (log.details?.error) {
               <p style="margin: 0; font-size: 0.85rem; color: #e74c3c;">
                 ⚠️ Error: {{ log.details.error }}
@@ -389,6 +394,16 @@ export class AdminDashboardComponent {
 
   getLogGenerationTime(log: any): number | null {
     return log.details?.generationTimeMs || log.projectId?.generationTimeMs || null;
+  }
+
+  getLogPromptSize(log: any): string | null {
+    const prompt = log.details?.promptChars ?? log.projectId?.aiPromptChars;
+    const instruction = log.details?.instructionChars ?? log.projectId?.aiInstructionChars;
+    if (prompt == null && instruction == null) return null;
+    const parts: string[] = [];
+    if (prompt != null) parts.push(`prompt ${prompt} car.`);
+    if (instruction != null) parts.push(`instrucción ${instruction} car.`);
+    return parts.join(' · ');
   }
 
   getLogAttemptErrors(log: any): string[] {

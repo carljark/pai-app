@@ -1,17 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
-import { AppFacade } from '../../../../app.facade'; // Will be created to hold global methods
+import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
+import { AppSelectComponent, SelectOption } from '../../../../components/app-select/app-select.component';
 
 @Component({
   selector: 'app-generator-view',
   standalone: true,
-  imports: [CommonModule, CurriculumSelectorComponent],
+  imports: [CommonModule, CurriculumSelectorComponent, AppSelectComponent],
   templateUrl: './generator-view.component.html',
   styleUrls: ['./generator-view.component.scss']
 })
@@ -23,25 +24,58 @@ export class GeneratorViewComponent {
   appFacade = inject(AppFacade);
   auth = inject(AuthFacade);
 
-  onCourseChange(event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
+  courseOptions = computed<SelectOption[]>(() => {
+    const nivel = this.curriculum.tipoNivel();
+    if (nivel === 'FP_BASICA' || nivel === 'CFGM_PELUQUERIA') {
+      return [
+        { value: '1º', label: this.trans.t().firstYearOption },
+        { value: '2º', label: this.trans.t().secondYearOption },
+      ];
+    }
+    if (nivel === 'CFGM_ESTETICA') {
+      return [{ value: '1º', label: this.trans.t().firstYearOption }];
+    }
+    return [
+      { value: '3º', label: this.trans.t().thirdYearOption },
+      { value: '4º', label: this.trans.t().fourthYearOption },
+    ];
+  });
+
+  methodologyOptions = computed<SelectOption[]>(() => [
+    { value: 'ABP (Aprendizaje Basado en Problemas / Proyectos)', label: this.trans.t().methodologyABP },
+    { value: 'ABR (Aprendizaje Basado en Retos)', label: this.trans.t().methodologyABR },
+    { value: 'ApS (Aprendizaje y Servicio)', label: this.trans.t().methodologyApS },
+  ]);
+
+  aiOptions = computed<SelectOption[]>(() => [
+    { value: 'gemini', label: this.trans.t().aiGemini },
+    { value: 'openrouter', label: this.trans.t().aiOpenRouter },
+  ]);
+
+  modelOptions = computed<SelectOption[]>(() =>
+    this.projects.availableModels().map(model => ({ value: model.value, label: model.label }))
+  );
+
+  onCourseChange(value: string) {
     this.curriculum.setCurso(value);
   }
 
-  onMethodologyChange(event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
+  onMethodologyChange(value: string) {
     this.projects.methodology.set(value);
   }
 
-  onAiChange(event: Event) {
-    const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
-    this.projects.selectedAi.set(value);
-    this.projects.selectedModel.set(this.projects.defaultModelForProvider(value));
+  onAiChange(value: string) {
+    const provider = value as 'gemini' | 'openrouter';
+    this.projects.selectedAi.set(provider);
+    this.projects.selectedModel.set(this.projects.defaultModelForProvider(provider));
   }
 
-  onModelChange(event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
+  onModelChange(value: string) {
     this.projects.selectedModel.set(value);
+  }
+
+  getUserName(id: string): string {
+    return this.projects.directory().find(u => u._id === id)?.name || id;
   }
 
   onExtraInstructionsChange(event: Event) {

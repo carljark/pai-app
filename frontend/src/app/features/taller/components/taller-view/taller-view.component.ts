@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MarkdownComponent } from 'ngx-markdown';
@@ -10,11 +10,12 @@ import { TranslationService } from '../../../../services/translation.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
+import { AppSelectComponent, SelectOption } from '../../../../components/app-select/app-select.component';
 
 @Component({
   selector: 'app-taller-view',
   standalone: true,
-  imports: [CommonModule, FormsModule, MarkdownComponent],
+  imports: [CommonModule, FormsModule, MarkdownComponent, AppSelectComponent],
   templateUrl: './taller-view.component.html'
 })
 export class TallerViewComponent {
@@ -29,6 +30,15 @@ export class TallerViewComponent {
   isMobileResourcesCollapsed = signal<boolean>(typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
 
   sortByDate = (a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+
+  aiOptions = computed<SelectOption[]>(() => [
+    { value: 'gemini', label: this.trans.t().aiGemini },
+    { value: 'openrouter', label: this.trans.t().aiOpenRouter },
+  ]);
+
+  modelOptions = computed<SelectOption[]>(() =>
+    this.projects.availableModels().map(model => ({ value: model.value, label: model.label }))
+  );
 
   /** Helpers para template - acceso seguro a userId */
   getCurrentProjectUserName(): string | null {
@@ -115,14 +125,13 @@ export class TallerViewComponent {
     }
   }
 
-  onAiChange(event: Event) {
-    const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
-    this.projects.selectedAi.set(value);
-    this.projects.selectedModel.set(this.projects.defaultModelForProvider(value));
+  onAiChange(value: string) {
+    const provider = value as 'gemini' | 'openrouter';
+    this.projects.selectedAi.set(provider);
+    this.projects.selectedModel.set(this.projects.defaultModelForProvider(provider));
   }
 
-  onModelChange(event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
+  onModelChange(value: string) {
     this.projects.selectedModel.set(value);
   }
 

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { buildContexts, selectRelevantExamples, MAX_INTEF_EXAMPLES } from '../services/ai.service';
+import { buildContexts, selectRelevantExamples, MAX_INTEF_EXAMPLES, MAX_INTEF_EXAMPLE_CHARS } from '../services/ai.service';
 import fs from 'fs';
 
 const makeExample = (title: string, opts: any = {}) => ({
@@ -39,6 +39,16 @@ describe('ai.service', () => {
     const { intefExamplesContext } = buildContexts({}, {});
     const payload = JSON.parse(intefExamplesContext.split('\n').pop() as string);
     expect(payload).toHaveLength(MAX_INTEF_EXAMPLES);
+    vi.restoreAllMocks();
+  });
+
+  it('recorta el contenido de cada ejemplo para no saturar el prompt', () => {
+    const big = makeExample('Grande', { originalContent: 'x'.repeat(MAX_INTEF_EXAMPLE_CHARS + 500) });
+    vi.spyOn(fs, 'existsSync').mockReturnValue(true);
+    vi.spyOn(fs, 'readFileSync').mockReturnValue(JSON.stringify([big]) as any);
+    const { intefExamplesContext } = buildContexts({}, {});
+    const payload = JSON.parse(intefExamplesContext.split('\n').pop() as string);
+    expect(payload[0].originalContent).toHaveLength(MAX_INTEF_EXAMPLE_CHARS);
     vi.restoreAllMocks();
   });
 });

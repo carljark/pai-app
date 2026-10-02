@@ -143,25 +143,20 @@
                   </h3>
                   @if (auth.currentUser()?.role === 'admin') {
                     <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
-                      <select 
-                        id="taller-ai-select"
-                        class="form-select" 
-                        style="padding: 4px 8px; font-size: 0.8rem; width: auto; max-width: 120px; margin: 0; height: 32px;"
-                        [value]="projects.selectedAi()" 
-                        (change)="onAiChange($event)">
-                        <option value="gemini">{{ trans.t().aiGemini }}</option>
-                        <option value="openrouter">{{ trans.t().aiOpenRouter }}</option>
-                      </select>
-                      <select 
-                        id="taller-model-select"
-                        class="form-select" 
-                        style="padding: 4px 8px; font-size: 0.8rem; width: auto; max-width: 160px; margin: 0; height: 32px;"
-                        [value]="projects.selectedModel()" 
-                        (change)="onModelChange($event)">
-                        @for (model of projects.availableModels(); track model.value) {
-                          <option [value]="model.value">{{ model.label }}</option>
-                        }
-                      </select>
+                      <app-select
+                        inputId="taller-ai-select"
+                        size="sm"
+                        [options]="aiOptions()"
+                        [value]="projects.selectedAi()"
+                        (valueChange)="onAiChange($event)">
+                      </app-select>
+                      <app-select
+                        inputId="taller-model-select"
+                        size="sm"
+                        [options]="modelOptions()"
+                        [value]="projects.selectedModel()"
+                        (valueChange)="onModelChange($event)">
+                      </app-select>
                     </div>
                   }
                 </div>

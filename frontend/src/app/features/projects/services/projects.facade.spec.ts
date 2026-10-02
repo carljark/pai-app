@@ -82,8 +82,8 @@ describe('ProjectsFacade', () => {
 
     // Flush initial loadHistory from constructor effect
     TestBed.flushEffects();
-    const initReq = httpMock.expectOne('/api/projects');
-    initReq.flush([]);
+    httpMock.expectOne('/api/projects').flush([]);
+    httpMock.expectOne('/api/users/directory').flush([]);
   });
 
   afterEach(() => {
@@ -1057,6 +1057,16 @@ describe('ProjectsFacade', () => {
       expect(typeof facade.availableModels).toBe('function');
       expect(facade.availableModels()[0].value).toBe('gemini-3.6-flash');
       expect(facade.selectedModel()).toBe('gemini-3.6-flash');
+    });
+
+    it('should compute matchingProjects for the current selection', () => {
+      facade.projectsHistory.set([
+        { _id: 'p1', status: 'borrador', ras: ['ra1'] },
+        { _id: 'p2', status: 'borrador', ras: ['ra2'] },
+      ] as any);
+      mockCurriculumFacade.selectedRas.mockReturnValue(['ra1']);
+
+      expect(facade.matchingProjects().map((p: any) => p._id)).toEqual(['p1']);
     });
   });
 

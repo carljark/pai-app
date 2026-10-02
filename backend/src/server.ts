@@ -11,6 +11,7 @@ import notificationRoutes from './routes/notification.routes';
 import feedbackRoutes from './routes/feedback.routes';
 import mapaRoutes from './routes/mapa.routes';
 import aiRoutes from './routes/ai.routes';
+import userRoutes from './routes/user.routes';
 
 import { authMiddleware } from './middlewares/auth.middleware';
 
@@ -39,6 +40,7 @@ if (process.env.NODE_ENV !== 'test') {
 app.use('/api/auth', authRoutes);
 app.use('/api/mapa-intermodular', mapaRoutes);
 app.use('/api/ai', authMiddleware, aiRoutes);
+app.use('/api/users', authMiddleware, userRoutes);
 
 // Rutas Protegidas
 app.use('/api', authMiddleware);

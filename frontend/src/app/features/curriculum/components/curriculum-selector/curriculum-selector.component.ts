@@ -1,6 +1,8 @@
 import { Component, inject, input, output, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurriculumFacade } from '../../services/curriculum.facade';
+import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { AppFacade } from '../../../../app.facade';
 import { TranslationService } from '../../../../services/translation.service';
 
 @Component({
@@ -12,6 +14,8 @@ import { TranslationService } from '../../../../services/translation.service';
 })
 export class CurriculumSelectorComponent {
   facade = inject(CurriculumFacade);
+  projects = inject(ProjectsFacade);
+  appFacade = inject(AppFacade);
   trans = inject(TranslationService);
   title = input.required<string>();
   isOpen = signal(true);
@@ -21,4 +25,8 @@ export class CurriculumSelectorComponent {
   generateText = input.required<string>();
   generatingText = input.required<string>();
   generate = output<void>();
+
+  openProject(project: any): void {
+    this.appFacade.openProjectInNewWindow(project);
+  }
 }

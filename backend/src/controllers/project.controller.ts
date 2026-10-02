@@ -32,6 +32,30 @@ export const streamUpdates = (req: any, res: Response) => {
   });
 };
 
+const PROJECT_POPULATE = [
+  { path: 'userId', select: 'name email' },
+  { path: 'collaborators.userId', select: 'name email' }
+];
+
+const ownerIdOf = (project: any): string =>
+  ((project?.userId as any)?._id || project?.userId)?.toString();
+
+const canManageCollaborators = (project: any, user: any): boolean =>
+  user?.role === 'admin' || ownerIdOf(project) === user?._id?.toString();
+
+/** Normaliza la lista de ids de colaboradores recibida del cliente. */
+export const sanitizeCollaboratorIds = (value: any): { userId: string; addedAt: Date }[] => {
+  if (!Array.isArray(value)) return [];
+  const unique = new Set<string>();
+  for (const id of value) {
+    if (typeof id === 'string' && mongoose.isValidObjectId(id)) unique.add(id);
+  }
+  return Array.from(unique).map(userId => ({ userId, addedAt: new Date() }));
+};
+
+const loadPopulatedProject = (id: any) =>
+  Project.findById(id).populate(PROJECT_POPULATE);
+
 export const formatCriterion = (c: any): string => {
   if (!c) return '';
   if (typeof c === 'string') return c.trim();
@@ -65,9 +89,13 @@ export const filterCriteriaByCourse = (critList: any[], level?: string): any[] =
 };
 
 /** Nº máximo de proyectos publicados que se inyectan como referencia en el prompt. */
-export const MAX_APPROVED_PROJECTS = 5;
+export const MAX_APPROVED_PROJECTS = 2;
 /** Longitud máxima (caracteres) del texto de cada proyecto publicado inyectado. */
 export const APPROVED_PROJECT_TEXT_LIMIT = 4000;
+/** Límites para no generar prompts gigantes que provoquen 503 en el proveedor. */
+export const MAX_COINCIDENCIA_INSTRUCTIONS_CHARS = 6000;
+export const MAX_FPB_MATCH_CHARS = 4000;
+export const MAX_FPB_MATCHES = 2;
 
 /**
  * Construye el bloque de contexto con proyectos publicados de la plataforma.
@@ -133,7 +161,7 @@ export const generateProject = async (req: any, res: Response) => {
     }
 
     // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes, enriquecido con coincidencias de FPB)
-    const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel, extraInstructions } = req.body;
+    const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel, extraInstructions, collaboratorIds } = req.body;
     const settings = await Settings.findOne();
     const { schoolContextStr, intefExamplesContext } = buildContexts(settings, { tipoNivel, courseLevel, title, modules, selectedRas });
 
@@ -159,17 +187,18 @@ export const generateProject = async (req: any, res: Response) => {
     if (tipoNivel === 'FP_BASICA') {
       const generalPromptDoc = await FpbMatch.findOne({ type: 'prompt_coincidencias' });
       if (generalPromptDoc) {
-        coincidenciaInstructions = `\n\n--- INSTRUCCIONES ESPECÍFICAS DE DISEÑO PARA FP BÁSICA ---\n${generalPromptDoc.rawText}`;
+        const instructions = String(generalPromptDoc.rawText || '').slice(0, MAX_COINCIDENCIA_INSTRUCTIONS_CHARS);
+        coincidenciaInstructions = `\n\n--- INSTRUCCIONES ESPECÍFICAS DE DISEÑO PARA FP BÁSICA ---\n${instructions}`;
       }
 
       if (selectedCodes.size > 0) {
         const matches = await FpbMatch.find({
           code: { $in: Array.from(selectedCodes) },
           type: { $in: ['coincidencia', 'actividad_ampliada', 'relacion_criterios'] }
-        });
+        }).limit(MAX_FPB_MATCHES);
         if (matches.length > 0) {
           fpbMatchesContext = "\n\n--- COINCIDENCIAS Y ACTIVIDADES DE REFERENCIA DE FP BÁSICA (INSPIRACIÓN OBLIGATORIA) ---\n" +
-            matches.map(m => `[Archivo: ${m.fileName} - Tipo: ${m.type} - Módulo: ${m.code || 'Transversal'}]\n${m.rawText}`).join('\n\n');
+            matches.map(m => `[Archivo: ${m.fileName} - Tipo: ${m.type} - Módulo: ${m.code || 'Transversal'}]\n${String(m.rawText || '').slice(0, MAX_FPB_MATCH_CHARS)}`).join('\n\n');
         }
       }
     }
@@ -285,6 +314,8 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       userPrompt += `\n\n--- INSTRUCCIONES EXTRA DEL DOCENTE (OBLIGATORIAS) ---\n${extraInstructions.trim()}`;
     }
 
+    console.log(`[Prompt] tipoNivel=${tipoNivel} userPrompt=${userPrompt.length} chars, instruction=${baseInstruction.length} chars`);
+
     const defaultTitle = (modules && modules.length > 0)
       ? modules.join(' + ')
       : (selectedRas && selectedRas.length > 0 ? selectedRas.slice(0, 2).join(' + ') : 'Proyecto Generado');
@@ -303,7 +334,10 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       aiInstruction: baseInstruction, // Guardamos el system prompt
       extraInstructions: typeof extraInstructions === 'string' && extraInstructions.trim() ? extraInstructions.trim() : undefined,
       aiProvider: req.body.aiProvider === 'openrouter' ? 'openrouter' : 'gemini',
-      aiModel: req.body.aiModel ? String(req.body.aiModel).trim() : undefined
+      aiModel: req.body.aiModel ? String(req.body.aiModel).trim() : undefined,
+      aiPromptChars: userPrompt.length,
+      aiInstructionChars: baseInstruction.length,
+      collaborators: sanitizeCollaboratorIds(collaboratorIds)
     });
     const savedProject = await newProject.save();
 
@@ -339,7 +373,7 @@ export const listProjects = async (req: any, res: Response) => {
     if (mine === 'true') {
       filter = { userId };
     }
-    const projects = await Project.find(filter).sort({ createdAt: -1 }).populate('userId', 'name email');
+    const projects = await Project.find(filter).sort({ createdAt: -1 }).populate(PROJECT_POPULATE);
     res.json(projects);
   } catch (error) {
     res.status(500).json({ error: "Error al listar proyectos" });
@@ -348,7 +382,7 @@ export const listProjects = async (req: any, res: Response) => {
 
 export const getProject = async (req: any, res: Response) => {
   try {
-    const project = await Project.findById(req.params.id).populate('userId', 'name email');
+    const project = await Project.findById(req.params.id).populate(PROJECT_POPULATE);
     if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
     res.json(project);
   } catch (error) {
@@ -400,6 +434,54 @@ export const deleteProject = async (req: any, res: Response) => {
     res.json({ message: "Proyecto borrado exitosamente" });
   } catch (error) {
     res.status(500).json({ error: "Error al borrar proyecto" });
+  }
+};
+
+export const addCollaborator = async (req: any, res: Response) => {
+  try {
+    const project = await Project.findById(req.params.id);
+    if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
+    if (!canManageCollaborators(project, req.user)) {
+      return res.status(403).json({ error: 'Solo el autor puede gestionar colaboradores' });
+    }
+    const collaboratorId = String(req.body?.userId || req.params.userId || '');
+    if (!mongoose.isValidObjectId(collaboratorId)) {
+      return res.status(400).json({ error: 'Usuario inválido' });
+    }
+    if (ownerIdOf(project) === collaboratorId) {
+      return res.status(400).json({ error: 'El autor ya participa en el proyecto' });
+    }
+    const exists = (project.collaborators || []).some((c: any) => c.userId?.toString() === collaboratorId);
+    if (!exists) {
+      project.collaborators = [...(project.collaborators || []), { userId: collaboratorId, addedAt: new Date() }] as any;
+      await project.save();
+      await new ActivityLog({
+        userId: req.user?._id,
+        action: 'ADD_COLLABORATOR',
+        projectId: project._id,
+        details: { title: project.title, collaboratorId }
+      }).save();
+    }
+    res.json(await loadPopulatedProject(project._id));
+  } catch {
+    res.status(500).json({ error: 'Error al añadir colaborador' });
+  }
+};
+
+export const removeCollaborator = async (req: any, res: Response) => {
+  try {
+    const project = await Project.findById(req.params.id);
+    if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
+    if (!canManageCollaborators(project, req.user)) {
+      return res.status(403).json({ error: 'Solo el autor puede gestionar colaboradores' });
+    }
+    project.collaborators = (project.collaborators || []).filter(
+      (c: any) => c.userId?.toString() !== String(req.params.userId)
+    ) as any;
+    await project.save();
+    res.json(await loadPopulatedProject(project._id));
+  } catch {
+    res.status(500).json({ error: 'Error al quitar colaborador' });
   }
 };
 

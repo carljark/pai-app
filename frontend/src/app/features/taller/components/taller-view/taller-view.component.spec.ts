@@ -615,20 +615,17 @@ describe('TallerViewComponent', () => {
   });
 
   it('should update selectedAi and selectedModel on onAiChange', () => {
-    const eventOpenRouter = { target: { value: 'openrouter' } } as any;
-    component.onAiChange(eventOpenRouter);
+    component.onAiChange('openrouter');
     expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
     expect(mockProjectsFacade.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
 
-    const eventGemini = { target: { value: 'gemini' } } as any;
-    component.onAiChange(eventGemini);
+    component.onAiChange('gemini');
     expect(mockProjectsFacade.selectedAi()).toBe('gemini');
     expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.6-flash');
   });
 
   it('should update selectedModel on onModelChange', () => {
-    const event = { target: { value: 'gemini-3.6-flash' } } as any;
-    component.onModelChange(event);
+    component.onModelChange('gemini-3.6-flash');
     expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.6-flash');
   });
 
@@ -676,7 +673,7 @@ describe('TallerViewComponent', () => {
     modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
     expect(modelSelect).toBeTruthy();
     // Directly test the component method instead of DOM event
-    component.onModelChange({ target: { value: 'deepseek/deepseek-v4.1-flash' } } as unknown as Event);
+    component.onModelChange('deepseek/deepseek-v4.1-flash');
     expect(mockProjectsFacade.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
 
     // Switch back to gemini in DOM

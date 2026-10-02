@@ -32,6 +32,7 @@ describe('AppFacade', () => {
       loadRas: vi.fn(),
       loadCes: vi.fn(),
       selectedRas: signal([]),
+      groupedSelectedItems: signal([]),
       clearSelection: vi.fn(),
       tipoNivel: signal('FP_BASICA')
     };
@@ -45,6 +46,7 @@ describe('AppFacade', () => {
       currentProjectId: signal(''),
       generatedProject: signal(''),
       loadProjectFiles: vi.fn(),
+      projectsHistory: signal<any[]>([]),
       historyTab: signal('FPB'),
       extraInstructions: signal('')
     };
@@ -251,6 +253,71 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.historyTab()).toBe('ESO');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
+    });
+
+    it('should warn and list existing projects with the same selection', () => {
+      curriculumFacadeMock.selectedRas.set(['ra1', 'ra2']);
+      projectsFacadeMock.projectsHistory.set([
+        { _id: 'p1', title: 'Duplicado', status: 'borrador', ras: ['ra2', 'ra1'] },
+        { _id: 'p2', title: 'Otro', status: 'borrador', ras: ['ra1'] },
+        { _id: 'p3', title: 'Error', status: 'error', ras: ['ra1', 'ra2'] },
+      ]);
+
+      facade.generateProject();
+
+      expect(facade.showDuplicateModal()).toBe(true);
+      expect(facade.duplicateProjects().map((p: any) => p._id)).toEqual(['p1']);
+      expect(projectsFacadeMock.generateProject).not.toHaveBeenCalled();
+    });
+
+    it('should continue and generate when the user confirms the duplicate warning', () => {
+      curriculumFacadeMock.selectedRas.set(['ra1']);
+      projectsFacadeMock.projectsHistory.set([
+        { _id: 'p1', title: 'Duplicado', status: 'borrador', ras: ['ra1'] },
+      ]);
+      projectsFacadeMock.generateProject.mockReturnValue(of({}));
+
+      facade.generateProject();
+      expect(facade.showDuplicateModal()).toBe(true);
+
+      facade.confirmDuplicates();
+
+      expect(facade.showDuplicateModal()).toBe(false);
+      expect(projectsFacadeMock.generateProject).toHaveBeenCalled();
+    });
+
+    it('should cancel the duplicate warning without generating', () => {
+      curriculumFacadeMock.selectedRas.set(['ra1']);
+      projectsFacadeMock.projectsHistory.set([
+        { _id: 'p1', title: 'Duplicado', status: 'borrador', ras: ['ra1'] },
+      ]);
+
+      facade.generateProject();
+      facade.cancelDuplicates();
+
+      expect(facade.showDuplicateModal()).toBe(false);
+      expect(projectsFacadeMock.generateProject).not.toHaveBeenCalled();
+    });
+
+    it('should open an existing duplicate project from the warning', () => {
+      curriculumFacadeMock.selectedRas.set(['ra1']);
+      projectsFacadeMock.projectsHistory.set([
+        { _id: 'p1', title: 'Duplicado', status: 'borrador', ras: ['ra1'], generatedContent: { rawText: 'x' } },
+      ]);
+      facade.generateProject();
+
+      facade.openDuplicateProject({ _id: 'p1', generatedContent: { rawText: 'x' } });
+
+      expect(facade.showDuplicateModal()).toBe(false);
+      expect(projectsFacadeMock.currentProjectId()).toBe('p1');
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+    });
+
+    it('should open a project in a new window via ?project=<id>', () => {
+      const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
+      facade.openProjectInNewWindow({ _id: 'p1' });
+      expect(openSpy).toHaveBeenCalledWith(expect.stringContaining('project=p1'), '_blank');
+      openSpy.mockRestore();
     });
 
     it('should generate project on success and set historyTab to CFGM for CFGM_ESTETICA', () => {

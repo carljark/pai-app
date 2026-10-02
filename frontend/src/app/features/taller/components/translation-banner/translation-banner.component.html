@@ -1,0 +1,43 @@
+@if (translation.view(); as content) {
+  @if (translation.isTranslating()) {
+    <div class="translation-banner translation-banner--progress" role="status">
+      <span class="translation-banner__text">⏳ {{ trans.t().translationInProgress }}</span>
+    </div>
+  } @else if (content.missingTranslation) {
+    <div class="translation-banner">
+      <span class="translation-banner__text">🌐 {{ trans.t().translationMissing }}</span>
+      @if (canTranslate()) {
+        <button
+          type="button"
+          class="btn-primary translation-banner__action"
+          (click)="translation.translateCurrentProject()"
+        >
+          {{ trans.t().translateProjectBtn }}
+        </button>
+      }
+    </div>
+  } @else if (content.stale) {
+    <div class="translation-banner translation-banner--warning">
+      <span class="translation-banner__text">⚠️ {{ trans.t().translationStale }}</span>
+      @if (canTranslate()) {
+        <button
+          type="button"
+          class="btn-secondary translation-banner__action"
+          (click)="translation.translateCurrentProject()"
+        >
+          {{ trans.t().retranslateProjectBtn }}
+        </button>
+      }
+    </div>
+  } @else if (content.isTranslation) {
+    <div class="translation-banner translation-banner--info">
+      <span class="translation-banner__text">🌐 {{ trans.t().translationShowing }}</span>
+    </div>
+  }
+
+  @if (translation.translationError()) {
+    <div class="translation-banner translation-banner--error" role="alert">
+      <span class="translation-banner__text">{{ trans.t().translationError }}</span>
+    </div>
+  }
+}

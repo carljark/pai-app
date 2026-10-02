@@ -228,6 +228,15 @@ export const TRANSLATIONS_CA = {
   duplicateProceed: 'Continuar i generar',
   matchingProjectsTitle: 'projectes amb esta selecció',
 
+  // TRADUCCIÓ DEL PROJECTE
+  translationMissing: 'Aquest projecte es va generar en castellà.',
+  translateProjectBtn: 'Traduir al català',
+  translationShowing: 'Estàs veient la traducció al català. Els canvis es desen en aquesta versió.',
+  translationStale: "L'original ha canviat des que es va traduir.",
+  retranslateProjectBtn: 'Tornar a traduir',
+  translationInProgress: 'Traduint el projecte… pot tardar uns minuts.',
+  translationError: "No s'ha pogut traduir el projecte. Torna-ho a provar.",
+
   // SKELETON LOADER
   loadingData: 'Carregant dades...',
 };

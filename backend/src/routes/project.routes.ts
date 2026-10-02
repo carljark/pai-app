@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { generateProject, listProjects, getProject, updateProject, deleteProject, streamUpdates, rewriteSection, retryProject, addCollaborator, removeCollaborator } from '../controllers/project.controller';
 import { exportDocx, importDocx } from '../controllers/docx.controller';
+import { translateProject } from '../controllers/translation.controller';
 import filesRoutes from './files.routes';
 import { requireApproved, requireAiAccess } from '../middlewares/auth.middleware';
 import { uploadMemory } from '../middlewares/upload.middleware';
@@ -19,6 +20,7 @@ router.get('/stream', streamUpdates);
 router.post('/generate', requireApproved, requireAiAccess, generateProject);
 router.post('/rewrite', requireApproved, requireAiAccess, rewriteSection);
 router.post('/:id/retry', requireApproved, requireAiAccess, retryProject);
+router.post('/:id/translate', requireApproved, requireAiAccess, translateProject);
 router.post('/:id/collaborators', requireApproved, addCollaborator);
 router.delete('/:id/collaborators/:userId', requireApproved, removeCollaborator);
 router.get('/', listProjects);

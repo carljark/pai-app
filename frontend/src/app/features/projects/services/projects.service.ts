@@ -20,6 +20,8 @@ import {
   RetryProjectResponse,
   AiModelsResponse,
   DirectoryUser,
+  ContentLanguage,
+  AIProvider,
 } from '../models/project.model';
 
 import {
@@ -141,8 +143,24 @@ export class ProjectsService {
     return `${this.apiUrl}/${projectId}/files/${filename}`;
   }
 
-  exportDocx(projectId: string): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/${projectId}/export-docx`, { responseType: 'blob' });
+  /** Exporta la versión del idioma indicado (su traducción si existe). */
+  exportDocx(projectId: string, language: ContentLanguage): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/${projectId}/export-docx`, {
+      responseType: 'blob',
+      params: { lang: language },
+    });
+  }
+
+  /** Traduce el contenido original con la IA y devuelve el proyecto con la traducción guardada. */
+  translateProject(
+    projectId: string,
+    target: ContentLanguage,
+    aiProvider: AIProvider,
+    aiModel: string,
+  ): Observable<Project> {
+    return this.http
+      .post<ProjectDto>(`${this.apiUrl}/${projectId}/translate`, { target, aiProvider, aiModel })
+      .pipe(map(fromProjectDto));
   }
 
   importDocx(projectId: string, file: File): Observable<ImportDocxResponse> {

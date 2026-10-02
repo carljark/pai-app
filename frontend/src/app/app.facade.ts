@@ -9,7 +9,7 @@ import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
 import { findProjectsWithSameSelection } from './features/projects/utils/selection-match';
-import { Project } from './features/projects/models/project.model';
+import { Project, resolveProjectContent } from './features/projects/models/project.model';
 import { AppNotification } from './features/notifications/models/notification.model';
 
 @Injectable({ providedIn: 'root' })
@@ -304,11 +304,10 @@ export class AppFacade {
       return;
     }
     this.projects.currentProjectId.set(project._id);
-    const rawText =
-      typeof project.generatedContent === 'string'
-        ? project.generatedContent
-        : project.generatedContent?.rawText;
-    this.projects.generatedProject.set(rawText || 'Sin contenido');
+    // Muestra la traducción al idioma de la interfaz si existe; si no, el original
+    const view = resolveProjectContent(project, this.layout.language());
+    this.projects.contentLanguage.set(view.language);
+    this.projects.generatedProject.set(view.text || 'Sin contenido');
     this.projects.loadProjectFiles();
     this.layout.switchView('taller');
   }

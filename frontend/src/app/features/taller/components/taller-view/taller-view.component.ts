@@ -14,6 +14,7 @@ import {
 } from '../../../projects/mappers/projects.mapper';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
+import { TranslationBannerComponent } from '../translation-banner/translation-banner.component';
 import {
   AppSelectComponent,
   SelectOption,
@@ -22,7 +23,13 @@ import {
 @Component({
   selector: 'app-taller-view',
   standalone: true,
-  imports: [CommonModule, FormsModule, MarkdownComponent, AppSelectComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MarkdownComponent,
+    AppSelectComponent,
+    TranslationBannerComponent,
+  ],
   templateUrl: './taller-view.component.html',
 })
 export class TallerViewComponent {

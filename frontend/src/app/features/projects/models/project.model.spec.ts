@@ -5,7 +5,14 @@ import {
   isESOProject,
   AiModelsResponse,
   getOwnerId,
+  Project,
+  projectLanguage,
+  originalText,
+  resolveProjectContent,
+  projectTextIn,
 } from './project.model';
+
+const asProject = (p: object) => p as Project;
 
 describe('Project Model - Utility Functions', () => {
   it('should type the AI models response shape', () => {
@@ -107,6 +114,72 @@ describe('Project Model - Utility Functions', () => {
       expect(getOwnerId(undefined)).toBeUndefined();
       expect(getOwnerId(null)).toBeUndefined();
       expect(getOwnerId('')).toBeUndefined();
+    });
+  });
+
+  describe('idioma del contenido', () => {
+    const base = {
+      language: 'castellano',
+      contentVersion: 2,
+      generatedContent: { rawText: 'Original ES' },
+    };
+
+    it('projectLanguage usa castellano para proyectos antiguos', () => {
+      expect(projectLanguage({ language: 'catalan' })).toBe('catalan');
+      expect(projectLanguage({})).toBe('castellano');
+    });
+
+    it('originalText admite el formato legacy en texto plano', () => {
+      expect(originalText(asProject(base))).toBe('Original ES');
+      expect(originalText(asProject({ generatedContent: 'Legacy' }))).toBe('Legacy');
+      expect(originalText(asProject({}))).toBe('');
+    });
+
+    it('muestra el original cuando la interfaz está en su idioma', () => {
+      expect(resolveProjectContent(asProject(base), 'castellano')).toEqual({
+        text: 'Original ES',
+        language: 'castellano',
+        isTranslation: false,
+        stale: false,
+        missingTranslation: false,
+      });
+    });
+
+    it('indica que falta la traducción y mantiene el original', () => {
+      const view = resolveProjectContent(asProject(base), 'catalan');
+      expect(view.text).toBe('Original ES');
+      expect(view.language).toBe('castellano');
+      expect(view.missingTranslation).toBe(true);
+    });
+
+    it('muestra la traducción y detecta si está desactualizada', () => {
+      const fresh = asProject({
+        ...base,
+        translations: { catalan: { rawText: 'Original CA', sourceVersion: 2 } },
+      });
+      expect(resolveProjectContent(fresh, 'catalan')).toEqual({
+        text: 'Original CA',
+        language: 'catalan',
+        isTranslation: true,
+        stale: false,
+        missingTranslation: false,
+      });
+
+      const stale = asProject({ ...base, translations: { catalan: { rawText: 'Antic' } } });
+      expect(resolveProjectContent(stale, 'catalan').stale).toBe(true);
+
+      const legacy = asProject({
+        generatedContent: { rawText: 'x' },
+        translations: { catalan: { rawText: 'y' } },
+      });
+      expect(resolveProjectContent(legacy, 'catalan').stale).toBe(false);
+    });
+
+    it('projectTextIn devuelve la traducción del idioma o el original', () => {
+      const project = asProject({ ...base, translations: { catalan: { rawText: 'CA' } } });
+      expect(projectTextIn(project, 'catalan')).toBe('CA');
+      expect(projectTextIn(project, 'castellano')).toBe('Original ES');
+      expect(projectTextIn(asProject(base), 'catalan')).toBe('Original ES');
     });
   });
 });

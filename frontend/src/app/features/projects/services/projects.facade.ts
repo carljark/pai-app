@@ -31,6 +31,9 @@ import {
   DirectoryUser,
   getHistoryTabForTipoNivel,
   getOwnerId,
+  ContentLanguage,
+  projectLanguage,
+  projectTextIn,
   isFPProject,
   isESOProject,
   METHODOLOGY_OPTIONS,
@@ -72,6 +75,8 @@ export class ProjectsFacade {
   // ============================================
   currentProjectId = signal<string | null>(null);
   generatedProject = signal<string>('');
+  /** Idioma del texto de `generatedProject`: se usa al guardar y al exportar. */
+  contentLanguage = signal<ContentLanguage>('castellano');
   projectFiles = signal<ProjectFile[]>([]);
   isEditMode = signal<boolean>(false);
   isUploading = signal<boolean>(false);
@@ -336,6 +341,7 @@ export class ProjectsFacade {
     this.isGenerating.set(false);
     this.currentProjectId.set(res.project._id);
     this.generatedProject.set(res.project.generatedContent?.rawText || '');
+    this.contentLanguage.set(projectLanguage(res.project));
     this.projectFiles.set([]);
     this.selectedCollaborators.set([]);
     this.undoStacksByProject.update((map) => ({ ...map, [res.project._id]: [] }));
@@ -383,6 +389,7 @@ export class ProjectsFacade {
     const payload: UpdateProjectPayload = {
       rawText: this.generatedProject(),
       status,
+      language: this.contentLanguage(),
     };
 
     return this.projectsService.updateProjectStatus(id, payload).pipe(
@@ -391,7 +398,7 @@ export class ProjectsFacade {
           this.projectsHistory.update((list) =>
             list.map((p) => (p._id === id ? updatedProject : p)),
           );
-          this.generatedProject.set(updatedProject.generatedContent?.rawText || '');
+          this.generatedProject.set(projectTextIn(updatedProject, this.contentLanguage()));
         },
         error: (err) => console.error('Error updating project status:', err),
       }),
@@ -526,7 +533,7 @@ export class ProjectsFacade {
   exportDocx() {
     const id = this.currentProjectId();
     if (!id) return;
-    return this.projectsService.exportDocx(id);
+    return this.projectsService.exportDocx(id, this.contentLanguage());
   }
 
   importDocx(file: File) {
@@ -538,6 +545,7 @@ export class ProjectsFacade {
         next: (res) => {
           this.isUploading.set(false);
           this.generatedProject.set(res.project.generatedContent?.rawText || '');
+          this.contentLanguage.set(projectLanguage(res.project));
           this.projectFiles.set([]);
         },
         error: (err) => {
@@ -561,6 +569,7 @@ export class ProjectsFacade {
   setCurrentProject(project: Project): void {
     this.currentProjectId.set(project._id);
     this.generatedProject.set(project.generatedContent?.rawText || '');
+    this.contentLanguage.set(projectLanguage(project));
     this.projectFiles.set([]);
     this.undoStacksByProject.update((map) => ({ ...map, [project._id]: [] }));
   }

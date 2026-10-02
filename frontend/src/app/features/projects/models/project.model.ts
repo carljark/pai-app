@@ -8,6 +8,16 @@ export type ProjectType =
   'FP_BASICA' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' | 'DIVERSIFICACION_CURRICULAR' | 'ESO';
 export type HistoryTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO';
 export type AIProvider = 'gemini' | 'openrouter';
+export type ContentLanguage = 'castellano' | 'catalan';
+
+/** Versión del contenido en un idioma distinto del original. */
+export interface ProjectTranslation {
+  rawText: string;
+  /** `contentVersion` del original que se tradujo. */
+  sourceVersion?: number;
+  translatedAt?: string | Date;
+  editedAt?: string | Date;
+}
 
 export interface ProjectModule {
   code: string;
@@ -56,6 +66,10 @@ export interface Project {
   usedAiProvider?: AIProvider;
   usedModel?: string;
   aiProvider?: AIProvider;
+  // Idioma del contenido original y sus traducciones
+  language?: ContentLanguage;
+  contentVersion?: number;
+  translations?: Partial<Record<ContentLanguage, ProjectTranslation>>;
 }
 
 export interface Collaborator {
@@ -87,6 +101,8 @@ export interface CreateProjectPayload {
 export interface UpdateProjectPayload {
   rawText: string;
   status: ProjectStatus;
+  /** Idioma del texto editado: si no es el original, se guarda como su traducción. */
+  language?: ContentLanguage;
 }
 
 export interface RewriteSectionPayload {
@@ -210,6 +226,61 @@ export function isFPProject(tipoNivel: ProjectType): boolean {
 
 export function isESOProject(tipoNivel: ProjectType): boolean {
   return tipoNivel === 'DIVERSIFICACION_CURRICULAR';
+}
+
+/** Idioma del contenido original; los proyectos anteriores a la traducción están en castellano. */
+export function projectLanguage(project: Pick<Project, 'language'>): ContentLanguage {
+  return project.language || 'castellano';
+}
+
+/** Texto original, admitiendo el formato legacy en que `generatedContent` era un string. */
+export function originalText(project: Pick<Project, 'generatedContent'>): string {
+  const content = project.generatedContent as GeneratedContent | string | undefined;
+  return (typeof content === 'string' ? content : content?.rawText) || '';
+}
+
+/** Qué versión del contenido se muestra según el idioma de la interfaz. */
+export interface ProjectContentView {
+  text: string;
+  /** Idioma del texto mostrado (el que se guarda y se exporta). */
+  language: ContentLanguage;
+  isTranslation: boolean;
+  /** La traducción se hizo sobre una versión anterior del original. */
+  stale: boolean;
+  /** La interfaz está en otro idioma y todavía no hay traducción. */
+  missingTranslation: boolean;
+}
+
+export function resolveProjectContent(
+  project: Project,
+  uiLanguage: ContentLanguage,
+): ProjectContentView {
+  const original = projectLanguage(project);
+  const translation = project.translations?.[uiLanguage];
+  if (uiLanguage !== original && translation?.rawText) {
+    const stale = (translation.sourceVersion ?? 0) !== (project.contentVersion ?? 0);
+    return {
+      text: translation.rawText,
+      language: uiLanguage,
+      isTranslation: true,
+      stale,
+      missingTranslation: false,
+    };
+  }
+  const missingTranslation = uiLanguage !== original;
+  return {
+    text: originalText(project),
+    language: original,
+    isTranslation: false,
+    stale: false,
+    missingTranslation,
+  };
+}
+
+/** Texto del proyecto en un idioma: su traducción si existe y, si no, el original. */
+export function projectTextIn(project: Project, language: ContentLanguage): string {
+  const translated = project.translations?.[language]?.rawText;
+  return language !== projectLanguage(project) && translated ? translated : originalText(project);
 }
 
 /** Id del autor tanto si `userId` viene poblado (objeto) como si es un string. */

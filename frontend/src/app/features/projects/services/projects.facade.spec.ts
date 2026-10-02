@@ -397,8 +397,37 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/123');
     expect(req.request.method).toBe('PUT');
-    expect(req.request.body).toEqual({ rawText: 'some content', status: 'publicado' });
+    expect(req.request.body).toEqual({
+      rawText: 'some content',
+      status: 'publicado',
+      language: 'castellano',
+    });
     req.flush({});
+  });
+
+  it('should save a translated version and keep showing it', () => {
+    facade.currentProjectId.set('123');
+    facade.contentLanguage.set('catalan');
+    facade.generatedProject.set('Text editat');
+
+    facade.updateProjectStatus('borrador')?.subscribe();
+
+    const req = httpMock.expectOne('/api/projects/123');
+    expect(req.request.body.language).toBe('catalan');
+    req.flush({
+      _id: '123',
+      language: 'castellano',
+      generatedContent: { rawText: 'Original' },
+      translations: { catalan: { rawText: 'Text editat', sourceVersion: 0 } },
+    });
+    expect(facade.generatedProject()).toBe('Text editat');
+  });
+
+  it('should export the DOCX in the language being viewed', () => {
+    facade.currentProjectId.set('123');
+    facade.contentLanguage.set('catalan');
+    facade.exportDocx()?.subscribe();
+    httpMock.expectOne('/api/projects/123/export-docx?lang=catalan').flush(new Blob());
   });
 
   it('should not update project status if no currentProjectId', () => {
@@ -510,7 +539,7 @@ describe('ProjectsFacade', () => {
     facade.currentProjectId.set('123');
     facade.exportDocx()?.subscribe();
 
-    const req = httpMock.expectOne('/api/projects/123/export-docx');
+    const req = httpMock.expectOne('/api/projects/123/export-docx?lang=castellano');
     expect(req.request.method).toBe('GET');
     expect(req.request.responseType).toBe('blob');
     req.flush(new Blob());
@@ -861,7 +890,7 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       facade.exportDocx()?.subscribe();
 
-      const req = httpMock.expectOne('/api/projects/123/export-docx');
+      const req = httpMock.expectOne('/api/projects/123/export-docx?lang=castellano');
       expect(req.request.method).toBe('GET');
       expect(req.request.responseType).toBe('blob');
       req.flush(new Blob());

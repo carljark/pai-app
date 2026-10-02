@@ -1,5 +1,19 @@
 import mongoose from 'mongoose';
 
+export const CONTENT_LANGUAGES = ['castellano', 'catalan'] as const;
+export type ContentLanguage = (typeof CONTENT_LANGUAGES)[number];
+
+/**
+ * Versión del contenido en otro idioma. `sourceVersion` es el `contentVersion` del original
+ * que se tradujo: si el original cambia después, la traducción queda desactualizada.
+ */
+const TranslationSchema = new mongoose.Schema({
+  rawText: String,
+  sourceVersion: Number,
+  translatedAt: Date,
+  editedAt: Date
+}, { _id: false });
+
 const ProjectSchema = new mongoose.Schema({
   title: String,
   modules: [String],
@@ -11,6 +25,14 @@ const ProjectSchema = new mongoose.Schema({
   generatedContent: {
     rawText: String,
     jsonStructure: Object
+  },
+  /** Idioma en el que se generó (y se edita) `generatedContent`. */
+  language: { type: String, enum: CONTENT_LANGUAGES, default: 'castellano' },
+  /** Se incrementa cada vez que cambia el texto original. */
+  contentVersion: { type: Number, default: 0 },
+  translations: {
+    castellano: TranslationSchema,
+    catalan: TranslationSchema
   },
   aiPrompt: String,
   aiInstruction: String,

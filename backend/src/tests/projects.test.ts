@@ -45,6 +45,21 @@ describe('Projects Endpoints', () => {
     expect(res.body.project.aiModel).toBe('gemini-3.8-flash');
   });
 
+  it('POST /api/projects/generate - Debería pedir rúbrica global, rúbricas por módulo y anexos imprimibles', async () => {
+    const { token } = await createTestUser('teacher', 'prof_rubricas@test.com');
+    const res = await request(app)
+      .post('/api/projects/generate')
+      .set('Authorization', `Bearer ${token}`)
+      .send({ title: 'Rúbricas', modules: ['M1', 'M2'], selectedRas: ['RA1'], methodology: 'ABP', tipoNivel: 'FP_BASICA' });
+
+    expect(res.status).toBe(202);
+    expect(res.body.project.aiInstruction).toContain('REGLA CRÍTICA INQUEBRANTABLE SOBRE LAS RÚBRICAS');
+    expect(res.body.project.aiInstruction).toContain('rúbrica global del proyecto');
+    expect(res.body.project.aiInstruction).toContain('rúbrica independiente por cada módulo profesional');
+    expect(res.body.project.aiInstruction).toContain('REGLA CRÍTICA INQUEBRANTABLE SOBRE LOS ANEXOS IMPRIMIBLES');
+    expect(res.body.project.aiInstruction).toContain('Anexo 1, Anexo 2');
+  });
+
   it('POST /api/projects/generate - Debería incluir extraInstructions en el prompt y en el modelo', async () => {
     const { token } = await createTestUser('teacher', 'prof_extra@test.com');
     const res = await request(app)

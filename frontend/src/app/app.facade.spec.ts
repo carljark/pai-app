@@ -49,6 +49,7 @@ describe('AppFacade', () => {
       retryProject: vi.fn(),
       currentProjectId: signal(''),
       generatedProject: signal(''),
+      contentLanguage: signal('castellano'),
       loadProjectFiles: vi.fn(),
       projectsHistory: signal<any[]>([]),
       historyTab: signal('FPB'),

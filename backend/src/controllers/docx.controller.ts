@@ -1,6 +1,7 @@
 import type { Response } from 'express';
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
+import { pickProjectText } from '../services/projectContent.service';
 import { marked } from 'marked';
 import HTMLtoDOCX from 'html-to-docx';
 import mammoth from 'mammoth';
@@ -11,7 +12,9 @@ const turndownService = new TurndownService({ headingStyle: 'atx' });
 export const exportDocx = async (req: any, res: Response) => {
   try {
     const project = await Project.findOne({ _id: req.params.id, userId: req.user._id });
-    if (!project || !project.generatedContent?.rawText) {
+    // `?lang=` exporta la versión que el usuario está viendo (traducción si existe)
+    const text = project ? pickProjectText(project, req.query.lang) : undefined;
+    if (!project || !text) {
       return res.status(404).json({ error: 'Proyecto no encontrado o sin contenido' });
     }
 
@@ -23,7 +26,7 @@ export const exportDocx = async (req: any, res: Response) => {
       createdAt: new Date()
     });
 
-    const html = await marked.parse(project.generatedContent.rawText);
+    const html = await marked.parse(text);
     const fileBuffer = await HTMLtoDOCX(html as string, null, { table: { row: { cantSplit: true } }, footer: true, pageNumber: true });
     
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
@@ -46,6 +49,8 @@ export const importDocx = async (req: any, res: Response) => {
     if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
     
     project.generatedContent!.rawText = newMarkdown;
+    // Sustituye el original: las traducciones quedan desactualizadas
+    project.contentVersion = Number(project.contentVersion) + 1;
     await project.save();
     
     res.json({ message: 'Documento procesado correctamente', project });

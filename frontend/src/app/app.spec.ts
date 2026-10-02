@@ -10,6 +10,7 @@ import { signal } from '@angular/core';
 
 import { CurriculumFacade } from './features/curriculum/services/curriculum.facade';
 import { ProjectsFacade } from './features/projects/services/projects.facade';
+import { ProjectTranslationFacade } from './features/projects/services/project-translation.facade';
 import { NotificationsFacade } from './features/notifications/services/notifications.facade';
 import { FeedbackService } from './features/feedback/services/feedback.service';
 import { MapaIntermodularFacade } from './features/mapa-intermodular/services/mapa-intermodular.facade';
@@ -174,6 +175,14 @@ describe('App', () => {
         { provide: AdminFacade, useValue: mockAdminFacade },
         { provide: FeedbackService, useValue: mockFeedbackService },
         { provide: MapaIntermodularFacade, useValue: mockMapaFacade },
+        {
+          provide: ProjectTranslationFacade,
+          useValue: {
+            view: signal(null),
+            isTranslating: signal(false),
+            translationError: signal(false),
+          },
+        },
       ],
     }).compileComponents();
 

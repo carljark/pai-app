@@ -1,0 +1,42 @@
+@use '../../../../../styles/variables' as variables;
+
+.translation-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border-left: 4px solid variables.$color-primary;
+  background: variables.$color-primary-light;
+  color: variables.$color-primary-dark;
+  font-size: 0.9rem;
+}
+
+.translation-banner__text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.translation-banner__action {
+  flex-shrink: 0;
+}
+
+.translation-banner--info {
+  border-left-color: variables.$color-info;
+  background: variables.$color-info-bg;
+}
+
+.translation-banner--warning,
+.translation-banner--progress {
+  border-left-color: variables.$color-warning;
+  background: variables.$color-warning-bg;
+}
+
+.translation-banner--error {
+  border-left-color: variables.$color-danger;
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}

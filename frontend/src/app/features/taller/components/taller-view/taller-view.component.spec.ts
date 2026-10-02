@@ -6,6 +6,7 @@ import { AppFacade } from '../../../../app.facade';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { ProjectTranslationFacade } from '../../../projects/services/project-translation.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
 import { signal } from '@angular/core';
@@ -158,6 +159,17 @@ describe('TallerViewComponent', () => {
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: PaiService, useValue: mockPaiService },
+        // El aviso de traducción tiene su propio spec; aquí se aísla de HttpClient
+        {
+          provide: ProjectTranslationFacade,
+          useValue: {
+            view: signal(null),
+            isTranslating: signal(false),
+            translationError: signal(false),
+            showCurrentProject: vi.fn(),
+            translateCurrentProject: vi.fn(),
+          },
+        },
       ],
     }).compileComponents();
 

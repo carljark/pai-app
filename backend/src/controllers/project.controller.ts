@@ -10,6 +10,7 @@ import path from 'path';
 import { addClient, removeClient } from "../services/sse.service";
 import { processQueue } from "../services/queue.service";
 import { syncProjectNotification, deleteProjectNotification } from "../services/notification.service";
+import { buildContentUpdate } from '../services/projectContent.service';
 
 // Endpoint para el SSE
 export const streamUpdates = (req: any, res: Response) => {
@@ -32,7 +33,7 @@ export const streamUpdates = (req: any, res: Response) => {
   });
 };
 
-const PROJECT_POPULATE = [
+export const PROJECT_POPULATE = [
   { path: 'userId', select: 'name email' },
   { path: 'collaborators.userId', select: 'name email' }
 ];
@@ -237,6 +238,12 @@ Cuando diseñes el proyecto y llegues al apartado de Evaluación, DEBES contempl
 NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODOS han de aparecer obligatoriamente en el proyecto.
 MUY IMPORTANTE: Cuando listes los RAs o las CEs y sus criterios de evaluación correspondientes, DEBES mantener estrictamente su NUMERACIÓN y NOMENCLATURA OFICIAL.
 
+REGLA CRÍTICA INQUEBRANTABLE SOBRE LAS RÚBRICAS:
+En el apartado de Evaluación DEBES incluir OBLIGATORIAMENTE:
+1. Una **rúbrica global del proyecto**, que evalúe el proyecto en su conjunto (producto final, competencias transversales y los RA/CE más relevantes).
+2. Además, una **rúbrica independiente por cada módulo profesional** (o materia/ámbito en ESO) implicado en el proyecto, cada una bajo su propio encabezado "Rúbrica del módulo <código y nombre oficial>". Cada rúbrica de módulo debe contener ÚNICAMENTE los RA/CE y criterios de evaluación de ese módulo, con su numeración oficial, de forma que cada docente pueda evaluar su módulo por separado.
+Si el proyecto implica un solo módulo, incluye igualmente la rúbrica global y la rúbrica de ese módulo. Todas las rúbricas siguen el formato de la Guía Maestra de Evaluación: tabla Markdown con los cuatro niveles de desempeño (En desarrollo (1), Básico (2), Avanzado (3), Experto (4)), traducidos al idioma de salida, y descripciones basadas en hechos observables.
+
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EL DETALLE DE ACTIVIDADES/FASES:
 NO puedes generar un proyecto corto, vago o resumido. DEBES desarrollar CADA FASE Y CADA ACTIVIDAD de forma pormenorizada y con el MÁXIMO NIVEL DE DETALLE posible.
 Para CADA UNA de las actividades que propongas en el proyecto, DEBES incluir OBLIGATORIAMENTE la siguiente estructura detallada:
@@ -249,6 +256,12 @@ Para CADA UNA de las actividades que propongas en el proyecto, DEBES incluir OBL
 - **Materiales y recursos necesarios**: Herramientas digitales, plantillas, espacios físicos o material fungible.
 - **Entregable o producto esperado**: Qué deben generar los alumnos al final de la actividad.
 - **Evaluación formativa**: Cómo se evaluará esta actividad en concreto y con qué instrumento.
+
+REGLA CRÍTICA INQUEBRANTABLE SOBRE LOS ANEXOS IMPRIMIBLES:
+Al final del proyecto DEBES incluir un apartado titulado "Anexos" con el material imprimible, listo para fotocopiar y repartir, que necesiten las actividades: fichas de trabajo del alumnado, plantillas, guiones de la actividad, listas de cotejo, dianas o cuestionarios de autoevaluación y coevaluación, y cualquier otro documento que se mencione en el desarrollo.
+- Numera cada anexo (Anexo 1, Anexo 2, …), indica en su encabezado a qué actividad pertenece y referencia ese número desde la actividad correspondiente (por ejemplo: "Material: Anexo 3").
+- Desarrolla el contenido COMPLETO de cada anexo (enunciados, preguntas, tablas con espacios en blanco para rellenar, instrucciones al alumnado); no te limites a describirlo.
+- Usa solo Markdown imprimible (encabezados, listas y tablas Markdown) y deja líneas o celdas vacías donde el alumnado deba escribir.
 
 REGLA SOBRE INSTRUCCIONES EXTRA DEL DOCENTE:
 Si en la solicitud se aportan "INSTRUCCIONES EXTRA DEL DOCENTE", debes integrarlas de forma obligatoria y prioritaria en el diseño del proyecto, adaptando temáticas, dinámicas pedagógicas, recursos o productos finales a lo especificado por el profesor.
@@ -328,6 +341,7 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       methodology,
       tipoNivel: tipoNivel || 'FP_BASICA',
       courseLevel: effectiveCourse,
+      language: language === 'catalan' ? 'catalan' : 'castellano',
       userId: req.user?._id,
       status: 'en_cola', // Nuevo estado
       aiPrompt: userPrompt, // Guardamos el prompt para el worker
@@ -392,11 +406,15 @@ export const getProject = async (req: any, res: Response) => {
 
 export const updateProject = async (req: any, res: Response) => {
   try {
-    const { rawText, status } = req.body;
-    const updated = await Project.findByIdAndUpdate(req.params.id, {
-      'generatedContent.rawText': rawText,
-      status: status || 'borrador'
-    }, { returnDocument: 'after' });
+    const { rawText, status, language } = req.body;
+    const current = await Project.findById(req.params.id);
+    const updated = current
+      ? await Project.findByIdAndUpdate(
+        req.params.id,
+        buildContentUpdate(current, rawText, status, language),
+        { returnDocument: 'after' }
+      )
+      : null;
     
     await new ActivityLog({
       userId: req.user?._id,

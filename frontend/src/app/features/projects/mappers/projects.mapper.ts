@@ -16,6 +16,8 @@ import {
   ImportDocxResponse,
   RetryProjectResponse,
   AIProvider,
+  ContentLanguage,
+  ProjectTranslation,
 } from '../models/project.model';
 
 // ============================================
@@ -52,6 +54,9 @@ export interface ProjectDto {
   aiProvider?: AIProvider;
   usedAiProvider?: AIProvider;
   usedModel?: string;
+  language?: ContentLanguage;
+  contentVersion?: number;
+  translations?: Partial<Record<ContentLanguage, ProjectTranslation>>;
 }
 
 export interface ProjectFileDto {
@@ -204,6 +209,9 @@ export function fromProjectDto(dto: ProjectDto): Project {
     aiProvider: dto.aiProvider,
     usedAiProvider: dto.usedAiProvider,
     usedModel: dto.usedModel,
+    language: dto.language,
+    contentVersion: dto.contentVersion,
+    translations: dto.translations,
   };
 }
 

@@ -87,6 +87,9 @@ describe('Projects Mapper', () => {
         aiProvider: 'gemini',
         usedAiProvider: 'openrouter',
         usedModel: 'openai/gpt-6-luna',
+        language: 'catalan',
+        contentVersion: 4,
+        translations: { castellano: { rawText: 'Traducción', sourceVersion: 4 } },
       });
       expect(result.status).toBe('error');
       expect(result.error).toBe('Fallo');
@@ -95,6 +98,9 @@ describe('Projects Mapper', () => {
       expect(result.aiProvider).toBe('gemini');
       expect(result.usedAiProvider).toBe('openrouter');
       expect(result.usedModel).toBe('openai/gpt-6-luna');
+      expect(result.language).toBe('catalan');
+      expect(result.contentVersion).toBe(4);
+      expect(result.translations?.castellano?.rawText).toBe('Traducción');
     });
 
     it('should default title to "Sin título" when missing', () => {

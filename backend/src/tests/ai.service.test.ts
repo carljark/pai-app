@@ -55,6 +55,22 @@ describe('AI Service', () => {
     warnSpy.mockRestore();
   });
 
+  it('generateGeminiContent debería reintentar errores transitorios (503) del mismo modelo', async () => {
+    const unavailable = new Error('This model is currently experiencing high demand. Please try again later.');
+    (unavailable as any).status = 503;
+    generateContentMock
+      .mockRejectedValueOnce(unavailable)
+      .mockResolvedValueOnce({ text: 'Recuperado tras reintento', modelVersion: 'gemini-3.8-flash' });
+
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const res = await generateGeminiContent('p', 'i');
+
+    expect(res.text).toBe('Recuperado tras reintento');
+    expect(generateContentMock).toHaveBeenCalledTimes(2);
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('error transitorio'));
+    warnSpy.mockRestore();
+  });
+
   it('generateGeminiContent debería manejar timeout si tarda demasiado', async () => {
     generateContentMock.mockImplementation(() => new Promise((resolve) => setTimeout(resolve, 50)));
     await expect(generateGeminiContent('p', 'i', 'gemini-3.8-flash', 10)).rejects.toThrow('Timeout en Gemini');

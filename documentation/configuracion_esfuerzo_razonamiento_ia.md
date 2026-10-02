@@ -41,6 +41,18 @@ La lista de capacidades está en `OPENROUTER_MODELS_WITH_REASONING_EFFORT` dentr
 
 El razonamiento alto puede consumir más tokens de salida y aumentar la latencia. OpenRouter cuenta los tokens de razonamiento como tokens de salida facturables. El esfuerzo alto tampoco aumenta por sí solo el límite de tokens de respuesta; cualquier ampliación de ese límite debe tratarse y probarse por separado para evitar respuestas truncadas.
 
+## Reintentos ante errores transitorios (503)
+
+El 3 de octubre de 2026 se comprobó contra la API real de Gemini que los modelos de la cascada (`gemini-3.8-flash`, `gemini-3.7-flash`, `gemini-3.6-flash`) **existen y responden**, y que admiten `thinkingLevel: HIGH`. Los errores `HTTP 503` observados en el registro de actividad corresponden a saturación de capacidad del proveedor (`"This model is currently experiencing high demand"`), no a nombres de modelo inválidos.
+
+Para mitigarlo, `generateGeminiContent` reintenta errores transitorios antes de pasar al siguiente modelo:
+
+- Se reintentan estados `500`, `502`, `503`, `504` y mensajes de `UNAVAILABLE`/`high demand`/`overloaded`/`try again later`.
+- Hasta 3 intentos por modelo, con espera exponencial (1,5 s y 3 s) entre reintentos.
+- Los errores no transitorios (por ejemplo `429` de cuota o errores de validación) siguen provocando el salto inmediato al siguiente modelo de la cascada.
+
+Constantes en `backend/src/services/ai.service.ts`: `GEMINI_RETRYABLE_STATUS`, `GEMINI_MAX_ATTEMPTS_PER_MODEL`, `GEMINI_RETRY_BASE_MS`.
+
 ## Verificación
 
 Los tests de `backend/src/tests/ai.service.test.ts` comprueban que:

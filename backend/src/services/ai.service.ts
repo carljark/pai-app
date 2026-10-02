@@ -135,6 +135,20 @@ export const GEMINI_MODEL_CASCADE = [
   'gemini-3.6-flash'
 ];
 
+// Errores transitorios del proveedor (saturación de capacidad) que merece la pena reintentar.
+const GEMINI_RETRYABLE_STATUS = new Set([500, 502, 503, 504]);
+const GEMINI_MAX_ATTEMPTS_PER_MODEL = 3;
+const GEMINI_RETRY_BASE_MS = 1500;
+
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+const isRetryableGeminiError = (err: any): boolean => {
+  const status = err?.status ?? err?.code;
+  if (typeof status === 'number' && GEMINI_RETRYABLE_STATUS.has(status)) return true;
+  const msg = String(err?.message || '');
+  return /UNAVAILABLE|high demand|overloaded|try again later/i.test(msg);
+};
+
 export const generateGeminiContent = async (
   userPrompt: string,
   systemInstruction: string,
@@ -149,34 +163,45 @@ export const generateGeminiContent = async (
 
   for (let i = 0; i < modelsToTry.length; i++) {
     const modelName = modelsToTry[i];
-    try {
-      if (i > 0) {
-        console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
-      } else {
-        console.log(`[Gemini] Iniciando generación con modelo ${modelName}...`);
-      }
-      const request = ai.models.generateContent({
-        model: modelName,
-        contents: userPrompt,
-        config: {
-          systemInstruction,
-          ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(modelName)
-            ? { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } }
-            : {})
+    if (i > 0) {
+      console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
+    } else {
+      console.log(`[Gemini] Iniciando generación con modelo ${modelName}...`);
+    }
+
+    for (let attempt = 1; attempt <= GEMINI_MAX_ATTEMPTS_PER_MODEL; attempt++) {
+      try {
+        const request = ai.models.generateContent({
+          model: modelName,
+          contents: userPrompt,
+          config: {
+            systemInstruction,
+            ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(modelName)
+              ? { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } }
+              : {})
+          }
+        });
+        const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
+        cascadeLog.push(`${modelName}: OK`);
+        return {
+          text: response.text,
+          model: (response as any).modelVersion || modelName,
+          cascadeLog
+        };
+      } catch (err: any) {
+        lastError = err;
+        const errorMsg = err.status ? `HTTP ${err.status}` : (err.message || 'error');
+        const willRetry = attempt < GEMINI_MAX_ATTEMPTS_PER_MODEL && isRetryableGeminiError(err);
+        if (willRetry) {
+          const wait = GEMINI_RETRY_BASE_MS * attempt;
+          console.warn(`[Gemini] ${modelName} error transitorio (${errorMsg}). Reintentando (${attempt + 1}/${GEMINI_MAX_ATTEMPTS_PER_MODEL}) en ${wait}ms...`);
+          await sleep(wait);
+          continue;
         }
-      });
-      const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
-      cascadeLog.push(`${modelName}: OK`);
-      return {
-        text: response.text,
-        model: (response as any).modelVersion || modelName,
-        cascadeLog
-      };
-    } catch (err: any) {
-      lastError = err;
-      const errorMsg = err.status ? `HTTP ${err.status}` : (err.message || 'error');
-      cascadeLog.push(`${modelName}: ${errorMsg}`);
-      console.warn(`[Gemini] Fallo con modelo ${modelName}:`, err.message || err);
+        cascadeLog.push(`${modelName}: ${errorMsg}`);
+        console.warn(`[Gemini] Fallo con modelo ${modelName}:`, err.message || err);
+        break;
+      }
     }
   }
 

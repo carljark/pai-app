@@ -227,7 +227,14 @@ describe('Projects Endpoints', () => {
     expect(res.status).toBe(500);
     spy.mockRestore();
 
+    // updateProject lee primero el proyecto: el fallo de escritura se prueba con uno existente
+    const existing = await new Project({ title: 'Existente' }).save();
     spy = vi.spyOn(Project, 'findByIdAndUpdate').mockRejectedValueOnce(new Error('DB'));
+    res = await request(app).put(`/api/projects/${existing._id}`).set('Authorization', `Bearer ${token}`).send({ rawText: 'A' });
+    expect(res.status).toBe(500);
+    spy.mockRestore();
+
+    spy = vi.spyOn(Project, 'findById').mockRejectedValueOnce(new Error('DB'));
     res = await request(app).put(`/api/projects/${fakeId}`).set('Authorization', `Bearer ${token}`).send({ rawText: 'A' });
     expect(res.status).toBe(500);
     spy.mockRestore();

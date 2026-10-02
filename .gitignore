@@ -45,6 +45,9 @@ backend/uploads/
 # Raw Curriculum Data
 Proyecto_FPB_PAI/
 
+# Audios/vídeos locales de pending_tasks (no versionar)
+pending_tasks/audios/
+
 # Ejemplos descargados eXeLearning/SCORM
 Ejemplos proyectos FP y ESO/
 tmp_extract/

@@ -67,7 +67,19 @@ describe('ProjectsFacade', () => {
     
     facade = TestBed.inject(ProjectsFacade);
     httpMock = TestBed.inject(HttpTestingController);
-    
+
+    // Catálogo de modelos (fuente única en el backend)
+    httpMock.expectOne('/api/ai/models').flush({
+      providers: [
+        { value: 'gemini', label: 'Gemini', defaultModel: 'gemini-3.6-flash' },
+        { value: 'openrouter', label: 'OpenRouter', defaultModel: 'deepseek/deepseek-v4.1-flash' }
+      ],
+      models: [
+        { value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' },
+        { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }
+      ]
+    });
+
     // Flush initial loadHistory from constructor effect
     TestBed.flushEffects();
     const initReq = httpMock.expectOne('/api/projects');
@@ -186,7 +198,7 @@ describe('ProjectsFacade', () => {
       tipoNivel: 'FP_BASICA',
       language: 'castellano',
       aiProvider: 'gemini',
-      aiModel: 'gemini-3.8-flash',
+      aiModel: 'gemini-3.6-flash',
       courseLevel: '2º',
       title: 'Custom Title'
     });
@@ -365,7 +377,7 @@ describe('ProjectsFacade', () => {
       context: 'full text',
       instruction: 'rewrite this',
       aiProvider: 'gemini',
-      aiModel: 'gemini-3.8-flash'
+      aiModel: 'gemini-3.6-flash'
     });
     req1.flush({});
 
@@ -624,7 +636,7 @@ describe('ProjectsFacade', () => {
         context: 'original content',
         instruction: 'make it better',
         aiProvider: 'gemini',
-        aiModel: 'gemini-3.8-flash',
+        aiModel: 'gemini-3.6-flash',
       });
       req.flush('rewritten content');
       
@@ -1041,9 +1053,10 @@ describe('ProjectsFacade', () => {
       expect(typeof facade.loadHistory).toBe('function');
     });
 
-    it('should have availableModels computed', () => {
+    it('should expose availableModels from the backend catalog', () => {
       expect(typeof facade.availableModels).toBe('function');
-      expect(facade.availableModels()).toBeDefined();
+      expect(facade.availableModels()[0].value).toBe('gemini-3.6-flash');
+      expect(facade.selectedModel()).toBe('gemini-3.6-flash');
     });
   });
 

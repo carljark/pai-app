@@ -1,5 +1,12 @@
 import fs from 'fs';
 import path from 'path';
+import {
+  DEFAULT_GEMINI_MODEL,
+  DEFAULT_OPENROUTER_MODEL,
+  GEMINI_MODEL_CASCADE,
+  GEMINI_MODELS_WITH_THINKING_LEVEL,
+  OPENROUTER_MODELS_WITH_REASONING_EFFORT
+} from '../data/ai-models';
 
 /** Nº máximo de ejemplos de referencia que se inyectan en el prompt. */
 export const MAX_INTEF_EXAMPLES = 20;
@@ -109,45 +116,15 @@ export interface SingleAiResult {
   cascadeLog?: string[];
 }
 
-export const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
-export const DEFAULT_OPENROUTER_MODEL = 'deepseek/deepseek-v4.1-flash';
-export const DEFAULT_REASONING_EFFORT = 'high';
-
-// OpenRouter's catalog currently advertises explicit reasoning-effort support
-// for these selectable models. Do not send the setting to `openrouter/free`:
-// it can route to a different model on each request.
-export const OPENROUTER_MODELS_WITH_REASONING_EFFORT = new Set([
-  'deepseek/deepseek-v4.1-flash',
-  'thinkingmachines/inkling-small:free'
-]);
-
-// These Gemini models accept the native thinkingLevel setting in generateContent.
-const GEMINI_MODELS_WITH_THINKING_LEVEL = new Set([
-  'gemini-3.8-flash',
-  'gemini-3.7-flash',
-  'gemini-3.6-flash',
-  'gemini-2.5-pro',
-  'gemini-3.1-pro-preview'
-]);
-export const GEMINI_MODEL_CASCADE = [
-  'gemini-3.8-flash',
-  'gemini-3.7-flash',
-  'gemini-3.6-flash'
-];
-
-// Errores transitorios del proveedor (saturación de capacidad) que merece la pena reintentar.
-const GEMINI_RETRYABLE_STATUS = new Set([500, 502, 503, 504]);
-const GEMINI_MAX_ATTEMPTS_PER_MODEL = 3;
-const GEMINI_RETRY_BASE_MS = 1500;
-
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-
-const isRetryableGeminiError = (err: any): boolean => {
-  const status = err?.status ?? err?.code;
-  if (typeof status === 'number' && GEMINI_RETRYABLE_STATUS.has(status)) return true;
-  const msg = String(err?.message || '');
-  return /UNAVAILABLE|high demand|overloaded|try again later/i.test(msg);
+// Los modelos disponibles se definen en un único lugar: backend/src/data/ai-models.ts
+export {
+  DEFAULT_GEMINI_MODEL,
+  DEFAULT_OPENROUTER_MODEL,
+  GEMINI_MODEL_CASCADE,
+  OPENROUTER_MODELS_WITH_REASONING_EFFORT
 };
+
+export const DEFAULT_REASONING_EFFORT = 'high';
 
 export const generateGeminiContent = async (
   userPrompt: string,
@@ -163,45 +140,34 @@ export const generateGeminiContent = async (
 
   for (let i = 0; i < modelsToTry.length; i++) {
     const modelName = modelsToTry[i];
-    if (i > 0) {
-      console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
-    } else {
-      console.log(`[Gemini] Iniciando generación con modelo ${modelName}...`);
-    }
-
-    for (let attempt = 1; attempt <= GEMINI_MAX_ATTEMPTS_PER_MODEL; attempt++) {
-      try {
-        const request = ai.models.generateContent({
-          model: modelName,
-          contents: userPrompt,
-          config: {
-            systemInstruction,
-            ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(modelName)
-              ? { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } }
-              : {})
-          }
-        });
-        const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
-        cascadeLog.push(`${modelName}: OK`);
-        return {
-          text: response.text,
-          model: (response as any).modelVersion || modelName,
-          cascadeLog
-        };
-      } catch (err: any) {
-        lastError = err;
-        const errorMsg = err.status ? `HTTP ${err.status}` : (err.message || 'error');
-        const willRetry = attempt < GEMINI_MAX_ATTEMPTS_PER_MODEL && isRetryableGeminiError(err);
-        if (willRetry) {
-          const wait = GEMINI_RETRY_BASE_MS * attempt;
-          console.warn(`[Gemini] ${modelName} error transitorio (${errorMsg}). Reintentando (${attempt + 1}/${GEMINI_MAX_ATTEMPTS_PER_MODEL}) en ${wait}ms...`);
-          await sleep(wait);
-          continue;
-        }
-        cascadeLog.push(`${modelName}: ${errorMsg}`);
-        console.warn(`[Gemini] Fallo con modelo ${modelName}:`, err.message || err);
-        break;
+    try {
+      if (i > 0) {
+        console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
+      } else {
+        console.log(`[Gemini] Iniciando generación con modelo ${modelName}...`);
       }
+      const request = ai.models.generateContent({
+        model: modelName,
+        contents: userPrompt,
+        config: {
+          systemInstruction,
+          ...(GEMINI_MODELS_WITH_THINKING_LEVEL.has(modelName)
+            ? { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } }
+            : {})
+        }
+      });
+      const response = await withTimeout(request, timeoutMs, `Timeout en Gemini (${modelName}): el proveedor no respondió a tiempo`);
+      cascadeLog.push(`${modelName}: OK`);
+      return {
+        text: response.text,
+        model: (response as any).modelVersion || modelName,
+        cascadeLog
+      };
+    } catch (err: any) {
+      lastError = err;
+      const errorMsg = err.status ? `HTTP ${err.status}` : (err.message || 'error');
+      cascadeLog.push(`${modelName}: ${errorMsg}`);
+      console.warn(`[Gemini] Fallo con modelo ${modelName}:`, err.message || err);
     }
   }
 
@@ -336,8 +302,8 @@ export const generateAiContentWithFallback = async (
         fullCascadeLog = [...fullCascadeLog, ...err.cascadeLog];
       } else {
         // Si no hay cascadeLog en el error, crear uno básico
-        const providerModel = i === 0 && preferredModel ? preferredModel : 
-                           provider === 'gemini' ? (preferredModel || 'gemini-3.8-flash') : 
+        const providerModel = i === 0 && preferredModel ? preferredModel :
+                           provider === 'gemini' ? (preferredModel || DEFAULT_GEMINI_MODEL) :
                             DEFAULT_OPENROUTER_MODEL;
         fullCascadeLog.push(`${providerModel}: ${err.message || 'Error desconocido'}`);
       }

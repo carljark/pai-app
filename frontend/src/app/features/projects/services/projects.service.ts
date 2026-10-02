@@ -20,6 +20,7 @@ import {
   FileUploadResponse,
   ImportDocxResponse,
   RetryProjectResponse,
+  AiModelsResponse,
 } from '../models/project.model';
 
 import {
@@ -41,6 +42,13 @@ import {
 export class ProjectsService {
   private http = inject(HttpClient);
   private apiUrl = '/api/projects';
+
+  // ---- IA / Modelos ----
+
+  /** Catálogo de modelos de IA (fuente única en el backend). */
+  getAiModels(): Observable<AiModelsResponse> {
+    return this.http.get<AiModelsResponse>('/api/ai/models');
+  }
 
   // ---- Historial ----
 

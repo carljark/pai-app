@@ -17,7 +17,13 @@ En `backend/src/services/ai.service.ts`, las llamadas a Gemini incluyen:
 thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH }
 ```
 
-Se aplica a los modelos Gemini conocidos que admiten `thinkingLevel`: `gemini-3.8-flash`, `gemini-3.7-flash`, `gemini-3.6-flash`, `gemini-2.5-pro` y `gemini-3.1-pro-preview`. La cascada interna de Gemini (`3.8`, `3.7`, `3.6 Flash`) conserva el nivel alto al cambiar de modelo.
+Se aplica a los modelos Gemini conocidos que admiten `thinkingLevel`. Actualmente el catálogo habilita únicamente `gemini-3.6-flash`, por lo que la cascada interna de Gemini usa ese único modelo. Los modelos `3.8` y `3.7` se retiraron al sufrir saturación de capacidad (HTTP 503) recurrente; el detalle está en `backend/src/data/ai-models.ts`.
+
+## Catálogo único de modelos
+
+Los modelos disponibles en la aplicación se definen en un único lugar: `backend/src/data/ai-models.ts`. De ahí se derivan `DEFAULT_GEMINI_MODEL`, `DEFAULT_OPENROUTER_MODEL`, `GEMINI_MODEL_CASCADE`, `GEMINI_MODELS_WITH_THINKING_LEVEL` y `OPENROUTER_MODELS_WITH_REASONING_EFFORT`.
+
+El backend expone el catálogo en `GET /api/ai/models` (`backend/src/controllers/ai.controller.ts`), y el frontend lo consume mediante `ProjectsService.getAiModels()`. El generador y el taller ya no contienen nombres de modelo hardcodeados.
 
 ## OpenRouter
 
@@ -41,17 +47,11 @@ La lista de capacidades está en `OPENROUTER_MODELS_WITH_REASONING_EFFORT` dentr
 
 El razonamiento alto puede consumir más tokens de salida y aumentar la latencia. OpenRouter cuenta los tokens de razonamiento como tokens de salida facturables. El esfuerzo alto tampoco aumenta por sí solo el límite de tokens de respuesta; cualquier ampliación de ese límite debe tratarse y probarse por separado para evitar respuestas truncadas.
 
-## Reintentos ante errores transitorios (503)
+## Cuota y errores transitorios
 
-El 3 de octubre de 2026 se comprobó contra la API real de Gemini que los modelos de la cascada (`gemini-3.8-flash`, `gemini-3.7-flash`, `gemini-3.6-flash`) **existen y responden**, y que admiten `thinkingLevel: HIGH`. Los errores `HTTP 503` observados en el registro de actividad corresponden a saturación de capacidad del proveedor (`"This model is currently experiencing high demand"`), no a nombres de modelo inválidos.
+El 2 de octubre de 2026 se comprobó que la clave de Gemini está en el **nivel gratuito**, con un límite de **5 peticiones por minuto y por modelo** (`GenerateRequestsPerMinutePerProjectPerModel-FreeTier`). Al superarlo la API responde `429 RESOURCE_EXHAUSTED`. Además, los modelos `3.8` y `3.7` devolvían `503 UNAVAILABLE` ("high demand") de forma recurrente.
 
-Para mitigarlo, `generateGeminiContent` reintenta errores transitorios antes de pasar al siguiente modelo:
-
-- Se reintentan estados `500`, `502`, `503`, `504` y mensajes de `UNAVAILABLE`/`high demand`/`overloaded`/`try again later`.
-- Hasta 3 intentos por modelo, con espera exponencial (1,5 s y 3 s) entre reintentos.
-- Los errores no transitorios (por ejemplo `429` de cuota o errores de validación) siguen provocando el salto inmediato al siguiente modelo de la cascada.
-
-Constantes en `backend/src/services/ai.service.ts`: `GEMINI_RETRYABLE_STATUS`, `GEMINI_MAX_ATTEMPTS_PER_MODEL`, `GEMINI_RETRY_BASE_MS`.
+Por eso se dejó solo `gemini-3.6-flash`, se eliminaron los reintentos sobre el mismo modelo (consumían la cuota de 5/min) y se centralizó el catálogo. Si se necesita más capacidad, la solución de fondo es activar la facturación del proyecto de Google Cloud.
 
 ## Verificación
 

@@ -64,8 +64,16 @@ describe('GeneratorViewComponent', () => {
     isGenerating: signal(false),
     methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
     selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
-    selectedModel: signal('gemini-3.8-flash'),
-    extraInstructions: signal('')
+    selectedModel: signal('gemini-3.6-flash'),
+    extraInstructions: signal(''),
+    availableModels: () => mockProjects.selectedAi() === 'gemini'
+      ? [{ value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }]
+      : [
+          { value: 'openrouter/free', label: 'Auto Gratuito (Router automático)', provider: 'openrouter' },
+          { value: 'dots-studio/dots-3-note-preview:free', label: 'Dots3 Note 512k (Documentos)', provider: 'openrouter' },
+          { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }
+        ],
+    defaultModelForProvider: (p: string) => p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash'
   };
 
   const mockAppFacade = {
@@ -161,7 +169,7 @@ describe('GeneratorViewComponent', () => {
   it('should change selectedAi and default selectedModel on select change when admin', () => {
     mockAuthFacade.currentUser.set({ role: 'admin' });
     mockProjects.selectedAi.set('gemini');
-    mockProjects.selectedModel.set('gemini-3.8-flash');
+    mockProjects.selectedModel.set('gemini-3.6-flash');
     fixture.detectChanges();
     const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select')).nativeElement;
     
@@ -173,7 +181,7 @@ describe('GeneratorViewComponent', () => {
     aiSelect.value = 'gemini';
     aiSelect.dispatchEvent(new Event('change'));
     expect(mockProjects.selectedAi()).toBe('gemini');
-    expect(mockProjects.selectedModel()).toBe('gemini-3.8-flash');
+    expect(mockProjects.selectedModel()).toBe('gemini-3.6-flash');
   });
 
   it('should change selectedModel on model select change when admin', () => {
@@ -182,11 +190,11 @@ describe('GeneratorViewComponent', () => {
     fixture.detectChanges();
 
     const modelSelect = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;
-    modelSelect.value = 'gemini-2.5-pro';
+    modelSelect.value = 'gemini-3.6-flash';
     modelSelect.dispatchEvent(new Event('change'));
-    expect(mockProjects.selectedModel()).toBe('gemini-2.5-pro');
+    expect(mockProjects.selectedModel()).toBe('gemini-3.6-flash');
 
-    // Switch to OpenRouter and choose Claude model
+    // Switch to OpenRouter and choose a document model
     mockProjects.selectedAi.set('openrouter');
     fixture.detectChanges();
     const modelSelectOR = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;

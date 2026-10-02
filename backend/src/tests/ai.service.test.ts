@@ -28,12 +28,12 @@ describe('AI Service', () => {
     generateContentMock.mockResolvedValue({ text: 'Respuesta simulada Gemini' });
   });
 
-  it('debería generar contenido con Gemini usando modelo por defecto gemini-3.8-flash', async () => {
+  it('debería generar contenido con Gemini usando modelo por defecto gemini-3.6-flash', async () => {
     const res = await generateGeminiContent('prompt', 'instruction');
     expect(res.text).toBe('Respuesta simulada Gemini');
-    expect(res.model).toBe('gemini-3.8-flash');
+    expect(res.model).toBe('gemini-3.6-flash');
     expect(generateContentMock).toHaveBeenCalledWith(expect.objectContaining({
-      model: 'gemini-3.8-flash',
+      model: 'gemini-3.6-flash',
       config: expect.objectContaining({ thinkingConfig: { thinkingLevel: 'HIGH' } })
     }));
   });
@@ -44,36 +44,20 @@ describe('AI Service', () => {
     (httpError as any).status = 429;
     generateContentMock
       .mockRejectedValueOnce(httpError)
-      .mockResolvedValueOnce({ text: 'Respuesta segundo modelo', modelVersion: 'gemini-3.8-flash-v2' });
+      .mockResolvedValueOnce({ text: 'Respuesta segundo modelo', modelVersion: 'gemini-3.6-flash-v2' });
 
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     const res = await generateGeminiContent('prompt', 'instruction', 'gemini-2.5-pro');
 
     expect(res.text).toBe('Respuesta segundo modelo');
-    expect(res.model).toBe('gemini-3.8-flash-v2');
-    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('Fallback interno: intentando modelo gemini-3.8-flash'));
-    warnSpy.mockRestore();
-  });
-
-  it('generateGeminiContent debería reintentar errores transitorios (503) del mismo modelo', async () => {
-    const unavailable = new Error('This model is currently experiencing high demand. Please try again later.');
-    (unavailable as any).status = 503;
-    generateContentMock
-      .mockRejectedValueOnce(unavailable)
-      .mockResolvedValueOnce({ text: 'Recuperado tras reintento', modelVersion: 'gemini-3.8-flash' });
-
-    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
-    const res = await generateGeminiContent('p', 'i');
-
-    expect(res.text).toBe('Recuperado tras reintento');
-    expect(generateContentMock).toHaveBeenCalledTimes(2);
-    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('error transitorio'));
+    expect(res.model).toBe('gemini-3.6-flash-v2');
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('Fallback interno: intentando modelo gemini-3.6-flash'));
     warnSpy.mockRestore();
   });
 
   it('generateGeminiContent debería manejar timeout si tarda demasiado', async () => {
     generateContentMock.mockImplementation(() => new Promise((resolve) => setTimeout(resolve, 50)));
-    await expect(generateGeminiContent('p', 'i', 'gemini-3.8-flash', 10)).rejects.toThrow('Timeout en Gemini');
+    await expect(generateGeminiContent('p', 'i', 'gemini-3.6-flash', 10)).rejects.toThrow('Timeout en Gemini');
   });
 
   it('generateGeminiContent debería relanzar otros errores cuando fallan todos los modelos', async () => {
@@ -81,8 +65,6 @@ describe('AI Service', () => {
     await expect(generateGeminiContent('p', 'i')).rejects.toMatchObject({
       message: 'Internal Gemini Error',
       cascadeLog: [
-        'gemini-3.8-flash: Internal Gemini Error',
-        'gemini-3.7-flash: Internal Gemini Error',
         'gemini-3.6-flash: Internal Gemini Error'
       ]
     });
@@ -160,7 +142,7 @@ describe('AI Service', () => {
     expect(res.provider).toBe('gemini');
     expect(res.fallbackUsed).toBe(false);
     expect(res.text).toBe('Respuesta simulada Gemini');
-    expect(res.model).toBe('gemini-3.8-flash');
+    expect(res.model).toBe('gemini-3.6-flash');
   });
 
   it('generateAiContentWithFallback debería hacer fallback a OpenRouter si Gemini falla', async () => {
@@ -183,8 +165,6 @@ describe('AI Service', () => {
     expect(res.text).toBe('Respuesta Fallback OpenRouter');
     expect(res.model).toBe(DEFAULT_OPENROUTER_MODEL);
     expect(res.cascadeLog).toEqual([
-      'gemini-3.8-flash: Quota limit',
-      'gemini-3.7-flash: Quota limit',
       'gemini-3.6-flash: Quota limit',
       `${DEFAULT_OPENROUTER_MODEL}: OK`
     ]);
@@ -207,7 +187,7 @@ describe('AI Service', () => {
     expect(res.provider).toBe('gemini');
     expect(res.fallbackUsed).toBe(true);
     expect(res.text).toBe('Respuesta simulada Gemini');
-    expect(res.model).toBe('gemini-3.8-flash');
+    expect(res.model).toBe('gemini-3.6-flash');
     warnSpy.mockRestore();
   });
 

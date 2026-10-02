@@ -10,7 +10,6 @@ import { TranslationService } from '../../../../services/translation.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
-import { getDefaultModelForProvider } from '../../../projects/models/project.model';
 
 @Component({
   selector: 'app-taller-view',
@@ -119,7 +118,7 @@ export class TallerViewComponent {
   onAiChange(event: Event) {
     const value = (event.target as HTMLSelectElement).value as 'gemini' | 'openrouter';
     this.projects.selectedAi.set(value);
-    this.projects.selectedModel.set(getDefaultModelForProvider(value));
+    this.projects.selectedModel.set(this.projects.defaultModelForProvider(value));
   }
 
   onModelChange(event: Event) {

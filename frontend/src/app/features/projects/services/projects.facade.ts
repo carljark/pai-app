@@ -20,9 +20,8 @@ import {
   ProjectFile,
   AIProvider,
   AIModelOption,
+  AiModelOptionDto,
   MethodologyOption,
-  getModelsForProvider,
-  getDefaultModelForProvider,
   getHistoryTabForTipoNivel,
   isFPProject,
   isESOProject,
@@ -48,9 +47,13 @@ export class ProjectsFacade {
   // ============================================
   methodology = signal<string>(METHODOLOGY_OPTIONS[0].value);
   selectedAi = signal<AIProvider>('gemini');
-  selectedModel = signal<string>('gemini-3.8-flash');
+  selectedModel = signal<string>('');
   extraInstructions = signal<string>('');
   isGenerating = signal<boolean>(false);
+
+  /** Catálogo de modelos recibido del backend. */
+  private allModels = signal<AiModelOptionDto[]>([]);
+  private defaultModels = signal<Record<AIProvider, string>>({ gemini: '', openrouter: '' });
 
   // ============================================
   // STATE - Taller (Proyecto Activo)
@@ -121,16 +124,26 @@ export class ProjectsFacade {
   // ============================================
   methodologyOptions = METHODOLOGY_OPTIONS;
   aiProviderOptions = AI_PROVIDER_OPTIONS;
-  availableModels = computed(() => getModelsForProvider(this.selectedAi()));
+  availableModels = computed<AIModelOption[]>(() =>
+    this.allModels()
+      .filter(m => m.provider === this.selectedAi())
+      .map(({ value, label, provider }) => ({ value, label, provider }))
+  );
 
   // ============================================
   // EFFECTS - Sincronización automática
   // ============================================
   constructor() {
-    // Auto-actualizar modelo cuando cambia proveedor
+    this.loadAiModels();
+
+    // Auto-actualizar modelo cuando cambia el proveedor o carga el catálogo.
     effect(() => {
       const provider = this.selectedAi();
-      this.selectedModel.set(getDefaultModelForProvider(provider));
+      const fallback = this.defaultModels()[provider];
+      const currentValid = this.allModels().some(m => m.provider === provider && m.value === this.selectedModel());
+      if (fallback && !currentValid) {
+        this.selectedModel.set(fallback);
+      }
     });
 
     // Auto-cargar historial cuando hay usuario autenticado
@@ -140,6 +153,26 @@ export class ProjectsFacade {
         this.loadHistory();
       }
     });
+  }
+
+  /** Carga el catálogo de modelos desde el backend (fuente única). */
+  private loadAiModels(): void {
+    this.projectsService.getAiModels().subscribe({
+      next: (res) => {
+        this.allModels.set(res?.models || []);
+        const defaults: Record<AIProvider, string> = { gemini: '', openrouter: '' };
+        (res?.providers || []).forEach(p => { defaults[p.value] = p.defaultModel; });
+        this.defaultModels.set(defaults);
+      },
+      error: (err) => console.error('Error loading AI models', err),
+    });
+  }
+
+  /** Modelo por defecto de un proveedor según el catálogo del backend. */
+  defaultModelForProvider(provider: AIProvider): string {
+    const configured = this.defaultModels()[provider];
+    if (configured) return configured;
+    return this.allModels().find(m => m.provider === provider)?.value || '';
   }
 
   // ============================================

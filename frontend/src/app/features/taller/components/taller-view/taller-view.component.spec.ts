@@ -112,11 +112,12 @@ describe('TallerViewComponent', () => {
       popUndo: vi.fn(),
       undoLastChange: vi.fn(),
       selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
-      selectedModel: signal<string>('gemini-3.8-flash'),
+      selectedModel: signal<string>('gemini-3.6-flash'),
       myProjects: signal([mockCurrentProject]),
       methodologyOptions: [],
       aiProviderOptions: [],
       availableModels: signal([]),
+      defaultModelForProvider: (p: string) => p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash',
     };
 
     mockAuthFacade = {
@@ -622,13 +623,13 @@ describe('TallerViewComponent', () => {
     const eventGemini = { target: { value: 'gemini' } } as any;
     component.onAiChange(eventGemini);
     expect(mockProjectsFacade.selectedAi()).toBe('gemini');
-    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.8-flash');
+    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.6-flash');
   });
 
   it('should update selectedModel on onModelChange', () => {
-    const event = { target: { value: 'gemini-3.7-flash' } } as any;
+    const event = { target: { value: 'gemini-3.6-flash' } } as any;
     component.onModelChange(event);
-    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.7-flash');
+    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.6-flash');
   });
 
   it('should switch selectedAi if fallback was used in rewriteWithAI', () => {
@@ -649,7 +650,7 @@ describe('TallerViewComponent', () => {
   it('should show taller-ai-select and taller-model-select for admin, handle template change events, and hide for non-admin', async () => {
     mockAuthFacade.currentUser.set({ role: 'admin', canUseAi: true });
     mockProjectsFacade.selectedAi.set('gemini');
-    mockProjectsFacade.availableModels.set([{ value: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash (Último)', provider: 'gemini' }, { value: 'gemini-3.7-flash', label: 'Gemini 3.7 Flash', provider: 'gemini' }, { value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }, { value: 'gemini-2.5-pro', label: 'Gemini 2.5 Pro', provider: 'gemini' }, { value: 'gemini-3.1-pro-preview', label: 'Gemini 3.1 Pro Preview', provider: 'gemini' }]);
+    mockProjectsFacade.availableModels.set([{ value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }, { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }]);
     fixture.detectChanges();
     let aiSelect = fixture.nativeElement.querySelector('#taller-ai-select');
     let modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
@@ -657,10 +658,10 @@ describe('TallerViewComponent', () => {
     expect(modelSelect).toBeTruthy();
 
     // Trigger change event on taller-model-select in DOM
-    const geminiOptionIndex = Array.from(modelSelect.options as unknown as HTMLOptionElement[]).findIndex((option: HTMLOptionElement) => option.value === 'gemini-3.7-flash');
+    const geminiOptionIndex = Array.from(modelSelect.options as unknown as HTMLOptionElement[]).findIndex((option: HTMLOptionElement) => option.value === 'gemini-3.6-flash');
     modelSelect.selectedIndex = geminiOptionIndex >= 0 ? geminiOptionIndex : 0;
     modelSelect.dispatchEvent(new Event('change'));
-    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.7-flash');
+    expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.6-flash');
 
     // Trigger change event on taller-ai-select in DOM (switch to openrouter)
     aiSelect.value = 'openrouter';

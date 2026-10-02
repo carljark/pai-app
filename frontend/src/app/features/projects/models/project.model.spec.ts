@@ -1,38 +1,18 @@
 import { describe, it, expect } from 'vitest';
 import {
-  getModelsForProvider,
-  getDefaultModelForProvider,
   getHistoryTabForTipoNivel,
   isFPProject,
   isESOProject,
-  ProjectType,
+  AiModelsResponse,
 } from './project.model';
 
 describe('Project Model - Utility Functions', () => {
-  describe('getModelsForProvider', () => {
-    it('should return GEMINI_MODELS for gemini provider', () => {
-      const models = getModelsForProvider('gemini');
-      expect(models).toHaveLength(5);
-      expect(models[0].provider).toBe('gemini');
-      expect(models[0].value).toBe('gemini-3.8-flash');
-    });
-
-    it('should return OPENROUTER_MODELS for openrouter provider', () => {
-      const models = getModelsForProvider('openrouter');
-      expect(models).toHaveLength(7);
-      expect(models[0].provider).toBe('openrouter');
-      expect(models[0].value).toBe('deepseek/deepseek-v4.1-flash');
-    });
-  });
-
-  describe('getDefaultModelForProvider', () => {
-    it('should return gemini-3.8-flash for gemini', () => {
-      expect(getDefaultModelForProvider('gemini')).toBe('gemini-3.8-flash');
-    });
-
-    it('should return DeepSeek V4.1 Flash for openrouter', () => {
-      expect(getDefaultModelForProvider('openrouter')).toBe('deepseek/deepseek-v4.1-flash');
-    });
+  it('should type the AI models response shape', () => {
+    const response: AiModelsResponse = {
+      providers: [{ value: 'gemini', label: 'Gemini', defaultModel: 'gemini-3.6-flash' }],
+      models: [{ value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }],
+    };
+    expect(response.models[0].value).toBe('gemini-3.6-flash');
   });
 
   describe('getHistoryTabForTipoNivel', () => {

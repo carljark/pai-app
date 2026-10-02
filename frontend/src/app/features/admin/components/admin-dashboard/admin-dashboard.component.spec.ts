@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AdminDashboardComponent } from './admin-dashboard.component';
 import { AdminFacade } from '../../services/admin.facade';
 import { FeedbackService } from '../../../feedback/services/feedback.service';
+import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { of, throwError } from 'rxjs';
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
@@ -11,6 +12,7 @@ describe('AdminDashboardComponent', () => {
   let fixture: ComponentFixture<AdminDashboardComponent>;
   let mockFacade: any;
   let mockFeedbackService: any;
+  let mockProjects: any;
 
   beforeEach(async () => {
     mockFacade = {
@@ -42,11 +44,19 @@ describe('AdminDashboardComponent', () => {
       deleteFeedback: vi.fn().mockReturnValue(of({}))
     };
 
+    // El catálogo de modelos vive en el backend; el mock simula sus valores.
+    mockProjects = {
+      defaultModelForProvider: vi.fn((p: string) =>
+        p === 'gemini' ? 'gemini-3.6-flash' : p === 'openrouter' ? 'openrouter/free' : ''
+      )
+    };
+
     await TestBed.configureTestingModule({
       imports: [AdminDashboardComponent],
       providers: [
         { provide: AdminFacade, useValue: mockFacade },
-        { provide: FeedbackService, useValue: mockFeedbackService }
+        { provide: FeedbackService, useValue: mockFeedbackService },
+        { provide: ProjectsFacade, useValue: mockProjects }
       ]
     }).compileComponents();
 

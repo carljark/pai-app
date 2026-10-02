@@ -20,7 +20,7 @@
 - `frontend/src/app/features/projects/services/projects.facade.ts`: carga el catálogo del backend, `availableModels` se filtra por proveedor y `defaultModelForProvider()` usa los valores por defecto recibidos.
 - `generator-view.component.html`: las opciones del selector de modelo se generan con `@for` sobre `availableModels()` (se quitan los nombres hardcodeados).
 - `generator-view.component.ts` y `taller-view.component.ts`: usan `projects.defaultModelForProvider()`.
-- `admin-dashboard.component.ts`: el modelo de reserva para logs pasa a `gemini-3.6-flash`.
+- `admin-dashboard.component.ts`: el modelo de reserva para logs se obtiene de `ProjectsFacade.defaultModelForProvider()` (ya no hay IDs de modelo hardcodeados en el frontend).
 
 ### Tests y documentación
 - `backend/src/tests/ai-models.test.ts` (**nuevo**): catálogo y controlador.

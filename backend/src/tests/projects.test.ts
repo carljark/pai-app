@@ -8,7 +8,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { FpbMatch } from '../models/FpbMatch';
 import { CE } from '../models/CE';
-import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, APPROVED_PROJECT_TEXT_LIMIT } from '../controllers/project.controller';
+import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, APPROVED_PROJECT_TEXT_LIMIT, MAX_APPROVED_PROJECTS } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
   ThinkingLevel: { HIGH: 'HIGH' },
@@ -762,13 +762,13 @@ describe('buildApprovedProjectsContext', () => {
     expect(ctx).toContain('Cualquiera');
   });
 
-  it('limita a 5 proyectos publicados', async () => {
-    for (let i = 0; i < 7; i++) {
+  it(`limita a ${MAX_APPROVED_PROJECTS} proyectos publicados`, async () => {
+    for (let i = 0; i < MAX_APPROVED_PROJECTS + 2; i++) {
       await new Project({ title: `P${i}`, status: 'publicado', tipoNivel: 'FP_BASICA', updatedAt: new Date(2025, 0, i + 1), generatedContent: { rawText: 't' } }).save();
     }
     const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA' });
     const payload = parsePayload(ctx);
-    expect(payload.length).toBe(5);
+    expect(payload.length).toBe(MAX_APPROVED_PROJECTS);
   });
 
   it('soporta publicados sin generatedContent', async () => {

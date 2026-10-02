@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AdminFacade } from '../../services/admin.facade';
 import { FeedbackService } from '../../../feedback/services/feedback.service';
+import { ProjectsFacade } from '../../../projects/services/projects.facade';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -312,6 +313,7 @@ import { FeedbackService } from '../../../feedback/services/feedback.service';
 export class AdminDashboardComponent {
   adminFacade = inject(AdminFacade);
   feedbackService = inject(FeedbackService);
+  projects = inject(ProjectsFacade);
 
   schoolSettings = signal({ schoolName: '', schoolCity: '', schoolContext: '' });
   isSavingSettings = signal(false);
@@ -379,10 +381,8 @@ export class AdminDashboardComponent {
   getLogModel(log: any): string | null {
     if (log.details?.model) return log.details.model;
     if (log.projectId?.usedModel) return log.projectId.usedModel;
-    const p = log.details?.provider || log.projectId?.usedAiProvider;
-    if (p === 'openrouter') return 'openrouter/free';
-    if (p === 'gemini') return 'gemini-3.6-flash';
-    return null;
+    const provider = log.details?.provider || log.projectId?.usedAiProvider;
+    return provider ? (this.projects.defaultModelForProvider(provider) || null) : null;
   }
 
   getLogProviderLabel(log: any): string | null {

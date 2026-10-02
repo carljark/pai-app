@@ -10,7 +10,7 @@ describe('MapaIntermodularService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [MapaIntermodularService]
+      providers: [MapaIntermodularService],
     });
     service = TestBed.inject(MapaIntermodularService);
     httpMock = TestBed.inject(HttpTestingController);
@@ -33,11 +33,11 @@ describe('MapaIntermodularService', () => {
         type: 'especifico',
         color: '#e74c3c',
         icon: 'cut',
-        learningOutcomes: []
-      }
+        learningOutcomes: [],
+      },
     ] as any;
 
-    service.getModules('FPB').subscribe(data => {
+    service.getModules('FPB').subscribe((data) => {
       expect(data).toEqual(mockData);
     });
 

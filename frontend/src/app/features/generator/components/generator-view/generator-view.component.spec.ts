@@ -7,7 +7,6 @@ import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
-import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { signal } from '@angular/core';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
@@ -15,13 +14,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-curriculum-selector',
   standalone: true,
-  template: '<div></div>'
+  template: '<div></div>',
 })
 class MockCurriculumSelectorComponent {
-  @Input() title: string = '';
-  @Input() generateText: string = '';
-  @Input() generatingText: string = '';
-  @Input() isGenerating: boolean = false;
+  @Input() title = '';
+  @Input() generateText = '';
+  @Input() generatingText = '';
+  @Input() isGenerating = false;
   @Output() generate = new EventEmitter<void>();
 }
 
@@ -30,7 +29,7 @@ describe('GeneratorViewComponent', () => {
   let fixture: ComponentFixture<GeneratorViewComponent>;
 
   const mockLayout = {};
-  
+
   const mockTrans = {
     t: signal({
       subtitle: 'Subtitle',
@@ -40,8 +39,8 @@ describe('GeneratorViewComponent', () => {
       generatorExtraInstructionsLabel: 'Instrucciones adicionales para la IA',
       generatorExtraInstructionsOptional: '(Opcional)',
       generatorExtraInstructionsPlaceholder: 'Ej: Enfocar...',
-      generatorModelLabel: 'Modelo de IA'
-    })
+      generatorModelLabel: 'Modelo de IA',
+    }),
   };
 
   const tipoNivelSignal = signal<string>('FP_BASICA');
@@ -58,7 +57,7 @@ describe('GeneratorViewComponent', () => {
     getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }),
     toggleRa: vi.fn(),
     setTipoNivel: setTipoNivelSpy,
-    setCurso: vi.fn((val: string) => cursoSignal.set(val))
+    setCurso: vi.fn((val: string) => cursoSignal.set(val)),
   };
 
   const mockProjects = {
@@ -67,31 +66,48 @@ describe('GeneratorViewComponent', () => {
     selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
     selectedModel: signal('gemini-3.6-flash'),
     extraInstructions: signal(''),
-    availableModels: () => mockProjects.selectedAi() === 'gemini'
-      ? [{ value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }]
-      : [
-          { value: 'openrouter/free', label: 'Auto Gratuito (Router automático)', provider: 'openrouter' },
-          { value: 'dots-studio/dots-3-note-preview:free', label: 'Dots3 Note 512k (Documentos)', provider: 'openrouter' },
-          { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }
-        ],
-    defaultModelForProvider: (p: string) => p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash',
+    availableModels: () =>
+      mockProjects.selectedAi() === 'gemini'
+        ? [{ value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }]
+        : [
+            {
+              value: 'openrouter/free',
+              label: 'Auto Gratuito (Router automático)',
+              provider: 'openrouter',
+            },
+            {
+              value: 'dots-studio/dots-3-note-preview:free',
+              label: 'Dots3 Note 512k (Documentos)',
+              provider: 'openrouter',
+            },
+            {
+              value: 'deepseek/deepseek-v4.1-flash',
+              label: 'DeepSeek V4.1 Flash',
+              provider: 'openrouter',
+            },
+          ],
+    defaultModelForProvider: (p: string) =>
+      p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash',
     directory: signal([{ _id: 'u2', name: 'Compañero', email: 'comp@test.com', role: 'teacher' }]),
     selectedCollaborators: signal<string[]>([]),
     toggleCollaborator: vi.fn(),
-    matchingProjects: signal([])
+    matchingProjects: signal([]),
   };
 
   const mockAppFacade = {
     generateProject: vi.fn(),
-    openProjectInNewWindow: vi.fn()
+    openProjectInNewWindow: vi.fn(),
   };
 
   const mockAuthFacade = {
-    currentUser: signal<any>({ role: 'admin' })
+    currentUser: signal<any>({ role: 'admin' }),
   };
 
   beforeEach(async () => {
     mockAuthFacade.currentUser.set({ role: 'admin' });
+    // Los signals del mock se comparten entre tests: se restablece el estado inicial
+    tipoNivelSignal.set('FP_BASICA');
+    setTipoNivelSpy.mockClear();
     await TestBed.configureTestingModule({
       imports: [GeneratorViewComponent],
       providers: [
@@ -100,10 +116,9 @@ describe('GeneratorViewComponent', () => {
         { provide: CurriculumFacade, useValue: mockCurriculum },
         { provide: ProjectsFacade, useValue: mockProjects },
         { provide: AppFacade, useValue: mockAppFacade },
-        { provide: AuthFacade, useValue: mockAuthFacade }
-      ]
-    })
-    .compileComponents();
+        { provide: AuthFacade, useValue: mockAuthFacade },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GeneratorViewComponent);
     component = fixture.componentInstance;
@@ -114,11 +129,26 @@ describe('GeneratorViewComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should change tipoNivel with the Enter key', () => {
+    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
+    const expected = [
+      'FP_BASICA',
+      'CFGM_ESTETICA',
+      'CFGM_PELUQUERIA',
+      'DIVERSIFICACION_CURRICULAR',
+    ];
+
+    tabs.forEach((tab: HTMLElement, i: number) => {
+      tab.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+      expect(setTipoNivelSpy).toHaveBeenLastCalledWith(expected[i]);
+    });
+  });
+
   it('should change tipoNivel on click', () => {
     const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
-    
+
     expect(mockCurriculum.tipoNivel()).toBe('FP_BASICA');
-    
+
     // click CFGM_ESTETICA
     tabs[1].click();
     expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGM_ESTETICA');
@@ -145,15 +175,17 @@ describe('GeneratorViewComponent', () => {
   it('should change curso on select change', () => {
     mockCurriculum.tipoNivel.set('FP_BASICA');
     fixture.detectChanges();
-    const courseSelect = fixture.debugElement.query(By.css('#generator-course-select')).nativeElement;
-    
+    const courseSelect = fixture.debugElement.query(
+      By.css('#generator-course-select'),
+    ).nativeElement;
+
     courseSelect.value = '2º';
     courseSelect.dispatchEvent(new Event('change'));
     expect(mockCurriculum.setCurso).toHaveBeenCalled();
-    
+
     mockCurriculum.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
     fixture.detectChanges();
-    
+
     courseSelect.value = '4º';
     courseSelect.dispatchEvent(new Event('change'));
     expect(mockCurriculum.setCurso).toHaveBeenCalledWith('4º');
@@ -169,8 +201,10 @@ describe('GeneratorViewComponent', () => {
 
   it('should change methodology on select change', () => {
     fixture.detectChanges();
-    const methodologySelect = fixture.debugElement.query(By.css('#generator-methodology-select')).nativeElement;
-    
+    const methodologySelect = fixture.debugElement.query(
+      By.css('#generator-methodology-select'),
+    ).nativeElement;
+
     methodologySelect.value = 'ABR (Aprendizaje Basado en Retos)';
     methodologySelect.dispatchEvent(new Event('change'));
     expect(mockProjects.methodology()).toContain('ABR');
@@ -182,7 +216,7 @@ describe('GeneratorViewComponent', () => {
     mockProjects.selectedModel.set('gemini-3.6-flash');
     fixture.detectChanges();
     const aiSelect = fixture.debugElement.query(By.css('#generator-ai-select')).nativeElement;
-    
+
     aiSelect.value = 'openrouter';
     aiSelect.dispatchEvent(new Event('change'));
     expect(mockProjects.selectedAi()).toBe('openrouter');
@@ -207,7 +241,9 @@ describe('GeneratorViewComponent', () => {
     // Switch to OpenRouter and choose a document model
     mockProjects.selectedAi.set('openrouter');
     fixture.detectChanges();
-    const modelSelectOR = fixture.debugElement.query(By.css('#generator-model-select')).nativeElement;
+    const modelSelectOR = fixture.debugElement.query(
+      By.css('#generator-model-select'),
+    ).nativeElement;
     modelSelectOR.value = 'dots-studio/dots-3-note-preview:free';
     modelSelectOR.dispatchEvent(new Event('change'));
     expect(mockProjects.selectedModel()).toBe('dots-studio/dots-3-note-preview:free');
@@ -224,7 +260,9 @@ describe('GeneratorViewComponent', () => {
 
   it('should update extraInstructions on textarea input', () => {
     fixture.detectChanges();
-    const textarea = fixture.debugElement.query(By.css('#generator-extra-instructions')).nativeElement;
+    const textarea = fixture.debugElement.query(
+      By.css('#generator-extra-instructions'),
+    ).nativeElement;
     textarea.value = 'Enfocar en sostenibilidad y dinámicas DUA';
     textarea.dispatchEvent(new Event('input'));
     expect(mockProjects.extraInstructions()).toBe('Enfocar en sostenibilidad y dinámicas DUA');
@@ -236,12 +274,14 @@ describe('GeneratorViewComponent', () => {
 
     expect(fixture.nativeElement.textContent).toContain('Compañero');
 
-    const checkbox = fixture.debugElement.query(By.css('input[type="checkbox"]')).nativeElement as HTMLInputElement;
+    const checkbox = fixture.debugElement.query(By.css('input[type="checkbox"]'))
+      .nativeElement as HTMLInputElement;
     checkbox.dispatchEvent(new Event('change'));
     expect(mockProjects.toggleCollaborator).toHaveBeenCalledWith('u2');
 
-    const removeBtn = Array.from(fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>)
-      .find(b => b.textContent?.includes('×')) as HTMLButtonElement;
+    const removeBtn = Array.from(
+      fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>,
+    ).find((b) => b.textContent?.includes('×')) as HTMLButtonElement;
     removeBtn.click();
     expect(mockProjects.toggleCollaborator).toHaveBeenCalledWith('u2');
   });
@@ -249,7 +289,7 @@ describe('GeneratorViewComponent', () => {
   it('should handle CFGM_ESTETICA course options and getUserName fallback', () => {
     mockCurriculum.tipoNivel.set('CFGM_ESTETICA');
     fixture.detectChanges();
-    expect(component.courseOptions().map(o => o.value)).toEqual(['1º']);
+    expect(component.courseOptions().map((o) => o.value)).toEqual(['1º']);
     expect(component.getUserName('u2')).toBe('Compañero');
     expect(component.getUserName('desconocido')).toBe('desconocido');
   });

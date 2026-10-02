@@ -11,14 +11,14 @@ describe('MapaIntermodularFacade', () => {
 
   beforeEach(() => {
     mockMapaService = {
-      getModules: vi.fn().mockReturnValue(of([...FPB_MODULES_SEED]))
+      getModules: vi.fn().mockReturnValue(of([...FPB_MODULES_SEED])),
     };
 
     TestBed.configureTestingModule({
       providers: [
         MapaIntermodularFacade,
-        { provide: MapaIntermodularService, useValue: mockMapaService }
-      ]
+        { provide: MapaIntermodularService, useValue: mockMapaService },
+      ],
     });
     facade = TestBed.inject(MapaIntermodularFacade);
     facade.modules.set([...FPB_MODULES_SEED]);
@@ -43,11 +43,17 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should verify module 3159 has exactly 5 RAs and 20 official criteria without RA6', () => {
-    const mod3159 = facade.modules().find(m => m.code === '3159');
+    const mod3159 = facade.modules().find((m) => m.code === '3159');
     expect(mod3159).toBeTruthy();
     expect(mod3159!.learningOutcomes.length).toBe(5);
-    expect(mod3159!.learningOutcomes.map(lo => lo.code)).toEqual(['RA1', 'RA2', 'RA3', 'RA4', 'RA5']);
-    expect(mod3159!.learningOutcomes.some(lo => lo.code === 'RA6')).toBe(false);
+    expect(mod3159!.learningOutcomes.map((lo) => lo.code)).toEqual([
+      'RA1',
+      'RA2',
+      'RA3',
+      'RA4',
+      'RA5',
+    ]);
+    expect(mod3159!.learningOutcomes.some((lo) => lo.code === 'RA6')).toBe(false);
 
     // RA1: 5 criteria
     expect(mod3159!.learningOutcomes[0].criteria_es?.length).toBe(5);
@@ -69,7 +75,10 @@ describe('MapaIntermodularFacade', () => {
     expect(mod3159!.learningOutcomes[4].criteria_es?.length).toBe(4);
     expect(mod3159!.learningOutcomes[4].criteria_ca?.length).toBe(4);
 
-    const totalCriteria = mod3159!.learningOutcomes.reduce((acc, lo) => acc + (lo.criteria_es?.length || 0), 0);
+    const totalCriteria = mod3159!.learningOutcomes.reduce(
+      (acc, lo) => acc + (lo.criteria_es?.length || 0),
+      0,
+    );
     expect(totalCriteria).toBe(20);
   });
 
@@ -97,7 +106,7 @@ describe('MapaIntermodularFacade', () => {
   it('should filter modules by type', () => {
     facade.setTypeFilter('especifico');
     const specificMods = facade.filteredModules();
-    expect(specificMods.every(m => m.type === 'especifico')).toBe(true);
+    expect(specificMods.every((m) => m.type === 'especifico')).toBe(true);
 
     facade.setTypeFilter('all');
     expect(facade.filteredModules().length).toBe(facade.modules().length);
@@ -107,7 +116,7 @@ describe('MapaIntermodularFacade', () => {
     facade.setRelationFilter('ciencias');
     const filtered = facade.filteredModules();
     expect(filtered.length).toBeGreaterThan(0);
-    
+
     facade.setRelationFilter('all');
     expect(facade.filteredModules().length).toBe(facade.modules().length);
   });
@@ -137,8 +146,12 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should build the export summary header for every active tab and language', () => {
-    const tabs: Array<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'> =
-      ['FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2'];
+    const tabs: ('FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2')[] = [
+      'FPB',
+      'CFGM',
+      'CFGM_PELUQUERIA',
+      'CFGM_PELUQUERIA_2',
+    ];
 
     for (const tab of tabs) {
       facade.activeTab.set(tab);
@@ -156,10 +169,10 @@ describe('MapaIntermodularFacade', () => {
     facade.selectedRaId.set('non_existent_ra');
     expect(facade.selectedRa()).toBeNull();
 
-    facade.setSearch({ target: { value: '3060' } });
+    facade.setSearch({ target: { value: '3060' } } as unknown as Event);
     expect(facade.searchQuery()).toBe('3060');
 
-    facade.setSearch({ target: null });
+    facade.setSearch({ target: null } as unknown as Event);
     expect(facade.searchQuery()).toBe('');
 
     facade.setSearch(123 as any);
@@ -182,8 +195,8 @@ describe('MapaIntermodularFacade', () => {
         type: 'especifico',
         color: '#333',
         icon: 'test',
-        learningOutcomes: []
-      }
+        learningOutcomes: [],
+      },
     ]);
     facade.selectModule('TEST');
     expect(facade.selectedRa()).toBeNull();
@@ -200,8 +213,8 @@ describe('MapaIntermodularFacade', () => {
         name_ca: 'Mòdul Test 2',
         type: 'especifico',
         color: '#333',
-        icon: 'test2'
-      } as any
+        icon: 'test2',
+      } as any,
     ]);
     facade.selectModule('TEST2');
     expect(facade.selectedRa()).toBeNull();
@@ -210,7 +223,7 @@ describe('MapaIntermodularFacade', () => {
   it('should cover all search match branches and relation filtering', () => {
     // Search match by name_es
     facade.setSearch('maquillaje');
-    expect(facade.filteredModules().some(m => m.code === '3063')).toBe(true);
+    expect(facade.filteredModules().some((m) => m.code === '3063')).toBe(true);
 
     // Search match by name_ca
     facade.setSearch('atenció');
@@ -275,50 +288,74 @@ describe('MapaIntermodularFacade', () => {
     facade.selectRa('3005_RA1');
     facade.selectCriterion('e) Se ha mantenido una conversación');
     const conns3005 = facade.filteredConnections();
-    const conn1e = conns3005.find(c => c.sourceCriteria === '3005-1e');
+    const conn1e = conns3005.find((c) => c.sourceCriteria === '3005-1e');
     expect(conn1e).toBeDefined();
-    expect(conn1e?.relatedCriteria?.some(r => r.moduleCode === '3011' && r.criteria.includes('3011-3a'))).toBe(true);
+    expect(
+      conn1e?.relatedCriteria?.some(
+        (r) => r.moduleCode === '3011' && r.criteria.includes('3011-3a'),
+      ),
+    ).toBe(true);
 
     // Test 2: Inversely from 3011, 3011-3a shows relation with 3005-1e
     facade.selectModule('3011');
     facade.selectRa('3011_RA3');
     facade.selectCriterion('3011-3a');
     const conns3011 = facade.filteredConnections();
-    const conn3a = conns3011.find(c => c.sourceCriteria?.includes('3011-3a'));
+    const conn3a = conns3011.find((c) => c.sourceCriteria?.includes('3011-3a'));
     expect(conn3a).toBeDefined();
-    expect(conn3a?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-1e'))).toBe(true);
+    expect(
+      conn3a?.relatedCriteria?.some(
+        (r) => r.moduleCode === '3005' && r.criteria.includes('3005-1e'),
+      ),
+    ).toBe(true);
 
     // Test 3: From 3005, 3005-2g connects with 3062-1f
     facade.selectModule('3005');
     facade.selectRa('3005_RA2');
     facade.selectCriterion('g) Se ha asesorado al cliente');
-    const conn2g = facade.filteredConnections().find(c => c.sourceCriteria === '3005-2g');
+    const conn2g = facade.filteredConnections().find((c) => c.sourceCriteria === '3005-2g');
     expect(conn2g).toBeDefined();
-    expect(conn2g?.relatedCriteria?.some(r => r.moduleCode === '3062' && r.criteria.includes('3062-1f'))).toBe(true);
+    expect(
+      conn2g?.relatedCriteria?.some(
+        (r) => r.moduleCode === '3062' && r.criteria.includes('3062-1f'),
+      ),
+    ).toBe(true);
 
     // Test 4: Inversely from 3062, 3062-1f shows relation with 3005-2g
     facade.selectModule('3062');
     facade.selectRa('3062_RA1');
     facade.selectCriterion('f) Se han justificado las causas');
-    const conn1f = facade.filteredConnections().find(c => c.sourceCriteria === '3062-1f');
+    const conn1f = facade.filteredConnections().find((c) => c.sourceCriteria === '3062-1f');
     expect(conn1f).toBeDefined();
-    expect(conn1f?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-2g'))).toBe(true);
+    expect(
+      conn1f?.relatedCriteria?.some(
+        (r) => r.moduleCode === '3005' && r.criteria.includes('3005-2g'),
+      ),
+    ).toBe(true);
 
     // Test 5: From 3005, 3005-3d connects with 3042-4g
     facade.selectModule('3005');
     facade.selectRa('3005_RA3');
     facade.selectCriterion('d) Se ha recogido la conformidad');
-    const conn3d = facade.filteredConnections().find(c => c.sourceCriteria === '3005-3d');
+    const conn3d = facade.filteredConnections().find((c) => c.sourceCriteria === '3005-3d');
     expect(conn3d).toBeDefined();
-    expect(conn3d?.relatedCriteria?.some(r => r.moduleCode === '3042' && r.criteria.includes('3042-4g'))).toBe(true);
+    expect(
+      conn3d?.relatedCriteria?.some(
+        (r) => r.moduleCode === '3042' && r.criteria.includes('3042-4g'),
+      ),
+    ).toBe(true);
 
     // Test 6: Inversely from 3042, 3042-4g shows relation with 3005-3d
     facade.selectModule('3042');
     facade.selectRa('3042_RA4');
     facade.selectCriterion('3042-4g');
-    const conn4g = facade.filteredConnections().find(c => c.sourceCriteria?.includes('3042-4g'));
+    const conn4g = facade.filteredConnections().find((c) => c.sourceCriteria?.includes('3042-4g'));
     expect(conn4g).toBeDefined();
-    expect(conn4g?.relatedCriteria?.some(r => r.moduleCode === '3005' && r.criteria.includes('3005-3d'))).toBe(true);
+    expect(
+      conn4g?.relatedCriteria?.some(
+        (r) => r.moduleCode === '3005' && r.criteria.includes('3005-3d'),
+      ),
+    ).toBe(true);
   });
 
   it('should switch tabs and update selected module and RA', async () => {
@@ -362,7 +399,7 @@ describe('MapaIntermodularFacade', () => {
     expect(facade.isLoadingSeed()).toBe(false);
     expect(consoleSpy).toHaveBeenCalledWith(
       expect.stringContaining('Error loading seed for tab CFGM_PELUQUERIA'),
-      expect.any(Error)
+      expect.any(Error),
     );
     consoleSpy.mockRestore();
   });
@@ -379,10 +416,15 @@ describe('MapaIntermodularFacade', () => {
 
   describe('uniqueActivities', () => {
     const makeAct = (id: string, title_es: string, title_ca = '') => ({
-      id, title_es, title_ca,
-      description_es: 'd_es', description_ca: 'd_ca',
-      evidence_es: 'e_es', evidence_ca: 'e_ca',
-      diversitySupport_es: 'ds_es', diversitySupport_ca: 'ds_ca'
+      id,
+      title_es,
+      title_ca,
+      description_es: 'd_es',
+      description_ca: 'd_ca',
+      evidence_es: 'e_es',
+      evidence_ca: 'e_ca',
+      diversitySupport_es: 'ds_es',
+      diversitySupport_ca: 'ds_ca',
     });
 
     it('should return empty array when no connections', () => {
@@ -395,44 +437,83 @@ describe('MapaIntermodularFacade', () => {
       const act2 = makeAct('2', 'Activitat B');
       const actDup = makeAct('3', 'Activitat A'); // duplicate title_es
       const conn1 = {
-        targetModuleCode: 'X', targetModuleName_es: 'X', targetModuleName_ca: 'X',
-        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        targetModuleCode: 'X',
+        targetModuleName_es: 'X',
+        targetModuleName_ca: 'X',
+        targetRaCode: 'RA1',
+        targetRaText_es: 'ra',
+        targetRaText_ca: 'ra',
         relationType: 'tecnica' as const,
-        justification_es: '', justification_ca: '',
-        activities: [act1, act2]
+        justification_es: '',
+        justification_ca: '',
+        activities: [act1, act2],
       };
       const conn2 = {
-        targetModuleCode: 'Y', targetModuleName_es: 'Y', targetModuleName_ca: 'Y',
-        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        targetModuleCode: 'Y',
+        targetModuleName_es: 'Y',
+        targetModuleName_ca: 'Y',
+        targetRaCode: 'RA1',
+        targetRaText_es: 'ra',
+        targetRaText_ca: 'ra',
         relationType: 'tecnica' as const,
-        justification_es: '', justification_ca: '',
-        activities: [actDup] // same title as act1
+        justification_es: '',
+        justification_ca: '',
+        activities: [actDup], // same title as act1
       };
-      facade.modules.set([{
-        code: 'MOD', name_es: 'Mod', name_ca: 'Mod', type: 'especifico', color: '#000', icon: 'x',
-        learningOutcomes: [{ id: 'MOD_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn1, conn2] }]
-      }]);
+      facade.modules.set([
+        {
+          code: 'MOD',
+          name_es: 'Mod',
+          name_ca: 'Mod',
+          type: 'especifico',
+          color: '#000',
+          icon: 'x',
+          learningOutcomes: [
+            {
+              id: 'MOD_RA1',
+              code: 'RA1',
+              text_es: 'ra',
+              text_ca: 'ra',
+              connections: [conn1, conn2],
+            },
+          ],
+        },
+      ]);
       facade.selectModule('MOD');
       facade.selectRa('MOD_RA1');
       const unique = facade.uniqueActivities();
       expect(unique.length).toBe(2);
-      expect(unique.map(a => a.title_es)).toEqual(['Activitat A', 'Activitat B']);
+      expect(unique.map((a) => a.title_es)).toEqual(['Activitat A', 'Activitat B']);
     });
 
     it('should fall back to title_ca as dedup key when title_es is empty', () => {
       const actNoEs1 = makeAct('a', '', 'Activitat CA');
       const actNoEs2 = makeAct('b', '', 'Activitat CA'); // duplicate by title_ca
       const conn = {
-        targetModuleCode: 'Z', targetModuleName_es: 'Z', targetModuleName_ca: 'Z',
-        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        targetModuleCode: 'Z',
+        targetModuleName_es: 'Z',
+        targetModuleName_ca: 'Z',
+        targetRaCode: 'RA1',
+        targetRaText_es: 'ra',
+        targetRaText_ca: 'ra',
         relationType: 'tecnica' as const,
-        justification_es: '', justification_ca: '',
-        activities: [actNoEs1, actNoEs2]
+        justification_es: '',
+        justification_ca: '',
+        activities: [actNoEs1, actNoEs2],
       };
-      facade.modules.set([{
-        code: 'MOD2', name_es: 'Mod2', name_ca: 'Mod2', type: 'especifico', color: '#000', icon: 'x',
-        learningOutcomes: [{ id: 'MOD2_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn] }]
-      }]);
+      facade.modules.set([
+        {
+          code: 'MOD2',
+          name_es: 'Mod2',
+          name_ca: 'Mod2',
+          type: 'especifico',
+          color: '#000',
+          icon: 'x',
+          learningOutcomes: [
+            { id: 'MOD2_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn] },
+          ],
+        },
+      ]);
       facade.selectModule('MOD2');
       facade.selectRa('MOD2_RA1');
       const unique = facade.uniqueActivities();
@@ -442,16 +523,30 @@ describe('MapaIntermodularFacade', () => {
     it('should skip activities with no title_es and no title_ca', () => {
       const actNoTitle = makeAct('x', '', '');
       const conn = {
-        targetModuleCode: 'W', targetModuleName_es: 'W', targetModuleName_ca: 'W',
-        targetRaCode: 'RA1', targetRaText_es: 'ra', targetRaText_ca: 'ra',
+        targetModuleCode: 'W',
+        targetModuleName_es: 'W',
+        targetModuleName_ca: 'W',
+        targetRaCode: 'RA1',
+        targetRaText_es: 'ra',
+        targetRaText_ca: 'ra',
         relationType: 'tecnica' as const,
-        justification_es: '', justification_ca: '',
-        activities: [actNoTitle]
+        justification_es: '',
+        justification_ca: '',
+        activities: [actNoTitle],
       };
-      facade.modules.set([{
-        code: 'MOD3', name_es: 'Mod3', name_ca: 'Mod3', type: 'especifico', color: '#000', icon: 'x',
-        learningOutcomes: [{ id: 'MOD3_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn] }]
-      }]);
+      facade.modules.set([
+        {
+          code: 'MOD3',
+          name_es: 'Mod3',
+          name_ca: 'Mod3',
+          type: 'especifico',
+          color: '#000',
+          icon: 'x',
+          learningOutcomes: [
+            { id: 'MOD3_RA1', code: 'RA1', text_es: 'ra', text_ca: 'ra', connections: [conn] },
+          ],
+        },
+      ]);
       facade.selectModule('MOD3');
       facade.selectRa('MOD3_RA1');
       expect(facade.uniqueActivities()).toEqual([]);

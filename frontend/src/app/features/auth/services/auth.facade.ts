@@ -18,13 +18,13 @@ export class AuthFacade {
 
   login(credentials: LoginCredentials): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${this.apiUrl}/login`, credentials).pipe(
-      tap(res => {
+      tap((res) => {
         if (res.token) {
           localStorage.setItem('pai_token', res.token);
           localStorage.setItem('pai_user', AuthMapper.toStorage(res.user));
           this.currentUser.set(res.user);
         }
-      })
+      }),
     );
   }
 

@@ -1,19 +1,43 @@
-<div class="mapa-step-header mapa-step-header--1" 
+<div
+  class="mapa-step-header mapa-step-header--1"
   [class.open]="step1Open()"
+  role="button"
+  tabindex="0"
   (click)="activateStep(1)"
+  (keydown.enter)="$event.target === $event.currentTarget && activateStep(1)"
   [attr.aria-expanded]="step1Open()"
-  [title]="isCa() ? 'Activar i desplaçar al Pas 1' : 'Activar y desplazar al Paso 1'">
+  [title]="isCa() ? 'Activar i desplaçar al Pas 1' : 'Activar y desplazar al Paso 1'"
+>
   <div class="mapa-step-header__left">
-    <button 
-      type="button" 
+    <button
+      type="button"
       class="mapa-step-toggle-btn"
       (click)="toggleStep(1, $event)"
-      [attr.aria-label]="step1Open() ? (isCa() ? 'Col·lapsar Pas 1' : 'Colapsar Paso 1') : (isCa() ? 'Expandir Pas 1' : 'Expandir Paso 1')"
-      [title]="step1Open() ? (isCa() ? 'Col·lapsar Pas 1' : 'Colapsar Paso 1') : (isCa() ? 'Expandir Pas 1' : 'Expandir Paso 1')">
+      [attr.aria-label]="
+        step1Open()
+          ? isCa()
+            ? 'Col·lapsar Pas 1'
+            : 'Colapsar Paso 1'
+          : isCa()
+            ? 'Expandir Pas 1'
+            : 'Expandir Paso 1'
+      "
+      [title]="
+        step1Open()
+          ? isCa()
+            ? 'Col·lapsar Pas 1'
+            : 'Colapsar Paso 1'
+          : isCa()
+            ? 'Expandir Pas 1'
+            : 'Expandir Paso 1'
+      "
+    >
       <span class="mapa-step-chevron" [class.rotated]="step1Open()">▼</span>
     </button>
     <h2 class="mapa-step-title">
-      {{ isCa() ? '1. Mòduls i Resultats d’Aprenentatge' : '1. Módulos y Resultados de Aprendizaje' }}
+      {{
+        isCa() ? '1. Mòduls i Resultats d’Aprenentatge' : '1. Módulos y Resultados de Aprendizaje'
+      }}
     </h2>
   </div>
   <div class="mapa-step-header__right">
@@ -27,13 +51,19 @@
 <div tabindex="-1" class="mapa-step-body mapa-step-body--1" [class.collapsed]="!step1Open()">
   <div class="mapa-modules-list">
     @for (mod of modules(); track mod.code) {
-      <div 
-        class="mapa-module-card" 
+      <div
+        class="mapa-module-card"
         [class.selected]="selectedModuleCode() === mod.code"
-        (click)="onSelectModule.emit(mod.code)">
+        role="button"
+        tabindex="0"
+        (click)="moduleSelected.emit(mod.code)"
+        (keydown.enter)="$event.target === $event.currentTarget && moduleSelected.emit(mod.code)"
+      >
         <div class="mapa-module-header">
           <div class="mapa-module-header__title">
-            <span class="mapa-module-chevron">{{ selectedModuleCode() === mod.code ? '▼' : '▶' }}</span>
+            <span class="mapa-module-chevron">{{
+              selectedModuleCode() === mod.code ? '▼' : '▶'
+            }}</span>
             <span class="mapa-badge-code" [style.background]="mod.color">{{ mod.code }}</span>
             <strong class="mapa-module-name">{{ isCa() ? mod.name_ca : mod.name_es }}</strong>
           </div>
@@ -43,13 +73,16 @@
         @if (selectedModuleCode() === mod.code) {
           <div class="mapa-ra-list">
             @for (ra of mod.learningOutcomes; track ra.id) {
-              <button 
-                class="mapa-ra-item" 
+              <button
+                class="mapa-ra-item"
                 [class.active]="selectedRaId() === ra.id"
-                (click)="onSelectRa.emit(ra.id); $event.stopPropagation()">
+                (click)="raSelected.emit(ra.id); $event.stopPropagation()"
+              >
                 <span class="mapa-ra-code">{{ ra.code }}</span>
                 <span class="mapa-ra-text">{{ isCa() ? ra.text_ca : ra.text_es }}</span>
-                <span class="mapa-ra-count" [title]="isCa() ? 'Connexions' : 'Conexiones'">{{ ra.connections.length }}</span>
+                <span class="mapa-ra-count" [title]="isCa() ? 'Connexions' : 'Conexiones'">{{
+                  ra.connections.length
+                }}</span>
               </button>
             }
           </div>
@@ -57,7 +90,11 @@
       </div>
     } @empty {
       <div class="mapa-empty-state">
-        {{ isCa() ? 'No s’ha trobat cap mòdul amb aquest filtre.' : 'No se encontró ningún módulo con este filtro.' }}
+        {{
+          isCa()
+            ? 'No s’ha trobat cap mòdul amb aquest filtre.'
+            : 'No se encontró ningún módulo con este filtro.'
+        }}
       </div>
     }
   </div>

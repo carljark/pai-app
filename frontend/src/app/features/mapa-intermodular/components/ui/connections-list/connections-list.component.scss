@@ -79,13 +79,34 @@
   text-transform: uppercase;
 }
 
-.tag-ciencias { background: #dbeafe; color: #1e40af; }
-.tag-comunicacion { background: #dcfce7; color: #166534; }
-.tag-empleabilidad { background: #fee2e2; color: #991b1b; }
-.tag-cliente { background: #fef3c7; color: #92400e; }
-.tag-sostenibilidad { background: #ecfdf5; color: #065f46; }
-.tag-digital { background: #f3e8ff; color: #6b21a8; }
-.tag-tecnica { background: #e0f2fe; color: #075985; }
+.tag-ciencias {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.tag-comunicacion {
+  background: #dcfce7;
+  color: #166534;
+}
+.tag-empleabilidad {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.tag-cliente {
+  background: #fef3c7;
+  color: #92400e;
+}
+.tag-sostenibilidad {
+  background: #ecfdf5;
+  color: #065f46;
+}
+.tag-digital {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+.tag-tecnica {
+  background: #e0f2fe;
+  color: #075985;
+}
 
 .mapa-target-ra-desc {
   font-size: 0.88rem;
@@ -166,8 +187,12 @@
   font-size: 0.7rem;
 }
 
-.mapa-related-name-tag { color: #64748b; }
-.mapa-related-crit-tag { color: #0f172a; }
+.mapa-related-name-tag {
+  color: #64748b;
+}
+.mapa-related-crit-tag {
+  color: #0f172a;
+}
 
 .mapa-justification-box {
   background: #ffffff;

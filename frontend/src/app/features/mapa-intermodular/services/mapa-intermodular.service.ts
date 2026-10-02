@@ -10,7 +10,7 @@ export class MapaIntermodularService {
 
   getModules(tab: MapaTab): Observable<FPBModule[]> {
     return this.http.get<FPBModule[]>('/api/mapa-intermodular', {
-      params: { tab }
+      params: { tab },
     });
   }
 }

@@ -2,6 +2,7 @@ import { Component, inject, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { Project, getOwnerId } from '../../../projects/models/project.model';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 
@@ -10,7 +11,7 @@ import { TranslationService } from '../../../../services/translation.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './history-project-card.component.html',
-  styleUrls: ['./history-project-card.component.scss']
+  styleUrls: ['./history-project-card.component.scss'],
 })
 export class HistoryProjectCardComponent {
   appFacade = inject(AppFacade);
@@ -18,7 +19,7 @@ export class HistoryProjectCardComponent {
   auth = inject(AuthFacade);
   trans = inject(TranslationService);
 
-  project = input.required<any>();
+  project = input.required<Project>();
   shareOpen = signal(false);
 
   get collaborators(): string[] {
@@ -33,8 +34,8 @@ export class HistoryProjectCardComponent {
     const user = this.auth.currentUser();
     if (!user) return false;
     if (user.role === 'admin') return true;
-    const owner = this.project().userId?._id || this.project().userId;
-    return owner?.toString() === (user._id || (user as any).id)?.toString();
+    const owner = getOwnerId(this.project().userId);
+    return owner === (user._id || user.id);
   }
 
   isCollaborator(userId: string): boolean {
@@ -50,26 +51,33 @@ export class HistoryProjectCardComponent {
   }
 
   getAuthorName(): string | null {
-    return this.project().userId?.name || null;
+    const userId = this.project().userId;
+    return (typeof userId === 'object' && userId?.name) || null;
   }
 
   isMyProject(): boolean {
     const user = this.auth.currentUser();
     if (!user) return false;
-    const uid = user._id || (user as any).id;
-    const authorId = this.project().userId?._id || this.project().userId;
-    return authorId?.toString() === uid?.toString();
+    const uid = user._id || user.id;
+    const authorId = getOwnerId(this.project().userId);
+    return authorId === uid;
   }
 
   getDisplayTitle(): string {
     const p = this.project();
-    const isGeneric = !p.title || p.title === 'Proyecto Integrador' || p.title === 'Proyecto de ESO' || p.title === 'Proyecto Generado';
+    const isGeneric =
+      !p.title ||
+      p.title === 'Proyecto Integrador' ||
+      p.title === 'Proyecto de ESO' ||
+      p.title === 'Proyecto Generado';
     if (isGeneric && p.modules && p.modules.length > 0) return p.modules.join(' + ');
     return p.title || this.trans.t().untitledProject;
   }
 
   modulesLabel(): string {
-    const mods = this.project().modules?.length ? this.project().modules : this.project().generatedContent?.modules;
+    const mods = this.project().modules?.length
+      ? this.project().modules
+      : this.project().generatedContent?.modules;
     return mods?.join(', ') || 'Varios';
   }
 
@@ -79,7 +87,9 @@ export class HistoryProjectCardComponent {
     if (provider === 'openrouter') return this.trans.t().aiOpenRouter;
     if (provider === 'gemini') return this.trans.t().aiGemini;
     if (p.usedModel) {
-      return p.usedModel.toLowerCase().includes('gemini') ? this.trans.t().aiGemini : this.trans.t().aiOpenRouter;
+      return p.usedModel.toLowerCase().includes('gemini')
+        ? this.trans.t().aiGemini
+        : this.trans.t().aiOpenRouter;
     }
     return null;
   }

@@ -7,9 +7,15 @@
 import { Injectable, inject, signal, computed, effect } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { AuthFacade } from '../../auth/services/auth.facade';
-import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import {
+  CurriculumFacade,
+  CFGM_PELUQUERIA_1ST_ORDER,
+  CFGM_PELUQUERIA_2ND_ORDER,
+} from '../../curriculum/services/curriculum.facade';
+import { LearningOutcome } from '../../curriculum/models/curriculum.model';
 import { ProjectsService } from './projects.service';
 import { findProjectsWithSameSelection } from '../utils/selection-match';
+import { RewriteSectionResponseDto, rewrittenText } from '../mappers/projects.mapper';
 import {
   Project,
   ProjectStatus,
@@ -23,8 +29,8 @@ import {
   AIModelOption,
   AiModelOptionDto,
   DirectoryUser,
-  MethodologyOption,
   getHistoryTabForTipoNivel,
+  getOwnerId,
   isFPProject,
   isESOProject,
   METHODOLOGY_OPTIONS,
@@ -89,39 +95,40 @@ export class ProjectsFacade {
   // ============================================
   // COMPUTED - Derivados
   // ============================================
-  currentProject = computed(() => 
-    this.projectsHistory().find(p => p._id === this.currentProjectId())
+  currentProject = computed(() =>
+    this.projectsHistory().find((p) => p._id === this.currentProjectId()),
   );
 
   myProjects = computed(() => {
     const user = this.authFacade.currentUser();
     if (!user) return [];
-    const uid = user._id || (user as any).id;
-    return this.projectsHistory().filter(p => {
-      const pAuthorId = (p.userId as any)?._id || p.userId;
-      return pAuthorId?.toString() === uid?.toString();
-    });
+    const uid = user._id || user.id;
+    return this.projectsHistory().filter((p) => getOwnerId(p.userId) === uid);
   });
 
   formattedGeneratedProject = computed(() => this.generatedProject() || '');
 
   fpProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
-    return this.projectsHistory().filter(p => {
+    return this.projectsHistory().filter((p) => {
       const matchLevel = isFPProject(p.tipoNivel);
       if (!matchLevel) return false;
       if (!q) return true;
-      return (p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q));
+      return (
+        p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q)
+      );
     });
   });
 
   esoProjects = computed(() => {
     const q = this.searchQuery().toLowerCase();
-    return this.projectsHistory().filter(p => {
+    return this.projectsHistory().filter((p) => {
       const matchLevel = isESOProject(p.tipoNivel);
       if (!matchLevel) return false;
       if (!q) return true;
-      return (p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q));
+      return (
+        p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q)
+      );
     });
   });
 
@@ -132,13 +139,13 @@ export class ProjectsFacade {
   aiProviderOptions = AI_PROVIDER_OPTIONS;
   availableModels = computed<AIModelOption[]>(() =>
     this.allModels()
-      .filter(m => m.provider === this.selectedAi())
-      .map(({ value, label, provider }) => ({ value, label, provider }))
+      .filter((m) => m.provider === this.selectedAi())
+      .map(({ value, label, provider }) => ({ value, label, provider })),
   );
 
   /** Proyectos generados cuya selección de RAs/CEs coincide exactamente con la actual. */
   matchingProjects = computed(() =>
-    findProjectsWithSameSelection(this.projectsHistory(), this.curriculumFacade.selectedRas())
+    findProjectsWithSameSelection(this.projectsHistory(), this.curriculumFacade.selectedRas()),
   );
 
   // ============================================
@@ -151,7 +158,9 @@ export class ProjectsFacade {
     effect(() => {
       const provider = this.selectedAi();
       const fallback = this.defaultModels()[provider];
-      const currentValid = this.allModels().some(m => m.provider === provider && m.value === this.selectedModel());
+      const currentValid = this.allModels().some(
+        (m) => m.provider === provider && m.value === this.selectedModel(),
+      );
       if (fallback && !currentValid) {
         this.selectedModel.set(fallback);
       }
@@ -177,21 +186,21 @@ export class ProjectsFacade {
 
   /** Añade o quita un usuario de la selección de colaboradores del nuevo proyecto. */
   toggleCollaborator(userId: string): void {
-    this.selectedCollaborators.update(list =>
-      list.includes(userId) ? list.filter(id => id !== userId) : [...list, userId]
+    this.selectedCollaborators.update((list) =>
+      list.includes(userId) ? list.filter((id) => id !== userId) : [...list, userId],
     );
   }
 
   /** Nombres de los colaboradores de un proyecto (para mostrar e invitar). */
   getCollaboratorNames(project: Project): string[] {
     return (project?.collaborators || [])
-      .map(c => (typeof c.userId === 'object' ? c.userId?.name : ''))
+      .map((c) => (typeof c.userId === 'object' ? c.userId?.name : ''))
       .filter((name): name is string => Boolean(name));
   }
 
   getCollaboratorIds(project: Project): string[] {
     return (project?.collaborators || [])
-      .map(c => (typeof c.userId === 'string' ? c.userId : c.userId?._id))
+      .map((c) => (typeof c.userId === 'string' ? c.userId : c.userId?._id))
       .filter((id): id is string => Boolean(id));
   }
 
@@ -200,19 +209,19 @@ export class ProjectsFacade {
   }
 
   addCollaborator(projectId: string, userId: string) {
-    return this.projectsService.addCollaborator(projectId, userId).pipe(
-      tap({ next: (updated) => this.replaceInHistory(updated) })
-    );
+    return this.projectsService
+      .addCollaborator(projectId, userId)
+      .pipe(tap({ next: (updated) => this.replaceInHistory(updated) }));
   }
 
   removeCollaborator(projectId: string, userId: string) {
-    return this.projectsService.removeCollaborator(projectId, userId).pipe(
-      tap({ next: (updated) => this.replaceInHistory(updated) })
-    );
+    return this.projectsService
+      .removeCollaborator(projectId, userId)
+      .pipe(tap({ next: (updated) => this.replaceInHistory(updated) }));
   }
 
   private replaceInHistory(updated: Project): void {
-    this.projectsHistory.update(list => list.map(p => p._id === updated._id ? updated : p));
+    this.projectsHistory.update((list) => list.map((p) => (p._id === updated._id ? updated : p)));
   }
 
   /** Carga el catálogo de modelos desde el backend (fuente única). */
@@ -221,7 +230,9 @@ export class ProjectsFacade {
       next: (res) => {
         this.allModels.set(res?.models || []);
         const defaults: Record<AIProvider, string> = { gemini: '', openrouter: '' };
-        (res?.providers || []).forEach(p => { defaults[p.value] = p.defaultModel; });
+        (res?.providers || []).forEach((p) => {
+          defaults[p.value] = p.defaultModel;
+        });
         this.defaultModels.set(defaults);
       },
       error: (err) => console.error('Error loading AI models', err),
@@ -232,7 +243,7 @@ export class ProjectsFacade {
   defaultModelForProvider(provider: AIProvider): string {
     const configured = this.defaultModels()[provider];
     if (configured) return configured;
-    return this.allModels().find(m => m.provider === provider)?.value || '';
+    return this.allModels().find((m) => m.provider === provider)?.value || '';
   }
 
   // ============================================
@@ -249,7 +260,7 @@ export class ProjectsFacade {
 
   /** Elimina un proyecto y limpia su undo stack */
   deleteProject(projectId: string) {
-    this.undoStacksByProject.update(map => {
+    this.undoStacksByProject.update((map) => {
       const copy = { ...map };
       delete copy[projectId];
       return copy;
@@ -263,12 +274,12 @@ export class ProjectsFacade {
       tap({
         next: (res) => {
           // Actualizar en historial
-          this.projectsHistory.update(list => 
-            list.map(p => p._id === projectId ? res.project : p)
+          this.projectsHistory.update((list) =>
+            list.map((p) => (p._id === projectId ? res.project : p)),
           );
         },
         error: (err) => console.error('Error retrying project:', err),
-      })
+      }),
     );
   }
 
@@ -278,18 +289,34 @@ export class ProjectsFacade {
 
   /** Genera un nuevo proyecto con la IA */
   generateProject(language: string, title?: string) {
-    const selectedRas = this.curriculumFacade.selectedRas();
     const tipoNivel = this.curriculumFacade.tipoNivel();
-    
     // Actualizar pestaña de historial según tipo
     this.historyTab.set(getHistoryTabForTipoNivel(tipoNivel));
+    const payload = this.buildCreatePayload(language, tipoNivel, title);
 
-    // Resolver módulos implicados
+    this.isGenerating.set(true);
+    return this.projectsService.generateProject(payload).pipe(
+      tap({
+        next: (res: GenerateProjectResponse) => this.onProjectGenerated(res),
+        error: (err) => {
+          this.isGenerating.set(false);
+          console.error('Error generating project:', err);
+        },
+      }),
+    );
+  }
+
+  private buildCreatePayload(
+    language: string,
+    tipoNivel: ProjectType,
+    title?: string,
+  ): CreateProjectPayload {
+    const selectedRas = this.curriculumFacade.selectedRas();
     const modules = this.getInvolvedModules(tipoNivel, selectedRas);
     const defaultTitle = modules.length > 0 ? modules.join(' + ') : 'Proyecto Integrador';
     const extra = this.extraInstructions().trim();
-
-    const payload: CreateProjectPayload = {
+    const collaborators = this.selectedCollaborators();
+    return {
       selectedRas,
       methodology: this.methodology(),
       modules,
@@ -300,85 +327,74 @@ export class ProjectsFacade {
       courseLevel: this.curriculumFacade.curso(),
       title: title || defaultTitle,
       extraInstructions: extra || undefined,
-      collaboratorIds: this.selectedCollaborators().length > 0 ? this.selectedCollaborators() : undefined,
+      collaboratorIds: collaborators.length > 0 ? collaborators : undefined,
     };
+  }
 
-    this.isGenerating.set(true);
-    return this.projectsService.generateProject(payload).pipe(
-      tap({
-        next: (res: GenerateProjectResponse) => {
-          this.isGenerating.set(false);
-          // Abrir el proyecto generado en el taller
-          this.currentProjectId.set(res.project._id);
-          this.generatedProject.set(res.project.generatedContent?.rawText || '');
-          this.projectFiles.set([]);
-          this.selectedCollaborators.set([]);
-          this.undoStacksByProject.update(map => ({ ...map, [res.project._id]: [] }));
-          // Recargar historial para que aparezca
-          this.loadHistory();
-        },
-        error: (err) => {
-          this.isGenerating.set(false);
-          console.error('Error generating project:', err);
-        },
-      })
-    );
+  /** Abre el proyecto generado en el taller y recarga el historial para que aparezca. */
+  private onProjectGenerated(res: GenerateProjectResponse): void {
+    this.isGenerating.set(false);
+    this.currentProjectId.set(res.project._id);
+    this.generatedProject.set(res.project.generatedContent?.rawText || '');
+    this.projectFiles.set([]);
+    this.selectedCollaborators.set([]);
+    this.undoStacksByProject.update((map) => ({ ...map, [res.project._id]: [] }));
+    this.loadHistory();
   }
 
   /** Resuelve los módulos implicados según tipo de nivel y RAs seleccionados */
   private getInvolvedModules(tipoNivel: ProjectType, selectedRas: string[]): string[] {
-    const isCa = typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan';
-    
     if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
-      const selected = this.curriculumFacade.ces().filter(ce => selectedRas.includes(ce.description));
-      return Array.from(new Set(selected.map((ce: any) => ce.subject || '')));
+      const selected = this.curriculumFacade
+        .ces()
+        .filter((ce) => selectedRas.includes(ce.description));
+      return Array.from(new Set(selected.map((ce) => ce.subject || '')));
     }
-    
-    const selected = this.curriculumFacade.ras().filter(ra => selectedRas.includes(ra.description));
-    
-    if (tipoNivel === 'CFGM_PELUQUERIA') {
-      const order = this.curriculumFacade.curso() === '2º' ? 
-        ['0640', '0643', '0843', '0848', '0636', '1708', '1710', '1713'] :
-        ['0845', '0842', '0844', '0846', '0849', '1664', '1709', '0156'];
-      
-      const moduleNames: string[] = [];
-      for (const modCode of order) {
-        const module = selected.find(ra => (ra as any).moduleCode === modCode);
-        if (module) {
-          const fullName = isCa 
-            ? (module as any).subject_ca || (module as any).subject || (module as any).module 
-            : (module as any).subject_es || (module as any).subject || (module as any).module;
-          moduleNames.push(fullName);
-        }
-      }
-      return moduleNames.length > 0 
-        ? moduleNames 
-        : [isCa ? 'CFGM Peluqueria i Cosmètica Capilar' : 'CFGM Peluquería y Cosmética Capilar'];
-    } else {
-      return Array.from(new Set(selected.map((ra: any) => ra.subject || ra.module || '')));
-    }
+
+    const selected = this.curriculumFacade
+      .ras()
+      .filter((ra) => selectedRas.includes(ra.description));
+    if (tipoNivel === 'CFGM_PELUQUERIA') return this.getPeluqueriaModules(selected);
+    return Array.from(new Set(selected.map((ra) => ra.subject || ra.module || '')));
+  }
+
+  /** Módulos de Peluquería en el orden oficial del curso, con su nombre en el idioma activo. */
+  private getPeluqueriaModules(selected: LearningOutcome[]): string[] {
+    const isCa =
+      typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan';
+    const order =
+      this.curriculumFacade.curso() === '2º'
+        ? CFGM_PELUQUERIA_2ND_ORDER
+        : CFGM_PELUQUERIA_1ST_ORDER;
+    const moduleNames = order
+      .map((code) => selected.find((ra) => ra.moduleCode === code))
+      .filter((ra): ra is LearningOutcome => ra !== undefined)
+      .map((ra) => (isCa ? ra.subject_ca : ra.subject_es) || ra.subject || ra.module || '');
+    return moduleNames.length > 0
+      ? moduleNames
+      : [isCa ? 'CFGM Peluqueria i Cosmètica Capilar' : 'CFGM Peluquería y Cosmética Capilar'];
   }
 
   /** Actualiza el estado del proyecto actual (borrador/publicado) */
   updateProjectStatus(status: ProjectStatus) {
     const id = this.currentProjectId();
     if (!id) return;
-    
+
     const payload: UpdateProjectPayload = {
       rawText: this.generatedProject(),
       status,
     };
-    
+
     return this.projectsService.updateProjectStatus(id, payload).pipe(
       tap({
         next: (updatedProject) => {
-          this.projectsHistory.update(list => 
-            list.map(p => p._id === id ? updatedProject : p)
+          this.projectsHistory.update((list) =>
+            list.map((p) => (p._id === id ? updatedProject : p)),
           );
           this.generatedProject.set(updatedProject.generatedContent?.rawText || '');
         },
         error: (err) => console.error('Error updating project status:', err),
-      })
+      }),
     );
   }
 
@@ -390,19 +406,19 @@ export class ProjectsFacade {
       aiProvider: aiProvider || this.selectedAi(),
       aiModel: aiModel || this.selectedModel(),
     };
-    
+
     this.isThinking.set(true);
     return this.projectsService.rewriteSection(payload).pipe(
       tap({
-        next: (newText: string) => {
+        next: (result: RewriteSectionResponseDto) => {
           this.isThinking.set(false);
-          this.generatedProject.set(newText);
+          this.generatedProject.set(rewrittenText(result));
         },
         error: (err) => {
           this.isThinking.set(false);
           console.error('Error rewriting section:', err);
         },
-      })
+      }),
     );
   }
 
@@ -415,9 +431,9 @@ export class ProjectsFacade {
     const current = this.generatedProject();
     const id = this.currentProjectId() || '__temp__';
     if (current) {
-      this.undoStacksByProject.update(map => ({
+      this.undoStacksByProject.update((map) => ({
         ...map,
-        [id]: [...(map[id] || []), current]
+        [id]: [...(map[id] || []), current],
       }));
     }
   }
@@ -427,9 +443,9 @@ export class ProjectsFacade {
     const id = this.currentProjectId() || '__temp__';
     const stack = this.undoStacksByProject()[id] || [];
     if (stack.length === 0) return;
-    this.undoStacksByProject.update(map => ({
+    this.undoStacksByProject.update((map) => ({
       ...map,
-      [id]: stack.slice(0, -1)
+      [id]: stack.slice(0, -1),
     }));
   }
 
@@ -438,12 +454,12 @@ export class ProjectsFacade {
     const id = this.currentProjectId() || '__temp__';
     const stack = this.undoStacksByProject()[id] || [];
     if (stack.length === 0) return;
-    
+
     const previous = stack[stack.length - 1];
     this.generatedProject.set(previous);
-    this.undoStacksByProject.update(map => ({
+    this.undoStacksByProject.update((map) => ({
       ...map,
-      [id]: stack.slice(0, -1)
+      [id]: stack.slice(0, -1),
     }));
     this.updateProjectStatus('borrador')?.subscribe();
   }
@@ -455,12 +471,19 @@ export class ProjectsFacade {
   loadProjectFiles(): void {
     const id = this.currentProjectId();
     if (!id) return;
-    this.projectsService.getProjectFiles(id).pipe(
-      tap({
-        next: (files) => this.projectFiles.set(files),
-        error: (err) => console.error("Error al cargar archivos", err)
-      })
-    ).subscribe({ error: () => { /* error already logged above */ } });
+    this.projectsService
+      .getProjectFiles(id)
+      .pipe(
+        tap({
+          next: (files) => this.projectFiles.set(files),
+          error: (err) => console.error('Error al cargar archivos', err),
+        }),
+      )
+      .subscribe({
+        error: () => {
+          /* error already logged above */
+        },
+      });
   }
 
   uploadFile(file: File) {
@@ -471,13 +494,13 @@ export class ProjectsFacade {
       tap({
         next: (res) => {
           this.isUploading.set(false);
-          this.projectFiles.update(list => [...list, res.file]);
+          this.projectFiles.update((list) => [...list, res.file]);
         },
         error: (err) => {
           this.isUploading.set(false);
           console.error('Error uploading file:', err);
         },
-      })
+      }),
     );
   }
 
@@ -487,10 +510,10 @@ export class ProjectsFacade {
     return this.projectsService.deleteFile(id, filename).pipe(
       tap({
         next: () => {
-          this.projectFiles.update(list => list.filter(f => f.filename !== filename));
+          this.projectFiles.update((list) => list.filter((f) => f.filename !== filename));
         },
         error: (err) => console.error('Error deleting file:', err),
-      })
+      }),
     );
   }
 
@@ -521,7 +544,7 @@ export class ProjectsFacade {
           this.isUploading.set(false);
           console.error('Error importing docx:', err);
         },
-      })
+      }),
     );
   }
 
@@ -539,7 +562,7 @@ export class ProjectsFacade {
     this.currentProjectId.set(project._id);
     this.generatedProject.set(project.generatedContent?.rawText || '');
     this.projectFiles.set([]);
-    this.undoStacksByProject.update(map => ({ ...map, [project._id]: [] }));
+    this.undoStacksByProject.update((map) => ({ ...map, [project._id]: [] }));
   }
 
   /** Limpia el proyecto actual */

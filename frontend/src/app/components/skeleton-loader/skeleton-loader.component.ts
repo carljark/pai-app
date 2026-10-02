@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './skeleton-loader.component.html',
-  styleUrl: './skeleton-loader.component.scss'
+  styleUrl: './skeleton-loader.component.scss',
 })
 export class SkeletonLoaderComponent {
   /** Número de líneas placeholder a mostrar (default: 4) */

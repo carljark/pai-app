@@ -25,25 +25,25 @@ import { FeedbackViewComponent } from './features/feedback/components/feedback-v
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    ErrorModalComponent, 
-    InfoModalComponent, 
-    ConfirmModalComponent, 
+    CommonModule,
+    ErrorModalComponent,
+    InfoModalComponent,
+    ConfirmModalComponent,
     DuplicateProjectsModalComponent,
     TimedToastComponent,
-    AdminDashboardComponent, 
-    HomeDashboardComponent, 
-    AuthFormComponent, 
+    AdminDashboardComponent,
+    HomeDashboardComponent,
+    AuthFormComponent,
     SidebarComponent,
     GeneratorViewComponent,
     HistoryViewComponent,
     PersonalViewComponent,
     FeedbackViewComponent,
     TallerViewComponent,
-    MapaIntermodularViewComponent
+    MapaIntermodularViewComponent,
   ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   authService = inject(AuthFacade);
@@ -56,14 +56,28 @@ export class App {
     this.layout.isMobile.set(window.innerWidth <= 768);
   }
 
-  getTestValue() { return 'test'; }
-  getT2() { return 2; }
-  getT3() { return 3; }
-  getT4() { return 4; }
-  setTestValue(val: string) { return val; }
+  getTestValue() {
+    return 'test';
+  }
+  getT2() {
+    return 2;
+  }
+  getT3() {
+    return 3;
+  }
+  getT4() {
+    return 4;
+  }
+  setTestValue(val: string) {
+    return val;
+  }
 
   constructor() {
-    try { history.scrollRestoration = 'manual'; } catch(e) {}
+    try {
+      history.scrollRestoration = 'manual';
+    } catch {
+      // Navegadores sin soporte de scrollRestoration
+    }
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
   }
 }

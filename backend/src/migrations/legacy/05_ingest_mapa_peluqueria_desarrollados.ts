@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { MapaModule } from '../src/models/MapaModule';
+import { MapaModule } from '../../models/MapaModule';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 export const up = async () => {
   console.log('🔄 Ejecutando migración 05 (EC2): Ingesta de documentos desarrollados de Mapa Peluquería 1º y 2º...');
 
-  const dataDir = path.resolve(__dirname, '../src/data/mapa-intermodular');
+  const dataDir = path.resolve(__dirname, '../../data/mapa-intermodular');
   const datasets: { tab: 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'; filename: string }[] = [
     { tab: 'CFGM_PELUQUERIA', filename: 'mapa_cfgm_peluqueria.json' },
     { tab: 'CFGM_PELUQUERIA_2', filename: 'mapa_cfgm_peluqueria_2.json' }

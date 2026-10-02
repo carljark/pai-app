@@ -1,47 +1,77 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {
+  LearningOutcome,
+  EvaluativeCriteria,
+} from '../features/curriculum/models/curriculum.model';
+import { ActivityLog, AdminUser, CenterSettings } from '../features/admin/models/admin.model';
+import { RawNotificationEvent } from '../features/notifications/models/notification.model';
+import {
+  FileUploadResponseDto,
+  GenerateProjectResponseDto,
+  ImportDocxResponseDto,
+  ProjectDto,
+  ProjectFileDto,
+  RewriteSectionResponseDto,
+} from '../features/projects/mappers/projects.mapper';
 
 @Injectable({ providedIn: 'root' })
 export class PaiService {
   private http = inject(HttpClient);
   private apiUrl = '/api';
 
-  getRas(lang: string = 'castellano'): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/ras?lang=${lang}`);
+  getRas(lang = 'castellano'): Observable<LearningOutcome[]> {
+    return this.http.get<LearningOutcome[]>(`${this.apiUrl}/ras?lang=${lang}`);
   }
 
-  getLogs(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/admin/logs`);
+  getLogs(): Observable<ActivityLog[]> {
+    return this.http.get<ActivityLog[]>(`${this.apiUrl}/admin/logs`);
   }
 
-  getCes(lang: string = 'castellano'): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/ces?lang=${lang}`);
+  getCes(lang = 'castellano'): Observable<EvaluativeCriteria[]> {
+    return this.http.get<EvaluativeCriteria[]>(`${this.apiUrl}/ces?lang=${lang}`);
   }
 
-  generateProject(selectedRas: string[], methodology: string, modules: string[], tipoNivel: string, language: string, courseLevel: string, title?: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/projects/generate`, { selectedRas, methodology, modules, tipoNivel, language, courseLevel, title });
+  generateProject(
+    selectedRas: string[],
+    methodology: string,
+    modules: string[],
+    tipoNivel: string,
+    language: string,
+    courseLevel: string,
+    title?: string,
+  ): Observable<GenerateProjectResponseDto> {
+    return this.http.post<GenerateProjectResponseDto>(`${this.apiUrl}/projects/generate`, {
+      selectedRas,
+      methodology,
+      modules,
+      tipoNivel,
+      language,
+      courseLevel,
+      title,
+    });
   }
 
-  listenToProjectUpdates(): Observable<any> {
-    return new Observable((observer) => {
-      const EventSourceImpl = (window as any)?.EventSource;
+  listenToProjectUpdates(): Observable<RawNotificationEvent> {
+    return new Observable<RawNotificationEvent>((observer) => {
+      const EventSourceImpl: typeof EventSource | undefined = window?.EventSource;
 
       if (!EventSourceImpl) {
-        return () => {};
+        return () => {
+          // Sin EventSource no hay conexión que cerrar
+        };
       }
 
       const token = localStorage.getItem('pai_token');
-      // Enviar token por query parameter o usar interceptor? EventSource no soporta headers.
-      // Así que lo pasamos por URL
+      // EventSource no soporta cabeceras, así que el token viaja por query parameter
       const eventSource = new EventSourceImpl(`${this.apiUrl}/projects/stream?token=${token}`);
-      
-      eventSource.onmessage = (event: any) => {
-        const data = JSON.parse(event.data);
-        observer.next(data);
+
+      eventSource.onmessage = (event: MessageEvent<string>) => {
+        observer.next(JSON.parse(event.data) as RawNotificationEvent);
       };
 
-      eventSource.onerror = (error: any) => {
+      eventSource.onerror = (error: Event) => {
         console.error('SSE Error:', error);
         // observer.error(error); // Mejor no cerrarlo por desconexiones puntuales
       };
@@ -52,35 +82,41 @@ export class PaiService {
     });
   }
 
-  getProjects(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/projects`);
+  getProjects(): Observable<ProjectDto[]> {
+    return this.http.get<ProjectDto[]>(`${this.apiUrl}/projects`);
   }
 
-  updateProject(id: string, rawText: string, status: string): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/projects/${id}`, { rawText, status });
+  updateProject(id: string, rawText: string, status: string): Observable<ProjectDto> {
+    return this.http.put<ProjectDto>(`${this.apiUrl}/projects/${id}`, { rawText, status });
   }
 
-  deleteProject(id: string): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/projects/${id}`);
+  deleteProject(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/projects/${id}`);
   }
 
-  rewriteSection(context: string, instruction: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/projects/rewrite`, { context, instruction });
+  rewriteSection(context: string, instruction: string): Observable<RewriteSectionResponseDto> {
+    return this.http.post<RewriteSectionResponseDto>(`${this.apiUrl}/projects/rewrite`, {
+      context,
+      instruction,
+    });
   }
 
   // Archivos adjuntos
-  getProjectFiles(projectId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/projects/${projectId}/files`);
+  getProjectFiles(projectId: string): Observable<ProjectFileDto[]> {
+    return this.http.get<ProjectFileDto[]>(`${this.apiUrl}/projects/${projectId}/files`);
   }
 
-  uploadFile(projectId: string, file: File): Observable<any> {
+  uploadFile(projectId: string, file: File): Observable<FileUploadResponseDto> {
     const formData = new FormData();
     formData.append('file', file);
-    return this.http.post<any>(`${this.apiUrl}/projects/${projectId}/files`, formData);
+    return this.http.post<FileUploadResponseDto>(
+      `${this.apiUrl}/projects/${projectId}/files`,
+      formData,
+    );
   }
 
-  deleteFile(projectId: string, filename: string): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/projects/${projectId}/files/${filename}`);
+  deleteFile(projectId: string, filename: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/projects/${projectId}/files/${filename}`);
   }
 
   getDownloadUrl(projectId: string, filename: string): string {
@@ -88,31 +124,39 @@ export class PaiService {
   }
 
   // Admin
-  getUsers(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/admin/users`);
+  getUsers(): Observable<AdminUser[]> {
+    return this.http.get<AdminUser[]>(`${this.apiUrl}/admin/users`);
   }
 
-  updateUserPermissions(id: string, data: { role?: string; canUseAi?: boolean }): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/admin/users/${id}/permissions`, data);
+  updateUserPermissions(
+    id: string,
+    data: { role?: string; canUseAi?: boolean },
+  ): Observable<AdminUser> {
+    return this.http.put<AdminUser>(`${this.apiUrl}/admin/users/${id}/permissions`, data);
   }
 
   // Settings del Centro
-  getSettings(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/settings`);
+  getSettings(): Observable<CenterSettings> {
+    return this.http.get<CenterSettings>(`${this.apiUrl}/settings`);
   }
 
-  updateSettings(data: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/settings`, data);
+  updateSettings(data: Partial<CenterSettings>): Observable<CenterSettings> {
+    return this.http.put<CenterSettings>(`${this.apiUrl}/settings`, data);
   }
 
   // DOCX Import/Export
   exportDocx(projectId: string): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/projects/${projectId}/export-docx`, { responseType: 'blob' });
+    return this.http.get(`${this.apiUrl}/projects/${projectId}/export-docx`, {
+      responseType: 'blob',
+    });
   }
 
-  importDocx(projectId: string, file: File): Observable<any> {
+  importDocx(projectId: string, file: File): Observable<ImportDocxResponseDto> {
     const formData = new FormData();
     formData.append('file', file);
-    return this.http.post<any>(`${this.apiUrl}/projects/${projectId}/import-docx`, formData);
+    return this.http.post<ImportDocxResponseDto>(
+      `${this.apiUrl}/projects/${projectId}/import-docx`,
+      formData,
+    );
   }
 }

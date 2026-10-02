@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { TestBed } from '@angular/core/testing';
 import { AppFacade } from './app.facade';
 import { LayoutService } from './services/layout.service';
@@ -9,9 +9,13 @@ import { NotificationsFacade } from './features/notifications/services/notificat
 import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
-import { signal, WritableSignal } from '@angular/core';
+import { signal } from '@angular/core';
 import { of, Subject, throwError } from 'rxjs';
 import { TRANSLATIONS_ES } from './services/translations.es';
+import { Project } from './features/projects/models/project.model';
+
+// Los tests usan proyectos parciales (incluidos formatos legacy de la API)
+const asProject = (p: object) => p as Project;
 
 describe('AppFacade', () => {
   let facade: AppFacade;
@@ -25,7 +29,7 @@ describe('AppFacade', () => {
 
   beforeEach(() => {
     authFacadeMock = {
-      currentUser: signal(null)
+      currentUser: signal(null),
     };
 
     curriculumFacadeMock = {
@@ -34,7 +38,7 @@ describe('AppFacade', () => {
       selectedRas: signal([]),
       groupedSelectedItems: signal([]),
       clearSelection: vi.fn(),
-      tipoNivel: signal('FP_BASICA')
+      tipoNivel: signal('FP_BASICA'),
     };
 
     projectsFacadeMock = {
@@ -48,13 +52,13 @@ describe('AppFacade', () => {
       loadProjectFiles: vi.fn(),
       projectsHistory: signal<any[]>([]),
       historyTab: signal('FPB'),
-      extraInstructions: signal('')
+      extraInstructions: signal(''),
     };
 
     layoutServiceMock = {
       language: signal('castellano'),
       currentView: signal('home'),
-      switchView: vi.fn()
+      switchView: vi.fn(),
     };
 
     notificationsFacadeMock = {
@@ -62,7 +66,7 @@ describe('AppFacade', () => {
       latestNotification: signal(null),
       clearLatestNotification: vi.fn(),
       openRecentActivity: vi.fn(),
-      loadNotifications: vi.fn()
+      loadNotifications: vi.fn(),
     };
 
     const telemetryServiceMock = {
@@ -70,11 +74,11 @@ describe('AppFacade', () => {
       stopTracking: vi.fn(),
       setCurrentPage: vi.fn(),
       flushHeartbeat: vi.fn(),
-      logEvent: vi.fn().mockReturnValue(of({ ok: true }))
+      logEvent: vi.fn().mockReturnValue(of({ ok: true })),
     };
 
     translationServiceMock = {
-      t: vi.fn().mockReturnValue(TRANSLATIONS_ES)
+      t: vi.fn().mockReturnValue(TRANSLATIONS_ES),
     };
     paiServiceMock = {};
 
@@ -88,8 +92,8 @@ describe('AppFacade', () => {
         { provide: NotificationsFacade, useValue: notificationsFacadeMock },
         { provide: TranslationService, useValue: translationServiceMock },
         { provide: PaiService, useValue: paiServiceMock },
-        { provide: TelemetryService, useValue: telemetryServiceMock }
-      ]
+        { provide: TelemetryService, useValue: telemetryServiceMock },
+      ],
     });
 
     // Don't inject it yet so effects can be controlled
@@ -102,7 +106,7 @@ describe('AppFacade', () => {
 
   it('should load curriculum and history when user is set', () => {
     facade = TestBed.inject(AppFacade);
-    
+
     authFacadeMock.currentUser.set({ name: 'Test' });
     TestBed.flushEffects();
 
@@ -131,11 +135,11 @@ describe('AppFacade', () => {
 
   it('should react to latestNotification ERROR', () => {
     facade = TestBed.inject(AppFacade);
-    
+
     notificationsFacadeMock.notifications.set([{ projectId: 'e1', status: 'error' }]);
     notificationsFacadeMock.latestNotification.set({ type: 'ERROR', message: 'some error' });
     TestBed.flushEffects();
-    
+
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
     expect(facade.errorMessage()).toBe('some error');
     expect(facade.showErrorModal()).toBe(true);
@@ -144,42 +148,52 @@ describe('AppFacade', () => {
   it('should react to latestNotification COMPLETED', () => {
     vi.useFakeTimers();
     facade = TestBed.inject(AppFacade);
-    
-    notificationsFacadeMock.notifications.set([{ projectId: 'c1', status: 'borrador', generationTimeMs: 1000 }]);
+
+    notificationsFacadeMock.notifications.set([
+      { projectId: 'c1', status: 'borrador', generationTimeMs: 1000 },
+    ]);
     notificationsFacadeMock.latestNotification.set({ type: 'COMPLETED', message: 'done' });
     TestBed.flushEffects();
-    
+
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
-    
+
     vi.advanceTimersByTime(100);
-    
+
     expect(facade.infoTitle()).toBe('¡Proyecto Generado!');
     expect(facade.infoMessage()).toBe('done');
     expect(facade.infoType()).toBe('success');
     expect(facade.showInfoModal()).toBe(true);
-    
+
     vi.useRealTimers();
   });
 
   it('should not show duplicate COMPLETED modal for the same project', () => {
     vi.useFakeTimers();
     facade = TestBed.inject(AppFacade);
-    
-    notificationsFacadeMock.latestNotification.set({ type: 'COMPLETED', projectId: 'p1', message: 'done 1' });
+
+    notificationsFacadeMock.latestNotification.set({
+      type: 'COMPLETED',
+      projectId: 'p1',
+      message: 'done 1',
+    });
     TestBed.flushEffects();
     vi.advanceTimersByTime(100);
     expect(facade.infoMessage()).toBe('done 1');
-    
+
     facade.closeInfoModal();
     expect(facade.showInfoModal()).toBe(false);
     expect(notificationsFacadeMock.clearLatestNotification).toHaveBeenCalled();
-    
-    notificationsFacadeMock.latestNotification.set({ type: 'COMPLETED', projectId: 'p1', message: 'done duplicate' });
+
+    notificationsFacadeMock.latestNotification.set({
+      type: 'COMPLETED',
+      projectId: 'p1',
+      message: 'done duplicate',
+    });
     TestBed.flushEffects();
     vi.advanceTimersByTime(100);
     expect(facade.showInfoModal()).toBe(false);
     expect(facade.infoMessage()).toBe('');
-    
+
     vi.useRealTimers();
   });
 
@@ -207,7 +221,7 @@ describe('AppFacade', () => {
     it('should show info if no ras selected', () => {
       curriculumFacadeMock.selectedRas.set([]);
       facade.generateProject();
-      
+
       expect(facade.infoTitle()).toBe('Atención');
       expect(facade.infoMessage()).toBe('Por favor, selecciona al menos un elemento de la lista.');
       expect(facade.showInfoModal()).toBe(true);
@@ -217,9 +231,9 @@ describe('AppFacade', () => {
       curriculumFacadeMock.tipoNivel.set('FP_BASICA');
       curriculumFacadeMock.selectedRas.set(['ra1']);
       projectsFacadeMock.generateProject.mockReturnValue(of({}));
-      
+
       facade.generateProject();
-      
+
       expect(projectsFacadeMock.historyTab()).toBe('FPB');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(curriculumFacadeMock.clearSelection).toHaveBeenCalled();
@@ -247,9 +261,9 @@ describe('AppFacade', () => {
       curriculumFacadeMock.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
       curriculumFacadeMock.selectedRas.set(['ce1']);
       projectsFacadeMock.generateProject.mockReturnValue(of({}));
-      
+
       facade.generateProject();
-      
+
       expect(projectsFacadeMock.historyTab()).toBe('ESO');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
@@ -302,11 +316,17 @@ describe('AppFacade', () => {
     it('should open an existing duplicate project from the warning', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
       projectsFacadeMock.projectsHistory.set([
-        { _id: 'p1', title: 'Duplicado', status: 'borrador', ras: ['ra1'], generatedContent: { rawText: 'x' } },
+        {
+          _id: 'p1',
+          title: 'Duplicado',
+          status: 'borrador',
+          ras: ['ra1'],
+          generatedContent: { rawText: 'x' },
+        },
       ]);
       facade.generateProject();
 
-      facade.openDuplicateProject({ _id: 'p1', generatedContent: { rawText: 'x' } });
+      facade.openDuplicateProject(asProject({ _id: 'p1', generatedContent: { rawText: 'x' } }));
 
       expect(facade.showDuplicateModal()).toBe(false);
       expect(projectsFacadeMock.currentProjectId()).toBe('p1');
@@ -315,7 +335,7 @@ describe('AppFacade', () => {
 
     it('should open a project in a new window via ?project=<id>', () => {
       const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
-      facade.openProjectInNewWindow({ _id: 'p1' });
+      facade.openProjectInNewWindow(asProject({ _id: 'p1' }));
       expect(openSpy).toHaveBeenCalledWith(expect.stringContaining('project=p1'), '_blank');
       openSpy.mockRestore();
     });
@@ -346,38 +366,44 @@ describe('AppFacade', () => {
 
     it('should show error modal on generate project error', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
-      projectsFacadeMock.generateProject.mockReturnValue(throwError(() => ({ error: { error: 'Server error' } })));
-      
+      projectsFacadeMock.generateProject.mockReturnValue(
+        throwError(() => ({ error: { error: 'Server error' } })),
+      );
+
       const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+
       facade.generateProject();
-      
+
       expect(consoleSpy).toHaveBeenCalled();
       expect(facade.errorMessage()).toContain('Server error');
       expect(facade.showErrorModal()).toBe(true);
       expect(projectsFacadeMock.isGenerating()).toBe(false);
     });
-    
+
     it('should show error modal on generate project error with message', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
-      projectsFacadeMock.generateProject.mockReturnValue(throwError(() => ({ error: { message: 'Server message' } })));
-      
-      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+      projectsFacadeMock.generateProject.mockReturnValue(
+        throwError(() => ({ error: { message: 'Server message' } })),
+      );
+
+      vi.spyOn(console, 'error').mockImplementation(() => {});
+
       facade.generateProject();
-      
+
       expect(facade.errorMessage()).toContain('Server message');
       expect(facade.showErrorModal()).toBe(true);
     });
-    
+
     it('should show error modal on generate project general error', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
-      projectsFacadeMock.generateProject.mockReturnValue(throwError(() => ({ message: 'General msg' })));
-      
-      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+      projectsFacadeMock.generateProject.mockReturnValue(
+        throwError(() => ({ message: 'General msg' })),
+      );
+
+      vi.spyOn(console, 'error').mockImplementation(() => {});
+
       facade.generateProject();
-      
+
       expect(facade.errorMessage()).toContain('General msg');
       expect(facade.showErrorModal()).toBe(true);
     });
@@ -385,11 +411,11 @@ describe('AppFacade', () => {
     it('should show error modal on generate project unknown error', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
       projectsFacadeMock.generateProject.mockReturnValue(throwError(() => ({})));
-      
-      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+
+      vi.spyOn(console, 'error').mockImplementation(() => {});
+
       facade.generateProject();
-      
+
       expect(facade.errorMessage()).toContain('Error desconocido');
       expect(facade.showErrorModal()).toBe(true);
     });
@@ -407,41 +433,43 @@ describe('AppFacade', () => {
 
     it('should show confirm modal and execute deletion on success', () => {
       projectsFacadeMock.deleteProject.mockReturnValue(of({}));
-      
+
       facade.deleteProject('123');
-      
+
       expect(facade.confirmTitle()).toBe('Eliminar Proyecto');
       expect(facade.showConfirmModal()).toBe(true);
-      
+
       // Execute the action
       facade.confirmAction()();
-      
+
       expect(projectsFacadeMock.deleteProject).toHaveBeenCalledWith('123');
       expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
       expect(facade.showConfirmModal()).toBe(false);
     });
 
     it('should execute deletion on error', () => {
-      projectsFacadeMock.deleteProject.mockReturnValue(throwError(() => ({ error: { error: 'Delete err' } })));
-      
+      projectsFacadeMock.deleteProject.mockReturnValue(
+        throwError(() => ({ error: { error: 'Delete err' } })),
+      );
+
       facade.deleteProject('123');
-      
+
       // Execute the action
       facade.confirmAction()();
-      
+
       expect(facade.errorMessage()).toBe('Delete err');
       expect(facade.showErrorModal()).toBe(true);
       expect(facade.showConfirmModal()).toBe(false);
     });
-    
+
     it('should fallback to default error on deletion error', () => {
       projectsFacadeMock.deleteProject.mockReturnValue(throwError(() => ({})));
-      
+
       facade.deleteProject('123');
-      
+
       // Execute the action
       facade.confirmAction()();
-      
+
       expect(facade.errorMessage()).toBe('Error al borrar el proyecto');
     });
 
@@ -462,11 +490,11 @@ describe('AppFacade', () => {
         _id: '123',
         generatedContent: { rawText: 'content' },
         ras: ['ra1'],
-        tipoNivel: 'ESO'
+        tipoNivel: 'ESO',
       };
-      
-      facade.viewPastProject(proj);
-      
+
+      facade.viewPastProject(asProject(proj));
+
       expect(projectsFacadeMock.currentProjectId()).toBe('123');
       expect(projectsFacadeMock.generatedProject()).toBe('content');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
@@ -476,11 +504,11 @@ describe('AppFacade', () => {
     it('should populate fields and switch view with string content', () => {
       const proj = {
         _id: '123-str',
-        generatedContent: 'string content text'
+        generatedContent: 'string content text',
       };
-      
-      facade.viewPastProject(proj);
-      
+
+      facade.viewPastProject(asProject(proj));
+
       expect(projectsFacadeMock.currentProjectId()).toBe('123-str');
       expect(projectsFacadeMock.generatedProject()).toBe('string content text');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
@@ -489,9 +517,9 @@ describe('AppFacade', () => {
 
     it('should handle missing fields', () => {
       const proj = { _id: '123' };
-      
-      facade.viewPastProject(proj);
-      
+
+      facade.viewPastProject(asProject(proj));
+
       expect(projectsFacadeMock.generatedProject()).toBe('Sin contenido');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
@@ -501,10 +529,10 @@ describe('AppFacade', () => {
       const proj = {
         _id: 'err-1',
         status: 'error',
-        errorDetail: 'Fallo al procesar con IA'
+        errorDetail: 'Fallo al procesar con IA',
       };
 
-      facade.viewPastProject(proj);
+      facade.viewPastProject(asProject(proj));
 
       expect(facade.errorMessage()).toBe('Fallo al procesar con IA');
       expect(facade.showErrorModal()).toBe(true);
@@ -514,10 +542,10 @@ describe('AppFacade', () => {
     it('should show error modal with fallback message when project status is error without errorDetail', () => {
       const proj = {
         _id: 'err-2',
-        status: 'error'
+        status: 'error',
       };
 
-      facade.viewPastProject(proj);
+      facade.viewPastProject(asProject(proj));
 
       expect(facade.errorMessage()).toBe('Error desconocido');
       expect(facade.showErrorModal()).toBe(true);
@@ -534,7 +562,7 @@ describe('AppFacade', () => {
       projectsFacadeMock.retryProject.mockReturnValue(of({ message: 'ok' }));
       const proj = { _id: 'proj-error-1' };
 
-      facade.retryProject(proj);
+      facade.retryProject(asProject(proj));
 
       expect(projectsFacadeMock.retryProject).toHaveBeenCalledWith('proj-error-1');
       expect(facade.infoTitle()).toBe('Proyecto en Cola');
@@ -544,10 +572,12 @@ describe('AppFacade', () => {
 
     it('should handle retry error with server error object', () => {
       const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      projectsFacadeMock.retryProject.mockReturnValue(throwError(() => ({ error: { error: 'Error del servidor' } })));
+      projectsFacadeMock.retryProject.mockReturnValue(
+        throwError(() => ({ error: { error: 'Error del servidor' } })),
+      );
       const proj = { _id: 'proj-error-2' };
 
-      facade.retryProject(proj);
+      facade.retryProject(asProject(proj));
 
       expect(facade.errorTitle()).toBe('Error al Reintentar');
       expect(facade.errorMessage()).toBe('Error del servidor');
@@ -560,7 +590,7 @@ describe('AppFacade', () => {
       projectsFacadeMock.retryProject.mockReturnValue(throwError(() => ({})));
       const proj = { _id: 'proj-error-3' };
 
-      facade.retryProject(proj);
+      facade.retryProject(asProject(proj));
 
       expect(facade.errorMessage()).toBe('Error desconocido');
       expect(facade.showErrorModal()).toBe(true);
@@ -569,7 +599,7 @@ describe('AppFacade', () => {
 
     it('should handle retry for project without _id', () => {
       projectsFacadeMock.retryProject.mockReturnValue(of({ message: 'ok' }));
-      facade.retryProject({});
+      facade.retryProject(asProject({}));
       expect(projectsFacadeMock.retryProject).toHaveBeenCalledWith(undefined);
       expect(facade.infoTitle()).toBe('Proyecto en Cola');
     });

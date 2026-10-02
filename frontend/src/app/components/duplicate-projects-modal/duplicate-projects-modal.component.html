@@ -1,5 +1,9 @@
 <div class="duplicate-projects-modal">
-  <div class="duplicate-projects-modal__backdrop" (click)="cancel.emit()"></div>
+  <div
+    class="duplicate-projects-modal__backdrop"
+    aria-hidden="true"
+    (click)="cancelled.emit()"
+  ></div>
 
   <div class="duplicate-projects-modal__card" role="dialog" aria-modal="true">
     <h2 class="duplicate-projects-modal__title">{{ title() }}</h2>
@@ -8,10 +12,14 @@
     <ul class="duplicate-projects-modal__list">
       @for (project of projects(); track project._id) {
         <li class="duplicate-projects-modal__item">
-          <button type="button" class="duplicate-projects-modal__link" (click)="openProject.emit(project)">
+          <button
+            type="button"
+            class="duplicate-projects-modal__link"
+            (click)="openProject.emit(project)"
+          >
             <span class="duplicate-projects-modal__link-title">{{ projectTitle(project) }}</span>
             <span class="duplicate-projects-modal__link-meta">
-              {{ project.status }} · {{ project.createdAt | date:'short' }}
+              {{ project.status }} · {{ project.createdAt | date: 'short' }}
               @if (projectModules(project)) {
                 <span> · {{ projectModules(project) }}</span>
               }
@@ -22,8 +30,16 @@
     </ul>
 
     <div class="duplicate-projects-modal__actions">
-      <button type="button" class="btn-secondary duplicate-projects-modal__cancel" (click)="cancel.emit()">{{ cancelLabel() }}</button>
-      <button type="button" class="btn-primary" (click)="proceed.emit()">{{ proceedLabel() }}</button>
+      <button
+        type="button"
+        class="btn-secondary duplicate-projects-modal__cancel"
+        (click)="cancelled.emit()"
+      >
+        {{ cancelLabel() }}
+      </button>
+      <button type="button" class="btn-primary" (click)="proceed.emit()">
+        {{ proceedLabel() }}
+      </button>
     </div>
   </div>
 </div>

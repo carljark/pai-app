@@ -13,14 +13,12 @@ describe('AuthFormComponent', () => {
   beforeEach(async () => {
     authFacadeMock = {
       login: vi.fn(),
-      register: vi.fn()
+      register: vi.fn(),
     };
 
     await TestBed.configureTestingModule({
       imports: [AuthFormComponent, FormsModule],
-      providers: [
-        { provide: AuthFacade, useValue: authFacadeMock }
-      ]
+      providers: [{ provide: AuthFacade, useValue: authFacadeMock }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AuthFormComponent);
@@ -28,28 +26,64 @@ describe('AuthFormComponent', () => {
     fixture.detectChanges();
   });
 
-  
   it('should trigger all HTML event bindings for coverage', () => {
     fixture.detectChanges();
-    
+
     const toggle = fixture.debugElement.nativeElement.querySelector('p a');
     if (toggle) {
-      try { toggle.click(); } catch(e) {}
+      try {
+        toggle.click();
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     }
 
     const form = fixture.debugElement.nativeElement.querySelector('form');
     if (form) {
-      try { form.dispatchEvent(new Event('submit')); } catch(e) {}
+      try {
+        form.dispatchEvent(new Event('submit'));
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     }
 
     const inputs = fixture.debugElement.nativeElement.querySelectorAll('input');
     inputs.forEach((i: any) => {
       i.value = 'test@test.com';
-      try { i.dispatchEvent(new Event('input')); } catch(e) {}
+      try {
+        i.dispatchEvent(new Event('input'));
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
   });
 
-  
+  it('should bind the register inputs and render the error message', async () => {
+    component.authMode.set('register');
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const root = fixture.nativeElement as HTMLElement;
+    const type = (selector: string, value: string) => {
+      const input = root.querySelector(selector) as HTMLInputElement;
+      input.value = value;
+      input.dispatchEvent(new Event('input'));
+    };
+    type('input[type="text"]', 'Ana');
+    type('input[type="email"]', 'ana@test.com');
+    type('input[type="password"]', 'secreta');
+    expect(component.authForm()).toEqual({
+      name: 'Ana',
+      email: 'ana@test.com',
+      password: 'secreta',
+    });
+
+    component.authError.set('Credenciales inválidas');
+    fixture.detectChanges();
+    expect(root.textContent).toContain('Credenciales inválidas');
+    expect(root.textContent).toContain('Crea una cuenta');
+  });
+
   it('should cover login and register callbacks', () => {
     // login error
     authFacadeMock.login.mockReturnValue(throwError(() => ({ error: { error: 'login fail' } })));
@@ -60,19 +94,20 @@ describe('AuthFormComponent', () => {
     authFacadeMock.register.mockReturnValue(of({}));
     component.register();
     expect(component.successMessage()).toContain('Registro exitoso');
-    
+
     // register error
     authFacadeMock.register.mockReturnValue(throwError(() => ({ error: { error: 'reg fail' } })));
     component.register();
     expect(component.authError()).toBe('reg fail');
   });
 
-  
   it('should trigger all HTML events safely', () => {
     // Mode login
-    authFacadeMock.login.mockReturnValue(of({})); authFacadeMock.register.mockReturnValue(of({})); component.authMode.set('login');
+    authFacadeMock.login.mockReturnValue(of({}));
+    authFacadeMock.register.mockReturnValue(of({}));
+    component.authMode.set('login');
     fixture.detectChanges();
-    
+
     let buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
     buttons.forEach((b: any) => b.click());
 
@@ -102,7 +137,7 @@ describe('AuthFormComponent', () => {
     authFacadeMock.login.mockReturnValue(of({}));
     component.authForm.set({ email: 'e', password: 'p', name: '' });
     component.login();
-    
+
     expect(authFacadeMock.login).toHaveBeenCalledWith({ email: 'e', password: 'p' });
     expect(component.authError()).toBe('');
   });
@@ -114,7 +149,7 @@ describe('AuthFormComponent', () => {
   });
 
   it('should set authError fallback when login fails without specific error', () => {
-    authFacadeMock.login.mockReturnValue(throwError(() => ({ })));
+    authFacadeMock.login.mockReturnValue(throwError(() => ({})));
     component.login();
     expect(component.authError()).toBe('Error al iniciar sesión');
   });
@@ -123,20 +158,22 @@ describe('AuthFormComponent', () => {
     authFacadeMock.register.mockReturnValue(of({}));
     component.authForm.set({ email: 'e', password: 'p', name: 'n' });
     component.register();
-    
+
     expect(authFacadeMock.register).toHaveBeenCalledWith({ email: 'e', password: 'p', name: 'n' });
     expect(component.successMessage()).toContain('Registro exitoso');
     expect(component.authMode()).toBe('login');
   });
 
   it('should set authError when register fails', () => {
-    authFacadeMock.register.mockReturnValue(throwError(() => ({ error: { error: 'Bad register' } })));
+    authFacadeMock.register.mockReturnValue(
+      throwError(() => ({ error: { error: 'Bad register' } })),
+    );
     component.register();
     expect(component.authError()).toBe('Bad register');
   });
 
   it('should set authError fallback when register fails without specific error', () => {
-    authFacadeMock.register.mockReturnValue(throwError(() => ({ })));
+    authFacadeMock.register.mockReturnValue(throwError(() => ({})));
     component.register();
     expect(component.authError()).toBe('Error al registrarse');
   });

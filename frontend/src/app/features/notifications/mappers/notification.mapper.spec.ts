@@ -6,7 +6,7 @@ describe('NotificationMapper', () => {
     const raw: RawNotificationEvent = {
       type: 'PROJECT_COMPLETED',
       projectId: '1',
-      project: { createdAt: '2023-01-01T10:00:00Z' }
+      project: { createdAt: '2023-01-01T10:00:00Z' },
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.type).toBe('COMPLETED');
@@ -21,7 +21,7 @@ describe('NotificationMapper', () => {
   it('should map PROJECT_COMPLETED correctly without date', () => {
     const raw: RawNotificationEvent = {
       type: 'PROJECT_COMPLETED',
-      projectId: '1'
+      projectId: '1',
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.message).toBe('El proyecto se ha generado satisfactoriamente.');
@@ -32,7 +32,7 @@ describe('NotificationMapper', () => {
       type: 'PROJECT_COMPLETED',
       projectId: '1',
       generationTimeMs: 14500,
-      project: { createdAt: '2023-01-01T10:00:00Z', generationTimeMs: 14500 }
+      project: { createdAt: '2023-01-01T10:00:00Z', generationTimeMs: 14500 },
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.message).toContain('(tiempo IA: 14.5s)');
@@ -43,7 +43,7 @@ describe('NotificationMapper', () => {
     const raw: RawNotificationEvent = {
       type: 'PROJECT_ERROR',
       projectId: '1',
-      error: 'Some error'
+      error: 'Some error',
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.type).toBe('ERROR');
@@ -55,7 +55,7 @@ describe('NotificationMapper', () => {
     const raw: RawNotificationEvent = {
       type: 'PROJECT_STATUS',
       projectId: '1',
-      status: 'generando'
+      status: 'generando',
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.type).toBe('STATUS');
@@ -65,7 +65,7 @@ describe('NotificationMapper', () => {
 
   it('should map CONNECTED correctly', () => {
     const raw: RawNotificationEvent = {
-      type: 'CONNECTED'
+      type: 'CONNECTED',
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.type).toBe('INFO');
@@ -76,7 +76,7 @@ describe('NotificationMapper', () => {
   it('should map UNKNOWN correctly to INFO', () => {
     const raw: RawNotificationEvent = {
       type: 'UNKNOWN' as any,
-      message: 'Unknown event'
+      message: 'Unknown event',
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.type).toBe('INFO');
@@ -99,7 +99,7 @@ describe('NotificationMapper', () => {
       generationTimeMs: 15000,
       createdAt: '2026-09-11T12:00:00Z',
       updatedAt: '2026-09-11T12:05:00Z',
-      readBy: ['u_1', 'u_2']
+      readBy: ['u_1', 'u_2'],
     };
 
     const notifRead = NotificationMapper.fromDbEntity(dbEntity, 'u_1');
@@ -113,7 +113,7 @@ describe('NotificationMapper', () => {
     const notifPopulatedUser = NotificationMapper.fromDbEntity({
       _id: 'db_2',
       userId: { _id: 'u_2', name: 'Ana', email: 'ana@test.com' },
-      type: 'PROJECT_COMPLETED'
+      type: 'PROJECT_COMPLETED',
     });
     expect(notifPopulatedUser.userName).toBe('Ana');
     expect(notifPopulatedUser.userEmail).toBe('ana@test.com');
@@ -134,7 +134,7 @@ describe('NotificationMapper', () => {
       type: 'PROJECT_STATUS',
       projectId: 'p_raw',
       userEmail: 'raw@test.com',
-      userName: 'Raw User'
+      userName: 'Raw User',
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.userEmail).toBe('raw@test.com');
@@ -143,7 +143,7 @@ describe('NotificationMapper', () => {
     const rawWithProjectUser: RawNotificationEvent = {
       type: 'PROJECT_STATUS',
       projectId: 'p_proj',
-      project: { userId: { name: 'Proj User', email: 'proj@test.com' } }
+      project: { userId: { name: 'Proj User', email: 'proj@test.com' } },
     };
     const notif2 = NotificationMapper.fromRawEvent(rawWithProjectUser);
     expect(notif2.userEmail).toBe('proj@test.com');
@@ -157,8 +157,8 @@ describe('NotificationMapper', () => {
         _id: 'embedded_1',
         title: 'Embedded Notif',
         status: 'generando',
-        type: 'PROJECT_STATUS'
-      }
+        type: 'PROJECT_STATUS',
+      },
     };
     const notif = NotificationMapper.fromRawEvent(raw);
     expect(notif.id).toBe('embedded_1');
@@ -170,7 +170,7 @@ describe('NotificationMapper', () => {
       _id: 'db_err_1',
       status: 'error',
       type: 'PROJECT_ERROR',
-      errorDetail: 'Error de prueba en base de datos'
+      errorDetail: 'Error de prueba en base de datos',
     };
     const mappedDb = NotificationMapper.fromDbEntity(dbErr);
     expect(mappedDb.errorDetail).toBe('Error de prueba en base de datos');
@@ -180,7 +180,7 @@ describe('NotificationMapper', () => {
       _id: 'db_err_2',
       status: 'error',
       type: 'PROJECT_ERROR',
-      message: 'Mensaje de error fallback'
+      message: 'Mensaje de error fallback',
     };
     const mappedFallback = NotificationMapper.fromDbEntity(dbFallbackErr);
     expect(mappedFallback.errorDetail).toBe('Mensaje de error fallback');
@@ -189,11 +189,10 @@ describe('NotificationMapper', () => {
       type: 'PROJECT_ERROR',
       projectId: 'raw_p1',
       status: 'error',
-      error: 'Error en crudo'
+      error: 'Error en crudo',
     };
     const mappedRaw = NotificationMapper.fromRawEvent(rawErr);
     expect(mappedRaw.errorDetail).toBe('Error en crudo');
     expect(mappedRaw.error).toBe('Error en crudo');
   });
 });
-

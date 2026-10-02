@@ -70,13 +70,16 @@ describe('HistoryViewComponent', () => {
     };
 
     mockAuthFacade = {
-      currentUser: signal({ _id: 'user1', name: 'Eva', role: 'teacher' })
+      currentUser: signal({ _id: 'user1', name: 'Eva', role: 'teacher' }),
     };
 
     await TestBed.configureTestingModule({
       imports: [HistoryViewComponent],
       providers: [
-        { provide: AppFacade, useValue: { viewPastProject: vi.fn(), deleteProject: vi.fn(), retryProject: vi.fn() } },
+        {
+          provide: AppFacade,
+          useValue: { viewPastProject: vi.fn(), deleteProject: vi.fn(), retryProject: vi.fn() },
+        },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: TranslationService, useValue: { t: signal(translations) } },
@@ -106,8 +109,16 @@ describe('HistoryViewComponent', () => {
 
   it('should filter by multiple keywords (AND) across content', () => {
     mockProjectsFacade.projectsHistory.set([
-      project({ _id: '1', title: 'Barbería moderna', generatedContent: { rawText: 'tendencias de corte' } }),
-      project({ _id: '2', title: 'Barbería clásica', generatedContent: { rawText: 'otro contenido' } }),
+      project({
+        _id: '1',
+        title: 'Barbería moderna',
+        generatedContent: { rawText: 'tendencias de corte' },
+      }),
+      project({
+        _id: '2',
+        title: 'Barbería clásica',
+        generatedContent: { rawText: 'otro contenido' },
+      }),
     ]);
     component.searchQuery.set('barbería corte');
     fixture.detectChanges();
@@ -143,7 +154,9 @@ describe('HistoryViewComponent', () => {
   });
 
   it('should switch tab on click', () => {
-    const buttons = fixture.nativeElement.querySelectorAll('.history-view__tab') as NodeListOf<HTMLButtonElement>;
+    const buttons = fixture.nativeElement.querySelectorAll(
+      '.history-view__tab',
+    ) as NodeListOf<HTMLButtonElement>;
     buttons[1].click();
     fixture.detectChanges();
     expect(component.activeTab()).toBe('CFGM_PELUQUERIA');
@@ -179,7 +192,9 @@ describe('HistoryViewComponent', () => {
   });
 
   it('should wire toolbar DOM events', () => {
-    const pills = fixture.nativeElement.querySelectorAll('.history-view__pill') as NodeListOf<HTMLButtonElement>;
+    const pills = fixture.nativeElement.querySelectorAll(
+      '.history-view__pill',
+    ) as NodeListOf<HTMLButtonElement>;
     pills[1].click();
     fixture.detectChanges();
     expect(component.onlyMine()).toBe(true);
@@ -187,7 +202,9 @@ describe('HistoryViewComponent', () => {
     fixture.detectChanges();
     expect(component.onlyMine()).toBe(false);
 
-    const input = fixture.nativeElement.querySelector('.history-view__search-input') as HTMLInputElement;
+    const input = fixture.nativeElement.querySelector(
+      '.history-view__search-input',
+    ) as HTMLInputElement;
     input.value = 'abc';
     input.dispatchEvent(new Event('input'));
     expect(component.searchQuery()).toBe('abc');

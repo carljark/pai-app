@@ -26,4 +26,10 @@
   --c-info-bg: #{variables.$color-info-bg};
 }
 
-markdown { table { @extend .table; border: 1px solid variables.$color-border; margin: variables.$spacing-4 0; } }
+markdown {
+  table {
+    @extend .table;
+    border: 1px solid variables.$color-border;
+    margin: variables.$spacing-4 0;
+  }
+}

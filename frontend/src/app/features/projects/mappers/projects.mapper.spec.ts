@@ -15,8 +15,9 @@ import {
   toImportDocxFormData,
   mapStatus,
   mapTipoNivel,
+  fromRewriteSectionResponse,
+  rewrittenText,
 } from './projects.mapper';
-import { ProjectStatus, ProjectType } from '../models/project.model';
 
 describe('Projects Mapper', () => {
   describe('mapStatus', () => {
@@ -110,8 +111,28 @@ describe('Projects Mapper', () => {
   describe('fromProjectDtoArray', () => {
     it('should map array of DTOs', () => {
       const dtos = [
-        { _id: '1', title: 'P1', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], userId: 'u1', createdAt: '', updatedAt: '' },
-        { _id: '2', title: 'P2', status: 'publicado', tipoNivel: 'CFGM_ESTETICA', courseLevel: '1º', modules: [], userId: 'u1', createdAt: '', updatedAt: '' },
+        {
+          _id: '1',
+          title: 'P1',
+          status: 'borrador',
+          tipoNivel: 'FP_BASICA',
+          courseLevel: '1º',
+          modules: [],
+          userId: 'u1',
+          createdAt: '',
+          updatedAt: '',
+        },
+        {
+          _id: '2',
+          title: 'P2',
+          status: 'publicado',
+          tipoNivel: 'CFGM_ESTETICA',
+          courseLevel: '1º',
+          modules: [],
+          userId: 'u1',
+          createdAt: '',
+          updatedAt: '',
+        },
       ];
       const result = fromProjectDtoArray(dtos);
       expect(result).toHaveLength(2);
@@ -128,7 +149,17 @@ describe('Projects Mapper', () => {
   describe('fromGenerateProjectResponse', () => {
     it('should map response with message', () => {
       const dto = {
-        project: { _id: '1', title: 'Test', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], userId: 'u1', createdAt: '', updatedAt: '' },
+        project: {
+          _id: '1',
+          title: 'Test',
+          status: 'borrador',
+          tipoNivel: 'FP_BASICA',
+          courseLevel: '1º',
+          modules: [],
+          userId: 'u1',
+          createdAt: '',
+          updatedAt: '',
+        },
         message: 'Project generated',
       };
       const result = fromGenerateProjectResponse(dto);
@@ -137,7 +168,19 @@ describe('Projects Mapper', () => {
     });
 
     it('should handle missing message', () => {
-      const dto = { project: { _id: '1', title: 'Test', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], userId: 'u1', createdAt: '', updatedAt: '' } };
+      const dto = {
+        project: {
+          _id: '1',
+          title: 'Test',
+          status: 'borrador',
+          tipoNivel: 'FP_BASICA',
+          courseLevel: '1º',
+          modules: [],
+          userId: 'u1',
+          createdAt: '',
+          updatedAt: '',
+        },
+      };
       const result = fromGenerateProjectResponse(dto);
       expect(result.message).toBeUndefined();
     });
@@ -146,7 +189,15 @@ describe('Projects Mapper', () => {
   describe('fromFileUploadResponse', () => {
     it('should map file and message', () => {
       const dto = {
-        file: { _id: 'f1', filename: 'test.pdf', originalName: 'test.pdf', mimeType: 'application/pdf', size: 1024, uploadedAt: '2024-01-01', projectId: 'p1' },
+        file: {
+          _id: 'f1',
+          filename: 'test.pdf',
+          originalName: 'test.pdf',
+          mimeType: 'application/pdf',
+          size: 1024,
+          uploadedAt: '2024-01-01',
+          projectId: 'p1',
+        },
         message: 'Uploaded',
       };
       const result = fromFileUploadResponse(dto);
@@ -158,7 +209,17 @@ describe('Projects Mapper', () => {
   describe('fromImportDocxResponse', () => {
     it('should map project and message', () => {
       const dto = {
-        project: { _id: '1', title: 'Imported', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], userId: 'u1', createdAt: '', updatedAt: '' },
+        project: {
+          _id: '1',
+          title: 'Imported',
+          status: 'borrador',
+          tipoNivel: 'FP_BASICA',
+          courseLevel: '1º',
+          modules: [],
+          userId: 'u1',
+          createdAt: '',
+          updatedAt: '',
+        },
         message: 'Imported',
       };
       const result = fromImportDocxResponse(dto);
@@ -170,7 +231,17 @@ describe('Projects Mapper', () => {
   describe('fromRetryProjectResponse', () => {
     it('should map project and message', () => {
       const dto = {
-        project: { _id: '1', title: 'Retried', status: 'borrador', tipoNivel: 'FP_BASICA', courseLevel: '1º', modules: [], userId: 'u1', createdAt: '', updatedAt: '' },
+        project: {
+          _id: '1',
+          title: 'Retried',
+          status: 'borrador',
+          tipoNivel: 'FP_BASICA',
+          courseLevel: '1º',
+          modules: [],
+          userId: 'u1',
+          createdAt: '',
+          updatedAt: '',
+        },
         message: 'Retried',
       };
       const result = fromRetryProjectResponse(dto);
@@ -181,7 +252,15 @@ describe('Projects Mapper', () => {
 
   describe('fromProjectFileDto', () => {
     it('should map all file fields', () => {
-      const dto = { _id: 'f1', filename: 'test.pdf', originalName: 'test.pdf', mimeType: 'application/pdf', size: 1024, uploadedAt: '2024-01-01', projectId: 'p1' };
+      const dto = {
+        _id: 'f1',
+        filename: 'test.pdf',
+        originalName: 'test.pdf',
+        mimeType: 'application/pdf',
+        size: 1024,
+        uploadedAt: '2024-01-01',
+        projectId: 'p1',
+      };
       const result = fromProjectFileDto(dto);
       expect(result._id).toBe('f1');
       expect(result.filename).toBe('test.pdf');
@@ -196,8 +275,24 @@ describe('Projects Mapper', () => {
   describe('fromProjectFileDtoArray', () => {
     it('should map array of file DTOs', () => {
       const dtos = [
-        { _id: 'f1', filename: 'a.pdf', originalName: 'a.pdf', mimeType: 'pdf', size: 100, uploadedAt: '2024-01-01', projectId: 'p1' },
-        { _id: 'f2', filename: 'b.pdf', originalName: 'b.pdf', mimeType: 'pdf', size: 200, uploadedAt: '2024-01-02', projectId: 'p1' },
+        {
+          _id: 'f1',
+          filename: 'a.pdf',
+          originalName: 'a.pdf',
+          mimeType: 'pdf',
+          size: 100,
+          uploadedAt: '2024-01-01',
+          projectId: 'p1',
+        },
+        {
+          _id: 'f2',
+          filename: 'b.pdf',
+          originalName: 'b.pdf',
+          mimeType: 'pdf',
+          size: 200,
+          uploadedAt: '2024-01-02',
+          projectId: 'p1',
+        },
       ];
       const result = fromProjectFileDtoArray(dtos);
       expect(result).toHaveLength(2);
@@ -238,7 +333,12 @@ describe('Projects Mapper', () => {
   describe('toRewriteSectionPayload', () => {
     it('should create payload with all fields', () => {
       const result = toRewriteSectionPayload('context', 'instruction', 'gemini', 'model');
-      expect(result).toEqual({ context: 'context', instruction: 'instruction', aiProvider: 'gemini', aiModel: 'model' });
+      expect(result).toEqual({
+        context: 'context',
+        instruction: 'instruction',
+        aiProvider: 'gemini',
+        aiModel: 'model',
+      });
     });
   });
 
@@ -255,6 +355,30 @@ describe('Projects Mapper', () => {
       const file = new File(['content'], 'test.docx');
       const formData = toImportDocxFormData(file, 'p1');
       expect(formData.get('file')).toBe(file);
+    });
+  });
+
+  describe('fromRewriteSectionResponse', () => {
+    it('should extract rawText from an object response', () => {
+      expect(fromRewriteSectionResponse({ rawText: 'texto' })).toBe('texto');
+    });
+
+    it('should pass through plain text and objects without rawText', () => {
+      const result = { newText: 'nuevo', provider: 'gemini' as const };
+      expect(fromRewriteSectionResponse('plano')).toBe('plano');
+      expect(fromRewriteSectionResponse(result)).toBe(result);
+    });
+  });
+
+  describe('rewrittenText', () => {
+    it('should return plain text responses as they are', () => {
+      expect(rewrittenText('plano')).toBe('plano');
+    });
+
+    it('should prefer newText, then rewrittenPart, then an empty string', () => {
+      expect(rewrittenText({ newText: 'nuevo', rewrittenPart: 'parte' })).toBe('nuevo');
+      expect(rewrittenText({ rewrittenPart: 'parte' })).toBe('parte');
+      expect(rewrittenText({})).toBe('');
     });
   });
 });

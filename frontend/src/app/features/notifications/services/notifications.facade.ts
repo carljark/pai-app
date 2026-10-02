@@ -1,8 +1,13 @@
 import { Injectable, inject, signal, effect, untracked } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 import { AuthFacade } from '../../../features/auth/services/auth.facade';
 import { PaiService } from '../../../services/pai.service';
-import { AppNotification, RawNotificationEvent } from '../models/notification.model';
+import {
+  AppNotification,
+  DbNotification,
+  RawNotificationEvent,
+} from '../models/notification.model';
 import { NotificationMapper } from '../mappers/notification.mapper';
 
 @Injectable({ providedIn: 'root' })
@@ -17,46 +22,58 @@ export class NotificationsFacade {
   private sseRevision = 0;
 
   private static readonly POLL_INTERVAL_MS = 5000;
+  private sseSub: Subscription | null = null;
 
   constructor() {
-    let sseSub: any = null;
+    this.initSessionEffect();
+    this.initVisibilityRefresh();
+    this.initPollingWhileOpen();
+  }
 
+  /** Conecta el SSE y carga notificaciones al iniciar sesión; limpia todo al cerrarla. */
+  private initSessionEffect(): void {
     effect(() => {
       const user = this.authService.currentUser();
-      untracked(() => {
-        if (user) {
-          this.loadNotifications();
-          if (!sseSub) {
-            sseSub = this.paiService.listenToProjectUpdates().subscribe({
-              next: (raw: RawNotificationEvent) => this.handleSseEvent(raw),
-              error: (err) => console.error('SSE Error in facade', err)
-            });
-          }
-        } else {
-          if (sseSub) {
-            sseSub.unsubscribe();
-            sseSub = null;
-          }
-          this.notifications.set([]);
-          this.latestNotification.set(null);
-        }
-      });
+      untracked(() => (user ? this.onLoggedIn() : this.onLoggedOut()));
     });
+  }
 
-    if (typeof document !== 'undefined') {
-      document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible' && this.authService.currentUser()) {
-          this.loadNotifications();
-        }
-      });
-    }
+  private onLoggedIn(): void {
+    this.loadNotifications();
+    if (this.sseSub) return;
+    this.sseSub = this.paiService.listenToProjectUpdates().subscribe({
+      next: (raw: RawNotificationEvent) => this.handleSseEvent(raw),
+      error: (err) => console.error('SSE Error in facade', err),
+    });
+  }
 
-    // Respaldo de sondeo: mientras el modal está abierto refrescamos
-    // periódicamente por si los eventos SSE de estado/fin se pierden.
+  private onLoggedOut(): void {
+    this.sseSub?.unsubscribe();
+    this.sseSub = null;
+    this.notifications.set([]);
+    this.latestNotification.set(null);
+  }
+
+  private initVisibilityRefresh(): void {
+    if (typeof document === 'undefined') return;
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && this.authService.currentUser()) {
+        this.loadNotifications();
+      }
+    });
+  }
+
+  // Respaldo de sondeo: mientras el modal está abierto refrescamos
+  // periódicamente por si los eventos SSE de estado/fin se pierden.
+  private initPollingWhileOpen(): void {
     effect((onCleanup) => {
       if (!this.recentActivityOpen()) return;
-      const timer: any = setInterval(() => this.loadNotifications(), NotificationsFacade.POLL_INTERVAL_MS);
-      timer.unref?.();
+      const timer = setInterval(
+        () => this.loadNotifications(),
+        NotificationsFacade.POLL_INTERVAL_MS,
+      );
+      // En Node (tests) el timer no debe mantener vivo el proceso
+      (timer as unknown as { unref?: () => void }).unref?.();
       onCleanup(() => clearInterval(timer));
     });
   }
@@ -65,21 +82,25 @@ export class NotificationsFacade {
     const user = this.authService.currentUser();
     const userId = user?._id;
     const revision = this.sseRevision;
-    this.http.get<any[]>('/api/notifications').subscribe({
+    this.http.get<DbNotification[]>('/api/notifications').subscribe({
       next: (items) => {
-        const validItems = (items || []).filter(i =>
-          Boolean(i.projectId || (i.status && ['en_cola', 'generando', 'borrador', 'publicado', 'error'].includes(i.status)))
+        const validItems = (items || []).filter((i) =>
+          Boolean(
+            i.projectId ||
+            (i.status &&
+              ['en_cola', 'generando', 'borrador', 'publicado', 'error'].includes(i.status)),
+          ),
         );
-        const fetched = validItems.map(i => NotificationMapper.fromDbEntity(i, userId));
+        const fetched = validItems.map((i) => NotificationMapper.fromDbEntity(i, userId));
         if (this.sseRevision === revision) {
           this.notifications.set(fetched);
         } else {
           // Llegaron eventos SSE mientras la petición estaba en vuelo: fusionamos
           // para no descartar el proyecto recién creado.
-          this.notifications.update(current => this.mergeFetched(current, fetched));
+          this.notifications.update((current) => this.mergeFetched(current, fetched));
         }
       },
-      error: (err) => console.error('Error loading notifications', err)
+      error: (err) => console.error('Error loading notifications', err),
     });
   }
 
@@ -93,7 +114,7 @@ export class NotificationsFacade {
 
     for (const existing of current) {
       const idx = existing.projectId
-        ? result.findIndex(n => n.projectId === existing.projectId)
+        ? result.findIndex((n) => n.projectId === existing.projectId)
         : -1;
 
       if (idx === -1) {
@@ -108,7 +129,7 @@ export class NotificationsFacade {
     }
 
     return result.sort(
-      (a, b) => (b.updatedAt || b.timestamp).getTime() - (a.updatedAt || a.timestamp).getTime()
+      (a, b) => (b.updatedAt || b.timestamp).getTime() - (a.updatedAt || a.timestamp).getTime(),
     );
   }
 
@@ -129,12 +150,12 @@ export class NotificationsFacade {
     this.latestNotification.set(mapped);
     this.sseRevision++;
 
-    this.notifications.update(list => this.mergeNotification(list, mapped));
+    this.notifications.update((list) => this.mergeNotification(list, mapped));
   }
 
   private mergeNotification(list: AppNotification[], notif: AppNotification): AppNotification[] {
     if (notif.projectId) {
-      const idx = list.findIndex(n => n.projectId === notif.projectId);
+      const idx = list.findIndex((n) => n.projectId === notif.projectId);
       if (idx >= 0) {
         const updated = [...list];
         const newTime = notif.updatedAt || notif.timestamp;
@@ -145,19 +166,14 @@ export class NotificationsFacade {
     return [notif, ...list];
   }
 
-
   markAsRead(id: string) {
-    this.notifications.update(list =>
-      list.map(n => n.id === id ? { ...n, read: true } : n)
-    );
+    this.notifications.update((list) => list.map((n) => (n.id === id ? { ...n, read: true } : n)));
   }
 
   markAllAsRead() {
-    this.notifications.update(list =>
-      list.map(n => ({ ...n, read: true }))
-    );
+    this.notifications.update((list) => list.map((n) => ({ ...n, read: true })));
     this.http.post('/api/notifications/read-all', {}).subscribe({
-      error: (err) => console.error('Error marking notifications read in backend', err)
+      error: (err) => console.error('Error marking notifications read in backend', err),
     });
   }
 

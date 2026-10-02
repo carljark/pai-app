@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import mammoth from 'mammoth';
-import { FpbMatch } from '../src/models/FpbMatch';
+import { FpbMatch } from '../../models/FpbMatch';
 
 const docxMapping: Record<string, { title: string, code: string | null, type: 'coincidencia' | 'actividad_ampliada' | 'relacion_criterios' | 'prompt_coincidencias' }> = {
   "Coincidencias_CS_I_Peluqueria_y_Estetica.docx": { title: "Comunicación y Sociedad I - Peluquería y Estética", code: "3011", type: "coincidencia" },

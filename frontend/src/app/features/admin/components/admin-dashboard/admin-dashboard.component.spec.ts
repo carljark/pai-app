@@ -6,6 +6,10 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { of, throwError } from 'rxjs';
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { ActivityLog } from '../../models/admin.model';
+
+// Los tests usan logs parciales
+const asLog = (l: object) => l as ActivityLog;
 
 describe('AdminDashboardComponent', () => {
   let component: AdminDashboardComponent;
@@ -16,13 +20,60 @@ describe('AdminDashboardComponent', () => {
 
   beforeEach(async () => {
     mockFacade = {
-      users: signal([{ _id: '1', name: 'Test User', email: 'test@test.com', role: 'pending', canUseAi: false, createdAt: new Date() }]),
+      users: signal([
+        {
+          _id: '1',
+          name: 'Test User',
+          email: 'test@test.com',
+          role: 'pending',
+          canUseAi: false,
+          createdAt: new Date(),
+        },
+      ]),
       settings: signal({ name: 'School A', educationalLevel: 'City A', context: 'Context A' }),
-      logs: signal([{ _id: '1', action: 'LOGIN', createdAt: new Date(), userId: { name: 'Admin', email: 'admin@test.com' }, details: { generationTimeMs: 1000 } }]),
+      logs: signal([
+        {
+          _id: '1',
+          action: 'LOGIN',
+          createdAt: new Date(),
+          userId: { name: 'Admin', email: 'admin@test.com' },
+          details: { generationTimeMs: 1000 },
+        },
+      ]),
       analyticsData: signal({
-        summary: { totalUsageSeconds: 3600, totalSessions: 5, totalDocxExports: 3, totalPdfExports: 2, totalProjectsGenerated: 4, totalUsers: 3 },
-        userMetrics: [{ userId: '1', name: 'Test User', email: 'test@test.com', role: 'teacher', canUseAi: true, createdAt: new Date().toISOString(), totalDurationSeconds: 1200, sessionCount: 2, lastActive: new Date().toISOString(), docxExportsCount: 2, pdfExportsCount: 1, projectsGeneratedCount: 3 }],
-        exportTimeline: [{ _id: '1', action: 'EXPORT_DOCX', createdAt: new Date().toISOString(), userId: { _id: '1', name: 'Test User', email: 'test@test.com' }, projectId: { _id: 'p1', title: 'Test Project' } }]
+        summary: {
+          totalUsageSeconds: 3600,
+          totalSessions: 5,
+          totalDocxExports: 3,
+          totalPdfExports: 2,
+          totalProjectsGenerated: 4,
+          totalUsers: 3,
+        },
+        userMetrics: [
+          {
+            userId: '1',
+            name: 'Test User',
+            email: 'test@test.com',
+            role: 'teacher',
+            canUseAi: true,
+            createdAt: new Date().toISOString(),
+            totalDurationSeconds: 1200,
+            sessionCount: 2,
+            lastActive: new Date().toISOString(),
+            docxExportsCount: 2,
+            pdfExportsCount: 1,
+            projectsGeneratedCount: 3,
+          },
+        ],
+        exportTimeline: [
+          {
+            _id: '1',
+            action: 'EXPORT_DOCX',
+            createdAt: new Date().toISOString(),
+            userId: { _id: '1', name: 'Test User', email: 'test@test.com' },
+            projectId: { _id: 'p1', title: 'Test Project' },
+          },
+        ],
       }),
       loadUsers: vi.fn(),
       loadSettings: vi.fn(),
@@ -32,23 +83,32 @@ describe('AdminDashboardComponent', () => {
       updateUserRole: vi.fn().mockReturnValue(of({})),
       updateUserAi: vi.fn().mockReturnValue(of({})),
       deleteUser: vi.fn().mockReturnValue(of({})),
-      saveSettings: vi.fn().mockReturnValue(of({}))
+      saveSettings: vi.fn().mockReturnValue(of({})),
     };
 
     mockFeedbackService = {
       feedbacks: signal([
-        { _id: 'fb1', title: 'Bug 1', status: 'pendiente', type: 'error', userName: 'Carlos', userEmail: 'c@test.com', description: 'Desc 1', createdAt: new Date() }
+        {
+          _id: 'fb1',
+          title: 'Bug 1',
+          status: 'pendiente',
+          type: 'error',
+          userName: 'Carlos',
+          userEmail: 'c@test.com',
+          description: 'Desc 1',
+          createdAt: new Date(),
+        },
       ]),
       loadFeedbacks: vi.fn().mockReturnValue(of([])),
       updateFeedbackStatus: vi.fn().mockReturnValue(of({})),
-      deleteFeedback: vi.fn().mockReturnValue(of({}))
+      deleteFeedback: vi.fn().mockReturnValue(of({})),
     };
 
     // El catálogo de modelos vive en el backend; el mock simula sus valores.
     mockProjects = {
       defaultModelForProvider: vi.fn((p: string) =>
-        p === 'gemini' ? 'gemini-3.6-flash' : p === 'openrouter' ? 'openrouter/free' : ''
-      )
+        p === 'gemini' ? 'gemini-3.6-flash' : p === 'openrouter' ? 'openrouter/free' : '',
+      ),
     };
 
     await TestBed.configureTestingModule({
@@ -56,8 +116,8 @@ describe('AdminDashboardComponent', () => {
       providers: [
         { provide: AdminFacade, useValue: mockFacade },
         { provide: FeedbackService, useValue: mockFeedbackService },
-        { provide: ProjectsFacade, useValue: mockProjects }
-      ]
+        { provide: ProjectsFacade, useValue: mockProjects },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AdminDashboardComponent);
@@ -81,11 +141,14 @@ describe('AdminDashboardComponent', () => {
     // toggleAiAccess
     component.toggleAiAccess('2', false);
     expect(mockFacade.updateUserAi).toHaveBeenCalledWith('2', true);
-    
+
     // saveSettings next
     component.schoolSettings.set({ schoolName: 'A', schoolCity: 'B', schoolContext: 'C' });
     const ev = new Event('submit');
-    vi.useFakeTimers(); component.saveSettings(ev); vi.runAllTimers(); vi.useRealTimers();
+    vi.useFakeTimers();
+    component.saveSettings(ev);
+    vi.runAllTimers();
+    vi.useRealTimers();
     expect(mockFacade.saveSettings).toHaveBeenCalled();
   });
 
@@ -99,21 +162,28 @@ describe('AdminDashboardComponent', () => {
     mockFacade.users.set([
       { _id: '1', role: 'pending', canUseAi: false },
       { _id: '2', role: 'teacher', canUseAi: true },
-      { _id: '3', role: 'admin', canUseAi: false }
+      { _id: '3', role: 'admin', canUseAi: false },
     ]);
-    mockFacade.logs.set([{ _id: '1', action: 'test', projectId: { title: 'T' }, details: { generationTimeMs: 1000, error: 'err' } }]);
+    mockFacade.logs.set([
+      {
+        _id: '1',
+        action: 'test',
+        projectId: { title: 'T' },
+        details: { generationTimeMs: 1000, error: 'err' },
+      },
+    ]);
     fixture.detectChanges();
-    
+
     // Form buttons and inputs
     component.schoolSettings.set({ schoolName: 'A', schoolCity: 'B', schoolContext: 'C' });
     fixture.detectChanges();
-    
+
     const form = fixture.debugElement.nativeElement.querySelector('form');
     if (form) form.dispatchEvent(new Event('submit'));
-    
+
     const inputs = fixture.debugElement.nativeElement.querySelectorAll('input');
     inputs.forEach((i: any) => i.dispatchEvent(new Event('ngModelChange')));
-    
+
     const textareas = fixture.debugElement.nativeElement.querySelectorAll('textarea');
     textareas.forEach((t: any) => t.dispatchEvent(new Event('ngModelChange')));
 
@@ -131,7 +201,7 @@ describe('AdminDashboardComponent', () => {
 
   it('should reflect settings in form', () => {
     // The effect in constructor sets the signal
-    fixture.detectChanges(); 
+    fixture.detectChanges();
     expect(component.schoolSettings().schoolName).toBe('School A');
     expect(component.schoolSettings().schoolCity).toBe('City A');
     expect(component.schoolSettings().schoolContext).toBe('Context A');
@@ -140,26 +210,30 @@ describe('AdminDashboardComponent', () => {
   it('should save settings successfully', () => {
     const event = new Event('submit');
     const preventDefaultSpy = vi.spyOn(event, 'preventDefault');
-    
-    component.schoolSettings.set({ schoolName: 'New School', schoolCity: 'New City', schoolContext: 'New Context' });
+
+    component.schoolSettings.set({
+      schoolName: 'New School',
+      schoolCity: 'New City',
+      schoolContext: 'New Context',
+    });
     component.saveSettings(event);
-    
+
     expect(preventDefaultSpy).toHaveBeenCalled();
     expect(component.isSavingSettings()).toBe(false);
     expect(component.saveSuccess()).toBe(true);
     expect(mockFacade.saveSettings).toHaveBeenCalledWith({
       name: 'New School',
       educationalLevel: 'New City',
-      context: 'New Context'
+      context: 'New Context',
     });
   });
 
   it('should handle save settings error', () => {
     mockFacade.saveSettings.mockReturnValueOnce(throwError(() => new Error('Error')));
     const event = new Event('submit');
-    
+
     component.saveSettings(event);
-    
+
     expect(component.isSavingSettings()).toBe(false);
     expect(component.saveSuccess()).toBe(false);
   });
@@ -184,14 +258,46 @@ describe('AdminDashboardComponent', () => {
   it('should render analytics data and handle null/empty analytics states', () => {
     // 1. With analytics data (Word and PDF items)
     mockFacade.analyticsData.set({
-      summary: { totalUsageSeconds: 3600, totalSessions: 5, totalDocxExports: 3, totalPdfExports: 2, totalProjectsGenerated: 4, totalUsers: 3 },
+      summary: {
+        totalUsageSeconds: 3600,
+        totalSessions: 5,
+        totalDocxExports: 3,
+        totalPdfExports: 2,
+        totalProjectsGenerated: 4,
+        totalUsers: 3,
+      },
       userMetrics: [
-        { userId: '1', name: 'Test User', email: 'test@test.com', role: 'teacher', canUseAi: true, createdAt: new Date().toISOString(), totalDurationSeconds: 1200, sessionCount: 2, lastActive: '', docxExportsCount: 2, pdfExportsCount: 1, projectsGeneratedCount: 3 }
+        {
+          userId: '1',
+          name: 'Test User',
+          email: 'test@test.com',
+          role: 'teacher',
+          canUseAi: true,
+          createdAt: new Date().toISOString(),
+          totalDurationSeconds: 1200,
+          sessionCount: 2,
+          lastActive: '',
+          docxExportsCount: 2,
+          pdfExportsCount: 1,
+          projectsGeneratedCount: 3,
+        },
       ],
       exportTimeline: [
-        { _id: '1', action: 'EXPORT_DOCX', createdAt: new Date().toISOString(), userId: { _id: '1', name: 'Test User', email: 'test@test.com' }, projectId: { _id: 'p1', title: 'Test Project' } },
-        { _id: '2', action: 'EXPORT_PDF', createdAt: new Date().toISOString(), userId: { _id: '1', name: 'Test User', email: 'test@test.com' }, details: { projectTitle: 'Detalle' } }
-      ]
+        {
+          _id: '1',
+          action: 'EXPORT_DOCX',
+          createdAt: new Date().toISOString(),
+          userId: { _id: '1', name: 'Test User', email: 'test@test.com' },
+          projectId: { _id: 'p1', title: 'Test Project' },
+        },
+        {
+          _id: '2',
+          action: 'EXPORT_PDF',
+          createdAt: new Date().toISOString(),
+          userId: { _id: '1', name: 'Test User', email: 'test@test.com' },
+          details: { projectTitle: 'Detalle' },
+        },
+      ],
     });
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
@@ -201,9 +307,16 @@ describe('AdminDashboardComponent', () => {
 
     // 2. Empty timeline
     mockFacade.analyticsData.set({
-      summary: { totalUsageSeconds: 0, totalSessions: 0, totalDocxExports: 0, totalPdfExports: 0, totalProjectsGenerated: 0, totalUsers: 0 },
+      summary: {
+        totalUsageSeconds: 0,
+        totalSessions: 0,
+        totalDocxExports: 0,
+        totalPdfExports: 0,
+        totalProjectsGenerated: 0,
+        totalUsers: 0,
+      },
       userMetrics: [],
-      exportTimeline: []
+      exportTimeline: [],
     });
     fixture.detectChanges();
     expect(compiled.textContent).toContain('No hay exportaciones registradas');
@@ -227,8 +340,8 @@ describe('AdminDashboardComponent', () => {
           model: 'meta-llama/llama-3.3-70b-instruct:free',
           provider: 'openrouter',
           fallbackUsed: true,
-          cascadeLog: ['gemini-3.8-flash: HTTP 503', 'meta-llama/llama-3.3-70b-instruct:free: OK']
-        }
+          cascadeLog: ['gemini-3.8-flash: HTTP 503', 'meta-llama/llama-3.3-70b-instruct:free: OK'],
+        },
       },
       {
         _id: '2',
@@ -238,11 +351,11 @@ describe('AdminDashboardComponent', () => {
         projectId: {
           title: 'Proyecto 2',
           usedModel: 'gemini-3.6-flash',
-          usedAiProvider: 'gemini'
+          usedAiProvider: 'gemini',
         },
         details: {
-          generationTimeMs: 2000
-        }
+          generationTimeMs: 2000,
+        },
       },
       {
         _id: '3',
@@ -253,15 +366,15 @@ describe('AdminDashboardComponent', () => {
         details: {
           title: 'Proyecto Detalle Fallido',
           error: 'Error de cuota agotada',
-          cascadeLog: ['gemini-3.8-flash: HTTP 503', 'gemini-3.7-flash: HTTP 429']
-        }
+          cascadeLog: ['gemini-3.8-flash: HTTP 503', 'gemini-3.7-flash: HTTP 429'],
+        },
       },
       {
         _id: '4',
         action: 'CUSTOM',
         createdAt: new Date(),
-        projectId: { usedModel: 'custom-ai-engine' }
-      }
+        projectId: { usedModel: 'custom-ai-engine' },
+      },
     ]);
     fixture.detectChanges();
 
@@ -289,45 +402,87 @@ describe('AdminDashboardComponent', () => {
 
   it('getLogModel and getLogProviderLabel should handle all branches', () => {
     // details.model
-    expect(component.getLogModel({ details: { model: 'exact-model' } })).toBe('exact-model');
+    expect(component.getLogModel(asLog({ details: { model: 'exact-model' } }))).toBe('exact-model');
     // projectId.usedModel
-    expect(component.getLogModel({ projectId: { usedModel: 'proj-model' } })).toBe('proj-model');
+    expect(component.getLogModel(asLog({ projectId: { usedModel: 'proj-model' } }))).toBe(
+      'proj-model',
+    );
     // provider openrouter in details and in projectId
-    expect(component.getLogModel({ details: { provider: 'openrouter' } })).toBe('openrouter/free');
-    expect(component.getLogModel({ projectId: { usedAiProvider: 'openrouter' } })).toBe('openrouter/free');
+    expect(component.getLogModel(asLog({ details: { provider: 'openrouter' } }))).toBe(
+      'openrouter/free',
+    );
+    expect(component.getLogModel(asLog({ projectId: { usedAiProvider: 'openrouter' } }))).toBe(
+      'openrouter/free',
+    );
     // provider gemini in details and in projectId
-    expect(component.getLogModel({ details: { provider: 'gemini' } })).toBe('gemini-3.6-flash');
-    expect(component.getLogModel({ projectId: { usedAiProvider: 'gemini' } })).toBe('gemini-3.6-flash');
+    expect(component.getLogModel(asLog({ details: { provider: 'gemini' } }))).toBe(
+      'gemini-3.6-flash',
+    );
+    expect(component.getLogModel(asLog({ projectId: { usedAiProvider: 'gemini' } }))).toBe(
+      'gemini-3.6-flash',
+    );
     // null / other
-    expect(component.getLogModel({ details: { provider: 'other' } })).toBeNull();
-    expect(component.getLogModel({})).toBeNull();
+    expect(component.getLogModel(asLog({ details: { provider: 'other' } }))).toBeNull();
+    expect(component.getLogModel(asLog({}))).toBeNull();
 
     // getLogProviderLabel
-    expect(component.getLogProviderLabel({ details: { provider: 'openrouter' } })).toBe('Secundario');
-    expect(component.getLogProviderLabel({ projectId: { usedAiProvider: 'openrouter' } })).toBe('Secundario');
-    expect(component.getLogProviderLabel({ details: { provider: 'gemini' } })).toBe('Primario');
-    expect(component.getLogProviderLabel({ projectId: { usedAiProvider: 'gemini' } })).toBe('Primario');
-    expect(component.getLogProviderLabel({ details: { provider: 'other' } })).toBeNull();
-    expect(component.getLogProviderLabel({})).toBeNull();
+    expect(component.getLogProviderLabel(asLog({ details: { provider: 'openrouter' } }))).toBe(
+      'Secundario',
+    );
+    expect(
+      component.getLogProviderLabel(asLog({ projectId: { usedAiProvider: 'openrouter' } })),
+    ).toBe('Secundario');
+    expect(component.getLogProviderLabel(asLog({ details: { provider: 'gemini' } }))).toBe(
+      'Primario',
+    );
+    expect(component.getLogProviderLabel(asLog({ projectId: { usedAiProvider: 'gemini' } }))).toBe(
+      'Primario',
+    );
+    expect(component.getLogProviderLabel(asLog({ details: { provider: 'other' } }))).toBeNull();
+    expect(component.getLogProviderLabel(asLog({}))).toBeNull();
 
     // getLogGenerationTime
-    expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 } })).toBe(12500);
-    expect(component.getLogGenerationTime({ projectId: { generationTimeMs: 8300 } })).toBe(8300);
-    expect(component.getLogGenerationTime({ details: { generationTimeMs: 12500 }, projectId: { generationTimeMs: 8300 } })).toBe(12500);
-    expect(component.getLogGenerationTime({})).toBeNull();
+    expect(component.getLogGenerationTime(asLog({ details: { generationTimeMs: 12500 } }))).toBe(
+      12500,
+    );
+    expect(component.getLogGenerationTime(asLog({ projectId: { generationTimeMs: 8300 } }))).toBe(
+      8300,
+    );
+    expect(
+      component.getLogGenerationTime(
+        asLog({
+          details: { generationTimeMs: 12500 },
+          projectId: { generationTimeMs: 8300 },
+        }),
+      ),
+    ).toBe(12500);
+    expect(component.getLogGenerationTime(asLog({}))).toBeNull();
 
     // getLogPromptSize
-    expect(component.getLogPromptSize({ details: { promptChars: 1200, instructionChars: 8000 } })).toBe('prompt 1200 car. · instrucción 8000 car.');
-    expect(component.getLogPromptSize({ projectId: { aiPromptChars: 10 } })).toBe('prompt 10 car.');
-    expect(component.getLogPromptSize({ details: { instructionChars: 20 } })).toBe('instrucción 20 car.');
-    expect(component.getLogPromptSize({})).toBeNull();
+    expect(
+      component.getLogPromptSize(asLog({ details: { promptChars: 1200, instructionChars: 8000 } })),
+    ).toBe('prompt 1200 car. · instrucción 8000 car.');
+    expect(component.getLogPromptSize(asLog({ projectId: { aiPromptChars: 10 } }))).toBe(
+      'prompt 10 car.',
+    );
+    expect(component.getLogPromptSize(asLog({ details: { instructionChars: 20 } }))).toBe(
+      'instrucción 20 car.',
+    );
+    expect(component.getLogPromptSize(asLog({}))).toBeNull();
   });
 
   it('should return only failed model attempts from the cascade log', () => {
-    expect(component.getLogAttemptErrors({ details: { cascadeLog: ['model-a: HTTP 503', 'model-b: OK'] } }))
-      .toEqual(['model-a: HTTP 503']);
-    expect(component.getLogAttemptErrors({ details: { cascadeLog: 'invalid' } })).toEqual([]);
-    expect(component.getLogAttemptErrors({})).toEqual([]);
+    expect(
+      component.getLogAttemptErrors(
+        asLog({
+          details: { cascadeLog: ['model-a: HTTP 503', 'model-b: OK'] },
+        }),
+      ),
+    ).toEqual(['model-a: HTTP 503']);
+    expect(component.getLogAttemptErrors(asLog({ details: { cascadeLog: 'invalid' } }))).toEqual(
+      [],
+    );
+    expect(component.getLogAttemptErrors(asLog({}))).toEqual([]);
   });
 
   it('should handle feedback administration methods and error type feedback', () => {
@@ -336,7 +491,7 @@ describe('AdminDashboardComponent', () => {
         _id: 'fb1',
         title: 'Sugerencia 1',
         type: 'sugerencia',
-        status: 'pendiente'
+        status: 'pendiente',
       },
       {
         _id: 'fb2',
@@ -346,8 +501,8 @@ describe('AdminDashboardComponent', () => {
         userName: 'Carlos',
         userEmail: 'carlos@test.com',
         adminNotes: 'En proceso',
-        createdAt: new Date().toISOString()
-      }
+        createdAt: new Date().toISOString(),
+      },
     ]);
     fixture.detectChanges();
 
@@ -360,14 +515,76 @@ describe('AdminDashboardComponent', () => {
 
     const mockEvent = { target: { value: 'Nueva nota' } } as any;
     component.saveAdminNotes('fb1', mockEvent);
-    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith('fb1', 'pendiente', 'Nueva nota');
+    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith(
+      'fb1',
+      'pendiente',
+      'Nueva nota',
+    );
 
     // Test saveAdminNotes with unknown feedback id (falls back to pendiente)
     component.saveAdminNotes('fb_unknown', mockEvent);
-    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith('fb_unknown', 'pendiente', 'Nueva nota');
+    expect(mockFeedbackService.updateFeedbackStatus).toHaveBeenCalledWith(
+      'fb_unknown',
+      'pendiente',
+      'Nueva nota',
+    );
 
     component.deleteFeedback('fb1');
     expect(mockFeedbackService.deleteFeedback).toHaveBeenCalledWith('fb1');
+  });
+
+  it('should render analytics fallbacks and cascade logs of failed projects', () => {
+    mockFacade.analyticsData.set({
+      summary: {
+        totalUsageSeconds: 60,
+        totalSessions: 1,
+        totalDocxExports: 1,
+        totalPdfExports: 0,
+        totalProjectsGenerated: 1,
+        totalUsers: 1,
+      },
+      userMetrics: [
+        {
+          userId: '1',
+          name: 'Activo',
+          email: 'activo@test.com',
+          role: 'teacher',
+          canUseAi: false,
+          createdAt: new Date().toISOString(),
+          totalDurationSeconds: 60,
+          sessionCount: 1,
+          lastActive: new Date().toISOString(),
+          docxExportsCount: 1,
+          pdfExportsCount: 0,
+          projectsGeneratedCount: 1,
+        },
+      ],
+      exportTimeline: [{ _id: 'e1', action: 'EXPORT_DOCX', createdAt: new Date().toISOString() }],
+    });
+    mockFacade.logs.set([
+      {
+        _id: 'l1',
+        action: 'GENERATE_PROJECT',
+        createdAt: new Date().toISOString(),
+        projectId: { _id: 'p1', status: 'error', errorCascadeLog: ['desde proyecto'] },
+        details: {},
+      },
+      {
+        _id: 'l2',
+        action: 'GENERATE_PROJECT',
+        createdAt: new Date().toISOString(),
+        projectId: { _id: 'p2', status: 'error' },
+        details: { errorCascadeLog: ['desde detalles'] },
+      },
+    ]);
+    fixture.detectChanges();
+
+    const text = (fixture.nativeElement as HTMLElement).textContent;
+    expect(text).not.toContain('Sin actividad');
+    expect(text).toContain('Proyecto');
+    expect(text).toContain('por Profesor');
+    expect(text).toContain('desde proyecto');
+    expect(text).toContain('desde detalles');
   });
 
   it('should render logs with model only (no provider label) and handle null settings', () => {
@@ -377,8 +594,8 @@ describe('AdminDashboardComponent', () => {
         action: 'PROJECT_GENERATE',
         createdAt: new Date().toISOString(),
         details: { model: 'custom-model-only' }, // getLogModel is string, getLogProviderLabel is null
-        user: { name: 'Teacher' }
-      }
+        user: { name: 'Teacher' },
+      },
     ]);
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('custom-model-only');

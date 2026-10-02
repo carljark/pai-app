@@ -13,7 +13,7 @@ describe('AuthMapper', () => {
       name: 'John',
       email: 'john@test.com',
       role: 'admin',
-      canUseAi: true
+      canUseAi: true,
     });
     const user = AuthMapper.fromStorage(userStr);
     expect(user).toEqual({
@@ -21,13 +21,13 @@ describe('AuthMapper', () => {
       name: 'John',
       email: 'john@test.com',
       role: 'admin',
-      canUseAi: true
+      canUseAi: true,
     });
   });
 
   it('fromStorage should return default values if missing fields', () => {
     const userStr = JSON.stringify({
-      _id: '123'
+      _id: '123',
     });
     const user = AuthMapper.fromStorage(userStr);
     expect(user).toEqual({
@@ -35,7 +35,7 @@ describe('AuthMapper', () => {
       name: 'Anónimo',
       email: '',
       role: 'pending',
-      canUseAi: false
+      canUseAi: false,
     });
   });
 
@@ -49,7 +49,7 @@ describe('AuthMapper', () => {
       name: 'John',
       email: 'j@test.com',
       role: 'admin',
-      canUseAi: true
+      canUseAi: true,
     };
     expect(AuthMapper.toStorage(user)).toBe(JSON.stringify(user));
   });

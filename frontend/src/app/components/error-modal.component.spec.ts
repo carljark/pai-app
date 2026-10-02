@@ -9,7 +9,7 @@ describe('ErrorModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ErrorModalComponent]
+      imports: [ErrorModalComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ErrorModalComponent);
@@ -26,7 +26,7 @@ describe('ErrorModalComponent', () => {
     componentRef.setInput('title', 'Custom Error Title');
     componentRef.setInput('message', 'Test Error Message');
     fixture.detectChanges();
-    
+
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h2')?.textContent).toContain('Custom Error Title');
     expect(compiled.textContent).toContain('Test Error Message');
@@ -34,11 +34,11 @@ describe('ErrorModalComponent', () => {
 
   it('should emit close event when button is clicked', () => {
     let emitted = false;
-    component.close.subscribe(() => emitted = true);
-    
+    component.closed.subscribe(() => (emitted = true));
+
     const button = fixture.nativeElement.querySelector('button');
     button?.click();
-    
+
     expect(emitted).toBe(true);
   });
 });

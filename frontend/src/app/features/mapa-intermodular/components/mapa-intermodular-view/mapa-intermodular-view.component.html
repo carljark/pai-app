@@ -1,0 +1,54 @@
+<app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)"> </app-mapa-tabs>
+
+@if (!facade.isLoadingSeed()) {
+  <app-mapa-header
+    [headerExpanded]="headerExpanded()"
+    [activeTab]="facade.activeTab()"
+    [searchQuery]="facade.searchQuery()"
+    [typeFilter]="facade.selectedTypeFilter()"
+    [stats]="facade.stats()"
+    (headerToggle)="toggleHeaderStats()"
+    (searchChange)="onSearch($event)"
+    (typeFilterChange)="onSetTypeFilter($event)"
+  >
+  </app-mapa-header>
+
+  <div class="mapa-vertical-accordions">
+    <app-modulo-list
+      [modules]="facade.filteredModules()"
+      [selectedModuleCode]="facade.selectedModuleCode()"
+      [selectedRaId]="facade.selectedRaId()"
+      [step1Open]="step1Open()"
+      (moduleSelected)="onSelectModule($event)"
+      (raSelected)="onSelectRa($event)"
+      (toggleStepEvent)="toggleStep($event)"
+      (activateStepEvent)="activateStep($event)"
+    >
+    </app-modulo-list>
+
+    <app-ra-detail
+      [step2Open]="step2Open()"
+      [selectedCriterion]="facade.selectedCriterion()"
+      (criterionSelected)="onSelectCriterion($event)"
+      (createProject)="createProjectFromConnection()"
+      (toggleStepEvent)="toggleStep($event)"
+      (activateStepEvent)="activateStep($event)"
+    >
+    </app-ra-detail>
+
+    <app-connections-list
+      [connections]="facade.filteredConnections()"
+      [selectedCriterion]="facade.selectedCriterion()"
+      [step3Open]="step3Open()"
+      [activeTab]="facade.activeTab()"
+      (createProject)="createProjectFromConnection($event)"
+      (toggleStepEvent)="toggleStep($event)"
+      (activateStepEvent)="activateStep($event)"
+    >
+    </app-connections-list>
+  </div>
+} @else {
+  <div class="mapa-loading-skeleton">
+    <app-skeleton-loader [lines]="6" [text]="trans.t().loadingData" />
+  </div>
+}

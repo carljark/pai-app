@@ -8,10 +8,12 @@ import { TranslationService } from '../../../../services/translation.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
-import { signal, computed } from '@angular/core';
+import { signal } from '@angular/core';
 import { of, throwError } from 'rxjs';
-import { MarkdownComponent } from 'ngx-markdown';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+
+// Eventos de input simulados: solo se usa `target`
+const asEvent = (e: object) => e as unknown as Event;
 
 // Mock html2pdf.js since it's used in the component
 vi.mock('html2pdf.js', () => {
@@ -19,14 +21,14 @@ vi.mock('html2pdf.js', () => {
     default: vi.fn(() => ({
       from: vi.fn().mockReturnThis(),
       save: vi.fn(),
-    }))
+    })),
   };
 });
 
 describe('TallerViewComponent', () => {
   let component: TallerViewComponent;
   let fixture: ComponentFixture<TallerViewComponent>;
-  
+
   let mockAppFacade: any;
   let mockLayoutService: any;
   let mockTranslationService: any;
@@ -40,7 +42,8 @@ describe('TallerViewComponent', () => {
       infoMessage: signal(''),
       infoType: signal(''),
       showInfoModal: signal(false),
-      errorMessage: signal(''), viewPastProject: vi.fn(),
+      errorMessage: signal(''),
+      viewPastProject: vi.fn(),
       errorTitle: signal(''),
       showErrorModal: signal(false),
       confirmTitle: signal(''),
@@ -51,7 +54,8 @@ describe('TallerViewComponent', () => {
     };
 
     mockLayoutService = {
-      language: signal('castellano'), switchView: vi.fn(),
+      language: signal('castellano'),
+      switchView: vi.fn(),
     };
 
     mockTranslationService = {
@@ -73,25 +77,21 @@ describe('TallerViewComponent', () => {
 
     // Signals compartidos para que los mocks puedan actualizarlos
     const generatedProjectSignal = signal('# Project content');
-    const undoStackSignal = signal([] as string[]);
-    const canUndoSignal = computed(() => undoStackSignal().length > 0);
-    const myProjectsSignal = signal([mockCurrentProject]);
     const projectFilesSignal = signal([]);
-    const aiPromptSignal = signal('');
-    const isThinkingSignal = signal(false);
-    const isUploadingSignal = signal(false);
-    const selectedAiSignal = signal<'gemini' | 'openrouter'>('gemini');
-    const selectedModelSignal = signal<string>('gemini-3.8-flash');
-    const methodologySignal = signal('ABP (Aprendizaje Basado en Problemas / Proyectos)');
-    const extraInstructionsSignal = signal('');
 
     mockProjectsFacade = {
-      exportDocx: vi.fn().mockReturnValue(of(new Blob(['test'], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }))),
-      projectFiles: projectFilesSignal, 
+      exportDocx: vi.fn().mockReturnValue(
+        of(
+          new Blob(['test'], {
+            type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+          }),
+        ),
+      ),
+      projectFiles: projectFilesSignal,
       currentProjectId: signal('proj-123'),
       currentProject: signal(mockCurrentProject),
       projectsHistory: signal([]),
-      generatedProject: generatedProjectSignal, 
+      generatedProject: generatedProjectSignal,
       formattedGeneratedProject: generatedProjectSignal,
       updateProjectStatus: vi.fn().mockReturnValue(of({})),
       loadHistory: vi.fn(),
@@ -102,7 +102,20 @@ describe('TallerViewComponent', () => {
         return of('Rewritten full text');
       }),
       isUploading: signal(false),
-      uploadFile: vi.fn().mockReturnValue(of({ file: { _id: 'f1', filename: 'test.txt', originalName: 'test.txt', mimeType: 'text/plain', size: 100, uploadedAt: new Date().toISOString(), projectId: 'proj-123' }, message: 'ok' })),
+      uploadFile: vi.fn().mockReturnValue(
+        of({
+          file: {
+            _id: 'f1',
+            filename: 'test.txt',
+            originalName: 'test.txt',
+            mimeType: 'text/plain',
+            size: 100,
+            uploadedAt: new Date().toISOString(),
+            projectId: 'proj-123',
+          },
+          message: 'ok',
+        }),
+      ),
       loadProjectFiles: vi.fn(),
       deleteFile: vi.fn().mockReturnValue(of({})),
       getDownloadUrl: vi.fn().mockReturnValue('http://download.url/file.txt'),
@@ -117,15 +130,23 @@ describe('TallerViewComponent', () => {
       methodologyOptions: [],
       aiProviderOptions: [],
       availableModels: signal([]),
-      defaultModelForProvider: (p: string) => p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash',
+      defaultModelForProvider: (p: string) =>
+        p === 'gemini' ? 'gemini-3.6-flash' : 'deepseek/deepseek-v4.1-flash',
     };
 
     mockAuthFacade = {
-      currentUser: signal({ name: 'Test Docente', email: 'docente@test.com', canUseAi: true, role: 'admin' })
+      currentUser: signal({
+        name: 'Test Docente',
+        email: 'docente@test.com',
+        canUseAi: true,
+        role: 'admin',
+      }),
     };
 
     mockPaiService = {
-      importDocx: vi.fn().mockReturnValue(of({ project: { generatedContent: { rawText: 'Extracted text' } } })),
+      importDocx: vi
+        .fn()
+        .mockReturnValue(of({ project: { generatedContent: { rawText: 'Extracted text' } } })),
     };
 
     await TestBed.configureTestingModule({
@@ -138,8 +159,7 @@ describe('TallerViewComponent', () => {
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: PaiService, useValue: mockPaiService },
       ],
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TallerViewComponent);
     component = fixture.componentInstance;
@@ -150,20 +170,31 @@ describe('TallerViewComponent', () => {
     vi.restoreAllMocks();
   });
 
-  
   it('should render template branches for coverage', () => {
     // Branch 1: empty state with history > 5
     mockProjectsFacade.currentProjectId.set(null);
     mockProjectsFacade.currentProject.set(null);
     mockProjectsFacade.generatedProject.set('');
     const arr = [
-      { _id: '1', status: 'publicado', modules: ['a'], tipoNivel: 'DIVERSIFICACION_CURRICULAR', createdAt: new Date() },
-      { _id: '2', status: 'error', generatedContent: { modules: ['b'] }, tipoNivel: 'FP_BASICA', createdAt: new Date() },
+      {
+        _id: '1',
+        status: 'publicado',
+        modules: ['a'],
+        tipoNivel: 'DIVERSIFICACION_CURRICULAR',
+        createdAt: new Date(),
+      },
+      {
+        _id: '2',
+        status: 'error',
+        generatedContent: { modules: ['b'] },
+        tipoNivel: 'FP_BASICA',
+        createdAt: new Date(),
+      },
       { _id: '3', status: 'en_cola' },
       { _id: '4', status: 'generando' },
       { _id: '5', status: 'otro' },
       { _id: '6', status: 'publicado' },
-      { _id: '7', status: 'publicado' }
+      { _id: '7', status: 'publicado' },
     ];
     mockProjectsFacade.recentProjects = signal(arr);
     mockProjectsFacade.projectsHistory.set(arr);
@@ -172,7 +203,11 @@ describe('TallerViewComponent', () => {
     // Click items in empty state
     const emptyButtons = fixture.debugElement.nativeElement.querySelectorAll('button');
     emptyButtons.forEach((b: any) => {
-      try { b.click(); } catch(e) {}
+      try {
+        b.click();
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
 
     // Branch 1b: empty state with 0 history items
@@ -186,22 +221,22 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.projectFiles.set([{ name: 'f.txt', size: 2000000 }]);
     mockProjectsFacade.isUploading.set(true);
     mockProjectsFacade.canUndo.set(true);
-    
+
     // Auth admin/ai
     mockAuthFacade.currentUser.set({ role: 'admin', canUseAi: true });
     fixture.detectChanges();
 
     // Click undo button in template
-    const undoBtn = fixture.debugElement.nativeElement.querySelector('.ai-assistant-panel button.btn-secondary');
+    const undoBtn = fixture.debugElement.nativeElement.querySelector(
+      '.ai-assistant-panel button.btn-secondary',
+    );
     if (undoBtn) undoBtn.click();
-    
+
     // Auth no ai
     mockAuthFacade.currentUser.set({ role: 'user', canUseAi: false });
     fixture.detectChanges();
   });
 
-  
-  
   it('should trigger HTML events via triggerEventHandler', () => {
     mockProjectsFacade.currentProjectId.set('123');
     mockProjectsFacade.generatedProject.set('Algo');
@@ -217,30 +252,44 @@ describe('TallerViewComponent', () => {
 
     // Trigger inputs
     const inputs = de.queryAll(By.css('input[type="file"]'));
-    inputs.forEach(i => i.triggerEventHandler('change', { target: { files: [] } }));
+    inputs.forEach((i) => i.triggerEventHandler('change', { target: { files: [] } }));
 
     // Trigger drag zone
     const dragZone = de.query(By.css('.upload-zone'));
     if (dragZone) {
       dragZone.triggerEventHandler('dragover', new Event('dragover'));
       dragZone.triggerEventHandler('dragleave', new Event('dragleave'));
-      dragZone.triggerEventHandler('drop', { dataTransfer: { files: [] }, preventDefault: () => {} });
+      dragZone.triggerEventHandler('drop', {
+        dataTransfer: { files: [] },
+        preventDefault: () => {},
+      });
     }
 
     // Trigger all buttons
     const buttons = de.queryAll(By.css('button'));
-    buttons.forEach(b => b.triggerEventHandler('click', null));
+    buttons.forEach((b) => b.triggerEventHandler('click', null));
   });
 
   it('should trigger all HTML event bindings for coverage', () => {
     // Branch: Empty State
     mockProjectsFacade.currentProjectId.set(null);
-    mockProjectsFacade.projectsHistory.set([{ _id: '1', status: 'publicado' }, { _id: '2' }, { _id: '3' }, { _id: '4' }, { _id: '5' }, { _id: '6' }]);
+    mockProjectsFacade.projectsHistory.set([
+      { _id: '1', status: 'publicado' },
+      { _id: '2' },
+      { _id: '3' },
+      { _id: '4' },
+      { _id: '5' },
+      { _id: '6' },
+    ]);
     fixture.detectChanges();
-    
+
     let buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
     buttons.forEach((b: any) => {
-      try { b.click(); } catch(e) {}
+      try {
+        b.click();
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
 
     // Branch: Editor state
@@ -252,23 +301,40 @@ describe('TallerViewComponent', () => {
 
     buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
     buttons.forEach((b: any) => {
-      try { b.click(); } catch(e) {}
+      try {
+        b.click();
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
 
     const inputs = fixture.debugElement.nativeElement.querySelectorAll('input');
     inputs.forEach((i: any) => {
-      try { i.dispatchEvent(new Event('change')); } catch(e) {}
+      try {
+        i.dispatchEvent(new Event('change'));
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
-    
+
     const textareas = fixture.debugElement.nativeElement.querySelectorAll('textarea');
     textareas.forEach((t: any) => {
-      try { t.value = 'abc'; t.dispatchEvent(new Event('input')); } catch(e) {}
+      try {
+        t.value = 'abc';
+        t.dispatchEvent(new Event('input'));
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
-    
+
     // Trigger pdf-content mouseup
     const pdfContent = fixture.debugElement.nativeElement.querySelector('#pdf-content');
     if (pdfContent) {
-      try { pdfContent.dispatchEvent(new MouseEvent('mouseup')); } catch(e) {}
+      try {
+        pdfContent.dispatchEvent(new MouseEvent('mouseup'));
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     }
 
     // Check thinking state buttons
@@ -276,7 +342,11 @@ describe('TallerViewComponent', () => {
     fixture.detectChanges();
     buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
     buttons.forEach((b: any) => {
-      try { b.click(); } catch(e) {}
+      try {
+        b.click();
+      } catch {
+        // El test solo comprueba que el click no rompe el componente
+      }
     });
     mockProjectsFacade.isThinking.set(false);
     fixture.detectChanges();
@@ -289,12 +359,12 @@ describe('TallerViewComponent', () => {
   it('should toggle AI panel collapsed state', () => {
     // Initial state is false
     expect(component.isSidebarCollapsed()).toBe(false);
-    
+
     // Set up auth and project state so the AI panel is rendered
     mockAuthFacade.currentUser = signal({ role: 'admin', canUseAi: true });
     mockProjectsFacade.generatedProject.set('content');
     fixture.detectChanges();
-    
+
     // Find the desktop toggle button
     const de = fixture.debugElement;
     const desktopToggleBtn = de.query(By.css('.taller-desktop-toggle button'));
@@ -354,7 +424,7 @@ describe('TallerViewComponent', () => {
 
   it('should handle upload word success', () => {
     const event = { target: { files: [new File([''], 'test.docx')], value: 'test.docx' } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).toHaveBeenCalledWith('proj-123', event.target.files[0]);
     expect(mockProjectsFacade.generatedProject()).toBe('Extracted text');
     expect(mockAppFacade.showInfoModal()).toBe(true);
@@ -363,20 +433,20 @@ describe('TallerViewComponent', () => {
   it('should handle upload word failure', () => {
     mockPaiService.importDocx.mockReturnValueOnce(throwError(() => new Error('error')));
     const event = { target: { files: [new File([''], 'test.docx')], value: 'test.docx' } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockAppFacade.showErrorModal()).toBe(true);
   });
 
   it('should abort upload word if no file', () => {
     const event = { target: { files: [], value: '' } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).not.toHaveBeenCalled();
   });
 
   it('should handle upload word failure when no project id', () => {
     mockProjectsFacade.currentProjectId.set(null);
     const event = { target: { files: [new File([''], 'test.docx')], value: 'test.docx' } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).not.toHaveBeenCalled();
   });
 
@@ -406,7 +476,7 @@ describe('TallerViewComponent', () => {
     expect(mockProjectsFacade.loadHistory).toHaveBeenCalled();
     expect(mockAppFacade.showInfoModal()).toBe(true);
   });
-  
+
   it('should publish project success - catala', () => {
     mockLayoutService.language.set('catala');
     component.publishProject();
@@ -428,7 +498,7 @@ describe('TallerViewComponent', () => {
     expect(html2pdf.default).toHaveBeenCalled();
     document.body.removeChild(mockElement);
   });
-  
+
   it('should do nothing on export PDF if markdown element not found', () => {
     vi.spyOn(document, 'querySelector').mockReturnValue(null);
     component.exportPDF();
@@ -463,7 +533,11 @@ describe('TallerViewComponent', () => {
     component.rewriteWithAI();
     await Promise.resolve();
     expect(mockProjectsFacade.pushUndo).toHaveBeenCalled();
-    expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith('fix grammar', 'gemini', 'gemini-3.8-flash');
+    expect(mockProjectsFacade.rewriteSection).toHaveBeenCalledWith(
+      'fix grammar',
+      'gemini',
+      'gemini-3.8-flash',
+    );
     expect(genSignal()).toBe('Rewritten full text');
     expect(mockProjectsFacade.isThinking()).toBe(false);
   });
@@ -472,8 +546,10 @@ describe('TallerViewComponent', () => {
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     mockProjectsFacade.generatedProject.set('# Old Project');
     mockProjectsFacade.aiPrompt.set('fix grammar');
-    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({ error: { error: 'Server Error' } })));
-    
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(
+      throwError(() => ({ error: { error: 'Server Error' } })),
+    );
+
     component.rewriteWithAI();
     expect(consoleSpy).toHaveBeenCalledWith('Error en IA', expect.any(Object));
     expect(mockAppFacade.errorMessage()).toBe('Server Error');
@@ -502,7 +578,7 @@ describe('TallerViewComponent', () => {
   it('should handle onFileSelected', () => {
     const event = { target: { files: [new File([''], 'file.txt')] } };
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onFileSelected(event);
+    component.onFileSelected(asEvent(event));
     expect(component.uploadFile).toHaveBeenCalledWith(event.target.files[0]);
   });
 
@@ -510,7 +586,7 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.currentProjectId.set(null);
     const event = { target: { files: [new File([''], 'file.txt')] } };
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onFileSelected(event);
+    component.onFileSelected(asEvent(event));
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
@@ -526,15 +602,19 @@ describe('TallerViewComponent', () => {
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     mockProjectsFacade.generatedProject.set('# Old Project');
     mockProjectsFacade.aiPrompt.set('fix grammar');
-    
+
     // err.error.message
-    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => ({ error: { message: 'Err message' } })));
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(
+      throwError(() => ({ error: { message: 'Err message' } })),
+    );
     component.rewriteWithAI();
     expect(mockAppFacade.errorMessage()).toBe('Err message');
     expect(mockAppFacade.errorTitle()).toBe('Error en el Asistente IA');
 
     // err.message
-    mockProjectsFacade.rewriteSection.mockReturnValueOnce(throwError(() => new Error('Direct error')));
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(
+      throwError(() => new Error('Direct error')),
+    );
     component.rewriteWithAI();
     expect(mockAppFacade.errorMessage()).toBe('Direct error');
 
@@ -548,31 +628,43 @@ describe('TallerViewComponent', () => {
 
   it('should handle onDrop edge cases', () => {
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    
+
     // No dataTransfer
     component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn() } as any);
     expect(component.uploadFile).not.toHaveBeenCalled();
 
     // No files
-    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [] } } as any);
+    component.onDrop({
+      preventDefault: vi.fn(),
+      stopPropagation: vi.fn(),
+      dataTransfer: { files: [] },
+    } as any);
     expect(component.uploadFile).not.toHaveBeenCalled();
 
     // No projectId
     mockProjectsFacade.currentProjectId.set(null);
-    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    component.onDrop({
+      preventDefault: vi.fn(),
+      stopPropagation: vi.fn(),
+      dataTransfer: { files: [new File([''], 'f.txt')] },
+    } as any);
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
   it('should handle onFileSelected with no files', () => {
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onFileSelected({ target: { files: [] } });
+    component.onFileSelected(asEvent({ target: { files: [] } }));
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
   it('should handle onDrop success', () => {
     mockProjectsFacade.currentProjectId.set('123');
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    component.onDrop({
+      preventDefault: vi.fn(),
+      stopPropagation: vi.fn(),
+      dataTransfer: { files: [new File([''], 'f.txt')] },
+    } as any);
     expect(component.uploadFile).toHaveBeenCalled();
   });
 
@@ -633,11 +725,13 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.generatedProject.set('# Old Project');
     mockProjectsFacade.aiPrompt.set('fix grammar');
     mockProjectsFacade.selectedAi.set('gemini');
-    mockProjectsFacade.rewriteSection.mockReturnValueOnce(of({
-      newText: 'Rewritten with openrouter',
-      fallbackUsed: true,
-      provider: 'openrouter'
-    }));
+    mockProjectsFacade.rewriteSection.mockReturnValueOnce(
+      of({
+        newText: 'Rewritten with openrouter',
+        fallbackUsed: true,
+        provider: 'openrouter',
+      }),
+    );
 
     component.rewriteWithAI();
     expect(mockProjectsFacade.selectedAi()).toBe('openrouter');
@@ -647,7 +741,14 @@ describe('TallerViewComponent', () => {
   it('should show taller-ai-select and taller-model-select for admin, handle template change events, and hide for non-admin', async () => {
     mockAuthFacade.currentUser.set({ role: 'admin', canUseAi: true });
     mockProjectsFacade.selectedAi.set('gemini');
-    mockProjectsFacade.availableModels.set([{ value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' }, { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }]);
+    mockProjectsFacade.availableModels.set([
+      { value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' },
+      {
+        value: 'deepseek/deepseek-v4.1-flash',
+        label: 'DeepSeek V4.1 Flash',
+        provider: 'openrouter',
+      },
+    ]);
     fixture.detectChanges();
     let aiSelect = fixture.nativeElement.querySelector('#taller-ai-select');
     let modelSelect = fixture.nativeElement.querySelector('#taller-model-select');
@@ -655,7 +756,9 @@ describe('TallerViewComponent', () => {
     expect(modelSelect).toBeTruthy();
 
     // Trigger change event on taller-model-select in DOM
-    const geminiOptionIndex = Array.from(modelSelect.options as unknown as HTMLOptionElement[]).findIndex((option: HTMLOptionElement) => option.value === 'gemini-3.6-flash');
+    const geminiOptionIndex = Array.from(
+      modelSelect.options as unknown as HTMLOptionElement[],
+    ).findIndex((option: HTMLOptionElement) => option.value === 'gemini-3.6-flash');
     modelSelect.selectedIndex = geminiOptionIndex >= 0 ? geminiOptionIndex : 0;
     modelSelect.dispatchEvent(new Event('change'));
     expect(mockProjectsFacade.selectedModel()).toBe('gemini-3.6-flash');
@@ -707,14 +810,14 @@ describe('TallerViewComponent', () => {
 
   it('should handle uploadWord when no file selected', () => {
     const event = { target: { files: [] } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).not.toHaveBeenCalled();
   });
 
   it('should handle uploadWord when no project id', () => {
     mockProjectsFacade.currentProjectId.set(null);
     const event = { target: { files: [new File([''], 'test.docx')] } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).not.toHaveBeenCalled();
   });
 
@@ -762,7 +865,7 @@ describe('TallerViewComponent', () => {
 
   it('should handle onFileSelected with no files', () => {
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onFileSelected({ target: { files: [] } });
+    component.onFileSelected(asEvent({ target: { files: [] } }));
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
@@ -785,25 +888,37 @@ describe('TallerViewComponent', () => {
     expect(component.uploadFile).not.toHaveBeenCalled();
 
     // No files
-    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [] } } as any);
+    component.onDrop({
+      preventDefault: vi.fn(),
+      stopPropagation: vi.fn(),
+      dataTransfer: { files: [] },
+    } as any);
     expect(component.uploadFile).not.toHaveBeenCalled();
 
     // No projectId
     mockProjectsFacade.currentProjectId.set(null);
-    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    component.onDrop({
+      preventDefault: vi.fn(),
+      stopPropagation: vi.fn(),
+      dataTransfer: { files: [new File([''], 'f.txt')] },
+    } as any);
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
   it('should handle onDrop success', () => {
     mockProjectsFacade.currentProjectId.set('123');
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onDrop({ preventDefault: vi.fn(), stopPropagation: vi.fn(), dataTransfer: { files: [new File([''], 'f.txt')] } } as any);
+    component.onDrop({
+      preventDefault: vi.fn(),
+      stopPropagation: vi.fn(),
+      dataTransfer: { files: [new File([''], 'f.txt')] },
+    } as any);
     expect(component.uploadFile).toHaveBeenCalled();
   });
 
   it('should handle onFileSelected with no files', () => {
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onFileSelected({ target: { files: [] } });
+    component.onFileSelected(asEvent({ target: { files: [] } }));
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
@@ -811,7 +926,7 @@ describe('TallerViewComponent', () => {
     mockProjectsFacade.currentProjectId.set(null);
     const event = { target: { files: [new File([''], 'file.txt')] } };
     vi.spyOn(component, 'uploadFile').mockImplementation(() => {});
-    component.onFileSelected(event);
+    component.onFileSelected(asEvent(event));
     expect(component.uploadFile).not.toHaveBeenCalled();
   });
 
@@ -830,14 +945,14 @@ describe('TallerViewComponent', () => {
 
   it('should handle uploadWord when no file selected', () => {
     const event = { target: { files: [] } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).not.toHaveBeenCalled();
   });
 
   it('should handle uploadWord when no project id', () => {
     mockProjectsFacade.currentProjectId.set(null);
     const event = { target: { files: [new File([''], 'test.docx')] } };
-    component.uploadWord(event);
+    component.uploadWord(asEvent(event));
     expect(mockPaiService.importDocx).not.toHaveBeenCalled();
   });
 

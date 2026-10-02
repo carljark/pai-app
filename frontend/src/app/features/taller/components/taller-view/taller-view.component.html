@@ -1,66 +1,228 @@
 @if (!projects.currentProject() || !projects.generatedProject()) {
-  <div style="max-width: 720px; margin: 0 auto; padding: 32px 0;">
-    <div style="text-align: center; margin-bottom: 32px;">
-      <div style="display: inline-flex; background: #f1f5f9; border-radius: 16px; padding: 16px; margin-bottom: 16px;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+  <div style="max-width: 720px; margin: 0 auto; padding: 32px 0">
+    <div style="text-align: center; margin-bottom: 32px">
+      <div
+        style="
+          display: inline-flex;
+          background: #f1f5f9;
+          border-radius: 16px;
+          padding: 16px;
+          margin-bottom: 16px;
+        "
+      >
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#94a3b8"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+        </svg>
       </div>
-      <h2 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 0 0 8px;">{{ trans.t().workshopEmptyTitle }}</h2>
-      <p style="color: #64748b; margin: 0; max-width: 420px; margin: 0 auto 24px;">{{ trans.t().workshopEmptyDesc }}</p>
-      <button class="btn-primary" (click)="layout.switchView('generator')" style="display: inline-flex; align-items: center; gap: 8px;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      <h2 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 0 0 8px">
+        {{ trans.t().workshopEmptyTitle }}
+      </h2>
+      <p style="color: #64748b; margin: 0; max-width: 420px; margin: 0 auto 24px">
+        {{ trans.t().workshopEmptyDesc }}
+      </p>
+      <button
+        class="btn-primary"
+        (click)="layout.switchView('generator')"
+        style="display: inline-flex; align-items: center; gap: 8px"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
         {{ trans.t().createProjectBtn }}
       </button>
     </div>
 
     @if (projects.projectsHistory().length > 0) {
       <div>
-        <p style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px;">{{ trans.t().workshopOrRecent }}</p>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          @for (project of projects.projectsHistory().slice().sort(sortByDate).slice(0, 5); track project._id) {
+        <p
+          style="
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 12px;
+          "
+        >
+          {{ trans.t().workshopOrRecent }}
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          @for (
+            project of projects.projectsHistory().slice().sort(sortByDate).slice(0, 5);
+            track project._id
+          ) {
             <button
               (click)="appFacade.viewPastProject(project)"
-              style="display: flex; align-items: center; gap: 16px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; cursor: pointer; text-align: left; transition: all 0.18s; width: 100%;">
-              <div style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"
-                [style.background]="project.status === 'publicado' ? '#dcfce7' : project.status === 'error' ? '#fee2e2' : project.status === 'en_cola' || project.status === 'generando' ? '#dbeafe' : '#f1f5f9'">
-                {{ project.status === 'publicado' ? '✅' : project.status === 'error' ? '❌' : project.status === 'en_cola' || project.status === 'generando' ? '⏳' : '📝' }}
+              style="
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                background: white;
+                border: 1px solid #e2e8f0;
+                border-radius: 12px;
+                padding: 14px 18px;
+                cursor: pointer;
+                text-align: left;
+                transition: all 0.18s;
+                width: 100%;
+              "
+            >
+              <div
+                style="
+                  flex-shrink: 0;
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 8px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1.1rem;
+                "
+                [style.background]="
+                  project.status === 'publicado'
+                    ? '#dcfce7'
+                    : project.status === 'error'
+                      ? '#fee2e2'
+                      : project.status === 'en_cola' || project.status === 'generando'
+                        ? '#dbeafe'
+                        : '#f1f5f9'
+                "
+              >
+                {{
+                  project.status === 'publicado'
+                    ? '✅'
+                    : project.status === 'error'
+                      ? '❌'
+                      : project.status === 'en_cola' || project.status === 'generando'
+                        ? '⏳'
+                        : '📝'
+                }}
               </div>
-              <div style="flex: 1; min-width: 0;">
-                <div style="font-size: 0.95rem; font-weight: 600; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                  {{ project.modules?.join(' · ') || project.generatedContent?.modules?.join(' · ') || trans.t().homeDefaultModules }}
+              <div style="flex: 1; min-width: 0">
+                <div
+                  style="
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: #1e293b;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  {{
+                    project.modules?.join(' · ') ||
+                      project.generatedContent?.modules?.join(' · ') ||
+                      trans.t().homeDefaultModules
+                  }}
                 </div>
-                <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">
-                  {{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? trans.t().courseLevelPDC : trans.t().courseLevelFP }}
+                <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px">
+                  {{ project.courseLevel ? project.courseLevel + ' ' : ''
+                  }}{{
+                    project.tipoNivel === 'DIVERSIFICACION_CURRICULAR'
+                      ? trans.t().courseLevelPDC
+                      : trans.t().courseLevelFP
+                  }}
                   &nbsp;·&nbsp;
-                  {{ project.createdAt | date:'d MMM yyyy, HH:mm' }}
+                  {{ project.createdAt | date: 'd MMM yyyy, HH:mm' }}
                 </div>
               </div>
-              <svg style="flex-shrink: 0; color: #c7d2fe;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg
+                style="flex-shrink: 0; color: #c7d2fe"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </button>
           }
         </div>
         @if (projects.projectsHistory().length > 5) {
-          <button class="btn-secondary" (click)="projects.loadHistory(); layout.switchView('history')" style="margin-top: 12px; width: 100%;">
+          <button
+            class="btn-secondary"
+            (click)="projects.loadHistory(); layout.switchView('history')"
+            style="margin-top: 12px; width: 100%"
+          >
             {{ trans.t().workshopViewAll }} ({{ projects.projectsHistory().length }}) →
           </button>
         }
       </div>
     } @else {
-      <div style="text-align: center; padding: 24px; background: #f8fafc; border-radius: 12px; border: 1px dashed #e2e8f0;">
-        <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">{{ trans.t().homeEmpty }}</p>
+      <div
+        style="
+          text-align: center;
+          padding: 24px;
+          background: #f8fafc;
+          border-radius: 12px;
+          border: 1px dashed #e2e8f0;
+        "
+      >
+        <p style="color: #94a3b8; margin: 0; font-size: 0.9rem">{{ trans.t().homeEmpty }}</p>
       </div>
     }
   </div>
 } @else {
   <div class="app-header">
     <h2 class="app-header-title">{{ trans.t().workshopTitle }}</h2>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 10px; flex-wrap: wrap">
       <button (click)="downloadWord()" class="btn-secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
         {{ trans.t().downloadWord }}
       </button>
-      <input type="file" id="docxUpload" accept=".docx" (change)="uploadWord($event)" style="display: none;">
+      <input
+        type="file"
+        id="docxUpload"
+        accept=".docx"
+        (change)="uploadWord($event)"
+        style="display: none"
+      />
       <button (click)="triggerUpload()" class="btn-secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="17 8 12 3 7 8" />
+          <line x1="12" y1="3" x2="12" y2="15" />
+        </svg>
         {{ trans.t().uploadWord }}
       </button>
       <button (click)="saveDraft()" class="btn-secondary">{{ trans.t().saveDraft }}</button>
@@ -70,12 +232,27 @@
   </div>
 
   <div class="taller-desktop-toggle">
-    <button (click)="isSidebarCollapsed.set(!isSidebarCollapsed())" class="btn-secondary" style="display: flex; align-items: center; gap: 6px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <button
+      (click)="isSidebarCollapsed.set(!isSidebarCollapsed())"
+      class="btn-secondary"
+      style="display: flex; align-items: center; gap: 6px"
+    >
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         @if (isSidebarCollapsed()) {
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line>
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="9" y1="3" x2="9" y2="21"></line>
         } @else {
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="15" y1="3" x2="15" y2="21"></line>
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="15" y1="3" x2="15" y2="21"></line>
         }
       </svg>
       {{ isSidebarCollapsed() ? trans.t().sidebarExpand : trans.t().sidebarCollapse }}
@@ -83,37 +260,133 @@
   </div>
 
   <div class="taller-layout" [class.resources-collapsed]="isMobileResourcesCollapsed()">
-    <div class="card taller-content" style="flex: 1; min-width: 0; position: relative;">
+    <div class="card taller-content" style="flex: 1; min-width: 0; position: relative">
       @if (projects.isThinking()) {
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(3px); z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border-radius: 12px;">
-          <div style="width: 48px; height: 48px; border: 4px solid #e2e8f0; border-top: 4px solid #4a7c65; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-          <div style="font-weight: 600; color: #1e293b; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(3px);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            border-radius: 12px;
+          "
+        >
+          <div
+            style="
+              width: 48px;
+              height: 48px;
+              border: 4px solid #e2e8f0;
+              border-top: 4px solid #4a7c65;
+              border-radius: 50%;
+              animation: spin 1s linear infinite;
+            "
+          ></div>
+          <div
+            style="
+              font-weight: 600;
+              color: #1e293b;
+              font-size: 1.15rem;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            "
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#10b981"
+              stroke-width="2"
+            >
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+              />
+            </svg>
             {{ trans.t().thinking }}
           </div>
-          <p style="margin: 0; font-size: 0.9rem; color: #64748b;">{{ trans.t().aiThinkingDesc }}</p>
+          <p style="margin: 0; font-size: 0.9rem; color: #64748b">{{ trans.t().aiThinkingDesc }}</p>
         </div>
       }
-      <div id="pdf-content" style="font-size: 1rem; line-height: 1.6; height: 650px; overflow-y: auto; overflow-x: auto; padding-right: 15px;">
+      <div
+        id="pdf-content"
+        style="
+          font-size: 1rem;
+          line-height: 1.6;
+          height: 650px;
+          overflow-y: auto;
+          overflow-x: auto;
+          padding-right: 15px;
+        "
+      >
         @if (getCurrentProjectUserName()) {
-          <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: #166534; font-size: 0.9rem;">
-            <strong>{{ trans.t().authorshipLabel }}:</strong> {{ getCurrentProjectUserName() }} &nbsp;|&nbsp; <strong>Email:</strong> {{ getCurrentProjectUserEmail() }}
+          <div
+            style="
+              background-color: #f0fdf4;
+              border: 1px solid #bbf7d0;
+              padding: 12px 16px;
+              border-radius: 6px;
+              margin-bottom: 24px;
+              color: #166534;
+              font-size: 0.9rem;
+            "
+          >
+            <strong>{{ trans.t().authorshipLabel }}:</strong>
+            {{ getCurrentProjectUserName() }} &nbsp;|&nbsp; <strong>Email:</strong>
+            {{ getCurrentProjectUserEmail() }}
           </div>
         }
-        <div style="min-width: 0; flex: 1; display: flex; flex-direction: column;">
-          <markdown [data]="projects.formattedGeneratedProject()" style="display: block; width: 100%; flex: 1;"></markdown>
+        <div style="min-width: 0; flex: 1; display: flex; flex-direction: column">
+          <markdown
+            [data]="projects.formattedGeneratedProject()"
+            style="display: block; width: 100%; flex: 1"
+          ></markdown>
         </div>
       </div>
     </div>
-    
+
     @if (!isSidebarCollapsed()) {
-      <div class="taller-sidebar-container" style="flex: 1; width: 100%; max-width: 400px;">
+      <div class="taller-sidebar-container" style="flex: 1; width: 100%; max-width: 400px">
         <div class="card taller-sidebar" [class.collapsed]="isMobileResourcesCollapsed()">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px;"
-               [style.margin-bottom]="isMobileResourcesCollapsed() ? '0' : '20px'"
-               [style.border-bottom]="isMobileResourcesCollapsed() ? 'none' : '1px solid #e2e8f0'">
-            <h2 style="margin: 0; font-size: 1.3rem; color: #1e293b; display: flex; align-items: center; gap: 8px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7c65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding-bottom: 12px;
+            "
+            [style.margin-bottom]="isMobileResourcesCollapsed() ? '0' : '20px'"
+            [style.border-bottom]="isMobileResourcesCollapsed() ? 'none' : '1px solid #e2e8f0'"
+          >
+            <h2
+              style="
+                margin: 0;
+                font-size: 1.3rem;
+                color: #1e293b;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#4a7c65"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
@@ -123,60 +396,166 @@
               type="button"
               (click)="isMobileResourcesCollapsed.set(!isMobileResourcesCollapsed())"
               class="mobile-only-toggle"
-              style="background: none; border: none; cursor: pointer; color: #64748b; padding: 4px 8px; border-radius: 6px; display: flex; align-items: center; gap: 4px; font-size: 0.85rem; transition: background 0.15s;"
-              [attr.aria-label]="isMobileResourcesCollapsed() ? 'Expandir recursos' : 'Colapsar recursos'">
+              style="
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #64748b;
+                padding: 4px 8px;
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 0.85rem;
+                transition: background 0.15s;
+              "
+              [attr.aria-label]="
+                isMobileResourcesCollapsed() ? 'Expandir recursos' : 'Colapsar recursos'
+              "
+            >
               @if (isMobileResourcesCollapsed()) {
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>
               } @else {
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
               }
             </button>
           </div>
-          
+
           @if (!isMobileResourcesCollapsed()) {
             @if (auth.currentUser()?.canUseAi || auth.currentUser()?.role === 'admin') {
-              <div class="ai-assistant-panel" style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px dashed #e2e8f0;">
-                <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px;">
-                  <h3 style="margin: 0; font-size: 1.1rem; color: #1f2937; display: flex; align-items: center; gap: 8px;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              <div
+                class="ai-assistant-panel"
+                style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px dashed #e2e8f0"
+              >
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 8px;
+                    margin-bottom: 16px;
+                  "
+                >
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: 1.1rem;
+                      color: #1f2937;
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                    "
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+                      />
+                    </svg>
                     {{ trans.t().aiAssistant }}
                   </h3>
                   @if (auth.currentUser()?.role === 'admin') {
-                    <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap">
                       <app-select
                         inputId="taller-ai-select"
                         size="sm"
                         [options]="aiOptions()"
                         [value]="projects.selectedAi()"
-                        (valueChange)="onAiChange($event)">
+                        (valueChange)="onAiChange($event)"
+                      >
                       </app-select>
                       <app-select
                         inputId="taller-model-select"
                         size="sm"
                         [options]="modelOptions()"
                         [value]="projects.selectedModel()"
-                        (valueChange)="onModelChange($event)">
+                        (valueChange)="onModelChange($event)"
+                      >
                       </app-select>
                     </div>
                   }
                 </div>
-                <div style="background-color: #f8fafc; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 0.85rem; color: #475569;">
-                  <p style="margin: 0 0 8px 0; font-weight: 500;">{{ trans.t().aiIntro }}</p>
-                  <ol style="margin: 0; padding-left: 16px;">
+                <div
+                  style="
+                    background-color: #f8fafc;
+                    padding: 12px;
+                    border-radius: 6px;
+                    margin-bottom: 16px;
+                    font-size: 0.85rem;
+                    color: #475569;
+                  "
+                >
+                  <p style="margin: 0 0 8px 0; font-weight: 500">{{ trans.t().aiIntro }}</p>
+                  <ol style="margin: 0; padding-left: 16px">
                     <li [innerHTML]="trans.t().aiStep1"></li>
                     <li [innerHTML]="trans.t().aiStep2"></li>
                     <li [innerHTML]="trans.t().aiStep3"></li>
                   </ol>
                 </div>
-                <div class="form-group" style="margin-bottom: 16px;">
-                  <textarea [ngModel]="projects.aiPrompt()" (ngModelChange)="projects.aiPrompt.set($event)" [placeholder]="trans.t().aiPlaceholder" class="form-input" style="height: 100px; resize: none;"></textarea>
+                <div class="form-group" style="margin-bottom: 16px">
+                  <textarea
+                    [ngModel]="projects.aiPrompt()"
+                    (ngModelChange)="projects.aiPrompt.set($event)"
+                    [placeholder]="trans.t().aiPlaceholder"
+                    class="form-input"
+                    style="height: 100px; resize: none"
+                  ></textarea>
                 </div>
-                <button (click)="rewriteWithAI()" [disabled]="projects.isThinking()" class="btn-primary" style="width: 100%;">
+                <button
+                  (click)="rewriteWithAI()"
+                  [disabled]="projects.isThinking()"
+                  class="btn-primary"
+                  style="width: 100%"
+                >
                   {{ projects.isThinking() ? trans.t().thinking : trans.t().rewriteBtn }}
                 </button>
                 @if (projects.canUndo()) {
-                  <button (click)="undoAI()" class="btn-secondary" style="width: 100%; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <button
+                    (click)="undoAI()"
+                    class="btn-secondary"
+                    style="
+                      width: 100%;
+                      margin-top: 8px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 6px;
+                    "
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <polyline points="1 4 1 10 7 10"></polyline>
                       <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
                     </svg>
@@ -185,29 +564,120 @@
                 }
               </div>
             } @else {
-              <div class="ai-assistant-panel" style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 24px;">
-                <h3 style="margin: 0 0 8px 0; color: #991b1b; font-size: 1rem;">{{ trans.t().aiDisabledTitle }}</h3>
-                <p style="margin: 0; font-size: 0.85rem; color: #b91c1c;">{{ trans.t().aiDisabledDesc }}</p>
+              <div
+                class="ai-assistant-panel"
+                style="
+                  background-color: #fef2f2;
+                  border: 1px solid #fecaca;
+                  border-radius: 8px;
+                  padding: 16px;
+                  text-align: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <h3 style="margin: 0 0 8px 0; color: #991b1b; font-size: 1rem">
+                  {{ trans.t().aiDisabledTitle }}
+                </h3>
+                <p style="margin: 0; font-size: 0.85rem; color: #b91c1c">
+                  {{ trans.t().aiDisabledDesc }}
+                </p>
               </div>
             }
 
-            <div style="flex-grow: 1; display: flex; flex-direction: column;">
-              <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937;">{{ trans.t().attachmentsTitle }}</h3>
-              <div style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 24px; text-align: center; cursor: pointer; margin-bottom: 16px;" 
-                   onclick="document.getElementById('fileInput').click()" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" style="margin-bottom: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500;">{{ projects.isUploading() ? trans.t().uploading : trans.t().dragFiles }}</p>
-                <input type="file" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
+            <div style="flex-grow: 1; display: flex; flex-direction: column">
+              <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937">
+                {{ trans.t().attachmentsTitle }}
+              </h3>
+              <div
+                style="
+                  border: 2px dashed #cbd5e1;
+                  border-radius: 6px;
+                  padding: 24px;
+                  text-align: center;
+                  cursor: pointer;
+                  margin-bottom: 16px;
+                "
+                onclick="document.getElementById('fileInput').click()"
+                (dragover)="onDragOver($event)"
+                (dragleave)="onDragLeave($event)"
+                (drop)="onDrop($event)"
+              >
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                  style="margin-bottom: 8px"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+                <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500">
+                  {{ projects.isUploading() ? trans.t().uploading : trans.t().dragFiles }}
+                </p>
+                <input
+                  type="file"
+                  id="fileInput"
+                  style="display: none"
+                  (change)="onFileSelected($event)"
+                />
               </div>
-              <div style="flex: 1; overflow-y: auto;">
+              <div style="flex: 1; overflow-y: auto">
                 @for (file of projects.projectFiles(); track file._id) {
-                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 8px;">
-                    <div style="overflow: hidden;">
-                      <a [href]="getDownloadUrl(file.filename)" target="_blank" style="color: #3b82f6; font-size: 0.85rem; font-weight: 500; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ file.originalName }}</a>
-                      <span style="font-size: 0.75rem; color: #94a3b8;">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</span>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 8px 12px;
+                      border: 1px solid #e2e8f0;
+                      border-radius: 6px;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    <div style="overflow: hidden">
+                      <a
+                        [href]="getDownloadUrl(file.filename)"
+                        target="_blank"
+                        style="
+                          color: #3b82f6;
+                          font-size: 0.85rem;
+                          font-weight: 500;
+                          display: block;
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                        "
+                        >{{ file.originalName }}</a
+                      >
+                      <span style="font-size: 0.75rem; color: #94a3b8"
+                        >{{ (file.size / 1024 / 1024).toFixed(2) }} MB</span
+                      >
                     </div>
-                    <button (click)="deleteFile(file.filename)" style="background: none; border: none; cursor: pointer; color: #ef4444; padding: 4px;">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    <button
+                      (click)="deleteFile(file.filename)"
+                      style="
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        color: #ef4444;
+                        padding: 4px;
+                      "
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                      </svg>
                     </button>
                   </div>
                 }

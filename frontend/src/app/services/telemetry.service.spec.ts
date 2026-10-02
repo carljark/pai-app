@@ -1,20 +1,16 @@
-import { TestBed } from "@angular/core/testing";
-import { HttpTestingController, provideHttpClientTesting } from "@angular/common/http/testing";
-import { provideHttpClient } from "@angular/common/http";
-import { TelemetryService } from "./telemetry.service";
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { TestBed } from '@angular/core/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { TelemetryService } from './telemetry.service';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
-describe("TelemetryService", () => {
+describe('TelemetryService', () => {
   let service: TelemetryService;
   let httpTestingController: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        TelemetryService,
-        provideHttpClient(),
-        provideHttpClientTesting()
-      ]
+      providers: [TelemetryService, provideHttpClient(), provideHttpClientTesting()],
     });
 
     service = TestBed.inject(TelemetryService);
@@ -26,111 +22,123 @@ describe("TelemetryService", () => {
     httpTestingController.verify();
   });
 
-  it("should be created and manage session id", () => {
+  it('should be created and manage session id', () => {
     expect(service).toBeTruthy();
-    service.setCurrentPage("mapa");
+    service.setCurrentPage('mapa');
   });
 
-  it("should start and stop tracking with flush and timer tick", () => {
+  it('should start and stop tracking with flush and timer tick', () => {
     vi.useFakeTimers();
     service.startTracking();
     // Second call should be no-op
     service.startTracking();
 
     vi.advanceTimersByTime(60000);
-    const reqTimer = httpTestingController.expectOne("/api/telemetry/heartbeat");
+    const reqTimer = httpTestingController.expectOne('/api/telemetry/heartbeat');
     reqTimer.flush({ ok: true, durationSeconds: 60 });
     vi.useRealTimers();
 
     service.flushHeartbeat();
-    const req = httpTestingController.expectOne("/api/telemetry/heartbeat");
-    expect(req.request.method).toBe("POST");
+    const req = httpTestingController.expectOne('/api/telemetry/heartbeat');
+    expect(req.request.method).toBe('POST');
     expect(req.request.body.sessionId).toBeDefined();
     req.flush({ ok: true, durationSeconds: 60 });
 
     service.stopTracking(true);
-    const reqStop = httpTestingController.expectOne("/api/telemetry/heartbeat");
+    const reqStop = httpTestingController.expectOne('/api/telemetry/heartbeat');
     expect(reqStop.request.body.isClosing).toBe(true);
     reqStop.flush({ ok: true, durationSeconds: 60 });
   });
 
-  it("should log custom events", () => {
-    service.logEvent("EXPORT_PDF", "proj-1", { format: "A4" }).subscribe(res => {
+  it('should log custom events', () => {
+    service.logEvent('EXPORT_PDF', 'proj-1', { format: 'A4' }).subscribe((res) => {
       expect(res.ok).toBe(true);
     });
 
-    const req = httpTestingController.expectOne("/api/telemetry/event");
-    expect(req.request.method).toBe("POST");
-    expect(req.request.body.action).toBe("EXPORT_PDF");
+    const req = httpTestingController.expectOne('/api/telemetry/event');
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body.action).toBe('EXPORT_PDF');
     req.flush({ ok: true });
   });
 
-  it("should handle error when flushing heartbeat without throwing", () => {
+  it('should handle error when flushing heartbeat without throwing', () => {
     service.flushHeartbeat();
-    const req = httpTestingController.expectOne("/api/telemetry/heartbeat");
-    req.error(new ProgressEvent("error"));
+    const req = httpTestingController.expectOne('/api/telemetry/heartbeat');
+    req.error(new ProgressEvent('error'));
   });
 
-  it("should handle visibility change events", () => {
+  it('should handle visibility change events', () => {
     service.startTracking();
 
-    Object.defineProperty(document, "visibilityState", { value: "hidden", configurable: true });
-    document.dispatchEvent(new Event("visibilitychange"));
-    const reqHidden = httpTestingController.expectOne("/api/telemetry/heartbeat");
+    Object.defineProperty(document, 'visibilityState', { value: 'hidden', configurable: true });
+    document.dispatchEvent(new Event('visibilitychange'));
+    const reqHidden = httpTestingController.expectOne('/api/telemetry/heartbeat');
     reqHidden.flush({ ok: true, durationSeconds: 60 });
 
-    Object.defineProperty(document, "visibilityState", { value: "visible", configurable: true });
-    document.dispatchEvent(new Event("visibilitychange"));
+    Object.defineProperty(document, 'visibilityState', { value: 'visible', configurable: true });
+    document.dispatchEvent(new Event('visibilitychange'));
 
     service.stopTracking(false);
   });
 
-  it("should handle beforeunload with sendBeacon if token exists", () => {
-    localStorage.setItem("token", "test-token");
+  it('should handle beforeunload with sendBeacon if token exists', () => {
+    localStorage.setItem('token', 'test-token');
     const originalSendBeacon = (navigator as any).sendBeacon;
     const beaconSpy = vi.fn().mockReturnValue(true);
-    Object.defineProperty(navigator, "sendBeacon", { value: beaconSpy, configurable: true });
+    Object.defineProperty(navigator, 'sendBeacon', { value: beaconSpy, configurable: true });
 
     service.flushHeartbeat(true);
     expect(beaconSpy).toHaveBeenCalled();
     localStorage.clear();
 
-    localStorage.setItem("pai_token", "test-pai-token");
+    localStorage.setItem('pai_token', 'test-pai-token');
     service.flushHeartbeat(true);
     expect(beaconSpy).toHaveBeenCalledTimes(2);
     localStorage.clear();
 
-    Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
+    Object.defineProperty(navigator, 'sendBeacon', {
+      value: originalSendBeacon,
+      configurable: true,
+    });
   });
 
-  it("should handle beforeunload window event directly", () => {
+  it('should handle beforeunload window event directly', () => {
     localStorage.clear();
     const originalSendBeacon = (navigator as any).sendBeacon;
-    Object.defineProperty(navigator, "sendBeacon", { value: undefined, configurable: true });
+    Object.defineProperty(navigator, 'sendBeacon', { value: undefined, configurable: true });
 
     service.startTracking();
-    window.dispatchEvent(new Event("beforeunload"));
-    const req = httpTestingController.expectOne("/api/telemetry/heartbeat");
+    window.dispatchEvent(new Event('beforeunload'));
+    const req = httpTestingController.expectOne('/api/telemetry/heartbeat');
     req.flush({ ok: true, durationSeconds: 60 });
     service.stopTracking(false);
 
-    Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
+    Object.defineProperty(navigator, 'sendBeacon', {
+      value: originalSendBeacon,
+      configurable: true,
+    });
   });
 
-  it("should fall back to HTTP when closing and sendBeacon exists but there is no token", () => {
+  it('should fall back to HTTP when closing and sendBeacon exists but there is no token', () => {
     localStorage.clear();
     const originalSendBeacon = (navigator as any).sendBeacon;
-    Object.defineProperty(navigator, "sendBeacon", { value: vi.fn().mockReturnValue(true), configurable: true });
+    Object.defineProperty(navigator, 'sendBeacon', {
+      value: vi.fn().mockReturnValue(true),
+      configurable: true,
+    });
 
     service.flushHeartbeat(true);
-    const req = httpTestingController.expectOne("/api/telemetry/heartbeat");
+    const req = httpTestingController.expectOne('/api/telemetry/heartbeat');
     expect(req.request.body.isClosing).toBe(true);
     req.flush({ ok: true, durationSeconds: 0 });
 
-    Object.defineProperty(navigator, "sendBeacon", { value: originalSendBeacon, configurable: true });
+    Object.defineProperty(navigator, 'sendBeacon', {
+      value: originalSendBeacon,
+      configurable: true,
+    });
   });
 
-  it("should stop tracking safely when there is no active interval", () => {
+  it('should stop tracking safely when there is no active interval', () => {
     service.startTracking();
     // Simulate a state where tracking started but the interval is gone
     (service as any).heartbeatInterval = null;

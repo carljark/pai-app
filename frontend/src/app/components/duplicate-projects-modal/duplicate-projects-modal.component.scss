@@ -63,7 +63,9 @@
     background: var(--c-surface);
     text-align: left;
     cursor: pointer;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition:
+      border-color 0.2s,
+      background-color 0.2s;
 
     &:hover {
       border-color: var(--c-primary);

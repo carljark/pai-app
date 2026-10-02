@@ -7,14 +7,17 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
-import { AppSelectComponent, SelectOption } from '../../../../components/app-select/app-select.component';
+import {
+  AppSelectComponent,
+  SelectOption,
+} from '../../../../components/app-select/app-select.component';
 
 @Component({
   selector: 'app-generator-view',
   standalone: true,
   imports: [CommonModule, CurriculumSelectorComponent, AppSelectComponent],
   templateUrl: './generator-view.component.html',
-  styleUrls: ['./generator-view.component.scss']
+  styleUrls: ['./generator-view.component.scss'],
 })
 export class GeneratorViewComponent {
   layout = inject(LayoutService);
@@ -42,7 +45,10 @@ export class GeneratorViewComponent {
   });
 
   methodologyOptions = computed<SelectOption[]>(() => [
-    { value: 'ABP (Aprendizaje Basado en Problemas / Proyectos)', label: this.trans.t().methodologyABP },
+    {
+      value: 'ABP (Aprendizaje Basado en Problemas / Proyectos)',
+      label: this.trans.t().methodologyABP,
+    },
     { value: 'ABR (Aprendizaje Basado en Retos)', label: this.trans.t().methodologyABR },
     { value: 'ApS (Aprendizaje y Servicio)', label: this.trans.t().methodologyApS },
   ]);
@@ -53,7 +59,7 @@ export class GeneratorViewComponent {
   ]);
 
   modelOptions = computed<SelectOption[]>(() =>
-    this.projects.availableModels().map(model => ({ value: model.value, label: model.label }))
+    this.projects.availableModels().map((model) => ({ value: model.value, label: model.label })),
   );
 
   onCourseChange(value: string) {
@@ -75,7 +81,7 @@ export class GeneratorViewComponent {
   }
 
   getUserName(id: string): string {
-    return this.projects.directory().find(u => u._id === id)?.name || id;
+    return this.projects.directory().find((u) => u._id === id)?.name || id;
   }
 
   onExtraInstructionsChange(event: Event) {

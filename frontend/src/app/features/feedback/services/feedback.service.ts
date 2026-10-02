@@ -18,10 +18,10 @@ export class FeedbackService {
       tap({
         next: (created) => {
           this.isSubmitting.set(false);
-          this.feedbacks.update(list => [created, ...list]);
+          this.feedbacks.update((list) => [created, ...list]);
         },
-        error: () => this.isSubmitting.set(false)
-      })
+        error: () => this.isSubmitting.set(false),
+      }),
     );
   }
 
@@ -40,24 +40,24 @@ export class FeedbackService {
           this.isLoading.set(false);
           this.feedbacks.set(items);
         },
-        error: () => this.isLoading.set(false)
-      })
+        error: () => this.isLoading.set(false),
+      }),
     );
   }
 
   updateFeedbackStatus(id: string, status: string, adminNotes?: string): Observable<FeedbackItem> {
     return this.http.patch<FeedbackItem>(`${this.apiUrl}/${id}`, { status, adminNotes }).pipe(
       tap((updated) => {
-        this.feedbacks.update(list => list.map(item => item._id === id ? updated : item));
-      })
+        this.feedbacks.update((list) => list.map((item) => (item._id === id ? updated : item)));
+      }),
     );
   }
 
   deleteFeedback(id: string): Observable<{ message: string }> {
     return this.http.delete<{ message: string }>(`${this.apiUrl}/${id}`).pipe(
       tap(() => {
-        this.feedbacks.update(list => list.filter(item => item._id !== id));
-      })
+        this.feedbacks.update((list) => list.filter((item) => item._id !== id));
+      }),
     );
   }
 }

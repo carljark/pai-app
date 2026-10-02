@@ -14,7 +14,10 @@ describe('AppSelectComponent', () => {
 
   it('should render options and placeholder', () => {
     fixture.componentRef.setInput('inputId', 'sel');
-    fixture.componentRef.setInput('options', [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }]);
+    fixture.componentRef.setInput('options', [
+      { value: 'a', label: 'A' },
+      { value: 'b', label: 'B' },
+    ]);
     fixture.componentRef.setInput('placeholder', 'Todos');
     fixture.componentRef.setInput('value', '');
     fixture.detectChanges();
@@ -26,7 +29,10 @@ describe('AppSelectComponent', () => {
   });
 
   it('should emit valueChange on change', () => {
-    fixture.componentRef.setInput('options', [{ value: 'a', label: 'A' }, { value: 'b', label: 'B' }]);
+    fixture.componentRef.setInput('options', [
+      { value: 'a', label: 'A' },
+      { value: 'b', label: 'B' },
+    ]);
     fixture.componentRef.setInput('value', 'a');
     fixture.detectChanges();
 

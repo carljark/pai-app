@@ -1,16 +1,113 @@
 @use 'variables';
 @use 'mixins';
-.card { @include mixins.card; }
-.form-group { margin-bottom: variables.$spacing-4; label { display: block; margin-bottom: variables.$spacing-2; font-size: variables.$font-size-sm; font-weight: variables.$font-weight-medium; color: variables.$color-text-main; } }
-.form-input { @include mixins.form-input; }
-.form-select { @include mixins.form-input; appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right variables.$spacing-3 center; padding-right: variables.$spacing-10; }
-.btn-primary { @include mixins.btn-primary; }
-.btn-secondary { @include mixins.btn-secondary; }
-.btn-danger { @include mixins.btn; background-color: variables.$color-danger; color: white; &:hover:not(:disabled) { background-color: variables.$color-primary-dark; } }
-.tabs { display: flex; border-bottom: 1px solid variables.$color-border; margin-bottom: variables.$spacing-6; overflow-x: auto; &-item { padding: variables.$spacing-3 variables.$spacing-4; cursor: pointer; font-weight: variables.$font-weight-medium; color: variables.$color-text-muted; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; &:hover { color: variables.$color-text-main; } &.active { color: variables.$color-primary; border-bottom-color: variables.$color-primary; } } }
-.badge { display: inline-block; padding: 2px variables.$spacing-2; border-radius: variables.$border-radius-full; font-size: variables.$font-size-xs; font-weight: variables.$font-weight-medium; &-info { background-color: variables.$color-info-bg; color: variables.$color-info; } &-success { background-color: variables.$color-success-bg; color: variables.$color-success; } &-warning { background-color: variables.$color-warning-bg; color: variables.$color-warning; } &-danger { background-color: variables.$color-danger-bg; color: variables.$color-danger; } }
-.table-container { overflow-x: auto; width: 100%; }
-.table { width: 100%; border-collapse: collapse; th, td { padding: variables.$spacing-3 variables.$spacing-4; text-align: left; border-bottom: 1px solid variables.$color-border; font-size: variables.$font-size-sm; } th { background-color: variables.$color-background; font-weight: variables.$font-weight-semibold; color: variables.$color-text-muted; } tr:hover { background-color: rgba(variables.$color-background, 0.5); } }
+.card {
+  @include mixins.card;
+}
+.form-group {
+  margin-bottom: variables.$spacing-4;
+  // .form-group__label: etiqueta de un grupo de controles que no es un <label> asociable
+  label,
+  &__label {
+    display: block;
+    margin-bottom: variables.$spacing-2;
+    font-size: variables.$font-size-sm;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$color-text-main;
+  }
+}
+.form-input {
+  @include mixins.form-input;
+}
+.form-select {
+  @include mixins.form-input;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right variables.$spacing-3 center;
+  padding-right: variables.$spacing-10;
+}
+.btn-primary {
+  @include mixins.btn-primary;
+}
+.btn-secondary {
+  @include mixins.btn-secondary;
+}
+.btn-danger {
+  @include mixins.btn;
+  background-color: variables.$color-danger;
+  color: white;
+  &:hover:not(:disabled) {
+    background-color: variables.$color-primary-dark;
+  }
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid variables.$color-border;
+  margin-bottom: variables.$spacing-6;
+  overflow-x: auto;
+  &-item {
+    padding: variables.$spacing-3 variables.$spacing-4;
+    cursor: pointer;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$color-text-muted;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    &:hover {
+      color: variables.$color-text-main;
+    }
+    &.active {
+      color: variables.$color-primary;
+      border-bottom-color: variables.$color-primary;
+    }
+  }
+}
+.badge {
+  display: inline-block;
+  padding: 2px variables.$spacing-2;
+  border-radius: variables.$border-radius-full;
+  font-size: variables.$font-size-xs;
+  font-weight: variables.$font-weight-medium;
+  &-info {
+    background-color: variables.$color-info-bg;
+    color: variables.$color-info;
+  }
+  &-success {
+    background-color: variables.$color-success-bg;
+    color: variables.$color-success;
+  }
+  &-warning {
+    background-color: variables.$color-warning-bg;
+    color: variables.$color-warning;
+  }
+  &-danger {
+    background-color: variables.$color-danger-bg;
+    color: variables.$color-danger;
+  }
+}
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  th,
+  td {
+    padding: variables.$spacing-3 variables.$spacing-4;
+    text-align: left;
+    border-bottom: 1px solid variables.$color-border;
+    font-size: variables.$font-size-sm;
+  }
+  th {
+    background-color: variables.$color-background;
+    font-weight: variables.$font-weight-semibold;
+    color: variables.$color-text-muted;
+  }
+  tr:hover {
+    background-color: rgba(variables.$color-background, 0.5);
+  }
+}
 
 /* SIDEBAR NAV ITEMS */
 .nav-item {
@@ -64,7 +161,9 @@
 .app-sidebar.collapsed .nav-item {
   justify-content: center;
   padding: variables.$spacing-3;
-  .nav-text { display: none; }
+  .nav-text {
+    display: none;
+  }
 }
 
 /* Tooltips — only visible when sidebar is collapsed on desktop */
@@ -87,7 +186,7 @@
   white-space: nowrap;
   z-index: 9999;
   pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.01em;
 }
 
@@ -125,7 +224,7 @@
     white-space: nowrap;
     z-index: 9999;
     pointer-events: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
   .app-sidebar .nav-item[data-tooltip]:hover::before {
     content: '';

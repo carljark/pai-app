@@ -50,13 +50,16 @@ describe('HistoryProjectCardComponent', () => {
     };
 
     mockAuthFacade = {
-      currentUser: signal({ _id: 'user1', name: 'Eva', role: 'teacher' })
+      currentUser: signal({ _id: 'user1', name: 'Eva', role: 'teacher' }),
     };
 
     await TestBed.configureTestingModule({
       imports: [HistoryProjectCardComponent],
       providers: [
-        { provide: AppFacade, useValue: { viewPastProject: vi.fn(), deleteProject: vi.fn(), retryProject: vi.fn() } },
+        {
+          provide: AppFacade,
+          useValue: { viewPastProject: vi.fn(), deleteProject: vi.fn(), retryProject: vi.fn() },
+        },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: TranslationService, useValue: { t: signal(translations) } },
@@ -93,7 +96,11 @@ describe('HistoryProjectCardComponent', () => {
   });
 
   it('should resolve display title and ai label', () => {
-    fixture.componentRef.setInput('project', { ...baseProject, title: 'Proyecto Generado', modules: ['ModA', 'ModB'] });
+    fixture.componentRef.setInput('project', {
+      ...baseProject,
+      title: 'Proyecto Generado',
+      modules: ['ModA', 'ModB'],
+    });
     expect(component.getDisplayTitle()).toBe('ModA + ModB');
 
     fixture.componentRef.setInput('project', { ...baseProject, usedAiProvider: 'gemini' });
@@ -136,13 +143,22 @@ describe('HistoryProjectCardComponent', () => {
     fixture.componentRef.setInput('project', { ...baseProject, title: '', modules: [] });
     expect(component.getDisplayTitle()).toBe('Proyecto sin título');
 
-    fixture.componentRef.setInput('project', { ...baseProject, title: 'X', modules: [], generatedContent: { modules: ['G1'] } });
+    fixture.componentRef.setInput('project', {
+      ...baseProject,
+      title: 'X',
+      modules: [],
+      generatedContent: { modules: ['G1'] },
+    });
     expect(component.modulesLabel()).toBe('G1');
 
     fixture.componentRef.setInput('project', { ...baseProject, title: 'X', modules: [] });
     expect(component.modulesLabel()).toBe('Varios');
 
-    fixture.componentRef.setInput('project', { ...baseProject, title: 'X', usedModel: 'deepseek/xx' });
+    fixture.componentRef.setInput('project', {
+      ...baseProject,
+      title: 'X',
+      usedModel: 'deepseek/xx',
+    });
     expect(component.getAiProviderLabel()).toBe('Secundario');
   });
 
@@ -162,7 +178,7 @@ describe('HistoryProjectCardComponent', () => {
       errorDetail: 'Fallo',
       generationTimeMs: 1500,
       courseLevel: '1º',
-      usedAiProvider: 'gemini'
+      usedAiProvider: 'gemini',
     });
     fixture.detectChanges();
 
@@ -170,14 +186,26 @@ describe('HistoryProjectCardComponent', () => {
     expect(text).toContain('⏱️');
     expect(text).toContain('1º');
 
-    (fixture.nativeElement.querySelector('.history-project-card__retry') as HTMLButtonElement).click();
-    (fixture.nativeElement.querySelector('.history-project-card__view-error') as HTMLButtonElement).click();
-    (fixture.nativeElement.querySelector('.history-project-card__delete') as HTMLButtonElement).click();
+    (
+      fixture.nativeElement.querySelector('.history-project-card__retry') as HTMLButtonElement
+    ).click();
+    (
+      fixture.nativeElement.querySelector('.history-project-card__view-error') as HTMLButtonElement
+    ).click();
+    (
+      fixture.nativeElement.querySelector('.history-project-card__delete') as HTMLButtonElement
+    ).click();
 
-    (fixture.nativeElement.querySelector('.history-project-card__share-toggle') as HTMLButtonElement).click();
+    (
+      fixture.nativeElement.querySelector(
+        '.history-project-card__share-toggle',
+      ) as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
 
-    const cb = fixture.nativeElement.querySelector('.history-project-card__share-option input') as HTMLInputElement;
+    const cb = fixture.nativeElement.querySelector(
+      '.history-project-card__share-option input',
+    ) as HTMLInputElement;
     cb.dispatchEvent(new Event('change'));
     expect(mockProjectsFacade.removeCollaborator).toHaveBeenCalled();
   });
@@ -187,7 +215,11 @@ describe('HistoryProjectCardComponent', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('.btn-primary')).toBeTruthy();
 
-    fixture.componentRef.setInput('project', { ...baseProject, status: 'error', error: 'Solo error' });
+    fixture.componentRef.setInput('project', {
+      ...baseProject,
+      status: 'error',
+      error: 'Solo error',
+    });
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('Solo error');
   });

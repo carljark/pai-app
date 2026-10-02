@@ -34,7 +34,8 @@ export const TRANSLATIONS_ES = {
   noESO: 'No hay Situaciones de Aprendizaje de ESO en el historial.',
   workshopTitle: 'Taller de Proyectos',
   workshopEmptyTitle: 'Taller de Edición',
-  workshopEmptyDesc: 'Selecciona un proyecto para empezar a editar, o crea uno nuevo desde el generador.',
+  workshopEmptyDesc:
+    'Selecciona un proyecto para empezar a editar, o crea uno nuevo desde el generador.',
   createProjectBtn: 'Crear Proyecto Nuevo',
   workshopOrRecent: '— O continúa con un proyecto reciente —',
   workshopRecentProjects: 'Proyectos Recientes',
@@ -59,7 +60,8 @@ export const TRANSLATIONS_ES = {
   aiOpenRouter: 'Secundario',
   generatorExtraInstructionsLabel: 'Instrucciones adicionales para la IA',
   generatorExtraInstructionsOptional: '(Opcional)',
-  generatorExtraInstructionsPlaceholder: 'Ej: Enfocar las actividades en el cuidado del medio ambiente, incluir dinámicas con herramientas digitales como Canva, o adaptar para alumnado con dificultades de comprensión lectora...',
+  generatorExtraInstructionsPlaceholder:
+    'Ej: Enfocar las actividades en el cuidado del medio ambiente, incluir dinámicas con herramientas digitales como Canva, o adaptar para alumnado con dificultades de comprensión lectora...',
   notificationAnalyzing: 'Analizando...',
   notificationRetrying: 'Reintentando...',
   longGenerationNotice: 'Tardará entre 2 y 20 minutos',
@@ -87,8 +89,10 @@ export const TRANSLATIONS_ES = {
   publish: ' Validar y Publicar',
   exportPDF: ' Exportar PDF',
   aiAssistant: 'Asistente IA',
-  aiIntro: '¡Hola! Soy tu asistente pedagógico. Solicita cualquier cambio o mejora sobre el documento:',
-  aiStep1: 'Escribe abajo qué quieres cambiar o añadir (ej. "Añade una rúbrica", "Adapta a 15 horas").',
+  aiIntro:
+    '¡Hola! Soy tu asistente pedagógico. Solicita cualquier cambio o mejora sobre el documento:',
+  aiStep1:
+    'Escribe abajo qué quieres cambiar o añadir (ej. "Añade una rúbrica", "Adapta a 15 horas").',
   aiStep2: 'Haz clic en "Reescribir con IA" para actualizar el proyecto completo.',
   aiStep3: 'Puedes pulsar "Deshacer cambios IA" si quieres volver a la versión anterior.',
   aiPlaceholder: 'Pide a la IA que modifique el proyecto...',
@@ -149,7 +153,8 @@ export const TRANSLATIONS_ES = {
   modalAttention: 'Atención',
   modalSelectAtLeastOne: 'Por favor, selecciona al menos un elemento de la lista.',
   modalProjectQueued: 'Proyecto en Cola',
-  modalProjectQueuedDesc: 'Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.',
+  modalProjectQueuedDesc:
+    'Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.',
   toastProjectQueued: 'Proyecto puesto en cola',
   modalGenerationError: 'Error al Iniciar Generación',
   modalProjectGenerated: '¡Proyecto Generado!',
@@ -188,7 +193,8 @@ export const TRANSLATIONS_ES = {
   feedbackSubject: 'Asunto o título',
   feedbackSubjectPlaceholder: 'Ej: Añadir opción para exportar en PDF...',
   feedbackDesc: 'Descripción detallada',
-  feedbackDescPlaceholder: 'Explica con el mayor detalle posible tu idea o los pasos que causaron el error...',
+  feedbackDescPlaceholder:
+    'Explica con el mayor detalle posible tu idea o los pasos que causaron el error...',
   feedbackSend: 'Enviar Mensaje',
   feedbackSending: 'Enviando...',
   feedbackSuccess: '¡Mensaje enviado con éxito! Gracias por ayudarnos a mejorar Plappin.',
@@ -216,11 +222,12 @@ export const TRANSLATIONS_ES = {
   historyFilterAllRas: 'Todos los RA',
   historyResultsCount: 'resultados',
   duplicateTitle: 'Ya existen proyectos con esta misma selección',
-  duplicateIntro: 'Hay proyectos generados con exactamente los mismos Resultados de Aprendizaje (o Competencias Específicas). Puedes abrirlos desde aquí o continuar y generar uno nuevo.',
+  duplicateIntro:
+    'Hay proyectos generados con exactamente los mismos Resultados de Aprendizaje (o Competencias Específicas). Puedes abrirlos desde aquí o continuar y generar uno nuevo.',
   duplicateCancel: 'Cancelar',
   duplicateProceed: 'Continuar y generar',
   matchingProjectsTitle: 'proyectos con esta selección',
 
   // SKELETON LOADER
-  loadingData: 'Cargando datos...'
+  loadingData: 'Cargando datos...',
 };

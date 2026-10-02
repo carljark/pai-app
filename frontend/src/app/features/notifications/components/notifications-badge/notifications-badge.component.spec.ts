@@ -21,20 +21,18 @@ describe('NotificationsBadgeComponent', () => {
         recentActivityOpen.set(true);
         markAllAsRead();
       }),
-      closeRecentActivity: vi.fn(() => recentActivityOpen.set(false))
+      closeRecentActivity: vi.fn(() => recentActivityOpen.set(false)),
     };
 
     await TestBed.configureTestingModule({
       imports: [NotificationsBadgeComponent],
-      providers: [
-        { provide: NotificationsFacade, useValue: notificationsFacadeMock }
-      ]
+      providers: [{ provide: NotificationsFacade, useValue: notificationsFacadeMock }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NotificationsBadgeComponent);
     component = fixture.componentInstance;
     componentRef = fixture.componentRef;
-    
+
     componentRef.setInput('projects', []);
     fixture.detectChanges();
   });
@@ -47,7 +45,7 @@ describe('NotificationsBadgeComponent', () => {
     componentRef.setInput('projects', [
       { status: 'en_cola' },
       { status: 'generando' },
-      { status: 'completado' }
+      { status: 'completado' },
     ]);
     fixture.detectChanges();
     expect(component.activeCount()).toBe(2);
@@ -57,7 +55,7 @@ describe('NotificationsBadgeComponent', () => {
     notificationsFacadeMock.notifications.set([
       { read: false, type: 'COMPLETED' },
       { read: true, type: 'COMPLETED' },
-      { read: false, type: 'ERROR' }
+      { read: false, type: 'ERROR' },
     ]);
     fixture.detectChanges();
     expect(component.unreadCount()).toBe(1);
@@ -72,19 +70,19 @@ describe('NotificationsBadgeComponent', () => {
 
   it('should render correct text and styles when open', () => {
     const pastDate = new Date();
-    pastDate.setHours(pastDate.getHours() - 2); 
-    
+    pastDate.setHours(pastDate.getHours() - 2);
+
     const projects = [
       { _id: '1', status: 'en_cola', modules: ['RA1'], createdAt: pastDate.toISOString() },
       { _id: '2', status: 'generando', createdAt: pastDate.toISOString() },
       { _id: '3', status: 'error', modules: ['RA3'], createdAt: pastDate.toISOString() },
-      { _id: '4', status: 'completado', createdAt: pastDate.toISOString() }
+      { _id: '4', status: 'completado', createdAt: pastDate.toISOString() },
     ];
-    
+
     componentRef.setInput('projects', projects);
     component.openNotifications();
     fixture.detectChanges();
-    
+
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('RA1');
     expect(compiled.textContent).toContain('Múltiples RA/CE');
@@ -96,10 +94,10 @@ describe('NotificationsBadgeComponent', () => {
   it('should close modal on backdrop or close button click', () => {
     notificationsFacadeMock.recentActivityOpen.set(true);
     fixture.detectChanges();
-    
+
     const compiled = fixture.nativeElement as HTMLElement;
-    const backdrop = compiled.querySelector('div[style*="rgba(0,0,0,0.5)"]') as HTMLElement;
-    
+    const backdrop = compiled.querySelector('div[style*="rgba(0, 0, 0, 0.5)"]') as HTMLElement;
+
     backdrop.click();
     expect(notificationsFacadeMock.recentActivityOpen()).toBe(false);
     expect(notificationsFacadeMock.closeRecentActivity).toHaveBeenCalledOnce();
@@ -119,7 +117,7 @@ describe('NotificationsBadgeComponent', () => {
     const startTime = new Date(1000000 - 35000).toISOString();
     const projects = [
       { _id: '1', status: 'generando', generationStartedAt: startTime, createdAt: startTime },
-      { _id: '2', status: 'borrador', generationTimeMs: 12400, createdAt: startTime }
+      { _id: '2', status: 'borrador', generationTimeMs: 12400, createdAt: startTime },
     ];
 
     componentRef.setInput('projects', projects);
@@ -140,7 +138,7 @@ describe('NotificationsBadgeComponent', () => {
     vi.setSystemTime(startTime);
 
     const projects = [
-      { _id: '1', status: 'generando', createdAt: new Date(startTime).toISOString() }
+      { _id: '1', status: 'generando', createdAt: new Date(startTime).toISOString() },
     ];
     componentRef.setInput('projects', projects);
     TestBed.flushEffects();
@@ -161,8 +159,8 @@ describe('NotificationsBadgeComponent', () => {
         status: 'borrador',
         modules: ['3060'],
         generationTimeMs: 15400,
-        timestamp: new Date()
-      }
+        timestamp: new Date(),
+      },
     ]);
     component.openNotifications();
     fixture.detectChanges();
@@ -184,8 +182,8 @@ describe('NotificationsBadgeComponent', () => {
         status: 'borrador',
         modules: ['3061'],
         generationTimeMs: 12000,
-        timestamp: new Date()
-      }
+        timestamp: new Date(),
+      },
     ]);
     component.openNotifications();
     fixture.detectChanges();

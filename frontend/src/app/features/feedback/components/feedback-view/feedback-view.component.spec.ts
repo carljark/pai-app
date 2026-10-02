@@ -16,7 +16,7 @@ describe('FeedbackViewComponent', () => {
     isLoading: signal(false),
     loadFeedbacks: vi.fn().mockReturnValue(of([])),
     sendFeedback: vi.fn().mockReturnValue(of({ _id: 'fb1', title: 'Test' })),
-    deleteFeedback: vi.fn().mockReturnValue(of({ message: 'OK' }))
+    deleteFeedback: vi.fn().mockReturnValue(of({ message: 'OK' })),
   };
 
   const mockTranslationService = {
@@ -39,8 +39,8 @@ describe('FeedbackViewComponent', () => {
       feedbackStatusReviewing: 'En revisión',
       feedbackStatusResolved: 'Resuelto',
       feedbackStatusDismissed: 'Descartado',
-      removeTooltip: 'Eliminar'
-    })
+      removeTooltip: 'Eliminar',
+    }),
   };
 
   beforeEach(async () => {
@@ -52,8 +52,8 @@ describe('FeedbackViewComponent', () => {
       imports: [FeedbackViewComponent],
       providers: [
         { provide: FeedbackService, useValue: mockFeedbackService },
-        { provide: TranslationService, useValue: mockTranslationService }
-      ]
+        { provide: TranslationService, useValue: mockTranslationService },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FeedbackViewComponent);
@@ -68,7 +68,7 @@ describe('FeedbackViewComponent', () => {
 
   it('debería cambiar entre tipo sugerencia y error al hacer click en los botones', () => {
     expect(component.selectedType()).toBe('sugerencia');
-    
+
     const typeButtons = fixture.nativeElement.querySelectorAll('.type-btn');
     expect(typeButtons.length).toBe(2);
 
@@ -102,7 +102,7 @@ describe('FeedbackViewComponent', () => {
     expect(mockFeedbackService.sendFeedback).toHaveBeenCalledWith({
       type: 'sugerencia',
       title: 'Nueva idea',
-      description: 'Detalle idea'
+      description: 'Detalle idea',
     });
     expect(component.alertType()).toBe('success');
     expect(component.alertMessage()).toBe('Enviado con éxito');
@@ -114,13 +114,17 @@ describe('FeedbackViewComponent', () => {
   });
 
   it('debería manejar error en loadFeedbacks durante ngOnInit', () => {
-    mockFeedbackService.loadFeedbacks.mockReturnValueOnce(throwError(() => new Error('Load error')));
+    mockFeedbackService.loadFeedbacks.mockReturnValueOnce(
+      throwError(() => new Error('Load error')),
+    );
     component.ngOnInit();
     expect(mockFeedbackService.loadFeedbacks).toHaveBeenCalled();
   });
 
   it('debería manejar error en deleteFeedback', () => {
-    mockFeedbackService.deleteFeedback.mockReturnValueOnce(throwError(() => new Error('Delete error')));
+    mockFeedbackService.deleteFeedback.mockReturnValueOnce(
+      throwError(() => new Error('Delete error')),
+    );
     component.deleteFeedback('fb1');
     expect(mockFeedbackService.deleteFeedback).toHaveBeenCalledWith('fb1');
   });
@@ -160,15 +164,15 @@ describe('FeedbackViewComponent', () => {
         status: 'resuelto',
         description: 'No guarda el archivo',
         adminNotes: 'Corregido',
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
       },
       {
         _id: 'fb2',
         title: 'Sugerencia sin fecha ni admin',
         type: 'sugerencia',
         status: 'pendiente',
-        description: 'Mejorar UI'
-      }
+        description: 'Mejorar UI',
+      },
     ]);
     fixture.detectChanges();
 
@@ -205,8 +209,8 @@ describe('FeedbackViewComponent', () => {
         status: 'resuelto',
         description: 'No guarda el archivo',
         adminNotes: 'Corregido en versión 2',
-        createdAt: new Date().toISOString()
-      }
+        createdAt: new Date().toISOString(),
+      },
     ]);
     fixture.detectChanges();
     const el = fixture.nativeElement;

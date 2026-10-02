@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { PaiService } from './pai.service';
@@ -10,9 +10,9 @@ describe('PaiService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [PaiService]
+      providers: [PaiService],
     });
-    
+
     service = TestBed.inject(PaiService);
     httpMock = TestBed.inject(HttpTestingController);
   });
@@ -26,51 +26,69 @@ describe('PaiService', () => {
   });
 
   it('should getRas with default language', () => {
-    service.getRas().subscribe(res => {
+    service.getRas().subscribe((res) => {
       expect(res).toEqual([{ id: 'ra1' }]);
     });
-    
+
     const req = httpMock.expectOne('/api/ras?lang=castellano');
     expect(req.request.method).toBe('GET');
     req.flush([{ id: 'ra1' }]);
   });
 
   it('should getRas with custom language', () => {
-    service.getRas('catalan').subscribe(res => {
+    service.getRas('catalan').subscribe((res) => {
       expect(res).toEqual([{ id: 'ra1' }]);
     });
-    
+
     const req = httpMock.expectOne('/api/ras?lang=catalan');
     expect(req.request.method).toBe('GET');
     req.flush([{ id: 'ra1' }]);
   });
 
   it('should getLogs', () => {
-    service.getLogs().subscribe(res => {
+    service.getLogs().subscribe((res) => {
       expect(res).toEqual([{ log: 'test' }]);
     });
-    
+
     const req = httpMock.expectOne('/api/admin/logs');
     expect(req.request.method).toBe('GET');
     req.flush([{ log: 'test' }]);
   });
 
   it('should getCes', () => {
-    service.getCes('castellano').subscribe(res => {
+    service.getCes('castellano').subscribe((res) => {
       expect(res).toEqual([{ id: 'ce1' }]);
     });
-    
+
     const req = httpMock.expectOne('/api/ces?lang=castellano');
     expect(req.request.method).toBe('GET');
     req.flush([{ id: 'ce1' }]);
   });
 
   it('should generateProject', () => {
-    const data = { selectedRas: ['ra1'], methodology: 'ABP', modules: ['mod1'], tipoNivel: 'FP', language: 'castellano', courseLevel: '1', title: 'Test' };
-    service.generateProject(data.selectedRas, data.methodology, data.modules, data.tipoNivel, data.language, data.courseLevel, data.title).subscribe(res => {
-      expect(res).toEqual({ id: 'proj1' });
-    });
-    
+    const data = {
+      selectedRas: ['ra1'],
+      methodology: 'ABP',
+      modules: ['mod1'],
+      tipoNivel: 'FP',
+      language: 'castellano',
+      courseLevel: '1',
+      title: 'Test',
+    };
+    service
+      .generateProject(
+        data.selectedRas,
+        data.methodology,
+        data.modules,
+        data.tipoNivel,
+        data.language,
+        data.courseLevel,
+        data.title,
+      )
+      .subscribe((res) => {
+        expect(res).toEqual({ id: 'proj1' });
+      });
+
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual(data);
@@ -80,7 +98,7 @@ describe('PaiService', () => {
   it('should listenToProjectUpdates using EventSource', () => {
     // This is hard to test directly because EventSource is created inside the observable.
     // We can mock EventSource on the window object.
-    
+
     class MockEventSource {
       onmessage: any;
       onerror: any;
@@ -97,16 +115,12 @@ describe('PaiService', () => {
     (window as any).EventSource = MockEventSource as any;
 
     localStorage.setItem('pai_token', 'fake-token');
-
-    let receivedData: any;
-    const sub = service.listenToProjectUpdates().subscribe(data => {
-      receivedData = data;
-    });
+    const sub = service.listenToProjectUpdates().subscribe();
 
     // We can use vitest fake timers or just wait since we used setTimeout
     // Since it's setTimeout(10), we can just use a promise or something,
     // Or replace setTimeout with synchronous call in mock
-    
+
     // Cleanup
     sub.unsubscribe();
     window.EventSource = OriginalEventSource;
@@ -117,9 +131,11 @@ describe('PaiService', () => {
     class MockEventSourceSync {
       onmessage: any;
       onerror: any;
-      close = () => { closed = true; };
+      close = () => {
+        closed = true;
+      };
       constructor(public url: string) {}
-      
+
       triggerMessage(data: any) {
         this.onmessage({ data: JSON.stringify(data) });
       }
@@ -127,33 +143,33 @@ describe('PaiService', () => {
         this.onerror(err);
       }
     }
-    
+
     const OriginalEventSource = window.EventSource;
     window.EventSource = MockEventSourceSync as any;
     localStorage.setItem('pai_token', 'test-token');
 
     let instance: MockEventSourceSync | undefined;
-    window.EventSource = vi.fn().mockImplementation(function(this: any, url: string) {
+    window.EventSource = vi.fn().mockImplementation(function (this: any, url: string) {
       instance = new MockEventSourceSync(url);
       return instance;
     }) as any;
 
     const dataList: any[] = [];
-    const sub = service.listenToProjectUpdates().subscribe(data => {
+    const sub = service.listenToProjectUpdates().subscribe((data) => {
       dataList.push(data);
     });
 
     expect(window.EventSource).toHaveBeenCalledWith('/api/projects/stream?token=test-token');
-    
+
     // trigger
     instance?.triggerMessage({ msg: 'hello' });
     expect(dataList).toEqual([{ msg: 'hello' }]);
-    
+
     instance?.triggerError('err');
 
     sub.unsubscribe();
     expect(closed).toBe(true);
-    
+
     window.EventSource = OriginalEventSource;
   });
 
@@ -249,10 +265,10 @@ describe('PaiService', () => {
   });
 
   it('should updateSettings', () => {
-    service.updateSettings({ key: 'val' }).subscribe();
+    service.updateSettings({ name: 'val' }).subscribe();
     const req = httpMock.expectOne('/api/settings');
     expect(req.request.method).toBe('PUT');
-    expect(req.request.body).toEqual({ key: 'val' });
+    expect(req.request.body).toEqual({ name: 'val' });
     req.flush({});
   });
 

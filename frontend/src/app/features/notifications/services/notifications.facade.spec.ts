@@ -17,14 +17,14 @@ describe('NotificationsFacade', () => {
   beforeEach(() => {
     updatesSubject = new Subject();
     authFacadeMock = {
-      currentUser: signal<any>(null)
+      currentUser: signal<any>(null),
     };
     paiServiceMock = {
-      listenToProjectUpdates: vi.fn(() => updatesSubject.asObservable())
+      listenToProjectUpdates: vi.fn(() => updatesSubject.asObservable()),
     };
     httpMock = {
       get: vi.fn(() => of([])),
-      post: vi.fn(() => of({ success: true }))
+      post: vi.fn(() => of({ success: true })),
     };
 
     TestBed.configureTestingModule({
@@ -32,8 +32,8 @@ describe('NotificationsFacade', () => {
         NotificationsFacade,
         { provide: AuthFacade, useValue: authFacadeMock },
         { provide: PaiService, useValue: paiServiceMock },
-        { provide: HttpClient, useValue: httpMock }
-      ]
+        { provide: HttpClient, useValue: httpMock },
+      ],
     });
 
     facade = TestBed.inject(NotificationsFacade);
@@ -54,7 +54,9 @@ describe('NotificationsFacade', () => {
   });
 
   it('loadNotifications should populate notifications from DB and handle error', () => {
-    const mockItems = [{ _id: 'n1', title: 'Notif DB', status: 'borrador', type: 'PROJECT_COMPLETED' }];
+    const mockItems = [
+      { _id: 'n1', title: 'Notif DB', status: 'borrador', type: 'PROJECT_COMPLETED' },
+    ];
     httpMock.get.mockReturnValueOnce(of(mockItems));
 
     facade.loadNotifications();
@@ -85,7 +87,7 @@ describe('NotificationsFacade', () => {
       type: 'PROJECT_STATUS',
       projectId: 'p1',
       status: 'generando',
-      notification: { _id: 'n1', projectId: 'p1', updatedAt: new Date(Date.now() + 10000) }
+      notification: { _id: 'n1', projectId: 'p1', updatedAt: new Date(Date.now() + 10000) },
     });
     expect(facade.notifications().length).toBe(2);
     expect(facade.notifications()[0].projectId).toBe('p1');
@@ -94,7 +96,7 @@ describe('NotificationsFacade', () => {
       type: 'PROJECT_STATUS',
       projectId: 'p2',
       status: 'generando',
-      notification: { _id: 'n2', projectId: 'p2' }
+      notification: { _id: 'n2', projectId: 'p2' },
     });
     expect(facade.notifications().length).toBe(2);
 
@@ -106,9 +108,9 @@ describe('NotificationsFacade', () => {
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
     httpMock.get.mockClear();
-    httpMock.get.mockReturnValueOnce(of([
-      { _id: 'n9', projectId: 'p9', status: 'borrador', type: 'PROJECT_COMPLETED' }
-    ]));
+    httpMock.get.mockReturnValueOnce(
+      of([{ _id: 'n9', projectId: 'p9', status: 'borrador', type: 'PROJECT_COMPLETED' }]),
+    );
 
     updatesSubject.next({ type: 'CONNECTED' });
 
@@ -127,12 +129,14 @@ describe('NotificationsFacade', () => {
     facade.loadNotifications();
 
     updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'new', status: 'generando' });
-    expect(facade.notifications().some(n => n.projectId === 'new')).toBe(true);
+    expect(facade.notifications().some((n) => n.projectId === 'new')).toBe(true);
 
-    inFlight.next([{ _id: 'old', projectId: 'old', status: 'borrador', type: 'PROJECT_COMPLETED' }]);
+    inFlight.next([
+      { _id: 'old', projectId: 'old', status: 'borrador', type: 'PROJECT_COMPLETED' },
+    ]);
     inFlight.complete();
 
-    const ids = facade.notifications().map(n => n.projectId);
+    const ids = facade.notifications().map((n) => n.projectId);
     expect(ids).toContain('new');
     expect(ids).toContain('old');
   });
@@ -141,10 +145,15 @@ describe('NotificationsFacade', () => {
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
-    facade.notifications.set([{
-      _id: 'n', projectId: 'p', status: 'borrador',
-      updatedAt: new Date(Date.now() - 10000), timestamp: new Date(Date.now() - 10000)
-    } as any]);
+    facade.notifications.set([
+      {
+        _id: 'n',
+        projectId: 'p',
+        status: 'borrador',
+        updatedAt: new Date(Date.now() - 10000),
+        timestamp: new Date(Date.now() - 10000),
+      } as any,
+    ]);
 
     const inFlight = new Subject<any[]>();
     httpMock.get.mockReturnValueOnce(inFlight.asObservable());
@@ -153,13 +162,18 @@ describe('NotificationsFacade', () => {
     // Cualquier evento SSE durante la petición fuerza el modo fusión
     updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'other', status: 'generando' });
 
-    inFlight.next([{
-      _id: 'n', projectId: 'p', status: 'generando', type: 'PROJECT_STATUS',
-      updatedAt: new Date(Date.now() - 20000).toISOString()
-    }]);
+    inFlight.next([
+      {
+        _id: 'n',
+        projectId: 'p',
+        status: 'generando',
+        type: 'PROJECT_STATUS',
+        updatedAt: new Date(Date.now() - 20000).toISOString(),
+      },
+    ]);
     inFlight.complete();
 
-    const item = facade.notifications().find(n => n.projectId === 'p');
+    const item = facade.notifications().find((n) => n.projectId === 'p');
     expect(item?.status).toBe('borrador');
   });
 
@@ -167,12 +181,29 @@ describe('NotificationsFacade', () => {
     const now = Date.now();
     const result = (facade as any).mergeFetched(
       [
-        { projectId: 'p', status: 'generando', updatedAt: new Date(now - 20000), timestamp: new Date(now - 20000), id: 'x' },
-        { id: 'no-project', status: 'generando', updatedAt: new Date(now), timestamp: new Date(now) }
+        {
+          projectId: 'p',
+          status: 'generando',
+          updatedAt: new Date(now - 20000),
+          timestamp: new Date(now - 20000),
+          id: 'x',
+        },
+        {
+          id: 'no-project',
+          status: 'generando',
+          updatedAt: new Date(now),
+          timestamp: new Date(now),
+        },
       ],
       [
-        { projectId: 'p', status: 'borrador', updatedAt: new Date(now - 1000), timestamp: new Date(now - 1000), id: 'y' }
-      ]
+        {
+          projectId: 'p',
+          status: 'borrador',
+          updatedAt: new Date(now - 1000),
+          timestamp: new Date(now - 1000),
+          id: 'y',
+        },
+      ],
     );
 
     expect(result.some((n: any) => n.projectId === 'p' && n.status === 'borrador')).toBe(true);
@@ -200,7 +231,7 @@ describe('NotificationsFacade', () => {
     updatesSubject.next({ type: 'PROJECT_COMPLETED', projectId: '1' });
     updatesSubject.next({ type: 'PROJECT_COMPLETED', projectId: '2' });
     const id = facade.notifications()[0].id;
-    
+
     facade.markAsRead(id);
     expect(facade.notifications()[0].read).toBe(true);
     expect(facade.notifications()[1].read).toBe(false);
@@ -211,9 +242,9 @@ describe('NotificationsFacade', () => {
     TestBed.flushEffects();
 
     updatesSubject.next({ type: 'PROJECT_COMPLETED', projectId: '1' });
-    
+
     facade.markAllAsRead();
-    expect(facade.notifications().every(n => n.read)).toBe(true);
+    expect(facade.notifications().every((n) => n.read)).toBe(true);
     expect(httpMock.post).toHaveBeenCalledWith('/api/notifications/read-all', {});
 
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
@@ -252,16 +283,18 @@ describe('NotificationsFacade', () => {
   });
 
   it('loadNotifications should filter items by projectId or known status', () => {
-    httpMock.get.mockReturnValueOnce(of([
-      { _id: 'a', projectId: 'p1' },
-      { _id: 'b', status: 'generando' },
-      { _id: 'c', status: 'desconocido' },
-      { _id: 'd' }
-    ]));
+    httpMock.get.mockReturnValueOnce(
+      of([
+        { _id: 'a', projectId: 'p1' },
+        { _id: 'b', status: 'generando' },
+        { _id: 'c', status: 'desconocido' },
+        { _id: 'd' },
+      ]),
+    );
 
     facade.loadNotifications();
 
-    const ids = facade.notifications().map(n => n.id);
+    const ids = facade.notifications().map((n) => n.id);
     expect(ids).toContain('a');
     expect(ids).toContain('b');
     expect(ids).not.toContain('c');
@@ -275,17 +308,17 @@ describe('NotificationsFacade', () => {
 
     updatesSubject.next({
       type: 'PROJECT_STATUS',
-      notification: { _id: 'n5', projectId: 'p5', status: 'generando' }
+      notification: { _id: 'n5', projectId: 'p5', status: 'generando' },
     });
 
-    expect(facade.notifications().some(n => n.projectId === 'p5')).toBe(true);
+    expect(facade.notifications().some((n) => n.projectId === 'p5')).toBe(true);
     expect(facade.latestNotification()?.projectId).toBe('p5');
   });
 
   it('handleSseEvent should handle a missing current user id', () => {
     (facade as any).handleSseEvent({ type: 'PROJECT_STATUS', projectId: 'p7', status: 'en_cola' });
 
-    expect(facade.notifications().some(n => n.projectId === 'p7')).toBe(true);
+    expect(facade.notifications().some((n) => n.projectId === 'p7')).toBe(true);
   });
 
   it('mergeNotification should prepend notifications without projectId', () => {
@@ -360,4 +393,3 @@ describe('NotificationsFacade', () => {
     }
   });
 });
-

@@ -4,8 +4,12 @@
    ===================================================== */
 
 @keyframes shimmer {
-  0%   { background-position: -600px 0; }
-  100% { background-position:  600px 0; }
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
 }
 
 .skeleton-wrapper {
@@ -33,7 +37,7 @@
   background: linear-gradient(
     90deg,
     var(--border-color, #e2e8f0) 25%,
-    var(--bg-hover, #f1f5f9)    50%,
+    var(--bg-hover, #f1f5f9) 50%,
     var(--border-color, #e2e8f0) 75%
   );
   background-size: 1200px 100%;

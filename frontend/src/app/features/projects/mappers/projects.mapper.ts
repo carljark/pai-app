@@ -8,7 +8,6 @@ import {
   Project,
   ProjectStatus,
   ProjectType,
-  HistoryTab,
   GeneratedContent,
   ProjectFile,
   CreateProjectPayload,
@@ -16,13 +15,14 @@ import {
   FileUploadResponse,
   ImportDocxResponse,
   RetryProjectResponse,
+  AIProvider,
 } from '../models/project.model';
 
 // ============================================
 // API DTO Types (what backend sends/receives)
 // ============================================
 
-interface ProjectDto {
+export interface ProjectDto {
   _id: string;
   title: string;
   status: string;
@@ -39,12 +39,15 @@ interface ProjectDto {
     courseLevel?: string;
   };
   userId: string | { _id: string; name: string };
-  collaborators?: { userId: string | { _id: string; name: string; email?: string }; addedAt?: string }[];
+  collaborators?: {
+    userId: string | { _id: string; name: string; email?: string };
+    addedAt?: string;
+  }[];
   createdAt: string;
   updatedAt: string;
 }
 
-interface ProjectFileDto {
+export interface ProjectFileDto {
   _id: string;
   filename: string;
   originalName: string;
@@ -54,25 +57,37 @@ interface ProjectFileDto {
   projectId: string;
 }
 
-interface GenerateProjectResponseDto {
+export interface GenerateProjectResponseDto {
   project: ProjectDto;
   message?: string;
 }
 
-interface FileUploadResponseDto {
+export interface FileUploadResponseDto {
   file: ProjectFileDto;
   message: string;
 }
 
-interface ImportDocxResponseDto {
+export interface ImportDocxResponseDto {
   project: ProjectDto;
   message: string;
 }
 
-interface RetryProjectResponseDto {
+export interface RetryProjectResponseDto {
   project: ProjectDto;
   message: string;
 }
+
+/** El endpoint de reescritura devuelve `{ rawText }` o el texto plano. */
+/** Respuesta actual del backend en `POST /rewrite`. */
+export interface RewriteResultDto {
+  newText?: string;
+  rewrittenPart?: string;
+  rawText?: string;
+  provider?: AIProvider;
+  model?: string;
+  fallbackUsed?: boolean;
+}
+export type RewriteSectionResponseDto = string | RewriteResultDto;
 
 // ============================================
 // Domain → DTO (for sending to API)
@@ -99,17 +114,22 @@ export function toUpdateProjectPayload(rawText: string, status: ProjectStatus) {
   return { rawText, status };
 }
 
-export function toRewriteSectionPayload(context: string, instruction: string, aiProvider: 'gemini' | 'openrouter', aiModel: string) {
+export function toRewriteSectionPayload(
+  context: string,
+  instruction: string,
+  aiProvider: 'gemini' | 'openrouter',
+  aiModel: string,
+) {
   return { context, instruction, aiProvider, aiModel };
 }
 
-export function toFileUploadFormData(file: File, projectId: string): FormData {
+export function toFileUploadFormData(file: File, _projectId: string): FormData {
   const formData = new FormData();
   formData.append('file', file);
   return formData;
 }
 
-export function toImportDocxFormData(file: File, projectId: string): FormData {
+export function toImportDocxFormData(file: File, _projectId: string): FormData {
   const formData = new FormData();
   formData.append('file', file);
   return formData;
@@ -121,12 +141,17 @@ export function toImportDocxFormData(file: File, projectId: string): FormData {
 
 export function mapStatus(status: string): ProjectStatus {
   const validStatuses: ProjectStatus[] = ['borrador', 'generando', 'en_cola', 'publicado', 'error'];
-  return validStatuses.includes(status as ProjectStatus) ? status as ProjectStatus : 'borrador';
+  return validStatuses.includes(status as ProjectStatus) ? (status as ProjectStatus) : 'borrador';
 }
 
 export function mapTipoNivel(tipo: string): ProjectType {
-  const validTypes: ProjectType[] = ['FP_BASICA', 'CFGM_ESTETICA', 'CFGM_PELUQUERIA', 'DIVERSIFICACION_CURRICULAR'];
-  return validTypes.includes(tipo as ProjectType) ? tipo as ProjectType : 'FP_BASICA';
+  const validTypes: ProjectType[] = [
+    'FP_BASICA',
+    'CFGM_ESTETICA',
+    'CFGM_PELUQUERIA',
+    'DIVERSIFICACION_CURRICULAR',
+  ];
+  return validTypes.includes(tipo as ProjectType) ? (tipo as ProjectType) : 'FP_BASICA';
 }
 
 function mapGeneratedContent(dto: ProjectDto['generatedContent']): GeneratedContent | undefined {
@@ -141,13 +166,15 @@ function mapGeneratedContent(dto: ProjectDto['generatedContent']): GeneratedCont
   };
 }
 
-function mapUserId(userId: string | { _id: string; name: string }): string | { _id: string; name: string } {
+function mapUserId(
+  userId: string | { _id: string; name: string },
+): string | { _id: string; name: string } {
   return userId;
 }
 
 function mapCollaborators(dto: ProjectDto['collaborators']) {
   if (!Array.isArray(dto)) return [];
-  return dto.map(c => ({ userId: c.userId, addedAt: c.addedAt }));
+  return dto.map((c) => ({ userId: c.userId, addedAt: c.addedAt }));
 }
 
 export function fromProjectDto(dto: ProjectDto): Project {
@@ -171,7 +198,9 @@ export function fromProjectDtoArray(dtos: ProjectDto[]): Project[] {
   return (dtos || []).map(fromProjectDto);
 }
 
-export function fromGenerateProjectResponse(dto: GenerateProjectResponseDto): GenerateProjectResponse {
+export function fromGenerateProjectResponse(
+  dto: GenerateProjectResponseDto,
+): GenerateProjectResponse {
   return {
     project: fromProjectDto(dto.project),
     message: dto.message,
@@ -213,4 +242,17 @@ export function fromProjectFileDto(dto: ProjectFileDto): ProjectFile {
 
 export function fromProjectFileDtoArray(dtos: ProjectFileDto[]): ProjectFile[] {
   return (dtos || []).map(fromProjectFileDto);
+}
+
+/** Extrae el texto reescrito; si no hay `rawText`, devuelve la respuesta tal cual. */
+export function fromRewriteSectionResponse(
+  res: RewriteSectionResponseDto,
+): RewriteSectionResponseDto {
+  return (typeof res === 'object' && res?.rawText) || res;
+}
+
+/** Texto reescrito de la respuesta, tanto si llega como texto plano como si llega como objeto. */
+export function rewrittenText(res: RewriteSectionResponseDto): string {
+  if (typeof res === 'string') return res;
+  return res?.newText || res?.rewrittenPart || '';
 }

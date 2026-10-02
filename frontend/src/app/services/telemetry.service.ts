@@ -1,16 +1,23 @@
-import { Injectable, inject } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable({ providedIn: "root" })
+interface HeartbeatPayload {
+  sessionId: string;
+  activeSeconds: number;
+  currentPage: string;
+  isClosing: boolean;
+}
+
+@Injectable({ providedIn: 'root' })
 export class TelemetryService {
   private http = inject(HttpClient);
 
   private sessionId: string;
   private lastActiveTimestamp: number = Date.now();
-  private accumulatedActiveSeconds: number = 0;
-  private heartbeatInterval: any = null;
-  private isTracking: boolean = false;
-  private currentPage: string = "home";
+  private accumulatedActiveSeconds = 0;
+  private heartbeatInterval: ReturnType<typeof setInterval> | null = null;
+  private isTracking = false;
+  private currentPage = 'home';
 
   constructor() {
     this.sessionId = this.getOrCreateSessionId();
@@ -18,14 +25,14 @@ export class TelemetryService {
   }
 
   private getOrCreateSessionId(): string {
-    const existing = sessionStorage.getItem("plappin_session_id");
+    const existing = sessionStorage.getItem('plappin_session_id');
     if (existing) return existing;
-    const sid = "sess_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
-    sessionStorage.setItem("plappin_session_id", sid);
+    const sid = 'sess_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+    sessionStorage.setItem('plappin_session_id', sid);
     return sid;
   }
 
-  startTracking(userToken?: string) {
+  startTracking() {
     if (this.isTracking) return;
     this.isTracking = true;
     this.lastActiveTimestamp = Date.now();
@@ -34,7 +41,7 @@ export class TelemetryService {
       this.flushHeartbeat();
     }, 60000);
 
-    window.addEventListener("beforeunload", this.onBeforeUnload);
+    window.addEventListener('beforeunload', this.onBeforeUnload);
   }
 
   stopTracking(flush = false) {
@@ -44,7 +51,7 @@ export class TelemetryService {
       clearInterval(this.heartbeatInterval);
       this.heartbeatInterval = null;
     }
-    window.removeEventListener("beforeunload", this.onBeforeUnload);
+    window.removeEventListener('beforeunload', this.onBeforeUnload);
     this.isTracking = false;
   }
 
@@ -53,8 +60,8 @@ export class TelemetryService {
   }
 
   private initVisibilityListener() {
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") {
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
         this.updateActiveSeconds();
         this.flushHeartbeat();
       } else {
@@ -65,8 +72,11 @@ export class TelemetryService {
 
   private updateActiveSeconds() {
     const now = Date.now();
-    if (document.visibilityState === "visible") {
-      const diffSec = Math.max(0, Math.min(300, Math.round((now - this.lastActiveTimestamp) / 1000)));
+    if (document.visibilityState === 'visible') {
+      const diffSec = Math.max(
+        0,
+        Math.min(300, Math.round((now - this.lastActiveTimestamp) / 1000)),
+      );
       this.accumulatedActiveSeconds += diffSec;
     }
     this.lastActiveTimestamp = now;
@@ -77,37 +87,41 @@ export class TelemetryService {
     const activeSec = this.accumulatedActiveSeconds;
     this.accumulatedActiveSeconds = 0;
 
-    const payload = {
+    const payload: HeartbeatPayload = {
       sessionId: this.sessionId,
       activeSeconds: activeSec,
       currentPage: this.currentPage,
-      isClosing
+      isClosing,
     };
+    if (this.sendBeaconOnClose(payload)) return;
 
-    if (isClosing && typeof navigator !== "undefined" && navigator.sendBeacon) {
-      const token = localStorage.getItem("pai_token") || localStorage.getItem("token");
-      if (token) {
-        const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
-        navigator.sendBeacon("/api/telemetry/heartbeat", blob);
-        return;
-      }
-    }
-
-    this.http.post<{ ok: boolean; durationSeconds: number }>("/api/telemetry/heartbeat", payload)
+    this.http
+      .post<{ ok: boolean; durationSeconds: number }>('/api/telemetry/heartbeat', payload)
       .subscribe({
-        next: () => {},
         error: () => {
           // Re-accumulate if failed
           this.accumulatedActiveSeconds += activeSec;
-        }
+        },
       });
   }
 
-  logEvent(action: string, projectId?: string, details?: any) {
-    return this.http.post<{ ok: boolean }>("/api/telemetry/event", {
+  /** Al cerrar la pestaña, `sendBeacon` sobrevive al unload; solo se usa con sesión iniciada. */
+  private sendBeaconOnClose(payload: HeartbeatPayload): boolean {
+    if (!payload.isClosing || typeof navigator === 'undefined' || !navigator.sendBeacon) {
+      return false;
+    }
+    const token = localStorage.getItem('pai_token') || localStorage.getItem('token');
+    if (!token) return false;
+    const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+    navigator.sendBeacon('/api/telemetry/heartbeat', blob);
+    return true;
+  }
+
+  logEvent(action: string, projectId?: string, details?: Record<string, unknown>) {
+    return this.http.post<{ ok: boolean }>('/api/telemetry/event', {
       action,
       projectId,
-      details
+      details,
     });
   }
 

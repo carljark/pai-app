@@ -1,5 +1,9 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+  TestRequest,
+} from '@angular/common/http/testing';
 import { ProjectsFacade } from './projects.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
 import { AuthFacade } from '../../auth/services/auth.facade';
@@ -7,7 +11,6 @@ import { signal } from '@angular/core';
 import { Project, ProjectStatus, ProjectType } from '../models/project.model';
 import { fromProjectDtoArray } from '../mappers/projects.mapper';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { throwError } from 'rxjs';
 
 function createMockProject(overrides: Partial<Project> = {}): Project {
   return {
@@ -29,10 +32,7 @@ function createMockProject(overrides: Partial<Project> = {}): Project {
  * Flushes a successful /api/projects/generate response and the follow-up
  * GET /api/projects that the facade triggers via loadHistory().
  */
-function flushGenerateSuccess(
-  httpMock: HttpTestingController,
-  req: TestRequest,
-): void {
+function flushGenerateSuccess(httpMock: HttpTestingController, req: TestRequest): void {
   req.flush({ project: createMockProject({ _id: 'gen-1' }), message: 'ok' });
   httpMock.expectOne('/api/projects').flush([]);
 }
@@ -50,22 +50,22 @@ describe('ProjectsFacade', () => {
       curso: vi.fn(),
       ras: vi.fn(),
       ces: vi.fn(),
-      clearSelection: vi.fn()
+      clearSelection: vi.fn(),
     };
 
     mockAuthFacade = {
-      currentUser: signal({ _id: 'u1', name: 'User 1' })
+      currentUser: signal({ _id: 'u1', name: 'User 1' }),
     };
-    
+
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
         ProjectsFacade,
         { provide: CurriculumFacade, useValue: mockCurriculumFacade },
-        { provide: AuthFacade, useValue: mockAuthFacade }
-      ]
+        { provide: AuthFacade, useValue: mockAuthFacade },
+      ],
     });
-    
+
     facade = TestBed.inject(ProjectsFacade);
     httpMock = TestBed.inject(HttpTestingController);
 
@@ -73,12 +73,16 @@ describe('ProjectsFacade', () => {
     httpMock.expectOne('/api/ai/models').flush({
       providers: [
         { value: 'gemini', label: 'Gemini', defaultModel: 'gemini-3.6-flash' },
-        { value: 'openrouter', label: 'OpenRouter', defaultModel: 'deepseek/deepseek-v4.1-flash' }
+        { value: 'openrouter', label: 'OpenRouter', defaultModel: 'deepseek/deepseek-v4.1-flash' },
       ],
       models: [
         { value: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', provider: 'gemini' },
-        { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek V4.1 Flash', provider: 'openrouter' }
-      ]
+        {
+          value: 'deepseek/deepseek-v4.1-flash',
+          label: 'DeepSeek V4.1 Flash',
+          provider: 'openrouter',
+        },
+      ],
     });
 
     // Flush initial loadHistory from constructor effect
@@ -99,11 +103,11 @@ describe('ProjectsFacade', () => {
   it('should load history and update projectsHistory signal', () => {
     const mockProjects = [createMockProject({ _id: '1', title: 'Test Project' })];
     facade.loadHistory();
-    
+
     const req = httpMock.expectOne('/api/projects');
     expect(req.request.method).toBe('GET');
     req.flush(mockProjects);
-    
+
     expect(facade.projectsHistory()).toEqual(fromProjectDtoArray(mockProjects as any));
   });
 
@@ -111,7 +115,7 @@ describe('ProjectsFacade', () => {
     facade.projectsHistory.set([
       createMockProject({ _id: '1', title: 'P1', userId: 'u1' }),
       createMockProject({ _id: '2', title: 'P2', userId: { _id: 'u1', name: 'User 1' } }),
-      createMockProject({ _id: '3', title: 'P3', userId: 'u2' })
+      createMockProject({ _id: '3', title: 'P3', userId: 'u2' }),
     ]);
     expect(facade.myProjects().length).toBe(2);
 
@@ -123,7 +127,7 @@ describe('ProjectsFacade', () => {
     mockAuthFacade.currentUser.set({ id: 'u2', name: 'User 2' });
     facade.projectsHistory.set([
       createMockProject({ _id: '1', title: 'P1', userId: 'u2' }),
-      createMockProject({ _id: '2', title: 'P2', userId: 'u3' })
+      createMockProject({ _id: '2', title: 'P2', userId: 'u3' }),
     ]);
 
     expect(facade.myProjects().length).toBe(1);
@@ -133,33 +137,51 @@ describe('ProjectsFacade', () => {
   it('should handle error when loading history', () => {
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     facade.loadHistory();
-    
+
     const req = httpMock.expectOne('/api/projects');
-    req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
-    
+    req.flush(
+      { message: 'Internal Server Error' },
+      { status: 500, statusText: 'Internal Server Error' },
+    );
+
     expect(errorSpy).toHaveBeenCalled();
   });
 
   it('should compute currentProject correctly', () => {
     facade.projectsHistory.set([
       createMockProject({ _id: '1', title: 'P1' }),
-      createMockProject({ _id: '2', title: 'P2' })
+      createMockProject({ _id: '2', title: 'P2' }),
     ]);
     facade.currentProjectId.set('2');
-    
+
     expect(facade.currentProject()?.title).toBe('P2');
   });
 
   it('should compute fpProjects and esoProjects based on search and level', () => {
     facade.projectsHistory.set([
-      createMockProject({ _id: '1', title: 'FP Proy', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text1' } }),
-      createMockProject({ _id: '2', title: 'ESO Proy', tipoNivel: 'DIVERSIFICACION_CURRICULAR', generatedContent: { rawText: 'text2' } }),
-      createMockProject({ _id: '3', title: 'Otro FP', tipoNivel: 'FP_BASICA', generatedContent: { rawText: 'text3' } })
+      createMockProject({
+        _id: '1',
+        title: 'FP Proy',
+        tipoNivel: 'FP_BASICA',
+        generatedContent: { rawText: 'text1' },
+      }),
+      createMockProject({
+        _id: '2',
+        title: 'ESO Proy',
+        tipoNivel: 'DIVERSIFICACION_CURRICULAR',
+        generatedContent: { rawText: 'text2' },
+      }),
+      createMockProject({
+        _id: '3',
+        title: 'Otro FP',
+        tipoNivel: 'FP_BASICA',
+        generatedContent: { rawText: 'text3' },
+      }),
     ]);
-    
+
     expect(facade.fpProjects().length).toBe(2);
     expect(facade.esoProjects().length).toBe(1);
-    
+
     facade.searchQuery.set('otro');
     expect(facade.fpProjects().length).toBe(1);
     expect(facade.esoProjects().length).toBe(0);
@@ -167,7 +189,7 @@ describe('ProjectsFacade', () => {
 
   it('should delete project via HTTP', () => {
     facade.deleteProject('123').subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/123');
     expect(req.request.method).toBe('DELETE');
     req.flush({ success: true });
@@ -177,7 +199,10 @@ describe('ProjectsFacade', () => {
     facade.retryProject('123').subscribe();
     const req = httpMock.expectOne('/api/projects/123/retry');
     expect(req.request.method).toBe('POST');
-    req.flush({ project: createMockProject({ _id: '123', title: 'Retried Project' }), message: 'ok' });
+    req.flush({
+      project: createMockProject({ _id: '123', title: 'Retried Project' }),
+      message: 'ok',
+    });
   });
 
   it('should generate project (FP_BASICA)', () => {
@@ -185,11 +210,11 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.curso.mockReturnValue('2º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
     mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
-    
+
     facade.methodology.set('ABP');
     facade.generateProject('castellano', 'Custom Title').subscribe();
     expect(facade.historyTab()).toBe('FPB');
-    
+
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({
@@ -201,7 +226,7 @@ describe('ProjectsFacade', () => {
       aiProvider: 'gemini',
       aiModel: 'gemini-3.6-flash',
       courseLevel: '2º',
-      title: 'Custom Title'
+      title: 'Custom Title',
     });
     flushGenerateSuccess(httpMock, req);
   });
@@ -211,11 +236,11 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.curso.mockReturnValue('4º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['CE1']);
     mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
-    
+
     facade.selectedAi.set('openrouter');
     facade.generateProject('catalan').subscribe();
     expect(facade.historyTab()).toBe('ESO');
-    
+
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['Math']);
     expect(req.request.body.aiProvider).toBe('openrouter');
@@ -243,10 +268,10 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.curso.mockReturnValue('1º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
     mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
-    
+
     facade.extraInstructions.set('Instrucciones personalizadas para la IA');
     facade.generateProject('castellano').subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.extraInstructions).toBe('Instrucciones personalizadas para la IA');
     flushGenerateSuccess(httpMock, req);
@@ -282,7 +307,7 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.ras.mockReturnValue([
       { description: 'RA_A', moduleCode: '0640', subject_es: '0640. Módulo ES' },
       { description: 'RA_B', moduleCode: '0643', subject: '0643. Subject' },
-      { description: 'RA_C', moduleCode: '0843', module: '0843. Module' }
+      { description: 'RA_C', moduleCode: '0843', module: '0843. Module' },
     ]);
 
     facade.generateProject('castellano').subscribe();
@@ -300,7 +325,7 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.ras.mockReturnValue([
       { description: 'RA_A', moduleCode: '0845', subject_ca: '0845. Mòdul CA' },
       { description: 'RA_B', moduleCode: '0842', subject: '0842. Subject' },
-      { description: 'RA_C', moduleCode: '0844', module: '0844. Module' }
+      { description: 'RA_C', moduleCode: '0844', module: '0844. Module' },
     ]);
 
     localStorage.setItem('pai_lang', 'catalan');
@@ -308,6 +333,19 @@ describe('ProjectsFacade', () => {
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['0845. Mòdul CA', '0842. Subject', '0844. Module']);
+    flushGenerateSuccess(httpMock, req);
+  });
+
+  it('should use an empty name for a CFGM_PELUQUERIA module without any name field', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
+    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_A']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_A', moduleCode: '0845' }]);
+
+    facade.generateProject('castellano', 'Título').subscribe();
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['']);
     flushGenerateSuccess(httpMock, req);
   });
 
@@ -354,15 +392,15 @@ describe('ProjectsFacade', () => {
   it('should update project status', () => {
     facade.currentProjectId.set('123');
     facade.generatedProject.set('some content');
-    
+
     facade.updateProjectStatus('publicado')?.subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/123');
     expect(req.request.method).toBe('PUT');
     expect(req.request.body).toEqual({ rawText: 'some content', status: 'publicado' });
     req.flush({});
   });
-  
+
   it('should not update project status if no currentProjectId', () => {
     facade.currentProjectId.set(null);
     expect(facade.updateProjectStatus('publicado')).toBeUndefined();
@@ -371,18 +409,20 @@ describe('ProjectsFacade', () => {
   it('should rewrite section with default and explicit aiProvider and aiModel', () => {
     facade.generatedProject.set('full text');
     facade.rewriteSection('rewrite this').subscribe();
-    
+
     const req1 = httpMock.expectOne('/api/projects/rewrite');
     expect(req1.request.method).toBe('POST');
     expect(req1.request.body).toEqual({
       context: 'full text',
       instruction: 'rewrite this',
       aiProvider: 'gemini',
-      aiModel: 'gemini-3.6-flash'
+      aiModel: 'gemini-3.6-flash',
     });
     req1.flush({});
 
-    facade.rewriteSection('rewrite this', 'openrouter', 'mistralai/mistral-7b-instruct:free').subscribe();
+    facade
+      .rewriteSection('rewrite this', 'openrouter', 'mistralai/mistral-7b-instruct:free')
+      .subscribe();
     const req2 = httpMock.expectOne('/api/projects/rewrite');
     expect(req2.request.body.aiProvider).toBe('openrouter');
     expect(req2.request.body.aiModel).toBe('mistralai/mistral-7b-instruct:free');
@@ -392,11 +432,21 @@ describe('ProjectsFacade', () => {
   it('should load project files', () => {
     facade.currentProjectId.set('123');
     facade.loadProjectFiles();
-    
+
     const req = httpMock.expectOne('/api/projects/123/files');
     expect(req.request.method).toBe('GET');
-    req.flush([{ _id: 'f1', filename: 'test.pdf', originalName: 'test.pdf', mimeType: 'application/pdf', size: 1024, uploadedAt: new Date().toISOString(), projectId: '123' }]);
-    
+    req.flush([
+      {
+        _id: 'f1',
+        filename: 'test.pdf',
+        originalName: 'test.pdf',
+        mimeType: 'application/pdf',
+        size: 1024,
+        uploadedAt: new Date().toISOString(),
+        projectId: '123',
+      },
+    ]);
+
     expect(facade.projectFiles().length).toBe(1);
     expect(facade.projectFiles()[0].originalName).toBe('test.pdf');
   });
@@ -405,13 +455,13 @@ describe('ProjectsFacade', () => {
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     facade.currentProjectId.set('123');
     facade.loadProjectFiles();
-    
+
     const req = httpMock.expectOne('/api/projects/123/files');
     req.flush('Error', { status: 500, statusText: 'Internal Server Error' });
-    
+
     expect(errorSpy).toHaveBeenCalled();
   });
-  
+
   it('should not load files if no currentProjectId', () => {
     facade.currentProjectId.set(null);
     facade.loadProjectFiles();
@@ -422,11 +472,19 @@ describe('ProjectsFacade', () => {
     facade.currentProjectId.set('123');
     const file = new File([''], 'test.txt');
     facade.uploadFile(file)?.subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/123/files');
     expect(req.request.method).toBe('POST');
     req.flush({
-      file: { _id: 'f1', filename: 'test.txt', originalName: 'test.txt', mimeType: 'text/plain', size: 100, uploadedAt: new Date().toISOString(), projectId: '123' },
+      file: {
+        _id: 'f1',
+        filename: 'test.txt',
+        originalName: 'test.txt',
+        mimeType: 'text/plain',
+        size: 100,
+        uploadedAt: new Date().toISOString(),
+        projectId: '123',
+      },
       message: 'ok',
     });
   });
@@ -434,7 +492,7 @@ describe('ProjectsFacade', () => {
   it('should delete file', () => {
     facade.currentProjectId.set('123');
     facade.deleteFile('test.txt')?.subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/123/files/test.txt');
     expect(req.request.method).toBe('DELETE');
     req.flush({});
@@ -443,7 +501,7 @@ describe('ProjectsFacade', () => {
   it('should get download URL', () => {
     facade.currentProjectId.set('123');
     expect(facade.getDownloadUrl('test.txt')).toBe('/api/projects/123/files/test.txt');
-    
+
     facade.currentProjectId.set(null);
     expect(facade.getDownloadUrl('test.txt')).toBe('');
   });
@@ -451,7 +509,7 @@ describe('ProjectsFacade', () => {
   it('should export docx', () => {
     facade.currentProjectId.set('123');
     facade.exportDocx()?.subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/123/export-docx');
     expect(req.request.method).toBe('GET');
     expect(req.request.responseType).toBe('blob');
@@ -462,7 +520,7 @@ describe('ProjectsFacade', () => {
     facade.currentProjectId.set('123');
     const file = new File([''], 'test.docx');
     facade.importDocx(file)?.subscribe();
-    
+
     const req = httpMock.expectOne('/api/projects/123/import-docx');
     expect(req.request.method).toBe('POST');
     req.flush({
@@ -630,7 +688,7 @@ describe('ProjectsFacade', () => {
     it('should rewrite section successfully', () => {
       facade.generatedProject.set('original content');
       facade.rewriteSection('make it better').subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/rewrite');
       expect(req.request.method).toBe('POST');
       expect(req.request.body).toEqual({
@@ -640,15 +698,17 @@ describe('ProjectsFacade', () => {
         aiModel: 'gemini-3.6-flash',
       });
       req.flush('rewritten content');
-      
+
       expect(facade.generatedProject()).toBe('rewritten content');
       expect(facade.isThinking()).toBe(false);
     });
 
     it('should rewrite section with explicit aiProvider and aiModel', () => {
       facade.generatedProject.set('original content');
-      facade.rewriteSection('make it better', 'openrouter', 'mistralai/mistral-7b-instruct:free').subscribe();
-      
+      facade
+        .rewriteSection('make it better', 'openrouter', 'mistralai/mistral-7b-instruct:free')
+        .subscribe();
+
       const req = httpMock.expectOne('/api/projects/rewrite');
       expect(req.request.body.aiProvider).toBe('openrouter');
       expect(req.request.body.aiModel).toBe('mistralai/mistral-7b-instruct:free');
@@ -660,13 +720,21 @@ describe('ProjectsFacade', () => {
     it('should load project files successfully', () => {
       facade.currentProjectId.set('123');
       facade.loadProjectFiles();
-      
+
       const req = httpMock.expectOne('/api/projects/123/files');
       expect(req.request.method).toBe('GET');
       req.flush([
-        { _id: 'f1', filename: 'test.pdf', originalName: 'test.pdf', mimeType: 'application/pdf', size: 1024, uploadedAt: new Date().toISOString(), projectId: '123' }
+        {
+          _id: 'f1',
+          filename: 'test.pdf',
+          originalName: 'test.pdf',
+          mimeType: 'application/pdf',
+          size: 1024,
+          uploadedAt: new Date().toISOString(),
+          projectId: '123',
+        },
       ]);
-      
+
       expect(facade.projectFiles().length).toBe(1);
       expect(facade.projectFiles()[0].originalName).toBe('test.pdf');
     });
@@ -675,10 +743,13 @@ describe('ProjectsFacade', () => {
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
       facade.currentProjectId.set('123');
       facade.loadProjectFiles();
-      
+
       const req = httpMock.expectOne('/api/projects/123/files');
-      req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
-      
+      req.flush(
+        { message: 'Internal Server Error' },
+        { status: 500, statusText: 'Internal Server Error' },
+      );
+
       expect(errorSpy).toHaveBeenCalled();
     });
 
@@ -692,14 +763,22 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       const file = new File([''], 'test.txt');
       facade.uploadFile(file)?.subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/123/files');
       expect(req.request.method).toBe('POST');
       req.flush({
-        file: { _id: 'f1', filename: 'test.txt', originalName: 'test.txt', mimeType: 'text/plain', size: 100, uploadedAt: new Date().toISOString(), projectId: '123' },
-        message: 'ok'
+        file: {
+          _id: 'f1',
+          filename: 'test.txt',
+          originalName: 'test.txt',
+          mimeType: 'text/plain',
+          size: 100,
+          uploadedAt: new Date().toISOString(),
+          projectId: '123',
+        },
+        message: 'ok',
       });
-      
+
       expect(facade.projectFiles().length).toBe(1);
       expect(facade.projectFiles()[0].filename).toBe('test.txt');
     });
@@ -708,12 +787,15 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       const file = new File([''], 'test.txt');
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+
       facade.uploadFile(file)?.subscribe({ error: () => {} });
-      
+
       const req = httpMock.expectOne('/api/projects/123/files');
-      req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
-      
+      req.flush(
+        { message: 'Internal Server Error' },
+        { status: 500, statusText: 'Internal Server Error' },
+      );
+
       expect(facade.isUploading()).toBe(false);
       expect(errorSpy).toHaveBeenCalled();
     });
@@ -727,14 +809,22 @@ describe('ProjectsFacade', () => {
     it('should delete file successfully', () => {
       facade.currentProjectId.set('123');
       facade.projectFiles.set([
-        { _id: 'f1', filename: 'test.txt', originalName: 'test.txt', mimeType: 'text/plain', size: 100, uploadedAt: new Date().toISOString(), projectId: '123' }
+        {
+          _id: 'f1',
+          filename: 'test.txt',
+          originalName: 'test.txt',
+          mimeType: 'text/plain',
+          size: 100,
+          uploadedAt: new Date().toISOString(),
+          projectId: '123',
+        },
       ]);
       facade.deleteFile('test.txt')?.subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/123/files/test.txt');
       expect(req.request.method).toBe('DELETE');
       req.flush({});
-      
+
       expect(facade.projectFiles().length).toBe(0);
     });
 
@@ -742,10 +832,13 @@ describe('ProjectsFacade', () => {
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
       facade.currentProjectId.set('123');
       facade.deleteFile('test.txt')?.subscribe({ error: () => {} });
-      
+
       const req = httpMock.expectOne('/api/projects/123/files/test.txt');
-      req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
-      
+      req.flush(
+        { message: 'Internal Server Error' },
+        { status: 500, statusText: 'Internal Server Error' },
+      );
+
       expect(errorSpy).toHaveBeenCalled();
     });
 
@@ -767,7 +860,7 @@ describe('ProjectsFacade', () => {
     it('should export docx with project ID', () => {
       facade.currentProjectId.set('123');
       facade.exportDocx()?.subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/123/export-docx');
       expect(req.request.method).toBe('GET');
       expect(req.request.responseType).toBe('blob');
@@ -783,7 +876,7 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       const file = new File([''], 'test.docx');
       facade.importDocx(file)?.subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/123/import-docx');
       expect(req.request.method).toBe('POST');
       req.flush({
@@ -801,7 +894,7 @@ describe('ProjectsFacade', () => {
         },
         message: 'Imported successfully',
       });
-      
+
       expect(facade.generatedProject()).toBe('Imported content');
       expect(facade.projectFiles()).toEqual([]);
     });
@@ -810,12 +903,15 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       const file = new File([''], 'test.docx');
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+
       facade.importDocx(file)?.subscribe({ error: () => {} });
-      
+
       const req = httpMock.expectOne('/api/projects/123/import-docx');
-      req.flush({ message: 'Internal Server Error' }, { status: 500, statusText: 'Internal Server Error' });
-      
+      req.flush(
+        { message: 'Internal Server Error' },
+        { status: 500, statusText: 'Internal Server Error' },
+      );
+
       expect(facade.isUploading()).toBe(false);
       expect(errorSpy).toHaveBeenCalled();
     });
@@ -854,9 +950,9 @@ describe('ProjectsFacade', () => {
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };
-      
+
       facade.setCurrentProject(project);
-      
+
       expect(facade.currentProjectId()).toBe('proj-1');
       expect(facade.generatedProject()).toBe('content');
       expect(facade.projectFiles()).toEqual([]);
@@ -866,11 +962,21 @@ describe('ProjectsFacade', () => {
     it('should clear current project', () => {
       facade.currentProjectId.set('proj-1');
       facade.generatedProject.set('content');
-      facade.projectFiles.set([{ _id: 'f1', filename: 'test.txt', originalName: 'test.txt', mimeType: 'text/plain', size: 100, uploadedAt: new Date().toISOString(), projectId: 'proj-1' }]);
+      facade.projectFiles.set([
+        {
+          _id: 'f1',
+          filename: 'test.txt',
+          originalName: 'test.txt',
+          mimeType: 'text/plain',
+          size: 100,
+          uploadedAt: new Date().toISOString(),
+          projectId: 'proj-1',
+        },
+      ]);
       facade.isEditMode.set(true);
-      
+
       facade.clearCurrentProject();
-      
+
       expect(facade.currentProjectId()).toBeNull();
       expect(facade.generatedProject()).toBe('');
       expect(facade.projectFiles()).toEqual([]);
@@ -883,10 +989,10 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.tipoNivel.mockReturnValue('DIVERSIFICACION_CURRICULAR');
       mockCurriculumFacade.selectedRas.mockReturnValue(['CE1']);
       mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
-      
+
       facade.generateProject('castellano').subscribe();
       expect(facade.historyTab()).toBe('ESO');
-      
+
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Math']);
       flushGenerateSuccess(httpMock, req);
@@ -896,10 +1002,10 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
       mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
-      
+
       facade.generateProject('castellano').subscribe();
       expect(facade.historyTab()).toBe('FPB');
-      
+
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['ModA']);
       flushGenerateSuccess(httpMock, req);
@@ -926,14 +1032,18 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.ras.mockReturnValue([
         { description: 'RA_A', moduleCode: '0640', subject_es: '0640. Módulo ES' },
         { description: 'RA_B', moduleCode: '0643', subject: '0643. Subject' },
-        { description: 'RA_C', moduleCode: '0843', module: '0843. Module' }
+        { description: 'RA_C', moduleCode: '0843', module: '0843. Module' },
       ]);
 
       facade.generateProject('castellano').subscribe();
       expect(facade.historyTab()).toBe('CFGM_PELUQUERIA');
 
       const req = httpMock.expectOne('/api/projects/generate');
-      expect(req.request.body.modules).toEqual(['0640. Módulo ES', '0643. Subject', '0843. Module']);
+      expect(req.request.body.modules).toEqual([
+        '0640. Módulo ES',
+        '0643. Subject',
+        '0843. Module',
+      ]);
       flushGenerateSuccess(httpMock, req);
     });
 
@@ -944,7 +1054,7 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.ras.mockReturnValue([
         { description: 'RA_A', moduleCode: '0845', subject_ca: '0845. Mòdul CA' },
         { description: 'RA_B', moduleCode: '0842', subject: '0842. Subject' },
-        { description: 'RA_C', moduleCode: '0844', module: '0844. Module' }
+        { description: 'RA_C', moduleCode: '0844', module: '0844. Module' },
       ]);
 
       localStorage.setItem('pai_lang', 'catalan');
@@ -1077,7 +1187,7 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.curso.mockReturnValue('1º');
       mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
-      
+
       facade.generateProject('castellano').subscribe();
       const genReq = httpMock.expectOne('/api/projects/generate');
       genReq.flush({ project: createMockProject({ _id: '123' }) });
@@ -1085,7 +1195,7 @@ describe('ProjectsFacade', () => {
       const loadReq = httpMock.expectOne('/api/projects');
       loadReq.flush([]);
       httpMock.verify();
-      
+
       facade.retryProject('123').subscribe();
       const retryReq = httpMock.expectOne('/api/projects/123/retry');
       retryReq.flush({ project: createMockProject({ _id: '123', title: 'Updated' }) });
@@ -1099,15 +1209,15 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.curso.mockReturnValue('1º');
       mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
-      
+
       facade.methodology.set('ABP');
       facade.generateProject('castellano', 'Custom Title').subscribe({ error: () => {} });
-      
+
       const req = httpMock.expectOne('/api/projects/generate');
       req.flush('error', { status: 500, statusText: 'Internal Server Error' });
       // No loadHistory call on error
       httpMock.verify();
-      
+
       expect(facade.isGenerating()).toBe(false);
     });
   });
@@ -1117,9 +1227,9 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       facade.generatedProject.set('some content');
       facade.projectsHistory.set([createMockProject({ _id: '123' })]);
-      
+
       facade.updateProjectStatus('publicado')?.subscribe({ error: () => {} });
-      
+
       const req = httpMock.expectOne('/api/projects/123');
       req.flush('error', { status: 500, statusText: 'Internal Server Error' });
       httpMock.verify();
@@ -1129,13 +1239,13 @@ describe('ProjectsFacade', () => {
       facade.currentProjectId.set('123');
       facade.generatedProject.set('original content');
       facade.projectsHistory.set([createMockProject({ _id: '123', title: 'Test' })]);
-      
+
       facade.updateProjectStatus('publicado')?.subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/123');
       req.flush(createMockProject({ _id: '123', title: 'Updated', status: 'publicado' }));
       httpMock.verify();
-      
+
       expect(facade.projectsHistory()[0].title).toBe('Updated');
       expect(facade.generatedProject()).toBe('');
     });
@@ -1145,22 +1255,22 @@ describe('ProjectsFacade', () => {
     it('should handle rewrite section error', () => {
       facade.generatedProject.set('original content');
       facade.rewriteSection('make it better').subscribe({ error: () => {} });
-      
+
       const req = httpMock.expectOne('/api/projects/rewrite');
       req.flush('error', { status: 500, statusText: 'Internal Server Error' });
       httpMock.verify();
-      
+
       expect(facade.isThinking()).toBe(false);
     });
 
     it('should update generatedProject on success', () => {
       facade.generatedProject.set('original content');
       facade.rewriteSection('make it better').subscribe();
-      
+
       const req = httpMock.expectOne('/api/projects/rewrite');
       req.flush('rewritten content');
       httpMock.verify();
-      
+
       expect(facade.isThinking()).toBe(false);
       expect(facade.generatedProject()).toBe('rewritten content');
     });

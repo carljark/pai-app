@@ -1,9 +1,9 @@
-import { RA } from '../src/models/RA';
+import { RA } from '../../models/RA';
 import fs from 'fs';
 import path from 'path';
 
 export async function up() {
-  const anexoText = fs.readFileSync(path.join(process.cwd(), 'migrations', 'data', 'anexo8.txt'), 'utf-8');
+  const anexoText = fs.readFileSync(path.join(process.cwd(), 'src', 'migrations', 'legacy', 'data', 'anexo8.txt'), 'utf-8');
   
   // Extract all RAs and their criteria using a better regex/parsing
   const rawSections = anexoText.split(/<p><strong>(Módulo profesional:.*?|Duración:.*?|3\. Enseñanzas.*?)<\/strong><\/p>/g);

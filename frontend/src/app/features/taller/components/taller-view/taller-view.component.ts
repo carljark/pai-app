@@ -1,22 +1,29 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MarkdownComponent } from 'ngx-markdown';
-// @ts-ignore
 import html2pdf from 'html2pdf.js';
 import { AppFacade } from '../../../../app.facade';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import {
+  RewriteResultDto,
+  RewriteSectionResponseDto,
+} from '../../../projects/mappers/projects.mapper';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
-import { AppSelectComponent, SelectOption } from '../../../../components/app-select/app-select.component';
+import {
+  AppSelectComponent,
+  SelectOption,
+} from '../../../../components/app-select/app-select.component';
 
 @Component({
   selector: 'app-taller-view',
   standalone: true,
   imports: [CommonModule, FormsModule, MarkdownComponent, AppSelectComponent],
-  templateUrl: './taller-view.component.html'
+  templateUrl: './taller-view.component.html',
 })
 export class TallerViewComponent {
   appFacade = inject(AppFacade);
@@ -27,9 +34,12 @@ export class TallerViewComponent {
   paiService = inject(PaiService);
 
   isSidebarCollapsed = signal<boolean>(false);
-  isMobileResourcesCollapsed = signal<boolean>(typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
+  isMobileResourcesCollapsed = signal<boolean>(
+    typeof window !== 'undefined' ? window.innerWidth < 1024 : false,
+  );
 
-  sortByDate = (a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+  sortByDate = (a: { createdAt: string | Date }, b: { createdAt: string | Date }) =>
+    new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
 
   aiOptions = computed<SelectOption[]>(() => [
     { value: 'gemini', label: this.trans.t().aiGemini },
@@ -37,7 +47,7 @@ export class TallerViewComponent {
   ]);
 
   modelOptions = computed<SelectOption[]>(() =>
-    this.projects.availableModels().map(model => ({ value: model.value, label: model.label }))
+    this.projects.availableModels().map((model) => ({ value: model.value, label: model.label })),
   );
 
   /** Helpers para template - acceso seguro a userId */
@@ -54,11 +64,11 @@ export class TallerViewComponent {
     if (!project) return null;
     const userId = project.userId;
     if (typeof userId === 'string') return null;
-    return (userId as any).email || null;
+    return userId.email || null;
   }
 
   downloadWord() {
-    this.projects.exportDocx()?.subscribe(blob => {
+    this.projects.exportDocx()?.subscribe((blob) => {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -74,20 +84,24 @@ export class TallerViewComponent {
     if (fileInput) fileInput.click();
   }
 
-  uploadWord(event: any) {
-    const file = event.target.files[0];
+  uploadWord(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const file = input.files![0];
     if (!file || !this.projects.currentProjectId()) return;
     this.paiService.importDocx(this.projects.currentProjectId()!, file).subscribe({
       next: (res) => {
-        this.projects.generatedProject.set(res.project.generatedContent.rawText);
-        this.showInfoModal('Archivo Procesado', 'El diseño se ha purificado a Markdown exitosamente.');
+        this.projects.generatedProject.set(res.project.generatedContent!.rawText);
+        this.showInfoModal(
+          'Archivo Procesado',
+          'El diseño se ha purificado a Markdown exitosamente.',
+        );
       },
       error: () => {
         this.appFacade.errorMessage.set('Error al procesar el archivo Word.');
         this.appFacade.showErrorModal.set(true);
-      }
+      },
     });
-    event.target.value = '';
+    input.value = '';
   }
 
   private showInfoModal(title: string, message: string) {
@@ -101,7 +115,12 @@ export class TallerViewComponent {
     this.projects.updateProjectStatus('borrador')?.subscribe({
       next: () => {
         this.projects.loadHistory();
-        this.showInfoModal('Guardado', this.layout.language() === 'castellano' ? 'Borrador guardado correctamente.' : 'Esborrany guardat correctament.');
+        this.showInfoModal(
+          'Guardado',
+          this.layout.language() === 'castellano'
+            ? 'Borrador guardado correctamente.'
+            : 'Esborrany guardat correctament.',
+        );
       },
       error: (err) => console.error('Error saving draft:', err),
     });
@@ -111,7 +130,12 @@ export class TallerViewComponent {
     this.projects.updateProjectStatus('publicado')?.subscribe({
       next: () => {
         this.projects.loadHistory();
-        this.showInfoModal('Publicado', this.layout.language() === 'castellano' ? 'Proyecto publicado y validado correctamente.' : 'Projecte publicat i validat correctament.');
+        this.showInfoModal(
+          'Publicado',
+          this.layout.language() === 'castellano'
+            ? 'Proyecto publicado y validado correctamente.'
+            : 'Projecte publicat i validat correctament.',
+        );
       },
       error: (err) => console.error('Error publishing project:', err),
     });
@@ -120,8 +144,12 @@ export class TallerViewComponent {
   exportPDF() {
     const element = document.querySelector('markdown');
     if (element) {
-      this.appFacade.telemetry?.logEvent('EXPORT_PDF', this.projects.currentProjectId() || undefined)?.subscribe();
-      html2pdf().from(element as HTMLElement).save('Proyecto.pdf');
+      this.appFacade.telemetry
+        ?.logEvent('EXPORT_PDF', this.projects.currentProjectId() || undefined)
+        ?.subscribe();
+      html2pdf()
+        .from(element as HTMLElement)
+        .save('Proyecto.pdf');
     }
   }
 
@@ -135,22 +163,30 @@ export class TallerViewComponent {
     this.projects.selectedModel.set(value);
   }
 
-  private handleRewriteSuccess(res: any) {
-    if (res.fallbackUsed && res.provider) {
-      this.projects.selectedAi.set(res.provider);
+  private handleRewriteSuccess(res: RewriteSectionResponseDto) {
+    // Una respuesta en texto plano no trae metadatos: se trata como objeto vacío
+    const result: RewriteResultDto = typeof res === 'string' ? {} : res;
+    if (result.fallbackUsed && result.provider) {
+      this.projects.selectedAi.set(result.provider);
     }
-    this.projects.generatedProject.set(res.newText || res.rewrittenPart || '');
+    this.projects.generatedProject.set(result.newText || result.rewrittenPart || '');
     this.projects.aiPrompt.set('');
     this.projects.isThinking.set(false);
     this.projects.updateProjectStatus('borrador')?.subscribe();
   }
 
-  private handleRewriteError(err: any) {
+  private handleRewriteError(err: HttpErrorResponse) {
     console.error('Error en IA', err);
     this.projects.isThinking.set(false);
     this.projects.popUndo();
-    this.appFacade.errorTitle.set(this.layout.language() === 'catalan' ? "Error a l'Assistent IA" : 'Error en el Asistente IA');
-    const serverMsg = err.error?.error || err.error?.message || err.message || 'Error al conectar con la IA para reescribir.';
+    this.appFacade.errorTitle.set(
+      this.layout.language() === 'catalan' ? "Error a l'Assistent IA" : 'Error en el Asistente IA',
+    );
+    const serverMsg =
+      err.error?.error ||
+      err.error?.message ||
+      err.message ||
+      'Error al conectar con la IA para reescribir.';
     this.appFacade.errorMessage.set(serverMsg);
     this.appFacade.showErrorModal.set(true);
   }
@@ -158,9 +194,9 @@ export class TallerViewComponent {
   private showMissingInstructionAlert() {
     this.appFacade.infoTitle.set(this.layout.language() === 'castellano' ? 'Atención' : 'Atenció');
     this.appFacade.infoMessage.set(
-      this.layout.language() === 'castellano' 
-        ? 'Por favor, introduce una instrucción para la IA.' 
-        : 'Per favor, introdueix una instrucció per a la IA.'
+      this.layout.language() === 'castellano'
+        ? 'Por favor, introduce una instrucción para la IA.'
+        : 'Per favor, introdueix una instrucció per a la IA.',
     );
     this.appFacade.infoType.set('info');
     this.appFacade.showInfoModal.set(true);
@@ -173,31 +209,41 @@ export class TallerViewComponent {
 
     this.projects.pushUndo();
     this.projects.isThinking.set(true);
-    this.projects.rewriteSection(instruction, this.projects.selectedAi(), this.projects.selectedModel()).subscribe({
-      next: (res) => this.handleRewriteSuccess(res),
-      error: (err) => this.handleRewriteError(err)
-    });
+    this.projects
+      .rewriteSection(instruction, this.projects.selectedAi(), this.projects.selectedModel())
+      .subscribe({
+        next: (res) => this.handleRewriteSuccess(res),
+        error: (err) => this.handleRewriteError(err),
+      });
   }
 
   undoAI() {
     if (!this.projects.canUndo()) return;
     this.projects.undoLastChange();
     const title = this.layout.language() === 'castellano' ? 'Deshecho' : 'Desfet';
-    const msg = this.layout.language() === 'castellano'
-      ? 'Se ha restaurado la versión anterior del proyecto.'
-      : 'S\'ha restaurat la versió anterior del projecte.';
+    const msg =
+      this.layout.language() === 'castellano'
+        ? 'Se ha restaurado la versión anterior del proyecto.'
+        : "S'ha restaurat la versió anterior del projecte.";
     this.showInfoModal(title, msg);
   }
 
-  onFileSelected(event: any) {
-    const file = event.target.files[0];
+  onFileSelected(event: Event) {
+    const file = (event.target as HTMLInputElement).files![0];
     if (file && this.projects.currentProjectId()) this.uploadFile(file);
   }
 
-  onDragOver(event: DragEvent) { event.preventDefault(); event.stopPropagation(); }
-  onDragLeave(event: DragEvent) { event.preventDefault(); event.stopPropagation(); }
+  onDragOver(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  onDragLeave(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
   onDrop(event: DragEvent) {
-    event.preventDefault(); event.stopPropagation();
+    event.preventDefault();
+    event.stopPropagation();
     const file = event.dataTransfer?.files[0];
     if (file && this.projects.currentProjectId()) this.uploadFile(file);
   }
@@ -205,8 +251,14 @@ export class TallerViewComponent {
   uploadFile(file: File) {
     this.projects.isUploading.set(true);
     this.projects.uploadFile(file)?.subscribe({
-      next: () => { this.projects.loadProjectFiles(); this.projects.isUploading.set(false); },
-      error: (err) => { console.error("Error al subir archivo", err); this.projects.isUploading.set(false); }
+      next: () => {
+        this.projects.loadProjectFiles();
+        this.projects.isUploading.set(false);
+      },
+      error: (err) => {
+        console.error('Error al subir archivo', err);
+        this.projects.isUploading.set(false);
+      },
     });
   }
 
@@ -215,8 +267,14 @@ export class TallerViewComponent {
     this.appFacade.confirmMessage.set(this.trans.t().deleteFile + ' ' + filename + '?');
     this.appFacade.confirmAction.set(() => {
       this.projects.deleteFile(filename)?.subscribe({
-        next: () => { this.projects.loadProjectFiles(); this.appFacade.showConfirmModal.set(false); },
-        error: (err) => { console.error("Error al borrar archivo", err); this.appFacade.showConfirmModal.set(false); }
+        next: () => {
+          this.projects.loadProjectFiles();
+          this.appFacade.showConfirmModal.set(false);
+        },
+        error: (err) => {
+          console.error('Error al borrar archivo', err);
+          this.appFacade.showConfirmModal.set(false);
+        },
       });
     });
     this.appFacade.showConfirmModal.set(true);

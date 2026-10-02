@@ -8,16 +8,30 @@
           type="button"
           class="history-view__pill"
           [class.history-view__pill--active]="!onlyMine()"
-          (click)="onlyMine.set(false)">{{ trans.t().historyAllProjects }}</button>
+          (click)="onlyMine.set(false)"
+        >
+          {{ trans.t().historyAllProjects }}
+        </button>
         <button
           type="button"
           class="history-view__pill"
           [class.history-view__pill--active]="onlyMine()"
-          (click)="onlyMine.set(true)">{{ trans.t().historyMyProjects }}</button>
+          (click)="onlyMine.set(true)"
+        >
+          {{ trans.t().historyMyProjects }}
+        </button>
       </div>
 
       <div class="history-view__search">
-        <svg class="history-view__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg
+          class="history-view__search-icon"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
@@ -26,7 +40,8 @@
           class="history-view__search-input"
           [placeholder]="trans.t().historySearchPlaceholder"
           (input)="onSearch($event)"
-          [value]="searchQuery()">
+          [value]="searchQuery()"
+        />
       </div>
     </div>
 
@@ -38,7 +53,8 @@
           [options]="moduleSelectOptions()"
           [value]="moduleFilter() || ''"
           [placeholder]="trans.t().historyFilterAllModules"
-          (valueChange)="onModuleChange($event)">
+          (valueChange)="onModuleChange($event)"
+        >
         </app-select>
       </label>
       <label class="history-view__filter-label">
@@ -48,10 +64,13 @@
           [options]="raSelectOptions()"
           [value]="raFilter() || ''"
           [placeholder]="trans.t().historyFilterAllRas"
-          (valueChange)="onRaChange($event)">
+          (valueChange)="onRaChange($event)"
+        >
         </app-select>
       </label>
-      <span class="history-view__results">{{ filteredProjects().length }} {{ trans.t().historyResultsCount }}</span>
+      <span class="history-view__results"
+        >{{ filteredProjects().length }} {{ trans.t().historyResultsCount }}</span
+      >
     </div>
 
     <div class="history-view__tabs">
@@ -60,7 +79,10 @@
           type="button"
           class="history-view__tab"
           [class.history-view__tab--active]="activeTab() === tab.id"
-          (click)="activeTab.set(tab.id)">{{ labelFor(tab.key) }}</button>
+          (click)="activeTab.set(tab.id)"
+        >
+          {{ labelFor(tab.key) }}
+        </button>
       }
     </div>
   </div>

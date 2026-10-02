@@ -1,4 +1,5 @@
 import { Injectable, inject, signal, untracked, effect } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { LayoutService } from './services/layout.service';
 import { TranslationService } from './services/translation.service';
 import { CurriculumFacade } from './features/curriculum/services/curriculum.facade';
@@ -8,6 +9,8 @@ import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
 import { findProjectsWithSameSelection } from './features/projects/utils/selection-match';
+import { Project } from './features/projects/models/project.model';
+import { AppNotification } from './features/notifications/models/notification.model';
 
 @Injectable({ providedIn: 'root' })
 export class AppFacade {
@@ -23,19 +26,21 @@ export class AppFacade {
   errorTitle = signal<string>('Ha ocurrido un error');
   errorMessage = signal<string>('');
   showErrorModal = signal<boolean>(false);
-  
+
   infoMessage = signal<string>('');
   infoTitle = signal<string>('Información');
-  infoType = signal<'info'|'success'>('info');
+  infoType = signal<'info' | 'success'>('info');
   showInfoModal = signal<boolean>(false);
-  
+
   showConfirmModal = signal<boolean>(false);
   confirmTitle = signal<string>('');
   confirmMessage = signal<string>('');
-  confirmAction = signal<() => void>(() => {});
+  confirmAction = signal<() => void>(() => {
+    // Acción por defecto: no hacer nada hasta que se configure el modal
+  });
 
   showDuplicateModal = signal<boolean>(false);
-  duplicateProjects = signal<any[]>([]);
+  duplicateProjects = signal<Project[]>([]);
 
   queueToastMessage = signal<string | null>(null);
   queueToastRestartToken = signal(0);
@@ -43,7 +48,9 @@ export class AppFacade {
   private shownCompletedProjectIds = new Set<string>();
   private lastHistorySignature = '';
   private pendingProjectId: string | null =
-    typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('project') : null;
+    typeof window !== 'undefined'
+      ? new URLSearchParams(window.location.search).get('project')
+      : null;
 
   constructor() {
     this.initAuthEffect();
@@ -98,8 +105,9 @@ export class AppFacade {
    */
   private initHistoryRefreshEffect(): void {
     effect(() => {
-      const signature = this.notifications.notifications()
-        .map(n => `${n.projectId}:${n.status}:${n.generationTimeMs ?? ''}`)
+      const signature = this.notifications
+        .notifications()
+        .map((n) => `${n.projectId}:${n.status}:${n.generationTimeMs ?? ''}`)
         .sort()
         .join('|');
       if (!signature || signature === this.lastHistorySignature) return;
@@ -108,7 +116,7 @@ export class AppFacade {
     });
   }
 
-  private handleCompletedNotification(notif: any): void {
+  private handleCompletedNotification(notif: AppNotification): void {
     const key = notif.projectId || notif.id || notif.message;
     if (this.shownCompletedProjectIds.has(key)) return;
     this.shownCompletedProjectIds.add(key);
@@ -148,12 +156,15 @@ export class AppFacade {
     this.enqueueGeneration();
   }
 
-  private findProjectsWithSameSelection(): any[] {
-    return findProjectsWithSameSelection(this.projects.projectsHistory() || [], this.curriculum.selectedRas());
+  private findProjectsWithSameSelection(): Project[] {
+    return findProjectsWithSameSelection(
+      this.projects.projectsHistory() || [],
+      this.curriculum.selectedRas(),
+    );
   }
 
   /** Abre el editor de un proyecto en una pestaña/ventana nueva mediante `?project=<id>`. */
-  openProjectInNewWindow(project: any): void {
+  openProjectInNewWindow(project: Project): void {
     if (!project?._id) return;
     const url = `${window.location.origin}${window.location.pathname}?project=${project._id}`;
     window.open(url, '_blank');
@@ -164,11 +175,15 @@ export class AppFacade {
     effect(() => {
       const id = this.pendingProjectId;
       if (!id) return;
-      const project = (this.projects.projectsHistory() || []).find((p: any) => p._id === id);
+      const project = (this.projects.projectsHistory() || []).find((p) => p._id === id);
       if (!project) return;
       untracked(() => {
         this.pendingProjectId = null;
-        try { window.history.replaceState({}, '', window.location.pathname); } catch { /* no-op */ }
+        try {
+          window.history.replaceState({}, '', window.location.pathname);
+        } catch {
+          /* no-op */
+        }
         this.viewPastProject(project);
       });
     });
@@ -183,7 +198,7 @@ export class AppFacade {
     this.showDuplicateModal.set(false);
   }
 
-  openDuplicateProject(project: any): void {
+  openDuplicateProject(project: Project): void {
     this.showDuplicateModal.set(false);
     this.viewPastProject(project);
   }
@@ -205,7 +220,7 @@ export class AppFacade {
     this.projects.isGenerating.set(true);
     this.projects.generateProject(this.layout.language()).subscribe({
       next: () => this.onGenerateSuccess(),
-      error: (err) => this.onGenerateError(err)
+      error: (err) => this.onGenerateError(err),
     });
   }
 
@@ -222,14 +237,14 @@ export class AppFacade {
 
   private showQueueToast(message: string): void {
     this.queueToastMessage.set(message);
-    this.queueToastRestartToken.update(token => token + 1);
+    this.queueToastRestartToken.update((token) => token + 1);
   }
 
   dismissQueueToast(): void {
     this.queueToastMessage.set(null);
   }
 
-  private onGenerateError(err: any): void {
+  private onGenerateError(err: HttpErrorResponse): void {
     console.error('Error:', err);
     this.errorTitle.set(this.trans.t().modalGenerationError);
     const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
@@ -253,13 +268,13 @@ export class AppFacade {
           this.errorMessage.set(err.error?.error || 'Error al borrar el proyecto');
           this.showErrorModal.set(true);
           this.showConfirmModal.set(false);
-        }
+        },
       });
     });
     this.showConfirmModal.set(true);
   }
 
-  retryProject(project: any): void {
+  retryProject(project: Project): void {
     if (project?._id) this.shownCompletedProjectIds.delete(project._id);
     this.projects.retryProject(project._id).subscribe({
       next: () => {
@@ -272,14 +287,15 @@ export class AppFacade {
       error: (err) => {
         console.error('Error al reintentar proyecto:', err);
         this.errorTitle.set('Error al Reintentar');
-        const serverMsg = err.error?.error || err.error?.message || err.message || 'Error desconocido';
+        const serverMsg =
+          err.error?.error || err.error?.message || err.message || 'Error desconocido';
         this.errorMessage.set(serverMsg);
         this.showErrorModal.set(true);
-      }
+      },
     });
   }
 
-  viewPastProject(project: any): void {
+  viewPastProject(project: Project): void {
     if (project.status === 'error') {
       const err = project.errorDetail || project.error || 'Error desconocido';
       this.errorTitle.set(this.trans.t().viewError || 'Error de Generación');
@@ -288,9 +304,10 @@ export class AppFacade {
       return;
     }
     this.projects.currentProjectId.set(project._id);
-    const rawText = typeof project.generatedContent === 'string' 
-      ? project.generatedContent 
-      : project.generatedContent?.rawText;
+    const rawText =
+      typeof project.generatedContent === 'string'
+        ? project.generatedContent
+        : project.generatedContent?.rawText;
     this.projects.generatedProject.set(rawText || 'Sin contenido');
     this.projects.loadProjectFiles();
     this.layout.switchView('taller');

@@ -11,8 +11,6 @@ import { map } from 'rxjs/operators';
 
 import {
   Project,
-  ProjectStatus,
-  ProjectType,
   ProjectFile,
   CreateProjectPayload,
   UpdateProjectPayload,
@@ -33,10 +31,16 @@ import {
   fromRetryProjectResponse,
   fromProjectFileDtoArray,
   toCreateProjectPayload,
-  toUpdateProjectPayload,
-  toRewriteSectionPayload,
   toFileUploadFormData,
   toImportDocxFormData,
+  fromRewriteSectionResponse,
+  ProjectDto,
+  ProjectFileDto,
+  GenerateProjectResponseDto,
+  FileUploadResponseDto,
+  ImportDocxResponseDto,
+  RetryProjectResponseDto,
+  RewriteSectionResponseDto,
 } from '../mappers/projects.mapper';
 
 @Injectable({ providedIn: 'root' })
@@ -57,23 +61,21 @@ export class ProjectsService {
   }
 
   addCollaborator(projectId: string, userId: string): Observable<Project> {
-    return this.http.post<any>(`${this.apiUrl}/${projectId}/collaborators`, { userId }).pipe(
-      map(fromProjectDto)
-    );
+    return this.http
+      .post<ProjectDto>(`${this.apiUrl}/${projectId}/collaborators`, { userId })
+      .pipe(map(fromProjectDto));
   }
 
   removeCollaborator(projectId: string, userId: string): Observable<Project> {
-    return this.http.delete<any>(`${this.apiUrl}/${projectId}/collaborators/${userId}`).pipe(
-      map(fromProjectDto)
-    );
+    return this.http
+      .delete<ProjectDto>(`${this.apiUrl}/${projectId}/collaborators/${userId}`)
+      .pipe(map(fromProjectDto));
   }
 
   // ---- Historial ----
 
   getHistory(): Observable<Project[]> {
-    return this.http.get<any[]>(this.apiUrl).pipe(
-      map(fromProjectDtoArray)
-    );
+    return this.http.get<ProjectDto[]>(this.apiUrl).pipe(map(fromProjectDtoArray));
   }
 
   deleteProject(projectId: string): Observable<void> {
@@ -81,31 +83,36 @@ export class ProjectsService {
   }
 
   retryProject(projectId: string): Observable<RetryProjectResponse> {
-    return this.http.post<any>(`${this.apiUrl}/${projectId}/retry`, {}).pipe(
-      map(fromRetryProjectResponse)
-    );
+    return this.http
+      .post<RetryProjectResponseDto>(`${this.apiUrl}/${projectId}/retry`, {})
+      .pipe(map(fromRetryProjectResponse));
   }
 
   // ---- Generación ----
 
   generateProject(payload: CreateProjectPayload): Observable<GenerateProjectResponse> {
     const dto = toCreateProjectPayload(payload);
-    return this.http.post<any>(`${this.apiUrl}/generate`, dto).pipe(
-      map(fromGenerateProjectResponse)
-    );
+    return this.http
+      .post<GenerateProjectResponseDto>(`${this.apiUrl}/generate`, dto)
+      .pipe(map(fromGenerateProjectResponse));
   }
 
   updateProjectStatus(projectId: string, payload: UpdateProjectPayload): Observable<Project> {
-    return this.http.put<any>(`${this.apiUrl}/${projectId}`, payload).pipe(
-      map(fromProjectDto)
-    );
+    return this.http
+      .put<ProjectDto>(`${this.apiUrl}/${projectId}`, payload)
+      .pipe(map(fromProjectDto));
   }
 
-  rewriteSection(payload: { context: string; instruction: string; aiProvider: 'gemini' | 'openrouter'; aiModel: string }): Observable<string> {
+  rewriteSection(payload: {
+    context: string;
+    instruction: string;
+    aiProvider: 'gemini' | 'openrouter';
+    aiModel: string;
+  }): Observable<RewriteSectionResponseDto> {
     // El backend devuelve { rawText: string } o string plano
-    return this.http.post<any>(`${this.apiUrl}/rewrite`, payload).pipe(
-      map(res => res?.rawText || res)
-    );
+    return this.http
+      .post<RewriteSectionResponseDto>(`${this.apiUrl}/rewrite`, payload)
+      .pipe(map(fromRewriteSectionResponse));
   }
 
   // ---- Undo/Redo (estado local, no HTTP) ----
@@ -114,16 +121,16 @@ export class ProjectsService {
   // ---- Archivos ----
 
   getProjectFiles(projectId: string): Observable<ProjectFile[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/${projectId}/files`).pipe(
-      map(fromProjectFileDtoArray)
-    );
+    return this.http
+      .get<ProjectFileDto[]>(`${this.apiUrl}/${projectId}/files`)
+      .pipe(map(fromProjectFileDtoArray));
   }
 
   uploadFile(projectId: string, file: File): Observable<FileUploadResponse> {
     const formData = toFileUploadFormData(file, projectId);
-    return this.http.post<any>(`${this.apiUrl}/${projectId}/files`, formData).pipe(
-      map(fromFileUploadResponse)
-    );
+    return this.http
+      .post<FileUploadResponseDto>(`${this.apiUrl}/${projectId}/files`, formData)
+      .pipe(map(fromFileUploadResponse));
   }
 
   deleteFile(projectId: string, filename: string): Observable<void> {
@@ -140,8 +147,8 @@ export class ProjectsService {
 
   importDocx(projectId: string, file: File): Observable<ImportDocxResponse> {
     const formData = toImportDocxFormData(file, projectId);
-    return this.http.post<any>(`${this.apiUrl}/${projectId}/import-docx`, formData).pipe(
-      map(fromImportDocxResponse)
-    );
+    return this.http
+      .post<ImportDocxResponseDto>(`${this.apiUrl}/${projectId}/import-docx`, formData)
+      .pipe(map(fromImportDocxResponse));
   }
 }

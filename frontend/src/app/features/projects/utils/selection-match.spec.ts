@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { selectionKey, findProjectsWithSameSelection } from './selection-match';
 
 describe('selection-match', () => {
-  const project = (overrides: any = {}) => ({ _id: '1', status: 'borrador', ras: ['ra1'], ...overrides } as any);
+  const project = (overrides: any = {}) =>
+    ({ _id: '1', status: 'borrador', ras: ['ra1'], ...overrides }) as any;
 
   it('selectionKey normaliza orden, mayúsculas y espacios', () => {
     expect(selectionKey([' B ', 'a'])).toBe('a||b');
@@ -17,7 +18,7 @@ describe('selection-match', () => {
       project({ _id: 'p4', ras: undefined }),
     ];
     const res = findProjectsWithSameSelection(projects as any, ['ra1', 'ra2']);
-    expect(res.map(p => p._id)).toEqual(['p1']);
+    expect(res.map((p) => p._id)).toEqual(['p1']);
   });
 
   it('devuelve [] si no hay selección', () => {
@@ -30,6 +31,8 @@ describe('selection-match', () => {
       project({ _id: 'p1', ras: 'no-array' }),
       project({ _id: 'p2', ras: ['ra1'] }),
     ];
-    expect(findProjectsWithSameSelection(projects as any, ['ra1']).map(p => p._id)).toEqual(['p2']);
+    expect(findProjectsWithSameSelection(projects as any, ['ra1']).map((p) => p._id)).toEqual([
+      'p2',
+    ]);
   });
 });

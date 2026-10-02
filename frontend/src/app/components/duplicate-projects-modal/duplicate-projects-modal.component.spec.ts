@@ -1,13 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DuplicateProjectsModalComponent } from './duplicate-projects-modal.component';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { Project } from '../../features/projects/models/project.model';
+
+const asProject = (p: object) => p as Project;
 
 describe('DuplicateProjectsModalComponent', () => {
   let component: DuplicateProjectsModalComponent;
   let fixture: ComponentFixture<DuplicateProjectsModalComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({ imports: [DuplicateProjectsModalComponent] }).compileComponents();
+    await TestBed.configureTestingModule({
+      imports: [DuplicateProjectsModalComponent],
+    }).compileComponents();
     fixture = TestBed.createComponent(DuplicateProjectsModalComponent);
     component = fixture.componentInstance;
     fixture.componentRef.setInput('title', 'Ya existen proyectos');
@@ -15,7 +20,13 @@ describe('DuplicateProjectsModalComponent', () => {
     fixture.componentRef.setInput('cancelLabel', 'Cancelar');
     fixture.componentRef.setInput('proceedLabel', 'Continuar');
     fixture.componentRef.setInput('projects', [
-      { _id: 'p1', title: 'Duplicado', status: 'borrador', createdAt: new Date().toISOString(), modules: ['Mod A'] },
+      {
+        _id: 'p1',
+        title: 'Duplicado',
+        status: 'borrador',
+        createdAt: new Date().toISOString(),
+        modules: ['Mod A'],
+      },
     ]);
     fixture.detectChanges();
   });
@@ -40,9 +51,11 @@ describe('DuplicateProjectsModalComponent', () => {
     const proceedSpy = vi.fn();
     const cancelSpy = vi.fn();
     component.proceed.subscribe(proceedSpy);
-    component.cancel.subscribe(cancelSpy);
+    component.cancelled.subscribe(cancelSpy);
 
-    const buttons = fixture.nativeElement.querySelectorAll('.duplicate-projects-modal__actions button');
+    const buttons = fixture.nativeElement.querySelectorAll(
+      '.duplicate-projects-modal__actions button',
+    );
     (buttons[0] as HTMLButtonElement).click();
     (buttons[1] as HTMLButtonElement).click();
 
@@ -51,22 +64,28 @@ describe('DuplicateProjectsModalComponent', () => {
   });
 
   it('should fall back to modules when a project has no title', () => {
-    fixture.componentRef.setInput('projects', [{ _id: 'p2', status: 'borrador', modules: ['Mod B'] }]);
+    fixture.componentRef.setInput('projects', [
+      { _id: 'p2', status: 'borrador', modules: ['Mod B'] },
+    ]);
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('Mod B');
   });
 
   it('should emit cancel from the backdrop', () => {
     const cancelSpy = vi.fn();
-    component.cancel.subscribe(cancelSpy);
-    (fixture.nativeElement.querySelector('.duplicate-projects-modal__backdrop') as HTMLElement).click();
+    component.cancelled.subscribe(cancelSpy);
+    (
+      fixture.nativeElement.querySelector('.duplicate-projects-modal__backdrop') as HTMLElement
+    ).click();
     expect(cancelSpy).toHaveBeenCalled();
   });
 
   it('should resolve title and modules fallbacks', () => {
-    expect(component.projectTitle({ _id: 'x', status: 'borrador' })).toBe('Proyecto');
-    expect(component.projectModules({ _id: 'x', generatedContent: { modules: ['G1'] } })).toBe('G1');
-    expect(component.projectModules({ _id: 'x' })).toBe('');
+    expect(component.projectTitle(asProject({ _id: 'x', status: 'borrador' }))).toBe('Proyecto');
+    expect(
+      component.projectModules(asProject({ _id: 'x', generatedContent: { modules: ['G1'] } })),
+    ).toBe('G1');
+    expect(component.projectModules(asProject({ _id: 'x' }))).toBe('');
   });
 
   it('should render the modules condition for both true and false', () => {

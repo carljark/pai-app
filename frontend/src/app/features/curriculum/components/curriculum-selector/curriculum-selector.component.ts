@@ -2,6 +2,7 @@ import { Component, inject, input, output, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurriculumFacade } from '../../services/curriculum.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { Project } from '../../../projects/models/project.model';
 import { AppFacade } from '../../../../app.facade';
 import { TranslationService } from '../../../../services/translation.service';
 
@@ -10,7 +11,7 @@ import { TranslationService } from '../../../../services/translation.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './curriculum-selector.component.html',
-  styleUrls: ['./curriculum-selector.component.scss']
+  styleUrls: ['./curriculum-selector.component.scss'],
 })
 export class CurriculumSelectorComponent {
   facade = inject(CurriculumFacade);
@@ -26,7 +27,7 @@ export class CurriculumSelectorComponent {
   generatingText = input.required<string>();
   generate = output<void>();
 
-  openProject(project: any): void {
+  openProject(project: Project): void {
     this.appFacade.openProjectInNewWindow(project);
   }
 }

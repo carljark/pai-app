@@ -1,4 +1,4 @@
-import { RA } from '../src/models/RA';
+import { RA } from '../../models/RA';
 
 export async function up() {
   const newModuleData = [

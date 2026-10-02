@@ -4,12 +4,54 @@
 <div class="card">
   <!-- Fila 1: Pestañas de titulación (ancho completo) -->
   <div class="form-group level-group">
-    <label>{{ trans.t().generatorLevelLabel }}</label>
-    <div class="tabs">
-      <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'FP_BASICA'" (click)="curriculum.setTipoNivel('FP_BASICA')">{{ trans.t().courseLevelFP }}</div>
-      <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_ESTETICA'" (click)="curriculum.setTipoNivel('CFGM_ESTETICA')">{{ trans.t().courseLevelCFGM }}</div>
-      <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_PELUQUERIA'" (click)="curriculum.setTipoNivel('CFGM_PELUQUERIA')">{{ trans.t().courseLevelCFGMPeluqueria }}</div>
-      <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'" (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')">{{ trans.t().courseLevelPDC }}</div>
+    <span class="form-group__label" id="generator-level-label">{{
+      trans.t().generatorLevelLabel
+    }}</span>
+    <div class="tabs" role="tablist" aria-labelledby="generator-level-label">
+      <div
+        class="tabs-item"
+        role="tab"
+        tabindex="0"
+        [class.active]="curriculum.tipoNivel() === 'FP_BASICA'"
+        [attr.aria-selected]="curriculum.tipoNivel() === 'FP_BASICA'"
+        (click)="curriculum.setTipoNivel('FP_BASICA')"
+        (keydown.enter)="curriculum.setTipoNivel('FP_BASICA')"
+      >
+        {{ trans.t().courseLevelFP }}
+      </div>
+      <div
+        class="tabs-item"
+        role="tab"
+        tabindex="0"
+        [class.active]="curriculum.tipoNivel() === 'CFGM_ESTETICA'"
+        [attr.aria-selected]="curriculum.tipoNivel() === 'CFGM_ESTETICA'"
+        (click)="curriculum.setTipoNivel('CFGM_ESTETICA')"
+        (keydown.enter)="curriculum.setTipoNivel('CFGM_ESTETICA')"
+      >
+        {{ trans.t().courseLevelCFGM }}
+      </div>
+      <div
+        class="tabs-item"
+        role="tab"
+        tabindex="0"
+        [class.active]="curriculum.tipoNivel() === 'CFGM_PELUQUERIA'"
+        [attr.aria-selected]="curriculum.tipoNivel() === 'CFGM_PELUQUERIA'"
+        (click)="curriculum.setTipoNivel('CFGM_PELUQUERIA')"
+        (keydown.enter)="curriculum.setTipoNivel('CFGM_PELUQUERIA')"
+      >
+        {{ trans.t().courseLevelCFGMPeluqueria }}
+      </div>
+      <div
+        class="tabs-item"
+        role="tab"
+        tabindex="0"
+        [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'"
+        [attr.aria-selected]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'"
+        (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')"
+        (keydown.enter)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')"
+      >
+        {{ trans.t().courseLevelPDC }}
+      </div>
     </div>
   </div>
 
@@ -21,7 +63,8 @@
         inputId="generator-course-select"
         [options]="courseOptions()"
         [value]="curriculum.curso()"
-        (valueChange)="onCourseChange($event)">
+        (valueChange)="onCourseChange($event)"
+      >
       </app-select>
     </div>
 
@@ -31,7 +74,8 @@
         inputId="generator-methodology-select"
         [options]="methodologyOptions()"
         [value]="projects.methodology()"
-        (valueChange)="onMethodologyChange($event)">
+        (valueChange)="onMethodologyChange($event)"
+      >
       </app-select>
     </div>
 
@@ -42,7 +86,8 @@
           inputId="generator-ai-select"
           [options]="aiOptions()"
           [value]="projects.selectedAi()"
-          (valueChange)="onAiChange($event)">
+          (valueChange)="onAiChange($event)"
+        >
         </app-select>
       </div>
 
@@ -52,35 +97,75 @@
           inputId="generator-model-select"
           [options]="modelOptions()"
           [value]="projects.selectedModel()"
-          (valueChange)="onModelChange($event)">
+          (valueChange)="onModelChange($event)"
+        >
         </app-select>
       </div>
     }
   </div>
 
-  <div class="form-group" style="margin-top: 12px;">
-    <label>{{ trans.t().generatorCollaboratorsLabel }}</label>
-    <details style="border: 1px solid var(--c-border); border-radius: 6px; padding: 8px 12px;">
-      <summary style="cursor: pointer; font-size: 0.9rem;">
+  <div class="form-group" style="margin-top: 12px">
+    <span class="form-group__label" id="generator-collaborators-label">{{
+      trans.t().generatorCollaboratorsLabel
+    }}</span>
+    <details
+      aria-labelledby="generator-collaborators-label"
+      style="border: 1px solid var(--c-border); border-radius: 6px; padding: 8px 12px"
+    >
+      <summary style="cursor: pointer; font-size: 0.9rem">
         {{ projects.selectedCollaborators().length }} {{ trans.t().generatorCollaboratorsSelected }}
       </summary>
-      <div style="max-height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; margin-top: 8px;">
+      <div
+        style="
+          max-height: 180px;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          margin-top: 8px;
+        "
+      >
         @for (u of projects.directory(); track u._id) {
-          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem;">
-            <input type="checkbox" [checked]="projects.selectedCollaborators().includes(u._id)" (change)="projects.toggleCollaborator(u._id)">
-            <span>{{ u.name }} <span style="color: var(--c-text-muted);">({{ u.email }})</span></span>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem">
+            <input
+              type="checkbox"
+              [checked]="projects.selectedCollaborators().includes(u._id)"
+              (change)="projects.toggleCollaborator(u._id)"
+            />
+            <span
+              >{{ u.name }} <span style="color: var(--c-text-muted)">({{ u.email }})</span></span
+            >
           </label>
         } @empty {
-          <span style="font-size: 0.85rem; color: var(--c-text-muted);">{{ trans.t().generatorCollaboratorsEmpty }}</span>
+          <span style="font-size: 0.85rem; color: var(--c-text-muted)">{{
+            trans.t().generatorCollaboratorsEmpty
+          }}</span>
         }
       </div>
     </details>
     @if (projects.selectedCollaborators().length > 0) {
-      <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px">
         @for (id of projects.selectedCollaborators(); track id) {
-          <span style="display: inline-flex; align-items: center; gap: 4px; background: #e0e7ff; color: #3730a3; border-radius: 12px; padding: 2px 8px; font-size: 0.8rem;">
+          <span
+            style="
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+              background: #e0e7ff;
+              color: #3730a3;
+              border-radius: 12px;
+              padding: 2px 8px;
+              font-size: 0.8rem;
+            "
+          >
             {{ getUserName(id) }}
-            <button type="button" (click)="projects.toggleCollaborator(id)" style="background: none; border: none; cursor: pointer; color: #3730a3;">×</button>
+            <button
+              type="button"
+              (click)="projects.toggleCollaborator(id)"
+              style="background: none; border: none; cursor: pointer; color: #3730a3"
+            >
+              ×
+            </button>
           </span>
         }
       </div>
@@ -98,7 +183,8 @@
       rows="3"
       [placeholder]="trans.t().generatorExtraInstructionsPlaceholder"
       [value]="projects.extraInstructions()"
-      (input)="onExtraInstructionsChange($event)">
+      (input)="onExtraInstructionsChange($event)"
+    >
     </textarea>
   </div>
 
@@ -107,6 +193,7 @@
     [generateText]="trans.t().generateBtn"
     [generatingText]="trans.t().generatingBtn"
     [isGenerating]="projects.isGenerating()"
-    (generate)="generateProject()">
+    (generate)="generateProject()"
+  >
   </app-curriculum-selector>
 </div>

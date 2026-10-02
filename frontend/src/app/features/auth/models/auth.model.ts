@@ -1,5 +1,7 @@
 export interface User {
   _id?: string;
+  /** Identificador legacy que algunas respuestas devuelven en lugar de `_id` */
+  id?: string;
   name: string;
   email: string;
   role?: 'pending' | 'teacher' | 'admin';

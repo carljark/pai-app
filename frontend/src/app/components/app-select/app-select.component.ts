@@ -9,7 +9,7 @@ export interface SelectOption {
   selector: 'app-select',
   standalone: true,
   templateUrl: './app-select.component.html',
-  styleUrls: ['./app-select.component.scss']
+  styleUrls: ['./app-select.component.scss'],
 })
 export class AppSelectComponent {
   inputId = input<string | null>(null);

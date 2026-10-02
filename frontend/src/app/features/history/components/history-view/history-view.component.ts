@@ -5,7 +5,10 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { HistoryProjectCardComponent } from '../history-project-card/history-project-card.component';
-import { AppSelectComponent, SelectOption } from '../../../../components/app-select/app-select.component';
+import {
+  AppSelectComponent,
+  SelectOption,
+} from '../../../../components/app-select/app-select.component';
 import {
   HistoryFilters,
   HistoryTabId,
@@ -20,7 +23,7 @@ import {
   standalone: true,
   imports: [CommonModule, HistoryProjectCardComponent, AppSelectComponent],
   templateUrl: './history-view.component.html',
-  styleUrls: ['./history-view.component.scss']
+  styleUrls: ['./history-view.component.scss'],
 })
 export class HistoryViewComponent {
   appFacade = inject(AppFacade);
@@ -42,14 +45,20 @@ export class HistoryViewComponent {
   ];
 
   moduleOptions = computed(() => collectModuleOptions(this.projects.projectsHistory() || []));
-  raOptions = computed(() => collectRaOptions(this.projects.projectsHistory() || [], this.moduleFilter()));
+  raOptions = computed(() =>
+    collectRaOptions(this.projects.projectsHistory() || [], this.moduleFilter()),
+  );
 
-  moduleSelectOptions = computed<SelectOption[]>(() => this.moduleOptions().map(m => ({ value: m, label: m })));
-  raSelectOptions = computed<SelectOption[]>(() => this.raOptions().map(r => ({ value: r, label: r })));
+  moduleSelectOptions = computed<SelectOption[]>(() =>
+    this.moduleOptions().map((m) => ({ value: m, label: m })),
+  );
+  raSelectOptions = computed<SelectOption[]>(() =>
+    this.raOptions().map((r) => ({ value: r, label: r })),
+  );
 
   filteredProjects = computed(() => {
     const owner = this.auth.currentUser();
-    const ownerId = owner ? (owner._id || (owner as any).id)?.toString() : undefined;
+    const ownerId = owner ? owner._id || owner.id : undefined;
     const filters: HistoryFilters = {
       tab: this.activeTab() as HistoryTabId,
       onlyMine: this.onlyMine(),
@@ -58,7 +67,7 @@ export class HistoryViewComponent {
       module: this.moduleFilter(),
       ra: this.raFilter(),
     };
-    return (this.projects.projectsHistory() || []).filter(p => matchesProjectFilters(p, filters));
+    return (this.projects.projectsHistory() || []).filter((p) => matchesProjectFilters(p, filters));
   });
 
   onSearch(event: Event) {
@@ -66,7 +75,8 @@ export class HistoryViewComponent {
   }
 
   labelFor(key: string): string {
-    return (this.trans.t() as any)[key] || key;
+    const t = this.trans.t();
+    return t[key as keyof typeof t] || key;
   }
 
   onModuleChange(value: string) {

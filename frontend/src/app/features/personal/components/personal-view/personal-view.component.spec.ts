@@ -7,6 +7,10 @@ import { TranslationService } from '../../../../services/translation.service';
 import { LayoutService } from '../../../../services/layout.service';
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { Project } from '../../../projects/models/project.model';
+
+// Los tests usan proyectos parciales
+const asProject = (p: object) => p as Project;
 
 describe('PersonalViewComponent', () => {
   let component: PersonalViewComponent;
@@ -15,20 +19,20 @@ describe('PersonalViewComponent', () => {
   const mockAppFacade = {
     viewPastProject: vi.fn(),
     retryProject: vi.fn(),
-    deleteProject: vi.fn()
+    deleteProject: vi.fn(),
   };
 
   const mockProjectsFacade = {
     myProjects: signal<any[]>([]),
-    loadHistory: vi.fn()
+    loadHistory: vi.fn(),
   };
 
   const mockAuthFacade = {
-    currentUser: signal({ _id: 'u1', name: 'Eva', email: 'eva@test.com' })
+    currentUser: signal({ _id: 'u1', name: 'Eva', email: 'eva@test.com' }),
   };
 
   const mockLayoutService = {
-    switchView: vi.fn()
+    switchView: vi.fn(),
   };
 
   const mockTranslationService = {
@@ -56,8 +60,8 @@ describe('PersonalViewComponent', () => {
       retryBtn: 'Reintentar',
       viewError: 'Ver Error',
       openEditor: 'Abrir Editor',
-      deleteFile: 'Borrar'
-    })
+      deleteFile: 'Borrar',
+    }),
   };
 
   beforeEach(async () => {
@@ -71,8 +75,8 @@ describe('PersonalViewComponent', () => {
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: LayoutService, useValue: mockLayoutService },
-        { provide: TranslationService, useValue: mockTranslationService }
-      ]
+        { provide: TranslationService, useValue: mockTranslationService },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PersonalViewComponent);
@@ -90,7 +94,7 @@ describe('PersonalViewComponent', () => {
       { _id: '1', title: 'P1', status: 'borrador', tipoNivel: 'FP_BASICA' },
       { _id: '2', title: 'P2', status: 'publicado', tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
       { _id: '3', title: 'P3', status: 'en_cola', tipoNivel: 'FP_BASICA' },
-      { _id: '4', title: 'P4', status: 'error', tipoNivel: 'FP_BASICA' }
+      { _id: '4', title: 'P4', status: 'error', tipoNivel: 'FP_BASICA' },
     ]);
     fixture.detectChanges();
 
@@ -105,7 +109,7 @@ describe('PersonalViewComponent', () => {
       { _id: '1', title: 'P1 FPB', tipoNivel: 'FP_BASICA' },
       { _id: '2', title: 'P2 CFGM', tipoNivel: 'CFGM_ESTETICA' },
       { _id: '2b', title: 'P2b CFGM Pel', tipoNivel: 'CFGM_PELUQUERIA' },
-      { _id: '3', title: 'P3 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' }
+      { _id: '3', title: 'P3 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
 
@@ -114,7 +118,8 @@ describe('PersonalViewComponent', () => {
     const allPill = pills[0];
     const fpbPill = pills[1];
     const cfgmPill = pills[3];
-    const cfgmPelPill = pills[2]; const esoPill = pills[4];
+    const cfgmPelPill = pills[2];
+    const esoPill = pills[4];
 
     fpbPill.click();
     fixture.detectChanges();
@@ -150,7 +155,7 @@ describe('PersonalViewComponent', () => {
     mockProjectsFacade.myProjects.set([
       { _id: '1', title: 'P1', status: 'borrador' },
       { _id: '2', title: 'P2', status: 'publicado' },
-      { _id: '3', title: 'P3', status: 'error' }
+      { _id: '3', title: 'P3', status: 'error' },
     ]);
     fixture.detectChanges();
 
@@ -189,7 +194,13 @@ describe('PersonalViewComponent', () => {
     mockProjectsFacade.myProjects.set([
       { _id: '1', title: 'Robótica y Sensores', modules: ['Tecno'], status: 'borrador' },
       { _id: '2', title: 'Cocina Mediterránea', modules: ['Hostelería'], status: 'publicado' },
-      { _id: '3', title: null, modules: null, status: 'borrador', generatedContent: { modules: ['GenMod'] } }
+      {
+        _id: '3',
+        title: null,
+        modules: null,
+        status: 'borrador',
+        generatedContent: { modules: ['GenMod'] },
+      },
     ]);
     fixture.detectChanges();
 
@@ -210,24 +221,24 @@ describe('PersonalViewComponent', () => {
 
   it('debería llamar a las acciones desde los botones del DOM', () => {
     mockProjectsFacade.myProjects.set([
-      { 
-        _id: '1', 
-        title: 'Proj Error', 
-        status: 'error', 
-        tipoNivel: 'FP_BASICA', 
-        usedAiProvider: 'openrouter', 
+      {
+        _id: '1',
+        title: 'Proj Error',
+        status: 'error',
+        tipoNivel: 'FP_BASICA',
+        usedAiProvider: 'openrouter',
         generationTimeMs: 14200,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
       },
-      { 
-        _id: '2', 
-        title: 'Proj Borrador', 
-        status: 'borrador', 
-        tipoNivel: 'DIVERSIFICACION_CURRICULAR', 
-        usedAiProvider: 'gemini', 
+      {
+        _id: '2',
+        title: 'Proj Borrador',
+        status: 'borrador',
+        tipoNivel: 'DIVERSIFICACION_CURRICULAR',
+        usedAiProvider: 'gemini',
         generationTimeMs: 8100,
-        createdAt: new Date().toISOString()
-      }
+        createdAt: new Date().toISOString(),
+      },
     ]);
     fixture.detectChanges();
 
@@ -262,10 +273,39 @@ describe('PersonalViewComponent', () => {
 
   it('debería mostrar mensaje de error cuando el estado es error y existe errorDetail', () => {
     mockProjectsFacade.myProjects.set([
-      { _id: 'err1', title: 'Error Proj', status: 'error', errorDetail: 'Error de prueba en personal', createdAt: new Date().toISOString() }
+      {
+        _id: 'err1',
+        title: 'Error Proj',
+        status: 'error',
+        errorDetail: 'Error de prueba en personal',
+        createdAt: new Date().toISOString(),
+      },
     ]);
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('⚠️ Error: Error de prueba en personal');
+  });
+
+  it('debería renderizar curso, niveles CFGM, módulos generados y error sin detalle', () => {
+    const createdAt = new Date().toISOString();
+    mockProjectsFacade.myProjects.set([
+      {
+        _id: 'a',
+        title: 'Estética',
+        status: 'en_cola',
+        tipoNivel: 'CFGM_ESTETICA',
+        courseLevel: '1º',
+        generatedContent: { modules: ['Maquillaje'] },
+        createdAt,
+      },
+      { _id: 'b', title: 'Pelu', status: 'generando', tipoNivel: 'CFGM_PELUQUERIA', createdAt },
+      { _id: 'c', title: 'Fallo', status: 'error', error: 'Fallo genérico', createdAt },
+    ]);
+    fixture.detectChanges();
+
+    const text = fixture.nativeElement.textContent;
+    expect(text).toContain('1º CFGM');
+    expect(text).toContain('Maquillaje');
+    expect(text).toContain('⚠️ Error: Fallo genérico');
   });
 
   it('debería mostrar estado vacío y permitir click en el botón de creación', () => {
@@ -279,14 +319,20 @@ describe('PersonalViewComponent', () => {
   });
 
   it('debería manejar getDisplayTitle y getAiProviderLabel', () => {
-    expect(component.getDisplayTitle({ title: 'Mi Proyecto' })).toBe('Mi Proyecto');
-    expect(component.getDisplayTitle({ title: 'Proyecto Generado', modules: ['M1', 'M2'] })).toBe('M1 + M2');
-    expect(component.getDisplayTitle({})).toBe('Sin título');
+    expect(component.getDisplayTitle(asProject({ title: 'Mi Proyecto' }))).toBe('Mi Proyecto');
+    expect(
+      component.getDisplayTitle(asProject({ title: 'Proyecto Generado', modules: ['M1', 'M2'] })),
+    ).toBe('M1 + M2');
+    expect(component.getDisplayTitle(asProject({}))).toBe('Sin título');
 
-    expect(component.getAiProviderLabel({ usedAiProvider: 'openrouter' })).toBe('Secundario');
-    expect(component.getAiProviderLabel({ usedAiProvider: 'gemini' })).toBe('Primario');
-    expect(component.getAiProviderLabel({ usedModel: 'openrouter/mistral' })).toBe('Secundario');
-    expect(component.getAiProviderLabel({ usedModel: 'gemini-3.6' })).toBe('Primario');
-    expect(component.getAiProviderLabel({})).toBeNull();
+    expect(component.getAiProviderLabel(asProject({ usedAiProvider: 'openrouter' }))).toBe(
+      'Secundario',
+    );
+    expect(component.getAiProviderLabel(asProject({ usedAiProvider: 'gemini' }))).toBe('Primario');
+    expect(component.getAiProviderLabel(asProject({ usedModel: 'openrouter/mistral' }))).toBe(
+      'Secundario',
+    );
+    expect(component.getAiProviderLabel(asProject({ usedModel: 'gemini-3.6' }))).toBe('Primario');
+    expect(component.getAiProviderLabel(asProject({}))).toBeNull();
   });
 });

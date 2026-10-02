@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { TestBed } from '@angular/core/testing';
 import { LayoutService } from './layout.service';
 import { AuthFacade } from '../features/auth/services/auth.facade';
@@ -10,16 +10,13 @@ describe('LayoutService', () => {
   beforeEach(() => {
     // Clear localStorage before each test
     localStorage.clear();
-    
+
     authFacadeMock = {
-      logout: vi.fn()
+      logout: vi.fn(),
     };
 
     TestBed.configureTestingModule({
-      providers: [
-        LayoutService,
-        { provide: AuthFacade, useValue: authFacadeMock }
-      ]
+      providers: [LayoutService, { provide: AuthFacade, useValue: authFacadeMock }],
     });
   });
 
@@ -59,17 +56,17 @@ describe('LayoutService', () => {
 
   it('should switch view and save to localStorage (via effect) and scroll to top', () => {
     service = TestBed.inject(LayoutService);
-    
+
     // Mock window.scrollTo
     const scrollToSpy = vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
-    
+
     service.switchView('taller');
     TestBed.flushEffects();
-    
+
     expect(service.currentView()).toBe('taller');
     expect(service.isSidebarCollapsed()).toBe(true);
     expect(scrollToSpy).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
-    
+
     expect(localStorage.getItem('pai_view')).toBe('taller');
 
     service.switchView('personal');

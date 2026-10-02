@@ -18,9 +18,9 @@ describe('SidebarComponent', () => {
     switchView: vi.fn(),
     currentView: signal('home'),
     language: signal('castellano'),
-    logout: vi.fn()
+    logout: vi.fn(),
   };
-  
+
   const mockTrans = {
     t: signal({
       sidebarExpand: 'Expandir',
@@ -36,17 +36,17 @@ describe('SidebarComponent', () => {
       sidebarLangTooltip: 'Cambiar Idioma',
       sidebarLangLabel: 'Idioma',
       sidebarLogoutTooltip: 'Cerrar Sesión',
-      logout: 'Salir'
-    })
+      logout: 'Salir',
+    }),
   };
 
   const mockAuth = {
-    currentUser: signal({ name: 'Admin', role: 'admin' })
+    currentUser: signal({ name: 'Admin', role: 'admin' }),
   };
 
   const mockProjects = {
     loadHistory: vi.fn(),
-    projectsHistory: signal([])
+    projectsHistory: signal([]),
   };
 
   const mockNotifications = {
@@ -56,7 +56,7 @@ describe('SidebarComponent', () => {
     openRecentActivity: vi.fn(),
     closeRecentActivity: vi.fn(),
     markAllAsRead: vi.fn(),
-    markAsRead: vi.fn()
+    markAsRead: vi.fn(),
   };
 
   beforeEach(async () => {
@@ -67,17 +67,15 @@ describe('SidebarComponent', () => {
         { provide: TranslationService, useValue: mockTrans },
         { provide: AuthFacade, useValue: mockAuth },
         { provide: ProjectsFacade, useValue: mockProjects },
-        { provide: NotificationsFacade, useValue: mockNotifications }
-      ]
-    })
-    .compileComponents();
+        { provide: NotificationsFacade, useValue: mockNotifications },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SidebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  
   it('should cover methods directly', () => {
     component.toggleLanguage();
     expect(mockLayout.language()).toBe('catalan');
@@ -85,11 +83,10 @@ describe('SidebarComponent', () => {
     expect(mockLayout.language()).toBe('castellano');
   });
 
-  
   it('should trigger all HTML event bindings for coverage safely', () => {
     mockAuth.currentUser = signal({ name: 'Admin', role: 'admin' });
     fixture.detectChanges();
-    
+
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('button');
     buttons.forEach((b: any) => b.click());
   });
@@ -103,7 +100,7 @@ describe('SidebarComponent', () => {
     btn.click();
     expect(mockLayout.toggleSidebar).toHaveBeenCalled();
   });
-  
+
   it('should have collapsed class if collapsed', () => {
     mockLayout.isSidebarCollapsed.set(true);
     fixture.detectChanges();
@@ -113,14 +110,18 @@ describe('SidebarComponent', () => {
 
   it('should switch view on nav click', () => {
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
-    const generatorBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Nuevo Proyecto')) as HTMLElement;
+    const generatorBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Nuevo Proyecto'),
+    ) as HTMLElement;
     generatorBtn.click();
     expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
   });
 
   it('should load history and switch view on history nav click', () => {
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
-    const historyBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Historial')) as HTMLElement;
+    const historyBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Historial'),
+    ) as HTMLElement;
     historyBtn.click();
     expect(mockProjects.loadHistory).toHaveBeenCalled();
     expect(mockLayout.switchView).toHaveBeenCalledWith('history');
@@ -128,12 +129,16 @@ describe('SidebarComponent', () => {
 
   it('should switch view on personal and feedback nav clicks', () => {
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
-    const personalBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Área Personal')) as HTMLElement;
+    const personalBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Área Personal'),
+    ) as HTMLElement;
     personalBtn.click();
     expect(mockProjects.loadHistory).toHaveBeenCalled();
     expect(mockLayout.switchView).toHaveBeenCalledWith('personal');
 
-    const feedbackBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Buzón de sugerencias')) as HTMLElement;
+    const feedbackBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Buzón de sugerencias'),
+    ) as HTMLElement;
     feedbackBtn.click();
     expect(mockLayout.switchView).toHaveBeenCalledWith('feedback');
   });
@@ -150,7 +155,7 @@ describe('SidebarComponent', () => {
   it('should not show admin panel if user is not admin', () => {
     mockAuth.currentUser.set({ name: 'User', role: 'user' });
     fixture.detectChanges();
-    
+
     const buttons = fixture.debugElement.nativeElement.querySelectorAll('.nav-item');
     let hasAdmin = false;
     buttons.forEach((b: any) => {
@@ -159,10 +164,10 @@ describe('SidebarComponent', () => {
     expect(hasAdmin).toBe(false);
   });
 
-  
-
   it('should logout', () => {
-    const logoutBtn = fixture.debugElement.nativeElement.querySelector('[data-tooltip="Cerrar Sesión"]');
+    const logoutBtn = fixture.debugElement.nativeElement.querySelector(
+      '[data-tooltip="Cerrar Sesión"]',
+    );
     logoutBtn.click();
     expect(mockLayout.logout).toHaveBeenCalled();
   });

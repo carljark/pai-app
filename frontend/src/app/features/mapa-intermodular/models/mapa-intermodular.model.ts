@@ -1,4 +1,11 @@
-export type CompetenceType = 'tecnica' | 'ciencias' | 'comunicacion' | 'empleabilidad' | 'cliente' | 'sostenibilidad' | 'digital';
+export type CompetenceType =
+  | 'tecnica'
+  | 'ciencias'
+  | 'comunicacion'
+  | 'empleabilidad'
+  | 'cliente'
+  | 'sostenibilidad'
+  | 'digital';
 
 export interface IntermodularActivity {
   id: string;
@@ -67,4 +74,12 @@ export interface FPBModule {
   color: string;
   icon: string;
   learningOutcomes: LearningOutcome[];
+}
+
+/** Totales del mapa activo que muestra la cabecera. */
+export interface MapaStats {
+  totalModules: number;
+  totalRas: number;
+  totalConnections: number;
+  totalActivities: number;
 }

@@ -1,4 +1,4 @@
-import { Project } from '../../projects/models/project.model';
+import { Project, getOwnerId } from '../../projects/models/project.model';
 
 export type HistoryTabId = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO';
 
@@ -12,7 +12,10 @@ export interface HistoryFilters {
 }
 
 const normalize = (value: string): string =>
-  (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  (value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
 
 export function projectModules(project: Project): string[] {
   if (project.modules && project.modules.length > 0) return project.modules;
@@ -25,7 +28,10 @@ export function projectRas(project: Project): string[] {
 
 export function matchesTab(project: Project, tab: HistoryTabId): boolean {
   if (tab === 'FPB') {
-    return project.tipoNivel === 'FP_BASICA' || (!project.tipoNivel && !project.courseLevel?.includes('CFGM'));
+    return (
+      project.tipoNivel === 'FP_BASICA' ||
+      (!project.tipoNivel && !project.courseLevel?.includes('CFGM'))
+    );
   }
   if (tab === 'CFGM') return project.tipoNivel === 'CFGM_ESTETICA';
   if (tab === 'CFGM_PELUQUERIA') return project.tipoNivel === 'CFGM_PELUQUERIA';
@@ -33,25 +39,31 @@ export function matchesTab(project: Project, tab: HistoryTabId): boolean {
 }
 
 export function parseKeywords(query: string): string[] {
-  return normalize(query).split(/\s+/).map(t => t.trim()).filter(Boolean);
+  return normalize(query)
+    .split(/\s+/)
+    .map((t) => t.trim())
+    .filter(Boolean);
 }
 
 export function matchesKeywords(project: Project, keywords: string[]): boolean {
   if (keywords.length === 0) return true;
-  const haystack = normalize([
-    project.title,
-    projectModules(project).join(' '),
-    projectRas(project).join(' '),
-    project.generatedContent?.rawText,
-  ].filter(Boolean).join(' '));
-  return keywords.every(keyword => haystack.includes(keyword));
+  const haystack = normalize(
+    [
+      project.title,
+      projectModules(project).join(' '),
+      projectRas(project).join(' '),
+      project.generatedContent?.rawText,
+    ]
+      .filter(Boolean)
+      .join(' '),
+  );
+  return keywords.every((keyword) => haystack.includes(keyword));
 }
 
 export function matchesProjectFilters(project: Project, filters: HistoryFilters): boolean {
   if (!matchesTab(project, filters.tab)) return false;
   if (filters.onlyMine && filters.ownerId) {
-    const authorId = (project.userId as any)?._id || project.userId;
-    if (authorId?.toString() !== filters.ownerId) return false;
+    if (getOwnerId(project.userId) !== filters.ownerId) return false;
   }
   if (filters.module && !projectModules(project).includes(filters.module)) return false;
   if (filters.ra && !projectRas(project).includes(filters.ra)) return false;
@@ -60,15 +72,21 @@ export function matchesProjectFilters(project: Project, filters: HistoryFilters)
 
 export function collectModuleOptions(projects: Project[]): string[] {
   const set = new Set<string>();
-  projects.forEach(p => projectModules(p).forEach(m => { if (m) set.add(m); }));
+  projects.forEach((p) =>
+    projectModules(p).forEach((m) => {
+      if (m) set.add(m);
+    }),
+  );
   return Array.from(set).sort((a, b) => a.localeCompare(b));
 }
 
 export function collectRaOptions(projects: Project[], module: string | null): string[] {
   const set = new Set<string>();
-  projects.forEach(p => {
+  projects.forEach((p) => {
     if (module && !projectModules(p).includes(module)) return;
-    projectRas(p).forEach(r => { if (r) set.add(r); });
+    projectRas(p).forEach((r) => {
+      if (r) set.add(r);
+    });
   });
   return Array.from(set).sort((a, b) => a.localeCompare(b));
 }

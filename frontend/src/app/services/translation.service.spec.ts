@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach } from 'vitest';
 import { TestBed } from '@angular/core/testing';
 import { TranslationService } from './translation.service';
 import { LayoutService } from './layout.service';
@@ -10,16 +10,13 @@ describe('TranslationService', () => {
 
   beforeEach(() => {
     layoutServiceMock = {
-      language: signal<'castellano' | 'catalan'>('castellano')
+      language: signal<'castellano' | 'catalan'>('castellano'),
     };
 
     TestBed.configureTestingModule({
-      providers: [
-        TranslationService,
-        { provide: LayoutService, useValue: layoutServiceMock }
-      ]
+      providers: [TranslationService, { provide: LayoutService, useValue: layoutServiceMock }],
     });
-    
+
     service = TestBed.inject(TranslationService);
   });
 
@@ -35,7 +32,7 @@ describe('TranslationService', () => {
 
   it('should return catalan translations when language is set to catalan', () => {
     layoutServiceMock.language.set('catalan');
-    
+
     expect(service.t().logout).toBe('Sortir');
     expect(service.t().downloadWord).toBe('Descarregar com a Word');
     expect(service.t().homeTitle).toBe('plappin');

@@ -12,9 +12,16 @@
   max-height: 420px;
   overflow-y: auto;
 
-  &::-webkit-scrollbar { width: 6px; }
-  &::-webkit-scrollbar-track { background: #f8fafc; }
-  &::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f8fafc;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
 }
 
 .mapa-modules-list {
@@ -124,8 +131,15 @@
   }
 }
 
-.mapa-ra-code { font-weight: 700; }
-.mapa-ra-text { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mapa-ra-code {
+  font-weight: 700;
+}
+.mapa-ra-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .mapa-ra-count {
   background: rgba(0, 0, 0, 0.06);
   padding: 2px 5px;

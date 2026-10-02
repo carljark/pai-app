@@ -4,7 +4,8 @@
  */
 
 export type ProjectStatus = 'borrador' | 'generando' | 'en_cola' | 'publicado' | 'error';
-export type ProjectType = 'FP_BASICA' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' | 'DIVERSIFICACION_CURRICULAR' | 'ESO';
+export type ProjectType =
+  'FP_BASICA' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' | 'DIVERSIFICACION_CURRICULAR' | 'ESO';
 export type HistoryTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO';
 export type AIProvider = 'gemini' | 'openrouter';
 
@@ -157,7 +158,10 @@ export interface MethodologyOption {
 }
 
 export const METHODOLOGY_OPTIONS: MethodologyOption[] = [
-  { value: 'ABP (Aprendizaje Basado en Problemas / Proyectos)', label: 'ABP (Aprendizaje Basado en Problemas / Proyectos)' },
+  {
+    value: 'ABP (Aprendizaje Basado en Problemas / Proyectos)',
+    label: 'ABP (Aprendizaje Basado en Problemas / Proyectos)',
+  },
   { value: 'ABR (Aprendizaje Basado en Retos)', label: 'ABR (Aprendizaje Basado en Retos)' },
   { value: 'ApS (Aprendizaje y Servicio)', label: 'ApS (Aprendizaje y Servicio)' },
 ];
@@ -191,9 +195,12 @@ export function getHistoryTabForTipoNivel(tipoNivel: ProjectType): HistoryTab {
     case 'DIVERSIFICACION_CURRICULAR':
     case 'ESO':
       return 'ESO';
-    case 'CFGM_ESTETICA': return 'CFGM';
-    case 'CFGM_PELUQUERIA': return 'CFGM_PELUQUERIA';
-    default: return 'FPB';
+    case 'CFGM_ESTETICA':
+      return 'CFGM';
+    case 'CFGM_PELUQUERIA':
+      return 'CFGM_PELUQUERIA';
+    default:
+      return 'FPB';
   }
 }
 
@@ -203,4 +210,10 @@ export function isFPProject(tipoNivel: ProjectType): boolean {
 
 export function isESOProject(tipoNivel: ProjectType): boolean {
   return tipoNivel === 'DIVERSIFICACION_CURRICULAR';
+}
+
+/** Id del autor tanto si `userId` viene poblado (objeto) como si es un string. */
+export function getOwnerId(userId: Project['userId'] | null | undefined): string | undefined {
+  if (userId && typeof userId === 'object') return userId._id;
+  return userId || undefined;
 }

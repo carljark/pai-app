@@ -12,11 +12,7 @@ describe('CurriculumFacade', () => {
   beforeEach(() => {
     localStorage.clear();
     TestBed.configureTestingModule({
-      providers: [
-        CurriculumFacade,
-        provideHttpClient(),
-        provideHttpClientTesting(),
-      ]
+      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
     });
     facade = TestBed.inject(CurriculumFacade);
     httpTestingController = TestBed.inject(HttpTestingController);
@@ -34,29 +30,29 @@ describe('CurriculumFacade', () => {
   it('should load RAs', () => {
     const mockRAs: LearningOutcome[] = [{ _id: '1', description: 'RA1', subject: 'Math' }];
     facade.loadRas('es');
-    
+
     const req = httpTestingController.expectOne('/api/ras?lang=es');
     expect(req.request.method).toBe('GET');
     req.flush(mockRAs);
-    
+
     expect(facade.ras()).toEqual(mockRAs);
   });
 
   it('should load CEs', () => {
     const mockCEs: EvaluativeCriteria[] = [{ _id: '1', description: 'CE1', subject: 'Math' }];
     facade.loadCes('es');
-    
+
     const req = httpTestingController.expectOne('/api/ces?lang=es');
     expect(req.request.method).toBe('GET');
     req.flush(mockCEs);
-    
+
     expect(facade.ces()).toEqual(mockCEs);
   });
 
   it('should toggle RA selection', () => {
     facade.toggleRa('RA1');
     expect(facade.selectedRas()).toContain('RA1');
-    
+
     facade.toggleRa('RA1');
     expect(facade.selectedRas()).not.toContain('RA1');
   });
@@ -70,10 +66,10 @@ describe('CurriculumFacade', () => {
   it('should return appropriate category style', () => {
     const scienceStyle = facade.getCategoryStyle('Ciencia');
     expect(scienceStyle.bg).toBe('#e8f4f8');
-    
+
     const languageStyle = facade.getCategoryStyle('Lengua');
     expect(languageStyle.bg).toBe('#fcf3cf');
-    
+
     const otherStyle = facade.getCategoryStyle('Otro');
     expect(otherStyle.bg).toBe('#ebdef0');
   });
@@ -83,12 +79,12 @@ describe('CurriculumFacade', () => {
     facade.ras.set([
       { _id: '1', description: 'Desc1', subject: 'SubjectA' },
       { _id: '2', description: 'Desc1', subject: 'SubjectA' },
-      { _id: '3', description: 'Desc2', subject: 'SubjectB' }
+      { _id: '3', description: 'Desc2', subject: 'SubjectB' },
     ]);
-    
+
     const groups = facade.groupedItems();
     expect(groups.length).toBe(2);
-    const subjectA = groups.find(g => g.category === 'SubjectA');
+    const subjectA = groups.find((g) => g.category === 'SubjectA');
     expect(subjectA?.items.length).toBe(1);
     expect(subjectA?.items[0].text).toBe('Desc1');
   });
@@ -97,21 +93,19 @@ describe('CurriculumFacade', () => {
     facade.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
     facade.ces.set([
       { _id: '1', description: 'Desc1', subject: 'Math' },
-      { _id: '2', description: 'Desc2', subject: 'English' }
+      { _id: '2', description: 'Desc2', subject: 'English' },
     ]);
-    
+
     const groups = facade.groupedItems();
     expect(groups.length).toBe(2);
-    expect(groups.find(g => g.category === 'Math - Math')).toBeDefined();
+    expect(groups.find((g) => g.category === 'Math - Math')).toBeDefined();
   });
 
   it('should compute selectedItemsDetails correctly', () => {
     facade.tipoNivel.set('FP_BASICA');
-    facade.ras.set([
-      { _id: '1', description: 'Desc1', subject: 'SubjectA' }
-    ]);
+    facade.ras.set([{ _id: '1', description: 'Desc1', subject: 'SubjectA' }]);
     facade.toggleRa('Desc1');
-    
+
     const details = facade.selectedItemsDetails();
     expect(details.length).toBe(1);
     expect(details[0].subject).toBe('SubjectA');
@@ -120,11 +114,9 @@ describe('CurriculumFacade', () => {
   it('should truncate long descriptions in selectedItemsDetails', () => {
     facade.tipoNivel.set('FP_BASICA');
     const longDesc = 'A'.repeat(70);
-    facade.ras.set([
-      { _id: '1', description: longDesc, subject: 'SubjectA' }
-    ]);
+    facade.ras.set([{ _id: '1', description: longDesc, subject: 'SubjectA' }]);
     facade.toggleRa(longDesc);
-    
+
     const details = facade.selectedItemsDetails();
     expect(details[0].shortDesc.endsWith('...')).toBe(true);
     expect(details[0].shortDesc.length).toBe(63); // 60 + '...'
@@ -134,11 +126,11 @@ describe('CurriculumFacade', () => {
     facade.tipoNivel.set('FP_BASICA');
     facade.ras.set([
       { _id: '1', description: 'Desc1', subject: 'SubjectA' },
-      { _id: '2', description: 'Desc2', subject: 'SubjectA' }
+      { _id: '2', description: 'Desc2', subject: 'SubjectA' },
     ]);
     facade.toggleRa('Desc1');
     facade.toggleRa('Desc2');
-    
+
     const grouped = facade.groupedSelectedItems();
     expect(grouped.length).toBe(1);
     expect(grouped[0].subject).toBe('SubjectA');
@@ -153,9 +145,13 @@ describe('CurriculumFacade', () => {
   it('should fallback to normalized match or default subject when description is not exact', () => {
     facade.tipoNivel.set('FP_BASICA');
     facade.ras.set([
-      { _id: '1', description: 'Resuelve problemas cotidianos aplicando algebra elemental.', subject: 'Ciencias' }
+      {
+        _id: '1',
+        description: 'Resuelve problemas cotidianos aplicando algebra elemental.',
+        subject: 'Ciencias',
+      },
     ]);
-    
+
     // Partial/normalized match
     facade.selectedRas.set(['Resuelve problemas cotidianos aplicando algebra elemental']);
     let details = facade.selectedItemsDetails();
@@ -176,7 +172,7 @@ describe('CurriculumFacade', () => {
     facade.tipoNivel.set('FP_BASICA');
     facade.toggleRa('RA1');
     expect(facade.selectedRas()).toContain('RA1');
-    
+
     facade.setTipoNivel('DIVERSIFICACION_CURRICULAR');
     expect(facade.tipoNivel()).toBe('DIVERSIFICACION_CURRICULAR');
     expect(facade.curso()).toBe('3º');
@@ -208,11 +204,7 @@ describe('CurriculumFacade', () => {
 
     TestBed.resetTestingModule();
     TestBed.configureTestingModule({
-      providers: [
-        CurriculumFacade,
-        provideHttpClient(),
-        provideHttpClientTesting(),
-      ]
+      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
     });
     const restoredFacade = TestBed.inject(CurriculumFacade);
     expect(restoredFacade.tipoNivel()).toBe('DIVERSIFICACION_CURRICULAR');
@@ -224,11 +216,7 @@ describe('CurriculumFacade', () => {
 
     TestBed.resetTestingModule();
     TestBed.configureTestingModule({
-      providers: [
-        CurriculumFacade,
-        provideHttpClient(),
-        provideHttpClientTesting(),
-      ]
+      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
     });
     const fpFacade = TestBed.inject(CurriculumFacade);
     expect(fpFacade.tipoNivel()).toBe('FP_BASICA');
@@ -240,11 +228,7 @@ describe('CurriculumFacade', () => {
 
     TestBed.resetTestingModule();
     TestBed.configureTestingModule({
-      providers: [
-        CurriculumFacade,
-        provideHttpClient(),
-        provideHttpClientTesting(),
-      ]
+      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
     });
     const fallbackFacade = TestBed.inject(CurriculumFacade);
     expect(fallbackFacade.curso()).toBe('1º');
@@ -271,9 +255,26 @@ describe('CurriculumFacade', () => {
   it('should group CFGM_ESTETICA items from API ras array with moduleCode and sort them', () => {
     facade.tipoNivel.set('CFGM_ESTETICA');
     facade.ras.set([
-      { id: 'RA1', description: 'Desc 0635', module: 'Depilación', moduleCode: '0635', tipoNivel: 'CFGM_ESTETICA' } as any,
-      { id: 'RA1', description: 'Desc 0633', module: '0633. Higiene', moduleCode: '0633', tipoNivel: 'CFGM_ESTETICA' } as any,
-      { id: 'RA1', description: 'Desc Unknown', module: 'Otro módulo', tipoNivel: 'CFGM_ESTETICA' } as any
+      {
+        id: 'RA1',
+        description: 'Desc 0635',
+        module: 'Depilación',
+        moduleCode: '0635',
+        tipoNivel: 'CFGM_ESTETICA',
+      } as any,
+      {
+        id: 'RA1',
+        description: 'Desc 0633',
+        module: '0633. Higiene',
+        moduleCode: '0633',
+        tipoNivel: 'CFGM_ESTETICA',
+      } as any,
+      {
+        id: 'RA1',
+        description: 'Desc Unknown',
+        module: 'Otro módulo',
+        tipoNivel: 'CFGM_ESTETICA',
+      } as any,
     ]);
 
     const groups = facade.groupedItems();
@@ -296,11 +297,7 @@ describe('CurriculumFacade', () => {
 
     TestBed.resetTestingModule();
     TestBed.configureTestingModule({
-      providers: [
-        CurriculumFacade,
-        provideHttpClient(),
-        provideHttpClientTesting(),
-      ]
+      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
     });
     const cfgmFacade = TestBed.inject(CurriculumFacade);
     expect(cfgmFacade.tipoNivel()).toBe('CFGM_ESTETICA');
@@ -342,7 +339,7 @@ describe('CurriculumFacade', () => {
     facade.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
     facade.ces.set([
       { id: '1', module: 'Mod1', subject: 'Sub1', description: 'desc1', index: 2, course: '3º' },
-      { id: '2', module: 'Mod1', subject: 'Sub1', description: 'desc2', index: 1, course: '3º' }
+      { id: '2', module: 'Mod1', subject: 'Sub1', description: 'desc2', index: 1, course: '3º' },
     ] as any);
     facade.curso.set('3º');
     const groups = facade.groupedItems();

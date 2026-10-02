@@ -3,6 +3,7 @@ export interface EvaluativeCriteria {
   description: string;
   number?: string;
   subject?: string;
+  area?: string;
 }
 
 export interface LearningOutcome {
@@ -12,6 +13,16 @@ export interface LearningOutcome {
   number?: string;
   subject?: string;
   module?: string;
+  // Clasificación y variantes bilingües que devuelven la API o los seeds CFGM
+  tipoNivel?: string;
+  moduleCode?: string;
+  module_es?: string;
+  module_ca?: string;
+  subject_es?: string;
+  subject_ca?: string;
+  description_es?: string;
+  description_ca?: string;
+  criterios?: string[];
   criterios_es?: string[];
   criterios_ca?: string[];
 }

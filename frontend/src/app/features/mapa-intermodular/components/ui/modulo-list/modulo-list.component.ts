@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './modulo-list.component.html',
-  styleUrl: './modulo-list.component.scss'
+  styleUrl: './modulo-list.component.scss',
 })
 export class ModuloListComponent {
   facade = inject(MapaIntermodularFacade);
@@ -22,8 +22,8 @@ export class ModuloListComponent {
 
   isCa = computed(() => this.layout.language() === 'catalan');
 
-  @Output() onSelectModule = new EventEmitter<string>();
-  @Output() onSelectRa = new EventEmitter<string>();
+  @Output() moduleSelected = new EventEmitter<string>();
+  @Output() raSelected = new EventEmitter<string>();
   @Output() toggleStepEvent = new EventEmitter<number>();
   @Output() activateStepEvent = new EventEmitter<number>();
 

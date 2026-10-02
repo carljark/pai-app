@@ -1,9 +1,45 @@
 import { Injectable, signal, computed, inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { FPBModule, LearningOutcome, IntermodularConnection, IntermodularActivity, CompetenceType } from '../models/mapa-intermodular.model';
+import {
+  FPBModule,
+  LearningOutcome,
+  IntermodularConnection,
+  IntermodularActivity,
+  MapaStats,
+} from '../models/mapa-intermodular.model';
 import { MapaIntermodularService } from './mapa-intermodular.service';
+import { formatConnection } from '../utils/connection-summary';
 
 export type MapaTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2';
+
+const TAB_DEFAULT_SELECTION: Record<MapaTab, { moduleCode: string; raId: string }> = {
+  FPB: { moduleCode: '3060', raId: '3060_RA1' },
+  CFGM: { moduleCode: '0633', raId: '0633_RA1' },
+  CFGM_PELUQUERIA: { moduleCode: '0845', raId: '0845_RA1' },
+  CFGM_PELUQUERIA_2: { moduleCode: '0640', raId: '0640_RA1' },
+};
+
+function hasRelation(m: FPBModule, relationType: string): boolean {
+  return m.learningOutcomes.some((ra) =>
+    ra.connections.some((c) => c.relationType === relationType),
+  );
+}
+
+/** Coincidencia de la búsqueda con el código o nombre del módulo o con alguno de sus RAs. */
+function matchesModuleQuery(m: FPBModule, q: string): boolean {
+  if (!q) return true;
+  return (
+    m.code.toLowerCase().includes(q) ||
+    m.name_es.toLowerCase().includes(q) ||
+    m.name_ca.toLowerCase().includes(q) ||
+    m.learningOutcomes.some(
+      (ra) =>
+        ra.code.toLowerCase().includes(q) ||
+        ra.text_es.toLowerCase().includes(q) ||
+        ra.text_ca.toLowerCase().includes(q),
+    )
+  );
+}
 
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
@@ -26,12 +62,12 @@ export class MapaIntermodularFacade {
   }
 
   private sanitizeModules(mods: FPBModule[]): FPBModule[] {
-    return (mods || []).map(m => ({
+    return (mods || []).map((m) => ({
       ...m,
-      learningOutcomes: (m.learningOutcomes || []).map(ra => ({
+      learningOutcomes: (m.learningOutcomes || []).map((ra) => ({
         ...ra,
-        connections: (ra.connections || []).filter(c => c.activities && c.activities.length > 0)
-      }))
+        connections: (ra.connections || []).filter((c) => c.activities && c.activities.length > 0),
+      })),
     }));
   }
 
@@ -49,7 +85,7 @@ export class MapaIntermodularFacade {
     const code = this.selectedModuleCode();
     const list = this.modules();
     if (!list || list.length === 0 || !code) return null;
-    return list.find(m => m.code === code) || null;
+    return list.find((m) => m.code === code) || null;
   });
 
   selectedRa = computed<LearningOutcome | null>(() => {
@@ -67,11 +103,15 @@ export class MapaIntermodularFacade {
     if (!crit) return ra.connections;
 
     const targetCrit = crit.toLowerCase().trim();
-    const letterMatch = targetCrit.match(/^[a-z0-9\-\s\.]*?([a-z])[\)\.\s]/) || targetCrit.match(/([a-z])/);
+    const letterMatch =
+      targetCrit.match(/^[a-z0-9\-\s.]*?([a-z])[).\s]/) || targetCrit.match(/([a-z])/);
     const letter = letterMatch ? letterMatch[1] : targetCrit;
 
-    const filtered = ra.connections.filter(c => {
-      if (c.criteriaKeys && (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))) {
+    const filtered = ra.connections.filter((c) => {
+      if (
+        c.criteriaKeys &&
+        (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))
+      ) {
         return true;
       }
       if (c.sourceCriteria) {
@@ -110,43 +150,25 @@ export class MapaIntermodularFacade {
     const type = this.selectedTypeFilter();
     const relFilter = this.selectedRelationFilter();
 
-    return this.modules().filter(m => {
-      // Type filter
-      if (type !== 'all' && m.type !== type) return false;
-
-      // Relation filter
-      if (relFilter !== 'all') {
-        const hasRelation = m.learningOutcomes.some(ra => 
-          ra.connections.some(c => c.relationType === relFilter)
-        );
-        if (!hasRelation) return false;
-      }
-
-      // Search query
-      if (!q) return true;
-      const matchCode = m.code.toLowerCase().includes(q);
-      const matchEs = m.name_es.toLowerCase().includes(q);
-      const matchCa = m.name_ca.toLowerCase().includes(q);
-      const matchRa = m.learningOutcomes.some(ra => 
-        ra.code.toLowerCase().includes(q) || 
-        ra.text_es.toLowerCase().includes(q) || 
-        ra.text_ca.toLowerCase().includes(q)
-      );
-      return matchCode || matchEs || matchCa || matchRa;
-    });
+    return this.modules().filter(
+      (m) =>
+        (type === 'all' || m.type === type) &&
+        (relFilter === 'all' || hasRelation(m, relFilter)) &&
+        matchesModuleQuery(m, q),
+    );
   });
 
-  stats = computed(() => {
+  stats = computed<MapaStats>(() => {
     const mods = this.modules();
     let totalRas = 0;
     let totalConnections = 0;
     let totalActivities = 0;
 
-    mods.forEach(m => {
+    mods.forEach((m) => {
       totalRas += m.learningOutcomes.length;
-      m.learningOutcomes.forEach(ra => {
+      m.learningOutcomes.forEach((ra) => {
         totalConnections += ra.connections.length;
-        ra.connections.forEach(c => {
+        ra.connections.forEach((c) => {
           totalActivities += c.activities.length;
         });
       });
@@ -156,7 +178,7 @@ export class MapaIntermodularFacade {
       totalModules: mods.length,
       totalRas,
       totalConnections,
-      totalActivities
+      totalActivities,
     };
   });
 
@@ -169,7 +191,7 @@ export class MapaIntermodularFacade {
     }
     this.selectedModuleCode.set(code);
     this.selectedCriterion.set(null);
-    const mod = this.modules().find(m => m.code === code);
+    const mod = this.modules().find((m) => m.code === code);
     if (mod && mod.learningOutcomes && mod.learningOutcomes.length > 0) {
       this.selectedRaId.set(mod.learningOutcomes[0].id);
     }
@@ -179,8 +201,8 @@ export class MapaIntermodularFacade {
     this.selectedRaId.set(raId);
     this.selectedCriterion.set(null);
     const currentMod = this.selectedModule();
-    if (!currentMod || !currentMod.learningOutcomes.some(r => r.id === raId)) {
-      const foundMod = this.modules().find(m => m.learningOutcomes.some(r => r.id === raId));
+    if (!currentMod || !currentMod.learningOutcomes.some((r) => r.id === raId)) {
+      const foundMod = this.modules().find((m) => m.learningOutcomes.some((r) => r.id === raId));
       if (foundMod) {
         this.selectedModuleCode.set(foundMod.code);
       }
@@ -195,18 +217,25 @@ export class MapaIntermodularFacade {
     const ra = this.selectedRa();
     if (!ra || !ra.connections) return 0;
     const targetCrit = critText.toLowerCase().trim();
-    const letterMatch = targetCrit.match(/^[a-z0-9\-\s\.]*?([a-z])[\)\.\s]/) || targetCrit.match(/([a-z])/);
+    const letterMatch =
+      targetCrit.match(/^[a-z0-9\-\s.]*?([a-z])[).\s]/) || targetCrit.match(/([a-z])/);
     const letter = letterMatch ? letterMatch[1] : targetCrit;
 
-    return ra.connections.filter(c => {
-      if (c.criteriaKeys && (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))) return true;
+    return ra.connections.filter((c) => {
+      if (
+        c.criteriaKeys &&
+        (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))
+      )
+        return true;
       if (c.sourceCriteria && c.sourceCriteria.toLowerCase().includes(letter)) return true;
       return false;
     }).length;
   }
 
-  setSearch(query: string | any) {
-    const q = typeof query === 'string' ? query : (query?.target?.value ?? '');
+  /** Acepta el texto o directamente el evento `input` del buscador. */
+  setSearch(query: string | Event) {
+    const q =
+      typeof query === 'string' ? query : ((query?.target as HTMLInputElement | null)?.value ?? '');
     this.searchQuery.set(q);
   }
 
@@ -230,35 +259,9 @@ export class MapaIntermodularFacade {
     const tabLabel = this.getMapaTabLabel(isCa);
 
     let summary = `=== MAPA INTERMODULAR ${tabLabel}: ${mod.code} - ${modName} ===\n\n`;
-
     summary += `${ra.code}: ${raText}\n\n`;
     summary += isCa ? `--- CONNEXIONS INTERMODULARS ---\n` : `--- CONEXIONES INTERMODULARES ---\n`;
-
-    ra.connections.forEach((c: IntermodularConnection, idx: number) => {
-      const targetName = isCa ? c.targetModuleName_ca : c.targetModuleName_es;
-      const targetRa = isCa ? c.targetRaText_ca : c.targetRaText_es;
-      const just = isCa ? c.justification_ca : c.justification_es;
-      const title = isCa ? (c.title_ca || c.title_es) : c.title_es;
-
-      summary += `\n[${idx + 1}] ${title || (c.targetModuleCode + ' - ' + targetName)}\n`;
-      if (c.sourceCriteria) {
-        summary += `    ${isCa ? 'Criteris propis:' : 'Criterios propios:'} ${c.sourceCriteria}\n`;
-      }
-      if (c.relatedCriteria && c.relatedCriteria.length > 0) {
-        const relStr = c.relatedCriteria.map(r => `${r.moduleCode}: ${isCa ? (r.criteria_ca || r.criteria) : (r.criteria_es || r.criteria)}`).join(' | ');
-        summary += `    ${isCa ? 'Criteris relacionats:' : 'Criterios relacionados:'} ${relStr}\n`;
-      }
-      summary += `    ${isCa ? 'Justificació:' : 'Justificación:'} ${just}\n`;
-
-      c.activities.forEach((act: IntermodularActivity) => {
-        const aTitle = isCa ? act.title_ca : act.title_es;
-        const aDesc = isCa ? act.description_ca : act.description_es;
-        const aDiv = isCa ? act.diversitySupport_ca : act.diversitySupport_es;
-        summary += `    * ${isCa ? 'Activitat:' : 'Actividad:'} ${aTitle}\n      ${isCa ? 'Desenvolupament:' : 'Desarrollo:'} ${aDesc}\n      ${isCa ? 'Atenció Diversitat:' : 'Atención Diversidad:'} ${aDiv}\n`;
-      });
-    });
-
-    return summary;
+    return summary + ra.connections.map((c, idx) => formatConnection(c, idx, isCa)).join('');
   }
 
   private getMapaTabLabel(isCa: boolean): string {
@@ -275,21 +278,12 @@ export class MapaIntermodularFacade {
     return 'CFGM Peluquería y Cosmética Capilar 2º';
   }
 
-
   setTab(tab: MapaTab, directData?: FPBModule[]): Promise<FPBModule[]> {
     this.activeTab.set(tab);
-    if (tab === 'FPB') {
-      this.selectedModuleCode.set('3060');
-      this.selectedRaId.set('3060_RA1');
-    } else if (tab === 'CFGM') {
-      this.selectedModuleCode.set('0633');
-      this.selectedRaId.set('0633_RA1');
-    } else if (tab === 'CFGM_PELUQUERIA') {
-      this.selectedModuleCode.set('0845');
-      this.selectedRaId.set('0845_RA1');
-    } else if (tab === 'CFGM_PELUQUERIA_2') {
-      this.selectedModuleCode.set('0640');
-      this.selectedRaId.set('0640_RA1');
+    const defaults = TAB_DEFAULT_SELECTION[tab];
+    if (defaults) {
+      this.selectedModuleCode.set(defaults.moduleCode);
+      this.selectedRaId.set(defaults.raId);
     }
     this.selectedCriterion.set(null);
 
@@ -299,22 +293,28 @@ export class MapaIntermodularFacade {
       return Promise.resolve(directData);
     }
 
-    if (this.seedCache[tab]) {
-      this.modules.set(this.seedCache[tab]!);
-      return Promise.resolve(this.seedCache[tab]!);
+    const cached = this.seedCache[tab];
+    if (cached) {
+      this.modules.set(cached);
+      return Promise.resolve(cached);
     }
+    return this.loadSeedIntoTab(tab);
+  }
 
+  private loadSeedIntoTab(tab: MapaTab): Promise<FPBModule[]> {
     this.isLoadingSeed.set(true);
-    return this.loadSeed(tab).then(data => {
-      if (this.activeTab() === tab) {
-        this.modules.set(data);
-      }
-      this.isLoadingSeed.set(false);
-      return data;
-    }).catch(err => {
-      console.error('Error loading seed for tab ' + tab, err);
-      this.isLoadingSeed.set(false);
-      return [];
-    });
+    return this.loadSeed(tab)
+      .then((data) => {
+        if (this.activeTab() === tab) {
+          this.modules.set(data);
+        }
+        this.isLoadingSeed.set(false);
+        return data;
+      })
+      .catch((err) => {
+        console.error('Error loading seed for tab ' + tab, err);
+        this.isLoadingSeed.set(false);
+        return [];
+      });
   }
 }

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { MapaModule } from '../src/models/MapaModule';
+import { MapaModule } from '../../models/MapaModule';
 
 export async function up() {
   console.log('🔄 Ejecutando migración: 04_deduplicate_mapa_peluqueria.ts...');

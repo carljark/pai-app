@@ -10,7 +10,7 @@ describe('RecentActivityModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RecentActivityModalComponent]
+      imports: [RecentActivityModalComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(RecentActivityModalComponent);
@@ -37,7 +37,7 @@ describe('RecentActivityModalComponent', () => {
     const emitSpy = vi.spyOn(component.closeModal, 'emit');
     const compiled = fixture.nativeElement as HTMLElement;
 
-    const backdrop = compiled.querySelector('div[style*="rgba(0,0,0,0.5)"]') as HTMLElement;
+    const backdrop = compiled.querySelector('div[style*="rgba(0, 0, 0, 0.5)"]') as HTMLElement;
     backdrop.click();
     expect(emitSpy).toHaveBeenCalledTimes(1);
 
@@ -50,7 +50,7 @@ describe('RecentActivityModalComponent', () => {
     const projects = [
       { _id: '1', status: 'generando', phase: 'analizando', modules: ['Ciencias'], rasCount: 1 },
       { _id: '2', status: 'generando', phase: 'reintentando', modules: ['TIC'], rasCount: 4 },
-      { _id: '3', status: 'borrador', modules: ['Matemáticas'], generationTimeMs: 25000 }
+      { _id: '3', status: 'borrador', modules: ['Matemáticas'], generationTimeMs: 25000 },
     ];
     componentRef.setInput('recentProjects', projects);
     fixture.detectChanges();
@@ -74,7 +74,7 @@ describe('RecentActivityModalComponent', () => {
   it('should display author using userEmail when available, falling back to userName', () => {
     const projects = [
       { _id: '1', status: 'borrador', userEmail: 'profesor@test.com', userName: 'Profesor' },
-      { _id: '2', status: 'borrador', userName: 'SoloNombre' }
+      { _id: '2', status: 'borrador', userName: 'SoloNombre' },
     ];
     componentRef.setInput('recentProjects', projects);
     fixture.detectChanges();
@@ -109,8 +109,18 @@ describe('RecentActivityModalComponent', () => {
     const yesterdayDate = new Date(2026, 8, 23, 16, 45, 0);
 
     const projects = [
-      { _id: 'p-today', status: 'borrador', title: 'Proyecto Hoy', createdAt: todayDate.toISOString() },
-      { _id: 'p-yesterday', status: 'borrador', title: 'Proyecto Ayer', createdAt: yesterdayDate.toISOString() }
+      {
+        _id: 'p-today',
+        status: 'borrador',
+        title: 'Proyecto Hoy',
+        createdAt: todayDate.toISOString(),
+      },
+      {
+        _id: 'p-yesterday',
+        status: 'borrador',
+        title: 'Proyecto Ayer',
+        createdAt: yesterdayDate.toISOString(),
+      },
     ];
     componentRef.setInput('recentProjects', projects);
     fixture.detectChanges();
@@ -125,15 +135,36 @@ describe('RecentActivityModalComponent', () => {
   it('should getErrorMessage correctly for various project structures', () => {
     expect(component.getErrorMessage(null)).toBeNull();
     expect(component.getErrorMessage({ status: 'borrador' })).toBeNull();
-    expect(component.getErrorMessage({ status: 'error', errorDetail: 'Error detallado' })).toBe('Error detallado');
-    expect(component.getErrorMessage({ status: 'error', error: 'Error simple' })).toBe('Error simple');
-    expect(component.getErrorMessage({ status: 'error', message: 'Mensaje de error custom', title: 'Otro' })).toBe('Mensaje de error custom');
-    expect(component.getErrorMessage({ status: 'error', message: 'Proyecto Educativo', title: 'Proyecto Educativo' })).toBeNull();
+    expect(component.getErrorMessage({ status: 'error', errorDetail: 'Error detallado' })).toBe(
+      'Error detallado',
+    );
+    expect(component.getErrorMessage({ status: 'error', error: 'Error simple' })).toBe(
+      'Error simple',
+    );
+    expect(
+      component.getErrorMessage({
+        status: 'error',
+        message: 'Mensaje de error custom',
+        title: 'Otro',
+      }),
+    ).toBe('Mensaje de error custom');
+    expect(
+      component.getErrorMessage({
+        status: 'error',
+        message: 'Proyecto Educativo',
+        title: 'Proyecto Educativo',
+      }),
+    ).toBeNull();
   });
 
   it('should render error banner in template when project has status error', () => {
     const projects = [
-      { _id: 'p-err', status: 'error', title: 'Proyecto Fallido', errorDetail: 'El modelo IA ha agotado el tiempo de espera' }
+      {
+        _id: 'p-err',
+        status: 'error',
+        title: 'Proyecto Fallido',
+        errorDetail: 'El modelo IA ha agotado el tiempo de espera',
+      },
     ];
     componentRef.setInput('recentProjects', projects);
     fixture.detectChanges();

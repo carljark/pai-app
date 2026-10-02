@@ -2,13 +2,14 @@ import { Component, inject, computed, input, Output, EventEmitter } from '@angul
 import { FormsModule } from '@angular/forms';
 import { LayoutService } from '../../../../../services/layout.service';
 import { CommonModule } from '@angular/common';
+import { MapaStats } from '../../../models/mapa-intermodular.model';
 
 @Component({
   selector: 'app-mapa-header',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class MapaHeaderComponent {
   layout = inject(LayoutService);
@@ -17,7 +18,7 @@ export class MapaHeaderComponent {
   activeTab = input.required<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'>();
   searchQuery = input.required<string>();
   typeFilter = input.required<string>();
-  stats = input.required<any>();
+  stats = input.required<MapaStats>();
 
   isCa = computed(() => this.layout.language() === 'catalan');
 

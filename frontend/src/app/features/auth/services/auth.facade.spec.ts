@@ -10,7 +10,7 @@ describe('AuthFacade', () => {
     localStorage.clear();
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [AuthFacade]
+      providers: [AuthFacade],
     });
     facade = TestBed.inject(AuthFacade);
     httpMock = TestBed.inject(HttpTestingController);
@@ -28,7 +28,7 @@ describe('AuthFacade', () => {
   it('should load user from localStorage on init', () => {
     const user = { _id: '123', name: 'John', email: 'j@t.com', role: 'admin', canUseAi: true };
     localStorage.setItem('pai_user', JSON.stringify(user));
-    
+
     TestBed.runInInjectionContext(() => {
       const newFacade = new AuthFacade();
       expect(newFacade.currentUser()).toEqual(user);
@@ -38,7 +38,7 @@ describe('AuthFacade', () => {
   it('login should post credentials and update state on success', () => {
     const mockRes = {
       token: 'fake-token',
-      user: { _id: '1', name: 'John', email: 'j@t.com', role: 'admin', canUseAi: true }
+      user: { _id: '1', name: 'John', email: 'j@t.com', role: 'admin', canUseAi: true },
     };
     const creds = { email: 'j@t.com', password: 'pw' };
 
@@ -56,7 +56,7 @@ describe('AuthFacade', () => {
 
   it('login should handle response without token gracefully', () => {
     const mockRes = {
-      user: { _id: '1', name: 'John', email: 'j@t.com', role: 'admin', canUseAi: true }
+      user: { _id: '1', name: 'John', email: 'j@t.com', role: 'admin', canUseAi: true },
     };
     const creds = { email: 'j@t.com', password: 'pw' };
 

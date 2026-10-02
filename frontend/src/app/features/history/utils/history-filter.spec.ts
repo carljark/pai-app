@@ -24,7 +24,13 @@ const base: any = {
 describe('history-filter', () => {
   it('resolves modules and ras with fallbacks', () => {
     expect(projectModules(base)).toEqual(['Módulo A', 'Módulo B']);
-    expect(projectModules({ ...base, modules: [], generatedContent: { rawText: '', modules: ['X'] } } as any)).toEqual(['X']);
+    expect(
+      projectModules({
+        ...base,
+        modules: [],
+        generatedContent: { rawText: '', modules: ['X'] },
+      } as any),
+    ).toEqual(['X']);
     expect(projectRas(base)).toEqual(['RA1', 'RA2']);
     expect(projectRas({ ...base, ras: undefined } as any)).toEqual([]);
   });
@@ -32,7 +38,9 @@ describe('history-filter', () => {
   it('matches tabs', () => {
     expect(matchesTab(base, 'FPB')).toBe(true);
     expect(matchesTab({ ...base, tipoNivel: 'CFGM_ESTETICA' } as any, 'CFGM')).toBe(true);
-    expect(matchesTab({ ...base, tipoNivel: 'CFGM_PELUQUERIA' } as any, 'CFGM_PELUQUERIA')).toBe(true);
+    expect(matchesTab({ ...base, tipoNivel: 'CFGM_PELUQUERIA' } as any, 'CFGM_PELUQUERIA')).toBe(
+      true,
+    );
     expect(matchesTab({ ...base, tipoNivel: 'ESO' } as any, 'ESO')).toBe(true);
   });
 
@@ -44,7 +52,14 @@ describe('history-filter', () => {
   });
 
   it('matches module, ra and owner filters', () => {
-    const filters = { tab: 'FPB' as const, onlyMine: true, ownerId: 'u1', keywords: [], module: 'Módulo A', ra: 'RA1' };
+    const filters = {
+      tab: 'FPB' as const,
+      onlyMine: true,
+      ownerId: 'u1',
+      keywords: [],
+      module: 'Módulo A',
+      ra: 'RA1',
+    };
     expect(matchesProjectFilters(base, filters)).toBe(true);
 
     expect(matchesProjectFilters(base, { ...filters, ownerId: 'other' })).toBe(false);

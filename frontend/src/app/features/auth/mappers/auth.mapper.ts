@@ -10,7 +10,7 @@ export class AuthMapper {
         name: parsed.name || 'Anónimo',
         email: parsed.email || '',
         role: parsed.role || 'pending',
-        canUseAi: !!parsed.canUseAi
+        canUseAi: !!parsed.canUseAi,
       };
     } catch {
       return null;

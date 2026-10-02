@@ -21,14 +21,14 @@ describe('MapaIntermodularViewComponent', () => {
     mockLayout = {
       language: signal<'castellano' | 'catalan'>('castellano'),
       switchView: vi.fn(),
-      isMobile: signal(false)
+      isMobile: signal(false),
     };
 
     mockTrans = {
       t: signal({
         sidebarMapa: 'Mapa Intermodular',
-        loadingData: 'Cargando datos...'
-      })
+        loadingData: 'Cargando datos...',
+      }),
     };
 
     await TestBed.configureTestingModule({
@@ -37,20 +37,20 @@ describe('MapaIntermodularViewComponent', () => {
         MapaIntermodularFacade,
         CurriculumFacade,
         { provide: LayoutService, useValue: mockLayout },
-        { provide: TranslationService, useValue: mockTrans }
-      ]
+        { provide: TranslationService, useValue: mockTrans },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MapaIntermodularViewComponent);
     component = fixture.componentInstance;
     mockFacade = TestBed.inject(MapaIntermodularFacade);
     curriculum = TestBed.inject(CurriculumFacade);
-    
+
     mockFacade.seedCache = {
       FPB: [...FPB_MODULES_SEED],
       CFGM: [...FPB_MODULES_SEED],
       CFGM_PELUQUERIA: [...FPB_MODULES_SEED],
-      CFGM_PELUQUERIA_2: [...FPB_MODULES_SEED]
+      CFGM_PELUQUERIA_2: [...FPB_MODULES_SEED],
     };
     mockFacade.isLoadingSeed.set(false);
     mockFacade.modules.set([...FPB_MODULES_SEED]);
@@ -59,16 +59,26 @@ describe('MapaIntermodularViewComponent', () => {
 
     // Seed curriculum ras for testing matching
     curriculum.ras.set([
-      { id: '3060-RA1', module: 'Preparación del entorno profesional', description: 'Muestra una imagen personal y profesional adecuada en el entorno de trabajo' },
+      {
+        id: '3060-RA1',
+        module: 'Preparación del entorno profesional',
+        description: 'Muestra una imagen personal y profesional adecuada en el entorno de trabajo',
+      },
       { id: '3005-RA1', module: 'Atención al cliente', description: 'Atiende a posibles clientes' },
-      { id: '3009-RA1', module: 'Ciencias aplicadas I', description: 'Resuelve problemas matemáticos' }
+      {
+        id: '3009-RA1',
+        module: 'Ciencias aplicadas I',
+        description: 'Resuelve problemas matemáticos',
+      },
     ]);
-    
+
     fixture.detectChanges();
   });
 
   it('should switch tabs via DOM click buttons and toggle language', () => {
-    const tabBtns = fixture.nativeElement.querySelectorAll('.mapa-tab-btn') as NodeListOf<HTMLButtonElement>;
+    const tabBtns = fixture.nativeElement.querySelectorAll(
+      '.mapa-tab-btn',
+    ) as NodeListOf<HTMLButtonElement>;
     expect(tabBtns.length).toBe(4);
 
     // Click CFGM tab in DOM
@@ -95,7 +105,7 @@ describe('MapaIntermodularViewComponent', () => {
     component.layout.language.set('catalan');
     fixture.detectChanges();
     expect(component.isCa()).toBe(true);
-    
+
     component.layout.language.set('castellano');
     fixture.detectChanges();
     expect(component.isCa()).toBe(false);
@@ -123,7 +133,9 @@ describe('MapaIntermodularViewComponent', () => {
   it('should create and render header and toggle stats', () => {
     expect(component).toBeTruthy();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.mapa-header__title')?.textContent).toContain('Mapa Intermodular');
+    expect(compiled.querySelector('.mapa-header__title')?.textContent).toContain(
+      'Mapa Intermodular',
+    );
     // Collapsed by default
     expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(0);
     expect(component.headerExpanded()).toBe(false);
@@ -135,11 +147,9 @@ describe('MapaIntermodularViewComponent', () => {
     expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(4);
   });
 
-  
-  
   it('should render activity details and motivating factor', () => {
     component.facade.setTab('FPB');
-    
+
     const dummyConn = {
       title_es: 'title_es',
       title_ca: 'title_ca',
@@ -150,9 +160,7 @@ describe('MapaIntermodularViewComponent', () => {
       targetRaText_es: 'ra_es',
       targetRaText_ca: 'ra_ca',
       sourceCriteria: 'a, b',
-      relatedCriteria: [
-        { code: 'a', text_es: 'ce_es', text_ca: 'ce_ca' }
-      ],
+      relatedCriteria: [{ code: 'a', text_es: 'ce_es', text_ca: 'ce_ca' }],
       activities: [
         {
           id: '1',
@@ -165,7 +173,7 @@ describe('MapaIntermodularViewComponent', () => {
           evidence_es: 'ev_es',
           evidence_ca: 'ev_ca',
           diversitySupport_es: 'div_es',
-          diversitySupport_ca: 'div_ca'
+          diversitySupport_ca: 'div_ca',
         },
         {
           id: '2',
@@ -176,9 +184,9 @@ describe('MapaIntermodularViewComponent', () => {
           evidence_es: 'ev',
           evidence_ca: 'ev',
           diversitySupport_es: 'div',
-          diversitySupport_ca: 'div'
-        }
-      ]
+          diversitySupport_ca: 'div',
+        },
+      ],
     };
     const emptyConn = {
       targetModuleCode: '3062',
@@ -188,21 +196,29 @@ describe('MapaIntermodularViewComponent', () => {
       targetRaText_es: 'ra3',
       targetRaText_ca: 'ra3',
       relatedCriteria: [],
-      activities: []
+      activities: [],
     };
-    
+
     const customMod = {
       code: '3060',
       name_es: 'Mod',
-      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [dummyConn, emptyConn] }]
+      learningOutcomes: [
+        {
+          id: '3060_RA1',
+          code: 'RA1',
+          text_es: 'a',
+          criteria_es: ['ce_1'],
+          connections: [dummyConn, emptyConn],
+        },
+      ],
     };
-    
+
     component.facade.modules.set([customMod as any]);
     component.facade.selectModule('3060');
     component.facade.selectRa('3060_RA1');
     component.facade.searchQuery.set('');
     fixture.detectChanges();
-    
+
     expect(fixture.nativeElement.textContent).toContain('mot_es');
     component.layout.language.set('catalan');
     fixture.detectChanges();
@@ -224,20 +240,25 @@ describe('MapaIntermodularViewComponent', () => {
     const customMod = {
       code: '3060',
       name_es: 'Mod',
-      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [] }]
+      learningOutcomes: [
+        { id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [] },
+      ],
     };
     component.facade.modules.set([customMod as any]);
     component.facade.selectModule('3060');
     component.facade.selectRa('3060_RA1');
     fixture.detectChanges();
-    
-    expect(fixture.nativeElement.textContent).toContain('No hay conexiones registradas para este RA');
+
+    expect(fixture.nativeElement.textContent).toContain(
+      'No hay conexiones registradas para este RA',
+    );
     component.layout.language.set('catalan');
     fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).toContain('No hi ha connexions registrades per a aquest RA');
+    expect(fixture.nativeElement.textContent).toContain(
+      'No hi ha connexions registrades per a aquest RA',
+    );
   });
 
-  
   it('should render all template conditions in both languages for full coverage', () => {
     // Check CFGM_PELUQUERIA tab button text
     component.facade.setTab('CFGM_PELUQUERIA');
@@ -249,7 +270,7 @@ describe('MapaIntermodularViewComponent', () => {
     component.layout.language.set('castellano');
 
     component.facade.setTab('FPB');
-    
+
     const dummyConn = {
       title_es: 'title_es',
       title_ca: 'title_ca',
@@ -260,9 +281,7 @@ describe('MapaIntermodularViewComponent', () => {
       targetRaText_es: 'ra_es',
       targetRaText_ca: 'ra_ca',
       sourceCriteria: 'a, b',
-      relatedCriteria: [
-        { code: 'a', text_es: 'ce_es', text_ca: 'ce_ca' }
-      ],
+      relatedCriteria: [{ code: 'a', text_es: 'ce_es', text_ca: 'ce_ca' }],
       activities: [
         {
           id: '1',
@@ -275,7 +294,7 @@ describe('MapaIntermodularViewComponent', () => {
           evidence_es: 'ev_es',
           evidence_ca: 'ev_ca',
           diversitySupport_es: 'div_es',
-          diversitySupport_ca: 'div_ca'
+          diversitySupport_ca: 'div_ca',
         },
         {
           id: '2',
@@ -286,9 +305,9 @@ describe('MapaIntermodularViewComponent', () => {
           evidence_es: 'ev',
           evidence_ca: 'ev',
           diversitySupport_es: 'div',
-          diversitySupport_ca: 'div'
-        }
-      ]
+          diversitySupport_ca: 'div',
+        },
+      ],
     };
     const emptyConn = {
       targetModuleCode: '3062',
@@ -298,34 +317,42 @@ describe('MapaIntermodularViewComponent', () => {
       targetRaText_es: 'ra3',
       targetRaText_ca: 'ra3',
       relatedCriteria: [],
-      activities: []
+      activities: [],
     };
-    
+
     const customMod = {
       code: '3060',
       name_es: 'Mod',
-      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', text_ca: 'b', criteria_es: ['ce_1'], connections: [dummyConn, emptyConn] }]
+      learningOutcomes: [
+        {
+          id: '3060_RA1',
+          code: 'RA1',
+          text_es: 'a',
+          text_ca: 'b',
+          criteria_es: ['ce_1'],
+          connections: [dummyConn, emptyConn],
+        },
+      ],
     };
-    
+
     component.facade.modules.set([customMod as any]);
     component.facade.selectModule('3060');
     component.facade.selectRa('3060_RA1');
     component.facade.searchQuery.set('');
     fixture.detectChanges();
-    
+
     expect(fixture.nativeElement.textContent).toContain('title_es');
     expect(fixture.nativeElement.textContent).toContain('mot_es');
     expect(fixture.nativeElement.textContent).toContain('Criterios propios');
-    
+
     component.layout.language.set('catalan');
     fixture.detectChanges();
-    
+
     expect(fixture.nativeElement.textContent).toContain('title_ca');
     expect(fixture.nativeElement.textContent).toContain('mot_ca');
     expect(fixture.nativeElement.textContent).toContain('Criteris propis');
   });
 
-  
   it('should render remaining edge cases in HTML (empty search, selected criterion)', () => {
     // 1. Empty modules due to search
     component.facade.searchQuery.set('GIBBERISH_NO_MATCH');
@@ -334,7 +361,7 @@ describe('MapaIntermodularViewComponent', () => {
     component.layout.language.set('catalan');
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('No s’ha trobat');
-    
+
     component.layout.language.set('castellano');
     component.facade.searchQuery.set('');
 
@@ -342,7 +369,9 @@ describe('MapaIntermodularViewComponent', () => {
     const customMod = {
       code: '3060',
       name_es: 'Mod',
-      learningOutcomes: [{ id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [] }]
+      learningOutcomes: [
+        { id: '3060_RA1', code: 'RA1', text_es: 'a', criteria_es: ['ce_1'], connections: [] },
+      ],
     };
     component.facade.modules.set([customMod as any]);
     component.facade.selectModule('3060');
@@ -352,7 +381,7 @@ describe('MapaIntermodularViewComponent', () => {
 
     expect(fixture.nativeElement.textContent).toContain('Ver todos');
     expect(fixture.nativeElement.textContent).toContain('Filtrado por criterio');
-    
+
     component.layout.language.set('catalan');
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('Veure tots');
@@ -398,7 +427,6 @@ describe('MapaIntermodularViewComponent', () => {
   it('should get correct relation labels and toggle header in Catalan', () => {
     // getRelationLabel is in ConnectionsListComponent, not MapaIntermodularViewComponent
     // This tests the component's tab functionality instead
-    const types = ['ciencias', 'comunicacion', 'empleabilidad', 'cliente', 'sostenibilidad', 'digital', 'tecnica', 'unknown_rel'];
     mockLayout.language.set('castellano');
     fixture.detectChanges();
 
@@ -440,7 +468,12 @@ describe('MapaIntermodularViewComponent', () => {
 
     curriculum.ras.set([
       { _id: '1', id: 'RA1', module: '3060 - Ciencias', description: 'Exact description' },
-      { _id: '2', id: 'RA2', module: '3059 - Comunicación', description: 'Otra descripción parcial' }
+      {
+        _id: '2',
+        id: 'RA2',
+        module: '3059 - Comunicación',
+        description: 'Otra descripción parcial',
+      },
     ]);
 
     component.createProjectFromConnection();
@@ -486,7 +519,7 @@ describe('MapaIntermodularViewComponent', () => {
     // Filter pills
     const pills = compiled.querySelectorAll('.filter-pill') as NodeListOf<HTMLButtonElement>;
     expect(pills.length).toBe(4);
-    pills.forEach(p => {
+    pills.forEach((p) => {
       p.click();
       fixture.detectChanges();
     });
@@ -507,7 +540,7 @@ describe('MapaIntermodularViewComponent', () => {
 
     // Module card click
     const modCards = compiled.querySelectorAll('.mapa-module-card') as NodeListOf<HTMLElement>;
-    modCards.forEach(c => {
+    modCards.forEach((c) => {
       c.click();
       fixture.detectChanges();
     });
@@ -518,29 +551,37 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
 
     // RA item click
-    const raItems = fixture.nativeElement.querySelectorAll('.mapa-ra-item') as NodeListOf<HTMLElement>;
-    raItems.forEach(r => {
+    const raItems = fixture.nativeElement.querySelectorAll(
+      '.mapa-ra-item',
+    ) as NodeListOf<HTMLElement>;
+    raItems.forEach((r) => {
       r.click();
       fixture.detectChanges();
     });
 
     // Action buttons in hero
-    const actionBtns = fixture.nativeElement.querySelectorAll('.mapa-btn-action') as NodeListOf<HTMLButtonElement>;
-    actionBtns.forEach(b => {
+    const actionBtns = fixture.nativeElement.querySelectorAll(
+      '.mapa-btn-action',
+    ) as NodeListOf<HTMLButtonElement>;
+    actionBtns.forEach((b) => {
       b.click();
       fixture.detectChanges();
     });
 
     // Criterion pills in hero
-    const critPills = fixture.nativeElement.querySelectorAll('.mapa-criterion-pill') as NodeListOf<HTMLButtonElement>;
+    const critPills = fixture.nativeElement.querySelectorAll(
+      '.mapa-criterion-pill',
+    ) as NodeListOf<HTMLButtonElement>;
     expect(critPills.length).toBeGreaterThan(0);
-    critPills.forEach(cp => {
+    critPills.forEach((cp) => {
       cp.click();
       fixture.detectChanges();
     });
 
     // Clear criteria button
-    const clearBtn = fixture.nativeElement.querySelector('.mapa-criteria-clear-btn') as HTMLButtonElement;
+    const clearBtn = fixture.nativeElement.querySelector(
+      '.mapa-criteria-clear-btn',
+    ) as HTMLButtonElement;
     if (clearBtn) {
       clearBtn.click();
       fixture.detectChanges();
@@ -572,11 +613,17 @@ describe('MapaIntermodularViewComponent', () => {
     mockLayout.language.set('castellano');
     component.facade.selectModule('3060');
     component.facade.selectRa('3060_RA1');
-    component.facade.modules.update(mods => {
-      return mods.map(m => m.code === '3060' ? {
-        ...m,
-        learningOutcomes: m.learningOutcomes.map(r => r.id === '3060_RA1' ? { ...r, connections: [] } : r)
-      } : m);
+    component.facade.modules.update((mods) => {
+      return mods.map((m) =>
+        m.code === '3060'
+          ? {
+              ...m,
+              learningOutcomes: m.learningOutcomes.map((r) =>
+                r.id === '3060_RA1' ? { ...r, connections: [] } : r,
+              ),
+            }
+          : m,
+      );
     });
     component.onSelectCriterion(null);
     fixture.detectChanges();
@@ -587,6 +634,35 @@ describe('MapaIntermodularViewComponent', () => {
   it('should test fallback relation labels', () => {
     // getRelationLabel is in ConnectionsListComponent, not MapaIntermodularViewComponent
     // This test was moved to connections-list.component.spec.ts
+  });
+
+  it('should activate headers and module cards with Enter only when they have the focus', () => {
+    const enter = () => new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+    const activateSpy = vi.spyOn(component, 'activateStep');
+    const moduleSpy = vi.spyOn(component, 'onSelectModule');
+    const headerSpy = vi.spyOn(component, 'toggleHeaderStats');
+    const root = fixture.nativeElement as HTMLElement;
+
+    for (const step of [1, 2, 3]) {
+      const header = root.querySelector(`.mapa-step-header--${step}`) as HTMLElement;
+      // Enter que sube desde el botón interior no debe activar el paso
+      header.querySelector('.mapa-step-toggle-btn')!.dispatchEvent(enter());
+      expect(activateSpy).not.toHaveBeenCalledWith(step);
+      header.dispatchEvent(enter());
+      expect(activateSpy).toHaveBeenCalledWith(step);
+    }
+
+    const card = root.querySelector('.mapa-module-card') as HTMLElement;
+    card.querySelector('.mapa-module-header')!.dispatchEvent(enter());
+    expect(moduleSpy).not.toHaveBeenCalled();
+    card.dispatchEvent(enter());
+    expect(moduleSpy).toHaveBeenCalled();
+
+    const mainRow = root.querySelector('.mapa-header__main-row') as HTMLElement;
+    mainRow.querySelector('.mapa-header__title-group')!.dispatchEvent(enter());
+    expect(headerSpy).not.toHaveBeenCalled();
+    mainRow.dispatchEvent(enter());
+    expect(headerSpy).toHaveBeenCalled();
   });
 
   it('should toggle accordion steps 1, 2 and 3 and update classes in DOM', () => {
@@ -615,19 +691,25 @@ describe('MapaIntermodularViewComponent', () => {
     btnToggle1.click();
     fixture.detectChanges();
     expect(component.step1Open()).toBe(false);
-    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain('collapsed');
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain(
+      'collapsed',
+    );
 
     // Clicking header1 directly (outside toggle btn) should ACTIVATE (open) step 1
     header1.click();
     fixture.detectChanges();
     expect(component.step1Open()).toBe(true);
-    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).not.toContain('collapsed');
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).not.toContain(
+      'collapsed',
+    );
 
     // Toggle step 2 via button click
     btnToggle2.click();
     fixture.detectChanges();
     expect(component.step2Open()).toBe(false);
-    expect(fixture.nativeElement.querySelector('.mapa-step-body--2').classList).toContain('collapsed');
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--2').classList).toContain(
+      'collapsed',
+    );
 
     // Clicking header2 directly should activate step 2
     header2.click();
@@ -638,7 +720,9 @@ describe('MapaIntermodularViewComponent', () => {
     btnToggle3.click();
     fixture.detectChanges();
     expect(component.step3Open()).toBe(false);
-    expect(fixture.nativeElement.querySelector('.mapa-step-body--3').classList).toContain('collapsed');
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--3').classList).toContain(
+      'collapsed',
+    );
 
     // Clicking header3 directly should activate step 3
     header3.click();
@@ -724,7 +808,7 @@ describe('MapaIntermodularViewComponent', () => {
 
     // Partial substring fallback
     curriculum.ras.set([
-      { description: 'muestra una imagen personal y profesional', module: '3060' }
+      { description: 'muestra una imagen personal y profesional', module: '3060' },
     ]);
     component.createProjectFromConnection();
     expect(curriculum.selectedRas()).toContain('muestra una imagen personal y profesional');
@@ -741,15 +825,13 @@ describe('MapaIntermodularViewComponent', () => {
     component.facade.selectModule('3060');
     component.facade.selectRa('3060_RA1');
     const desc = component.facade.selectedRa()?.text_es || '';
-    curriculum.ras.set([
-      { id: 'RA1', description: desc, module: '3060' }
-    ]);
+    curriculum.ras.set([{ id: 'RA1', description: desc, module: '3060' }]);
     const mockConn: any = {
       targetModuleCode: '3060',
       targetModuleName_es: 'Prep',
       targetRaCode: 'RA1',
       targetRaText_es: desc,
-      targetRaText_ca: desc
+      targetRaText_ca: desc,
     };
     component.createProjectFromConnection(mockConn);
   });
@@ -800,15 +882,24 @@ describe('MapaIntermodularViewComponent', () => {
           evidence_es: 'ev_perruq_es',
           evidence_ca: 'ev_perruq_ca',
           diversitySupport_es: 'div_perruq_es',
-          diversitySupport_ca: 'div_perruq_ca'
-        }
-      ]
+          diversitySupport_ca: 'div_perruq_ca',
+        },
+      ],
     };
     const peluquerMod = {
       code: '0845',
       name_es: 'Tall de cabells',
       name_ca: 'Tall de cabells',
-      learningOutcomes: [{ id: '0845_RA1', code: 'RA1', text_es: 'ra_es', text_ca: 'ra_ca', criteria_es: ['a) criteri'], connections: [dummyConn2] }]
+      learningOutcomes: [
+        {
+          id: '0845_RA1',
+          code: 'RA1',
+          text_es: 'ra_es',
+          text_ca: 'ra_ca',
+          criteria_es: ['a) criteri'],
+          connections: [dummyConn2],
+        },
+      ],
     };
     component.facade.modules.set([peluquerMod as any]);
     component.facade.selectModule('0845');

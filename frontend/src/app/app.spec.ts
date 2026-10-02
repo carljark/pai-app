@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { App } from './app';
@@ -18,36 +18,38 @@ import { of } from 'rxjs';
 describe('App', () => {
   let fixture: ComponentFixture<App>;
   let component: App;
-  
+
   let layoutServiceMock: any;
   let authFacadeMock: any;
   let appFacadeMock: any;
 
   beforeEach(async () => {
     layoutServiceMock = {
-      isMobile: signal(false), language: signal("es"),
+      isMobile: signal(false),
+      language: signal('es'),
       currentView: signal('home'),
       switchView: vi.fn(),
       isSidebarCollapsed: signal(false),
-      toggleSidebar: vi.fn()
+      toggleSidebar: vi.fn(),
     };
-    
+
     authFacadeMock = {
-      currentUser: signal(null)
+      currentUser: signal(null),
     };
-    
+
     appFacadeMock = {
-      showInfoModal: signal(false), showProjectsLimitModal: signal(false),
+      showInfoModal: signal(false),
+      showProjectsLimitModal: signal(false),
       infoTitle: signal(''),
       infoMessage: signal(''),
       infoType: signal('info'),
       closeInfoModal: vi.fn(),
-      
+
       showConfirmModal: signal(false),
       confirmTitle: signal(''),
       confirmMessage: signal(''),
       confirmAction: signal(() => {}),
-      
+
       showErrorModal: signal(false),
       errorTitle: signal(''),
       errorMessage: signal(''),
@@ -59,19 +61,33 @@ describe('App', () => {
       queueToastMessage: signal<string | null>(null),
       queueToastRestartToken: signal(0),
       dismissQueueToast: vi.fn(),
-      
+
       viewPastProject: vi.fn(),
-      openProjectInNewWindow: vi.fn()
+      openProjectInNewWindow: vi.fn(),
     };
 
     const mockCurriculumFacade = {
       ras: signal([]),
       modules: signal([]),
-      isLoading: signal(false), tipoNivel: signal('FP_BASICA'), curso: signal('1º'), groupedItems: signal([]), selectedRas: signal([]), selectedItemsDetails: signal([]), groupedSelectedItems: signal([]), getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }), toggleRa: vi.fn()
+      isLoading: signal(false),
+      tipoNivel: signal('FP_BASICA'),
+      curso: signal('1º'),
+      groupedItems: signal([]),
+      selectedRas: signal([]),
+      selectedItemsDetails: signal([]),
+      groupedSelectedItems: signal([]),
+      getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }),
+      toggleRa: vi.fn(),
     };
     const mockProjectsFacade = {
       projects: signal([]),
-      isGenerating: signal(false), projectsHistory: signal([]), myProjects: signal([]), currentProjectId: signal(null), isUploading: signal(false), loadHistory: vi.fn(), currentProject: signal(null),
+      isGenerating: signal(false),
+      projectsHistory: signal([]),
+      myProjects: signal([]),
+      currentProjectId: signal(null),
+      isUploading: signal(false),
+      loadHistory: vi.fn(),
+      currentProject: signal(null),
       step: signal(0),
       hasActiveGeneration: signal(false),
       methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
@@ -89,7 +105,7 @@ describe('App', () => {
       addCollaborator: vi.fn(),
       removeCollaborator: vi.fn(),
       historyTab: signal('FPB'),
-      extraInstructions: signal('')
+      extraInstructions: signal(''),
     };
     const mockAdminFacade = {
       settings: signal({}),
@@ -100,7 +116,7 @@ describe('App', () => {
       loadUsers: vi.fn(),
       loadLogs: vi.fn(),
       loadAnalytics: vi.fn(),
-      formatDuration: vi.fn().mockReturnValue('1m')
+      formatDuration: vi.fn().mockReturnValue('1m'),
     };
     const mockNotificationsFacade = {
       notifications: signal([]),
@@ -108,7 +124,7 @@ describe('App', () => {
       recentActivityOpen: signal(false),
       openRecentActivity: vi.fn(),
       closeRecentActivity: vi.fn(),
-      markAllAsRead: vi.fn()
+      markAllAsRead: vi.fn(),
     };
     const mockFeedbackService = {
       feedbacks: signal([]),
@@ -116,7 +132,7 @@ describe('App', () => {
       isLoading: signal(false),
       loadFeedbacks: vi.fn().mockReturnValue(of([])),
       sendFeedback: vi.fn().mockReturnValue(of({})),
-      deleteFeedback: vi.fn().mockReturnValue(of({}))
+      deleteFeedback: vi.fn().mockReturnValue(of({})),
     };
     const mockMapaFacade = {
       activeTab: signal('FPB'),
@@ -142,7 +158,7 @@ describe('App', () => {
       setSearch: vi.fn(),
       setTypeFilter: vi.fn(),
       setRelationFilter: vi.fn(),
-      getConnectionsCountForCriterion: vi.fn().mockReturnValue(0)
+      getConnectionsCountForCriterion: vi.fn().mockReturnValue(0),
     };
 
     await TestBed.configureTestingModule({
@@ -151,17 +167,21 @@ describe('App', () => {
         { provide: AuthFacade, useValue: authFacadeMock },
         { provide: AppFacade, useValue: appFacadeMock },
         { provide: LayoutService, useValue: layoutServiceMock },
-        
+
         { provide: CurriculumFacade, useValue: mockCurriculumFacade },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: NotificationsFacade, useValue: mockNotificationsFacade },
         { provide: AdminFacade, useValue: mockAdminFacade },
         { provide: FeedbackService, useValue: mockFeedbackService },
-        { provide: MapaIntermodularFacade, useValue: mockMapaFacade }
-      ]
+        { provide: MapaIntermodularFacade, useValue: mockMapaFacade },
+      ],
     }).compileComponents();
-    
-    Object.defineProperty(window.history, 'scrollRestoration', { value: 'auto', writable: true, configurable: true });
+
+    Object.defineProperty(window.history, 'scrollRestoration', {
+      value: 'auto',
+      writable: true,
+      configurable: true,
+    });
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'auto';
     }
@@ -172,11 +192,11 @@ describe('App', () => {
     fixture = TestBed.createComponent(App);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    
+
     expect(component).toBeTruthy();
-    
+
     expect(layoutServiceMock.isMobile()).toBe(false);
-    
+
     window.innerWidth = 500;
     component.onResize();
     expect(layoutServiceMock.isMobile()).toBe(true);
@@ -185,7 +205,7 @@ describe('App', () => {
     component.onResize();
     expect(layoutServiceMock.isMobile()).toBe(false);
   });
-  
+
   it('should have set scrollRestoration to manual if available', () => {
     fixture = TestBed.createComponent(App);
     if ('scrollRestoration' in history) {
@@ -193,8 +213,6 @@ describe('App', () => {
     }
   });
 
-  
-  
   it('should cover dummy functions for threshold', () => {
     fixture = TestBed.createComponent(App);
     component = fixture.componentInstance;
@@ -212,7 +230,6 @@ describe('App', () => {
     vi.useRealTimers();
   });
 
-  
   it('should scroll to top on init via setTimeout', async () => {
     vi.useFakeTimers();
     fixture = TestBed.createComponent(App);
@@ -220,9 +237,8 @@ describe('App', () => {
     vi.useRealTimers();
   });
 
-  
   it('should flush setTimeouts', async () => {
-    await new Promise(r => setTimeout(r, 50));
+    await new Promise((r) => setTimeout(r, 50));
     expect(true).toBe(true);
   });
 
@@ -237,7 +253,7 @@ describe('App', () => {
     fixture.detectChanges();
 
     const de = fixture.debugElement;
-    
+
     const homeDe = de.query(By.css('app-home-dashboard'));
     if (homeDe) {
       homeDe.triggerEventHandler('navigate', 'history');
@@ -247,41 +263,41 @@ describe('App', () => {
     }
 
     const infoDe = de.query(By.css('app-info-modal'));
-    if (infoDe) infoDe.triggerEventHandler('close', null);
+    if (infoDe) infoDe.triggerEventHandler('closed', null);
 
     const confirmDe = de.query(By.css('app-confirm-modal'));
     if (confirmDe) {
       confirmDe.triggerEventHandler('confirm', null);
-      confirmDe.triggerEventHandler('cancel', null);
+      confirmDe.triggerEventHandler('cancelled', null);
     }
 
     const errorDe = de.query(By.css('app-error-modal'));
-    if (errorDe) errorDe.triggerEventHandler('close', null);
+    if (errorDe) errorDe.triggerEventHandler('closed', null);
   });
 
   it('should cover template branches based on signals', () => {
     fixture = TestBed.createComponent(App);
     component = fixture.componentInstance;
-    
+
     // Auth unauthenticated
     authFacadeMock.currentUser.set(null);
     fixture.detectChanges();
-    
+
     // Auth authenticated, admin role
     authFacadeMock.currentUser.set({ role: 'admin' });
     layoutServiceMock.currentView.set('admin');
     fixture.detectChanges();
-    
+
     // Views
     layoutServiceMock.currentView.set('home');
     fixture.detectChanges();
-    
+
     layoutServiceMock.currentView.set('generator');
     fixture.detectChanges();
-    
+
     layoutServiceMock.currentView.set('history');
     fixture.detectChanges();
-    
+
     layoutServiceMock.currentView.set('taller');
     fixture.detectChanges();
 
@@ -299,7 +315,7 @@ describe('App', () => {
     appFacadeMock.showConfirmModal.set(true);
     appFacadeMock.showErrorModal.set(true);
     fixture.detectChanges();
-    
+
     expect(component).toBeTruthy();
   });
 
@@ -322,20 +338,26 @@ describe('App', () => {
     component = fixture.componentInstance;
     appFacadeMock.showDuplicateModal.set(true);
     appFacadeMock.duplicateProjects.set([
-      { _id: 'p1', title: 'Duplicado', status: 'borrador', createdAt: new Date().toISOString() }
+      { _id: 'p1', title: 'Duplicado', status: 'borrador', createdAt: new Date().toISOString() },
     ]);
     fixture.detectChanges();
 
     expect(fixture.nativeElement.querySelector('app-duplicate-projects-modal')).toBeTruthy();
 
-    (fixture.nativeElement.querySelector('.duplicate-projects-modal__backdrop') as HTMLElement).click();
+    (
+      fixture.nativeElement.querySelector('.duplicate-projects-modal__backdrop') as HTMLElement
+    ).click();
     expect(appFacadeMock.cancelDuplicates).toHaveBeenCalled();
 
-    const actions = fixture.nativeElement.querySelectorAll('.duplicate-projects-modal__actions button');
+    const actions = fixture.nativeElement.querySelectorAll(
+      '.duplicate-projects-modal__actions button',
+    );
     (actions[1] as HTMLButtonElement).click();
     expect(appFacadeMock.confirmDuplicates).toHaveBeenCalled();
 
-    (fixture.nativeElement.querySelector('.duplicate-projects-modal__link') as HTMLButtonElement).click();
+    (
+      fixture.nativeElement.querySelector('.duplicate-projects-modal__link') as HTMLButtonElement
+    ).click();
     expect(appFacadeMock.openDuplicateProject).toHaveBeenCalled();
   });
 });

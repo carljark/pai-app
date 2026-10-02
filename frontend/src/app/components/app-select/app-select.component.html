@@ -1,7 +1,8 @@
 <div
   class="app-select"
   [class.app-select--sm]="size() === 'sm'"
-  [class.app-select--disabled]="disabled()">
+  [class.app-select--disabled]="disabled()"
+>
   @if (label()) {
     <label class="app-select__label" [attr.for]="inputId()">{{ label() }}</label>
   }
@@ -10,7 +11,8 @@
     [attr.id]="inputId()"
     [value]="value()"
     [disabled]="disabled()"
-    (change)="onSelect($event)">
+    (change)="onSelect($event)"
+  >
     @if (placeholder()) {
       <option value="">{{ placeholder() }}</option>
     }

@@ -4,6 +4,7 @@ import {
   isFPProject,
   isESOProject,
   AiModelsResponse,
+  getOwnerId,
 } from './project.model';
 
 describe('Project Model - Utility Functions', () => {
@@ -90,6 +91,22 @@ describe('Project Model - Utility Functions', () => {
 
     it('should return false for ESO', () => {
       expect(isESOProject('ESO')).toBe(false);
+    });
+  });
+
+  describe('getOwnerId', () => {
+    it('should return the _id of a populated user', () => {
+      expect(getOwnerId({ _id: 'u1', name: 'Ana' })).toBe('u1');
+    });
+
+    it('should return the id when userId is a string', () => {
+      expect(getOwnerId('u2')).toBe('u2');
+    });
+
+    it('should return undefined for missing or empty ids', () => {
+      expect(getOwnerId(undefined)).toBeUndefined();
+      expect(getOwnerId(null)).toBeUndefined();
+      expect(getOwnerId('')).toBeUndefined();
     });
   });
 });

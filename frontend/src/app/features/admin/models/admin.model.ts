@@ -1,3 +1,5 @@
+import { AIProvider } from '../../projects/models/project.model';
+
 export interface AdminUser {
   _id: string;
   name: string;
@@ -13,12 +15,41 @@ export interface CenterSettings {
   educationalLevel: string;
 }
 
+/** Metadatos libres de un log; los de IA los usa el panel de actividad. */
+export interface ActivityLogDetails {
+  [key: string]: unknown;
+  title?: string;
+  error?: string;
+  model?: string;
+  provider?: AIProvider;
+  fallbackUsed?: boolean;
+  generationTimeMs?: number;
+  promptChars?: number;
+  instructionChars?: number;
+  cascadeLog?: unknown;
+  errorCascadeLog?: string[];
+}
+
+/** Proyecto poblado por `GET /api/admin/logs` (o `null` si se borró). */
+export interface ActivityLogProject {
+  _id: string;
+  title?: string;
+  status?: string;
+  usedModel?: string;
+  usedAiProvider?: AIProvider;
+  generationTimeMs?: number;
+  errorCascadeLog?: string[];
+  errorDetail?: string;
+  aiPromptChars?: number;
+  aiInstructionChars?: number;
+}
+
 export interface ActivityLog {
   _id: string;
   userId: { _id: string; name: string; email: string };
   action: string;
-  details: any;
-  projectId?: any;
+  details: ActivityLogDetails;
+  projectId?: ActivityLogProject | null;
   createdAt: string;
 }
 
@@ -60,4 +91,3 @@ export interface AnalyticsData {
   userMetrics: UserMetric[];
   exportTimeline: ExportTimelineItem[];
 }
-

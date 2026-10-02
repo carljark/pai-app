@@ -10,7 +10,7 @@ describe('FeedbackService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [FeedbackService]
+      providers: [FeedbackService],
     });
     service = TestBed.inject(FeedbackService);
     httpMock = TestBed.inject(HttpTestingController);
@@ -29,12 +29,14 @@ describe('FeedbackService', () => {
       type: 'sugerencia' as const,
       title: 'Mejora',
       description: 'Detalle',
-      status: 'pendiente' as const
+      status: 'pendiente' as const,
     };
 
-    service.sendFeedback({ type: 'sugerencia', title: 'Mejora', description: 'Detalle' }).subscribe(res => {
-      expect(res._id).toBe('fb1');
-    });
+    service
+      .sendFeedback({ type: 'sugerencia', title: 'Mejora', description: 'Detalle' })
+      .subscribe((res) => {
+        expect(res._id).toBe('fb1');
+      });
 
     const req = httpMock.expectOne('/api/feedback');
     expect(req.request.method).toBe('POST');
@@ -45,7 +47,7 @@ describe('FeedbackService', () => {
   });
 
   it('debería cargar lista de feedbacks con y sin query params', () => {
-    service.loadFeedbacks({ status: 'pendiente', type: 'error' }).subscribe(res => {
+    service.loadFeedbacks({ status: 'pendiente', type: 'error' }).subscribe((res) => {
       expect(res.length).toBe(1);
     });
 
@@ -63,15 +65,36 @@ describe('FeedbackService', () => {
   });
 
   it('debería actualizar estado de un feedback', () => {
-    service.feedbacks.set([{ _id: 'fb1', title: 'Bug', status: 'pendiente', type: 'error', userId: '1', userName: 'A', userEmail: 'B', description: 'C' }]);
-    
-    service.updateFeedbackStatus('fb1', 'resuelto', 'Listo').subscribe(res => {
+    service.feedbacks.set([
+      {
+        _id: 'fb1',
+        title: 'Bug',
+        status: 'pendiente',
+        type: 'error',
+        userId: '1',
+        userName: 'A',
+        userEmail: 'B',
+        description: 'C',
+      },
+    ]);
+
+    service.updateFeedbackStatus('fb1', 'resuelto', 'Listo').subscribe((res) => {
       expect(res.status).toBe('resuelto');
     });
 
     const req = httpMock.expectOne('/api/feedback/fb1');
     expect(req.request.method).toBe('PATCH');
-    req.flush({ _id: 'fb1', title: 'Bug', status: 'resuelto', type: 'error', adminNotes: 'Listo', userId: '1', userName: 'A', userEmail: 'B', description: 'C' });
+    req.flush({
+      _id: 'fb1',
+      title: 'Bug',
+      status: 'resuelto',
+      type: 'error',
+      adminNotes: 'Listo',
+      userId: '1',
+      userName: 'A',
+      userEmail: 'B',
+      description: 'C',
+    });
 
     expect(service.feedbacks()[0].status).toBe('resuelto');
     expect(service.feedbacks()[0].adminNotes).toBe('Listo');
@@ -79,7 +102,7 @@ describe('FeedbackService', () => {
 
   it('debería manejar error en sendFeedback', () => {
     service.sendFeedback({ type: 'error', title: 'Fallo', description: 'Desc' }).subscribe({
-      error: () => {}
+      error: () => {},
     });
 
     const req = httpMock.expectOne('/api/feedback');
@@ -106,20 +129,59 @@ describe('FeedbackService', () => {
 
   it('debería actualizar estado de un feedback entre varios items', () => {
     service.feedbacks.set([
-      { _id: 'fb1', title: 'Bug 1', status: 'pendiente', type: 'error', userId: '1', userName: 'A', userEmail: 'B', description: 'C' },
-      { _id: 'fb2', title: 'Bug 2', status: 'pendiente', type: 'error', userId: '1', userName: 'A', userEmail: 'B', description: 'C' }
+      {
+        _id: 'fb1',
+        title: 'Bug 1',
+        status: 'pendiente',
+        type: 'error',
+        userId: '1',
+        userName: 'A',
+        userEmail: 'B',
+        description: 'C',
+      },
+      {
+        _id: 'fb2',
+        title: 'Bug 2',
+        status: 'pendiente',
+        type: 'error',
+        userId: '1',
+        userName: 'A',
+        userEmail: 'B',
+        description: 'C',
+      },
     ]);
-    
+
     service.updateFeedbackStatus('fb1', 'resuelto', 'Listo').subscribe();
     const req = httpMock.expectOne('/api/feedback/fb1');
-    req.flush({ _id: 'fb1', title: 'Bug 1', status: 'resuelto', type: 'error', adminNotes: 'Listo', userId: '1', userName: 'A', userEmail: 'B', description: 'C' });
+    req.flush({
+      _id: 'fb1',
+      title: 'Bug 1',
+      status: 'resuelto',
+      type: 'error',
+      adminNotes: 'Listo',
+      userId: '1',
+      userName: 'A',
+      userEmail: 'B',
+      description: 'C',
+    });
 
     expect(service.feedbacks()[0].status).toBe('resuelto');
     expect(service.feedbacks()[1].status).toBe('pendiente');
   });
 
   it('debería eliminar feedback', () => {
-    service.feedbacks.set([{ _id: 'fb1', title: 'Bug', status: 'pendiente', type: 'error', userId: '1', userName: 'A', userEmail: 'B', description: 'C' }]);
+    service.feedbacks.set([
+      {
+        _id: 'fb1',
+        title: 'Bug',
+        status: 'pendiente',
+        type: 'error',
+        userId: '1',
+        userName: 'A',
+        userEmail: 'B',
+        description: 'C',
+      },
+    ]);
 
     service.deleteFeedback('fb1').subscribe();
     const req = httpMock.expectOne('/api/feedback/fb1');

@@ -1,8 +1,23 @@
 <div class="mapa-header" [class.expanded]="headerExpanded()">
-  <div class="mapa-header__main-row" (click)="toggleHeaderStatsHandler()">
+  <div
+    class="mapa-header__main-row"
+    role="button"
+    tabindex="0"
+    (click)="toggleHeaderStatsHandler()"
+    (keydown.enter)="$event.target === $event.currentTarget && toggleHeaderStatsHandler()"
+  >
     <div class="mapa-header__title-group">
       <div class="mapa-header__icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
           <circle cx="6" cy="6" r="3"></circle>
           <circle cx="18" cy="6" r="3"></circle>
           <circle cx="12" cy="18" r="3"></circle>
@@ -13,23 +28,48 @@
       </div>
       <h1 class="mapa-header__title">
         @if (activeTab() === 'FPB') {
-          {{ isCa() ? 'Mapa Intermodular CFGB Perruqueria i Estètica' : 'Mapa Intermodular CFGB Peluquería y Estética' }}
+          {{
+            isCa()
+              ? 'Mapa Intermodular CFGB Perruqueria i Estètica'
+              : 'Mapa Intermodular CFGB Peluquería y Estética'
+          }}
         } @else if (activeTab() === 'CFGM') {
-          {{ isCa() ? 'Mapa intermodular del CFGM Estètica i Bellesa' : 'Mapa intermodular del CFGM Estética y Belleza' }}
+          {{
+            isCa()
+              ? 'Mapa intermodular del CFGM Estètica i Bellesa'
+              : 'Mapa intermodular del CFGM Estética y Belleza'
+          }}
         } @else if (activeTab() === 'CFGM_PELUQUERIA') {
-          {{ isCa() ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar 1r' : 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar 1º' }}
+          {{
+            isCa()
+              ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar 1r'
+              : 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar 1º'
+          }}
         } @else {
-          {{ isCa() ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar 2n' : 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar 2º' }}
+          {{
+            isCa()
+              ? 'Mapa intermodular del CFGM Perruqueria i Cosmètica Capil·lar 2n'
+              : 'Mapa intermodular del CFGM Peluquería y Cosmética Capilar 2º'
+          }}
         }
       </h1>
     </div>
 
-    <button 
-      class="mapa-stats-toggle-btn" 
+    <button
+      class="mapa-stats-toggle-btn"
       (click)="$event.stopPropagation(); toggleHeaderStatsHandler()"
-      [title]="isCa() ? 'Mostrar o ocultar opcions' : 'Mostrar u ocultar opciones'">
+      [title]="isCa() ? 'Mostrar o ocultar opcions' : 'Mostrar u ocultar opciones'"
+    >
       <span class="toggle-icon">{{ headerExpanded() ? '▲' : '▼' }}</span>
-      <span>{{ headerExpanded() ? (isCa() ? 'Col·lapsar' : 'Colapsar') : (isCa() ? 'Filtres i Estadístiques' : 'Filtros y Estadísticas') }}</span>
+      <span>{{
+        headerExpanded()
+          ? isCa()
+            ? 'Col·lapsar'
+            : 'Colapsar'
+          : isCa()
+            ? 'Filtres i Estadístiques'
+            : 'Filtros y Estadísticas'
+      }}</span>
     </button>
   </div>
 
@@ -37,55 +77,77 @@
     <div class="mapa-header__expanded-body">
       <p class="mapa-header__subtitle">
         @if (activeTab() === 'FPB') {
-          {{ isCa() 
-            ? 'Explorador interactiu de connexions curriculars, criteris i activitats del CFGB Perruqueria i Estètica.'
-            : 'Explorador interactivo de conexiones curriculares, criterios y actividades del CFGB Peluquería y Estética.' }}
+          {{
+            isCa()
+              ? 'Explorador interactiu de connexions curriculars, criteris i activitats del CFGB Perruqueria i Estètica.'
+              : 'Explorador interactivo de conexiones curriculares, criterios y actividades del CFGB Peluquería y Estética.'
+          }}
         } @else if (activeTab() === 'CFGM_PELUQUERIA_2') {
-          {{ isCa()
-            ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 2n curs.'
-            : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 2.º curso.' }}
+          {{
+            isCa()
+              ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 2n curs.'
+              : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 2.º curso.'
+          }}
         } @else {
-          {{ isCa()
-            ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 1r curs.'
-            : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 1.er curso.' }}
+          {{
+            isCa()
+              ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 1r curs.'
+              : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 1.er curso.'
+          }}
         }
       </p>
 
       <!-- Controls in expanded header -->
       <div class="mapa-controls">
         <div class="mapa-search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input 
-            type="text" 
-            [ngModel]="searchQuery()" 
-            (ngModelChange)="onSearch($event)" 
-            [placeholder]="isCa() ? 'Cerca mòdul, RA o criteri...' : 'Buscar módulo, RA o criterio...'"
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            [ngModel]="searchQuery()"
+            (ngModelChange)="onSearch($event)"
+            [placeholder]="
+              isCa() ? 'Cerca mòdul, RA o criteri...' : 'Buscar módulo, RA o criterio...'
+            "
           />
         </div>
 
         <div class="mapa-filter-pills">
-          <button 
-            [class.active]="typeFilter() === 'all'" 
-            (click)="onSetTypeFilter('all')" 
-            class="filter-pill">
+          <button
+            [class.active]="typeFilter() === 'all'"
+            (click)="onSetTypeFilter('all')"
+            class="filter-pill"
+          >
             {{ isCa() ? 'Tots' : 'Todos' }}
           </button>
-          <button 
-            [class.active]="typeFilter() === 'especifico'" 
-            (click)="onSetTypeFilter('especifico')" 
-            class="filter-pill">
+          <button
+            [class.active]="typeFilter() === 'especifico'"
+            (click)="onSetTypeFilter('especifico')"
+            class="filter-pill"
+          >
             {{ isCa() ? 'Específics' : 'Específicos' }}
           </button>
-          <button 
-            [class.active]="typeFilter() === 'comun'" 
-            (click)="onSetTypeFilter('comun')" 
-            class="filter-pill">
+          <button
+            [class.active]="typeFilter() === 'comun'"
+            (click)="onSetTypeFilter('comun')"
+            class="filter-pill"
+          >
             {{ isCa() ? 'Comuns' : 'Comunes' }}
           </button>
-          <button 
-            [class.active]="typeFilter() === 'transversal'" 
-            (click)="onSetTypeFilter('transversal')" 
-            class="filter-pill">
+          <button
+            [class.active]="typeFilter() === 'transversal'"
+            (click)="onSetTypeFilter('transversal')"
+            class="filter-pill"
+          >
             {{ isCa() ? 'Transversals' : 'Transversales' }}
           </button>
         </div>
@@ -95,11 +157,21 @@
       <div class="mapa-stats">
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalModules }}</span>
-          <span class="mapa-stat-label">{{ isCa() ? (activeTab() !== 'FPB' ? 'Mòduls CFGM' : 'Mòduls CFGB') : (activeTab() !== 'FPB' ? 'Módulos CFGM' : 'Módulos CFGB') }}</span>
+          <span class="mapa-stat-label">{{
+            isCa()
+              ? activeTab() !== 'FPB'
+                ? 'Mòduls CFGM'
+                : 'Mòduls CFGB'
+              : activeTab() !== 'FPB'
+                ? 'Módulos CFGM'
+                : 'Módulos CFGB'
+          }}</span>
         </div>
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalRas }}</span>
-          <span class="mapa-stat-label">{{ isCa() ? 'Resultats d’Aprenentatge' : 'Resultados de Aprendizaje' }}</span>
+          <span class="mapa-stat-label">{{
+            isCa() ? 'Resultats d’Aprenentatge' : 'Resultados de Aprendizaje'
+          }}</span>
         </div>
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalConnections }}</span>
@@ -107,7 +179,9 @@
         </div>
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalActivities }}</span>
-          <span class="mapa-stat-label">{{ isCa() ? 'Activitats Innovadores' : 'Actividades Innovadoras' }}</span>
+          <span class="mapa-stat-label">{{
+            isCa() ? 'Activitats Innovadores' : 'Actividades Innovadoras'
+          }}</span>
         </div>
       </div>
     </div>

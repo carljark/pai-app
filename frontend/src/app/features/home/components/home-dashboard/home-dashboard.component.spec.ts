@@ -12,11 +12,11 @@ describe('HomeDashboardComponent', () => {
 
   const mockProjectsFacade = {
     loadHistory: vi.fn(),
-    projectsHistory: signal([])
+    projectsHistory: signal([]),
   };
 
   const mockAuthFacade = {
-    currentUser: signal({ name: 'TestUser' })
+    currentUser: signal({ name: 'TestUser' }),
   };
 
   const mockTranslationService = {
@@ -35,7 +35,7 @@ describe('HomeDashboardComponent', () => {
       courseLevelFP: 'FP Básica',
       courseLevelCFGM: 'CFGM Estética y Belleza',
       workshopViewAll: 'Ver todos los proyectos',
-      
+
       homeRecentTitle: 'Recent',
       homeEmpty: 'Empty',
       homeStartNow: 'Start',
@@ -45,8 +45,8 @@ describe('HomeDashboardComponent', () => {
       statusDraft: 'Draft',
       statusQueued: 'Queued',
       statusGenerating: 'Generating',
-      statusError: 'Error'
-    })
+      statusError: 'Error',
+    }),
   };
 
   beforeEach(async () => {
@@ -55,8 +55,8 @@ describe('HomeDashboardComponent', () => {
       providers: [
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
-        { provide: TranslationService, useValue: mockTranslationService }
-      ]
+        { provide: TranslationService, useValue: mockTranslationService },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomeDashboardComponent);
@@ -88,10 +88,10 @@ describe('HomeDashboardComponent', () => {
       { _id: '3', createdAt: '2023-01-02T00:00:00Z', status: 'error' },
       { _id: '4', createdAt: '2023-01-05T00:00:00Z', status: 'en_cola' },
       { _id: '5', createdAt: '2023-01-04T00:00:00Z', status: 'generando' },
-      { _id: '6', createdAt: '2023-01-06T00:00:00Z', status: 'borrador' }
+      { _id: '6', createdAt: '2023-01-06T00:00:00Z', status: 'borrador' },
     ];
     mockProjectsFacade.projectsHistory.set(mockProjects as any);
-    
+
     const recent = component.recentProjects();
     expect(recent.length).toBe(5);
     expect(recent[0]._id).toBe('6');
@@ -125,21 +125,40 @@ describe('HomeDashboardComponent', () => {
     const mockProjects = [{ _id: '1', createdAt: '2023-01-01T00:00:00Z', status: 'publicado' }];
     mockProjectsFacade.projectsHistory.set(mockProjects as any);
     fixture.detectChanges();
-    
+
     const spy = vi.spyOn(component.openProject, 'emit');
     const card = fixture.debugElement.nativeElement.querySelector('.home-project-card');
     card.click();
     expect(spy).toHaveBeenCalledWith(mockProjects[0]);
   });
-  
-  it('should show "ver todos los proyectos" if more than 5', () => {
-    const mockProjects = Array(6).fill({ _id: '1', createdAt: '2023-01-01T00:00:00Z', status: 'publicado' });
+
+  it('should emit openProject with Enter only when the card itself has the focus', () => {
+    const mockProjects = [{ _id: '1', createdAt: '2023-01-01T00:00:00Z', status: 'publicado' }];
     mockProjectsFacade.projectsHistory.set(mockProjects as any);
     fixture.detectChanges();
-    
+
+    const spy = vi.spyOn(component.openProject, 'emit');
+    const card = fixture.debugElement.nativeElement.querySelector('.home-project-card');
+    const enter = () => new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+
+    card.querySelector('.home-project-card__header').dispatchEvent(enter());
+    expect(spy).not.toHaveBeenCalled();
+    card.dispatchEvent(enter());
+    expect(spy).toHaveBeenCalledWith(mockProjects[0]);
+  });
+
+  it('should show "ver todos los proyectos" if more than 5', () => {
+    const mockProjects = Array(6).fill({
+      _id: '1',
+      createdAt: '2023-01-01T00:00:00Z',
+      status: 'publicado',
+    });
+    mockProjectsFacade.projectsHistory.set(mockProjects as any);
+    fixture.detectChanges();
+
     const ghostBtn = fixture.debugElement.nativeElement.querySelector('.home-cta--ghost');
     expect(ghostBtn).toBeTruthy();
-    
+
     const spy = vi.spyOn(component.navigate, 'emit');
     ghostBtn.click();
     expect(spy).toHaveBeenCalledWith('history');
@@ -147,8 +166,13 @@ describe('HomeDashboardComponent', () => {
 
   it('should handle project level label correctly', () => {
     const mockProjects = [
-      { _id: '1', createdAt: '2023-01-01T00:00:00Z', status: 'publicado', tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
-      { _id: '2', createdAt: '2023-01-01T00:00:00Z', status: 'publicado', tipoNivel: 'FP_BASICA' }
+      {
+        _id: '1',
+        createdAt: '2023-01-01T00:00:00Z',
+        status: 'publicado',
+        tipoNivel: 'DIVERSIFICACION_CURRICULAR',
+      },
+      { _id: '2', createdAt: '2023-01-01T00:00:00Z', status: 'publicado', tipoNivel: 'FP_BASICA' },
     ];
     mockProjectsFacade.projectsHistory.set(mockProjects as any);
     fixture.detectChanges();

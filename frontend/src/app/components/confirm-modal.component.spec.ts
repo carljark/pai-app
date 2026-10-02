@@ -9,7 +9,7 @@ describe('ConfirmModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ConfirmModalComponent]
+      imports: [ConfirmModalComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ConfirmModalComponent);
@@ -32,7 +32,7 @@ describe('ConfirmModalComponent', () => {
     componentRef.setInput('title', 'Custom Title');
     componentRef.setInput('message', 'Custom Message');
     fixture.detectChanges();
-    
+
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h2')?.textContent).toContain('Custom Title');
     expect(compiled.querySelector('p')?.textContent).toContain('Custom Message');
@@ -40,23 +40,27 @@ describe('ConfirmModalComponent', () => {
 
   it('should emit confirm event when confirm button is clicked', () => {
     let emitted = false;
-    component.confirm.subscribe(() => emitted = true);
-    
+    component.confirm.subscribe(() => (emitted = true));
+
     const buttons = fixture.nativeElement.querySelectorAll('button');
-    const confirmBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Sí, eliminar')) as HTMLElement;
+    const confirmBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Sí, eliminar'),
+    ) as HTMLElement;
     confirmBtn?.click();
-    
+
     expect(emitted).toBe(true);
   });
 
   it('should emit cancel event when cancel button is clicked', () => {
     let emitted = false;
-    component.cancel.subscribe(() => emitted = true);
-    
+    component.cancelled.subscribe(() => (emitted = true));
+
     const buttons = fixture.nativeElement.querySelectorAll('button');
-    const cancelBtn = Array.from(buttons).find((b: any) => b.textContent.includes('Cancelar')) as HTMLElement;
+    const cancelBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Cancelar'),
+    ) as HTMLElement;
     cancelBtn?.click();
-    
+
     expect(emitted).toBe(true);
   });
 });

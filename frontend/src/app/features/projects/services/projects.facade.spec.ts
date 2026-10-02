@@ -5,6 +5,7 @@ import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
 import { AuthFacade } from '../../auth/services/auth.facade';
 import { signal } from '@angular/core';
 import { Project, ProjectStatus, ProjectType } from '../models/project.model';
+import { fromProjectDtoArray } from '../mappers/projects.mapper';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { throwError } from 'rxjs';
 
@@ -103,7 +104,7 @@ describe('ProjectsFacade', () => {
     expect(req.request.method).toBe('GET');
     req.flush(mockProjects);
     
-    expect(facade.projectsHistory()).toEqual(mockProjects);
+    expect(facade.projectsHistory()).toEqual(fromProjectDtoArray(mockProjects as any));
   });
 
   it('should compute myProjects correctly based on currentUser id', () => {

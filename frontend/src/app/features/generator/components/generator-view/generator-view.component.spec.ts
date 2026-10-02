@@ -44,21 +44,22 @@ describe('GeneratorViewComponent', () => {
     })
   };
 
+  const tipoNivelSignal = signal<string>('FP_BASICA');
+  const cursoSignal = signal<string>('1º');
+  const setTipoNivelSpy = vi.fn((val: string) => tipoNivelSignal.set(val));
+
   const mockCurriculum = {
-    tipoNivel: signal('FP_BASICA'),
-    curso: signal('1º'),
+    tipoNivel: tipoNivelSignal,
+    curso: cursoSignal,
     groupedItems: signal([]),
     selectedRas: signal([]),
     selectedItemsDetails: signal([]),
     groupedSelectedItems: signal([]),
     getCategoryStyle: vi.fn().mockReturnValue({ bg: '#fff', text: '#000', icon: '' }),
     toggleRa: vi.fn(),
-    setTipoNivel: vi.fn((val) => mockCurriculum.tipoNivel.set(val)),
-    setCurso: vi.fn((val) => mockCurriculum.curso.set(val))
+    setTipoNivel: setTipoNivelSpy,
+    setCurso: vi.fn((val: string) => cursoSignal.set(val))
   };
-  mockCurriculum.tipoNivel.set = vi.fn((val) => mockCurriculum.tipoNivel.set(val));
-  const mockSet = vi.fn((v) => { mockCurriculum.tipoNivel = signal(v); mockCurriculum.tipoNivel.set = mockSet; });
-  mockCurriculum.tipoNivel.set = mockSet;
 
   const mockProjects = {
     isGenerating: signal(false),
@@ -120,15 +121,15 @@ describe('GeneratorViewComponent', () => {
     
     // click CFGM_ESTETICA
     tabs[1].click();
-    expect(mockSet).toHaveBeenCalledWith('CFGM_ESTETICA');
+    expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGM_ESTETICA');
 
     // click CFGM_PELUQUERIA
     tabs[2].click();
-    expect(mockSet).toHaveBeenCalledWith('CFGM_PELUQUERIA');
+    expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGM_PELUQUERIA');
 
     // click FP Básica
     tabs[0].click();
-    expect(mockSet).toHaveBeenCalledWith('FP_BASICA');
+    expect(setTipoNivelSpy).toHaveBeenCalledWith('FP_BASICA');
   });
 
   it('should call generateProject on AppFacade when button clicked', () => {

@@ -137,7 +137,7 @@ describe('NotificationsFacade', () => {
     expect(ids).toContain('old');
   });
 
-  it('should prefer a newer in-memory notification over a stale snapshot', () => {
+  it('should prefer a newer in-memory notification over a stale snapshot when merging', () => {
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();
 
@@ -146,14 +146,37 @@ describe('NotificationsFacade', () => {
       updatedAt: new Date(Date.now() - 10000), timestamp: new Date(Date.now() - 10000)
     } as any]);
 
-    httpMock.get.mockReturnValueOnce(of([{
+    const inFlight = new Subject<any[]>();
+    httpMock.get.mockReturnValueOnce(inFlight.asObservable());
+    facade.loadNotifications();
+
+    // Cualquier evento SSE durante la petición fuerza el modo fusión
+    updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'other', status: 'generando' });
+
+    inFlight.next([{
       _id: 'n', projectId: 'p', status: 'generando', type: 'PROJECT_STATUS',
       updatedAt: new Date(Date.now() - 20000).toISOString()
-    }]));
-    facade.loadNotifications();
+    }]);
+    inFlight.complete();
 
     const item = facade.notifications().find(n => n.projectId === 'p');
     expect(item?.status).toBe('borrador');
+  });
+
+  it('mergeFetched should keep the fetched entry when newer and preserve items without projectId', () => {
+    const now = Date.now();
+    const result = (facade as any).mergeFetched(
+      [
+        { projectId: 'p', status: 'generando', updatedAt: new Date(now - 20000), timestamp: new Date(now - 20000), id: 'x' },
+        { id: 'no-project', status: 'generando', updatedAt: new Date(now), timestamp: new Date(now) }
+      ],
+      [
+        { projectId: 'p', status: 'borrador', updatedAt: new Date(now - 1000), timestamp: new Date(now - 1000), id: 'y' }
+      ]
+    );
+
+    expect(result.some(n => n.projectId === 'p' && n.status === 'borrador')).toBe(true);
+    expect(result.some(n => n.id === 'no-project')).toBe(true);
   });
 
   it('should clear notifications and unsubscribe on logout', () => {

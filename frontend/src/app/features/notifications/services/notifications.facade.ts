@@ -14,6 +14,7 @@ export class NotificationsFacade {
   notifications = signal<AppNotification[]>([]);
   latestNotification = signal<AppNotification | null>(null);
   recentActivityOpen = signal(false);
+  private sseRevision = 0;
 
   constructor() {
     let sseSub: any = null;
@@ -52,43 +53,42 @@ export class NotificationsFacade {
   loadNotifications() {
     const user = this.authService.currentUser();
     const userId = user?._id;
-    const requestedAt = Date.now();
+    const revision = this.sseRevision;
     this.http.get<any[]>('/api/notifications').subscribe({
       next: (items) => {
         const validItems = (items || []).filter(i =>
           Boolean(i.projectId || (i.status && ['en_cola', 'generando', 'borrador', 'publicado', 'error'].includes(i.status)))
         );
         const fetched = validItems.map(i => NotificationMapper.fromDbEntity(i, userId));
-        this.notifications.update(current => this.reconcileNotifications(current, fetched, requestedAt));
+        if (this.sseRevision === revision) {
+          this.notifications.set(fetched);
+        } else {
+          // Llegaron eventos SSE mientras la petición estaba en vuelo: fusionamos
+          // para no descartar el proyecto recién creado.
+          this.notifications.update(current => this.mergeFetched(current, fetched));
+        }
       },
       error: (err) => console.error('Error loading notifications', err)
     });
   }
 
   /**
-   * Fusiona la lista recibida de la base de datos con la que ya está en memoria,
-   * sin descartar las notificaciones que hayan llegado por SSE mientras la
-   * petición estaba en vuelo (evita que el proyecto recién creado desaparezca).
+   * Fusiona el snapshot de la base de datos con lo que ya está en memoria,
+   * conservando las notificaciones que no vienen en el snapshot (recibidas por
+   * SSE durante la petición) y prefiriendo la entrada más reciente.
    */
-  private reconcileNotifications(
-    current: AppNotification[],
-    fetched: AppNotification[],
-    requestedAt: number
-  ): AppNotification[] {
+  private mergeFetched(current: AppNotification[], fetched: AppNotification[]): AppNotification[] {
     const result = [...fetched];
 
     for (const existing of current) {
       const idx = existing.projectId
         ? result.findIndex(n => n.projectId === existing.projectId)
         : -1;
-      const existingTime = (existing.updatedAt || existing.timestamp).getTime();
 
       if (idx === -1) {
-        // No está en el snapshot: solo se conserva si apareció tras iniciar la petición.
-        if (existingTime >= requestedAt) {
-          result.push(existing);
-        }
+        result.push(existing);
       } else {
+        const existingTime = (existing.updatedAt || existing.timestamp).getTime();
         const fetchedTime = (result[idx].updatedAt || result[idx].timestamp).getTime();
         if (existingTime > fetchedTime) {
           result[idx] = { ...result[idx], ...existing, id: result[idx].id };
@@ -116,6 +116,7 @@ export class NotificationsFacade {
     const userId = user?._id;
     const mapped = NotificationMapper.fromRawEvent(raw, userId);
     this.latestNotification.set(mapped);
+    this.sseRevision++;
 
     this.notifications.update(list => this.mergeNotification(list, mapped));
   }

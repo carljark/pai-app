@@ -12,10 +12,12 @@ Al pulsar "Generar proyecto" se abre el modal de actividad reciente, pero el pro
 
 ### 1. Fusión en lugar de reemplazo (`notifications.facade.ts`)
 
-`loadNotifications()` ahora delega en `reconcileNotifications()`, que fusiona el snapshot de la base de datos con el estado en memoria:
+`loadNotifications()` captura un contador de revisión de SSE al iniciar la petición:
 
-- Las notificaciones presentes en el snapshot se aplican, pero **no pisan** una entrada en memoria más reciente.
-- Las notificaciones que solo están en memoria se conservan únicamente si aparecieron **después** de iniciar la petición (eventos SSE en vuelo), evitando así tanto perder el proyecto recién creado como conservar elementos obsoletos o borrados.
+- Si **no** llegaron eventos SSE mientras la petición estaba en vuelo, aplica el snapshot de la base de datos tal cual.
+- Si llegaron eventos SSE, fusiona (`mergeFetched`) conservando las notificaciones que no vienen en el snapshot (el proyecto recién creado) y prefiriendo siempre la entrada más reciente por `updatedAt`.
+
+Usar un contador de revisión evita depender de marcas de tiempo, que fallan cuando varias operaciones ocurren en el mismo milisegundo.
 
 ### 2. Resincronización tras generar (`app.facade.ts`)
 

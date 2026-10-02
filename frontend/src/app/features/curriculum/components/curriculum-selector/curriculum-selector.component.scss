@@ -164,16 +164,18 @@
 }
 
 .floating-cart__matches {
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px dashed variables.$color-border;
+  padding: 10px 20px;
+  background: variables.$color-warning-bg;
+  border-bottom: 1px solid variables.$color-warning;
+  max-height: 40vh;
+  overflow-y: auto;
 }
 
 .floating-cart__matches-summary {
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: variables.$color-primary;
+  color: variables.$color-primary-dark;
 }
 
 .floating-cart__matches-list {

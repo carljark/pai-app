@@ -32,6 +32,29 @@
 
 <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
 <div class="floating-cart">
+  <!-- Proyectos ya generados con la misma selección: encima de la cabecera para que se vean siempre -->
+  @if (projects.matchingProjects().length > 0) {
+    <details class="floating-cart__matches">
+      <summary class="floating-cart__matches-summary">
+        📄 {{ projects.matchingProjects().length }} {{ trans.t().matchingProjectsTitle }}
+      </summary>
+      <ul class="floating-cart__matches-list">
+        @for (match of projects.matchingProjects(); track match._id) {
+          <li class="floating-cart__match">
+            <button type="button" class="floating-cart__match-link" (click)="openProject(match)">
+              <span class="floating-cart__match-title">{{
+                match.title || match.modules?.join(' + ')
+              }}</span>
+              <span class="floating-cart__match-meta"
+                >{{ match.status }} · {{ match.createdAt | date: 'short' }}</span
+              >
+            </button>
+          </li>
+        }
+      </ul>
+    </details>
+  }
+
   <div
     class="floating-cart__header"
     role="button"
@@ -89,32 +112,6 @@
             </li>
           }
         </ul>
-
-        @if (projects.matchingProjects().length > 0) {
-          <details class="floating-cart__matches">
-            <summary class="floating-cart__matches-summary">
-              📄 {{ projects.matchingProjects().length }} {{ trans.t().matchingProjectsTitle }}
-            </summary>
-            <ul class="floating-cart__matches-list">
-              @for (match of projects.matchingProjects(); track match._id) {
-                <li class="floating-cart__match">
-                  <button
-                    type="button"
-                    class="floating-cart__match-link"
-                    (click)="openProject(match)"
-                  >
-                    <span class="floating-cart__match-title">{{
-                      match.title || match.modules?.join(' + ')
-                    }}</span>
-                    <span class="floating-cart__match-meta"
-                      >{{ match.status }} · {{ match.createdAt | date: 'short' }}</span
-                    >
-                  </button>
-                </li>
-              }
-            </ul>
-          </details>
-        }
       </div>
     }
 

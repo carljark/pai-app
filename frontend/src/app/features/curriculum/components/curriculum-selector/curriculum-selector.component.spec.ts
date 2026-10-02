@@ -184,6 +184,18 @@ describe('CurriculumSelectorComponent', () => {
     );
   });
 
+  it('should show matching projects above the cart header even when the cart is collapsed', () => {
+    mockProjects.matchingProjects.set([
+      { _id: 'p1', title: 'Existente', status: 'borrador', createdAt: new Date().toISOString() },
+    ]);
+    component.isOpen.set(false);
+    fixture.detectChanges();
+
+    const cart = fixture.nativeElement.querySelector('.floating-cart') as HTMLElement;
+    expect(cart.firstElementChild?.classList).toContain('floating-cart__matches');
+    expect(cart.querySelector('.floating-cart__body')).toBeNull();
+  });
+
   it('should not render the matching section when there are no matches', () => {
     mockProjects.matchingProjects.set([]);
     fixture.detectChanges();

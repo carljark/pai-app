@@ -175,8 +175,8 @@ describe('NotificationsFacade', () => {
       ]
     );
 
-    expect(result.some(n => n.projectId === 'p' && n.status === 'borrador')).toBe(true);
-    expect(result.some(n => n.id === 'no-project')).toBe(true);
+    expect(result.some((n: any) => n.projectId === 'p' && n.status === 'borrador')).toBe(true);
+    expect(result.some((n: any) => n.id === 'no-project')).toBe(true);
   });
 
   it('should clear notifications and unsubscribe on logout', () => {

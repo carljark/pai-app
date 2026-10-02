@@ -77,6 +77,26 @@ describe('Projects Mapper', () => {
       expect(result.userId).toBe('u1');
     });
 
+    it('should keep the generation error and AI metadata for the history', () => {
+      const result = fromProjectDto({
+        ...baseDto,
+        status: 'error',
+        error: 'Fallo',
+        errorDetail: 'Timeout en Gemini',
+        generationTimeMs: 1200,
+        aiProvider: 'gemini',
+        usedAiProvider: 'openrouter',
+        usedModel: 'openai/gpt-6-luna',
+      });
+      expect(result.status).toBe('error');
+      expect(result.error).toBe('Fallo');
+      expect(result.errorDetail).toBe('Timeout en Gemini');
+      expect(result.generationTimeMs).toBe(1200);
+      expect(result.aiProvider).toBe('gemini');
+      expect(result.usedAiProvider).toBe('openrouter');
+      expect(result.usedModel).toBe('openai/gpt-6-luna');
+    });
+
     it('should default title to "Sin título" when missing', () => {
       const dto = { ...baseDto, title: '' };
       const result = fromProjectDto(dto);

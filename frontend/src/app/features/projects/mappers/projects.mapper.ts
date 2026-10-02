@@ -45,6 +45,13 @@ export interface ProjectDto {
   }[];
   createdAt: string;
   updatedAt: string;
+  // Datos de la generación: error y proveedor/modelo de IA utilizados
+  error?: string;
+  errorDetail?: string;
+  generationTimeMs?: number;
+  aiProvider?: AIProvider;
+  usedAiProvider?: AIProvider;
+  usedModel?: string;
 }
 
 export interface ProjectFileDto {
@@ -191,6 +198,12 @@ export function fromProjectDto(dto: ProjectDto): Project {
     collaborators: mapCollaborators(dto.collaborators),
     createdAt: dto.createdAt,
     updatedAt: dto.updatedAt,
+    error: dto.error,
+    errorDetail: dto.errorDetail,
+    generationTimeMs: dto.generationTimeMs,
+    aiProvider: dto.aiProvider,
+    usedAiProvider: dto.usedAiProvider,
+    usedModel: dto.usedModel,
   };
 }
 

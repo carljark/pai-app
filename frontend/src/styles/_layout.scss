@@ -71,6 +71,14 @@
     font-weight: variables.$font-weight-semibold;
     color: variables.$color-primary-dark;
   }
+  // Cabecera fija al hacer scroll (taller): por debajo del menú lateral (100) y del panel IA móvil (1000)
+  &--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: variables.$color-background;
+    padding-block: variables.$spacing-2;
+  }
 }
 .desktop-only {
   display: none;

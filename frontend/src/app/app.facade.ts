@@ -37,11 +37,13 @@ export class AppFacade {
   queueToastRestartToken = signal(0);
 
   private shownCompletedProjectIds = new Set<string>();
+  private lastHistorySignature = '';
 
   constructor() {
     this.initAuthEffect();
     this.initViewEffect();
     this.initNotificationEffect();
+    this.initHistoryRefreshEffect();
   }
 
   private initAuthEffect(): void {
@@ -71,9 +73,6 @@ export class AppFacade {
       const notif = this.notifications.latestNotification();
       if (!notif) return;
       untracked(() => {
-        if (['COMPLETED', 'ERROR', 'STATUS'].includes(notif.type)) {
-          this.projects.loadHistory();
-        }
         if (notif.type === 'COMPLETED') {
           this.handleCompletedNotification(notif);
         } else if (notif.type === 'ERROR') {
@@ -82,6 +81,23 @@ export class AppFacade {
           this.showErrorModal.set(true);
         }
       });
+    });
+  }
+
+  /**
+   * Refresca el historial cuando cambia el estado de algún proyecto en la lista
+   * de notificaciones, tanto si el cambio llega por SSE como por el sondeo de
+   * respaldo del modal.
+   */
+  private initHistoryRefreshEffect(): void {
+    effect(() => {
+      const signature = this.notifications.notifications()
+        .map(n => `${n.projectId}:${n.status}:${n.generationTimeMs ?? ''}`)
+        .sort()
+        .join('|');
+      if (!signature || signature === this.lastHistorySignature) return;
+      this.lastHistorySignature = signature;
+      untracked(() => this.projects.loadHistory());
     });
   }
 

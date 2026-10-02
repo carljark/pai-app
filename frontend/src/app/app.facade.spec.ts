@@ -56,6 +56,7 @@ describe('AppFacade', () => {
     };
 
     notificationsFacadeMock = {
+      notifications: signal<any[]>([]),
       latestNotification: signal(null),
       clearLatestNotification: vi.fn(),
       openRecentActivity: vi.fn(),
@@ -108,12 +109,13 @@ describe('AppFacade', () => {
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
   });
 
-  it('should react to latestNotification STATUS', () => {
+  it('should refresh history when the notifications list changes', () => {
     facade = TestBed.inject(AppFacade);
-    
-    notificationsFacadeMock.latestNotification.set({ type: 'STATUS', message: 'test' });
+    projectsFacadeMock.loadHistory.mockClear();
+
+    notificationsFacadeMock.notifications.set([{ projectId: 'p1', status: 'generando' }]);
     TestBed.flushEffects();
-    
+
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
   });
 
@@ -128,6 +130,7 @@ describe('AppFacade', () => {
   it('should react to latestNotification ERROR', () => {
     facade = TestBed.inject(AppFacade);
     
+    notificationsFacadeMock.notifications.set([{ projectId: 'e1', status: 'error' }]);
     notificationsFacadeMock.latestNotification.set({ type: 'ERROR', message: 'some error' });
     TestBed.flushEffects();
     
@@ -140,6 +143,7 @@ describe('AppFacade', () => {
     vi.useFakeTimers();
     facade = TestBed.inject(AppFacade);
     
+    notificationsFacadeMock.notifications.set([{ projectId: 'c1', status: 'borrador', generationTimeMs: 1000 }]);
     notificationsFacadeMock.latestNotification.set({ type: 'COMPLETED', message: 'done' });
     TestBed.flushEffects();
     

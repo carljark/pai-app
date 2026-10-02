@@ -117,6 +117,45 @@ describe('NotificationsFacade', () => {
     expect(facade.notifications()[0].projectId).toBe('p9');
   });
 
+  it('should keep notifications received by SSE while a load request is in flight', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+
+    const inFlight = new Subject<any[]>();
+    httpMock.get.mockReturnValueOnce(inFlight.asObservable());
+
+    facade.loadNotifications();
+
+    updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'new', status: 'generando' });
+    expect(facade.notifications().some(n => n.projectId === 'new')).toBe(true);
+
+    inFlight.next([{ _id: 'old', projectId: 'old', status: 'borrador', type: 'PROJECT_COMPLETED' }]);
+    inFlight.complete();
+
+    const ids = facade.notifications().map(n => n.projectId);
+    expect(ids).toContain('new');
+    expect(ids).toContain('old');
+  });
+
+  it('should prefer a newer in-memory notification over a stale snapshot', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+
+    facade.notifications.set([{
+      _id: 'n', projectId: 'p', status: 'borrador',
+      updatedAt: new Date(Date.now() - 10000), timestamp: new Date(Date.now() - 10000)
+    } as any]);
+
+    httpMock.get.mockReturnValueOnce(of([{
+      _id: 'n', projectId: 'p', status: 'generando', type: 'PROJECT_STATUS',
+      updatedAt: new Date(Date.now() - 20000).toISOString()
+    }]));
+    facade.loadNotifications();
+
+    const item = facade.notifications().find(n => n.projectId === 'p');
+    expect(item?.status).toBe('borrador');
+  });
+
   it('should clear notifications and unsubscribe on logout', () => {
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();

@@ -58,7 +58,8 @@ describe('AppFacade', () => {
     notificationsFacadeMock = {
       latestNotification: signal(null),
       clearLatestNotification: vi.fn(),
-      openRecentActivity: vi.fn()
+      openRecentActivity: vi.fn(),
+      loadNotifications: vi.fn()
     };
 
     const telemetryServiceMock = {

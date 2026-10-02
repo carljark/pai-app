@@ -138,6 +138,9 @@ export class AppFacade {
     this.curriculum.clearSelection();
     this.projects.extraInstructions?.set('');
     this.projects.loadHistory();
+    // El proyecto ya existe en el backend: resincronizamos notificaciones para
+    // que aparezca de inmediato en el modal de actividad reciente.
+    this.notifications.loadNotifications();
     this.layout.switchView('history');
   }
 

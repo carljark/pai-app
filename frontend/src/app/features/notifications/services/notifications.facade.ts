@@ -16,6 +16,8 @@ export class NotificationsFacade {
   recentActivityOpen = signal(false);
   private sseRevision = 0;
 
+  private static readonly POLL_INTERVAL_MS = 5000;
+
   constructor() {
     let sseSub: any = null;
 
@@ -48,6 +50,15 @@ export class NotificationsFacade {
         }
       });
     }
+
+    // Respaldo de sondeo: mientras el modal está abierto refrescamos
+    // periódicamente por si los eventos SSE de estado/fin se pierden.
+    effect((onCleanup) => {
+      if (!this.recentActivityOpen()) return;
+      const timer: any = setInterval(() => this.loadNotifications(), NotificationsFacade.POLL_INTERVAL_MS);
+      timer.unref?.();
+      onCleanup(() => clearInterval(timer));
+    });
   }
 
   loadNotifications() {

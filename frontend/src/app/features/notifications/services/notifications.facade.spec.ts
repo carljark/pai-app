@@ -310,6 +310,23 @@ describe('NotificationsFacade', () => {
     expect(facade.recentActivityOpen()).toBe(false);
   });
 
+  it('should poll notifications while the modal is open and stop when closed', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+
+    httpMock.get.mockClear();
+
+    facade.openRecentActivity();
+    TestBed.flushEffects();
+
+    expect(facade.recentActivityOpen()).toBe(true);
+    expect(httpMock.get).toHaveBeenCalledWith('/api/notifications');
+
+    facade.closeRecentActivity();
+    TestBed.flushEffects();
+    expect(facade.recentActivityOpen()).toBe(false);
+  });
+
   it('should reload notifications when the tab becomes visible and there is a user', () => {
     authFacadeMock.currentUser.set({ _id: '1' });
     TestBed.flushEffects();

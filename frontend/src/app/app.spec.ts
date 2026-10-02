@@ -316,4 +316,26 @@ describe('App', () => {
     toast.triggerEventHandler('dismissed', undefined);
     expect(appFacadeMock.dismissQueueToast).toHaveBeenCalledOnce();
   });
+
+  it('should render and interact with the duplicate projects modal', () => {
+    fixture = TestBed.createComponent(App);
+    component = fixture.componentInstance;
+    appFacadeMock.showDuplicateModal.set(true);
+    appFacadeMock.duplicateProjects.set([
+      { _id: 'p1', title: 'Duplicado', status: 'borrador', createdAt: new Date().toISOString() }
+    ]);
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('app-duplicate-projects-modal')).toBeTruthy();
+
+    (fixture.nativeElement.querySelector('.duplicate-projects-modal__backdrop') as HTMLElement).click();
+    expect(appFacadeMock.cancelDuplicates).toHaveBeenCalled();
+
+    const actions = fixture.nativeElement.querySelectorAll('.duplicate-projects-modal__actions button');
+    (actions[1] as HTMLButtonElement).click();
+    expect(appFacadeMock.confirmDuplicates).toHaveBeenCalled();
+
+    (fixture.nativeElement.querySelector('.duplicate-projects-modal__link') as HTMLButtonElement).click();
+    expect(appFacadeMock.openDuplicateProject).toHaveBeenCalled();
+  });
 });

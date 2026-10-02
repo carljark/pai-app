@@ -23,4 +23,13 @@ describe('selection-match', () => {
   it('devuelve [] si no hay selección', () => {
     expect(findProjectsWithSameSelection([project()] as any, [])).toEqual([]);
   });
+
+  it('normaliza entradas vacías y descarta ras que no son array', () => {
+    expect(selectionKey(['', ' RA1 '])).toBe('||ra1');
+    const projects = [
+      project({ _id: 'p1', ras: 'no-array' }),
+      project({ _id: 'p2', ras: ['ra1'] }),
+    ];
+    expect(findProjectsWithSameSelection(projects as any, ['ra1']).map(p => p._id)).toEqual(['p2']);
+  });
 });

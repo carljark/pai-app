@@ -55,4 +55,26 @@ describe('DuplicateProjectsModalComponent', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain('Mod B');
   });
+
+  it('should emit cancel from the backdrop', () => {
+    const cancelSpy = vi.fn();
+    component.cancel.subscribe(cancelSpy);
+    (fixture.nativeElement.querySelector('.duplicate-projects-modal__backdrop') as HTMLElement).click();
+    expect(cancelSpy).toHaveBeenCalled();
+  });
+
+  it('should resolve title and modules fallbacks', () => {
+    expect(component.projectTitle({ _id: 'x', status: 'borrador' })).toBe('Proyecto');
+    expect(component.projectModules({ _id: 'x', generatedContent: { modules: ['G1'] } })).toBe('G1');
+    expect(component.projectModules({ _id: 'x' })).toBe('');
+  });
+
+  it('should render the modules condition for both true and false', () => {
+    fixture.componentRef.setInput('projects', [
+      { _id: 'a', status: 'borrador', modules: ['M1'] },
+      { _id: 'b', status: 'borrador' },
+    ]);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('M1');
+  });
 });

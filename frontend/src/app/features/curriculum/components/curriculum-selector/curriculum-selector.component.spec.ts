@@ -20,7 +20,8 @@ describe('CurriculumSelectorComponent', () => {
     mockTrans = {
       t: signal({
         removeTooltip: 'Quitar',
-        matchingProjectsTitle: 'proyectos con esta selección'
+        matchingProjectsTitle: 'proyectos con esta selección',
+        longGenerationNoticePlural: 'Muchos elementos seleccionados'
       })
     };
 
@@ -169,5 +170,21 @@ describe('CurriculumSelectorComponent', () => {
     mockProjects.matchingProjects.set([]);
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('.floating-cart__matches')).toBeNull();
+  });
+
+  it('should render matches without title and the long generation notice', () => {
+    mockProjects.matchingProjects.set([
+      { _id: 'm1', status: 'borrador', createdAt: new Date().toISOString(), modules: ['Modulo X'] }
+    ]);
+    (mockFacade.selectedItemsDetails as any).set([
+      { subject: 'S', index: 1, shortDesc: 'a', fullDesc: 'a' },
+      { subject: 'S', index: 2, shortDesc: 'b', fullDesc: 'b' },
+      { subject: 'S', index: 3, shortDesc: 'c', fullDesc: 'c' }
+    ]);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.floating-cart__match-title')?.textContent).toContain('Modulo X');
+    expect(compiled.querySelector('.generation-notice')).toBeTruthy();
   });
 });

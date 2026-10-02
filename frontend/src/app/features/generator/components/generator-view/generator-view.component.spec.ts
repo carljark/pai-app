@@ -130,6 +130,10 @@ describe('GeneratorViewComponent', () => {
     // click FP Básica
     tabs[0].click();
     expect(setTipoNivelSpy).toHaveBeenCalledWith('FP_BASICA');
+
+    // click Diversificación Curricular
+    tabs[3].click();
+    expect(setTipoNivelSpy).toHaveBeenCalledWith('DIVERSIFICACION_CURRICULAR');
   });
 
   it('should call generateProject on AppFacade when button clicked', () => {
@@ -224,5 +228,29 @@ describe('GeneratorViewComponent', () => {
     textarea.value = 'Enfocar en sostenibilidad y dinámicas DUA';
     textarea.dispatchEvent(new Event('input'));
     expect(mockProjects.extraInstructions()).toBe('Enfocar en sostenibilidad y dinámicas DUA');
+  });
+
+  it('should render selected collaborators and toggle them', () => {
+    mockProjects.selectedCollaborators.set(['u2']);
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.textContent).toContain('Compañero');
+
+    const checkbox = fixture.debugElement.query(By.css('input[type="checkbox"]')).nativeElement as HTMLInputElement;
+    checkbox.dispatchEvent(new Event('change'));
+    expect(mockProjects.toggleCollaborator).toHaveBeenCalledWith('u2');
+
+    const removeBtn = Array.from(fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>)
+      .find(b => b.textContent?.includes('×')) as HTMLButtonElement;
+    removeBtn.click();
+    expect(mockProjects.toggleCollaborator).toHaveBeenCalledWith('u2');
+  });
+
+  it('should handle CFGM_ESTETICA course options and getUserName fallback', () => {
+    mockCurriculum.tipoNivel.set('CFGM_ESTETICA');
+    fixture.detectChanges();
+    expect(component.courseOptions().map(o => o.value)).toEqual(['1º']);
+    expect(component.getUserName('u2')).toBe('Compañero');
+    expect(component.getUserName('desconocido')).toBe('desconocido');
   });
 });

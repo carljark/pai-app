@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { HistoryViewComponent } from './history-view.component';
 import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
@@ -11,6 +12,7 @@ describe('HistoryViewComponent', () => {
   let component: HistoryViewComponent;
   let fixture: ComponentFixture<HistoryViewComponent>;
   let mockProjectsFacade: any;
+  let mockAuthFacade: any;
 
   const project = (overrides: any = {}) => ({
     _id: '1',
@@ -67,12 +69,16 @@ describe('HistoryViewComponent', () => {
       removeCollaborator: vi.fn(),
     };
 
+    mockAuthFacade = {
+      currentUser: signal({ _id: 'user1', name: 'Eva', role: 'teacher' })
+    };
+
     await TestBed.configureTestingModule({
       imports: [HistoryViewComponent],
       providers: [
         { provide: AppFacade, useValue: { viewPastProject: vi.fn(), deleteProject: vi.fn(), retryProject: vi.fn() } },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
-        { provide: AuthFacade, useValue: { currentUser: signal({ _id: 'user1', name: 'Eva', role: 'teacher' }) } },
+        { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: TranslationService, useValue: { t: signal(translations) } },
       ],
     }).compileComponents();
@@ -156,5 +162,40 @@ describe('HistoryViewComponent', () => {
     component.onModuleChange('');
     expect(component.moduleFilter()).toBeNull();
     expect(component.raFilter()).toBeNull();
+  });
+
+  it('should handle empty history, null user and label fallback', () => {
+    mockProjectsFacade.projectsHistory.set(undefined);
+    mockAuthFacade.currentUser.set(null);
+    fixture.detectChanges();
+
+    expect(component.moduleOptions()).toEqual([]);
+    expect(component.raOptions()).toEqual([]);
+    expect(component.filteredProjects()).toEqual([]);
+    expect(component.labelFor('claveDesconocida')).toBe('claveDesconocida');
+
+    component.onRaChange('');
+    expect(component.raFilter()).toBeNull();
+  });
+
+  it('should wire toolbar DOM events', () => {
+    const pills = fixture.nativeElement.querySelectorAll('.history-view__pill') as NodeListOf<HTMLButtonElement>;
+    pills[1].click();
+    fixture.detectChanges();
+    expect(component.onlyMine()).toBe(true);
+    pills[0].click();
+    fixture.detectChanges();
+    expect(component.onlyMine()).toBe(false);
+
+    const input = fixture.nativeElement.querySelector('.history-view__search-input') as HTMLInputElement;
+    input.value = 'abc';
+    input.dispatchEvent(new Event('input'));
+    expect(component.searchQuery()).toBe('abc');
+
+    const selects = fixture.debugElement.queryAll(By.css('app-select'));
+    selects[0].triggerEventHandler('valueChange', 'Modulo A');
+    expect(component.moduleFilter()).toBe('Modulo A');
+    selects[1].triggerEventHandler('valueChange', 'RA1');
+    expect(component.raFilter()).toBe('RA1');
   });
 });

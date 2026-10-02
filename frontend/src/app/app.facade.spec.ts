@@ -540,6 +540,20 @@ describe('AppFacade', () => {
       expect(layoutServiceMock.switchView).not.toHaveBeenCalled();
     });
 
+    it('should use project.error when the project has no errorDetail', () => {
+      facade.viewPastProject(asProject({ _id: 'err-3', status: 'error', error: 'Cuota agotada' }));
+
+      expect(facade.errorMessage()).toBe('Cuota agotada');
+      expect(facade.showErrorModal()).toBe(true);
+    });
+
+    it('should not open a new window for a project without id', () => {
+      const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
+      facade.openProjectInNewWindow(asProject({}));
+      expect(openSpy).not.toHaveBeenCalled();
+      openSpy.mockRestore();
+    });
+
     it('should show error modal with fallback message when project status is error without errorDetail', () => {
       const proj = {
         _id: 'err-2',

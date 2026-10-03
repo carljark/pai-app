@@ -1188,6 +1188,92 @@ describe('ProjectsFacade', () => {
     });
   });
 
+  describe('Collaborators and directory', () => {
+    const shared = {
+      _id: 'p1',
+      collaborators: [
+        { userId: { _id: 'u2', name: 'Ana' } },
+        { userId: 'u3' },
+        { userId: { _id: '', name: '' } },
+      ],
+    } as any;
+
+    it('should toggle collaborators in the selection', () => {
+      facade.toggleCollaborator('u2');
+      facade.toggleCollaborator('u3');
+      expect(facade.selectedCollaborators()).toEqual(['u2', 'u3']);
+      facade.toggleCollaborator('u2');
+      expect(facade.selectedCollaborators()).toEqual(['u3']);
+    });
+
+    it('should read collaborator names, ids and shared state', () => {
+      expect(facade.getCollaboratorNames(shared)).toEqual(['Ana']);
+      expect(facade.getCollaboratorIds(shared)).toEqual(['u2', 'u3']);
+      expect(facade.isShared(shared)).toBe(true);
+
+      const solo = { _id: 'p2' } as any;
+      expect(facade.getCollaboratorNames(solo)).toEqual([]);
+      expect(facade.getCollaboratorIds(solo)).toEqual([]);
+      expect(facade.isShared(solo)).toBe(false);
+      expect(facade.isShared(null as any)).toBe(false);
+    });
+
+    it('should add and remove collaborators updating the history', () => {
+      facade.projectsHistory.set([
+        { _id: 'p1', title: 'Antes' },
+        { _id: 'p9', title: 'Otro' },
+      ] as any);
+
+      facade.addCollaborator('p1', 'u2').subscribe();
+      const add = httpMock.expectOne('/api/projects/p1/collaborators');
+      expect(add.request.method).toBe('POST');
+      expect(add.request.body).toEqual({ userId: 'u2' });
+      add.flush({ _id: 'p1', title: 'Compartido', collaborators: [{ userId: 'u2' }] });
+      expect(facade.projectsHistory()[0].title).toBe('Compartido');
+      expect(facade.projectsHistory()[1].title).toBe('Otro');
+
+      facade.removeCollaborator('p1', 'u2').subscribe();
+      const remove = httpMock.expectOne('/api/projects/p1/collaborators/u2');
+      expect(remove.request.method).toBe('DELETE');
+      remove.flush({ _id: 'p1', title: 'Sin compartir', collaborators: [] });
+      expect(facade.projectsHistory()[0].title).toBe('Sin compartir');
+    });
+
+    it('should load the user directory and tolerate empty responses and errors', () => {
+      (facade as any).loadDirectory();
+      httpMock.expectOne('/api/users/directory').flush([{ _id: 'u2', name: 'Ana' }]);
+      expect(facade.directory().length).toBe(1);
+
+      (facade as any).loadDirectory();
+      httpMock.expectOne('/api/users/directory').flush(null);
+      expect(facade.directory()).toEqual([]);
+
+      const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      (facade as any).loadDirectory();
+      httpMock
+        .expectOne('/api/users/directory')
+        .flush('fallo', { status: 500, statusText: 'Server Error' });
+      expect(errorSpy).toHaveBeenCalledWith('Error loading user directory', expect.anything());
+      errorSpy.mockRestore();
+    });
+
+    it('should log an error when the AI catalog cannot be loaded', () => {
+      const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      (facade as any).loadAiModels();
+      httpMock.expectOne('/api/ai/models').flush('fallo', { status: 500, statusText: 'Error' });
+      expect(errorSpy).toHaveBeenCalledWith('Error loading AI models', expect.anything());
+      errorSpy.mockRestore();
+    });
+
+    it('should resolve the default model per provider', () => {
+      expect(facade.defaultModelForProvider('gemini')).toBe('gemini-3.6-flash');
+      (facade as any).defaultModels.set({ gemini: '', openrouter: '' });
+      expect(facade.defaultModelForProvider('openrouter')).toBe('deepseek/deepseek-v4.1-flash');
+      (facade as any).allModels.set([]);
+      expect(facade.defaultModelForProvider('openrouter')).toBe('');
+    });
+  });
+
   describe('Effects and Constructor', () => {
     it('should have loadHistory method that can be called', () => {
       expect(typeof facade.loadHistory).toBe('function');

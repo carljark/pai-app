@@ -73,7 +73,7 @@
       >
     </div>
 
-    <div class="history-view__tabs">
+    <div class="history-view__tabs" [class.history-view__tabs--searching]="isSearching()">
       @for (tab of tabs; track tab.id) {
         <button
           type="button"
@@ -85,6 +85,9 @@
         </button>
       }
     </div>
+    @if (isSearching()) {
+      <p class="history-view__search-scope">{{ trans.t().historySearchAllLevels }}</p>
+    }
   </div>
 
   <div class="history-view__list">

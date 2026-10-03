@@ -230,6 +230,8 @@ export const TRANSLATIONS_ES = {
   historySharedBadge: 'Compartido',
   historySharedWith: 'Con',
   historySearchPlaceholder: 'Buscar por palabras clave...',
+  historySearchAllLevels:
+    'Buscando en todos los niveles. Vacía el buscador para volver a filtrar por pestaña.',
   historyFilterModule: 'Módulo',
   historyFilterRa: 'RA',
   historyFilterAllModules: 'Todos los módulos',

@@ -16,6 +16,7 @@ import {
   collectRaOptions,
   matchesProjectFilters,
   parseKeywords,
+  sortByRelevance,
 } from '../../utils/history-filter';
 
 @Component({
@@ -56,6 +57,10 @@ export class HistoryViewComponent {
     this.raOptions().map((r) => ({ value: r, label: r })),
   );
 
+  keywords = computed(() => parseKeywords(this.searchQuery()));
+  /** Con texto en el buscador se busca en todos los niveles (las pestañas no filtran). */
+  isSearching = computed(() => this.keywords().length > 0);
+
   filteredProjects = computed(() => {
     const owner = this.auth.currentUser();
     const ownerId = owner ? owner._id || owner.id : undefined;
@@ -63,11 +68,14 @@ export class HistoryViewComponent {
       tab: this.activeTab() as HistoryTabId,
       onlyMine: this.onlyMine(),
       ownerId,
-      keywords: parseKeywords(this.searchQuery()),
+      keywords: this.keywords(),
       module: this.moduleFilter(),
       ra: this.raFilter(),
     };
-    return (this.projects.projectsHistory() || []).filter((p) => matchesProjectFilters(p, filters));
+    const matches = (this.projects.projectsHistory() || []).filter((p) =>
+      matchesProjectFilters(p, filters),
+    );
+    return sortByRelevance(matches, filters.keywords);
   });
 
   onSearch(event: Event) {

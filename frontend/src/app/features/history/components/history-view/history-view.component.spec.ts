@@ -33,6 +33,7 @@ describe('HistoryViewComponent', () => {
     courseLevelPDC: 'ESO',
     searchProjects: 'Search',
     historySearchPlaceholder: 'Buscar por palabras clave...',
+    historySearchAllLevels: 'Buscando en todos los niveles',
     historyFilterModule: 'Módulo',
     historyFilterRa: 'RA',
     historyFilterAllModules: 'Todos los módulos',
@@ -125,6 +126,34 @@ describe('HistoryViewComponent', () => {
     const text = fixture.nativeElement.textContent;
     expect(text).toContain('Barbería moderna');
     expect(text).not.toContain('Barbería clásica');
+  });
+
+  it('should search in every tab, show the scope hint and rank title matches first', () => {
+    mockProjectsFacade.projectsHistory.set([
+      project({
+        _id: '1',
+        title: 'Otro',
+        modules: [],
+        generatedContent: { rawText: 'imatge al text' },
+      }),
+      project({ _id: '2', title: 'Imatge corporal', tipoNivel: 'CFGM_PELUQUERIA' }),
+      project({ _id: '3', title: 'Sin relación' }),
+    ]);
+    component.activeTab.set('FPB');
+    component.searchQuery.set('imatge');
+    fixture.detectChanges();
+
+    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['2', '1']);
+    const root = fixture.nativeElement as HTMLElement;
+    expect(root.querySelector('.history-view__tabs--searching')).toBeTruthy();
+    expect(root.querySelector('.history-view__search-scope')?.textContent).toContain(
+      'Buscando en todos los niveles',
+    );
+
+    component.searchQuery.set('');
+    fixture.detectChanges();
+    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['1', '3']);
+    expect(root.querySelector('.history-view__search-scope')).toBeNull();
   });
 
   it('should filter by module and RA', () => {

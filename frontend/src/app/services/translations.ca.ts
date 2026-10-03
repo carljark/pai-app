@@ -230,6 +230,8 @@ export const TRANSLATIONS_CA = {
   historySharedBadge: 'Compartit',
   historySharedWith: 'Amb',
   historySearchPlaceholder: 'Cercar per paraules clau...',
+  historySearchAllLevels:
+    'Cercant a tots els nivells. Buida el cercador per tornar a filtrar per pestanya.',
   historyFilterModule: 'Mòdul',
   historyFilterRa: 'RA',
   historyFilterAllModules: 'Tots els mòduls',

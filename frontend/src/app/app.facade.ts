@@ -1,6 +1,7 @@
 import { Injectable, inject, signal, untracked, effect } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { LayoutService } from './services/layout.service';
+import { buildViewUrl } from './services/view-route';
 import { TranslationService } from './services/translation.service';
 import { CurriculumFacade } from './features/curriculum/services/curriculum.facade';
 import { ProjectsFacade } from './features/projects/services/projects.facade';
@@ -47,17 +48,13 @@ export class AppFacade {
 
   private shownCompletedProjectIds = new Set<string>();
   private lastHistorySignature = '';
-  private pendingProjectId: string | null =
-    typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search).get('project')
-      : null;
 
   constructor() {
     this.initAuthEffect();
     this.initViewEffect();
     this.initNotificationEffect();
     this.initHistoryRefreshEffect();
-    this.initOpenProjectFromUrl();
+    this.initRequestedProjectEffect();
   }
 
   private initAuthEffect(): void {
@@ -166,25 +163,25 @@ export class AppFacade {
   /** Abre el editor de un proyecto en una pestaña/ventana nueva mediante `?project=<id>`. */
   openProjectInNewWindow(project: Project): void {
     if (!project?._id) return;
-    const url = `${window.location.origin}${window.location.pathname}?project=${project._id}`;
+    const path = buildViewUrl({ view: 'taller', project: project._id }, window.location.pathname);
+    const url = `${window.location.origin}${path}`;
     window.open(url, '_blank');
   }
 
   /** Abre el proyecto indicado en la URL (`?project=<id>`) cuando el historial está disponible. */
-  private initOpenProjectFromUrl(): void {
+  /**
+   * Abre el proyecto que pide la URL (enlace, recarga o botones atrás/adelante) en cuanto el
+   * historial está disponible. La URL ya indica la pantalla, así que no se añade otra entrada.
+   */
+  private initRequestedProjectEffect(): void {
     effect(() => {
-      const id = this.pendingProjectId;
+      const id = this.layout.requestedProject();
       if (!id) return;
       const project = (this.projects.projectsHistory() || []).find((p) => p._id === id);
       if (!project) return;
       untracked(() => {
-        this.pendingProjectId = null;
-        try {
-          window.history.replaceState({}, '', window.location.pathname);
-        } catch {
-          /* no-op */
-        }
-        this.viewPastProject(project);
+        this.layout.requestedProject.set(null);
+        if (this.projects.currentProjectId() !== id) this.viewPastProject(project, false);
       });
     });
   }
@@ -296,7 +293,8 @@ export class AppFacade {
     });
   }
 
-  viewPastProject(project: Project): void {
+  /** Abre un proyecto en el taller; `pushHistory: false` cuando ya lo indica la URL (atrás/adelante). */
+  viewPastProject(project: Project, pushHistory = true): void {
     if (project.status === 'error') {
       const err = project.errorDetail || project.error || 'Error desconocido';
       this.errorTitle.set(this.trans.t().viewError || 'Error de Generación');
@@ -310,6 +308,6 @@ export class AppFacade {
     this.projects.contentLanguage.set(view.language);
     this.projects.generatedProject.set(view.text || 'Sin contenido');
     this.projects.loadProjectFiles();
-    this.layout.switchView('taller');
+    if (pushHistory) this.layout.switchView('taller', project._id);
   }
 }

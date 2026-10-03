@@ -60,6 +60,7 @@ describe('AppFacade', () => {
       language: signal('castellano'),
       currentView: signal('home'),
       switchView: vi.fn(),
+      requestedProject: signal<string | null>(null),
     };
 
     notificationsFacadeMock = {
@@ -331,14 +332,47 @@ describe('AppFacade', () => {
 
       expect(facade.showDuplicateModal()).toBe(false);
       expect(projectsFacadeMock.currentProjectId()).toBe('p1');
-      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller', expect.any(String));
     });
 
-    it('should open a project in a new window via ?project=<id>', () => {
+    it('should open a project in a new window via ?view=taller&project=<id>', () => {
       const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
       facade.openProjectInNewWindow(asProject({ _id: 'p1' }));
-      expect(openSpy).toHaveBeenCalledWith(expect.stringContaining('project=p1'), '_blank');
+      expect(openSpy).toHaveBeenCalledWith(
+        expect.stringContaining('?view=taller&project=p1'),
+        '_blank',
+      );
       openSpy.mockRestore();
+    });
+
+    it('should open the project requested by the URL or the browser history without a new entry', () => {
+      const project = { _id: 'p5', status: 'borrador', generatedContent: { rawText: 'Texto' } };
+      layoutServiceMock.requestedProject.set('p5');
+      TestBed.flushEffects();
+      // Todavía no ha llegado el historial: la petición queda pendiente
+      expect(layoutServiceMock.requestedProject()).toBe('p5');
+
+      projectsFacadeMock.projectsHistory.set([project]);
+      TestBed.flushEffects();
+
+      expect(projectsFacadeMock.currentProjectId()).toBe('p5');
+      expect(projectsFacadeMock.generatedProject()).toBe('Texto');
+      expect(layoutServiceMock.switchView).not.toHaveBeenCalled();
+      expect(layoutServiceMock.requestedProject()).toBeNull();
+    });
+
+    it('should not reload the project when the requested one is already open', () => {
+      projectsFacadeMock.projectsHistory.set([
+        { _id: 'p6', generatedContent: { rawText: 'Nuevo' } },
+      ]);
+      projectsFacadeMock.currentProjectId.set('p6');
+      projectsFacadeMock.generatedProject.set('Cambios sin guardar');
+
+      layoutServiceMock.requestedProject.set('p6');
+      TestBed.flushEffects();
+
+      expect(projectsFacadeMock.generatedProject()).toBe('Cambios sin guardar');
+      expect(layoutServiceMock.requestedProject()).toBeNull();
     });
 
     it('should generate project on success and set historyTab to CFGM for CFGM_ESTETICA', () => {
@@ -499,7 +533,7 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.currentProjectId()).toBe('123');
       expect(projectsFacadeMock.generatedProject()).toBe('content');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
-      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller', expect.any(String));
     });
 
     it('should populate fields and switch view with string content', () => {
@@ -513,7 +547,7 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.currentProjectId()).toBe('123-str');
       expect(projectsFacadeMock.generatedProject()).toBe('string content text');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
-      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller', expect.any(String));
     });
 
     it('should handle missing fields', () => {
@@ -523,7 +557,7 @@ describe('AppFacade', () => {
 
       expect(projectsFacadeMock.generatedProject()).toBe('Sin contenido');
       expect(projectsFacadeMock.loadProjectFiles).toHaveBeenCalled();
-      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller');
+      expect(layoutServiceMock.switchView).toHaveBeenCalledWith('taller', expect.any(String));
     });
 
     it('should show error modal when project status is error with errorDetail', () => {

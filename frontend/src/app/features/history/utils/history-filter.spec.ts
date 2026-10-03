@@ -2,12 +2,14 @@ import { describe, it, expect } from 'vitest';
 import {
   collectModuleOptions,
   collectRaOptions,
+  keywordRank,
   matchesKeywords,
   matchesProjectFilters,
   matchesTab,
   parseKeywords,
   projectModules,
   projectRas,
+  sortByRelevance,
 } from './history-filter';
 
 const base: any = {
@@ -49,6 +51,44 @@ describe('history-filter', () => {
     expect(matchesKeywords(base, ['barberia', 'corte'])).toBe(true);
     expect(matchesKeywords(base, ['barberia', 'ausente'])).toBe(false);
     expect(matchesKeywords(base, [])).toBe(true);
+  });
+
+  it('ranks metadata matches above content matches and searches translations', () => {
+    const inTitle = {
+      ...base,
+      title: 'Taller de barbería',
+      generatedContent: { rawText: '' },
+    } as any;
+    const inContent = {
+      ...base,
+      title: 'Otro',
+      modules: [],
+      ras: [],
+      generatedContent: { rawText: 'curso de barbería' },
+    } as any;
+    const inTranslation = {
+      ...base,
+      title: 'Otro',
+      modules: [],
+      ras: [],
+      generatedContent: { rawText: 'texto' },
+      translations: { catalan: { rawText: 'imatge corporal' }, castellano: undefined },
+    } as any;
+
+    expect(keywordRank(inTitle, ['barberia'])).toBe(2);
+    expect(keywordRank(inContent, ['barberia'])).toBe(1);
+    expect(keywordRank(inContent, ['ausente'])).toBe(0);
+    expect(keywordRank(inTranslation, ['imatge'])).toBe(1);
+
+    expect(sortByRelevance([inContent, inTitle], ['barberia'])).toEqual([inTitle, inContent]);
+    expect(sortByRelevance([inContent, inTitle], [])).toEqual([inContent, inTitle]);
+  });
+
+  it('searches every tab when there are keywords', () => {
+    const eso = { ...base, tipoNivel: 'ESO' } as any;
+    const filters = { tab: 'FPB' as const, onlyMine: false, keywords: [], module: null, ra: null };
+    expect(matchesProjectFilters(eso, filters)).toBe(false);
+    expect(matchesProjectFilters(eso, { ...filters, keywords: ['barberia'] })).toBe(true);
   });
 
   it('matches module, ra and owner filters', () => {

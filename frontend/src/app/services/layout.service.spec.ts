@@ -10,6 +10,8 @@ describe('LayoutService', () => {
   beforeEach(() => {
     // Clear localStorage before each test
     localStorage.clear();
+    // La URL de jsdom persiste entre tests: se parte siempre de la raíz
+    window.history.replaceState(null, '', '/');
 
     authFacadeMock = {
       logout: vi.fn(),
@@ -83,6 +85,65 @@ describe('LayoutService', () => {
     TestBed.flushEffects();
     expect(service.currentView()).toBe('home');
     expect(service.isSidebarCollapsed()).toBe(false);
+  });
+
+  describe('historial del navegador', () => {
+    beforeEach(() => vi.spyOn(window, 'scrollTo').mockImplementation(() => {}));
+
+    it('refleja la vista guardada en la URL al arrancar sin añadir entradas', () => {
+      localStorage.setItem('pai_view', 'history');
+      const length = window.history.length;
+      service = TestBed.inject(LayoutService);
+      expect(window.location.search).toBe('?view=history');
+      expect(window.history.length).toBe(length);
+    });
+
+    it('la URL manda sobre la vista guardada y pide el proyecto del taller', () => {
+      localStorage.setItem('pai_view', 'home');
+      window.history.replaceState(null, '', '/?view=taller&project=p1');
+      service = TestBed.inject(LayoutService);
+      expect(service.currentView()).toBe('taller');
+      expect(service.isSidebarCollapsed()).toBe(true);
+      expect(service.requestedProject()).toBe('p1');
+    });
+
+    it('acepta los enlaces antiguos ?project=<id>', () => {
+      window.history.replaceState(null, '', '/?project=p7');
+      service = TestBed.inject(LayoutService);
+      expect(service.currentView()).toBe('taller');
+      expect(service.requestedProject()).toBe('p7');
+      expect(window.location.search).toBe('?view=taller&project=p7');
+    });
+
+    it('añade una entrada por cada cambio de pantalla, sin duplicar la actual', () => {
+      service = TestBed.inject(LayoutService);
+      const length = window.history.length;
+
+      service.switchView('history');
+      service.switchView('taller', 'p1');
+      service.switchView('taller', 'p1');
+
+      expect(window.location.search).toBe('?view=taller&project=p1');
+      expect(window.history.length).toBe(length + 2);
+    });
+
+    it('al ir atrás o adelante muestra la pantalla y el proyecto de esa entrada', () => {
+      service = TestBed.inject(LayoutService);
+
+      window.history.replaceState(null, '', '/?view=taller&project=p2');
+      window.dispatchEvent(new PopStateEvent('popstate'));
+      expect(service.currentView()).toBe('taller');
+      expect(service.requestedProject()).toBe('p2');
+
+      window.history.replaceState(null, '', '/?view=history');
+      window.dispatchEvent(new PopStateEvent('popstate'));
+      expect(service.currentView()).toBe('history');
+      expect(service.requestedProject()).toBeNull();
+
+      window.history.replaceState(null, '', '/');
+      window.dispatchEvent(new PopStateEvent('popstate'));
+      expect(service.currentView()).toBe('home');
+    });
   });
 
   it('should call authService.logout when logout is called', () => {

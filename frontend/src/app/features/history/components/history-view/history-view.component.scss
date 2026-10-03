@@ -119,6 +119,17 @@
     width: 100%;
     margin-top: 16px;
     border-bottom: 1px solid var(--c-border);
+
+    // Mientras se busca, las pestañas no filtran: se atenúan para indicarlo
+    &--searching {
+      opacity: 0.55;
+    }
+  }
+
+  &__search-scope {
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+    color: var(--c-text-muted);
   }
 
   &__tab {

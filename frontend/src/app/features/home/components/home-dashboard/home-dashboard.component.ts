@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { Project } from '../../../projects/models/project.model';
 import { AuthFacade } from '../../../auth/services/auth.facade';
+import { HomeIntroComponent } from '../home-intro/home-intro.component';
 
 type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
 
 @Component({
   selector: 'app-home-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HomeIntroComponent],
   templateUrl: './home-dashboard.component.html',
   styleUrl: './home-dashboard.component.scss',
 })

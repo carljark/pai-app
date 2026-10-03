@@ -5,12 +5,8 @@
       <img src="word-transparent.png" alt="plappin" class="home-hero__word" />
       <img src="logo-transparent.png" alt="Logo" class="home-hero__logo" />
     </div>
-    <p class="home-hero__greeting">
-      {{ t().homeGreeting }}, <strong>{{ userName() }}</strong
-      >!
-    </p>
-    <div class="home-hero__description" [innerHTML]="t().homeDescription"></div>
-    <div class="home-hero__disclaimer" [innerHTML]="t().homeAiDisclaimer"></div>
+    <h1 class="home-hero__greeting">{{ t().homeGreeting }}, {{ userName() }}</h1>
+    <p class="home-hero__tagline">{{ t().homeTagline }}</p>
 
     <!-- CTA Buttons -->
     <div class="home-hero__actions">
@@ -50,6 +46,8 @@
       </button>
     </div>
   </div>
+
+  <app-home-intro></app-home-intro>
 
   <!-- Recent Projects Section -->
   <div class="home-recent">

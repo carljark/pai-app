@@ -1,0 +1,43 @@
+<section class="home-intro">
+  <h2 class="home-intro__title">{{ t().homeStepsTitle }}</h2>
+  <ol class="home-intro__steps">
+    @for (step of steps(); track step.title; let i = $index) {
+      <li class="home-intro__step">
+        <span class="home-intro__node" aria-hidden="true">{{ i + 1 }}</span>
+        <strong class="home-intro__step-title">{{ step.title }}</strong>
+        <span class="home-intro__step-text">{{ step.text }}</span>
+      </li>
+    }
+  </ol>
+
+  <ul class="home-intro__features">
+    @for (feature of features(); track feature.title) {
+      <li class="home-intro__feature">
+        <svg
+          class="home-intro__feature-icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          @for (path of feature.paths; track path) {
+            <path [attr.d]="path" />
+          }
+        </svg>
+        <div class="home-intro__feature-body">
+          <strong class="home-intro__feature-title">{{ feature.title }}</strong>
+          <span class="home-intro__feature-text">{{ feature.text }}</span>
+        </div>
+      </li>
+    }
+  </ul>
+
+  <p class="home-intro__ai-note">
+    <strong>{{ t().homeAiTitle }}</strong> {{ t().homeAiText }}
+  </p>
+</section>

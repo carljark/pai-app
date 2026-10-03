@@ -23,7 +23,7 @@ describe('HomeDashboardComponent', () => {
     t: signal({
       homeTitle: 'Title',
       homeGreeting: 'Greeting',
-      homeDescription: 'Description',
+      homeTagline: 'Tagline',
       homePill1: 'Pill1',
       homePill2: 'Pill2',
       homePill3: 'Pill3',
@@ -74,6 +74,17 @@ describe('HomeDashboardComponent', () => {
 
   it('should get current user name', () => {
     expect(component.userName()).toBe('TestUser');
+  });
+
+  it('should render the greeting as headline with the tagline and the intro section', () => {
+    const root = fixture.nativeElement as HTMLElement;
+    expect(root.querySelector('h1.home-hero__greeting')?.textContent).toContain(
+      'Greeting, TestUser',
+    );
+    expect(root.querySelector('.home-hero__tagline')?.textContent).toContain('Tagline');
+    expect(root.querySelector('app-home-intro')).toBeTruthy();
+    expect(root.querySelector('.home-hero__word')).toBeTruthy();
+    expect(root.querySelector('.home-hero__logo')).toBeTruthy();
   });
 
   it('should get default user name if null', () => {

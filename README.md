@@ -21,6 +21,7 @@ Este repositorio contiene la versión MVP (Fase I) de la Plataforma PAI, diseña
     Crea un archivo llamado `.env` dentro de la carpeta `backend/` y añade tu clave secreta:
     ```env
     GEMINI_API_KEY=tu_clave_aqui
+    # GEMINI_ENABLED=true   # Gemini está desactivado por defecto (cuota gratuita de 20 peticiones/día)
     ```
 
 2.  **Levantar el entorno**:
@@ -48,6 +49,7 @@ La aplicación cuenta con una arquitectura optimizada para producción (usando N
     En el servidor (EC2), el archivo `.env` debe colocarse **en la raíz del proyecto** (no dentro de la carpeta `backend/`) para que Docker Compose pueda leerlo correctamente. Debe contener, como mínimo:
     ```env
     GEMINI_API_KEY=tu_clave_aqui
+    # GEMINI_ENABLED=true   # Gemini está desactivado por defecto (cuota gratuita de 20 peticiones/día)
     ADMIN_EMAIL=admin@tucentro.edu
     ADMIN_PASSWORD=contraseña_segura
     JWT_SECRET=tu_secreto_jwt

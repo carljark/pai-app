@@ -11,12 +11,27 @@ export type AIProvider = 'gemini' | 'openrouter';
 export type ContentLanguage = 'castellano' | 'catalan';
 
 /** Versión del contenido en un idioma distinto del original. */
+export type TranslationStatus = 'traduciendo' | 'completada' | 'error';
+
+/** Igual que en el backend: una traducción en curso más antigua se considera abandonada. */
+export const TRANSLATION_LOCK_MS = 30 * 60 * 1000;
+
 export interface ProjectTranslation {
-  rawText: string;
+  /** Vacío mientras se traduce por primera vez. */
+  rawText?: string;
   /** `contentVersion` del original que se tradujo. */
   sourceVersion?: number;
   translatedAt?: string | Date;
   editedAt?: string | Date;
+  status?: TranslationStatus;
+  startedAt?: string | Date;
+  error?: string;
+}
+
+/** `true` si la traducción está en curso y su bloqueo no ha caducado. */
+export function isTranslationInProgress(translation?: ProjectTranslation): boolean {
+  if (translation?.status !== 'traduciendo' || !translation.startedAt) return false;
+  return Date.now() - new Date(translation.startedAt).getTime() < TRANSLATION_LOCK_MS;
 }
 
 export interface ProjectModule {
@@ -249,6 +264,30 @@ export interface ProjectContentView {
   stale: boolean;
   /** La interfaz está en otro idioma y todavía no hay traducción. */
   missingTranslation: boolean;
+  /** Hay una traducción a este idioma en curso. */
+  translating: boolean;
+  /** La última traducción a este idioma falló o quedó abandonada. */
+  translationFailed: boolean;
+}
+
+/** Vista de una traducción existente; está desactualizada si el original cambió después. */
+function translatedView(
+  project: Project,
+  language: ContentLanguage,
+  text: string,
+  translation: ProjectTranslation,
+): Omit<ProjectContentView, 'translating' | 'translationFailed'> {
+  const stale = (translation.sourceVersion ?? 0) !== (project.contentVersion ?? 0);
+  return { text, language, isTranslation: true, stale, missingTranslation: false };
+}
+
+/** Estado de la traducción al idioma de la interfaz (si no es el original). */
+function translationState(
+  translation: ProjectTranslation | undefined,
+): Pick<ProjectContentView, 'translating' | 'translationFailed'> {
+  const translating = isTranslationInProgress(translation);
+  const abandoned = translation?.status === 'traduciendo' && !translating;
+  return { translating, translationFailed: translation?.status === 'error' || abandoned };
 }
 
 export function resolveProjectContent(
@@ -256,24 +295,18 @@ export function resolveProjectContent(
   uiLanguage: ContentLanguage,
 ): ProjectContentView {
   const original = projectLanguage(project);
-  const translation = project.translations?.[uiLanguage];
-  if (uiLanguage !== original && translation?.rawText) {
-    const stale = (translation.sourceVersion ?? 0) !== (project.contentVersion ?? 0);
-    return {
-      text: translation.rawText,
-      language: uiLanguage,
-      isTranslation: true,
-      stale,
-      missingTranslation: false,
-    };
+  const translation = uiLanguage !== original ? project.translations?.[uiLanguage] : undefined;
+  const state = translationState(translation);
+  if (translation?.rawText) {
+    return { ...translatedView(project, uiLanguage, translation.rawText, translation), ...state };
   }
-  const missingTranslation = uiLanguage !== original;
   return {
     text: originalText(project),
     language: original,
     isTranslation: false,
     stale: false,
-    missingTranslation,
+    missingTranslation: uiLanguage !== original,
+    ...state,
   };
 }
 

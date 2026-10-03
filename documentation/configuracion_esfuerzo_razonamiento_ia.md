@@ -9,7 +9,20 @@ Las peticiones a modelos compatibles se configuran para usar un esfuerzo de razo
 
 El ajuste afecta al razonamiento interno del modelo; la aplicación sigue mostrando y almacenando el contenido final, no la traza de razonamiento.
 
-## Gemini
+## Estado actual (3 de octubre de 2026): Gemini desactivado y cascada en OpenRouter
+
+- **Gemini está desactivado por defecto** porque la cuenta está en el nivel gratuito: 20 peticiones al día por modelo, que se agotaban con dos o tres traducciones.
+  - Con Gemini desactivado (`isGeminiEnabled()` en `backend/src/data/ai-models.ts`), `GET /api/ai/models` solo ofrece OpenRouter.
+  - `resolveProvider()` convierte en `openrouter` cualquier petición o proyecto guardado con `gemini`, y `modelFitsProvider()` descarta los modelos de Gemini (los de OpenRouter llevan prefijo `organización/`).
+  - El frontend solo muestra los proveedores del catálogo y cambia la selección si la actual no está disponible.
+  - **Para reactivarlo**: `GEMINI_ENABLED=true` en el `.env` del backend y reiniciar. No hay que tocar código.
+- **Cascada de modelos en OpenRouter** (`OPENROUTER_MODEL_CASCADE`, en el orden del catálogo): `deepseek/deepseek-v4.1-flash` (por defecto) → `openai/gpt-6-luna` → modelos gratuitos. Si un modelo devuelve error o agota el tiempo, `generateOpenRouterContent` intenta el siguiente. `cascadeLog` registra cada intento y `requestedModel` indica el modelo que respondió.
+- **Peticiones sin razonamiento** (`generateAiContentWithFallback(..., { reasoning: false })`, usado en las traducciones):
+  - a los modelos con soporte confirmado (DeepSeek, GPT-6 Luna, Inkling: parámetro `reasoning` en `supported_parameters`) se envía `reasoning: { enabled: false }`; en Gemini se omite `thinking_level`;
+  - **motivo**: DeepSeek V4.1 Flash razona por defecto aunque no se le envíe `reasoning_effort`. Medido con una sección de 6000 caracteres: 169 s y 9477 tokens de razonamiento frente a 34 s y 0 tokens con el razonamiento desactivado (coste 0,0046 $ frente a 0,0008 $);
+  - la generación de proyectos y la reescritura mantienen `reasoning_effort: "high"`.
+
+## Gemini (cuando está activado)
 
 Desde el 2 de octubre de 2026, `backend/src/services/ai.service.ts` llama a Gemini mediante la **Interactions API** (`ai.interactions.create`, `POST /v1beta/interactions`) en lugar de `models.generateContent`. Con la clave actual, `generateContent` devuelve `404 NOT_FOUND` en todos los modelos Gemini 3.x (y en 2.5 indica "no longer available to new users"), aunque aparezcan en el listado de modelos. La Interactions API sí responde con los mismos modelos. El texto se lee de `output_text` y el modelo usado de `model`.
 

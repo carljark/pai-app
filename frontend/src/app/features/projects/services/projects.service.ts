@@ -143,6 +143,11 @@ export class ProjectsService {
     return `${this.apiUrl}/${projectId}/files/${filename}`;
   }
 
+  /** Proyecto actualizado (se usa para seguir el progreso de una traducción). */
+  getProject(projectId: string): Observable<Project> {
+    return this.http.get<ProjectDto>(`${this.apiUrl}/${projectId}`).pipe(map(fromProjectDto));
+  }
+
   /** Exporta la versión del idioma indicado (su traducción si existe). */
   exportDocx(projectId: string, language: ContentLanguage): Observable<Blob> {
     return this.http.get(`${this.apiUrl}/${projectId}/export-docx`, {

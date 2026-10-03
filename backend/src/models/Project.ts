@@ -11,7 +11,11 @@ const TranslationSchema = new mongoose.Schema({
   rawText: String,
   sourceVersion: Number,
   translatedAt: Date,
-  editedAt: Date
+  editedAt: Date,
+  /** Estado de la última traducción solicitada; `traduciendo` actúa como bloqueo. */
+  status: { type: String, enum: ['traduciendo', 'completada', 'error'] },
+  startedAt: Date,
+  error: String
 }, { _id: false });
 
 const ProjectSchema = new mongoose.Schema({

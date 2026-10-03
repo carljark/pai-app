@@ -8,6 +8,7 @@ import { AppFacade } from '../../../../app.facade';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { AIProvider } from '../../../projects/models/project.model';
 import {
   RewriteResultDto,
   RewriteSectionResponseDto,
@@ -48,10 +49,13 @@ export class TallerViewComponent {
   sortByDate = (a: { createdAt: string | Date }, b: { createdAt: string | Date }) =>
     new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
 
-  aiOptions = computed<SelectOption[]>(() => [
-    { value: 'gemini', label: this.trans.t().aiGemini },
-    { value: 'openrouter', label: this.trans.t().aiOpenRouter },
-  ]);
+  /** Solo los proveedores que ofrece el backend (Gemini puede estar desactivado). */
+  aiOptions = computed<SelectOption[]>(() =>
+    [
+      { value: 'gemini', label: this.trans.t().aiGemini },
+      { value: 'openrouter', label: this.trans.t().aiOpenRouter },
+    ].filter((option) => this.projects.availableProviders().includes(option.value as AIProvider)),
+  );
 
   modelOptions = computed<SelectOption[]>(() =>
     this.projects.availableModels().map((model) => ({ value: model.value, label: model.label })),

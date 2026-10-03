@@ -235,7 +235,10 @@ export const TRANSLATIONS_ES = {
     'Estás viendo la traducción al castellano. Los cambios se guardan en esta versión.',
   translationStale: 'El original ha cambiado desde que se tradujo.',
   retranslateProjectBtn: 'Volver a traducir',
-  translationInProgress: 'Traduciendo el proyecto… puede tardar unos minutos.',
+  translationInProgress:
+    'Traduciendo el proyecto… puede tardar unos minutos. Puedes seguir usando la aplicación: te avisaremos al terminar.',
+  translationCompletedToast: 'Traducción completada',
+  translationFailedToast: 'No se ha podido traducir',
   translationError: 'No se ha podido traducir el proyecto. Inténtalo de nuevo.',
 
   // SKELETON LOADER

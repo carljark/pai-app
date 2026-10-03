@@ -93,6 +93,7 @@ describe('App', () => {
       hasActiveGeneration: signal(false),
       methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
       selectedAi: signal('gemini'),
+      availableProviders: signal(['gemini', 'openrouter']),
       selectedModel: signal('gemini-3.6-flash'),
       availableModels: signal([]),
       defaultModelForProvider: vi.fn(),

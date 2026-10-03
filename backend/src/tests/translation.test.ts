@@ -17,6 +17,7 @@ import {
 } from '../services/translation.service';
 import { pickProjectText, buildContentUpdate } from '../services/projectContent.service';
 import { up as addProjectLanguage } from '../migrations/12_add_project_language';
+import { runProjectTranslation, TRANSLATION_LOCK_MS, failInterruptedTranslations } from '../controllers/translation.controller';
 
 const { aiMock } = vi.hoisted(() => ({ aiMock: vi.fn() }));
 
@@ -104,6 +105,72 @@ describe('translation.service - utilidades', () => {
     expect(result).toBe('TRADUCIDO # A\nuno\n## B\ndos');
     expect(aiMock).toHaveBeenCalledTimes(1);
   });
+
+  // 5 secciones de ~5000 caracteres: cada una va en una petición distinta
+  const longText = (count: number) =>
+    Array.from({ length: count }, (_, i) => `# S${i}\n${'x'.repeat(5000)}`).join('\n');
+  const sectionOf = (prompt: string) => Number(/# S(\d+)/.exec(prompt)?.[1]);
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  const options = { source: 'castellano', target: 'catalan', glossary: '', provider: 'gemini' } as const;
+
+  it('traduce como máximo 3 secciones a la vez y conserva el orden', async () => {
+    let active = 0;
+    let maxActive = 0;
+    aiMock.mockImplementation(async (prompt: string) => {
+      active++;
+      maxActive = Math.max(maxActive, active);
+      const index = sectionOf(prompt);
+      await delay((5 - index) * 5); // las primeras secciones terminan las últimas
+      active--;
+      return { text: `T${index}`, provider: 'gemini', model: 'm', fallbackUsed: false };
+    });
+
+    const result = await translateMarkdown(longText(5), options);
+
+    expect(result).toBe('T0\n\nT1\n\nT2\n\nT3\n\nT4');
+    expect(maxActive).toBe(3);
+    expect(aiMock).toHaveBeenCalledTimes(5);
+  });
+
+  it('tras un respaldo, las secciones siguientes usan directamente ese proveedor', async () => {
+    aiMock.mockImplementation(async (prompt: string, _system: string, provider: string) => {
+      const index = sectionOf(prompt);
+      if (index > 0 && index < 3) await delay(20);
+      return { text: `T${index}`, provider: index === 0 ? 'openrouter' : provider, model: 'm', fallbackUsed: index === 0 };
+    });
+
+    await translateMarkdown(longText(4), { ...options, model: 'gemini-3.6-flash' });
+
+    const lastCall = aiMock.mock.calls.find(call => sectionOf(call[0]) === 3)!;
+    expect(lastCall[2]).toBe('openrouter');
+    expect(lastCall[4]).toBeUndefined();
+  });
+
+  it('las secciones siguientes usan el modelo que respondió tras la cascada de OpenRouter', async () => {
+    aiMock.mockImplementation(async (prompt: string) => {
+      const index = sectionOf(prompt);
+      if (index > 0 && index < 3) await delay(20);
+      return { text: `T${index}`, provider: 'openrouter', model: 'm', requestedModel: 'openai/gpt-6-luna', fallbackUsed: false };
+    });
+
+    await translateMarkdown(longText(4), { ...options, provider: 'openrouter', model: 'deepseek/deepseek-v4.1-flash' });
+
+    const lastCall = aiMock.mock.calls.find(call => sectionOf(call[0]) === 3)!;
+    expect(lastCall[4]).toBe('openai/gpt-6-luna');
+  });
+
+  it('si una sección falla no se lanzan más y se propaga el error', async () => {
+    aiMock.mockImplementation(async (prompt: string) => {
+      const index = sectionOf(prompt);
+      if (index === 0) throw new Error('fallo');
+      await delay(10);
+      return { text: `T${index}`, provider: 'gemini', model: 'm', fallbackUsed: false };
+    });
+
+    await expect(translateMarkdown(longText(6), options)).rejects.toThrow('fallo');
+    await delay(30);
+    expect(aiMock).toHaveBeenCalledTimes(3);
+  });
 });
 
 describe('projectContent.service', () => {
@@ -136,8 +203,16 @@ describe('projectContent.service', () => {
   });
 });
 
+/** Espera a que la traducción en segundo plano deje `translations.catalan.status` en `status`. */
+const waitForTranslationStatus = (id: unknown, status: string) =>
+  vi.waitFor(async () => {
+    const doc: any = await Project.findById(id).lean();
+    expect(doc?.translations?.catalan?.status).toBe(status);
+    return doc;
+  }, { timeout: 3000, interval: 20 });
+
 describe('POST /api/projects/:id/translate', () => {
-  it('traduce el proyecto y guarda la versión con su sourceVersion', async () => {
+  it('responde 202 en estado traduciendo y guarda la traducción en segundo plano', async () => {
     const { token } = await createTestUser('teacher', 'trad@test.com');
     const project = await createProject({ contentVersion: 3 });
 
@@ -146,11 +221,14 @@ describe('POST /api/projects/:id/translate', () => {
       .set('Authorization', `Bearer ${token}`)
       .send({ target: 'catalan', aiProvider: 'openrouter', aiModel: 'openai/gpt-6-luna' });
 
-    expect(res.status).toBe(200);
-    expect(res.body.translations.catalan.rawText).toContain('TRADUCIDO');
-    expect(res.body.translations.catalan.sourceVersion).toBe(3);
+    expect(res.status).toBe(202);
+    expect(res.body.translations.catalan.status).toBe('traduciendo');
     expect(res.body.generatedContent.rawText).toBe(ORIGINAL_ES);
-    expect(aiMock).toHaveBeenCalledWith(expect.any(String), expect.any(String), 'openrouter', undefined, 'openai/gpt-6-luna');
+
+    const doc = await waitForTranslationStatus(project._id, 'completada');
+    expect(doc.translations.catalan.rawText).toContain('TRADUCIDO');
+    expect(doc.translations.catalan.sourceVersion).toBe(3);
+    expect(aiMock).toHaveBeenCalledWith(expect.any(String), expect.any(String), 'openrouter', undefined, 'openai/gpt-6-luna', { reasoning: false });
   });
 
   it('usa el proveedor del proyecto si no se indica otro', async () => {
@@ -160,7 +238,22 @@ describe('POST /api/projects/:id/translate', () => {
       .post(`/api/projects/${project._id}/translate`)
       .set('Authorization', `Bearer ${token}`)
       .send({ target: 'catalan' });
-    expect(aiMock).toHaveBeenCalledWith(expect.any(String), expect.any(String), 'gemini', undefined, undefined);
+    await waitForTranslationStatus(project._id, 'completada');
+    expect(aiMock).toHaveBeenCalledWith(expect.any(String), expect.any(String), 'gemini', undefined, undefined, { reasoning: false });
+  });
+
+  it('responde 409 si ya hay una traducción en curso y permite reintentar si el bloqueo caducó', async () => {
+    const { token } = await createTestUser('teacher', 'trad5@test.com');
+    const recent = await createProject({ translations: { catalan: { status: 'traduciendo', startedAt: new Date() } } });
+    const expired = await createProject({
+      translations: { catalan: { status: 'traduciendo', startedAt: new Date(Date.now() - TRANSLATION_LOCK_MS - 1000) } }
+    });
+    const post = (id: unknown) =>
+      request(app).post(`/api/projects/${id}/translate`).set('Authorization', `Bearer ${token}`).send({ target: 'catalan' });
+
+    expect((await post(recent._id)).status).toBe(409);
+    expect((await post(expired._id)).status).toBe(202);
+    await waitForTranslationStatus(expired._id, 'completada');
   });
 
   it('rechaza idiomas inválidos, proyectos inexistentes, sin contenido o ya en ese idioma', async () => {
@@ -176,16 +269,65 @@ describe('POST /api/projects/:id/translate', () => {
     expect((await post(project._id, 'castellano')).status).toBe(400);
   });
 
-  it('devuelve 500 si falla la IA', async () => {
+  it('guarda el estado de error si falla la IA, conservando la traducción anterior', async () => {
     const { token } = await createTestUser('teacher', 'trad4@test.com');
-    const project = await createProject();
+    const project = await createProject({ translations: { catalan: { rawText: 'Versió anterior', status: 'completada' } } });
     aiMock.mockRejectedValueOnce(new Error('sin cuota'));
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const res = await request(app)
+      .post(`/api/projects/${project._id}/translate`)
+      .set('Authorization', `Bearer ${token}`)
+      .send({ target: 'catalan' });
+    expect(res.status).toBe(202);
+
+    const doc = await waitForTranslationStatus(project._id, 'error');
+    expect(doc.translations.catalan.error).toBe('sin cuota');
+    expect(doc.translations.catalan.rawText).toBe('Versió anterior');
+    errorSpy.mockRestore();
+  });
+
+  it('runProjectTranslation ignora proyectos borrados y registra errores sin mensaje', async () => {
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    await runProjectTranslation('64b7f0000000000000000000', 'catalan', { provider: 'gemini' }, undefined);
+    expect(aiMock).not.toHaveBeenCalled();
+
+    const project = await createProject();
+    aiMock.mockRejectedValueOnce('fallo sin objeto');
+    await runProjectTranslation(project._id, 'catalan', { provider: 'gemini' }, undefined);
+    const doc: any = await Project.findById(project._id).lean();
+    expect(doc.translations.catalan).toMatchObject({ status: 'error', error: 'fallo sin objeto' });
+    errorSpy.mockRestore();
+  });
+
+  it('al arrancar marca como fallidas las traducciones interrumpidas por un reinicio', async () => {
+    const running = await createProject({ translations: { catalan: { status: 'traduciendo', startedAt: new Date() } } });
+    const finished = await createProject({ translations: { catalan: { rawText: 'Fet', status: 'completada' } } });
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    expect(await failInterruptedTranslations()).toBe(1);
+    expect(await failInterruptedTranslations()).toBe(0);
+
+    const interrupted: any = await Project.findById(running._id).lean();
+    expect(interrupted.translations.catalan).toMatchObject({ status: 'error' });
+    expect(interrupted.translations.catalan.error).toContain('reinicio');
+    const untouched: any = await Project.findById(finished._id).lean();
+    expect(untouched.translations.catalan.status).toBe('completada');
+    expect(logSpy).toHaveBeenCalledTimes(1);
+    logSpy.mockRestore();
+  });
+
+  it('devuelve 500 si falla el inicio de la traducción', async () => {
+    const { token } = await createTestUser('teacher', 'trad6@test.com');
+    const project = await createProject();
+    const spy = vi.spyOn(Project, 'updateOne').mockRejectedValueOnce(new Error('DB'));
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const res = await request(app)
       .post(`/api/projects/${project._id}/translate`)
       .set('Authorization', `Bearer ${token}`)
       .send({ target: 'catalan' });
     expect(res.status).toBe(500);
+    spy.mockRestore();
     errorSpy.mockRestore();
   });
 });

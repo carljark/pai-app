@@ -4,6 +4,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
+    // Los tests existentes cubren el flujo con Gemini; los de Gemini desactivado cambian la variable
+    env: { GEMINI_ENABLED: 'true' },
     fileParallelism: false,
     sequence: {
       concurrent: false

@@ -1,4 +1,11 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import {
+  getEnabledModels,
+  getEnabledProviderCatalog,
+  modelFitsProvider,
+  resolveProvider
+} from '../data/ai-models';
+import { getAiModels } from '../controllers/ai.controller';
 import {
   generateGeminiContent,
   generateOpenRouterContent,
@@ -239,5 +246,116 @@ describe('AI Service', () => {
 
   afterEach(() => {
     vi.unstubAllGlobals();
+  });
+});
+
+describe('AI Service - Gemini desactivado y peticiones sin razonamiento', () => {
+  const okFetch = () =>
+    vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ choices: [{ message: { content: 'Respuesta OpenRouter' } }] })
+    });
+  const sentBody = (fetchMock: ReturnType<typeof vi.fn>, call = 0) =>
+    JSON.parse((fetchMock.mock.calls[call]![1] as RequestInit).body as string);
+
+  beforeEach(() => {
+    process.env.OPENROUTER_API_KEY = 'test_key';
+    interactionsCreateMock.mockReset();
+    interactionsCreateMock.mockResolvedValue({ output_text: 'Respuesta Gemini' });
+  });
+
+  afterEach(() => {
+    process.env.GEMINI_ENABLED = 'true';
+    vi.unstubAllGlobals();
+  });
+
+  it('con Gemini desactivado usa solo OpenRouter y descarta modelos de Gemini', async () => {
+    process.env.GEMINI_ENABLED = 'false';
+    const fetchMock = okFetch();
+    vi.stubGlobal('fetch', fetchMock);
+
+    const res = await generateAiContentWithFallback('p', 'i', 'gemini', undefined, 'gemini-3.6-flash');
+
+    expect(res.provider).toBe('openrouter');
+    expect(res.fallbackUsed).toBe(false);
+    expect(interactionsCreateMock).not.toHaveBeenCalled();
+    expect(sentBody(fetchMock).model).toBe(DEFAULT_OPENROUTER_MODEL);
+  });
+
+  it('con Gemini desactivado no hay respaldo si OpenRouter falla', async () => {
+    process.env.GEMINI_ENABLED = 'false';
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, status: 500, text: async () => 'Error' }));
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    await expect(generateAiContentWithFallback('p', 'i', 'openrouter')).rejects.toThrow('Fallaron todos los proveedores');
+    expect(interactionsCreateMock).not.toHaveBeenCalled();
+    errorSpy.mockRestore();
+  });
+
+  it('si falla DeepSeek intenta GPT-6 Luna y después los gratuitos, en ese orden', async () => {
+    const failure = { ok: false, status: 503, text: async () => 'Saturado' };
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(failure)
+      .mockResolvedValueOnce(failure)
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ choices: [{ message: { content: 'Libre' } }] }) });
+    vi.stubGlobal('fetch', fetchMock);
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    const res = await generateOpenRouterContent('p', 'i');
+
+    expect(fetchMock.mock.calls.map((_, i) => sentBody(fetchMock, i).model)).toEqual([
+      'deepseek/deepseek-v4.1-flash',
+      'openai/gpt-6-luna',
+      'openrouter/free'
+    ]);
+    expect(res.requestedModel).toBe('openrouter/free');
+    expect(res.cascadeLog).toEqual([
+      'deepseek/deepseek-v4.1-flash: Error en OpenRouter (503): Saturado',
+      'openai/gpt-6-luna: Error en OpenRouter (503): Saturado',
+      'openrouter/free: OK'
+    ]);
+    warnSpy.mockRestore();
+  });
+
+  it('reasoning: false desactiva el razonamiento solo en modelos que lo admiten', async () => {
+    const fetchMock = okFetch();
+    vi.stubGlobal('fetch', fetchMock);
+
+    await generateAiContentWithFallback('p', 'i', 'openrouter', undefined, 'deepseek/deepseek-v4.1-flash', { reasoning: false });
+    expect(sentBody(fetchMock)).not.toHaveProperty('reasoning_effort');
+    expect(sentBody(fetchMock).reasoning).toEqual({ enabled: false });
+
+    await generateOpenRouterContent('p', 'i', 'openrouter/free', false);
+    expect(sentBody(fetchMock, 1)).not.toHaveProperty('reasoning');
+
+    await generateAiContentWithFallback('p', 'i', 'gemini', undefined, undefined, { reasoning: false });
+    expect(interactionsCreateMock).toHaveBeenCalledWith(
+      expect.not.objectContaining({ generation_config: expect.anything() })
+    );
+  });
+
+  it('el catálogo y el proveedor efectivo dependen de GEMINI_ENABLED', () => {
+    process.env.GEMINI_ENABLED = 'false';
+    expect(getEnabledProviderCatalog().map(p => p.value)).toEqual(['openrouter']);
+    expect(getEnabledModels().every(m => m.provider === 'openrouter')).toBe(true);
+    expect(resolveProvider('gemini')).toBe('openrouter');
+
+    process.env.GEMINI_ENABLED = 'true';
+    expect(getEnabledProviderCatalog().map(p => p.value)).toEqual(['gemini', 'openrouter']);
+    expect(resolveProvider('gemini')).toBe('gemini');
+    expect(resolveProvider(undefined)).toBe('gemini');
+    expect(resolveProvider('openrouter')).toBe('openrouter');
+    expect(modelFitsProvider('openrouter', 'openai/gpt-6-luna')).toBe(true);
+    expect(modelFitsProvider('gemini', 'openai/gpt-6-luna')).toBe(false);
+    expect(modelFitsProvider('gemini', 'gemini-3.6-flash')).toBe(true);
+  });
+
+  it('GET /api/ai/models solo devuelve lo habilitado', () => {
+    process.env.GEMINI_ENABLED = 'false';
+    const res = { json: vi.fn() };
+    getAiModels({}, res as any);
+    const body = res.json.mock.calls[0]![0];
+    expect(body.providers.map((p: { value: string }) => p.value)).toEqual(['openrouter']);
+    expect(body.models.some((m: { provider: string }) => m.provider === 'gemini')).toBe(false);
   });
 });

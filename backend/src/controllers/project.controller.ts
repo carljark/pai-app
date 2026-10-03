@@ -11,6 +11,7 @@ import { addClient, removeClient } from "../services/sse.service";
 import { processQueue } from "../services/queue.service";
 import { syncProjectNotification, deleteProjectNotification } from "../services/notification.service";
 import { buildContentUpdate } from '../services/projectContent.service';
+import { resolveProvider } from "../data/ai-models";
 
 // Endpoint para el SSE
 export const streamUpdates = (req: any, res: Response) => {
@@ -347,7 +348,7 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       aiPrompt: userPrompt, // Guardamos el prompt para el worker
       aiInstruction: baseInstruction, // Guardamos el system prompt
       extraInstructions: typeof extraInstructions === 'string' && extraInstructions.trim() ? extraInstructions.trim() : undefined,
-      aiProvider: req.body.aiProvider === 'openrouter' ? 'openrouter' : 'gemini',
+      aiProvider: resolveProvider(req.body.aiProvider),
       aiModel: req.body.aiModel ? String(req.body.aiModel).trim() : undefined,
       aiPromptChars: userPrompt.length,
       aiInstructionChars: baseInstruction.length,
@@ -534,7 +535,7 @@ export const rewriteSection = async (req: any, res: Response) => {
     }
 
     const prompt = buildRewritePrompt(context, instruction);
-    const preferredProvider: 'gemini' | 'openrouter' = aiProvider === 'openrouter' ? 'openrouter' : 'gemini';
+    const preferredProvider = resolveProvider(aiProvider);
     const result = await generateAiContentWithFallback(
       prompt,
       "Eres un asistente pedagógico de edición curricular experto, directo y preciso.",
@@ -584,7 +585,7 @@ async function reenqueueProject(project: any, userName?: string, aiProvider?: st
     project.aiInstruction = 'Experto pedagógico.';
   }
   if (aiProvider) {
-    project.aiProvider = aiProvider === 'openrouter' ? 'openrouter' : 'gemini';
+    project.aiProvider = resolveProvider(aiProvider);
   }
   project.status = 'en_cola';
   project.errorDetail = undefined;

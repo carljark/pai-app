@@ -30,6 +30,8 @@ if (process.env.NODE_ENV !== 'test') {
     .then(async () => {
       console.log('MongoDB Conectado');
       await runMigrations();
+      const { failInterruptedTranslations } = await import('./controllers/translation.controller');
+      await failInterruptedTranslations();
       const { initQueue } = await import('./services/queue.service');
       await initQueue();
     })

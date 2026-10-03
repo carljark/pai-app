@@ -10,6 +10,8 @@ import {
   originalText,
   resolveProjectContent,
   projectTextIn,
+  isTranslationInProgress,
+  TRANSLATION_LOCK_MS,
 } from './project.model';
 
 const asProject = (p: object) => p as Project;
@@ -142,6 +144,8 @@ describe('Project Model - Utility Functions', () => {
         isTranslation: false,
         stale: false,
         missingTranslation: false,
+        translating: false,
+        translationFailed: false,
       });
     });
 
@@ -163,6 +167,8 @@ describe('Project Model - Utility Functions', () => {
         isTranslation: true,
         stale: false,
         missingTranslation: false,
+        translating: false,
+        translationFailed: false,
       });
 
       const stale = asProject({ ...base, translations: { catalan: { rawText: 'Antic' } } });
@@ -173,6 +179,51 @@ describe('Project Model - Utility Functions', () => {
         translations: { catalan: { rawText: 'y' } },
       });
       expect(resolveProjectContent(legacy, 'catalan').stale).toBe(false);
+    });
+
+    it('isTranslationInProgress respeta el estado y la caducidad del bloqueo', () => {
+      const now = new Date();
+      const old = new Date(Date.now() - TRANSLATION_LOCK_MS - 1000);
+      expect(isTranslationInProgress(undefined)).toBe(false);
+      expect(isTranslationInProgress({ status: 'completada', startedAt: now })).toBe(false);
+      expect(isTranslationInProgress({ status: 'traduciendo' })).toBe(false);
+      expect(isTranslationInProgress({ status: 'traduciendo', startedAt: now })).toBe(true);
+      expect(isTranslationInProgress({ status: 'traduciendo', startedAt: old })).toBe(false);
+    });
+
+    it('marca la traducción en curso, fallida o abandonada', () => {
+      const withTranslation = (catalan: object) =>
+        asProject({ ...base, translations: { catalan } });
+
+      const running = resolveProjectContent(
+        withTranslation({ status: 'traduciendo', startedAt: new Date() }),
+        'catalan',
+      );
+      expect(running).toMatchObject({
+        missingTranslation: true,
+        translating: true,
+        translationFailed: false,
+      });
+
+      const failed = resolveProjectContent(
+        withTranslation({ rawText: 'Antic', sourceVersion: 2, status: 'error' }),
+        'catalan',
+      );
+      expect(failed).toMatchObject({
+        isTranslation: true,
+        translating: false,
+        translationFailed: true,
+      });
+
+      const abandoned = resolveProjectContent(
+        withTranslation({ status: 'traduciendo', startedAt: new Date(0) }),
+        'catalan',
+      );
+      expect(abandoned).toMatchObject({ translating: false, translationFailed: true });
+
+      // En el idioma original no se considera ninguna traducción
+      const original = resolveProjectContent(withTranslation({ status: 'error' }), 'castellano');
+      expect(original.translationFailed).toBe(false);
     });
 
     it('projectTextIn devuelve la traducción del idioma o el original', () => {

@@ -65,6 +65,8 @@ export class ProjectsFacade {
   /** Catálogo de modelos recibido del backend. */
   private allModels = signal<AiModelOptionDto[]>([]);
   private defaultModels = signal<Record<AIProvider, string>>({ gemini: '', openrouter: '' });
+  /** Proveedores que ofrece el backend (p. ej. sin Gemini si está desactivado). */
+  availableProviders = signal<AIProvider[]>([]);
 
   /** Colaboradores: directorio de usuarios y selección para el nuevo proyecto. */
   directory = signal<DirectoryUser[]>([]);
@@ -239,9 +241,18 @@ export class ProjectsFacade {
           defaults[p.value] = p.defaultModel;
         });
         this.defaultModels.set(defaults);
+        this.applyAvailableProviders((res?.providers || []).map((p) => p.value));
       },
       error: (err) => console.error('Error loading AI models', err),
     });
+  }
+
+  /** Si el proveedor seleccionado ya no se ofrece (Gemini desactivado), se pasa al primero disponible. */
+  private applyAvailableProviders(providers: AIProvider[]): void {
+    this.availableProviders.set(providers);
+    if (providers.length > 0 && !providers.includes(this.selectedAi())) {
+      this.selectedAi.set(providers[0]);
+    }
   }
 
   /** Modelo por defecto de un proveedor según el catálogo del backend. */

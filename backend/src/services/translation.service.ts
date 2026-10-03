@@ -142,13 +142,51 @@ export interface TranslationOptions {
   model?: string;
 }
 
-/** Traduce el Markdown sección a sección, en orden, con el mismo motor y fallback que la generación. */
+/** Nº de secciones que se traducen a la vez. */
+export const TRANSLATION_CONCURRENCY = 3;
+
+/** Proveedor y modelo que usarán las siguientes secciones (cambia si entra el respaldo). */
+interface TranslationRun {
+  provider: 'gemini' | 'openrouter';
+  model?: string;
+  failed: boolean;
+}
+
+const translateSection = async (section: string, options: TranslationOptions, run: TranslationRun) => {
+  const { prompt, system } = buildTranslationPrompt(section, options.source, options.target, options.glossary);
+  // Sin razonamiento: en una traducción no aporta y multiplica el tiempo de respuesta
+  const result = await generateAiContentWithFallback(prompt, system, run.provider, undefined, run.model, {
+    reasoning: false
+  });
+  // Respaldo "pegajoso": si el proveedor o el modelo preferido fallaron, las secciones siguientes
+  // van directamente al que ha respondido en lugar de volver a esperar al que falla
+  run.provider = result.provider;
+  if (result.requestedModel) run.model = result.requestedModel;
+  else delete run.model;
+  return stripCodeFences(result.text);
+};
+
+/**
+ * Traduce el Markdown por secciones, `TRANSLATION_CONCURRENCY` a la vez, con el mismo motor y
+ * fallback que la generación, y las une en su orden original. Si una sección falla no se lanzan más.
+ */
 export const translateMarkdown = async (text: string, options: TranslationOptions): Promise<string> => {
-  const translated: string[] = [];
-  for (const section of splitMarkdownSections(text)) {
-    const { prompt, system } = buildTranslationPrompt(section, options.source, options.target, options.glossary);
-    const result = await generateAiContentWithFallback(prompt, system, options.provider, undefined, options.model);
-    translated.push(stripCodeFences(result.text));
-  }
+  const sections = splitMarkdownSections(text);
+  const translated: string[] = new Array(sections.length);
+  const run: TranslationRun = { provider: options.provider, ...(options.model ? { model: options.model } : {}), failed: false };
+  let next = 0;
+  const worker = async () => {
+    while (next < sections.length && !run.failed) {
+      const index = next++;
+      try {
+        translated[index] = await translateSection(sections[index]!, options, run);
+      } catch (error) {
+        run.failed = true;
+        throw error;
+      }
+    }
+  };
+  const workers = Math.min(TRANSLATION_CONCURRENCY, sections.length);
+  await Promise.all(Array.from({ length: workers }, worker));
   return translated.join('\n\n');
 };

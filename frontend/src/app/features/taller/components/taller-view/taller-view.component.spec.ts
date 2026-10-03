@@ -126,6 +126,7 @@ describe('TallerViewComponent', () => {
       popUndo: vi.fn(),
       undoLastChange: vi.fn(),
       selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
+      availableProviders: signal(['gemini', 'openrouter']),
       selectedModel: signal<string>('gemini-3.6-flash'),
       myProjects: signal([mockCurrentProject]),
       methodologyOptions: [],

@@ -4,6 +4,7 @@ import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
+import { AIProvider } from '../../../projects/models/project.model';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
@@ -53,10 +54,13 @@ export class GeneratorViewComponent {
     { value: 'ApS (Aprendizaje y Servicio)', label: this.trans.t().methodologyApS },
   ]);
 
-  aiOptions = computed<SelectOption[]>(() => [
-    { value: 'gemini', label: this.trans.t().aiGemini },
-    { value: 'openrouter', label: this.trans.t().aiOpenRouter },
-  ]);
+  /** Solo los proveedores que ofrece el backend (Gemini puede estar desactivado). */
+  aiOptions = computed<SelectOption[]>(() =>
+    [
+      { value: 'gemini', label: this.trans.t().aiGemini },
+      { value: 'openrouter', label: this.trans.t().aiOpenRouter },
+    ].filter((option) => this.projects.availableProviders().includes(option.value as AIProvider)),
+  );
 
   modelOptions = computed<SelectOption[]>(() =>
     this.projects.availableModels().map((model) => ({ value: model.value, label: model.label })),

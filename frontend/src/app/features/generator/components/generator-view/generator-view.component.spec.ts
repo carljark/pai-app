@@ -64,6 +64,7 @@ describe('GeneratorViewComponent', () => {
     isGenerating: signal(false),
     methodology: signal('ABP (Aprendizaje Basado en Problemas / Proyectos)'),
     selectedAi: signal<'gemini' | 'openrouter'>('gemini'),
+    availableProviders: signal(['gemini', 'openrouter']),
     selectedModel: signal('gemini-3.6-flash'),
     extraInstructions: signal(''),
     availableModels: () =>

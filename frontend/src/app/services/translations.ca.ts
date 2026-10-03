@@ -234,7 +234,10 @@ export const TRANSLATIONS_CA = {
   translationShowing: 'Estàs veient la traducció al català. Els canvis es desen en aquesta versió.',
   translationStale: "L'original ha canviat des que es va traduir.",
   retranslateProjectBtn: 'Tornar a traduir',
-  translationInProgress: 'Traduint el projecte… pot tardar uns minuts.',
+  translationInProgress:
+    "Traduint el projecte… pot tardar uns minuts. Pots continuar fent servir l'aplicació: t'avisarem quan acabi.",
+  translationCompletedToast: 'Traducció completada',
+  translationFailedToast: "No s'ha pogut traduir",
   translationError: "No s'ha pogut traduir el projecte. Torna-ho a provar.",
 
   // SKELETON LOADER

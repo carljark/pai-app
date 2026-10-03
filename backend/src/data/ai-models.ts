@@ -56,7 +56,30 @@ export const AI_PROVIDER_CATALOG: AiProviderCatalog[] = [
   { value: 'openrouter', label: 'OpenRouter', defaultModel: DEFAULT_OPENROUTER_MODEL }
 ];
 
+/**
+ * Gemini está DESACTIVADO por defecto: la cuenta está en el nivel gratuito (20 peticiones/día por
+ * modelo) y se agota enseguida. Se reactiva con `GEMINI_ENABLED=true` en el `.env` (p. ej. tras
+ * activar la facturación de Google Cloud). Se lee en cada llamada para poder cambiarlo en tests.
+ */
+export const isGeminiEnabled = (): boolean => process.env.GEMINI_ENABLED === 'true';
+
+/** Proveedores y modelos que se ofrecen en `GET /api/ai/models` según la configuración. */
+export const getEnabledProviderCatalog = (): AiProviderCatalog[] =>
+  AI_PROVIDER_CATALOG.filter(p => p.value !== 'gemini' || isGeminiEnabled());
+export const getEnabledModels = (): AiModelCatalogEntry[] =>
+  AI_AVAILABLE_MODELS.filter(m => m.provider !== 'gemini' || isGeminiEnabled());
+
+/** Proveedor efectivo de una petición: OpenRouter si se pide o si Gemini está desactivado. */
+export const resolveProvider = (value: unknown): AiProviderId =>
+  value === 'openrouter' || !isGeminiEnabled() ? 'openrouter' : 'gemini';
+
+/** Los modelos de OpenRouter llevan prefijo de organización (`openai/…`); los de Gemini, no. */
+export const modelFitsProvider = (provider: AiProviderId, model: string): boolean =>
+  provider === 'openrouter' ? model.includes('/') : !model.includes('/');
+
 export const GEMINI_MODEL_CASCADE: string[] = GEMINI_AVAILABLE_MODELS.map(m => m.value);
+/** Orden de reintento en OpenRouter: DeepSeek (por defecto), GPT-6 Luna y después los gratuitos. */
+export const OPENROUTER_MODEL_CASCADE: string[] = OPENROUTER_AVAILABLE_MODELS.map(m => m.value);
 export const GEMINI_MODELS_WITH_THINKING_LEVEL = new Set(
   GEMINI_AVAILABLE_MODELS.filter(m => m.thinkingLevel).map(m => m.value)
 );

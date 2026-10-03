@@ -1199,6 +1199,36 @@ describe('ProjectsFacade', () => {
       expect(facade.selectedModel()).toBe('gemini-3.6-flash');
     });
 
+    it('should switch to the first available provider when Gemini is disabled', () => {
+      expect(facade.availableProviders()).toEqual(['gemini', 'openrouter']);
+
+      (facade as any).loadAiModels();
+      httpMock.expectOne('/api/ai/models').flush({
+        providers: [
+          {
+            value: 'openrouter',
+            label: 'OpenRouter',
+            defaultModel: 'deepseek/deepseek-v4.1-flash',
+          },
+        ],
+        models: [
+          { value: 'deepseek/deepseek-v4.1-flash', label: 'DeepSeek', provider: 'openrouter' },
+        ],
+      });
+      TestBed.flushEffects();
+
+      expect(facade.availableProviders()).toEqual(['openrouter']);
+      expect(facade.selectedAi()).toBe('openrouter');
+      expect(facade.selectedModel()).toBe('deepseek/deepseek-v4.1-flash');
+    });
+
+    it('should keep the selected provider when the catalog has no providers', () => {
+      (facade as any).loadAiModels();
+      httpMock.expectOne('/api/ai/models').flush({});
+      expect(facade.availableProviders()).toEqual([]);
+      expect(facade.selectedAi()).toBe('gemini');
+    });
+
     it('should compute matchingProjects for the current selection', () => {
       facade.projectsHistory.set([
         { _id: 'p1', status: 'borrador', ras: ['ra1'] },

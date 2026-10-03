@@ -216,7 +216,7 @@ export class AppFacade {
       this.projects.historyTab.set('FPB');
     }
     this.notifications.openRecentActivity();
-    this.showQueueToast(this.trans.t().toastProjectQueued);
+    this.showToast(this.trans.t().toastProjectQueued);
     this.projects.isGenerating.set(true);
     this.projects.generateProject(this.layout.language()).subscribe({
       next: () => this.onGenerateSuccess(),
@@ -235,7 +235,8 @@ export class AppFacade {
     this.layout.switchView('history');
   }
 
-  private showQueueToast(message: string): void {
+  /** Muestra el toast temporal de la aplicación (cola de generación, traducciones…). */
+  showToast(message: string): void {
     this.queueToastMessage.set(message);
     this.queueToastRestartToken.update((token) => token + 1);
   }

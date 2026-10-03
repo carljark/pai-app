@@ -32,6 +32,7 @@ Medido con peticiones reales:
 - **Frontend**: `ProjectsFacade.availableProviders` y cambio automático de proveedor; los selectores de generador y taller filtran por el catálogo.
 
 ## Archivos modificados
+- Docker: `docker-compose.yml` y `docker-compose.prod.yml` pasan `GEMINI_ENABLED` (por defecto `false`); sin esto el contenedor no vería la variable del `.env`.
 - Backend: `data/ai-models.ts`, `services/ai.service.ts`, `services/translation.service.ts`, `controllers/ai.controller.ts`, `controllers/project.controller.ts`, `controllers/translation.controller.ts`, `vitest.config.ts` (`GEMINI_ENABLED=true` en tests), `tests/ai.service.test.ts`, `tests/translation.test.ts`.
 - Frontend: `projects.facade.ts` (+ spec), `generator-view.component.ts`, `taller-view.component.ts`, mocks en `generator-view`, `taller-view` y `app` specs.
 - Documentación: `documentation/configuracion_esfuerzo_razonamiento_ia.md`, `documentation/traduccion_proyectos.md`, `README.md`.

@@ -15,7 +15,7 @@ El ajuste afecta al razonamiento interno del modelo; la aplicación sigue mostra
   - Con Gemini desactivado (`isGeminiEnabled()` en `backend/src/data/ai-models.ts`), `GET /api/ai/models` solo ofrece OpenRouter.
   - `resolveProvider()` convierte en `openrouter` cualquier petición o proyecto guardado con `gemini`, y `modelFitsProvider()` descarta los modelos de Gemini (los de OpenRouter llevan prefijo `organización/`).
   - El frontend solo muestra los proveedores del catálogo y cambia la selección si la actual no está disponible.
-  - **Para reactivarlo**: `GEMINI_ENABLED=true` en el `.env` del backend y reiniciar. No hay que tocar código.
+  - **Para reactivarlo**: `GEMINI_ENABLED=true` en el `.env` (raíz en producción) y `docker compose -f docker-compose.prod.yml up -d` para recrear el backend. Los dos `docker-compose` pasan la variable con valor por defecto `false`. No hay que tocar código.
 - **Cascada de modelos en OpenRouter** (`OPENROUTER_MODEL_CASCADE`, en el orden del catálogo): `deepseek/deepseek-v4.1-flash` (por defecto) → `openai/gpt-6-luna` → modelos gratuitos. Si un modelo devuelve error o agota el tiempo, `generateOpenRouterContent` intenta el siguiente. `cascadeLog` registra cada intento y `requestedModel` indica el modelo que respondió.
 - **Peticiones sin razonamiento** (`generateAiContentWithFallback(..., { reasoning: false })`, usado en las traducciones):
   - a los modelos con soporte confirmado (DeepSeek, GPT-6 Luna, Inkling: parámetro `reasoning` en `supported_parameters`) se envía `reasoning: { enabled: false }`; en Gemini se omite `thinking_level`;

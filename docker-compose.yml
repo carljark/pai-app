@@ -23,6 +23,8 @@ services:
       - MONGO_URI=mongodb://db:27017/pai_db
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      # Gemini desactivado salvo GEMINI_ENABLED=true en .env (cuota gratuita de 20 peticiones/día)
+      - GEMINI_ENABLED=${GEMINI_ENABLED:-false}
       - JWT_SECRET=${JWT_SECRET}
       - ADMIN_EMAIL=${ADMIN_EMAIL}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}

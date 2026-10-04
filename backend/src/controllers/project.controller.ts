@@ -90,6 +90,30 @@ export const filterCriteriaByCourse = (critList: any[], level?: string): any[] =
   });
 };
 
+/** Número oficial del RA dentro de su módulo ("3160_RA2" → "RA2"). */
+export const officialRaCode = (id?: string | null): string => (id || '').split('_').pop() || '';
+
+/** Los RA antiguos de FP Básica no guardan tipoNivel; se tratan como FP_BASICA. */
+const sameLevel = (raLevel?: string | null, level?: string) => (raLevel || 'FP_BASICA') === (level || 'FP_BASICA');
+
+/**
+ * RA seleccionado (el frontend envía su descripción). Si la misma descripción existe en varios
+ * ciclos, se prefiere la del nivel del proyecto para no tomar el número de RA de otro módulo.
+ */
+export const findSelectedRa = (allRas: any[], selectedStr: string, tipoNivel?: string): any => {
+  const matches = allRas.filter(r =>
+    r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
+  return matches.find(r => sameLevel(r.tipoNivel, tipoNivel)) || matches[0];
+};
+
+/** Bloque del prompt que identifica un RA con su módulo y su número oficial. */
+export const describeRaForPrompt = (raDoc: any, selectedStr: string, language?: string): string => {
+  const moduleName = (language === 'catalan' && raDoc.module_ca) ? raDoc.module_ca : (raDoc.module_es || raDoc.module);
+  const moduleLabel = raDoc.moduleCode ? `${raDoc.moduleCode} ${moduleName}` : moduleName;
+  const code = officialRaCode(raDoc.id);
+  return `- Módulo/Asignatura: ${moduleLabel}\n  Resultado de Aprendizaje ${code} (numeración oficial, no la cambies): ${selectedStr}`;
+};
+
 /** Denominación oficial de cada ciclo FP en castellano y catalán, para el prompt de la IA. */
 const CYCLE_NAMES: Record<string, { es: string; ca: string }> = {
   CFGM_ESTETICA: { es: 'CFGM Estética y Belleza', ca: 'CFGM Estètica i Bellesa' },
@@ -191,7 +215,7 @@ export const generateProject = async (req: any, res: Response) => {
     // Extraer códigos de los RAs seleccionados
     const selectedCodes = new Set<string>();
     for (const selectedStr of selectedRas || []) {
-      const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
+      const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
       if (raDoc && raDoc.id) {
         const code = raDoc.id.split('_')[0];
         if (code) selectedCodes.add(code);
@@ -253,6 +277,7 @@ REGLA CRÍTICA INQUEBRANTABLE SOBRE EVALUACIÓN:
 Cuando diseñes el proyecto y llegues al apartado de Evaluación, DEBES contemplar los criterios de evaluación aplicables a CADA UNO de los Resultados de Aprendizaje (RA) o Competencias Específicas (CE) seleccionados por el usuario.
 NO puedes obviar ni saltarte NINGÚN resultado de aprendizaje seleccionado. TODOS han de aparecer obligatoriamente en el proyecto.
 MUY IMPORTANTE: Cuando listes los RAs o las CEs y sus criterios de evaluación correspondientes, DEBES mantener estrictamente su NUMERACIÓN y NOMENCLATURA OFICIAL.
+Cada RA o CE de la solicitud lleva junto a él su número oficial dentro de su módulo o materia (por ejemplo, "RA3" del módulo 0843). Usa SIEMPRE ese número, también en las rúbricas y en las tablas de evaluación; NUNCA los renumeres según el orden en que aparecen en la solicitud (si se seleccionan el RA2 y el RA5 de un módulo, se llaman RA2 y RA5, no RA1 y RA2).
 
 REGLA CRÍTICA INQUEBRANTABLE SOBRE LAS RÚBRICAS:
 En el apartado de Evaluación DEBES incluir OBLIGATORIAMENTE:
@@ -298,10 +323,9 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
 
     // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
-      const raDoc = allRas.find(r => r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
+      const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
       if (raDoc) {
-        const moduleName = (language === 'catalan' && raDoc.module_ca) ? raDoc.module_ca : (raDoc.module_es || raDoc.module);
-        let text = `- Módulo/Asignatura: ${moduleName}\n  Resultado de Aprendizaje (RA): ${selectedStr}`;
+        let text = describeRaForPrompt(raDoc, selectedStr, language);
         const rawList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0)
           ? raDoc.criterios_ca
           : (raDoc.criterios_es && raDoc.criterios_es.length > 0 ? raDoc.criterios_es : []);
@@ -314,7 +338,8 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
       const ceDoc = allCes.find(c => c.description_es === selectedStr || c.description_ca === selectedStr || c.ce_id === selectedStr);
       if (ceDoc) {
         const subjectName = ceDoc.subject || ceDoc.area;
-        let text = `- Asignatura: ${subjectName}\n  Competencia Específica (CE): ${selectedStr}`;
+        const ceCode = ceDoc.ce_id ? ` ${ceDoc.ce_id}` : '';
+        let text = `- Asignatura: ${subjectName}\n  Competencia Específica${ceCode} (numeración oficial, no la cambies): ${selectedStr}`;
         const rawList = (language === 'catalan' && ceDoc.criterios_ca && ceDoc.criterios_ca.length > 0)
           ? ceDoc.criterios_ca
           : (ceDoc.criterios_es && ceDoc.criterios_es.length > 0 ? ceDoc.criterios_es : (ceDoc.criterios || []));

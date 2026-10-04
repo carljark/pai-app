@@ -8,7 +8,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { FpbMatch } from '../models/FpbMatch';
 import { CE } from '../models/CE';
-import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, describeTargetCourse, APPROVED_PROJECT_TEXT_LIMIT, MAX_APPROVED_PROJECTS } from '../controllers/project.controller';
+import { formatCriterion, filterCriteriaByCourse, officialRaCode, findSelectedRa, describeRaForPrompt, buildApprovedProjectsContext, describeTargetCourse, APPROVED_PROJECT_TEXT_LIMIT, MAX_APPROVED_PROJECTS } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: class {
@@ -649,6 +649,29 @@ describe('Projects Endpoints', () => {
       expect(filterCriteriaByCourse(criteriaList, undefined)).toEqual(criteriaList);
       expect(filterCriteriaByCourse(criteriaList, '')).toEqual(criteriaList);
       expect(filterCriteriaByCourse([], '3º')).toEqual([]);
+    });
+
+    it('officialRaCode debería devolver el número oficial del RA sin prefijo de módulo', () => {
+      expect(officialRaCode('RA5')).toBe('RA5');
+      expect(officialRaCode('3160_RA2')).toBe('RA2');
+      expect(officialRaCode(undefined)).toBe('');
+    });
+
+    it('findSelectedRa debería preferir el RA del nivel del proyecto cuando la descripción se repite', () => {
+      const fpb = { id: 'RA4', description_es: 'Texto repetido' };
+      const cfgm = { id: 'RA2', tipoNivel: 'CFGM_ESTETICA', description_es: 'Texto repetido' };
+      expect(findSelectedRa([fpb, cfgm], 'Texto repetido', 'CFGM_ESTETICA')).toBe(cfgm);
+      expect(findSelectedRa([cfgm, fpb], 'Texto repetido', 'FP_BASICA')).toBe(fpb);
+      expect(findSelectedRa([cfgm], 'Texto repetido', 'FP_BASICA')).toBe(cfgm);
+      expect(findSelectedRa([cfgm], 'Otro texto', 'CFGM_ESTETICA')).toBeUndefined();
+    });
+
+    it('describeRaForPrompt debería incluir el código del módulo y el número oficial del RA', () => {
+      const ra = { id: 'RA5', moduleCode: '0843', module: 'Mòdul', module_es: 'Módulo', module_ca: 'Mòdul' };
+      expect(describeRaForPrompt(ra, 'Descripción del RA')).toBe(
+        '- Módulo/Asignatura: 0843 Módulo\n  Resultado de Aprendizaje RA5 (numeración oficial, no la cambies): Descripción del RA',
+      );
+      expect(describeRaForPrompt({ ...ra, moduleCode: undefined }, 'Desc', 'catalan')).toContain('Asignatura: Mòdul\n');
     });
 
     it('POST /api/projects/generate - Debería aplicar el curso 3º y excluir criterios de 4º en Diversificación Curricular', async () => {

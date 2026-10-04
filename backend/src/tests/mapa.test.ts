@@ -297,7 +297,9 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(ra?.criterios_ca[0]).toMatch(/^a\) S'han especificat/);
 
       const mod0843 = await MapaModule.findOne({ tab: 'CFGM_PELUQUERIA_2', code: '0843' });
-      const textsCa = JSON.stringify(mod0843!.learningOutcomes);
+      const textsCa = JSON.stringify(mod0843!.learningOutcomes, (key, value) =>
+        typeof value === 'string' && key.endsWith('_es') ? undefined : value,
+      );
       expect(textsCa).not.toContain('traduce la secuencia');
       expect(textsCa).toContain('tradueix la seqüència');
     });

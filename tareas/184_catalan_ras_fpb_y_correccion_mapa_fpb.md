@@ -64,5 +64,8 @@ Cerrar los problemas de FPB (Peluquería y Estética) detectados en la tarea 183
   - que desaparecen los catalanismos y la basura del mapa.
 - Modificado: `documentation/procesamiento_actividades_mapa_intermodular.md`, sección 7 (comprobaciones de calidad lingüística y de referencias).
 
+## Corrección de un test previo
+El test de la migración 16 (tarea 182) buscaba «traduce la secuencia» en todo el JSON del módulo 0843, castellano incluido, y fallaba porque esa frase es correcta en `description_es`. Ahora serializa solo los campos que no son `_es`.
+
 ## Pendiente para el usuario
 - Ejecutar `cd backend && npm test`.

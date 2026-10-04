@@ -6,16 +6,22 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { LayoutService } from '../../../../services/layout.service';
-import { Project } from '../../../projects/models/project.model';
+import {
+  HISTORY_TAB_LABEL_KEYS,
+  HistoryTab,
+  Project,
+  courseLevelLabelKey,
+  getHistoryTabForTipoNivel,
+} from '../../../projects/models/project.model';
 
-type LevelFilter = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO';
-
-const LEVEL_FILTERS: Record<LevelFilter, (p: Project) => boolean> = {
-  FPB: (p) => p.tipoNivel === 'FP_BASICA' || !p.tipoNivel,
-  CFGM: (p) => p.tipoNivel === 'CFGM_ESTETICA',
-  CFGM_PELUQUERIA: (p) => p.tipoNivel === 'CFGM_PELUQUERIA',
-  ESO: (p) => p.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || p.tipoNivel === 'ESO',
-};
+/** Orden de los filtros de nivel (pills) en "Mis proyectos". */
+const LEVEL_FILTERS: HistoryTab[] = [
+  'FPB',
+  'CFGM_PELUQUERIA',
+  'CFGM',
+  'CFGS_EDUCACION_INFANTIL',
+  'ESO',
+];
 
 /** Coincidencia de la búsqueda con título, módulos o estado del proyecto. */
 function matchesSearch(p: Project, q: string): boolean {
@@ -43,7 +49,8 @@ export class PersonalViewComponent implements OnInit {
   trans = inject(TranslationService);
   layout = inject(LayoutService);
 
-  levelFilter = signal<'ALL' | LevelFilter>('ALL');
+  readonly levelFilters = LEVEL_FILTERS.map((id) => ({ id, key: HISTORY_TAB_LABEL_KEYS[id] }));
+  levelFilter = signal<'ALL' | HistoryTab>('ALL');
   statusFilter = signal<'ALL' | 'borrador' | 'publicado' | 'error'>('ALL');
   searchQuery = signal<string>('');
 
@@ -69,7 +76,9 @@ export class PersonalViewComponent implements OnInit {
   filteredMyProjects = computed(() => {
     let list = this.projectsFacade.myProjects() || [];
     const levelFilter = this.levelFilter();
-    if (levelFilter !== 'ALL') list = list.filter(LEVEL_FILTERS[levelFilter]);
+    if (levelFilter !== 'ALL') {
+      list = list.filter((p) => getHistoryTabForTipoNivel(p.tipoNivel) === levelFilter);
+    }
     const statusFilter = this.statusFilter();
     if (statusFilter !== 'ALL') list = list.filter((p) => p.status === statusFilter);
     const q = this.searchQuery().toLowerCase().trim();
@@ -87,6 +96,15 @@ export class PersonalViewComponent implements OnInit {
       return project.modules.join(' + ');
     }
     return project.title || this.trans.t().untitledProject;
+  }
+
+  /** Nombre del nivel (ciclo o ESO) del proyecto en el idioma activo. */
+  levelLabel(project: Project): string {
+    return this.trans.t()[courseLevelLabelKey(project.tipoNivel)];
+  }
+
+  labelFor(key: (typeof HISTORY_TAB_LABEL_KEYS)[HistoryTab]): string {
+    return this.trans.t()[key];
   }
 
   getAiProviderLabel(project: Project): string | null {

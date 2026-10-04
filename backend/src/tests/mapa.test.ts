@@ -7,6 +7,12 @@ import { up as runMigration08 } from '../migrations/08_ingest_mapa_intermodular'
 import { up as runMigration09 } from '../migrations/09_deduplicate_mapa_peluqueria';
 import { up as runMigration10 } from '../migrations/10_ingest_mapa_peluqueria_desarrollados';
 import { up as runMigration11 } from '../migrations/11_ingest_mapa_peluqueria_actividades_corregidas';
+import { up as runMigration14 } from '../migrations/14_fix_catalan_peluqueria_1708_1710';
+import { up as runMigration15 } from '../migrations/15_ingest_mapa_educacion_infantil';
+import { up as runMigration16 } from '../migrations/16_fix_catalan_peluqueria_segundo_curso';
+import { up as runMigration17 } from '../migrations/17_fix_catalan_mapas_y_ras_estetica';
+import { up as runMigration18 } from '../migrations/18_fix_catalan_ras_y_mapa_fpb';
+import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -197,6 +203,135 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(conns848).toBe(51);
       expect(empty848).toBe(0);
       expect(titles.size).toBe(108);
+    });
+
+    it('debería corregir con la migración 14 el catalán de 1708 y 1710 en Peluquería 2º', async () => {
+      await runMigration14();
+
+      const mod1708 = await MapaModule.findOne({ tab: 'CFGM_PELUQUERIA_2', code: '1708' });
+      const ra1 = mod1708!.learningOutcomes.find((lo: any) => lo.code === 'RA1');
+      expect(ra1.text_ca).toMatch(/^Identifica els aspectes ambientals/);
+      expect(ra1.criteria_ca[0]).toMatch(/^a\) S'ha descrit/);
+    });
+
+    it('debería recargar con la migración 17 los mapas corregidos y el catalán de Estética', async () => {
+      await RA.create({
+        id: 'RA1',
+        module: 'Técnicas de higiene',
+        moduleCode: '0633',
+        tipoNivel: 'CFGM_ESTETICA',
+        description: 'Aplica técnicas',
+        description_es: 'Aplica técnicas',
+        criterios_ca: ['a) Se ha identificado el tipo de piel'],
+      });
+
+      await runMigration17();
+
+      const ra = await RA.findOne({ tipoNivel: 'CFGM_ESTETICA', moduleCode: '0633', id: 'RA1' });
+      expect(ra?.criterios_ca[0]).toMatch(/^a\) S'ha identificat/);
+      expect(ra?.description_es).toBe('Aplica técnicas');
+
+      expect(await MapaModule.countDocuments({ tab: 'FPB' })).toBeGreaterThan(0);
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBeGreaterThan(0);
+      const fpb = JSON.stringify(await MapaModule.find({ tab: 'FPB' }).lean());
+      expect(fpb).not.toContain("S'han expuesto");
+      expect(fpb).not.toContain('Coincidències_CS_I_Peluqueria_y_Estetica.docx');
+    });
+
+    it('debería traducir con la migración 18 los RA de FPB y completar los criterios vacíos o duplicados', async () => {
+      const castellano = ['a) Se ha relacionado la imagen personal que precisa un profesional.'];
+      await RA.create([
+        {
+          id: 'RA1',
+          module: "Preparació de l'entorn professional",
+          module_es: 'Preparación del entorno profesional',
+          description: 'Muestra una imagen',
+          description_es: 'Muestra una imagen',
+          criterios_es: castellano,
+          criterios_ca: castellano,
+        },
+        { id: 'RA5', module_es: 'Lavado y cambios de forma del cabello', criterios_es: ['a) Copia del RA4'] },
+        { id: 'RA1', module_es: 'Maquillaje', criterios_es: [], criterios_ca: [] },
+        { id: 'RA1', module_es: 'Preparación del entorno profesional', tipoNivel: 'CFGM_ESTETICA', criterios_ca: castellano },
+      ]);
+
+      await runMigration18();
+      await runMigration18();
+
+      const prep = await RA.findOne({ module_es: 'Preparación del entorno profesional', tipoNivel: 'FP_BASICA' });
+      expect(prep?.description_ca).toMatch(/^Mostra una imatge/);
+      expect(prep?.criterios_ca[0]).toMatch(/^a\) S'ha relacionat/);
+      expect(prep?.criterios_es).toEqual(castellano);
+
+      const lavado = await RA.findOne({ module_es: 'Lavado y cambios de forma del cabello', id: 'RA5' });
+      expect(lavado?.criterios_es[0]).toMatch(/cambio de forma permanente/);
+      const maquillaje = await RA.findOne({ module_es: 'Maquillaje', id: 'RA1' });
+      expect(maquillaje?.criterios_es).toHaveLength(9);
+      expect(maquillaje?.criterios_ca).toHaveLength(9);
+
+      const ajeno = await RA.findOne({ tipoNivel: 'CFGM_ESTETICA' });
+      expect(ajeno?.criterios_ca).toEqual(castellano);
+
+      const fpb = JSON.stringify(await MapaModule.find({ tab: 'FPB' }).lean());
+      expect(fpb).not.toMatch(/el ajudant de manicura|higienitzación|deficiències en el servicio/);
+      expect(fpb).not.toContain('Nota metodológica');
+      expect(fpb).not.toContain('cera caliente i tibia');
+    });
+
+    it('debería corregir con la migración 16 el catalán de 2º de Peluquería en RA y mapa', async () => {
+      await RA.create({
+        id: 'RA1',
+        module: 'Imagen corporal',
+        moduleCode: '0640',
+        tipoNivel: 'CFGM_PELUQUERIA',
+        description: 'Caracteriza la imagen corporal',
+        description_es: 'Caracteriza la imagen corporal',
+        criterios_ca: ['a) Se han especificado...'],
+      });
+
+      await runMigration16();
+
+      const ra = await RA.findOne({ tipoNivel: 'CFGM_PELUQUERIA', moduleCode: '0640', id: 'RA1' });
+      expect(ra?.description_ca).toMatch(/^Caracteritza la imatge corporal/);
+      expect(ra?.description_es).toBe('Caracteriza la imagen corporal');
+      expect(ra?.criterios_ca[0]).toMatch(/^a\) S'han especificat/);
+
+      const mod0843 = await MapaModule.findOne({ tab: 'CFGM_PELUQUERIA_2', code: '0843' });
+      const textsCa = JSON.stringify(mod0843!.learningOutcomes);
+      expect(textsCa).not.toContain('traduce la secuencia');
+      expect(textsCa).toContain('tradueix la seqüència');
+    });
+
+    it('debería cargar con la migración 15 el mapa de Educación Infantil cumpliendo las reglas', async () => {
+      await runMigration15();
+      await runMigration15();
+
+      for (const [tab, modules, min] of [
+        ['CFGS_EDUCACION_INFANTIL', 6, 300],
+        ['CFGS_EDUCACION_INFANTIL_2', 9, 300],
+      ] as const) {
+        const docs = await MapaModule.find({ tab });
+        expect(docs).toHaveLength(modules);
+        let total = 0;
+        for (const doc of docs) {
+          for (const lo of doc.learningOutcomes) {
+            expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+            expect(lo.connections.length).toBeLessThanOrEqual(15);
+            for (const c of lo.connections) {
+              expect(c.activities.length).toBeGreaterThanOrEqual(1);
+              expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+            }
+            total += lo.connections.length;
+          }
+        }
+        expect(total).toBeGreaterThanOrEqual(min);
+        expect(total).toBeLessThanOrEqual(600);
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_EDUCACION_INFANTIL_2');
+      expect(res.status).toBe(200);
+      expect(res.body[0].code).toBe('0013');
+      expect(res.body[0].name_ca).toBe('El joc infantil i la seva metodologia');
     });
   });
 });

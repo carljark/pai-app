@@ -327,6 +327,51 @@ describe('CurriculumFacade', () => {
     expect(groups.length).toBeGreaterThan(0);
   });
 
+  it('should show only the CFGS Educación Infantil modules of the selected course, in order', () => {
+    facade.setTipoNivel('CFGS_EDUCACION_INFANTIL');
+    facade.ras.set([]);
+    localStorage.setItem('pai_lang', 'castellano');
+
+    const firstYear = facade.groupedItems().map((g) => g.moduleCode);
+    expect(firstYear).toEqual(['0011', '0012', '0014', '0015', '1665', '1709']);
+    expect(facade.groupedItems()[0].category).toBe('0011. Didáctica de la educación infantil');
+
+    facade.setCurso('2º');
+    const secondYear = facade.groupedItems().map((g) => g.moduleCode);
+    expect(secondYear).toEqual([
+      '0013',
+      '0016',
+      '0017',
+      '0018',
+      '0020',
+      '0019',
+      '0179',
+      '1708',
+      '1710',
+    ]);
+  });
+
+  it('should translate the CFGS Educación Infantil fallback to Catalan', () => {
+    facade.tipoNivel.set('CFGS_EDUCACION_INFANTIL');
+    facade.ras.set([]);
+    localStorage.setItem('pai_lang', 'catalan');
+    const [didactica] = facade.groupedItems();
+    expect(didactica.category).toBe("0011. Didàctica de l'educació infantil");
+    expect(didactica.items[0].text).toMatch(/^Contextualitza la intervenció educativa/);
+  });
+
+  it('should restore CFGS Educación Infantil as the stored level', () => {
+    localStorage.setItem('pai_tipo_nivel', 'CFGS_EDUCACION_INFANTIL');
+    localStorage.setItem('pai_curso', '2º');
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
+    });
+    const stored = TestBed.inject(CurriculumFacade);
+    expect(stored.tipoNivel()).toBe('CFGS_EDUCACION_INFANTIL');
+    expect(stored.curso()).toBe('2º');
+  });
+
   it('should group CFGM_ESTETICA items using fallback with Catalan', () => {
     facade.tipoNivel.set('CFGM_ESTETICA');
     facade.ras.set([]);

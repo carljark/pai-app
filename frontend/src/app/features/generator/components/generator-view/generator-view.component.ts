@@ -2,9 +2,17 @@ import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
-import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
+import {
+  CurriculumFacade,
+  courseModuleOrder,
+} from '../../../curriculum/services/curriculum.facade';
+import { TipoNivel } from '../../../curriculum/utils/curriculum-grouping';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
-import { AIProvider } from '../../../projects/models/project.model';
+import {
+  AIProvider,
+  HISTORY_TAB_LABEL_KEYS,
+  HistoryTab,
+} from '../../../projects/models/project.model';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
@@ -28,9 +36,18 @@ export class GeneratorViewComponent {
   appFacade = inject(AppFacade);
   auth = inject(AuthFacade);
 
+  /** Pestañas de titulación del generador, en orden de visualización. */
+  readonly levelTabs: { nivel: TipoNivel; key: (typeof HISTORY_TAB_LABEL_KEYS)[HistoryTab] }[] = [
+    { nivel: 'FP_BASICA', key: HISTORY_TAB_LABEL_KEYS.FPB },
+    { nivel: 'CFGM_ESTETICA', key: HISTORY_TAB_LABEL_KEYS.CFGM },
+    { nivel: 'CFGM_PELUQUERIA', key: HISTORY_TAB_LABEL_KEYS.CFGM_PELUQUERIA },
+    { nivel: 'CFGS_EDUCACION_INFANTIL', key: HISTORY_TAB_LABEL_KEYS.CFGS_EDUCACION_INFANTIL },
+    { nivel: 'DIVERSIFICACION_CURRICULAR', key: HISTORY_TAB_LABEL_KEYS.ESO },
+  ];
+
   courseOptions = computed<SelectOption[]>(() => {
     const nivel = this.curriculum.tipoNivel();
-    if (nivel === 'FP_BASICA' || nivel === 'CFGM_PELUQUERIA') {
+    if (nivel === 'FP_BASICA' || courseModuleOrder(nivel, '1º')) {
       return [
         { value: '1º', label: this.trans.t().firstYearOption },
         { value: '2º', label: this.trans.t().secondYearOption },

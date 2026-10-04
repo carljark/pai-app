@@ -41,6 +41,7 @@ describe('Projects Mapper', () => {
       expect(mapTipoNivel('FP_BASICA')).toBe('FP_BASICA');
       expect(mapTipoNivel('CFGM_ESTETICA')).toBe('CFGM_ESTETICA');
       expect(mapTipoNivel('CFGM_PELUQUERIA')).toBe('CFGM_PELUQUERIA');
+      expect(mapTipoNivel('CFGS_EDUCACION_INFANTIL')).toBe('CFGS_EDUCACION_INFANTIL');
       expect(mapTipoNivel('DIVERSIFICACION_CURRICULAR')).toBe('DIVERSIFICACION_CURRICULAR');
     });
 

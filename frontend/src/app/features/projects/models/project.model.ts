@@ -5,8 +5,13 @@
 
 export type ProjectStatus = 'borrador' | 'generando' | 'en_cola' | 'publicado' | 'error';
 export type ProjectType =
-  'FP_BASICA' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' | 'DIVERSIFICACION_CURRICULAR' | 'ESO';
-export type HistoryTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO';
+  | 'FP_BASICA'
+  | 'CFGM_ESTETICA'
+  | 'CFGM_PELUQUERIA'
+  | 'CFGS_EDUCACION_INFANTIL'
+  | 'DIVERSIFICACION_CURRICULAR'
+  | 'ESO';
+export type HistoryTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGS_EDUCACION_INFANTIL' | 'ESO';
 export type AIProvider = 'gemini' | 'openrouter';
 export type ContentLanguage = 'castellano' | 'catalan';
 
@@ -230,9 +235,25 @@ export function getHistoryTabForTipoNivel(tipoNivel: ProjectType): HistoryTab {
       return 'CFGM';
     case 'CFGM_PELUQUERIA':
       return 'CFGM_PELUQUERIA';
+    case 'CFGS_EDUCACION_INFANTIL':
+      return 'CFGS_EDUCACION_INFANTIL';
     default:
       return 'FPB';
   }
+}
+
+/** Clave de traducción con el nombre de cada pestaña de nivel. */
+export const HISTORY_TAB_LABEL_KEYS = {
+  FPB: 'courseLevelFP',
+  CFGM: 'courseLevelCFGM',
+  CFGM_PELUQUERIA: 'courseLevelCFGMPeluqueria',
+  CFGS_EDUCACION_INFANTIL: 'courseLevelCFGSEducacionInfantil',
+  ESO: 'courseLevelPDC',
+} as const satisfies Record<HistoryTab, string>;
+
+/** Clave de traducción del nivel (ciclo o ESO) de un proyecto. */
+export function courseLevelLabelKey(tipoNivel: ProjectType | undefined) {
+  return HISTORY_TAB_LABEL_KEYS[getHistoryTabForTipoNivel(tipoNivel as ProjectType)];
 }
 
 export function isFPProject(tipoNivel: ProjectType): boolean {

@@ -399,6 +399,16 @@ describe('AppFacade', () => {
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
     });
 
+    it('should set historyTab to CFGS_EDUCACION_INFANTIL for CFGS_EDUCACION_INFANTIL', () => {
+      curriculumFacadeMock.tipoNivel.set('CFGS_EDUCACION_INFANTIL');
+      curriculumFacadeMock.selectedRas.set(['ra_cfgs_inf']);
+      projectsFacadeMock.generateProject.mockReturnValue(of({}));
+
+      facade.generateProject();
+
+      expect(projectsFacadeMock.historyTab()).toBe('CFGS_EDUCACION_INFANTIL');
+    });
+
     it('should show error modal on generate project error', () => {
       curriculumFacadeMock.selectedRas.set(['ra1']);
       projectsFacadeMock.generateProject.mockReturnValue(

@@ -10,7 +10,11 @@ import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
 import { findProjectsWithSameSelection } from './features/projects/utils/selection-match';
-import { Project, resolveProjectContent } from './features/projects/models/project.model';
+import {
+  Project,
+  getHistoryTabForTipoNivel,
+  resolveProjectContent,
+} from './features/projects/models/project.model';
 import { AppNotification } from './features/notifications/models/notification.model';
 
 @Injectable({ providedIn: 'root' })
@@ -202,16 +206,7 @@ export class AppFacade {
 
   private enqueueGeneration(): void {
     this.notifications.clearLatestNotification?.();
-    const nivel = this.curriculum.tipoNivel();
-    if (nivel === 'DIVERSIFICACION_CURRICULAR') {
-      this.projects.historyTab.set('ESO');
-    } else if (nivel === 'CFGM_ESTETICA') {
-      this.projects.historyTab.set('CFGM');
-    } else if (nivel === 'CFGM_PELUQUERIA') {
-      this.projects.historyTab.set('CFGM_PELUQUERIA');
-    } else {
-      this.projects.historyTab.set('FPB');
-    }
+    this.projects.historyTab.set(getHistoryTabForTipoNivel(this.curriculum.tipoNivel()));
     this.notifications.openRecentActivity();
     this.showToast(this.trans.t().toastProjectQueued);
     this.projects.isGenerating.set(true);

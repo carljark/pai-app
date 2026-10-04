@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
+import { mapaTabConfig } from './mapa-tabs.config';
 import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { MapaIntermodularService } from './mapa-intermodular.service';
@@ -159,7 +160,18 @@ describe('MapaIntermodularFacade', () => {
       expect(facade.exportConnectionSummary('catalan')).toContain('MAPA INTERMODULAR');
     }
 
+    facade.activeTab.set('CFGS_EDUCACION_INFANTIL_2');
+    expect(facade.exportConnectionSummary('castellano')).toContain('CFGS Educación Infantil 2º');
+    expect(facade.exportConnectionSummary('catalan')).toContain('CFGS Educació Infantil 2n');
+
     facade.activeTab.set('FPB');
+  });
+
+  it('should select the first RA of 0011 when opening the CFGS Educación Infantil tab', async () => {
+    await facade.setTab('CFGS_EDUCACION_INFANTIL', []);
+    expect(facade.selectedModuleCode()).toBe('0011');
+    expect(facade.selectedRaId()).toBe('0011_RA1');
+    expect(mapaTabConfig('DESCONOCIDA' as any).id).toBe('FPB');
   });
 
   it('should test fallbacks for unknown module or RA and empty list', () => {

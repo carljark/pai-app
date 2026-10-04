@@ -67,35 +67,15 @@
         >
           {{ trans.t().personalFilterAll }}
         </button>
-        <button
-          class="filter-pill"
-          [class.active]="levelFilter() === 'FPB'"
-          (click)="levelFilter.set('FPB')"
-        >
-          {{ trans.t().courseLevelFP }}
-        </button>
-        <button
-          class="filter-pill"
-          [class.active]="levelFilter() === 'CFGM_PELUQUERIA'"
-          (click)="levelFilter.set('CFGM_PELUQUERIA')"
-        >
-          {{ trans.t().courseLevelCFGMPeluqueria }}
-        </button>
-
-        <button
-          class="filter-pill"
-          [class.active]="levelFilter() === 'CFGM'"
-          (click)="levelFilter.set('CFGM')"
-        >
-          {{ trans.t().courseLevelCFGM }}
-        </button>
-        <button
-          class="filter-pill"
-          [class.active]="levelFilter() === 'ESO'"
-          (click)="levelFilter.set('ESO')"
-        >
-          {{ trans.t().courseLevelPDC }}
-        </button>
+        @for (level of levelFilters; track level.id) {
+          <button
+            class="filter-pill"
+            [class.active]="levelFilter() === level.id"
+            (click)="levelFilter.set(level.id)"
+          >
+            {{ labelFor(level.key) }}
+          </button>
+        }
       </div>
 
       <!-- Filtro de Estado -->
@@ -183,16 +163,7 @@
                 font-weight: 600;
               "
             >
-              {{ project.courseLevel ? project.courseLevel + ' ' : ''
-              }}{{
-                project.tipoNivel === 'DIVERSIFICACION_CURRICULAR'
-                  ? trans.t().courseLevelPDC
-                  : project.tipoNivel === 'CFGM_ESTETICA'
-                    ? trans.t().courseLevelCFGM
-                    : project.tipoNivel === 'CFGM_PELUQUERIA'
-                      ? trans.t().courseLevelCFGMPeluqueria
-                      : trans.t().courseLevelFP
-              }}
+              {{ project.courseLevel ? project.courseLevel + ' ' : '' }}{{ levelLabel(project) }}
             </span>
           </div>
 

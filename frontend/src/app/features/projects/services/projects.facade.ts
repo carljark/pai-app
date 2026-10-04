@@ -7,11 +7,9 @@
 import { Injectable, inject, signal, computed, effect } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { AuthFacade } from '../../auth/services/auth.facade';
-import {
-  CurriculumFacade,
-  CFGM_PELUQUERIA_1ST_ORDER,
-  CFGM_PELUQUERIA_2ND_ORDER,
-} from '../../curriculum/services/curriculum.facade';
+import { CurriculumFacade, courseModuleOrder } from '../../curriculum/services/curriculum.facade';
+import { TRANSLATIONS_CA } from '../../../services/translations.ca';
+import { TRANSLATIONS_ES } from '../../../services/translations.es';
 import { LearningOutcome } from '../../curriculum/models/curriculum.model';
 import { ProjectsService } from './projects.service';
 import { findProjectsWithSameSelection } from '../utils/selection-match';
@@ -29,6 +27,7 @@ import {
   AIModelOption,
   AiModelOptionDto,
   DirectoryUser,
+  courseLevelLabelKey,
   getHistoryTabForTipoNivel,
   getOwnerId,
   ContentLanguage,
@@ -371,25 +370,28 @@ export class ProjectsFacade {
     const selected = this.curriculumFacade
       .ras()
       .filter((ra) => selectedRas.includes(ra.description));
-    if (tipoNivel === 'CFGM_PELUQUERIA') return this.getPeluqueriaModules(selected);
+    const order = courseModuleOrder(tipoNivel, this.curriculumFacade.curso());
+    if (order) return this.getCourseModules(tipoNivel, selected, order);
     return Array.from(new Set(selected.map((ra) => ra.subject || ra.module || '')));
   }
 
-  /** Módulos de Peluquería en el orden oficial del curso, con su nombre en el idioma activo. */
-  private getPeluqueriaModules(selected: LearningOutcome[]): string[] {
+  /**
+   * Módulos de un ciclo de dos cursos en el orden oficial del curso, con su nombre en el
+   * idioma activo; si no hay ninguno, el nombre del ciclo.
+   */
+  private getCourseModules(
+    tipoNivel: ProjectType,
+    selected: LearningOutcome[],
+    order: string[],
+  ): string[] {
     const isCa =
       typeof localStorage !== 'undefined' && localStorage.getItem('pai_lang') === 'catalan';
-    const order =
-      this.curriculumFacade.curso() === '2º'
-        ? CFGM_PELUQUERIA_2ND_ORDER
-        : CFGM_PELUQUERIA_1ST_ORDER;
     const moduleNames = order
       .map((code) => selected.find((ra) => ra.moduleCode === code))
       .filter((ra): ra is LearningOutcome => ra !== undefined)
       .map((ra) => (isCa ? ra.subject_ca : ra.subject_es) || ra.subject || ra.module || '');
-    return moduleNames.length > 0
-      ? moduleNames
-      : [isCa ? 'CFGM Peluqueria i Cosmètica Capilar' : 'CFGM Peluquería y Cosmética Capilar'];
+    const translations = isCa ? TRANSLATIONS_CA : TRANSLATIONS_ES;
+    return moduleNames.length > 0 ? moduleNames : [translations[courseLevelLabelKey(tipoNivel)]];
   }
 
   /** Actualiza el estado del proyecto actual (borrador/publicado) */

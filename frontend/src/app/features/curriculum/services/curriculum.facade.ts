@@ -10,12 +10,13 @@ import {
   fuzzyFindItem,
   groupCes,
   groupRasByModule,
+  isFpCycle,
   shortenDescription,
   sortCfgmGroups,
 } from '../utils/curriculum-grouping';
 
 export type { GroupedCurriculumItem } from '../utils/curriculum-grouping';
-export { CFGM_PELUQUERIA_1ST_ORDER, CFGM_PELUQUERIA_2ND_ORDER } from '../utils/curriculum-grouping';
+export { courseModuleOrder } from '../utils/curriculum-grouping';
 
 const SCIENCE_KEYWORDS = [
   'ciencia',
@@ -45,13 +46,8 @@ const LANGUAGE_KEYWORDS = [
 function getStoredTipoNivel(): TipoNivel {
   if (typeof localStorage !== 'undefined') {
     const saved = localStorage.getItem('pai_tipo_nivel');
-    if (
-      saved === 'DIVERSIFICACION_CURRICULAR' ||
-      saved === 'FP_BASICA' ||
-      saved === 'CFGM_ESTETICA' ||
-      saved === 'CFGM_PELUQUERIA'
-    ) {
-      return saved;
+    if (saved === 'DIVERSIFICACION_CURRICULAR' || saved === 'FP_BASICA' || isFpCycle(saved ?? '')) {
+      return saved as TipoNivel;
     }
   }
   return 'FP_BASICA';
@@ -146,8 +142,7 @@ export class CurriculumFacade {
 
   groupedItems = computed<GroupedCurriculumItem[]>(() => {
     const tipoNivel = this.tipoNivel();
-    const isRaNivel =
-      tipoNivel === 'FP_BASICA' || tipoNivel === 'CFGM_ESTETICA' || tipoNivel === 'CFGM_PELUQUERIA';
+    const isRaNivel = tipoNivel === 'FP_BASICA' || isFpCycle(tipoNivel);
     if (!isRaNivel) return groupCes(this.ces());
 
     const list = filterRasForNivel(this.ras(), tipoNivel, this.curso(), this.isCatalan());

@@ -136,6 +136,7 @@ describe('GeneratorViewComponent', () => {
       'FP_BASICA',
       'CFGM_ESTETICA',
       'CFGM_PELUQUERIA',
+      'CFGS_EDUCACION_INFANTIL',
       'DIVERSIFICACION_CURRICULAR',
     ];
 
@@ -162,9 +163,32 @@ describe('GeneratorViewComponent', () => {
     tabs[0].click();
     expect(setTipoNivelSpy).toHaveBeenCalledWith('FP_BASICA');
 
-    // click Diversificación Curricular
+    // click CFGS Educación Infantil
     tabs[3].click();
+    expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGS_EDUCACION_INFANTIL');
+
+    // click Diversificación Curricular
+    tabs[4].click();
     expect(setTipoNivelSpy).toHaveBeenCalledWith('DIVERSIFICACION_CURRICULAR');
+  });
+
+  it('should label the level tabs in the active language', () => {
+    mockTrans.t.update(
+      (t) =>
+        ({
+          ...t,
+          courseLevelCFGSEducacionInfantil: 'CFGS Educació Infantil',
+        }) as typeof t,
+    );
+    fixture.detectChanges();
+    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
+    expect(tabs[3].textContent.trim()).toBe('CFGS Educació Infantil');
+  });
+
+  it('should offer 1st and 2nd year for CFGS Educación Infantil', () => {
+    mockCurriculum.tipoNivel.set('CFGS_EDUCACION_INFANTIL');
+    fixture.detectChanges();
+    expect(component.courseOptions().map((o) => o.value)).toEqual(['1º', '2º']);
   });
 
   it('should call generateProject on AppFacade when button clicked', () => {

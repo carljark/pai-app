@@ -44,6 +44,9 @@ describe('history-filter', () => {
       true,
     );
     expect(matchesTab({ ...base, tipoNivel: 'ESO' } as any, 'ESO')).toBe(true);
+    const infantil = { ...base, tipoNivel: 'CFGS_EDUCACION_INFANTIL' } as any;
+    expect(matchesTab(infantil, 'CFGS_EDUCACION_INFANTIL')).toBe(true);
+    expect(matchesTab(infantil, 'FPB')).toBe(false);
   });
 
   it('parses and matches keywords ignoring accents and order', () => {

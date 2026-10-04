@@ -2,7 +2,7 @@ import { TranslationService } from '../../../../services/translation.service';
 import { Component, inject, output, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
-import { Project } from '../../../projects/models/project.model';
+import { Project, courseLevelLabelKey } from '../../../projects/models/project.model';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { HomeIntroComponent } from '../home-intro/home-intro.component';
 
@@ -36,6 +36,11 @@ export class HomeDashboardComponent {
     effect(() => {
       this.projectsFacade.loadHistory();
     });
+  }
+
+  /** Nombre del nivel (ciclo o ESO) del proyecto en el idioma activo. */
+  levelLabel(project: Project): string {
+    return this.t()[courseLevelLabelKey(project.tipoNivel)];
   }
 
   statusLabel(status: string): string {

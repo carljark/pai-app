@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import { User } from '../models/User';
 import { up as createAdminUp } from '../migrations/01_create_admin_user';
+import { up as ingestEducacionInfantilUp } from '../migrations/13_ingest_cfgs_educacion_infantil_ras';
+import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -77,5 +79,23 @@ describe('Migrations Safety & Idempotency', () => {
     // El admin no debe estar duplicado
     const adminCount = await User.countDocuments({ role: 'admin' });
     expect(adminCount).toBe(1);
+  });
+
+  it('Carga los RA del CFGS Educación Infantil sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', module: 'Otro', tipoNivel: 'CFGM_PELUQUERIA', description: 'Ajeno' });
+
+    await ingestEducacionInfantilUp();
+    await ingestEducacionInfantilUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGS_EDUCACION_INFANTIL' });
+    expect(ras).toHaveLength(82);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGM_PELUQUERIA' })).toBe(1);
+
+    const didactica = ras.find((r) => r.moduleCode === '0011' && r.id === 'RA1');
+    expect(didactica?.module_es).toBe('Didáctica de la educación infantil');
+    expect(didactica?.module_ca).toBe("Didàctica de l'educació infantil");
+    expect(didactica?.criterios_es[0]).toMatch(/^a\) Se ha /);
+    expect(didactica?.criterios_ca[0]).toMatch(/^a\) S'ha /);
+    expect(didactica?.criterios_ca).toHaveLength(didactica?.criterios_es.length ?? -1);
   });
 });

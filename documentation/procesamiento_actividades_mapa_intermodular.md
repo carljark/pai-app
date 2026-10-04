@@ -140,3 +140,31 @@ El componente `mapa-intermodular-view` organiza la navegación en 3 pasos vertic
    - Renderiza las tarjetas de conexión coincidentes con el criterio seleccionado.
    - Cada tarjeta muestra el módulo y RA destino, los criterios propios y externos implicados, la justificación curricular y las actividades disponibles.
    - **Acción "Crear Proyecto":** El botón en cada tarjeta abre el generador de proyectos preseleccionando automáticamente los RAs del módulo origen y destino.
+
+---
+
+## 6. Alta de una pestaña de mapa (ciclo y curso)
+
+Las pestañas del mapa se definen en un único lugar: `frontend/src/app/features/mapa-intermodular/services/mapa-tabs.config.ts` (`MAPA_TABS`). Cada entrada fija:
+- el nombre en castellano y catalán;
+- el nivel (`tipoNivel`) y el curso con que «Crear proyecto» abre el generador;
+- el módulo y RA seleccionados al abrir la pestaña.
+
+Las pestañas, el título de la cabecera, el subtítulo de 2.º curso y el resumen exportado se derivan de esa configuración.
+
+Para añadir un ciclo o curso al mapa:
+1. Generar el JSON en `backend/src/data/mapa-intermodular/` con las reglas de la sección 4.2.
+2. Añadir el identificador de pestaña al enum de `MapaModule` y a `ALLOWED_TABS` de `mapa.controller.ts`.
+3. Crear una migración que sustituya solo esa pestaña (ver `15_ingest_mapa_educacion_infantil.ts`).
+4. Añadir la entrada en `MAPA_TABS`.
+
+Ciclos con mapa: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º) y CFGS Educación Infantil (1.º y 2.º).
+
+## 7. Calidad lingüística y referencias de los mapas
+
+Comprobaciones que debe pasar cualquier mapa antes de ingerirse (aprendidas en las tareas 182–184):
+- **Paridad ES/CA de referencias:** los códigos de aprendizaje (`3159-1a`, `3064-4e`…) de un campo `_ca` deben coincidir, en el mismo orden, con los de su pareja `_es`. La traducción automática tiende a convertir la letra «e)» en «i)» y a desplazar numeraciones.
+- **Sin texto ajeno:** los campos de actividad (sobre todo `diversitySupport`) no pueden arrastrar fragmentos de otros documentos (notas metodológicas, nombres de archivo `.md`, encabezados de RA).
+- **Sin catalanismos en `_es` ni castellano en `_ca`,** incluido el campo heredado `criteria` de `relatedCriteria`, que repite el texto castellano.
+- **Criterios oficiales:** el texto de los criterios del mapa debe ser el del currículo oficial (BOE); si el documento de origen lo abrevia, se sustituye por el oficial en ambos idiomas.
+- **Coherencia con la colección `ras`:** los textos catalanes de RA y criterios del mapa de FPB salen del mismo fichero que los RA (`backend/src/data/ras_fpb_catalan.data.ts`), para que el mapa y el generador muestren la misma traducción.

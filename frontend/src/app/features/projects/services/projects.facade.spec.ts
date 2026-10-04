@@ -372,7 +372,46 @@ describe('ProjectsFacade', () => {
     facade.generateProject('catalan').subscribe();
 
     const req = httpMock.expectOne('/api/projects/generate');
-    expect(req.request.body.modules).toEqual(['CFGM Peluqueria i Cosmètica Capilar']);
+    expect(req.request.body.modules).toEqual(['CFGM Perruqueria i Cosmètica Capil·lar']);
+    flushGenerateSuccess(httpMock, req);
+  });
+
+  it('should order CFGS Educación Infantil modules by course and name them in catalan', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGS_EDUCACION_INFANTIL');
+    mockCurriculumFacade.curso.mockReturnValue('2º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_JOC', 'RA_PAUX', 'RA_DID']);
+    mockCurriculumFacade.ras.mockReturnValue([
+      { description: 'RA_PAUX', moduleCode: '0020', subject_ca: 'Primers auxilis' },
+      {
+        description: 'RA_JOC',
+        moduleCode: '0013',
+        subject_ca: 'El joc infantil i la seva metodologia',
+      },
+      { description: 'RA_DID', moduleCode: '0011', subject_ca: "Didàctica de l'educació infantil" },
+    ]);
+
+    localStorage.setItem('pai_lang', 'catalan');
+    facade.generateProject('catalan').subscribe();
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    // 0011 es de 1.º: no se incluye en un proyecto de 2.º
+    expect(req.request.body.modules).toEqual([
+      'El joc infantil i la seva metodologia',
+      'Primers auxilis',
+    ]);
+    flushGenerateSuccess(httpMock, req);
+  });
+
+  it('should fall back to the CFGS Educación Infantil name in castellano when no module matches', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('CFGS_EDUCACION_INFANTIL');
+    mockCurriculumFacade.curso.mockReturnValue('1º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['RA_X']);
+    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_X', moduleCode: '9999' }]);
+
+    facade.generateProject('castellano').subscribe();
+
+    const req = httpMock.expectOne('/api/projects/generate');
+    expect(req.request.body.modules).toEqual(['CFGS Educación Infantil']);
     flushGenerateSuccess(httpMock, req);
   });
 
@@ -1117,7 +1156,7 @@ describe('ProjectsFacade', () => {
       facade.generateProject('catalan').subscribe();
 
       const req = httpMock.expectOne('/api/projects/generate');
-      expect(req.request.body.modules).toEqual(['CFGM Peluqueria i Cosmètica Capilar']);
+      expect(req.request.body.modules).toEqual(['CFGM Perruqueria i Cosmètica Capil·lar']);
       flushGenerateSuccess(httpMock, req);
     });
 

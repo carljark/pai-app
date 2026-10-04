@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
+  courseLevelLabelKey,
   getHistoryTabForTipoNivel,
   isFPProject,
   isESOProject,
@@ -40,6 +41,20 @@ describe('Project Model - Utility Functions', () => {
 
     it('should return CFGM_PELUQUERIA for CFGM_PELUQUERIA', () => {
       expect(getHistoryTabForTipoNivel('CFGM_PELUQUERIA')).toBe('CFGM_PELUQUERIA');
+    });
+
+    it('should return CFGS_EDUCACION_INFANTIL for CFGS_EDUCACION_INFANTIL', () => {
+      expect(getHistoryTabForTipoNivel('CFGS_EDUCACION_INFANTIL')).toBe('CFGS_EDUCACION_INFANTIL');
+    });
+
+    it('should resolve the translation key of each level', () => {
+      expect(courseLevelLabelKey('CFGS_EDUCACION_INFANTIL')).toBe(
+        'courseLevelCFGSEducacionInfantil',
+      );
+      expect(courseLevelLabelKey('CFGM_PELUQUERIA')).toBe('courseLevelCFGMPeluqueria');
+      expect(courseLevelLabelKey('CFGM_ESTETICA')).toBe('courseLevelCFGM');
+      expect(courseLevelLabelKey('DIVERSIFICACION_CURRICULAR')).toBe('courseLevelPDC');
+      expect(courseLevelLabelKey(undefined)).toBe('courseLevelFP');
     });
 
     it('should return FPB for FP_BASICA', () => {

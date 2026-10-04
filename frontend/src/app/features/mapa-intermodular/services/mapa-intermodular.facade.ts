@@ -10,14 +10,9 @@ import {
 import { MapaIntermodularService } from './mapa-intermodular.service';
 import { formatConnection } from '../utils/connection-summary';
 
-export type MapaTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2';
+import { MapaTab, mapaTabConfig, mapaTabLabel } from './mapa-tabs.config';
 
-const TAB_DEFAULT_SELECTION: Record<MapaTab, { moduleCode: string; raId: string }> = {
-  FPB: { moduleCode: '3060', raId: '3060_RA1' },
-  CFGM: { moduleCode: '0633', raId: '0633_RA1' },
-  CFGM_PELUQUERIA: { moduleCode: '0845', raId: '0845_RA1' },
-  CFGM_PELUQUERIA_2: { moduleCode: '0640', raId: '0640_RA1' },
-};
+export type { MapaTab } from './mapa-tabs.config';
 
 function hasRelation(m: FPBModule, relationType: string): boolean {
   return m.learningOutcomes.some((ra) =>
@@ -256,7 +251,7 @@ export class MapaIntermodularFacade {
     const modName = isCa ? mod.name_ca : mod.name_es;
     const raText = isCa ? ra.text_ca : ra.text_es;
 
-    const tabLabel = this.getMapaTabLabel(isCa);
+    const tabLabel = mapaTabLabel(this.activeTab(), isCa);
 
     let summary = `=== MAPA INTERMODULAR ${tabLabel}: ${mod.code} - ${modName} ===\n\n`;
     summary += `${ra.code}: ${raText}\n\n`;
@@ -264,27 +259,11 @@ export class MapaIntermodularFacade {
     return summary + ra.connections.map((c, idx) => formatConnection(c, idx, isCa)).join('');
   }
 
-  private getMapaTabLabel(isCa: boolean): string {
-    const tab = this.activeTab();
-    if (isCa) {
-      if (tab === 'FPB') return 'CFGB Perruqueria i Estètica';
-      if (tab === 'CFGM') return 'CFGM Estètica i Bellesa';
-      if (tab === 'CFGM_PELUQUERIA') return 'CFGM Perruqueria i Cosmètica Capil·lar 1r';
-      return 'CFGM Perruqueria i Cosmètica Capil·lar 2n';
-    }
-    if (tab === 'FPB') return 'CFGB Peluquería y Estética';
-    if (tab === 'CFGM') return 'CFGM Estética y Belleza';
-    if (tab === 'CFGM_PELUQUERIA') return 'CFGM Peluquería y Cosmética Capilar 1º';
-    return 'CFGM Peluquería y Cosmética Capilar 2º';
-  }
-
   setTab(tab: MapaTab, directData?: FPBModule[]): Promise<FPBModule[]> {
     this.activeTab.set(tab);
-    const defaults = TAB_DEFAULT_SELECTION[tab];
-    if (defaults) {
-      this.selectedModuleCode.set(defaults.moduleCode);
-      this.selectedRaId.set(defaults.raId);
-    }
+    const defaults = mapaTabConfig(tab).defaultSelection;
+    this.selectedModuleCode.set(defaults.moduleCode);
+    this.selectedRaId.set(defaults.raId);
     this.selectedCriterion.set(null);
 
     if (directData) {

@@ -1,10 +1,12 @@
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
 import { CfgmRaData, CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { CFGM_PELUQUERIA_RAS_DATA } from '../data/ras_cfgm_peluqueria.data';
+import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_infantil.data';
 
-export type TipoNivel =
-  'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA';
-type CfgmTipo = 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA';
+/** Ciclos de grado medio y superior con RA propios. */
+export const FP_CYCLES = ['CFGM_ESTETICA', 'CFGM_PELUQUERIA', 'CFGS_EDUCACION_INFANTIL'] as const;
+type CicloTipo = (typeof FP_CYCLES)[number];
+export type TipoNivel = 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | CicloTipo;
 
 export interface GroupedCurriculumItem {
   category: string;
@@ -50,21 +52,45 @@ export const CFGM_PELUQUERIA_2ND_ORDER = [
   '1713',
 ];
 
-const CFGM_FALLBACK_DATA: Record<CfgmTipo, CfgmRaData[]> = {
-  CFGM_ESTETICA: CFGM_ESTETICA_RAS_DATA,
-  CFGM_PELUQUERIA: CFGM_PELUQUERIA_RAS_DATA,
+/** CFGS Educación Infantil: módulos de cada curso según FP Illes Balears. */
+export const CFGS_EDUCACION_INFANTIL_1ST_ORDER = ['0011', '0012', '0014', '0015', '1665', '1709'];
+export const CFGS_EDUCACION_INFANTIL_2ND_ORDER = [
+  '0013',
+  '0016',
+  '0017',
+  '0018',
+  '0020',
+  '0019',
+  '0179',
+  '1708',
+  '1710',
+];
+
+/** Ciclos de dos cursos: los módulos y su orden dependen del curso elegido. */
+const COURSE_ORDERS: Partial<Record<CicloTipo, [string[], string[]]>> = {
+  CFGM_PELUQUERIA: [CFGM_PELUQUERIA_1ST_ORDER, CFGM_PELUQUERIA_2ND_ORDER],
+  CFGS_EDUCACION_INFANTIL: [CFGS_EDUCACION_INFANTIL_1ST_ORDER, CFGS_EDUCACION_INFANTIL_2ND_ORDER],
 };
 
-function isCfgm(tipoNivel: string): tipoNivel is CfgmTipo {
-  return tipoNivel === 'CFGM_ESTETICA' || tipoNivel === 'CFGM_PELUQUERIA';
+const CFGM_FALLBACK_DATA: Record<CicloTipo, CfgmRaData[]> = {
+  CFGM_ESTETICA: CFGM_ESTETICA_RAS_DATA,
+  CFGM_PELUQUERIA: CFGM_PELUQUERIA_RAS_DATA,
+  CFGS_EDUCACION_INFANTIL: CFGS_EDUCACION_INFANTIL_RAS_DATA,
+};
+
+export function isFpCycle(tipoNivel: string): tipoNivel is CicloTipo {
+  return (FP_CYCLES as readonly string[]).includes(tipoNivel);
 }
 
-function peluqueriaOrder(curso: string): string[] {
-  return curso === '2º' ? CFGM_PELUQUERIA_2ND_ORDER : CFGM_PELUQUERIA_1ST_ORDER;
+/** Módulos del curso en su orden oficial, o `null` si el ciclo no se divide por cursos. */
+export function courseModuleOrder(tipoNivel: string, curso: string): string[] | null {
+  const orders = isFpCycle(tipoNivel) ? COURSE_ORDERS[tipoNivel] : undefined;
+  if (!orders) return null;
+  return curso === '2º' ? orders[1] : orders[0];
 }
 
-/** RAs de respaldo desde los seeds CFGM cuando la API aún no los devuelve. */
-function cfgmFallbackRas(tipo: CfgmTipo, isCa: boolean): LearningOutcome[] {
+/** RAs de respaldo desde los seeds del ciclo cuando la API aún no los devuelve. */
+function cfgmFallbackRas(tipo: CicloTipo, isCa: boolean): LearningOutcome[] {
   return CFGM_FALLBACK_DATA[tipo].map((r) => {
     const name = `${r.moduleCode}. ${isCa ? r.module_ca : r.module_es}`;
     return {
@@ -89,7 +115,7 @@ function localizeRa(r: LearningOutcome, isCa: boolean): LearningOutcome {
   };
 }
 
-/** Filtra los RAs del nivel (y del curso en Peluquería) y los traduce al idioma activo. */
+/** Filtra los RAs del nivel (y del curso en los ciclos de dos cursos) y los traduce al idioma activo. */
 export function filterRasForNivel(
   ras: LearningOutcome[],
   tipoNivel: TipoNivel,
@@ -99,12 +125,10 @@ export function filterRasForNivel(
   let list = ras.filter(
     (ra) => ra.tipoNivel === tipoNivel || (!ra.tipoNivel && tipoNivel === 'FP_BASICA'),
   );
-  if (isCfgm(tipoNivel) && list.length === 0) list = cfgmFallbackRas(tipoNivel, isCa);
+  if (isFpCycle(tipoNivel) && list.length === 0) list = cfgmFallbackRas(tipoNivel, isCa);
   list = list.map((r) => localizeRa(r, isCa));
-  if (tipoNivel === 'CFGM_PELUQUERIA') {
-    const allowedModules = peluqueriaOrder(curso);
-    list = list.filter((r) => allowedModules.includes(r.moduleCode ?? ''));
-  }
+  const allowedModules = courseModuleOrder(tipoNivel, curso);
+  if (allowedModules) list = list.filter((r) => allowedModules.includes(r.moduleCode ?? ''));
   return list;
 }
 
@@ -137,14 +161,14 @@ export function groupRasByModule(list: LearningOutcome[]): GroupedCurriculumItem
   }));
 }
 
-/** Ordena los módulos CFGM según el orden oficial; el resto de niveles se mantiene. */
+/** Ordena los módulos de los ciclos según el orden oficial; el resto de niveles se mantiene. */
 export function sortCfgmGroups(
   groups: GroupedCurriculumItem[],
   tipoNivel: TipoNivel,
   curso: string,
 ): GroupedCurriculumItem[] {
-  if (!isCfgm(tipoNivel)) return groups;
-  const order = tipoNivel === 'CFGM_PELUQUERIA' ? peluqueriaOrder(curso) : CFGM_MODULE_ORDER;
+  if (!isFpCycle(tipoNivel)) return groups;
+  const order = courseModuleOrder(tipoNivel, curso) ?? CFGM_MODULE_ORDER;
   return groups.sort((a, b) => {
     const idxA = order.indexOf(a.moduleCode || '');
     const idxB = order.indexOf(b.moduleCode || '');

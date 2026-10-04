@@ -1459,9 +1459,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Caracteriza la imagen corporal, identificando su estructura, morfología y proporciones.",
+    "description": "Caracteritza la imatge corporal, identificant-ne l'estructura, la morfologia i les proporcions.",
     "description_es": "Caracteriza la imagen corporal, identificando su estructura, morfología y proporciones.",
-    "description_ca": "Caracteriza la imagen corporal, identificando su estructura, morfología y proporciones.",
+    "description_ca": "Caracteritza la imatge corporal, identificant-ne l'estructura, la morfologia i les proporcions.",
     "criterios_es": [
       "a) Se han especificado las diferentes zonas y posiciones anatómicas.",
       "b) Se han establecido los términos de localización a través de los ejes y planos anatómicos.",
@@ -1473,14 +1473,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se han identificado las desproporciones morfológicas que se pueden corregir a través de las técnicas de peluquería y estética."
     ],
     "criterios_ca": [
-      "a) Se han especificado las diferentes zonas y posiciones anatómicas.",
-      "b) Se han establecido los términos de localización a través de los ejes y planos anatómicos.",
-      "c) Se ha valorado el uso de terminología anatomo-fisiológica en imagen personal.",
-      "d) Se han establecido los parámetros que definen las proporciones corporales y faciales.",
-      "e) Se han identificado los factores que determinan el tipo de constitución corporal.",
-      "f) Se han medido las variables antropométricas que definen los diferentes somatotipos.",
-      "g) Se han identificado los tipos de rostro y facciones.",
-      "h) Se han identificado las desproporciones morfológicas que se pueden corregir a través de las técnicas de peluquería y estética."
+      "a) S'han especificat les diferents zones i posicions anatòmiques.",
+      "b) S'han establert els termes de localització a través dels eixos i plans anatòmics.",
+      "c) S'ha valorat l'ús de terminologia anatomofisiològica en imatge personal.",
+      "d) S'han establert els paràmetres que defineixen les proporcions corporals i facials.",
+      "e) S'han identificat els factors que determinen el tipus de constitució corporal.",
+      "f) S'han mesurat les variables antropomètriques que defineixen els diferents somatotips.",
+      "g) S'han identificat els tipus de cara i les faccions.",
+      "h) S'han identificat les desproporcions morfològiques que es poden corregir mitjançant les tècniques de perruqueria i estètica."
     ]
   },
   {
@@ -1490,9 +1490,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Caracteriza los sistemas y aparatos corporales, describiendo su estructura, funcionamiento y alteraciones relacionadas con la imagen personal.",
+    "description": "Caracteritza els sistemes i aparells corporals, descrivint-ne l'estructura, el funcionament i les alteracions relacionades amb la imatge personal.",
     "description_es": "Caracteriza los sistemas y aparatos corporales, describiendo su estructura, funcionamiento y alteraciones relacionadas con la imagen personal.",
-    "description_ca": "Caracteriza los sistemas y aparatos corporales, describiendo su estructura, funcionamiento y alteraciones relacionadas con la imagen personal.",
+    "description_ca": "Caracteritza els sistemes i aparells corporals, descrivint-ne l'estructura, el funcionament i les alteracions relacionades amb la imatge personal.",
     "criterios_es": [
       "a) Se ha establecido la estructura jerárquica del organismo.",
       "b) Se ha caracterizado la anatomía del aparato circulatorio.",
@@ -1506,16 +1506,16 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "j) Se ha identificado el mecanismo del sistema nervioso como coordinador y controlador del medio interno y externo."
     ],
     "criterios_ca": [
-      "a) Se ha establecido la estructura jerárquica del organismo.",
-      "b) Se ha caracterizado la anatomía del aparato circulatorio.",
-      "c) Se han especificado las funciones de la sangre y la linfa.",
-      "d) Se han identificado la anatomía y fisiología del aparato respiratorio.",
-      "e) Se ha especificado la estructura de los músculos y los huesos que permiten el movimiento.",
-      "f) Se han establecido los tipos de movimiento corporales.",
-      "g) Se han identificado los principales grupos musculares.",
-      "h) Se ha relacionado la morfología del pie y de la mano con los tratamientos de manicura y pedicura.",
-      "i) Se ha determinado la influencia de las hormonas en el órgano cutáneo.",
-      "j) Se ha identificado el mecanismo del sistema nervioso como coordinador y controlador del medio interno y externo."
+      "a) S'ha establert l'estructura jeràrquica de l'organisme.",
+      "b) S'ha caracteritzat l'anatomia de l'aparell circulatori.",
+      "c) S'han especificat les funcions de la sang i la limfa.",
+      "d) S'han identificat l'anatomia i la fisiologia de l'aparell respiratori.",
+      "e) S'ha especificat l'estructura dels músculs i els ossos que permeten el moviment.",
+      "f) S'han establert els tipus de moviments corporals.",
+      "g) S'han identificat els principals grups musculars.",
+      "h) S'ha relacionat la morfologia del peu i de la mà amb els tractaments de manicura i pedicura.",
+      "i) S'ha determinat la influència de les hormones en l'òrgan cutani.",
+      "j) S'ha identificat el mecanisme del sistema nerviós com a coordinador i controlador del medi intern i extern."
     ]
   },
   {
@@ -1525,9 +1525,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Identifica pautas de alimentación y nutrición, analizando su influencia en la imagen corporal y el órgano cutáneo.",
+    "description": "Identifica pautes d'alimentació i nutrició, analitzant-ne la influència en la imatge corporal i l'òrgan cutani.",
     "description_es": "Identifica pautas de alimentación y nutrición, analizando su influencia en la imagen corporal y el órgano cutáneo.",
-    "description_ca": "Identifica pautas de alimentación y nutrición, analizando su influencia en la imagen corporal y el órgano cutáneo.",
+    "description_ca": "Identifica pautes d'alimentació i nutrició, analitzant-ne la influència en la imatge corporal i l'òrgan cutani.",
     "criterios_es": [
       "a) Se han establecido las diferencias entre alimentación y nutrición.",
       "b) Se han especificado los nutrientes básicos.",
@@ -1540,15 +1540,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se ha caracterizado la estructura y el funcionamiento del aparato excretor."
     ],
     "criterios_ca": [
-      "a) Se han establecido las diferencias entre alimentación y nutrición.",
-      "b) Se han especificado los nutrientes básicos.",
-      "c) Se han relacionado los nutrientes con su función en el organismo.",
-      "d) Se han identificado las necesidades nutritivas del organismo para su buen funcionamiento.",
-      "e) Se han reconocido los alimentos que forman parte de la pirámide alimenticia.",
-      "f) Se ha valorado la influencia de una dieta equilibrada en la salud y en la imagen corporal.",
-      "g) Se han especificado los aparatos y órganos que intervienen en el proceso de la digestión.",
-      "h) Se ha determinado el funcionamiento del aparato digestivo.",
-      "i) Se ha caracterizado la estructura y el funcionamiento del aparato excretor."
+      "a) S'han establert les diferències entre alimentació i nutrició.",
+      "b) S'han especificat els nutrients bàsics.",
+      "c) S'han relacionat els nutrients amb la seva funció en l'organisme.",
+      "d) S'han identificat les necessitats nutritives de l'organisme per al seu bon funcionament.",
+      "e) S'han reconegut els aliments que formen part de la piràmide alimentària.",
+      "f) S'ha valorat la influència d'una dieta equilibrada en la salut i en la imatge corporal.",
+      "g) S'han especificat els aparells i òrgans que intervenen en el procés de la digestió.",
+      "h) S'ha determinat el funcionament de l'aparell digestiu.",
+      "i) S'han caracteritzat l'estructura i el funcionament de l'aparell excretor."
     ]
   },
   {
@@ -1558,9 +1558,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Promociona hábitos de vida saludables, relacionándolos con los procesos de imagen personal.",
+    "description": "Promociona hàbits de vida saludables, relacionant-los amb els processos d'imatge personal.",
     "description_es": "Promociona hábitos de vida saludables, relacionándolos con los procesos de imagen personal.",
-    "description_ca": "Promociona hábitos de vida saludables, relacionándolos con los procesos de imagen personal.",
+    "description_ca": "Promociona hàbits de vida saludables, relacionant-los amb els processos d'imatge personal.",
     "criterios_es": [
       "a) Se han identificado los parámetros que definen el concepto de vida saludable.",
       "b) Se ha especificado la importancia de la hidratación y su influencia en la imagen personal.",
@@ -1572,14 +1572,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se ha relacionado la prevención del cáncer con los hábitos de vida saludables."
     ],
     "criterios_ca": [
-      "a) Se han identificado los parámetros que definen el concepto de vida saludable.",
-      "b) Se ha especificado la importancia de la hidratación y su influencia en la imagen personal.",
-      "c) Se ha justificado el ejercicio físico y el sueño en el aspecto personal.",
-      "d) Se han identificado los efectos, generales y sobre la piel, producidos por el consumo de tabaco y alcohol.",
-      "e) Se ha justificado la importancia de la prevención de la drogodependencia.",
-      "f) Se han relacionado las medidas de higiene personal con su repercusión en el ámbito profesional.",
-      "g) Se ha justificado la influencia de las hormonas en la anatomofisiología cutánea.",
-      "h) Se ha relacionado la prevención del cáncer con los hábitos de vida saludables."
+      "a) S'han identificat els paràmetres que defineixen el concepte de vida saludable.",
+      "b) S'ha especificat la importància de la hidratació i la seva influència en la imatge personal.",
+      "c) S'ha justificat la influència de l'exercici físic i la son en l'aspecte personal.",
+      "d) S'han identificat els efectes, generals i sobre la pell, produïts pel consum de tabac i alcohol.",
+      "e) S'ha justificat la importància de la prevenció de la drogodependència.",
+      "f) S'han relacionat les mesures d'higiene personal amb la seva repercussió en l'àmbit professional.",
+      "g) S'ha justificat la influència de les hormones en l'anatomofisiologia cutània.",
+      "h) S'ha relacionat la prevenció del càncer amb els hàbits de vida saludables."
     ]
   },
   {
@@ -1589,9 +1589,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Selecciona los métodos de higiene y desinfección, relacionándolos con el riesgo de infecciones e infestaciones a través del material.",
+    "description": "Selecciona els mètodes d'higiene i desinfecció, relacionant-los amb el risc d'infeccions i infestacions a través del material.",
     "description_es": "Selecciona los métodos de higiene y desinfección, relacionándolos con el riesgo de infecciones e infestaciones a través del material.",
-    "description_ca": "Selecciona los métodos de higiene y desinfección, relacionándolos con el riesgo de infecciones e infestaciones a través del material.",
+    "description_ca": "Selecciona els mètodes d'higiene i desinfecció, relacionant-los amb el risc d'infeccions i infestacions a través del material.",
     "criterios_es": [
       "a) Se han establecido las condiciones necesarias para el desarrollo microbiano.",
       "b) Se han identificado los diferentes tipos de microorganismos.",
@@ -1604,15 +1604,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han relacionado los distintos métodos de tratamiento de residuos con los riesgos biológicos que pueden producir."
     ],
     "criterios_ca": [
-      "a) Se han establecido las condiciones necesarias para el desarrollo microbiano.",
-      "b) Se han identificado los diferentes tipos de microorganismos.",
-      "c) Se ha establecido la diferencia entre infección e infestación.",
-      "d) Se han caracterizado las infecciones e infestaciones más importantes en el ámbito de la imagen personal.",
-      "e) Se han especificado las etapas de la cadena epidemiológica.",
-      "f) Se han relacionado las técnicas de imagen personal (tatuajes, piercing y rasurado, entre otros) con sus riesgos potenciales.",
-      "g) Se ha valorado el orden, la limpieza y la desinfección de instalaciones y equipos como primer factor de prevención de riesgos.",
-      "h) Se han aplicado los diferentes métodos de limpieza, desinfección y esterilización.",
-      "i) Se han relacionado los distintos métodos de tratamiento de residuos con los riesgos biológicos que pueden producir."
+      "a) S'han establert les condicions necessàries per al desenvolupament microbià.",
+      "b) S'han identificat els diferents tipus de microorganismes.",
+      "c) S'ha establert la diferència entre infecció i infestació.",
+      "d) S'han caracteritzat les infeccions i infestacions més importants en l'àmbit de la imatge personal.",
+      "e) S'han especificat les etapes de la cadena epidemiològica.",
+      "f) S'han relacionat les tècniques d'imatge personal (tatuatges, pírcings i afaitat, entre d'altres) amb els seus riscs potencials.",
+      "g) S'han valorat l'ordre, la neteja i la desinfecció d'instal·lacions i equips com a primer factor de prevenció de riscs.",
+      "h) S'han aplicat els diferents mètodes de neteja, desinfecció i esterilització.",
+      "i) S'han relacionat els diferents mètodes de tractament de residus amb els riscs biològics que poden produir."
     ]
   },
   {
@@ -1622,9 +1622,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Determina hábitos de seguridad para prevenir enfermedades profesionales, identificando los riesgos asociados y las medidas para prevenirlos.",
+    "description": "Determina hàbits de seguretat per prevenir malalties professionals, identificant els riscs associats i les mesures per prevenir-los.",
     "description_es": "Determina hábitos de seguridad para prevenir enfermedades profesionales, identificando los riesgos asociados y las medidas para prevenirlos.",
-    "description_ca": "Determina hábitos de seguridad para prevenir enfermedades profesionales, identificando los riesgos asociados y las medidas para prevenirlos.",
+    "description_ca": "Determina hàbits de seguretat per prevenir malalties professionals, identificant els riscs associats i les mesures per prevenir-los.",
     "criterios_es": [
       "a) Se han identificado los riesgos inherentes a la actividad y su enfermedad profesional asociada.",
       "b) Se han relacionado los riesgos con las causas más frecuentes de accidentes en los establecimientos de imagen personal.",
@@ -1635,13 +1635,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han aplicado técnicas de primeros auxilios en reacciones adversas y accidentes."
     ],
     "criterios_ca": [
-      "a) Se han identificado los riesgos inherentes a la actividad y su enfermedad profesional asociada.",
-      "b) Se han relacionado los riesgos con las causas más frecuentes de accidentes en los establecimientos de imagen personal.",
-      "c) Se han determinado las medidas de protección personal que se deben adoptar en la preparación y ejecución de las operaciones técnicas.",
-      "d) Se han previsto medidas de prevención específicas para el cliente durante el servicio de peluquería y estética.",
-      "e) Se han reconocido las condiciones de los espacios de trabajo para evitar riesgos profesionales.",
-      "f) Se ha relacionado la selección de los equipos de protección individual del profesional o esteticista con la actividad que va a desarrollar.",
-      "g) Se han aplicado técnicas de primeros auxilios en reacciones adversas y accidentes."
+      "a) S'han identificat els riscs inherents a l'activitat i la malaltia professional associada.",
+      "b) S'han relacionat els riscs amb les causes més freqüents d'accidents en els establiments d'imatge personal.",
+      "c) S'han determinat les mesures de protecció personal que s'han d'adoptar en la preparació i l'execució de les operacions tècniques.",
+      "d) S'han previst mesures de prevenció específiques per al client durant el servei de perruqueria i estètica.",
+      "e) S'han reconegut les condicions dels espais de treball per evitar riscs professionals.",
+      "f) S'ha relacionat la selecció dels equips de protecció individual del professional o esteticista amb l'activitat que ha de desenvolupar.",
+      "g) S'han aplicat tècniques de primers auxilis en reaccions adverses i accidents."
     ]
   },
   {
@@ -1651,9 +1651,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Identifica los productos y servicios en empresas de imagen personal, aplicando técnicas de marketing.",
+    "description": "Identifica els productes i serveis en empreses d'imatge personal, aplicant tècniques de màrqueting.",
     "description_es": "Identifica los productos y servicios en empresas de imagen personal, aplicando técnicas de marketing.",
-    "description_ca": "Identifica los productos y servicios en empresas de imagen personal, aplicando técnicas de marketing.",
+    "description_ca": "Identifica els productes i serveis en empreses d'imatge personal, aplicant tècniques de màrqueting.",
     "criterios_es": [
       "a) Se ha caracterizado el marketing en el ámbito de la imagen personal.",
       "b) Se han identificado los tipos de marketing.",
@@ -1667,16 +1667,16 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "j) Se han definido las fases del plan de marketing."
     ],
     "criterios_ca": [
-      "a) Se ha caracterizado el marketing en el ámbito de la imagen personal.",
-      "b) Se han identificado los tipos de marketing.",
-      "c) Se han determinado los elementos del marketing mix que pueden ser utilizados por la empresa.",
-      "d) Se han establecido las diferencias entre un bien, como producto tangible, y un servicio.",
-      "e) Se han especificado las características propias de los servicios.",
-      "f) Se ha analizado la importancia del precio como herramienta del marketing mix.",
-      "g) Se han reconocido los tipos de canales de distribución (mayoristas y minoristas) relacionados con la imagen personal.",
-      "h) Se han valorado las franquicias de peluquería y estética como un tipo de distribución con posibilidades de autoempleo.",
-      "i) Se han identificado los elementos de la servucción.",
-      "j) Se han definido las fases del plan de marketing."
+      "a) S'ha caracteritzat el màrqueting en l'àmbit de la imatge personal.",
+      "b) S'han identificat els tipus de màrqueting.",
+      "c) S'han determinat els elements del màrqueting mix que pot utilitzar l'empresa.",
+      "d) S'han establert les diferències entre un bé, com a producte tangible, i un servei.",
+      "e) S'han especificat les característiques pròpies dels serveis.",
+      "f) S'ha analitzat la importància del preu com a eina del màrqueting mix.",
+      "g) S'han reconegut els tipus de canals de distribució (majoristes i detallistes) relacionats amb la imatge personal.",
+      "h) S'han valorat les franquícies de perruqueria i estètica com un tipus de distribució amb possibilitats d'autoocupació.",
+      "i) S'han identificat els elements de la servucció.",
+      "j) S'han definit les fases del pla de màrqueting."
     ]
   },
   {
@@ -1686,9 +1686,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Determina las necesidades de los clientes, analizando las motivaciones de compra de productos y servicios de imagen personal.",
+    "description": "Determina les necessitats dels clients, analitzant les motivacions de compra de productes i serveis d'imatge personal.",
     "description_es": "Determina las necesidades de los clientes, analizando las motivaciones de compra de productos y servicios de imagen personal.",
-    "description_ca": "Determina las necesidades de los clientes, analizando las motivaciones de compra de productos y servicios de imagen personal.",
+    "description_ca": "Determina les necessitats dels clients, analitzant les motivacions de compra de productes i serveis d'imatge personal.",
     "criterios_es": [
       "a) Se ha identificado al cliente como el elemento más importante en las empresas de imagen personal.",
       "b) Se han analizado las variables que influyen en el consumo de los clientes de imagen personal.",
@@ -1699,13 +1699,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han determinado los mecanismos de fidelización de los clientes."
     ],
     "criterios_ca": [
-      "a) Se ha identificado al cliente como el elemento más importante en las empresas de imagen personal.",
-      "b) Se han analizado las variables que influyen en el consumo de los clientes de imagen personal.",
-      "c) Se han identificado las motivaciones de compra del cliente.",
-      "d) Se han establecido las fases del proceso de compra.",
-      "e) Se han especificado los niveles de motivación de la teoría de Maslow.",
-      "f) Se ha establecido la clasificación del cliente según su tipología, carácter y rol.",
-      "g) Se han determinado los mecanismos de fidelización de los clientes."
+      "a) S'ha identificat el client com l'element més important de les empreses d'imatge personal.",
+      "b) S'han analitzat les variables que influeixen en el consum dels clients d'imatge personal.",
+      "c) S'han identificat les motivacions de compra del client.",
+      "d) S'han establert les fases del procés de compra.",
+      "e) S'han especificat els nivells de motivació de la teoria de Maslow.",
+      "f) S'ha establert la classificació del client segons la tipologia, el caràcter i el rol.",
+      "g) S'han determinat els mecanismes de fidelització dels clients."
     ]
   },
   {
@@ -1715,9 +1715,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Establece pautas de atención al cliente, utilizando las técnicas de comunicación y sus herramientas.",
+    "description": "Estableix pautes d'atenció al client, utilitzant les tècniques de comunicació i les seves eines.",
     "description_es": "Establece pautas de atención al cliente, utilizando las técnicas de comunicación y sus herramientas.",
-    "description_ca": "Establece pautas de atención al cliente, utilizando las técnicas de comunicación y sus herramientas.",
+    "description_ca": "Estableix pautes d'atenció al client, utilitzant les tècniques de comunicació i les seves eines.",
     "criterios_es": [
       "a) Se ha determinado el procedimiento de atención al cliente en todas las fases del proceso desde la recepción hasta la despedida.",
       "b) Se han identificado los elementos, etapas, barreras y objetivos de la comunicación.",
@@ -1730,15 +1730,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han realizado demostraciones de productos y servicios."
     ],
     "criterios_ca": [
-      "a) Se ha determinado el procedimiento de atención al cliente en todas las fases del proceso desde la recepción hasta la despedida.",
-      "b) Se han identificado los elementos, etapas, barreras y objetivos de la comunicación.",
-      "c) Se han identificado los instrumentos que utilizan las empresas de imagen personal en la comunicación interna y externa.",
-      "d) Se ha caracterizado la comunicación verbal con los usuarios.",
-      "e) Se ha establecido la secuencia de actuación en una presentación o charla comercial.",
-      "f) Se han identificado las fases de la comunicación telefónica.",
-      "g) Se han analizado los instrumentos de comunicación escrita (cartas, folletos y tarjetas, entre otros).",
-      "h) Se ha valorado la importancia de la comunicación gestual en las relaciones comerciales.",
-      "i) Se han realizado demostraciones de productos y servicios."
+      "a) S'ha determinat el procediment d'atenció al client en totes les fases del procés, des de la recepció fins al comiat.",
+      "b) S'han identificat els elements, les etapes, les barreres i els objectius de la comunicació.",
+      "c) S'han identificat els instruments que utilitzen les empreses d'imatge personal en la comunicació interna i externa.",
+      "d) S'ha caracteritzat la comunicació verbal amb els usuaris.",
+      "e) S'ha establert la seqüència d'actuació en una presentació o xerrada comercial.",
+      "f) S'han identificat les fases de la comunicació telefònica.",
+      "g) S'han analitzat els instruments de comunicació escrita (cartes, fullets i targetes, entre d'altres).",
+      "h) S'ha valorat la importància de la comunicació gestual en les relacions comercials.",
+      "i) S'han fet demostracions de productes i serveis."
     ]
   },
   {
@@ -1748,9 +1748,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Utiliza técnicas de promoción y publicidad, justificando la selección de los instrumentos empleados.",
+    "description": "Utilitza tècniques de promoció i publicitat, justificant la selecció dels instruments emprats.",
     "description_es": "Utiliza técnicas de promoción y publicidad, justificando la selección de los instrumentos empleados.",
-    "description_ca": "Utiliza técnicas de promoción y publicidad, justificando la selección de los instrumentos empleados.",
+    "description_ca": "Utilitza tècniques de promoció i publicitat, justificant la selecció dels instruments emprats.",
     "criterios_es": [
       "a) Se han identificado los objetivos de la publicidad",
       "b) Se han establecido las fases de una campaña publicitaria.",
@@ -1760,12 +1760,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se ha realizado una campaña promocional de un producto/servicio de estética."
     ],
     "criterios_ca": [
-      "a) Se han identificado los objetivos de la publicidad",
-      "b) Se han establecido las fases de una campaña publicitaria.",
-      "c) Se han especificado los medios publicitarios más utilizados por las empresas del sector.",
-      "d) Se han relacionado los instrumentos de la promoción con los objetivos y efectos.",
-      "e) Se han establecido las fases de una campaña de promoción.",
-      "f) Se ha realizado una campaña promocional de un producto/servicio de estética."
+      "a) S'han identificat els objectius de la publicitat.",
+      "b) S'han establert les fases d'una campanya publicitària.",
+      "c) S'han especificat els mitjans publicitaris més utilitzats per les empreses del sector.",
+      "d) S'han relacionat els instruments de la promoció amb els objectius i els efectes.",
+      "e) S'han establert les fases d'una campanya de promoció.",
+      "f) S'ha fet una campanya promocional d'un producte o servei d'estètica."
     ]
   },
   {
@@ -1775,9 +1775,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica las técnicas del merchandising promocional, utilizando los instrumentos específicos y adecuándolos a la imagen de la empresa.",
+    "description": "Aplica les tècniques del marxandatge promocional, utilitzant els instruments específics i adequant-los a la imatge de l'empresa.",
     "description_es": "Aplica las técnicas del merchandising promocional, utilizando los instrumentos específicos y adecuándolos a la imagen de la empresa.",
-    "description_ca": "Aplica las técnicas del merchandising promocional, utilizando los instrumentos específicos y adecuándolos a la imagen de la empresa.",
+    "description_ca": "Aplica les tècniques del marxandatge promocional, utilitzant els instruments específics i adequant-los a la imatge de l'empresa.",
     "criterios_es": [
       "a) Se han establecido los objetivos del merchandising.",
       "b) Se han clasificado los tipos de compras según el comportamiento del cliente.",
@@ -1789,14 +1789,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se han aplicado y combinado los diferentes elementos del merchandising."
     ],
     "criterios_ca": [
-      "a) Se han establecido los objetivos del merchandising.",
-      "b) Se han clasificado los tipos de compras según el comportamiento del cliente.",
-      "c) Se han especificado los elementos del merchandising.",
-      "d) Se han relacionado los efectos de la ambientación visual, sonora y olfativa con el proceso de venta.",
-      "e) Se ha establecido la distribución de los espacios y productos en los puntos de venta.",
-      "f) Se han identificado la cartelería y los expositores como instrumentos de publicidad en el lugar de venta.",
-      "g) Se ha analizado la función del escaparate y su influencia en la decisión de compra del consumidor.",
-      "h) Se han aplicado y combinado los diferentes elementos del merchandising."
+      "a) S'han establert els objectius del marxandatge.",
+      "b) S'han classificat els tipus de compres segons el comportament del client.",
+      "c) S'han especificat els elements del marxandatge.",
+      "d) S'han relacionat els efectes de l'ambientació visual, sonora i olfactiva amb el procés de venda.",
+      "e) S'ha establert la distribució dels espais i dels productes en els punts de venda.",
+      "f) S'han identificat la cartelleria i els expositors com a instruments de publicitat en el lloc de venda.",
+      "g) S'ha analitzat la funció de l'aparador i la seva influència en la decisió de compra del consumidor.",
+      "h) S'han aplicat i combinat els diferents elements del marxandatge."
     ]
   },
   {
@@ -1806,9 +1806,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realiza demostraciones de venta de servicios y productos de imagen personal, definiendo las etapas y utilizando las técnicas específicas.",
+    "description": "Fa demostracions de venda de serveis i productes d'imatge personal, definint-ne les etapes i utilitzant les tècniques específiques.",
     "description_es": "Realiza demostraciones de venta de servicios y productos de imagen personal, definiendo las etapas y utilizando las técnicas específicas.",
-    "description_ca": "Realiza demostraciones de venta de servicios y productos de imagen personal, definiendo las etapas y utilizando las técnicas específicas.",
+    "description_ca": "Fa demostracions de venda de serveis i productes d'imatge personal, definint-ne les etapes i utilitzant les tècniques específiques.",
     "criterios_es": [
       "a) Se han identificado las cualidades, actitudes, aptitudes y habilidades que debe reunir un asesor de ventas en las relaciones comerciales.",
       "b) Se han establecido las técnicas de asertividad utilizadas en las relaciones comerciales.",
@@ -1821,15 +1821,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han establecido los procedimientos para seguimiento postventa en los procesos comerciales."
     ],
     "criterios_ca": [
-      "a) Se han identificado las cualidades, actitudes, aptitudes y habilidades que debe reunir un asesor de ventas en las relaciones comerciales.",
-      "b) Se han establecido las técnicas de asertividad utilizadas en las relaciones comerciales.",
-      "c) Se han aplicado técnicas de asertividad y habilidades sociales.",
-      "d) Se han establecido las fases y las técnicas de venta.",
-      "e) Se ha establecido la argumentación comercial como fórmula de recomendación al cliente.",
-      "f) Se han establecido las pautas para la resolución de objeciones a la venta.",
-      "g) Se han identificado las señales de cierre de la venta.",
-      "h) Se han establecido estrategias para el cierre de una venta.",
-      "i) Se han establecido los procedimientos para seguimiento postventa en los procesos comerciales."
+      "a) S'han identificat les qualitats, actituds, aptituds i habilitats que ha de reunir un assessor de vendes en les relacions comercials.",
+      "b) S'han establert les tècniques d'assertivitat utilitzades en les relacions comercials.",
+      "c) S'han aplicat tècniques d'assertivitat i habilitats socials.",
+      "d) S'han establert les fases i les tècniques de venda.",
+      "e) S'ha establert l'argumentació comercial com a fórmula de recomanació al client.",
+      "f) S'han establert les pautes per a la resolució d'objeccions a la venda.",
+      "g) S'han identificat els senyals de tancament de la venda.",
+      "h) S'han establert estratègies per al tancament d'una venda.",
+      "i) S'han establert els procediments per al seguiment postvenda en els processos comercials."
     ]
   },
   {
@@ -1839,9 +1839,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Màrqueting i venda en imatge personal",
     "moduleCode": "0643",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Trata las reclamaciones y quejas, aplicando procedimientos de resolución de conflictos.",
+    "description": "Tracta les reclamacions i queixes, aplicant procediments de resolució de conflictes.",
     "description_es": "Trata las reclamaciones y quejas, aplicando procedimientos de resolución de conflictos.",
-    "description_ca": "Trata las reclamaciones y quejas, aplicando procedimientos de resolución de conflictos.",
+    "description_ca": "Tracta les reclamacions i queixes, aplicant procediments de resolució de conflictes.",
     "criterios_es": [
       "a) Se ha descrito el procedimiento para la resolución de conflictos y reclamaciones.",
       "b) Se ha descrito el procedimiento para la recogida de reclamaciones.",
@@ -1850,11 +1850,11 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "e) Se ha registrado la información del seguimiento postventa, de incidencias, de peticiones y de reclamaciones de clientes como indicadores para mejorar la calidad del servicio prestado y aumentar la fidelización."
     ],
     "criterios_ca": [
-      "a) Se ha descrito el procedimiento para la resolución de conflictos y reclamaciones.",
-      "b) Se ha descrito el procedimiento para la recogida de reclamaciones.",
-      "c) Se han identificado las alternativas al procedimiento que se pueden ofrecer al cliente ante reclamaciones fácilmente subsanables.",
-      "d) Se ha trasladado la información sobre la reclamación según el orden jerárquico preestablecido.",
-      "e) Se ha registrado la información del seguimiento postventa, de incidencias, de peticiones y de reclamaciones de clientes como indicadores para mejorar la calidad del servicio prestado y aumentar la fidelización."
+      "a) S'ha descrit el procediment per a la resolució de conflictes i reclamacions.",
+      "b) S'ha descrit el procediment per a la recollida de reclamacions.",
+      "c) S'han identificat les alternatives al procediment que es poden oferir al client davant reclamacions fàcilment esmenables.",
+      "d) S'ha traslladat la informació sobre la reclamació segons l'ordre jeràrquic preestablert.",
+      "e) S'ha registrat la informació del seguiment postvenda, d'incidències, de peticions i de reclamacions de clients com a indicadors per millorar la qualitat del servei prestat i augmentar la fidelització."
     ]
   },
   {
@@ -1864,9 +1864,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Coloració capil·lar",
     "moduleCode": "0843",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Propone cambios de coloración del cabello, relacionando su estado con las demandas y estilos planteados.",
+    "description": "Proposa canvis de coloració del cabell, relacionant-ne l'estat amb les demandes i els estils plantejats.",
     "description_es": "Propone cambios de coloración del cabello, relacionando su estado con las demandas y estilos planteados.",
-    "description_ca": "Propone cambios de coloración del cabello, relacionando su estado con las demandas y estilos planteados.",
+    "description_ca": "Proposa canvis de coloració del cabell, relacionant-ne l'estat amb les demandes i els estils plantejats.",
     "criterios_es": [
       "a) Se ha identificado la escala de tonos del color natural del cabello.",
       "b) Se han distinguido los tonos y reflejos del color del cabello en la carta de colores.",
@@ -1879,15 +1879,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han identificado las necesidades/demandas del cliente para la propuesta de cambio de coloración."
     ],
     "criterios_ca": [
-      "a) Se ha identificado la escala de tonos del color natural del cabello.",
-      "b) Se han distinguido los tonos y reflejos del color del cabello en la carta de colores.",
-      "c) Se han identificado los aspectos que condicionan el proceso de cambio de color.",
-      "d) Se ha examinado el estado del cuero cabelludo y del cabello.",
-      "e) Se han registrado en la ficha técnica los datos obtenidos.",
-      "f) Se ha reconocido la influencia de las alteraciones y el color del cabello en el proceso.",
-      "g) Se han diferenciado los tipos de cambios de coloración.",
-      "h) Se han identificado las tendencias de moda en la coloración del cabello.",
-      "i) Se han identificado las necesidades/demandas del cliente para la propuesta de cambio de coloración."
+      "a) S'ha identificat l'escala de tons del color natural del cabell.",
+      "b) S'han distingit els tons i reflexos del color del cabell en la carta de colors.",
+      "c) S'han identificat els aspectes que condicionen el procés de canvi de color.",
+      "d) S'ha examinat l'estat del cuir cabellut i del cabell.",
+      "e) S'han registrat en la fitxa tècnica les dades obtingudes.",
+      "f) S'ha reconegut la influència de les alteracions i del color del cabell en el procés.",
+      "g) S'han diferenciat els tipus de canvis de coloració.",
+      "h) S'han identificat les tendències de moda en la coloració del cabell.",
+      "i) S'han identificat les necessitats i demandes del client per a la proposta de canvi de coloració."
     ]
   },
   {
@@ -1897,9 +1897,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Coloració capil·lar",
     "moduleCode": "0843",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Pone a punto el proceso de aplicación de tintes capilares, justificando la selección de medios y las operaciones de preparación del producto.",
+    "description": "Posa a punt el procés d'aplicació de tints capil·lars, justificant la selecció de mitjans i les operacions de preparació del producte.",
     "description_es": "Pone a punto el proceso de aplicación de tintes capilares, justificando la selección de medios y las operaciones de preparación del producto.",
-    "description_ca": "Pone a punto el proceso de aplicación de tintes capilares, justificando la selección de medios y las operaciones de preparación del producto.",
+    "description_ca": "Posa a punt el procés d'aplicació de tints capil·lars, justificant la selecció de mitjans i les operacions de preparació del producte.",
     "criterios_es": [
       "a) Se han reconocido los útiles, materiales y equipos necesarios para los cambios de color del cabello.",
       "b) Se ha justificado la selección de cosméticos para el cambio de color.",
@@ -1910,13 +1910,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han determinado los criterios de selección en la aplicación de métodos de higiene, desinfección y esterilización."
     ],
     "criterios_ca": [
-      "a) Se han reconocido los útiles, materiales y equipos necesarios para los cambios de color del cabello.",
-      "b) Se ha justificado la selección de cosméticos para el cambio de color.",
-      "c) Se ha justificado la selección del producto oxidante según las características del cabello.",
-      "d) Se han realizado los cálculos volumétricos para la dilución del oxidante en función de las necesidades.",
-      "e) Se ha realizado la mezcla de los cosméticos para el cambio de color.",
-      "f) Se han establecido las condiciones de seguridad e higiene en la preparación y manipulación de cosméticos.",
-      "g) Se han determinado los criterios de selección en la aplicación de métodos de higiene, desinfección y esterilización."
+      "a) S'han reconegut els estris, materials i equips necessaris per als canvis de color del cabell.",
+      "b) S'ha justificat la selecció de cosmètics per al canvi de color.",
+      "c) S'ha justificat la selecció del producte oxidant segons les característiques del cabell.",
+      "d) S'han fet els càlculs volumètrics per a la dilució de l'oxidant en funció de les necessitats.",
+      "e) S'ha fet la mescla dels cosmètics per al canvi de color.",
+      "f) S'han establert les condicions de seguretat i higiene en la preparació i manipulació de cosmètics.",
+      "g) S'han determinat els criteris de selecció en l'aplicació de mètodes d'higiene, desinfecció i esterilització."
     ]
   },
   {
@@ -1926,9 +1926,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Coloració capil·lar",
     "moduleCode": "0843",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica medidas y técnicas previas a la coloración y a la decoloración, analizando el protocolo de aplicación.",
+    "description": "Aplica mesures i tècniques prèvies a la coloració i a la decoloració, analitzant el protocol d'aplicació.",
     "description_es": "Aplica medidas y técnicas previas a la coloración y a la decoloración, analizando el protocolo de aplicación.",
-    "description_ca": "Aplica medidas y técnicas previas a la coloración y a la decoloración, analizando el protocolo de aplicación.",
+    "description_ca": "Aplica mesures i tècniques prèvies a la coloració i a la decoloració, analitzant el protocol d'aplicació.",
     "criterios_es": [
       "a) Se han especificado las medidas de acomodación y protección del usuario y del profesional.",
       "b) Se ha justificado la aplicación de la prueba de tolerancia al tinte.",
@@ -1939,13 +1939,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se ha preparado el cabello antes de la coloración, con la aplicación de técnicas de mordiente, pre-pigmentación o decapado."
     ],
     "criterios_ca": [
-      "a) Se han especificado las medidas de acomodación y protección del usuario y del profesional.",
-      "b) Se ha justificado la aplicación de la prueba de tolerancia al tinte.",
-      "c) Se han identificado las pautas de aplicación de la prueba de tolerancia.",
-      "d) Se han determinado los casos en los que está indicado aplicar técnicas previas.",
-      "e) Se han diferenciado las pautas de aplicación de las distintas técnicas previas.",
-      "f) Se ha justificado la elección de las técnicas previas.",
-      "g) Se ha preparado el cabello antes de la coloración, con la aplicación de técnicas de mordiente, pre-pigmentación o decapado."
+      "a) S'han especificat les mesures d'acomodació i protecció de l'usuari i del professional.",
+      "b) S'ha justificat l'aplicació de la prova de tolerància al tint.",
+      "c) S'han identificat les pautes d'aplicació de la prova de tolerància.",
+      "d) S'han determinat els casos en què està indicat aplicar tècniques prèvies.",
+      "e) S'han diferenciat les pautes d'aplicació de les diferents tècniques prèvies.",
+      "f) S'ha justificat l'elecció de les tècniques prèvies.",
+      "g) S'ha preparat el cabell abans de la coloració, amb l'aplicació de tècniques de mordent, prepigmentació o decapatge."
     ]
   },
   {
@@ -1955,9 +1955,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Coloració capil·lar",
     "moduleCode": "0843",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica operaciones de coloración en el cabello, seleccionando y justificando el procedimiento de trabajo.",
+    "description": "Aplica operacions de coloració en el cabell, seleccionant i justificant el procediment de treball.",
     "description_es": "Aplica operaciones de coloración en el cabello, seleccionando y justificando el procedimiento de trabajo.",
-    "description_ca": "Aplica operaciones de coloración en el cabello, seleccionando y justificando el procedimiento de trabajo.",
+    "description_ca": "Aplica operacions de coloració en el cabell, seleccionant i justificant el procediment de treball.",
     "criterios_es": [
       "a) Se han identificado las fases del proceso de la coloración temporal y semipermanente.",
       "b) Se han diferenciado las pautas de aplicación de los colorantes temporales y semipermanentes.",
@@ -1969,14 +1969,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se ha verificado la coincidencia del color elegido con el resultado obtenido."
     ],
     "criterios_ca": [
-      "a) Se han identificado las fases del proceso de la coloración temporal y semipermanente.",
-      "b) Se han diferenciado las pautas de aplicación de los colorantes temporales y semipermanentes.",
-      "c) Se han relacionado los tipos de coloración permanente con las técnicas de aplicación del color.",
-      "d) Se han secuenciado los pasos que hay que seguir en las técnicas de coloración permanente del cabello.",
-      "e) Se han aplicado los distintos tipos de técnicas de coloración parcial.",
-      "f) Se han distinguido las técnicas complementarias en los procesos de coloración.",
-      "g) Se han identificado las variables que determinan el proceso de coloración.",
-      "h) Se ha verificado la coincidencia del color elegido con el resultado obtenido."
+      "a) S'han identificat les fases del procés de la coloració temporal i semipermanent.",
+      "b) S'han diferenciat les pautes d'aplicació dels colorants temporals i semipermanents.",
+      "c) S'han relacionat els tipus de coloració permanent amb les tècniques d'aplicació del color.",
+      "d) S'han seqüenciat els passos que cal seguir en les tècniques de coloració permanent del cabell.",
+      "e) S'han aplicat els diferents tipus de tècniques de coloració parcial.",
+      "f) S'han distingit les tècniques complementàries en els processos de coloració.",
+      "g) S'han identificat les variables que determinen el procés de coloració.",
+      "h) S'ha verificat la coincidència del color triat amb el resultat obtingut."
     ]
   },
   {
@@ -1986,9 +1986,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Coloració capil·lar",
     "moduleCode": "0843",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica técnicas de decoloración en el cabello, relacionando el procedimiento de trabajo con el resultado final.",
+    "description": "Aplica tècniques de decoloració en el cabell, relacionant el procediment de treball amb el resultat final.",
     "description_es": "Aplica técnicas de decoloración en el cabello, relacionando el procedimiento de trabajo con el resultado final.",
-    "description_ca": "Aplica técnicas de decoloración en el cabello, relacionando el procedimiento de trabajo con el resultado final.",
+    "description_ca": "Aplica tècniques de decoloració en el cabell, relacionant el procediment de treball amb el resultat final.",
     "criterios_es": [
       "a) Se han establecido los fundamentos de la decoloración.",
       "b) Se han determinado las fases del proceso de decoloración.",
@@ -2001,15 +2001,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han especificado las medidas de precaución y normas de seguridad."
     ],
     "criterios_ca": [
-      "a) Se han establecido los fundamentos de la decoloración.",
-      "b) Se han determinado las fases del proceso de decoloración.",
-      "c) Se han establecido las variables que afectan al proceso de decoloración.",
-      "d) Se han identificado las técnicas de hidratación del cabello post-tratamiento.",
-      "e) Se han aplicado cosméticos decolorantes sobre cabello virgen y sobre cabello teñido.",
-      "f) Se ha relacionado el grado de decoloración con el tiempo de exposición, como factor determinante del proceso.",
-      "g) Se han utilizado diferentes técnicas de decoloración para la realización de mechas.",
-      "h) Se han realizado retoques de raíces.",
-      "i) Se han especificado las medidas de precaución y normas de seguridad."
+      "a) S'han establert els fonaments de la decoloració.",
+      "b) S'han determinat les fases del procés de decoloració.",
+      "c) S'han establert les variables que afecten el procés de decoloració.",
+      "d) S'han identificat les tècniques d'hidratació del cabell posteriors al tractament.",
+      "e) S'han aplicat cosmètics decolorants sobre cabell verge i sobre cabell tenyit.",
+      "f) S'ha relacionat el grau de decoloració amb el temps d'exposició, com a factor determinant del procés.",
+      "g) S'han utilitzat diferents tècniques de decoloració per fer metxes.",
+      "h) S'han fet retocs d'arrels.",
+      "i) S'han especificat les mesures de precaució i les normes de seguretat."
     ]
   },
   {
@@ -2019,9 +2019,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Coloració capil·lar",
     "moduleCode": "0843",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Establece pautas de asesoramiento, determinando los cuidados y mantenimiento del color.",
+    "description": "Estableix pautes d'assessorament, determinant les cures i el manteniment del color.",
     "description_es": "Establece pautas de asesoramiento, determinando los cuidados y mantenimiento del color.",
-    "description_ca": "Establece pautas de asesoramiento, determinando los cuidados y mantenimiento del color.",
+    "description_ca": "Estableix pautes d'assessorament, determinant les cures i el manteniment del color.",
     "criterios_es": [
       "a) Se han relacionado las características del cabello con los cosméticos de mantenimiento.",
       "b) Se han vinculado las pautas de mantenimiento con la permanencia del color.",
@@ -2031,12 +2031,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se ha obtenido información sobre el grado de satisfacción del cliente."
     ],
     "criterios_ca": [
-      "a) Se han relacionado las características del cabello con los cosméticos de mantenimiento.",
-      "b) Se han vinculado las pautas de mantenimiento con la permanencia del color.",
-      "c) Se han identificado las precauciones que hay que tomar para el cuidado de los cabellos decolorados.",
-      "d) Se han propuesto medidas para optimizar el resultado del servicio.",
-      "e) Se han determinado los criterios que permiten evaluar los resultados finales obtenidos.",
-      "f) Se ha obtenido información sobre el grado de satisfacción del cliente."
+      "a) S'han relacionat les característiques del cabell amb els cosmètics de manteniment.",
+      "b) S'han vinculat les pautes de manteniment amb la permanència del color.",
+      "c) S'han identificat les precaucions que cal prendre per a la cura dels cabells decolorats.",
+      "d) S'han proposat mesures per optimitzar el resultat del servei.",
+      "e) S'han determinat els criteris que permeten avaluar els resultats finals obtinguts.",
+      "f) S'ha obtingut informació sobre el grau de satisfacció del client."
     ]
   },
   {
@@ -2046,9 +2046,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Prepara la zona de trabajo, organizando medios útiles y herramientas en condiciones de seguridad e higiene.",
+    "description": "Prepara la zona de treball, organitzant mitjans, estris i eines en condicions de seguretat i higiene.",
     "description_es": "Prepara la zona de trabajo, organizando medios útiles y herramientas en condiciones de seguridad e higiene.",
-    "description_ca": "Prepara la zona de trabajo, organizando medios útiles y herramientas en condiciones de seguridad e higiene.",
+    "description_ca": "Prepara la zona de treball, organitzant mitjans, estris i eines en condicions de seguretat i higiene.",
     "criterios_es": [
       "a) Se han acondicionado los espacios donde se desarrolla el proceso.",
       "b) Se han reconocido los factores de ambientación del espacio de trabajo (ventilación, luz y color, entre otros) como factor de calidad del servicio.",
@@ -2060,14 +2060,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se ha aplicado la normativa actual para el control de residuos y útiles cortantes."
     ],
     "criterios_ca": [
-      "a) Se han acondicionado los espacios donde se desarrolla el proceso.",
-      "b) Se han reconocido los factores de ambientación del espacio de trabajo (ventilación, luz y color, entre otros) como factor de calidad del servicio.",
-      "c) Se han mantenido las instalaciones en condiciones de seguridad e higiene.",
-      "d) Se han aplicado las medidas de protección y seguridad del profesional.",
-      "e) Se han identificado las posturas corporales adecuadas para prevenir accidentes.",
-      "f) Se han seleccionado los cosméticos en función de la técnica de peluquería y barbería.",
-      "g) Se ha reconocido la importancia de la utilización de material desechable.",
-      "h) Se ha aplicado la normativa actual para el control de residuos y útiles cortantes."
+      "a) S'han condicionat els espais on es desenvolupa el procés.",
+      "b) S'han reconegut els factors d'ambientació de l'espai de treball (ventilació, llum i color, entre d'altres) com a factor de qualitat del servei.",
+      "c) S'han mantingut les instal·lacions en condicions de seguretat i higiene.",
+      "d) S'han aplicat les mesures de protecció i seguretat del professional.",
+      "e) S'han identificat les postures corporals adequades per prevenir accidents.",
+      "f) S'han seleccionat els cosmètics en funció de la tècnica de perruqueria i barberia.",
+      "g) S'ha reconegut la importància de la utilització de material d'un sol ús.",
+      "h) S'ha aplicat la normativa actual per al control de residus i d'estris tallants."
     ]
   },
   {
@@ -2077,9 +2077,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Diseña estilos de barba y bigote, utilizando técnicas de visagismo y de tratamiento de la imagen.",
+    "description": "Dissenya estils de barba i bigoti, utilitzant tècniques de visagisme i de tractament de la imatge.",
     "description_es": "Diseña estilos de barba y bigote, utilizando técnicas de visagismo y de tratamiento de la imagen.",
-    "description_ca": "Diseña estilos de barba y bigote, utilizando técnicas de visagismo y de tratamiento de la imagen.",
+    "description_ca": "Dissenya estils de barba i bigoti, utilitzant tècniques de visagisme i de tractament de la imatge.",
     "criterios_es": [
       "a) Se han establecido las pautas de análisis del rostro a través del visagismo.",
       "b) Se han caracterizado distintos estilos de barba y bigote.",
@@ -2089,12 +2089,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se han propuesto cambios de imagen del rostro masculino mediante transformación de barba y bigote."
     ],
     "criterios_ca": [
-      "a) Se han establecido las pautas de análisis del rostro a través del visagismo.",
-      "b) Se han caracterizado distintos estilos de barba y bigote.",
-      "c) Se han determinado las correcciones de las desproporciones estéticas en el rostro a través de la barba y bigote.",
-      "d) Se han configurado bocetos con distintos estilismos de barba y bigote.",
-      "e) Se han caracterizado los programas de tratamiento de la imagen a través de medios informáticos.",
-      "f) Se han propuesto cambios de imagen del rostro masculino mediante transformación de barba y bigote."
+      "a) S'han establert les pautes d'anàlisi de la cara a través del visagisme.",
+      "b) S'han caracteritzat diferents estils de barba i bigoti.",
+      "c) S'han determinat les correccions de les desproporcions estètiques de la cara a través de la barba i el bigoti.",
+      "d) S'han configurat esbossos amb diferents estilismes de barba i bigoti.",
+      "e) S'han caracteritzat els programes de tractament de la imatge per mitjans informàtics.",
+      "f) S'han proposat canvis d'imatge de la cara masculina mitjançant la transformació de la barba i el bigoti."
     ]
   },
   {
@@ -2104,9 +2104,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realiza arreglo de barba y bigote, utilizando medios técnicos y útiles adecuados.",
+    "description": "Fa l'arranjament de barba i bigoti, utilitzant mitjans tècnics i estris adequats.",
     "description_es": "Realiza arreglo de barba y bigote, utilizando medios técnicos y útiles adecuados.",
-    "description_ca": "Realiza arreglo de barba y bigote, utilizando medios técnicos y útiles adecuados.",
+    "description_ca": "Fa l'arranjament de barba i bigoti, utilitzant mitjans tècnics i estris adequats.",
     "criterios_es": [
       "a) Se han establecido medidas de acomodación y protección personal.",
       "b) Se han seleccionado técnicas para descargar la barba y el bigote.",
@@ -2117,13 +2117,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se ha realizado control visual del resultado y simetría."
     ],
     "criterios_ca": [
-      "a) Se han establecido medidas de acomodación y protección personal.",
-      "b) Se han seleccionado técnicas para descargar la barba y el bigote.",
-      "c) Se ha caracterizado el orden de ejecución en la descarga y configuración de barba y bigote.",
-      "d) Se han utilizado tijera, navaja o maquinas para delimitar el contorno de la barba y/o bigote.",
-      "e) Se ha comparado el resultado del arreglo de barba y bigote, con las expectativas establecidas.",
-      "f) Se han seleccionado técnicas de finalización del proceso de arreglo de barba y bigote.",
-      "g) Se ha realizado control visual del resultado y simetría."
+      "a) S'han establert mesures d'acomodació i protecció personal.",
+      "b) S'han seleccionat tècniques per descarregar la barba i el bigoti.",
+      "c) S'ha caracteritzat l'ordre d'execució en la descàrrega i la configuració de barba i bigoti.",
+      "d) S'han utilitzat tisores, navalla o màquines per delimitar el contorn de la barba o del bigoti.",
+      "e) S'ha comparat el resultat de l'arranjament de barba i bigoti amb les expectatives establertes.",
+      "f) S'han seleccionat tècniques de finalització del procés d'arranjament de barba i bigoti.",
+      "g) S'ha fet el control visual del resultat i de la simetria."
     ]
   },
   {
@@ -2133,9 +2133,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realiza técnicas previas al rasurado, relacionando las características de la piel con los tratamientos estéticos adecuados.",
+    "description": "Aplica tècniques prèvies a l'afaitat, relacionant les característiques de la pell amb els tractaments estètics adequats.",
     "description_es": "Realiza técnicas previas al rasurado, relacionando las características de la piel con los tratamientos estéticos adecuados.",
-    "description_ca": "Realiza técnicas previas al rasurado, relacionando las características de la piel con los tratamientos estéticos adecuados.",
+    "description_ca": "Aplica tècniques prèvies a l'afaitat, relacionant les característiques de la pell amb els tractaments estètics adequats.",
     "criterios_es": [
       "a) Se han determinado las características del pelo de la barba y bigote.",
       "b) Se han identificado alteraciones estéticas en la zona.",
@@ -2146,13 +2146,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han justificado las técnicas de preparación de la piel antes del rasurado."
     ],
     "criterios_ca": [
-      "a) Se han determinado las características del pelo de la barba y bigote.",
-      "b) Se han identificado alteraciones estéticas en la zona.",
-      "c) Se han establecido las medidas de atención al cliente.",
-      "d) Se han especificado las medidas de protección al usuario.",
-      "e) Se han aplicado tratamientos estéticos de hidratación y exfoliación facial.",
-      "f) Se ha aplicado masaje específico para preparar la piel.",
-      "g) Se han justificado las técnicas de preparación de la piel antes del rasurado."
+      "a) S'han determinat les característiques del pèl de la barba i el bigoti.",
+      "b) S'han identificat alteracions estètiques en la zona.",
+      "c) S'han establert les mesures d'atenció al client.",
+      "d) S'han especificat les mesures de protecció de l'usuari.",
+      "e) S'han aplicat tractaments estètics d'hidratació i exfoliació facial.",
+      "f) S'ha aplicat massatge específic per preparar la pell.",
+      "g) S'han justificat les tècniques de preparació de la pell abans de l'afaitat."
     ]
   },
   {
@@ -2162,9 +2162,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica técnicas de rasurado de la barba, interpretando el procedimiento de trabajo y siguiendo las condiciones higiénico-sanitarias.",
+    "description": "Aplica tècniques d'afaitat de la barba, interpretant el procediment de treball i seguint les condicions higienicosanitàries.",
     "description_es": "Aplica técnicas de rasurado de la barba, interpretando el procedimiento de trabajo y siguiendo las condiciones higiénico-sanitarias.",
-    "description_ca": "Aplica técnicas de rasurado de la barba, interpretando el procedimiento de trabajo y siguiendo las condiciones higiénico-sanitarias.",
+    "description_ca": "Aplica tècniques d'afaitat de la barba, interpretant el procediment de treball i seguint les condicions higienicosanitàries.",
     "criterios_es": [
       "a) Se han seleccionado útiles y se han preparado los cosméticos para el bañado de la barba.",
       "b) Se ha manejado la brocha según el modo y orden de ejecución.",
@@ -2175,13 +2175,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han formulado medidas de actuación en caso de emergencias por irritaciones, alergias o cortes."
     ],
     "criterios_ca": [
-      "a) Se han seleccionado útiles y se han preparado los cosméticos para el bañado de la barba.",
-      "b) Se ha manejado la brocha según el modo y orden de ejecución.",
-      "c) Se ha manejado la navaja según criterios de seguridad.",
-      "d) Se han ejecutado las maniobras de rasurado en el orden establecido.",
-      "e) Se han determinado las técnicas de finalización de rasurado.",
-      "f) Se han aplicado tratamientos posteriores al rasurado.",
-      "g) Se han formulado medidas de actuación en caso de emergencias por irritaciones, alergias o cortes."
+      "a) S'han seleccionat estris i s'han preparat els cosmètics per ensabonar la barba.",
+      "b) S'ha manejat la brotxa segons la manera i l'ordre d'execució.",
+      "c) S'ha manejat la navalla segons criteris de seguretat.",
+      "d) S'han executat les maniobres d'afaitat en l'ordre establert.",
+      "e) S'han determinat les tècniques de finalització de l'afaitat.",
+      "f) S'han aplicat tractaments posteriors a l'afaitat.",
+      "g) S'han formulat mesures d'actuació en cas d'emergència per irritacions, al·lèrgies o talls."
     ]
   },
   {
@@ -2191,9 +2191,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica técnicas asociadas al estilismo facial masculino, diferenciando formas de realización y efectos conseguidos.",
+    "description": "Aplica tècniques associades a l'estilisme facial masculí, diferenciant les formes de realització i els efectes aconseguits.",
     "description_es": "Aplica técnicas asociadas al estilismo facial masculino, diferenciando formas de realización y efectos conseguidos.",
-    "description_ca": "Aplica técnicas asociadas al estilismo facial masculino, diferenciando formas de realización y efectos conseguidos.",
+    "description_ca": "Aplica tècniques associades a l'estilisme facial masculí, diferenciant les formes de realització i els efectes aconseguits.",
     "criterios_es": [
       "a) Se han seleccionado técnicas para la depilación de cejas y otras zonas faciales.",
       "b) Se han configurado patillas y acabados de cuello y nuca.",
@@ -2206,15 +2206,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han diseñado estilismos masculinos innovadores."
     ],
     "criterios_ca": [
-      "a) Se han seleccionado técnicas para la depilación de cejas y otras zonas faciales.",
-      "b) Se han configurado patillas y acabados de cuello y nuca.",
-      "c) Se han seleccionado la técnica y los útiles adecuados.",
-      "d) Se han aplicado técnicas de definición de acabado de cuello y patillas.",
-      "e) Se ha verificado el resultado a través de la simetría de las mismas.",
-      "f) Se han realizado cambios de color en estilismos masculinos.",
-      "g) Se han utilizado productos y materiales adecuados.",
-      "h) Se han seleccionado distintas técnicas para realizar acabados de fantasía.",
-      "i) Se han diseñado estilismos masculinos innovadores."
+      "a) S'han seleccionat tècniques per a la depilació de celles i d'altres zones facials.",
+      "b) S'han configurat patilles i acabats de coll i clatell.",
+      "c) S'han seleccionat la tècnica i els estris adequats.",
+      "d) S'han aplicat tècniques de definició de l'acabat de coll i patilles.",
+      "e) S'ha verificat el resultat a través de la seva simetria.",
+      "f) S'han fet canvis de color en estilismes masculins.",
+      "g) S'han utilitzat productes i materials adequats.",
+      "h) S'han seleccionat diferents tècniques per fer acabats de fantasia.",
+      "i) S'han dissenyat estilismes masculins innovadors."
     ]
   },
   {
@@ -2224,9 +2224,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Perruqueria i estilisme masculí",
     "moduleCode": "0848",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realiza corte y acabado de cabello, integrando técnicas de estilismo masculino.",
+    "description": "Fa el tall i l'acabat del cabell, integrant tècniques d'estilisme masculí.",
     "description_es": "Realiza corte y acabado de cabello, integrando técnicas de estilismo masculino.",
-    "description_ca": "Realiza corte y acabado de cabello, integrando técnicas de estilismo masculino.",
+    "description_ca": "Fa el tall i l'acabat del cabell, integrant tècniques d'estilisme masculí.",
     "criterios_es": [
       "a) Se han definido los estilos de corte masculino.",
       "b) Se ha seleccionado la técnica según los útiles de corte.",
@@ -2237,13 +2237,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han establecido los criterios de selección de los productos específicos para conseguir el acabado pretendido."
     ],
     "criterios_ca": [
-      "a) Se han definido los estilos de corte masculino.",
-      "b) Se ha seleccionado la técnica según los útiles de corte.",
-      "c) Se ha configurado el corte en función de las características del cabello y la morfología de rostro y cráneo.",
-      "d) Se han establecido los parámetros para la realización.",
-      "e) Se ha realizado el corte de cabello según los criterios establecidos.",
-      "f) Se han realizado acabados y peinados masculinos.",
-      "g) Se han establecido los criterios de selección de los productos específicos para conseguir el acabado pretendido."
+      "a) S'han definit els estils de tall masculí.",
+      "b) S'ha seleccionat la tècnica segons els estris de tall.",
+      "c) S'ha configurat el tall en funció de les característiques del cabell i de la morfologia de la cara i el crani.",
+      "d) S'han establert els paràmetres per fer-lo.",
+      "e) S'ha fet el tall de cabell segons els criteris establerts.",
+      "f) S'han fet acabats i pentinats masculins.",
+      "g) S'han establert els criteris de selecció dels productes específics per aconseguir l'acabat pretès."
     ]
   },
   {
@@ -2253,9 +2253,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Estètica de mans i peus",
     "moduleCode": "0636",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Determina el proceso de manicura y pedicura, observando la morfología de manos y pies y relacionándolo con las demandas del usuario.",
+    "description": "Determina el procés de manicura i pedicura, observant la morfologia de mans i peus i relacionant-lo amb les demandes de l'usuari.",
     "description_es": "Determina el proceso de manicura y pedicura, observando la morfología de manos y pies y relacionándolo con las demandas del usuario.",
-    "description_ca": "Determina el proceso de manicura y pedicura, observando la morfología de manos y pies y relacionándolo con las demandas del usuario.",
+    "description_ca": "Determina el procés de manicura i pedicura, observant la morfologia de mans i peus i relacionant-lo amb les demandes de l'usuari.",
     "criterios_es": [
       "a) Se han definido los procesos estéticos de manicura y pedicura.",
       "b) Se ha estudiado la morfología de los pies y las manos.",
@@ -2265,12 +2265,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se han cuidado las medidas estéticas del profesional que realiza estas técnicas."
     ],
     "criterios_ca": [
-      "a) Se han definido los procesos estéticos de manicura y pedicura.",
-      "b) Se ha estudiado la morfología de los pies y las manos.",
-      "c) Se han valorado las demandas y gustos del usuario.",
-      "d) Se han diseñado los procedimientos para realizar las técnicas estéticas de manicura y pedicura.",
-      "e) Se han registrado en la ficha técnica los procedimientos, los datos personales y la información de interés profesional.",
-      "f) Se han cuidado las medidas estéticas del profesional que realiza estas técnicas."
+      "a) S'han definit els processos estètics de manicura i pedicura.",
+      "b) S'ha estudiat la morfologia dels peus i les mans.",
+      "c) S'han valorat les demandes i els gustos de l'usuari.",
+      "d) S'han dissenyat els procediments per aplicar les tècniques estètiques de manicura i pedicura.",
+      "e) S'han registrat en la fitxa tècnica els procediments, les dades personals i la informació d'interès professional.",
+      "f) S'han cuidat les mesures estètiques del professional que aplica aquestes tècniques."
     ]
   },
   {
@@ -2280,9 +2280,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Estètica de mans i peus",
     "moduleCode": "0636",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Prepara los espacios, equipos, cosméticos y aparatos, adaptándolos a las técnicas estéticas de manicura y pedicura.",
+    "description": "Prepara els espais, equips, cosmètics i aparells, adaptant-los a les tècniques estètiques de manicura i pedicura.",
     "description_es": "Prepara los espacios, equipos, cosméticos y aparatos, adaptándolos a las técnicas estéticas de manicura y pedicura.",
-    "description_ca": "Prepara los espacios, equipos, cosméticos y aparatos, adaptándolos a las técnicas estéticas de manicura y pedicura.",
+    "description_ca": "Prepara els espais, equips, cosmètics i aparells, adaptant-los a les tècniques estètiques de manicura i pedicura.",
     "criterios_es": [
       "a) Se han identificado los espacios donde se van a realizar los procesos estéticos de manicura y pedicura.",
       "b) Se han mantenido las instalaciones en óptimas condiciones higiénicas antes y después de su uso.",
@@ -2291,11 +2291,11 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "e) Se han aplicado los métodos más adecuados de mantenimiento, desinfección y esterilización."
     ],
     "criterios_ca": [
-      "a) Se han identificado los espacios donde se van a realizar los procesos estéticos de manicura y pedicura.",
-      "b) Se han mantenido las instalaciones en óptimas condiciones higiénicas antes y después de su uso.",
-      "c) Se han seleccionado los equipos, materiales y cosméticos.",
-      "d) Se han manejado con destreza los útiles, aparatos y cosméticos.",
-      "e) Se han aplicado los métodos más adecuados de mantenimiento, desinfección y esterilización."
+      "a) S'han identificat els espais on es faran els processos estètics de manicura i pedicura.",
+      "b) S'han mantingut les instal·lacions en condicions higièniques òptimes abans i després d'utilitzar-les.",
+      "c) S'han seleccionat els equips, materials i cosmètics.",
+      "d) S'han manejat amb destresa els estris, aparells i cosmètics.",
+      "e) S'han aplicat els mètodes més adequats de manteniment, desinfecció i esterilització."
     ]
   },
   {
@@ -2305,9 +2305,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Estètica de mans i peus",
     "moduleCode": "0636",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Efectúa técnicas de manicura y pedicura, aplicando normas de seguridad e higiene.",
+    "description": "Aplica tècniques de manicura i pedicura, seguint normes de seguretat i higiene.",
     "description_es": "Efectúa técnicas de manicura y pedicura, aplicando normas de seguridad e higiene.",
-    "description_ca": "Efectúa técnicas de manicura y pedicura, aplicando normas de seguridad e higiene.",
+    "description_ca": "Aplica tècniques de manicura i pedicura, seguint normes de seguretat i higiene.",
     "criterios_es": [
       "a) Se ha planificado la acomodación y protección del usuario, atendiendo a criterios de confortabilidad y seguridad.",
       "b) Se han seleccionado los procedimientos de actuación para la realización de las técnicas estéticas de manicura y pedicura, aplicando medidas de seguridad e higiene especificas.",
@@ -2319,14 +2319,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se han aplicado las técnicas de masaje, justificando la secuenciación, efectos, indicaciones y contraindicaciones de las mismas."
     ],
     "criterios_ca": [
-      "a) Se ha planificado la acomodación y protección del usuario, atendiendo a criterios de confortabilidad y seguridad.",
-      "b) Se han seleccionado los procedimientos de actuación para la realización de las técnicas estéticas de manicura y pedicura, aplicando medidas de seguridad e higiene especificas.",
-      "c) Se han aplicado técnicas de desmaquillado de la lámina ungueal.",
-      "d) Se han realizado las técnicas de conformación de uñas: corte, arreglo y forma.",
-      "e) Se han limado y pulimentado las uñas según su morfología.",
-      "f) Se han aplicado las técnicas de acondicionamiento y/o retirada de cutícula.",
-      "g) Se han adaptado las técnicas de manicura y pedicura a las características y necesidades de un usuario masculino.",
-      "h) Se han aplicado las técnicas de masaje, justificando la secuenciación, efectos, indicaciones y contraindicaciones de las mismas."
+      "a) S'ha planificat l'acomodació i la protecció de l'usuari, atenent criteris de confortabilitat i seguretat.",
+      "b) S'han seleccionat els procediments d'actuació per aplicar les tècniques estètiques de manicura i pedicura, aplicant mesures de seguretat i higiene específiques.",
+      "c) S'han aplicat tècniques de desmaquillatge de la làmina unguial.",
+      "d) S'han aplicat les tècniques de conformació d'ungles: tall, arranjament i forma.",
+      "e) S'han llimat i polit les ungles segons la seva morfologia.",
+      "f) S'han aplicat les tècniques de condicionament o retirada de la cutícula.",
+      "g) S'han adaptat les tècniques de manicura i pedicura a les característiques i necessitats d'un usuari masculí.",
+      "h) S'han aplicat les tècniques de massatge, justificant-ne la seqüenciació, els efectes, les indicacions i les contraindicacions."
     ]
   },
   {
@@ -2336,9 +2336,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Estètica de mans i peus",
     "moduleCode": "0636",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Elabora tratamientos específicos de manos, pies y uñas, integrando en el proceso técnicas novedosas.",
+    "description": "Elabora tractaments específics de mans, peus i ungles, integrant en el procés tècniques noves.",
     "description_es": "Elabora tratamientos específicos de manos, pies y uñas, integrando en el proceso técnicas novedosas.",
-    "description_ca": "Elabora tratamientos específicos de manos, pies y uñas, integrando en el proceso técnicas novedosas.",
+    "description_ca": "Elabora tractaments específics de mans, peus i ungles, integrant en el procés tècniques noves.",
     "criterios_es": [
       "a) Se han descrito procedimientos específicos de tratamientos para los pies, las manos y las uñas.",
       "b) Se ha planificado la aparatología y los cosméticos empleados en los tratamientos y técnicas de manicura y pedicura.",
@@ -2349,13 +2349,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se ha demostrado el conocimiento de la normativa higiénico-sanitaria vigente sobre uso y eliminación de los residuos derivados de la aplicación de estas técnicas."
     ],
     "criterios_ca": [
-      "a) Se han descrito procedimientos específicos de tratamientos para los pies, las manos y las uñas.",
-      "b) Se ha planificado la aparatología y los cosméticos empleados en los tratamientos y técnicas de manicura y pedicura.",
-      "c) Se han manejado los aparatos para los tratamientos específicos: efluvios, ventosas, cepillos, pulverizadores y parafina, entre otros.",
-      "d) Se han utilizado los cosméticos específicos según los procedimientos de uso y las medidas higiénico-sanitarias.",
-      "e) Se han integrado las técnicas, aparatos y cosméticos para realizar los tratamientos estéticos en manos y pies.",
-      "f) Se han aplicado técnicas de mantenimiento y cuidado de aparatos, útiles y cosméticos.",
-      "g) Se ha demostrado el conocimiento de la normativa higiénico-sanitaria vigente sobre uso y eliminación de los residuos derivados de la aplicación de estas técnicas."
+      "a) S'han descrit procediments específics de tractaments per als peus, les mans i les ungles.",
+      "b) S'han planificat l'aparatologia i els cosmètics emprats en els tractaments i les tècniques de manicura i pedicura.",
+      "c) S'han manejat els aparells per als tractaments específics: efluvis, ventoses, raspalls, polvoritzadors i parafina, entre d'altres.",
+      "d) S'han utilitzat els cosmètics específics segons els procediments d'ús i les mesures higienicosanitàries.",
+      "e) S'han integrat les tècniques, els aparells i els cosmètics per fer els tractaments estètics de mans i peus.",
+      "f) S'han aplicat tècniques de manteniment i cura d'aparells, estris i cosmètics.",
+      "g) S'ha demostrat el coneixement de la normativa higienicosanitària vigent sobre l'ús i l'eliminació dels residus derivats de l'aplicació d'aquestes tècniques."
     ]
   },
   {
@@ -2365,9 +2365,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Estètica de mans i peus",
     "moduleCode": "0636",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realiza la decoración de uñas, combinando técnicas y cosméticos.",
+    "description": "Fa la decoració d'ungles, combinant tècniques i cosmètics.",
     "description_es": "Realiza la decoración de uñas, combinando técnicas y cosméticos.",
-    "description_ca": "Realiza la decoración de uñas, combinando técnicas y cosméticos.",
+    "description_ca": "Fa la decoració d'ungles, combinant tècniques i cosmètics.",
     "criterios_es": [
       "a) Se han diseñado, de forma grafica, distintos maquillajes de uñas.",
       "b) Se han clasificado los productos de decoración y maquillaje por textura y técnicas de aplicación.",
@@ -2379,14 +2379,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se han verificado los resultados, comparándolos con los gustos y necesidades del usuario."
     ],
     "criterios_ca": [
-      "a) Se han diseñado, de forma grafica, distintos maquillajes de uñas.",
-      "b) Se han clasificado los productos de decoración y maquillaje por textura y técnicas de aplicación.",
-      "c) Se han aplicado técnicas de maquillaje mixtas: aerógrafo y pincel.",
-      "d) Se han aplicado técnicas de maquillado con esmaltes: mixtas, de pincel y punzón.",
-      "e) Se han aplicado técnicas de maquillado con productos acrílicos.",
-      "f) Se han realizado distintos tipos y diseños de maquillado de uñas: francesa, media luna, picos, diagonal, floral y fantasías.",
-      "g) Se han ejecutado técnicas específicas de embellecimiento de uña masculina.",
-      "h) Se han verificado los resultados, comparándolos con los gustos y necesidades del usuario."
+      "a) S'han dissenyat, de manera gràfica, diferents maquillatges d'ungles.",
+      "b) S'han classificat els productes de decoració i maquillatge per textura i tècniques d'aplicació.",
+      "c) S'han aplicat tècniques de maquillatge mixtes: aerògraf i pinzell.",
+      "d) S'han aplicat tècniques de maquillatge amb esmalts: mixtes, de pinzell i punxó.",
+      "e) S'han aplicat tècniques de maquillatge amb productes acrílics.",
+      "f) S'han fet diferents tipus i dissenys de maquillatge d'ungles: francesa, mitja lluna, puntes, diagonal, floral i fantasies.",
+      "g) S'han executat tècniques específiques d'embelliment de l'ungla masculina.",
+      "h) S'han verificat els resultats, comparant-los amb els gustos i les necessitats de l'usuari."
     ]
   },
   {
@@ -2396,9 +2396,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Sostenibilitat aplicada al sistema productiu",
     "moduleCode": "1708",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Identifica los aspectos ambientales, sociales y de gobernanza (ASG) relativos a la sostenibilidad teniendo en cuenta el concepto de desarrollo sostenible y los marcos internacionales que contribuyen a su consecución.",
+    "description": "Identifica els aspectes ambientals, socials i de governança (ASG) relatius a la sostenibilitat tenint en compte el concepte de desenvolupament sostenible i els marcs internacionals que contribueixen a assolir-lo.",
     "description_es": "Identifica los aspectos ambientales, sociales y de gobernanza (ASG) relativos a la sostenibilidad teniendo en cuenta el concepto de desarrollo sostenible y los marcos internacionales que contribuyen a su consecución.",
-    "description_ca": "Identifica los aspectos ambientales, sociales y de gobernanza (ASG) relativos a la sostenibilidad teniendo en cuenta el concepto de desarrollo sostenible y los marcos internacionales que contribuyen a su consecución.",
+    "description_ca": "Identifica els aspectes ambientals, socials i de governança (ASG) relatius a la sostenibilitat tenint en compte el concepte de desenvolupament sostenible i els marcs internacionals que contribueixen a assolir-lo.",
     "criterios_es": [
       "a) Se ha descrito el concepto de sostenibilidad, estableciendo los marcos internacionales asociados al desarrollo sostenible.",
       "b) Se han identificado los asuntos ambientales, sociales y de gobernanza que influyen en el desarrollo sostenible de las organizaciones empresariales.",
@@ -2408,12 +2408,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se ha descrito la inversión socialmente responsable y el papel de los analistas, inversores, agencias e índices de sostenibilidad en el fomento de la sostenibilidad."
     ],
     "criterios_ca": [
-      "a) Se ha descrito el concepto de sostenibilidad, estableciendo los marcos internacionales asociados al desarrollo sostenible.",
-      "b) Se han identificado los asuntos ambientales, sociales y de gobernanza que influyen en el desarrollo sostenible de las organizaciones empresariales.",
-      "c) Se han relacionado los Objetivos de Desarrollo Sostenible (ODS) con su importancia para la consecución de la Agenda 2030\\.",
-      "d) Se ha analizado la importancia de identificar los aspectos ASG más relevantes para los grupos de interés de las organizaciones relacionándolos con los riesgos y oportunidades que suponen para la propia organización.",
-      "e) Se han identificado los principales estándares de métricas para la evaluación del desempeño en sostenibilidad y su papel en la rendición de cuentas que marca la legislación vigente y las futuras regulaciones en desarrollo.",
-      "f) Se ha descrito la inversión socialmente responsable y el papel de los analistas, inversores, agencias e índices de sostenibilidad en el fomento de la sostenibilidad."
+      "a) S'ha descrit el concepte de sostenibilitat, establint els marcs internacionals associats al desenvolupament sostenible.",
+      "b) S'han identificat les qüestions ambientals, socials i de governança que influeixen en el desenvolupament sostenible de les organitzacions empresarials.",
+      "c) S'han relacionat els Objectius de Desenvolupament Sostenible (ODS) amb la seva importància per assolir l'Agenda 2030.",
+      "d) S'ha analitzat la importància d'identificar els aspectes ASG més rellevants per als grups d'interès de les organitzacions, relacionant-los amb els riscs i les oportunitats que suposen per a la mateixa organització.",
+      "e) S'han identificat els principals estàndards de mètriques per a l'avaluació de l'acompliment en sostenibilitat i el seu paper en la rendició de comptes que marca la legislació vigent i les futures regulacions en desenvolupament.",
+      "f) S'ha descrit la inversió socialment responsable i el paper dels analistes, inversors, agències i índexs de sostenibilitat en el foment de la sostenibilitat."
     ]
   },
   {
@@ -2423,9 +2423,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Sostenibilitat aplicada al sistema productiu",
     "moduleCode": "1708",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Caracteriza los retos ambientales y sociales a los que se enfrenta la sociedad, describiendo los impactos sobre las personas y los sectores productivos y proponiendo acciones para minimizarlos.",
+    "description": "Caracteritza els reptes ambientals i socials a què s'enfronta la societat, descrivint els impactes sobre les persones i els sectors productius i proposant accions per minimitzar-los.",
     "description_es": "Caracteriza los retos ambientales y sociales a los que se enfrenta la sociedad, describiendo los impactos sobre las personas y los sectores productivos y proponiendo acciones para minimizarlos.",
-    "description_ca": "Caracteriza los retos ambientales y sociales a los que se enfrenta la sociedad, describiendo los impactos sobre las personas y los sectores productivos y proponiendo acciones para minimizarlos.",
+    "description_ca": "Caracteritza els reptes ambientals i socials a què s'enfronta la societat, descrivint els impactes sobre les persones i els sectors productius i proposant accions per minimitzar-los.",
     "criterios_es": [
       "a) Se han identificado los principales retos ambientales y sociales.",
       "b) Se han relacionado los retos ambientales y sociales con el desarrollo de la actividad económica.",
@@ -2434,11 +2434,11 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "e) Se ha analizado la importancia de establecer alianzas y trabajar de manera transversal y coordinada para abordar con éxito los retos ambientales y sociales."
     ],
     "criterios_ca": [
-      "a) Se han identificado los principales retos ambientales y sociales.",
-      "b) Se han relacionado los retos ambientales y sociales con el desarrollo de la actividad económica.",
-      "c) Se ha analizado el efecto de los impactos ambientales y sociales sobre las personas y los sectores productivos.",
-      "d) Se han identificado las medidas y acciones encaminadas a minimizar los impactos ambientales y sociales.",
-      "e) Se ha analizado la importancia de establecer alianzas y trabajar de manera transversal y coordinada para abordar con éxito los retos ambientales y sociales."
+      "a) S'han identificat els principals reptes ambientals i socials.",
+      "b) S'han relacionat els reptes ambientals i socials amb el desenvolupament de l'activitat econòmica.",
+      "c) S'ha analitzat l'efecte dels impactes ambientals i socials sobre les persones i els sectors productius.",
+      "d) S'han identificat les mesures i les accions encaminades a minimitzar els impactes ambientals i socials.",
+      "e) S'ha analitzat la importància d'establir aliances i de treballar de manera transversal i coordinada per abordar amb èxit els reptes ambientals i socials."
     ]
   },
   {
@@ -2448,18 +2448,18 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Sostenibilitat aplicada al sistema productiu",
     "moduleCode": "1708",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Establece la aplicación de criterios de sostenibilidad en el desempeño profesional y personal, identificando los elementos necesarios.",
+    "description": "Estableix l'aplicació de criteris de sostenibilitat en l'acompliment professional i personal, identificant-ne els elements necessaris.",
     "description_es": "Establece la aplicación de criterios de sostenibilidad en el desempeño profesional y personal, identificando los elementos necesarios.",
-    "description_ca": "Establece la aplicación de criterios de sostenibilidad en el desempeño profesional y personal, identificando los elementos necesarios.",
+    "description_ca": "Estableix l'aplicació de criteris de sostenibilitat en l'acompliment professional i personal, identificant-ne els elements necessaris.",
     "criterios_es": [
       "a) Se han identificado los ODS más relevantes para la actividad profesional que realiza.",
       "b) Se han analizado los riesgos y oportunidades que representan los ODS.",
       "c) Se han identificado las acciones necesarias para atender algunos de los retos ambientales y sociales desde la actividad profesional y el entorno personal."
     ],
     "criterios_ca": [
-      "a) Se han identificado los ODS más relevantes para la actividad profesional que realiza.",
-      "b) Se han analizado los riesgos y oportunidades que representan los ODS.",
-      "c) Se han identificado las acciones necesarias para atender algunos de los retos ambientales y sociales desde la actividad profesional y el entorno personal."
+      "a) S'han identificat els ODS més rellevants per a l'activitat professional que duu a terme.",
+      "b) S'han analitzat els riscs i les oportunitats que representen els ODS.",
+      "c) S'han identificat les accions necessàries per atendre alguns dels reptes ambientals i socials des de l'activitat professional i l'entorn personal."
     ]
   },
   {
@@ -2469,9 +2469,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Sostenibilitat aplicada al sistema productiu",
     "moduleCode": "1708",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Propón productos y servicios responsables teniendo en cuenta los principios de la economía circular.",
+    "description": "Proposa productes i serveis responsables tenint en compte els principis de l'economia circular.",
     "description_es": "Propón productos y servicios responsables teniendo en cuenta los principios de la economía circular.",
-    "description_ca": "Propón productos y servicios responsables teniendo en cuenta los principios de la economía circular.",
+    "description_ca": "Proposa productes i serveis responsables tenint en compte els principis de l'economia circular.",
     "criterios_es": [
       "a) Se ha caracterizado el modelo de producción y consumo actual.",
       "b) Se han identificado los principios de la economía verde y circular.",
@@ -2481,12 +2481,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados."
     ],
     "criterios_ca": [
-      "a) Se ha caracterizado el modelo de producción y consumo actual.",
-      "b) Se han identificado los principios de la economía verde y circular.",
-      "c) Se han contrastado los beneficios de la economía verde y circular frente al modelo clásico de producción.",
-      "d) Se han aplicado principios de ecodiseño.",
-      "e) Se ha analizado el ciclo de vida del producto.",
-      "f) Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados."
+      "a) S'ha caracteritzat el model de producció i consum actual.",
+      "b) S'han identificat els principis de l'economia verda i circular.",
+      "c) S'han contrastat els beneficis de l'economia verda i circular enfront del model clàssic de producció.",
+      "d) S'han aplicat principis d'ecodisseny.",
+      "e) S'ha analitzat el cicle de vida del producte.",
+      "f) S'han identificat els processos de producció i els criteris de sostenibilitat aplicats."
     ]
   },
   {
@@ -2496,9 +2496,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Sostenibilitat aplicada al sistema productiu",
     "moduleCode": "1708",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realiza actividades sostenibles minimizando el impacto de las mismas en el medio ambiente.",
+    "description": "Duu a terme activitats sostenibles minimitzant-ne l'impacte en el medi ambient.",
     "description_es": "Realiza actividades sostenibles minimizando el impacto de las mismas en el medio ambiente.",
-    "description_ca": "Realiza actividades sostenibles minimizando el impacto de las mismas en el medio ambiente.",
+    "description_ca": "Duu a terme activitats sostenibles minimitzant-ne l'impacte en el medi ambient.",
     "criterios_es": [
       "a) Se ha caracterizado el modelo de producción y consumo actual.",
       "b) Se han identificado los principios de la economía verde y circular.",
@@ -2511,15 +2511,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se ha aplicado la normativa ambiental."
     ],
     "criterios_ca": [
-      "a) Se ha caracterizado el modelo de producción y consumo actual.",
-      "b) Se han identificado los principios de la economía verde y circular.",
-      "c) Se han contrastado los beneficios de la economía verde y circular frente al modelo clásico de producción.",
-      "d) Se ha evaluado el impacto de las actividades personales y profesionales.",
-      "e) Se han aplicado principios de ecodiseño.",
-      "f) Se han aplicado estrategias sostenibles.",
-      "g) Se ha analizado el ciclo de vida del producto.",
-      "h) Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados.",
-      "i) Se ha aplicado la normativa ambiental."
+      "a) S'ha caracteritzat el model de producció i consum actual.",
+      "b) S'han identificat els principis de l'economia verda i circular.",
+      "c) S'han contrastat els beneficis de l'economia verda i circular enfront del model clàssic de producció.",
+      "d) S'ha avaluat l'impacte de les activitats personals i professionals.",
+      "e) S'han aplicat principis d'ecodisseny.",
+      "f) S'han aplicat estratègies sostenibles.",
+      "g) S'ha analitzat el cicle de vida del producte.",
+      "h) S'han identificat els processos de producció i els criteris de sostenibilitat aplicats.",
+      "i) S'ha aplicat la normativa ambiental."
     ]
   },
   {
@@ -2529,9 +2529,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Sostenibilitat aplicada al sistema productiu",
     "moduleCode": "1708",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Analiza un plan de sostenibilidad de una empresa del sector, identificando sus grupos de interés, los aspectos ASG materiales y justificando acciones para su gestión y medición.",
+    "description": "Analitza un pla de sostenibilitat d'una empresa del sector, identificant-ne els grups d'interès i els aspectes ASG materials i justificant accions per gestionar-los i mesurar-los.",
     "description_es": "Analiza un plan de sostenibilidad de una empresa del sector, identificando sus grupos de interés, los aspectos ASG materiales y justificando acciones para su gestión y medición.",
-    "description_ca": "Analiza un plan de sostenibilidad de una empresa del sector, identificando sus grupos de interés, los aspectos ASG materiales y justificando acciones para su gestión y medición.",
+    "description_ca": "Analitza un pla de sostenibilitat d'una empresa del sector, identificant-ne els grups d'interès i els aspectes ASG materials i justificant accions per gestionar-los i mesurar-los.",
     "criterios_es": [
       "a) Se han identificado los principales grupos de interés de la empresa.",
       "b) Se han analizado los aspectos ASG materiales, las expectativas de los grupos de interés y la importancia de los aspectos ASG en relación con los objetivos empresariales.",
@@ -2540,11 +2540,11 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "e) Se ha elaborado un informe de sostenibilidad con el plan y los indicadores propuestos."
     ],
     "criterios_ca": [
-      "a) Se han identificado los principales grupos de interés de la empresa.",
-      "b) Se han analizado los aspectos ASG materiales, las expectativas de los grupos de interés y la importancia de los aspectos ASG en relación con los objetivos empresariales.",
-      "c) Se han definido acciones encaminadas a minimizar los impactos negativos y aprovechar las oportunidades que plantean los principales aspectos ASG identificados.",
-      "d) Se han determinado las métricas de evaluación del desempeño de la empresa de acuerdo con los estándares de sostenibilidad más ampliamente utilizados.",
-      "e) Se ha elaborado un informe de sostenibilidad con el plan y los indicadores propuestos."
+      "a) S'han identificat els principals grups d'interès de l'empresa.",
+      "b) S'han analitzat els aspectes ASG materials, les expectatives dels grups d'interès i la importància dels aspectes ASG en relació amb els objectius empresarials.",
+      "c) S'han definit accions encaminades a minimitzar els impactes negatius i aprofitar les oportunitats que plantegen els principals aspectes ASG identificats.",
+      "d) S'han determinat les mètriques d'avaluació de l'acompliment de l'empresa d'acord amb els estàndards de sostenibilitat més utilitzats.",
+      "e) S'ha elaborat un informe de sostenibilitat amb el pla i els indicadors proposats."
     ]
   },
   {
@@ -2554,9 +2554,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat II",
     "moduleCode": "1710",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Planifica y pone en marcha estrategias en los diferentes procesos selectivos de empleo que le permiten mejorar sus posibilidades de inserción laboral.",
+    "description": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seves possibilitats d'inserció laboral.",
     "description_es": "Planifica y pone en marcha estrategias en los diferentes procesos selectivos de empleo que le permiten mejorar sus posibilidades de inserción laboral.",
-    "description_ca": "Planifica y pone en marcha estrategias en los diferentes procesos selectivos de empleo que le permiten mejorar sus posibilidades de inserción laboral.",
+    "description_ca": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seves possibilitats d'inserció laboral.",
     "criterios_es": [
       "a) Se han determinado las técnicas utilizadas actualmente en el sector para el proceso de selección de personal.",
       "b) Se han desarrollado estrategias para la búsqueda de empleo relacionadas con las técnicas actuales más utilizadas contextualizadas al sector.",
@@ -2564,10 +2564,10 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "d) Se ha construido una marca personal identificando las necesidades del mercado actual, sus habilidades, destrezas y su aporte de valor."
     ],
     "criterios_ca": [
-      "a) Se han determinado las técnicas utilizadas actualmente en el sector para el proceso de selección de personal.",
-      "b) Se han desarrollado estrategias para la búsqueda de empleo relacionadas con las técnicas actuales más utilizadas contextualizadas al sector.",
-      "c) Se han valorado las actitudes y aptitudes que permiten superar procesos selectivos en el sector privado y en el sector público.",
-      "d) Se ha construido una marca personal identificando las necesidades del mercado actual, sus habilidades, destrezas y su aporte de valor."
+      "a) S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
+      "b) S'han desenvolupat estratègies per a la cerca de feina relacionades amb les tècniques actuals més utilitzades, contextualitzades al sector.",
+      "c) S'han valorat les actituds i les aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
+      "d) S'ha construït una marca personal identificant les necessitats del mercat actual, les seves habilitats i destreses i la seva aportació de valor."
     ]
   },
   {
@@ -2577,9 +2577,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat II",
     "moduleCode": "1710",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Aplica estrategias relacionadas con las competencias personales, sociales y emocionales para el empleo en búsqueda de la mejora de su empleabilidad.",
+    "description": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació amb l'objectiu de millorar la seva ocupabilitat.",
     "description_es": "Aplica estrategias relacionadas con las competencias personales, sociales y emocionales para el empleo en búsqueda de la mejora de su empleabilidad.",
-    "description_ca": "Aplica estrategias relacionadas con las competencias personales, sociales y emocionales para el empleo en búsqueda de la mejora de su empleabilidad.",
+    "description_ca": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació amb l'objectiu de millorar la seva ocupabilitat.",
     "criterios_es": [
       "a) Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad en el sector de referencia.",
       "b) Se ha participado activamente en el establecimiento de los objetivos del equipo y en la toma de decisiones del mismo y asumido la responsabilidad de las acciones y decisiones del grupo, participando activamente en el logro de unos objetivos compartidos cooperando con otras personas y compartiendo el liderazgo.",
@@ -2590,13 +2590,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
     ],
     "criterios_ca": [
-      "a) Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad en el sector de referencia.",
-      "b) Se ha participado activamente en el establecimiento de los objetivos del equipo y en la toma de decisiones del mismo y asumido la responsabilidad de las acciones y decisiones del grupo, participando activamente en el logro de unos objetivos compartidos cooperando con otras personas y compartiendo el liderazgo.",
-      "c) Se han incorporado al propio proceso de aprendizaje las técnicas y recursos de presentación y comunicación, tanto orales como escritos, adecuados para una comunicación efectiva y afectiva siendo capaz de adaptarlos a cada situación y circunstancias, valorando las oportunidades y dificultades que ofrece cada una de ellas.",
-      "d) Se han aplicado técnicas y estrategias para la gestión del tiempo disponible para alcanzar los objetivos tanto individuales como del equipo y programado las actividades necesarias.",
-      "e) Se han aplicado estrategias para canalizar las emociones mostrando una actitud flexible en las relaciones con otras personas.",
-      "f) Se han desarrollado estrategias para la programación de actividades atendiendo a criterios de organización eficiente y previendo las posibles dificultades.",
-      "g) Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas, aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
+      "a) S'ha valorat la importància de les competències personals i socials en l'ocupabilitat en el sector de referència.",
+      "b) S'ha participat activament en l'establiment dels objectius de l'equip i en la seva presa de decisions, s'ha assumit la responsabilitat de les accions i les decisions del grup i s'ha participat activament en l'assoliment d'uns objectius compartits, cooperant amb altres persones i compartint el lideratge.",
+      "c) S'han incorporat al propi procés d'aprenentatge les tècniques i els recursos de presentació i comunicació, tant orals com escrits, adequats per a una comunicació efectiva i afectiva, adaptant-los a cada situació i circumstància i valorant les oportunitats i les dificultats que ofereix cadascuna.",
+      "d) S'han aplicat tècniques i estratègies per a la gestió del temps disponible per assolir els objectius tant individuals com de l'equip i s'han programat les activitats necessàries.",
+      "e) S'han aplicat estratègies per canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
+      "f) S'han desenvolupat estratègies per a la programació d'activitats atenent criteris d'organització eficient i preveient les possibles dificultats.",
+      "g) S'ha reaccionat de manera flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats amb estratègies relacionades amb la intel·ligència emocional."
     ]
   },
   {
@@ -2606,9 +2606,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat II",
     "moduleCode": "1710",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Pone en práctica las habilidades emprendedoras necesarias para el desarrollo de procesos de innovación e investigación aplicadas que promuevan la modernización del sector productivo hacia un modelo sostenible.",
+    "description": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguin la modernització del sector productiu cap a un model sostenible.",
     "description_es": "Pone en práctica las habilidades emprendedoras necesarias para el desarrollo de procesos de innovación e investigación aplicadas que promuevan la modernización del sector productivo hacia un modelo sostenible.",
-    "description_ca": "Pone en práctica las habilidades emprendedoras necesarias para el desarrollo de procesos de innovación e investigación aplicadas que promuevan la modernización del sector productivo hacia un modelo sostenible.",
+    "description_ca": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguin la modernització del sector productiu cap a un model sostenible.",
     "criterios_es": [
       "a) Se ha identificado el concepto de innovación y su relación con la construcción de una sociedad más sostenible que mejore en el bienestar de los individuos.",
       "b) Se han analizado las distintas metodologías para emprender y su importancia para favorecer la innovación y como fuente de creación de empleo y bienestar social.",
@@ -2618,12 +2618,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) Se han incorporado los objetivos de las políticas e iniciativas relacionadas con la sostenibilidad y el medio ambiente a la estrategia empresarial enfocada al desarrollo de un modelo económico y social sostenible."
     ],
     "criterios_ca": [
-      "a) Se ha identificado el concepto de innovación y su relación con la construcción de una sociedad más sostenible que mejore en el bienestar de los individuos.",
-      "b) Se han analizado las distintas metodologías para emprender y su importancia para favorecer la innovación y como fuente de creación de empleo y bienestar social.",
-      "c) Se han aplicado las habilidades emprendedoras necesarias para promover el emprendimiento y el intraemprendimiento.",
-      "d) Se ha puesto en práctica el trabajo colaborativo como requisito para el desarrollo de procesos de innovación.",
-      "e) Se ha desarrollado la competencia digital necesaria para la mejora de los procesos de innovación e investigación aplicadas que promuevan la modernización del sector productivo.",
-      "f) Se han incorporado los objetivos de las políticas e iniciativas relacionadas con la sostenibilidad y el medio ambiente a la estrategia empresarial enfocada al desarrollo de un modelo económico y social sostenible."
+      "a) S'ha identificat el concepte d'innovació i la seva relació amb la construcció d'una societat més sostenible que millori el benestar de les persones.",
+      "b) S'han analitzat les diferents metodologies per emprendre i la seva importància per afavorir la innovació i com a font de creació d'ocupació i benestar social.",
+      "c) S'han aplicat les habilitats emprenedores necessàries per promoure l'emprenedoria i la intraemprenedoria.",
+      "d) S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
+      "e) S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguin la modernització del sector productiu.",
+      "f) S'han incorporat els objectius de les polítiques i les iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible."
     ]
   },
   {
@@ -2633,9 +2633,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat II",
     "moduleCode": "1710",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Identifica, define y valida ideas de emprendimiento generadoras de nuevas oportunidades a partir de estrategias de análisis del entorno socio productivo utilizando metodologías ágiles para el emprendimiento.",
+    "description": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socioproductiu, utilitzant metodologies àgils per a l'emprenedoria.",
     "description_es": "Identifica, define y valida ideas de emprendimiento generadoras de nuevas oportunidades a partir de estrategias de análisis del entorno socio productivo utilizando metodologías ágiles para el emprendimiento.",
-    "description_ca": "Identifica, define y valida ideas de emprendimiento generadoras de nuevas oportunidades a partir de estrategias de análisis del entorno socio productivo utilizando metodologías ágiles para el emprendimiento.",
+    "description_ca": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socioproductiu, utilitzant metodologies àgils per a l'emprenedoria.",
     "criterios_es": [
       "a) Se han identificado los problemas de las personas destinatarias potenciales del proyecto emprendedor como paso previo a la propuesta de soluciones que se conviertan en oportunidades.",
       "b) Se ha puesto en práctica el proceso creativo con el fin de conseguir una idea emprendedora que aporte valor económico, social y/o cultural.",
@@ -2648,15 +2648,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se ha experimentado con la puesta en práctica de estrategias de marketing para desarrollar destrezas en técnicas de comunicación y venta."
     ],
     "criterios_ca": [
-      "a) Se han identificado los problemas de las personas destinatarias potenciales del proyecto emprendedor como paso previo a la propuesta de soluciones que se conviertan en oportunidades.",
-      "b) Se ha puesto en práctica el proceso creativo con el fin de conseguir una idea emprendedora que aporte valor económico, social y/o cultural.",
-      "c) Se ha diseñado un modelo de negocio y/o gestión derivado de la idea emprendedora.",
-      "d) Se han incorporado valores éticos y sociales a la idea emprendedora analizando modelos de balance social.",
-      "e) Se ha analizado la contribución de la Economía Circular y la Economía del Bien Común al desarrollo de un modelo económico y social basado en la equidad, la justicia social y la sostenibilidad.",
-      "f) Se han analizado los principales componentes del entorno general y específico, y su impacto en la idea emprendedora.",
-      "g) Se han realizado entrevistas de problema para validar el perfil y el problema de las personas destinatarias de la idea emprendedora.",
-      "h) Se ha validado la solución mediante la creación de prototipos buscando el encaje problema-solución.",
-      "i) Se ha experimentado con la puesta en práctica de estrategias de marketing para desarrollar destrezas en técnicas de comunicación y venta."
+      "a) S'han identificat els problemes de les persones destinatàries potencials del projecte emprenedor com a pas previ a la proposta de solucions que es converteixin en oportunitats.",
+      "b) S'ha posat en pràctica el procés creatiu amb la finalitat d'aconseguir una idea emprenedora que aporti valor econòmic, social o cultural.",
+      "c) S'ha dissenyat un model de negoci o de gestió derivat de la idea emprenedora.",
+      "d) S'han incorporat valors ètics i socials a la idea emprenedora analitzant models de balanç social.",
+      "e) S'ha analitzat la contribució de l'economia circular i de l'economia del bé comú al desenvolupament d'un model econòmic i social basat en l'equitat, la justícia social i la sostenibilitat.",
+      "f) S'han analitzat els principals components de l'entorn general i específic i el seu impacte en la idea emprenedora.",
+      "g) S'han fet entrevistes de problema per validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
+      "h) S'ha validat la solució mitjançant la creació de prototips cercant l'encaix problema-solució.",
+      "i) S'ha experimentat amb la posada en pràctica d'estratègies de màrqueting per desenvolupar destreses en tècniques de comunicació i venda."
     ]
   },
   {
@@ -2666,9 +2666,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat II",
     "moduleCode": "1710",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Desarrolla un proyecto emprendedor de innovación social y/o tecnológica aplicada en colaboración con el entorno.",
+    "description": "Desenvolupa un projecte emprenedor d'innovació social o tecnològica aplicada en col·laboració amb l'entorn.",
     "description_es": "Desarrolla un proyecto emprendedor de innovación social y/o tecnológica aplicada en colaboración con el entorno.",
-    "description_ca": "Desarrolla un proyecto emprendedor de innovación social y/o tecnológica aplicada en colaboración con el entorno.",
+    "description_ca": "Desenvolupa un projecte emprenedor d'innovació social o tecnològica aplicada en col·laboració amb l'entorn.",
     "criterios_es": [
       "a) Se han analizado los conceptos básicos del emprendimiento y la innovación social.",
       "b) Se ha reflexionado sobre la necesidad del liderazgo ético y sostenible en las organizaciones.",
@@ -2681,15 +2681,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han definido los agentes implicados en el proyecto, así como su participación en el mismo."
     ],
     "criterios_ca": [
-      "a) Se han analizado los conceptos básicos del emprendimiento y la innovación social.",
-      "b) Se ha reflexionado sobre la necesidad del liderazgo ético y sostenible en las organizaciones.",
-      "c) Se ha reflexionado sobre la tecnología como base para el cambio del modelo productivo.",
-      "d) Se han puesto en marcha las estrategias propias del pensamiento de diseño para detectar necesidades sociales y medioambientales.",
-      "e) Se han analizado los elementos del diseño de modelos de negocio ecosociales y/o de base tecnológica.",
-      "f) Se han alineado metas de desarrollo sostenible con el diseño de modelos de negocio ecosociales y/o de base tecnológica.",
-      "g) Se han aplicado las estrategias necesarias para analizar la viabilidad del proyecto emprendedor.",
-      "h) Se han investigado las opciones financieras socialmente responsables.",
-      "i) Se han definido los agentes implicados en el proyecto, así como su participación en el mismo."
+      "a) S'han analitzat els conceptes bàsics de l'emprenedoria i la innovació social.",
+      "b) S'ha reflexionat sobre la necessitat del lideratge ètic i sostenible en les organitzacions.",
+      "c) S'ha reflexionat sobre la tecnologia com a base per al canvi del model productiu.",
+      "d) S'han posat en marxa les estratègies pròpies del pensament de disseny per detectar necessitats socials i mediambientals.",
+      "e) S'han analitzat els elements del disseny de models de negoci ecosocials o de base tecnològica.",
+      "f) S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials o de base tecnològica.",
+      "g) S'han aplicat les estratègies necessàries per analitzar la viabilitat del projecte emprenedor.",
+      "h) S'han investigat les opcions financeres socialment responsables.",
+      "i) S'han definit els agents implicats en el projecte, així com la seva participació."
     ]
   },
   {

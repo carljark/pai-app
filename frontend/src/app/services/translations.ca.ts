@@ -43,6 +43,7 @@ export const TRANSLATIONS_CA = {
   courseLevelFP: 'CFGB Perruqueria i Estètica',
   courseLevelCFGM: 'CFGM Estètica i Bellesa',
   courseLevelCFGMPeluqueria: 'CFGM Perruqueria i Cosmètica Capil·lar',
+  courseLevelCFGSEducacionInfantil: 'CFGS Educació Infantil',
   courseLevelPDC: 'ESO (PDC)',
   searchProjects: 'Buscar projecte...',
   generatorLevelLabel: 'Nivell Educatiu',

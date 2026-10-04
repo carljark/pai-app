@@ -54,6 +54,7 @@ describe('PersonalViewComponent', () => {
       courseLevelFP: 'FP Básica',
       courseLevelCFGM: 'CFGM',
       courseLevelPDC: 'ESO',
+      courseLevelCFGSEducacionInfantil: 'CFGS Educación Infantil',
       untitledProject: 'Sin título',
       aiGemini: 'Primario',
       aiOpenRouter: 'Secundario',
@@ -109,17 +110,19 @@ describe('PersonalViewComponent', () => {
       { _id: '1', title: 'P1 FPB', tipoNivel: 'FP_BASICA' },
       { _id: '2', title: 'P2 CFGM', tipoNivel: 'CFGM_ESTETICA' },
       { _id: '2b', title: 'P2b CFGM Pel', tipoNivel: 'CFGM_PELUQUERIA' },
+      { _id: '2c', title: 'P2c CFGS Inf', tipoNivel: 'CFGS_EDUCACION_INFANTIL' },
       { _id: '3', title: 'P3 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
     ]);
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Pills order: [ALL, FPB, CFGM, ESO, ALL, borrador, publicado, error]
+    // Pills order: [ALL, FPB, CFGM Pel, CFGM, CFGS, ESO, ALL, borrador, publicado, error]
     const allPill = pills[0];
     const fpbPill = pills[1];
     const cfgmPill = pills[3];
     const cfgmPelPill = pills[2];
-    const esoPill = pills[4];
+    const cfgsPill = pills[4];
+    const esoPill = pills[5];
 
     fpbPill.click();
     fixture.detectChanges();
@@ -139,6 +142,11 @@ describe('PersonalViewComponent', () => {
     expect(component.filteredMyProjects().length).toBe(1);
     expect(component.filteredMyProjects()[0].title).toBe('P2b CFGM Pel');
 
+    cfgsPill.click();
+    fixture.detectChanges();
+    expect(component.levelFilter()).toBe('CFGS_EDUCACION_INFANTIL');
+    expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['P2c CFGS Inf']);
+
     esoPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ESO');
@@ -148,7 +156,7 @@ describe('PersonalViewComponent', () => {
     allPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ALL');
-    expect(component.filteredMyProjects().length).toBe(4);
+    expect(component.filteredMyProjects().length).toBe(5);
   });
 
   it('debería filtrar por estado del proyecto mediante clicks en el DOM', () => {
@@ -161,10 +169,10 @@ describe('PersonalViewComponent', () => {
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
     // Status pills are indexes 4 (ALL), 5 (borrador), 6 (publicado), 7 (error)
-    const borradorPill = pills[6];
-    const publicadoPill = pills[7];
-    const errorPill = pills[8];
-    const allStatusPill = pills[5];
+    const borradorPill = pills[7];
+    const publicadoPill = pills[8];
+    const errorPill = pills[9];
+    const allStatusPill = pills[6];
 
     borradorPill.click();
     fixture.detectChanges();
@@ -298,12 +306,21 @@ describe('PersonalViewComponent', () => {
         createdAt,
       },
       { _id: 'b', title: 'Pelu', status: 'generando', tipoNivel: 'CFGM_PELUQUERIA', createdAt },
+      {
+        _id: 'd',
+        title: 'Infantil',
+        status: 'borrador',
+        tipoNivel: 'CFGS_EDUCACION_INFANTIL',
+        courseLevel: '2º',
+        createdAt,
+      },
       { _id: 'c', title: 'Fallo', status: 'error', error: 'Fallo genérico', createdAt },
     ]);
     fixture.detectChanges();
 
     const text = fixture.nativeElement.textContent;
     expect(text).toContain('1º CFGM');
+    expect(text).toContain('2º CFGS Educación Infantil');
     expect(text).toContain('Maquillaje');
     expect(text).toContain('⚠️ Error: Fallo genérico');
   });

@@ -1,6 +1,7 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
+import { MapaTab, mapaTabConfig } from '@mapa-intermodular/services/mapa-tabs.config';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
@@ -111,16 +112,9 @@ export class MapaIntermodularViewComponent {
 
   /** Alinea nivel y curso del generador con la pestaña activa del mapa. */
   private syncCurriculumLevel(): void {
-    const tab = this.facade.activeTab();
-    const isPeluqueria = tab === 'CFGM_PELUQUERIA' || tab === 'CFGM_PELUQUERIA_2';
-    this.curriculum.setTipoNivel(
-      tab === 'CFGM' ? 'CFGM_ESTETICA' : isPeluqueria ? 'CFGM_PELUQUERIA' : 'FP_BASICA',
-    );
-    if (tab === 'CFGM_PELUQUERIA_2') {
-      this.curriculum.setCurso('2º');
-    } else if (tab === 'CFGM_PELUQUERIA') {
-      this.curriculum.setCurso('1º');
-    }
+    const config = mapaTabConfig(this.facade.activeTab());
+    this.curriculum.setTipoNivel(config.tipoNivel);
+    if (config.curso) this.curriculum.setCurso(config.curso);
   }
 
   /** RA de origen seguido de los RAs destino de la conexión (o de todas las filtradas). */
@@ -149,7 +143,7 @@ export class MapaIntermodularViewComponent {
     return selected;
   }
 
-  setTab(tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2') {
+  setTab(tab: MapaTab) {
     this.facade.setTab(tab);
   }
 }

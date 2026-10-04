@@ -2,6 +2,7 @@ import { Component, inject, computed, input } from '@angular/core';
 import { LayoutService } from '../../../../../services/layout.service';
 import { IntermodularActivity } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
+import { MapaTab } from '../../../services/mapa-tabs.config';
 
 @Component({
   selector: 'app-activities-grid',
@@ -15,5 +16,5 @@ export class ActivitiesGridComponent {
   isCa = computed(() => this.layout.language() === 'catalan');
 
   activities = input.required<IntermodularActivity[]>();
-  activeTab = input.required<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'>();
+  activeTab = input.required<MapaTab>();
 }

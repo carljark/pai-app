@@ -4,6 +4,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
 import { IntermodularConnection } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
 import { ActivitiesGridComponent } from '../activities-grid/activities-grid.component';
+import { MapaTab } from '../../../services/mapa-tabs.config';
 
 @Component({
   selector: 'app-connections-list',
@@ -20,7 +21,7 @@ export class ConnectionsListComponent {
   connections = input.required<IntermodularConnection[]>();
   selectedCriterion = input.required<string | null>();
   step3Open = input.required<boolean>();
-  activeTab = input.required<'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2'>();
+  activeTab = input.required<MapaTab>();
 
   @Output() createProject = new EventEmitter<IntermodularConnection>();
   @Output() toggleStepEvent = new EventEmitter<number>();

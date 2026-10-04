@@ -8,7 +8,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { FpbMatch } from '../models/FpbMatch';
 import { CE } from '../models/CE';
-import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, APPROVED_PROJECT_TEXT_LIMIT, MAX_APPROVED_PROJECTS } from '../controllers/project.controller';
+import { formatCriterion, filterCriteriaByCourse, buildApprovedProjectsContext, describeTargetCourse, APPROVED_PROJECT_TEXT_LIMIT, MAX_APPROVED_PROJECTS } from '../controllers/project.controller';
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: class {
@@ -797,5 +797,19 @@ describe('buildApprovedProjectsContext', () => {
     const ctx = await buildApprovedProjectsContext({ tipoNivel: 'FP_BASICA' });
     const payload = parsePayload(ctx);
     expect(payload[0].text).toBe('');
+  });
+});
+
+describe('describeTargetCourse', () => {
+  it('usa la denominación del ciclo en el idioma del proyecto', () => {
+    expect(describeTargetCourse('CFGS_EDUCACION_INFANTIL', '2º', 'castellano')).toBe('2º de CFGS Educación Infantil');
+    expect(describeTargetCourse('CFGS_EDUCACION_INFANTIL', '1º', 'catalan')).toBe('1º de CFGS Educació Infantil');
+    expect(describeTargetCourse('CFGM_PELUQUERIA', '1º', 'catalan')).toBe('1º de CFGM Perruqueria i Cosmètica Capil·lar');
+    expect(describeTargetCourse('CFGM_ESTETICA', '1º')).toBe('1º de CFGM Estética y Belleza');
+  });
+
+  it('mantiene las descripciones de ESO y FP Básica', () => {
+    expect(describeTargetCourse('DIVERSIFICACION_CURRICULAR', '3º')).toBe('3º de ESO (Diversificación Curricular / PDC)');
+    expect(describeTargetCourse('FP_BASICA', '1º', 'catalan')).toBe('1º de FP Básica (Formación Profesional Básica)');
   });
 });

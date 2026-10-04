@@ -1,6 +1,6 @@
-import { Project, getOwnerId } from '../../projects/models/project.model';
+import { HistoryTab, Project, getOwnerId } from '../../projects/models/project.model';
 
-export type HistoryTabId = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'ESO';
+export type HistoryTabId = HistoryTab;
 
 export interface HistoryFilters {
   tab: HistoryTabId;
@@ -35,6 +35,7 @@ export function matchesTab(project: Project, tab: HistoryTabId): boolean {
   }
   if (tab === 'CFGM') return project.tipoNivel === 'CFGM_ESTETICA';
   if (tab === 'CFGM_PELUQUERIA') return project.tipoNivel === 'CFGM_PELUQUERIA';
+  if (tab === 'CFGS_EDUCACION_INFANTIL') return project.tipoNivel === 'CFGS_EDUCACION_INFANTIL';
   return project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || project.tipoNivel === 'ESO';
 }
 

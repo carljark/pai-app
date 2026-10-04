@@ -1,7 +1,14 @@
 import type { Request, Response } from 'express';
 import { MapaModule } from '../models/MapaModule';
 
-const ALLOWED_TABS = ['FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2'];
+const ALLOWED_TABS = [
+  'FPB',
+  'CFGM',
+  'CFGM_PELUQUERIA',
+  'CFGM_PELUQUERIA_2',
+  'CFGS_EDUCACION_INFANTIL',
+  'CFGS_EDUCACION_INFANTIL_2',
+];
 
 export const getMapaModules = async (req: Request, res: Response) => {
   try {

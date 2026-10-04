@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FPBModule } from '../models/mapa-intermodular.model';
-import { MapaTab } from './mapa-intermodular.facade';
+import { MapaTab } from './mapa-tabs.config';
 
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularService {

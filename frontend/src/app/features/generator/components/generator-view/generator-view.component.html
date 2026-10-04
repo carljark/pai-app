@@ -8,50 +8,19 @@
       trans.t().generatorLevelLabel
     }}</span>
     <div class="tabs" role="tablist" aria-labelledby="generator-level-label">
-      <div
-        class="tabs-item"
-        role="tab"
-        tabindex="0"
-        [class.active]="curriculum.tipoNivel() === 'FP_BASICA'"
-        [attr.aria-selected]="curriculum.tipoNivel() === 'FP_BASICA'"
-        (click)="curriculum.setTipoNivel('FP_BASICA')"
-        (keydown.enter)="curriculum.setTipoNivel('FP_BASICA')"
-      >
-        {{ trans.t().courseLevelFP }}
-      </div>
-      <div
-        class="tabs-item"
-        role="tab"
-        tabindex="0"
-        [class.active]="curriculum.tipoNivel() === 'CFGM_ESTETICA'"
-        [attr.aria-selected]="curriculum.tipoNivel() === 'CFGM_ESTETICA'"
-        (click)="curriculum.setTipoNivel('CFGM_ESTETICA')"
-        (keydown.enter)="curriculum.setTipoNivel('CFGM_ESTETICA')"
-      >
-        {{ trans.t().courseLevelCFGM }}
-      </div>
-      <div
-        class="tabs-item"
-        role="tab"
-        tabindex="0"
-        [class.active]="curriculum.tipoNivel() === 'CFGM_PELUQUERIA'"
-        [attr.aria-selected]="curriculum.tipoNivel() === 'CFGM_PELUQUERIA'"
-        (click)="curriculum.setTipoNivel('CFGM_PELUQUERIA')"
-        (keydown.enter)="curriculum.setTipoNivel('CFGM_PELUQUERIA')"
-      >
-        {{ trans.t().courseLevelCFGMPeluqueria }}
-      </div>
-      <div
-        class="tabs-item"
-        role="tab"
-        tabindex="0"
-        [class.active]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'"
-        [attr.aria-selected]="curriculum.tipoNivel() === 'DIVERSIFICACION_CURRICULAR'"
-        (click)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')"
-        (keydown.enter)="curriculum.setTipoNivel('DIVERSIFICACION_CURRICULAR')"
-      >
-        {{ trans.t().courseLevelPDC }}
-      </div>
+      @for (level of levelTabs; track level.nivel) {
+        <div
+          class="tabs-item"
+          role="tab"
+          tabindex="0"
+          [class.active]="curriculum.tipoNivel() === level.nivel"
+          [attr.aria-selected]="curriculum.tipoNivel() === level.nivel"
+          (click)="curriculum.setTipoNivel(level.nivel)"
+          (keydown.enter)="curriculum.setTipoNivel(level.nivel)"
+        >
+          {{ trans.t()[level.key] }}
+        </div>
+      }
     </div>
   </div>
 

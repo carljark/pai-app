@@ -51,6 +51,8 @@ describe('MapaIntermodularViewComponent', () => {
       CFGM: [...FPB_MODULES_SEED],
       CFGM_PELUQUERIA: [...FPB_MODULES_SEED],
       CFGM_PELUQUERIA_2: [...FPB_MODULES_SEED],
+      CFGS_EDUCACION_INFANTIL: [...FPB_MODULES_SEED],
+      CFGS_EDUCACION_INFANTIL_2: [...FPB_MODULES_SEED],
     };
     mockFacade.isLoadingSeed.set(false);
     mockFacade.modules.set([...FPB_MODULES_SEED]);
@@ -79,7 +81,26 @@ describe('MapaIntermodularViewComponent', () => {
     const tabBtns = fixture.nativeElement.querySelectorAll(
       '.mapa-tab-btn',
     ) as NodeListOf<HTMLButtonElement>;
-    expect(tabBtns.length).toBe(4);
+    expect(tabBtns.length).toBe(6);
+
+    // Click CFGS Educación Infantil 1º y 2º in DOM
+    tabBtns[4].click();
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL');
+    expect(fixture.nativeElement.textContent).toContain(
+      'Mapa intermodular del CFGS Educación Infantil 1º',
+    );
+    tabBtns[5].click();
+    fixture.detectChanges();
+    expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL_2');
+    component.layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain(
+      'Mapa intermodular del CFGS Educació Infantil 2n',
+    );
+    expect(tabBtns[5].textContent?.trim()).toBe('CFGS Educació Infantil 2n');
+    component.layout.language.set('castellano');
+    fixture.detectChanges();
 
     // Click CFGM tab in DOM
     tabBtns[1].click();
@@ -450,6 +471,15 @@ describe('MapaIntermodularViewComponent', () => {
     expect(curriculum.tipoNivel()).toBe('FP_BASICA');
     expect(curriculum.selectedRas().length).toBeGreaterThan(0);
     expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
+  });
+
+  it('should open the generator at CFGS Educación Infantil 2º from its map tab', async () => {
+    await component.facade.setTab('CFGS_EDUCACION_INFANTIL_2', [...FPB_MODULES_SEED]);
+    component.facade.selectModule('3060');
+    component.facade.selectRa('3060_RA1');
+    component.createProjectFromConnection();
+    expect(curriculum.tipoNivel()).toBe('CFGS_EDUCACION_INFANTIL');
+    expect(curriculum.curso()).toBe('2º');
   });
 
   it('should trigger createProjectFromConnection for a specific connection', () => {

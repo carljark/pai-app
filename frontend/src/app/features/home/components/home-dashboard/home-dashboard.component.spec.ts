@@ -34,6 +34,7 @@ describe('HomeDashboardComponent', () => {
       courseLevelPDC: 'ESO (PDC)',
       courseLevelFP: 'FP Básica',
       courseLevelCFGM: 'CFGM Estética y Belleza',
+      courseLevelCFGSEducacionInfantil: 'CFGS Educación Infantil',
       workshopViewAll: 'Ver todos los proyectos',
 
       homeRecentTitle: 'Recent',
@@ -184,6 +185,13 @@ describe('HomeDashboardComponent', () => {
         tipoNivel: 'DIVERSIFICACION_CURRICULAR',
       },
       { _id: '2', createdAt: '2023-01-01T00:00:00Z', status: 'publicado', tipoNivel: 'FP_BASICA' },
+      {
+        _id: '3',
+        createdAt: '2023-01-01T00:00:00Z',
+        status: 'publicado',
+        tipoNivel: 'CFGS_EDUCACION_INFANTIL',
+        courseLevel: '2º',
+      },
     ];
     mockProjectsFacade.projectsHistory.set(mockProjects as any);
     fixture.detectChanges();
@@ -191,5 +199,6 @@ describe('HomeDashboardComponent', () => {
     const levels = fixture.debugElement.nativeElement.querySelectorAll('.home-project-card__level');
     expect(levels[0].textContent).toContain('ESO (PDC)');
     expect(levels[1].textContent).toContain('FP Básica');
+    expect(levels[2].textContent).toContain('2º CFGS Educación Infantil');
   });
 });

@@ -90,6 +90,21 @@ export const filterCriteriaByCourse = (critList: any[], level?: string): any[] =
   });
 };
 
+/** Denominación oficial de cada ciclo FP en castellano y catalán, para el prompt de la IA. */
+const CYCLE_NAMES: Record<string, { es: string; ca: string }> = {
+  CFGM_ESTETICA: { es: 'CFGM Estética y Belleza', ca: 'CFGM Estètica i Bellesa' },
+  CFGM_PELUQUERIA: { es: 'CFGM Peluquería y Cosmética Capilar', ca: 'CFGM Perruqueria i Cosmètica Capil·lar' },
+  CFGS_EDUCACION_INFANTIL: { es: 'CFGS Educación Infantil', ca: 'CFGS Educació Infantil' },
+};
+
+/** Curso y nivel destino del proyecto, con el nombre del ciclo en el idioma del proyecto. */
+export const describeTargetCourse = (tipoNivel: string, course: string, language?: string): string => {
+  const cycle = CYCLE_NAMES[tipoNivel];
+  if (cycle) return `${course} de ${language === 'catalan' ? cycle.ca : cycle.es}`;
+  if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') return `${course} de ESO (Diversificación Curricular / PDC)`;
+  return `${course} de FP Básica (Formación Profesional Básica)`;
+};
+
 /** Nº máximo de proyectos publicados que se inyectan como referencia en el prompt. */
 export const MAX_APPROVED_PROJECTS = 2;
 /** Longitud máxima (caracteres) del texto de cada proyecto publicado inyectado. */
@@ -279,13 +294,7 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
     // Determinación del curso efectivo y descripción
     const defaultCourse = tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
     const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCourse;
-    const targetCourseDescription = tipoNivel === 'CFGM_ESTETICA'
-      ? (language === 'catalan' ? `${effectiveCourse} de CFGM Estètica i Bellesa` : `${effectiveCourse} de CFGM Estética y Belleza`)
-      : (tipoNivel === 'CFGM_PELUQUERIA'
-        ? (language === 'catalan' ? `${effectiveCourse} de CFGM Perruqueria i Cosmètica Capil·lar` : `${effectiveCourse} de CFGM Peluquería y Cosmética Capilar`)
-        : (tipoNivel === 'DIVERSIFICACION_CURRICULAR'
-          ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
-          : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`));
+    const targetCourseDescription = describeTargetCourse(tipoNivel, effectiveCourse, language);
 
     // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {

@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IMapaModule extends Document {
-  tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2';
+  tab: 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2' | 'CFGS_EDUCACION_INFANTIL' | 'CFGS_EDUCACION_INFANTIL_2';
   order: number;
   code: string;
   name_es: string;
@@ -17,7 +17,7 @@ const MapaModuleSchema = new Schema<IMapaModule>(
     tab: {
       type: String,
       required: true,
-      enum: ['FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2'],
+      enum: ['FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2'],
       index: true
     },
     order: { type: Number, required: true, default: 0 },

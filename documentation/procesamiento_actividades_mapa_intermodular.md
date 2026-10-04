@@ -160,6 +160,8 @@ Para añadir un ciclo o curso al mapa:
 
 Ciclos con mapa: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º) y CFGS Educación Infantil (1.º y 2.º).
 
+El 1.º de Educación Infantil se rehízo en la tarea 191 (migración 19). Se tomaron las relaciones RA↔RA de los documentos de Drive y se redactó una actividad propia por relación, publicada en los dos RA conectados.
+
 ## 7. Calidad lingüística y referencias de los mapas
 
 Comprobaciones que debe pasar cualquier mapa antes de ingerirse (aprendidas en las tareas 182–184):

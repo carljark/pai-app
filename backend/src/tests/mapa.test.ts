@@ -12,6 +12,7 @@ import { up as runMigration15 } from '../migrations/15_ingest_mapa_educacion_inf
 import { up as runMigration16 } from '../migrations/16_fix_catalan_peluqueria_segundo_curso';
 import { up as runMigration17 } from '../migrations/17_fix_catalan_mapas_y_ras_estetica';
 import { up as runMigration18 } from '../migrations/18_fix_catalan_ras_y_mapa_fpb';
+import { up as runMigration19 } from '../migrations/19_reload_mapa_infantil_primer_curso';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
@@ -334,6 +335,35 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.status).toBe(200);
       expect(res.body[0].code).toBe('0013');
       expect(res.body[0].name_ca).toBe('El joc infantil i la seva metodologia');
+    });
+
+    it('debería recargar con la migración 19 solo el 1.º de Infantil con relaciones bidireccionales', async () => {
+      await MapaModule.create({ tab: 'CFGS_EDUCACION_INFANTIL_2', order: 0, code: '0013', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration19();
+      await runMigration19();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL_2' })).toBe(1);
+      const docs = await MapaModule.find({ tab: 'CFGS_EDUCACION_INFANTIL' });
+      expect(docs).toHaveLength(6);
+
+      const pairs = new Set<string>();
+      for (const doc of docs) {
+        for (const lo of doc.learningOutcomes) {
+          const titles = lo.connections.map((c) => c.activities[0]?.title_es);
+          expect(new Set(titles).size).toBe(titles.length);
+          for (const c of lo.connections) {
+            expect(c.relatedCriteria.every((r) => r.moduleCode === c.targetModuleCode)).toBe(true);
+            pairs.add(`${doc.code}_${lo.code}>${c.targetModuleCode}_${c.targetRaCode}`);
+          }
+        }
+      }
+      expect(pairs.size).toBe(406);
+      for (const p of pairs) {
+        const [from, to] = p.split('>');
+        expect(pairs.has(`${to}>${from}`)).toBe(true);
+      }
     });
   });
 });

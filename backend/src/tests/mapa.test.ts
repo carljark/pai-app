@@ -14,6 +14,7 @@ import { up as runMigration17 } from '../migrations/17_fix_catalan_mapas_y_ras_e
 import { up as runMigration18 } from '../migrations/18_fix_catalan_ras_y_mapa_fpb';
 import { up as runMigration19 } from '../migrations/19_reload_mapa_infantil_primer_curso';
 import { up as runMigration20 } from '../migrations/20_reload_mapa_infantil_segundo_curso';
+import { up as runMigration21 } from '../migrations/21_reload_mapa_infantil_primer_curso_tres_actividades';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
@@ -369,7 +370,13 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration19();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL_2' })).toBe(1);
-      await expectBidirectionalMap('CFGS_EDUCACION_INFANTIL', 6, 406, 1);
+      await expectBidirectionalMap('CFGS_EDUCACION_INFANTIL', 6, 406, 3);
+    });
+
+    it('debería recargar con la migración 21 el 1.º de Infantil con tres actividades por conexión', async () => {
+      await runMigration21();
+      await runMigration21();
+      await expectBidirectionalMap('CFGS_EDUCACION_INFANTIL', 6, 406, 3);
     });
 
     it('debería recargar con la migración 20 solo el 2.º de Infantil con tres actividades por conexión', async () => {

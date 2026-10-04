@@ -16,6 +16,8 @@ import {
 export const MAX_INTEF_EXAMPLES = 8;
 /** Recorte de cada ejemplo para no saturar el prompt (y evitar 503 del proveedor). */
 export const MAX_INTEF_EXAMPLE_CHARS = 1200;
+/** Máximo de fichas de aprendizaje-servicio (`kind: 'aps'`) entre los ejemplos inyectados. */
+export const MAX_APS_EXAMPLES = 3;
 
 export interface ExampleCriteria {
   tipoNivel?: string;
@@ -30,7 +32,10 @@ const STOPWORDS = new Set([
   'the', 'and', 'of', 'proyecto', 'proyectos', 'alumnado', 'alumnos', 'actividad', 'actividades',
   'contenido', 'contenidos', 'resultado', 'resultados', 'aprendizaje', 'criterio', 'criterios',
   'modulo', 'modulos', 'trabajo', 'realizar', 'utilizar', 'desarrollo', 'fase', 'fases', 'tarea',
-  'tareas', 'sobre', 'entre', 'desde', 'mediante', 'diferentes', 'cada', 'traves', 'sido', 'tiene'
+  'tareas', 'sobre', 'entre', 'desde', 'mediante', 'diferentes', 'cada', 'traves', 'sido', 'tiene',
+  // Genéricas: aparecen en casi cualquier ficha («conocimientos básicos», «formación profesional»)
+  'basica', 'basicas', 'basico', 'basicos', 'formacion', 'profesional', 'profesionales', 'habilidades',
+  'conocimientos', 'personas', 'alumnas', 'forma', 'formas', 'manera', 'modo'
 ]);
 
 function tokenize(text: string): string[] {
@@ -41,6 +46,14 @@ function tokenize(text: string): string[] {
     .split(/[^a-z0-9]+/)
     .filter(w => w.length >= 4 && !STOPWORDS.has(w));
 }
+
+/** Familia profesional de cada nivel FP: los nombres de módulo no siempre la mencionan. */
+const LEVEL_KEYWORDS: Record<string, string> = {
+  FP_BASICA: 'formación profesional básica peluquería estética',
+  CFGM_ESTETICA: 'formación profesional estética belleza',
+  CFGM_PELUQUERIA: 'formación profesional peluquería cosmética capilar',
+  CFGS_EDUCACION_INFANTIL: 'formación profesional educación infantil'
+};
 
 /**
  * Selecciona hasta {@link MAX_INTEF_EXAMPLES} ejemplos, priorizando los más
@@ -53,35 +66,82 @@ export const selectRelevantExamples = (examples: any[], criteria: ExampleCriteri
 
   const queryTokens = new Set(tokenize([
     criteria.tipoNivel,
+    LEVEL_KEYWORDS[criteria.tipoNivel || ''],
     criteria.courseLevel,
     criteria.title,
     ...(criteria.modules || []),
     ...(criteria.ras || [])
   ].filter(Boolean).join(' ')));
 
-  const scored = examples.map((example, index) => {
-    const len = (example?.originalContent || example?.content_sample || '').length;
-    let score = 0;
-
-    if (queryTokens.size > 0) {
-      const rasTokens = new Set(tokenize((example?.ras || []).join(' ')));
-      const moduleTokens = new Set(tokenize((example?.modules || []).join(' ')));
-      const baseTokens = new Set(tokenize(
-        [example?.title, example?.description, example?.originalContent].filter(Boolean).join(' ')
-      ));
-
-      for (const token of queryTokens) {
-        if (rasTokens.has(token)) score += 3;
-        else if (moduleTokens.has(token)) score += 2;
-        else if (baseTokens.has(token)) score += 1;
-      }
-    }
-
-    return { example, index, score, len };
-  });
+  const indexed = examples.map(exampleTokens);
+  const idf = inverseDocumentFrequency(indexed, queryTokens);
+  const family = new Set(tokenize(LEVEL_KEYWORDS[criteria.tipoNivel || ''] || ''));
+  const scored = examples.map((example, index) => ({
+    example,
+    index,
+    score: scoreExample(indexed[index]!, queryTokens, idf, family),
+    len: (example?.originalContent || example?.content_sample || '').length
+  }));
 
   scored.sort((a, b) => b.score - a.score || b.len - a.len || a.index - b.index);
-  return scored.slice(0, MAX_INTEF_EXAMPLES).map(s => s.example);
+  return takeWithApsLimit(scored.map(s => s.example));
+};
+
+interface ExampleTokens {
+  ras: Set<string>;
+  modules: Set<string>;
+  base: Set<string>;
+}
+
+const exampleTokens = (example: any): ExampleTokens => ({
+  ras: new Set(tokenize((example?.ras || []).join(' '))),
+  modules: new Set(tokenize((example?.modules || []).join(' '))),
+  base: new Set(tokenize([example?.title, example?.description, example?.originalContent].filter(Boolean).join(' ')))
+});
+
+/**
+ * Peso de cada palabra de la consulta según su rareza en el corpus de ejemplos: una palabra
+ * específica («peluquería») cuenta mucho más que una frecuente («forma», «manera»).
+ */
+const inverseDocumentFrequency = (indexed: ExampleTokens[], queryTokens: Set<string>): Map<string, number> => {
+  const idf = new Map<string, number>();
+  for (const token of queryTokens) {
+    const df = indexed.filter(t => t.ras.has(token) || t.modules.has(token) || t.base.has(token)).length;
+    idf.set(token, Math.log(1 + indexed.length / (1 + df)));
+  }
+  return idf;
+};
+
+/**
+ * Coincidencias con los RA/CE pesan 3, con los módulos 2 y con el resto del texto 1, multiplicadas por
+ * su rareza. La familia profesional del nivel (`family`) pesa 3 aparezca donde aparezca.
+ */
+const scoreExample = (tokens: ExampleTokens, queryTokens: Set<string>, idf: Map<string, number>, family: Set<string>): number => {
+  let score = 0;
+  for (const token of queryTokens) {
+    const found = tokens.ras.has(token) || tokens.modules.has(token) || tokens.base.has(token);
+    const weight = !found ? 0 : family.has(token) || tokens.ras.has(token) ? 3 : tokens.modules.has(token) ? 2 : 1;
+    score += weight * (idf.get(token) || 0);
+  }
+  return score;
+};
+
+/**
+ * Primeros {@link MAX_INTEF_EXAMPLES} ejemplos con como mucho {@link MAX_APS_EXAMPLES} fichas de
+ * aprendizaje-servicio: son resúmenes breves y no deben desplazar a los proyectos completos.
+ */
+const takeWithApsLimit = (ranked: any[]): any[] => {
+  const selected: any[] = [];
+  let aps = 0;
+  for (const example of ranked) {
+    if (selected.length >= MAX_INTEF_EXAMPLES) break;
+    if (example?.kind === 'aps') {
+      if (aps >= MAX_APS_EXAMPLES) continue;
+      aps++;
+    }
+    selected.push(example);
+  }
+  return selected;
 };
 
 export const buildContexts = (settings: any, criteria: ExampleCriteria = {}) => {
@@ -101,9 +161,10 @@ export const buildContexts = (settings: any, criteria: ExampleCriteria = {}) => 
           modules: example?.modules,
           ras: example?.ras,
           methodology: example?.methodology,
-          originalContent: String(example?.originalContent || example?.content_sample || '').slice(0, MAX_INTEF_EXAMPLE_CHARS)
+          originalContent: String(example?.originalContent || example?.content_sample || '').slice(0, MAX_INTEF_EXAMPLE_CHARS),
+          ...(example?.kind ? { source: example.source } : {})
         }));
-        intefExamplesContext = "\n--- EJEMPLOS DEL INTEF (más relevantes) ---\n" + JSON.stringify(compact);
+        intefExamplesContext = "\n--- EJEMPLOS DE REFERENCIA: INTEF Y BUENAS PRÁCTICAS DE APRENDIZAJE-SERVICIO (más relevantes) ---\n" + JSON.stringify(compact);
       }
     }
   } catch (e) { console.warn("No se cargaron los ejemplos del INTEF"); }

@@ -1,22 +1,76 @@
+@use '../../../../../../styles/variables' as variables;
+@use '../../../../../../styles/mixins' as mixins;
+
 .mapa-tabs {
   display: flex;
-  gap: 1rem;
-  padding: 1rem 1rem 0;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: variables.$spacing-3 variables.$spacing-4;
+  padding: variables.$spacing-4 variables.$spacing-4 variables.$spacing-3;
   background: var(--bg-card);
   border-bottom: 1px solid var(--border-color);
 
-  .mapa-tab-btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background: none;
-    font-weight: 600;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s ease;
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-1;
+    min-width: 0;
+  }
 
-    &.active {
-      color: var(--primary-color);
-      border-bottom-color: var(--primary-color);
+  &__field:first-child {
+    flex: 1 1 100%;
+  }
+
+  &__label {
+    font-size: variables.$font-size-sm;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$color-text-muted;
+  }
+
+  &__select {
+    width: 100%;
+    font-weight: variables.$font-weight-medium;
+  }
+
+  &__segmented {
+    display: inline-flex;
+    padding: 2px;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-lg;
+    background: variables.$color-primary-light;
+  }
+
+  &__curso {
+    min-width: 3.5rem;
+    padding: variables.$spacing-2 variables.$spacing-4;
+    border: none;
+    border-radius: variables.$border-radius-md;
+    background: transparent;
+    color: variables.$color-primary-dark;
+    font-weight: variables.$font-weight-medium;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover:not(.mapa-tabs__curso--active) {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus-visible {
+      outline: 2px solid variables.$color-primary;
+      outline-offset: 2px;
+    }
+
+    &--active {
+      background: variables.$color-primary;
+      color: white;
+    }
+  }
+
+  @include mixins.mq(sm) {
+    &__field:first-child {
+      flex: 0 1 28rem;
     }
   }
 }

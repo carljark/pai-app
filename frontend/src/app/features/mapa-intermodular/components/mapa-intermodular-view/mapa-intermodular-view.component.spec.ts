@@ -77,56 +77,59 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should switch tabs via DOM click buttons and toggle language', () => {
-    const tabBtns = fixture.nativeElement.querySelectorAll(
-      '.mapa-tab-btn',
-    ) as NodeListOf<HTMLButtonElement>;
-    expect(tabBtns.length).toBe(6);
+  it('should switch cycle with the select and course with the segmented buttons', () => {
+    const el = fixture.nativeElement as HTMLElement;
+    const select = el.querySelector('.mapa-tabs__select') as HTMLSelectElement;
+    const chooseCiclo = (tipoNivel: string) => {
+      select.value = tipoNivel;
+      select.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+    };
+    const cursoBtns = () =>
+      el.querySelectorAll('.mapa-tabs__curso') as NodeListOf<HTMLButtonElement>;
 
-    // Click CFGS Educación Infantil 1º y 2º in DOM
-    tabBtns[4].click();
-    fixture.detectChanges();
+    expect(select.options.length).toBe(4);
+    expect(cursoBtns().length).toBe(0);
+
+    chooseCiclo('CFGS_EDUCACION_INFANTIL');
     expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL');
-    expect(fixture.nativeElement.textContent).toContain(
-      'Mapa intermodular del CFGS Educación Infantil 1º',
-    );
-    tabBtns[5].click();
+    expect(el.textContent).toContain('Mapa intermodular del CFGS Educación Infantil 1º');
+    expect(cursoBtns().length).toBe(2);
+    expect(cursoBtns()[0].getAttribute('aria-pressed')).toBe('true');
+
+    cursoBtns()[1].click();
     fixture.detectChanges();
     expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL_2');
     component.layout.language.set('catalan');
     fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).toContain(
-      'Mapa intermodular del CFGS Educació Infantil 2n',
-    );
-    expect(tabBtns[5].textContent?.trim()).toBe('CFGS Educació Infantil 2n');
+    expect(el.textContent).toContain('Mapa intermodular del CFGS Educació Infantil 2n');
+    expect(cursoBtns()[1].textContent?.trim()).toBe('2n');
+    expect(select.selectedOptions[0]?.textContent?.trim()).toBe('CFGS Educació Infantil');
     component.layout.language.set('castellano');
     fixture.detectChanges();
+    expect(cursoBtns()[1].textContent?.trim()).toBe('2.º');
 
-    // Click CFGM tab in DOM
-    tabBtns[1].click();
-    fixture.detectChanges();
-    expect(component.facade.activeTab()).toBe('CFGM');
-
-    // Click CFGM_PELUQUERIA tab in DOM
-    tabBtns[2].click();
+    // Al cambiar de ciclo se conserva el curso si existe
+    chooseCiclo('CFGM_PELUQUERIA');
+    expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA_2');
+    cursoBtns()[0].click();
     fixture.detectChanges();
     expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA');
 
-    // Click CFGM_PELUQUERIA_2 tab in DOM
-    tabBtns[3].click();
-    fixture.detectChanges();
-    expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA_2');
-
-    // Click FPB tab in DOM
-    tabBtns[0].click();
-    fixture.detectChanges();
+    // Ciclos sin cursos: sin selector de curso
+    chooseCiclo('CFGM_ESTETICA');
+    expect(component.facade.activeTab()).toBe('CFGM');
+    expect(cursoBtns().length).toBe(0);
+    chooseCiclo('FP_BASICA');
     expect(component.facade.activeTab()).toBe('FPB');
 
-    // toggle language
+    // Un ciclo desconocido no cambia la pestaña
+    chooseCiclo('DESCONOCIDO');
+    expect(component.facade.activeTab()).toBe('FPB');
+
     component.layout.language.set('catalan');
     fixture.detectChanges();
     expect(component.isCa()).toBe(true);
-
     component.layout.language.set('castellano');
     fixture.detectChanges();
     expect(component.isCa()).toBe(false);

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# PreToolUse/Bash: bloquea commits y ejecución de tests/builds (ver AGENTS.md §1 y §6).
+# PreToolUse/Bash: bloquea operaciones git destructivas (ver AGENTS.md §1).
+# Commits, tests y despliegues están permitidos: forman parte del flujo de cada tarea.
 cmd=$(jq -r '.tool_input.command // ""')
 
 deny() {
@@ -7,12 +8,22 @@ deny() {
   exit 0
 }
 
-if printf '%s' "$cmd" | grep -Eq '(^|[;&|[:space:]])git([[:space:]]+-[^[:space:]]+([[:space:]]+[^-[:space:]][^[:space:]]*)?)*[[:space:]]+commit([[:space:]]|$)'; then
-  deny "AGENTS.md: no hagas commits. Deja los cambios locales; el usuario hará el commit."
+git_cmd='(^|[;&|[:space:]])git([[:space:]]+-[^[:space:]]+([[:space:]]+[^-[:space:]][^[:space:]]*)?)*[[:space:]]+'
+
+if printf '%s' "$cmd" | grep -Eq "${git_cmd}push([[:space:]].*)?[[:space:]](-f|--force|--force-with-lease)([=[:space:]]|$)"; then
+  deny "AGENTS.md §1: nunca hagas push --force."
 fi
 
-if printf '%s' "$cmd" | grep -Eq '(^|[;&|[:space:]])(npm[[:space:]]+(run[[:space:]]+)?(test|build|e2e)([:[:space:]]|$)|npm[[:space:]]+t([[:space:]]|$)|(npx[[:space:]]+)?ng[[:space:]]+(test|build)([[:space:]]|$)|(npx[[:space:]]+)?(vitest|cypress)([[:space:]]|$))'; then
-  deny "AGENTS.md: no ejecutes tests ni builds. Indica al usuario el comando para que lo lance él."
+if printf '%s' "$cmd" | grep -Eq "${git_cmd}push([[:space:]].*)?[[:space:]]\+[^[:space:]]"; then
+  deny "AGENTS.md §1: nunca hagas push forzado (+refspec)."
+fi
+
+if printf '%s' "$cmd" | grep -Eq "${git_cmd}reset([[:space:]].*)?[[:space:]]--hard([[:space:]]|$)"; then
+  deny "AGENTS.md §1: no uses reset --hard; revierte con un commit nuevo (git revert)."
+fi
+
+if printf '%s' "$cmd" | grep -Eq "${git_cmd}(clean[[:space:]].*-[a-zA-Z]*f|branch[[:space:]].*-D|checkout[[:space:]]+--[[:space:]]+\.|restore[[:space:]]+\.)"; then
+  deny "AGENTS.md §1: operación git destructiva bloqueada (clean -f, branch -D, descartar todos los cambios)."
 fi
 
 exit 0

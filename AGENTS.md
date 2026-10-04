@@ -2,9 +2,15 @@
 
 Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directrices de `.agents/rules/`. Para incorporar ciclos de Formación Profesional, también es obligatorio seguir `.agents/skills/agregar-fp/SKILL.md` y sus referencias.
 
-## 1. Control de versiones
+## 1. Control de versiones, tests y despliegue
 
-- **No hagas commits automáticamente.** Limítate a realizar cambios locales. El usuario decidirá y hará los commits.
+El agente se encarga de todo el ciclo de cada tarea, salvo que el usuario indique otra cosa:
+
+1. **Rama.** Cambios pequeños y acotados: en la rama de trabajo actual. Tareas grandes (funcionalidad nueva, migraciones, muchos archivos o riesgo alto): rama nueva `feature/NNN_descripcion` creada desde la rama actual, con la numeración de las existentes (`git branch -a`).
+2. **Verificación.** Lint y typecheck, y después las suites completas: `cd backend && npm test` y `cd frontend && npm test`. Si algo falla, se corrige (aunque no lo haya causado la tarea) y se vuelve a ejecutar hasta que todo pase.
+3. **Commit y push.** Mensaje en castellano que resuma la tarea. Nunca `push --force`, `reset --hard` ni reescribir historia publicada. No se hace merge a `main`: lo decide el usuario.
+4. **Despliegue en producción** (EC2 Ubuntu, ver `documentation/despliegue_produccion.md`), solo con los tests en verde: copia de seguridad (`scripts/backup-prod-db.sh`), `git pull` de la rama de trabajo y reconstrucción con `docker-compose.prod.yml`; después, comprobar contenedores, migraciones y API. Si el despliegue falla, volver al commit anterior desplegado y avisar.
+5. Si un despliegue puede interrumpir trabajo en curso (generaciones o traducciones) o implica migraciones de datos delicadas, avisar al usuario antes.
 
 ## 2. Documentación de tareas
 
@@ -40,12 +46,12 @@ Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directri
 - Comprueba la compatibilidad zoneless de dependencias externas; por ejemplo, `<markdown>` de `ngx-markdown` es compatible, pero no se debe asumir lo mismo del pipe.
 - No importes `zone.js/testing` ni uses `fakeAsync`/`tick` o la utilidad de pruebas `async` de Angular. Para esperar la estabilidad, usa tests nativos `async`/`await` con `await fixture.whenStable()`.
 - **Zoneless no prohíbe `TestBed` ni `fixture.detectChanges()`:** úsalos cuando el test necesite crear el fixture o solicitar explícitamente una actualización de la vista.
-- **No ejecutes tests ni builds** (por ejemplo, `npm test`, `ng test`, `npm run build` o `ng build`) durante las tareas. Deja su ejecución al usuario, salvo que este lo solicite explícitamente.
+- Al terminar cada tarea, ejecuta las suites completas (`npm test` en `backend/` y `frontend/`) y corrige los fallos antes de hacer commit (ver §1).
 
 ## 7. Migraciones y modificaciones de datos
 
 - Antes de añadir una migración, inspecciona el runner, las migraciones existentes y la secuencia para evitar colisiones; identifica qué entorno y colecciones afecta.
-- Trata las migraciones como cambios persistentes: define claramente su alcance, evita sobrescribir o borrar datos ajenos y verifica si es seguro reejecutarlas. No ejecutes operaciones contra producción sin autorización explícita.
+- Trata las migraciones como cambios persistentes: define claramente su alcance, evita sobrescribir o borrar datos ajenos y verifica si es seguro reejecutarlas. Fuera del despliegue descrito en §1 (que incluye la copia de seguridad previa y las migraciones del runner), no ejecutes operaciones de escritura contra producción sin autorización explícita.
 - Los scripts temporales de migración se guardan en el espacio temporal aprobado y se eliminan tras usarlos; una migración de producto debe residir en la carpeta de migraciones que utiliza el runner real.
 
 ## 8. Incorporación de ciclos FP

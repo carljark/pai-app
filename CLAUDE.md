@@ -6,7 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Notas adicionales para Claude Code
 
-- `.agents/rules/` duplica AGENTS.md (con nombres de herramientas de Antigravity). Si hay conflicto, manda AGENTS.md: **nunca ejecutes tests ni builds** salvo petición explícita, aunque `.agents/rules/05` diga lo contrario.
+- `.agents/rules/` duplica AGENTS.md (con nombres de herramientas de Antigravity). Si hay conflicto, manda AGENTS.md.
+- Cada tarea termina con tests completos en verde, commit, push y despliegue en el EC2 (AGENTS.md §1). Acceso: `ssh -i ~/UJI/co2univ/co2univ-key.pem ubuntu@51.92.83.118`; procedimiento en `documentation/despliegue_produccion.md`. El hook `.claude/hooks/guard-bash.sh` solo bloquea operaciones git destructivas.
 - Documentación, tareas y comentarios se redactan en castellano. Numera `tareas/` por orden numérico (`ls tareas | sort -n`), no alfabético: hay números de 2 y 3 dígitos.
 
 ## Estructura y comandos

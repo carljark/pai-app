@@ -1,8 +1,7 @@
 # Reglas Globales del Asistente (Antigravity)
 
 ## 1. Control de Versiones
-- **NUNCA** hagas commits automáticamente en el repositorio (Git).
-- Limítate a escribir o modificar el código localmente. Si se requiere un commit, el usuario lo hará manualmente.
+- Sigue el flujo de `AGENTS.md` §1: rama según el tamaño de la tarea, tests completos en verde, commit, push y despliegue en el EC2 con copia de seguridad previa.
 
 ## 2. Documentación de Tareas y Diseño Técnico
 - A partir de ahora, todo lo que implementes o desarrolles debe documentarse obligatoriamente en una carpeta llamada `tareas` en la raíz del proyecto.

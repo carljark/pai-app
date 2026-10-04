@@ -3,6 +3,7 @@ import { Subject, of, throwError } from 'rxjs';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { ProjectsTransferComponent } from './projects-transfer.component';
 import {
+  ExportableProject,
   ImportSummary,
   ProjectsTransferService,
   TRANSFER_FORMAT,
@@ -11,6 +12,14 @@ import {
 
 const transferFile = (projects: unknown[]) =>
   JSON.stringify({ format: TRANSFER_FORMAT, version: TRANSFER_VERSION, projects });
+
+const exportable = (id: string, title: string): ExportableProject => ({
+  _id: id,
+  title,
+  tipoNivel: 'FP_BASICA',
+  status: 'borrador',
+  owner: { email: `${id}@test.com`, name: `Autor ${id}` },
+});
 
 /** Selecciona un fichero en el input real del DOM y espera a que termine la importación. */
 const selectFile = async (fixture: ComponentFixture<ProjectsTransferComponent>, text?: string) => {
@@ -28,7 +37,6 @@ const selectFile = async (fixture: ComponentFixture<ProjectsTransferComponent>, 
 const summary = (extra: Partial<ImportSummary> = {}): ImportSummary => ({
   imported: 1,
   skipped: 0,
-  ownerFallback: 0,
   errors: [],
   ...extra,
 });
@@ -36,11 +44,23 @@ const summary = (extra: Partial<ImportSummary> = {}): ImportSummary => ({
 describe('ProjectsTransferComponent', () => {
   let fixture: ComponentFixture<ProjectsTransferComponent>;
   let component: ProjectsTransferComponent;
-  let transfer: { exportProjects: ReturnType<typeof vi.fn>; importChunk: ReturnType<typeof vi.fn> };
+  let transfer: {
+    listExportable: ReturnType<typeof vi.fn>;
+    exportProjects: ReturnType<typeof vi.fn>;
+    importChunk: ReturnType<typeof vi.fn>;
+  };
   const text = () => fixture.nativeElement.textContent as string;
+  const button = (selector: string) =>
+    fixture.nativeElement.querySelector(selector) as HTMLButtonElement;
 
   beforeEach(async () => {
-    transfer = { exportProjects: vi.fn(), importChunk: vi.fn() };
+    transfer = {
+      listExportable: vi.fn(() =>
+        of([exportable('a', 'Proyecto A'), exportable('b', 'Proyecto B')]),
+      ),
+      exportProjects: vi.fn(),
+      importChunk: vi.fn(),
+    };
     await TestBed.configureTestingModule({
       imports: [ProjectsTransferComponent],
       providers: [{ provide: ProjectsTransferService, useValue: transfer }],
@@ -52,54 +72,95 @@ describe('ProjectsTransferComponent', () => {
 
   afterEach(() => vi.restoreAllMocks());
 
-  it('debería descargar la exportación al pulsar «Exportar proyectos»', () => {
-    transfer.exportProjects.mockReturnValue(of(new Blob(['{}'])));
-    const createUrl = vi.fn(() => 'blob:exportacion');
+  const mockDownload = () => {
     const revokeUrl = vi.fn();
-    Object.assign(window.URL, { createObjectURL: createUrl, revokeObjectURL: revokeUrl });
+    Object.assign(window.URL, {
+      createObjectURL: vi.fn(() => 'blob:x'),
+      revokeObjectURL: revokeUrl,
+    });
     const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {});
+    return { click, revokeUrl };
+  };
 
-    (fixture.nativeElement.querySelector('.btn-primary') as HTMLButtonElement).click();
+  it('debería cargar y mostrar la lista de proyectos exportables', () => {
+    expect(transfer.listExportable).toHaveBeenCalled();
+    expect(text()).toContain('Proyecto A');
+    expect(text()).toContain('Exportar todos (2)');
+  });
 
+  it('debería exportar solo los proyectos seleccionados', () => {
+    transfer.exportProjects.mockReturnValue(of(new Blob(['{}'])));
+    const { click, revokeUrl } = mockDownload();
+    expect(button('.btn-primary').disabled).toBe(true);
+
+    const checkbox = fixture.nativeElement.querySelector(
+      '.export-selection__item .export-selection__checkbox',
+    ) as HTMLInputElement;
+    checkbox.click();
+    fixture.detectChanges();
+    expect(button('.btn-primary').textContent).toContain('Exportar seleccionados (1)');
+    button('.btn-primary').click();
+
+    expect(transfer.exportProjects).toHaveBeenCalledWith(['a']);
     expect(click).toHaveBeenCalled();
-    expect(revokeUrl).toHaveBeenCalledWith('blob:exportacion');
+    expect(revokeUrl).toHaveBeenCalledWith('blob:x');
     expect(component.isExporting()).toBe(false);
+  });
+
+  it('debería exportar todos los proyectos con «Exportar todos»', () => {
+    transfer.exportProjects.mockReturnValue(of(new Blob(['{}'])));
+    mockDownload();
+    button('.projects-transfer__export-all').click();
+    expect(transfer.exportProjects).toHaveBeenCalledWith([]);
   });
 
   it('debería avisar si la exportación falla', () => {
     transfer.exportProjects.mockReturnValue(throwError(() => new Error('500')));
-    (fixture.nativeElement.querySelector('.btn-primary') as HTMLButtonElement).click();
+    button('.projects-transfer__export-all').click();
     fixture.detectChanges();
     expect(text()).toContain('No se pudieron exportar los proyectos.');
     expect(component.isExporting()).toBe(false);
   });
 
-  it('debería deshabilitar la exportación mientras se exporta', () => {
-    component.isExporting.set(true);
+  it('debería avisar si no se puede cargar la lista', () => {
+    transfer.listExportable.mockReturnValue(throwError(() => new Error('500')));
+    component.loadExportable();
     fixture.detectChanges();
-    const button = fixture.nativeElement.querySelector('.btn-primary') as HTMLButtonElement;
-    expect(button.disabled).toBe(true);
-    expect(button.textContent).toContain('Exportando…');
+    expect(text()).toContain('No se pudo cargar la lista de proyectos.');
   });
 
-  it('debería importar el fichero seleccionado y mostrar el resumen', async () => {
+  it('debería quitar de la selección los proyectos que ya no están en la lista', () => {
+    component.selectedIds.set(['a', 'desaparecido']);
+    component.loadExportable();
+    expect(component.selectedIds()).toEqual(['a']);
+  });
+
+  it('debería deshabilitar la exportación mientras se exporta', () => {
+    component.selectedIds.set(['a']);
+    component.isExporting.set(true);
+    fixture.detectChanges();
+    expect(button('.btn-primary').disabled).toBe(true);
+    expect(button('.btn-primary').textContent).toContain('Exportando…');
+  });
+
+  it('debería importar a nombre del usuario activo, mostrar el resumen y recargar la lista', async () => {
     transfer.importChunk.mockReturnValue(
       of(
         summary({
           imported: 2,
           skipped: 1,
-          ownerFallback: 1,
           errors: [{ title: 'Vacío', error: 'No tiene contenido.' }],
         }),
       ),
     );
+    transfer.listExportable.mockClear();
 
     await selectFile(fixture, transferFile([{ title: 'A' }, { title: 'B' }]));
 
     expect(transfer.importChunk).toHaveBeenCalledTimes(1);
-    expect(text()).toContain('Importados: 2 · Ya existían: 1 · Con errores: 1');
-    expect(text()).toContain('1 proyecto(s) quedaron a tu nombre');
+    expect(text()).toContain('Importados a tu nombre: 2 · Ya los tenías: 1 · Con errores: 1');
     expect(text()).toContain('Vacío: No tiene contenido.');
+    expect(transfer.listExportable).toHaveBeenCalledTimes(1);
   });
 
   it('debería enviar los ficheros grandes en varios trozos y sumar sus resúmenes', async () => {
@@ -108,7 +169,6 @@ describe('ProjectsTransferComponent', () => {
     await selectFile(fixture, transferFile([{ big }, { big }]));
     expect(transfer.importChunk).toHaveBeenCalledTimes(2);
     expect(component.summary()?.imported).toBe(2);
-    expect(text()).not.toContain('quedaron a tu nombre');
   });
 
   it('debería mostrar el progreso mientras importa', async () => {

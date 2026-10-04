@@ -1,10 +1,9 @@
 import mongoose from 'mongoose';
 import { Project, CONTENT_LANGUAGES } from '../models/Project';
-import { User } from '../models/User';
 
 /**
- * Exportación e importación de proyectos entre instalaciones (producción ↔ local).
- * Los usuarios se identifican por email, porque sus ids no coinciden entre bases de datos.
+ * Exportación e importación de proyectos entre instalaciones (producción ↔ local) o entre usuarios.
+ * Se exportan proyectos de cualquier usuario; al importarlos quedan a nombre de quien importa.
  * Ver documentation/exportacion_importacion_proyectos.md.
  */
 export const TRANSFER_FORMAT = 'plappin-projects';
@@ -27,7 +26,6 @@ export interface TransferUser {
 export interface ImportSummary {
   imported: number;
   skipped: number;
-  ownerFallback: number;
   errors: { title: string; error: string }[];
 }
 
@@ -55,10 +53,10 @@ export const serializeProject = (p: any) => ({
     .map((c: any) => ({ ...exportUser(c.userId), addedAt: c.addedAt }))
 });
 
-/** Todos los proyectos terminados o, si se indican, solo los de `ids`. */
+/** Todos los proyectos terminados o, si se indican, solo los de `ids` (que también deben estar terminados). */
 export const buildProjectsExport = async (ids: string[] = []) => {
   const validIds = ids.filter(id => mongoose.isValidObjectId(id));
-  const filter = ids.length ? { _id: { $in: validIds } } : { status: { $in: EXPORTABLE_STATUSES } };
+  const filter = { status: { $in: EXPORTABLE_STATUSES }, ...(ids.length ? { _id: { $in: validIds } } : {}) };
   const projects = await Project.find(filter)
     .sort({ createdAt: 1 })
     .populate('userId', 'name email')
@@ -81,24 +79,31 @@ export const validateTransferPayload = (body: any): string | null => {
   return null;
 };
 
-const normalizeEmail = (email: unknown) => (typeof email === 'string' ? email.trim().toLowerCase() : '');
-
-const usersByEmail = async (projects: any[]): Promise<Map<string, any>> => {
-  const emails = new Set<string>();
-  for (const p of projects) {
-    emails.add(normalizeEmail(p?.owner?.email));
-    for (const c of p?.collaborators || []) emails.add(normalizeEmail(c?.email));
-  }
-  emails.delete('');
-  const users = await User.find({ email: { $in: [...emails] } }).select('_id email').lean();
-  return new Map(users.map(u => [normalizeEmail(u.email), u._id]));
+/** Lista ligera de los proyectos exportables (de cualquier usuario) para elegir cuáles exportar. */
+export const listExportableProjects = async () => {
+  const projects = await Project.find({ status: { $in: EXPORTABLE_STATUSES } })
+    .select('title modules tipoNivel courseLevel status language createdAt userId')
+    .sort({ createdAt: -1 })
+    .populate('userId', 'name email')
+    .lean();
+  return projects.map((p: any) => ({
+    _id: String(p._id),
+    title: importedTitle(p),
+    ...pick(p, ['tipoNivel', 'courseLevel', 'status', 'language', 'createdAt']),
+    owner: exportUser(p.userId)
+  }));
 };
 
-const alreadyImported = async (sourceId: unknown): Promise<boolean> => {
+/**
+ * ¿Ya tiene quien importa este proyecto? Se compara con sus proyectos importados del mismo origen y,
+ * si el origen es esta misma instalación, con el propio proyecto original si es suyo. Así se puede
+ * copiar a la cuenta propia un proyecto de otro usuario, pero no duplicarlo al reimportar.
+ */
+const alreadyImported = async (sourceId: unknown, importerId: any): Promise<boolean> => {
   if (typeof sourceId !== 'string' || !sourceId) return false;
   const or: any[] = [{ importSourceId: sourceId }];
   if (mongoose.isValidObjectId(sourceId)) or.push({ _id: sourceId });
-  return Boolean(await Project.exists({ $or: or }));
+  return Boolean(await Project.exists({ userId: importerId, $or: or }));
 };
 
 /**
@@ -118,51 +123,40 @@ export const importedTitle = (p: any): string => {
   return modules.length ? modules.join(' + ') : 'Proyecto importado';
 };
 
-const toProjectDoc = (p: any, users: Map<string, any>, fallbackUserId: any) => {
-  const ownerId = users.get(normalizeEmail(p.owner?.email));
-  const collaborators = (p.collaborators || [])
-    .map((c: any) => ({ userId: users.get(normalizeEmail(c?.email)), addedAt: c?.addedAt }))
-    .filter((c: any) => c.userId && String(c.userId) !== String(ownerId || fallbackUserId));
-  return {
-    ...pick(p, COPIED_FIELDS),
-    title: importedTitle(p),
-    status: EXPORTABLE_STATUSES.includes(p.status) ? p.status : 'borrador',
-    language: CONTENT_LANGUAGES.includes(p.language) ? p.language : 'castellano',
-    generatedContent: { rawText: p.generatedContent.rawText },
-    translations: exportTranslations(p.translations),
-    userId: ownerId || fallbackUserId,
-    collaborators,
-    importSourceId: typeof p.sourceId === 'string' ? p.sourceId : undefined,
-    importedAt: new Date()
-  };
-};
+/** El proyecto importado es de quien importa y no conserva colaboradores de la instalación de origen. */
+const toProjectDoc = (p: any, importerId: any) => ({
+  ...pick(p, COPIED_FIELDS),
+  title: importedTitle(p),
+  status: EXPORTABLE_STATUSES.includes(p.status) ? p.status : 'borrador',
+  language: CONTENT_LANGUAGES.includes(p.language) ? p.language : 'castellano',
+  generatedContent: { rawText: p.generatedContent.rawText },
+  translations: exportTranslations(p.translations),
+  userId: importerId,
+  collaborators: [],
+  importSourceId: typeof p.sourceId === 'string' ? p.sourceId : undefined,
+  importedAt: new Date()
+});
 
-const importOne = async (p: any, users: Map<string, any>, importerId: any, summary: ImportSummary) => {
+const importOne = async (p: any, importerId: any, summary: ImportSummary) => {
   const reason = invalidProjectReason(p);
   if (reason) {
     summary.errors.push({ title: importedTitle(p), error: reason });
     return;
   }
-  if (await alreadyImported(p.sourceId)) {
+  if (await alreadyImported(p.sourceId, importerId)) {
     summary.skipped++;
     return;
   }
-  const doc = toProjectDoc(p, users, importerId);
-  if (!users.has(normalizeEmail(p.owner?.email))) summary.ownerFallback++;
-  await Project.create(doc);
+  await Project.create(toProjectDoc(p, importerId));
   summary.imported++;
 };
 
-/**
- * Crea los proyectos del fichero. Se omiten los que ya existen (mismo origen), y los de un autor
- * que no existe en esta instalación quedan a nombre de quien importa.
- */
+/** Crea a nombre de quien importa los proyectos del fichero que todavía no tenga. */
 export const importProjects = async (projects: any[], importerId: any): Promise<ImportSummary> => {
-  const summary: ImportSummary = { imported: 0, skipped: 0, ownerFallback: 0, errors: [] };
-  const users = await usersByEmail(projects);
+  const summary: ImportSummary = { imported: 0, skipped: 0, errors: [] };
   for (const p of projects) {
     try {
-      await importOne(p, users, importerId, summary);
+      await importOne(p, importerId, summary);
     } catch (error: any) {
       summary.errors.push({ title: importedTitle(p), error: error?.message || String(error) });
     }

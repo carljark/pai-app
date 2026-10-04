@@ -1,0 +1,101 @@
+@use '../../../../../styles/variables' as variables;
+
+.export-selection {
+  margin-top: variables.$spacing-4;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+}
+
+.export-selection__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: variables.$spacing-3;
+  padding: variables.$spacing-3 variables.$spacing-4;
+  background: variables.$color-surface-alt;
+  border-bottom: 1px solid variables.$color-border;
+}
+
+.export-selection__search-label {
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-medium;
+}
+
+.export-selection__search {
+  flex: 1 1 16rem;
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+  font-size: variables.$font-size-sm;
+
+  &:focus {
+    outline: 2px solid variables.$color-border-focus;
+    outline-offset: 1px;
+  }
+}
+
+.export-selection__select-all {
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-2;
+  font-size: variables.$font-size-sm;
+  cursor: pointer;
+}
+
+.export-selection__count {
+  margin-left: auto;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.export-selection__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 22rem;
+  overflow-y: auto;
+}
+
+.export-selection__item + .export-selection__item {
+  border-top: 1px solid variables.$color-border;
+}
+
+.export-selection__label {
+  display: flex;
+  align-items: flex-start;
+  gap: variables.$spacing-3;
+  padding: variables.$spacing-3 variables.$spacing-4;
+  cursor: pointer;
+
+  &:hover {
+    background: variables.$color-primary-light;
+  }
+}
+
+.export-selection__checkbox {
+  margin-top: 0.2rem;
+  accent-color: variables.$color-primary;
+}
+
+.export-selection__text {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-1;
+}
+
+.export-selection__title {
+  color: variables.$color-text-main;
+  font-weight: variables.$font-weight-medium;
+}
+
+.export-selection__meta {
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-xs;
+}
+
+.export-selection__empty {
+  margin: 0;
+  padding: variables.$spacing-4;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}

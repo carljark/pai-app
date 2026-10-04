@@ -3,21 +3,35 @@
     Exportar e importar proyectos
   </h2>
   <p class="projects-transfer__intro">
-    Descarga todos los proyectos terminados (borradores y publicados) en un fichero JSON e impórtalo
-    en otra instalación de Plappin, por ejemplo de producción a local o al revés. Los autores se
-    reconocen por su email; los proyectos ya importados no se duplican.
+    Exporta a un fichero JSON los proyectos terminados (borradores y publicados) de cualquier
+    usuario: todos o solo los que selecciones. Al importar un fichero, de esta u otra instalación de
+    Plappin, los proyectos se guardan a tu nombre; los que ya tengas importados no se duplican.
   </p>
+
+  <h3 class="projects-transfer__subtitle">Exportar</h3>
+  <app-export-selection [projects]="exportable()" [(selectedIds)]="selectedIds" />
 
   <div class="projects-transfer__actions">
     <button
       type="button"
       class="btn-primary projects-transfer__button"
-      [disabled]="isExporting() || isImporting()"
+      [disabled]="!selectedIds().length || isExporting() || isImporting()"
+      (click)="exportProjects(selectedIds())"
+    >
+      {{ isExporting() ? 'Exportando…' : 'Exportar seleccionados (' + selectedIds().length + ')' }}
+    </button>
+    <button
+      type="button"
+      class="btn-secondary projects-transfer__button projects-transfer__export-all"
+      [disabled]="!exportable().length || isExporting() || isImporting()"
       (click)="exportProjects()"
     >
-      {{ isExporting() ? 'Exportando…' : 'Exportar proyectos' }}
+      Exportar todos ({{ exportable().length }})
     </button>
+  </div>
 
+  <h3 class="projects-transfer__subtitle">Importar</h3>
+  <div class="projects-transfer__actions">
     <label
       class="btn-secondary projects-transfer__button projects-transfer__file-label"
       [class.projects-transfer__file-label--disabled]="isImporting()"
@@ -48,15 +62,9 @@
   @if (summary(); as s) {
     <div class="projects-transfer__message projects-transfer__message--success" role="status">
       <p class="projects-transfer__summary">
-        Importados: {{ s.imported }} · Ya existían: {{ s.skipped }} · Con errores:
+        Importados a tu nombre: {{ s.imported }} · Ya los tenías: {{ s.skipped }} · Con errores:
         {{ s.errors.length }}
       </p>
-      @if (s.ownerFallback) {
-        <p class="projects-transfer__note">
-          {{ s.ownerFallback }} proyecto(s) quedaron a tu nombre porque su autor no existe en esta
-          instalación.
-        </p>
-      }
       @if (s.errors.length) {
         <ul class="projects-transfer__errors">
           @for (e of s.errors; track $index) {

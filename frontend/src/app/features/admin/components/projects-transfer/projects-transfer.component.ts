@@ -1,6 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { ExportSelectionComponent } from '../export-selection/export-selection.component';
 import {
+  ExportableProject,
   ImportSummary,
   ProjectsTransferFile,
   ProjectsTransferService,
@@ -11,10 +13,14 @@ import {
   parseTransferFile,
 } from '../../services/projects-transfer.service';
 
-/** Exportar todos los proyectos a un fichero JSON e importar ficheros de otra instalación. */
+/**
+ * Exportar proyectos de cualquier usuario (todos o los seleccionados) a un fichero JSON e importar
+ * ficheros, de esta u otra instalación, a nombre del usuario activo.
+ */
 @Component({
   selector: 'app-projects-transfer',
   standalone: true,
+  imports: [ExportSelectionComponent],
   templateUrl: './projects-transfer.component.html',
   styleUrl: './projects-transfer.component.scss',
 })
@@ -26,11 +32,30 @@ export class ProjectsTransferComponent {
   progress = signal<{ done: number; total: number } | null>(null);
   summary = signal<ImportSummary | null>(null);
   error = signal<string | null>(null);
+  exportable = signal<ExportableProject[]>([]);
+  selectedIds = signal<string[]>([]);
 
-  exportProjects() {
+  constructor() {
+    this.loadExportable();
+  }
+
+  loadExportable() {
+    this.transfer.listExportable().subscribe({
+      next: (projects) => {
+        this.exportable.set(projects);
+        // Se descartan de la selección los proyectos que ya no están en la lista
+        const ids = new Set(projects.map((p) => p._id));
+        this.selectedIds.update((selected) => selected.filter((id) => ids.has(id)));
+      },
+      error: () => this.error.set('No se pudo cargar la lista de proyectos.'),
+    });
+  }
+
+  /** Sin `ids`, exporta todos los proyectos terminados. */
+  exportProjects(ids: string[] = []) {
     this.isExporting.set(true);
     this.error.set(null);
-    this.transfer.exportProjects().subscribe({
+    this.transfer.exportProjects(ids).subscribe({
       next: (blob) => {
         this.download(blob, exportFileName());
         this.isExporting.set(false);
@@ -71,6 +96,7 @@ export class ProjectsTransferComponent {
     } finally {
       this.isImporting.set(false);
       this.progress.set(null);
+      this.loadExportable();
     }
   }
 

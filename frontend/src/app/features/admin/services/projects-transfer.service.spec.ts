@@ -27,11 +27,26 @@ describe('ProjectsTransferService', () => {
 
   afterEach(() => http.verify());
 
+  it('listExportable debería pedir la lista de proyectos exportables', () => {
+    let received: unknown;
+    service.listExportable().subscribe((list) => (received = list));
+    http.expectOne('/api/admin/projects/exportable').flush([{ _id: '1', title: 'A', owner: null }]);
+    expect(received).toEqual([{ _id: '1', title: 'A', owner: null }]);
+  });
+
+  it('exportProjects debería exportar solo los ids indicados', () => {
+    service.exportProjects(['a', 'b']).subscribe();
+    const req = http.expectOne((r) => r.url === '/api/admin/projects/export');
+    expect(req.request.params.get('ids')).toBe('a,b');
+    req.flush(new Blob(['{}']));
+  });
+
   it('exportProjects debería descargar la exportación como blob', () => {
     let received: Blob | undefined;
     service.exportProjects().subscribe((blob) => (received = blob));
     const req = http.expectOne('/api/admin/projects/export');
     expect(req.request.method).toBe('GET');
+    expect(req.request.params.has('ids')).toBe(false);
     expect(req.request.responseType).toBe('blob');
     req.flush(new Blob(['{}']));
     expect(received).toBeInstanceOf(Blob);
@@ -81,12 +96,11 @@ describe('utilidades de exportación', () => {
   });
 
   it('mergeSummaries debería sumar contadores y concatenar errores', () => {
-    const a = { imported: 1, skipped: 2, ownerFallback: 1, errors: [{ title: 'A', error: 'x' }] };
-    const b = { imported: 3, skipped: 0, ownerFallback: 0, errors: [{ title: 'B', error: 'y' }] };
+    const a = { imported: 1, skipped: 2, errors: [{ title: 'A', error: 'x' }] };
+    const b = { imported: 3, skipped: 0, errors: [{ title: 'B', error: 'y' }] };
     expect(mergeSummaries(a, b)).toEqual({
       imported: 4,
       skipped: 2,
-      ownerFallback: 1,
       errors: [a.errors[0], b.errors[0]],
     });
     expect(mergeSummaries(emptySummary(), emptySummary())).toEqual(emptySummary());

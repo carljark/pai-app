@@ -121,7 +121,11 @@ describe('AdminDashboardComponent', () => {
         // El test que pulsa todos los botones también pulsa los de exportar/importar
         {
           provide: ProjectsTransferService,
-          useValue: { exportProjects: () => EMPTY, importChunk: () => EMPTY },
+          useValue: {
+            listExportable: () => EMPTY,
+            exportProjects: () => EMPTY,
+            importChunk: () => EMPTY,
+          },
         },
       ],
     }).compileComponents();

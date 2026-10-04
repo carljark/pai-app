@@ -1,6 +1,20 @@
 import type { Response } from 'express';
 import { ActivityLog } from '../models/ActivityLog';
-import { buildProjectsExport, importProjects as importProjectList, validateTransferPayload } from '../services/project-transfer.service';
+import {
+  buildProjectsExport,
+  importProjects as importProjectList,
+  listExportableProjects,
+  validateTransferPayload
+} from '../services/project-transfer.service';
+
+/** GET /api/admin/projects/exportable: proyectos de cualquier usuario que se pueden exportar. */
+export const listExportable = async (_req: any, res: Response) => {
+  try {
+    res.json(await listExportableProjects());
+  } catch (error: any) {
+    res.status(500).json({ error: 'Error al listar los proyectos: ' + error.message });
+  }
+};
 
 const exportFileName = () => `plappin-proyectos-${new Date().toISOString().slice(0, 10)}.json`;
 
@@ -19,7 +33,7 @@ export const exportProjects = async (req: any, res: Response) => {
 
 /**
  * POST /api/admin/projects/import: recibe un fichero de exportación (o un trozo, con el mismo
- * formato) y crea los proyectos que no existan.
+ * formato) y crea a nombre del usuario activo los proyectos que todavía no tenga.
  */
 export const importProjects = async (req: any, res: Response) => {
   const invalid = validateTransferPayload(req.body);

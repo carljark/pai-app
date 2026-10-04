@@ -35,6 +35,25 @@ describe('Exportación e importación de proyectos', () => {
     const { token } = await createTestUser('teacher', 'docente@test.com');
     expect((await exportAll(token)).status).toBe(403);
     expect((await importPayload(token, {})).status).toBe(403);
+    expect((await request(app).get('/api/admin/projects/exportable').set('Authorization', `Bearer ${token}`)).status).toBe(403);
+  });
+
+  it('debería listar los proyectos exportables de cualquier usuario', async () => {
+    const { token, user: admin } = await createTestUser('admin', 'admin@test.com');
+    const { user: teacher } = await createTestUser('teacher', 'autora@test.com');
+    await Project.create([
+      baseProject(teacher._id, { title: undefined, modules: ['Maquillaje'], createdAt: new Date('2026-01-01') }),
+      baseProject(admin._id, { title: 'Del admin', status: 'publicado', createdAt: new Date('2026-02-01') }),
+      baseProject(teacher._id, { title: 'En cola', status: 'en_cola' })
+    ]);
+
+    const res = await request(app).get('/api/admin/projects/exportable').set('Authorization', `Bearer ${token}`);
+
+    expect(res.status).toBe(200);
+    expect(res.body.map((p: any) => p.title)).toEqual(['Del admin', 'Maquillaje']);
+    expect(res.body[1]).toMatchObject({ tipoNivel: 'FP_BASICA', status: 'borrador', owner: { email: 'autora@test.com' } });
+    expect(res.body[1]._id).toEqual(expect.any(String));
+    expect(res.body[1]).not.toHaveProperty('generatedContent');
   });
 
   it('debería exportar los proyectos terminados con autor y colaboradores por email', async () => {
@@ -69,12 +88,16 @@ describe('Exportación e importación de proyectos', () => {
 
   it('debería exportar solo los proyectos indicados en ids e ignorar ids no válidos', async () => {
     const { token, user } = await createTestUser('admin', 'admin@test.com');
-    const [a] = await Project.create([baseProject(user._id, { title: 'A' }), baseProject(user._id, { title: 'B' })]);
-    const res = await exportAll(token, `?ids=${a!._id},no-es-un-id`);
+    const [a, , queued] = await Project.create([
+      baseProject(user._id, { title: 'A' }),
+      baseProject(user._id, { title: 'B' }),
+      baseProject(user._id, { title: 'En cola', status: 'en_cola' })
+    ]);
+    const res = await exportAll(token, `?ids=${a!._id},${queued!._id},no-es-un-id`);
     expect(res.body.projects.map((p: any) => p.title)).toEqual(['A']);
   });
 
-  it('debería importar asignando el autor por email y omitir los proyectos ya importados', async () => {
+  it('debería importar a nombre del usuario activo, sin colaboradores, y omitir los que ya tiene', async () => {
     const { token, user: admin } = await createTestUser('admin', 'admin@test.com');
     const { user: teacher } = await createTestUser('teacher', 'autora@test.com');
     await Project.create(baseProject(teacher._id, { collaborators: [{ userId: admin._id }] }));
@@ -82,10 +105,10 @@ describe('Exportación e importación de proyectos', () => {
     await Project.deleteMany({});
 
     const first = await importPayload(token, exported);
-    expect(first.body).toEqual({ imported: 1, skipped: 0, ownerFallback: 0, errors: [] });
+    expect(first.body).toEqual({ imported: 1, skipped: 0, errors: [] });
     const imported = await Project.findOne().lean();
-    expect(String(imported!.userId)).toBe(String(teacher._id));
-    expect(imported!.collaborators.map(c => String(c.userId))).toEqual([String(admin._id)]);
+    expect(String(imported!.userId)).toBe(String(admin._id));
+    expect(imported!.collaborators).toHaveLength(0);
     expect(imported!.importSourceId).toBe(exported.projects[0].sourceId);
     expect(imported!.importedAt).toBeInstanceOf(Date);
 
@@ -94,11 +117,23 @@ describe('Exportación e importación de proyectos', () => {
     expect(await ActivityLog.countDocuments({ action: 'IMPORT_PROJECTS' })).toBe(2);
   });
 
-  it('debería omitir al importar un proyecto que sigue existiendo en la misma base de datos', async () => {
+  it('debería omitir un proyecto propio de la misma base de datos', async () => {
     const { token, user } = await createTestUser('admin', 'admin@test.com');
     await Project.create(baseProject(user._id));
     const res = await importPayload(token, (await exportAll(token)).body);
     expect(res.body).toMatchObject({ imported: 0, skipped: 1 });
+  });
+
+  it('debería copiar a la cuenta propia un proyecto de otro usuario de la misma base de datos', async () => {
+    const { token, user: admin } = await createTestUser('admin', 'admin@test.com');
+    const { user: teacher } = await createTestUser('teacher', 'autora@test.com');
+    await Project.create(baseProject(teacher._id));
+    const exported = (await exportAll(token)).body;
+
+    expect((await importPayload(token, exported)).body).toMatchObject({ imported: 1, skipped: 0 });
+    expect((await importPayload(token, exported)).body).toMatchObject({ imported: 0, skipped: 1 });
+    expect(await Project.countDocuments({ userId: teacher._id })).toBe(1);
+    expect(await Project.countDocuments({ userId: admin._id })).toBe(1);
   });
 
   it('debería conservar el origen al reexportar un proyecto importado (ida y vuelta)', async () => {
@@ -108,18 +143,17 @@ describe('Exportación e importación de proyectos', () => {
     expect(res.body.projects[0].sourceId).toBe('id-de-produccion');
   });
 
-  it('debería asignar a quien importa los proyectos de autores desconocidos y descartar colaboradores desconocidos', async () => {
+  it('debería normalizar el estado y el idioma no válidos de un proyecto de otra instalación', async () => {
     const { token, user: admin } = await createTestUser('admin', 'admin@test.com');
     const payload = {
       format: 'plappin-projects', version: 1,
       projects: [{
         sourceId: 'externo-1', title: 'De otra instalación', tipoNivel: 'CFGM_ESTETICA', status: 'generando', language: 'aleman',
-        generatedContent: { rawText: 'Texto' }, owner: { email: 'nadie@otro.com' },
-        collaborators: [{ email: 'tampoco@otro.com' }, { email: 'ADMIN@test.com' }]
+        generatedContent: { rawText: 'Texto' }, owner: { email: 'nadie@otro.com' }, collaborators: [{ email: 'ADMIN@test.com' }]
       }]
     };
     const res = await importPayload(token, payload);
-    expect(res.body).toMatchObject({ imported: 1, ownerFallback: 1 });
+    expect(res.body).toMatchObject({ imported: 1 });
     const p = await Project.findOne().lean();
     expect(String(p!.userId)).toBe(String(admin._id));
     expect(p!.collaborators).toHaveLength(0);
@@ -176,6 +210,8 @@ describe('Exportación e importación de proyectos', () => {
     const { token } = await createTestUser('admin', 'admin@test.com');
     vi.spyOn(transfer, 'buildProjectsExport').mockRejectedValueOnce(new Error('sin base'));
     vi.spyOn(transfer, 'importProjects').mockRejectedValueOnce(new Error('sin base'));
+    vi.spyOn(transfer, 'listExportableProjects').mockRejectedValueOnce(new Error('sin base'));
+    expect((await request(app).get('/api/admin/projects/exportable').set('Authorization', `Bearer ${token}`)).status).toBe(500);
     expect((await exportAll(token)).status).toBe(500);
     expect((await importPayload(token, { format: 'plappin-projects', version: 1, projects: [] })).status).toBe(500);
     vi.restoreAllMocks();

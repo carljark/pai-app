@@ -22,21 +22,26 @@ export interface ProjectsTransferFile {
 export interface ImportSummary {
   imported: number;
   skipped: number;
-  ownerFallback: number;
   errors: { title: string; error: string }[];
 }
 
-export const emptySummary = (): ImportSummary => ({
-  imported: 0,
-  skipped: 0,
-  ownerFallback: 0,
-  errors: [],
-});
+/** Proyecto de la lista para elegir qué exportar (GET /api/admin/projects/exportable). */
+export interface ExportableProject {
+  _id: string;
+  title: string;
+  tipoNivel?: string;
+  courseLevel?: string;
+  status?: string;
+  language?: string;
+  createdAt?: string;
+  owner: { email: string; name?: string } | null;
+}
+
+export const emptySummary = (): ImportSummary => ({ imported: 0, skipped: 0, errors: [] });
 
 export const mergeSummaries = (a: ImportSummary, b: ImportSummary): ImportSummary => ({
   imported: a.imported + b.imported,
   skipped: a.skipped + b.skipped,
-  ownerFallback: a.ownerFallback + b.ownerFallback,
   errors: [...a.errors, ...b.errors],
 });
 
@@ -82,8 +87,17 @@ export const exportFileName = (date = new Date()) =>
 export class ProjectsTransferService {
   private http = inject(HttpClient);
 
-  exportProjects(): Observable<Blob> {
-    return this.http.get('/api/admin/projects/export', { responseType: 'blob' });
+  listExportable(): Observable<ExportableProject[]> {
+    return this.http.get<ExportableProject[]>('/api/admin/projects/exportable');
+  }
+
+  /** Sin `ids`, exporta todos los proyectos terminados. */
+  exportProjects(ids: string[] = []): Observable<Blob> {
+    const params = ids.length ? { ids: ids.join(',') } : undefined;
+    return this.http.get('/api/admin/projects/export', {
+      responseType: 'blob',
+      ...(params ? { params } : {}),
+    });
   }
 
   importChunk(file: ProjectsTransferFile, projects: unknown[]): Observable<ImportSummary> {

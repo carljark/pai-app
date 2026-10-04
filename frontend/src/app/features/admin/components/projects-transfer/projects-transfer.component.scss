@@ -19,6 +19,12 @@
   max-width: 70ch;
 }
 
+.projects-transfer__subtitle {
+  margin: variables.$spacing-6 0 0;
+  color: variables.$color-text-main;
+  font-size: variables.$font-size-lg;
+}
+
 .projects-transfer__actions {
   display: flex;
   flex-wrap: wrap;
@@ -74,12 +80,6 @@
 .projects-transfer__summary {
   margin: 0;
   font-weight: variables.$font-weight-semibold;
-}
-
-.projects-transfer__note {
-  margin: variables.$spacing-2 0 0;
-  color: variables.$color-text-muted;
-  font-size: variables.$font-size-sm;
 }
 
 .projects-transfer__errors {

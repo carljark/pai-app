@@ -1,0 +1,56 @@
+<div class="export-selection">
+  <div class="export-selection__toolbar">
+    <label class="export-selection__search-label" for="export-selection-search">Buscar</label>
+    <input
+      id="export-selection-search"
+      type="search"
+      class="export-selection__search"
+      placeholder="Título, nombre o email del autor"
+      [value]="query()"
+      (input)="onSearch($event)"
+    />
+    <label class="export-selection__select-all">
+      <input
+        type="checkbox"
+        class="export-selection__checkbox"
+        [checked]="allFilteredSelected()"
+        [disabled]="!filtered().length"
+        (change)="toggleAllFiltered()"
+      />
+      Seleccionar todos los visibles
+    </label>
+    <span class="export-selection__count">{{ selectedIds().length }} seleccionados</span>
+  </div>
+
+  @if (filtered().length) {
+    <ul class="export-selection__list">
+      @for (p of filtered(); track p._id) {
+        <li class="export-selection__item">
+          <label class="export-selection__label">
+            <input
+              type="checkbox"
+              class="export-selection__checkbox"
+              [checked]="isSelected(p._id)"
+              (change)="toggle(p._id)"
+            />
+            <span class="export-selection__text">
+              <span class="export-selection__title">{{ p.title }}</span>
+              <span class="export-selection__meta">
+                {{ p.owner?.name || p.owner?.email || 'Sin autor' }} · {{ levelLabel(p.tipoNivel) }}
+                {{ p.courseLevel }} · {{ p.status }} · {{ p.createdAt | date: 'dd/MM/yyyy' }}
+              </span>
+            </span>
+          </label>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="export-selection__empty">
+      {{
+        projects().length
+          ? 'Ningún proyecto coincide con la búsqueda.'
+          : 'No hay proyectos para exportar.'
+      }}
+    </p>
+  }
+</div>

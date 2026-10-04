@@ -57,6 +57,9 @@ const ProjectSchema = new mongoose.Schema({
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     addedAt: { type: Date, default: Date.now }
   }],
+  /** Id del proyecto original si llegó por importación (evita duplicarlo al reimportar). */
+  importSourceId: { type: String, index: true },
+  importedAt: Date,
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 });

@@ -1,0 +1,69 @@
+<section class="projects-transfer" aria-labelledby="projects-transfer-title">
+  <h2 id="projects-transfer-title" class="projects-transfer__title">
+    Exportar e importar proyectos
+  </h2>
+  <p class="projects-transfer__intro">
+    Descarga todos los proyectos terminados (borradores y publicados) en un fichero JSON e impórtalo
+    en otra instalación de Plappin, por ejemplo de producción a local o al revés. Los autores se
+    reconocen por su email; los proyectos ya importados no se duplican.
+  </p>
+
+  <div class="projects-transfer__actions">
+    <button
+      type="button"
+      class="btn-primary projects-transfer__button"
+      [disabled]="isExporting() || isImporting()"
+      (click)="exportProjects()"
+    >
+      {{ isExporting() ? 'Exportando…' : 'Exportar proyectos' }}
+    </button>
+
+    <label
+      class="btn-secondary projects-transfer__button projects-transfer__file-label"
+      [class.projects-transfer__file-label--disabled]="isImporting()"
+    >
+      {{ isImporting() ? 'Importando…' : 'Importar desde fichero' }}
+      <input
+        type="file"
+        accept="application/json,.json"
+        class="projects-transfer__file-input"
+        [disabled]="isImporting()"
+        (change)="onFileSelected($event)"
+      />
+    </label>
+  </div>
+
+  @if (progress(); as p) {
+    <p class="projects-transfer__progress" role="status">
+      Importando proyectos: {{ p.done }} de {{ p.total }}…
+    </p>
+  }
+
+  @if (error()) {
+    <p class="projects-transfer__message projects-transfer__message--error" role="alert">
+      {{ error() }}
+    </p>
+  }
+
+  @if (summary(); as s) {
+    <div class="projects-transfer__message projects-transfer__message--success" role="status">
+      <p class="projects-transfer__summary">
+        Importados: {{ s.imported }} · Ya existían: {{ s.skipped }} · Con errores:
+        {{ s.errors.length }}
+      </p>
+      @if (s.ownerFallback) {
+        <p class="projects-transfer__note">
+          {{ s.ownerFallback }} proyecto(s) quedaron a tu nombre porque su autor no existe en esta
+          instalación.
+        </p>
+      }
+      @if (s.errors.length) {
+        <ul class="projects-transfer__errors">
+          @for (e of s.errors; track $index) {
+            <li class="projects-transfer__error">{{ e.title }}: {{ e.error }}</li>
+          }
+        </ul>
+      }
+    </div>
+  }
+</section>

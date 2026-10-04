@@ -14,6 +14,8 @@ frontend/node_modules/
 # Database data
 mongo_data/
 db/
+# Copias de seguridad y exportaciones de la base de datos (contienen usuarios y proyectos reales)
+backups/
 
 # Environment variables
 .env

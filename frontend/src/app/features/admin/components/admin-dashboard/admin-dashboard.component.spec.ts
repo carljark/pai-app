@@ -3,10 +3,11 @@ import { AdminDashboardComponent } from './admin-dashboard.component';
 import { AdminFacade } from '../../services/admin.facade';
 import { FeedbackService } from '../../../feedback/services/feedback.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
-import { of, throwError } from 'rxjs';
+import { EMPTY, of, throwError } from 'rxjs';
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ActivityLog } from '../../models/admin.model';
+import { ProjectsTransferService } from '../../services/projects-transfer.service';
 
 // Los tests usan logs parciales
 const asLog = (l: object) => l as ActivityLog;
@@ -117,6 +118,11 @@ describe('AdminDashboardComponent', () => {
         { provide: AdminFacade, useValue: mockFacade },
         { provide: FeedbackService, useValue: mockFeedbackService },
         { provide: ProjectsFacade, useValue: mockProjects },
+        // El test que pulsa todos los botones también pulsa los de exportar/importar
+        {
+          provide: ProjectsTransferService,
+          useValue: { exportProjects: () => EMPTY, importChunk: () => EMPTY },
+        },
       ],
     }).compileComponents();
 

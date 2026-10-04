@@ -1,0 +1,90 @@
+@use '../../../../../styles/variables' as variables;
+
+.projects-transfer {
+  background: variables.$color-surface;
+  border-radius: variables.$border-radius-lg;
+  padding: variables.$spacing-8;
+  box-shadow: variables.$shadow-sm;
+  margin-bottom: variables.$spacing-10;
+}
+
+.projects-transfer__title {
+  color: variables.$color-text-main;
+  margin-top: 0;
+}
+
+.projects-transfer__intro {
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+  max-width: 70ch;
+}
+
+.projects-transfer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: variables.$spacing-3;
+  margin-top: variables.$spacing-4;
+}
+
+.projects-transfer__file-label {
+  position: relative;
+  cursor: pointer;
+
+  &:focus-within {
+    outline: 2px solid variables.$color-border-focus;
+    outline-offset: 2px;
+  }
+}
+
+.projects-transfer__file-label--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// El input queda oculto visualmente pero accesible desde el teclado a través de la etiqueta
+.projects-transfer__file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  cursor: inherit;
+}
+
+.projects-transfer__progress {
+  color: variables.$color-info;
+  margin-top: variables.$spacing-4;
+}
+
+.projects-transfer__message {
+  margin-top: variables.$spacing-4;
+  padding: variables.$spacing-3 variables.$spacing-4;
+  border-radius: variables.$border-radius-md;
+}
+
+.projects-transfer__message--error {
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}
+
+.projects-transfer__message--success {
+  background: variables.$color-success-bg;
+  color: variables.$color-text-main;
+}
+
+.projects-transfer__summary {
+  margin: 0;
+  font-weight: variables.$font-weight-semibold;
+}
+
+.projects-transfer__note {
+  margin: variables.$spacing-2 0 0;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.projects-transfer__errors {
+  margin: variables.$spacing-2 0 0;
+  padding-left: variables.$spacing-5;
+  color: variables.$color-danger;
+  font-size: variables.$font-size-sm;
+}

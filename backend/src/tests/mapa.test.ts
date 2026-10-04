@@ -13,11 +13,35 @@ import { up as runMigration16 } from '../migrations/16_fix_catalan_peluqueria_se
 import { up as runMigration17 } from '../migrations/17_fix_catalan_mapas_y_ras_estetica';
 import { up as runMigration18 } from '../migrations/18_fix_catalan_ras_y_mapa_fpb';
 import { up as runMigration19 } from '../migrations/19_reload_mapa_infantil_primer_curso';
+import { up as runMigration20 } from '../migrations/20_reload_mapa_infantil_segundo_curso';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
 beforeEach(async () => await clearDB());
+
+/** Comprueba relaciones bidireccionales, actividades mínimas y títulos sin repetir en cada RA. */
+const expectBidirectionalMap = async (tab: string, modules: number, connections: number, minActivities: number) => {
+  const docs = await MapaModule.find({ tab });
+  expect(docs).toHaveLength(modules);
+  const pairs = new Set<string>();
+  for (const doc of docs) {
+    for (const lo of doc.learningOutcomes) {
+      const titles = lo.connections.flatMap((c) => c.activities.map((a) => a.title_es));
+      expect(new Set(titles).size).toBe(titles.length);
+      for (const c of lo.connections) {
+        expect(c.activities.length).toBeGreaterThanOrEqual(minActivities);
+        expect(c.relatedCriteria.every((r) => r.moduleCode === c.targetModuleCode)).toBe(true);
+        pairs.add(`${doc.code}_${lo.code}>${c.targetModuleCode}_${c.targetRaCode}`);
+      }
+    }
+  }
+  expect(pairs.size).toBe(connections);
+  for (const p of pairs) {
+    const [from, to] = p.split('>');
+    expect(pairs.has(`${to}>${from}`)).toBe(true);
+  }
+};
 
 describe('Mapa Intermodular Endpoints & Migration', () => {
   describe('GET /api/mapa-intermodular', () => {
@@ -345,25 +369,18 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration19();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL_2' })).toBe(1);
-      const docs = await MapaModule.find({ tab: 'CFGS_EDUCACION_INFANTIL' });
-      expect(docs).toHaveLength(6);
+      await expectBidirectionalMap('CFGS_EDUCACION_INFANTIL', 6, 406, 1);
+    });
 
-      const pairs = new Set<string>();
-      for (const doc of docs) {
-        for (const lo of doc.learningOutcomes) {
-          const titles = lo.connections.map((c) => c.activities[0]?.title_es);
-          expect(new Set(titles).size).toBe(titles.length);
-          for (const c of lo.connections) {
-            expect(c.relatedCriteria.every((r) => r.moduleCode === c.targetModuleCode)).toBe(true);
-            pairs.add(`${doc.code}_${lo.code}>${c.targetModuleCode}_${c.targetRaCode}`);
-          }
-        }
-      }
-      expect(pairs.size).toBe(406);
-      for (const p of pairs) {
-        const [from, to] = p.split('>');
-        expect(pairs.has(`${to}>${from}`)).toBe(true);
-      }
+    it('debería recargar con la migración 20 solo el 2.º de Infantil con tres actividades por conexión', async () => {
+      await MapaModule.create({ tab: 'CFGS_EDUCACION_INFANTIL', order: 0, code: '0011', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration20();
+      await runMigration20();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL' })).toBe(1);
+      await expectBidirectionalMap('CFGS_EDUCACION_INFANTIL_2', 9, 358, 3);
     });
   });
 });

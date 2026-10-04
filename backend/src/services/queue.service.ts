@@ -1,6 +1,7 @@
 import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { generateAiContentWithFallback } from '../services/ai.service';
+import { generateProjectBySections, isSectionedGenerationEnabled } from './sectioned-generation.service';
 import { sendToUser } from './sse.service';
 import { syncProjectNotification, toProjectSummary } from './notification.service';
 
@@ -162,19 +163,28 @@ async function startProjectGeneration(project: any) {
   });
 }
 
+/** Por partes (esqueleto + partes en paralelo) salvo que `SECTIONED_GENERATION=false`. */
+function generateProjectContent(project: any, notifyPhase: ReturnType<typeof createPhaseNotifier>) {
+  const prompt = project.aiPrompt || '';
+  const instruction = project.aiInstruction || '';
+  const provider = project.aiProvider || 'gemini';
+  if (!isSectionedGenerationEnabled()) {
+    return generateAiContentWithFallback(prompt, instruction, provider, notifyPhase, project.aiModel);
+  }
+  return generateProjectBySections({
+    prompt, instruction, provider, onPhaseChange: notifyPhase,
+    ...(project.aiModel ? { model: project.aiModel } : {}),
+    ...(project.language ? { language: project.language } : {})
+  });
+}
+
 async function executeProjectGeneration(project: any) {
   await startProjectGeneration(project);
   const notifyPhase = createPhaseNotifier(project);
   const startTime = Date.now();
 
   try {
-    const result = await generateAiContentWithFallback(
-      project.aiPrompt || '',
-      project.aiInstruction || '',
-      project.aiProvider || 'gemini',
-      notifyPhase,
-      project.aiModel
-    );
+    const result = await generateProjectContent(project, notifyPhase);
     project.usedAiProvider = result.provider;
     await handleProjectSuccess(project, result.text, Date.now() - startTime, result.fallbackUsed, result.model, result.cascadeLog);
   } catch (error: any) {

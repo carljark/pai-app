@@ -4,6 +4,7 @@ import { Project } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import * as aiService from '../services/ai.service';
 import * as sseService from '../services/sse.service';
+import * as sectionedService from '../services/sectioned-generation.service';
 
 describe('Queue Service', () => {
   beforeEach(() => {
@@ -194,6 +195,52 @@ describe('Queue Service', () => {
     expect((mockProjectNoUser as any).errorDetail).toBe('Error de texto plano');
     expect(sseService.sendToUser).not.toHaveBeenCalled();
     consoleErrorSpy.mockRestore();
+  });
+
+  it('debería generar por partes con el idioma y el modelo del proyecto', async () => {
+    const mockProject = {
+      _id: 'proj_sections', userId: 'user_s', aiPrompt: 'prompt', aiInstruction: 'instruction',
+      aiProvider: 'openrouter', aiModel: 'deepseek/deepseek-v4.1-flash', language: 'catalan',
+      status: 'en_cola', title: 'Per parts', save: vi.fn().mockResolvedValue(true)
+    };
+    vi.spyOn(Project, 'findOneAndUpdate').mockResolvedValueOnce(mockProject as any).mockResolvedValueOnce(null);
+    const sections = vi.spyOn(sectionedService, 'generateProjectBySections').mockResolvedValue({
+      text: 'Projecte per parts', provider: 'openrouter', model: 'deepseek/deepseek-v4.1-flash', fallbackUsed: false
+    });
+    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await processQueue();
+
+    expect(sections).toHaveBeenCalledWith(expect.objectContaining({
+      prompt: 'prompt', instruction: 'instruction', provider: 'openrouter',
+      model: 'deepseek/deepseek-v4.1-flash', language: 'catalan', onPhaseChange: expect.any(Function)
+    }));
+    expect(mockProject.status).toBe('borrador');
+    expect((mockProject as any).generatedContent.rawText).toBe('Projecte per parts');
+  });
+
+  it('debería generar en una sola llamada con SECTIONED_GENERATION=false', async () => {
+    process.env.SECTIONED_GENERATION = 'false';
+    const mockProject = {
+      _id: 'proj_single', userId: 'user_1', aiPrompt: 'prompt', aiInstruction: 'instruction',
+      status: 'en_cola', title: 'Una llamada', save: vi.fn().mockResolvedValue(true)
+    };
+    vi.spyOn(Project, 'findOneAndUpdate').mockResolvedValueOnce(mockProject as any).mockResolvedValueOnce(null);
+    const sections = vi.spyOn(sectionedService, 'generateProjectBySections');
+    const single = vi.spyOn(aiService, 'generateAiContentWithFallback').mockResolvedValue({
+      text: 'Texto', provider: 'gemini', model: 'gemini-3.6-flash', fallbackUsed: false
+    });
+    vi.spyOn(ActivityLog.prototype, 'save').mockResolvedValue(true as any);
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await processQueue();
+    delete process.env.SECTIONED_GENERATION;
+
+    expect(sections).not.toHaveBeenCalled();
+    expect(single).toHaveBeenCalledTimes(1);
+    expect(single).toHaveBeenCalledWith('prompt', 'instruction', 'gemini', expect.any(Function), undefined);
+    expect(mockProject.status).toBe('borrador');
   });
 
   it('debería manejar proyectos sin userId en éxito', async () => {

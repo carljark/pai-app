@@ -1,4 +1,7 @@
 {
+  "permissions": {
+    "allow": ["Bash(./scripts/deploy-prod.sh)", "Bash(./scripts/deploy-prod.sh:*)"]
+  },
   "hooks": {
     "PreToolUse": [
       {

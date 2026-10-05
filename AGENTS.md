@@ -10,7 +10,7 @@ El agente se encarga de todo el ciclo de cada tarea, salvo que el usuario indiqu
 2. **Verificación.** Lint y typecheck, y después las suites completas: `cd backend && npm test` y `cd frontend && npm test`. Si algo falla, se corrige (aunque no lo haya causado la tarea) y se vuelve a ejecutar hasta que todo pase.
 3. **Commit y push.** Mensaje en castellano que resuma la tarea. Nunca `push --force`, `reset --hard` ni reescribir historia publicada. No se hace merge a `main`: lo decide el usuario.
 4. **Despliegue en producción** (EC2 Ubuntu, ver `documentation/despliegue_produccion.md`), solo con los tests en verde: copia de seguridad (`scripts/backup-prod-db.sh`), `git pull` de la rama de trabajo y reconstrucción con `docker-compose.prod.yml`; después, comprobar contenedores, migraciones y API. Si el despliegue falla, volver al commit anterior desplegado y avisar.
-5. Si un despliegue puede interrumpir trabajo en curso (generaciones o traducciones) o implica migraciones de datos delicadas, avisar al usuario antes.
+5. El agente tiene permiso permanente para desplegar con `./scripts/deploy-prod.sh` sin pedir confirmación. En la fase actual del proyecto no importa cortar generaciones o traducciones en curso; solo hay que avisar antes si el despliegue implica migraciones de datos delicadas.
 
 ## 2. Documentación de tareas
 

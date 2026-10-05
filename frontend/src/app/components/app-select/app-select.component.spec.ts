@@ -46,6 +46,17 @@ describe('AppSelectComponent', () => {
     expect(spy).toHaveBeenCalledWith('b');
   });
 
+  it('should show the bound value even if it is not the first option', () => {
+    fixture.componentRef.setInput('options', [
+      { value: 'a', label: 'A' },
+      { value: 'b', label: 'B' },
+    ]);
+    fixture.componentRef.setInput('value', 'b');
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('select').value).toBe('b');
+  });
+
   it('should render label and sm/disabled modifiers', () => {
     fixture.componentRef.setInput('label', 'Curso');
     fixture.componentRef.setInput('inputId', 'x');

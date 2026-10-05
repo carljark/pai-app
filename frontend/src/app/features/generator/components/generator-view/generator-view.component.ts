@@ -45,6 +45,11 @@ export class GeneratorViewComponent {
     { nivel: 'DIVERSIFICACION_CURRICULAR', key: HISTORY_TAB_LABEL_KEYS.ESO },
   ];
 
+  /** Titulaciones para el desplegable, en el idioma activo. */
+  levelOptions = computed<SelectOption[]>(() =>
+    this.levelTabs.map((level) => ({ value: level.nivel, label: this.trans.t()[level.key] })),
+  );
+
   courseOptions = computed<SelectOption[]>(() => {
     const nivel = this.curriculum.tipoNivel();
     if (nivel === 'FP_BASICA' || courseModuleOrder(nivel, '1º')) {
@@ -82,6 +87,10 @@ export class GeneratorViewComponent {
   modelOptions = computed<SelectOption[]>(() =>
     this.projects.availableModels().map((model) => ({ value: model.value, label: model.label })),
   );
+
+  onLevelChange(value: string) {
+    this.curriculum.setTipoNivel(value as TipoNivel);
+  }
 
   onCourseChange(value: string) {
     this.curriculum.setCurso(value);

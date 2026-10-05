@@ -130,49 +130,25 @@ describe('GeneratorViewComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should change tipoNivel with the Enter key', () => {
-    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
-    const expected = [
+  it('should change tipoNivel from the level dropdown', () => {
+    const levelSelect = fixture.debugElement.query(By.css('#generator-level-select')).nativeElement;
+    const options = Array.from(levelSelect.options as HTMLOptionsCollection).map((o) => o.value);
+    expect(options).toEqual([
       'FP_BASICA',
       'CFGM_ESTETICA',
       'CFGM_PELUQUERIA',
       'CFGS_EDUCACION_INFANTIL',
       'DIVERSIFICACION_CURRICULAR',
-    ];
+    ]);
 
-    tabs.forEach((tab: HTMLElement, i: number) => {
-      tab.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
-      expect(setTipoNivelSpy).toHaveBeenLastCalledWith(expected[i]);
+    options.forEach((value) => {
+      levelSelect.value = value;
+      levelSelect.dispatchEvent(new Event('change'));
+      expect(setTipoNivelSpy).toHaveBeenLastCalledWith(value);
     });
   });
 
-  it('should change tipoNivel on click', () => {
-    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
-
-    expect(mockCurriculum.tipoNivel()).toBe('FP_BASICA');
-
-    // click CFGM_ESTETICA
-    tabs[1].click();
-    expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGM_ESTETICA');
-
-    // click CFGM_PELUQUERIA
-    tabs[2].click();
-    expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGM_PELUQUERIA');
-
-    // click FP Básica
-    tabs[0].click();
-    expect(setTipoNivelSpy).toHaveBeenCalledWith('FP_BASICA');
-
-    // click CFGS Educación Infantil
-    tabs[3].click();
-    expect(setTipoNivelSpy).toHaveBeenCalledWith('CFGS_EDUCACION_INFANTIL');
-
-    // click Diversificación Curricular
-    tabs[4].click();
-    expect(setTipoNivelSpy).toHaveBeenCalledWith('DIVERSIFICACION_CURRICULAR');
-  });
-
-  it('should label the level tabs in the active language', () => {
+  it('should label the levels in the active language', () => {
     mockTrans.t.update(
       (t) =>
         ({
@@ -181,8 +157,8 @@ describe('GeneratorViewComponent', () => {
         }) as typeof t,
     );
     fixture.detectChanges();
-    const tabs = fixture.debugElement.nativeElement.querySelectorAll('.tabs-item');
-    expect(tabs[3].textContent.trim()).toBe('CFGS Educació Infantil');
+    const levelSelect = fixture.debugElement.query(By.css('#generator-level-select')).nativeElement;
+    expect(levelSelect.options[3].textContent.trim()).toBe('CFGS Educació Infantil');
   });
 
   it('should offer 1st and 2nd year for CFGS Educación Infantil', () => {
@@ -197,23 +173,29 @@ describe('GeneratorViewComponent', () => {
     expect(mockAppFacade.generateProject).toHaveBeenCalled();
   });
 
-  it('should change curso on select change', () => {
-    mockCurriculum.tipoNivel.set('FP_BASICA');
-    fixture.detectChanges();
-    const courseSelect = fixture.debugElement.query(
-      By.css('#generator-course-select'),
-    ).nativeElement;
+  it('should change curso with the segmented buttons', () => {
+    const courseButtons = () =>
+      fixture.nativeElement.querySelectorAll(
+        '.generator-view__curso',
+      ) as NodeListOf<HTMLButtonElement>;
 
-    courseSelect.value = '2º';
-    courseSelect.dispatchEvent(new Event('change'));
-    expect(mockCurriculum.setCurso).toHaveBeenCalled();
+    mockCurriculum.tipoNivel.set('FP_BASICA');
+    cursoSignal.set('1º');
+    fixture.detectChanges();
+    expect(courseButtons()[0]!.getAttribute('aria-pressed')).toBe('true');
+    courseButtons()[1]!.click();
+    expect(mockCurriculum.setCurso).toHaveBeenCalledWith('2º');
 
     mockCurriculum.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
     fixture.detectChanges();
-
-    courseSelect.value = '4º';
-    courseSelect.dispatchEvent(new Event('change'));
+    courseButtons()[1]!.click();
     expect(mockCurriculum.setCurso).toHaveBeenCalledWith('4º');
+  });
+
+  it('should hide the course selector when the level has a single course', () => {
+    mockCurriculum.tipoNivel.set('CFGM_ESTETICA');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.generator-view__segmented')).toBeNull();
   });
 
   it('should disable generate button if generating', () => {

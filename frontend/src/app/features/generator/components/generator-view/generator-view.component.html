@@ -2,41 +2,47 @@
   <h2 class="app-header-title">{{ trans.t().subtitle }}</h2>
 </div>
 <div class="card">
-  <!-- Fila 1: Pestañas de titulación (ancho completo) -->
-  <div class="form-group level-group">
-    <span class="form-group__label" id="generator-level-label">{{
-      trans.t().generatorLevelLabel
-    }}</span>
-    <div class="tabs" role="tablist" aria-labelledby="generator-level-label">
-      @for (level of levelTabs; track level.nivel) {
-        <div
-          class="tabs-item"
-          role="tab"
-          tabindex="0"
-          [class.active]="curriculum.tipoNivel() === level.nivel"
-          [attr.aria-selected]="curriculum.tipoNivel() === level.nivel"
-          (click)="curriculum.setTipoNivel(level.nivel)"
-          (keydown.enter)="curriculum.setTipoNivel(level.nivel)"
-        >
-          {{ trans.t()[level.key] }}
-        </div>
-      }
-    </div>
-  </div>
-
-  <!-- Fila 2: Selects de curso, metodología y (si admin) IA/modelo -->
-  <div class="form-row">
-    <div class="form-group form-group-course">
-      <label for="generator-course-select">{{ trans.t().generatorCourseLabel }}</label>
+  <!-- Fila 1: titulación (desplegable) y curso (solo si la titulación tiene más de uno) -->
+  <div class="generator-view__level-row">
+    <div class="form-group generator-view__level">
+      <label for="generator-level-select">{{ trans.t().generatorLevelLabel }}</label>
       <app-select
-        inputId="generator-course-select"
-        [options]="courseOptions()"
-        [value]="curriculum.curso()"
-        (valueChange)="onCourseChange($event)"
+        inputId="generator-level-select"
+        [options]="levelOptions()"
+        [value]="curriculum.tipoNivel()"
+        (valueChange)="onLevelChange($event)"
       >
       </app-select>
     </div>
 
+    @if (courseOptions().length > 1) {
+      <div class="form-group generator-view__course">
+        <span class="form-group__label" id="generator-course-label">{{
+          trans.t().generatorCourseLabel
+        }}</span>
+        <div
+          class="generator-view__segmented"
+          role="group"
+          aria-labelledby="generator-course-label"
+        >
+          @for (option of courseOptions(); track option.value) {
+            <button
+              type="button"
+              class="generator-view__curso"
+              [class.generator-view__curso--active]="curriculum.curso() === option.value"
+              [attr.aria-pressed]="curriculum.curso() === option.value"
+              (click)="onCourseChange(option.value)"
+            >
+              {{ option.label }}
+            </button>
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Fila 2: metodología y (si admin) IA/modelo -->
+  <div class="form-row">
     <div class="form-group form-group-methodology">
       <label for="generator-methodology-select">{{ trans.t().generatorMethodologyLabel }}</label>
       <app-select

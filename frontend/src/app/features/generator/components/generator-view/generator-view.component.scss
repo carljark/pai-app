@@ -1,7 +1,57 @@
 @use '../../../../../styles/variables' as variables;
 
-.level-group {
+.generator-view__level-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: variables.$spacing-3 24px;
   margin-bottom: 20px;
+}
+
+.generator-view__level-row .form-group {
+  margin-bottom: 0;
+}
+
+.generator-view__level {
+  flex: 0 1 auto;
+  min-width: 240px;
+  max-width: 100%;
+}
+
+.generator-view__segmented {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-primary-light;
+}
+
+.generator-view__curso {
+  min-width: 3.5rem;
+  padding: variables.$spacing-2 variables.$spacing-4;
+  border: none;
+  border-radius: variables.$border-radius-md;
+  background: transparent;
+  color: variables.$color-primary-dark;
+  font-weight: variables.$font-weight-medium;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover:not(.generator-view__curso--active) {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus-visible {
+    outline: 2px solid variables.$color-primary;
+    outline-offset: 2px;
+  }
+
+  &--active {
+    background: variables.$color-primary;
+    color: white;
+  }
 }
 
 .form-row {
@@ -13,11 +63,6 @@
 
 .form-row .form-group {
   margin-bottom: 0;
-}
-
-.form-group-course {
-  flex: 1;
-  min-width: 150px;
 }
 
 .form-group-methodology {

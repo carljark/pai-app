@@ -2,17 +2,11 @@ import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
-import {
-  CurriculumFacade,
-  courseModuleOrder,
-} from '../../../curriculum/services/curriculum.facade';
+import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
 import { TipoNivel } from '../../../curriculum/utils/curriculum-grouping';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
-import {
-  AIProvider,
-  HISTORY_TAB_LABEL_KEYS,
-  HistoryTab,
-} from '../../../projects/models/project.model';
+import { AIProvider } from '../../../projects/models/project.model';
+import { NivelesService } from '../../../../services/niveles.service';
 import { CurriculumSelectorComponent } from '../../../curriculum/components/curriculum-selector/curriculum-selector.component';
 import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
@@ -35,36 +29,27 @@ export class GeneratorViewComponent {
   projects = inject(ProjectsFacade);
   appFacade = inject(AppFacade);
   auth = inject(AuthFacade);
+  niveles = inject(NivelesService);
 
-  /** Pestañas de titulación del generador, en orden de visualización. */
-  readonly levelTabs: { nivel: TipoNivel; key: (typeof HISTORY_TAB_LABEL_KEYS)[HistoryTab] }[] = [
-    { nivel: 'FP_BASICA', key: HISTORY_TAB_LABEL_KEYS.FPB },
-    { nivel: 'CFGM_ESTETICA', key: HISTORY_TAB_LABEL_KEYS.CFGM },
-    { nivel: 'CFGM_PELUQUERIA', key: HISTORY_TAB_LABEL_KEYS.CFGM_PELUQUERIA },
-    { nivel: 'CFGS_EDUCACION_INFANTIL', key: HISTORY_TAB_LABEL_KEYS.CFGS_EDUCACION_INFANTIL },
-    { nivel: 'DIVERSIFICACION_CURRICULAR', key: HISTORY_TAB_LABEL_KEYS.ESO },
-  ];
+  /** Titulaciones del catálogo para el desplegable, en el idioma activo. */
+  levelOptions = computed<SelectOption[]>(() => {
+    const isCa = this.layout.language() === 'catalan';
+    return this.niveles
+      .niveles()
+      .map((nivel) => ({ value: nivel.id, label: this.niveles.nombre(nivel, isCa) }));
+  });
 
-  /** Titulaciones para el desplegable, en el idioma activo. */
-  levelOptions = computed<SelectOption[]>(() =>
-    this.levelTabs.map((level) => ({ value: level.nivel, label: this.trans.t()[level.key] })),
-  );
-
+  /** Cursos de la titulación activa según el catálogo. */
   courseOptions = computed<SelectOption[]>(() => {
-    const nivel = this.curriculum.tipoNivel();
-    if (nivel === 'FP_BASICA' || courseModuleOrder(nivel, '1º')) {
-      return [
-        { value: '1º', label: this.trans.t().firstYearOption },
-        { value: '2º', label: this.trans.t().secondYearOption },
-      ];
-    }
-    if (nivel === 'CFGM_ESTETICA') {
-      return [{ value: '1º', label: this.trans.t().firstYearOption }];
-    }
-    return [
-      { value: '3º', label: this.trans.t().thirdYearOption },
-      { value: '4º', label: this.trans.t().fourthYearOption },
-    ];
+    const t = this.trans.t();
+    const labels: Record<string, string> = {
+      '1º': t.firstYearOption,
+      '2º': t.secondYearOption,
+      '3º': t.thirdYearOption,
+      '4º': t.fourthYearOption,
+    };
+    const cursos = this.niveles.find(this.curriculum.tipoNivel())?.cursos ?? [];
+    return cursos.map(({ curso }) => ({ value: curso, label: labels[curso] ?? curso }));
   });
 
   methodologyOptions = computed<SelectOption[]>(() => [

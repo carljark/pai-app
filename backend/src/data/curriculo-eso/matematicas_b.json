@@ -1,0 +1,637 @@
+{
+  "code": "matematicas_b",
+  "name_es": "Matemáticas B",
+  "name_ca": "Matemàtiques B",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Interpretar, modelizar y resolver problemas de la vida cotidiana y propios de las matemáticas, aplicando diferentes estrategias y formas de razonamiento, para explorar diferentes maneras de conducta y obtener posibles soluciones.",
+      "description_ca": "Interpretar, modelitzar i resoldre problemes de la vida quotidiana i propis de les matemàtiques, aplicant diferents estratègies i formes de raonament, per explorar diferents maneres de conducta i obtenir possibles solucions.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "STEM3",
+        "STEM4",
+        "CD2",
+        "CPSAA5",
+        "CE3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reformular de manera verbal y gráfica problemas matemáticos, interpretando los datos, las relaciones entre ellas y las preguntas planteadas.",
+          "text_ca": "Reformular de manera verbal i gràfica problemes matemàtics, interpretant les dades, les relacions entre elles i les preguntes plantejades.",
+          "aclaraciones_es": [
+            "Analizar y seleccionar la información relevante en los enunciados de los problemas matemáticos independientemente de si se presentan en formato numérico, gráfico, algebraico o textual y comprender las cuestiones planteadas.",
+            "Organizar los datos y las relaciones entre ellas con las estrategias adecuadas (simplificar el problema, elaborar tablas, construir gráficos, esquemas, etc.).",
+            "Reformular el problema mediante diferentes representaciones (verbal, algebraica, gráfica, geométrica, etc.) para facilitar la comprensión y resolución.",
+            "Identificar e interpretar las relaciones existentes entre los datos iniciales en la resolución de problemas matemáticos.",
+            "Identificar y justificar posibles restricciones entre los datos y variables del problema teniendo en cuenta las restricciones.",
+            "Expresar la relación entre los datos y los conceptos matemáticos asociados mediante modelos algebraicos, funciones, tablas o diagramas."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar i seleccionar la informació rellevant en els enunciats dels problemes matemàtics independentment de si es presenten en format numèric, gràfic, algebraic o textual i comprendre les qüestions plantejades.",
+            "Organitzar les dades i les relacions entre elles amb les estratègies adequades (simplificar el problema, elaborar taules, construir gràfics, esquemes, etc.).",
+            "Reformular el problema mitjançant diferents representacions (verbal, algebraica, gràfica, geomètrica, etc.) per facilitar-ne la comprensió i resolució.",
+            "Identificar i interpretar les relacions existents entre les dades inicials en la resolució de problemes matemàtics.",
+            "Identificar i justificar possibles restriccions entre les dades i variables del problema tenint en compte les restriccions.",
+            "Expressar la relació entre les dades i els conceptes matemàtics associats mitjançant models algebraics, funcions, taules o diagrames."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar y seleccionar diferentes herramientas y estrategias elaboradas en la resolución de un mismo problema, valorando la eficiencia.",
+          "text_ca": "Analitzar i seleccionar diferents eines i estratègies elaborades en la resolució d’un mateix problema, valorant-ne l’eficiència.",
+          "aclaraciones_es": [
+            "Comparar, seleccionar y aplicar diferentes estrategias para la resolución de problemas evaluando la complejidad, eficacia y aplicabilidad en diferentes contextos.",
+            "Utilizar modelos matemáticos diversos (ecuaciones, sistemas, tablas, regresiones, representaciones gráficas, esquemas) para estructurar y resolver el problema con rigor.",
+            "Aplicar con precisión operaciones, procedimientos y algoritmos propios de la aritmética, el álgebra, la geometría, la estadística o la probabilidad, optimizando el uso según el caso.",
+            "Reconocer e interpretar los datos generados durante el proceso de resolución para revisar, ajustar o modificar la estrategia, si hace falta, y así avanzar hacia una solución coherente.",
+            "Evaluar y valorar la eficacia y la idoneidad de las diferentes estrategias de resolución de un mismo problema observando la rapidez, la simplicidad, la precisión y la eficacia y evaluar si fuese necesario plantear una alternativa más sencilla o intuitiva."
+          ],
+          "aclaraciones_ca": [
+            "Comparar, seleccionar i aplicar diferents estratègies per a la resolució de problemes avaluant-ne la complexitat, eficàcia i aplicabilitat en diferents contextos.",
+            "Utilitzar models matemàtics diversos (equacions, sistemes, taules, regressions, representacions gràfiques, esquemes) per estructurar i resoldre el problema amb rigor.",
+            "Aplicar amb precisió operacions, procediments i algorismes propis de l’aritmètica, l’àlgebra, la geometria, l’estadística o la probabilitat, optimitzant-ne l’ús segons el cas.",
+            "Reconèixer i interpretar les dades generades durant el procés de resolució per revisar, ajustar o modificar l’estratègia, si cal, i així avançar cap a una solució coherent.",
+            "Avaluar i valorar l’eficàcia i la idoneïtat de les diferents estratègies de resolució d’un mateix problema observant la rapidesa, la simplicitat, la precisió i l’eficàcia i avaluar si seria necessari plantejar una alternativa més senzilla o intuïtiva."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Obtener todas las soluciones matemáticas posibles de un problema movilizando los conocimientos y utilizando las herramientas tecnológicas necesarias.",
+          "text_ca": "Obtenir totes les solucions matemàtiques possibles d’un problema mobilitzant els coneixements i utilitzant les eines tecnològiques necessàries.",
+          "aclaraciones_es": [
+            "Determinar todas las posibles soluciones de un problema, aplicando los conocimientos adquiridos y asegurándose de que no se dejan opciones sin considerar.",
+            "Analizar e interpretar los resultados obtenidos, relacionándolos con los conceptos matemáticos asociados y su significado teórico y comprobando si tienen sentido desde un punto de vista práctico y, si fuera el caso, concluir que el problema no tiene solución.",
+            "Redactar respuestas precisas y justificadas matemáticamente, empleando una notación rigurosa y argumentando cada paso del proceso.",
+            "Utilizar herramientas tecnológicas diversas (calculadoras, hojas de cálculo, software de cálculo simbólico, geometría dinámica) por, en caso necesario, modelizar, calcular y representar los resultados de manera eficiente.",
+            "Explicar y argumentar con claridad el proceso de resolución, usando una notación matemática rigurosa y un lenguaje técnico apropiado."
+          ],
+          "aclaraciones_ca": [
+            "Determinar totes les possibles solucions d’un problema, aplicant els coneixements adquirits i assegurant-se que no es deixen opcions sense considerar.",
+            "Analitzar i interpretar els resultats obtinguts, relacionant-los amb els conceptes matemàtics associats i el seu significat teòric i comprovant si tenen sentit des d’un punt de vista pràctica i, si fos el cas, concloure que el problema no té solució.",
+            "Redactar respostes precises i justificades matemàticament, emprant una notació rigorosa i argumentant cada pas del procés.",
+            "Utilitzar eines tecnològiques diverses (calculadores, fulls de càlcul, programari de càlcul simbòlic, geometria dinàmica) per, en cas necessari, modelitzar, calcular i representar els resultats de manera eficient.",
+            "Explicar i argumentar amb claredat el procés de resolució, fent servir una notació matemàtica rigorosa i un llenguatge tècnic apropiat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Analizar las soluciones de un problema usando diferentes técnicas y herramientas, evaluando las respuestas obtenidas, para verificar la validez e idoneidad desde un punto de vista matemático y la repercusión global.",
+      "description_ca": "Analitzar les solucions d’un problema usant diferents tècniques i eines, avaluant les respostes obtingudes, per verificar-ne la validesa i idoneïtat des d’un punt de vista matemàtic i la repercussió global.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "CD2",
+        "CPSAA4",
+        "CC3",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Comprobar la corrección matemática de las soluciones de un problema.",
+          "text_ca": "Comprovar la correcció matemàtica de les solucions d’un problema.",
+          "aclaraciones_es": [
+            "Revisar en detalle los cálculos, demostrando la validez de los resultados con justificaciones matemáticas precisas.",
+            "Comparar y validar la solución mediante diferentes métodos (resolución algebraica, verificación gráfica, demostraciones, uso de propiedades matemáticas).",
+            "Utilizar, en caso necesario, herramientas tecnológicas avanzadas (hojas de cálculo con funciones complejas, software de cálculo simbólico, geometría dinámica) para comprobar y representar las soluciones de manera rigurosa.",
+            "Detectar y corregir errores mediante un análisis crítico, explicando por qué se han producido y como se pueden evitar en futuros problemas.",
+            "Argumentar la corrección de la solución con un razonamiento lógico estructurado, empleando notación matemática precisa y justificaciones rigurosas."
+          ],
+          "aclaraciones_ca": [
+            "Revisar detalladament els càlculs, demostrant la validesa dels resultats amb justificacions matemàtiques precises.",
+            "Comparar i validar la solució mitjançant diferents mètodes (resolució algebraica, verificació gràfica, demostracions, ús de propietats matemàtiques).",
+            "Utilitzar, en cas necessari, eines tecnològiques avançades (fulls de càlcul amb funcions complexes, programari de càlcul simbòlic, geometria dinàmica) per comprovar i representar les solucions de manera rigorosa.",
+            "Detectar i corregir errors mitjançant una anàlisi crítica, explicant per què s’han produït i com es poden evitar en futurs problemes.",
+            "Argumentar la correcció de la solució amb un raonament lògic estructurat, emprant notació matemàtica precisa i justificacions rigoroses."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Justificar las soluciones óptimas de un problema desde diferentes perspectivas (matemática, de género, de sostenibilidad, de consumo responsable…).",
+          "text_ca": "Justificar les solucions òptimes d’un problema des de diferents perspectives (matemàtica, de gènere, de sostenibilitat, de consum responsable…).",
+          "aclaraciones_es": [
+            "Comprobar la validez y corrección matemática de las soluciones encontradas.",
+            "Aplicar métodos de comprobación matemática (por ejemplo: sustitución de valores, métodos gráficos o geométricos, pruebas algebraicas…).",
+            "Descartar las soluciones que no encajan en las condiciones y restricciones.",
+            "Evaluar, si es el caso, las soluciones desde la perspectiva oportuna (de género, de sostenibilidad, de consumo responsable, etc.)."
+          ],
+          "aclaraciones_ca": [
+            "Comprovar la validesa i correcció matemàtica de les solucions trobades.",
+            "Aplicar mètodes de comprovació matemàtica (per exemple: substitució de valors, mètodes gràfics o geomètrics, proves algebraiques…).",
+            "Descartar les solucions que no encaixen en les condicions i restriccions.",
+            "Avaluar, si és el cas, les solucions des de la perspectiva escaient (de gènere, de sostenibilitat, de consum responsable, etc.)."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Formular y comprobar conjeturas sencillas o plantear problemas de manera autónoma, reconociendo el valor del razonamiento y la argumentación, para generar nuevo conocimiento.",
+      "description_ca": "Formular i comprovar conjectures senzilles o plantejar problemes de manera autònoma, reconeixent el valor del raonament i l’argumentació, per generar nou coneixement.",
+      "descriptores": [
+        "CCL1",
+        "STEM1",
+        "STEM2",
+        "CD1",
+        "CD2",
+        "CD5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Formular, comprobar e investigar conjeturas de forma guiada.",
+          "text_ca": "Formular, comprovar i investigar conjectures de forma guiada.",
+          "aclaraciones_es": [
+            "Identificar y analizar patrones y regularidades, propiedades y relaciones en las situaciones planteadas, mediante la observación, el análisis de datos, la indagación, etc.",
+            "Formular conjeturas.",
+            "Verificar conjeturas probándolas con diferentes ejemplos, ajustándolas si hace falta, o refutarlas mediante contraejemplos."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i analitzar patrons i regularitats, propietats i relacions en les situacions plantejades, mitjançant l’observació, l’anàlisi de dades, la indagació, etc.",
+            "Formular conjectures.",
+            "Verificar conjectures provant-les amb diferents exemples, ajustant-les si cal, o refutar-les mitjançant contraexemples."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Plantear variantes de un problema que lleven a una generalización.",
+          "text_ca": "Plantejar variants d’un problema que portin a una generalització.",
+          "aclaraciones_es": [
+            "Plantear variantes de problemas ya resueltos, modificando alguna de sus datos o condiciones.",
+            "Descubrir el efecto de estas modificaciones en la resolución del problema.",
+            "Identificar las generalidades y las particularidades de problemas similares."
+          ],
+          "aclaraciones_ca": [
+            "Plantejar variants de problemes ja resolts, modificant alguna de les seves dades o condicions.",
+            "Descobrir l’efecte d’aquestes modificacions en la resolució del problema.",
+            "Identificar les generalitats i les particularitats de problemes similars."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Usar herramientas tecnológicas adecuadas en la investigación y comprobación de conjeturas o problemas.",
+          "text_ca": "Fer servir eines tecnològiques adequades en la investigació i comprovació de conjectures o problemes.",
+          "aclaraciones_es": [
+            "Emplear herramientas tecnológicas de manera eficiente para facilitar los cálculos en la resolución de problemas y comprobación de conjeturas.",
+            "De manera puntual, consultar recursos en linea para encontrar problemas similares o relacionados o información en lo referente a conjeturas concretas."
+          ],
+          "aclaraciones_ca": [
+            "Emprar eines tecnològiques de manera eficient per facilitar els càlculs en la resolució de problemes i comprovació de conjectures.",
+            "De manera puntual, consultar recursos en línia per trobar problemes similars o relacionats o informació referent a conjectures concretes."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Utilizar los principios del pensamiento computacional organizando datos, descomponiendo en partes, reconociendo patrones, interpretando, modificando y creando algoritmos por modelizar situaciones y resolver problemas de manera eficaz.",
+      "description_ca": "Utilitzar els principis del pensament computacional organitzant dades, descomponent en parts, reconeixent patrons, interpretant, modificant i creant algorismes per modelitzar situacions i resoldre problemes de manera eficaç.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "STEM3",
+        "CD2",
+        "CD3",
+        "CD5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Generalizar patrones y proporcionar una representación computacional de situaciones problematizadas.",
+          "text_ca": "Generalitzar patrons i proporcionar una representació computacional de situacions problematitzades.",
+          "aclaraciones_es": [
+            "Identificar y describir patrones a partir de ejemplos concretos.",
+            "Generalizar con reglas o fórmulas los patrones identificados.",
+            "Proporcionar modelos o algoritmos que reflejan las situaciones problematizadas."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i descriure patrons a partir d’exemples concrets.",
+            "Generalitzar amb regles o fórmules els patrons identificats.",
+            "Proporcionar models o algoritmes que reflecteixen les situacions problematitzades."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Modelizar situaciones y resolver problemas de manera eficaz interpretando, modificando, generalizando y creando algoritmos.",
+          "text_ca": "Modelitzar situacions i resoldre problemes de manera eficaç interpretant, modificant, generalitzant i creant algorismes.",
+          "aclaraciones_es": [
+            "Identificar los pasos para resolver un problema de manera estructurada.",
+            "Modelizar situaciones mediante la creación de algoritmos.",
+            "Resolver problemas de manera eficaz interpretando y modificando algoritmos conocidos."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les passes per resoldre un problema de manera estructurada.",
+            "Modelitzar situacions mitjançant la creació d’algorismes.",
+            "Resoldre problemes de manera eficaç interpretant i modificant algorismes coneguts."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Reconocer y utilizar conexiones entre los diferentes elementos matemáticos interconectando conceptos y procedimientos para desarrollar una visión de las matemáticas como un todo integrado.",
+      "description_ca": "Reconèixer i utilitzar connexions entre els diferents elements matemàtics interconnectant conceptes i procediments per desenvolupar una visió de les matemàtiques com un tot integrat.",
+      "descriptores": [
+        "STEM1",
+        "STEM3",
+        "CD2",
+        "CD3",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Deducir relaciones entre los conocimientos y experiencias matemáticas, formando un todo coherente.",
+          "text_ca": "Deduir relacions entre els coneixements i experiències matemàtiques, formant un tot coherent.",
+          "aclaraciones_es": [
+            "Descubrir la relación entre diferentes conocimientos y experiencias matemáticas (por ejemplo, la relación y la coherencia de la ecuación algebraica de una función y su gráfico).",
+            "Consolidar el aprendizaje de conocimientos matemáticos y las relaciones entre ellos formando un todo coherente."
+          ],
+          "aclaraciones_ca": [
+            "Descobrir la relació entre diferents coneixements i experiències matemàtiques (per exemple, la relació i la coherència de l’equació algebraica d’una funció i el seu gràfic).",
+            "Consolidar l’aprenentatge de coneixements matemàtics i les relacions entre ells formant un tot coherent."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar y poner en práctica conexiones entre diferentes procesos matemáticos, aplicando conocimientos y experiencias previas.",
+          "text_ca": "Analitzar i posar en pràctica connexions entre diferents processos matemàtics, tot aplicant coneixements i experiències prèvies.",
+          "aclaraciones_es": [
+            "Identificar y analizar conexiones entre diferentes conocimientos y procesos matemáticos.",
+            "Emplear los conocimientos y procesos matemáticos fruto de experiencias previas de manera combinada y conectada con los nuevos conocimientos."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i analitzar connexions entre diferents coneixements i processos matemàtics.",
+            "Emprar els coneixements i processos matemàtics fruit d’experiències prèvies de manera combinada i connectada amb els nous coneixements."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Identificar las matemáticas implicadas en otras materias y en situaciones reales, susceptibles de ser tratadas en términos matemáticos, interrelacionando conceptos y procedimientos para aplicarlos en situaciones diversas.",
+      "description_ca": "Identificar les matemàtiques implicades en altres matèries i en situacions reals, susceptibles de ser tractades en termes matemàtics, interrelacionant conceptes i procediments per aplicar-los en situacions diverses.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "CD3",
+        "CD5",
+        "CC4",
+        "CE2",
+        "CE3",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Proponer situaciones susceptibles de ser formuladas y resueltas mediante herramientas y estrategias matemáticas, estableciendo y aplicando conexiones entre el mundo real y las matemáticas, y usando los procesos inherentes a la investigación científica y matemática: inferir, medir, comunicar, clasificar y predecir.",
+          "text_ca": "Proposar situacions susceptibles de ser formulades i resoltes mitjançant eines i estratègies matemàtiques, establint i aplicant connexions entre el món real i les matemàtiques, i usant els processos inherents a la recerca científica i matemàtica: inferir, mesurar, comunicar, classificar i predir.",
+          "aclaraciones_es": [
+            "Proponer situaciones reales a las que se pueden aplicar los conocimientos y estrategias matemáticas que se trabajen en el aula (por ejemplo, plantear casos reales que se puedan resolver con trigonometría).",
+            "Medir magnitudes en elementos del mundo real (cantidades, áreas, volúmenes, distancias, temperaturas, etc.).",
+            "Hacer estimaciones, predicciones y clasificaciones.",
+            "Comunicar correcta y rigurosamente las diferentes acciones y resultados."
+          ],
+          "aclaraciones_ca": [
+            "Proposar situacions reals a les quals es poden aplicar els coneixements i estratègies matemàtiques que es treballen a l’aula (per exemple, plantejar casos reals que es puguin resoldre amb trigonometria).",
+            "Mesurar magnituds en elements del món real (quantitats, àrees, volums, distàncies, temperatures, etc.).",
+            "Fer estimacions, prediccions i classificacions.",
+            "Comunicar correctament i rigorosament les diferents accions i resultats."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar y aplicar conexiones coherentes entre las matemáticas y otras materias realizando un análisis crítico.",
+          "text_ca": "Analitzar i aplicar connexions coherents entre les matemàtiques i altres matèries realitzant una anàlisi crítica.",
+          "aclaraciones_es": [
+            "Identificar situaciones de otras materias que se pueden interpretar y modelizar matemáticamente (por ejemplo, el crecimiento exponencial bacteriano, fórmulas de cinemática, etc.).",
+            "Enriquecer los conocimientos matemáticos con conocimientos de otras materias (por ejemplo, con el contexto histórico de un hallazgo matemático, la presencia de las razones de proporcionalidad a elementos patrimoniales o artísticos, etc.).",
+            "Resolver problemas interdisciplinarios haciendo, si procede, un análisis crítico."
+          ],
+          "aclaraciones_ca": [
+            "Identificar situacions d’altres matèries que es poden interpretar i modelitzar matemàticament (per exemple el creixement exponencial bacterià, fórmules de cinemàtica, etc.).",
+            "Enriquir els coneixements matemàtics amb coneixements d’altres matèries (per exemple, amb el context històric d’una troballa matemàtica, la presència de les raons de proporcionalitat a elements patrimonials o artístics, etc.).",
+            "Resoldre problemes interdisciplinaris fent-ne, si escau, una anàlisi crítica."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar la aportación de las matemáticas al progreso de la humanidad y su contribución a la superación de los retos que demanda la sociedad actual.",
+          "text_ca": "Valorar l’aportació de les matemàtiques al progrés de la humanitat i la seva contribució a la superació dels reptes que demanda la societat actual.",
+          "aclaraciones_es": [
+            "Reconocer la aportación de las matemáticas al progreso de la humanidad y de la ciencia.",
+            "Emplear los conocimientos y herramientas matemáticas para entender los retos actuales de la sociedad (agotamiento de los recursos, cambio climático, conflictos armados, etc.) y como superarlos.",
+            "Ser consciente de las limitaciones de la ciencia y de las matemáticas a la hora de resolver todos los retos actuales."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer l’aportació de les matemàtiques al progrés de la humanitat i de la ciència.",
+            "Emprar els coneixements i eines matemàtiques per entendre els reptes actuals de la societat (esgotament dels recursos, canvi climàtic, conflictes armats, etc.) i com superar-los.",
+            "Ser conscient de les limitacions de la ciència i de les matemàtiques a l’hora de resoldre tots els reptes actuals."
+          ]
+        },
+        {
+          "id": "6.4",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Comprender la realidad de las Illes Balears a partir del estudio de problemas matemáticos contextualizados.",
+          "text_ca": "Comprendre la realitat de les Illes Balears a partir de l’estudi de problemes matemàtics contextualitzats.",
+          "aclaraciones_es": [
+            "Conocer los elementos científicos y matemáticos propios de la historia y cultura de las Illes Balears.",
+            "Interpretar la realidad geográfica, medioambiental, demográfica, social y económica usando herramientas matemáticas y consultando noticias de prensa, bancos de datos (IBESTAT), etc.",
+            "Resolver problemas matemáticos contextualizados en las Illes Balears."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer els elements científics i matemàtics propis de la història i cultura de les illes Balears.",
+            "Interpretar la realitat geogràfica, mediambiental, demogràfica, social i econòmica usant eines matemàtiques i consultant notícies de premsa, bancs de dades (IBESTAT), etc.",
+            "Resoldre problemes matemàtics contextualitzats a les Illes Balears."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE7",
+      "ce_num": 7,
+      "description_es": "Representar, de manera individual y colectiva, conceptos, procedimientos, información y resultados matemáticos usando diferentes tecnologías para visualizar ideas y estructurar procesos matemáticos.",
+      "description_ca": "Representar, de manera individual i col·lectiva, conceptes, procediments, informació i resultats matemàtics usant diferents tecnologies per visualitzar idees i estructurar processos matemàtics.",
+      "descriptores": [
+        "STEM3",
+        "CD1",
+        "CD2",
+        "CD5",
+        "CE3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "7.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Representar matemáticamente la información más relevante de un problema, conceptos, procedimientos y resultados matemáticos visualizando ideas y estructurando procesos matemáticos.",
+          "text_ca": "Representar matemàticament la informació més rellevant d’un problema, conceptes, procediments i resultats matemàtics visualitzant idees i estructurant processos matemàtics.",
+          "aclaraciones_es": [
+            "Discernir la información relevante y la irrelevante del enunciado de un problema.",
+            "Representar y resumir la información y conceptos relevantes mediante gráficos, diagramas u otros tipos de representaciones matemáticas para facilitar la comprensión.",
+            "Visualizar ideas y plantear procedimientos y procesos de manera estructurada.",
+            "Organizar y estructurar los procesos matemáticos de manera coherente para facilitar la resolución de problemas.",
+            "Presentar los resultados de manera clara."
+          ],
+          "aclaraciones_ca": [
+            "Destriar la informació rellevant i la irrellevant de l’enunciat d’un problema.",
+            "Representar i resumir la informació i conceptes rellevants mitjançant gràfics, diagrames o altres tipus de representacions matemàtiques per facilitar-ne la comprensió.",
+            "Visualitzar idees i plantejar procediments i processos de manera estructurada.",
+            "Organitzar i estructurar els processos matemàtics de manera coherent per facilitar la resolució de problemes.",
+            "Presentar els resultats de manera clara."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Seleccionar entre diferentes herramientas, incluidas las digitales, y formas de representación (pictórica, gráfica, verbal o simbólica) valorando la utilidad para compartir información.",
+          "text_ca": "Seleccionar entre diferents eines, incloses les digitals, i formes de representació (pictòrica, gràfica, verbal o simbòlica) valorant-ne la utilitat per compartir informació.",
+          "aclaraciones_es": [
+            "Elegir las herramientas más adecuadas para la representación de la información (por ejemplo: lápiz y papel, pizarra, regla y compás…).",
+            "Valorar y seleccionar las diferentes formas de representación (pictórica, gráfica, verbal o simbólica) según su utilidad para sintetizar y compartir información.",
+            "Hacer un uso justificado de las herramientas digitales."
+          ],
+          "aclaraciones_ca": [
+            "Triar les eines més adequades per a la representació de la informació (per exemple: llapis i paper, pissarra, regle i compàs…).",
+            "Valorar i seleccionar les diferents formes de representació (pictòrica, gràfica, verbal o simbòlica) segons la seva utilitat per a sintetitzar i compartir informació.",
+            "Fer un ús justificat de les eines digitals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE8",
+      "ce_num": 8,
+      "description_es": "Comunicar, de manera individual y colectiva, conceptos, procedimientos y argumentos matemáticos usando el lenguaje oral, escrito o gráfico, utilizando la terminología matemática apropiada, para dar significado y coherencia a las ideas matemáticas.",
+      "description_ca": "Comunicar, de manera individual i col·lectiva, conceptes, procediments i arguments matemàtics usant el llenguatge oral, escrit o gràfic, utilitzant la terminologia matemàtica apropiada, per donar significat i coherència a les idees matemàtiques.",
+      "descriptores": [
+        "CCL1",
+        "CCL3",
+        "CP1",
+        "STEM2",
+        "STEM4",
+        "CD2",
+        "CD3",
+        "CE3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "8.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Comunicar ideas, conclusiones, conjeturas y razonamientos matemáticos, utilizando diferentes medios, incluidos los digitales, con coherencia, claridad y terminología apropiada.",
+          "text_ca": "Comunicar idees, conclusions, conjectures i raonaments matemàtics, utilitzant diferents mitjans, inclosos els digitals, amb coherència, claredat i terminologia apropiada.",
+          "aclaraciones_es": [
+            "Conocer la terminología correspondiente a los diferentes campos de las matemáticas y dominar los diferentes conceptos.",
+            "Comunicar oralmente y por escrito información (ideas, conclusiones, conjeturas, razonamientos…) empleando el lenguaje matemático con claridad, adecuación, coherencia, cohesión y corrección lingüística.",
+            "Cuando sean necesarios y permitan enriquecer la comunicación, emplear los medios digitales de manera justificada."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer la terminologia corresponent als diferents camps de les matemàtiques i dominar els diferents conceptes.",
+            "Comunicar oralment i per escrit informació (idees, conclusions, conjectures, raonaments…) emprant el llenguatge matemàtic amb claredat, adequació, coherència, cohesió i correcció lingüística.",
+            "Quan siguin necessaris i permetin enriquir la comunicació, emprar els mitjans digitals de manera justificada."
+          ]
+        },
+        {
+          "id": "8.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reconocer y emplear el lenguaje matemático presente en la vida cotidiana y en varios contextos comunicando mensajes con contenido matemático con precisión y rigor.",
+          "text_ca": "Reconèixer i emprar el llenguatge matemàtic present en la vida quotidiana i en diversos contexts comunicant missatges amb contingut matemàtic amb precisió i rigor.",
+          "aclaraciones_es": [
+            "Reconocer el lenguaje matemático presente en el mundo real y en la vida cotidiana (por ejemplo, lo que se puede encontrar en artículos científicos, noticias de prensa, contratos, facturas, recibos…).",
+            "Valorar los usos del lenguaje matemático en la vida cotidiana, detectar carencia de rigor en su uso (por ejemplo, presentación parcial o sesgada de datos o gráficos, ofertas comerciales engañosas, cláusulas abusivas, etc.).",
+            "Emplear el lenguaje matemático para describir y analizar con precisión y rigor diferentes hechos del mundo real y la vida cotidiana."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer el llenguatge matemàtic present en el món real i en la vida quotidiana (per exemple, el que es pot trobar a articles científics, notícies de premsa, contractes, factures, rebuts…).",
+            "Valorar els usos del llenguatge matemàtic a la vida quotidiana, detectar manca de rigor en el seu ús (per exemple, presentació parcial o esbiaixada de dades o gràfics, ofertes comercials enganyoses, clàusules abusives, etc.).",
+            "Emprar el llenguatge matemàtic per descriure i analitzar amb precisió i rigor diferents fets del món real i la vida quotidiana."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE9",
+      "ce_num": 9,
+      "description_es": "Desarrollar destrezas personales, identificando y gestionando emociones, poniendo en práctica estrategias de aceptación del error como parte del proceso de aprendizaje y adaptándose ante situaciones de incertidumbre, para mejorar la perseverancia en la consecución de objetivos y el disfrute en el aprendizaje de las matemáticas.",
+      "description_ca": "Desenvolupar destreses personals, identificant i gestionant emocions, posant en pràctica estratègies d’acceptació de l’error com a part del procés d’aprenentatge i adaptant-se davant situacions d’incertesa, per millorar la perseverança en la consecució d’objectius i el gaudi en l’aprenentatge de les matemàtiques.",
+      "descriptores": [
+        "STEM5",
+        "CPSAA1",
+        "CPSAA4",
+        "CPSAA5",
+        "CE2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "9.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar y gestionar las emociones propias y desarrollar el autoconcepto matemático generando expectativas positivas ante nuevos retos matemáticos.",
+          "text_ca": "Identificar i gestionar les emocions pròpies i desenvolupar l’autoconcepte matemàtic generant expectatives positives davant nous reptes matemàtics.",
+          "aclaraciones_es": [
+            "Reconducir las emociones que puedan afectar negativamente el aprendizaje de las matemáticas (pereza, inseguridad, frustración…).",
+            "Reconocer las fortalezas y debilidades personales en la hora de encarar retos matemáticos.",
+            "Consolidar progresivamente confianza para reforzar las fortalezas y superar las debilidades."
+          ],
+          "aclaraciones_ca": [
+            "Reconduir les emocions que puguin afectar negativament l’aprenentatge de les matemàtiques (peresa, inseguretat, frustració…).",
+            "Reconèixer les fortaleses i febleses personals a l’hora d’encarar reptes matemàtics.",
+            "Consolidar progressivament confiança per reforçar les fortaleses i superar les febleses."
+          ]
+        },
+        {
+          "id": "9.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Mostrar una actitud positiva y perseverante al hacer frente a las diferentes situaciones de aprendizaje de las matemáticas aceptando la crítica razonada.",
+          "text_ca": "Mostrar una actitud positiva i perseverant en fer front a les diferents situacions d’aprenentatge de les matemàtiques acceptant la crítica raonada.",
+          "aclaraciones_es": [
+            "Mostrar una actitud positiva y perseverante en el aprendizaje de las matemáticas y en la realización de las actividades de la materia.",
+            "Aceptar y agradecer la crítica razonada y transformarla en una oportunidad de aprendizaje."
+          ],
+          "aclaraciones_ca": [
+            "Mostrar una actitud positiva i perseverant en l’aprenentatge de les matemàtiques i en la realització de les activitats de la matèria.",
+            "Acceptar i agrair la crítica raonada i transformar-la en una oportunitat d’aprenentatge."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE10",
+      "ce_num": 10,
+      "description_es": "Desarrollar destrezas sociales reconociendo y respetando las emociones y experiencias de los demás, participando activa y reflexivamente en proyectos en equipos heterogéneos con roles asignados para construir una identidad positiva como estudiante de matemáticas, fomentar el bienestar personal y grupal, y crear relaciones saludables.",
+      "description_ca": "Desenvolupar destreses socials reconeixent i respectant les emocions i experiències dels altres, participant activament i reflexivament en projectes en equips heterogenis amb rols assignats per construir una identitat positiva com a estudiant de matemàtiques, fomentar el benestar personal i grupal, i crear relacions saludables.",
+      "descriptores": [
+        "CCL5",
+        "CP3",
+        "STEM3",
+        "CPSAA1",
+        "CPSAA3",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "10.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Colaborar activamente y construir relaciones trabajando con las matemáticas en equipos heterogéneos, respetando diferentes opiniones, comunicándose de manera efectiva, pensando de manera crítica y creativa, tomando decisiones y realizando juicios informados.",
+          "text_ca": "Col·laborar activament i construir relacions treballant amb les matemàtiques en equips heterogenis, respectant diferents opinions, comunicant-se de manera efectiva, pensant de manera crítica i creativa, prenent decisions i realitzant judicis informats.",
+          "aclaraciones_es": [
+            "Colaborar activamente en equipos heterogéneos.",
+            "Hacer aportaciones creativas.",
+            "Comunicar las aportaciones y opiniones de manera clara y efectiva.",
+            "Valorar con respeto las opiniones y aportaciones del resto de miembros del equipo.",
+            "Emitir juicios críticos e informados."
+          ],
+          "aclaraciones_ca": [
+            "Col·laborar activament en equips heterogenis.",
+            "Fer aportacions creatives.",
+            "Comunicar les aportacions i opinions de manera clara i efectiva.",
+            "Valorar amb respecte les opinions i aportacions de la resta de membres de l’equip.",
+            "Emetre judicis crítics i informats."
+          ]
+        },
+        {
+          "id": "10.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Gestionar el reparto de tareas en el trabajo en equipo, aportando valor, favoreciendo la inclusión, la escucha activa, responsabilizándose del rol asignado y de la propia contribución al equipo.",
+          "text_ca": "Gestionar el repartiment de tasques en el treball en equip, aportant valor, afavorint la inclusió, l’escolta activa, responsabilitzant-se del rol assignat i de la pròpia contribució a l’equip.",
+          "aclaraciones_es": [
+            "Participar en el reparto de tareas en los trabajos en equipo.",
+            "Hacer aportaciones valiosas que contribuyan a la realización exitosa del trabajo del equipo.",
+            "Responsabilizarse del rol asignado en cada momento.",
+            "Escuchar activamente las aportaciones de los demás miembros.",
+            "Favorecer la participación e inclusión de todos los miembros del equipo."
+          ],
+          "aclaraciones_ca": [
+            "Participar en el repartiment de tasques en els treballs en equip.",
+            "Fer aportacions valuoses que contribueixin a la realització exitosa de la feina de l’equip.",
+            "Responsabilitzar-se del rol assignat en cada moment.",
+            "Escoltar activament les aportacions dels altres membres.",
+            "Afavorir la participació i inclusió de tots els membres de l’equip."
+          ]
+        }
+      ]
+    }
+  ]
+}

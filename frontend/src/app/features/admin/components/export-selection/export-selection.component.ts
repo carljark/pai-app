@@ -5,6 +5,7 @@ import { ExportableProject } from '../../services/projects-transfer.service';
 /** Nombre corto de cada nivel para la lista (el panel de administración está en castellano). */
 const LEVEL_LABELS: Record<string, string> = {
   FP_BASICA: 'FP Básica',
+  ESO_ORDINARIA: 'ESO',
   DIVERSIFICACION_CURRICULAR: 'Diversificación',
   CFGM_ESTETICA: 'CFGM Estética',
   CFGM_PELUQUERIA: 'CFGM Peluquería',

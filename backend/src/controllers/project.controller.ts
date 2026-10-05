@@ -12,6 +12,8 @@ import { processQueue } from "../services/queue.service";
 import { syncProjectNotification, deleteProjectNotification } from "../services/notification.service";
 import { buildContentUpdate } from '../services/projectContent.service';
 import { resolveProvider } from "../data/ai-models";
+import { defaultCurso, findNivel } from '../data/niveles';
+import { ESO_ORDINARIA, buildEsoInstruction, describeEsoCeForPrompt, findEsoCe } from '../services/eso-curriculum.service';
 
 // Endpoint para el SSE
 export const streamUpdates = (req: any, res: Response) => {
@@ -114,17 +116,13 @@ export const describeRaForPrompt = (raDoc: any, selectedStr: string, language?: 
   return `- Módulo/Asignatura: ${moduleLabel}\n  Resultado de Aprendizaje ${code} (numeración oficial, no la cambies): ${selectedStr}`;
 };
 
-/** Denominación oficial de cada ciclo FP en castellano y catalán, para el prompt de la IA. */
-const CYCLE_NAMES: Record<string, { es: string; ca: string }> = {
-  CFGM_ESTETICA: { es: 'CFGM Estética y Belleza', ca: 'CFGM Estètica i Bellesa' },
-  CFGM_PELUQUERIA: { es: 'CFGM Peluquería y Cosmética Capilar', ca: 'CFGM Perruqueria i Cosmètica Capil·lar' },
-  CFGS_EDUCACION_INFANTIL: { es: 'CFGS Educación Infantil', ca: 'CFGS Educació Infantil' },
-};
-
-/** Curso y nivel destino del proyecto, con el nombre del ciclo en el idioma del proyecto. */
+/** Curso y nivel destino del proyecto, con el nombre oficial del ciclo (catálogo) en el idioma del proyecto. */
 export const describeTargetCourse = (tipoNivel: string, course: string, language?: string): string => {
-  const cycle = CYCLE_NAMES[tipoNivel];
-  if (cycle) return `${course} de ${language === 'catalan' ? cycle.ca : cycle.es}`;
+  const nivel = findNivel(tipoNivel);
+  if (nivel?.etapa === 'CFGM' || nivel?.etapa === 'CFGS') {
+    return `${course} de ${language === 'catalan' ? nivel.nombre_ca : nivel.nombre_es}`;
+  }
+  if (tipoNivel === ESO_ORDINARIA) return `${course} de ESO (Educación Secundaria Obligatoria)`;
   if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') return `${course} de ESO (Diversificación Curricular / PDC)`;
   return `${course} de FP Básica (Formación Profesional Básica)`;
 };
@@ -269,6 +267,11 @@ Esta propuesta debe especificar de manera detallada:
       }
     }
 
+    // Determinación del curso efectivo y descripción
+    const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCurso(tipoNivel);
+    const targetCourseDescription = describeTargetCourse(tipoNivel, effectiveCourse, language);
+    const esoInstruction = tipoNivel === ESO_ORDINARIA ? buildEsoInstruction(effectiveCourse) : '';
+
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
 REGLA CRÍTICA INQUEBRANTABLE SOBRE EL CURSO Y NIVEL EDUCATIVO:
 El proyecto debe diseñarse rigurosa y exclusivamente para el curso y nivel educativo formalmente indicado en la solicitud del docente (por ejemplo: 3º de ESO en Diversificación Curricular / PDC). Si se solicita 3º de ESO, queda TERMINANTEMENTE PROHIBIDO cambiarlo a 4º de ESO o dirigirlo a otro curso. Los proyectos de referencia o ejemplos de repositorios (como INTEF) que pertenezcan a otros cursos (como 4º de ESO) deben usarse ÚNICAMENTE como inspiración de metodologías activas y estructura didáctica, pero NUNCA deben alterar el curso formalmente solicitado. En el apartado inicial "Identidad del Proyecto", debes consignar con total exactitud el curso y nivel educativo solicitado.
@@ -314,15 +317,12 @@ MUY IMPORTANTE: NUNCA utilices recuadros de texto dibujados con caracteres ASCII
 REGLA ESTRICTA SOBRE TEXTO, NÚMEROS Y UNIDADES (PROHIBIDO LATEX): Escribe SIEMPRE los números, minutos, horas, unidades (kg, g, m, etc.), paréntesis y acotaciones en TEXTO PLANO NORMAL de Markdown (por ejemplo: "(165 minutos totales)", "50 kg", "2 horas"). NUNCA utilices notación LaTeX, comandos \\text{...}, ni delimitadores con el símbolo de dólar ($) bajo ningún concepto para números, duraciones o texto estándar.
 Genera todo el contenido en el idioma: ${language || 'castellano'}.
 
-${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}${fpbCaInstruction}`;
-    
-    // Determinación del curso efectivo y descripción
-    const defaultCourse = tipoNivel === 'DIVERSIFICACION_CURRICULAR' ? '3º' : '1º';
-    const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCourse;
-    const targetCourseDescription = describeTargetCourse(tipoNivel, effectiveCourse, language);
+${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}${fpbCaInstruction}${esoInstruction}`;
 
     // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
     const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
+      const esoCe = tipoNivel === ESO_ORDINARIA ? findEsoCe(allCes, selectedStr) : undefined;
+      if (esoCe) return describeEsoCeForPrompt(esoCe, effectiveCourse, language);
       const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
       if (raDoc) {
         let text = describeRaForPrompt(raDoc, selectedStr, language);
@@ -335,7 +335,8 @@ ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincide
         }
         return text;
       }
-      const ceDoc = allCes.find(c => c.description_es === selectedStr || c.description_ca === selectedStr || c.ce_id === selectedStr);
+      const ceDoc = allCes.find(c => c.tipoNivel !== ESO_ORDINARIA
+        && (c.description_es === selectedStr || c.description_ca === selectedStr || c.ce_id === selectedStr));
       if (ceDoc) {
         const subjectName = ceDoc.subject || ceDoc.area;
         const ceCode = ceDoc.ce_id ? ` ${ceDoc.ce_id}` : '';

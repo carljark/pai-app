@@ -1,0 +1,335 @@
+{
+  "code": "tecnologia",
+  "name_es": "Tecnología",
+  "name_ca": "Tecnologia",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Identificar y proponer problemas tecnológicos con iniciativa y creatividad, estudiando las necesidades del entorno próximo y aplicando estrategias y procesos colaborativos e iterativos relativos a proyectos, para idear y planificar soluciones de manera eficiente, accesible, sostenible e innovadora.",
+      "description_ca": "Identificar i proposar problemes tecnològics amb iniciativa i creativitat, estudiant les necessitats de l’entorn pròxim i aplicant estratègies i processos col·laboratius i iteratius, relatius a projectes, per idear i planificar solucions de manera eficient, accessible, sostenible i innovadora.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "CD1",
+        "CD3",
+        "CPSAA3",
+        "CPSAA4",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Idear y planificar soluciones tecnológicas emprendedoras que generen un valor para la comunidad, a partir de la observación y el análisis del entorno más próximo, estudiando las necesidades, requisitos y posibilidades de mejora.",
+          "text_ca": "Idear i planificar solucions tecnològiques emprenedores que generin un valor per a la comunitat, a partir de l’observació i l’anàlisi de l’entorn més pròxim, estudiant-ne les necessitats, requisits i possibilitats de millora.",
+          "aclaraciones_es": [
+            "Idear soluciones tecnológicas siguiendo el método de proyectos.",
+            "Proponer diseños que incluyan una solución gráfica normalizada.",
+            "Identificar y secuenciar los recursos necesarios tanto materiales y temporales como personales."
+          ],
+          "aclaraciones_ca": [
+            "Idear solucions tecnològiques seguint el mètode de projectes.",
+            "Proposar dissenys que incloguin una solució gràfica normalitzada.",
+            "Identificar i seqüenciar els recursos necessaris tant materials, temporals com personals."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Aplicar con iniciativa estrategias colaborativas de gestión de proyectos con una perspectiva interdisciplinaria y siguiendo un proceso iterativo de validación, desde la fase de ideación hasta la difusión de la solución.",
+          "text_ca": "Aplicar amb iniciativa estratègies col·laboratives de gestió de projectes amb una perspectiva interdisciplinària i seguint un procés iteratiu de validació, des de la fase d’ideació fins a la difusió de la solució.",
+          "aclaraciones_es": [
+            "Trabajar en equipo a lo largo de todas las fases del proceso tecnológico con autonomía e iniciativa; con un liderazgo positivo, respetuoso y equilibrado; una partición equitativa de trabajos que fomente la participación, poniendo en práctica la autocrítica y respetando al resto de miembros.",
+            "Evaluar una solución obtenida, desarrollar propuestas de mejora del diseño y, en caso necesario, rediseñar.",
+            "Integrar conocimientos de diferentes disciplinas al proyecto."
+          ],
+          "aclaraciones_ca": [
+            "Treballar en equip al llarg de totes les fases del procés tecnològic amb autonomia i iniciativa; amb un lideratge positiu, respectuós i equilibrat; una partició equitativa de feines que fomenti la participació, posant en pràctica l’autocrítica i respectant la resta de membres.",
+            "Avaluar una solució obtinguda, desenvolupar propostes de millora del disseny i, en cas necessari, redissenyar.",
+            "Integrar coneixements de diferents disciplines al projecte."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Tratar la gestión del proyecto de manera creativa, aplicando estrategias y técnicas colaborativas adecuadas, así como métodos de investigación en la ideación de soluciones más eficientes, accesibles e innovadoras.",
+          "text_ca": "Tractar la gestió del projecte de manera creativa, aplicant estratègies i tècniques col·laboratives adients, com també mètodes de recerca en la ideació de solucions més eficients, accessibles i innovadores.",
+          "aclaraciones_es": [
+            "Utilizar estrategias o herramientas para programar, organizar y planificar las tareas de un proyecto, como por ejemplo esquemas, diagramas, etc.",
+            "Aportar ideas creativas para el desarrollo de un proyecto utilizando estrategias adecuadas.",
+            "Desarrollar investigaciones de información con diferentes fuentes fiables, actualizadas y que respeten los derechos de autor.",
+            "Diseñar soluciones eficientes, ergonómicas, accesibles, innovadoras, sostenibles, adecuadas al mundo actual y al entorno cotidiano."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar estratègies o eines per programar, organitzar i planificar les tasques d’un projecte, com per exemple, esquemes, diagrames, etc.",
+            "Aportar idees creatives per al desenvolupament d’un projecte utilitzant estratègies adients.",
+            "Desenvolupar recerques d’informació amb diferents fonts fiables, actualitzades i que respectin els drets d’autor.",
+            "Dissenyar solucions eficients, ergonòmiques, accessibles, innovadores, sostenibles, adequades al món actual i a l’entorn quotidià."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Aplicar de forma apropiada y segura distintas técnicas y conocimientos interdisciplinares, utilizando procedimientos y recursos tecnológicos y analizando el ciclo de vida de productos, para fabricar soluciones tecnológicas accesibles y sostenibles que den respuesta a necesidades planteadas.",
+      "description_ca": "Aplicar de manera apropiada i segura diferents tècniques i coneixements interdisciplinaris, utilitzant procediments i recursos tecnològics i analitzant el cicle de vida de productes per fabricar solucions tecnològiques accessibles i sostenibles que donin resposta a necessitats plantejades.",
+      "descriptores": [
+        "STEM2",
+        "STEM5",
+        "CD2",
+        "CPSAA4",
+        "CC4",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar el diseño de un producto que dé respuesta a una necesidad planteada, evaluando la demanda, evolución y previsión de fin de ciclo de vida con un criterio ético, responsable e inclusivo.",
+          "text_ca": "Analitzar el disseny d’un producte que doni resposta a una necessitat plantejada, avaluant-ne la demanda, evolució i previsió de fi de cicle de vida amb un criteri ètic, responsable i inclusiu.",
+          "aclaraciones_es": [
+            "Analizar un producto tecnológico evaluando su función, sus elementos y las relaciones entre ellos, su funcionamiento, las características técnicas, el origen y su impacto social, económico y medioambiental."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar un producte tecnològic avaluant la seva funció, els seus elements i les relacions entre ells, el seu funcionament, les característiques tècniques, l’origen i el seu impacte social, econòmic i mediambiental."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Fabricar productos y soluciones tecnológicas, aplicando herramientas de diseño asistido, técnicas de elaboración manual, mecánica y digital y utilizando los materiales y recursos mecánicos, eléctricos, electrónicos y digitales adecuados.",
+          "text_ca": "Fabricar productes i solucions tecnològiques, aplicant eines de disseny assistit, tècniques d’elaboració manual, mecànica i digital i utilitzant els materials i recursos mecànics, elèctrics, electrònics i digitals adients.",
+          "aclaraciones_es": [
+            "Fabricar productos tecnológicos usando, tanto sistemas CAD (2D y 3D), como técnicas de elaboración manuales, mecánicas y digitales.",
+            "Utilizar materiales y recursos apropiados y eficientes, tanto estructurales como eléctricos, electrónicos y/o neumáticos."
+          ],
+          "aclaraciones_ca": [
+            "Fabricar productes tecnològics fent servir, tant sistemes CAD (2D i 3D), com tècniques d’elaboració manuals, mecàniques i digitals.",
+            "Utilitzar materials i recursos apropiats i eficients, tant estructurals com elèctrics, electrònics i/o pneumàtics."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Expresar, comunicar y difundir ideas, propuestas o soluciones tecnológicas en diferentes foros de manera efectiva, usando un lenguaje inclusivo y no sexista, empleando los recursos disponibles y aplicando los elementos y técnicas necesarios para intercambiar la información de manera responsable y fomentar el trabajo en equipo.",
+      "description_ca": "Expressar, comunicar i difondre idees, propostes o solucions tecnològiques en diferents fòrums de manera efectiva, usant un llenguatge inclusiu i no sexista, emprant els recursos disponibles i aplicant els elements i tècniques necessaris per intercanviar la informació de manera responsable i fomentar el treball en equip.",
+      "descriptores": [
+        "CCL1",
+        "STEM4",
+        "CD3",
+        "CPSAA3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Intercambiar información y fomentar el trabajo en equipo de manera asertiva, usando las herramientas digitales adecuadas junto con el vocabulario técnico, símbolos y esquemas de sistemas tecnológicos apropiados.",
+          "text_ca": "Intercanviar informació i fomentar el treball en equip de manera assertiva, emprant les eines digitals adequades juntament amb el vocabulari tècnic, símbols i esquemes de sistemes tecnològics apropiats.",
+          "aclaraciones_es": [
+            "Compartir conocimiento y colaborar en equipo de forma eficiente y asertiva.",
+            "Utilizar herramientas digitales colaborativas para el intercambio de información.",
+            "Expresar los saberes técnicos (vocabulario técnico, símbolos y esquemas de sistemas tecnológicos) de forma gráfica, verbal o escrita."
+          ],
+          "aclaraciones_ca": [
+            "Compartir coneixement i col·laborar en equip de forma eficient i assertiva.",
+            "Utilitzar eines digitals col·laboratives per a l’intercanvi d’informació.",
+            "Expressar els sabers tècnics (vocabulari tècnic, símbols i esquemes de sistemes tecnològics) de forma gràfica, verbal o escrita."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Presentar y difundir las propuestas o soluciones tecnológicas de manera efectiva, empleando la entonación, expresión, gestión del tiempo y adaptación adecuada del discurso, así como un lenguaje inclusivo y no sexista.",
+          "text_ca": "Presentar i difondre les propostes o solucions tecnològiques de manera efectiva, emprant l’entonació, expressió, gestió del temps i adaptació adequada del discurs, com també un llenguatge inclusiu i no sexista.",
+          "aclaraciones_es": [
+            "Comunicar las soluciones ideadas o fabricaciones elaboradas del proyecto tecnológico, apoyándose para su difusión con algún soporte.",
+            "Expresarse con un vocabulario técnico apropiado, una entonación adecuada, con fluidez y un lenguaje verbal y no verbal inclusivo y no sexista.",
+            "Administrar correctamente el tiempo disponible durante una presentación oral.",
+            "Emplear técnicas de presentación para adaptar el discurso a la audiencia de manera eficiente."
+          ],
+          "aclaraciones_ca": [
+            "Comunicar les solucions ideades o fabricacions elaborades del projecte tecnològic, recolzant-se per a la seva difusió amb algun suport.",
+            "Expressar-se amb un vocabulari tècnic apropiat, una entonació adequada, amb fluïdesa i un llenguatge verbal i no verbal inclusiu i no sexista.",
+            "Administrar correctament el temps disponible durant una presentació oral.",
+            "Emprar tècniques de presentació per adaptar el discurs a l’audiència de manera eficient."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Desarrollar soluciones automatizadas a problemas planteados, aplicando los conocimientos necesarios e incorporando tecnologías emergentes, para diseñar y construir sistemas de control programables y robóticos.",
+      "description_ca": "Desenvolupar solucions automatitzades a problemes plantejats aplicant els coneixements necessaris i incorporant tecnologies emergents per dissenyar i construir sistemes de control programables i robòtics.",
+      "descriptores": [
+        "CP2",
+        "STEM1",
+        "STEM3",
+        "CD5",
+        "CPSAA5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Diseñar, construir, controlar y simular sistemas automáticos programables y robots que sean capaces de hacer tareas de manera autónoma, aplicando conocimientos de mecánica, electrónica, neumática y componentes de los sistemas de control, así como otros conocimientos interdisciplinarios.",
+          "text_ca": "Dissenyar, construir, controlar i simular sistemes automàtics programables i robots que siguin capaços de fer tasques de manera autònoma, aplicant coneixements de mecànica, electrònica, pneumàtica i components dels sistemes de control, com també altres coneixements interdisciplinaris.",
+          "aclaraciones_es": [
+            "Descomponer problemas en diferentes fases reconociendo patrones repetitivos para la resolución de los problemas tecnológicos de manera estructurada.",
+            "Programar en diferentes lenguajes, tanto en código como en bloques.",
+            "Aplicar los fundamentos teóricos para la configuración de actuadores y sensores eléctricos, electrónicos, mecánicos, neumáticos e hidráulicos.",
+            "Automatizar las soluciones de proyectos transversales de otras áreas o disciplinas."
+          ],
+          "aclaraciones_ca": [
+            "Descompondre problemes en diferents fases reconeixement patrons repetitius per a la resolució dels problemes tecnològics de manera estructurada.",
+            "Programar en diferents llenguatges, tant en codi com en blocs.",
+            "Aplicar els fonaments teòrics per a la configuració d’actuadors i sensors elèctrics, electrònics, mecànics, pneumàtics i hidràulics.",
+            "Automatitzar les solucions de projectes transversals d’altres àrees o disciplines."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Integrar en las máquinas y sistemas tecnológicos aplicaciones informáticas y tecnologías digitales emergentes de control y simulación como Internet de las cosas, el big data o la Inteligencia Artificial con sentido crítico y ético.",
+          "text_ca": "Integrar en les màquines i sistemes tecnològics aplicacions informàtiques i tecnologies digitals emergents de control i simulació com a Internet de les coses, el big data o la Intel·ligència Artificial amb sentit crític i ètic.",
+          "aclaraciones_es": [
+            "Investigar los datos de manera crítica para dar respuesta a una necesidad.",
+            "Gestionar información con una base de datos y big data.",
+            "Simular escenarios con la ayuda de la IA analizando de forma crítica la información gestionada.",
+            "Diseñar aplicaciones informáticas que resuelvan un problema cotidiano y gestionarlas con placas controladoras."
+          ],
+          "aclaraciones_ca": [
+            "Investigar les dades de manera crítica per donar resposta a una necessitat.",
+            "Gestionar informació amb una base de dades i big data.",
+            "Simular escenaris amb l’ajuda de la IA analitzant de forma crítica la informació gestionada.",
+            "Dissenyar aplicacions informàtiques que resolguin un problema quotidià i gestionar-les amb plaques controladores."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Aprovechar y emplear de manera responsable las posibilidades de las herramientas digitales, adaptándolas a sus necesidades, configurándolas y aplicando conocimientos interdisciplinares para la resolución de tareas de una manera más eficiente.",
+      "description_ca": "Aprofitar i emprar de manera responsable les possibilitats de les eines digitals, adaptant- les a les seves necessitats, configurant-les i aplicant-hi coneixements interdisciplinaris, per a la resolució de tasques d’una manera més eficient.",
+      "descriptores": [
+        "CP2",
+        "CD2",
+        "CD5",
+        "CPSAA4",
+        "CPSAA5"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Resolver tareas propuestas de manera eficiente mediante el uso y configuración de diferentes aplicaciones y herramientas digitales, aplicando conocimientos interdisciplinarios con autonomía.",
+          "text_ca": "Resoldre tasques proposades de manera eficient mitjançant l’ús i configuració de diferents aplicacions i eines digitals, aplicant coneixements interdisciplinaris amb autonomia.",
+          "aclaraciones_es": [
+            "Utilizar simuladores mecánicos, eléctricos, electrónicos o neumáticos de manera autónoma para resolver proyectos tecnológicos.",
+            "Integrar conocimientos de otras materias a los proyectos de manera eficiente."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar simuladors mecànics, elèctrics, electrònics o pneumàtics de manera autònoma per resoldre projectes tecnològics.",
+            "Integrar coneixements d’altres matèries en els projectes de manera eficient."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Analizar procesos tecnológicos, teniendo en cuenta su impacto en la sociedad y el entorno y aplicando criterios de sostenibilidad y accesibilidad, para hacer un uso ético y ecosocialmente responsable de la tecnología.",
+      "description_ca": "Analitzar processos tecnològics, tenint en compte el seu impacte en la societat i l’entorn i aplicant criteris de sostenibilitat i accessibilitat, per fer un ús ètic i responsable, des del punt de vista ecològic i social, de la tecnologia.",
+      "descriptores": [
+        "STEM2",
+        "STEM5",
+        "CD4",
+        "CC4"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Hacer un uso responsable de la tecnología, mediante el análisis y aplicación de criterios de sostenibilidad y accesibilidad en la selección de materiales y en su diseño, así como en los procesos de fabricación de productos tecnológicos, minimizando el impacto negativo en la sociedad y en el planeta.",
+          "text_ca": "Fer un ús responsable de la tecnologia, mitjançant l’anàlisi i aplicació de criteris de sostenibilitat i accessibilitat en la selecció de materials i en el seu disseny, com també en els processos de fabricació de productes tecnològics, minimitzant l’impacte negatiu en la societat i en el planeta.",
+          "aclaraciones_es": [
+            "Analizar y aplicar criterios de sostenibilidad y ergonomía en los procesos de diseño y fabricación de productos, usando materiales próximos y accesibles.",
+            "Cumplir las normas de prevención de riesgos en el taller durante la fabricación de productos tecnológicos.",
+            "Optimizar los recursos disponibles y evitar el desperdicio de materiales en el taller.",
+            "Incorporar principios de diseño ecológico en el proceso de fabricación de productos tecnológicos en aspectos como la modularidad para facilitar la separación de residuos, la eficiencia energética, la durabilidad del producto o la reutilización de componentes, entre otros."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar i aplicar criteris de sostenibilitat i ergonomia en els processos de disseny i fabricació de productes, fent servir materials propers i accessibles.",
+            "Complir les normes de prevenció de riscs al taller durant la fabricació de productes tecnològics.",
+            "Optimitzar els recursos disponibles i evitar el desaprofitament de materials al taller.",
+            "Incorporar principis de disseny ecològic en el procés de fabricació de productes tecnològics en aspectes com la modularitat per facilitar la separació de residus, l’eficiència energètica, la durabilitat del producte o la reutilització de components, entre d’altres."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar los beneficios que, en el cuidado del entorno, aportan la arquitectura bioclimática y el transporte ecológico, valorando la contribución de las tecnologías al desarrollo sostenible.",
+          "text_ca": "Analitzar els beneficis que, en la cura de l’entorn, aporten l’arquitectura bioclimàtica i el transport ecològic, valorant la contribució de les tecnologies al desenvolupament sostenible.",
+          "aclaraciones_es": [
+            "Analizar el impacto de la arquitectura bioclimática en la reducción del consumo energético y de las emisiones contaminantes aprovechando los recursos naturales.",
+            "Identificar las ventajas del transporte ecológico en la reducción de la contaminación y de las emisiones de gases de efecto invernadero (GEI).",
+            "Valorar la contribución de las tecnologías innovadoras a la minimización del impacto medioambiental y al fomento del desarrollo sostenible."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar l’impacte de l’arquitectura bioclimàtica en la reducció del consum energètic i de les emissions contaminats aprofitant els recursos naturals.",
+            "Identificar els avantatges del transport ecològic en la reducció de la contaminació i de les emissions de gasos d’efecte hivernacle (GEI).",
+            "Valorar la contribució de les tecnologies innovadores a la minimització de l’impacte mediambiental i al foment del desenvolupament sostenible."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar y valorar la repercusión y los beneficios del desarrollo de proyectos tecnológicos de carácter social por medio de comunidades abiertas, acciones de voluntariado o proyectos de servicio en la comunidad.",
+          "text_ca": "Identificar i valorar la repercussió i els beneficis del desenvolupament de projectes tecnològics de caràcter social per mitjà de comunitats obertes, accions de voluntariat o projectes de servei a la comunitat.",
+          "aclaraciones_es": [
+            "Analizar los efectos positivos que tienen los proyectos tecnológicos desarrollados para ayudar a la sociedad, como los de voluntariado, servicios sociales, igualdad de oportunidades, inclusión y accesibilidad."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar els efectes positius que tenen els projectes tecnològics desenvolupats per ajudar a la societat, com els de voluntariat, serveis socials, igualtat d’oportunitats, inclusió i accessibilitat."
+          ]
+        }
+      ]
+    }
+  ]
+}

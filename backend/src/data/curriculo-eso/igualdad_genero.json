@@ -1,0 +1,403 @@
+{
+  "code": "igualdad_genero",
+  "name_es": "Igualdad de Género",
+  "name_ca": "Igualtat de Gènere",
+  "cursos": {
+    "1º": "optativa",
+    "2º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Comprender como funciona el sistema sexo-género, como constructo social que ha configurado los modelos de masculinidad y feminidad, para favorecer un desarrollo integral y autónomo de la personalidad, plural y respetuoso, que cuestione los estereotipos de género.",
+      "description_ca": "Comprendre com funciona el sistema sexe-gènere, com a constructe social que ha configurat els models de masculinitat i feminitat, per afavorir un desenvolupament integral i autònom de la personalitat, plural i respectuós, que qüestioni els estereotips de gènere.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL5",
+        "CD2",
+        "CPSAA3",
+        "CC3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Comprender el proceso de socialización diferencial en la construcción de las identidades de género, compartiendo conceptos e identificando los diversos agentes de socialización para favorecer modelos de feminidad y masculinidad no hegemónicos.",
+          "text_ca": "Comprendre el procés de socialització diferencial en la construcció de les identitats de gènere, compartint conceptes i identificant els diversos agents de socialització per afavorir models de feminitat i masculinitat no hegemònics.",
+          "aclaraciones_es": [
+            "Comprender como el proceso de socialización afecta la construcción de las identidades de género.",
+            "Entender la socialización diferenciada para niños y niñas.",
+            "Identificar los agentes de socialización, como la familia, la escuela, los iguales, pero también la literatura y los medios de comunicación.",
+            "Reconocer modelos de feminidad y masculinidad diversos y abiertos."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre com el procés de socialització afecta la construcció de les identitats de gènere.",
+            "Entendre la socialització diferenciada per a nins i nines.",
+            "Identificar els agents de socialització, com la família, l’escola, els iguals, però també la literatura i els mitjans de comunicació.",
+            "Reconèixer models de feminitat i masculinitat diversos i oberts."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Detectar y analizar críticamente los mandatos e imágenes estereotipadas de las mujeres y los hombres en la vida cotidiana, en las profesiones, en los medios de comunicación y en las redes sociales, declinando prejuicios y estereotipos misóginos y androcéntricos.",
+          "text_ca": "Detectar i analitzar críticament els mandats i imatges estereotipades de les dones i els homes a la vida quotidiana, a les professions, als mitjans de comunicació i a les xarxes socials, declinant prejudicis i estereotips misògins i androcèntrics.",
+          "aclaraciones_es": [
+            "Reconocer los roles de género en la vida cotidiana (en las profesiones, en la dedicación al cuidado de los niños, de los enfermos, del hogar y otras tareas sociales).",
+            "Detectar los estereotipos de género (en los mandatos corporales, en el comportamiento esperado en cada género y en los gustos de hombres y mujeres).",
+            "Analizar críticamente la difusión de estos estereotipos en los medios de comunicación (televisión, anuncios, música, redes sociales u otros medios).",
+            "Construir una actitud de rechazo de los prejuicios y estereotipos machistas."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer els rols de gènere a la vida quotidiana (a les professions, en la dedicació a les cures dels infants, dels malalts, de la llar i altres tasques socials).",
+            "Detectar els estereotips de gènere (en els mandats corporals, en el comportament esperat en cada gènere i en els gustos d’homes i dones).",
+            "Analitzar críticament la difusió d’aquests estereotips en els mitjans de comunicació (televisió, anuncis, música, xarxes socials o altres mitjans).",
+            "Construir una actitud de rebuig dels prejudicis i estereotips masclistes."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Transferir los aprendizajes a la misma realidad personal y social, utilizando un lenguaje inclusivo, mostrando actitudes de respeto e igualdad en las relaciones interpersonales y rechazando la discriminación por cuestiones de sexo o género.",
+          "text_ca": "Transferir els aprenentatges a la mateixa realitat personal i social, utilitzant un llenguatge inclusiu, mostrant actituds de respecte i igualtat en les relacions interpersonals i rebutjant la discriminació per qüestions de sexe o gènere.",
+          "aclaraciones_es": [
+            "Transferir los aprendizajes en la propia vida y en el día a día.",
+            "Hablar y escribir siempre empleando un lenguaje inclusivo.",
+            "Relacionarse con las otras personas de manera respetuosa.",
+            "Mostrar una actitud de rechazo hacia los comportamientos discriminatorios por motivo de sexo o género."
+          ],
+          "aclaraciones_ca": [
+            "Transferir els aprenentatges a la pròpia vida i en el dia a dia.",
+            "Parlar i escriure sempre emprant un llenguatge inclusiu.",
+            "Relacionar-se amb les altres persones de manera respectuosa.",
+            "Mostrar una actitud de rebuig cap als comportaments discriminatoris per motiu de sexe o gènere."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Reflexionar sobre la importancia de las relaciones igualitarias entre hombres y mujeres en la sociedad actual, identificar creencias, comportamientos y actitudes que generan violencia hacia las mujeres, adoptando una postura crítica, de denuncia y de transformación social.",
+      "description_ca": "Reflexionar sobre la importància de les relacions igualitàries entre homes i dones en la societat actual, identificar creences, comportaments i actituds que generen violència cap a les dones, adoptant una postura crítica, de denúncia i de transformació social.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CD3",
+        "CPSAA2",
+        "CC2",
+        "CC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar, detectar y rechazar comportamientos y actitudes que puedan suponer cualquier tipo de violencia hacia las mujeres, manifestando respeto y solidaridad hacia las víctimas de violencia machista.",
+          "text_ca": "Identificar, detectar i rebutjar comportaments i actituds que puguin suposar qualsevol mena de violència envers les dones, manifestant respecte i solidaritat cap a les víctimes de violència masclista.",
+          "aclaraciones_es": [
+            "Identificar y distinguir los diferentes tipos de violencias hacia las mujeres, las visibles, como la física y la sexual, y también las invisibles como, por ejemplo, además de la psicológica, la violencia simbólica, económica e institucional.",
+            "Rechazar cualquier forma de violencia hacia las mujeres. Expresar solidaridad hacia las víctimas de violencia machista."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i distingir els diferents tipus de violències envers les dones, les visibles, com la física i la sexual, i també les invisibles, com ara, a més de la psicològica, la violència simbòlica, econòmica i institucional.",
+            "Rebutjar qualsevol forma de violència cap a les dones. Expressar solidaritat cap a les víctimes de violència masclista."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Realizar acciones transformadoras que puedan revertir las violencias machistas, mostrando actitudes de implicación y cambio hacia una sociedad más igualitaria.",
+          "text_ca": "Realitzar accions transformadores que puguin revertir les violències masclistes, mostrant actituds d’implicació i canvi cap a una societat més igualitària.",
+          "aclaraciones_es": [
+            "Manifestar públicamente el rechazo a la violencia machista de manera artística.",
+            "Expresar el rechazo a la violencia machista de manera escrita.",
+            "Formar parte de actividades colectivas transformadoras a favor de la igualdad.",
+            "Tener iniciativas individuales y colectivas que visibilicen la violencia machista en cualquier de sus manifestaciones."
+          ],
+          "aclaraciones_ca": [
+            "Manifestar públicament el rebuig a la violència masclista de manera artística.",
+            "Expressar el rebuig a la violència masclista de manera escrita.",
+            "Formar part d’activitats col·lectives transformadores a favor de la igualtat.",
+            "Tenir iniciatives individuals i col·lectives que visibilitzin la violència masclista en qualsevol de les seves manifestacions."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Identificar las situaciones de invisibilidad y marginalidad que ha sufrido históricamente y que todavía hoy en día sufre la mujer, para integrar su contribución al patrimonio cultural, social y científico, como protagonistas del pasado, del presente y del futuro.",
+      "description_ca": "Identificar les situacions d’invisibilitat i marginalitat que ha patit històricament i que encara avui dia pateix la dona, per tal d’integrar la seva contribució al patrimoni cultural, social i científic, com a protagonistes del passat, del present i del futur.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CCL5",
+        "CD1",
+        "CPSAA1",
+        "CC1",
+        "STEM3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar el papel de las mujeres a lo largo de la historia, identificando los diferentes momentos en que el movimiento feminista ha contribuido al desarrollo de los sistemas democráticos.",
+          "text_ca": "Valorar el paper de les dones al llarg de la història, identificant-ne els diferents moments en què el moviment feminista ha contribuït al desenvolupament dels sistemes democràtics.",
+          "aclaraciones_es": [
+            "Identificar las diferentes oleadas del movimiento feminista y como han contribuido al desarrollo de sociedades más democráticas e igualitarias.",
+            "Comprender que el proceso de toma de conciencia por parte de las mujeres sobre su situación de invisibilidad histórica ha sido un factor clave en la construcción de vínculos de solidaridad y apoyo mutuo —sororidad—, que les ha permitido organizarse de forma pacífica para luchar contra las desigualdades y las injusticias de género.",
+            "Tomar conciencia de la necesidad de dar voz y presencia a las mujeres en el mundo actual para romper con la inercia patriarcal arrastrada que las invisibiliza históricamente.",
+            "Comprender e identificar el patriarcado como un problema sistémico, global y transversal heredado por educación y transmisión cultural no natural y totalmente arbitrario capaz de ser desconstruido socialmente mediante un nuevo paradigma y coeducación."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les onades feministes i com han contribuït al desenvolupament de societats més democràtiques i igualitàries.",
+            "Comprendre que el procés de presa de consciència per part de les dones sobre la seva situació d’invisibilitat històrica ha estat un factor clau en la construcció de vincles de solidaritat i suport mutu —sororitat—, que els ha permès organitzar-se de manera pacífica per lluitar contra les desigualtats i les injustícies de gènere.",
+            "Prendre consciència de la necessitat de donar veu i presència a les dones en el món actual per trencar amb la inèrcia patriarcal arrossegada que les invisibilitza històricament.",
+            "Comprendre i identificar el patriarcat com un problema sistèmic, global i transversal heretat per educació i transmissió cultural no natural i totalment arbitrari capaç de ser desconstruït socialment mitjançant un nou paradigma i coeducació."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Conocer mujeres referentes en todos los ámbitos, reparando el silencio que la historia ha construido y visibilizando un presente con igualdad de oportunidades.",
+          "text_ca": "Conèixer dones referents en tots els àmbits, reparant el silenci que la història ha construït i visibilitzant un present amb igualtat d’oportunitats.",
+          "aclaraciones_es": [
+            "Tomar conciencia de la invisibilización histórica de las mujeres.",
+            "Investigar las vidas de mujeres del pasado y del presente dentro de cualquier ámbito humano.",
+            "Hacer entrevistas a mujeres cercanas a nuestras vidas y entender qué dificultades forman parte en su día a día.",
+            "Realizar alguna tarea o proyecto de visibilización de las mujeres, tanto históricas como de la vida cotidiana actual, en grupo."
+          ],
+          "aclaraciones_ca": [
+            "Prendre consciència de la invisibilització històrica de les dones.",
+            "Investigar vides de dones del passat i del present dins qualsevol àmbit humà.",
+            "Fer entrevistes a dones properes en les nostres vides i entendre quines dificultats formen part en el seu dia a dia.",
+            "Realitzar alguna tasca o projecte de visibilització de dones, tant històriques com de la vida comuna actual, en grup."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Reconocer las diferentes situaciones discriminatorias que han sufrido y sufren las mujeres, relacionándolas con múltiples variables (económicas, políticas, sociales, culturales…).",
+          "text_ca": "Reconèixer les diferents situacions discriminatòries que han patit i pateixen les dones, relacionant-les amb múltiples variables (econòmiques, polítiques, socials, culturals…).",
+          "aclaraciones_es": [
+            "Reconocer que el hecho de ser mujer, y no su origen, estatus social ni nivel cultural, es lo que puede situarla en riesgo de sufrir violencia machista.",
+            "Tomar conciencia de que las mujeres siguen enfrentándose a situaciones de indefensión estructural y sistémica en el ámbito público, especialmente en aquellas instituciones donde aún no se ha incorporado de manera efectiva la perspectiva de género.",
+            "Entender como funciona el patricarcado a través del techo de cristal todavía vigente.",
+            "Identificar y analizar de forma crítica aquellas desigualdades de género que han sido históricamente normalizadas en el sistema social, como la brecha salarial entre mujeres y hombres, distinguiéndolas de lo que debe considerarse justo y equitativo en una sociedad democrática e igualitaria.",
+            "Reconocer que son los hombres los que mayoritariamente tienen cargos de responsabilidad y acceso a los lugares públicos donde se toman las grandes decisiones.",
+            "Saber que una de las estrategias del patriarcado se nutre del negacionismo, y comprender el machismo interiorizado tanto de hombres como de mujeres a causa del sistema cultural."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer que el fet de ser dona, i no el seu origen, estatus social ni nivell cultural, pot situar-la en risc de patir violència masclista.",
+            "Prendre consciència que les dones continuen enfrontant-se a situacions d’indefensió estructural i sistèmica en l’àmbit públic, especialment en aquelles institucions on encara no s’ha incorporat de manera efectiva la perspectiva de gènere.",
+            "Entendre com funciona el mecanisme patriarcal a través del sostre de vidre encara vigent.",
+            "Identificar i analitzar de manera crítica aquelles desigualtats de gènere que han estat històricament normalitzades en el sistema social, com la bretxa salarial entre dones i homes, tot distingint-les del que hauria de considerar-se just i equitatiu en una societat democràtica i igualitària.",
+            "Reconèixer que són els homes els que majoritàriament tenen càrrecs de responsabilitat i accés als llocs públics on es prenen les grans decisions.",
+            "Saber que una de les estratègies del patriarcat es nodreix del negacionisme, i comprendre el masclisme interioritzat tant d'homes com de dones a causa del sistema cultural."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Conocer las características de la educación sexual integral, para contribuir a la salud y el bienestar de la juventud y favorecer unas relaciones afectivas sanas e igualitarias.",
+      "description_ca": "Conèixer les característiques de l’educació sexual integral, per contribuir a la salut i el benestar del jovent i afavorir unes relacions afectives sanes i igualitàries.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CD3",
+        "CPSAA1",
+        "CPSAA2",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Desarrollar el conocimiento y la curiosidad sobre el propio cuerpo, para profundizar en los cambios físicos, emocionales y sociales que se producen durante la adolescencia.",
+          "text_ca": "Desenvolupar el coneixement i la curiositat sobre el propi cos, per tal d’aprofundir en els canvis físics, emocionals i socials que es produeixen durant l’adolescència.",
+          "aclaraciones_es": [
+            "Favorecer el descubrimiento saludable, libre y tolerante del propio cuerpo y del ajeno.",
+            "Desarrollar una relación saludable y natural con la sexualidad, libre de tabúes, basada en el conocimiento, el respeto, la autoestima y la aceptación de la diversidad.",
+            "Fomentar un clima de confianza, respeto y empatía en el aula que permita dialogar y compartir, sin miedo ni juicios, las dudas e inquietudes, evitando recorrer a espacios inseguros o desinformados para resolver preguntas o dudas que puedan surgir.",
+            "Demostrar una comprensión adecuada de la educación sexual, mediante recursos pedagógicos acordes a su momento evolutivo, aplicando una mirada respetuosa hacia sí mismo y hacia los demás."
+          ],
+          "aclaraciones_ca": [
+            "Afavorir el descobriment saludable, lliure i tolerant del propi cos i l’aliè.",
+            "Desenvolupar una relació saludable i natural amb la sexualitat, lliure de tabús, basada en el coneixement, el respecte, l’autoestima i l’acceptació de la diversitat.",
+            "Fomentar un clima de confiança, respecte i empatia a l’aula que permeti dialogar i compartir, sense por ni judicis, els dubtes i inquietuds, evitant recórrer a espais insegurs o desinformats per resoldre les preguntes o dubtes que puguin sorgir.",
+            "Demostrar una comprensió adequada de l’educació sexual, mitjançant recursos pedagògics acordats al seu moment evolutiu, aplicant una mirada respectuosa cap a si mateix i cap als altres."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar las características personales que contribuyen al desarrollo humano, para legitimar las diferentes maneras de ser, estar y amar, siempre desde la responsabilidad afectiva.",
+          "text_ca": "Identificar les característiques personals que contribueixen al desenvolupament humà, per legitimar les diferents maneres de ser, estar i estimar, sempre des de la responsabilitat afectiva.",
+          "aclaraciones_es": [
+            "Trabajar la autoestima y la autoaceptación.",
+            "Reconocer a todas las personas como seres dignos y merecedores de respeto.",
+            "Aceptar la diversidad y la diferencia como una realidad enriquecedora.",
+            "Comprender que el consentimiento de todas y cada una de las partes es condición imprescindible y necesaria de toda relación afectiva y/o sexual.",
+            "Rechazar los prejuicios y las etiquetas ideológicas tradicionales que desprecian algunas maneras de amar legítimas y respetuosas."
+          ],
+          "aclaraciones_ca": [
+            "Treballar l’autoestima i l'auto acceptació.",
+            "Reconèixer totes les persones com a éssers dignes i mereixedors de respecte.",
+            "Acceptar la diversitat i la diferència com una realitat enriquidora.",
+            "Comprendre que el consentiment de totes i cadascuna de les parts és condició imprescindible i necessària de tota relació afectiva i/o sexual.",
+            "Rebutjar els prejudicis i les etiquetes ideològiques tradicionals que menyspreen algunes maneres d’estimar legítimes i respectuoses."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Conocer como afecta la pornografía y el sistema prostitucional a las relaciones afectivosexuales, desplegando una mirada crítica hacia esta realidad.",
+          "text_ca": "Conèixer com afecta la pornografia i el sistema prostitucional a les relacions afectivosexuals, desplegant una mirada crítica envers aquesta realitat.",
+          "aclaraciones_es": [
+            "Conocer las implicaciones éticas, sociales y afectivas de la pornografía y la prostitución y como afectan a las relaciones afectivosexuals.",
+            "Comprender como la pornografía normaliza relaciones de dominación en las relaciones afectivosexuales.",
+            "Identificar críticamente cualquier conducta vejatoria hacia las mujeres y todas las personas.",
+            "Entender que la pornografía es un negocio en el cual las personas pueden ser un «objeto» y ser deshumanizadas.",
+            "Analizar de forma crítica el fácil acceso de la adolescencia a contenidos pornográficos como resultado de intereses económicos, mediáticos y culturales, que distorsionan la comprensión de una vivencia saludable, respetuosa y afectiva de la sexualidad.",
+            "Rechazar cualquier tipo de esclavitud incluida la prostitución.",
+            "Comprender que la existencia de la prostitución está vinculada directamente a la demanda por parte de los consumidores o clientes, y que esta práctica se sustenta en relaciones de poder desiguales y en el abuso estructural hacia las personas en situación de vulnerabilidad.",
+            "Disfrutar de espacios de diálogo y de talleres afectivosexuales saludables."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer les implicacions ètiques, socials i afectives de la pornografia i la prostitució i com afecten les relacions afectivosexuals.",
+            "Comprendre com la pornografia normalitza relacions de dominació en les relacions afectivosexuals.",
+            "Identificar críticament qualsevol conducta vexatòria enfront les dones i totes les persones.",
+            "Entendre que la pornografia és un negoci en el qual les persones poden ser un «objecte» i ser deshumanitzades.",
+            "Analitzar de manera crítica el fàcil accés de l’adolescència a continguts pornogràfics com a resultat d’interessos econòmics, mediàtics i culturals, que distorsionen la comprensió d’una vivència saludable, respectuosa i afectiva de la sexualitat.",
+            "Rebutjar qualsevol tipus d’esclavitud, inclosa la prostitució.",
+            "Identificar que, el fet que hi hagi clients i consumidors, fa que existeixi la prostitució, que es fonamenta en l’abús de poder.",
+            "Gaudir d’espais de diàleg i de tallers afectivosexuals saludables."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Conocer la diversidad afectiva, sexual y de género, para garantizar el respeto hacia las diferentes identidades y la orientación sexual de las personas.",
+      "description_ca": "Conèixer la diversitat afectiva, sexual i de gènere, per garantir el respecte cap a les diferents identitats i l’orientació sexual de les persones.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CD1",
+        "CPSAA2",
+        "CC1",
+        "CC3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Comprender conceptos básicos que estén relacionados con la identidad, la expresión y la orientación de las personas, obteniendo así una terminología común, que puede favorecer el autoconocimiento.",
+          "text_ca": "Comprendre conceptes bàsics que estiguin relacionats amb la identitat, l’expressió i l’orientació de les persones, obtenint així una terminologia comuna, que pot afavorir l’autoconeixement.",
+          "aclaraciones_es": [
+            "Comprender el significado y la diversidad de las distintas identidades sexuales y orientaciones sexuales, favoreciendo una actitud de respeto, inclusión y reconocimiento de la pluralidad afectivosexual.",
+            "Informarse y asesorarse acerca del acompañamiento, la información y el asesoramiento necesarios en procesos relacionados con la construcción y expresión de la identidad u orientación sexual, incluidos aquellos vinculados al hecho de visibilizarla públicamente.",
+            "Solicitar y aprovechar de forma consciente el apoyo y la información necesaria para la comprensión y el desarrollo de su propia identidad de género y orientación sexual, favoreciendo así un proceso de autoconocimiento respetuoso y libre de prejuicios.",
+            "Detectar problemas familiares ligados a estas situaciones, así como las posibles soluciones.",
+            "Distinguir y comprender conceptos básicos como expresión del género, orientación sexual o del deseo, identidad de género y sexo biológico."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el significat i la diversitat de les diferents identitats sexuals i orientacions sexuals, afavorint una actitud de respecte, inclusió i reconeixement de la pluralitat afectivosexual.",
+            "Informar-se i assessorar-se sobre l’acompanyament, la informació i l’assessorament necessaris en processos relacionats amb la construcció i expressió de la identitat o orientació sexual, inclosos aquells vinculats al fet de fer-la visible públicament.",
+            "Sol·licitar i aprofitar de manera conscient el suport i la informació necessaris per a la comprensió i el desenvolupament de la pròpia identitat de gènere i orientació sexual, afavorint així un procés d’autoconeixement respectuós i lliure de prejudicis.",
+            "Detectar problemes familiars lligats a aquestes situacions, així com les possibles solucions.",
+            "Distingir i comprendre conceptes bàsics com expressió del gènere, orientació sexual o del desig, identitat de gènere i sexe biològic."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar el papel de las personas LGTBIQ+ a lo largo de la historia, entender las causas y consecuencias de su invisibilización y la importancia de tener referentes en el presente.",
+          "text_ca": "Valorar el paper de les persones LGTBIQ+ al llarg de la història, entendre les causes i conseqüències de la seva invisibilització i la importància de tenir referents en el present.",
+          "aclaraciones_es": [
+            "Desarrollar una actitud empática y respetuosa hacia las personas y colectivos LGTBIQ+, reconociendo las discriminaciones históricas sufridas por motivo de su identidad u orientación sexual y promoviendo la defensa de sus derechos y la inclusión social.",
+            "Estudiar e investigar las graves consecuencias que, por razón de la invisibilización de personas LGTBIQ+, han resultado en todos los ámbitos de la humanidad, como por ejemplo el científico, artístico, político, religioso, etc.",
+            "Construir una mirada abierta, respetuosa y tolerante a favor de un mundo igualitario y justo donde todas las personas son reconocidas como seres dignos."
+          ],
+          "aclaraciones_ca": [
+            "Desenvolupar una actitud empàtica i respectuosa envers les persones i col·lectius LGTBIQ+, reconeixent les discriminacions històriques patides per motiu de la seva identitat o orientació sexual i promovent la defensa dels seus drets i la inclusió social.",
+            "Estudiar i investigar les greus conseqüències que, per raó de la invisibilització de persones LGTBIQ+, s’han derivat en tots els àmbits de la humanitat, com ara el científic, artístic, polític, religiós, etc.",
+            "Construir una mirada oberta, respectuosa i tolerant a favor d’un món igualitari i just on totes les persones són reconegudes com a éssers dignes."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar, detectar y rechazar comportamientos y actitudes que puedan suponer cualquier tipo de violencia hacia las personas LGTBIQ+, teniendo presente la importancia de la convivencia y el respeto hacia todas las personas.",
+          "text_ca": "Identificar, detectar i rebutjar comportaments i actituds que puguin suposar qualsevol mena de violència cap a les persones LGTBIQ+, tenint present la importància de la convivència i el respecte cap a totes les persones.",
+          "aclaraciones_es": [
+            "Identificar actitudes xenófobas en la historia y en la actualidad.",
+            "Comprender de manera crítica el carácter sistémico del talante xenófobo que otorga privilegios y perpetúa intereses de grupos que ejercen abuso de poder y discriminan a las personas LGTBIQ+, identificando sus manifestaciones y consecuencias en la sociedad actual.",
+            "Rechazar la violencia y cualquier tipo de falta de respeto hacia las personas y colectivos LGTBIQ+.",
+            "Dar visibilidad y apoyo, y normalizar el trato respetuoso y digno hacia todo ser humano."
+          ],
+          "aclaraciones_ca": [
+            "Identificar actituds xenòfobes en la història i en l’actualitat.",
+            "Comprendre de manera crítica el caràcter sistèmic del tarannà xenòfob que atorga privilegis i perpetua interessos de grups que exerceixen abús de poder i discriminen les persones LGTBIQ+, identificant les seves manifestacions i conseqüències en la societat actual.",
+            "Rebutjar la violència i qualsevol tipus de falta de respecte cap a les persones i col·lectius LGTBIQ+.",
+            "Donar visibilitat i suport, i normalitzar el tracte respectuós i digne cap a tot ésser humà."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -391,4 +391,99 @@ describe('CurriculumFacade', () => {
     expect(groups.length).toBe(1);
     expect((groups[0].items[0] as any).text).toBe('desc1');
   });
+
+  describe('ESO ordinaria', () => {
+    const ESO_CES: EvaluativeCriteria[] = [
+      {
+        _id: '1',
+        subject: 'Matemáticas A',
+        tipo: 'opcion',
+        ce_num: 1,
+        description: 'Igual',
+        value: 'Matemáticas A · CE1. Igual',
+      },
+      {
+        _id: '2',
+        subject: 'Matemáticas B',
+        tipo: 'opcion',
+        ce_num: 1,
+        description: 'Igual',
+        value: 'Matemáticas B · CE1. Igual',
+      },
+      {
+        _id: '3',
+        subject: 'Lengua Castellana y Literatura',
+        tipo: 'comun',
+        ce_num: 2,
+        description: 'Comprender textos orales',
+        value: 'Lengua Castellana y Literatura · CE2. Comprender textos orales',
+      },
+    ];
+
+    it('should load the ESO CE of a course', () => {
+      facade.loadEsoCes('catalan', '4º');
+      const req = httpTestingController.expectOne(
+        '/api/ces?lang=catalan&tipoNivel=ESO_ORDINARIA&curso=4%C2%BA',
+      );
+      req.flush(ESO_CES);
+      expect(facade.esoCes()).toEqual(ESO_CES);
+    });
+
+    it('should switch to ESO with 1.º as the default course', () => {
+      facade.setTipoNivel('ESO_ORDINARIA');
+      expect(facade.curso()).toBe('1º');
+      expect(localStorage.getItem('pai_tipo_nivel')).toBe('ESO_ORDINARIA');
+    });
+
+    it('should restore ESO with any of its four courses', () => {
+      localStorage.setItem('pai_tipo_nivel', 'ESO_ORDINARIA');
+      localStorage.setItem('pai_curso', '4º');
+      TestBed.resetTestingModule();
+      TestBed.configureTestingModule({
+        providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
+      });
+      const stored = TestBed.inject(CurriculumFacade);
+      expect(stored.tipoNivel()).toBe('ESO_ORDINARIA');
+      expect(stored.curso()).toBe('4º');
+    });
+
+    it('should use the ESO CE as active CE only for the ESO level', () => {
+      facade.esoCes.set(ESO_CES);
+      facade.ces.set([{ _id: 'p', description: 'PDC' }]);
+      facade.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
+      expect(facade.activeCes()[0].description).toBe('PDC');
+      facade.tipoNivel.set('ESO_ORDINARIA');
+      expect(facade.activeCes()).toEqual(ESO_CES);
+    });
+
+    it('should group the ESO CE by subject, marking non-common subjects', () => {
+      facade.tipoNivel.set('ESO_ORDINARIA');
+      facade.esoCes.set(ESO_CES);
+      const groups = facade.groupedItems();
+      expect(groups.map((g) => g.category)).toEqual([
+        'Matemáticas A · De opción',
+        'Matemáticas B · De opción',
+        'Lengua Castellana y Literatura',
+      ]);
+      expect(groups[1].items[0]).toEqual({
+        index: 1,
+        text: 'Igual',
+        value: 'Matemáticas B · CE1. Igual',
+      });
+    });
+
+    it('should show the CE text of the selected subject in the summary', () => {
+      facade.tipoNivel.set('ESO_ORDINARIA');
+      facade.esoCes.set(ESO_CES);
+      facade.toggleRa('Matemáticas B · CE1. Igual');
+      expect(facade.selectedItemsDetails()).toEqual([
+        {
+          subject: 'Matemáticas B · De opción',
+          index: 1,
+          shortDesc: 'Igual',
+          fullDesc: 'Igual',
+        },
+      ]);
+    });
+  });
 });

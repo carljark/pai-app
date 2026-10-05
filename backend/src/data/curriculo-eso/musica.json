@@ -1,0 +1,579 @@
+{
+  "code": "musica",
+  "name_es": "Música",
+  "name_ca": "Música",
+  "cursos": {
+    "1º": "comun",
+    "3º": "opcion",
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Analizar obras de diferentes épocas y culturas, identificando los principales rasgos estilísticos y estableciendo relaciones con su contexto, para valorar el patrimonio musical y de la danza como fuente de disfrute y enriquecimiento personal.",
+      "description_ca": "Analitzar obres de diferents èpoques i cultures, identificant-ne els principals trets estilístics i establint relacions amb el seu context, per valorar el patrimoni musical i de la dansa com a font de gaudi i enriquiment personal.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "CP3",
+        "CD1",
+        "CD2",
+        "CPSAA3",
+        "CC1",
+        "CCEC1",
+        "CCEC2"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Identificar los principales rasgos estilísticos de obras musicales y de danza de diferentes épocas y culturas, evidenciando una actitud de apertura, interés y respeto a la hora de escucharlas o de verlas.",
+          "text_ca": "Identificar els principals trets estilístics d’obres musicals i de dansa de diferents èpoques i cultures, fent evident una actitud d’obertura, interès i respecte a l’hora d’escoltar-les o de veure-les.",
+          "aclaraciones_es": [
+            "Reconocer los principales rasgos estilísticos de obras musicales y de danza de diferentes culturas.",
+            "Mostrar una actitud de interés y respeto durante la audición o el visionado."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer els principals trets estilístics d’obres musicals i de dansa de diferents cultures.",
+            "Mostrar una actitud d’interès i respecte durant l’audició o el visionat."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Explicar, con actitud abierta y respetuosa, las funciones desempeñadas por determinadas producciones musicales y de danza, relacionándolas con las principales características de su contexto histórico, social y cultural.",
+          "text_ca": "Explicar, amb actitud oberta i respectuosa, les funcions acomplertes per determinades produccions musicals i de dansa, relacionant-les amb les principals característiques del seu context històric, social i cultural.",
+          "aclaraciones_es": [
+            "Explicar las funciones de producciones musicales y de danza diversas.",
+            "Mostrar una actitud abierta y respetuosa durante la audición o el visionado."
+          ],
+          "aclaraciones_ca": [
+            "Explicar les funcions de produccions musicals i de dansa diverses.",
+            "Mostrar una actitud oberta i respectuosa durant l’audició o el visionat."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Establecer conexiones entre manifestaciones musicales y de danza de otras épocas y culturas, valorando su influencia sobre la música y la danza actuales.",
+          "text_ca": "Establir connexions entre manifestacions musicals i de dansa d’altres èpoques i cultures, valorant-ne la influència sobre la música i la dansa actuals.",
+          "aclaraciones_es": [
+            "Reconocer las conexiones entre manifestaciones musicales y de danza de diferentes culturas.",
+            "Reconocer la influencia de las manifestaciones escuchadas o visionadas sobre la música y la danza actuales."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer les connexions entre manifestacions musicals i de dansa de diferents cultures.",
+            "Reconèixer la influència de les manifestacions escoltades o visionades sobre la música i la dansa actuals."
+          ]
+        },
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Identificar los principales rasgos estilísticos de obras musicales y de danza de diferentes épocas y culturas, haciendo evidente una actitud de apertura, interés y respeto a la hora de escucharlas o verlas.",
+          "text_ca": "Identificar els principals trets estilístics d’obres musicals i de dansa de diferents èpoques i cultures, fent evident una actitud d’obertura, interès i respecte a l’hora d’escoltar-les o veure-les.",
+          "aclaraciones_es": [
+            "Identificar los principales rasgos estilísticos de obras musicales y de danza de diferentes épocas históricas.",
+            "Mostrar una actitud de apertura, interés y respeto durante la audición o el visionado."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els principals trets estilístics d’obres musicals i de dansa de diferents èpoques històriques.",
+            "Mostrar una actitud d’obertura, interès i respecte durant l’audició o el visionat."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Explicar, con una actitud abierta y respetuosa, las funciones de determinadas producciones musicales y de danza, relacionándolas con las principales características del contexto histórico, social y cultural.",
+          "text_ca": "Explicar, amb una actitud oberta i respectuosa, les funcions de determinades produccions musicals i de dansa, relacionant-les amb les principals característiques del context històric, social i cultural.",
+          "aclaraciones_es": [
+            "Explicar las funciones de producciones musicales y de danza diversas.",
+            "Relacionar las funciones de las producciones escuchadas o vistas con las principales características del contexto histórico, social y cultural en que se inscriben.",
+            "Mostrar una actitud de apertura y respeto durante la audición o el visionado."
+          ],
+          "aclaraciones_ca": [
+            "Explicar les funcions de produccions musicals i de dansa diverses.",
+            "Relacionar les funcions de les produccions escoltades o vistes amb les principals característiques del context històric, social i cultural en què s’inscriuen.",
+            "Mostrar una actitud d’obertura i respecte durant l’audició o el visionat."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Establecer conexiones entre manifestaciones musicales y de danza de diferentes épocas y culturas, valorando la influencia sobre la música y la danza actuales.",
+          "text_ca": "Establir connexions entre manifestacions musicals i de dansa de diferents èpoques i cultures, tot valorant-ne la influència sobre la música i la dansa actuals.",
+          "aclaraciones_es": [
+            "Establecer conexiones entre manifestaciones musicales y de danza de diferentes épocas y culturas.",
+            "Valorar la influencia de las manifestaciones escuchadas o vistas sobre la música y la danza actuales."
+          ],
+          "aclaraciones_ca": [
+            "Establir connexions entre manifestacions musicals i de dansa de diferents èpoques i cultures.",
+            "Valorar la influència de les manifestacions escoltades o vistes sobre la música i la dansa actuals."
+          ]
+        },
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar obras musicales y de danza de diferentes épocas y culturas, identificando los rasgos estilísticos, explicando su relación con el contexto y haciendo evidente una actitud de apertura, interés y respeto a la hora de escucharlas o verlas.",
+          "text_ca": "Analitzar obres musicals i de dansa de diferents èpoques i cultures, identificant-ne els trets estilístics, explicant la seva relació amb el context i fent evident una actitud d’obertura, interès i respecte a l’hora d’escoltar-les o veure-les.",
+          "aclaraciones_es": [
+            "Analizar obras musicales y de danza de diferentes épocas y culturas. Identificar los rasgos estilísticos. Explicar su relación con el contexto.",
+            "Mostrar una actitud de apertura, interés y respeto en la escucha o visualización."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar obres musicals i de dansa de diferents èpoques i cultures. Identificar-ne els trets estilístics. Explicar la seva relació amb el context.",
+            "Mostrar una actitud d’obertura, interès i respecte en l’escolta o visualització."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar críticamente los hábitos, los gustos y los referentes musicales y de danza de diferentes épocas y culturas, reflexionando sobre su evolución y sobre la relación con los del presente.",
+          "text_ca": "Valorar críticament els hàbits, els gusts i els referents musicals i de dansa de diferents èpoques i cultures, reflexionant sobre la seva evolució i sobre la relació amb els del present.",
+          "aclaraciones_es": [
+            "Valorar críticamente los hábitos, los gustos y los referentes musicales y de danza de diferentes épocas y culturas.",
+            "Reflexionar sobre la evolución y la relación de los hábitos, gustos y referentes musicales y de danza pasados con los del presente."
+          ],
+          "aclaraciones_ca": [
+            "Valorar críticament els hàbits, els gusts i els referents musicals i de dansa de diferents èpoques i cultures.",
+            "Reflexionar sobre l’evolució i la relació dels hàbits, gusts i referents musicals i de dansa passats amb els del present."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Explorar las posibilidades expresivas de diferentes técnicas musicales y de la danza, a través de actividades de improvisación, para incorporarlas al repertorio personal de recursos y desarrollar el criterio de selección de las técnicas más adecuadas a la intención expresiva.",
+      "description_ca": "Explorar les possibilitats expressives de diferents tècniques musicals i de la dansa, a través d’activitats d’improvisació, per incorporar-les al repertori personal de recursos i desenvolupar el criteri de selecció de les tècniques més adequades a la intenció expressiva.",
+      "descriptores": [
+        "CCL1",
+        "CD2",
+        "CPSAA1",
+        "CPSAA3",
+        "CC1",
+        "CC3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Participar con iniciativa, confianza y creatividad, en la exploración de técnicas musicales y de danza elementales, mediante improvisaciones pautadas, individuales o en grupo, en las que se usen la voz, el cuerpo, instrumentos musicales y herramientas tecnológicas.",
+          "text_ca": "Participar amb iniciativa, confiança i creativitat, en l’exploració de tècniques musicals i de dansa elementals, mitjançant improvisacions pautades, individuals o en grup, en què es facin servir la veu, el cos, instruments musicals i eines tecnològiques.",
+          "aclaraciones_es": [
+            "Participar en la exploración de técnicas elementales musicales y de danza en improvisaciones pautadas en grupo.",
+            "Utilizar la voz, el cuerpo e instrumentos musicales durante las actividades."
+          ],
+          "aclaraciones_ca": [
+            "Participar en l’exploració de tècniques elementals musicals i de dansa en improvisacions pautades en grup.",
+            "Utilitzar la veu, el cos i instruments musicals durant les activitats."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Expresar ideas, sentimientos y emociones en actividades pautadas de improvisación, seleccionando las técnicas más adecuadas entre las que conforman el repertorio personal de recursos.",
+          "text_ca": "Expressar idees, sentiments i emocions en activitats pautades d’improvisació, seleccionant les tècniques més adequades entre les que conformen el repertori personal de recursos.",
+          "aclaraciones_es": [
+            "Expresar ideas y emociones en actividades pautadas de improvisación vocal, corporal e instrumental."
+          ],
+          "aclaraciones_ca": [
+            "Expressar idees i emocions en activitats pautades d’improvisació vocal, corporal i instrumental."
+          ]
+        },
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Participar, con iniciativa, confianza y creatividad, a la exploración de técnicas musicales y de danza elementales, mediante improvisaciones pautadas, tanto individuales como colectivas, utilizando la voz, el cuerpo, instrumentos musicales y herramientas tecnológicas.",
+          "text_ca": "Participar, amb iniciativa, confiança i creativitat, a l’exploració de tècniques musicals i de dansa elementals, mitjançant improvisacions pautades, tant individuals com col·lectives, utilitzant la veu, el cos, instruments musicals i eines tecnològiques.",
+          "aclaraciones_es": [
+            "Participar en la exploración de técnicas musicales y de danza elementales, mediante improvisaciones pautadas individuales y en grupo.",
+            "Utilizar con creatividad la voz, el cuerpo, instrumentos musicales y las herramientas tecnológicas disponibles.",
+            "Mostrar iniciativa y confianza durante las actividades."
+          ],
+          "aclaraciones_ca": [
+            "Participar en l’exploració de tècniques musicals i de dansa elementals, mitjançant improvisacions pautades individuals i en grup.",
+            "Utilitzar amb creativitat la veu, el cos, instruments musicals i les eines tecnològiques disponibles.",
+            "Mostrar iniciativa i confiança durant les activitats."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Expresar ideas, sentimientos y emociones en actividades pautadas de improvisación, seleccionando las técnicas más adecuadas de entre las que conforman el repertorio personal de recursos.",
+          "text_ca": "Expressar idees, sentiments i emocions en activitats pautades d’improvisació, seleccionant les tècniques més adequades d’entre aquelles que conformen el repertori de recursos personal.",
+          "aclaraciones_es": [
+            "Expresar ideas, sentimientos y emociones en actividades pautadas de improvisación vocal, corporal e instrumental.",
+            "Seleccionar las técnicas más adecuadas del repertorio personal de recursos expresivos e interpretativos."
+          ],
+          "aclaraciones_ca": [
+            "Expressar idees, sentiments i emocions en activitats pautades d’improvisació vocal, corporal i instrumental.",
+            "Seleccionar les tècniques més adequades del repertori de recursos expressius i interpretatius personal."
+          ]
+        },
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Participar con iniciativa, confianza y creatividad en la exploración de técnicas musicales y de danza de mayor complejidad, mediante improvisaciones libres y pautadas, individuales o en grupo, en las que se use la voz, el cuerpo, instrumentos musicales o herramientas tecnológicas.",
+          "text_ca": "Participar amb iniciativa, confiança i creativitat en l’exploració de tècniques musicals i de dansa de complexitat més gran, mitjançant improvisacions lliures i pautades, individuals o en grup, en què es faci servir la veu, el cos, instruments musicals o eines tecnològiques.",
+          "aclaraciones_es": [
+            "Participar en la exploración de técnicas musicales y de danza de mayor complejidad, mediante improvisaciones pautadas y libres, individuales o en grupo.",
+            "Utilizar con creatividad la voz, el cuerpo, instrumentos musicales y las herramientas tecnológicas disponibles en las actividades de improvisación.",
+            "Mostrar iniciativa y confianza."
+          ],
+          "aclaraciones_ca": [
+            "Participar en l’exploració de tècniques musicals i de dansa de major complexitat, mitjançant improvisacions pautades i lliures, individuals o en grup.",
+            "Utilitzar amb creativitat la veu, el cos, instruments musicals i les eines tecnològiques disponibles en les activitats d’improvisació.",
+            "Mostrar iniciativa i confiança."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Elaborar piezas musicales o de danza estructuradas, a partir de actividades de improvisación, seleccionando las técnicas del repertorio personal de recursos más adecuadas a la intención expresiva.",
+          "text_ca": "Elaborar peces musicals o de dansa estructurades, a partir d’activitats d’improvisació, seleccionant les tècniques del repertori personal de recursos més adequades a la intenció expressiva.",
+          "aclaraciones_es": [
+            "Crear piezas musicales o de danza estructuradas a partir de actividades de improvisación.",
+            "Seleccionar las técnicas del repertorio personal de recursos más afines a la intención expresiva."
+          ],
+          "aclaraciones_ca": [
+            "Crear peces musicals o de dansa estructurades a partir d’activitats d’improvisació.",
+            "Seleccionar les tècniques del repertori personal de recursos més afins a la intenció expressiva."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Interpretar piezas musicales y de danza, gestionando adecuadamente las emociones y empleando varias estrategias y técnicas vocales, corporales o instrumentales, para ampliar las posibilidades de expresión personal.",
+      "description_ca": "Interpretar peces musicals i de dansa, gestionant adequadament les emocions i emprant diverses estratègies i tècniques vocals, corporals o instrumentals, per ampliar les possibilitats d’expressió personal.",
+      "descriptores": [
+        "CCL1",
+        "CD2",
+        "CPSAA1",
+        "CPSAA3",
+        "CC1",
+        "CE1",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Leer partituras sencillas, identificando de forma guiada los elementos básicos del lenguaje musical, con o sin apoyo de la audición.",
+          "text_ca": "Llegir partitures senzilles, identificant de forma guiada els elements bàsics del llenguatge musical, amb o sense suport de l’audició.",
+          "aclaraciones_es": [
+            "Leer, de forma guiada, partituras sencillas.",
+            "Identificar, de forma guiada, los elementos básicos del lenguaje musical en una partitura, con o sin apoyo de la audición."
+          ],
+          "aclaraciones_ca": [
+            "Llegir, de forma guiada, partitures senzilles.",
+            "Identificar, de forma guiada, els elements bàsics del llenguatge musical en una partitura, amb o sense suport de l’audició."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Emplear técnicas elementales de interpretación vocal, corporal o instrumental, aplicando estrategias de memorización y valorando los ensayos como espacios de escucha y aprendizaje.",
+          "text_ca": "Emprar tècniques elementals d’interpretació vocal, corporal o instrumental, aplicant estratègies de memorització i valorant els assaigs com a espais d’escolta i aprenentatge.",
+          "aclaraciones_es": [
+            "Emplear técnicas elementales de interpretación vocal, instrumental o corporal.",
+            "Aplicar estrategias sencillas de memorización de las piezas interpretadas.",
+            "Valorar los ensayos como espacios de escucha y aprendizaje."
+          ],
+          "aclaraciones_ca": [
+            "Emprar tècniques elementals d’interpretació vocal, instrumental o corporal.",
+            "Aplicar estratègies senzilles de memorització de les peces interpretades.",
+            "Valorar els assaigs com a espais d’escolta i aprenentatge."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Interpretar con corrección, piezas musicales y de danza sencillas, individuales y en grupo, dentro y fuera del aula, gestionando de manera guiada la ansiedad y el miedo escénico, y manteniendo la concentración.",
+          "text_ca": "Interpretar amb correcció, peces musicals i de dansa senzilles, individuals i en grup, dins i fora de l’aula, gestionant de manera guiada l’ansietat i la por escènica, i mantenint la concentració.",
+          "aclaraciones_es": [
+            "Interpretar en grupo piezas musicales y de danza sencillas dentro y fuera del aula.",
+            "Gestionar la ansiedad y el miedo escénico de forma guiada.",
+            "Mantener la concentración y una actitud adecuada durante las interpretaciones."
+          ],
+          "aclaraciones_ca": [
+            "Interpretar en grup peces musicals i de dansa senzilles dins i fora de l’aula.",
+            "Gestionar l’ansietat i la por escènica de forma guiada.",
+            "Mantenir la concentració i una actitud adequada durant les interpretacions."
+          ]
+        },
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Leer partituras sencillas, identificando de forma guiada los elementos básicos del lenguaje musical, con o sin apoyo de la audición.",
+          "text_ca": "Llegir partitures senzilles, identificant de forma guiada els elements bàsics del llenguatge musical, amb o sense suport de l’audició.",
+          "aclaraciones_es": [
+            "Leer partituras sencillas.",
+            "Identificar los elementos básicos del lenguaje musical en una partitura, con o sin apoyo de la audició."
+          ],
+          "aclaraciones_ca": [
+            "Llegir partitures senzilles.",
+            "Identificar els elements bàsics del llenguatge musical en una partitura, amb suport de l’audició o sense."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Emplear técnicas elementales de interpretación vocal, corporal o instrumental, aplicando estrategias de memorización y valorando los ensayos como espacios de escucha y aprendizaje.",
+          "text_ca": "Emprar tècniques elementals d’interpretació vocal, corporal o instrumental, aplicant estratègies de memorització i valorant els assaigs com a espais d’escolta i aprenentatge.",
+          "aclaraciones_es": [
+            "Emplear técnicas de interpretación vocal, instrumental o corporal.",
+            "Aplicar estrategias de memorización eficaces de las piezas interpretadas.",
+            "Valorar los ensayos como espacios de escucha y aprendizaje."
+          ],
+          "aclaraciones_ca": [
+            "Emprar tècniques d’interpretació vocal, instrumental o corporal.",
+            "Aplicar estratègies de memorització eficaces de les peces interpretades.",
+            "Valorar els assaigs com a espais d’escolta i aprenentatge."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Interpretar piezas musicales y de danza sencillas individuales o grupales, dentro o fuera del aula, correctamente, gestionando de manera guiada la ansiedad y el miedo escénico, y manteniendo la concentración.",
+          "text_ca": "Interpretar peces musicals i de dansa senzilles individuals o grupals, dins o fora de l’aula, correctament, gestionant de manera guiada l’ansietat i la por escènica, i mantenint la concentració.",
+          "aclaraciones_es": [
+            "Interpretar piezas musicales y de danza sencillas, individuales o grupales, dentro del aula y afuera.",
+            "Gestionar, eficazmente, la ansiedad y el miedo escénico de manera guiada.",
+            "Mantener la concentración y una actitud adecuada durante las interpretaciones."
+          ],
+          "aclaraciones_ca": [
+            "Interpretar peces musicals i de dansa senzilles, individuals o grupals, dins de l’aula i a fora.",
+            "Gestionar, eficaçment, l’ansietat i la por escènica de manera guiada.",
+            "Mantenir la concentració i una actitud adequada durant les interpretacions."
+          ]
+        },
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Leer partituras sencillas, identificando los elementos básicos del lenguaje musical y analizando de forma guiada las estructuras de las piezas, con o sin apoyo de la audición.",
+          "text_ca": "Llegir partitures senzilles, identificant els elements bàsics del llenguatge musical i analitzant de forma guiada les estructures de les peces, amb suport de l’audició o sense.",
+          "aclaraciones_es": [
+            "Leer partituras sencillas.",
+            "Identificar los elementos básicos del lenguaje musical (ritmo, melodía, armonía, textura, instrumentación…) en las partituras trabajadas, con o sin apoyo de la audición.",
+            "Analizar de forma guiada la estructura de las piezas trabajadas, con o sin apoyo de la audición."
+          ],
+          "aclaraciones_ca": [
+            "Llegir partitures senzilles.",
+            "Identificar els elements bàsics del llenguatge musical (ritme, melodia, harmonia, textura, instrumentació…) en les partitures treballades, amb suport de l’audició o sense.",
+            "Analitzar de forma guiada l’estructura de les peces treballades, amb suport de l’audició o sense."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Emplear diferentes técnicas de interpretación vocal, corporal o instrumental, aplicando estrategias de memorización y valorando los ensayos como espacios de escucha y aprendizaje.",
+          "text_ca": "Emprar diferents tècniques d’interpretació vocal, corporal o instrumental, aplicant estratègies de memorització i valorant els assaigs com a espais d’escolta i aprenentatge.",
+          "aclaraciones_es": [
+            "Emplear diferentes técnicas de interpretación vocal, corporal o instrumental.",
+            "Aplicar estrategias de memorización eficaces de las piezas interpretadas.",
+            "Valorar los ensayos como espacios de escucha y aprendizaje."
+          ],
+          "aclaraciones_ca": [
+            "Emprar diferents tècniques d’interpretació vocal, corporal o instrumental.",
+            "Aplicar estratègies de memorització eficaces de les peces interpretades.",
+            "Valorar els assaigs com a espais d’escolta i aprenentatge."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Interpretar con corrección y expresividad piezas musicales y de danza, individuales y en grupo, dentro y fuera del aula, gestionando la ansiedad y el miedo escénico, manteniendo la concentración.",
+          "text_ca": "Interpretar amb correcció i expressivitat peces musicals i de dansa, individuals i en grup, dins de l’aula i a fora, gestionant l’ansietat i la por escènica, mantenint la concentració.",
+          "aclaraciones_es": [
+            "Interpretar con corrección y expresividad piezas musicales y de danza, individuales y en grupo, dentro y fuer del aula.",
+            "Gestionar eficazmente la ansiedad y el miedo escénico.",
+            "Mantener la concentración y una actitud adecuada durante las interpretaciones."
+          ],
+          "aclaraciones_ca": [
+            "Interpretar amb correcció i expressivitat peces musicals i de dansa, individuals i en grup, dins de l’aula i a fora.",
+            "Gestionar eficaçment l’ansietat i la por escènica.",
+            "Mantenir la concentració i una actitud adequada durant les interpretacions."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Crear propuestas artísticas y musicales, usando la voz, el cuerpo, instrumentos musicales y herramientas tecnológicas, para potenciar la creatividad e identificar oportunidades de desarrollo personal, social, académico y profesional.",
+      "description_ca": "Crear propostes artístiques i musicals, fent servir la veu, el cos, instruments musicals i eines tecnològiques, per potenciar la creativitat i identificar oportunitats de desenvolupament personal, social, acadèmic i professional.",
+      "descriptores": [
+        "CCL1",
+        "STEM3",
+        "CD2",
+        "CPSAA3",
+        "CC1",
+        "CE1",
+        "CE3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Planificar y desarrollar, con creatividad, propuestas artísticas y musicales, tanto individuales como colaborativas, empleando medios musicales y de danza, así como herramientas analógicas y/o digitales.",
+          "text_ca": "Planificar i desenvolupar, amb creativitat, propostes artístiques i musicals, tant individuals com col·laboratives, emprant mitjans musicals i de dansa, com també eines analògiques i/o digitals.",
+          "aclaraciones_es": [
+            "Planificar propuestas artísticas y musicales creativas colaborativas.",
+            "Desarrollar de forma guiada las propuestas planificadas empleando medios musicales y de danza, y herramientas analógicas y digitales."
+          ],
+          "aclaraciones_ca": [
+            "Planificar propostes artístiques i musicals creatives col·laboratives.",
+            "Desenvolupar de forma guiada les propostes planificades emprant mitjans musicals i de dansa, i eines analògiques i digitals."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Participar activamente en la planificación y en la ejecución de propuestas artísticas y musicales colaborativas, valorando las aportaciones del resto de integrantes del grupo y descubriendo oportunidades de desarrollo personal, social, académico y profesional.",
+          "text_ca": "Participar activament en la planificació i en l’execució de propostes artístiques i musicals col·laboratives, valorant les aportacions de la resta d’integrants del grup i descobrint oportunitats de desenvolupament personal, social, acadèmic i professional.",
+          "aclaraciones_es": [
+            "Participar en la planificación de propuestas artísticas y musicales colaborativas.",
+            "Participar en la ejecución de las propuestas colaborativas planificadas.",
+            "Reconocer las aportaciones de los compañeros del grupo.",
+            "Identificar oportunidades de crecimiento personal."
+          ],
+          "aclaraciones_ca": [
+            "Participar en la planificació de propostes artístiques i musicals col·laboratives.",
+            "Participar en l’execució de les propostes col·laboratives planificades.",
+            "Reconèixer les aportacions dels companys del grup.",
+            "Identificar oportunitats de creixement personal."
+          ]
+        },
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Planificar y desarrollar con creatividad propuestas artísticas y musicales, tanto individuales como colaborativas, empleando medios musicales y de danza, así como herramientas analógicas y digitales.",
+          "text_ca": "Planificar i desenvolupar amb creativitat propostes artístiques i musicals, tant individuals com col·laboratives, tot emprant mitjans musicals i de dansa, com també eines analògiques i digitals.",
+          "aclaraciones_es": [
+            "Planificar propuestas artísticas y musicales, creativas, tanto individuales como colaborativas.",
+            "Desarrollar con autonomía las propuestas planificadas, empleando medios musicales y de danza, y herramientas analógicas y digitales."
+          ],
+          "aclaraciones_ca": [
+            "Planificar propostes artístiques i musicals, creatives, tant individuals com col·laboratives.",
+            "Desenvolupar amb autonomia les propostes planificades, emprant mitjans musicals i de dansa, i eines analògiques i digitals."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Participar activamente en la planificación y en la ejecución de propuestas artísticas y musicales colaborativas, valorando las aportaciones del resto de integrantes del grupo y descubriendo oportunidades de desarrollo personal, social, académico y profesional.",
+          "text_ca": "Participar activament en la planificació i en l’execució de propostes artístiques i musicals col·laboratives, valorant les aportacions de la resta d’integrants del grup i descobrint oportunitats de desenvolupament personal, social, acadèmic i professional.",
+          "aclaraciones_es": [
+            "Participar activamente en la planificación de propuestas artísticas y musicales colaborativas.",
+            "Participar con compromiso en la ejecución de las propuestas colaborativas planificadas.",
+            "Valorar las aportaciones de los compañeros del grupo.",
+            "Descubrir oportunidades de desarrollo personal, social, académico y profesional."
+          ],
+          "aclaraciones_ca": [
+            "Participar activament en la planificació de propostes artístiques i musicals col·laboratives.",
+            "Participar amb compromís en l’execució de les propostes col·laboratives planificades.",
+            "Valorar les aportacions dels companys del grup.",
+            "Descobrir oportunitats de desenvolupament personal, social, acadèmic i professional."
+          ]
+        },
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Planificar y desarrollar, con creatividad, propuestas artísticas y musicales, tanto individuales como colaborativas, seleccionando los medios musicales y de danza más adecuadas de entre los disponibles, así como las herramientas analógicas o digitales más oportunas.",
+          "text_ca": "Planificar i desenvolupar, amb creativitat, propostes artístiques i musicals, tant individuals com col·laboratives, seleccionant els mitjans musicals i de dansa més adients d’entre els disponibles, així com les eines analògiques o digitals més oportunes.",
+          "aclaraciones_es": [
+            "Planificar propuestas artísticas y musicales creativas, tanto individuales como colaborativas.",
+            "Desarrollar con autonomía las propuestas planificadas.",
+            "Seleccionar, entre los recursos disponibles, los medios musicales y de danza más oportunos y las herramientas analógicas o digitales más adecuadas para llevar a cabo la propuesta."
+          ],
+          "aclaraciones_ca": [
+            "Planificar propostes artístiques i musicals creatives, tant individuals com col·laboratives.",
+            "Desenvolupar amb autonomia les propostes planificades.",
+            "Seleccionar, d’entre els recursos disponibles, els mitjans musicals i de dansa més oportuns i les eines analògiques o digitals més adequades per dur a terme la proposta."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Participar activamente en la planificación y en la ejecución de propuestas artísticas y musicales colaborativas, asumiendo diferentes funciones, valorando las aportaciones del resto de integrantes del grupo e identificando varias oportunidades de desarrollo personal, social, académico y profesional.",
+          "text_ca": "Participar activament en la planificació i en l’execució de propostes artístiques i musicals col·laboratives, assumint diferents funcions, valorant les aportacions de la resta d’integrants del grup i identificant diverses oportunitats de desenvolupament personal, social, acadèmic i professional.",
+          "aclaraciones_es": [
+            "Participar activamente en la planificación y en la ejecución de propuestas artísticas y musicales colaborativas.",
+            "Asumir diferentes roles en las propuestas planificadas.",
+            "Valorar las aportaciones del resto de integrantes del grupo.",
+            "Identificar varias oportunidades de desarrollo personal, social, académico y profesional asociadas a las propuestas artísticas ejecutadas."
+          ],
+          "aclaraciones_ca": [
+            "Participar activament en la planificació i en l’execució de propostes artístiques i musicals col·laboratives.",
+            "Assumir diferents rols en les propostes planificades.",
+            "Valorar les aportacions de la resta d’integrants del grup.",
+            "Identificar diverses oportunitats de desenvolupament personal, social, acadèmic i professional associades a les propostes artístiques executades."
+          ]
+        }
+      ]
+    }
+  ]
+}

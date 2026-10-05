@@ -105,6 +105,25 @@ describe('CurriculumSelectorComponent', () => {
     expect(mockFacade.toggleRa).toHaveBeenCalledWith('RA2');
   });
 
+  it('should select ESO CE by their unique value and show their text', async () => {
+    (mockFacade.groupedItems as any).set([
+      {
+        category: 'Matemáticas B · De opción',
+        totalItems: 1,
+        items: [{ index: 1, text: 'Igual', value: 'Matemáticas B · CE1. Igual' }],
+      },
+    ]);
+    (mockFacade.selectedRas as any).set(['Matemáticas B · CE1. Igual']);
+    fixture.detectChanges();
+    await fixture.whenStable();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const checkbox = compiled.querySelector<HTMLInputElement>('input[type="checkbox"]')!;
+    expect(checkbox.checked).toBe(true);
+    expect(compiled.querySelector('.selection-item__text')!.textContent).toContain('Igual');
+    checkbox.dispatchEvent(new Event('change'));
+    expect(mockFacade.toggleRa).toHaveBeenCalledWith('Matemáticas B · CE1. Igual');
+  });
+
   it('should display selected items in the cart', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const cartHeader = compiled.querySelector('.floating-cart__header');

@@ -112,17 +112,19 @@ describe('PersonalViewComponent', () => {
       { _id: '2b', title: 'P2b CFGM Pel', tipoNivel: 'CFGM_PELUQUERIA' },
       { _id: '2c', title: 'P2c CFGS Inf', tipoNivel: 'CFGS_EDUCACION_INFANTIL' },
       { _id: '3', title: 'P3 ESO', tipoNivel: 'DIVERSIFICACION_CURRICULAR' },
+      { _id: '4', title: 'P4 ESO ordinaria', tipoNivel: 'ESO_ORDINARIA' },
     ]);
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Pills order: [ALL, FPB, CFGM Pel, CFGM, CFGS, ESO, ALL, borrador, publicado, error]
+    // Pills order: [ALL, FPB, CFGM Pel, CFGM, CFGS, ESO, ESO (PDC), ALL, borrador, publicado, error]
     const allPill = pills[0];
     const fpbPill = pills[1];
     const cfgmPill = pills[3];
     const cfgmPelPill = pills[2];
     const cfgsPill = pills[4];
-    const esoPill = pills[5];
+    const esoOrdinariaPill = pills[5];
+    const esoPill = pills[6];
 
     fpbPill.click();
     fixture.detectChanges();
@@ -147,6 +149,11 @@ describe('PersonalViewComponent', () => {
     expect(component.levelFilter()).toBe('CFGS_EDUCACION_INFANTIL');
     expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['P2c CFGS Inf']);
 
+    esoOrdinariaPill.click();
+    fixture.detectChanges();
+    expect(component.levelFilter()).toBe('ESO_ORDINARIA');
+    expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['P4 ESO ordinaria']);
+
     esoPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ESO');
@@ -156,7 +163,7 @@ describe('PersonalViewComponent', () => {
     allPill.click();
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ALL');
-    expect(component.filteredMyProjects().length).toBe(5);
+    expect(component.filteredMyProjects().length).toBe(6);
   });
 
   it('debería filtrar por estado del proyecto mediante clicks en el DOM', () => {
@@ -168,11 +175,11 @@ describe('PersonalViewComponent', () => {
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Status pills are indexes 4 (ALL), 5 (borrador), 6 (publicado), 7 (error)
-    const borradorPill = pills[7];
-    const publicadoPill = pills[8];
-    const errorPill = pills[9];
-    const allStatusPill = pills[6];
+    // Status pills are indexes 7 (ALL), 8 (borrador), 9 (publicado), 10 (error)
+    const borradorPill = pills[8];
+    const publicadoPill = pills[9];
+    const errorPill = pills[10];
+    const allStatusPill = pills[7];
 
     borradorPill.click();
     fixture.detectChanges();

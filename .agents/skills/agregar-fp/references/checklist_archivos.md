@@ -6,31 +6,16 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
 
 ## 1. Backend
 
-### 1.1. Modelo `Project.ts`
-- **Archivo:** `backend/src/models/Project.ts`
-- **Modificación:** Añadir el nuevo identificador al enum de `tipoNivel`:
-  ```typescript
-  tipoNivel: { 
-    type: String, 
-    enum: ['FP_BASICA', 'DIVERSIFICACION_CURRICULAR', 'CFGM_ESTETICA', 'CFGM_PELUQUERIA', 'CFGM_<SLUG>'], 
-    default: 'FP_BASICA' 
-  }
-  ```
+### 1.1. Catálogo de niveles `niveles.ts`
+- **Archivo:** `backend/src/data/niveles.ts` (fuente única de niveles; ver `documentation/niveles_educativos_y_catalogo.md`).
+- **Modificación:** Añadir la entrada del ciclo con `id`, `etapa`, nombres oficiales ES/CA (TodoFP/BOE y CAIB/BOIB), `unidad: 'RA'` y sus `cursos`. Con eso:
+  - `Project.tipoNivel` acepta el nuevo valor (se valida contra `NIVEL_IDS`);
+  - `describeTargetCourse` usa el nombre oficial en el prompt (CFGM y CFGS);
+  - el generador muestra el ciclo y sus cursos (`GET /api/niveles`).
 
 ### 1.2. Controlador `project.controller.ts` (Prompt IA Bilingüe)
 - **Archivo:** `backend/src/controllers/project.controller.ts`
-- **Modificación:** Respetar la variable `language` para que la IA reciba la denominación oficial exacta en el idioma seleccionado:
-  ```typescript
-  const targetCourseDescription = tipoNivel === 'CFGM_ESTETICA'
-    ? (language === 'catalan' ? `${effectiveCourse} de CFGM Estètica i Bellesa` : `${effectiveCourse} de CFGM Estética y Belleza`)
-    : (tipoNivel === 'CFGM_PELUQUERIA'
-      ? (language === 'catalan' ? `${effectiveCourse} de CFGM Perruqueria i Cosmètica Capil·lar` : `${effectiveCourse} de CFGM Peluquería y Cosmética Capilar`)
-      : (tipoNivel === 'CFGM_<SLUG>'
-        ? (language === 'catalan' ? `${effectiveCourse} de CFGM <Nombre en Catalán>` : `${effectiveCourse} de CFGM <Nombre en Castellano>`)
-        : (tipoNivel === 'DIVERSIFICACION_CURRICULAR'
-          ? `${effectiveCourse} de ESO (Diversificación Curricular / PDC)`
-          : `${effectiveCourse} de FP Básica (Formación Profesional Básica)`)));
-  ```
+- **Sin cambios para el nombre del ciclo:** `describeTargetCourse` toma la denominación oficial ES/CA del catálogo (paso 1.1) según el idioma del proyecto. Solo hay que tocar el controlador si el ciclo necesita reglas de prompt propias, que irán en un helper aparte.
 
 ### 1.3. Archivo de Datos de RAs (Bilingüe Obligatorio)
 - **Archivo:** `backend/src/data/ras_cfgm_<slug>.data.ts`

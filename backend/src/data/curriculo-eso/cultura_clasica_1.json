@@ -1,0 +1,330 @@
+{
+  "code": "cultura_clasica_1",
+  "name_es": "Cultura Clásica I",
+  "name_ca": "Cultura Clàssica I",
+  "cursos": {
+    "1º": "optativa",
+    "2º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Buscar, seleccionar, tratar y organizar información sobre el marco geográfico y las principales etapas de la historia de Grecia y Roma, usando críticamente fuentes históricas y geográficas, para adquirir conocimientos, elaborar y expresar respuestas en varios formatos.",
+      "description_ca": "Cercar, seleccionar, tractar i organitzar informació sobre el marc geogràfic i les principals etapes de la història de Grècia i Roma, usant críticament fonts històriques i geogràfiques, per adquirir coneixements, elaborar i expressar respostes en diversos formats.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CC1",
+        "STEM4",
+        "CD1",
+        "CD2",
+        "CPSAA5"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Elaborar y presentar contenidos propios en forma de esquemas, ejes cronológicos, mapas y otros tipos de formato, usando diferentes fuentes históricas y las tecnologías de la información, de forma reflexiva y crítica, situando las ciudades y regiones más importantes de Grecia y Roma en el momento de su apogeo y delimitando las etapas en que se divide su historia.",
+          "text_ca": "Elaborar i presentar continguts propis en forma d’esquemes, eixos cronològics, mapes i altres tipus de format, fent servir diferents fonts històriques i les tecnologies de la informació, de forma reflexiva i crítica, situant les ciutats i regions més importants de Grècia i Roma en el moment del seu apogeu i delimitant les etapes en què es divideix la seva història.",
+          "aclaraciones_es": [
+            "Elaborar y presentar contenidos propios en diferentes formatos.",
+            "Usar diferentes fuentes históricas.",
+            "Usar tecnologías de la información de forma reflexiva y crítica.",
+            "Delimitar las etapas en que se dividen las civilizaciones griega y romana.",
+            "Situar en un mapa las ciudades y regiones más importantes de la civilización griega y la civilización romana en sus apogeos."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar i presentar continguts propis en diferents formats.",
+            "Usar diferents fonts històriques.",
+            "Usar tecnologies de la informació de forma reflexiva i crítica.",
+            "Delimitar les etapes en què es divideixen les civilitzacions grega i romana.",
+            "Situar en un mapa les ciutats i regions més importants de la civilització grega i la civilització romana en els seus apogeus."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar los personajes masculinos y femeninos y los hitos históricos de relevancia que ocurrieron, analizando y argumentando sus causas y consecuencias, mediante la localización, análisis y comparación de manera crítica de fuentes primarias y secundarias como pruebas históricas.",
+          "text_ca": "Identificar els personatges masculins i femenins i les fites històriques de rellevància que hi ocorregueren, analitzant i argumentant les seves causes i conseqüències, mitjançant la localització, anàlisi i comparació de manera crítica de fonts primàries i secundàries com a proves històriques.",
+          "aclaraciones_es": [
+            "Identificar los personajes masculinos y femeninos más relevantes.",
+            "Identificar los hitos históricos más relevantes.",
+            "Analizar y argumentar las causas y las consecuencias de los hitos históricos más relevantes.",
+            "Consultar, analizar y comparar diferentes fuentes."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els personatges masculins i femenins més rellevants.",
+            "Identificar les fites històriques més rellevants.",
+            "Analitzar i argumentar les causes i les conseqüències de les fites històriques més rellevants.",
+            "Consultar, analitzar i comparar diferents fonts."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Elaborar trabajos individuales o en grupo, mediante la investigación, selección y tratamiento de la información sobre los pueblos que vivían en las Illes Balears antes de los romanos y como se modificó el territorio con la romanización.",
+          "text_ca": "Elaborar treballs individuals o en grup, mitjançant la recerca, selecció i tractament de la informació sobre els pobles que vivien a les Illes Balears abans dels romans i com es va modificar el territori amb la romanització.",
+          "aclaraciones_es": [
+            "Elaborar trabajos de investigación sobre los pueblos prerromanos de las Illes Balears.",
+            "Explicar cómo afectó la romanización a la organización territorial de las Illes Balears."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar treballs de recerca sobre els pobles preromans de les Illes Balears.",
+            "Explicar com va afectar la romanització l’organització territorial de les Illes Balears."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Valorar el papel de la civilización grecolatina en su origen de la identidad europea, analizando críticamente su pervivencia en diferentes aspectos de la sociedad actual para poder valorar su legado cultural, artístico y social.",
+      "description_ca": "Valorar el paper de la civilització grecollatina a l’origen de la identitat europea, analitzant críticament la seva pervivència en diferents aspectes de la societat actual per poder valorar el seu llegat cultural, artístic i social.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CCL5",
+        "CD1",
+        "CD2",
+        "STEM4",
+        "STEM5",
+        "CPSAA1",
+        "CPSAA5",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CC4",
+        "CE3",
+        "CCEC1",
+        "CCEC2"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Determinar las características de las principales formas de organización política presentes en Grecia y Roma estableciendo semejanzas y diferencias entre ellas y comparando de forma crítica las formas de gobierno de la antigüedad con las actuales, adquiriendo conciencia de lo que supone ser ciudadano europeo en una sociedad libre y democrática.",
+          "text_ca": "Determinar les característiques de les principals formes d’organització política presents a Grècia i Roma establint semblances i diferències entre elles i comparant de forma crítica les formes de govern de l’antiguitat amb les actuals, adquirint consciència del que suposa ser ciutadà europeu en una societat lliure i democràtica.",
+          "aclaraciones_es": [
+            "Determinar las características de los sistemas de gobierno de la Antigüedad clásica.",
+            "Comparar los sistemas de gobierno de la Antigüedad clásica con los sistemas de gobierno actuales y reconocer la influencia.",
+            "Conocer y entender los derechos y los deberes que tiene todo ciudadano europeo.",
+            "Definir los principales rasgos de una sociedad libre y democrática."
+          ],
+          "aclaraciones_ca": [
+            "Determinar les característiques dels sistemes de govern de l’Antiguitat clàssica.",
+            "Comparar els sistemes de govern de l’Antiguitat clàssica amb els sistemes de govern actuals i reconèixer-ne la influència.",
+            "Conèixer i entendre els drets i els deures que té tot ciutadà europeu.",
+            "Definir els principals trets d’una societat lliure i democràtica."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Establecer las características y la evolución de las clases sociales en Grecia y Roma mediante la comparación entre ambos modelos y haciendo un análisis crítico de la pervivencia de estos modelos en la sociedad actual.",
+          "text_ca": "Establir les característiques i l’evolució de les classes socials a Grècia i Roma mitjançant la comparació entre ambdós models i fent una anàlisi crítica de la pervivència d’aquests models en la societat actual.",
+          "aclaraciones_es": [
+            "Establecer las características y la evolución de las clases sociales en Grecia y Roma y comparar ambos modelos.",
+            "Analizar con espíritu crítico los modelos sociales de Grecia y Roma con los actuales y reconocer la pervivencia."
+          ],
+          "aclaraciones_ca": [
+            "Establir les característiques i l’evolució de les classes socials a Grècia i Roma i comparar ambdós models.",
+            "Analitzar amb esperit crític els models socials de Grècia i Roma amb els actuals i reconèixer- ne la pervivència."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar las formas actuales de la distribución del trabajo y el proceso de equiparación de los papeles de hombres y mujeres iniciado a nuestra sociedad, estableciendo comparaciones con la composición de la familia en Grecia y Roma y los roles asignados a sus miembros y las principales formas de trabajo y de ocio existentes en la antigüedad.",
+          "text_ca": "Identificar les formes actuals de la distribució del treball i el procés d’equiparació dels papers d’homes i dones iniciat a la nostra societat, establint comparacions amb la composició de la família a Grècia i Roma i els rols assignats als seus membres i les principals formes de treball i de lleure existents en l’antiguitat.",
+          "aclaraciones_es": [
+            "Analizar el papel de la mujer en la Antigüedad y compararlo con la actualidad.",
+            "Describir el trabajo y el ocio en Grecia y Roma y compararlos con la actualidad.",
+            "Explicar la composición de la familia griega y romana tradicionales y el papel de sus miembros en la sociedad y compararlo con la actualidad."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar el paper de la dona en l’Antiguitat i comparar-lo amb l’actualitat.",
+            "Descriure el treball i el lleure a Grècia i Roma i comparar-los amb l’actualitat.",
+            "Explicar la composició de la família grega i romana tradicionals i el paper dels seus membres en la societat i comparar-ho amb l’actualitat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Conocer los principales dioses y diosas de la mitología grecolatina, así así como los protagonistas de los ciclos míticos más relevantes, para reconocerlos en obras artísticas de diferentes tipos y para que sirvan de inspiración para elaborar obras de diferente formato que se inspiran en la mitología.",
+      "description_ca": "Conèixer els principals déus i deesses de la mitologia grecollatina, com també els protagonistes dels cicles mítics més rellevants, per reconèixer-los a obres artístiques de diferents tipus i perquè serveixin d’inspiració per elaborar obres de diferent format que s’inspiren en la mitologia.",
+      "descriptores": [
+        "CCL2",
+        "CP2",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CCEC1",
+        "CCEC2",
+        "CCEC3",
+        "CD1",
+        "CD2",
+        "CD3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Describir los componentes básicos de la religión en el mundo antiguo, reconociendo los diferentes tipos de festividades, rituales y sacrificios relacionados con los dioses olímpicos, comparándolos con fiestas y rituales religiosos conocidos por el alumno y valorando críticamente su pervivencia en las manifestaciones festivas y religiosas actuales.",
+          "text_ca": "Descriure els components bàsics de la religió al món antic, reconeixent els diferents tipus de festivitats, rituals i sacrificis relacionats amb els déus olímpics, comparant-los amb festes i rituals religiosos coneguts per l’alumne i valorant críticament la seva pervivència en les manifestacions festives i religioses actuals.",
+          "aclaraciones_es": [
+            "Reconocer el politeísmo y el antropomorfismo como componentes básicos de la religión en la antigüedad grecorromana.",
+            "Describir las principales festividades religiosas y observar cómo marcaban el calendario: Olimpiadas, Dionisíacas, Saturnales y otras.",
+            "Conocer diferentes tipos de rituales y ceremonias de los cultos públicos y privados destinados a establecer contacto con las divinidades y mantenerlas favorables: plegarias, ofrendas, libaciones, sacrificios de animales, etc.",
+            "Comparar los elementos característicos de la religión en la antigüedad grecorromana con fiestas y rituales religiosos conocidos por el alumno y valorar críticamente la pervivencia en la actualidad."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer el politeisme i l’antropomorfisme com a components bàsics de la religió a l’antiguitat grecoromana.",
+            "Descriure les principals festivitats religioses i observar com marcaven el calendari: Olimpíades, Dionisíaques, Saturnals i altres.",
+            "Conèixer diferents tipus de rituals i cerimònies dels cultes públics i privats destinats a establir contacte amb les divinitats i mantenir-les favorables: pregàries, ofrenes, libacions, sacrificis d’animals, etc.",
+            "Comparar els elements característics de la religió a l’antiguitat grecoromana amb festes i rituals religiosos coneguts per l’alumne i valorar-ne críticament la pervivència en l’actualitat."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Distinguir los principales dioses y diosas de la mitología grecolatina, identificándolos por sus atributos en diferentes representaciones, reconociendo las escenas mitológicas que protagonizan, identificando esa iconografía en diferentes formatos artísticos y conceptuales y poniendo atención al papel sumiso o de víctima de la mujer.",
+          "text_ca": "Distingir els principals déus i deesses de la mitologia grecollatina, identificant-los pels seus atributs a diferents representacions, reconeixent les escenes mitològiques que protagonitzen, identificant aquesta iconografia en diferents formats artístics i conceptuals i posant esment al paper submís o de víctima de la dona.",
+          "aclaraciones_es": [
+            "Distinguir los principales dioses y diosas de la mitología grecolatina.",
+            "Identificar las divinidades olímpicas por sus atributos a diferentes representaciones.",
+            "Identificar, en la iconografía, las escenas mitológicas protagonizadas por las principales divinidades.",
+            "Analizar críticamente la influencia de la mitología clásica como modelo de normalización de conductas patriarcales."
+          ],
+          "aclaraciones_ca": [
+            "Distingir els principals déus i deesses de la mitologia grecollatina.",
+            "Identificar les divinitats olímpiques pels seus atributs a diferents representacions.",
+            "Identificar, a la iconografia, les escenes mitològiques protagonitzades per les principals divinitats.",
+            "Analitzar críticament la influència de la mitologia clàssica com a model de normalització de conductes patriarcals."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Exponer la pervivencia de las diferentes manifestaciones religiosas y mitológicas grecolatinas, comparándolas con las que perviven en nuestra sociedad (las representaciones teatrales, los espectáculos públicos y deportivos, la cultura popular y las costumbres y rituales religiosos).",
+          "text_ca": "Exposar la pervivència de les diferents manifestacions religioses i mitològiques grecollatines, comparant-les amb les que perviuen a la nostra societat (les representacions teatrals, els espectacles públics i esportius, la cultura popular i els costums i rituals religiosos).",
+          "aclaraciones_es": [
+            "Exponer la pervivencia de las diferentes manifestaciones religiosas y mitológicas grecolatinas.",
+            "Comparar las manifestaciones religiosas y mitológicas grecolatinas con las que se pueden encontrar a nuestra sociedad: las representaciones teatrales, los espectáculos públicos y deportivos, la cultura popular y las costumbres y rituales religiosos."
+          ],
+          "aclaraciones_ca": [
+            "Exposar la pervivència de les diferents manifestacions religioses i mitològiques grecollatines.",
+            "Comparar les manifestacions religioses i mitològiques grecollatines amb les que es poden trobar a la nostra societat: les representacions teatrals, els espectacles públics i esportius, la cultura popular i els costums i rituals religiosos."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Analizar la presencia del griego y el latín a las lenguas del alumno para entender el significado etimológico y ser capaz de identificar y formar palabras a partir de los étimos dados, para producir materiales en diferentes formatos con el léxico adquirido y apreciar y respetar la diversidad lingüística fomentando el interés por el estudio otras lenguas, entre ellas las lenguas clásicas.",
+      "description_ca": "Analitzar la presència del grec i el llatí a les llengües de l’alumne per tal d’entendre el significat etimològic i ser capaç d’identificar i formar paraules a partir dels ètims donats, per produir materials en diferents formats amb el lèxic adquirit i estimar i respectar la diversitat lingüística fomentant l’interès per l’estudi d’altres llengües, entre les quals les llengües clàssiques.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CP2",
+        "CP3",
+        "STEM2",
+        "CD1",
+        "CC1",
+        "CE3",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Describir los diversos tipos de escritura, distinguiendo diferentes tipos de alfabetos y de soportes gráficos, estableciendo comparaciones con los usados actualmente y relacionando la importancia de la escritura con la evolución de la humanidad.",
+          "text_ca": "Descriure els diversos tipus d’escriptura, distingint diferents tipus d’alfabets i de suports gràfics, establint comparacions amb els usats actualment i relacionant la importància de l’escriptura amb l’evolució de la humanitat.",
+          "aclaraciones_es": [
+            "Describir los diferentes tipos de escritura.",
+            "Identificar los diferentes alfabetos y materiales que se utilizaban para escribir.",
+            "Comparar los sistemas de escritura antiguos y los actuales.",
+            "Relacionar la escritura con el desarrollo de la humanidad."
+          ],
+          "aclaraciones_ca": [
+            "Descriure els diferents tipus d’escriptura.",
+            "Identificar els diferents alfabets i materials que s’utilitzaven per escriure.",
+            "Comparar els sistemes d’escriptura antics i els actuals.",
+            "Relacionar l’escriptura amb el desenvolupament de la humanitat."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Inferir el origen común de diferentes lenguas europeas e identificar las lenguas románicas y no románicas de la Península Ibérica, situándolas en un mapa.",
+          "text_ca": "Inferir l’origen comú de diferents llengües europees i identificar les llengües romàniques i no romàniques de la Península Ibèrica, situant-les en un mapa.",
+          "aclaraciones_es": [
+            "Entender la procedencia indoeuropea de la mayoría de las lenguas de Europa.",
+            "Identificar las lenguas románicas y no románicas de la Península Ibérica y localizarlas en un mapa."
+          ],
+          "aclaraciones_ca": [
+            "Entendre la procedència indoeuropea de la majoria de llengües d’Europa.",
+            "Identificar les llengües romàniques i no romàniques de la Península Ibèrica i localitzar-les en un mapa."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Ampliar el vocabulario con un léxico mínimo de tipo técnico y científico de origen grecolatino, en la lengua propia, señalando la relación con las raíces o étimos latinos y griegos y mejorar la competencia lingüística.",
+          "text_ca": "Ampliar el vocabulari amb un lèxic mínim de tipus tècnic i científic d’origen grecollatí, en la llengua pròpia, assenyalant-ne la relació amb les arrels o ètims llatins i grecs i millorar la competència lingüística.",
+          "aclaraciones_es": [
+            "Ampliar el vocabulario del estudiante con términos técnicos y científicos de origen griego y latino.",
+            "Señalar la relación de los términos técnicos y científicos con las raíces o los étimos griegos o latinos.",
+            "Mejorar las habilidades lingüísticas."
+          ],
+          "aclaraciones_ca": [
+            "Ampliar el vocabulari de l’estudiant amb termes tècnics i científics d’origen grec i llatí.",
+            "Assenyalar la relació dels termes tècnics i científics amb les arrels o els ètims grecs o llatins.",
+            "Millorar les habilitats lingüístiques."
+          ]
+        }
+      ]
+    }
+  ]
+}

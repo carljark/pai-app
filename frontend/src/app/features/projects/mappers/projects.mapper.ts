@@ -162,6 +162,7 @@ export function mapTipoNivel(tipo: string): ProjectType {
     'CFGM_ESTETICA',
     'CFGM_PELUQUERIA',
     'CFGS_EDUCACION_INFANTIL',
+    'ESO_ORDINARIA',
     'DIVERSIFICACION_CURRICULAR',
   ];
   return validTypes.includes(tipo as ProjectType) ? (tipo as ProjectType) : 'FP_BASICA';

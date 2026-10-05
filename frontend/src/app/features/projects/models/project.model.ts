@@ -9,9 +9,12 @@ export type ProjectType =
   | 'CFGM_ESTETICA'
   | 'CFGM_PELUQUERIA'
   | 'CFGS_EDUCACION_INFANTIL'
+  | 'ESO_ORDINARIA'
   | 'DIVERSIFICACION_CURRICULAR'
   | 'ESO';
-export type HistoryTab = 'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGS_EDUCACION_INFANTIL' | 'ESO';
+/** Pestañas de nivel del historial; `ESO` es la del PDC y `ESO_ORDINARIA` la de la ESO. */
+export type HistoryTab =
+  'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGS_EDUCACION_INFANTIL' | 'ESO_ORDINARIA' | 'ESO';
 export type AIProvider = 'gemini' | 'openrouter';
 export type ContentLanguage = 'castellano' | 'catalan';
 
@@ -237,6 +240,8 @@ export function getHistoryTabForTipoNivel(tipoNivel: ProjectType): HistoryTab {
       return 'CFGM_PELUQUERIA';
     case 'CFGS_EDUCACION_INFANTIL':
       return 'CFGS_EDUCACION_INFANTIL';
+    case 'ESO_ORDINARIA':
+      return 'ESO_ORDINARIA';
     default:
       return 'FPB';
   }
@@ -248,6 +253,7 @@ export const HISTORY_TAB_LABEL_KEYS = {
   CFGM: 'courseLevelCFGM',
   CFGM_PELUQUERIA: 'courseLevelCFGMPeluqueria',
   CFGS_EDUCACION_INFANTIL: 'courseLevelCFGSEducacionInfantil',
+  ESO_ORDINARIA: 'courseLevelESO',
   ESO: 'courseLevelPDC',
 } as const satisfies Record<HistoryTab, string>;
 

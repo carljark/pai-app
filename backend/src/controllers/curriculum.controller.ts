@@ -1,6 +1,8 @@
 import type { Response } from 'express';
 import { RA } from '../models/RA';
 import { CE } from '../models/CE';
+import { NIVELES } from '../data/niveles';
+import { ESO_ORDINARIA, mapEsoCes } from '../services/eso-curriculum.service';
 
 const caToEsModules: Record<string, string> = {
   "Atenció a possibles clients": "Atención al cliente",
@@ -110,12 +112,23 @@ function mapCe(c: any, lang: 'ca' | 'es') {
   return { area, subject, ce_id: c.ce_id, description, criterios };
 }
 
+/**
+ * CE del nivel indicado. Sin `tipoNivel` (o con el PDC) devuelve las del PDC, como antes;
+ * con `ESO_ORDINARIA` devuelve las de las materias del `curso` con sus criterios de ese curso.
+ */
 export const getCes = async (req: any, res: Response) => {
   try {
     const lang = req.query.lang === 'catalan' ? 'ca' : 'es';
-    const ces = await CE.find();
+    if (req.query.tipoNivel === ESO_ORDINARIA) {
+      const docs = await CE.find({ tipoNivel: ESO_ORDINARIA });
+      return res.json(mapEsoCes(docs, lang, String(req.query.curso || '1º')));
+    }
+    const ces = await CE.find({ tipoNivel: { $ne: ESO_ORDINARIA } });
     return res.json(ces.map(c => mapCe(c, lang)));
   } catch (error) {
     return res.status(500).json({ error: "No se pudieron cargar las CEs" });
   }
 };
+
+/** Catálogo de niveles educativos (`data/niveles.ts`). */
+export const getNiveles = (_req: any, res: Response) => res.json(NIVELES);

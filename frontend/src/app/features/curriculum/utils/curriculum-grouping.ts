@@ -6,11 +6,12 @@ import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_inf
 /** Ciclos de grado medio y superior con RA propios. */
 export const FP_CYCLES = ['CFGM_ESTETICA', 'CFGM_PELUQUERIA', 'CFGS_EDUCACION_INFANTIL'] as const;
 type CicloTipo = (typeof FP_CYCLES)[number];
-export type TipoNivel = 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | CicloTipo;
+export type TipoNivel = 'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'ESO_ORDINARIA' | CicloTipo;
 
 export interface GroupedCurriculumItem {
   category: string;
-  items: { index: number; text: string }[];
+  /** `value` es el valor seleccionado cuando no coincide con el texto (CE de la ESO). */
+  items: { index: number; text: string; value?: string }[];
   totalItems: number;
   moduleCode?: string;
 }
@@ -18,6 +19,7 @@ export interface GroupedCurriculumItem {
 export interface ItemInfo {
   subject: string;
   index: number;
+  text?: string;
 }
 
 export const CFGM_MODULE_ORDER = [
@@ -191,7 +193,11 @@ export function buildItemLookup(groups: GroupedCurriculumItem[]): Map<string, It
   const lookup = new Map<string, ItemInfo>();
   for (const group of groups) {
     for (const item of group.items) {
-      lookup.set(item.text, { subject: group.category, index: item.index });
+      lookup.set(item.value ?? item.text, {
+        subject: group.category,
+        index: item.index,
+        text: item.text,
+      });
     }
   }
   return lookup;

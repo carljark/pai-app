@@ -1,0 +1,319 @@
+{
+  "code": "recursos_digitales_2",
+  "name_es": "Recursos Digitales II",
+  "name_ca": "Recursos Digitals II",
+  "cursos": {
+    "3º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Buscar y seleccionar de manera crítica información adecuada proveniente de diferentes fuentes, atendiendo a criterios de validez, calidad, actualidad y fiabilidad y respetando los derechos de autor, para incorporarla a la construcción de conocimiento.",
+      "description_ca": "Cercar i seleccionar de manera crítica informació adequada provinent de diferents fonts, atenent a criteris de validesa, qualitat, actualitat i fiabilitat i respectant els drets d’autor, per incorporar-la a la construcció de coneixement.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "CP1",
+        "STEM4",
+        "CD1",
+        "CD3",
+        "CPSAA4",
+        "CC1"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Buscar y seleccionar información en función de sus necesidades haciendo uso de las herramientas del entorno personal de aprendizaje y siguiendo normas básicas de seguridad en la red.",
+          "text_ca": "Cercar i seleccionar informació en funció de les seves necessitats fent ús de les eines de l’entorn personal d’aprenentatge i seguint normes bàsiques de seguretat a la xarxa.",
+          "aclaraciones_es": [
+            "Buscar información a partir de diferentes fuentes de información.",
+            "Seleccionar la información más relevante, fiable y adecuada a los objetivos de toda la búsqueda.",
+            "Usar de forma eficiente las herramientas del entorno personal de aprendizaje en la búsqueda y selección de información.",
+            "Seguir normas básicas de seguridad en la red en la búsqueda y selección de información."
+          ],
+          "aclaraciones_ca": [
+            "Cercar informació a partir de diferents fonts d’informació.",
+            "Seleccionar la informació més rellevant, fiable i adequada per als objectius de tota la cerca.",
+            "Usar de forma eficient les eines de l’entorn personal d’aprenentatge en la cerca i selecció d’informació.",
+            "Seguir normes bàsiques de seguretat a la xarxa en la cerca i selecció d’informació."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Contrastar información procedente de diferentes fuentes de manera crítica y segura, evaluando la fiabilidad y pertinencia.",
+          "text_ca": "Contrastar informació procedent de diferents fonts de manera crítica i segura, avaluant-ne la fiabilitat i pertinència.",
+          "aclaraciones_es": [
+            "Reconocer y diferenciar las diversas fuentes de información.",
+            "Verificar la autoría, la reputación de la fuente y la actualización de la información.",
+            "Validar datos sensibles antes de compartirlos.",
+            "Contrastar información empleando herramientas digitales de verificación."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer i diferenciar les diverses fonts d’informació.",
+            "Verificar l’autoria, la reputació de la font i l’actualització de la informació.",
+            "Validar dades sensibles abans de compartir-les.",
+            "Contrastar informacions emprant eines digitals de verificació."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Hacer un uso ético de los datos y las herramientas digitales, aplicando las normas de etiqueta digital y respetando las licencias de uso y propiedad intelectual en la comunicación, colaboración y participación activa en la red.",
+          "text_ca": "Fer un ús ètic de les dades i les eines digitals, aplicant les normes d’etiqueta digital i respectant les llicències d’ús i propietat intel·lectual en la comunicació, col·laboració i participació activa a la xarxa.",
+          "aclaraciones_es": [
+            "Tener un comportamiento adecuado y respetuoso en la comunicación, colaboración y participación activa en la red.",
+            "Respetar los derechos de autor y las licencias de uso en la búsqueda y creación de material."
+          ],
+          "aclaraciones_ca": [
+            "Tenir un comportament adequat i respectuós en la comunicació, col·laboració i participació activa a la xarxa.",
+            "Respectar els drets d’autor i les llicències d’ús en la cerca i creació de material."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Valorar y prever los riesgos para la salud y la seguridad de los dispositivos y los datos personales, identificando las principales amenazas para hacer un uso seguro, saludable y legal.",
+      "description_ca": "Valorar i preveure els riscs per a la salut i la seguretat dels dispositius i les dades personals, identificant les principals amenaces per tal de fer-ne un ús segur, saludable i legal.",
+      "descriptores": [
+        "STEM5",
+        "CD3",
+        "CD4",
+        "CPSAA2",
+        "CC1",
+        "CC2"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Proteger los datos personales y la huella digital generada en internet configurando las condiciones de privacidad de las redes sociales y espacios virtuales de trabajo.",
+          "text_ca": "Protegir les dades personals i l’empremta digital generada a internet configurant les condicions de privacitat de les xarxes socials i espais virtuals de treball.",
+          "aclaraciones_es": [
+            "Proteger los datos personales con la configuración de las condiciones de privacidad en las redes sociales y espacios de trabajo virtuales.",
+            "Gestionar la huella digital ajustando las opciones de privacidad en entornos digitales."
+          ],
+          "aclaraciones_ca": [
+            "Protegir les dades personals amb la configuració de les condicions de privacitat a les xarxes socials i espais de treball virtuals.",
+            "Gestionar l’empremta digital ajustant les opcions de privacitat en entorns digitals."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Configurar y actualizar contraseñas, sistemas operativos y antivirus de manera periódica en los diferentes dispositivos digitales de uso habitual.",
+          "text_ca": "Configurar i actualitzar contrasenyes, sistemes operatius i antivirus de manera periòdica en els diferents dispositius digitals d’ús habitual.",
+          "aclaraciones_es": [
+            "Configurar contraseñas seguras para cada dispositivo y cuenta digital.",
+            "Actualizar periódicamente las contraseñas para mantener la seguridad de los dispositivos.",
+            "Mantener los sistemas operativos actualizados para proteger los dispositivos contra vulnerabilidades.",
+            "Instalar y actualizar antivirus, realizando escaneos periódicos para identificar amenazas."
+          ],
+          "aclaraciones_ca": [
+            "Configurar contrasenyes segures per a cada dispositiu i compte digital.",
+            "Actualitzar periòdicament les contrasenyes per mantenir la seguretat dels dispositius.",
+            "Mantenir els sistemes operatius actualitzats per protegir els dispositius contra vulnerabilitats.",
+            "Instal·lar i actualitzar antivirus, realitzant escaneigs periòdics per identificar amenaces."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Identificar y saber reaccionar ante situaciones que representan una amenaza en la red eligiendo la mejor solución entre varias opciones y valorando el bienestar personal y colectivo.",
+          "text_ca": "Identificar i saber reaccionar davant situacions que representen una amenaça a la xarxa triant la millor solució entre diverses opcions i valorant el benestar personal i col·lectiu.",
+          "aclaraciones_es": [
+            "Identificar situaciones peligrosas en la red",
+            "Responder ante un riesgo en Internet con la elección de la mejor opción.",
+            "Velar por el bienestar y seguridad en la red."
+          ],
+          "aclaraciones_ca": [
+            "Identificar situacions perilloses a la xarxa",
+            "Respondre davant d’un risc a Internet amb la tria de la millor opció.",
+            "Vetllar pel benestar i seguretat a la xarxa."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Expresar, comunicar y difundir ideas y contenidos con un lenguaje inclusivo y no sexista, utilizando herramientas de comunicación y publicación simples para gestionar de forma responsable su presencia en la red.",
+      "description_ca": "Expressar, comunicar i difondre idees i continguts amb un llenguatge inclusiu i no sexista, utilitzant eines de comunicació i publicació simples per gestionar de forma responsable la seva presència a la xarxa.",
+      "descriptores": [
+        "CCL1",
+        "CCL5",
+        "STEM4",
+        "CD2",
+        "CD3",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Interactuar en espacios virtuales de comunicación y plataformas de aprendizaje colaborativo, adaptándose a diferentes audiencias con una actitud participativa y respetuosa.",
+          "text_ca": "Interactuar en espais virtuals de comunicació i plataformes d’aprenentatge col·laboratiu, adaptant-se a diferents audiències amb una actitud participativa i respectuosa.",
+          "aclaraciones_es": [
+            "Utilizar entornos virtuales de aprendizaje colaborativos.",
+            "Usar la etiqueta en correo electrónico, grupos de noticias, páginas web…",
+            "Participar en espacios virtuales de comunicación de forma respetuosa y con corrección."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar entorns virtuals d’aprenentatge col·laboratius.",
+            "Fer servir l’etiqueta en correu electrònic, grups de notícies, planes web…",
+            "Participar en espais virtuals de comunicació de forma respectuosa i amb correcció."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Compartir y publicar información y datos en la red, haciendo uso de las diferentes herramientas y formatos disponibles en internet.",
+          "text_ca": "Compartir i publicar informació i dades a la xarxa, fent ús de les diferents eines i formats disponibles a internet.",
+          "aclaraciones_es": [
+            "Emplear aplicaciones y plataformas online para compartir datos y contenidos de manera efectiva.",
+            "Seleccionar y aplicar formatos digitales adecuados para la publicación de contenidos en función del contexto y del público."
+          ],
+          "aclaraciones_ca": [
+            "Emprar aplicacions i plataformes en línia per compartir dades i continguts de manera efectiva.",
+            "Seleccionar i aplicar formats digitals adequats per a la publicació de continguts en funció del context i del públic."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Usar las herramientas informáticas al alcance para crear y editar contenidos digitales de diferente naturaleza, trabajando de forma autónoma o colaborativa, para aplicarlas a la construcción de conocimientos y apoyar el aprendizaje en ámbitos diversos.",
+      "description_ca": "Fer servir les eines informàtiques a l’abast per crear i editar continguts digitals de diferent naturalesa, treballant de forma autònoma o col·laborativa, per aplicar-les a la construcció de coneixements i donar suport a l’aprenentatge a àmbits diversos.",
+      "descriptores": [
+        "STEM4",
+        "CD2",
+        "CPSAA5",
+        "CE3",
+        "CCEC2",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Crear y editar contenidos digitales de manera individual o colectiva, seleccionando las herramientas más apropiadas de manera creativa.",
+          "text_ca": "Crear i editar continguts digitals de manera individual o col·lectiva, seleccionant les eines més apropiades de manera creativa.",
+          "aclaraciones_es": [
+            "Crear y editar contenidos digitales de manera creativa individual o colectivamente.",
+            "Seleccionar las herramientas más apropiadas de creación y edición de contenidos."
+          ],
+          "aclaraciones_ca": [
+            "Crear i editar continguts digitals de manera creativa individualment o col·lectivament.",
+            "Seleccionar les eines més apropiades de creació i edició de continguts."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Usar software propio de ámbitos diversos de forma autónoma, aprovechando las ventajas que proporcionan estas herramientas para profundizar en el conocimiento de las diferentes materias.",
+          "text_ca": "Fer servir programari propi d’àmbits diversos de forma autònoma, aprofitant els avantatges que proporcionen aquestes eines per aprofundir en el coneixement de les diferents matèries.",
+          "aclaraciones_es": [
+            "Utilizar el software con autonomía.",
+            "Aprovechar las funcionalidades específicas de cada software para ampliar y profundizar en el conocimiento y las habilidades en diferentes materias."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar el programari amb autonomia.",
+            "Aprofitar les funcionalitats específiques de cada programari per ampliar i aprofundir en el coneixement i les habilitats en diferents matèries."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Desarrollar aplicaciones informáticas en diferentes entornos, aplicando los fundamentos del pensamiento computacional para dar respuesta a problemas diversos y para simular el comportamiento de sistemas sencillos.",
+      "description_ca": "Desenvolupar aplicacions informàtiques en diferents entorns, aplicant els fonaments del pensament computacional per donar resposta a problemes diversos i per simular el comportament de sistemes senzills.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "STEM3",
+        "CD5",
+        "CPSAA5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Diseñar soluciones a problemas informáticos a través de algoritmos y diagramas de flujo, aplicando los elementos y técnicas de programación de manera creativa.",
+          "text_ca": "Dissenyar solucions a problemes informàtics a través d’algoritmes i diagrames de flux, aplicant els elements i tècniques de programació de manera creativa.",
+          "aclaraciones_es": [
+            "Diseñar soluciones a problemas informáticos a través de algoritmos y diagramas de flujo.",
+            "Aplicar los elementos y técnicas de programación de manera creativa."
+          ],
+          "aclaraciones_ca": [
+            "Dissenyar solucions a problemes informàtics a través d’algoritmes i diagrames de flux.",
+            "Aplicar els elements i tècniques de programació de manera creativa."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Programar aplicaciones sencillas para diferentes dispositivos, empleando los elementos de programación de manera apropiada y aprovechando los recursos que facilitan las diferentes herramientas de edición disponibles.",
+          "text_ca": "Programar aplicacions senzilles per a diferents dispositius, emprant els elements de programació de manera apropiada i aprofitant els recursos que faciliten les diferents eines d’edició disponibles.",
+          "aclaraciones_es": [
+            "Diseñar y programar aplicaciones sencillas para diferentes dispositivos.",
+            "Emplear diferentes elementos de programación, utilizando entornos de programación disponibles, intuitivos y adaptados."
+          ],
+          "aclaraciones_ca": [
+            "Dissenyar i programar aplicacions senzilles per a diferents dispositius.",
+            "Emprar diferents elements de programació, utilitzant entorns de programació disponibles, intuïtius i adaptats."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Simular el comportamiento de sistemas simples, utilizando la programación y reproduciendo el comportamiento de sus componentes fundamentales para obtener una herramienta con capacidad predictiva.",
+          "text_ca": "Simular el comportament de sistemes simples, utilitzant la programació i reproduint el comportament dels seus components fonamentals per obtenir una eina amb capacitat predictiva.",
+          "aclaraciones_es": [
+            "Analizar y entender un sistema simple básico.",
+            "Simular el comportamiento de un sistema simple a través de la programación.",
+            "Evaluar que los resultados se ajustan en la programación previa."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar i entendre un sistema simple bàsic.",
+            "Simular el comportament d’un sistema simple a través de la programació.",
+            "Avaluar que els resultats s’ajusten a la programació prèvia."
+          ]
+        }
+      ]
+    }
+  ]
+}

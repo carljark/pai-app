@@ -1,0 +1,658 @@
+{
+  "code": "educacion_fisica",
+  "name_es": "Educación Física",
+  "name_ca": "Educació Física",
+  "cursos": {
+    "1º": "comun",
+    "2º": "comun",
+    "3º": "comun",
+    "4º": "comun"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Adoptar un estilo de vida activo y saludable, seleccionando e incorporando intencionalmente actividades físicas y deportivas en las rutinas diarias a partir de un análisis crítico de los modelos corporales y del rechazo de las prácticas que carezcan de base científica, para hacer un uso saludable y autónomo del tiempo libre y así mejorar la calidad de vida.",
+      "description_ca": "Adoptar un estil de vida actiu i saludable, seleccionant i incorporant intencionalment activitats físiques i esportives en les rutines diàries, a partir d’una anàlisi crítica dels models corporals i del rebuig de les pràctiques que manquin de base científica, per fer un ús saludable i autònom del temps lliure i d’aquesta manera millorar qualitat de vida.",
+      "descriptores": [
+        "CCL3",
+        "STEM2",
+        "STEM5",
+        "CD4",
+        "CPSAA2",
+        "CPSAA4"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Establecer y organizar secuencias sencillas de actividad física orientada al concepto integral de salud y al estilo de vida activo, a partir de una valoración del nivel inicial de condición física y respetar la propia identidad corporal.",
+          "text_ca": "Establir i organitzar seqüències senzilles d’exercici físic orientat al concepte integral de salut i a l’estil de vida actiu, a partir d’una valoració del nivell inicial de condició física i respectar la pròpia identitat corporal.",
+          "aclaraciones_es": [
+            "Organizar secuencias sencillas de ejercicio físico.",
+            "Relacionar el ejercicio físico con el concepto de salud.",
+            "Hacer una valoración del nivel inicial de condición física.",
+            "Vincular los resultados de las pruebas de valoración de la condición física a la salud.",
+            "Adaptar la práctica del ejercicio físico a la propia condición física."
+          ],
+          "aclaraciones_ca": [
+            "Organitzar seqüències senzilles d’exercici físic.",
+            "Relacionar l’exercici físic amb el concepte de salut.",
+            "Fer una valoració del nivell inicial de condició física.",
+            "Vincular els resultats de les proves de valoració de la condició física a la salut.",
+            "Adaptar la pràctica de l’exercici físic a la pròpia condició física."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Incorporar con progresiva autonomía procesos de activación corporal, dosificación del esfuerzo, alimentación saludable, educación postural, relajación e higiene durante la práctica de actividades motrices, interiorizando las rutinas propias de una práctica motriz saludable y responsable.",
+          "text_ca": "Incorporar amb progressiva autonomia processos d’activació corporal, dosificació de l’esforç, alimentació saludable, educació postural, relaxació i higiene durant la pràctica d’activitats motrius, interioritzant les rutines propies d’una pràctica motriu saludable i responsable.",
+          "aclaraciones_es": [
+            "Incorporar con progresiva autonomía procesos de activación corporal y de vuelta a la calma.",
+            "Incorporar con progresiva autonomía procesos de dosificación del esfuerzo.",
+            "Incorporar con progresiva autonomía pautas de alimentación saludable.",
+            "Incorporar con progresiva autonomía criterios sobre educación postural.",
+            "Incorporar con progresiva autonomía técnicas de relajación.",
+            "Incorporar con progresiva autonomía hábitos de higiene durante y después de la práctica de ejercicio físico."
+          ],
+          "aclaraciones_ca": [
+            "Incorporar amb progressiva autonomia processos d’activació corporal i de tornada a la calma.",
+            "Incorporar amb progressiva autonomia processos de dosificació de l’esforç.",
+            "Incorporar amb progressiva autonomia pautes d’alimentació saludable.",
+            "Incorporar amb progressiva autonomia criteris sobre educació postural.",
+            "Incorporar amb progressiva autonomia tècniques de relaxació.",
+            "Incorporar amb progressiva autonomia hàbits d’higiene durant i després de la pràctica d’exercici físic."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Adoptar de manera responsable y con progresiva autonomía medidas generales para la prevención de lesiones antes, durando y después de la práctica de ejercicio físico, aprendiendo a reconocer situaciones de riesgo para actuar preventivamente.",
+          "text_ca": "Adoptar de manera responsable i amb progressiva autonomia mesures generals per a la prevenció de lesions abans, durant i després de la pràctica d’exercici físic, aprenent a reconèixer situacions de risc per tal d’actuar preventivament.",
+          "aclaraciones_es": [
+            "Reconocer situaciones de riesgo y adoptar de forma autónoma medidas para la prevención de lesiones antes, durante y después de la práctica de ejercicio físico."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer situacions de risc i adoptar de manera autònoma mesures per a la prevenció de lesions abans, durant i després de la pràctica d’exercici físic."
+          ]
+        },
+        {
+          "id": "1.4",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Actuar de acuerdo con los protocolos de intervención ante accidentes derivados de la práctica de ejercicio físico, aplicando medidas básicas de primeros auxilios.",
+          "text_ca": "Actuar d’acord amb els protocols d’intervenció davant accidents derivats de la pràctica d’exercici físic, aplicant mesures bàsiques de primers auxilis.",
+          "aclaraciones_es": [
+            "Actuar de acuerdo con los protocolos de intervención ante situaciones d’emergencia o accidentes simulados aplicando medidas de primeros auxilios."
+          ],
+          "aclaraciones_ca": [
+            "Actuar d’acord amb els protocols d’intervenció davant situacions d’emergència o accidents simulats aplicant mesures de primers auxilis."
+          ]
+        },
+        {
+          "id": "1.5",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Analizar y valorar la incidencia que ciertas prácticas y comportamientos tienen en nuestra salud y en la convivencia, valorando su impacto y evitando activamente su reproducción.",
+          "text_ca": "Analitzar i valorar la incidència que certes pràctiques i comportaments tenen en la nostra salut i en la convivència, valorant el seu impacte i evitant activament la seva reproducció.",
+          "aclaraciones_es": [
+            "Analizar y valorar el impacto negativo que ciertos hábitos tienen en nuestra salud y en la convivencia y evitar la reproducción."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar i valorar l’impacte negatiu que certs hàbits tenen en la nostra salut i en la convivència i evitar-ne la reproducció."
+          ]
+        },
+        {
+          "id": "1.6",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Explorar diferentes recursos y aplicaciones digitales reconociendo su potencial, como los riesgos para su uso en el ámbito del ejercicio físico y el deporte.",
+          "text_ca": "Explorar diferents recursos i aplicacions digitals reconeixent el seu potencial, com també els riscs per el seu ús en l’àmbit de l’exercici físic i l’esport.",
+          "aclaraciones_es": [
+            "Explorar y reconocer el potencial y riesgos de diferentes recursos y aplicaciones digitales en el ámbito del ejercicio físico y el deporte."
+          ],
+          "aclaraciones_ca": [
+            "Explorar i reconèixer el potencial i riscs de diferents recursos i aplicacions digitals en l’àmbit de l’exercici físic i l’esport."
+          ]
+        },
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Planificar y autorregular la práctica de ejercicio físico al concepto integral de salud y al estilo de vida activo, según las necesidades e intereses individuales, respetando la propia identidad corporal.",
+          "text_ca": "Planificar i autoregular la pràctica d’exercici físic orientat al concepte integral de salut i a l’estil de vida actiu, segons les necessitats i interessos individuals, respectant la pròpia identitat corporal.",
+          "aclaraciones_es": [
+            "Planificar y autorregular la práctica de ejercicio físico.",
+            "Relacionar el ejercicio físico con el concepto de salud.",
+            "Adaptar la práctica del ejercicio físico a las necesidades e intereses individuales."
+          ],
+          "aclaraciones_ca": [
+            "Planificar i autoregular la pràctica d’exercici físic.",
+            "Relacionar l’exercici físic amb el concepte de salut.",
+            "Adaptar la pràctica de l’exercici físic a les necessitats i interessos individuals."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Incorporar de manera autónoma los procesos de activación corporal, autorregulación y dosificación del esfuerzo, alimentación saludable, educación postural, relajación e higiene durante y después de la práctica de actividades motrices, interiorizando las rutinas propias de una práctica motriz saludable y responsable.",
+          "text_ca": "Incorporar de manera autònoma els processos d’activació corporal, autorregulació i dosificació de l’esforç, alimentació saludable, educació postural, relaxació i higiene durant i després de la pràctica d’activitats motrius, interioritzant les rutines pròpies d’una pràctica motriu saludable i responsable.",
+          "aclaraciones_es": [
+            "Incorporar de manera autónoma los procesos de activación corporal y de vuelta a la calma.",
+            "Incorporar de manera autónoma los procesos dosificación del esfuerzo.",
+            "Incorporar de manera autónoma pautas de alimentación saludable.",
+            "Incorporar de manera autónoma criterios sobre la educación postural.",
+            "Incorporar de manera autónoma técnicas de relajación.",
+            "Incorporar de manera autónoma los hábitos de higiene durante y después de la práctica de ejercicio físico."
+          ],
+          "aclaraciones_ca": [
+            "Incorporar de manera autònoma els processos d’activació corporal i de tornada a la calma.",
+            "Incorporar de manera autònoma els processos dosificació de l’esforç.",
+            "Incorporar de manera autònoma pautes d’alimentació saludable.",
+            "Incorporar de manera autònoma criteris sobre l’educació postural.",
+            "Incorporar de manera autònoma tècniques de relaxació.",
+            "Incorporar de manera autònoma els hàbits d’higiene durant i després de la pràctica d’exercici físic."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Adoptar de manera responsable y autónoma medidas específicas para la prevención de lesiones antes, durante y después de la práctica de ejercicio físico, aprendiendo a reconocer situaciones de riesgo para actuar preventivamente.",
+          "text_ca": "Adoptar de manera responsable i autònoma mesures específiques per a la prevenció de lesions abans, durant i després de la pràctica d’exercici físic, aprenent a reconèixer situacions de risc per actuar prèviament.",
+          "aclaraciones_es": [
+            "Adoptar de manera autónoma medidas para la prevención de lesiones en la práctica de ejercicio físico."
+          ],
+          "aclaraciones_ca": [
+            "Adoptar de manera autònoma mesures per a la prevenció de lesions a la pràctica d’exercici físic."
+          ]
+        },
+        {
+          "id": "1.4",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Actuar de acuerdo con los protocolos de intervención ante situaciones de emergencia o accidentes aplicando medidas específicas de primeros auxilios.",
+          "text_ca": "Actuar d’acord amb els protocols d’intervenció davant situacions d’emergència o accidents aplicant mesures específiques de primers auxilis.",
+          "aclaraciones_es": [
+            "Actuar de acuerdo con los protocolos de intervención ante situaciones de emergencia o accidentes simuladas aplicando medidas de primeros auxilios."
+          ],
+          "aclaraciones_ca": [
+            "Actuar d’acord amb els protocols d’intervenció davant situacions d’emergència o accidents simulades aplicant mesures de primers auxilis."
+          ]
+        },
+        {
+          "id": "1.5",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Adoptar actitudes comprometidas y transformadoras que rechacen los estereotipos sociales asociados al ámbito de lo corporal, al género y a la diversidad sexual, y los comportamientos que pongan en riesgo la salud, contrastando con autonomía e independencia cualquier información en base a los criterios científicos de validez, fiabilidad y objetividad.",
+          "text_ca": "Adoptar actituds compromeses i transformadores que rebutgin els estereotips socials associats a l’àmbit corporal, al gènere i a la diversitat sexual, i els comportaments que posin en risc la salut, contrastant amb autonomia i independència qualsevol informació en base als criteris científics de validesa, fiabilitat i objectivitat.",
+          "aclaraciones_es": [
+            "Adoptar actitudes que rechacen los estereotipos asociados al ámbito corporal, contrastando cualquier información basada en criterios científicos.",
+            "Adoptar actitudes que rechacen los estereotipos asociados al género y a la diversidad sexual, contrastando cualquier información basada en criterios científicos.",
+            "Adoptar actitudes que rechacen los estereotipos asociados a los comportamientos que pongan en riesgo la salud, contrastando cualquier información en base a criterios científicos."
+          ],
+          "aclaraciones_ca": [
+            "Adoptar actituds que rebutgin els estereotips associats a l’àmbit corporal, contrastant qualsevol informació basada en criteris científics.",
+            "Adoptar actituds que rebutgin els estereotips associats al gènere i a la diversitat sexual, contrastant qualsevol informació basada en criteris científics.",
+            "Adoptar actituds que rebutgin els estereotips associats als comportaments que posin en risc la salut, contrastant qualsevol informació basada en criteris científics."
+          ]
+        },
+        {
+          "id": "1.6",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Planificar, desarrollar y compartir con seguridad la práctica física cotidiana manejando recursos y aplicaciones digitales vinculados al ámbito de la actividad física y el deporte.",
+          "text_ca": "Planificar, desenvolupar i compartir amb seguretat la pràctica física quotidiana manejant recursos i aplicacions digitals vinculats a l’àmbit de l’activitat física i l’esport.",
+          "aclaraciones_es": [
+            "Manejar recursos y aplicaciones digitales de forma segura para planificar, desarrollar y compartir la práctica de ejercicio físico."
+          ],
+          "aclaraciones_ca": [
+            "Manejar recursos i aplicacions digitals de forma segura per planificar, desenvolupar i compartir la pràctica d’exercici físic."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Adaptar, con progresiva autonomía en su ejecución, las capacidades físicas perceptivo- motrices y coordinativas, así como las habilidades y destrezas motrices, aplicando procesos de percepción, decisión y ejecución adecuados a la lógica interna y a los objetivos de diferentes situaciones con dificultad variable, para resolver situaciones de carácter motor vinculadas con distintas actividades físicas funcionales, deportivas, expresivas y recreativas, y para consolidar actitudes de superación, crecimiento y resiliencia al enfrentarse a desafíos físicos.",
+      "description_ca": "Adaptar, amb progressiva autonomia en l’execució, les capacitats físiques perceptiu- motrius i coordinatives, com també les habilitats i destreses motrius, aplicant processos de percepció, decisió i execució adequats a la lògica interna i als objectius de diferents situacions amb dificultat variable, per resoldre situacions de caràcter motor vinculades amb diferents activitats físiques funcionals, esportives, expressives i recreatives, i per consolidar actituds de superació, creixement i resiliència en enfrontar-se a desafiaments físics.",
+      "descriptores": [
+        "CPSAA4",
+        "CPSAA5",
+        "CE2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Desarrollar proyectos motores de carácter individual, cooperativo o colaborativo, estableciendo mecanismos para reconducir los procesos de trabajo, incluyendo estrategias de autoevaluación y coevaluación tanto del proceso como del resultado.",
+          "text_ca": "Desenvolupar projectes motors de caràcter individual, cooperatiu o col·laboratiu, incloent mecanismes per reconduir els processos de treball, incloses estratègies d’autoavaluació i coavaluació tant del procés com del resultat.",
+          "aclaraciones_es": [
+            "Desarrollar proyectos motores de carácter individual realizando estrategias de autoevaluación y coevaluación del proceso y del resultado para reconducir los procesos de trabajo.",
+            "Desarrollar proyectos motores de carácter cooperativo o colaborativo realizando estrategias de autoevaluación y coevaluación del proceso y el resultado para reconducir los procesos de trabajo."
+          ],
+          "aclaraciones_ca": [
+            "Desenvolupar projectes motors de caràcter individual realitzant estratègies d’autoavaluació i coavaluació del procés i del resultat per reconduir els processos de treball.",
+            "Desenvolupar projectes motors de caràcter cooperatiu o col·laboratiu realitzant estratègies d’autoavaluació i coavaluació del procés i el resultat per reconduir els processos de treball."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Interpretar y actuar correctamente en contextos motrices variados, aplicando principios básicos de toma de decisiones en situaciones lúdicas, juegos modificados y actividades deportivas a partir de la anticipación, adecuándose a las demandas motrices, a la actuación del compañero y de la persona oponente (si la hubiera) y a la lógica interna en contextos reales o simulados de actuación, reflexionando sobre las soluciones y los resultados obtenidos.",
+          "text_ca": "Interpretar i actuar correctament en contextos motrius variats, aplicant principis bàsics de presa de decisions en situacions lúdiques, jocs modificats i activitats esportives a partir de l’anticipació, adequant-se a les demandes motrius, a l’actuació del company i de la persona oponent (si n’hi ha), i a la lògica interna en contextos reals o simulats d’actuació, reflexionant sobre les solucions i els resultats obtinguts.",
+          "aclaraciones_es": [
+            "Interpretar y actuar correctamente en contextos motrices variados.",
+            "Aplicar los principios básicos de toma de decisión, reflexionando sobre las soluciones."
+          ],
+          "aclaraciones_ca": [
+            "Interpretar i actuar correctament en contexts motrius variats.",
+            "Aplicar els principis bàsics de presa de decisió, reflexionant sobre les solucions."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Evidenciar control y dominio corporal al emplear los componentes cualitativos y cuantitativos de la motricidad de manera eficiente y creativa, haciendo frente a las demandas de resolución de problemas en situaciones motrices transferibles a su espacio vivencial con progresiva autonomía.",
+          "text_ca": "Evidenciar control i domini corporal en emprar els components qualitatius i quantitatius de la motricitat de manera eficient i creativa, afrontant les demandes de resolució de problemes en situacions motrius transferibles al seu espai vivencial amb una autonomia progressiva.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Desarrollar proyectos motores de carácter individual, cooperativo o colaborativo, estableciendo mecanismos para reconducir los procesos de trabajo y asegurar una participación equilibrada, incluyendo estrategias de autoevaluación y coevaluación tanto del proceso como del resultado.",
+          "text_ca": "Desenvolupar projectes motors de caràcter individual, cooperatiu o col·laboratiu, establint mecanismes per reconduir els processos de treball i assegurar una participació equilibrada, incloent estratègies d’autoavaluació i coavaluació tant del procés com del resultat.",
+          "aclaraciones_es": [
+            "Desarrollar proyectos motores de carácter individual, realizando estrategias de autoevaluación y coevaluación del proceso y el resultado para reconducir los procesos de trabajo.",
+            "Desarrollar proyectos motores de carácter cooperativo o colaborativo, asegurando una participación equilibrada y realizando estrategias de autoevaluación y coevaluación del proceso y el resultado para reconducir los procesos de trabajo."
+          ],
+          "aclaraciones_ca": [
+            "Desenvolupar projectes motors de caràcter individual, realitzant estratègies d’autoavaluació i coavaluació del procés i el resultat per reconduir els processos de treball.",
+            "Desenvolupar projectes motors de caràcter cooperatiu o col·laboratiu, assegurant una participació equilibrada i realitzant estratègies d’autoavaluació i coavaluació del procés i el resultat per reconduir els processos de treball."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Mostrar habilidades para la adaptación y la actuación ante situaciones con una elevada incertidumbre, aprovechando eficientemente las propias capacidades y aplicando de manera automática procesos de percepción, decisión y ejecución en contextos reales o simulados de actuación, reflexionando sobre las soluciones y resultados obtenidos.",
+          "text_ca": "Mostrar habilitats per a l’adaptació i l’actuació davant situacions amb una elevada incertesa, aprofitant eficientment les pròpies capacitats i aplicant de manera automàtica processos de percepció, decisió i execució en contextos reals o simulats d’actuació, reflexionant sobre les solucions i resultats obtinguts.",
+          "aclaraciones_es": [
+            "Aplicar los procesos de percepción, decisión y ejecución de manera eficiente ante situaciones con una elevada incertidumbre, a partir de las propias capacidades."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar els processos de percepció, decisió i execució de manera eficient davant situacions amb una elevada incertesa, a partir de les pròpies capacitats."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Evidenciar control y dominio corporal al emplear los componentes cualitativos y cuantitativos de la motricidad de manera eficiente y creativa, resolviendo problemas en todo tipo de situaciones motrices transferibles a su espacio vivencial con autonomía.",
+          "text_ca": "Evidenciar control i domini corporal en emprar els components qualitatius i quantitatius de la motricitat de manera eficient i creativa, resolent problemes en tot tipus de situacions motrius transferibles al seu espai vivencial amb autonomia.",
+          "aclaraciones_es": [
+            "Controlar de manera eficiente y creativa los componentes cualitativos y cuantitativos de la motricidad resolviendo problemas en todo tipo de situaciones motrices transferibles en la vida cotidiana."
+          ],
+          "aclaraciones_ca": [
+            "Controlar de manera eficient i creativa els components qualitatius i quantitatius de la motricitat resolent problemes en tota mena de situacions motrius transferibles a la vida quotidiana."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Compartir espacios de práctica físico-deportiva con independencia de las diferencias culturales, sociales, de género y de habilidad, priorizando el respeto entre los participantes y a las reglas sobre los resultados, adoptando una actitud crítica ante comportamientos antideportivos o contrarios a la convivencia y desarrollando procesos de autorregulación emocional que canalicen el fracaso y el éxito en estas situaciones, para contribuir con progresiva autonomía al entendimiento social y al compromiso ético en los diferentes espacios los que se participa.",
+      "description_ca": "Compartir espais de pràctica físicoesportiva amb independència de les diferències culturals, socials, de gènere i d’habilitat, prioritzant el respecte entre els participants i a les regles sobre els resultats, adoptant una actitud crítica davant comportaments antiesportius o contraris a la convivència i desenvolupant processos d’autoregulació emocional que canalitzin el fracàs i l’èxit en aquestes situacions, per contribuir amb progressiva autonomia a l’enteniment social i al compromís ètic en els diferents espais en què es participa.",
+      "descriptores": [
+        "CCL5",
+        "CPSAA1",
+        "CPSAA3",
+        "CPSAA5",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Practicar una gran variedad de actividades motrices, valorando las implicaciones éticas de las actitudes antideportivas, evitando la competitividad desmedida y actuando con deportividad al asumir los roles de público, participante u otros.",
+          "text_ca": "Practicar una gran varietat d’activitats motrius, valorant les implicacions ètiques de les actituds antiesportives, evitant la competitivitat desmesurada i actuant amb esportivitat en assumir els rols de públic, participant o altres.",
+          "aclaraciones_es": [
+            "Practicar una gran variedad de actividades motrices evitando la competitividad desmesurada y actuando con deportividad en los roles de público, participante u otros.",
+            "Mostrar una actitud crítica ante las conductas antideportivas."
+          ],
+          "aclaraciones_ca": [
+            "Practicar una gran varietat d’activitats motrius evitant la competitivitat desmesurada i actuant amb esportivitat en els rols de públic, participant o altres.",
+            "Mostrar una actitud crítica davant les conductes antiesportives."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Cooperar o colaborar en la práctica de diferentes producciones motrices para alcanzar el logro individual y grupal, participando en la toma de decisiones y asumiendo distintos roles asignados y responsabilidades.",
+          "text_ca": "Cooperar o col·laborar en la pràctica de diferents produccions motrius per aconseguir l’assoliment individual i grupal, participant en la presa de decisions i assumint diferents rols assignats i responsabilitats.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Hacer uso con progresiva autonomía de habilidades sociales, diálogo en la resolución de conflictos y respeto ante la diversidad, ya sea de género, afectivo-sexual, de origen nacional, étnica, socioeconómica o de competencia motriz, mostrando una actitud crítica y un compromiso activo frente a los estereotipos, las actuaciones discriminatorias y cualquier tipo de violencia, haciendo respetar el propio cuerpo y el de los demás.",
+          "text_ca": "Fer ús amb progressiva autonomia d’habilitats socials, diàleg en la resolució de conflictes i respecte davant la diversitat, ja sigui de gènere, afectivosexual, d’origen nacional, ètnica, socioeconòmica o de competència motriu, mostrant una actitud crítica i un compromís actiu enfront dels estereotips, les actuacions discriminatòries i qualsevol mena de violència, fent respectar el propi cos i el dels altres.",
+          "aclaraciones_es": [
+            "Hacer uso de habilidades sociales, diálogo en la resolución de conflictos y respeto ante la diversidad de género, afectivosexual, origen nacional, cultural, socioeconómica o de competencia motriz.",
+            "Mostrar una actitud crítica frente los estereotipos, las actuaciones discriminatorias y cualquier tipo de violencia."
+          ],
+          "aclaraciones_ca": [
+            "Fer ús d’habilitats socials, diàleg en la resolució de conflictes i respecte davant la diversitat de gènere, afectivosexual, origen nacional, cultural, socioeconòmica o de competència motriu.",
+            "Mostrar una actitud crítica enfront els estereotips, les actuacions discriminatòries i qualsevol mena de violència."
+          ]
+        },
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Practicar y participar activamente asumiendo responsabilidades en la organización de una gran variedad de actividades motrices, valorando las implicaciones éticas de las prácticas antideportivas, evitando la competitividad desmedida y actuando con deportividad al asumir los roles de público, participante u otros.",
+          "text_ca": "Practicar i participar activament assumint responsabilitats en l’organització d’una gran varietat d’activitats motrius, valorant les implicacions ètiques de les pràctiques antiesportives, evitant la competitivitat desmesurada i actuant amb esportivitat en assumir els rols de públic, participant o altres.",
+          "aclaraciones_es": [
+            "Practicar una gran variedad de actividades motrices evitando la competitividad desmedida y actuando con deportividad en los roles de público, participante u otros.",
+            "Mostrar una actitud crítica ante las conductas antideportivas.",
+            "Participar en la organización de actividades motrices de forma activa y responsable."
+          ],
+          "aclaraciones_ca": [
+            "Practicar una gran varietat d’activitats motrius evitant la competitivitat desmesurada i actuant amb esportivitat en els rols de públic, participant o altres.",
+            "Mostrar una actitud crítica davant les conductes antiesportives.",
+            "Participar en l’organització d’activitats motrius de forma activa i responsable."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Cooperar o colaborar en la práctica de diferentes producciones motrices y proyectos para alcanzar el logro individual y grupal, participando con autonomía en la toma de decisiones vinculadas a la asignación de roles, la gestión del tiempo de práctica y la optimización del resultado final.",
+          "text_ca": "Cooperar o col·laborar en la pràctica de diferents produccions motrius i projectes per aconseguir l’assoliment individual i grupal, participant amb autonomia en la presa de decisions vinculades a l’assignació de rols, la gestió del temps de pràctica i l’optimització del resultat final.",
+          "aclaraciones_es": [
+            "Cooperar en la práctica de diferentes producciones motrices y proyectos para conseguir el logro individual y grupal participante en la toma de decisiones vinculadas a la asignación de roles, la gestión del tiempo de práctica y la optimización del resultado final."
+          ],
+          "aclaraciones_ca": [
+            "Cooperar en la pràctica de diferents produccions motrius i projectes per aconseguir l’assoliment individual i grupal participant en la presa de decisions vinculades a l’assignació de rols, la gestió del temps de pràctica i l’optimització del resultat final."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Relacionarse y entenderse con el resto de participantes durante el desarrollo de varias prácticas motrices con autonomía y haciendo uso efectivo de habilidades sociales de diálogo en la resolución de conflictos y respeto ante la diversidad, ya sea de género, afectivo-sexual, de origen nacional, étnica socio-económica o de competencia motriz, y posicionándose activamente frente a los estereotipos, las actuaciones discriminatorias y cualquier tipo de violencia, haciendo respetar el propio cuerpo y el de los demás.",
+          "text_ca": "Relacionar-se i entendre’s amb la resta de participants durant el desenvolupament de diverses pràctiques motrius amb autonomia i fent ús efectiu d’habilitats socials de diàleg en la resolució de conflictes i respecte davant la diversitat, ja sigui de gènere, afectivosexual, d’origen nacional, cultural socioeconòmica o de competència motriu, i posicionant-se activament enfront dels estereotips, les actuacions discriminatòries i qualsevol tipus de violència, fent respectar el propi cos i el dels altres.",
+          "aclaraciones_es": [
+            "Entenderse con el resto de los participantes durante el desarrollo de varias prácticas motrices haciendo uso de habilidades sociales de diálogo en la resolución de conflictos y de respeto ante la diversidad.",
+            "Posicionarse activamente frente a los estereotipos."
+          ],
+          "aclaraciones_ca": [
+            "Entendre’s amb la resta de participants durant el desenvolupament de diverses pràctiques motrius fent ús d’habilitats socials de diàleg en la resolució de conflictes i de respecte davant la diversitat.",
+            "Posicionar-se activament enfront dels estereotips."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Practicar, analizar y valorar distintas manifestaciones de la cultura motriz aprovechando las posibilidades y recursos expresivos que ofrecen el cuerpo y el movimiento y profundizando en las consecuencias del deporte como fenómeno social, analizando críticamente sus manifestaciones desde la perspectiva de género y desde los intereses económico-políticos que lo rodean, para alcanzar una visión más realista, contextualizada y justa de la motricidad en el marco de las sociedades actuales.",
+      "description_ca": "Practicar, analitzar i valorar diferents manifestacions de la cultura motriu aprofitant les possibilitats i els recursos expressius que ofereixen el cos i el moviment, i aprofundint en les conseqüències de l’esport com a fenomen social, analitzant críticament les seves manifestacions des d’una perspectiva de gènere i des dels interessos econòmic-polítics que l’envolten, per tal d’assolir una visió més realista, contextualitzada i justa de la motricitat en el marc de les societats actuals.",
+      "descriptores": [
+        "CC2",
+        "CC3",
+        "CCEC1",
+        "CCEC2",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Gestionar la participación en juegos motores y otras manifestaciones artístico-expresivas vinculadas tanto a la cultura propia como con otras, favoreciendo su conservación y valorando sus orígenes, evolución e influencia en las sociedades contemporáneas.",
+          "text_ca": "Gestionar la participació en jocs motors i altres manifestacions artístic-expressives vinculades tant a la cultura pròpia com a d’altres, afavorint la seva conservació i valorant els seus orígens, evolució i influència en les societats contemporànies.",
+          "aclaraciones_es": [
+            "Participar en juegos motores y otras manifestaciones artísticas y expresivas vinculadas tanto a la cultura propia como otros.",
+            "Favorecer la conservación de los juegos motores y otras manifestaciones artísticas y expresivas a partir del conocimiento de su origen, evolución e influencia a la sociedad."
+          ],
+          "aclaraciones_ca": [
+            "Participar en jocs motors i altres manifestacions artístiques i expressives vinculades tant a la cultura pròpia com a d’altres.",
+            "Afavorir la conservació dels jocs motors i altres manifestacions artístiques i expressives a partir del coneixement del seu origen, evolució i influència a la societat."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Analizar objetivamente las diferentes actividades y modalidades deportivas según sus características y requerimientos, evitando los posibles estereotipos de género o capacidad o los comportamientos sexistas vinculados a dichas manifestaciones.",
+          "text_ca": "Analitzar objectivament les diferents activitats i modalitats esportives segons les seves característiques i requeriments, evitant els possibles estereotips de gènere o capacitat o els comportaments sexistes vinculats a dites manifestacions.",
+          "aclaraciones_es": [
+            "Analizar las diferentes actividades y modalidades deportivas según sus características y requerimientos.",
+            "Evitar los posibles estereotipos de género o capacidad y los comportamientos sexistas vinculados a las diferentes actividades y modalidades deportivas."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar les diferents activitats i modalitats esportives segons les seves característiques i requeriments.",
+            "Evitar els possibles estereotips de gènere o capacitat i els comportaments sexistes vinculats a les diferents activitats i modalitats esportives."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Participar activamente en la creación y representación de composiciones de expresión corporal individuales o colectivas con y sin base musical, utilizando intencionadamente y con progresiva autonomía el cuerpo como herramienta de expresión y comunicación a través de varias técnicas expresivas.",
+          "text_ca": "Participar activament en la creació i representació de composicions d’expressió corporal individuals o col·lectives amb i sense base musical, utilitzant intencionadament i amb progressiva autonomia el cos com a eina d’expressió i comunicació a través de diverses tècniques expressives.",
+          "aclaraciones_es": [
+            "Crear y representar composiciones individuales o colectivas con y sin base musical.",
+            "Utilizar el cuerpo como herramienta de expresión y comunicación a través de varias técnicas expresivas."
+          ],
+          "aclaraciones_ca": [
+            "Crear i representar composicions individuals o col·lectives amb i sense base musical.",
+            "Utilitzar el cos com a eina d’expressió i comunicació a través de diverses tècniques expressives."
+          ]
+        },
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Comprender y practicar varias modalidades relacionadas con la cultura propia, la tradicional o las que proceden otros lugares del mundo, identificando y contextualizando la influencia social del deporte en las sociedades actuales, valorando sus orígenes, evolución, distintas manifestaciones e intereses económico-políticos.",
+          "text_ca": "Comprendre i practicar diverses modalitats relacionades amb la cultura pròpia, la tradicional o les que procedeixen d’altres llocs del món, identificant i contextualitzant la influència social de l’esport en les societats actuals, valorant els seus orígens, l’evolució i les seves diferents manifestacions i interessos econòmics i polítics.",
+          "aclaraciones_es": [
+            "Practicar varias manifestaciones de la cultura motriz propia, la tradicional o las que proceden otros lugares del mundo.",
+            "Identificar la influencia social del deporte en las sociedades actuales."
+          ],
+          "aclaraciones_ca": [
+            "Practicar diverses manifestacions de la cultura motriu pròpia, la tradicional o les que procedeixen d’altres llocs del món.",
+            "Identificar la influència social de l’esport en les societats actuals."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Adoptar actitudes comprometidas y conscientes sobre los distintos estereotipos de género y comportamientos sexistas continúan produciéndose en algunos contextos de la motricidad, identificando los factores que contribuyen a su mantenimiento y ayudando a difundir referentes de distintos géneros en el ámbito físico-deportivo.",
+          "text_ca": "Adoptar actituds compromeses i conscients sobre els diferents estereotips de gènere i comportaments sexistes que es continuen produint en alguns contexts de la motricitat, identificant els factors que contribueixen al seu manteniment i ajudant a difondre referents de diferents gèneres en l’àmbit fisicoesportiu.",
+          "aclaraciones_es": [
+            "Identificar estereotipos de género y comportamientos sexistas en el ámbito físico- deportivo.",
+            "Mostrar actitudes comprometidas y conscientes sobre los estereotipos de género y comportamientos sexistas que continúan produciéndose en algunos contextos de la motricidad, ayudando a difundir referentes de todos los géneros en el ámbito físico- deportivo."
+          ],
+          "aclaraciones_ca": [
+            "Identificar estereotips de gènere i comportaments sexistes en l’àmbit fisicoesportiu.",
+            "Mostrar actituds compromeses i conscients sobre els estereotips de gènere i comportaments sexistes que es continuen produint en alguns contexts de la motricitat, ajudant a difondre referents de tots els gèneres en l’àmbit fisicoesportiu."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Crear y representar composiciones individuales o colectivas con y sin base musical y de manera coordinada, utilizando intencionalmente y con autonomía el cuerpo y el movimiento como herramienta de expresión y comunicación a través de técnicas expresivas específicas, y ayudando a difundir y compartir esas prácticas culturales entre compañeros u otros miembros de la comunidad.",
+          "text_ca": "Crear i representar composicions individuals o col·lectives amb i sense base musical i de manera coordinada, utilitzant intencionalment i amb autonomia el cos i el moviment com a eina d’expressió i comunicació a través de tècniques expressives específiques, i ajudant a difondre i compartir aquestes pràctiques culturals entre companys o altres membres de la comunitat.",
+          "aclaraciones_es": [
+            "Crear y representar composiciones individuales o colectivas con y sin base musical y de manera coordinada.",
+            "Utilizar el cuerpo y el movimiento como herramienta de expresión y comunicación a través de técnicas expresivas específicas.",
+            "Difundir y compartir técnicas expresivas específicas entre compañeros u otros miembros de la comunidad."
+          ],
+          "aclaraciones_ca": [
+            "Crear i representar composicions individuals o col·lectives amb i sense base musical i de manera coordinada.",
+            "Utilitzar el cos i el moviment com a eina d’expressió i comunicació a través de tècniques expressives específiques.",
+            "Difondre i compartir tècniques expressives específiques entre companys o altres membres de la comunitat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Adoptar un estilo de vida sostenible y ecosocialmente responsable aplicando medidas de seguridad individuales y colectivas en la práctica físico-deportiva según el entorno y desarrollando colaborativa y cooperativamente acciones de servicio a la comunidad vinculadas a la actividad física y al deporte, para contribuir activamente a la conservación del medio natural y urbano.",
+      "description_ca": "Adoptar un estil de vida sostenible i ecosocialment responsable aplicant mesures de seguretat individuals i col·lectives en la pràctica físicoesportiva segons l’entorn i desenvolupant de manera col·laborativa i cooperativa accions de servei a la comunitat vinculades a l’activitat física i a l’esport, per contribuir activament a la conservació del medi natural i urbà.",
+      "descriptores": [
+        "STEM5",
+        "CC4",
+        "CE1",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Participar en actividades físico-deportivas en entornos naturales, terrestres o acuáticos, disfrutando del entorno de manera sostenible, minimizando el impacto ambiental que estas puedan producir y siendo conscientes de su huella ecológica.",
+          "text_ca": "Participar en activitats fisicoesportives en entorns naturals, terrestres o aquàtics, gaudint de l’entorn de manera sostenible, minimitzant l’impacte ambiental que aquestes puguin produir i sent conscients de la seva petjada ecològica.",
+          "aclaraciones_es": [
+            "Participar en actividades físico-deportivas en entornos urbanos y naturales, terrestres o acuáticos.",
+            "Minimizar el impacto de las actividades físico-deportivas al entorno natural, mostrando conciencia de su huella ecológica."
+          ],
+          "aclaraciones_ca": [
+            "Participar en activitats fisicoesportives en entorns urbans i naturals, terrestres o aquàtics.",
+            "Minimitzar l’impacte de les activitats fisicoesportives a l’entorn natural, mostrant consciència de la seva petjada ecològica."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Practicar actividades físico-deportivas en el medio natural y urbano, aplicando normas de seguridad individuales y colectivas.",
+          "text_ca": "Practicar activitats fisicoesportives en el medi natural i urbà, aplicant normes de seguretat individuals i col·lectives.",
+          "aclaraciones_es": [
+            "Aplicar las normas de seguridad individuales y colectivas a las actividades físicoesportives practicadas en el medio natural y urbano."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar les normes de seguretat individuals i col·lectives a les activitats físicoesportives practicades en el medi natural i urbà."
+          ]
+        },
+        {
+          "id": "5.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Participar en actividades físico-deportivas en entornos naturales terrestres o acuáticos, disfrutando del entorno de manera sostenible, minimizando el impacto ambiental que estas puedan producir, siendo conscientes de su huella ecológica, y desarrollando actuaciones intencionadas dirigidas a la conservación y mejora de las condiciones de los espacios en los cuales se desarrollen.",
+          "text_ca": "Participar en activitats físicoesportives en entorns naturals terrestres o aquàtics, gaudint de l’entorn de manera sostenible, minimitzant l’impacte ambiental que puguin produir, sent conscients de la seva petjada ecològica, i desenvolupant actuacions intencionades dirigides a la conservació i millora de les condicions dels espais en els quals es desenvolupin.",
+          "aclaraciones_es": [
+            "Participar en actividades físico-deportivas en entornos urbanos y naturales, terrestres o acuáticos.",
+            "Minimizar el impacto de las actividades físico-deportivas en el entorno natural, mostrando conciencia de su huella ecológica.",
+            "Desarrollar actuaciones dirigidas a la conservación y mejora de las condiciones de los espacios naturales o urbanos donde desarrollen actividades físico-deportivas."
+          ],
+          "aclaraciones_ca": [
+            "Participar en activitats fisicoesportives en entorns urbans i naturals, terrestres o aquàtics.",
+            "Minimitzar l’impacte de les activitats fisicoesportives a l’entorn natural, mostrant consciència de la seva petjada ecològica.",
+            "Desenvolupar actuacions dirigides a la conservació i millora de les condicions dels espais naturals o urbans on desenvolupin activitats fisicoesportives."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Diseñar y organizar actividades físico-deportivas en el medio natural y urbano, asumiendo responsabilidades y aplicando normas de seguridad individuales y colectivas.",
+          "text_ca": "Dissenyar i organitzar activitats físicoesportives en el medi natural i urbà, assumint responsabilitats i aplicant normes de seguretat individuals i col·lectives.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        }
+      ]
+    }
+  ]
+}

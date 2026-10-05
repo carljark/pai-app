@@ -16,6 +16,7 @@ import {
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
 import { TranslationBannerComponent } from '../translation-banner/translation-banner.component';
+import { CourseLevelKeyPipe } from '../../../projects/pipes/course-level-key.pipe';
 import {
   AppSelectComponent,
   SelectOption,
@@ -30,6 +31,7 @@ import {
     MarkdownComponent,
     AppSelectComponent,
     TranslationBannerComponent,
+    CourseLevelKeyPipe,
   ],
   templateUrl: './taller-view.component.html',
 })

@@ -1,0 +1,602 @@
+{
+  "code": "taller_finanzas",
+  "name_es": "Taller de Finanzas y Consumo Responsable",
+  "name_ca": "Taller de Finances i Consum Responsable",
+  "cursos": {
+    "3º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Tomar conciencia de que las relaciones económicas entre los hogares, las empresas y las administraciones públicas generan flujos de renta que responden a sus necesidades o capacidades de financiación, reconociendo que estos flujos pueden ser prestados o invertidos en el tiempo, valorando la idoneidad de realizar una adecuada planificación y estudiando las diversas formas de dinero, sus usos y su gestión por parte de los intermediarios financieros, comprendiendo que se deben realizar dentro de un marco ético.",
+      "description_ca": "Prendre consciència que les relacions econòmiques entre les llars, les empreses i les administracions públiques generen fluxos de renda que responen a les seves necessitats o capacitats de finançament, reconeixent que aquests fluxos poden ser prestats o invertits en el temps, valorant la idoneïtat de realitzar-ne una adequada planificació i estudiant les diverses formes de diners, els seus usos i la seva gestió per part dels intermediaris financers, comprenent que s’ha de realitzar dins d’un marc ètic.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "CD1",
+        "CPSAA2",
+        "CPSAA4",
+        "CC3",
+        "CC4",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Explicar y representar las relaciones económicas entre hogares, empresas y administraciones públicas en el entorno próximo.",
+          "text_ca": "Explicar i representar les relacions econòmiques entre llars, empreses i administracions públiques en l’entorn pròxim.",
+          "aclaraciones_es": [
+            "Explicar los agentes económicos principales y sus funciones.",
+            "Describir las relaciones económicas que se establecen entre los hogares, las empresas y las administraciones públicas en el entorno próximo, destacando sus características principales.",
+            "Representar gráfica o simbólicamente estas conexiones, utilizando esquemas, mapas conceptuales u otras herramientas visuales que permitan analizar su dinámica.",
+            "Interpretar estas relaciones económicas, identificando sus interacciones y sus implicaciones en la economía local."
+          ],
+          "aclaraciones_ca": [
+            "Explicar els agents econòmics principals i les seves funcions.",
+            "Descriure les relacions econòmiques que s’estableixen entre les llars, les empreses i les administracions públiques en l’entorn pròxim, destacant-ne les característiques principals.",
+            "Representar gràficament o simbòlicament aquestes connexions, utilitzant esquemes, mapes conceptuals o altres eines visuals que permetin analitzar-ne la dinàmica.",
+            "Interpretar aquestes relacions econòmiques, identificant-ne les interaccions i les seves implicacions en l’economia local."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Describir el dinero y sus diferentes formas, representando sus usos en la satisfacción de las necesidades personales y valorando el papel del sistema financiero como canal del elevado número de transacciones económicas a nivel global.",
+          "text_ca": "Descriure els diners i les seves diferents formes, representant els seus usos en la satisfacció de les necessitats personals i valorant el paper del sistema financer com a canal de l’elevat nombre de transaccions econòmiques a nivell global.",
+          "aclaraciones_es": [
+            "Identificar las diferentes formas que puede adoptar el dinero, analizando sus características y funciones en el contexto económico.",
+            "Explicar los usos del dinero en la satisfacción de las necesidades personales, relacionándolos con situaciones de la vida cotidiana.",
+            "Representar gráficamente o mediante esquemas los flujos económicos vinculados al uso del dinero, destacando su relevancia.",
+            "Evaluar el papel del sistema financiero, argumentando su importancia como mecanismo que canaliza y facilita un elevado número de transacciones económicas a escala global."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les diferents formes que poden adoptar els diners, analitzant-ne les característiques i funcions en el context econòmic.",
+            "Explicar els usos dels diners en la satisfacció de les necessitats personals, relacionant-los amb situacions de la vida quotidiana.",
+            "Representar gràficament o mitjançant esquemes els fluxos econòmics vinculats a l’ús dels diners, destacant-ne la rellevància.",
+            "Avaluar el paper del sistema financer, argumentant-ne la importància com a mecanisme que canalitza i facilita un elevat nombre de transaccions econòmiques a escala global."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Conocer el proceso de emisión del dinero, distinguiendo dinero en efectivo de dinero en depósitos, así como los medios más habituales de pago y los diferentes tipos de tarjetas bancarias.",
+          "text_ca": "Conèixer el procés d’emissió dels diners, distingint diners en efectiu de diners en dipòsits, com també els mitjans més habituals de pagament i els diferents tipus de targetes bancàries.",
+          "aclaraciones_es": [
+            "Comprender el proceso de creación y emisión del dinero dentro de un sistema económico, diferenciando el dinero en efectivo del dinero en depósitos bancarios.",
+            "Identificar los medios más habituales de pago y sus características.",
+            "Conocer los diferentes tipos de tarjetas bancarias y entender sus funciones y diferencias."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el procés de creació i emissió dels diners dins d’un sistema econòmic, diferenciant els diners en efectiu dels diners en dipòsits bancaris.",
+            "Identificar els mitjans més habituals de pagament i les seves característiques.",
+            "Conèixer els diferents tipus de targetes bancàries i entendre les seves funcions i diferències."
+          ]
+        },
+        {
+          "id": "1.4",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Reflexionar sobre las diversas formas de utilización del dinero, expresando una actitud positiva hacia el ahorro, considerándolo como medio para invertir y conseguir diferentes objetivos personales.",
+          "text_ca": "Reflexionar sobre les diverses formes d’utilització dels diners, expressant una actitud positiva cap a l’estalvi, considerant-lo com a mitjà per invertir i aconseguir diferents objectius personals.",
+          "aclaraciones_es": [
+            "Reflexionar sobre el uso del dinero de manera responsable y eficaz.",
+            "Desarrollar una actitud positiva hacia el ahorro como herramienta para conseguir objetivos personales.",
+            "Comprender las diferentes formas de invertir el dinero y las opciones que existen para maximizar los ahorros.",
+            "Identificar las ventajas del ahorro a largo plazo y su efecto en la consecución de metas personales y financieras."
+          ],
+          "aclaraciones_ca": [
+            "Reflexionar sobre l’ús dels diners de manera responsable i eficaç.",
+            "Desenvolupar una actitud positiva cap a l’estalvi com a eina per aconseguir objectius personals.",
+            "Comprendre les diferents formes d’invertir els diners i les opcions que existeixen per maximitzar els estalvis.",
+            "Identificar els avantatges de l’estalvi a llarg termini i el seu efecte en la consecució de metes personals i financeres."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Identificar el concepto de tipo de interés, distinguiendo su papel en las leyes de capitalización, llevando a cabo cálculos que conduzcan a establecer los resultados de operaciones básicas de préstamo, inversión y seguro, conociendo la naturaleza y finalidad de las corrientes monetarias que generan.",
+      "description_ca": "Identificar el concepte de tipus d’interès, distingint el seu paper en les lleis de capitalització, duent a terme càlculs que condueixin a establir els resultats d’operacions bàsiques de préstec, inversió i assegurança, coneixent la naturalesa i finalitat dels corrents monetaris que generen.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "CP1",
+        "STEM1",
+        "STEM2",
+        "STEM4",
+        "CD1",
+        "CD2",
+        "CD3",
+        "CD5",
+        "CPSAA4",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Diferenciar entre los principales productos financieros que ofrecen las entidades financieras a los particulares, razonar por qué se pagan o reciben intereses y valorar las ventajas e inconvenientes para cada una de las alternativas, además de la oportunidad de usarlos con garantía y responsabilidad.",
+          "text_ca": "Diferenciar entre els principals productes financers que ofereixen les entitats financeres als particulars, raonar perquè es paguen o reben interessos i valorar els avantatges i inconvenients per a cadascuna de les alternatives, a més de l’oportunitat d’usar-los amb garantia i responsabilitat.",
+          "aclaraciones_es": [
+            "Diferenciar los productos financieros más comunes que ofrecen las entidades financieras, como las cuentas corrientes, los depósitos a plazo, los créditos y las tarjetas de crédito.",
+            "Comprender por qué estos productos implican pago o recepción de intereses, y cómo los intereses afectan a las finanzas personales.",
+            "Analizar las ventajas y desventajas de cada uno de estos productos para ayudar a los alumnos a tomar decisiones informadas y responsables.",
+            "Reflexionar sobre el uso de estos productos financieros con responsabilidad, valorando la seguridad y las garantías que ofrecen las entidades financieras."
+          ],
+          "aclaraciones_ca": [
+            "Diferenciar els productes financers més comuns que ofereixen les entitats financeres, com els comptes corrents, els dipòsits a termini, els crèdits i les targetes de crèdit.",
+            "Comprendre perquè aquests productes impliquen pagament o recepció d’interessos, i com els interessos afecten les finances personals.",
+            "Analitzar els avantatges i desavantatges de cadascun d’aquests productes per ajudar els alumnes a prendre decisions informades i responsables.",
+            "Reflexionar sobre l’ús d’aquests productes financers amb responsabilitat, valorant la seguretat i les garanties que ofereixen les entitats financeres."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Comprender las causas por las que se originan los intereses y cómo se generan en función de la ley de capitalización empleada, resolviendo, mediante actividades de taller, problemas reales de operaciones de préstamo e inversión, reconociendo los elementos implicados.",
+          "text_ca": "Comprendre les causes per les quals s’originen els interessos i com es generen en funció de la llei de capitalització emprada, resolent, mitjançant activitats de taller, problemes reals d’operacions de préstec i inversió, reconeixent els elements implicats.",
+          "aclaraciones_es": [
+            "Entender por qué los bancos y otras entidades financieras pagan o cobran intereses, como consecuencia de la oferta y la demanda de dinero, el riesgo, el tiempo y la inflación.",
+            "Aplicar la ley de la capitalización (intereses simples y compuestos) en el cálculo de los intereses generados en una operación financiera.",
+            "Resolver casos prácticos sencillos sobre cálculos de los intereses y la comprensión de los elementos implicados en esas operaciones."
+          ],
+          "aclaraciones_ca": [
+            "Entendre perquè els bancs i altres entitats financeres paguen o cobren interessos, com a conseqüència de l’oferta i la demanda de diners, el risc, el temps i la inflació.",
+            "Aplicar la llei de la capitalització (interessos simples i composts) en el càlcul dels interessos generats en una operació financera.",
+            "Resoldre casos pràctics senzills sobre càlculs dels interessos i la comprensió dels elements implicats en aquestes operacions."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Describir la inflación e identificar cómo afecta a los productos de ahorro y préstamo, en un entorno próximo, y valorar sus consecuencias económicas y sociales.",
+          "text_ca": "Descriure la inflació i identificar com afecten els productes d’estalvi i préstec, en un entorn pròxim, i valorar-ne les conseqüències econòmiques i socials.",
+          "aclaraciones_es": [
+            "Entender la inflación y sus efectos en la economía y productos de ahorro y préstamo.",
+            "Identificar los efectos de la inflación sobre productos financieros.",
+            "Valorar las consecuencias económicas y sociales de la inflación.",
+            "Proponer estrategias individuales y colectivas para protegerse de la inflación."
+          ],
+          "aclaraciones_ca": [
+            "Entendre la inflació i els seus efectes en l’economia i productes d’estalvi i préstec.",
+            "Identificar els efectes de la inflació sobre productes financers.",
+            "Valorar les conseqüències econòmiques i socials de la inflació.",
+            "Proposar estratègies individuals i col·lectives per protegir-se de la inflació."
+          ]
+        },
+        {
+          "id": "2.4",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Conocer el concepto de mutualización, describiendo mediante casos prácticos en el aula su funcionamiento y utilidad, reconociendo el papel de las entidades aseguradoras como intermediarios financieros.",
+          "text_ca": "Conèixer el concepte de mutualització, descrivint mitjançant casos pràctics a l’aula el seu funcionament i utilitat, reconeixent el paper de les entitats asseguradores com a intermediaris financers.",
+          "aclaraciones_es": [
+            "Conocer el concepto de mutualización, así como su funcionamiento y aplicación al contexto de los seguros.",
+            "Describir el proceso de la mutualización intermediando casos prácticos.",
+            "Reconocer el papel de las entidades aseguradoras como intermediarios entre los asegurados en la gestión de los riesgos."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer el concepte de mutualització, com també el seu funcionament i aplicació al context de les assegurances.",
+            "Descriure el procés de la mutualització mitjançant casos pràctics.",
+            "Reconèixer el paper de les entitats asseguradores com a intermediaris entre els assegurats en la gestió dels riscs."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Conocer el paradigma del consumo responsable o consciente, identificando los beneficios personales y valorando las consecuencias que tiene para la sociedad, el medio ambiente y las relaciones laborales una ciudadanía preocupada por sus actos de compra, siendo conscientes de la necesidad de tomar decisiones racionales y de mostrar comportamientos de acuerdo con una comprensión adecuada de los mensajes publicitarios, analizando la creación de valor añadido de la actividad productiva y siendo críticos con la obsolescencia programada.",
+      "description_ca": "Conèixer el paradigma del consum responsable o conscient, identificant els beneficis personals i valorant les conseqüències que té per a la societat, el medi ambient i les relacions laborals una ciutadania preocupada pels seus actes de compra, sent conscients de la necessitat de prendre decisions racionals i de mostrar comportaments d’acord amb una comprensió adequada dels missatges publicitaris, analitzant la creació de valor afegit de l’activitat productiva i sent crítics amb l’obsolescència programada.",
+      "descriptores": [
+        "CCL1",
+        "CCL3",
+        "CP3",
+        "CD1",
+        "CD3",
+        "CPSAA3",
+        "CPSAA5",
+        "CC3",
+        "CC4",
+        "CE1",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Valorar positivamente el consumo responsable o consciente como una herramienta para cortar el cambio climático, la desigualdad social y combatir la precariedad del mercado laboral, promoviendo actitudes socialmente responsables en el entorno próximo.",
+          "text_ca": "Valorar positivament el consum responsable o conscient com una eina per tallar el canvi climàtic, la desigualtat social i combatre la precarietat del mercat laboral, promovent actituds socialment responsables en l’entorn pròxim.",
+          "aclaraciones_es": [
+            "Valorar el consumo responsable como herramienta para el cambio social.",
+            "Promover actitudes responsables y conscientes en sus decisiones de consumo.",
+            "Fomentar el compromiso con la comunidad y con sus acciones individuales."
+          ],
+          "aclaraciones_ca": [
+            "Valorar el consum responsable com a eina per al canvi social.",
+            "Promoure actituds responsables i conscients en les seves decisions de consum.",
+            "Fomentar el compromís amb la comunitat i amb les seves accions individuals."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Interiorizar la responsabilidad, como personas individuales, a la hora de cuidar y mejorar el entorno y la calidad de vida de la colectividad, así como la responsabilidad de los poderes públicos de dictar normas para que la economía sea sostenible, solidaria y respetuosa con los derechos humanos.",
+          "text_ca": "Interioritzar la responsabilitat, com a persones individuals, a l’hora de cuidar i millorar l’entorn i la qualitat de vida de la col·lectivitat, com també la responsabilitat dels poders públics de dictar normes perquè l’economia sigui sostenible, solidària i respectuosa amb els drets humans.",
+          "aclaraciones_es": [
+            "Comprender la responsabilidad individual y colectiva en el cuidado del entorno y la mejora de la calidad de vida.",
+            "Reflexionar sobre el papel de los poderes públicos a la hora de establecer leyes y normas para garantizar una economía sostenible, solidaria y respetuosa con los derechos humanos.",
+            "Promover actitudes responsables y solidarias que incidan positivamente en la comunidad."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre la responsabilitat individual i col·lectiva en la cura de l’entorn i la millora de la qualitat de vida.",
+            "Reflexionar sobre el paper dels poders públics a l’hora d’establir lleis i normes per garantir una economia sostenible, solidària i respectuosa amb els drets humans.",
+            "Promoure actituds responsables i solidàries que incideixin positivament en la comunitat."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Entender el consumo como un acto consciente, premeditado y crítico sujeto a la influencia de la publicidad, ante el que tenemos que valorar la austeridad como alternativa al derroche, los impactos sobre la propia salud y las condiciones sociales y ecológicas en las que ha sido elaborado un producto o un servicio.",
+          "text_ca": "Entendre el consum com un acte conscient, premeditat i crític subjecte a la influència de la publicitat, davant el qual hem de valorar l’austeritat com a alternativa al malbaratament, els impactes sobre la pròpia salut i les condicions socials i ecològiques en les quals ha estat elaborat un producte o un servei.",
+          "aclaraciones_es": [
+            "Concienciarse de que el consumo puede ser influido por elementos externos.",
+            "Evaluar el impacto social, ecológico y personal del consumo.",
+            "Comprender la importancia de la austeridad como una opción para evitar el derroche, contribuyendo a una sociedad más responsable y sostenible."
+          ],
+          "aclaraciones_ca": [
+            "Conscienciar-se que el consum pot ser influenciat per elements externs.",
+            "Avaluar l’impacte social, ecològic i personal del consum.",
+            "Comprendre la importància de l’austeritat com una opció per evitar el malbaratament, tot contribuint a una societat més responsable i sostenible."
+          ]
+        },
+        {
+          "id": "3.4",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Gestionar problemas vinculados al entorno real proponiendo soluciones sostenibles mediante actuaciones individuales o colectivas que se traduzcan en mejoras para la sociedad.",
+          "text_ca": "Gestionar problemes vinculats a l’entorn real proposant solucions sostenibles mitjançant actuacions individuals o col·lectives que es tradueixin en millores per a la societat.",
+          "aclaraciones_es": [
+            "Identificar problemas sociales, económicos y ambientales relacionados con su entorno más próximo, analizando las causas y los efectos que estos problemas tienen en la comunidad.",
+            "Proponer soluciones sostenibles.",
+            "Trabajar, tanto de manera individual como colectiva, en iniciativas que puedan ser aplicadas al entorno local o global para mejorar las condiciones sociales y ambientales."
+          ],
+          "aclaraciones_ca": [
+            "Identificar problemes socials, econòmics i ambientals relacionats amb el seu entorn més proper, tot analitzant les causes i els efectes que aquests problemes tenen en la comunitat.",
+            "Proposar solucions sostenibles.",
+            "Treballar, tant de manera individual com col·lectiva, en iniciatives que puguin ser aplicades a l’entorn local o global per millorar les condicions socials i ambientals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Conocer qué es un presupuesto personal, planificándolo y llevando a cabo una gestión efectiva de este, identificando y clasificando gastos e ingresos, así como planteando el lugar que el ahorro debe ostentar y siendo capaces de leer y entender los documentos que actúan de soporte de ingresos y gastos, como el contrato de trabajo, la nómina, las facturas y recibos de compra o préstamo, tiques, los contratos de alquiler, de seguro y las hojas de reclamación, valorando, además, las opciones reservadas para capitalizar los ahorros a través de activos financieros, una vez analizadas y comparadas sus características de riesgo, rentabilidad y liquidez, en un entorno de inversión diversificado.",
+      "description_ca": "Conèixer què és un pressupost personal, planificant-lo i duent-ne a terme una gestió efectiva, identificant i classificant despeses i ingressos, com també plantejant el lloc que l’estalvi hi ha d’ostentar i sent capaç de llegir i entendre els documents que actuen de suport d’ingressos i despeses, com el contracte de treball, la nòmina, les factures i rebuts de compra o préstec, tiquets, els contractes de lloguer, d’assegurança i els fulls de reclamació, valorant, a més, les opcions reservades per capitalitzar els estalvis a través d’actius financers, una vegada analitzades i comparades les seves característiques de risc, rendibilitat i liquiditat, en un entorn d’inversió diversificat.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "STEM3",
+        "STEM4",
+        "CD1",
+        "CD5",
+        "CPSAA1",
+        "CPSAA5",
+        "CE3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Elaborar y utilizar el presupuesto personal como instrumento para mejorar las finanzas personales, utilizando plantillas o aplicaciones para calcular, en situaciones cotidianas, los diferentes tipos de ingresos y gastos y su evolución, identificando aquellos gastos más elevados o no necesarios, determinando la necesidad de incrementar los ingresos, evaluando la capacidad de endeudamiento y estableciendo un plan de ahorro ante posibles situaciones imprevistas.",
+          "text_ca": "Elaborar i utilitzar el pressupost personal com a instrument per millorar les finances personals, utilitzant plantilles o aplicacions per calcular, en situacions quotidianes, els diferents tipus d’ingressos i despeses i la seva evolució, identificant aquelles despeses més elevades o no necessàries, determinant la necessitat d’incrementar els ingressos, avaluant la capacitat d’endeutament i establint un pla d’estalvi davant possibles situacions imprevistes.",
+          "aclaraciones_es": [
+            "Aplicar los conceptos básicos de finanzas personales en su vida cotidiana, creando un presupuesto personal.",
+            "Identificar sus necesidades financieras, así como los gastos superfluos.",
+            "Elaborar un presupuesto personal ficticio utilizando una plantilla (hoja de cálculo) o aplicación, incluyendo categorías detalladas de ingresos y gastos.",
+            "Concienciarse sobre el control de deudas, evitando el sobreendeudamiento.",
+            "Establecer un plan de ahorro responsable ante posibles imprevistos."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar els conceptes bàsics de finances personals a la seva vida quotidiana, creant un pressupost personal.",
+            "Identificar les seves necessitats financeres, com també les despeses supèrflues.",
+            "Elaborar un pressupost personal fictici utilitzant una plantilla (full de càlcul) o aplicació, incloent categories detallades d’ingressos i despeses.",
+            "Conscienciar-se sobre el control de deutes, evitant el sobreendeutament.",
+            "Establir un pla d’estalvi responsable davant possibles imprevists."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Preparar los documentos relacionados con una operación simulada de compraventa, como por ejemplo facturas, albaranes y recibos.",
+          "text_ca": "Preparar els documents relacionats amb una operació simulada de compravenda, com ara factures, albarans i rebuts.",
+          "aclaraciones_es": [
+            "Preparar los documentos administrativos necesarios en una operación comercial simulada de compraventa.",
+            "Entender la importancia de los documentos comerciales como instrumentos de control y registro."
+          ],
+          "aclaraciones_ca": [
+            "Preparar els documents administratius necessaris en una operació comercial simulada de compravenda.",
+            "Entendre la importància dels documents comercials com a instruments de control i registre."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Diferenciar y seleccionar entre diferentes productos financieros, ofrecidos por entidades financieras del entorno próximo, aquellos que mejor se adapten a diferentes finalidades de ahorro, conociendo la relación entre rentabilidad y riesgo y las condiciones de liquidez pactadas.",
+          "text_ca": "Diferenciar i seleccionar entre diferents productes financers, oferts per entitats financeres de l’entorn pròxim, aquells que millor s’adaptin a diferents finalitats d’estalvi, coneixent la relació entre rendibilitat i risc i les condicions de liquiditat pactades.",
+          "aclaraciones_es": [
+            "Identificar los principales productos financieros de ahorro.",
+            "Comprender las características de los productos financieros de ahorro.",
+            "Evaluar la rentabilidad, el riesgo asociado y las condiciones de liquidez.",
+            "Seleccionar el producto más adecuado según las necesidades personales y objetivos de ahorro."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els principals productes financers d’estalvi.",
+            "Comprendre les característiques dels productes financers d’estalvi.",
+            "Avaluar-ne la rendibilitat, el risc associat i les condicions de liquiditat.",
+            "Seleccionar el producte més adequat segons les necessitats personals i objectius d’estalvi."
+          ]
+        },
+        {
+          "id": "4.4",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Resolver, a manera de retos planteados, situaciones relacionadas con un contrato de trabajo y una nómina, e investigar y seleccionar aquella información que se considera relevante para resolver de manera argumentada los retos planteados, de manera individual o colectiva.",
+          "text_ca": "Resoldre, a manera de reptes plantejats, situacions relacionades amb un contracte de treball i una nòmina, i investigar i seleccionar aquella informació que considera rellevant per resoldre de manera argumentada els reptes plantejats, de manera individual o en col·lectivitat.",
+          "aclaraciones_es": [
+            "Comprender los elementos básicos de un contrato de trabajo.",
+            "Interpretar una nómina.",
+            "Seleccionar información útil para comprender mejor los derechos laborales y las obligaciones contractuales."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre els elements bàsics d’un contracte de treball.",
+            "Interpretar una nòmina.",
+            "Seleccionar informació útil per comprendre millor els drets laborals i les obligacions contractuals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Valorar y relacionar el impulso de la esperanza de vida, al nacer y a los 65 años, con el aumento en las tasas de escolarización y en la cobertura sanitaria, comprendiendo y estudiando los pilares básicos sobre los cuales se sustenta el estado del bienestar, determinando la importancia del ahorro personal, la solidaridad entre generaciones como marco de nuestro sistema público de pensiones y reconociendo el papel crucial que juegan los impuestos dentro de nuestro sistema de bienestar.",
+      "description_ca": "Valorar i relacionar l’impuls de l’esperança de vida, en néixer i als 65 anys, amb l’augment en les taxes d’escolarització i en la cobertura sanitària, comprenent i estudiant els pilars bàsics sobre els quals se sustenta l’Estat del Benestar, determinant la importància de l’estalvi personal, la solidaritat entre generacions com a marc del nostre sistema públic de pensions i reconeixent el paper crucial que juguen els imposts dins el nostre sistema de benestar.",
+      "descriptores": [
+        "CCL3",
+        "CCL5",
+        "STEM1",
+        "STEM4",
+        "CD1",
+        "CD5",
+        "CPSAA2",
+        "CE1",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Comprender el concepto de esperanza de vida y analizar su relación con las políticas básicas del estado del bienestar, como la educación y sanidad públicas.",
+          "text_ca": "Comprendre el concepte d’esperança de vida i analitzar la seva relació amb les polítiques bàsiques de l’estat del benestar, com l’educació i sanitat públiques.",
+          "aclaraciones_es": [
+            "Comprender el significado y cálculo del concepto de esperanza de vida.",
+            "Analizar la influencia de factores como la educación y la sanidad públicas en la calidad de vida y la longevidad de las personas.",
+            "Utilizar estadísticas actuales para entender las variaciones de esperanza de vida según el contexto social, económico y geográfico.",
+            "Reflexionar sobre la importancia de las políticas públicas y su papel en la mejora del bienestar colectivo."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el significat i càlcul del concepte d’esperança de vida.",
+            "Analitzar la influència de factors com l’educació i la sanitat públiques en la qualitat de vida i la longevitat de les persones.",
+            "Utilitzar estadístiques actuals per entendre les variacions d’esperança de vida segons el context social, econòmic i geogràfic.",
+            "Reflexionar sobre la importància de les polítiques públiques i el seu paper en la millora del benestar col·lectiu."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Tomar conciencia de la importancia del ahorro para afrontar los diferentes periodos que se dan en el ciclo financiero individual, a lo largo de la vida.",
+          "text_ca": "Prendre consciència sobre la importància de l’estalvi per afrontar els diferents períodes que es donen en el cicle financer individual, al llarg de la vida.",
+          "aclaraciones_es": [
+            "Identificar los diferentes periodos o etapas de la vida (inicio laboral, consolidación profesional, jubilación) y los desafíos financieros asociados.",
+            "Reflexionar sobre la necesidad de planificar finanzas para afrontar momentos de incertidumbre o grandes gastos.",
+            "Desarrollar habilidades para establecer y seguir un plan de ahorro adecuado a diferentes situaciones vitales.",
+            "Comprender la importancia del ahorro para el logro de objetivos a corto, medio y largo plazo."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els diferents períodes o etapes de la vida (inici laboral, consolidació professional, jubilació) i els desafiaments financers associats.",
+            "Reflexionar sobre la necessitat de planificar finances per afrontar moments d’incertesa o grans despeses.",
+            "Desenvolupar habilitats per establir i seguir un pla d’estalvi adequat a diferents situacions vitals.",
+            "Comprendre la importància de l’estalvi per a l’assoliment d’objectius a curt, mitjà i llarg termini."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Reconocer la importancia del sistema público de pensiones, describiendo su funcionamiento básico y valorando la solidaridad entre generaciones, sabiendo calcular, empleando técnicas de taller y a partir de supuestos simplificados, la pensión de jubilación.",
+          "text_ca": "Reconèixer la importància del sistema públic de pensions, descrivint el seu funcionament bàsic i valorant la solidaritat entre generacions, sabent calcular, emprant tècniques de taller i a partir de supòsits simplificats, la pensió de jubilació.",
+          "aclaraciones_es": [
+            "Reconocer el papel del sistema público de pensiones en el estado del bienestar y su funcionamiento como mecanismo de protección social.",
+            "Reflexionar sobre la contribución de las personas activas para garantizar la seguridad económica de los jubilados.",
+            "Calcular con ejemplos simplificados el valor de una pensión de jubilación a partir de las bases reguladoras y los años cotizados.",
+            "Entender los desafíos actuales del sistema público de pensiones y valorar su importancia como pilar fundamental de cohesión social."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer el paper del sistema públic de pensions en l’estat del benestar i el seu funcionament com a mecanisme de protecció social.",
+            "Reflexionar sobre la contribució de les persones actives per garantir la seguretat econòmica dels jubilats.",
+            "Calcular amb exemples simplificats, el valor d’una pensió de jubilació a partir de les bases reguladores i els anys cotitzats.",
+            "Entendre els desafiaments actuals del sistema públic de pensions i valorar-ne la importància com a pilar fonamental de cohesió social."
+          ]
+        },
+        {
+          "id": "5.4",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Reconocer la importancia de los impuestos; distinguir los impuestos básicos y llevar a cabo cálculos cotidianos de IRPF e IVA.",
+          "text_ca": "Reconèixer la importància dels imposts; distingir els imposts bàsics i dur a terme càlculs quotidians d’IRPF i IVA.",
+          "aclaraciones_es": [
+            "Reconocer la función de los impuestos como fuente de financiación de los servicios públicos y herramientas de redistribución económica.",
+            "Diferenciar los impuestos entre directos e indirectos.",
+            "Resolver problemas vinculados al cálculo del IRPF y el IVA en situaciones cotidianas.",
+            "Reflexionar sobre la importancia de cumplir con las obligaciones fiscales para el funcionamiento de la sociedad."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer la funció dels imposts com a font de finançament dels serveis públics i eines de redistribució econòmica.",
+            "Diferenciar els imposts entre directes i indirectes.",
+            "Resoldre problemes vinculats al càlcul de l’IRPF i l’IVA en situacions quotidianes.",
+            "Reflexionar sobre la importància de complir amb les obligacions fiscals per al funcionament de la societat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Utilizar el concepto de economía circular para proponer medidas de consumo responsable, ahorro personal y eficiencia doméstica, valorando las consecuencias positivas sobre el entorno local, regional y global, siendo conscientes de los retos a los cuales se enfrenta la transición verde en cuanto a nuevas relaciones de trabajo, lucha contra la pobreza y desigualdad, y las brechas de género, conociendo los derechos de los consumidores y de los trabajadores dentro del marco de los Objetivos de Desarrollo Sostenible y de las actuaciones de las políticas públicas nacionales e internacionales, sin perder de vista las aportaciones de la administración regional.",
+      "description_ca": "Utilitzar el concepte d’economia circular per proposar mesures de consum responsable, estalvi personal i eficiència domèstica, valorant les conseqüències positives sobre l’entorn local, regional i global, sent conscient dels reptes als quals s’enfronta la transició verda quant a noves relacions de treball, lluita contra la pobresa i desigualtat, i bretxes de gènere, coneixent els drets dels consumidors i dels treballadors dins del marc dels Objectius de Desenvolupament Sostenible i de les actuacions de les polítiques públiques nacionals i internacionals, sense perdre de vista les aportacions de l’administració regional.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CP2",
+        "STEM4",
+        "CD1",
+        "CPSAA2",
+        "CPSAA5",
+        "CC2",
+        "CC3",
+        "CC4",
+        "CE1",
+        "CE2",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Conocer el concepto de economía circular, valorando los impactos ambientales (huellas de carbono, hídrica y energética) de todas las etapas del ciclo de vida del producto, siendo conscientes de la importancia de evolucionar hacia este sistema.",
+          "text_ca": "Conèixer el concepte d’economia circular, valorant els impactes ambientals (petjades de carboni, hídrica i energètica) de totes les etapes del cicle de vida del producte, sent conscient de la importància d’evolucionar cap a aquest sistema.",
+          "aclaraciones_es": [
+            "Definir el concepto de economía circular y describir sus características principales.",
+            "Comprender la reducción del impacto ambiental mediante la reutilización, reciclaje y reparación, a través de la economía circular.",
+            "Reconocer la contribución de las actividades humanas a la huella de carbono, hídrica y energética.",
+            "Valorar la optimización de las etapas del ciclo de vida de un producto para la reducción de los residuos y los consumos innecesarios.",
+            "Fomentar actitudes responsables hacia un modelo de consumo y producción más sostenible."
+          ],
+          "aclaraciones_ca": [
+            "Definir el concepte d’economia circular i descriure’n les característiques principals.",
+            "Comprendre la reducció de l’impacte ambiental mitjançant la reutilització, reciclatge i reparació, a través de l’economia circular.",
+            "Reconèixer la contribució de les activitats humanes a la petjada de carboni, hídrica i energètica.",
+            "Valorar l’optimització de les etapes del cicle de vida d’un producte per a la reducció dels residus i els consums innecessaris.",
+            "Fomentar actituds responsables cap a un model de consum i producció més sostenible."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Valorar la necesidad de una transición energética, identificando los principales retos, tanto en el entorno próximo como a nivel internacional, reconociendo las repercusiones globales de los actos individuales.",
+          "text_ca": "Valorar la necessitat d’una transició energètica, identificant-ne els principals reptes, tant a l’entorn pròxim com a nivell internacional, reconeixent les repercussions globals dels actes individuals.",
+          "aclaraciones_es": [
+            "Comprender qué es la transición energética, por qué es necesaria y qué cambios implica a nivel global y local.",
+            "Identificar los retos que dificultan el cambio hacia un modelo energético sostenible.",
+            "Reconocer la influencia de los hábitos personales y las políticas energéticas en el cambio climático y en la equidad social a nivel mundial.",
+            "Comparar los costes y beneficios de diferentes fuentes de energía en el contexto de las Illes Balears.",
+            "Promover actitudes responsables y energéticamente sostenibles."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre què és la transició energètica, perquè és necessària i quins canvis implica a nivell global i local.",
+            "Identificar els reptes que dificulten el canvi cap a un model energètic sostenible.",
+            "Reconèixer la influència dels hàbits personals i les polítiques energètiques en el canvi climàtic i en l’equitat social a nivell mundial.",
+            "Comparar els costs i beneficis de diferents fonts d’energia en el context de les Illes Balears.",
+            "Promoure actituds responsables i energèticament sostenibles."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Estudiar los derechos de los consumidores y de los trabajadores, analizando las diferentes instituciones que se encargan de su defensa en nuestra comunidad autónoma, conociendo la relación causal consumo-trabajo a fin de avanzar hacia modelos sostenibles que eliminen las brechas salariales.",
+          "text_ca": "Estudiar els drets dels consumidors i dels treballadors, analitzant les diferents institucions que s’encarreguen de la seva defensa a la nostra comunitat autònoma, coneixent la relació causal consum-treball a fi d’avançar cap a models sostenibles que eliminin les bretxes salarials.",
+          "aclaraciones_es": [
+            "Identificar los derechos fundamentales que protegen a consumidores y los trabajadores en situaciones cotidianas.",
+            "Reconocer las entidades que velan por los derechos de los consumidores y trabajadores en las Illes Balears.",
+            "Relacionar las condiciones de trabajo con las decisiones de consumo, identificando cómo los hábitos de consumo pueden influir en las brechas salariales.",
+            "Reflexionar sobre prácticas que fomenten la igualdad salarial y la responsabilidad social en el ámbito empresarial."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els drets fonamentals que protegeixen els consumidors i treballadors en situacions quotidianes.",
+            "Reconèixer les entitats que vetllen pels drets dels consumidors i treballadors a les Illes Balears.",
+            "Relacionar les condicions de treball amb les decisions de consum, tot identificant com els hàbits de consum poden influir en les bretxes salarials.",
+            "Reflexionar sobre pràctiques que fomentin la igualtat salarial i la responsabilitat social en l’àmbit empresarial."
+          ]
+        },
+        {
+          "id": "6.4",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Comprender los Objetivos de Desarrollo Sostenible y valorar su importancia en el futuro desarrollo de la economía y la sociedad, analizando las actuaciones que se están llevando a cabo en la Comunitat Autònoma de les Illes Balears para su consecución y cumplimiento.",
+          "text_ca": "Comprendre els Objectius de Desenvolupament Sostenible i valorar-ne la importància en el futur desenvolupament de l’economia i la societat, analitzant les actuacions que s’estan duent a terme a la Comunitat Autònoma de les Illes Balears per a la seva consecució i compliment.",
+          "aclaraciones_es": [
+            "Conocer los 17 Objetivos de Desarrollo Sostenible (ODS) de la Agenda 2030 y comprender la relevancia que tienen.",
+            "Valorar iniciativas y proyectos en las Illes Balears que promuevan el cumplimiento de los ODS.",
+            "Reflexionar sobre la contribución de los ODS a una economía y sociedad más justas, equitativas y sostenibles.",
+            "Actuar de manera comprometida en el logro de los ODS en el entorno local y global.",
+            "Desarrollar propuestas de acciones alineadas con los ODS que tengan un impacto positivo en el entorno escolar o local."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer els 17 Objectius de Desenvolupament Sostenible (ODS) de l’Agenda 2030 i comprendre la rellevància que tenen.",
+            "Valorar iniciatives i projectes a les Illes Balears que promoguin el compliment dels ODS.",
+            "Reflexionar sobre la contribució dels ODS a una economia i societat més justes, equitatives i sostenibles.",
+            "Actuar de manera compromesa en l’assoliment dels ODS en l’entorn local i global.",
+            "Desenvolupar propostes d’accions alineades amb els ODS que tinguin un impacte positiu a l’entorn escolar o local."
+          ]
+        }
+      ]
+    }
+  ]
+}

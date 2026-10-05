@@ -1,0 +1,416 @@
+{
+  "code": "tecnologia_digitalizacion",
+  "name_es": "Tecnología y Digitalización",
+  "name_ca": "Tecnologia i Digitalització",
+  "cursos": {
+    "2º": "comun",
+    "3º": "comun"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Buscar y seleccionar la información adecuada proveniente de diversas fuentes, de manera crítica y segura, aplicando procesos de investigación, métodos de análisis de productos y experimentando con herramientas de simulación, para definir problemas tecnológicos e iniciar procesos de creación de soluciones a partir de la información obtenida.",
+      "description_ca": "Cercar i seleccionar la informació adequada provinent de diverses fonts, de manera crítica i segura, aplicant processos de recerca, mètodes d’anàlisi de productes i experimentant amb eines de simulació, per definir problemes tecnològics i iniciar processos de creació de solucions a partir de la informació obtinguda.",
+      "descriptores": [
+        "CCL3",
+        "STEM2",
+        "CD1",
+        "CD4",
+        "CPSAA4",
+        "CE1"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Definir problemas o necesidades planteadas, buscando y contrastando información procedente de diferentes fuentes de manera crítica, evaluando su fiabilidad y pertinencia.",
+          "text_ca": "Definir problemes o necessitats plantejades, cercant i contrastant informació procedent de diferents fonts de manera crítica, avaluant-ne la fiabilitat i pertinència.",
+          "aclaraciones_es": [
+            "Plantear de manera clara el problema para resolver o la necesidad para atender.",
+            "Buscar información en libros, Internet u otras fuentes asegurándose de que sean fiables.",
+            "Analizar la información encontrada, contrastarla con varias fuentes y escoger la más útil y de confianza."
+          ],
+          "aclaraciones_ca": [
+            "Plantejar de manera clara el problema per resoldre o la necessitat per atendre.",
+            "Cercar informació en llibres, internet o altres fonts assegurant-se que siguin fiables.",
+            "Analitzar la informació trobada, contrastar-la amb diverses fonts i escollir la més útil i de confiança."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Comprender y examinar productos tecnológicos de uso habitual a través del análisis de objetos y sistemas, empleando el método científico y utilizando herramientas de simulación en la construcción de conocimiento.",
+          "text_ca": "Comprendre i examinar productes tecnològics d’ús habitual a través d’anàlisis d’objectes i sistemes, emprant el mètode científic i eines de simulació en la construcció de coneixement.",
+          "aclaraciones_es": [
+            "Observar y analizar el funcionamiento de productos tecnológicos que se utilizan en la vida cotidiana.",
+            "Emplear programas o aplicaciones para la simulación del funcionamiento de objetos sin tenerlos que manipular físicamente.",
+            "Aplicar el método científico para obtener conclusiones sobre los productos."
+          ],
+          "aclaraciones_ca": [
+            "Observar i analitzar el funcionament de productes tecnològics que s’utilitzen en la vida quotidiana.",
+            "Emprar programes o aplicacions per a la simulació del funcionament d’objectes sense haver-los de manipular físicament.",
+            "Aplicar el mètode científic per obtenir conclusions sobre els productes."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Adoptar medidas preventivas para la protección de los dispositivos, los datos y la salud personal, identificando problemas y riesgos relacionados con el uso de la tecnología y analizándolos de manera ética y crítica.",
+          "text_ca": "Adoptar mesures preventives per a la protecció dels dispositius, les dades i la salut personal, identificant problemes i riscs relacionats amb l’ús de la tecnologia i analitzant-los de manera ètica i crítica.",
+          "aclaraciones_es": [
+            "Identificar problemas que pueden surgir del uso de dispositivos electrónicos, como por ejemplo los virus informáticos o los datos no seguros.",
+            "Reconocer los problemas y riesgos que pueden surgir con el uso de la tecnología.",
+            "Reflexionar críticamente sobre estos problemas, considerando el impacto que tienen en la salud de las personas y la sociedad."
+          ],
+          "aclaraciones_ca": [
+            "Identificar problemes que poden sorgir de l’ús de dispositius electrònics, com ara els virus informàtics o les dades no segures.",
+            "Reconèixer els problemes i riscs que poden sorgir amb l’ús de la tecnologia.",
+            "Reflexionar críticament sobre aquests problemes, considerant l’impacte que tenen en la salut de les persones i la societat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Abordar problemas tecnológicos con autonomía y actitud creativa, aplicando conocimientos interdisciplinares y trabajando de forma cooperativa y colaborativa, para diseñar y planificar soluciones a un problema o necesidad de forma eficaz, innovadora y sostenible.",
+      "description_ca": "Tractar problemes tecnològics amb autonomia i actitud creativa, aplicant coneixements interdisciplinaris i treballant de manera cooperativa i col·laborativa, per dissenyar i planificar solucions a un problema o necessitat de manera eficaç, innovadora i sostenible.",
+      "descriptores": [
+        "CCL1",
+        "STEM1",
+        "STEM3",
+        "CD3",
+        "CPSAA3",
+        "CPSAA5",
+        "CE1",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Idear y diseñar soluciones eficaces, innovadoras y sostenibles a problemas definidos, aplicando conceptos, técnicas y procedimientos interdisciplinares, así como criterios de sostenibilidad, con actitud emprendedora, perseverante y creativa.",
+          "text_ca": "Idear i dissenyar solucions eficaces, innovadores i sostenibles a problemes definits, aplicant conceptes, tècniques i procediments interdisciplinaris, com també criteris de sostenibilitat, amb actitud emprenedora, perseverant i creativa.",
+          "aclaraciones_es": [
+            "Aplicar el método de proyectos en el diseño del anteproyecto de un producto: definición del problema, investigación de soluciones, elección de la solución a través del análisis y toma de decisiones y diseño final.",
+            "Utilizar conceptos, técnicas y procedimientos de varias disciplinas para abordar el problema de manera integral.",
+            "Adoptar una estrategia emprendedora y de liderazgo, mostrando perseverancia y creatividad en el proceso de diseño y la implementación de soluciones.",
+            "Analizar la repercusión social y posibles impactos para encontrar la solución más sostenible y respetuosa con el medio ambiente."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar el mètode de projectes en el disseny de l’avantprojecte d’un producte: definició del problema, recerca de solucions, elecció de la solució a través de l’anàlisi i presa de decisions i disseny final.",
+            "Utilitzar conceptes, tècniques i procediments de diverses disciplines per abordar el problema de manera integral.",
+            "Adoptar una estratègia emprenedora i de lideratge, mostrant perseverança i creativitat en el procés de disseny i la implementació de solucions.",
+            "Analitzar la repercussió social i possibles impactes per trobar la solució més sostenible i respectuosa amb el medi ambient."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Seleccionar, planificar y organizar los materiales y herramientas, así como las tareas necesarias para la construcción de una solución a un problema planteado, trabajando individualmente o en grupo de manera cooperativa y colaborativa.",
+          "text_ca": "Seleccionar, planificar i organitzar els materials i eines, com també les tasques necessàries per a la construcció d’una solució a un problema plantejat, treballant individualment o en grup de manera cooperativa i col·laborativa.",
+          "aclaraciones_es": [
+            "Aplicar el método de proyectos para la planificación de un proyecto: conocer, escoger, y planificar los materiales y herramientas necesarios para la construcción de una solución a un problema; distribuir las fases o tareas de fabricación del proyecto, controlando el tiempo dedicado a cada tarea.",
+            "Trabajar tanto de forma autónoma como en equipo, mediante un liderazgo equilibrado y un reparto equitativo de las responsabilidades."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar el mètode de projectes per a la planificació d’un projecte: conèixer, escollir, i planificar els materials i eines necessaris per a la construcció d’una solució a un problema; distribuir les fases o tasques de fabricació del projecte, controlant el temps dedicat a cada tasca.",
+            "Treballar tant de forma autònoma com en equip, mitjançant un lideratge equilibrat i un repartiment equitatiu de les responsabilitats."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Aplicar de forma apropiada y segura distintas técnicas y conocimientos interdisciplinares utilizando operadores, sistemas tecnológicos y herramientas, teniendo en cuenta la planificación y el diseño previo, para construir o fabricar soluciones tecnológicas y sostenibles que den respuesta a necesidades en diferentes contextos.",
+      "description_ca": "Aplicar de manera apropiada i segura diferents tècniques i coneixements interdisciplinaris utilitzant operadors, sistemes tecnològics i eines, tenint en compte la planificació i el disseny previ per construir o fabricar solucions tecnològiques i sostenibles que donin resposta a necessitats en diferents contexts.",
+      "descriptores": [
+        "STEM2",
+        "STEM3",
+        "STEM5",
+        "CD5",
+        "CPSAA1",
+        "CE3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Fabricar objetos o modelos mediante la manipulación y conformación de materiales, empleando herramientas y máquinas adecuadas, aplicando los fundamentos de estructuras, mecanismos, electricidad y electrónica y respetando las normas de seguridad y salud correspondientes",
+          "text_ca": "Fabricar objectes o models mitjançant la manipulació i conformació de materials, emprant eines i màquines adequades, aplicant els fonaments d’estructures, mecanismes, electricitat i electrònica i respectant les normes de seguretat i salut corresponents.",
+          "aclaraciones_es": [
+            "Aplicar a la fabricación de objetos y modelos los fundamentos teóricos sobre estructuras, máquinas simples, mecanismos de transmisión y transformación de movimiento, electricidad y electrónica analógica y digital.",
+            "Aplicar el método de proyectos durante la construcción. Crear objetos o modelos a través de la manipulación y conformación de materiales tecnológicos. Utilizar las herramientas y máquinas del aula taller adecuadas para el material con el que se trabaja, conocer el funcionamiento y características propias. Evaluar los prototipos obtenidos y aplicar las correcciones de diseño necesarias, si procede.",
+            "Respetar las normas de seguridad y salud aplicables durante todo el proceso de fabricación en el aula taller, identificando riesgos y atendiendo a las señalizaciones de seguridad."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar a la fabricació d’objectes i models els fonaments teòrics sobre estructures, màquines simples, mecanismes de transmissió i transformació de moviment, electricitat i electrònica analògica i digital.",
+            "Aplicar el mètode de projectes durant la construcció. Crear objectes o models a través de la manipulació i conformació de materials tecnològics. Utilitzar les eines i màquines de l’aula taller adequades per al material amb el qual es treballa, coneixent-ne el funcionament i característiques pròpies. Avaluar els prototips obtinguts i aplicar les correccions de disseny necessàries, si escau.",
+            "Respectar les normes de seguretat i salut aplicables durant tot el procés de fabricació a l’aula taller, identificant riscs i atenent a les senyalitzacions de seguretat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Describir, representar e intercambiar ideas o soluciones a problemas tecnológicos o digitales, utilizando medios de representación, simbología y vocabulario adecuados, así como los instrumentos y recursos disponibles, valorando la utilidad de las herramientas digitales para comunicar y difundir información y propuestas.",
+      "description_ca": "Descriure, representar i intercanviar idees o solucions a problemes tecnològics o digitals, utilitzant mitjans de representació, simbologia i vocabulari adequats, com també els instruments i recursos disponibles i valorant la utilitat de les eines digitals per comunicar i difondre informació i propostes.",
+      "descriptores": [
+        "CCL1",
+        "STEM4",
+        "CD3",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Representar y comunicar el proceso de creación de un producto desde su diseño hasta su difusión, elaborando documentación técnica y gráfica con la ayuda de herramientas digitales, empleando los formatos y el vocabulario técnico adecuados, de manera colaborativa, tanto presencialmente como en remoto.",
+          "text_ca": "Representar i comunicar el procés de creació d’un producte des del seu disseny fins a la seva difusió, elaborant documentació tècnica i gràfica amb l’ajuda d’eines digitals, emprant els formats i el vocabulari tècnic adequats, de manera col·laborativa, tant presencialment com en remot.",
+          "aclaraciones_es": [
+            "Elaborar documentación técnica y gráfica del producto utilizando herramientas digitales que garanticen precisión y claridad a la memoria técnica.",
+            "Aplicar el vocabulario técnico y el formato adecuado para una comunicación profesional precisa.",
+            "Presentar y difundir el producto final de manera efectiva, mostrando todas las fases del proceso de creación.",
+            "Coordinarse con otras personas, tanto de forma presencial como en linea, para desarrollar y comunicar el proyecto conjuntamente."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar documentació tècnica i gràfica del producte utilitzant eines digitals que garanteixin precisió i claredat a la memòria tècnica.",
+            "Aplicar el vocabulari tècnic i el format adequat per a una comunicació precisa professional.",
+            "Presentar i difondre el producte final de manera efectiva, mostrant totes les fases del procés de creació.",
+            "Coordinar-se amb altres persones, tant de forma presencial com en línia, per desenvolupar i comunicar el projecte conjuntament."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Desarrollar algoritmos y aplicaciones informáticas en distintos entornos, aplicando los principios del pensamiento computacional e incorporando las tecnologías emergentes, para crear soluciones a problemas concretos, automatizar procesos y aplicarlos en sistemas de control o en robótica.",
+      "description_ca": "Desenvolupar algorismes i aplicacions informàtiques en diferents entorns, aplicant els principis del pensament computacional i incorporant les tecnologies emergents, per crear solucions a problemes concrets, automatitzar processos i aplicar-los a sistemes de control o robòtica.",
+      "descriptores": [
+        "CP2",
+        "STEM1",
+        "STEM3",
+        "CD5",
+        "CPSAA5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Describir, interpretar y diseñar soluciones a problemas informáticos a través de algoritmos y diagramas de flujo, aplicando los elementos y técnicas de programación de manera creativa.",
+          "text_ca": "Descriure, interpretar i dissenyar solucions a problemes informàtics a través d’algorismes i diagrames de flux, aplicant els elements i tècniques de programació de manera creativa.",
+          "aclaraciones_es": [
+            "Definir, comprender y resolver problemas informáticos mediante algoritmos.",
+            "Diseñar y visualizar soluciones a los problemas informáticos mediante diagramas de flujo.",
+            "Programar de manera creativa."
+          ],
+          "aclaraciones_ca": [
+            "Definir, comprendre i resoldre problemes informàtics mitjançant algorismes.",
+            "Dissenyar i visualitzar solucions als problemes informàtics mitjançant diagrames de flux.",
+            "Programar de manera creativa."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Programar aplicaciones sencillas para distintos dispositivos (ordenadores, dispositivos móviles y otros) empleando los elementos de programación de manera apropiada y aplicando herramientas de edición, así como módulos de inteligencia artificial que añadan funcionalidades a la solución.",
+          "text_ca": "Programar aplicacions senzilles per a distints dispositius (ordinadors, dispositius mòbils i altres) emprant els elements de programació de manera apropiada i aplicant eines d’edició, com també mòduls d’intel·ligència artificial que afegeixin funcionalitats a la solució.",
+          "aclaraciones_es": [
+            "Programar y editar aplicaciones adecuadamente: ordenadores, dispositivos móviles y otros.",
+            "Integrar la inteligencia artificial para ampliar la funcionalidad de la solución adoptada."
+          ],
+          "aclaraciones_ca": [
+            "Programar i editar aplicacions adequadament: ordinadors, dispositius mòbils i altres.",
+            "Integrar la intel·ligència artificial per ampliar la funcionalitat de la solució adoptada."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Automatizar procesos, máquinas y objetos de manera autónoma, con conexión a internet, mediante el análisis, construcción y programación de robots y sistemas de control.",
+          "text_ca": "Automatitzar processos, màquines i objectes de manera autònoma, amb connexió a internet, mitjançant l’anàlisi, construcció i programació de robots i sistemes de control.",
+          "aclaraciones_es": [
+            "Automatizar los recursos materiales y funcionales en red.",
+            "Analizar, construir, simular y/o programar robots y sistemas de control."
+          ],
+          "aclaraciones_ca": [
+            "Automatitzar els recursos materials i funcionals en xarxa.",
+            "Analitzar, construir, simular i/o programar robots i sistemes de control."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Comprender los fundamentos del funcionamiento de los dispositivos y aplicaciones habituales de su entorno digital de aprendizaje, analizando sus componentes y funciones y ajustándolos a sus necesidades, para hacer un uso más eficiente y seguro de los mismos y para detectar y resolver problemas técnicos sencillos.",
+      "description_ca": "Comprendre els fonaments del funcionament dels dispositius i aplicacions habituals del seu entorn digital d’aprenentatge, analitzant-ne els components i funcions i ajustant-los a les seves necessitats per fer-ne un ús més eficient i segur i per detectar i resoldre problemes tècnics senzills.",
+      "descriptores": [
+        "CP2",
+        "CD2",
+        "CD4",
+        "CD5",
+        "CPSAA4",
+        "CPSAA5"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Usar de manera eficiente y segura los dispositivos digitales de uso cotidiano en la resolución de problemas sencillos, analizando los componentes y los sistemas de comunicación, conociendo los riesgos y adoptando medidas de seguridad para la protección de datos y equipos.",
+          "text_ca": "Emprar de manera eficient i segura els dispositius digitals d’ús quotidià en la resolució de problemes senzills, analitzant els components i els sistemes de comunicació, coneixent els riscs i adoptant mesures de seguretat per a la protecció de dades i equips.",
+          "aclaraciones_es": [
+            "Identificar y conocer la función de los principales componentes de hardware de los dispositivos digitales.",
+            "Identificar y conocer el funcionamiento básico de los sistemas operativos de los dispositivos digitales.",
+            "Conocer y utilizar los diferentes sistemas de comunicación de los dispositivos digitales.",
+            "Utilizar dispositivos digitales de forma eficiente para resolver tareas cotidianas sencillas.",
+            "Identificar los riesgos que conlleva la utilización de dispositivos digitales.",
+            "Conocer y aplicar las principales medidas de seguridad en la protección de equipos y datos que conlleva la utilización de dispositivos digitales."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i conèixer la funció dels principals components de maquinari dels dispositius digitals.",
+            "Identificar i conèixer el funcionament bàsic dels sistemes operatius dels dispositius digitals.",
+            "Conèixer i utilitzar els diferents sistemes de comunicació dels dispositius digitals.",
+            "Utilitzar dispositius digitals de forma eficient per resoldre tasques quotidianes senzilles.",
+            "Identificar els riscs que comporta la utilització de dispositius digitals.",
+            "Conèixer i aplicar les principals mesures de seguretat en la protecció d’equips i dades que comporta la utilització de dispositius digitals."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Crear contenidos, elaborar materiales y difundirlos en distintas plataformas, configurando correctamente las herramientas digitales habituales del entorno de aprendizaje, ajustándolas a sus necesidades y respetando los derechos de autor y la etiqueta digital.",
+          "text_ca": "Crear continguts, elaborar materials i difondre’ls en distintes plataformes, configurant correctament les eines digitals habituals de l’entorn d’aprenentatge, ajustant-les a les seves necessitats i respectant els drets d’autor i l’etiqueta digital.",
+          "aclaraciones_es": [
+            "Utilizar los entornos de aprendizaje virtuales (EVA) aplicando la configuración más eficiente en cada caso.",
+            "Crear y elaborar materiales para presentar los resultados de un proyecto tecnológico haciendo uso de herramientas digitales.",
+            "Difundir materiales elaborados con herramientas digitales utilizando plataformas de publicación de contenidos digitales.",
+            "Respetar los derechos de autoría en la creación, difusión y elaboración de materiales utilizando recursos con licencias compatibles con el uso del material.",
+            "Utilizar las normas de comportamiento general en las comunicaciones por Internet."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar els entorns d’aprenentatge virtuals (EVA) aplicant la configuració més eficient en cada cas.",
+            "Crear i elaborar materials per presentar els resultats d’un projecte tecnològic fent ús d’eines digitals.",
+            "Difondre materials elaborats amb eines digitals utilitzant plataformes de publicació de continguts digitals.",
+            "Respectar els drets d’autoria en la creació, difusió i elaboració de materials utilitzant recursos amb llicències compatibles amb l’ús del material.",
+            "Utilitzar les normes de comportament general en les comunicacions per internet."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Organizar la información de manera estructurada, aplicando técnicas de almacenamiento seguro.",
+          "text_ca": "Organitzar la informació de manera estructurada, aplicant tècniques d’emmagatzematge segur.",
+          "aclaraciones_es": [
+            "Gestionar el correo electrónico aplicando herramientas de organización.",
+            "Gestionar los archivos en la nube siguiendo una estructura de carpetas que sea útil a lo largo del tiempo.",
+            "Realizar copias de seguridad siguiendo el procedimiento adecuado."
+          ],
+          "aclaraciones_ca": [
+            "Gestionar el correu electrònic aplicant eines d’organització.",
+            "Gestionar els arxius al núvol seguint una estructura de carpetes que sigui útil al llarg del temps.",
+            "Realitzar còpies de seguretat seguint el procediment adequat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE7",
+      "ce_num": 7,
+      "description_es": "Hacer un uso responsable y ético de la tecnología, mostrando interés por un desarrollo sostenible, identificando sus repercusiones y valorando la contribución de las tecnologías emergentes, para identificar las aportaciones y el impacto del desarrollo tecnológico en la sociedad y en el entorno.",
+      "description_ca": "Fer un ús responsable i ètic de la tecnologia, tot mostrant interès per un desenvolupament sostenible, identificant-ne les repercussions i valorant la contribució de les tecnologies emergents per identificar les aportacions i l’impacte del desenvolupament tecnològic en la societat i en l’entorn.",
+      "descriptores": [
+        "STEM2",
+        "STEM5",
+        "CD4",
+        "CC4"
+      ],
+      "criterios": [
+        {
+          "id": "7.1",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Reconocer la influencia de la actividad tecnológica en la sociedad y en la sostenibilidad ambiental a lo largo de su historia, identificando sus aportaciones y repercusiones y valorando su importancia para el desarrollo sostenible.",
+          "text_ca": "Reconèixer la influència de l’activitat tecnològica en la societat i en la sostenibilitat ambiental al llarg de la seva història, identificant-ne les aportacions i repercussions i valorant-ne la importància per al desenvolupament sostenible.",
+          "aclaraciones_es": [
+            "Reconocer el impacto de la actividad tecnológica en la sociedad y el medio ambiente a lo largo de la historia.",
+            "Identificar las principales aportaciones y consecuencias de la tecnología en relación con la sostenibilidad ambiental.",
+            "Valorar la importancia de la tecnología para la promoción de un desarrollo sostenible en la sociedad actual."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer l’impacte de l’activitat tecnològica en la societat i el medi ambient al llarg de la història.",
+            "Identificar les principals aportacions i conseqüències de la tecnologia en relació amb la sostenibilitat ambiental.",
+            "Valorar la importància de la tecnologia per a la promoció d’un desenvolupament sostenible en la societat actual."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "2º",
+            "3º"
+          ],
+          "text_es": "Identificar las aportaciones de las tecnologías emergentes al bienestar, a la igualdad social y a la disminución del impacto ambiental, haciendo un uso responsable y ético de las mismas.",
+          "text_ca": "Identificar les aportacions de les tecnologies emergents al benestar, a la igualtat social i a la disminució de l’impacte ambiental, fent-ne un ús responsable i ètic.",
+          "aclaraciones_es": [
+            "Analizar la contribución de las tecnologías emergentes a la mejora del bienestar y a la promoción de la igualdad social.",
+            "Identificar las aportaciones de las tecnologías emergentes a la disminución del impacto ambiental y el favorecimiento de la sostenibilidad.",
+            "Valorar la importancia de utilizar las tecnologías emergentes de manera ética y con responsabilidad social."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar la contribució de les tecnologies emergents a la millora del benestar i a la promoció de la igualtat social.",
+            "Identificar les aportacions de les tecnologies emergents en la disminució de l’impacte ambiental i l’afavoriment de la sostenibilitat.",
+            "Valorar la importància d’utilitzar les tecnologies emergents de manera ètica i amb responsabilitat social."
+          ]
+        }
+      ]
+    }
+  ]
+}

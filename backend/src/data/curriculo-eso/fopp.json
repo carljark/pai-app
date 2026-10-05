@@ -1,0 +1,354 @@
+{
+  "code": "fopp",
+  "name_es": "Formación y Orientación Personal y Profesional",
+  "name_ca": "Formació i Orientació Personal i Professional",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Comprender los procesos físicos y psicológicos implicados en la cognición, la motivación y el aprendizaje, analizando las implicaciones en la conducta y desarrollando estrategias de gestión emocional y del propio proceso de aprendizaje para mejorar el desempeño en el ámbito personal, social y académico y conseguir mayor control sobre las acciones y sus consecuencias.",
+      "description_ca": "Comprendre els processos físics i psicològics implicats en la cognició, la motivació i l’aprenentatge, analitzant-ne les implicacions en la conducta i desenvolupant estratègies de gestió emocional i del propi procés d’aprenentatge per millorar l’acompliment en l’àmbit personal, social i acadèmic i aconseguir major control sobre les accions i les seves conseqüències.",
+      "descriptores": [
+        "CPSAA1",
+        "CPSAA3",
+        "CPSAA4",
+        "CPSAA5"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Mejorar el desempeño personal, social y académico aplicando estrategias de aprendizaje y gestión emocional que permitan un mayor control sobre las acciones y sus consecuencias.",
+          "text_ca": "Millorar l’acompliment personal, social i acadèmic aplicant estratègies d’aprenentatge i gestió emocional que permetin un major control sobre les accions i les seves conseqüències.",
+          "aclaraciones_es": [
+            "Mejorar el desempeño personal, social y académico aplicando estrategias de organización de las tareas y planificación del tiempo.",
+            "Gestionar conflictos de manera constructiva demostrando empatía en interacciones sociales.",
+            "Combinar estrategias específicas para superar dificultades académicas y personales que permitan un mayor control de las acciones y sus consecuencias."
+          ],
+          "aclaraciones_ca": [
+            "Millorar l’acompliment personal, social i acadèmic aplicant estratègies d’organització de les tasques i planificació del temps.",
+            "Gestionar conflictes de manera constructiva demostrant empatia en interaccions socials.",
+            "Combinar estratègies específiques per superar dificultats acadèmiques i personals que permetin un major control de les accions i les seves conseqüències."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar y aplicar los procesos que intervienen en el aprendizaje, analizando las implicaciones y desarrollando estrategias que favorezcan la adquisición de conocimientos, destrezas y actitudes.",
+          "text_ca": "Identificar i aplicar els processos que intervenen en l’aprenentatge, analitzant-ne les implicacions i desenvolupant estratègies que afavoreixin l’adquisició de coneixements, destreses i actituds.",
+          "aclaraciones_es": [
+            "Reconocer los procesos cognitivos implicados en el aprendizaje.",
+            "Diferenciar los conocimientos, destrezas y actitudes como componentes del aprendizaje.",
+            "Detectar factores que influyen en el aprendizaje.",
+            "Implementar técnicas y hábitos de estudio para mejorar la retención de conocimientos.",
+            "Comparar la eficacia de diferentes técnicas y hábitos en función de los resultados obtenidos.",
+            "Diseñar un plan personalizado de aprendizaje que incorpore técnicas adecuadas a las propias necesidades."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer els processos cognitius implicats en l’aprenentatge.",
+            "Diferenciar els coneixements, destreses i actituds com a components de l’aprenentatge.",
+            "Detectar factors que influeixen en l’aprenentatge.",
+            "Implementar tècniques i hàbits d’estudi per millorar la retenció de coneixements.",
+            "Comparar l’eficàcia de diferents tècniques i hàbits en funció dels resultats obtinguts.",
+            "Dissenyar un pla personalitzat d’aprenentatge que incorpori tècniques adequades a les necessitats pròpies."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar la importancia del componente emocional, tomando conciencia de su repercusión en el aprendizaje y desarrollando estrategias que lo mejoren.",
+          "text_ca": "Analitzar la importància del component emocional, prenent consciència de la seva repercussió en l’aprenentatge i desenvolupant estratègies que el millorin.",
+          "aclaraciones_es": [
+            "Observar la relación entre las emociones positivas y un rendimiento óptimo.",
+            "Reconocer como las emociones negativas pueden interferir en el aprendizaje.",
+            "Reflexionar sobre como la gestión emocional influye en la capacidad de concentración y resolución de problemas.",
+            "Incorporar técnicas de regulación emocional en actividades académicas."
+          ],
+          "aclaraciones_ca": [
+            "Observar la relació entre les emocions positives i un rendiment òptim.",
+            "Reconèixer com les emocions negatives poden interferir en l’aprenentatge.",
+            "Reflexionar sobre com la gestió emocional influeix en la capacitat de concentració i resolució de problemes.",
+            "Incorporar tècniques de regulació emocional en activitats acadèmiques."
+          ]
+        },
+        {
+          "id": "1.4",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar la relación de la cognición, la motivación, el aprendizaje y la gestión emocional con la conducta, tanto la propia como la de los demás, a partir de las bases teóricas fundamentales de los procesos físicos y psicológicos que intervienen.",
+          "text_ca": "Analitzar la relació de la cognició, la motivació, l’aprenentatge i la gestió emocional amb la conducta, tant la pròpia com la dels altres, a partir de les bases teòriques fonamentals dels processos físics i psicològics que hi intervenen.",
+          "aclaraciones_es": [
+            "Establecer las interacciones entre cognición, motivación, aprendizaje y emociones en la conducta.",
+            "Conocer la influencia de los procesos físicos en las reacciones emocionales y cognitivas.",
+            "Reflexionar sobre cómo las bases psicológicas explican patrones de conducta propios y ajenos.",
+            "Analizar cómo la motivación intrínseca y extrínseca afecta el aprendizaje y el comportamiento."
+          ],
+          "aclaraciones_ca": [
+            "Establir les interaccions entre cognició, motivació, aprenentatge i emocions en la conducta.",
+            "Conèixer la influència dels processos físics en les reaccions emocionals i cognitives.",
+            "Reflexionar sobre com les bases psicològiques expliquen patrons de conducta propis i aliens.",
+            "Analitzar com la motivació intrínseca i extrínseca afecta l’aprenentatge i el comportament."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Comprender las principales características del desarrollo evolutivo de la persona, a partir del análisis de aquellos elementos de la madurez que condicionan los comportamientos y con la identificación de las cualidades personales y de relación social propias y de los demás, para potenciar las que favorecen la autonomía y permiten afrontar de manera eficaz los nuevos retos.",
+      "description_ca": "Comprendre les principals característiques del desenvolupament evolutiu de la persona, a partir de l’anàlisi d’aquells elements de la maduresa que condicionen els comportaments i amb la identificació de les qualitats personals i de relació social pròpies i dels altres, per potenciar les que afavoreixen l’autonomia i permeten afrontar de manera eficaç els nous reptes.",
+      "descriptores": [
+        "CPSAA1",
+        "CPSAA3",
+        "CPSAA4",
+        "CPSAA5",
+        "CC1",
+        "CE2"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Afrontar nuevos retos de manera eficaz y con progresiva autonomía, identificando las cualidades personales y sociales propias y de los demás y analizando los elementos que condicionan los comportamientos y actuaciones en el proceso de desarrollo evolutivo.",
+          "text_ca": "Afrontar nous reptes de manera eficaç i amb progressiva autonomia, identificant les qualitats personals i socials pròpies i dels altres i analitzant els elements que condicionen els comportaments i actuacions en el procés de desenvolupament evolutiu.",
+          "aclaraciones_es": [
+            "Identificar los retos o situaciones imprevistas en diferentes contextos personales, sociales y académicos.",
+            "Adaptarse a situaciones imprevistas con estrategias que afronten las dificultades de manera organizada y eficaz.",
+            "Reconocer las propias cualidades personales y sociales que favorecen la autonomía y la interacción en la resolución de los retos.",
+            "Examinar los factores internos y externos que condicionan las decisiones y los comportamientos.",
+            "Relacionar los comportamientos observados con el proceso de desarrollo evolutivo en términos de madurez emocional y social."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els reptes o situacions imprevistes en diferents contexts personals, socials i acadèmics.",
+            "Adaptar-se a situacions imprevistes amb estratègies que enfrontin les dificultats de manera organitzada i eficaç.",
+            "Reconèixer les pròpies qualitats personals i socials que afavoreixen l’autonomia i la interacció en la resolució dels reptes.",
+            "Examinar els factors interns i externs que condicionen les decisions i els comportaments.",
+            "Relacionar els comportaments observats amb el procés de desenvolupament evolutiu en termes de maduresa emocional i social."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Conocer el desarrollo evolutivo de las personas analizando y comprendiendo las principales características de la madurez que van conformando a la persona en diferentes planes: físico, cognitivo, social, emocional y sexual.",
+          "text_ca": "Conèixer el desenvolupament evolutiu de les persones analitzant i comprenent les principals característiques de la maduresa que van conformant a la persona en diferents plans: físic, cognitiu, social, emocional i sexual.",
+          "aclaraciones_es": [
+            "Identificar las etapas del desarrollo evolutivo humano y sus principales características.",
+            "Examinar la evolución de las características físicas, cognitivas, sociales, emocionales y sexuales a lo largo del tiempo.",
+            "Explicar la relación entre los cambios físicos y emocionales durante el desarrollo.",
+            "Interpretar comportamientos y actitudes en función del nivel de desarrollo y madurez de la persona.",
+            "Reconocer la influencia de la madurez de un plano en otros planos que conforman la persona."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les etapes del desenvolupament evolutiu humà i les seves principals característiques.",
+            "Examinar l’evolució de les característiques físiques, cognitives, socials, emocionals i sexuals al llarg del temps.",
+            "Explicar la relació entre els canvis físics i emocionals durant el desenvolupament.",
+            "Interpretar comportaments i actituds en funció del nivell de desenvolupament i maduresa de la persona.",
+            "Reconèixer la influència de la maduresa d’un pla en altres plans que conformen la persona."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar cualidades personales y de los demás, reflexionando sobre la importancia de potenciar aquellas que permitan afrontar eficazmente los retos y faciliten el proceso de transición de la adolescencia a la edad adulta.",
+          "text_ca": "Identificar qualitats personals i dels altres, reflexionant sobre la importància de potenciar aquelles que permetin afrontar eficaçment els reptes i faciliten el procés de transició de l’adolescència a l’edat adulta.",
+          "aclaraciones_es": [
+            "Identificar las cualidades destacables personales y a de otras personas que influyan positivamente en situaciones de cambio.",
+            "Reconocer el impacto de potenciar aquellas cualidades que permitan afrontar eficazmente los retos y faciliten la transición a la edad adulta."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les qualitats destacables personals i a d’altres persones que influeixen positivament en situacions de canvi.",
+            "Reconèixer l’impacte de potenciar aquelles qualitats que permeten afrontar eficaçment els reptes i faciliten la transició a l’edat adulta."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Conocer y comprender el ser humano, sus sociedades y culturas, analizando con empatía su diversidad y complejidad desde diferentes perspectivas, para fomentar el espíritu crítico sobre aspectos que dirigen el funcionamiento humano, social y cultural.",
+      "description_ca": "Conèixer i comprendre l’ésser humà, les seves societats i cultures, analitzant amb empatia la seva diversitat i complexitat des de diferents perspectives, per fomentar l’esperit crític sobre aspectes que dirigeixen el funcionament humà, social i cultural.",
+      "descriptores": [
+        "CPSAA3",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CE2"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reflexionar de manera crítica sobre la condición humana, la sociedad y la cultura a partir del conocimiento que proporcionan las ciencias humanas y sociales.",
+          "text_ca": "Reflexionar de manera crítica sobre la condició humana, la societat i la cultura a partir del coneixement que proporcionen les ciències humanes i socials.",
+          "aclaraciones_es": [
+            "Comprender las interrelaciones entre fenómenos sociales y culturales desde una perspectiva crítica.",
+            "Argumentar de forma coherente acerca de fenómenos humanos y sociales, considerando las implicaciones éticas y culturales.",
+            "Generar ideas o estrategias para promover valores como la igualdad, la sostenibilidad o el respeto por la diversidad cultural."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre les interrelacions entre fenòmens socials i culturals des d’una perspectiva crítica.",
+            "Argumentar de forma coherent sobre fenòmens humans i socials, considerant les implicacions ètiques i culturals.",
+            "Generar idees o estratègies per promoure valors com la igualtat, la sostenibilitat o el respecte per la diversitat cultural."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar la diversidad personal, social y cultural desde diferentes perspectivas a partir de los conocimientos que proporcionan las ciencias humanas y sociales, mostrando actitudes de respeto y empatía hacia lo que es diferente y valorando la equidad y la no discriminación.",
+          "text_ca": "Analitzar la diversitat personal, social i cultural des de diferents perspectives a partir dels coneixements que proporcionen les ciències humanes i socials, mostrant actituds de respecte i empatia envers el que és diferent i valorant l’equitat i la no discriminació.",
+          "aclaraciones_es": [
+            "Analizar situaciones de diversidad personal, social o cultural, identificando factores e implicaciones en la convivencia.",
+            "Reflexionar de manera crítica sobre los valores de equidad y respeto en diferentes situaciones de diversidad.",
+            "Diseñar iniciativas que promuevan la equidad, la no discriminación y el respeto en el entorno escolar o comunitario."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar situacions de diversitat personal, social o cultural, identificant-ne factors i implicacions en la convivència.",
+            "Reflexionar de manera crítica sobre els valors d’equitat i respecte en diferents situacions de diversitat.",
+            "Dissenyar iniciatives que promoguin l’equitat, la no discriminació i el respecte en l’entorn escolar o comunitari."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Conocer la dimensión social y antropológica del ser humano y desarrollar estrategias y habilidades sociales adecuadas a contextos cambiantes y a grupos diferentes, considerando los factores personales y socioculturales que intervienen en la configuración psicológica de la persona, para comprenderse a un mismo e interactuar con los demás desde el respeto a la diversidad personal, social y cultural.",
+      "description_ca": "Conèixer la dimensió social i antropològica de l’ésser humà i desenvolupar estratègies i habilitats socials adequades a contexts canviants i a grups diferents, considerant els factors personals i socioculturals que intervenen en la configuració psicològica de la persona, per comprendre’s a un mateix i interactuar amb els altres des del respecte a la diversitat personal, social i cultural.",
+      "descriptores": [
+        "CC1",
+        "CC2",
+        "CC3",
+        "CE2"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Desarrollar estrategias y habilidades que faciliten la adaptación a nuevos grupos y contextos a partir del conocimiento social y antropológico del ser humano.",
+          "text_ca": "Desenvolupar estratègies i habilitats que facilitin l’adaptació a nous grups i contexts a partir del coneixement social i antropològic de l’ésser humà.",
+          "aclaraciones_es": [
+            "Examinar situaciones e identificar factores sociales y antropológicos que afecten a la adaptación a nuevos grupos y contextos.",
+            "Valorar diferentes estrategias de adaptación a nuevos contextos, destacando ventajas e inconvenientes.",
+            "Crear estrategias concretas de adaptación que se puedan aplicar en situaciones reales."
+          ],
+          "aclaraciones_ca": [
+            "Examinar situacions i identificar factors socials i antropològics que afecten l’adaptació a nous grups i contexts.",
+            "Valorar diferents estratègies d’adaptació a nous contexts, destacant-ne avantatges i inconvenients.",
+            "Crear estratègies concretes d’adaptació que es puguin aplicar en situacions reals."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar los factores personales y socioculturales que intervienen en la configuración psicológica de la persona a partir del conocimiento comparado de la dimensión social y antropológica del ser humano.",
+          "text_ca": "Analitzar els factors personals i socioculturals que intervenen en la configuració psicològica de la persona a partir del coneixement comparat de la dimensió social i antropològica de l’ésser humà.",
+          "aclaraciones_es": [
+            "Comprender la configuración de la psicología individual en base a los factores personales (genéticos, emocionales) y los socioculturales (educación, cultura, normas).",
+            "Valorar la importancia relativa de los factores personales y sociales en la formación de la personalidad y la identidad.",
+            "Proponer intervenciones que aborden los efectos de factores socioculturales en el bienestar psicológico."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre la configuració de la psicologia individual en base als factors personals (genètics, emocionals) i els socioculturals (educació, cultura, normes).",
+            "Valorar la importància relativa dels factors personals i socials en la formació de la personalitat i la identitat.",
+            "Proposar intervencions que abordin els efectes de factors socioculturals en el benestar psicològic."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar la diversidad, desde el respeto, la inclusión y la igualdad real y efectiva entre hombres y mujeres, considerándola un elemento enriquecedor a nivel personal, social y cultural.",
+          "text_ca": "Valorar la diversitat, des del respecte, la inclusió i la igualtat real i efectiva entre homes i dones, considerant-la un element enriquidor a nivell personal, social i cultural.",
+          "aclaraciones_es": [
+            "Comprender los factores que generan desigualdad y apreciar como la diversidad puede enriquecer las sociedades.",
+            "Desarrollar una opinión fundamentada sobre la importancia de la igualdad y el respeto a la diversidad en una sociedad democrática.",
+            "Contribuir de manera activa a la promoción de valores igualitarios e inclusivos en la comunidad."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre els factors que generen desigualtat i apreciar com la diversitat pot enriquir les societats.",
+            "Desenvolupar una opinió fonamentada sobre la importància de la igualtat i el respecte a la diversitat en una societat democràtica.",
+            "Contribuir de manera activa a la promoció de valors igualitaris i inclusius en la comunitat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Explorar las oportunidades académicas y profesionales que ofrece el entorno, descubriendo y priorizando las necesidades e intereses personales y vocacionales y desarrollando el espíritu de iniciativa y de autosuperación, así como las destrezas necesarias en la toma de decisiones, para llevar a cabo un proyecto personal, académico y profesional propio y realizar una primera aproximación al diseño de un plan de búsqueda activa de ocupación.",
+      "description_ca": "Explorar les oportunitats acadèmiques i professionals que ofereix l’entorn, descobrint i prioritzant les necessitats i interessos personals i vocacionals i desenvolupant l’esperit d’iniciativa i d’autosuperació, com també les destreses necessàries en la presa de decisions, per tal de dur a terme un projecte personal, acadèmic i professional propi i realitzar una primera aproximació al disseny d’un pla de cerca activa d’ocupació.",
+      "descriptores": [
+        "CD1",
+        "CD3",
+        "CPSAA4",
+        "CPSAA5",
+        "CE1",
+        "CE2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Realizar un proyecto personal, académico y profesional propio y aproximarse al proceso de búsqueda activa de ocupación, priorizando las necesidades y descubriendo los intereses personales y vocacionales mediante la exploración de las oportunidades académicas y profesionales que ofrece el entorno presencial y virtual y desarrollando las destrezas necesarias en el proceso de toma de decisiones.",
+          "text_ca": "Realitzar un projecte personal, acadèmic i professional propi i aproximar-se al procés de cerca activa d’ocupació, prioritzant les necessitats i descobrint els interessos personals i vocacionals mitjançant l’exploració de les oportunitats acadèmiques i professionals que ofereix l’entorn presencial i virtual i desenvolupant les destreses necessàries en el procés de presa de decisions.",
+          "aclaraciones_es": [
+            "Desglosar las propias preferencias y cualidades para determinar las áreas académicas y profesionales que más se adaptan a las capacidades e intereses personales.",
+            "Desarrollar la capacidad para tomar decisiones informadas a partir del análisis de las diferentes opciones, priorizando las necesidades individuales y las oportunidades profesionales.",
+            "Desarrollar un plan estratégico personal que defina las metas académicas y profesionales, incluyendo los pasos y herramientas necesarias para lograrlas."
+          ],
+          "aclaraciones_ca": [
+            "Desglossar les pròpies preferències i qualitats per determinar les àrees acadèmiques i professionals que més s’adapten a les capacitats i interessos personals.",
+            "Desenvolupar la capacitat per prendre decisions informades a partir de l’anàlisi de les diferents opcions, prioritzant les necessitats individuals i les oportunitats professionals.",
+            "Desenvolupar un pla estratègic personal que defineixi les metes acadèmiques i professionals, incloent les passes i eines necessàries per assolir-les."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Explorar el entorno próximo identificando las oportunidades académicas y profesionales que ofrece, valorando aquellas que mejor se adaptan a las cualidades e intereses personales y potenciando el espíritu de iniciativa y superación.",
+          "text_ca": "Explorar l’entorn pròxim identificant les oportunitats acadèmiques i professionals que ofereix, valorant aquelles que millor s’adapten a les qualitats i interessos personals i potenciant l’esperit d’iniciativa i superació.",
+          "aclaraciones_es": [
+            "Identificar y analizar las oportunidades académicas y profesionales del alrededor, evaluando las características y su relevancia para cada alumno.",
+            "Evaluar de manera crítica las oportunidades académicas y profesionales disponibles para determinar qué se adaptan mejor a las necesidades y objetivos personales a corto y largo plazo.",
+            "Realizar un plan de acción para explorar y aprovechar las oportunidades disponibles, desarrollando una actitud de iniciativa para la superación personal, académica y profesional."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i analitzar les oportunitats acadèmiques i professionals del voltant, avaluant-ne les característiques i la seva rellevància per a cada alumne.",
+            "Avaluar de manera crítica les oportunitats acadèmiques i professionals disponibles per determinar quines s’adapten millor a les necessitats i objectius personals a curt i llarg termini.",
+            "Realitzar un pla d’acció per explorar i aprofitar les oportunitats disponibles, desenvolupant una actitud d’iniciativa per a la superació personal, acadèmica i professional."
+          ]
+        }
+      ]
+    }
+  ]
+}

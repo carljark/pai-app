@@ -44,6 +44,7 @@ export const TRANSLATIONS_ES = {
   courseLevelCFGM: 'CFGM Estética y Belleza',
   courseLevelCFGMPeluqueria: 'CFGM Peluquería y Cosmética Capilar',
   courseLevelCFGSEducacionInfantil: 'CFGS Educación Infantil',
+  courseLevelESO: 'ESO',
   courseLevelPDC: 'ESO (PDC)',
   searchProjects: 'Buscar proyecto...',
   generatorLevelLabel: 'Nivel Educativo',

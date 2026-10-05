@@ -1,0 +1,288 @@
+{
+  "code": "introduccion_filosofia",
+  "name_es": "Introducción a la Filosofía",
+  "name_ca": "Introducció a la Filosofia",
+  "cursos": {
+    "3º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Usar y valorar adecuadamente argumentos y estructuras argumentales, a partir de su análisis, tanto formal como informal, para producir y apreciar discursos, expresiones o reflexiones, personales o colectivas, orales y/o escritas, de forma rigurosa, y evitar así modos dogmáticos, fundamentalistas, falaces y sesgados de sostener opiniones o hipótesis incoherentes.",
+      "description_ca": "Usar i valorar adequadament arguments i estructures argumentals, a partir de la seva anàlisi, tant formal com informal, per produir i apreciar discursos, expressions o reflexions, personals o col·lectives, orals i/o escrites, de forma rigorosa, i evitar així modes dogmàtics, fonamentalistes, fal·laços i esbiaixats de sostenir opinions o hipòtesis incoherents.",
+      "descriptores": [
+        "CCL1",
+        "CCL5",
+        "CP1",
+        "STEM4",
+        "CPSAA1",
+        "CPSAA3",
+        "CPSAA4",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Producir y evaluar discursos argumentativos, orales y escritos, sobre cuestiones y problemas filosóficos, demostrando un uso correcto de normas y pautas lógicas, retóricas y argumentativas.",
+          "text_ca": "Produir i avaluar discursos argumentatius, orals i escrits, sobre qüestions i problemes filosòfics, demostrant un ús correcte de normes i pautes lògiques, retòriques i argumentatives.",
+          "aclaraciones_es": [
+            "Producir discursos argumentativos, orales y escritos, sobre cuestiones y problemas filosóficos, demostrando un uso correcto de normas y pautas lógicas, retóricas y argumentativas, usando un registro y una ortografía adecuadas: aplicación de las herramientas de la reflexión filosófica mediante las reglas del discurso argumentativo.",
+            "Evaluar discursos argumentativos, orales y escritos en diferentes ámbitos (medios de comunicación, literatura, redes sociales, etc.), sobre cuestiones y problemas filosóficos, demostrando un uso correcto de normas y pautas lógicas, retóricas y argumentativas, usando un registro y una ortografía adecuadas."
+          ],
+          "aclaraciones_ca": [
+            "Produir discursos argumentatius, orals i escrits, sobre qüestions i problemes filosòfics, demostrant un ús correcte de normes i pautes lògiques, retòriques i argumentatives, fent servir un registre i una ortografia adequades: aplicació de les eines de la reflexió filosòfica mitjançant les regles del discurs argumentatiu.",
+            "Avaluar discursos argumentatius, orals i escrits en diferents àmbits (mitjans de comunicació, literatura, xarxes socials, etc.), sobre qüestions i problemes filosòfics, demostrant un ús correcte de normes i pautes lògiques, retòriques i argumentatives, fent servir un registre i una ortografia adequades."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Detectar y evitar modos dogmáticos, falaces y sesgados de sostener opiniones e hipótesis, y ejercitar las virtudes argumentativas, demostrando comprensión de la naturaleza de esas falacias y sesgos, así como de la necesidad de someter la práctica argumentativa a principios éticos como por ejemplo la cooperación, el compromiso con la verdad, el respeto a la pluralidad y el rechazo de toda actitud vejatoria, discriminatoria o arbitraria.",
+          "text_ca": "Detectar i evitar modes dogmàtics, fal·laços i esbiaixats de sostenir opinions i hipòtesis, i exercitar les virtuts argumentatives, demostrant comprensió de la naturalesa d'aquestes fal·làcies i biaixos, així com de la necessitat de sotmetre la pràctica argumentativa a principis ètics com ara la cooperació, el compromís amb la veritat, el respecte a la pluralitat i el rebuig de tota actitud vexatòria, discriminatòria o arbitrària.",
+          "aclaraciones_es": [
+            "Detectar opiniones e hipótesis dogmáticas, falaces o sesgadas en diferentes ámbitos: periodístico, académico, redes sociales, tertulias, etc.",
+            "Explicar la naturaleza y mecanismos de las falacias y los sesgos argumentativos: qué son las falacias, cómo las podemos localizar y con qué finalidades se utilizan.",
+            "Estudiar los mecanismos de la comunicación en referencia a los principios éticos del compromiso con la verdad, el respeto a la pluralidad y el rechazo de toda actitud vejatoria, discriminatoria o arbitraria."
+          ],
+          "aclaraciones_ca": [
+            "Detectar opinions i hipòtesis dogmàtiques, fal·laces o esbiaixades en diferents àmbits: periodístic, acadèmic, xarxes socials, tertúlies, etc.",
+            "Explicar la naturalesa i mecanismes de les fal·làcies i els biaixos argumentatius: què són les fal·làcies, com les podem localitzar i amb quines finalitats s’utilitzen.",
+            "Estudiar els mecanismes de la comunicació en referència als principis ètics del compromís amb la veritat, el respecte a la pluralitat i el rebuig de tota actitud vexatòria, discriminatòria o arbitrària."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Practicar el ejercicio del diálogo filosófico de manera rigurosa, crítica, tolerante y empática, interiorizando las pautas éticas y formales que requiere, mediante la participación en actividades grupales y a través del planteamiento dialógico de las cuestiones filosóficas, para promover el contraste y el intercambio de ideas y el ejercicio de una ciudadanía activa y democrática.",
+      "description_ca": "Practicar l'exercici del diàleg filosòfic de manera rigorosa, crítica, tolerant i empàtica, interioritzant les pautes ètiques i formals que requereix, mitjançant la participació en activitats grupals i a través del plantejament dialògic de les qüestions filosòfiques, per promoure el contrast i l'intercanvi d'idees i l’exercici d’una ciutadania activa i democràtica.",
+      "descriptores": [
+        "CCL1",
+        "CCL5",
+        "CP1",
+        "STEM3",
+        "CPSAA3",
+        "CPSAA4",
+        "CC2",
+        "CC3",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Promover el contraste y el intercambio de ideas y el ejercicio de una ciudadanía activa y democrática a través del ejercicio de la participación en actividades grupales y del diálogo racional, respetuoso, abierto, constructivo y comprometido con la verdad sobre cuestiones y problemas filosóficamente relevantes.",
+          "text_ca": "Promoure el contrast i l'intercanvi d'idees i l'exercici d'una ciutadania activa i democràtica a través de l'exercici de la participació en activitats grupals i del diàleg racional, respectuós, obert, constructiu i compromès amb la veritat sobre qüestions i problemes rellevants filosòficament.",
+          "aclaraciones_es": [
+            "Participar en actividad grupales como, por ejemplo, debates, contrastando e intercambiando ideas y practicando una ciudadanía activa y democrática.",
+            "Reconocer la importancia del diálogo abierto y racional en las actividades colectivas.",
+            "Dialogar sobre cuestiones y problemas filosóficamente relevantes de forma racional, respetuosa y constructiva.",
+            "Reconocer ámbitos de participación grupal democrática presentes en nuestra realidad cotidiana."
+          ],
+          "aclaraciones_ca": [
+            "Participar en activitat grupals com, per exemple, debats, contrastant i intercanviant idees i practicant una ciutadania activa i democràtica.",
+            "Reconèixer la importància del diàleg obert i racional en les activitats col·lectives.",
+            "Dialogar sobre qüestions i problemes filosòficament rellevants de forma racional, respectuosa i constructiva.",
+            "Reconèixer àmbits de participació grupal democràtica presents en la nostra realitat quotidiana."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Identificar problemas y formular preguntas sobre el fundamento, el valor y el sentido de la realidad y la existencia humana, a partir del análisis y la interpretación de imágenes, máximas, textos breves, audiovisuales, cine, lectura de libros, música, arte y otras formas de expresión filosófica y cultural, para reconocer la radicalidad y la trascendencia de esas cuestiones, así como la necesidad de afrontarlas para desarrollar una vida reflexiva y consciente.",
+      "description_ca": "Identificar problemes i formular preguntes sobre el fonament, el valor i el sentit de la realitat i l'existència humana, a partir de l'anàlisi i la interpretació d’imatges, màximes, texts breus, audiovisuals, cinema, lectura de llibres, música, art i altres formes d'expressió filosòfica i cultural, per reconèixer la radicalitat i la transcendència d'aquestes qüestions, així com la necessitat d'afrontar-les per desenvolupar una vida reflexiva i conscient.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CD1",
+        "CD2",
+        "CD4",
+        "CPSAA1",
+        "CPSAA2",
+        "CPSAA3",
+        "CPSAA4",
+        "CC1",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Reconocer la radicalidad y trascendencia de los problemas filosóficos mediante su reconocimiento y análisis en textos y otros medios de expresión filosófica o más ampliamente cultural.",
+          "text_ca": "Reconèixer la radicalitat i transcendència dels problemes filosòfics mitjançant el seu reconeixement i anàlisi en texts i altres mitjans d’expressió filosòfica o més àmpliament cultural.",
+          "aclaraciones_es": [
+            "Reconocer la radicalidad y trascendencia de los problemas filosóficos de cualquier ámbito de expresión: formales e informales, académicos, literarios, etc.",
+            "Analizar y reformular los problemas filosóficos en textos y otros medios de expresión como el mundo audiovisual o de la literatura.",
+            "Reconocer la vigencia de los problemas filosóficos en relación con el sentido de la realidad y de la existencia humana en los diferentes ámbitos de nuestra sociedad actual.",
+            "Reconocer la vigencia de los problemas filosóficos en relación con el sentido de la realidad y de la existencia humana en el ámbito estético a lo largo de la historia del arte y en la actualidad."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer la radicalitat i transcendència dels problemes filosòfics de qualsevol àmbit d’expressió: formals i informals, acadèmics, literaris, etc.",
+            "Analitzar i reformular els problemes filosòfics en textos i altres mitjans d’expressió com el món audiovisual o la literatura.",
+            "Reconèixer la vigència dels problemes filosòfics en relació al sentit de la realitat i de l’existència humana als diferents àmbits de la nostra societat actual.",
+            "Reconèixer la vigència dels problemes filosòfics en relació al sentit de la realitat i de l’existència humana en l’àmbit estètic al llarg de la història de l’art i de la seva actualitat."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Desarrollar una actitud indagadora, autónoma y activa en el ámbito de la reflexión filosófica, mediante el diseño, la elaboración y la comunicación pública de productos originales, como por ejemplo trabajos de investigación, etc.",
+          "text_ca": "Desenvolupar una actitud indagadora, autònoma i activa en l'àmbit de la reflexió filosòfica, mitjançant el disseny, l'elaboració i la comunicació pública de productes originals, com ara treballs de recerca, etc.",
+          "aclaraciones_es": [
+            "Indagar de forma autónoma y activa en el ámbito de la reflexión filosófica.",
+            "Indagar de forma autónoma y activa en temas de actualidad relacionados con los valores de la ciudadanía activa y democrática.",
+            "Diseñar, elaborar y comunicar públicamente productos originales, como por ejemplo trabajos de investigación, disertaciones o comentarios de texto en ámbitos cercanos a los alumnos y relacionados con valores de la ciudadanía activa y democrática."
+          ],
+          "aclaraciones_ca": [
+            "Indagar de forma autònoma i activa en l’àmbit de la reflexió filosòfica.",
+            "Indagar de forma autònoma i activa en temes d’actualitat relacionats amb els valors de la ciutadania activa i democràtica.",
+            "Dissenyar, elaborar i comunicar públicament productes originals, com ara treballs de recerca, dissertacions o comentaris de text en àmbits propers als alumnes i relacionats amb valors de la ciutadania activa i democràtica."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Reconocer el carácter plural de las concepciones, ideas y argumentos en torno a cada uno de los problemas fundamentales de la filosofía, haciendo un uso teórico de la razón. Esto es, analizar crítica y dialécticamente varias tesis y máximas filosóficamente relevantes y relativas al conocimiento de la realidad, para generar una concepción compleja y no dogmática de estas cuestiones e ideas, promoviendo una actitud abierta, tolerando, con capacidad de consenso y comprometida con la resolución racional y pacífica de los conflictos.",
+      "description_ca": "Reconèixer el caràcter plural de les concepcions, idees i arguments entorn de cadascun dels problemes fonamentals de la filosofia, fent un ús teòric de la raó. Això és, analitzar críticament i dialècticament diverses tesis i màximes filosòficament rellevants i relatives al coneixement de la realitat, per generar una concepció complexa i no dogmàtica d’aquestes qüestions i idees, promovent una actitud oberta, tolerant, amb capacitat de consens i compromesa amb la resolució racional i pacífica dels conflictes.",
+      "descriptores": [
+        "CCL1",
+        "CCL3",
+        "CCL5",
+        "STEM1",
+        "STEM2",
+        "CD1",
+        "CD3",
+        "CPSAA3",
+        "CPSAA4",
+        "CC1",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Generar una concepción compleja y no dogmática de los problemas filosóficos mediante el análisis crítico de tesis filosóficas diferentes y opuestas, que promuevan la comprensión y la necesidad de pensarlas y expresarlas como momentos de un proceso dinámico y siempre abierto de reflexión y diálogo filosófico.",
+          "text_ca": "Generar una concepció complexa i no dogmàtica dels problemes filosòfics mitjançant l'anàlisi crítica de tesis filosòfiques diferents i oposades, que en promoguin la comprensió i la necessitat de pensar-les i expressar-les com a moments d'un procés dinàmic i sempre obert de reflexió i diàleg filosòfic.",
+          "aclaraciones_es": [
+            "Analizar críticamente diferentes tesis en torno a los problemas filosóficos.",
+            "Concebir de forma compleja y no dogmática los problemas filosóficos.",
+            "Reconocer los problemas filosóficos principales de nuestra actualidad y sus ámbitos de reflexión.",
+            "Analizar los principales problemas filosóficos de nuestra actualidad: ética, política, etc."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar críticament diferents tesis entorn als problemes filosòfics.",
+            "Concebre de forma complexa i no dogmàtica els problemes filosòfics.",
+            "Reconèixer els problemes filosòfics principals de la nostra actualitat i els seus àmbits de reflexió.",
+            "Analitzar els principals problemes filosòfics de la nostra actualitat: ètica, política, etc."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Generar una concepción compleja, rigurosa y crítica de la riqueza e influencia del pensamiento filosófico, identificando y analizando las ideas y teorías filosóficas principales en textos o documentos pertenecientes a cualquier ámbito cultural, así como en relación con experiencias, acciones o acontecimientos comunes y de actualidad.",
+          "text_ca": "Generar una concepció complexa, rigorosa i crítica de la riquesa i influència del pensament filosòfic, identificant i analitzant les idees i teories filosòfiques principals a texts o documents pertanyents a qualsevol àmbit cultural, així com en relació amb experiències, accions o esdeveniments comuns i d'actualitat.",
+          "aclaraciones_es": [
+            "Identificar la influencia del pensamiento filosófico en experiencias, acciones o acontecimientos comunes y de actualidad.",
+            "Identificar la influencia de otras corrientes filosóficas actuales fuera de la tradición occidental.",
+            "Analizar la presencia de las principales ideas y teorías filosóficas en textos o documentos de diferentes ámbitos.",
+            "Analizar la presencia de las principales ideas y teorías filosóficas en los acontecimientos históricos próximos a nuestra sociedad."
+          ],
+          "aclaraciones_ca": [
+            "Identificar la influència del pensament filosòfic en experiències, accions o esdeveniments comuns i d’actualitat.",
+            "Identificar la influència d’altres corrents filosòfics actuals fora de la tradició occidental.",
+            "Analitzar la presència de les principals idees i teories filosòfiques en textos o documents de diferents àmbits.",
+            "Analitzar la presència de les principals idees i teories filosòfiques en els esdeveniments històrics propers de la nostra societat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Analizar problemas éticos y políticos mediante la exposición crítica y dialéctica de todas las posiciones filosóficamente pertinentes en la interpretación y resolución de los mismos, para desarrollar el juicio propio y la autonomía moral. Desarrollar la sensibilidad y comprensión crítica del arte y otras manifestaciones con valor estético, para contribuir a la educación que cuide de los sentimientos y la gestión de las emociones estéticas, para generar una actitud reflexiva en cuanto al lenguaje de las imágenes.",
+      "description_ca": "Analitzar problemes ètics i polítics mitjançant l'exposició crítica i dialèctica de totes les posicions filosòficament pertinents en la interpretació i resolució dels mateixos, per desenvolupar el judici propi i l'autonomia moral. Desenvolupar la sensibilitat i comprensió crítica de l'art i altres manifestacions amb valor estètic, per contribuir a l'educació amb cura dels sentiments i la gestió de les emocions estètiques, per generar una actitud reflexiva pel que fa al llenguatge de les imatges.",
+      "descriptores": [
+        "CCL1",
+        "CCL3",
+        "CCL5",
+        "STEM1",
+        "STEM2",
+        "CD1",
+        "CD3",
+        "CPSAA1",
+        "CPSAA2",
+        "CPSAA3",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CE1"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Desarrollar el propio juicio y la autonomía moral mediante el análisis filosófico de problemas éticos y políticos fundamentales, tanto de la historia del pensamiento como de la actualidad, considerando las diferentes posiciones en competición, y elaborando, argumentando, exponiendo y sometiendo el diálogo en las otras tesis al respeto.",
+          "text_ca": "Desenvolupar el propi judici i l’autonomia moral mitjançant l'anàlisi filosòfic de problemes ètics i polítics fonamentals, tant de la història del pensament com de l’actualitat, considerant les diferents posicions en competició, i elaborant, argumentant, exposant i sometent el diàleg a les altres tesis al respecte.",
+          "aclaraciones_es": [
+            "Analizar filosóficamente problemas éticos fundamentales: justicia, igualdad, etc.",
+            "Analizar filosóficamente problemas éticos de actualidad: el cuidado, el transhumanismo, impacto del ser humano en la naturaleza, etc.",
+            "Analizar filosóficamente problemas políticos fundamentales: la crisis de la democracia, el futuro de los sistemas políticos actuales, etc.",
+            "Desarrollar argumentaciones filosóficamente pertinentes en relación con los problemas éticos y políticos fundamentales de la actualidad.",
+            "Investigar las diferentes tesis éticas y políticas actuales: origen, vigencia, etc.",
+            "Argumentar en torno a diferentes posiciones en relación con tesis éticas y políticas."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar filosòficament problemes ètics fonamentals: justícia, igualtat, etc.",
+            "Analitzar filosòficament problemes ètics d’actualitat: la cura, el transhumanisme, impacte de l’ésser humà a la naturalesa, etc.",
+            "Analitzar filosòficament problemes polítics fonamentals: la crisi de la democràcia, el futur dels sistemes polítics actuals, etc.",
+            "Desenvolupar argumentacions filosòficament pertinents en relació als problemes ètics i polítics fonamentals de l’actualitat.",
+            "Investigar les diferents tesis ètiques i polítiques actuals: origen, vigència, etc.",
+            "Argumentar entorn a diferents posicions en relació a tesis ètiques i polítiques."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "3º"
+          ],
+          "text_es": "Generar un equilibrio adecuado entre el aspecto racional y el emotivo en la consideración de los problemas filosóficos, especialmente los referidos al ámbito de la estética, mediante la reflexión expresa en torno a la experiencia artística y el análisis del papel de las imágenes y el lenguaje audiovisual en la cultura contemporánea.",
+          "text_ca": "Generar un equilibri adequat entre l'aspecte racional i l’emotiu en la consideració dels problemes filosòfics, especialment els referits a l'àmbit de l'estètica, mitjançant la reflexió expressa entorn de l'experiència artística i l'anàlisi del paper de les imatges i el llenguatge audiovisual a la cultura contemporània.",
+          "aclaraciones_es": [
+            "Reflexionar en torno al arte y las diferentes actividades y experiencias estéticas.",
+            "Reflexionar en torno a la relación entre la creación artística y los problemas filosóficos fundamentales.",
+            "Analizar el papel de las imágenes y el lenguaje audiovisual en la cultura contemporánea: el arte en nuestra vida cotidiana, el sentimiento estético como básico en el ser humano."
+          ],
+          "aclaraciones_ca": [
+            "Reflexionar entorn de l’art i les diferents activitats i experiències estètiques.",
+            "Reflexionar entorn a la relació entre la creació artística i els problemes filosòfics fonamentals.",
+            "Analitzar el paper de les imatges i el llenguatge audiovisual en la cultura contemporània: l’art a la nostra vida quotidiana, el sentiment estètic com a bàsic a l’ésser humà."
+          ]
+        }
+      ]
+    }
+  ]
+}

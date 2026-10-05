@@ -1,0 +1,241 @@
+{
+  "code": "expresion_artistica",
+  "name_es": "Expresión Artística",
+  "name_ca": "Expressió Artística",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Analizar manifestaciones artísticas, contextualizándolas, describiendo los aspectos esenciales y valorando el proceso de creación y el resultado final, para educar la mirada, alimentar el imaginario, reforzar la confianza y ampliar las posibilidades de disfrute del patrimonio cultural y artístico.",
+      "description_ca": "Analitzar manifestacions artístiques, contextualitzant-les, descrivint-ne els aspectes essencials i valorant-ne el procés de creació i el resultat final, per educar la mirada, alimentar l’imaginari, reforçar la confiança i ampliar les possibilitats de gaudi del patrimoni cultural i artístic.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "CP3",
+        "CD1",
+        "CD2",
+        "CPSAA3",
+        "CC1",
+        "CCEC1",
+        "CCEC2"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar manifestaciones artísticas de diferentes épocas y culturas, contextualizándolas, describiendo sus aspectos esenciales, valorando el proceso de creación y el resultado final, y evidenciando una actitud de apertura, interés y respeto en su recepción.",
+          "text_ca": "Analitzar manifestacions artístiques de diferents èpoques i cultures, contextualitzant-les, descrivint els seus aspectes essencials, valorant el procés de creació i el resultat final, i evidenciant una actitud d’obertura, interès i respecte en la seva recepció.",
+          "aclaraciones_es": [
+            "Reconocer y analizar manifestaciones artísticas de diferentes épocas y culturas.",
+            "Contextualizar y describir los aspectos esenciales de las manifestaciones artísticas.",
+            "Valorar el proceso de creación y el resultado final de las manifestaciones artísticas.",
+            "Evidenciar una actitud abierta, de interés y respeto en la recepción de manifestaciones artísticas."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer i analitzar manifestacions artístiques de diferents èpoques i cultures.",
+            "Contextualitzar i descriure els aspectes essencials de les manifestacions artístiques.",
+            "Valorar el procés de creació i el resultat final de les manifestacions artístiques.",
+            "Evidenciar una actitud oberta, d’interès i respecte en la recepció de manifestacions artístiques."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar críticamente los hábitos, los gustos y los referentes artísticos de diferentes épocas y culturas, reflexionando sobre su evolución y sobre su relación con los del presente.",
+          "text_ca": "Valorar críticament els hàbits, els gusts i els referents artístics de diferents èpoques i cultures, reflexionant sobre la seva evolució i sobre la seva relació amb els del present.",
+          "aclaraciones_es": [
+            "Valorar críticamente los hábitos, los gustos y los referentes artísticos de diferentes épocas y culturas.",
+            "Reflexionar sobre la evolución de las manifestaciones artísticas de diferentes épocas y culturas.",
+            "Relacionar y comparar manifestaciones artísticas del pasado con las del presente."
+          ],
+          "aclaraciones_ca": [
+            "Valorar críticament els hàbits, els gusts i els referents artístics de diferents èpoques i cultures.",
+            "Reflexionar sobre l’evolució de les manifestacions artístiques de diferents èpoques i cultures.",
+            "Relacionar i comparar manifestacions artístiques del passat amb les del present."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Explorar las posibilidades expresivas de diferentes técnicas grafico-plásticas, empleando distintos medios, soportes, herramientas y lenguajes, para incorporarlas al repertorio personal de recursos y desarrollar el criterio de selección de las más adecuadas a cada necesidad o intención.",
+      "description_ca": "Explorar les possibilitats expressives de diferents tècniques graficoplàstiques, emprant diferents mitjans, suports, eines i llenguatges, incorporar-les al repertori personal de recursos i desenvolupar el criteri de selecció de les més adequades a cada necessitat o intenció.",
+      "descriptores": [
+        "CD2",
+        "CPSAA1",
+        "CC1",
+        "CC3",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Participar, con iniciativa, confianza y creatividad, en la exploración de diferentes técnicas gráfico-plásticas, empleando herramientas, medios, soportes y lenguajes.",
+          "text_ca": "Participar, amb iniciativa, confiança i creativitat, en l’exploració de diferents tècniques gràficoplàstiques, emprant eines, mitjans, suports i llenguatges.",
+          "aclaraciones_es": [
+            "Participar, con iniciativa, confianza y creatividad, en la exploración de diferentes técnicas gráficas y plásticas.",
+            "Explorar las posibilidades expresivas de diferentes técnicas gráficas y plásticas.",
+            "Emplear diversidad de herramientas, medios, soportes y lenguajes, incorporarlas al repertorio personal de recursos."
+          ],
+          "aclaraciones_ca": [
+            "Participar, amb iniciativa, confiança i creativitat, en l’exploració de diferents tècniques gràfiques i plàstiques.",
+            "Explorar les possibilitats expressives de diferents tècniques gràfiques i plàstiques.",
+            "Emprar diversitat d’eines, mitjans, suports i llenguatges, incorporar-les al repertori personal de recursos."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Elaborar producciones gráfico-plásticas de forma creativa, determinando las intenciones expresivas y seleccionando con corrección las herramientas, medios, soportes y lenguajes más adecuados de entre aquellos que conforman el repertorio personal de recursos.",
+          "text_ca": "Elaborar produccions gràficoplàstiques de manera creativa, determinant-ne les intencions expressives i seleccionant amb correcció les eines, mitjans, suports i llenguatges més adequats d’entre aquells que conformen el repertori personal de recursos.",
+          "aclaraciones_es": [
+            "Elaborar producciones gráficas y plásticas de manera creativa.",
+            "Determinar las intenciones expresivas en función del objetivo propuesto.",
+            "Seleccionar con corrección las herramientas, medios, soportes y lenguajes más adecuados a cada necesidad o intención."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar produccions gràfiques i plàstiques de manera creativa.",
+            "Determinar les intencions expressives en funció de l’objectiu proposat.",
+            "Seleccionar amb correcció les eines, mitjans, suports i llenguatges més adequats a cada necessitat o intenció."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Explorar las posibilidades expresivas de diferentes medios, técnicas y formatos audiovisuales, decodificando sus lenguajes, identificando las herramientas y distinguiendo sus fines, para incorporarlos al repertorio personal de recursos y desarrollar el criterio de selección de los más adecuados a cada necesidad o intención.",
+      "description_ca": "Explorar les possibilitats expressives de diferents mitjans, tècniques i formats audiovisuals, mitjançant la descodificació de llenguatges, la identificació de les eines i la distinció de les seves finalitats, per incorporar-les al repertori personal de recursos i desenvolupar el criteri de selecció de les més adequades a cada necessitat o intenció.",
+      "descriptores": [
+        "CD5",
+        "CPSAA1",
+        "CPSAA3",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Participar, con iniciativa, confianza y creatividad, en la exploración de diferentes medios, técnicas y formatos audiovisuales, descodificando lenguajes, identificando herramientas y distinguiendo sus finalidades.",
+          "text_ca": "Participar, amb iniciativa, confiança i creativitat, en l’exploració de diferents mitjans, tècniques i formats audiovisuals, descodificant llenguatges, identificant les eines i distingint les seves finalitats.",
+          "aclaraciones_es": [
+            "Participar, con iniciativa, confianza y creatividad, en la exploración de diferentes medios, técnicas y formatos audiovisuales.",
+            "Comprender y valorar las posibilidades creativas y expresivas del lenguaje audiovisual e incorporarlo al repertorio personal de recursos.",
+            "Identificar y seleccionar las herramientas más adecuadas según la finalidad."
+          ],
+          "aclaraciones_ca": [
+            "Participar, amb iniciativa, confiança i creativitat, en l’exploració de diferents mitjans, tècniques i formats audiovisuals.",
+            "Comprendre i valorar les possibilitats creatives i expressives del llenguatge audiovisual i incorporar-lo al repertori personal de recursos.",
+            "Identificar i seleccionar les eines més adequades segons la seva finalitat."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Realizar producciones audiovisuales, individuales o colaborativas, asumiendo diferentes funciones; incorporando el uso de las tecnologías digitales con una intención expresiva; buscando un resultado final ajustado en al proyecto preparado previamente; y seleccionando y empleando, con corrección y de manera creativa, las herramientas y medios disponibles más adecuados.",
+          "text_ca": "Realitzar produccions audiovisuals, individuals o col·laboratives, assumint diferents funcions; incorporant l’ús de les tecnologies digitals amb una intenció expressiva; cercant un resultat final ajustat al projecte preparat prèviament; i seleccionant i emprant, amb correcció i de manera creativa, les eines i mitjans disponibles més adequats.",
+          "aclaraciones_es": [
+            "Realizar producciones audiovisuales individuales o colaborativas, con iniciativa y una actitud cooperativa y respetuosa, asumiendo diferentes funciones.",
+            "Incorporar el uso de las tecnologías digitales con una intención expresiva y un uso ético.",
+            "Buscar un resultado final ajustado en el proyecto preparado previamente.",
+            "Seleccionar y emplear, con corrección y de forma creativa, las herramientas y medios disponibles más adecuados."
+          ],
+          "aclaraciones_ca": [
+            "Realitzar produccions audiovisuals individuals o col·laboratives, amb iniciativa i una actitud cooperativa i respectuosa, assumint diferents funcions.",
+            "Incorporar l’ús de les tecnologies digitals amb una intenció expressiva i un ús ètic.",
+            "Cercar un resultat final ajustat al projecte preparat prèviament.",
+            "Seleccionar i emprar, amb correcció i de manera creativa, les eines i mitjans disponibles més adequats."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Crear producciones artísticas, individuales o grupales, realizadas con diferentes técnicas y herramientas, incluido el propio cuerpo, a partir de un motivo o intención previos, adaptando el diseño y el proceso a las necesidades e indicaciones de realización y teniendo en cuenta las características del público destinatario, para compartirlas y valorar las oportunidades de desarrollo personal, social, académico o profesional que pueden derivarse de esta actividad.",
+      "description_ca": "Crear produccions artístiques, individuals o grupals, realitzades amb diferents tècniques i eines, inclòs el propi cos, a partir d’un motiu o intenció previs, adaptant-ne el disseny i el procés a les necessitats i indicacions de realització i tenint en compte les característiques del públic destinatari, per compartir-les i valorar les oportunitats de desenvolupament personal, social, acadèmic o professional que poden derivar-se d’aquesta activitat.",
+      "descriptores": [
+        "CCL1",
+        "STEM3",
+        "CD3",
+        "CPSAA3",
+        "CPSAA5",
+        "CE3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Crear un producto artístico individual o grupal, de forma colaborativa y abierta, diseñando las fases del proceso y seleccionando las técnicas y herramientas más adecuadas para conseguir un resultado adaptado a una intención y a un público determinados.",
+          "text_ca": "Crear un producte artístic individual o grupal, de manera col·laborativa i oberta, dissenyant les fases del procés i seleccionant les tècniques i eines més adequades per aconseguir un resultat adaptat a una intenció i a un públic determinats.",
+          "aclaraciones_es": [
+            "Crear un producto artístico individual o grupal, de forma colaborativa y abierta.",
+            "Diseñar un producto respetando las fases del proceso de creación, realización y seguimiento del proyecto desde el inicio hasta el resultado final.",
+            "Adaptar el diseño a las intenciones y necesidades del público destinatario.",
+            "Seleccionar las técnicas y herramientas más adecuadas a la propuesta."
+          ],
+          "aclaraciones_ca": [
+            "Crear un producte artístic individual o grupal, de manera col·laborativa i oberta.",
+            "Dissenyar un producte respectant les fases del procés de creació, realització i seguiment del projecte des de l’inici fins al resultat final.",
+            "Adaptar el disseny a les intencions i necessitats del públic destinatari.",
+            "Seleccionar les tècniques i eines més adequades a la proposta."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Exponer el resultado final de la creación de un producto artístico, individual o grupal, poniendo en común y valorando críticamente el desarrollo de su elaboración, las dificultades encontradas, los progresos realizados y los logros alcanzados.",
+          "text_ca": "Exposar el resultat final de la creació d’un producte artístic, individual o grupal, posant en comú i valorant críticament el desenvolupament de la seva elaboració, les dificultats trobades, els progressos realitzats i els fites assolides.",
+          "aclaraciones_es": [
+            "Exponer el resultado final de un producto artístico, individual o grupal, de forma colaborativa y respetuosa.",
+            "Valorar críticamente el proceso de desarrollo y elaboración del producto artístico: dificultades encontradas, progresos, logros alcanzados, etc. (retroalimentación, retroacción o feedback)."
+          ],
+          "aclaraciones_ca": [
+            "Exposar el resultat final d’un producte artístic, individual o grupal, de manera col·laborativa i respectuosa.",
+            "Valorar críticament el procés de desenvolupament i elaboració del producte artístic: dificultats trobades, progressos, assoliments aconseguits, etc. (retroalimentació, retroacció o feedback)."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar oportunidades de desarrollo personal, social, académico o profesional relacionadas con el ámbito artístico, comprendiendo su valor añadido y expresando la opinión personal de forma razonada y respetuosa.",
+          "text_ca": "Identificar oportunitats de desenvolupament personal, social, acadèmic o professional relacionades amb l’àmbit artístic, comprenent el seu valor afegit i expressant l’opinió personal de forma raonada i respectuosa.",
+          "aclaraciones_es": [
+            "Identificar y valorar las oportunidades de desarrollo personal, social, académico o profesional que pueden derivarse de las actividades artísticas.",
+            "Ser críticos y expresar la opinión personal de forma razonada y respetuosa."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i valorar les oportunitats de desenvolupament personal, social, acadèmic o professional que poden derivar-se de les activitats artístiques.",
+            "Ser crítics i expressar l’opinió personal de forma raonada i respectuosa."
+          ]
+        }
+      ]
+    }
+  ]
+}

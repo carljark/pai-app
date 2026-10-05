@@ -9,6 +9,7 @@ import { NotificationsFacade } from './features/notifications/services/notificat
 import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
+import { NivelesService } from './services/niveles.service';
 import { findProjectsWithSameSelection } from './features/projects/utils/selection-match';
 import {
   Project,
@@ -27,6 +28,7 @@ export class AppFacade {
   paiService = inject(PaiService);
   auth = inject(AuthFacade);
   telemetry = inject(TelemetryService);
+  niveles = inject(NivelesService);
 
   errorTitle = signal<string>('Ha ocurrido un error');
   errorMessage = signal<string>('');
@@ -55,6 +57,7 @@ export class AppFacade {
 
   constructor() {
     this.initAuthEffect();
+    this.initEsoCurriculumEffect();
     this.initViewEffect();
     this.initNotificationEffect();
     this.initHistoryRefreshEffect();
@@ -69,9 +72,24 @@ export class AppFacade {
         this.telemetry.startTracking();
         this.curriculum.loadRas(lang);
         this.curriculum.loadCes(lang);
-        untracked(() => this.projects.loadHistory());
+        untracked(() => {
+          this.niveles.load();
+          this.projects.loadHistory();
+        });
       } else {
         this.telemetry.stopTracking();
+      }
+    });
+  }
+
+  /** Las CE de la ESO dependen del curso: se recargan al cambiar de nivel, curso o idioma. */
+  private initEsoCurriculumEffect(): void {
+    effect(() => {
+      const user = this.auth.currentUser();
+      const lang = this.layout.language();
+      const curso = this.curriculum.curso();
+      if (user && this.curriculum.tipoNivel() === 'ESO_ORDINARIA') {
+        untracked(() => this.curriculum.loadEsoCes(lang, curso));
       }
     });
   }

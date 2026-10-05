@@ -1,0 +1,347 @@
+{
+  "code": "latin",
+  "name_es": "Latín",
+  "name_ca": "Llatí",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Valorar el papel de la civilización latina en el origen de la identidad europea, comparando y reconociendo las semejanzas y diferencias entre lenguas y culturas, para analizar críticamente el presente.",
+      "description_ca": "Valorar el paper de la civilització llatina en l’origen de la identitat europea, comparant i reconeixent les semblances i diferències entre llengües i cultures, per analitzar críticament el present.",
+      "descriptores": [
+        "CCL2",
+        "CP2",
+        "CP3",
+        "CC1",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Describir el significado de productos culturales del presente, en el contexto de los desarrollos culturales en Europa, comparando las semejanzas y diferencias con la antigüedad latina.",
+          "text_ca": "Descriure el significat de productes culturals del present, en el context dels desenvolupaments culturals a Europa, comparant les semblances i diferències amb l’antiguitat llatina.",
+          "aclaraciones_es": [
+            "Describir el significado de productos culturales actuales dentro del ámbito europeo y su relación con la Roma antigua.",
+            "Reconocer las semejanzas y diferencias entre la Europa actual y la antigüedad romana."
+          ],
+          "aclaraciones_ca": [
+            "Descriure el significat de productes culturals actuals dins l’àmbit europeu i la seva relació amb la Roma antiga.",
+            "Reconèixer les semblances i diferències entre l’Europa actual i l’antiguitat romana."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar de manera crítica las formas de vida, costumbres y actitudes de la sociedad romana en comparación con las de nuestras sociedades a partir del contenido de fuentes latinas en diferentes soportes.",
+          "text_ca": "Valorar de manera crítica les formes de vida, costums i actituds de la societat romana en comparació amb els de les nostres societats a partir del contingut de fonts llatines en diferents suports.",
+          "aclaraciones_es": [
+            "Entender los rasgos que caracterizan las maneras de vida, costumbres y actitudes de la sociedad romana mediante la lectura y análisis de fuentes antiguas en diferentes soportes.",
+            "Analizar los rasgos principales de la sociedad romana comparándolos con los de nuestras sociedades.",
+            "Valorar, con espíritu crítico, el modus vivendi y los rasgos de la sociedad romana en comparación con nuestra sociedad."
+          ],
+          "aclaraciones_ca": [
+            "Entendre els trets que caracteritzen les maneres de vida, costums i actituds de la societat romana mitjançant la lectura i anàlisi de fonts antigues en diferents suports.",
+            "Analitzar els trets principals de la societat romana comparant-los amb els de les nostres societats.",
+            "Valorar, amb esperit crític, el modus vivendi i els trets de la societat romana en comparació amb la nostra societat."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar los periodos de la historia de Roma, los acontecimientos y personajes, así como los aspectos de la civilización romana en su contexto histórico, relacionando los datos con referentes actuales y aplicando los conocimientos adquiridos.",
+          "text_ca": "Identificar els períodes de la història de Roma, els esdeveniments i personatges, com també els aspectes de la civilització romana en el seu context històric, relacionant les dades amb referents actuals i aplicant els coneixements adquirits.",
+          "aclaraciones_es": [
+            "Identificar los principales periodos de la historia de Roma relacionándolos con los principales hechos y leyendas que se acontecen.",
+            "Explicar los principales personajes legendarios e históricos de la antigua Roma relacionándolos con el periodo que vivieron.",
+            "Reconocer la huella de diferentes aspectos de la civilización romana en referentes actuales."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els principals períodes de la història de Roma relacionant-los amb els principals fets i llegendes que s’hi esdevenen.",
+            "Explicar els principals personatges llegendaris i històrics de l’antiga Roma relacionant-los amb el període que varen viure.",
+            "Reconèixer la petjada de diferents aspectes de la civilització romana en referents actuals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Conocer los aspectos básicos de la lengua latina, comparándola con las lenguas de enseñanza y con otras lenguas del repertorio individual de los alumnos, para valorar los rasgos comunes y apreciar la diversidad lingüística como muestra de riqueza cultural.",
+      "description_ca": "Conèixer els aspectes bàsics de la llengua llatina, comparant-la amb les llengües d’ensenyament i amb altres llengües del repertori individual dels alumnes, per valorar els trets comuns i apreciar la diversitat lingüística com a mostra de riquesa cultural.",
+      "descriptores": [
+        "CP2",
+        "CP3",
+        "STEM1",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar críticamente y adecuarse a la diversidad lingüística y cultural al que da origen el latín, identificando y explicando semejanzas y diferencias entre los elementos lingüísticos del entorno, relacionándolos con los de la propia cultura y desarrollando una cultura compartida y una ciudadanía comprometida con los valores democráticos.",
+          "text_ca": "Valorar críticament i adequar-se a la diversitat lingüística i cultural a què dona origen el llatí, identificant i explicant semblances i diferències entre els elements lingüístics de l’entorn, relacionant-los amb els de la pròpia cultura i desenvolupant una cultura compartida i una ciutadania compromesa amb els valors democràtics.",
+          "aclaraciones_es": [
+            "Reconocer y valorar la diversidad lingüística y cultural que proviene del latín, identificando y explicando semejanza y diferencias entre las lenguas modernas conocidas y la propia cultura.",
+            "Desarrollar un compromiso con los valores democráticos."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer i valorar la diversitat lingüística i cultural que prové del llatí, identificant i explicant semblances i diferències entre les llengües modernes conegudes i la pròpia cultura.",
+            "Desenvolupar un compromís amb els valors democràtics."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Inferir significados de términos latinos aplicando los conocimientos léxicos y fonéticos de otras lenguas del repertorio individual.",
+          "text_ca": "Inferir significats de termes llatins aplicant els coneixements lèxics i fonètics d’altres llengües del repertori individual.",
+          "aclaraciones_es": [
+            "Deducir el significado de palabras latinas utilizando los conocimientos ya adquiridos y las lenguas conocidas por los alumnos."
+          ],
+          "aclaraciones_ca": [
+            "Deduir el significat de paraules llatines utilitzant els coneixements ja adquirits i les llengües conegudes pels alumnes."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Ampliar el caudal léxico y mejorar la expresión oral y escrita, incorporando latinismos y locuciones usuales de origen latino de manera coherente.",
+          "text_ca": "Ampliar el cabal lèxic i millorar l’expressió oral i escrita, incorporant llatinismes i locucions usuals d’origen llatí de manera coherent.",
+          "aclaraciones_es": [
+            "Ampliar el vocabulario y mejorar la expresión oral y escrita, incorporando latinismos y locuciones latinas."
+          ],
+          "aclaraciones_ca": [
+            "Ampliar el vocabulari i millorar l’expressió oral i escrita, incorporant llatinismes i locucions llatines."
+          ]
+        },
+        {
+          "id": "2.4",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Producir definiciones etimológicas de términos cotidianos, científicos y técnicos, reconociendo los elementos latinos en diferentes contextos lingüísticos y estableciendo, si procede, la relación semántica entre un término patrimonial y un cultismo.",
+          "text_ca": "Produir definicions etimològiques de termes quotidians, científics i tècnics, reconeixent els elements llatins en diferents contexts lingüístics i establint, si escau, la relació semàntica entre un terme patrimonial i un cultisme.",
+          "aclaraciones_es": [
+            "Definir etimológicamente palabras de uso común, científicas y técnicas, identificando las raíces latinas en cultismos y palabras patrimoniales.",
+            "Identificar y analizar la relación semántica entre palabras de una misma raíz latina que han evolucionado por vías diferentes, dobletes."
+          ],
+          "aclaraciones_ca": [
+            "Definir etimològicament paraules d’ús comú, científiques i tècniques, identificant les arrels llatines en cultismes i mots patrimonials.",
+            "Identificar y analitzar la relació semàntica entre paraules d’una mateixa arrel llatina que han evolucionat en vies diferents, doblets."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Leer e interpretar textos latinos, asumiendo la aproximación a los textos como un proceso dinámico y tomando conciencia de los conocimientos y experiencias propias, para identificar su carácter clásico y fundamental.",
+      "description_ca": "Llegir i interpretar texts llatins, assumint l’aproximació als texts com un procés dinàmic i prenent consciència dels coneixements i experiències pròpies, per identificar el seu caràcter clàssic i fonamental.",
+      "descriptores": [
+        "CCL2",
+        "CP1",
+        "CP2",
+        "STEM1",
+        "CPSAA4",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Explicar de manera oral, escrita o multimodal, el carácter clásico y humanista de las varias manifestaciones literarias y artísticas de la civilización latina utilizando un vocabulario correcto y una expresión adecuada.",
+          "text_ca": "Explicar de manera oral, escrita o multimodal, el caràcter clàssic i humanista de les diverses manifestacions literàries i artístiques de la civilització llatina utilitzant un vocabulari correcte i una expressió adequada.",
+          "aclaraciones_es": [
+            "Explicar, oralmente y/o por escrito, por qué una obra artística o literaria ha acontecido clásica (su perdurabilidad, influencia en la cultura occidental, valores universales) y fundamental (su importancia en la historia literaria y cultural), utilizando un vocabulario correcto y una expresión adecuada."
+          ],
+          "aclaraciones_ca": [
+            "Explicar, oralment i/o per escrit, perquè una obra artística o literària ha esdevingut clàssica (la seva perdurabilitat, influència en la cultura occidental, valors universals) i fonamental (la seva importància en la història literària i cultural), utilitzant un vocabulari correcte i una expressió adequada."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reconocer el sentido global y las ideas principales y secundarias de un texto, contextualizándolo e identificando las referencias históricas, sociales, políticas o religiosas que se mencionan, y sirviéndose de conocimientos sobre personajes y acontecimientos históricos ya estudiados.",
+          "text_ca": "Reconèixer el sentit global i les idees principals i secundàries d’un text, contextualitzant-lo i identificant les referències històriques, socials, polítiques o religioses que s’hi esmenten, i servint-se de coneixements sobre personatges i esdeveniments històrics ja estudiats.",
+          "aclaraciones_es": [
+            "Identificar el sentido general y las ideas principales y secundarias de un texto, contextualizándolo en su momento histórico y reconociendo referencias sociales, políticas o religiosas con la ayuda de los conocimientos previos sobre personajes y acontecimientos históricos."
+          ],
+          "aclaraciones_ca": [
+            "Identificar el sentit general i les idees principals i secundàries d’un text, contextualitzant-lo en el seu moment històric i reconeixent referències socials, polítiques o religioses amb l’ajuda dels coneixements previs sobre personatges i esdeveniments històrics."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Interpretar de manera crítica el contenido de textos latinos de dificultad adecuada, atendido el contexto en el cual se produjeron, conectándolos con la experiencia propia y valorando como contribuyen a entender las maneras de vida, costumbres y actitudes de nuestra sociedad.",
+          "text_ca": "Interpretar de manera crítica el contingut de texts llatins de dificultat adequada, atès el context en el qual es van produir, connectant-los amb l’experiència pròpia i valorant com contribueixen a entendre les maneres de vida, costums i actituds de la nostra societat.",
+          "aclaraciones_es": [
+            "Interpretar un texto latino de dificultad adecuada, situándolo en su contexto histórico y conectándolo con la experiencia propia, reflexionando sobre la influencia del mundo clásico en la sociedad contemporánea."
+          ],
+          "aclaraciones_ca": [
+            "Interpretar un text llatí de dificultat adequada, situant-lo en el seu context històric i connectant-lo amb l’experiència pròpia, reflexionant sobre la influència del món clàssic en la societat contemporània."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Comprender textos originales latinos, traduciendo del latín a la lengua de enseñanza y desarrollando estrategias de acceso al significado de un enunciado sencillo en lengua latina, para conseguir y justificar la traducción propia de un pasaje.",
+      "description_ca": "Comprendre texts originals llatins, traduint del llatí a la llengua d’ensenyament i desenvolupant estratègies d’accés al significat d’un enunciat senzill en llengua llatina, per aconseguir i justificar la traducció pròpia d’un passatge.",
+      "descriptores": [
+        "CCL2",
+        "CP2",
+        "CP3",
+        "CD2",
+        "STEM1"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar los aspectos morfológicos, sintácticos y léxicos elementales de la lengua latina, identificándolos y comparándolos con los de la lengua familiar.",
+          "text_ca": "Analitzar els aspectes morfològics, sintàctics i lèxics elementals de la llengua llatina, identificant-los i comparant-los amb els de la llengua familiar.",
+          "aclaraciones_es": [
+            "Analizar los aspectos morfológicos, sintácticos y léxicos de las unidades elementales de la lengua latina.",
+            "Identificar los aspectos morfológicos, sintácticos y léxicos elementales en textos breves y sencillos en lengua latina.",
+            "Comparar los aspectos morfológicos, sintácticos y léxicos elementales del latín con los de la lengua de enseñanza del alumno."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar els aspectes morfològics, sintàctics i lèxics de les unitats elementals de la llengua llatina.",
+            "Identificar els aspectes morfològics, sintàctics i lèxics elementals en texts breus i senzills en llengua llatina.",
+            "Comparar els aspectes morfològics, sintàctics i lèxics elementals del llatí amb els de la llengua de l’ensenyament de l’alumne."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Traducir textos breves y sencillos con términos adecuados y expresión correcta en la lengua de enseñanza, justificando la traducción y manifestando la correspondencia entre el análisis y la versión realizada.",
+          "text_ca": "Traduir texts breus i senzills amb termes adequats i expressió correcta en la llengua d’ensenyament, justificant la traducció i manifestant la correspondència entre l’anàlisi i la versió realitzada.",
+          "aclaraciones_es": [
+            "Realizar traducciones a la lengua de la enseñanza del alumno a partir de textos breves y sencillos en lengua latina.",
+            "Realizar las traducciones usando términos adecuados, corrección ortográfica y expresiva.",
+            "Ser consciente de la correspondencia que hay entre el análisis morfológico, sintáctico y léxico de un texto y su traducción.",
+            "Justificar la traducción propia mediante la correspondencia entre el análisis y la versión realizadas."
+          ],
+          "aclaraciones_ca": [
+            "Realitzar traduccions a la llengua de l’ensenyament de l’alumne a partir de texts breus i senzills en llengua llatina.",
+            "Realitzar les traduccions amb termes adequats, correcció ortogràfica i expressiva.",
+            "Ser conscient de la correspondència que hi ha entre l’anàlisi morfològica, sintàctica i lèxica d’un text i la seva traducció.",
+            "Justificar la traducció pròpia mitjançant la correspondència entre l’anàlisi i la versió realitzades."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Producir mediante retroversión de oraciones simples utilizando las estructuras propias de la lengua latina.",
+          "text_ca": "Produir mitjançant retroversió d’oracions simples utilitzant les estructures pròpies de la llengua llatina.",
+          "aclaraciones_es": [
+            "Producir oraciones simples en lengua latina de forma gramatica, morfológica, sintáctica y léxicamente correcta."
+          ],
+          "aclaraciones_ca": [
+            "Produir oracions simples en llengua llatina correctes gramaticalment, morfològica, sintàctica i lèxica."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Descubrir, conocer y valorar el patrimonio cultural, arqueológico y artístico romano, apreciándolo y reconociéndolo como producto de la creación humana y como testimonio de la historia, para identificar las fuentes de inspiración y distinguir los procesos de construcción, preservación, conservación y restauración, así como para garantizar su sostenibilidad.",
+      "description_ca": "Descobrir, conèixer i valorar el patrimoni cultural, arqueològic i artístic romà, apreciant- lo i reconeixent-lo com a producte de la creació humana i com a testimoniatge de la història, per identificar les fonts d’inspiració i distingir els processos de construcció, preservació, conservació i restauració, com també per garantir la seva sostenibilitat.",
+      "descriptores": [
+        "CP3",
+        "CD1",
+        "CD3",
+        "CC1",
+        "CC4",
+        "CCEC1",
+        "CCEC2"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Explicar los elementos de la civilización latina, especialmente los relacionados con la mitología clásica, identificándolos como fuente de inspiración de manifestaciones literarias y artísticas.",
+          "text_ca": "Explicar els elements de la civilització llatina, especialment els relacionats amb la mitologia clàssica, identificant-los com a font d’inspiració de manifestacions literàries i artístiques.",
+          "aclaraciones_es": [
+            "Explicar los rasgos característicos de la civilización romana.",
+            "Identificar y explicar la iconografía grecorromana en obras artísticas de disciplinas diversas a lo largo de la tradición clásica.",
+            "Identificar y explicar los principales elementos de la literatura latina a lo largo de la tradición clásica."
+          ],
+          "aclaraciones_ca": [
+            "Explicar els trets característics de la civilització romana.",
+            "Identificar i explicar la iconografia grecoromana en obres artístiques de disciplines diverses al llarg de la tradició clàssica.",
+            "Identificar i explicar els principals elements de la literatura llatina al llarg de la tradició clàssica."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reconocer las huellas de la romanización en el patrimonio cultural y arqueológico del entorno, identificando los procesos de preservación, conservación y restauración como un aspecto fundamental de una ciudadanía comprometida con la sostenibilidad ambiental y el cuidado de su legado.",
+          "text_ca": "Reconèixer les petjades de la romanització en el patrimoni cultural i arqueològic de l’entorn, identificant els processos de preservació, conservació i restauració com un aspecte fonamental d’una ciutadania compromesa amb la sostenibilitat ambiental i la cura del seu llegat.",
+          "aclaraciones_es": [
+            "Explicar el proceso de romanización, especialmente en las Illes Balears.",
+            "Identificar el patrimonio cultural y arqueológico del entorno de los alumnos y los procesos de preservación, conservación y restauración.",
+            "Reconocer el legado material e inmaterial a los entornos de los alumnos y argumentar la relevancia de su cuidado y protección."
+          ],
+          "aclaraciones_ca": [
+            "Explicar el procés de romanització, especialment a les Illes Balears.",
+            "Identificar el patrimoni cultural i arqueològic de l’entorn dels alumnes i els processos de preservació, conservació i restauració.",
+            "Reconèixer el llegat material i immaterial als entorns dels alumnes i argumentar la rellevància de la seva cura i protecció."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Exponer de manera oral, escrita o multimodal las conclusiones obtenidas a partir de la investigación, individual o colectiva, del legado material e inmaterial de la civilización romana y su pervivencia en el presente a través de soportes analógicos y digitales, seleccionando información, contrastándola y organizándola a partir de criterios de validez, calidad y fiabilidad.",
+          "text_ca": "Exposar de manera oral, escrita o multimodal les conclusions obtingudes a partir de la recerca, individual o col·lectiva, del llegat material i immaterial de la civilització romana i la seva pervivència en el present a través de suports analògics i digitals, seleccionant informació, contrastant-la i organitzant-la a partir de criteris de validesa, qualitat i fiabilitat.",
+          "aclaraciones_es": [
+            "Investigar colectivamente o individual el legado material e inmaterial de la civilización romana.",
+            "Exponer los resultados y conclusiones de la investigación con soportes y medios diversos: de manera oral, escrita o multimodal.",
+            "Seleccionar la información de fuentes adecuadas, contrastándola y organizándola a partir de criterios de validez, calidad y fiabilidad, y reconocer la autoría."
+          ],
+          "aclaraciones_ca": [
+            "Investigar col·lectivament o individual el llegat material i immaterial de la civilització romana.",
+            "Exposar els resultats i conclusions de la recerca amb suports i mitjans diversos: de manera oral, escrita o multimodal.",
+            "Seleccionar la informació de fonts adequades, contrastant-la i organitzant-la a partir de criteris de validesa, qualitat i fiabilitat, i reconèixer-ne l’autoria."
+          ]
+        }
+      ]
+    }
+  ]
+}

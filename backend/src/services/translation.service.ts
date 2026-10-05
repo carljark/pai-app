@@ -2,6 +2,7 @@ import { RA } from '../models/RA';
 import { CE } from '../models/CE';
 import { CONTENT_LANGUAGES, type ContentLanguage } from '../models/Project';
 import { generateAiContentWithFallback } from './ai.service';
+import { ESO_ORDINARIA, parseEsoSelection } from './eso-curriculum.service';
 
 /** Tamaño máximo (caracteres) de cada sección enviada a la IA. */
 export const MAX_TRANSLATION_SECTION_CHARS = 6000;
@@ -85,15 +86,25 @@ type GlossaryDoc = Record<string, unknown>;
 
 const fieldFor = (language: ContentLanguage, base: string) => `${base}_${language === 'catalan' ? 'ca' : 'es'}`;
 
-/** Pares "origen → destino" de un documento (descripción y nombre de módulo). */
+/** Pares "origen → destino" de un documento (descripción y nombre de módulo o materia). */
 const glossaryPairs = (doc: GlossaryDoc, source: ContentLanguage, target: ContentLanguage): string[] =>
-  ['description', 'module'].flatMap(base => {
+  ['description', 'module', 'subject'].flatMap(base => {
     const from = doc[fieldFor(source, base)];
     const to = doc[fieldFor(target, base)];
     return typeof from === 'string' && typeof to === 'string' && from && to && from !== to
       ? [`- "${from}" → "${to}"`]
       : [];
   });
+
+/** CE de la ESO ordinaria seleccionadas como «Materia · CEn. Descripción». */
+const findEsoGlossaryCes = async (selections: string[]) => {
+  const parsed = selections.map(parseEsoSelection).filter(p => p !== null);
+  if (parsed.length === 0) return [];
+  return CE.find({
+    tipoNivel: ESO_ORDINARIA,
+    $or: parsed.map(p => ({ ce_num: p.ceNum, $or: [{ subject_es: p.subject }, { subject_ca: p.subject }] }))
+  }).lean();
+};
 
 /**
  * Glosario con las denominaciones oficiales (BOE / CAIB) de los RAs y CEs del proyecto,
@@ -106,8 +117,10 @@ export const buildCurriculumGlossary = async (
 ): Promise<string> => {
   if (selections.length === 0) return '';
   const query = { $or: [{ description: { $in: selections } }, { description_es: { $in: selections } }, { description_ca: { $in: selections } }] };
-  const [ras, ces] = await Promise.all([RA.find(query).lean(), CE.find({ $or: query.$or.slice(1) }).lean()]);
-  const pairs = [...ras, ...ces].flatMap(doc => glossaryPairs(doc as GlossaryDoc, source, target));
+  const [ras, ces, esoCes] = await Promise.all([
+    RA.find(query).lean(), CE.find({ $or: query.$or.slice(1) }).lean(), findEsoGlossaryCes(selections)
+  ]);
+  const pairs = [...ras, ...ces, ...esoCes].flatMap(doc => glossaryPairs(doc as GlossaryDoc, source, target));
   return Array.from(new Set(pairs)).slice(0, MAX_GLOSSARY_ENTRIES).join('\n');
 };
 

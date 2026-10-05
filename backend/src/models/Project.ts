@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { NIVEL_IDS } from '../data/niveles';
 
 export const CONTENT_LANGUAGES = ['castellano', 'catalan'] as const;
 export type ContentLanguage = (typeof CONTENT_LANGUAGES)[number];
@@ -23,7 +24,8 @@ const ProjectSchema = new mongoose.Schema({
   modules: [String],
   ras: [String],
   methodology: String,
-  tipoNivel: { type: String, enum: ['FP_BASICA', 'DIVERSIFICACION_CURRICULAR', 'CFGM_ESTETICA', 'CFGM_PELUQUERIA', 'CFGS_EDUCACION_INFANTIL'], default: 'FP_BASICA' },
+  /** Nivel educativo; los valores válidos salen del catálogo `data/niveles.ts`. */
+  tipoNivel: { type: String, enum: NIVEL_IDS as string[], default: 'FP_BASICA' },
   courseLevel: String,
   status: { type: String, enum: ['en_cola', 'generando', 'borrador', 'publicado', 'error'], default: 'en_cola' },
   generatedContent: {

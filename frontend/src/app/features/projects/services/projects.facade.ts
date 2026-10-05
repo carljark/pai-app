@@ -360,10 +360,10 @@ export class ProjectsFacade {
 
   /** Resuelve los módulos implicados según tipo de nivel y RAs seleccionados */
   private getInvolvedModules(tipoNivel: ProjectType, selectedRas: string[]): string[] {
-    if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') {
+    if (tipoNivel === 'DIVERSIFICACION_CURRICULAR' || tipoNivel === 'ESO_ORDINARIA') {
       const selected = this.curriculumFacade
-        .ces()
-        .filter((ce) => selectedRas.includes(ce.description));
+        .activeCes()
+        .filter((ce) => selectedRas.includes(ce.value ?? ce.description));
       return Array.from(new Set(selected.map((ce) => ce.subject || '')));
     }
 

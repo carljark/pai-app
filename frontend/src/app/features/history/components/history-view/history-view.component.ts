@@ -43,6 +43,7 @@ export class HistoryViewComponent {
     { id: 'CFGM_PELUQUERIA', key: 'courseLevelCFGMPeluqueria' },
     { id: 'CFGM', key: 'courseLevelCFGM' },
     { id: 'CFGS_EDUCACION_INFANTIL', key: 'courseLevelCFGSEducacionInfantil' },
+    { id: 'ESO_ORDINARIA', key: 'courseLevelESO' },
     { id: 'ESO', key: 'courseLevelPDC' },
   ];
 

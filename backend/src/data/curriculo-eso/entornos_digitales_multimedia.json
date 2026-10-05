@@ -1,0 +1,180 @@
+{
+  "code": "entornos_digitales_multimedia",
+  "name_es": "Entornos Digitales y Multimedia",
+  "name_ca": "Entorns Digitals i Multimèdia",
+  "cursos": {
+    "1º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Emplear con solvencia y de manera autónoma procesadores de texto, identificando y aprovechando las funcionalidades que ofrecen para la generación de documentos.",
+      "description_ca": "Emprar amb solvència i de manera autònoma processadors de text, identificant i aprofitant les funcionalitats que ofereixen per a la generació de documents.",
+      "descriptores": [
+        "CD1",
+        "CD2"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Emplear el teclado correctamente, haciendo un uso autónomo de los diferentes grupos de teclas.",
+          "text_ca": "Emprar el teclat correctament, fent un ús autònom dels diferents grups de tecles.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Definir diferentes estilos de párrafo, aprovechándolos para la generación de índices.",
+          "text_ca": "Definir diferents estils de paràgraf, aprofitant-los per a la generació d’índexs.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Crear tablas y editar las propiedades de distribución y formato.",
+          "text_ca": "Crear taules i editar-ne les propietats de distribució i format.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "1.4",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Valorar y utilizar la herramienta de inserción de comentarios para la realización de trabajos personales y en grupo.",
+          "text_ca": "Valorar i utilitzar l’eina d’inserció de comentaris per a la realització de treballs personals i en grup.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "1.5",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Revisar ortográficamente y gramatical el texto producido con la herramienta adecuada del procesador.",
+          "text_ca": "Revisar ortogràficament i gramatical el text produït amb l’eina adequada del processador.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "1.6",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Reproducir fielmente textos, tanto en relación al contenido como al formato.",
+          "text_ca": "Reproduir fidelment texts, tant pel que fa al contingut com al format.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "1.7",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Configurar la impresión de documentos.",
+          "text_ca": "Configurar la impressió de documents.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Emplear con solvencia y de manera autónoma aplicaciones para la creación de presentaciones multimedia.",
+      "description_ca": "Emprar amb solvència i de manera autònoma aplicacions per a la creació de presentacions multimèdia.",
+      "descriptores": [
+        "CD1",
+        "CD2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Diseñar y elaborar presentaciones multimedia basadas en diapositivas, haciendo un uso razonable de sus funcionalidades.",
+          "text_ca": "Dissenyar i elaborar presentacions multimèdia basades en diapositives, fent un ús raonable de les seves funcionalitats.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Diseñar y elaborar presentaciones multimedia incluyendo una cantidad de contenido y elementos razonables de acuerdo con el uso, como guía en las exposiciones.",
+          "text_ca": "Dissenyar i elaborar presentacions multimèdia incloent una quantitat de contingut i elements raonable d’acord amb l’ús com a guia en les exposicions.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Ensayar exposiciones orales haciendo uso de las funcionalidades adecuadas de la aplicación.",
+          "text_ca": "Assajar exposicions orals fent ús de les funcionalitats adequades de l’aplicació.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Emplear, de forma guiada, hojas de cálculo para la automatización de cálculos y generación de diagramas.",
+      "description_ca": "Emprar, de manera guiada, fulls de càlcul per a l’automatització de càlculs i generació de diagrames.",
+      "descriptores": [
+        "STEM1",
+        "STEM4",
+        "CD1",
+        "CD2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Referenciar de manera adecuada variables y constantes en la definición de operaciones y funciones.",
+          "text_ca": "Referenciar de manera adequada variables i constants en la definició d’operacions i funcions.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Diseñar y elaborar tablas, con un formato adecuado, para la automatización de cálculos que resuelvan problemas sencillos.",
+          "text_ca": "Dissenyar i elaborar taules, amb un format adequat, per a l’automatització de càlculs que resolguin problemes senzills.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "1º"
+          ],
+          "text_es": "Generar diagramas a partir de tablas sencillas, configurando los elementos correctamente.",
+          "text_ca": "Generar diagrames a partir de taules senzilles, configurant-ne els elements correctament.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        }
+      ]
+    }
+  ]
+}

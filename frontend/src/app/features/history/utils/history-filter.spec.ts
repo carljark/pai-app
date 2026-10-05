@@ -44,6 +44,12 @@ describe('history-filter', () => {
       true,
     );
     expect(matchesTab({ ...base, tipoNivel: 'ESO' } as any, 'ESO')).toBe(true);
+    const eso = { ...base, tipoNivel: 'ESO_ORDINARIA' } as any;
+    expect(matchesTab(eso, 'ESO_ORDINARIA')).toBe(true);
+    expect(matchesTab(eso, 'ESO')).toBe(false);
+    expect(
+      matchesTab({ ...base, tipoNivel: 'DIVERSIFICACION_CURRICULAR' } as any, 'ESO_ORDINARIA'),
+    ).toBe(false);
     const infantil = { ...base, tipoNivel: 'CFGS_EDUCACION_INFANTIL' } as any;
     expect(matchesTab(infantil, 'CFGS_EDUCACION_INFANTIL')).toBe(true);
     expect(matchesTab(infantil, 'FPB')).toBe(false);

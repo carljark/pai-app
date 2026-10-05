@@ -12,12 +12,12 @@
         }})
       </summary>
       <div class="selection-group__items">
-        @for (item of group.items; track item.text) {
+        @for (item of group.items; track item.value ?? item.text) {
           <label class="selection-item">
             <input
               type="checkbox"
-              [checked]="facade.selectedRas().includes(item.text)"
-              (change)="facade.toggleRa(item.text)"
+              [checked]="facade.selectedRas().includes(item.value ?? item.text)"
+              (change)="facade.toggleRa(item.value ?? item.text)"
             />
             <span class="selection-item__text">
               <span class="selection-item__index">{{ item.index }}. </span>

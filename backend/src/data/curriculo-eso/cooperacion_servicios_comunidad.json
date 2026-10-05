@@ -1,0 +1,375 @@
+{
+  "code": "cooperacion_servicios_comunidad",
+  "name_es": "Cooperación y Servicios a la Comunidad",
+  "name_ca": "Cooperació i Serveis a la Comunitat",
+  "cursos": {
+    "2º": "optativa"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Entender la importancia de los hábitos saludables y sostenibles basándose en los saberes científicos para adoptarlos y promoverlos en su entorno.",
+      "description_ca": "Entendre la importància dels hàbits saludables i sostenibles basant-se en els sabers científics per adoptar-los i promoure’ls en el seu entorn.",
+      "descriptores": [
+        "CCL1",
+        "CP1",
+        "STEM3",
+        "STEM5",
+        "CD1",
+        "CD3",
+        "CPSAA1",
+        "CPSAA2",
+        "CC1",
+        "CC2",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Proponer y adoptar hábitos individuales y colectivos sostenibles analizando de una manera crítica las actividades propias y ajenas basándose en los conocimientos adquiridos y la información disponibles.",
+          "text_ca": "Proposar i adoptar hàbits individuals i col·lectius sostenibles analitzant d’una manera crítica les activitats pròpies i alienes basant-se en els coneixements adquirits i la informació disponibles.",
+          "aclaraciones_es": [
+            "Adquirir las habilidades críticas necesarias para valorar nuestras propias actividades y las de los demás con relación a los hábitos sostenibles (reutilización, reciclaje, reducción…).",
+            "Investigar y analizar hábitos de consumo y estilos de vida de nuestra sociedad y determinar su sostenibilidad.",
+            "Discriminar en los discursos sobre sostenibilidad aquellos planteamientos que tienen una fundamentación científica."
+          ],
+          "aclaraciones_ca": [
+            "Adquirir les habilitats crítiques necessàries per valorar les nostres pròpies activitats i les dels altres en relació als hàbits sostenibles (reutilització, reciclatge, reducció…).",
+            "Investigar i analitzar hàbits de consum i estils de vida de la nostra societat i determinar-ne la sostenibilitat.",
+            "Discriminar en els discursos sobre sostenibilitat aquells plantejaments que tenen una fonamentació científica."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Proponer y adoptar hábitos individuales y colectivos saludables analizando de una manera crítica las actividades propias y ajenas (alimentación, higiene, postura corporal, actividad física…), con una actitud crítica, basándose en los conocimientos adquiridos.",
+          "text_ca": "Proposar i adoptar hàbits individuals i col·lectius saludables analitzant d’una manera crítica les activitats pròpies i alienes (alimentació, higiene, postura corporal, activitat física…), amb una actitud crítica, basant-se en els coneixements adquirits.",
+          "aclaraciones_es": [
+            "Elaborar y hacer difusión de propuestas que promuevan la adopción de hábitos saludables (alimentación, deporte, higiene, sueño…) y que impacten en su entorno.",
+            "Analizar críticamente los hábitos y actividades habituales de los compañeros y de las personas de su entorno, desde una perspectiva de salud física y mental."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar i fer difusió de propostes que promoguin l’adopció d'hàbits saludables (alimentació, esport, higiene, son…) i que impactin en el seu entorn.",
+            "Analitzar críticament els hàbits i activitats habituals dels companys i de les persones del seu entorn, des d’una perspectiva de salut física i mental."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Interpretar el paisaje de forma crítica analizando sus elementos y reflexionando sobre el impacto ambiental y los riesgos naturales derivados de las acciones humanas.",
+          "text_ca": "Interpretar el paisatge de forma crítica analitzant els seus elements i reflexionant sobre l’impacte ambiental i els riscs naturals derivats de les accions humanes.",
+          "aclaraciones_es": [
+            "Investigar los conceptos clave actuales con relación al impacto ambiental: cambio climático, huella humana, capacidad de carga, etc.",
+            "Poner en relación con el entorno propio del alumno las principales causas y consecuencias de los problemas medioambientales.",
+            "Analizar el impacto de las actividades humanas en el caso de las Illes Balears."
+          ],
+          "aclaraciones_ca": [
+            "Investigar els conceptes clau actuals en relació a l’impacte ambiental: canvi climàtic, petjada humana, capacitat de càrrega, etc.",
+            "Posar en relació amb l’entorn propi de l’alumne les principals causes i conseqüències dels problemes mediambientals.",
+            "Analitzar l’impacte de les activitats humanes en el cas de les Illes Balears."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Indagar, argumentar, diseñar y elaborar producciones propias sobre problemáticas que nos rodean, que sean de cariz social, para desarrollar un pensamiento crítico, respetuoso con las diferencias y que contribuya a la construcción de la propia identidad y a valorar el conjunto de la sociedad.",
+      "description_ca": "Indagar, argumentar, dissenyar i elaborar produccions pròpies sobre problemàtiques que ens envolten, que siguin de caire social, per desenvolupar un pensament crític, respectuós amb les diferències i que contribueixi a la construcció de la pròpia identitat i a valorar el conjunt de la societat.",
+      "descriptores": [
+        "CCL5",
+        "CP3",
+        "CD1",
+        "CD3",
+        "CPSAA1",
+        "CPSAA3",
+        "CC2",
+        "CC3",
+        "CE1",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Identificar, valorar y mostrar interés por los principales problemas y retos que afectan a la sociedad.",
+          "text_ca": "Identificar, valorar i mostrar interès pels principals problemes i reptes que afecten la societat.",
+          "aclaraciones_es": [
+            "Investigar cuáles son los desafíos de las sociedades actuales con relación a la convivencia y la igualdad: la intolerancia, el racismo, la desigualdad económica, la discriminación por razones de género…",
+            "Demostrar la capacidad de tratarlos de una forma compleja, desde diferentes perspectivas y con voluntad de hacer progresar la sociedad."
+          ],
+          "aclaraciones_ca": [
+            "Investigar quins són els desafiaments de les societats actuals en relació a la convivència i la igualtat: la intolerància, el racisme, la desigualtat econòmica, la discriminació per raons de gènere…",
+            "Demostrar capacitat de tractar-los d’una forma complexa, des de diferents perspectives i amb voluntat de fer progressar la societat."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Argumentar de forma crítica sobre los problemas sociales que rodean al alumno, por ejemplo: desigualdad social, crisis energética, masificación, impactos ambientales… mediante los conocimientos adquiridos, contrastando y valorando fuentes diversas.",
+          "text_ca": "Argumentar de forma crítica sobre els problemes socials que envolten l’alumne, per exemple: desigualtat social, crisi energètica, massificació, impactes ambientals… mitjançant els coneixements adquirits, contrastant i valorant fonts diverses.",
+          "aclaraciones_es": [
+            "Investigar diferentes fuentes de información en relación con los problemas sociales que nos rodean.",
+            "Encontrar y aplicar herramientas de contraste de la información que podemos encontrar en relación con los problemas sociales que nos rodean.",
+            "Contrastar diferentes puntos de vista en relación con los problemas sociales que nos rodean: ecología, desigualdad, etc., valorando la veracidad y fiabilidad."
+          ],
+          "aclaraciones_ca": [
+            "Investigar diferents fonts d'informació en relació als problemes socials que ens envolten.",
+            "Trobar i aplicar eines de contrastació de la informació que podem trobar en relació als problemes socials que ens envolten.",
+            "Contrastar diferents punts de vista en relació als problemes socials que ens envolten: ecologia, desigualtat, etc., valorant-ne la veracitat i fiabilitat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Buscar, seleccionar, tratar y organizar información sobre temas relevantes de nuestro entorno que impliquen una necesidad de intervención, usando fuentes diversas para adquirir conocimientos que permitan elaborar y expresar respuestas en varios formatos.",
+      "description_ca": "Cercar, seleccionar, tractar i organitzar informació sobre temes rellevants del nostre entorn que impliquin una necessitat d’intervenció, usant fonts diverses per adquirir coneixements que permetin elaborar i expressar respostes en diversos formats.",
+      "descriptores": [
+        "CCL1",
+        "STEM3",
+        "CD1",
+        "CD2",
+        "CD3",
+        "CPSAA3",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Elaborar y expresar contenidos propios en diferentes formatos mediante la investigación y la selección.",
+          "text_ca": "Elaborar i expressar continguts propis en diferents formats mitjançant la recerca i la selecció.",
+          "aclaraciones_es": [
+            "Investigar los diferentes métodos de investigación y valorar la fiabilidad de los propios métodos y de las fuentes."
+          ],
+          "aclaraciones_ca": [
+            "Investigar els diferents mètodes de recerca i valorar la fiabilitat dels propis mètodes i de les fonts."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Contrastar y fundamentar los argumentos sobre temas y acontecimientos de nuestro entorno.",
+          "text_ca": "Contrastar i fonamentar els arguments sobre temes i esdeveniments del nostre entorn.",
+          "aclaraciones_es": [
+            "Contrastar la fiabilidad de las fuentes de información sobre temas de cooperación, especialmente en relación con las fake news difundidas en redes."
+          ],
+          "aclaraciones_ca": [
+            "Contrastar la fiabilitat de les fonts d’informació sobre temes de cooperació, sobretot en relació amb les fake news difoses en xarxes."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Tratar y presentar la información objeto de investigación.",
+          "text_ca": "Tractar i presentar la informació objecte de recerca.",
+          "aclaraciones_es": [
+            "Realizar campañas de sensibilización a nivel del centro educativo o local.",
+            "Divulgar, tanto en carteles como por redes o en presentaciones orales, la información fiable y de primera mano obtenida sobre los temas investigados."
+          ],
+          "aclaraciones_ca": [
+            "Fer campanyes de sensibilització a nivell del centre educatiu o local.",
+            "Divulgar, tant en cartells com per xarxes o en presentacions orals, la informació fiable i de primera mà obtinguda sobre els temes investigats."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Conocer y participar de forma activa en diferentes órganos del contexto escolar (comisiones, asamblea de delegados, consejo escolar, voluntariado dentro del centro...).",
+      "description_ca": "Conèixer i participar de forma activa en diferents òrgans del context escolar (comissions, assemblea de delegats, consell escolar, voluntariat dins el centre...).",
+      "descriptores": [
+        "CCL1",
+        "CP1",
+        "CD3",
+        "CPSAA3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Tomar conciencia de la cantidad de órganos del contexto escolar que rodean al alumno.",
+          "text_ca": "Prendre consciència de la quantitat d’òrgans del context escolar que envolten l’alumne.",
+          "aclaraciones_es": [
+            "Conocer las estructuras de participación de la comunidad educativa: profesores, padres o tutores legales y alumnos.",
+            "Conocer los documentos que establecen los derechos y deberes de los alumnos y los procedimientos que regulan su participación (especialmente los colectivos como el de asociación, participación y manifestación de las discrepancias…)."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer les estructures de participació de la comunitat educativa: professors, pares o tutors legals i alumnes.",
+            "Conèixer els documents que estableixen els drets i deures dels alumnes i els procediments que regulen la seva participació (especialment els col·lectius com el d’associació, participació i manifestació de les discrepàncies…)."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Conocer las funciones y competencias de los órganos del contexto escolar.",
+          "text_ca": "Conèixer les funcions i competències dels òrgans del context escolar.",
+          "aclaraciones_es": [
+            "Comprender la normativa de participación en el ámbito escolar.",
+            "Analizar las funciones de los organismos de participación y valorar su incidencia."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre la normativa de participació a l'àmbit escolar.",
+            "Analitzar les funcions dels organismes de participació i valorar la incidència que tenen."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Contribuir y participar en el funcionamiento de los diferentes órganos escolares.",
+          "text_ca": "Contribuir i participar en el funcionament dels diferents òrgans escolars.",
+          "aclaraciones_es": [
+            "Valorar la importancia de la participación como herramienta crítica y de cohesión social en el contexto escolar.",
+            "Elaborar propuestas para canalizar a través de los órganos de participación escolar.",
+            "Revisar el grado de incidencia de los documentos que establecen los derechos y deberes de los alumnos."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la importància de la participació com a eina crítica i de cohesió social en el context escolar.",
+            "Elaborar propostes per canalitzar a través dels òrgans de participació escolar.",
+            "Revisar el grau d’incidència dels documents que estableixen els drets i deures dels alumnes."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Conocer y colaborar con las entidades de voluntariado del entorno y con los canales de participación ciudadana, tanto los institucionales como los de ONG y el asociacionismo juvenil.",
+      "description_ca": "Conèixer i col·laborar amb les entitats de voluntariat de l'entorn i amb els canals de participació ciutadana, tant els institucionals com els d'ONG i l'associacionisme juvenil.",
+      "descriptores": [
+        "CP1",
+        "CP3",
+        "CPSAA1",
+        "CPSAA3",
+        "CE1"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Tomar conciencia de la cantidad de voluntariado que rodea al alumno mediante el estudio de diferentes tipos de entidades.",
+          "text_ca": "Prendre consciència de la quantitat de voluntariat que envolta l’alumne mitjançant l’estudi de diferents tipus d’entitats.",
+          "aclaraciones_es": [
+            "Investigar el fenómeno del voluntariado a nivel autonómico, insular, comarcal y municipal.",
+            "Analizar la información de los portales de voluntariado de las instituciones de gobierno de las Illes Balears (Gobierno de las Illes Balears, Consejos Insulares…).",
+            "Realizar investigaciones a través de las instituciones, de la sociedad civil, y de su entorno más inmediato (padres o tutores legales, profesores, compañeros) de las acciones de voluntariado en su municipio."
+          ],
+          "aclaraciones_ca": [
+            "Investigar el fenomen del voluntariat a nivell autonòmic, insular, comarcal i municipal.",
+            "Analitzar la informació dels portals del voluntariat de les institucions de govern de les Illes (Govern de les Illes Balears, Consells Insulars…).",
+            "Realitzar recerques a través de les institucions, de la societat civil, i del seu entorn més immediat (pares o tutors legals, professors, companys) de les accions de voluntariat al seu municipi."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Conocer las funciones y competencias del voluntariado que rodea al alumno.",
+          "text_ca": "Conèixer les funcions i competències del voluntariat que envolta a l'alumne.",
+          "aclaraciones_es": [
+            "Clasificar las diferentes entidades de voluntariado según su objetivo y sus valores."
+          ],
+          "aclaraciones_ca": [
+            "Classificar les diferents entitats de voluntariat segons el seu objectiu i els seus valors."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Promover el funcionamiento de proyectos dentro de estas entidades de voluntariado con una implicación personal.",
+          "text_ca": "Promoure el funcionament de projectes dins d’aquestes entitats de voluntariat amb una implicació personal.",
+          "aclaraciones_es": [
+            "Reconocer y valorar el papel central del voluntariado en el crecimiento personal.",
+            "Reconocer y valorar el papel central del voluntariado en el ámbito social y su importancia para los diferentes miembros de la comunidad."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer i valorar el paper central del voluntariat en el creixement personal.",
+            "Reconèixer i valorar el paper central del voluntariat en l'àmbit social i la seva importància per als diferents membres de la comunitat."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Desarrollar una actitud de atención y servicio, practicando la escucha activa, cooperando entre colectivos separados generacionalmente y con colectivos vulnerables, para favorecer la autoestima personal.",
+      "description_ca": "Desenvolupar una actitud d’atenció i servei, practicant l’escolta activa, cooperant entre col·lectius separats generacionalment i amb col·lectius vulnerables, per afavorir l’autoestima personal.",
+      "descriptores": [
+        "CCL1",
+        "CP1",
+        "CP2",
+        "CP3",
+        "CD2",
+        "CPSAA1",
+        "CC1",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Desarrollar y demostrar una actitud de respeto y cooperación hacia otras generaciones y hacia colectivos vulnerables.",
+          "text_ca": "Desenvolupar i demostrar una actitud de respecte i cooperació cap a altres generacions i cap a col·lectius vulnerables.",
+          "aclaraciones_es": [
+            "Realizar acciones de cooperación y servicio en entidades próximas en el centro a favor de colectivos vulnerables.",
+            "Realizar acciones de servicio respecto del medio ambiente mostrando compromiso con la sostenibilidad intergeneracional."
+          ],
+          "aclaraciones_ca": [
+            "Realitzar accions de cooperació i servei en entitats properes al centre a favor de col·lectius vulnerables.",
+            "Realitzar accions de servei respecte del medi ambient mostrant compromís amb la sostenibilitat intergeneracional."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "2º"
+          ],
+          "text_es": "Contribuir activamente al desarrollo de proyectos en el marco del ámbito socio comunitario de referencia para los alumnos, dirigidos, principalmente, a entidades del tercer sector.",
+          "text_ca": "Contribuir activament al desenvolupament de projectes en el marc de l’àmbit sociocomunitari de referència per als alumnes, adreçats, principalment, a entitats del tercer sector.",
+          "aclaraciones_es": [
+            "Conocer y colaborar en actividades concretas que se lleven a cabo en los diferentes proyectos de desarrollo relacionados con los ODS que organiza la Consejería de Educación y Universidades u otras entidades del tercer sector."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer i col·laborar en activitats concretes que es duguin a terme en els diferents projectes de desenvolupament relacionats amb els ODS que organitza la Conselleria d’Educació o altres entitats del tercer sector."
+          ]
+        }
+      ]
+    }
+  ]
+}

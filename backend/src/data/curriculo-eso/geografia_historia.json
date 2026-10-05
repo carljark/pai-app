@@ -1,0 +1,1105 @@
+{
+  "code": "geografia_historia",
+  "name_es": "Geografía e Historia",
+  "name_ca": "Geografia i Història",
+  "cursos": {
+    "1º": "comun",
+    "2º": "comun",
+    "3º": "comun",
+    "4º": "comun"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Buscar, seleccionar, tratar y organizar información sobre temas relevantes del presente y del pasado, usando críticamente fuentes históricas y geográficas, para adquirir conocimientos, elaborar y expresar contenidos en varios formatos.",
+      "description_ca": "Cercar, seleccionar, tractar i organitzar informació sobre temes rellevants del present i del passat, usant críticament fonts històriques i geogràfiques, per adquirir coneixements, elaborar i expressar continguts en diversos formats.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "STEM4",
+        "CD1",
+        "CD2",
+        "CC1"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Elaborar, expresar y presentar contenidos propios en forma de esquemas, tablas informativas y otros formatos mediante el desarrollo de estrategias de búsqueda, selección y tratamiento de información relativas a procesos y acontecimientos relevantes del presente y del pasado.",
+          "text_ca": "Elaborar, expressar i presentar continguts propis en forma d’esquemes, taules informatives i altres formats mitjançant el desenvolupament d’estratègies de cerca, selecció i tractament d’informació relatives a processos i esdeveniments rellevants del present i del passat.",
+          "aclaraciones_es": [
+            "Elaborar, expresar y presentar la información en tablas, mapas conceptuales, esquemas, resúmenes o cuadros resumen.",
+            "Buscar, seleccionar y sintetizar información de forma adecuada a fuentes tanto analógicas como digitales.",
+            "Utilizar de forma adecuada dispositivos, aplicaciones informáticas, plataformas digitales y redes de comunicación.",
+            "Expresar los contenidos de forma correcta y siguiendo las normas ortográficas."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar, expressar i presentar la informació en taules, mapes conceptuals, esquemes, resums o quadres resum.",
+            "Cercar, seleccionar i sintetitzar informació de forma adequada a fonts tant analògiques com digitals.",
+            "Utilitzar de forma adequada dispositius, aplicacions informàtiques, plataformes digitals i xarxes de comunicació.",
+            "Expressar els continguts de forma correcta i seguint les normes ortogràfiques."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Contrastar y argumentar sobre temas y acontecimientos de la Prehistoria, la Edad Antigua, la Edad Media y la Edad Moderna, localizando y analizando de forma crítica fuentes primarias y secundarias como pruebas históricas.",
+          "text_ca": "Contrastar i argumentar sobre temes i esdeveniments de la Prehistòria, l’Edat Antiga, l’Edat Mitjana i l’Edat Moderna, localitzant i analitzant de manera crítica fonts primàries i secundàries com a proves històriques.",
+          "aclaraciones_es": [
+            "Identificar y clasificar los diferentes tipos de fuentes históricas.",
+            "Investigar hechos históricos a partir de diferentes fuentes históricas.",
+            "Valorar y argumentar sobre la validez de diferentes fuentes históricas."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i classificar els diferents tipus de fonts històriques.",
+            "Investigar fets històrics a partir de diferents fonts històriques.",
+            "Valorar i argumentar sobre la validesa de diferents fonts històriques."
+          ]
+        },
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Elaborar contenidos propios en diferentes formatos, mediante aplicaciones y estrategias de recogida y representación de datos más complejos, usando y contrastando críticamente fuentes fiables, tanto analógicas como digitales, del presente y de la historia contemporánea, identificando la desinformación y la manipulación.",
+          "text_ca": "Elaborar continguts propis en diferents formats, mitjançant aplicacions i estratègies de recollida i representació de dades més complexes, usant i contrastant críticament fonts fiables, tant analògiques com digitals, del present i de la història contemporània, identificant la desinformació i la manipulació.",
+          "aclaraciones_es": [
+            "Elaborar contenidos en diferentes formatos, mediante estrategias de recogida y representación variadas.",
+            "Contrastar las fuentes, analógicas y digitales, para identificar la desinformación y la manipulación."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar continguts en diferents formats, mitjançant estratègies de recollida i representació variades.",
+            "Contrastar les fonts, analògiques i digitals, per identificar la desinformació i la manipulació."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Establecer conexiones y relaciones entre los conocimientos e información adquirida, elaborando síntesis interpretativas y explicativas, mediante informes, estudios o dosieres informativos, que reflejen un dominio y consolidación de los contenidos tratados.",
+          "text_ca": "Establir connexions i relacions entre els coneixements i informacions adquirits, elaborant síntesis interpretatives i explicatives, mitjançant informes, estudis o dossiers informatius, que reflecteixin un domini i consolidació dels continguts tractats.",
+          "aclaraciones_es": [
+            "Relacionar los conocimientos adquiridos con resúmenes interpretativos y explicativos.",
+            "Consolidar los contenidos tratados con la elaboración de informes, estudios o dosieres."
+          ],
+          "aclaraciones_ca": [
+            "Relacionar els coneixements adquirits amb resums interpretatius i explicatius.",
+            "Consolidar els continguts tractats amb l’elaboració d’informes, estudis o dossiers."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Transferir adecuadamente la información y el conocimiento por medio de narraciones, pósters, presentaciones, exposiciones orales, medios audiovisuales y otros productos.",
+          "text_ca": "Transferir adequadament la informació i el coneixement per mitjà de narracions, pòsters, presentacions, exposicions orals, mitjans audiovisuals i altres productes.",
+          "aclaraciones_es": [
+            "Transferir adecuadamente la información y el conocimiento utilizando diferentes formatos."
+          ],
+          "aclaraciones_ca": [
+            "Transferir adequadament la informació i el coneixement utilitzant diferents formats."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Indagar, argumentar y elaborar productos propios sobre problemas geográficos, históricos y sociales que resulten relevantes en la actualidad, desde lo local a lo global, para desarrollar un pensamiento crítico, respetuoso con las diferencias, que contribuya a la construcción de la propia identidad y a enriquecer el acervo común.",
+      "description_ca": "Indagar, argumentar i elaborar productes propis sobre problemes geogràfics, històrics i socials que resultin rellevants actualment, des del local al global, per desenvolupar un pensament crític, respectuós amb les diferències, que contribueixi a la construcció de la pròpia identitat i a enriquir el patrimoni comú.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CD2",
+        "CC1",
+        "CC3",
+        "CE3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar, valorar y mostrar interés por los principales problemas que afectan la sociedad, adoptando una posicióń crítica y proactiva hacia este.",
+          "text_ca": "Identificar, valorar i mostrar interès pels principals problemes que afecten la societat, adoptant una posició́ crítica i proactiva cap a aquests.",
+          "aclaraciones_es": [
+            "Identificar y valorar retos y problemas de la sociedad actual (pobreza, desigualdad social, emergencia climática, desafíos demográficos, despoblación, situaciones discriminatorias de género…).",
+            "Proponer soluciones a las problemáticas y retos de la sociedad actual."
+          ],
+          "aclaraciones_ca": [
+            "Identificar i valorar reptes i problemes de la societat actual (pobresa, desigualtat social, emergència climàtica, desafiaments demogràfics, despoblació, situacions discriminatòries de gènere…).",
+            "Proposar solucions a les problemàtiques i reptes de la societat actual."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Argumentar de forma crítica sobre problemas de actualidad a través de conocimientos geográficos e históricos, contrastante y valorando fuentes diversas.",
+          "text_ca": "Argumentar de manera crítica sobre problemes d’actualitat a través de coneixements geogràfics i històrics, contrastant i valorant fonts diverses.",
+          "aclaraciones_es": [
+            "Expresar y respetar opiniones sobre problemas de la sociedad actual mediante debates, redacciones u otros productos.",
+            "Analizar y comparar diferentes puntos de vista temas y/o problemas de la sociedad actual."
+          ],
+          "aclaraciones_ca": [
+            "Expressar i respectar opinions sobre problemes de la societat actual mitjançant debats, redaccions o altres productes.",
+            "Analitzar i comparar diferents punts de vista temes i/o problemes de la societat actual."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Incorporar y utilizar adecuadamente términos, conceptos y acontecimientos relacionados con la geografía, la historia y otras disciplinas de las ciencias sociales, a través de intervenciones orales, textos escritos y otros productos, mostrando planteamientos originales y propuestas creativas.",
+          "text_ca": "Incorporar i utilitzar adequadament termes, conceptes i esdeveniments relacionats amb la geografia, la història i altres disciplines de les ciències socials, a través d’intervencions orals, texts escrits i altres productes, mostrant plantejaments originals i propostes creatives.",
+          "aclaraciones_es": [
+            "Utilizar términos y conceptos específicos de la materia en las producciones escritas y orales."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar termes i conceptes específics de la matèria en les produccions escrites i orals."
+          ]
+        },
+        {
+          "id": "2.4",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Elaborar juicios argumentados, respetando las opiniones de los demás y enriqueciendo el caudal común en el contexto del mundo actual, sus retos y sus conflictos desde una perspectiva sistémica y global.",
+          "text_ca": "Elaborar judicis argumentats, respectant les opinions dels altres i enriquint el cabal comú en el context del món actual, els seus reptes i els seus conflictes des d'una perspectiva sistèmica i global.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Generar productos originales y creativos mediante la reelaboración de conocimientos previos a través de herramientas de investigación que permitan explicar problemas presentes y pasados de la humanidad a distintas escalas temporales y espaciales, de lo local a lo global, utilizando conceptos, situaciones y datos relevantes.",
+          "text_ca": "Generar productes originals i creatius mitjançant la reelaboració de coneixements previs a través d'eines de recerca que permetin explicar problemes presents i passats de la humanitat a distintes escales temporals i espacials, del local al global, utilitzant conceptes, situacions i dades rellevants.",
+          "aclaraciones_es": [
+            "Utilizar conceptos, situaciones y datos relevantes para explicar problemas presentes de la humanidad.",
+            "Utilizar conceptos, situaciones y datos relevantes para explicar problemas de la humanidad en la edad contemporánea.",
+            "Plasmar conocimientos adquiridos generando nuevos materiales originales para explicar los problemas presentes de la humanidad.",
+            "Reelaborar conocimientos adquiridos generando nuevos materiales originales para explicar los problemas de la sociedad en la edad contemporánea."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar conceptes, situacions i dades rellevants per explicar problemes presents de la humanitat.",
+            "Utilitzar conceptes, situacions i dades rellevants per explicar problemes de la humanitat a l’edat contemporània.",
+            "Plasmar coneixements adquirits generant nous materials originals per explicar els problemes presents de la humanitat.",
+            "Reelaborar coneixements adquirits generant nous materials originals per explicar els problemes de la societat a l’edat contemporània."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Producir y expresar juicios y argumentos personales y criterios de forma abierta y respetuosa, haciendo patente la propia identidad y enriqueciendo el patrimonio común en el contexto del mundo actual, sus retos y sus conflictos, desde una perspectiva sistémica y global.",
+          "text_ca": "Produir i expressar judicis i arguments personals i criteris de forma oberta i respectuosa, fent patent la pròpia identitat i enriquint el patrimoni comú en el context del món actual, els seus reptes i els seus conflictes, des d'una perspectiva sistèmica i global.",
+          "aclaraciones_es": [
+            "Expresar juicios, argumentos y criterios personales de manera respetuosa.",
+            "Construir una identidad propia y respetar el resto de las identidades del mundo actual."
+          ],
+          "aclaraciones_ca": [
+            "Expressar judicis, arguments i criteris personals de manera respectuosa.",
+            "Construir una identitat pròpia i respectar la resta d’identitats del món actual."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Conocer los principales desafíos a los que se han enfrentado distintas sociedades a lo largo del tiempo, identificando las causas y consecuencias de los cambios producidos y los problemas a los que se enfrentan en la actualidad, mediante el desarrollo de proyectos de investigación y el uso de fuentes fiables, para realizar propuestas que contribuyan al desarrollo sostenible.",
+      "description_ca": "Conèixer els principals desafiaments als quals s’han enfrontat diferents societats al llarg del temps, identificant les causes i conseqüències dels canvis produïts i els problemes als quals s’enfronten en l’actualitat, mitjançant el desenvolupament de projectes de recerca i l’ús de fonts fiables, per realitzar propostes que contribueixin al desenvolupament sostenible.",
+      "descriptores": [
+        "STEM3",
+        "STEM4",
+        "STEM5",
+        "CPSAA3",
+        "CC3",
+        "CC4",
+        "CE1",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Adquirir y construir conocimiento relevante del mundo actual y de la historia, a través de procesos inductivos, de la investigación y del trabajo por proyectos, retos o problemas, mediante la elaboración de productos que reflejen la comprensión de los fenómenos y problemas abordados.",
+          "text_ca": "Adquirir i construir coneixement rellevant del món actual i de la història, a través de processos inductius, de la recerca i del treball per projectes, reptes o problemes, mitjançant l’elaboració de productes que reflecteixin la comprensió dels fenòmens i problemes abordats.",
+          "aclaraciones_es": [
+            "Elaborar tareas de investigación e investigación sobre temas de historia y de actualidad.",
+            "Aprender a buscar y seleccionar información adecuada y presentarla sin hacer uso de plagio."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar tasques de recerca i investigació sobre temes d’història i d’actualitat.",
+            "Aprendre a cercar i seleccionar informació adequada i presenta-la sense fer ús de plagi."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar los principales problemas, retos y desafíos a los que se ha enfrentado la humanidad a lo largo de la historia, los cambios producidos, sus causas y consecuencias, así como los que, en la actualidad, tenemos que plantear y resolver en torno a los Objetivos de Desarrollo Sostenible.",
+          "text_ca": "Identificar els principals problemes, reptes i desafiaments als quals s’ha enfrontat la humanitat al llarg de la història, els canvis produïts, les seves causes i conseqüències, com també els que, en l’actualitat, hem de plantejar i resoldre entorn dels Objectius de Desenvolupament Sostenible.",
+          "aclaraciones_es": [
+            "Conocer los principales retos y desafíos de la historia de la humanidad.",
+            "Identificar causas y consecuencias en relación a los hechos históricos y actuales.",
+            "Conocer los ODS y relacionarlos con los desafíos trabajados."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer els principals reptes i desafiaments de la Història de la humanitat.",
+            "Identificar causes i conseqüències en relació amb els fets històrics i actuals.",
+            "Conèixer els ODS i relacionar-los amb els desafiaments treballats."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Representar adecuadamente información geográfica e histórica a través de varias formas de representación gráfica, cartográfica y visual.",
+          "text_ca": "Representar adequadament informació geogràfica i històrica a través de diverses formes de representació gràfica, cartogràfica i visual.",
+          "aclaraciones_es": [
+            "Representar e interpretar información geográfica de forma gráfica, cartográfica o visual: tipos de mapas, proyecciones cartográficas, climogramas, pirámides de población, tablas y gráficas de datos meteorológicos, mapas históricos, pirámides sociales... etc."
+          ],
+          "aclaraciones_ca": [
+            "Representar i interpretar informació geogràfica de forma gràfica, cartogràfica o visual: tipus de mapes, projeccions cartogràfiques, climogrames, piràmides de població, taules i gràfiques de dades meteorològiques, mapes històrics, piràmides socials... etc."
+          ]
+        },
+        {
+          "id": "3.4",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Utilizar una secuencia cronológica con objeto de examinar la relación entre hechos y procesos en diferentes periodos y lugares históricos (simultaneidad y duración), utilizando términos y conceptos apropiados.",
+          "text_ca": "Utilitzar una seqüència cronològica a fi d’examinar la relació entre fets i processos en diferents períodes i llocs històrics (simultaneïtat i durada), utilitzant termes i conceptes apropiats.",
+          "aclaraciones_es": [
+            "Elaborar e interpretar ejes cronológicos. Distinguir la diferente escala temporal de las etapas de la prehistoria y la historia antigua, así como de la Edad Media hasta la Edad Moderna."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar i interpretar eixos cronològics. Distingir la diferent escala temporal de les etapes de la prehistòria i la història antiga, així com de l’edat mitjana fins a l’edat moderna."
+          ]
+        },
+        {
+          "id": "3.5",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Analizar procesos de cambio histórico de relevancia a través del uso de diferentes fuentes de información, teniendo en cuenta las continuidades y permanencias en diferentes periodos y lugares.",
+          "text_ca": "Analitzar processos de canvi històric de rellevància a través de l’ús de diferents fonts d’informació, tenint en compte les continuïtats i permanències en diferents períodes i llocs.",
+          "aclaraciones_es": [
+            "Explicar las características de cada tiempo histórico y los acontecimientos que han determinado cambios fundamentales en el rumbo de la historia.",
+            "Entender el proceso de hominización. Reconocer los cambios evolutivos hasta llegar a la especie humana.",
+            "Identificar las características de cada etapa de la Prehistoria.",
+            "Analizar la trascendencia de la revolución neolítica.",
+            "Reconocer la importancia del descubrimiento de la escritura.",
+            "Conocer el origen y alcance de los principales imperios de la Edad Media y Moderna.",
+            "Comprender la relevancia de la apertura de nuevas rutas comerciales y de la llegada en América.",
+            "Comparar la América precolombina con la América colonial y analizar los procesos de cambio."
+          ],
+          "aclaraciones_ca": [
+            "Explicar les característiques de cada temps històric i els esdeveniments que han determinat canvis fonamentals en el rumb de la història.",
+            "Entendre el procés d’hominització. Reconèixer els canvis evolutius fins a arribar a l’espècie humana.",
+            "Identificar les característiques de cada etapa de la prehistòria.",
+            "Analitzar la transcendència de la revolució neolítica.",
+            "Reconèixer la importància del descobriment de l’escriptura.",
+            "Conèixer l’origen i abast dels principals imperis de l’Edat Mitjana i Moderna.",
+            "Comprendre la rellevància de l’obertura de noves rutes comercials i de l’arribada a Amèrica.",
+            "Comparar l’Amèrica precolombina amb l’Amèrica colonial i analitzar els processos de canvi."
+          ]
+        },
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Realizar propuestas que contribuyan al logro de los Objetivos de Desarrollo Sostenible, aplicando métodos y proyectos de investigación, incidiendo en el uso de mapas y otras representaciones gráficas, así como de medios accesibles de interpretación de imágenes.",
+          "text_ca": "Realitzar propostes que contribueixin a l'assoliment dels Objectius de Desenvolupament Sostenible, aplicant mètodes i projectes de recerca, incidint en l'ús de mapes i altres representacions gràfiques, així com de mitjans accessibles d'interpretació d'imatges.",
+          "aclaraciones_es": [
+            "Aplicar métodos y proyectos de investigación para realizar propuestas que contribuyen a lograr los ODS.",
+            "Utilizar mapas y representaciones gráficas para hacer propuestas que lleven a la consecución de los ODS."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar mètodes i projectes de recerca per realitzar propostes que contribueixen a assolir els ODS.",
+            "Utilitzar mapes i representacions gràfiques per fer propostes que duguin a la consecució dels ODS."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Entender y afrontar, desde un enfoque ecosocial, problemas y desafíos pasados, actuales o futuros de las sociedades contemporáneas teniendo en cuenta sus relaciones de interdependencia y ecodependencia.",
+          "text_ca": "Entendre i afrontar, des d'un enfocament ecosocial, problemes i desafiaments passats, actuals o futurs de les societats contemporànies tenint en compte les seves relacions d'interdependència i ecodependència.",
+          "aclaraciones_es": [
+            "Mantener un enfoque ecosocial para la resolución de problemas y desafíos pasados, actuales y futuros de las sociedades contemporáneas.",
+            "Entender y valorar las relaciones de interdependencia y ecodependencia a las sociedades contemporáneas."
+          ],
+          "aclaraciones_ca": [
+            "Mantindre un enfocament ecosocial per a la resolució de problemes i desafiaments passats, actuals i futurs de les societats contemporànies.",
+            "Entendre i valorar les relacions d’interdependència i ecodependència a les societats contemporànies."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Utilizar secuencias cronológicas complejas en las que identificar, comparar y relacionar hechos y procesos en diferentes periodos y lugares históricos (simultaneidad, duración, causalidad) utilizando términos y conceptos específicos del ámbito de la historia y la geografía.",
+          "text_ca": "Utilitzar seqüències cronològiques complexes en les que identificar, comparar i relacionar fets i processos en diferents períodes i llocs històrics (simultaneïtat, durada, causalitat) utilitzant termes i conceptes específics de l’àmbit de la història i la geografia.",
+          "aclaraciones_es": [
+            "Comparar y relacionar hechos y procesos en diferentes periodos y lugares utilizando términos y conceptos geográficos e históricos."
+          ],
+          "aclaraciones_ca": [
+            "Comparar i relacionar fets i processos en diferents períodes i llocs utilitzant termes i conceptes geogràfics i històrics."
+          ]
+        },
+        {
+          "id": "3.4",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Analizar procesos de cambio histórico y comparar casos de la historia y la geografía a través del uso de fuentes de información diversas, teniendo en cuenta transformaciones de corta y larga duración (coyuntura y estructura), las continuidades y permanencias en diferentes periodos y lugares.",
+          "text_ca": "Analitzar processos de canvi històric i comparar casos de la història i la geografia a través de l’ús de fonts d’informacions diverses, tenint en compte transformacions de curta i llarga durada (conjuntura i estructura), les continuïtats i permanències en diferents períodes i llocs.",
+          "aclaraciones_es": [
+            "Analizar procesos de cambio con varias fuentes y observar las transformaciones y las permanencias desde una perspectiva geográfica.",
+            "Comparar las transformaciones coyunturales y las estructurales que se dan en los procesos de cambio."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar processos de canvi amb diverses fonts i observar les transformacions i les permanències des d’una perspectiva geogràfica.",
+            "Comparar les transformacions conjunturals i les estructurals que es donen en els processos de canvi."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Identificar y analizar los elementos del paisaje y su articulación en sistemas complejos naturales, rurales y urbanos, así como su evolución en el tiempo, interpretando las causas de las transformaciones y valorando el grado de equilibrio existente en los distintos ecosistemas, para promover su conservación, mejora y uso sostenible.",
+      "description_ca": "Identificar i analitzar els elements del paisatge i la seva articulació en sistemes complexos naturals, rurals i urbans, com també la seva evolució en el temps, interpretant les causes de les transformacions i valorant el grau d’equilibri existent en els diferents ecosistemes, per promoure la seva conservació, millora i ús sostenible.",
+      "descriptores": [
+        "CPSAA2",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CC4",
+        "CE1"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Interpretar el entorno desde una perspectiva sistémica e integradora, a través del concepto de paisaje, identificando sus principales elementos y las interrelaciones existentes.",
+          "text_ca": "Interpretar l’entorn des d’una perspectiva sistèmica i integradora, a través del concepte de paisatge, identificant els seus principals elements i les interrelacions existents.",
+          "aclaraciones_es": [
+            "Identificar los principales elementos y factores que condicionan el clima.",
+            "Conocer, localizar y comparar los diversos paisajes y zonas bioclimáticas de la Tierra, así como de España y Baleares.",
+            "Identificar los climogramas del mundo, España y Baleares.",
+            "Comprender la estructura de la Tierra y las diferentes formas de modificación del relieve terrestre.",
+            "Identificar los principales elementos y formas del relieve.",
+            "Localizar las principales unidades del relieve de los continentes, España e Illes Balears."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els principals elements i factors que condicionen el clima.",
+            "Conèixer, localitzar i comparar els diversos paisatges i zones bioclimàtiques de la Terra, així com d’Espanya i Balears.",
+            "Identificar els climogrames del món, Espanya i Balears.",
+            "Comprendre l’estructura de la Terra i les diferents formes de modificació del relleu terrestre.",
+            "Identificar els principals elements i formes del relleu.",
+            "Localitzar les principals unitats del relleu dels continents, Espanya i Illes Balears."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar el grado de sostenibilidad y de equilibrio de los diferentes espacios y desde diferentes escalas y analizar su transformación y degradación a través del tiempo por la acción humana en la explotación de los recursos, su relación con la evolución de la población y las estrategias desarrolladas para su control y dominio y los conflictos que ha provocado.",
+          "text_ca": "Valorar el grau de sostenibilitat i d’equilibri dels diferents espais i des de diferents escales i analitzar la seva transformació i degradació a través del temps per l’acció humana en l’explotació dels recursos, la seva relació amb l’evolució de la població i les estratègies desenvolupades per al seu control i domini i els conflictes que això ha provocat.",
+          "aclaraciones_es": [
+            "Conocer y relacionar los conceptos de calentamiento global y cambio climático.",
+            "Identificar ecosistemas y espacios frágiles y amenazados a escala mundial, estatal o balear.",
+            "Analizar casos de espacios transformados y degradados por la acción humana."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer i relacionar els conceptes d’escalfament global i canvi climàtic.",
+            "Identificar ecosistemes i espais fràgils i amenaçats a escala mundial, estatal o balear.",
+            "Analitzar casos d’espais transformats i degradats per l’acció humana."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Argumentar la necesidad de acciones de defensa, protección, conservación y mejora del entorno (natural, rural y urbano) a través de propuestas e iniciativas que reflejen compromisos y conductas en favor de la sostenibilidad y del reparto justo y solidario de los recursos.",
+          "text_ca": "Argumentar la necessitat d’accions de defensa, protecció, conservació i millora de l’entorn (natural, rural i urbà) a través de propostes i iniciatives que reflecteixin compromisos i conductes en favor de la sostenibilitat i del repartiment just i solidari dels recursos.",
+          "aclaraciones_es": [
+            "Identificar las principales figuras de protección de espacios naturales.",
+            "Expresar opiniones sobre la protección de espacios del entorno y sobre el concepto de sostenibilidad.",
+            "Proponer acciones de defensa, protección, conservación y mejora de los espacios a escala global o local."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les principals figures de protecció d’espais naturals.",
+            "Expressar opinions sobre la protecció d’espais de l’entorn i sobre el concepte de sostenibilitat.",
+            "Proposar accions de defensa, protecció, conservació i millora dels espais a escala global o local."
+          ]
+        },
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Identificar los elementos del entorno y comprender su funcionamiento como un sistema complejo por medio del análisis multicausal de sus relaciones naturales y humanas, presentes y pasadas, valorando el grado de conservación y de equilibrio dinámico.",
+          "text_ca": "Identificar els elements de l'entorn i comprendre el seu funcionament com un sistema complex per mitjà de l'anàlisi multicausal de les seves relacions naturals i humanes, presents i passades, valorant-ne el grau de conservació i d'equilibri dinàmic.",
+          "aclaraciones_es": [
+            "Comprender a través del análisis multicausal el entorno, su funcionamiento y las relaciones naturales y humanas."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre a través de l’anàlisi multicausal l’entorn, el seu funcionament i les relacions naturals i humanes."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Idear y adoptar, cuando sea posible, comportamientos y acciones que contribuyan a la conservación y mejora del entorno natural, rural y urbano, a través del respeto a todos los seres vivos, mostrando comportamientos orientados al logro de un desarrollo sostenible de esos entornos, y defendiendo el acceso universal, justo y equitativo a los recursos que nos ofrece el planeta.",
+          "text_ca": "Idear i adoptar, quan sigui possible, comportaments i accions que contribueixin a la conservació i millora de l'entorn natural, rural i urbà, a través del respecte a tots els éssers vius, mostrant comportaments orientats a l'assoliment d'un desenvolupament sostenible d'aquests entorns, i defensant l'accés universal, just i equitatiu als recursos que ens ofereix el planeta.",
+          "aclaraciones_es": [
+            "Contribuir a la conservación y mejora del entorno natural, rural y urbano desde una perspectiva adecuada para lograr un desarrollo sostenible.",
+            "Defender el acceso universal, justo y equitativo a los recursos que nos ofrece el planeta."
+          ],
+          "aclaraciones_ca": [
+            "Contribuir a la conservació i millora de l’entorn natural, rural i urbà des d’una perspectiva adient per assolir un desenvolupament sostenible.",
+            "Defensar l’accés universal, just i equitatiu als recursos que ens ofereix el planeta."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Analizar de forma crítica planteamientos históricos y geográficos explicando la construcción de los sistemas democráticos y los principios constitucionales que rigen la vida en comunidad, así como asumiendo los deberes y derechos propios de nuestro marco de convivencia, para promover la participación ciudadana y la cohesión social.",
+      "description_ca": "Analitzar de manera crítica plantejaments històrics i geogràfics explicant la construcció dels sistemes democràtics i els principis constitucionals que regeixen la vida en comunitat, com també assumint els deures i drets propis del nostre marc de convivència, per promoure la participació ciutadana i la cohesió social.",
+      "descriptores": [
+        "CCL5",
+        "CC1",
+        "CC2",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar, interpretar y analizar los mecanismos que han regulado la convivencia y la vida en común a lo largo de la historia, desde el origen de la sociedad a las diferentes civilizaciones que se han ido sucediendo, señalando los principales modelos de organización social y política que se han gestado.",
+          "text_ca": "Identificar, interpretar i analitzar els mecanismes que han regulat la convivència i la vida en comú al llarg de la història, des de l’origen de la societat a les diferents civilitzacions que s’han anat succeint, assenyalant els principals models d’organització social i política que s’han gestat.",
+          "aclaraciones_es": [
+            "Comprender el surgimiento y las necesidades de la organización política y social entre el Neolítico y las Primeras Civilizaciones.",
+            "Comprender el surgimiento de la organización política durante la Prehistoria.",
+            "Conocer e identificar los diferentes sistemas políticos de la edad Antigua y de la Edad Media y Moderna.",
+            "Interpretar su evolución y compararlos."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el sorgiment i les necessitats de l’organització política i social entre el Neolític i les Primeres Civilitzacions.",
+            "Comprendre el sorgiment de l’organització política durant la prehistòria.",
+            "Conèixer i identificar els diferents sistemes polítics de l’edat Antiga i de l’Edat Mitjana i Moderna.",
+            "Interpretar la seva evolució i comparar-los."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Señalar y explicar aquellas experiencias históricas más destacables, y anteriores a la época contemporánea, en las cuales se consiguió establecer sistemas políticos que favorecieron el ejercicio de derechos y libertades de los individuos y de la colectividad, considerándolas como antecedentes de las posteriores conquistas democráticas y referentes históricos de las libertades actuales.",
+          "text_ca": "Assenyalar i explicar aquelles experiències històriques més destacables, i anteriors a l’època contemporània, en les quals es va aconseguir establir sistemes polítics que van afavorir l’exercici de drets i llibertats dels individus i de la col·lectivitat, considerant-les com a antecedents de les posteriors conquestes democràtiques i referents històrics de les llibertats actuals.",
+          "aclaraciones_es": [
+            "Analizar y comprender la Atenas de Pericles y el inicio del sistema democrático.",
+            "Describir algunas de las diferencias entre la democracia griega y las democracias actuales."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar i comprendre l’Atenes de Pèricles i l’inici del sistema democràtic.",
+            "Descriure algunes de les diferències entre la democràcia grega i les democràcies actuals."
+          ]
+        },
+        {
+          "id": "5.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Mostrar actitudes pacíficas y respetuosas y asumir las normas como marco necesario para la convivencia, demostrando capacidad crítica e identificando y respondiendo de manera asertiva ante las situaciones de injusticia y desigualdad.",
+          "text_ca": "Mostrar actituds pacífiques i respectuoses i assumir les normes com a marc necessari per a la convivència, demostrant capacitat crítica i identificant i responent de manera assertiva davant les situacions d’injustícia i desigualtat.",
+          "aclaraciones_es": [
+            "Participar de forma asertiva en los trabajos en grupo, debates, charlas y coloquios."
+          ],
+          "aclaraciones_ca": [
+            "Participar de forma assertiva en els treballs en grup, debats, xerrades i col·loquis."
+          ]
+        },
+        {
+          "id": "5.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Conocer, valorar y ejercer responsabilidades, derechos y deberes y actuar en favor de su desarrollo y afirmación a través del conocimiento de nuestro ordenamiento jurídico y constitucional, de la comprensión y puesta en valor de nuestra memoria democrática y de los aspectos fundamentales que la conforman, de la contribución de los hombres y mujeres a esta, y la defensa de nuestros valores constitucionales.",
+          "text_ca": "Conèixer, valorar i exercir responsabilitats, drets i deures i actuar en favor del seu desenvolupament i afirmació a través del coneixement del nostre ordenament jurídic i constitucional, de la comprensió i posada en valor de la nostra memòria democràtica i dels aspectes fonamentals que la conformen, de la contribució dels homes i dones a aquesta, i la defensa dels nostres valors constitucionals.",
+          "aclaraciones_es": [
+            "Conocer, valorar y ejercer responsabilidades, derechos y deberes que emanan de nuestro ordenamiento jurídico y constitucional y actuar en favor de su desarrollo.",
+            "Comprender y poner en valor nuestra memoria democrática y sus valores, así como la contribución de los hombres y de las mujeres a esta."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer, valorar i exercir responsabilitats, drets i deures que emanen del nostre ordenament jurídic i constitucional i actuar en favor del seu desenvolupament.",
+            "Comprendre i posar en valor la nostra memòria democràtica i els seus valors, així com la contribució dels homes i de les dones a aquesta."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Reconocer movimientos y causas que generen una conciencia solidaria, promuevan la cohesión social, y trabajen para la eliminación de la desigualdad, especialmente la motivada por cuestión de género, y para el pleno desarrollo de la ciudadanía, mediante la movilización de conocimientos y estrategias de participación, trabajo en equipo, mediación y resolución pacífica de conflictos.",
+          "text_ca": "Reconèixer moviments i causes que generin una consciència solidària, promoguin la cohesió social, i treballin per a l'eliminació de la desigualtat, especialment la motivada per qüestió de gènere, i per al ple desenvolupament de la ciutadania, mitjançant la mobilització de coneixements i estratègies de participació, treball en equip, mediació i resolució pacífica de conflictes.",
+          "aclaraciones_es": [
+            "Reconocer movimientos y causas que generen conciencia solidaria, cohesión social y busquen eliminar desigualdades, especialmente las de género.",
+            "Promover y realizar las estrategias de participación, trabajo en equipo, mediación y resolución pacífica de conflictos."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer moviments i causes que generin consciència solidària, cohesió social i cerquin eliminar desigualtats, en especial les de gènere.",
+            "Promoure i realitzar les estratègies de participació, treball en equip, mediació i resolució pacífica de conflictes."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Comprender los procesos geográficos, históricos y culturales que han conformado la realidad multicultural en la que vivimos, conociendo y difundiendo la historia y cultura de las minorías étnicas presentes en nuestro país y valorando la aportación de los movimientos en defensa de la igualdad y la inclusión, para reducir estereotipos, evitar cualquier tipo de discriminación y violencia, y reconocer la riqueza de la diversidad.",
+      "description_ca": "Comprendre els processos geogràfics, històrics i culturals que han conformat la realitat multicultural en què vivim, coneixent i difonent la història i la cultura de les minories ètniques presents al nostre país i valorant l’aportació dels moviments en defensa de la igualtat i la inclusió, per tal de reduir els estereotips, evitar qualsevol tipus de discriminació i violència, i reconèixer la riquesa de la diversitat.",
+      "descriptores": [
+        "CCL5",
+        "CPSAA3",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Situar el nacimiento y desarrollo de diferentes civilizaciones en el espacio y en el tiempo, integrando los elementos históricos, culturales, institucionales y religiosos que las han conformado, explicando la realidad multicultural generada a lo largo del tiempo e identificando sus aportaciones más relevantes a la cultura universal.",
+          "text_ca": "Situar el naixement i desenvolupament de diferents civilitzacions en l’espai i en el temps, integrant els elements històrics, culturals, institucionals i religiosos que les han conformat, explicant la realitat multicultural generada al llarg del temps i identificant les seves aportacions més rellevants a la cultura universal.",
+          "aclaraciones_es": [
+            "Conocer la influencia del medio físico en el desarrollo de primeras civilizaciones.",
+            "Localizar y datar las civilizaciones de la edad antigua y de la Edad Media.",
+            "Conocer sus características culturales, institucionales y religiosas más destacadas de Mesopotamia, Egipto, Grecia, Roma, el Imperio Bizantino y el Islam.",
+            "Identificar las aportaciones más relevantes de estas civilizaciones a la cultura universal.",
+            "Entender el origen de la religión y el significado magico-religioso de las primeras manifestaciones artísticas.",
+            "Conocer las características de las religiones politeístas de la antigüedad.",
+            "Identificar los principales dioses y rituales religiosos de la época.",
+            "Localizar el origen del cristianismo y conocer las novedades que aportaba su doctrina y su difusión.",
+            "Explicar los motivos de la persecución de los cristianos.",
+            "Comprender sus preceptos principales de la doctrina islámica y su alcance en la actualidad.",
+            "Explicar el poder de la Iglesia en la Europa feudal.",
+            "Definir el concepto de cruzada y sintetizar las cruzadas principales y sus consecuencias.",
+            "Conocer los motivos de la persecución de los judíos y sus consecuencias.",
+            "Identificar las causas y las consecuencias de la reforma y la contrarreforma.",
+            "Comparar las doctrinas reformistas."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer la influència del medi físic en el desenvolupament de primeres civilitzacions.",
+            "Localitzar i datar les civilitzacions de l’edat antiga i de l’Edat Mitjana",
+            "Conèixer les seves característiques culturals, institucionals i religioses més destacades de Mesopotàmia, Egipte, Grècia, Roma, l’Imperi Bizantí i l’Islam.",
+            "Identificar les aportacions més rellevants d’aquestes civilitzacions a la cultura universal.",
+            "Entendre l’origen de la religió i el significat magicoreligiós de les primeres manifestacions artístiques.",
+            "Conèixer les característiques de les religions politeistes de l’antiguitat.",
+            "Identificar els principals déus i rituals religiosos de l’època.",
+            "Localitzar l’origen del cristianisme i conèixer les novetats que aportava la seva doctrina i la seva difusió.",
+            "Explicar els motius de la persecució dels cristians.",
+            "Comprendre els seus preceptes principals de la doctrina islàmica i el seu abast en l’actualitat.",
+            "Explicar el poder de l’Església a l’Europa feudal.",
+            "Definir el concepte de croada i sintetitzar les croades principals i les seves conseqüències.",
+            "Conèixer els motius de la persecució dels jueus i les seves conseqüències.",
+            "Identificar les causes i les conseqüències de la reforma i la contrareforma.",
+            "Comparar les doctrines reformistes."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Reconocer las desigualdades sociales existentes en épocas pasadas y los mecanismos de dominación y control que se han aplicado, identificando aquellos colectivos que se han visto sometidos y silenciados, destacando la presencia de personajes femeninos.",
+          "text_ca": "Reconèixer les desigualtats socials existents en èpoques passades i els mecanismes de dominació i control que s’han aplicat, identificant aquells col·lectius que s’han vist sotmesos i silenciats, destacant la presència de personatges femenins.",
+          "aclaraciones_es": [
+            "Describir el tipo de sociedad y los diferentes grupos sociales (origen, derechos…).",
+            "Reconocer las desigualdades existentes y entender quienes eran los colectivos marginados durante la época antigua: extranjeros, esclavos y la mujer.",
+            "Elaborar o completar pirámides sociales.",
+            "Destacar el papel de la mujer e identificar personajes femeninos destacados.",
+            "Conocer los rasgos básicos de la economía a la antigüedad, la Edad Media y Moderna.",
+            "Describir la sociedad estamental y los diferentes grupos sociales que la formaban (origen, privilegios…).",
+            "Reconocer las desigualdades existentes y entender quiénes eran los colectivos marginados durante la época medieval y moderna: siervos, minorías étnicas, esclavos y la mujer."
+          ],
+          "aclaraciones_ca": [
+            "Descriure el tipus de societat i els diferents grups socials (origen, drets…).",
+            "Reconèixer les desigualtats existents i entendre qui eren els col·lectius marginats durant l’època antiga: estrangers, esclaus i la dona.",
+            "Elaborar o completar piràmides socials.",
+            "Destacar el paper de la dona i identificar personatges femenins destacats.",
+            "Conèixer els trets bàsics de l’economia a l’antiguitat, l’Edat Mitjana i Moderna.",
+            "Descriure la societat estamental i els diferents grups socials que la formaven (origen, privilegis…).",
+            "Reconèixer les desigualtats existents i entendre qui eren els col·lectius marginats durant l’època medieval i moderna: serfs, minories ètniques, esclaus i la dona."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar la diversidad social y cultural, argumentando e interviniendo en favor de la inclusión, así como rechazando y actuando en contra de cualquier actitud o comportamiento discriminatorio o basado en estereotipos.",
+          "text_ca": "Valorar la diversitat social i cultural, argumentant i intervenint a favor de la inclusió, així com rebutjant i actuant en contra de qualsevol actitud o comportament discriminatori o basat en estereotips.",
+          "aclaraciones_es": [
+            "Definir el término cultura y sus rasgos.",
+            "Identificar las diferentes áreas culturales del mundo y los conflictos existentes.",
+            "Entender y valorar la multiculturalidad como un fenómeno enriquecedor."
+          ],
+          "aclaraciones_ca": [
+            "Definir el terme cultura i els seus trets.",
+            "Identificar les diferents àrees culturals del món i els conflictes existents.",
+            "Entendre i valorar la multiculturalitat com un fenomen enriquidor."
+          ]
+        },
+        {
+          "id": "6.4",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Argumentar e intervenir sobre la igualdad real de hombres y mujeres actuando en contra de cualquier actitud y comportamiento discriminatorio por razón de género.",
+          "text_ca": "Argumentar i intervenir sobre la igualtat real d’homes i dones actuant en contra de qualsevol actitud i comportament discriminatori per raó de gènere.",
+          "aclaraciones_es": [
+            "Comprender el papel de la mujer y su rol en la sociedad actual.",
+            "Promover el rechazo hacia las situaciones discriminatorias de las niñas y de las mujeres en el mundo."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el paper de la dona i el seu rol a la societat actual.",
+            "Promoure el rebuig cap a les situacions discriminatòries de les nenes i de les dones en el món."
+          ]
+        },
+        {
+          "id": "6.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Rechazar actitudes discriminatorias y reconocer la riqueza de la diversidad, a partir del análisis de la relación entre los aspectos geográficos, históricos, ecosociales y culturales que han conformado la sociedad globalizada y multicultural actual, y del conocimiento de la aportación de los movimientos en defensa de los derechos de las minorías y en favor de la inclusividad y la igualdad real, especialmente de las mujeres.",
+          "text_ca": "Rebutjar actituds discriminatòries i reconèixer la riquesa de la diversitat, a partir de l'anàlisi de la relació entre els aspectes geogràfics, històrics, ecosocials i culturals que han conformat la societat globalitzada i multicultural actual, i del coneixement de l'aportació dels moviments en defensa dels drets de les minories i en favor de la inclusivitat i la igualtat real, especialment de les dones.",
+          "aclaraciones_es": [
+            "Rechazar actitudes discriminatorias a partir del análisis de la relación entre los aspectos geográficos, históricos, ecosociales y culturales que han conformado la sociedad globalizada y multicultural actual.",
+            "Conocer la aportación de los movimientos en defensa de los derechos de las minorías y en favor de la inslusividad y la igualdad real, especialmente de las mujeres."
+          ],
+          "aclaraciones_ca": [
+            "Rebutjar actituds discriminatòries a partir de l'anàlisi de la relació entre els aspectes geogràfics, històrics, ecosocials i culturals que han conformat la societat globalitzada i multicultural actual.",
+            "Conèixer l'aportació dels moviments en defensa dels drets de les minories i en favor de la inclusivitat i la igualtat real, especialment de les dones."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Contribuir al bienestar individual y colectivo a través del diseño, exposición y puesta en práctica de iniciativas orientadas a promover un compromiso activo con los valores comunes, la mejora del entorno y el servicio en la comunidad.",
+          "text_ca": "Contribuir al benestar individual i col·lectiu a través del disseny, exposició i posada en pràctica d'iniciatives orientades a promoure un compromís actiu amb els valors comuns, la millora de l'entorn i el servei a la comunitat.",
+          "aclaraciones_es": [
+            "Diseñar, exponer y poner en práctica iniciativas que promuevan la mejora del entorno y el servicio en la comunidad para contribuir al bienestar individual y colectivo."
+          ],
+          "aclaraciones_ca": [
+            "Dissenyar, exposar i posar en pràctica iniciatives que promoguin la millora de l’entorn i el servei a la comunitat per contribuir al benestar individual i col·lectiu."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE7",
+      "ce_num": 7,
+      "description_es": "Identificar los fundamentos que sostienen las diversas identidades propias y las ajenas, a través del conocimiento y puesta en valor del patrimonio material e inmaterial que compartimos para conservarlo y respetar los sentimientos de pertenencia, así como para favorecer procesos que contribuyan a la cohesión y solidaridad territorial en orden a los valores del europeísmo y de la Declaración Universal de los Derechos Humanos.",
+      "description_ca": "Identificar els fonaments que sostenen les diverses identitats propies i les dels altres, a través del coneixement i la valoració del patrimoni material i immaterial que compartim per conservar-lo i respectar els sentiments de pertinença, com també per afavorir processos que contribueixin a la cohesió o solidaritat territorial amb vista als valors de l’europeisme i la Declaració Universal dels Drets Humans.",
+      "descriptores": [
+        "CP3",
+        "CPSAA1",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "7.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Relacionar las culturas y civilizaciones que se han desarrollado a lo largo de la historia antigua, medieval y moderna con las diversas identidades colectivas que se han ido construyendo hasta la actualidad, reflexionando sobre los múltiplos significados que adoptan y sus aportaciones a la cultura humana universal.",
+          "text_ca": "Relacionar les cultures i civilitzacions que s’han desenvolupat al llarg de la història antiga, medieval i moderna amb les diverses identitats col·lectives que s’han anat construint fins a l’actualitat, reflexionant sobre els múltiples significats que adopten i les seves aportacions a la cultura humana universal.",
+          "aclaraciones_es": [
+            "Conocer el legado cultural de la Grecia clásica, de la civilización romana y de la cultura islámica, bizantina y carolingia.",
+            "Identificar y valorar los restos históricos que sobreviven actualmente fruto de esa herencia.",
+            "Comprender y valorar la importancia de las aportaciones a la ciencia universal desde la Edad Media hasta la Edad Moderna.",
+            "Identificar los principales avances tecnológicos de las distintas civilizaciones de Edad Media y Moderna."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer el llegat cultural de la Grècia clàssica, de la civilització romana i de la cultura islàmica, bizantina i carolíngia.",
+            "Identificar i valorar les restes històriques que sobreviuen actualment fruit d’aquesta herència.",
+            "Comprendre i valorar la importància de les aportacions a la ciència universal des de l’edat mitjana fins l’edat moderna.",
+            "Identificar els principals avenços tecnològics de les distintes civilitzacions d’Edat Mitjana i Moderna."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar el origen histórico de diferentes identidades colectivas que se han desarrollado en España, interpretando el uso se ha hecho de las mismas y mostrando una actitud de respeto hacia los diferentes sentidos de pertenencia, promoviendo la solidaridad y la cohesión social.",
+          "text_ca": "Identificar l’origen històric de diferents identitats col·lectives que s’han desenvolupat a Espanya, interpretant l’ús s’ha fet de les mateixes i mostrant una actitud de respecte cap als diferents sentits de pertinença, promovent la solidaritat i la cohesió social.",
+          "aclaraciones_es": [
+            "Identificar las características y localizar los pueblos prerromanos, bárbaros visigodos, vándalos y bizantinos.",
+            "Conocer el proceso de colonización de los pueblos fenicios, griegos y cartagineses. La Ibiza púnica.",
+            "Entender las consecuencias del contacto de los pueblos colonizadores con las culturas peninsulares.",
+            "Conocer la conquista romana y el proceso de romanización peninsular y balear.",
+            "Conocer las etapas, la distribución y organización territorial de Al-Ándalus y las Islas Orientales.",
+            "Entender y valorar la conquista cristiana peninsular y el Reino de Mallorca.",
+            "Describir el paso de la Edad Media en la edad moderna: el caso de los Austrias y de Borbones."
+          ],
+          "aclaraciones_ca": [
+            "Identificar les característiques i localitzar els pobles preromans, bàrbars visigots, vàndals i Bizantins.",
+            "Conèixer el procés de colonització dels pobles fenicis, grecs i cartaginesos. L’Eivissa púnica.",
+            "Entendre les conseqüències del contacte dels pobles colonitzadors amb les cultures peninsulars.",
+            "Conèixer la conquesta romana i el procés de romanització peninsular i balear.",
+            "Conèixer les etapes, la distribució i organització territorial de Al-Àndalus i les Illes Orientals.",
+            "Entendre i valorar la conquesta cristiana peninsular i el Regne de Mallorca.",
+            "Descriure el pas de l’edat mitjana a l’edat moderna: el cas dels Àustries i dels Borbons."
+          ]
+        },
+        {
+          "id": "7.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Señalar los fundamentos de la idea de Europa a través de las diferentes experiencias históricas del pasado e identificar el legado histórico, institucional, artístico y cultural como patrimonio común de la ciudadanía europea.",
+          "text_ca": "Assenyalar els fonaments de la idea d’Europa a través de les diferents experiències històriques del passat i identificar el llegat històric, institucional, artístic i cultural com a patrimoni comú de la ciutadania europea.",
+          "aclaraciones_es": [
+            "Explicar las características esenciales del arte griego y romano y su evolución.",
+            "Conocer e identificar las principales aportaciones de la Grecia clásica y la civilización romana a la cultura europea.",
+            "Entender el concepto de romanización y su alcance.",
+            "Explicar los rasgos que definen las culturas de la Edad Media y Moderna.",
+            "Explicar las características esenciales del arte románico, gótico, renacentista y barroco.",
+            "Reconocer las aportaciones de la cultura musulmana y judía a la cultura europea.",
+            "Comprender la importancia del cristianismo en la formación de la idea de Europa."
+          ],
+          "aclaraciones_ca": [
+            "Explicar les característiques essencials de l’art grec i romà i la seva evolució.",
+            "Conèixer i identificar les principals aportacions de la Grècia clàssica i la civilització romana a la cultura europea.",
+            "Entendre el concepte de romanització i el seu abast.",
+            "Explicar els trets que defineixen les cultures de l’edat mitjana i moderna.",
+            "Explicar les característiques essencials de l’art romànic, gòtic, renaixentista i barroc.",
+            "Reconèixer les aportacions de la cultura musulmana i jueva a la cultura europea.",
+            "Comprendre la importància del cristianisme en la formació de la idea d’Europa."
+          ]
+        },
+        {
+          "id": "7.4",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar, proteger y conservar el patrimonio artístico, histórico y cultural como fundamento de la identidad colectiva local, autonómica, nacional, europea y universal, considerándolo un bien para lo disfrute recreativo y cultural y un recurso para el desarrollo de los pueblos.",
+          "text_ca": "Valorar, protegir i conservar el patrimoni artístic, històric i cultural com a fonament de la identitat col·lectiva local, autonòmica, nacional, europea i universal, considerant-ho un bé per al gaudi recreatiu i cultural i un recurs per al desenvolupament dels pobles.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "7.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Reconocer los rasgos que van conformando la identidad propia y de los demás, la riqueza de las identidades múltiples en relación con diferentes escalas espaciales, a través de la investigación y el análisis de sus fundamentos geográficos, históricos, artísticos, ideológicos y lingüísticos, y el reconocimiento de sus expresiones culturales.",
+          "text_ca": "Reconèixer els trets que van conformant la identitat pròpia i dels altres, la riquesa de les identitats múltiples en relació amb diferents escales espacials, a través de la investigació i l'anàlisi dels seus fonaments geogràfics, històrics, artístics, ideològics i lingüístics, i el reconeixement de les seves expressions culturals.",
+          "aclaraciones_es": [
+            "Reconocer rasgos de la identidad propia y de los demás, a través de la investigación y el análisis de sus fundamentos geográficos, históricos, artísticos, ideológicos y lingüísticos."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer trets de la identitat pròpia i dels altres, a través de la recerca i l’anàlisi dels seus fonaments geogràfics, històrics, artístics, ideològics i lingüístics."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Conocer y contribuir a conservar el patrimonio material e inmaterial común, respetando los sentimientos de pertenencia y adoptando compromisos con principios y acciones orientadas a la cohesión y la solidaridad territorial de la comunidad política, los valores del europeismo y de la Declaración Universal de los Derechos Humanos.",
+          "text_ca": "Conèixer i contribuir a conservar el patrimoni material i immaterial comú, respectant els sentiments de pertinença i adoptant compromisos amb principis i accions orientades a la cohesió i la solidaritat territorial de la comunitat política, els valors de l'europeisme i de la Declaració Universal dels Drets Humans.",
+          "aclaraciones_es": [
+            "Adoptar compromisos con los principios y valores del europeismo y la Declaración Universal de los Derechos Humanos.",
+            "Respetar, conocer y contribuir a la conservación del patrimonio material e inmaterial."
+          ],
+          "aclaraciones_ca": [
+            "Adoptar compromisos amb els principis i valors de l’europeisme i la Declaració Universal dels Drets Humans.",
+            "Respectar, conèixer i contribuir a la conservació del patrimoni material i immaterial."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE8",
+      "ce_num": 8,
+      "description_es": "Tomar conciencia del papel de los ciclos demográficos, el ciclo vital, las formas de vida y las relaciones intergeneracionales y de dependencia en la sociedad actual y su evolución a lo largo del tiempo, analizándolas de manera crítica, para promover alternativas saludables, sostenibles, enriquecedoras y respetuosas con la dignidad humana y el compromiso con la sociedad y el entorno.",
+      "description_ca": "Prendre consciència del paper dels cicles demogràfics, el cicle vital, les formes de vida i les relacions intergeneracionals i de dependència en la societat actual i la seva evolució al llarg del temps, analitzant-les de manera crítica, per promoure alternatives saludables, sostenibles, enriquidores i respectuoses amb la dignitat humana i el compromís amb la societat i l’entorn.",
+      "descriptores": [
+        "STEM5",
+        "CD4",
+        "CPSAA2",
+        "CPSAA5",
+        "CC1",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "8.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Conocer e interpretar los comportamientos demográficos de la población, los cambios que ha experimentado y sus ciclos, identificando y analizando los principales problemas y retos a los cuales nos enfrentamos en el mundo, en España y en las Illes Balears.",
+          "text_ca": "Conèixer i interpretar els comportaments demogràfics de la població, els canvis que ha experimentat i els seus cicles, identificant i analitzant els principals problemes i reptes als quals ens enfrontem en el món, a Espanya i a les Illes Balears.",
+          "aclaraciones_es": [
+            "Conocer y dominar las técnicas para el estudio demográfico como el cálculo de tasas o las pirámides de población.",
+            "Comprender las principales características de la población mundial, española y balear.",
+            "Identificar los principales desafíos demográficos actuales.",
+            "Localizar los sistemas urbanos mundiales principales, españoles y baleares.",
+            "Conocer los principales problemas del mundo urbano (contaminación, residuos urbanos…).",
+            "Analizar casos de despoblación y sobrepoblación urbana."
+          ],
+          "aclaraciones_ca": [
+            "Conèixer i dominar les tècniques per a l’estudi demogràfic com el càlcul de taxes o les piràmides de població.",
+            "Comprendre les principals característiques de la població mundial, espanyola i balear.",
+            "Identificar els principals desafiaments demogràfics actuals.",
+            "Localitzar els sistemes urbans mundials principals, espanyols i balears.",
+            "Conèixer els principals problemes del món urbà (contaminació, residus urbans…).",
+            "Analitzar casos de despoblació i sobrepoblació urbana."
+          ]
+        },
+        {
+          "id": "8.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Tomar conciencia del ciclo vital y analizar cómo han cambiado sus características, necesidades y obligaciones en distintos momentos históricos, así como las raíces de la distribución por motivos de género del trabajo doméstico, asumiendo las responsabilidades y compromisos propios de la edad en el ámbito familiar, en el entorno escolar y en la comunidad y valorando la riqueza que aportan las relaciones intergeneracionales.",
+          "text_ca": "Prendre consciència del cicle vital i analitzar com han canviat les seves característiques, necessitats i obligacions en diferents moments històrics, com també les arrels de la distribució per motius de gènere del treball domèstic, assumint les responsabilitats i compromisos propis de l’edat en l’àmbit familiar, en l’entorn escolar i en la comunitat i valorant la riquesa que aporten les relacions intergeneracionals.",
+          "aclaraciones_es": [
+            "Valorar la lucha por los derechos de la mujer a lo largo de la historia.",
+            "Valorar los derechos de los niños a la sociedad actual."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la lluita pels drets de la dona al llarg de la història.",
+            "Valorar els drets dels infants a la societat actual."
+          ]
+        },
+        {
+          "id": "8.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Relacionar los cambios en los estilos de vida tradicional y contrastarlos con los que son saludables y sostenibles en el entorno, a través de comportamientos respetuosos con la salud propia, la de los demás y con otros seres vivos, tomando conciencia de la importancia de promover el propio desarrollo personal.",
+          "text_ca": "Relacionar els canvis en els estils de vida tradicional i contrastar-los amb els que són saludables i sostenibles en l’entorn, a través de comportaments respectuosos amb la salut pròpia, la dels altres i amb altres éssers vius, prenent consciència de la importància de promoure el propi desenvolupament personal.",
+          "aclaraciones_es": [
+            "Comparar el estilo de vida urbano y rural.",
+            "Reconocer la necesidad de un crecimiento urbano sostenible y realizar propuestas."
+          ],
+          "aclaraciones_ca": [
+            "Comparar l’estil de vida urbà i rural.",
+            "Reconèixer la necessitat d’un creixement urbà sostenible i realitzar propostes."
+          ]
+        },
+        {
+          "id": "8.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Adoptar un papel activo y comprometido con el entorno, de acuerdo con aptitudes, aspiraciones, intereses y valores propios, a partir del análisis crítico de la realidad económica, de la distribución y gestión del trabajo, y la adopción de hábitos responsables, saludables, sostenibles y respetuosos con la dignidad humana y la de otros de seres vivos, así como de la reflexión ética ante el uso de la tecnología y la gestión del tiempo libre.",
+          "text_ca": "Adoptar un paper actiu i compromès amb l'entorn, d'acord amb aptituds, aspiracions, interessos i valors propis, a partir de l'anàlisi crítica de la realitat econòmica, de la distribució i gestió del treball, i l'adopció d'hàbits responsables, saludables, sostenibles i respectuosos amb la dignitat humana i la d’altres d’éssers vius, així com de la reflexió ètica davant els usos de la tecnologia i la gestió del temps lliure.",
+          "aclaraciones_es": [
+            "Adoptar un papel activo y comprometido con el entorno a partir del análisis crítico de la realidad económica, de la distribución y gestión del trabajo.",
+            "Adquirir hábitos responsables, saludables, sostenibles y respetuosos con la dignidad humana y otros seres vivos.",
+            "Lograr una reflexión ética ante el uso de la tecnología y la gestión del tiempo libre.",
+            "Reconocer las iniciativas de las asociaciones y entidades sociales civiles.",
+            "Adoptar actitudes proactivas para la participación y transformación en el ámbito local y comunitario y a través de las relaciones intergeneracionales."
+          ],
+          "aclaraciones_ca": [
+            "Adoptar un paper actiu i compromès amb l’entorn a partir de l’anàlisi crítica de la realitat econòmica, de la distribució i gestió del treball.",
+            "Adquirir hàbits responsables, saludables, sostenibles i respectuosos amb la dignitat humana i altres éssers vius.",
+            "Assolir una reflexió ètica davant els usos de la tecnologia i la gestió del temps lliure.",
+            "Reconèixer les iniciatives de les associacions i entitats socials civils.",
+            "Adoptar actituds proactives per a la participació i transformació en l’àmbit local i comunitari i a través de les relacions intergeneracionals."
+          ]
+        },
+        {
+          "id": "8.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Reconocer las iniciativas de la sociedad civil, reflejadas en asociaciones y entidades sociales, adoptando actitudes de participación y transformación en el ámbito local y comunitario, especialmente en el ámbito de las relaciones intergeneracionales.",
+          "text_ca": "Reconèixer les iniciatives de la societat civil, reflectides en associacions i entitats socials, adoptant actituds de participació i transformació en l'àmbit local i comunitari, especialment a l'àmbit de les relacions intergeneracionals.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        }
+      ]
+    },
+    {
+      "ce_id": "CE9",
+      "ce_num": 9,
+      "description_es": "Conocer y valorar la importancia de la seguridad integral ciudadana en la cultura de convivencia nacional e internacional, reconociendo la contribución del Estado, sus instituciones y otras entidades sociales a la ciudadanía global, a la paz, a la cooperación internacional y al desarrollo sostenible, para promover la consecución de un mundo más seguro, solidario, sostenible y justo.",
+      "description_ca": "Conèixer i valorar la importància de la seguretat integral ciutadana en la cultura de convivència nacional i internacional, reconeixent la contribució de l’Estat, les seves institucions i altres entitats socials a la ciutadania global, a la pau, a la cooperació internacional i al desenvolupament sostenible, per promoure la consecució d’un món més segur, solidari, sostenible i just.",
+      "descriptores": [
+        "CCL2",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CC4",
+        "CE1",
+        "CCEC1"
+      ],
+      "criterios": [
+        {
+          "id": "9.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar e interpretar la conexión de España con los grandes procesos históricos (de las épocas antigua, medieval y moderna), valorando lo que han supuesto para su evolución y señalando las aportaciones de sus habitantes a lo largo de la historia.",
+          "text_ca": "Identificar i interpretar la connexió d’Espanya amb els grans processos històrics (de les èpoques antiga, medieval i moderna), valorant el que han suposat per a la seva evolució i assenyalant les aportacions dels seus habitants al llarg de la història.",
+          "aclaraciones_es": [],
+          "aclaraciones_ca": []
+        },
+        {
+          "id": "9.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Interpretar desde la perspectiva del desarrollo sostenible y la ciudadanía global los principales desafíos del mundo actual, expresando la importancia de implicarse en la investigación de soluciones y en la manera de concretarlos desde la propia capacidad de acción, tanto local como global, valorando la contribución del Estado, sus instituciones y las asociaciones civiles en programas y misiones dirigidos por organismos nacionales e internacionales para el logro de la paz, la seguridad integral, la convivencia social y la cooperación entre los pueblos.",
+          "text_ca": "Interpretar des de la perspectiva del desenvolupament sostenible i la ciutadania global els principals desafiaments del món actual, expressant la importància d’implicar-se en la recerca de solucions i en la manera de concretar-los des de la pròpia capacitat d’acció, tant local com global, valorant la contribució de l’Estat, les seves institucions i les associacions civils en programes i missions dirigits per organismes nacionals i internacionals per a l’assoliment de la pau, la seguretat integral, la convivència social i la cooperació entre els pobles.",
+          "aclaraciones_es": [
+            "Entender el concepto de globalización y sus implicaciones a nivel global.",
+            "Valorar el alcance de los conflictos internacionales.",
+            "Proponer mejoras sobre aspectos de nuestra sociedad (reparto justo, pobreza…)."
+          ],
+          "aclaraciones_ca": [
+            "Entendre el concepte de globalització i les seves implicacions a nivell global.",
+            "Valorar l’abast dels conflictes internacionals.",
+            "Proposar millores sobre aspectes de la nostra societat (repartiment just, pobresa…)."
+          ]
+        },
+        {
+          "id": "9.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Interpretar y explicar de manera argumentada la conexión de España con los grandes procesos históricos de la época contemporánea, valorando lo que han supuesto para su evolución y señalando las aportaciones de sus habitantes a lo largo de la historia, así como las aportaciones del Estado y sus instituciones a la cultura europea y mundial.",
+          "text_ca": "Interpretar i explicar de manera argumentada la connexió d'Espanya amb els grans processos històrics de l'època contemporània, valorant el que han suposat per a la vostra evolució i assenyalant les aportacions dels seus habitants al llarg de la història, així com les aportacions de l'Estat i les seves institucions a la cultura europea i mundial.",
+          "aclaraciones_es": [
+            "Interpretar y explicar la conexión de España con los grandes procesos históricos de la época contemporánea.",
+            "Valorar las aportaciones que las personas del estado español han hecho a lo largo de la historia, así como las del Estado, sus instituciones y las Illes Balears a la cultura europea y mundial."
+          ],
+          "aclaraciones_ca": [
+            "Interpretar i explicar la connexió d’ Espanya amb els grans processos històrics de l’època contemporània.",
+            "Valorar les aportacions que les persones de l’estat espanyol han fet al llarg de la història, així com les de l’Estat, les seves institucions i les Illes Balears a la cultura europea i mundial."
+          ]
+        },
+        {
+          "id": "9.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Contribuir a la consecución de un mundo más seguro, justo, solidario y sostenible, a través del análisis de los principales conflictos del presente y el reconocimiento de las instituciones del Estado y de las asociaciones civiles que garantizan la seguridad integral y la convivencia social, así como los compromisos internacionales de nuestro país en favor de la paz, la seguridad, la cooperación, la sostenibilidad, los valores democráticos y los Objetivos de Desarrollo Sostenible.",
+          "text_ca": "Contribuir a la consecució d'un món més segur, just, solidari i sostenible, a través de l'anàlisi dels principals conflictes del present i el reconeixement de les institucions de l’Estat i de les associacions civils que garanteixen la seguretat integral i la convivència social, així com els compromisos internacionals del nostre país en favor de la pau, la seguretat, la cooperació, la sostenibilitat, els valors democràtics i els Objectius de Desenvolupament Sostenible.",
+          "aclaraciones_es": [
+            "Analizar los principales conflictos del mundo actual para contribuir a un mundo más seguro, solidario y sostenible.",
+            "Reconocer las instituciones del Estado y las asociaciones civiles que garantizan la seguridad integral y la convivencia sociales.",
+            "Conocer los compromisos internacionales de nuestro país en favor de la paz, la seguridad, la cooperación, la sostenibilidad, los valores democráticos y los Objetivos de Desarrollo Sostenible."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar els principals conflictes del món actual per contribuir a un món més segur, solidari i sostenible.",
+            "Reconèixer les institucions de l’Estat i les associacions civils que garanteixen la seguretat integral i la convivència socials.",
+            "Conèixer els compromisos internacionals del nostre país en favor de la pau, la seguretat, la cooperació, la sostenibilitat, els valors democràtics i els Objectius de Desenvolupament Sostenible."
+          ]
+        }
+      ]
+    }
+  ]
+}

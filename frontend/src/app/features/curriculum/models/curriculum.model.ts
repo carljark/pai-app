@@ -4,6 +4,14 @@ export interface EvaluativeCriteria {
   number?: string;
   subject?: string;
   area?: string;
+  // Campos de la ESO ordinaria (GET /api/ces?tipoNivel=ESO_ORDINARIA)
+  subjectCode?: string;
+  /** Tipo de la materia en el curso: común, de opción u optativa. */
+  tipo?: 'comun' | 'opcion' | 'optativa';
+  ce_num?: number;
+  /** Valor único de selección: «Materia · CEn. Descripción». */
+  value?: string;
+  criterios?: string[];
 }
 
 export interface LearningOutcome {

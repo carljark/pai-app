@@ -52,7 +52,8 @@ const LEVEL_KEYWORDS: Record<string, string> = {
   FP_BASICA: 'formación profesional básica peluquería estética',
   CFGM_ESTETICA: 'formación profesional estética belleza',
   CFGM_PELUQUERIA: 'formación profesional peluquería cosmética capilar',
-  CFGS_EDUCACION_INFANTIL: 'formación profesional educación infantil'
+  CFGS_EDUCACION_INFANTIL: 'formación profesional educación infantil',
+  ESO_ORDINARIA: 'educación secundaria obligatoria situación aprendizaje'
 };
 
 /**

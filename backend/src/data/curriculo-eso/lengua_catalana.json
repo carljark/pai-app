@@ -1,0 +1,1078 @@
+{
+  "code": "lengua_catalana",
+  "name_es": "Lengua Catalana y Literatura",
+  "name_ca": "Llengua Catalana i Literatura",
+  "cursos": {
+    "1º": "comun",
+    "2º": "comun",
+    "3º": "comun",
+    "4º": "comun"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Describir y apreciar la diversidad lingüística del mundo a partir del reconocimiento de las lenguas de los alumnos y la realidad plurilingüe y pluricultural de España, con especial atención a los territorios de habla catalana, analizando el origen y desarrollo sociohistórico de sus lenguas y las características de las principales variedades dialectales del catalán, para favorecer la reflexión interlingüística, combatir los estereotipos y prejuicios lingüísticos, y poner en valor esa diversidad como fuente de riqueza cultural.",
+      "description_ca": "Descriure i apreciar la diversitat lingüística del món a partir del reconeixement de les llengües dels alumnes i la realitat plurilingüe i pluricultural d’Espanya, amb especial atenció als territoris de parla catalana, analitzant l’origen i desenvolupament sociohistòric de les seves llengües i les característiques de les principals varietats dialectals del català, per afavorir la reflexió interlingüística, combatre els estereotips i prejudicis lingüístics, i posar en valor aquesta diversitat com a font de riquesa cultural.",
+      "descriptores": [
+        "CCL1",
+        "CCL5",
+        "CP2",
+        "CP3",
+        "CC1",
+        "CC2",
+        "CCEC1",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Reconocer las lenguas del entorno de los alumnos y contrastar algunos de sus rasgos en manifestaciones orales, escritas y multimodales.",
+          "text_ca": "Reconèixer les llengües de l’entorn dels alumnes i contrastar alguns dels seus trets en manifestacions orals, escrites i multimodals.",
+          "aclaraciones_es": [
+            "Reconocer las lenguas del entorno de los alumnos.",
+            "Contrastar algunos de sus rasgos en manifestaciones orales, escritas y multimodales."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer les llengües de l’entorn dels alumnes.",
+            "Contrastar alguns dels seus trets en manifestacions orals, escrites i multimodals."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar prejuicios y estereotipos lingüísticos adoptando una actitud de respeto y valoración de la riqueza cultural lingüística y dialectal, a partir de la observación de la diversidad lingüística del entorno.",
+          "text_ca": "Identificar prejudicis i estereotips lingüístics adoptant una actitud de respecte i valoració de la riquesa cultural lingüística i dialectal, a partir de l’observació de la diversitat lingüística de l’entorn.",
+          "aclaraciones_es": [
+            "Identificar prejuicios y estereotipos lingüísticos.",
+            "Adoptar una actitud de respeto.",
+            "Valorar la riqueza cultural y lingüística.",
+            "Observar la diversidad lingüística del entorno."
+          ],
+          "aclaraciones_ca": [
+            "Identificar prejudicis i estereotips lingüístics.",
+            "Adoptar una actitud de respecte.",
+            "Valorar la riquesa cultural i lingüística.",
+            "Observar la diversitat lingüística de l’entorn."
+          ]
+        },
+        {
+          "id": "1.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Reconocer y valorar las lenguas de España y las variedades dialectales del catalán, con atención especial a la del propio territorio, a partir de la explicación de su origen y su desarrollo histórico y sociolingüístico, contrastando aspectos lingüísticos y discursivos de las diferentes lenguas, así como rasgos de los dialectos del catalán, diferenciándolos de los rasgos sociolectales y de registro, en manifestaciones orales, escritas y multimodales.",
+          "text_ca": "Reconèixer i valorar les llengües d’Espanya i les varietats dialectals del català, amb atenció especial a la del propi territori, a partir de l’explicació del seu origen i el seu desenvolupament històric i sociolingüístic, contrastant aspectes lingüístics i discursius de les diferents llengües, com també trets dels dialectes del català, diferenciant-los dels trets sociolectals i de registre, en manifestacions orals, escrites i multimodals.",
+          "aclaraciones_es": [
+            "Reconocer las lenguas de España, con atención especial a la lengua catalana.",
+            "Reconocer las variedades dialectales del catalán.",
+            "Explicar el origen y el desarrollo histórico y sociolingüístico de la lengua catalana.",
+            "Identificar aspectos lingüísticos y discursivos de las diferentes lenguas, tanto de España, como de las que hablan los alumnos.",
+            "Contrastar los rasgos dialectales, sociolectals y de registro en manifestaciones orales, escritas y multimodales.",
+            "Diferenciar el registro formal e informal en diferentes manifestaciones orales, escritas y multimodales.",
+            "Valorar la diversidad lingüística como fuente de riqueza cultural."
+          ],
+          "aclaraciones_ca": [
+            "Reconèixer les llengües d’Espanya, amb atenció especial a la llengua catalana.",
+            "Reconèixer les varietats dialectals del català.",
+            "Explicar l’origen i el desenvolupament històric i sociolingüístic de la llengua catalana.",
+            "Identificar aspectes lingüístics i discursius de les diferents llengües, tant d’Espanya, com les que parlen els alumnes.",
+            "Contrastar els trets dialectals, sociolectals i de registre en manifestacions orals, escrites i multimodals.",
+            "Diferenciar el registre formal i informal en diferents manifestacions orals, escrites i multimodals.",
+            "Valorar la diversitat lingüística com a font de riquesa cultural."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Identificar y cuestionar prejuicios y estereotipos lingüísticos adoptando una actitud de respeto y valoración de la riqueza cultural, lingüística y dialectal, a partir del análisis de la diversidad lingüística en el entorno social próximo, de la exploración y reflexión en torno los fenómenos del contacto entre lenguas, y de la indagación de los derechos lingüísticos individuales y colectivos.",
+          "text_ca": "Identificar i qüestionar prejudicis i estereotips lingüístics adoptant una actitud de respecte i valoració de la riquesa cultural, lingüística i dialectal, a partir de l’anàlisi de la diversitat lingüística en l’entorn social pròxim, de l’exploració i reflexió entorn els fenòmens del contacte entre llengües, i de la indagació dels drets lingüístics individuals i col·lectius.",
+          "aclaraciones_es": [
+            "Identificar prejuicios y estereotipos lingüísticos.",
+            "Cuestionar prejuicios y estereotipos desde el respeto y la valoración de la riqueza cultural, lingüística y dialectal.",
+            "Analizar la diversidad lingüística en el entorno social próximo.",
+            "Reflexionar sobre los fenómenos de contacto entre lenguas.",
+            "Identificar los derechos lingüísticos individuales y colectivos."
+          ],
+          "aclaraciones_ca": [
+            "Identificar prejudicis i estereotips lingüístics.",
+            "Qüestionar prejudicis i estereotips des del respecte i la valoració de la riquesa cultural, lingüística i dialectal.",
+            "Analitzar la diversitat lingüística en l’entorn social pròxim.",
+            "Reflexionar sobre els fenòmens de contacte entre llengües.",
+            "Identificar els drets lingüístics individuals i col·lectius."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Comprender e interpretar textos orales y multimodales recogiendo el sentido general y la información más relevante, identificando el punto de vista y la intención del emisor y valorando la fiabilidad, la forma y el contenido, para construir conocimiento, formarse opinión y ampliar las posibilidades de disfrute y ocio.",
+      "description_ca": "Comprendre i interpretar texts orals i multimodals recollint el sentit general i la informació més rellevant, identificant el punt de vista i la intenció de l’emissor i valorant-ne la fiabilitat, la forma i el contingut, per construir coneixement, formar-se opinió i eixamplar les possibilitats de gaudi i oci.",
+      "descriptores": [
+        "CCL2",
+        "CP2",
+        "STEM1",
+        "CD2",
+        "CD3",
+        "CPSAA4",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Comprender el sentido global, la estructura, la información más relevante en función de las necesidades comunicativas y la intención del emisor en textos orales y multimodales sencillos de diferentes ámbitos, analizando la interacción entre los diferentes códigos.",
+          "text_ca": "Comprendre el sentit global, l’estructura, la informació més rellevant en funció de les necessitats comunicatives i la intenció de l’emissor en texts orals i multimodals senzills de diferents àmbits, analitzant la interacció entre els diferents codis.",
+          "aclaraciones_es": [
+            "Comprender el sentido global, la estructura, la información más relevante en función de las necesidades comunicativas.",
+            "Comprender la intención del emisor en textos orales y multimodales sencillos de diferentes ámbitos.",
+            "Analizar la interacción entre los diferentes códigos."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el sentit global, l’estructura, la informació més rellevant en funció de les necessitats comunicatives.",
+            "Comprendre la intenció de l’emissor en texts orals i multimodals senzills de diferents àmbits.",
+            "Analitzar la interacció entre els diferents codis."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar la forma y el contenido de textos orales y multimodales sencillos, evaluando la calidad, la fiabilidad e idoneidad del canal utilizado, así como la eficacia de los procedimientos comunicativos empleados.",
+          "text_ca": "Valorar la forma i el contingut de texts orals i multimodals senzills, avaluant-ne la qualitat, la fiabilitat i idoneïtat del canal utilitzat, com també l’eficàcia dels procediments comunicatius emprats.",
+          "aclaraciones_es": [
+            "Valorar la forma y el contenido de textos orales y multimodales sencillos.",
+            "Evaluar la calidad de textos orales y multimodales sencillos.",
+            "Valorar la fiabilidad y la idoneidad del canal utilizado y la eficacia de los procedimientos comunicativos empleados."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la forma i el contingut de texts orals i multimodals senzills.",
+            "Avaluar la qualitat de texts orals i multimodals senzills.",
+            "Valorar la fiabilitat i la idoneïtat del canal utilitzat i l’eficàcia dels procediments comunicatius emprats."
+          ]
+        },
+        {
+          "id": "2.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Comprender el sentido global, la estructura, la información más relevante en función de las necesidades comunicativas y la intención del emisor en textos orales y multimodales de una cierta complejidad de diferentes ámbitos, analizando la interacción entre los diferentes códigos.",
+          "text_ca": "Comprendre el sentit global, l’estructura, la informació més rellevant en funció de les necessitats comunicatives i la intenció de l’emissor en texts orals i multimodals d’una certa complexitat de diferents àmbits, analitzant la interacció entre els diferents codis.",
+          "aclaraciones_es": [
+            "Comprender el sentido global de textos orales y multimodales de una cierta complejidad de diferentes ámbitos.",
+            "Analizar la estructura de textos orales y multimodales de una cierta complejidad de diferentes ámbitos.",
+            "Discernir la información más relevante en función de las necesidades comunicativas y la intención de textos orales y multimodales de una cierta complejidad en diferentes ámbitos.",
+            "Analizar la interacción entre el código verbal y el código no verbal."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el sentit global de texts orals i multimodals d’una certa complexitat de diferents àmbits.",
+            "Analitzar l’estructura de texts orals i multimodals d’una certa complexitat de diferents àmbits.",
+            "Destriar la informació més rellevant en funció de les necessitats comunicatives i la intenció de texts orals i multimodals d’una certa complexitat en diferents àmbits.",
+            "Analitzar la interacció entre el codi verbal i el codi no verbal."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Valorar la forma y el contenido de textos orales y multimodales de una cierta complejidad, evaluando la calidad, la fiabilidad y la idoneidad del canal utilizado, así como la eficacia de los procedimientos comunicativos empleados.",
+          "text_ca": "Valorar la forma i el contingut de texts orals i multimodals d’una certa complexitat, avaluant- ne la qualitat, la fiabilitat i la idoneïtat del canal utilitzat, com també l’eficàcia dels procediments comunicatius emprats.",
+          "aclaraciones_es": [
+            "Valorar la forma de textos orales y multimodales de una cierta complejidad.",
+            "Valorar el contenido de textos orales y multimodales de una cierta complejidad.",
+            "Evaluar la calidad, la fiabilidad y la idoneidad del canal usado.",
+            "Evaluar la eficacia de los procedimientos comunicativos empleados."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la forma de texts orals i multimodals d’una certa complexitat.",
+            "Valorar el contingut de texts orals i multimodals d’una certa complexitat.",
+            "Avaluar la qualitat, la fiabilitat i la idoneïtat del canal usat.",
+            "Avaluar l’eficàcia dels procediments comunicatius emprats."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Producir textos orales y multimodales con fluidez, coherencia, cohesión y registro adecuado, dadas las convenciones propias de los diferentes géneros discursivos, y participar en interacciones orales con actitud cooperativa y respetuosa, tanto para construir conocimiento y establecer vínculos personales como para intervenir de manera activa e informada en diferentes contextos sociales.",
+      "description_ca": "Produir texts orals i multimodals amb fluïdesa, coherència, cohesió i registre adequat, ateses les convencions pròpies dels diferents gèneres discursius, i participar en interaccions orals amb actitud cooperativa i respectuosa, tant per construir coneixement i establir vincles personals com per intervenir de manera activa i informada en diferents contexts socials.",
+      "descriptores": [
+        "CCL3",
+        "CCL5",
+        "CP2",
+        "STEM1",
+        "CD2",
+        "CD3",
+        "CC2",
+        "CE1"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Realizar narraciones y exposiciones orales sencillas con diferentes grados de planificación sobre temas de interés personal, social y educativo ajustándose a las convenciones propias de los diversos géneros discursivos, con fluidez, coherencia, cohesión y el registro adecuado, en diferentes soportes y utilizando de manera eficaz recursos verbales y no verbales.",
+          "text_ca": "Realitzar narracions i exposicions orals senzilles amb diferents graus de planificació sobre temes d’interès personal, social i educatiu ajustant-se a les convencions pròpies dels diversos gèneres discursius, amb fluïdesa, coherència, cohesió i el registre adequat, en diferents suports i utilitzant de manera eficaç recursos verbals i no verbals.",
+          "aclaraciones_es": [
+            "Realizar narraciones orales sencillas con diferentes grados de planificación sobre temas de interés personal, social y educativo en diferentes soportes.",
+            "Realizar exposiciones orales sencillas con diferentes grados de planificación sobre temas de interés personal, social y educativo en diversos soportes.",
+            "Ajustar las narraciones y exposiciones orales sencillas a las convenciones propias de los diversos géneros discursivos con fluidez, coherencia, cohesión y corrección.",
+            "Emplear el registro adecuado a la hora de hacer las narraciones y exposiciones orales sencillas.",
+            "Utilizar en las exposiciones orales y narraciones, de manera eficaz, recursos verbales y no verbales."
+          ],
+          "aclaraciones_ca": [
+            "Realitzar narracions orals senzilles amb diferents graus de planificació sobre temes d’interès personal, social i educatiu en diferents suports.",
+            "Realitzar exposicions orals senzilles amb diferents graus de planificació sobre temes d’interès personal, social i educatiu en diferents suports.",
+            "Ajustar les narracions i exposicions orals senzilles a les convencions pròpies dels diversos gèneres discursius amb fluïdesa, coherència, cohesió i correcció.",
+            "Emprar el registre adequat a l’hora de fer les narracions i exposicions orals senzilles.",
+            "Utilitzar en les exposicions orals i narracions, de manera eficaç, recursos verbals i no verbals."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Participar en interacciones orales informales, en el trabajo en equipo y en situaciones orales formales de carácter dialogado de forma activa y adecuada, con actitudes de escucha activa y haciendo uso de estrategias de cooperación conversacional y cortesía lingüística.",
+          "text_ca": "Participar en interaccions orals informals, en el treball en equip i en situacions orals formals de caràcter dialogat de forma activa i adequada, amb actituds d’escolta activa i fent ús d’estratègies de cooperació conversacional i cortesia lingüística.",
+          "aclaraciones_es": [
+            "Participar en interacciones orales informales.",
+            "Participar en el trabajo en equipo y en situaciones orales formales de carácter dialogado.",
+            "Participar de forma activa y adecuada con actitudes de escucha activa.",
+            "Hacer uso de estrategias de cooperación conversacional y cortesía lingüística."
+          ],
+          "aclaraciones_ca": [
+            "Participar en interaccions orals informals.",
+            "Participar en el treball en equip i en situacions orals formals de caràcter dialogat.",
+            "Participar de forma activa i adequada amb actituds d’escolta activa.",
+            "Fer ús d’estratègies de cooperació conversacional i cortesia lingüística."
+          ]
+        },
+        {
+          "id": "3.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Realizar exposiciones y argumentaciones orales de una cierta extensión y complejidad con diferente grado de planificación sobre temas de interés personal, social, educativo y profesional ajustándose a las convenciones propias de los diversos géneros discursivos, con fluidez, coherencia, cohesión, corrección y el registro adecuado en diferentes soportes, utilizando de manera eficaz recursos verbales y no verbales.",
+          "text_ca": "Realitzar exposicions i argumentacions orals d’una certa extensió i complexitat amb diferent grau de planificació sobre temes d’interès personal, social, educatiu i professional ajustant-se a les convencions pròpies dels diversos gèneres discursius, amb fluïdesa, coherència, cohesió, correcció i el registre adequat en diferents suports, utilitzant de manera eficaç recursos verbals i no verbals.",
+          "aclaraciones_es": [
+            "Realizar exposiciones orales de una cierta extensión y complejidad con diferente grado de planificación sobre temas de interés personal, social, educativo y profesional.",
+            "Realizar argumentaciones orales de una cierta extensión y complejidad con diferente grado de planificación sobre temas de interés personal, social, educativo y profesional.",
+            "Aplicar las convenciones propias de los diversos géneros discursivos, con fluidez, coherencia, cohesión, corrección y registro adecuado.",
+            "Utilizar de manera eficaz los recursos verbales y no verbales."
+          ],
+          "aclaraciones_ca": [
+            "Realitzar exposicions orals d’una certa extensió i complexitat amb diferent grau de planificació sobre temes d’interès personal, social, educatiu i professional.",
+            "Realitzar argumentacions orals d’una certa extensió i complexitat amb diferent grau de planificació sobre temes d’interès personal, social, educatiu i professional.",
+            "Aplicar les convencions pròpies dels diversos gèneres discursius, amb fluïdesa, coherència, cohesió, correcció i registre adequat.",
+            "Utilitzar de manera eficaç els recursos verbals i no verbals."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Participar de manera activa y adecuada en interacciones orales informales, en el trabajo en equipo y en situaciones orales formales de carácter dialogado, con actitudes de escucha activa y estrategias de cooperación conversacional y cortesía lingüística.",
+          "text_ca": "Participar de manera activa i adequada en interaccions orals informals, en el treball en equip i en situacions orals formals de caràcter dialogat, amb actituds d’escolta activa i estratègies de cooperació conversacional i cortesia lingüística.",
+          "aclaraciones_es": [
+            "Participar de manera activa y adecuada en interacciones orales informales.",
+            "Participar de manera activa y adecuada en el trabajo en equipo.",
+            "Participar de manera activa y adecuada en situaciones orales formales de carácter dialogado.",
+            "Participar con actitudes de escucha activa.",
+            "Utilizar estrategias de cooperación conversacional y cortesía lingüística."
+          ],
+          "aclaraciones_ca": [
+            "Participar de manera activa i adequada en interaccions orals informals.",
+            "Participar de manera activa i adequada en el treball en equip.",
+            "Participar de manera activa i adequada en situacions orals formals de caràcter dialogat.",
+            "Participar amb actituds d’escolta activa.",
+            "Utilitzar estratègies de cooperació conversacional i cortesia lingüística."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Comprender, interpretar y valorar, con sentido crítico y diferentes propósitos de lectura, el sentido global y las ideas principales y secundarias del texto, identificando la intención del emisor, reflexionando sobre el contenido y la forma y evaluando la calidad y fiabilidad, para dar respuesta a necesidades e intereses comunicativos diversos y construir conocimiento.",
+      "description_ca": "Comprendre, interpretar i valorar, amb sentit crític i diferents propòsits de lectura, el sentit global i les idees principals i secundàries del text, identificant la intenció de l’emissor, reflexionant sobre el contingut i la forma i avaluant-ne la qualitat i fiabilitat, per donar resposta a necessitats i interessos comunicatius diversos i construir coneixement.",
+      "descriptores": [
+        "CCL2",
+        "CCL3",
+        "CCL5",
+        "CP2",
+        "STEM4",
+        "CD1",
+        "CPSAA4",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Comprender e interpretar el sentido global, la estructura, la información más relevante y la intención del emisor en textos escritos y multimodales sencillos de diferentes ámbitos que respondan a diferentes propósitos de lectura, realizando las inferencias necesarias.",
+          "text_ca": "Comprendre i interpretar el sentit global, l’estructura, la informació més rellevant i la intenció de l’emissor en texts escrits i multimodals senzills de diferents àmbits que responguin a diferents propòsits de lectura, realitzant les inferències necessàries.",
+          "aclaraciones_es": [
+            "Comprender el sentido global, la estructura, la información más relevante y la intención del emisor en textos escritos y multimodales sencillos de diferentes ámbitos que respondan a diferentes propósitos de lectura.",
+            "Interpretar el sentido global, la información más relevante y la intención del emisor en textos escritos y multimodales sencillos de diferentes ámbitos que respondan a diferentes propósitos de lectura.",
+            "Realizar las inferencias necesarias."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el sentit global, l’estructura, la informació més rellevant i la intenció de l’emissor en texts escrits i multimodals senzills de diferents àmbits que responguin a diferents propòsits de lectura.",
+            "Interpretar el sentit global, la informació més rellevant i la intenció de l’emissor en texts escrits i multimodals senzills de diferents àmbits que responguin a diferents propòsits de lectura.",
+            "Realitzar les inferències necessàries."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Valorar la forma y el contenido de textos sencillos evaluando la calidad, la fiabilidad e idoneidad del canal utilizado, así como la eficacia de los procedimientos comunicativos empleados.",
+          "text_ca": "Valorar la forma i el contingut de texts senzills avaluant-ne la qualitat, la fiabilitat i idoneïtat del canal utilitzat, com també l’eficàcia dels procediments comunicatius emprats.",
+          "aclaraciones_es": [
+            "Valorar la forma y el contenido de textos sencillos.",
+            "Evaluar la calidad, la fiabilidad y la idoneidad del canal utilizado en textos sencillos.",
+            "Evaluar la eficacia de los procedimientos comunicativos empleados."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la forma i el contingut de texts senzills.",
+            "Avaluar la qualitat, la fiabilitat i la idoneïtat del canal utilitzat en texts senzills.",
+            "Avaluar l’eficàcia dels procediments comunicatius emprats."
+          ]
+        },
+        {
+          "id": "4.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Comprender e interpretar el sentido global, la estructura, la información más relevante y la intención del emisor en textos escritos y multimodales sencillos de diferentes ámbitos que respondan a diferentes propósitos de lectura, realizando las inferencias necesarias.",
+          "text_ca": "Comprendre i interpretar el sentit global, l’estructura, la informació més rellevant i la intenció de l’emissor en texts escrits i multimodals senzills de diferents àmbits que responguin a diferents propòsits de lectura, realitzant les inferències necessàries.",
+          "aclaraciones_es": [
+            "Comprender el sentido global, la estructura, la información más relevante y la intención del emisor en textos escritos y multimodales sencillos de diferentes ámbitos que respondan a diferentes propósitos de lectura.",
+            "Interpretar el sentido global, la información más relevante y la intención del emisor en textos escritos y multimodales sencillos de diferentes ámbitos que respondan a diferentes propósitos de lectura.",
+            "Realizar las inferencias necesarias."
+          ],
+          "aclaraciones_ca": [
+            "Comprendre el sentit global, l’estructura, la informació més rellevant i la intenció de l’emissor en texts escrits i multimodals senzills de diferents àmbits que responguin a diferents propòsits de lectura.",
+            "Interpretar el sentit global, la informació més rellevant i la intenció de l’emissor en texts escrits i multimodals senzills de diferents àmbits que responguin a diferents propòsits de lectura.",
+            "Realitzar les inferències necessàries."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Valorar la forma y el contenido de textos sencillos evaluando la calidad, la fiabilidad e idoneidad del canal utilizado, así como la eficacia de los procedimientos comunicativos empleados.",
+          "text_ca": "Valorar la forma i el contingut de texts senzills avaluant-ne la qualitat, la fiabilitat i idoneïtat del canal utilitzat, com també l’eficàcia dels procediments comunicatius emprats.",
+          "aclaraciones_es": [
+            "Valorar la forma y el contenido de textos sencillos.",
+            "Evaluar la calidad, la fiabilidad y la idoneidad del canal utilizado en textos sencillos.",
+            "Evaluar la eficacia de los procedimientos comunicativos empleados."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la forma i el contingut de texts senzills.",
+            "Avaluar la qualitat, la fiabilitat i la idoneïtat del canal utilitzat en texts senzills.",
+            "Avaluar l’eficàcia dels procediments comunicatius emprats."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Producir textos escritos y multimodales coherentes, cohesionados, adecuados y correctos atendidas las convenciones propias del género discursivo elegido, para construir conocimiento y para dar respuesta de manera informada, eficaz y creativa a demandas comunicativas concretas.",
+      "description_ca": "Produir texts escrits i multimodals coherents, cohesionats, adequats i correctes ateses les convencions pròpies del gènere discursiu triat, per construir coneixement i per donar resposta de manera informada, eficaç i creativa a demandes comunicatives concretes.",
+      "descriptores": [
+        "CCL1",
+        "CCL3",
+        "CCL5",
+        "STEM1",
+        "CD2",
+        "CD3",
+        "CPSAA5",
+        "CC2"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Planificar la redacción de textos escritos y multimodales sencillos, atendida la situación comunicativa, el destinatario, el propósito y el canal; redactar borradores y revisarlos con ayuda del diálogo entre iguales e instrumentos de consulta, y presentar un texto final coherente, cohesionado, correcto y con el registro adecuado.",
+          "text_ca": "Planificar la redacció de texts escrits i multimodals senzills, atesa la situació comunicativa, el destinatari, el propòsit i el canal; redactar esborranys i revisar-los amb ajuda del diàleg entre iguals i instruments de consulta, i presentar un text final coherent, cohesionat, correcte i amb el registre adequat.",
+          "aclaraciones_es": [
+            "Planificar, producir y revisar textos escritos y multimodales sencillos atendida la situación comunicativa, el destinatario, el propósito y el canal.",
+            "Redactar borradores y revisarlos con ayuda del diálogo entre iguales e instrumentos de consulta.",
+            "Presentar un texto final coherente, cohesionado, correcto y con el registro adecuado."
+          ],
+          "aclaraciones_ca": [
+            "Planificar, produir i revisar texts escrits i multimodals senzills atesa la situació comunicativa, el destinatari, el propòsit i el canal.",
+            "Redactar esborranys i revisar-los amb ajuda del diàleg entre iguals i instruments de consulta.",
+            "Presentar un text final coherent, cohesionat, correcte i amb el registre adequat."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Incorporar procedimientos básicos para enriquecer los textos, atendiendo aspectos discursivos, lingüísticos y de estilo, con precisión léxica y corrección ortográfica y gramatical.",
+          "text_ca": "Incorporar procediments bàsics per enriquir els texts, atenent aspectes discursius, lingüístics i d’estil, amb precisió lèxica i correcció ortogràfica i gramatical.",
+          "aclaraciones_es": [
+            "Incorporar procedimientos básicos para enriquecer los textos a partir de aspectos lingüísticos, discursivos y de estilo.",
+            "Incorporar procedimientos básicos para enriquecer los textos con precisión léxica y corrección ortográfica y gramatical."
+          ],
+          "aclaraciones_ca": [
+            "Incorporar procediments bàsics per enriquir els texts a partir d’aspectes lingüístics, discursius i d’estil.",
+            "Incorporar procediments bàsics per enriquir els texts amb precisió lèxica i correcció ortogràfica i gramatical."
+          ]
+        },
+        {
+          "id": "5.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Planificar la redacción de textos escritos y multimodales sencillos, atendida la situación comunicativa, el destinatario, el propósito y el canal; redactar borradores y revisarlos con ayuda del diálogo entre iguales e instrumentos de consulta, y presentar un texto final coherente, cohesionado, correcto y con el registro adecuado.",
+          "text_ca": "Planificar la redacció de texts escrits i multimodals senzills, atesa la situació comunicativa, el destinatari, el propòsit i el canal; redactar esborranys i revisar-los amb ajuda del diàleg entre iguals i instruments de consulta, i presentar un text final coherent, cohesionat, correcte i amb el registre adequat.",
+          "aclaraciones_es": [
+            "Planificar, producir y revisar textos escritos y multimodales sencillos atendida la situación comunicativa, el destinatario, el propósito y el canal.",
+            "Redactar borradores y revisarlos con ayuda del diálogo entre iguales e instrumentos de consulta.",
+            "Presentar un texto final coherente, cohesionado, correcto y con el registro adecuado."
+          ],
+          "aclaraciones_ca": [
+            "Planificar, produir i revisar texts escrits i multimodals senzills atesa la situació comunicativa, el destinatari, el propòsit i el canal.",
+            "Redactar esborranys i revisar-los amb ajuda del diàleg entre iguals i instruments de consulta.",
+            "Presentar un text final coherent, cohesionat, correcte i amb el registre adequat."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Incorporar procedimientos básicos para enriquecer los textos, atendiendo aspectos discursivos, lingüísticos y de estilo, con precisión léxica y corrección ortográfica y gramatical.",
+          "text_ca": "Incorporar procediments bàsics per enriquir els texts, atenent aspectes discursius, lingüístics i d’estil, amb precisió lèxica i correcció ortogràfica i gramatical.",
+          "aclaraciones_es": [
+            "Incorporar procedimientos básicos para enriquecer los textos a partir de aspectos lingüísticos, discursivos y de estilo.",
+            "Incorporar procedimientos básicos para enriquecer los textos con precisión léxica y corrección ortográfica y gramatical."
+          ],
+          "aclaraciones_ca": [
+            "Incorporar procediments bàsics per enriquir els texts a partir d’aspectes lingüístics, discursius i d’estil.",
+            "Incorporar procediments bàsics per enriquir els texts amb precisió lèxica i correcció ortogràfica i gramatical."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Seleccionar y contrastar información procedente de diferentes fuentes de manera progresivamente autónoma, evaluar la fiabilidad y pertinencia en función de los objetivos de lectura establecidos. Integrar y transformar esta información para comunicarla desde un punto de vista crítico y personal, evitando los riesgos de manipulación y desinformación, y respetando la propiedad intelectual.",
+      "description_ca": "Seleccionar i contrastar informació procedent de diferents fonts de manera progressivament autònoma, avaluar-ne la fiabilitat i pertinència en funció dels objectius de lectura establerts. Integrar i transformar aquesta informació per comunicar-la des d’un punt de vista crític i personal, evitant els riscos de manipulació i desinformació, i respectant la propietat intel·lectual.",
+      "descriptores": [
+        "CCL3",
+        "CD1",
+        "CD2",
+        "CD3",
+        "CD4",
+        "CPSAA4",
+        "CC2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Localizar, seleccionar y contrastar información de manera guiada procedente de diferentes fuentes, calibrando la fiabilidad y pertinencia en función de los objetivos de lectura; organizarla e integrarla en esquemas propios, y reelaborarla y comunicarla de manera creativa adoptando un punto de vista crítico y respetando los principios de propiedad intelectual.",
+          "text_ca": "Localitzar, seleccionar i contrastar informació de manera guiada procedent de diferents fonts, calibrant-ne la fiabilitat i pertinència en funció dels objectius de lectura; organitzar-la i integrar-la en esquemes propis, i reelaborar-la i comunicar-la de manera creativa adoptant un punt de vista crític i respectant els principis de propietat intel·lectual.",
+          "aclaraciones_es": [
+            "Localizar de manera guiada información procedente de diferentes fuentes.",
+            "Seleccionar de manera guiada información procedente de diferentes fuentes.",
+            "Contrastar de manera guiada información procedente de diferentes fuentes.",
+            "Calibrar la fiabilidad y pertenencia de la información extraída en función de los objetivos de lectura.",
+            "Organizar la información procedente de diferentes fuentes.",
+            "Integrar la información procedente de diferentes fuentes en esquemas propios.",
+            "Reelaborar la información procedente de diferentes fuentes.",
+            "Comunicar la información procedente de diferentes fuentes de manera creativa adoptando un punto de vista crítico.",
+            "Respetar los principios de la propiedad intelectual."
+          ],
+          "aclaraciones_ca": [
+            "Localitzar de manera guiada informació procedent de diferents fonts.",
+            "Seleccionar de manera guiada informació procedent de diferents fonts.",
+            "Contrastar de manera guiada informació procedent de diferents fonts.",
+            "Calibrar la fiabilitat i pertinença de la informació extreta en funció dels objectius de lectura.",
+            "Organitzar la informació procedent de diferents fonts.",
+            "Integrar la informació procedent de diferents fonts en esquemes propis.",
+            "Reelaborar la informació procedent de diferents fonts.",
+            "Comunicar la informació procedent de diferents fonts de manera creativa adoptant un punt de vista crític.",
+            "Respectar els principis de la propietat intel·lectual."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Elaborar trabajos de investigación de manera guiada en diferentes soportes sobre diversos temas de interés académico, personal o social a partir de la información seleccionada.",
+          "text_ca": "Elaborar treballs de recerca de manera guiada en diferents suports sobre diversos temes d’interès acadèmic, personal o social a partir de la informació seleccionada.",
+          "aclaraciones_es": [
+            "Elaborar trabajos de investigación de manera guiada en diferentes soportes sobre diversos temas de interés académico, personal o social a partir de la información seleccionada."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar treballs de recerca de manera guiada en diferents suports sobre diversos temes d’interès acadèmic, personal o social a partir de la informació seleccionada."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Adoptar hábitos de uso crítico, seguro, sostenible y saludable de las tecnologías digitales en relación con la búsqueda y la comunicación de la información.",
+          "text_ca": "Adoptar hàbits d’ús crític, segur, sostenible i saludable de les tecnologies digitals en relació a la cerca i la comunicació de la informació.",
+          "aclaraciones_es": [
+            "Adoptar hábitos de uso crítico, seguro, sostenible y saludable de las tecnologías digitales en relación con la búsquesda de la información."
+          ],
+          "aclaraciones_ca": [
+            "Adoptar hàbits d’ús crític, segur, sostenible i saludable de les tecnologies digitals en relació a la cerca de la informació."
+          ]
+        },
+        {
+          "id": "6.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Localizar, seleccionar y contrastar información de manera guiada procedente de diferentes fuentes, calibrando la fiabilidad y pertinencia en función de los objetivos de lectura; organizarla e integrarla en esquemas propios, y reelaborarla y comunicarla de manera creativa adoptando un punto de vista crítico y respetando los principios de propiedad intelectual.",
+          "text_ca": "Localitzar, seleccionar i contrastar informació de manera guiada procedent de diferents fonts, calibrant-ne la fiabilitat i pertinència en funció dels objectius de lectura; organitzar-la i integrar-la en esquemes propis, i reelaborar-la i comunicar-la de manera creativa adoptant un punt de vista crític i respectant els principis de propietat intel·lectual.",
+          "aclaraciones_es": [
+            "Localizar de manera guiada información procedente de diferentes fuentes.",
+            "Seleccionar de manera guiada información procedente de diferentes fuentes.",
+            "Contrastar de manera guiada información procedente de diferentes fuentes.",
+            "Calibrar la fiabilidad y pertenencia de la información extraída en función de los objetivos de lectura.",
+            "Organizar la información procedente de diversas fuentes.",
+            "Integrar la información procedente de diversas fuentes en esquemas propios.",
+            "Reelaborar la información procedente de diversas fuentes.",
+            "Comunicar la información procedente de diversas fuentes de manera creativa adoptando un punto de vista crítico.",
+            "Respetar los principios de la propiedad intelectual."
+          ],
+          "aclaraciones_ca": [
+            "Localitzar de manera guiada informació procedent de diferents fonts.",
+            "Seleccionar de manera guiada informació procedent de diferents fonts.",
+            "Contrastar de manera guiada informació procedent de diferents fonts.",
+            "Calibrar la fiabilitat i pertinença de la informació extreta en funció dels objectius de lectura.",
+            "Organitzar la informació procedent de diferents fonts.",
+            "Integrar la informació procedent de diferents fonts en esquemes propis.",
+            "Reelaborar la informació procedent de diferents fonts.",
+            "Comunicar la informació procedent de diferents fonts de manera creativa adoptant un punt de vista crític.",
+            "Respectar els principis de la propietat intel·lectual."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Elaborar trabajos de investigación de manera guiada en diferentes soportes sobre diversos temas de interés académico, personal o social a partir de la información seleccionada.",
+          "text_ca": "Elaborar treballs de recerca de manera guiada en diferents suports sobre diversos temes d’interès acadèmic, personal o social a partir de la informació seleccionada.",
+          "aclaraciones_es": [
+            "Elaborar trabajos de investigación de manera guiada en diferentes soportes sobre diversos temas de interés académico, personal o social a partir de la información seleccionada."
+          ],
+          "aclaraciones_ca": [
+            "Elaborar treballs de recerca de manera guiada en diferents suports sobre diversos temes d’interès acadèmic, personal o social a partir de la informació seleccionada."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Adoptar hábitos de uso críticos, seguros, sostenibles y saludables en relación con la búsqueda y la comunicación de la información con tecnologías digitales.",
+          "text_ca": "Adoptar hàbits d’ús crítics, segurs, sostenibles i saludables en relació a la cerca i la comunicació de la informació amb tecnologies digitals.",
+          "aclaraciones_es": [
+            "Adoptar hábitos de uso críticos, seguros, sostenibles y saludables en relación con la búsqueda de información con tecnologías digitales."
+          ],
+          "aclaraciones_ca": [
+            "Adoptar hàbits d’ús crítics, segurs, sostenibles i saludables en relació a la cerca d’informació amb tecnologies digitals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE7",
+      "ce_num": 7,
+      "description_es": "Seleccionar y leer de manera progresivamente autónoma obras diversas como fuente de placer y conocimiento, configurando un itinerario lector que evolucione en cuanto a diversidad, complejidad, actualidad y calidad de las obras, y compartir experiencias de lectura para construir la propia identidad lectora y para disfrutar de la dimensión social de la lectura.",
+      "description_ca": "Seleccionar i llegir de manera progressivament autònoma obres diverses com a font de plaer i coneixement, configurant un itinerari lector que evolucioni quant a diversitat, complexitat, actualitat i qualitat de les obres, i compartir experiències de lectura per construir la pròpia identitat lectora i per gaudir de la dimensió social de la lectura.",
+      "descriptores": [
+        "CCL1",
+        "CCL4",
+        "CD3",
+        "CPSAA1",
+        "CCEC1",
+        "CCEC2",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "7.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Elegir y leer textos a partir de preselecciones, guiándose por los propios gustos, intereses y necesidades y dejando constancia del propio itinerario lector y de la experiencia de lectura.",
+          "text_ca": "Triar i llegir texts a partir de preseleccions guiant-se pels propis gusts, interessos i necessitats i deixant constància del propi itinerari lector i de l’experiència de lectura.",
+          "aclaraciones_es": [
+            "Elegir textos a partir de preselecciones, guiándose por los propios gustos, intereses y necesidades.",
+            "Explicar los criterios de selección de lectura.",
+            "Leer de manera guiada los textos seleccionados en función de los propios gustos, intereses y necesidades.",
+            "Dejar constancia del propio itinerario lector y de la experiencia de la lectura."
+          ],
+          "aclaraciones_ca": [
+            "Triar texts a partir de preseleccions guiant-se pels propis gusts, interessos i necessitats.",
+            "Explicar els criteris de selecció de lectura.",
+            "Llegir de manera guiada els texts seleccionats en funció dels propis gusts, interessos i necessitats.",
+            "Deixar constància del propi itinerari lector i de l’experiència de la lectura."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Compartir la experiencia de lectura en soportes diversos relacionando el sentido de la obra con la propia experiencia biográfica y lectora.",
+          "text_ca": "Compartir l’experiència de lectura en suports diversos relacionant el sentit de l’obra amb la pròpia experiència biogràfica i lectora.",
+          "aclaraciones_es": [
+            "Compartir la experiencia lectora en soportes diversos.",
+            "Relacionar el sentido de la obra a partir de su trayectoria biográfica, lectora y cultural."
+          ],
+          "aclaraciones_ca": [
+            "Compartir l’experiència lectora en suports diversos.",
+            "Relacionar el sentit de l’obra a partir de la seva trajectòria biogràfica, lectora i cultural."
+          ]
+        },
+        {
+          "id": "7.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Elegir y leer textos a partir de preselecciones guiándose por los propios gustos, intereses y necesidades y dejando constancia del propio itinerario lector y de la experiencia de lectura.",
+          "text_ca": "Triar i llegir texts a partir de preseleccions guiant-se pels propis gusts, interessos i necessitats i deixant constància del propi itinerari lector i de l’experiència de lectura.",
+          "aclaraciones_es": [
+            "Elegir textos a partir de preselecciones guiándose por los propios gustos, intereses y necesidades.",
+            "Explicar los criterios de selección de lectura.",
+            "Leer de manera guiada los textos seleccionados en función de los propios gustos, intereses y necesidades.",
+            "Dejar constancia del propio itinerario lector y de la experiencia de la lectura."
+          ],
+          "aclaraciones_ca": [
+            "Triar texts a partir de preseleccions guiant-se pels propis gusts, interessos i necessitats.",
+            "Explicar els criteris de selecció de lectura.",
+            "Llegir de manera guiada els texts seleccionats en funció dels propis gusts, interessos i necessitats.",
+            "Deixar constància del propi itinerari lector i de l’experiència de la lectura."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Compartir la experiencia de lectura en soportes diversos relacionando el sentido de la obra con la propia experiencia biográfica y lectora.",
+          "text_ca": "Compartir l’experiència de lectura en suports diversos relacionant el sentit de l’obra amb la pròpia experiència biogràfica i lectora.",
+          "aclaraciones_es": [
+            "Compartir la experiencia lectora en soportes diversos.",
+            "Relacionar el sentido de la obra a partir de la propia trayectoria biográfica, lectora y cultural."
+          ],
+          "aclaraciones_ca": [
+            "Compartir l’experiència lectora en suports diversos.",
+            "Relacionar el sentit de l’obra a partir de la pròpia trajectòria biogràfica, lectora i cultural."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE8",
+      "ce_num": 8,
+      "description_es": "Leer, interpretar y valorar obras o fragmentos literarios de la literatura catalana y universal, utilizando un metalenguaje específico y movilizando la experiencia biográfica y los conocimientos literarios y culturales que permitan establecer vínculos entre textos diversos y con otras manifestaciones artísticas para conformar un mapa cultural, para ampliar las posibilidades de disfrute de la literatura y para crear textos de intención literaria.",
+      "description_ca": "Llegir, interpretar i valorar obres o fragments literaris de la literatura catalana i universal, utilitzant un metallenguatge específic i mobilitzant l’experiència biogràfica i els coneixements literaris i culturals que permetin establir vincles entre texts diversos i amb altres manifestacions artístiques per conformar un mapa cultural, eixamplar les possibilitats de gaudi de la literatura i crear texts d’intenció literària.",
+      "descriptores": [
+        "CCL1",
+        "CCL4",
+        "CC1",
+        "CCEC1",
+        "CCEC2",
+        "CCEC3",
+        "CCEC4"
+      ],
+      "criterios": [
+        {
+          "id": "8.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Explicar y argumentar, con la ayuda de pautas y modelos, la interpretación de las obras leídas a partir del análisis de las relaciones internas de sus elementos constitutivos con el sentido de la obra, atendiendo a la configuración de los géneros y subgéneros literarios.",
+          "text_ca": "Explicar i argumentar, amb l’ajuda de pautes i models, la interpretació de les obres llegides a partir de l’anàlisi de les relacions internes dels seus elements constitutius amb el sentit de l’obra, atesa la configuració dels gèneres i subgèneres literaris.",
+          "aclaraciones_es": [
+            "Explicar las obras leídas.",
+            "Interpretar y argumentar estas obras con la ayuda de pautas y modelos.",
+            "Analizar las relaciones internas de sus elementos constitutivos con el sentido de la obra (géneros y subgéneros literarios)."
+          ],
+          "aclaraciones_ca": [
+            "Explicar les obres llegides.",
+            "Interpretar i argumentar aquestes obres amb l’ajuda de pautes i models.",
+            "Analitzar les relacions internes dels seus elements constitutius amb el sentit de l’obra (gèneres i subgèneres literaris)."
+          ]
+        },
+        {
+          "id": "8.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Establecer de manera guiada vínculos argumentados entre los textos leídos y otros textos escritos, orales o multimodales, así como con otras manifestaciones artísticas y culturales en función de temas, tópicos, estructuras, lenguaje y valores éticos y estéticos, mostrando la implicación y la respuesta personal del lector en la lectura.",
+          "text_ca": "Establir de manera guiada vincles argumentats entre els texts llegits i altres texts escrits, orals o multimodals, com també amb altres manifestacions artístiques i culturals en funció de temes, tòpics, estructures, llenguatge i valors ètics i estètics, mostrant la implicació i la resposta personal del lector en la lectura.",
+          "aclaraciones_es": [
+            "Establecer de manera guiada vínculos argumentados entre los textos leídos y otros textos escritos, orales o multimodales, así como con otras manifestaciones artísticas y culturales.",
+            "Identificar los temas, los tópicos, las estructuras, el lenguaje utilizado y los valores éticos y estéticos.",
+            "Mostrar la implicación y la respuesta personal del lector en la lectura."
+          ],
+          "aclaraciones_ca": [
+            "Establir de manera guiada vincles argumentats entre els texts llegits i altres texts escrits, orals o multimodals, com també amb altres manifestacions artístiques i culturals.",
+            "Identificar els temes, els tòpics, les estructures, el llenguatge utilitzat i els valors ètics i estètics.",
+            "Mostrar la implicació i la resposta personal del lector en la lectura."
+          ]
+        },
+        {
+          "id": "8.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Crear textos personales o colectivos con intención literaria y conciencia de estilo, en diferentes soportes y con ayuda de otros lenguajes artísticos y audiovisuales, a partir de la lectura de obras o fragmentos significativos en los que se empleen las convenciones formales de los diversos géneros y estilos literarios.",
+          "text_ca": "Crear texts personals o col·lectius amb intenció literària i consciència d’estil, en diferents suports i amb ajuda d’altres llenguatges artístics i audiovisuals, a partir de la lectura d’obres o fragments significatius en els quals s’emprin les convencions formals dels diversos gèneres i estils literaris.",
+          "aclaraciones_es": [
+            "Crear textos personales o colectivos con intención literaria y conciencia de estilo.",
+            "Utilizar diferentes soportes con ayuda de otros lenguajes artísticos y audiovisuales."
+          ],
+          "aclaraciones_ca": [
+            "Crear texts personals o col·lectius amb intenció literària i consciència d’estil.",
+            "Utilitzar diferents suports amb ajuda d’altres llenguatges artístics i audiovisuals."
+          ]
+        },
+        {
+          "id": "8.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Explicar y argumentar, con la ayuda de pautas y modelos, la interpretación de las obras leídas a partir del análisis de las relaciones internas de sus elementos constitutivos con el sentido de la obra, atendida la configuración de los géneros y subgéneros literarios.",
+          "text_ca": "Explicar i argumentar, amb l’ajuda de pautes i models, la interpretació de les obres llegides a partir de l’anàlisi de les relacions internes dels seus elements constitutius amb el sentit de l’obra, atesa la configuració dels gèneres i subgèneres literaris.",
+          "aclaraciones_es": [
+            "Explicar las obras leídas.",
+            "Interpretar y argumentar estas obras con la ayuda de pautas y modelos.",
+            "Analizar las relaciones internas de sus elementos constitutivos con el sentido de la obra (géneros y subgéneros literarios)."
+          ],
+          "aclaraciones_ca": [
+            "Explicar les obres llegides.",
+            "Interpretar i argumentar aquestes obres amb l’ajuda de pautes i models.",
+            "Analitzar les relacions internes dels seus elements constitutius amb el sentit de l’obra (gèneres i subgèneres literaris)."
+          ]
+        },
+        {
+          "id": "8.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Establecer de manera guiada vínculos argumentados entre los textos leídos y otros textos escritos, orales o multimodales, así como con otras manifestaciones artísticas y culturales en función de temas, tópicos, estructuras, lenguaje y valores éticos y estéticos, mostrando la implicación y la respuesta personal del lector en la lectura.",
+          "text_ca": "Establir de manera guiada vincles argumentats entre els texts llegits i altres texts escrits, orals o multimodals, com també amb altres manifestacions artístiques i culturals en funció de temes, tòpics, estructures, llenguatge i valors ètics i estètics, mostrant la implicació i la resposta personal del lector en la lectura.",
+          "aclaraciones_es": [
+            "Establecer de manera guiada vínculos argumentados entre los textos leídos y otros textos escritos, orales o multimodales, así como con otras manifestaciones artísticas y culturales.",
+            "Identificar los temas, los tópicos, las estructuras, el lenguaje utilizado y los valores éticos y estéticos.",
+            "Mostrar la implicación y la respuesta personal del lector en la lectura."
+          ],
+          "aclaraciones_ca": [
+            "Establir de manera guiada vincles argumentats entre els texts llegits i altres texts escrits, orals o multimodals, com també amb altres manifestacions artístiques i culturals.",
+            "Identificar els temes, els tòpics, les estructures, el llenguatge utilitzat i els valors ètics i estètics.",
+            "Mostrar la implicació i la resposta personal del lector en la lectura."
+          ]
+        },
+        {
+          "id": "8.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Crear textos personales o colectivos con intención literaria y conciencia de estilo, en diferentes soportes y con ayuda de otros lenguajes artísticos y audiovisuales, a partir de la lectura de obras o fragmentos significativos en los que se empleen las convenciones formales de los diversos géneros y estilos literarios.",
+          "text_ca": "Crear texts personals o col·lectius amb intenció literària i consciència d’estil, en diferents suports i amb ajuda d’altres llenguatges artístics i audiovisuals, a partir de la lectura d’obres o fragments significatius en els quals s’emprin les convencions formals dels diversos gèneres i estils literaris.",
+          "aclaraciones_es": [
+            "Crear textos personales o colectivos con intención literaria y conciencia de estilo.",
+            "Utilizar diferentes soportes con ayuda de otros lenguajes artísticos y audiovisuales."
+          ],
+          "aclaraciones_ca": [
+            "Crear texts personals o col·lectius amb intenció literària i consciència d’estil.",
+            "Utilitzar diferents suports amb ajuda d’altres llenguatges artístics i audiovisuals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE9",
+      "ce_num": 9,
+      "description_es": "Movilizar el conocimiento sobre la estructura de la lengua y sus usos y reflexionar de manera progresivamente autónoma sobre las elecciones lingüísticas y discursivas, con la terminología adecuada, para desarrollar la conciencia lingüística, para aumentar el repertorio comunicativo y para mejorar las destrezas tanto de producción oral y escrita como de comprensión e interpretación crítica.",
+      "description_ca": "Mobilitzar el coneixement sobre l’estructura de la llengua i els seus usos i reflexionar de manera progressivament autònoma sobre les eleccions lingüístiques i discursives, amb la terminologia adequada, per desenvolupar la consciència lingüística, per augmentar el repertori comunicatiu i per millorar les destreses tant de producció oral i escrita com de comprensió i interpretació crítica.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CP2",
+        "STEM1",
+        "STEM2",
+        "CPSAA5"
+      ],
+      "criterios": [
+        {
+          "id": "9.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Revisar los textos propios de manera guiada y hacer propuestas de mejora argumentando los cambios a partir de la reflexión metalingüística e interlingüística y con un metalenguaje específico.",
+          "text_ca": "Revisar els texts propis de manera guiada i fer propostes de millora argumentant els canvis a partir de la reflexió metalingüística i interlingüística i amb un metallenguatge específic.",
+          "aclaraciones_es": [
+            "Revisar los textos propios de manera guiada.",
+            "Hacer propuestas de mejora.",
+            "Argumentar los cambios a partir de la reflexión de la metalingüística e interlingüística con un metalenguaje específico."
+          ],
+          "aclaraciones_ca": [
+            "Revisar els texts propis de manera guiada.",
+            "Fer propostes de millora.",
+            "Argumentar els canvis a partir de la reflexió de la metalingüística i interlingüística amb un metallenguatge específic."
+          ]
+        },
+        {
+          "id": "9.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Explicar y argumentar la interrelación entre el propósito comunicativo y las elecciones lingüísticas del emisor, así como sus efectos en el receptor, utilizando el conocimiento explícito de la lengua y un metalenguaje específico.",
+          "text_ca": "Explicar i argumentar la interrelació entre el propòsit comunicatiu i les eleccions lingüístiques de l’emissor, com també els seus efectes en el receptor, utilitzant el coneixement explícit de la llengua i un metallenguatge específic.",
+          "aclaraciones_es": [
+            "Explicar y argumentar la interrelación entre el propósito comunicativo y las elecciones lingüísticas del emisor.",
+            "Analizar los efectos en el receptor, utilizando el conocimiento explícito de la lengua y un metalenguaje específico."
+          ],
+          "aclaraciones_ca": [
+            "Explicar i argumentar la interrelació entre el propòsit comunicatiu i les eleccions lingüístiques de l’emissor.",
+            "Analitzar-ne els efectes en el receptor, utilitzant el coneixement explícit de la llengua i un metallenguatge específic."
+          ]
+        },
+        {
+          "id": "9.3",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Formular generalizaciones sobre aspectos básicos del funcionamiento de la lengua a partir de la observación, la comparación y la transformación de enunciados, así como de la formulación de hipótesis y la investigación de contraejemplos utilizando un metalenguaje específico y consultando de manera guiada diccionarios, manuales y gramáticas.",
+          "text_ca": "Formular generalitzacions sobre aspectes bàsics del funcionament de la llengua a partir de l’observació, la comparació i la transformació d’enunciats, com també de la formulació d’hipòtesis i la recerca de contraexemples utilitzant un metallenguatge específic i consultant de manera guiada diccionaris, manuals i gramàtiques.",
+          "aclaraciones_es": [
+            "Formular generalizaciones sobre aspectos básicos del funcionamiento de la lengua.",
+            "Observar, comparar y transformar enunciados.",
+            "Formular hipótesis en la investigación de contraejemplos utilizando un metalenguaje específico."
+          ],
+          "aclaraciones_ca": [
+            "Formular generalitzacions sobre aspectes bàsics del funcionament de la llengua.",
+            "Observar, comparar i transformar enunciats.",
+            "Formular hipòtesis en la recerca de contraexemples utilitzant un metallenguatge específic."
+          ]
+        },
+        {
+          "id": "9.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Revisar los textos propios de manera guiada y hacer propuestas de mejora argumentando los cambios a partir de la reflexión metalingüística e interlingüística y con un metalenguaje específico.",
+          "text_ca": "Revisar els texts propis de manera guiada i fer propostes de millora argumentant els canvis a partir de la reflexió metalingüística i interlingüística i amb un metallenguatge específic.",
+          "aclaraciones_es": [
+            "Revisar los textos propios de manera guiada.",
+            "Hacer propuestas de mejora.",
+            "Argumentar los cambios a partir de la reflexión de la metalingüística e interlingüística con un metalenguaje específico."
+          ],
+          "aclaraciones_ca": [
+            "Revisar els texts propis de manera guiada.",
+            "Fer propostes de millora.",
+            "Argumentar els canvis a partir de la reflexió de la metalingüística i interlingüística amb un metallenguatge específic."
+          ]
+        },
+        {
+          "id": "9.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Explicar y argumentar la interrelación entre el propósito comunicativo y las elecciones lingüísticas del emisor, así como sus efectos en el receptor, utilizando el conocimiento explícito de la lengua y un metalenguaje específico.",
+          "text_ca": "Explicar i argumentar la interrelació entre el propòsit comunicatiu i les eleccions lingüístiques de l’emissor, com també els seus efectes en el receptor, utilitzant el coneixement explícit de la llengua i un metallenguatge específic.",
+          "aclaraciones_es": [
+            "Explicar y argumentar la interrelación entre el propósito comunicativo y las elecciones lingüísticas del emisor.",
+            "Analizar los efectos en el receptor, utilizando el conocimiento explícito de la lengua y un metalenguaje específico."
+          ],
+          "aclaraciones_ca": [
+            "Explicar i argumentar la interrelació entre el propòsit comunicatiu i les eleccions lingüístiques de l’emissor.",
+            "Analitzar-ne els efectes en el receptor, utilitzant el coneixement explícit de la llengua i un metallenguatge específic."
+          ]
+        },
+        {
+          "id": "9.3",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Formular generalizaciones sobre aspectos básicos del funcionamiento de la lengua a partir de la observación, la comparación y la transformación de enunciados, así como de la formulación de hipótesis y la investigación de contraejemplos utilizando un metalenguaje específico y consultando de manera guiada diccionarios, manuales y gramáticas.",
+          "text_ca": "Formular generalitzacions sobre aspectes bàsics del funcionament de la llengua a partir de l’observació, la comparació i la transformació d’enunciats, com també de la formulació d’hipòtesis i la recerca de contraexemples utilitzant un metallenguatge específic i consultant de manera guiada diccionaris, manuals i gramàtiques.",
+          "aclaraciones_es": [
+            "Formular generalizaciones sobre aspectos básicos del funcionamiento de la lengua.",
+            "Observar, comparar y transformar enunciados.",
+            "Formular hipótesis en la investigación de contraejemplos utilizando un metalenguaje específico."
+          ],
+          "aclaraciones_ca": [
+            "Formular generalitzacions sobre aspectes bàsics del funcionament de la llengua.",
+            "Observar, comparar i transformar enunciats.",
+            "Formular hipòtesis en la recerca de contraexemples utilitzant un metallenguatge específic."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE10",
+      "ce_num": 10,
+      "description_es": "Poner las propias prácticas comunicativas al servicio de la convivencia democrática, la resolución dialogada de los conflictos y la igualdad de derechos de todas las personas, utilizando un lenguaje no discriminatorio y desterrando los abusos de poder a través de la palabra para favorecer un uso no tan solo eficaz sino también ético y democrático del lenguaje.",
+      "description_ca": "Posar les pròpies pràctiques comunicatives al servei de la convivència democràtica, la resolució dialogada dels conflictes i la igualtat de drets de totes les persones, utilitzant un llenguatge no discriminatori i bandejant els abusos de poder a través de la paraula per afavorir un ús no tan sols eficaç sinó també ètic i democràtic del llenguatge.",
+      "descriptores": [
+        "CCL1",
+        "CCL5",
+        "CP3",
+        "CD3",
+        "CPSAA3",
+        "CC1",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "10.1",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Identificar y desterrar los usos discriminatorios de la lengua, los abusos de poder a través de la palabra y los usos manipuladores del lenguaje a partir de la reflexión y el análisis de los elementos lingüísticos, textuales y discursivos utilizados, así como de los elementos no verbales que rigen la comunicación entre las personas.",
+          "text_ca": "Identificar i bandejar els usos discriminatoris de la llengua, els abusos de poder a través de la paraula i els usos manipuladors del llenguatge a partir de la reflexió i l’anàlisi dels elements lingüístics, textuals i discursius utilitzats, com també dels elements no verbals que regeixen la comunicació entre les persones.",
+          "aclaraciones_es": [
+            "Identificar los usos discriminatorios de la lengua y los usos manipuladores del lenguaje.",
+            "Reflexionar sobre los abusos de poder a través de la palabra para poder evitarlos.",
+            "Analizar los elementos lingüísticos, textuales y discursivos utilizados, así como los elementos no verbales que rigen la comunicación entre las personas."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els usos discriminatoris de la llengua i els usos manipuladors del llenguatge.",
+            "Reflexionar sobre els abusos de poder a través de la paraula per poder evitar-los.",
+            "Analitzar els elements lingüístics, textuals i discursius utilitzats, com també els elements no verbals que regeixen la comunicació entre les persones."
+          ]
+        },
+        {
+          "id": "10.2",
+          "cursos": [
+            "1º",
+            "2º"
+          ],
+          "text_es": "Utilizar estrategias para la resolución dialogada de los conflictos y la búsqueda de consensos tanto en el ámbito personal como educativo y social.",
+          "text_ca": "Utilitzar estratègies per a la resolució dialogada dels conflictes i la cerca de consensos tant en l’àmbit personal com educatiu i social.",
+          "aclaraciones_es": [
+            "Utilizar estrategias para la resolución dialogada de conflictos."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar estratègies per a la resolució dialogada de conflictes."
+          ]
+        },
+        {
+          "id": "10.1",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Identificar y desterrar los usos discriminatorios de la lengua, los abusos de poder a través de la palabra y los usos manipuladores del lenguaje a partir de la reflexión y el análisis de los elementos lingüísticos, textuales y discursivos utilizados, así como de los elementos no verbales que rigen la comunicación entre las personas.",
+          "text_ca": "Identificar i bandejar els usos discriminatoris de la llengua, els abusos de poder a través de la paraula i els usos manipuladors del llenguatge a partir de la reflexió i l’anàlisi dels elements lingüístics, textuals i discursius utilitzats, com també dels elements no verbals que regeixen la comunicació entre les persones.",
+          "aclaraciones_es": [
+            "Identificar los usos discriminatorios de la lengua y los usos manipuladores del lenguaje.",
+            "Reflexionar sobre los abusos de poder a través de la palabra para poder evitarlos.",
+            "Analizar los elementos lingüísticos, textuales y discursivos utilizados, así como los elementos no verbales que rigen la comunicación entre las personas."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els usos discriminatoris de la llengua i els usos manipuladors del llenguatge.",
+            "Reflexionar sobre els abusos de poder a través de la paraula per poder evitar-los.",
+            "Analitzar els elements lingüístics, textuals i discursius utilitzats, com també els elements no verbals que regeixen la comunicació entre les persones."
+          ]
+        },
+        {
+          "id": "10.2",
+          "cursos": [
+            "3º",
+            "4º"
+          ],
+          "text_es": "Utilizar estrategias para la resolución dialogada de los conflictos y la búsqueda de consensos tanto en el ámbito personal como educativo y social.",
+          "text_ca": "Utilitzar estratègies per a la resolució dialogada dels conflictes i la cerca de consensos tant en l’àmbit personal com educatiu i social.",
+          "aclaraciones_es": [
+            "Utilizar estrategias para la resolución dialogada de conflictos."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar estratègies per a la resolució dialogada de conflictes."
+          ]
+        }
+      ]
+    }
+  ]
+}

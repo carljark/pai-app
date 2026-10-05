@@ -9,6 +9,7 @@ import { NotificationsFacade } from './features/notifications/services/notificat
 import { PaiService } from './services/pai.service';
 import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
+import { NivelesService } from './services/niveles.service';
 import { signal } from '@angular/core';
 import { of, Subject, throwError } from 'rxjs';
 import { TRANSLATIONS_ES } from './services/translations.es';
@@ -26,6 +27,7 @@ describe('AppFacade', () => {
   let notificationsFacadeMock: any;
   let translationServiceMock: any;
   let paiServiceMock: any;
+  let nivelesServiceMock: any;
 
   beforeEach(() => {
     authFacadeMock = {
@@ -35,6 +37,8 @@ describe('AppFacade', () => {
     curriculumFacadeMock = {
       loadRas: vi.fn(),
       loadCes: vi.fn(),
+      loadEsoCes: vi.fn(),
+      curso: signal('1º'),
       selectedRas: signal([]),
       groupedSelectedItems: signal([]),
       clearSelection: vi.fn(),
@@ -83,6 +87,7 @@ describe('AppFacade', () => {
       t: vi.fn().mockReturnValue(TRANSLATIONS_ES),
     };
     paiServiceMock = {};
+    nivelesServiceMock = { load: vi.fn() };
 
     TestBed.configureTestingModule({
       providers: [
@@ -95,6 +100,7 @@ describe('AppFacade', () => {
         { provide: TranslationService, useValue: translationServiceMock },
         { provide: PaiService, useValue: paiServiceMock },
         { provide: TelemetryService, useValue: telemetryServiceMock },
+        { provide: NivelesService, useValue: nivelesServiceMock },
       ],
     });
 
@@ -115,6 +121,20 @@ describe('AppFacade', () => {
     expect(curriculumFacadeMock.loadRas).toHaveBeenCalledWith('castellano');
     expect(curriculumFacadeMock.loadCes).toHaveBeenCalledWith('castellano');
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
+    expect(nivelesServiceMock.load).toHaveBeenCalled();
+    expect(curriculumFacadeMock.loadEsoCes).not.toHaveBeenCalled();
+  });
+
+  it('should load the ESO CE of the active course and reload them when the course changes', () => {
+    facade = TestBed.inject(AppFacade);
+    curriculumFacadeMock.tipoNivel.set('ESO_ORDINARIA');
+    authFacadeMock.currentUser.set({ name: 'Test' });
+    TestBed.flushEffects();
+    expect(curriculumFacadeMock.loadEsoCes).toHaveBeenLastCalledWith('castellano', '1º');
+
+    curriculumFacadeMock.curso.set('3º');
+    TestBed.flushEffects();
+    expect(curriculumFacadeMock.loadEsoCes).toHaveBeenLastCalledWith('castellano', '3º');
   });
 
   it('should refresh history when the notifications list changes', () => {

@@ -1,0 +1,330 @@
+{
+  "code": "digitalizacion",
+  "name_es": "Digitalización",
+  "name_ca": "Digitalització",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Identificar y resolver problemas técnicos sencillos, conectar y configurar dispositivos en redes domésticas, aplicando los conocimientos de hardware y sistemas operativos para gestionar las herramientas e instalaciones informáticas y de comunicación de uso cotidiano.",
+      "description_ca": "Identificar i resoldre problemes tècnics senzills, connectar i configurar dispositius a xarxes domèstiques, aplicant els coneixements de maquinari i sistemes operatius per gestionar les eines i instal·lacions informàtiques i de comunicació d’ús quotidià.",
+      "descriptores": [
+        "STEM1",
+        "STEM2",
+        "CD4",
+        "CD5",
+        "CPSAA1",
+        "CPSAA5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Conectar dispositivos y gestionar redes locales aplicando los conocimientos y procesos asociados a sistemas de comunicación con hilo e inalámbrico con una actitud proactiva.",
+          "text_ca": "Connectar dispositius i gestionar xarxes locals aplicant els coneixements i processos associats a sistemes de comunicació amb fil i sense fil amb una actitud proactiva.",
+          "aclaraciones_es": [
+            "Ensamblar dispositivos de forma diligente como sistemas de comunicación con y sin hilos.",
+            "Administrar redes locales."
+          ],
+          "aclaraciones_ca": [
+            "Assemblar dispositius de forma diligent com a sistemes de comunicació amb i sense fils.",
+            "Administrar xarxes locals."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Instalar y mantener sistemas operativos configurando sus características en función de sus necesidades personales.",
+          "text_ca": "Instal·lar i mantenir sistemes operatius configurant les seves característiques en funció de les seves necessitats personals.",
+          "aclaraciones_es": [
+            "Estudiar las características básicas de diferentes sistemas operativos.",
+            "Instalar sistemas operativos y realizar el mantenimiento.",
+            "Configurar los sistemas operativos en función de las necesidades personales."
+          ],
+          "aclaraciones_ca": [
+            "Estudiar les característiques bàsiques de diferents sistemes operatius.",
+            "Instal·lar sistemes operatius i realitzar-ne el manteniment.",
+            "Configurar els sistemes operatius segons les necessitats personals."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar y resolver problemas técnicos sencillos analizando componentes y funciones de los dispositivos digitales, evaluando las soluciones de manera crítica y reformulando el procedimiento, en caso necesario.",
+          "text_ca": "Identificar i resoldre problemes tècnics senzills analitzant components i funcions dels dispositius digitals, avaluant les solucions de manera crítica i reformulant el procediment, en cas necessari.",
+          "aclaraciones_es": [
+            "Identificar problemas técnicos sencillos.",
+            "Resolver problemas mediante el análisis de los componentes y de las funciones de los dispositivos digitales.",
+            "Evaluar las soluciones de manera crítica y reformular el procedimiento en caso necesario."
+          ],
+          "aclaraciones_ca": [
+            "Identificar problemes tècnics senzills.",
+            "Resoldre problemes mitjançant l’anàlisi dels components i de les funcions dels dispositius digitals.",
+            "Avaluar les solucions de manera crítica i reformular el procediment en cas necessari."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Configurar el entorno personal de aprendizaje interactuando y aprovechando los recursos del ámbito digital para optimizar y gestionar el aprendizaje permanente.",
+      "description_ca": "Configurar l’entorn personal d’aprenentatge interactuant i aprofitant els recursos de l’àmbit digital per optimitzar i gestionar l’aprenentatge permanent.",
+      "descriptores": [
+        "CD1",
+        "CD2",
+        "CD3",
+        "CPSAA1",
+        "CPSAA4",
+        "CPSAA5",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Gestionar el aprendizaje en el ámbito digital, configurando el entorno personal de aprendizaje mediante la integración de recursos digitales de manera autónoma.",
+          "text_ca": "Gestionar l’aprenentatge en l’àmbit digital, configurant l’entorn personal d’aprenentatge mitjançant la integració de recursos digitals de manera autònoma.",
+          "aclaraciones_es": [
+            "Gestionar el aprendizaje en el ámbito digital.",
+            "Configurar el entorno personal de aprendizaje (EPA ).",
+            "Integrar recursos digitales de manera autónoma."
+          ],
+          "aclaraciones_ca": [
+            "Gestionar l’aprenentatge en l’àmbit digital.",
+            "Configurar l’entorn personal d’aprenentatge (EPA).",
+            "Integrar recursos digitals de manera autònoma."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Buscar, seleccionar y archivar información en función de las propias necesidades mediante las herramientas del entorno personal de aprendizaje con sentido crítico y siguiendo normas básicas de seguridad en la red.",
+          "text_ca": "Cercar, seleccionar i arxivar informació en funció de les pròpies necessitats mitjançant les eines de l’entorn personal d’aprenentatge amb sentit crític i seguint normes bàsiques de seguretat a la xarxa.",
+          "aclaraciones_es": [
+            "Buscar y seleccionar información relevante para sus necesidades.",
+            "Utilizar herramientas digitales del entorno personal con sentido crítico y siguiendo normas básicas de seguridad en la red.",
+            "Almacenar información de manera organizada asegurándose que los datos se tratan de forma responsable y protegida."
+          ],
+          "aclaraciones_ca": [
+            "Cercar i seleccionar informació rellevant per a les seves necessitats.",
+            "Utilitzar eines digitals de l’entorn personal amb sentit crític i seguint normes bàsiques de seguretat a la xarxa.",
+            "Emmagatzemar informació de manera organitzada assegurant-se que les dades es tracten de forma responsable i protegida."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Crear, programar, integrar y reelaborar contenidos digitales de manera individual o colectiva, seleccionando las herramientas más apropiadas para generar nuevo conocimiento y contenidos digitales de manera creativa, respetando los derechos de autor y las licencias de uso.",
+          "text_ca": "Crear, programar, integrar i reelaborar continguts digitals de manera individual o col·lectiva, seleccionant les eines més apropiades per generar nou coneixement i continguts digitals de manera creativa, respectant els drets d’autor i les llicències d’ús.",
+          "aclaraciones_es": [
+            "Diseñar y crear contenidos digitales, de manera creativa, a nivel individual o colectivo, utilizando herramientas digitales adecuadas.",
+            "Integrar y adaptar contenidos existentes para generar nuevo contenido, respetando los derechos de autor y licencias de uso."
+          ],
+          "aclaraciones_ca": [
+            "Dissenyar i crear continguts digitals, de manera creativa, a nivell individual o col·lectiu, utilitzant eines digitals adequades.",
+            "Integrar i adaptar continguts existents per generar nou contingut, respectant els drets d’autor i llicències d’ús."
+          ]
+        },
+        {
+          "id": "2.4",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Interactuar en espacios virtuales de comunicación y plataformas de aprendizaje colaborativo, compartiendo y publicando información y datos, adaptándose a diferentes audiencias con una actitud participativa y respetuosa.",
+          "text_ca": "Interactuar en espais virtuals de comunicació i plataformes d’aprenentatge col·laboratiu, compartint i publicant informació i dades, adaptant-se a diferents audiències amb una actitud participativa i respectuosa.",
+          "aclaraciones_es": [
+            "Participar y compartir información de forma activa con otros usuarios en lugares de comunicación y de aprendizaje virtuales.",
+            "Ajustar el contenido y la forma de la comunicación en función de las características y necesidades del público.",
+            "Fomentar el diálogo y la colaboración con una actitud basada en el respeto y la inclusión en entornos virtuales."
+          ],
+          "aclaraciones_ca": [
+            "Participar i compartir informació de forma activa amb altres usuaris a llocs de comunicació i d’aprenentatge virtuals.",
+            "Ajustar el contingut i la forma de la comunicació segons les característiques i necessitats del públic.",
+            "Fomentar el diàleg i la col·laboració amb una actitud basada en el respecte i la inclusió en entorns virtuals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Desarrollar hábitos que fomenten el bienestar digital, aplicando medidas preventivas y correctivas para proteger dispositivos, datos personales y la propia salud.",
+      "description_ca": "Desenvolupar hàbits que fomentin el benestar digital, aplicant mesures preventives i correctives per protegir dispositius, dades personals i la pròpia salut.",
+      "descriptores": [
+        "CCL3",
+        "STEM5",
+        "CD1",
+        "CD4",
+        "CPSAA2",
+        "CPSAA5",
+        "CC2",
+        "CC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Proteger los datos personales y la huella digital generada en Internet y configurar las condiciones de privacidad de las redes sociales y espacios virtuales de trabajo.",
+          "text_ca": "Protegir les dades personals i l’empremta digital generada a Internet i configurar les condicions de privacitat de les xarxes socials i espais virtuals de treball.",
+          "aclaraciones_es": [
+            "Configurar las opciones de privacidad en las redes sociales y espacios virtuales para proteger los datos personales.",
+            "Identificar y minimizar el impacto de la información compartida en línea para controlar la huella digital."
+          ],
+          "aclaraciones_ca": [
+            "Configurar les opcions de privacitat a les xarxes socials i espais virtuals per protegir les dades personals.",
+            "Identificar i minimitzar l’impacte de la informació compartida en línia per controlar l’empremta digital."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Configurar y actualizar, contraseñas, sistemas operativos y antivirus de manera periódica en los diferentes dispositivos digitales de uso habitual.",
+          "text_ca": "Configurar i actualitzar, contrasenyes, sistemes operatius i antivirus de manera periòdica en els diferents dispositius digitals d’ús habitual.",
+          "aclaraciones_es": [
+            "Configurar contraseñas seguras con combinaciones robustas y variadas.",
+            "Actualizar periódicamente las contraseñas.",
+            "Mantener los sistemas operativos actualizados para corregir vulnerabilidades.",
+            "Instalar y actualizar antivirus y realizar escaneos periódicos para proteger los dispositivos digitales."
+          ],
+          "aclaraciones_ca": [
+            "Configurar contrasenyes segures amb combinacions robustes i variades.",
+            "Actualitzar periòdicament les contrasenyes.",
+            "Mantenir els sistemes operatius actualitzats per corregir vulnerabilitats.",
+            "Instal·lar i actualitzar antivirus i realitzar escaneigs periòdics per protegir els dispositius digitals."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Identificar y saber reaccionar ante situaciones que representan una amenaza en la red, para elegir la mejor solución entre varias opciones, desarrollar prácticas saludables y seguras y valorar el bienestar físico y mental, tanto personal como colectivo.",
+          "text_ca": "Identificar i saber reaccionar davant situacions que representen una amenaça a la xarxa, per triar la millor solució entre diverses opcions, desenvolupar pràctiques saludables i segures i valorar el benestar físic i mental, tant personal com col·lectiu.",
+          "aclaraciones_es": [
+            "Identificar los principales riesgos de la red.",
+            "Reaccionar adecuadamente ante las amenazas digitales, eligiendo soluciones seguras y eficaces.",
+            "Desarrollar hábitos saludables en el uso de las tecnologías para proteger el bienestar físico y mental.",
+            "Promover el respeto al bienestar personal y colectivo en todas las acciones digitales."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els principals riscs de la xarxa.",
+            "Reaccionar adequadament davant les amenaces digitals, triant solucions segures i eficaces.",
+            "Desenvolupar hàbits saludables en l’ús de les tecnologies per protegir el benestar físic i mental.",
+            "Promoure el respecte al benestar personal i col·lectiu en totes les accions digitals."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Ejercer una ciudadanía digital crítica mediante el conocimiento de las posibles acciones a realizar en la red, identificando las repercusiones, para hacer un uso activo, responsable y ético de la tecnología.",
+      "description_ca": "Exercir una ciutadania digital crítica mitjançant el coneixement de les possibles accions a realitzar en la xarxa, identificant-ne les repercussions, per fer un ús actiu, responsable i ètic de la tecnologia.",
+      "descriptores": [
+        "CD3",
+        "CD4",
+        "CPSAA1",
+        "CC1",
+        "CC2",
+        "CC3",
+        "CC4",
+        "CE1"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Hacer un uso ético de los datos y las herramientas digitales, aplicando las normas de etiqueta digital y respetando la privacidad y las licencias de uso y propiedad intelectual en la comunicación, colaboración y participación activa en la red.",
+          "text_ca": "Fer un ús ètic de les dades i les eines digitals, aplicant les normes d’etiqueta digital i respectant la privacitat i les llicències d’ús i propietat intel·lectual en la comunicació, col·laboració i participació activa en la xarxa.",
+          "aclaraciones_es": [
+            "Fomentar un uso ético de los datos y herramientas digitales.",
+            "Aplicar las normas de etiqueta digital en las interacciones online.",
+            "Respetar la privacidad y las licencias de uso y de propiedad intelectual.",
+            "Comunicar, colaborar y participar de manera responsable y activa en la red."
+          ],
+          "aclaraciones_ca": [
+            "Fomentar un ús ètic de les dades i eines digitals.",
+            "Aplicar les normes d’etiqueta digital en les interaccions en línia.",
+            "Respectar la privacitat i les llicències d’ús i de propietat intel·lectual.",
+            "Comunicar, col·laborar i participar de manera responsable i activa a la xarxa."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reconocer las aportaciones de las tecnologías digitales en las gestiones administrativas y el comercio electrónico, desde la conciencia de la brecha social de acceso, uso y aprovechamiento de estas tecnologías para diversos colectivos.",
+          "text_ca": "Reconèixer les aportacions de les tecnologies digitals en les gestions administratives i el comerç electrònic, des de la consciència de la bretxa social d’accés, ús i aprofitament d’aquestes tecnologies per a diversos col·lectius.",
+          "aclaraciones_es": [
+            "Valorar la utilización de las tecnologías digitales en las gestiones administrativas y el comercio electrónico.",
+            "Tomar conciencia de la brecha social en el acceso, uso y aprovechamiento de las tecnologías digitales."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la utilització de les tecnologies digitals en les gestions administratives i el comerç electrònic.",
+            "Prendre consciència de la bretxa social en l’accés, ús i aprofitament de les tecnologies digitals."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar la importancia de la oportunidad, facilidad y libertad de expresión que suponen los medios digitales conectados, analizando de manera crítica los mensajes que se reciben y transmiten teniendo en cuenta su objetividad, ideología, intencionalidad, sesgos y caducidad.",
+          "text_ca": "Valorar la importància de l’oportunitat, facilitat i llibertat d’expressió que suposen els mitjans digitals connectats, analitzant de manera crítica els missatges que es reben i transmeten tenint en compte la seva objectivitat, ideologia, intencionalitat, biaixos i caducitat.",
+          "aclaraciones_es": [
+            "Valorar la importancia de la oportunidad, facilidad y libertad de expresión de los medios digitales conectados.",
+            "Analizar de manera crítica los mensajes recibidos y transmitidos de los medios en red.",
+            "Considerar la objetividad, ideología, intencionalidad, sesgos y caducidad de los medios digitales conectados."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la importància de l’oportunitat, facilitat i llibertat d’expressió dels mitjans digitals connectats.",
+            "Analitzar de manera crítica els missatges rebuts i transmesos dels mitjans en xarxa.",
+            "Considerar l’objectivitat, ideologia, intencionalitat, biaixos i caducitat dels mitjans digitals connectats."
+          ]
+        },
+        {
+          "id": "4.4",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar la necesidad y los beneficios globales de un uso y desarrollo ecológica y socialmente responsable de las tecnologías digitales, teniendo en cuenta criterios de accesibilidad, sostenibilidad e impacto.",
+          "text_ca": "Analitzar la necessitat i els beneficis globals d’un ús i desenvolupament ecològicament i social responsable de les tecnologies digitals, tenint en compte criteris d’accessibilitat, sostenibilitat i impacte.",
+          "aclaraciones_es": [
+            "Analizar la necesidad de un uso y desarrollo responsable de las tecnologías digitales.",
+            "Evaluar los beneficios globales de un uso y desarrollo responsable de las tecnologías digitales.",
+            "Tener en cuenta cuestiones como la accesibilidad, sostenibilidad e impacto en el análisis de las tecnologías digitales."
+          ],
+          "aclaraciones_ca": [
+            "Analitzar la necessitat d’un ús i desenvolupament responsable de les tecnologies digitals.",
+            "Avaluar els beneficis globals d’un ús i desenvolupament responsable de les tecnologies digitals.",
+            "Tenir en compte qüestions com l’accessibilitat, sostenibilitat i impacte en l’anàlisi de les tecnologies digitals."
+          ]
+        }
+      ]
+    }
+  ]
+}

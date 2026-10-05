@@ -1,0 +1,495 @@
+{
+  "code": "economia_emprendimiento",
+  "name_es": "Economía y Emprendimiento",
+  "name_ca": "Economia i Emprenedoria",
+  "cursos": {
+    "4º": "opcion"
+  },
+  "competencias": [
+    {
+      "ce_id": "CE1",
+      "ce_num": 1,
+      "description_es": "Analizar y valorar las fortalezas y debilidades propias y de los demás, reflexionando sobre las aptitudes y gestionando de manera eficaz las emociones y las destrezas necesarias, para adaptarse a entornos cambiantes y diseñar un proyecto personal que genere valor para los otros.",
+      "description_ca": "Analitzar i valorar les fortaleses i febleses pròpies i dels altres, reflexionant sobre les aptituds i gestionant de manera eficaç les emocions i les destreses necessàries, per adaptar- se a entorns canviants i dissenyar un projecte personal que generi valor per als altres.",
+      "descriptores": [
+        "CPSAA1",
+        "CC1",
+        "CE2",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "1.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Adaptarse a entornos complejos y crear un proyecto personal original y generador de valor, partiendo de la valoración crítica sobre las propias aptitudes y las posibilidades creativas, haciendo hincapié en las fortalezas y debilidades y consiguiendo progresivamente el control consciente de las emociones.",
+          "text_ca": "Adaptar-se a entorns complexos i crear un projecte personal original i generador de valor, partint de la valoració crítica sobre les pròpies aptituds i les possibilitats creatives, posant l’accent en les fortaleses i febleses i aconseguint progressivament el control conscient de les emocions.",
+          "aclaraciones_es": [
+            "Adaptarse a entornos cambiantes y complejos.",
+            "Crear un proyecto original y generador de valor.",
+            "Formular una valoración crítica de las propias aptitudes y posibilidades creativas.",
+            "Visualizar las fortalezas y debilidades personales.",
+            "Conseguir progresivamente el control consciente de las emociones durante el proceso creativo."
+          ],
+          "aclaraciones_ca": [
+            "Adaptar-se a entorns canviants i complexos.",
+            "Crear un projecte original i generador de valor.",
+            "Formular una valoració crítica de les pròpies aptituds i possibilitats creatives.",
+            "Visualitzar les fortaleses i febleses personals.",
+            "Aconseguir progressivament el control conscient de les emocions durant el procés creatiu."
+          ]
+        },
+        {
+          "id": "1.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Utilizar estrategias de análisis razonado de las fortalezas y debilidades personales y de la iniciativa y creatividad propia y de los demás.",
+          "text_ca": "Utilitzar estratègies d’anàlisi raonada de les fortaleses i febleses personals i de la iniciativa i creativitat pròpia i dels altres.",
+          "aclaraciones_es": [
+            "Utilizar estrategias de análisis razonado para evaluar las fortalezas y debilidades personales.",
+            "Utilizar estrategias de análisis razonado para valorar la iniciativa y creatividad propia y de los demás."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar estratègies d’anàlisi raonada per avaluar les fortaleses i febleses personals.",
+            "Utilitzar estratègies d’anàlisi raonada per valorar la iniciativa i creativitat pròpia i dels altres."
+          ]
+        },
+        {
+          "id": "1.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Gestionar de manera eficaz las emociones y destrezas personales, promoviendo y desarrollando actitudes creativas.",
+          "text_ca": "Gestionar de manera eficaç les emocions i destreses personals, promovent i desenvolupant actituds creatives.",
+          "aclaraciones_es": [
+            "Gestionar de manera eficaz las emociones y destrezas personales.",
+            "Promover y desarrollar actitudes creativas."
+          ],
+          "aclaraciones_ca": [
+            "Gestionar de manera eficaç les emocions i destreses personals.",
+            "Promoure i desenvolupar actituds creatives."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE2",
+      "ce_num": 2,
+      "description_es": "Utilizar estrategias de conformación de equipos, así como habilidades sociales, de comunicación e innovación ágil, aplicándolas con autonomía y motivación a las dinámicas de trabajo en diferentes contextos, para constituir equipos eficaces y descubrir el valor de cooperar con otras personas durante el proceso de ideación y desarrollo de soluciones emprendedoras.",
+      "description_ca": "Utilitzar estratègies de conformació d’equips, com també habilitats socials, de comunicació i innovació àgil, aplicant-les amb autonomia i motivació a les dinàmiques de treball en diferents contexts, per constituir equips eficaços i descobrir el valor de cooperar amb altres persones durant el procés d’ideació i desenvolupament de solucions emprenedores.",
+      "descriptores": [
+        "CCL1",
+        "CP1",
+        "CP2",
+        "CPSAA1",
+        "CPSAA3",
+        "CC1",
+        "CE2"
+      ],
+      "criterios": [
+        {
+          "id": "2.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Constituir equipos de trabajo basados en principios de equidad, coeducación e igualdad entre hombres y mujeres, actitud participativa y visualización de metas comunes, utilizando estrategias que faciliten la identificación y optimización de los recursos humanos necesarios que conduzcan a la consecución del reto propuesto.",
+          "text_ca": "Constituir equips de treball basats en principis d’equitat, coeducació i igualtat entre homes i dones, actitud participativa i visualització de metes comunes, utilitzant estratègies que facilitin la identificació i optimització dels recursos humans necessaris que condueixin a la consecució del repte proposat.",
+          "aclaraciones_es": [
+            "Crear equipos de trabajo con un enfoque de equidad, basado en los principios de la coeducación y la igualdad efectiva entre géneros.",
+            "Fomentar una actitud participativa entre todos los miembros del equipo.",
+            "Visualizar metas comunes para garantizar la cohesión del grupo.",
+            "Desarrollar estrategias para identificar y optimizar los recursos humanos necesarios que conduzcan a la consecución del reto propuesto."
+          ],
+          "aclaraciones_ca": [
+            "Crear equips de treball amb un enfocament d’equitat, basat en els principis de la coeducació i la igualtat efectiva entre gèneres.",
+            "Fomentar una actitud participativa entre tots els membres de l’equip.",
+            "Visualitzar metes comunes per garantir la cohesió del grup.",
+            "Desenvolupar estratègies per identificar i optimitzar els recursos humans necessaris que condueixin a la consecució del repte proposat."
+          ]
+        },
+        {
+          "id": "2.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Poner en práctica habilidades sociales, de comunicación abierta, de motivación, de liderazgo y de cooperación e innovación ágil, tanto de manera presencial como a distancia, en diferentes contextos de trabajo en equipo.",
+          "text_ca": "Posar en pràctica habilitats socials, de comunicació oberta, de motivació, de lideratge i de cooperació i innovació àgil, tant de manera presencial com a distància, en diferents contexts de treball en equip.",
+          "aclaraciones_es": [
+            "Desarrollar habilidades sociales en contextos de trabajo en equipo.",
+            "Fomentar una comunicación abierta entre los miembros del equipo.",
+            "Desarrollar habilidades de motivación y liderazgo para la cohesión del grupo.",
+            "Mejorar la cooperación y la innovación ágil tanto presencialmente como a distancia."
+          ],
+          "aclaraciones_ca": [
+            "Desenvolupar habilitats socials en contexts de treball en equip.",
+            "Fomentar una comunicació oberta entre els membres de l’equip.",
+            "Desenvolupar habilitats de motivació i lideratge per a la cohesió del grup.",
+            "Millorar la cooperació i la innovació àgil tant de presencialment com a distància."
+          ]
+        },
+        {
+          "id": "2.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar y respetar las aportaciones de los demás en las diferentes dinámicas de trabajo y fases del proceso llevado a cabo, respetando las decisiones tomadas de manera colectiva.",
+          "text_ca": "Valorar i respectar les aportacions dels altres en les diferents dinàmiques de treball i fases del procés dut a terme, respectant les decisions preses de manera col·lectiva.",
+          "aclaraciones_es": [
+            "Valorar las aportaciones de los demás en las dinámicas de trabajo.",
+            "Respetar las decisiones tomadas de manera colectiva.",
+            "Reconocer la importancia de las diferentes fases del proceso en el trabajo en equipo."
+          ],
+          "aclaraciones_ca": [
+            "Valorar les aportacions dels altres en les dinàmiques de treball.",
+            "Respectar les decisions preses de manera col·lectiva.",
+            "Reconèixer la importància de les diferents fases del procés en el treball en equip."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE3",
+      "ce_num": 3,
+      "description_es": "Elaborar, con sentido ético y solidario, ideas y soluciones innovadoras y sostenibles que den respuesta a las necesidades locales y globales detectadas, utilizando metodologías ágiles de ideación y analizando tanto sus puntos fuertes y débiles como el impacto que puedan generar en el entorno, para conseguir la superación de retos relacionados con la preservación y cuidado del medio natural, social, cultural y artístico.",
+      "description_ca": "Elaborar, amb sentit ètic i solidari, idees i solucions innovadores i sostenibles que donin resposta a les necessitats locals i globals detectades, utilitzant metodologies àgils d’ideació i analitzant tant els seus punts forts i febles com l’impacte que puguin generar-ne en l’entorn, per aconseguir la superació de reptes relacionats amb la preservació i cura del medi natural, social, cultural i artístic.",
+      "descriptores": [
+        "STEM3",
+        "CC4",
+        "CE1",
+        "CE2",
+        "CE3",
+        "CCEC3"
+      ],
+      "criterios": [
+        {
+          "id": "3.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Preservar y cuidar el medio natural, social, cultural y artístico a partir de propuestas y actuaciones locales y globales que promuevan el desarrollo sostenible, con visión creativa, emprendedora y comprometida.",
+          "text_ca": "Preservar i tenir cura del medi natural, social, cultural i artístic a partir de propostes i actuacions locals i globals que promoguin el desenvolupament sostenible, amb visió creativa, emprenedora i compromesa.",
+          "aclaraciones_es": [
+            "Preservar el medio natural y cultural mediante propuestas sostenibles.",
+            "Cuidar el medio social y artístico a través de actuaciones locales y globales.",
+            "Promover el desarrollo sostenible con una visión creativa.",
+            "Adoptar una actitud emprendedora y comprometida hacia la preservación y cuidado del medio natural, social, cultural y artístico."
+          ],
+          "aclaraciones_ca": [
+            "Preservar el medi natural i cultural mitjançant propostes sostenibles.",
+            "Tenir cura del medi social i artístic a través d’actuacions locals i globals.",
+            "Promoure el desenvolupament sostenible amb una visió creativa.",
+            "Adoptar una actitud emprenedora i compromesa envers la preservació i cura del medi natural, social, cultural i artístic."
+          ]
+        },
+        {
+          "id": "3.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Superar los retos propuestos a partir de ideas y soluciones innovadoras y sostenibles, evaluando las ventajas e inconvenientes, así como el impacto que pudieran generar a nivel personal y en el contexto en el cual se dirigen.",
+          "text_ca": "Superar els reptes proposats a partir d’idees i solucions innovadores i sostenibles, avaluant- ne els avantatges i inconvenients, com també l’impacte que poguessin generar a nivell personal i en el context al qual s’adrecen.",
+          "aclaraciones_es": [
+            "Afrontar los retos propuestos con ideas innovadoras y sostenibles.",
+            "Evaluar las ventajas e inconvenientes de las soluciones propuestas.",
+            "Evaluar el impacto potencial de las soluciones a nivel personal.",
+            "Visualizar el impacto de las soluciones en el contexto en el cual se dirigen."
+          ],
+          "aclaraciones_ca": [
+            "Afrontar els reptes proposats amb idees innovadores i sostenibles.",
+            "Avaluar els avantatges i inconvenients de les solucions proposades.",
+            "Estimar l’impacte potencial de les solucions a nivell personal.",
+            "Visualitzar l’impacte de les solucions en el context al qual s’adrecen."
+          ]
+        },
+        {
+          "id": "3.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Aplicar metodologías ágiles siguiendo los criterios y pautas establecidos en el proceso de construcción de ideas creativas y sostenibles que faciliten la superación de los retos planteados y la obtención de soluciones a las necesidades detectadas con sentido ético y solidario.",
+          "text_ca": "Aplicar metodologies àgils seguint els criteris i pautes establerts en el procés de construcció d’idees creatives i sostenibles que facilitin la superació dels reptes plantejats i l’obtenció de solucions a les necessitats detectades amb sentit ètic i solidari.",
+          "aclaraciones_es": [
+            "Aplicar metodologías ágiles en la construcción de ideas creativas y sostenibles.",
+            "Afrontar la superación de los retos planteados con soluciones adecuadas.",
+            "Promover el sentido ético y solidario en las soluciones obtenidas."
+          ],
+          "aclaraciones_ca": [
+            "Aplicar metodologies àgils en la construcció d’idees creatives i sostenibles.",
+            "Afrontar la superació dels reptes plantejats amb solucions adequades.",
+            "Promoure el sentit ètic i solidari en les solucions obtingudes."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE4",
+      "ce_num": 4,
+      "description_es": "Seleccionar y reunir los recursos disponibles en el proceso de desarrollo de la idea o solución creativa propuesta, incluyendo los medios de producción y las fuentes financieras y aplicando estrategias de captación para poner en marcha el proyecto que lleve a la realidad la solución emprendedora.",
+      "description_ca": "Seleccionar i reunir els recursos disponibles en el procés de desenvolupament de la idea o solució creativa proposada, incloent-hi els mitjans de producció i les fonts financeres i aplicant-ne estratègies de captació per posar en marxa el projecte que faci real la solució emprenedora.",
+      "descriptores": [
+        "STEM3",
+        "CD2",
+        "CE1",
+        "CE2"
+      ],
+      "criterios": [
+        {
+          "id": "4.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Poner en marcha un proyecto viable que lleve a la realidad una solución emprendedora, seleccionando y reuniendo los recursos materiales, inmateriales y digitales disponibles en el proceso de ideación creativa.",
+          "text_ca": "Posar en marxa un projecte viable que faci real una solució emprenedora, seleccionant i reunint els recursos materials, immaterials i digitals disponibles en el procés d’ideació creativa.",
+          "aclaraciones_es": [
+            "Diseñar un proyecto viable que implemente una solución emprendedora.",
+            "Seleccionar los recursos materiales, inmateriales y digitales más relevantes para el proceso de ideación creativa.",
+            "Reunir los recursos disponibles que faciliten el proceso de ideación creativa."
+          ],
+          "aclaraciones_ca": [
+            "Dissenyar un projecte viable que implementi una solució emprenedora.",
+            "Seleccionar els recursos materials, immaterials i digitals més rellevants per al procés d’ideació creativa.",
+            "Reunir els recursos disponibles que facilitin el procés d’ideació creativa."
+          ]
+        },
+        {
+          "id": "4.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Utilizar con autonomía estrategias de captación y gestión de recursos conociendo las características y aplicándolas al proceso de conversión de ideas y soluciones en acciones.",
+          "text_ca": "Utilitzar amb autonomia estratègies de captació i gestió de recursos coneixent-ne les característiques i aplicant-les al procés de conversió d’idees i solucions en accions.",
+          "aclaraciones_es": [
+            "Utilizar estrategias de captación de recursos con autonomía.",
+            "Gestionar recursos conociendo las características.",
+            "Aplicar las estrategias al proceso de conversión de ideas y soluciones en acciones."
+          ],
+          "aclaraciones_ca": [
+            "Utilitzar estratègies de captació de recursos amb autonomia.",
+            "Gestionar recursos coneixent-ne les característiques.",
+            "Aplicar les estratègies al procés de conversió d’idees i solucions en accions."
+          ]
+        },
+        {
+          "id": "4.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Reunir, analizar y seleccionar con criterios propios los recursos disponibles, planificando con coherencia la organización, distribución, uso y optimización.",
+          "text_ca": "Reunir, analitzar i seleccionar amb criteris propis els recursos disponibles, planificant-ne amb coherència l’organització, distribució, ús i optimització.",
+          "aclaraciones_es": [
+            "Reunir con criterios propios los recursos disponibles.",
+            "Planificar la organización, distribución, uso y optimización de los recursos de un proyecto."
+          ],
+          "aclaraciones_ca": [
+            "Reunir amb criteris propis els recursos disponibles.",
+            "Planificar l’organització, distribució, ús i optimització dels recursos d’un projecte."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE5",
+      "ce_num": 5,
+      "description_es": "Presentar y exponer ideas y soluciones creativas, utilizando estrategias comunicativas ágiles y valorando la importancia de una comunicación efectiva y respetuosa, para transmitir mensajes convincentes adecuados al contexto y a los objetivos concretos de cada situación y validar las ideas y soluciones presentadas.",
+      "description_ca": "Presentar i exposar idees i solucions creatives, utilitzant estratègies comunicatives àgils i valorant la importància d’una comunicació efectiva i respectuosa, per transmetre missatges convincents adequats al context i als objectius concrets de cada situació i validar les idees i solucions presentades.",
+      "descriptores": [
+        "CCL1",
+        "CCL2",
+        "CCL3",
+        "CD3",
+        "CPSAA1",
+        "CC1",
+        "CE1",
+        "CE2"
+      ],
+      "criterios": [
+        {
+          "id": "5.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Validar las ideas y soluciones presentadas mediante mensajes convincentes y adecuados al contexto y objetivos concretos, utilizando estrategias comunicativas ágiles adecuadas para cada situación comunicativa.",
+          "text_ca": "Validar les idees i solucions presentades mitjançant missatges convincents i adequats al context i objectius concrets, utilitzant estratègies comunicatives àgils adients per a cada situació comunicativa.",
+          "aclaraciones_es": [
+            "Validar las ideas y soluciones presentadas en función de los objetivos y el contexto.",
+            "Componer mensajes convincentes y adecuados para transmitir las ideas y soluciones.",
+            "Adaptar las estrategias comunicativas en función de las características de cada situación.",
+            "Seleccionar técnicas de comunicación ágiles para favorecer la comprensión y el impacto del mensaje."
+          ],
+          "aclaraciones_ca": [
+            "Validar les idees i solucions presentades segons els objectius i el context.",
+            "Compondre missatges convincents i adequats per transmetre les idees i solucions.",
+            "Adaptar les estratègies comunicatives segons les característiques de cada situació.",
+            "Seleccionar tècniques de comunicació àgils per afavorir la comprensió i l’impacte del missatge."
+          ]
+        },
+        {
+          "id": "5.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Presentar y exponer, con claridad y coherencia, las ideas y soluciones creativas, valorando la importancia de mantener una comunicación eficaz y respetuosa a lo largo de todo el proceso.",
+          "text_ca": "Presentar i exposar, amb claredat i coherència, les idees i solucions creatives, valorant la importància de mantenir una comunicació eficaç i respectuosa al llarg de tot el procés.",
+          "aclaraciones_es": [
+            "Defender las ideas y soluciones creativas con claridad y coherencia en la información.",
+            "Valorar la importancia de mantener una comunicación eficaz.",
+            "Demostrar una comunicación respetuosa a lo largo del proceso."
+          ],
+          "aclaraciones_ca": [
+            "Defensar les idees i solucions creatives amb claredat i coherència en la informació.",
+            "Valorar la importància de mantenir una comunicació eficaç.",
+            "Demostrar una comunicació respectuosa al llarg del procés."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE6",
+      "ce_num": 6,
+      "description_es": "Comprender aspectos básicos de la economía y las finanzas, valorando críticamente el problema de la escasez de recursos y la necesidad de elegir, así como los principios de interacción social desde el punto de vista económico para relacionarlos con la búsqueda y planificación de recursos para el desarrollo de la idea o solución emprendedora que afronte el reto planteado de manera eficiente, equitativa y sostenible.",
+      "description_ca": "Comprendre aspectes bàsics de l’economia i les finances, valorant críticament el problema de l’escassetat de recursos i la necessitat de triar, com també els principis d’interacció social des del punt de vista econòmic per relacionar-los amb la cerca i planificació de recursos per al desenvolupament de la idea o solució emprenedora que afronti el repte plantejat de manera eficient, equitativa i sostenible.",
+      "descriptores": [
+        "CC1",
+        "CE1",
+        "CE2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "6.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Desarrollar una idea o solución emprendedora a partir de los conocimientos, destrezas y actitudes adquiridos desde el ámbito de la economía y las finanzas, relacionándolos entre ellos y con los recursos necesarios y disponibles para desarrollarla.",
+          "text_ca": "Desenvolupar una idea o solució emprenedora a partir dels coneixements, destreses i actituds adquirits des de l’àmbit de l’economia i les finances, relacionant-los entre ells i amb els recursos necessaris i disponibles per desenvolupar-la.",
+          "aclaraciones_es": [
+            "Desarrollar una idea o solución emprendedora basada en conocimientos de economía y finanzas.",
+            "Aplicar las destrezas adquiridas para facilitar el desarrollo de la solución.",
+            "Combinar la relación entre los conocimientos, recursos necesarios y recursos disponibles."
+          ],
+          "aclaraciones_ca": [
+            "Desenvolupar una idea o solució emprenedora basada en coneixements d’economia i finances.",
+            "Aplicar les destreses adquirides per facilitar el desenvolupament de la solució.",
+            "Combinar la relació entre els coneixements, recursos necessaris i recursos disponibles."
+          ]
+        },
+        {
+          "id": "6.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Conocer ampliamente y comprender con precisión los conocimientos, destrezas y actitudes necesarios del ámbito económico y financiero aplicándolos con coherencia a situaciones, actividades o proyectos concretos.",
+          "text_ca": "Conèixer àmpliament i comprendre amb precisió els coneixements, destreses i actituds necessaris de l’àmbit econòmic i financer aplicant-los amb coherència a situacions, activitats o projectes concrets.",
+          "aclaraciones_es": [
+            "Explicar con precisión los conocimientos, destrezas y actitudes necesarios del ámbito económico y financiero.",
+            "Transferir con coherencia estos conocimientos, destrezas y actitudes a situaciones, actividades o proyectos concretos."
+          ],
+          "aclaraciones_ca": [
+            "Explicar amb precisió els coneixements, destreses i actituds necessaris de l’àmbit econòmic i financer.",
+            "Transferir amb coherència aquests coneixements, destreses i actituds a situacions, activitats o projectes concrets."
+          ]
+        },
+        {
+          "id": "6.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Afrontar los retos de manera eficaz, equitativa y sostenible, en diferentes contextos y situaciones, reales o simuladas, transfiriendo los saberes económicos y financieros necesarios.",
+          "text_ca": "Afrontar els reptes de manera eficaç, equitativa i sostenible, en diferents contexts i situacions, reals o simulades, transferint els sabers econòmics i financers necessaris.",
+          "aclaraciones_es": [
+            "Identificar los retos en contextos diversos, en situaciones simuladas o reales.",
+            "Poner en práctica estrategias para afrontar retos económicos de manera eficaz, equitativa y sostenible."
+          ],
+          "aclaraciones_ca": [
+            "Identificar els reptes en contexts diversos, en situacions simulades o reals.",
+            "Posar en pràctica estratègies per afrontar reptes econòmics de manera eficaç, equitativa i sostenible."
+          ]
+        },
+        {
+          "id": "6.4",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar críticamente el problema económico de la escasez de recursos y la necesidad de elegir, así como los principios de interacción social desde el punto de vista económico, aprovechando ese conocimiento en el afrontamiento eficaz de retos.",
+          "text_ca": "Valorar críticament el problema econòmic de l’escassetat de recursos i la necessitat de triar, com també els principis d’interacció social des del punt de vista econòmic, aprofitant aquest coneixement en l’afrontament eficaç de reptes.",
+          "aclaraciones_es": [
+            "Valorar críticamente el problema de la escasez de recursos y la necesidad de hacer elecciones económicas.",
+            "Aplicar los principios de interacción social desde una perspectiva económica para afrontar retos de manera eficaz."
+          ],
+          "aclaraciones_ca": [
+            "Valorar críticament el problema de l’escassetat de recursos i la necessitat de fer eleccions econòmiques.",
+            "Aplicar els principis d’interacció social des d’una perspectiva econòmica per afrontar reptes de manera eficaç."
+          ]
+        }
+      ]
+    },
+    {
+      "ce_id": "CE7",
+      "ce_num": 7,
+      "description_es": "Construir y analizar de manera cooperativa, autónoma y ágil prototipos innovadores y sostenibles, aplicando estrategias eficaces de diseño y ejecución, evaluando todas las fases del proceso de manera crítica y ética, validando los resultados obtenidos para mejorar y perfeccionar los prototipos creados y para contribuir al aprendizaje y al desarrollo personal y colectivo.",
+      "description_ca": "Construir i analitzar de manera cooperativa, autònoma i àgil prototips innovadors i sostenibles, aplicant estratègies eficaces de disseny i execució, avaluant totes les fases del procés de manera crítica i ètica, validant els resultats obtinguts per millorar i perfeccionar els prototips creats i per contribuir a l’aprenentatge i el desenvolupament personal i col·lectiu.",
+      "descriptores": [
+        "STEM3",
+        "CD5",
+        "CPSAA3",
+        "CPSAA5",
+        "CE2",
+        "CE3"
+      ],
+      "criterios": [
+        {
+          "id": "7.1",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Valorar la contribución del prototipo final, tanto al aprendizaje como al desarrollo personal y colectivo, evaluando de manera crítica y ética todas las fases del proceso llevado a cabo, así como la adecuación de las estrategias empleadas para construirlo.",
+          "text_ca": "Valorar la contribució del prototip final, tant a l’aprenentatge com al desenvolupament personal i col·lectiu, avaluant de manera crítica i ètica totes les fases del procés dut a terme, com també l’adequació de les estratègies emprades per construir-lo.",
+          "aclaraciones_es": [
+            "Valorar la contribución del proceso de realización del prototipo final al aprendizaje y al desarrollo personal y colectivo.",
+            "Secundar de manera crítica y ética todas las fases del proceso.",
+            "Valorar la adecuación de las estrategias empleadas en la construcción del prototipo."
+          ],
+          "aclaraciones_ca": [
+            "Valorar la contribució del procés de realització del prototip final a l’aprenentatge i al desenvolupament personal i col·lectiu.",
+            "Secundar de manera crítica i ètica totes les fases del procés.",
+            "Valorar l’adequació de les estratègies emprades en la construcció del prototip."
+          ]
+        },
+        {
+          "id": "7.2",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Analizar, de manera crítica, el proceso de diseño y ejecución llevado a cabo en la realización de los prototipos, estableciendo comparaciones entre la efectividad, la viabilidad y la adecuación lograda en los procesos y los resultados obtenidos.",
+          "text_ca": "Analitzar, de manera crítica, el procés de disseny i execució dut a terme en la realització dels prototips, establint comparacions entre l’efectivitat, la viabilitat i l’adequació assolida en els processos i els resultats obtinguts.",
+          "aclaraciones_es": [
+            "Examinar de manera crítica el proceso de diseño y ejecución de los prototipos creados.",
+            "Comparar la efectividad, la viabilidad y la adecuación entre los procesos y los resultados obtenidos."
+          ],
+          "aclaraciones_ca": [
+            "Examinar de manera crítica el procés de disseny i execució dels prototips creats.",
+            "Comparar l’efectivitat, la viabilitat i l’adequació entre els processos i els resultats obtinguts."
+          ]
+        },
+        {
+          "id": "7.3",
+          "cursos": [
+            "4º"
+          ],
+          "text_es": "Utilizar estrategias eficaces de diseño y ejecución seleccionando aquellas que faciliten la construcción del prototipo final de manera ágil, cooperativa y autónoma.",
+          "text_ca": "Utilitzar estratègies eficaces de disseny i execució seleccionant aquelles que facilitin la construcció del prototip final de manera àgil, cooperativa i autònoma.",
+          "aclaraciones_es": [
+            "Diseñar estrategias eficaces en el diseño y ejecución del prototipo final.",
+            "Seleccionar estrategias que faciliten una construcción ágil, cooperativa y autónoma."
+          ],
+          "aclaraciones_ca": [
+            "Dissenyar estratègies eficaces en el disseny i execució del prototip final.",
+            "Seleccionar estratègies que facilitin una construcció àgil, cooperativa i autònoma."
+          ]
+        }
+      ]
+    }
+  ]
+}

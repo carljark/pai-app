@@ -7,6 +7,7 @@ import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AppFacade } from '../../../../app.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
+import { NivelesService } from '../../../../services/niveles.service';
 import { signal } from '@angular/core';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
@@ -28,7 +29,30 @@ describe('GeneratorViewComponent', () => {
   let component: GeneratorViewComponent;
   let fixture: ComponentFixture<GeneratorViewComponent>;
 
-  const mockLayout = {};
+  const mockLayout = { language: signal<'castellano' | 'catalan'>('castellano') };
+
+  const nivel = (id: string, nombre_es: string, nombre_ca: string, cursos: string[]) => ({
+    id,
+    nombre_es,
+    nombre_ca,
+    cursos: cursos.map((curso) => ({ curso })),
+  });
+  const CATALOGO = [
+    nivel('FP_BASICA', 'CFGB Peluquería y Estética', 'CFGB Perruqueria i Estètica', ['1º', '2º']),
+    nivel('CFGM_ESTETICA', 'CFGM Estética y Belleza', 'CFGM Estètica i Bellesa', ['1º']),
+    nivel('CFGM_PELUQUERIA', 'CFGM Peluquería', 'CFGM Perruqueria', ['1º', '2º']),
+    nivel('CFGS_EDUCACION_INFANTIL', 'CFGS Educación Infantil', 'CFGS Educació Infantil', [
+      '1º',
+      '2º',
+    ]),
+    nivel('ESO_ORDINARIA', 'ESO', 'ESO', ['1º', '2º', '3º', '4º']),
+    nivel('DIVERSIFICACION_CURRICULAR', 'ESO (PDC)', 'ESO (PDC)', ['3º', '4º', '5º']),
+  ];
+  const mockNiveles = {
+    niveles: signal<any[]>(CATALOGO),
+    find: (id: string) => CATALOGO.find((n) => n.id === id),
+    nombre: (n: any, isCa: boolean) => (isCa ? n.nombre_ca : n.nombre_es),
+  };
 
   const mockTrans = {
     t: signal({
@@ -108,6 +132,7 @@ describe('GeneratorViewComponent', () => {
     mockAuthFacade.currentUser.set({ role: 'admin' });
     // Los signals del mock se comparten entre tests: se restablece el estado inicial
     tipoNivelSignal.set('FP_BASICA');
+    mockLayout.language.set('castellano');
     setTipoNivelSpy.mockClear();
     await TestBed.configureTestingModule({
       imports: [GeneratorViewComponent],
@@ -118,6 +143,7 @@ describe('GeneratorViewComponent', () => {
         { provide: ProjectsFacade, useValue: mockProjects },
         { provide: AppFacade, useValue: mockAppFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
+        { provide: NivelesService, useValue: mockNiveles },
       ],
     }).compileComponents();
 
@@ -138,6 +164,7 @@ describe('GeneratorViewComponent', () => {
       'CFGM_ESTETICA',
       'CFGM_PELUQUERIA',
       'CFGS_EDUCACION_INFANTIL',
+      'ESO_ORDINARIA',
       'DIVERSIFICACION_CURRICULAR',
     ]);
 
@@ -149,16 +176,23 @@ describe('GeneratorViewComponent', () => {
   });
 
   it('should label the levels in the active language', () => {
-    mockTrans.t.update(
-      (t) =>
-        ({
-          ...t,
-          courseLevelCFGSEducacionInfantil: 'CFGS Educació Infantil',
-        }) as typeof t,
-    );
+    mockLayout.language.set('catalan');
     fixture.detectChanges();
     const levelSelect = fixture.debugElement.query(By.css('#generator-level-select')).nativeElement;
     expect(levelSelect.options[3].textContent.trim()).toBe('CFGS Educació Infantil');
+  });
+
+  it('should offer the four ESO courses and keep unknown course labels', () => {
+    mockCurriculum.tipoNivel.set('ESO_ORDINARIA');
+    fixture.detectChanges();
+    expect(component.courseOptions().map((o) => o.value)).toEqual(['1º', '2º', '3º', '4º']);
+    mockCurriculum.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
+    expect(component.courseOptions()[2]).toEqual({ value: '5º', label: '5º' });
+  });
+
+  it('should have no courses for a level missing from the catalog', () => {
+    mockCurriculum.tipoNivel.set('DESCONOCIDO');
+    expect(component.courseOptions()).toEqual([]);
   });
 
   it('should offer 1st and 2nd year for CFGS Educación Infantil', () => {

@@ -50,6 +50,7 @@ describe('ProjectsFacade', () => {
       curso: vi.fn(),
       ras: vi.fn(),
       ces: vi.fn(),
+      activeCes: vi.fn(() => mockCurriculumFacade.ces()),
       clearSelection: vi.fn(),
     };
 
@@ -1063,6 +1064,22 @@ describe('ProjectsFacade', () => {
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Math']);
+      flushGenerateSuccess(httpMock, req);
+    });
+
+    it('should resolve modules for ESO_ORDINARIA from the selected CE values', () => {
+      mockCurriculumFacade.tipoNivel.mockReturnValue('ESO_ORDINARIA');
+      mockCurriculumFacade.selectedRas.mockReturnValue(['Matemáticas B · CE1. Igual']);
+      mockCurriculumFacade.ces.mockReturnValue([
+        { description: 'Igual', subject: 'Matemáticas A', value: 'Matemáticas A · CE1. Igual' },
+        { description: 'Igual', subject: 'Matemáticas B', value: 'Matemáticas B · CE1. Igual' },
+      ]);
+
+      facade.generateProject('castellano').subscribe();
+      expect(facade.historyTab()).toBe('ESO_ORDINARIA');
+
+      const req = httpMock.expectOne('/api/projects/generate');
+      expect(req.request.body.modules).toEqual(['Matemáticas B']);
       flushGenerateSuccess(httpMock, req);
     });
 

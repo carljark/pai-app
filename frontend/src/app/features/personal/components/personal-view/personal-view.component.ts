@@ -20,6 +20,7 @@ const LEVEL_FILTERS: HistoryTab[] = [
   'CFGM_PELUQUERIA',
   'CFGM',
   'CFGS_EDUCACION_INFANTIL',
+  'ESO_ORDINARIA',
   'ESO',
 ];
 

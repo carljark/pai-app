@@ -5,6 +5,8 @@ import bcrypt from 'bcryptjs';
 import { User } from '../models/User';
 import { up as createAdminUp } from '../migrations/01_create_admin_user';
 import { up as ingestEducacionInfantilUp } from '../migrations/13_ingest_cfgs_educacion_infantil_ras';
+import { up as reingestEsteticaUp } from '../migrations/24_reingest_cfgm_estetica_ras';
+import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
@@ -97,5 +99,21 @@ describe('Migrations Safety & Idempotency', () => {
     expect(didactica?.criterios_es[0]).toMatch(/^a\) Se ha /);
     expect(didactica?.criterios_ca[0]).toMatch(/^a\) S'ha /);
     expect(didactica?.criterios_ca).toHaveLength(didactica?.criterios_es.length ?? -1);
+  });
+
+  it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', module: 'Otro', tipoNivel: 'CFGM_PELUQUERIA', description: 'Ajeno' });
+    await RA.create({ id: 'RA1', moduleCode: '0633', tipoNivel: 'CFGM_ESTETICA', description: 'Obsoleto' });
+
+    await reingestEsteticaUp();
+    await reingestEsteticaUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGM_ESTETICA' });
+    expect(ras).toHaveLength(CFGM_ESTETICA_RAS_DATA.length);
+    expect(ras.some((r) => r.description === 'Obsoleto')).toBe(false);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGM_PELUQUERIA' })).toBe(1);
+    const higiene = ras.find((r) => r.moduleCode === '0633' && r.id === CFGM_ESTETICA_RAS_DATA[0]?.id);
+    expect(higiene?.criterios_ca?.length).toBe(higiene?.criterios_es?.length);
+    expect(higiene?.description).toBe(higiene?.description_ca);
   });
 });

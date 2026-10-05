@@ -23,4 +23,4 @@ Unificar los nombres de las skills de Claude Code con los de otros proyectos del
 
 ## Verificación
 
-Solo cambian archivos Markdown de configuración del agente. No se han ejecutado las suites de backend ni de frontend, y no hay despliegue porque no cambia nada de la aplicación.
+Solo cambian archivos Markdown de configuración del agente. El hook de `git push` ejecutó las suites completas, todas en verde: backend 250 tests y frontend 722 tests (1 omitido), con lint, umbrales de cobertura y comprobación zoneless. No hace falta desplegar en el EC2 porque no cambia nada de la aplicación.

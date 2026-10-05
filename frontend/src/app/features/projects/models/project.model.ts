@@ -4,17 +4,22 @@
  */
 
 export type ProjectStatus = 'borrador' | 'generando' | 'en_cola' | 'publicado' | 'error';
-export type ProjectType =
-  | 'FP_BASICA'
-  | 'CFGM_ESTETICA'
-  | 'CFGM_PELUQUERIA'
-  | 'CFGS_EDUCACION_INFANTIL'
-  | 'ESO_ORDINARIA'
-  | 'DIVERSIFICACION_CURRICULAR'
-  | 'ESO';
-/** Pestañas de nivel del historial; `ESO` es la del PDC y `ESO_ORDINARIA` la de la ESO. */
-export type HistoryTab =
-  'FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGS_EDUCACION_INFANTIL' | 'ESO_ORDINARIA' | 'ESO';
+/** Nivel educativo (`tipoNivel`): un id del catálogo de niveles (`GET /api/niveles`). */
+export type ProjectType = string;
+/** Pestaña de nivel del historial: el `tipoNivel` normalizado. */
+export type HistoryTab = string;
+
+/** Nivel de los proyectos antiguos que no guardan `tipoNivel`. */
+export const DEFAULT_TIPO_NIVEL = 'FP_BASICA';
+
+/** Alias antiguos de `tipoNivel`: `ESO` era el Programa de Diversificación Curricular. */
+const TIPO_NIVEL_ALIASES: Record<string, string> = { ESO: 'DIVERSIFICACION_CURRICULAR' };
+
+/** `tipoNivel` del catálogo: vacío pasa a FP Básica y los alias antiguos a su id actual. */
+export function normalizeTipoNivel(tipoNivel: string | null | undefined): string {
+  if (!tipoNivel) return DEFAULT_TIPO_NIVEL;
+  return TIPO_NIVEL_ALIASES[tipoNivel] ?? tipoNivel;
+}
 export type AIProvider = 'gemini' | 'openrouter';
 export type ContentLanguage = 'castellano' | 'catalan';
 
@@ -227,47 +232,6 @@ export interface AiProviderOptionDto {
 export interface AiModelsResponse {
   providers: AiProviderOptionDto[];
   models: AiModelOptionDto[];
-}
-
-export function getHistoryTabForTipoNivel(tipoNivel: ProjectType): HistoryTab {
-  switch (tipoNivel) {
-    case 'DIVERSIFICACION_CURRICULAR':
-    case 'ESO':
-      return 'ESO';
-    case 'CFGM_ESTETICA':
-      return 'CFGM';
-    case 'CFGM_PELUQUERIA':
-      return 'CFGM_PELUQUERIA';
-    case 'CFGS_EDUCACION_INFANTIL':
-      return 'CFGS_EDUCACION_INFANTIL';
-    case 'ESO_ORDINARIA':
-      return 'ESO_ORDINARIA';
-    default:
-      return 'FPB';
-  }
-}
-
-/** Clave de traducción con el nombre de cada pestaña de nivel. */
-export const HISTORY_TAB_LABEL_KEYS = {
-  FPB: 'courseLevelFP',
-  CFGM: 'courseLevelCFGM',
-  CFGM_PELUQUERIA: 'courseLevelCFGMPeluqueria',
-  CFGS_EDUCACION_INFANTIL: 'courseLevelCFGSEducacionInfantil',
-  ESO_ORDINARIA: 'courseLevelESO',
-  ESO: 'courseLevelPDC',
-} as const satisfies Record<HistoryTab, string>;
-
-/** Clave de traducción del nivel (ciclo o ESO) de un proyecto. */
-export function courseLevelLabelKey(tipoNivel: ProjectType | undefined) {
-  return HISTORY_TAB_LABEL_KEYS[getHistoryTabForTipoNivel(tipoNivel as ProjectType)];
-}
-
-export function isFPProject(tipoNivel: ProjectType): boolean {
-  return tipoNivel === 'FP_BASICA' || tipoNivel === 'CFGM_ESTETICA' || !tipoNivel;
-}
-
-export function isESOProject(tipoNivel: ProjectType): boolean {
-  return tipoNivel === 'DIVERSIFICACION_CURRICULAR';
 }
 
 /** Idioma del contenido original; los proyectos anteriores a la traducción están en castellano. */

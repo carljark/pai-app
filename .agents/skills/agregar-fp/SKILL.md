@@ -56,10 +56,9 @@ python3 .agents/skills/agregar-fp/scripts/scaffold_cfgm.py \
   --name-ca "<Nombre en Catalán>"
 ```
 
-Archivos generados:
+Archivos generados (todos en el backend; el frontend no lleva datos curriculares ni listas de niveles):
 - `backend/src/data/ras_cfgm_<slug>.data.ts`
 - `backend/src/migrations/0X_ingest_cfgm_<slug>_ras.ts`
-- `frontend/src/app/features/curriculum/data/ras_cfgm_<slug>.data.ts`
 - `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `mapa_cfgm_<slug>_2.json` si tiene 2.º curso)
 - `backend/src/migrations/0X_ingest_mapa_intermodular.ts` (ingesta en MongoDB collection `mapamodules`)
 
@@ -69,7 +68,7 @@ Archivos generados:
 1. Extraer los RAs y criterios oficiales desde los documentos normativos contrastando con **TodoFP** y **CAIB**:
    - **En castellano:** Extraer textualmente del BOE (`lista_RA_CE_..._ES_...md`). Criterios ordenados: `a) Se ha...`, `b) Se han...`.
    - **En catalán:** Extraer de las fuentes autonómicas o traducir siguiendo la terminología balear de FP (`a) S'ha...`, `b) S'han...`).
-2. Rellenar `backend/src/data/ras_cfgm_<slug>.data.ts` y sincronizar en `frontend/src/app/features/curriculum/data/ras_cfgm_<slug>.data.ts` con tipado `CfgmRaData`:
+2. Rellenar `backend/src/data/ras_cfgm_<slug>.data.ts` con tipado `CfgmRaData` (solo en el backend: el frontend obtiene los RA de MongoDB vía `GET /api/ras` y no tiene RA de respaldo):
    ```typescript
    {
      id: "RA1",
@@ -89,45 +88,42 @@ Archivos generados:
 
 ---
 
-### Paso 3: Configuración en Backend y Prompt IA Bilingüe
-1. **`backend/src/models/Project.ts`**: Añadir `'CFGM_<SLUG>'` al enum de `tipoNivel` (si es un nuevo grado medio).
-2. **`backend/src/controllers/project.controller.ts`**: En `targetCourseDescription`, respetar el idioma del proyecto para la IA:
-   ```typescript
-   : (tipoNivel === 'CFGM_<SLUG>'
-     ? (language === 'catalan' 
-         ? `${effectiveCourse} de CFGM <Nombre en Catalán>` 
-         : `${effectiveCourse} de CFGM <Nombre en Castellano>`)
-     : ...)
-   ```
+### Paso 3: Entrada en el catálogo de niveles (backend)
+Todo el frontend (generador, historial, «Mis proyectos», inicio, Taller, exportación y mapa) y las validaciones del backend salen de `backend/src/data/niveles.ts`. Añadir la entrada del ciclo:
+
+```typescript
+{
+  id: 'CFGM_<SLUG>',
+  etapa: 'CFGM',               // 'FPB' | 'CFGM' | 'CFGS' | 'ESO'
+  comunidad: 'IB',
+  nombre_es: 'CFGM <Nombre en Castellano>',   // TodoFP/BOE
+  nombre_ca: 'CFGM <Nombre en Catalán>',      // CAIB/BOIB
+  palabrasClave: 'formación profesional <familia profesional>', // ejemplos INTEF del prompt
+  unidad: 'RA',
+  terminologia: 'proyecto_intermodular',
+  cursos: [
+    { curso: '1º', modulos: ['cod1', 'cod2', ...] }, // orden oficial del 1.er curso
+    { curso: '2º', modulos: ['codA', 'codB', ...] }, // orden oficial del 2.º curso
+  ],
+  mapas: [
+    { tab: 'CFGM_<SLUG>', curso: '1º', moduleCode: 'cod1', raId: 'cod1_RA1' },
+    { tab: 'CFGM_<SLUG>_2', curso: '2º', moduleCode: 'codA', raId: 'codA_RA1' },
+  ],
+}
+```
+
+- `modulos` filtra y ordena los módulos de cada curso en el selector curricular y en el proyecto generado; debe cubrir exactamente los `moduleCode` de los RA del ciclo (lo comprueba `backend/src/tests/niveles-catalogo.test.ts`).
+- `mapas` declara las pestañas del mapa intermodular (`MapaModule.tab`) y su selección inicial. Sin `curso`, el mapa abarca todo el ciclo.
+- `nombrePrompt_es/ca` solo hace falta si el prompt debe nombrar el nivel de otra forma que `nombre_es/ca`.
+- Con la entrada, el backend valida `Project.tipoNivel`, `RA.tipoNivel`, `MapaModule.tab` y el `tab` de `GET /api/mapa-intermodular`, y `describeTargetCourse` usa el nombre oficial en el prompt.
+- Las reglas de prompt propias de un nivel (como la Carpeta de Aprendizaje de FP Básica) son lógica: van en un helper del backend, no en el catálogo.
 
 ---
 
-### Paso 4: Configuración en Frontend (Curriculum & Generator)
-1. **`frontend/src/app/features/curriculum/services/curriculum.facade.ts`**:
-   - Importar `CFGM_<SLUG>_RAS_DATA`.
-   - Definir la ordenación de módulos por cursos:
-     ```typescript
-     const CFGM_<SLUG>_MODULE_ORDER = ['cod1', 'cod2', ...]; // 1.er curso
-     const CFGM_<SLUG>_MODULE_ORDER_2 = ['codA', 'codB', ...]; // 2.º curso
-     ```
-   - Añadir `'CFGM_<SLUG>'` al tipo de unión de `tipoNivel`.
-   - Actualizar `getStoredTipoNivel()` y el fallback estático en `loadRas()`.
-   - **CRÍTICO:** Asegurar que `groupedItems` mapea reactivamente los campos según `isCa` para los RAs cargados desde la API:
-     ```typescript
-     list = list.map(r => ({
-       ...r,
-       module: isCa ? ((r as any).module_ca || r.module) : ((r as any).module_es || r.module),
-       subject: isCa ? ((r as any).module_ca || r.subject || r.module) : ((r as any).module_es || r.subject || r.module),
-       description: isCa ? ((r as any).description_ca || r.description) : ((r as any).description_es || r.description),
-       criterios: isCa ? ((r as any).criterios_ca || (r as any).criterios) : ((r as any).criterios_es || (r as any).criterios)
-     } as any));
-     ```
-2. **Traducciones (`translations.es.ts` y `translations.ca.ts`)**:
-   - `courseLevelCFGM<CapitalizedSlug>` en ES: `'CFGM <Nombre en Castellano>'`.
-   - `courseLevelCFGM<CapitalizedSlug>` en CA: `'CFGM <Nombre en Catalán>'`.
-3. **`generator-view.component.ts`**:
-   - Añadir el tab de nivel en la vista del formulario de generación.
-   - **Filtrado por Curso:** Asegurar que al seleccionar 1.er curso o 2.º curso, solo se muestren los módulos correspondientes a ese año.
+### Paso 4: Frontend (sin cambios)
+No se toca el frontend: `NivelesService` carga el catálogo con `GET /api/niveles` y de él salen el desplegable de titulación, los cursos, los módulos de cada curso, las pestañas del historial, los filtros, las etiquetas de los proyectos y el selector del mapa. No hay claves `courseLevel…` en las traducciones ni RA de respaldo en el bundle.
+
+Si durante la incorporación aparece un `tipoNivel` escrito a mano en `frontend/src` (fuera de las reglas propias de la ESO), es un error: debe salir del catálogo.
 
 ---
 
@@ -146,27 +142,26 @@ Archivos generados:
    - El frontend consume los módulos mediante `MapaIntermodularService.getModules(tab)` apuntando al endpoint `GET /api/mapa-intermodular?tab=...`.
 2. **Pestañas Separadas por Curso:**
    - Si el ciclo dispone de mapa para 1.er y 2.º curso, generar dos datasets independientes en MongoDB con tabs distintos (ej. `CFGM_<SLUG>` y `CFGM_<SLUG>_2`).
-   - Configurar dos pestañas en `mapa-intermodular-view.component.html` (ej. `CFGM <Nombre>` y `CFGM <Nombre> 2n`).
+   - Declarar ambas pestañas en `mapas` del catálogo (paso 3). El selector de ciclo, los botones de curso, el título («Mapa intermodular del CFGM <Nombre> 2n») y los textos con la sigla de la etapa salen de ahí.
 
 ---
 
-### Paso 6: Ajuste de Vistas de Historial, Home y Perfil
-Verificar que se emplee la clave de traducción correspondiente en:
-- `history-view.component.ts`
-- `home-dashboard.component.ts`
-- `personal-view.component.ts`
-- `projects.facade.ts`
+### Paso 6: Historial, inicio y perfil
+Sin cambios: las pestañas del historial y los filtros de «Mis proyectos» son una por nivel del catálogo, y el nombre del nivel de cada proyecto sale del catálogo (pipe `nivelNombre` o `NivelesService.nombreDe`).
 
 ---
 
 ### Paso 7: Blindaje de Tests, Cobertura y Supresión de `stderr`
 Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_cobertura.md).
 
-1. En `mapa-intermodular-view.component.spec.ts`:
-   - **OBLIGATORIO:** Simular el clic en el botón del DOM:
+1. En `mapa-intermodular-view.component.spec.ts` (con el catálogo de prueba de `frontend/src/app/testing/niveles.mock.ts`, al que se añade el ciclo):
+   - **OBLIGATORIO:** Simular la elección en el DOM: el ciclo en el desplegable y el curso con sus botones:
      ```typescript
-     const tabBtns = fixture.nativeElement.querySelectorAll('.mapa-tab-btn') as NodeListOf<HTMLButtonElement>;
-     tabBtns[nuevoIndice].click();
+     const select = el.querySelector('.mapa-tabs__select') as HTMLSelectElement;
+     select.value = 'CFGM_<SLUG>';
+     select.dispatchEvent(new Event('change'));
+     fixture.detectChanges();
+     (el.querySelectorAll('.mapa-tabs__curso')[1] as HTMLButtonElement).click();
      fixture.detectChanges();
      ```
    - Probar conmutación de idioma en el header (`headerExpanded.set(true)`):
@@ -175,7 +170,7 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
 2. **Supresión Limpia de Errores en Tests:**
    - Si un test prueba deliberadamente una captura de error (`catch` con `throwError`), interceptar siempre `console.error` con `vi.spyOn(console, 'error').mockImplementation(() => {})` y restaurarlo al finalizar (`consoleSpy.mockRestore()`), evitando ensuciar la salida estándar de errores (`stderr`) de Vitest.
    - En `app.spec.ts`: Asegurar que `MapaIntermodularFacade` esté registrado en los `providers` del `TestBed` con su mock para evitar llamadas HTTP accidentales en segundo plano.
-3. En los demás spec (`generator-view`, `curriculum.facade`, `history-view`, `personal-view`), añadir assertions para el nuevo ciclo tanto en ES como en CA.
+3. Los specs de generador, historial y «Mis proyectos» ya cubren un nivel ficticio añadido solo al catálogo (`NIVEL_FICTICIO`); basta con añadir el ciclo a `NIVELES_MOCK` y, en el backend, comprobar que `niveles-catalogo.test.ts` sigue en verde (módulos por curso y pestañas del mapa).
 
 ---
 

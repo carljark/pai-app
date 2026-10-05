@@ -12,7 +12,7 @@ import { processQueue } from "../services/queue.service";
 import { syncProjectNotification, deleteProjectNotification } from "../services/notification.service";
 import { buildContentUpdate } from '../services/projectContent.service';
 import { resolveProvider } from "../data/ai-models";
-import { defaultCurso, findNivel } from '../data/niveles';
+import { DEFAULT_TIPO_NIVEL, defaultCurso, findNivel, nombrePrompt } from '../data/niveles';
 import { ESO_ORDINARIA, buildEsoInstruction, describeEsoCeForPrompt, findEsoCe } from '../services/eso-curriculum.service';
 
 // Endpoint para el SSE
@@ -95,8 +95,9 @@ export const filterCriteriaByCourse = (critList: any[], level?: string): any[] =
 /** Número oficial del RA dentro de su módulo ("3160_RA2" → "RA2"). */
 export const officialRaCode = (id?: string | null): string => (id || '').split('_').pop() || '';
 
-/** Los RA antiguos de FP Básica no guardan tipoNivel; se tratan como FP_BASICA. */
-const sameLevel = (raLevel?: string | null, level?: string) => (raLevel || 'FP_BASICA') === (level || 'FP_BASICA');
+/** Los RA antiguos de FP Básica no guardan tipoNivel; se tratan como el nivel por defecto. */
+const sameLevel = (raLevel?: string | null, level?: string) =>
+  (raLevel || DEFAULT_TIPO_NIVEL) === (level || DEFAULT_TIPO_NIVEL);
 
 /**
  * RA seleccionado (el frontend envía su descripción). Si la misma descripción existe en varios
@@ -118,13 +119,8 @@ export const describeRaForPrompt = (raDoc: any, selectedStr: string, language?: 
 
 /** Curso y nivel destino del proyecto, con el nombre oficial del ciclo (catálogo) en el idioma del proyecto. */
 export const describeTargetCourse = (tipoNivel: string, course: string, language?: string): string => {
-  const nivel = findNivel(tipoNivel);
-  if (nivel?.etapa === 'CFGM' || nivel?.etapa === 'CFGS') {
-    return `${course} de ${language === 'catalan' ? nivel.nombre_ca : nivel.nombre_es}`;
-  }
-  if (tipoNivel === ESO_ORDINARIA) return `${course} de ESO (Educación Secundaria Obligatoria)`;
-  if (tipoNivel === 'DIVERSIFICACION_CURRICULAR') return `${course} de ESO (Diversificación Curricular / PDC)`;
-  return `${course} de FP Básica (Formación Profesional Básica)`;
+  const nivel = findNivel(tipoNivel) ?? findNivel(DEFAULT_TIPO_NIVEL);
+  return `${course} de ${nivel ? nombrePrompt(nivel, language) : tipoNivel}`;
 };
 
 /** Nº máximo de proyectos publicados que se inyectan como referencia en el prompt. */
@@ -375,7 +371,7 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       modules,
       ras: selectedRas,
       methodology,
-      tipoNivel: tipoNivel || 'FP_BASICA',
+      tipoNivel: tipoNivel || DEFAULT_TIPO_NIVEL,
       courseLevel: effectiveCourse,
       language: language === 'catalan' ? 'catalan' : 'castellano',
       userId: req.user?._id,

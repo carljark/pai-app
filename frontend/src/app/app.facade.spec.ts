@@ -56,7 +56,7 @@ describe('AppFacade', () => {
       contentLanguage: signal('castellano'),
       loadProjectFiles: vi.fn(),
       projectsHistory: signal<any[]>([]),
-      historyTab: signal('FPB'),
+      historyTab: signal('FP_BASICA'),
       extraInstructions: signal(''),
     };
 
@@ -249,14 +249,14 @@ describe('AppFacade', () => {
       expect(facade.showInfoModal()).toBe(true);
     });
 
-    it('should generate project on success and set historyTab to FPB for FP_BASICA', () => {
+    it('should generate project on success and set historyTab to FP_BASICA', () => {
       curriculumFacadeMock.tipoNivel.set('FP_BASICA');
       curriculumFacadeMock.selectedRas.set(['ra1']);
       projectsFacadeMock.generateProject.mockReturnValue(of({}));
 
       facade.generateProject();
 
-      expect(projectsFacadeMock.historyTab()).toBe('FPB');
+      expect(projectsFacadeMock.historyTab()).toBe('FP_BASICA');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(curriculumFacadeMock.clearSelection).toHaveBeenCalled();
       expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
@@ -279,14 +279,14 @@ describe('AppFacade', () => {
       expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
     });
 
-    it('should generate project on success and set historyTab to ESO for DIVERSIFICACION_CURRICULAR', () => {
+    it('should generate project on success and set historyTab to DIVERSIFICACION_CURRICULAR', () => {
       curriculumFacadeMock.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
       curriculumFacadeMock.selectedRas.set(['ce1']);
       projectsFacadeMock.generateProject.mockReturnValue(of({}));
 
       facade.generateProject();
 
-      expect(projectsFacadeMock.historyTab()).toBe('ESO');
+      expect(projectsFacadeMock.historyTab()).toBe('DIVERSIFICACION_CURRICULAR');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
     });
@@ -395,14 +395,14 @@ describe('AppFacade', () => {
       expect(layoutServiceMock.requestedProject()).toBeNull();
     });
 
-    it('should generate project on success and set historyTab to CFGM for CFGM_ESTETICA', () => {
+    it('should generate project on success and set historyTab to CFGM_ESTETICA', () => {
       curriculumFacadeMock.tipoNivel.set('CFGM_ESTETICA');
       curriculumFacadeMock.selectedRas.set(['ra_cfgm']);
       projectsFacadeMock.generateProject.mockReturnValue(of({}));
 
       facade.generateProject();
 
-      expect(projectsFacadeMock.historyTab()).toBe('CFGM');
+      expect(projectsFacadeMock.historyTab()).toBe('CFGM_ESTETICA');
       expect(projectsFacadeMock.isGenerating()).toBe(false);
       expect(layoutServiceMock.switchView).toHaveBeenCalledWith('history');
     });

@@ -14,55 +14,34 @@ ROOT_DIR="$(cd "$(dirname "$0")/../../../.." && pwd)"
 
 echo "🔍 Verificando presencia e integridad bilingüe de $TIPO_NIVEL (slug: $SLUG)..."
 
-# 1. Project.ts
-if grep -q "$TIPO_NIVEL" "$ROOT_DIR/backend/src/models/Project.ts"; then
-  echo "  ✅ Backend Project.ts contiene $TIPO_NIVEL"
-else
-  echo "  ❌ ERROR: Falta $TIPO_NIVEL en backend/src/models/Project.ts"
-fi
-
-# 2. project.controller.ts
-if grep -q "$TIPO_NIVEL" "$ROOT_DIR/backend/src/controllers/project.controller.ts"; then
-  echo "  ✅ Backend project.controller.ts contiene $TIPO_NIVEL"
-  if grep -A 5 "$TIPO_NIVEL" "$ROOT_DIR/backend/src/controllers/project.controller.ts" | grep -q "language === 'catalan'"; then
-    echo "  ✅ Backend project.controller.ts contempla selector bilingüe para IA"
+# 1. Catálogo de niveles (fuente única de backend y frontend)
+CATALOGO="$ROOT_DIR/backend/src/data/niveles.ts"
+if grep -q "id: '$TIPO_NIVEL'" "$CATALOGO"; then
+  echo "  ✅ El catálogo backend/src/data/niveles.ts contiene $TIPO_NIVEL"
+  if grep -A 30 "id: '$TIPO_NIVEL'" "$CATALOGO" | grep -q "modulos:"; then
+    echo "  ✅ Los cursos declaran sus módulos en orden oficial"
   else
-    echo "  ⚠️ ADVERTENCIA: project.controller.ts podría no alternar entre ES y CA según la variable language"
+    echo "  ⚠️ ADVERTENCIA: los cursos de $TIPO_NIVEL no declaran 'modulos' (se mostrarán todos sin ordenar)"
+  fi
+  if grep -A 30 "id: '$TIPO_NIVEL'" "$CATALOGO" | grep -q "mapas:"; then
+    echo "  ✅ El nivel declara sus pestañas del mapa intermodular"
+  else
+    echo "  ⚠️ ADVERTENCIA: $TIPO_NIVEL no declara 'mapas' (no aparecerá en el mapa intermodular)"
   fi
 else
-  echo "  ❌ ERROR: Falta $TIPO_NIVEL en backend/src/controllers/project.controller.ts"
+  echo "  ❌ ERROR: Falta la entrada '$TIPO_NIVEL' en backend/src/data/niveles.ts"
 fi
 
-# 3. curriculum.facade.ts
-if grep -q "$TIPO_NIVEL" "$ROOT_DIR/frontend/src/app/features/curriculum/services/curriculum.facade.ts"; then
-  echo "  ✅ Frontend curriculum.facade.ts contiene $TIPO_NIVEL"
+# 2. El frontend no debe nombrar el nivel: todo sale del catálogo
+if grep -rq "$TIPO_NIVEL" "$ROOT_DIR/frontend/src" --include='*.ts' --include='*.html' --exclude='*.spec.ts' --exclude='niveles.mock.ts'; then
+  echo "  ❌ ERROR: el frontend nombra $TIPO_NIVEL fuera de los specs; debe salir del catálogo:"
+  grep -rln "$TIPO_NIVEL" "$ROOT_DIR/frontend/src" --include='*.ts' --include='*.html' --exclude='*.spec.ts' --exclude='niveles.mock.ts'
 else
-  echo "  ❌ ERROR: Falta $TIPO_NIVEL en frontend/src/app/features/curriculum/services/curriculum.facade.ts"
+  echo "  ✅ El frontend no tiene el nivel escrito a mano"
 fi
 
-# 4. Traducciones ES y CA
-if grep -iq "$SLUG" "$ROOT_DIR/frontend/src/app/services/translations.es.ts" && grep -iq "$SLUG" "$ROOT_DIR/frontend/src/app/services/translations.ca.ts"; then
-  echo "  ✅ Archivos de traducción translations.es.ts y translations.ca.ts contienen la clave del nivel"
-else
-  echo "  ❌ ERROR: Falta clave de traducción en translations.es.ts o translations.ca.ts"
-fi
-
-# 5. Generator View
-if grep -q "$TIPO_NIVEL" "$ROOT_DIR/frontend/src/app/features/generator/components/generator-view/generator-view.component.ts"; then
-  echo "  ✅ Generator view contiene $TIPO_NIVEL"
-else
-  echo "  ❌ ERROR: Falta $TIPO_NIVEL en generator-view.component.ts"
-fi
-
-# 6. Mapa Intermodular View
-if grep -q "$TIPO_NIVEL" "$ROOT_DIR/frontend/src/app/features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component.html"; then
-  echo "  ✅ Mapa Intermodular view HTML contiene $TIPO_NIVEL"
-else
-  echo "  ❌ ERROR: Falta $TIPO_NIVEL en mapa-intermodular-view.component.html"
-fi
-
-# 7. Integridad Bilingüe de Datos Curriculares (evitar la trampa del fallback monolingüe)
-DATA_FILE="$ROOT_DIR/frontend/src/app/features/curriculum/data/ras_cfgm_${SLUG}.data.ts"
+# 3. Integridad Bilingüe de Datos Curriculares (evitar la trampa del fallback monolingüe)
+DATA_FILE="$ROOT_DIR/backend/src/data/ras_cfgm_${SLUG}.data.ts"
 if [ -f "$DATA_FILE" ]; then
   echo "  ✅ Archivo de datos curriculares existe: ras_cfgm_${SLUG}.data.ts"
   # Comprobar que module_es y module_ca no son idénticos
@@ -81,7 +60,7 @@ else:
   echo "  ✅ Diferenciación lingüística en módulos (ES vs CA): $SAMPLE_CHECK módulos distintos"
 fi
 
-# 8. Dataset del Mapa Intermodular y Validación de Actividades (Cero Conexiones Vacías)
+# 4. Dataset del Mapa Intermodular y Validación de Actividades (Cero Conexiones Vacías)
 MAPA_FILE="$ROOT_DIR/backend/src/data/mapa-intermodular/mapa_cfgm_${SLUG}.json"
 if [ -f "$MAPA_FILE" ]; then
   echo "  ✅ Dataset JSON del Mapa Intermodular presente: mapa_cfgm_${SLUG}.json"

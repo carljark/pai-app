@@ -1,4 +1,4 @@
-import { Injectable, signal, computed, inject } from '@angular/core';
+import { Injectable, signal, computed, inject, effect, untracked } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import {
   FPBModule,
@@ -9,10 +9,10 @@ import {
 } from '../models/mapa-intermodular.model';
 import { MapaIntermodularService } from './mapa-intermodular.service';
 import { formatConnection } from '../utils/connection-summary';
+import { MapaTab, mapaTabLabel } from '../utils/mapa-labels';
+import { NivelesService } from '../../../services/niveles.service';
 
-import { MapaTab, mapaTabConfig, mapaTabLabel } from './mapa-tabs.config';
-
-export type { MapaTab } from './mapa-tabs.config';
+export type { MapaTab } from '../utils/mapa-labels';
 
 function hasRelation(m: FPBModule, relationType: string): boolean {
   return m.learningOutcomes.some((ra) =>
@@ -39,12 +39,14 @@ function matchesModuleQuery(m: FPBModule, q: string): boolean {
 @Injectable({ providedIn: 'root' })
 export class MapaIntermodularFacade {
   private mapaService = inject(MapaIntermodularService);
+  private niveles = inject(NivelesService);
 
-  activeTab = signal<MapaTab>('FPB');
+  /** Pestaña activa; vacía hasta que llega el catálogo de niveles. */
+  activeTab = signal<MapaTab>('');
   modules = signal<FPBModule[]>([]);
   isLoadingSeed = signal<boolean>(false);
-  selectedModuleCode = signal<string>('3060');
-  selectedRaId = signal<string>('3060_RA1');
+  selectedModuleCode = signal<string>('');
+  selectedRaId = signal<string>('');
   selectedCriterion = signal<string | null>(null);
   searchQuery = signal<string>('');
   selectedTypeFilter = signal<string>('all');
@@ -52,8 +54,12 @@ export class MapaIntermodularFacade {
 
   private seedCache: Partial<Record<MapaTab, FPBModule[]>> = {};
 
+  /** Con el catálogo cargado se abre el primer mapa que declara. */
   constructor() {
-    this.setTab('FPB');
+    effect(() => {
+      const first = this.niveles.mapaTabs()[0];
+      if (first && !untracked(this.activeTab)) untracked(() => this.setTab(first.tab));
+    });
   }
 
   private sanitizeModules(mods: FPBModule[]): FPBModule[] {
@@ -251,7 +257,7 @@ export class MapaIntermodularFacade {
     const modName = isCa ? mod.name_ca : mod.name_es;
     const raText = isCa ? ra.text_ca : ra.text_es;
 
-    const tabLabel = mapaTabLabel(this.activeTab(), isCa);
+    const tabLabel = mapaTabLabel(this.niveles.mapaTab(this.activeTab()), isCa);
 
     let summary = `=== MAPA INTERMODULAR ${tabLabel}: ${mod.code} - ${modName} ===\n\n`;
     summary += `${ra.code}: ${raText}\n\n`;
@@ -261,9 +267,9 @@ export class MapaIntermodularFacade {
 
   setTab(tab: MapaTab, directData?: FPBModule[]): Promise<FPBModule[]> {
     this.activeTab.set(tab);
-    const defaults = mapaTabConfig(tab).defaultSelection;
-    this.selectedModuleCode.set(defaults.moduleCode);
-    this.selectedRaId.set(defaults.raId);
+    const defaults = this.niveles.mapaTab(tab);
+    this.selectedModuleCode.set(defaults?.moduleCode ?? '');
+    this.selectedRaId.set(defaults?.raId ?? '');
     this.selectedCriterion.set(null);
 
     if (directData) {

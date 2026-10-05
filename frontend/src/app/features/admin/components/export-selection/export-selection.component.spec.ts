@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
+import { loadNivelesMock } from '../../../../testing/niveles.mock';
 import { ExportSelectionComponent } from './export-selection.component';
 import { ExportableProject } from '../../services/projects-transfer.service';
 
@@ -43,7 +46,9 @@ describe('ExportSelectionComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ExportSelectionComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
+    loadNivelesMock();
     fixture = TestBed.createComponent(ExportSelectionComponent);
     component = fixture.componentInstance;
     fixture.componentRef.setInput('projects', projects);
@@ -104,9 +109,9 @@ describe('ExportSelectionComponent', () => {
     expect(component.allFilteredSelected()).toBe(false);
   });
 
-  it('levelLabel debería devolver el nombre corto o el valor original', () => {
-    expect(component.levelLabel('FP_BASICA')).toBe('FP Básica');
+  it('levelLabel debería devolver el nombre del catálogo o el valor original', () => {
+    expect(component.levelLabel('FP_BASICA')).toBe('CFGB Peluquería y Estética');
     expect(component.levelLabel('OTRO')).toBe('OTRO');
-    expect(component.levelLabel(undefined)).toBe('');
+    expect(component.levelLabel(undefined)).toBe('CFGB Peluquería y Estética');
   });
 });

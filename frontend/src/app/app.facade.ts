@@ -11,11 +11,7 @@ import { AuthFacade } from './features/auth/services/auth.facade';
 import { TelemetryService } from './services/telemetry.service';
 import { NivelesService } from './services/niveles.service';
 import { findProjectsWithSameSelection } from './features/projects/utils/selection-match';
-import {
-  Project,
-  getHistoryTabForTipoNivel,
-  resolveProjectContent,
-} from './features/projects/models/project.model';
+import { Project, resolveProjectContent } from './features/projects/models/project.model';
 import { AppNotification } from './features/notifications/models/notification.model';
 
 @Injectable({ providedIn: 'root' })
@@ -224,7 +220,7 @@ export class AppFacade {
 
   private enqueueGeneration(): void {
     this.notifications.clearLatestNotification?.();
-    this.projects.historyTab.set(getHistoryTabForTipoNivel(this.curriculum.tipoNivel()));
+    this.projects.historyTab.set(this.curriculum.tipoNivel());
     this.notifications.openRecentActivity();
     this.showToast(this.trans.t().toastProjectQueued);
     this.projects.isGenerating.set(true);

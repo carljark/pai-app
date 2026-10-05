@@ -10,6 +10,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
 import { NivelesService } from '../../../../services/niveles.service';
 import { signal } from '@angular/core';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
+import { NIVEL_FICTICIO } from '../../../../testing/niveles.mock';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -50,7 +51,7 @@ describe('GeneratorViewComponent', () => {
   ];
   const mockNiveles = {
     niveles: signal<any[]>(CATALOGO),
-    find: (id: string) => CATALOGO.find((n) => n.id === id),
+    find: (id: string) => mockNiveles.niveles().find((n) => n.id === id),
     nombre: (n: any, isCa: boolean) => (isCa ? n.nombre_ca : n.nombre_es),
   };
 
@@ -188,6 +189,23 @@ describe('GeneratorViewComponent', () => {
     expect(component.courseOptions().map((o) => o.value)).toEqual(['1º', '2º', '3º', '4º']);
     mockCurriculum.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
     expect(component.courseOptions()[2]).toEqual({ value: '5º', label: '5º' });
+  });
+
+  it('should offer a level added only to the catalog, with its name and courses', () => {
+    mockNiveles.niveles.set([...CATALOGO, NIVEL_FICTICIO]);
+    mockLayout.language.set('catalan');
+    fixture.detectChanges();
+    const levelSelect = fixture.debugElement.query(By.css('#generator-level-select')).nativeElement;
+    const last = levelSelect.options[levelSelect.options.length - 1];
+    expect(last.value).toBe('CFGS_FICTICIO');
+    expect(last.textContent.trim()).toBe('CFGS Animació Fictícia');
+
+    levelSelect.value = 'CFGS_FICTICIO';
+    levelSelect.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(setTipoNivelSpy).toHaveBeenLastCalledWith('CFGS_FICTICIO');
+    expect(component.courseOptions().map((o) => o.value)).toEqual(['1º', '2º']);
+    mockNiveles.niveles.set(CATALOGO);
   });
 
   it('should have no courses for a level missing from the catalog', () => {

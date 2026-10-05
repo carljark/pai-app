@@ -6,23 +6,12 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { LayoutService } from '../../../../services/layout.service';
+import { NivelesService } from '../../../../services/niveles.service';
 import {
-  HISTORY_TAB_LABEL_KEYS,
   HistoryTab,
   Project,
-  courseLevelLabelKey,
-  getHistoryTabForTipoNivel,
+  normalizeTipoNivel,
 } from '../../../projects/models/project.model';
-
-/** Orden de los filtros de nivel (pills) en "Mis proyectos". */
-const LEVEL_FILTERS: HistoryTab[] = [
-  'FPB',
-  'CFGM_PELUQUERIA',
-  'CFGM',
-  'CFGS_EDUCACION_INFANTIL',
-  'ESO_ORDINARIA',
-  'ESO',
-];
 
 /** Coincidencia de la búsqueda con título, módulos o estado del proyecto. */
 function matchesSearch(p: Project, q: string): boolean {
@@ -49,8 +38,13 @@ export class PersonalViewComponent implements OnInit {
   auth = inject(AuthFacade);
   trans = inject(TranslationService);
   layout = inject(LayoutService);
+  niveles = inject(NivelesService);
 
-  readonly levelFilters = LEVEL_FILTERS.map((id) => ({ id, key: HISTORY_TAB_LABEL_KEYS[id] }));
+  /** Filtros de nivel (pills): uno por nivel del catálogo, en el idioma activo. */
+  levelFilters = computed(() => {
+    const isCa = this.layout.language() === 'catalan';
+    return this.niveles.niveles().map((n) => ({ id: n.id, label: this.niveles.nombre(n, isCa) }));
+  });
   levelFilter = signal<'ALL' | HistoryTab>('ALL');
   statusFilter = signal<'ALL' | 'borrador' | 'publicado' | 'error'>('ALL');
   searchQuery = signal<string>('');
@@ -78,7 +72,7 @@ export class PersonalViewComponent implements OnInit {
     let list = this.projectsFacade.myProjects() || [];
     const levelFilter = this.levelFilter();
     if (levelFilter !== 'ALL') {
-      list = list.filter((p) => getHistoryTabForTipoNivel(p.tipoNivel) === levelFilter);
+      list = list.filter((p) => normalizeTipoNivel(p.tipoNivel) === levelFilter);
     }
     const statusFilter = this.statusFilter();
     if (statusFilter !== 'ALL') list = list.filter((p) => p.status === statusFilter);
@@ -101,11 +95,7 @@ export class PersonalViewComponent implements OnInit {
 
   /** Nombre del nivel (ciclo o ESO) del proyecto en el idioma activo. */
   levelLabel(project: Project): string {
-    return this.trans.t()[courseLevelLabelKey(project.tipoNivel)];
-  }
-
-  labelFor(key: (typeof HISTORY_TAB_LABEL_KEYS)[HistoryTab]): string {
-    return this.trans.t()[key];
+    return this.niveles.nombreDe(project.tipoNivel, this.layout.language() === 'catalan');
   }
 
   getAiProviderLabel(project: Project): string | null {

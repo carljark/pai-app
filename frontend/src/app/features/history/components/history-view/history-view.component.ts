@@ -4,6 +4,8 @@ import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
+import { LayoutService } from '../../../../services/layout.service';
+import { NivelesService } from '../../../../services/niveles.service';
 import { HistoryProjectCardComponent } from '../history-project-card/history-project-card.component';
 import {
   AppSelectComponent,
@@ -31,6 +33,8 @@ export class HistoryViewComponent {
   projects = inject(ProjectsFacade);
   auth = inject(AuthFacade);
   trans = inject(TranslationService);
+  layout = inject(LayoutService);
+  niveles = inject(NivelesService);
 
   activeTab = this.projects.historyTab;
   onlyMine = signal<boolean>(false);
@@ -38,14 +42,11 @@ export class HistoryViewComponent {
   moduleFilter = signal<string | null>(null);
   raFilter = signal<string | null>(null);
 
-  readonly tabs: { id: HistoryTabId; key: string }[] = [
-    { id: 'FPB', key: 'courseLevelFP' },
-    { id: 'CFGM_PELUQUERIA', key: 'courseLevelCFGMPeluqueria' },
-    { id: 'CFGM', key: 'courseLevelCFGM' },
-    { id: 'CFGS_EDUCACION_INFANTIL', key: 'courseLevelCFGSEducacionInfantil' },
-    { id: 'ESO_ORDINARIA', key: 'courseLevelESO' },
-    { id: 'ESO', key: 'courseLevelPDC' },
-  ];
+  /** Una pestaña por nivel del catálogo, en su orden y en el idioma activo. */
+  tabs = computed<{ id: HistoryTabId; label: string }[]>(() => {
+    const isCa = this.layout.language() === 'catalan';
+    return this.niveles.niveles().map((n) => ({ id: n.id, label: this.niveles.nombre(n, isCa) }));
+  });
 
   moduleOptions = computed(() => collectModuleOptions(this.projects.projectsHistory() || []));
   raOptions = computed(() =>
@@ -82,11 +83,6 @@ export class HistoryViewComponent {
 
   onSearch(event: Event) {
     this.searchQuery.set((event.target as HTMLInputElement).value);
-  }
-
-  labelFor(key: string): string {
-    const t = this.trans.t();
-    return t[key as keyof typeof t] || key;
   }
 
   onModuleChange(value: string) {

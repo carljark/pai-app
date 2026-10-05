@@ -3,11 +3,11 @@
     <span class="mapa-tabs__label">{{ isCa() ? 'Cicle' : 'Ciclo' }}</span>
     <select
       class="form-select mapa-tabs__select"
-      [value]="activeConfig().tipoNivel"
+      [value]="activeConfig()?.nivel?.id"
       (change)="selectCiclo($any($event.target).value)"
     >
-      @for (ciclo of ciclos; track ciclo.tipoNivel) {
-        <option [value]="ciclo.tipoNivel" [selected]="ciclo.tipoNivel === activeConfig().tipoNivel">
+      @for (ciclo of ciclos(); track ciclo.tipoNivel) {
+        <option [value]="ciclo.tipoNivel" [selected]="ciclo.tipoNivel === activeConfig()?.nivel?.id">
           {{ cicloLabel(ciclo.tabs[0]!) }}
         </option>
       }
@@ -18,13 +18,13 @@
     <div class="mapa-tabs__field">
       <span class="mapa-tabs__label" id="mapa-tabs-curso">{{ isCa() ? 'Curs' : 'Curso' }}</span>
       <div class="mapa-tabs__segmented" role="group" aria-labelledby="mapa-tabs-curso">
-        @for (tab of cursos(); track tab.id) {
+        @for (tab of cursos(); track tab.tab) {
           <button
             type="button"
             class="mapa-tabs__curso"
-            [class.mapa-tabs__curso--active]="activeTab() === tab.id"
-            [attr.aria-pressed]="activeTab() === tab.id"
-            (click)="setTab(tab.id)"
+            [class.mapa-tabs__curso--active]="activeTab() === tab.tab"
+            [attr.aria-pressed]="activeTab() === tab.tab"
+            (click)="setTab(tab.tab)"
           >
             {{ cursoLabel(tab) }}
           </button>

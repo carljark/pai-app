@@ -7,9 +7,8 @@
 import { Injectable, inject, signal, computed, effect } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { AuthFacade } from '../../auth/services/auth.facade';
-import { CurriculumFacade, courseModuleOrder } from '../../curriculum/services/curriculum.facade';
-import { TRANSLATIONS_CA } from '../../../services/translations.ca';
-import { TRANSLATIONS_ES } from '../../../services/translations.es';
+import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { NivelesService } from '../../../services/niveles.service';
 import { LearningOutcome } from '../../curriculum/models/curriculum.model';
 import { ProjectsService } from './projects.service';
 import { findProjectsWithSameSelection } from '../utils/selection-match';
@@ -27,14 +26,11 @@ import {
   AIModelOption,
   AiModelOptionDto,
   DirectoryUser,
-  courseLevelLabelKey,
-  getHistoryTabForTipoNivel,
+  DEFAULT_TIPO_NIVEL,
   getOwnerId,
   ContentLanguage,
   projectLanguage,
   projectTextIn,
-  isFPProject,
-  isESOProject,
   METHODOLOGY_OPTIONS,
   AI_PROVIDER_OPTIONS,
 } from '../models/project.model';
@@ -43,14 +39,14 @@ import {
 export class ProjectsFacade {
   private projectsService = inject(ProjectsService);
   private curriculumFacade = inject(CurriculumFacade);
+  private niveles = inject(NivelesService);
   private authFacade = inject(AuthFacade);
 
   // ============================================
   // STATE - Historial
   // ============================================
   projectsHistory = signal<Project[]>([]);
-  historyTab = signal<HistoryTab>('FPB');
-  searchQuery = signal<string>('');
+  historyTab = signal<HistoryTab>(DEFAULT_TIPO_NIVEL);
 
   // ============================================
   // STATE - Generador
@@ -113,30 +109,6 @@ export class ProjectsFacade {
   });
 
   formattedGeneratedProject = computed(() => this.generatedProject() || '');
-
-  fpProjects = computed(() => {
-    const q = this.searchQuery().toLowerCase();
-    return this.projectsHistory().filter((p) => {
-      const matchLevel = isFPProject(p.tipoNivel);
-      if (!matchLevel) return false;
-      if (!q) return true;
-      return (
-        p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q)
-      );
-    });
-  });
-
-  esoProjects = computed(() => {
-    const q = this.searchQuery().toLowerCase();
-    return this.projectsHistory().filter((p) => {
-      const matchLevel = isESOProject(p.tipoNivel);
-      if (!matchLevel) return false;
-      if (!q) return true;
-      return (
-        p.title?.toLowerCase().includes(q) || p.generatedContent?.rawText?.toLowerCase().includes(q)
-      );
-    });
-  });
 
   // ============================================
   // OPTIONS - Para selects en UI
@@ -305,8 +277,8 @@ export class ProjectsFacade {
   /** Genera un nuevo proyecto con la IA */
   generateProject(language: string, title?: string) {
     const tipoNivel = this.curriculumFacade.tipoNivel();
-    // Actualizar pestaña de historial según tipo
-    this.historyTab.set(getHistoryTabForTipoNivel(tipoNivel));
+    // La pestaña del historial es el propio nivel
+    this.historyTab.set(tipoNivel);
     const payload = this.buildCreatePayload(language, tipoNivel, title);
 
     this.isGenerating.set(true);
@@ -360,7 +332,7 @@ export class ProjectsFacade {
 
   /** Resuelve los módulos implicados según tipo de nivel y RAs seleccionados */
   private getInvolvedModules(tipoNivel: ProjectType, selectedRas: string[]): string[] {
-    if (tipoNivel === 'DIVERSIFICACION_CURRICULAR' || tipoNivel === 'ESO_ORDINARIA') {
+    if (!this.niveles.usaRa(tipoNivel)) {
       const selected = this.curriculumFacade
         .activeCes()
         .filter((ce) => selectedRas.includes(ce.value ?? ce.description));
@@ -370,14 +342,14 @@ export class ProjectsFacade {
     const selected = this.curriculumFacade
       .ras()
       .filter((ra) => selectedRas.includes(ra.description));
-    const order = courseModuleOrder(tipoNivel, this.curriculumFacade.curso());
+    const order = this.niveles.modulos(tipoNivel, this.curriculumFacade.curso());
     if (order) return this.getCourseModules(tipoNivel, selected, order);
     return Array.from(new Set(selected.map((ra) => ra.subject || ra.module || '')));
   }
 
   /**
-   * Módulos de un ciclo de dos cursos en el orden oficial del curso, con su nombre en el
-   * idioma activo; si no hay ninguno, el nombre del ciclo.
+   * Módulos de un curso en su orden oficial (catálogo), con su nombre en el idioma activo;
+   * si no hay ninguno, el nombre del nivel.
    */
   private getCourseModules(
     tipoNivel: ProjectType,
@@ -390,8 +362,7 @@ export class ProjectsFacade {
       .map((code) => selected.find((ra) => ra.moduleCode === code))
       .filter((ra): ra is LearningOutcome => ra !== undefined)
       .map((ra) => (isCa ? ra.subject_ca : ra.subject_es) || ra.subject || ra.module || '');
-    const translations = isCa ? TRANSLATIONS_CA : TRANSLATIONS_ES;
-    return moduleNames.length > 0 ? moduleNames : [translations[courseLevelLabelKey(tipoNivel)]];
+    return moduleNames.length > 0 ? moduleNames : [this.niveles.nombreDe(tipoNivel, isCa)];
   }
 
   /** Actualiza el estado del proyecto actual (borrador/publicado) */

@@ -2,7 +2,9 @@ import { TranslationService } from '../../../../services/translation.service';
 import { Component, inject, output, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
-import { Project, courseLevelLabelKey } from '../../../projects/models/project.model';
+import { Project } from '../../../projects/models/project.model';
+import { NivelesService } from '../../../../services/niveles.service';
+import { LayoutService } from '../../../../services/layout.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { HomeIntroComponent } from '../home-intro/home-intro.component';
 
@@ -20,6 +22,8 @@ export class HomeDashboardComponent {
   translationService = inject(TranslationService);
   t = this.translationService.t;
   private authFacade = inject(AuthFacade);
+  private niveles = inject(NivelesService);
+  private layout = inject(LayoutService);
 
   navigate = output<AppView>();
   openProject = output<Project>();
@@ -40,7 +44,7 @@ export class HomeDashboardComponent {
 
   /** Nombre del nivel (ciclo o ESO) del proyecto en el idioma activo. */
   levelLabel(project: Project): string {
-    return this.t()[courseLevelLabelKey(project.tipoNivel)];
+    return this.niveles.nombreDe(project.tipoNivel, this.layout.language() === 'catalan');
   }
 
   statusLabel(status: string): string {

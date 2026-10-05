@@ -1,4 +1,9 @@
-import { HistoryTab, Project, getOwnerId } from '../../projects/models/project.model';
+import {
+  HistoryTab,
+  Project,
+  getOwnerId,
+  normalizeTipoNivel,
+} from '../../projects/models/project.model';
 
 export type HistoryTabId = HistoryTab;
 
@@ -26,18 +31,9 @@ export function projectRas(project: Project): string[] {
   return project.ras || [];
 }
 
+/** Cada pestaña es un nivel del catálogo; los proyectos antiguos se normalizan (vacío, `ESO`). */
 export function matchesTab(project: Project, tab: HistoryTabId): boolean {
-  if (tab === 'FPB') {
-    return (
-      project.tipoNivel === 'FP_BASICA' ||
-      (!project.tipoNivel && !project.courseLevel?.includes('CFGM'))
-    );
-  }
-  if (tab === 'CFGM') return project.tipoNivel === 'CFGM_ESTETICA';
-  if (tab === 'CFGM_PELUQUERIA') return project.tipoNivel === 'CFGM_PELUQUERIA';
-  if (tab === 'CFGS_EDUCACION_INFANTIL') return project.tipoNivel === 'CFGS_EDUCACION_INFANTIL';
-  if (tab === 'ESO_ORDINARIA') return project.tipoNivel === 'ESO_ORDINARIA';
-  return project.tipoNivel === 'DIVERSIFICACION_CURRICULAR' || project.tipoNivel === 'ESO';
+  return normalizeTipoNivel(project.tipoNivel) === tab;
 }
 
 export function parseKeywords(query: string): string[] {

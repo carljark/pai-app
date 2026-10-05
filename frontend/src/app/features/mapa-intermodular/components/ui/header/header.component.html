@@ -50,25 +50,7 @@
   @if (headerExpanded()) {
     <div class="mapa-header__expanded-body">
       <p class="mapa-header__subtitle">
-        @if (activeTab() === 'FPB') {
-          {{
-            isCa()
-              ? 'Explorador interactiu de connexions curriculars, criteris i activitats del CFGB Perruqueria i Estètica.'
-              : 'Explorador interactivo de conexiones curriculares, criterios y actividades del CFGB Peluquería y Estética.'
-          }}
-        } @else if (isSecondYear()) {
-          {{
-            isCa()
-              ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 2n curs.'
-              : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 2.º curso.'
-          }}
-        } @else {
-          {{
-            isCa()
-              ? 'Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de 1r curs.'
-              : 'Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de 1.er curso.'
-          }}
-        }
+        {{ subtitle() }}
       </p>
 
       <!-- Controls in expanded header -->
@@ -131,15 +113,7 @@
       <div class="mapa-stats">
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalModules }}</span>
-          <span class="mapa-stat-label">{{
-            isCa()
-              ? activeTab() !== 'FPB'
-                ? 'Mòduls CFGM'
-                : 'Mòduls CFGB'
-              : activeTab() !== 'FPB'
-                ? 'Módulos CFGM'
-                : 'Módulos CFGB'
-          }}</span>
+          <span class="mapa-stat-label">{{ modulesLabel() }}</span>
         </div>
         <div class="mapa-stat-card">
           <span class="mapa-stat-value">{{ stats().totalRas }}</span>

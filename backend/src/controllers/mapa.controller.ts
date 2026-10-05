@@ -1,22 +1,14 @@
 import type { Request, Response } from 'express';
 import { MapaModule } from '../models/MapaModule';
-
-const ALLOWED_TABS = [
-  'FPB',
-  'CFGM',
-  'CFGM_PELUQUERIA',
-  'CFGM_PELUQUERIA_2',
-  'CFGS_EDUCACION_INFANTIL',
-  'CFGS_EDUCACION_INFANTIL_2',
-];
+import { MAPA_TABS } from '../data/niveles';
 
 export const getMapaModules = async (req: Request, res: Response) => {
   try {
     const tab = req.query.tab as string;
 
-    if (!tab || !ALLOWED_TABS.includes(tab)) {
+    if (!tab || !MAPA_TABS.includes(tab)) {
       return res.status(400).json({
-        error: `Parámetro 'tab' inválido o ausente. Valores permitidos: ${ALLOWED_TABS.join(', ')}`
+        error: `Parámetro 'tab' inválido o ausente. Valores permitidos: ${MAPA_TABS.join(', ')}`
       });
     }
 

@@ -1,3 +1,5 @@
+@use '../../../../../styles/variables' as variables;
+
 .history-view {
   display: flex;
   flex-direction: column;
@@ -124,6 +126,12 @@
     &--searching {
       opacity: 0.55;
     }
+  }
+
+  &__levels-error {
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+    color: variables.$color-danger;
   }
 
   &__search-scope {

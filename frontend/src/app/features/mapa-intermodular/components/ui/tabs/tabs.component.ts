@@ -1,18 +1,15 @@
 import { Component, inject, computed, input, Output, EventEmitter } from '@angular/core';
-import {
-  MAPA_CICLOS,
-  MapaTab,
-  MapaTabConfig,
-  mapaTabConfig,
-} from '@mapa-intermodular/services/mapa-tabs.config';
+import { MapaTab, cursoCorto, mapaCicloLabel } from '../../../utils/mapa-labels';
 import { LayoutService } from '../../../../../services/layout.service';
+import { MapaTabInfo, NivelesService } from '../../../../../services/niveles.service';
 
-const CURSO_LABELS = {
-  '1º': { es: '1.º', ca: '1r' },
-  '2º': { es: '2.º', ca: '2n' },
-} as const;
+/** Ciclo del mapa con sus pestañas (una por curso, o una sola si el mapa abarca el ciclo). */
+interface MapaCiclo {
+  tipoNivel: string;
+  tabs: MapaTabInfo[];
+}
 
-/** Selector del mapa en dos pasos: ciclo (desplegable) y curso (solo si el ciclo tiene dos). */
+/** Selector del mapa en dos pasos: ciclo (desplegable) y curso (solo si el ciclo tiene varios). */
 @Component({
   selector: 'app-mapa-tabs',
   standalone: true,
@@ -21,32 +18,42 @@ const CURSO_LABELS = {
 })
 export class MapaTabsComponent {
   layout = inject(LayoutService);
+  private niveles = inject(NivelesService);
   isCa = computed(() => this.layout.language() === 'catalan');
 
-  readonly ciclos = MAPA_CICLOS;
+  /** Ciclos con mapa en el orden del catálogo, agrupando las pestañas de cada curso. */
+  ciclos = computed<MapaCiclo[]>(() => {
+    const ciclos: MapaCiclo[] = [];
+    for (const tab of this.niveles.mapaTabs()) {
+      const ciclo = ciclos.find((c) => c.tipoNivel === tab.nivel.id);
+      if (ciclo) ciclo.tabs.push(tab);
+      else ciclos.push({ tipoNivel: tab.nivel.id, tabs: [tab] });
+    }
+    return ciclos;
+  });
   activeTab = input.required<MapaTab>();
 
-  activeConfig = computed(() => mapaTabConfig(this.activeTab()));
+  activeConfig = computed(() => this.niveles.mapaTab(this.activeTab()));
   cursos = computed(
-    () => this.ciclos.find((c) => c.tipoNivel === this.activeConfig().tipoNivel)?.tabs ?? [],
+    () => this.ciclos().find((c) => c.tipoNivel === this.activeConfig()?.nivel.id)?.tabs ?? [],
   );
 
   @Output() tabChange = new EventEmitter<MapaTab>();
 
-  cicloLabel(tab: MapaTabConfig): string {
-    return this.isCa() ? tab.ciclo_ca : tab.ciclo_es;
+  cicloLabel(tab: MapaTabInfo): string {
+    return mapaCicloLabel(tab, this.isCa());
   }
 
-  cursoLabel(tab: MapaTabConfig): string {
-    return tab.curso ? CURSO_LABELS[tab.curso][this.isCa() ? 'ca' : 'es'] : '';
+  cursoLabel(tab: MapaTabInfo): string {
+    return tab.curso ? cursoCorto(tab.curso, this.isCa()) : '';
   }
 
   /** Al cambiar de ciclo se mantiene el curso actual si el nuevo ciclo lo tiene. */
   selectCiclo(tipoNivel: string) {
-    const tabs = this.ciclos.find((c) => c.tipoNivel === tipoNivel)?.tabs ?? [];
-    const sameCurso = tabs.find((t) => t.curso === this.activeConfig().curso);
+    const tabs = this.ciclos().find((c) => c.tipoNivel === tipoNivel)?.tabs ?? [];
+    const sameCurso = tabs.find((t) => t.curso === this.activeConfig()?.curso);
     const next = sameCurso ?? tabs[0];
-    if (next) this.setTab(next.id);
+    if (next) this.setTab(next.tab);
   }
 
   setTab(tab: MapaTab) {

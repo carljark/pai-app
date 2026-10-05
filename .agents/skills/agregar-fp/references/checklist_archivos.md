@@ -1,6 +1,6 @@
 # Checklist Integral para la Incorporación de un CFGM (Bilingüe ES/CA)
 
-Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave** divididos entre Backend y Frontend. Utiliza este documento como referencia exacta de qué modificar y cómo, asegurando la plena paridad entre **Castellano** y **Catalán**.
+Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niveles, datos curriculares, migraciones y mapa intermodular. El frontend lo toma todo del catálogo (`GET /api/niveles`) y no se modifica. Utiliza este documento como referencia exacta de qué modificar y cómo, asegurando la plena paridad entre **Castellano** y **Catalán**.
 
 ---
 
@@ -8,10 +8,12 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
 
 ### 1.1. Catálogo de niveles `niveles.ts`
 - **Archivo:** `backend/src/data/niveles.ts` (fuente única de niveles; ver `documentation/niveles_educativos_y_catalogo.md`).
-- **Modificación:** Añadir la entrada del ciclo con `id`, `etapa`, nombres oficiales ES/CA (TodoFP/BOE y CAIB/BOIB), `unidad: 'RA'` y sus `cursos`. Con eso:
-  - `Project.tipoNivel` acepta el nuevo valor (se valida contra `NIVEL_IDS`);
-  - `describeTargetCourse` usa el nombre oficial en el prompt (CFGM y CFGS);
-  - el generador muestra el ciclo y sus cursos (`GET /api/niveles`).
+- **Modificación:** Añadir la entrada del ciclo con `id`, `etapa`, nombres oficiales ES/CA (TodoFP/BOE y CAIB/BOIB), `palabrasClave`, `unidad: 'RA'`, sus `cursos` con los `modulos` de cada uno en orden oficial y sus `mapas` (pestaña, curso y selección inicial). Con eso:
+  - `Project.tipoNivel` y `RA.tipoNivel` aceptan el nuevo valor (se validan contra `NIVEL_IDS`);
+  - `MapaModule.tab` y `GET /api/mapa-intermodular?tab=` aceptan sus pestañas (`MAPA_TABS`);
+  - `describeTargetCourse` usa el nombre oficial en el prompt (o `nombrePrompt_es/ca`);
+  - el generador, el historial, «Mis proyectos», inicio, Taller, exportación y el mapa muestran el ciclo, sus cursos y sus módulos.
+- **Test:** `backend/src/tests/niveles-catalogo.test.ts` comprueba que los `modulos` cubren exactamente los RA del ciclo y que todas las pestañas y niveles de las migraciones están en el catálogo; añade el dataset del ciclo a su lista.
 
 ### 1.2. Controlador `project.controller.ts` (Prompt IA Bilingüe)
 - **Archivo:** `backend/src/controllers/project.controller.ts`
@@ -72,62 +74,9 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
 
 ---
 
-## 2. Frontend
+## 2. Frontend (sin cambios) y mapa intermodular
 
-### 2.1. Archivo de Datos Espejo (Frontend)
-- **Archivo:** `frontend/src/app/features/curriculum/data/ras_cfgm_<slug>.data.ts`
-- **Contenido:** Mismo contenido que en backend, importando la interfaz `CfgmRaData`:
-  ```typescript
-  import { CfgmRaData } from './ras_cfgm_estetica.data';
-  export const CFGM_<SLUG>_RAS_DATA: CfgmRaData[] = [ ... ];
-  ```
-
-### 2.2. Facade Curricular (`curriculum.facade.ts`)
-- **Archivo:** `frontend/src/app/features/curriculum/services/curriculum.facade.ts`
-- **Modificaciones:**
-  1. Importar `CFGM_<SLUG>_RAS_DATA`.
-  2. Definir `const CFGM_<SLUG>_MODULE_ORDER = ['cód1', 'cód2', ...];`.
-  3. Extender el tipo de unión: `'FP_BASICA' | 'DIVERSIFICACION_CURRICULAR' | 'CFGM_ESTETICA' | 'CFGM_PELUQUERIA' | 'CFGM_<SLUG>'`.
-  4. En `getStoredTipoNivel()`: añadir el caso.
-  5. En `loadRas()`: añadir el fallback estático con mapeo `isCa`:
-     ```typescript
-     if (this.tipoNivel() === 'CFGM_<SLUG>' && list.length === 0) {
-       list = CFGM_<SLUG>_RAS_DATA.map(r => ({
-         id: r.id,
-         module: isCa ? `${r.moduleCode}. ${r.module_ca}` : `${r.moduleCode}. ${r.module_es}`,
-         subject: isCa ? `${r.moduleCode}. ${r.module_ca}` : `${r.moduleCode}. ${r.module_es}`,
-         description: isCa ? r.description_ca : r.description_es,
-         tipoNivel: 'CFGM_<SLUG>',
-         moduleCode: r.moduleCode,
-         criterios: isCa ? r.criterios_ca : r.criterios_es
-       } as any));
-     }
-     ```
-  6. **Mapeo Reactivo Obligatorio:** En `groupedItems`, mapear reactivamente los campos para que la lista de la API respete el idioma activo:
-     ```typescript
-     list = list.map(r => ({
-       ...r,
-       module: isCa ? ((r as any).module_ca || r.module) : ((r as any).module_es || r.module),
-       subject: isCa ? ((r as any).module_ca || r.subject || r.module) : ((r as any).module_es || r.subject || r.module),
-       description: isCa ? ((r as any).description_ca || r.description) : ((r as any).description_es || r.description),
-       criterios: isCa ? ((r as any).criterios_ca || (r as any).criterios) : ((r as any).criterios_es || (r as any).criterios)
-     } as any));
-     ```
-  7. En la ordenación por curso: vincular `CFGM_<SLUG>_MODULE_ORDER`.
-
-### 2.3. Traducciones (`translations.es.ts` y `translations.ca.ts`)
-- **Archivos:** `frontend/src/app/services/translations.es.ts` y `translations.ca.ts`
-- **Modificación:** Añadir clave con los nombres oficiales:
-  - ES: `courseLevelCFGM<CapitalizedSlug>: 'CFGM <Nombre en Castellano>',`
-  - CA: `courseLevelCFGM<CapitalizedSlug>: 'CFGM <Nombre en Catalán>',`
-
-### 2.4. Vista del Generador (`generator-view.component.ts`)
-- Añadir el botón tab en la plantilla inline de selección de nivel:
-  ```html
-  <div class="tabs-item" [class.active]="curriculum.tipoNivel() === 'CFGM_<SLUG>'" (click)="curriculum.setTipoNivel('CFGM_<SLUG>')">
-    {{ trans.t().courseLevelCFGM<CapitalizedSlug> }}
-  </div>
-  ```
+El frontend no lleva listas de niveles, claves de traducción por nivel ni RA de respaldo: no se toca. Solo se añade el ciclo al catálogo de prueba `frontend/src/app/testing/niveles.mock.ts` si algún spec lo necesita.
 
 ### 2.5. Dataset del Mapa Intermodular (`mapa_cfgm_<slug>.json` y migración MongoDB)
 - Debe generarse como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` combinando los archivos `*_ES_*.md` y `*_CA_*.md`.
@@ -142,30 +91,21 @@ Cada nuevo ciclo formativo de grado medio requiere actualizar **11 puntos clave*
   - Conexiones: `title_es`, `title_ca`, `targetModuleName_es`, `targetModuleName_ca`, `targetRaText_es`, `targetRaText_ca`, `justification_es`, `justification_ca`.
   - Actividades: `title_es`/`title_ca`, `motivatingFactor_es`/`motivatingFactor_ca`, `description_es`/`description_ca`, `evidence_es`/`evidence_ca`, `diversitySupport_es`/`diversitySupport_ca`.
 
-### 2.6. Vista del Mapa Intermodular (`mapa-intermodular-view.component.html`)
-- Botón tab:
-  ```html
-  <button class="mapa-tab-btn" [class.active]="facade.activeTab() === 'CFGM_<SLUG>'" (click)="setTab('CFGM_<SLUG>')" ...>
-    {{ isCa() ? 'CFGM <Nombre CA>' : 'CFGM <Nombre ES>' }}
-  </button>
-  ```
-- Título dinámico:
-  ```html
-  {{ isCa() 
-    ? (facade.activeTab() === 'CFGM_<SLUG>' ? 'Mapa intermodular del CFGM <Nombre CA>' : ...) 
-    : (facade.activeTab() === 'CFGM_<SLUG>' ? 'Mapa intermodular del CFGM <Nombre ES>' : ...) }}
-  ```
+### 2.6. Vista del Mapa Intermodular
+- Sin cambios en la vista: el selector de ciclo, los botones de curso, el título y los textos («Retos CFGS», «Mòduls CFGM») salen de `mapas` y `etapa` del catálogo.
 
 ---
 
 ## 3. Blindaje de Tests, Cobertura y Limpieza de Consola
 
-1. **Simular clic en DOM:** En `mapa-intermodular-view.component.spec.ts`, simular el clic en el botón del nuevo ciclo para cubrir la función compilada del template:
+1. **Simular la elección en el DOM:** En `mapa-intermodular-view.component.spec.ts`, elegir el ciclo en el desplegable y el curso con sus botones:
    ```typescript
-   const tabBtns = fixture.nativeElement.querySelectorAll('.mapa-tab-btn') as NodeListOf<HTMLButtonElement>;
-   tabBtns[nuevoIndice].click();
+   select.value = 'CFGM_<SLUG>';
+   select.dispatchEvent(new Event('change'));
    fixture.detectChanges();
-   expect(component.facade.activeTab()).toBe('CFGM_<SLUG>');
+   (el.querySelectorAll('.mapa-tabs__curso')[1] as HTMLButtonElement).click();
+   fixture.detectChanges();
+   expect(component.facade.activeTab()).toBe('CFGM_<SLUG>_2');
    ```
 2. **Validación Bilingüe:** Verificar que al conmutar `layout.language.set('catalan')` y `layout.language.set('castellano')`, el DOM renderiza los textos en catalán y castellano respectivamente.
 3. **Supresión Limpia de Errores en Tests:**

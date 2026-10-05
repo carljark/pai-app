@@ -18,6 +18,7 @@ import {
   AIProvider,
   ContentLanguage,
   ProjectTranslation,
+  normalizeTipoNivel,
 } from '../models/project.model';
 
 // ============================================
@@ -156,16 +157,9 @@ export function mapStatus(status: string): ProjectStatus {
   return validStatuses.includes(status as ProjectStatus) ? (status as ProjectStatus) : 'borrador';
 }
 
+/** Acepta cualquier nivel del catálogo; solo normaliza el vacío y los alias antiguos. */
 export function mapTipoNivel(tipo: string): ProjectType {
-  const validTypes: ProjectType[] = [
-    'FP_BASICA',
-    'CFGM_ESTETICA',
-    'CFGM_PELUQUERIA',
-    'CFGS_EDUCACION_INFANTIL',
-    'ESO_ORDINARIA',
-    'DIVERSIFICACION_CURRICULAR',
-  ];
-  return validTypes.includes(tipo as ProjectType) ? (tipo as ProjectType) : 'FP_BASICA';
+  return normalizeTipoNivel(tipo);
 }
 
 function mapGeneratedContent(dto: ProjectDto['generatedContent']): GeneratedContent | undefined {

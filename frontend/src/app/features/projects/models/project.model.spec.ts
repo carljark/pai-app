@@ -1,9 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  courseLevelLabelKey,
-  getHistoryTabForTipoNivel,
-  isFPProject,
-  isESOProject,
+  normalizeTipoNivel,
   AiModelsResponse,
   getOwnerId,
   Project,
@@ -26,95 +23,16 @@ describe('Project Model - Utility Functions', () => {
     expect(response.models[0].value).toBe('gemini-3.6-flash');
   });
 
-  describe('getHistoryTabForTipoNivel', () => {
-    it('should return ESO for DIVERSIFICACION_CURRICULAR', () => {
-      expect(getHistoryTabForTipoNivel('DIVERSIFICACION_CURRICULAR')).toBe('ESO');
+  describe('normalizeTipoNivel', () => {
+    it('keeps the catalog ids as they are', () => {
+      expect(normalizeTipoNivel('CFGS_EDUCACION_INFANTIL')).toBe('CFGS_EDUCACION_INFANTIL');
+      expect(normalizeTipoNivel('NIVEL_NUEVO')).toBe('NIVEL_NUEVO');
     });
 
-    it('should return ESO for ESO', () => {
-      expect(getHistoryTabForTipoNivel('ESO')).toBe('ESO');
-    });
-
-    it('should return CFGM for CFGM_ESTETICA', () => {
-      expect(getHistoryTabForTipoNivel('CFGM_ESTETICA')).toBe('CFGM');
-    });
-
-    it('should return CFGM_PELUQUERIA for CFGM_PELUQUERIA', () => {
-      expect(getHistoryTabForTipoNivel('CFGM_PELUQUERIA')).toBe('CFGM_PELUQUERIA');
-    });
-
-    it('should return CFGS_EDUCACION_INFANTIL for CFGS_EDUCACION_INFANTIL', () => {
-      expect(getHistoryTabForTipoNivel('CFGS_EDUCACION_INFANTIL')).toBe('CFGS_EDUCACION_INFANTIL');
-    });
-
-    it('should resolve the translation key of each level', () => {
-      expect(courseLevelLabelKey('CFGS_EDUCACION_INFANTIL')).toBe(
-        'courseLevelCFGSEducacionInfantil',
-      );
-      expect(courseLevelLabelKey('CFGM_PELUQUERIA')).toBe('courseLevelCFGMPeluqueria');
-      expect(courseLevelLabelKey('CFGM_ESTETICA')).toBe('courseLevelCFGM');
-      expect(courseLevelLabelKey('DIVERSIFICACION_CURRICULAR')).toBe('courseLevelPDC');
-      expect(courseLevelLabelKey(undefined)).toBe('courseLevelFP');
-    });
-
-    it('should return FPB for FP_BASICA', () => {
-      expect(getHistoryTabForTipoNivel('FP_BASICA')).toBe('FPB');
-    });
-
-    it('should return FPB for unknown tipoNivel', () => {
-      expect(getHistoryTabForTipoNivel('UNKNOWN' as any)).toBe('FPB');
-    });
-  });
-
-  describe('isFPProject', () => {
-    it('should return true for FP_BASICA', () => {
-      expect(isFPProject('FP_BASICA')).toBe(true);
-    });
-
-    it('should return true for CFGM_ESTETICA', () => {
-      expect(isFPProject('CFGM_ESTETICA')).toBe(true);
-    });
-
-    it('should return true for undefined tipoNivel', () => {
-      expect(isFPProject(undefined as any)).toBe(true);
-    });
-
-    it('should return true for empty string', () => {
-      expect(isFPProject('' as any)).toBe(true);
-    });
-
-    it('should return false for CFGM_PELUQUERIA', () => {
-      expect(isFPProject('CFGM_PELUQUERIA')).toBe(false);
-    });
-
-    it('should return false for DIVERSIFICACION_CURRICULAR', () => {
-      expect(isFPProject('DIVERSIFICACION_CURRICULAR')).toBe(false);
-    });
-
-    it('should return false for ESO', () => {
-      expect(isFPProject('ESO')).toBe(false);
-    });
-  });
-
-  describe('isESOProject', () => {
-    it('should return true for DIVERSIFICACION_CURRICULAR', () => {
-      expect(isESOProject('DIVERSIFICACION_CURRICULAR')).toBe(true);
-    });
-
-    it('should return false for FP_BASICA', () => {
-      expect(isESOProject('FP_BASICA')).toBe(false);
-    });
-
-    it('should return false for CFGM_ESTETICA', () => {
-      expect(isESOProject('CFGM_ESTETICA')).toBe(false);
-    });
-
-    it('should return false for CFGM_PELUQUERIA', () => {
-      expect(isESOProject('CFGM_PELUQUERIA')).toBe(false);
-    });
-
-    it('should return false for ESO', () => {
-      expect(isESOProject('ESO')).toBe(false);
+    it('maps legacy values: empty to FP Básica and ESO to the PDC', () => {
+      expect(normalizeTipoNivel(undefined)).toBe('FP_BASICA');
+      expect(normalizeTipoNivel('')).toBe('FP_BASICA');
+      expect(normalizeTipoNivel('ESO')).toBe('DIVERSIFICACION_CURRICULAR');
     });
   });
 

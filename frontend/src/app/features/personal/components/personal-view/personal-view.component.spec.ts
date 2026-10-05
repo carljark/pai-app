@@ -6,7 +6,10 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { LayoutService } from '../../../../services/layout.service';
 import { signal } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { NIVELES_MOCK, NIVEL_FICTICIO, loadNivelesMock } from '../../../../testing/niveles.mock';
 import { Project } from '../../../projects/models/project.model';
 
 // Los tests usan proyectos parciales
@@ -33,6 +36,7 @@ describe('PersonalViewComponent', () => {
 
   const mockLayoutService = {
     switchView: vi.fn(),
+    language: signal<'castellano' | 'catalan'>('castellano'),
   };
 
   const mockTranslationService = {
@@ -51,10 +55,6 @@ describe('PersonalViewComponent', () => {
       personalFilterErrors: 'Errores',
       personalSearchPlaceholder: 'Buscar...',
       createProjectBtn: 'Crear Proyecto',
-      courseLevelFP: 'FP Básica',
-      courseLevelCFGM: 'CFGM',
-      courseLevelPDC: 'ESO',
-      courseLevelCFGSEducacionInfantil: 'CFGS Educación Infantil',
       untitledProject: 'Sin título',
       aiGemini: 'Primario',
       aiOpenRouter: 'Secundario',
@@ -67,6 +67,7 @@ describe('PersonalViewComponent', () => {
 
   beforeEach(async () => {
     mockProjectsFacade.myProjects.set([]);
+    mockLayoutService.language.set('castellano');
     vi.clearAllMocks();
 
     await TestBed.configureTestingModule({
@@ -77,8 +78,11 @@ describe('PersonalViewComponent', () => {
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: LayoutService, useValue: mockLayoutService },
         { provide: TranslationService, useValue: mockTranslationService },
+        provideHttpClient(),
+        provideHttpClientTesting(),
       ],
     }).compileComponents();
+    loadNivelesMock();
 
     fixture = TestBed.createComponent(PersonalViewComponent);
     component = fixture.componentInstance;
@@ -117,24 +121,24 @@ describe('PersonalViewComponent', () => {
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Pills order: [ALL, FPB, CFGM Pel, CFGM, CFGS, ESO, ESO (PDC), ALL, borrador, publicado, error]
+    // Pills en el orden del catálogo: [ALL, FPB, CFGM, CFGM Pel, CFGS, ESO, ESO (PDC), ALL, estados…]
     const allPill = pills[0];
     const fpbPill = pills[1];
-    const cfgmPill = pills[3];
-    const cfgmPelPill = pills[2];
+    const cfgmPill = pills[2];
+    const cfgmPelPill = pills[3];
     const cfgsPill = pills[4];
     const esoOrdinariaPill = pills[5];
     const esoPill = pills[6];
 
     fpbPill.click();
     fixture.detectChanges();
-    expect(component.levelFilter()).toBe('FPB');
+    expect(component.levelFilter()).toBe('FP_BASICA');
     expect(component.filteredMyProjects().length).toBe(1);
     expect(component.filteredMyProjects()[0].title).toBe('P1 FPB');
 
     cfgmPill.click();
     fixture.detectChanges();
-    expect(component.levelFilter()).toBe('CFGM');
+    expect(component.levelFilter()).toBe('CFGM_ESTETICA');
     expect(component.filteredMyProjects().length).toBe(1);
     expect(component.filteredMyProjects()[0].title).toBe('P2 CFGM');
 
@@ -156,7 +160,7 @@ describe('PersonalViewComponent', () => {
 
     esoPill.click();
     fixture.detectChanges();
-    expect(component.levelFilter()).toBe('ESO');
+    expect(component.levelFilter()).toBe('DIVERSIFICACION_CURRICULAR');
     expect(component.filteredMyProjects().length).toBe(1);
     expect(component.filteredMyProjects()[0].title).toBe('P3 ESO');
 
@@ -164,6 +168,44 @@ describe('PersonalViewComponent', () => {
     fixture.detectChanges();
     expect(component.levelFilter()).toBe('ALL');
     expect(component.filteredMyProjects().length).toBe(6);
+  });
+
+  it('debería filtrar y etiquetar un nivel añadido solo al catálogo', () => {
+    loadNivelesMock([...NIVELES_MOCK, NIVEL_FICTICIO]);
+    mockProjectsFacade.myProjects.set([
+      { _id: 'f', title: 'Ficticio', tipoNivel: 'CFGS_FICTICIO', courseLevel: '1º' },
+      { _id: 'p', title: 'FPB', tipoNivel: 'FP_BASICA' },
+    ]);
+    fixture.detectChanges();
+    const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
+    const ficticio = pills[7] as HTMLButtonElement;
+    expect(ficticio.textContent?.trim()).toBe('CFGS Animación Ficticia');
+    ficticio.click();
+    fixture.detectChanges();
+    expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['Ficticio']);
+    expect(fixture.nativeElement.textContent).toContain('1º CFGS Animación Ficticia');
+  });
+
+  it('debería nombrar los filtros de nivel con el catálogo en castellano y catalán', () => {
+    const labels = () =>
+      Array.from(fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill'))
+        .slice(1, 7)
+        .map((b: any) => b.textContent.trim());
+    expect(labels()).toEqual([
+      'CFGB Peluquería y Estética',
+      'CFGM Estética y Belleza',
+      'CFGM Peluquería y Cosmética Capilar',
+      'CFGS Educación Infantil',
+      'ESO',
+      'ESO (PDC)',
+    ]);
+    mockLayoutService.language.set('catalan');
+    mockProjectsFacade.myProjects.set([
+      { _id: 'd', title: 'Infantil', tipoNivel: 'CFGS_EDUCACION_INFANTIL', courseLevel: '2º' },
+    ]);
+    fixture.detectChanges();
+    expect(labels()[3]).toBe('CFGS Educació Infantil');
+    expect(fixture.nativeElement.textContent).toContain('2º CFGS Educació Infantil');
   });
 
   it('debería filtrar por estado del proyecto mediante clicks en el DOM', () => {
@@ -326,7 +368,7 @@ describe('PersonalViewComponent', () => {
     fixture.detectChanges();
 
     const text = fixture.nativeElement.textContent;
-    expect(text).toContain('1º CFGM');
+    expect(text).toContain('1º CFGM Estética y Belleza');
     expect(text).toContain('2º CFGS Educación Infantil');
     expect(text).toContain('Maquillaje');
     expect(text).toContain('⚠️ Error: Fallo genérico');

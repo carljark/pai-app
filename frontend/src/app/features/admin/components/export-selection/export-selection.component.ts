@@ -1,16 +1,7 @@
-import { Component, computed, input, model, signal } from '@angular/core';
+import { Component, computed, inject, input, model, signal } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { ExportableProject } from '../../services/projects-transfer.service';
-
-/** Nombre corto de cada nivel para la lista (el panel de administración está en castellano). */
-const LEVEL_LABELS: Record<string, string> = {
-  FP_BASICA: 'FP Básica',
-  ESO_ORDINARIA: 'ESO',
-  DIVERSIFICACION_CURRICULAR: 'Diversificación',
-  CFGM_ESTETICA: 'CFGM Estética',
-  CFGM_PELUQUERIA: 'CFGM Peluquería',
-  CFGS_EDUCACION_INFANTIL: 'CFGS Educación Infantil',
-};
+import { NivelesService } from '../../../../services/niveles.service';
 
 const normalize = (text: string) => text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
@@ -26,6 +17,7 @@ export class ExportSelectionComponent {
   projects = input.required<ExportableProject[]>();
   selectedIds = model<string[]>([]);
   query = signal('');
+  private niveles = inject(NivelesService);
 
   filtered = computed(() => {
     const q = normalize(this.query().trim());
@@ -41,8 +33,9 @@ export class ExportSelectionComponent {
     return visible.length > 0 && visible.every((p) => selected.has(p._id));
   });
 
+  /** Nombre del nivel en castellano (el panel de administración está en castellano). */
   levelLabel(tipoNivel?: string): string {
-    return (tipoNivel && LEVEL_LABELS[tipoNivel]) || tipoNivel || '';
+    return this.niveles.nombreDe(tipoNivel, false);
   }
 
   isSelected(id: string): boolean {

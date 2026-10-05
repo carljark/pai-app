@@ -45,10 +45,10 @@ describe('Projects Mapper', () => {
       expect(mapTipoNivel('DIVERSIFICACION_CURRICULAR')).toBe('DIVERSIFICACION_CURRICULAR');
     });
 
-    it('should default to FP_BASICA for unknown values', () => {
-      expect(mapTipoNivel('UNKNOWN')).toBe('FP_BASICA');
+    it('should accept any catalog id and only normalize empty and legacy values', () => {
+      expect(mapTipoNivel('NIVEL_NUEVO')).toBe('NIVEL_NUEVO');
       expect(mapTipoNivel('')).toBe('FP_BASICA');
-      expect(mapTipoNivel('invalid')).toBe('FP_BASICA');
+      expect(mapTipoNivel('ESO')).toBe('DIVERSIFICACION_CURRICULAR');
     });
   });
 

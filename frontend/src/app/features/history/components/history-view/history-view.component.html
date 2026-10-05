@@ -74,17 +74,20 @@
     </div>
 
     <div class="history-view__tabs" [class.history-view__tabs--searching]="isSearching()">
-      @for (tab of tabs; track tab.id) {
+      @for (tab of tabs(); track tab.id) {
         <button
           type="button"
           class="history-view__tab"
           [class.history-view__tab--active]="activeTab() === tab.id"
           (click)="activeTab.set(tab.id)"
         >
-          {{ labelFor(tab.key) }}
+          {{ tab.label }}
         </button>
       }
     </div>
+    @if (niveles.error()) {
+      <p class="history-view__levels-error" role="alert">{{ trans.t().levelsLoadError }}</p>
+    }
     @if (isSearching()) {
       <p class="history-view__search-scope">{{ trans.t().historySearchAllLevels }}</p>
     }

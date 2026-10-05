@@ -3,7 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { LayoutService } from '../../../../../services/layout.service';
 import { CommonModule } from '@angular/common';
 import { MapaStats } from '../../../models/mapa-intermodular.model';
-import { MapaTab, mapaTabConfig, mapaTabLabel } from '../../../services/mapa-tabs.config';
+import { MapaTab, cursoLargo, mapaCicloLabel, mapaTabLabel } from '../../../utils/mapa-labels';
+import { NivelesService } from '../../../../../services/niveles.service';
 
 @Component({
   selector: 'app-mapa-header',
@@ -14,6 +15,7 @@ import { MapaTab, mapaTabConfig, mapaTabLabel } from '../../../services/mapa-tab
 })
 export class MapaHeaderComponent {
   layout = inject(LayoutService);
+  private niveles = inject(NivelesService);
 
   headerExpanded = input.required<boolean>();
   activeTab = input.required<MapaTab>();
@@ -23,16 +25,38 @@ export class MapaHeaderComponent {
 
   isCa = computed(() => this.layout.language() === 'catalan');
 
+  /** Pestaña activa con su nivel del catálogo. */
+  tab = computed(() => this.niveles.mapaTab(this.activeTab()));
+
   /** Título con el nombre del ciclo y el curso de la pestaña activa. */
-  title = computed(() => {
-    const label = mapaTabLabel(this.activeTab(), this.isCa());
-    return this.activeTab() === 'FPB'
-      ? `Mapa Intermodular ${label}`
-      : `Mapa intermodular del ${label}`;
+  title = computed(() => `Mapa intermodular del ${mapaTabLabel(this.tab(), this.isCa())}`);
+
+  /** Subtítulo: el curso del mapa (o el único del ciclo) o, si abarca varios, el ciclo. */
+  subtitle = computed(() => {
+    const tab = this.tab();
+    if (!tab) return '';
+    const isCa = this.isCa();
+    const cursos = tab.nivel.cursos;
+    const unico = cursos.length === 1 ? cursos[0]?.curso : undefined;
+    const cursoMapa = tab.curso ?? unico;
+    if (!cursoMapa) {
+      const ciclo = mapaCicloLabel(tab, isCa);
+      return isCa
+        ? `Explorador interactiu de connexions curriculars, criteris i activitats del ${ciclo}.`
+        : `Explorador interactivo de conexiones curriculares, criterios y actividades del ${ciclo}.`;
+    }
+    const curso = cursoLargo(cursoMapa, isCa);
+    return isCa
+      ? `Relacions entre mòduls, resultats d’aprenentatge i criteris d’avaluació de ${curso}.`
+      : `Relaciones entre módulos, resultados de aprendizaje y criterios de evaluación de ${curso}.`;
   });
 
-  /** ¿La pestaña activa corresponde al 2.º curso de un ciclo? */
-  isSecondYear = computed(() => mapaTabConfig(this.activeTab()).curso === '2º');
+  /** Estadística de módulos con la sigla de la etapa («Módulos CFGS»). */
+  modulesLabel = computed(() => {
+    const tab = this.tab();
+    const sigla = tab ? ` ${this.niveles.sigla(tab.nivel)}` : '';
+    return `${this.isCa() ? 'Mòduls' : 'Módulos'}${sigla}`;
+  });
 
   // Outputs for parent component
   @Output() headerToggle = new EventEmitter<void>();

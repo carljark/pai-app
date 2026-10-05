@@ -6,7 +6,12 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { signal } from '@angular/core';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { LayoutService } from '../../../../services/layout.service';
+import { NivelesService } from '../../../../services/niveles.service';
+import { NIVELES_MOCK, NIVEL_FICTICIO, loadNivelesMock } from '../../../../testing/niveles.mock';
 
 describe('HistoryViewComponent', () => {
   let component: HistoryViewComponent;
@@ -26,11 +31,7 @@ describe('HistoryViewComponent', () => {
 
   const translations = {
     historyTitle: 'History',
-    courseLevelFP: 'FPB',
-    courseLevelCFGM: 'CFGM',
-    courseLevelCFGM_PELUQUERIA: 'CFGM Peluquería',
-    courseLevelCFGMPeluqueria: 'CFGM Peluquería',
-    courseLevelPDC: 'ESO',
+    levelsLoadError: 'No se ha podido cargar la lista de niveles educativos.',
     searchProjects: 'Search',
     historySearchPlaceholder: 'Buscar por palabras clave...',
     historySearchAllLevels: 'Buscando en todos los niveles',
@@ -60,7 +61,7 @@ describe('HistoryViewComponent', () => {
   beforeEach(async () => {
     mockProjectsFacade = {
       projectsHistory: signal([]),
-      historyTab: signal('FPB'),
+      historyTab: signal('FP_BASICA'),
       directory: signal([]),
       selectedCollaborators: signal([]),
       getCollaboratorNames: vi.fn().mockReturnValue([]),
@@ -84,12 +85,21 @@ describe('HistoryViewComponent', () => {
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: TranslationService, useValue: { t: signal(translations) } },
+        provideHttpClient(),
+        provideHttpClientTesting(),
       ],
     }).compileComponents();
+    loadNivelesMock();
+    TestBed.inject(LayoutService).language.set('castellano');
 
     fixture = TestBed.createComponent(HistoryViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    TestBed.inject(LayoutService).language.set('castellano');
+    localStorage.removeItem('pai_lang');
   });
 
   it('should create and show empty message', () => {
@@ -139,7 +149,7 @@ describe('HistoryViewComponent', () => {
       project({ _id: '2', title: 'Imatge corporal', tipoNivel: 'CFGM_PELUQUERIA' }),
       project({ _id: '3', title: 'Sin relación' }),
     ]);
-    component.activeTab.set('FPB');
+    component.activeTab.set('FP_BASICA');
     component.searchQuery.set('imatge');
     fixture.detectChanges();
 
@@ -186,9 +196,64 @@ describe('HistoryViewComponent', () => {
     const buttons = fixture.nativeElement.querySelectorAll(
       '.history-view__tab',
     ) as NodeListOf<HTMLButtonElement>;
-    buttons[1].click();
+    buttons[2].click();
     fixture.detectChanges();
     expect(component.activeTab()).toBe('CFGM_PELUQUERIA');
+  });
+
+  it('should show one tab per catalog level, in order and in the active language', () => {
+    const labels = () =>
+      Array.from(fixture.nativeElement.querySelectorAll('.history-view__tab')).map((b: any) =>
+        b.textContent.trim(),
+      );
+    expect(labels()).toEqual([
+      'CFGB Peluquería y Estética',
+      'CFGM Estética y Belleza',
+      'CFGM Peluquería y Cosmética Capilar',
+      'CFGS Educación Infantil',
+      'ESO',
+      'ESO (PDC)',
+    ]);
+    TestBed.inject(LayoutService).language.set('catalan');
+    fixture.detectChanges();
+    expect(labels()[3]).toBe('CFGS Educació Infantil');
+  });
+
+  it('should put legacy projects without level in FP Básica and ESO ones in the PDC tab', () => {
+    mockProjectsFacade.projectsHistory.set([
+      project({ _id: '1', title: 'Sin nivel', tipoNivel: undefined }),
+      project({ _id: '2', title: 'PDC antiguo', tipoNivel: 'ESO' }),
+      project({ _id: '3', title: 'PDC', tipoNivel: 'DIVERSIFICACION_CURRICULAR' }),
+    ]);
+    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['1']);
+    component.activeTab.set('DIVERSIFICACION_CURRICULAR');
+    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['2', '3']);
+  });
+
+  it('should add a tab and list the projects of a level added only to the catalog', () => {
+    loadNivelesMock([...NIVELES_MOCK, NIVEL_FICTICIO]);
+    mockProjectsFacade.projectsHistory.set([
+      project({ _id: '1', title: 'Proyecto ficticio', tipoNivel: 'CFGS_FICTICIO' }),
+      project({ _id: '2', title: 'Proyecto FPB' }),
+    ]);
+    fixture.detectChanges();
+    const tabs = fixture.nativeElement.querySelectorAll('.history-view__tab');
+    const last = tabs[tabs.length - 1] as HTMLButtonElement;
+    expect(last.textContent?.trim()).toBe('CFGS Animación Ficticia');
+    last.click();
+    fixture.detectChanges();
+    expect(component.activeTab()).toBe('CFGS_FICTICIO');
+    expect(component.filteredProjects().map((p: any) => p.title)).toEqual(['Proyecto ficticio']);
+  });
+
+  it('should warn when the levels catalog could not be loaded', () => {
+    const root = fixture.nativeElement as HTMLElement;
+    expect(root.querySelector('.history-view__levels-error')).toBeNull();
+    TestBed.inject(NivelesService).error.set(true);
+    fixture.detectChanges();
+    expect(root.querySelector('.history-view__levels-error')?.textContent).toContain(
+      'No se ha podido cargar',
+    );
   });
 
   it('should update search and module/ra filters from events', () => {
@@ -206,7 +271,7 @@ describe('HistoryViewComponent', () => {
     expect(component.raFilter()).toBeNull();
   });
 
-  it('should handle empty history, null user and label fallback', () => {
+  it('should handle empty history and null user', () => {
     mockProjectsFacade.projectsHistory.set(undefined);
     mockAuthFacade.currentUser.set(null);
     fixture.detectChanges();
@@ -214,7 +279,6 @@ describe('HistoryViewComponent', () => {
     expect(component.moduleOptions()).toEqual([]);
     expect(component.raOptions()).toEqual([]);
     expect(component.filteredProjects()).toEqual([]);
-    expect(component.labelFor('claveDesconocida')).toBe('claveDesconocida');
 
     component.onRaChange('');
     expect(component.raFilter()).toBeNull();

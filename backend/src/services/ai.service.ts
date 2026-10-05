@@ -11,6 +11,7 @@ import {
   modelFitsProvider,
   resolveProvider
 } from '../data/ai-models';
+import { NIVELES } from '../data/niveles';
 
 /** Nº máximo de ejemplos de referencia que se inyectan en el prompt. */
 export const MAX_INTEF_EXAMPLES = 8;
@@ -47,14 +48,10 @@ function tokenize(text: string): string[] {
     .filter(w => w.length >= 4 && !STOPWORDS.has(w));
 }
 
-/** Familia profesional de cada nivel FP: los nombres de módulo no siempre la mencionan. */
-const LEVEL_KEYWORDS: Record<string, string> = {
-  FP_BASICA: 'formación profesional básica peluquería estética',
-  CFGM_ESTETICA: 'formación profesional estética belleza',
-  CFGM_PELUQUERIA: 'formación profesional peluquería cosmética capilar',
-  CFGS_EDUCACION_INFANTIL: 'formación profesional educación infantil',
-  ESO_ORDINARIA: 'educación secundaria obligatoria situación aprendizaje'
-};
+/** Familia profesional de cada nivel (catálogo): los nombres de módulo no siempre la mencionan. */
+const LEVEL_KEYWORDS: Record<string, string> = Object.fromEntries(
+  NIVELES.filter(n => n.palabrasClave).map(n => [n.id, n.palabrasClave as string])
+);
 
 /**
  * Selecciona hasta {@link MAX_INTEF_EXAMPLES} ejemplos, priorizando los más

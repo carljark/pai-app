@@ -1,6 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
-import { mapaTabConfig } from './mapa-tabs.config';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { loadNivelesMock } from '../../../testing/niveles.mock';
+import { NivelesService } from '../../../services/niveles.service';
 import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { MapaIntermodularService } from './mapa-intermodular.service';
@@ -19,8 +22,11 @@ describe('MapaIntermodularFacade', () => {
       providers: [
         MapaIntermodularFacade,
         { provide: MapaIntermodularService, useValue: mockMapaService },
+        provideHttpClient(),
+        provideHttpClientTesting(),
       ],
     });
+    loadNivelesMock();
     facade = TestBed.inject(MapaIntermodularFacade);
     facade.modules.set([...FPB_MODULES_SEED]);
     facade.selectModule('3060');
@@ -147,7 +153,7 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should build the export summary header for every active tab and language', () => {
-    const tabs: ('FPB' | 'CFGM' | 'CFGM_PELUQUERIA' | 'CFGM_PELUQUERIA_2')[] = [
+    const tabs = [
       'FPB',
       'CFGM',
       'CFGM_PELUQUERIA',
@@ -171,7 +177,28 @@ describe('MapaIntermodularFacade', () => {
     await facade.setTab('CFGS_EDUCACION_INFANTIL', []);
     expect(facade.selectedModuleCode()).toBe('0011');
     expect(facade.selectedRaId()).toBe('0011_RA1');
-    expect(mapaTabConfig('DESCONOCIDA' as any).id).toBe('FPB');
+  });
+
+  it('should clear the selection for a tab that is not in the catalog', async () => {
+    await facade.setTab('DESCONOCIDA', []);
+    expect(facade.selectedModuleCode()).toBe('');
+    expect(facade.selectedRaId()).toBe('');
+    expect(facade.exportConnectionSummary('castellano')).toBe('');
+  });
+
+  it('should open the first map of the catalog once it is loaded', () => {
+    TestBed.tick();
+    expect(facade.activeTab()).toBe('FPB');
+    expect(mockMapaService.getModules).toHaveBeenCalledWith('FPB');
+    expect(facade.selectedRaId()).toBe('3060_RA1');
+  });
+
+  it('should wait for the catalog before opening any map', () => {
+    TestBed.inject(NivelesService).niveles.set([]);
+    const fresh = TestBed.runInInjectionContext(() => new MapaIntermodularFacade());
+    TestBed.tick();
+    expect(fresh.activeTab()).toBe('');
+    expect(mockMapaService.getModules).not.toHaveBeenCalled();
   });
 
   it('should test fallbacks for unknown module or RA and empty list', () => {

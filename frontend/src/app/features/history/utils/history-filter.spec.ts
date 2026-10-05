@@ -37,22 +37,19 @@ describe('history-filter', () => {
     expect(projectRas({ ...base, ras: undefined } as any)).toEqual([]);
   });
 
-  it('matches tabs', () => {
-    expect(matchesTab(base, 'FPB')).toBe(true);
-    expect(matchesTab({ ...base, tipoNivel: 'CFGM_ESTETICA' } as any, 'CFGM')).toBe(true);
-    expect(matchesTab({ ...base, tipoNivel: 'CFGM_PELUQUERIA' } as any, 'CFGM_PELUQUERIA')).toBe(
+  it('matches tabs by normalized level', () => {
+    expect(matchesTab(base, 'FP_BASICA')).toBe(true);
+    expect(matchesTab({ ...base, tipoNivel: undefined } as any, 'FP_BASICA')).toBe(true);
+    expect(matchesTab({ ...base, tipoNivel: 'CFGM_ESTETICA' } as any, 'CFGM_ESTETICA')).toBe(true);
+    expect(matchesTab({ ...base, tipoNivel: 'ESO' } as any, 'DIVERSIFICACION_CURRICULAR')).toBe(
       true,
     );
-    expect(matchesTab({ ...base, tipoNivel: 'ESO' } as any, 'ESO')).toBe(true);
     const eso = { ...base, tipoNivel: 'ESO_ORDINARIA' } as any;
     expect(matchesTab(eso, 'ESO_ORDINARIA')).toBe(true);
-    expect(matchesTab(eso, 'ESO')).toBe(false);
-    expect(
-      matchesTab({ ...base, tipoNivel: 'DIVERSIFICACION_CURRICULAR' } as any, 'ESO_ORDINARIA'),
-    ).toBe(false);
+    expect(matchesTab(eso, 'DIVERSIFICACION_CURRICULAR')).toBe(false);
     const infantil = { ...base, tipoNivel: 'CFGS_EDUCACION_INFANTIL' } as any;
     expect(matchesTab(infantil, 'CFGS_EDUCACION_INFANTIL')).toBe(true);
-    expect(matchesTab(infantil, 'FPB')).toBe(false);
+    expect(matchesTab(infantil, 'FP_BASICA')).toBe(false);
   });
 
   it('parses and matches keywords ignoring accents and order', () => {
@@ -95,14 +92,14 @@ describe('history-filter', () => {
 
   it('searches every tab when there are keywords', () => {
     const eso = { ...base, tipoNivel: 'ESO' } as any;
-    const filters = { tab: 'FPB' as const, onlyMine: false, keywords: [], module: null, ra: null };
+    const filters = { tab: 'FP_BASICA', onlyMine: false, keywords: [], module: null, ra: null };
     expect(matchesProjectFilters(eso, filters)).toBe(false);
     expect(matchesProjectFilters(eso, { ...filters, keywords: ['barberia'] })).toBe(true);
   });
 
   it('matches module, ra and owner filters', () => {
     const filters = {
-      tab: 'FPB' as const,
+      tab: 'FP_BASICA',
       onlyMine: true,
       ownerId: 'u1',
       keywords: [],

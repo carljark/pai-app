@@ -135,7 +135,7 @@
                 </div>
                 <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px">
                   {{ project.courseLevel ? project.courseLevel + ' ' : ''
-                  }}{{ trans.t()[project.tipoNivel | courseLevelKey] }}
+                  }}{{ project.tipoNivel | nivelNombre }}
                   &nbsp;·&nbsp;
                   {{ project.createdAt | date: 'd MMM yyyy, HH:mm' }}
                 </div>

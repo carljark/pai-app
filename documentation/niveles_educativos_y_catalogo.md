@@ -7,28 +7,46 @@
 | Campo | Uso |
 |---|---|
 | `id` | Valor de `tipoNivel` en proyectos, RA y CE (`FP_BASICA`, `CFGM_ESTETICA`, `ESO_ORDINARIA`…). |
-| `etapa` | `FPB`, `CFGM`, `CFGS` o `ESO`. |
+| `etapa` | `FPB`, `CFGM`, `CFGS` o `ESO`. El frontend la muestra como sigla («CFGB» para la FPB) en el mapa. |
 | `comunidad` | Currículo aplicado: `IB` (Illes Balears) o `estatal`. |
-| `nombre_es` / `nombre_ca` | Nombre oficial en el desplegable del generador y en el prompt. |
+| `nombre_es` / `nombre_ca` | Nombre oficial: desplegable del generador, pestañas del historial, filtros, tarjetas de proyecto, exportación y mapa. |
+| `nombrePrompt_es` / `nombrePrompt_ca` | Opcional. Nombre del nivel en el prompt («2º de …»); si falta, se usa el nombre oficial. |
+| `palabrasClave` | Opcional. Familia profesional o etapa para elegir los ejemplos INTEF del prompt (`LEVEL_KEYWORDS`). |
 | `unidad` | `RA` (FP) o `CE` (ESO): qué se selecciona al crear un proyecto. |
 | `terminologia` | `proyecto_intermodular` o `situacion_aprendizaje`. |
-| `cursos` | Cursos del nivel; el primero es el de por defecto. `edad` es opcional y llega al prompt. |
+| `cursos` | Cursos del nivel; el primero es el de por defecto. `edad` es opcional y llega al prompt. `modulos` (FP) son los códigos de los módulos del curso en su orden oficial: filtran y ordenan el selector curricular y los módulos del proyecto generado. |
+| `mapas` | Pestañas del mapa intermodular del nivel: `tab` (id histórico de `MapaModule.tab`), `curso` (sin curso, el mapa abarca todo el ciclo) y la selección inicial (`moduleCode`, `raId`). |
 
-Quién lo usa:
-- `GET /api/niveles` lo sirve al frontend.
-- `NivelesService` (frontend) construye con él el desplegable de titulación y los botones de curso del generador.
-- `Project.tipoNivel` se valida contra `NIVEL_IDS`.
-- `describeTargetCourse` toma de él el nombre de los ciclos.
-- `generateProject` toma de él el curso por defecto.
+### Backend
 
-Otros puntos del frontend todavía tienen niveles fijos: pestañas del historial, filtros de «Mis proyectos», `getHistoryTabForTipoNivel`, `TipoNivel`, `cursosValidos` en `CurriculumFacade` y el mapa intermodular. Al añadir un nivel hay que revisarlos (`grep -rn "CFGS_EDUCACION_INFANTIL" frontend/src`). Se irán pasando al catálogo en tareas posteriores.
+- `GET /api/niveles` sirve el catálogo al frontend.
+- `Project.tipoNivel` y `RA.tipoNivel` se validan contra `NIVEL_IDS`; `DEFAULT_TIPO_NIVEL` (`FP_BASICA`) es el nivel de los proyectos y RA antiguos sin `tipoNivel`.
+- `MapaModule.tab` y el parámetro `tab` de `GET /api/mapa-intermodular` se validan contra `MAPA_TABS`, derivado de `mapas`. Los ids de pestaña (`FPB`, `CFGM`, `CFGM_PELUQUERIA_2`…) se conservan para no migrar datos.
+- `describeTargetCourse` describe el curso destino con `nombrePrompt` (o el nombre oficial) en el idioma del proyecto; `LEVEL_KEYWORDS` sale de `palabrasClave`.
+- Las reglas propias de un nivel (Carpeta de Aprendizaje de FP Básica, instrucciones de la ESO) son lógica con nombre propio en el backend, no datos del catálogo.
+- `backend/src/tests/niveles-catalogo.test.ts` comprueba que los `modulos` cubren exactamente los RA de cada ciclo y que todos los `tipoNivel` y `tab` de datos y migraciones están en el catálogo.
+
+### Frontend
+
+`NivelesService` carga el catálogo al iniciar sesión (junto a los RA) y ofrece `find`, `nombreDe`, `cursos`, `cursoPorDefecto`, `modulos`, `usaRa`, `nivelPorDefecto`, `mapaTabs`, `mapaTab` y `sigla`. De él salen:
+
+- el desplegable de titulación y los cursos del generador;
+- los módulos de cada curso y su orden (`CurriculumFacade`); al cargar el catálogo, un nivel o curso guardado en `localStorage` que ya no existe pasa al nivel por defecto o al primer curso;
+- las pestañas del historial (una por nivel, con el `tipoNivel` como id) y los filtros de «Mis proyectos»;
+- el nombre del nivel en tarjetas de inicio, «Mis proyectos», Taller (pipe `nivelNombre`) y exportación;
+- el selector de ciclo y curso del mapa, su selección inicial, el título y los textos con la sigla de la etapa.
+
+`normalizeTipoNivel` (modelo de proyectos) trata los valores antiguos: vacío → `FP_BASICA` y `ESO` → `DIVERSIFICACION_CURRICULAR`. Si el catálogo no carga, el historial muestra un aviso (`levelsLoadError`).
+
+Los RA solo están en MongoDB (`GET /api/ras`): el frontend ya no incluye RA de respaldo (`curriculum/data/ras_*.data.ts`, unos 600 KB). Si la API falla, el selector curricular queda vacío, como ya pasaba con la ESO.
 
 ## Cómo añadir un nivel
 
-1. Añadir la entrada en `backend/src/data/niveles.ts`.
-2. Cargar sus datos curriculares en MongoDB con una migración nueva (`backend/src/migrations/NN_*.ts`), a partir de JSON en `backend/src/data/` (nunca como semillas en el bundle del frontend).
-3. Ciclos FP: seguir la skill `agregar-fp`, que además cubre mapa intermodular, traducciones y tests.
-4. Revisar los puntos con niveles fijos del apartado anterior y añadir el nombre a `translations.{es,ca}.ts` (`courseLevel…`).
+1. Añadir la entrada en `backend/src/data/niveles.ts`: nombres oficiales ES/CA, cursos (con `modulos` en FP) y `mapas` si tiene mapa intermodular.
+2. Cargar sus datos curriculares en MongoDB con una migración nueva (`backend/src/migrations/NN_*.ts`), a partir de datos en `backend/src/data/` (nunca como semillas en el bundle del frontend).
+3. Ciclos FP: seguir la skill `agregar-fp` (RA bilingües, mapa intermodular y tests).
+
+El frontend no se toca.
 
 ## ESO ordinaria (`ESO_ORDINARIA`)
 

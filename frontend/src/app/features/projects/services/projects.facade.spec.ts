@@ -11,6 +11,7 @@ import { signal } from '@angular/core';
 import { Project, ProjectStatus, ProjectType } from '../models/project.model';
 import { fromProjectDtoArray } from '../mappers/projects.mapper';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { loadNivelesMock } from '../../../testing/niveles.mock';
 
 function createMockProject(overrides: Partial<Project> = {}): Project {
   return {
@@ -69,6 +70,7 @@ describe('ProjectsFacade', () => {
 
     facade = TestBed.inject(ProjectsFacade);
     httpMock = TestBed.inject(HttpTestingController);
+    loadNivelesMock();
 
     // Catálogo de modelos (fuente única en el backend)
     httpMock.expectOne('/api/ai/models').flush({
@@ -158,36 +160,6 @@ describe('ProjectsFacade', () => {
     expect(facade.currentProject()?.title).toBe('P2');
   });
 
-  it('should compute fpProjects and esoProjects based on search and level', () => {
-    facade.projectsHistory.set([
-      createMockProject({
-        _id: '1',
-        title: 'FP Proy',
-        tipoNivel: 'FP_BASICA',
-        generatedContent: { rawText: 'text1' },
-      }),
-      createMockProject({
-        _id: '2',
-        title: 'ESO Proy',
-        tipoNivel: 'DIVERSIFICACION_CURRICULAR',
-        generatedContent: { rawText: 'text2' },
-      }),
-      createMockProject({
-        _id: '3',
-        title: 'Otro FP',
-        tipoNivel: 'FP_BASICA',
-        generatedContent: { rawText: 'text3' },
-      }),
-    ]);
-
-    expect(facade.fpProjects().length).toBe(2);
-    expect(facade.esoProjects().length).toBe(1);
-
-    facade.searchQuery.set('otro');
-    expect(facade.fpProjects().length).toBe(1);
-    expect(facade.esoProjects().length).toBe(0);
-  });
-
   it('should delete project via HTTP', () => {
     facade.deleteProject('123').subscribe();
 
@@ -214,7 +186,7 @@ describe('ProjectsFacade', () => {
 
     facade.methodology.set('ABP');
     facade.generateProject('castellano', 'Custom Title').subscribe();
-    expect(facade.historyTab()).toBe('FPB');
+    expect(facade.historyTab()).toBe('FP_BASICA');
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.method).toBe('POST');
@@ -240,7 +212,7 @@ describe('ProjectsFacade', () => {
 
     facade.selectedAi.set('openrouter');
     facade.generateProject('catalan').subscribe();
-    expect(facade.historyTab()).toBe('ESO');
+    expect(facade.historyTab()).toBe('DIVERSIFICACION_CURRICULAR');
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.modules).toEqual(['Math']);
@@ -249,14 +221,14 @@ describe('ProjectsFacade', () => {
     flushGenerateSuccess(httpMock, req);
   });
 
-  it('should generate project (CFGM_ESTETICA) and set historyTab to CFGM', () => {
+  it('should generate project (CFGM_ESTETICA) and set historyTab to its level', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_ESTETICA');
     mockCurriculumFacade.curso.mockReturnValue('1r');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA_CFGM_1']);
     mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_CFGM_1', module: 'Estètica' }]);
 
     facade.generateProject('castellano').subscribe();
-    expect(facade.historyTab()).toBe('CFGM');
+    expect(facade.historyTab()).toBe('CFGM_ESTETICA');
 
     const req = httpMock.expectOne('/api/projects/generate');
     expect(req.request.body.tipoNivel).toBe('CFGM_ESTETICA');
@@ -321,7 +293,7 @@ describe('ProjectsFacade', () => {
 
   it('should resolve CFGM_PELUQUERIA modules for 1r in catalan using subject_ca, subject and module fallbacks', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
-    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.curso.mockReturnValue('1º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA_A', 'RA_B', 'RA_C']);
     mockCurriculumFacade.ras.mockReturnValue([
       { description: 'RA_A', moduleCode: '0845', subject_ca: '0845. Mòdul CA' },
@@ -339,7 +311,7 @@ describe('ProjectsFacade', () => {
 
   it('should use an empty name for a CFGM_PELUQUERIA module without any name field', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
-    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.curso.mockReturnValue('1º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA_A']);
     mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_A', moduleCode: '0845' }]);
 
@@ -352,7 +324,7 @@ describe('ProjectsFacade', () => {
 
   it('should fall back to the generic CFGM_PELUQUERIA name in castellano when no module matches', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
-    mockCurriculumFacade.curso.mockReturnValue('1r');
+    mockCurriculumFacade.curso.mockReturnValue('1º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA_X']);
     mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_X', moduleCode: '9999' }]);
 
@@ -1060,7 +1032,7 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
 
       facade.generateProject('castellano').subscribe();
-      expect(facade.historyTab()).toBe('ESO');
+      expect(facade.historyTab()).toBe('DIVERSIFICACION_CURRICULAR');
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Math']);
@@ -1089,7 +1061,7 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
 
       facade.generateProject('castellano').subscribe();
-      expect(facade.historyTab()).toBe('FPB');
+      expect(facade.historyTab()).toBe('FP_BASICA');
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['ModA']);
@@ -1103,7 +1075,7 @@ describe('ProjectsFacade', () => {
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_CFGM_1', module: 'Estètica' }]);
 
       facade.generateProject('castellano').subscribe();
-      expect(facade.historyTab()).toBe('CFGM');
+      expect(facade.historyTab()).toBe('CFGM_ESTETICA');
 
       const req = httpMock.expectOne('/api/projects/generate');
       expect(req.request.body.modules).toEqual(['Estètica']);
@@ -1134,7 +1106,7 @@ describe('ProjectsFacade', () => {
 
     it('should resolve CFGM_PELUQUERIA modules for 1r in catalan using subject_ca, subject and module fallbacks', () => {
       mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
-      mockCurriculumFacade.curso.mockReturnValue('1r');
+      mockCurriculumFacade.curso.mockReturnValue('1º');
       mockCurriculumFacade.selectedRas.mockReturnValue(['RA_A', 'RA_B', 'RA_C']);
       mockCurriculumFacade.ras.mockReturnValue([
         { description: 'RA_A', moduleCode: '0845', subject_ca: '0845. Mòdul CA' },
@@ -1152,7 +1124,7 @@ describe('ProjectsFacade', () => {
 
     it('should fall back to the generic CFGM_PELUQUERIA name in castellano when no module matches', () => {
       mockCurriculumFacade.tipoNivel.mockReturnValue('CFGM_PELUQUERIA');
-      mockCurriculumFacade.curso.mockReturnValue('1r');
+      mockCurriculumFacade.curso.mockReturnValue('1º');
       mockCurriculumFacade.selectedRas.mockReturnValue(['RA_X']);
       mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA_X', moduleCode: '9999' }]);
 

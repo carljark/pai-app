@@ -67,13 +67,13 @@
         >
           {{ trans.t().personalFilterAll }}
         </button>
-        @for (level of levelFilters; track level.id) {
+        @for (level of levelFilters(); track level.id) {
           <button
             class="filter-pill"
             [class.active]="levelFilter() === level.id"
             (click)="levelFilter.set(level.id)"
           >
-            {{ labelFor(level.key) }}
+            {{ level.label }}
           </button>
         }
       </div>

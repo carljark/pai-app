@@ -4,7 +4,7 @@ import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermo
 import { IntermodularConnection } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
 import { ActivitiesGridComponent } from '../activities-grid/activities-grid.component';
-import { MapaTab } from '../../../services/mapa-tabs.config';
+import { MapaTab } from '../../../utils/mapa-labels';
 
 @Component({
   selector: 'app-connections-list',

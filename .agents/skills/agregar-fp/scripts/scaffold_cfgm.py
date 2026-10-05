@@ -43,26 +43,6 @@ export const CFGM_{slug.upper()}_RAS_DATA: any[] = [
     print(f"✅ Creado: {out_path}")
     return out_path
 
-def generate_frontend_data(slug, name_es, name_ca, tipo_nivel):
-    out_path = os.path.join(ROOT_DIR, f"frontend/src/app/features/curriculum/data/ras_cfgm_{slug}.data.ts")
-    if os.path.exists(out_path):
-        print(f"⚠️  El archivo ya existe: {out_path}")
-        return out_path
-    
-    content = f"""import {{ CfgmRaData }} from './ras_cfgm_estetica.data';
-
-/**
- * Catálogo curricular oficial de {name_es} / {name_ca}.
- */
-export const CFGM_{slug.upper()}_RAS_DATA: CfgmRaData[] = [
-  // Rellenar con los módulos y RAs correspondientes
-];
-"""
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(content)
-    print(f"✅ Creado: {out_path}")
-    return out_path
-
 def generate_migration(slug, name_es, tipo_nivel, next_num):
     filename = f"{next_num:02d}_ingest_cfgm_{slug}_ras.ts"
     out_path = os.path.join(ROOT_DIR, "backend/src/migrations", filename)
@@ -128,17 +108,15 @@ def main():
 
     print(f"🚀 Iniciando andamiaje para: {name_es} ({name_ca}) -> tipoNivel: {tipo_nivel}")
     generate_backend_data(slug, name_es, name_ca, tipo_nivel)
-    generate_frontend_data(slug, name_es, name_ca, tipo_nivel)
     generate_migration(slug, name_es, tipo_nivel, next_mig)
     generate_mapa_seed(slug, name_es, name_ca, tipo_nivel)
 
     print("\n📋 Siguientes pasos recomendados:")
-    print(f" 1. Añadir '{tipo_nivel}' al enum de backend/src/models/Project.ts")
-    print(f" 2. Añadir la descripción del curso en backend/src/controllers/project.controller.ts")
-    print(f" 3. Añadir '{tipo_nivel}' y el array de orden en frontend/src/app/features/curriculum/services/curriculum.facade.ts")
-    print(f" 4. Añadir las traducciones en translations.es.ts y translations.ca.ts")
-    print(f" 5. Añadir el botón tab en generator-view.component.html y mapa-intermodular-view.component.html")
-    print(f" 6. Actualizar las pruebas unitarias y verificar cobertura con npm test")
+    print(f" 1. Añadir la entrada '{tipo_nivel}' a backend/src/data/niveles.ts (nombres ES/CA, cursos con sus módulos y mapas)")
+    print(" 2. Rellenar los RA bilingües y el JSON del mapa intermodular")
+    print(" 3. Añadir el dataset a backend/src/tests/niveles-catalogo.test.ts")
+    print(" 4. El frontend no se toca: todo sale del catálogo (GET /api/niveles)")
+    print(" 5. Ejecutar npm test en backend y frontend")
 
 if __name__ == "__main__":
     main()

@@ -4,7 +4,11 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { signal } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
+import { LayoutService } from '../../../../services/layout.service';
+import { loadNivelesMock } from '../../../../testing/niveles.mock';
 
 describe('HomeDashboardComponent', () => {
   let component: HomeDashboardComponent;
@@ -31,10 +35,6 @@ describe('HomeDashboardComponent', () => {
       homeNewProject: 'New Project',
       homeViewHistory: 'View History',
       defaultUser: 'Docente',
-      courseLevelPDC: 'ESO (PDC)',
-      courseLevelFP: 'FP Básica',
-      courseLevelCFGM: 'CFGM Estética y Belleza',
-      courseLevelCFGSEducacionInfantil: 'CFGS Educación Infantil',
       workshopViewAll: 'Ver todos los proyectos',
 
       homeRecentTitle: 'Recent',
@@ -57,8 +57,11 @@ describe('HomeDashboardComponent', () => {
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: TranslationService, useValue: mockTranslationService },
+        provideHttpClient(),
+        provideHttpClientTesting(),
       ],
     }).compileComponents();
+    loadNivelesMock();
 
     fixture = TestBed.createComponent(HomeDashboardComponent);
     component = fixture.componentInstance;
@@ -198,7 +201,14 @@ describe('HomeDashboardComponent', () => {
 
     const levels = fixture.debugElement.nativeElement.querySelectorAll('.home-project-card__level');
     expect(levels[0].textContent).toContain('ESO (PDC)');
-    expect(levels[1].textContent).toContain('FP Básica');
+    expect(levels[1].textContent).toContain('CFGB Peluquería y Estética');
     expect(levels[2].textContent).toContain('2º CFGS Educación Infantil');
+
+    const layout = TestBed.inject(LayoutService);
+    layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(levels[2].textContent).toContain('2º CFGS Educació Infantil');
+    layout.language.set('castellano');
+    localStorage.removeItem('pai_lang');
   });
 });

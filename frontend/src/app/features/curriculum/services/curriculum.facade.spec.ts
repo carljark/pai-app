@@ -4,6 +4,30 @@ import { provideHttpClient } from '@angular/common/http';
 import { CurriculumFacade } from './curriculum.facade';
 import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { loadNivelesMock } from '../../../testing/niveles.mock';
+
+/** RA de la API de un ciclo (los RA ya no se incluyen en el bundle del frontend). */
+const apiRa = (tipoNivel: string, moduleCode: string, extra: Partial<LearningOutcome> = {}) =>
+  ({
+    id: `${moduleCode}_RA1`,
+    description: `Desc ${moduleCode}`,
+    module: `${moduleCode}. Módulo ${moduleCode}`,
+    moduleCode,
+    tipoNivel,
+    ...extra,
+  }) as LearningOutcome;
+
+/** Nueva instancia de la fachada con el catálogo cargado (tras guardar algo en localStorage). */
+function recreateFacade(): CurriculumFacade {
+  TestBed.resetTestingModule();
+  TestBed.configureTestingModule({
+    providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
+  });
+  const created = TestBed.inject(CurriculumFacade);
+  loadNivelesMock();
+  TestBed.tick();
+  return created;
+}
 
 describe('CurriculumFacade', () => {
   let facade: CurriculumFacade;
@@ -16,6 +40,7 @@ describe('CurriculumFacade', () => {
     });
     facade = TestBed.inject(CurriculumFacade);
     httpTestingController = TestBed.inject(HttpTestingController);
+    loadNivelesMock();
   });
 
   afterEach(() => {
@@ -201,55 +226,62 @@ describe('CurriculumFacade', () => {
   it('should restore tipoNivel and curso from localStorage upon instantiation', () => {
     localStorage.setItem('pai_tipo_nivel', 'DIVERSIFICACION_CURRICULAR');
     localStorage.setItem('pai_curso', '4º');
-
-    TestBed.resetTestingModule();
-    TestBed.configureTestingModule({
-      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
-    });
-    const restoredFacade = TestBed.inject(CurriculumFacade);
+    const restoredFacade = recreateFacade();
     expect(restoredFacade.tipoNivel()).toBe('DIVERSIFICACION_CURRICULAR');
     expect(restoredFacade.curso()).toBe('4º');
 
-    // Test restoring FP_BASICA with 2º
     localStorage.setItem('pai_tipo_nivel', 'FP_BASICA');
     localStorage.setItem('pai_curso', '2º');
-
-    TestBed.resetTestingModule();
-    TestBed.configureTestingModule({
-      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
-    });
-    const fpFacade = TestBed.inject(CurriculumFacade);
+    const fpFacade = recreateFacade();
     expect(fpFacade.tipoNivel()).toBe('FP_BASICA');
     expect(fpFacade.curso()).toBe('2º');
+  });
 
-    // Test restoring invalid curso for level fallbacks to default
-    localStorage.setItem('pai_tipo_nivel', 'FP_BASICA');
-    localStorage.setItem('pai_curso', '4º'); // 4º invalid for FP_BASICA
+  it('should move a stored course that the level lacks to its first course once the catalog loads', () => {
+    localStorage.setItem('pai_tipo_nivel', 'CFGM_ESTETICA');
+    localStorage.setItem('pai_curso', '4º');
+    const fixed = recreateFacade();
+    expect(fixed.tipoNivel()).toBe('CFGM_ESTETICA');
+    expect(fixed.curso()).toBe('1º');
+    expect(localStorage.getItem('pai_curso')).toBe('1º');
+  });
 
+  it('should keep the stored values until the catalog arrives', () => {
+    localStorage.setItem('pai_tipo_nivel', 'CFGM_ESTETICA');
+    localStorage.setItem('pai_curso', '4º');
     TestBed.resetTestingModule();
     TestBed.configureTestingModule({
       providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
     });
-    const fallbackFacade = TestBed.inject(CurriculumFacade);
-    expect(fallbackFacade.curso()).toBe('1º');
+    const waiting = TestBed.inject(CurriculumFacade);
+    TestBed.tick();
+    expect(waiting.curso()).toBe('4º');
   });
 
-  it('should group CFGM_ESTETICA items using fallback when ras is empty and sort by CFGM_MODULE_ORDER', () => {
-    facade.tipoNivel.set('CFGM_ESTETICA');
-    facade.ras.set([]);
+  it('should fall back to the default level when the stored one is not in the catalog', () => {
+    localStorage.setItem('pai_tipo_nivel', 'NIVEL_RETIRADO');
+    localStorage.setItem('pai_curso', '3º');
+    const fixed = recreateFacade();
+    expect(fixed.tipoNivel()).toBe('FP_BASICA');
+    expect(fixed.curso()).toBe('1º');
+  });
 
-    const groups = facade.groupedItems();
-    expect(groups.length).toBe(9);
-    expect(groups[0].moduleCode).toBe('0633');
-    expect(groups[1].moduleCode).toBe('0635');
-    expect(groups[2].moduleCode).toBe('0636');
-    expect(groups[3].moduleCode).toBe('0638');
-    expect(groups[4].moduleCode).toBe('0640');
-    expect(groups[5].moduleCode).toBe('0641');
-    expect(groups[6].moduleCode).toBe('1664');
-    expect(groups[7].moduleCode).toBe('1709');
-    expect(groups[8].moduleCode).toBe('0156');
-    expect(groups[0].items.length).toBeGreaterThan(0);
+  it('should group CFGM_ESTETICA items in the official module order of the catalog', () => {
+    facade.setTipoNivel('CFGM_ESTETICA');
+    facade.ras.set(
+      ['0156', '1709', '0641', '0633', '0640', '0638', '0636', '0635', '1664'].map((code) =>
+        apiRa('CFGM_ESTETICA', code),
+      ),
+    );
+
+    const codes = facade.groupedItems().map((g) => g.moduleCode);
+    expect(codes).toEqual(['0633', '0635', '0636', '0638', '0640', '0641', '1664', '1709', '0156']);
+  });
+
+  it('should show no RA (and no bundled fallback) while the API has not answered', () => {
+    facade.setTipoNivel('CFGM_PELUQUERIA');
+    facade.ras.set([]);
+    expect(facade.groupedItems()).toEqual([]);
   });
 
   it('should group CFGM_ESTETICA items from API ras array with moduleCode and sort them', () => {
@@ -277,8 +309,9 @@ describe('CurriculumFacade', () => {
       } as any,
     ]);
 
+    // El RA sin módulo del curso queda fuera: solo se muestran los módulos del catálogo
     const groups = facade.groupedItems();
-    expect(groups.length).toBe(3);
+    expect(groups.length).toBe(2);
     expect(groups[0].moduleCode).toBe('0633');
     expect(groups[1].moduleCode).toBe('0635');
   });
@@ -294,21 +327,9 @@ describe('CurriculumFacade', () => {
   it('should restore CFGM_ESTETICA from localStorage', () => {
     localStorage.setItem('pai_tipo_nivel', 'CFGM_ESTETICA');
     localStorage.setItem('pai_curso', '1º');
-
-    TestBed.resetTestingModule();
-    TestBed.configureTestingModule({
-      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
-    });
-    const cfgmFacade = TestBed.inject(CurriculumFacade);
+    const cfgmFacade = recreateFacade();
     expect(cfgmFacade.tipoNivel()).toBe('CFGM_ESTETICA');
     expect(cfgmFacade.curso()).toBe('1º');
-  });
-
-  it('should group CFGM_PELUQUERIA items using fallback when ras is empty', () => {
-    facade.tipoNivel.set('CFGM_PELUQUERIA');
-    facade.ras.set([]);
-    const groups = facade.groupedItems();
-    expect(groups.length).toBeGreaterThan(0);
   });
 
   it('should handle setTipoNivel to CFGM_PELUQUERIA and set default course to 1º', () => {
@@ -319,65 +340,44 @@ describe('CurriculumFacade', () => {
     expect(localStorage.getItem('pai_curso')).toBe('1º');
   });
 
-  it('should group CFGM_PELUQUERIA items using fallback with Catalan', () => {
-    facade.tipoNivel.set('CFGM_PELUQUERIA');
-    facade.ras.set([]);
-    localStorage.setItem('pai_lang', 'catalan');
-    const groups = facade.groupedItems();
-    expect(groups.length).toBeGreaterThan(0);
-  });
-
   it('should show only the CFGS Educación Infantil modules of the selected course, in order', () => {
     facade.setTipoNivel('CFGS_EDUCACION_INFANTIL');
-    facade.ras.set([]);
+    const allCodes = ['1709', '0011', '0179', '0013', '0012', '1710', '0014', '0015', '1665'];
+    facade.ras.set([
+      ...allCodes.map((code) => apiRa('CFGS_EDUCACION_INFANTIL', code)),
+      apiRa('CFGM_PELUQUERIA', '0013'),
+    ]);
     localStorage.setItem('pai_lang', 'castellano');
 
     const firstYear = facade.groupedItems().map((g) => g.moduleCode);
     expect(firstYear).toEqual(['0011', '0012', '0014', '0015', '1665', '1709']);
-    expect(facade.groupedItems()[0].category).toBe('0011. Didáctica de la educación infantil');
+    expect(facade.groupedItems()[0].category).toBe('0011. Módulo 0011');
 
     facade.setCurso('2º');
     const secondYear = facade.groupedItems().map((g) => g.moduleCode);
-    expect(secondYear).toEqual([
-      '0013',
-      '0016',
-      '0017',
-      '0018',
-      '0020',
-      '0019',
-      '0179',
-      '1708',
-      '1710',
-    ]);
+    expect(secondYear).toEqual(['0013', '0179', '1710']);
   });
 
-  it('should translate the CFGS Educación Infantil fallback to Catalan', () => {
-    facade.tipoNivel.set('CFGS_EDUCACION_INFANTIL');
-    facade.ras.set([]);
+  it('should translate the CFGS Educación Infantil RA to Catalan', () => {
+    facade.setTipoNivel('CFGS_EDUCACION_INFANTIL');
+    facade.ras.set([
+      apiRa('CFGS_EDUCACION_INFANTIL', '0011', {
+        module_ca: "0011. Didàctica de l'educació infantil",
+        description_ca: 'Contextualitza la intervenció educativa',
+      }),
+    ]);
     localStorage.setItem('pai_lang', 'catalan');
     const [didactica] = facade.groupedItems();
     expect(didactica.category).toBe("0011. Didàctica de l'educació infantil");
-    expect(didactica.items[0].text).toMatch(/^Contextualitza la intervenció educativa/);
+    expect(didactica.items[0].text).toBe('Contextualitza la intervenció educativa');
   });
 
   it('should restore CFGS Educación Infantil as the stored level', () => {
     localStorage.setItem('pai_tipo_nivel', 'CFGS_EDUCACION_INFANTIL');
     localStorage.setItem('pai_curso', '2º');
-    TestBed.resetTestingModule();
-    TestBed.configureTestingModule({
-      providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
-    });
-    const stored = TestBed.inject(CurriculumFacade);
+    const stored = recreateFacade();
     expect(stored.tipoNivel()).toBe('CFGS_EDUCACION_INFANTIL');
     expect(stored.curso()).toBe('2º');
-  });
-
-  it('should group CFGM_ESTETICA items using fallback with Catalan', () => {
-    facade.tipoNivel.set('CFGM_ESTETICA');
-    facade.ras.set([]);
-    localStorage.setItem('pai_lang', 'catalan');
-    const groups = facade.groupedItems();
-    expect(groups.length).toBeGreaterThan(0);
   });
 
   it('should group DIVERSIFICACION_CURRICULAR items with ces', () => {
@@ -438,11 +438,7 @@ describe('CurriculumFacade', () => {
     it('should restore ESO with any of its four courses', () => {
       localStorage.setItem('pai_tipo_nivel', 'ESO_ORDINARIA');
       localStorage.setItem('pai_curso', '4º');
-      TestBed.resetTestingModule();
-      TestBed.configureTestingModule({
-        providers: [CurriculumFacade, provideHttpClient(), provideHttpClientTesting()],
-      });
-      const stored = TestBed.inject(CurriculumFacade);
+      const stored = recreateFacade();
       expect(stored.tipoNivel()).toBe('ESO_ORDINARIA');
       expect(stored.curso()).toBe('4º');
     });

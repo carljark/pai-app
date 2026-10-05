@@ -1,7 +1,8 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
-import { MapaTab, mapaTabConfig } from '@mapa-intermodular/services/mapa-tabs.config';
+import { MapaTab } from '@mapa-intermodular/utils/mapa-labels';
+import { NivelesService } from '../../../../services/niveles.service';
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { CurriculumFacade } from '../../../curriculum/services/curriculum.facade';
@@ -40,6 +41,7 @@ export class MapaIntermodularViewComponent {
   layout = inject(LayoutService);
   trans = inject(TranslationService);
   curriculum = inject(CurriculumFacade);
+  private niveles = inject(NivelesService);
 
   headerExpanded = signal(false);
   step1Open = signal(true);
@@ -112,8 +114,9 @@ export class MapaIntermodularViewComponent {
 
   /** Alinea nivel y curso del generador con la pestaña activa del mapa. */
   private syncCurriculumLevel(): void {
-    const config = mapaTabConfig(this.facade.activeTab());
-    this.curriculum.setTipoNivel(config.tipoNivel);
+    const config = this.niveles.mapaTab(this.facade.activeTab());
+    if (!config) return;
+    this.curriculum.setTipoNivel(config.nivel.id);
     if (config.curso) this.curriculum.setCurso(config.curso);
   }
 

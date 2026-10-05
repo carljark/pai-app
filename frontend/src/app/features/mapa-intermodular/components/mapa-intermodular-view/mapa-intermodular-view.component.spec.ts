@@ -8,6 +8,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { signal } from '@angular/core';
 import { FPB_MODULES_SEED } from '../../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { loadNivelesMock } from '../../../../testing/niveles.mock';
 
 describe('MapaIntermodularViewComponent', () => {
   let component: MapaIntermodularViewComponent;
@@ -40,6 +41,7 @@ describe('MapaIntermodularViewComponent', () => {
         { provide: TranslationService, useValue: mockTrans },
       ],
     }).compileComponents();
+    loadNivelesMock();
 
     fixture = TestBed.createComponent(MapaIntermodularViewComponent);
     component = fixture.componentInstance;
@@ -158,7 +160,7 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component).toBeTruthy();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.mapa-header__title')?.textContent).toContain(
-      'Mapa Intermodular',
+      'Mapa intermodular del CFGB Peluquería y Estética',
     );
     // Collapsed by default
     expect(compiled.querySelectorAll('.mapa-stat-card').length).toBe(0);
@@ -951,6 +953,79 @@ describe('MapaIntermodularViewComponent', () => {
     expect(fixture.nativeElement.textContent).toContain('Propostes d');
     expect(fixture.nativeElement.textContent).toContain('Aprenentatges i Diversitat CFGM');
     expect(fixture.nativeElement.textContent).toContain('act_perruq_ca');
+  });
+
+  it('should name the CFGS Educación Infantil 2.º map from the catalog in Catalan', () => {
+    const el = fixture.nativeElement as HTMLElement;
+    const infantilMod = {
+      code: '0013',
+      name_es: 'Didáctica de la educación infantil',
+      name_ca: 'Didàctica de l’educació infantil',
+      type: 'especifico',
+      learningOutcomes: [
+        {
+          id: '0013_RA1',
+          code: 'RA1',
+          text_es: 'ra_es',
+          text_ca: 'ra_ca',
+          criteria_es: ['a) criterio'],
+          criteria_ca: ['a) criteri'],
+          connections: [
+            {
+              title_es: 'conn_es',
+              title_ca: 'conn_ca',
+              targetModuleCode: '0016',
+              targetModuleName_es: 'Juego infantil',
+              targetModuleName_ca: 'Joc infantil',
+              targetRaCode: 'RA1',
+              targetRaText_es: 'ra_es',
+              targetRaText_ca: 'ra_ca',
+              sourceCriteria: 'a',
+              relatedCriteria: [],
+              activities: [
+                {
+                  id: 'i1',
+                  title_es: 'act_infantil_es',
+                  title_ca: 'act_infantil_ca',
+                  description_es: 'd',
+                  description_ca: 'd',
+                  evidence_es: 'e',
+                  evidence_ca: 'e',
+                  diversitySupport_es: 'v',
+                  diversitySupport_ca: 'v',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+    mockFacade.seedCache.CFGS_EDUCACION_INFANTIL_2 = [infantilMod];
+    component.layout.language.set('catalan');
+    const select = el.querySelector('.mapa-tabs__select') as HTMLSelectElement;
+    select.value = 'CFGS_EDUCACION_INFANTIL';
+    select.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    (el.querySelectorAll('.mapa-tabs__curso')[1] as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (el.querySelector('.mapa-header__main-row') as HTMLElement).click();
+    fixture.detectChanges();
+
+    expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL_2');
+    expect(el.querySelector('.mapa-header__title')?.textContent).toContain(
+      'Mapa intermodular del CFGS Educació Infantil 2n',
+    );
+    expect(el.textContent).toContain('criteris d’avaluació de 2n curs');
+    expect(el.textContent).toContain('Mòduls CFGS');
+    expect(el.textContent).toContain('Propostes d’Activitats i Reptes CFGS');
+    expect(el.textContent).toContain('Aprenentatges i Diversitat CFGS:');
+    expect(el.querySelector('app-mapa-header')?.textContent).not.toContain('CFGM');
+    expect(el.querySelector('app-activities-grid')?.textContent).not.toContain('CFGM');
+
+    component.layout.language.set('castellano');
+    fixture.detectChanges();
+    expect(el.textContent).toContain('Propuestas de Actividades y Retos CFGS');
+    expect(el.textContent).toContain('de 2.º curso');
   });
 
   it('should show skeleton loader when isLoadingSeed is true', () => {

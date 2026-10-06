@@ -61,3 +61,6 @@ tmp_extract/
 coverage/
 backend/coverage/
 frontend/coverage/
+
+# Configuración local de Claude Code (permisos de esta máquina)
+.claude/settings.local.json

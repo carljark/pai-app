@@ -26,6 +26,7 @@ export function groupEsoCes(list: EvaluativeCriteria[], isCa: boolean): GroupedC
       index: ce.ce_num ?? group.items.length + 1,
       text: ce.description,
       value: ce.value,
+      criterios: ce.criteriosDetalle,
     });
     group.totalItems = group.items.length;
     groups.set(category, group);

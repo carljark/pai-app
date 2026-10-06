@@ -1,8 +1,8 @@
 # Plan 003: Selección de criterios de evaluación en la ESO y el PDC
 
 > **Fecha:** 6 de octubre de 2026
-> **Estado:** Aprobado
-> **Partes afectadas:** backend / frontend / migraciones (solo si el contraste con la CAIB detecta diferencias) / despliegue
+> **Estado:** Implementado (tarea 200)
+> **Partes afectadas:** backend / frontend / migraciones (no han sido necesarias: el contraste con la CAIB no detectó diferencias) / despliegue
 
 ---
 

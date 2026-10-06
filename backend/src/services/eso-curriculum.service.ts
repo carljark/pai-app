@@ -51,13 +51,17 @@ export const mapEsoCes = (docs: any[], lang: Lang, curso: string) =>
         description,
         value: esoSelection(subject, doc.ce_num, description),
         criterios: criteriosDelCurso(doc, curso).map((c: any) => `${c.id}: ${lang === 'ca' ? c.text_ca : c.text_es}`),
+        criteriosDetalle: criteriosDelCurso(doc, curso).map((c: any) => ({ id: c.id, text: lang === 'ca' ? c.text_ca : c.text_es })),
       };
     })
     .sort((a, b) => (TIPO_ORDER[a.tipo!] ?? 9) - (TIPO_ORDER[b.tipo!] ?? 9)
       || a.subject.localeCompare(b.subject) || a.ce_num - b.ce_num);
 
-/** Bloque del prompt con la CE, sus descriptores y los criterios del curso. */
-export const describeEsoCeForPrompt = (doc: any, curso: string, language?: string): string => {
+/**
+ * Bloque del prompt con la CE, sus descriptores y los criterios del curso. Si el docente ha
+ * elegido criterios (`ids`), solo se listan esos.
+ */
+export const describeEsoCeForPrompt = (doc: any, curso: string, language?: string, ids?: string[]): string => {
   const ca = language === 'catalan';
   const subject = ca ? doc.subject_ca : doc.subject_es;
   const description = ca ? doc.description_ca : doc.description_es;
@@ -66,9 +70,10 @@ export const describeEsoCeForPrompt = (doc: any, curso: string, language?: strin
     `  Competencia Específica CE${doc.ce_num} (numeración oficial, no la cambies): ${description}`,
   ];
   if (doc.descriptores?.length) lines.push(`  Descriptores del perfil de salida: ${doc.descriptores.join(', ')}`);
-  const criterios = criteriosDelCurso(doc, curso);
+  const criterios = criteriosDelCurso(doc, curso).filter((c: any) => !ids || ids.includes(c.id));
   if (criterios.length > 0) {
-    lines.push(`  CRITERIOS DE EVALUACIÓN OFICIALES DE ${curso} (numeración oficial):`);
+    const titulo = ids ? 'CRITERIOS DE EVALUACIÓN SELECCIONADOS' : 'CRITERIOS DE EVALUACIÓN OFICIALES';
+    lines.push(`  ${titulo} DE ${curso} (numeración oficial):`);
     criterios.forEach(c => lines.push(`    ${c.id}: ${ca ? c.text_ca : c.text_es}`));
   }
   return lines.join('\n');

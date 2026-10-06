@@ -711,8 +711,8 @@ describe('Projects Endpoints', () => {
       expect(res.body.project.aiPrompt).toContain('NO utilices 4º de ESO bajo ningún concepto');
       
       // Verificamos que se incluye el criterio de 3º y NO el de 4º
-      expect(res.body.project.aiPrompt).toContain('3º ESO - 1.1: Criterio exclusivo de 3º ESO');
-      expect(res.body.project.aiPrompt).not.toContain('4º ESO - 1.1: Criterio exclusivo de 4º ESO');
+      expect(res.body.project.aiPrompt).toContain('1.1: Criterio exclusivo de 3º ESO');
+      expect(res.body.project.aiPrompt).not.toContain('1.1: Criterio exclusivo de 4º ESO');
       expect(res.body.project.aiPrompt).not.toContain('[object Object]');
     });
 
@@ -747,8 +747,8 @@ describe('Projects Endpoints', () => {
       expect(res.body.project.tipoNivel).toBe('DIVERSIFICACION_CURRICULAR');
       
       expect(res.body.project.aiPrompt).toContain('4º de ESO (Diversificación Curricular / PDC)');
-      expect(res.body.project.aiPrompt).toContain('4º ESO - 2.1: Criterio exclusivo de 4º ESO para física');
-      expect(res.body.project.aiPrompt).not.toContain('3º ESO - 2.1: Criterio exclusivo de 3º ESO para física');
+      expect(res.body.project.aiPrompt).toContain('2.1: Criterio exclusivo de 4º ESO para física');
+      expect(res.body.project.aiPrompt).not.toContain('2.1: Criterio exclusivo de 3º ESO para física');
     });
   });
 });

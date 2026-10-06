@@ -43,6 +43,7 @@ describe('AppFacade', () => {
       groupedSelectedItems: signal([]),
       clearSelection: vi.fn(),
       tipoNivel: signal('FP_BASICA'),
+      usaRa: signal(true),
     };
 
     projectsFacadeMock = {
@@ -119,7 +120,7 @@ describe('AppFacade', () => {
     TestBed.flushEffects();
 
     expect(curriculumFacadeMock.loadRas).toHaveBeenCalledWith('castellano');
-    expect(curriculumFacadeMock.loadCes).toHaveBeenCalledWith('castellano');
+    expect(curriculumFacadeMock.loadCes).not.toHaveBeenCalled();
     expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
     expect(nivelesServiceMock.load).toHaveBeenCalled();
     expect(curriculumFacadeMock.loadEsoCes).not.toHaveBeenCalled();
@@ -135,6 +136,21 @@ describe('AppFacade', () => {
     curriculumFacadeMock.curso.set('3º');
     TestBed.flushEffects();
     expect(curriculumFacadeMock.loadEsoCes).toHaveBeenLastCalledWith('castellano', '3º');
+  });
+
+  it('should load the PDC CE of the active course and reload them when the course changes', () => {
+    facade = TestBed.inject(AppFacade);
+    curriculumFacadeMock.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
+    curriculumFacadeMock.usaRa.set(false);
+    curriculumFacadeMock.curso.set('3º');
+    authFacadeMock.currentUser.set({ name: 'Test' });
+    TestBed.flushEffects();
+    expect(curriculumFacadeMock.loadCes).toHaveBeenLastCalledWith('castellano', '3º');
+
+    curriculumFacadeMock.curso.set('4º');
+    TestBed.flushEffects();
+    expect(curriculumFacadeMock.loadCes).toHaveBeenLastCalledWith('castellano', '4º');
+    expect(curriculumFacadeMock.loadEsoCes).not.toHaveBeenCalled();
   });
 
   it('should refresh history when the notifications list changes', () => {

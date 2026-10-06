@@ -110,6 +110,7 @@ export function toCreateProjectPayload(domain: CreateProjectPayload): CreateProj
   // Payload structure matches domain 1:1, just ensure types
   return {
     selectedRas: domain.selectedRas,
+    criteriosSeleccionados: domain.criteriosSeleccionados,
     methodology: domain.methodology,
     modules: domain.modules,
     tipoNivel: domain.tipoNivel,

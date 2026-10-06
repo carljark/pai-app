@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CurriculumSelectorComponent } from './curriculum-selector.component';
 import { CurriculumFacade } from '../../services/curriculum.facade';
+import { CriteriosFacade } from '../../services/criterios.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { AppFacade } from '../../../../app.facade';
 import { signal } from '@angular/core';
@@ -15,11 +16,15 @@ describe('CurriculumSelectorComponent', () => {
   let mockTrans: any;
   let mockProjects: any;
   let mockAppFacade: any;
+  let mockCriterios: any;
 
   beforeEach(async () => {
     mockTrans = {
       t: signal({
         removeTooltip: 'Quitar',
+        criteriaTitle: 'Criterios de evaluación',
+        selectAllCriteria: 'Seleccionar todos los criterios',
+        criteriaShort: 'criterios',
         matchingProjectsTitle: 'proyectos con esta selección',
         longGenerationNoticePlural: 'Muchos elementos seleccionados',
       }),
@@ -31,6 +36,14 @@ describe('CurriculumSelectorComponent', () => {
 
     mockAppFacade = {
       openProjectInNewWindow: vi.fn(),
+    };
+
+    mockCriterios = {
+      selectedCount: vi.fn().mockReturnValue(1),
+      allChecked: vi.fn().mockReturnValue(false),
+      isChecked: vi.fn().mockReturnValue(true),
+      toggle: vi.fn(),
+      toggleAll: vi.fn(),
     };
 
     mockFacade = {
@@ -48,12 +61,28 @@ describe('CurriculumSelectorComponent', () => {
       toggleRa: vi.fn(),
       getCategoryStyle: () => ({ bg: '#e8f4f8', text: '#2c3e50', icon: '' }),
       selectedItemsDetails: signal([
-        { subject: 'Ciencia', index: 1, shortDesc: 'RA1', fullDesc: 'RA1' },
+        {
+          subject: 'Ciencia',
+          index: 1,
+          shortDesc: 'RA1',
+          fullDesc: 'RA1',
+          key: 'RA1',
+          criteriosTotal: 0,
+        },
       ]),
       groupedSelectedItems: signal([
         {
           subject: 'Ciencia',
-          items: [{ subject: 'Ciencia', index: 1, shortDesc: 'RA1', fullDesc: 'RA1' }],
+          items: [
+            {
+              subject: 'Ciencia',
+              index: 1,
+              shortDesc: 'RA1',
+              fullDesc: 'RA1',
+              key: 'RA1',
+              criteriosTotal: 0,
+            },
+          ],
         },
       ]),
     };
@@ -64,6 +93,7 @@ describe('CurriculumSelectorComponent', () => {
         { provide: CurriculumFacade, useValue: mockFacade },
         { provide: ProjectsFacade, useValue: mockProjects },
         { provide: AppFacade, useValue: mockAppFacade },
+        { provide: CriteriosFacade, useValue: mockCriterios },
         { provide: TranslationService, useValue: mockTrans },
       ],
     }).compileComponents();
@@ -226,9 +256,9 @@ describe('CurriculumSelectorComponent', () => {
       { _id: 'm1', status: 'borrador', createdAt: new Date().toISOString(), modules: ['Modulo X'] },
     ]);
     (mockFacade.selectedItemsDetails as any).set([
-      { subject: 'S', index: 1, shortDesc: 'a', fullDesc: 'a' },
-      { subject: 'S', index: 2, shortDesc: 'b', fullDesc: 'b' },
-      { subject: 'S', index: 3, shortDesc: 'c', fullDesc: 'c' },
+      { subject: 'S', index: 1, shortDesc: 'a', fullDesc: 'a', key: 'a', criteriosTotal: 0 },
+      { subject: 'S', index: 2, shortDesc: 'b', fullDesc: 'b', key: 'b', criteriosTotal: 0 },
+      { subject: 'S', index: 3, shortDesc: 'c', fullDesc: 'c', key: 'c', criteriosTotal: 0 },
     ]);
     fixture.detectChanges();
 
@@ -237,5 +267,59 @@ describe('CurriculumSelectorComponent', () => {
       'Modulo X',
     );
     expect(compiled.querySelector('.generation-notice')).toBeTruthy();
+  });
+
+  describe('criterios de evaluación', () => {
+    const criterios = [
+      { id: '1.1', text: 'Primero' },
+      { id: '1.2', text: 'Segundo' },
+    ];
+
+    beforeEach(() => {
+      (mockFacade.groupedItems as any).set([
+        {
+          category: 'Música',
+          totalItems: 1,
+          items: [{ index: 1, text: 'CE música', value: 'Música · CE1. CE música', criterios }],
+        },
+      ]);
+      (mockFacade.selectedItemsDetails as any).set([
+        {
+          subject: 'Música',
+          index: 1,
+          shortDesc: 'CE música',
+          fullDesc: 'CE música',
+          key: 'Música · CE1. CE música',
+          criteriosTotal: 2,
+        },
+      ]);
+      (mockFacade.groupedSelectedItems as any).set([
+        { subject: 'Música', items: (mockFacade.selectedItemsDetails as any)() },
+      ]);
+      fixture.detectChanges();
+    });
+
+    it('should render the criteria of each CE and the selected count in the cart', () => {
+      const compiled = fixture.nativeElement as HTMLElement;
+      expect(compiled.querySelectorAll('.ce-criterios-list__item').length).toBe(2);
+      expect(compiled.querySelector('.selected-item__criterios')?.textContent).toContain(
+        '(1/2 criterios)',
+      );
+      expect(mockCriterios.selectedCount).toHaveBeenCalledWith('Música · CE1. CE música', 2);
+    });
+
+    it('should remove the CE from the cart using its selection value', () => {
+      const compiled = fixture.nativeElement as HTMLElement;
+      (compiled.querySelector('.selected-item__remove') as HTMLButtonElement).click();
+      expect(mockFacade.toggleRa).toHaveBeenCalledWith('Música · CE1. CE música');
+    });
+
+    it('should not render criteria for items without them', () => {
+      (mockFacade.groupedItems as any).set([
+        { category: 'FP', totalItems: 1, items: [{ index: 1, text: 'RA1' }] },
+      ]);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.querySelector('app-ce-criterios-list')).toBeNull();
+    });
   });
 });

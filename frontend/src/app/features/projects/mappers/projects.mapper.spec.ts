@@ -344,6 +344,7 @@ describe('Projects Mapper', () => {
         courseLevel: '1º',
         title: 'Test',
         extraInstructions: 'extra',
+        criteriosSeleccionados: [{ ce: 'CE1', ids: ['1.2'] }],
       };
       const result = toCreateProjectPayload(payload);
       expect(result).toEqual(payload);

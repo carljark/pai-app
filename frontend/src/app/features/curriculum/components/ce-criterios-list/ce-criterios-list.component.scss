@@ -1,0 +1,42 @@
+@use '../../../../../styles/variables' as variables;
+
+.ce-criterios-list {
+  margin: 0 0 12px 34px;
+  font-size: 0.9rem;
+}
+
+.ce-criterios-list__summary {
+  cursor: pointer;
+  color: variables.$color-primary;
+  font-weight: 600;
+  user-select: none;
+}
+
+.ce-criterios-list__all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ce-criterios-list__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.ce-criterios-list__label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.ce-criterios-list__id {
+  color: variables.$color-primary;
+}

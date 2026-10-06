@@ -67,7 +67,6 @@ export class AppFacade {
       if (user) {
         this.telemetry.startTracking();
         this.curriculum.loadRas(lang);
-        this.curriculum.loadCes(lang);
         untracked(() => {
           this.niveles.load();
           this.projects.loadHistory();
@@ -78,14 +77,18 @@ export class AppFacade {
     });
   }
 
-  /** Las CE de la ESO dependen del curso: se recargan al cambiar de nivel, curso o idioma. */
+  /** Las CE de la ESO y del PDC dependen del curso: se recargan al cambiar de nivel, curso o idioma. */
   private initEsoCurriculumEffect(): void {
     effect(() => {
       const user = this.auth.currentUser();
       const lang = this.layout.language();
       const curso = this.curriculum.curso();
-      if (user && this.curriculum.tipoNivel() === 'ESO_ORDINARIA') {
+      const tipoNivel = this.curriculum.tipoNivel();
+      if (!user) return;
+      if (tipoNivel === 'ESO_ORDINARIA') {
         untracked(() => this.curriculum.loadEsoCes(lang, curso));
+      } else if (!this.curriculum.usaRa()) {
+        untracked(() => this.curriculum.loadCes(lang, curso));
       }
     });
   }

@@ -1,4 +1,4 @@
-import { LearningOutcome, EvaluativeCriteria } from '../models/curriculum.model';
+import { LearningOutcome, EvaluativeCriteria, CriterioItem } from '../models/curriculum.model';
 import { normalizeTipoNivel } from '../../projects/models/project.model';
 
 /** Nivel educativo: un id del catálogo de niveles (`NivelesService`). */
@@ -7,7 +7,7 @@ export type TipoNivel = string;
 export interface GroupedCurriculumItem {
   category: string;
   /** `value` es el valor seleccionado cuando no coincide con el texto (CE de la ESO). */
-  items: { index: number; text: string; value?: string }[];
+  items: { index: number; text: string; value?: string; criterios?: CriterioItem[] }[];
   totalItems: number;
   moduleCode?: string;
 }
@@ -16,6 +16,7 @@ export interface ItemInfo {
   subject: string;
   index: number;
   text?: string;
+  criterios?: CriterioItem[];
 }
 
 function localizeRa(r: LearningOutcome, isCa: boolean): LearningOutcome {
@@ -88,13 +89,19 @@ export function sortGroupsByModuleOrder(
 }
 
 export function groupCes(list: EvaluativeCriteria[]): GroupedCurriculumItem[] {
-  const groups: Record<string, string[]> = {};
+  const groups: Record<string, GroupedCurriculumItem> = {};
   for (const ce of list) {
-    const groupName = `${ce.area || ce.subject} - ${ce.subject}`;
-    if (!groups[groupName]) groups[groupName] = [];
-    groups[groupName].push(ce.description);
+    const category = `${ce.area || ce.subject} - ${ce.subject}`;
+    const group = (groups[category] ??= { category, items: [], totalItems: 0 });
+    if (group.items.some((item) => item.text === ce.description)) continue;
+    group.items.push({
+      index: group.items.length + 1,
+      text: ce.description,
+      criterios: ce.criteriosDetalle,
+    });
+    group.totalItems = group.items.length;
   }
-  return Object.keys(groups).map((key) => ({ category: key, ...toIndexedItems(groups[key]) }));
+  return Object.values(groups);
 }
 
 export function buildItemLookup(groups: GroupedCurriculumItem[]): Map<string, ItemInfo> {
@@ -105,6 +112,7 @@ export function buildItemLookup(groups: GroupedCurriculumItem[]): Map<string, It
         subject: group.category,
         index: item.index,
         text: item.text,
+        criterios: item.criterios,
       });
     }
   }

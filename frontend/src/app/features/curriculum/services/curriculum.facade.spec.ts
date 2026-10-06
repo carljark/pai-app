@@ -65,9 +65,9 @@ describe('CurriculumFacade', () => {
 
   it('should load CEs', () => {
     const mockCEs: EvaluativeCriteria[] = [{ _id: '1', description: 'CE1', subject: 'Math' }];
-    facade.loadCes('es');
+    facade.loadCes('es', '3º');
 
-    const req = httpTestingController.expectOne('/api/ces?lang=es');
+    const req = httpTestingController.expectOne('/api/ces?lang=es&curso=3%C2%BA');
     expect(req.request.method).toBe('GET');
     req.flush(mockCEs);
 
@@ -478,8 +478,43 @@ describe('CurriculumFacade', () => {
           index: 1,
           shortDesc: 'Igual',
           fullDesc: 'Igual',
+          key: 'Matemáticas B · CE1. Igual',
+          criteriosTotal: 0,
         },
       ]);
+    });
+
+    it('should expose the criteria of the selected CE and its selection key in the summary', () => {
+      facade.tipoNivel.set('ESO_ORDINARIA');
+      facade.esoCes.set([
+        {
+          ...ESO_CES[0]!,
+          value: 'Mates · CE1. Desc',
+          criteriosDetalle: [
+            { id: '1.1', text: 'a' },
+            { id: '1.2', text: 'b' },
+          ],
+        },
+      ]);
+      expect(facade.groupedItems()[0]!.items[0]!.criterios).toHaveLength(2);
+      facade.toggleRa('Mates · CE1. Desc');
+      const [detail] = facade.selectedItemsDetails();
+      expect(detail!.key).toBe('Mates · CE1. Desc');
+      expect(detail!.criteriosTotal).toBe(2);
+    });
+
+    it('should expose the criteria of the PDC CE selected by their description', () => {
+      facade.tipoNivel.set('DIVERSIFICACION_CURRICULAR');
+      facade.ces.set([
+        {
+          _id: '1',
+          description: 'CE PDC',
+          subject: 'Mates',
+          criteriosDetalle: [{ id: '1.1', text: 'a' }],
+        },
+      ]);
+      facade.toggleRa('CE PDC');
+      expect(facade.selectedItemsDetails()[0]!.criteriosTotal).toBe(1);
     });
   });
 });

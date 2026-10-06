@@ -1,0 +1,31 @@
+<details class="ce-criterios-list">
+  <summary class="ce-criterios-list__summary">
+    {{ trans.t().criteriaTitle }} ({{ criterios.selectedCount(ceKey(), items().length) }}/{{
+      items().length
+    }})
+  </summary>
+  <label class="ce-criterios-list__all">
+    <input
+      type="checkbox"
+      [checked]="criterios.allChecked(ceKey(), items())"
+      (change)="criterios.toggleAll(ceKey(), items())"
+    />
+    {{ trans.t().selectAllCriteria }}
+  </label>
+  <ul class="ce-criterios-list__items">
+    @for (item of items(); track item.id) {
+      <li class="ce-criterios-list__item">
+        <label class="ce-criterios-list__label">
+          <input
+            type="checkbox"
+            [checked]="criterios.isChecked(ceKey(), item.id, items())"
+            (change)="criterios.toggle(ceKey(), item.id, items())"
+          />
+          <span class="ce-criterios-list__text">
+            <strong class="ce-criterios-list__id">{{ item.id }}</strong> {{ item.text }}
+          </span>
+        </label>
+      </li>
+    }
+  </ul>
+</details>

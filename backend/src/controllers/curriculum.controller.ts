@@ -3,6 +3,7 @@ import { RA } from '../models/RA';
 import { CE } from '../models/CE';
 import { NIVELES } from '../data/niveles';
 import { ESO_ORDINARIA, mapEsoCes } from '../services/eso-curriculum.service';
+import { criteriosDeCe } from '../services/criterios.service';
 
 const caToEsModules: Record<string, string> = {
   "Atenció a possibles clients": "Atención al cliente",
@@ -103,13 +104,13 @@ export const getRas = async (req: any, res: Response) => {
   }
 };
 
-function mapCe(c: any, lang: 'ca' | 'es') {
+function mapCe(c: any, lang: 'ca' | 'es', curso: string) {
   const subjectBase = c.subject.startsWith('Matemàtiques') ? 'Matemàtiques' : c.subject;
   const area = lang === 'ca' ? (esToCa[c.area] || c.area) : (caToEs[c.area] || c.area);
   const subject = lang === 'ca' ? (esToCa[subjectBase] || subjectBase) : (caToEs[subjectBase] || subjectBase);
   const description = lang === 'ca' && c.description_ca ? c.description_ca : (c.description_es || c.get('description'));
   const criterios = lang === 'ca' && c.criterios_ca ? c.criterios_ca : (c.criterios_es || c.get('criterios'));
-  return { area, subject, ce_id: c.ce_id, description, criterios };
+  return { area, subject, ce_id: c.ce_id, description, criterios, criteriosDetalle: criteriosDeCe(c, curso, lang) };
 }
 
 /**
@@ -124,7 +125,7 @@ export const getCes = async (req: any, res: Response) => {
       return res.json(mapEsoCes(docs, lang, String(req.query.curso || '1º')));
     }
     const ces = await CE.find({ tipoNivel: { $ne: ESO_ORDINARIA } });
-    return res.json(ces.map(c => mapCe(c, lang)));
+    return res.json(ces.map(c => mapCe(c, lang, String(req.query.curso || '3º'))));
   } catch (error) {
     return res.status(500).json({ error: "No se pudieron cargar las CEs" });
   }

@@ -23,6 +23,8 @@ const ProjectSchema = new mongoose.Schema({
   title: String,
   modules: [String],
   ras: [String],
+  /** Criterios de evaluación elegidos por CE (ESO y PDC); sin ellos se usan todos los del curso. */
+  criteriosSeleccionados: [{ _id: false, ce: String, ids: [String] }],
   methodology: String,
   /** Nivel educativo; los valores válidos salen del catálogo `data/niveles.ts`. */
   tipoNivel: { type: String, enum: NIVEL_IDS as string[], default: DEFAULT_TIPO_NIVEL },

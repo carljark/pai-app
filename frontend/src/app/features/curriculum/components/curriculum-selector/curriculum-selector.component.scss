@@ -259,3 +259,9 @@
     transform: rotate(360deg);
   }
 }
+
+.selected-item__criterios {
+  color: variables.$color-primary;
+  font-size: 0.85em;
+  white-space: nowrap;
+}

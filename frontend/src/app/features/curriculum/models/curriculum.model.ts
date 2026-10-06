@@ -1,3 +1,9 @@
+/** Criterio de evaluación de una CE, con su numeración oficial («1.1»). */
+export interface CriterioItem {
+  id: string;
+  text: string;
+}
+
 export interface EvaluativeCriteria {
   _id: string;
   description: string;
@@ -12,6 +18,8 @@ export interface EvaluativeCriteria {
   /** Valor único de selección: «Materia · CEn. Descripción». */
   value?: string;
   criterios?: string[];
+  /** Criterios del curso con su número oficial, en el idioma pedido. */
+  criteriosDetalle?: CriterioItem[];
 }
 
 export interface LearningOutcome {
@@ -33,6 +41,12 @@ export interface LearningOutcome {
   criterios?: string[];
   criterios_es?: string[];
   criterios_ca?: string[];
+}
+
+/** Criterios elegidos de una CE (`ce` es el valor con el que se selecciona la CE). */
+export interface CriterioSeleccionado {
+  ce: string;
+  ids: string[];
 }
 
 export interface CurriculumSelection {

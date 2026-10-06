@@ -114,6 +114,8 @@ export interface DirectoryUser {
 
 export interface CreateProjectPayload {
   selectedRas: string[];
+  /** Criterios elegidos cuando no se usan todos los de una CE (ESO y PDC). */
+  criteriosSeleccionados?: { ce: string; ids: string[] }[];
   methodology: string;
   modules: string[];
   tipoNivel: ProjectType;

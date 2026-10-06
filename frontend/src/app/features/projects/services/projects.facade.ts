@@ -8,6 +8,7 @@ import { Injectable, inject, signal, computed, effect } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { AuthFacade } from '../../auth/services/auth.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { CriteriosFacade } from '../../curriculum/services/criterios.facade';
 import { NivelesService } from '../../../services/niveles.service';
 import { LearningOutcome } from '../../curriculum/models/curriculum.model';
 import { ProjectsService } from './projects.service';
@@ -39,6 +40,7 @@ import {
 export class ProjectsFacade {
   private projectsService = inject(ProjectsService);
   private curriculumFacade = inject(CurriculumFacade);
+  private criteriosFacade = inject(CriteriosFacade);
   private niveles = inject(NivelesService);
   private authFacade = inject(AuthFacade);
 
@@ -293,6 +295,11 @@ export class ProjectsFacade {
     );
   }
 
+  private criteriosPayload(): CreateProjectPayload['criteriosSeleccionados'] {
+    const criterios = this.criteriosFacade.payload();
+    return criterios.length > 0 ? criterios : undefined;
+  }
+
   private buildCreatePayload(
     language: string,
     tipoNivel: ProjectType,
@@ -305,6 +312,7 @@ export class ProjectsFacade {
     const collaborators = this.selectedCollaborators();
     return {
       selectedRas,
+      criteriosSeleccionados: this.criteriosPayload(),
       methodology: this.methodology(),
       modules,
       tipoNivel,

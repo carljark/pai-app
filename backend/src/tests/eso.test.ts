@@ -227,7 +227,7 @@ describe('Generación de proyectos de ESO', () => {
       description_es: eso!.description_es, criterios_es: [{ criterio_id: '3º ESO - 1.1', description: 'Criterio PDC' }]
     });
     const res = await generate({ tipoNivel: 'DIVERSIFICACION_CURRICULAR', selectedRas: [eso!.description_es], courseLevel: '3º' });
-    expect(res.body.project.aiPrompt).toContain('3º ESO - 1.1: Criterio PDC');
+    expect(res.body.project.aiPrompt).toContain('1.1: Criterio PDC');
     expect(res.body.project.aiInstruction).not.toContain('REGLAS OBLIGATORIAS PARA LA ESO');
   });
 

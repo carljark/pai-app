@@ -6,6 +6,7 @@ import {
 } from '@angular/common/http/testing';
 import { ProjectsFacade } from './projects.facade';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
+import { CriteriosFacade } from '../../curriculum/services/criterios.facade';
 import { AuthFacade } from '../../auth/services/auth.facade';
 import { signal } from '@angular/core';
 import { Project, ProjectStatus, ProjectType } from '../models/project.model';
@@ -219,6 +220,27 @@ describe('ProjectsFacade', () => {
     expect(req.request.body.aiProvider).toBe('openrouter');
     expect(req.request.body.title).toBe('Math');
     flushGenerateSuccess(httpMock, req);
+  });
+
+  it('should send the partial criteria choice and omit it when every criterion is used', () => {
+    mockCurriculumFacade.tipoNivel.mockReturnValue('DIVERSIFICACION_CURRICULAR');
+    mockCurriculumFacade.curso.mockReturnValue('3º');
+    mockCurriculumFacade.selectedRas.mockReturnValue(['CE1']);
+    mockCurriculumFacade.ces.mockReturnValue([{ description: 'CE1', subject: 'Math' }]);
+    const criterios = TestBed.inject(CriteriosFacade);
+    const payload = vi.spyOn(criterios, 'payload');
+
+    payload.mockReturnValue([{ ce: 'CE1', ids: ['1.2'] }]);
+    facade.generateProject('castellano').subscribe();
+    const first = httpMock.expectOne('/api/projects/generate');
+    expect(first.request.body.criteriosSeleccionados).toEqual([{ ce: 'CE1', ids: ['1.2'] }]);
+    flushGenerateSuccess(httpMock, first);
+
+    payload.mockReturnValue([]);
+    facade.generateProject('castellano').subscribe();
+    const second = httpMock.expectOne('/api/projects/generate');
+    expect(second.request.body.criteriosSeleccionados).toBeUndefined();
+    flushGenerateSuccess(httpMock, second);
   });
 
   it('should generate project (CFGM_ESTETICA) and set historyTab to its level', () => {

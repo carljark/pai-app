@@ -6,6 +6,7 @@ import {
   sortGroupsByModuleOrder,
 } from './curriculum-grouping';
 import { LearningOutcome } from '../models/curriculum.model';
+import { buildItemLookup, groupCes } from './curriculum-grouping';
 
 const group = (category: string, moduleCode?: string): GroupedCurriculumItem => ({
   category,
@@ -73,5 +74,28 @@ describe('curriculum-grouping', () => {
     const [bare] = filterRasForNivel([{ description: 'Sola' }], 'FP_BASICA', null, true);
     expect(bare.subject).toBeUndefined();
     expect(groupRasByModule([bare])[0].category).toBe('');
+  });
+});
+
+describe('groupCes with criteria', () => {
+  const crit = [{ id: '1.1', text: 'a' }];
+
+  it('keeps the criteria of each CE and skips repeated descriptions', () => {
+    const groups = groupCes([
+      { _id: '1', description: 'CE1', subject: 'Mates', area: 'Ámbito', criteriosDetalle: crit },
+      { _id: '2', description: 'CE1', subject: 'Mates', area: 'Ámbito' },
+      { _id: '3', description: 'CE2', subject: 'Mates', area: 'Ámbito' },
+    ]);
+    expect(groups).toHaveLength(1);
+    expect(groups[0]!.totalItems).toBe(2);
+    expect(groups[0]!.items[0]).toEqual({ index: 1, text: 'CE1', criterios: crit });
+    expect(groups[0]!.items[1]!.index).toBe(2);
+  });
+
+  it('exposes the criteria in the item lookup', () => {
+    const lookup = buildItemLookup(
+      groupCes([{ _id: '1', description: 'CE1', subject: 'M', criteriosDetalle: crit }]),
+    );
+    expect(lookup.get('CE1')!.criterios).toEqual(crit);
   });
 });

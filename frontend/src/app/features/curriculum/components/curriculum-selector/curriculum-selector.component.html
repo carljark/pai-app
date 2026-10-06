@@ -24,6 +24,12 @@
               {{ item.text }}
             </span>
           </label>
+          @if (item.criterios?.length) {
+            <app-ce-criterios-list
+              [ceKey]="item.value ?? item.text"
+              [items]="item.criterios ?? []"
+            />
+          }
         }
       </div>
     </details>
@@ -83,15 +89,23 @@
                 {{ group.subject }} ({{ group.items.length }})
               </div>
               <ul class="selected-items">
-                @for (item of group.items; track item.fullDesc) {
+                @for (item of group.items; track item.key) {
                   <li class="selected-item">
                     <div>
                       <strong class="selected-item__index">{{ item.index }}.</strong>
                       {{ item.shortDesc }}
+                      @if (item.criteriosTotal) {
+                        <span class="selected-item__criterios"
+                          >({{ criterios.selectedCount(item.key, item.criteriosTotal) }}/{{
+                            item.criteriosTotal
+                          }}
+                          {{ trans.t().criteriaShort }})</span
+                        >
+                      }
                     </div>
                     <button
                       class="selected-item__remove"
-                      (click)="facade.toggleRa(item.fullDesc)"
+                      (click)="facade.toggleRa(item.key)"
                       [title]="trans.t().removeTooltip"
                     >
                       <svg

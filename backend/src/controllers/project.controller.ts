@@ -14,6 +14,9 @@ import { buildContentUpdate } from '../services/projectContent.service';
 import { resolveProvider } from "../data/ai-models";
 import { DEFAULT_TIPO_NIVEL, defaultCurso, findNivel, nombrePrompt } from '../data/niveles';
 import { ESO_ORDINARIA, buildEsoInstruction, describeEsoCeForPrompt, findEsoCe } from '../services/eso-curriculum.service';
+import {
+  COBERTURA_CRITERIOS, CriteriosError, describePdcCeForPrompt, findCeDoc, parseSeleccion, validarSeleccion,
+} from '../services/criterios.service';
 
 // Endpoint para el SSE
 export const streamUpdates = (req: any, res: Response) => {
@@ -168,6 +171,36 @@ export const buildApprovedProjectsContext = async (criteria: {
   return '\n--- PROYECTOS APROBADOS DE LA PLATAFORMA (mismo nivel y curso, más recientes) ---\n' + JSON.stringify(payload);
 };
 
+/** Bloque del prompt de un RA de FP con sus criterios del curso. */
+const describeRaSelection = (raDoc: any, selectedStr: string, curso: string, language?: string): string => {
+  let text = describeRaForPrompt(raDoc, selectedStr, language);
+  const rawList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0)
+    ? raDoc.criterios_ca
+    : (raDoc.criterios_es && raDoc.criterios_es.length > 0 ? raDoc.criterios_es : []);
+  const filteredList = filterCriteriaByCourse(rawList, curso);
+  if (filteredList.length > 0) {
+    text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${filteredList.map((c: any) => `  ${formatCriterion(c)}`).join('\n')}`;
+  }
+  return text;
+};
+
+interface SelectionContext {
+  selectedStr: string; allRas: any[]; allCes: any[]; tipoNivel: string;
+  effectiveCourse: string; language?: string; ids: string[] | undefined;
+}
+
+/** Bloque del prompt de un elemento curricular seleccionado (CE de ESO, RA de FP o CE del PDC). */
+const describeSelection = (ctx: SelectionContext): string => {
+  const { selectedStr, allRas, allCes, tipoNivel, effectiveCourse, language, ids } = ctx;
+  const esoCe = tipoNivel === ESO_ORDINARIA ? findEsoCe(allCes, selectedStr) : undefined;
+  if (esoCe) return describeEsoCeForPrompt(esoCe, effectiveCourse, language, ids);
+  const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
+  if (raDoc) return describeRaSelection(raDoc, selectedStr, effectiveCourse, language);
+  const ceDoc = findCeDoc(allCes, selectedStr, tipoNivel);
+  if (ceDoc) return describePdcCeForPrompt(ceDoc, selectedStr, effectiveCourse, language, ids);
+  return `- ${selectedStr}`;
+};
+
 export const generateProject = async (req: any, res: Response) => {
   try {
     const userId = req.user?._id;
@@ -266,6 +299,8 @@ Esta propuesta debe especificar de manera detallada:
     // Determinación del curso efectivo y descripción
     const effectiveCourse = (courseLevel && typeof courseLevel === 'string' && courseLevel.trim()) ? courseLevel.trim() : defaultCurso(tipoNivel);
     const targetCourseDescription = describeTargetCourse(tipoNivel, effectiveCourse, language);
+    const seleccion = parseSeleccion(req.body.criteriosSeleccionados);
+    const criteriosPorCe = validarSeleccion(seleccion, selectedRas || [], allCes, tipoNivel, effectiveCourse);
     const esoInstruction = tipoNivel === ESO_ORDINARIA ? buildEsoInstruction(effectiveCourse) : '';
 
     const baseInstruction = `Eres un experto en diseño instruccional y metodologías activas (ABP, Aps).
@@ -316,41 +351,11 @@ Genera todo el contenido en el idioma: ${language || 'castellano'}.
 ${schoolContextStr} ${intefExamplesContext} ${approvedProjectsContext}${coincidenciaInstructions}${fpbMatchesContext}${fpbCaInstruction}${esoInstruction}`;
 
     // Enriquecer RAs y CEs filtrando criterios según el curso correspondiente
-    const enrichedRas = (selectedRas || []).map((selectedStr: string) => {
-      const esoCe = tipoNivel === ESO_ORDINARIA ? findEsoCe(allCes, selectedStr) : undefined;
-      if (esoCe) return describeEsoCeForPrompt(esoCe, effectiveCourse, language);
-      const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
-      if (raDoc) {
-        let text = describeRaForPrompt(raDoc, selectedStr, language);
-        const rawList = (language === 'catalan' && raDoc.criterios_ca && raDoc.criterios_ca.length > 0)
-          ? raDoc.criterios_ca
-          : (raDoc.criterios_es && raDoc.criterios_es.length > 0 ? raDoc.criterios_es : []);
-        const filteredList = filterCriteriaByCourse(rawList, effectiveCourse);
-        if (filteredList.length > 0) {
-          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${filteredList.map((c: any) => `  ${formatCriterion(c)}`).join('\n')}`;
-        }
-        return text;
-      }
-      const ceDoc = allCes.find(c => c.tipoNivel !== ESO_ORDINARIA
-        && (c.description_es === selectedStr || c.description_ca === selectedStr || c.ce_id === selectedStr));
-      if (ceDoc) {
-        const subjectName = ceDoc.subject || ceDoc.area;
-        const ceCode = ceDoc.ce_id ? ` ${ceDoc.ce_id}` : '';
-        let text = `- Asignatura: ${subjectName}\n  Competencia Específica${ceCode} (numeración oficial, no la cambies): ${selectedStr}`;
-        const rawList = (language === 'catalan' && ceDoc.criterios_ca && ceDoc.criterios_ca.length > 0)
-          ? ceDoc.criterios_ca
-          : (ceDoc.criterios_es && ceDoc.criterios_es.length > 0 ? ceDoc.criterios_es : (ceDoc.criterios || []));
-        const filteredList = filterCriteriaByCourse(rawList, effectiveCourse);
-        if (filteredList.length > 0) {
-          text += `\n  CRITERIOS DE EVALUACIÓN OFICIALES:\n  ${filteredList.map((c: any) => `  ${formatCriterion(c)}`).join('\n')}`;
-        }
-        return text;
-      }
-      return `- ${selectedStr}`;
-    });
+    const enrichedRas = (selectedRas || []).map((selectedStr: string) =>
+      describeSelection({ selectedStr, allRas, allCes, tipoNivel, effectiveCourse, language, ids: criteriosPorCe.get(selectedStr) }));
 
     let userPrompt = `Diseña la propuesta EXCLUSIVAMENTE para alumnado de ${targetCourseDescription}, integrando OBLIGATORIAMENTE todos y cada uno de los siguientes elementos curriculares:
-${enrichedRas.join('\n\n')}
+${enrichedRas.join('\n\n')}${criteriosPorCe.size > 0 ? COBERTURA_CRITERIOS : ''}
 
 INSTRUCCIÓN OBLIGATORIA DE CURSO Y NIVEL:
 En el documento generado, incluye obligatoriamente un apartado o epígrafe inicial titulado "Identidad del Proyecto" donde indiques explícitamente y con total exactitud que el curso al que va dirigido es "${targetCourseDescription}". Está TERMINANTEMENTE PROHIBIDO modificar o sugerir otro curso distinto (por ejemplo, si se indica 3º de ESO, NO utilices 4º de ESO bajo ningún concepto).`;
@@ -370,6 +375,7 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       title: title || defaultTitle,
       modules,
       ras: selectedRas,
+      criteriosSeleccionados: seleccion,
       methodology,
       tipoNivel: tipoNivel || DEFAULT_TIPO_NIVEL,
       courseLevel: effectiveCourse,
@@ -406,7 +412,7 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       project: savedProject
     });
   } catch (error: any) {
-    res.status(500).json({ error: error.message });
+    res.status(error instanceof CriteriosError ? 400 : 500).json({ error: error.message });
   }
 };
 

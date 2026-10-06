@@ -107,3 +107,31 @@ La migración `23_ingest_ces_eso_ordinaria` carga los JSON en la colección `ces
 - **Producto final** en un contexto cercano al alumnado.
 
 Cada CE seleccionada se describe con su materia, su número oficial, sus descriptores y los criterios del curso. Las reglas no se aplican a los proyectos del PDC ni de FP.
+
+## Selección de criterios de evaluación (ESO y PDC)
+
+Cada CE de la ESO ordinaria y del PDC se despliega en el selector con sus criterios del curso. El docente puede marcar criterios sueltos o usar «Seleccionar todos los criterios». El proyecto se genera a partir de los criterios elegidos (plan 003).
+
+### Backend (`services/criterios.service.ts`)
+
+- `GET /api/ces` devuelve en cada CE `criteriosDetalle: [{ id, text }]` (`id` oficial, como «1.1») del curso pedido. El PDC admite ahora `curso` (por defecto 3.º).
+- Los criterios del PDC siguen en su formato heredado (`ces_eso_bilingual.json`, con el curso dentro del identificador: «3º ESO - 1.1», «1.1 (4º ESO)», «CA 1.1» o «1.1»). `criteriosDeCe` los normaliza al vuelo a `{ id, text }` y filtra por curso; no hay migración de datos.
+- `POST /api/projects/generate` acepta `criteriosSeleccionados: [{ ce, ids[] }]`, donde `ce` es el valor con el que se selecciona la CE (el de `selectedRas`). Se rechaza con **400**: una lista mal formada, una CE que no está en `selectedRas`, una CE sin criterios y un id que no existe en esa CE para el curso.
+- Sin `criteriosSeleccionados` (peticiones antiguas, FP, CE completas) se usan todos los criterios del curso, como antes.
+- Con selección, el bloque de la CE se titula «CRITERIOS DE EVALUACIÓN SELECCIONADOS» con solo esos criterios, y el prompt añade `COBERTURA_CRITERIOS`: todos deben cubrirse y evaluarse con su numeración oficial, y no se incluyen otros de esas CE.
+- `Project.criteriosSeleccionados` guarda la elección. El prompt ya se guarda en el proyecto, así que el reintento conserva los criterios.
+
+### Frontend
+
+- `CriteriosFacade` guarda solo las **elecciones parciales** por CE. Una CE seleccionada sin entrada tiene todos sus criterios marcados, así que seleccionar una CE equivale a «seleccionar todos». Marcar un criterio selecciona la CE; desmarcar el último la deselecciona; las entradas de CE deseleccionadas se descartan solas.
+- `CeCriteriosListComponent` (`ce-criterios-list`) pinta la lista dentro de cada CE. El carrito muestra «(n/m criterios)».
+- La petición solo incluye `criteriosSeleccionados` cuando alguna CE tiene una elección parcial.
+- Las CE del PDC se recargan al cambiar de curso (sus criterios dependen de él), igual que las de la ESO ordinaria.
+
+### Contraste con la web de la CAIB (6 de octubre de 2026)
+
+Se descargaron los 53 documentos (PDF y Word) de <https://www.caib.es/sites/lomloe/ca/eso_materies/> y se comprobó que los textos en catalán aparecen literalmente en ellos:
+- **ESO ordinaria:** los 922 textos (189 CE y 733 criterios) coinciden.
+- **PDC (`ces_eso_bilingual.json`):** 255 de 256 coinciden. La única diferencia es la coma de Física y Química 4.º, criterio 3.1 («interpretar, organitzar»), que el original de la CAIB escribe con punto («interpretar. organitzar»); se mantiene la coma corregida.
+
+No hizo falta ninguna migración de datos. La web de la CAIB devuelve muchos 502, por lo que la descarga necesitó varios reintentos.

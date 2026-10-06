@@ -119,9 +119,12 @@ export class CurriculumFacade {
       .subscribe((res) => this.ras.set(res));
   }
 
-  loadCes(language: string) {
+  /** CE del PDC; sus criterios dependen del curso (3.º o 4.º). */
+  loadCes(language: string, curso: string) {
     this.http
-      .get<EvaluativeCriteria[]>(`${this.apiUrl}/ces?lang=${language}`)
+      .get<EvaluativeCriteria[]>(
+        `${this.apiUrl}/ces?lang=${language}&curso=${encodeURIComponent(curso)}`,
+      )
       .subscribe((res) => this.ces.set(res));
   }
 
@@ -186,6 +189,8 @@ export class CurriculumFacade {
         index: info.index,
         shortDesc: shortenDescription(text),
         fullDesc: text,
+        key: desc,
+        criteriosTotal: info.criterios?.length ?? 0,
       };
     });
   });

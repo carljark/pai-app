@@ -1,10 +1,10 @@
 # Planes de cambio
 
-Planes escritos con la skill `proponer-cambio` antes de implementar una tarea grande. Estados: _Propuesto_, _Aprobado_, _Descartado_ e _Implementado (tarea NNN)_; la tarea correspondiente se documenta en `tareas/`.
+Planes escritos con la skill `proponer-cambio` antes de implementar una tarea grande. Estados: _Propuesto_, _Implementado (tarea 200)_, _Descartado_ e _Implementado (tarea NNN)_; la tarea correspondiente se documenta en `tareas/`.
 
 ## Planes
 
-- **[003 — Selección de criterios de evaluación en la ESO y el PDC](003_plan_seleccion_criterios_evaluacion_eso.md)** · _Aprobado_  
+- **[003 — Selección de criterios de evaluación en la ESO y el PDC](003_plan_seleccion_criterios_evaluacion_eso.md)** · _Implementado (tarea 200)_  
   Cada CE de la ESO y del PDC muestra sus criterios, con «seleccionar todos»; el proyecto se genera a partir de los criterios elegidos, en castellano y catalán.
 
 - **[002 — Niveles educativos desde el catálogo](002_plan_niveles_desde_el_catalogo.md)** · _Implementado (tarea 198)_  

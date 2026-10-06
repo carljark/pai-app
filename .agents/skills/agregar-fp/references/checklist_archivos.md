@@ -1,6 +1,6 @@
-# Checklist Integral para la Incorporación de un CFGM (Bilingüe ES/CA)
+# Checklist Integral para la Incorporación de un Ciclo de FP (CFGM / CFGS, Bilingüe ES/CA)
 
-Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niveles, datos curriculares, migraciones y mapa intermodular. El frontend lo toma todo del catálogo (`GET /api/niveles`) y no se modifica. Utiliza este documento como referencia exacta de qué modificar y cómo, asegurando la plena paridad entre **Castellano** y **Catalán**.
+Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niveles, datos curriculares y migraciones. El **mapa intermodular es opcional** (por defecto no se hace; las secciones marcadas «solo con mapa» se aplican únicamente si se pide). El frontend lo toma todo del catálogo (`GET /api/niveles`) y no se modifica. Utiliza este documento como referencia exacta de qué modificar y cómo, asegurando la plena paridad entre **Castellano** y **Catalán**.
 
 ---
 
@@ -8,9 +8,9 @@ Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niv
 
 ### 1.1. Catálogo de niveles `niveles.ts`
 - **Archivo:** `backend/src/data/niveles.ts` (fuente única de niveles; ver `documentation/niveles_educativos_y_catalogo.md`).
-- **Modificación:** Añadir la entrada del ciclo con `id`, `etapa`, nombres oficiales ES/CA (TodoFP/BOE y CAIB/BOIB), `palabrasClave`, `unidad: 'RA'`, sus `cursos` con los `modulos` de cada uno en orden oficial y sus `mapas` (pestaña, curso y selección inicial). Con eso:
+- **Modificación:** Añadir la entrada del ciclo con `id`, `etapa`, nombres oficiales ES/CA (TodoFP/BOE y CAIB/BOIB), `palabrasClave`, `unidad: 'RA'`, sus `cursos` con los `modulos` de cada uno en orden oficial y, solo con mapa, sus `mapas` (pestaña, curso y selección inicial). Con eso:
   - `Project.tipoNivel` y `RA.tipoNivel` aceptan el nuevo valor (se validan contra `NIVEL_IDS`);
-  - `MapaModule.tab` y `GET /api/mapa-intermodular?tab=` aceptan sus pestañas (`MAPA_TABS`);
+  - con mapa, `MapaModule.tab` y `GET /api/mapa-intermodular?tab=` aceptan sus pestañas (`MAPA_TABS`);
   - `describeTargetCourse` usa el nombre oficial en el prompt (o `nombrePrompt_es/ca`);
   - el generador, el historial, «Mis proyectos», inicio, Taller, exportación y el mapa muestran el ciclo, sus cursos y sus módulos.
 - **Test:** `backend/src/tests/niveles-catalogo.test.ts` comprueba que los `modulos` cubren exactamente los RA del ciclo y que todas las pestañas y niveles de las migraciones están en el catálogo; añade el dataset del ciclo a su lista.
@@ -20,8 +20,8 @@ Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niv
 - **Sin cambios para el nombre del ciclo:** `describeTargetCourse` toma la denominación oficial ES/CA del catálogo (paso 1.1) según el idioma del proyecto. Solo hay que tocar el controlador si el ciclo necesita reglas de prompt propias, que irán en un helper aparte.
 
 ### 1.3. Archivo de Datos de RAs (Bilingüe Obligatorio)
-- **Archivo:** `backend/src/data/ras_cfgm_<slug>.data.ts`
-- **Estructura:** Array exportado `CFGM_<SLUG>_RAS_DATA: any[]` con objetos conteniendo campos separados para ambos idiomas:
+- **Archivo:** `backend/src/data/ras_<etapa>_<slug>.data.ts` (`<etapa>` = `cfgm` o `cfgs`)
+- **Estructura:** Array exportado `<ETAPA>_<SLUG>_RAS_DATA: any[]` con objetos conteniendo campos separados para ambos idiomas:
   ```typescript
   {
     id: 'RA1',
@@ -74,11 +74,11 @@ Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niv
 
 ---
 
-## 2. Frontend (sin cambios) y mapa intermodular
+## 2. Frontend (sin cambios) y mapa intermodular (solo con mapa)
 
 El frontend no lleva listas de niveles, claves de traducción por nivel ni RA de respaldo: no se toca. Solo se añade el ciclo al catálogo de prueba `frontend/src/app/testing/niveles.mock.ts` si algún spec lo necesita.
 
-### 2.5. Dataset del Mapa Intermodular (`mapa_cfgm_<slug>.json` y migración MongoDB)
+### 2.5. (Solo con mapa) Dataset del Mapa Intermodular (`mapa_cfgm_<slug>.json` y migración MongoDB)
 - Debe generarse como JSON en `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` combinando los archivos `*_ES_*.md` y `*_CA_*.md`.
 - Ingestarse en MongoDB mediante la migración correspondiente en la colección `mapamodules`.
 - **REGLAS CRÍTICAS DE CONEXIONES Y ACTIVIDADES:**
@@ -91,14 +91,14 @@ El frontend no lleva listas de niveles, claves de traducción por nivel ni RA de
   - Conexiones: `title_es`, `title_ca`, `targetModuleName_es`, `targetModuleName_ca`, `targetRaText_es`, `targetRaText_ca`, `justification_es`, `justification_ca`.
   - Actividades: `title_es`/`title_ca`, `motivatingFactor_es`/`motivatingFactor_ca`, `description_es`/`description_ca`, `evidence_es`/`evidence_ca`, `diversitySupport_es`/`diversitySupport_ca`.
 
-### 2.6. Vista del Mapa Intermodular
+### 2.6. (Solo con mapa) Vista del Mapa Intermodular
 - Sin cambios en la vista: el selector de ciclo, los botones de curso, el título y los textos («Retos CFGS», «Mòduls CFGM») salen de `mapas` y `etapa` del catálogo.
 
 ---
 
 ## 3. Blindaje de Tests, Cobertura y Limpieza de Consola
 
-1. **Simular la elección en el DOM:** En `mapa-intermodular-view.component.spec.ts`, elegir el ciclo en el desplegable y el curso con sus botones:
+1. **(Solo con mapa) Simular la elección en el DOM:** En `mapa-intermodular-view.component.spec.ts`, elegir el ciclo en el desplegable y el curso con sus botones:
    ```typescript
    select.value = 'CFGM_<SLUG>';
    select.dispatchEvent(new Event('change'));
@@ -107,7 +107,9 @@ El frontend no lleva listas de niveles, claves de traducción por nivel ni RA de
    fixture.detectChanges();
    expect(component.facade.activeTab()).toBe('CFGM_<SLUG>_2');
    ```
-2. **Validación Bilingüe:** Verificar que al conmutar `layout.language.set('catalan')` y `layout.language.set('castellano')`, el DOM renderiza los textos en catalán y castellano respectivamente.
+2. **(Solo con mapa) Validación Bilingüe:** Verificar que al conmutar `layout.language.set('catalan')` y `layout.language.set('castellano')`, el DOM renderiza los textos en catalán y castellano respectivamente.
 3. **Supresión Limpia de Errores en Tests:**
    - En pruebas que fuercen errores (`catch` / `throwError`), interceptar siempre `console.error` con `vi.spyOn(console, 'error')` para no ensuciar la salida `stderr` de Vitest.
-   - En `app.spec.ts`: Proporcionar `mockMapaFacade` para evitar peticiones HTTP accidentales durante las pruebas del componente raíz `App`.
+   - En `app.spec.ts` (solo con mapa): Proporcionar `mockMapaFacade` para evitar peticiones HTTP accidentales durante las pruebas del componente raíz `App`.
+
+4. **Siempre:** test de datos de backend con paridad ES/CA (mismos RA y criterios, textos distintos entre idiomas) y numeración consecutiva; el ciclo en `niveles-catalogo.test.ts`.

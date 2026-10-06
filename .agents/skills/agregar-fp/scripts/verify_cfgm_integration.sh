@@ -1,15 +1,20 @@
 #!/bin/bash
-# Script de validación para comprobar la correcta integración bilingüe de un CFGM
+# Script de validación para comprobar la correcta integración bilingüe de un ciclo (CFGM o CFGS)
+# El mapa intermodular es opcional: solo se valida si el ciclo lo declara en el catálogo,
+# o siempre con --con-mapa.
 set -e
 
 if [ -z "$1" ]; then
-  echo "Uso: ./verify_cfgm_integration.sh <TIPO_NIVEL>"
+  echo "Uso: ./verify_cfgm_integration.sh <TIPO_NIVEL> [--con-mapa]"
   echo "Ejemplo: ./verify_cfgm_integration.sh CFGM_PELUQUERIA"
+  echo "         ./verify_cfgm_integration.sh CFGS_INTEGRACION_SOCIAL"
   exit 1
 fi
 
 TIPO_NIVEL="$1"
-SLUG=$(echo "$TIPO_NIVEL" | sed 's/CFGM_//' | tr '[:upper:]' '[:lower:]')
+CON_MAPA="${2:-}"
+ETAPA=$(echo "$TIPO_NIVEL" | cut -d_ -f1 | tr '[:upper:]' '[:lower:]')
+SLUG=$(echo "$TIPO_NIVEL" | sed -E 's/^(CFGM|CFGS)_//' | tr '[:upper:]' '[:lower:]')
 ROOT_DIR="$(cd "$(dirname "$0")/../../../.." && pwd)"
 
 echo "🔍 Verificando presencia e integridad bilingüe de $TIPO_NIVEL (slug: $SLUG)..."
@@ -25,8 +30,9 @@ if grep -q "id: '$TIPO_NIVEL'" "$CATALOGO"; then
   fi
   if grep -A 30 "id: '$TIPO_NIVEL'" "$CATALOGO" | grep -q "mapas:"; then
     echo "  ✅ El nivel declara sus pestañas del mapa intermodular"
+    CON_MAPA="--con-mapa"
   else
-    echo "  ⚠️ ADVERTENCIA: $TIPO_NIVEL no declara 'mapas' (no aparecerá en el mapa intermodular)"
+    echo "  ℹ️ $TIPO_NIVEL no declara 'mapas': ciclo sin mapa intermodular (válido)"
   fi
 else
   echo "  ❌ ERROR: Falta la entrada '$TIPO_NIVEL' en backend/src/data/niveles.ts"
@@ -41,9 +47,9 @@ else
 fi
 
 # 3. Integridad Bilingüe de Datos Curriculares (evitar la trampa del fallback monolingüe)
-DATA_FILE="$ROOT_DIR/backend/src/data/ras_cfgm_${SLUG}.data.ts"
+DATA_FILE="$ROOT_DIR/backend/src/data/ras_${ETAPA}_${SLUG}.data.ts"
 if [ -f "$DATA_FILE" ]; then
-  echo "  ✅ Archivo de datos curriculares existe: ras_cfgm_${SLUG}.data.ts"
+  echo "  ✅ Archivo de datos curriculares existe: ras_${ETAPA}_${SLUG}.data.ts"
   # Comprobar que module_es y module_ca no son idénticos
   SAMPLE_CHECK=$(python3 -c "
 import json, re
@@ -61,9 +67,11 @@ else:
 fi
 
 # 4. Dataset del Mapa Intermodular y Validación de Actividades (Cero Conexiones Vacías)
-MAPA_FILE="$ROOT_DIR/backend/src/data/mapa-intermodular/mapa_cfgm_${SLUG}.json"
-if [ -f "$MAPA_FILE" ]; then
-  echo "  ✅ Dataset JSON del Mapa Intermodular presente: mapa_cfgm_${SLUG}.json"
+MAPA_FILE="$ROOT_DIR/backend/src/data/mapa-intermodular/mapa_${ETAPA}_${SLUG}.json"
+if [ "$CON_MAPA" != "--con-mapa" ]; then
+  echo "  ℹ️ Sin mapa intermodular: se omite la validación del dataset del mapa"
+elif [ -f "$MAPA_FILE" ]; then
+  echo "  ✅ Dataset JSON del Mapa Intermodular presente: mapa_${ETAPA}_${SLUG}.json"
   python3 -c "
 import json, sys
 with open('$MAPA_FILE', 'r', encoding='utf-8') as f:
@@ -98,7 +106,7 @@ if avg_conns > 25:
     print(f'  ⚠️ ADVERTENCIA: La media de conexiones por RA ({avg_conns}) es inusualmente alta.')
 "
 else
-  echo "  ❌ ERROR: Falta archivo de dataset backend/src/data/mapa-intermodular/mapa_cfgm_${SLUG}.json"
+  echo "  ❌ ERROR: Falta archivo de dataset backend/src/data/mapa-intermodular/mapa_${ETAPA}_${SLUG}.json"
 fi
 
 echo ""

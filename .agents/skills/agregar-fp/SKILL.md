@@ -1,12 +1,15 @@
 ---
 name: agregar-fp
 description: >-
-  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Formación Profesional (tanto Grado Básico / FP Básica como Grado Medio / CFGM) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y carpeta de archivos curriculares). Gestiona la integración end-to-end en backend, frontend, mapa intermodular con bidireccionalidad completa, gestión de 1.er y 2.º curso, control estricto de conexiones (todas con actividad, sin conexiones vacías, 6-15 por RA), deduplicación rigurosa, migraciones, traducciones y suite de tests con cobertura >= 90%.
+  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Formación Profesional (Grado Básico / FP Básica, Grado Medio / CFGM y Grado Superior / CFGS) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y fuentes oficiales). Gestiona la integración end-to-end en backend (catálogo de niveles, RA y criterios bilingües ES/CA, migraciones), la gestión de 1.er y 2.º curso y la suite de tests con cobertura >= 90%. El mapa intermodular es OPCIONAL: por defecto los ciclos se incorporan SIN mapa (se añade más adelante o bajo demanda; entonces rigen sus reglas de conexiones y actividades).
 ---
 
-# Skill: Incorporación de Ciclos Formativos de Formación Profesional (Grado Básico y Grado Medio)
+# Skill: Incorporación de Ciclos Formativos de Formación Profesional (Grado Básico, Medio y Superior)
 
-Esta skill permite integrar cualquier nuevo ciclo de Formación Profesional —tanto de **Grado Básico (FP Básica / FPB)** como de **Grado Medio (CFGM)**— en Plappin de forma sistemática, bilingüe estricta (Castellano / Catalán) y sin fricción, aprovechando el estándar validado en **FP Básica**, **CFGM Estética y Belleza** y **CFGM Peluquería y Cosmética Capilar**.
+Esta skill permite integrar cualquier nuevo ciclo de Formación Profesional —de **Grado Básico (FP Básica / FPB)**, **Grado Medio (CFGM)** o **Grado Superior (CFGS)**— en Plappin de forma sistemática, bilingüe estricta (Castellano / Catalán) y sin fricción, aprovechando el estándar validado en **FP Básica**, **CFGM Estética y Belleza**, **CFGM Peluquería y Cosmética Capilar** y **CFGS Educación Infantil**.
+
+> [!IMPORTANT]
+> **El mapa intermodular es opcional y, por defecto, NO se hace.** Un ciclo se considera incorporado cuando tiene su entrada en el catálogo, sus RA y criterios bilingües ES/CA en MongoDB y los tests en verde. Los pasos y secciones marcados **«solo con mapa»** (Paso 5, parte del Paso 7 y los prompts de las secciones 4 y 5) se aplican únicamente si el usuario pide expresamente el mapa del ciclo, ahora o más adelante. Sin mapa, la entrada del catálogo no lleva `mapas` y el ciclo no aparece en la pantalla del mapa.
 
 ---
 
@@ -30,14 +33,16 @@ Para iniciar la integración, el asistente solo necesita:
 1. **Nivel del Ciclo:**
    - **Grado Básico (FP Básica / FPB):** `tipoNivel = 'FP_BASICA'` (o subtipos específicos).
    - **Grado Medio (CFGM):** `tipoNivel = 'CFGM_<SLUG_MAYUSCULAS>'` (ej. `CFGM_PELUQUERIA`, `CFGM_ESTETICA`, `CFGM_COCINA`).
+   - **Grado Superior (CFGS):** `tipoNivel = 'CFGS_<SLUG_MAYUSCULAS>'` y `etapa: 'CFGS'` (ej. `CFGS_EDUCACION_INFANTIL`, `CFGS_INTEGRACION_SOCIAL`).
 2. **Denominaciones oficiales del ciclo:**
    - **En castellano:** Denominación oficial estatal del BOE / TodoFP (ej. *"Peluquería y Cosmética Capilar"*, *"Cocina y Gastronomía"*, *"Servicios Administrativos"*).
    - **En catalán:** Denominación autonómica oficial de FP Illes Balears / CAIB (ej. *"Perruqueria i Cosmètica Capil·lar"*, *"Cuina i Gastronomia"*, *"Serveis Administratius"*).
 3. **Identificador / Slug:** Una palabra clave corta en minúsculas (ej. `peluqueria`, `cocina`, `automocion`, `servicios_admin`).
-4. **Carpeta de archivos curriculares:** Carpeta del ciclo formativo (ej. `add_mid_grades/Grado medio <nombre>/` o `FPB/`). Debe contener:
-   - Archivos de RAs y Criterios oficiales del BOE en castellano (`lista_RA_CE_..._ES_...md` o `RA_CE_..._curso_ES.md`).
-   - Archivos o traducciones normativas en catalán balear (`lista_RA_CE_..._CA_...md`).
-   - Carpeta del Mapa Intermodular con los archivos pareados: `mapa_intermodular_*_ES_*.md` y `mapa_intermodular_*_CA_*.md`.
+4. **Fuentes curriculares:** una carpeta del ciclo (ej. `add_mid_grades/Grado medio <nombre>/` o `FPB/`) o, si no hay carpeta, los documentos oficiales descargados de BOE/TodoFP (castellano) y BOIB/CAIB (catalán). Deben aportar:
+   - RAs y Criterios oficiales en castellano (`lista_RA_CE_..._ES_...md` o `RA_CE_..._curso_ES.md`, o el Real Decreto del título).
+   - RAs y Criterios en catalán balear (`lista_RA_CE_..._CA_...md` o el decreto autonómico del BOIB).
+   - **Solo con mapa:** carpeta del Mapa Intermodular con los archivos pareados `mapa_intermodular_*_ES_*.md` y `mapa_intermodular_*_CA_*.md`.
+5. **Distribución por cursos y módulos:** códigos de módulo y su orden por curso en Illes Balears (portal de FP de la CAIB).
 
 > [!IMPORTANT]
 > **Regla de Oro Bilingüe:** NUNCA introduzcas texto en catalán en los campos `_es` (como `module_es`, `description_es` o `criterios_es`) ni texto en castellano en los campos `_ca`. Ambos idiomas deben convivir de forma completa, rigurosa y simétrica.
@@ -53,14 +58,15 @@ Ejecutar el script asistente para generar los archivos base y calcular automáti
 python3 .agents/skills/agregar-fp/scripts/scaffold_cfgm.py \
   --slug <slug> \
   --name-es "<Nombre en Castellano>" \
-  --name-ca "<Nombre en Catalán>"
+  --name-ca "<Nombre en Catalán>" \
+  [--etapa cfgs]      # grado superior (por defecto cfgm) \
+  [--con-mapa]        # solo si se pide el mapa intermodular
 ```
 
 Archivos generados (todos en el backend; el frontend no lleva datos curriculares ni listas de niveles):
-- `backend/src/data/ras_cfgm_<slug>.data.ts`
-- `backend/src/migrations/0X_ingest_cfgm_<slug>_ras.ts`
-- `backend/src/data/mapa-intermodular/mapa_cfgm_<slug>.json` (y `mapa_cfgm_<slug>_2.json` si tiene 2.º curso)
-- `backend/src/migrations/0X_ingest_mapa_intermodular.ts` (ingesta en MongoDB collection `mapamodules`)
+- `backend/src/data/ras_<etapa>_<slug>.data.ts` (`<etapa>` = `cfgm` o `cfgs`)
+- `backend/src/migrations/NN_ingest_<etapa>_<slug>_ras.ts`
+- **Solo con `--con-mapa`:** `backend/src/data/mapa-intermodular/mapa_<etapa>_<slug>.json` (y `_2.json` si tiene 2.º curso) y su migración de ingesta en la colección `mapamodules`.
 
 ---
 
@@ -84,7 +90,14 @@ Archivos generados (todos en el backend; el frontend no lleva datos curriculares
      criterios_ca: [ "a) S'ha...", "b) S'han..." ]
    }
    ```
-3. **Validación de Criterios Completos:** Verificar minuciosamente que no se omitan letras de criterios de evaluación (ej. `h`, `i`, etc.), asegurando coherencia total con las referencias cruzadas del mapa intermodular.
+3. **Validación de Criterios Completos:** Verificar minuciosamente que no se omitan letras de criterios de evaluación (ej. `h`, `i`, etc.). Si el ciclo tiene mapa, comprobar además la coherencia con sus referencias cruzadas.
+4. **Extracción determinista, sin IA para el contenido (como en la ESO, tarea 197):** extraer los textos de los documentos oficiales con un script temporal (en el espacio temporal de la sesión, eliminado después) y validarlos automáticamente:
+   - paridad ES/CA: mismos módulos, mismos RA y mismo número y orden de criterios;
+   - numeración consecutiva de RA (`RA1…RAn`) y de criterios (`a), b), c)…`);
+   - **cada texto aparece literalmente en el documento oficial de su idioma**;
+   - todos los `moduleCode` coinciden con los módulos del título y con los cursos que declarará el catálogo.
+   La IA solo interviene para resolver erratas del BOE/BOIB (anótalas en la tarea) o para traducir al catalán balear cuando no exista versión oficial; en ese caso, avisar al usuario.
+5. **Fuentes que fallan:** la web de la CAIB devuelve 502 con frecuencia; reintentar la descarga (en segundo plano, solo los ficheros fallidos) antes de dar una fuente por no disponible. Si no hay versión catalana oficial, no copiar el castellano en `_ca`: pararse y avisar.
 
 ---
 
@@ -94,7 +107,7 @@ Todo el frontend (generador, historial, «Mis proyectos», inicio, Taller, expor
 ```typescript
 {
   id: 'CFGM_<SLUG>',
-  etapa: 'CFGM',               // 'FPB' | 'CFGM' | 'CFGS' | 'ESO'
+  etapa: 'CFGM',               // 'FPB' | 'CFGM' | 'CFGS' | 'ESO' (CFGS para grado superior)
   comunidad: 'IB',
   nombre_es: 'CFGM <Nombre en Castellano>',   // TodoFP/BOE
   nombre_ca: 'CFGM <Nombre en Catalán>',      // CAIB/BOIB
@@ -105,15 +118,16 @@ Todo el frontend (generador, historial, «Mis proyectos», inicio, Taller, expor
     { curso: '1º', modulos: ['cod1', 'cod2', ...] }, // orden oficial del 1.er curso
     { curso: '2º', modulos: ['codA', 'codB', ...] }, // orden oficial del 2.º curso
   ],
-  mapas: [
-    { tab: 'CFGM_<SLUG>', curso: '1º', moduleCode: 'cod1', raId: 'cod1_RA1' },
-    { tab: 'CFGM_<SLUG>_2', curso: '2º', moduleCode: 'codA', raId: 'codA_RA1' },
-  ],
+  // Solo con mapa intermodular (por defecto se omite):
+  // mapas: [
+  //   { tab: 'CFGM_<SLUG>', curso: '1º', moduleCode: 'cod1', raId: 'cod1_RA1' },
+  //   { tab: 'CFGM_<SLUG>_2', curso: '2º', moduleCode: 'codA', raId: 'codA_RA1' },
+  // ],
 }
 ```
 
 - `modulos` filtra y ordena los módulos de cada curso en el selector curricular y en el proyecto generado; debe cubrir exactamente los `moduleCode` de los RA del ciclo (lo comprueba `backend/src/tests/niveles-catalogo.test.ts`).
-- `mapas` declara las pestañas del mapa intermodular (`MapaModule.tab`) y su selección inicial. Sin `curso`, el mapa abarca todo el ciclo.
+- `mapas` es opcional: declara las pestañas del mapa intermodular (`MapaModule.tab`) y su selección inicial. **Un ciclo sin `mapas` es válido**: no aparece en el mapa y todo lo demás funciona. Sin `curso`, el mapa abarca todo el ciclo.
 - `nombrePrompt_es/ca` solo hace falta si el prompt debe nombrar el nivel de otra forma que `nombre_es/ca`.
 - Con la entrada, el backend valida `Project.tipoNivel`, `RA.tipoNivel`, `MapaModule.tab` y el `tab` de `GET /api/mapa-intermodular`, y `describeTargetCourse` usa el nombre oficial en el prompt.
 - Las reglas de prompt propias de un nivel (como la Carpeta de Aprendizaje de FP Básica) son lógica: van en un helper del backend, no en el catálogo.
@@ -127,7 +141,10 @@ Si durante la incorporación aparece un `tipoNivel` escrito a mano en `frontend/
 
 ---
 
-### Paso 5: Semilla y Vista del Mapa Intermodular (Reglas de Cantidad, Calidad y Deduplicación)
+### Paso 5 (solo con mapa): Semilla y Vista del Mapa Intermodular (Reglas de Cantidad, Calidad y Deduplicación)
+
+> [!NOTE]
+> **Omitir este paso entero si no se ha pedido el mapa del ciclo.** Puede hacerse más adelante o bajo demanda, sobre un ciclo ya incorporado: basta añadir `mapas` al catálogo, el JSON y su migración.
 
 > [!CAUTION]
 > **REGLAS CRÍTICAS DE CONEXIONES Y ACTIVIDADES:**
@@ -154,7 +171,7 @@ Sin cambios: las pestañas del historial y los filtros de «Mis proyectos» son 
 ### Paso 7: Blindaje de Tests, Cobertura y Supresión de `stderr`
 Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_cobertura.md).
 
-1. En `mapa-intermodular-view.component.spec.ts` (con el catálogo de prueba de `frontend/src/app/testing/niveles.mock.ts`, al que se añade el ciclo):
+1. **Solo con mapa.** En `mapa-intermodular-view.component.spec.ts` (con el catálogo de prueba de `frontend/src/app/testing/niveles.mock.ts`, al que se añade el ciclo):
    - **OBLIGATORIO:** Simular la elección en el DOM: el ciclo en el desplegable y el curso con sus botones:
      ```typescript
      const select = el.querySelector('.mapa-tabs__select') as HTMLSelectElement;
@@ -167,10 +184,11 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
    - Probar conmutación de idioma en el header (`headerExpanded.set(true)`):
      - En Castellano: comprobar que contiene el nombre en castellano.
      - En Catalán: cambiar a `layout.language.set('catalan')` y comprobar el nombre en catalán.
-2. **Supresión Limpia de Errores en Tests:**
+2. **Supresión Limpia de Errores en Tests** (siempre que se añadan tests con errores esperados):
    - Si un test prueba deliberadamente una captura de error (`catch` con `throwError`), interceptar siempre `console.error` con `vi.spyOn(console, 'error').mockImplementation(() => {})` y restaurarlo al finalizar (`consoleSpy.mockRestore()`), evitando ensuciar la salida estándar de errores (`stderr`) de Vitest.
-   - En `app.spec.ts`: Asegurar que `MapaIntermodularFacade` esté registrado en los `providers` del `TestBed` con su mock para evitar llamadas HTTP accidentales en segundo plano.
-3. Los specs de generador, historial y «Mis proyectos» ya cubren un nivel ficticio añadido solo al catálogo (`NIVEL_FICTICIO`); basta con añadir el ciclo a `NIVELES_MOCK` y, en el backend, comprobar que `niveles-catalogo.test.ts` sigue en verde (módulos por curso y pestañas del mapa).
+   - En `app.spec.ts` (solo con mapa): Asegurar que `MapaIntermodularFacade` esté registrado en los `providers` del `TestBed` con su mock para evitar llamadas HTTP accidentales en segundo plano.
+3. Los specs de generador, historial y «Mis proyectos» ya cubren un nivel ficticio añadido solo al catálogo (`NIVEL_FICTICIO`); basta con añadir el ciclo a `NIVELES_MOCK` y, en el backend, comprobar que `niveles-catalogo.test.ts` sigue en verde (módulos por curso y, con mapa, pestañas del mapa).
+4. Backend: añadir el ciclo al test del catálogo y un test de datos que compruebe paridad ES/CA (mismos RA y criterios, textos distintos entre idiomas) y numeración consecutiva.
 
 ---
 
@@ -178,20 +196,21 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
 1. Ejecutar el script de verificación integral o la suite completa:
    - Frontend: `npm test` con umbral de funciones en HTML >= 80% (o 100%) y branch coverage >= 90%.
    - Backend: `npm test`.
-2. Documentar la tarea en `tareas/` siguiendo la regla global de `GEMINI.md` con el siguiente número secuencial (ej. `12X_incorporacion_cfgm_<slug>.md`).
+2. Si el ciclo no tiene mapa, `./scripts/verify_cfgm_integration.sh <TIPO_NIVEL>` lo detecta (no declara `mapas`) y omite su validación; con mapa, añadir `--con-mapa`.
+3. Documentar la tarea en `tareas/` siguiendo `AGENTS.md` §2 con el siguiente número secuencial (ej. `NNN_incorporacion_<etapa>_<slug>.md`), indicando si el ciclo tiene o no mapa.
 
 ---
 
-## 4. Prompt para la Generación de Conexiones y Actividades del Mapa Intermodular
+## 4. Prompt para la Generación de Conexiones y Actividades del Mapa Intermodular (solo con mapa)
 
-Cuando se encargue a la IA o a un subagente generar los documentos curriculares markdown del mapa intermodular a partir del currículo oficial, se debe utilizar exactamente la siguiente instrucción directriz:
+Solo si se ha pedido el mapa del ciclo. Cuando se encargue a la IA o a un subagente generar los documentos curriculares markdown del mapa intermodular a partir del currículo oficial, se debe utilizar exactamente la siguiente instrucción directriz:
 
 ```text
 Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema curricular, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). 
 
 REGLAS ESTRICTAS DE CANTIDAD Y CALIDAD:
 1. Para cada RA, propón entre 6 y 15 conexiones intermodulares relevantes (media de 8 a 12 por RA).
-2. Cada conexión DEBE incluir obligatoriamente su correspondiente propuesta de actividad formativa innovadora (metodologías activas: proyectos, retos, problemas, servicio). NUNCA generes conexiones vacías o sin actividad.
+2. Cada conexión DEBE incluir obligatoriamente al menos tres propuestas de actividad formativa innovadoras (como en CFGM Estética) (metodologías activas: proyectos, retos, problemas, servicio). NUNCA generes conexiones vacías o sin actividad.
 3. Las actividades deben ser ÚNICAS y diferenciadas. No repitas la misma actividad con diferente código de criterio.
 4. En cada actividad no se pueden contemplar más de tres CE externos, aparte del propio del módulo.
 5. Se han de especificar las medidas DUA adaptadas a cada actividad y evidencias evaluables.
@@ -203,9 +222,11 @@ REGLAS ESTRICTAS DE CANTIDAD Y CALIDAD:
 
 ## 5. Plantilla de Prompt para Delegar la Integración Completa al Subagente `fp-implementor`
 
+Plantilla base (sin mapa). Si se pide el mapa, añadir al final las reglas de mapa de la sección 4 y los requisitos marcados «solo con mapa».
+
 ```text
-Implementa el ciclo formativo <Nivel: Grado Básico / Grado Medio> <Nombre en Castellano> (<Nombre en Catalán>) con slug '<slug>' y tipoNivel '<TIPO_NIVEL>'.
-Sigue estrictamente la skill en .agents/skills/agregar-fp/SKILL.md y la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md.
+Implementa el ciclo formativo <Nivel: Grado Básico / Grado Medio / Grado Superior> <Nombre en Castellano> (<Nombre en Catalán>) con slug '<slug>' y tipoNivel '<TIPO_NIVEL>'.
+Sigue estrictamente la skill en .agents/skills/agregar-fp/SKILL.md (y, solo si hay mapa, la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md).
 Los archivos fuente se encuentran en: <ruta_carpeta>.
 
 Fuentes oficiales de contraste:
@@ -216,12 +237,10 @@ REQUISITOS BILINGÜES Y TÉCNICOS ESTRICTOS:
 1. Extrae los nombres, descripciones y criterios oficiales en castellano del BOE/TodoFP para los campos _es.
 2. Extrae o traduce al catalán balear oficial de FP CAIB para los campos _ca. Nunca mezcles ambos idiomas.
 3. Asegura el mapeo reactivo isCa en curriculum.facade.ts y la condición de idioma en targetCourseDescription en project.controller.ts.
-4. Genera el dataset del mapa intermodular en backend/src/data/mapa-intermodular/mapa_<slug>.json (y _2.json si tiene 2º curso) para ingesta en MongoDB.
-5. CERO CONEXIONES VACÍAS: Cada conexión debe tener al menos una actividad formativa (activities.length >= 1). No crees conexiones con activities: [].
-6. CANTIDAD EQUILIBRADA DE ACTIVIDADES: Entre 6 y 15 conexiones por RA (300 a 600 conexiones totales por curso). Deduplica las actividades por título.
-7. Si hay 1.er y 2.º curso, separa los módulos adecuadamente en el generador y genera pestañas independientes en el mapa intermodular.
-8. Recuerda simular el click() en el DOM para el nuevo tab en mapa-intermodular-view.component.spec.ts para mantener el 100% de cobertura en plantillas.
-9. Silencia stderr en los tests espiando console.error en pruebas de error, y registra mockMapaFacade en app.spec.ts.
+4. NO generes el mapa intermodular (ni su JSON, ni su migración, ni `mapas` en el catálogo) salvo que se te pida expresamente. Aplica una extracción determinista de los RA y criterios y valida que cada texto aparece literalmente en la fuente oficial de su idioma.
+5. Si hay 1.er y 2.º curso, separa los módulos por curso en `cursos[].modulos` del catálogo.
+6. Silencia stderr en los tests espiando console.error en pruebas de error.
+7. Solo con mapa: genera backend/src/data/mapa-intermodular/mapa_<etapa>_<slug>.json (y _2.json), cero conexiones vacías, 6-15 conexiones por RA con al menos 3 actividades, simula el click() del nuevo tab en mapa-intermodular-view.component.spec.ts y registra mockMapaFacade en app.spec.ts.
 
 Al finalizar, ejecuta la suite de tests de frontend y backend, y documenta la tarea en tareas/.
 ```

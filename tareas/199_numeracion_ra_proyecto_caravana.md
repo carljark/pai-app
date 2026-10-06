@@ -53,5 +53,7 @@ El usuario indicó que el apartado 2 (Concreció curricular) estaba bien, pero e
   - estado `borrador`;
   - 0 etiquetas con el formato antiguo.
 - La web responde 200 (`https://plappin.duckdns.org/`).
-- No se ejecutaron las suites de tests: no hay cambios de código, solo `.gitignore`.
+- No hay cambios de código. Aun así, el hook de pre-push ejecutó las suites completas y todo pasó:
+  - backend: 283 tests;
+  - frontend: lint, 745 tests (1 omitido) y comprobaciones de cobertura y zoneless.
 - Scripts y exportaciones temporales borrados del espacio temporal; también se borró la copia del JSON en el EC2 y en el contenedor.

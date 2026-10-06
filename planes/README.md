@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[003 — Selección de criterios de evaluación en la ESO y el PDC](003_plan_seleccion_criterios_evaluacion_eso.md)** · _Aprobado_  
+  Cada CE de la ESO y del PDC muestra sus criterios, con «seleccionar todos»; el proyecto se genera a partir de los criterios elegidos, en castellano y catalán.
+
 - **[002 — Niveles educativos desde el catálogo](002_plan_niveles_desde_el_catalogo.md)** · _Implementado (tarea 198)_  
   Historial, filtros, cursos, orden de módulos, mapa intermodular, prompt y validaciones salen del catálogo de niveles; se eliminan los 600 KB de RA de respaldo del bundle del frontend.
 

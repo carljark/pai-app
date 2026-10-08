@@ -72,7 +72,20 @@ Crear el mapa intermodular de la ESO a partir del documento del IES Cap de Lleva
   - Los archivos nuevos están al 100 %.
 - `npx ngc -p tsconfig.app.json --noEmit` y `npx eslint` sobre los archivos tocados: sin errores.
 - En el backend, `tsc --noEmit` no es representativo (el proyecto no resuelve las extensiones de los imports relativos con su configuración), así que no se usó como criterio.
-- Revisión visual: no se pudo hacer en local porque Docker no estaba arrancado. Se hará en producción tras el despliegue (ver abajo).
+- Despliegue en producción con `./scripts/deploy-prod.sh`:
+  - copia de seguridad `pai_db_20261008_153811.archive.gz`;
+  - commit `e30c162`;
+  - migración `25_ingest_afinidades_eso` completada.
+- `GET /api/afinidades-eso` en producción:
+  - ESO_1: 12 materias, 21 fichas.
+  - ESO_2: 15 materias, 29 fichas.
+  - ESO_3: 17 materias, 37 fichas.
+  - ESO_4: 18 materias, 38 fichas.
+  - Ningún criterio queda sin texto oficial ES/CA. Cada materia tiene al menos 3 fichas (4 en 4.º).
+  - El mapa de FP (`tab=FPB`) sigue respondiendo 200.
+- **Revisión visual pendiente:**
+  - en local Docker no estaba arrancado;
+  - en producción la interfaz exige iniciar sesión y no se usaron credenciales sin autorización del usuario.
 
 ## Desviaciones respecto al plan
 

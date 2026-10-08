@@ -8,7 +8,10 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { signal } from '@angular/core';
 import { FPB_MODULES_SEED } from '../../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { loadNivelesMock } from '../../../../testing/niveles.mock';
+import { loadNivelesMock, NIVELES_MOCK } from '../../../../testing/niveles.mock';
+import { AfinidadesEsoService } from '../../services/afinidades-eso.service';
+import { AFINIDADES_1, NIVEL_AFINIDADES } from '../../../../testing/afinidades.mock';
+import { of } from 'rxjs';
 
 describe('MapaIntermodularViewComponent', () => {
   let component: MapaIntermodularViewComponent;
@@ -1049,5 +1052,33 @@ describe('MapaIntermodularViewComponent', () => {
 
     const accordions = fixture.nativeElement.querySelector('.mapa-vertical-accordions');
     expect(accordions).not.toBeNull();
+  });
+  it('muestra el mapa de afinidades y no los pasos de FP en una pestaña de formato afinidades', async () => {
+    const getAfinidades = vi.spyOn(TestBed.inject(AfinidadesEsoService), 'getAfinidades');
+    getAfinidades.mockReturnValue(of(AFINIDADES_1));
+    loadNivelesMock([...NIVELES_MOCK, { ...NIVEL_AFINIDADES, id: 'ESO_AFINIDADES' }]);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(component.isAfinidades()).toBe(false);
+    expect(el.querySelector('app-mapa-header')).toBeTruthy();
+    expect(el.querySelector('app-afinidades-eso-view')).toBeNull();
+
+    await component.facade.setTab('ESO_1');
+    fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(component.isAfinidades()).toBe(true);
+    expect(el.querySelector('app-afinidades-eso-view')).toBeTruthy();
+    expect(getAfinidades).toHaveBeenCalledWith('ESO_1');
+    expect(el.querySelector('app-mapa-header')).toBeNull();
+    expect(el.querySelector('app-modulo-list')).toBeNull();
+    expect(el.querySelector('app-ra-detail')).toBeNull();
+    expect(el.querySelector('app-connections-list')).toBeNull();
+    expect(el.querySelectorAll('app-afinidad-card').length).toBe(2);
+
+    await component.facade.setTab('FPB');
+    fixture.detectChanges();
+    expect(el.querySelector('app-afinidades-eso-view')).toBeNull();
+    expect(el.querySelector('app-mapa-header')).toBeTruthy();
   });
 });

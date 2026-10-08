@@ -1,6 +1,8 @@
 <app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)"> </app-mapa-tabs>
 
-@if (!facade.isLoadingSeed()) {
+@if (isAfinidades()) {
+  <app-afinidades-eso-view [tab]="facade.activeTab()" />
+} @else if (!facade.isLoadingSeed()) {
   <app-mapa-header
     [headerExpanded]="headerExpanded()"
     [activeTab]="facade.activeTab()"

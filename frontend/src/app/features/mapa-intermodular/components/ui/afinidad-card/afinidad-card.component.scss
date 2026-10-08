@@ -1,0 +1,179 @@
+@use '../../../../../../styles/variables' as variables;
+
+.afinidad-card {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-4;
+  padding: variables.$spacing-4 variables.$spacing-5;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-surface;
+  box-shadow: variables.$shadow-sm;
+}
+
+.afinidad-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-2;
+}
+
+.afinidad-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: variables.$spacing-2;
+  font-size: variables.$font-size-xs;
+}
+
+.afinidad-card__curso,
+.afinidad-card__opcion,
+.afinidad-card__origen {
+  padding: 2px variables.$spacing-2;
+  border-radius: variables.$border-radius-full;
+  font-weight: variables.$font-weight-medium;
+}
+
+.afinidad-card__curso {
+  background: variables.$color-primary;
+  color: variables.$color-surface;
+}
+
+.afinidad-card__opcion {
+  background: variables.$color-surface-alt;
+  color: variables.$color-text-muted;
+}
+
+.afinidad-card__origen {
+  background: variables.$color-info-bg;
+  color: variables.$color-info;
+}
+
+.afinidad-card__origen--ampliacion {
+  background: variables.$color-warning-bg;
+  color: variables.$color-warning;
+}
+
+.afinidad-card__materias {
+  margin: 0;
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-main;
+}
+
+.afinidad-card__materia {
+  font-weight: variables.$font-weight-semibold;
+}
+
+.afinidad-card__mas {
+  margin: 0 variables.$spacing-1;
+  color: variables.$color-text-light;
+}
+
+.afinidad-card__ambito {
+  margin: 0;
+  font-size: variables.$font-size-lg;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-primary-dark;
+}
+
+.afinidad-card__ambito-label {
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-medium;
+  color: variables.$color-text-muted;
+}
+
+.afinidad-card__tabla {
+  display: grid;
+  grid-template-columns: repeat(var(--afinidad-cols, 3), minmax(0, 1fr));
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+  overflow: hidden;
+}
+
+.afinidad-card__th,
+.afinidad-card__td {
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border-bottom: 1px solid variables.$color-border;
+  font-size: variables.$font-size-sm;
+}
+
+.afinidad-card__th {
+  background: variables.$color-primary-light;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-primary-dark;
+}
+
+.afinidad-card__td {
+  color: variables.$color-text-main;
+}
+
+.afinidad-card__td--relacion {
+  background: variables.$color-surface-alt;
+  font-style: italic;
+}
+
+.afinidad-card__criterio {
+  margin-bottom: variables.$spacing-1;
+}
+
+.afinidad-card__criterio-id {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-primary;
+}
+
+.afinidad-card__criterio-texto {
+  margin: variables.$spacing-1 0 variables.$spacing-2;
+  padding-left: variables.$spacing-2;
+  border-left: 2px solid variables.$color-primary;
+  color: variables.$color-text-muted;
+}
+
+.afinidad-card__resumen {
+  margin: 0;
+}
+
+.afinidad-card__subtitulo {
+  margin: 0 0 variables.$spacing-2;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-text-main;
+}
+
+.afinidad-card__saber {
+  margin: 0 0 variables.$spacing-1;
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-main;
+}
+
+.afinidad-card__conceptos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: variables.$spacing-2;
+}
+
+.afinidad-card__concepto {
+  padding: 2px variables.$spacing-2;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-full;
+  font-size: variables.$font-size-xs;
+  color: variables.$color-text-muted;
+}
+
+@media (max-width: variables.$bp-md) {
+  .afinidad-card__tabla {
+    grid-template-columns: 1fr;
+  }
+
+  .afinidad-card__th {
+    display: none;
+  }
+
+  .afinidad-card__td[data-materia]::before {
+    content: attr(data-materia);
+    display: block;
+    font-size: variables.$font-size-xs;
+    font-weight: variables.$font-weight-semibold;
+    color: variables.$color-text-muted;
+  }
+}

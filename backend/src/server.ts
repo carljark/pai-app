@@ -10,6 +10,7 @@ import telemetryRoutes from './routes/telemetry.routes';
 import notificationRoutes from './routes/notification.routes';
 import feedbackRoutes from './routes/feedback.routes';
 import mapaRoutes from './routes/mapa.routes';
+import afinidadesRoutes from './routes/afinidades.routes';
 import aiRoutes from './routes/ai.routes';
 import userRoutes from './routes/user.routes';
 
@@ -41,6 +42,7 @@ if (process.env.NODE_ENV !== 'test') {
 // Rutas Públicas
 app.use('/api/auth', authRoutes);
 app.use('/api/mapa-intermodular', mapaRoutes);
+app.use('/api/afinidades-eso', afinidadesRoutes);
 app.use('/api/ai', authMiddleware, aiRoutes);
 app.use('/api/users', authMiddleware, userRoutes);
 

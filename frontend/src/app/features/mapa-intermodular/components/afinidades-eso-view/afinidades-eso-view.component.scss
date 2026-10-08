@@ -1,0 +1,117 @@
+@use '../../../../../styles/variables' as variables;
+
+.afinidades-eso {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-4;
+  padding: variables.$spacing-4 0;
+}
+
+.afinidades-eso__intro {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-1;
+}
+
+.afinidades-eso__titulo {
+  margin: 0;
+  font-size: variables.$font-size-xl;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-primary-dark;
+}
+
+.afinidades-eso__descripcion {
+  margin: 0;
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-muted;
+}
+
+.afinidades-eso__layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+  gap: variables.$spacing-5;
+  align-items: start;
+}
+
+.afinidades-eso__materias {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-1;
+  position: sticky;
+  top: variables.$spacing-4;
+}
+
+.afinidades-eso__subtitulo {
+  margin: 0 0 variables.$spacing-2;
+  font-size: variables.$font-size-base;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-text-main;
+}
+
+.afinidades-eso__materia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: variables.$spacing-2;
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-surface;
+  font-size: variables.$font-size-sm;
+  text-align: left;
+  color: variables.$color-text-main;
+  cursor: pointer;
+
+  &:hover {
+    border-color: variables.$color-primary;
+  }
+}
+
+.afinidades-eso__materia--activa {
+  border-color: variables.$color-primary;
+  background: variables.$color-primary-light;
+  font-weight: variables.$font-weight-semibold;
+}
+
+.afinidades-eso__materia-total {
+  min-width: 1.5rem;
+  padding: 0 variables.$spacing-1;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-surface-alt;
+  font-size: variables.$font-size-xs;
+  text-align: center;
+  color: variables.$color-text-muted;
+}
+
+.afinidades-eso__fichas {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-4;
+  min-width: 0;
+}
+
+.afinidades-eso__estado {
+  padding: variables.$spacing-4;
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-muted;
+}
+
+.afinidades-eso__estado--error {
+  color: variables.$color-danger;
+}
+
+@media (max-width: variables.$bp-md) {
+  .afinidades-eso__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .afinidades-eso__materias {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .afinidades-eso__subtitulo {
+    width: 100%;
+  }
+}

@@ -20,7 +20,14 @@ export interface MapaNivel {
   tab: string;
   /** Curso que cubre el mapa; sin curso, el mapa abarca todo el ciclo. */
   curso?: string;
+  /**
+   * Formato del mapa: `modulos` (FP: módulos, RA, conexiones y actividades; por defecto) o
+   * `afinidades` (ESO: fichas de afinidad entre materias, sin actividades).
+   */
+  formato?: 'modulos' | 'afinidades';
+  /** Módulo (o materia, en las afinidades) seleccionado al abrir el mapa. */
   moduleCode: string;
+  /** RA seleccionado al abrir el mapa; vacío en las afinidades. */
   raId: string;
 }
 
@@ -135,6 +142,13 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '3º', edad: '14-15 años' },
       { curso: '4º', edad: '15-16 años' },
     ],
+    // Afinidades curriculares por curso (documento del IES Cap de Llevant, ampliado).
+    mapas: [
+      { tab: 'ESO_1', curso: '1º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },
+      { tab: 'ESO_2', curso: '2º', formato: 'afinidades', moduleCode: 'educacion_fisica', raId: '' },
+      { tab: 'ESO_3', curso: '3º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },
+      { tab: 'ESO_4', curso: '4º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },
+    ],
   },
   {
     // Programa de Diversificación Curricular (3.º y 4.º de ESO).
@@ -156,8 +170,18 @@ export const DEFAULT_TIPO_NIVEL = 'FP_BASICA';
 
 export const NIVEL_IDS: readonly string[] = NIVELES.map((n) => n.id);
 
-/** Pestañas del mapa intermodular declaradas en el catálogo (valores válidos de `MapaModule.tab`). */
-export const MAPA_TABS: readonly string[] = NIVELES.flatMap((n) => (n.mapas ?? []).map((m) => m.tab));
+const tabsDeFormato = (formato: 'modulos' | 'afinidades'): readonly string[] =>
+  NIVELES.flatMap((n) => (n.mapas ?? []).filter((m) => (m.formato ?? 'modulos') === formato).map((m) => m.tab));
+
+/** Pestañas del mapa por módulos declaradas en el catálogo (valores válidos de `MapaModule.tab`). */
+export const MAPA_TABS: readonly string[] = tabsDeFormato('modulos');
+
+/** Pestañas del mapa de afinidades (valores válidos de `AfinidadEso.tab`), con su curso. */
+export const AFINIDADES_TABS: readonly string[] = tabsDeFormato('afinidades');
+
+/** Curso de una pestaña del catálogo (`ESO_3` → `3º`). */
+export const cursoDeTab = (tab: string): string | undefined =>
+  NIVELES.flatMap((n) => n.mapas ?? []).find((m) => m.tab === tab)?.curso;
 
 export const findNivel = (id?: string | null): NivelEducativo | undefined =>
   NIVELES.find((n) => n.id === id);

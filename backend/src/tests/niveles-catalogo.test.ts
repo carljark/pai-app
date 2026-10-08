@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
-import { DEFAULT_TIPO_NIVEL, MAPA_TABS, NIVELES, NIVEL_IDS, findNivel, nombrePrompt } from '../data/niveles';
+import { AFINIDADES_TABS, DEFAULT_TIPO_NIVEL, MAPA_TABS, cursoDeTab, NIVELES, NIVEL_IDS, findNivel, nombrePrompt } from '../data/niveles';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { CFGM_PELUQUERIA_RAS_DATA } from '../data/ras_cfgm_peluqueria.data';
 import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_infantil.data';
@@ -36,8 +36,24 @@ describe('Catálogo de niveles: datos para el frontend', () => {
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA', curso: '1º', moduleCode: '0845', raId: '0845_RA1' },
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA_2', curso: '2º', moduleCode: '0640', raId: '0640_RA1' },
       { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL', curso: '1º', moduleCode: '0011', raId: '0011_RA1' },
-      { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL_2', curso: '2º', moduleCode: '0013', raId: '0013_RA1' }
+      { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL_2', curso: '2º', moduleCode: '0013', raId: '0013_RA1' },
+      { nivel: 'ESO_ORDINARIA', tab: 'ESO_1', curso: '1º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },
+      { nivel: 'ESO_ORDINARIA', tab: 'ESO_2', curso: '2º', formato: 'afinidades', moduleCode: 'educacion_fisica', raId: '' },
+      { nivel: 'ESO_ORDINARIA', tab: 'ESO_3', curso: '3º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },
+      { nivel: 'ESO_ORDINARIA', tab: 'ESO_4', curso: '4º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' }
     ]);
+  });
+
+  it('separa las pestañas de afinidades de las de módulos', () => {
+    expect(AFINIDADES_TABS).toEqual(['ESO_1', 'ESO_2', 'ESO_3', 'ESO_4']);
+    for (const tab of AFINIDADES_TABS) expect(MAPA_TABS).not.toContain(tab);
+  });
+
+  it('cursoDeTab devuelve el curso de la pestaña y undefined si no hay', () => {
+    expect(cursoDeTab('ESO_3')).toBe('3º');
+    expect(cursoDeTab('CFGM_PELUQUERIA_2')).toBe('2º');
+    expect(cursoDeTab('FPB')).toBeUndefined();
+    expect(cursoDeTab('DESCONOCIDA')).toBeUndefined();
   });
 
   it('el curso de cada mapa existe en su nivel', () => {

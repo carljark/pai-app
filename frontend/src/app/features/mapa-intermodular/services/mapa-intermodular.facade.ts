@@ -278,6 +278,11 @@ export class MapaIntermodularFacade {
       return Promise.resolve(directData);
     }
 
+    if (defaults?.formato === 'afinidades') {
+      this.modules.set([]);
+      return Promise.resolve([]);
+    }
+
     const cached = this.seedCache[tab];
     if (cached) {
       this.modules.set(cached);

@@ -8,6 +8,9 @@ export interface MapaNivel {
   tab: string;
   /** Curso que cubre el mapa; sin curso, el mapa abarca todo el ciclo. */
   curso?: string;
+  /** `modulos` (FP, por defecto) o `afinidades` (ESO: fichas de afinidad entre materias). */
+  formato?: 'modulos' | 'afinidades';
+  /** Módulo (o materia, en las afinidades) seleccionado al abrir el mapa. */
   moduleCode: string;
   raId: string;
 }

@@ -8,6 +8,8 @@ import { FPB_MODULES_SEED } from '../data/mapa-intermodular.seed';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { MapaIntermodularService } from './mapa-intermodular.service';
 import { of, throwError } from 'rxjs';
+import { NIVELES_MOCK } from '../../../testing/niveles.mock';
+import { NIVEL_AFINIDADES } from '../../../testing/afinidades.mock';
 
 describe('MapaIntermodularFacade', () => {
   let facade: MapaIntermodularFacade;
@@ -153,12 +155,7 @@ describe('MapaIntermodularFacade', () => {
   });
 
   it('should build the export summary header for every active tab and language', () => {
-    const tabs = [
-      'FPB',
-      'CFGM',
-      'CFGM_PELUQUERIA',
-      'CFGM_PELUQUERIA_2',
-    ];
+    const tabs = ['FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2'];
 
     for (const tab of tabs) {
       facade.activeTab.set(tab);
@@ -590,5 +587,19 @@ describe('MapaIntermodularFacade', () => {
       facade.selectRa('MOD3_RA1');
       expect(facade.uniqueActivities()).toEqual([]);
     });
+  });
+  it('setTab con una pestaña de afinidades no pide módulos', async () => {
+    loadNivelesMock([...NIVELES_MOCK, { ...NIVEL_AFINIDADES, id: 'ESO_AFINIDADES' }]);
+    mockMapaService.getModules.mockClear();
+
+    const result = await facade.setTab('ESO_1');
+
+    expect(result).toEqual([]);
+    expect(facade.activeTab()).toBe('ESO_1');
+    expect(facade.modules()).toEqual([]);
+    expect(facade.selectedModuleCode()).toBe('MAT');
+    expect(facade.selectedRaId()).toBe('');
+    expect(mockMapaService.getModules).not.toHaveBeenCalled();
+    expect(facade.isLoadingSeed()).toBe(false);
   });
 });

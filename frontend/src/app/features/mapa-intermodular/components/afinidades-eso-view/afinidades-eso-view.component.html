@@ -1,0 +1,69 @@
+<section class="afinidades-eso">
+  <header class="afinidades-eso__intro">
+    <h2 class="afinidades-eso__titulo">
+      {{ isCa() ? 'Afinitats curriculars' : 'Afinidades curriculares' }} · ESO {{ curso() }}
+    </h2>
+    <p class="afinidades-eso__descripcion">
+      {{
+        isCa()
+          ? 'Propostes orientatives de vinculació entre matèries per programar per àmbits. Cada fitxa relaciona criteris d’avaluació, sabers bàsics i conceptes comuns.'
+          : 'Propuestas orientativas de vinculación entre materias para programar por ámbitos. Cada ficha relaciona criterios de evaluación, saberes básicos y conceptos comunes.'
+      }}
+    </p>
+  </header>
+
+  @if (facade.isLoading()) {
+    <div class="afinidades-eso__estado">
+      <app-skeleton-loader
+        [lines]="6"
+        [text]="isCa() ? 'Carregant afinitats…' : 'Cargando afinidades…'"
+      />
+    </div>
+  } @else if (facade.hasError()) {
+    <p class="afinidades-eso__estado afinidades-eso__estado--error">
+      {{
+        isCa()
+          ? 'No s’han pogut carregar les afinitats.'
+          : 'No se han podido cargar las afinidades.'
+      }}
+    </p>
+  } @else {
+    <div class="afinidades-eso__layout">
+      <nav class="afinidades-eso__materias" [attr.aria-label]="isCa() ? 'Matèries' : 'Materias'">
+        <h3 class="afinidades-eso__subtitulo">
+          {{ isCa() ? 'Matèries' : 'Materias' }} ({{ facade.materias().length }})
+        </h3>
+        @for (m of facade.materias(); track m.code) {
+          <button
+            type="button"
+            class="afinidades-eso__materia"
+            [class.afinidades-eso__materia--activa]="facade.selectedMateria() === m.code"
+            [attr.aria-pressed]="facade.selectedMateria() === m.code"
+            (click)="selectMateria(m.code)"
+          >
+            <span class="afinidades-eso__materia-nombre">{{ isCa() ? m.name_ca : m.name_es }}</span>
+            <span class="afinidades-eso__materia-total">{{ m.total }}</span>
+          </button>
+        }
+      </nav>
+
+      <div class="afinidades-eso__fichas">
+        <h3 class="afinidades-eso__subtitulo">
+          {{ materiaActual() }} · {{ facade.fichas().length }}
+          {{ isCa() ? 'fitxes' : 'fichas' }}
+        </h3>
+        @for (a of facade.fichas(); track a.id) {
+          <app-afinidad-card [afinidad]="a" [materia]="facade.selectedMateria()" />
+        } @empty {
+          <p class="afinidades-eso__estado">
+            {{
+              isCa()
+                ? 'Aquesta matèria encara no té fitxes en aquest curs.'
+                : 'Esta materia aún no tiene fichas en este curso.'
+            }}
+          </p>
+        }
+      </div>
+    </div>
+  }
+</section>

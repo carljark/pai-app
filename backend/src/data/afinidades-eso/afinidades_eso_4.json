@@ -1,0 +1,3852 @@
+[
+  {
+    "id": "ESO4-01",
+    "curso": "4º",
+    "materias": [
+      "digitalizacion",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Desinformación y comunicación en la red",
+    "ambito_ca": "Desinformació i comunicació a la xarxa",
+    "vinculos": [
+      {
+        "criterios": {
+          "digitalizacion": [
+            "2.2"
+          ],
+          "lengua_catalana": [
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "buscar, seleccionar y archivar información con herramientas digitales.",
+          "lengua_catalana": "localizar, seleccionar y contrastar información de fuentes diversas."
+        },
+        "resumen_ca": {
+          "digitalizacion": "cercar, seleccionar i arxivar informació amb eines digitals.",
+          "lengua_catalana": "localitzar, seleccionar i contrastar informació de fonts diverses."
+        },
+        "relacion_es": "Verificación de noticias y detección de desinformación con criterios compartidos.",
+        "relacion_ca": "Verificació de notícies i detecció de desinformació amb criteris compartits."
+      },
+      {
+        "criterios": {
+          "digitalizacion": [
+            "4.3"
+          ],
+          "lengua_catalana": [
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "valorar la libertad de expresión que suponen los medios digitales.",
+          "lengua_catalana": "identificar y desterrar los usos discriminatorios y manipuladores de la lengua."
+        },
+        "resumen_ca": {
+          "digitalizacion": "valorar la llibertat d’expressió que suposen els mitjans digitals.",
+          "lengua_catalana": "identificar i bandejar els usos discriminatoris i manipuladors de la llengua."
+        },
+        "relacion_es": "Análisis del discurso de odio y de los límites de la libertad de expresión en línea.",
+        "relacion_ca": "Anàlisi del discurs d’odi i dels límits de la llibertat d’expressió en línia."
+      }
+    ],
+    "saberes": {
+      "digitalizacion": {
+        "es": [
+          "Búsqueda y selección de información",
+          "Medios de comunicación digitales",
+          "Libertad de expresión",
+          "Ciudadanía digital"
+        ],
+        "ca": [
+          "Cerca i selecció d’informació",
+          "Mitjans de comunicació digitals",
+          "Llibertat d’expressió",
+          "Ciutadania digital"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Fiabilidad de las fuentes",
+          "Textos periodísticos y multimodales",
+          "Usos discriminatorios del lenguaje",
+          "Argumentación"
+        ],
+        "ca": [
+          "Fiabilitat de les fonts",
+          "Texts periodístics i multimodals",
+          "Usos discriminatoris del llenguatge",
+          "Argumentació"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "desinformación",
+      "fuente",
+      "fiabilidad",
+      "discurso",
+      "libertad de expresión"
+    ],
+    "conceptos_ca": [
+      "desinformació",
+      "font",
+      "fiabilitat",
+      "discurs",
+      "llibertat d’expressió"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "digitalizacion",
+        "ambito_es": "Desinformación y comunicación en la red",
+        "ambito_ca": "Desinformació i comunicació a la xarxa"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-02",
+    "curso": "4º",
+    "materias": [
+      "digitalizacion",
+      "valores_civicos_eticos"
+    ],
+    "ambito_es": "Ética y ciudadanía digital",
+    "ambito_ca": "Ètica i ciutadania digital",
+    "vinculos": [
+      {
+        "criterios": {
+          "digitalizacion": [
+            "4.1"
+          ],
+          "valores_civicos_eticos": [
+            "1.3"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "hacer un uso ético de los datos y las herramientas digitales.",
+          "valores_civicos_eticos": "demostrar autonomía moral mediante la deliberación racional."
+        },
+        "resumen_ca": {
+          "digitalizacion": "fer un ús ètic de les dades i les eines digitals.",
+          "valores_civicos_eticos": "demostrar autonomia moral mitjançant la deliberació racional."
+        },
+        "relacion_es": "Deliberación sobre dilemas éticos del uso de datos y de la inteligencia artificial.",
+        "relacion_ca": "Deliberació sobre dilemes ètics de l’ús de dades i de la intel·ligència artificial."
+      },
+      {
+        "criterios": {
+          "digitalizacion": [
+            "3.1"
+          ],
+          "valores_civicos_eticos": [
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "proteger los datos personales y la huella digital.",
+          "valores_civicos_eticos": "promover una convivencia pacífica, respetuosa y democrática."
+        },
+        "resumen_ca": {
+          "digitalizacion": "protegir les dades personals i l’empremta digital.",
+          "valores_civicos_eticos": "promoure una convivència pacífica, respectuosa i democràtica."
+        },
+        "relacion_es": "Elaboración de pautas de convivencia digital y de protección de la privacidad.",
+        "relacion_ca": "Elaboració de pautes de convivència digital i de protecció de la privacitat."
+      }
+    ],
+    "saberes": {
+      "digitalizacion": {
+        "es": [
+          "Huella digital y privacidad",
+          "Etiqueta digital",
+          "Uso ético de los datos",
+          "Inteligencia artificial"
+        ],
+        "ca": [
+          "Empremta digital i privacitat",
+          "Etiqueta digital",
+          "Ús ètic de les dades",
+          "Intel·ligència artificial"
+        ]
+      },
+      "valores_civicos_eticos": {
+        "es": [
+          "Autonomía moral",
+          "Deliberación ética",
+          "Convivencia democrática",
+          "Derechos digitales"
+        ],
+        "ca": [
+          "Autonomia moral",
+          "Deliberació ètica",
+          "Convivència democràtica",
+          "Drets digitals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "privacidad",
+      "dato",
+      "responsabilidad",
+      "dilema",
+      "ciudadanía"
+    ],
+    "conceptos_ca": [
+      "privacitat",
+      "dada",
+      "responsabilitat",
+      "dilema",
+      "ciutadania"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "digitalizacion",
+        "ambito_es": "Ética y ciudadanía digital",
+        "ambito_ca": "Ètica i ciutadania digital"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-03",
+    "curso": "4º",
+    "materias": [
+      "digitalizacion",
+      "matematicas_b"
+    ],
+    "ambito_es": "Algoritmos y tratamiento de datos",
+    "ambito_ca": "Algorismes i tractament de dades",
+    "vinculos": [
+      {
+        "criterios": {
+          "digitalizacion": [
+            "2.3"
+          ],
+          "matematicas_b": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "crear y programar contenidos digitales.",
+          "matematicas_b": "generalizar patrones y representarlos computacionalmente."
+        },
+        "resumen_ca": {
+          "digitalizacion": "crear i programar continguts digitals.",
+          "matematicas_b": "generalitzar patrons i representar-los computacionalment."
+        },
+        "relacion_es": "Traducción de procedimientos matemáticos a algoritmos programables.",
+        "relacion_ca": "Traducció de procediments matemàtics a algorismes programables."
+      },
+      {
+        "criterios": {
+          "digitalizacion": [
+            "2.2"
+          ],
+          "matematicas_b": [
+            "7.2"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "buscar y archivar información con herramientas digitales.",
+          "matematicas_b": "seleccionar herramientas digitales y formas de representación adecuadas."
+        },
+        "resumen_ca": {
+          "digitalizacion": "cercar i arxivar informació amb eines digitals.",
+          "matematicas_b": "seleccionar eines digitals i formes de representació adequades."
+        },
+        "relacion_es": "Organización y visualización de conjuntos de datos con hojas de cálculo.",
+        "relacion_ca": "Organització i visualització de conjunts de dades amb fulls de càlcul."
+      }
+    ],
+    "saberes": {
+      "digitalizacion": {
+        "es": [
+          "Programación",
+          "Gestión de archivos y datos",
+          "Aplicaciones de hoja de cálculo"
+        ],
+        "ca": [
+          "Programació",
+          "Gestió de fitxers i dades",
+          "Aplicacions de full de càlcul"
+        ]
+      },
+      "matematicas_b": {
+        "es": [
+          "Patrones, pautas y regularidades",
+          "Algoritmos",
+          "Estadística",
+          "Representación de datos"
+        ],
+        "ca": [
+          "Patrons, pautes i regularitats",
+          "Algorismes",
+          "Estadística",
+          "Representació de dades"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "algoritmo",
+      "patrón",
+      "variable",
+      "dato",
+      "representación"
+    ],
+    "conceptos_ca": [
+      "algorisme",
+      "patró",
+      "variable",
+      "dada",
+      "representació"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "digitalizacion",
+        "ambito_es": "Algoritmos y tratamiento de datos",
+        "ambito_ca": "Algorismes i tractament de dades"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-04",
+    "curso": "4º",
+    "materias": [
+      "digitalizacion",
+      "economia_emprendimiento"
+    ],
+    "ambito_es": "Emprendimiento y comercio electrónico",
+    "ambito_ca": "Emprenedoria i comerç electrònic",
+    "vinculos": [
+      {
+        "criterios": {
+          "digitalizacion": [
+            "4.2"
+          ],
+          "economia_emprendimiento": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "reconocer las aportaciones digitales a las gestiones y al comercio electrónico.",
+          "economia_emprendimiento": "poner en marcha un proyecto emprendedor viable."
+        },
+        "resumen_ca": {
+          "digitalizacion": "reconèixer les aportacions digitals a les gestions i al comerç electrònic.",
+          "economia_emprendimiento": "posar en marxa un projecte emprenedor viable."
+        },
+        "relacion_es": "Diseño de la presencia digital y del canal de venta de una iniciativa emprendedora.",
+        "relacion_ca": "Disseny de la presència digital i del canal de venda d’una iniciativa emprenedora."
+      },
+      {
+        "criterios": {
+          "digitalizacion": [
+            "2.3"
+          ],
+          "economia_emprendimiento": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "digitalizacion": "crear y reelaborar contenidos digitales.",
+          "economia_emprendimiento": "validar ideas con mensajes convincentes adecuados al contexto."
+        },
+        "resumen_ca": {
+          "digitalizacion": "crear i reelaborar continguts digitals.",
+          "economia_emprendimiento": "validar idees amb missatges convincents adequats al context."
+        },
+        "relacion_es": "Creación de contenidos de comunicación y marketing para validar una idea.",
+        "relacion_ca": "Creació de continguts de comunicació i màrqueting per validar una idea."
+      }
+    ],
+    "saberes": {
+      "digitalizacion": {
+        "es": [
+          "Intercambio de bienes y servicios en plataformas digitales",
+          "Gestiones administrativas en línea",
+          "Creación de contenidos"
+        ],
+        "ca": [
+          "Intercanvi de béns i serveis en plataformes digitals",
+          "Gestions administratives en línia",
+          "Creació de continguts"
+        ]
+      },
+      "economia_emprendimiento": {
+        "es": [
+          "Modelo de negocio",
+          "Comunicación efectiva y presentación del prototipo",
+          "Validación de ideas",
+          "Recursos del proyecto"
+        ],
+        "ca": [
+          "Model de negoci",
+          "Comunicació efectiva i presentació del prototip",
+          "Validació d’idees",
+          "Recursos del projecte"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "modelo de negocio",
+      "cliente",
+      "canal",
+      "valor",
+      "marketing"
+    ],
+    "conceptos_ca": [
+      "model de negoci",
+      "client",
+      "canal",
+      "valor",
+      "màrqueting"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "digitalizacion",
+        "ambito_es": "Emprendimiento y comercio electrónico",
+        "ambito_ca": "Emprenedoria i comerç electrònic"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-05",
+    "curso": "4º",
+    "materias": [
+      "economia_emprendimiento",
+      "matematicas_a"
+    ],
+    "ambito_es": "Finanzas personales y decisiones económicas",
+    "ambito_ca": "Finances personals i decisions econòmiques",
+    "vinculos": [
+      {
+        "criterios": {
+          "economia_emprendimiento": [
+            "6.4"
+          ],
+          "matematicas_a": [
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "economia_emprendimiento": "valorar la escasez de recursos y la necesidad de elegir.",
+          "matematicas_a": "formular y resolver situaciones reales con herramientas matemáticas."
+        },
+        "resumen_ca": {
+          "economia_emprendimiento": "valorar l’escassetat de recursos i la necessitat de triar.",
+          "matematicas_a": "formular i resoldre situacions reals amb eines matemàtiques."
+        },
+        "relacion_es": "Cálculo de presupuestos, intereses y costes de oportunidad en decisiones cotidianas.",
+        "relacion_ca": "Càlcul de pressuposts, interessos i costos d’oportunitat en decisions quotidianes."
+      },
+      {
+        "criterios": {
+          "economia_emprendimiento": [
+            "4.3"
+          ],
+          "matematicas_a": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "economia_emprendimiento": "analizar y planificar los recursos disponibles.",
+          "matematicas_a": "seleccionar las soluciones óptimas de un problema."
+        },
+        "resumen_ca": {
+          "economia_emprendimiento": "analitzar i planificar els recursos disponibles.",
+          "matematicas_a": "seleccionar les solucions òptimes d’un problema."
+        },
+        "relacion_es": "Comparación de soluciones de financiación según criterios matemáticos y económicos.",
+        "relacion_ca": "Comparació de solucions de finançament segons criteris matemàtics i econòmics."
+      }
+    ],
+    "saberes": {
+      "economia_emprendimiento": {
+        "es": [
+          "Escasez y coste de oportunidad",
+          "Presupuesto personal",
+          "Financiación"
+        ],
+        "ca": [
+          "Escassetat i cost d’oportunitat",
+          "Pressupost personal",
+          "Finançament"
+        ]
+      },
+      "matematicas_a": {
+        "es": [
+          "Porcentajes",
+          "Interés simple y compuesto",
+          "Funciones lineales",
+          "Resolución de problemas"
+        ],
+        "ca": [
+          "Percentatges",
+          "Interès simple i compost",
+          "Funcions lineals",
+          "Resolució de problemes"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "presupuesto",
+      "interés",
+      "coste",
+      "decisión",
+      "porcentaje"
+    ],
+    "conceptos_ca": [
+      "pressupost",
+      "interès",
+      "cost",
+      "decisió",
+      "percentatge"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "economia_emprendimiento",
+        "ambito_es": "Finanzas personales y decisiones económicas",
+        "ambito_ca": "Finances personals i decisions econòmiques"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-06",
+    "curso": "4º",
+    "materias": [
+      "economia_emprendimiento",
+      "geografia_historia"
+    ],
+    "ambito_es": "Economía, globalización y sostenibilidad",
+    "ambito_ca": "Economia, globalització i sostenibilitat",
+    "vinculos": [
+      {
+        "criterios": {
+          "economia_emprendimiento": [
+            "3.1"
+          ],
+          "geografia_historia": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "economia_emprendimiento": "preservar el medio natural, social y cultural con propuestas emprendedoras.",
+          "geografia_historia": "hacer propuestas que contribuyan a los ODS."
+        },
+        "resumen_ca": {
+          "economia_emprendimiento": "preservar el medi natural, social i cultural amb propostes emprenedores.",
+          "geografia_historia": "fer propostes que contribueixin als ODS."
+        },
+        "relacion_es": "Formulación de iniciativas económicas alineadas con los Objetivos de Desarrollo Sostenible.",
+        "relacion_ca": "Formulació d’iniciatives econòmiques alineades amb els Objectius de Desenvolupament Sostenible."
+      },
+      {
+        "criterios": {
+          "economia_emprendimiento": [
+            "6.3"
+          ],
+          "geografia_historia": [
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "economia_emprendimiento": "afrontar retos de manera eficaz, equitativa y sostenible.",
+          "geografia_historia": "afrontar problemas desde un enfoque ecosocial."
+        },
+        "resumen_ca": {
+          "economia_emprendimiento": "afrontar reptes de manera eficaç, equitativa i sostenible.",
+          "geografia_historia": "afrontar problemes des d’un enfocament ecosocial."
+        },
+        "relacion_es": "Análisis de los efectos de la globalización sobre el territorio y el empleo.",
+        "relacion_ca": "Anàlisi dels efectes de la globalització sobre el territori i l’ocupació."
+      }
+    ],
+    "saberes": {
+      "economia_emprendimiento": {
+        "es": [
+          "Emprendimiento social y sostenible",
+          "Agentes económicos",
+          "Escasez de recursos"
+        ],
+        "ca": [
+          "Emprenedoria social i sostenible",
+          "Agents econòmics",
+          "Escassetat de recursos"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Globalización",
+          "Objetivos de Desarrollo Sostenible",
+          "Sectores económicos",
+          "Desigualdades"
+        ],
+        "ca": [
+          "Globalització",
+          "Objectius de Desenvolupament Sostenible",
+          "Sectors econòmics",
+          "Desigualtats"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "globalización",
+      "sostenibilidad",
+      "mercado",
+      "desigualdad",
+      "ODS"
+    ],
+    "conceptos_ca": [
+      "globalització",
+      "sostenibilitat",
+      "mercat",
+      "desigualtat",
+      "ODS"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "economia_emprendimiento",
+        "ambito_es": "Economía, globalización y sostenibilidad",
+        "ambito_ca": "Economia, globalització i sostenibilitat"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-07",
+    "curso": "4º",
+    "materias": [
+      "economia_emprendimiento",
+      "fopp"
+    ],
+    "ambito_es": "Proyecto personal e iniciativa emprendedora",
+    "ambito_ca": "Projecte personal i iniciativa emprenedora",
+    "vinculos": [
+      {
+        "criterios": {
+          "economia_emprendimiento": [
+            "1.2"
+          ],
+          "fopp": [
+            "2.3"
+          ]
+        },
+        "resumen_es": {
+          "economia_emprendimiento": "analizar fortalezas y debilidades personales.",
+          "fopp": "identificar cualidades personales y potenciarlas."
+        },
+        "resumen_ca": {
+          "economia_emprendimiento": "analitzar fortaleses i febleses personals.",
+          "fopp": "identificar qualitats personals i potenciar-les."
+        },
+        "relacion_es": "Autoconocimiento aplicado a la definición de un perfil emprendedor.",
+        "relacion_ca": "Autoconeixement aplicat a la definició d’un perfil emprenedor."
+      },
+      {
+        "criterios": {
+          "economia_emprendimiento": [
+            "1.1"
+          ],
+          "fopp": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "economia_emprendimiento": "crear un proyecto personal original y generador de valor.",
+          "fopp": "realizar un proyecto personal, académico y profesional."
+        },
+        "resumen_ca": {
+          "economia_emprendimiento": "crear un projecte personal original i generador de valor.",
+          "fopp": "realitzar un projecte personal, acadèmic i professional."
+        },
+        "relacion_es": "Conexión entre el proyecto vital y las opciones de autoempleo.",
+        "relacion_ca": "Connexió entre el projecte vital i les opcions d’autoocupació."
+      }
+    ],
+    "saberes": {
+      "economia_emprendimiento": {
+        "es": [
+          "Autoconocimiento",
+          "Iniciativa y creatividad",
+          "Proyecto emprendedor"
+        ],
+        "ca": [
+          "Autoconeixement",
+          "Iniciativa i creativitat",
+          "Projecte emprenedor"
+        ]
+      },
+      "fopp": {
+        "es": [
+          "Cualidades personales",
+          "Proyecto de vida",
+          "Itinerarios académicos y profesionales",
+          "Búsqueda de empleo"
+        ],
+        "ca": [
+          "Qualitats personals",
+          "Projecte de vida",
+          "Itineraris acadèmics i professionals",
+          "Cerca de feina"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "autoconocimiento",
+      "iniciativa",
+      "proyecto",
+      "competencia",
+      "itinerario"
+    ],
+    "conceptos_ca": [
+      "autoconeixement",
+      "iniciativa",
+      "projecte",
+      "competència",
+      "itinerari"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "economia_emprendimiento",
+        "ambito_es": "Proyecto personal e iniciativa emprendedora",
+        "ambito_ca": "Projecte personal i iniciativa emprenedora"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-08",
+    "curso": "4º",
+    "materias": [
+      "valores_civicos_eticos",
+      "geografia_historia"
+    ],
+    "ambito_es": "Derechos humanos y memoria democrática",
+    "ambito_ca": "Drets humans i memòria democràtica",
+    "vinculos": [
+      {
+        "criterios": {
+          "valores_civicos_eticos": [
+            "2.6"
+          ],
+          "geografia_historia": [
+            "9.2"
+          ]
+        },
+        "resumen_es": {
+          "valores_civicos_eticos": "contribuir a un mundo más justo y pacífico.",
+          "geografia_historia": "contribuir a un mundo más seguro, justo y solidario."
+        },
+        "resumen_ca": {
+          "valores_civicos_eticos": "contribuir a un món més just i pacífic.",
+          "geografia_historia": "contribuir a un món més segur, just i solidari."
+        },
+        "relacion_es": "Análisis de conflictos contemporáneos y de los mecanismos internacionales de paz.",
+        "relacion_ca": "Anàlisi de conflictes contemporanis i dels mecanismes internacionals de pau."
+      },
+      {
+        "criterios": {
+          "valores_civicos_eticos": [
+            "2.2"
+          ],
+          "geografia_historia": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "valores_civicos_eticos": "ejercer una ciudadanía activa y democrática.",
+          "geografia_historia": "conocer y ejercer responsabilidades, derechos y deberes."
+        },
+        "resumen_ca": {
+          "valores_civicos_eticos": "exercir una ciutadania activa i democràtica.",
+          "geografia_historia": "conèixer i exercir responsabilitats, drets i deures."
+        },
+        "relacion_es": "Estudio de la conquista de los derechos y de la participación democrática.",
+        "relacion_ca": "Estudi de la conquesta dels drets i de la participació democràtica."
+      }
+    ],
+    "saberes": {
+      "valores_civicos_eticos": {
+        "es": [
+          "Derechos humanos",
+          "Cultura de paz",
+          "Ciudadanía activa",
+          "Movimientos sociales"
+        ],
+        "ca": [
+          "Drets humans",
+          "Cultura de pau",
+          "Ciutadania activa",
+          "Moviments socials"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Siglo XX y conflictos mundiales",
+          "Transición democrática",
+          "Constitución",
+          "Organismos internacionales"
+        ],
+        "ca": [
+          "Segle XX i conflictes mundials",
+          "Transició democràtica",
+          "Constitució",
+          "Organismes internacionals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "derecho",
+      "democracia",
+      "paz",
+      "memoria",
+      "ciudadanía"
+    ],
+    "conceptos_ca": [
+      "dret",
+      "democràcia",
+      "pau",
+      "memòria",
+      "ciutadania"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "valores_civicos_eticos",
+        "ambito_es": "Derechos humanos y memoria democrática",
+        "ambito_ca": "Drets humans i memòria democràtica"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-09",
+    "curso": "4º",
+    "materias": [
+      "valores_civicos_eticos",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Emergencia climática y responsabilidad ecosocial",
+    "ambito_ca": "Emergència climàtica i responsabilitat ecosocial",
+    "vinculos": [
+      {
+        "criterios": {
+          "valores_civicos_eticos": [
+            "3.2"
+          ],
+          "biologia_geologia": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "valores_civicos_eticos": "valorar planteamientos científicos y éticos ante la emergencia climática.",
+          "biologia_geologia": "identificar riesgos naturales potenciados por acciones humanas."
+        },
+        "resumen_ca": {
+          "valores_civicos_eticos": "valorar plantejaments científics i ètics davant l’emergència climàtica.",
+          "biologia_geologia": "identificar riscos naturals potenciats per accions humanes."
+        },
+        "relacion_es": "Fundamentación científica y ética de las decisiones ante el cambio climático.",
+        "relacion_ca": "Fonamentació científica i ètica de les decisions davant el canvi climàtic."
+      },
+      {
+        "criterios": {
+          "valores_civicos_eticos": [
+            "3.3"
+          ],
+          "biologia_geologia": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "valores_civicos_eticos": "promover estilos de vida comprometidos con la sostenibilidad.",
+          "biologia_geologia": "contrastar la veracidad de la información científica."
+        },
+        "resumen_ca": {
+          "valores_civicos_eticos": "promoure estils de vida compromesos amb la sostenibilitat.",
+          "biologia_geologia": "contrastar la veracitat de la informació científica."
+        },
+        "relacion_es": "Contraste de mensajes sobre medio ambiente y compromiso con hábitos sostenibles.",
+        "relacion_ca": "Contrast de missatges sobre medi ambient i compromís amb hàbits sostenibles."
+      }
+    ],
+    "saberes": {
+      "valores_civicos_eticos": {
+        "es": [
+          "Emergencia climática",
+          "Ecodependencia e interdependencia",
+          "Desarrollo sostenible"
+        ],
+        "ca": [
+          "Emergència climàtica",
+          "Ecodependència i interdependència",
+          "Desenvolupament sostenible"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Riesgos naturales",
+          "Efectos globales de la dinámica de la geosfera",
+          "Pseudociencia y fuentes fiables",
+          "Relieve y paisaje como recurso"
+        ],
+        "ca": [
+          "Riscos naturals",
+          "Efectes globals de la dinàmica de la geosfera",
+          "Pseudociència i fonts fiables",
+          "Relleu i paisatge com a recurs"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "clima",
+      "riesgo",
+      "sostenibilidad",
+      "evidencia",
+      "responsabilidad"
+    ],
+    "conceptos_ca": [
+      "clima",
+      "risc",
+      "sostenibilitat",
+      "evidència",
+      "responsabilitat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "valores_civicos_eticos",
+        "ambito_es": "Emergencia climática y responsabilidad ecosocial",
+        "ambito_ca": "Emergència climàtica i responsabilitat ecosocial"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-10",
+    "curso": "4º",
+    "materias": [
+      "valores_civicos_eticos",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Argumentación y debate ético",
+    "ambito_ca": "Argumentació i debat ètic",
+    "vinculos": [
+      {
+        "criterios": {
+          "valores_civicos_eticos": [
+            "2.3"
+          ],
+          "lengua_castellana": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "valores_civicos_eticos": "tomar decisiones razonadas sobre problemas éticos.",
+          "lengua_castellana": "realizar exposiciones y argumentaciones orales complejas."
+        },
+        "resumen_ca": {
+          "valores_civicos_eticos": "prendre decisions raonades sobre problemes ètics.",
+          "lengua_castellana": "realitzar exposicions i argumentacions orals complexes."
+        },
+        "relacion_es": "Preparación y desarrollo de un debate sobre un dilema social.",
+        "relacion_ca": "Preparació i desenvolupament d’un debat sobre un dilema social."
+      },
+      {
+        "criterios": {
+          "valores_civicos_eticos": [
+            "1.2"
+          ],
+          "lengua_castellana": [
+            "10.2"
+          ]
+        },
+        "resumen_es": {
+          "valores_civicos_eticos": "comunicar ideas y emociones con empatía.",
+          "lengua_castellana": "resolver conflictos de manera dialogada y buscar consensos."
+        },
+        "resumen_ca": {
+          "valores_civicos_eticos": "comunicar idees i emocions amb empatia.",
+          "lengua_castellana": "resoldre conflictes de manera dialogada i cercar consensos."
+        },
+        "relacion_es": "Práctica de la escucha activa y de la búsqueda de consensos.",
+        "relacion_ca": "Pràctica de l’escolta activa i de la cerca de consensos."
+      }
+    ],
+    "saberes": {
+      "valores_civicos_eticos": {
+        "es": [
+          "Deliberación moral",
+          "Empatía",
+          "Virtudes del diálogo y normas de argumentación"
+        ],
+        "ca": [
+          "Deliberació moral",
+          "Empatia",
+          "Virtuts del diàleg i normes d’argumentació"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Textos argumentativos",
+          "Secuencias textuales argumentativas",
+          "Cortesía lingüística",
+          "Géneros discursivos del ámbito social"
+        ],
+        "ca": [
+          "Textos argumentatius",
+          "Seqüències textuals argumentatives",
+          "Cortesia lingüística",
+          "Gèneres discursius de l’àmbit social"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "argumento",
+      "debate",
+      "consenso",
+      "dilema",
+      "empatía"
+    ],
+    "conceptos_ca": [
+      "argument",
+      "debat",
+      "consens",
+      "dilema",
+      "empatia"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "valores_civicos_eticos",
+        "ambito_es": "Argumentación y debate ético",
+        "ambito_ca": "Argumentació i debat ètic"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-11",
+    "curso": "4º",
+    "materias": [
+      "expresion_artistica",
+      "musica"
+    ],
+    "ambito_es": "Proyecto artístico interdisciplinar",
+    "ambito_ca": "Projecte artístic interdisciplinari",
+    "vinculos": [
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "4.1"
+          ],
+          "musica": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "crear un producto artístico colaborativo.",
+          "musica": "planificar y desarrollar propuestas artísticas y musicales."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "crear un producte artístic col·laboratiu.",
+          "musica": "planificar i desenvolupar propostes artístiques i musicals."
+        },
+        "relacion_es": "Planificación conjunta de un espectáculo o instalación con imagen y sonido.",
+        "relacion_ca": "Planificació conjunta d’un espectacle o instal·lació amb imatge i so."
+      },
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "4.2"
+          ],
+          "musica": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "exponer el resultado final de un producto artístico.",
+          "musica": "participar en la ejecución de propuestas colaborativas."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "exposar el resultat final d’un producte artístic.",
+          "musica": "participar en l’execució de propostes col·laboratives."
+        },
+        "relacion_es": "Presentación pública y valoración del proceso creativo compartido.",
+        "relacion_ca": "Presentació pública i valoració del procés creatiu compartit."
+      }
+    ],
+    "saberes": {
+      "expresion_artistica": {
+        "es": [
+          "Fases del proyecto artístico",
+          "Producción audiovisual",
+          "Realización y presentación del proyecto"
+        ],
+        "ca": [
+          "Fases del projecte artístic",
+          "Producció audiovisual",
+          "Realització i presentació del projecte"
+        ]
+      },
+      "musica": {
+        "es": [
+          "Proyectos musicales",
+          "Interpretación en grupo",
+          "Tecnología musical",
+          "Planificación y ejecución de proyectos musicales y audiovisuales"
+        ],
+        "ca": [
+          "Projectes musicals",
+          "Interpretació en grup",
+          "Tecnologia musical",
+          "Planificació i execució de projectes musicals i audiovisuals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "proyecto",
+      "creación",
+      "escena",
+      "proceso",
+      "público"
+    ],
+    "conceptos_ca": [
+      "projecte",
+      "creació",
+      "escena",
+      "procés",
+      "públic"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "expresion_artistica",
+        "ambito_es": "Proyecto artístico interdisciplinar",
+        "ambito_ca": "Projecte artístic interdisciplinari"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-12",
+    "curso": "4º",
+    "materias": [
+      "expresion_artistica",
+      "geografia_historia"
+    ],
+    "ambito_es": "Arte y sociedad contemporánea",
+    "ambito_ca": "Art i societat contemporània",
+    "vinculos": [
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "1.1"
+          ],
+          "geografia_historia": [
+            "3.4"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "analizar manifestaciones artísticas contextualizándolas.",
+          "geografia_historia": "analizar procesos de cambio histórico."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "analitzar manifestacions artístiques contextualitzant-les.",
+          "geografia_historia": "analitzar processos de canvi històric."
+        },
+        "relacion_es": "Lectura de las vanguardias como respuesta a los cambios del siglo XX.",
+        "relacion_ca": "Lectura de les avantguardes com a resposta als canvis del segle XX."
+      },
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "1.2"
+          ],
+          "geografia_historia": [
+            "7.2"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "valorar críticamente referentes artísticos de diferentes épocas.",
+          "geografia_historia": "contribuir a conservar el patrimonio material e inmaterial."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "valorar críticament referents artístics de diferents èpoques.",
+          "geografia_historia": "contribuir a conservar el patrimoni material i immaterial."
+        },
+        "relacion_es": "Valoración del patrimonio artístico contemporáneo de las Islas Baleares.",
+        "relacion_ca": "Valoració del patrimoni artístic contemporani de les Illes Balears."
+      }
+    ],
+    "saberes": {
+      "expresion_artistica": {
+        "es": [
+          "Manifestaciones artísticas contemporáneas",
+          "Contexto de las obras",
+          "Referentes artísticos"
+        ],
+        "ca": [
+          "Manifestacions artístiques contemporànies",
+          "Context de les obres",
+          "Referents artístics"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Siglo XX",
+          "Cambio social y cultural",
+          "Patrimonio",
+          "Fuentes históricas"
+        ],
+        "ca": [
+          "Segle XX",
+          "Canvi social i cultural",
+          "Patrimoni",
+          "Fonts històriques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "vanguardia",
+      "contexto",
+      "patrimonio",
+      "cambio",
+      "obra"
+    ],
+    "conceptos_ca": [
+      "avantguarda",
+      "context",
+      "patrimoni",
+      "canvi",
+      "obra"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "expresion_artistica",
+        "ambito_es": "Arte y sociedad contemporánea",
+        "ambito_ca": "Art i societat contemporània"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-13",
+    "curso": "4º",
+    "materias": [
+      "expresion_artistica",
+      "tecnologia"
+    ],
+    "ambito_es": "Diseño y fabricación de prototipos",
+    "ambito_ca": "Disseny i fabricació de prototips",
+    "vinculos": [
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "2.2"
+          ],
+          "tecnologia": [
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "elaborar producciones gráfico-plásticas con intención expresiva.",
+          "tecnologia": "analizar el diseño de un producto que responde a una necesidad."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "elaborar produccions gràficoplàstiques amb intenció expressiva.",
+          "tecnologia": "analitzar el disseny d’un producte que respon a una necessitat."
+        },
+        "relacion_es": "Integración de criterios estéticos y funcionales en el diseño de un objeto.",
+        "relacion_ca": "Integració de criteris estètics i funcionals en el disseny d’un objecte."
+      },
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "2.1"
+          ],
+          "tecnologia": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "explorar técnicas gráfico-plásticas.",
+          "tecnologia": "fabricar productos con herramientas de diseño asistido."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "explorar tècniques gràficoplàstiques.",
+          "tecnologia": "fabricar productes amb eines de disseny assistit."
+        },
+        "relacion_es": "Paso del boceto al prototipo con herramientas manuales y digitales.",
+        "relacion_ca": "Pas de l’esbós al prototip amb eines manuals i digitals."
+      }
+    ],
+    "saberes": {
+      "expresion_artistica": {
+        "es": [
+          "Técnicas gráfico-plásticas",
+          "Diseño",
+          "Volumen y materiales"
+        ],
+        "ca": [
+          "Tècniques gràficoplàstiques",
+          "Disseny",
+          "Volum i materials"
+        ]
+      },
+      "tecnologia": {
+        "es": [
+          "Diseño asistido por ordenador",
+          "Fabricación digital",
+          "Materiales",
+          "Prototipado"
+        ],
+        "ca": [
+          "Disseny assistit per ordinador",
+          "Fabricació digital",
+          "Materials",
+          "Prototipatge"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "diseño",
+      "prototipo",
+      "forma",
+      "función",
+      "material"
+    ],
+    "conceptos_ca": [
+      "disseny",
+      "prototip",
+      "forma",
+      "funció",
+      "material"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "expresion_artistica",
+        "ambito_es": "Diseño y fabricación de prototipos",
+        "ambito_ca": "Disseny i fabricació de prototips"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-14",
+    "curso": "4º",
+    "materias": [
+      "fopp",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Orientación profesional en un contexto internacional",
+    "ambito_ca": "Orientació professional en un context internacional",
+    "vinculos": [
+      {
+        "criterios": {
+          "fopp": [
+            "5.1"
+          ],
+          "lengua_extranjera": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "fopp": "realizar un proyecto personal y aproximarse a la búsqueda de empleo.",
+          "lengua_extranjera": "redactar textos de extensión media con claridad y coherencia."
+        },
+        "resumen_ca": {
+          "fopp": "realitzar un projecte personal i aproximar-se a la cerca de feina.",
+          "lengua_extranjera": "redactar texts d’extensió mitjana amb claredat i coherència."
+        },
+        "relacion_es": "Redacción de un currículum y de una carta de presentación en lengua extranjera.",
+        "relacion_ca": "Redacció d’un currículum i d’una carta de presentació en llengua estrangera."
+      },
+      {
+        "criterios": {
+          "fopp": [
+            "5.2"
+          ],
+          "lengua_extranjera": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "fopp": "identificar oportunidades académicas y profesionales.",
+          "lengua_extranjera": "participar activamente en situaciones interactivas."
+        },
+        "resumen_ca": {
+          "fopp": "identificar oportunitats acadèmiques i professionals.",
+          "lengua_extranjera": "participar activament en situacions interactives."
+        },
+        "relacion_es": "Simulación de entrevistas y exploración de programas de movilidad europea.",
+        "relacion_ca": "Simulació d’entrevistes i exploració de programes de mobilitat europea."
+      }
+    ],
+    "saberes": {
+      "fopp": {
+        "es": [
+          "Búsqueda activa de empleo",
+          "Plan de búsqueda activa de empleo",
+          "Movilidad académica y profesional"
+        ],
+        "ca": [
+          "Cerca activa de feina",
+          "Pla de cerca activa d’ocupació",
+          "Mobilitat acadèmica i professional"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Textos formales",
+          "Interacción oral",
+          "Léxico del mundo laboral",
+          "Aspectos socioculturales"
+        ],
+        "ca": [
+          "Texts formals",
+          "Interacció oral",
+          "Lèxic del món laboral",
+          "Aspectes socioculturals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "currículum",
+      "entrevista",
+      "movilidad",
+      "competencia",
+      "perfil"
+    ],
+    "conceptos_ca": [
+      "currículum",
+      "entrevista",
+      "mobilitat",
+      "competència",
+      "perfil"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "fopp",
+        "ambito_es": "Orientación profesional en un contexto internacional",
+        "ambito_ca": "Orientació professional en un context internacional"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-15",
+    "curso": "4º",
+    "materias": [
+      "fopp",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Bienestar emocional y hábitos de vida",
+    "ambito_ca": "Benestar emocional i hàbits de vida",
+    "vinculos": [
+      {
+        "criterios": {
+          "fopp": [
+            "1.3"
+          ],
+          "educacion_fisica": [
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "fopp": "analizar la importancia del componente emocional.",
+          "educacion_fisica": "incorporar procesos de autorregulación y dosificación del esfuerzo."
+        },
+        "resumen_ca": {
+          "fopp": "analitzar la importància del component emocional.",
+          "educacion_fisica": "incorporar processos d’autoregulació i dosificació de l’esforç."
+        },
+        "relacion_es": "Relación entre actividad física, gestión del estrés y rendimiento académico.",
+        "relacion_ca": "Relació entre activitat física, gestió de l’estrès i rendiment acadèmic."
+      },
+      {
+        "criterios": {
+          "fopp": [
+            "4.1"
+          ],
+          "educacion_fisica": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "fopp": "desarrollar habilidades de adaptación a nuevos grupos y contextos.",
+          "educacion_fisica": "relacionarse con el resto de participantes y resolver conflictos."
+        },
+        "resumen_ca": {
+          "fopp": "desenvolupar habilitats d’adaptació a nous grups i contextos.",
+          "educacion_fisica": "relacionar-se amb la resta de participants i resoldre conflictes."
+        },
+        "relacion_es": "Práctica de habilidades sociales en situaciones motrices cooperativas.",
+        "relacion_ca": "Pràctica d’habilitats socials en situacions motrius cooperatives."
+      }
+    ],
+    "saberes": {
+      "fopp": {
+        "es": [
+          "Gestión emocional",
+          "Habilidades sociales",
+          "Motivación y aprendizaje"
+        ],
+        "ca": [
+          "Gestió emocional",
+          "Habilitats socials",
+          "Motivació i aprenentatge"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Salud mental y actividad física",
+          "Autorregulación",
+          "Cooperación",
+          "Resolución de conflictos"
+        ],
+        "ca": [
+          "Salut mental i activitat física",
+          "Autoregulació",
+          "Cooperació",
+          "Resolució de conflictes"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "emoción",
+      "estrés",
+      "bienestar",
+      "cooperación",
+      "autorregulación"
+    ],
+    "conceptos_ca": [
+      "emoció",
+      "estrès",
+      "benestar",
+      "cooperació",
+      "autoregulació"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "fopp",
+        "ambito_es": "Bienestar emocional y hábitos de vida",
+        "ambito_ca": "Benestar emocional i hàbits de vida"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-16",
+    "curso": "4º",
+    "materias": [
+      "fopp",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Comunicación para el acceso al mundo laboral",
+    "ambito_ca": "Comunicació per a l’accés al món laboral",
+    "vinculos": [
+      {
+        "criterios": {
+          "fopp": [
+            "5.1"
+          ],
+          "lengua_castellana": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "fopp": "realizar un proyecto personal y aproximarse a la búsqueda de empleo.",
+          "lengua_castellana": "planificar la redacción de textos escritos y multimodales."
+        },
+        "resumen_ca": {
+          "fopp": "realitzar un projecte personal i aproximar-se a la cerca de feina.",
+          "lengua_castellana": "planificar la redacció de texts escrits i multimodals."
+        },
+        "relacion_es": "Elaboración de documentos de presentación profesional adecuados al destinatario.",
+        "relacion_ca": "Elaboració de documents de presentació professional adequats al destinatari."
+      },
+      {
+        "criterios": {
+          "fopp": [
+            "2.1"
+          ],
+          "lengua_castellana": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "fopp": "afrontar nuevos retos identificando cualidades personales.",
+          "lengua_castellana": "realizar exposiciones y argumentaciones orales."
+        },
+        "resumen_ca": {
+          "fopp": "afrontar nous reptes identificant qualitats personals.",
+          "lengua_castellana": "realitzar exposicions i argumentacions orals."
+        },
+        "relacion_es": "Preparación de una presentación oral del propio itinerario formativo.",
+        "relacion_ca": "Preparació d’una presentació oral del propi itinerari formatiu."
+      }
+    ],
+    "saberes": {
+      "fopp": {
+        "es": [
+          "Autoconocimiento",
+          "Itinerarios formativos",
+          "Procesos de selección"
+        ],
+        "ca": [
+          "Autoconeixement",
+          "Itineraris formatius",
+          "Processos de selecció"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Textos del ámbito laboral",
+          "Exposición oral",
+          "Adecuación al registro"
+        ],
+        "ca": [
+          "Textos de l’àmbit laboral",
+          "Exposició oral",
+          "Adequació al registre"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "registro",
+      "destinatario",
+      "itinerario",
+      "presentación",
+      "selección"
+    ],
+    "conceptos_ca": [
+      "registre",
+      "destinatari",
+      "itinerari",
+      "presentació",
+      "selecció"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "fopp",
+        "ambito_es": "Comunicación para el acceso al mundo laboral",
+        "ambito_ca": "Comunicació per a l’accés al món laboral"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-17",
+    "curso": "4º",
+    "materias": [
+      "latin",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Etimología y léxico culto",
+    "ambito_ca": "Etimologia i lèxic culte",
+    "vinculos": [
+      {
+        "criterios": {
+          "latin": [
+            "2.4"
+          ],
+          "lengua_castellana": [
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "latin": "producir definiciones etimológicas de términos cotidianos y técnicos.",
+          "lengua_castellana": "formular generalizaciones sobre el funcionamiento de la lengua."
+        },
+        "resumen_ca": {
+          "latin": "produir definicions etimològiques de termes quotidians i tècnics.",
+          "lengua_castellana": "formular generalitzacions sobre el funcionament de la llengua."
+        },
+        "relacion_es": "Análisis de la formación del léxico culto a partir de raíces latinas.",
+        "relacion_ca": "Anàlisi de la formació del lèxic culte a partir d’arrels llatines."
+      },
+      {
+        "criterios": {
+          "latin": [
+            "2.3"
+          ],
+          "lengua_castellana": [
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "latin": "ampliar el léxico incorporando latinismos y locuciones.",
+          "lengua_castellana": "enriquecer los textos atendiendo a aspectos lingüísticos y de estilo."
+        },
+        "resumen_ca": {
+          "latin": "ampliar el lèxic incorporant llatinismes i locucions.",
+          "lengua_castellana": "enriquir els texts atenent aspectes lingüístics i d’estil."
+        },
+        "relacion_es": "Uso preciso de latinismos en la producción escrita.",
+        "relacion_ca": "Ús precís de llatinismes en la producció escrita."
+      }
+    ],
+    "saberes": {
+      "latin": {
+        "es": [
+          "Evolución del latín al castellano",
+          "Léxico y etimología",
+          "Latinismos y locuciones"
+        ],
+        "ca": [
+          "Evolució del llatí al castellà",
+          "Lèxic i etimologia",
+          "Llatinismes i locucions"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Formación de palabras",
+          "Precisión léxica",
+          "Reflexión lingüística"
+        ],
+        "ca": [
+          "Formació de paraules",
+          "Precisió lèxica",
+          "Reflexió lingüística"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "étimo",
+      "cultismo",
+      "latinismo",
+      "derivación",
+      "significado"
+    ],
+    "conceptos_ca": [
+      "ètim",
+      "cultisme",
+      "llatinisme",
+      "derivació",
+      "significat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "latin",
+        "ambito_es": "Etimología y léxico culto",
+        "ambito_ca": "Etimologia i lèxic culte"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-18",
+    "curso": "4º",
+    "materias": [
+      "latin",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Del latín al catalán",
+    "ambito_ca": "Del llatí al català",
+    "vinculos": [
+      {
+        "criterios": {
+          "latin": [
+            "2.2"
+          ],
+          "lengua_catalana": [
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "latin": "inferir significados de términos latinos a partir de otras lenguas.",
+          "lengua_catalana": "formular generalizaciones sobre el funcionamiento de la lengua."
+        },
+        "resumen_ca": {
+          "latin": "inferir significats de termes llatins a partir d’altres llengües.",
+          "lengua_catalana": "formular generalitzacions sobre el funcionament de la llengua."
+        },
+        "relacion_es": "Estudio de los cambios fonéticos que explican la evolución del latín al catalán.",
+        "relacion_ca": "Estudi dels canvis fonètics que expliquen l’evolució del llatí al català."
+      },
+      {
+        "criterios": {
+          "latin": [
+            "2.1"
+          ],
+          "lengua_catalana": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "latin": "valorar la diversidad lingüística a la que da origen el latín.",
+          "lengua_catalana": "reconocer las lenguas de España y las variedades del catalán."
+        },
+        "resumen_ca": {
+          "latin": "valorar la diversitat lingüística a què dona origen el llatí.",
+          "lengua_catalana": "reconèixer les llengües d’Espanya i les varietats del català."
+        },
+        "relacion_es": "Situación del catalán y de sus variedades dentro de la familia románica.",
+        "relacion_ca": "Situació del català i de les seves varietats dins la família romànica."
+      }
+    ],
+    "saberes": {
+      "latin": {
+        "es": [
+          "Lenguas románicas",
+          "Evolución fonética",
+          "Léxico patrimonial"
+        ],
+        "ca": [
+          "Llengües romàniques",
+          "Evolució fonètica",
+          "Lèxic patrimonial"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Variedades dialectales",
+          "Historia de la lengua",
+          "Reflexión lingüística"
+        ],
+        "ca": [
+          "Varietats dialectals",
+          "Història de la llengua",
+          "Reflexió lingüística"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "evolución",
+      "lengua románica",
+      "palabra patrimonial",
+      "variedad",
+      "cambio fonético"
+    ],
+    "conceptos_ca": [
+      "evolució",
+      "llengua romànica",
+      "mot patrimonial",
+      "varietat",
+      "canvi fonètic"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "latin",
+        "ambito_es": "Del latín al catalán",
+        "ambito_ca": "Del llatí al català"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-19",
+    "curso": "4º",
+    "materias": [
+      "latin",
+      "geografia_historia"
+    ],
+    "ambito_es": "Roma y la romanización de las Baleares",
+    "ambito_ca": "Roma i la romanització de les Balears",
+    "vinculos": [
+      {
+        "criterios": {
+          "latin": [
+            "5.2"
+          ],
+          "geografia_historia": [
+            "7.2"
+          ]
+        },
+        "resumen_es": {
+          "latin": "reconocer las huellas de la romanización en el patrimonio del entorno.",
+          "geografia_historia": "contribuir a conservar el patrimonio material e inmaterial."
+        },
+        "resumen_ca": {
+          "latin": "reconèixer les petjades de la romanització en el patrimoni de l’entorn.",
+          "geografia_historia": "contribuir a conservar el patrimoni material i immaterial."
+        },
+        "relacion_es": "Estudio de yacimientos romanos de las Islas Baleares y de su conservación.",
+        "relacion_ca": "Estudi de jaciments romans de les Illes Balears i de la seva conservació."
+      },
+      {
+        "criterios": {
+          "latin": [
+            "1.3"
+          ],
+          "geografia_historia": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "latin": "identificar períodos, hechos y personajes de la historia de Roma.",
+          "geografia_historia": "utilizar secuencias cronológicas complejas."
+        },
+        "resumen_ca": {
+          "latin": "identificar períodes, fets i personatges de la història de Roma.",
+          "geografia_historia": "utilitzar seqüències cronològiques complexes."
+        },
+        "relacion_es": "Construcción de una cronología comparada de Roma y del territorio balear.",
+        "relacion_ca": "Construcció d’una cronologia comparada de Roma i del territori balear."
+      }
+    ],
+    "saberes": {
+      "latin": {
+        "es": [
+          "Historia de Roma",
+          "Romanización",
+          "Patrimonio arqueológico"
+        ],
+        "ca": [
+          "Història de Roma",
+          "Romanització",
+          "Patrimoni arqueològic"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Patrimonio de las Islas Baleares",
+          "Cronología",
+          "Conservación del patrimonio"
+        ],
+        "ca": [
+          "Patrimoni de les Illes Balears",
+          "Cronologia",
+          "Conservació del patrimoni"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "romanización",
+      "yacimiento",
+      "cronología",
+      "patrimonio",
+      "civilización"
+    ],
+    "conceptos_ca": [
+      "romanització",
+      "jaciment",
+      "cronologia",
+      "patrimoni",
+      "civilització"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "latin",
+        "ambito_es": "Roma y la romanización de las Baleares",
+        "ambito_ca": "Roma i la romanització de les Balears"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-20",
+    "curso": "4º",
+    "materias": [
+      "latin",
+      "segunda_lengua_extranjera"
+    ],
+    "ambito_es": "Lenguas románicas e intercomprensión",
+    "ambito_ca": "Llengües romàniques i intercomprensió",
+    "vinculos": [
+      {
+        "criterios": {
+          "latin": [
+            "2.2"
+          ],
+          "segunda_lengua_extranjera": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "latin": "inferir significados de términos latinos a partir de otras lenguas.",
+          "segunda_lengua_extranjera": "comparar semejanzas y diferencias entre lenguas."
+        },
+        "resumen_ca": {
+          "latin": "inferir significats de termes llatins a partir d’altres llengües.",
+          "segunda_lengua_extranjera": "comparar semblances i diferències entre llengües."
+        },
+        "relacion_es": "Uso de la raíz latina para comprender léxico de la segunda lengua.",
+        "relacion_ca": "Ús de l’arrel llatina per comprendre lèxic de la segona llengua."
+      },
+      {
+        "criterios": {
+          "latin": [
+            "2.1"
+          ],
+          "segunda_lengua_extranjera": [
+            "6.3"
+          ]
+        },
+        "resumen_es": {
+          "latin": "valorar la diversidad lingüística a la que da origen el latín.",
+          "segunda_lengua_extranjera": "defender y apreciar la diversidad lingüística y cultural."
+        },
+        "resumen_ca": {
+          "latin": "valorar la diversitat lingüística a què dona origen el llatí.",
+          "segunda_lengua_extranjera": "defensar i apreciar la diversitat lingüística i cultural."
+        },
+        "relacion_es": "Valoración del plurilingüismo europeo a partir de un origen compartido.",
+        "relacion_ca": "Valoració del plurilingüisme europeu a partir d’un origen compartit."
+      }
+    ],
+    "saberes": {
+      "latin": {
+        "es": [
+          "Lenguas románicas",
+          "Léxico",
+          "Plurilingüismo"
+        ],
+        "ca": [
+          "Llengües romàniques",
+          "Lèxic",
+          "Plurilingüisme"
+        ]
+      },
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Estrategias de intercomprensión",
+          "Comparación entre lenguas",
+          "Diversidad cultural"
+        ],
+        "ca": [
+          "Estratègies d’intercomprensió",
+          "Comparació entre llengües",
+          "Diversitat cultural"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "intercomprensión",
+      "raíz",
+      "plurilingüismo",
+      "familia lingüística",
+      "transferencia"
+    ],
+    "conceptos_ca": [
+      "intercomprensió",
+      "arrel",
+      "plurilingüisme",
+      "família lingüística",
+      "transferència"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "latin",
+        "ambito_es": "Lenguas románicas e intercomprensión",
+        "ambito_ca": "Llengües romàniques i intercomprensió"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-21",
+    "curso": "4º",
+    "materias": [
+      "tecnologia",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Energía y vivienda sostenible",
+    "ambito_ca": "Energia i habitatge sostenible",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnologia": [
+            "6.2"
+          ],
+          "fisica_quimica": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia": "analizar los beneficios de la arquitectura bioclimática y el transporte sostenible.",
+          "fisica_quimica": "detectar necesidades tecnológicas, ambientales y sociales."
+        },
+        "resumen_ca": {
+          "tecnologia": "analitzar els beneficis de l’arquitectura bioclimàtica i el transport sostenible.",
+          "fisica_quimica": "detectar necessitats tecnològiques, ambientals i socials."
+        },
+        "relacion_es": "Estudio de la eficiencia energética de una vivienda.",
+        "relacion_ca": "Estudi de l’eficiència energètica d’un habitatge."
+      },
+      {
+        "criterios": {
+          "tecnologia": [
+            "4.1"
+          ],
+          "fisica_quimica": [
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia": "diseñar y simular sistemas automáticos programables.",
+          "fisica_quimica": "resolver problemas con leyes y teorías científicas."
+        },
+        "resumen_ca": {
+          "tecnologia": "dissenyar i simular sistemes automàtics programables.",
+          "fisica_quimica": "resoldre problemes amb lleis i teories científiques."
+        },
+        "relacion_es": "Cálculo y control de magnitudes energéticas en un sistema domótico.",
+        "relacion_ca": "Càlcul i control de magnituds energètiques en un sistema domòtic."
+      }
+    ],
+    "saberes": {
+      "tecnologia": {
+        "es": [
+          "Arquitectura bioclimática",
+          "Domótica",
+          "Sistemas de control"
+        ],
+        "ca": [
+          "Arquitectura bioclimàtica",
+          "Domòtica",
+          "Sistemes de control"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Energía y transformaciones",
+          "Electricidad",
+          "Calor y temperatura",
+          "Fuentes de energía"
+        ],
+        "ca": [
+          "Energia i transformacions",
+          "Electricitat",
+          "Calor i temperatura",
+          "Fonts d’energia"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "energía",
+      "eficiencia",
+      "potencia",
+      "control",
+      "sostenibilidad"
+    ],
+    "conceptos_ca": [
+      "energia",
+      "eficiència",
+      "potència",
+      "control",
+      "sostenibilitat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "tecnologia",
+        "ambito_es": "Energía y vivienda sostenible",
+        "ambito_ca": "Energia i habitatge sostenible"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-22",
+    "curso": "4º",
+    "materias": [
+      "tecnologia",
+      "matematicas_b"
+    ],
+    "ambito_es": "Robótica y modelización",
+    "ambito_ca": "Robòtica i modelització",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnologia": [
+            "4.1"
+          ],
+          "matematicas_b": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia": "diseñar, construir y programar robots.",
+          "matematicas_b": "modelizar situaciones y resolver problemas con algoritmos."
+        },
+        "resumen_ca": {
+          "tecnologia": "dissenyar, construir i programar robots.",
+          "matematicas_b": "modelitzar situacions i resoldre problemes amb algorismes."
+        },
+        "relacion_es": "Programación de trayectorias y comportamientos a partir de modelos matemáticos.",
+        "relacion_ca": "Programació de trajectòries i comportaments a partir de models matemàtics."
+      },
+      {
+        "criterios": {
+          "tecnologia": [
+            "2.1"
+          ],
+          "matematicas_b": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia": "analizar el diseño de un producto.",
+          "matematicas_b": "aplicar conexiones entre las matemáticas y otras materias."
+        },
+        "resumen_ca": {
+          "tecnologia": "analitzar el disseny d’un producte.",
+          "matematicas_b": "aplicar connexions entre les matemàtiques i altres matèries."
+        },
+        "relacion_es": "Uso de geometría y trigonometría en el diseño de mecanismos.",
+        "relacion_ca": "Ús de geometria i trigonometria en el disseny de mecanismes."
+      }
+    ],
+    "saberes": {
+      "tecnologia": {
+        "es": [
+          "Robótica",
+          "Programación",
+          "Sensores y actuadores"
+        ],
+        "ca": [
+          "Robòtica",
+          "Programació",
+          "Sensors i actuadors"
+        ]
+      },
+      "matematicas_b": {
+        "es": [
+          "Trigonometría",
+          "Funciones",
+          "Algoritmos",
+          "Geometría analítica"
+        ],
+        "ca": [
+          "Trigonometria",
+          "Funcions",
+          "Algorismes",
+          "Geometria analítica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "robot",
+      "modelo",
+      "algoritmo",
+      "ángulo",
+      "trayectoria"
+    ],
+    "conceptos_ca": [
+      "robot",
+      "model",
+      "algorisme",
+      "angle",
+      "trajectòria"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "tecnologia",
+        "ambito_es": "Robótica y modelización",
+        "ambito_ca": "Robòtica i modelització"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-23",
+    "curso": "4º",
+    "materias": [
+      "tecnologia",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Tecnología para la sostenibilidad ambiental",
+    "ambito_ca": "Tecnologia per a la sostenibilitat ambiental",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnologia": [
+            "6.1"
+          ],
+          "biologia_geologia": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia": "hacer un uso responsable de la tecnología con criterios de sostenibilidad.",
+          "biologia_geologia": "resolver problemas biológicos o geológicos con conocimientos científicos."
+        },
+        "resumen_ca": {
+          "tecnologia": "fer un ús responsable de la tecnologia amb criteris de sostenibilitat.",
+          "biologia_geologia": "resoldre problemes biològics o geològics amb coneixements científics."
+        },
+        "relacion_es": "Diseño de soluciones técnicas para problemas ambientales del entorno.",
+        "relacion_ca": "Disseny de solucions tècniques per a problemes ambientals de l’entorn."
+      },
+      {
+        "criterios": {
+          "tecnologia": [
+            "1.1"
+          ],
+          "biologia_geologia": [
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia": "idear soluciones tecnológicas que generen valor para la comunidad.",
+          "biologia_geologia": "diseñar la experimentación y la toma de datos."
+        },
+        "resumen_ca": {
+          "tecnologia": "idear solucions tecnològiques que generin valor per a la comunitat.",
+          "biologia_geologia": "dissenyar l’experimentació i la presa de dades."
+        },
+        "relacion_es": "Construcción de instrumentos para medir variables ambientales.",
+        "relacion_ca": "Construcció d’instruments per mesurar variables ambientals."
+      }
+    ],
+    "saberes": {
+      "tecnologia": {
+        "es": [
+          "Sostenibilidad",
+          "Proyecto tecnológico",
+          "Sensores"
+        ],
+        "ca": [
+          "Sostenibilitat",
+          "Projecte tecnològic",
+          "Sensors"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Controles experimentales",
+          "Investigación científica",
+          "Toma de datos",
+          "Modelado de procesos naturales"
+        ],
+        "ca": [
+          "Controls experimentals",
+          "Recerca científica",
+          "Presa de dades",
+          "Modelatge de processos naturals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "sostenibilidad",
+      "sensor",
+      "medida",
+      "impacto",
+      "solución"
+    ],
+    "conceptos_ca": [
+      "sostenibilitat",
+      "sensor",
+      "mesura",
+      "impacte",
+      "solució"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "tecnologia",
+        "ambito_es": "Tecnología para la sostenibilidad ambiental",
+        "ambito_ca": "Tecnologia per a la sostenibilitat ambiental"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-24",
+    "curso": "4º",
+    "materias": [
+      "fisica_quimica",
+      "matematicas_a"
+    ],
+    "ambito_es": "Movimiento y funciones",
+    "ambito_ca": "Moviment i funcions",
+    "vinculos": [
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "1.2"
+          ],
+          "matematicas_a": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "resolver problemas fisicoquímicos con leyes y teorías.",
+          "matematicas_a": "modelizar situaciones y resolver problemas."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "resoldre problemes fisicoquímics amb lleis i teories.",
+          "matematicas_a": "modelitzar situacions i resoldre problemes."
+        },
+        "relacion_es": "Modelización del movimiento rectilíneo con funciones.",
+        "relacion_ca": "Modelització del moviment rectilini amb funcions."
+      },
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "3.2"
+          ],
+          "matematicas_a": [
+            "7.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "utilizar unidades, magnitudes y notación científica correctas.",
+          "matematicas_a": "representar matemáticamente la información de un problema."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "utilitzar unitats, magnituds i notació científica correctes.",
+          "matematicas_a": "representar matemàticament la informació d’un problema."
+        },
+        "relacion_es": "Interpretación de gráficas posición-tiempo y velocidad-tiempo.",
+        "relacion_ca": "Interpretació de gràfiques posició-temps i velocitat-temps."
+      }
+    ],
+    "saberes": {
+      "fisica_quimica": {
+        "es": [
+          "Movimiento y fuerzas",
+          "Magnitudes y unidades",
+          "Gráficas del movimiento"
+        ],
+        "ca": [
+          "Moviment i forces",
+          "Magnituds i unitats",
+          "Gràfiques del moviment"
+        ]
+      },
+      "matematicas_a": {
+        "es": [
+          "Funciones lineales y cuadráticas",
+          "Representación gráfica",
+          "Ecuaciones"
+        ],
+        "ca": [
+          "Funcions lineals i quadràtiques",
+          "Representació gràfica",
+          "Equacions"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "función",
+      "velocidad",
+      "gráfica",
+      "pendiente",
+      "magnitud"
+    ],
+    "conceptos_ca": [
+      "funció",
+      "velocitat",
+      "gràfica",
+      "pendent",
+      "magnitud"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "fisica_quimica",
+        "ambito_es": "Movimiento y funciones",
+        "ambito_ca": "Moviment i funcions"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-25",
+    "curso": "4º",
+    "materias": [
+      "fisica_quimica",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Investigación científica en el laboratorio",
+    "ambito_ca": "Investigació científica al laboratori",
+    "vinculos": [
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "2.1"
+          ],
+          "biologia_geologia": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "emplear las metodologías propias de la ciencia.",
+          "biologia_geologia": "plantear preguntas e hipótesis contrastables."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "emprar les metodologies pròpies de la ciència.",
+          "biologia_geologia": "plantejar preguntes i hipòtesis contrastables."
+        },
+        "relacion_es": "Formulación compartida de hipótesis en un proyecto de investigación.",
+        "relacion_ca": "Formulació compartida d’hipòtesis en un projecte de recerca."
+      },
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "3.3"
+          ],
+          "biologia_geologia": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "aplicar las normas de uso del laboratorio.",
+          "biologia_geologia": "realizar experimentos y tomar datos."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "aplicar les normes d’ús del laboratori.",
+          "biologia_geologia": "realitzar experiments i prendre dades."
+        },
+        "relacion_es": "Experimentación segura con registro riguroso de datos.",
+        "relacion_ca": "Experimentació segura amb registre rigorós de dades."
+      }
+    ],
+    "saberes": {
+      "fisica_quimica": {
+        "es": [
+          "Metodología científica",
+          "Reacciones químicas",
+          "Normas de laboratorio"
+        ],
+        "ca": [
+          "Metodologia científica",
+          "Reaccions químiques",
+          "Normes de laboratori"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Proyecto científico",
+          "Experimentación",
+          "Análisis de resultados"
+        ],
+        "ca": [
+          "Projecte científic",
+          "Experimentació",
+          "Anàlisi de resultats"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "hipótesis",
+      "variable",
+      "experimento",
+      "evidencia",
+      "seguridad"
+    ],
+    "conceptos_ca": [
+      "hipòtesi",
+      "variable",
+      "experiment",
+      "evidència",
+      "seguretat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "fisica_quimica",
+        "ambito_es": "Investigación científica en el laboratorio",
+        "ambito_ca": "Investigació científica al laboratori"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-26",
+    "curso": "4º",
+    "materias": [
+      "fisica_quimica",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Divulgación científica",
+    "ambito_ca": "Divulgació científica",
+    "vinculos": [
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "3.1"
+          ],
+          "lengua_extranjera": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "emplear fuentes fiables para interpretar y comunicar información científica.",
+          "lengua_extranjera": "extraer el sentido global y las ideas principales de textos."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "emprar fonts fiables per interpretar i comunicar informació científica.",
+          "lengua_extranjera": "extreure el sentit global i les idees principals de texts."
+        },
+        "relacion_es": "Lectura de artículos divulgativos en lengua extranjera.",
+        "relacion_ca": "Lectura d’articles divulgatius en llengua estrangera."
+      },
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "6.1"
+          ],
+          "lengua_extranjera": [
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "valorar los avances científicos realizados por mujeres y hombres.",
+          "lengua_extranjera": "expresar oralmente textos estructurados."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "valorar els avanços científics fets per dones i homes.",
+          "lengua_extranjera": "expressar oralment texts estructurats."
+        },
+        "relacion_es": "Presentación oral sobre una científica o un científico relevante.",
+        "relacion_ca": "Presentació oral sobre una científica o un científic rellevant."
+      }
+    ],
+    "saberes": {
+      "fisica_quimica": {
+        "es": [
+          "Fuentes científicas",
+          "Historia de la ciencia",
+          "Comunicación científica"
+        ],
+        "ca": [
+          "Fonts científiques",
+          "Història de la ciència",
+          "Comunicació científica"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Comprensión de textos expositivos",
+          "Producción oral",
+          "Léxico científico"
+        ],
+        "ca": [
+          "Comprensió de texts expositius",
+          "Producció oral",
+          "Lèxic científic"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "divulgación",
+      "fuente",
+      "descubrimiento",
+      "ciencia",
+      "comunicación"
+    ],
+    "conceptos_ca": [
+      "divulgació",
+      "font",
+      "descobriment",
+      "ciència",
+      "comunicació"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "fisica_quimica",
+        "ambito_es": "Divulgación científica",
+        "ambito_ca": "Divulgació científica"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-27",
+    "curso": "4º",
+    "materias": [
+      "biologia_geologia",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Ciencia y mitos sobre el cuerpo y el deporte",
+    "ambito_ca": "Ciència i mites sobre el cos i l’esport",
+    "vinculos": [
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "2.2"
+          ],
+          "educacion_fisica": [
+            "1.5"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "contrastar la veracidad de la información científica con fuentes fiables.",
+          "educacion_fisica": "rechazar estereotipos corporales y comportamientos que pongan en riesgo la salud."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "contrastar la veracitat de la informació científica amb fonts fiables.",
+          "educacion_fisica": "rebutjar estereotips corporals i comportaments que posin en risc la salut."
+        },
+        "relacion_es": "Análisis crítico de mensajes sobre el cuerpo, la genética y el rendimiento deportivo.",
+        "relacion_ca": "Anàlisi crítica de missatges sobre el cos, la genètica i el rendiment esportiu."
+      },
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "3.4"
+          ],
+          "educacion_fisica": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "interpretar los resultados de un proyecto de investigación.",
+          "educacion_fisica": "planificar y autorregular el ejercicio orientado a la salud."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "interpretar els resultats d’un projecte de recerca.",
+          "educacion_fisica": "planificar i autoregular l’exercici orientat a la salut."
+        },
+        "relacion_es": "Interpretación de datos fisiológicos propios para ajustar la práctica física.",
+        "relacion_ca": "Interpretació de dades fisiològiques pròpies per ajustar la pràctica física."
+      }
+    ],
+    "saberes": {
+      "biologia_geologia": {
+        "es": [
+          "Fuentes fidedignas de información científica",
+          "Métodos de análisis de resultados",
+          "Fenotipo y genotipo"
+        ],
+        "ca": [
+          "Fonts fidedignes d’informació científica",
+          "Mètodes d’anàlisi de resultats",
+          "Fenotip i genotip"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Prácticas peligrosas en torno al cuerpo y la actividad física",
+          "Tipologías corporales y análisis crítico",
+          "Control de variables fisiológicas básicas"
+        ],
+        "ca": [
+          "Pràctiques perilloses entorn del cos i l’activitat física",
+          "Tipologies corporals i anàlisi crítica",
+          "Control de variables fisiològiques bàsiques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "evidencia",
+      "mito",
+      "genotipo",
+      "salud",
+      "dato"
+    ],
+    "conceptos_ca": [
+      "evidència",
+      "mite",
+      "genotip",
+      "salut",
+      "dada"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "biologia_geologia",
+        "ambito_es": "Ciencia y mitos sobre el cuerpo y el deporte",
+        "ambito_ca": "Ciència i mites sobre el cos i l’esport"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-28",
+    "curso": "4º",
+    "materias": [
+      "matematicas_a",
+      "geografia_historia"
+    ],
+    "ambito_es": "Datos sociales de las Islas Baleares",
+    "ambito_ca": "Dades socials de les Illes Balears",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas_a": [
+            "6.4"
+          ],
+          "geografia_historia": [
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_a": "comprender la realidad de las Islas Baleares con problemas contextualizados.",
+          "geografia_historia": "afrontar problemas desde un enfoque ecosocial."
+        },
+        "resumen_ca": {
+          "matematicas_a": "comprendre la realitat de les Illes Balears amb problemes contextualitzats.",
+          "geografia_historia": "afrontar problemes des d’un enfocament ecosocial."
+        },
+        "relacion_es": "Análisis cuantitativo de la presión turística y demográfica.",
+        "relacion_ca": "Anàlisi quantitativa de la pressió turística i demogràfica."
+      },
+      {
+        "criterios": {
+          "matematicas_a": [
+            "8.1"
+          ],
+          "geografia_historia": [
+            "1.3"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_a": "comunicar razonamientos y conclusiones matemáticas.",
+          "geografia_historia": "transferir la información mediante pósteres y presentaciones."
+        },
+        "resumen_ca": {
+          "matematicas_a": "comunicar raonaments i conclusions matemàtiques.",
+          "geografia_historia": "transferir la informació mitjançant pòsters i presentacions."
+        },
+        "relacion_es": "Comunicación de un estudio estadístico sobre el territorio.",
+        "relacion_ca": "Comunicació d’un estudi estadístic sobre el territori."
+      }
+    ],
+    "saberes": {
+      "matematicas_a": {
+        "es": [
+          "Estadística",
+          "Gráficos",
+          "Porcentajes",
+          "Interpretación de datos"
+        ],
+        "ca": [
+          "Estadística",
+          "Gràfics",
+          "Percentatges",
+          "Interpretació de dades"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Población y territorio",
+          "Desigualdad en el contexto de las Islas Baleares",
+          "Sostenibilidad",
+          "Fuentes estadísticas"
+        ],
+        "ca": [
+          "Població i territori",
+          "Desigualtat en el context de les Illes Balears",
+          "Sostenibilitat",
+          "Fonts estadístiques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "dato",
+      "población",
+      "indicador",
+      "territorio",
+      "muestra"
+    ],
+    "conceptos_ca": [
+      "dada",
+      "població",
+      "indicador",
+      "territori",
+      "mostra"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "matematicas_a",
+        "ambito_es": "Datos sociales de las Islas Baleares",
+        "ambito_ca": "Dades socials de les Illes Balears"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-29",
+    "curso": "4º",
+    "materias": [
+      "matematicas_a",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Estadística del rendimiento físico",
+    "ambito_ca": "Estadística del rendiment físic",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas_a": [
+            "4.1"
+          ],
+          "educacion_fisica": [
+            "1.6"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_a": "reconocer patrones y organizar datos.",
+          "educacion_fisica": "planificar la práctica física con aplicaciones digitales."
+        },
+        "resumen_ca": {
+          "matematicas_a": "reconèixer patrons i organitzar dades.",
+          "educacion_fisica": "planificar la pràctica física amb aplicacions digitals."
+        },
+        "relacion_es": "Recogida y organización de datos de condición física.",
+        "relacion_ca": "Recollida i organització de dades de condició física."
+      },
+      {
+        "criterios": {
+          "matematicas_a": [
+            "7.2"
+          ],
+          "educacion_fisica": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_a": "seleccionar herramientas y formas de representación adecuadas.",
+          "educacion_fisica": "planificar y autorregular el ejercicio orientado a la salud."
+        },
+        "resumen_ca": {
+          "matematicas_a": "seleccionar eines i formes de representació adequades.",
+          "educacion_fisica": "planificar i autoregular l’exercici orientat a la salut."
+        },
+        "relacion_es": "Representación de la evolución personal para ajustar un plan de entrenamiento.",
+        "relacion_ca": "Representació de l’evolució personal per ajustar un pla d’entrenament."
+      }
+    ],
+    "saberes": {
+      "matematicas_a": {
+        "es": [
+          "Estadística descriptiva",
+          "Gráficos",
+          "Hoja de cálculo"
+        ],
+        "ca": [
+          "Estadística descriptiva",
+          "Gràfics",
+          "Full de càlcul"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Planificación del entrenamiento",
+          "Condición física",
+          "Aplicaciones de control"
+        ],
+        "ca": [
+          "Planificació de l’entrenament",
+          "Condició física",
+          "Aplicacions de control"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "media",
+      "evolución",
+      "registro",
+      "entrenamiento",
+      "gráfico"
+    ],
+    "conceptos_ca": [
+      "mitjana",
+      "evolució",
+      "registre",
+      "entrenament",
+      "gràfic"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "matematicas_a",
+        "ambito_es": "Estadística del rendimiento físico",
+        "ambito_ca": "Estadística del rendiment físic"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-30",
+    "curso": "4º",
+    "materias": [
+      "matematicas_b",
+      "musica"
+    ],
+    "ambito_es": "Matemática del sonido",
+    "ambito_ca": "Matemàtica del so",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas_b": [
+            "6.2"
+          ],
+          "musica": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_b": "aplicar conexiones entre las matemáticas y otras materias.",
+          "musica": "leer partituras y analizar los elementos del lenguaje musical."
+        },
+        "resumen_ca": {
+          "matematicas_b": "aplicar connexions entre les matemàtiques i altres matèries.",
+          "musica": "llegir partitures i analitzar els elements del llenguatge musical."
+        },
+        "relacion_es": "Relación entre proporciones, intervalos y escalas musicales.",
+        "relacion_ca": "Relació entre proporcions, intervals i escales musicals."
+      },
+      {
+        "criterios": {
+          "matematicas_b": [
+            "4.1"
+          ],
+          "musica": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_b": "generalizar patrones.",
+          "musica": "elaborar piezas musicales estructuradas."
+        },
+        "resumen_ca": {
+          "matematicas_b": "generalitzar patrons.",
+          "musica": "elaborar peces musicals estructurades."
+        },
+        "relacion_es": "Composición a partir de patrones rítmicos y secuencias.",
+        "relacion_ca": "Composició a partir de patrons rítmics i seqüències."
+      }
+    ],
+    "saberes": {
+      "matematicas_b": {
+        "es": [
+          "Patrones, pautas y regularidades",
+          "Relación entre dos variables",
+          "Razones y proporciones",
+          "Funciones y su comportamiento"
+        ],
+        "ca": [
+          "Patrons, pautes i regularitats",
+          "Relació entre dues variables",
+          "Raons i proporcions",
+          "Funcions i el seu comportament"
+        ]
+      },
+      "musica": {
+        "es": [
+          "Lenguaje musical",
+          "Escalas e intervalos",
+          "Composición",
+          "Ritmo"
+        ],
+        "ca": [
+          "Llenguatge musical",
+          "Escales i intervals",
+          "Composició",
+          "Ritme"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "frecuencia",
+      "proporción",
+      "patrón",
+      "intervalo",
+      "ritmo"
+    ],
+    "conceptos_ca": [
+      "freqüència",
+      "proporció",
+      "patró",
+      "interval",
+      "ritme"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "matematicas_b",
+        "ambito_es": "Matemática del sonido",
+        "ambito_ca": "Matemàtica del so"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-31",
+    "curso": "4º",
+    "materias": [
+      "matematicas_b",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Leyes científicas y modelos matemáticos",
+    "ambito_ca": "Lleis científiques i models matemàtics",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas_b": [
+            "4.2"
+          ],
+          "fisica_quimica": [
+            "2.3"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_b": "modelizar situaciones y resolver problemas.",
+          "fisica_quimica": "aplicar leyes y teorías científicas para validar hipótesis."
+        },
+        "resumen_ca": {
+          "matematicas_b": "modelitzar situacions i resoldre problemes.",
+          "fisica_quimica": "aplicar lleis i teories científiques per validar hipòtesis."
+        },
+        "relacion_es": "Expresión matemática de leyes físicas y químicas.",
+        "relacion_ca": "Expressió matemàtica de lleis físiques i químiques."
+      },
+      {
+        "criterios": {
+          "matematicas_b": [
+            "2.1"
+          ],
+          "fisica_quimica": [
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "matematicas_b": "comprobar la corrección matemática de las soluciones.",
+          "fisica_quimica": "resolver problemas fisicoquímicos."
+        },
+        "resumen_ca": {
+          "matematicas_b": "comprovar la correcció matemàtica de les solucions.",
+          "fisica_quimica": "resoldre problemes fisicoquímics."
+        },
+        "relacion_es": "Revisión de resultados con análisis dimensional y órdenes de magnitud.",
+        "relacion_ca": "Revisió de resultats amb anàlisi dimensional i ordres de magnitud."
+      }
+    ],
+    "saberes": {
+      "matematicas_b": {
+        "es": [
+          "Ecuaciones y sistemas",
+          "Funciones",
+          "Notación científica"
+        ],
+        "ca": [
+          "Equacions i sistemes",
+          "Funcions",
+          "Notació científica"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Fuerza como causa de cambios en los cuerpos",
+          "Estequiometría",
+          "Magnitudes y unidades"
+        ],
+        "ca": [
+          "Força com a causa de canvis en els cossos",
+          "Estequiometria",
+          "Magnituds i unitats"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "ley",
+      "modelo",
+      "ecuación",
+      "magnitud",
+      "validación"
+    ],
+    "conceptos_ca": [
+      "llei",
+      "model",
+      "equació",
+      "magnitud",
+      "validació"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "matematicas_b",
+        "ambito_es": "Leyes científicas y modelos matemáticos",
+        "ambito_ca": "Lleis científiques i models matemàtics"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-32",
+    "curso": "4º",
+    "materias": [
+      "musica",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Música popular en otras lenguas",
+    "ambito_ca": "Música popular en altres llengües",
+    "vinculos": [
+      {
+        "criterios": {
+          "musica": [
+            "1.1"
+          ],
+          "lengua_extranjera": [
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "analizar obras musicales de diferentes épocas y culturas.",
+          "lengua_extranjera": "interpretar el contenido y los rasgos discursivos de textos."
+        },
+        "resumen_ca": {
+          "musica": "analitzar obres musicals de diferents èpoques i cultures.",
+          "lengua_extranjera": "interpretar el contingut i els trets discursius de texts."
+        },
+        "relacion_es": "Análisis de canciones y de sus letras en su contexto cultural.",
+        "relacion_ca": "Anàlisi de cançons i de les lletres en el seu context cultural."
+      },
+      {
+        "criterios": {
+          "musica": [
+            "1.2"
+          ],
+          "lengua_extranjera": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "valorar críticamente hábitos y referentes musicales.",
+          "lengua_extranjera": "valorar críticamente la diversidad cultural y artística."
+        },
+        "resumen_ca": {
+          "musica": "valorar críticament hàbits i referents musicals.",
+          "lengua_extranjera": "valorar críticament la diversitat cultural i artística."
+        },
+        "relacion_es": "Reflexión sobre la industria musical y la diversidad cultural.",
+        "relacion_ca": "Reflexió sobre la indústria musical i la diversitat cultural."
+      }
+    ],
+    "saberes": {
+      "musica": {
+        "es": [
+          "Música popular urbana",
+          "Industria musical",
+          "Análisis musical"
+        ],
+        "ca": [
+          "Música popular urbana",
+          "Indústria musical",
+          "Anàlisi musical"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Textos literarios y canciones",
+          "Aspectos socioculturales",
+          "Interpretación de textos"
+        ],
+        "ca": [
+          "Texts literaris i cançons",
+          "Aspectes socioculturals",
+          "Interpretació de texts"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "letra",
+      "género musical",
+      "cultura",
+      "industria",
+      "contexto"
+    ],
+    "conceptos_ca": [
+      "lletra",
+      "gènere musical",
+      "cultura",
+      "indústria",
+      "context"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "musica",
+        "ambito_es": "Música popular en otras lenguas",
+        "ambito_ca": "Música popular en altres llengües"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-33",
+    "curso": "4º",
+    "materias": [
+      "musica",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Coreografía y expresión corporal",
+    "ambito_ca": "Coreografia i expressió corporal",
+    "vinculos": [
+      {
+        "criterios": {
+          "musica": [
+            "3.3"
+          ],
+          "educacion_fisica": [
+            "4.3"
+          ]
+        },
+        "resumen_es": {
+          "musica": "interpretar piezas musicales y de danza con expresividad.",
+          "educacion_fisica": "crear y representar composiciones con y sin base musical."
+        },
+        "resumen_ca": {
+          "musica": "interpretar peces musicals i de dansa amb expressivitat.",
+          "educacion_fisica": "crear i representar composicions amb i sense base musical."
+        },
+        "relacion_es": "Creación de una coreografía ajustada a la estructura musical.",
+        "relacion_ca": "Creació d’una coreografia ajustada a l’estructura musical."
+      },
+      {
+        "criterios": {
+          "musica": [
+            "2.1"
+          ],
+          "educacion_fisica": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "musica": "explorar técnicas musicales y de danza.",
+          "educacion_fisica": "practicar modalidades de la cultura propia y de otras."
+        },
+        "resumen_ca": {
+          "musica": "explorar tècniques musicals i de dansa.",
+          "educacion_fisica": "practicar modalitats de la cultura pròpia i d’altres."
+        },
+        "relacion_es": "Práctica de danzas tradicionales y actuales.",
+        "relacion_ca": "Pràctica de danses tradicionals i actuals."
+      }
+    ],
+    "saberes": {
+      "musica": {
+        "es": [
+          "Danza",
+          "Estructura musical",
+          "Interpretación"
+        ],
+        "ca": [
+          "Dansa",
+          "Estructura musical",
+          "Interpretació"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Expresión corporal",
+          "Actividades rítmicas y musicales",
+          "Ritmo y movimiento"
+        ],
+        "ca": [
+          "Expressió corporal",
+          "Activitats rítmiques i musicals",
+          "Ritme i moviment"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "coreografía",
+      "ritmo",
+      "estructura",
+      "movimiento",
+      "expresión"
+    ],
+    "conceptos_ca": [
+      "coreografia",
+      "ritme",
+      "estructura",
+      "moviment",
+      "expressió"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "musica",
+        "ambito_es": "Coreografía y expresión corporal",
+        "ambito_ca": "Coreografia i expressió corporal"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-34",
+    "curso": "4º",
+    "materias": [
+      "lengua_catalana",
+      "segunda_lengua_extranjera"
+    ],
+    "ambito_es": "Mediación plurilingüe",
+    "ambito_ca": "Mediació plurilingüe",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "2.1"
+          ],
+          "segunda_lengua_extranjera": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "comprender el sentido global y la información relevante de textos orales.",
+          "segunda_lengua_extranjera": "aplicar estrategias de mediación."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "comprendre el sentit global i la informació rellevant de texts orals.",
+          "segunda_lengua_extranjera": "aplicar estratègies de mediació."
+        },
+        "relacion_es": "Mediación de información entre catalán y la segunda lengua.",
+        "relacion_ca": "Mediació d’informació entre català i la segona llengua."
+      },
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "1.2"
+          ],
+          "segunda_lengua_extranjera": [
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "cuestionar prejuicios y estereotipos lingüísticos.",
+          "segunda_lengua_extranjera": "actuar de manera empática en situaciones interculturales."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "qüestionar prejudicis i estereotips lingüístics.",
+          "segunda_lengua_extranjera": "actuar de manera empàtica en situacions interculturals."
+        },
+        "relacion_es": "Reflexión sobre actitudes lingüísticas en contextos plurilingües.",
+        "relacion_ca": "Reflexió sobre actituds lingüístiques en contextos plurilingües."
+      }
+    ],
+    "saberes": {
+      "lengua_catalana": {
+        "es": [
+          "Comprensión oral",
+          "Prejuicios lingüísticos",
+          "Plurilingüismo"
+        ],
+        "ca": [
+          "Comprensió oral",
+          "Prejudicis lingüístics",
+          "Plurilingüisme"
+        ]
+      },
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Mediación",
+          "Interculturalidad",
+          "Estrategias de comprensión"
+        ],
+        "ca": [
+          "Mediació",
+          "Interculturalitat",
+          "Estratègies de comprensió"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mediación",
+      "plurilingüismo",
+      "prejuicio",
+      "interculturalidad",
+      "comprensión"
+    ],
+    "conceptos_ca": [
+      "mediació",
+      "plurilingüisme",
+      "prejudici",
+      "interculturalitat",
+      "comprensió"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "lengua_catalana",
+        "ambito_es": "Mediación plurilingüe",
+        "ambito_ca": "Mediació plurilingüe"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-35",
+    "curso": "4º",
+    "materias": [
+      "lengua_castellana",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Literatura comparada",
+    "ambito_ca": "Literatura comparada",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "8.2"
+          ],
+          "lengua_catalana": [
+            "8.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "establecer vínculos entre los textos leídos y otros textos.",
+          "lengua_catalana": "establecer vínculos entre los textos leídos y otras manifestaciones."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "establir vincles entre els texts llegits i altres texts.",
+          "lengua_catalana": "establir vincles entre els texts llegits i altres manifestacions."
+        },
+        "relacion_es": "Comparación de temas y movimientos literarios en las dos literaturas.",
+        "relacion_ca": "Comparació de temes i moviments literaris en les dues literatures."
+      },
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "8.1"
+          ],
+          "lengua_catalana": [
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "explicar y argumentar la interpretación de las obras leídas.",
+          "lengua_catalana": "explicar y argumentar la interpretación de las obras leídas."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "explicar i argumentar la interpretació de les obres llegides.",
+          "lengua_catalana": "explicar i argumentar la interpretació de les obres llegides."
+        },
+        "relacion_es": "Interpretación argumentada de obras contemporáneas en las dos lenguas.",
+        "relacion_ca": "Interpretació argumentada d’obres contemporànies en les dues llengües."
+      }
+    ],
+    "saberes": {
+      "lengua_castellana": {
+        "es": [
+          "Literatura contemporánea",
+          "Intertextualidad",
+          "Comentario de texto"
+        ],
+        "ca": [
+          "Literatura contemporània",
+          "Intertextualitat",
+          "Comentari de text"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Literatura contemporánea",
+          "Intertextualidad",
+          "Comentario de texto"
+        ],
+        "ca": [
+          "Literatura contemporània",
+          "Intertextualitat",
+          "Comentari de text"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "movimiento literario",
+      "tema",
+      "interpretación",
+      "contexto",
+      "intertextualidad"
+    ],
+    "conceptos_ca": [
+      "moviment literari",
+      "tema",
+      "interpretació",
+      "context",
+      "intertextualitat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "lengua_castellana",
+        "ambito_es": "Literatura comparada",
+        "ambito_ca": "Literatura comparada"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-36",
+    "curso": "4º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Estrategias de aprendizaje plurilingüe",
+    "ambito_ca": "Estratègies d’aprenentatge plurilingüe",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "5.1"
+          ],
+          "lengua_extranjera": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "comparar y argumentar semejanzas entre lenguas.",
+          "lengua_extranjera": "comparar y argumentar semejanzas entre lenguas."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "comparar i argumentar semblances entre llengües.",
+          "lengua_extranjera": "comparar i argumentar semblances entre llengües."
+        },
+        "relacion_es": "Transferencia de estrategias entre las dos lenguas extranjeras.",
+        "relacion_ca": "Transferència d’estratègies entre les dues llengües estrangeres."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "5.3"
+          ],
+          "lengua_extranjera": [
+            "5.3"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "registrar y analizar los progresos de aprendizaje.",
+          "lengua_extranjera": "registrar y analizar los progresos de aprendizaje."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "registrar i analitzar els progressos d’aprenentatge.",
+          "lengua_extranjera": "registrar i analitzar els progressos d’aprenentatge."
+        },
+        "relacion_es": "Uso de un portafolio común para autoevaluar el progreso lingüístico.",
+        "relacion_ca": "Ús d’un portfoli comú per autoavaluar el progrés lingüístic."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Reflexión interlingüística",
+          "Autoevaluación",
+          "Técnicas de autoevaluación"
+        ],
+        "ca": [
+          "Reflexió interlingüística",
+          "Autoavaluació",
+          "Tècniques d’autoavaluació"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Reflexión interlingüística",
+          "Autoevaluación",
+          "Estrategias de aprendizaje"
+        ],
+        "ca": [
+          "Reflexió interlingüística",
+          "Autoavaluació",
+          "Estratègies d’aprenentatge"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "transferencia",
+      "portafolio",
+      "estrategia",
+      "autoevaluación",
+      "plurilingüismo"
+    ],
+    "conceptos_ca": [
+      "transferència",
+      "portfoli",
+      "estratègia",
+      "autoavaluació",
+      "plurilingüisme"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "ambito_es": "Estrategias de aprendizaje plurilingüe",
+        "ambito_ca": "Estratègies d’aprenentatge plurilingüe"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-37",
+    "curso": "4º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "valores_civicos_eticos"
+    ],
+    "ambito_es": "Interculturalidad y derechos humanos",
+    "ambito_ca": "Interculturalitat i drets humans",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "6.2"
+          ],
+          "valores_civicos_eticos": [
+            "2.5"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "valorar la diversidad cultural en relación con los derechos humanos.",
+          "valores_civicos_eticos": "contribuir al bienestar social con una posición ética informada."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "valorar la diversitat cultural en relació amb els drets humans.",
+          "valores_civicos_eticos": "contribuir al benestar social amb una posició ètica informada."
+        },
+        "relacion_es": "Análisis de situaciones de discriminación cultural desde los derechos humanos.",
+        "relacion_ca": "Anàlisi de situacions de discriminació cultural des dels drets humans."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "6.1"
+          ],
+          "valores_civicos_eticos": [
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "actuar de manera empática en situaciones interculturales.",
+          "valores_civicos_eticos": "promover una convivencia pacífica y respetuosa."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "actuar de manera empàtica en situacions interculturals.",
+          "valores_civicos_eticos": "promoure una convivència pacífica i respectuosa."
+        },
+        "relacion_es": "Práctica de la convivencia intercultural en el centro.",
+        "relacion_ca": "Pràctica de la convivència intercultural en el centre."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Interculturalidad",
+          "Aspectos socioculturales",
+          "Estereotipos"
+        ],
+        "ca": [
+          "Interculturalitat",
+          "Aspectes socioculturals",
+          "Estereotips"
+        ]
+      },
+      "valores_civicos_eticos": {
+        "es": [
+          "Derechos humanos",
+          "Diversidad cultural",
+          "Interculturalismo e inclusión social"
+        ],
+        "ca": [
+          "Drets humans",
+          "Diversitat cultural",
+          "Interculturalisme i inclusió social"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "interculturalidad",
+      "derecho",
+      "diversidad",
+      "empatía",
+      "convivencia"
+    ],
+    "conceptos_ca": [
+      "interculturalitat",
+      "dret",
+      "diversitat",
+      "empatia",
+      "convivència"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "ambito_es": "Interculturalidad y derechos humanos",
+        "ambito_ca": "Interculturalitat i drets humans"
+      }
+    ]
+  },
+  {
+    "id": "ESO4-38",
+    "curso": "4º",
+    "materias": [
+      "expresion_artistica",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Ilustración y narrativa visual",
+    "ambito_ca": "Il·lustració i narrativa visual",
+    "vinculos": [
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "3.2"
+          ],
+          "lengua_catalana": [
+            "8.3"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "realizar producciones audiovisuales colaborativas.",
+          "lengua_catalana": "crear textos con intención literaria."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "realitzar produccions audiovisuals col·laboratives.",
+          "lengua_catalana": "crear texts amb intenció literària."
+        },
+        "relacion_es": "Creación de un relato ilustrado o de un cortometraje a partir de un texto propio.",
+        "relacion_ca": "Creació d’un relat il·lustrat o d’un curtmetratge a partir d’un text propi."
+      },
+      {
+        "criterios": {
+          "expresion_artistica": [
+            "1.1"
+          ],
+          "lengua_catalana": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "expresion_artistica": "analizar manifestaciones artísticas.",
+          "lengua_catalana": "comprender e interpretar textos escritos y multimodales."
+        },
+        "resumen_ca": {
+          "expresion_artistica": "analitzar manifestacions artístiques.",
+          "lengua_catalana": "comprendre i interpretar texts escrits i multimodals."
+        },
+        "relacion_es": "Análisis conjunto de texto e imagen en el cómic y el álbum ilustrado.",
+        "relacion_ca": "Anàlisi conjunta de text i imatge en el còmic i l’àlbum il·lustrat."
+      }
+    ],
+    "saberes": {
+      "expresion_artistica": {
+        "es": [
+          "Narrativa visual",
+          "Imagen secuenciada e historieta gráfica",
+          "Producción audiovisual"
+        ],
+        "ca": [
+          "Narrativa visual",
+          "Imatge seqüenciada i historieta gràfica",
+          "Producció audiovisual"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Escritura creativa",
+          "Textos multimodales",
+          "Géneros literarios"
+        ],
+        "ca": [
+          "Escriptura creativa",
+          "Texts multimodals",
+          "Gèneres literaris"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "narración",
+      "imagen",
+      "secuencia",
+      "relato",
+      "multimodalidad"
+    ],
+    "conceptos_ca": [
+      "narració",
+      "imatge",
+      "seqüència",
+      "relat",
+      "multimodalitat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "expresion_artistica",
+        "ambito_es": "Ilustración y narrativa visual",
+        "ambito_ca": "Il·lustració i narrativa visual"
+      }
+    ]
+  }
+]

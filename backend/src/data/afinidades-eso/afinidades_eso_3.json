@@ -1,0 +1,4349 @@
+[
+  {
+    "id": "ESO3-01",
+    "curso": "3º",
+    "materias": [
+      "biologia_geologia",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Laboratorio de procesos vitales y transformaciones de la materia",
+    "ambito_ca": "Laboratori de processos vitals i transformacions de la matèria",
+    "vinculos": [
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "3.1",
+            "3.2"
+          ],
+          "fisica_quimica": [
+            "2.1",
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "formular hipótesis y diseñar investigaciones.",
+          "fisica_quimica": "investigar fenómenos y diseñar contrastaciones de hipótesis."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "formular hipòtesis i dissenyar investigacions.",
+          "fisica_quimica": "investigar fenòmens i dissenyar contrastacions d’hipòtesis."
+        },
+        "relacion_es": "Procedimientos de investigación comunes para estudiar procesos biológicos y químicos.",
+        "relacion_ca": "Procediments de recerca comuns per estudiar processos biològics i químics."
+      },
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "3.3",
+            "3.4"
+          ],
+          "fisica_quimica": [
+            "3.1",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "experimentar, recoger datos e interpretar resultados.",
+          "fisica_quimica": "interpretar datos y aplicar normas de laboratorio."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "experimentar, recollir dades i interpretar resultats.",
+          "fisica_quimica": "interpretar dades i aplicar normes de laboratori."
+        },
+        "relacion_es": "Obtención de evidencias y explicación de los resultados con criterios compartidos.",
+        "relacion_ca": "Obtenció d’evidències i explicació dels resultats amb criteris compartits."
+      }
+    ],
+    "saberes": {
+      "biologia_geologia": {
+        "es": [
+          "Célula como unidad funcional",
+          "experimentación",
+          "observación",
+          "uso de instrumentos",
+          "análisis de datos",
+          "correlación y causalidad"
+        ],
+        "ca": [
+          "Cèl·lula com a unitat funcional",
+          "experimentació",
+          "observació",
+          "ús d’instruments",
+          "anàlisi de dades",
+          "correlació i causalitat"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Método científico",
+          "cambios químicos",
+          "factores de las reacciones",
+          "instrumentos de medida",
+          "seguridad",
+          "comunicación de resultados"
+        ],
+        "ca": [
+          "Mètode científic",
+          "canvis químics",
+          "factors de les reaccions",
+          "instruments de mesura",
+          "seguretat",
+          "comunicació de resultats"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "transformación",
+      "hipótesis",
+      "variable",
+      "experimentación",
+      "evidencia",
+      "causalidad"
+    ],
+    "conceptos_ca": [
+      "transformació",
+      "hipòtesi",
+      "variable",
+      "experimentació",
+      "evidència",
+      "causalitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "biologia_geologia",
+        "opcion": 3,
+        "ambito_es": "Laboratorio de procesos vitales y transformaciones de la materia",
+        "ambito_ca": "Laboratori de processos vitals i transformacions de la matèria"
+      },
+      {
+        "materia": "fisica_quimica",
+        "opcion": 3,
+        "ambito_es": "Experimentación y transformaciones en los seres vivos",
+        "ambito_ca": "Experimentació i transformacions en els éssers vius"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-02",
+    "curso": "3º",
+    "materias": [
+      "biologia_geologia",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Funcionamiento del cuerpo y práctica física saludable",
+    "ambito_ca": "Funcionament del cos i pràctica física saludable",
+    "vinculos": [
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "5.3"
+          ],
+          "educacion_fisica": [
+            "1.1",
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "adoptar hábitos saludables con fundamento fisiológico.",
+          "educacion_fisica": "regular la práctica física e incorporar rutinas saludables."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "adoptar hàbits saludables amb fonament fisiològic.",
+          "educacion_fisica": "regular la pràctica física i incorporar rutines saludables."
+        },
+        "relacion_es": "Relación entre el funcionamiento del organismo y la regulación del esfuerzo.",
+        "relacion_ca": "Relació entre el funcionament de l’organisme i la regulació de l’esforç."
+      },
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "2.2"
+          ],
+          "educacion_fisica": [
+            "1.5"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "distinguir información científica de falsas creencias.",
+          "educacion_fisica": "contrastar información y rechazar prácticas perjudiciales."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "distingir informació científica de falses creences.",
+          "educacion_fisica": "contrastar informació i rebutjar pràctiques perjudicials."
+        },
+        "relacion_es": "Análisis fundamentado de los mensajes sobre alimentación, cuerpo y actividad física.",
+        "relacion_ca": "Anàlisi fonamentada dels missatges sobre alimentació, cos i activitat física."
+      }
+    ],
+    "saberes": {
+      "biologia_geologia": {
+        "es": [
+          "Aparatos circulatorio y respiratorio",
+          "nutrición",
+          "coordinación de los sistemas corporales",
+          "dieta saludable",
+          "salud",
+          "fuentes de información científica"
+        ],
+        "ca": [
+          "Aparells circulatori i respiratori",
+          "nutrició",
+          "coordinació dels sistemes corporals",
+          "dieta saludable",
+          "salut",
+          "fonts d’informació científica"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Variables fisiológicas",
+          "calentamiento",
+          "dosificación del esfuerzo",
+          "alimentación saludable",
+          "publicidad alimentaria",
+          "mitos sobre el cuerpo y el deporte"
+        ],
+        "ca": [
+          "Variables fisiològiques",
+          "escalfament",
+          "dosificació de l’esforç",
+          "alimentació saludable",
+          "publicitat alimentària",
+          "mites sobre el cos i l’esport"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "salud",
+      "nutrición",
+      "respuesta fisiológica",
+      "esfuerzo",
+      "autocuidado",
+      "evidencia"
+    ],
+    "conceptos_ca": [
+      "salut",
+      "nutrició",
+      "resposta fisiològica",
+      "esforç",
+      "autocura",
+      "evidència"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "biologia_geologia",
+        "opcion": 4,
+        "ambito_es": "Funcionamiento del cuerpo y práctica física saludable",
+        "ambito_ca": "Funcionament del cos i pràctica física saludable"
+      },
+      {
+        "materia": "educacion_fisica",
+        "opcion": 3,
+        "ambito_es": "Fisiología y hábitos saludables",
+        "ambito_ca": "Fisiologia i hàbits saludables"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-03",
+    "curso": "3º",
+    "materias": [
+      "cultura_clasica_2",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Cultura del cuerpo y significado social del deporte",
+    "ambito_ca": "Cultura del cos i significat social de l’esport",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "2.2"
+          ],
+          "educacion_fisica": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "comparar clases sociales, roles y formas de trabajo y ocio.",
+          "educacion_fisica": "analizar y rechazar estereotipos de género en las prácticas deportivas."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "comparar classes socials, rols i formes de treball i lleure.",
+          "educacion_fisica": "analitzar i rebutjar estereotips de gènere en les pràctiques esportives."
+        },
+        "relacion_es": "Examen de los modelos corporales y del acceso a la actividad física según género y posición social.",
+        "relacion_ca": "Examen dels models corporals i de l’accés a l’activitat física segons gènere i posició social."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "3.3"
+          ],
+          "educacion_fisica": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "reconocer la pervivencia de fiestas y espectáculos clásicos.",
+          "educacion_fisica": "comprender y practicar manifestaciones motrices vinculadas a culturas y tradiciones."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "reconèixer la pervivència de festes i espectacles clàssics.",
+          "educacion_fisica": "comprendre i practicar manifestacions motrius vinculades a cultures i tradicions."
+        },
+        "relacion_es": "Interpretación del deporte como expresión cultural con continuidades y transformaciones.",
+        "relacion_ca": "Interpretació de l’esport com a expressió cultural amb continuïtats i transformacions."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_2": {
+        "es": [
+          "Vida cotidiana",
+          "roles sociales y familiares",
+          "ocio",
+          "juegos atléticos",
+          "festividades",
+          "continuidad de los espectáculos de la Antigüedad"
+        ],
+        "ca": [
+          "Vida quotidiana",
+          "rols socials i familiars",
+          "lleure",
+          "jocs atlètics",
+          "festivitats",
+          "continuïtat dels espectacles de l’Antiguitat"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Cultura motriz",
+          "manifestaciones deportivas",
+          "deporte y perspectiva de género",
+          "estereotipos",
+          "influencia social y cultural del deporte"
+        ],
+        "ca": [
+          "Cultura motriu",
+          "manifestacions esportives",
+          "esport i perspectiva de gènere",
+          "estereotips",
+          "influència social i cultural de l’esport"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "cuerpo",
+      "deporte",
+      "cultura",
+      "género",
+      "participación",
+      "tradición"
+    ],
+    "conceptos_ca": [
+      "cos",
+      "esport",
+      "cultura",
+      "gènere",
+      "participació",
+      "tradició"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_2",
+        "opcion": 4,
+        "ambito_es": "Cultura del cuerpo y significado social del deporte",
+        "ambito_ca": "Cultura del cos i significat social de l’esport"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-04",
+    "curso": "3º",
+    "materias": [
+      "educacion_plastica",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Lectura crítica de los mensajes multimodales",
+    "ambito_ca": "Lectura crítica dels missatges multimodals",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "4.1",
+            "4.2"
+          ],
+          "lengua_catalana": [
+            "4.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "analizar lenguajes visuales y establecer conexiones entre producciones.",
+          "lengua_catalana": "interpretar textos multimodales y valorar su forma, contenido y fiabilidad."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "analitzar llenguatges visuals i establir connexions entre produccions.",
+          "lengua_catalana": "interpretar texts multimodals i valorar-ne forma, contingut i fiabilitat."
+        },
+        "relacion_es": "Análisis conjunto de la imagen, la palabra y la intención comunicativa.",
+        "relacion_ca": "Anàlisi conjunta de la imatge, la paraula i la intenció comunicativa."
+      },
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "8.1",
+            "8.2"
+          ],
+          "lengua_catalana": [
+            "5.1",
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "reconocer funciones de las imágenes y considerar al público destinatario.",
+          "lengua_catalana": "adecuar textos a la situación y detectar usos manipuladores o discriminatorios."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "reconèixer funcions de les imatges i considerar el públic destinatari.",
+          "lengua_catalana": "adequar texts a la situació i detectar usos manipuladors o discriminatoris."
+        },
+        "relacion_es": "Relación entre decisiones expresivas, destinatarios y efectos del mensaje.",
+        "relacion_ca": "Relació entre decisions expressives, destinataris i efectes del missatge."
+      }
+    ],
+    "saberes": {
+      "educacion_plastica": {
+        "es": [
+          "Lectura de imágenes",
+          "composición",
+          "lenguaje visual y audiovisual",
+          "comunicación multimodal",
+          "intencionalidad",
+          "medios y públicos"
+        ],
+        "ca": [
+          "Lectura d’imatges",
+          "composició",
+          "llenguatge visual i audiovisual",
+          "comunicació multimodal",
+          "intencionalitat",
+          "mitjans i públics"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Textos multimodales",
+          "intención comunicativa",
+          "géneros sociales y mediáticos",
+          "adecuación",
+          "recursos expresivos",
+          "usos manipuladores del lenguaje"
+        ],
+        "ca": [
+          "Texts multimodals",
+          "intenció comunicativa",
+          "gèneres socials i mediàtics",
+          "adequació",
+          "recursos expressius",
+          "usos manipuladors del llenguatge"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mensaje",
+      "código",
+      "intención",
+      "destinatario",
+      "persuasión",
+      "interpretación"
+    ],
+    "conceptos_ca": [
+      "missatge",
+      "codi",
+      "intenció",
+      "destinatari",
+      "persuasió",
+      "interpretació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "educacion_plastica",
+        "opcion": 3,
+        "ambito_es": "Lectura crítica de los mensajes multimodales",
+        "ambito_ca": "Lectura crítica dels missatges multimodals"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-05",
+    "curso": "3º",
+    "materias": [
+      "educacion_plastica",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Representación gráfica y diseño",
+    "ambito_ca": "Representació gràfica i disseny",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "5.2",
+            "7.1"
+          ],
+          "tecnologia_digitalizacion": [
+            "2.1",
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "justificar decisiones y emplear técnicas visuales adecuadas a un objetivo.",
+          "tecnologia_digitalizacion": "diseñar soluciones y planificar los recursos necesarios."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "justificar decisions i emprar tècniques visuals adequades a un objectiu.",
+          "tecnologia_digitalizacion": "dissenyar solucions i planificar els recursos necessaris."
+        },
+        "relacion_es": "Relación entre forma, función, materiales y restricciones de diseño.",
+        "relacion_ca": "Relació entre forma, funció, materials i restriccions de disseny."
+      },
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "8.3"
+          ],
+          "tecnologia_digitalizacion": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "explicar el proceso y valorar errores y mejoras.",
+          "tecnologia_digitalizacion": "representar y comunicar el proceso con documentación técnica y gráfica."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "explicar el procés i valorar errors i millores.",
+          "tecnologia_digitalizacion": "representar i comunicar el procés amb documentació tècnica i gràfica."
+        },
+        "relacion_es": "Uso de representaciones para hacer explícitas y revisar las decisiones.",
+        "relacion_ca": "Ús de representacions per fer explícites i revisar les decisions."
+      }
+    ],
+    "saberes": {
+      "educacion_plastica": {
+        "es": [
+          "Bocetos",
+          "geometría plana",
+          "formas y volumen",
+          "proceso creativo",
+          "selección de técnicas",
+          "documentación gráfica del proceso"
+        ],
+        "ca": [
+          "Esbossos",
+          "geometria plana",
+          "formes i volum",
+          "procés creatiu",
+          "selecció de tècniques",
+          "documentació gràfica del procés"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Diseño de soluciones",
+          "representación CAD en dos y tres dimensiones",
+          "documentos técnicos",
+          "fabricación",
+          "revisión de soluciones"
+        ],
+        "ca": [
+          "Disseny de solucions",
+          "representació CAD en dues i tres dimensions",
+          "documents tècnics",
+          "fabricació",
+          "revisió de solucions"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "diseño",
+      "forma",
+      "función",
+      "representación",
+      "material",
+      "revisión"
+    ],
+    "conceptos_ca": [
+      "disseny",
+      "forma",
+      "funció",
+      "representació",
+      "material",
+      "revisió"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "educacion_plastica",
+        "opcion": 4,
+        "ambito_es": "Representación gráfica y diseño",
+        "ambito_ca": "Representació gràfica i disseny"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-06",
+    "curso": "3º",
+    "materias": [
+      "fisica_quimica",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Explicación científica y fiabilidad de la información",
+    "ambito_ca": "Explicació científica i fiabilitat de la informació",
+    "vinculos": [
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "2.1",
+            "4.2"
+          ],
+          "lengua_catalana": [
+            "4.2",
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "distinguir ciencia y pseudociencia y seleccionar fuentes fiables.",
+          "lengua_catalana": "valorar textos y contrastar la fiabilidad de las fuentes."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "distingir ciència i pseudociència i seleccionar fonts fiables.",
+          "lengua_catalana": "valorar texts i contrastar la fiabilitat de les fonts."
+        },
+        "relacion_es": "Evaluación de los argumentos, las pruebas y la calidad de la información científica.",
+        "relacion_ca": "Avaluació dels arguments, les proves i la qualitat de la informació científica."
+      },
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "3.1"
+          ],
+          "lengua_catalana": [
+            "3.1",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "interpretar y comunicar información científica en diferentes formatos.",
+          "lengua_catalana": "elaborar exposiciones y textos adecuados y coherentes."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "interpretar i comunicar informació científica en diferents formats.",
+          "lengua_catalana": "elaborar exposicions i texts adequats i coherents."
+        },
+        "relacion_es": "Construcción de explicaciones precisas con datos, terminología y estructura lógica.",
+        "relacion_ca": "Construcció d’explicacions precises amb dades, terminologia i estructura lògica."
+      }
+    ],
+    "saberes": {
+      "fisica_quimica": {
+        "es": [
+          "Indagación y evidencias",
+          "lenguaje científico",
+          "interpretación de datos",
+          "informes de laboratorio",
+          "fuentes fiables",
+          "valor social de la ciencia"
+        ],
+        "ca": [
+          "Indagació i evidències",
+          "llenguatge científic",
+          "interpretació de dades",
+          "informes de laboratori",
+          "fonts fiables",
+          "valor social de la ciència"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Exposición y argumentación",
+          "comprensión de textos académicos",
+          "alfabetización informacional",
+          "precisión léxica",
+          "cohesión",
+          "revisión textual"
+        ],
+        "ca": [
+          "Exposició i argumentació",
+          "comprensió de texts acadèmics",
+          "alfabetització informacional",
+          "precisió lèxica",
+          "cohesió",
+          "revisió textual"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "evidencia",
+      "fuente",
+      "explicación",
+      "argumento",
+      "precisión",
+      "fiabilidad"
+    ],
+    "conceptos_ca": [
+      "evidència",
+      "font",
+      "explicació",
+      "argument",
+      "precisió",
+      "fiabilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "fisica_quimica",
+        "opcion": 4,
+        "ambito_es": "Explicación científica y fiabilidad de la información",
+        "ambito_ca": "Explicació científica i fiabilitat de la informació"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-07",
+    "curso": "3º",
+    "materias": [
+      "geografia_historia",
+      "taller_finanzas"
+    ],
+    "ambito_es": "Actividad económica y sostenibilidad",
+    "ambito_ca": "Activitat econòmica i sostenibilitat",
+    "vinculos": [
+      {
+        "criterios": {
+          "geografia_historia": [
+            "3.2",
+            "4.2"
+          ],
+          "taller_finanzas": [
+            "3.1",
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "geografia_historia": "analizar problemas ecosociales y contribuir a la sostenibilidad.",
+          "taller_finanzas": "valorar el consumo responsable y comprender la economía circular."
+        },
+        "resumen_ca": {
+          "geografia_historia": "analitzar problemes ecosocials i contribuir a la sostenibilitat.",
+          "taller_finanzas": "valorar el consum responsable i comprendre l’economia circular."
+        },
+        "relacion_es": "Estudio de las relaciones entre producción, consumo, recursos e impactos.",
+        "relacion_ca": "Estudi de les relacions entre producció, consum, recursos i impactes."
+      },
+      {
+        "criterios": {
+          "geografia_historia": [
+            "3.1",
+            "9.2"
+          ],
+          "taller_finanzas": [
+            "3.2",
+            "6.4"
+          ]
+        },
+        "resumen_es": {
+          "geografia_historia": "formular propuestas vinculadas a los ODS y al desarrollo sostenible.",
+          "taller_finanzas": "relacionar responsabilidad pública, derechos y objetivos de desarrollo."
+        },
+        "resumen_ca": {
+          "geografia_historia": "formular propostes vinculades als ODS i al desenvolupament sostenible.",
+          "taller_finanzas": "relacionar responsabilitat pública, drets i objectius de desenvolupament."
+        },
+        "relacion_es": "Comprensión del papel de los agentes económicos y las políticas públicas.",
+        "relacion_ca": "Comprensió del paper dels agents econòmics i les polítiques públiques."
+      }
+    ],
+    "saberes": {
+      "geografia_historia": {
+        "es": [
+          "Sectores económicos",
+          "fuentes de energía",
+          "comercio",
+          "turismo en las Baleares",
+          "desigualdades",
+          "instituciones y sostenibilidad"
+        ],
+        "ca": [
+          "Sectors econòmics",
+          "fonts d’energia",
+          "comerç",
+          "turisme a les Balears",
+          "desigualtats",
+          "institucions i sostenibilitat"
+        ]
+      },
+      "taller_finanzas": {
+        "es": [
+          "Agentes económicos",
+          "consumo responsable",
+          "economía circular",
+          "transición energética",
+          "derechos de los consumidores",
+          "ODS"
+        ],
+        "ca": [
+          "Agents econòmics",
+          "consum responsable",
+          "economia circular",
+          "transició energètica",
+          "drets dels consumidors",
+          "ODS"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "producción",
+      "consumo",
+      "recursos",
+      "desigualdad",
+      "sostenibilidad",
+      "regulación"
+    ],
+    "conceptos_ca": [
+      "producció",
+      "consum",
+      "recursos",
+      "desigualtat",
+      "sostenibilitat",
+      "regulació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "geografia_historia",
+        "opcion": 4,
+        "ambito_es": "Actividad económica y sostenibilidad",
+        "ambito_ca": "Activitat econòmica i sostenibilitat"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-08",
+    "curso": "3º",
+    "materias": [
+      "introduccion_filosofia",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Argumentación y diálogo",
+    "ambito_ca": "Argumentació i diàleg",
+    "vinculos": [
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "1.1",
+            "1.2"
+          ],
+          "lengua_catalana": [
+            "3.1",
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "construir argumentos y detectar falacias y sesgos.",
+          "lengua_catalana": "elaborar argumentaciones y analizar usos manipuladores del lenguaje."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "construir arguments i detectar fal·làcies i biaixos.",
+          "lengua_catalana": "elaborar argumentacions i analitzar usos manipuladors del llenguatge."
+        },
+        "relacion_es": "Distinción entre razones, recursos persuasivos y procedimientos de manipulación.",
+        "relacion_ca": "Distinció entre raons, recursos persuasius i procediments de manipulació."
+      },
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "2.1"
+          ],
+          "lengua_catalana": [
+            "3.2",
+            "10.2"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "contrastar ideas mediante un diálogo riguroso y respetuoso.",
+          "lengua_catalana": "intervenir en interacciones orales y buscar consensos."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "contrastar idees mitjançant un diàleg rigorós i respectuós.",
+          "lengua_catalana": "intervenir en interaccions orals i cercar consensos."
+        },
+        "relacion_es": "Articulación de la escucha, la justificación y la revisión de las propias posiciones.",
+        "relacion_ca": "Articulació de l’escolta, la justificació i la revisió de les pròpies posicions."
+      }
+    ],
+    "saberes": {
+      "introduccion_filosofia": {
+        "es": [
+          "Razonamiento",
+          "argumentación informal",
+          "nociones de lógica",
+          "falacias y sesgos",
+          "verdad",
+          "diálogo filosófico"
+        ],
+        "ca": [
+          "Raonament",
+          "argumentació informal",
+          "nocions de lògica",
+          "fal·làcies i biaixos",
+          "veritat",
+          "diàleg filosòfic"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Textos argumentativos",
+          "coherencia",
+          "conectores",
+          "interacción oral",
+          "cortesía",
+          "usos manipuladores",
+          "resolución dialogada de conflictos"
+        ],
+        "ca": [
+          "Texts argumentatius",
+          "coherència",
+          "connectors",
+          "interacció oral",
+          "cortesia",
+          "usos manipuladors",
+          "resolució dialogada de conflictes"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "argumento",
+      "razón",
+      "coherencia",
+      "verdad",
+      "diálogo",
+      "persuasión"
+    ],
+    "conceptos_ca": [
+      "argument",
+      "raó",
+      "coherència",
+      "veritat",
+      "diàleg",
+      "persuasió"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "introduccion_filosofia",
+        "opcion": 1,
+        "ambito_es": "Argumentación y diálogo",
+        "ambito_ca": "Argumentació i diàleg"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-09",
+    "curso": "3º",
+    "materias": [
+      "introduccion_filosofia",
+      "geografia_historia"
+    ],
+    "ambito_es": "Justicia y organización política",
+    "ambito_ca": "Justícia i organització política",
+    "vinculos": [
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "5.1"
+          ],
+          "geografia_historia": [
+            "5.1",
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "analizar problemas éticos y políticos y desarrollar autonomía moral.",
+          "geografia_historia": "ejercer derechos y responsabilidades y reconocer causas solidarias."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "analitzar problemes ètics i polítics i desenvolupar autonomia moral.",
+          "geografia_historia": "exercir drets i responsabilitats i reconèixer causes solidàries."
+        },
+        "relacion_es": "Comprensión de los fundamentos de los derechos, la legitimidad y la participación democrática.",
+        "relacion_ca": "Comprensió dels fonaments dels drets, la legitimitat i la participació democràtica."
+      },
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "4.1",
+            "4.2"
+          ],
+          "geografia_historia": [
+            "2.2",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "comparar tesis filosóficas y relacionarlas con problemas actuales.",
+          "geografia_historia": "argumentar sobre la actualidad y analizar retos ecosociales."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "comparar tesis filosòfiques i relacionar-les amb problemes actuals.",
+          "geografia_historia": "argumentar sobre l’actualitat i analitzar reptes ecosocials."
+        },
+        "relacion_es": "Contraste de criterios de justicia para interpretar las desigualdades y los conflictos.",
+        "relacion_ca": "Contrast de criteris de justícia per interpretar les desigualtats i els conflictes."
+      }
+    ],
+    "saberes": {
+      "introduccion_filosofia": {
+        "es": [
+          "Deliberación moral",
+          "organización social y poder político",
+          "democracia",
+          "derechos humanos",
+          "igualdad",
+          "pensamiento feminista"
+        ],
+        "ca": [
+          "Deliberació moral",
+          "organització social i poder polític",
+          "democràcia",
+          "drets humans",
+          "igualtat",
+          "pensament feminista"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Sistema político español",
+          "instituciones europeas",
+          "organismos internacionales",
+          "derechos humanos",
+          "desigualdades",
+          "ciudadanía"
+        ],
+        "ca": [
+          "Sistema polític espanyol",
+          "institucions europees",
+          "organismes internacionals",
+          "drets humans",
+          "desigualtats",
+          "ciutadania"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "justicia",
+      "derecho",
+      "poder",
+      "democracia",
+      "igualdad",
+      "legitimidad"
+    ],
+    "conceptos_ca": [
+      "justícia",
+      "dret",
+      "poder",
+      "democràcia",
+      "igualtat",
+      "legitimitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "introduccion_filosofia",
+        "opcion": 2,
+        "ambito_es": "Justicia y organización política",
+        "ambito_ca": "Justícia i organització política"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-10",
+    "curso": "3º",
+    "materias": [
+      "introduccion_filosofia",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Conocimiento y justificación científica",
+    "ambito_ca": "Coneixement i justificació científica",
+    "vinculos": [
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "1.2"
+          ],
+          "biologia_geologia": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "detectar falacias, sesgos y actitudes dogmáticas.",
+          "biologia_geologia": "distinguir información científica de pseudociencias y falsas creencias."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "detectar fal·làcies, biaixos i actituds dogmàtiques.",
+          "biologia_geologia": "distingir informació científica de pseudociències i falses creences."
+        },
+        "relacion_es": "Análisis de la validez de las afirmaciones y de los criterios de fiabilidad.",
+        "relacion_ca": "Anàlisi de la validesa de les afirmacions i dels criteris de fiabilitat."
+      },
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "4.1",
+            "4.2"
+          ],
+          "biologia_geologia": [
+            "3.1",
+            "3.4"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "contrastar concepciones filosóficas y analizar su relevancia.",
+          "biologia_geologia": "formular hipótesis e interpretar resultados de investigación."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "contrastar concepcions filosòfiques i analitzar-ne la rellevància.",
+          "biologia_geologia": "formular hipòtesis i interpretar resultats de recerca."
+        },
+        "relacion_es": "Relación entre hipótesis, evidencia, causalidad y límites de las conclusiones.",
+        "relacion_ca": "Relació entre hipòtesi, evidència, causalitat i límits de les conclusions."
+      }
+    ],
+    "saberes": {
+      "introduccion_filosofia": {
+        "es": [
+          "Posibilidad y límites del conocimiento",
+          "teorías de la verdad",
+          "Hume y causalidad",
+          "Kuhn y ciencia",
+          "sesgos",
+          "desinformación"
+        ],
+        "ca": [
+          "Possibilitat i límits del coneixement",
+          "teories de la veritat",
+          "Hume i causalitat",
+          "Kuhn i ciència",
+          "biaixos",
+          "desinformació"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Fuentes científicas",
+          "hipótesis",
+          "experimentación",
+          "análisis de resultados",
+          "correlación y causalidad",
+          "carácter colectivo de la ciencia"
+        ],
+        "ca": [
+          "Fonts científiques",
+          "hipòtesis",
+          "experimentació",
+          "anàlisi de resultats",
+          "correlació i causalitat",
+          "caràcter col·lectiu de la ciència"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "conocimiento",
+      "hipótesis",
+      "evidencia",
+      "causalidad",
+      "verdad",
+      "sesgo"
+    ],
+    "conceptos_ca": [
+      "coneixement",
+      "hipòtesi",
+      "evidència",
+      "causalitat",
+      "veritat",
+      "biaix"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "introduccion_filosofia",
+        "opcion": 3,
+        "ambito_es": "Conocimiento y justificación científica",
+        "ambito_ca": "Coneixement i justificació científica"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-11",
+    "curso": "3º",
+    "materias": [
+      "introduccion_filosofia",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Estética e interpretación de las imágenes",
+    "ambito_ca": "Estètica i interpretació de les imatges",
+    "vinculos": [
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "5.2"
+          ],
+          "educacion_plastica": [
+            "2.2",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "reflexionar sobre la experiencia artística y el papel de las imágenes.",
+          "educacion_plastica": "analizar producciones artísticas y argumentar la experiencia estética."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "reflexionar sobre l’experiència artística i el paper de les imatges.",
+          "educacion_plastica": "analitzar produccions artístiques i argumentar l’experiència estètica."
+        },
+        "relacion_es": "Relación entre percepción, emoción, juicio y valoración del arte.",
+        "relacion_ca": "Relació entre percepció, emoció, judici i valoració de l’art."
+      },
+      {
+        "criterios": {
+          "introduccion_filosofia": [
+            "3.1",
+            "4.2"
+          ],
+          "educacion_plastica": [
+            "4.2",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "introduccion_filosofia": "reconocer problemas filosóficos en manifestaciones culturales.",
+          "educacion_plastica": "relacionar lenguajes e interpretar las funciones sociales de las imágenes."
+        },
+        "resumen_ca": {
+          "introduccion_filosofia": "reconèixer problemes filosòfics en manifestacions culturals.",
+          "educacion_plastica": "relacionar llenguatges i interpretar les funcions socials de les imatges."
+        },
+        "relacion_es": "Examen del significado, las convenciones y los efectos culturales de las representaciones.",
+        "relacion_ca": "Examen del significat, les convencions i els efectes culturals de les representacions."
+      }
+    ],
+    "saberes": {
+      "introduccion_filosofia": {
+        "es": [
+          "Arte, belleza y gusto",
+          "teorías estéticas",
+          "apariencia y realidad",
+          "experiencia artística",
+          "imágenes y cultura contemporánea"
+        ],
+        "ca": [
+          "Art, bellesa i gust",
+          "teories estètiques",
+          "aparença i realitat",
+          "experiència artística",
+          "imatges i cultura contemporània"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Percepción visual",
+          "lenguajes artísticos",
+          "composición",
+          "lectura de imágenes",
+          "funciones sociales del arte",
+          "expresión de ideas y emociones"
+        ],
+        "ca": [
+          "Percepció visual",
+          "llenguatges artístics",
+          "composició",
+          "lectura d’imatges",
+          "funcions socials de l’art",
+          "expressió d’idees i emocions"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "percepción",
+      "representación",
+      "belleza",
+      "gusto",
+      "significado",
+      "juicio"
+    ],
+    "conceptos_ca": [
+      "percepció",
+      "representació",
+      "bellesa",
+      "gust",
+      "significat",
+      "judici"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "introduccion_filosofia",
+        "opcion": 4,
+        "ambito_es": "Estética e interpretación de las imágenes",
+        "ambito_ca": "Estètica i interpretació de les imatges"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-12",
+    "curso": "3º",
+    "materias": [
+      "tecnicas_experimentales",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Método experimental y transformaciones de la materia",
+    "ambito_ca": "Mètode experimental i transformacions de la matèria",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "2.1",
+            "3.2"
+          ],
+          "fisica_quimica": [
+            "2.2",
+            "2.3"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "estructurar una investigación y aplicar conocimientos científicos.",
+          "fisica_quimica": "contrastar hipótesis mediante procedimientos y leyes científicas."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "estructurar una investigació i aplicar coneixements científics.",
+          "fisica_quimica": "contrastar hipòtesis mitjançant procediments i lleis científiques."
+        },
+        "relacion_es": "Relación entre diseño experimental, variables y explicación de los fenómenos.",
+        "relacion_ca": "Relació entre disseny experimental, variables i explicació dels fenòmens."
+      },
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "4.2",
+            "4.3"
+          ],
+          "fisica_quimica": [
+            "3.1",
+            "3.2",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "tratar datos y comunicar conclusiones.",
+          "fisica_quimica": "comunicar datos, emplear unidades y respetar las normas de laboratorio."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "tractar dades i comunicar conclusions.",
+          "fisica_quimica": "comunicar dades, emprar unitats i respectar les normes de laboratori."
+        },
+        "relacion_es": "Medida, tratamiento de los resultados y comunicación con rigor y seguridad.",
+        "relacion_ca": "Mesura, tractament dels resultats i comunicació amb rigor i seguretat."
+      }
+    ],
+    "saberes": {
+      "tecnicas_experimentales": {
+        "es": [
+          "Hipótesis",
+          "variables",
+          "diseño experimental",
+          "instrumentos",
+          "seguridad y residuos",
+          "errores",
+          "informes"
+        ],
+        "ca": [
+          "Hipòtesis",
+          "variables",
+          "disseny experimental",
+          "instruments",
+          "seguretat i residus",
+          "errors",
+          "informes"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Cambios químicos",
+          "conservación de la masa",
+          "factores de reacción",
+          "instrumentos",
+          "unidades",
+          "metodología científica"
+        ],
+        "ca": [
+          "Canvis químics",
+          "conservació de la massa",
+          "factors de reacció",
+          "instruments",
+          "unitats",
+          "metodologia científica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "hipótesis",
+      "variable",
+      "control",
+      "medida",
+      "error",
+      "evidencia"
+    ],
+    "conceptos_ca": [
+      "hipòtesi",
+      "variable",
+      "control",
+      "mesura",
+      "error",
+      "evidència"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnicas_experimentales",
+        "opcion": 1,
+        "ambito_es": "Método experimental y transformaciones de la materia",
+        "ambito_ca": "Mètode experimental i transformacions de la matèria"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-13",
+    "curso": "3º",
+    "materias": [
+      "tecnicas_experimentales",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Observación e investigación biológica",
+    "ambito_ca": "Observació i investigació biològica",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "1.2",
+            "2.1"
+          ],
+          "biologia_geologia": [
+            "2.1",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "contrastar información y organizar una investigación.",
+          "biologia_geologia": "seleccionar información y diseñar la experimentación."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "contrastar informació i organitzar una investigació.",
+          "biologia_geologia": "seleccionar informació i dissenyar l’experimentació."
+        },
+        "relacion_es": "Fundamentación de las preguntas y de los procedimientos de investigación biológica.",
+        "relacion_ca": "Fonamentació de les preguntes i dels procediments de recerca biològica."
+      },
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "3.1",
+            "3.3",
+            "4.2"
+          ],
+          "biologia_geologia": [
+            "3.3",
+            "3.4",
+            "3.5"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "organizar el trabajo, analizar datos y comunicar resultados.",
+          "biologia_geologia": "experimentar, interpretar resultados y cooperar científicamente."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "organitzar el treball, analitzar dades i comunicar resultats.",
+          "biologia_geologia": "experimentar, interpretar resultats i cooperar científicament."
+        },
+        "relacion_es": "Obtención e interpretación de datos con responsabilidades y criterios compartidos.",
+        "relacion_ca": "Obtenció i interpretació de dades amb responsabilitats i criteris compartits."
+      }
+    ],
+    "saberes": {
+      "tecnicas_experimentales": {
+        "es": [
+          "Fuentes de información",
+          "diseño de experimentos",
+          "manipulación de instrumentos",
+          "organización del trabajo",
+          "análisis de datos",
+          "informes"
+        ],
+        "ca": [
+          "Fonts d’informació",
+          "disseny d’experiments",
+          "manipulació d’instruments",
+          "organització del treball",
+          "anàlisi de dades",
+          "informes"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Célula",
+          "anatomía y fisiología",
+          "observación",
+          "método científico",
+          "toma de datos",
+          "correlación y causalidad",
+          "cooperación científica"
+        ],
+        "ca": [
+          "Cèl·lula",
+          "anatomia i fisiologia",
+          "observació",
+          "mètode científic",
+          "presa de dades",
+          "correlació i causalitat",
+          "cooperació científica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "observación",
+      "variable",
+      "dato",
+      "comparación",
+      "causalidad",
+      "conclusión"
+    ],
+    "conceptos_ca": [
+      "observació",
+      "variable",
+      "dada",
+      "comparació",
+      "causalitat",
+      "conclusió"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnicas_experimentales",
+        "opcion": 2,
+        "ambito_es": "Observación e investigación biológica",
+        "ambito_ca": "Observació i investigació biològica"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-14",
+    "curso": "3º",
+    "materias": [
+      "tecnicas_experimentales",
+      "matematicas"
+    ],
+    "ambito_es": "Medida y tratamiento de resultados",
+    "ambito_ca": "Mesura i tractament de resultats",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "2.1"
+          ],
+          "matematicas": [
+            "6.1",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "diseñar las etapas de una investigación experimental.",
+          "matematicas": "formular y resolver situaciones reales con herramientas matemáticas."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "dissenyar les etapes d’una investigació experimental.",
+          "matematicas": "formular i resoldre situacions reals amb eines matemàtiques."
+        },
+        "relacion_es": "Definición de variables, magnitudes y procedimientos cuantitativos.",
+        "relacion_ca": "Definició de variables, magnituds i procediments quantitatius."
+      },
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "4.2",
+            "4.3"
+          ],
+          "matematicas": [
+            "2.1",
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "analizar datos y expresar los resultados y las conclusiones.",
+          "matematicas": "comprobar cálculos, representar resultados y justificarlos."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "analitzar dades i expressar els resultats i les conclusions.",
+          "matematicas": "comprovar càlculs, representar resultats i justificar-los."
+        },
+        "relacion_es": "Valoración de la precisión y del alcance de las conclusiones experimentales.",
+        "relacion_ca": "Valoració de la precisió i de l’abast de les conclusions experimentals."
+      }
+    ],
+    "saberes": {
+      "tecnicas_experimentales": {
+        "es": [
+          "Análisis de variables",
+          "toma de medidas",
+          "cálculo e interpretación de errores",
+          "tratamiento de los resultados",
+          "expresión de conclusiones"
+        ],
+        "ca": [
+          "Anàlisi de variables",
+          "presa de mesures",
+          "càlcul i interpretació d’errors",
+          "tractament dels resultats",
+          "expressió de conclusions"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Magnitudes y unidades",
+          "errores de medida",
+          "estadística",
+          "relaciones entre variables",
+          "gráficos",
+          "herramientas digitales de cálculo"
+        ],
+        "ca": [
+          "Magnituds i unitats",
+          "errors de mesura",
+          "estadística",
+          "relacions entre variables",
+          "gràfics",
+          "eines digitals de càlcul"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "magnitud",
+      "variable",
+      "medida",
+      "error",
+      "distribución",
+      "modelo"
+    ],
+    "conceptos_ca": [
+      "magnitud",
+      "variable",
+      "mesura",
+      "error",
+      "distribució",
+      "model"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnicas_experimentales",
+        "opcion": 3,
+        "ambito_es": "Medida y tratamiento de resultados",
+        "ambito_ca": "Mesura i tractament de resultats"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-15",
+    "curso": "3º",
+    "materias": [
+      "tecnicas_experimentales",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Instrumentación y sistemas de medida",
+    "ambito_ca": "Instrumentació i sistemes de mesura",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "2.1",
+            "3.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "2.1",
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "diseñar montajes y aplicar conocimientos científicos.",
+          "tecnologia_digitalizacion": "diseñar y construir soluciones tecnológicas."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "dissenyar muntatges i aplicar coneixements científics.",
+          "tecnologia_digitalizacion": "dissenyar i construir solucions tecnològiques."
+        },
+        "relacion_es": "Relación entre requisitos de medida, diseño del montaje y funcionamiento de los instrumentos.",
+        "relacion_ca": "Relació entre requisits de mesura, disseny del muntatge i funcionament dels instruments."
+      },
+      {
+        "criterios": {
+          "tecnicas_experimentales": [
+            "4.2",
+            "4.3"
+          ],
+          "tecnologia_digitalizacion": [
+            "5.3",
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "tecnicas_experimentales": "tratar y comunicar los resultados de la investigación.",
+          "tecnologia_digitalizacion": "programar sistemas de control y elaborar documentación técnica."
+        },
+        "resumen_ca": {
+          "tecnicas_experimentales": "tractar i comunicar els resultats de la investigació.",
+          "tecnologia_digitalizacion": "programar sistemes de control i elaborar documentació tècnica."
+        },
+        "relacion_es": "Registro automatizado de datos y justificación de los procedimientos empleados.",
+        "relacion_ca": "Registre automatitzat de dades i justificació dels procediments emprats."
+      }
+    ],
+    "saberes": {
+      "tecnicas_experimentales": {
+        "es": [
+          "Diseño de montajes",
+          "variables",
+          "manipulación de instrumentos",
+          "seguridad",
+          "tratamiento de datos",
+          "precisión y errores"
+        ],
+        "ca": [
+          "Disseny de muntatges",
+          "variables",
+          "manipulació d’instruments",
+          "seguretat",
+          "tractament de dades",
+          "precisió i errors"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Electricidad y electrónica",
+          "circuitos",
+          "sistemas de control programado",
+          "programación de dispositivos",
+          "representación y documentación técnica"
+        ],
+        "ca": [
+          "Electricitat i electrònica",
+          "circuits",
+          "sistemes de control programat",
+          "programació de dispositius",
+          "representació i documentació tècnica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "instrumento",
+      "sistema",
+      "variable",
+      "señal",
+      "medida",
+      "control"
+    ],
+    "conceptos_ca": [
+      "instrument",
+      "sistema",
+      "variable",
+      "senyal",
+      "mesura",
+      "control"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnicas_experimentales",
+        "opcion": 4,
+        "ambito_es": "Instrumentación y sistemas de medida",
+        "ambito_ca": "Instrumentació i sistemes de mesura"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-16",
+    "curso": "3º",
+    "materias": [
+      "lengua_castellana",
+      "introduccion_filosofia"
+    ],
+    "ambito_es": "Argumentación y pensamiento crítico",
+    "ambito_ca": "Argumentació i pensament crític",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "3.1",
+            "5.1"
+          ],
+          "introduccion_filosofia": [
+            "1.1",
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "elaborar argumentaciones orales y escritas coherentes.",
+          "introduccion_filosofia": "construir argumentos y detectar falacias y sesgos."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "elaborar argumentacions orals i escrites coherents.",
+          "introduccion_filosofia": "construir arguments i detectar fal·làcies i biaixos."
+        },
+        "relacion_es": "Análisis de la tesis, las razones y la validez de las inferencias.",
+        "relacion_ca": "Anàlisi de la tesi, les raons i la validesa de les inferències."
+      },
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "3.2",
+            "10.2"
+          ],
+          "introduccion_filosofia": [
+            "2.1",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "participar en diálogos y buscar consensos.",
+          "introduccion_filosofia": "contrastar ideas y deliberar sobre problemas éticos y políticos."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "participar en diàlegs i cercar consensos.",
+          "introduccion_filosofia": "contrastar idees i deliberar sobre problemes ètics i polítics."
+        },
+        "relacion_es": "Justificación de posiciones y revisión razonada de los desacuerdos.",
+        "relacion_ca": "Justificació de posicions i revisió raonada dels desacords."
+      }
+    ],
+    "saberes": {
+      "lengua_castellana": {
+        "es": [
+          "Argumentación",
+          "conectores",
+          "coherencia",
+          "modalización",
+          "interacción oral",
+          "uso ético de la lengua"
+        ],
+        "ca": [
+          "Argumentació",
+          "connectors",
+          "coherència",
+          "modalització",
+          "interacció oral",
+          "ús ètic de la llengua"
+        ]
+      },
+      "introduccion_filosofia": {
+        "es": [
+          "Razonamiento",
+          "falacias",
+          "sesgos",
+          "verdad",
+          "diálogo filosófico",
+          "deliberación moral"
+        ],
+        "ca": [
+          "Raonament",
+          "fal·làcies",
+          "biaixos",
+          "veritat",
+          "diàleg filosòfic",
+          "deliberació moral"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "tesis",
+      "argumento",
+      "inferencia",
+      "coherencia",
+      "diálogo",
+      "juicio"
+    ],
+    "conceptos_ca": [
+      "tesi",
+      "argument",
+      "inferència",
+      "coherència",
+      "diàleg",
+      "judici"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_castellana",
+        "opcion": 3,
+        "ambito_es": "Argumentación y pensamiento crítico",
+        "ambito_ca": "Argumentació i pensament crític"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-17",
+    "curso": "3º",
+    "materias": [
+      "lengua_castellana",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Literatura y lenguajes visuales",
+    "ambito_ca": "Literatura i llenguatges visuals",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "8.1",
+            "8.2"
+          ],
+          "educacion_plastica": [
+            "3.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "interpretar obras y relacionarlas con otras manifestaciones artísticas.",
+          "educacion_plastica": "analizar obras y conectar lenguajes artísticos."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "interpretar obres i relacionar-les amb altres manifestacions artístiques.",
+          "educacion_plastica": "analitzar obres i connectar llenguatges artístics."
+        },
+        "relacion_es": "Comparación de los recursos literarios y visuales en la construcción de significados.",
+        "relacion_ca": "Comparació dels recursos literaris i visuals en la construcció de significats."
+      },
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "4.1",
+            "4.2"
+          ],
+          "educacion_plastica": [
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "interpretar textos multimodales y valorar sus recursos.",
+          "educacion_plastica": "reconocer los usos y las funciones de las producciones artísticas."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "interpretar texts multimodals i valorar-ne els recursos.",
+          "educacion_plastica": "reconèixer els usos i les funcions de les produccions artístiques."
+        },
+        "relacion_es": "Relación entre forma, contexto, destinatario e interpretación.",
+        "relacion_ca": "Relació entre forma, context, destinatari i interpretació."
+      }
+    ],
+    "saberes": {
+      "lengua_castellana": {
+        "es": [
+          "Géneros literarios",
+          "temas y tópicos",
+          "recursos expresivos",
+          "relaciones entre literatura y artes",
+          "lectura de textos multimodales"
+        ],
+        "ca": [
+          "Gèneres literaris",
+          "temes i tòpics",
+          "recursos expressius",
+          "relacions entre literatura i arts",
+          "lectura de texts multimodals"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Lenguaje visual y audiovisual",
+          "composición",
+          "lectura de imágenes",
+          "recursos expresivos",
+          "contexto y función de las producciones"
+        ],
+        "ca": [
+          "Llenguatge visual i audiovisual",
+          "composició",
+          "lectura d’imatges",
+          "recursos expressius",
+          "context i funció de les produccions"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "representación",
+      "tema",
+      "símbolo",
+      "narración",
+      "expresión",
+      "interpretación"
+    ],
+    "conceptos_ca": [
+      "representació",
+      "tema",
+      "símbol",
+      "narració",
+      "expressió",
+      "interpretació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_castellana",
+        "opcion": 4,
+        "ambito_es": "Literatura y lenguajes visuales",
+        "ambito_ca": "Literatura i llenguatges visuals"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-18",
+    "curso": "3º",
+    "materias": [
+      "lengua_catalana",
+      "geografia_historia",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Información social y argumentación pública",
+    "ambito_ca": "Informació social i argumentació pública",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "4.2",
+            "6.1"
+          ],
+          "geografia_historia": [
+            "1.1",
+            "1.2"
+          ],
+          "lengua_castellana": [
+            "4.2",
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "valorar textos y contrastar fuentes.",
+          "geografia_historia": "buscar información y establecer relaciones explicativas.",
+          "lengua_castellana": "valorar textos y fuentes."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "valorar texts i contrastar fonts.",
+          "geografia_historia": "cercar informació i establir relacions explicatives.",
+          "lengua_castellana": "valorar texts i fonts."
+        },
+        "relacion_es": "Criterios comunes para interpretar información económica, social y política.",
+        "relacion_ca": "Criteris comuns per interpretar informació econòmica, social i política."
+      },
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "3.1",
+            "5.1"
+          ],
+          "geografia_historia": [
+            "2.2"
+          ],
+          "lengua_castellana": [
+            "3.1",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "elaborar exposiciones, argumentaciones y textos coherentes.",
+          "geografia_historia": "formular juicios argumentados.",
+          "lengua_castellana": "comunicar con coherencia y adecuación."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "elaborar exposicions, argumentacions i texts coherents.",
+          "geografia_historia": "formular judicis argumentats.",
+          "lengua_castellana": "comunicar amb coherència i adequació."
+        },
+        "relacion_es": "Expresión fundamentada del conocimiento social en las dos lenguas.",
+        "relacion_ca": "Expressió fonamentada del coneixement social en les dues llengües."
+      }
+    ],
+    "saberes": {
+      "lengua_catalana": {
+        "es": [
+          "Géneros mediáticos",
+          "exposición y argumentación",
+          "fiabilidad informativa",
+          "conectores",
+          "modalización",
+          "revisión textual"
+        ],
+        "ca": [
+          "Gèneres mediàtics",
+          "exposició i argumentació",
+          "fiabilitat informativa",
+          "connectors",
+          "modalització",
+          "revisió textual"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Geografía económica",
+          "instituciones",
+          "retos ecosociales",
+          "investigación social",
+          "fuentes",
+          "interpretaciones multicausales"
+        ],
+        "ca": [
+          "Geografia econòmica",
+          "institucions",
+          "reptes ecosocials",
+          "recerca social",
+          "fonts",
+          "interpretacions multicausals"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Textos sociales y mediáticos",
+          "argumentación",
+          "contraste de fuentes",
+          "cohesión",
+          "modalización",
+          "comunicación oral"
+        ],
+        "ca": [
+          "Texts socials i mediàtics",
+          "argumentació",
+          "contrast de fonts",
+          "cohesió",
+          "modalització",
+          "comunicació oral"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "fuente",
+      "fiabilidad",
+      "contexto",
+      "causa",
+      "argumento",
+      "ciudadanía"
+    ],
+    "conceptos_ca": [
+      "font",
+      "fiabilitat",
+      "context",
+      "causa",
+      "argument",
+      "ciutadania"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_catalana",
+        "opcion": 3,
+        "ambito_es": "Información social y argumentación pública",
+        "ambito_ca": "Informació social i argumentació pública"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-19",
+    "curso": "3º",
+    "materias": [
+      "lengua_catalana",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Mediación y conciencia plurilingüe",
+    "ambito_ca": "Mediació i consciència plurilingüe",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "4.1",
+            "5.1"
+          ],
+          "lengua_extranjera": [
+            "4.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "comprender información y reformularla en textos adecuados.",
+          "lengua_extranjera": "explicar y simplificar mensajes para facilitar la comprensión."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "comprendre informació i reformular-la en texts adequats.",
+          "lengua_extranjera": "explicar i simplificar missatges per facilitar la comprensió."
+        },
+        "relacion_es": "Transferencia del significado entre lenguas según destinatarios y necesidades.",
+        "relacion_ca": "Transferència del significat entre llengües segons destinataris i necessitats."
+      },
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "9.3",
+            "10.1"
+          ],
+          "lengua_extranjera": [
+            "5.1",
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "comparar usos lingüísticos y rechazar discriminaciones.",
+          "lengua_extranjera": "comparar lenguas y actuar con respeto intercultural."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "comparar usos lingüístics i rebutjar discriminacions.",
+          "lengua_extranjera": "comparar llengües i actuar amb respecte intercultural."
+        },
+        "relacion_es": "Reflexión sobre equivalencias, diferencias y convenciones comunicativas.",
+        "relacion_ca": "Reflexió sobre equivalències, diferències i convencions comunicatives."
+      }
+    ],
+    "saberes": {
+      "lengua_catalana": {
+        "es": [
+          "Comprensión y síntesis",
+          "reformulación",
+          "adecuación",
+          "reflexión interlingüística",
+          "propiedades textuales",
+          "usos no discriminatorios"
+        ],
+        "ca": [
+          "Comprensió i síntesi",
+          "reformulació",
+          "adequació",
+          "reflexió interlingüística",
+          "propietats textuals",
+          "usos no discriminatoris"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Mediación",
+          "estrategias de comprensión y producción",
+          "comparación lingüística",
+          "cortesía",
+          "convenciones socioculturales",
+          "plurilingüismo"
+        ],
+        "ca": [
+          "Mediació",
+          "estratègies de comprensió i producció",
+          "comparació lingüística",
+          "cortesia",
+          "convencions socioculturals",
+          "plurilingüisme"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mediación",
+      "significado",
+      "equivalencia",
+      "contexto",
+      "registro",
+      "diversidad"
+    ],
+    "conceptos_ca": [
+      "mediació",
+      "significat",
+      "equivalència",
+      "context",
+      "registre",
+      "diversitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_catalana",
+        "opcion": 4,
+        "ambito_es": "Mediación y conciencia plurilingüe",
+        "ambito_ca": "Mediació i consciència plurilingüe"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-20",
+    "curso": "3º",
+    "materias": [
+      "lengua_extranjera",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Comprensión de la información sobre salud",
+    "ambito_ca": "Comprensió de la informació sobre salut",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "1.1",
+            "1.3"
+          ],
+          "biologia_geologia": [
+            "2.1",
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "seleccionar información pertinente y aplicar estrategias de comprensión.",
+          "biologia_geologia": "buscar información científica y valorar su base científica."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "seleccionar informació pertinent i aplicar estratègies de comprensió.",
+          "biologia_geologia": "cercar informació científica i valorar-ne la base científica."
+        },
+        "relacion_es": "Comprensión de fuentes divulgativas sobre el cuerpo y los hábitos saludables.",
+        "relacion_ca": "Comprensió de fonts divulgatives sobre el cos i els hàbits saludables."
+      },
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "2.1",
+            "4.2"
+          ],
+          "biologia_geologia": [
+            "1.2",
+            "5.3"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "explicar información y simplificar mensajes.",
+          "biologia_geologia": "comunicar conocimiento y justificar hábitos saludables."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "explicar informació i simplificar missatges.",
+          "biologia_geologia": "comunicar coneixement i justificar hàbits saludables."
+        },
+        "relacion_es": "Expresión de relaciones entre hábitos y salud con precisión conceptual y adecuación lingüística.",
+        "relacion_ca": "Expressió de relacions entre hàbits i salut amb precisió conceptual i adequació lingüística."
+      }
+    ],
+    "saberes": {
+      "lengua_extranjera": {
+        "es": [
+          "Léxico sobre salud y vida cotidiana",
+          "descripción",
+          "explicación",
+          "comprensión de textos informativos",
+          "mediación",
+          "estrategias de reformulación"
+        ],
+        "ca": [
+          "Lèxic sobre salut i vida quotidiana",
+          "descripció",
+          "explicació",
+          "comprensió de texts informatius",
+          "mediació",
+          "estratègies de reformulació"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Nutrición",
+          "aparatos y sistemas del cuerpo",
+          "hábitos saludables",
+          "prevención",
+          "fuentes fiables",
+          "comunicación científica"
+        ],
+        "ca": [
+          "Nutrició",
+          "aparells i sistemes del cos",
+          "hàbits saludables",
+          "prevenció",
+          "fonts fiables",
+          "comunicació científica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "salud",
+      "hábito",
+      "información",
+      "fuente",
+      "explicación",
+      "prevención"
+    ],
+    "conceptos_ca": [
+      "salut",
+      "hàbit",
+      "informació",
+      "font",
+      "explicació",
+      "prevenció"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_extranjera",
+        "opcion": 3,
+        "ambito_es": "Comprensión de la información sobre salud",
+        "ambito_ca": "Comprensió de la informació sobre salut"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-21",
+    "curso": "3º",
+    "materias": [
+      "lengua_extranjera",
+      "musica"
+    ],
+    "ambito_es": "Lengua y cultura musical",
+    "ambito_ca": "Llengua i cultura musical",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "1.1",
+            "6.2"
+          ],
+          "musica": [
+            "1.1",
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "comprender mensajes y valorar manifestaciones culturales.",
+          "musica": "analizar obras musicales y relacionarlas con el contexto."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "comprendre missatges i valorar manifestacions culturals.",
+          "musica": "analitzar obres musicals i relacionar-les amb el context."
+        },
+        "relacion_es": "Interpretación de la música como expresión lingüística, social y cultural.",
+        "relacion_ca": "Interpretació de la música com a expressió lingüística, social i cultural."
+      },
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "2.1",
+            "6.1"
+          ],
+          "musica": [
+            "1.3",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "comunicar interpretaciones con respeto intercultural.",
+          "musica": "relacionar tradiciones musicales y aplicar recursos vocales."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "comunicar interpretacions amb respecte intercultural.",
+          "musica": "relacionar tradicions musicals i aplicar recursos vocals."
+        },
+        "relacion_es": "Relación entre texto, pronunciación, expresión vocal y referentes culturales.",
+        "relacion_ca": "Relació entre text, pronunciació, expressió vocal i referents culturals."
+      }
+    ],
+    "saberes": {
+      "lengua_extranjera": {
+        "es": [
+          "Comprensión oral",
+          "patrones sonoros y entonación",
+          "léxico y expresión de opiniones",
+          "referentes culturales",
+          "diversidad lingüística"
+        ],
+        "ca": [
+          "Comprensió oral",
+          "patrons sonors i entonació",
+          "lèxic i expressió d’opinions",
+          "referents culturals",
+          "diversitat lingüística"
+        ]
+      },
+      "musica": {
+        "es": [
+          "Músicas populares y urbanas",
+          "contexto de los géneros",
+          "interpretación vocal",
+          "rasgos rítmicos y melódicos",
+          "influencias culturales"
+        ],
+        "ca": [
+          "Músiques populars i urbanes",
+          "context dels gèneres",
+          "interpretació vocal",
+          "trets rítmics i melòdics",
+          "influències culturals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "voz",
+      "ritmo",
+      "entonación",
+      "texto",
+      "expresión",
+      "cultura"
+    ],
+    "conceptos_ca": [
+      "veu",
+      "ritme",
+      "entonació",
+      "text",
+      "expressió",
+      "cultura"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_extranjera",
+        "opcion": 4,
+        "ambito_es": "Lengua y cultura musical",
+        "ambito_ca": "Llengua i cultura musical"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-22",
+    "curso": "3º",
+    "materias": [
+      "matematicas",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Modelización matemática de fenómenos fisicoquímicos",
+    "ambito_ca": "Modelització matemàtica de fenòmens fisicoquímics",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas": [
+            "1.2",
+            "6.2"
+          ],
+          "fisica_quimica": [
+            "1.2",
+            "2.3"
+          ]
+        },
+        "resumen_es": {
+          "matematicas": "aplicar estrategias de resolución y conexiones con otras materias.",
+          "fisica_quimica": "resolver problemas fisicoquímicos y aplicar leyes científicas para validar hipótesis."
+        },
+        "resumen_ca": {
+          "matematicas": "aplicar estratègies de resolució i connexions amb altres matèries.",
+          "fisica_quimica": "resoldre problemes fisicoquímics i aplicar lleis científiques per validar hipòtesis."
+        },
+        "relacion_es": "Traducción de relaciones entre magnitudes a expresiones algebraicas y ecuaciones.",
+        "relacion_ca": "Traducció de relacions entre magnituds a expressions algebraiques i equacions."
+      },
+      {
+        "criterios": {
+          "matematicas": [
+            "2.1",
+            "8.1"
+          ],
+          "fisica_quimica": [
+            "3.1",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "matematicas": "comprobar la corrección de las soluciones y comunicar procedimientos.",
+          "fisica_quimica": "interpretar datos y emplear unidades y herramientas matemáticas."
+        },
+        "resumen_ca": {
+          "matematicas": "comprovar la correcció de les solucions i comunicar procediments.",
+          "fisica_quimica": "interpretar dades i emprar unitats i eines matemàtiques."
+        },
+        "relacion_es": "Coherencia entre datos, cálculos, unidades e interpretación física de los resultados.",
+        "relacion_ca": "Coherència entre dades, càlculs, unitats i interpretació física dels resultats."
+      }
+    ],
+    "saberes": {
+      "matematicas": {
+        "es": [
+          "Expresiones algebraicas",
+          "ecuaciones",
+          "proporcionalidad",
+          "relaciones entre variables",
+          "tablas y gráficos",
+          "errores de medida"
+        ],
+        "ca": [
+          "Expressions algebraiques",
+          "equacions",
+          "proporcionalitat",
+          "relacions entre variables",
+          "taules i gràfics",
+          "errors de mesura"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Magnitudes y unidades",
+          "tratamiento de datos experimentales",
+          "leyes y relaciones cuantitativas",
+          "cambios químicos",
+          "conservación de la masa",
+          "medida"
+        ],
+        "ca": [
+          "Magnituds i unitats",
+          "tractament de dades experimentals",
+          "lleis i relacions quantitatives",
+          "canvis químics",
+          "conservació de la massa",
+          "mesura"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "magnitud",
+      "unidad",
+      "variable",
+      "proporcionalidad",
+      "ecuación",
+      "modelo"
+    ],
+    "conceptos_ca": [
+      "magnitud",
+      "unitat",
+      "variable",
+      "proporcionalitat",
+      "equació",
+      "model"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "matematicas",
+        "opcion": 4,
+        "ambito_es": "Modelización matemática de fenómenos fisicoquímicos",
+        "ambito_ca": "Modelització matemàtica de fenòmens fisicoquímics"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-23",
+    "curso": "3º",
+    "materias": [
+      "musica",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Poesía y expresión musical",
+    "ambito_ca": "Poesia i expressió musical",
+    "vinculos": [
+      {
+        "criterios": {
+          "musica": [
+            "1.1",
+            "1.2"
+          ],
+          "lengua_catalana": [
+            "8.1",
+            "8.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "analizar rasgos musicales y relacionarlos con la función y el contexto.",
+          "lengua_catalana": "interpretar obras literarias y relacionarlas con otras artes."
+        },
+        "resumen_ca": {
+          "musica": "analitzar trets musicals i relacionar-los amb la funció i el context.",
+          "lengua_catalana": "interpretar obres literàries i relacionar-les amb altres arts."
+        },
+        "relacion_es": "Relación entre texto poético, expresión musical y significado cultural.",
+        "relacion_ca": "Relació entre text poètic, expressió musical i significat cultural."
+      },
+      {
+        "criterios": {
+          "musica": [
+            "3.2",
+            "3.3"
+          ],
+          "lengua_catalana": [
+            "3.1",
+            "8.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "aplicar técnicas vocales e interpretar piezas.",
+          "lengua_catalana": "expresar interpretaciones y argumentar vínculos entre manifestaciones artísticas."
+        },
+        "resumen_ca": {
+          "musica": "aplicar tècniques vocals i interpretar peces.",
+          "lengua_catalana": "expressar interpretacions i argumentar vincles entre manifestacions artístiques."
+        },
+        "relacion_es": "Articulación de la voz, el ritmo y los recursos expresivos del texto.",
+        "relacion_ca": "Articulació de la veu, el ritme i els recursos expressius del text."
+      }
+    ],
+    "saberes": {
+      "musica": {
+        "es": [
+          "Repertorio vocal",
+          "técnica vocal",
+          "melodía y ritmo",
+          "contexto de los géneros",
+          "música popular",
+          "interpretación"
+        ],
+        "ca": [
+          "Repertori vocal",
+          "tècnica vocal",
+          "melodia i ritme",
+          "context dels gèneres",
+          "música popular",
+          "interpretació"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Poesía",
+          "recursos expresivos",
+          "temas y tópicos",
+          "lectura expresiva",
+          "relaciones entre literatura y artes",
+          "interpretación literaria"
+        ],
+        "ca": [
+          "Poesia",
+          "recursos expressius",
+          "temes i tòpics",
+          "lectura expressiva",
+          "relacions entre literatura i arts",
+          "interpretació literària"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "voz",
+      "ritmo",
+      "texto",
+      "expresión",
+      "tema",
+      "interpretación"
+    ],
+    "conceptos_ca": [
+      "veu",
+      "ritme",
+      "text",
+      "expressió",
+      "tema",
+      "interpretació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "musica",
+        "opcion": 3,
+        "ambito_es": "Poesía y expresión musical",
+        "ambito_ca": "Poesia i expressió musical"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-24",
+    "curso": "3º",
+    "materias": [
+      "musica",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Sonido y tratamiento digital",
+    "ambito_ca": "So i tractament digital",
+    "vinculos": [
+      {
+        "criterios": {
+          "musica": [
+            "4.1"
+          ],
+          "tecnologia_digitalizacion": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "planificar propuestas musicales con herramientas tecnológicas.",
+          "tecnologia_digitalizacion": "crear contenidos digitales y difundirlos con configuración adecuada."
+        },
+        "resumen_ca": {
+          "musica": "planificar propostes musicals amb eines tecnològiques.",
+          "tecnologia_digitalizacion": "crear continguts digitals i difondre’ls amb configuració adequada."
+        },
+        "relacion_es": "Relación entre decisiones musicales y tratamiento digital de los contenidos.",
+        "relacion_ca": "Relació entre decisions musicals i tractament digital dels continguts."
+      },
+      {
+        "criterios": {
+          "musica": [
+            "4.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "musica": "participar en las fases de realización y valorar las aportaciones.",
+          "tecnologia_digitalizacion": "documentar y comunicar el proceso de creación."
+        },
+        "resumen_ca": {
+          "musica": "participar en les fases de realització i valorar les aportacions.",
+          "tecnologia_digitalizacion": "documentar i comunicar el procés de creació."
+        },
+        "relacion_es": "Organización, revisión y explicación de los procedimientos técnicos y expresivos.",
+        "relacion_ca": "Organització, revisió i explicació dels procediments tècnics i expressius."
+      }
+    ],
+    "saberes": {
+      "musica": {
+        "es": [
+          "Secuenciadores",
+          "editores de partituras",
+          "música y efectos sonoros audiovisuales",
+          "interpretación",
+          "propiedad intelectual",
+          "consumo musical responsable"
+        ],
+        "ca": [
+          "Seqüenciadors",
+          "editors de partitures",
+          "música i efectes sonors audiovisuals",
+          "interpretació",
+          "propietat intel·lectual",
+          "consum musical responsable"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Edición de contenidos digitales",
+          "herramientas multimedia",
+          "plataformas de publicación",
+          "documentación técnica",
+          "formatos y comunicación digital"
+        ],
+        "ca": [
+          "Edició de continguts digitals",
+          "eines multimèdia",
+          "plataformes de publicació",
+          "documentació tècnica",
+          "formats i comunicació digital"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "sonido",
+      "secuencia",
+      "edición",
+      "formato",
+      "comunicación",
+      "revisión"
+    ],
+    "conceptos_ca": [
+      "so",
+      "seqüència",
+      "edició",
+      "format",
+      "comunicació",
+      "revisió"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "musica",
+        "opcion": 4,
+        "ambito_es": "Sonido y tratamiento digital",
+        "ambito_ca": "So i tractament digital"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-25",
+    "curso": "3º",
+    "materias": [
+      "recursos_digitales_2",
+      "matematicas"
+    ],
+    "ambito_es": "Algoritmos y modelización",
+    "ambito_ca": "Algorismes i modelització",
+    "vinculos": [
+      {
+        "criterios": {
+          "recursos_digitales_2": [
+            "5.1",
+            "5.2"
+          ],
+          "matematicas": [
+            "4.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_2": "diseñar algoritmos y programar aplicaciones sencillas.",
+          "matematicas": "reconocer patrones y modelizar situaciones con algoritmos."
+        },
+        "resumen_ca": {
+          "recursos_digitales_2": "dissenyar algorismes i programar aplicacions senzilles.",
+          "matematicas": "reconèixer patrons i modelitzar situacions amb algorismes."
+        },
+        "relacion_es": "Descomposición de problemas y expresión ordenada de los procedimientos de resolución.",
+        "relacion_ca": "Descomposició de problemes i expressió ordenada dels procediments de resolució."
+      },
+      {
+        "criterios": {
+          "recursos_digitales_2": [
+            "5.3"
+          ],
+          "matematicas": [
+            "2.1",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_2": "simular sistemas simples con capacidad predictiva.",
+          "matematicas": "comprobar resultados y emplear tecnología para verificar conjeturas."
+        },
+        "resumen_ca": {
+          "recursos_digitales_2": "simular sistemes simples amb capacitat predictiva.",
+          "matematicas": "comprovar resultats i emprar tecnologia per verificar conjectures."
+        },
+        "relacion_es": "Contraste entre el comportamiento del modelo, los datos y las predicciones.",
+        "relacion_ca": "Contrast entre el comportament del model, les dades i les prediccions."
+      }
+    ],
+    "saberes": {
+      "recursos_digitales_2": {
+        "es": [
+          "Pensamiento computacional",
+          "programación por bloques",
+          "patrones",
+          "simuladores",
+          "procesamiento de información",
+          "automatización"
+        ],
+        "ca": [
+          "Pensament computacional",
+          "programació per blocs",
+          "patrons",
+          "simuladors",
+          "processament d’informació",
+          "automatització"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Patrones",
+          "variables",
+          "relaciones funcionales",
+          "interpretación y modificación de algoritmos",
+          "conjeturas",
+          "verificación de soluciones"
+        ],
+        "ca": [
+          "Patrons",
+          "variables",
+          "relacions funcionals",
+          "interpretació i modificació d’algorismes",
+          "conjectures",
+          "verificació de solucions"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "algoritmo",
+      "variable",
+      "patrón",
+      "modelo",
+      "simulación",
+      "verificación"
+    ],
+    "conceptos_ca": [
+      "algorisme",
+      "variable",
+      "patró",
+      "model",
+      "simulació",
+      "verificació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "recursos_digitales_2",
+        "opcion": 3,
+        "ambito_es": "Algoritmos y modelización",
+        "ambito_ca": "Algorismes i modelització"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-26",
+    "curso": "3º",
+    "materias": [
+      "recursos_digitales_2",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Programación y sistemas de control",
+    "ambito_ca": "Programació i sistemes de control",
+    "vinculos": [
+      {
+        "criterios": {
+          "recursos_digitales_2": [
+            "5.1",
+            "5.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "5.1",
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_2": "diseñar algoritmos y programar dispositivos.",
+          "tecnologia_digitalizacion": "formular soluciones informáticas y programar aplicaciones."
+        },
+        "resumen_ca": {
+          "recursos_digitales_2": "dissenyar algorismes i programar dispositius.",
+          "tecnologia_digitalizacion": "formular solucions informàtiques i programar aplicacions."
+        },
+        "relacion_es": "Lenguajes y procedimientos compartidos para formalizar e implementar soluciones.",
+        "relacion_ca": "Llenguatges i procediments compartits per formalitzar i implementar solucions."
+      },
+      {
+        "criterios": {
+          "recursos_digitales_2": [
+            "5.3"
+          ],
+          "tecnologia_digitalizacion": [
+            "5.3"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_2": "simular el comportamiento de sistemas.",
+          "tecnologia_digitalizacion": "automatizar procesos mediante sistemas de control."
+        },
+        "resumen_ca": {
+          "recursos_digitales_2": "simular el comportament de sistemes.",
+          "tecnologia_digitalizacion": "automatitzar processos mitjançant sistemes de control."
+        },
+        "relacion_es": "Relación entre simulación digital, entradas, procesos y respuestas de los dispositivos.",
+        "relacion_ca": "Relació entre simulació digital, entrades, processos i respostes dels dispositius."
+      }
+    ],
+    "saberes": {
+      "recursos_digitales_2": {
+        "es": [
+          "Programación por bloques",
+          "aplicaciones",
+          "reconocimiento de patrones",
+          "simuladores",
+          "procesamiento de la información",
+          "aprendizaje automatizado"
+        ],
+        "ca": [
+          "Programació per blocs",
+          "aplicacions",
+          "reconeixement de patrons",
+          "simuladors",
+          "processament de la informació",
+          "aprenentatge automatitzat"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Algoritmos",
+          "diagramas de flujo",
+          "sistemas de control",
+          "programación de dispositivos",
+          "robótica",
+          "simulación"
+        ],
+        "ca": [
+          "Algorismes",
+          "diagrames de flux",
+          "sistemes de control",
+          "programació de dispositius",
+          "robòtica",
+          "simulació"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "algoritmo",
+      "entrada",
+      "proceso",
+      "salida",
+      "control",
+      "simulación"
+    ],
+    "conceptos_ca": [
+      "algorisme",
+      "entrada",
+      "procés",
+      "sortida",
+      "control",
+      "simulació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "recursos_digitales_2",
+        "opcion": 4,
+        "ambito_es": "Programación y sistemas de control",
+        "ambito_ca": "Programació i sistemes de control"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-27",
+    "curso": "3º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Lectura e interpretación intercultural",
+    "ambito_ca": "Lectura i interpretació intercultural",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "1.1",
+            "1.2"
+          ],
+          "lengua_castellana": [
+            "4.1",
+            "8.2"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "comprender e interpretar textos de complejidad progresiva.",
+          "lengua_castellana": "interpretar textos y relacionar manifestaciones culturales."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "comprendre i interpretar texts de complexitat progressiva.",
+          "lengua_castellana": "interpretar texts i relacionar manifestacions culturals."
+        },
+        "relacion_es": "Comparación de significados, temas y convenciones en textos de diferentes lenguas.",
+        "relacion_ca": "Comparació de significats, temes i convencions en texts de diferents llengües."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "4.2",
+            "6.2"
+          ],
+          "lengua_castellana": [
+            "3.1",
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "reformular mensajes y valorar la diversidad cultural.",
+          "lengua_castellana": "comunicar interpretaciones y rechazar usos discriminatorios."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "reformular missatges i valorar la diversitat cultural.",
+          "lengua_castellana": "comunicar interpretacions i rebutjar usos discriminatoris."
+        },
+        "relacion_es": "Explicación de las diferencias culturales con precisión y respeto.",
+        "relacion_ca": "Explicació de les diferències culturals amb precisió i respecte."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Comprensión de textos",
+          "convenciones de género",
+          "mediación",
+          "reformulación",
+          "léxico cultural",
+          "diversidad lingüística y artística"
+        ],
+        "ca": [
+          "Comprensió de texts",
+          "convencions de gènere",
+          "mediació",
+          "reformulació",
+          "lèxic cultural",
+          "diversitat lingüística i artística"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Comprensión e interpretación",
+          "temas y tópicos",
+          "relaciones entre textos",
+          "exposición oral",
+          "contexto cultural",
+          "ética comunicativa"
+        ],
+        "ca": [
+          "Comprensió i interpretació",
+          "temes i tòpics",
+          "relacions entre texts",
+          "exposició oral",
+          "context cultural",
+          "ètica comunicativa"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "texto",
+      "tema",
+      "contexto",
+      "significado",
+      "interpretación",
+      "mediación"
+    ],
+    "conceptos_ca": [
+      "text",
+      "tema",
+      "context",
+      "significat",
+      "interpretació",
+      "mediació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "opcion": 4,
+        "ambito_es": "Lectura e interpretación intercultural",
+        "ambito_ca": "Lectura i interpretació intercultural"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-28",
+    "curso": "3º",
+    "materias": [
+      "taller_finanzas",
+      "matematicas"
+    ],
+    "ambito_es": "Cálculo financiero y decisiones económicas",
+    "ambito_ca": "Càlcul financer i decisions econòmiques",
+    "vinculos": [
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "2.2",
+            "4.1"
+          ],
+          "matematicas": [
+            "1.2",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "calcular intereses y elaborar presupuestos personales.",
+          "matematicas": "aplicar modelos matemáticos a problemas reales."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "calcular interessos i elaborar pressuposts personals.",
+          "matematicas": "aplicar models matemàtics a problemes reals."
+        },
+        "relacion_es": "Relación entre variables financieras, operaciones y decisiones de gasto o ahorro.",
+        "relacion_ca": "Relació entre variables financeres, operacions i decisions de despesa o estalvi."
+      },
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "2.1",
+            "4.3"
+          ],
+          "matematicas": [
+            "2.2",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "comparar productos financieros y seleccionar alternativas.",
+          "matematicas": "valorar la coherencia de las soluciones y justificarlas."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "comparar productes financers i seleccionar alternatives.",
+          "matematicas": "valorar la coherència de les solucions i justificar-les."
+        },
+        "relacion_es": "Comparación de costes, rendimientos y condiciones con criterios explícitos.",
+        "relacion_ca": "Comparació de costos, rendiments i condicions amb criteris explícits."
+      }
+    ],
+    "saberes": {
+      "taller_finanzas": {
+        "es": [
+          "Presupuesto",
+          "ingresos y gastos",
+          "ahorro",
+          "interés simple y compuesto",
+          "rentabilidad",
+          "riesgo",
+          "liquidez"
+        ],
+        "ca": [
+          "Pressupost",
+          "ingressos i despeses",
+          "estalvi",
+          "interès simple i compost",
+          "rendibilitat",
+          "risc",
+          "liquiditat"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Porcentajes",
+          "proporcionalidad",
+          "potencias",
+          "interés simple y compuesto",
+          "expresiones algebraicas",
+          "toma de decisiones de consumo"
+        ],
+        "ca": [
+          "Percentatges",
+          "proporcionalitat",
+          "potències",
+          "interès simple i compost",
+          "expressions algebraiques",
+          "presa de decisions de consum"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "presupuesto",
+      "porcentaje",
+      "interés",
+      "capital",
+      "rendimiento",
+      "comparación"
+    ],
+    "conceptos_ca": [
+      "pressupost",
+      "percentatge",
+      "interès",
+      "capital",
+      "rendiment",
+      "comparació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "taller_finanzas",
+        "opcion": 1,
+        "ambito_es": "Cálculo financiero y decisiones económicas",
+        "ambito_ca": "Càlcul financer i decisions econòmiques"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-29",
+    "curso": "3º",
+    "materias": [
+      "taller_finanzas",
+      "geografia_historia"
+    ],
+    "ambito_es": "Economía y desarrollo sostenible",
+    "ambito_ca": "Economia i desenvolupament sostenible",
+    "vinculos": [
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "1.1",
+            "3.2"
+          ],
+          "geografia_historia": [
+            "1.2",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "explicar agentes económicos y responsabilidades públicas.",
+          "geografia_historia": "relacionar información y explicar desafíos ecosociales."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "explicar agents econòmics i responsabilitats públiques.",
+          "geografia_historia": "relacionar informació i explicar desafiaments ecosocials."
+        },
+        "relacion_es": "Comprensión de las interdependencias entre hogares, empresas, instituciones y territorio.",
+        "relacion_ca": "Comprensió de les interdependències entre llars, empreses, institucions i territori."
+      },
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "6.1",
+            "6.4"
+          ],
+          "geografia_historia": [
+            "3.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "comprender la economía circular y valorar los ODS.",
+          "geografia_historia": "relacionar propuestas con los ODS y la sostenibilidad."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "comprendre l’economia circular i valorar els ODS.",
+          "geografia_historia": "relacionar propostes amb els ODS i la sostenibilitat."
+        },
+        "relacion_es": "Análisis de los impactos de la producción y el consumo y del papel de la regulación.",
+        "relacion_ca": "Anàlisi dels impactes de la producció i el consum i del paper de la regulació."
+      }
+    ],
+    "saberes": {
+      "taller_finanzas": {
+        "es": [
+          "Agentes económicos",
+          "consumo responsable",
+          "economía circular",
+          "derechos",
+          "políticas públicas",
+          "transición energética",
+          "ODS"
+        ],
+        "ca": [
+          "Agents econòmics",
+          "consum responsable",
+          "economia circular",
+          "drets",
+          "polítiques públiques",
+          "transició energètica",
+          "ODS"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Sectores económicos",
+          "comercio",
+          "energía",
+          "turismo balear",
+          "desigualdades",
+          "instituciones",
+          "desarrollo sostenible"
+        ],
+        "ca": [
+          "Sectors econòmics",
+          "comerç",
+          "energia",
+          "turisme balear",
+          "desigualtats",
+          "institucions",
+          "desenvolupament sostenible"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "producción",
+      "consumo",
+      "interdependencia",
+      "recurso",
+      "desigualdad",
+      "sostenibilidad"
+    ],
+    "conceptos_ca": [
+      "producció",
+      "consum",
+      "interdependència",
+      "recurs",
+      "desigualtat",
+      "sostenibilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "taller_finanzas",
+        "opcion": 2,
+        "ambito_es": "Economía y desarrollo sostenible",
+        "ambito_ca": "Economia i desenvolupament sostenible"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-30",
+    "curso": "3º",
+    "materias": [
+      "taller_finanzas",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Publicidad y consumo crítico",
+    "ambito_ca": "Publicitat i consum crític",
+    "vinculos": [
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "3.3"
+          ],
+          "lengua_catalana": [
+            "4.2",
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "analizar la influencia de la publicidad en las decisiones de consumo.",
+          "lengua_catalana": "valorar mensajes e identificar usos manipuladores del lenguaje."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "analitzar la influència de la publicitat en les decisions de consum.",
+          "lengua_catalana": "valorar missatges i identificar usos manipuladors del llenguatge."
+        },
+        "relacion_es": "Distinción entre información verificable, persuasión y promesas comerciales.",
+        "relacion_ca": "Distinció entre informació verificable, persuasió i promeses comercials."
+      },
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "4.2",
+            "6.3"
+          ],
+          "lengua_catalana": [
+            "4.1",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "comprender documentos de compraventa y derechos de los consumidores.",
+          "lengua_catalana": "interpretar y redactar textos adecuados a finalidades sociales."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "comprendre documents de compravenda i drets dels consumidors.",
+          "lengua_catalana": "interpretar i redactar texts adequats a finalitats socials."
+        },
+        "relacion_es": "Comprensión del lenguaje económico y de las condiciones de las transacciones.",
+        "relacion_ca": "Comprensió del llenguatge econòmic i de les condicions de les transaccions."
+      }
+    ],
+    "saberes": {
+      "taller_finanzas": {
+        "es": [
+          "Publicidad y redes sociales",
+          "compras impulsivas",
+          "consumo responsable",
+          "facturas y recibos",
+          "contratos",
+          "derechos de los consumidores"
+        ],
+        "ca": [
+          "Publicitat i xarxes socials",
+          "compres impulsives",
+          "consum responsable",
+          "factures i rebuts",
+          "contractes",
+          "drets dels consumidors"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Textos sociales y publicitarios",
+          "intención comunicativa",
+          "modalización",
+          "recursos persuasivos",
+          "comprensión crítica",
+          "precisión léxica"
+        ],
+        "ca": [
+          "Texts socials i publicitaris",
+          "intenció comunicativa",
+          "modalització",
+          "recursos persuasius",
+          "comprensió crítica",
+          "precisió lèxica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "publicidad",
+      "información",
+      "persuasión",
+      "necesidad",
+      "contrato",
+      "derecho"
+    ],
+    "conceptos_ca": [
+      "publicitat",
+      "informació",
+      "persuasió",
+      "necessitat",
+      "contracte",
+      "dret"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "taller_finanzas",
+        "opcion": 3,
+        "ambito_es": "Publicidad y consumo crítico",
+        "ambito_ca": "Publicitat i consum crític"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-31",
+    "curso": "3º",
+    "materias": [
+      "taller_finanzas",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Consumo tecnológico y economía circular",
+    "ambito_ca": "Consum tecnològic i economia circular",
+    "vinculos": [
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "3.1",
+            "6.1"
+          ],
+          "tecnologia_digitalizacion": [
+            "7.1",
+            "7.2"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "valorar el consumo responsable y los impactos ambientales.",
+          "tecnologia_digitalizacion": "analizar el impacto tecnológico y las aportaciones de las tecnologías emergentes."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "valorar el consum responsable i els impactes ambientals.",
+          "tecnologia_digitalizacion": "analitzar l’impacte tecnològic i les aportacions de les tecnologies emergents."
+        },
+        "relacion_es": "Relación entre decisiones de consumo, ciclo de vida y sostenibilidad de los productos.",
+        "relacion_ca": "Relació entre decisions de consum, cicle de vida i sostenibilitat dels productes."
+      },
+      {
+        "criterios": {
+          "taller_finanzas": [
+            "3.4",
+            "6.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "taller_finanzas": "valorar soluciones sostenibles y retos de la transición energética.",
+          "tecnologia_digitalizacion": "diseñar soluciones eficaces y sostenibles."
+        },
+        "resumen_ca": {
+          "taller_finanzas": "valorar solucions sostenibles i reptes de la transició energètica.",
+          "tecnologia_digitalizacion": "dissenyar solucions eficaces i sostenibles."
+        },
+        "relacion_es": "Comparación de alternativas según uso, durabilidad, coste e impacto.",
+        "relacion_ca": "Comparació d’alternatives segons ús, durabilitat, cost i impacte."
+      }
+    ],
+    "saberes": {
+      "taller_finanzas": {
+        "es": [
+          "Economía circular",
+          "obsolescencia programada",
+          "consumo responsable",
+          "eficiencia doméstica",
+          "transición energética",
+          "derechos del consumidor"
+        ],
+        "ca": [
+          "Economia circular",
+          "obsolescència programada",
+          "consum responsable",
+          "eficiència domèstica",
+          "transició energètica",
+          "drets del consumidor"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Obsolescencia",
+          "impacto ambiental y social de la tecnología",
+          "criterios de diseño",
+          "eficiencia",
+          "tecnologías emergentes"
+        ],
+        "ca": [
+          "Obsolescència",
+          "impacte ambiental i social de la tecnologia",
+          "criteris de disseny",
+          "eficiència",
+          "tecnologies emergents"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "consumo",
+      "durabilidad",
+      "obsolescencia",
+      "eficiencia",
+      "impacto",
+      "sostenibilidad"
+    ],
+    "conceptos_ca": [
+      "consum",
+      "durabilitat",
+      "obsolescència",
+      "eficiència",
+      "impacte",
+      "sostenibilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "taller_finanzas",
+        "opcion": 4,
+        "ambito_es": "Consumo tecnológico y economía circular",
+        "ambito_ca": "Consum tecnològic i economia circular"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-32",
+    "curso": "3º",
+    "materias": [
+      "tecnologia_digitalizacion",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Medida ambiental y salud",
+    "ambito_ca": "Mesura ambiental i salut",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnologia_digitalizacion": [
+            "2.1",
+            "5.3"
+          ],
+          "biologia_geologia": [
+            "3.2",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia_digitalizacion": "diseñar soluciones y programar sistemas de control.",
+          "biologia_geologia": "diseñar investigaciones y recoger datos."
+        },
+        "resumen_ca": {
+          "tecnologia_digitalizacion": "dissenyar solucions i programar sistemes de control.",
+          "biologia_geologia": "dissenyar investigacions i recollir dades."
+        },
+        "relacion_es": "Relación entre preguntas científicas, variables ambientales e instrumentos de registro.",
+        "relacion_ca": "Relació entre preguntes científiques, variables ambientals i instruments de registre."
+      },
+      {
+        "criterios": {
+          "tecnologia_digitalizacion": [
+            "4.1",
+            "7.1"
+          ],
+          "biologia_geologia": [
+            "3.4",
+            "5.3"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia_digitalizacion": "comunicar resultados técnicos y valorar el impacto de la tecnología.",
+          "biologia_geologia": "interpretar resultados y justificar hábitos saludables."
+        },
+        "resumen_ca": {
+          "tecnologia_digitalizacion": "comunicar resultats tècnics i valorar l’impacte de la tecnologia.",
+          "biologia_geologia": "interpretar resultats i justificar hàbits saludables."
+        },
+        "relacion_es": "Interpretación de los datos y de los límites de los dispositivos en decisiones sobre salud.",
+        "relacion_ca": "Interpretació de les dades i dels límits dels dispositius en decisions sobre salut."
+      }
+    ],
+    "saberes": {
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Circuitos y electrónica",
+          "sistemas de control programado",
+          "dispositivos",
+          "registro digital",
+          "documentación",
+          "impacto tecnológico"
+        ],
+        "ca": [
+          "Circuits i electrònica",
+          "sistemes de control programat",
+          "dispositius",
+          "registre digital",
+          "documentació",
+          "impacte tecnològic"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Salud ambiental y humana",
+          "aparato respiratorio",
+          "hábitos saludables",
+          "variables",
+          "toma de datos",
+          "análisis de resultados"
+        ],
+        "ca": [
+          "Salut ambiental i humana",
+          "aparell respiratori",
+          "hàbits saludables",
+          "variables",
+          "presa de dades",
+          "anàlisi de resultats"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "variable",
+      "medida",
+      "sistema",
+      "ambiente",
+      "salud",
+      "evidencia"
+    ],
+    "conceptos_ca": [
+      "variable",
+      "mesura",
+      "sistema",
+      "ambient",
+      "salut",
+      "evidència"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnologia_digitalizacion",
+        "opcion": 3,
+        "ambito_es": "Medida ambiental y salud",
+        "ambito_ca": "Mesura ambiental i salut"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-33",
+    "curso": "3º",
+    "materias": [
+      "tecnologia_digitalizacion",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Diseño funcional y lenguaje visual",
+    "ambito_ca": "Disseny funcional i llenguatge visual",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnologia_digitalizacion": [
+            "2.1",
+            "4.1"
+          ],
+          "educacion_plastica": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia_digitalizacion": "diseñar soluciones y representarlas con documentación gráfica.",
+          "educacion_plastica": "seleccionar técnicas y justificar decisiones expresivas."
+        },
+        "resumen_ca": {
+          "tecnologia_digitalizacion": "dissenyar solucions i representar-les amb documentació gràfica.",
+          "educacion_plastica": "seleccionar tècniques i justificar decisions expressives."
+        },
+        "relacion_es": "Relación entre forma, función y representación del diseño.",
+        "relacion_ca": "Relació entre forma, funció i representació del disseny."
+      },
+      {
+        "criterios": {
+          "tecnologia_digitalizacion": [
+            "3.1"
+          ],
+          "educacion_plastica": [
+            "8.3"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia_digitalizacion": "construir modelos y aplicar conocimientos interdisciplinarios.",
+          "educacion_plastica": "explicar los procesos y valorar errores y mejoras."
+        },
+        "resumen_ca": {
+          "tecnologia_digitalizacion": "construir models i aplicar coneixements interdisciplinaris.",
+          "educacion_plastica": "explicar els processos i valorar errors i millores."
+        },
+        "relacion_es": "Revisión de los resultados según criterios funcionales, formales y comunicativos.",
+        "relacion_ca": "Revisió dels resultats segons criteris funcionals, formals i comunicatius."
+      }
+    ],
+    "saberes": {
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Diseño",
+          "CAD en dos y tres dimensiones",
+          "fabricación",
+          "materiales",
+          "representación técnica",
+          "comunicación del proceso"
+        ],
+        "ca": [
+          "Disseny",
+          "CAD en dues i tres dimensions",
+          "fabricació",
+          "materials",
+          "representació tècnica",
+          "comunicació del procés"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Bocetos",
+          "geometría",
+          "composición",
+          "volumen",
+          "técnicas y materiales",
+          "documentación gráfica",
+          "revisión del proceso"
+        ],
+        "ca": [
+          "Esbossos",
+          "geometria",
+          "composició",
+          "volum",
+          "tècniques i materials",
+          "documentació gràfica",
+          "revisió del procés"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "diseño",
+      "forma",
+      "función",
+      "volumen",
+      "representación",
+      "material"
+    ],
+    "conceptos_ca": [
+      "disseny",
+      "forma",
+      "funció",
+      "volum",
+      "representació",
+      "material"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnologia_digitalizacion",
+        "opcion": 4,
+        "ambito_es": "Diseño funcional y lenguaje visual",
+        "ambito_ca": "Disseny funcional i llenguatge visual"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-34",
+    "curso": "3º",
+    "materias": [
+      "cultura_clasica_2",
+      "introduccion_filosofia"
+    ],
+    "ambito_es": "Orígenes del pensamiento racional",
+    "ambito_ca": "Orígens del pensament racional",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "2.3"
+          ],
+          "introduccion_filosofia": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "valorar el arte clásico y los orígenes de la ciencia y la tecnología.",
+          "introduccion_filosofia": "reconocer la riqueza y la influencia del pensamiento filosófico."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "valorar l’art clàssic i els orígens de la ciència i la tecnologia.",
+          "introduccion_filosofia": "reconèixer la riquesa i la influència del pensament filosòfic."
+        },
+        "relacion_es": "Estudio del paso del mito al logos y de las primeras explicaciones racionales.",
+        "relacion_ca": "Estudi del pas del mite al logos i de les primeres explicacions racionals."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "2.1"
+          ],
+          "introduccion_filosofia": [
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "comparar las formas de organización política de Atenas y Esparta.",
+          "introduccion_filosofia": "promover el intercambio de ideas y el ejercicio de una ciudadanía democrática."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "comparar les formes d’organització política d’Atenes i Esparta.",
+          "introduccion_filosofia": "promoure l’intercanvi d’idees i l’exercici d’una ciutadania democràtica."
+        },
+        "relacion_es": "Debate sobre la democracia ateniense y sus límites.",
+        "relacion_ca": "Debat sobre la democràcia atenesa i els seus límits."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_2": {
+        "es": [
+          "Ciencia y pensamiento griegos",
+          "Democracia ateniense",
+          "Legado clásico"
+        ],
+        "ca": [
+          "Ciència i pensament grecs",
+          "Democràcia atenesa",
+          "Llegat clàssic"
+        ]
+      },
+      "introduccion_filosofia": {
+        "es": [
+          "Del mito al logos",
+          "Diálogo y argumentación",
+          "Filosofía política",
+          "Historia del pensamiento"
+        ],
+        "ca": [
+          "Del mite al logos",
+          "Diàleg i argumentació",
+          "Filosofia política",
+          "Història del pensament"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mito",
+      "logos",
+      "democracia",
+      "argumento",
+      "ciudadanía"
+    ],
+    "conceptos_ca": [
+      "mite",
+      "logos",
+      "democràcia",
+      "argument",
+      "ciutadania"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_2",
+        "ambito_es": "Orígenes del pensamiento racional",
+        "ambito_ca": "Orígens del pensament racional"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-35",
+    "curso": "3º",
+    "materias": [
+      "cultura_clasica_2",
+      "segunda_lengua_extranjera"
+    ],
+    "ambito_es": "Legado clásico en Europa",
+    "ambito_ca": "Llegat clàssic a Europa",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "4.2"
+          ],
+          "segunda_lengua_extranjera": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "inferir el origen común de las lenguas europeas.",
+          "segunda_lengua_extranjera": "comparar y contrastar semejanzas y diferencias entre lenguas."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "inferir l’origen comú de les llengües europees.",
+          "segunda_lengua_extranjera": "comparar i contrastar semblances i diferències entre llengües."
+        },
+        "relacion_es": "Comparación léxica entre la segunda lengua, el catalán, el castellano y el latín.",
+        "relacion_ca": "Comparació lèxica entre la segona llengua, el català, el castellà i el llatí."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "1.3"
+          ],
+          "segunda_lengua_extranjera": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "elaborar trabajos de investigación sobre el mundo clásico.",
+          "segunda_lengua_extranjera": "valorar críticamente la diversidad lingüística, cultural y artística y adecuarse a ella."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "elaborar treballs de recerca sobre el món clàssic.",
+          "segunda_lengua_extranjera": "valorar críticament la diversitat lingüística, cultural i artística i adequar-s’hi."
+        },
+        "relacion_es": "Investigación sobre el patrimonio clásico de los países donde se habla la lengua.",
+        "relacion_ca": "Recerca sobre el patrimoni clàssic dels països on es parla la llengua."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_2": {
+        "es": [
+          "Lenguas indoeuropeas",
+          "Patrimonio clásico",
+          "Búsqueda de información"
+        ],
+        "ca": [
+          "Llengües indoeuropees",
+          "Patrimoni clàssic",
+          "Recerca d’informació"
+        ]
+      },
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Reflexión interlingüística",
+          "Patrimonio cultural",
+          "Comprensión de textos informativos"
+        ],
+        "ca": [
+          "Reflexió interlingüística",
+          "Patrimoni cultural",
+          "Comprensió de texts informatius"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "lengua",
+      "patrimonio",
+      "Europa",
+      "léxico",
+      "legado"
+    ],
+    "conceptos_ca": [
+      "llengua",
+      "patrimoni",
+      "Europa",
+      "lèxic",
+      "llegat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_2",
+        "ambito_es": "Legado clásico en Europa",
+        "ambito_ca": "Llegat clàssic a Europa"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-36",
+    "curso": "3º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "recursos_digitales_2"
+    ],
+    "ambito_es": "Producción multimedia en lengua extranjera",
+    "ambito_ca": "Producció multimèdia en llengua estrangera",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "2.1"
+          ],
+          "recursos_digitales_2": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "expresar oralmente textos estructurados y adecuados a la situación.",
+          "recursos_digitales_2": "crear y editar contenidos digitales de manera individual o colectiva."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "expressar oralment texts estructurats i adequats a la situació.",
+          "recursos_digitales_2": "crear i editar continguts digitals de manera individual o col·lectiva."
+        },
+        "relacion_es": "Elaboración de un pódcast o vídeo en la segunda lengua.",
+        "relacion_ca": "Elaboració d’un pòdcast o vídeo en la segona llengua."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "4.2"
+          ],
+          "recursos_digitales_2": [
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "aplicar estrategias de mediación que faciliten la comprensión.",
+          "recursos_digitales_2": "contrastar información de fuentes diversas evaluando su fiabilidad."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "aplicar estratègies de mediació que facilitin la comprensió.",
+          "recursos_digitales_2": "contrastar informació de fonts diverses avaluant-ne la fiabilitat."
+        },
+        "relacion_es": "Selección y adaptación de fuentes fiables para un público concreto.",
+        "relacion_ca": "Selecció i adaptació de fonts fiables per a un públic concret."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Producción oral planificada",
+          "Mediación",
+          "Léxico temático",
+          "Integración de elementos visuales en textos multimodales"
+        ],
+        "ca": [
+          "Producció oral planificada",
+          "Mediació",
+          "Lèxic temàtic",
+          "Integració d’elements visuals en texts multimodals"
+        ]
+      },
+      "recursos_digitales_2": {
+        "es": [
+          "Tecnologías de la comunicación digitales",
+          "Búsqueda y evaluación de información",
+          "Compartición de archivos y gestión de permisos",
+          "Publicación segura"
+        ],
+        "ca": [
+          "Tecnologies de la comunicació digitals",
+          "Cerca i avaluació d’informació",
+          "Compartició d’arxius i gestió de permisos",
+          "Publicació segura"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "pódcast",
+      "guion",
+      "fuente",
+      "edición",
+      "público"
+    ],
+    "conceptos_ca": [
+      "pòdcast",
+      "guió",
+      "font",
+      "edició",
+      "públic"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "ambito_es": "Producción multimedia en lengua extranjera",
+        "ambito_ca": "Producció multimèdia en llengua estrangera"
+      }
+    ]
+  },
+  {
+    "id": "ESO3-37",
+    "curso": "3º",
+    "materias": [
+      "educacion_fisica",
+      "matematicas"
+    ],
+    "ambito_es": "Datos de la condición física",
+    "ambito_ca": "Dades de la condició física",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_fisica": [
+            "1.1"
+          ],
+          "matematicas": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "educacion_fisica": "planificar y autorregular el ejercicio físico orientado a la salud.",
+          "matematicas": "reconocer patrones y organizar datos para facilitar su interpretación."
+        },
+        "resumen_ca": {
+          "educacion_fisica": "planificar i autoregular l’exercici físic orientat a la salut.",
+          "matematicas": "reconèixer patrons i organitzar dades per facilitar-ne la interpretació."
+        },
+        "relacion_es": "Registro y análisis de la frecuencia cardíaca y de la progresión del esfuerzo.",
+        "relacion_ca": "Registre i anàlisi de la freqüència cardíaca i de la progressió de l’esforç."
+      },
+      {
+        "criterios": {
+          "educacion_fisica": [
+            "1.6"
+          ],
+          "matematicas": [
+            "7.1"
+          ]
+        },
+        "resumen_es": {
+          "educacion_fisica": "planificar y compartir con seguridad la práctica física con aplicaciones digitales.",
+          "matematicas": "representar conceptos, procedimientos y datos con diferentes herramientas."
+        },
+        "resumen_ca": {
+          "educacion_fisica": "planificar i compartir amb seguretat la pràctica física amb aplicacions digitals.",
+          "matematicas": "representar conceptes, procediments i dades amb diferents eines."
+        },
+        "relacion_es": "Representación gráfica de datos de práctica física obtenidos con aplicaciones.",
+        "relacion_ca": "Representació gràfica de dades de pràctica física obtingudes amb aplicacions."
+      }
+    ],
+    "saberes": {
+      "educacion_fisica": {
+        "es": [
+          "Frecuencia cardíaca y zonas de actividad",
+          "Planificación del entrenamiento",
+          "Aplicaciones digitales de control",
+          "Condición física y salud"
+        ],
+        "ca": [
+          "Freqüència cardíaca i zones d’activitat",
+          "Planificació de l’entrenament",
+          "Aplicacions digitals de control",
+          "Condició física i salut"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Estadística descriptiva",
+          "Gráficos",
+          "Medidas de centralización",
+          "Hoja de cálculo"
+        ],
+        "ca": [
+          "Estadística descriptiva",
+          "Gràfics",
+          "Mesures de centralització",
+          "Full de càlcul"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "frecuencia",
+      "esfuerzo",
+      "datos",
+      "gráfico",
+      "progresión"
+    ],
+    "conceptos_ca": [
+      "freqüència",
+      "esforç",
+      "dades",
+      "gràfic",
+      "progressió"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "educacion_fisica",
+        "ambito_es": "Datos de la condición física",
+        "ambito_ca": "Dades de la condició física"
+      }
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+<article class="afinidad-card">
+  <header class="afinidad-card__header">
+    <div class="afinidad-card__meta">
+      <span class="afinidad-card__curso">{{ afinidad().curso }} ESO</span>
+      @if (fuente()?.opcion; as opcion) {
+        <span class="afinidad-card__opcion">{{ isCa() ? 'Opció' : 'Opción' }} {{ opcion }}</span>
+      }
+      <span
+        class="afinidad-card__origen"
+        [class.afinidad-card__origen--ampliacion]="afinidad().origen === 'ampliacion'"
+        [title]="
+          afinidad().origen === 'documento'
+            ? isCa()
+              ? 'Proposta del document d’afinitats curriculars del centre'
+              : 'Propuesta del documento de afinidades curriculares del centro'
+            : isCa()
+              ? 'Proposta nova que amplia el document del centre'
+              : 'Propuesta nueva que amplía el documento del centro'
+        "
+      >
+        {{
+          afinidad().origen === 'documento'
+            ? isCa()
+              ? 'Document del centre'
+              : 'Documento del centro'
+            : isCa()
+              ? 'Ampliació'
+              : 'Ampliación'
+        }}
+      </span>
+    </div>
+    <p class="afinidad-card__materias">
+      @for (m of materias(); track m; let last = $last) {
+        <span class="afinidad-card__materia">{{ nombre(m) }}</span>
+        @if (!last) {
+          <span class="afinidad-card__mas">+</span>
+        }
+      }
+    </p>
+    <h3 class="afinidad-card__ambito">
+      <span class="afinidad-card__ambito-label">{{
+        isCa() ? 'Àmbit proposat:' : 'Ámbito propuesto:'
+      }}</span>
+      {{ ambito() }}
+    </h3>
+  </header>
+
+  <div class="afinidad-card__tabla" [style.--afinidad-cols]="materias().length + 1">
+    @for (m of materias(); track m) {
+      <div class="afinidad-card__th">
+        {{ isCa() ? 'Criteris de' : 'Criterios de' }} {{ nombre(m) }}
+      </div>
+    }
+    <div class="afinidad-card__th">
+      {{ isCa() ? 'Relació que fonamenta l’àmbit' : 'Relación que fundamenta el ámbito' }}
+    </div>
+
+    @for (v of afinidad().vinculos; track $index) {
+      @for (m of materias(); track m) {
+        <div class="afinidad-card__td" [attr.data-materia]="nombre(m)">
+          @for (c of criterios(v, m); track c.id) {
+            <details class="afinidad-card__criterio">
+              <summary class="afinidad-card__criterio-id">CE {{ c.id }}</summary>
+              <p class="afinidad-card__criterio-texto">{{ textoCriterio(c) }}</p>
+            </details>
+          }
+          <p class="afinidad-card__resumen">{{ resumen(v, m) }}</p>
+        </div>
+      }
+      <div class="afinidad-card__td afinidad-card__td--relacion">{{ relacion(v) }}</div>
+    }
+  </div>
+
+  <section class="afinidad-card__saberes">
+    <h4 class="afinidad-card__subtitulo">
+      {{ isCa() ? 'Sabers bàsics mobilitzats' : 'Saberes básicos movilizados' }}
+    </h4>
+    @for (m of materias(); track m) {
+      <p class="afinidad-card__saber">
+        <strong>{{ nombre(m) }}:</strong> {{ saberes(m).join('; ') }}.
+      </p>
+    }
+  </section>
+
+  <footer class="afinidad-card__conceptos">
+    <span class="afinidad-card__subtitulo">{{
+      isCa() ? 'Conceptes comuns:' : 'Conceptos comunes:'
+    }}</span>
+    @for (c of conceptos(); track c) {
+      <span class="afinidad-card__concepto">{{ c }}</span>
+    }
+  </footer>
+</article>

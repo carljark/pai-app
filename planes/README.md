@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[004 — Mapa de afinidades curriculares de la ESO (1.º-4.º)](004_plan_mapa_afinidades_curriculares_eso.md)** · _Implementado (tarea 202)_  
+  Mapa de la ESO con el formato del documento del IES Cap de Llevant (fichas de afinidad sin actividades), revisado contra el Decreto 42/2025, ampliado y con 4.º de ESO y sus materias de opción.
+
 - **[003 — Selección de criterios de evaluación en la ESO y el PDC](003_plan_seleccion_criterios_evaluacion_eso.md)** · _Implementado (tarea 200)_  
   Cada CE de la ESO y del PDC muestra sus criterios, con «seleccionar todos»; el proyecto se genera a partir de los criterios elegidos, en castellano y catalán.
 

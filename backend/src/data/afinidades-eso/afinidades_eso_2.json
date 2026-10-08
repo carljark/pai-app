@@ -1,0 +1,3368 @@
+[
+  {
+    "id": "ESO2-01",
+    "curso": "2º",
+    "materias": [
+      "cooperacion_servicios_comunidad",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Comunicación y vínculos intergeneracionales",
+    "ambito_ca": "Comunicació i vincles intergeneracionals",
+    "vinculos": [
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "6.1"
+          ],
+          "lengua_catalana": [
+            "3.2",
+            "10.2"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "cooperar con otras generaciones y colectivos vulnerables.",
+          "lengua_catalana": "practicar la escucha y el diálogo respetuoso."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "cooperar amb altres generacions i col·lectius vulnerables.",
+          "lengua_catalana": "practicar l’escolta i el diàleg respectuós."
+        },
+        "relacion_es": "Uso de la lengua para comprender experiencias y construir vínculos sociales.",
+        "relacion_ca": "Ús de la llengua per comprendre experiències i construir vincles socials."
+      },
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "3.1",
+            "3.3"
+          ],
+          "lengua_catalana": [
+            "3.1",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "elaborar contenidos propios y comunicar información investigada.",
+          "lengua_catalana": "elaborar exposiciones y textos adecuados al destinatario."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "elaborar continguts propis i comunicar informació investigada.",
+          "lengua_catalana": "elaborar exposicions i texts adequats al destinatari."
+        },
+        "relacion_es": "Transformación rigurosa de la información oral en conocimiento compartido.",
+        "relacion_ca": "Transformació rigorosa de la informació oral en coneixement compartit."
+      }
+    ],
+    "saberes": {
+      "cooperacion_servicios_comunidad": {
+        "es": [
+          "Escucha entre generaciones",
+          "alteridad",
+          "respeto",
+          "patrimonio cultural",
+          "educación emocional",
+          "participación"
+        ],
+        "ca": [
+          "Escolta entre generacions",
+          "alteritat",
+          "respecte",
+          "patrimoni cultural",
+          "educació emocional",
+          "participació"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Comprensión oral",
+          "cooperación conversacional",
+          "cortesía",
+          "exposición",
+          "planificación y revisión de textos",
+          "adecuación"
+        ],
+        "ca": [
+          "Comprensió oral",
+          "cooperació conversacional",
+          "cortesia",
+          "exposició",
+          "planificació i revisió de texts",
+          "adequació"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "escucha activa",
+      "diálogo",
+      "respeto",
+      "comunicación",
+      "identidad",
+      "patrimonio cultural",
+      "escucha",
+      "memoria",
+      "información"
+    ],
+    "conceptos_ca": [
+      "escolta activa",
+      "diàleg",
+      "respecte",
+      "comunicació",
+      "identitat",
+      "patrimoni cultural",
+      "escolta",
+      "memòria",
+      "informació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cooperacion_servicios_comunidad",
+        "opcion": 1,
+        "ambito_es": "Comunicación y vínculos intergeneracionales",
+        "ambito_ca": "Comunicació i vincles intergeneracionals"
+      },
+      {
+        "materia": "lengua_catalana",
+        "opcion": 2,
+        "ambito_es": "Comunicación y relaciones intergeneracionales",
+        "ambito_ca": "Comunicació i relacions intergeneracionals"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-02",
+    "curso": "2º",
+    "materias": [
+      "cooperacion_servicios_comunidad",
+      "geografia_historia",
+      "matematicas"
+    ],
+    "ambito_es": "Diversidad, población y acogida",
+    "ambito_ca": "Diversitat, població i acollida",
+    "vinculos": [
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "2.1",
+            "2.2"
+          ],
+          "geografia_historia": [
+            "8.1",
+            "6.3"
+          ],
+          "matematicas": [
+            "1.1",
+            "6.4"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "identificar retos sociales y argumentar con fuentes contrastadas.",
+          "geografia_historia": "interpretar la población y valorar la diversidad.",
+          "matematicas": "interpretar datos contextualizados."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "identificar reptes socials i argumentar amb fonts contrastades.",
+          "geografia_historia": "interpretar la població i valorar la diversitat.",
+          "matematicas": "interpretar dades contextualitzades."
+        },
+        "relacion_es": "Comprensión de la diversidad y las necesidades sociales a partir de datos demográficos.",
+        "relacion_ca": "Comprensió de la diversitat i les necessitats socials a partir de dades demogràfiques."
+      },
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "3.3",
+            "4.3"
+          ],
+          "geografia_historia": [
+            "3.3"
+          ],
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "presentar información y participar en los órganos escolares.",
+          "geografia_historia": "representar información.",
+          "matematicas": "representar datos y justificar conclusiones."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "presentar informació i participar en els òrgans escolars.",
+          "geografia_historia": "representar informació.",
+          "matematicas": "representar dades i justificar conclusions."
+        },
+        "relacion_es": "Fundamentación de la participación y de las decisiones de acogida con información verificable.",
+        "relacion_ca": "Fonamentació de la participació i de les decisions d’acollida amb informació verificable."
+      }
+    ],
+    "saberes": {
+      "cooperacion_servicios_comunidad": {
+        "es": [
+          "Alteridad",
+          "comportamientos no discriminatorios",
+          "escucha de colectivos vulnerables",
+          "tratamiento de información",
+          "participación ciudadana"
+        ],
+        "ca": [
+          "Alteritat",
+          "comportaments no discriminatoris",
+          "escolta de col·lectius vulnerables",
+          "tractament d’informació",
+          "participació ciutadana"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Fuentes demográficas",
+          "migraciones",
+          "población balear",
+          "diversidad cultural",
+          "desigualdades",
+          "representación geográfica"
+        ],
+        "ca": [
+          "Fonts demogràfiques",
+          "migracions",
+          "població balear",
+          "diversitat cultural",
+          "desigualtats",
+          "representació geogràfica"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Frecuencias",
+          "tablas y gráficos",
+          "porcentajes",
+          "proporcionalidad",
+          "interpretación y comunicación de datos"
+        ],
+        "ca": [
+          "Freqüències",
+          "taules i gràfics",
+          "percentatges",
+          "proporcionalitat",
+          "interpretació i comunicació de dades"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "población",
+      "diversidad",
+      "desigualdad",
+      "inclusión",
+      "información",
+      "representación"
+    ],
+    "conceptos_ca": [
+      "població",
+      "diversitat",
+      "desigualtat",
+      "inclusió",
+      "informació",
+      "representació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cooperacion_servicios_comunidad",
+        "opcion": 2,
+        "ambito_es": "Diversidad, población y acogida",
+        "ambito_ca": "Diversitat, població i acollida"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-03",
+    "curso": "2º",
+    "materias": [
+      "cooperacion_servicios_comunidad",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Actividad física y convivencia",
+    "ambito_ca": "Activitat física i convivència",
+    "vinculos": [
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "1.2"
+          ],
+          "educacion_fisica": [
+            "1.1",
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "promover hábitos individuales y colectivos saludables.",
+          "educacion_fisica": "organizar ejercicio saludable y desarrollar procesos motores cooperativos."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "promoure hàbits individuals i col·lectius saludables.",
+          "educacion_fisica": "organitzar exercici saludable i desenvolupar processos motors cooperatius."
+        },
+        "relacion_es": "Comprensión de la práctica física como factor de salud y bienestar comunitario.",
+        "relacion_ca": "Comprensió de la pràctica física com a factor de salut i benestar comunitari."
+      },
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "4.3",
+            "6.1"
+          ],
+          "educacion_fisica": [
+            "3.2",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "contribuir al funcionamiento de los órganos escolares.",
+          "educacion_fisica": "cooperar, asumir responsabilidades y resolver conflictos."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "contribuir al funcionament dels òrgans escolars.",
+          "educacion_fisica": "cooperar, assumir responsabilitats i resoldre conflictes."
+        },
+        "relacion_es": "Participación inclusiva y regulación de las relaciones sociales en espacios compartidos.",
+        "relacion_ca": "Participació inclusiva i regulació de les relacions socials en espais compartits."
+      }
+    ],
+    "saberes": {
+      "cooperacion_servicios_comunidad": {
+        "es": [
+          "Vida activa",
+          "salud física, social y mental",
+          "alteridad",
+          "comportamientos no discriminatorios",
+          "educación emocional",
+          "escucha y cooperación"
+        ],
+        "ca": [
+          "Vida activa",
+          "salut física, social i mental",
+          "alteritat",
+          "comportaments no discriminatoris",
+          "educació emocional",
+          "escolta i cooperació"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Intensidad y adaptación del esfuerzo",
+          "organización de la práctica motriz",
+          "cooperación",
+          "habilidades sociales",
+          "reglas",
+          "autorregulación emocional"
+        ],
+        "ca": [
+          "Intensitat i adaptació de l’esforç",
+          "organització de la pràctica motriu",
+          "cooperació",
+          "habilitats socials",
+          "regles",
+          "autoregulació emocional"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "bienestar",
+      "participación",
+      "cooperación",
+      "inclusión",
+      "responsabilidad",
+      "convivencia",
+      "salud"
+    ],
+    "conceptos_ca": [
+      "benestar",
+      "participació",
+      "cooperació",
+      "inclusió",
+      "responsabilitat",
+      "convivència",
+      "salut"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cooperacion_servicios_comunidad",
+        "opcion": 3,
+        "ambito_es": "Actividad física y convivencia",
+        "ambito_ca": "Activitat física i convivència"
+      },
+      {
+        "materia": "educacion_fisica",
+        "opcion": 2,
+        "ambito_es": "Actividad física y convivencia",
+        "ambito_ca": "Activitat física i convivència"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-04",
+    "curso": "2º",
+    "materias": [
+      "cooperacion_servicios_comunidad",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Consumo responsable y sostenibilidad",
+    "ambito_ca": "Consum responsable i sostenibilitat",
+    "vinculos": [
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "1.1"
+          ],
+          "fisica_quimica": [
+            "1.3",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "adoptar hábitos sostenibles con un análisis crítico de las actividades propias y ajenas.",
+          "fisica_quimica": "identificar problemas científicos y necesidades ambientales del entorno."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "adoptar hàbits sostenibles amb una anàlisi crítica de les activitats pròpies i alienes.",
+          "fisica_quimica": "identificar problemes científics i necessitats ambientals de l’entorn."
+        },
+        "relacion_es": "Fundamentación científica de las decisiones sobre recursos, consumo e impacto ambiental.",
+        "relacion_ca": "Fonamentació científica de les decisions sobre recursos, consum i impacte ambiental."
+      },
+      {
+        "criterios": {
+          "cooperacion_servicios_comunidad": [
+            "3.3",
+            "4.3"
+          ],
+          "fisica_quimica": [
+            "3.1",
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "cooperacion_servicios_comunidad": "tratar información y participar en el funcionamiento de los órganos escolares.",
+          "fisica_quimica": "interpretar información científica y abordar necesidades sociales con metodología científica."
+        },
+        "resumen_ca": {
+          "cooperacion_servicios_comunidad": "tractar informació i participar en el funcionament dels òrgans escolars.",
+          "fisica_quimica": "interpretar informació científica i abordar necessitats socials amb metodologia científica."
+        },
+        "relacion_es": "Uso de evidencias para valorar hábitos colectivos y argumentar decisiones comunitarias.",
+        "relacion_ca": "Ús d’evidències per valorar hàbits col·lectius i argumentar decisions comunitàries."
+      }
+    ],
+    "saberes": {
+      "cooperacion_servicios_comunidad": {
+        "es": [
+          "Consumo responsable",
+          "agotamiento de los recursos naturales",
+          "emergencia climática",
+          "conciencia ambiental",
+          "participación",
+          "tratamiento de información"
+        ],
+        "ca": [
+          "Consum responsable",
+          "esgotament dels recursos naturals",
+          "emergència climàtica",
+          "consciència ambiental",
+          "participació",
+          "tractament d’informació"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Energía",
+          "transferencias y transformaciones",
+          "fuentes renovables y no renovables",
+          "uso responsable de recursos",
+          "datos científicos",
+          "impacto ambiental"
+        ],
+        "ca": [
+          "Energia",
+          "transferències i transformacions",
+          "fonts renovables i no renovables",
+          "ús responsable de recursos",
+          "dades científiques",
+          "impacte ambiental"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "energía",
+      "recurso",
+      "consumo",
+      "impacto",
+      "sostenibilidad",
+      "responsabilidad"
+    ],
+    "conceptos_ca": [
+      "energia",
+      "recurs",
+      "consum",
+      "impacte",
+      "sostenibilitat",
+      "responsabilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cooperacion_servicios_comunidad",
+        "opcion": 4,
+        "ambito_es": "Consumo responsable y sostenibilidad",
+        "ambito_ca": "Consum responsable i sostenibilitat"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-05",
+    "curso": "2º",
+    "materias": [
+      "cultura_clasica_2",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Legado clásico y lenguaje de las imágenes",
+    "ambito_ca": "Llegat clàssic i llenguatge de les imatges",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "2.3"
+          ],
+          "educacion_plastica": [
+            "1.1",
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "reconocer los rasgos y la influencia del arte clásico.",
+          "educacion_plastica": "contextualizar las producciones artísticas y valorar el patrimonio."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "reconèixer els trets i la influència de l’art clàssic.",
+          "educacion_plastica": "contextualitzar les produccions artístiques i valorar el patrimoni."
+        },
+        "relacion_es": "Lectura de las formas artísticas en relación con su función y contexto.",
+        "relacion_ca": "Lectura de les formes artístiques en relació amb la seva funció i context."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "3.2"
+          ],
+          "educacion_plastica": [
+            "3.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "identificar divinidades, atributos y escenas mitológicas.",
+          "educacion_plastica": "analizar propuestas visuales y relacionar lenguajes artísticos."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "identificar divinitats, atributs i escenes mitològiques.",
+          "educacion_plastica": "analitzar propostes visuals i relacionar llenguatges artístics."
+        },
+        "relacion_es": "Interpretación de símbolos y de la pervivencia de los referentes mitológicos.",
+        "relacion_ca": "Interpretació de símbols i de la pervivència dels referents mitològics."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_2": {
+        "es": [
+          "Arte grecorromano e influencia posterior",
+          "principales obras",
+          "funciones del arte",
+          "mitos, divinidades y atributos",
+          "pervivencia iconográfica"
+        ],
+        "ca": [
+          "Art grecoromà i influència posterior",
+          "principals obres",
+          "funcions de l’art",
+          "mites, divinitats i atributs",
+          "pervivència iconogràfica"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Géneros artísticos",
+          "arte mitológico",
+          "lectura de imágenes",
+          "signos y símbolos",
+          "contexto de las obras",
+          "patrimonio cultural"
+        ],
+        "ca": [
+          "Gèneres artístics",
+          "art mitològic",
+          "lectura d’imatges",
+          "signes i símbols",
+          "context de les obres",
+          "patrimoni cultural"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mito",
+      "símbolo",
+      "iconografía",
+      "representación",
+      "patrimonio",
+      "pervivencia"
+    ],
+    "conceptos_ca": [
+      "mite",
+      "símbol",
+      "iconografia",
+      "representació",
+      "patrimoni",
+      "pervivència"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_2",
+        "opcion": 3,
+        "ambito_es": "Legado clásico y lenguaje de las imágenes",
+        "ambito_ca": "Llegat clàssic i llenguatge de les imatges"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-06",
+    "curso": "2º",
+    "materias": [
+      "educacion_fisica",
+      "geografia_historia"
+    ],
+    "ambito_es": "Espacio urbano y movilidad activa",
+    "ambito_ca": "Espai urbà i mobilitat activa",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_fisica": [
+            "5.1",
+            "5.2"
+          ],
+          "geografia_historia": [
+            "4.3",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "educacion_fisica": "practicar actividad física en el entorno con sostenibilidad y seguridad.",
+          "geografia_historia": "defender la mejora del entorno y analizar problemas de las ciudades."
+        },
+        "resumen_ca": {
+          "educacion_fisica": "practicar activitat física en l’entorn amb sostenibilitat i seguretat.",
+          "geografia_historia": "defensar la millora de l’entorn i analitzar problemes de les ciutats."
+        },
+        "relacion_es": "Valoración de los espacios urbanos según accesibilidad, seguridad y usos sociales.",
+        "relacion_ca": "Valoració dels espais urbans segons accessibilitat, seguretat i usos socials."
+      },
+      {
+        "criterios": {
+          "educacion_fisica": [
+            "2.2"
+          ],
+          "geografia_historia": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "educacion_fisica": "tomar decisiones adecuadas al contexto motriz.",
+          "geografia_historia": "representar información geográfica con diferentes recursos."
+        },
+        "resumen_ca": {
+          "educacion_fisica": "prendre decisions adequades al context motriu.",
+          "geografia_historia": "representar informació geogràfica amb diferents recursos."
+        },
+        "relacion_es": "Relación entre lectura del espacio, orientación y decisiones de desplazamiento.",
+        "relacion_ca": "Relació entre lectura de l’espai, orientació i decisions de desplaçament."
+      }
+    ],
+    "saberes": {
+      "educacion_fisica": {
+        "es": [
+          "Actividad física en entornos urbanos",
+          "movilidad activa y sostenible",
+          "normas de seguridad",
+          "uso de los espacios",
+          "toma de decisiones motrices"
+        ],
+        "ca": [
+          "Activitat física en entorns urbans",
+          "mobilitat activa i sostenible",
+          "normes de seguretat",
+          "ús dels espais",
+          "presa de decisions motrius"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Ciudad y urbanización",
+          "planos urbanos",
+          "red urbana balear",
+          "sostenibilidad urbana",
+          "movilidad segura",
+          "representación geográfica"
+        ],
+        "ca": [
+          "Ciutat i urbanització",
+          "plànols urbans",
+          "xarxa urbana balear",
+          "sostenibilitat urbana",
+          "mobilitat segura",
+          "representació geogràfica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "espacio",
+      "movilidad",
+      "accesibilidad",
+      "orientación",
+      "seguridad",
+      "sostenibilidad"
+    ],
+    "conceptos_ca": [
+      "espai",
+      "mobilitat",
+      "accessibilitat",
+      "orientació",
+      "seguretat",
+      "sostenibilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "educacion_fisica",
+        "opcion": 4,
+        "ambito_es": "Espacio urbano y movilidad activa",
+        "ambito_ca": "Espai urbà i mobilitat activa"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-07",
+    "curso": "2º",
+    "materias": [
+      "educacion_plastica",
+      "matematicas"
+    ],
+    "ambito_es": "Geometría y organización de las formas",
+    "ambito_ca": "Geometria i organització de les formes",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "4.2"
+          ],
+          "matematicas": [
+            "5.1",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "relacionar lenguajes artísticos y sus especificidades.",
+          "matematicas": "reconocer relaciones matemáticas y conexiones con otras materias."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "relacionar llenguatges artístics i les seves especificitats.",
+          "matematicas": "reconèixer relacions matemàtiques i connexions amb altres matèries."
+        },
+        "relacion_es": "Análisis geométrico de las estructuras visuales y las proporciones.",
+        "relacion_ca": "Anàlisi geomètrica de les estructures visuals i les proporcions."
+      },
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "5.2"
+          ],
+          "matematicas": [
+            "7.1",
+            "7.2"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "seleccionar técnicas y justificar las decisiones del proceso creativo.",
+          "matematicas": "representar conceptos y elaborar representaciones útiles para resolver problemas."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "seleccionar tècniques i justificar les decisions del procés creatiu.",
+          "matematicas": "representar conceptes i elaborar representacions útils per resoldre problemes."
+        },
+        "relacion_es": "Uso razonado de construcciones geométricas y representaciones espaciales.",
+        "relacion_ca": "Ús raonat de construccions geomètriques i representacions espacials."
+      }
+    ],
+    "saberes": {
+      "educacion_plastica": {
+        "es": [
+          "Trazados geométricos",
+          "proporción",
+          "simetría axial y radial",
+          "redes modulares",
+          "composición",
+          "organización de formas en el plano y el espacio"
+        ],
+        "ca": [
+          "Traçats geomètrics",
+          "proporció",
+          "simetria axial i radial",
+          "xarxes modulars",
+          "composició",
+          "organització de formes en el pla i l’espai"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Semejanza y escalas",
+          "figuras planas y tridimensionales",
+          "teorema de Pitágoras",
+          "áreas y volúmenes",
+          "representaciones geométricas"
+        ],
+        "ca": [
+          "Semblança i escales",
+          "figures planes i tridimensionals",
+          "teorema de Pitàgores",
+          "àrees i volums",
+          "representacions geomètriques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "forma",
+      "proporción",
+      "escala",
+      "geometría",
+      "espacio",
+      "representación"
+    ],
+    "conceptos_ca": [
+      "forma",
+      "proporció",
+      "escala",
+      "geometria",
+      "espai",
+      "representació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "educacion_plastica",
+        "opcion": 1,
+        "ambito_es": "Geometría y organización de las formas",
+        "ambito_ca": "Geometria i organització de les formes"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-08",
+    "curso": "2º",
+    "materias": [
+      "educacion_plastica",
+      "geografia_historia"
+    ],
+    "ambito_es": "Arte y sociedad medieval y moderna",
+    "ambito_ca": "Art i societat medieval i moderna",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "1.1",
+            "4.1"
+          ],
+          "geografia_historia": [
+            "1.2",
+            "3.5"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "explicar los factores históricos y sociales de las producciones artísticas.",
+          "geografia_historia": "contrastar fuentes y analizar procesos de cambio histórico."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "explicar els factors històrics i socials de les produccions artístiques.",
+          "geografia_historia": "contrastar fonts i analitzar processos de canvi històric."
+        },
+        "relacion_es": "Interpretación de las imágenes y los edificios como fuentes históricas.",
+        "relacion_ca": "Interpretació de les imatges i els edificis com a fonts històriques."
+      },
+      {
+        "criterios": {
+          "educacion_plastica": [
+            "1.2",
+            "3.1"
+          ],
+          "geografia_historia": [
+            "7.4"
+          ]
+        },
+        "resumen_es": {
+          "educacion_plastica": "valorar el patrimonio y analizar obras de diferentes épocas.",
+          "geografia_historia": "valorar, proteger y conservar el patrimonio artístico y cultural."
+        },
+        "resumen_ca": {
+          "educacion_plastica": "valorar el patrimoni i analitzar obres de diferents èpoques.",
+          "geografia_historia": "valorar, protegir i conservar el patrimoni artístic i cultural."
+        },
+        "relacion_es": "Comprensión del valor cultural de las formas artísticas y su conservación.",
+        "relacion_ca": "Comprensió del valor cultural de les formes artístiques i la seva conservació."
+      }
+    ],
+    "saberes": {
+      "educacion_plastica": {
+        "es": [
+          "Géneros artísticos",
+          "funciones del arte",
+          "arquitectura, pintura y escultura",
+          "contexto de las obras",
+          "diversidad cultural",
+          "patrimonio"
+        ],
+        "ca": [
+          "Gèneres artístics",
+          "funcions de l’art",
+          "arquitectura, pintura i escultura",
+          "context de les obres",
+          "diversitat cultural",
+          "patrimoni"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Sociedad medieval y moderna",
+          "arte románico y gótico",
+          "Renacimiento y Barroco",
+          "fuentes históricas",
+          "patrimonio artístico"
+        ],
+        "ca": [
+          "Societat medieval i moderna",
+          "art romànic i gòtic",
+          "Renaixement i Barroc",
+          "fonts històriques",
+          "patrimoni artístic"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "fuente",
+      "contexto",
+      "estilo",
+      "representación",
+      "patrimonio",
+      "conservación"
+    ],
+    "conceptos_ca": [
+      "font",
+      "context",
+      "estil",
+      "representació",
+      "patrimoni",
+      "conservació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "educacion_plastica",
+        "opcion": 2,
+        "ambito_es": "Arte y sociedad medieval y moderna",
+        "ambito_ca": "Art i societat medieval i moderna"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-09",
+    "curso": "2º",
+    "materias": [
+      "fisica_quimica",
+      "matematicas"
+    ],
+    "ambito_es": "Magnitudes y modelos del movimiento",
+    "ambito_ca": "Magnituds i models del moviment",
+    "vinculos": [
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "1.1",
+            "1.2"
+          ],
+          "matematicas": [
+            "1.2",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "explicar fenómenos y resolver problemas fisicoquímicos.",
+          "matematicas": "aplicar modelos y conectar las matemáticas con otras materias."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "explicar fenòmens i resoldre problemes fisicoquímics.",
+          "matematicas": "aplicar models i connectar les matemàtiques amb altres matèries."
+        },
+        "relacion_es": "Relación entre el movimiento físico, las magnitudes y las expresiones matemáticas.",
+        "relacion_ca": "Relació entre el moviment físic, les magnituds i les expressions matemàtiques."
+      },
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "3.1",
+            "3.2"
+          ],
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "interpretar datos y utilizar unidades y herramientas matemáticas.",
+          "matematicas": "representar resultados y justificar procedimientos."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "interpretar dades i utilitzar unitats i eines matemàtiques.",
+          "matematicas": "representar resultats i justificar procediments."
+        },
+        "relacion_es": "Interpretación coherente de tablas, gráficos y cálculos sobre el movimiento.",
+        "relacion_ca": "Interpretació coherent de taules, gràfics i càlculs sobre el moviment."
+      }
+    ],
+    "saberes": {
+      "fisica_quimica": {
+        "es": [
+          "Cinemática",
+          "velocidad y aceleración",
+          "gráficos del movimiento",
+          "fuerzas",
+          "unidades del sistema internacional",
+          "factores de conversión"
+        ],
+        "ca": [
+          "Cinemàtica",
+          "velocitat i acceleració",
+          "gràfics del moviment",
+          "forces",
+          "unitats del sistema internacional",
+          "factors de conversió"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Proporcionalidad",
+          "relaciones lineales",
+          "tablas y gráficos",
+          "ecuaciones",
+          "magnitudes y unidades",
+          "resolución de problemas contextualizados"
+        ],
+        "ca": [
+          "Proporcionalitat",
+          "relacions lineals",
+          "taules i gràfics",
+          "equacions",
+          "magnituds i unitats",
+          "resolució de problemes contextualitzats"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "magnitud",
+      "unidad",
+      "variable",
+      "proporción",
+      "función",
+      "modelo"
+    ],
+    "conceptos_ca": [
+      "magnitud",
+      "unitat",
+      "variable",
+      "proporció",
+      "funció",
+      "model"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "fisica_quimica",
+        "opcion": 1,
+        "ambito_es": "Magnitudes y modelos del movimiento",
+        "ambito_ca": "Magnituds i models del moviment"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-10",
+    "curso": "2º",
+    "materias": [
+      "fisica_quimica",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Propiedades de los materiales y uso tecnológico",
+    "ambito_ca": "Propietats dels materials i ús tecnològic",
+    "vinculos": [
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "1.1",
+            "2.1"
+          ],
+          "tecnologia_digitalizacion": [
+            "1.2",
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "explicar propiedades e investigar fenómenos mediante evidencias.",
+          "tecnologia_digitalizacion": "analizar objetos y diseñar soluciones adecuadas."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "explicar propietats i investigar fenòmens mitjançant evidències.",
+          "tecnologia_digitalizacion": "analitzar objectes i dissenyar solucions adequades."
+        },
+        "relacion_es": "Relación entre las propiedades de los materiales y la función de los objetos.",
+        "relacion_ca": "Relació entre les propietats dels materials i la funció dels objectes."
+      },
+      {
+        "criterios": {
+          "fisica_quimica": [
+            "1.3",
+            "6.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "2.2",
+            "7.1"
+          ]
+        },
+        "resumen_es": {
+          "fisica_quimica": "analizar problemas reales y necesidades ambientales o tecnológicas.",
+          "tecnologia_digitalizacion": "seleccionar materiales y valorar el impacto de la tecnología."
+        },
+        "resumen_ca": {
+          "fisica_quimica": "analitzar problemes reals i necessitats ambientals o tecnològiques.",
+          "tecnologia_digitalizacion": "seleccionar materials i valorar l’impacte de la tecnologia."
+        },
+        "relacion_es": "Justificación de la selección de materiales según funcionalidad y sostenibilidad.",
+        "relacion_ca": "Justificació de la selecció de materials segons funcionalitat i sostenibilitat."
+      }
+    ],
+    "saberes": {
+      "fisica_quimica": {
+        "es": [
+          "Propiedades y clasificación de sistemas materiales",
+          "teoría cinético-molecular",
+          "cambios físicos",
+          "efectos del calor",
+          "fuerzas y deformaciones"
+        ],
+        "ca": [
+          "Propietats i classificació de sistemes materials",
+          "teoria cineticomolecular",
+          "canvis físics",
+          "efectes de la calor",
+          "forces i deformacions"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Materiales naturales, transformados y sintéticos",
+          "madera, metales y plásticos",
+          "propiedades mecánicas y térmicas",
+          "estructuras",
+          "impacto ambiental"
+        ],
+        "ca": [
+          "Materials naturals, transformats i sintètics",
+          "fusta, metalls i plàstics",
+          "propietats mecàniques i tèrmiques",
+          "estructures",
+          "impacte ambiental"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "material",
+      "propiedad",
+      "estructura",
+      "transformación",
+      "función",
+      "sostenibilidad"
+    ],
+    "conceptos_ca": [
+      "material",
+      "propietat",
+      "estructura",
+      "transformació",
+      "funció",
+      "sostenibilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "fisica_quimica",
+        "opcion": 2,
+        "ambito_es": "Propiedades de los materiales y uso tecnológico",
+        "ambito_ca": "Propietats dels materials i ús tecnològic"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-11",
+    "curso": "2º",
+    "materias": [
+      "geografia_historia",
+      "matematicas"
+    ],
+    "ambito_es": "Dinámicas demográficas y análisis cuantitativo",
+    "ambito_ca": "Dinàmiques demogràfiques i anàlisi quantitativa",
+    "vinculos": [
+      {
+        "criterios": {
+          "geografia_historia": [
+            "8.1"
+          ],
+          "matematicas": [
+            "1.1",
+            "6.4"
+          ]
+        },
+        "resumen_es": {
+          "geografia_historia": "interpretar los comportamientos y los retos demográficos.",
+          "matematicas": "interpretar datos y problemas contextualizados en las Islas Baleares."
+        },
+        "resumen_ca": {
+          "geografia_historia": "interpretar els comportaments i els reptes demogràfics.",
+          "matematicas": "interpretar dades i problemes contextualitzats a les Illes Balears."
+        },
+        "relacion_es": "Lectura cuantitativa de la población y de sus transformaciones.",
+        "relacion_ca": "Lectura quantitativa de la població i de les seves transformacions."
+      },
+      {
+        "criterios": {
+          "geografia_historia": [
+            "3.3",
+            "2.2"
+          ],
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "geografia_historia": "representar información y argumentar sobre problemas actuales.",
+          "matematicas": "representar datos y justificar las conclusiones."
+        },
+        "resumen_ca": {
+          "geografia_historia": "representar informació i argumentar sobre problemes actuals.",
+          "matematicas": "representar dades i justificar les conclusions."
+        },
+        "relacion_es": "Relación entre tablas, gráficos e interpretación social de los resultados.",
+        "relacion_ca": "Relació entre taules, gràfics i interpretació social dels resultats."
+      }
+    ],
+    "saberes": {
+      "geografia_historia": {
+        "es": [
+          "Fuentes demográficas",
+          "tasas",
+          "pirámides de población",
+          "migraciones",
+          "natalidad y mortalidad",
+          "envejecimiento",
+          "población balear"
+        ],
+        "ca": [
+          "Fonts demogràfiques",
+          "taxes",
+          "piràmides de població",
+          "migracions",
+          "natalitat i mortalitat",
+          "envelliment",
+          "població balear"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Porcentajes",
+          "proporcionalidad",
+          "variaciones relativas",
+          "frecuencias",
+          "tablas",
+          "gráficos",
+          "interpretación de datos"
+        ],
+        "ca": [
+          "Percentatges",
+          "proporcionalitat",
+          "variacions relatives",
+          "freqüències",
+          "taules",
+          "gràfics",
+          "interpretació de dades"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "población",
+      "tasa",
+      "proporción",
+      "distribución",
+      "variación",
+      "gráfico",
+      "representación gráfica"
+    ],
+    "conceptos_ca": [
+      "població",
+      "taxa",
+      "proporció",
+      "distribució",
+      "variació",
+      "gràfic",
+      "representació gràfica"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "geografia_historia",
+        "opcion": 2,
+        "ambito_es": "Dinámicas demográficas y análisis cuantitativo",
+        "ambito_ca": "Dinàmiques demogràfiques i anàlisi quantitativa"
+      },
+      {
+        "materia": "matematicas",
+        "opcion": 3,
+        "ambito_es": "Población, datos y necesidades sociales",
+        "ambito_ca": "Població, dades i necessitats socials"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-12",
+    "curso": "2º",
+    "materias": [
+      "geografia_historia",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Patrimonio e interpretación histórica del arte",
+    "ambito_ca": "Patrimoni i interpretació històrica de l’art",
+    "vinculos": [
+      {
+        "criterios": {
+          "geografia_historia": [
+            "1.2",
+            "3.5"
+          ],
+          "educacion_plastica": [
+            "1.1",
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "geografia_historia": "contrastar fuentes y explicar cambios históricos.",
+          "educacion_plastica": "relacionar producciones artísticas con su contexto."
+        },
+        "resumen_ca": {
+          "geografia_historia": "contrastar fonts i explicar canvis històrics.",
+          "educacion_plastica": "relacionar produccions artístiques amb el seu context."
+        },
+        "relacion_es": "Lectura del arte como expresión de creencias, poder y organización social.",
+        "relacion_ca": "Lectura de l’art com a expressió de creences, poder i organització social."
+      },
+      {
+        "criterios": {
+          "geografia_historia": [
+            "7.4"
+          ],
+          "educacion_plastica": [
+            "1.2",
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "geografia_historia": "valorar y conservar el patrimonio artístico y cultural.",
+          "educacion_plastica": "valorar el patrimonio y analizar obras de diferentes épocas."
+        },
+        "resumen_ca": {
+          "geografia_historia": "valorar i conservar el patrimoni artístic i cultural.",
+          "educacion_plastica": "valorar el patrimoni i analitzar obres de diferents èpoques."
+        },
+        "relacion_es": "Comprensión de los valores históricos y formales del patrimonio compartido.",
+        "relacion_ca": "Comprensió dels valors històrics i formals del patrimoni compartit."
+      }
+    ],
+    "saberes": {
+      "geografia_historia": {
+        "es": [
+          "Sociedades medievales y modernas",
+          "arte románico y gótico",
+          "Renacimiento y Barroco",
+          "fuentes",
+          "conservación del patrimonio"
+        ],
+        "ca": [
+          "Societats medievals i modernes",
+          "art romànic i gòtic",
+          "Renaixement i Barroc",
+          "fonts",
+          "conservació del patrimoni"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Géneros artísticos",
+          "arquitectura, escultura y pintura",
+          "contexto y función de las obras",
+          "lectura de imágenes",
+          "patrimonio"
+        ],
+        "ca": [
+          "Gèneres artístics",
+          "arquitectura, escultura i pintura",
+          "context i funció de les obres",
+          "lectura d’imatges",
+          "patrimoni"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "contexto",
+      "fuente",
+      "estilo",
+      "símbolo",
+      "patrimonio",
+      "conservación"
+    ],
+    "conceptos_ca": [
+      "context",
+      "font",
+      "estil",
+      "símbol",
+      "patrimoni",
+      "conservació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "geografia_historia",
+        "opcion": 3,
+        "ambito_es": "Patrimonio e interpretación histórica del arte",
+        "ambito_ca": "Patrimoni i interpretació històrica de l’art"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-13",
+    "curso": "2º",
+    "materias": [
+      "igualdad_genero",
+      "geografia_historia"
+    ],
+    "ambito_es": "Mujeres y desigualdades sociales",
+    "ambito_ca": "Dones i desigualtats socials",
+    "vinculos": [
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "3.1",
+            "3.2"
+          ],
+          "geografia_historia": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "reconocer las aportaciones de las mujeres y recuperar referentes.",
+          "geografia_historia": "reconocer desigualdades del pasado y los mecanismos de dominación."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "reconèixer les aportacions de les dones i recuperar referents.",
+          "geografia_historia": "reconèixer desigualtats del passat i els mecanismes de dominació."
+        },
+        "relacion_es": "Lectura de las fuentes y de las exclusiones históricas con perspectiva de género.",
+        "relacion_ca": "Lectura de les fonts i de les exclusions històriques amb perspectiva de gènere."
+      },
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "3.3"
+          ],
+          "geografia_historia": [
+            "6.4"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "relacionar discriminaciones con variables sociales, económicas y culturales.",
+          "geografia_historia": "argumentar e intervenir a favor de la igualdad entre hombres y mujeres."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "relacionar discriminacions amb variables socials, econòmiques i culturals.",
+          "geografia_historia": "argumentar i intervenir a favor de la igualtat entre homes i dones."
+        },
+        "relacion_es": "Explicación multicausal de las desigualdades y de los cambios en los derechos.",
+        "relacion_ca": "Explicació multicausal de les desigualtats i dels canvis en els drets."
+      }
+    ],
+    "saberes": {
+      "igualdad_genero": {
+        "es": [
+          "Invisibilización de las mujeres",
+          "referentes femeninos",
+          "historia del feminismo",
+          "interseccionalidad",
+          "derechos",
+          "desigualdades globales"
+        ],
+        "ca": [
+          "Invisibilització de les dones",
+          "referents femenins",
+          "història del feminisme",
+          "interseccionalitat",
+          "drets",
+          "desigualtats globals"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Organización de las sociedades medievales y modernas",
+          "jerarquías",
+          "papel de las mujeres",
+          "desigualdades",
+          "fuentes",
+          "igualdad de género"
+        ],
+        "ca": [
+          "Organització de les societats medievals i modernes",
+          "jerarquies",
+          "paper de les dones",
+          "desigualtats",
+          "fonts",
+          "igualtat de gènere"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "desigualdad",
+      "poder",
+      "derechos",
+      "invisibilización",
+      "género",
+      "cambio social"
+    ],
+    "conceptos_ca": [
+      "desigualtat",
+      "poder",
+      "drets",
+      "invisibilització",
+      "gènere",
+      "canvi social"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "igualdad_genero",
+        "opcion": 3,
+        "ambito_es": "Mujeres y desigualdades sociales",
+        "ambito_ca": "Dones i desigualtats socials"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-14",
+    "curso": "2º",
+    "materias": [
+      "igualdad_genero",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Representación visual y perspectiva de género",
+    "ambito_ca": "Representació visual i perspectiva de gènere",
+    "vinculos": [
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.2"
+          ],
+          "educacion_plastica": [
+            "1.1",
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "detectar estereotipos en los medios y en las imágenes cotidianas.",
+          "educacion_plastica": "analizar producciones visuales desde una perspectiva de género."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "detectar estereotips als mitjans i a les imatges quotidianes.",
+          "educacion_plastica": "analitzar produccions visuals des d’una perspectiva de gènere."
+        },
+        "relacion_es": "Lectura crítica de los valores y modelos sociales presentes en las imágenes.",
+        "relacion_ca": "Lectura crítica dels valors i models socials presents en les imatges."
+      },
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "3.2"
+          ],
+          "educacion_plastica": [
+            "1.2",
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "conocer mujeres referentes y reparar su invisibilización.",
+          "educacion_plastica": "valorar el patrimonio y la diversidad de las expresiones artísticas."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "conèixer dones referents i reparar-ne la invisibilització.",
+          "educacion_plastica": "valorar el patrimoni i la diversitat de les expressions artístiques."
+        },
+        "relacion_es": "Revisión de la presencia de artistas y de las formas de representación de las mujeres.",
+        "relacion_ca": "Revisió de la presència d’artistes i de les formes de representació de les dones."
+      }
+    ],
+    "saberes": {
+      "igualdad_genero": {
+        "es": [
+          "Estereotipos",
+          "socialización",
+          "violencia simbólica",
+          "invisibilización de las mujeres",
+          "referentes en el arte y la cultura"
+        ],
+        "ca": [
+          "Estereotips",
+          "socialització",
+          "violència simbòlica",
+          "invisibilització de les dones",
+          "referents en l’art i la cultura"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Lectura de imágenes",
+          "signos y símbolos",
+          "funciones del arte",
+          "papel de la mujer en la historia del arte",
+          "diversidad cultural"
+        ],
+        "ca": [
+          "Lectura d’imatges",
+          "signes i símbols",
+          "funcions de l’art",
+          "paper de la dona en la història de l’art",
+          "diversitat cultural"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "imagen",
+      "representación",
+      "estereotipo",
+      "mirada",
+      "identidad",
+      "visibilidad"
+    ],
+    "conceptos_ca": [
+      "imatge",
+      "representació",
+      "estereotip",
+      "mirada",
+      "identitat",
+      "visibilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "igualdad_genero",
+        "opcion": 4,
+        "ambito_es": "Representación visual y perspectiva de género",
+        "ambito_ca": "Representació visual i perspectiva de gènere"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-15",
+    "curso": "2º",
+    "materias": [
+      "lengua_castellana",
+      "geografia_historia"
+    ],
+    "ambito_es": "Discursos sociales y diversidad cultural",
+    "ambito_ca": "Discursos socials i diversitat cultural",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "4.1",
+            "6.1"
+          ],
+          "geografia_historia": [
+            "2.2",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "interpretar textos y contrastar información de diversas fuentes.",
+          "geografia_historia": "argumentar sobre problemas actuales e interpretar dinámicas demográficas."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "interpretar texts i contrastar informació de diverses fonts.",
+          "geografia_historia": "argumentar sobre problemes actuals i interpretar dinàmiques demogràfiques."
+        },
+        "relacion_es": "Lectura crítica de las explicaciones sobre población, migraciones y desigualdades.",
+        "relacion_ca": "Lectura crítica de les explicacions sobre població, migracions i desigualtats."
+      },
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "3.1",
+            "10.1"
+          ],
+          "geografia_historia": [
+            "6.3"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "exponer información y detectar usos discriminatorios.",
+          "geografia_historia": "valorar la diversidad cultural y rechazar estereotipos."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "exposar informació i detectar usos discriminatoris.",
+          "geografia_historia": "valorar la diversitat cultural i rebutjar estereotips."
+        },
+        "relacion_es": "Relación entre representaciones discursivas, conocimiento social e inclusión.",
+        "relacion_ca": "Relació entre representacions discursives, coneixement social i inclusió."
+      }
+    ],
+    "saberes": {
+      "lengua_castellana": {
+        "es": [
+          "Comprensión de textos sociales y mediáticos",
+          "exposición oral",
+          "fiabilidad de fuentes",
+          "intención comunicativa",
+          "lenguaje discriminatorio"
+        ],
+        "ca": [
+          "Comprensió de texts socials i mediàtics",
+          "exposició oral",
+          "fiabilitat de fonts",
+          "intenció comunicativa",
+          "llenguatge discriminatori"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Migraciones",
+          "población balear",
+          "multiculturalidad",
+          "desigualdades",
+          "fuentes sociales",
+          "prejuicios e inclusión"
+        ],
+        "ca": [
+          "Migracions",
+          "població balear",
+          "multiculturalitat",
+          "desigualtats",
+          "fonts socials",
+          "prejudicis i inclusió"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "fuente",
+      "discurso",
+      "migración",
+      "diversidad",
+      "estereotipo",
+      "argumento"
+    ],
+    "conceptos_ca": [
+      "font",
+      "discurs",
+      "migració",
+      "diversitat",
+      "estereotip",
+      "argument"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_castellana",
+        "opcion": 2,
+        "ambito_es": "Discursos sociales y diversidad cultural",
+        "ambito_ca": "Discursos socials i diversitat cultural"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-16",
+    "curso": "2º",
+    "materias": [
+      "lengua_extranjera",
+      "geografia_historia"
+    ],
+    "ambito_es": "Diversidad cultural y comunicación intercultural",
+    "ambito_ca": "Diversitat cultural i comunicació intercultural",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "6.1",
+            "6.2"
+          ],
+          "geografia_historia": [
+            "6.3",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "relacionar lenguas y culturas y rechazar prejuicios.",
+          "geografia_historia": "valorar la diversidad e interpretar dinámicas de población."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "relacionar llengües i cultures i rebutjar prejudicis.",
+          "geografia_historia": "valorar la diversitat i interpretar dinàmiques de població."
+        },
+        "relacion_es": "Comprensión de los contextos culturales y de la movilidad de las personas.",
+        "relacion_ca": "Comprensió dels contexts culturals i de la mobilitat de les persones."
+      },
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "1.1",
+            "2.1"
+          ],
+          "geografia_historia": [
+            "1.1",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "comprender información y describir realidades cercanas.",
+          "geografia_historia": "elaborar contenidos y representar información geográfica."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "comprendre informació i descriure realitats properes.",
+          "geografia_historia": "elaborar continguts i representar informació geogràfica."
+        },
+        "relacion_es": "Expresión de localizaciones, comparaciones y características sociales con apoyo geográfico.",
+        "relacion_ca": "Expressió de localitzacions, comparacions i característiques socials amb suport geogràfic."
+      }
+    ],
+    "saberes": {
+      "lengua_extranjera": {
+        "es": [
+          "Léxico de lugares y vida cotidiana",
+          "descripción y comparación",
+          "comprensión de textos",
+          "convenciones culturales",
+          "cortesía",
+          "interculturalidad"
+        ],
+        "ca": [
+          "Lèxic de llocs i vida quotidiana",
+          "descripció i comparació",
+          "comprensió de texts",
+          "convencions culturals",
+          "cortesia",
+          "interculturalitat"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Países y ciudades",
+          "migraciones",
+          "diversidad social y cultural",
+          "distribución de la población",
+          "representación geográfica"
+        ],
+        "ca": [
+          "Països i ciutats",
+          "migracions",
+          "diversitat social i cultural",
+          "distribució de la població",
+          "representació geogràfica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "territorio",
+      "población",
+      "movilidad",
+      "cultura",
+      "diversidad",
+      "comunicación"
+    ],
+    "conceptos_ca": [
+      "territori",
+      "població",
+      "mobilitat",
+      "cultura",
+      "diversitat",
+      "comunicació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_extranjera",
+        "opcion": 2,
+        "ambito_es": "Diversidad cultural y comunicación intercultural",
+        "ambito_ca": "Diversitat cultural i comunicació intercultural"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-17",
+    "curso": "2º",
+    "materias": [
+      "matematicas",
+      "tecnologia_digitalizacion"
+    ],
+    "ambito_es": "Diseño, medida y construcción",
+    "ambito_ca": "Disseny, mesura i construcció",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas": [
+            "1.2",
+            "2.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "2.1",
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "matematicas": "aplicar estrategias y comprobar la validez contextual de las soluciones.",
+          "tecnologia_digitalizacion": "diseñar soluciones y planificar materiales y recursos."
+        },
+        "resumen_ca": {
+          "matematicas": "aplicar estratègies i comprovar la validesa contextual de les solucions.",
+          "tecnologia_digitalizacion": "dissenyar solucions i planificar materials i recursos."
+        },
+        "relacion_es": "Determinación de dimensiones y recursos según restricciones de diseño.",
+        "relacion_ca": "Determinació de dimensions i recursos segons restriccions de disseny."
+      },
+      {
+        "criterios": {
+          "matematicas": [
+            "7.1",
+            "7.2"
+          ],
+          "tecnologia_digitalizacion": [
+            "3.1",
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "matematicas": "representar conceptos y elaborar representaciones para resolver problemas.",
+          "tecnologia_digitalizacion": "construir modelos y comunicar su documentación gráfica."
+        },
+        "resumen_ca": {
+          "matematicas": "representar conceptes i elaborar representacions per resoldre problemes.",
+          "tecnologia_digitalizacion": "construir models i comunicar-ne la documentació gràfica."
+        },
+        "relacion_es": "Coherencia entre cálculo geométrico, plano y configuración tridimensional.",
+        "relacion_ca": "Coherència entre càlcul geomètric, plànol i configuració tridimensional."
+      }
+    ],
+    "saberes": {
+      "matematicas": {
+        "es": [
+          "Semejanza",
+          "escalas",
+          "áreas y volúmenes",
+          "cuerpos geométricos",
+          "representaciones planas",
+          "precisión de la medida"
+        ],
+        "ca": [
+          "Semblança",
+          "escales",
+          "àrees i volums",
+          "cossos geomètrics",
+          "representacions planes",
+          "precisió de la mesura"
+        ]
+      },
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Estructuras",
+          "modelos",
+          "materiales",
+          "técnicas manuales",
+          "acotación",
+          "escalas",
+          "documentación gráfica"
+        ],
+        "ca": [
+          "Estructures",
+          "models",
+          "materials",
+          "tècniques manuals",
+          "acotació",
+          "escales",
+          "documentació gràfica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "dimensión",
+      "escala",
+      "proporción",
+      "volumen",
+      "representación",
+      "precisión"
+    ],
+    "conceptos_ca": [
+      "dimensió",
+      "escala",
+      "proporció",
+      "volum",
+      "representació",
+      "precisió"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "matematicas",
+        "opcion": 2,
+        "ambito_es": "Diseño, medida y construcción",
+        "ambito_ca": "Disseny, mesura i construcció"
+      },
+      {
+        "materia": "tecnologia_digitalizacion",
+        "opcion": 1,
+        "ambito_es": "Diseño y representación geométrica",
+        "ambito_ca": "Disseny i representació geomètrica"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-18",
+    "curso": "2º",
+    "materias": [
+      "recursos_digitales_1",
+      "educacion_plastica"
+    ],
+    "ambito_es": "Imagen y edición digital",
+    "ambito_ca": "Imatge i edició digital",
+    "vinculos": [
+      {
+        "criterios": {
+          "recursos_digitales_1": [
+            "4.1",
+            "4.2"
+          ],
+          "educacion_plastica": [
+            "5.1",
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_1": "crear contenidos y utilizar software especializado.",
+          "educacion_plastica": "expresar ideas y seleccionar técnicas y soportes adecuados."
+        },
+        "resumen_ca": {
+          "recursos_digitales_1": "crear continguts i utilitzar programari especialitzat.",
+          "educacion_plastica": "expressar idees i seleccionar tècniques i suports adequats."
+        },
+        "relacion_es": "Relación entre las posibilidades de las herramientas digitales y la intención expresiva.",
+        "relacion_ca": "Relació entre les possibilitats de les eines digitals i la intenció expressiva."
+      },
+      {
+        "criterios": {
+          "recursos_digitales_1": [
+            "1.3",
+            "3.2"
+          ],
+          "educacion_plastica": [
+            "8.2",
+            "8.3"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_1": "respetar licencias y publicar información responsablemente.",
+          "educacion_plastica": "considerar al público y explicar el proceso y los resultados."
+        },
+        "resumen_ca": {
+          "recursos_digitales_1": "respectar llicències i publicar informació responsablement.",
+          "educacion_plastica": "considerar el públic i explicar el procés i els resultats."
+        },
+        "relacion_es": "Adecuación de los formatos, de los usos y de la comunicación de las imágenes.",
+        "relacion_ca": "Adequació dels formats, dels usos i de la comunicació de les imatges."
+      }
+    ],
+    "saberes": {
+      "recursos_digitales_1": {
+        "es": [
+          "Imágenes de mapa de bits y vectoriales",
+          "editores de imagen",
+          "audio y vídeo",
+          "formatos creativos",
+          "propiedad intelectual",
+          "difusión digital"
+        ],
+        "ca": [
+          "Imatges de mapa de bits i vectorials",
+          "editors d’imatge",
+          "àudio i vídeo",
+          "formats creatius",
+          "propietat intel·lectual",
+          "difusió digital"
+        ]
+      },
+      "educacion_plastica": {
+        "es": [
+          "Elementos del lenguaje visual",
+          "composición",
+          "técnicas de expresión",
+          "herramientas digitales",
+          "intención comunicativa",
+          "público destinatario"
+        ],
+        "ca": [
+          "Elements del llenguatge visual",
+          "composició",
+          "tècniques d’expressió",
+          "eines digitals",
+          "intenció comunicativa",
+          "públic destinatari"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "imagen",
+      "píxel",
+      "forma",
+      "composición",
+      "formato",
+      "autoría"
+    ],
+    "conceptos_ca": [
+      "imatge",
+      "píxel",
+      "forma",
+      "composició",
+      "format",
+      "autoria"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "recursos_digitales_1",
+        "opcion": 1,
+        "ambito_es": "Imagen y edición digital",
+        "ambito_ca": "Imatge i edició digital"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-19",
+    "curso": "2º",
+    "materias": [
+      "recursos_digitales_1",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Fuentes y comunicación digital",
+    "ambito_ca": "Fonts i comunicació digital",
+    "vinculos": [
+      {
+        "criterios": {
+          "recursos_digitales_1": [
+            "1.1",
+            "1.2"
+          ],
+          "lengua_catalana": [
+            "4.2",
+            "6.1"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_1": "buscar información y contrastar su fiabilidad.",
+          "lengua_catalana": "valorar textos y seleccionar fuentes fiables."
+        },
+        "resumen_ca": {
+          "recursos_digitales_1": "cercar informació i contrastar-ne la fiabilitat.",
+          "lengua_catalana": "valorar texts i seleccionar fonts fiables."
+        },
+        "relacion_es": "Criterios compartidos para distinguir información, opinión, manipulación y desinformación.",
+        "relacion_ca": "Criteris compartits per distingir informació, opinió, manipulació i desinformació."
+      },
+      {
+        "criterios": {
+          "recursos_digitales_1": [
+            "1.3",
+            "3.2"
+          ],
+          "lengua_catalana": [
+            "5.1",
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_1": "aplicar criterios éticos y publicar contenidos.",
+          "lengua_catalana": "adecuar textos y evitar usos discriminatorios o manipuladores."
+        },
+        "resumen_ca": {
+          "recursos_digitales_1": "aplicar criteris ètics i publicar continguts.",
+          "lengua_catalana": "adequar texts i evitar usos discriminatoris o manipuladors."
+        },
+        "relacion_es": "Relación entre calidad informativa, propiedad intelectual y responsabilidad comunicativa.",
+        "relacion_ca": "Relació entre qualitat informativa, propietat intel·lectual i responsabilitat comunicativa."
+      }
+    ],
+    "saberes": {
+      "recursos_digitales_1": {
+        "es": [
+          "Búsqueda y selección de información",
+          "detección de noticias falsas",
+          "blogs",
+          "publicación web",
+          "etiqueta digital",
+          "licencias"
+        ],
+        "ca": [
+          "Cerca i selecció d’informació",
+          "detecció de notícies falses",
+          "blogs",
+          "publicació web",
+          "etiqueta digital",
+          "llicències"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Comprensión crítica",
+          "alfabetización informacional",
+          "textos mediáticos",
+          "autoría y citación",
+          "adecuación",
+          "ética comunicativa"
+        ],
+        "ca": [
+          "Comprensió crítica",
+          "alfabetització informacional",
+          "texts mediàtics",
+          "autoria i citació",
+          "adequació",
+          "ètica comunicativa"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "fuente",
+      "fiabilidad",
+      "autoría",
+      "información",
+      "intención",
+      "responsabilidad"
+    ],
+    "conceptos_ca": [
+      "font",
+      "fiabilitat",
+      "autoria",
+      "informació",
+      "intenció",
+      "responsabilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "recursos_digitales_1",
+        "opcion": 2,
+        "ambito_es": "Fuentes y comunicación digital",
+        "ambito_ca": "Fonts i comunicació digital"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-20",
+    "curso": "2º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Mediación y adecuación comunicativa",
+    "ambito_ca": "Mediació i adequació comunicativa",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "4.1",
+            "4.2"
+          ],
+          "lengua_catalana": [
+            "4.1",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "explicar mensajes sencillos y facilitar su comprensión.",
+          "lengua_catalana": "comprender información y elaborar textos adecuados."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "explicar missatges senzills i facilitar-ne la comprensió.",
+          "lengua_catalana": "comprendre informació i elaborar texts adequats."
+        },
+        "relacion_es": "Selección y reformulación de la información según el destinatario.",
+        "relacion_ca": "Selecció i reformulació de la informació segons el destinatari."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "5.1",
+            "6.1"
+          ],
+          "lengua_catalana": [
+            "1.2",
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "comparar lenguas y respetar las diferencias culturales.",
+          "lengua_catalana": "rechazar prejuicios y reflexionar sobre el funcionamiento lingüístico."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "comparar llengües i respectar les diferències culturals.",
+          "lengua_catalana": "rebutjar prejudicis i reflexionar sobre el funcionament lingüístic."
+        },
+        "relacion_es": "Comprensión de equivalencias y convenciones sin atribuir superioridad a ninguna lengua.",
+        "relacion_ca": "Comprensió d’equivalències i convencions sense atribuir superioritat a cap llengua."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Mediación guiada",
+          "léxico frecuente",
+          "comprensión y reformulación",
+          "comparación interlingüística",
+          "cortesía",
+          "diversidad cultural"
+        ],
+        "ca": [
+          "Mediació guiada",
+          "lèxic freqüent",
+          "comprensió i reformulació",
+          "comparació interlingüística",
+          "cortesia",
+          "diversitat cultural"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Comprensión",
+          "síntesis",
+          "adecuación al destinatario",
+          "registros",
+          "comparación lingüística",
+          "prejuicios y diversidad"
+        ],
+        "ca": [
+          "Comprensió",
+          "síntesi",
+          "adequació al destinatari",
+          "registres",
+          "comparació lingüística",
+          "prejudicis i diversitat"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mediación",
+      "significado",
+      "destinatario",
+      "equivalencia",
+      "contexto",
+      "respeto"
+    ],
+    "conceptos_ca": [
+      "mediació",
+      "significat",
+      "destinatari",
+      "equivalència",
+      "context",
+      "respecte"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "opcion": 2,
+        "ambito_es": "Mediación y adecuación comunicativa",
+        "ambito_ca": "Mediació i adequació comunicativa"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-21",
+    "curso": "2º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "geografia_historia"
+    ],
+    "ambito_es": "Territorio y diversidad cultural",
+    "ambito_ca": "Territori i diversitat cultural",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "1.1",
+            "2.1"
+          ],
+          "geografia_historia": [
+            "1.1",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "comprender textos sencillos y describir realidades cercanas.",
+          "geografia_historia": "elaborar contenidos y representar información geográfica."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "comprendre texts senzills i descriure realitats properes.",
+          "geografia_historia": "elaborar continguts i representar informació geogràfica."
+        },
+        "relacion_es": "Relación entre descripción lingüística, localización e información territorial.",
+        "relacion_ca": "Relació entre descripció lingüística, localització i informació territorial."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "6.1",
+            "6.2"
+          ],
+          "geografia_historia": [
+            "6.3",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "respetar otras culturas y valorar su diversidad.",
+          "geografia_historia": "interpretar la diversidad social y las dinámicas demográficas."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "respectar altres cultures i valorar-ne la diversitat.",
+          "geografia_historia": "interpretar la diversitat social i les dinàmiques demogràfiques."
+        },
+        "relacion_es": "Comprensión de la pluralidad cultural y de los movimientos de población.",
+        "relacion_ca": "Comprensió de la pluralitat cultural i dels moviments de població."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Léxico de lugares y vida cotidiana",
+          "descripción",
+          "localización",
+          "convenciones socioculturales",
+          "comprensión guiada",
+          "interculturalidad"
+        ],
+        "ca": [
+          "Lèxic de llocs i vida quotidiana",
+          "descripció",
+          "localització",
+          "convencions socioculturals",
+          "comprensió guiada",
+          "interculturalitat"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Países y ciudades",
+          "población",
+          "migraciones",
+          "diversidad cultural",
+          "mapas y planos",
+          "prejuicios e inclusión"
+        ],
+        "ca": [
+          "Països i ciutats",
+          "població",
+          "migracions",
+          "diversitat cultural",
+          "mapes i plànols",
+          "prejudicis i inclusió"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "territorio",
+      "lugar",
+      "población",
+      "movilidad",
+      "cultura",
+      "diversidad"
+    ],
+    "conceptos_ca": [
+      "territori",
+      "lloc",
+      "població",
+      "mobilitat",
+      "cultura",
+      "diversitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "opcion": 3,
+        "ambito_es": "Territorio y diversidad cultural",
+        "ambito_ca": "Territori i diversitat cultural"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-22",
+    "curso": "2º",
+    "materias": [
+      "tecnologia_digitalizacion",
+      "fisica_quimica"
+    ],
+    "ambito_es": "Materiales y comportamiento físico",
+    "ambito_ca": "Materials i comportament físic",
+    "vinculos": [
+      {
+        "criterios": {
+          "tecnologia_digitalizacion": [
+            "1.2",
+            "2.1"
+          ],
+          "fisica_quimica": [
+            "1.1",
+            "2.1"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia_digitalizacion": "analizar objetos y diseñar soluciones.",
+          "fisica_quimica": "explicar propiedades e investigar fenómenos."
+        },
+        "resumen_ca": {
+          "tecnologia_digitalizacion": "analitzar objectes i dissenyar solucions.",
+          "fisica_quimica": "explicar propietats i investigar fenòmens."
+        },
+        "relacion_es": "Justificación física de la selección y del comportamiento de los materiales.",
+        "relacion_ca": "Justificació física de la selecció i del comportament dels materials."
+      },
+      {
+        "criterios": {
+          "tecnologia_digitalizacion": [
+            "2.2",
+            "7.1"
+          ],
+          "fisica_quimica": [
+            "1.3",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "tecnologia_digitalizacion": "seleccionar recursos y valorar el impacto tecnológico.",
+          "fisica_quimica": "analizar necesidades y problemas ambientales o tecnológicos."
+        },
+        "resumen_ca": {
+          "tecnologia_digitalizacion": "seleccionar recursos i valorar l’impacte tecnològic.",
+          "fisica_quimica": "analitzar necessitats i problemes ambientals o tecnològics."
+        },
+        "relacion_es": "Relación entre propiedades, función, aprovechamiento de recursos e impactos.",
+        "relacion_ca": "Relació entre propietats, funció, aprofitament de recursos i impactes."
+      }
+    ],
+    "saberes": {
+      "tecnologia_digitalizacion": {
+        "es": [
+          "Madera, metales y plásticos",
+          "propiedades mecánicas y térmicas",
+          "estructuras",
+          "técnicas de manipulación",
+          "impacto ambiental"
+        ],
+        "ca": [
+          "Fusta, metalls i plàstics",
+          "propietats mecàniques i tèrmiques",
+          "estructures",
+          "tècniques de manipulació",
+          "impacte ambiental"
+        ]
+      },
+      "fisica_quimica": {
+        "es": [
+          "Propiedades de la materia",
+          "sistemas materiales",
+          "cambios físicos",
+          "efectos del calor",
+          "fuerzas y deformaciones",
+          "experimentación"
+        ],
+        "ca": [
+          "Propietats de la matèria",
+          "sistemes materials",
+          "canvis físics",
+          "efectes de la calor",
+          "forces i deformacions",
+          "experimentació"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "material",
+      "propiedad",
+      "fuerza",
+      "deformación",
+      "calor",
+      "función"
+    ],
+    "conceptos_ca": [
+      "material",
+      "propietat",
+      "força",
+      "deformació",
+      "calor",
+      "funció"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "tecnologia_digitalizacion",
+        "opcion": 2,
+        "ambito_es": "Materiales y comportamiento físico",
+        "ambito_ca": "Materials i comportament físic"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-23",
+    "curso": "2º",
+    "materias": [
+      "cultura_clasica_1",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Léxico de origen grecolatino",
+    "ambito_ca": "Lèxic d’origen grecollatí",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "4.3"
+          ],
+          "lengua_castellana": [
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "ampliar el vocabulario con léxico técnico y científico de origen grecolatino.",
+          "lengua_castellana": "formular generalizaciones sobre el funcionamiento de la lengua a partir de la observación."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "ampliar el vocabulari amb lèxic tècnic i científic d’origen grecollatí.",
+          "lengua_castellana": "formular generalitzacions sobre el funcionament de la llengua a partir de l’observació."
+        },
+        "relacion_es": "Análisis de la formación de palabras a partir de raíces, prefijos y sufijos clásicos.",
+        "relacion_ca": "Anàlisi de la formació de paraules a partir d’arrels, prefixos i sufixos clàssics."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "4.2"
+          ],
+          "lengua_castellana": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "inferir el origen común de las lenguas europeas e identificar las románicas.",
+          "lengua_castellana": "reconocer las lenguas de España y las variedades del español."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "inferir l’origen comú de les llengües europees i identificar les romàniques.",
+          "lengua_castellana": "reconèixer les llengües d’Espanya i les varietats de l’espanyol."
+        },
+        "relacion_es": "Comprensión del origen latino del castellano y de su relación con otras lenguas.",
+        "relacion_ca": "Comprensió de l’origen llatí del castellà i de la seva relació amb altres llengües."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_1": {
+        "es": [
+          "Étimos griegos y latinos",
+          "Cultismos y palabras patrimoniales",
+          "Lenguas románicas",
+          "Indoeuropeo"
+        ],
+        "ca": [
+          "Ètims grecs i llatins",
+          "Cultismes i mots patrimonials",
+          "Llengües romàniques",
+          "Indoeuropeu"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Formación de palabras",
+          "Relaciones de significado",
+          "Lenguas de España",
+          "Reflexión sobre la lengua"
+        ],
+        "ca": [
+          "Formació de paraules",
+          "Relacions de significat",
+          "Llengües d’Espanya",
+          "Reflexió sobre la llengua"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "étimo",
+      "raíz",
+      "derivación",
+      "lengua románica",
+      "léxico"
+    ],
+    "conceptos_ca": [
+      "ètim",
+      "arrel",
+      "derivació",
+      "llengua romànica",
+      "lèxic"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_1",
+        "ambito_es": "Léxico de origen grecolatino",
+        "ambito_ca": "Lèxic d’origen grecollatí"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-24",
+    "curso": "2º",
+    "materias": [
+      "cultura_clasica_1",
+      "geografia_historia"
+    ],
+    "ambito_es": "Ciudadanía y organización social en la Antigüedad",
+    "ambito_ca": "Ciutadania i organització social a l’Antiguitat",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "2.1"
+          ],
+          "geografia_historia": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "determinar las formas de organización política de Grecia y Roma.",
+          "geografia_historia": "analizar los mecanismos que han regulado la convivencia a lo largo de la historia."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "determinar les formes d’organització política de Grècia i Roma.",
+          "geografia_historia": "analitzar els mecanismes que han regulat la convivència al llarg de la història."
+        },
+        "relacion_es": "Comparación de las instituciones antiguas con los sistemas de gobierno posteriores.",
+        "relacion_ca": "Comparació de les institucions antigues amb els sistemes de govern posteriors."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "2.2"
+          ],
+          "geografia_historia": [
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "establecer las características y la evolución de las clases sociales.",
+          "geografia_historia": "reconocer las desigualdades sociales y los mecanismos de dominación del pasado."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "establir les característiques i l’evolució de les classes socials.",
+          "geografia_historia": "reconèixer les desigualtats socials i els mecanismes de dominació del passat."
+        },
+        "relacion_es": "Análisis de la jerarquía social, la esclavitud y la condición de ciudadano.",
+        "relacion_ca": "Anàlisi de la jerarquia social, l’esclavitud i la condició de ciutadà."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_1": {
+        "es": [
+          "Formas de gobierno en Grecia y Roma",
+          "Clases sociales",
+          "Ciudadanía",
+          "Familia y roles familiares"
+        ],
+        "ca": [
+          "Formes de govern a Grècia i Roma",
+          "Classes socials",
+          "Ciutadania",
+          "Família i rols familiars"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Organización de las sociedades medievales y modernas",
+          "Jerarquías sociales",
+          "Desigualdades",
+          "Fuentes históricas"
+        ],
+        "ca": [
+          "Organització de les societats medievals i modernes",
+          "Jerarquies socials",
+          "Desigualtats",
+          "Fonts històriques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "ciudadanía",
+      "democracia",
+      "república",
+      "jerarquía",
+      "desigualdad"
+    ],
+    "conceptos_ca": [
+      "ciutadania",
+      "democràcia",
+      "república",
+      "jerarquia",
+      "desigualtat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_1",
+        "ambito_es": "Ciudadanía y organización social en la Antigüedad",
+        "ambito_ca": "Ciutadania i organització social a l’Antiguitat"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-25",
+    "curso": "2º",
+    "materias": [
+      "cultura_clasica_1",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Juegos y competiciones del mundo clásico",
+    "ambito_ca": "Jocs i competicions del món clàssic",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "3.1"
+          ],
+          "educacion_fisica": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "describir la religión antigua y los tipos de festividades.",
+          "educacion_fisica": "gestionar la participación en juegos motores vinculados a la cultura propia y ajena."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "descriure la religió antiga i els tipus de festivitats.",
+          "educacion_fisica": "gestionar la participació en jocs motors vinculats a la cultura pròpia i aliena."
+        },
+        "relacion_es": "Relación entre festividad religiosa, juego y competición atlética en la Antigüedad.",
+        "relacion_ca": "Relació entre festivitat religiosa, joc i competició atlètica a l’Antiguitat."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "3.3"
+          ],
+          "educacion_fisica": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "exponer la pervivencia de las manifestaciones religiosas y mitológicas.",
+          "educacion_fisica": "practicar actividades motrices valorando las implicaciones éticas del juego limpio."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "exposar la pervivència de les manifestacions religioses i mitològiques.",
+          "educacion_fisica": "practicar activitats motrius valorant les implicacions ètiques del joc net."
+        },
+        "relacion_es": "Comparación de los valores de los juegos antiguos con los del deporte actual.",
+        "relacion_ca": "Comparació dels valors dels jocs antics amb els de l’esport actual."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_1": {
+        "es": [
+          "Festividades religiosas",
+          "Juegos Olímpicos",
+          "Pervivencia de la tradición clásica",
+          "Vida cotidiana"
+        ],
+        "ca": [
+          "Festivitats religioses",
+          "Jocs Olímpics",
+          "Pervivència de la tradició clàssica",
+          "Vida quotidiana"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Juegos y deportes tradicionales",
+          "Juego limpio y valores",
+          "Deporte como fenómeno cultural",
+          "Habilidades atléticas"
+        ],
+        "ca": [
+          "Jocs i esports tradicionals",
+          "Joc net i valors",
+          "Esport com a fenomen cultural",
+          "Habilitats atlètiques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "olimpiada",
+      "competición",
+      "festividad",
+      "juego limpio",
+      "tradición"
+    ],
+    "conceptos_ca": [
+      "olimpíada",
+      "competició",
+      "festivitat",
+      "joc net",
+      "tradició"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_1",
+        "ambito_es": "Juegos y competiciones del mundo clásico",
+        "ambito_ca": "Jocs i competicions del món clàssic"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-26",
+    "curso": "2º",
+    "materias": [
+      "cultura_clasica_2",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Mito y literatura",
+    "ambito_ca": "Mite i literatura",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "3.2"
+          ],
+          "lengua_castellana": [
+            "8.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "describir las creencias de griegos y romanos sobre el origen del mundo.",
+          "lengua_castellana": "establecer vínculos entre los textos leídos y otras manifestaciones artísticas."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "descriure les creences de grecs i romans sobre l’origen del món.",
+          "lengua_castellana": "establir vincles entre els textos llegits i altres manifestacions artístiques."
+        },
+        "relacion_es": "Lectura de relatos mitológicos y de sus recreaciones literarias.",
+        "relacion_ca": "Lectura de relats mitològics i de les seves recreacions literàries."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "3.3"
+          ],
+          "lengua_castellana": [
+            "8.3"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "describir la pervivencia de las manifestaciones mitológicas grecolatinas.",
+          "lengua_castellana": "crear textos con intención literaria y conciencia de estilo."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "descriure la pervivència de les manifestacions mitològiques grecollatines.",
+          "lengua_castellana": "crear textos amb intenció literària i consciència d’estil."
+        },
+        "relacion_es": "Reescritura creativa de un mito en un contexto actual.",
+        "relacion_ca": "Reescriptura creativa d’un mite en un context actual."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_2": {
+        "es": [
+          "Mitología grecolatina",
+          "Cosmogonía y teogonía",
+          "Héroes y heroínas",
+          "Pervivencia del mito"
+        ],
+        "ca": [
+          "Mitologia grecollatina",
+          "Cosmogonia i teogonia",
+          "Herois i heroïnes",
+          "Pervivència del mite"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Lectura guiada de textos literarios",
+          "Géneros literarios",
+          "Intertextualidad",
+          "Escritura creativa"
+        ],
+        "ca": [
+          "Lectura guiada de textos literaris",
+          "Gèneres literaris",
+          "Intertextualitat",
+          "Escriptura creativa"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "mito",
+      "héroe",
+      "relato",
+      "recreación",
+      "pervivencia"
+    ],
+    "conceptos_ca": [
+      "mite",
+      "heroi",
+      "relat",
+      "recreació",
+      "pervivència"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_2",
+        "ambito_es": "Mito y literatura",
+        "ambito_ca": "Mite i literatura"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-27",
+    "curso": "2º",
+    "materias": [
+      "cultura_clasica_2",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Huella clásica en otras lenguas",
+    "ambito_ca": "Empremta clàssica en altres llengües",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "4.3"
+          ],
+          "lengua_extranjera": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "ampliar el vocabulario con léxico técnico y científico de origen grecolatino.",
+          "lengua_extranjera": "comparar semejanzas y diferencias entre lenguas."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "ampliar el vocabulari amb lèxic tècnic i científic d’origen grecollatí.",
+          "lengua_extranjera": "comparar semblances i diferències entre llengües."
+        },
+        "relacion_es": "Reconocimiento de raíces clásicas compartidas en el léxico de la lengua extranjera.",
+        "relacion_ca": "Reconeixement d’arrels clàssiques compartides en el lèxic de la llengua estrangera."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_2": [
+            "3.3"
+          ],
+          "lengua_extranjera": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_2": "describir la pervivencia de las manifestaciones mitológicas grecolatinas.",
+          "lengua_extranjera": "interpretar el sentido global de textos orales, escritos y multimodales."
+        },
+        "resumen_ca": {
+          "cultura_clasica_2": "descriure la pervivència de les manifestacions mitològiques grecollatines.",
+          "lengua_extranjera": "interpretar el sentit global de texts orals, escrits i multimodals."
+        },
+        "relacion_es": "Comprensión de referencias mitológicas en textos y productos culturales en lengua extranjera.",
+        "relacion_ca": "Comprensió de referències mitològiques en texts i productes culturals en llengua estrangera."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_2": {
+        "es": [
+          "Léxico de origen grecolatino",
+          "Mitología",
+          "Pervivencia en la cultura actual"
+        ],
+        "ca": [
+          "Lèxic d’origen grecollatí",
+          "Mitologia",
+          "Pervivència en la cultura actual"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Comparación entre lenguas",
+          "Estrategias de comprensión",
+          "Léxico",
+          "Aspectos socioculturales"
+        ],
+        "ca": [
+          "Comparació entre llengües",
+          "Estratègies de comprensió",
+          "Lèxic",
+          "Aspectes socioculturals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "raíz",
+      "léxico",
+      "mito",
+      "transferencia",
+      "comparación"
+    ],
+    "conceptos_ca": [
+      "arrel",
+      "lèxic",
+      "mite",
+      "transferència",
+      "comparació"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_2",
+        "ambito_es": "Huella clásica en otras lenguas",
+        "ambito_ca": "Empremta clàssica en altres llengües"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-28",
+    "curso": "2º",
+    "materias": [
+      "igualdad_genero",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Lenguaje, medios e igualdad",
+    "ambito_ca": "Llenguatge, mitjans i igualtat",
+    "vinculos": [
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.2"
+          ],
+          "lengua_extranjera": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "detectar y analizar críticamente mandatos e imágenes estereotipadas.",
+          "lengua_extranjera": "interpretar el sentido global de textos multimodales."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "detectar i analitzar críticament mandats i imatges estereotipades.",
+          "lengua_extranjera": "interpretar el sentit global de texts multimodals."
+        },
+        "relacion_es": "Análisis de anuncios y textos multimodales en lengua extranjera desde una perspectiva de género.",
+        "relacion_ca": "Anàlisi d’anuncis i texts multimodals en llengua estrangera des d’una perspectiva de gènere."
+      },
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.3"
+          ],
+          "lengua_extranjera": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "transferir los aprendizajes a la realidad con un lenguaje inclusivo.",
+          "lengua_extranjera": "redactar textos breves con claridad, coherencia y adecuación."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "transferir els aprenentatges a la realitat amb un llenguatge inclusiu.",
+          "lengua_extranjera": "redactar texts breus amb claredat, coherència i adequació."
+        },
+        "relacion_es": "Redacción de mensajes inclusivos para una campaña del centro.",
+        "relacion_ca": "Redacció de missatges inclusius per a una campanya del centre."
+      }
+    ],
+    "saberes": {
+      "igualdad_genero": {
+        "es": [
+          "Estereotipos en los medios",
+          "Socialización de género",
+          "Relaciones sanas e igualitarias",
+          "Publicidad y género"
+        ],
+        "ca": [
+          "Estereotips en els mitjans",
+          "Socialització de gènere",
+          "Relacions sanes i igualitàries",
+          "Publicitat i gènere"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Textos multimodales",
+          "Producción escrita",
+          "Léxico de opinión",
+          "Aspectos socioculturales"
+        ],
+        "ca": [
+          "Texts multimodals",
+          "Producció escrita",
+          "Lèxic d’opinió",
+          "Aspectes socioculturals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "estereotipo",
+      "inclusión",
+      "publicidad",
+      "mensaje",
+      "igualdad"
+    ],
+    "conceptos_ca": [
+      "estereotip",
+      "inclusió",
+      "publicitat",
+      "missatge",
+      "igualtat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "igualdad_genero",
+        "ambito_es": "Lenguaje, medios e igualdad",
+        "ambito_ca": "Llenguatge, mitjans i igualtat"
+      }
+    ]
+  },
+  {
+    "id": "ESO2-29",
+    "curso": "2º",
+    "materias": [
+      "recursos_digitales_1",
+      "segunda_lengua_extranjera"
+    ],
+    "ambito_es": "Comunicación digital plurilingüe",
+    "ambito_ca": "Comunicació digital plurilingüe",
+    "vinculos": [
+      {
+        "criterios": {
+          "recursos_digitales_1": [
+            "3.1"
+          ],
+          "segunda_lengua_extranjera": [
+            "3.1"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_1": "interactuar en espacios virtuales de comunicación y aprendizaje colaborativo.",
+          "segunda_lengua_extranjera": "participar en situaciones interactivas breves y sencillas."
+        },
+        "resumen_ca": {
+          "recursos_digitales_1": "interactuar en espais virtuals de comunicació i aprenentatge col·laboratiu.",
+          "segunda_lengua_extranjera": "participar en situacions interactives breus i senzilles."
+        },
+        "relacion_es": "Intercambio virtual con alumnado de otros países mediante plataformas seguras.",
+        "relacion_ca": "Intercanvi virtual amb alumnat d’altres països mitjançant plataformes segures."
+      },
+      {
+        "criterios": {
+          "recursos_digitales_1": [
+            "4.1"
+          ],
+          "segunda_lengua_extranjera": [
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "recursos_digitales_1": "crear y editar contenidos digitales con las herramientas más apropiadas.",
+          "segunda_lengua_extranjera": "redactar textos breves y comprensibles adecuados a la situación."
+        },
+        "resumen_ca": {
+          "recursos_digitales_1": "crear i editar continguts digitals amb les eines més apropiades.",
+          "segunda_lengua_extranjera": "redactar texts breus i comprensibles adequats a la situació."
+        },
+        "relacion_es": "Elaboración de un producto digital breve en la segunda lengua.",
+        "relacion_ca": "Elaboració d’un producte digital breu en la segona llengua."
+      }
+    ],
+    "saberes": {
+      "recursos_digitales_1": {
+        "es": [
+          "Comunicación y colaboración en línea",
+          "Edición de contenidos digitales",
+          "Etiqueta digital",
+          "Seguridad"
+        ],
+        "ca": [
+          "Comunicació i col·laboració en línia",
+          "Edició de continguts digitals",
+          "Etiqueta digital",
+          "Seguretat"
+        ]
+      },
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Interacción escrita y oral",
+          "Producción de textos breves",
+          "Convenciones de la comunicación digital",
+          "Léxico cotidiano"
+        ],
+        "ca": [
+          "Interacció escrita i oral",
+          "Producció de texts breus",
+          "Convencions de la comunicació digital",
+          "Lèxic quotidià"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "intercambio",
+      "plataforma",
+      "contenido",
+      "interacción",
+      "etiqueta digital"
+    ],
+    "conceptos_ca": [
+      "intercanvi",
+      "plataforma",
+      "contingut",
+      "interacció",
+      "etiqueta digital"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "recursos_digitales_1",
+        "ambito_es": "Comunicación digital plurilingüe",
+        "ambito_ca": "Comunicació digital plurilingüe"
+      }
+    ]
+  }
+]

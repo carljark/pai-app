@@ -15,6 +15,7 @@ import { MapaHeaderComponent } from '../ui/header/header.component';
 import { ModuloListComponent } from '../ui/modulo-list/modulo-list.component';
 import { RaDetailComponent } from '../ui/ra-detail/ra-detail.component';
 import { ConnectionsListComponent } from '../ui/connections-list/connections-list.component';
+import { AfinidadesEsoViewComponent } from '../afinidades-eso-view/afinidades-eso-view.component';
 import {
   RaReference,
   connectionTargetRef,
@@ -32,6 +33,7 @@ import {
     ModuloListComponent,
     RaDetailComponent,
     ConnectionsListComponent,
+    AfinidadesEsoViewComponent,
   ],
   templateUrl: './mapa-intermodular-view.component.html',
   styleUrl: './mapa-intermodular-view.component.scss',
@@ -49,6 +51,10 @@ export class MapaIntermodularViewComponent {
   step3Open = signal(true);
 
   isCa = computed(() => this.layout.language() === 'catalan');
+  /** La pestaña activa es un mapa de afinidades (ESO) y no de módulos (FP). */
+  isAfinidades = computed(
+    () => this.niveles.mapaTab(this.facade.activeTab())?.formato === 'afinidades',
+  );
 
   toggleHeaderStats() {
     this.headerExpanded.update((v) => !v);

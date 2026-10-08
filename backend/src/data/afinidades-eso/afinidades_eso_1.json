@@ -1,0 +1,2451 @@
+[
+  {
+    "id": "ESO1-01",
+    "curso": "1º",
+    "materias": [
+      "biologia_geologia",
+      "geografia_historia"
+    ],
+    "ambito_es": "Paisaje, territorio y conservación",
+    "ambito_ca": "Paisatge, territori i conservació",
+    "vinculos": [
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "6.2"
+          ],
+          "geografia_historia": [
+            "4.1"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "interpretar el paisaje y los impactos de las acciones humanas.",
+          "geografia_historia": "interpretar los elementos y las interrelaciones del paisaje."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "interpretar el paisatge i els impactes de les accions humanes.",
+          "geografia_historia": "interpretar els elements i les interrelacions del paisatge."
+        },
+        "relacion_es": "Explicación integrada de relieve, clima, agua y seres vivos.",
+        "relacion_ca": "Explicació integrada de relleu, clima, aigua i éssers vius."
+      },
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "5.1",
+            "5.2"
+          ],
+          "geografia_historia": [
+            "4.2",
+            "4.3"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "relacionar conservación y sostenibilidad y adoptar hábitos sostenibles.",
+          "geografia_historia": "analizar la degradación y justificar la protección del entorno."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "relacionar conservació i sostenibilitat i adoptar hàbits sostenibles.",
+          "geografia_historia": "analitzar la degradació i justificar la protecció de l’entorn."
+        },
+        "relacion_es": "Análisis de los efectos humanos y de los fundamentos de la conservación.",
+        "relacion_ca": "Anàlisi dels efectes humans i dels fonaments de la conservació."
+      }
+    ],
+    "saberes": {
+      "biologia_geologia": {
+        "es": [
+          "Ecosistemas",
+          "biodiversidad",
+          "atmósfera e hidrosfera",
+          "rocas",
+          "suelo",
+          "cambio climático",
+          "hábitos sostenibles"
+        ],
+        "ca": [
+          "Ecosistemes",
+          "biodiversitat",
+          "atmosfera i hidrosfera",
+          "roques",
+          "sòl",
+          "canvi climàtic",
+          "hàbits sostenibles"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Geografía física",
+          "relieve",
+          "clima",
+          "aguas",
+          "alteración del medio",
+          "patrimonio natural de las Islas Baleares"
+        ],
+        "ca": [
+          "Geografia física",
+          "relleu",
+          "clima",
+          "aigües",
+          "alteració del medi",
+          "patrimoni natural de les Illes Balears"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "paisaje",
+      "sistema",
+      "relieve",
+      "clima",
+      "impacto",
+      "conservación"
+    ],
+    "conceptos_ca": [
+      "paisatge",
+      "sistema",
+      "relleu",
+      "clima",
+      "impacte",
+      "conservació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "biologia_geologia",
+        "opcion": 1,
+        "ambito_es": "Paisaje, territorio y conservación",
+        "ambito_ca": "Paisatge, territori i conservació"
+      },
+      {
+        "materia": "geografia_historia",
+        "opcion": 1,
+        "ambito_es": "Paisaje y sistemas naturales",
+        "ambito_ca": "Paisatge i sistemes naturals"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-02",
+    "curso": "1º",
+    "materias": [
+      "biologia_geologia",
+      "matematicas"
+    ],
+    "ambito_es": "Biodiversidad e investigación con datos",
+    "ambito_ca": "Biodiversitat i investigació amb dades",
+    "vinculos": [
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "3.2",
+            "3.3"
+          ],
+          "matematicas": [
+            "6.1",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "diseñar la toma de datos y obtener observaciones cuantitativas y cualitativas.",
+          "matematicas": "formular situaciones reales con herramientas matemáticas y conectarlas con otras materias."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "dissenyar la presa de dades i obtenir observacions quantitatives i qualitatives.",
+          "matematicas": "formular situacions reals amb eines matemàtiques i connectar-les amb altres matèries."
+        },
+        "relacion_es": "Definición de variables y procedimientos de medida para estudiar la biodiversidad del entorno.",
+        "relacion_ca": "Definició de variables i procediments de mesura per estudiar la biodiversitat de l’entorn."
+      },
+      {
+        "criterios": {
+          "biologia_geologia": [
+            "3.4"
+          ],
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "biologia_geologia": "interpretar los resultados de investigación con herramientas matemáticas.",
+          "matematicas": "representar datos y comunicar resultados con precisión."
+        },
+        "resumen_ca": {
+          "biologia_geologia": "interpretar els resultats de recerca amb eines matemàtiques.",
+          "matematicas": "representar dades i comunicar resultats amb precisió."
+        },
+        "relacion_es": "Relación entre observación biológica, tratamiento de datos y justificación de conclusiones.",
+        "relacion_ca": "Relació entre observació biològica, tractament de dades i justificació de conclusions."
+      }
+    ],
+    "saberes": {
+      "biologia_geologia": {
+        "es": [
+          "Biodiversidad",
+          "especies del entorno",
+          "clasificación de los seres vivos",
+          "observación y toma de datos",
+          "análisis de resultados"
+        ],
+        "ca": [
+          "Biodiversitat",
+          "espècies de l’entorn",
+          "classificació dels éssers vius",
+          "observació i presa de dades",
+          "anàlisi de resultats"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Variables cualitativas y cuantitativas",
+          "frecuencias",
+          "tablas y gráficos",
+          "medidas de centralización",
+          "proporciones",
+          "interpretación de datos"
+        ],
+        "ca": [
+          "Variables qualitatives i quantitatives",
+          "freqüències",
+          "taules i gràfics",
+          "mesures de centralització",
+          "proporcions",
+          "interpretació de dades"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "biodiversidad",
+      "variable",
+      "muestra",
+      "frecuencia",
+      "comparación",
+      "representación"
+    ],
+    "conceptos_ca": [
+      "biodiversitat",
+      "variable",
+      "mostra",
+      "freqüència",
+      "comparació",
+      "representació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "biologia_geologia",
+        "opcion": 2,
+        "ambito_es": "Biodiversidad e investigación con datos",
+        "ambito_ca": "Biodiversitat i investigació amb dades"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-03",
+    "curso": "1º",
+    "materias": [
+      "cultura_clasica_1",
+      "geografia_historia"
+    ],
+    "ambito_es": "Mundo antiguo y ciudadanía",
+    "ambito_ca": "Món antic i ciutadania",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "1.1",
+            "1.2"
+          ],
+          "geografia_historia": [
+            "1.2",
+            "3.4"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "situar Grecia y Roma e interpretar fuentes y hechos históricos.",
+          "geografia_historia": "contrastar fuentes de la Antigüedad y ordenar los procesos históricos."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "situar Grècia i Roma i interpretar fonts i fets històrics.",
+          "geografia_historia": "contrastar fonts de l’Antiguitat i ordenar els processos històrics."
+        },
+        "relacion_es": "Contextualización temporal y territorial de las civilizaciones clásicas.",
+        "relacion_ca": "Contextualització temporal i territorial de les civilitzacions clàssiques."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "2.1",
+            "2.2"
+          ],
+          "geografia_historia": [
+            "5.1",
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "comparar formas de gobierno y organización social.",
+          "geografia_historia": "analizar la organización de las sociedades y los antecedentes de los derechos y las libertades."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "comparar formes de govern i organització social.",
+          "geografia_historia": "analitzar l’organització de les societats i els antecedents dels drets i les llibertats."
+        },
+        "relacion_es": "Estudio de las instituciones, las jerarquías y la condición de ciudadano.",
+        "relacion_ca": "Estudi de les institucions, les jerarquies i la condició de ciutadà."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_1": {
+        "es": [
+          "Marco geográfico de Grecia y Roma",
+          "etapas históricas",
+          "fuentes escritas",
+          "organización política",
+          "clases sociales",
+          "ciudadanía"
+        ],
+        "ca": [
+          "Marc geogràfic de Grècia i Roma",
+          "etapes històriques",
+          "fonts escrites",
+          "organització política",
+          "classes socials",
+          "ciutadania"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Antigüedad clásica",
+          "polis griegas",
+          "democracia ateniense",
+          "República e Imperio romanos",
+          "organización social",
+          "fuentes y cronología"
+        ],
+        "ca": [
+          "Antiguitat clàssica",
+          "polis gregues",
+          "democràcia atenesa",
+          "República i Imperi romans",
+          "organització social",
+          "fonts i cronologia"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "civilización",
+      "ciudadanía",
+      "poder",
+      "jerarquía",
+      "fuente histórica",
+      "cambio"
+    ],
+    "conceptos_ca": [
+      "civilització",
+      "ciutadania",
+      "poder",
+      "jerarquia",
+      "font històrica",
+      "canvi"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_1",
+        "opcion": 1,
+        "ambito_es": "Mundo antiguo y ciudadanía",
+        "ambito_ca": "Món antic i ciutadania"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-04",
+    "curso": "1º",
+    "materias": [
+      "cultura_clasica_1",
+      "lengua_catalana",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Origen de las lenguas y formación del léxico",
+    "ambito_ca": "Origen de les llengües i formació del lèxic",
+    "vinculos": [
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "4.1",
+            "4.2"
+          ],
+          "lengua_catalana": [
+            "1.1"
+          ],
+          "lengua_castellana": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "reconocer sistemas de escritura y el origen de las lenguas europeas.",
+          "lengua_catalana": "reconocer lenguas y variedades y comparar sus rasgos.",
+          "lengua_castellana": "reconocer lenguas y variedades y comparar sus rasgos."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "reconèixer sistemes d’escriptura i l’origen de les llengües europees.",
+          "lengua_catalana": "reconèixer llengües i varietats i comparar-ne trets.",
+          "lengua_castellana": "reconèixer llengües i varietats i comparar-ne trets."
+        },
+        "relacion_es": "Comprensión de la diversidad lingüística y de las relaciones entre lenguas.",
+        "relacion_ca": "Comprensió de la diversitat lingüística i de les relacions entre llengües."
+      },
+      {
+        "criterios": {
+          "cultura_clasica_1": [
+            "4.3"
+          ],
+          "lengua_catalana": [
+            "9.3"
+          ],
+          "lengua_castellana": [
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "cultura_clasica_1": "identificar étimos griegos y latinos y ampliar el vocabulario.",
+          "lengua_catalana": "formular generalizaciones lingüísticas mediante observación y comparación.",
+          "lengua_castellana": "formular generalizaciones lingüísticas mediante observación y comparación."
+        },
+        "resumen_ca": {
+          "cultura_clasica_1": "identificar ètims grecs i llatins i ampliar el vocabulari.",
+          "lengua_catalana": "formular generalitzacions lingüístiques mitjançant observació i comparació.",
+          "lengua_castellana": "formular generalitzacions lingüístiques mitjançant observació i comparació."
+        },
+        "relacion_es": "Análisis compartido de la formación y el significado de las palabras.",
+        "relacion_ca": "Anàlisi compartida de la formació i el significat dels mots."
+      }
+    ],
+    "saberes": {
+      "cultura_clasica_1": {
+        "es": [
+          "Alfabetos griego y latino",
+          "indoeuropeo",
+          "lenguas románicas",
+          "cultismos y palabras patrimoniales",
+          "raíces, derivación y composición"
+        ],
+        "ca": [
+          "Alfabets grec i llatí",
+          "indoeuropeu",
+          "llengües romàniques",
+          "cultismes i mots patrimonials",
+          "arrels, derivació i composició"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Lenguas del entorno",
+          "comparación interlingüística",
+          "estructura y formación de palabras",
+          "significado",
+          "consulta de diccionarios"
+        ],
+        "ca": [
+          "Llengües de l’entorn",
+          "comparació interlingüística",
+          "estructura i formació de paraules",
+          "significat",
+          "consulta de diccionaris"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Diversidad lingüística",
+          "comparación entre lenguas",
+          "estructura de las palabras",
+          "procedimientos de formación del léxico",
+          "diccionarios"
+        ],
+        "ca": [
+          "Diversitat lingüística",
+          "comparació entre llengües",
+          "estructura de les paraules",
+          "procediments de formació del lèxic",
+          "diccionaris"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "lengua",
+      "alfabeto",
+      "raíz",
+      "derivación",
+      "composición",
+      "significado"
+    ],
+    "conceptos_ca": [
+      "llengua",
+      "alfabet",
+      "arrel",
+      "derivació",
+      "composició",
+      "significat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "cultura_clasica_1",
+        "opcion": 2,
+        "ambito_es": "Origen de las lenguas y formación del léxico",
+        "ambito_ca": "Origen de les llengües i formació del lèxic"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-05",
+    "curso": "1º",
+    "materias": [
+      "educacion_fisica",
+      "musica"
+    ],
+    "ambito_es": "Ritmo y expresión corporal",
+    "ambito_ca": "Ritme i expressió corporal",
+    "vinculos": [
+      {
+        "criterios": {
+          "educacion_fisica": [
+            "4.3"
+          ],
+          "musica": [
+            "2.1",
+            "2.2"
+          ]
+        },
+        "resumen_es": {
+          "educacion_fisica": "participar en composiciones de expresión corporal con intención comunicativa.",
+          "musica": "explorar recursos musicales y expresar ideas y emociones."
+        },
+        "resumen_ca": {
+          "educacion_fisica": "participar en composicions d’expressió corporal amb intenció comunicativa.",
+          "musica": "explorar recursos musicals i expressar idees i emocions."
+        },
+        "relacion_es": "Relación entre ritmo, movimiento e intención expresiva.",
+        "relacion_ca": "Relació entre ritme, moviment i intenció expressiva."
+      },
+      {
+        "criterios": {
+          "educacion_fisica": [
+            "3.2"
+          ],
+          "musica": [
+            "3.2",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "educacion_fisica": "cooperar asumiendo roles y responsabilidades.",
+          "musica": "aplicar técnicas corporales e interpretar piezas musicales y danzas."
+        },
+        "resumen_ca": {
+          "educacion_fisica": "cooperar assumint rols i responsabilitats.",
+          "musica": "aplicar tècniques corporals i interpretar peces musicals i danses."
+        },
+        "relacion_es": "Coordinación temporal y corporal en la interpretación colectiva.",
+        "relacion_ca": "Coordinació temporal i corporal en la interpretació col·lectiva."
+      }
+    ],
+    "saberes": {
+      "educacion_fisica": {
+        "es": [
+          "Usos comunicativos de la corporalidad",
+          "actividades rítmicas y musicales",
+          "coordinación espacial y temporal",
+          "juegos y danzas tradicionales",
+          "cooperación"
+        ],
+        "ca": [
+          "Usos comunicatius de la corporalitat",
+          "activitats rítmiques i musicals",
+          "coordinació espacial i temporal",
+          "jocs i danses tradicionals",
+          "cooperació"
+        ]
+      },
+      "musica": {
+        "es": [
+          "Ritmo y duración",
+          "elementos del lenguaje musical",
+          "técnica corporal",
+          "improvisación guiada",
+          "repertorio de danzas",
+          "interpretación colectiva"
+        ],
+        "ca": [
+          "Ritme i durada",
+          "elements del llenguatge musical",
+          "tècnica corporal",
+          "improvisació guiada",
+          "repertori de danses",
+          "interpretació col·lectiva"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "ritmo",
+      "tiempo",
+      "movimiento",
+      "expresión",
+      "coordinación",
+      "interpretación"
+    ],
+    "conceptos_ca": [
+      "ritme",
+      "temps",
+      "moviment",
+      "expressió",
+      "coordinació",
+      "interpretació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "educacion_fisica",
+        "opcion": 1,
+        "ambito_es": "Ritmo y expresión corporal",
+        "ambito_ca": "Ritme i expressió corporal"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-06",
+    "curso": "1º",
+    "materias": [
+      "entornos_digitales_multimedia",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Escritura y edición digital",
+    "ambito_ca": "Escriptura i edició digital",
+    "vinculos": [
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "1.2",
+            "1.4"
+          ],
+          "lengua_catalana": [
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "estructurar documentos con estilos y utilizar comentarios.",
+          "lengua_catalana": "planificar, redactar y revisar textos adecuados a la situación comunicativa."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "estructurar documents amb estils i utilitzar comentaris.",
+          "lengua_catalana": "planificar, redactar i revisar texts adequats a la situació comunicativa."
+        },
+        "relacion_es": "Organización del contenido y revisión compartida de la escritura.",
+        "relacion_ca": "Organització del contingut i revisió compartida de l’escriptura."
+      },
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "1.5",
+            "1.6"
+          ],
+          "lengua_catalana": [
+            "5.2",
+            "9.1"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "revisar la lengua y reproducir correctamente contenido y formato.",
+          "lengua_catalana": "mejorar la precisión lingüística y revisar los textos con reflexión sobre la lengua."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "revisar la llengua i reproduir correctament contingut i format.",
+          "lengua_catalana": "millorar la precisió lingüística i revisar els texts amb reflexió sobre la llengua."
+        },
+        "relacion_es": "Integración de corrección lingüística, legibilidad y convenciones de edición.",
+        "relacion_ca": "Integració de correcció lingüística, llegibilitat i convencions d’edició."
+      }
+    ],
+    "saberes": {
+      "entornos_digitales_multimedia": {
+        "es": [
+          "Procesador de textos",
+          "estilos de párrafo",
+          "índices",
+          "comentarios",
+          "revisión ortográfica y gramatical",
+          "formatos de página y carácter"
+        ],
+        "ca": [
+          "Processador de texts",
+          "estils de paràgraf",
+          "índexs",
+          "comentaris",
+          "revisió ortogràfica i gramatical",
+          "formats de pàgina i caràcter"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Planificación y revisión textual",
+          "coherencia y cohesión",
+          "corrección ortográfica y gramatical",
+          "adecuación",
+          "precisión léxica"
+        ],
+        "ca": [
+          "Planificació i revisió textual",
+          "coherència i cohesió",
+          "correcció ortogràfica i gramatical",
+          "adequació",
+          "precisió lèxica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "texto",
+      "estructura",
+      "coherencia",
+      "revisión",
+      "corrección",
+      "legibilidad"
+    ],
+    "conceptos_ca": [
+      "text",
+      "estructura",
+      "coherència",
+      "revisió",
+      "correcció",
+      "llegibilitat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "entornos_digitales_multimedia",
+        "opcion": 1,
+        "ambito_es": "Escritura y edición digital",
+        "ambito_ca": "Escriptura i edició digital"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-07",
+    "curso": "1º",
+    "materias": [
+      "entornos_digitales_multimedia",
+      "matematicas"
+    ],
+    "ambito_es": "Cálculo y representación de datos",
+    "ambito_ca": "Càlcul i representació de dades",
+    "vinculos": [
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "3.1",
+            "3.2"
+          ],
+          "matematicas": [
+            "1.2",
+            "1.3"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "referenciar celdas y automatizar cálculos en tablas.",
+          "matematicas": "aplicar procedimientos y obtener soluciones con herramientas tecnológicas."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "referenciar cel·les i automatitzar càlculs en taules.",
+          "matematicas": "aplicar procediments i obtenir solucions amb eines tecnològiques."
+        },
+        "relacion_es": "Traducción de operaciones y relaciones numéricas a fórmulas de hoja de cálculo.",
+        "relacion_ca": "Traducció d’operacions i relacions numèriques a fórmules de full de càlcul."
+      },
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "3.3"
+          ],
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "generar diagramas y configurar sus elementos.",
+          "matematicas": "representar información y explicar los resultados."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "generar diagrames i configurar-ne els elements.",
+          "matematicas": "representar informació i explicar els resultats."
+        },
+        "relacion_es": "Selección de gráficos coherentes con los datos y con la información que se quiere comunicar.",
+        "relacion_ca": "Selecció de gràfics coherents amb les dades i amb la informació que es vol comunicar."
+      }
+    ],
+    "saberes": {
+      "entornos_digitales_multimedia": {
+        "es": [
+          "Hojas de cálculo",
+          "referencias de celdas",
+          "fórmulas",
+          "funciones básicas",
+          "ordenación y filtros",
+          "diagramas, ejes y leyendas"
+        ],
+        "ca": [
+          "Fulls de càlcul",
+          "referències de cel·les",
+          "fórmules",
+          "funcions bàsiques",
+          "ordenació i filtres",
+          "diagrames, eixos i llegendes"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Operaciones numéricas",
+          "porcentajes",
+          "media",
+          "variables estadísticas",
+          "tablas",
+          "diagramas de barras y de sectores"
+        ],
+        "ca": [
+          "Operacions numèriques",
+          "percentatges",
+          "mitjana",
+          "variables estadístiques",
+          "taules",
+          "diagrames de barres i sectors"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "dato",
+      "operación",
+      "fórmula",
+      "tabla",
+      "gráfico",
+      "variable"
+    ],
+    "conceptos_ca": [
+      "dada",
+      "operació",
+      "fórmula",
+      "taula",
+      "gràfic",
+      "variable"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "entornos_digitales_multimedia",
+        "opcion": 2,
+        "ambito_es": "Cálculo y representación de datos",
+        "ambito_ca": "Càlcul i representació de dades"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-08",
+    "curso": "1º",
+    "materias": [
+      "entornos_digitales_multimedia",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Información científica y representación digital",
+    "ambito_ca": "Informació científica i representació digital",
+    "vinculos": [
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "3.2",
+            "3.3"
+          ],
+          "biologia_geologia": [
+            "3.3",
+            "3.4"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "tratar datos en tablas y generar diagramas.",
+          "biologia_geologia": "recoger datos e interpretar resultados de investigación."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "tractar dades en taules i generar diagrames.",
+          "biologia_geologia": "recollir dades i interpretar resultats de recerca."
+        },
+        "relacion_es": "Organización y representación rigurosa de las observaciones científicas.",
+        "relacion_ca": "Organització i representació rigorosa de les observacions científiques."
+      },
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "2.1",
+            "2.2"
+          ],
+          "biologia_geologia": [
+            "1.1",
+            "1.2"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "elaborar presentaciones con contenido y recursos adecuados.",
+          "biologia_geologia": "interpretar y comunicar información biológica y geológica."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "elaborar presentacions amb contingut i recursos adequats.",
+          "biologia_geologia": "interpretar i comunicar informació biològica i geològica."
+        },
+        "relacion_es": "Coherencia entre información científica, recursos visuales y explicación.",
+        "relacion_ca": "Coherència entre informació científica, recursos visuals i explicació."
+      }
+    ],
+    "saberes": {
+      "entornos_digitales_multimedia": {
+        "es": [
+          "Hojas de cálculo",
+          "tablas y diagramas",
+          "diseño de diapositivas",
+          "integración de textos e imágenes",
+          "jerarquía y selección del contenido"
+        ],
+        "ca": [
+          "Fulls de càlcul",
+          "taules i diagrames",
+          "disseny de diapositives",
+          "integració de texts i imatges",
+          "jerarquia i selecció del contingut"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Observación y toma de datos",
+          "fuentes científicas",
+          "análisis de resultados",
+          "comunicación científica",
+          "representación de procesos naturales"
+        ],
+        "ca": [
+          "Observació i presa de dades",
+          "fonts científiques",
+          "anàlisi de resultats",
+          "comunicació científica",
+          "representació de processos naturals"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "información",
+      "dato",
+      "representación",
+      "gráfico",
+      "síntesis",
+      "comunicación"
+    ],
+    "conceptos_ca": [
+      "informació",
+      "dada",
+      "representació",
+      "gràfic",
+      "síntesi",
+      "comunicació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "entornos_digitales_multimedia",
+        "opcion": 3,
+        "ambito_es": "Información científica y representación digital",
+        "ambito_ca": "Informació científica i representació digital"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-09",
+    "curso": "1º",
+    "materias": [
+      "entornos_digitales_multimedia",
+      "geografia_historia"
+    ],
+    "ambito_es": "Organización y comunicación del conocimiento social",
+    "ambito_ca": "Organització i comunicació del coneixement social",
+    "vinculos": [
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "1.2",
+            "1.3"
+          ],
+          "geografia_historia": [
+            "1.1",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "estructurar documentos y editar tablas.",
+          "geografia_historia": "elaborar contenidos y representar información geográfica e histórica."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "estructurar documents i editar taules.",
+          "geografia_historia": "elaborar continguts i representar informació geogràfica i històrica."
+        },
+        "relacion_es": "Jerarquización del conocimiento y relación entre textos, esquemas y tablas.",
+        "relacion_ca": "Jerarquització del coneixement i relació entre texts, esquemes i taules."
+      },
+      {
+        "criterios": {
+          "entornos_digitales_multimedia": [
+            "2.2",
+            "2.3"
+          ],
+          "geografia_historia": [
+            "2.3"
+          ]
+        },
+        "resumen_es": {
+          "entornos_digitales_multimedia": "seleccionar el contenido de las presentaciones y ensayar exposiciones.",
+          "geografia_historia": "emplear términos y conceptos geográficos e históricos en producciones propias."
+        },
+        "resumen_ca": {
+          "entornos_digitales_multimedia": "seleccionar el contingut de les presentacions i assajar exposicions.",
+          "geografia_historia": "emprar termes i conceptes geogràfics i històrics en produccions pròpies."
+        },
+        "relacion_es": "Comunicación oral con apoyo visual y terminología disciplinar precisa.",
+        "relacion_ca": "Comunicació oral amb suport visual i terminologia disciplinària precisa."
+      }
+    ],
+    "saberes": {
+      "entornos_digitales_multimedia": {
+        "es": [
+          "Estilos e índices",
+          "tablas",
+          "imágenes y leyendas",
+          "presentaciones",
+          "racionalización del contenido",
+          "funcionalidades de ensayo"
+        ],
+        "ca": [
+          "Estils i índexs",
+          "taules",
+          "imatges i llegendes",
+          "presentacions",
+          "racionalització del contingut",
+          "funcionalitats d’assaig"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Fuentes de información",
+          "representación del espacio",
+          "cronología",
+          "esquemas y tablas",
+          "terminología geográfica e histórica"
+        ],
+        "ca": [
+          "Fonts d’informació",
+          "representació de l’espai",
+          "cronologia",
+          "esquemes i taules",
+          "terminologia geogràfica i històrica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "fuente",
+      "estructura",
+      "jerarquía",
+      "representación",
+      "síntesis",
+      "comunicación"
+    ],
+    "conceptos_ca": [
+      "font",
+      "estructura",
+      "jerarquia",
+      "representació",
+      "síntesi",
+      "comunicació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "entornos_digitales_multimedia",
+        "opcion": 4,
+        "ambito_es": "Organización y comunicación del conocimiento social",
+        "ambito_ca": "Organització i comunicació del coneixement social"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-10",
+    "curso": "1º",
+    "materias": [
+      "igualdad_genero",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Cuerpo y estereotipos en el deporte",
+    "ambito_ca": "Cos i estereotips en l’esport",
+    "vinculos": [
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.1",
+            "1.2"
+          ],
+          "educacion_fisica": [
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "comprender la socialización de género y analizar estereotipos.",
+          "educacion_fisica": "analizar modalidades deportivas evitando estereotipos de género o capacidad."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "comprendre la socialització de gènere i analitzar estereotips.",
+          "educacion_fisica": "analitzar modalitats esportives evitant estereotips de gènere o capacitat."
+        },
+        "relacion_es": "Identificación de las expectativas sociales que condicionan la participación deportiva.",
+        "relacion_ca": "Identificació de les expectatives socials que condicionen la participació esportiva."
+      },
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.3",
+            "5.3"
+          ],
+          "educacion_fisica": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "mostrar respeto y rechazar discriminaciones y violencias.",
+          "educacion_fisica": "aplicar habilidades sociales y respetar la diversidad en las prácticas motrices."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "mostrar respecte i rebutjar discriminacions i violències.",
+          "educacion_fisica": "aplicar habilitats socials i respectar la diversitat en les pràctiques motrius."
+        },
+        "relacion_es": "Construcción de relaciones igualitarias y respeto del propio cuerpo y del de los demás.",
+        "relacion_ca": "Construcció de relacions igualitàries i respecte del propi cos i del dels altres."
+      }
+    ],
+    "saberes": {
+      "igualdad_genero": {
+        "es": [
+          "Socialización de género",
+          "estereotipos",
+          "igualdad",
+          "identidad y expresión de género",
+          "responsabilidad afectiva",
+          "rechazo de la discriminación"
+        ],
+        "ca": [
+          "Socialització de gènere",
+          "estereotips",
+          "igualtat",
+          "identitat i expressió de gènere",
+          "responsabilitat afectiva",
+          "rebuig de la discriminació"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Estereotipos corporales y de género",
+          "deporte y medios",
+          "participación igualitaria",
+          "figuras deportivas",
+          "habilidades sociales",
+          "respeto"
+        ],
+        "ca": [
+          "Estereotips corporals i de gènere",
+          "esport i mitjans",
+          "participació igualitària",
+          "figures esportives",
+          "habilitats socials",
+          "respecte"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "cuerpo",
+      "género",
+      "estereotipo",
+      "identidad",
+      "respeto",
+      "igualdad"
+    ],
+    "conceptos_ca": [
+      "cos",
+      "gènere",
+      "estereotip",
+      "identitat",
+      "respecte",
+      "igualtat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "igualdad_genero",
+        "opcion": 1,
+        "ambito_es": "Cuerpo y estereotipos en el deporte",
+        "ambito_ca": "Cos i estereotips en l’esport"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-11",
+    "curso": "1º",
+    "materias": [
+      "igualdad_genero",
+      "lengua_castellana"
+    ],
+    "ambito_es": "Lenguaje y construcción de los estereotipos",
+    "ambito_ca": "Llenguatge i construcció dels estereotips",
+    "vinculos": [
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.2"
+          ],
+          "lengua_castellana": [
+            "4.1",
+            "10.1"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "analizar imágenes estereotipadas y mandatos de género.",
+          "lengua_castellana": "interpretar textos e identificar usos discriminatorios del lenguaje."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "analitzar imatges estereotipades i mandats de gènere.",
+          "lengua_castellana": "interpretar texts i identificar usos discriminatoris del llenguatge."
+        },
+        "relacion_es": "Análisis de cómo los discursos representan a mujeres y hombres y naturalizan desigualdades.",
+        "relacion_ca": "Anàlisi de com els discursos representen dones i homes i naturalitzen desigualtats."
+      },
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.3"
+          ],
+          "lengua_castellana": [
+            "3.2",
+            "10.2"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "emplear un lenguaje inclusivo y mantener relaciones respetuosas.",
+          "lengua_castellana": "participar en diálogos y buscar consensos."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "emprar un llenguatge inclusiu i mantenir relacions respectuoses.",
+          "lengua_castellana": "participar en diàlegs i cercar consensos."
+        },
+        "relacion_es": "Uso consciente de la lengua en relaciones igualitarias y en la resolución de desacuerdos.",
+        "relacion_ca": "Ús conscient de la llengua en relacions igualitàries i en la resolució de desacords."
+      }
+    ],
+    "saberes": {
+      "igualdad_genero": {
+        "es": [
+          "Sistema sexo-género",
+          "agentes de socialización",
+          "sexismo",
+          "estereotipos",
+          "violencia simbólica",
+          "relaciones igualitarias"
+        ],
+        "ca": [
+          "Sistema sexe-gènere",
+          "agents de socialització",
+          "sexisme",
+          "estereotips",
+          "violència simbòlica",
+          "relacions igualitàries"
+        ]
+      },
+      "lengua_castellana": {
+        "es": [
+          "Comprensión textual",
+          "intención del emisor",
+          "lenguaje discriminatorio",
+          "interacción oral",
+          "cortesía",
+          "resolución dialogada de conflictos"
+        ],
+        "ca": [
+          "Comprensió textual",
+          "intenció de l’emissor",
+          "llenguatge discriminatori",
+          "interacció oral",
+          "cortesia",
+          "resolució dialogada de conflictes"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "lenguaje",
+      "representación",
+      "estereotipo",
+      "discriminación",
+      "respeto",
+      "diálogo"
+    ],
+    "conceptos_ca": [
+      "llenguatge",
+      "representació",
+      "estereotip",
+      "discriminació",
+      "respecte",
+      "diàleg"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "igualdad_genero",
+        "opcion": 2,
+        "ambito_es": "Lenguaje y construcción de los estereotipos",
+        "ambito_ca": "Llenguatge i construcció dels estereotips"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-12",
+    "curso": "1º",
+    "materias": [
+      "lengua_castellana",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Tratamiento integrado de las lenguas",
+    "ambito_ca": "Tractament integrat de les llengües",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "1.1",
+            "9.3"
+          ],
+          "lengua_catalana": [
+            "1.1",
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "comparar lenguas y formular generalizaciones sobre su funcionamiento.",
+          "lengua_catalana": "reconocer lenguas y reflexionar sobre regularidades lingüísticas."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "comparar llengües i formular generalitzacions sobre el seu funcionament.",
+          "lengua_catalana": "reconèixer llengües i reflexionar sobre regularitats lingüístiques."
+        },
+        "relacion_es": "Terminología compartida y transferencia de conocimientos entre los dos sistemas lingüísticos.",
+        "relacion_ca": "Terminologia compartida i transferència de coneixements entre els dos sistemes lingüístics."
+      },
+      {
+        "criterios": {
+          "lengua_castellana": [
+            "5.1",
+            "9.1"
+          ],
+          "lengua_catalana": [
+            "5.1",
+            "9.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_castellana": "planificar la escritura y revisar los textos.",
+          "lengua_catalana": "redactar y revisar textos con criterios lingüísticos."
+        },
+        "resumen_ca": {
+          "lengua_castellana": "planificar l’escriptura i revisar els texts.",
+          "lengua_catalana": "redactar i revisar texts amb criteris lingüístics."
+        },
+        "relacion_es": "Coordinación de los procedimientos de comprensión, escritura y revisión.",
+        "relacion_ca": "Coordinació dels procediments de comprensió, escriptura i revisió."
+      }
+    ],
+    "saberes": {
+      "lengua_castellana": {
+        "es": [
+          "Diversidad lingüística",
+          "estructura de las palabras y de la oración",
+          "clases de palabras",
+          "propiedades textuales",
+          "ortografía",
+          "revisión"
+        ],
+        "ca": [
+          "Diversitat lingüística",
+          "estructura de les paraules i de l’oració",
+          "classes de mots",
+          "propietats textuals",
+          "ortografia",
+          "revisió"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Comparación interlingüística",
+          "estructura de palabras y enunciados",
+          "categorías gramaticales",
+          "coherencia y cohesión",
+          "ortografía",
+          "revisión"
+        ],
+        "ca": [
+          "Comparació interlingüística",
+          "estructura de paraules i enunciats",
+          "categories gramaticals",
+          "coherència i cohesió",
+          "ortografia",
+          "revisió"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "lengua",
+      "categoría",
+      "estructura",
+      "coherencia",
+      "cohesión",
+      "revisión"
+    ],
+    "conceptos_ca": [
+      "llengua",
+      "categoria",
+      "estructura",
+      "coherència",
+      "cohesió",
+      "revisió"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_castellana",
+        "opcion": 1,
+        "ambito_es": "Tratamiento integrado de las lenguas",
+        "ambito_ca": "Tractament integrat de les llengües"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-13",
+    "curso": "1º",
+    "materias": [
+      "lengua_catalana",
+      "cultura_clasica_1"
+    ],
+    "ambito_es": "Léxico y herencia lingüística",
+    "ambito_ca": "Lèxic i herència lingüística",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "1.1",
+            "9.3"
+          ],
+          "cultura_clasica_1": [
+            "4.1",
+            "4.2"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "comparar lenguas y observar regularidades lingüísticas.",
+          "cultura_clasica_1": "reconocer los sistemas de escritura y el origen de las lenguas."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "comparar llengües i observar regularitats lingüístiques.",
+          "cultura_clasica_1": "reconèixer els sistemes d’escriptura i l’origen de les llengües."
+        },
+        "relacion_es": "Comprensión de las relaciones entre alfabeto, lengua y transmisión cultural.",
+        "relacion_ca": "Comprensió de les relacions entre alfabet, llengua i transmissió cultural."
+      },
+      {
+        "criterios": {
+          "lengua_catalana": [
+            "5.2",
+            "9.3"
+          ],
+          "cultura_clasica_1": [
+            "4.3"
+          ]
+        },
+        "resumen_es": {
+          "lengua_catalana": "enriquecer el léxico y analizar el funcionamiento de las palabras.",
+          "cultura_clasica_1": "identificar raíces grecolatinas y ampliar el vocabulario."
+        },
+        "resumen_ca": {
+          "lengua_catalana": "enriquir el lèxic i analitzar el funcionament de les paraules.",
+          "cultura_clasica_1": "identificar arrels grecollatines i ampliar el vocabulari."
+        },
+        "relacion_es": "Relación entre la forma de las palabras, su composición y el significado.",
+        "relacion_ca": "Relació entre la forma dels mots, la seva composició i el significat."
+      }
+    ],
+    "saberes": {
+      "lengua_catalana": {
+        "es": [
+          "Diversidad lingüística",
+          "comparación entre lenguas",
+          "estructura de las palabras",
+          "derivación y composición",
+          "léxico",
+          "diccionarios"
+        ],
+        "ca": [
+          "Diversitat lingüística",
+          "comparació entre llengües",
+          "estructura de les paraules",
+          "derivació i composició",
+          "lèxic",
+          "diccionaris"
+        ]
+      },
+      "cultura_clasica_1": {
+        "es": [
+          "Alfabetos griego y latino",
+          "lenguas románicas",
+          "étimos",
+          "cultismos",
+          "palabras patrimoniales",
+          "helenismos y latinismos"
+        ],
+        "ca": [
+          "Alfabets grec i llatí",
+          "llengües romàniques",
+          "ètims",
+          "cultismes",
+          "mots patrimonials",
+          "hel·lenismes i llatinismes"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "alfabeto",
+      "lengua",
+      "raíz",
+      "derivación",
+      "composición",
+      "significado"
+    ],
+    "conceptos_ca": [
+      "alfabet",
+      "llengua",
+      "arrel",
+      "derivació",
+      "composició",
+      "significat"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_catalana",
+        "opcion": 1,
+        "ambito_es": "Léxico y herencia lingüística",
+        "ambito_ca": "Lèxic i herència lingüística"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-14",
+    "curso": "1º",
+    "materias": [
+      "lengua_extranjera",
+      "lengua_catalana"
+    ],
+    "ambito_es": "Aprendizaje de lenguas y reflexión lingüística",
+    "ambito_ca": "Aprenentatge de llengües i reflexió lingüística",
+    "vinculos": [
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "5.1",
+            "5.2"
+          ],
+          "lengua_catalana": [
+            "1.1",
+            "9.3"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "comparar lenguas y utilizar estrategias de aprendizaje.",
+          "lengua_catalana": "reconocer lenguas e identificar regularidades de su funcionamiento."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "comparar llengües i utilitzar estratègies d’aprenentatge.",
+          "lengua_catalana": "reconèixer llengües i identificar regularitats del seu funcionament."
+        },
+        "relacion_es": "Transferencia de recursos y comprensión de semejanzas y diferencias lingüísticas.",
+        "relacion_ca": "Transferència de recursos i comprensió de semblances i diferències lingüístiques."
+      },
+      {
+        "criterios": {
+          "lengua_extranjera": [
+            "2.2",
+            "2.3"
+          ],
+          "lengua_catalana": [
+            "5.1",
+            "9.1"
+          ]
+        },
+        "resumen_es": {
+          "lengua_extranjera": "planificar, escribir y revisar textos sencillos.",
+          "lengua_catalana": "planificar y revisar la escritura con criterios lingüísticos."
+        },
+        "resumen_ca": {
+          "lengua_extranjera": "planificar, escriure i revisar texts senzills.",
+          "lengua_catalana": "planificar i revisar l’escriptura amb criteris lingüístics."
+        },
+        "relacion_es": "Coordinación de los procedimientos de escritura, con complejidad ajustada a cada lengua.",
+        "relacion_ca": "Coordinació dels procediments d’escriptura, amb complexitat ajustada a cada llengua."
+      }
+    ],
+    "saberes": {
+      "lengua_extranjera": {
+        "es": [
+          "Unidades lingüísticas básicas",
+          "léxico",
+          "convenciones ortográficas",
+          "comparación de lenguas",
+          "estrategias de producción y revisión"
+        ],
+        "ca": [
+          "Unitats lingüístiques bàsiques",
+          "lèxic",
+          "convencions ortogràfiques",
+          "comparació de llengües",
+          "estratègies de producció i revisió"
+        ]
+      },
+      "lengua_catalana": {
+        "es": [
+          "Categorías gramaticales",
+          "estructuras de enunciados",
+          "coherencia y cohesión",
+          "ortografía",
+          "planificación y revisión",
+          "diversidad lingüística"
+        ],
+        "ca": [
+          "Categories gramaticals",
+          "estructures d’enunciats",
+          "coherència i cohesió",
+          "ortografia",
+          "planificació i revisió",
+          "diversitat lingüística"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "estructura",
+      "significado",
+      "orden",
+      "cohesión",
+      "revisión",
+      "transferencia"
+    ],
+    "conceptos_ca": [
+      "estructura",
+      "significat",
+      "ordre",
+      "cohesió",
+      "revisió",
+      "transferència"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "lengua_extranjera",
+        "opcion": 1,
+        "ambito_es": "Aprendizaje de lenguas y reflexión lingüística",
+        "ambito_ca": "Aprenentatge de llengües i reflexió lingüística"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-15",
+    "curso": "1º",
+    "materias": [
+      "matematicas",
+      "biologia_geologia"
+    ],
+    "ambito_es": "Investigación del entorno con datos",
+    "ambito_ca": "Investigació de l’entorn amb dades",
+    "vinculos": [
+      {
+        "criterios": {
+          "matematicas": [
+            "6.1",
+            "6.2"
+          ],
+          "biologia_geologia": [
+            "3.2",
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "matematicas": "formular situaciones reales con herramientas matemáticas y establecer conexiones entre materias.",
+          "biologia_geologia": "diseñar la toma de datos y observar fenómenos con instrumentos adecuados."
+        },
+        "resumen_ca": {
+          "matematicas": "formular situacions reals amb eines matemàtiques i establir connexions entre matèries.",
+          "biologia_geologia": "dissenyar la presa de dades i observar fenòmens amb instruments adequats."
+        },
+        "relacion_es": "Uso de la medida y la organización de datos para responder preguntas sobre el entorno natural.",
+        "relacion_ca": "Ús de la mesura i l’organització de dades per respondre preguntes sobre l’entorn natural."
+      },
+      {
+        "criterios": {
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ],
+          "biologia_geologia": [
+            "3.4",
+            "5.1"
+          ]
+        },
+        "resumen_es": {
+          "matematicas": "representar información y comunicar resultados matemáticos.",
+          "biologia_geologia": "interpretar resultados y fundamentar la conservación de la biodiversidad."
+        },
+        "resumen_ca": {
+          "matematicas": "representar informació i comunicar resultats matemàtics.",
+          "biologia_geologia": "interpretar resultats i fonamentar la conservació de la biodiversitat."
+        },
+        "relacion_es": "Lectura de tablas y gráficos para explicar patrones biológicos y valorar la conservación.",
+        "relacion_ca": "Lectura de taules i gràfics per explicar patrons biològics i valorar la conservació."
+      }
+    ],
+    "saberes": {
+      "matematicas": {
+        "es": [
+          "Variables estadísticas",
+          "frecuencias",
+          "tablas y gráficos",
+          "medidas de centralización",
+          "proporciones",
+          "interpretación y comunicación de datos"
+        ],
+        "ca": [
+          "Variables estadístiques",
+          "freqüències",
+          "taules i gràfics",
+          "mesures de centralització",
+          "proporcions",
+          "interpretació i comunicació de dades"
+        ]
+      },
+      "biologia_geologia": {
+        "es": [
+          "Biodiversidad",
+          "ecosistemas",
+          "especies del entorno",
+          "observación y toma de datos",
+          "análisis de resultados",
+          "conservación"
+        ],
+        "ca": [
+          "Biodiversitat",
+          "ecosistemes",
+          "espècies de l’entorn",
+          "observació i presa de dades",
+          "anàlisi de resultats",
+          "conservació"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "variable",
+      "dato",
+      "frecuencia",
+      "distribución",
+      "biodiversidad",
+      "interpretación"
+    ],
+    "conceptos_ca": [
+      "variable",
+      "dada",
+      "freqüència",
+      "distribució",
+      "biodiversitat",
+      "interpretació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "matematicas",
+        "opcion": 1,
+        "ambito_es": "Investigación del entorno con datos",
+        "ambito_ca": "Investigació de l’entorn amb dades"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-16",
+    "curso": "1º",
+    "materias": [
+      "musica",
+      "educacion_fisica"
+    ],
+    "ambito_es": "Ritmo y comunicación corporal",
+    "ambito_ca": "Ritme i comunicació corporal",
+    "vinculos": [
+      {
+        "criterios": {
+          "musica": [
+            "2.1",
+            "2.2"
+          ],
+          "educacion_fisica": [
+            "4.3"
+          ]
+        },
+        "resumen_es": {
+          "musica": "explorar recursos y expresar ideas y emociones.",
+          "educacion_fisica": "participar en composiciones de expresión corporal."
+        },
+        "resumen_ca": {
+          "musica": "explorar recursos i expressar idees i emocions.",
+          "educacion_fisica": "participar en composicions d’expressió corporal."
+        },
+        "relacion_es": "Correspondencia entre estímulo musical, gesto e intención expresiva.",
+        "relacion_ca": "Correspondència entre estímul musical, gest i intenció expressiva."
+      },
+      {
+        "criterios": {
+          "musica": [
+            "3.2",
+            "3.3"
+          ],
+          "educacion_fisica": [
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "aplicar técnicas e interpretar música y danza.",
+          "educacion_fisica": "cooperar y asumir roles en prácticas motrices."
+        },
+        "resumen_ca": {
+          "musica": "aplicar tècniques i interpretar música i dansa.",
+          "educacion_fisica": "cooperar i assumir rols en pràctiques motrius."
+        },
+        "relacion_es": "Coordinación de la interpretación y del movimiento en grupo.",
+        "relacion_ca": "Coordinació de la interpretació i del moviment en grup."
+      }
+    ],
+    "saberes": {
+      "musica": {
+        "es": [
+          "Ritmo",
+          "duración",
+          "técnica corporal",
+          "repertorio de danzas",
+          "improvisación guiada",
+          "escucha e interpretación colectiva"
+        ],
+        "ca": [
+          "Ritme",
+          "durada",
+          "tècnica corporal",
+          "repertori de danses",
+          "improvisació guiada",
+          "escolta i interpretació col·lectiva"
+        ]
+      },
+      "educacion_fisica": {
+        "es": [
+          "Coordinación espacial y temporal",
+          "expresión corporal",
+          "actividades rítmicas",
+          "danzas tradicionales",
+          "cooperación"
+        ],
+        "ca": [
+          "Coordinació espacial i temporal",
+          "expressió corporal",
+          "activitats rítmiques",
+          "danses tradicionals",
+          "cooperació"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "ritmo",
+      "tiempo",
+      "movimiento",
+      "expresión",
+      "coordinación",
+      "interpretación"
+    ],
+    "conceptos_ca": [
+      "ritme",
+      "temps",
+      "moviment",
+      "expressió",
+      "coordinació",
+      "interpretació"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "musica",
+        "opcion": 1,
+        "ambito_es": "Ritmo y comunicación corporal",
+        "ambito_ca": "Ritme i comunicació corporal"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-17",
+    "curso": "1º",
+    "materias": [
+      "musica",
+      "matematicas"
+    ],
+    "ambito_es": "Duración y relaciones numéricas en el ritmo",
+    "ambito_ca": "Durada i relacions numèriques en el ritme",
+    "vinculos": [
+      {
+        "criterios": {
+          "musica": [
+            "3.1"
+          ],
+          "matematicas": [
+            "6.1",
+            "6.2"
+          ]
+        },
+        "resumen_es": {
+          "musica": "leer partituras e identificar elementos del lenguaje musical.",
+          "matematicas": "identificar relaciones matemáticas en situaciones reales y otras materias."
+        },
+        "resumen_ca": {
+          "musica": "llegir partitures i identificar elements del llenguatge musical.",
+          "matematicas": "identificar relacions matemàtiques en situacions reals i altres matèries."
+        },
+        "relacion_es": "Comprensión de las duraciones relativas y de la organización temporal del discurso musical.",
+        "relacion_ca": "Comprensió de les durades relatives i de l’organització temporal del discurs musical."
+      },
+      {
+        "criterios": {
+          "musica": [
+            "3.2",
+            "3.3"
+          ],
+          "matematicas": [
+            "7.1",
+            "8.1"
+          ]
+        },
+        "resumen_es": {
+          "musica": "aplicar técnicas e interpretar piezas sencillas.",
+          "matematicas": "representar relaciones y explicar procedimientos."
+        },
+        "resumen_ca": {
+          "musica": "aplicar tècniques i interpretar peces senzilles.",
+          "matematicas": "representar relacions i explicar procediments."
+        },
+        "relacion_es": "Correspondencia entre representación simbólica, equivalencias y ejecución rítmica.",
+        "relacion_ca": "Correspondència entre representació simbòlica, equivalències i execució rítmica."
+      }
+    ],
+    "saberes": {
+      "musica": {
+        "es": [
+          "Duración",
+          "ritmo",
+          "elementos básicos del lenguaje musical",
+          "lectura de partituras",
+          "interpretación rítmica"
+        ],
+        "ca": [
+          "Durada",
+          "ritme",
+          "elements bàsics del llenguatge musical",
+          "lectura de partitures",
+          "interpretació rítmica"
+        ]
+      },
+      "matematicas": {
+        "es": [
+          "Fracciones",
+          "equivalencias",
+          "operaciones con números racionales",
+          "razones",
+          "proporcionalidad",
+          "representación de relaciones numéricas"
+        ],
+        "ca": [
+          "Fraccions",
+          "equivalències",
+          "operacions amb nombres racionals",
+          "raons",
+          "proporcionalitat",
+          "representació de relacions numèriques"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "duración",
+      "unidad",
+      "fracción",
+      "equivalencia",
+      "proporción",
+      "patrón"
+    ],
+    "conceptos_ca": [
+      "durada",
+      "unitat",
+      "fracció",
+      "equivalència",
+      "proporció",
+      "patró"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "musica",
+        "opcion": 2,
+        "ambito_es": "Duración y relaciones numéricas en el ritmo",
+        "ambito_ca": "Durada i relacions numèriques en el ritme"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-18",
+    "curso": "1º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Transferencia entre lenguas extranjeras",
+    "ambito_ca": "Transferència entre llengües estrangeres",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "5.1",
+            "5.2"
+          ],
+          "lengua_extranjera": [
+            "5.1",
+            "5.2"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "comparar lenguas y aplicar estrategias de aprendizaje.",
+          "lengua_extranjera": "contrastar sistemas lingüísticos y utilizar estrategias de mejora."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "comparar llengües i aplicar estratègies d’aprenentatge.",
+          "lengua_extranjera": "contrastar sistemes lingüístics i utilitzar estratègies de millora."
+        },
+        "relacion_es": "Identificación de semejanzas, diferencias y recursos transferibles entre lenguas.",
+        "relacion_ca": "Identificació de semblances, diferències i recursos transferibles entre llengües."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "2.3",
+            "3.2"
+          ],
+          "lengua_extranjera": [
+            "2.3",
+            "3.2"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "planificar mensajes y emplear estrategias de interacción.",
+          "lengua_extranjera": "revisar la producción y gestionar los turnos y las aclaraciones."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "planificar missatges i emprar estratègies d’interacció.",
+          "lengua_extranjera": "revisar la producció i gestionar els torns i aclariments."
+        },
+        "relacion_es": "Coordinación de procedimientos comunicativos con exigencias ajustadas al dominio de cada lengua.",
+        "relacion_ca": "Coordinació de procediments comunicatius amb exigències ajustades al domini de cada llengua."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Léxico básico",
+          "estructuras comunicativas",
+          "patrones sonoros",
+          "estrategias de comprensión y producción",
+          "comparación lingüística",
+          "cortesía"
+        ],
+        "ca": [
+          "Lèxic bàsic",
+          "estructures comunicatives",
+          "patrons sonors",
+          "estratègies de comprensió i producció",
+          "comparació lingüística",
+          "cortesia"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Funciones comunicativas",
+          "estructuras básicas",
+          "pronunciación",
+          "planificación y revisión",
+          "estrategias de interacción",
+          "plurilingüismo"
+        ],
+        "ca": [
+          "Funcions comunicatives",
+          "estructures bàsiques",
+          "pronunciació",
+          "planificació i revisió",
+          "estratègies d’interacció",
+          "plurilingüisme"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "lengua",
+      "estructura",
+      "significado",
+      "transferencia",
+      "estrategia",
+      "interacción"
+    ],
+    "conceptos_ca": [
+      "llengua",
+      "estructura",
+      "significat",
+      "transferència",
+      "estratègia",
+      "interacció"
+    ],
+    "origen": "documento",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "opcion": 1,
+        "ambito_es": "Transferencia entre lenguas extranjeras",
+        "ambito_ca": "Transferència entre llengües estrangeres"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-19",
+    "curso": "1º",
+    "materias": [
+      "igualdad_genero",
+      "lengua_extranjera"
+    ],
+    "ambito_es": "Mujeres referentes y diversidad cultural",
+    "ambito_ca": "Dones referents i diversitat cultural",
+    "vinculos": [
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "3.2"
+          ],
+          "lengua_extranjera": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "conocer mujeres referentes de todos los ámbitos y visibilizarlas.",
+          "lengua_extranjera": "interpretar el sentido global y la información específica de textos breves."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "conèixer dones referents de tots els àmbits i visibilitzar-les.",
+          "lengua_extranjera": "interpretar el sentit global i la informació específica de texts breus."
+        },
+        "relacion_es": "Lectura de biografías breves de mujeres referentes de países donde se habla la lengua extranjera.",
+        "relacion_ca": "Lectura de biografies breus de dones referents de països on es parla la llengua estrangera."
+      },
+      {
+        "criterios": {
+          "igualdad_genero": [
+            "1.2"
+          ],
+          "lengua_extranjera": [
+            "6.2",
+            "6.3"
+          ]
+        },
+        "resumen_es": {
+          "igualdad_genero": "detectar y analizar críticamente mandatos e imágenes estereotipadas.",
+          "lengua_extranjera": "aceptar la diversidad cultural y rechazar estereotipos y prejuicios."
+        },
+        "resumen_ca": {
+          "igualdad_genero": "detectar i analitzar críticament mandats i imatges estereotipades.",
+          "lengua_extranjera": "acceptar la diversitat cultural i rebutjar estereotips i prejudicis."
+        },
+        "relacion_es": "Análisis crítico de los estereotipos de género en materiales auténticos de otras culturas.",
+        "relacion_ca": "Anàlisi crítica dels estereotips de gènere en materials autèntics d’altres cultures."
+      }
+    ],
+    "saberes": {
+      "igualdad_genero": {
+        "es": [
+          "Mujeres referentes en la ciencia, el arte y la política",
+          "Estereotipos y roles de género",
+          "Socialización de género",
+          "Silenciación e invisibilización histórica de la mujer"
+        ],
+        "ca": [
+          "Dones referents en la ciència, l’art i la política",
+          "Estereotips i rols de gènere",
+          "Socialització de gènere",
+          "Silenciació i invisibilització històrica de la dona"
+        ]
+      },
+      "lengua_extranjera": {
+        "es": [
+          "Comprensión de textos breves y biografías",
+          "Aspectos socioculturales de los países de la lengua",
+          "Estereotipos e interculturalidad",
+          "Léxico de descripción de personas"
+        ],
+        "ca": [
+          "Comprensió de texts breus i biografies",
+          "Aspectes socioculturals dels països de la llengua",
+          "Estereotips i interculturalitat",
+          "Lèxic de descripció de persones"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "referente",
+      "estereotipo",
+      "diversidad",
+      "biografía",
+      "igualdad"
+    ],
+    "conceptos_ca": [
+      "referent",
+      "estereotip",
+      "diversitat",
+      "biografia",
+      "igualtat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "igualdad_genero",
+        "ambito_es": "Mujeres referentes y diversidad cultural",
+        "ambito_ca": "Dones referents i diversitat cultural"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-20",
+    "curso": "1º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "geografia_historia"
+    ],
+    "ambito_es": "Lenguas, territorios y culturas de Europa",
+    "ambito_ca": "Llengües, territoris i cultures d’Europa",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "6.2"
+          ],
+          "geografia_historia": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "aceptar la diversidad lingüística y cultural de los países de la lengua.",
+          "geografia_historia": "representar información geográfica con mapas y otros recursos."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "acceptar la diversitat lingüística i cultural dels països de la llengua.",
+          "geografia_historia": "representar informació geogràfica amb mapes i altres recursos."
+        },
+        "relacion_es": "Localización de los territorios donde se habla la lengua y lectura de sus rasgos geográficos.",
+        "relacion_ca": "Localització dels territoris on es parla la llengua i lectura dels seus trets geogràfics."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "2.1"
+          ],
+          "geografia_historia": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "expresar oralmente textos breves y estructurados sobre temas conocidos.",
+          "geografia_historia": "elaborar y presentar contenidos propios en esquemas y otros formatos."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "expressar oralment texts breus i estructurats sobre temes coneguts.",
+          "geografia_historia": "elaborar i presentar continguts propis en esquemes i altres formats."
+        },
+        "relacion_es": "Presentación oral sencilla de un territorio con apoyo cartográfico.",
+        "relacion_ca": "Presentació oral senzilla d’un territori amb suport cartogràfic."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Aspectos socioculturales y geográficos",
+          "Descripción de lugares",
+          "Expresión oral breve",
+          "Diversidad lingüística"
+        ],
+        "ca": [
+          "Aspectes socioculturals i geogràfics",
+          "Descripció de llocs",
+          "Expressió oral breu",
+          "Diversitat lingüística"
+        ]
+      },
+      "geografia_historia": {
+        "es": [
+          "Mapas y representación del territorio",
+          "Geografía física de Europa",
+          "Diversidad cultural",
+          "Fuentes de información geográfica"
+        ],
+        "ca": [
+          "Mapes i representació del territori",
+          "Geografia física d’Europa",
+          "Diversitat cultural",
+          "Fonts d’informació geogràfica"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "territorio",
+      "lengua",
+      "cultura",
+      "mapa",
+      "diversidad"
+    ],
+    "conceptos_ca": [
+      "territori",
+      "llengua",
+      "cultura",
+      "mapa",
+      "diversitat"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "ambito_es": "Lenguas, territorios y culturas de Europa",
+        "ambito_ca": "Llengües, territoris i cultures d’Europa"
+      }
+    ]
+  },
+  {
+    "id": "ESO1-21",
+    "curso": "1º",
+    "materias": [
+      "segunda_lengua_extranjera",
+      "musica"
+    ],
+    "ambito_es": "Canción y lengua en interacción",
+    "ambito_ca": "Cançó i llengua en interacció",
+    "vinculos": [
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "1.1"
+          ],
+          "musica": [
+            "1.1"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "interpretar el sentido global de textos orales breves.",
+          "musica": "identificar rasgos estilísticos de obras musicales de diferentes épocas y culturas."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "interpretar el sentit global de texts orals breus.",
+          "musica": "identificar trets estilístics d’obres musicals de diferents èpoques i cultures."
+        },
+        "relacion_es": "Comprensión de canciones en la segunda lengua y de su contexto musical.",
+        "relacion_ca": "Comprensió de cançons en la segona llengua i del seu context musical."
+      },
+      {
+        "criterios": {
+          "segunda_lengua_extranjera": [
+            "3.1"
+          ],
+          "musica": [
+            "3.3"
+          ]
+        },
+        "resumen_es": {
+          "segunda_lengua_extranjera": "participar en situaciones interactivas breves y sencillas.",
+          "musica": "interpretar piezas musicales sencillas, individualmente y en grupo."
+        },
+        "resumen_ca": {
+          "segunda_lengua_extranjera": "participar en situacions interactives breus i senzilles.",
+          "musica": "interpretar peces musicals senzilles, individualment i en grup."
+        },
+        "relacion_es": "Interpretación colectiva de una canción que integra pronunciación, ritmo e interacción.",
+        "relacion_ca": "Interpretació col·lectiva d’una cançó que integra pronunciació, ritme i interacció."
+      }
+    ],
+    "saberes": {
+      "segunda_lengua_extranjera": {
+        "es": [
+          "Patrones sonoros, acentuales y rítmicos",
+          "Comprensión oral de canciones",
+          "Interacción en situaciones sencillas",
+          "Aspectos culturales"
+        ],
+        "ca": [
+          "Patrons sonors, accentuals i rítmics",
+          "Comprensió oral de cançons",
+          "Interacció en situacions senzilles",
+          "Aspectes culturals"
+        ]
+      },
+      "musica": {
+        "es": [
+          "Repertorio vocal de diferentes culturas",
+          "Técnica vocal",
+          "Ritmo y pulsación",
+          "Interpretación en grupo"
+        ],
+        "ca": [
+          "Repertori vocal de diferents cultures",
+          "Tècnica vocal",
+          "Ritme i pulsació",
+          "Interpretació en grup"
+        ]
+      }
+    },
+    "conceptos_es": [
+      "ritmo",
+      "pronunciación",
+      "canción",
+      "interpretación",
+      "cultura"
+    ],
+    "conceptos_ca": [
+      "ritme",
+      "pronunciació",
+      "cançó",
+      "interpretació",
+      "cultura"
+    ],
+    "origen": "ampliacion",
+    "fuentes": [
+      {
+        "materia": "segunda_lengua_extranjera",
+        "ambito_es": "Canción y lengua en interacción",
+        "ambito_ca": "Cançó i llengua en interacció"
+      }
+    ]
+  }
+]

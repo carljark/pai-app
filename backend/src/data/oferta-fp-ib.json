@@ -1,0 +1,938 @@
+[
+  {
+    "codigo": "ADG11",
+    "etapa": "FPB",
+    "familia_es": "Administración y Gestión",
+    "familia_ca": "Administració i gestió",
+    "nombre_es": "Servicios Administrativos",
+    "nombre_ca": "Serveis administratius"
+  },
+  {
+    "codigo": "ADG21",
+    "etapa": "CFGM",
+    "familia_es": "Administración y Gestión",
+    "familia_ca": "Administració i gestió",
+    "nombre_es": "Gestión Administrativa",
+    "nombre_ca": "Gestió administrativa"
+  },
+  {
+    "codigo": "ADG31",
+    "etapa": "CFGS",
+    "familia_es": "Administración y Gestión",
+    "familia_ca": "Administració i gestió",
+    "nombre_es": "Asistencia a la Dirección",
+    "nombre_ca": "Assistència a la direcció"
+  },
+  {
+    "codigo": "ADG32",
+    "etapa": "CFGS",
+    "familia_es": "Administración y Gestión",
+    "familia_ca": "Administració i gestió",
+    "nombre_es": "Administración y Finanzas",
+    "nombre_ca": "Administració i finances"
+  },
+  {
+    "codigo": "AFD11",
+    "etapa": "FPB",
+    "familia_es": "Actividades Físicas y Deportivas",
+    "familia_ca": "Activitats físiques i esportives",
+    "nombre_es": "Acceso y Conservación en Instalaciones Deportivas",
+    "nombre_ca": "Accés i conservació d'instal·lacions esportives"
+  },
+  {
+    "codigo": "AFD21",
+    "etapa": "CFGM",
+    "familia_es": "Actividades Físicas y Deportivas",
+    "familia_ca": "Activitats físiques i esportives",
+    "nombre_es": "Guía en el Medio Natural y de Tiempo Libre",
+    "nombre_ca": "Guia en el medi natural i de temps lliure"
+  },
+  {
+    "codigo": "AFD31",
+    "etapa": "CFGS",
+    "familia_es": "Actividades Físicas y Deportivas",
+    "familia_ca": "Activitats físiques i esportives",
+    "nombre_es": "Enseñanza y Animación Sociodeportiva",
+    "nombre_ca": "Ensenyament i animació socioesportiva"
+  },
+  {
+    "codigo": "AFD32",
+    "etapa": "CFGS",
+    "familia_es": "Actividades Físicas y Deportivas",
+    "familia_ca": "Activitats físiques i esportives",
+    "nombre_es": "Acondicionamiento Físico",
+    "nombre_ca": "Condicionament físic"
+  },
+  {
+    "codigo": "AGA11",
+    "etapa": "FPB",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Agro-jardinería y Composiciones Florales",
+    "nombre_ca": "Agrojardineria i composicions florals"
+  },
+  {
+    "codigo": "AGA13",
+    "etapa": "FPB",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Aprovechamientos Forestales",
+    "nombre_ca": "Aprofitaments forestals"
+  },
+  {
+    "codigo": "AGA21",
+    "etapa": "CFGM",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Producción Agroecológica",
+    "nombre_ca": "Producció agroecològica"
+  },
+  {
+    "codigo": "AGA22",
+    "etapa": "CFGM",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Producción Agropecuaria",
+    "nombre_ca": "Producció agropecuària"
+  },
+  {
+    "codigo": "AGA23",
+    "etapa": "CFGM",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Jardinería y Floristería",
+    "nombre_ca": "Jardineria i floristeria"
+  },
+  {
+    "codigo": "AGA25",
+    "etapa": "CFGM",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Aprovechamiento y Conservación del Medio Natural",
+    "nombre_ca": "Aprofitament i conservació del medi natural"
+  },
+  {
+    "codigo": "AGA31",
+    "etapa": "CFGS",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Paisajismo y Medio Rural",
+    "nombre_ca": "Paisatgisme i medi rural"
+  },
+  {
+    "codigo": "AGA32",
+    "etapa": "CFGS",
+    "familia_es": "Agraria",
+    "familia_ca": "Agrària",
+    "nombre_es": "Gestión Forestal y del Medio Natural",
+    "nombre_ca": "Gestió forestal i del medi natural"
+  },
+  {
+    "codigo": "ARG11",
+    "etapa": "FPB",
+    "familia_es": "Artes Gráficas",
+    "familia_ca": "Arts gràfiques",
+    "nombre_es": "Artes Gráficas",
+    "nombre_ca": "Arts gràfiques"
+  },
+  {
+    "codigo": "ARG21",
+    "etapa": "CFGM",
+    "familia_es": "Artes Gráficas",
+    "familia_ca": "Arts gràfiques",
+    "nombre_es": "Preimpresión Digital",
+    "nombre_ca": "Preimpressió digital"
+  },
+  {
+    "codigo": "ARG22",
+    "etapa": "CFGM",
+    "familia_es": "Artes Gráficas",
+    "familia_ca": "Arts gràfiques",
+    "nombre_es": "Impresión Gráfica",
+    "nombre_ca": "Impressió gràfica"
+  },
+  {
+    "codigo": "ARG32",
+    "etapa": "CFGS",
+    "familia_es": "Artes Gráficas",
+    "familia_ca": "Arts gràfiques",
+    "nombre_es": "Diseño y Edición de Publicaciones Impresas y Multimedia",
+    "nombre_ca": "Disseny i edició de publicacions impreses i multimèdia"
+  },
+  {
+    "codigo": "COM11",
+    "etapa": "FPB",
+    "familia_es": "Comercio y Marketing",
+    "familia_ca": "Comerç i màrqueting",
+    "nombre_es": "Servicios Comerciales",
+    "nombre_ca": "Serveis comercials"
+  },
+  {
+    "codigo": "COM21",
+    "etapa": "CFGM",
+    "familia_es": "Comercio y Marketing",
+    "familia_ca": "Comerç i màrqueting",
+    "nombre_es": "Actividades Comerciales",
+    "nombre_ca": "Activitats comercials"
+  },
+  {
+    "codigo": "COM31",
+    "etapa": "CFGS",
+    "familia_es": "Comercio y Marketing",
+    "familia_ca": "Comerç i màrqueting",
+    "nombre_es": "Marketing y Publicidad",
+    "nombre_ca": "Màrqueting i publicitat"
+  },
+  {
+    "codigo": "COM33",
+    "etapa": "CFGS",
+    "familia_es": "Comercio y Marketing",
+    "familia_ca": "Comerç i màrqueting",
+    "nombre_es": "Gestión de Ventas y Espacios Comerciales",
+    "nombre_ca": "Gestió de vendes i espais comercials"
+  },
+  {
+    "codigo": "COM34",
+    "etapa": "CFGS",
+    "familia_es": "Comercio y Marketing",
+    "familia_ca": "Comerç i màrqueting",
+    "nombre_es": "Comercio Internacional",
+    "nombre_ca": "Comerç internacional"
+  },
+  {
+    "codigo": "COM35",
+    "etapa": "CFGS",
+    "familia_es": "Comercio y Marketing",
+    "familia_ca": "Comerç i màrqueting",
+    "nombre_es": "Transporte y Logística",
+    "nombre_ca": "Transport i logística"
+  },
+  {
+    "codigo": "ELE11",
+    "etapa": "FPB",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Electricidad y Electrónica",
+    "nombre_ca": "Electricitat i electrònica"
+  },
+  {
+    "codigo": "ELE21",
+    "etapa": "CFGM",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Instalaciones Eléctricas y Automáticas",
+    "nombre_ca": "Instal·lacions elèctriques i automàtiques"
+  },
+  {
+    "codigo": "ELE22",
+    "etapa": "CFGM",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Instalaciones de Telecomunicaciones",
+    "nombre_ca": "Instal·lacions de telecomunicacions"
+  },
+  {
+    "codigo": "ELE31",
+    "etapa": "CFGS",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Sistemas Electrotécnicos y Automatizados",
+    "nombre_ca": "Sistemes electrotècnics i automatitzats"
+  },
+  {
+    "codigo": "ELE32",
+    "etapa": "CFGS",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Sistemas de Telecomunicaciones e Informáticos",
+    "nombre_ca": "Sistemes de telecomunicacions i informàtics"
+  },
+  {
+    "codigo": "ELE33",
+    "etapa": "CFGS",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Mantenimiento Electrónico",
+    "nombre_ca": "Manteniment electrònic"
+  },
+  {
+    "codigo": "ELE34",
+    "etapa": "CFGS",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Automatización y Robótica Industrial",
+    "nombre_ca": "Automatització i robòtica industrial"
+  },
+  {
+    "codigo": "ELE35",
+    "etapa": "CFGS",
+    "familia_es": "Electricidad y Electrónica",
+    "familia_ca": "Electricitat i electrònica",
+    "nombre_es": "Electromedicina Clínica",
+    "nombre_ca": "Electromedicina clínica"
+  },
+  {
+    "codigo": "ENA31",
+    "etapa": "CFGS",
+    "familia_es": "Energía y Agua",
+    "familia_ca": "Energia i aigua",
+    "nombre_es": "Eficiencia Energética y Energía Solar Térmica",
+    "nombre_ca": "Eficiència energètica i energia solar tèrmica"
+  },
+  {
+    "codigo": "ENA33",
+    "etapa": "CFGS",
+    "familia_es": "Energía y Agua",
+    "familia_ca": "Energia i aigua",
+    "nombre_es": "Energías Renovables",
+    "nombre_ca": "Energies renovables"
+  },
+  {
+    "codigo": "EOC21",
+    "etapa": "CFGM",
+    "familia_es": "Edificación y Obra Civil",
+    "familia_ca": "Edificació i obra civil",
+    "nombre_es": "Construcción",
+    "nombre_ca": "Construcció"
+  },
+  {
+    "codigo": "EOC31",
+    "etapa": "CFGS",
+    "familia_es": "Edificación y Obra Civil",
+    "familia_ca": "Edificació i obra civil",
+    "nombre_es": "Proyectos de Edificación",
+    "nombre_ca": "Projectes d'edificació"
+  },
+  {
+    "codigo": "EOC32",
+    "etapa": "CFGS",
+    "familia_es": "Edificación y Obra Civil",
+    "familia_ca": "Edificació i obra civil",
+    "nombre_es": "Proyectos de Obra Civil",
+    "nombre_ca": "Projectes d'obra civil"
+  },
+  {
+    "codigo": "EOC33",
+    "etapa": "CFGS",
+    "familia_es": "Edificación y Obra Civil",
+    "familia_ca": "Edificació i obra civil",
+    "nombre_es": "Organización y Control de Obras de Construcción",
+    "nombre_ca": "Organització i control d'obres de construcció"
+  },
+  {
+    "codigo": "FME11",
+    "etapa": "FPB",
+    "familia_es": "Fabricación Mecánica",
+    "familia_ca": "Fabricació mecànica",
+    "nombre_es": "Fabricación y Montaje",
+    "nombre_ca": "Fabricació i muntatge"
+  },
+  {
+    "codigo": "FME21",
+    "etapa": "CFGM",
+    "familia_es": "Fabricación Mecánica",
+    "familia_ca": "Fabricació mecànica",
+    "nombre_es": "Mecanizado",
+    "nombre_ca": "Mecanització"
+  },
+  {
+    "codigo": "HOT11",
+    "etapa": "FPB",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Cocina y Restauración",
+    "nombre_ca": "Cuina i restauració"
+  },
+  {
+    "codigo": "HOT21",
+    "etapa": "CFGM",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Cocina y Gastronomía",
+    "nombre_ca": "Cuina i gastronomia"
+  },
+  {
+    "codigo": "HOT22",
+    "etapa": "CFGM",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Servicios en Restauración",
+    "nombre_ca": "Serveis en restauració"
+  },
+  {
+    "codigo": "HOT31",
+    "etapa": "CFGS",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Gestión de Alojamientos Turísticos",
+    "nombre_ca": "Gestió d'allotjaments turístics"
+  },
+  {
+    "codigo": "HOT32",
+    "etapa": "CFGS",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Agencias de Viajes y Gestión de Eventos",
+    "nombre_ca": "Agències de viatges i gestió d'esdeveniments"
+  },
+  {
+    "codigo": "HOT33",
+    "etapa": "CFGS",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Guía, Información y Asistencias Turísticas",
+    "nombre_ca": "Guia, informació i assistències turístiques"
+  },
+  {
+    "codigo": "HOT34",
+    "etapa": "CFGS",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Dirección de Cocina",
+    "nombre_ca": "Direcció de cuina"
+  },
+  {
+    "codigo": "HOT35",
+    "etapa": "CFGS",
+    "familia_es": "Hostelería y Turismo",
+    "familia_ca": "Hoteleria i turisme",
+    "nombre_es": "Dirección de Servicios de Restauración",
+    "nombre_ca": "Direcció de serveis en restauració"
+  },
+  {
+    "codigo": "IFC11",
+    "etapa": "FPB",
+    "familia_es": "Informática y Comunicaciones",
+    "familia_ca": "Informàtica i comunicacions",
+    "nombre_es": "Informática y Comunicaciones",
+    "nombre_ca": "Informàtica i comunicacions"
+  },
+  {
+    "codigo": "IFC12",
+    "etapa": "FPB",
+    "familia_es": "Informática y Comunicaciones",
+    "familia_ca": "Informàtica i comunicacions",
+    "nombre_es": "Informática de Oficina",
+    "nombre_ca": "Informàtica d'oficina"
+  },
+  {
+    "codigo": "IFC21",
+    "etapa": "CFGM",
+    "familia_es": "Informática y Comunicaciones",
+    "familia_ca": "Informàtica i comunicacions",
+    "nombre_es": "Sistemas Microinformáticos y Redes",
+    "nombre_ca": "Sistemes microinformàtics i xarxes"
+  },
+  {
+    "codigo": "IFC31",
+    "etapa": "CFGS",
+    "familia_es": "Informática y Comunicaciones",
+    "familia_ca": "Informàtica i comunicacions",
+    "nombre_es": "Administración de Sistemas Informáticos en Red",
+    "nombre_ca": "Administració de sistemes informàtics en xarxa"
+  },
+  {
+    "codigo": "IFC32",
+    "etapa": "CFGS",
+    "familia_es": "Informática y Comunicaciones",
+    "familia_ca": "Informàtica i comunicacions",
+    "nombre_es": "Desarrollo de Aplicaciones Multiplataforma",
+    "nombre_ca": "Desenvolupament d'aplicacions multiplataforma"
+  },
+  {
+    "codigo": "IFC33",
+    "etapa": "CFGS",
+    "familia_es": "Informática y Comunicaciones",
+    "familia_ca": "Informàtica i comunicacions",
+    "nombre_es": "Desarrollo de Aplicaciones Web",
+    "nombre_ca": "Desenvolupament d'aplicacions web"
+  },
+  {
+    "codigo": "IMA12",
+    "etapa": "FPB",
+    "familia_es": "Instalación y Mantenimiento",
+    "familia_ca": "Instal·lació i manteniment",
+    "nombre_es": "Mantenimiento de Viviendas",
+    "nombre_ca": "Manteniment d'habitatges"
+  },
+  {
+    "codigo": "IMA21",
+    "etapa": "CFGM",
+    "familia_es": "Instalación y Mantenimiento",
+    "familia_ca": "Instal·lació i manteniment",
+    "nombre_es": "Instalaciones de Producción de Calor",
+    "nombre_ca": "Instal·lacions de producció de calor"
+  },
+  {
+    "codigo": "IMA22",
+    "etapa": "CFGM",
+    "familia_es": "Instalación y Mantenimiento",
+    "familia_ca": "Instal·lació i manteniment",
+    "nombre_es": "Instalaciones Frigoríficas y de Climatización",
+    "nombre_ca": "Instal·lacions frigorífiques i de climatització"
+  },
+  {
+    "codigo": "IMA23",
+    "etapa": "CFGM",
+    "familia_es": "Instalación y Mantenimiento",
+    "familia_ca": "Instal·lació i manteniment",
+    "nombre_es": "Mantenimiento Electromecánico",
+    "nombre_ca": "Manteniment electromecànic"
+  },
+  {
+    "codigo": "IMA32",
+    "etapa": "CFGS",
+    "familia_es": "Instalación y Mantenimiento",
+    "familia_ca": "Instal·lació i manteniment",
+    "nombre_es": "Mantenimiento de Instalaciones Térmicas y de Fluidos",
+    "nombre_ca": "Manteniment d'instal·lacions tèrmiques i de fluids"
+  },
+  {
+    "codigo": "IMP11",
+    "etapa": "FPB",
+    "familia_es": "Imagen Personal",
+    "familia_ca": "Imatge personal",
+    "nombre_es": "Peluquería y Estética",
+    "nombre_ca": "Perruqueria i estètica"
+  },
+  {
+    "codigo": "IMP21",
+    "etapa": "CFGM",
+    "familia_es": "Imagen Personal",
+    "familia_ca": "Imatge personal",
+    "nombre_es": "Estética y Belleza",
+    "nombre_ca": "Estètica i bellesa"
+  },
+  {
+    "codigo": "IMP22",
+    "etapa": "CFGM",
+    "familia_es": "Imagen Personal",
+    "familia_ca": "Imatge personal",
+    "nombre_es": "Peluquería y Cosmética Capilar",
+    "nombre_ca": "Perruqueria i cosmètica capil·lar"
+  },
+  {
+    "codigo": "IMP31",
+    "etapa": "CFGS",
+    "familia_es": "Imagen Personal",
+    "familia_ca": "Imatge personal",
+    "nombre_es": "Estética Integral y Bienestar",
+    "nombre_ca": "Estètica integral i benestar"
+  },
+  {
+    "codigo": "IMP32",
+    "etapa": "CFGS",
+    "familia_es": "Imagen Personal",
+    "familia_ca": "Imatge personal",
+    "nombre_es": "Estilismo y Dirección de Peluquería",
+    "nombre_ca": "Estilisme i direcció de perruqueria"
+  },
+  {
+    "codigo": "IMP33",
+    "etapa": "CFGS",
+    "familia_es": "Imagen Personal",
+    "familia_ca": "Imatge personal",
+    "nombre_es": "Asesoría de Imagen Personal y Corporativa",
+    "nombre_ca": "Assessoria d'imatge personal i corporativa"
+  },
+  {
+    "codigo": "IMS21",
+    "etapa": "CFGM",
+    "familia_es": "Imagen y Sonido",
+    "familia_ca": "Imatge i so",
+    "nombre_es": "Vídeo Disc-Jockey y Sonido",
+    "nombre_ca": "Vídeo disc-jockey i so"
+  },
+  {
+    "codigo": "IMS31",
+    "etapa": "CFGS",
+    "familia_es": "Imagen y Sonido",
+    "familia_ca": "Imatge i so",
+    "nombre_es": "Animaciones 3D, Juegos y Entornos Interactivos",
+    "nombre_ca": "Animacions 3D, jocs i entorns interactius"
+  },
+  {
+    "codigo": "IMS32",
+    "etapa": "CFGS",
+    "familia_es": "Imagen y Sonido",
+    "familia_ca": "Imatge i so",
+    "nombre_es": "Realización de Proyectos Audiovisuales y Espectáculos",
+    "nombre_ca": "Realització de projectes d'audiovisuals i espectacles"
+  },
+  {
+    "codigo": "IMS33",
+    "etapa": "CFGS",
+    "familia_es": "Imagen y Sonido",
+    "familia_ca": "Imatge i so",
+    "nombre_es": "Producción de Audiovisuales y Espectáculos",
+    "nombre_ca": "Producció d'audiovisuals i espectacles"
+  },
+  {
+    "codigo": "IMS34",
+    "etapa": "CFGS",
+    "familia_es": "Imagen y Sonido",
+    "familia_ca": "Imatge i so",
+    "nombre_es": "Sonido para Audiovisuales y Espectáculos",
+    "nombre_ca": "So per a audiovisuals i espectacles"
+  },
+  {
+    "codigo": "IMS35",
+    "etapa": "CFGS",
+    "familia_es": "Imagen y Sonido",
+    "familia_ca": "Imatge i so",
+    "nombre_es": "Iluminación, Captación y Tratamiento de Imagen",
+    "nombre_ca": "Il·luminació captació i tractament d'imatge"
+  },
+  {
+    "codigo": "INA12",
+    "etapa": "FPB",
+    "familia_es": "Industrias Alimentarias",
+    "familia_ca": "Indústries alimentàries",
+    "nombre_es": "Actividades de Panadería y Pastelería",
+    "nombre_ca": "Activitats de forneria i pastisseria"
+  },
+  {
+    "codigo": "INA21",
+    "etapa": "CFGM",
+    "familia_es": "Industrias Alimentarias",
+    "familia_ca": "Indústries alimentàries",
+    "nombre_es": "Panadería, Repostería y Confitería",
+    "nombre_ca": "Forneria, rebosteria i confiteria"
+  },
+  {
+    "codigo": "INA22",
+    "etapa": "CFGM",
+    "familia_es": "Industrias Alimentarias",
+    "familia_ca": "Indústries alimentàries",
+    "nombre_es": "Aceites de Oliva y Vinos",
+    "nombre_ca": "Olis d'oliva i vi"
+  },
+  {
+    "codigo": "INA31",
+    "etapa": "CFGS",
+    "familia_es": "Industrias Alimentarias",
+    "familia_ca": "Indústries alimentàries",
+    "nombre_es": "Vitivinicultura",
+    "nombre_ca": "Vitivinicultura"
+  },
+  {
+    "codigo": "MAM11",
+    "etapa": "FPB",
+    "familia_es": "Madera, Mueble y Corcho",
+    "familia_ca": "Fusta, moble i suro",
+    "nombre_es": "Carpintería y Mueble",
+    "nombre_ca": "Fusteria i moble"
+  },
+  {
+    "codigo": "MAM21",
+    "etapa": "CFGM",
+    "familia_es": "Madera, Mueble y Corcho",
+    "familia_ca": "Fusta, moble i suro",
+    "nombre_es": "Carpintería y Mueble",
+    "nombre_ca": "Fusteria i moble"
+  },
+  {
+    "codigo": "MAM31",
+    "etapa": "CFGS",
+    "familia_es": "Madera, Mueble y Corcho",
+    "familia_ca": "Fusta, moble i suro",
+    "nombre_es": "Diseño y Amueblamiento",
+    "nombre_ca": "Disseny i moblament"
+  },
+  {
+    "codigo": "MAP22",
+    "etapa": "CFGM",
+    "familia_es": "Marítimo-Pesquera",
+    "familia_ca": "Maritimopesquera",
+    "nombre_es": "Mantenimiento y Control de la Maquinaria de Buques y Embarcaciones",
+    "nombre_ca": "Manteniment i control de la maquinària de vaixells i embarcacions"
+  },
+  {
+    "codigo": "MAP24",
+    "etapa": "CFGM",
+    "familia_es": "Marítimo-Pesquera",
+    "familia_ca": "Maritimopesquera",
+    "nombre_es": "Navegación y Pesca de Litoral",
+    "nombre_ca": "Navegació i pesca de litoral"
+  },
+  {
+    "codigo": "MAP32",
+    "etapa": "CFGS",
+    "familia_es": "Marítimo-Pesquera",
+    "familia_ca": "Maritimopesquera",
+    "nombre_es": "Transporte Marítimo y Pesca de Altura",
+    "nombre_ca": "Transport marítim i pesca d'altura"
+  },
+  {
+    "codigo": "MAP33",
+    "etapa": "CFGS",
+    "familia_es": "Marítimo-Pesquera",
+    "familia_ca": "Maritimopesquera",
+    "nombre_es": "Organización del Mantenimiento de Maquinaria de Buques y Embarcaciones",
+    "nombre_ca": "Organització del manteniment de maquinària de vaixells i embarcacions"
+  },
+  {
+    "codigo": "QUI31",
+    "etapa": "CFGS",
+    "familia_es": "Química",
+    "familia_ca": "Química",
+    "nombre_es": "Laboratorio de Análisis y de Control de Calidad",
+    "nombre_ca": "Laboratori d'anàlisi i de control de qualitat"
+  },
+  {
+    "codigo": "SAN21",
+    "etapa": "CFGM",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Emergencias Sanitarias",
+    "nombre_ca": "Emergències sanitàries"
+  },
+  {
+    "codigo": "SAN22",
+    "etapa": "CFGM",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Farmacia y Parafarmacia",
+    "nombre_ca": "Farmàcia i parafarmàcia"
+  },
+  {
+    "codigo": "SAN23",
+    "etapa": "CFGM",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Cuidados Auxiliares de Enfermería",
+    "nombre_ca": "Cures auxiliars d'infermeria"
+  },
+  {
+    "codigo": "SAN31",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Anatomía Patológica y Citodiagnóstico",
+    "nombre_ca": "Anatomia patològica i citodiagnòstic"
+  },
+  {
+    "codigo": "SAN32",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Dietética",
+    "nombre_ca": "Dietètica"
+  },
+  {
+    "codigo": "SAN33",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Documentación y Administración Sanitarias",
+    "nombre_ca": "Documentació i administració sanitàries"
+  },
+  {
+    "codigo": "SAN34",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Higiene Bucodental",
+    "nombre_ca": "Higiene bucodental"
+  },
+  {
+    "codigo": "SAN35",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Imagen para el Diagnóstico y Medicina Nuclear",
+    "nombre_ca": "Imatge per al diagnòstic i medicina nuclear"
+  },
+  {
+    "codigo": "SAN36",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Laboratorio Clínico y Biomédico",
+    "nombre_ca": "Laboratori clínic i biomèdic"
+  },
+  {
+    "codigo": "SAN38",
+    "etapa": "CFGS",
+    "familia_es": "Sanidad",
+    "familia_ca": "Sanitat",
+    "nombre_es": "Prótesis Dentales",
+    "nombre_ca": "Pròtesis dentals"
+  },
+  {
+    "codigo": "SEA21",
+    "etapa": "CFGM",
+    "familia_es": "Seguridad y Medio Ambiente",
+    "familia_ca": "Seguretat i medi ambient",
+    "nombre_es": "Emergencias y Protección Civil",
+    "nombre_ca": "Emergències i protecció civil"
+  },
+  {
+    "codigo": "SEA22",
+    "etapa": "CFGM",
+    "familia_es": "Seguridad y Medio Ambiente",
+    "familia_ca": "Seguretat i medi ambient",
+    "nombre_es": "Seguridad",
+    "nombre_ca": "Seguretat"
+  },
+  {
+    "codigo": "SEA23",
+    "etapa": "CFGM",
+    "familia_es": "Seguridad y Medio Ambiente",
+    "familia_ca": "Seguretat i medi ambient",
+    "nombre_es": "Sanidad Ambiental Aplicada",
+    "nombre_ca": "Sanitat ambiental aplicada"
+  },
+  {
+    "codigo": "SEA34",
+    "etapa": "CFGS",
+    "familia_es": "Seguridad y Medio Ambiente",
+    "familia_ca": "Seguretat i medi ambient",
+    "nombre_es": "Prevención de Riesgos Profesionales",
+    "nombre_ca": "Prevenció de riscos professionals"
+  },
+  {
+    "codigo": "SSC11",
+    "etapa": "FPB",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Actividades Domésticas y Limpieza de Edificios",
+    "nombre_ca": "Activitats domèstiques i neteja d'edificis"
+  },
+  {
+    "codigo": "SSC21",
+    "etapa": "CFGM",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Atención a Personas en Situación de Dependencia",
+    "nombre_ca": "Atenció a persones en situació de dependència"
+  },
+  {
+    "codigo": "SSC31",
+    "etapa": "CFGS",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Educación Infantil",
+    "nombre_ca": "Educació infantil"
+  },
+  {
+    "codigo": "SSC32",
+    "etapa": "CFGS",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Animación Sociocultural y Turística",
+    "nombre_ca": "Animació sociocultural i turística"
+  },
+  {
+    "codigo": "SSC33",
+    "etapa": "CFGS",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Integración Social",
+    "nombre_ca": "Integració social"
+  },
+  {
+    "codigo": "SSC34",
+    "etapa": "CFGS",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Mediación Comunicativa",
+    "nombre_ca": "Mediació comunicativa"
+  },
+  {
+    "codigo": "SSC35",
+    "etapa": "CFGS",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Promoción de Igualdad de Género",
+    "nombre_ca": "Promoció de la igualtat de gènere"
+  },
+  {
+    "codigo": "SSC36",
+    "etapa": "CFGS",
+    "familia_es": "Servicios Socioculturales y a la Comunidad",
+    "familia_ca": "Serveis socioculturals i a la comunitat",
+    "nombre_es": "Formación para la Movilidad Segura y Sostenible",
+    "nombre_ca": "Formació per a la mobilitat sostenible"
+  },
+  {
+    "codigo": "TCP11",
+    "etapa": "FPB",
+    "familia_es": "Textil, Confección y Piel",
+    "familia_ca": "Tèxtil, confecció i pell",
+    "nombre_es": "Arreglo y Reparación de Artículos Textiles y de Piel",
+    "nombre_ca": "Arranjament i reparació d'articles tèxtils i de pell"
+  },
+  {
+    "codigo": "TCP21",
+    "etapa": "CFGM",
+    "familia_es": "Textil, Confección y Piel",
+    "familia_ca": "Tèxtil, confecció i pell",
+    "nombre_es": "Confección y Moda",
+    "nombre_ca": "Confecció i moda"
+  },
+  {
+    "codigo": "TCP32",
+    "etapa": "CFGS",
+    "familia_es": "Textil, Confección y Piel",
+    "familia_ca": "Tèxtil, confecció i pell",
+    "nombre_es": "Diseño y Producción de Calzado y Complementos",
+    "nombre_ca": "Disseny de calçat i complements"
+  },
+  {
+    "codigo": "TMV11",
+    "etapa": "FPB",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Mantenimiento de Vehículos",
+    "nombre_ca": "Manteniment de vehicles"
+  },
+  {
+    "codigo": "TMV12",
+    "etapa": "FPB",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Mantenimiento de Embarcaciones Deportivas y de Recreo",
+    "nombre_ca": "Manteniment d'embarcacions esportives i d'esbarjo"
+  },
+  {
+    "codigo": "TMV21",
+    "etapa": "CFGM",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Carrocería",
+    "nombre_ca": "Carrosseria"
+  },
+  {
+    "codigo": "TMV22",
+    "etapa": "CFGM",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Electromecánica de Vehículos Automóviles",
+    "nombre_ca": "Electromecànica de vehicles automòbils"
+  },
+  {
+    "codigo": "TMV26",
+    "etapa": "CFGM",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Mantenimiento de Embarcaciones de Recreo",
+    "nombre_ca": "Manteniment d'embarcacions d'esbarjo"
+  },
+  {
+    "codigo": "TMV31",
+    "etapa": "CFGS",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Automoción",
+    "nombre_ca": "Automoció"
+  },
+  {
+    "codigo": "TMV32",
+    "etapa": "CFGS",
+    "familia_es": "Transporte y Mantenimiento de Vehículos",
+    "familia_ca": "Transport i manteniment de vehicles",
+    "nombre_es": "Mantenimiento Aeromecánico de Aviones con Motor de Turbina",
+    "nombre_ca": "Manteniment aeromecànic d'avions amb motor de turbina"
+  }
+]

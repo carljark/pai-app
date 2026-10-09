@@ -9,6 +9,7 @@ import projectRoutes from './routes/project.routes';
 import telemetryRoutes from './routes/telemetry.routes';
 import notificationRoutes from './routes/notification.routes';
 import feedbackRoutes from './routes/feedback.routes';
+import solicitudesRoutes from './routes/solicitudes.routes';
 import mapaRoutes from './routes/mapa.routes';
 import afinidadesRoutes from './routes/afinidades.routes';
 import aiRoutes from './routes/ai.routes';
@@ -53,6 +54,7 @@ app.use('/api/settings', settingsRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/feedback', feedbackRoutes);
+app.use('/api/solicitudes', solicitudesRoutes);
 app.use('/api/telemetry', telemetryRoutes);
 app.use('/api', curriculumRoutes);
 

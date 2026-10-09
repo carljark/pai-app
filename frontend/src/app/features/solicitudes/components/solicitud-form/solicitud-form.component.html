@@ -1,0 +1,82 @@
+<div class="solicitud-form">
+  <div class="solicitud-form__fila">
+    <label class="solicitud-form__campo solicitud-form__campo--ancho">
+      <span class="solicitud-form__etiqueta">{{ trans.t().solCentro }} *</span>
+      <input
+        class="solicitud-form__input solicitud-form__nombre"
+        maxlength="120"
+        [placeholder]="trans.t().solCentroPlaceholder"
+        [value]="campos().nombre"
+        (input)="actualizar('nombre', $event)"
+      />
+    </label>
+    <label class="solicitud-form__campo">
+      <span class="solicitud-form__etiqueta">{{ trans.t().solMunicipio }}</span>
+      <input
+        class="solicitud-form__input solicitud-form__municipio"
+        maxlength="80"
+        [value]="campos().municipio"
+        (input)="actualizar('municipio', $event)"
+      />
+    </label>
+    <label class="solicitud-form__campo">
+      <span class="solicitud-form__etiqueta">{{ trans.t().solWeb }}</span>
+      <input
+        type="url"
+        class="solicitud-form__input solicitud-form__web"
+        maxlength="200"
+        [value]="campos().web"
+        (input)="actualizar('web', $event)"
+      />
+    </label>
+  </div>
+
+  <fieldset class="solicitud-form__grupo">
+    <legend class="solicitud-form__etiqueta">{{ trans.t().solCiclos }} *</legend>
+    <app-oferta-selector
+      [oferta]="service.oferta()"
+      [seleccionados]="seleccionados()"
+      (seleccionadosChange)="seleccionados.set($event)"
+    />
+  </fieldset>
+
+  <label class="solicitud-form__campo">
+    <span class="solicitud-form__etiqueta">{{ trans.t().solOtros }}</span>
+    <textarea
+      class="solicitud-form__input solicitud-form__otros"
+      rows="2"
+      [placeholder]="trans.t().solOtrosPlaceholder"
+      [value]="campos().otros"
+      (input)="actualizar('otros', $event)"
+    ></textarea>
+  </label>
+
+  <label class="solicitud-form__campo">
+    <span class="solicitud-form__etiqueta">{{ trans.t().solComentario }}</span>
+    <textarea
+      class="solicitud-form__input solicitud-form__comentario"
+      rows="2"
+      maxlength="1000"
+      [value]="campos().comentario"
+      (input)="actualizar('comentario', $event)"
+    ></textarea>
+  </label>
+
+  @if (error()) {
+    <p class="solicitud-form__mensaje solicitud-form__mensaje--error" role="alert">{{ error() }}</p>
+  }
+  @if (enviada()) {
+    <p class="solicitud-form__mensaje solicitud-form__mensaje--ok" role="status">
+      {{ trans.t().solEnviada }}
+    </p>
+  }
+
+  <button
+    type="button"
+    class="btn-primary solicitud-form__enviar"
+    [disabled]="!puedeEnviar()"
+    (click)="enviar()"
+  >
+    {{ service.isSubmitting() ? trans.t().solEnviando : trans.t().solEnviar }}
+  </button>
+</div>

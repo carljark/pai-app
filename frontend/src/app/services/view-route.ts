@@ -1,5 +1,5 @@
 export type AppView =
-  'home' | 'generator' | 'history' | 'taller' | 'admin' | 'mapa' | 'personal' | 'feedback';
+  'home' | 'generator' | 'history' | 'taller' | 'admin' | 'mapa' | 'personal' | 'feedback' | 'solicitudes';
 
 export const APP_VIEWS: readonly AppView[] = [
   'home',
@@ -10,6 +10,7 @@ export const APP_VIEWS: readonly AppView[] = [
   'mapa',
   'personal',
   'feedback',
+  'solicitudes',
 ];
 
 /** Pantalla reflejada en la URL; en el taller incluye el proyecto abierto. */

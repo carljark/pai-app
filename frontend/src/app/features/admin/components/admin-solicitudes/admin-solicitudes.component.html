@@ -1,0 +1,88 @@
+<section class="admin-solicitudes" aria-labelledby="admin-solicitudes-title">
+  <div class="admin-solicitudes__cabecera">
+    <h2 id="admin-solicitudes-title" class="admin-solicitudes__titulo">Solicitudes de centros</h2>
+    <button type="button" class="btn-secondary admin-solicitudes__recargar" (click)="cargar()">
+      Recargar
+    </button>
+  </div>
+  <p class="admin-solicitudes__intro">
+    Centros y ciclos que piden los docentes. Los ciclos pendientes se incorporan desde Claude Code
+    con la skill <code>procesar-solicitudes</code>; después marca aquí cada ciclo como «incorporado»
+    con su número de tarea y cierra la solicitud. El docente recibe un aviso cada vez que cambia el
+    estado de su solicitud.
+  </p>
+
+  @if (error()) {
+    <p class="admin-solicitudes__error" role="alert">{{ error() }}</p>
+  }
+
+  @for (s of service.todas(); track s._id) {
+    <article class="admin-solicitudes__item">
+      <header class="admin-solicitudes__item-cabecera">
+        <div>
+          <strong>{{ s.centro.nombre }}</strong>
+          @if (s.centro.municipio) {
+            <span class="admin-solicitudes__dato">· {{ s.centro.municipio }}</span>
+          }
+          <div class="admin-solicitudes__dato">
+            {{ s.userName }} ({{ s.userEmail }}) · {{ s.createdAt | date: 'dd/MM/yyyy HH:mm' }}
+            @if (s.centro.web) {
+              · <a [href]="s.centro.web" target="_blank" rel="noopener">{{ s.centro.web }}</a>
+            }
+          </div>
+        </div>
+        <select
+          class="admin-solicitudes__select admin-solicitudes__estado"
+          aria-label="Estado de la solicitud"
+          [value]="s.status"
+          (change)="cambiarEstado(s._id, $event)"
+        >
+          @for (e of estados; track e) {
+            <option [value]="e" [selected]="e === s.status">{{ e }}</option>
+          }
+        </select>
+      </header>
+
+      @if (s.comentario) {
+        <p class="admin-solicitudes__comentario">{{ s.comentario }}</p>
+      }
+
+      <ul class="admin-solicitudes__ciclos">
+        @for (c of s.ciclos; track c._id) {
+          <li class="admin-solicitudes__ciclo">
+            <span class="admin-solicitudes__ciclo-nombre">{{ nombreCiclo(c) }}</span>
+            <select
+              class="admin-solicitudes__select admin-solicitudes__estado-ciclo"
+              aria-label="Estado del ciclo"
+              [value]="c.estado"
+              (change)="cambiarEstadoCiclo(s._id, c, $event)"
+            >
+              @for (e of estadosCiclo; track e) {
+                <option [value]="e" [selected]="e === c.estado">{{ e }}</option>
+              }
+            </select>
+            <input
+              class="admin-solicitudes__tarea"
+              placeholder="Tarea"
+              aria-label="Número de tarea"
+              maxlength="10"
+              [value]="c.tarea || ''"
+              (change)="cambiarTarea(s._id, c, $event)"
+            />
+          </li>
+        }
+      </ul>
+
+      <textarea
+        class="admin-solicitudes__notas"
+        rows="2"
+        placeholder="Notas del administrador"
+        aria-label="Notas del administrador"
+        [value]="s.adminNotes"
+        (change)="cambiarNotas(s._id, $event)"
+      ></textarea>
+    </article>
+  } @empty {
+    <p class="admin-solicitudes__vacio">No hay solicitudes.</p>
+  }
+</section>

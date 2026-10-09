@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[218 — Solicitudes de centros y sus ciclos](218_plan_solicitudes_de_centros.md)** · _Implementado (tarea 218)_  
+  Un docente pide su centro y sus ciclos desde la aplicación (con la oferta de FP de Baleares y qué ciclos ya están disponibles), el administrador gestiona las solicitudes y la skill `procesar-solicitudes` incorpora en Claude Code los ciclos que faltan.
+
 - **[005 — Trabajo colaborativo en proyectos compartidos](005_plan_trabajo_colaborativo_en_proyectos.md)** · _Implementado (tarea 203)_  
   Solo autor y colaboradores pueden editar (el resto, solo lectura), notificación al colaborador invitado, turno de edición que bloquea la IA y los cambios a los demás mientras alguien modifica el proyecto, y registro con fecha, hora y autor de cada cambio.
 

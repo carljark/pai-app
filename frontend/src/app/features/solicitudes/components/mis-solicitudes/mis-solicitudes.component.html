@@ -1,0 +1,28 @@
+<section class="mis-solicitudes" aria-labelledby="mis-solicitudes-title">
+  <h3 id="mis-solicitudes-title" class="mis-solicitudes__titulo">{{ trans.t().solMias }}</h3>
+  @for (s of service.misSolicitudes(); track s._id) {
+    <article class="mis-solicitudes__item">
+      <header class="mis-solicitudes__cabecera">
+        <strong class="mis-solicitudes__centro">{{ s.centro.nombre }}</strong>
+        <span class="mis-solicitudes__estado mis-solicitudes__estado--{{ s.status }}">
+          {{ trans.t().solEstados[s.status] }}
+        </span>
+      </header>
+      <p class="mis-solicitudes__fecha">
+        {{ trans.t().solEnviadaEl }} {{ s.createdAt | date: 'dd/MM/yyyy' }}
+      </p>
+      <ul class="mis-solicitudes__ciclos">
+        @for (c of s.ciclos; track c._id) {
+          <li class="mis-solicitudes__ciclo">
+            <span>{{ nombreCiclo(c) }}</span>
+            <span class="mis-solicitudes__estado mis-solicitudes__estado--{{ c.estado }}">
+              {{ trans.t().solEstadosCiclo[c.estado] }}
+            </span>
+          </li>
+        }
+      </ul>
+    </article>
+  } @empty {
+    <p class="mis-solicitudes__vacio">{{ trans.t().solSinSolicitudes }}</p>
+  }
+</section>

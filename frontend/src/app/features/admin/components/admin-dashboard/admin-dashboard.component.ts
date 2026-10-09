@@ -5,12 +5,13 @@ import { AdminFacade } from '../../services/admin.facade';
 import { FeedbackService } from '../../../feedback/services/feedback.service';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { ActivityLog } from '../../models/admin.model';
+import { AdminSolicitudesComponent } from '../admin-solicitudes/admin-solicitudes.component';
 import { ProjectsTransferComponent } from '../projects-transfer/projects-transfer.component';
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [CommonModule, FormsModule, ProjectsTransferComponent],
+  imports: [CommonModule, FormsModule, ProjectsTransferComponent, AdminSolicitudesComponent],
   templateUrl: './admin-dashboard.component.html',
 })
 export class AdminDashboardComponent {

@@ -42,6 +42,10 @@
         <app-feedback-view></app-feedback-view>
       }
 
+      @if (layout.currentView() === 'solicitudes') {
+        <app-solicitudes-view></app-solicitudes-view>
+      }
+
       @if (layout.currentView() === 'admin' && authService.currentUser()?.role === 'admin') {
         <app-admin-dashboard></app-admin-dashboard>
       }

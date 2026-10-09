@@ -285,6 +285,46 @@ export const TRANSLATIONS_CA = {
     REMOVE_COLLABORATOR: 'Va treure un col·laborador',
   } as Record<string, string>,
 
+  // SOL·LICITUDS DE CENTRES
+  sidebarSolicitudes: 'Sol·licitar centre',
+  solTitle: 'Sol·licitar un centre i els seus cicles',
+  solSubtitle:
+    "Indica el teu centre i els cicles que imparteix. Els que ja són a Plappin es poden fer servir des d'ara; els altres s'incorporaran.",
+  solCentro: 'Nom del centre',
+  solCentroPlaceholder: 'P. ex.: IES Cap de Llevant',
+  solMunicipio: 'Municipi',
+  solWeb: 'Web del centre',
+  solCiclos: 'Cicles del centre',
+  solBuscar: 'Cerca per nom, família o codi',
+  solTodasEtapas: 'Tots els graus',
+  solEtapas: { FPB: 'Grau bàsic', CFGM: 'Grau mitjà', CFGS: 'Grau superior' } as Record<string, string>,
+  solSeleccionados: 'cicles seleccionats',
+  solSinResultados: 'Cap cicle no coincideix amb la cerca.',
+  solOtros: 'Altres cicles (un per línia)',
+  solOtrosPlaceholder: 'Cicles que no surten a la llista',
+  solComentario: 'Comentari (opcional)',
+  solEnviar: 'Enviar sol·licitud',
+  solEnviando: 'Enviant...',
+  solEnviada: "Sol·licitud enviada. T'avisarem quan canviï el seu estat.",
+  solErrorEnvio: "No s'ha pogut enviar la sol·licitud.",
+  solErrorOferta: "No s'ha pogut carregar la llista de cicles.",
+  solMias: 'Les meves sol·licituds',
+  solSinSolicitudes: 'Encara no has enviat cap sol·licitud.',
+  solEnviadaEl: 'Enviada el',
+  solOtroCiclo: 'Altre cicle',
+  solEstados: {
+    pendiente: 'Pendent',
+    en_curso: 'En curs',
+    completada: 'Completada',
+    descartada: 'Descartada',
+  } as Record<string, string>,
+  solEstadosCiclo: {
+    disponible: 'Disponible',
+    pendiente: 'Pendent',
+    incorporado: 'Incorporat',
+    descartado: 'Descartat',
+  } as Record<string, string>,
+
   // SKELETON LOADER
   loadingData: 'Carregant dades...',
 };

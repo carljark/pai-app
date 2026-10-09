@@ -74,6 +74,8 @@ Cuando la tarea incorpore un ciclo de FP o un nivel de ESO, sigue la skill (ruta
 - `.agents/skills/agregar-ciclo-educativo/references/checklist_archivos.md`
 - `.agents/skills/agregar-ciclo-educativo/references/lecciones_aprendidas_cobertura.md`
 
+Los ciclos que piden los docentes desde «Solicitar centro» se procesan con la skill `procesar-solicitudes` (`.claude/skills/procesar-solicitudes/SKILL.md`). Cada ciclo de FP nuevo lleva su `codigoCaib` de la oferta (`backend/src/data/oferta-fp-ib.json`; ver `documentation/solicitudes_de_centros.md`).
+
 Directrices invariantes:
 
 - Contrasta currículos y denominaciones con fuentes oficiales: en FP, TodoFP/BOE para castellano y CAIB/BOIB para catalán balear; en ESO, el decreto autonómico en ambos idiomas (BOIB) y la web LOMLOE de la CAIB. No uses datos inventados ni copias monolingües como fallback.

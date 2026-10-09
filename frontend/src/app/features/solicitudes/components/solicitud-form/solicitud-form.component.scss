@@ -1,0 +1,72 @@
+@use '../../../../../styles/variables' as variables;
+
+.solicitud-form {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-4;
+}
+
+.solicitud-form__fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: variables.$spacing-3;
+}
+
+.solicitud-form__campo {
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  gap: variables.$spacing-1;
+}
+
+.solicitud-form__campo--ancho {
+  flex-basis: 320px;
+}
+
+.solicitud-form__etiqueta {
+  color: variables.$color-text-main;
+  font-size: variables.$font-size-sm;
+  font-weight: 600;
+}
+
+.solicitud-form__input {
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+  font-family: inherit;
+  font-size: variables.$font-size-sm;
+
+  &:focus {
+    outline: 2px solid variables.$color-border-focus;
+  }
+}
+
+.solicitud-form__grupo {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-2;
+}
+
+.solicitud-form__mensaje {
+  margin: 0;
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border-radius: variables.$border-radius-md;
+  font-size: variables.$font-size-sm;
+}
+
+.solicitud-form__mensaje--error {
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}
+
+.solicitud-form__mensaje--ok {
+  background: variables.$color-success-bg;
+  color: variables.$color-success;
+}
+
+.solicitud-form__enviar {
+  align-self: flex-start;
+}

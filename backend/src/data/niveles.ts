@@ -42,6 +42,8 @@ export interface CursoNivel {
 export interface NivelEducativo {
   id: string;
   etapa: Etapa;
+  /** Código del ciclo en la oferta de FP de las Illes Balears (`oferta-fp-ib.json`), p. ej. `SSC33`. */
+  codigoCaib?: string;
   /** Comunidad cuyo currículo se aplica: `IB` (Illes Balears) o `estatal`. */
   comunidad: 'IB' | 'estatal';
   nombre_es: string;
@@ -62,6 +64,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'FP_BASICA',
     etapa: 'FPB',
+    codigoCaib: 'IMP11',
     comunidad: 'IB',
     nombre_es: 'CFGB Peluquería y Estética',
     nombre_ca: 'CFGB Perruqueria i Estètica',
@@ -76,6 +79,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGM_ESTETICA',
     etapa: 'CFGM',
+    codigoCaib: 'IMP21',
     comunidad: 'IB',
     nombre_es: 'CFGM Estética y Belleza',
     nombre_ca: 'CFGM Estètica i Bellesa',
@@ -90,6 +94,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGM_PELUQUERIA',
     etapa: 'CFGM',
+    codigoCaib: 'IMP22',
     comunidad: 'IB',
     nombre_es: 'CFGM Peluquería y Cosmética Capilar',
     nombre_ca: 'CFGM Perruqueria i Cosmètica Capil·lar',
@@ -108,6 +113,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGM_ATENCION_DEPENDENCIA',
     etapa: 'CFGM',
+    codigoCaib: 'SSC21',
     comunidad: 'IB',
     nombre_es: 'CFGM Atención a Personas en Situación de Dependencia',
     nombre_ca: 'CFGM Atenció a persones en situació de dependència',
@@ -123,6 +129,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGM_GUIA_MEDIO_NATURAL',
     etapa: 'CFGM',
+    codigoCaib: 'AFD21',
     comunidad: 'IB',
     nombre_es: 'CFGM Guía en el Medio Natural y de Tiempo Libre',
     nombre_ca: 'CFGM Guia en el medi natural i de temps lliure',
@@ -138,6 +145,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
     etapa: 'CFGM',
+    codigoCaib: 'SAN23',
     comunidad: 'IB',
     nombre_es: 'CFGM Cuidados Auxiliares de Enfermería',
     nombre_ca: "CFGM Cures auxiliars d'infermeria",
@@ -151,6 +159,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGS_EDUCACION_INFANTIL',
     etapa: 'CFGS',
+    codigoCaib: 'SSC31',
     comunidad: 'IB',
     nombre_es: 'CFGS Educación Infantil',
     nombre_ca: 'CFGS Educació Infantil',
@@ -170,6 +179,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGS_ACONDICIONAMIENTO_FISICO',
     etapa: 'CFGS',
+    codigoCaib: 'AFD32',
     comunidad: 'IB',
     nombre_es: 'CFGS Acondicionamiento Físico',
     nombre_ca: 'CFGS Condicionament físic',
@@ -185,6 +195,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGS_ANIMACION_SOCIODEPORTIVA',
     etapa: 'CFGS',
+    codigoCaib: 'AFD31',
     comunidad: 'IB',
     nombre_es: 'CFGS Enseñanza y Animación Sociodeportiva',
     nombre_ca: 'CFGS Ensenyament i animació socioesportiva',
@@ -200,6 +211,7 @@ export const NIVELES: readonly NivelEducativo[] = [
   {
     id: 'CFGS_INTEGRACION_SOCIAL',
     etapa: 'CFGS',
+    codigoCaib: 'SSC33',
     comunidad: 'IB',
     nombre_es: 'CFGS Integración Social',
     nombre_ca: 'CFGS Integració social',

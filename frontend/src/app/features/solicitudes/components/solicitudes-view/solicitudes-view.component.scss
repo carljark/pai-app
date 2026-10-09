@@ -1,0 +1,27 @@
+@use '../../../../../styles/variables' as variables;
+
+.solicitudes-view {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-6;
+  max-width: 960px;
+}
+
+.solicitudes-view__titulo {
+  margin: 0;
+  color: variables.$color-text-main;
+}
+
+.solicitudes-view__subtitulo {
+  margin: variables.$spacing-1 0 0;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+  max-width: 70ch;
+}
+
+.solicitudes-view__tarjeta {
+  padding: variables.$spacing-6;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-surface;
+  box-shadow: variables.$shadow-sm;
+}

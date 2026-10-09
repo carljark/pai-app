@@ -20,6 +20,7 @@ import { TallerViewComponent } from './features/taller/components/taller-view/ta
 import { MapaIntermodularViewComponent } from './features/mapa-intermodular/components/mapa-intermodular-view/mapa-intermodular-view.component';
 import { PersonalViewComponent } from './features/personal/components/personal-view/personal-view.component';
 import { FeedbackViewComponent } from './features/feedback/components/feedback-view/feedback-view.component';
+import { SolicitudesViewComponent } from './features/solicitudes/components/solicitudes-view/solicitudes-view.component';
 
 @Component({
   selector: 'app-root',
@@ -39,6 +40,7 @@ import { FeedbackViewComponent } from './features/feedback/components/feedback-v
     HistoryViewComponent,
     PersonalViewComponent,
     FeedbackViewComponent,
+    SolicitudesViewComponent,
     TallerViewComponent,
     MapaIntermodularViewComponent,
   ],

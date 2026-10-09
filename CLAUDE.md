@@ -31,6 +31,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `backend/src/migrations/legacy/` contiene las antiguas de `backend/migrations/`, registradas **con** `.ts`. Está congelada: no añadas ni renombres archivos ahí, o se reejecutarían.
 - Un único runner las aplica (primero legacy) en `predev`/`prestart` (`npm run migrate`) y de nuevo al arrancar el servidor. Detalles: `documentation/migraciones_backend.md`.
 
+## Solicitudes de centros
+
+- Los docentes piden centros y ciclos desde la aplicación; la skill `procesar-solicitudes` lee las pendientes con `./scripts/solicitudes-pendientes.sh` (solo lectura, por SSH) e incorpora los ciclos que elija el usuario con `agregar-ciclo-educativo`. Detalles: `documentation/solicitudes_de_centros.md`.
+
 ## IA
 
 - `backend/src/data/ai-models.ts` es el catálogo único de modelos; el frontend lo obtiene de `GET /api/ai/models`. No hardcodees nombres de modelos en el frontend.

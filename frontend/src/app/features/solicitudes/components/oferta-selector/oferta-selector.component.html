@@ -1,0 +1,51 @@
+<div class="oferta-selector">
+  <div class="oferta-selector__filtros">
+    <input
+      type="search"
+      class="oferta-selector__buscador"
+      [placeholder]="trans.t().solBuscar"
+      [attr.aria-label]="trans.t().solBuscar"
+      [value]="busqueda()"
+      (input)="buscar($event)"
+    />
+    <select
+      class="oferta-selector__etapa"
+      [attr.aria-label]="trans.t().solTodasEtapas"
+      [value]="etapa()"
+      (change)="filtrarEtapa($event)"
+    >
+      <option value="">{{ trans.t().solTodasEtapas }}</option>
+      @for (e of etapas; track e) {
+        <option [value]="e">{{ trans.t().solEtapas[e] }}</option>
+      }
+    </select>
+  </div>
+
+  <p class="oferta-selector__contador">
+    {{ seleccionados().length }} {{ trans.t().solSeleccionados }}
+  </p>
+
+  <ul class="oferta-selector__lista">
+    @for (c of filtrados(); track c.codigo) {
+      <li class="oferta-selector__item">
+        <label class="oferta-selector__opcion">
+          <input
+            type="checkbox"
+            class="oferta-selector__check"
+            [checked]="estaSeleccionado(c.codigo)"
+            (change)="alternar(c.codigo)"
+          />
+          <span class="oferta-selector__nombre">{{ c.etapa }} {{ nombre(c) }}</span>
+          <span class="oferta-selector__familia">{{ familia(c) }} · {{ c.codigo }}</span>
+          @if (c.disponible) {
+            <span class="oferta-selector__disponible">{{
+              trans.t().solEstadosCiclo['disponible']
+            }}</span>
+          }
+        </label>
+      </li>
+    } @empty {
+      <li class="oferta-selector__vacio">{{ trans.t().solSinResultados }}</li>
+    }
+  </ul>
+</div>

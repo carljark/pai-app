@@ -1,0 +1,92 @@
+@use '../../../../../styles/variables' as variables;
+
+.mis-solicitudes {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-3;
+}
+
+.mis-solicitudes__titulo {
+  margin: 0;
+  color: variables.$color-text-main;
+  font-size: variables.$font-size-lg;
+}
+
+.mis-solicitudes__item {
+  padding: variables.$spacing-4;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-surface;
+}
+
+.mis-solicitudes__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: variables.$spacing-2;
+}
+
+.mis-solicitudes__centro {
+  color: variables.$color-text-main;
+}
+
+.mis-solicitudes__fecha {
+  margin: variables.$spacing-1 0 variables.$spacing-2;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-xs;
+}
+
+.mis-solicitudes__ciclos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-1;
+}
+
+.mis-solicitudes__ciclo {
+  display: flex;
+  justify-content: space-between;
+  gap: variables.$spacing-2;
+  font-size: variables.$font-size-sm;
+}
+
+.mis-solicitudes__estado {
+  flex-shrink: 0;
+  padding: 2px variables.$spacing-2;
+  border-radius: variables.$border-radius-sm;
+  background: variables.$color-surface-alt;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-xs;
+  font-weight: 600;
+}
+
+.mis-solicitudes__estado--disponible,
+.mis-solicitudes__estado--incorporado,
+.mis-solicitudes__estado--completada {
+  background: variables.$color-success-bg;
+  color: variables.$color-success;
+}
+
+.mis-solicitudes__estado--en_curso {
+  background: variables.$color-info-bg;
+  color: variables.$color-info;
+}
+
+.mis-solicitudes__estado--pendiente {
+  background: variables.$color-warning-bg;
+  color: variables.$color-warning;
+}
+
+.mis-solicitudes__estado--descartado,
+.mis-solicitudes__estado--descartada {
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}
+
+.mis-solicitudes__vacio {
+  margin: 0;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}

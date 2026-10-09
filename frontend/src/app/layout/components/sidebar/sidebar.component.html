@@ -208,6 +208,30 @@
       </svg>
       <span class="nav-text">{{ trans.t().sidebarFeedback }}</span>
     </button>
+    <button
+      (click)="layout.switchView('solicitudes')"
+      [class.active]="layout.currentView() === 'solicitudes'"
+      class="nav-item"
+      [attr.data-tooltip]="trans.t().sidebarSolicitudes"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M3 21h18"></path>
+        <path d="M5 21V7l7-4 7 4v14"></path>
+        <path d="M10 21v-5h4v5"></path>
+        <path d="M12 8v4"></path>
+        <path d="M10 10h4"></path>
+      </svg>
+      <span class="nav-text">{{ trans.t().sidebarSolicitudes }}</span>
+    </button>
     @if (auth.currentUser()?.role === 'admin') {
       <button
         (click)="layout.switchView('admin')"

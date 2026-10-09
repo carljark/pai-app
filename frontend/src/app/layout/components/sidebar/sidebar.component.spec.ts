@@ -32,6 +32,7 @@ describe('SidebarComponent', () => {
       sidebarTaller: 'Taller Editor',
       sidebarMapa: 'Mapa Intermodular',
       sidebarFeedback: 'Buzón de sugerencias',
+      sidebarSolicitudes: 'Solicitar centro',
       sidebarAdmin: 'Admin Panel',
       sidebarLangTooltip: 'Cambiar Idioma',
       sidebarLangLabel: 'Idioma',
@@ -144,6 +145,12 @@ describe('SidebarComponent', () => {
     ) as HTMLElement;
     feedbackBtn.click();
     expect(mockLayout.switchView).toHaveBeenCalledWith('feedback');
+
+    const solicitudesBtn = Array.from(buttons).find((b: any) =>
+      b.textContent.includes('Solicitar centro'),
+    ) as HTMLElement;
+    solicitudesBtn.click();
+    expect(mockLayout.switchView).toHaveBeenCalledWith('solicitudes');
   });
 
   it('should show admin panel if user is admin', () => {

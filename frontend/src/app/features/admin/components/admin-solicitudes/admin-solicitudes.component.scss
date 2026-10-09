@@ -1,0 +1,92 @@
+@use '../../../../../styles/variables' as variables;
+
+.admin-solicitudes {
+  background: variables.$color-surface;
+  border-radius: variables.$border-radius-lg;
+  padding: variables.$spacing-8;
+  box-shadow: variables.$shadow-sm;
+  margin-bottom: variables.$spacing-10;
+}
+
+.admin-solicitudes__cabecera,
+.admin-solicitudes__item-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: variables.$spacing-3;
+}
+
+.admin-solicitudes__titulo {
+  margin: 0;
+  color: variables.$color-text-main;
+}
+
+.admin-solicitudes__intro {
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+  max-width: 70ch;
+}
+
+.admin-solicitudes__error {
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}
+
+.admin-solicitudes__item {
+  margin-top: variables.$spacing-4;
+  padding: variables.$spacing-4;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+}
+
+.admin-solicitudes__dato,
+.admin-solicitudes__comentario {
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.admin-solicitudes__ciclos {
+  list-style: none;
+  margin: variables.$spacing-3 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-2;
+}
+
+.admin-solicitudes__ciclo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: variables.$spacing-2;
+  font-size: variables.$font-size-sm;
+}
+
+.admin-solicitudes__ciclo-nombre {
+  flex: 1 1 260px;
+}
+
+.admin-solicitudes__select,
+.admin-solicitudes__tarea,
+.admin-solicitudes__notas {
+  padding: variables.$spacing-1 variables.$spacing-2;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-sm;
+  font-family: inherit;
+  font-size: variables.$font-size-sm;
+}
+
+.admin-solicitudes__tarea {
+  width: 80px;
+}
+
+.admin-solicitudes__notas {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-solicitudes__vacio {
+  color: variables.$color-text-muted;
+}

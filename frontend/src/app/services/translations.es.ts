@@ -286,6 +286,46 @@ export const TRANSLATIONS_ES = {
     REMOVE_COLLABORATOR: 'Quitó a un colaborador',
   } as Record<string, string>,
 
+  // SOLICITUDES DE CENTROS
+  sidebarSolicitudes: 'Solicitar centro',
+  solTitle: 'Solicitar un centro y sus ciclos',
+  solSubtitle:
+    'Indica tu centro y los ciclos que imparte. Los que ya están en Plappin se pueden usar desde ahora; los demás se incorporarán.',
+  solCentro: 'Nombre del centro',
+  solCentroPlaceholder: 'Ej.: IES Cap de Llevant',
+  solMunicipio: 'Municipio',
+  solWeb: 'Web del centro',
+  solCiclos: 'Ciclos del centro',
+  solBuscar: 'Buscar por nombre, familia o código',
+  solTodasEtapas: 'Todos los grados',
+  solEtapas: { FPB: 'Grado básico', CFGM: 'Grado medio', CFGS: 'Grado superior' } as Record<string, string>,
+  solSeleccionados: 'ciclos seleccionados',
+  solSinResultados: 'Ningún ciclo coincide con la búsqueda.',
+  solOtros: 'Otros ciclos (uno por línea)',
+  solOtrosPlaceholder: 'Ciclos que no aparecen en la lista',
+  solComentario: 'Comentario (opcional)',
+  solEnviar: 'Enviar solicitud',
+  solEnviando: 'Enviando...',
+  solEnviada: 'Solicitud enviada. Te avisaremos cuando cambie su estado.',
+  solErrorEnvio: 'No se pudo enviar la solicitud.',
+  solErrorOferta: 'No se pudo cargar la lista de ciclos.',
+  solMias: 'Mis solicitudes',
+  solSinSolicitudes: 'Aún no has enviado ninguna solicitud.',
+  solEnviadaEl: 'Enviada el',
+  solOtroCiclo: 'Otro ciclo',
+  solEstados: {
+    pendiente: 'Pendiente',
+    en_curso: 'En curso',
+    completada: 'Completada',
+    descartada: 'Descartada',
+  } as Record<string, string>,
+  solEstadosCiclo: {
+    disponible: 'Disponible',
+    pendiente: 'Pendiente',
+    incorporado: 'Incorporado',
+    descartado: 'Descartado',
+  } as Record<string, string>,
+
   // SKELETON LOADER
   loadingData: 'Cargando datos...',
 };

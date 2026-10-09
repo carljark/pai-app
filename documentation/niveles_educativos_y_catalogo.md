@@ -87,6 +87,34 @@ Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208)
   - El RD 499/2024 repite la letra «a)» en el RA5 de 1713; se renumera a)-d), como en Peluquería.
 - **Diferencias con otros ciclos:** el 0020 de este RD usa «persona accidentada» y «que hay que conseguir». El de Educación Infantil (RD 1394/2007) dice «accidentado» y «a conseguir», así que cada ciclo conserva el texto de su RD.
 
+## CFGM Guía en el Medio Natural y de Tiempo Libre (`CFGM_GUIA_MEDIO_NATURAL`)
+
+Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). No tiene mapa intermodular.
+
+### Fuente normativa
+
+- **Módulos y cursos:** ficha del ciclo en FP Illes Balears (<https://www.caib.es/sites/fp/ca/guia_en_el_medi_natural_i_de_temps_lliure/>), tabla «Matriculats a partir del curs 2026/27», idéntica a la de 2024/25 y 2025/26.
+  - 1.º: 1325, 1327, 1329, 1333, 1334, 1335, 1336, 1664 y 1709.
+  - 2.º: 1328, 1337, 1338, 1339, 0156, 1708, 1710 y 1713.
+  - El módulo optativo no se carga porque no tiene currículo propio. El título no incluye Primeros auxilios (0020): su contenido está en Socorrismo en el medio natural (1337).
+- **Castellano:**
+  - Módulos propios (1325-1339): anexo I del **RD 402/2020, texto consolidado** (BOE-A-2020-2738, última actualización 28/5/2024).
+  - Transversales (1664, 1709, 0156, 1708, 1710 y 1713): el texto canónico compartido con los demás ciclos (ver «Módulos transversales compartidos»). El 1713 del texto consolidado del RD 402/2020 es el mismo del RD 499/2024, con la letra «a)» repetida en el RA5.
+- **Catalán:**
+  - La CAIB aplica currículos autonómicos «en fase d'esborrany», sin texto publicado. La traducción de los módulos propios es propia, con el agente `traductor-es-ca` y la terminología de FP balear.
+  - Los nombres de los módulos son los de la ficha de la CAIB. El 1338 se llama allí «Guia en el medi aquàtic», aunque el BOE dice «Guía en el medio natural acuático».
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgm_guia_medio_natural.data.ts`: 17 módulos, 97 RA y 651 criterios (66 RA y 425 criterios de los módulos propios). Los carga la migración `30_ingest_cfgm_guia_medio_natural_ras.ts`, que es reejecutable y solo toca este nivel.
+- Un script temporal extrae los textos del PDF consolidado del BOE y comprueba que cada texto castellano aparece literalmente en él, que la numeración de RA y letras es consecutiva y que hay paridad ES/CA.
+- **Erratas del BOE:**
+  - En 1338 RA1, los criterios c) y d) están en el mismo párrafo («…para la ruta. d) Se ha seleccionado…»); se separan.
+  - Falta el punto final en seis criterios (1334 RA1 b) y RA2 d), 1337 RA6 f), 1338 RA3 c) y RA5 e), y 1339 RA6 e)); se añade.
+  - 1336 RA5 d) es el único criterio que no empieza por «Se ha»: «Se ejecutan las diferentes fases…» («S'executen…»).
+  - 1337 RA6 g) incluye una lista de pruebas con guiones «−»; se conserva en un único criterio.
+- **Decisiones de traducción:** «conducción del diestro» → «conducció de l'èquid de la mà»; «zafaduras» → «alliberament»; «franqueo de pequeños saltos» → «franqueig de petits salts»; «pozas» → «gorgs»; «vías ferratas» → «vies ferrades».
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

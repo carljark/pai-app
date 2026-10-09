@@ -121,6 +121,21 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGM_GUIA_MEDIO_NATURAL',
+    etapa: 'CFGM',
+    comunidad: 'IB',
+    nombre_es: 'CFGM Guía en el Medio Natural y de Tiempo Libre',
+    nombre_ca: 'CFGM Guia en el medi natural i de temps lliure',
+    palabrasClave: 'formación profesional actividades físicas deportivas medio natural tiempo libre',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Módulos de cada curso según FP Illes Balears (AFD21, matriculados desde 2026-27).
+    cursos: [
+      { curso: '1º', modulos: ['1325', '1327', '1329', '1333', '1334', '1335', '1336', '1664', '1709'] },
+      { curso: '2º', modulos: ['1328', '1337', '1338', '1339', '0156', '1708', '1710', '1713'] },
+    ],
+  },
+  {
     id: 'CFGS_EDUCACION_INFANTIL',
     etapa: 'CFGS',
     comunidad: 'IB',

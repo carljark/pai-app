@@ -7,6 +7,7 @@ import { up as createAdminUp } from '../migrations/01_create_admin_user';
 import { up as ingestEducacionInfantilUp } from '../migrations/13_ingest_cfgs_educacion_infantil_ras';
 import { up as reingestEsteticaUp } from '../migrations/24_reingest_cfgm_estetica_ras';
 import { up as ingestAtencionDependenciaUp } from '../migrations/26_ingest_cfgm_atencion_dependencia_ras';
+import { up as ingestGuiaMedioNaturalUp } from '../migrations/30_ingest_cfgm_guia_medio_natural_ras';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
@@ -117,6 +118,23 @@ describe('Migrations Safety & Idempotency', () => {
     expect(teleasistencia?.module_ca).toBe('Teleassistència');
     expect(teleasistencia?.description).toBe(teleasistencia?.description_ca);
     expect(teleasistencia?.criterios_ca).toHaveLength(teleasistencia?.criterios_es.length ?? -1);
+  });
+
+  it('Carga los RA del CFGM Guía en el Medio Natural y de Tiempo Libre sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', moduleCode: '1709', tipoNivel: 'CFGM_ATENCION_DEPENDENCIA', description: 'Ajeno' });
+
+    await ingestGuiaMedioNaturalUp();
+    await ingestGuiaMedioNaturalUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGM_GUIA_MEDIO_NATURAL' });
+    expect(ras).toHaveLength(97);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGM_ATENCION_DEPENDENCIA' })).toBe(1);
+
+    const cuerdas = ras.find((r) => r.moduleCode === '1339' && r.id === 'RA1');
+    expect(cuerdas?.module_es).toBe('Maniobras con cuerdas');
+    expect(cuerdas?.module_ca).toBe('Maniobres amb cordes');
+    expect(cuerdas?.description).toBe(cuerdas?.description_ca);
+    expect(cuerdas?.criterios_ca).toHaveLength(cuerdas?.criterios_es.length ?? -1);
   });
 
   it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {

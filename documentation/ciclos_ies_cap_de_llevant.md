@@ -14,6 +14,7 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | CFGM Estética y Belleza | `CFGM_ESTETICA` |
 | CFGM Peluquería y Cosmética Capilar | `CFGM_PELUQUERIA` |
 | CFGM Atención a Personas en Situación de Dependencia (tarea 208) | `CFGM_ATENCION_DEPENDENCIA` |
+| CFGM Guía en el Medio Natural y de Tiempo Libre (tarea 212) | `CFGM_GUIA_MEDIO_NATURAL` |
 | CFGS Educación Infantil | `CFGS_EDUCACION_INFANTIL` |
 
 ## Pendientes de incorporar
@@ -21,13 +22,12 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | Grado | Nombre en catalán (web del centro) | Nombre en castellano (provisional) | `tipoNivel` propuesto |
 |---|---|---|---|
 | CFGM | Cures auxiliars d'infermeria (matí i tarda) | Cuidados auxiliares de enfermería | `CFGM_CUIDADOS_AUXILIARES_ENFERMERIA` |
-| CFGM | Guia en el medi natural i de temps lliure | Guía en el medio natural y de tiempo libre | `CFGM_GUIA_MEDIO_NATURAL` |
 | CFGS | Condicionament físic | Acondicionamiento físico | `CFGS_ACONDICIONAMIENTO_FISICO` |
 | CFGS | Ensenyament i animació socioesportiva | Enseñanza y animación sociodeportiva | `CFGS_ANIMACION_SOCIODEPORTIVA` |
 | CFGS | Integració social | Integración social | `CFGS_INTEGRACION_SOCIAL` |
 | CFGS | Laboratori clínic i biomèdic | Laboratorio clínico y biomédico | `CFGS_LABORATORIO_CLINICO` |
 
-Son **6 ciclos** (2 de grado medio y 4 de grado superior). Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
+Son **5 ciclos** (1 de grado medio y 4 de grado superior). Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
 
 ## Cambios anunciados para el curso 2026-27
 

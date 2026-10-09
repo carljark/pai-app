@@ -169,6 +169,35 @@ Ciclo AFD32 de la familia Actividades Físicas y Deportivas (tarea 214). No tien
   - 1151 RA6 g) incluye una lista de pruebas de socorrismo con guiones «-»; se conserva en un único criterio, como el 1337 RA6 g) de Guía en el Medio Natural.
 - **Decisiones de traducción:** «fitness» → «fitnes» (forma de la CAIB); «acondicionamiento físico» → «condicionament físic»; «soporte musical» → «suport musical»; «hidrocinesia» → «hidrocinèsia»; «camillas» → «lliteres»; «músculo-esquelético» → «musculoesquelètic».
 
+## CFGS Enseñanza y Animación Sociodeportiva (`CFGS_ANIMACION_SOCIODEPORTIVA`)
+
+Ciclo de la familia Actividades Físicas y Deportivas (tarea 216). No tiene mapa intermodular.
+
+### Fuente normativa
+
+- **Módulos y cursos:** ficha del ciclo en FP Illes Balears (<https://www.caib.es/sites/fp/ca/ensenyament_i_animacio_socioesportiva/>), tabla «Matriculats a partir del curs 2026/27».
+  - 1.º: 1124, 1136, 1138, 1139, 1141, 1143, 1665 y 1709.
+  - 2.º: 1123, 1137, 1140, 1142, 1144, 0179, 1708 y 1710.
+  - No se cargan el módulo optativo ni las horas reservadas al módulo en inglés, que no tienen currículo propio. FOL (1145), EIE (1146) y FCT (1147) del RD de 2017 ya no se imparten.
+- **Castellano:**
+  - Módulos propios (1123, 1124, 1137-1144): anexo I del **RD 653/2017** (BOE-A-2017-8301). El **RD 500/2024** renombra el 1144 «Proyecto de enseñanza y animación sociodeportiva» como «Proyecto intermodular de enseñanza y animación sociodeportiva».
+  - 1136 (Valoración de la condición física e intervención en accidentes): mismo texto que en el CFGS Acondicionamiento Físico, con sus erratas ya corregidas.
+  - Transversales de grado superior (1665, 1709, 0179, 1708 y 1710): ver «Módulos transversales compartidos».
+- **Catalán:**
+  - Currículo autonómico «en fase d'esborrany», sin texto publicado. Traducción propia con el agente `traductor-es-ca` (tres lotes, 394 textos). 41 textos idénticos a los de otros ciclos reutilizan su catalán ya revisado.
+  - Nombres de los módulos según la ficha de la CAIB. Dos decisiones:
+    - La CAIB escribe «Planificació de l'animació sociesportiva»; se corrige a «socioesportiva».
+    - El 1141 es «Activitats fisicoesportives amb objectes» en la CAIB y «de implementos» en el BOE; en los textos catalanes se usa «amb objectes» por coherencia con el nombre del módulo.
+  - El 1144 aparece en la CAIB solo como «Projecte intermodular»; se usa «Projecte intermodular d'ensenyament i animació socioesportiva», en paralelo al BOE.
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgs_animacion_sociodeportiva.data.ts`: 16 módulos, 90 RA y 634 criterios (63 RA y 438 criterios sin contar los transversales). Los carga la migración `33_ingest_cfgs_animacion_sociodeportiva_ras.ts`, reejecutable y limitada a este nivel.
+- Un script temporal extrae los textos del HTML del BOE y comprueba que cada texto castellano aparece literalmente en él, que la numeración de RA y letras es consecutiva y que hay paridad ES/CA.
+- **Erratas del BOE:**
+  - 1137 RA4 b) no tiene punto final; se añade.
+  - 1139 RA3 g) incluye una lista de pruebas de socorrismo con guiones «-»; se conserva en un único criterio, como el 1151 RA6 g) de Acondicionamiento Físico.
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

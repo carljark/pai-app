@@ -10,6 +10,7 @@ import { up as ingestAtencionDependenciaUp } from '../migrations/26_ingest_cfgm_
 import { up as ingestGuiaMedioNaturalUp } from '../migrations/30_ingest_cfgm_guia_medio_natural_ras';
 import { up as ingestCuidadosAuxiliaresUp } from '../migrations/31_ingest_cfgm_cuidados_auxiliares_enfermeria_ras';
 import { up as ingestAcondicionamientoFisicoUp } from '../migrations/32_ingest_cfgs_acondicionamiento_fisico_ras';
+import { up as ingestAnimacionSociodeportivaUp } from '../migrations/33_ingest_cfgs_animacion_sociodeportiva_ras';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
@@ -171,6 +172,23 @@ describe('Migrations Safety & Idempotency', () => {
     expect(hidrocinesia?.module_ca).toBe("Tècniques d'hidrocinèsia");
     expect(hidrocinesia?.description).toBe(hidrocinesia?.description_ca);
     expect(hidrocinesia?.criterios_ca).toHaveLength(hidrocinesia?.criterios_es.length ?? -1);
+  });
+
+  it('Carga los RA del CFGS Enseñanza y Animación Sociodeportiva sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', moduleCode: '1136', tipoNivel: 'CFGS_ACONDICIONAMIENTO_FISICO', description: 'Ajeno' });
+
+    await ingestAnimacionSociodeportivaUp();
+    await ingestAnimacionSociodeportivaUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGS_ANIMACION_SOCIODEPORTIVA' });
+    expect(ras).toHaveLength(90);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
+
+    const dinamizacion = ras.find((r) => r.moduleCode === '1124' && r.id === 'RA1');
+    expect(dinamizacion?.module_es).toBe('Dinamización grupal');
+    expect(dinamizacion?.module_ca).toBe('Dinamització grupal');
+    expect(dinamizacion?.description).toBe(dinamizacion?.description_ca);
+    expect(dinamizacion?.criterios_ca).toHaveLength(dinamizacion?.criterios_es.length ?? -1);
   });
 
   it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {

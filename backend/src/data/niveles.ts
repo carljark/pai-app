@@ -183,6 +183,21 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGS_ANIMACION_SOCIODEPORTIVA',
+    etapa: 'CFGS',
+    comunidad: 'IB',
+    nombre_es: 'CFGS Enseñanza y Animación Sociodeportiva',
+    nombre_ca: 'CFGS Ensenyament i animació socioesportiva',
+    palabrasClave: 'formación profesional actividades físicas deportivas animación sociodeportiva ocio tiempo libre',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Módulos de cada curso según FP Illes Balears (matriculados desde 2026-27).
+    cursos: [
+      { curso: '1º', modulos: ['1124', '1136', '1138', '1139', '1141', '1143', '1665', '1709'] },
+      { curso: '2º', modulos: ['1123', '1137', '1140', '1142', '1144', '0179', '1708', '1710'] },
+    ],
+  },
+  {
     // ESO ordinaria: Decreto 42/2025 (BOIB n.º 103, de 4/8/2025).
     id: 'ESO_ORDINARIA',
     etapa: 'ESO',

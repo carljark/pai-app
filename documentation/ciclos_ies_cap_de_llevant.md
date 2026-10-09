@@ -18,16 +18,16 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | CFGM Cuidados Auxiliares de Enfermería (tarea 213, LOGSE) | `CFGM_CUIDADOS_AUXILIARES_ENFERMERIA` |
 | CFGS Educación Infantil | `CFGS_EDUCACION_INFANTIL` |
 | CFGS Acondicionamiento Físico (tarea 214) | `CFGS_ACONDICIONAMIENTO_FISICO` |
+| CFGS Enseñanza y Animación Sociodeportiva (tarea 216) | `CFGS_ANIMACION_SOCIODEPORTIVA` |
 
 ## Pendientes de incorporar
 
 | Grado | Nombre en catalán (web del centro) | Nombre en castellano (provisional) | `tipoNivel` propuesto |
 |---|---|---|---|
-| CFGS | Ensenyament i animació socioesportiva | Enseñanza y animación sociodeportiva | `CFGS_ANIMACION_SOCIODEPORTIVA` |
 | CFGS | Integració social | Integración social | `CFGS_INTEGRACION_SOCIAL` |
 | CFGS | Laboratori clínic i biomèdic | Laboratorio clínico y biomédico | `CFGS_LABORATORIO_CLINICO` |
 
-Son **3 ciclos** de grado superior. Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
+Son **2 ciclos** de grado superior. Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
 
 ## Cambios anunciados para el curso 2026-27
 

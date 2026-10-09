@@ -20,14 +20,16 @@ export class NotificationsBadgeComponent {
 
   now = signal(Date.now());
 
+  /** Proyectos completados e invitaciones a colaborar sin leer. */
   unreadCount = computed(
     () =>
-      this.notificationsFacade.notifications().filter((n) => !n.read && n.type === 'COMPLETED')
-        .length,
+      this.notificationsFacade
+        .notifications()
+        .filter((n) => !n.read && (n.type === 'COMPLETED' || n.type === 'INVITATION')).length,
   );
 
   recentProjects = computed<ActivityItem[]>(() => {
-    const notifs = this.notificationsFacade.notifications();
+    const notifs = this.notificationsFacade.activity();
     if (notifs.length > 0) return notifs;
     const current = untracked(() => this.now());
     const oneDay = 24 * 60 * 60 * 1000;

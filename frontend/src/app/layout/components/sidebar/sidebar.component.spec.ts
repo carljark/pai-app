@@ -51,6 +51,9 @@ describe('SidebarComponent', () => {
 
   const mockNotifications = {
     notifications: signal([]),
+    activity: signal([]),
+    invitations: signal([]),
+    editLockEvent: signal(null),
     latestNotification: signal(null),
     recentActivityOpen: signal(false),
     openRecentActivity: vi.fn(),

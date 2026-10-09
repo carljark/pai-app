@@ -1,0 +1,39 @@
+@use '../../../../../styles/variables' as variables;
+
+.invitation-list {
+  padding: 0 20px 10px;
+  border-bottom: 1px solid variables.$color-border;
+}
+
+.invitation-list__title {
+  margin: 4px 0 8px;
+  color: variables.$color-text-main;
+  font-size: 0.95rem;
+}
+
+.invitation-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  background: variables.$color-surface-alt;
+}
+
+.invitation-list__item--unread {
+  border-left: 4px solid variables.$color-primary;
+  background: variables.$color-primary-light;
+}
+
+.invitation-list__text {
+  margin: 0;
+  color: variables.$color-text-main;
+  font-size: 0.85rem;
+}
+
+.invitation-list__open {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}

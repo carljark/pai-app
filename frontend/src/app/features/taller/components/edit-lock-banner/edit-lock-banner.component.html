@@ -1,0 +1,16 @@
+@if (editLock.readOnly()) {
+  <div class="edit-lock-banner edit-lock-banner--readonly" role="status">
+    <span class="edit-lock-banner__text">🔒 {{ trans.t().editReadOnly }}</span>
+  </div>
+} @else if (editLock.lockedByOther()) {
+  <div class="edit-lock-banner edit-lock-banner--locked" role="alert">
+    <span class="edit-lock-banner__text">
+      ✍️ <strong class="edit-lock-banner__holder">{{ editLock.holderName() }}</strong>
+      {{ trans.t().editLockOther }}
+    </span>
+  </div>
+} @else if (editLock.hasLock()) {
+  <div class="edit-lock-banner edit-lock-banner--mine" role="status">
+    <span class="edit-lock-banner__text">✍️ {{ trans.t().editLockMine }}</span>
+  </div>
+}

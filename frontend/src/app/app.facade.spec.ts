@@ -183,6 +183,21 @@ describe('AppFacade', () => {
     expect(facade.showErrorModal()).toBe(true);
   });
 
+  it('avisa al recibir una invitación a colaborar', () => {
+    facade = TestBed.inject(AppFacade);
+
+    notificationsFacadeMock.latestNotification.set({
+      type: 'INVITATION',
+      userName: 'Ana',
+      title: 'Huerto',
+    });
+    TestBed.flushEffects();
+
+    expect(facade.infoTitle()).toBe(TRANSLATIONS_ES.invitationToastTitle);
+    expect(facade.infoMessage()).toBe(`Ana ${TRANSLATIONS_ES.invitationInvitedYou} «Huerto»`);
+    expect(facade.showInfoModal()).toBe(true);
+  });
+
   it('should react to latestNotification COMPLETED', () => {
     vi.useFakeTimers();
     facade = TestBed.inject(AppFacade);

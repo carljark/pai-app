@@ -208,7 +208,7 @@ describe('Projects Endpoints', () => {
   });
 
   it('Errores 500 en endpoints de proyectos', async () => {
-    const { token } = await createTestUser('teacher', 'prof7@test.com');
+    const { token, user } = await createTestUser('teacher', 'prof7@test.com');
     const Project = mongoose.model('Project');
     const fakeId = new mongoose.Types.ObjectId();
     
@@ -228,7 +228,7 @@ describe('Projects Endpoints', () => {
     spy.mockRestore();
 
     // updateProject lee primero el proyecto: el fallo de escritura se prueba con uno existente
-    const existing = await new Project({ title: 'Existente' }).save();
+    const existing = await new Project({ title: 'Existente', userId: user._id }).save();
     spy = vi.spyOn(Project, 'findByIdAndUpdate').mockRejectedValueOnce(new Error('DB'));
     res = await request(app).put(`/api/projects/${existing._id}`).set('Authorization', `Bearer ${token}`).send({ rawText: 'A' });
     expect(res.status).toBe(500);
@@ -399,13 +399,16 @@ describe('Projects Endpoints', () => {
 
 
   it('POST /api/projects/rewrite - Debería reescribir el proyecto completo con IA', async () => {
-    const { token } = await createTestUser('teacher', 'teacher_rewrite@test.com');
-    
+    const { token, user } = await createTestUser('teacher', 'teacher_rewrite@test.com');
+    const Project = mongoose.model('Project');
+    const projectId = (await new Project({ title: 'Reescribir', userId: user._id }).save())._id.toString();
+
     // Caso éxito: devuelve el nuevo markdown completo
     const res = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
       .send({
+        projectId,
         context: '# Proyecto Actual con Texto a cambiar aquí',
         instruction: 'Añade una sección de evaluación'
       });
@@ -420,6 +423,7 @@ describe('Projects Endpoints', () => {
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
       .send({
+        projectId,
         context: '# Proyecto Actual',
         instruction: 'Añade resumen',
         aiProvider: 'openrouter',
@@ -433,13 +437,13 @@ describe('Projects Endpoints', () => {
     const res400_1 = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
-      .send({ context: '# Proyecto' });
+      .send({ projectId, context: '# Proyecto' });
     expect(res400_1.status).toBe(400);
 
     const res400_2 = await request(app)
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
-      .send({ instruction: 'Mejorar' });
+      .send({ projectId, instruction: 'Mejorar' });
     expect(res400_2.status).toBe(400);
 
     // Caso 500
@@ -450,6 +454,7 @@ describe('Projects Endpoints', () => {
       .post('/api/projects/rewrite')
       .set('Authorization', `Bearer ${token}`)
       .send({
+        projectId,
         context: '# Proyecto',
         instruction: 'Cambiar'
       });

@@ -257,6 +257,34 @@ export const TRANSLATIONS_CA = {
   translationFailedToast: "No s'ha pogut traduir",
   translationError: "No s'ha pogut traduir el projecte. Torna-ho a provar.",
 
+  // TREBALL COL·LABORATIU
+  invitationsTitle: 'Invitacions a col·laborar',
+  invitationInvitedYou: "t'ha convidat a col·laborar en",
+  invitationOpen: 'Obrir projecte',
+  invitationToastTitle: 'Nova invitació',
+  editLockOther:
+    "està editant el projecte. L'assistent IA i els canvis estan bloquejats fins que acabi.",
+  editLockMine: "Tens el torn d'edició: la resta de participants no pot fer canvis mentre edites.",
+  editReadOnly:
+    "Només lectura: únicament l'autor i els col·laboradors convidats poden modificar aquest projecte.",
+  changeLogTitle: 'Registre de canvis',
+  changeLogEmpty: 'Encara no hi ha canvis registrats.',
+  changeLogRefresh: 'Actualitzar',
+  changeActionDefault: 'Va modificar el projecte',
+  changeActions: {
+    GENERATE_PROJECT: 'Va generar el projecte',
+    UPDATE_PROJECT: 'Va editar el document',
+    UPDATE_STATUS_BORRADOR: "Va desar l'esborrany",
+    UPDATE_STATUS_PUBLICADO: 'Va publicar el projecte',
+    AI_REWRITE: 'Va demanar una reescriptura a la IA',
+    IMPORT_DOCX: 'Va importar un Word',
+    TRANSLATE_PROJECT: 'Va traduir el projecte',
+    UPLOAD_FILE: 'Va pujar un recurs',
+    DELETE_FILE: 'Va esborrar un recurs',
+    ADD_COLLABORATOR: 'Va convidar un col·laborador',
+    REMOVE_COLLABORATOR: 'Va treure un col·laborador',
+  } as Record<string, string>,
+
   // SKELETON LOADER
   loadingData: 'Carregant dades...',
 };

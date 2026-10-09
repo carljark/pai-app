@@ -1,0 +1,88 @@
+@use '../../../../../styles/variables' as variables;
+
+.project-change-log {
+  margin-bottom: 12px;
+  border: 1px solid variables.$color-border;
+  border-radius: 8px;
+  background: variables.$color-surface;
+}
+
+.project-change-log__toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: variables.$color-text-main;
+  font-size: 0.9rem;
+}
+
+.project-change-log__title {
+  font-weight: variables.$font-weight-semibold;
+}
+
+.project-change-log__chevron {
+  transition: transform 0.2s ease;
+}
+
+.project-change-log__chevron--open {
+  transform: rotate(180deg);
+}
+
+.project-change-log__body {
+  padding: 0 16px 12px;
+}
+
+.project-change-log__refresh {
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+
+.project-change-log__empty {
+  margin: 0;
+  color: variables.$color-text-muted;
+  font-size: 0.85rem;
+}
+
+.project-change-log__list {
+  max-height: 240px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.project-change-log__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid variables.$color-border;
+  font-size: 0.85rem;
+}
+
+.project-change-log__date {
+  color: variables.$color-text-muted;
+  font-variant-numeric: tabular-nums;
+}
+
+.project-change-log__who {
+  font-weight: variables.$font-weight-medium;
+  color: variables.$color-text-main;
+}
+
+.project-change-log__action {
+  color: variables.$color-text-main;
+}
+
+.project-change-log__detail {
+  flex-basis: 100%;
+  color: variables.$color-text-muted;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

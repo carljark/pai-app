@@ -1,0 +1,39 @@
+<section class="project-change-log">
+  <button
+    type="button"
+    class="project-change-log__toggle"
+    [attr.aria-expanded]="isOpen()"
+    (click)="toggle()"
+  >
+    <span class="project-change-log__title">🕘 {{ trans.t().changeLogTitle }}</span>
+    <span class="project-change-log__chevron" [class.project-change-log__chevron--open]="isOpen()"
+      >▾</span
+    >
+  </button>
+
+  @if (isOpen()) {
+    <div class="project-change-log__body">
+      <button type="button" class="btn-secondary project-change-log__refresh" (click)="load()">
+        {{ isLoading() ? trans.t().loadingData : trans.t().changeLogRefresh }}
+      </button>
+      @if (changes().length === 0) {
+        <p class="project-change-log__empty">{{ trans.t().changeLogEmpty }}</p>
+      } @else {
+        <ul class="project-change-log__list">
+          @for (change of changes(); track change.id) {
+            <li class="project-change-log__item">
+              <time class="project-change-log__date">{{ formatDate(change.createdAt) }}</time>
+              <span class="project-change-log__who" [title]="change.userEmail">{{
+                change.userName || change.userEmail
+              }}</span>
+              <span class="project-change-log__action">{{ actionLabel(change) }}</span>
+              @if (detail(change); as text) {
+                <span class="project-change-log__detail">{{ text }}</span>
+              }
+            </li>
+          }
+        </ul>
+      }
+    </div>
+  }
+</section>

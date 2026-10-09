@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NotificationsBadgeComponent } from './notifications-badge.component';
 import { NotificationsFacade } from '../../services/notifications.facade';
-import { ComponentRef, signal } from '@angular/core';
+import { ComponentRef, computed, signal } from '@angular/core';
 import { vi, describe, beforeEach, it, expect } from 'vitest';
 
 describe('NotificationsBadgeComponent', () => {
@@ -13,8 +13,11 @@ describe('NotificationsBadgeComponent', () => {
   beforeEach(async () => {
     const recentActivityOpen = signal(false);
     const markAllAsRead = vi.fn();
+    const notifications = signal<any[]>([]);
     notificationsFacadeMock = {
-      notifications: signal([]),
+      notifications,
+      activity: computed(() => notifications().filter((n) => n.type !== 'INVITATION')),
+      invitations: computed(() => notifications().filter((n) => n.type === 'INVITATION')),
       recentActivityOpen,
       markAllAsRead,
       openRecentActivity: vi.fn(() => {
@@ -59,6 +62,16 @@ describe('NotificationsBadgeComponent', () => {
     ]);
     fixture.detectChanges();
     expect(component.unreadCount()).toBe(1);
+  });
+
+  it('cuenta las invitaciones sin leer pero no las mezcla con la actividad', () => {
+    notificationsFacadeMock.notifications.set([
+      { read: false, type: 'INVITATION', projectId: 'p1' },
+      { read: true, type: 'INVITATION', projectId: 'p2' },
+    ]);
+    fixture.detectChanges();
+    expect(component.unreadCount()).toBe(1);
+    expect(component.recentProjects()).toEqual([]);
   });
 
   it('should open notifications modal and mark as read', () => {

@@ -8,4 +8,7 @@ const ActivityLogSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
+// Registro de cambios de un proyecto (GET /api/projects/:id/changes)
+ActivityLogSchema.index({ projectId: 1, createdAt: -1 });
+
 export const ActivityLog = mongoose.model('ActivityLog', ActivityLogSchema);

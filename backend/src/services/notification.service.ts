@@ -1,6 +1,6 @@
 import { Notification } from '../models/Notification';
 import { User } from '../models/User';
-import { broadcast } from './sse.service';
+import { broadcast, sendToUser } from './sse.service';
 import mongoose from 'mongoose';
 
 interface NotificationExtra {
@@ -90,8 +90,9 @@ export async function syncProjectNotification(project: any, extra?: Notification
     const resolvedUser = await resolveUserDetails(project, extra);
     const updateData = buildUpdateData(project, extra, resolvedUser);
 
+    // Solo la notificación general del proyecto: las invitaciones personales no se tocan
     const notif = await Notification.findOneAndUpdate(
-      { projectId },
+      { projectId, recipientId: null },
       { $set: updateData, $setOnInsert: { createdAt: new Date(), readBy: [] } },
       { upsert: true, returnDocument: 'after' }
     );
@@ -118,6 +119,42 @@ export async function syncProjectNotification(project: any, extra?: Notification
     console.error('[NotificationService] Error syncing notification:', err);
     return null;
   }
+}
+
+const buildInvitation = (project: any, inviter: any, recipientId: string) => ({
+  projectId: project._id,
+  recipientId,
+  userId: inviter?._id,
+  userName: inviter?.name || 'Profesor',
+  ...(inviter?.email ? { userEmail: inviter.email } : {}),
+  type: 'PROJECT_INVITATION',
+  title: project.title || 'Proyecto Educativo',
+  message: `${inviter?.name || 'Un profesor'} te ha invitado a colaborar en «${project.title || 'Proyecto Educativo'}»`,
+  modules: project.modules || [],
+  status: project.status || 'borrador'
+});
+
+/**
+ * Avisa a cada colaborador invitado (salvo a quien invita) con una notificación personal
+ * que solo ve él, y en tiempo real por SSE si está conectado.
+ */
+export async function notifyInvitations(project: any, inviter: any, collaboratorIds: string[]) {
+  const inviterId = inviter?._id?.toString();
+  const recipients = Array.from(new Set(collaboratorIds.map(String))).filter(id => id !== inviterId);
+  for (const recipientId of recipients) {
+    try {
+      const notification = await Notification.create(buildInvitation(project, inviter, recipientId));
+      sendToUser(recipientId, { type: 'PROJECT_INVITATION', projectId: project._id, notification });
+    } catch (err) {
+      console.error('[NotificationService] Error creating invitation:', err);
+    }
+  }
+}
+
+/** Retira las invitaciones pendientes de un colaborador al quitarlo del proyecto. */
+export async function deleteInvitation(projectId: any, recipientId: string) {
+  if (!isValidObjectId(recipientId)) return;
+  await Notification.deleteMany({ projectId, recipientId, type: 'PROJECT_INVITATION' });
 }
 
 export async function deleteProjectNotification(projectId: any) {

@@ -476,6 +476,7 @@ describe('ProjectsFacade', () => {
     const req1 = httpMock.expectOne('/api/projects/rewrite');
     expect(req1.request.method).toBe('POST');
     expect(req1.request.body).toEqual({
+      projectId: expect.any(String),
       context: 'full text',
       instruction: 'rewrite this',
       aiProvider: 'gemini',
@@ -755,6 +756,7 @@ describe('ProjectsFacade', () => {
       const req = httpMock.expectOne('/api/projects/rewrite');
       expect(req.request.method).toBe('POST');
       expect(req.request.body).toEqual({
+        projectId: expect.any(String),
         context: 'original content',
         instruction: 'make it better',
         aiProvider: 'gemini',

@@ -54,8 +54,9 @@ describe('DOCX & Files Endpoints', () => {
   });
 
   it('Files API - POST, GET y DELETE adjuntos', async () => {
-    const { token } = await createTestUser('teacher', 'files@test.com');
-    const projectId = new mongoose.Types.ObjectId().toString();
+    const { token, user } = await createTestUser('teacher', 'files@test.com');
+    const Project = mongoose.model('Project');
+    const projectId = (await new Project({ title: 'Recursos', userId: user._id }).save())._id.toString();
     const fakeBuffer = Buffer.from('test pdf');
 
     // 1. Subir

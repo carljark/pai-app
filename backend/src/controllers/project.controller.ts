@@ -9,7 +9,8 @@ import fs from 'fs';
 import path from 'path';
 import { addClient, removeClient } from "../services/sse.service";
 import { processQueue } from "../services/queue.service";
-import { syncProjectNotification, deleteProjectNotification } from "../services/notification.service";
+import { syncProjectNotification, deleteProjectNotification, notifyInvitations } from "../services/notification.service";
+import { collaboratorIdsOf } from "../services/project-access.service";
 import { buildContentUpdate } from '../services/projectContent.service';
 import { resolveProvider } from "../data/ai-models";
 import { DEFAULT_TIPO_NIVEL, defaultCurso, findNivel, nombrePrompt } from '../data/niveles';
@@ -44,12 +45,6 @@ export const PROJECT_POPULATE = [
   { path: 'collaborators.userId', select: 'name email' }
 ];
 
-const ownerIdOf = (project: any): string =>
-  ((project?.userId as any)?._id || project?.userId)?.toString();
-
-const canManageCollaborators = (project: any, user: any): boolean =>
-  user?.role === 'admin' || ownerIdOf(project) === user?._id?.toString();
-
 /** Normaliza la lista de ids de colaboradores recibida del cliente. */
 export const sanitizeCollaboratorIds = (value: any): { userId: string; addedAt: Date }[] => {
   if (!Array.isArray(value)) return [];
@@ -59,9 +54,6 @@ export const sanitizeCollaboratorIds = (value: any): { userId: string; addedAt: 
   }
   return Array.from(unique).map(userId => ({ userId, addedAt: new Date() }));
 };
-
-const loadPopulatedProject = (id: any) =>
-  Project.findById(id).populate(PROJECT_POPULATE);
 
 export const formatCriterion = (c: any): string => {
   if (!c) return '';
@@ -392,6 +384,7 @@ En el documento generado, incluye obligatoriamente un apartado o epígrafe inici
       collaborators: sanitizeCollaboratorIds(collaboratorIds)
     });
     const savedProject = await newProject.save();
+    await notifyInvitations(savedProject, req.user, collaboratorIdsOf(savedProject));
 
     await syncProjectNotification(savedProject, {
       type: 'PROJECT_STATUS',
@@ -445,14 +438,12 @@ export const getProject = async (req: any, res: Response) => {
 export const updateProject = async (req: any, res: Response) => {
   try {
     const { rawText, status, language } = req.body;
-    const current = await Project.findById(req.params.id);
-    const updated = current
-      ? await Project.findByIdAndUpdate(
-        req.params.id,
-        buildContentUpdate(current, rawText, status, language),
-        { returnDocument: 'after' }
-      )
-      : null;
+    // `requireProjectEditor` ya cargó el proyecto y comprobó los permisos
+    const updated = await Project.findByIdAndUpdate(
+      req.project._id,
+      buildContentUpdate(req.project, rawText, status, language),
+      { returnDocument: 'after' }
+    );
     
     await new ActivityLog({
       userId: req.user?._id,
@@ -490,54 +481,6 @@ export const deleteProject = async (req: any, res: Response) => {
     res.json({ message: "Proyecto borrado exitosamente" });
   } catch (error) {
     res.status(500).json({ error: "Error al borrar proyecto" });
-  }
-};
-
-export const addCollaborator = async (req: any, res: Response) => {
-  try {
-    const project = await Project.findById(req.params.id);
-    if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
-    if (!canManageCollaborators(project, req.user)) {
-      return res.status(403).json({ error: 'Solo el autor puede gestionar colaboradores' });
-    }
-    const collaboratorId = String(req.body?.userId || req.params.userId || '');
-    if (!mongoose.isValidObjectId(collaboratorId)) {
-      return res.status(400).json({ error: 'Usuario inválido' });
-    }
-    if (ownerIdOf(project) === collaboratorId) {
-      return res.status(400).json({ error: 'El autor ya participa en el proyecto' });
-    }
-    const exists = (project.collaborators || []).some((c: any) => c.userId?.toString() === collaboratorId);
-    if (!exists) {
-      project.collaborators = [...(project.collaborators || []), { userId: collaboratorId, addedAt: new Date() }] as any;
-      await project.save();
-      await new ActivityLog({
-        userId: req.user?._id,
-        action: 'ADD_COLLABORATOR',
-        projectId: project._id,
-        details: { title: project.title, collaboratorId }
-      }).save();
-    }
-    res.json(await loadPopulatedProject(project._id));
-  } catch {
-    res.status(500).json({ error: 'Error al añadir colaborador' });
-  }
-};
-
-export const removeCollaborator = async (req: any, res: Response) => {
-  try {
-    const project = await Project.findById(req.params.id);
-    if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
-    if (!canManageCollaborators(project, req.user)) {
-      return res.status(403).json({ error: 'Solo el autor puede gestionar colaboradores' });
-    }
-    project.collaborators = (project.collaborators || []).filter(
-      (c: any) => c.userId?.toString() !== String(req.params.userId)
-    ) as any;
-    await project.save();
-    res.json(await loadPopulatedProject(project._id));
-  } catch {
-    res.status(500).json({ error: 'Error al quitar colaborador' });
   }
 };
 
@@ -582,6 +525,12 @@ export const rewriteSection = async (req: any, res: Response) => {
     );
     const cleanText = (result.text || '').trim().replace(/^```markdown\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '');
     console.log(`[Project/Rewrite] Reescritura completada con proveedor ${result.provider} (modelo: ${result.model})`);
+    await new ActivityLog({
+      userId: req.user?._id,
+      action: 'AI_REWRITE',
+      projectId: req.project?._id,
+      details: { title: req.project?.title, instruction: String(instruction).slice(0, 200) }
+    }).save();
 
     res.json({
       newText: cleanText,

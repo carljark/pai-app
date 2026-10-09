@@ -400,6 +400,8 @@ export class ProjectsFacade {
   /** Reescribe una sección del proyecto con IA */
   rewriteSection(instruction: string, aiProvider?: AIProvider, aiModel?: string) {
     const payload = {
+      // El backend comprueba permisos y turno de edición sobre este proyecto
+      projectId: this.currentProjectId() || '',
       context: this.generatedProject(),
       instruction,
       aiProvider: aiProvider || this.selectedAi(),

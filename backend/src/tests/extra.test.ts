@@ -28,9 +28,14 @@ describe('Extra coverage', () => {
   });
 
   it('docx: importDocx no file', async () => {
-    const { token } = await createTestUser('teacher', 'ex3@test.com');
+    const { token, user } = await createTestUser('teacher', 'ex3@test.com');
     const fakeId = new mongoose.Types.ObjectId();
-    const res = await request(app).post(`/api/projects/${fakeId}/import-docx`).set('Authorization', `Bearer ${token}`);
+    const missing = await request(app).post(`/api/projects/${fakeId}/import-docx`).set('Authorization', `Bearer ${token}`);
+    expect(missing.status).toBe(404);
+
+    const Project = mongoose.model('Project');
+    const project = await new Project({ title: 'Sin archivo', userId: user._id }).save();
+    const res = await request(app).post(`/api/projects/${project._id}/import-docx`).set('Authorization', `Bearer ${token}`);
     expect(res.status).toBe(400);
   });
 

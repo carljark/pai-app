@@ -213,8 +213,8 @@ const waitForTranslationStatus = (id: unknown, status: string) =>
 
 describe('POST /api/projects/:id/translate', () => {
   it('responde 202 en estado traduciendo y guarda la traducción en segundo plano', async () => {
-    const { token } = await createTestUser('teacher', 'trad@test.com');
-    const project = await createProject({ contentVersion: 3 });
+    const { token, user } = await createTestUser('teacher', 'trad@test.com');
+    const project = await createProject({ contentVersion: 3, userId: user._id });
 
     const res = await request(app)
       .post(`/api/projects/${project._id}/translate`)
@@ -232,8 +232,8 @@ describe('POST /api/projects/:id/translate', () => {
   });
 
   it('usa el proveedor del proyecto si no se indica otro', async () => {
-    const { token } = await createTestUser('teacher', 'trad2@test.com');
-    const project = await createProject({ aiProvider: 'gemini' });
+    const { token, user } = await createTestUser('teacher', 'trad2@test.com');
+    const project = await createProject({ aiProvider: 'gemini', userId: user._id });
     await request(app)
       .post(`/api/projects/${project._id}/translate`)
       .set('Authorization', `Bearer ${token}`)
@@ -243,9 +243,10 @@ describe('POST /api/projects/:id/translate', () => {
   });
 
   it('responde 409 si ya hay una traducción en curso y permite reintentar si el bloqueo caducó', async () => {
-    const { token } = await createTestUser('teacher', 'trad5@test.com');
-    const recent = await createProject({ translations: { catalan: { status: 'traduciendo', startedAt: new Date() } } });
+    const { token, user } = await createTestUser('teacher', 'trad5@test.com');
+    const recent = await createProject({ userId: user._id, translations: { catalan: { status: 'traduciendo', startedAt: new Date() } } });
     const expired = await createProject({
+      userId: user._id,
       translations: { catalan: { status: 'traduciendo', startedAt: new Date(Date.now() - TRANSLATION_LOCK_MS - 1000) } }
     });
     const post = (id: unknown) =>
@@ -257,9 +258,9 @@ describe('POST /api/projects/:id/translate', () => {
   });
 
   it('rechaza idiomas inválidos, proyectos inexistentes, sin contenido o ya en ese idioma', async () => {
-    const { token } = await createTestUser('teacher', 'trad3@test.com');
-    const project = await createProject();
-    const empty = await createProject({ generatedContent: { rawText: '' } });
+    const { token, user } = await createTestUser('teacher', 'trad3@test.com');
+    const project = await createProject({ userId: user._id });
+    const empty = await createProject({ generatedContent: { rawText: '' }, userId: user._id });
     const post = (id: unknown, target: unknown) =>
       request(app).post(`/api/projects/${id}/translate`).set('Authorization', `Bearer ${token}`).send({ target });
 
@@ -270,8 +271,8 @@ describe('POST /api/projects/:id/translate', () => {
   });
 
   it('guarda el estado de error si falla la IA, conservando la traducción anterior', async () => {
-    const { token } = await createTestUser('teacher', 'trad4@test.com');
-    const project = await createProject({ translations: { catalan: { rawText: 'Versió anterior', status: 'completada' } } });
+    const { token, user } = await createTestUser('teacher', 'trad4@test.com');
+    const project = await createProject({ userId: user._id, translations: { catalan: { rawText: 'Versió anterior', status: 'completada' } } });
     aiMock.mockRejectedValueOnce(new Error('sin cuota'));
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
@@ -318,8 +319,8 @@ describe('POST /api/projects/:id/translate', () => {
   });
 
   it('devuelve 500 si falla el inicio de la traducción', async () => {
-    const { token } = await createTestUser('teacher', 'trad6@test.com');
-    const project = await createProject();
+    const { token, user } = await createTestUser('teacher', 'trad6@test.com');
+    const project = await createProject({ userId: user._id });
     const spy = vi.spyOn(Project, 'updateOne').mockRejectedValueOnce(new Error('DB'));
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const res = await request(app)
@@ -334,8 +335,8 @@ describe('POST /api/projects/:id/translate', () => {
 
 describe('Edición y exportación por idioma', () => {
   it('PUT guarda la traducción sin tocar el original ni contentVersion', async () => {
-    const { token } = await createTestUser('teacher', 'edit@test.com');
-    const project = await createProject({ translations: { catalan: { rawText: 'abans', sourceVersion: 0 } } });
+    const { token, user } = await createTestUser('teacher', 'edit@test.com');
+    const project = await createProject({ userId: user._id, translations: { catalan: { rawText: 'abans', sourceVersion: 0 } } });
 
     const res = await request(app)
       .put(`/api/projects/${project._id}`)
@@ -348,9 +349,9 @@ describe('Edición y exportación por idioma', () => {
     expect(res.body.contentVersion).toBe(0);
   });
 
-  it('PUT del original incrementa contentVersion y devuelve null si no existe', async () => {
-    const { token } = await createTestUser('teacher', 'edit2@test.com');
-    const project = await createProject();
+  it('PUT del original incrementa contentVersion y responde 404 si no existe', async () => {
+    const { token, user } = await createTestUser('teacher', 'edit2@test.com');
+    const project = await createProject({ userId: user._id });
     const res = await request(app)
       .put(`/api/projects/${project._id}`)
       .set('Authorization', `Bearer ${token}`)
@@ -361,7 +362,7 @@ describe('Edición y exportación por idioma', () => {
       .put('/api/projects/64b7f0000000000000000000')
       .set('Authorization', `Bearer ${token}`)
       .send({ rawText: 'x' });
-    expect(missing.body).toBeNull();
+    expect(missing.status).toBe(404);
   });
 
   it('exporta a DOCX la versión del idioma pedido', async () => {

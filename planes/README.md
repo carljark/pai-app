@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[005 — Trabajo colaborativo en proyectos compartidos](005_plan_trabajo_colaborativo_en_proyectos.md)** · _Implementado (tarea 203)_  
+  Solo autor y colaboradores pueden editar (el resto, solo lectura), notificación al colaborador invitado, turno de edición que bloquea la IA y los cambios a los demás mientras alguien modifica el proyecto, y registro con fecha, hora y autor de cada cambio.
+
 - **[004 — Mapa de afinidades curriculares de la ESO (1.º-4.º)](004_plan_mapa_afinidades_curriculares_eso.md)** · _Implementado (tarea 202)_  
   Mapa de la ESO con el formato del documento del IES Cap de Llevant (fichas de afinidad sin actividades), revisado contra el Decreto 42/2025, ampliado y con 4.º de ESO y sus materias de opción.
 

@@ -50,18 +50,22 @@ describe('Cobertura de ramas adicionales', () => {
     expect(toProjectSummary(undefined)).toBeUndefined();
   });
 
-  it('files.controller cubre subida sin archivo y directorio inexistente', () => {
+  it('files.controller cubre subida sin archivo y directorio inexistente', async () => {
     const resNoFile = mockRes();
-    uploadFile({}, resNoFile);
+    await uploadFile({}, resNoFile);
     expect(resNoFile.status).toHaveBeenCalledWith(400);
 
     const resNoDir = mockRes();
     getFiles({ params: { id: 'directorio-inexistente-xyz' } }, resNoDir);
     expect(resNoDir.json).toHaveBeenCalledWith([]);
 
+    // Sin usuario el registro de cambios falla, pero la subida responde igual
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const resNoFile2 = mockRes();
-    uploadFile({ file: { originalname: 'a.pdf' } }, resNoFile2);
+    await uploadFile({ file: { originalname: 'a.pdf' } }, resNoFile2);
     expect(resNoFile2.json).toHaveBeenCalledWith({ message: 'Archivo subido', filename: 'a.pdf' });
+    expect(errorSpy).toHaveBeenCalled();
+    errorSpy.mockRestore();
   });
 
   it('updateSettings actualiza una configuración existente', async () => {

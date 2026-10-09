@@ -16,6 +16,9 @@ import {
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
 import { TranslationBannerComponent } from '../translation-banner/translation-banner.component';
+import { EditLockBannerComponent } from '../edit-lock-banner/edit-lock-banner.component';
+import { ProjectChangeLogComponent } from '../project-change-log/project-change-log.component';
+import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
 import { NivelNombrePipe } from '../../../projects/pipes/nivel-nombre.pipe';
 import {
   AppSelectComponent,
@@ -31,6 +34,8 @@ import {
     MarkdownComponent,
     AppSelectComponent,
     TranslationBannerComponent,
+    EditLockBannerComponent,
+    ProjectChangeLogComponent,
     NivelNombrePipe,
   ],
   templateUrl: './taller-view.component.html',
@@ -42,6 +47,8 @@ export class TallerViewComponent {
   projects = inject(ProjectsFacade);
   auth = inject(AuthFacade);
   paiService = inject(PaiService);
+  /** Turno de edición y permisos: con `blocked()` se deshabilitan la IA y los cambios. */
+  editLock = inject(EditLockFacade);
 
   isSidebarCollapsed = signal<boolean>(false);
   isMobileResourcesCollapsed = signal<boolean>(
@@ -192,6 +199,7 @@ export class TallerViewComponent {
     console.error('Error en IA', err);
     this.projects.isThinking.set(false);
     this.projects.popUndo();
+    this.editLock.handleConflict(err);
     this.appFacade.errorTitle.set(
       this.layout.language() === 'catalan' ? "Error a l'Assistent IA" : 'Error en el Asistente IA',
     );

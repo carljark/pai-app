@@ -9,7 +9,7 @@ function getNotifType(status: string): string {
 }
 
 async function backfillNotificationsIfEmpty() {
-  const count = await Notification.countDocuments();
+  const count = await Notification.countDocuments({ recipientId: null });
   if (count > 0) return;
 
   const existingProjects = await Project.find().populate('userId', 'name email').limit(50);
@@ -36,7 +36,9 @@ async function backfillNotificationsIfEmpty() {
 export const getNotifications = async (req: any, res: Response) => {
   try {
     await backfillNotificationsIfEmpty();
-    const notifications = await Notification.find().populate('userId', 'name email').sort({ updatedAt: -1 }).limit(50);
+    // Las notificaciones generales las ven todos; las personales (invitaciones), solo su destinatario
+    const visible = { $or: [{ recipientId: null }, { recipientId: req.user?._id }] };
+    const notifications = await Notification.find(visible).populate('userId', 'name email').sort({ updatedAt: -1 }).limit(50);
     const result = notifications.map(n => {
       const obj = n.toObject ? n.toObject() : { ...n };
       const user = obj.userId as any;

@@ -45,14 +45,19 @@ export const importDocx = async (req: any, res: Response) => {
     const cleanHtml = result.value;
     const newMarkdown = turndownService.turndown(cleanHtml);
     
-    const project = await Project.findOne({ _id: req.params.id, userId: req.user._id });
-    if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
-    
-    project.generatedContent!.rawText = newMarkdown;
+    // `requireProjectEditor` ya cargó el proyecto: autor, colaboradores o administradores
+    const project = req.project;
+    project.generatedContent = { ...(project.generatedContent || {}), rawText: newMarkdown };
     // Sustituye el original: las traducciones quedan desactualizadas
     project.contentVersion = Number(project.contentVersion) + 1;
     await project.save();
-    
+    await ActivityLog.create({
+      userId: req.user._id,
+      action: 'IMPORT_DOCX',
+      projectId: project._id,
+      details: { title: project.title, filename: req.file.originalname }
+    });
+
     res.json({ message: 'Documento procesado correctamente', project });
   } catch (error) {
     res.status(500).json({ error: 'Error importando el archivo DOCX' });

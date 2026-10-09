@@ -1,4 +1,5 @@
-import { Injectable, inject, signal, effect, untracked } from '@angular/core';
+import { Injectable, inject, signal, computed, effect, untracked } from '@angular/core';
+import type { EditLockEvent } from '../../projects/models/collaboration.model';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { AuthFacade } from '../../../features/auth/services/auth.facade';
@@ -10,6 +11,10 @@ import {
 } from '../models/notification.model';
 import { NotificationMapper } from '../mappers/notification.mapper';
 
+/** Mismo proyecto y misma clase de aviso (la invitación no sustituye al estado ni al revés). */
+const sameEntry = (a: AppNotification, b: AppNotification): boolean =>
+  a.projectId === b.projectId && (a.type === 'INVITATION') === (b.type === 'INVITATION');
+
 @Injectable({ providedIn: 'root' })
 export class NotificationsFacade {
   private http = inject(HttpClient);
@@ -18,6 +23,11 @@ export class NotificationsFacade {
 
   notifications = signal<AppNotification[]>([]);
   latestNotification = signal<AppNotification | null>(null);
+  /** Último cambio de turno de edición recibido por SSE. */
+  editLockEvent = signal<EditLockEvent | null>(null);
+  /** Invitaciones a colaborar: se muestran aparte de la actividad de generación. */
+  invitations = computed(() => this.notifications().filter((n) => n.type === 'INVITATION'));
+  activity = computed(() => this.notifications().filter((n) => n.type !== 'INVITATION'));
   recentActivityOpen = signal(false);
   private sseRevision = 0;
 
@@ -113,9 +123,7 @@ export class NotificationsFacade {
     const result = [...fetched];
 
     for (const existing of current) {
-      const idx = existing.projectId
-        ? result.findIndex((n) => n.projectId === existing.projectId)
-        : -1;
+      const idx = existing.projectId ? result.findIndex((n) => sameEntry(n, existing)) : -1;
 
       if (idx === -1) {
         result.push(existing);
@@ -134,6 +142,11 @@ export class NotificationsFacade {
   }
 
   private handleSseEvent(raw: RawNotificationEvent) {
+    if (raw.type === 'PROJECT_EDIT_LOCK') {
+      // No es una notificación: lo consume el turno de edición del taller
+      this.editLockEvent.set({ projectId: raw.projectId || '', lock: raw.lock ?? null });
+      return;
+    }
     if (raw.type === 'CONNECTED') {
       // En cada (re)conexión resincronizamos con la base de datos para no perder
       // eventos terminales ocurridos durante una desconexión.
@@ -155,7 +168,7 @@ export class NotificationsFacade {
 
   private mergeNotification(list: AppNotification[], notif: AppNotification): AppNotification[] {
     if (notif.projectId) {
-      const idx = list.findIndex((n) => n.projectId === notif.projectId);
+      const idx = list.findIndex((n) => sameEntry(n, notif));
       if (idx >= 0) {
         const updated = [...list];
         const newTime = notif.updatedAt || notif.timestamp;

@@ -3,6 +3,7 @@ import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { ProjectTranslationFacade } from '../../../projects/services/project-translation.facade';
+import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
 
 /**
  * Aviso del taller cuando el proyecto no está en el idioma de la interfaz: ofrece traducirlo,
@@ -21,10 +22,12 @@ export class TranslationBannerComponent {
   private auth = inject(AuthFacade);
   private lastLanguage = this.layout.language();
 
-  /** Traducir usa la IA: mismos permisos que el asistente del taller. */
+  private editLock = inject(EditLockFacade);
+
+  /** Traducir usa la IA y cambia el proyecto: mismos permisos y turno que el asistente. */
   canTranslate = computed(() => {
     const user = this.auth.currentUser();
-    return Boolean(user?.canUseAi || user?.role === 'admin');
+    return Boolean(user?.canUseAi || user?.role === 'admin') && !this.editLock.blocked();
   });
 
   constructor() {

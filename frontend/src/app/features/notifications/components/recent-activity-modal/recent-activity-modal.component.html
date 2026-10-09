@@ -75,6 +75,7 @@
     </div>
 
     <div style="max-height: 60vh; overflow-y: auto; padding: 10px 0">
+      <app-invitation-list></app-invitation-list>
       @if (recentProjects().length === 0) {
         <div style="padding: 30px 20px; text-align: center; color: #7f8c8d; font-size: 1rem">
           {{ trans.t().modalRecentActivityEmpty }}

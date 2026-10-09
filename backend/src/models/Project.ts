@@ -61,6 +61,15 @@ const ProjectSchema = new mongoose.Schema({
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     addedAt: { type: Date, default: Date.now }
   }],
+  /** Turno de edición: quien lo tiene vigente es el único que puede modificar el proyecto. */
+  editLock: {
+    type: new mongoose.Schema({
+      userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+      userName: String,
+      expiresAt: Date
+    }, { _id: false }),
+    default: undefined
+  },
   /** Id del proyecto original si llegó por importación (evita duplicarlo al reimportar). */
   importSourceId: { type: String, index: true },
   importedAt: Date,

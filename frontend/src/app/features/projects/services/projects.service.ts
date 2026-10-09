@@ -106,6 +106,7 @@ export class ProjectsService {
   }
 
   rewriteSection(payload: {
+    projectId: string;
     context: string;
     instruction: string;
     aiProvider: 'gemini' | 'openrouter';

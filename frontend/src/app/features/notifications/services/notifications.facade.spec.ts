@@ -384,6 +384,58 @@ describe('NotificationsFacade', () => {
     expect(httpMock.get).not.toHaveBeenCalled();
   });
 
+  it('el evento del turno de edición no se convierte en notificación', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    const lock = { userId: 'u2', userName: 'Ana', expiresAt: '', remainingMs: 1000 };
+
+    updatesSubject.next({ type: 'PROJECT_EDIT_LOCK', projectId: 'p1', lock });
+    expect(facade.editLockEvent()).toEqual({ projectId: 'p1', lock });
+    expect(facade.notifications()).toEqual([]);
+
+    updatesSubject.next({ type: 'PROJECT_EDIT_LOCK' });
+    expect(facade.editLockEvent()).toEqual({ projectId: '', lock: null });
+  });
+
+  it('la invitación y el estado del mismo proyecto conviven y se separan', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    TestBed.flushEffects();
+    const invitation = {
+      _id: 'i1',
+      projectId: 'p1',
+      type: 'PROJECT_INVITATION',
+      title: 'Huerto',
+      userName: 'Ana',
+      status: 'borrador',
+    };
+
+    updatesSubject.next({ type: 'PROJECT_STATUS', projectId: 'p1', status: 'en_cola' });
+    updatesSubject.next({ type: 'PROJECT_INVITATION', projectId: 'p1', notification: invitation });
+    updatesSubject.next({ type: 'PROJECT_INVITATION', projectId: 'p1', notification: invitation });
+
+    expect(facade.notifications().length).toBe(2);
+    expect(facade.invitations().map((n) => n.id)).toEqual(['i1']);
+    expect(facade.activity().map((n) => n.type)).toEqual(['STATUS']);
+    expect(facade.latestNotification()?.type).toBe('INVITATION');
+  });
+
+  it('al fusionar con la base de datos no mezcla la invitación con el estado', () => {
+    authFacadeMock.currentUser.set({ _id: '1' });
+    const pending = new Subject<any[]>();
+    httpMock.get.mockReturnValueOnce(pending.asObservable());
+    TestBed.flushEffects();
+
+    updatesSubject.next({
+      type: 'PROJECT_INVITATION',
+      projectId: 'p1',
+      notification: { _id: 'i1', projectId: 'p1', type: 'PROJECT_INVITATION', status: 'borrador' },
+    });
+    pending.next([{ _id: 's1', projectId: 'p1', type: 'PROJECT_STATUS', status: 'borrador' }]);
+
+    expect(facade.invitations().length).toBe(1);
+    expect(facade.activity().length).toBe(1);
+  });
+
   it('should construct without a document (SSR-safe)', () => {
     vi.stubGlobal('document', undefined);
     try {

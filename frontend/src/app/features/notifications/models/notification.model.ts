@@ -1,3 +1,5 @@
+import type { EditLock } from '../../projects/models/collaboration.model';
+
 /** Usuario poblado por Mongoose o solo su id. */
 export type UserRef = string | { _id?: string; name?: string; email?: string };
 
@@ -78,11 +80,14 @@ export interface RawNotificationEvent {
   generationTimeMs?: number;
   generationStartedAt?: Date | string;
   notification?: DbNotification;
+  /** Turno de edición (eventos `PROJECT_EDIT_LOCK`). */
+  lock?: EditLock | null;
 }
 
 export interface AppNotification {
   id: string;
-  type: 'COMPLETED' | 'ERROR' | 'STATUS' | 'INFO';
+  /** `INVITATION`: invitación personal a colaborar en un proyecto. */
+  type: 'COMPLETED' | 'ERROR' | 'STATUS' | 'INFO' | 'INVITATION';
   title: string;
   message: string;
   error?: string;

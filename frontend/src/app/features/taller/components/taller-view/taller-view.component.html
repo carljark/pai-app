@@ -206,7 +206,7 @@
         (change)="uploadWord($event)"
         style="display: none"
       />
-      <button (click)="triggerUpload()" class="btn-secondary">
+      <button (click)="triggerUpload()" class="btn-secondary" [disabled]="editLock.blocked()">
         <svg
           width="16"
           height="16"
@@ -221,8 +221,12 @@
         </svg>
         {{ trans.t().uploadWord }}
       </button>
-      <button (click)="saveDraft()" class="btn-secondary">{{ trans.t().saveDraft }}</button>
-      <button (click)="publishProject()" class="btn-primary">{{ trans.t().publish }}</button>
+      <button (click)="saveDraft()" class="btn-secondary" [disabled]="editLock.blocked()">
+        {{ trans.t().saveDraft }}
+      </button>
+      <button (click)="publishProject()" class="btn-primary" [disabled]="editLock.blocked()">
+        {{ trans.t().publish }}
+      </button>
       <button (click)="exportPDF()" class="btn-danger">{{ trans.t().exportPDF }}</button>
     </div>
   </div>
@@ -313,7 +317,9 @@
           <p style="margin: 0; font-size: 0.9rem; color: #64748b">{{ trans.t().aiThinkingDesc }}</p>
         </div>
       }
+      <app-edit-lock-banner></app-edit-lock-banner>
       <app-translation-banner></app-translation-banner>
+      <app-project-change-log></app-project-change-log>
       <div
         id="pdf-content"
         style="
@@ -516,7 +522,8 @@
                 <div class="form-group" style="margin-bottom: 16px">
                   <textarea
                     [ngModel]="projects.aiPrompt()"
-                    (ngModelChange)="projects.aiPrompt.set($event)"
+                    (ngModelChange)="projects.aiPrompt.set($event); editLock.touch()"
+                    [disabled]="editLock.blocked()"
                     [placeholder]="trans.t().aiPlaceholder"
                     class="form-input"
                     style="height: 100px; resize: none"
@@ -524,7 +531,7 @@
                 </div>
                 <button
                   (click)="rewriteWithAI()"
-                  [disabled]="projects.isThinking()"
+                  [disabled]="projects.isThinking() || editLock.blocked()"
                   class="btn-primary"
                   style="width: 100%"
                 >
@@ -533,6 +540,7 @@
                 @if (projects.canUndo()) {
                   <button
                     (click)="undoAI()"
+                    [disabled]="editLock.blocked()"
                     class="btn-secondary"
                     style="
                       width: 100%;
@@ -585,43 +593,45 @@
               <h3 style="margin: 0 0 16px 0; font-size: 1.1rem; color: #1f2937">
                 {{ trans.t().attachmentsTitle }}
               </h3>
-              <div
-                style="
-                  border: 2px dashed #cbd5e1;
-                  border-radius: 6px;
-                  padding: 24px;
-                  text-align: center;
-                  cursor: pointer;
-                  margin-bottom: 16px;
-                "
-                onclick="document.getElementById('fileInput').click()"
-                (dragover)="onDragOver($event)"
-                (dragleave)="onDragLeave($event)"
-                (drop)="onDrop($event)"
-              >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#94a3b8"
-                  stroke-width="2"
-                  style="margin-bottom: 8px"
+              @if (!editLock.blocked()) {
+                <div
+                  style="
+                    border: 2px dashed #cbd5e1;
+                    border-radius: 6px;
+                    padding: 24px;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-bottom: 16px;
+                  "
+                  onclick="document.getElementById('fileInput').click()"
+                  (dragover)="onDragOver($event)"
+                  (dragleave)="onDragLeave($event)"
+                  (drop)="onDrop($event)"
                 >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="17 8 12 3 7 8" />
-                  <line x1="12" y1="3" x2="12" y2="15" />
-                </svg>
-                <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500">
-                  {{ projects.isUploading() ? trans.t().uploading : trans.t().dragFiles }}
-                </p>
-                <input
-                  type="file"
-                  id="fileInput"
-                  style="display: none"
-                  (change)="onFileSelected($event)"
-                />
-              </div>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#94a3b8"
+                    stroke-width="2"
+                    style="margin-bottom: 8px"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                  </svg>
+                  <p style="margin: 0; font-size: 0.85rem; color: #64748b; font-weight: 500">
+                    {{ projects.isUploading() ? trans.t().uploading : trans.t().dragFiles }}
+                  </p>
+                  <input
+                    type="file"
+                    id="fileInput"
+                    style="display: none"
+                    (change)="onFileSelected($event)"
+                  />
+                </div>
+              }
               <div style="flex: 1; overflow-y: auto">
                 @for (file of projects.projectFiles(); track file._id) {
                   <div
@@ -656,6 +666,7 @@
                     </div>
                     <button
                       (click)="deleteFile(file.filename)"
+                      [disabled]="editLock.blocked()"
                       style="
                         background: none;
                         border: none;

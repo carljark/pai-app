@@ -1,0 +1,17 @@
+@if (notifications.invitations().length > 0) {
+  <section class="invitation-list">
+    <h3 class="invitation-list__title">🤝 {{ trans.t().invitationsTitle }}</h3>
+    @for (invitation of notifications.invitations(); track invitation.id) {
+      <div class="invitation-list__item" [class.invitation-list__item--unread]="!invitation.read">
+        <p class="invitation-list__text">
+          <strong>{{ invitation.userName }}</strong> {{ trans.t().invitationInvitedYou }} «{{
+            invitation.title
+          }}»
+        </p>
+        <button type="button" class="btn-primary invitation-list__open" (click)="open(invitation)">
+          {{ trans.t().invitationOpen }}
+        </button>
+      </div>
+    }
+  </section>
+}

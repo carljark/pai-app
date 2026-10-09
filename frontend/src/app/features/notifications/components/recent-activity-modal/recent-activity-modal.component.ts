@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../../../services/translation.service';
 import { ActivityItem } from '../../models/notification.model';
 import { activityStartTime } from '../../utils/activity-time';
+import { InvitationListComponent } from '../invitation-list/invitation-list.component';
 
 @Component({
   selector: 'app-recent-activity-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, InvitationListComponent],
   templateUrl: './recent-activity-modal.component.html',
 })
 export class RecentActivityModalComponent {

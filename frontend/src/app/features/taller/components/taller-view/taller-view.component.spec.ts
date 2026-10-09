@@ -9,6 +9,9 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { ProjectTranslationFacade } from '../../../projects/services/project-translation.facade';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
+import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
+import { CollaborationService } from '../../../projects/services/collaboration.service';
+import { NotificationsFacade } from '../../../notifications/services/notifications.facade';
 import { signal } from '@angular/core';
 import { of, throwError } from 'rxjs';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
@@ -36,6 +39,7 @@ describe('TallerViewComponent', () => {
   let mockProjectsFacade: any;
   let mockAuthFacade: any;
   let mockPaiService: any;
+  let mockEditLock: any;
 
   beforeEach(async () => {
     mockAppFacade = {
@@ -145,6 +149,16 @@ describe('TallerViewComponent', () => {
       }),
     };
 
+    mockEditLock = {
+      blocked: signal(false),
+      readOnly: signal(false),
+      lockedByOther: signal(false),
+      hasLock: signal(false),
+      holderName: signal(''),
+      touch: vi.fn(),
+      handleConflict: vi.fn(),
+    };
+
     mockPaiService = {
       importDocx: vi
         .fn()
@@ -160,6 +174,10 @@ describe('TallerViewComponent', () => {
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
         { provide: PaiService, useValue: mockPaiService },
+        { provide: EditLockFacade, useValue: mockEditLock },
+        // El registro de cambios tiene su propio spec; aquí no hace peticiones
+        { provide: CollaborationService, useValue: { getChanges: vi.fn(() => of([])) } },
+        { provide: NotificationsFacade, useValue: { editLockEvent: signal(null) } },
         // El aviso de traducción tiene su propio spec; aquí se aísla de HttpClient
         {
           provide: ProjectTranslationFacade,
@@ -281,6 +299,31 @@ describe('TallerViewComponent', () => {
     // Trigger all buttons
     const buttons = de.queryAll(By.css('button'));
     buttons.forEach((b) => b.triggerEventHandler('click', null));
+  });
+
+  it('si otra persona edita o es de solo lectura, deshabilita la IA y los cambios', async () => {
+    const el = fixture.nativeElement as HTMLElement;
+    const textarea = () => el.querySelector('textarea') as HTMLTextAreaElement;
+    expect(el.querySelector('#fileInput')).not.toBeNull();
+
+    textarea().value = 'Añade una rúbrica';
+    textarea().dispatchEvent(new Event('input'));
+    expect(mockProjectsFacade.aiPrompt()).toBe('Añade una rúbrica');
+    expect(mockEditLock.touch).toHaveBeenCalled();
+
+    mockEditLock.blocked.set(true);
+    mockProjectsFacade.canUndo.set(true);
+    mockProjectsFacade.projectFiles.set([{ _id: 'f1', filename: 'a.pdf', size: 10 }]);
+    fixture.detectChanges();
+
+    expect(el.querySelector('#fileInput')).toBeNull();
+    const disabled = Array.from(el.querySelectorAll('button')).filter((b) => b.disabled);
+    // Importar Word, guardar, publicar, reescribir, deshacer y borrar recurso
+    expect(disabled.length).toBeGreaterThanOrEqual(6);
+    // ngModel aplica `disabled` de forma asíncrona
+    await fixture.whenStable();
+    fixture.detectChanges();
+    expect(textarea().disabled).toBe(true);
   });
 
   it('should trigger all HTML event bindings for coverage', () => {

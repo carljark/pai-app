@@ -6,6 +6,7 @@ import { ProjectTranslationFacade } from '../../../projects/services/project-tra
 import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
+import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
 import { TRANSLATIONS_ES } from '../../../../services/translations.es';
 
 const view = (overrides: object = {}) => ({
@@ -22,6 +23,7 @@ describe('TranslationBannerComponent', () => {
   let translation: any;
   let language: ReturnType<typeof signal<string>>;
   let currentUser: ReturnType<typeof signal<any>>;
+  let blocked: ReturnType<typeof signal<boolean>>;
 
   const text = () => (fixture.nativeElement as HTMLElement).textContent || '';
   const button = () => fixture.nativeElement.querySelector('button') as HTMLButtonElement | null;
@@ -29,6 +31,7 @@ describe('TranslationBannerComponent', () => {
   beforeEach(async () => {
     language = signal('castellano');
     currentUser = signal<any>({ role: 'teacher', canUseAi: true });
+    blocked = signal(false);
     translation = {
       view: signal<any>(null),
       isTranslating: signal(false),
@@ -43,6 +46,7 @@ describe('TranslationBannerComponent', () => {
         { provide: LayoutService, useValue: { language } },
         { provide: TranslationService, useValue: { t: signal(TRANSLATIONS_ES) } },
         { provide: AuthFacade, useValue: { currentUser } },
+        { provide: EditLockFacade, useValue: { blocked } },
       ],
     }).compileComponents();
     fixture = TestBed.createComponent(TranslationBannerComponent);
@@ -75,6 +79,16 @@ describe('TranslationBannerComponent', () => {
     expect(button()).not.toBeNull();
 
     currentUser.set(null);
+    fixture.detectChanges();
+    expect(button()).toBeNull();
+  });
+
+  it('oculta el botón si otra persona edita o el proyecto es de solo lectura', () => {
+    translation.view.set(view({ missingTranslation: true }));
+    fixture.detectChanges();
+    expect(button()).not.toBeNull();
+
+    blocked.set(true);
     fixture.detectChanges();
     expect(button()).toBeNull();
   });

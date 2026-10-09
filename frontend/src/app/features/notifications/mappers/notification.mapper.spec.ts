@@ -195,4 +195,16 @@ describe('NotificationMapper', () => {
     expect(mappedRaw.errorDetail).toBe('Error en crudo');
     expect(mappedRaw.error).toBe('Error en crudo');
   });
+
+  it('convierte la invitación a colaborar en una notificación INVITATION', () => {
+    const mapped = NotificationMapper.fromDbEntity({
+      _id: 'i1',
+      type: 'PROJECT_INVITATION',
+      projectId: 'p1',
+      title: 'Huerto',
+      userName: 'Ana',
+    });
+    expect(mapped.type).toBe('INVITATION');
+    expect(mapped.userName).toBe('Ana');
+  });
 });

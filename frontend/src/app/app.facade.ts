@@ -111,6 +111,8 @@ export class AppFacade {
           this.errorTitle.set('Error en la Generación');
           this.errorMessage.set(notif.message);
           this.showErrorModal.set(true);
+        } else if (notif.type === 'INVITATION') {
+          this.showInvitationNotice(notif);
         }
       });
     });
@@ -144,6 +146,15 @@ export class AppFacade {
       this.infoType.set('success');
       this.showInfoModal.set(true);
     }, 100);
+  }
+
+  /** Invitación a colaborar recibida en tiempo real: aviso con quién invita y a qué proyecto. */
+  private showInvitationNotice(notif: AppNotification): void {
+    const t = this.trans.t();
+    this.infoTitle.set(t.invitationToastTitle);
+    this.infoMessage.set(`${notif.userName} ${t.invitationInvitedYou} «${notif.title}»`);
+    this.infoType.set('info');
+    this.showInfoModal.set(true);
   }
 
   closeInfoModal(): void {

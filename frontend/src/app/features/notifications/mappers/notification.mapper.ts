@@ -15,6 +15,7 @@ const DB_TYPE_MAP: Record<string, AppNotification['type']> = {
   PROJECT_COMPLETED: 'COMPLETED',
   PROJECT_ERROR: 'ERROR',
   PROJECT_STATUS: 'STATUS',
+  PROJECT_INVITATION: 'INVITATION',
   INFO: 'INFO',
 };
 

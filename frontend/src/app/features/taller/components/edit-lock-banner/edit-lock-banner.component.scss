@@ -1,0 +1,37 @@
+@use '../../../../../styles/variables' as variables;
+
+.edit-lock-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border-left: 4px solid variables.$color-info;
+  background: variables.$color-info-bg;
+  color: variables.$color-text-main;
+  font-size: 0.9rem;
+}
+
+.edit-lock-banner__text {
+  flex: 1;
+}
+
+.edit-lock-banner__holder {
+  font-weight: variables.$font-weight-semibold;
+}
+
+.edit-lock-banner--locked {
+  border-left-color: variables.$color-warning;
+  background: variables.$color-warning-bg;
+}
+
+.edit-lock-banner--readonly {
+  border-left-color: variables.$color-text-muted;
+  background: variables.$color-surface-alt;
+}
+
+.edit-lock-banner--mine {
+  border-left-color: variables.$color-success;
+  background: variables.$color-success-bg;
+}

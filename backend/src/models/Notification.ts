@@ -3,9 +3,11 @@ import mongoose from 'mongoose';
 const NotificationSchema = new mongoose.Schema({
   projectId: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  /** Destinatario de una notificación personal (invitaciones); sin él la ven todos. */
+  recipientId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', index: true },
   userName: { type: String, default: 'Profesor' },
   userEmail: { type: String },
-  type: { type: String, required: true }, // 'PROJECT_STATUS' | 'PROJECT_COMPLETED' | 'PROJECT_ERROR' | 'INFO'
+  type: { type: String, required: true }, // 'PROJECT_STATUS' | 'PROJECT_COMPLETED' | 'PROJECT_ERROR' | 'PROJECT_INVITATION' | 'INFO'
   title: { type: String, required: true },
   message: { type: String, required: true },
   modules: [String],

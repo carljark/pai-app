@@ -257,6 +257,35 @@ export const TRANSLATIONS_ES = {
   translationFailedToast: 'No se ha podido traducir',
   translationError: 'No se ha podido traducir el proyecto. Inténtalo de nuevo.',
 
+  // TRABAJO COLABORATIVO
+  invitationsTitle: 'Invitaciones a colaborar',
+  invitationInvitedYou: 'te ha invitado a colaborar en',
+  invitationOpen: 'Abrir proyecto',
+  invitationToastTitle: 'Nueva invitación',
+  editLockOther:
+    'está editando el proyecto. El asistente IA y los cambios están bloqueados hasta que termine.',
+  editLockMine:
+    'Tienes el turno de edición: el resto de participantes no puede hacer cambios mientras editas.',
+  editReadOnly:
+    'Solo lectura: únicamente el autor y los colaboradores invitados pueden modificar este proyecto.',
+  changeLogTitle: 'Registro de cambios',
+  changeLogEmpty: 'Todavía no hay cambios registrados.',
+  changeLogRefresh: 'Actualizar',
+  changeActionDefault: 'Modificó el proyecto',
+  changeActions: {
+    GENERATE_PROJECT: 'Generó el proyecto',
+    UPDATE_PROJECT: 'Editó el documento',
+    UPDATE_STATUS_BORRADOR: 'Guardó el borrador',
+    UPDATE_STATUS_PUBLICADO: 'Publicó el proyecto',
+    AI_REWRITE: 'Pidió una reescritura a la IA',
+    IMPORT_DOCX: 'Importó un Word',
+    TRANSLATE_PROJECT: 'Tradujo el proyecto',
+    UPLOAD_FILE: 'Subió un recurso',
+    DELETE_FILE: 'Borró un recurso',
+    ADD_COLLABORATOR: 'Invitó a un colaborador',
+    REMOVE_COLLABORATOR: 'Quitó a un colaborador',
+  } as Record<string, string>,
+
   // SKELETON LOADER
   loadingData: 'Cargando datos...',
 };

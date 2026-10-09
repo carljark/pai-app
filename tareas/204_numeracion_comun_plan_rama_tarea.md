@@ -23,4 +23,5 @@ Hasta ahora planes (`planes/001-005`), ramas (`feature/001-010`) y tareas (`tare
 
 ## Verificación
 - Comando de cálculo ejecutado en la sesión: devuelve `204` (máximo actual: tarea 203).
-- Cambio solo de documentación e instrucciones: no se han ejecutado las suites de tests ni se ha desplegado, porque no hay código afectado.
+- El hook de `git push` ejecutó las suites completas: backend 346 tests y frontend 832 tests (1 omitido) en verde, con lint, cobertura y comprobación zoneless correctos.
+- Cambio solo de documentación e instrucciones: no se ha desplegado en el EC2, porque no afecta al código en producción.

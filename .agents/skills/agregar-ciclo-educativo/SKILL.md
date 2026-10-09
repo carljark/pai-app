@@ -1,7 +1,7 @@
 ---
 name: agregar-ciclo-educativo
 description: >-
-  Procedimiento y guía técnica para incorporar ciclos educativos a la plataforma Plappin con mínima información de entrada (nombre y fuentes oficiales). Cubre dos rutas: ciclos de Formación Profesional (Grado Básico / FP Básica, Grado Medio / CFGM y Grado Superior / CFGS), que se seleccionan por RA, y niveles de la ESO (ampliar o actualizar la ESO ordinaria o añadir otra ESO, p. ej. de otra comunidad o decreto), que se seleccionan por competencias específicas (CE) y criterios por curso. Gestiona la integración end-to-end en backend (catálogo de niveles, datos curriculares bilingües ES/CA extraídos de forma determinista, migraciones), los cursos y la suite de tests con cobertura >= 90%. El mapa es OPCIONAL en ambas rutas: por defecto no se hace (mapa intermodular por módulos en FP, mapa de afinidades por materias en ESO); se añade más adelante o bajo demanda.
+  Procedimiento y guía técnica para incorporar ciclos educativos a la plataforma Plappin con mínima información de entrada (nombre y fuentes oficiales). Cubre dos rutas: ciclos de Formación Profesional (Grado Básico / FP Básica, Grado Medio / CFGM y Grado Superior / CFGS), que se seleccionan por RA, y niveles de la ESO (ampliar o actualizar la ESO ordinaria o añadir otra ESO, p. ej. de otra comunidad o decreto), que se seleccionan por competencias específicas (CE) y criterios por curso. Gestiona la integración end-to-end en backend (catálogo de niveles, datos curriculares bilingües ES/CA extraídos de forma determinista, migraciones), los cursos y la suite de tests con cobertura >= 90%. El mapa NO forma parte de añadir un ciclo (es muy costoso): solo se hace si el usuario lo pide expresamente (mapa intermodular por módulos en FP, con al menos una actividad por conexión; mapa de afinidades por materias en ESO).
 ---
 
 # Skill: Incorporación de ciclos educativos (FP de Grado Básico, Medio y Superior, y ESO)
@@ -19,7 +19,7 @@ Esta skill integra en Plappin, de forma sistemática y bilingüe estricta (caste
 | Referencia validada | FP Básica, CFGM Estética, CFGM Peluquería, CFGS Educación Infantil | ESO ordinaria, Decreto 42/2025 (tareas 197, 200 y 202) |
 
 > [!IMPORTANT]
-> **El mapa es opcional y, por defecto, NO se hace.** Un nivel se considera incorporado cuando tiene su entrada en el catálogo, sus datos curriculares bilingües ES/CA en MongoDB y los tests en verde. Los pasos marcados **«solo con mapa»** se aplican únicamente si el usuario pide expresamente el mapa, ahora o más adelante. Sin mapa, la entrada del catálogo no lleva `mapas` y el nivel no aparece en la pantalla del mapa.
+> **El mapa NO forma parte de añadir un ciclo: solo se hace si el usuario lo pide expresamente.** Es con diferencia la parte más costosa. Una petición como «añade el ciclo X» o «incorpora la ESO de Y» **no** incluye el mapa: no lo generes, no prepares su JSON ni su migración y no lo propongas como siguiente paso. Si el usuario lo pide más adelante, se añade sobre el nivel ya incorporado. Un nivel se considera incorporado cuando tiene su entrada en el catálogo, sus datos curriculares bilingües ES/CA en MongoDB y los tests en verde. Los pasos marcados **«solo con mapa»** se aplican únicamente si el usuario pide expresamente el mapa, ahora o más adelante. Sin mapa, la entrada del catálogo no lleva `mapas` y el nivel no aparece en la pantalla del mapa.
 
 > [!IMPORTANT]
 > **Regla de Oro Bilingüe (ambas rutas):** NUNCA introduzcas texto en catalán en los campos `_es` ni texto en castellano en los campos `_ca`. Ambos idiomas deben convivir de forma completa, rigurosa y simétrica. Para traducir o revisar la paridad usa el agente `traductor-es-ca` (`.claude/agents/traductor-es-ca.md`).
@@ -162,7 +162,7 @@ Si durante la incorporación aparece un `tipoNivel` de FP escrito a mano en `fro
 
 > [!CAUTION]
 > **REGLAS CRÍTICAS DE CONEXIONES Y ACTIVIDADES:**
-> 1. **CERO Conexiones Huérfanas / Vacías (`activities: []`):** Cada conexión intermodular DEBE tener al menos **tres** propuestas de actividad formativa (`activities.length >= 3`, como en CFGM Estética). Queda **terminantemente prohibido** crear conexiones sin actividad. El mapa de CFGM Peluquería es anterior a esta regla y aún tiene conexiones con menos de tres. Si un cruce de criterios no dispone de actividad asociada, NO debe generarse una conexión en el grafo.
+> 1. **CERO Conexiones Huérfanas / Vacías (`activities: []`):** Cada conexión intermodular DEBE tener al menos una propuesta de actividad formativa (`activities.length >= 1`). Queda **terminantemente prohibido** crear conexiones sin actividad. Si un cruce de criterios no dispone de actividad asociada, NO debe generarse una conexión en el grafo.
 > 2. **Rango Equilibrado y Educativo por RA (6 a 15 conexiones por RA):** Cada RA debe tener entre **6 y 15 conexiones intermodulares** (media de ~8 a 12). En un curso completo de 8-11 módulos, el mapa debe situarse entre **300 y 600 conexiones**. NUNCA generes miles de conexiones repetidas o artificiales.
 > 3. **Deduplicación Rigurosa de Actividades:** Las actividades deben ser únicas dentro de cada módulo y RA. No repitas la misma actividad en múltiples conexiones del mismo RA.
 
@@ -340,7 +340,7 @@ Quiero que para el "mapa intermodular" busques las conexiones entre los modulos 
 
 REGLAS ESTRICTAS DE CANTIDAD Y CALIDAD:
 1. Para cada RA, propón entre 6 y 15 conexiones intermodulares relevantes (media de 8 a 12 por RA).
-2. Cada conexión DEBE incluir obligatoriamente al menos tres propuestas de actividad formativa innovadoras (como en CFGM Estética) (metodologías activas: proyectos, retos, problemas, servicio). NUNCA generes conexiones vacías o sin actividad.
+2. Cada conexión DEBE incluir obligatoriamente al menos una propuesta de actividad formativa innovadora (metodologías activas: proyectos, retos, problemas, servicio). NUNCA generes conexiones vacías o sin actividad.
 3. Las actividades deben ser ÚNICAS y diferenciadas. No repitas la misma actividad con diferente código de criterio.
 4. En cada actividad no se pueden contemplar más de tres CE externos, aparte del propio del módulo.
 5. Se han de especificar las medidas DUA adaptadas a cada actividad y evidencias evaluables.
@@ -371,7 +371,7 @@ REQUISITOS BILINGÜES Y TÉCNICOS ESTRICTOS:
 4. NO generes el mapa intermodular (ni su JSON, ni su migración, ni `mapas` en el catálogo) salvo que se te pida expresamente. Aplica una extracción determinista de los RA y criterios y valida que cada texto aparece literalmente en la fuente oficial de su idioma.
 5. Si hay 1.er y 2.º curso, separa los módulos por curso en `cursos[].modulos` del catálogo.
 6. Silencia stderr en los tests espiando console.error en pruebas de error.
-7. Solo con mapa: genera backend/src/data/mapa-intermodular/mapa_<etapa>_<slug>.json (y _2.json), cero conexiones vacías, 6-15 conexiones por RA con al menos 3 actividades, simula el click() del nuevo tab en mapa-intermodular-view.component.spec.ts y registra mockMapaFacade en app.spec.ts.
+7. Solo con mapa: genera backend/src/data/mapa-intermodular/mapa_<etapa>_<slug>.json (y _2.json), cero conexiones vacías, 6-15 conexiones por RA con al menos 1 actividad, simula el click() del nuevo tab en mapa-intermodular-view.component.spec.ts y registra mockMapaFacade en app.spec.ts.
 
 Al finalizar, ejecuta la suite de tests de frontend y backend, y documenta la tarea en tareas/.
 ```

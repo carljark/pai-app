@@ -31,6 +31,9 @@ Tras el renombrado de la tarea 205, la skill incorpora tanto ciclos de FP como n
   - CFGM Peluquería no: 254 de 377 conexiones en 1.º y 189 de 367 en 2.º tienen menos de tres. Se anota como excepción anterior a la regla y no se regenera.
 
   `scripts/verify_cfgm_integration.sh` sigue comprobando solo que no haya conexiones vacías.
+- **Revertido a petición del usuario: mapa solo bajo petición expresa y mínimo de una actividad.** Como el mapa es muy costoso:
+  - `AGENTS.md` §8 y la skill (frontmatter, aviso inicial, reglas del paso 5, prompt de la sección 7 y plantilla del subagente) dejan claro que añadir un ciclo **no** incluye el mapa. Una petición como «añade el ciclo X» no lo incluye: no se genera ni se propone; solo se hace si se pide expresamente.
+  - El mínimo vuelve a ser una actividad por conexión (`activities.length >= 1`) en `AGENTS.md`, `SKILL.md`, el checklist y `documentation/procesamiento_actividades_mapa_intermodular.md`. Desaparece la nota de excepción de CFGM Peluquería, que ya cumple.
 - `lecciones_aprendidas_cobertura.md` no cambia: sus lecciones son de FP y siguen vigentes.
 
 ## Verificación

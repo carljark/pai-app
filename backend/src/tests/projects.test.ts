@@ -212,7 +212,7 @@ describe('Projects Endpoints', () => {
     const Project = mongoose.model('Project');
     const fakeId = new mongoose.Types.ObjectId();
     
-    let spy = vi.spyOn(Project.prototype, 'save').mockRejectedValueOnce(new Error('DB'));
+    let spy: { mockRestore(): void } = vi.spyOn(Project.prototype, 'save').mockRejectedValueOnce(new Error('DB'));
     let res = await request(app).post('/api/projects/generate').set('Authorization', `Bearer ${token}`).send({ title: 'A', modules: [], ras: [], methodology: '', tipoNivel: 'FP', contextInfo: '' });
     expect(res.status).toBe(500);
     spy.mockRestore();

@@ -224,7 +224,7 @@ describe('Generación de proyectos de ESO', () => {
     const eso = await CE.findOne({ tipoNivel: 'ESO_ORDINARIA', subjectCode: 'biologia_geologia', ce_num: 1 });
     await CE.create({
       tipoNivel: 'DIVERSIFICACION_CURRICULAR', subject: 'Biologia i Geologia', ce_id: 'CE.1',
-      description_es: eso!.description_es, criterios_es: [{ criterio_id: '3º ESO - 1.1', description: 'Criterio PDC' }]
+      description_es: eso!.description_es!, criterios_es: [{ criterio_id: '3º ESO - 1.1', description: 'Criterio PDC' }]
     });
     const res = await generate({ tipoNivel: 'DIVERSIFICACION_CURRICULAR', selectedRas: [eso!.description_es], courseLevel: '3º' });
     expect(res.body.project.aiPrompt).toContain('1.1: Criterio PDC');

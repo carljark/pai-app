@@ -31,11 +31,11 @@ const expectBidirectionalMap = async (tab: string, modules: number, connections:
   const pairs = new Set<string>();
   for (const doc of docs) {
     for (const lo of doc.learningOutcomes) {
-      const titles = lo.connections.flatMap((c) => c.activities.map((a) => a.title_es));
+      const titles = lo.connections.flatMap((c: any) => c.activities.map((a: any) => a.title_es));
       expect(new Set(titles).size).toBe(titles.length);
       for (const c of lo.connections) {
         expect(c.activities.length).toBeGreaterThanOrEqual(minActivities);
-        expect(c.relatedCriteria.every((r) => r.moduleCode === c.targetModuleCode)).toBe(true);
+        expect(c.relatedCriteria.every((r: any) => r.moduleCode === c.targetModuleCode)).toBe(true);
         pairs.add(`${doc.code}_${lo.code}>${c.targetModuleCode}_${c.targetRaCode}`);
       }
     }

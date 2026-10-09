@@ -21,7 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - ESLint (angular-eslint) está a 0 hallazgos y `npm test` lo ejecuta primero (bloqueante). Tras editar, pasa `cd frontend && npx eslint <archivos tocados>`; lint y typecheck (`npx ngc -p tsconfig.app.json --noEmit`, `npx tsc -p tsconfig.spec.json --noEmit`) no cuentan como test/build.
   - En specs se permiten `any` y funciones vacías; para objetos parciales usa helpers como `const asProject = (p: object) => p as Project;`.
   - `npm install` necesita `--legacy-peer-deps` (conflicto de peer `katex` con ngx-markdown).
-- El backend no tiene linter: usa TypeScript 7 y typescript-eslint aún no lo soporta.
+- El backend no tiene linter: usa TypeScript 7 y typescript-eslint aún no lo soporta. Typecheck con `cd backend && npm run typecheck` (debe quedar a 0 errores; cubre `src/` salvo `migrations/legacy/`).
 - Docker dev: `docker compose up -d --build` (Mongo en el host en **27018**, backend 3000, frontend 4200). El proxy de Angular apunta a `http://backend:3000`, que solo resuelve dentro de Docker.
 - Variables en `.env` (gitignored): `GEMINI_API_KEY`, `OPENROUTER_API_KEY`, `JWT_SECRET`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`; compose añade `MONGO_URI` y `PORT`.
 

@@ -223,12 +223,12 @@ export const generateProject = async (req: any, res: Response) => {
     // 3. CONSTRUCCIÓN DEL PROMPT (Igual que antes, enriquecido con coincidencias de FPB)
     const { modules, selectedRas, methodology, tipoNivel, title, language, courseLevel, extraInstructions, collaboratorIds } = req.body;
     const settings = await Settings.findOne();
-    const { schoolContextStr, intefExamplesContext } = buildContexts(settings, { tipoNivel, courseLevel, title, modules, selectedRas });
+    const { schoolContextStr, intefExamplesContext } = buildContexts(settings, { tipoNivel, courseLevel, title, modules, ras: selectedRas });
 
     const approvedProjectsContext = await buildApprovedProjectsContext({ tipoNivel, courseLevel });
 
     // Obtener RAs y CEs para el enriquecimiento y extracción de códigos
-    const allRas = await mongoose.models.RA.find();
+    const allRas = await mongoose.models.RA!.find();
     const allCes = mongoose.models.CE ? await mongoose.models.CE.find() : [];
 
     // Extraer códigos de los RAs seleccionados

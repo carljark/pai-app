@@ -21,7 +21,7 @@ export const closeDB = async () => {
 
 export const clearDB = async () => {
   const collections = mongoose.connection.collections;
-  for (const key in collections) {
-    await collections[key].deleteMany({});
+  for (const collection of Object.values(collections)) {
+    await collection.deleteMany({});
   }
 };

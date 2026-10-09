@@ -186,8 +186,8 @@ export interface SingleAiResult {
   text: string;
   model: string;
   /** Id del catálogo con el que se obtuvo la respuesta (puede diferir del pedido por la cascada). */
-  requestedModel?: string;
-  cascadeLog?: string[];
+  requestedModel?: string | undefined;
+  cascadeLog?: string[] | undefined;
 }
 
 // Los modelos disponibles se definen en un único lugar: backend/src/data/ai-models.ts
@@ -224,7 +224,7 @@ export const generateGeminiContent = async (
   const cascadeLog: string[] = [];
 
   for (let i = 0; i < modelsToTry.length; i++) {
-    const modelName = modelsToTry[i];
+    const modelName = modelsToTry[i]!;
     try {
       if (i > 0) {
         console.warn(`[Gemini] Fallback interno: intentando modelo ${modelName} tras error con el anterior.`);
@@ -335,9 +335,9 @@ export interface AiGenerationResult {
   text: string;
   provider: 'gemini' | 'openrouter';
   model: string;
-  requestedModel?: string;
+  requestedModel?: string | undefined;
   fallbackUsed: boolean;
-  cascadeLog?: string[];
+  cascadeLog?: string[] | undefined;
 }
 
 export type PhaseCallback = (phase: 'analizando' | 'reintentando', provider: 'gemini' | 'openrouter') => Promise<void> | void;
@@ -397,12 +397,12 @@ export const generateAiContentWithFallback = async (
   let lastError: any = null;
   let fullCascadeLog: string[] = [];
   for (let i = 0; i < order.length; i++) {
-    const provider = order[i];
+    const provider = order[i]!;
     try {
       const result = await tryProvider(provider, i > 0, userPrompt, systemInstruction, onPhaseChange, model, reasoning);
       // Si tenemos éxito, añadimos los logs de intentos previos fallidos al cascadeLog del resultado
       if (fullCascadeLog.length > 0) {
-        return { ...result, cascadeLog: [...fullCascadeLog, ...result.cascadeLog] };
+        return { ...result, cascadeLog: [...fullCascadeLog, ...(result.cascadeLog ?? [])] };
       }
       return result;
     } catch (err: any) {

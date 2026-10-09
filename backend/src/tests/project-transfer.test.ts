@@ -11,7 +11,7 @@ beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
 beforeEach(async () => await clearDB());
 
-const baseProject = (userId: any, extra: object = {}) => ({
+const baseProject = (userId: any, extra: object = {}): any => ({
   title: 'Proyecto de peluquería',
   modules: ['Lavado y cambios de forma del cabello'],
   ras: ['Observa el estado del cuero cabelludo'],

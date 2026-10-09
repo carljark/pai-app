@@ -29,7 +29,7 @@ const MapaModuleSchema = new Schema<IMapaModule>(
     type: { type: String, required: true },
     color: { type: String, required: true },
     icon: { type: String, required: true },
-    learningOutcomes: { type: [Schema.Types.Mixed], default: [] }
+    learningOutcomes: { type: [{ type: Schema.Types.Mixed }], default: [] }
   },
   {
     timestamps: true

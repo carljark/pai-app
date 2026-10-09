@@ -11,6 +11,7 @@
     "predev": "npm run migrate",
     "dev": "tsx watch src/server.ts",
     "ingest": "tsx scripts/super_ingest.ts",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:cov": "vitest run --coverage"
   },

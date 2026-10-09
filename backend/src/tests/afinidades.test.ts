@@ -85,7 +85,7 @@ describe('GET /api/afinidades-eso', () => {
         }
       }
       const v = res.body.afinidades[0].vinculos[0];
-      const [materia, [id]] = Object.entries<string[]>(v.criterios)[0] as [string, string[]];
+      const [materia, [id]] = Object.entries<string[]>(v.criterios)[0] as [string, [string]];
       const oficial = textoOficial(materia, id, '1º');
       expect(v.criteriosTexto[materia][0]).toEqual({ id, text_es: oficial.es, text_ca: oficial.ca });
     });

@@ -17,10 +17,10 @@ describe('Queue Service', () => {
   it('debería salir si ya está procesando', async () => {
     // Para forzar la concurrencia, llamamos dos veces
     // Es difícil de testear de forma síncrona sin exportar isProcessing, pero lo simulamos:
-    vi.spyOn(Project, 'findOneAndUpdate').mockImplementationOnce(async () => {
+    vi.spyOn(Project, 'findOneAndUpdate').mockImplementationOnce((async () => {
       processQueue(); // Llama a sí mismo y debería salir inmediatamente
       return null;
-    });
+    }) as any);
     await processQueue();
     expect(Project.findOneAndUpdate).toHaveBeenCalledTimes(1);
   });
@@ -58,7 +58,7 @@ describe('Queue Service', () => {
     await processQueue();
 
     expect(mockProject.status).toBe('borrador');
-    expect(mockProject.generatedContent?.rawText).toBe('Contenido AI');
+    expect((mockProject as any).generatedContent?.rawText).toBe('Contenido AI');
     expect((mockProject as any).usedModel).toBe('gemini-3.8-flash');
     expect((mockProject as any).generationTimeMs).toBeDefined();
     expect((mockProject as any).generationTimeMs).toBeGreaterThanOrEqual(0);

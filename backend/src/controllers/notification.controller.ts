@@ -16,7 +16,7 @@ async function backfillNotificationsIfEmpty() {
   for (const p of existingProjects) {
     await Notification.create({
       projectId: p._id,
-      userId: p.userId?._id || p.userId,
+      userId: p.userId?._id ?? p.userId ?? null,
       userName: (p.userId as any)?.name || 'Profesor',
       userEmail: (p.userId as any)?.email,
       modules: p.modules || [],
@@ -24,9 +24,9 @@ async function backfillNotificationsIfEmpty() {
       type: getNotifType(p.status),
       title: p.title || 'Proyecto Educativo',
       message: p.title || 'Proyecto Educativo',
-      errorDetail: p.errorDetail,
-      generationTimeMs: p.generationTimeMs,
-      generationStartedAt: p.generationStartedAt,
+      errorDetail: p.errorDetail ?? null,
+      generationTimeMs: p.generationTimeMs ?? null,
+      generationStartedAt: p.generationStartedAt ?? null,
       createdAt: p.createdAt,
       updatedAt: (p as any).updatedAt || p.createdAt
     });

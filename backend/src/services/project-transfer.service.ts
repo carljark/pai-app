@@ -9,7 +9,7 @@ import { Project, CONTENT_LANGUAGES } from '../models/Project';
 export const TRANSFER_FORMAT = 'plappin-projects';
 export const TRANSFER_VERSION = 1;
 /** Solo se exportan proyectos terminados: los que están en cola o generándose no tienen contenido. */
-export const EXPORTABLE_STATUSES = ['borrador', 'publicado'];
+export const EXPORTABLE_STATUSES: Array<'borrador' | 'publicado'> = ['borrador', 'publicado'];
 
 const COPIED_FIELDS = [
   'title', 'modules', 'ras', 'methodology', 'tipoNivel', 'courseLevel', 'status', 'language', 'contentVersion',

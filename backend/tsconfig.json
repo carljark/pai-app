@@ -1,44 +1,30 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
+  // El backend se ejecuta con tsx (sin paso de build): tsc solo hace typecheck.
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
-
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    // Entorno: Node 22 + ESM. tsx resuelve imports relativos sin extensión,
+    // así que se usa la resolución "bundler" en lugar de "nodenext".
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    "lib": ["esnext"],
+    "types": ["node", "vitest/globals"],
+    "resolveJsonModule": true,
+    "noEmit": true,
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
+    // Typecheck estricto
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
+    // Módulos
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "vitest.config.ts"],
+  // Migraciones antiguas congeladas: no se editan (ver CLAUDE.md)
+  "exclude": ["src/migrations/legacy"]
 }

@@ -129,7 +129,7 @@ describe("Telemetry and Analytics API", () => {
     expect(res.body.summary.totalProjectsGenerated).toBe(1);
 
     expect(res.body.userMetrics.length).toBeGreaterThanOrEqual(2);
-    const teacherMetric = res.body.userMetrics.find((u) => u.userId === teacherUser._id.toString());
+    const teacherMetric = res.body.userMetrics.find((u: any) => u.userId === teacherUser._id.toString());
     expect(teacherMetric).toBeTruthy();
     expect(teacherMetric?.totalDurationSeconds).toBe(300);
     expect(teacherMetric?.docxExportsCount).toBe(1);

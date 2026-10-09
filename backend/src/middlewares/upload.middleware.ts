@@ -6,7 +6,7 @@ export const uploadMemory = multer({ storage: multer.memoryStorage() });
 
 const diskStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const projectId = req.params.id;
+    const projectId = req.params.id as string;
     const dir = path.join(process.cwd(), 'uploads', projectId);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });

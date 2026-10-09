@@ -4,14 +4,14 @@ import { broadcast, sendToUser } from './sse.service';
 import mongoose from 'mongoose';
 
 interface NotificationExtra {
-  type?: string;
-  title?: string;
-  message?: string;
-  userName?: string;
-  userEmail?: string;
-  phase?: string;
-  rasCount?: number;
-  errorDetail?: string;
+  type?: string | undefined;
+  title?: string | undefined;
+  message?: string | undefined;
+  userName?: string | undefined;
+  userEmail?: string | undefined;
+  phase?: string | undefined;
+  rasCount?: number | undefined;
+  errorDetail?: string | undefined;
 }
 
 function isValidObjectId(value: any): boolean {
@@ -45,7 +45,7 @@ async function resolveUserDetails(project: any, extra?: NotificationExtra) {
   };
 }
 
-function buildUpdateData(project: any, extra: NotificationExtra | undefined, resolvedUser: { userName: string; userEmail?: string }) {
+function buildUpdateData(project: any, extra: NotificationExtra | undefined, resolvedUser: { userName: string; userEmail?: string | undefined }) {
   const rasCount = extra?.rasCount ?? (project.ras ? project.ras.length : 0);
   const rawUserId = project.userId?._id || project.userId;
   const userId = isValidObjectId(rawUserId) ? rawUserId : undefined;

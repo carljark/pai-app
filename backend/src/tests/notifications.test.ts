@@ -228,7 +228,7 @@ describe('Notifications API and Service', () => {
     }).save();
 
     await deleteProjectNotification(notif.projectId);
-    const count = await Notification.countDocuments({ projectId: notif.projectId });
+    const count = await Notification.countDocuments({ projectId: notif.projectId! });
     expect(count).toBe(0);
 
     // Invalid string projectId should log warning and skip deletion

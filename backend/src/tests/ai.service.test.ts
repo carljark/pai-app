@@ -108,7 +108,7 @@ describe('AI Service', () => {
       method: 'POST',
       body: expect.stringContaining(DEFAULT_OPENROUTER_MODEL)
     }));
-    const requestBody = JSON.parse((mockFetch.mock.calls[0][1] as RequestInit).body as string);
+    const requestBody = JSON.parse((mockFetch.mock.calls[0]![1] as RequestInit).body as string);
     expect(requestBody.reasoning_effort).toBe(DEFAULT_REASONING_EFFORT);
   });
 
@@ -189,7 +189,7 @@ describe('AI Service', () => {
     expect(mockFetch).toHaveBeenCalledWith('https://openrouter.ai/api/v1/chat/completions', expect.objectContaining({
       body: expect.stringContaining(DEFAULT_OPENROUTER_MODEL)
     }));
-    const fallbackBody = JSON.parse((mockFetch.mock.calls[0][1] as RequestInit).body as string);
+    const fallbackBody = JSON.parse((mockFetch.mock.calls[0]![1] as RequestInit).body as string);
     expect(fallbackBody.reasoning_effort).toBe(DEFAULT_REASONING_EFFORT);
     expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('Fallback activado'));
     warnSpy.mockRestore();

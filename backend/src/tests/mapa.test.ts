@@ -15,6 +15,7 @@ import { up as runMigration18 } from '../migrations/18_fix_catalan_ras_y_mapa_fp
 import { up as runMigration19 } from '../migrations/19_reload_mapa_infantil_primer_curso';
 import { up as runMigration20 } from '../migrations/20_reload_mapa_infantil_segundo_curso';
 import { up as runMigration21 } from '../migrations/21_reload_mapa_infantil_primer_curso_tres_actividades';
+import { up as runMigration27 } from '../migrations/27_reload_cfgm_peluqueria_transversales';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
@@ -177,9 +178,9 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
         });
       });
 
-      expect(actsPelu1).toBe(846);
+      expect(actsPelu1).toBe(843);
       expect(actsPelu2).toBe(1407);
-      expect(connsPelu1).toBe(377);
+      expect(connsPelu1).toBe(375);
       expect(connsPelu2).toBe(367);
       expect(emptyConnsPelu1).toBe(0);
       expect(emptyConnsPelu2).toBe(0);
@@ -200,7 +201,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
           totalConns1 += lo.connections.length;
         });
       });
-      expect(totalConns1).toBe(377);
+      expect(totalConns1).toBe(375);
     });
 
     it('debería ejecutar la migración 11 y cargar las actividades corregidas', async () => {
@@ -238,6 +239,31 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       const ra1 = mod1708!.learningOutcomes.find((lo: any) => lo.code === 'RA1');
       expect(ra1.text_ca).toMatch(/^Identifica els aspectes ambientals/);
       expect(ra1.criteria_ca[0]).toMatch(/^a\) S'ha descrit/);
+    });
+
+    it('debería corregir con la migración 27 los transversales de Peluquería en RA y mapas', async () => {
+      await RA.create({ id: 'RA1', moduleCode: '0020', tipoNivel: 'CFGS_EDUCACION_INFANTIL', description: 'Ajeno' });
+
+      await runMigration27();
+      await runMigration27();
+
+      expect(await RA.countDocuments({ tipoNivel: 'CFGS_EDUCACION_INFANTIL' })).toBe(1);
+      const ra3 = await RA.findOne({ tipoNivel: 'CFGM_PELUQUERIA', moduleCode: '1709', id: 'RA3' });
+      expect(ra3?.criterios_es).toHaveLength(7);
+      expect(ra3?.criterios_ca).toHaveLength(7);
+      const ra1713 = await RA.findOne({ tipoNivel: 'CFGM_PELUQUERIA', moduleCode: '1713', id: 'RA1' });
+      expect(ra1713?.criterios_ca[3]).toBe("d) S'han determinat les funcions de cada departament.");
+
+      const mapa1 = JSON.stringify(await MapaModule.find({ tab: 'CFGM_PELUQUERIA' }).lean());
+      expect(mapa1).not.toMatch(/1709-3[hi]/);
+      expect(mapa1).not.toContain('cloud /nube');
+      const mod1709 = await MapaModule.findOne({ tab: 'CFGM_PELUQUERIA', code: '1709' });
+      const lo3 = mod1709!.learningOutcomes.find((lo: any) => lo.code === 'RA3');
+      expect(lo3.criteria_es).toHaveLength(7);
+      expect(lo3.connections.length).toBeGreaterThanOrEqual(6);
+
+      const mapa2 = JSON.stringify(await MapaModule.find({ tab: 'CFGM_PELUQUERIA_2' }).lean());
+      expect(mapa2).toContain("Planifica l'execució de les activitats");
     });
 
     it('debería recargar con la migración 17 los mapas corregidos y el catalán de Estética', async () => {

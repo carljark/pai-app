@@ -1027,7 +1027,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "criterios_es": [
       "a) Se han relacionado los sistemas ciber físicos con la evolución industrial.",
       "b) Se ha analizado el cambio producido en los sistemas automatizados.",
-      "c) Se ha descrito la combinación de la parte física de las industrias con el software , IoT (Internet de las cosas), comunicaciones, entre otros.",
+      "c) Se ha descrito la combinación de la parte física de las industrias con el software, IoT (Internet de las cosas), comunicaciones, entre otros.",
       "d) Se ha descrito la interrelación entre el mundo físico y el virtual.",
       "e) Se ha relacionado la migración a entornos 4.0 con la mejora de los resultados de las empresas.",
       "f) Se han identificado las ventajas para clientes y empresas."
@@ -1049,14 +1049,14 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "moduleCode": "1664",
     "tipoNivel": "CFGM_PELUQUERIA",
     "description": "Identifica l'estructura dels sistemes basats en cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
-    "description_es": "Identifica la estructura de los sistemas basados en cloud /nube describiendo su tipología y campo de aplicación.",
+    "description_es": "Identifica la estructura de los sistemas basados en cloud/nube describiendo su tipología y campo de aplicación.",
     "description_ca": "Identifica l'estructura dels sistemes basats en cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
     "criterios_es": [
-      "a) Se han identificado los diferentes niveles de la cloud /nube.",
-      "b) Se han identificado las principales funciones de la cloud /nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros).",
-      "c) Se ha descrito el concepto de edge computing y su relación con la cloud/ nube.",
+      "a) Se han identificado los diferentes niveles de la cloud/nube.",
+      "b) Se han identificado las principales funciones de la cloud/nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros).",
+      "c) Se ha descrito el concepto de edge computing y su relación con la cloud/nube.",
       "d) Se han definido los conceptos de fog y mist y sus zonas de aplicación en el conjunto.",
-      "e) Se han identificado las ventajas que proporciona la utilización de la cloud /nube en los sistemas conectados."
+      "e) Se han identificado las ventajas que proporciona la utilización de la cloud/nube en los sistemas conectados."
     ],
     "criterios_ca": [
       "a) S'han identificat els diferents nivells del cloud/núvol.",
@@ -1078,7 +1078,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "description_ca": "Compara els sistemes de producció/prestació de serveis digitalitzats amb els sistemes clàssics identificant les millores introduïdes.",
     "criterios_es": [
       "a) Se han identificado las tecnologías habilitadoras (THD) actuales que definen un sistema digitalizado.",
-      "b) Se han descrito las características y aplicaciones del IoT, IA (Inteligencia Artificial), Big Data, tecnología 5G, la robótica colaborativa, Blockchain , Ciberseguridad, fabricación aditiva, realidad virtual, gemelos digitales, entre otras.",
+      "b) Se han descrito las características y aplicaciones del IoT, IA (Inteligencia Artificial), Big Data, tecnología 5G, la robótica colaborativa, Blockchain, Ciberseguridad, fabricación aditiva, realidad virtual, gemelos digitales, entre otras.",
       "c) Se ha descrito la contribución de las THD a la mejora de la productividad y la eficiencia de los sistemas productivos o de prestación de servicios.",
       "d) Se ha relacionado la alineación entre las unidades funcionales de las empresas que conforman el sistema y el objetivo del mismo.",
       "e) Se ha relacionado la implantación de las tecnologías habilitadoras (sensórica, tratamiento de datos, automatización y comunicaciones, entre otras) con la reducción de costes y la mejora de la competitividad.",
@@ -1104,9 +1104,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria als recursos humans.",
+    "description": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
     "description_es": "Elabora un plan de transformación de una empresa clásica del sector en el que se enmarca el título, basada en una EL, al concepto 4.0, determinando los cambios a introducir en las principales fases del sistema e indicando como afectaría a los recursos humanos.",
-    "description_ca": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria als recursos humans.",
+    "description_ca": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
     "criterios_es": [
       "a) Se ha definido a nivel de bloques el diagrama de funcionamiento de la empresa clásica.",
       "b) Se han identificado las etapas susceptibles de ser digitalizadas.",
@@ -1179,7 +1179,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
       "g) S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que inclogui la seqüenciació d'actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
       "h) S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seva importància com a mesura de prevenció.",
-      "i) S'han identificat les tècniques bàsiques de primers auxilis que s'han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús de la farmaciola."
+      "i) S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús de la farmaciola."
     ]
   },
   {
@@ -1199,9 +1199,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "d) Se han identificado los diferentes componentes del recibo de salario.",
       "e) Se han identificado los recursos laborales existentes ante las diferentes vicisitudes que se pueden dar en la relación laboral.",
       "f) Se ha valorado el papel de la Seguridad Social como pilar esencial para la mejora de la calidad de vida de los ciudadanos.",
-      "g) Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral.",
-      "h) Se ha analizado el contenido del derecho fundamental a la libertad sindical y las diferentes modalidades de representación de las personas trabajadoras en la empresa.",
-      "i) Se ha identificado el derecho fundamental a la huelga, las medidas de conflicto colectivo y los órganos y procedimientos para la resolución de conflictos."
+      "g) Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral."
     ],
     "criterios_ca": [
       "a) S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
@@ -1210,9 +1208,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "d) S'han identificat els diferents components del rebut de salari.",
       "e) S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral.",
       "f) S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
-      "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral.",
-      "h) S'ha analitzat el contingut del dret fonamental a la llibertat sindical i les diferents modalitats de representació de les persones treballadores a l'empresa.",
-      "i) S'ha identificat el dret fonamental a la vaga, les mesures de conflicte col·lectiu i els òrgans i procediments per a la resolució de conflictes."
+      "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
     ]
   },
   {
@@ -2402,7 +2398,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "criterios_es": [
       "a) Se ha descrito el concepto de sostenibilidad, estableciendo los marcos internacionales asociados al desarrollo sostenible.",
       "b) Se han identificado los asuntos ambientales, sociales y de gobernanza que influyen en el desarrollo sostenible de las organizaciones empresariales.",
-      "c) Se han relacionado los Objetivos de Desarrollo Sostenible (ODS) con su importancia para la consecución de la Agenda 2030\\.",
+      "c) Se han relacionado los Objetivos de Desarrollo Sostenible (ODS) con su importancia para la consecución de la Agenda 2030.",
       "d) Se ha analizado la importancia de identificar los aspectos ASG más relevantes para los grupos de interés de las organizaciones relacionándolos con los riesgos y oportunidades que suponen para la propia organización.",
       "e) Se han identificado los principales estándares de métricas para la evaluación del desempeño en sostenibilidad y su papel en la rendición de cuentas que marca la legislación vigente y las futuras regulaciones en desarrollo.",
       "f) Se ha descrito la inversión socialmente responsable y el papel de los analistas, inversores, agencias e índices de sostenibilidad en el fomento de la sostenibilidad."
@@ -2707,22 +2703,22 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "b) Se ha descrito la estructura organizativa de las empresas.",
       "c) Se han caracterizado los principales departamentos.",
       "d) Se han determinado las funciones de cada departamento.",
-      "e) Se ha evaluado el volumen de negocio de acuerdo con las necesidades de los clientes.",
+      "e) Se ha evaluado el volumen de negocio de acuerdo a las necesidades de los clientes.",
       "f) Se ha definido la estrategia para dar respuesta a las demandas.",
       "g) Se han valorado los recursos humanos y materiales necesarios.",
-      "h) Se ha realizado el seguimiento de los resultados de acuerdo con la estrategia aplicada.",
-      "i) Se han relacionado los productos o servicios con su posible contribución a los ODS."
+      "h) Se ha realizado el seguimiento de los resultados de acuerdo a la estrategia aplicada.",
+      "i) Se han relacionado los productos o servicios con su posible contribución a los ODS (Objetivos de Desarrollo Sostenible)."
     ],
     "criterios_ca": [
       "a) S'han identificat les empreses tipus més representatives del sector.",
       "b) S'ha descrit l'estructura organitzativa de les empreses.",
       "c) S'han caracteritzat els departaments principals.",
-      "d) Shan determinat les funcions de cada departament.",
-      "e) S'ha avaluat el volum de negoci segons les necessitats dels clients.",
+      "d) S'han determinat les funcions de cada departament.",
+      "e) S'ha avaluat el volum de negoci d'acord amb les necessitats dels clients.",
       "f) S'ha definit l'estratègia per donar resposta a les demandes.",
       "g) S'han valorat els recursos humans i materials necessaris.",
-      "h) S'han fet el seguiment dels resultats d'acord amb l'estratègia aplicada.",
-      "i) S'han relacionat els productes o serveis amb la possible contribució als ODS."
+      "h) S'ha fet el seguiment dels resultats d'acord amb l'estratègia aplicada.",
+      "i) S'han relacionat els productes o serveis amb la seva possible contribució als ODS (Objectius de Desenvolupament Sostenible)."
     ]
   },
   {
@@ -2757,7 +2753,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "f) S'han identificat les parts que componen el projecte.",
       "g) S'han previst els recursos materials i humans per fer-ho.",
       "h) S'ha fet el pressupost econòmic corresponent.",
-      "i) S'ha definit i elaborat la documentació per dissenyar-la.",
+      "i) S'ha definit i elaborat la documentació per al seu disseny.",
       "j) S'han identificat els aspectes relacionats amb la qualitat del projecte.",
       "k) S'han presentat en públic les idees més rellevants dels projectes proposats."
     ]
@@ -2769,9 +2765,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Planifica lexecució de les activitats proposades a la solució plantejada, determinant el pla dintervenció i elaborant la documentació corresponent.",
+    "description": "Planifica l'execució de les activitats proposades a la solució plantejada, determinant el pla d'intervenció i elaborant la documentació corresponent.",
     "description_es": "Planifica la ejecución de las actividades propuestas a la solución planteada, determinando el plan de intervención y elaborando la documentación correspondiente.",
-    "description_ca": "Planifica lexecució de les activitats proposades a la solució plantejada, determinant el pla dintervenció i elaborant la documentació corresponent.",
+    "description_ca": "Planifica l'execució de les activitats proposades a la solució plantejada, determinant el pla d'intervenció i elaborant la documentació corresponent.",
     "criterios_es": [
       "a) Se han temporizado las secuencias de las actividades.",
       "b) Se han determinado los recursos y la logística de cada actividad.",
@@ -2802,9 +2798,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Projecte intermodular",
     "moduleCode": "1713",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Realitza el seguiment de l'execució de les activitats plantejades i es verifica que es compleix amb la planificació.",
+    "description": "Realitza el seguiment de l'execució de les activitats plantejades, verificant que es compleix amb la planificació.",
     "description_es": "Realiza el seguimiento de la ejecución de las actividades planteadas, verificando que se cumple con la planificación.",
-    "description_ca": "Realitza el seguiment de l'execució de les activitats plantejades i es verifica que es compleix amb la planificació.",
+    "description_ca": "Realitza el seguiment de l'execució de les activitats plantejades, verificant que es compleix amb la planificació.",
     "criterios_es": [
       "a) Se ha definido el procedimiento de seguimiento de las actividades.",
       "b) Se ha verificado la calidad de los resultados de las actividades.",

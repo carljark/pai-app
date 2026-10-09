@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA as DATA } from '../data/ras_cfgm_atencion_dependencia.data';
+import { CFGM_PELUQUERIA_RAS_DATA, type CfgmRaData } from '../data/ras_cfgm_peluqueria.data';
 import { findNivel } from '../data/niveles';
 import { describeTargetCourse } from '../controllers/project.controller';
 
@@ -53,6 +54,14 @@ describe('Datos del CFGM Atención a Personas en Situación de Dependencia', () 
   it('no mezcla los idiomas', () => {
     expect(textosCa.filter((t) => CASTELLANO.test(t))).toEqual([]);
     expect(textosEs.filter((t) => CATALAN.test(t))).toEqual([]);
+  });
+
+  it('comparte con Peluquería el texto de los módulos transversales (tarea 209)', () => {
+    const textos = (ras: CfgmRaData[]) => ras
+      .filter((ra) => ['1664', '1709', '0156', '1708', '1710', '1713'].includes(ra.moduleCode))
+      .map(({ moduleCode, id, description_es, description_ca, criterios_es, criterios_ca }) =>
+        ({ moduleCode, id, description_es, description_ca, criterios_es, criterios_ca }));
+    expect(textos(CFGM_PELUQUERIA_RAS_DATA)).toEqual(textos(DATA));
   });
 
   it('usa los nombres oficiales del ciclo en el prompt', () => {

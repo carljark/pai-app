@@ -6,16 +6,28 @@ Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directri
 
 El agente se encarga de todo el ciclo de cada tarea, salvo que el usuario indique otra cosa:
 
-1. **Rama.** Cambios pequeños y acotados: en la rama de trabajo actual. Tareas grandes (funcionalidad nueva, migraciones, muchos archivos o riesgo alto): rama nueva `feature/NNN_descripcion` creada desde la rama actual, con la numeración de las existentes (`git branch -a`).
+1. **Rama.** Cambios pequeños y acotados: en la rama de trabajo actual. Tareas grandes (funcionalidad nueva, migraciones, muchos archivos o riesgo alto): rama nueva `feature/NNN_descripcion` creada desde la rama actual, con el número común de la tarea (ver §1.1).
 2. **Verificación.** Lint y typecheck, y después las suites completas: `cd backend && npm test` y `cd frontend && npm test`. Si algo falla, se corrige (aunque no lo haya causado la tarea) y se vuelve a ejecutar hasta que todo pase.
 3. **Commit y push.** Mensaje en castellano que resuma la tarea. Nunca `push --force`, `reset --hard` ni reescribir historia publicada. No se hace merge a `main`: lo decide el usuario.
 4. **Despliegue en producción** (EC2 Ubuntu, ver `documentation/despliegue_produccion.md`), solo con los tests en verde: copia de seguridad (`scripts/backup-prod-db.sh`), `git pull` de la rama de trabajo y reconstrucción con `docker-compose.prod.yml`; después, comprobar contenedores, migraciones y API. Si el despliegue falla, volver al commit anterior desplegado y avisar.
 5. El agente tiene permiso permanente para desplegar con `./scripts/deploy-prod.sh` sin pedir confirmación. En la fase actual del proyecto no importa cortar generaciones o traducciones en curso; solo hay que avisar antes si el despliegue implica migraciones de datos delicadas.
 
+### 1.1. Numeración común: plan, rama y tarea (obligatorio)
+
+Una misma tarea usa **el mismo número NNN** en su plan (`planes/NNN_plan_*.md`), su rama (`feature/NNN_*`) y su registro (`tareas/NNN_*.md`). No hay numeraciones independientes.
+
+- **Asignación:** el número se fija **una sola vez**, en el primer artefacto que se cree (normalmente el plan; si no hay plan, la rama; si tampoco hay rama, el registro en `tareas/`). Es el mayor número usado en cualquiera de los tres sitios más uno, con 3 dígitos:
+  ```bash
+  { ls tareas planes; git branch -a; } | grep -oE '(^|feature/)[0-9]+_' | grep -oE '[0-9]+' | sort -n | tail -1 | awk '{printf "%03d\n", $1+1}'
+  ```
+- **Reutilización:** los artefactos posteriores de la misma tarea **no recalculan** el número: lo toman del plan o de la rama ya creados (p. ej. rama `feature/204_x` → registro `tareas/204_x.md`), aunque entretanto se hayan creado otros números.
+- Si una tarea no tiene plan o rama, ese número simplemente no se usa en esa carpeta (los huecos son normales). Si un número ya está ocupado en cualquiera de los tres sitios por otra tarea, no se reutiliza.
+- Los artefactos anteriores a esta regla (planes 001-005, ramas 001-010 y tareas hasta la 203) conservan su número; no se renombran.
+
 ## 2. Documentación de tareas
 
 - Todo lo que se implemente o desarrolle debe documentarse en `tareas/` en la raíz. Si no existe la carpeta, créala; por cada tarea importante, crea un archivo Markdown propio.
-- Antes de crear el documento, revisa los números existentes y usa el siguiente número secuencial disponible; añade un nombre breve y descriptivo, por ejemplo `138_consolidacion_instrucciones_agente.md`.
+- El número del documento es el número común de la tarea (§1.1): si ya existe plan o rama, el mismo; si no, el siguiente libre entre `tareas/`, `planes/` y las ramas `feature/`. Añade un nombre breve y descriptivo, por ejemplo `138_consolidacion_instrucciones_agente.md`.
 - Redacta un diseño técnico profesional que incluya propósito, arquitectura/flujo, archivos modificados y decisiones o detalles técnicos relevantes (librerías, patrones y tradeoffs).
 - Mantén además la documentación técnica pertinente en `documentation/`, especialmente para decisiones de arquitectura y comportamiento de proveedores, modelos por defecto, razonamiento y fallback.
 

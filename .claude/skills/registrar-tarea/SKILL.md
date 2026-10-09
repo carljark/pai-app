@@ -1,13 +1,19 @@
 ---
 name: registrar-tarea
-description: Documenta una tarea terminada en tareas/ con el siguiente número secuencial (AGENTS.md §2). Úsala al acabar cualquier implementación o desarrollo relevante, o cuando el usuario pida registrar o documentar lo hecho.
+description: Documenta una tarea terminada en tareas/ con el número común de la tarea, el mismo de su plan y su rama feature/NNN (AGENTS.md §1.1 y §2). Úsala al acabar cualquier implementación o desarrollo relevante, o cuando el usuario pida registrar o documentar lo hecho.
 ---
 
 # Registrar una tarea en `tareas/`
 
 Argumento opcional: descripción corta de la tarea ($ARGUMENTS). Si falta, dedúcela de la conversación y de los cambios de la sesión (`git status`, `git diff --stat`).
 
-1. **Número:** `ls tareas | sed -E 's/^([0-9]+).*/\1/' | sort -n | tail -1` y súmale 1. Usa orden numérico, no alfabético: hay números de 2 y 3 dígitos.
+1. **Número común (AGENTS.md §1.1):** plan, rama y tarea comparten el mismo NNN.
+   - Si la tarea tiene plan (`planes/NNN_plan_*.md`) o se creó para ella una rama `feature/NNN_*` (`git branch --show-current`), usa **ese** número; no calcules otro. Un cambio pequeño hecho en la rama de trabajo de otra tarea no hereda su número.
+   - Si no tiene ninguno, toma el mayor número usado en `tareas/`, `planes/` o las ramas `feature/` más uno, con 3 dígitos (orden numérico, no alfabético):
+     ```bash
+     { ls tareas planes; git branch -a; } | grep -oE '(^|feature/)[0-9]+_' | grep -oE '[0-9]+' | sort -n | tail -1 | awk '{printf "%03d\n", $1+1}'
+     ```
+   - Si plan y rama tienen números distintos, o el número ya existe en `tareas/` para otra tarea, detente y avisa al usuario.
 2. **Nombre:** `tareas/<NNN>_<slug_en_snake_case>.md`, en castellano, sin tildes ni ñ en el nombre de archivo.
 3. **Contenido:** créalo con la herramienta Write (nunca `cat`/heredoc), en castellano, con esta estructura:
 

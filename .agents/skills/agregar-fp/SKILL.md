@@ -197,7 +197,7 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
    - Frontend: `npm test` con umbral de funciones en HTML >= 80% (o 100%) y branch coverage >= 90%.
    - Backend: `npm test`.
 2. Si el ciclo no tiene mapa, `./scripts/verify_cfgm_integration.sh <TIPO_NIVEL>` lo detecta (no declara `mapas`) y omite su validación; con mapa, añadir `--con-mapa`.
-3. Documentar la tarea en `tareas/` siguiendo `AGENTS.md` §2 con el siguiente número secuencial (ej. `NNN_incorporacion_<etapa>_<slug>.md`), indicando si el ciclo tiene o no mapa.
+3. Documentar la tarea en `tareas/` siguiendo `AGENTS.md` §2 con el número común de la tarea (§1.1: el mismo del plan y de la rama `feature/NNN_*`, si existen) (ej. `NNN_incorporacion_<etapa>_<slug>.md`), indicando si el ciclo tiene o no mapa.
 
 ---
 

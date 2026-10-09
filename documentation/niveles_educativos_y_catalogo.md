@@ -198,6 +198,35 @@ Ciclo de la familia Actividades Físicas y Deportivas (tarea 216). No tiene mapa
   - 1137 RA4 b) no tiene punto final; se añade.
   - 1139 RA3 g) incluye una lista de pruebas de socorrismo con guiones «-»; se conserva en un único criterio, como el 1151 RA6 g) de Acondicionamiento Físico.
 
+## CFGS Integración Social (`CFGS_INTEGRACION_SOCIAL`)
+
+Título de Técnico Superior en Integración Social (SSC33), familia Servicios Socioculturales y a la Comunidad. Sin mapa intermodular (tarea 217).
+
+### Fuente normativa
+
+- **Módulos y cursos:** ficha del ciclo en FP Illes Balears (<https://www.caib.es/sites/fp/ca/integracio_social/>), tabla «Matriculats a partir del curs 2026/27».
+  - 1.º: 0337, 0338, 0340, 0342, 0344, 1665 y 1709.
+  - 2.º: 0017, 0020, 0339, 0341, 0343, 0345, 0179, 1708 y 1710.
+  - No se cargan el módulo optativo ni las horas reservadas al módulo en inglés. FOL (0346), EIE (0347) y FCT (0348) del RD de 2012 ya no se imparten.
+- **Castellano:**
+  - Anexo I del **RD 1074/2012** (BOE-A-2012-10866). El BOE no muestra la versión consolidada del anexo, así que se extrae el texto original.
+  - **RD 289/2023** (BOE-A-2023-10395): sustituye la redacción de los módulos 0017, 0337, 0338, 0339, 0340, 0341 y 0343, que se toman de él. Los 0020, 0342, 0344 y 0345 no cambian.
+  - **RD 500/2024** (BOE-A-2024-10685): renombra el 0345 «Proyecto de integración social» como «Proyecto intermodular de integración social».
+  - Transversales de grado superior (1665, 1709, 0179, 1708 y 1710): ver «Módulos transversales compartidos».
+  - El 0017 y el 0020 tienen el mismo código que en Educación Infantil, pero el texto no es idéntico: el RD 289/2023 añade comas al 0017 (RA2 a) y descripción del RA4), y el 0020 RA2 dice «con el objetivo que se quiere conseguir».
+- **Catalán:**
+  - Currículo autonómico «en fase d'esborrany», sin texto publicado. Traducción propia con el agente `traductor-es-ca` (tres lotes, 380 textos). 123 textos idénticos a los de otros ciclos (sobre todo del 0017, 0020 y 0345) reutilizan su catalán ya revisado.
+  - Nombres de los módulos según la ficha de la CAIB. El 0341 es «Suport a la intervenció socioeducativa» en la CAIB y «Apoyo a la intervención educativa» en el BOE; se mantiene el nombre oficial de cada idioma.
+  - El 0345 aparece en la CAIB solo como «Projecte intermodular»; se usa «Projecte intermodular d'integració social», en paralelo al BOE.
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgs_integracion_social.data.ts`: 16 módulos, 81 RA y 645 criterios (54 RA y 449 criterios sin contar los transversales). Los carga la migración `34_ingest_cfgs_integracion_social_ras.ts`, reejecutable y limitada a este nivel.
+- Un script temporal extrae los textos del HTML del BOE (anexo I de 2012 y apartado «Seis» del RD 289/2023) y comprueba que cada texto castellano aparece literalmente, que la numeración de RA y letras es consecutiva y que hay paridad ES/CA.
+- **Erratas del BOE, que se conservan en castellano por ser el texto oficial:**
+  - 0340 RA2 e) «Se ha planificado actividades apropiadas en los procesos mediación…» (concordancia y falta «de»). En catalán: «S'han planificat activitats… en els processos de mediació…».
+  - 0343 RA2 e) «productos de apoyo adecuadas». En catalán, «productes de suport adequats».
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

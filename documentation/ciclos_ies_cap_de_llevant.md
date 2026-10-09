@@ -19,15 +19,15 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | CFGS Educación Infantil | `CFGS_EDUCACION_INFANTIL` |
 | CFGS Acondicionamiento Físico (tarea 214) | `CFGS_ACONDICIONAMIENTO_FISICO` |
 | CFGS Enseñanza y Animación Sociodeportiva (tarea 216) | `CFGS_ANIMACION_SOCIODEPORTIVA` |
+| CFGS Integración Social (tarea 217) | `CFGS_INTEGRACION_SOCIAL` |
 
 ## Pendientes de incorporar
 
 | Grado | Nombre en catalán (web del centro) | Nombre en castellano (provisional) | `tipoNivel` propuesto |
 |---|---|---|---|
-| CFGS | Integració social | Integración social | `CFGS_INTEGRACION_SOCIAL` |
 | CFGS | Laboratori clínic i biomèdic | Laboratorio clínico y biomédico | `CFGS_LABORATORIO_CLINICO` |
 
-Son **2 ciclos** de grado superior. Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
+Queda **1 ciclo** de grado superior. Se incorpora **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
 
 ## Cambios anunciados para el curso 2026-27
 

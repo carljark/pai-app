@@ -198,6 +198,21 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGS_INTEGRACION_SOCIAL',
+    etapa: 'CFGS',
+    comunidad: 'IB',
+    nombre_es: 'CFGS Integración Social',
+    nombre_ca: 'CFGS Integració social',
+    palabrasClave: 'formación profesional servicios socioculturales comunidad integración social inclusión',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Módulos de cada curso según FP Illes Balears (matriculados desde 2026-27).
+    cursos: [
+      { curso: '1º', modulos: ['0337', '0338', '0340', '0342', '0344', '1665', '1709'] },
+      { curso: '2º', modulos: ['0017', '0020', '0339', '0341', '0343', '0345', '0179', '1708', '1710'] },
+    ],
+  },
+  {
     // ESO ordinaria: Decreto 42/2025 (BOIB n.º 103, de 4/8/2025).
     id: 'ESO_ORDINARIA',
     etapa: 'ESO',

@@ -11,6 +11,7 @@ import { up as ingestGuiaMedioNaturalUp } from '../migrations/30_ingest_cfgm_gui
 import { up as ingestCuidadosAuxiliaresUp } from '../migrations/31_ingest_cfgm_cuidados_auxiliares_enfermeria_ras';
 import { up as ingestAcondicionamientoFisicoUp } from '../migrations/32_ingest_cfgs_acondicionamiento_fisico_ras';
 import { up as ingestAnimacionSociodeportivaUp } from '../migrations/33_ingest_cfgs_animacion_sociodeportiva_ras';
+import { up as ingestIntegracionSocialUp } from '../migrations/34_ingest_cfgs_integracion_social_ras';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
@@ -189,6 +190,23 @@ describe('Migrations Safety & Idempotency', () => {
     expect(dinamizacion?.module_ca).toBe('Dinamització grupal');
     expect(dinamizacion?.description).toBe(dinamizacion?.description_ca);
     expect(dinamizacion?.criterios_ca).toHaveLength(dinamizacion?.criterios_es.length ?? -1);
+  });
+
+  it('Carga los RA del CFGS Integración Social sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', moduleCode: '0017', tipoNivel: 'CFGS_EDUCACION_INFANTIL', description: 'Ajeno' });
+
+    await ingestIntegracionSocialUp();
+    await ingestIntegracionSocialUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGS_INTEGRACION_SOCIAL' });
+    expect(ras).toHaveLength(81);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGS_EDUCACION_INFANTIL' })).toBe(1);
+
+    const mediacion = ras.find((r) => r.moduleCode === '0340' && r.id === 'RA1');
+    expect(mediacion?.module_es).toBe('Mediación comunitaria');
+    expect(mediacion?.module_ca).toBe('Mediació comunitària');
+    expect(mediacion?.description).toBe(mediacion?.description_ca);
+    expect(mediacion?.criterios_ca).toHaveLength(mediacion?.criterios_es.length ?? -1);
   });
 
   it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {

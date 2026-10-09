@@ -142,7 +142,7 @@ Generalizar las comparaciones con `ESO_ORDINARIA` para que salgan del catálogo 
 - `backend/src/data/afinidades-eso/*.json`, migración nueva sobre la colección `AfinidadEso` y pestañas `formato: 'afinidades'` en `mapas` del catálogo. El frontend (`AfinidadesEsoFacade`, `AfinidadesEsoViewComponent`, `AfinidadCardComponent`) no cambia.
 
 ### 4.6. Siglas
-- ESO: **CE** = competencia específica; **CA** = criterio de evaluación («CA 1.1»), en castellano y en catalán, como el Decreto 42/2025. Nunca «CE x.y» para un criterio (en FP, «CE» sí es el criterio de evaluación del RA).
+- ESO: criterio de evaluación «CE 1.1» en castellano y «CA 1.1» (criteri d'avaluació) en catalán; la competencia específica es «CE1». En FP, «CE» es el criterio de evaluación del RA en los dos idiomas.
 
 ### 4.7. Tests
 - `backend/src/tests/eso.test.ts` (o uno nuevo en el caso B): paridad, tipos de materia, migración idempotente sin tocar el PDC, `GET /api/ces` por curso e idioma y prompt con edad y terminología LOMLOE.

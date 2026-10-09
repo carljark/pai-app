@@ -12,7 +12,7 @@ Cada ficha corresponde a un curso y relaciona dos o tres materias:
 - **Conceptos comunes** (`conceptos_es/_ca`).
 - **Origen:** `documento` (ficha del documento del centro) o `ampliacion` (propuesta nueva de la plataforma). La vista lo muestra con una insignia.
 
-La ficha etiqueta cada criterio como **«CA x.y»** en los dos idiomas (criterio de evaluación / criteri d'avaluació), como el Decreto 42/2025; «CE» queda reservado a las competencias específicas.
+La ficha etiqueta cada criterio como **«CE x.y»** en castellano (criterio de evaluación) y **«CA x.y»** en catalán (criteri d'avaluació).
 
 Los textos oficiales de los criterios no se copian en las fichas. El endpoint los resuelve desde la colección `CE` (`tipoNivel: 'ESO_ORDINARIA'`) y los devuelve en `vinculos[].criteriosTexto`. **Los ids de criterio se repiten entre el bloque de 1.º-3.º (o 1.º-2.º) y el de 4.º** (p. ej. Biología 3.2), así que se resuelven por id **y** curso.
 

@@ -21,6 +21,9 @@ En el mapa de afinidades de la ESO, cada criterio de evaluación aparecía como 
 - No hace falta migrar datos: los JSON de afinidades guardan solo el id del criterio («6.2»), y sus textos no usan «CE x.y». La sigla la pone la plantilla.
 - Es el único punto de la interfaz con esa etiqueta. El selector curricular de la ESO muestra los criterios dentro de su CE, sin sigla.
 
+## Ajuste posterior: «CE» en castellano
+A petición del usuario, en castellano el criterio vuelve a etiquetarse «CE x.y» (criterio de evaluación) y en catalán se mantiene «CA x.y» (criteri d'avaluació). La plantilla elige la sigla con `isCa()`. La competencia específica sigue siendo «CE1»; en castellano el formato distingue el criterio («CE 1.1») de la competencia («CE1»). Se actualizaron con la misma regla la skill, su checklist, el agente `traductor-es-ca`, `AGENTS.md` §8 y `documentation/mapa_afinidades_eso.md`. El spec comprueba las dos siglas.
+
 ## Verificación
 - `npx eslint` de la ficha sin hallazgos y spec de la ficha en verde (10 tests).
 - Suites completas ejecutadas por el hook de `git push`.

@@ -209,9 +209,9 @@ No hay scaffold para la ESO: los archivos se crean a mano siguiendo los de la ES
 
 > [!IMPORTANT]
 > **Siglas de la ESO (LOMLOE), distintas de las de FP.** La jerarquía es saberes básicos ➡️ competencias específicas ➡️ criterios de evaluación:
-> - **CE** = competencia específica / competència específica (la categoría superior: «CE1», «CE2»…).
-> - **CA** = criterio de evaluación / criteri d'avaluació («CA 1.1», «CA 2.3»), en castellano y en catalán, como escribe el Decreto 42/2025 en sus dos versiones.
-> - Nunca etiquetes un criterio de la ESO como «CE x.y»: se confunde con la competencia específica. En FP, en cambio, «CE» sí es el criterio de evaluación de un RA.
+> - **Competencia específica** (la categoría superior): «CE1», «CE2»… en los dos idiomas.
+> - **Criterio de evaluación:** en castellano, «CE 1.1» (criterio de evaluación); en catalán, **«CA 1.1»** (criteri d'avaluació), nunca «CE 1.1». El formato distingue el criterio («CE 1.1», con número de criterio) de la competencia («CE1»).
+> - En FP, «CE» es el criterio de evaluación de un RA en los dos idiomas.
 > Aplica en datos, interfaz (selector, mapa de afinidades), prompts y documentación.
 
 ### Paso E0: Decidir el caso
@@ -305,7 +305,7 @@ El frontend debe saber qué niveles usan el currículo de ESO a partir del catá
 El mapa de la ESO no sigue el modelo de la FP: son **fichas de afinidad entre materias, sin actividades** (`documentation/mapa_afinidades_eso.md`).
 - Datos en `backend/src/data/afinidades-eso/afinidades_<nivel>_<curso>.json`, ingeridos por una migración nueva en la colección `AfinidadEso` (patrón de `25_ingest_afinidades_eso`; la 25 no se reejecuta).
 - Pestañas en `mapas` del catálogo con `formato: 'afinidades'` (una por curso); `AFINIDADES_TABS` y `cursoDeTab` las recogen solas.
-- Los criterios se muestran como «CA x.y» en ambos idiomas, nunca «CE x.y».
+- Los criterios se muestran como «CE x.y» en castellano y «CA x.y» en catalán.
 - Reglas: cada criterio citado existe en la materia y se imparte en el curso de la ficha (se resuelve por id **y** curso); paridad ES/CA de ámbitos, relaciones, saberes y conceptos; cada materia de cada curso aparece al menos en 3 fichas; las fichas nuevas llevan `origen: "ampliacion"` y sus saberes se contrastan con los saberes básicos del decreto.
 - **Caso B:** `afinidades.controller.ts` resuelve hoy los textos con `tipoNivel: 'ESO_ORDINARIA'`; debe usar el nivel de la pestaña.
 

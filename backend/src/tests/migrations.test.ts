@@ -8,6 +8,7 @@ import { up as ingestEducacionInfantilUp } from '../migrations/13_ingest_cfgs_ed
 import { up as reingestEsteticaUp } from '../migrations/24_reingest_cfgm_estetica_ras';
 import { up as ingestAtencionDependenciaUp } from '../migrations/26_ingest_cfgm_atencion_dependencia_ras';
 import { up as ingestGuiaMedioNaturalUp } from '../migrations/30_ingest_cfgm_guia_medio_natural_ras';
+import { up as ingestCuidadosAuxiliaresUp } from '../migrations/31_ingest_cfgm_cuidados_auxiliares_enfermeria_ras';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
@@ -135,6 +136,23 @@ describe('Migrations Safety & Idempotency', () => {
     expect(cuerdas?.module_ca).toBe('Maniobres amb cordes');
     expect(cuerdas?.description).toBe(cuerdas?.description_ca);
     expect(cuerdas?.criterios_ca).toHaveLength(cuerdas?.criterios_es.length ?? -1);
+  });
+
+  it('Carga los RA del CFGM Cuidados Auxiliares de Enfermería sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', moduleCode: '1325', tipoNivel: 'CFGM_GUIA_MEDIO_NATURAL', description: 'Ajeno' });
+
+    await ingestCuidadosAuxiliaresUp();
+    await ingestCuidadosAuxiliaresUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA' });
+    expect(ras).toHaveLength(30);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGM_GUIA_MEDIO_NATURAL' })).toBe(1);
+
+    const tecnicas = ras.find((r) => r.moduleCode === 'CAE2' && r.id === 'RA1');
+    expect(tecnicas?.module_es).toBe('Técnicas básicas de enfermería');
+    expect(tecnicas?.module_ca).toBe("Tècniques bàsiques d'infermeria");
+    expect(tecnicas?.description).toBe(tecnicas?.description_ca);
+    expect(tecnicas?.criterios_ca).toHaveLength(tecnicas?.criterios_es.length ?? -1);
   });
 
   it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {

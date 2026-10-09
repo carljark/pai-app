@@ -115,6 +115,32 @@ Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). No tien
   - 1337 RA6 g) incluye una lista de pruebas con guiones «−»; se conserva en un único criterio.
 - **Decisiones de traducción:** «conducción del diestro» → «conducció de l'èquid de la mà»; «zafaduras» → «alliberament»; «franqueo de pequeños saltos» → «franqueig de petits salts»; «pozas» → «gorgs»; «vías ferratas» → «vies ferrades».
 
+## CFGM Cuidados Auxiliares de Enfermería (`CFGM_CUIDADOS_AUXILIARES_ENFERMERIA`)
+
+Ciclo SAN23 de la familia Sanidad (tarea 213). No tiene mapa intermodular. Es el primer título **LOGSE** del catálogo.
+
+### Fuente normativa
+
+- **Ordenación:** según la ficha de FP Illes Balears (<https://www.caib.es/sites/fp/ca/cures_auxiliars_dinfermeria/>), el ciclo es LOGSE y en Baleares se aplican los currículos estatales. No hay currículo autonómico ni texto oficial en catalán.
+- **Castellano:** capacidades terminales y criterios de evaluación del **RD 546/1995** (título y enseñanzas mínimas, BOE-A-1995-13533). El RD 558/1995 (currículo, BOE-A-1995-13592) solo añade contenidos y remite al 546 para capacidades y criterios.
+- **Catalán:** traducción propia con el agente `traductor-es-ca` (dos lotes). Nombres de los módulos traducidos («Tècniques bàsiques d'infermeria», «Higiene del medi hospitalari i neteja de material», etc.).
+- **Sustitución prevista:** el Ministerio sometió a consulta pública en junio de 2026 el proyecto de RD del título LOE «Técnico en Cuidados de enfermería». Cuando se publique y la CAIB lo implante, este ciclo deberá recargarse con los RA del nuevo título (nuevo `tipoNivel` o migración de recarga).
+
+### Adaptación LOGSE al modelo de RA
+
+- **Capacidades terminales como RA:** cada capacidad terminal se guarda como un RA (`RA1` = capacidad N.1 del módulo N) y sus criterios llevan letras `a)`, `b)`… en el orden del RD. Los criterios LOGSE están en infinitivo («Explicar…», «Describir…»), no en la forma «Se ha…» de la LOE.
+- **Códigos de módulo:** los módulos LOGSE no tienen código oficial. Se usan `CAE1`-`CAE7`, con la numeración del RD (el 6, Relaciones en el equipo de trabajo, es transversal; el 7 es FOL). El prompt los muestra como «CAE2 Técnicas básicas de enfermería».
+- **Cursos:** un solo curso (`1º`) con los siete módulos: el ciclo dura 1.400 horas, con un curso en el centro y la FCT.
+- **FCT:** no se carga, como en los demás ciclos, que no incluyen la formación en empresa.
+- Los módulos transversales LOE compartidos (1664, 1709, 0156, 1708, 1710 y 1713) no existen en este título.
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgm_cuidados_auxiliares_enfermeria.data.ts`: 7 módulos, 30 capacidades y 173 criterios. Los carga la migración `31_ingest_cfgm_cuidados_auxiliares_enfermeria_ras.ts`, que es reejecutable y solo toca este nivel.
+- Un script temporal extrae los textos del HTML del BOE. En él, las dos columnas de la tabla «Capacidades terminales / Criterios de evaluación» se separan con « / » en la primera fila de cada capacidad. El script comprueba que cada texto castellano aparece literalmente en el BOE y que la numeración de capacidades (1.1-1.3, 2.1-2.6, 3.1-3.4, 4.1-4.3, 5.1-5.4 y 6.1-6.5) coincide.
+- **Particularidades del BOE:** las capacidades de FOL no van numeradas. Los criterios «En un supuesto práctico…: …» incluyen una lista interna que se conserva en un único criterio. CAE2 RA4 g) escribe «específicado» con tilde; se conserva en castellano y se traduce «especificat».
+- **Decisiones de traducción:** «botiquín» → «farmaciola»; «sábana de arrastre» → «llençol travesser»; «camilla» → «llitera»; «calzas» → «peücs»; «ancianos» → «persones grans»; «lesionados» → «ferits»; «liquidación de haberes» → «liquidació de havers»; «sillón dental» → «cadira dental».
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

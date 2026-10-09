@@ -136,6 +136,19 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
+    etapa: 'CFGM',
+    comunidad: 'IB',
+    nombre_es: 'CFGM Cuidados Auxiliares de Enfermería',
+    nombre_ca: "CFGM Cures auxiliars d'infermeria",
+    palabrasClave: 'formación profesional sanidad cuidados auxiliares enfermería',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Título LOGSE (SAN23, RD 546/1995) con el currículo estatal: un curso en el centro más la FCT,
+    // que no se carga. Los módulos no tienen código oficial: CAE1-CAE7 siguen su numeración en el RD.
+    cursos: [{ curso: '1º', modulos: ['CAE1', 'CAE2', 'CAE3', 'CAE4', 'CAE5', 'CAE6', 'CAE7'] }],
+  },
+  {
     id: 'CFGS_EDUCACION_INFANTIL',
     etapa: 'CFGS',
     comunidad: 'IB',

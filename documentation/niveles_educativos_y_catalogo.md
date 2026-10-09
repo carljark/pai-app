@@ -141,6 +141,34 @@ Ciclo SAN23 de la familia Sanidad (tarea 213). No tiene mapa intermodular. Es el
 - **Particularidades del BOE:** las capacidades de FOL no van numeradas. Los criterios «En un supuesto práctico…: …» incluyen una lista interna que se conserva en un único criterio. CAE2 RA4 g) escribe «específicado» con tilde; se conserva en castellano y se traduce «especificat».
 - **Decisiones de traducción:** «botiquín» → «farmaciola»; «sábana de arrastre» → «llençol travesser»; «camilla» → «llitera»; «calzas» → «peücs»; «ancianos» → «persones grans»; «lesionados» → «ferits»; «liquidación de haberes» → «liquidació de havers»; «sillón dental» → «cadira dental».
 
+## CFGS Acondicionamiento Físico (`CFGS_ACONDICIONAMIENTO_FISICO`)
+
+Ciclo AFD32 de la familia Actividades Físicas y Deportivas (tarea 214). No tiene mapa intermodular.
+
+### Fuente normativa
+
+- **Módulos y cursos:** ficha del ciclo en FP Illes Balears (<https://www.caib.es/sites/fp/ca/condicionament_fisic/>), tabla «Matriculats a partir del curs 2026/27».
+  - 1.º: 0017, 1136, 1148, 1149, 1151, 1665 y 1709.
+  - 2.º: 1150, 1152, 1153, 1154, 0179, 1708 y 1710.
+  - El módulo optativo y las horas reservadas al módulo en inglés no se cargan porque no tienen currículo propio. FOL (1155), EIE (1156) y FCT (1157) del RD de 2017 ya no se imparten.
+- **Castellano:**
+  - Módulos propios (0017, 1136, 1148-1154): anexo I del **RD 651/2017** (BOE-A-2017-7981). El BOE no tiene versión consolidada; el **RD 500/2024** solo cambia del título el artículo 6 y los anexos III y V, y renombra el 1154 «Proyecto de acondicionamiento físico» como «Proyecto intermodular de acondicionamiento físico».
+  - Transversales de grado superior (1665, 1709, 0179, 1708 y 1710): el mismo texto del CFGS Educación Infantil (ver «Módulos transversales compartidos»).
+- **Catalán:**
+  - La CAIB aplica currículos autonómicos «en fase d'esborrany», sin texto publicado. La traducción de los módulos propios es propia, con el agente `traductor-es-ca` (dos lotes) y la terminología de FP balear. 84 textos idénticos a los de otros ciclos (casi todo el 0017, parte del 1136 y del proyecto) reutilizan su catalán ya revisado.
+  - Los nombres de los módulos son los de la ficha de la CAIB («Fitnes en sala d'entrenament polivalent», «Condicionament físic a l'aigua»). El 1154 aparece allí solo como «Projecte intermodular»; se usa «Projecte intermodular de condicionament físic», en paralelo al nombre del BOE.
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgs_acondicionamiento_fisico.data.ts`: 14 módulos, 78 RA y 569 criterios (51 RA y 373 criterios de los módulos propios). Los carga la migración `32_ingest_cfgs_acondicionamiento_fisico_ras.ts`, que es reejecutable y solo toca este nivel.
+- Un script temporal extrae los textos del HTML del BOE y comprueba que cada texto castellano aparece literalmente en él, que la numeración de RA y letras es consecutiva y que hay paridad ES/CA.
+- **Erratas del BOE:**
+  - Falta el punto final en la descripción de 1136 RA4; se añade.
+  - 1136 RA4 e) acaba en coma («…valoración cardiofuncional,»); se cambia por punto.
+  - 1150 RA2 b) dice «series de coreografiadas»; se conserva en castellano y se traduce «sèries coreografiades».
+  - 1151 RA6 g) incluye una lista de pruebas de socorrismo con guiones «-»; se conserva en un único criterio, como el 1337 RA6 g) de Guía en el Medio Natural.
+- **Decisiones de traducción:** «fitness» → «fitnes» (forma de la CAIB); «acondicionamiento físico» → «condicionament físic»; «soporte musical» → «suport musical»; «hidrocinesia» → «hidrocinèsia»; «camillas» → «lliteres»; «músculo-esquelético» → «musculoesquelètic».
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

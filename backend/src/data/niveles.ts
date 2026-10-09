@@ -168,6 +168,21 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGS_ACONDICIONAMIENTO_FISICO',
+    etapa: 'CFGS',
+    comunidad: 'IB',
+    nombre_es: 'CFGS Acondicionamiento Físico',
+    nombre_ca: 'CFGS Condicionament físic',
+    palabrasClave: 'formación profesional actividades físicas deportivas acondicionamiento físico fitness',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Módulos de cada curso según FP Illes Balears (AFD32, matriculados desde 2026-27).
+    cursos: [
+      { curso: '1º', modulos: ['0017', '1136', '1148', '1149', '1151', '1665', '1709'] },
+      { curso: '2º', modulos: ['1150', '1152', '1153', '1154', '0179', '1708', '1710'] },
+    ],
+  },
+  {
     // ESO ordinaria: Decreto 42/2025 (BOIB n.º 103, de 4/8/2025).
     id: 'ESO_ORDINARIA',
     etapa: 'ESO',

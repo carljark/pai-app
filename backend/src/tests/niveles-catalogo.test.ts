@@ -8,6 +8,7 @@ import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_inf
 import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA } from '../data/ras_cfgm_atencion_dependencia.data';
 import { CFGM_GUIA_MEDIO_NATURAL_RAS_DATA } from '../data/ras_cfgm_guia_medio_natural.data';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
+import { CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA } from '../data/ras_cfgs_acondicionamiento_fisico.data';
 import { describeTargetCourse } from '../controllers/project.controller';
 import { selectRelevantExamples } from '../services/ai.service';
 import { RA } from '../models/RA';
@@ -74,7 +75,8 @@ describe('Catálogo de niveles: datos para el frontend', () => {
       CFGS_EDUCACION_INFANTIL: CFGS_EDUCACION_INFANTIL_RAS_DATA,
       CFGM_ATENCION_DEPENDENCIA: CFGM_ATENCION_DEPENDENCIA_RAS_DATA,
       CFGM_GUIA_MEDIO_NATURAL: CFGM_GUIA_MEDIO_NATURAL_RAS_DATA,
-      CFGM_CUIDADOS_AUXILIARES_ENFERMERIA: CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA
+      CFGM_CUIDADOS_AUXILIARES_ENFERMERIA: CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA,
+      CFGS_ACONDICIONAMIENTO_FISICO: CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA
     };
     for (const [id, ras] of Object.entries(datasets)) {
       const modulos = modulosDe(id);
@@ -87,7 +89,7 @@ describe('Catálogo de niveles: datos para el frontend', () => {
     const datos = [
       ...CFGM_ESTETICA_RAS_DATA, ...CFGM_PELUQUERIA_RAS_DATA, ...CFGS_EDUCACION_INFANTIL_RAS_DATA,
       ...CFGM_ATENCION_DEPENDENCIA_RAS_DATA, ...CFGM_GUIA_MEDIO_NATURAL_RAS_DATA,
-      ...CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA
+      ...CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA, ...CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA
     ];
     for (const ra of datos) expect(NIVEL_IDS).toContain(ra.tipoNivel);
     for (const tipo of literalsOf('tipoNivel')) expect(NIVEL_IDS).toContain(tipo);

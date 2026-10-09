@@ -17,21 +17,21 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | CFGM Guía en el Medio Natural y de Tiempo Libre (tarea 212) | `CFGM_GUIA_MEDIO_NATURAL` |
 | CFGM Cuidados Auxiliares de Enfermería (tarea 213, LOGSE) | `CFGM_CUIDADOS_AUXILIARES_ENFERMERIA` |
 | CFGS Educación Infantil | `CFGS_EDUCACION_INFANTIL` |
+| CFGS Acondicionamiento Físico (tarea 214) | `CFGS_ACONDICIONAMIENTO_FISICO` |
 
 ## Pendientes de incorporar
 
 | Grado | Nombre en catalán (web del centro) | Nombre en castellano (provisional) | `tipoNivel` propuesto |
 |---|---|---|---|
-| CFGS | Condicionament físic | Acondicionamiento físico | `CFGS_ACONDICIONAMIENTO_FISICO` |
 | CFGS | Ensenyament i animació socioesportiva | Enseñanza y animación sociodeportiva | `CFGS_ANIMACION_SOCIODEPORTIVA` |
 | CFGS | Integració social | Integración social | `CFGS_INTEGRACION_SOCIAL` |
 | CFGS | Laboratori clínic i biomèdic | Laboratorio clínico y biomédico | `CFGS_LABORATORIO_CLINICO` |
 
-Son **4 ciclos** de grado superior. Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
+Son **3 ciclos** de grado superior. Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
 
 ## Cambios anunciados para el curso 2026-27
 
-- **Nuevos en el centro:** CFGS Condicionament físic (por la tarde) y CFGM Estètica i bellesa. Este último ya está en Plappin.
+- **Nuevos en el centro:** CFGS Condicionament físic (por la tarde) y CFGM Estètica i bellesa. Los dos ya están en Plappin.
 - **Dejan de ofrecerse:** CFGS Estilismo y Dirección de Peluquería (IMP32) y el certificado de profesionalidad IMPE0108 (Servicios auxiliares de estética). Si el centro lo imparte aún en 2025-26, se puede incorporar el CFGS Estilismo y Dirección de Peluquería como opcional; no se recomienda si ya no se va a ofrecer.
 
 ## Fuera de alcance

@@ -106,6 +106,21 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGM_ATENCION_DEPENDENCIA',
+    etapa: 'CFGM',
+    comunidad: 'IB',
+    nombre_es: 'CFGM Atención a Personas en Situación de Dependencia',
+    nombre_ca: 'CFGM Atenció a persones en situació de dependència',
+    palabrasClave: 'formación profesional atención personas dependencia sociosanitaria',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Módulos de cada curso según FP Illes Balears (SSC21, matriculados desde 2026-27).
+    cursos: [
+      { curso: '1º', modulos: ['0020', '0210', '0212', '0213', '0215', '0217', '1664', '1709'] },
+      { curso: '2º', modulos: ['0211', '0214', '0216', '0831', '0156', '1708', '1710', '1713'] },
+    ],
+  },
+  {
     id: 'CFGS_EDUCACION_INFANTIL',
     etapa: 'CFGS',
     comunidad: 'IB',

@@ -6,6 +6,7 @@ import { User } from '../models/User';
 import { up as createAdminUp } from '../migrations/01_create_admin_user';
 import { up as ingestEducacionInfantilUp } from '../migrations/13_ingest_cfgs_educacion_infantil_ras';
 import { up as reingestEsteticaUp } from '../migrations/24_reingest_cfgm_estetica_ras';
+import { up as ingestAtencionDependenciaUp } from '../migrations/26_ingest_cfgm_atencion_dependencia_ras';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
@@ -99,6 +100,23 @@ describe('Migrations Safety & Idempotency', () => {
     expect(didactica?.criterios_es[0]).toMatch(/^a\) Se ha /);
     expect(didactica?.criterios_ca[0]).toMatch(/^a\) S'ha /);
     expect(didactica?.criterios_ca).toHaveLength(didactica?.criterios_es.length ?? -1);
+  });
+
+  it('Carga los RA del CFGM Atención a Personas en Situación de Dependencia sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', moduleCode: '0020', tipoNivel: 'CFGS_EDUCACION_INFANTIL', description: 'Ajeno' });
+
+    await ingestAtencionDependenciaUp();
+    await ingestAtencionDependenciaUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGM_ATENCION_DEPENDENCIA' });
+    expect(ras).toHaveLength(78);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGS_EDUCACION_INFANTIL' })).toBe(1);
+
+    const teleasistencia = ras.find((r) => r.moduleCode === '0831' && r.id === 'RA1');
+    expect(teleasistencia?.module_es).toBe('Teleasistencia');
+    expect(teleasistencia?.module_ca).toBe('Teleassistència');
+    expect(teleasistencia?.description).toBe(teleasistencia?.description_ca);
+    expect(teleasistencia?.criterios_ca).toHaveLength(teleasistencia?.criterios_es.length ?? -1);
   });
 
   it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {

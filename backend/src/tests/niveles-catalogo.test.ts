@@ -5,6 +5,7 @@ import { AFINIDADES_TABS, DEFAULT_TIPO_NIVEL, MAPA_TABS, cursoDeTab, NIVELES, NI
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { CFGM_PELUQUERIA_RAS_DATA } from '../data/ras_cfgm_peluqueria.data';
 import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_infantil.data';
+import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA } from '../data/ras_cfgm_atencion_dependencia.data';
 import { describeTargetCourse } from '../controllers/project.controller';
 import { selectRelevantExamples } from '../services/ai.service';
 import { RA } from '../models/RA';
@@ -68,7 +69,8 @@ describe('Catálogo de niveles: datos para el frontend', () => {
     const datasets = {
       CFGM_ESTETICA: CFGM_ESTETICA_RAS_DATA,
       CFGM_PELUQUERIA: CFGM_PELUQUERIA_RAS_DATA,
-      CFGS_EDUCACION_INFANTIL: CFGS_EDUCACION_INFANTIL_RAS_DATA
+      CFGS_EDUCACION_INFANTIL: CFGS_EDUCACION_INFANTIL_RAS_DATA,
+      CFGM_ATENCION_DEPENDENCIA: CFGM_ATENCION_DEPENDENCIA_RAS_DATA
     };
     for (const [id, ras] of Object.entries(datasets)) {
       const modulos = modulosDe(id);
@@ -78,7 +80,10 @@ describe('Catálogo de niveles: datos para el frontend', () => {
   });
 
   it('todos los tipoNivel y tab que cargan los datos y migraciones están en el catálogo', () => {
-    const datos = [...CFGM_ESTETICA_RAS_DATA, ...CFGM_PELUQUERIA_RAS_DATA, ...CFGS_EDUCACION_INFANTIL_RAS_DATA];
+    const datos = [
+      ...CFGM_ESTETICA_RAS_DATA, ...CFGM_PELUQUERIA_RAS_DATA, ...CFGS_EDUCACION_INFANTIL_RAS_DATA,
+      ...CFGM_ATENCION_DEPENDENCIA_RAS_DATA
+    ];
     for (const ra of datos) expect(NIVEL_IDS).toContain(ra.tipoNivel);
     for (const tipo of literalsOf('tipoNivel')) expect(NIVEL_IDS).toContain(tipo);
     const tabs = literalsOf('tab');

@@ -48,6 +48,35 @@ Los RA solo están en MongoDB (`GET /api/ras`): el frontend ya no incluye RA de 
 
 El frontend no se toca.
 
+## CFGM Atención a Personas en Situación de Dependencia (`CFGM_ATENCION_DEPENDENCIA`)
+
+Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208). No tiene mapa intermodular.
+
+### Fuente normativa
+
+- **Módulos y cursos:** ficha del ciclo en FP Illes Balears (<https://www.caib.es/sites/fp/ca/atencia_a_persones_en_situacia_de_dependancia/>), tabla «Matriculats a partir del curs 2026/27».
+  - 1.º: 0020, 0210, 0212, 0213, 0215, 0217, 1664 y 1709.
+  - 2.º: 0211, 0214, 0216, 0831, 0156, 1708, 1710 y 1713.
+  - El módulo optativo no se carga porque no tiene currículo propio. FOL (0218), EIE (0219) y FCT (0220), que siguen en el RD de 2011, ya no se imparten.
+- **Castellano:**
+  - RA y criterios de 0020, 0210-0217 y 0831: anexo I del **RD 1593/2011** (BOE núm. 301). El BOE no tiene versión consolidada de este RD. El **RD 499/2024** solo cambia del título el artículo 6 y los anexos III y V.
+  - 1664, 1708, 1709, 1710 y 0156: **RD 659/2023, texto consolidado** (última modificación: 6/5/2025). Este texto cambia, por ejemplo, el RA2 de 1709 («Adquiere las competencias necesarias para el desempeño de las funciones de nivel básico en Prevención de Riesgos Laborales»).
+  - 1713 Proyecto intermodular: anexo II del **RD 499/2024**.
+- **Catalán:**
+  - La CAIB aplica currículos autonómicos «en fase d'esborrany», sin texto publicado, así que la traducción es propia, con la terminología de FP balear.
+  - Los nombres de los módulos son los de la ficha de la CAIB.
+  - Los transversales y parte de 0020 reutilizan el catalán ya revisado de Peluquería y Educación Infantil cuando el castellano coincide.
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgm_atencion_dependencia.data.ts`: 16 módulos, 78 RA y 590 criterios. Los carga la migración `26_ingest_cfgm_atencion_dependencia_ras.ts`, que es reejecutable y solo toca este nivel.
+- Un script temporal extrae los textos de los PDF oficiales. Se comprueba que cada texto castellano aparece literalmente en su BOE, que la numeración de RA y letras es consecutiva y que hay paridad ES/CA.
+- **Erratas del BOE:**
+  - El RD 1593/2011 escribe «Código 0212» sin dos puntos.
+  - Falta el punto final en 0211 RA2 b) y 0215 RA2 b); se añade.
+  - El RD 499/2024 repite la letra «a)» en el RA5 de 1713; se renumera a)-d), como en Peluquería.
+- **Diferencias con otros ciclos:** el 0020 de este RD usa «persona accidentada» y «que hay que conseguir». El de Educación Infantil (RD 1394/2007) dice «accidentado» y «a conseguir», así que cada ciclo conserva el texto de su RD.
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

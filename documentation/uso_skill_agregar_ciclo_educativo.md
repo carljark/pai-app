@@ -37,6 +37,7 @@ Si deseas asegurar o forzar que el agente utilice estrictamente esta skill y sus
 Para contrastar normativas, códigos y denominaciones bilingües oficiales:
 - **TodoFP (Ministerio de Educación, FP y Deportes de España):** [https://www.todofp.es/inicio.html](https://www.todofp.es/inicio.html) (Títulos estatales, BOE y denominaciones oficiales en castellano).
 - **FP Illes Balears (CAIB):** [https://www.caib.es/sites/fp/ca/inici/](https://www.caib.es/sites/fp/ca/inici/) (Normativa autonómica balear, currículos autonómicos y denominaciones en catalán).
+- **ESO en las Illes Balears:** Decreto 42/2025 (BOIB n.º 103, de 4/8/2025) en castellano y catalán, y la web LOMLOE de la CAIB por materias: [https://www.caib.es/sites/lomloe/ca/eso_materies/](https://www.caib.es/sites/lomloe/ca/eso_materies/).
 
 ---
 
@@ -74,7 +75,13 @@ Usa la skill agregar-ciclo-educativo para integrar el ciclo:
 - Archivos: @add_mid_grades/Grado medio farmacia
 ```
 
-### Ejemplo 3: Prompt para generar conexiones y actividades del mapa intermodular
+### Ejemplo 3: Ampliar o incorporar una ESO (ruta ESO)
+```text
+Usa la skill agregar-ciclo-educativo (ruta ESO) para actualizar la ESO ordinaria con el nuevo decreto de currículo que está en @Proyecto_FPB_PAI/ESO/ (versiones en castellano y catalán)
+```
+La skill distingue entre ampliar la ESO ordinaria (solo datos y una migración nueva) e incorporar otra ESO, por ejemplo de otra comunidad, que exige generalizar antes el código atado a `ESO_ORDINARIA`.
+
+### Ejemplo 4: Prompt para generar conexiones y actividades del mapa intermodular
 ```text
 Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema como hasta ahora, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). Has de proponer además, al menos 9 actividades en las que se trabaje con esta combinacion de CE, dirigidas a los alumnos de una edad correspondiente al curso. años. Las actividades han de basarse en las metodologias activas de aprendizaje (Proyectos, problemas, servicio, etc.). Se ha de especificar las medidas DUA a tener en cuenta adaptadas a cada actividad. Todos los CRiterios de evaluacion (CE) han de tener actividades relacionadas con otros modulos, y no se pueden contemplar mas de tres CE, a parte del propio del modulo, por actividad. No importa si son muchas combinaciones y actividades, hazlo asi. Además, ha de ser bideccional, si hay una relacion y unas actividades entre los RA de dos modulos, han de aparecer en ambos. El documento ha de tener una version en catalan y otra en castellano sin faltas de ortografia y sin mezclar las dos lenguas.
 ```

@@ -68,7 +68,7 @@ Una misma tarea usa **el mismo número NNN** en su plan (`planes/NNN_plan_*.md`)
 
 ## 8. Incorporación de ciclos educativos (FP y ESO)
 
-Cuando la tarea incorpore un ciclo, sigue la skill y referencias completas:
+Cuando la tarea incorpore un ciclo de FP o un nivel de ESO, sigue la skill (ruta FP o ruta ESO) y sus referencias completas:
 
 - `.agents/skills/agregar-ciclo-educativo/SKILL.md`
 - `.agents/skills/agregar-ciclo-educativo/references/checklist_archivos.md`
@@ -76,12 +76,13 @@ Cuando la tarea incorpore un ciclo, sigue la skill y referencias completas:
 
 Directrices invariantes:
 
-- Contrasta currículos y denominaciones con fuentes oficiales: TodoFP/BOE para castellano y CAIB/BOIB para catalán balear. No uses datos inventados ni copias monolingües como fallback.
+- Contrasta currículos y denominaciones con fuentes oficiales: en FP, TodoFP/BOE para castellano y CAIB/BOIB para catalán balear; en ESO, el decreto autonómico en ambos idiomas (BOIB) y la web LOMLOE de la CAIB. No uses datos inventados ni copias monolingües como fallback.
 - Mantén paridad real ES/CA en datos, interfaz, generador, prompts, mapa y traducciones: nunca pongas catalán en campos `_es` ni castellano en `_ca`. El cambio de idioma debe mapear de forma reactiva tanto datos de API/Mongo como seeds estáticos; los prompts deben usar el nombre oficial en el idioma solicitado.
 - Integra el nivel de extremo a extremo: modelos/enums y migraciones backend; tipos, carga/fallback curricular y orden por curso en frontend; traducciones; generador, historial, home y perfil. **El mapa intermodular es opcional**: por defecto un ciclo se incorpora sin mapa (sin `mapas` en el catálogo) y el mapa se añade más adelante o bajo demanda.
 - Si hay 1.º y 2.º curso, separa selección de módulos, datasets y pestañas del mapa por curso.
+- En la ESO, cada criterio guarda los cursos en que se aplica y cada materia su tipo por curso (común, de opción u optativa). Su mapa opcional es el de afinidades entre materias (sin actividades). Ampliar `ESO_ORDINARIA` solo requiere datos y una migración nueva; otra ESO exige antes generalizar el código atado a `ESO_ORDINARIA` (paso E4 de la skill).
 - Guarda mapas grandes como JSON en `backend/src/data/mapa-intermodular/` e ingiéralos mediante migraciones en MongoDB. **No incrustes semillas grandes como TypeScript en el bundle frontend** por el riesgo de OOM en builds/EC2.
-- Para el mapa (solo si se pide): cada conexión debe tener al menos una actividad (`activities.length >= 1`); no crees conexiones huérfanas. Mantén entre **6 y 15 conexiones por RA** como objetivo (aprox. 300–600 por curso), relaciones bidireccionales y actividades deduplicadas. Conserva simetría ES/CA en módulos, RA/CE, conexiones y actividades; como máximo tres CE externos por conexión.
+- Para el mapa intermodular de FP (solo si se pide): cada conexión debe tener al menos una actividad (`activities.length >= 1`); no crees conexiones huérfanas. Mantén entre **6 y 15 conexiones por RA** como objetivo (aprox. 300–600 por curso), relaciones bidireccionales y actividades deduplicadas. Conserva simetría ES/CA en módulos, RA/CE, conexiones y actividades; como máximo tres CE externos por conexión.
 - Empareja los documentos curriculares castellano/catalán por índice de actividad y verifica que mantienen la misma estructura y cantidad de filas/bloques.
 - En tests del mapa, simula clicks en los botones reales del DOM para cubrir las funciones compiladas de plantillas y comprueba títulos/contenido en ambos idiomas. En tests que esperan errores, espía y restaura `console.error`; provee mocks para evitar peticiones HTTP accidentales.
 - Usa el scaffold de la skill cuando proceda, verifica la secuencia de migración y alcanza al menos **90 % de cobertura global**, además de respetar los umbrales específicos de cobertura de plantillas configurados en el frontend.

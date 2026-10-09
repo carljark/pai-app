@@ -1,6 +1,6 @@
-# Checklist Integral para la Incorporación de un Ciclo de FP (CFGM / CFGS, Bilingüe ES/CA)
+# Checklist Integral para la Incorporación de un Ciclo Educativo (FP y ESO, Bilingüe ES/CA)
 
-Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niveles, datos curriculares y migraciones. El **mapa intermodular es opcional** (por defecto no se hace; las secciones marcadas «solo con mapa» se aplican únicamente si se pide). El frontend lo toma todo del catálogo (`GET /api/niveles`) y no se modifica. Utiliza este documento como referencia exacta de qué modificar y cómo, asegurando la plena paridad entre **Castellano** y **Catalán**.
+Las secciones 1 a 3 son la **ruta FP**; la sección 4, la **ruta ESO**. Cada nuevo ciclo formativo se incorpora **solo en el backend**: catálogo de niveles, datos curriculares y migraciones. El **mapa intermodular es opcional** (por defecto no se hace; las secciones marcadas «solo con mapa» se aplican únicamente si se pide). El frontend lo toma todo del catálogo (`GET /api/niveles`) y no se modifica. Utiliza este documento como referencia exacta de qué modificar y cómo, asegurando la plena paridad entre **Castellano** y **Catalán**.
 
 ---
 
@@ -113,3 +113,35 @@ El frontend no lleva listas de niveles, claves de traducción por nivel ni RA de
    - En `app.spec.ts` (solo con mapa): Proporcionar `mockMapaFacade` para evitar peticiones HTTP accidentales durante las pruebas del componente raíz `App`.
 
 4. **Siempre:** test de datos de backend con paridad ES/CA (mismos RA y criterios, textos distintos entre idiomas) y numeración consecutiva; el ciclo en `niveles-catalogo.test.ts`.
+
+---
+
+## 4. Ruta ESO
+
+Referencia: ESO ordinaria (`ESO_ORDINARIA`, Decreto 42/2025), tareas 197, 200 y 202, y `documentation/niveles_educativos_y_catalogo.md`. **Caso A** = ampliar o actualizar `ESO_ORDINARIA`; **caso B** = otra ESO (`ESO_<SUFIJO>`).
+
+### 4.1. Datos curriculares
+- **Archivos:** `backend/src/data/curriculo-eso/<materia>.json` (caso A) o `backend/src/data/curriculo-eso-<sufijo>/<materia>.json` (caso B), uno por materia.
+- **Formato:** `code`, `name_es/ca`, `cursos` (`{ "1º": "comun" | "opcion" | "optativa" }`) y `competencias[]` con `ce_id`, `ce_num`, `description_es/ca`, `descriptores` y `criterios[]` (`id`, `cursos`, `text_es/ca`, `aclaraciones_es/ca`).
+- **Modelo:** `backend/src/models/CE.ts` (`subjectCode`, `subject_es/ca`, `subjectTipos`, `ce_num`, `descriptores`, `criteriosPorCurso`). No hace falta tocarlo salvo que el decreto aporte un dato nuevo.
+
+### 4.2. Catálogo `niveles.ts`
+- Caso A: sin cambios, salvo cursos, edades o decreto.
+- Caso B: entrada con `etapa: 'ESO'`, `unidad: 'CE'`, `terminologia: 'situacion_aprendizaje'`, `cursos` con `edad` y **sin** `modulos`, `nombrePrompt_es/ca` y `palabrasClave`. Si es otra comunidad, ampliar el tipo `comunidad`.
+
+### 4.3. Migración
+- **Archivo:** `backend/src/migrations/NN_<reingest|ingest>_ces_eso_<sufijo>.ts`, con el siguiente número de dos dígitos.
+- **Patrón:** el de `23_ingest_ces_eso_ordinaria.ts` (`ceDocsFromMateria`, `CE.deleteMany({ tipoNivel })` + `insertMany`). La 23 ya está aplicada en producción: un cambio de datos de `ESO_ORDINARIA` necesita una migración nueva.
+
+### 4.4. Código (solo caso B)
+Generalizar las comparaciones con `ESO_ORDINARIA` para que salgan del catálogo (tabla del paso E4 de `SKILL.md`):
+- Backend: `services/eso-curriculum.service.ts`, `controllers/curriculum.controller.ts`, `controllers/project.controller.ts`, `services/criterios.service.ts`, `services/translation.service.ts` y, con mapa, `controllers/afinidades.controller.ts`.
+- Frontend: `app.facade.ts` y `features/curriculum/services/curriculum.facade.ts`, con el nivel en `testing/niveles.mock.ts`.
+
+### 4.5. (Solo con mapa) Mapa de afinidades
+- `backend/src/data/afinidades-eso/*.json`, migración nueva sobre la colección `AfinidadEso` y pestañas `formato: 'afinidades'` en `mapas` del catálogo. El frontend (`AfinidadesEsoFacade`, `AfinidadesEsoViewComponent`, `AfinidadCardComponent`) no cambia.
+
+### 4.6. Tests
+- `backend/src/tests/eso.test.ts` (o uno nuevo en el caso B): paridad, tipos de materia, migración idempotente sin tocar el PDC, `GET /api/ces` por curso e idioma y prompt con edad y terminología LOMLOE.
+- `niveles-catalogo.test.ts` y, con mapa, `afinidades-datos.test.ts` y `afinidades.test.ts`.
+- Caso B: specs del frontend que comprueben que el nivel nuevo carga sus CE.

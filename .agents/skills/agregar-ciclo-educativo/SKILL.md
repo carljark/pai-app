@@ -1,10 +1,10 @@
 ---
-name: agregar-fp
+name: agregar-ciclo-educativo
 description: >-
-  Procedimiento y guía técnica para incorporar nuevos ciclos formativos de Formación Profesional (Grado Básico / FP Básica, Grado Medio / CFGM y Grado Superior / CFGS) a la plataforma Plappin con mínima información de entrada (nombre del ciclo y fuentes oficiales). Gestiona la integración end-to-end en backend (catálogo de niveles, RA y criterios bilingües ES/CA, migraciones), la gestión de 1.er y 2.º curso y la suite de tests con cobertura >= 90%. El mapa intermodular es OPCIONAL: por defecto los ciclos se incorporan SIN mapa (se añade más adelante o bajo demanda; entonces rigen sus reglas de conexiones y actividades).
+  Procedimiento y guía técnica para incorporar nuevos ciclos educativos a la plataforma Plappin: ciclos de Formación Profesional (Grado Básico / FP Básica, Grado Medio / CFGM y Grado Superior / CFGS) y, cuando haga falta, niveles de la ESO (con CE en lugar de RA, como la ESO ordinaria de la tarea 197), con mínima información de entrada (nombre del ciclo y fuentes oficiales). Gestiona la integración end-to-end en backend (catálogo de niveles, RA y criterios bilingües ES/CA, migraciones), la gestión de 1.er y 2.º curso y la suite de tests con cobertura >= 90%. El mapa intermodular es OPCIONAL: por defecto los ciclos se incorporan SIN mapa (se añade más adelante o bajo demanda; entonces rigen sus reglas de conexiones y actividades).
 ---
 
-# Skill: Incorporación de Ciclos Formativos de Formación Profesional (Grado Básico, Medio y Superior)
+# Skill: Incorporación de ciclos educativos (FP de Grado Básico, Medio y Superior, y ESO)
 
 Esta skill permite integrar cualquier nuevo ciclo de Formación Profesional —de **Grado Básico (FP Básica / FPB)**, **Grado Medio (CFGM)** o **Grado Superior (CFGS)**— en Plappin de forma sistemática, bilingüe estricta (Castellano / Catalán) y sin fricción, aprovechando el estándar validado en **FP Básica**, **CFGM Estética y Belleza**, **CFGM Peluquería y Cosmética Capilar** y **CFGS Educación Infantil**.
 
@@ -55,7 +55,7 @@ Para iniciar la integración, el asistente solo necesita:
 Ejecutar el script asistente para generar los archivos base y calcular automáticamente el siguiente número secuencial de migración:
 
 ```bash
-python3 .agents/skills/agregar-fp/scripts/scaffold_cfgm.py \
+python3 .agents/skills/agregar-ciclo-educativo/scripts/scaffold_cfgm.py \
   --slug <slug> \
   --name-es "<Nombre en Castellano>" \
   --name-ca "<Nombre en Catalán>" \
@@ -226,7 +226,7 @@ Plantilla base (sin mapa). Si se pide el mapa, añadir al final las reglas de ma
 
 ```text
 Implementa el ciclo formativo <Nivel: Grado Básico / Grado Medio / Grado Superior> <Nombre en Castellano> (<Nombre en Catalán>) con slug '<slug>' y tipoNivel '<TIPO_NIVEL>'.
-Sigue estrictamente la skill en .agents/skills/agregar-fp/SKILL.md (y, solo si hay mapa, la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md).
+Sigue estrictamente la skill en .agents/skills/agregar-ciclo-educativo/SKILL.md (y, solo si hay mapa, la guía técnica en documentation/procesamiento_actividades_mapa_intermodular.md).
 Los archivos fuente se encuentran en: <ruta_carpeta>.
 
 Fuentes oficiales de contraste:

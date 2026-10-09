@@ -27,7 +27,7 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | CFGS | Integració social | Integración social | `CFGS_INTEGRACION_SOCIAL` |
 | CFGS | Laboratori clínic i biomèdic | Laboratorio clínico y biomédico | `CFGS_LABORATORIO_CLINICO` |
 
-Son **7 ciclos** (3 de grado medio y 4 de grado superior). Se incorporan **sin mapa intermodular**, según la skill `agregar-fp`.
+Son **7 ciclos** (3 de grado medio y 4 de grado superior). Se incorporan **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
 
 ## Cambios anunciados para el curso 2026-27
 

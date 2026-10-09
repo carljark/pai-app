@@ -1,6 +1,6 @@
 # Instrucciones para agentes
 
-Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directrices de `.agents/rules/`. Para incorporar ciclos de Formación Profesional, también es obligatorio seguir `.agents/skills/agregar-fp/SKILL.md` y sus referencias.
+Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directrices de `.agents/rules/`. Para incorporar ciclos educativos (FP o ESO), también es obligatorio seguir `.agents/skills/agregar-ciclo-educativo/SKILL.md` y sus referencias.
 
 ## 1. Control de versiones, tests y despliegue
 
@@ -66,13 +66,13 @@ Una misma tarea usa **el mismo número NNN** en su plan (`planes/NNN_plan_*.md`)
 - Trata las migraciones como cambios persistentes: define claramente su alcance, evita sobrescribir o borrar datos ajenos y verifica si es seguro reejecutarlas. Fuera del despliegue descrito en §1 (que incluye la copia de seguridad previa y las migraciones del runner), no ejecutes operaciones de escritura contra producción sin autorización explícita.
 - Los scripts temporales de migración se guardan en el espacio temporal aprobado y se eliminan tras usarlos; una migración de producto debe residir en la carpeta de migraciones que utiliza el runner real.
 
-## 8. Incorporación de ciclos FP
+## 8. Incorporación de ciclos educativos (FP y ESO)
 
 Cuando la tarea incorpore un ciclo, sigue la skill y referencias completas:
 
-- `.agents/skills/agregar-fp/SKILL.md`
-- `.agents/skills/agregar-fp/references/checklist_archivos.md`
-- `.agents/skills/agregar-fp/references/lecciones_aprendidas_cobertura.md`
+- `.agents/skills/agregar-ciclo-educativo/SKILL.md`
+- `.agents/skills/agregar-ciclo-educativo/references/checklist_archivos.md`
+- `.agents/skills/agregar-ciclo-educativo/references/lecciones_aprendidas_cobertura.md`
 
 Directrices invariantes:
 

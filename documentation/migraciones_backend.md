@@ -14,7 +14,7 @@ El backend aplica migraciones de MongoDB con un único runner: `backend/src/migr
 Las dos convenciones de nombre vienen de los dos runners que existían antes de unificarlos. Se conservan para que las bases de datos ya migradas (local y EC2) no reejecuten nada. Por eso:
 
 - No se añaden ni se renombran archivos en `legacy/`.
-- Las migraciones nuevas van en `backend/src/migrations/` con el siguiente número secuencial de dos dígitos. El scaffold de la skill `agregar-fp` lo calcula solo.
+- Las migraciones nuevas van en `backend/src/migrations/` con el siguiente número secuencial de dos dígitos. El scaffold de la skill `agregar-ciclo-educativo` lo calcula solo.
 - Dentro de cada carpeta el orden es lexicográfico. `legacy/` mezcla `001_`/`002_` con `01_`…`06_` y se mantiene tal cual.
 
 ## Cuándo se ejecutan

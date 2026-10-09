@@ -44,7 +44,7 @@ Los RA solo están en MongoDB (`GET /api/ras`): el frontend ya no incluye RA de 
 
 1. Añadir la entrada en `backend/src/data/niveles.ts`: nombres oficiales ES/CA, cursos (con `modulos` en FP) y `mapas` si tiene mapa intermodular.
 2. Cargar sus datos curriculares en MongoDB con una migración nueva (`backend/src/migrations/NN_*.ts`), a partir de datos en `backend/src/data/` (nunca como semillas en el bundle del frontend).
-3. Ciclos FP: seguir la skill `agregar-fp` (RA bilingües, mapa intermodular y tests).
+3. Ciclos FP o niveles de ESO: seguir la skill `agregar-ciclo-educativo` (RA bilingües, mapa intermodular y tests).
 
 El frontend no se toca.
 

@@ -106,7 +106,7 @@ La solución definitiva consta de tres capas clave:
    En lugar de incrustar semillas gigantes de decenas de megabytes en archivos `.ts` de Angular (que agotaban el heap de Node.js en Vitest y en el build de producción en EC2), los datasets se almacenan como JSON limpios en `backend/src/data/mapa-intermodular/` y se persisten en MongoDB en la colección `mapamodules`. El frontend los recupera bajo demanda vía `MapaIntermodularService.getModules(tab)` con un tiempo de carga instantáneo.
 
 2. **Deduplicación Rigurosa de Actividades y Cero Conexiones Vacías:**
-   - **Prohibición de conexiones vacías:** Queda terminantemente prohibido generar conexiones con `activities: []`. Toda conexión del grafo debe ofrecer obligatoriamente al menos una actividad formativa (`activities.length >= 1`). Si un cruce curricular no tiene actividad propuesta, no se instancia en el grafo.
+   - **Prohibición de conexiones vacías:** Queda terminantemente prohibido generar conexiones con `activities: []`. Toda conexión del grafo debe ofrecer obligatoriamente al menos tres actividades formativas (`activities.length >= 3`, como en CFGM Estética). El mapa de CFGM Peluquería es anterior a esta regla y aún tiene conexiones con menos de tres. Si un cruce curricular no tiene actividad propuesta, no se instancia en el grafo.
    - **Volumen equilibrado:** Cada Resultado de Aprendizaje (RA) dispone de entre **6 y 15 conexiones intermodulares** (media de ~8 a 12 por RA), evitando la saturación con cientos de tarjetas vacías o redundantes.
    - **Deduplicación por RA:** Cada actividad formativa es única dentro de su RA y módulo por título y desarrollo.
 

@@ -26,6 +26,11 @@ Tras el renombrado de la tarea 205, la skill incorpora tanto ciclos de FP como n
 - **Generalizar el código no entra en esta tarea.** Hoy solo hay una ESO, y generalizar sin un segundo nivel real sería especulativo. La skill deja inventariados los puntos atados a `ESO_ORDINARIA` (6 en el backend y 2 en el frontend) para hacerlo cuando llegue el caso B.
 - **No hay scaffold para la ESO.** Los datos de cada decreto tienen una estructura distinta (bloques de cursos, erratas), así que la extracción es un script temporal por tarea, como en la tarea 197.
 - **Mínimo de tres actividades por conexión** en las reglas del mapa de FP, alineado con el prompt de la sección 7 y la práctica de CFGM Estética. `activities.length >= 1` queda como mínimo absoluto.
+- **Ampliación posterior: tres actividades también en las reglas generales.** `AGENTS.md` §8, el checklist de la skill y `documentation/procesamiento_actividades_mapa_intermodular.md` pasan de `activities.length >= 1` a `>= 3`. Se comprobaron los mapas existentes:
+  - FPB, CFGM Estética y CFGS Educación Infantil ya cumplen (mínimo 5, 3 y 3);
+  - CFGM Peluquería no: 254 de 377 conexiones en 1.º y 189 de 367 en 2.º tienen menos de tres. Se anota como excepción anterior a la regla y no se regenera.
+
+  `scripts/verify_cfgm_integration.sh` sigue comprobando solo que no haya conexiones vacías.
 - `lecciones_aprendidas_cobertura.md` no cambia: sus lecciones son de FP y siguen vigentes.
 
 ## Verificación

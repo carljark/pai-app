@@ -162,7 +162,7 @@ Si durante la incorporación aparece un `tipoNivel` de FP escrito a mano en `fro
 
 > [!CAUTION]
 > **REGLAS CRÍTICAS DE CONEXIONES Y ACTIVIDADES:**
-> 1. **CERO Conexiones Huérfanas / Vacías (`activities: []`):** Cada conexión intermodular DEBE tener al menos tres propuestas de actividad formativa (mínimo absoluto `activities.length >= 1`). Queda **terminantemente prohibido** crear conexiones sin actividad. Si un cruce de criterios no dispone de actividad asociada, NO debe generarse una conexión en el grafo.
+> 1. **CERO Conexiones Huérfanas / Vacías (`activities: []`):** Cada conexión intermodular DEBE tener al menos **tres** propuestas de actividad formativa (`activities.length >= 3`, como en CFGM Estética). Queda **terminantemente prohibido** crear conexiones sin actividad. El mapa de CFGM Peluquería es anterior a esta regla y aún tiene conexiones con menos de tres. Si un cruce de criterios no dispone de actividad asociada, NO debe generarse una conexión en el grafo.
 > 2. **Rango Equilibrado y Educativo por RA (6 a 15 conexiones por RA):** Cada RA debe tener entre **6 y 15 conexiones intermodulares** (media de ~8 a 12). En un curso completo de 8-11 módulos, el mapa debe situarse entre **300 y 600 conexiones**. NUNCA generes miles de conexiones repetidas o artificiales.
 > 3. **Deduplicación Rigurosa de Actividades:** Las actividades deben ser únicas dentro de cada módulo y RA. No repitas la misma actividad en múltiples conexiones del mismo RA.
 

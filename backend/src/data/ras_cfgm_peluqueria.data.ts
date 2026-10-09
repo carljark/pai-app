@@ -994,9 +994,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de la EC en relació amb el medi ambient i el desenvolupament sostenible.",
+    "description": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
     "description_es": "Establece las diferencias entre la Economía Lineal (EL) y la Economía Circular (EC), identificando las ventajas de la EC en relación con el medioambiente y el desarrollo sostenible.",
-    "description_ca": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de la EC en relació amb el medi ambient i el desenvolupament sostenible.",
+    "description_ca": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
     "criterios_es": [
       "a) Se han identificado las etapas «típicas» de los modelos basados en EL y modelos basados en EC.",
       "b) Se ha analizado cada etapa de los modelos EL y EC y su repercusión en el medio ambiente.",
@@ -1035,7 +1035,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "criterios_ca": [
       "a) S'han relacionat els sistemes ciberfísics amb l'evolució industrial.",
       "b) S'ha analitzat el canvi produït en els sistemes automatitzats.",
-      "c) S'ha descrit la combinació de la part física de les indústries amb el programari, IoT (Internet de les coses), comunicacions, entre d'altres.",
+      "c) S'ha descrit la combinació de la part física de les indústries amb el programari, IoT (Internet de les coses), comunicacions, entre altres.",
       "d) S'ha descrit la interrelació entre el món físic i el virtual.",
       "e) S'ha relacionat la migració a entorns 4.0 amb la millora dels resultats de les empreses.",
       "f) S'han identificat els avantatges per a clients i empreses."
@@ -1048,9 +1048,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Identifica l'estructura dels sistemes basats en cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
+    "description": "Identifica l'estructura dels sistemes basats en el cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
     "description_es": "Identifica la estructura de los sistemas basados en cloud/nube describiendo su tipología y campo de aplicación.",
-    "description_ca": "Identifica l'estructura dels sistemes basats en cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
+    "description_ca": "Identifica l'estructura dels sistemes basats en el cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
     "criterios_es": [
       "a) Se han identificado los diferentes niveles de la cloud/nube.",
       "b) Se han identificado las principales funciones de la cloud/nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros).",
@@ -1060,7 +1060,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han identificat els diferents nivells del cloud/núvol.",
-      "b) S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre d'altres).",
+      "b) S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres).",
       "c) S'ha descrit el concepte d'edge computing i la seva relació amb el cloud/núvol.",
       "d) S'han definit els conceptes de fog i mist i les seves zones d'aplicació en el conjunt.",
       "e) S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
@@ -1088,12 +1088,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han identificat les tecnologies habilitadores (THD) actuals que defineixen un sistema digitalitzat.",
-      "b) S'han descrit les característiques i aplicacions de l'IoT, IA (Intel·ligència Artificial), Big Data, tecnologia 5G, la robòtica col·laborativa, Blockchain, Ciberseguretat, fabricació additiva, realitat virtual, bessons digitals, entre d'altres.",
+      "b) S'han descrit les característiques i aplicacions de l'IoT, la IA (Intel·ligència Artificial), el Big Data, la tecnologia 5G, la robòtica col·laborativa, el Blockchain, la Ciberseguretat, la fabricació additiva, la realitat virtual, els bessons digitals, entre altres.",
       "c) S'ha descrit la contribució de les THD a la millora de la productivitat i l'eficiència dels sistemes productius o de prestació de serveis.",
-      "d) S'ha relacionat l'alineació entre les unitats funcionals de les empreses que conformen el sistema i l'objectiu del mateix.",
-      "e) S'ha relacionat la implantació de les tecnologies habilitadores (sensòrica, tractament de dades, automatització i comunicacions, entre d'altres) amb la reducció de costos i la millora de la competitivitat.",
+      "d) S'ha relacionat l'alineació entre les unitats funcionals de les empreses que conformen el sistema i el seu objectiu.",
+      "e) S'ha relacionat la implantació de les tecnologies habilitadores (sensòrica, tractament de dades, automatització i comunicacions, entre altres) amb la reducció de costos i la millora de la competitivitat.",
       "f) S'han relacionat les tecnologies disruptives amb aplicacions concretes en els sectors productius.",
-      "g) S'han definit els sistemes d'emmagatzematge de dades no convencionals i l'accés als mateixos des de cada unitat.",
+      "g) S'han definit els sistemes d'emmagatzematge de dades no convencionals i l'accés a aquests des de cada unitat.",
       "h) S'han descrit les millores produïdes en el sistema i en cadascuna de les seves etapes."
     ]
   },
@@ -1104,9 +1104,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
+    "description": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis que cal introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
     "description_es": "Elabora un plan de transformación de una empresa clásica del sector en el que se enmarca el título, basada en una EL, al concepto 4.0, determinando los cambios a introducir en las principales fases del sistema e indicando como afectaría a los recursos humanos.",
-    "description_ca": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
+    "description_ca": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis que cal introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
     "criterios_es": [
       "a) Se ha definido a nivel de bloques el diagrama de funcionamiento de la empresa clásica.",
       "b) Se han identificado las etapas susceptibles de ser digitalizadas.",
@@ -1118,13 +1118,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "h) Se ha elaborado un documento con la secuencia del plan de transformación y los recursos empleados."
     ],
     "criterios_ca": [
-      "a) S'ha definit a nivell de blocs el diagrama de funcionament de l'empresa clàssica.",
+      "a) S'ha definit en blocs el diagrama de funcionament de l'empresa clàssica.",
       "b) S'han identificat les etapes susceptibles de ser digitalitzades.",
       "c) S'han definit les tecnologies implicades en cadascuna de les etapes.",
       "d) S'ha establert la connexió de les etapes digitalitzades amb la resta del sistema.",
       "e) S'ha elaborat un diagrama de blocs del sistema digitalitzat.",
       "f) S'ha elaborat un informe de viabilitat i de les millores introduïdes.",
-      "g) S'ha analitzat la millora en la producció i gestió de residus, entre d'altres.",
+      "g) S'ha analitzat la millora en la producció i la gestió de residus, entre altres.",
       "h) S'ha elaborat un document amb la seqüència del pla de transformació i els recursos emprats."
     ]
   },
@@ -1144,9 +1144,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "c) Se ha reflexionado sobre las actitudes y aptitudes requeridas actualmente para la actividad profesional relacionadas con el título, así como las competencias personales y sociales más relevantes para el sector identificando nuestra zona de desarrollo próximo."
     ],
     "criterios_ca": [
-      "a) S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació i analitzat els seus requeriments actuals per al perfil professional.",
+      "a) S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació i analitzant els seus requeriments actuals per al perfil professional.",
       "b) S'han comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
-      "c) S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector identificant la nostra zona de desenvolupament proper."
+      "c) S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com sobre les competències personals i socials més rellevants per al sector identificant la nostra zona de desenvolupament proper."
     ]
   },
   {
@@ -1171,15 +1171,15 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín."
     ],
     "criterios_ca": [
-      "a) S'ha valorat la importància de la cultura preventiva en tots els àmbits d'activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats d'aquests, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+      "a) S'ha valorat la importància de la cultura preventiva en tots els àmbits i activitats de l'empresa o organisme equiparat, relacionant les condicions laborals amb la salut de la persona treballadora, identificant i classificant els factors de risc en l'activitat i els danys derivats d'aquests, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
       "b) S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
-      "c) S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per evitar els danys en el seu origen i minimitzar les seves conseqüències.",
+      "c) S'ha determinat l'avaluació de riscos a l'empresa o organisme equiparat i s'han definit les tècniques de prevenció i de protecció que s'han d'aplicar per evitar els danys en el seu origen i minimitzar-ne les conseqüències.",
       "d) S'han analitzat els protocols d'actuació en cas d'emergència.",
       "e) S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
-      "f) S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
-      "g) S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que inclogui la seqüenciació d'actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
-      "h) S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seva importància com a mesura de prevenció.",
-      "i) S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús de la farmaciola."
+      "f) S'han classificat les diferents formes de gestió de la prevenció a l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals, i s'han determinat les formes de representació de les persones treballadores a l'empresa o organisme equiparat en matèria de prevenció de riscos.",
+      "g) S'ha valorat la importància de l'existència d'un pla preventiu a l'empresa o organisme equiparat que inclogui la seqüenciació d'actuacions que cal dur a terme en cas d'emergència i s'ha reflexionat sobre el seu contingut.",
+      "h) S'han determinat els requisits i les condicions per a la vigilància de la salut de la persona treballadora i la seva importància com a mesura de prevenció.",
+      "i) S'han identificat les tècniques bàsiques de primers auxilis que s'han d'aplicar al lloc de l'accident davant de diferents tipus de danys i la composició i l'ús de la farmaciola."
     ]
   },
   {
@@ -1189,9 +1189,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Analitza les seves condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+    "description": "Analitza les seves condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
     "description_es": "Analiza sus condiciones laborales como persona trabajadora por cuenta ajena identificándolas en los principales tipos de cambios y vicisitudes relevantes que se pueden presentar en la relación laboral en la normativa laboral y especialmente en el convenio colectivo del sector.",
-    "description_ca": "Analitza les seves condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+    "description_ca": "Analitza les seves condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
     "criterios_es": [
       "a) Se han analizado los derechos y obligaciones derivados de la relación laboral, así como las condiciones de trabajo pactadas en un convenio colectivo aplicable al sector profesional relacionado con el título.",
       "b) Se han comparado las principales modalidades de contratación, localizando los diferentes modelos en las fuentes oficiales.",
@@ -1202,11 +1202,11 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "g) Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral."
     ],
     "criterios_ca": [
-      "a) S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
+      "a) S'han analitzat els drets i les obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
       "b) S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
       "c) S'han identificat les característiques definitòries dels nous entorns d'organització del treball i els drets que comporta.",
       "d) S'han identificat els diferents components del rebut de salari.",
-      "e) S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral.",
+      "e) S'han identificat els recursos laborals existents davant de les diferents vicissituds que es poden produir en la relació laboral.",
       "f) S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
       "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
     ]
@@ -1218,9 +1218,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional d'acord amb l'anàlisi de les competències, interessos i destreses personals.",
+    "description": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
     "description_es": "Analiza y evalúa su potencial profesional y sus intereses para guiarse en el proceso de autoorientación y elabora una hoja de ruta para la inserción profesional en base al análisis de las competencias, intereses y destrezas personales.",
-    "description_ca": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional d'acord amb l'anàlisi de les competències, interessos i destreses personals.",
+    "description_ca": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
     "criterios_es": [
       "a) Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
       "b) Se han analizado las cualidades y competencias personales afines a la actividad profesional relacionada con el perfil del título.",
@@ -1238,10 +1238,10 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "a) S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
       "b) S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
       "c) S'han determinat les competències personals i socials amb valor per a l'ocupació.",
-      "d) S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
-      "e) S'ha valorat el concepte d'autoestima en el procés de recerca d'ocupació.",
+      "d) S'han assenyalat les preferències professionals, els interessos i les metes en el marc d'un projecte professional.",
+      "e) S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
       "f) S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
-      "g) S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
+      "g) S'han identificat expectatives de futur per a la inserció professional analitzant competències, interessos i destreses personals.",
       "h) S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
       "i) S'han identificat els itineraris formatius professionals relacionats amb el perfil professional.",
       "j) S'han formulat objectius professionals i s'han determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
@@ -1270,7 +1270,7 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se ha diseñado el entorno de aprendizaje que permite alcanzar el plan de desarrollo individual."
     ],
     "criterios_ca": [
-      "a) S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
+      "a) S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de competències pròpies i noves.",
       "b) S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
       "c) S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
       "d) S'ha posat en pràctica la competència digital per configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",
@@ -1288,9 +1288,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Anglès professional",
     "moduleCode": "0156",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Comprèn informació, d'índole professional i quotidiana, continguda en discursos orals senzills, emesos en llengua estàndard, desxifrant el contingut global del missatge, i relacionant-lo amb els recursos lingüístics corresponents.",
+    "description": "Comprèn informació, d'índole professional i quotidiana, continguda en discursos orals senzills, emesos en llengua estàndard, desxifrant el contingut global del missatge i relacionant-lo amb els recursos lingüístics corresponents.",
     "description_es": "Comprende información, de índole profesional y cotidiana, contenida en discursos orales sencillos, emitidos en lengua estándar, descifrando el contenido global del mensaje, y relacionándolo con los recursos lingüísticos correspondientes.",
-    "description_ca": "Comprèn informació, d'índole professional i quotidiana, continguda en discursos orals senzills, emesos en llengua estàndard, desxifrant el contingut global del missatge, i relacionant-lo amb els recursos lingüístics corresponents.",
+    "description_ca": "Comprèn informació, d'índole professional i quotidiana, continguda en discursos orals senzills, emesos en llengua estàndard, desxifrant el contingut global del missatge i relacionant-lo amb els recursos lingüístics corresponents.",
     "criterios_es": [
       "a) Se ha situado el mensaje en su contexto por medio del análisis de sus características textuales y contextuales.",
       "b) Se ha identificado el hilo argumental de mensajes orales y determinado los roles que aparecen en los mismos.",
@@ -1304,13 +1304,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'ha situat el missatge en el seu context per mitjà de l'anàlisi de les seves característiques textuals i contextuals.",
-      "b) S'ha identificat el fil argumental de missatges orals i determinat els rols que hi apareixen.",
-      "c) S'ha reconegut la finalitat del missatge, ja es tracti d'un missatge directe, telefònic o en qualsevol altre medi auditiu.",
+      "b) S'ha identificat el fil argumental de missatges orals i s'han determinat els rols que hi apareixen.",
+      "c) S'ha reconegut la finalitat del missatge, ja es tracti d'un missatge directe, telefònic o en qualsevol altre mitjà auditiu.",
       "d) S'ha extret informació específica continguda en discursos orals, en llengua estàndard, relacionats amb la vida social, professional o acadèmica.",
       "e) S'han seqüenciat els elements constituents del missatge.",
       "f) S'han identificat i resumit amb claredat les idees principals d'un discurs sobre temes coneguts, transmès pels mitjans de comunicació i emès en llengua estàndard.",
-      "g) S'han reconegut les instruccions orals i s'han seguit les indicacions sent capaç de concloure si precisen d'una resposta verbal o d'una no verbal.",
-      "h) S'ha pres consciència de la importància de comprendre globalment un missatge, sense necessitat d'entendre tots i cadascun dels elements del mateix.",
+      "g) S'han reconegut les instruccions orals i s'han seguit les indicacions, sent capaç de concloure si requereixen una resposta verbal o una de no verbal.",
+      "h) S'ha pres consciència de la importància de comprendre globalment un missatge, sense necessitat d'entendre tots i cadascun dels seus elements.",
       "i) S'ha servit de l'anàlisi de l'entonació i dels elements visuals per identificar els diversos significats i intencions comunicatives de l'emissor."
     ]
   },
@@ -1321,9 +1321,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Anglès professional",
     "moduleCode": "0156",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Comprèn informació professional continguda en textos escrits senzills, analitzant de forma comprensiva el seu contingut.",
+    "description": "Comprèn informació professional continguda en textos escrits senzills, analitzant de manera comprensiva el seu contingut.",
     "description_es": "Comprende información profesional contenida en textos escritos sencillos, analizando de forma comprensiva su contenido.",
-    "description_ca": "Comprèn informació professional continguda en textos escrits senzills, analitzant de forma comprensiva el seu contingut.",
+    "description_ca": "Comprèn informació professional continguda en textos escrits senzills, analitzant de manera comprensiva el seu contingut.",
     "criterios_es": [
       "a) Se han seleccionado los materiales de consulta y diccionarios técnicos. para la comprensión del texto.",
       "b) Se han leído de forma comprensiva textos claros en lengua estándar.",
@@ -1336,13 +1336,13 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "i) Se ha extraído información específica de textos de diferente naturaleza, relativos a su profesión y contenidos en distintos soportes."
     ],
     "criterios_ca": [
-      "a) S'han seleccionat els materials de consulta i diccionaris tècnics per a la comprensió del text.",
-      "b) S'han llegit de forma comprensiva textos clars en llengua estàndard.",
+      "a) S'han seleccionat els materials de consulta i els diccionaris tècnics per a la comprensió del text.",
+      "b) S'han llegit de manera comprensiva textos clars en llengua estàndard.",
       "c) S'ha relacionat el text amb l'àmbit del sector a què es refereix.",
       "d) S'han reconegut les idees principals d'un text escrit identificant la informació rellevant, sense necessitat d'entendre tots i cadascun dels elements d'aquest text.",
-      "e) S'ha identificat la terminologia utilitzada, així com les estructures gramaticals i altres elements característics de cada tipologia discursiva.",
+      "e) S'ha identificat la terminologia utilitzada, així com les estructures gramaticals i els altres elements característics de cada tipologia discursiva.",
       "f) S'han realitzat traduccions de textos en llengua estàndard utilitzant material de suport en cas necessari.",
-      "g) S'ha interpretat el missatge rebut a través de suports telemàtics o qualsevol altre tipus de suport.",
+      "g) S'ha interpretat el missatge rebut a través de suports telemàtics o de qualsevol altre tipus de suport.",
       "h) S'ha reconegut la finalitat de diferents textos escrits en qualsevol suport, en llengua estàndard i relacionats amb l'activitat professional.",
       "i) S'ha extret informació específica de textos de diferent naturalesa, relatius a la seva professió i continguts en diferents suports."
     ]
@@ -1380,12 +1380,12 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "e) S'han expressat sentiments, idees o opinions.",
       "f) S'han enumerat les activitats pròpies de la tasca professional.",
       "g) S'ha descrit i seqüenciat un procés de treball de la seva competència.",
-      "h) S'ha justificat l'acceptació o no de propostes realitzades fent ús de normes de cortesia i de maneres apropiades.",
+      "h) S'ha justificat l'acceptació o no de propostes fetes fent ús de normes de cortesia i de maneres apropiades.",
       "i) S'ha intercanviat, amb relativa fluïdesa, informació específica i detallada utilitzant frases d'estructura senzilla i diferents suports telemàtics.",
       "j) S'han realitzat, de manera clara, presentacions breus i preparades sobre un tema dins de la seva especialitat, fent ús dels protocols adequats.",
       "k) S'ha comunicat espontàniament adoptant un nivell de formalitat adequat a les circumstàncies.",
       "l) S'han respost preguntes relatives a la seva vida socioprofessional, incloses les pròpies d'una entrevista de treball.",
-      "m) S'ha sol·licitat la reformulació del discurs o l'aclariment de part del mateix quan s'ha considerat necessari per a una millor comprensió."
+      "m) S'ha sol·licitat la reformulació del discurs o l'aclariment de part d'aquest quan s'ha considerat necessari per a una millor comprensió."
     ]
   },
   {
@@ -1395,9 +1395,9 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Anglès professional",
     "moduleCode": "0156",
     "tipoNivel": "CFGM_PELUQUERIA",
-    "description": "Redacta textos senzills en llengua estàndard, relacionant les regles gramaticals amb la finalitat dels mateixos.",
+    "description": "Redacta textos senzills en llengua estàndard, relacionant les regles gramaticals amb la finalitat d'aquests.",
     "description_es": "Redacta textos sencillos en lengua estándar, relacionando las reglas gramaticales con la finalidad de los mismos.",
-    "description_ca": "Redacta textos senzills en llengua estàndard, relacionant les regles gramaticals amb la finalitat dels mateixos.",
+    "description_ca": "Redacta textos senzills en llengua estàndard, relacionant les regles gramaticals amb la finalitat d'aquests.",
     "criterios_es": [
       "a) Se han seleccionado las estrategias, estructuras, vocabulario y convenciones más adecuadas para el tipo de texto que se va a crear (fax, nota, carta o correo electrónico, entre otros).",
       "b) Se han redactado textos breves relacionados con aspectos cotidianos y/o profesionales.",
@@ -1411,16 +1411,16 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
       "j) Se ha solicitado, de forma escrita, información referente a aspectos relacionados con su campo profesional (página web y correo electrónico, entre otros)."
     ],
     "criterios_ca": [
-      "a) S'han seleccionat les estratègies, estructures, vocabulari i convencions més adequades per al tipus de text que es crearà (fax, nota, carta o correu electrònic, entre d'altres).",
+      "a) S'han seleccionat les estratègies, estructures, vocabulari i convencions més adequades per al tipus de text que s'ha de crear (fax, nota, carta o correu electrònic, entre altres).",
       "b) S'han redactat textos breus relacionats amb aspectes quotidians i/o professionals.",
       "c) S'ha organitzat la informació de manera coherent i cohesionada.",
-      "d) S'han realitzat resums de textos relacionats amb el seu entorn professional, identificant les idees principals dels mateixos.",
+      "d) S'han realitzat resums de textos relacionats amb el seu entorn professional, identificant-ne les idees principals.",
       "e) S'ha emplenat documentació específica del seu camp professional, aplicant les fórmules establertes i el vocabulari específic.",
       "f) S'ha emplenat un text donat amb suports visuals i claus lingüístiques aportades.",
-      "g) S'han utilitzat les fórmules de cortesia pròpies del document que s'elaborarà.",
-      "h) S'ha escrit correspondència formal bàsica en format físic o digital destinada principalment a demanar informació, sol·licitar un servei o dur a terme una reclamació o altra gestió senzilla, sempre atenent a les convencions de la tipologia textual.",
-      "i) S'han pres notes, i missatges, amb informació senzilla sobre aspectes propis de la seva tasca professional.",
-      "j) S'ha sol·licitat, de forma escrita, informació referent a aspectes relacionats amb el seu camp professional (pàgina web i correu electrònic, entre d'altres)."
+      "g) S'han utilitzat les fórmules de cortesia pròpies del document que s'ha d'elaborar.",
+      "h) S'ha escrit correspondència formal bàsica en format físic o digital destinada principalment a demanar informació, sol·licitar un servei o dur a terme una reclamació o una altra gestió senzilla, atenent sempre les convencions de la tipologia textual.",
+      "i) S'han pres notes i missatges amb informació senzilla sobre aspectes propis de la seva tasca professional.",
+      "j) S'ha sol·licitat, per escrit, informació referent a aspectes relacionats amb el seu camp professional (pàgina web i correu electrònic, entre altres)."
     ]
   },
   {
@@ -1442,10 +1442,10 @@ export const CFGM_PELUQUERIA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han definit els trets més significatius dels costums i usos de la comunitat on es parla la llengua estrangera.",
-      "b) S'han descrit els protocols i normes de relació social propis del país.",
-      "c) S'han identificat els valors i creences propis de la comunitat on es parla la llengua estrangera.",
+      "b) S'han descrit els protocols i les normes de relació social propis del país.",
+      "c) S'han identificat els valors i les creences propis de la comunitat on es parla la llengua estrangera.",
       "d) S'han identificat els aspectes socioprofessionals propis del sector, en qualsevol tipus de text.",
-      "e) S'han aplicat els protocols i normes de relació social propis del país de la llengua estrangera."
+      "e) S'han aplicat els protocols i les normes de relació social propis del país de la llengua estrangera."
     ]
   },
   {

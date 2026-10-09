@@ -150,7 +150,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "criterios_ca": [
       "a) S'han seleccionat les tècniques d'higiene facial i corporal d'acord amb les necessitats i demandes de l'usuari.",
       "b) S'ha informat l'usuari de les fases del procés d'higiene facial o corporal que se li aplicaran.",
-      "c) S'ha preparat la pell amb les tècniques específiques, cosmètics, aparells de calor seca o humida i massatge, per a facilitar-ne la higiene, segons les seues característiques i necessitats.",
+      "c) S'ha preparat la pell amb les tècniques específiques, cosmètics, aparells de calor seca o humida i massatge, per a facilitar-ne la higiene, segons les seves característiques i necessitats.",
       "d) S'ha realitzat l'extracció de comedons amb els productes, estris i mitjans adequats a les condicions i a l'estat de la pell.",
       "e) S'han utilitzat mesures d'higiene i equips de protecció personal en tot el procés.",
       "f) S'han aplicat adequadament els cosmètics i aparells utilitzats en els processos d'higiene facial i corporal, segons les característiques i sensibilitat de l'usuari i les especificacions del fabricant.",
@@ -165,9 +165,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Tècniques d’higiene facial i corporal",
     "moduleCode": "0633",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Aplica tècniques per al control de la qualitat, justificant la seua importància en la prestació del servei.",
+    "description": "Aplica tècniques per al control de la qualitat, justificant la seva importància en la prestació del servei.",
     "description_es": "Valora los resultados obtenidos, asesorando sobre hábitos de higiene facial y corporal, los cosméticos más adecuados y las pautas de utilización.",
-    "description_ca": "Aplica tècniques per al control de la qualitat, justificant la seua importància en la prestació del servei.",
+    "description_ca": "Aplica tècniques per al control de la qualitat, justificant la seva importància en la prestació del servei.",
     "criterios_es": [
       "a) Se han determinado los criterios que definen un servicio óptimo de higiene facial y corporal.",
       "b) Se han identificado las principales causas que pueden dar lugar a deficiencias en las técnicas de higiene facial y corporal.",
@@ -184,7 +184,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "d) S'han aplicat tècniques per a detectar el grau de satisfacció de l'usuari en els processos d'higiene facial i corporal.",
       "e) S'han identificat les possibles mesures de correcció.",
       "f) S'ha simulat l'assessorament posttractament referent a cosmètics i pautes d'higiene en els diferents estats fisiològics.",
-      "g) S'ha simulat l'assessorament sobre la importància d'hàbits de vida saludable i la seua influència en l'estat de la pell."
+      "g) S'ha simulat l'assessorament sobre la importància d'hàbits de vida saludable i la seva influència en l'estat de la pell."
     ]
   },
   {
@@ -281,7 +281,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'ha definit la terminologia i les tècniques de depilació i epilació.",
-      "b) S'han diferenciat els mètodes de depilació per les seues característiques o forma d'aplicació.",
+      "b) S'han diferenciat els mètodes de depilació per les seves característiques o forma d'aplicació.",
       "c) S'han seleccionat els mètodes segons la zona corporal i les característiques de la pell o del pèl a tractar.",
       "d) S'ha determinat la utilització dels mètodes de decoloració segons les característiques de la pell i del pèl que s'ha de tractar.",
       "e) S'han identificat les propietats, la forma d'utilització i la presentació dels cosmètics depilatoris.",
@@ -574,9 +574,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Anàlisi estètica",
     "moduleCode": "0638",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Identifica les lesions bàsiques i alteracions de la pell i annexos, descrivint les seues característiques i la seua repercussió estètica.",
+    "description": "Identifica les lesions bàsiques i alteracions de la pell i annexos, descrivint les seves característiques i la seva repercussió estètica.",
     "description_es": "Identifica las lesiones básicas y alteraciones de la piel y anexos, describiendo sus características y su repercusión estética.",
-    "description_ca": "Identifica les lesions bàsiques i alteracions de la pell i annexos, descrivint les seues característiques i la seua repercussió estètica.",
+    "description_ca": "Identifica les lesions bàsiques i alteracions de la pell i annexos, descrivint les seves característiques i la seva repercussió estètica.",
     "criterios_es": [
       "a) Se han reconocido las lesiones cutáneas más frecuentes que pueden influir en la aplicación de tratamientos estéticos.",
       "b) Se han identificado las alteraciones de la hidratación, sudoración, lipidación, pigmentación y queratinización cutánea con repercusión en las técnicas estéticas.",
@@ -688,9 +688,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Anàlisi estètica",
     "moduleCode": "0638",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Valora la importància d'una actitud professional en el desenvolupament de la seua activitat, relacionant-la amb el compliment de les normes deontològiques.",
+    "description": "Valora la importància d'una actitud professional en el desenvolupament de la seva activitat, relacionant-la amb el compliment de les normes deontològiques.",
     "description_es": "Valora la importancia de una actitud profesional en el desarrollo de su actividad, relacionándola con el cumplimiento de las normas deontológicas.",
-    "description_ca": "Valora la importància d'una actitud professional en el desenvolupament de la seua activitat, relacionant-la amb el compliment de les normes deontològiques.",
+    "description_ca": "Valora la importància d'una actitud professional en el desenvolupament de la seva activitat, relacionant-la amb el compliment de les normes deontològiques.",
     "criterios_es": [
       "a) Se ha definido el concepto de deontología profesional.",
       "b) Se han identificado los deberes y obligaciones del profesional.",
@@ -715,9 +715,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Caracteritza la imatge corporal, identificant la seua estructura, morfologia i proporcions.",
+    "description": "Caracteritza la imatge corporal, identificant la seva estructura, morfologia i proporcions.",
     "description_es": "Caracteriza la imagen corporal, identificando su estructura, morfología y proporciones.",
-    "description_ca": "Caracteritza la imatge corporal, identificant la seua estructura, morfologia i proporcions.",
+    "description_ca": "Caracteritza la imatge corporal, identificant la seva estructura, morfologia i proporcions.",
     "criterios_es": [
       "a) Se han especificado las diferentes zonas y posiciones anatómicas.",
       "b) Se han establecido los términos de localización a través de los ejes y planos anatómicos.",
@@ -746,9 +746,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Caracteritza els sistemes i aparells corporals, descrivint la seua estructura, funcionament i alteracions relacionades amb la imatge personal.",
+    "description": "Caracteritza els sistemes i aparells corporals, descrivint la seva estructura, funcionament i alteracions relacionades amb la imatge personal.",
     "description_es": "Caracteriza los sistemas y aparatos corporales, describiendo su estructura, funcionamiento y alteraciones relacionadas con la imagen personal.",
-    "description_ca": "Caracteritza els sistemes i aparells corporals, descrivint la seua estructura, funcionament i alteracions relacionades amb la imatge personal.",
+    "description_ca": "Caracteritza els sistemes i aparells corporals, descrivint la seva estructura, funcionament i alteracions relacionades amb la imatge personal.",
     "criterios_es": [
       "a) Se ha establecido la estructura jerárquica del organismo.",
       "b) Se ha caracterizado la anatomía del aparato circulatorio.",
@@ -781,9 +781,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Imatge corporal i hàbits saludables",
     "moduleCode": "0640",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Identifica pautes d'alimentació i nutrició, analitzant la seua influència en la imatge corporal i l'òrgan cutani.",
+    "description": "Identifica pautes d'alimentació i nutrició, analitzant la seva influència en la imatge corporal i l'òrgan cutani.",
     "description_es": "Identifica pautas de alimentación y nutrición, analizando su influencia en la imagen corporal y el órgano cutáneo.",
-    "description_ca": "Identifica pautes d'alimentació i nutrició, analitzant la seua influència en la imatge corporal i l'òrgan cutani.",
+    "description_ca": "Identifica pautes d'alimentació i nutrició, analitzant la seva influència en la imatge corporal i l'òrgan cutani.",
     "criterios_es": [
       "a) Se han establecido las diferencias entre alimentación y nutrición.",
       "b) Se han especificado los nutrientes básicos.",
@@ -833,7 +833,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "c) S'ha justificat l'exercici físic i el son en l'aspecte personal.",
       "d) S'han identificat els efectes, generals i sobre la pell, produïts pel consum de tabac i alcohol.",
       "e) S'ha justificat la importància de la prevenció de la drogodependència.",
-      "f) S'han relacionat les mesures d'higiene personal amb la seua repercussió en l'àmbit professional.",
+      "f) S'han relacionat les mesures d'higiene personal amb la seva repercussió en l'àmbit professional.",
       "g) S'ha justificat la influència de les hormones sexuals en l'anatomofisiologia cutània.",
       "h) S'ha relacionat la prevenció del càncer amb els hàbits de vida saludable."
     ]
@@ -891,7 +891,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "g) Se han aplicado técnicas de primeros auxilios en reacciones adversas y accidentes."
     ],
     "criterios_ca": [
-      "a) S'han identificat els riscos inherents a l'activitat i la seua malaltia professional associada.",
+      "a) S'han identificat els riscos inherents a l'activitat i la seva malaltia professional associada.",
       "b) S'han relacionat els riscos amb les causes més freqüents d'accidents en els establiments d'imatge personal.",
       "c) S'han determinat les mesures de protecció personal que s'han d'adoptar en la preparació i execució de les operacions tècniques.",
       "d) S'han previst mesures de prevenció específiques per al client durant el servei de perruqueria i estètica.",
@@ -952,9 +952,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han justificat les diferències entre els sistemes homogenis i els heterogenis.",
-      "b) S'ha identificat la composició, característiques, propietats i concentració de les dissolucions, així com la seua aplicació en cosmètica.",
-      "c) S'ha descrit la composició, les propietats i característiques dels sistemes dispersos heterogenis i la seua aplicació en cosmètica.",
-      "d) S'han classificat els tensioactius i s'ha analitzat la seua funció.",
+      "b) S'ha identificat la composició, característiques, propietats i concentració de les dissolucions, així com la seva aplicació en cosmètica.",
+      "c) S'ha descrit la composició, les propietats i característiques dels sistemes dispersos heterogenis i la seva aplicació en cosmètica.",
+      "d) S'han classificat els tensioactius i s'ha analitzat la seva funció.",
       "e) S'han interpretat les diferències entre suspensions, gels i emulsions.",
       "f) S'ha identificat la naturalesa fisicoquímica de diferents cosmètics.",
       "g) S'ha identificat el material i els equips de laboratori necessaris per a preparar cosmètics.",
@@ -969,9 +969,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Cosmetologia per a estètica i bellesa",
     "moduleCode": "0641",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Classifica els productes cosmètics per la seua forma de presentació, relacionant-los amb el seu grau de penetració a la pell.",
+    "description": "Classifica els productes cosmètics per la seva forma de presentació, relacionant-los amb el seu grau de penetració a la pell.",
     "description_es": "Clasifica los productos cosméticos por su forma de presentación, relacionándolos con su grado de penetración en la piel.",
-    "description_ca": "Classifica els productes cosmètics per la seua forma de presentació, relacionant-los amb el seu grau de penetració a la pell.",
+    "description_ca": "Classifica els productes cosmètics per la seva forma de presentació, relacionant-los amb el seu grau de penetració a la pell.",
     "criterios_es": [
       "a) Se han clasificado los cosméticos en función de su acción principal y lugar de aplicación.",
       "b) Se han identificado las distintas formas de presentación de los cosméticos.",
@@ -981,12 +981,12 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "f) Se han determinado los parámetros que definen la eficacia de los cosméticos, influyendo en su calidad."
     ],
     "criterios_ca": [
-      "a) S'han classificat els cosmètics en funció de la seua acció principal i lloc d'aplicació.",
+      "a) S'han classificat els cosmètics en funció de la seva acció principal i lloc d'aplicació.",
       "b) S'han identificat les diferents formes de presentació dels cosmètics.",
-      "c) S'han descrit els avantatges i inconvenients de les diferents formes cosmètiques i la seua forma d'utilització.",
+      "c) S'han descrit els avantatges i inconvenients de les diferents formes cosmètiques i la seva forma d'utilització.",
       "d) S'ha avaluat la via i el grau de penetració dels cosmètics en la pell.",
-      "e) S'han analitzat els factors que influeixen en la penetració dels cosmètics en la pell i en la seua forma d'actuar.",
-      "f) S'han determinat els paràmetres que defineixen l'eficàcia dels cosmètics, influint en la seua qualitat."
+      "e) S'han analitzat els factors que influeixen en la penetració dels cosmètics en la pell i en la seva forma d'actuar.",
+      "f) S'han determinat els paràmetres que defineixen l'eficàcia dels cosmètics, influint en la seva qualitat."
     ]
   },
   {
@@ -996,9 +996,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Cosmetologia per a estètica i bellesa",
     "moduleCode": "0641",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Selecciona els cosmètics d'higiene adequats a les diferents tipologies cutànies, identificant la seua composició, característiques i forma d'actuar.",
+    "description": "Selecciona els cosmètics d'higiene adequats a les diferents tipologies cutànies, identificant la seva composició, característiques i forma d'actuar.",
     "description_es": "Selecciona los cosméticos de higiene adecuados a las distintas tipologías cutáneas, identificando su composición, características y forma de actuar.",
-    "description_ca": "Selecciona els cosmètics d'higiene adequats a les diferents tipologies cutànies, identificant la seua composició, característiques i forma d'actuar.",
+    "description_ca": "Selecciona els cosmètics d'higiene adequats a les diferents tipologies cutànies, identificant la seva composició, característiques i forma d'actuar.",
     "criterios_es": [
       "a) Se ha definido el concepto de higiene y se han identificado los componentes que forman parte de la suciedad que se acumula en la superficie de la piel.",
       "b) Se han diferenciado los distintos mecanismos de acción de las sustancias limpiadoras.",
@@ -1017,7 +1017,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "d) S'ha analitzat la composició i els avantatges i inconvenients dels diferents productes netejadors facials i corporals.",
       "e) S'ha relacionat la forma d'actuar d'un tònic facial amb els ingredients que el componen.",
       "f) S'han classificat els cosmètics exfoliants i s'ha diferenciat el seu mecanisme d'acció.",
-      "g) S'han classificat les màscares en funció dels seus principis actius i de la seua forma cosmètica.",
+      "g) S'han classificat les màscares en funció dels seus principis actius i de la seva forma cosmètica.",
       "h) S'han identificat els principis actius dels desodorants i antitranspirants segons el seu mecanisme d'acció.",
       "i) S'han analitzat i preparat al laboratori fórmules senzilles de diferents cosmètics d'higiene."
     ]
@@ -1048,7 +1048,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "b) S'han classificat els principis actius hidratants segons el seu mecanisme d'acció.",
       "c) S'ha seleccionat la composició dels cosmètics hidratants en funció del tipus de pell on han de ser emprats.",
       "d) S'han establert les diferències entre una emulsió i un oli per a hidratació corporal.",
-      "e) S'han classificat els cosmètics solars segons la seua finalitat i moment d'aplicació.",
+      "e) S'han classificat els cosmètics solars segons la seva finalitat i moment d'aplicació.",
       "f) S'han diferenciat els principis actius que intervenen en la formulació dels fotoprotectors solars.",
       "g) S'ha interpretat el grau de resistència a l'aigua d'un fotoprotector solar i el seu poder de protecció.",
       "h) S'ha associat la composició dels productes per a després del sol amb la funció que realitzen.",
@@ -1062,9 +1062,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Cosmetologia per a estètica i bellesa",
     "moduleCode": "0641",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Selecciona els cosmètics decoratius adequats a les diferents tipologies cutànies, identificant la seua composició, funció i zona d'aplicació.",
+    "description": "Selecciona els cosmètics decoratius adequats a les diferents tipologies cutànies, identificant la seva composició, funció i zona d'aplicació.",
     "description_es": "Selecciona los cosméticos decorativos adecuados a las distintas tipologías cutáneas, identificando su composición, función y zona de aplicación.",
-    "description_ca": "Selecciona els cosmètics decoratius adequats a les diferents tipologies cutànies, identificant la seua composició, funció i zona d'aplicació.",
+    "description_ca": "Selecciona els cosmètics decoratius adequats a les diferents tipologies cutànies, identificant la seva composició, funció i zona d'aplicació.",
     "criterios_es": [
       "a) Se han identificado los principios activos responsables de la acción decorativa de los cosméticos y se han diferenciado en función de su solubilidad.",
       "b) Se ha relacionado la composición de los cosméticos decorativos con su forma de presentación.",
@@ -1077,14 +1077,14 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "i) Se han analizado artículos y dosieres sobre innovaciones en cosmética decorativa."
     ],
     "criterios_ca": [
-      "a) S'han identificat els principis actius responsables de l'acció decorativa dels cosmètics i s'han diferenciat en funció de la seua solubilitat.",
-      "b) S'ha relacionat la composició dels cosmètics decoratius amb la seua forma de presentació.",
+      "a) S'han identificat els principis actius responsables de l'acció decorativa dels cosmètics i s'han diferenciat en funció de la seva solubilitat.",
+      "b) S'ha relacionat la composició dels cosmètics decoratius amb la seva forma de presentació.",
       "c) S'han classificat els cosmètics decoratius en funció de la zona d'aplicació.",
       "d) S'han analitzat els cosmètics per a maquillar la pell del rostre, els ulls i els llavis i s'ha especificat l'objectiu que persegueixen.",
       "e) S'han especificat les condicions que ha de complir un cosmètic labial quant a duresa i composició.",
       "f) S'ha enumerat la composició dels cosmètics utilitzats en els processos de maquillatge de les ungles.",
       "g) S'han classificat els cosmètics per al maquillatge corporal.",
-      "h) S'han diferenciat els principis actius dels cosmètics autobronzejadors i la seua forma d'actuar.",
+      "h) S'han diferenciat els principis actius dels cosmètics autobronzejadors i la seva forma d'actuar.",
       "i) S'han analitzat articles i dossiers sobre innovacions en cosmètica decorativa."
     ]
   },
@@ -1110,12 +1110,12 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han identificat els components dels depilatoris químics i l'efecte que originen sobre el borrissol.",
-      "b) S'han descrit els diferents tipus de ceres, la seua composició i característiques.",
+      "b) S'han descrit els diferents tipus de ceres, la seva composició i característiques.",
       "c) S'ha analitzat la composició, efectes i mecanisme d'acció dels cosmètics que s'empren abans i després de la depilació.",
       "d) S'han determinat els avantatges i inconvenients dels diferents cosmètics per a eliminar el borrissol.",
       "e) S'ha distingit la forma d'actuar dels cosmètics decolorants basant-se en els seus principis actius.",
       "f) S'ha analitzat la composició de cadascun dels cosmètics emprats en manicura i pedicura.",
-      "g) S'han establert els criteris de selecció dels cosmètics de manicura, pedicura i tractaments de mans i peus en funció de la seua acció i el servei estètic que s'ha de realitzar.",
+      "g) S'han establert els criteris de selecció dels cosmètics de manicura, pedicura i tractaments de mans i peus en funció de la seva acció i el servei estètic que s'ha de realitzar.",
       "h) S'ha descrit la composició i la forma d'actuar dels cosmètics emprats per a ungles artificials."
     ]
   },
@@ -1142,7 +1142,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han reconegut les causes i factors que produeixen amb més freqüència alteracions en els cosmètics.",
-      "b) S'han relacionat les alteracions en la composició dels productes cosmètics amb els canvis que s'originen en les seues característiques organolèptiques.",
+      "b) S'han relacionat les alteracions en la composició dels productes cosmètics amb els canvis que s'originen en les seves característiques organolèptiques.",
       "c) S'ha identificat el lloc i les condicions òptimes d'emmagatzematge per a garantir la correcta conservació dels productes cosmètics i l'organització adequada del magatzem.",
       "d) S'han especificat les pautes correctes de manipulació dels productes cosmètics per a garantir unes condicions higienicosanitàries idònies d'aplicació.",
       "e) S'han analitzat les conseqüències d'una incorrecta manipulació dels productes cosmètics.",
@@ -1159,9 +1159,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Estableix les diferències entre l'economia lineal (EL) i l'economia circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
+    "description": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
     "description_es": "Establece las diferencias entre la Economía Lineal (EL) y la Economía Circular (EC), identificando las ventajas de la EC en relación con el medioambiente y el desarrollo sostenible.",
-    "description_ca": "Estableix les diferències entre l'economia lineal (EL) i l'economia circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
+    "description_ca": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
     "criterios_es": [
       "a) Se han identificado las etapas «típicas» de los modelos basados en EL y modelos basados en EC.",
       "b) Se ha analizado cada etapa de los modelos EL y EC y su repercusión en el medio ambiente.",
@@ -1172,7 +1172,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han identificat les etapes «típiques» dels models basats en EL i models basats en EC.",
-      "b) S'ha analitzat cada etapa dels models EL i EC i la seua repercussió en el medi ambient.",
+      "b) S'ha analitzat cada etapa dels models EL i EC i la seva repercussió en el medi ambient.",
       "c) S'ha valorat la importància del reciclatge en els models econòmics.",
       "d) S'han identificat processos reals basats en EL.",
       "e) S'han identificat processos reals basats en EC.",
@@ -1192,7 +1192,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "criterios_es": [
       "a) Se han relacionado los sistemas ciber físicos con la evolución industrial.",
       "b) Se ha analizado el cambio producido en los sistemas automatizados.",
-      "c) Se ha descrito la combinación de la parte física de las industrias con el software , IoT (Internet de las cosas), comunicaciones, entre otros.",
+      "c) Se ha descrito la combinación de la parte física de las industrias con el software, IoT (Internet de las cosas), comunicaciones, entre otros.",
       "d) Se ha descrito la interrelación entre el mundo físico y el virtual.",
       "e) Se ha relacionado la migración a entornos 4.0 con la mejora de los resultados de las empresas.",
       "f) Se han identificado las ventajas para clientes y empresas."
@@ -1213,22 +1213,22 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Identifica l'estructura dels sistemes basats en el núvol (cloud) descrivint la seua tipologia i camp d'aplicació.",
-    "description_es": "Identifica la estructura de los sistemas basados en cloud /nube describiendo su tipología y campo de aplicación.",
-    "description_ca": "Identifica l'estructura dels sistemes basats en el núvol (cloud) descrivint la seua tipologia i camp d'aplicació.",
+    "description": "Identifica l'estructura dels sistemes basats en el cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
+    "description_es": "Identifica la estructura de los sistemas basados en cloud/nube describiendo su tipología y campo de aplicación.",
+    "description_ca": "Identifica l'estructura dels sistemes basats en el cloud/núvol descrivint la seva tipologia i camp d'aplicació.",
     "criterios_es": [
-      "a) Se han identificado los diferentes niveles de la cloud /nube.",
-      "b) Se han identificado las principales funciones de la cloud /nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros).",
-      "c) Se ha descrito el concepto de edge computing y su relación con la cloud/ nube.",
+      "a) Se han identificado los diferentes niveles de la cloud/nube.",
+      "b) Se han identificado las principales funciones de la cloud/nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros).",
+      "c) Se ha descrito el concepto de edge computing y su relación con la cloud/nube.",
       "d) Se han definido los conceptos de fog y mist y sus zonas de aplicación en el conjunto.",
-      "e) Se han identificado las ventajas que proporciona la utilización de la cloud /nube en los sistemas conectados."
+      "e) Se han identificado las ventajas que proporciona la utilización de la cloud/nube en los sistemas conectados."
     ],
     "criterios_ca": [
-      "a) S'han identificat els diferents nivells de la cloud / del núvol.",
-      "b) S'han identificat les principals funcions de la cloud / del núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres).",
-      "c) S'ha descrit el concepte d'edge computing i la seua relació amb la cloud / el núvol.",
-      "d) S'han definit els conceptes de fog i mist i les seues zones d'aplicació en el conjunt.",
-      "e) S'han identificat els avantatges que proporciona la utilització de la cloud / del núvol en els sistemes connectats."
+      "a) S'han identificat els diferents nivells del cloud/núvol.",
+      "b) S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres).",
+      "c) S'ha descrit el concepte d'edge computing i la seva relació amb el cloud/núvol.",
+      "d) S'han definit els conceptes de fog i mist i les seves zones d'aplicació en el conjunt.",
+      "e) S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
     ]
   },
   {
@@ -1243,7 +1243,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "description_ca": "Compara els sistemes de producció/prestació de serveis digitalitzats amb els sistemes clàssics identificant les millores introduïdes.",
     "criterios_es": [
       "a) Se han identificado las tecnologías habilitadoras (THD) actuales que definen un sistema digitalizado.",
-      "b) Se han descrito las características y aplicaciones del IoT, IA (Inteligencia Artificial), Big Data, tecnología 5G, la robótica colaborativa, Blockchain , Ciberseguridad, fabricación aditiva, realidad virtual, gemelos digitales, entre otras.",
+      "b) Se han descrito las características y aplicaciones del IoT, IA (Inteligencia Artificial), Big Data, tecnología 5G, la robótica colaborativa, Blockchain, Ciberseguridad, fabricación aditiva, realidad virtual, gemelos digitales, entre otras.",
       "c) Se ha descrito la contribución de las THD a la mejora de la productividad y la eficiencia de los sistemas productivos o de prestación de servicios.",
       "d) Se ha relacionado la alineación entre las unidades funcionales de las empresas que conforman el sistema y el objetivo del mismo.",
       "e) Se ha relacionado la implantación de las tecnologías habilitadoras (sensórica, tratamiento de datos, automatización y comunicaciones, entre otras) con la reducción de costes y la mejora de la competitividad.",
@@ -1253,10 +1253,10 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han identificat les tecnologies habilitadores (THD) actuals que defineixen un sistema digitalitzat.",
-      "b) S'han descrit les característiques i les aplicacions de l'IoT, la IA (intel·ligència artificial), el Big Data, la tecnologia 5G, la robòtica col·laborativa, el blockchain, la ciberseguretat, la fabricació additiva, la realitat virtual i els bessons digitals, entre d'altres.",
+      "b) S'han descrit les característiques i aplicacions de l'IoT, la IA (Intel·ligència Artificial), el Big Data, la tecnologia 5G, la robòtica col·laborativa, el Blockchain, la Ciberseguretat, la fabricació additiva, la realitat virtual, els bessons digitals, entre altres.",
       "c) S'ha descrit la contribució de les THD a la millora de la productivitat i l'eficiència dels sistemes productius o de prestació de serveis.",
       "d) S'ha relacionat l'alineació entre les unitats funcionals de les empreses que conformen el sistema i el seu objectiu.",
-      "e) S'ha relacionat la implantació de les tecnologies habilitadores (sensòrica, tractament de dades, automatització i comunicacions, entre d'altres) amb la reducció de costos i la millora de la competitivitat.",
+      "e) S'ha relacionat la implantació de les tecnologies habilitadores (sensòrica, tractament de dades, automatització i comunicacions, entre altres) amb la reducció de costos i la millora de la competitivitat.",
       "f) S'han relacionat les tecnologies disruptives amb aplicacions concretes en els sectors productius.",
       "g) S'han definit els sistemes d'emmagatzematge de dades no convencionals i l'accés a aquests des de cada unitat.",
       "h) S'han descrit les millores produïdes en el sistema i en cadascuna de les seves etapes."
@@ -1269,9 +1269,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Digitalització aplicada als sectors productius",
     "moduleCode": "1664",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Elabora un pla de transformació d'una empresa clàssica del sector en el qual s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
+    "description": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis que cal introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
     "description_es": "Elabora un plan de transformación de una empresa clásica del sector en el que se enmarca el título, basada en una EL, al concepto 4.0, determinando los cambios a introducir en las principales fases del sistema e indicando como afectaría a los recursos humanos.",
-    "description_ca": "Elabora un pla de transformació d'una empresa clàssica del sector en el qual s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
+    "description_ca": "Elabora un pla de transformació d'una empresa clàssica del sector en què s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis que cal introduir en les principals fases del sistema i indicant com afectaria els recursos humans.",
     "criterios_es": [
       "a) Se ha definido a nivel de bloques el diagrama de funcionamiento de la empresa clásica.",
       "b) Se han identificado las etapas susceptibles de ser digitalizadas.",
@@ -1283,13 +1283,13 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "h) Se ha elaborado un documento con la secuencia del plan de transformación y los recursos empleados."
     ],
     "criterios_ca": [
-      "a) S'ha definit a nivell de blocs el diagrama de funcionament de l'empresa clàssica.",
+      "a) S'ha definit en blocs el diagrama de funcionament de l'empresa clàssica.",
       "b) S'han identificat les etapes susceptibles de ser digitalitzades.",
       "c) S'han definit les tecnologies implicades en cadascuna de les etapes.",
       "d) S'ha establert la connexió de les etapes digitalitzades amb la resta del sistema.",
       "e) S'ha elaborat un diagrama de blocs del sistema digitalitzat.",
       "f) S'ha elaborat un informe de viabilitat i de les millores introduïdes.",
-      "g) S'ha analitzat la millora en la producció i gestió de residus, entre d'altres.",
+      "g) S'ha analitzat la millora en la producció i la gestió de residus, entre altres.",
       "h) S'ha elaborat un document amb la seqüència del pla de transformació i els recursos emprats."
     ]
   },
@@ -1311,7 +1311,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "criterios_ca": [
       "a) S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació i analitzant els seus requeriments actuals per al perfil professional.",
       "b) S'han comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
-      "c) S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com sobre les competències personals i socials més rellevants per al sector identificant la pròpia zona de desenvolupament proper."
+      "c) S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com sobre les competències personals i socials més rellevants per al sector identificant la nostra zona de desenvolupament proper."
     ]
   },
   {
@@ -1321,9 +1321,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Adquireix les competències necessàries per a l'exercici de les funcions de nivell bàsic en prevenció de riscos laborals.",
+    "description": "Adquireix les competències necessàries per a l'acompliment de les funcions de nivell bàsic en Prevenció de Riscos Laborals.",
     "description_es": "Adquiere las competencias necesarias para el desempeño de las funciones de nivel básico en Prevención de Riesgos Laborales.",
-    "description_ca": "Adquireix les competències necessàries per a l'exercici de les funcions de nivell bàsic en prevenció de riscos laborals.",
+    "description_ca": "Adquireix les competències necessàries per a l'acompliment de les funcions de nivell bàsic en Prevenció de Riscos Laborals.",
     "criterios_es": [
       "a) Se ha valorado la importancia de la cultura preventiva en todos los ámbitos actividades de la empresa u organismo equiparado relacionado las condiciones laborales con la salud de la persona trabajadora identificando y clasificando los factores de riesgo en la actividad y los daños derivados de los mismos, especialmente las situaciones de riesgo más habituales en los entornos de trabajo del sector profesional relacionado con el título.",
       "b) Se han clasificado y descrito los tipos de daños profesionales, con especial referencia a accidentes de trabajo y enfermedades profesionales, relacionados con el perfil profesional del título.",
@@ -1336,8 +1336,8 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "i) Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín."
     ],
     "criterios_ca": [
-      "a) S'ha valorat la importància de la cultura preventiva en tots els àmbits i activitats de l'empresa o organisme equiparat, relacionant les condicions laborals amb la salut de la persona treballadora, identificant i classificant els factors de risc en l'activitat i els danys que se'n deriven, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
-      "b) S'han classificat i descrit els tipus de danys professionals, amb una referència especial a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
+      "a) S'ha valorat la importància de la cultura preventiva en tots els àmbits i activitats de l'empresa o organisme equiparat, relacionant les condicions laborals amb la salut de la persona treballadora, identificant i classificant els factors de risc en l'activitat i els danys derivats d'aquests, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+      "b) S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
       "c) S'ha determinat l'avaluació de riscos a l'empresa o organisme equiparat i s'han definit les tècniques de prevenció i de protecció que s'han d'aplicar per evitar els danys en el seu origen i minimitzar-ne les conseqüències.",
       "d) S'han analitzat els protocols d'actuació en cas d'emergència.",
       "e) S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
@@ -1354,9 +1354,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Analitza les seues condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+    "description": "Analitza les seves condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
     "description_es": "Analiza sus condiciones laborales como persona trabajadora por cuenta ajena identificándolas en los principales tipos de cambios y vicisitudes relevantes que se pueden presentar en la relación laboral en la normativa laboral y especialmente en el convenio colectivo del sector.",
-    "description_ca": "Analitza les seues condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+    "description_ca": "Analitza les seves condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
     "criterios_es": [
       "a) Se han analizado los derechos y obligaciones derivados de la relación laboral, así como las condiciones de trabajo pactadas en un convenio colectivo aplicable al sector profesional relacionado con el título.",
       "b) Se han comparado las principales modalidades de contratación, localizando los diferentes modelos en las fuentes oficiales.",
@@ -1372,7 +1372,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "c) S'han identificat les característiques definitòries dels nous entorns d'organització del treball i els drets que comporta.",
       "d) S'han identificat els diferents components del rebut de salari.",
       "e) S'han identificat els recursos laborals existents davant de les diferents vicissituds que es poden produir en la relació laboral.",
-      "f) S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida de la ciutadania.",
+      "f) S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
       "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
     ]
   },
@@ -1383,9 +1383,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
+    "description": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
     "description_es": "Analiza y evalúa su potencial profesional y sus intereses para guiarse en el proceso de autoorientación y elabora una hoja de ruta para la inserción profesional en base al análisis de las competencias, intereses y destrezas personales.",
-    "description_ca": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
+    "description_ca": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
     "criterios_es": [
       "a) Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
       "b) Se han analizado las cualidades y competencias personales afines a la actividad profesional relacionada con el perfil del título.",
@@ -1420,9 +1420,9 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGM_ESTETICA",
-    "description": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
+    "description": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seva identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
     "description_es": "Aplica las estrategias para el aprendizaje autónomo reconociendo su valor profesionalizador, diseñando y optimizando su propio entorno de aprendizaje haciendo uso de las tecnologías digitales como herramientas de aprendizaje autónomo, siendo coherente con su identidad digital y sus propios objetivos profesionales planteados en su plan de desarrollo individual.",
-    "description_ca": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
+    "description_ca": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seva identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
     "criterios_es": [
       "a) Se ha tomado conciencia de la responsabilidad individual en el desarrollo profesional valorando la actitud de aprendizaje permanente para el desarrollo de propias y nuevas competencias.",
       "b) Se ha identificado la empleabilidad como capacidad de adaptación al entorno laboral.",
@@ -1470,7 +1470,7 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     "criterios_ca": [
       "a) S'ha situat el missatge en el seu context per mitjà de l'anàlisi de les seves característiques textuals i contextuals.",
       "b) S'ha identificat el fil argumental de missatges orals i s'han determinat els rols que hi apareixen.",
-      "c) S'ha reconegut la finalitat del missatge, tant si es tracta d'un missatge directe o telefònic com en qualsevol altre mitjà auditiu.",
+      "c) S'ha reconegut la finalitat del missatge, ja es tracti d'un missatge directe, telefònic o en qualsevol altre mitjà auditiu.",
       "d) S'ha extret informació específica continguda en discursos orals, en llengua estàndard, relacionats amb la vida social, professional o acadèmica.",
       "e) S'han seqüenciat els elements constituents del missatge.",
       "f) S'han identificat i resumit amb claredat les idees principals d'un discurs sobre temes coneguts, transmès pels mitjans de comunicació i emès en llengua estàndard.",
@@ -1539,17 +1539,17 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
     ],
     "criterios_ca": [
       "a) S'han determinat els registres més adequats per a l'emissió del missatge.",
-      "b) S'ha comunicat utilitzant fórmules, nexos d'unió, marcadors discursius i estratègies d'interacció d'acord amb la situació de comunicació.",
+      "b) S'ha comunicat utilitzant fórmules, nexes d'unió, marcadors discursius i estratègies d'interacció d'acord amb la situació de comunicació.",
       "c) S'han descrit fets breus i imprevistos relacionats amb la seva professió.",
       "d) S'ha utilitzat correctament la terminologia de la professió.",
       "e) S'han expressat sentiments, idees o opinions.",
       "f) S'han enumerat les activitats pròpies de la tasca professional.",
       "g) S'ha descrit i seqüenciat un procés de treball de la seva competència.",
-      "h) S'ha justificat l'acceptació o no de propostes realitzades fent ús de normes de cortesia i de maneres apropiades.",
-      "i) S'ha intercanviat, amb una fluïdesa relativa, informació específica i detallada utilitzant frases d'estructura senzilla i diferents suports telemàtics.",
+      "h) S'ha justificat l'acceptació o no de propostes fetes fent ús de normes de cortesia i de maneres apropiades.",
+      "i) S'ha intercanviat, amb relativa fluïdesa, informació específica i detallada utilitzant frases d'estructura senzilla i diferents suports telemàtics.",
       "j) S'han realitzat, de manera clara, presentacions breus i preparades sobre un tema dins de la seva especialitat, fent ús dels protocols adequats.",
       "k) S'ha comunicat espontàniament adoptant un nivell de formalitat adequat a les circumstàncies.",
-      "l) S'han respost preguntes relatives a la seva vida socioprofessional, incloses les pròpies d'una entrevista de feina.",
+      "l) S'han respost preguntes relatives a la seva vida socioprofessional, incloses les pròpies d'una entrevista de treball.",
       "m) S'ha sol·licitat la reformulació del discurs o l'aclariment de part d'aquest quan s'ha considerat necessari per a una millor comprensió."
     ]
   },
@@ -1576,16 +1576,16 @@ export const CFGM_ESTETICA_RAS_DATA: CfgmRaData[] = [
       "j) Se ha solicitado, de forma escrita, información referente a aspectos relacionados con su campo profesional (página web y correo electrónico, entre otros)."
     ],
     "criterios_ca": [
-      "a) S'han seleccionat les estratègies, estructures, vocabulari i convencions més adequades per al tipus de text que s'ha de crear (fax, nota, carta o correu electrònic, entre d'altres).",
+      "a) S'han seleccionat les estratègies, estructures, vocabulari i convencions més adequades per al tipus de text que s'ha de crear (fax, nota, carta o correu electrònic, entre altres).",
       "b) S'han redactat textos breus relacionats amb aspectes quotidians i/o professionals.",
       "c) S'ha organitzat la informació de manera coherent i cohesionada.",
       "d) S'han realitzat resums de textos relacionats amb el seu entorn professional, identificant-ne les idees principals.",
       "e) S'ha emplenat documentació específica del seu camp professional, aplicant les fórmules establertes i el vocabulari específic.",
-      "f) S'ha completat un text donat amb suports visuals i claus lingüístiques aportades.",
+      "f) S'ha emplenat un text donat amb suports visuals i claus lingüístiques aportades.",
       "g) S'han utilitzat les fórmules de cortesia pròpies del document que s'ha d'elaborar.",
       "h) S'ha escrit correspondència formal bàsica en format físic o digital destinada principalment a demanar informació, sol·licitar un servei o dur a terme una reclamació o una altra gestió senzilla, atenent sempre les convencions de la tipologia textual.",
       "i) S'han pres notes i missatges amb informació senzilla sobre aspectes propis de la seva tasca professional.",
-      "j) S'ha sol·licitat, per escrit, informació referent a aspectes relacionats amb el seu camp professional (pàgina web i correu electrònic, entre d'altres)."
+      "j) S'ha sol·licitat, per escrit, informació referent a aspectes relacionats amb el seu camp professional (pàgina web i correu electrònic, entre altres)."
     ]
   },
   {

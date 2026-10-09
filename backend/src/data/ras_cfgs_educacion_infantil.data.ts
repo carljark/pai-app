@@ -955,9 +955,9 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
       "c) Se ha reflexionado sobre las actitudes y aptitudes requeridas actualmente para la actividad profesional relacionadas con el título, así como las competencias personales y sociales más relevantes para el sector identificando nuestra zona de desarrollo próximo."
     ],
     "criterios_ca": [
-      "a) S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació i analitzat els seus requeriments actuals per al perfil professional.",
+      "a) S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació i analitzant els seus requeriments actuals per al perfil professional.",
       "b) S'han comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
-      "c) S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector identificant la nostra zona de desenvolupament proper."
+      "c) S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com sobre les competències personals i socials més rellevants per al sector identificant la nostra zona de desenvolupament proper."
     ]
   },
   {
@@ -967,9 +967,9 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGS_EDUCACION_INFANTIL",
-    "description": "Assoleix les competències necessàries per obtenir el títol de tècnic bàsic en prevenció de riscs laborals.",
-    "description_es": "Alcanza las competencias necesarias para la obtención del título de Técnico Básico en Prevención de Riesgos Laborales.",
-    "description_ca": "Assoleix les competències necessàries per obtenir el títol de tècnic bàsic en prevenció de riscs laborals.",
+    "description": "Adquireix les competències necessàries per a l'acompliment de les funcions de nivell bàsic en Prevenció de Riscos Laborals.",
+    "description_es": "Adquiere las competencias necesarias para el desempeño de las funciones de nivel básico en Prevención de Riesgos Laborales.",
+    "description_ca": "Adquireix les competències necessàries per a l'acompliment de les funcions de nivell bàsic en Prevenció de Riscos Laborals.",
     "criterios_es": [
       "a) Se ha valorado la importancia de la cultura preventiva en todos los ámbitos actividades de la empresa u organismo equiparado relacionado las condiciones laborales con la salud de la persona trabajadora identificando y clasificando los factores de riesgo en la actividad y los daños derivados de los mismos, especialmente las situaciones de riesgo más habituales en los entornos de trabajo del sector profesional relacionado con el título.",
       "b) Se han clasificado y descrito los tipos de daños profesionales, con especial referencia a accidentes de trabajo y enfermedades profesionales, relacionados con el perfil profesional del título.",
@@ -982,15 +982,15 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
       "i) Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín."
     ],
     "criterios_ca": [
-      "a) S'ha valorat la importància de la cultura preventiva en tots els àmbits d'activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats d'aquests, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+      "a) S'ha valorat la importància de la cultura preventiva en tots els àmbits i activitats de l'empresa o organisme equiparat, relacionant les condicions laborals amb la salut de la persona treballadora, identificant i classificant els factors de risc en l'activitat i els danys derivats d'aquests, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
       "b) S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
-      "c) S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per evitar els danys en el seu origen i minimitzar les seves conseqüències.",
+      "c) S'ha determinat l'avaluació de riscos a l'empresa o organisme equiparat i s'han definit les tècniques de prevenció i de protecció que s'han d'aplicar per evitar els danys en el seu origen i minimitzar-ne les conseqüències.",
       "d) S'han analitzat els protocols d'actuació en cas d'emergència.",
       "e) S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
-      "f) S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
-      "g) S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que inclogui la seqüenciació d'actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
-      "h) S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seva importància com a mesura de prevenció.",
-      "i) S'han identificat les tècniques bàsiques de primers auxilis que s'han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús de la farmaciola."
+      "f) S'han classificat les diferents formes de gestió de la prevenció a l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals, i s'han determinat les formes de representació de les persones treballadores a l'empresa o organisme equiparat en matèria de prevenció de riscos.",
+      "g) S'ha valorat la importància de l'existència d'un pla preventiu a l'empresa o organisme equiparat que inclogui la seqüenciació d'actuacions que cal dur a terme en cas d'emergència i s'ha reflexionat sobre el seu contingut.",
+      "h) S'han determinat els requisits i les condicions per a la vigilància de la salut de la persona treballadora i la seva importància com a mesura de prevenció.",
+      "i) S'han identificat les tècniques bàsiques de primers auxilis que s'han d'aplicar al lloc de l'accident davant de diferents tipus de danys i la composició i l'ús de la farmaciola."
     ]
   },
   {
@@ -1000,9 +1000,9 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGS_EDUCACION_INFANTIL",
-    "description": "Analitza les seves condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+    "description": "Analitza les seves condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
     "description_es": "Analiza sus condiciones laborales como persona trabajadora por cuenta ajena identificándolas en los principales tipos de cambios y vicisitudes relevantes que se pueden presentar en la relación laboral en la normativa laboral y especialmente en el convenio colectivo del sector.",
-    "description_ca": "Analitza les seves condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+    "description_ca": "Analitza les seves condicions laborals com a persona treballadora per compte d'altri identificant-les en els principals tipus de canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
     "criterios_es": [
       "a) Se han analizado los derechos y obligaciones derivados de la relación laboral, así como las condiciones de trabajo pactadas en un convenio colectivo aplicable al sector profesional relacionado con el título.",
       "b) Se han comparado las principales modalidades de contratación, localizando los diferentes modelos en las fuentes oficiales.",
@@ -1013,11 +1013,11 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
       "g) Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral."
     ],
     "criterios_ca": [
-      "a) S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
+      "a) S'han analitzat els drets i les obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
       "b) S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
       "c) S'han identificat les característiques definitòries dels nous entorns d'organització del treball i els drets que comporta.",
       "d) S'han identificat els diferents components del rebut de salari.",
-      "e) S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral.",
+      "e) S'han identificat els recursos laborals existents davant de les diferents vicissituds que es poden produir en la relació laboral.",
       "f) S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
       "g) S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
     ]
@@ -1029,9 +1029,9 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
     "module_ca": "Itinerari personal per a l’ocupabilitat I",
     "moduleCode": "1709",
     "tipoNivel": "CFGS_EDUCACION_INFANTIL",
-    "description": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional d'acord amb l'anàlisi de les competències, interessos i destreses personals.",
+    "description": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
     "description_es": "Analiza y evalúa su potencial profesional y sus intereses para guiarse en el proceso de autoorientación y elabora una hoja de ruta para la inserción profesional en base al análisis de las competencias, intereses y destrezas personales.",
-    "description_ca": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional d'acord amb l'anàlisi de les competències, interessos i destreses personals.",
+    "description_ca": "Analitza i avalua el seu potencial professional i els seus interessos per guiar-se en el procés d'autoorientació i elabora un full de ruta per a la inserció professional a partir de l'anàlisi de les competències, interessos i destreses personals.",
     "criterios_es": [
       "a) Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
       "b) Se han analizado las cualidades y competencias personales afines a la actividad profesional relacionada con el perfil del título.",
@@ -1049,10 +1049,10 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
       "a) S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
       "b) S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
       "c) S'han determinat les competències personals i socials amb valor per a l'ocupació.",
-      "d) S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
-      "e) S'ha valorat el concepte d'autoestima en el procés de recerca d'ocupació.",
+      "d) S'han assenyalat les preferències professionals, els interessos i les metes en el marc d'un projecte professional.",
+      "e) S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
       "f) S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
-      "g) S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
+      "g) S'han identificat expectatives de futur per a la inserció professional analitzant competències, interessos i destreses personals.",
       "h) S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
       "i) S'han identificat els itineraris formatius professionals relacionats amb el perfil professional.",
       "j) S'han formulat objectius professionals i s'han determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
@@ -1081,7 +1081,7 @@ export const CFGS_EDUCACION_INFANTIL_RAS_DATA: CfgmRaData[] = [
       "i) Se ha diseñado el entorno de aprendizaje que permite alcanzar el plan de desarrollo individual."
     ],
     "criterios_ca": [
-      "a) S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
+      "a) S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de competències pròpies i noves.",
       "b) S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
       "c) S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
       "d) S'ha posat en pràctica la competència digital per configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",

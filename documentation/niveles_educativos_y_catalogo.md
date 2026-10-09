@@ -48,6 +48,16 @@ Los RA solo están en MongoDB (`GET /api/ras`): el frontend ya no incluye RA de 
 
 El frontend no se toca.
 
+## Módulos transversales compartidos (FP)
+
+Los módulos comunes de la reforma de 2024 tienen **un único texto en todos los ciclos** (tareas 209 y 210):
+- 1664 Digitalización (GM), 1708 Sostenibilidad, 1709 y 1710 Itinerario personal para la empleabilidad I y II, y 0156 Inglés profesional (GM): **RD 659/2023, texto consolidado** (última modificación: 6/5/2025).
+- 1713 Proyecto intermodular (GM): RD 499/2024, anexo II.
+
+El catalán es una traducción canónica en catalán balear, sin formas valencianas («seva», no «seua») ni calcos como «del mateix». La referencia es `ras_cfgm_atencion_dependencia.data.ts`. `ras-atencion-dependencia.test.ts` comprueba que Peluquería, Estética y Educación Infantil tienen el mismo texto (1708, 1709 y 1710 también en grado superior).
+
+Al añadir un ciclo, estos módulos se copian de ahí, no de otra fuente. Si se corrige uno, se corrige en todos los ciclos y en sus mapas.
+
 ## CFGM Atención a Personas en Situación de Dependencia (`CFGM_ATENCION_DEPENDENCIA`)
 
 Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208). No tiene mapa intermodular.

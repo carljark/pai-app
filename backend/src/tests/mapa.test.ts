@@ -16,6 +16,7 @@ import { up as runMigration19 } from '../migrations/19_reload_mapa_infantil_prim
 import { up as runMigration20 } from '../migrations/20_reload_mapa_infantil_segundo_curso';
 import { up as runMigration21 } from '../migrations/21_reload_mapa_infantil_primer_curso_tres_actividades';
 import { up as runMigration27 } from '../migrations/27_reload_cfgm_peluqueria_transversales';
+import { up as runMigration28 } from '../migrations/28_reload_transversales_canonicos';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
@@ -264,6 +265,32 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
 
       const mapa2 = JSON.stringify(await MapaModule.find({ tab: 'CFGM_PELUQUERIA_2' }).lean());
       expect(mapa2).toContain("Planifica l'execució de les activitats");
+    });
+
+    it('debería unificar con la migración 28 los transversales y redirigir las conexiones al 0636 RA5', async () => {
+      await RA.create({ id: 'RA1', moduleCode: '3060', tipoNivel: 'FP_BASICA', description: 'Ajeno' });
+
+      await runMigration28();
+      await runMigration28();
+
+      expect(await RA.countDocuments({ tipoNivel: 'FP_BASICA' })).toBe(1);
+      const ra2 = { moduleCode: '1709', id: 'RA2' };
+      const [infantil, estetica] = await Promise.all([
+        RA.findOne({ ...ra2, tipoNivel: 'CFGS_EDUCACION_INFANTIL' }),
+        RA.findOne({ ...ra2, tipoNivel: 'CFGM_ESTETICA' }),
+      ]);
+      expect(infantil?.description_es).toMatch(/^Adquiere las competencias necesarias/);
+      expect(estetica?.description_ca).toBe(infantil?.description_ca);
+      expect(JSON.stringify(await RA.find({ tipoNivel: 'CFGM_ESTETICA' }).lean())).not.toMatch(/seua|seues|cloud \/nube/);
+
+      const mod0643 = await MapaModule.findOne({ tab: 'CFGM_PELUQUERIA_2', code: '0643' });
+      const ra5 = mod0643!.learningOutcomes.find((lo: any) => lo.code === 'RA5');
+      const conn = ra5.connections.find((c: any) => c.sourceCriteria === '0643-5e');
+      expect(conn.targetRaCode).toBe('RA5');
+      expect(conn.targetRaText_es).toMatch(/^Realiza la decoración de uñas/);
+      expect(JSON.stringify(mod0643)).not.toContain('0636-RA6');
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBeGreaterThan(0);
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL' })).toBeGreaterThan(0);
     });
 
     it('debería recargar con la migración 17 los mapas corregidos y el catalán de Estética', async () => {

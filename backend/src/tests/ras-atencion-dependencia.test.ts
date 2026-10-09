@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA as DATA } from '../data/ras_cfgm_atencion_dependencia.data';
 import { CFGM_PELUQUERIA_RAS_DATA, type CfgmRaData } from '../data/ras_cfgm_peluqueria.data';
+import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
+import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_infantil.data';
 import { findNivel } from '../data/niveles';
 import { describeTargetCourse } from '../controllers/project.controller';
 
@@ -56,12 +58,16 @@ describe('Datos del CFGM Atención a Personas en Situación de Dependencia', () 
     expect(textosEs.filter((t) => CATALAN.test(t))).toEqual([]);
   });
 
-  it('comparte con Peluquería el texto de los módulos transversales (tarea 209)', () => {
-    const textos = (ras: CfgmRaData[]) => ras
-      .filter((ra) => ['1664', '1709', '0156', '1708', '1710', '1713'].includes(ra.moduleCode))
+  it('comparte con los demás ciclos el texto de los módulos transversales (tareas 209 y 210)', () => {
+    const textos = (ras: CfgmRaData[], codes: string[]) => ras
+      .filter((ra) => codes.includes(ra.moduleCode))
       .map(({ moduleCode, id, description_es, description_ca, criterios_es, criterios_ca }) =>
         ({ moduleCode, id, description_es, description_ca, criterios_es, criterios_ca }));
-    expect(textos(CFGM_PELUQUERIA_RAS_DATA)).toEqual(textos(DATA));
+    const cfgm = ['1664', '1709', '0156', '1708', '1710', '1713'];
+    expect(textos(CFGM_PELUQUERIA_RAS_DATA, cfgm)).toEqual(textos(DATA, cfgm));
+    expect(textos(CFGM_ESTETICA_RAS_DATA, cfgm)).toEqual(textos(DATA, ['1664', '1709', '0156']));
+    // Grado superior: 1708, 1709 y 1710 son los mismos módulos que en grado medio.
+    expect(textos(CFGS_EDUCACION_INFANTIL_RAS_DATA, cfgm)).toEqual(textos(DATA, ['1709', '1708', '1710']));
   });
 
   it('usa los nombres oficiales del ciclo en el prompt', () => {

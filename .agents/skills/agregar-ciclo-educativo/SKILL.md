@@ -11,7 +11,7 @@ Esta skill integra en Plappin, de forma sistemática y bilingüe estricta (caste
 | | **Ruta FP** | **Ruta ESO** |
 |---|---|---|
 | Niveles | FP Básica (FPB), CFGM, CFGS | ESO ordinaria (ampliación o actualización) u otra ESO (otra comunidad o decreto) |
-| Unidad curricular | RA con criterios `a), b)…` | CE con criterios `1.1, 1.2…` aplicables a uno o varios cursos |
+| Unidad curricular | RA con criterios de evaluación (CE) `a), b)…` | Competencias específicas (CE) con criterios de evaluación (CA) `1.1, 1.2…` aplicables a uno o varios cursos |
 | Agrupación | Módulos (`moduleCode`), ordenados por curso | Materias (`subjectCode`), comunes, de opción u optativas en cada curso |
 | Colección MongoDB | `ras` (modelo `RA`) | `ces` (modelo `CE`) |
 | Terminología del prompt | proyecto intermodular | situación de aprendizaje (LOMLOE) |
@@ -207,6 +207,13 @@ Además de las reglas comunes de la sección 6:
 
 No hay scaffold para la ESO: los archivos se crean a mano siguiendo los de la ESO ordinaria. Detalle de archivos en [checklist_archivos.md](./references/checklist_archivos.md) (sección «Ruta ESO») y documentación de referencia en `documentation/niveles_educativos_y_catalogo.md` y `documentation/mapa_afinidades_eso.md`.
 
+> [!IMPORTANT]
+> **Siglas de la ESO (LOMLOE), distintas de las de FP.** La jerarquía es saberes básicos ➡️ competencias específicas ➡️ criterios de evaluación:
+> - **CE** = competencia específica / competència específica (la categoría superior: «CE1», «CE2»…).
+> - **CA** = criterio de evaluación / criteri d'avaluació («CA 1.1», «CA 2.3»), en castellano y en catalán, como escribe el Decreto 42/2025 en sus dos versiones.
+> - Nunca etiquetes un criterio de la ESO como «CE x.y»: se confunde con la competencia específica. En FP, en cambio, «CE» sí es el criterio de evaluación de un RA.
+> Aplica en datos, interfaz (selector, mapa de afinidades), prompts y documentación.
+
 ### Paso E0: Decidir el caso
 - **Caso A: ampliar o actualizar `ESO_ORDINARIA`.** Solo cambian datos (`backend/src/data/curriculo-eso/`) y se añade una migración nueva. El código y el frontend no se tocan.
 - **Caso B: otra ESO (`ESO_<SUFIJO>`).** El código de la ESO está atado hoy a la constante `ESO_ORDINARIA`, así que primero hay que generalizarlo (Paso E4). Es una tarea grande: proponer el plan con la skill `proponer-cambio` y trabajar en rama `feature/NNN_*` (AGENTS.md §1).
@@ -298,6 +305,7 @@ El frontend debe saber qué niveles usan el currículo de ESO a partir del catá
 El mapa de la ESO no sigue el modelo de la FP: son **fichas de afinidad entre materias, sin actividades** (`documentation/mapa_afinidades_eso.md`).
 - Datos en `backend/src/data/afinidades-eso/afinidades_<nivel>_<curso>.json`, ingeridos por una migración nueva en la colección `AfinidadEso` (patrón de `25_ingest_afinidades_eso`; la 25 no se reejecuta).
 - Pestañas en `mapas` del catálogo con `formato: 'afinidades'` (una por curso); `AFINIDADES_TABS` y `cursoDeTab` las recogen solas.
+- Los criterios se muestran como «CA x.y» en ambos idiomas, nunca «CE x.y».
 - Reglas: cada criterio citado existe en la materia y se imparte en el curso de la ficha (se resuelve por id **y** curso); paridad ES/CA de ámbitos, relaciones, saberes y conceptos; cada materia de cada curso aparece al menos en 3 fichas; las fichas nuevas llevan `origen: "ampliacion"` y sus saberes se contrastan con los saberes básicos del decreto.
 - **Caso B:** `afinidades.controller.ts` resuelve hoy los textos con `tipoNivel: 'ESO_ORDINARIA'`; debe usar el nivel de la pestaña.
 

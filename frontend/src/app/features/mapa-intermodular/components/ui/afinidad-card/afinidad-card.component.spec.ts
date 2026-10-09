@@ -105,7 +105,7 @@ describe('AfinidadCardComponent', () => {
     render(FICHA_DOS, 'BYG');
     const details = el.querySelector('details') as HTMLDetailsElement;
     const summary = details.querySelector('summary') as HTMLElement;
-    expect(summary.textContent?.trim()).toBe('CE 1.1');
+    expect(summary.textContent?.trim()).toBe('CA 1.1');
     expect(text('.afinidad-card__criterio-texto')).toBe('Texto oficial BYG');
     summary.click();
     fixture.detectChanges();
@@ -113,12 +113,14 @@ describe('AfinidadCardComponent', () => {
     layout.language.set('catalan');
     fixture.detectChanges();
     expect(text('.afinidad-card__criterio-texto')).toBe('Text oficial BYG');
+    // CA (criterio de evaluación / criteri d'avaluació) en los dos idiomas, como el decreto; CE es la competencia específica.
+    expect(summary.textContent?.trim()).toBe('CA 1.1');
   });
 
   it('sin criteriosTexto usa los ids con texto vacío', () => {
     render(FICHA_DOS, 'MAT');
     const ids = Array.from(el.querySelectorAll('summary')).map((s) => s.textContent?.trim());
-    expect(ids).toEqual(['CE 2.1', 'CE 2.2', 'CE 1.1']);
+    expect(ids).toEqual(['CA 2.1', 'CA 2.2', 'CA 1.1']);
     const textos = Array.from(el.querySelectorAll('.afinidad-card__criterio-texto')).map((p) =>
       p.textContent?.trim(),
     );

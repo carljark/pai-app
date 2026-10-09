@@ -60,7 +60,7 @@
         <div class="afinidad-card__td" [attr.data-materia]="nombre(m)">
           @for (c of criterios(v, m); track c.id) {
             <details class="afinidad-card__criterio">
-              <summary class="afinidad-card__criterio-id">CE {{ c.id }}</summary>
+              <summary class="afinidad-card__criterio-id">CA {{ c.id }}</summary>
               <p class="afinidad-card__criterio-texto">{{ textoCriterio(c) }}</p>
             </details>
           }

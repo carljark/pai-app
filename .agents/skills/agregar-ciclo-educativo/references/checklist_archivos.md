@@ -141,7 +141,10 @@ Generalizar las comparaciones con `ESO_ORDINARIA` para que salgan del catálogo 
 ### 4.5. (Solo con mapa) Mapa de afinidades
 - `backend/src/data/afinidades-eso/*.json`, migración nueva sobre la colección `AfinidadEso` y pestañas `formato: 'afinidades'` en `mapas` del catálogo. El frontend (`AfinidadesEsoFacade`, `AfinidadesEsoViewComponent`, `AfinidadCardComponent`) no cambia.
 
-### 4.6. Tests
+### 4.6. Siglas
+- ESO: **CE** = competencia específica; **CA** = criterio de evaluación («CA 1.1»), en castellano y en catalán, como el Decreto 42/2025. Nunca «CE x.y» para un criterio (en FP, «CE» sí es el criterio de evaluación del RA).
+
+### 4.7. Tests
 - `backend/src/tests/eso.test.ts` (o uno nuevo en el caso B): paridad, tipos de materia, migración idempotente sin tocar el PDC, `GET /api/ces` por curso e idioma y prompt con edad y terminología LOMLOE.
 - `niveles-catalogo.test.ts` y, con mapa, `afinidades-datos.test.ts` y `afinidades.test.ts`.
 - Caso B: specs del frontend que comprueben que el nivel nuevo carga sus CE.

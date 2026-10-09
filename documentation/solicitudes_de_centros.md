@@ -37,6 +37,7 @@ Los ciclos son globales: un ciclo que se incorpora por la solicitud de un centro
 | `CFGS_ACONDICIONAMIENTO_FISICO` | AFD32 |
 | `CFGS_ANIMACION_SOCIODEPORTIVA` | AFD31 |
 | `CFGS_INTEGRACION_SOCIAL` | SSC33 |
+| `CFGS_LABORATORIO_CLINICO` | SAN36 |
 
 Todo ciclo de FP nuevo debe llevar su `codigoCaib`; lo comprueba `backend/src/tests/solicitudes.test.ts`.
 

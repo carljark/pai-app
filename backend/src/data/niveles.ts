@@ -225,6 +225,22 @@ export const NIVELES: readonly NivelEducativo[] = [
     ],
   },
   {
+    id: 'CFGS_LABORATORIO_CLINICO',
+    etapa: 'CFGS',
+    codigoCaib: 'SAN36',
+    comunidad: 'IB',
+    nombre_es: 'CFGS Laboratorio Clínico y Biomédico',
+    nombre_ca: 'CFGS Laboratori clínic i biomèdic',
+    palabrasClave: 'formación profesional sanidad laboratorio clínico biomédico análisis',
+    unidad: 'RA',
+    terminologia: 'proyecto_intermodular',
+    // Módulos de cada curso según FP Illes Balears (matriculados desde 2026-27).
+    cursos: [
+      { curso: '1º', modulos: ['1367', '1368', '1369', '1370', '0179', '1665', '1709'] },
+      { curso: '2º', modulos: ['1371', '1372', '1373', '1374', '1375', '1708', '1710'] },
+    ],
+  },
+  {
     // ESO ordinaria: Decreto 42/2025 (BOIB n.º 103, de 4/8/2025).
     id: 'ESO_ORDINARIA',
     etapa: 'ESO',

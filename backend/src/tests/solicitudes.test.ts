@@ -18,7 +18,7 @@ const enviar = (token: string, body: object) =>
 
 const SOLICITUD = {
   centro: { nombre: 'IES Joan Ramis i Ramis', municipio: 'Maó', web: 'https://iesjoanramis.org' },
-  ciclos: ['SSC33', 'SAN36'],
+  ciclos: ['SSC33', 'SAN34'],
   otros: ['Ciclo inventado'],
   comentario: 'Lo necesitamos para el curso que viene',
   idioma: 'ca',
@@ -49,7 +49,7 @@ describe('Solicitudes de centros', () => {
     const res = await request(app).get('/api/solicitudes/oferta').set('Authorization', `Bearer ${token}`);
     expect(res.status).toBe(200);
     expect(res.body.find((c: any) => c.codigo === 'SSC33').disponible).toBe('CFGS_INTEGRACION_SOCIAL');
-    expect(res.body.find((c: any) => c.codigo === 'SAN36').disponible).toBeNull();
+    expect(res.body.find((c: any) => c.codigo === 'SAN34').disponible).toBeNull();
   });
 
   it('el docente envía una solicitud y la ve en «Mis solicitudes»', async () => {
@@ -60,9 +60,9 @@ describe('Solicitudes de centros', () => {
     expect(res.body.userId).toBe(user._id.toString());
     expect(res.body.idioma).toBe('ca');
     expect(res.body.ciclos.map((c: any) => [c.codigo, c.estado])).toEqual([
-      ['SSC33', 'disponible'], ['SAN36', 'pendiente'], [undefined, 'pendiente'],
+      ['SSC33', 'disponible'], ['SAN34', 'pendiente'], [undefined, 'pendiente'],
     ]);
-    expect(res.body.ciclos[1].nombre_ca).toBe('Laboratori clínic i biomèdic');
+    expect(res.body.ciclos[1].nombre_ca).toBe('Higiene bucodental');
 
     const mias = await request(app).get('/api/solicitudes/mias').set('Authorization', `Bearer ${token}`);
     expect(mias.body).toHaveLength(1);
@@ -174,14 +174,14 @@ describe('Solicitudes de centros', () => {
     const a = await createTestUser('teacher', 'a@test.com');
     const b = await createTestUser('teacher', 'b@test.com');
     const primera = await enviar(a.token, SOLICITUD);
-    await enviar(b.token, { centro: { nombre: 'IES Cap de Llevant' }, ciclos: ['SAN36'], otros: ['ciclo INVENTADO'] });
+    await enviar(b.token, { centro: { nombre: 'IES Cap de Llevant' }, ciclos: ['SAN34'], otros: ['ciclo INVENTADO'] });
     const cerrada = await enviar(b.token, { centro: { nombre: 'Cerrado' }, ciclos: ['IMP31'] });
     await Solicitud.updateOne({ _id: cerrada.body._id }, { status: 'descartada' });
 
     const { solicitudes, ciclosPendientes } = await resumenPendientes();
     expect(solicitudes.map((s) => s.centro.nombre)).toEqual(['IES Joan Ramis i Ramis', 'IES Cap de Llevant']);
     expect(ciclosPendientes.map((c) => [c.codigo ?? c.nombre, c.solicitudes.length])).toEqual([
-      ['SAN36', 2], ['Ciclo inventado', 2],
+      ['SAN34', 2], ['Ciclo inventado', 2],
     ]);
     expect(ciclosPendientes[0]?.solicitudes[0]).toBe(String(primera.body._id));
   });

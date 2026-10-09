@@ -227,6 +227,36 @@ Título de Técnico Superior en Integración Social (SSC33), familia Servicios S
   - 0340 RA2 e) «Se ha planificado actividades apropiadas en los procesos mediación…» (concordancia y falta «de»). En catalán: «S'han planificat activitats… en els processos de mediació…».
   - 0343 RA2 e) «productos de apoyo adecuadas». En catalán, «productes de suport adequats».
 
+## CFGS Laboratorio Clínico y Biomédico (`CFGS_LABORATORIO_CLINICO`)
+
+Título de Técnico Superior en Laboratorio Clínico y Biomédico (SAN36), familia Sanidad. `codigoCaib: 'SAN36'`. Sin mapa intermodular (tarea 219).
+
+### Fuente normativa
+
+- **Módulos y cursos:** ficha del ciclo en FP Illes Balears (<https://www.caib.es/sites/fp/ca/laboratori_clinic_i_biomedic/>), tabla «Matriculats a partir del curs 2026/27».
+  - 1.º: 1367, 1368, 1369, 1370, 0179, 1665 y 1709. En este ciclo, el inglés profesional va en 1.º.
+  - 2.º: 1371, 1372, 1373, 1374, 1375, 1708 y 1710.
+  - No se cargan el módulo optativo ni las horas reservadas al módulo en inglés. FOL (1376), EIE (1377) y FCT (1378) del RD de 2014 ya no se imparten.
+- **Castellano:**
+  - Anexo I del **RD 771/2014** (BOE-A-2014-10068). El RD 500/2024 solo renombra el 1375 «Proyecto de laboratorio clínico y biomédico» como «Proyecto intermodular de laboratorio clínico y biomédico».
+  - Transversales de grado superior (0179, 1665, 1709, 1708 y 1710): ver «Módulos transversales compartidos».
+- **Catalán:**
+  - Currículo autonómico «en fase d'esborrany». El BOE no tiene traducción catalana de este real decreto, y el PDF que publica la CAIB es el texto castellano del BOE.
+  - Traducción propia con el agente `traductor-es-ca` (tres lotes, 524 textos). 37 textos, casi todos del proyecto 1375, reutilizan el catalán ya revisado de otros ciclos.
+  - Nombres de los módulos según la ficha de la CAIB. Se corrige la concordancia del 1374: la CAIB escribe «Tècniques d'anàlisi hematològic» y aquí se usa «hematològica», porque «anàlisi» es femenino en catalán.
+  - El 1375 aparece en la CAIB solo como «Projecte intermodular»; se usa «Projecte intermodular de laboratori clínic i biomèdic», en paralelo al BOE.
+
+### Datos y extracción
+
+- `backend/src/data/ras_cfgs_laboratorio_clinico.data.ts`: 14 módulos y 89 RA (62 RA y 499 criterios sin contar los transversales). Los carga la migración `35_ingest_cfgs_laboratorio_clinico_ras.ts`, reejecutable y limitada a este nivel.
+- Un script temporal extrae los textos del HTML del BOE y comprueba que cada texto castellano aparece literalmente en él (tras normalizar los espacios duros del BOE), que la numeración de RA y letras es consecutiva y que hay paridad ES/CA.
+- **Erratas del BOE (también en el PDF oficial):**
+  - 1371 RA1 j) termina en coma («…uso eficiente de los recursos,»); se cambia por punto.
+  - 1371 RA7 g) no tiene punto final; se añade.
+  - 1370 RA8 c) empieza en minúscula («c) se han descrito…»); se pone mayúscula.
+  - 1373 RA4 empieza con un sustantivo («Aplicación de técnicas de aislamiento…») en vez de un verbo. Se conserva tal cual, también en catalán.
+- Un espacio duro del BOE en 1371 («orina de 24 horas») se normaliza a espacio normal.
+
 ## ESO ordinaria (`ESO_ORDINARIA`)
 
 ### Fuente normativa

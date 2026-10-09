@@ -20,14 +20,11 @@ La lista de la web del centro es de enseñanzas que imparte y puede no coincidir
 | CFGS Acondicionamiento Físico (tarea 214) | `CFGS_ACONDICIONAMIENTO_FISICO` |
 | CFGS Enseñanza y Animación Sociodeportiva (tarea 216) | `CFGS_ANIMACION_SOCIODEPORTIVA` |
 | CFGS Integración Social (tarea 217) | `CFGS_INTEGRACION_SOCIAL` |
+| CFGS Laboratorio Clínico y Biomédico (tarea 219) | `CFGS_LABORATORIO_CLINICO` |
 
 ## Pendientes de incorporar
 
-| Grado | Nombre en catalán (web del centro) | Nombre en castellano (provisional) | `tipoNivel` propuesto |
-|---|---|---|---|
-| CFGS | Laboratori clínic i biomèdic | Laboratorio clínico y biomédico | `CFGS_LABORATORIO_CLINICO` |
-
-Queda **1 ciclo** de grado superior. Se incorpora **sin mapa intermodular**, según la skill `agregar-ciclo-educativo`.
+Ninguno: los ciclos de la web del centro ya están todos en Plappin. Los ciclos de otros centros se piden desde la aplicación («Solicitar centro») y se procesan con la skill `procesar-solicitudes` (`documentation/solicitudes_de_centros.md`).
 
 ## Cambios anunciados para el curso 2026-27
 

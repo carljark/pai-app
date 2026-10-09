@@ -12,6 +12,7 @@ import { up as ingestCuidadosAuxiliaresUp } from '../migrations/31_ingest_cfgm_c
 import { up as ingestAcondicionamientoFisicoUp } from '../migrations/32_ingest_cfgs_acondicionamiento_fisico_ras';
 import { up as ingestAnimacionSociodeportivaUp } from '../migrations/33_ingest_cfgs_animacion_sociodeportiva_ras';
 import { up as ingestIntegracionSocialUp } from '../migrations/34_ingest_cfgs_integracion_social_ras';
+import { up as ingestLaboratorioClinicoUp } from '../migrations/35_ingest_cfgs_laboratorio_clinico_ras';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { RA } from '../models/RA';
 
@@ -207,6 +208,23 @@ describe('Migrations Safety & Idempotency', () => {
     expect(mediacion?.module_ca).toBe('Mediació comunitària');
     expect(mediacion?.description).toBe(mediacion?.description_ca);
     expect(mediacion?.criterios_ca).toHaveLength(mediacion?.criterios_es.length ?? -1);
+  });
+
+  it('Carga los RA del CFGS Laboratorio Clínico y Biomédico sin duplicar ni tocar otros niveles', async () => {
+    await RA.create({ id: 'RA1', moduleCode: '0179', tipoNivel: 'CFGS_INTEGRACION_SOCIAL', description: 'Ajeno' });
+
+    await ingestLaboratorioClinicoUp();
+    await ingestLaboratorioClinicoUp();
+
+    const ras = await RA.find({ tipoNivel: 'CFGS_LABORATORIO_CLINICO' });
+    expect(ras).toHaveLength(89);
+    expect(await RA.countDocuments({ tipoNivel: 'CFGS_INTEGRACION_SOCIAL' })).toBe(1);
+
+    const muestras = ras.find((r) => r.moduleCode === '1367' && r.id === 'RA1');
+    expect(muestras?.module_es).toBe('Gestión de muestras biológicas');
+    expect(muestras?.module_ca).toBe('Gestió de mostres biològiques');
+    expect(muestras?.description).toBe(muestras?.description_ca);
+    expect(muestras?.criterios_ca).toHaveLength(muestras?.criterios_es.length ?? -1);
   });
 
   it('Recarga los RA del CFGM Estética sin duplicar ni tocar otros niveles', async () => {

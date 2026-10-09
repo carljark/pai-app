@@ -17,6 +17,7 @@ import { up as runMigration20 } from '../migrations/20_reload_mapa_infantil_segu
 import { up as runMigration21 } from '../migrations/21_reload_mapa_infantil_primer_curso_tres_actividades';
 import { up as runMigration27 } from '../migrations/27_reload_cfgm_peluqueria_transversales';
 import { up as runMigration28 } from '../migrations/28_reload_transversales_canonicos';
+import { up as runMigration29 } from '../migrations/29_reload_mapa_fpb_catalan';
 import { RA } from '../models/RA';
 
 beforeAll(async () => await connectDB());
@@ -291,6 +292,21 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(JSON.stringify(mod0643)).not.toContain('0636-RA6');
       expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBeGreaterThan(0);
       expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL' })).toBeGreaterThan(0);
+    });
+
+    it('debería recargar con la migración 29 el mapa de FPB sin castellanismos en catalán', async () => {
+      await MapaModule.create({ tab: 'CFGM', order: 0, code: '0633', name_es: 'x', name_ca: 'x', type: 't', color: '#000', icon: 'i' });
+
+      await runMigration29();
+      await runMigration29();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
+      const fpb = await MapaModule.find({ tab: 'FPB' }).lean();
+      expect(fpb).toHaveLength(11);
+      const catalan = JSON.stringify(fpb.flatMap((m: any) => m.learningOutcomes.flatMap((lo: any) =>
+        lo.connections.flatMap((c: any) => [c.justification_ca, ...c.relatedCriteria.map((r: any) => r.criteria_ca)]))));
+      expect(catalan).not.toMatch(/del Itinerari|(^|[^\w'])ací\b|apoyades|Mantener|Favorecer|es entrenan|fácilment/);
+      expect(catalan).toContain("de l'Itinerari per a l'ocupabilitat");
     });
 
     it('debería recargar con la migración 17 los mapas corregidos y el catalán de Estética', async () => {

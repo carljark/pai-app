@@ -46,10 +46,10 @@ export class MapaIntermodularViewComponent {
   private niveles = inject(NivelesService);
 
   headerExpanded = signal(false);
-  /** Módulos y RA se muestran plegados al abrir el mapa; se despliegan al elegir. */
+  /** Los tres pasos se muestran plegados al abrir el mapa; se despliegan al elegir. */
   step1Open = signal(false);
   step2Open = signal(false);
-  step3Open = signal(true);
+  step3Open = signal(false);
 
   isCa = computed(() => this.layout.language() === 'catalan');
   /** La pestaña activa es un mapa de afinidades (ESO) y no de módulos (FP). */
@@ -154,10 +154,11 @@ export class MapaIntermodularViewComponent {
     return selected;
   }
 
-  /** Al entrar en otro curso, módulos y RA vuelven a mostrarse plegados. */
+  /** Al entrar en otro curso, los tres pasos vuelven a mostrarse plegados. */
   setTab(tab: MapaTab) {
     this.facade.setTab(tab);
     this.step1Open.set(false);
     this.step2Open.set(false);
+    this.step3Open.set(false);
   }
 }

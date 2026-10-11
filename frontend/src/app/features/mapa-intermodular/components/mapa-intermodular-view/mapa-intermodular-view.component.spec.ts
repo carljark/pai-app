@@ -704,10 +704,13 @@ describe('MapaIntermodularViewComponent', () => {
   });
 
   it('should toggle accordion steps 1, 2 and 3 and update classes in DOM', () => {
-    // Estado inicial: módulos y RA plegados
+    // Estado inicial: los tres pasos plegados
     expect(component.step1Open()).toBe(false);
     expect(component.step2Open()).toBe(false);
-    expect(component.step3Open()).toBe(true);
+    expect(component.step3Open()).toBe(false);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--3').classList).toContain(
+      'collapsed',
+    );
     expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain(
       'collapsed',
     );
@@ -716,6 +719,7 @@ describe('MapaIntermodularViewComponent', () => {
     );
     component.step1Open.set(true);
     component.step2Open.set(true);
+    component.step3Open.set(true);
     fixture.detectChanges();
 
     const header1 = fixture.nativeElement.querySelector('.mapa-step-header--1') as HTMLElement;
@@ -827,15 +831,17 @@ describe('MapaIntermodularViewComponent', () => {
     vi.useRealTimers();
   });
 
-  it('should collapse modules and RA when entering another course tab', () => {
+  it('should collapse all steps when entering another course tab', () => {
     component.step1Open.set(true);
     component.step2Open.set(true);
+    component.step3Open.set(true);
     component.setTab('CFGM_PELUQUERIA_2');
     fixture.detectChanges();
 
     expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA_2');
     expect(component.step1Open()).toBe(false);
     expect(component.step2Open()).toBe(false);
+    expect(component.step3Open()).toBe(false);
     expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain(
       'collapsed',
     );

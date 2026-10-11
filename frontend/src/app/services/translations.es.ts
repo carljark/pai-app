@@ -152,6 +152,7 @@ export const TRANSLATIONS_ES = {
   selectAllCriteria: 'Seleccionar todos los criterios',
   criteriaShort: 'criterios',
   removeTooltip: 'Quitar',
+  dragToMoveTooltip: 'Arrastra para mover · clic para contraer o desplegar',
   authTitle: 'Plataforma PAI',
   authLoginSubtitle: 'Inicia sesión para continuar',
   authRegisterSubtitle: 'Crea una cuenta',
@@ -298,7 +299,10 @@ export const TRANSLATIONS_ES = {
   solCiclos: 'Ciclos del centro',
   solBuscar: 'Buscar por nombre, familia o código',
   solTodasEtapas: 'Todos los grados',
-  solEtapas: { FPB: 'Grado básico', CFGM: 'Grado medio', CFGS: 'Grado superior' } as Record<string, string>,
+  solEtapas: { FPB: 'Grado básico', CFGM: 'Grado medio', CFGS: 'Grado superior' } as Record<
+    string,
+    string
+  >,
   solSeleccionados: 'ciclos seleccionados',
   solSinResultados: 'Ningún ciclo coincide con la búsqueda.',
   solOtros: 'Otros ciclos (uno por línea)',

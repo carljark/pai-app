@@ -22,6 +22,7 @@ describe('CurriculumSelectorComponent', () => {
     mockTrans = {
       t: signal({
         removeTooltip: 'Quitar',
+        dragToMoveTooltip: 'Arrastra para mover',
         criteriaTitle: 'Criterios de evaluación',
         selectAllCriteria: 'Seleccionar todos los criterios',
         criteriaShort: 'criterios',
@@ -208,6 +209,18 @@ describe('CurriculumSelectorComponent', () => {
     header.click();
     fixture.detectChanges();
     expect(component.isOpen()).toBe(true);
+  });
+
+  it('should keep the cart state when the header click ends a drag', () => {
+    const drag = { wasDragged: () => true } as any;
+    component.toggleCart(drag);
+    expect(component.isOpen()).toBe(true);
+  });
+
+  it('should make the cart draggable from its header', () => {
+    const header = fixture.nativeElement.querySelector('.floating-cart__header') as HTMLElement;
+    expect(header.getAttribute('title')).toBe('Arrastra para mover');
+    expect(fixture.nativeElement.querySelector('.floating-cart__grip')).toBeTruthy();
   });
 
   it('should list matching existing projects and open them in a new window', () => {

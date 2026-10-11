@@ -83,13 +83,19 @@
   color: variables.$color-surface;
   font-weight: bold;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: move;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 15px;
   user-select: none;
+  touch-action: none;
   line-height: 1.4;
+}
+
+.floating-cart__grip {
+  opacity: 0.7;
+  flex-shrink: 0;
 }
 
 .floating-cart__title {

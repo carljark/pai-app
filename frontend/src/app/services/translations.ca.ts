@@ -153,6 +153,7 @@ export const TRANSLATIONS_CA = {
   selectAllCriteria: 'Seleccionar tots els criteris',
   criteriaShort: 'criteris',
   removeTooltip: 'Treure',
+  dragToMoveTooltip: 'Arrossega per moure · clic per plegar o desplegar',
   authTitle: 'Plataforma PAI',
   authLoginSubtitle: 'Inicia sessió per continuar',
   authRegisterSubtitle: 'Crea un compte',
@@ -297,7 +298,10 @@ export const TRANSLATIONS_CA = {
   solCiclos: 'Cicles del centre',
   solBuscar: 'Cerca per nom, família o codi',
   solTodasEtapas: 'Tots els graus',
-  solEtapas: { FPB: 'Grau bàsic', CFGM: 'Grau mitjà', CFGS: 'Grau superior' } as Record<string, string>,
+  solEtapas: { FPB: 'Grau bàsic', CFGM: 'Grau mitjà', CFGS: 'Grau superior' } as Record<
+    string,
+    string
+  >,
   solSeleccionados: 'cicles seleccionats',
   solSinResultados: 'Cap cicle no coincideix amb la cerca.',
   solOtros: 'Altres cicles (un per línia)',

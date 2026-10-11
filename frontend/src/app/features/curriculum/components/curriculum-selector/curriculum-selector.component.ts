@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CurriculumFacade } from '../../services/curriculum.facade';
 import { CriteriosFacade } from '../../services/criterios.facade';
 import { CeCriteriosListComponent } from '../ce-criterios-list/ce-criterios-list.component';
+import { DraggablePanelDirective } from '../../directives/draggable-panel.directive';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { Project } from '../../../projects/models/project.model';
 import { AppFacade } from '../../../../app.facade';
@@ -11,7 +12,7 @@ import { TranslationService } from '../../../../services/translation.service';
 @Component({
   selector: 'app-curriculum-selector',
   standalone: true,
-  imports: [CommonModule, CeCriteriosListComponent],
+  imports: [CommonModule, CeCriteriosListComponent, DraggablePanelDirective],
   templateUrl: './curriculum-selector.component.html',
   styleUrls: ['./curriculum-selector.component.scss'],
 })
@@ -29,6 +30,12 @@ export class CurriculumSelectorComponent {
   generateText = input.required<string>();
   generatingText = input.required<string>();
   generate = output<void>();
+
+  /** Contrae o despliega el carrito, salvo que el clic sea el final de un arrastre. */
+  toggleCart(drag: DraggablePanelDirective): void {
+    if (drag.wasDragged()) return;
+    this.isOpen.set(!this.isOpen());
+  }
 
   openProject(project: Project): void {
     this.appFacade.openProjectInNewWindow(project);

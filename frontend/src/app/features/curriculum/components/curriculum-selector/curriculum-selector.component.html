@@ -37,7 +37,12 @@
 </div>
 
 <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
-<div class="floating-cart">
+<div
+  class="floating-cart"
+  appDraggablePanel=".floating-cart__header"
+  storageKey="plappin.floatingCartPosition"
+  #drag="draggablePanel"
+>
   <!-- Proyectos ya generados con la misma selección: encima de la cabecera para que se vean siempre -->
   @if (projects.matchingProjects().length > 0) {
     <details class="floating-cart__matches">
@@ -66,9 +71,11 @@
     role="button"
     tabindex="0"
     [attr.aria-expanded]="isOpen()"
-    (click)="isOpen.set(!isOpen())"
+    [title]="trans.t().dragToMoveTooltip"
+    (click)="toggleCart(drag)"
     (keydown.enter)="isOpen.set(!isOpen())"
   >
+    <span class="floating-cart__grip" aria-hidden="true">⠿</span>
     <span class="floating-cart__title"
       >{{ title() }} ({{ facade.selectedItemsDetails().length }})</span
     >

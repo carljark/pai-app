@@ -46,8 +46,9 @@ export class MapaIntermodularViewComponent {
   private niveles = inject(NivelesService);
 
   headerExpanded = signal(false);
-  step1Open = signal(true);
-  step2Open = signal(true);
+  /** Módulos y RA se muestran plegados al abrir el mapa; se despliegan al elegir. */
+  step1Open = signal(false);
+  step2Open = signal(false);
   step3Open = signal(true);
 
   isCa = computed(() => this.layout.language() === 'catalan');
@@ -83,6 +84,7 @@ export class MapaIntermodularViewComponent {
 
   onSelectModule(code: string) {
     this.facade.selectModule(code);
+    this.step2Open.set(true);
   }
 
   onSelectRa(raId: string, event?: Event) {

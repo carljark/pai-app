@@ -704,10 +704,19 @@ describe('MapaIntermodularViewComponent', () => {
   });
 
   it('should toggle accordion steps 1, 2 and 3 and update classes in DOM', () => {
-    // Initial state: all 3 steps open
-    expect(component.step1Open()).toBe(true);
-    expect(component.step2Open()).toBe(true);
+    // Estado inicial: módulos y RA plegados
+    expect(component.step1Open()).toBe(false);
+    expect(component.step2Open()).toBe(false);
     expect(component.step3Open()).toBe(true);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain(
+      'collapsed',
+    );
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--2').classList).toContain(
+      'collapsed',
+    );
+    component.step1Open.set(true);
+    component.step2Open.set(true);
+    fixture.detectChanges();
 
     const header1 = fixture.nativeElement.querySelector('.mapa-step-header--1') as HTMLElement;
     const header2 = fixture.nativeElement.querySelector('.mapa-step-header--2') as HTMLElement;
@@ -816,6 +825,12 @@ describe('MapaIntermodularViewComponent', () => {
 
     querySpy.mockRestore();
     vi.useRealTimers();
+  });
+
+  it('should expand the RA step when a module is selected', () => {
+    expect(component.step2Open()).toBe(false);
+    component.onSelectModule('3063');
+    expect(component.step2Open()).toBe(true);
   });
 
   it('should auto-expand step 2 and step 3 when onSelectRa is called', () => {

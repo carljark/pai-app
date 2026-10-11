@@ -29,6 +29,13 @@ El panel flotante «Selección actual» del generador (`app-curriculum-selector`
 - Anclaje inferior derecho en vez de `left`/`top`: evita que al desplegar el carrito su cuerpo quede fuera de la ventana.
 - `localStorage` solo como comodidad por usuario y navegador; no hace falta persistirlo en el backend.
 
+## Ampliación: acordeones desplegados al cambiar de idioma
+
+Al cambiar de idioma, los acordeones de módulos/materias (y los de criterios de evaluación) se plegaban. El `@for` los identificaba por su nombre (`track group.category` y `track item.value ?? item.text`), que cambia con el idioma, así que Angular destruía y recreaba los `<details>` cerrados.
+
+- Los grupos e ítems se identifican ahora por posición (`track $index`): el orden de módulos, materias y RA/CE es el mismo en ambos idiomas, y los `<details>` (y los `app-ce-criterios-list` con su desplegable) se reutilizan actualizando solo los textos.
+- El estado abierto de cada grupo se guarda en un signal (`openGroups`) con clave `nivel|curso|posición`, enlazado con `[open]` y actualizado con el evento `toggle`. Así, al cambiar de nivel o curso los grupos aparecen plegados (y se recuperan al volver), algo que el `track` no puede resolver: Angular recalcula la clave de las vistas vivas con el estado actual, por lo que una clave que dependa del nivel no distingue el antes y el después.
+
 ## Verificación
 
 - Frontend: lint, typecheck y `npm test` (865 tests, umbrales de cobertura cumplidos).

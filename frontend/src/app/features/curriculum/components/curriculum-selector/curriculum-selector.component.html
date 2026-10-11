@@ -1,7 +1,11 @@
 <!-- Lado Izquierdo: Acordeones de Selección -->
 <div class="selection-list">
-  @for (group of facade.groupedItems(); track group.category) {
-    <details class="selection-group">
+  @for (group of facade.groupedItems(); track $index) {
+    <details
+      class="selection-group"
+      [open]="isGroupOpen($index)"
+      (toggle)="onGroupToggle($index, $event)"
+    >
       <summary
         class="selection-group__header"
         [style.background]="facade.getCategoryStyle(group.category).bg"
@@ -12,7 +16,7 @@
         }})
       </summary>
       <div class="selection-group__items">
-        @for (item of group.items; track item.value ?? item.text) {
+        @for (item of group.items; track $index) {
           <label class="selection-item">
             <input
               type="checkbox"

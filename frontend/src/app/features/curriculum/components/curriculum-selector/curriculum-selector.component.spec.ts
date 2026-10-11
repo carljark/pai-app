@@ -48,6 +48,8 @@ describe('CurriculumSelectorComponent', () => {
     };
 
     mockFacade = {
+      tipoNivel: signal('CFGS_X'),
+      curso: signal('1º'),
       groupedItems: signal([
         {
           category: 'Ciencia',
@@ -209,6 +211,59 @@ describe('CurriculumSelectorComponent', () => {
     header.click();
     fixture.detectChanges();
     expect(component.isOpen()).toBe(true);
+  });
+
+  /** Abre o cierra un acordeón como lo haría el usuario (el navegador emite `toggle`). */
+  const setOpen = (details: HTMLDetailsElement, open: boolean) => {
+    details.open = open;
+    details.dispatchEvent(new Event('toggle'));
+    fixture.detectChanges();
+  };
+
+  it('should keep the expanded groups and criteria open when the language changes', () => {
+    const criterios = [{ id: '1.1', text: 'Primero' }];
+    const groupsIn = (category: string, text: string) => [
+      { category, totalItems: 1, items: [{ index: 1, text, value: text, criterios }] },
+    ];
+    (mockFacade.groupedItems as any).set(groupsIn('Matemáticas', 'CE castellano'));
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const group = compiled.querySelector('.selection-group') as HTMLDetailsElement;
+    const criteria = compiled.querySelector('.ce-criterios-list') as HTMLDetailsElement;
+    setOpen(group, true);
+    criteria.open = true;
+
+    (mockFacade.groupedItems as any).set(groupsIn('Matemàtiques', 'CE català'));
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('.selection-group')).toBe(group);
+    expect(group.open).toBe(true);
+    expect(criteria.open).toBe(true);
+    expect(group.textContent).toContain('Matemàtiques');
+    expect(group.textContent).toContain('CE català');
+  });
+
+  it('should collapse the groups when the level changes and remember them per level', () => {
+    const group = fixture.nativeElement.querySelector('.selection-group') as HTMLDetailsElement;
+    setOpen(group, true);
+
+    (mockFacade as any).tipoNivel.set('CFGM_Y');
+    fixture.detectChanges();
+    expect(group.open).toBe(false);
+
+    (mockFacade as any).tipoNivel.set('CFGS_X');
+    fixture.detectChanges();
+    expect(group.open).toBe(true);
+  });
+
+  it('should forget a group when it is collapsed', () => {
+    const group = fixture.nativeElement.querySelector('.selection-group') as HTMLDetailsElement;
+    setOpen(group, true);
+    setOpen(group, false);
+    group.dispatchEvent(new Event('toggle'));
+
+    expect(component.isGroupOpen(0)).toBe(false);
+    expect(group.open).toBe(false);
   });
 
   it('should keep the cart state when the header click ends a drag', () => {

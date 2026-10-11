@@ -154,7 +154,10 @@ export class MapaIntermodularViewComponent {
     return selected;
   }
 
+  /** Al entrar en otro curso, módulos y RA vuelven a mostrarse plegados. */
   setTab(tab: MapaTab) {
     this.facade.setTab(tab);
+    this.step1Open.set(false);
+    this.step2Open.set(false);
   }
 }

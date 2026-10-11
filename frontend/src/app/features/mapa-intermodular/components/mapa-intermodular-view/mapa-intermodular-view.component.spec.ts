@@ -827,6 +827,20 @@ describe('MapaIntermodularViewComponent', () => {
     vi.useRealTimers();
   });
 
+  it('should collapse modules and RA when entering another course tab', () => {
+    component.step1Open.set(true);
+    component.step2Open.set(true);
+    component.setTab('CFGM_PELUQUERIA_2');
+    fixture.detectChanges();
+
+    expect(component.facade.activeTab()).toBe('CFGM_PELUQUERIA_2');
+    expect(component.step1Open()).toBe(false);
+    expect(component.step2Open()).toBe(false);
+    expect(fixture.nativeElement.querySelector('.mapa-step-body--1').classList).toContain(
+      'collapsed',
+    );
+  });
+
   it('should expand the RA step when a module is selected', () => {
     expect(component.step2Open()).toBe(false);
     component.onSelectModule('3063');

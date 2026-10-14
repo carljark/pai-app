@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
+import { CurriculumResolver } from './curriculum-resolver';
 import {
-  collectModuleOptions,
-  collectRaOptions,
   keywordRank,
   matchesKeywords,
   matchesProjectFilters,
   matchesTab,
   parseKeywords,
+  projectCurso,
   projectModules,
   projectRas,
   sortByRelevance,
@@ -90,33 +90,56 @@ describe('history-filter', () => {
     expect(sortByRelevance([inContent, inTitle], [])).toEqual([inContent, inTitle]);
   });
 
-  it('searches every tab when there are keywords', () => {
+  const resolver = new CurriculumResolver({ modules: [], items: [] });
+  const moduleKey = (text: string) => resolver.modulesOf({ ...base, modules: [text] })[0]!.key;
+  const raKey = (text: string) => resolver.itemsOf({ ...base, ras: [text] })[0]!.key;
+  const filters = {
+    tab: 'FP_BASICA',
+    curso: null,
+    onlyMine: false,
+    keywords: [] as string[],
+    module: null as string | null,
+    ra: null as string | null,
+  };
+
+  it('searches every tab and course when there are keywords', () => {
     const eso = { ...base, tipoNivel: 'ESO' } as any;
-    const filters = { tab: 'FP_BASICA', onlyMine: false, keywords: [], module: null, ra: null };
-    expect(matchesProjectFilters(eso, filters)).toBe(false);
-    expect(matchesProjectFilters(eso, { ...filters, keywords: ['barberia'] })).toBe(true);
+    expect(matchesProjectFilters(eso, filters, resolver)).toBe(false);
+    expect(matchesProjectFilters(eso, { ...filters, keywords: ['barberia'] }, resolver)).toBe(true);
+    const segundo = { ...filters, curso: '2º' };
+    expect(matchesProjectFilters(base, segundo, resolver)).toBe(false);
+    expect(matchesProjectFilters(base, { ...segundo, keywords: ['barberia'] }, resolver)).toBe(
+      true,
+    );
   });
 
-  it('matches module, ra and owner filters', () => {
-    const filters = {
-      tab: 'FP_BASICA',
+  it('matches course, module, ra and owner filters', () => {
+    const all = {
+      ...filters,
+      curso: '1º',
       onlyMine: true,
       ownerId: 'u1',
-      keywords: [],
-      module: 'Módulo A',
-      ra: 'RA1',
+      module: moduleKey('módulo a'),
+      ra: raKey('RA1'),
     };
-    expect(matchesProjectFilters(base, filters)).toBe(true);
+    expect(matchesProjectFilters(base, all, resolver)).toBe(true);
 
-    expect(matchesProjectFilters(base, { ...filters, ownerId: 'other' })).toBe(false);
-    expect(matchesProjectFilters(base, { ...filters, module: 'Módulo Z' })).toBe(false);
-    expect(matchesProjectFilters(base, { ...filters, ra: 'RA9' })).toBe(false);
+    expect(matchesProjectFilters(base, { ...all, ownerId: 'other' }, resolver)).toBe(false);
+    expect(matchesProjectFilters(base, { ...all, curso: '2º' }, resolver)).toBe(false);
+    expect(matchesProjectFilters(base, { ...all, module: moduleKey('Módulo Z') }, resolver)).toBe(
+      false,
+    );
+    expect(matchesProjectFilters(base, { ...all, ra: raKey('RA9') }, resolver)).toBe(false);
   });
 
-  it('collects module and ra options', () => {
-    const list = [base, { ...base, _id: '2', modules: ['Módulo C'], ras: ['RA3'] }];
-    expect(collectModuleOptions(list as any)).toEqual(['Módulo A', 'Módulo B', 'Módulo C']);
-    expect(collectRaOptions(list as any, 'Módulo C')).toEqual(['RA3']);
-    expect(collectRaOptions(list as any, null)).toEqual(['RA1', 'RA2', 'RA3']);
+  it('reads the course from the project or its generated content', () => {
+    expect(projectCurso(base)).toBe('1º');
+    const legacy = {
+      ...base,
+      courseLevel: '',
+      generatedContent: { rawText: '', courseLevel: '2º' },
+    };
+    expect(projectCurso(legacy)).toBe('2º');
+    expect(projectCurso({ ...base, courseLevel: '', generatedContent: undefined })).toBe('');
   });
 });

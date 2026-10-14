@@ -7,16 +7,16 @@
         <button
           type="button"
           class="history-view__pill"
-          [class.history-view__pill--active]="!onlyMine()"
-          (click)="onlyMine.set(false)"
+          [class.history-view__pill--active]="!filters.onlyMine()"
+          (click)="filters.onlyMine.set(false)"
         >
           {{ trans.t().historyAllProjects }}
         </button>
         <button
           type="button"
           class="history-view__pill"
-          [class.history-view__pill--active]="onlyMine()"
-          (click)="onlyMine.set(true)"
+          [class.history-view__pill--active]="filters.onlyMine()"
+          (click)="filters.onlyMine.set(true)"
         >
           {{ trans.t().historyMyProjects }}
         </button>
@@ -40,59 +40,25 @@
           class="history-view__search-input"
           [placeholder]="trans.t().historySearchPlaceholder"
           (input)="onSearch($event)"
-          [value]="searchQuery()"
+          [value]="filters.searchQuery()"
         />
       </div>
     </div>
 
-    <div class="history-view__filters">
-      <label class="history-view__filter-label">
-        {{ trans.t().historyFilterModule }}:
-        <app-select
-          size="sm"
-          [options]="moduleSelectOptions()"
-          [value]="moduleFilter() || ''"
-          [placeholder]="trans.t().historyFilterAllModules"
-          (valueChange)="onModuleChange($event)"
-        >
-        </app-select>
-      </label>
-      <label class="history-view__filter-label">
-        {{ trans.t().historyFilterRa }}:
-        <app-select
-          size="sm"
-          [options]="raSelectOptions()"
-          [value]="raFilter() || ''"
-          [placeholder]="trans.t().historyFilterAllRas"
-          (valueChange)="onRaChange($event)"
-        >
-        </app-select>
-      </label>
-      <span class="history-view__results"
-        >{{ filteredProjects().length }} {{ trans.t().historyResultsCount }}</span
-      >
-    </div>
-
-    <label class="history-view__level" [class.history-view__level--searching]="isSearching()">
-      <span class="history-view__level-label">{{ trans.t().historyLevelLabel }}:</span>
-      <app-select
-        class="history-view__level-select"
-        [options]="levelOptions()"
-        [value]="activeTab()"
-        (valueChange)="activeTab.set($event)"
-      >
-      </app-select>
-    </label>
+    <app-history-filters></app-history-filters>
+    <span class="history-view__results"
+      >{{ filters.filteredProjects().length }} {{ trans.t().historyResultsCount }}</span
+    >
     @if (niveles.error()) {
       <p class="history-view__levels-error" role="alert">{{ trans.t().levelsLoadError }}</p>
     }
-    @if (isSearching()) {
+    @if (filters.isSearching()) {
       <p class="history-view__search-scope">{{ trans.t().historySearchAllLevels }}</p>
     }
   </div>
 
   <div class="history-view__list">
-    @for (project of filteredProjects(); track project._id) {
+    @for (project of filters.filteredProjects(); track project._id) {
       <app-history-project-card [project]="project"></app-history-project-card>
     } @empty {
       <div class="history-view__empty">{{ trans.t().noProjectsInSection }}</div>

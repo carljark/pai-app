@@ -1,0 +1,70 @@
+<div class="history-filters" [class.history-filters--searching]="filters.isSearching()">
+  <label class="history-filters__field history-filters__field--level">
+    <span class="history-filters__label">{{ trans.t().historyLevelLabel }}</span>
+    <app-select
+      [options]="filters.levelOptions()"
+      [value]="filters.activeTab()"
+      (valueChange)="filters.setLevel($event)"
+    >
+    </app-select>
+  </label>
+
+  @if (filters.cursoOptions().length > 1) {
+    <div class="history-filters__field">
+      <span class="history-filters__label" id="history-filters-curso">{{
+        trans.t().historyFilterCourse
+      }}</span>
+      <div class="history-filters__segmented" role="group" aria-labelledby="history-filters-curso">
+        <button
+          type="button"
+          class="history-filters__curso"
+          [class.history-filters__curso--active]="!filters.curso()"
+          [attr.aria-pressed]="!filters.curso()"
+          (click)="filters.setCurso(null)"
+        >
+          {{ trans.t().historyFilterAllCourses }}
+        </button>
+        @for (curso of filters.cursoOptions(); track curso) {
+          <button
+            type="button"
+            class="history-filters__curso"
+            [class.history-filters__curso--active]="filters.curso() === curso"
+            [attr.aria-pressed]="filters.curso() === curso"
+            (click)="filters.setCurso(curso)"
+          >
+            {{ cursoLabel(curso) }}
+          </button>
+        }
+      </div>
+    </div>
+  }
+
+  <label class="history-filters__field history-filters__field--wide">
+    <span class="history-filters__label">{{
+      usaRa() ? trans.t().historyFilterModule : trans.t().historyFilterSubject
+    }}</span>
+    <app-select
+      [options]="filters.moduleOptions()"
+      [value]="filters.module() || ''"
+      [placeholder]="
+        usaRa() ? trans.t().historyFilterAllModules : trans.t().historyFilterAllSubjects
+      "
+      (valueChange)="filters.setModule($event)"
+    >
+    </app-select>
+  </label>
+
+  <label class="history-filters__field history-filters__field--wide">
+    <span class="history-filters__label">{{
+      usaRa() ? trans.t().historyFilterRa : trans.t().historyFilterCe
+    }}</span>
+    <app-select
+      [options]="filters.raOptions()"
+      [value]="filters.ra() || ''"
+      [disabled]="!filters.module()"
+      [placeholder]="raPlaceholder()"
+      (valueChange)="filters.setRa($event)"
+    >
+    </app-select>
+  </label>
+</div>

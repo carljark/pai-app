@@ -1,0 +1,62 @@
+{
+  "nivel": "CFGS_ACONDICIONAMIENTO_FISICO",
+  "curso": "1º",
+  "modulos": {
+    "1136": {
+      "nombre_es": "Valoración de la condición física e intervención en accidentes",
+      "nombre_ca": "Valoració de la condició física i intervenció en accidents",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#f87171",
+      "icon": "heart-pulse"
+    },
+    "1148": {
+      "nombre_es": "Fitness en sala de entrenamiento polivalente",
+      "nombre_ca": "Fitnes en sala d'entrenament polivalent",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "atom"
+    },
+    "1149": {
+      "nombre_es": "Actividades básicas de acondicionamiento físico con soporte musical",
+      "nombre_ca": "Activitats bàsiques de condicionament físic amb suport musical",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#c084fc",
+      "icon": "sparkles"
+    },
+    "1151": {
+      "nombre_es": "Acondicionamiento físico en el agua",
+      "nombre_ca": "Condicionament físic a l'aigua",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#34d399",
+      "icon": "waves"
+    },
+    "1665": {
+      "nombre_es": "Digitalización aplicada a los sectores productivos",
+      "nombre_ca": "Digitalització aplicada als sectors productius",
+      "tipo": "comun",
+      "relacion": "digital",
+      "color": "#f87171",
+      "icon": "binary"
+    },
+    "1709": {
+      "nombre_es": "Itinerario personal para la empleabilidad I",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat I",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#4ade80",
+      "icon": "briefcase"
+    },
+    "0017": {
+      "nombre_es": "Habilidades sociales",
+      "nombre_ca": "Habilitats socials",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#fb923c",
+      "icon": "users"
+    }
+  }
+}

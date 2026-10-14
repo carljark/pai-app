@@ -21,9 +21,11 @@ import { up as runMigration29 } from '../migrations/29_reload_mapa_fpb_catalan';
 import { up as runMigration36 } from '../migrations/36_ingest_mapa_cfgm_cuidados_auxiliares_enfermeria';
 import { up as runMigration37 } from '../migrations/37_ingest_mapa_cfgs_integracion_social';
 import { up as runMigration38 } from '../migrations/38_ingest_mapa_cfgs_integracion_social_2';
+import { up as runMigration40 } from '../migrations/40_ingest_mapa_cfgs_acondicionamiento_fisico';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
+import { CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA as AF_RAS } from '../data/ras_cfgs_acondicionamiento_fisico.data';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -548,6 +550,32 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.status).toBe(200);
       expect(res.body.map((m: any) => m.code)).toEqual(['0017', '0020', '0339', '0341', '0343', '0345', '0179', '1708', '1710']);
       expect(res.body[0].name_ca).toBe('Habilitats socials');
+    });
+
+    it('debería cargar con la migración 40 el 1.º de Acondicionamiento Físico sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_INTEGRACION_SOCIAL', order: 0, code: '0337', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration40();
+      await runMigration40();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_INTEGRACION_SOCIAL' })).toBe(1);
+      await expectBidirectionalMap('CFGS_ACONDICIONAMIENTO_FISICO', 7, 314, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = AF_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_ACONDICIONAMIENTO_FISICO');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['0017', '1136', '1148', '1149', '1151', '1665', '1709']);
+      expect(res.body[1].name_ca).toBe('Valoració de la condició física i intervenció en accidents');
     });
   });
 });

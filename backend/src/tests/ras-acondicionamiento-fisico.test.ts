@@ -79,7 +79,9 @@ describe('Datos del CFGS Acondicionamiento Físico', () => {
   it('separa por curso los módulos de FP Illes Balears y usa los nombres oficiales en el prompt', () => {
     const nivel = findNivel('CFGS_ACONDICIONAMIENTO_FISICO');
     expect(nivel?.etapa).toBe('CFGS');
-    expect(nivel?.mapas).toBeUndefined();
+    expect(nivel?.mapas).toEqual([
+      { tab: 'CFGS_ACONDICIONAMIENTO_FISICO', curso: '1º', moduleCode: '1136', raId: '1136_RA1' },
+    ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([7, 7]);
     expect(describeTargetCourse('CFGS_ACONDICIONAMIENTO_FISICO', '2º')).toBe('2º de CFGS Acondicionamiento Físico');
     expect(describeTargetCourse('CFGS_ACONDICIONAMIENTO_FISICO', '1º', 'catalan')).toBe('1º de CFGS Condicionament físic');

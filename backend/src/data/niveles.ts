@@ -192,6 +192,7 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '1º', modulos: ['0017', '1136', '1148', '1149', '1151', '1665', '1709'] },
       { curso: '2º', modulos: ['1150', '1152', '1153', '1154', '0179', '1708', '1710'] },
     ],
+    mapas: [{ tab: 'CFGS_ACONDICIONAMIENTO_FISICO', curso: '1º', moduleCode: '1136', raId: '1136_RA1' }],
   },
   {
     id: 'CFGS_ANIMACION_SOCIODEPORTIVA',

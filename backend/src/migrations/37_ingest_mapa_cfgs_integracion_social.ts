@@ -11,7 +11,8 @@ const FILENAME = 'mapa_cfgs_integracion_social.json';
 
 /**
  * Carga el mapa intermodular del CFGS Integración Social (1º curso),
- * generado con scripts/mapa-intermodular (tarea 224). Solo sustituye su pestaña, así que
+ * generado con scripts/mapa-intermodular. El borrador de la tarea 224 no se llegó a desplegar;
+ * el plan y los textos son de la tarea 226. Solo sustituye su pestaña, así que
  * es seguro reejecutarla.
  */
 export const up = async () => {

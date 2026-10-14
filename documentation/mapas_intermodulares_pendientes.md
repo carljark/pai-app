@@ -19,12 +19,12 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Acondicionamiento Físico | 2.º | `CFGS_ACONDICIONAMIENTO_FISICO` | `CFGS_ACONDICIONAMIENTO_FISICO_2` | `mapa_cfgs_acondicionamiento_fisico_2.json` | 7 | 35 | 248 | 140 | En curso (tarea 227, Gemini): [prompt](../scripts/mapa-intermodular/prompt_cfgs_acondicionamiento_fisico_2.md) |
 | CFGS Enseñanza y Animación Sociodeportiva | 1.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA` | `mapa_cfgs_animacion_sociodeportiva.json` | 8 | 48 | 339 | 192 | Pendiente |
 | CFGS Enseñanza y Animación Sociodeportiva | 2.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA_2` | `mapa_cfgs_animacion_sociodeportiva_2.json` | 8 | 42 | 295 | 168 | Pendiente |
-| CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | En curso (tarea 226, Claude): se rehace el borrador de Gemini (tarea 224), que tenía textos de plantilla |
+| CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | ✅ Hecho (tarea 226, Claude): 145 relaciones, 290 conexiones. El borrador de Gemini (tarea 224) se descartó por tener textos de plantilla |
 | CFGS Integración Social | 2.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL_2` | `mapa_cfgs_integracion_social_2.json` | 9 | 44 | 346 | 176 | ✅ Hecho (tarea 225, Claude): 165 relaciones, 330 conexiones |
 | CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | Pendiente |
 | CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | Pendiente |
 
-Con la tarea 225 quedan 11 pestañas (una de ellas, Integración Social 1.º, en curso con Gemini en la tarea 224), con unas 1.870 relaciones y otras tantas actividades bilingües.
+Quedan 10 pestañas, con unas 1.730 relaciones y otras tantas actividades bilingües (una de ellas, Acondicionamiento Físico 2.º, en curso).
 
 ## Orden sugerido
 

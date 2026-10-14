@@ -1,5 +1,8 @@
 # 224 · Mapa intermodular del CFGS Integración Social (1.º)
 
+> [!WARNING]
+> **No se desplegó.** El mapa de esta tarea superaba las comprobaciones estructurales, pero sus textos estaban generados con plantilla: los 148 desarrollos empezaban igual, 64 títulos estaban cortados y había solo 12 contextos y 6 DUA distintos. Además, el plan emparejaba los criterios por orden alfabético. Lo sustituye la [tarea 226](226_mapa_cfgs_integracion_social_1.md), que rehace el plan y los textos y conserva la configuración, la migración 37 y los tests.
+
 ## Propósito
 
 Siguiendo el plan de elaboración de mapas intermodulares pendientes ([`documentation/mapas_intermodulares_pendientes.md`](../documentation/mapas_intermodulares_pendientes.md)) y las directrices de `scripts/mapa-intermodular/prompt_cfgs_integracion_social_1.md`, se crea el mapa intermodular del primer curso del **CFGS Integración Social** (`CFGS_INTEGRACION_SOCIAL`).

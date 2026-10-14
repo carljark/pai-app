@@ -502,7 +502,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration37();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
-      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL', 7, 296, 1);
+      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL', 7, 290, 1);
       for (const doc of await MapaModule.find({ tab: 'CFGS_INTEGRACION_SOCIAL' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = IS_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;

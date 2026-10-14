@@ -117,6 +117,10 @@ export const TRANSLATIONS_ES = {
   homeFeature3Text: 'Rúbricas por módulo para todo el equipo docente.',
   homeAiTitle: 'La IA propone, tú decides.',
   homeAiText: 'Revisa y valida cada propuesta: tu criterio pedagógico es el que cuenta.',
+  homeCreditsLogoAlt:
+    'Logotipos de la Universitat Rovira i Virgili, la Universitat de les Illes Balears, la Universitat de Lleida y la Universidad de Murcia',
+  homeCreditsText:
+    'Plappin es parte de un proyecto de investigación del Máster Interuniversitario en Tecnología Educativa: e-Learning y Gestión del Conocimiento. Actualmente se encuentra en su fase Beta.',
   homePill1: 'IA Generativa',
   homePill2: 'Exporta a Word',
   homePill3: 'Bilingüe ES / CA',

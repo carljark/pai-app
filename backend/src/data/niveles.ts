@@ -224,6 +224,7 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '1º', modulos: ['0337', '0338', '0340', '0342', '0344', '1665', '1709'] },
       { curso: '2º', modulos: ['0017', '0020', '0339', '0341', '0343', '0345', '0179', '1708', '1710'] },
     ],
+    mapas: [{ tab: 'CFGS_INTEGRACION_SOCIAL', curso: '1º', moduleCode: '0337', raId: '0337_RA1' }],
   },
   {
     id: 'CFGS_LABORATORIO_CLINICO',

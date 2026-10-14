@@ -1,0 +1,62 @@
+{
+  "nivel": "CFGS_INTEGRACION_SOCIAL",
+  "curso": "1º",
+  "modulos": {
+    "0337": {
+      "nombre_es": "Contexto de la intervención social",
+      "nombre_ca": "Context de la intervenció social",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#34d399",
+      "icon": "compass"
+    },
+    "0338": {
+      "nombre_es": "Inserción sociolaboral",
+      "nombre_ca": "Inserció sociolaboral",
+      "tipo": "especifico",
+      "relacion": "empleabilidad",
+      "color": "#fb923c",
+      "icon": "hand"
+    },
+    "0340": {
+      "nombre_es": "Mediación comunitaria",
+      "nombre_ca": "Mediació comunitària",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#a78bfa",
+      "icon": "users"
+    },
+    "0342": {
+      "nombre_es": "Promoción de la autonomía personal",
+      "nombre_ca": "Promoció de l'autonomia personal",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#f472b6",
+      "icon": "heart-pulse"
+    },
+    "0344": {
+      "nombre_es": "Metodología de la intervención social",
+      "nombre_ca": "Metodologia de la intervenció social",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "book"
+    },
+    "1665": {
+      "nombre_es": "Digitalización aplicada a los sectores productivos",
+      "nombre_ca": "Digitalització aplicada als sectors productius",
+      "tipo": "comun",
+      "relacion": "digital",
+      "color": "#f87171",
+      "icon": "binary"
+    },
+    "1709": {
+      "nombre_es": "Itinerario personal para la empleabilidad I",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat I",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#fbbf24",
+      "icon": "briefcase"
+    }
+  }
+}

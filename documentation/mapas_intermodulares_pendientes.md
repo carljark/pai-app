@@ -19,12 +19,12 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Acondicionamiento Físico | 2.º | `CFGS_ACONDICIONAMIENTO_FISICO` | `CFGS_ACONDICIONAMIENTO_FISICO_2` | `mapa_cfgs_acondicionamiento_fisico_2.json` | 7 | 35 | 248 | 140 | Pendiente |
 | CFGS Enseñanza y Animación Sociodeportiva | 1.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA` | `mapa_cfgs_animacion_sociodeportiva.json` | 8 | 48 | 339 | 192 | Pendiente |
 | CFGS Enseñanza y Animación Sociodeportiva | 2.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA_2` | `mapa_cfgs_animacion_sociodeportiva_2.json` | 8 | 42 | 295 | 168 | Pendiente |
-| CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | Pendiente |
+| CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | ✅ Hecho (tarea 224, Gemini): 148 relaciones, 296 conexiones |
 | CFGS Integración Social | 2.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL_2` | `mapa_cfgs_integracion_social_2.json` | 9 | 44 | 346 | 176 | Pendiente |
 | CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | Pendiente |
 | CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | Pendiente |
 
-Quedan 12 pestañas, con unas 2.050 relaciones y otras tantas actividades bilingües.
+Quedan 11 pestañas, con unas 1.900 relaciones y otras tantas actividades bilingües.
 
 ## Orden sugerido
 

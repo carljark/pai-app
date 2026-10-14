@@ -157,7 +157,7 @@ Para añadir un ciclo o curso al mapa:
 2. Crear una migración que sustituya solo esa pestaña (ver `36_ingest_mapa_cfgm_cuidados_auxiliares_enfermeria.ts`).
 3. Añadir la entrada en `mapas` del nivel y actualizar `niveles-catalogo.test.ts` y `mapa.test.ts`.
 
-Ciclos con mapa: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º), CFGM Cuidados Auxiliares de Enfermería, CFGS Educación Infantil (1.º y 2.º) y CFGS Integración Social (2.º). Los pendientes están en [mapas_intermodulares_pendientes.md](mapas_intermodulares_pendientes.md).
+Ciclos con mapa: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º), CFGM Cuidados Auxiliares de Enfermería, CFGS Educación Infantil (1.º y 2.º) y CFGS Integración Social (1.º y 2.º). Los pendientes están en [mapas_intermodulares_pendientes.md](mapas_intermodulares_pendientes.md).
 
 El 1.º de Educación Infantil se rehízo en la tarea 191 (migración 19). Se tomaron las relaciones RA↔RA de los documentos de Drive y se redactó una actividad propia por relación, publicada en los dos RA conectados.
 

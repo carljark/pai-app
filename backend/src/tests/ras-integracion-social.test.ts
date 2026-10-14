@@ -82,6 +82,7 @@ describe('Datos del CFGS Integración Social', () => {
     const nivel = findNivel('CFGS_INTEGRACION_SOCIAL');
     expect(nivel?.etapa).toBe('CFGS');
     expect(nivel?.mapas).toEqual([
+      { tab: 'CFGS_INTEGRACION_SOCIAL', curso: '1º', moduleCode: '0337', raId: '0337_RA1' },
       { tab: 'CFGS_INTEGRACION_SOCIAL_2', curso: '2º', moduleCode: '0017', raId: '0017_RA1' },
     ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([7, 9]);

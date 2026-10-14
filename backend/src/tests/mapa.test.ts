@@ -19,6 +19,7 @@ import { up as runMigration27 } from '../migrations/27_reload_cfgm_peluqueria_tr
 import { up as runMigration28 } from '../migrations/28_reload_transversales_canonicos';
 import { up as runMigration29 } from '../migrations/29_reload_mapa_fpb_catalan';
 import { up as runMigration36 } from '../migrations/36_ingest_mapa_cfgm_cuidados_auxiliares_enfermeria';
+import { up as runMigration37 } from '../migrations/37_ingest_mapa_cfgs_integracion_social';
 import { up as runMigration38 } from '../migrations/38_ingest_mapa_cfgs_integracion_social_2';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
@@ -491,6 +492,36 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.status).toBe(200);
       expect(res.body.map((m: any) => m.code)).toEqual(['CAE1', 'CAE2', 'CAE3', 'CAE4', 'CAE5', 'CAE6', 'CAE7']);
       expect(res.body[1].name_ca).toBe("Tècniques bàsiques d'infermeria");
+    });
+
+    it('debería cargar con la migración 37 el mapa de Integración Social (1º) sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGM', order: 0, code: '0633', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration37();
+      await runMigration37();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
+      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL', 7, 296, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_INTEGRACION_SOCIAL' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = IS_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) {
+            expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+            expect(c.sourceCriteria).toMatch(/^\d{4}-\d[a-z](, \d{4}-\d[a-z])*$/);
+          }
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_INTEGRACION_SOCIAL');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['0337', '0338', '0340', '0342', '0344', '1665', '1709']);
+      expect(res.body[0].name_es).toBe('Contexto de la intervención social');
+      expect(res.body[0].name_ca).toBe('Context de la intervenció social');
     });
 
     it('debería cargar con la migración 38 el 2.º de Integración Social sin tocar otras pestañas', async () => {

@@ -200,7 +200,7 @@ Ciclo de la familia Actividades Físicas y Deportivas (tarea 216). No tiene mapa
 
 ## CFGS Integración Social (`CFGS_INTEGRACION_SOCIAL`)
 
-Título de Técnico Superior en Integración Social (SSC33), familia Servicios Socioculturales y a la Comunidad. Tiene mapa intermodular de 2.º desde la tarea 225 (pestaña `CFGS_INTEGRACION_SOCIAL_2`, 165 relaciones y 330 conexiones); el de 1.º se hace en la tarea 224.
+Título de Técnico Superior en Integración Social (SSC33), familia Servicios Socioculturales y a la Comunidad. Incorporado en la tarea 217. Tiene mapa intermodular de los dos cursos: 1.º (pestaña `CFGS_INTEGRACION_SOCIAL`; plan de relaciones de la tarea 224, con textos redactados de nuevo en la tarea 226) y 2.º (tarea 225, pestaña `CFGS_INTEGRACION_SOCIAL_2`, 165 relaciones y 330 conexiones).
 
 ### Fuente normativa
 

@@ -52,6 +52,7 @@ describe('AppFacade', () => {
       generateProject: vi.fn(),
       deleteProject: vi.fn(),
       retryProject: vi.fn(),
+      cloneProject: vi.fn(),
       currentProjectId: signal(''),
       generatedProject: signal(''),
       contentLanguage: signal('castellano'),
@@ -660,6 +661,42 @@ describe('AppFacade', () => {
       expect(facade.errorMessage()).toBe('Error desconocido');
       expect(facade.showErrorModal()).toBe(true);
       expect(layoutServiceMock.switchView).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('cloneProject', () => {
+    beforeEach(() => {
+      facade = TestBed.inject(AppFacade);
+    });
+
+    it('should clone in the interface language, reload the history and show a toast', () => {
+      projectsFacadeMock.cloneProject.mockReturnValue(of(asProject({ _id: 'copia' })));
+      layoutServiceMock.language.set('catalan');
+      const toastSpy = vi.spyOn(facade, 'showToast').mockImplementation(() => {});
+
+      facade.cloneProject(asProject({ _id: 'orig' }));
+
+      expect(projectsFacadeMock.cloneProject).toHaveBeenCalledWith('orig', 'catalan');
+      expect(projectsFacadeMock.loadHistory).toHaveBeenCalled();
+      expect(toastSpy).toHaveBeenCalledWith(TRANSLATIONS_ES.toastProjectCloned);
+    });
+
+    it('should show the server error, or the generic one, when cloning fails', () => {
+      projectsFacadeMock.cloneProject.mockReturnValue(
+        throwError(() => ({ error: { error: 'Solo se pueden copiar proyectos terminados' } })),
+      );
+      facade.cloneProject(asProject({ _id: 'orig' }));
+      expect(facade.errorTitle()).toBe(TRANSLATIONS_ES.modalCloneError);
+      expect(facade.errorMessage()).toBe('Solo se pueden copiar proyectos terminados');
+      expect(facade.showErrorModal()).toBe(true);
+
+      projectsFacadeMock.cloneProject.mockReturnValue(throwError(() => ({ message: 'Sin red' })));
+      facade.cloneProject(asProject({ _id: 'orig' }));
+      expect(facade.errorMessage()).toBe('Sin red');
+
+      projectsFacadeMock.cloneProject.mockReturnValue(throwError(() => ({})));
+      facade.cloneProject(asProject({ _id: 'orig' }));
+      expect(facade.errorMessage()).toBe('Error desconocido');
     });
   });
 

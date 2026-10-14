@@ -257,6 +257,11 @@ export class ProjectsFacade {
     return this.projectsService.deleteProject(projectId);
   }
 
+  /** Copia un proyecto terminado a nombre del usuario actual. */
+  cloneProject(projectId: string, language: 'castellano' | 'catalan') {
+    return this.projectsService.cloneProject(projectId, language);
+  }
+
   /** Reintenta la generación de un proyecto fallido */
   retryProject(projectId: string) {
     return this.projectsService.retryProject(projectId).pipe(

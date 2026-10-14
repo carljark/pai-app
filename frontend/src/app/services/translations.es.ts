@@ -171,6 +171,10 @@ export const TRANSLATIONS_ES = {
   modalProjectQueuedDesc:
     'Tu proyecto ha sido puesto en la cola de generación. Se está procesando en segundo plano.\n\nPuedes ver su estado desde el botón de notificaciones o el historial.',
   toastProjectQueued: 'Proyecto puesto en cola',
+  toastProjectCloned: 'Proyecto copiado',
+  modalCloneError: 'Error al copiar el proyecto',
+  cloneProject: 'Copiar',
+  cloneProjectTooltip: 'Crear una copia editable a tu nombre',
   modalGenerationError: 'Error al Iniciar Generación',
   modalProjectGenerated: '¡Proyecto Generado!',
   modalDeleteProject: 'Eliminar Proyecto',
@@ -225,6 +229,7 @@ export const TRANSLATIONS_ES = {
 
   // HISTORIAL EXPANDIDO
   historyAllProjects: 'Todos los proyectos del centro',
+  historyLevelLabel: 'Ciclo o nivel',
   historyMyProjects: 'Solo mis proyectos',
   historyAuthorLabel: 'Creado por',
   historyMyProjectBadge: 'Mío',

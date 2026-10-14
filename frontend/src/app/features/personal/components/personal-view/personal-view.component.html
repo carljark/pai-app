@@ -59,24 +59,14 @@
   <div class="filter-bar">
     <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
       <!-- Filtro de Nivel -->
-      <div class="pill-group">
-        <button
-          class="filter-pill"
-          [class.active]="levelFilter() === 'ALL'"
-          (click)="levelFilter.set('ALL')"
-        >
-          {{ trans.t().personalFilterAll }}
-        </button>
-        @for (level of levelFilters(); track level.id) {
-          <button
-            class="filter-pill"
-            [class.active]="levelFilter() === level.id"
-            (click)="levelFilter.set(level.id)"
-          >
-            {{ level.label }}
-          </button>
-        }
-      </div>
+      <app-select
+        class="personal-view__level-select"
+        size="sm"
+        [options]="levelOptions()"
+        [value]="levelFilter()"
+        (valueChange)="levelFilter.set($event)"
+      >
+      </app-select>
 
       <!-- Filtro de Estado -->
       <div class="pill-group">
@@ -262,6 +252,13 @@
           } @else if (project.status === 'borrador' || project.status === 'publicado') {
             <button (click)="appFacade.viewPastProject(project)" class="btn-primary">
               {{ trans.t().openEditor }}
+            </button>
+            <button
+              (click)="appFacade.cloneProject(project)"
+              class="btn-secondary personal-view__clone"
+              [title]="trans.t().cloneProjectTooltip"
+            >
+              {{ trans.t().cloneProject }}
             </button>
           }
           <button

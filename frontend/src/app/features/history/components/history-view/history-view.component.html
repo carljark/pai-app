@@ -73,18 +73,16 @@
       >
     </div>
 
-    <div class="history-view__tabs" [class.history-view__tabs--searching]="isSearching()">
-      @for (tab of tabs(); track tab.id) {
-        <button
-          type="button"
-          class="history-view__tab"
-          [class.history-view__tab--active]="activeTab() === tab.id"
-          (click)="activeTab.set(tab.id)"
-        >
-          {{ tab.label }}
-        </button>
-      }
-    </div>
+    <label class="history-view__level" [class.history-view__level--searching]="isSearching()">
+      <span class="history-view__level-label">{{ trans.t().historyLevelLabel }}:</span>
+      <app-select
+        class="history-view__level-select"
+        [options]="levelOptions()"
+        [value]="activeTab()"
+        (valueChange)="activeTab.set($event)"
+      >
+      </app-select>
+    </label>
     @if (niveles.error()) {
       <p class="history-view__levels-error" role="alert">{{ trans.t().levelsLoadError }}</p>
     }

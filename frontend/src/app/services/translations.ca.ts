@@ -172,6 +172,10 @@ export const TRANSLATIONS_CA = {
   modalProjectQueuedDesc:
     "El teu projecte s'ha posat a la cua de generació. S'està processant en segon pla.\n\nPots veure'n l'estat des del botó de notificacions o l'arxiu.",
   toastProjectQueued: 'Projecte posat a la cua',
+  toastProjectCloned: 'Projecte copiat',
+  modalCloneError: 'Error en copiar el projecte',
+  cloneProject: 'Copiar',
+  cloneProjectTooltip: 'Crear una còpia editable a nom teu',
   modalGenerationError: 'Error al Iniciar la Generació',
   modalProjectGenerated: 'Projecte Generat!',
   modalDeleteProject: 'Eliminar Projecte',
@@ -226,6 +230,7 @@ export const TRANSLATIONS_CA = {
 
   // HISTORIAL EXPANDIT
   historyAllProjects: 'Tots els projectes del centre',
+  historyLevelLabel: 'Cicle o nivell',
   historyMyProjects: 'Només els meus projectes',
   historyAuthorLabel: 'Creat per',
   historyMyProjectBadge: 'Meu',

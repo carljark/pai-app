@@ -58,7 +58,12 @@ describe('HistoryProjectCardComponent', () => {
       providers: [
         {
           provide: AppFacade,
-          useValue: { viewPastProject: vi.fn(), deleteProject: vi.fn(), retryProject: vi.fn() },
+          useValue: {
+            viewPastProject: vi.fn(),
+            deleteProject: vi.fn(),
+            retryProject: vi.fn(),
+            cloneProject: vi.fn(),
+          },
         },
         { provide: ProjectsFacade, useValue: mockProjectsFacade },
         { provide: AuthFacade, useValue: mockAuthFacade },
@@ -70,6 +75,20 @@ describe('HistoryProjectCardComponent', () => {
     component = fixture.componentInstance;
     fixture.componentRef.setInput('project', baseProject);
     fixture.detectChanges();
+  });
+
+  it('should copy finished projects from the Copy button only', () => {
+    const appFacade = TestBed.inject(AppFacade) as any;
+    const cloneBtn = () =>
+      fixture.nativeElement.querySelector('.history-project-card__clone') as HTMLButtonElement;
+    cloneBtn().click();
+    expect(appFacade.cloneProject).toHaveBeenCalledWith(baseProject);
+
+    for (const status of ['en_cola', 'generando', 'error']) {
+      fixture.componentRef.setInput('project', { ...baseProject, status });
+      fixture.detectChanges();
+      expect(cloneBtn()).toBeNull();
+    }
   });
 
   it('should render title, shared badge and participants', () => {

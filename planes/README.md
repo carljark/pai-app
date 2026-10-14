@@ -4,7 +4,7 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
-- **[220 — Clonar proyectos y desplegable de ciclos](220_plan_clonar_proyectos_y_desplegable_de_ciclos.md)** · _Propuesto_  
+- **[220 — Clonar proyectos y desplegable de ciclos](220_plan_clonar_proyectos_y_desplegable_de_ciclos.md)** · _Implementado (tarea 220)_  
   Botón «Copiar» en el historial y en el área personal que crea una copia propia titulada «Copia de …» (contenido, traducciones y archivos); las pestañas y pills de nivel pasan a ser un menú desplegable.
 
 - **[218 — Solicitudes de centros y sus ciclos](218_plan_solicitudes_de_centros.md)** · _Implementado (tarea 218)_  

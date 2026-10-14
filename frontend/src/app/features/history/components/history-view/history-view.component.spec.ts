@@ -138,6 +138,14 @@ describe('HistoryViewComponent', () => {
     expect(text).not.toContain('Barbería clásica');
   });
 
+  const levelSelect = () =>
+    fixture.nativeElement.querySelector('.history-view__level select') as HTMLSelectElement;
+  const chooseLevel = (id: string) => {
+    levelSelect().value = id;
+    levelSelect().dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+  };
+
   it('should search in every tab, show the scope hint and rank title matches first', () => {
     mockProjectsFacade.projectsHistory.set([
       project({
@@ -155,7 +163,7 @@ describe('HistoryViewComponent', () => {
 
     expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['2', '1']);
     const root = fixture.nativeElement as HTMLElement;
-    expect(root.querySelector('.history-view__tabs--searching')).toBeTruthy();
+    expect(root.querySelector('.history-view__level--searching')).toBeTruthy();
     expect(root.querySelector('.history-view__search-scope')?.textContent).toContain(
       'Buscando en todos los niveles',
     );
@@ -192,20 +200,14 @@ describe('HistoryViewComponent', () => {
     expect(text).toContain('resultados');
   });
 
-  it('should switch tab on click', () => {
-    const buttons = fixture.nativeElement.querySelectorAll(
-      '.history-view__tab',
-    ) as NodeListOf<HTMLButtonElement>;
-    buttons[2].click();
-    fixture.detectChanges();
+  it('should switch level from the dropdown', () => {
+    chooseLevel('CFGM_PELUQUERIA');
     expect(component.activeTab()).toBe('CFGM_PELUQUERIA');
+    expect(levelSelect().value).toBe('CFGM_PELUQUERIA');
   });
 
-  it('should show one tab per catalog level, in order and in the active language', () => {
-    const labels = () =>
-      Array.from(fixture.nativeElement.querySelectorAll('.history-view__tab')).map((b: any) =>
-        b.textContent.trim(),
-      );
+  it('should show one option per catalog level, in order and in the active language', () => {
+    const labels = () => Array.from(levelSelect().options).map((o) => o.textContent?.trim());
     expect(labels()).toEqual([
       'CFGB Peluquería y Estética',
       'CFGM Estética y Belleza',
@@ -230,18 +232,16 @@ describe('HistoryViewComponent', () => {
     expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['2', '3']);
   });
 
-  it('should add a tab and list the projects of a level added only to the catalog', () => {
+  it('should add an option and list the projects of a level added only to the catalog', () => {
     loadNivelesMock([...NIVELES_MOCK, NIVEL_FICTICIO]);
     mockProjectsFacade.projectsHistory.set([
       project({ _id: '1', title: 'Proyecto ficticio', tipoNivel: 'CFGS_FICTICIO' }),
       project({ _id: '2', title: 'Proyecto FPB' }),
     ]);
     fixture.detectChanges();
-    const tabs = fixture.nativeElement.querySelectorAll('.history-view__tab');
-    const last = tabs[tabs.length - 1] as HTMLButtonElement;
-    expect(last.textContent?.trim()).toBe('CFGS Animación Ficticia');
-    last.click();
-    fixture.detectChanges();
+    const options = levelSelect().options;
+    expect(options[options.length - 1].textContent?.trim()).toBe('CFGS Animación Ficticia');
+    chooseLevel('CFGS_FICTICIO');
     expect(component.activeTab()).toBe('CFGS_FICTICIO');
     expect(component.filteredProjects().map((p: any) => p.title)).toEqual(['Proyecto ficticio']);
   });

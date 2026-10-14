@@ -23,6 +23,7 @@ describe('PersonalViewComponent', () => {
     viewPastProject: vi.fn(),
     retryProject: vi.fn(),
     deleteProject: vi.fn(),
+    cloneProject: vi.fn(),
   };
 
   const mockProjectsFacade = {
@@ -109,7 +110,15 @@ describe('PersonalViewComponent', () => {
     expect(component.inQueueCount()).toBe(1);
   });
 
-  it('debería filtrar por nivel educativo mediante clicks en el DOM', () => {
+  const levelSelect = () =>
+    fixture.nativeElement.querySelector('.personal-view__level-select select') as HTMLSelectElement;
+  const chooseLevel = (id: string) => {
+    levelSelect().value = id;
+    levelSelect().dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+  };
+
+  it('debería filtrar por nivel educativo desde el desplegable', () => {
     mockProjectsFacade.myProjects.set([
       { _id: '1', title: 'P1 FPB', tipoNivel: 'FP_BASICA' },
       { _id: '2', title: 'P2 CFGM', tipoNivel: 'CFGM_ESTETICA' },
@@ -120,52 +129,19 @@ describe('PersonalViewComponent', () => {
     ]);
     fixture.detectChanges();
 
-    const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Pills en el orden del catálogo: [ALL, FPB, CFGM, CFGM Pel, CFGS, ESO, ESO (PDC), ALL, estados…]
-    const allPill = pills[0];
-    const fpbPill = pills[1];
-    const cfgmPill = pills[2];
-    const cfgmPelPill = pills[3];
-    const cfgsPill = pills[4];
-    const esoOrdinariaPill = pills[5];
-    const esoPill = pills[6];
+    const expectLevel = (id: string, titles: string[]) => {
+      chooseLevel(id);
+      expect(component.levelFilter()).toBe(id);
+      expect(component.filteredMyProjects().map((p) => p.title)).toEqual(titles);
+    };
+    expectLevel('FP_BASICA', ['P1 FPB']);
+    expectLevel('CFGM_ESTETICA', ['P2 CFGM']);
+    expectLevel('CFGM_PELUQUERIA', ['P2b CFGM Pel']);
+    expectLevel('CFGS_EDUCACION_INFANTIL', ['P2c CFGS Inf']);
+    expectLevel('ESO_ORDINARIA', ['P4 ESO ordinaria']);
+    expectLevel('DIVERSIFICACION_CURRICULAR', ['P3 ESO']);
 
-    fpbPill.click();
-    fixture.detectChanges();
-    expect(component.levelFilter()).toBe('FP_BASICA');
-    expect(component.filteredMyProjects().length).toBe(1);
-    expect(component.filteredMyProjects()[0].title).toBe('P1 FPB');
-
-    cfgmPill.click();
-    fixture.detectChanges();
-    expect(component.levelFilter()).toBe('CFGM_ESTETICA');
-    expect(component.filteredMyProjects().length).toBe(1);
-    expect(component.filteredMyProjects()[0].title).toBe('P2 CFGM');
-
-    cfgmPelPill.click();
-    fixture.detectChanges();
-    expect(component.levelFilter()).toBe('CFGM_PELUQUERIA');
-    expect(component.filteredMyProjects().length).toBe(1);
-    expect(component.filteredMyProjects()[0].title).toBe('P2b CFGM Pel');
-
-    cfgsPill.click();
-    fixture.detectChanges();
-    expect(component.levelFilter()).toBe('CFGS_EDUCACION_INFANTIL');
-    expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['P2c CFGS Inf']);
-
-    esoOrdinariaPill.click();
-    fixture.detectChanges();
-    expect(component.levelFilter()).toBe('ESO_ORDINARIA');
-    expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['P4 ESO ordinaria']);
-
-    esoPill.click();
-    fixture.detectChanges();
-    expect(component.levelFilter()).toBe('DIVERSIFICACION_CURRICULAR');
-    expect(component.filteredMyProjects().length).toBe(1);
-    expect(component.filteredMyProjects()[0].title).toBe('P3 ESO');
-
-    allPill.click();
-    fixture.detectChanges();
+    chooseLevel('ALL');
     expect(component.levelFilter()).toBe('ALL');
     expect(component.filteredMyProjects().length).toBe(6);
   });
@@ -177,20 +153,19 @@ describe('PersonalViewComponent', () => {
       { _id: 'p', title: 'FPB', tipoNivel: 'FP_BASICA' },
     ]);
     fixture.detectChanges();
-    const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    const ficticio = pills[7] as HTMLButtonElement;
-    expect(ficticio.textContent?.trim()).toBe('CFGS Animación Ficticia');
-    ficticio.click();
-    fixture.detectChanges();
+    const options = levelSelect().options;
+    expect(options[options.length - 1].textContent?.trim()).toBe('CFGS Animación Ficticia');
+    chooseLevel('CFGS_FICTICIO');
     expect(component.filteredMyProjects().map((p) => p.title)).toEqual(['Ficticio']);
     expect(fixture.nativeElement.textContent).toContain('1º CFGS Animación Ficticia');
   });
 
   it('debería nombrar los filtros de nivel con el catálogo en castellano y catalán', () => {
     const labels = () =>
-      Array.from(fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill'))
-        .slice(1, 7)
-        .map((b: any) => b.textContent.trim());
+      Array.from(levelSelect().options)
+        .slice(1)
+        .map((o) => o.textContent?.trim());
+    expect(levelSelect().options[0].textContent?.trim()).toBe('Todos');
     expect(labels()).toEqual([
       'CFGB Peluquería y Estética',
       'CFGM Estética y Belleza',
@@ -217,11 +192,11 @@ describe('PersonalViewComponent', () => {
     fixture.detectChanges();
 
     const pills = fixture.nativeElement.querySelectorAll('.filter-bar .filter-pill');
-    // Status pills are indexes 7 (ALL), 8 (borrador), 9 (publicado), 10 (error)
-    const borradorPill = pills[8];
-    const publicadoPill = pills[9];
-    const errorPill = pills[10];
-    const allStatusPill = pills[7];
+    // Pills de estado: 0 (ALL), 1 (borrador), 2 (publicado), 3 (error)
+    const borradorPill = pills[1];
+    const publicadoPill = pills[2];
+    const errorPill = pills[3];
+    const allStatusPill = pills[0];
 
     borradorPill.click();
     fixture.detectChanges();
@@ -305,12 +280,14 @@ describe('PersonalViewComponent', () => {
 
     const cardButtons = fixture.nativeElement.querySelectorAll('.card button');
     // Card 1 has Retry, View Error, Delete
-    // Card 2 has Open Editor, Delete
+    // Card 2 has Open Editor, Copy, Delete
     const retryBtn = cardButtons[0];
     const viewErrorBtn = cardButtons[1];
     const deleteBtn1 = cardButtons[2];
     const openEditorBtn = cardButtons[3];
-    const deleteBtn2 = cardButtons[4];
+    const cloneBtn = cardButtons[4];
+    const deleteBtn2 = cardButtons[5];
+    expect(fixture.nativeElement.querySelectorAll('.personal-view__clone').length).toBe(1);
 
     retryBtn.click();
     expect(mockAppFacade.retryProject).toHaveBeenCalled();
@@ -323,6 +300,9 @@ describe('PersonalViewComponent', () => {
 
     openEditorBtn.click();
     expect(mockAppFacade.viewPastProject).toHaveBeenCalled();
+
+    cloneBtn.click();
+    expect(mockAppFacade.cloneProject).toHaveBeenCalledWith(expect.objectContaining({ _id: '2' }));
 
     deleteBtn2.click();
     expect(mockAppFacade.deleteProject).toHaveBeenCalledWith('2');

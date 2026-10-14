@@ -42,10 +42,12 @@ export class HistoryViewComponent {
   moduleFilter = signal<string | null>(null);
   raFilter = signal<string | null>(null);
 
-  /** Una pestaña por nivel del catálogo, en su orden y en el idioma activo. */
-  tabs = computed<{ id: HistoryTabId; label: string }[]>(() => {
+  /** Una opción del desplegable por nivel del catálogo, en su orden y en el idioma activo. */
+  levelOptions = computed<SelectOption[]>(() => {
     const isCa = this.layout.language() === 'catalan';
-    return this.niveles.niveles().map((n) => ({ id: n.id, label: this.niveles.nombre(n, isCa) }));
+    return this.niveles
+      .niveles()
+      .map((n) => ({ value: n.id, label: this.niveles.nombre(n, isCa) }));
   });
 
   moduleOptions = computed(() => collectModuleOptions(this.projects.projectsHistory() || []));

@@ -115,17 +115,24 @@
     color: var(--c-text-muted);
   }
 
-  &__tabs {
+  &__level {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: 10px;
     width: 100%;
     margin-top: 16px;
-    border-bottom: 1px solid var(--c-border);
+    font-weight: 500;
+    color: var(--c-text-muted);
 
-    // Mientras se busca, las pestañas no filtran: se atenúan para indicarlo
+    // Mientras se busca, el nivel no filtra: se atenúa para indicarlo
     &--searching {
       opacity: 0.55;
     }
+  }
+
+  &__level-select {
+    flex: 1;
+    max-width: 420px;
   }
 
   &__levels-error {
@@ -138,29 +145,6 @@
     margin: 8px 0 0;
     font-size: 0.85rem;
     color: var(--c-text-muted);
-  }
-
-  &__tab {
-    padding: 8px 16px;
-    border: none;
-    border-bottom: 2px solid transparent;
-    background: none;
-    color: var(--c-text-muted);
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition:
-      color 0.2s ease,
-      border-color 0.2s ease;
-
-    &:hover {
-      color: var(--c-text);
-    }
-
-    &--active {
-      color: var(--c-primary);
-      border-bottom-color: var(--c-primary);
-    }
   }
 
   &__list {

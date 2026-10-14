@@ -73,6 +73,8 @@ const ProjectSchema = new mongoose.Schema({
   /** Id del proyecto original si llegó por importación (evita duplicarlo al reimportar). */
   importSourceId: { type: String, index: true },
   importedAt: Date,
+  /** Proyecto del que se copió (POST /api/projects/:id/clone). */
+  clonedFrom: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 });

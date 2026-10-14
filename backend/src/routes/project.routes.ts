@@ -4,6 +4,7 @@ import { addCollaborator, removeCollaborator, getEditLock, takeEditLock, leaveEd
 import { listProjectChanges } from '../controllers/project-changes.controller';
 import { exportDocx, importDocx } from '../controllers/docx.controller';
 import { translateProject } from '../controllers/translation.controller';
+import { cloneProject } from '../controllers/project-clone.controller';
 import filesRoutes from './files.routes';
 import { requireApproved, requireAiAccess } from '../middlewares/auth.middleware';
 import { projectEditGuards } from '../middlewares/project-access.middleware';
@@ -29,6 +30,7 @@ router.get('/stream', streamUpdates);
 router.post('/generate', requireApproved, requireAiAccess, generateProject);
 router.post('/rewrite', requireApproved, requireAiAccess, ...projectEditGuards, rewriteSection);
 router.post('/:id/retry', requireApproved, requireAiAccess, retryProject);
+router.post('/:id/clone', requireApproved, cloneProject);
 router.post('/:id/translate', requireApproved, requireAiAccess, ...projectEditGuards, translateProject);
 router.post('/:id/collaborators', requireApproved, addCollaborator);
 router.delete('/:id/collaborators/:userId', requireApproved, removeCollaborator);

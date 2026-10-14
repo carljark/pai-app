@@ -8,10 +8,10 @@ import { TranslationService } from '../../../../services/translation.service';
 import { LayoutService } from '../../../../services/layout.service';
 import { NivelesService } from '../../../../services/niveles.service';
 import {
-  HistoryTab,
-  Project,
-  normalizeTipoNivel,
-} from '../../../projects/models/project.model';
+  AppSelectComponent,
+  SelectOption,
+} from '../../../../components/app-select/app-select.component';
+import { HistoryTab, Project, normalizeTipoNivel } from '../../../projects/models/project.model';
 
 /** Coincidencia de la búsqueda con título, módulos o estado del proyecto. */
 function matchesSearch(p: Project, q: string): boolean {
@@ -28,7 +28,7 @@ function matchesSearch(p: Project, q: string): boolean {
 @Component({
   selector: 'app-personal-view',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, AppSelectComponent],
   styleUrl: './personal-view.component.scss',
   templateUrl: './personal-view.component.html',
 })
@@ -40,10 +40,13 @@ export class PersonalViewComponent implements OnInit {
   layout = inject(LayoutService);
   niveles = inject(NivelesService);
 
-  /** Filtros de nivel (pills): uno por nivel del catálogo, en el idioma activo. */
-  levelFilters = computed(() => {
+  /** Opciones del desplegable de nivel: «Todos» y un nivel del catálogo por opción. */
+  levelOptions = computed<SelectOption[]>(() => {
     const isCa = this.layout.language() === 'catalan';
-    return this.niveles.niveles().map((n) => ({ id: n.id, label: this.niveles.nombre(n, isCa) }));
+    const levels = this.niveles
+      .niveles()
+      .map((n) => ({ value: n.id, label: this.niveles.nombre(n, isCa) }));
+    return [{ value: 'ALL', label: this.trans.t().personalFilterAll }, ...levels];
   });
   levelFilter = signal<'ALL' | HistoryTab>('ALL');
   statusFilter = signal<'ALL' | 'borrador' | 'publicado' | 'error'>('ALL');

@@ -179,6 +179,17 @@ describe('ProjectsFacade', () => {
     });
   });
 
+  it('should clone a project in the requested language', () => {
+    let cloned: any;
+    facade.cloneProject('123', 'catalan').subscribe((p) => (cloned = p));
+    const req = httpMock.expectOne('/api/projects/123/clone');
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual({ language: 'catalan' });
+    req.flush(createMockProject({ _id: '456', title: 'Còpia de Huerto' }));
+    expect(cloned._id).toBe('456');
+    expect(cloned.title).toBe('Còpia de Huerto');
+  });
+
   it('should generate project (FP_BASICA)', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
     mockCurriculumFacade.curso.mockReturnValue('2º');

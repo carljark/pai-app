@@ -84,6 +84,13 @@ export class ProjectsService {
     return this.http.delete<void>(`${this.apiUrl}/${projectId}`);
   }
 
+  /** Copia un proyecto terminado a nombre del usuario; `language` decide «Copia de»/«Còpia de». */
+  cloneProject(projectId: string, language: 'castellano' | 'catalan'): Observable<Project> {
+    return this.http
+      .post<ProjectDto>(`${this.apiUrl}/${projectId}/clone`, { language })
+      .pipe(map(fromProjectDto));
+  }
+
   retryProject(projectId: string): Observable<RetryProjectResponse> {
     return this.http
       .post<RetryProjectResponseDto>(`${this.apiUrl}/${projectId}/retry`, {})

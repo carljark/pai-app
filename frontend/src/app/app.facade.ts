@@ -295,6 +295,21 @@ export class AppFacade {
     this.showConfirmModal.set(true);
   }
 
+  /** Copia el proyecto a nombre del usuario y recarga el historial para mostrar la copia. */
+  cloneProject(project: Project): void {
+    this.projects.cloneProject(project._id, this.layout.language()).subscribe({
+      next: () => {
+        this.projects.loadHistory();
+        this.showToast(this.trans.t().toastProjectCloned);
+      },
+      error: (err) => {
+        this.errorTitle.set(this.trans.t().modalCloneError);
+        this.errorMessage.set(err.error?.error || err.message || 'Error desconocido');
+        this.showErrorModal.set(true);
+      },
+    });
+  }
+
   retryProject(project: Project): void {
     if (project?._id) this.shownCompletedProjectIds.delete(project._id);
     this.projects.retryProject(project._id).subscribe({

@@ -92,3 +92,7 @@
 .search-input:focus {
   border-color: var(--c-primary);
 }
+
+.personal-view__level-select {
+  min-width: 220px;
+}

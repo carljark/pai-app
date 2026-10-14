@@ -80,6 +80,13 @@
       <button (click)="appFacade.viewPastProject(project())" class="btn-primary">
         {{ trans.t().openEditor }}
       </button>
+      <button
+        (click)="appFacade.cloneProject(project())"
+        class="btn-secondary history-project-card__clone"
+        [title]="trans.t().cloneProjectTooltip"
+      >
+        {{ trans.t().cloneProject }}
+      </button>
     }
     @if (canManage()) {
       <button

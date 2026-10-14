@@ -1,7 +1,7 @@
 # Plan 220: Clonar proyectos y desplegable de ciclos
 
 > **Fecha:** 9 de octubre de 2026
-> **Estado:** Propuesto
+> **Estado:** Implementado (tarea 220)
 > **Partes afectadas:** backend / frontend / despliegue
 
 ---
@@ -45,11 +45,11 @@ Permitir copiar un proyecto existente desde el historial de proyectos y desde el
 | `documentation/` | Nota sobre la clonación (`clonar_proyectos.md`). | docs |
 
 ## 5. Tareas
-- [ ] Backend: modelo, servicio, controlador, ruta y tests.
-- [ ] Frontend: servicio, facades, botón Copiar en tarjeta del historial y área personal, traducciones ES/CA.
-- [ ] Frontend: desplegables de nivel en historial y área personal; limpiar SCSS de pestañas/pills de nivel.
-- [ ] Lint, typecheck y suites completas en verde (cobertura por archivo).
-- [ ] Documentación, registro de tarea, commit, push y despliegue.
+- [x] Backend: modelo, servicio, controlador, ruta y tests.
+- [x] Frontend: servicio, facades, botón Copiar en tarjeta del historial y área personal, traducciones ES/CA.
+- [x] Frontend: desplegables de nivel en historial y área personal; limpiar SCSS de pestañas/pills de nivel.
+- [x] Lint, typecheck y suites completas en verde (cobertura por archivo).
+- [x] Documentación, registro de tarea, commit, push y despliegue.
 
 ## 6. Riesgos y verificación prevista
 - **Datos:** no hay migración; `clonedFrom` es opcional. La copia no altera el original (test explícito).

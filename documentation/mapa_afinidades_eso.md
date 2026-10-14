@@ -10,7 +10,6 @@ Cada ficha corresponde a un curso y relaciona dos o tres materias:
 - **Vínculos.** Cada vínculo agrupa los criterios de evaluación relacionados de cada materia (`criterios: { materia: ['6.2'] }`), un resumen de cada uno (`resumen_es/_ca`) y la «relación que fundamenta el ámbito» (`relacion_es/_ca`).
 - **Saberes básicos movilizados** por materia (`saberes[materia].es/ca`).
 - **Conceptos comunes** (`conceptos_es/_ca`).
-- **Origen:** `documento` (ficha del documento del centro) o `ampliacion` (propuesta nueva de la plataforma). La vista lo muestra con una insignia.
 
 La ficha etiqueta cada criterio como **«CE x.y»** en castellano (criterio de evaluación) y **«CA x.y»** en catalán (criteri d'avaluació).
 
@@ -23,7 +22,7 @@ Los textos oficiales de los criterios no se copian en las fichas. El endpoint lo
 | Datos | `backend/src/data/afinidades-eso/afinidades_eso_{1,2,3,4}.json` |
 | Catálogo | `backend/src/data/niveles.ts`: pestañas `ESO_1`…`ESO_4` con `formato: 'afinidades'`. `MAPA_TABS` solo incluye las de módulos; `AFINIDADES_TABS` y `cursoDeTab` son las nuevas |
 | Modelo | `backend/src/models/AfinidadEso.ts` (colección propia; el id de la ficha se guarda como `code`) |
-| Migración | `backend/src/migrations/25_ingest_afinidades_eso.ts` (borra y reinserta solo esta colección) |
+| Migración | `backend/src/migrations/25_ingest_afinidades_eso.ts` (borra y reinserta solo esta colección); `38_quitar_origen_afinidades_eso.ts` elimina el antiguo campo `origen` (documento del centro o ampliación), que ya no se guarda ni se muestra |
 | API | `GET /api/afinidades-eso?tab=ESO_n` (pública, como el mapa de FP): `{ curso, materias, afinidades }`. `materias` son todas las del curso según `subjectTipos` de las CE, con el número de fichas de cada una |
 | Frontend | `features/mapa-intermodular/`: `AfinidadesEsoService`, `AfinidadesEsoFacade` (signals y caché por pestaña), `AfinidadesEsoViewComponent` (materias y fichas) y `AfinidadCardComponent` (ficha) |
 

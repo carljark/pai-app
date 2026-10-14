@@ -27,9 +27,9 @@ describe('Datos de afinidades de la ESO: estructura', () => {
     }
   });
 
-  it('origen válido y 2-3 materias distintas', () => {
+  it('2-3 materias distintas y sin campo origen', () => {
     for (const f of fichas) {
-      expect(['documento', 'ampliacion']).toContain(f.origen);
+      expect(f).not.toHaveProperty('origen');
       expect(f.materias.length).toBeGreaterThanOrEqual(2);
       expect(f.materias.length).toBeLessThanOrEqual(3);
       expect(new Set(f.materias).size).toBe(f.materias.length);

@@ -8,6 +8,7 @@ import { AfinidadEso } from '../models/AfinidadEso';
 import { CE } from '../models/CE';
 import { up as ingestEsoUp } from '../migrations/23_ingest_ces_eso_ordinaria';
 import { up as ingestAfinidadesUp, loadAfinidades, afinidadDocs } from '../migrations/25_ingest_afinidades_eso';
+import { up as quitarOrigenUp } from '../migrations/38_quitar_origen_afinidades_eso';
 
 const CURRICULO_DIR = path.resolve(__dirname, '../data/curriculo-eso');
 const materiasJson = fs.readdirSync(CURRICULO_DIR).filter(f => f.endsWith('.json'))
@@ -99,7 +100,7 @@ describe('GET /api/afinidades-eso', () => {
       const { m, k } = dup;
       await AfinidadEso.create({
         tab: 'ESO_1', order: 99, code: 'ESO1-TEST', curso: '1º', materias: [m.code, 'x'],
-        ambito_es: 'a', ambito_ca: 'a', origen: 'ampliacion',
+        ambito_es: 'a', ambito_ca: 'a',
         vinculos: [{ criterios: { [m.code]: [k.id] }, resumen_es: {}, resumen_ca: {}, relacion_es: '', relacion_ca: '' }]
       });
       const res = await request(app).get('/api/afinidades-eso?tab=ESO_1');
@@ -112,7 +113,7 @@ describe('GET /api/afinidades-eso', () => {
     it('un criterio inexistente devuelve textos vacíos', async () => {
       await AfinidadEso.create({
         tab: 'ESO_1', order: 99, code: 'ESO1-TEST', curso: '1º', materias: ['biologia_geologia', 'nada'],
-        ambito_es: 'a', ambito_ca: 'a', origen: 'ampliacion',
+        ambito_es: 'a', ambito_ca: 'a',
         vinculos: [{ criterios: { biologia_geologia: ['99.9'], nada: ['1.1'] }, resumen_es: {}, resumen_ca: {}, relacion_es: '', relacion_ca: '' }]
       });
       const res = await request(app).get('/api/afinidades-eso?tab=ESO_1');
@@ -187,5 +188,18 @@ describe('Migración 25: afinidades de la ESO', () => {
   it('el modelo rechaza una pestaña que no es de afinidades', async () => {
     const [ficha] = afinidadDocs([loadAfinidades()[0]!]);
     await expect(new AfinidadEso({ ...ficha, tab: 'FPB' }).validate()).rejects.toThrow(/tab/);
+  });
+});
+
+describe('Migración 38: quita el origen de las afinidades', () => {
+  it('elimina el campo origen de las fichas y es idempotente', async () => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    const [ficha] = afinidadDocs([loadAfinidades()[0]!]);
+    await AfinidadEso.collection.insertOne({ ...ficha, origen: 'documento' });
+    await quitarOrigenUp();
+    await quitarOrigenUp();
+    const doc = await AfinidadEso.collection.findOne({ code: ficha!.code });
+    expect(doc).not.toBeNull();
+    expect(doc).not.toHaveProperty('origen');
   });
 });

@@ -34,8 +34,6 @@ export interface AfinidadEso {
   saberes: Record<string, { es: string[]; ca: string[] }>;
   conceptos_es: string[];
   conceptos_ca: string[];
-  /** `documento` (IES Cap de Llevant) o `ampliacion` (propuesta nueva). */
-  origen: 'documento' | 'ampliacion';
   fuentes: FuenteAfinidad[];
 }
 

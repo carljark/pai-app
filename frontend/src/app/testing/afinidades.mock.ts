@@ -26,7 +26,6 @@ export const FICHA_DOS: AfinidadEso = {
   saberes: { BYG: { es: ['Saber A', 'Saber B'], ca: ['Saber CA A', 'Saber CA B'] } },
   conceptos_es: ['Energía', 'Medida'],
   conceptos_ca: ['Energia', 'Mesura'],
-  origen: 'documento',
   fuentes: [{ materia: 'BYG', opcion: 2, ambito_es: 'Ámbito de BYG', ambito_ca: 'Àmbit de BYG' }],
 };
 
@@ -58,7 +57,6 @@ export const FICHA_TRES: AfinidadEso = {
   },
   conceptos_es: ['Sistema'],
   conceptos_ca: ['Sistema ca'],
-  origen: 'ampliacion',
   fuentes: [
     { materia: 'MAT', opcion: 1, ambito_es: 'Ámbito desde MAT', ambito_ca: 'Àmbit des de MAT' },
     { materia: 'TEC', ambito_es: 'Ámbito desde TEC', ambito_ca: 'Àmbit des de TEC' },

@@ -25,8 +25,7 @@
 }
 
 .afinidad-card__curso,
-.afinidad-card__opcion,
-.afinidad-card__origen {
+.afinidad-card__opcion {
   padding: 2px variables.$spacing-2;
   border-radius: variables.$border-radius-full;
   font-weight: variables.$font-weight-medium;
@@ -40,16 +39,6 @@
 .afinidad-card__opcion {
   background: variables.$color-surface-alt;
   color: variables.$color-text-muted;
-}
-
-.afinidad-card__origen {
-  background: variables.$color-info-bg;
-  color: variables.$color-info;
-}
-
-.afinidad-card__origen--ampliacion {
-  background: variables.$color-warning-bg;
-  color: variables.$color-warning;
 }
 
 .afinidad-card__materias {

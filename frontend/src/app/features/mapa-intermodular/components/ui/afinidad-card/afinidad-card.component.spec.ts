@@ -48,7 +48,7 @@ describe('AfinidadCardComponent', () => {
     expect(materiasOrden()).toEqual(['Matemáticas', 'Biología y Geología']);
     expect(el.querySelectorAll('.afinidad-card__th').length).toBe(3);
     expect(text('.afinidad-card__curso')).toBe('1º ESO');
-    expect(text('.afinidad-card__origen')).toBe('Documento del centro');
+    expect(el.querySelector('.afinidad-card__origen')).toBeNull();
     expect(text('.afinidad-card__td--relacion')).toBe('Relación científica');
     expect(text('.afinidad-card__subtitulo')).toBe('Saberes básicos movilizados');
     expect(text('.afinidad-card__saber')).toContain('Matemáticas: .');
@@ -59,8 +59,7 @@ describe('AfinidadCardComponent', () => {
     render(FICHA_TRES, 'TEC');
     expect(materiasOrden()).toEqual(['Tecnología', 'Biología y Geología', 'Matemáticas']);
     expect(el.querySelectorAll('.afinidad-card__th').length).toBe(4);
-    expect(text('.afinidad-card__origen')).toBe('Ampliación');
-    expect(el.querySelector('.afinidad-card__origen--ampliacion')).toBeTruthy();
+    expect(el.querySelector('.afinidad-card__origen')).toBeNull();
   });
 
   it('si la materia no está en la ficha, no la antepone', () => {
@@ -91,14 +90,12 @@ describe('AfinidadCardComponent', () => {
     render(FICHA_DOS, 'BYG');
     expect(text('.afinidad-card__ambito')).toContain('Àmbit proposat: Àmbit de BYG');
     expect(text('.afinidad-card__opcion')).toBe('Opció 2');
-    expect(text('.afinidad-card__origen')).toBe('Document del centre');
     expect(materiasOrden()).toEqual(['Biologia i Geologia', 'Matemàtiques']);
     expect(text('.afinidad-card__td--relacion')).toBe('Relació científica');
     expect(text('.afinidad-card__resumen')).toBe('Resum BYG');
     expect(text('.afinidad-card__saber')).toContain('Biologia i Geologia: Saber CA A; Saber CA B.');
     expect(text('.afinidad-card__subtitulo')).toBe('Sabers bàsics mobilitzats');
     expect(text('.afinidad-card__concepto')).toBe('Energia');
-    expect(el.querySelector('.afinidad-card__origen')?.getAttribute('title')).toContain('document');
   });
 
   it('muestra el texto oficial del criterio al hacer clic en el summary', () => {

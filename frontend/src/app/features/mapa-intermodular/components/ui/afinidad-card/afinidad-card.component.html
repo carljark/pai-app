@@ -5,29 +5,6 @@
       @if (fuente()?.opcion; as opcion) {
         <span class="afinidad-card__opcion">{{ isCa() ? 'Opció' : 'Opción' }} {{ opcion }}</span>
       }
-      <span
-        class="afinidad-card__origen"
-        [class.afinidad-card__origen--ampliacion]="afinidad().origen === 'ampliacion'"
-        [title]="
-          afinidad().origen === 'documento'
-            ? isCa()
-              ? 'Proposta del document d’afinitats curriculars del centre'
-              : 'Propuesta del documento de afinidades curriculares del centro'
-            : isCa()
-              ? 'Proposta nova que amplia el document del centre'
-              : 'Propuesta nueva que amplía el documento del centro'
-        "
-      >
-        {{
-          afinidad().origen === 'documento'
-            ? isCa()
-              ? 'Document del centre'
-              : 'Documento del centro'
-            : isCa()
-              ? 'Ampliació'
-              : 'Ampliación'
-        }}
-      </span>
     </div>
     <p class="afinidad-card__materias">
       @for (m of materias(); track m; let last = $last) {

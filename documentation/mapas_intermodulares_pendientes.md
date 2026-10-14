@@ -28,7 +28,7 @@ Quedan 12 pestañas, con unas 2.050 relaciones y otras tantas actividades biling
 
 ## Orden sugerido
 
-1. **CFGS Integración Social 1.º** (37 RA). Es el más pequeño de los pendientes y comparte familia (Servicios Socioculturales) con Educación Infantil, que ya tiene mapa. Sirve para comparar la calidad del otro modelo.
+1. **CFGS Integración Social 1.º** (37 RA). Es el más pequeño de los pendientes y comparte familia (Servicios Socioculturales) con Educación Infantil, que ya tiene mapa. Sirve para comparar la calidad del otro modelo. Prompt ya rellenado: [`scripts/mapa-intermodular/prompt_cfgs_integracion_social_1.md`](../scripts/mapa-intermodular/prompt_cfgs_integracion_social_1.md).
 2. **CFGS Acondicionamiento Físico 2.º** (35 RA) y **CFGM Atención a la Dependencia 2.º** (38 RA): también son pequeños.
 3. Después, los cursos de 40 a 45 RA y, al final, Guía en el Medio Natural 1.º (52 RA, el mayor).
 

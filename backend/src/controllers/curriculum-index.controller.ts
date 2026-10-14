@@ -32,6 +32,23 @@ export interface FilterIndex {
 const unique = (values: (string | null | undefined)[]): string[] =>
   Array.from(new Set(values.filter((v): v is string => !!v)));
 
+/**
+ * Texto comparable (igual que en el historial del frontend): sin tildes, mayúsculas, puntuación ni
+ * la numeración inicial («1. ») con la que los proyectos antiguos de FP Básica guardaban los RA.
+ */
+export const normalizeText = (value: string): string =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/^\s*(ra\s*)?\d+\s*[.)-]\s*/, '')
+    .replace(/[.,;:()«»"'’·-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const normalizedSet = (values: unknown[]): Set<string> =>
+  new Set(values.filter((v): v is string => typeof v === 'string').map(normalizeText));
+
 const numberIn = (value?: string | null): number => Number(/\d+/.exec(value || '')?.[0] ?? 0);
 
 /** Entrada de un RA: los proyectos guardan el nombre del módulo y la descripción en su idioma. */
@@ -83,20 +100,27 @@ const pdcEntry = (c: any): { module: FilterModule; item: FilterItem } => {
 
 const ceEntry = (c: any) => (c.tipoNivel === ESO_ORDINARIA ? esoEntry(c) : pdcEntry(c));
 
+/** Alias que no son ya, una vez normalizados, la etiqueta en castellano o en catalán. */
+const extraAliases = <T extends FilterModule>(entry: T): T => {
+  const labels = new Set([normalizeText(entry.es), normalizeText(entry.ca)]);
+  return { ...entry, aliases: entry.aliases.filter(a => !labels.has(normalizeText(a))) };
+};
+
 /**
  * Índice del currículo para los filtros del historial, limitado a los módulos y RA/CE que usa
- * algún proyecto: permite agrupar en una sola opción el mismo módulo o RA guardado en castellano
- * y en catalán.
+ * algún proyecto (`usedModules`/`usedItems` ya normalizados): permite agrupar en una sola opción
+ * el mismo módulo o RA guardado en castellano y en catalán. Para aligerar la respuesta, `aliases`
+ * solo lleva los textos que no coinciden con `es` o `ca` (el frontend también busca por estos).
  */
 export const buildFilterIndex = (entries: { module: FilterModule; item: FilterItem }[], usedModules: Set<string>, usedItems: Set<string>): FilterIndex => {
-  const items = entries.map(e => e.item).filter(i => i.aliases.some(a => usedItems.has(a)));
+  const items = entries.map(e => e.item).filter(i => i.aliases.some(a => usedItems.has(normalizeText(a))));
   const itemModules = new Set(items.map(i => i.moduleKey));
   const modules = new Map<string, FilterModule>();
   for (const { module } of entries) {
-    const used = itemModules.has(module.key) || module.aliases.some(a => usedModules.has(a));
+    const used = itemModules.has(module.key) || module.aliases.some(a => usedModules.has(normalizeText(a)));
     if (used && !modules.has(module.key)) modules.set(module.key, module);
   }
-  return { modules: Array.from(modules.values()), items };
+  return { modules: Array.from(modules.values()).map(extraAliases), items: items.map(extraAliases) };
 };
 
 export const getFilterIndex = async (_req: any, res: Response) => {
@@ -108,7 +132,7 @@ export const getFilterIndex = async (_req: any, res: Response) => {
       Project.distinct('ras'),
     ]);
     const entries = [...ras.map(raEntry), ...ces.map(ceEntry)];
-    return res.json(buildFilterIndex(entries, new Set(usedModules as string[]), new Set(usedItems as string[])));
+    return res.json(buildFilterIndex(entries, normalizedSet(usedModules), normalizedSet(usedItems)));
   } catch (error) {
     return res.status(500).json({ error: 'No se pudo cargar el índice del currículo' });
   }

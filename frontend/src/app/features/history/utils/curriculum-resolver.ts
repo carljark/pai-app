@@ -7,7 +7,7 @@ export interface FilterIndexModule {
   tipoNivel: string;
   es: string;
   ca: string;
-  /** Textos con los que lo guardan los proyectos (castellano, catalán y antiguos). */
+  /** Otros textos con los que lo guardan los proyectos, además de `es` y `ca` (antiguos, ESO). */
   aliases: string[];
 }
 
@@ -32,13 +32,19 @@ export interface FilterOption {
   order: number;
 }
 
+/**
+ * Texto comparable: sin tildes, mayúsculas, puntuación ni la numeración inicial («1. ») con la
+ * que los proyectos antiguos de FP Básica guardaban los RA.
+ */
 const normalize = (value: string): string =>
   value
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/^\s*(ra\s*)?\d+\s*[.)-]\s*/, '')
+    .replace(/[.,;:()«»"'’·-]/g, ' ')
     .replace(/\s+/g, ' ')
-    .trim()
-    .toLowerCase();
+    .trim();
 
 const lookupKey = (tipoNivel: string, text: string) => `${tipoNivel}\u0000${normalize(text)}`;
 
@@ -53,7 +59,7 @@ const textOption = (tipoNivel: string, text: string): FilterOption => ({
 const buildLookup = <T extends FilterIndexModule>(entries: T[]): Map<string, T> => {
   const lookup = new Map<string, T>();
   for (const entry of entries) {
-    for (const alias of entry.aliases) {
+    for (const alias of [entry.es, entry.ca, ...entry.aliases]) {
       const key = lookupKey(normalizeTipoNivel(entry.tipoNivel), alias);
       if (!lookup.has(key)) lookup.set(key, entry);
     }

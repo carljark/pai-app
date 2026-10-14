@@ -46,6 +46,19 @@ describe('CurriculumResolver', () => {
     expect(resolver.itemsOf(p)).toEqual([]);
   });
 
+  it('recognises old RA saved with numbering and other punctuation, and the labels themselves', () => {
+    const legacy = project({
+      modules: ['PEINADOS'],
+      ras: ['1. Peina.', 'RA2. Recoge', 'RA1) Analiza'],
+    });
+    expect(resolver.modulesOf(legacy)[0]!.key).toBe(PEINADOS);
+    expect(resolver.itemsOf(legacy).map((i) => i.key)).toEqual([
+      `${PEINADOS}|RA1`,
+      `${PEINADOS}|RA2`,
+      `${ANALISIS}|RA1`,
+    ]);
+  });
+
   it('does not mix texts of another level', () => {
     const other = project({ tipoNivel: 'FP_BASICA' });
     expect(resolver.modulesOf(other)[0]!.key).toMatch(/^txt\|/);

@@ -6,6 +6,7 @@ import { RA } from '../models/RA';
 import { CE } from '../models/CE';
 import { Project } from '../models/Project';
 import { connectDB, closeDB, clearDB } from './testSetup';
+import { normalizeText } from '../controllers/curriculum-index.controller';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -37,11 +38,11 @@ describe('GET /api/curriculum/filter-index', () => {
 
     expect(res.status).toBe(200);
     expect(res.body.modules).toEqual([
-      { key: 'CFGS_INTEGRACION_SOCIAL|0337', tipoNivel: 'CFGS_INTEGRACION_SOCIAL', es: 'Contexto', ca: 'Context', aliases: ['Contexto', 'Context'] },
+      { key: 'CFGS_INTEGRACION_SOCIAL|0337', tipoNivel: 'CFGS_INTEGRACION_SOCIAL', es: 'Contexto', ca: 'Context', aliases: [] },
     ]);
     expect(res.body.items).toEqual([
       { key: 'CFGS_INTEGRACION_SOCIAL|0337|RA2', tipoNivel: 'CFGS_INTEGRACION_SOCIAL', moduleKey: 'CFGS_INTEGRACION_SOCIAL|0337',
-        order: 2, es: 'RA2. Descr es', ca: 'RA2. Descr ca', aliases: ['Descr es', 'Descr ca'] },
+        order: 2, es: 'RA2. Descr es', ca: 'RA2. Descr ca', aliases: [] },
     ]);
   });
 
@@ -67,6 +68,22 @@ describe('GET /api/curriculum/filter-index', () => {
       ['ESO_ORDINARIA|MAT', 'Matemáticas', 'Matemàtiques'],
       ['DIVERSIFICACION_CURRICULAR|Matemáticas', 'Matemáticas', 'Matemàtiques'],
     ]);
+  });
+
+  it('reconoce los RA antiguos con numeración y otra puntuación, y envía solo los alias extra', async () => {
+    await CE.create({ tipoNivel: 'ESO_ORDINARIA', subjectCode: 'MAT', subject_es: 'Matemáticas', subject_ca: 'Matemàtiques',
+      ce_num: 1, description_es: 'Resolver', description_ca: 'Resoldre' });
+    await RA.create({ id: 'RA1', module_es: 'Maquillaje', module_ca: 'Maquillatge', tipoNivel: 'FP_BASICA',
+      description_es: 'Muestra una imagen, relacionándola.', description_ca: 'Mostra una imatge.' });
+    await Project.create([
+      { title: 'F', modules: ['MAQUILLAJE'], ras: ['1. Muestra una imagen relacionandola'] },
+      { title: 'E', modules: ['Matemáticas'], ras: ['Matemáticas · CE1. Resolver'], tipoNivel: 'ESO_ORDINARIA' },
+    ]);
+
+    const res = await get(token);
+
+    expect(res.body.items.map((i: any) => i.aliases)).toEqual([[], ['Matemáticas · CE1. Resolver', 'Matemàtiques · CE1. Resoldre']]);
+    expect(normalizeText('RA 2) Texto «tipo», sí')).toBe('texto tipo si');
   });
 
   it('usa el nivel por defecto y la descripción de los RA antiguos sin código', async () => {

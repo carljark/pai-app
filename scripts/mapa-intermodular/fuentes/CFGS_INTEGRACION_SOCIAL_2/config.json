@@ -1,0 +1,78 @@
+{
+  "nivel": "CFGS_INTEGRACION_SOCIAL",
+  "curso": "2º",
+  "modulos": {
+    "1708": {
+      "nombre_es": "Sostenibilidad aplicada al sistema productivo",
+      "nombre_ca": "Sostenibilitat aplicada al sistema productiu",
+      "tipo": "comun",
+      "relacion": "sostenibilidad",
+      "color": "#fbbf24",
+      "icon": "leaf"
+    },
+    "1710": {
+      "nombre_es": "Itinerario personal para la empleabilidad II",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat II",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#c084fc",
+      "icon": "briefcase"
+    },
+    "0017": {
+      "nombre_es": "Habilidades sociales",
+      "nombre_ca": "Habilitats socials",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#c084fc",
+      "icon": "users"
+    },
+    "0020": {
+      "nombre_es": "Primeros auxilios",
+      "nombre_ca": "Primers auxilis",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#ef4444",
+      "icon": "heart-pulse"
+    },
+    "0339": {
+      "nombre_es": "Atención a las unidades de convivencia",
+      "nombre_ca": "Atenció a les unitats de convivència",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#38bdf8",
+      "icon": "hand"
+    },
+    "0341": {
+      "nombre_es": "Apoyo a la intervención educativa",
+      "nombre_ca": "Suport a la intervenció socioeducativa",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#fb923c",
+      "icon": "book"
+    },
+    "0343": {
+      "nombre_es": "Sistemas aumentativos y alternativos de comunicación",
+      "nombre_ca": "Sistemes augmentatius i alternatius de comunicació",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#34d399",
+      "icon": "message-circle"
+    },
+    "0345": {
+      "nombre_es": "Proyecto intermodular de integración social",
+      "nombre_ca": "Projecte intermodular d'integració social",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#f59e0b",
+      "icon": "folder-kanban"
+    },
+    "0179": {
+      "nombre_es": "Inglés profesional",
+      "nombre_ca": "Anglès professional",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#4ade80",
+      "icon": "languages"
+    }
+  }
+}

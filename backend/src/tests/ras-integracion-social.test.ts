@@ -81,7 +81,9 @@ describe('Datos del CFGS Integración Social', () => {
   it('separa por curso los módulos de FP Illes Balears y usa los nombres oficiales en el prompt', () => {
     const nivel = findNivel('CFGS_INTEGRACION_SOCIAL');
     expect(nivel?.etapa).toBe('CFGS');
-    expect(nivel?.mapas).toBeUndefined();
+    expect(nivel?.mapas).toEqual([
+      { tab: 'CFGS_INTEGRACION_SOCIAL_2', curso: '2º', moduleCode: '0017', raId: '0017_RA1' },
+    ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([7, 9]);
     expect(describeTargetCourse('CFGS_INTEGRACION_SOCIAL', '2º'))
       .toBe('2º de CFGS Integración Social');

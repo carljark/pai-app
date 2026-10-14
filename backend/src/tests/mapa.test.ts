@@ -19,8 +19,10 @@ import { up as runMigration27 } from '../migrations/27_reload_cfgm_peluqueria_tr
 import { up as runMigration28 } from '../migrations/28_reload_transversales_canonicos';
 import { up as runMigration29 } from '../migrations/29_reload_mapa_fpb_catalan';
 import { up as runMigration36 } from '../migrations/36_ingest_mapa_cfgm_cuidados_auxiliares_enfermeria';
+import { up as runMigration38 } from '../migrations/38_ingest_mapa_cfgs_integracion_social_2';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
+import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -489,6 +491,32 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.status).toBe(200);
       expect(res.body.map((m: any) => m.code)).toEqual(['CAE1', 'CAE2', 'CAE3', 'CAE4', 'CAE5', 'CAE6', 'CAE7']);
       expect(res.body[1].name_ca).toBe("Tècniques bàsiques d'infermeria");
+    });
+
+    it('debería cargar con la migración 38 el 2.º de Integración Social sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_EDUCACION_INFANTIL_2', order: 0, code: '0013', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration38();
+      await runMigration38();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL_2' })).toBe(1);
+      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL_2', 9, 330, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_INTEGRACION_SOCIAL_2' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = IS_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_INTEGRACION_SOCIAL_2');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['0017', '0020', '0339', '0341', '0343', '0345', '0179', '1708', '1710']);
+      expect(res.body[0].name_ca).toBe('Habilitats socials');
     });
   });
 });

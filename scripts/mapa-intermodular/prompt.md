@@ -64,6 +64,9 @@ Reglas de redacción:
 - Los campos _es van en castellano y los _ca en catalán balear de FP (l'alumnat, fer, emplenar, feina…), sin faltas y sin mezclar idiomas. El catalán debe ser una versión natural, no una traducción palabra por palabra.
 - Las DUA y las evidencias deben ser propias de cada actividad, no una plantilla repetida.
 - Escribe JSON válido: comillas dobles y el apóstrofo catalán (') tal cual.
+- PROHIBIDO generar los textos con scripts, plantillas o combinando fragmentos de los criterios. Puedes usar scripts solo para planificar y contar (grados, cobertura), nunca para escribir títulos, contextos, desarrollos, evidencias o DUA. Cada actividad se redacta a mano para su relación, como haría un docente.
+- No copies el texto de los criterios («Se ha…», «S'ha…») en títulos ni desarrollos: explica con tus palabras qué hace el alumnado. El título es una frase completa con sentido («Mediación en un conflicto vecinal por ruidos»), nunca un recorte de criterios.
+- Cada contexto, evidencia y DUA es propio de su actividad. Los desarrollos no pueden empezar todos igual. El validador rechaza los textos repetidos y los que pegan criterios.
 
 PASO 5. Validación y generación. Ejecuta:
   cd backend && npx tsx ../scripts/mapa-intermodular/mapa-intermodular.mts construir --nivel <NIVEL> --curso <CURSO> --trabajo ../scripts/mapa-intermodular/fuentes/<TAB> --salida src/data/mapa-intermodular/<ARCHIVO>.json
@@ -86,6 +89,8 @@ PASO 7. Documentación y entrega:
 ---
 
 ## Notas para quien lanza el prompt
+
+- **Calidad, no solo validación.** En la tarea 224 un modelo generó los textos con un script: los 148 desarrollos empezaban igual, 64 títulos estaban cortados a mitad de frase y había solo 12 contextos y 6 DUA. Pasó las comprobaciones estructurales y no se desplegó. Desde entonces el validador detecta esos patrones, pero conviene revisar una muestra de actividades antes de fusionar.
 
 - **Un curso por ejecución.** En los ciclos de dos cursos, lanza el prompt dos veces (1.º y 2.º). Cada curso lleva su propia migración: la del primero puede estar ya aplicada en producción y no debe modificarse.
 - **Ejecuciones en paralelo.** Si lanzas varios mapas a la vez en ramas distintas, chocarán en el número de migración, en `niveles.ts` y en las listas de `niveles-catalogo.test.ts`. Es preferible lanzarlos de uno en uno o renumerar al fusionar.

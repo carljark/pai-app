@@ -205,6 +205,14 @@ Correspondencia con el modelo del mapa: `contexto` → `motivatingFactor`, `desa
 - Todos los textos existen en ES y CA, son distintos y no tienen marcas evidentes del otro idioma. El detector usa límites de palabra Unicode, porque `\b` de JavaScript no reconoce letras acentuadas y daba falsos positivos como «con» en «conèixer».
 - Las citas de criterios del desarrollo (`0011-1a`, `CAE2-3c`) coinciden en ES y CA y pertenecen a la relación.
 
+- **Redacción propia, no de plantilla** (desde la tarea 225):
+  - los títulos no acaban en una palabra funcional («del», «y», «la»…) ni copian criterios («Se ha…»);
+  - los desarrollos no pegan el texto de los criterios;
+  - como mucho el 5 % de los desarrollos (y nunca más de 4 si son pocos) empieza con las mismas seis palabras;
+  - ningún contexto, DUA o evidencia se repite más de esa misma cota.
+
+  Estas reglas se añadieron porque el primer mapa encargado a otro modelo (tarea 224) superaba las comprobaciones estructurales con textos generados por script. Tenía 148 desarrollos idénticos al inicio, 64 títulos cortados y solo 12 contextos y 6 DUA.
+
 Son avisos, que no bloquean: criterios del curso sin ninguna conexión y criterios de la relación que el desarrollo no cita.
 
 ### 8.4. Detalles del JSON generado

@@ -171,6 +171,7 @@ function checkRelacion(rel: Relacion, byModule: Map<string, Ra[]>, where: string
   (rel.actividades ?? []).forEach((act, i) => {
     checkTextos(act, ACTIVITY_FIELDS, `${where} actividad ${i + 1}`);
     checkCitas(act, rel, `${where} actividad ${i + 1}`);
+    checkRedaccion(act, `${where} actividad ${i + 1}`);
   });
 }
 
@@ -209,7 +210,44 @@ function checkGlobal(rels: Relacion[], byModule: Map<string, Ra[]>) {
   }
   checkGrados(grado, byModule);
   checkCobertura(cubiertos, byModule);
+  checkPlantillas(rels);
   return pares.size;
+}
+
+const FINAL_COJO = word('de|del|la|el|los|las|y|i|que|a|en|per|para|con|amb|un|una|al|als|les|els|o');
+const TEXTO_DE_CRITERIO = /(?<!\p{L})(Se han? |S'han? )/u;
+
+/** Títulos completos y desarrollos redactados, no pegados del texto de los criterios. */
+function checkRedaccion(act: Actividad, where: string) {
+  for (const lang of LANGS) {
+    const titulo = act[`titulo_${lang}`]?.trim() ?? '';
+    const ultima = titulo.split(/\s+/).pop() ?? '';
+    if (FINAL_COJO.test(ultima) && ultima.length <= 4) fail(`${where}: titulo_${lang} acaba a medias («${titulo}»)`);
+    if (TEXTO_DE_CRITERIO.test(titulo)) fail(`${where}: titulo_${lang} copia el texto de un criterio («${titulo}»)`);
+    if (TEXTO_DE_CRITERIO.test(act[`desarrollo_${lang}`] ?? '')) {
+      fail(`${where}: desarrollo_${lang} pega el texto de un criterio («Se ha…»/«S'ha…»); redáctalo con palabras propias`);
+    }
+  }
+}
+
+/**
+ * Detecta textos generados con plantilla: desarrollos que empiezan igual y contextos, DUA o
+ * evidencias repetidos. Cada actividad debe redactarse para su relación.
+ */
+function checkPlantillas(rels: Relacion[]) {
+  const acts = rels.flatMap((r) => r.actividades ?? []);
+  const limite = Math.max(4, Math.ceil(acts.length * 0.05));
+  const repetidos = (textos: string[]) =>
+    [...textos.reduce((m, t) => m.set(t, (m.get(t) ?? 0) + 1), new Map<string, number>())].filter(([, n]) => n > limite);
+  const inicio = (t = '') => t.trim().split(/\s+/).slice(0, 6).join(' ').toLowerCase();
+  for (const [t, n] of repetidos(acts.map((a) => inicio(a.desarrollo_es)))) {
+    fail(`${n} desarrollos empiezan igual («${t}…»): redacta cada actividad para su relación`);
+  }
+  for (const campo of ['contexto', 'dua', 'evidencia'] as const) {
+    for (const [t, n] of repetidos(acts.map((a) => (a[`${campo}_es`] ?? '').trim()))) {
+      fail(`${campo}_es repetido ${n} veces («${t.slice(0, 70)}…»): debe ser propio de cada actividad`);
+    }
+  }
 }
 
 function checkTitulos(titulos: Map<string, Set<string>>, raKey: string, rel: Relacion) {

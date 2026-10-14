@@ -125,6 +125,7 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '1º', modulos: ['0020', '0210', '0212', '0213', '0215', '0217', '1664', '1709'] },
       { curso: '2º', modulos: ['0211', '0214', '0216', '0831', '0156', '1708', '1710', '1713'] },
     ],
+    mapas: [{ tab: 'CFGM_ATENCION_DEPENDENCIA_2', curso: '2º', moduleCode: '0211', raId: '0211_RA1' }],
   },
   {
     id: 'CFGM_GUIA_MEDIO_NATURAL',

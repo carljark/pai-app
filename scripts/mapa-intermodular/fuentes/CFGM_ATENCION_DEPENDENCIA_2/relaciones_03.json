@@ -1,0 +1,684 @@
+[
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["c", "d"] },
+    "b": { "modulo": "0831", "ra": "RA2", "criterios": ["c", "f"] },
+    "justificacion_es": "En una ola de calor, las llamadas programadas sirven para detectar a tiempo signos de deterioro y condiciones peligrosas del domicilio.",
+    "justificacion_ca": "En una onada de calor, les trucades programades serveixen per detectar a temps signes de deteriorament i condicions perilloses del domicili.",
+    "actividades": [
+      {
+        "titulo_es": "Campaña de llamadas por la ola de calor",
+        "titulo_ca": "Campanya de trucades per l'onada de calor",
+        "contexto_es": "AEMET anuncia cinco días por encima de 38 °C y la central debe llamar a todas las personas usuarias de riesgo.",
+        "contexto_ca": "AEMET anuncia cinc dies per sobre de 38 °C i la central ha de telefonar a totes les persones usuàries de risc.",
+        "desarrollo_es": "El alumnado prioriza en la aplicación las llamadas según edad, patologías y si la persona vive sola (0831-2c). Prepara preguntas para detectar signos de deterioro, como confusión, poca orina o mareos (0216-1c), y para conocer el entorno: ventilador, persianas o agua a mano (0216-1d). En la simulación adapta la conversación a cada caso (0831-2f).",
+        "desarrollo_ca": "L'alumnat prioritza a l'aplicació les trucades segons l'edat, les patologies i si la persona viu sola (0831-2c). Prepara preguntes per detectar signes de deteriorament, com confusió, poca orina o marejos (0216-1c), i per conèixer l'entorn: ventilador, persianes o aigua a mà (0216-1d). A la simulació adapta la conversa a cada cas (0831-2f).",
+        "evidencia_es": "Lista priorizada de llamadas, guion de preguntas y simulaciones grabadas.",
+        "evidencia_ca": "Llista prioritzada de trucades, guió de preguntes i simulacions enregistrades.",
+        "dua_es": "Fichas de casos con datos destacados y guion con casillas.",
+        "dua_ca": "Fitxes de casos amb dades destacades i guió amb caselles.",
+        "metodologia_es": "simulación de crisis.",
+        "metodologia_ca": "simulació de crisi."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA3", "criterios": ["b", "c"] },
+    "b": { "modulo": "0831", "ra": "RA2", "criterios": ["b", "d"] },
+    "justificacion_es": "Las agendas de recordatorio de medicación de la teleasistencia solo son seguras si quien llama conoce las pautas y los riesgos de cada fármaco.",
+    "justificacion_ca": "Les agendes de recordatori de medicació de la teleassistència només són segures si qui telefona coneix les pautes i els riscs de cada fàrmac.",
+    "actividades": [
+      {
+        "titulo_es": "Agenda de recordatorio del Sintrom",
+        "titulo_ca": "Agenda de recordatori del Sintrom",
+        "contexto_es": "Gabriel toma Sintrom y a menudo olvida la dosis o la duplica; su médica pide un recordatorio diario por teléfono.",
+        "contexto_ca": "En Gabriel pren Sintrom i sovint n'oblida la dosi o la duplica; la seva metgessa demana un recordatori diari per telèfon.",
+        "desarrollo_es": "El alumnado selecciona en la aplicación las agendas de recordatorio del turno (0831-2b) y elige la de Gabriel (0831-2d). Antes de llamar repasa su pauta según el plan individualizado (0216-3b) y los riesgos de un error con un anticoagulante, como sangrados o hematomas, para preguntar por ellos (0216-3c).",
+        "desarrollo_ca": "L'alumnat selecciona a l'aplicació les agendes de recordatori del torn (0831-2b) i tria la d'en Gabriel (0831-2d). Abans de telefonar repassa la seva pauta segons el pla individualitzat (0216-3b) i els riscs d'un error amb un anticoagulant, com sagnats o hematomes, per demanar-ne (0216-3c).",
+        "evidencia_es": "Agenda configurada y guion de llamada con preguntas de seguridad.",
+        "evidencia_ca": "Agenda configurada i guió de trucada amb preguntes de seguretat.",
+        "dua_es": "Ficha del fármaco con pictogramas y simulador de la aplicación.",
+        "dua_ca": "Fitxa del fàrmac amb pictogrames i simulador de l'aplicació.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA5", "criterios": ["d", "e"] },
+    "b": { "modulo": "0831", "ra": "RA4", "criterios": ["b"] },
+    "justificacion_es": "Seguir la evolución física de una persona desde la central exige observar con método y registrar cada llamada.",
+    "justificacion_ca": "Seguir l'evolució física d'una persona des de la central exigeix observar amb mètode i registrar cada trucada.",
+    "actividades": [
+      {
+        "titulo_es": "Seguimiento telefónico tras una fractura de cadera",
+        "titulo_ca": "Seguiment telefònic després d'una fractura de maluc",
+        "contexto_es": "Aina ha vuelto a casa tras operarse de la cadera y la central la llama tres veces por semana durante un mes.",
+        "contexto_ca": "N'Aina ha tornat a casa després d'operar-se del maluc i la central la telefona tres vegades per setmana durant un mes.",
+        "desarrollo_es": "El alumnado obtiene información de Aina y de su hijo con una escala breve de dolor y movilidad (0216-5d). Aplica la misma observación en cada llamada para seguir su evolución (0216-5e) y la registra con la técnica de la central, de modo que el siguiente turno vea la tendencia (0831-4b).",
+        "desarrollo_ca": "L'alumnat obté informació de n'Aina i del seu fill amb una escala breu de dolor i mobilitat (0216-5d). Aplica la mateixa observació a cada trucada per seguir-ne l'evolució (0216-5e) i la registra amb la tècnica de la central, de manera que el torn següent en vegi la tendència (0831-4b).",
+        "evidencia_es": "Escala aplicada y registro de evolución de cuatro semanas.",
+        "evidencia_ca": "Escala aplicada i registre d'evolució de quatre setmanes.",
+        "dua_es": "Escala visual de dolor y plantilla de registro con gráfico.",
+        "dua_ca": "Escala visual de dolor i plantilla de registre amb gràfic.",
+        "metodologia_es": "estudio de caso longitudinal.",
+        "metodologia_ca": "estudi de cas longitudinal."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["g"] },
+    "b": { "modulo": "0831", "ra": "RA3", "criterios": ["f", "g"] },
+    "justificacion_es": "Ante una caída en casa, la central activa los recursos y da pautas para que la persona y su entorno actúen con seguridad.",
+    "justificacion_ca": "Davant una caiguda a casa, la central activa els recursos i dona pautes perquè la persona i el seu entorn actuïn amb seguretat.",
+    "actividades": [
+      {
+        "titulo_es": "Alarma por caída en el pasillo",
+        "titulo_ca": "Alarma per caiguda al passadís",
+        "contexto_es": "Bartomeu pulsa el colgante: se ha caído en el pasillo, no se ha hecho daño, pero no consigue levantarse y su mujer está sola con él.",
+        "contexto_ca": "En Bartomeu pitja el penjoll: ha caigut al passadís, no s'ha fet mal, però no aconsegueix aixecar-se i la seva dona hi és tota sola.",
+        "desarrollo_es": "En la simulación, el alumnado responde con calma a la emergencia (0831-3f) y decide qué recurso movilizar: la persona de contacto con llaves o la unidad móvil (0831-3g). Mientras llega la ayuda, da a la mujer pautas para no levantarlo a pulso y para usar después el andador con seguridad (0216-2g).",
+        "desarrollo_ca": "A la simulació, l'alumnat respon amb calma a l'emergència (0831-3f) i decideix quin recurs mobilitzar: la persona de contacte amb claus o la unitat mòbil (0831-3g). Mentre arriba l'ajuda, dona a la dona pautes per no aixecar-lo a pols i per fer servir després el caminador amb seguretat (0216-2g).",
+        "evidencia_es": "Simulación grabada y hoja de pautas para la familia.",
+        "evidencia_ca": "Simulació enregistrada i full de pautes per a la família.",
+        "dua_es": "Árbol de decisión de recursos y guion de apoyo.",
+        "dua_ca": "Arbre de decisió de recursos i guió de suport.",
+        "metodologia_es": "simulación de emergencias.",
+        "metodologia_ca": "simulació d'emergències."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["c", "g"] },
+    "b": { "modulo": "0831", "ra": "RA2", "criterios": ["g"] },
+    "justificacion_es": "Una llamada saliente bien cerrada puede servir para recordar a la familia cómo alimentar con seguridad a una persona con disfagia.",
+    "justificacion_ca": "Una trucada sortint ben tancada pot servir per recordar a la família com alimentar amb seguretat una persona amb disfàgia.",
+    "actividades": [
+      {
+        "titulo_es": "Llamada de seguimiento por disfagia",
+        "titulo_ca": "Trucada de seguiment per disfàgia",
+        "contexto_es": "Tras un ingreso por neumonía por aspiración, la familia de Rafel debe espesar los líquidos y vigilar la postura al comer.",
+        "contexto_ca": "Després d'un ingrés per pneumònia per aspiració, la família d'en Rafel ha d'espessir els líquids i vigilar la postura en menjar.",
+        "desarrollo_es": "El alumnado identifica los riesgos de la ingesta de Rafel, como líquidos finos o comer acostado (0216-4g). En la llamada informa a la familia de cómo darle los alimentos con seguridad (0216-4c) y cierra con la despedida del protocolo, que incluye cuándo será la próxima llamada (0831-2g).",
+        "desarrollo_ca": "L'alumnat identifica els riscs de la ingesta d'en Rafel, com líquids fluids o menjar ajagut (0216-4g). A la trucada informa la família de com donar-li els aliments amb seguretat (0216-4c) i tanca amb l'acomiadament del protocol, que inclou quan serà la propera trucada (0831-2g).",
+        "evidencia_es": "Lista de riesgos y llamada simulada con despedida protocolaria.",
+        "evidencia_ca": "Llista de riscs i trucada simulada amb acomiadament protocol·lari.",
+        "dua_es": "Vídeo sobre texturas y guion con frases clave.",
+        "dua_ca": "Vídeo sobre textures i guió amb frases clau.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "0831", "ra": "RA4", "criterios": ["f", "g"] },
+    "justificacion_es": "Conocer lo que prescribe el plan de cuidados permite detectar por teléfono cuándo no se cumple y avisar a quien corresponde.",
+    "justificacion_ca": "Conèixer el que prescriu el pla de cures permet detectar per telèfon quan no es compleix i avisar qui correspongui.",
+    "actividades": [
+      {
+        "titulo_es": "Las curas que no se están haciendo",
+        "titulo_ca": "Les cures que no s'estan fent",
+        "contexto_es": "Durante una llamada, Maria comenta de pasada que la enfermera ya no viene a curarle la úlcera del talón.",
+        "contexto_ca": "Durant una trucada, na Maria comenta de passada que la infermera ja no ve a curar-li la úlcera del taló.",
+        "desarrollo_es": "El alumnado interpreta las prescripciones del plan de cuidados de Maria, como curas cada 48 horas o cambios posturales (0216-1e). Al compararlas con lo que cuenta en la llamada, decide qué profesionales deben intervenir (0831-4f) y redacta la comunicación de la incidencia con una propuesta de mejora (0831-4g).",
+        "desarrollo_ca": "L'alumnat interpreta les prescripcions del pla de cures de na Maria, com cures cada 48 hores o canvis posturals (0216-1e). En comparar-les amb el que explica a la trucada, decideix quins professionals hi han d'intervenir (0831-4f) i redacta la comunicació de la incidència amb una proposta de millora (0831-4g).",
+        "evidencia_es": "Análisis del plan y comunicación de incidencia redactada.",
+        "evidencia_ca": "Anàlisi del pla i comunicació d'incidència redactada.",
+        "dua_es": "Plan de cuidados simplificado y modelo de comunicación.",
+        "dua_ca": "Pla de cures simplificat i model de comunicació.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["a", "b"] },
+    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["g"] },
+    "justificacion_es": "Para dimensionar el personal y el material de un servicio hay que conocer las necesidades físicas de las personas atendidas.",
+    "justificacion_ca": "Per dimensionar el personal i el material d'un servei cal conèixer les necessitats físiques de les persones ateses.",
+    "actividades": [
+      {
+        "titulo_es": "¿Cuántas auxiliares necesita esta unidad?",
+        "titulo_ca": "Quantes auxiliars necessita aquesta unitat?",
+        "contexto_es": "Una residencia abre una unidad de doce plazas para personas con EPOC e insuficiencia cardiaca y debe calcular personal y equipos.",
+        "contexto_ca": "Una residència obre una unitat de dotze places per a persones amb MPOC i insuficiència cardíaca i ha de calcular personal i equips.",
+        "desarrollo_es": "El alumnado describe las alteraciones cardiovasculares y respiratorias más frecuentes de esos perfiles (0216-1a) y las necesidades de atención física que generan (0216-1b). Con ello valora los recursos humanos y materiales de la unidad: ratio por turno, oxígeno, pulsioxímetros y camas articuladas (1713-1g).",
+        "desarrollo_ca": "L'alumnat descriu les alteracions cardiovasculars i respiratòries més freqüents d'aquests perfils (0216-1a) i les necessitats d'atenció física que generen (0216-1b). Amb això valora els recursos humans i materials de la unitat: ràtio per torn, oxigen, pulsioxímetres i llits articulats (1713-1g).",
+        "evidencia_es": "Ficha de perfiles y tabla de recursos justificada.",
+        "evidencia_ca": "Fitxa de perfils i taula de recursos justificada.",
+        "dua_es": "Láminas anatómicas y hoja de cálculo con fórmulas preparadas.",
+        "dua_ca": "Làmines anatòmiques i full de càlcul amb fórmules preparades.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["g", "h"] },
+    "justificacion_es": "Elegir las ayudas técnicas de movilización adecuadas es también prever sus recursos y su coste dentro de un proyecto.",
+    "justificacion_ca": "Triar les ajudes tècniques de mobilització adequades és també preveure'n els recursos i el cost dins un projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Presupuesto de ayudas técnicas para un domicilio",
+        "titulo_ca": "Pressupost d'ajudes tècniques per a un domicili",
+        "contexto_es": "Una familia quiere cuidar en casa a su padre encamado y necesita saber qué ayudas técnicas comprar y cuánto costarán.",
+        "contexto_ca": "Una família vol tenir cura a casa del seu pare enllitat i necessita saber quines ajudes tècniques comprar i quant costaran.",
+        "desarrollo_es": "El alumnado selecciona las ayudas técnicas más adecuadas al estado del padre, como grúa, sábana deslizante o cama articulada (0216-2d). Prevé los recursos para instalarlas y formar a la familia (1713-2g) y elabora un presupuesto con alternativas de compra, alquiler y préstamo (1713-2h).",
+        "desarrollo_ca": "L'alumnat selecciona les ajudes tècniques més adequades a l'estat del pare, com grua, llençol lliscant o llit articulat (0216-2d). Preveu els recursos per instal·lar-les i formar la família (1713-2g) i elabora un pressupost amb alternatives de compra, lloguer i préstec (1713-2h).",
+        "evidencia_es": "Propuesta de ayudas técnicas y presupuesto comparado.",
+        "evidencia_ca": "Proposta d'ajudes tècniques i pressupost comparat.",
+        "dua_es": "Catálogo visual y plantilla de presupuesto con fórmulas.",
+        "dua_ca": "Catàleg visual i plantilla de pressupost amb fórmules.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["h"] },
+    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["d", "e"] },
+    "justificacion_es": "Una actividad de cocina con personas usuarias implica riesgos que deben preverse en el plan del proyecto.",
+    "justificacion_ca": "Una activitat de cuina amb persones usuàries implica riscs que s'han de preveure al pla del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Taller de ensaïmadas sin sustos",
+        "titulo_ca": "Taller d'ensaïmades sense ensurts",
+        "contexto_es": "El proyecto incluye un taller de ensaïmadas con personas usuarias del centro de día, algunas con disfagia y diabetes.",
+        "contexto_ca": "El projecte inclou un taller d'ensaïmades amb persones usuàries del centre de dia, algunes amb disfàgia i diabetis.",
+        "desarrollo_es": "El alumnado identifica qué momentos del taller implican riesgo, como el horno, los cuchillos o la degustación (1713-3d). Los incorpora al plan de prevención del centro con medios concretos (1713-3e) y fija medidas de seguridad para la degustación: texturas adaptadas, raciones controladas y supervisión (0216-4h).",
+        "desarrollo_ca": "L'alumnat identifica quins moments del taller impliquen risc, com el forn, els ganivets o el tast (1713-3d). Els incorpora al pla de prevenció del centre amb mitjans concrets (1713-3e) i fixa mesures de seguretat per al tast: textures adaptades, racions controlades i supervisió (0216-4h).",
+        "evidencia_es": "Matriz de riesgos y ficha de seguridad del taller.",
+        "evidencia_ca": "Matriu de riscs i fitxa de seguretat del taller.",
+        "dua_es": "Matriz con colores de semáforo y fotos de cada fase.",
+        "dua_ca": "Matriu amb colors de semàfor i fotos de cada fase.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["c", "d", "e"] },
+    "justificacion_es": "Los protocolos de observación del estado físico son la herramienta para detectar desviaciones en un proyecto de salud.",
+    "justificacion_ca": "Els protocols d'observació de l'estat físic són l'eina per detectar desviacions en un projecte de salut.",
+    "actividades": [
+      {
+        "titulo_es": "Seguimiento del programa de paseos",
+        "titulo_ca": "Seguiment del programa de passejades",
+        "contexto_es": "El proyecto del grupo puso en marcha paseos diarios en la residencia, pero a la tercera semana algunos residentes se fatigan más.",
+        "contexto_ca": "El projecte del grup va posar en marxa passejades diàries a la residència, però a la tercera setmana alguns residents es fatiguen més.",
+        "desarrollo_es": "El alumnado identifica qué debe incluir un protocolo de observación para los paseos: frecuencia cardiaca, saturación y escala de fatiga (0216-5a). Con los datos detecta desviaciones respecto a lo previsto (1713-4c), informa a la enfermera (1713-4d) y documenta los cambios aplicados, como acortar la ruta (1713-4e).",
+        "desarrollo_ca": "L'alumnat identifica què ha d'incloure un protocol d'observació per a les passejades: freqüència cardíaca, saturació i escala de fatiga (0216-5a). Amb les dades detecta desviacions respecte del que s'havia previst (1713-4c), n'informa la infermera (1713-4d) i documenta els canvis aplicats, com escurçar la ruta (1713-4e).",
+        "evidencia_es": "Protocolo de observación, informe de desviaciones y registro de cambios.",
+        "evidencia_ca": "Protocol d'observació, informe de desviacions i registre de canvis.",
+        "dua_es": "Escala de fatiga con caras y tabla de registro sencilla.",
+        "dua_ca": "Escala de fatiga amb cares i taula de registre senzilla.",
+        "metodologia_es": "investigación-acción.",
+        "metodologia_ca": "investigació-acció."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["f"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "La domótica ofrece soluciones innovadoras para lograr condiciones ambientales favorables a la salud en la habitación.",
+    "justificacion_ca": "La domòtica ofereix solucions innovadores per aconseguir condicions ambientals favorables a la salut a l'habitació.",
+    "actividades": [
+      {
+        "titulo_es": "Una habitación que se regula sola",
+        "titulo_ca": "Una habitació que es regula tota sola",
+        "contexto_es": "En verano, las habitaciones orientadas al sur superan los 30 °C y varios residentes encamados se deshidratan.",
+        "contexto_ca": "A l'estiu, les habitacions orientades al sud superen els 30 °C i diversos residents enllitats es deshidraten.",
+        "desarrollo_es": "El alumnado define las condiciones ambientales favorables para la atención: temperatura, humedad, luz y ruido (0216-1f). Después busca aspectos innovadores que puedan aplicarse, como sensores, persianas automáticas o avisos al control de enfermería (1713-2d), y propone una combinación realista.",
+        "desarrollo_ca": "L'alumnat defineix les condicions ambientals favorables per a l'atenció: temperatura, humitat, llum i renou (0216-1f). Després cerca aspectes innovadors que es puguin aplicar, com sensors, persianes automàtiques o avisos al control d'infermeria (1713-2d), i proposa una combinació realista.",
+        "evidencia_es": "Ficha de condiciones ambientales y propuesta de innovación.",
+        "evidencia_ca": "Fitxa de condicions ambientals i proposta d'innovació.",
+        "dua_es": "Termohigrómetro para medir en el aula y ejemplos en vídeo.",
+        "dua_ca": "Termohigròmetre per mesurar a l'aula i exemples en vídeo.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "0156", "ra": "RA2", "criterios": ["d", "i"] },
+    "justificacion_es": "Preparar la medicación de un residente extranjero puede exigir leer prospectos o informes en inglés.",
+    "justificacion_ca": "Preparar la medicació d'un resident estranger pot exigir llegir prospectes o informes en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "El prospecto que llegó de Londres",
+        "titulo_ca": "El prospecte que va arribar de Londres",
+        "contexto_es": "Mr Cooper ingresa con medicación comprada en el Reino Unido y los prospectos están solo en inglés.",
+        "contexto_ca": "Mr Cooper ingressa amb medicació comprada al Regne Unit i els prospectes només estan en anglès.",
+        "desarrollo_es": "El alumnado lee los prospectos y reconoce las ideas principales sin traducir cada palabra (0156-2d). Extrae los datos concretos que necesita: dosis, horario, vía y precauciones (0156-2i). Con ellos prepara la medicación del día según la pauta del plan de cuidados (0216-3b).",
+        "desarrollo_ca": "L'alumnat llegeix els prospectes i en reconeix les idees principals sense traduir cada paraula (0156-2d). N'extreu les dades concretes que necessita: dosi, horari, via i precaucions (0156-2i). Amb aquestes dades prepara la medicació del dia segons la pauta del pla de cures (0216-3b).",
+        "evidencia_es": "Ficha de medicación en castellano y pastillero preparado.",
+        "evidencia_ca": "Fitxa de medicació en català i pastiller preparat.",
+        "dua_es": "Glosario de términos farmacéuticos y prospectos ampliados.",
+        "dua_ca": "Glossari de termes farmacèutics i prospectes ampliats.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA3", "criterios": ["e", "f"] },
+    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["d", "f", "g"] },
+    "justificacion_es": "Explicar en inglés cómo se toman las constantes y qué signos de alarma vigilar refuerza tanto la técnica como el idioma.",
+    "justificacion_ca": "Explicar en anglès com es prenen les constants i quins signes d'alarma s'han de vigilar reforça tant la tècnica com l'idioma.",
+    "actividades": [
+      {
+        "titulo_es": "Constantes vitales explicadas en inglés",
+        "titulo_ca": "Constants vitals explicades en anglès",
+        "contexto_es": "Llega a la residencia una voluntaria de Erasmus que no habla castellano y debe aprender la rutina de constantes.",
+        "contexto_ca": "Arriba a la residència una voluntària d'Erasmus que no parla català i ha d'aprendre la rutina de constants.",
+        "desarrollo_es": "El alumnado enumera en inglés las tareas de la rutina de la mañana (0156-3f) y describe paso a paso la toma de constantes (0156-3g) con la terminología correcta (0156-3d). Mientras lo demuestra con una compañera toma las constantes (0216-3f) y explica qué signos de alteración obligan a parar y avisar (0216-3e).",
+        "desarrollo_ca": "L'alumnat enumera en anglès les tasques de la rutina del matí (0156-3f) i descriu pas a pas la presa de constants (0156-3g) amb la terminologia correcta (0156-3d). Mentre ho demostra amb una companya pren les constants (0216-3f) i explica quins signes d'alteració obliguen a aturar-se i avisar (0216-3e).",
+        "evidencia_es": "Demostración grabada en inglés con lista de verificación técnica.",
+        "evidencia_ca": "Demostració enregistrada en anglès amb llista de verificació tècnica.",
+        "dua_es": "Banco de vocabulario con imágenes y ensayo por parejas.",
+        "dua_ca": "Banc de vocabulari amb imatges i assaig per parelles.",
+        "metodologia_es": "AICLE (aprendizaje integrado de contenidos y lengua).",
+        "metodologia_ca": "AICLE (aprenentatge integrat de continguts i llengua)."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["b"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["g"] },
+    "justificacion_es": "Cuando la fisioterapeuta es extranjera, la movilización correcta depende de entender y seguir sus instrucciones orales en inglés.",
+    "justificacion_ca": "Quan la fisioterapeuta és estrangera, la mobilització correcta depèn d'entendre i seguir les seves instruccions orals en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Instrucciones de la fisioterapeuta en inglés",
+        "titulo_ca": "Instruccions de la fisioterapeuta en anglès",
+        "contexto_es": "La nueva fisioterapeuta, holandesa, da las indicaciones de las transferencias en inglés durante la sesión.",
+        "contexto_ca": "La nova fisioterapeuta, holandesa, dona les indicacions de les transferències en anglès durant la sessió.",
+        "desarrollo_es": "En parejas, una alumna da en inglés las órdenes de una transferencia («lock the brakes», «on three», «pivot») y la otra reconoce cada instrucción y decide si requiere respuesta verbal o solo acción (0156-1g). Siguiéndolas, realiza la transferencia adaptada al estado de la persona (0216-2b).",
+        "desarrollo_ca": "En parelles, una alumna dona en anglès les ordres d'una transferència («lock the brakes», «on three», «pivot») i l'altra reconeix cada instrucció i decideix si requereix resposta verbal o només acció (0156-1g). Seguint-les, fa la transferència adaptada a l'estat de la persona (0216-2b).",
+        "evidencia_es": "Práctica observada con lista de instrucciones comprendidas.",
+        "evidencia_ca": "Pràctica observada amb llista d'instruccions compreses.",
+        "dua_es": "Tarjetas de instrucciones con dibujos y repetición lenta.",
+        "dua_ca": "Targetes d'instruccions amb dibuixos i repetició lenta.",
+        "metodologia_es": "respuesta física total.",
+        "metodologia_ca": "resposta física total."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["d"] },
+    "b": { "modulo": "0156", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "Si la familia solo lee inglés, el registro de ingesta debe rellenarse con el vocabulario y las fórmulas propias del documento.",
+    "justificacion_ca": "Si la família només llegeix anglès, el registre d'ingesta s'ha d'emplenar amb el vocabulari i les fórmules pròpies del document.",
+    "actividades": [
+      {
+        "titulo_es": "Hoja de ingesta en inglés para la familia",
+        "titulo_ca": "Full d'ingesta en anglès per a la família",
+        "contexto_es": "La hija de Mrs Taylor vive en Manchester y pide recibir cada semana el registro de lo que come su madre.",
+        "contexto_ca": "La filla de Mrs Taylor viu a Manchester i demana rebre cada setmana el registre del que menja la seva mare.",
+        "desarrollo_es": "El alumnado comprueba durante una semana si la ingesta de Mrs Taylor se ajusta al plan de cuidados: raciones, líquidos y suplementos (0216-4d). Después rellena en inglés la hoja de ingesta del centro, con el vocabulario de alimentación y las fórmulas propias del documento (0156-4e).",
+        "desarrollo_ca": "L'alumnat comprova durant una setmana si la ingesta de Mrs Taylor s'ajusta al pla de cures: racions, líquids i suplements (0216-4d). Després emplena en anglès el full d'ingesta del centre, amb el vocabulari d'alimentació i les fórmules pròpies del document (0156-4e).",
+        "evidencia_es": "Registro semanal de ingesta en inglés.",
+        "evidencia_ca": "Registre setmanal d'ingesta en anglès.",
+        "dua_es": "Plantilla bilingüe y banco de alimentos con imágenes.",
+        "dua_ca": "Plantilla bilingüe i banc d'aliments amb imatges.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["c", "e"] },
+    "justificacion_es": "Las prescripciones pueden llegar por teléfono en inglés y hay que comprender su finalidad y ordenar bien sus partes.",
+    "justificacion_ca": "Les prescripcions poden arribar per telèfon en anglès i cal comprendre'n la finalitat i ordenar-ne bé les parts.",
+    "actividades": [
+      {
+        "titulo_es": "Mensaje de voz del médico de Mr Hughes",
+        "titulo_ca": "Missatge de veu del metge de Mr Hughes",
+        "contexto_es": "El médico privado de Mr Hughes deja un mensaje de voz en inglés con cambios en sus cuidados tras la última revisión.",
+        "contexto_ca": "El metge privat de Mr Hughes deixa un missatge de veu en anglès amb canvis en les seves cures després de la darrera revisió.",
+        "desarrollo_es": "El alumnado escucha el mensaje y reconoce su finalidad: informar, pedir algo o dar instrucciones (0156-1c). Ordena las partes del mensaje en una tabla (0156-1e) y las interpreta como prescripciones que deben incorporarse al plan de cuidados (0216-1e).",
+        "desarrollo_ca": "L'alumnat escolta el missatge i en reconeix la finalitat: informar, demanar alguna cosa o donar instruccions (0156-1c). Ordena les parts del missatge en una taula (0156-1e) i les interpreta com a prescripcions que s'han d'incorporar al pla de cures (0216-1e).",
+        "evidencia_es": "Tabla secuenciada del mensaje y actualización del plan.",
+        "evidencia_ca": "Taula seqüenciada del missatge i actualització del pla.",
+        "dua_es": "Audio repetible con transcripción opcional.",
+        "dua_ca": "Àudio repetible amb transcripció opcional.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA5", "criterios": ["c"] },
+    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Informar a una familia extranjera de un imprevisto exige haber recogido bien los hechos y saber describirlos en inglés.",
+    "justificacion_ca": "Informar una família estrangera d'un imprevist exigeix haver recollit bé els fets i saber-los descriure en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Contar en inglés la caída de esta mañana",
+        "titulo_ca": "Explicar en anglès la caiguda d'aquest matí",
+        "contexto_es": "Mrs Walsh ha resbalado en la ducha sin consecuencias graves y su hijo llama desde Dublín para saber qué ha pasado.",
+        "contexto_ca": "Mrs Walsh ha relliscat a la dutxa sense conseqüències greus i el seu fill telefona des de Dublín per saber què ha passat.",
+        "desarrollo_es": "El alumnado recoge información completa sobre lo ocurrido: hora, actividad, actuación y estado posterior (0216-5c). En una videollamada simulada describe al hijo en inglés, de forma breve y tranquila, este hecho imprevisto (0156-3c).",
+        "desarrollo_ca": "L'alumnat recull informació completa sobre el que ha passat: hora, activitat, actuació i estat posterior (0216-5c). En una videotrucada simulada descriu al fill en anglès, de manera breu i tranquil·la, aquest fet imprevist (0156-3c).",
+        "evidencia_es": "Registro de la contingencia y videollamada simulada.",
+        "evidencia_ca": "Registre de la contingència i videotrucada simulada.",
+        "dua_es": "Estructura de relato con conectores en inglés.",
+        "dua_ca": "Estructura de relat amb connectors en anglès.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "0156", "ra": "RA5", "criterios": ["a"] },
+    "justificacion_es": "Organizar el servicio de comidas para residentes de otros países pide conocer sus costumbres alimentarias.",
+    "justificacion_ca": "Organitzar el servei d'àpats per a residents d'altres països demana conèixer els seus costums alimentaris.",
+    "actividades": [
+      {
+        "titulo_es": "La hora del té en la residencia",
+        "titulo_ca": "L'hora del te a la residència",
+        "contexto_es": "Los residentes británicos se quejan de que cenan demasiado tarde y echan de menos el té de la tarde.",
+        "contexto_ca": "Els residents britànics es queixen que sopen massa tard i troben a faltar el te de l'horabaixa.",
+        "desarrollo_es": "El alumnado define los rasgos de las costumbres alimentarias británicas: horarios, té con leche o desayuno salado (0156-5a). Con ello reorganiza la distribución de comidas de su planta, respetando la hoja de dietas y ofreciendo un té adaptado a las 17 h (0216-4a).",
+        "desarrollo_ca": "L'alumnat defineix els trets dels costums alimentaris britànics: horaris, te amb llet o berenar salat (0156-5a). Amb això reorganitza la distribució d'àpats de la seva planta, respectant el full de dietes i oferint un te adaptat a les 17 h (0216-4a).",
+        "evidencia_es": "Ficha de costumbres y horario de servicio reorganizado.",
+        "evidencia_ca": "Fitxa de costums i horari de servei reorganitzat.",
+        "dua_es": "Imágenes de comidas típicas y entrevista a un residente.",
+        "dua_ca": "Imatges de menjars típics i entrevista a un resident.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA3", "criterios": ["h"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["i"] },
+    "justificacion_es": "Las medidas de protección generan residuos sanitarios que deben gestionarse según la normativa ambiental.",
+    "justificacion_ca": "Les mesures de protecció generen residus sanitaris que s'han de gestionar segons la normativa ambiental.",
+    "actividades": [
+      {
+        "titulo_es": "Guantes, agujas y pañales: cada uno a su sitio",
+        "titulo_ca": "Guants, agulles i bolquers: cadascun al seu lloc",
+        "contexto_es": "Una inspección detecta agujas de insulina en la bolsa de basura común de la planta.",
+        "contexto_ca": "Una inspecció detecta agulles d'insulina a la bossa de fems comuna de la planta.",
+        "desarrollo_es": "El alumnado repasa las medidas de protección e higiene de cada técnica sanitaria de la planta (0216-3h) y clasifica los residuos que generan según la normativa ambiental y sanitaria balear: contenedor de punzantes, grupo II o residuo urbano (1708-5i).",
+        "desarrollo_ca": "L'alumnat repassa les mesures de protecció i higiene de cada tècnica sanitària de la planta (0216-3h) i classifica els residus que generen segons la normativa ambiental i sanitària balear: contenidor de punxants, grup II o residu urbà (1708-5i).",
+        "evidencia_es": "Tabla de clasificación de residuos y cartel para la sala de curas.",
+        "evidencia_ca": "Taula de classificació de residus i cartell per a la sala de cures.",
+        "dua_es": "Material real (sin riesgo) para clasificar y cartel con colores.",
+        "dua_ca": "Material real (sense risc) per classificar i cartell amb colors.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["b", "d"] },
+    "justificacion_es": "El desperdicio alimentario de los comedores colectivos es un reto ambiental que se reduce organizando mejor el servicio.",
+    "justificacion_ca": "El malbaratament alimentari dels menjadors col·lectius és un repte ambiental que es redueix organitzant millor el servei.",
+    "actividades": [
+      {
+        "titulo_es": "Menos bandejas a la basura",
+        "titulo_ca": "Menys safates als fems",
+        "contexto_es": "La residencia tira cada día casi un tercio de la comida servida.",
+        "contexto_ca": "La residència llança cada dia gairebé un terç del menjar servit.",
+        "desarrollo_es": "El alumnado relaciona el desperdicio alimentario de los centros con el impacto ambiental y económico de la actividad (1708-2b). Propone medidas para reducirlo, como raciones a demanda o menús elegidos el día antes (1708-2d), y reorganiza el servicio de comidas aplicándolas sin salirse de la hoja de dietas (0216-4a).",
+        "desarrollo_ca": "L'alumnat relaciona el malbaratament alimentari dels centres amb l'impacte ambiental i econòmic de l'activitat (1708-2b). Proposa mesures per reduir-lo, com racions a demanda o menús triats el dia abans (1708-2d), i reorganitza el servei d'àpats aplicant-les sense sortir-se del full de dietes (0216-4a).",
+        "evidencia_es": "Pesaje de restos antes y después y plan de servicio revisado.",
+        "evidencia_ca": "Pesatge de restes abans i després i pla de servei revisat.",
+        "dua_es": "Báscula, tabla de registro y gráfico comparativo guiado.",
+        "dua_ca": "Bàscula, taula de registre i gràfic comparatiu guiat.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["f"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["d", "f"] },
+    "justificacion_es": "Limpiar y conservar prótesis implica productos y consumos con impacto ambiental que pueden reducirse.",
+    "justificacion_ca": "Netejar i conservar pròtesis implica productes i consums amb impacte ambiental que es poden reduir.",
+    "actividades": [
+      {
+        "titulo_es": "Limpieza de prótesis con menos impacto",
+        "titulo_ca": "Neteja de pròtesis amb menys impacte",
+        "contexto_es": "En la planta se usan pastillas efervescentes y vasos desechables para cada prótesis dental, cada noche.",
+        "contexto_ca": "A la planta es fan servir pastilles efervescents i gots d'un sol ús per a cada pròtesi dental, cada nit.",
+        "desarrollo_es": "El alumnado describe la técnica correcta de limpieza y conservación de prótesis dentales y auditivas (0216-2f). Evalúa el impacto de la rutina actual en agua, envases y residuos (1708-5d) y aplica estrategias sostenibles, como vasos reutilizables identificados y productos a granel (1708-5f).",
+        "desarrollo_ca": "L'alumnat descriu la tècnica correcta de neteja i conservació de pròtesis dentals i auditives (0216-2f). Avalua l'impacte de la rutina actual en aigua, envasos i residus (1708-5d) i aplica estratègies sostenibles, com gots reutilitzables identificats i productes a granel (1708-5f).",
+        "evidencia_es": "Protocolo de limpieza revisado y cálculo de residuos evitados.",
+        "evidencia_ca": "Protocol de neteja revisat i càlcul de residus evitats.",
+        "dua_es": "Demostración práctica y hoja de cálculo sencilla.",
+        "dua_ca": "Demostració pràctica i full de càlcul senzill.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1708", "ra": "RA4", "criterios": ["a", "b", "c"] },
+    "justificacion_es": "Las ayudas técnicas de movilización pueden reutilizarse en un banco de préstamo, un ejemplo claro de economía circular.",
+    "justificacion_ca": "Les ajudes tècniques de mobilització es poden reutilitzar en un banc de préstec, un exemple clar d'economia circular.",
+    "actividades": [
+      {
+        "titulo_es": "Banco de préstamo de ayudas técnicas",
+        "titulo_ca": "Banc de préstec d'ajudes tècniques",
+        "contexto_es": "En el pueblo hay grúas y andadores guardados en trasteros mientras otras familias esperan meses para conseguirlos.",
+        "contexto_ca": "Al poble hi ha grues i caminadors desats en trasters mentre altres famílies esperen mesos per aconseguir-los.",
+        "desarrollo_es": "El alumnado describe el modelo actual de compra, uso breve y abandono de estas ayudas (1708-4a), identifica los principios de la economía circular aplicables (1708-4b) y compara sus beneficios con el modelo clásico (1708-4c). Para el banco de préstamo define cómo elegir la ayuda adecuada a cada persona según su estado (0216-2d).",
+        "desarrollo_ca": "L'alumnat descriu el model actual de compra, ús breu i abandonament d'aquestes ajudes (1708-4a), identifica els principis de l'economia circular aplicables (1708-4b) i en compara els beneficis amb el model clàssic (1708-4c). Per al banc de préstec defineix com triar l'ajuda adequada a cada persona segons el seu estat (0216-2d).",
+        "evidencia_es": "Propuesta del banco de préstamo con ficha de selección de ayudas.",
+        "evidencia_ca": "Proposta del banc de préstec amb fitxa de selecció d'ajudes.",
+        "dua_es": "Esquema lineal frente a circular y catálogo con fotos.",
+        "dua_ca": "Esquema lineal enfront de circular i catàleg amb fotos.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["d"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["a", "c"] },
+    "justificacion_es": "El cambio climático multiplica las olas de calor, uno de los factores del entorno que más dañan la salud de las personas dependientes.",
+    "justificacion_ca": "El canvi climàtic multiplica les onades de calor, un dels factors de l'entorn que més danyen la salut de les persones dependents.",
+    "actividades": [
+      {
+        "titulo_es": "Mapa de riesgo por calor en la residencia",
+        "titulo_ca": "Mapa de risc per calor a la residència",
+        "contexto_es": "Cada verano aumentan los ingresos hospitalarios de residentes por golpes de calor.",
+        "contexto_ca": "Cada estiu augmenten els ingressos hospitalaris de residents per cops de calor.",
+        "desarrollo_es": "El alumnado identifica el calor extremo como reto ambiental ligado al cambio climático (1708-2a) y analiza sus efectos sobre las personas mayores y los servicios de cuidados (1708-2c). Después recorre el centro y marca en un plano las zonas y características del entorno que empeoran la salud en verano (0216-1d).",
+        "desarrollo_ca": "L'alumnat identifica la calor extrema com a repte ambiental lligat al canvi climàtic (1708-2a) i n'analitza els efectes sobre les persones grans i els serveis de cures (1708-2c). Després recorre el centre i marca en un plànol les zones i característiques de l'entorn que empitjoren la salut a l'estiu (0216-1d).",
+        "evidencia_es": "Plano de riesgo por calor con propuestas de mejora.",
+        "evidencia_ca": "Plànol de risc per calor amb propostes de millora.",
+        "dua_es": "Plano impreso grande, termómetro y pegatinas de colores.",
+        "dua_ca": "Plànol imprès gran, termòmetre i adhesius de colors.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["c", "g"] },
+    "justificacion_es": "Asesorar sobre absorbentes y material de excretas es también valorar su ciclo de vida y las alternativas reutilizables.",
+    "justificacion_ca": "Assessorar sobre absorbents i material d'excretes és també valorar-ne el cicle de vida i les alternatives reutilitzables.",
+    "actividades": [
+      {
+        "titulo_es": "Absorbentes desechables o reutilizables",
+        "titulo_ca": "Absorbents d'un sol ús o reutilitzables",
+        "contexto_es": "Una familia del SAD gasta más de cien euros al mes en absorbentes y pregunta por las alternativas lavables.",
+        "contexto_ca": "Una família del SAD gasta més de cent euros al mes en absorbents i demana per les alternatives rentables.",
+        "desarrollo_es": "El alumnado analiza el ciclo de vida de un absorbente desechable y de uno lavable (1708-5g) y contrasta los beneficios de cada modelo en coste, residuos y comodidad (1708-5c). Con esa comparación asesora a la familia sobre el uso del material elegido y su eliminación correcta (0216-4e).",
+        "desarrollo_ca": "L'alumnat analitza el cicle de vida d'un absorbent d'un sol ús i d'un de rentable (1708-5g) i contrasta els beneficis de cada model en cost, residus i comoditat (1708-5c). Amb aquesta comparació assessora la família sobre l'ús del material triat i la seva eliminació correcta (0216-4e).",
+        "evidencia_es": "Tabla comparativa y guion de asesoramiento a la familia.",
+        "evidencia_ca": "Taula comparativa i guió d'assessorament a la família.",
+        "dua_es": "Muestras de ambos productos y calculadora de costes.",
+        "dua_ca": "Mostres dels dos productes i calculadora de costos.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA5", "criterios": ["b"] },
+    "b": { "modulo": "1708", "ra": "RA6", "criterios": ["c", "d"] },
+    "justificacion_es": "Pasar los registros sanitarios a soporte informático reduce papel y permite medir ese avance dentro del plan de sostenibilidad.",
+    "justificacion_ca": "Passar els registres sanitaris a suport informàtic redueix paper i permet mesurar aquest avanç dins el pla de sostenibilitat.",
+    "actividades": [
+      {
+        "titulo_es": "Papel cero en los registros de planta",
+        "titulo_ca": "Paper zero als registres de planta",
+        "contexto_es": "El plan de sostenibilidad del grupo residencial fija reducir un 70 % el papel en tres años.",
+        "contexto_ca": "El pla de sostenibilitat del grup residencial fixa reduir un 70 % el paper en tres anys.",
+        "desarrollo_es": "El alumnado rellena los mismos protocolos de observación en papel y en el programa informático del centro (0216-5b). Calcula el papel que se ahorraría y define la acción dentro del plan de sostenibilidad (1708-6c) con una métrica de seguimiento, como hojas impresas por residente y mes (1708-6d).",
+        "desarrollo_ca": "L'alumnat emplena els mateixos protocols d'observació en paper i en el programa informàtic del centre (0216-5b). Calcula el paper que s'estalviaria i defineix l'acció dins el pla de sostenibilitat (1708-6c) amb una mètrica de seguiment, com fulls impresos per resident i mes (1708-6d).",
+        "evidencia_es": "Registros completados y ficha de acción con indicador.",
+        "evidencia_ca": "Registres completats i fitxa d'acció amb indicador.",
+        "dua_es": "Plantilla de ficha de acción y ejemplo de indicador.",
+        "dua_ca": "Plantilla de fitxa d'acció i exemple d'indicador.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["h"] },
+    "b": { "modulo": "1708", "ra": "RA3", "criterios": ["a", "b"] },
+    "justificacion_es": "Promover el autocuidado contribuye directamente al ODS 3 y supone riesgos y oportunidades para el servicio.",
+    "justificacion_ca": "Promoure l'autocura contribueix directament a l'ODS 3 i suposa riscs i oportunitats per al servei.",
+    "actividades": [
+      {
+        "titulo_es": "Autocuidado y ODS 3 en el centro de día",
+        "titulo_ca": "Autocura i ODS 3 al centre de dia",
+        "contexto_es": "El centro de día quiere un programa de autocuidado y la dirección pregunta qué gana y qué arriesga con él.",
+        "contexto_ca": "El centre de dia vol un programa d'autocura i la direcció demana què hi guanya i què hi arrisca.",
+        "desarrollo_es": "El alumnado identifica el ODS 3 como el más relevante para su actividad (1708-3a) y analiza qué riesgos y oportunidades supone, como la menor dependencia o la necesidad de formar al personal (1708-3b). Con ello argumenta ante la dirección el valor de promover el autocuidado (0216-1h).",
+        "desarrollo_ca": "L'alumnat identifica l'ODS 3 com el més rellevant per a la seva activitat (1708-3a) i analitza quins riscs i oportunitats suposa, com la menor dependència o la necessitat de formar el personal (1708-3b). Amb això argumenta davant la direcció el valor de promoure l'autocura (0216-1h).",
+        "evidencia_es": "Matriz de riesgos y oportunidades y argumentario.",
+        "evidencia_ca": "Matriu de riscs i oportunitats i argumentari.",
+        "dua_es": "Plantilla DAFO simplificada y ejemplos de programas.",
+        "dua_ca": "Plantilla DAFO simplificada i exemples de programes.",
+        "metodologia_es": "debate argumentado.",
+        "metodologia_ca": "debat argumentat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["a", "b"] },
+    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Las pruebas prácticas de las bolsas de empleo evalúan técnicas de posicionamiento y movilización junto con la actitud.",
+    "justificacion_ca": "Les proves pràctiques de les borses d'ocupació avaluen tècniques de posicionament i mobilització juntament amb l'actitud.",
+    "actividades": [
+      {
+        "titulo_es": "Simulacro de prueba práctica del SAD municipal",
+        "titulo_ca": "Simulacre de prova pràctica del SAD municipal",
+        "contexto_es": "El ayuntamiento abre una bolsa de auxiliares del SAD con una prueba práctica de cambios posturales y transferencias.",
+        "contexto_ca": "L'ajuntament obre una borsa d'auxiliars del SAD amb una prova pràctica de canvis posturals i transferències.",
+        "desarrollo_es": "En un simulacro con tribunal, el alumnado coloca a una persona encamada en decúbito lateral (0216-2a) y la traslada a la silla adaptando la técnica a su estado (0216-2b). Al terminar, el tribunal valora con el alumnado qué actitudes y aptitudes han pesado en la nota (1710-1c).",
+        "desarrollo_ca": "En un simulacre amb tribunal, l'alumnat col·loca una persona enllitada en decúbit lateral (0216-2a) i la trasllada a la cadira adaptant la tècnica al seu estat (0216-2b). En acabar, el tribunal valora amb l'alumnat quines actituds i aptituds han pesat en la nota (1710-1c).",
+        "evidencia_es": "Hoja de evaluación del tribunal y reflexión personal.",
+        "evidencia_ca": "Full d'avaluació del tribunal i reflexió personal.",
+        "dua_es": "Criterios del tribunal conocidos de antemano y ensayo previo.",
+        "dua_ca": "Criteris del tribunal coneguts per endavant i assaig previ.",
+        "metodologia_es": "simulación de proceso selectivo.",
+        "metodologia_ca": "simulació de procés selectiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA4", "criterios": ["b"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["h"] },
+    "justificacion_es": "Las técnicas de apoyo a la ingesta inspiran utensilios adaptados que pueden validarse con prototipos.",
+    "justificacion_ca": "Les tècniques de suport a la ingesta inspiren estris adaptats que es poden validar amb prototips.",
+    "actividades": [
+      {
+        "titulo_es": "Prototipo de cuchara para temblor",
+        "titulo_ca": "Prototip de cullera per a tremolor",
+        "contexto_es": "Varias personas con párkinson del centro dejan de comer solas porque la comida se les cae de la cuchara.",
+        "contexto_ca": "Diverses persones amb Parkinson del centre deixen de menjar soles perquè el menjar els cau de la cullera.",
+        "desarrollo_es": "El alumnado aplica distintas técnicas de apoyo a la ingesta con estas personas y observa en qué momento falla la autonomía (0216-4b). A partir de ello construye un prototipo sencillo, como un mango engrosado con lastre, y lo prueba para comprobar si resuelve el problema (1710-4h).",
+        "desarrollo_ca": "L'alumnat aplica diferents tècniques de suport a la ingesta amb aquestes persones i observa en quin moment falla l'autonomia (0216-4b). A partir d'això construeix un prototip senzill, com un mànec engruixit amb llast, i el prova per comprovar si resol el problema (1710-4h).",
+        "evidencia_es": "Prototipo, registro de pruebas y conclusiones.",
+        "evidencia_ca": "Prototip, registre de proves i conclusions.",
+        "dua_es": "Materiales variados y trabajo en pequeños grupos.",
+        "dua_ca": "Materials variats i feina en grups petits.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA5", "criterios": ["h"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["a", "e"] },
+    "justificacion_es": "Los sensores y aplicaciones de seguimiento son innovaciones que mejoran el bienestar al permitir un control continuo de la salud.",
+    "justificacion_ca": "Els sensors i les aplicacions de seguiment són innovacions que milloren el benestar perquè permeten un control continu de la salut.",
+    "actividades": [
+      {
+        "titulo_es": "Sensores que avisan antes de la caída",
+        "titulo_ca": "Sensors que avisen abans de la caiguda",
+        "contexto_es": "Una empresa ofrece al centro unos sensores de cama que avisan si el residente se levanta de noche.",
+        "contexto_ca": "Una empresa ofereix al centre uns sensors de llit que avisen si el resident s'aixeca de nit.",
+        "desarrollo_es": "El alumnado argumenta por qué el seguimiento continuo de la evolución física mejora el bienestar de la persona (0216-5h). Relaciona esta innovación con una sociedad más sostenible y cuidadora (1710-3a) y configura una aplicación de prueba para ver qué datos recoge y cómo se consultan (1710-3e).",
+        "desarrollo_ca": "L'alumnat argumenta per què el seguiment continu de l'evolució física millora el benestar de la persona (0216-5h). Relaciona aquesta innovació amb una societat més sostenible i cuidadora (1710-3a) i configura una aplicació de prova per veure quines dades recull i com es consulten (1710-3e).",
+        "evidencia_es": "Informe de valoración de la innovación y capturas de la prueba.",
+        "evidencia_ca": "Informe de valoració de la innovació i captures de la prova.",
+        "dua_es": "Demostración en directo y guía visual de la aplicación.",
+        "dua_ca": "Demostració en directe i guia visual de l'aplicació.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA1", "criterios": ["g", "h"] },
+    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["a", "d"] },
+    "justificacion_es": "Un programa comunitario de autocuidado es un proyecto de innovación social que nace de detectar necesidades reales.",
+    "justificacion_ca": "Un programa comunitari d'autocura és un projecte d'innovació social que neix de detectar necessitats reals.",
+    "actividades": [
+      {
+        "titulo_es": "Escuela de autocuidado en el casal de mayores",
+        "titulo_ca": "Escola d'autocura al casal de gent gran",
+        "contexto_es": "El casal de mayores del barrio quiere ofrecer algo útil para la salud, pero no sabe qué necesitan sus socios.",
+        "contexto_ca": "El casal de gent gran del barri vol oferir alguna cosa útil per a la salut, però no sap què necessiten els socis.",
+        "desarrollo_es": "El alumnado analiza qué es la innovación social con ejemplos de proyectos de salud comunitaria (1710-5a) y aplica el pensamiento de diseño con los socios para detectar sus necesidades (1710-5d). Diseña después una «escuela de autocuidado» donde las personas participan activamente (0216-1g) y que fomenta su autonomía en salud (0216-1h).",
+        "desarrollo_ca": "L'alumnat analitza què és la innovació social amb exemples de projectes de salut comunitària (1710-5a) i aplica el pensament de disseny amb els socis per detectar-ne les necessitats (1710-5d). Dissenya després una «escola d'autocura» on les persones participen activament (0216-1g) i que en fomenta l'autonomia en salut (0216-1h).",
+        "evidencia_es": "Mapa de necesidades y programa de la escuela de autocuidado.",
+        "evidencia_ca": "Mapa de necessitats i programa de l'escola d'autocura.",
+        "dua_es": "Dinámica de empatía con tarjetas y programa en formato cartel.",
+        "dua_ca": "Dinàmica d'empatia amb targetes i programa en format cartell.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0216", "ra": "RA2", "criterios": ["h"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["d"] },
+    "justificacion_es": "Una idea emprendedora de acompañamiento debe incorporar el valor ético de potenciar la autonomía de la persona.",
+    "justificacion_ca": "Una idea emprenedora d'acompanyament ha d'incorporar el valor ètic de potenciar l'autonomia de la persona.",
+    "actividades": [
+      {
+        "titulo_es": "Paseos acompañados con valores",
+        "titulo_ca": "Passejades acompanyades amb valors",
+        "contexto_es": "Un grupo de alumnas quiere crear un servicio de acompañamiento para pasear a personas mayores con movilidad reducida.",
+        "contexto_ca": "Un grup d'alumnes vol crear un servei d'acompanyament per passejar persones grans amb mobilitat reduïda.",
+        "desarrollo_es": "El alumnado incorpora a su idea emprendedora valores éticos y sociales y los recoge en un pequeño balance social (1710-4d). Entre ellos destaca el de potenciar la autonomía: la persona camina todo lo que puede y decide la ruta, aunque sea más lento (0216-2h).",
+        "desarrollo_ca": "L'alumnat incorpora a la seva idea emprenedora valors ètics i socials i els recull en un petit balanç social (1710-4d). Entre aquests destaca el de potenciar l'autonomia: la persona camina tot el que pot i decideix la ruta, encara que sigui més lent (0216-2h).",
+        "evidencia_es": "Carta de valores del servicio y balance social inicial.",
+        "evidencia_ca": "Carta de valors del servei i balanç social inicial.",
+        "dua_es": "Ejemplos de balances sociales y plantilla guiada.",
+        "dua_ca": "Exemples de balanços socials i plantilla guiada.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  }
+]

@@ -1,0 +1,939 @@
+[
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0216",
+      "ra": "RA3",
+      "criterios": [
+        "f",
+        "g"
+      ]
+    },
+    "justificacion_es": "Explicar con pictogramas qué se va a hacer permite que la persona sin habla participe en la toma de constantes.",
+    "justificacion_ca": "Explicar amb pictogrames què es farà permet que la persona sense parla participi en la presa de constants.",
+    "actividades": [
+      {
+        "titulo_es": "Tablero para la toma de constantes",
+        "titulo_ca": "Tauler per a la presa de constants",
+        "contexto_es": "Miquel, con autismo y sin lenguaje oral, se agita cada vez que le colocan el tensiómetro.",
+        "contexto_ca": "En Miquel, amb autisme i sense llenguatge oral, s'agita cada vegada que li posen el tensiòmetre.",
+        "desarrollo_es": "El alumnado crea con un tablero y pictogramas la secuencia «brazo – aprieta – suelta – termina» (0214-2b) y la coloca en un soporte que Miquel pueda señalar con facilidad (0214-2f). Con ese apoyo toma la tensión, el pulso y la temperatura siguiendo la prescripción (0216-3f) y le invita a señalar en el tablero cuándo está listo (0216-3g).",
+        "desarrollo_ca": "L'alumnat crea amb un tauler i pictogrames la seqüència «braç – estreny – amolla – acaba» (0214-2b) i la col·loca en un suport que en Miquel pugui assenyalar amb facilitat (0214-2f). Amb aquest suport pren la tensió, el pols i la temperatura seguint la prescripció (0216-3f) i el convida a assenyalar al tauler quan està preparat (0216-3g).",
+        "evidencia_es": "Tablero de la secuencia y registro de constantes de la práctica.",
+        "evidencia_ca": "Tauler de la seqüència i registre de constants de la pràctica.",
+        "dua_es": "Pictogramas plastificados con velcro y práctica previa con maniquí.",
+        "dua_ca": "Pictogrames plastificats amb velcro i pràctica prèvia amb maniquí.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0216",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Conocer los signos de dolor, frío o cansancio permite que una persona sorda avise de un deterioro físico a tiempo.",
+    "justificacion_ca": "Conèixer els signes de dolor, fred o cansament permet que una persona sorda avisi d'un deteriorament físic a temps.",
+    "actividades": [
+      {
+        "titulo_es": "Signos para decir que algo duele",
+        "titulo_ca": "Signes per dir que alguna cosa fa mal",
+        "contexto_es": "Catalina, sorda y con artrosis, solo usa lengua de signos y en el turno de noche nadie entiende cuándo tiene dolor.",
+        "contexto_ca": "Na Catalina, sorda i amb artrosi, només fa servir llengua de signes i al torn de nit ningú no entén quan té dolor.",
+        "desarrollo_es": "El alumnado aprende los signos de uso habitual en el cuidado diario: dolor, frío, mareo, cansancio o aseo (0214-3b). Con un listado de signos de deterioro físico, como la pérdida de apetito o las úlceras incipientes, crea un póster que une cada señal con el signo para preguntar por ella (0216-1c).",
+        "desarrollo_ca": "L'alumnat aprèn els signes d'ús habitual en la cura diària: dolor, fred, mareig, cansament o higiene (0214-3b). Amb un llistat de signes de deteriorament físic, com la pèrdua de gana o les úlceres incipients, crea un pòster que relaciona cada senyal amb el signe per preguntar-hi (0216-1c).",
+        "evidencia_es": "Póster bilingüe signos-síntomas y prueba práctica de signado.",
+        "evidencia_ca": "Pòster bilingüe signes-símptomes i prova pràctica de signació.",
+        "dua_es": "Vídeos de signos a cámara lenta y práctica en espejo.",
+        "dua_ca": "Vídeos de signes a càmera lenta i pràctica davant el mirall.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0216",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "justificacion_es": "Entender lo que la persona comunica con su sistema durante la comida permite adaptar la ayuda y respetar sus gustos.",
+    "justificacion_ca": "Entendre el que la persona comunica amb el seu sistema durant el menjar permet adaptar l'ajuda i respectar-ne els gusts.",
+    "actividades": [
+      {
+        "titulo_es": "La comida que Joana elige",
+        "titulo_ca": "El menjar que tria na Joana",
+        "contexto_es": "Joana, con ELA avanzada, usa un comunicador de mirada y siempre le dan de comer al mismo ritmo y en el mismo orden.",
+        "contexto_ca": "Na Joana, amb ELA avançada, fa servir un comunicador de mirada i sempre li donen de menjar al mateix ritme i en el mateix ordre.",
+        "desarrollo_es": "El alumnado interpreta los mensajes que Joana compone con la mirada, como «más despacio», «agua» o «primero el postre» (0214-2d). Con esa información aplica la técnica de apoyo a la ingesta adecuada a su disfagia (0216-4b) y cuida que la comida sea un rato agradable, sin prisas y con conversación (0216-4f).",
+        "desarrollo_ca": "L'alumnat interpreta els missatges que na Joana compon amb la mirada, com «més a poc a poc», «aigua» o «primer les postres» (0214-2d). Amb aquesta informació aplica la tècnica de suport a la ingesta adequada a la seva disfàgia (0216-4b) i té cura que el menjar sigui una estona agradable, sense presses i amb conversa (0216-4f).",
+        "evidencia_es": "Registro de mensajes interpretados y práctica de ingesta evaluada.",
+        "evidencia_ca": "Registre de missatges interpretats i pràctica d'ingesta avaluada.",
+        "dua_es": "Simulador de comunicador en tableta y demostración guiada.",
+        "dua_ca": "Simulador de comunicador en tauleta i demostració guiada.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0216",
+      "ra": "RA5",
+      "criterios": [
+        "f",
+        "g"
+      ]
+    },
+    "justificacion_es": "Lo que se registra sobre comunicación y salud solo es útil si llega al equipo interdisciplinar a tiempo y por el canal correcto.",
+    "justificacion_ca": "El que es registra sobre comunicació i salut només és útil si arriba a l'equip interdisciplinari a temps i pel canal correcte.",
+    "actividades": [
+      {
+        "titulo_es": "Parte de turno con datos de salud y comunicación",
+        "titulo_ca": "Comunicat de torn amb dades de salut i comunicació",
+        "contexto_es": "Un residente ha dejado de usar su tablero y además ha comido menos; nadie lo ha relacionado porque cada dato está en un registro distinto.",
+        "contexto_ca": "Un resident ha deixat de fer servir el seu tauler i, a més, ha menjat menys; ningú no ho ha relacionat perquè cada dada és en un registre diferent.",
+        "desarrollo_es": "El alumnado registra en el plan de cuidados los datos de ingesta y de uso del tablero de esa semana (0216-5f). En una reunión simulada argumenta por qué ambos datos deben llegar juntos al equipo (0214-4b) y los transmite por el canal establecido en el momento adecuado (0216-5g).",
+        "desarrollo_ca": "L'alumnat registra al pla de cures les dades d'ingesta i d'ús del tauler d'aquella setmana (0216-5f). En una reunió simulada argumenta per què les dues dades han d'arribar juntes a l'equip (0214-4b) i les transmet pel canal establert en el moment adequat (0216-5g).",
+        "evidencia_es": "Registro cumplimentado y parte de turno presentado al equipo.",
+        "evidencia_ca": "Registre emplenat i comunicat de torn presentat a l'equip.",
+        "dua_es": "Modelo de parte de turno con apartados y ejemplo resuelto.",
+        "dua_ca": "Model de comunicat de torn amb apartats i exemple resolt.",
+        "metodologia_es": "simulación de reunión de equipo.",
+        "metodologia_ca": "simulació de reunió d'equip."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0216",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Comunicadores, pulsadores y soportes deben fijarse con seguridad para que no causen accidentes durante las movilizaciones.",
+    "justificacion_ca": "Comunicadors, polsadors i suports s'han de fixar amb seguretat perquè no causin accidents durant les mobilitzacions.",
+    "actividades": [
+      {
+        "titulo_es": "El soporte del comunicador en la silla",
+        "titulo_ca": "El suport del comunicador a la cadira",
+        "contexto_es": "Durante una transferencia, el brazo articulado del comunicador golpeó a un usuario en la cara.",
+        "contexto_ca": "Durant una transferència, el braç articulat del comunicador va colpejar un usuari a la cara.",
+        "desarrollo_es": "El alumnado argumenta qué riesgos implica cada elemento del sistema de comunicación, como cables, brazos articulados o tabletas sueltas (0214-1g). Después elabora y practica un protocolo de transferencia que incluye retirar o bloquear el soporte y revisar el entorno antes de mover a la persona (0216-2e).",
+        "desarrollo_ca": "L'alumnat argumenta quins riscs implica cada element del sistema de comunicació, com cables, braços articulats o tauletes soltes (0214-1g). Després elabora i practica un protocol de transferència que inclou retirar o bloquejar el suport i revisar l'entorn abans de moure la persona (0216-2e).",
+        "evidencia_es": "Mapa de riesgos del sistema y protocolo de transferencia segura.",
+        "evidencia_ca": "Mapa de riscs del sistema i protocol de transferència segura.",
+        "dua_es": "Fotos del equipo real y lista de pasos con iconos.",
+        "dua_ca": "Fotos de l'equip real i llista de passos amb icones.",
+        "metodologia_es": "análisis de incidentes.",
+        "metodologia_ca": "anàlisi d'incidents."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0216",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "justificacion_es": "Antes de una exploración o de aplicar calor, la persona sorda necesita que se le anticipe con signos qué va a ocurrir.",
+    "justificacion_ca": "Abans d'una exploració o d'aplicar calor, la persona sorda necessita que se li anticipi amb signes què passarà.",
+    "actividades": [
+      {
+        "titulo_es": "Anticipar con signos la visita médica",
+        "titulo_ca": "Anticipar amb signes la visita mèdica",
+        "contexto_es": "El médico del centro visita a Pau, sordo, por un dolor de rodilla y pauta calor local; Pau se asusta porque nadie le explica nada.",
+        "contexto_ca": "El metge del centre visita en Pau, sord, per un mal de genoll i pauta calor local; en Pau s'espanta perquè ningú no li explica res.",
+        "desarrollo_es": "El alumnado prepara mensajes signados sencillos para anticipar cada paso: «túmbate», «el médico mira la rodilla», «ahora calor» (0214-3c). Coloca a Pau en la posición que facilita la exploración de la rodilla (0216-3a) y selecciona el tratamiento de calor indicado en su plan, con tiempo y protección de la piel (0216-3d).",
+        "desarrollo_ca": "L'alumnat prepara missatges signats senzills per anticipar cada pas: «ajeu-te», «el metge mira el genoll», «ara calor» (0214-3c). Col·loca en Pau en la posició que facilita l'exploració del genoll (0216-3a) i selecciona el tractament de calor indicat al seu pla, amb temps i protecció de la pell (0216-3d).",
+        "evidencia_es": "Secuencia de mensajes signados y práctica de posición y calor local.",
+        "evidencia_ca": "Seqüència de missatges signats i pràctica de posició i calor local.",
+        "dua_es": "Vídeo modelo de los signos y tarjetas de posiciones anatómicas.",
+        "dua_ca": "Vídeo model dels signes i targetes de posicions anatòmiques.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Explicar el terminal de teleasistencia a una persona con dificultades de comunicación exige identificar qué le facilita entender.",
+    "justificacion_ca": "Explicar el terminal de teleassistència a una persona amb dificultats de comunicació exigeix identificar què li facilita entendre.",
+    "actividades": [
+      {
+        "titulo_es": "El botón rojo explicado a Damià",
+        "titulo_ca": "El botó vermell explicat a en Damià",
+        "contexto_es": "Damià, con deterioro cognitivo leve, acaba de darse de alta en teleasistencia y no recuerda para qué sirve el colgante.",
+        "contexto_ca": "En Damià, amb deteriorament cognitiu lleu, s'acaba de donar d'alta a teleassistència i no recorda per a què serveix el penjoll.",
+        "desarrollo_es": "El alumnado identifica qué favorece y qué dificulta la comunicación con Damià: atención breve, memoria reciente y buena comprensión visual (0214-1d). Con ello adapta la explicación del terminal y del colgante en una llamada, con frases cortas, repeticiones y una tarjeta junto al teléfono (0831-3c).",
+        "desarrollo_ca": "L'alumnat identifica què afavoreix i què dificulta la comunicació amb en Damià: atenció breu, memòria recent i bona comprensió visual (0214-1d). Amb això adapta l'explicació del terminal i del penjoll en una trucada, amb frases curtes, repeticions i una targeta al costat del telèfon (0831-3c).",
+        "evidencia_es": "Perfil comunicativo de Damià, guion de llamada y tarjeta recordatoria.",
+        "evidencia_ca": "Perfil comunicatiu d'en Damià, guió de trucada i targeta recordatòria.",
+        "dua_es": "Modelo de tarjeta con fotos del terminal y ensayo por parejas.",
+        "dua_ca": "Model de targeta amb fotos del terminal i assaig per parelles.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Las herramientas telemáticas de la central pueden convertirse en un apoyo a la comunicación si incorporan imagen y pictogramas.",
+    "justificacion_ca": "Les eines telemàtiques de la central es poden convertir en un suport a la comunicació si incorporen imatge i pictogrames.",
+    "actividades": [
+      {
+        "titulo_es": "Videollamada con pictogramas en la central",
+        "titulo_ca": "Videotrucada amb pictogrames a la central",
+        "contexto_es": "La central de teleasistencia estrena un terminal con pantalla y quiere atender a personas usuarias sin lenguaje oral.",
+        "contexto_ca": "La central de teleassistència estrena un terminal amb pantalla i vol atendre persones usuàries sense llenguatge oral.",
+        "desarrollo_es": "El alumnado explora la aplicación de videollamada de la central y prueba a compartir en pantalla un tablero de pictogramas durante la llamada (0831-1e). Justifica ante la coordinación por qué estas tecnologías mejoran la comunicación con estas personas y qué límites tienen (0214-2g).",
+        "desarrollo_ca": "L'alumnat explora l'aplicació de videotrucada de la central i prova de compartir en pantalla un tauler de pictogrames durant la trucada (0831-1e). Justifica davant la coordinació per què aquestes tecnologies milloren la comunicació amb aquestes persones i quins límits tenen (0214-2g).",
+        "evidencia_es": "Prueba documentada con capturas y nota de justificación.",
+        "evidencia_ca": "Prova documentada amb captures i nota de justificació.",
+        "dua_es": "Guía paso a paso de la aplicación y trabajo en parejas.",
+        "dua_ca": "Guia pas a pas de l'aplicació i feina en parelles.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Una persona sorda puede pedir ayuda por videollamada si el operador comprende sus signos y usa otros facilitadores visuales.",
+    "justificacion_ca": "Una persona sorda pot demanar ajuda per videotrucada si l'operador comprèn els seus signes i fa servir altres facilitadors visuals.",
+    "actividades": [
+      {
+        "titulo_es": "Alarma por videollamada de una usuaria sorda",
+        "titulo_ca": "Alarma per videotrucada d'una usuària sorda",
+        "contexto_es": "Francisca, sorda, activa la alarma y aparece en la pantalla de la central signando muy deprisa.",
+        "contexto_ca": "Na Francisca, sorda, activa l'alarma i apareix a la pantalla de la central signant molt de pressa.",
+        "desarrollo_es": "El alumnado describe otros facilitadores que puede usar la central, como el chat escrito, las tarjetas de imágenes o la lectura labial (0214-3e). En la simulación comprende el mensaje signado de Francisca (0214-3f) y mantiene un trato cercano y tranquilizador con gestos y frases escritas en pantalla (0831-3e).",
+        "desarrollo_ca": "L'alumnat descriu altres facilitadors que pot fer servir la central, com el xat escrit, les targetes d'imatges o la lectura labial (0214-3e). A la simulació comprèn el missatge signat de na Francisca (0214-3f) i manté un tracte proper i tranquil·litzador amb gests i frases escrites en pantalla (0831-3e).",
+        "evidencia_es": "Simulación grabada y ficha de facilitadores visuales de la central.",
+        "evidencia_ca": "Simulació enregistrada i fitxa de facilitadors visuals de la central.",
+        "dua_es": "Vídeos de mensajes signados a distinta velocidad y glosario visual.",
+        "dua_ca": "Vídeos de missatges signats a diferent velocitat i glossari visual.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0831",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Las llamadas de seguimiento permiten detectar cambios en cómo se comunica la persona, y esos cambios pueden requerir otros profesionales.",
+    "justificacion_ca": "Les trucades de seguiment permeten detectar canvis en com es comunica la persona, i aquests canvis poden requerir altres professionals.",
+    "actividades": [
+      {
+        "titulo_es": "Señales de alarma en la voz de Llorenç",
+        "titulo_ca": "Senyals d'alarma en la veu d'en Llorenç",
+        "contexto_es": "En las últimas llamadas, Llorenç arrastra las palabras y tarda en encontrarlas, algo que antes no ocurría.",
+        "contexto_ca": "A les darreres trucades, en Llorenç arrossega les paraules i tarda a trobar-les, cosa que abans no passava.",
+        "desarrollo_es": "El alumnado elabora una lista de indicadores de cambio en la comunicación oral, como lentitud, errores de palabra o dificultad para seguir la conversación (0214-4f). Con ella analiza tres llamadas de Llorenç y decide en qué casos hay que avisar al médico o a los servicios sociales (0831-4f).",
+        "desarrollo_ca": "L'alumnat elabora una llista d'indicadors de canvi en la comunicació oral, com lentitud, errors de paraula o dificultat per seguir la conversa (0214-4f). Amb aquesta llista analitza tres trucades d'en Llorenç i decideix en quins casos cal avisar el metge o els serveis socials (0831-4f).",
+        "evidencia_es": "Lista de indicadores y decisión justificada de derivación.",
+        "evidencia_ca": "Llista d'indicadors i decisió justificada de derivació.",
+        "dua_es": "Audios con transcripción y tabla de indicadores para marcar.",
+        "dua_ca": "Àudios amb transcripció i taula d'indicadors per marcar.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0831",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
+    "justificacion_es": "Para quien vive solo, la llamada de la central puede ser su única conversación del día; el lenguaje que se use pesa mucho.",
+    "justificacion_ca": "Per a qui viu tot sol, la trucada de la central pot ser l'única conversa del dia; el llenguatge que s'hi faci servir pesa molt.",
+    "actividades": [
+      {
+        "titulo_es": "La única conversación del día",
+        "titulo_ca": "L'única conversa del dia",
+        "contexto_es": "Una usuaria confiesa al operador que su llamada semanal es lo único que la hace salir de la cama ese día.",
+        "contexto_ca": "Una usuària confessa a l'operador que la seva trucada setmanal és l'únic que la fa sortir del llit aquell dia.",
+        "desarrollo_es": "A partir de testimonios, el alumnado argumenta cómo la comunicación sostiene la vida diaria, el ánimo y la orientación de las personas mayores solas (0214-1a). Con ello valora qué lenguaje conviene en las llamadas salientes, cercano, sin infantilizar y adaptado a cada persona, y lo concreta en un decálogo (0831-2h).",
+        "desarrollo_ca": "A partir de testimonis, l'alumnat argumenta com la comunicació sosté la vida diària, l'ànim i l'orientació de les persones grans soles (0214-1a). Amb això valora quin llenguatge convé a les trucades sortints, proper, sense infantilitzar i adaptat a cada persona, i ho concreta en un decàleg (0831-2h).",
+        "evidencia_es": "Decálogo del lenguaje en llamadas salientes.",
+        "evidencia_ca": "Decàleg del llenguatge en trucades sortints.",
+        "dua_es": "Testimonios en audio y texto y debate en grupos pequeños.",
+        "dua_ca": "Testimonis en àudio i text i debat en grups petits.",
+        "metodologia_es": "debate argumentado.",
+        "metodologia_ca": "debat argumentat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Implicar a la familia en la comunicación con la persona usuaria es una necesidad del sector que puede dar pie a un proyecto.",
+    "justificacion_ca": "Implicar la família en la comunicació amb la persona usuària és una necessitat del sector que pot donar peu a un projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Proyecto: familias que también hablan con pictogramas",
+        "titulo_ca": "Projecte: famílies que també parlen amb pictogrames",
+        "contexto_es": "En el centro de día, los usuarios usan pictogramas, pero en casa nadie los utiliza y se pierde lo aprendido.",
+        "contexto_ca": "Al centre de dia, els usuaris fan servir pictogrames, però a casa ningú no els utilitza i es perd el que han après.",
+        "desarrollo_es": "El alumnado identifica, con entrevistas al personal, la necesidad de que las familias continúen en casa el sistema de comunicación (1713-2a). En grupo plantea soluciones (1713-2b) y selecciona técnicas concretas para implicar a la familia, como talleres, vídeos breves o una libreta viajera (0214-1f).",
+        "desarrollo_ca": "L'alumnat identifica, amb entrevistes al personal, la necessitat que les famílies continuïn a casa el sistema de comunicació (1713-2a). En grup planteja solucions (1713-2b) i selecciona tècniques concretes per implicar la família, com tallers, vídeos breus o una llibreta viatgera (0214-1f).",
+        "evidencia_es": "Informe de necesidades y propuesta de soluciones priorizadas.",
+        "evidencia_ca": "Informe de necessitats i proposta de solucions prioritzades.",
+        "dua_es": "Guion de entrevista y plantilla de priorización visual.",
+        "dua_ca": "Guió d'entrevista i plantilla de priorització visual.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
+    "justificacion_es": "Elegir el sistema con ayuda para un centro exige conocer las opciones y estudiar si son técnicamente viables allí.",
+    "justificacion_ca": "Triar el sistema amb ajuda per a un centre exigeix conèixer les opcions i estudiar si hi són tècnicament viables.",
+    "actividades": [
+      {
+        "titulo_es": "¿Qué comunicador compramos?",
+        "titulo_ca": "Quin comunicador comprem?",
+        "contexto_es": "Un centro de día dispone de una subvención para comprar sistemas de comunicación y pide asesoramiento.",
+        "contexto_ca": "Un centre de dia disposa d'una subvenció per comprar sistemes de comunicació i demana assessorament.",
+        "desarrollo_es": "El alumnado describe las características y usos básicos de tableros, comunicadores de voz y aplicaciones en tableta (0214-2a), junto con otros facilitadores como atriles o pulsadores (0214-2c). Recoge información de proveedores (1713-2c) y estudia la viabilidad técnica de cada opción en ese centro: wifi, cargas, formación y mantenimiento (1713-2e).",
+        "desarrollo_ca": "L'alumnat descriu les característiques i els usos bàsics de taulers, comunicadors de veu i aplicacions en tauleta (0214-2a), juntament amb altres facilitadors com faristols o polsadors (0214-2c). Recull informació de proveïdors (1713-2c) i estudia la viabilitat tècnica de cada opció en aquest centre: wifi, càrregues, formació i manteniment (1713-2e).",
+        "evidencia_es": "Tabla comparativa y estudio de viabilidad técnica.",
+        "evidencia_ca": "Taula comparativa i estudi de viabilitat tècnica.",
+        "dua_es": "Catálogos con imágenes y prueba física de los dispositivos.",
+        "dua_ca": "Catàlegs amb imatges i prova física dels dispositius.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Un taller de comunicación signada para el personal necesita una secuencia temporal y una logística bien definidas.",
+    "justificacion_ca": "Un taller de comunicació signada per al personal necessita una seqüència temporal i una logística ben definides.",
+    "actividades": [
+      {
+        "titulo_es": "Taller de bimodal para el personal de la residencia",
+        "titulo_ca": "Taller de bimodal per al personal de la residència",
+        "contexto_es": "La residencia acoge a tres personas sordas y quiere formar a su personal en comunicación bimodal.",
+        "contexto_ca": "La residència acull tres persones sordes i vol formar el seu personal en comunicació bimodal.",
+        "desarrollo_es": "El alumnado describe la estructura básica del bimodal y de la dactilología para decidir qué enseñar primero (0214-3a). Con ello temporiza un taller de cuatro sesiones (1713-3a) y define sala, horario compatible con los turnos, vídeos y material de cada sesión (1713-3b).",
+        "desarrollo_ca": "L'alumnat descriu l'estructura bàsica del bimodal i de la dactilologia per decidir què s'ha d'ensenyar primer (0214-3a). Amb això temporitza un taller de quatre sessions (1713-3a) i defineix sala, horari compatible amb els torns, vídeos i material de cada sessió (1713-3b).",
+        "evidencia_es": "Cronograma y ficha logística del taller.",
+        "evidencia_ca": "Cronograma i fitxa logística del taller.",
+        "dua_es": "Plantilla de cronograma y ejemplos de talleres anteriores.",
+        "dua_ca": "Plantilla de cronograma i exemples de tallers anteriors.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA4",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Verificar si el sistema de comunicación se usa bien es una forma de controlar la calidad y las desviaciones del proyecto.",
+    "justificacion_ca": "Verificar si el sistema de comunicació s'utilitza bé és una manera de controlar la qualitat i les desviacions del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Revisión al mes de implantar los tableros",
+        "titulo_ca": "Revisió al cap d'un mes d'implantar els taulers",
+        "contexto_es": "Un mes después de instalar tableros en el comedor, el grupo del proyecto vuelve para ver si se usan.",
+        "contexto_ca": "Un mes després d'instal·lar taulers al menjador, el grup del projecte hi torna per veure si s'utilitzen.",
+        "desarrollo_es": "El alumnado observa si los usuarios y el personal usan correctamente cada elemento del tablero (0214-4d) y comprueba el resultado con criterios de calidad fijados en el proyecto (1713-4b). Detecta desviaciones, como pictogramas que faltan o tableros guardados en un cajón (1713-4c), y las comunica al equipo según el protocolo de transmisión del centro (0214-4e).",
+        "desarrollo_ca": "L'alumnat observa si els usuaris i el personal utilitzen correctament cada element del tauler (0214-4d) i comprova el resultat amb criteris de qualitat fixats al projecte (1713-4b). Detecta desviacions, com pictogrames que falten o taulers desats en un calaix (1713-4c), i les comunica a l'equip segons el protocol de transmissió del centre (0214-4e).",
+        "evidencia_es": "Hoja de observación, informe de desviaciones y comunicado al equipo.",
+        "evidencia_ca": "Full d'observació, informe de desviacions i comunicat a l'equip.",
+        "dua_es": "Hoja de observación con casillas y fotos de referencia.",
+        "dua_ca": "Full d'observació amb caselles i fotos de referència.",
+        "metodologia_es": "investigación-acción.",
+        "metodologia_ca": "investigació-acció."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Mostrar que registrar y transmitir mejora la calidad del trabajo exige presentar la información de manera ordenada.",
+    "justificacion_ca": "Mostrar que registrar i transmetre millora la qualitat de la feina exigeix presentar la informació de manera ordenada.",
+    "actividades": [
+      {
+        "titulo_es": "Cápsula: por qué registrar no es perder el tiempo",
+        "titulo_ca": "Càpsula: per què registrar no és perdre el temps",
+        "contexto_es": "En el centro algunas auxiliares piensan que los registros de comunicación «son papeleo» y no los rellenan.",
+        "contexto_ca": "Al centre algunes auxiliars pensen que els registres de comunicació «són paperassa» i no els emplenen.",
+        "desarrollo_es": "El alumnado recopila ejemplos reales en que un buen registro cambió la atención de una persona y argumenta su valor para la calidad del servicio (0214-4g). Lo presenta en una cápsula de vídeo de tres minutos con una estructura clara: problema, ejemplo y beneficio (1713-5a).",
+        "desarrollo_ca": "L'alumnat recull exemples reals en què un bon registre va canviar l'atenció d'una persona i n'argumenta el valor per a la qualitat del servei (0214-4g). Ho presenta en una càpsula de vídeo de tres minuts amb una estructura clara: problema, exemple i benefici (1713-5a).",
+        "evidencia_es": "Cápsula de vídeo y guion estructurado.",
+        "evidencia_ca": "Càpsula de vídeo i guió estructurat.",
+        "dua_es": "Plantilla de guion y libertad de formato: vídeo, audio o presentación.",
+        "dua_ca": "Plantilla de guió i llibertat de format: vídeo, àudio o presentació.",
+        "metodologia_es": "aprendizaje basado en productos.",
+        "metodologia_ca": "aprenentatge basat en productes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "h",
+        "i"
+      ]
+    },
+    "justificacion_es": "Muchos manuales y fichas técnicas de comunicadores solo están en inglés y hay que entenderlos para usarlos bien.",
+    "justificacion_ca": "Molts manuals i fitxes tècniques de comunicadors només estan en anglès i cal entendre'ls per utilitzar-los bé.",
+    "actividades": [
+      {
+        "titulo_es": "El manual en inglés del comunicador nuevo",
+        "titulo_ca": "El manual en anglès del comunicador nou",
+        "contexto_es": "Llega al centro un comunicador de voz y un pulsador de importación con instrucciones solo en inglés.",
+        "contexto_ca": "Arriba al centre un comunicador de veu i un polsador d'importació amb instruccions només en anglès.",
+        "desarrollo_es": "El alumnado elige diccionarios técnicos y glosarios en línea para trabajar el texto (0156-2a), reconoce la finalidad de cada documento, manual o ficha de seguridad (0156-2h), y extrae datos concretos: carga, grabación de mensajes y conexión del pulsador (0156-2i). Con esos datos describe en castellano las características y usos del comunicador (0214-2a) y del pulsador como elemento facilitador (0214-2c).",
+        "desarrollo_ca": "L'alumnat tria diccionaris tècnics i glossaris en línia per treballar el text (0156-2a), reconeix la finalitat de cada document, manual o fitxa de seguretat (0156-2h), i n'extreu dades concretes: càrrega, enregistrament de missatges i connexió del polsador (0156-2i). Amb aquestes dades descriu en català les característiques i els usos del comunicador (0214-2a) i del polsador com a element facilitador (0214-2c).",
+        "evidencia_es": "Ficha de uso rápido en castellano a partir del manual en inglés.",
+        "evidencia_ca": "Fitxa d'ús ràpid en català a partir del manual en anglès.",
+        "dua_es": "Manual con vocabulario clave resaltado y trabajo por parejas.",
+        "dua_ca": "Manual amb el vocabulari clau destacat i feina per parelles.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA1",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
+    "justificacion_es": "Sistemas como Makaton nacieron en el Reino Unido y gran parte de su divulgación está en vídeos en inglés.",
+    "justificacion_ca": "Sistemes com Makaton van néixer al Regne Unit i gran part de la seva divulgació és en vídeos en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Makaton contado por sus creadores",
+        "titulo_ca": "Makaton explicat pels seus creadors",
+        "contexto_es": "El equipo quiere comparar Makaton con el sistema bimodal que ya usa y solo encuentra información en inglés.",
+        "contexto_ca": "L'equip vol comparar Makaton amb el sistema bimodal que ja fa servir i només troba informació en anglès.",
+        "desarrollo_es": "El alumnado ve un documental breve en inglés sobre Makaton, extrae datos concretos sobre su origen y su uso (0156-1d) y resume con claridad sus ideas principales (0156-1f). Con ese resumen describe las características de Makaton junto a las del bimodal y los pictogramas en una tabla comparativa (0214-1c).",
+        "desarrollo_ca": "L'alumnat mira un documental breu en anglès sobre Makaton, n'extreu dades concretes sobre l'origen i l'ús (0156-1d) i en resumeix amb claredat les idees principals (0156-1f). Amb aquest resum descriu les característiques de Makaton al costat de les del bimodal i dels pictogrames en una taula comparativa (0214-1c).",
+        "evidencia_es": "Resumen en inglés y tabla comparativa de sistemas.",
+        "evidencia_ca": "Resum en anglès i taula comparativa de sistemes.",
+        "dua_es": "Vídeo con subtítulos en inglés y velocidad ajustable.",
+        "dua_ca": "Vídeo amb subtítols en anglès i velocitat ajustable.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA1",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "Con un residente extranjero con demencia, la entonación y los gestos dicen más que las palabras, y los signos deben ajustarse a él.",
+    "justificacion_ca": "Amb un resident estranger amb demència, l'entonació i els gests diuen més que les paraules, i els signes s'hi han d'ajustar.",
+    "actividades": [
+      {
+        "titulo_es": "Lo que Mrs Brown dice sin palabras",
+        "titulo_ca": "El que Mrs Brown diu sense paraules",
+        "contexto_es": "Mrs Brown, inglesa con demencia avanzada, apenas articula frases, pero su tono y sus gestos cambian a lo largo del día.",
+        "contexto_ca": "Mrs Brown, anglesa amb demència avançada, amb prou feines articula frases, però el seu to i els seus gests canvien al llarg del dia.",
+        "desarrollo_es": "Con grabaciones de Mrs Brown, el alumnado analiza su entonación y sus gestos para distinguir si expresa queja, alegría o una petición (0156-1i). Después ajusta un pequeño repertorio de gestos y signos naturales a sus capacidades, mezclando palabras inglesas sencillas (0214-3d).",
+        "desarrollo_ca": "Amb enregistraments de Mrs Brown, l'alumnat analitza la seva entonació i els seus gests per distingir si expressa queixa, alegria o una petició (0156-1i). Després ajusta un petit repertori de gests i signes naturals a les seves capacitats, combinant-hi paraules angleses senzilles (0214-3d).",
+        "evidencia_es": "Tabla de interpretación de tono y gestos y repertorio ajustado.",
+        "evidencia_ca": "Taula d'interpretació de to i gests i repertori ajustat.",
+        "dua_es": "Audios cortos repetibles y ejemplos de intenciones comunicativas.",
+        "dua_ca": "Àudios curts repetibles i exemples d'intencions comunicatives.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
+    "justificacion_es": "Para comprobar si una familia extranjera aplica en casa las pautas de comunicación hay que dárselas por escrito en su idioma.",
+    "justificacion_ca": "Per comprovar si una família estrangera aplica a casa les pautes de comunicació cal donar-les-hi per escrit en el seu idioma.",
+    "actividades": [
+      {
+        "titulo_es": "Pautas en inglés para la familia de Oliver",
+        "titulo_ca": "Pautes en anglès per a la família d'Oliver",
+        "contexto_es": "Oliver, un joven irlandés con parálisis cerebral, vuelve los fines de semana a casa, donde nadie habla castellano.",
+        "contexto_ca": "L'Oliver, un jove irlandès amb paràlisi cerebral, torna els caps de setmana a casa, on ningú no parla castellà.",
+        "desarrollo_es": "El alumnado redacta en inglés un texto breve con las pautas de uso del tablero en casa (0156-4b) y una hoja de seguimiento con el vocabulario del ámbito (0156-4e). En ella fija criterios sencillos para comprobar si la familia sigue las instrucciones, como cuántas veces se usa o qué mensajes aparecen (0214-4c).",
+        "desarrollo_ca": "L'alumnat redacta en anglès un text breu amb les pautes d'ús del tauler a casa (0156-4b) i un full de seguiment amb el vocabulari de l'àmbit (0156-4e). Hi fixa criteris senzills per comprovar si la família segueix les instruccions, com quantes vegades s'utilitza o quins missatges hi apareixen (0214-4c).",
+        "evidencia_es": "Hoja de pautas y de seguimiento en inglés.",
+        "evidencia_ca": "Full de pautes i de seguiment en anglès.",
+        "dua_es": "Modelo de hoja y banco de frases en inglés.",
+        "dua_ca": "Model de full i banc de frases en anglès.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA4",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "justificacion_es": "Las ayudas técnicas para la comunicación también tienen un ciclo de vida y pueden diseñarse con criterios de ecodiseño.",
+    "justificacion_ca": "Les ajudes tècniques per a la comunicació també tenen un cicle de vida i es poden dissenyar amb criteris d'ecodisseny.",
+    "actividades": [
+      {
+        "titulo_es": "Tableros que duran más y contaminan menos",
+        "titulo_ca": "Taulers que duren més i contaminen menys",
+        "contexto_es": "El centro tira cada trimestre decenas de tableros plastificados que se rompen o quedan desfasados.",
+        "contexto_ca": "El centre llança cada trimestre desenes de taulers plastificats que es trenquen o queden desfasats.",
+        "desarrollo_es": "El alumnado analiza el ciclo de vida de un tablero plastificado, desde la impresión hasta el residuo (1708-4e). Diseña una alternativa con principios de ecodiseño, como fundas reutilizables, pictogramas intercambiables y materiales reciclados (1708-4d), y la prueba como ayuda técnica con una persona usuaria (0214-2f).",
+        "desarrollo_ca": "L'alumnat analitza el cicle de vida d'un tauler plastificat, des de la impressió fins al residu (1708-4e). Dissenya una alternativa amb principis d'ecodisseny, com fundes reutilitzables, pictogrames intercanviables i materials reciclats (1708-4d), i la prova com a ajuda tècnica amb una persona usuària (0214-2f).",
+        "evidencia_es": "Análisis de ciclo de vida y prototipo del tablero ecodiseñado.",
+        "evidencia_ca": "Anàlisi de cicle de vida i prototip del tauler ecodissenyat.",
+        "dua_es": "Diagrama del ciclo de vida para completar y materiales manipulables.",
+        "dua_ca": "Diagrama del cicle de vida per completar i materials manipulables.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "La accesibilidad comunicativa conecta el trabajo diario con los ODS de reducción de desigualdades y de salud y bienestar.",
+    "justificacion_ca": "L'accessibilitat comunicativa connecta la feina diària amb els ODS de reducció de desigualtats i de salut i benestar.",
+    "actividades": [
+      {
+        "titulo_es": "Comunicar también es un ODS",
+        "titulo_ca": "Comunicar també és un ODS",
+        "contexto_es": "El centro prepara su memoria anual y quiere explicar cómo su trabajo contribuye a la Agenda 2030.",
+        "contexto_ca": "El centre prepara la memòria anual i vol explicar com la seva feina contribueix a l'Agenda 2030.",
+        "desarrollo_es": "El alumnado identifica qué ODS se relacionan más con su labor de auxiliar, en especial el 3 y el 10 (1708-3a). Para el apartado de comunicación de la memoria argumenta, con ejemplos, cómo poder comunicarse cambia la vida diaria de las personas usuarias (0214-1a).",
+        "desarrollo_ca": "L'alumnat identifica quins ODS es relacionen més amb la seva feina d'auxiliar, especialment el 3 i el 10 (1708-3a). Per a l'apartat de comunicació de la memòria argumenta, amb exemples, com poder comunicar-se canvia la vida diària de les persones usuàries (0214-1a).",
+        "evidencia_es": "Apartado redactado para la memoria del centro.",
+        "evidencia_ca": "Apartat redactat per a la memòria del centre.",
+        "dua_es": "Fichas visuales de los ODS y ejemplos de memorias.",
+        "dua_ca": "Fitxes visuals dels ODS i exemples de memòries.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Para que las personas usuarias participen en las prácticas sostenibles del centro, los mensajes deben ser accesibles.",
+    "justificacion_ca": "Perquè les persones usuàries participin en les pràctiques sostenibles del centre, els missatges han de ser accessibles.",
+    "actividades": [
+      {
+        "titulo_es": "Cartelería de reciclaje con pictogramas",
+        "titulo_ca": "Cartells de reciclatge amb pictogrames",
+        "contexto_es": "El centro de día pone contenedores de reciclaje, pero las personas usuarias con discapacidad intelectual no saben usarlos.",
+        "contexto_ca": "El centre de dia posa contenidors de reciclatge, però les persones usuàries amb discapacitat intel·lectual no saben fer-los servir.",
+        "desarrollo_es": "El alumnado aplica una estrategia sostenible concreta en el centro: separar envases, papel y orgánico en el comedor y en el taller (1708-5f). Para hacerla accesible, crea mensajes sencillos con pictogramas y voz grabada en un pulsador junto a cada contenedor (0214-2b).",
+        "desarrollo_ca": "L'alumnat aplica una estratègia sostenible concreta al centre: separar envasos, paper i orgànic al menjador i al taller (1708-5f). Per fer-la accessible, crea missatges senzills amb pictogrames i veu enregistrada en un polsador al costat de cada contenidor (0214-2b).",
+        "evidencia_es": "Carteles con pictogramas, mensajes grabados y registro de uso.",
+        "evidencia_ca": "Cartells amb pictogrames, missatges enregistrats i registre d'ús.",
+        "dua_es": "Banco de pictogramas y pulsadores de grabación fáciles de usar.",
+        "dua_ca": "Banc de pictogrames i polsadors d'enregistrament fàcils d'utilitzar.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Hacer accesibles los ODS a personas usuarias sordas pasa por traducirlos a mensajes signados sencillos.",
+    "justificacion_ca": "Fer accessibles els ODS a persones usuàries sordes passa per traduir-los a missatges signats senzills.",
+    "actividades": [
+      {
+        "titulo_es": "La Agenda 2030 en signos",
+        "titulo_ca": "L'Agenda 2030 en signes",
+        "contexto_es": "El centro celebra la semana de los ODS y el grupo de personas sordas queda al margen de las charlas.",
+        "contexto_ca": "El centre celebra la setmana dels ODS i el grup de persones sordes queda al marge de les xerrades.",
+        "desarrollo_es": "El alumnado relaciona cinco ODS cercanos a la vida del centro con la Agenda 2030, como agua, salud o igualdad (1708-1c). Para cada uno crea un mensaje signado sencillo y lo presenta al grupo de personas sordas con apoyo de imágenes (0214-3c).",
+        "desarrollo_ca": "L'alumnat relaciona cinc ODS propers a la vida del centre amb l'Agenda 2030, com aigua, salut o igualtat (1708-1c). Per a cadascun crea un missatge signat senzill i el presenta al grup de persones sordes amb suport d'imatges (0214-3c).",
+        "evidencia_es": "Vídeo con los mensajes signados y valoración del grupo.",
+        "evidencia_ca": "Vídeo amb els missatges signats i valoració del grup.",
+        "dua_es": "Tarjetas de ODS con imágenes y ensayo previo grabado.",
+        "dua_ca": "Targetes d'ODS amb imatges i assaig previ enregistrat.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Las aplicaciones de comunicación aumentativa son un campo de innovación que exige competencia digital.",
+    "justificacion_ca": "Les aplicacions de comunicació augmentativa són un camp d'innovació que exigeix competència digital.",
+    "actividades": [
+      {
+        "titulo_es": "Configurar una aplicación de comunicación desde cero",
+        "titulo_ca": "Configurar una aplicació de comunicació des de zero",
+        "contexto_es": "Una familia ha comprado una tableta y pide ayuda para instalar una aplicación de comunicación para su hijo.",
+        "contexto_ca": "Una família ha comprat una tauleta i demana ajuda per instal·lar una aplicació de comunicació per al seu fill.",
+        "desarrollo_es": "El alumnado instala y configura una aplicación gratuita de comunicación aumentativa, crea categorías y graba voces (1710-3e). Después justifica ante la familia por qué la tecnología amplía las posibilidades del apoyo a la comunicación y qué riesgos hay que vigilar, como la batería o la dependencia del aparato (0214-2g).",
+        "desarrollo_ca": "L'alumnat instal·la i configura una aplicació gratuïta de comunicació augmentativa, crea categories i enregistra veus (1710-3e). Després justifica davant la família per què la tecnologia amplia les possibilitats del suport a la comunicació i quins riscs cal vigilar, com la bateria o la dependència de l'aparell (0214-2g).",
+        "evidencia_es": "Aplicación configurada y guía breve para la familia.",
+        "evidencia_ca": "Aplicació configurada i guia breu per a la família.",
+        "dua_es": "Videotutorial y emparejamiento con un compañero más experto.",
+        "dua_ca": "Videotutorial i aparellament amb un company més expert.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "g"
+      ]
+    },
+    "justificacion_es": "Muchas familias desconocen la comunicación aumentativa; detectar ese problema puede originar una idea emprendedora.",
+    "justificacion_ca": "Moltes famílies desconeixen la comunicació augmentativa; detectar aquest problema pot originar una idea emprenedora.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevistas a familias para una idea emprendedora",
+        "titulo_ca": "Entrevistes a famílies per a una idea emprenedora",
+        "contexto_es": "El alumnado plantea un servicio a domicilio de apoyo a la comunicación, pero no sabe si las familias lo necesitan.",
+        "contexto_ca": "L'alumnat planteja un servei a domicili de suport a la comunicació, però no sap si les famílies el necessiten.",
+        "desarrollo_es": "El alumnado define con palabras sencillas qué es la comunicación alternativa y la aumentativa para poder explicarlo a las familias (0214-1b). Identifica los problemas de sus posibles clientes (1710-4a) y realiza cinco entrevistas de problema para validar si existe esa necesidad (1710-4g).",
+        "desarrollo_ca": "L'alumnat defineix amb paraules senzilles què és la comunicació alternativa i l'augmentativa per poder explicar-ho a les famílies (0214-1b). Identifica els problemes dels seus possibles clients (1710-4a) i fa cinc entrevistes de problema per validar si existeix aquesta necessitat (1710-4g).",
+        "evidencia_es": "Guion de entrevista, resumen de respuestas y conclusión de validación.",
+        "evidencia_ca": "Guió d'entrevista, resum de respostes i conclusió de validació.",
+        "dua_es": "Modelo de entrevista y opción de entrevistar en parejas.",
+        "dua_ca": "Model d'entrevista i opció d'entrevistar en parelles.",
+        "metodologia_es": "metodología lean startup.",
+        "metodologia_ca": "metodologia lean startup."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0214",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "El pensamiento de diseño ayuda a descubrir por qué las pautas de comunicación no se siguen en casa.",
+    "justificacion_ca": "El pensament de disseny ajuda a descobrir per què les pautes de comunicació no se segueixen a casa.",
+    "actividades": [
+      {
+        "titulo_es": "Design thinking en el salón de casa",
+        "titulo_ca": "Design thinking a la sala d'estar",
+        "contexto_es": "Las familias reconocen que no aplican en casa las pautas de comunicación que reciben del centro.",
+        "contexto_ca": "Les famílies reconeixen que no apliquen a casa les pautes de comunicació que reben del centre.",
+        "desarrollo_es": "El alumnado aplica las fases de empatizar y definir del pensamiento de diseño para descubrir por qué las familias no siguen las pautas (1710-5d). Con lo aprendido establece criterios realistas para verificar en casa el cumplimiento de las instrucciones, como una foto semanal del tablero en uso (0214-4c).",
+        "desarrollo_ca": "L'alumnat aplica les fases d'empatitzar i definir del pensament de disseny per descobrir per què les famílies no segueixen les pautes (1710-5d). Amb el que ha après estableix criteris realistes per verificar a casa el compliment de les instruccions, com una foto setmanal del tauler en ús (0214-4c).",
+        "evidencia_es": "Mapa de empatía y criterios de verificación acordados.",
+        "evidencia_ca": "Mapa d'empatia i criteris de verificació acordats.",
+        "dua_es": "Plantilla de mapa de empatía y ejemplos resueltos.",
+        "dua_ca": "Plantilla de mapa d'empatia i exemples resolts.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
+      }
+    ]
+  }
+]

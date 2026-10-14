@@ -22,10 +22,12 @@ import { up as runMigration36 } from '../migrations/36_ingest_mapa_cfgm_cuidados
 import { up as runMigration37 } from '../migrations/37_ingest_mapa_cfgs_integracion_social';
 import { up as runMigration38 } from '../migrations/38_ingest_mapa_cfgs_integracion_social_2';
 import { up as runMigration40 } from '../migrations/40_ingest_mapa_cfgs_acondicionamiento_fisico';
+import { up as runMigration41 } from '../migrations/41_ingest_mapa_cfgm_atencion_dependencia_2';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
 import { CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA as AF_RAS } from '../data/ras_cfgs_acondicionamiento_fisico.data';
+import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA as APSD_RAS } from '../data/ras_cfgm_atencion_dependencia.data';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -576,6 +578,32 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.status).toBe(200);
       expect(res.body.map((m: any) => m.code)).toEqual(['0017', '1136', '1148', '1149', '1151', '1665', '1709']);
       expect(res.body[1].name_ca).toBe('Valoració de la condició física i intervenció en accidents');
+    });
+
+    it('debería cargar con la migración 41 el 2.º de Atención a la Dependencia sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO', order: 0, code: '1136', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration41();
+      await runMigration41();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
+      await expectBidirectionalMap('CFGM_ATENCION_DEPENDENCIA_2', 8, 306, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGM_ATENCION_DEPENDENCIA_2' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = APSD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGM_ATENCION_DEPENDENCIA_2');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['0211', '0214', '0216', '0831', '0156', '1708', '1710', '1713']);
+      expect(res.body[0].name_ca).toBe('Destreses socials');
     });
   });
 });

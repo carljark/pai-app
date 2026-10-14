@@ -1,0 +1,882 @@
+[
+  {
+    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["j"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["k"] },
+    "justificacion_es": "Presentar el proyecto en inglés ante un público externo combina la exposición pública con la producción oral en lengua extranjera.",
+    "justificacion_ca": "Presentar el projecte en anglès davant un públic extern combina l'exposició pública amb la producció oral en llengua estrangera.",
+    "actividades": [
+      {
+        "titulo_es": "Pitch del proyecto ante un centro europeo",
+        "titulo_ca": "Pitch del projecte davant un centre europeu",
+        "contexto_es": "Un centro de FP finlandés con el que el instituto tiene un Erasmus+ quiere conocer los proyectos del grupo por videoconferencia.",
+        "contexto_ca": "Un centre d'FP finlandès amb el qual l'institut té un Erasmus+ vol conèixer els projectes del grup per videoconferència.",
+        "desarrollo_es": "Cada equipo prepara una presentación de tres minutos en inglés con su protocolo de saludo, desarrollo y cierre (0156-3j). En la videoconferencia expone las ideas más relevantes del proyecto y responde a las preguntas del público finlandés (1713-2k).",
+        "desarrollo_ca": "Cada equip prepara una presentació de tres minuts en anglès amb el protocol de salutació, desenvolupament i tancament (0156-3j). A la videoconferència exposa les idees més rellevants del projecte i respon les preguntes del públic finlandès (1713-2k).",
+        "evidencia_es": "Presentación grabada y diapositivas en inglés.",
+        "evidencia_ca": "Presentació enregistrada i diapositives en anglès.",
+        "dua_es": "Guion con frases de transición y ensayo con retroalimentación.",
+        "dua_ca": "Guió amb frases de transició i assaig amb retroacció.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA2", "criterios": ["c", "e"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Buena parte de la información sobre soluciones innovadoras en cuidados se publica en inglés.",
+    "justificacion_ca": "Bona part de la informació sobre solucions innovadores en cures es publica en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Buscar ideas en revistas británicas de cuidados",
+        "titulo_ca": "Cercar idees en revistes britàniques de cures",
+        "contexto_es": "El grupo quiere saber cómo se resuelve en otros países la atención a personas con demencia en casa.",
+        "contexto_ca": "El grup vol saber com es resol en altres països l'atenció a persones amb demència a casa.",
+        "desarrollo_es": "El alumnado lee artículos breves de revistas británicas de cuidados y los relaciona con su sector (0156-2c). Identifica la terminología y las estructuras típicas del texto divulgativo (0156-2e) y recoge información útil sobre las soluciones que plantea su proyecto (1713-2c).",
+        "desarrollo_ca": "L'alumnat llegeix articles breus de revistes britàniques de cures i els relaciona amb el seu sector (0156-2c). Identifica la terminologia i les estructures típiques del text divulgatiu (0156-2e) i recull informació útil sobre les solucions que planteja el seu projecte (1713-2c).",
+        "evidencia_es": "Fichas de lectura y tabla de soluciones encontradas.",
+        "evidencia_ca": "Fitxes de lectura i taula de solucions trobades.",
+        "dua_es": "Artículos de distinta dificultad y glosario compartido.",
+        "dua_ca": "Articles de dificultat diferent i glossari compartit.",
+        "metodologia_es": "lectura cooperativa en grupos.",
+        "metodologia_ca": "lectura cooperativa en grups."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["j"] },
+    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["c", "i"] },
+    "justificacion_es": "Un proyecto con un socio extranjero requiere pedir por escrito información y autorizaciones en inglés.",
+    "justificacion_ca": "Un projecte amb un soci estranger requereix demanar per escrit informació i autoritzacions en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Correo para pedir permiso de grabación",
+        "titulo_ca": "Correu per demanar permís d'enregistrament",
+        "contexto_es": "El proyecto incluye grabar un vídeo con residentes de una residencia de propiedad británica y hay que pedir permiso a su sede en Londres.",
+        "contexto_ca": "El projecte inclou enregistrar un vídeo amb residents d'una residència de propietat britànica i cal demanar permís a la seu de Londres.",
+        "desarrollo_es": "El alumnado identifica qué permisos necesita: dirección, residentes y familias (1713-3c). Redacta en inglés el correo a la sede solicitando información y la autorización (0156-4j), y prepara la documentación del consentimiento para adjuntar (1713-3i).",
+        "desarrollo_ca": "L'alumnat identifica quins permisos necessita: direcció, residents i famílies (1713-3c). Redacta en anglès el correu a la seu per sol·licitar informació i l'autorització (0156-4j), i prepara la documentació del consentiment per adjuntar-la (1713-3i).",
+        "evidencia_es": "Correo en inglés y modelo de consentimiento.",
+        "evidencia_ca": "Correu en anglès i model de consentiment.",
+        "dua_es": "Modelo de correo formal y lista de comprobación.",
+        "dua_ca": "Model de correu formal i llista de comprovació.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "Comparar las empresas de cuidados de Reino Unido y de Baleares exige leer textos del sector en inglés.",
+    "justificacion_ca": "Comparar les empreses de cures del Regne Unit i de les Balears exigeix llegir textos del sector en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Care homes frente a residencias",
+        "titulo_ca": "Care homes enfront de residències",
+        "contexto_es": "Muchas familias británicas residentes en Mallorca preguntan si aquí existen servicios como los «care homes» o el «home care».",
+        "contexto_ca": "Moltes famílies britàniques residents a Mallorca demanen si aquí hi ha serveis com els «care homes» o el «home care».",
+        "desarrollo_es": "El alumnado identifica las empresas tipo más representativas del sector en Baleares: residencias, centros de día, SAD y teleasistencia (1713-1a). Las compara con webs y folletos británicos, señalando los aspectos socioprofesionales que aparecen en esos textos, como la figura del «carer» (0156-5d).",
+        "desarrollo_ca": "L'alumnat identifica les empreses tipus més representatives del sector a les Balears: residències, centres de dia, SAD i teleassistència (1713-1a). Les compara amb webs i fulletons britànics, assenyalant-ne els aspectes socioprofessionals que hi apareixen, com la figura del «carer» (0156-5d).",
+        "evidencia_es": "Tabla comparativa de servicios en ambos países.",
+        "evidencia_ca": "Taula comparativa de serveis als dos països.",
+        "dua_es": "Folletos reales con vocabulario resaltado.",
+        "dua_ca": "Fulletons reals amb el vocabulari destacat.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["g"] },
+    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "Describir un proceso de trabajo en inglés requiere conocer los términos técnicos estándar del sector.",
+    "justificacion_ca": "Descriure un procés de treball en anglès requereix conèixer els termes tècnics estàndard del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Glosario técnico del proyecto en tres lenguas",
+        "titulo_ca": "Glossari tècnic del projecte en tres llengües",
+        "contexto_es": "El vídeo final del proyecto tendrá subtítulos en inglés y el grupo duda de la traducción de muchos términos.",
+        "contexto_ca": "El vídeo final del projecte tindrà subtítols en anglès i el grup dubta de la traducció de molts termes.",
+        "desarrollo_es": "El alumnado reúne en un glosario los términos técnicos estándar del sector en castellano, catalán e inglés, como grúa, transferencia o úlcera por presión (1713-5d). Con ellos describe y secuencia oralmente en inglés el proceso principal de su proyecto (0156-3g).",
+        "desarrollo_ca": "L'alumnat reuneix en un glossari els termes tècnics estàndard del sector en castellà, català i anglès, com grua, transferència o úlcera per pressió (1713-5d). Amb aquests descriu i seqüencia oralment en anglès el procés principal del seu projecte (0156-3g).",
+        "evidencia_es": "Glosario trilingüe y descripción oral grabada.",
+        "evidencia_ca": "Glossari trilingüe i descripció oral enregistrada.",
+        "dua_es": "Glosario con imágenes y pronunciación en audio.",
+        "dua_ca": "Glossari amb imatges i pronúncia en àudio.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["d"] },
+    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["a"] },
+    "justificacion_es": "Resumir en inglés guías de evaluación de proyectos ayuda a definir el procedimiento de seguimiento propio.",
+    "justificacion_ca": "Resumir en anglès guies d'avaluació de projectes ajuda a definir el procediment de seguiment propi.",
+    "actividades": [
+      {
+        "titulo_es": "Resumen de una guía de seguimiento en inglés",
+        "titulo_ca": "Resum d'una guia de seguiment en anglès",
+        "contexto_es": "La tutora comparte una guía breve en inglés de una ONG sobre cómo hacer el seguimiento de proyectos comunitarios.",
+        "contexto_ca": "La tutora comparteix una guia breu en anglès d'una ONG sobre com fer el seguiment de projectes comunitaris.",
+        "desarrollo_es": "El alumnado resume en inglés las ideas principales de la guía (0156-4d). Con ese resumen define el procedimiento de seguimiento de su proyecto: qué se mide, quién lo mide y cada cuánto (1713-4a).",
+        "desarrollo_ca": "L'alumnat resumeix en anglès les idees principals de la guia (0156-4d). Amb aquest resum defineix el procediment de seguiment del seu projecte: què es mesura, qui ho mesura i cada quant (1713-4a).",
+        "evidencia_es": "Resumen en inglés y procedimiento de seguimiento.",
+        "evidencia_ca": "Resum en anglès i procediment de seguiment.",
+        "dua_es": "Guía con párrafos numerados y plantilla de resumen.",
+        "dua_ca": "Guia amb paràgrafs numerats i plantilla de resum.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA1", "criterios": ["a", "c"] },
+    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["i"] },
+    "justificacion_es": "Relacionar los servicios del sector con los ODS exige entender antes el marco internacional del desarrollo sostenible.",
+    "justificacion_ca": "Relacionar els serveis del sector amb els ODS exigeix entendre abans el marc internacional del desenvolupament sostenible.",
+    "actividades": [
+      {
+        "titulo_es": "Servicios de atención y Agenda 2030",
+        "titulo_ca": "Serveis d'atenció i Agenda 2030",
+        "contexto_es": "La patronal de residencias pide a sus centros que indiquen a qué ODS contribuyen sus servicios.",
+        "contexto_ca": "La patronal de residències demana als seus centres que indiquin a quins ODS contribueixen els seus serveis.",
+        "desarrollo_es": "El alumnado describe el concepto de sostenibilidad y los marcos internacionales que lo sostienen (1708-1a) y relaciona los ODS con la Agenda 2030 (1708-1c). Después asocia cada servicio del sector, como SAD, centro de día o teleasistencia, con los ODS a los que contribuye (1713-1i).",
+        "desarrollo_ca": "L'alumnat descriu el concepte de sostenibilitat i els marcs internacionals que el sostenen (1708-1a) i relaciona els ODS amb l'Agenda 2030 (1708-1c). Després associa cada servei del sector, com el SAD, el centre de dia o la teleassistència, amb els ODS als quals contribueix (1713-1i).",
+        "evidencia_es": "Mural de servicios y ODS.",
+        "evidencia_ca": "Mural de serveis i ODS.",
+        "dua_es": "Iconos oficiales de los ODS y tarjetas de servicios.",
+        "dua_ca": "Icones oficials dels ODS i targetes de serveis.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA6", "criterios": ["a", "b"] },
+    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["e"] },
+    "justificacion_es": "Para valorar el volumen de negocio de una empresa del sector hay que conocer a sus grupos de interés y lo que esperan de ella.",
+    "justificacion_ca": "Per valorar el volum de negoci d'una empresa del sector cal conèixer-ne els grups d'interès i el que n'esperen.",
+    "actividades": [
+      {
+        "titulo_es": "Grupos de interés de una empresa de SAD",
+        "titulo_ca": "Grups d'interès d'una empresa de SAD",
+        "contexto_es": "Una cooperativa de ayuda a domicilio de Manacor quiere crecer y analiza a quién debe escuchar.",
+        "contexto_ca": "Una cooperativa d'ajuda a domicili de Manacor vol créixer i analitza a qui ha d'escoltar.",
+        "desarrollo_es": "El alumnado identifica los grupos de interés de la cooperativa: usuarios, familias, socias trabajadoras y ayuntamientos (1708-6a), y analiza qué esperan y qué aspectos ASG les importan (1708-6b). Con esos datos evalúa el volumen de negocio posible según la demanda real de la comarca (1713-1e).",
+        "desarrollo_ca": "L'alumnat identifica els grups d'interès de la cooperativa: usuaris, famílies, sòcies treballadores i ajuntaments (1708-6a), i analitza què esperen i quins aspectes ASG els importen (1708-6b). Amb aquestes dades avalua el volum de negoci possible segons la demanda real de la comarca (1713-1e).",
+        "evidencia_es": "Mapa de grupos de interés y estimación de demanda.",
+        "evidencia_ca": "Mapa de grups d'interès i estimació de demanda.",
+        "dua_es": "Datos demográficos en gráficos y plantilla de mapa.",
+        "dua_ca": "Dades demogràfiques en gràfics i plantilla de mapa.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA6", "criterios": ["e"] },
+    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "El informe de sostenibilidad del proyecto forma parte de la documentación con la que se evalúa en su conjunto.",
+    "justificacion_ca": "L'informe de sostenibilitat del projecte forma part de la documentació amb què s'avalua en conjunt.",
+    "actividades": [
+      {
+        "titulo_es": "Informe de sostenibilidad del proyecto",
+        "titulo_ca": "Informe de sostenibilitat del projecte",
+        "contexto_es": "El tribunal del proyecto intermodular pide que cada equipo acredite el impacto ambiental y social de su propuesta.",
+        "contexto_ca": "El tribunal del projecte intermodular demana que cada equip acrediti l'impacte ambiental i social de la seva proposta.",
+        "desarrollo_es": "El alumnado elabora un informe de sostenibilidad breve de su proyecto con el plan de acciones y sus indicadores (1708-6e). Lo incorpora a la documentación de evaluación final, junto con la memoria técnica y la rúbrica (1713-4f).",
+        "desarrollo_ca": "L'alumnat elabora un informe de sostenibilitat breu del seu projecte amb el pla d'accions i els indicadors (1708-6e). L'incorpora a la documentació d'avaluació final, juntament amb la memòria tècnica i la rúbrica (1713-4f).",
+        "evidencia_es": "Informe de sostenibilidad integrado en la memoria.",
+        "evidencia_ca": "Informe de sostenibilitat integrat a la memòria.",
+        "dua_es": "Plantilla de informe por apartados y ejemplo real.",
+        "dua_ca": "Plantilla d'informe per apartats i exemple real.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA4", "criterios": ["d"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["i", "j"] },
+    "justificacion_es": "Aplicar el ecodiseño desde la documentación del proyecto mejora su calidad y reduce su impacto.",
+    "justificacion_ca": "Aplicar l'ecodisseny des de la documentació del projecte en millora la qualitat i en redueix l'impacte.",
+    "actividades": [
+      {
+        "titulo_es": "Ecodiseño del kit de estimulación cognitiva",
+        "titulo_ca": "Ecodisseny del kit d'estimulació cognitiva",
+        "contexto_es": "El proyecto del grupo consiste en un kit de juegos de estimulación cognitiva para domicilios.",
+        "contexto_ca": "El projecte del grup consisteix en un kit de jocs d'estimulació cognitiva per a domicilis.",
+        "desarrollo_es": "El alumnado aplica principios de ecodiseño al kit: materiales reciclados, piezas reparables y caja reutilizable (1708-4d). Los recoge en la documentación de diseño del proyecto (1713-2i) y los incluye entre los aspectos de calidad que se comprobarán (1713-2j).",
+        "desarrollo_ca": "L'alumnat aplica principis d'ecodisseny al kit: materials reciclats, peces reparables i capsa reutilitzable (1708-4d). Els recull a la documentació de disseny del projecte (1713-2i) i els inclou entre els aspectes de qualitat que es comprovaran (1713-2j).",
+        "evidencia_es": "Ficha de diseño del kit y criterios de calidad.",
+        "evidencia_ca": "Fitxa de disseny del kit i criteris de qualitat.",
+        "dua_es": "Muestras de materiales y plantilla de ficha técnica.",
+        "dua_ca": "Mostres de materials i plantilla de fitxa tècnica.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["a", "b"] },
+    "justificacion_es": "Los estándares de métricas de sostenibilidad inspiran el procedimiento para verificar la calidad de los resultados del proyecto.",
+    "justificacion_ca": "Els estàndards de mètriques de sostenibilitat inspiren el procediment per verificar la qualitat dels resultats del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Indicadores que se pueden medir",
+        "titulo_ca": "Indicadors que es poden mesurar",
+        "contexto_es": "El grupo ha escrito objetivos como «mejorar el bienestar» y la tutora le pide indicadores medibles.",
+        "contexto_ca": "El grup ha escrit objectius com «millorar el benestar» i la tutora li demana indicadors mesurables.",
+        "desarrollo_es": "El alumnado identifica cómo funcionan los estándares de métricas de sostenibilidad y su papel en la rendición de cuentas (1708-1e). Con ese modelo define el procedimiento de seguimiento del proyecto (1713-4a) y fija cómo verificará la calidad de cada resultado con indicadores concretos (1713-4b).",
+        "desarrollo_ca": "L'alumnat identifica com funcionen els estàndards de mètriques de sostenibilitat i el seu paper en la rendició de comptes (1708-1e). Amb aquest model defineix el procediment de seguiment del projecte (1713-4a) i fixa com verificarà la qualitat de cada resultat amb indicadors concrets (1713-4b).",
+        "evidencia_es": "Tabla de indicadores con fuente y frecuencia.",
+        "evidencia_ca": "Taula d'indicadors amb font i freqüència.",
+        "dua_es": "Ejemplos de indicadores buenos y malos.",
+        "dua_ca": "Exemples d'indicadors bons i dolents.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA5", "criterios": ["e", "h"] },
+    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["b", "g", "h"] },
+    "justificacion_es": "La logística de una salida con personas usuarias puede diseñarse con criterios sostenibles y previendo imprevistos.",
+    "justificacion_ca": "La logística d'una sortida amb persones usuàries es pot dissenyar amb criteris sostenibles i preveient imprevistos.",
+    "actividades": [
+      {
+        "titulo_es": "Excursión sostenible a s'Albufera",
+        "titulo_ca": "Excursió sostenible a s'Albufera",
+        "contexto_es": "El proyecto incluye una salida con personas del centro de día al Parque Natural de s'Albufera.",
+        "contexto_ca": "El projecte inclou una sortida amb persones del centre de dia al Parc Natural de s'Albufera.",
+        "desarrollo_es": "El alumnado define la logística de la salida: transporte adaptado, comida y material (1713-3b), con criterios sostenibles como transporte colectivo, comida local sin envases y botellas reutilizables (1708-5h) y materiales ecodiseñados para las actividades (1708-5e). Prevé posibles imprevistos, como calor o un retraso del autobús (1713-3g), y una solución para cada uno (1713-3h).",
+        "desarrollo_ca": "L'alumnat defineix la logística de la sortida: transport adaptat, menjar i material (1713-3b), amb criteris sostenibles com transport col·lectiu, menjar local sense envasos i botelles reutilitzables (1708-5h) i materials ecodissenyats per a les activitats (1708-5e). Preveu possibles imprevistos, com la calor o un retard de l'autobús (1713-3g), i una solució per a cadascun (1713-3h).",
+        "evidencia_es": "Plan logístico con criterios sostenibles y plan de contingencias.",
+        "evidencia_ca": "Pla logístic amb criteris sostenibles i pla de contingències.",
+        "dua_es": "Plantilla de planificación y mapa del parque.",
+        "dua_ca": "Plantilla de planificació i mapa del parc.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["a", "d"] },
+    "justificacion_es": "Las oportunidades que abren los ODS ayudan a detectar necesidades del sector y respuestas innovadoras.",
+    "justificacion_ca": "Les oportunitats que obren els ODS ajuden a detectar necessitats del sector i respostes innovadores.",
+    "actividades": [
+      {
+        "titulo_es": "Oportunidades de los ODS para la atención a domicilio",
+        "titulo_ca": "Oportunitats dels ODS per a l'atenció a domicili",
+        "contexto_es": "El grupo busca tema para su proyecto y la tutora propone partir de los ODS.",
+        "contexto_ca": "El grup cerca tema per al seu projecte i la tutora proposa partir dels ODS.",
+        "desarrollo_es": "El alumnado analiza los riesgos y oportunidades que representan los ODS para la atención domiciliaria (1708-3b). A partir de ellos identifica necesidades concretas del sector (1713-2a) y busca aspectos innovadores que podría aplicar, como huertos en domicilios o redes de vecinos (1713-2d).",
+        "desarrollo_ca": "L'alumnat analitza els riscs i les oportunitats que representen els ODS per a l'atenció domiciliària (1708-3b). A partir d'aquests identifica necessitats concretes del sector (1713-2a) i cerca aspectes innovadors que podria aplicar, com horts a domicilis o xarxes de veïns (1713-2d).",
+        "evidencia_es": "Matriz de oportunidades y lista de necesidades.",
+        "evidencia_ca": "Matriu d'oportunitats i llista de necessitats.",
+        "dua_es": "Tarjetas de ODS y lluvia de ideas visual.",
+        "dua_ca": "Targetes d'ODS i pluja d'idees visual.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA1", "criterios": ["f"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["h"] },
+    "justificacion_es": "La inversión socialmente responsable es una fuente posible para financiar el presupuesto de un proyecto social.",
+    "justificacion_ca": "La inversió socialment responsable és una font possible per finançar el pressupost d'un projecte social.",
+    "actividades": [
+      {
+        "titulo_es": "¿Quién financia nuestro proyecto?",
+        "titulo_ca": "Qui finança el nostre projecte?",
+        "contexto_es": "El presupuesto del proyecto supera lo que puede pagar el centro y el grupo busca financiación.",
+        "contexto_ca": "El pressupost del projecte supera el que pot pagar el centre i el grup cerca finançament.",
+        "desarrollo_es": "El alumnado elabora el presupuesto económico del proyecto (1713-2h) y describe qué es la inversión socialmente responsable y qué papel tienen fondos, bancas éticas y fundaciones (1708-1f). Con ello identifica dos fuentes posibles y adapta el presupuesto a sus requisitos.",
+        "desarrollo_ca": "L'alumnat elabora el pressupost econòmic del projecte (1713-2h) i descriu què és la inversió socialment responsable i quin paper hi tenen fons, banques ètiques i fundacions (1708-1f). Amb això identifica dues fonts possibles i adapta el pressupost als seus requisits.",
+        "evidencia_es": "Presupuesto y ficha de fuentes de financiación.",
+        "evidencia_ca": "Pressupost i fitxa de fonts de finançament.",
+        "dua_es": "Hoja de cálculo con fórmulas y ejemplos de convocatorias.",
+        "dua_ca": "Full de càlcul amb fórmules i exemples de convocatòries.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1710", "ra": "RA5", "criterios": ["g", "h"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["e"] },
+    "justificacion_es": "La viabilidad del proyecto depende tanto de lo técnico como de encontrar opciones financieras responsables.",
+    "justificacion_ca": "La viabilitat del projecte depèn tant del que és tècnic com de trobar opcions financeres responsables.",
+    "actividades": [
+      {
+        "titulo_es": "Estudio de viabilidad del servicio de respiro",
+        "titulo_ca": "Estudi de viabilitat del servei de respir",
+        "contexto_es": "El grupo propone un servicio de respiro de fin de semana para familias cuidadoras de Inca.",
+        "contexto_ca": "El grup proposa un servei de respir de cap de setmana per a famílies cuidadores d'Inca.",
+        "desarrollo_es": "El alumnado realiza el estudio de viabilidad técnica del servicio: espacio, personal y horarios (1713-2e). Aplica estrategias para analizar la viabilidad del proyecto emprendedor, con previsión de ingresos y gastos (1710-5g), e investiga opciones de financiación socialmente responsables, como banca ética o micromecenazgo (1710-5h).",
+        "desarrollo_ca": "L'alumnat fa l'estudi de viabilitat tècnica del servei: espai, personal i horaris (1713-2e). Aplica estratègies per analitzar la viabilitat del projecte emprenedor, amb previsió d'ingressos i despeses (1710-5g), i investiga opcions de finançament socialment responsables, com la banca ètica o el micromecenatge (1710-5h).",
+        "evidencia_es": "Estudio de viabilidad completo.",
+        "evidencia_ca": "Estudi de viabilitat complet.",
+        "dua_es": "Plantilla de viabilidad por bloques y calculadora.",
+        "dua_ca": "Plantilla de viabilitat per blocs i calculadora.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1710", "ra": "RA5", "criterios": ["i"] },
+    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["f"] },
+    "justificacion_es": "Definir los agentes que participan en un proyecto es el paso previo para asignarles recursos y tareas.",
+    "justificacion_ca": "Definir els agents que participen en un projecte és el pas previ per assignar-los recursos i tasques.",
+    "actividades": [
+      {
+        "titulo_es": "Mapa de agentes del proyecto",
+        "titulo_ca": "Mapa d'agents del projecte",
+        "contexto_es": "El proyecto de huerto intergeneracional implica a una escuela, una residencia, el ayuntamiento y una asociación agraria.",
+        "contexto_ca": "El projecte d'hort intergeneracional implica una escola, una residència, l'ajuntament i una associació agrària.",
+        "desarrollo_es": "El alumnado define los agentes implicados y qué aporta cada uno al proyecto (1710-5i). Con ese mapa asigna a cada actividad del huerto los recursos materiales y humanos de cada agente (1713-3f).",
+        "desarrollo_ca": "L'alumnat defineix els agents implicats i què aporta cadascun al projecte (1710-5i). Amb aquest mapa assigna a cada activitat de l'hort els recursos materials i humans de cada agent (1713-3f).",
+        "evidencia_es": "Mapa de agentes y tabla de asignación.",
+        "evidencia_ca": "Mapa d'agents i taula d'assignació.",
+        "dua_es": "Plantilla gráfica de agentes y ejemplo resuelto.",
+        "dua_ca": "Plantilla gràfica d'agents i exemple resolt.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1710", "ra": "RA4", "criterios": ["c"] },
+    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["f", "h"] },
+    "justificacion_es": "El modelo de negocio concreta la estrategia de la empresa y permite seguir sus resultados.",
+    "justificacion_ca": "El model de negoci concreta l'estratègia de l'empresa i permet seguir-ne els resultats.",
+    "actividades": [
+      {
+        "titulo_es": "Lienzo de negocio de un servicio de acompañamiento",
+        "titulo_ca": "Llenç de negoci d'un servei d'acompanyament",
+        "contexto_es": "Dos alumnas quieren montar un servicio de acompañamiento a consultas médicas para personas mayores.",
+        "contexto_ca": "Dues alumnes volen muntar un servei d'acompanyament a consultes mèdiques per a persones grans.",
+        "desarrollo_es": "El alumnado diseña el modelo de negocio con un lienzo Canvas (1710-4c) y define con él la estrategia para responder a la demanda (1713-1f). Fija también cómo hará el seguimiento de los resultados según esa estrategia, por ejemplo con clientes al mes y valoraciones (1713-1h).",
+        "desarrollo_ca": "L'alumnat dissenya el model de negoci amb un llenç Canvas (1710-4c) i hi defineix l'estratègia per respondre a la demanda (1713-1f). Fixa també com farà el seguiment dels resultats segons aquesta estratègia, per exemple amb clients al mes i valoracions (1713-1h).",
+        "evidencia_es": "Lienzo Canvas y cuadro de seguimiento.",
+        "evidencia_ca": "Llenç Canvas i quadre de seguiment.",
+        "dua_es": "Lienzo impreso grande y ejemplos de otros sectores.",
+        "dua_ca": "Llenç imprès gran i exemples d'altres sectors.",
+        "metodologia_es": "metodologías ágiles de emprendimiento.",
+        "metodologia_ca": "metodologies àgils d'emprenedoria."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1710", "ra": "RA2", "criterios": ["b"] },
+    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["b"] },
+    "justificacion_es": "Compartir el liderazgo de un equipo exige transmitir la información tanto entre iguales como hacia la tutora.",
+    "justificacion_ca": "Compartir el lideratge d'un equip exigeix transmetre la informació tant entre iguals com cap a la tutora.",
+    "actividades": [
+      {
+        "titulo_es": "Liderazgo rotatorio en el equipo del proyecto",
+        "titulo_ca": "Lideratge rotatori a l'equip del projecte",
+        "contexto_es": "En el equipo siempre decide la misma persona y el resto se desentiende.",
+        "contexto_ca": "A l'equip sempre decideix la mateixa persona i la resta se'n desentén.",
+        "desarrollo_es": "El equipo establece una coordinación rotatoria semanal en la que todos asumen las decisiones y su responsabilidad (1710-2b). Quien coordina transmite la información al grupo y a la tutora en una reunión breve, horizontal y verticalmente (1713-5b).",
+        "desarrollo_ca": "L'equip estableix una coordinació rotatòria setmanal en què tothom assumeix les decisions i la seva responsabilitat (1710-2b). Qui coordina transmet la informació al grup i a la tutora en una reunió breu, horitzontalment i verticalment (1713-5b).",
+        "evidencia_es": "Calendario de coordinación y actas semanales.",
+        "evidencia_ca": "Calendari de coordinació i actes setmanals.",
+        "dua_es": "Modelo de acta y guion de la reunión.",
+        "dua_ca": "Model d'acta i guió de la reunió.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1710", "ra": "RA3", "criterios": ["d"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "Las ideas innovadoras para el proyecto surgen mejor del trabajo colaborativo que del individual.",
+    "justificacion_ca": "Les idees innovadores per al projecte sorgeixen millor de la feina col·laborativa que de la individual.",
+    "actividades": [
+      {
+        "titulo_es": "Hackatón de innovación en cuidados",
+        "titulo_ca": "Hackató d'innovació en cures",
+        "contexto_es": "El instituto organiza una mañana de innovación con alumnado de Atención a la Dependencia y de Informática.",
+        "contexto_ca": "L'institut organitza un matí d'innovació amb alumnat d'Atenció a la Dependència i d'Informàtica.",
+        "desarrollo_es": "En equipos mixtos, el alumnado pone en práctica el trabajo colaborativo para generar ideas en tres rondas cronometradas (1710-3d). Al final identifica qué aspectos innovadores pueden aplicarse de verdad a su proyecto intermodular (1713-2d).",
+        "desarrollo_ca": "En equips mixtos, l'alumnat posa en pràctica la feina col·laborativa per generar idees en tres rondes cronometrades (1710-3d). Al final identifica quins aspectes innovadors es poden aplicar de veritat al seu projecte intermodular (1713-2d).",
+        "evidencia_es": "Panel de ideas y selección justificada.",
+        "evidencia_ca": "Panell d'idees i selecció justificada.",
+        "dua_es": "Roles definidos y apoyo visual de cada ronda.",
+        "dua_ca": "Rols definits i suport visual de cada ronda.",
+        "metodologia_es": "hackatón.",
+        "metodologia_ca": "hackató."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1710", "ra": "RA4", "criterios": ["i"] },
+    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["a"] },
+    "justificacion_es": "Difundir un proyecto con técnicas de marketing exige transmitir la información de forma ordenada.",
+    "justificacion_ca": "Difondre un projecte amb tècniques de màrqueting exigeix transmetre la informació de manera ordenada.",
+    "actividades": [
+      {
+        "titulo_es": "Campaña para dar a conocer el servicio",
+        "titulo_ca": "Campanya per donar a conèixer el servei",
+        "contexto_es": "El servicio de acompañamiento que ha diseñado el grupo no tiene clientes porque nadie lo conoce.",
+        "contexto_ca": "El servei d'acompanyament que ha dissenyat el grup no té clients perquè ningú no el coneix.",
+        "desarrollo_es": "El alumnado experimenta con estrategias de marketing: carteles en centros de salud, redes sociales y una charla en el casal (1710-4i). En cada pieza transmite la información con orden y método: qué ofrece, a quién y cómo contactar (1713-5a).",
+        "desarrollo_ca": "L'alumnat experimenta amb estratègies de màrqueting: cartells en centres de salut, xarxes socials i una xerrada al casal (1710-4i). A cada peça transmet la informació amb ordre i mètode: què ofereix, a qui i com contactar (1713-5a).",
+        "evidencia_es": "Piezas de la campaña y registro de respuestas.",
+        "evidencia_ca": "Peces de la campanya i registre de respostes.",
+        "dua_es": "Plantillas de diseño y libertad de formato.",
+        "dua_ca": "Plantilles de disseny i llibertat de format.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA2", "criterios": ["b", "d"] },
+    "b": { "modulo": "1708", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "Los informes internacionales sobre desarrollo sostenible se publican en inglés y permiten entender su marco.",
+    "justificacion_ca": "Els informes internacionals sobre desenvolupament sostenible es publiquen en anglès i permeten entendre'n el marc.",
+    "actividades": [
+      {
+        "titulo_es": "Leer la OMS sobre envejecimiento saludable",
+        "titulo_ca": "Llegir l'OMS sobre envelliment saludable",
+        "contexto_es": "La OMS ha lanzado la Década del Envejecimiento Saludable y el resumen solo está en inglés.",
+        "contexto_ca": "L'OMS ha llançat la Dècada de l'Envelliment Saludable i el resum només està en anglès.",
+        "desarrollo_es": "El alumnado lee de forma comprensiva el resumen del informe (0156-2b) y reconoce sus ideas principales sin traducirlo palabra a palabra (0156-2d). Con ello describe el concepto de sostenibilidad aplicado al envejecimiento y el marco internacional que lo impulsa (1708-1a).",
+        "desarrollo_ca": "L'alumnat llegeix de manera comprensiva el resum de l'informe (0156-2b) i en reconeix les idees principals sense traduir-lo paraula per paraula (0156-2d). Amb això descriu el concepte de sostenibilitat aplicat a l'envelliment i el marc internacional que l'impulsa (1708-1a).",
+        "evidencia_es": "Mapa conceptual a partir del informe.",
+        "evidencia_ca": "Mapa conceptual a partir de l'informe.",
+        "dua_es": "Texto adaptado por niveles y glosario.",
+        "dua_ca": "Text adaptat per nivells i glossari.",
+        "metodologia_es": "lectura guiada por fases.",
+        "metodologia_ca": "lectura guiada per fases."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA1", "criterios": ["f"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "Los documentales en inglés sobre cambio climático y envejecimiento ayudan a identificar los grandes retos sociales y ambientales.",
+    "justificacion_ca": "Els documentals en anglès sobre canvi climàtic i envelliment ajuden a identificar els grans reptes socials i ambientals.",
+    "actividades": [
+      {
+        "titulo_es": "Documental sobre una sociedad que envejece",
+        "titulo_ca": "Documental sobre una societat que envelleix",
+        "contexto_es": "La BBC emite un documental sobre cómo el calor y la soledad afectan a las personas mayores en Europa.",
+        "contexto_ca": "La BBC emet un documental sobre com la calor i la soledat afecten les persones grans a Europa.",
+        "desarrollo_es": "El alumnado ve fragmentos del documental y resume con claridad sus ideas principales (0156-1f). A partir de ellas identifica los retos ambientales y sociales que plantea y los ordena según su impacto en su trabajo (1708-2a).",
+        "desarrollo_ca": "L'alumnat mira fragments del documental i en resumeix amb claredat les idees principals (0156-1f). A partir d'aquestes identifica els reptes ambientals i socials que planteja i els ordena segons l'impacte en la seva feina (1708-2a).",
+        "evidencia_es": "Resumen en inglés y ranking de retos.",
+        "evidencia_ca": "Resum en anglès i rànquing de reptes.",
+        "dua_es": "Subtítulos en inglés y fragmentos cortos.",
+        "dua_ca": "Subtítols en anglès i fragments curts.",
+        "metodologia_es": "cinefórum.",
+        "metodologia_ca": "cinefòrum."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["g", "h"] },
+    "b": { "modulo": "1708", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "Pedir a un proveedor extranjero información sobre sus criterios de sostenibilidad es una gestión escrita formal en inglés.",
+    "justificacion_ca": "Demanar a un proveïdor estranger informació sobre els seus criteris de sostenibilitat és una gestió escrita formal en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Carta al proveedor de guantes",
+        "titulo_ca": "Carta al proveïdor de guants",
+        "contexto_es": "La residencia compra guantes a un fabricante alemán y quiere saber cómo se producen y si son reciclables.",
+        "contexto_ca": "La residència compra guants a un fabricant alemany i vol saber com es produeixen i si són reciclables.",
+        "desarrollo_es": "El alumnado identifica qué procesos de producción y criterios de sostenibilidad conviene preguntar al fabricante (1708-4f). Redacta en inglés una carta formal para pedir esa información (0156-4h), con las fórmulas de cortesía propias de este tipo de documento (0156-4g).",
+        "desarrollo_ca": "L'alumnat identifica quins processos de producció i criteris de sostenibilitat convé demanar al fabricant (1708-4f). Redacta en anglès una carta formal per sol·licitar aquesta informació (0156-4h), amb les fórmules de cortesia pròpies d'aquest tipus de document (0156-4g).",
+        "evidencia_es": "Carta formal en inglés.",
+        "evidencia_ca": "Carta formal en anglès.",
+        "dua_es": "Modelo de carta y banco de fórmulas de cortesía.",
+        "dua_ca": "Model de carta i banc de fórmules de cortesia.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["l"] },
+    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["a", "b"] },
+    "justificacion_es": "Las entrevistas de trabajo en inglés son habituales para empleos en el sector de cuidados en otros países europeos.",
+    "justificacion_ca": "Les entrevistes de feina en anglès són habituals per a ocupacions del sector de cures en altres països europeus.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevista para trabajar de «carer» en Irlanda",
+        "titulo_ca": "Entrevista per fer feina de «carer» a Irlanda",
+        "contexto_es": "Una agencia irlandesa busca auxiliares de cuidados y hace la primera entrevista por videollamada en inglés.",
+        "contexto_ca": "Una agència irlandesa cerca auxiliars de cures i fa la primera entrevista per videotrucada en anglès.",
+        "desarrollo_es": "El alumnado determina qué técnicas de selección usan las agencias del sector (1710-1a) y desarrolla una estrategia de búsqueda de empleo en el extranjero (1710-1b). En una entrevista simulada responde en inglés a preguntas sobre su formación y experiencia (0156-3l).",
+        "desarrollo_ca": "L'alumnat determina quines tècniques de selecció fan servir les agències del sector (1710-1a) i desenvolupa una estratègia de cerca de feina a l'estranger (1710-1b). En una entrevista simulada respon en anglès preguntes sobre la seva formació i experiència (0156-3l).",
+        "evidencia_es": "Plan de búsqueda y entrevista grabada.",
+        "evidencia_ca": "Pla de cerca i entrevista enregistrada.",
+        "dua_es": "Banco de preguntas frecuentes y ensayo previo.",
+        "dua_ca": "Banc de preguntes freqüents i assaig previ.",
+        "metodologia_es": "simulación de entrevista.",
+        "metodologia_ca": "simulació d'entrevista."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["a", "b"] },
+    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["d"] },
+    "justificacion_es": "La marca personal en el mercado internacional necesita un CV y un perfil escritos en inglés.",
+    "justificacion_ca": "La marca personal en el mercat internacional necessita un CV i un perfil escrits en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Mi perfil profesional en inglés",
+        "titulo_ca": "El meu perfil professional en anglès",
+        "contexto_es": "El alumnado quiere optar a prácticas Erasmus+ y necesita su perfil y su carta de presentación en inglés.",
+        "contexto_ca": "L'alumnat vol optar a pràctiques Erasmus+ i necessita el seu perfil i la carta de presentació en anglès.",
+        "desarrollo_es": "El alumnado elige la estructura, el vocabulario y las convenciones de un CV europeo y de una carta de presentación (0156-4a). Redacta textos breves sobre su perfil (0156-4b) que transmiten su marca personal y su aportación de valor (1710-1d).",
+        "desarrollo_ca": "L'alumnat tria l'estructura, el vocabulari i les convencions d'un CV europeu i d'una carta de presentació (0156-4a). Redacta textos breus sobre el seu perfil (0156-4b) que transmeten la seva marca personal i la seva aportació de valor (1710-1d).",
+        "evidencia_es": "CV Europass y carta en inglés.",
+        "evidencia_ca": "CV Europass i carta en anglès.",
+        "dua_es": "Plantilla Europass y ejemplos comentados.",
+        "dua_ca": "Plantilla Europass i exemples comentats.",
+        "metodologia_es": "aprendizaje basado en productos.",
+        "metodologia_ca": "aprenentatge basat en productes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA5", "criterios": ["e"] },
+    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["b"] },
+    "justificacion_es": "Buscar empleo en otro país exige aplicar sus normas de relación social en cada contacto con las empresas.",
+    "justificacion_ca": "Cercar feina en un altre país exigeix aplicar-ne les normes de relació social en cada contacte amb les empreses.",
+    "actividades": [
+      {
+        "titulo_es": "Feria de empleo internacional simulada",
+        "titulo_ca": "Fira d'ocupació internacional simulada",
+        "contexto_es": "El instituto recibe a empresas británicas e irlandesas del sector de cuidados en una feria de empleo.",
+        "contexto_ca": "L'institut rep empreses britàniques i irlandeses del sector de cures en una fira d'ocupació.",
+        "desarrollo_es": "El alumnado prepara una estrategia para la feria: qué empresas visitar, qué llevar y qué preguntar (1710-1b). En los encuentros simulados aplica las normas de relación social británicas, como el saludo, la puntualidad o el seguimiento por escrito (0156-5e).",
+        "desarrollo_ca": "L'alumnat prepara una estratègia per a la fira: quines empreses visitar, què dur i què demanar (1710-1b). Als encontres simulats aplica les normes de relació social britàniques, com la salutació, la puntualitat o el seguiment per escrit (0156-5e).",
+        "evidencia_es": "Plan de la feria y observación de los encuentros.",
+        "evidencia_ca": "Pla de la fira i observació dels encontres.",
+        "dua_es": "Guion de presentación y apoyo de un compañero.",
+        "dua_ca": "Guió de presentació i suport d'un company.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA1", "criterios": ["b", "h"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Seguir un seminario web en inglés sobre comunicación profesional refuerza la comprensión global y las propias técnicas de presentación.",
+    "justificacion_ca": "Seguir un seminari web en anglès sobre comunicació professional reforça la comprensió global i les pròpies tècniques de presentació.",
+    "actividades": [
+      {
+        "titulo_es": "Seminario web sobre comunicación con mayores",
+        "titulo_ca": "Seminari web sobre comunicació amb gent gran",
+        "contexto_es": "Una asociación europea de cuidadores ofrece un seminario web gratuito en inglés sobre comunicación afectiva.",
+        "contexto_ca": "Una associació europea de cuidadors ofereix un seminari web gratuït en anglès sobre comunicació afectiva.",
+        "desarrollo_es": "El alumnado sigue el seminario identificando el hilo argumental y el papel de cada ponente (0156-1b), sin bloquearse por las palabras que no entiende (0156-1h). Después incorpora dos técnicas del seminario a su forma de presentarse y comunicarse, y las adapta a una situación real (1710-2c).",
+        "desarrollo_ca": "L'alumnat segueix el seminari identificant-ne el fil argumental i el paper de cada ponent (0156-1b), sense bloquejar-se per les paraules que no entén (0156-1h). Després incorpora dues tècniques del seminari a la seva manera de presentar-se i comunicar-se, i les adapta a una situació real (1710-2c).",
+        "evidencia_es": "Ficha de seguimiento del seminario y práctica de las técnicas.",
+        "evidencia_ca": "Fitxa de seguiment del seminari i pràctica de les tècniques.",
+        "dua_es": "Grabación con subtítulos y ficha guiada.",
+        "dua_ca": "Enregistrament amb subtítols i fitxa guiada.",
+        "metodologia_es": "aprendizaje autónomo guiado.",
+        "metodologia_ca": "aprenentatge autònom guiat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA2", "criterios": ["f"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["b"] },
+    "justificacion_es": "Traducir experiencias de emprendimiento social de otros países permite analizar distintas metodologías para emprender.",
+    "justificacion_ca": "Traduir experiències d'emprenedoria social d'altres països permet analitzar diferents metodologies per emprendre.",
+    "actividades": [
+      {
+        "titulo_es": "Traducir el modelo Buurtzorg",
+        "titulo_ca": "Traduir el model Buurtzorg",
+        "contexto_es": "El modelo holandés Buurtzorg de equipos autónomos de cuidados a domicilio solo está documentado en inglés.",
+        "contexto_ca": "El model holandès Buurtzorg d'equips autònoms de cures a domicili només està documentat en anglès.",
+        "desarrollo_es": "El alumnado traduce con apoyo de herramientas un artículo breve sobre Buurtzorg (0156-2f). Con la traducción analiza la metodología que usaron para emprender y por qué generó empleo y bienestar social (1710-3b).",
+        "desarrollo_ca": "L'alumnat tradueix amb suport d'eines un article breu sobre Buurtzorg (0156-2f). Amb la traducció analitza la metodologia que van fer servir per emprendre i per què va generar ocupació i benestar social (1710-3b).",
+        "evidencia_es": "Traducción revisada y análisis del modelo.",
+        "evidencia_ca": "Traducció revisada i anàlisi del model.",
+        "dua_es": "Traductor automático con revisión guiada y glosario.",
+        "dua_ca": "Traductor automàtic amb revisió guiada i glossari.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA5", "criterios": ["a", "c"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "Las costumbres y valores de los residentes extranjeros son parte del entorno que condiciona una idea emprendedora.",
+    "justificacion_ca": "Els costums i els valors dels residents estrangers són part de l'entorn que condiciona una idea emprenedora.",
+    "actividades": [
+      {
+        "titulo_es": "Servicio de cuidados para residentes europeos",
+        "titulo_ca": "Servei de cures per a residents europeus",
+        "contexto_es": "En el suroeste de Mallorca viven miles de jubilados europeos que envejecen lejos de sus familias.",
+        "contexto_ca": "Al sud-oest de Mallorca hi viuen milers de jubilats europeus que envelleixen lluny de les seves famílies.",
+        "desarrollo_es": "El alumnado define las costumbres de esta comunidad (0156-5a) e identifica sus valores y creencias, como la independencia o el papel de la familia (0156-5c). Con ello analiza cómo este entorno influye en una idea emprendedora de cuidados adaptada a ellos (1710-4f).",
+        "desarrollo_ca": "L'alumnat defineix els costums d'aquesta comunitat (0156-5a) i n'identifica els valors i les creences, com la independència o el paper de la família (0156-5c). Amb això analitza com aquest entorn influeix en una idea emprenedora de cures adaptada a ells (1710-4f).",
+        "evidencia_es": "Ficha cultural y análisis del entorno.",
+        "evidencia_ca": "Fitxa cultural i anàlisi de l'entorn.",
+        "dua_es": "Fuentes variadas y trabajo en parejas.",
+        "dua_ca": "Fonts variades i feina en parelles.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0156", "ra": "RA1", "criterios": ["i"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["g"] },
+    "justificacion_es": "En las entrevistas de problema con clientes extranjeros, la entonación y los gestos revelan necesidades que las palabras no dicen.",
+    "justificacion_ca": "En les entrevistes de problema amb clients estrangers, l'entonació i els gests revelen necessitats que les paraules no diuen.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevistas de problema en inglés",
+        "titulo_ca": "Entrevistes de problema en anglès",
+        "contexto_es": "Para validar su idea de servicio, el grupo entrevista a jubilados británicos en un club social.",
+        "contexto_ca": "Per validar la seva idea de servei, el grup entrevista jubilats britànics en un club social.",
+        "desarrollo_es": "El alumnado realiza entrevistas de problema en inglés para validar el perfil y el problema de sus posibles clientes (1710-4g). Al analizarlas se fija en la entonación y los gestos para captar intenciones e inquietudes que no se dicen abiertamente (0156-1i).",
+        "desarrollo_ca": "L'alumnat fa entrevistes de problema en anglès per validar el perfil i el problema dels seus possibles clients (1710-4g). En analitzar-les es fixa en l'entonació i els gests per captar intencions i inquietuds que no es diuen obertament (0156-1i).",
+        "evidencia_es": "Entrevistas grabadas y análisis de resultados.",
+        "evidencia_ca": "Entrevistes enregistrades i anàlisi de resultats.",
+        "dua_es": "Guion de entrevista en inglés y trabajo en parejas.",
+        "dua_ca": "Guió d'entrevista en anglès i feina en parelles.",
+        "metodologia_es": "metodología lean startup.",
+        "metodologia_ca": "metodologia lean startup."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Abordar un reto social con aliados exige participar en objetivos compartidos y asumir responsabilidades en el grupo.",
+    "justificacion_ca": "Abordar un repte social amb aliats exigeix participar en objectius compartits i assumir responsabilitats en el grup.",
+    "actividades": [
+      {
+        "titulo_es": "Alianza escuela-residencia contra la brecha generacional",
+        "titulo_ca": "Aliança escola-residència contra la bretxa generacional",
+        "contexto_es": "Una escuela y una residencia vecinas quieren colaborar, pero cada una tiene objetivos diferentes.",
+        "contexto_ca": "Una escola i una residència veïnes volen col·laborar, però cadascuna té objectius diferents.",
+        "desarrollo_es": "El alumnado analiza por qué la alianza entre ambas entidades es clave para abordar la brecha generacional (1708-2e). En una reunión simulada participa en fijar objetivos compartidos, toma decisiones y asume responsabilidades concretas (1710-2b).",
+        "desarrollo_ca": "L'alumnat analitza per què l'aliança entre les dues entitats és clau per abordar la bretxa generacional (1708-2e). En una reunió simulada participa a fixar objectius compartits, pren decisions i assumeix responsabilitats concretes (1710-2b).",
+        "evidencia_es": "Acuerdo de colaboración con objetivos y responsables.",
+        "evidencia_ca": "Acord de col·laboració amb objectius i responsables.",
+        "dua_es": "Tarjetas de rol y plantilla de acuerdo.",
+        "dua_ca": "Targetes de rol i plantilla d'acord.",
+        "metodologia_es": "simulación de reunión.",
+        "metodologia_ca": "simulació de reunió."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA2", "criterios": ["b"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["a"] },
+    "justificacion_es": "La innovación social nace de entender cómo los retos sociales se relacionan con la actividad económica.",
+    "justificacion_ca": "La innovació social neix d'entendre com els reptes socials es relacionen amb l'activitat econòmica.",
+    "actividades": [
+      {
+        "titulo_es": "Envejecimiento, economía e innovación",
+        "titulo_ca": "Envelliment, economia i innovació",
+        "contexto_es": "En Baleares, en diez años una de cada cuatro personas tendrá más de 65 años.",
+        "contexto_ca": "A les Balears, d'aquí a deu anys una de cada quatre persones tindrà més de 65 anys.",
+        "desarrollo_es": "El alumnado relaciona el envejecimiento de la población con la actividad económica de las islas: empleo, turismo y servicios (1708-2b). Después identifica qué innovaciones pueden convertir ese reto en bienestar, como viviendas colaborativas o tecnología de apoyo (1710-3a).",
+        "desarrollo_ca": "L'alumnat relaciona l'envelliment de la població amb l'activitat econòmica de les illes: ocupació, turisme i serveis (1708-2b). Després identifica quines innovacions poden convertir aquest repte en benestar, com habitatges col·laboratius o tecnologia de suport (1710-3a).",
+        "evidencia_es": "Infografía del reto y banco de innovaciones.",
+        "evidencia_ca": "Infografia del repte i banc d'innovacions.",
+        "dua_es": "Datos en gráficos y ejemplos de innovaciones en vídeo.",
+        "dua_ca": "Dades en gràfics i exemples d'innovacions en vídeo.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "El pensamiento de diseño ayuda a proponer acciones que minimicen el impacto de un reto social concreto.",
+    "justificacion_ca": "El pensament de disseny ajuda a proposar accions que minimitzin l'impacte d'un repte social concret.",
+    "actividades": [
+      {
+        "titulo_es": "Design thinking contra la soledad no deseada",
+        "titulo_ca": "Design thinking contra la soledat no desitjada",
+        "contexto_es": "El ayuntamiento lanza un concurso de ideas para reducir la soledad no deseada en el barrio.",
+        "contexto_ca": "L'ajuntament llança un concurs d'idees per reduir la soledat no desitjada al barri.",
+        "desarrollo_es": "El alumnado aplica el pensamiento de diseño con vecinos mayores para detectar sus necesidades sociales (1710-5d). Con lo aprendido identifica medidas concretas para reducir el impacto de la soledad, como paseos en grupo o comidas compartidas (1708-2d).",
+        "desarrollo_ca": "L'alumnat aplica el pensament de disseny amb veïns grans per detectar-ne les necessitats socials (1710-5d). Amb el que ha après identifica mesures concretes per reduir l'impacte de la soledat, com passejades en grup o dinars compartits (1708-2d).",
+        "evidencia_es": "Mapa de empatía y propuesta para el concurso.",
+        "evidencia_ca": "Mapa d'empatia i proposta per al concurs.",
+        "dua_es": "Plantillas visuales de cada fase.",
+        "dua_ca": "Plantilles visuals de cada fase.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["f"] },
+    "justificacion_es": "Las acciones sostenibles que identifica el profesional pueden integrarse en la estrategia de una empresa del sector.",
+    "justificacion_ca": "Les accions sostenibles que identifica el professional es poden integrar en l'estratègia d'una empresa del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Plan verde para una empresa de SAD",
+        "titulo_ca": "Pla verd per a una empresa de SAD",
+        "contexto_es": "Una empresa de ayuda a domicilio quiere presentarse a un concurso público que puntúa los criterios ambientales.",
+        "contexto_ca": "Una empresa d'ajuda a domicili es vol presentar a un concurs públic que puntua els criteris ambientals.",
+        "desarrollo_es": "El alumnado identifica acciones sostenibles que pueden aplicar las auxiliares en su trabajo diario, como rutas a pie o productos de limpieza ecológicos (1708-3c). Después las integra en la estrategia de la empresa, alineándolas con las políticas ambientales del concurso (1710-3f).",
+        "desarrollo_ca": "L'alumnat identifica accions sostenibles que poden aplicar les auxiliars en la feina diària, com rutes a peu o productes de neteja ecològics (1708-3c). Després les integra en l'estratègia de l'empresa, alineant-les amb les polítiques ambientals del concurs (1710-3f).",
+        "evidencia_es": "Plan verde de la empresa.",
+        "evidencia_ca": "Pla verd de l'empresa.",
+        "dua_es": "Ejemplo de pliego de condiciones resumido.",
+        "dua_ca": "Exemple de plec de condicions resumit.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA3", "criterios": ["a", "b"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["b", "e"] },
+    "justificacion_es": "Los ODS más relevantes para el sector orientan el proceso creativo hacia ideas con valor social.",
+    "justificacion_ca": "Els ODS més rellevants per al sector orienten el procés creatiu cap a idees amb valor social.",
+    "actividades": [
+      {
+        "titulo_es": "Ideas emprendedoras a partir de los ODS",
+        "titulo_ca": "Idees emprenedores a partir dels ODS",
+        "contexto_es": "El grupo debe proponer una idea emprendedora y no sabe por dónde empezar.",
+        "contexto_ca": "El grup ha de proposar una idea emprenedora i no sap per on començar.",
+        "desarrollo_es": "El alumnado identifica los ODS más relevantes para su actividad profesional (1708-3a) y los riesgos y oportunidades que representan (1708-3b). Con ellos pone en marcha un proceso creativo para generar ideas con valor social (1710-4b) y analiza cómo la economía del bien común puede inspirarlas (1710-4e).",
+        "desarrollo_ca": "L'alumnat identifica els ODS més rellevants per a la seva activitat professional (1708-3a) i els riscs i les oportunitats que representen (1708-3b). Amb aquests posa en marxa un procés creatiu per generar idees amb valor social (1710-4b) i analitza com l'economia del bé comú les pot inspirar (1710-4e).",
+        "evidencia_es": "Banco de ideas priorizadas.",
+        "evidencia_ca": "Banc d'idees prioritzades.",
+        "dua_es": "Técnicas creativas visuales y tiempo de reflexión individual.",
+        "dua_ca": "Tècniques creatives visuals i temps de reflexió individual.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["e", "f"] },
+    "justificacion_es": "Un modelo de negocio ecosocial debe definir acciones para minimizar impactos y alinearse con metas sostenibles.",
+    "justificacion_ca": "Un model de negoci ecosocial ha de definir accions per minimitzar impactes i alinear-se amb metes sostenibles.",
+    "actividades": [
+      {
+        "titulo_es": "Modelo de negocio de una cooperativa de cuidados",
+        "titulo_ca": "Model de negoci d'una cooperativa de cures",
+        "contexto_es": "Un grupo de auxiliares quiere crear una cooperativa de cuidados con criterios ecosociales.",
+        "contexto_ca": "Un grup d'auxiliars vol crear una cooperativa de cures amb criteris ecosocials.",
+        "desarrollo_es": "El alumnado analiza los elementos de un modelo de negocio ecosocial (1710-5e) y alinea sus metas con el desarrollo sostenible (1710-5f). Define acciones para minimizar los impactos negativos de la cooperativa, como desplazamientos o residuos, y aprovechar sus oportunidades (1708-6c).",
+        "desarrollo_ca": "L'alumnat analitza els elements d'un model de negoci ecosocial (1710-5e) i n'alinea les metes amb el desenvolupament sostenible (1710-5f). Defineix accions per minimitzar els impactes negatius de la cooperativa, com els desplaçaments o els residus, i aprofitar-ne les oportunitats (1708-6c).",
+        "evidencia_es": "Modelo de negocio ecosocial con plan de acciones.",
+        "evidencia_ca": "Model de negoci ecosocial amb pla d'accions.",
+        "dua_es": "Lienzo ecosocial y ejemplos de cooperativas.",
+        "dua_ca": "Llenç ecosocial i exemples de cooperatives.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA6", "criterios": ["d"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["d"] },
+    "justificacion_es": "El balance social y las métricas de sostenibilidad miden el valor ético y social de una idea emprendedora.",
+    "justificacion_ca": "El balanç social i les mètriques de sostenibilitat mesuren el valor ètic i social d'una idea emprenedora.",
+    "actividades": [
+      {
+        "titulo_es": "Medir el impacto social de nuestra idea",
+        "titulo_ca": "Mesurar l'impacte social de la nostra idea",
+        "contexto_es": "Una fundación que apoya proyectos sociales pide indicadores de impacto antes de financiar.",
+        "contexto_ca": "Una fundació que dona suport a projectes socials demana indicadors d'impacte abans de finançar.",
+        "desarrollo_es": "El alumnado incorpora valores éticos y sociales a su idea analizando modelos de balance social (1710-4d). Determina métricas para evaluar su desempeño según estándares de sostenibilidad, como horas de respiro familiar o empleo local creado (1708-6d).",
+        "desarrollo_ca": "L'alumnat incorpora valors ètics i socials a la seva idea analitzant models de balanç social (1710-4d). Determina mètriques per avaluar-ne l'acompliment segons estàndards de sostenibilitat, com hores de respir familiar o ocupació local creada (1708-6d).",
+        "evidencia_es": "Cuadro de indicadores de impacto.",
+        "evidencia_ca": "Quadre d'indicadors d'impacte.",
+        "dua_es": "Ejemplos de indicadores y plantilla guiada.",
+        "dua_ca": "Exemples d'indicadors i plantilla guiada.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA1", "criterios": ["b", "d"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "Los aspectos ASG relevantes del entorno condicionan los riesgos y oportunidades de una idea emprendedora.",
+    "justificacion_ca": "Els aspectes ASG rellevants de l'entorn condicionen els riscs i les oportunitats d'una idea emprenedora.",
+    "actividades": [
+      {
+        "titulo_es": "Análisis ASG del entorno de la idea",
+        "titulo_ca": "Anàlisi ASG de l'entorn de la idea",
+        "contexto_es": "Antes de lanzar su servicio de respiro familiar, el grupo quiere conocer qué le espera en el entorno.",
+        "contexto_ca": "Abans de llançar el seu servei de respir familiar, el grup vol conèixer què l'espera a l'entorn.",
+        "desarrollo_es": "El alumnado identifica los asuntos ambientales, sociales y de gobernanza que influyen en las empresas del sector (1708-1b) y analiza cuáles son más relevantes para sus grupos de interés y qué riesgos u oportunidades suponen (1708-1d). Con ello completa el análisis del entorno general y específico de su idea (1710-4f).",
+        "desarrollo_ca": "L'alumnat identifica les qüestions ambientals, socials i de governança que influeixen en les empreses del sector (1708-1b) i analitza quines són més rellevants per als seus grups d'interès i quins riscs o oportunitats suposen (1708-1d). Amb això completa l'anàlisi de l'entorn general i específic de la seva idea (1710-4f).",
+        "evidencia_es": "Análisis PESTEL con enfoque ASG.",
+        "evidencia_ca": "Anàlisi PESTEL amb enfocament ASG.",
+        "dua_es": "Plantilla PESTEL con preguntas guía.",
+        "dua_ca": "Plantilla PESTEL amb preguntes guia.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA4", "criterios": ["b", "c"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "La economía circular ofrece oportunidades de intraemprendimiento dentro de los propios centros.",
+    "justificacion_ca": "L'economia circular ofereix oportunitats d'intraemprenedoria dins els mateixos centres.",
+    "actividades": [
+      {
+        "titulo_es": "Intraemprender un taller de reparación",
+        "titulo_ca": "Intraemprendre un taller de reparació",
+        "contexto_es": "En la residencia se acumulan sillas de ruedas y andadores con pequeñas averías que nadie repara.",
+        "contexto_ca": "A la residència s'acumulen cadires de rodes i caminadors amb petites avaries que ningú no repara.",
+        "desarrollo_es": "El alumnado identifica los principios de la economía circular aplicables a este material (1708-4b) y contrasta sus beneficios con comprar nuevo (1708-4c). Con habilidades emprendedoras propone a la dirección un taller interno de reparación como proyecto de intraemprendimiento (1710-3c).",
+        "desarrollo_ca": "L'alumnat identifica els principis de l'economia circular aplicables a aquest material (1708-4b) i en contrasta els beneficis amb comprar-ne de nou (1708-4c). Amb habilitats emprenedores proposa a la direcció un taller intern de reparació com a projecte d'intraemprenedoria (1710-3c).",
+        "evidencia_es": "Propuesta de intraemprendimiento presentada a la dirección.",
+        "evidencia_ca": "Proposta d'intraemprenedoria presentada a la direcció.",
+        "dua_es": "Esquema de propuesta y ensayo de la presentación.",
+        "dua_ca": "Esquema de proposta i assaig de la presentació.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1708", "ra": "RA5", "criterios": ["a", "b"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["d"] },
+    "justificacion_es": "Cambiar el modelo de consumo de un centro es un proceso de innovación que requiere trabajo colaborativo.",
+    "justificacion_ca": "Canviar el model de consum d'un centre és un procés d'innovació que requereix feina col·laborativa.",
+    "actividades": [
+      {
+        "titulo_es": "Comisión verde del centro de día",
+        "titulo_ca": "Comissió verda del centre de dia",
+        "contexto_es": "El centro de día crea una comisión verde con personal, usuarios y familias.",
+        "contexto_ca": "El centre de dia crea una comissió verda amb personal, usuaris i famílies.",
+        "desarrollo_es": "El alumnado caracteriza el modelo de consumo actual del centro en comida, limpieza y material (1708-5a) e identifica qué principios de la economía verde y circular podría aplicar (1708-5b). Prepara y dinamiza una sesión colaborativa de la comisión para generar propuestas entre todos (1710-3d).",
+        "desarrollo_ca": "L'alumnat caracteritza el model de consum actual del centre en menjar, neteja i material (1708-5a) i identifica quins principis de l'economia verda i circular podria aplicar (1708-5b). Prepara i dinamitza una sessió col·laborativa de la comissió per generar propostes entre tots (1710-3d).",
+        "evidencia_es": "Diagnóstico de consumo y acta de la sesión.",
+        "evidencia_ca": "Diagnòstic de consum i acta de la sessió.",
+        "dua_es": "Fichas de consumo con imágenes y roles en la sesión.",
+        "dua_ca": "Fitxes de consum amb imatges i rols a la sessió.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "nivel": "CFGM_ATENCION_DEPENDENCIA",
+  "curso": "2º",
+  "modulos": {
+    "1708": {
+      "nombre_es": "Sostenibilidad aplicada al sistema productivo",
+      "nombre_ca": "Sostenibilitat aplicada al sistema productiu",
+      "tipo": "comun",
+      "relacion": "sostenibilidad",
+      "color": "#f87171",
+      "icon": "leaf"
+    },
+    "1710": {
+      "nombre_es": "Itinerario personal para la empleabilidad II",
+      "nombre_ca": "Itinerari personal per a l'ocupabilitat II",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#4ade80",
+      "icon": "briefcase"
+    },
+    "1713": {
+      "nombre_es": "Proyecto intermodular",
+      "nombre_ca": "Projecte intermodular",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#fbbf24",
+      "icon": "folder-kanban"
+    },
+    "0211": {
+      "nombre_es": "Destrezas sociales",
+      "nombre_ca": "Destreses socials",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#f472b6",
+      "icon": "users"
+    },
+    "0214": {
+      "nombre_es": "Apoyo a la comunicación",
+      "nombre_ca": "Suport a la comunicació",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#34d399",
+      "icon": "message-circle"
+    },
+    "0216": {
+      "nombre_es": "Atención sanitaria",
+      "nombre_ca": "Atenció sanitària",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#fb923c",
+      "icon": "heart-pulse"
+    },
+    "0831": {
+      "nombre_es": "Teleasistencia",
+      "nombre_ca": "Teleassistència",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#a78bfa",
+      "icon": "user-check"
+    },
+    "0156": {
+      "nombre_es": "Inglés profesional",
+      "nombre_ca": "Anglès professional",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#38bdf8",
+      "icon": "languages"
+    }
+  }
+}

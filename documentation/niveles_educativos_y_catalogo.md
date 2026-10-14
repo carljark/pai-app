@@ -143,7 +143,7 @@ Ciclo SAN23 de la familia Sanidad (tarea 213). Es el primer título **LOGSE** de
 
 ## CFGS Acondicionamiento Físico (`CFGS_ACONDICIONAMIENTO_FISICO`)
 
-Ciclo AFD32 de la familia Actividades Físicas y Deportivas (tarea 214). Tiene mapa intermodular de 1.º desde la tarea 228 (pestaña `CFGS_ACONDICIONAMIENTO_FISICO`, 157 relaciones y 314 conexiones); el de 2.º se hace en la tarea 227.
+Ciclo AFD32 de la familia Actividades Físicas y Deportivas (tarea 214). Tiene mapa intermodular de los dos cursos: 1.º desde la tarea 228 (pestaña `CFGS_ACONDICIONAMIENTO_FISICO`, 157 relaciones y 314 conexiones) y 2.º desde la tarea 227 (pestaña `CFGS_ACONDICIONAMIENTO_FISICO_2`, 140 relaciones y 280 conexiones).
 
 ### Fuente normativa
 

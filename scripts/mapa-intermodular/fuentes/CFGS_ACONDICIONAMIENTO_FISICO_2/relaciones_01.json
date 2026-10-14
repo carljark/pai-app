@@ -1,0 +1,823 @@
+[
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1150",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Comprender la documentación técnica y las instrucciones en inglés sobre software musical permite evaluar con rigor los efectos técnicos de las actividades con soporte musical.",
+    "justificacion_ca": "Comprendre la documentació tècnica i les instruccions en anglès sobre programari musical permet avaluar amb rigor els efectes tècnics de les activitats amb suport musical.",
+    "actividades": [
+      {
+        "titulo_es": "Análisis de software musical internacional para clases colectivas",
+        "titulo_ca": "Anàlisi de programari musical internacional per a classes col·lectives",
+        "contexto_es": "Una cadena internacional de gimnasios implanta una aplicación en inglés para la edición de pistas y control de beats por minuto en sus salas.",
+        "contexto_ca": "Una cadena internacional de gimnasos implanta una aplicació en anglès per a l'edició de pistes i control de pulsacions per minut a les sales.",
+        "desarrollo_es": "El equipo técnico extrae la idea principal de los manuales del software en inglés (0179-2a) e interpreta las instrucciones digitales de modulación rítmica (0179-2i); a continuación, analiza cómo influyen estas herramientas en la valoración de los efectos técnicos y el impacto del esfuerzo en las sesiones dirigidas (1150-1a).",
+        "desarrollo_ca": "L'equip tècnic extreu la idea principal dels manuals del programari en anglès (0179-2a) i interpreta les instruccions digitals de modulació rítmica (0179-2i); a continuació, analitza com influeixen aquestes eines en la valoració dels efectes tècnics i l'impacte de l'esforç a les sessions dirigides (1150-1a).",
+        "evidencia_es": "Ficha comparativa en castellano y glosario técnico con los parámetros del software analizado.",
+        "evidencia_ca": "Fitxa comparativa en català i glossari tècnic amb els paràmetres del programari analitzat.",
+        "dua_es": "Infografía visual con capturas del software, glosario bilingüe de apoyo y trabajo por parejas cooperativas.",
+        "dua_ca": "Infografia visual amb captures del programari, glossari bilingüe de suport i feina per parelles cooperatives.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "1150",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Interpretar textos especializados en inglés y traducir artículos sobre tendencias musicales orienta la selección de temas idóneos para coreografías avanzadas.",
+    "justificacion_ca": "Interpretar textos especialitzats en anglès i traduir articles sobre tendències musicals orienta la selecció de temes idonis per a coreografies avançades.",
+    "actividades": [
+      {
+        "titulo_es": "Traducción de catálogos musicales para diseño de sesiones coreografiadas",
+        "titulo_ca": "Traducció de catàlegs musicals per al disseny de sessions coreografiades",
+        "contexto_es": "El departamento de actividades dirigidas prepara una convención de fitness y debe seleccionar playlists técnicas licenciadas procedentes del mercado británico.",
+        "contexto_ca": "El departament d'activitats dirigides prepara una convenció de fitnes i ha de seleccionar llistes de reproducció tècniques llicenciades procedents del mercat britànic.",
+        "desarrollo_es": "Los futuros técnicos identifican la finalidad formativa de varias publicaciones anglosajonas de fitness (0179-2b), traducen fragmentos complejos sobre estructura de bloques musicales (0179-2j) y eligen la música más adecuada según el estilo, intensidad y duración de la sesión prevista (1150-3a).",
+        "desarrollo_ca": "Els futurs tècnics identifiquen la finalitat formativa de diverses publicacions anglosaxones de fitnes (0179-2b), tradueixen fragments complexos sobre estructura de blocs musicals (0179-2j) i trien la música més adequada segons l'estil, intensitat i durada de la sessió prevista (1150-3a).",
+        "evidencia_es": "Dossier con dos reseñas traducidas y lista de canciones estructurada por fases de entrenamiento.",
+        "evidencia_ca": "Dossier amb dues ressenyes traduïdes i llista de cançons estructurada per fases d'entrenament.",
+        "dua_es": "Tablas de correspondencia de términos musicales, posibilidad de escuchar fragmentos de audio y rúbrica clara de selección.",
+        "dua_ca": "Taules de correspondència de termes musicals, possibilitat d'escoltar fragments d'àudio i rúbrica clara de selecció.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1150",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Redactar informes técnicos detallados en inglés sobre biomecánica coreográfica consolida la aplicación rigurosa de criterios fisiológicos en salas de fitness.",
+    "justificacion_ca": "Redactar informes tècnics detallats en anglès sobre biomecànica coreogràfica consolida l'aplicació rigorosa de criteris fisiològics a les sales de fitnes.",
+    "actividades": [
+      {
+        "titulo_es": "Redacción técnica en inglés sobre biomecánica del step avanzado",
+        "titulo_ca": "Redacció tècnica en anglès sobre biomecànica de l'estep avançat",
+        "contexto_es": "Un centro deportivo solicita una memoria explicativa en inglés para justificar ante la dirección deportiva la progresión de cargas en clases de step.",
+        "contexto_ca": "Un centre esportiu sol·licita una memòria explicativa en anglès per justificar davant la direcció esportiva la progressió de càrregues en classes d'estep.",
+        "desarrollo_es": "El alumnado redacta un documento claro y estructurado en inglés sobre cinética articular (0179-4a), contrastando diversas fuentes internacionales para aplicar criterios biomecánicos y motivacionales al secuenciar los bloques de saltos y giros con música (1150-3b).",
+        "desarrollo_ca": "L'alumnat redacta un document clar i estructurat en anglès sobre cinètica articular (0179-4a), contrastant diverses fonts internacionals per aplicar criteris biomecànics i motivacionals en seqüenciar els blocs de salts i girs amb música (1150-3b).",
+        "evidencia_es": "Informe técnico en inglés de tres páginas con diagramas biomecánicos y curvas de intensidad.",
+        "evidencia_ca": "Informe tècnic en anglès de tres pàgines amb diagrames biomecànics i corbes d'intensitat.",
+        "dua_es": "Plantilla estructurada de informe, conectores discursivos en inglés y ejemplos de curvas de frecuencia cardíaca.",
+        "dua_ca": "Plantilla estructurada d'informe, connectors discursius en anglès i exemples de corbes de freqüència cardíaca.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1150",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Conocer los usos socioculturales del entrenamiento colectivo en países anglosajones ayuda a graduar la dificultad técnica de las sesiones para clientela internacional.",
+    "justificacion_ca": "Conèixer els usos socioculturals de l'entrenament col·lectiu en països anglosaxons ajuda a graduar la dificultat tècnica de les sessions per a clientela internacional.",
+    "actividades": [
+      {
+        "titulo_es": "Adaptación técnica de rutinas coreográficas a perfiles internacionales",
+        "titulo_ca": "Adaptació tècnica de rutines coreogràfiques a perfils internacionals",
+        "contexto_es": "En un resort de las Illes Balears se programa una clase de aerodance para turistas británicos y nórdicos con diferentes hábitos de práctica.",
+        "contexto_ca": "En un complex turístic de les Illes Balears es programa una classe d'aerodance per a turistes britànics i nòrdics amb diferents hàbits de pràctica.",
+        "desarrollo_es": "Los participantes identifican las tendencias y costumbres del fitness en el ámbito angloparlante (0179-5a) y analizan la dificultad técnica y coordinativa de los pasos coreográficos para evitar frustración en las personas usuarias (1150-1b).",
+        "desarrollo_ca": "Els participants identifiquen les tendències i costums del fitnes en l'àmbit anglòfon (0179-5a) i analitzen la dificultat tècnica i coordinativa dels passos coreogràfics per evitar frustració en les persones usuàries (1150-1b).",
+        "evidencia_es": "Guía de adaptación cultural y técnica con niveles de dificultad escalonados.",
+        "evidencia_ca": "Guia d'adaptació cultural i tècnica amb nivells de dificultat esglaonats.",
+        "dua_es": "Vídeos explicativos con subtítulos en inglés, tarjetas de progresión técnica y ensayo en pequeños grupos.",
+        "dua_ca": "Vídeos explicatius amb subtítols en anglès, targetes de progressió tècnica i assaig en petits grups.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1150",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Aplicar las normas profesionales y de etiqueta social del entorno anglosajón facilita formular objetivos realistas en programas dirigidos a socios foráneos.",
+    "justificacion_ca": "Aplicar les normes professionals i d'etiqueta social de l'entorn anglòfon facilita formular objectius realistes en programes dirigits a socis forans.",
+    "actividades": [
+      {
+        "titulo_es": "Programación bilingüe de objetivos en clases colectivas con música",
+        "titulo_ca": "Programació bilingüe d'objectius en classes col·lectives amb música",
+        "contexto_es": "Un club náutico y deportivo de Palma diseña un programa trimestral de cardio-conditioning enfocado a residentes comunitarios extranjeros.",
+        "contexto_ca": "Un club nàutic i esportiu de Palma dissenya un programa trimestral de cardio-conditioning enfocat a residents comunitaris estrangers.",
+        "desarrollo_es": "Los estudiantes describen los protocolos de acogida y comunicación propios del cliente internacional (0179-5b) y establecen objetivos específicos de acondicionamiento físico adaptados a los recursos e instalaciones del centro (1150-2a).",
+        "desarrollo_ca": "Els estudiants descriuen els protocols d'acollida i comunicació propis del client internacional (0179-5b) i estableixen objectius específics de condicionament físic adaptats als recursos i instal·lacions del centre (1150-2a).",
+        "evidencia_es": "Ficha de programación trimestral con objetivos operativos y fórmulas de bienvenida protocolaria.",
+        "evidencia_ca": "Fitxa de programació trimestral amb objectius operatius i fórmules de benvinguda protocol·lària.",
+        "dua_es": "Documento bilingüe con modelos de objetivos SMART, role-playing de entrevista y lista de comprobación de protocolo.",
+        "dua_ca": "Document bilingüe amb models d'objectius SMART, joc de rol d'entrevista i llista de verificació de protocol.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1150",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Reconocer las preferencias estéticas y culturales de distintos colectivos orienta la combinación de pasos básicos y variantes en estilos de baile y cardiobox.",
+    "justificacion_ca": "Reconèixer les preferències estètiques i culturals de diferents col·lectius orienta la combinació de passos bàsics i variants en estils de ball i cardiobox.",
+    "actividades": [
+      {
+        "titulo_es": "Diseño de variantes coreográficas multiculturales en sala polivalente",
+        "titulo_ca": "Disseny de variants coreogràfiques multiculturals en sala polivalent",
+        "contexto_es": "Un gimnasio urbano organiza una jornada de puertas abiertas con clases temáticas de danza fitness y estilos urbanos para un público heterogéneo.",
+        "contexto_ca": "Un gimnàs urbà organitza una jornada de portes obertes amb classes temàtiques de dansa fitnes i estils urbans per a un públic heterogeni.",
+        "desarrollo_es": "El alumnado identifica los valores y gustos musicales representativos de la comunidad multicultural angloparlante (0179-5c) y combina pasos fundamentales junto a sus progresiones para enriquecer la composición coreográfica (1150-3c).",
+        "desarrollo_ca": "L'alumnat identifica els valors i gustos musicals representatius de la comunitat multicultural anglòfona (0179-5c) i combina passos fonamentals juntament amb les seves progressions per enriquir la composició coreogràfica (1150-3c).",
+        "evidencia_es": "Coreografía grabada de cuatro bloques de 32 tiempos con desglose de variaciones técnicas.",
+        "evidencia_ca": "Coreografia enregistrada de quatre blocs de 32 temps amb desglossament de variacions tècniques.",
+        "dua_es": "Esquemas visuales de secuencias de pasos, música ralentizada para ensayo y apoyo gestual marcado.",
+        "dua_ca": "Esquemes visuals de seqüències de passos, música alentida per a assaig i suport gestual marcat.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1152",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Extraer información técnica de publicaciones en inglés sobre prevención acuática sustenta las explicaciones iniciales de estructura y seguridad al inicio de la sesión.",
+    "justificacion_ca": "Extreure informació tècnica de publicacions en anglès sobre prevenció aquàtica sustenta les explicacions inicials d'estructura i seguretat a l'inici de la sessió.",
+    "actividades": [
+      {
+        "titulo_es": "Protocolo informativo bilingüe previo a la sesión de hidrocinesia",
+        "titulo_ca": "Protocol informatiu bilingüe previ a la sessió d'hidrocinèsia",
+        "contexto_es": "En la piscina climatizada de un balneario, el instructor debe recibir a un grupo de bañistas extranjeros antes de comenzar el programa de ejercicios.",
+        "contexto_ca": "A la piscina climatitzada d'un balneari, l'instructor ha de rebre un grup de banyistes estrangers abans de començar el programa d'exercicis.",
+        "desarrollo_es": "Los alumnos localizan datos relevantes en manuales clínicos acuáticos en inglés (0179-2c) y estructuran la charla inicial explicando la finalidad de la sesión y las medidas preventivas en el vaso (1152-4a).",
+        "desarrollo_ca": "Els alumnes localitzen dades rellevants en manuals clínics aquàtics en anglès (0179-2c) i estructuren la xerrada inicial explicant la finalitat de la sessió i les mesures preventives en el vas (1152-4a).",
+        "evidencia_es": "Guion informativo bilingüe y simulación grabada de la acogida a los usuarios en el borde de la piscina.",
+        "evidencia_ca": "Guió informatiu bilingüe i simulació enregistrada de l'acollida als usuaris a la vora de la piscina.",
+        "dua_es": "Panel con pictogramas de seguridad acuática, tarjetas plastificadas con frases clave y demostración física.",
+        "dua_ca": "Panell amb pictogrames de seguretat aquàtica, targetes plastificades amb frases clau i demostració física.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1152",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Comunicarse oralmente con fluidez en inglés sobre temas de salud permite relacionar las deficiencias funcionales de usuarios extranjeros con ejercicios acuáticos específicos.",
+    "justificacion_ca": "Comunicar-se oralment amb fluïdesa en anglès sobre temes de salut permet relacionar les deficiències funcionals d'usuaris estrangers amb exercicis aquàtics específics.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevista clínica acuática a usuarios angloparlantes con patología",
+        "titulo_ca": "Entrevista clínica aquàtica a usuaris anglòfons amb patologia",
+        "contexto_es": "Un centro termal de Calvià atiende a pacientes extranjeros derivados por dolor lumbar que necesitan una anamnesis funcional en inglés.",
+        "contexto_ca": "Un centre termal de Calvià atén pacients estrangers derivats per dolor lumbar que necessiten una anamnesi funcional en anglès.",
+        "desarrollo_es": "Durante la entrevista, el alumnado emplea expresiones cotidianas y técnicas con precisión en inglés (0179-3a), expresa con claridad las alternativas de trabajo (0179-3i) y analiza las limitaciones motoras del usuario para seleccionar los ejercicios de hidrocinesia más adecuados (1152-3a).",
+        "desarrollo_ca": "Durant l'entrevista, l'alumnat empra expressions quotidianes i tècniques amb precisió en anglès (0179-3a), expressa amb claredat les alternatives de treball (0179-3i) i analitza les limitacions motores de l'usuari per seleccionar els exercicis d'hidrocinèsia més adequats (1152-3a).",
+        "evidencia_es": "Grabación de la entrevista en inglés y ficha de prescripción acuática justificada.",
+        "evidencia_ca": "Enregistrament de l'entrevista en anglès i fitxa de prescripció aquàtica justificada.",
+        "dua_es": "Guion estructurado de preguntas clínicas, escala visual analógica del dolor y trabajo en parejas rotativas.",
+        "dua_ca": "Guió estructurat de preguntes clíniques, escala visual analògica del dolor i feina en parelles rotatives.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "1152",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Debatir técnicamente en inglés y fundamentar opiniones permite acordar con solvencia los parámetros evaluativos de protocolos de hidrocinesia.",
+    "justificacion_ca": "Debatre tècnicament en anglès i fonamentar opinions permet acordar amb solvència els paràmetres avaluatius de protocols d'hidrocinèsia.",
+    "actividades": [
+      {
+        "titulo_es": "Debate profesional en inglés sobre parámetros de evaluación acuática",
+        "titulo_ca": "Debat professional en anglès sobre paràmetres d'avaluació aquàtica",
+        "contexto_es": "Un equipo multidisciplinar internacional en una clínica deportiva discute los criterios para dar el alta a usuarios en programas de piscina terapéutica.",
+        "contexto_ca": "Un equip multidisciplinari internacional en una clínica esportiva discuteix els criteris per donar l'alta a usuaris en programes de piscina terapèutica.",
+        "desarrollo_es": "Los futuros técnicos intercambian información compleja sobre rangos de movilidad articular (0179-3b), defienden su postura con argumentos biomecánicos sólidos (0179-3j) y consensúan los parámetros de evolución que se medirán en la programación acuática (1152-5a).",
+        "desarrollo_ca": "Els futurs tècnics intercanvien informació complexa sobre rangs de mobilitat articular (0179-3b), defensen la seva postura amb arguments biomecànics sòlids (0179-3j) i consensuen els paràmetres d'evolució que es mesuraran a la programació aquàtica (1152-5a).",
+        "evidencia_es": "Acta de la reunión técnica redactada en inglés con la tabla de variables de evaluación acordadas.",
+        "evidencia_ca": "Acta de la reunió tècnica redactada en anglès amb la taula de variables d'avaluació acordades.",
+        "dua_es": "Rúbrica de argumentación, listado de conectores de debate en inglés y opción de aportar esquemas conceptuales.",
+        "dua_ca": "Rúbrica d'argumentació, llistat de connectors de debat en anglès i opció d'aportar esquemes conceptuals.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1152",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Cumplimentar cuestionarios de valoración acuática en inglés asegura determinar con exactitud el nivel de autonomía y seguridad del bañista.",
+    "justificacion_ca": "Emplenar qüestionaris de valoració aquàtica en anglès assegura determinar amb exactitud el nivell d'autonomia i seguretat del banyista.",
+    "actividades": [
+      {
+        "titulo_es": "Cumplimentación de fichas de cribado acuático para socios extranjeros",
+        "titulo_ca": "Emplenament de fitxes de cribratge aquàtic per a socis estrangers",
+        "contexto_es": "Un centro de hidroterapia requiere estandarizar la ficha de admisión en inglés para nuevos residentes británicos que desean ingresar en clases acuáticas.",
+        "contexto_ca": "Un centre d'hidroteràpia requereix estandarditzar la fitxa d'admissió en anglès per a nous residents britànics que desitgen ingressar en classes aquàtiques.",
+        "desarrollo_es": "El alumnado cumplimenta formularios técnicos específicos usando vocabulario formal en inglés (0179-4b) y establece los criterios para dictaminar el nivel de competencia y autonomía acuática imprescindible antes de autorizar las sesiones (1152-1a).",
+        "desarrollo_ca": "L'alumnat emplena formularis tècnics específics usant vocabulari formal en anglès (0179-4b) i estableix els criteris per dictaminar el nivell de competència i autonomia aquàtica imprescindible abans d'autoritzar les sessions (1152-1a).",
+        "evidencia_es": "Ficha de consentimiento y cribado acuático completada en inglés para tres casos clínicos.",
+        "evidencia_ca": "Fitxa de consentiment i cribratge aquàtic completada en anglès per a tres casos clínics.",
+        "dua_es": "Modelo de formulario con campos guiados, glosario médico-deportivo en inglés y apoyo visual en pictogramas.",
+        "dua_ca": "Model de formulari amb camps guiats, glossari mèdic i esportiu en anglès i suport visual en pictogrames.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Comprender conferencias orales en inglés sobre reeducación postural ayuda a formular indicadores de calidad objetivos para programas funcionales.",
+    "justificacion_ca": "Comprendre conferències orals en anglès sobre reeducació postural ajuda a formular indicadors de qualitat objectius per a programes funcionals.",
+    "actividades": [
+      {
+        "titulo_es": "Extracción de indicadores de calidad a partir de webinars internacionales de postura",
+        "titulo_ca": "Extracció d'indicadors de qualitat a partir de seminaris web internacionals de postura",
+        "contexto_es": "Los técnicos de un centro de bienestar asisten telemáticamente a una ponencia impartida por especialistas de la Asociación Británica de Pilates.",
+        "contexto_ca": "Els tècnics d'un centre de benestar assisteixen telemàticament a una ponència impartida per especialistes de l'Associació Britànica de Pilates.",
+        "desarrollo_es": "A partir de la audición del seminario en inglés, los estudiantes identifican las ideas centrales sobre higiene vertebral (0179-1a) y diseñan los indicadores específicos para evaluar la satisfacción y la calidad técnica del servicio de mantenimiento postural (1153-5a).",
+        "desarrollo_ca": "A partir de l'audició del seminari en anglès, els estudiants identifiquen les idees centrals sobre higiene vertebral (0179-1a) i dissenyen els indicadors específics per avaluar la satisfacció i la qualitat tècnica del servei de manteniment postural (1153-5a).",
+        "evidencia_es": "Resumen ejecutivo del webinar y rúbrica de indicadores de calidad del servicio postural.",
+        "evidencia_ca": "Resum executiu del seminari web i rúbrica d'indicadors de qualitat del servei postural.",
+        "dua_es": "Transcripción del audio en inglés con marcadores temporales, subtítulos y esquema de indicadores por categorías.",
+        "dua_ca": "Transcripció de l'àudio en anglès amb marcadors temporals, subtítols i esquema d'indicadors per categories.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "La lectura comprensiva global de manuales en lengua extranjera orienta el diseño metodológico y los canales comunicativos en sesiones de control postural.",
+    "justificacion_ca": "La lectura comprensiva global de manuals en llengua estrangera orienta el disseny metodològic i els canals comunicatius en sessions de control postural.",
+    "actividades": [
+      {
+        "titulo_es": "Integración de guías clínicas en inglés en el diseño de clases de espalda sana",
+        "titulo_ca": "Integració de guies clíniques en anglès en el disseny de classes d'esquena sana",
+        "contexto_es": "Un gimnasio actualiza sus protocolos de stretching e higiene postural revisando las recomendaciones publicadas por el American College of Sports Medicine.",
+        "contexto_ca": "Un gimnàs actualitza els protocols d'estiraments i higiene postural revisant les recomanacions publicades per l'American College of Sports Medicine.",
+        "desarrollo_es": "El equipo de trabajo comprende el sentido global de las pautas ergonómicas del documento en inglés (0179-2d) y define los objetivos de sesión, materiales auxiliares y estrategias de comunicación interpersonal para la clase (1153-3a).",
+        "desarrollo_ca": "L'equip de feina comprèn el sentit global de les pautes ergonòmiques del document en anglès (0179-2d) i defineix els objectius de sessió, materials auxiliars i estratègies de comunicació interpersonal per a la classe (1153-3a).",
+        "evidencia_es": "Ficha de diseño de sesión con adaptaciones metodológicas y referencias al manual en inglés.",
+        "evidencia_ca": "Fitxa de disseny de sessió amb adaptacions metodològiques i referències al manual en anglès.",
+        "dua_es": "Texto con resaltado de términos esenciales, organizador gráfico de la sesión y debate moderado por el docente.",
+        "dua_ca": "Text amb realçament de termes essencials, organitzador gràfic de la sessió i debat moderat pel docent.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Leer de forma ágil textos especializados en inglés permite fundamentar la charla de bienvenida sobre pautas de seguridad e indumentaria en clases de pilates.",
+    "justificacion_ca": "Llegir de manera àgil textos especialitzats en anglès permet fonamentar la xerrada de benvinguda sobre pautes de seguretat i indumentària en classes de pilates.",
+    "actividades": [
+      {
+        "titulo_es": "Instrucción de bienvenida y seguridad en sesiones de corrección postural",
+        "titulo_ca": "Instrucció de benvinguda i seguretat en sessions de correcció postural",
+        "contexto_es": "En un estudio de pilates suelo con asistencia de turistas extranjeros, el monitor debe explicar las normas antes de usar los implementos.",
+        "contexto_ca": "En un estudi de pilates terra amb assistència de turistes estrangers, el monitor ha d'explicar les normes abans de fer servir els implements.",
+        "desarrollo_es": "Los técnicos leen con fluidez artículos sobre ergonomía del calzado y ropa en pilates (0179-2e) y explican a los practicantes la dinámica de la sesión, los objetivos perseguidos y las normas de vestimenta y seguridad (1153-4a).",
+        "desarrollo_ca": "Els tècnics llegeixen amb fluïdesa articles sobre ergonomia del calçat i roba en pilates (0179-2e) i expliquen als practicants la dinàmica de la sessió, els objectius perseguits i les normes de vestimenta i seguretat (1153-4a).",
+        "evidencia_es": "Simulación filmada del briefing inicial y cartel resumen de normas de seguridad de la sala.",
+        "evidencia_ca": "Simulació filmada del resum informatiu inicial i cartell resum de normes de seguretat de la sala.",
+        "dua_es": "Infografía de vestimenta adecuada, tarjetas de rol para la simulación y apoyo gestual durante la explicación.",
+        "dua_ca": "Infografia de vestimenta adequada, targetes de rol per a la simulació i suport gestual durant l'explicació.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "k"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Saber desenvolverse en registros formales en inglés y responder a entrevistas laborales facilita analizar los efectos y la técnica de las disciplinas posturales.",
+    "justificacion_ca": "Saber desembolicar-se en registres formals en anglès i respondre a entrevistes laborals facilita analitzar els efectes i la tècnica de les disciplines posturals.",
+    "actividades": [
+      {
+        "titulo_es": "Defensa en inglés de la técnica postural en entrevista de trabajo",
+        "titulo_ca": "Defensa en anglès de la tècnica postural en entrevista de feina",
+        "contexto_es": "Un resort de lujo en Eivissa entrevista a candidatos a monitor de postural training, evaluando su dominio técnico y competencia lingüística en inglés.",
+        "contexto_ca": "Un complex turístic de luxe a Eivissa entrevista candidats a monitor de postural training, avaluant el seu domini tècnic i competència lingüística en anglès.",
+        "desarrollo_es": "En la entrevista simulada, el aspirante aplica fórmulas formales de cortesía en inglés (0179-3c), responde con precisión a preguntas profesionales sobre su trayectoria (0179-3k) y analiza los efectos a largo plazo de la gimnasia postural sobre la salud raquídea (1153-1a).",
+        "desarrollo_ca": "En l'entrevista simulada, l'aspirant aplica fórmules formals de cortesia en anglès (0179-3c), respon amb precisió a preguntes professionals sobre la seva trajectòria (0179-3k) i analitza els efectes a llarg termini de la gimnàstica postural sobre la salut raquídia (1153-1a).",
+        "evidencia_es": "Grabación de la entrevista laboral en inglés con rúbrica de valoración técnica y comunicativa.",
+        "evidencia_ca": "Enregistrament de l'entrevista laboral en anglès amb rúbrica de valoració tècnica i comunicativa.",
+        "dua_es": "Batería previa de preguntas habituales, mapa mental de conceptos posturales y coevaluación entre pares.",
+        "dua_ca": "Bateria prèvia de preguntes habituals, mapa mental de conceptes posturals i coavaluació entre parells.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Estructurar presentaciones orales en inglés permite justificar las características ergonómicas y condiciones espaciales que exige una sala de bienestar.",
+    "justificacion_ca": "Estructurar presentacions orals en anglès permet justificar les característiques ergonòmiques i condicions espacials que exigeix una sala de benestar.",
+    "actividades": [
+      {
+        "titulo_es": "Presentación oral en inglés del diseño ergonómico de un estudio de postural training",
+        "titulo_ca": "Presentació oral en anglès del disseny ergonòmic d'un estudi de postural training",
+        "contexto_es": "El equipo técnico expone ante inversores británicos la adecuación lumínica, acústica y de equipamiento de un nuevo centro de readaptación funcional.",
+        "contexto_ca": "L'equip tècnic exposa davant inversors britànics l'adequació lumínica, acústica i d'equipament d'un nou centre de readaptació funcional.",
+        "desarrollo_es": "Los estudiantes realizan una exposición audiovisual clara y fluida en inglés (0179-3d), detallando los requisitos de temperatura, ventilación y material auxiliar necesarios para la sala de mantenimiento postural (1153-2a).",
+        "desarrollo_ca": "Els estudiants fan una exposició audiovisual clara i fluida en anglès (0179-3d), detallant els requisits de temperatura, ventilació i material auxiliar necessaris per a la sala de manteniment postural (1153-2a).",
+        "evidencia_es": "Diapositivas en inglés y grabación en vídeo de la presentación de diez minutos.",
+        "evidencia_ca": "Diapositives en anglès i enregistrament en vídeo de la presentació de deu minuts.",
+        "dua_es": "Estructura guiada de diapositivas, notas oradoras de apoyo y posibilidad de ensayar frente al grupo de iguales.",
+        "dua_ca": "Estructura guiada de diapositives, notes d'orador de suport i possibilitat d'assaig davant el grup d'iguals.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "El dominio de la terminología anatómica y funcional en inglés fundamenta el diseño de ejercicios específicos para personas con déficits posturales.",
+    "justificacion_ca": "El domini de la terminologia anatòmica i funcional en anglès fonamenta el disseny d'exercicis específics per a persones amb dèficits posturals.",
+    "actividades": [
+      {
+        "titulo_es": "Prescripción postural individualizada con terminología biomecánica en inglés",
+        "titulo_ca": "Prescripció postural individualitzada amb terminologia biomecànica en anglès",
+        "contexto_es": "Un entrenador personal debe preparar una rutina correctiva de core para un corredor extranjero que presenta anteversión pélvica excesiva.",
+        "contexto_ca": "Un entrenador personal ha de preparar una rutina correctiva de core per a un corredor estranger que presenta anteversió pelviana excessiva.",
+        "desarrollo_es": "El técnico emplea vocabulario biomecánico preciso en inglés sobre cadenas musculares (0179-3e) y vincula los ejercicios de estabilización central con la corrección de los patrones lesivos del deportista (1153-3b).",
+        "desarrollo_ca": "El tècnic empra vocabulari biomecànic precís en anglès sobre cadenes musculars (0179-3e) i vincula els exercicis d'estabilització central amb la correcció dels patrons lesius de l'esportista (1153-3b).",
+        "evidencia_es": "Ficha de prescripción técnica con glosario anatómico bilingüe y descripción de cuatro ejercicios.",
+        "evidencia_ca": "Fitxa de prescripció tècnica amb glossari anatòmic bilingüe i descripció de quatre exercicis.",
+        "dua_es": "Esquemas anatómicos del raquis, diccionario visual biomecánico y trabajo cooperativo en parejas.",
+        "dua_ca": "Esquemes anatòmics del raquis, diccionari visual biomecànic i feina cooperativa en parelles.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Organizar información escrita con cohesión y coherencia en inglés asegura redactar partes rigurosos de prevención de riesgos en salas de entrenamiento funcional.",
+    "justificacion_ca": "Organitzar informació escrita amb cohesió i coherència en anglès assegura redactar comunicats rigorosos de prevenció de riscs en sales d'entrenament funcional.",
+    "actividades": [
+      {
+        "titulo_es": "Redacción en inglés del informe de seguridad de sala y materiales de control postural",
+        "titulo_ca": "Redacció en anglès de l'informe de seguretat de sala i materials de control postural",
+        "contexto_es": "Una auditoría de una cadena hotelera requiere una revisión escrita en inglés del estado de mantenimiento de colchonetas, rulos y anclajes en la sala fitness.",
+        "contexto_ca": "Una auditoria d'una cadena hotelera requereix una revisió escrita en anglès de l'estat de manteniment de matalassets, corrons i ancoratges a la sala fitnes.",
+        "desarrollo_es": "El alumnado redacta un informe técnico estructurado en inglés (0179-4c), detallando la inspección preventiva de los materiales de apoyo y el cumplimiento de los protocolos de seguridad de la sala (1153-2b).",
+        "desarrollo_ca": "L'alumnat redacta un informe tècnic estructurat en anglès (0179-4c), detallant la inspecció preventiva dels materials de suport i el compliment dels protocols de seguretat de la sala (1153-2b).",
+        "evidencia_es": "Checklist de inspección y memoria técnica en inglés con propuestas preventivas.",
+        "evidencia_ca": "Llista de verificació d'inspecció i memòria tècnica en anglès amb propostes preventives.",
+        "dua_es": "Guía de redacción técnica en inglés, lista de verificación con iconos de seguridad y revisión cruzada entre grupos.",
+        "dua_ca": "Guia de redacció tècnica en anglès, llista de verificació amb icones de seguretat i revisió creuada entre grups.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1153",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Identificar los aspectos socioprofesionales en publicaciones anglosajonas enriquece las explicaciones sobre máquinas y beneficios posturales para usuarios foráneos.",
+    "justificacion_ca": "Identificar els aspectes socioprofessionals en publicacions anglosaxones enriqueix les explicacions sobre màquines i beneficis posturals per a usuaris forans.",
+    "actividades": [
+      {
+        "titulo_es": "Explicación de máquinas de pilates y beneficios posturales para clientes internacionales",
+        "titulo_ca": "Explicació de màquines de pilates i beneficis posturals per a clients internacionals",
+        "contexto_es": "En la zona de studio pilates de un hotel balneario, el instructor debe demostrar el uso del reformer y cadillac a clientes británicos de mediana edad.",
+        "contexto_ca": "A la zona d'estudi de pilates d'un hotel balneari, l'instructor ha de demostrar l'ús del reformer i cadillac a clients britànics de mitjana edat.",
+        "desarrollo_es": "Los técnicos reconocen las expectativas de servicio del cliente internacional a partir de textos profesionales en inglés (0179-5d) y explican de forma amena el manejo de los aparatos y los beneficios funcionales del ejercicio continuado (1153-4b).",
+        "desarrollo_ca": "Els tècnics reconeixen les expectatives de servei del client internacional a partir de textos professionals en anglès (0179-5d) i expliquen de manera amena el maneig dels aparells i els beneficis funcionals de l'exercici continuat (1153-4b).",
+        "evidencia_es": "Demostración práctica en vídeo con explicación oral en inglés de la técnica del reformer.",
+        "evidencia_ca": "Demostració pràctica en vídeo amb explicació oral en anglès de la tècnica del reformer.",
+        "dua_es": "Póster explicativo con flechas cinemáticas, glosario de feedback corrector y práctica guiada.",
+        "dua_ca": "Pòster explicatiu amb fletxes cinemàtiques, glossari de feedback corrector i pràctica guiada.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Captar la finalidad de conferencias o llamadas en inglés en el sector del fitness fundamenta la clasificación organizativa de las empresas deportivas.",
+    "justificacion_ca": "Captar la finalitat de conferències o trucades en anglès en el sector del fitnes fonamenta la classificació organitzativa de les empreses esportives.",
+    "actividades": [
+      {
+        "titulo_es": "Mapeo de modelos empresariales de fitness a partir de podcasts corporativos en inglés",
+        "titulo_ca": "Mapeig de models empresarials de fitnes a partir de podcasts corporatius en anglès",
+        "contexto_es": "Para diseñar el proyecto intermodular, el equipo investiga cómo se estructuran las grandes cadenas de gimnasios europeas mediante conferencias telemáticas.",
+        "contexto_ca": "Per dissenyar el projecte intermodular, l'equip investiga com s'estructuren les grans cadenes de gimnasos europees mitjançant conferències telemàtiques.",
+        "desarrollo_es": "El alumnado identifica la intención comunicativa de directivos del fitness en entrevistas de audio en inglés (0179-1b) y clasifica las organizaciones del sector según su estructura societaria, servicios y posicionamiento comercial (1154-1a).",
+        "desarrollo_ca": "L'alumnat identifica la intenció comunicativa de directius del fitnes en entrevistes d'àudio en anglès (0179-1b) i classifica les organitzacions del sector segons l'estructura societària, serveis i posicionament comercial (1154-1a).",
+        "evidencia_es": "Mapa conceptual comparativo de tres modelos de negocio del fitness europeo.",
+        "evidencia_ca": "Mapa conceptual comparatiu de tres models de negoci del fitnes europeu.",
+        "dua_es": "Resumen escrito del audio en inglés, plantilla de matriz organizativa y trabajo en grupos de discusión.",
+        "dua_ca": "Resum escrit de l'àudio en anglès, plantilla de matriu organitzativa i feina en grups de discussió.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Extraer información oral concreta de ponencias internacionales orienta la definición de procedimientos de evaluación en proyectos de acondicionamiento físico.",
+    "justificacion_ca": "Extreure informació oral concreta de ponències internacionals orienta la definició de procediments d'avaluació en projectes de condicionament físic.",
+    "actividades": [
+      {
+        "titulo_es": "Diseño de procedimientos evaluativos del proyecto a partir de seminarios en lengua inglesa",
+        "titulo_ca": "Disseny de procediments avaluatius del projecte a partir de seminaris en llengua anglesa",
+        "contexto_es": "El equipo promotor de un proyecto de entrenamiento outdoor analiza sistemas de evaluación continua presentados en un congreso virtual de Londres.",
+        "contexto_ca": "L'equip promotor d'un projecte d'entrenament outdoor analitza sistemes d'avaluació contínua presentats en un congrés virtual de Londres.",
+        "desarrollo_es": "Los estudiantes extraen datos cuantitativos de las intervenciones orales en inglés (0179-1c) y configuran el sistema de evaluación operativa para medir el éxito de las intervenciones del proyecto deportivo (1154-4a).",
+        "desarrollo_ca": "Els estudiants extreuen dades quantitatives de les intervencions orals en anglès (0179-1c) i configuren el sistema d'avaluació operativa per mesurar l'èxit de les intervencions del projecte esportiu (1154-4a).",
+        "evidencia_es": "Protocolo de evaluación del proyecto con cronograma de control e indicadores medibles.",
+        "evidencia_ca": "Protocol d'avaluació del projecte amb cronograma de control i indicadors mesurables.",
+        "dua_es": "Segmentos de audio seleccionados, infografía resumen en inglés y plantilla editable de evaluación.",
+        "dua_ca": "Segments d'àudio seleccionats, infografia resum en anglès i plantilla editable d'avaluació.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Describir oralmente secuencias laborales en inglés resulta esencial para coordinar y ordenar las fases de ejecución del proyecto deportivo.",
+    "justificacion_ca": "Descriure oralment seqüències laborals en anglès resulta essencial per coordinar i ordenar les fases d'execució del projecte esportiu.",
+    "actividades": [
+      {
+        "titulo_es": "Explicación oral del cronograma de ejecución del proyecto ante el comité de dirección",
+        "titulo_ca": "Explicació oral del cronograma d'execució del projecte davant el comitè de direcció",
+        "contexto_es": "Los coordinadores de un proyecto de fitness corporativo deben presentar la planificación temporal de apertura ante los socios fundadores en una reunión en inglés.",
+        "contexto_ca": "Els coordinadors d'un projecte de fitnes corporatiu han de presentar la planificació temporal d'obertura davant els socis fundadors en una reunió en anglès.",
+        "desarrollo_es": "El alumnado secuencia y describe en inglés cada una de las tareas del plan de trabajo (0179-3f), ordenando las actividades del proyecto según su prelación técnica y necesidades logísticas (1154-3a).",
+        "desarrollo_ca": "L'alumnat seqüencia i descriu en anglès cadascuna de les tasques del pla de feina (0179-3f), ordenant les activitats del projecte segons la seva prelació tècnica i necessitats logístiques (1154-3a).",
+        "evidencia_es": "Diagrama de Gantt comentado y audio con la presentación oral de la planificación en inglés.",
+        "evidencia_ca": "Diagrama de Gantt comentat i àudio amb la presentació oral de la planificació en anglès.",
+        "dua_es": "Diagrama de flujo interactivo, lista de expresiones temporales en inglés y turnos rotatorios de intervención.",
+        "dua_ca": "Diagrama de flux interactiu, llista d'expressions temporals en anglès i torns rotatoris d'intervenció.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Utilizar apoyos visuales y esquemas lingüísticos en inglés permite cumplimentar eficazmente las fichas de necesidades logísticas y recursos de cada actividad del proyecto.",
+    "justificacion_ca": "Utilitzar suports visuals i esquemes lingüístics en anglès permet emplenar eficaçment les fitxes de necessitats logístiques i recursos de cada activitat del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Documentación logística en inglés de actividades para un evento deportivo",
+        "titulo_ca": "Documentació logística en anglès d'activitats per a un esdeveniment esportiu",
+        "contexto_es": "La organización de un triatlón popular prepara las fichas técnicas de avituallamiento, guardarropa y calentamiento con soporte en inglés para voluntarios.",
+        "contexto_ca": "L'organització d'un triatló popular prepara les fitxes tècniques d'avituallament, guarda-roba i escalfament amb suport en anglès per a voluntaris.",
+        "desarrollo_es": "Los técnicos cumplimentan formularios de aprovisionamiento en inglés apoyándose en esquemas e iconos gráficos (0179-4d) y determinan la logística, materiales e infraestructuras indispensables para cada actividad (1154-3b).",
+        "desarrollo_ca": "Els tècnics emplenen formularis d'aprovisionament en anglès recolzant-se en esquemes i icones gràfiques (0179-4d) i determinen la logística, materials i infraestructures indispensables per a cada activitat (1154-3b).",
+        "evidencia_es": "Manual logístico bilingüe con mapas de ubicación y fichas de recursos por zona.",
+        "evidencia_ca": "Manual logístic bilingüe amb mapes d'ubicació i fitxes de recursos per zona.",
+        "dua_es": "Plantillas con iconos estandarizados, glosario de términos de logística deportiva y trabajo en equipo.",
+        "dua_ca": "Plantilles amb icones estandarditzades, glossari de termes de logística esportiva i feina en equip.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Identificar el punto de vista y actitud de ponentes internacionales en inglés ayuda a comprender la relevancia de los marcos globales de desarrollo sostenible en el deporte.",
+    "justificacion_ca": "Identificar el punt de vista i actitud de ponents internacionals en anglès ajuda a comprendre la rellevància dels marcs globals de desenvolupament sostenible en l'esport.",
+    "actividades": [
+      {
+        "titulo_es": "Análisis de discursos en inglés sobre sostenibilidad en organizaciones deportivas",
+        "titulo_ca": "Anàlisi de discursos en anglès sobre sostenibilitat en organitzacions esportives",
+        "contexto_es": "En un módulo formativo internacional, los estudiantes visionan las intervenciones de representantes del Comité Olímpico Internacional sobre sostenibilidad.",
+        "contexto_ca": "En un mòdul formatiu internacional, els estudiants visionen les intervencions de representants del Comitè Olímpic Internacional sobre sostenibilitat.",
+        "desarrollo_es": "El alumnado identifica la perspectiva y el tono del orador en vídeos en lengua inglesa (0179-1d) y describe los conceptos de sostenibilidad y los acuerdos internacionales sobre clima aplicables al ámbito físico-deportivo (1708-1a).",
+        "desarrollo_ca": "L'alumnat identifica la perspectiva i el to de l'orador en vídeos en llengua anglesa (0179-1d) i descriu els conceptes de sostenibilitat i els acords internacionals sobre clima aplicables a l'àmbit fisicoesportiu (1708-1a).",
+        "evidencia_es": "Ensayo comparativo en castellano sobre la visión institucional de la sostenibilidad deportiva.",
+        "evidencia_ca": "Assaig comparatiu en català sobre la visió institucional de la sostenibilitat esportiva.",
+        "dua_es": "Subtítulos en inglés, preguntas orientadoras de escucha activa y discusión guiada en asamblea.",
+        "dua_ca": "Subtítols en anglès, preguntes orientadores d'escolta activa i discussió guiada en assemblea.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Seguir el hilo argumental en conferencias especializadas en inglés facilita caracterizar los retos ambientales globales que impactan en las instalaciones deportivas.",
+    "justificacion_ca": "Seguir el fil argumental en conferències especialitzades en anglès facilita caracteritzar els reptes ambientals globals que impacten en les instal·lacions esportives.",
+    "actividades": [
+      {
+        "titulo_es": "Identificación de retos ambientales del fitness en debates radiofónicos en inglés",
+        "titulo_ca": "Identificació de reptes ambientals del fitnes en debats radiofònics en anglès",
+        "contexto_es": "Un programa de radio de la BBC debate el consumo energético de los centros deportivos climatizados y su huella en las ciudades.",
+        "contexto_ca": "Un programa de ràdio de la BBC debat el consum energètic dels centres esportius climatitzats i la seva petjada a les ciutats.",
+        "desarrollo_es": "Los alumnos analizan el hilo argumental y los roles de los ponentes en el audio en inglés (0179-1e), enumerando y caracterizando los principales retos ambientales que afrontan los centros de acondicionamiento físico (1708-2a).",
+        "desarrollo_ca": "Els alumnes analitzen el fil argumental i els rols dels ponents en l'àudio en anglès (0179-1e), enumerant i caracteritzant els principals reptes ambientals que afronten els centres de condicionament físic (1708-2a).",
+        "evidencia_es": "Infografía sobre los cinco mayores desafíos ecológicos del sector deportivo.",
+        "evidencia_ca": "Infografia sobre els cinc reptes ecològics més grans del sector esportiu.",
+        "dua_es": "Pistas auditivas con pausas intermedias, mapa conceptual con ideas clave y resumen bilingüe de apoyo.",
+        "dua_ca": "Pistes auditives amb pauses intermèdies, mapa conceptual amb idees clau i resum bilingüe de suport.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Digitalizar memorias de evaluación en hidrocinesia permite auditar los procesos de aprovisionamiento y verificar los criterios ecológicos aplicados.",
+    "justificacion_ca": "Digitalitzar memòries d'avaluació en hidrocinèsia permet auditar els processos d'aprovisionament i verificar els criteris ecològics aplicats.",
+    "actividades": [
+      {
+        "titulo_es": "Digitalización de memorias evaluativas acuáticas e inspección de sostenibilidad en suministros",
+        "titulo_ca": "Digitalització de memòries avaluatives aquàtiques i inspecció de sostenibilitat en subministraments",
+        "contexto_es": "Un balneario implanta un software de gestión técnica para archivar las memorias de calidad del agua y el desgaste de flotadores.",
+        "contexto_ca": "Un balneari implanta un programari de gestió tècnica per arxivar les memòries de qualitat de l'aigua i el desgast de flotadors.",
+        "desarrollo_es": "Los técnicos elaboran informes evaluativos en soporte informático estandarizado detallando la progresión de los usuarios (1152-5f) e identifican los procesos de producción sostenible y los certificados ambientales del material acuático adquirido (1708-4f).",
+        "desarrollo_ca": "Els tècnics elaboren informes avaluatius en suport informàtic estandarditzat detallant la progressió dels usuaris (1152-5f) i identifiquen els processos de producció sostenible i els certificats ambientals del material aquàtic adquirit (1708-4f).",
+        "evidencia_es": "Memoria digitalizada de evaluación acuática y auditoría ambiental de la cadena de suministro.",
+        "evidencia_ca": "Memòria digitalitzada d'avaluació aquàtica i auditoria ambiental de la cadena de subministrament.",
+        "dua_es": "Plantilla informática con campos precargados, rúbrica de verificación ecológica y trabajo colaborativo.",
+        "dua_ca": "Plantilla informàtica amb camps precarregats, rúbrica de verificació ecològica i feina col·laborativa.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA5",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Auditar la calidad del agua y del vaso terapéutico permite contrastar la eficiencia de sistemas circulares frente a la cloración convencional intensiva.",
+    "justificacion_ca": "Auditar la qualitat de l'aigua i del vas terapèutic permet contrastar l'eficiència de sistemes circulars enfront de la cloració convencional intensiva.",
+    "actividades": [
+      {
+        "titulo_es": "Evaluación de calidad del vaso acuático y comparativa de modelos circulares de filtración",
+        "titulo_ca": "Avaluació de qualitat del vas aquàtic i comparativa de models circulars de filtració",
+        "contexto_es": "Un polideportivo municipal compara el gasto de agua y productos químicos tras cambiar los filtros de arena por vidrio reciclado activado.",
+        "contexto_ca": "Un poliesportiu municipal compara la despesa d'aigua i productes químics després de canviar els filtres d'arena per vidre reciclat activat.",
+        "desarrollo_es": "El equipo establece el protocolo de control de turbidez, pH y cloro combinado en la piscina de hidrocinesia (1152-5g) y compara las ventajas de ahorro hídrico y energético de la economía circular respecto a las depuradoras clásicas de alto vertido (1708-5c).",
+        "desarrollo_ca": "L'equip estableix el protocol de control de terbolesa, pH i clor combinat a la piscina d'hidrocinèsia (1152-5g) i compara els avantatges d'estalvi hídric i energètic de l'economia circular respecte a les depuradores clàssiques d'alt abocament (1708-5c).",
+        "evidencia_es": "Informe de calidad físico-química del agua y balance comparativo de ahorro ambiental.",
+        "evidencia_ca": "Informe de qualitat fisicoquímica de l'aigua i balanç comparatiu d'estalvi ambiental.",
+        "dua_es": "Kits de medición rápida con reactivos visuales, tablas comparativas de ahorro y debate en asamblea.",
+        "dua_ca": "Kits de mesura ràpida amb reactius visuals, taules comparatives d'estalvi i debat en assemblea.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Fijar parámetros para evaluar la sesión de hidrocinesia orienta la definición de acciones para mitigar riesgos ASG en instalaciones termales.",
+    "justificacion_ca": "Fixar paràmetres per avaluar la sessió d'hidrocinèsia orienta la definició d'accions per mitigar riscs ASG en instal·lacions termals.",
+    "actividades": [
+      {
+        "titulo_es": "Parámetros evaluativos en hidrocinesia y medidas correctoras ASG en spas deportivos",
+        "titulo_ca": "Paràmetres avaluatius en hidrocinèsia i mesures correctores ASG en spas esportius",
+        "contexto_es": "La dirección de un centro termal revisa los parámetros de evaluación de sus clases de piscina para incorporar metas de gobernanza y sostenibilidad.",
+        "contexto_ca": "La direcció d'un centre termal revisa els paràmetres d'avaluació de les seves classes de piscina per incorporar metes de governança i sostenibilitat.",
+        "desarrollo_es": "Los técnicos definen los criterios de evaluación de la carga, movilidad y confort alcanzado en la sesión acuática (1152-5a) y articulan propuestas de acción para reducir emisiones y asegurar la equidad en el acceso a las terapias acuáticas (1708-6c).",
+        "desarrollo_ca": "Els tècnics defineixen els criteris d'avaluació de la càrrega, mobilitat i confort assolit en la sessió aquàtica (1152-5a) i articulen propostes d'acció per reduir emissions i assegurar l'equitat en l'accés a les teràpies aquàtiques (1708-6c).",
+        "evidencia_es": "Rúbrica de evaluación de sesión de hidrocinesia integrada en el plan de sostenibilidad del centro.",
+        "evidencia_ca": "Rúbrica d'avaluació de sessió d'hidrocinèsia integrada en el pla de sostenibilitat del centre.",
+        "dua_es": "Escalas visuales de percepción motriz, matriz ASG simplificada y trabajo cooperativo.",
+        "dua_ca": "Escales visuals de percepció motriu, matriu ASG simplificada i feina cooperativa.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Describir condiciones de seguridad en hidrocinesia requiere aplicar destrezas comunicativas empáticas que transmitan tranquilidad a los practicantes.",
+    "justificacion_ca": "Descriure condicions de seguretat en hidrocinèsia requereix aplicar destreses comunicatives empàtiques que transmetin tranquil·litat als practicants.",
+    "actividades": [
+      {
+        "titulo_es": "Comunicación afectiva y protocolos de seguridad en la acogida de usuarios de hidrocinesia",
+        "titulo_ca": "Comunicació afectiva i protocols de seguretat en l'acollida d'usuaris d'hidrocinèsia",
+        "contexto_es": "Personas con miedo al agua profunda se incorporan por prescripción médica a un programa de reeducación en piscina.",
+        "contexto_ca": "Persones amb por a l'aigua profunda s'incorporen per prescripció mèdica a un programa de reeducació en piscina.",
+        "desarrollo_es": "El alumnado describe con claridad las medidas de protección y flotabilidad del vaso acuático (1152-1h), empleando habilidades de comunicación asertiva y escucha empática para calmar la ansiedad y generar un clima de confianza (1710-2c).",
+        "desarrollo_ca": "L'alumnat descriu amb claredat les mesures de protecció i flotabilitat del vas aquàtic (1152-1h), emprant habilitats de comunicació assertiva i escolta empàtica per calmar l'ansietat i generar un clima de confiança (1710-2c).",
+        "evidencia_es": "Vídeo del diálogo inicial de acogida con pautas de seguridad y rúbrica de empatía comunicativa.",
+        "evidencia_ca": "Vídeo del diàleg inicial d'acollida amb pautes de seguretat i rúbrica d'empatia comunicativa.",
+        "dua_es": "Guion estructurado de escucha activa, tarjetas visuales de seguridad y práctica de role-playing en seco.",
+        "dua_ca": "Guió estructurat d'escolta activa, targetes visuals de seguretat i pràctica de joc de rol en sec.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA3",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Redactar protocolos de hidrocinesia de forma rigurosa exige gestionar eficientemente el tiempo de trabajo individual y en equipo en el centro deportivo.",
+    "justificacion_ca": "Redactar protocols d'hidrocinèsia de manera rigorosa exigeix gestionar eficientment el temps de feina individual i en equip en el centre esportiu.",
+    "actividades": [
+      {
+        "titulo_es": "Gestión del tiempo en la elaboración y registro de protocolos técnicos de hidrocinesia",
+        "titulo_ca": "Gestió del temps en l'elaboració i registre de protocols tècnics d'hidrocinèsia",
+        "contexto_es": "El departamento de hidroterapia debe actualizar quince protocolos técnicos en una semana ante la apertura de la temporada de bienestar.",
+        "contexto_ca": "El departament d'hidroteràpia ha d'actualitzar quinze protocols tècnics en una setmana davant l'obertura de la temporada de benestar.",
+        "desarrollo_es": "Los técnicos aplican técnicas normalizadas de redacción y registro documental de los protocolos de ejercicio en agua (1152-3h), implementando cronogramas y técnicas de priorización temporal para cumplir los plazos en equipo de forma coordinada (1710-2d).",
+        "desarrollo_ca": "Els tècnics apliquen tècniques normalitzades de redacció i registre documental dels protocols d'exercici en aigua (1152-3h), implementant cronogrames i tècniques de priorització temporal per complir els terminis en equip de manera coordinada (1710-2d).",
+        "evidencia_es": "Protocolo técnico de hidrocinesia documentado y matriz de planificación temporal de tareas.",
+        "evidencia_ca": "Protocol tècnic d'hidrocinèsia documentat i matriu de planificació temporal de tasques.",
+        "dua_es": "Plantilla de protocolo en formulario digital, matriz de Eisenhower para gestión del tiempo y tutoría.",
+        "dua_ca": "Plantilla de protocol en formulari digital, matriu d'Eisenhower per a gestió del temps i tutoria.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Supervisar las normas de uso de implementos en el vaso prepara al técnico para destacar en procesos de selección mediante su rigor y solvencia profesional.",
+    "justificacion_ca": "Supervisar les normes d'ús d'implements en el vas prepara el tècnic per destacar en processos de selecció mitjançant el seu rigor i solvència professional.",
+    "actividades": [
+      {
+        "titulo_es": "Supervisión de seguridad con implementos y estrategias de empleabilidad para monitores acuáticos",
+        "titulo_ca": "Supervisió de seguretat amb implements i estratègies d'ocupabilitat per a monitors aquàtics",
+        "contexto_es": "En una prueba de selección para un puesto de monitor acuático, el examinador valora cómo el candidato vigila la correcta utilización de materiales.",
+        "contexto_ca": "En una prova de selecció per a un lloc de monitor aquàtic, l'examinador valora com el candidat vigila la correcta utilització de materials.",
+        "desarrollo_es": "El aspirante supervisa que los usuarios utilicen de forma segura churros, tablas y mancuernas acuáticas corrigiendo usos indebidos (1152-4g) y analiza cómo estas destrezas de control y autoridad profesional mejoran su perfil en portales de empleo (1710-1b).",
+        "desarrollo_ca": "L'aspirant supervisa que els usuaris utilitzin de manera segura xurros, taules i manuelles aquàtiques corregint usos indeguts (1152-4g) i analitza com aquestes destreses de control i autoritat professional milloren el seu perfil en portals d'ocupació (1710-1b).",
+        "evidencia_es": "Simulación grabada de intervención en piscina y actualización del CV enfocado a competencias acuáticas.",
+        "evidencia_ca": "Simulació enregistrada d'intervenció en piscina i actualització del CV enfocat a competències aquàtiques.",
+        "dua_es": "Checklist de pautas de seguridad, modelo de CV funcional y coevaluación entre compañeros.",
+        "dua_ca": "Llista de verificació de pautes de seguretat, model de CV funcional i coavaluació entre companys.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1152",
+      "ra": "RA4",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Promover una metodología desinhibida y cercana en piscina sustenta el diseño de propuestas de fitness acuático éticas y orientadas al balance social.",
+    "justificacion_ca": "Promoure una metodologia desinhibida i propera en piscina sustenta el disseny de propostes de fitnes aquàtic ètiques i orientades al balanç social.",
+    "actividades": [
+      {
+        "titulo_es": "Metodología desinhibidora en agua e integración de balance social en proyectos acuáticos",
+        "titulo_ca": "Metodologia desinhibidora en aigua i integració de balanç social en projectes aquàtics",
+        "contexto_es": "Un equipo de monitores idea una cooperativa de actividades acuáticas comunitarias para combatir el aislamiento social en personas mayores.",
+        "contexto_ca": "Un equip de monitors idea una cooperativa d'activitats aquàtiques comunitàries per combatre l'aïllament social en persones grans.",
+        "desarrollo_es": "Los técnicos aplican estrategias pedagógicas participativas y desinhibidoras que fomentan la alegría del movimiento en agua (1152-4h), incorporando criterios éticos de equidad y métricas de balance social al modelo emprendedor (1710-4d).",
+        "desarrollo_ca": "Els tècnics apliquen estratègies pedagògiques participatives i desinhibidores que fomenten l'alegria del moviment en aigua (1152-4h), incorporant criteris ètics d'equitat i mètriques de balanç social al model emprenedor (1710-4d).",
+        "evidencia_es": "Ficha de diseño metodológico de la sesión acuática y balance social inicial del proyecto.",
+        "evidencia_ca": "Fitxa de disseny metodològic de la sessió aquàtica i balanç social inicial del projecte.",
+        "dua_es": "Guía de dinámicas lúdicas acuáticas, plantilla de balance social simplificada y trabajo cooperativo.",
+        "dua_ca": "Guia de dinàmiques lúdiques aquàtiques, plantilla de balanç social simplificada i feina cooperativa.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Estimar el equipo docente y de apoyo necesario para control postural permite prever la dotación de recursos humanos y materiales del proyecto de fitness.",
+    "justificacion_ca": "Estimar l'equip docent i de suport necessari per a control postural permet preveure la dotació de recursos humans i materials del projecte de fitnes.",
+    "actividades": [
+      {
+        "titulo_es": "Planificación de recursos humanos y equipamiento para un estudio de pilates",
+        "titulo_ca": "Planificació de recursos humans i equipament per a un estudi de pilates",
+        "contexto_es": "En la memoria técnica del proyecto intermodular se calcula la plantilla de monitores y el lote de reformers necesarios para el nuevo centro.",
+        "contexto_ca": "En la memòria tècnica del projecte intermodular es calcula la plantilla de monitors i el lot de reformers necessaris per al nou centre.",
+        "desarrollo_es": "El alumnado calcula los perfiles profesionales y las horas de dedicación necesarias para atender los programas de bienestar raquídeo (1153-1f), integrando estas previsiones en la planificación global de recursos humanos y materiales del proyecto deportivo (1154-2e).",
+        "desarrollo_ca": "L'alumnat calcula els perfils professionals i les hores de dedicació necessàries per atendre els programes de benestar raquidi (1153-1f), integrant aquestes previsions en la planificació global de recursos humans i materials del projecte esportiu (1154-2e).",
+        "evidencia_es": "Capítulo de recursos humanos y materiales del proyecto con tabla salarial y ratios de sala.",
+        "evidencia_ca": "Capítol de recursos humans i materials del projecte amb taula salarial i ràtios de sala.",
+        "dua_es": "Plantilla de dimensionamiento de personal, organigrama visual y cálculo asistido en hoja de cálculo.",
+        "dua_ca": "Plantilla de dimensionament de personal, organigrama visual i càlcul assistit en full de càlcul.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Definir las condiciones espaciales y técnicas de la sala de bienestar orienta la asignación temporal de tiempos y recursos en el plan de obras del proyecto.",
+    "justificacion_ca": "Definir les condicions espacials i tècniques de la sala de benestar orienta l'assignació temporal de temps i recursos en el pla d'obres del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Diseño espacial de sala postural y cronograma de acondicionamiento de obra",
+        "titulo_ca": "Disseny espacial de sala postural i cronograma de condicionament d'obra",
+        "contexto_es": "El equipo promotor supervisa las obras de insonorización, tarima flotante y espejos para la sala de mantenimiento postural del centro.",
+        "contexto_ca": "L'equip promotor supervisa les obres d'insonorització, tarima flotant i miralls per a la sala de manteniment postural del centre.",
+        "desarrollo_es": "Los técnicos determinan los requisitos ambientales de luz natural, ventilación y metros cuadrados por colchoneta (1153-2a), planificando la asignación de operarios y el cronograma temporal para completar el montaje antes de la fecha de apertura (1154-3f).",
+        "desarrollo_ca": "Els tècnics determinen els requisits ambientals de llum natural, ventilació i metres quadrats per matalasset (1153-2a), planificant l'assignació d'operaris i el cronograma temporal per completar el muntatge abans de la data d'obertura (1154-3f).",
+        "evidencia_es": "Plano acotado de la sala de bienestar y diagrama de Gantt de ejecución de las reformas.",
+        "evidencia_ca": "Plànol acotat de la sala de benestar i diagrama de Gantt d'execució de les reformes.",
+        "dua_es": "Software CAD simplificado, diagrama de barras interactivo y división de responsabilidades.",
+        "dua_ca": "Programari CAD simplificat, diagrama de barres interactiu i divisió de responsabilitats.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Comprobar protocolos de seguridad y detectar anomalías en equipos de corrección postural fundamenta la elaboración documental de la auditoría del proyecto.",
+    "justificacion_ca": "Comprovar protocols de seguretat i detectar anomalies en equips de correcció postural fonamenta l'elaboració documental de l'auditoria del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Protocolo documental de seguridad e inspección técnica para la evaluación del proyecto",
+        "titulo_ca": "Protocol documental de seguretat i inspecció tècnica per a l'avaluació del projecte",
+        "contexto_es": "Una auditoría de calidad revisa si el proyecto deportivo cumple los procedimientos reglamentarios de revisión de muelles, anclajes y colchonetas.",
+        "contexto_ca": "Una auditoria de qualitat revisa si el projecte esportiu compleix els procediments reglamentaris de revisió de molles, ancoratges i matalassets.",
+        "desarrollo_es": "El alumnado revisa el estado de los recursos de emergencia y prevención en sala (1153-2b), verifica el protocolo de detección de holguras en aparatos mecánicos (1153-2c) y redacta la documentación técnica necesaria para el seguimiento evaluativo de las instalaciones del proyecto (1154-4e).",
+        "desarrollo_ca": "L'alumnat revisa l'estat dels recursos d'emergència i prevenció en sala (1153-2b), verifica el protocol de detecció de folgances en aparells mecànics (1153-2c) i redacta la documentació tècnica necessària per al seguiment avaluatiu de les instal·lacions del projecte (1154-4e).",
+        "evidencia_es": "Dossier de control de seguridad técnica y actas de inspección del proyecto.",
+        "evidencia_ca": "Dossier de control de seguretat tècnica i actes d'inspecció del projecte.",
+        "dua_es": "Modelos de actas con casillas de verificación, fotografías de puntos de anclaje y trabajo cooperativo.",
+        "dua_ca": "Models d'actes amb caselles de verificació, fotografies de punts d'ancoratge i feina cooperativa.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Planificar progresiones y adaptaciones ergonómicas individualizadas permite presupuestar con precisión las inversiones en material especializado del proyecto.",
+    "justificacion_ca": "Planificar progressions i adaptacions ergonòmiques individualitzades permet pressupostar amb precisió les inversions en material especialitzat del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Presupuesto económico y diseño de progresiones adaptadas para entrenamiento funcional",
+        "titulo_ca": "Pressupost econòmic i disseny de progressions adaptades per a entrenament funcional",
+        "contexto_es": "El equipo promotor diseña un servicio de readaptación postural para colectivos con movilidad reducida y debe calcular los costes de adquisición de ayudas biomecánicas.",
+        "contexto_ca": "L'equip promotor dissenya un servei de readaptació postural per a col·lectius amb mobilitat reduïda i ha de calcular els costos d'adquisició d'ajudes biomecàniques.",
+        "desarrollo_es": "Los técnicos definen progresiones individualizadas de trabajo postural basadas en apoyos y cuñas regulables (1153-3d) y elaboran el presupuesto detallado de inversión en implementos ergonómicos para el proyecto empresarial (1154-2f).",
+        "desarrollo_ca": "Els tècnics defineixen progressions individualitzades de treball postural basades en suports i falques regulables (1153-3d) i elaboren el pressupost detallat d'inversió en implements ergonòmics per al projecte empresarial (1154-2f).",
+        "evidencia_es": "Presupuesto económico en hoja de cálculo y ficha técnica de progresiones ergonómicas adaptadas.",
+        "evidencia_ca": "Pressupost econòmic en full de càlcul i fitxa tècnica de progressions ergonòmiques adaptades.",
+        "dua_es": "Catálogo de precios digital, hoja de cálculo con fórmulas de costes y trabajo por parejas.",
+        "dua_ca": "Catàleg de preus digital, full de càlcul amb fórmules de costos i feina per parelles.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA3",
+      "criterios": [
+        "g"
+      ]
+    },
+    "justificacion_es": "La posición del técnico para garantizar feedback constante se relaciona con el coste horario y la viabilidad económica del servicio de entrenamiento personalizado.",
+    "justificacion_ca": "La posició del tècnic per garantir feedback constant es relaciona amb el cost horari i la viabilitat econòmica del servei d'entrenament personalitzat.",
+    "actividades": [
+      {
+        "titulo_es": "Valoración económica del servicio de entrenamiento postural según la ratio y feedback del técnico",
+        "titulo_ca": "Valoració econòmica del servei d'entrenament postural segons la ràtio i feedback del tècnic",
+        "contexto_es": "Un centro de pilates calcula el precio de la sesión individual versus dúo en función de la atención kinestésica continuada del instructor.",
+        "contexto_ca": "Un centre de pilates calcula el preu de la sessió individual versus duo en funció de l'atenció cinestèsica continuada de l'instructor.",
+        "desarrollo_es": "El alumnado analiza la ubicación espacial estratégica del técnico para dar feedback visual y verbal sin bloquear el movimiento (1153-3e), calculando la valoración económica y el margen de rentabilidad de la hora de sesión según la ratio de practicantes (1154-3g).",
+        "desarrollo_ca": "L'alumnat analitza la ubicació espacial estratègica del tècnic per donar feedback visual i verbal sense bloquejar el moviment (1153-3e), calculant la valoració econòmica i el marge de rendibilitat de l'hora de sessió segons la ràtio de practicants (1154-3g).",
+        "evidencia_es": "Estudio de tarifas del servicio postural y esquema de distribución y desplazamientos del técnico en sala.",
+        "evidencia_ca": "Estudi de tarifes del servei postural i esquema de distribució i desplaçaments del tècnic en sala.",
+        "dua_es": "Plano de sala con zonas de feedback marcadas, simulador de costes en hoja de cálculo y discusión guiada.",
+        "dua_ca": "Plànol de sala amb zones de feedback marcades, simulador de costos en full de càlcul i discussió guiada.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Aplicar técnicas manipulativas de corrección postural se complementa con la participación directa del usuario al evaluar la calidad del trato recibido.",
+    "justificacion_ca": "Aplicar tècniques manipulatives de correcció postural es complementa amb la participació directa de l'usuari en avaluar la qualitat del tracte rebut.",
+    "actividades": [
+      {
+        "titulo_es": "Técnicas manipulativas de corrección postural y evaluación de la satisfacción del cliente",
+        "titulo_ca": "Tècniques manipulatives de correcció postural i avaluació de la satisfacció del client",
+        "contexto_es": "En un estudio de reeducación corporal, los practicantes evalúan trimestralmente la idoneidad y el confort de las correcciones manuales del monitor.",
+        "contexto_ca": "En un estudi de reeducació corporal, els practicants avaluen trimestralment la idoneïtat i el confort de les correccions manuals del monitor.",
+        "desarrollo_es": "Los técnicos ejecutan presas suaves de contacto manual para alinear escápulas y pelvis en estiramientos pasivos (1153-3f) y diseñan encuestas de satisfacción para que los usuarios valoren el respeto, la eficacia y el clima de seguridad durante la práctica (1154-4f).",
+        "desarrollo_ca": "Els tècnics executen preses suaus de contacte manual per alinear escàpules i pelvis en estiraments passius (1153-3f) i dissenyen enquestes de satisfacció perquè els usuaris valorin el respecte, l'eficàcia i el clima de seguretat durant la pràctica (1154-4f).",
+        "evidencia_es": "Grabación de la maniobra de corrección manual y cuestionario de evaluación del cliente con resultados tabulados.",
+        "evidencia_ca": "Enregistrament de la maniobra de correcció manual i qüestionari d'avaluació del client amb resultats tabulats.",
+        "dua_es": "Protocolo visual de contacto manual seguro, cuestionario accesible en código QR y análisis en parejas.",
+        "dua_ca": "Protocol visual de contacte manual segur, qüestionari accessible en codi QR i anàlisi en parelles.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1154",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Fijar parámetros para valorar sesiones de mantenimiento funcional orienta la elección del modelo de proyecto idóneo para dar respuesta a las demandas del sector.",
+    "justificacion_ca": "Fixar paràmetres per valorar sessions de manteniment funcional orienta l'elecció del model de projecte idoni per donar resposta a les demandes del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Parámetros de control de la sesión postural y definición de tipologías de proyecto",
+        "titulo_ca": "Paràmetres de control de la sessió postural i definició de tipologies de projecte",
+        "contexto_es": "Un equipo promotor contrasta si abrir un estudio específico de reformer pilates o un centro integral de salud postural multidisciplinar.",
+        "contexto_ca": "Un equip promotor contrasta si obrir un estudi específic de reformer pilates o un centre integral de salut postural multidisciplinari.",
+        "desarrollo_es": "El alumnado define los parámetros pedagógicos y de rendimiento motor para evaluar las clases de gimnasia suave (1153-5d) y selecciona el modelo de proyecto empresarial idóneo para satisfacer la demanda detectada en su comarca (1154-1e).",
+        "desarrollo_ca": "L'alumnat defineix els paràmetres pedagògics i de rendiment motor per avaluar les classes de gimnàstica suau (1153-5d) i selecciona el model de projecte empresarial idoni per satisfer la demanda detectada a la seva comarca (1154-1e).",
+        "evidencia_es": "Ficha de parámetros de evaluación de sesión y propuesta fundamentada del tipo de proyecto seleccionado.",
+        "evidencia_ca": "Fitxa de paràmetres d'avaluació de sessió i proposta fonamentada del tipus de projecte seleccionat.",
+        "dua_es": "Árbol de decisión de tipologías empresariales, rúbrica de parámetros motores y trabajo cooperativo.",
+        "dua_ca": "Arbre de decisió de tipologies empresarials, rúbrica de paràmetres motors i feina cooperativa.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Adaptar espacios para usuarios con movilidad reducida se combina con la evaluación del impacto ambiental de las reformas de accesibilidad ejecutadas.",
+    "justificacion_ca": "Adaptar espais per a usuaris amb mobilitat reduïda es combina amb l'avaluació de l'impacte ambiental de les reformes d'accessibilitat executades.",
+    "actividades": [
+      {
+        "titulo_es": "Adaptación accesible de salas de control postural y evaluación de su impacto ambiental",
+        "titulo_ca": "Adaptació accessible de sales de control postural i avaluació del seu impacte ambiental",
+        "contexto_es": "Una sala de actividades suaves sustituye escalones por rampas y evalúa la huella de carbono de los materiales de obra utilizados.",
+        "contexto_ca": "Una sala d'activitats suaus substitueix escalons per rampes i avalua la petjada de carboni dels materials d'obra utilitzats.",
+        "desarrollo_es": "Los técnicos diseñan la eliminación de desniveles y la ampliación de puertas para facilitar el acceso a personas en silla de ruedas (1153-1g), calculando la repercusión ambiental y la huella de carbono de las intervenciones y materiales instalados (1708-5d).",
+        "desarrollo_ca": "Els tècnics dissenyen l'eliminació de desnivells i l'ampliació de portes per facilitar l'accés a persones en cadira de rodes (1153-1g), calculant la repercussió ambiental i la petjada de carboni de les intervencions i materials instal·lats (1708-5d).",
+        "evidencia_es": "Plano de la sala adaptada y memoria de impacto ambiental de las obras de accesibilidad.",
+        "evidencia_ca": "Plànol de la sala adaptada i memòria d'impacte ambiental de les obres d'accessibilitat.",
+        "dua_es": "Calculadora digital de huella de carbono, simbología de accesibilidad universal y debate en grupo.",
+        "dua_ca": "Calculadora digital de petjada de carboni, simbologia d'accessibilitat universal i debat en grup.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Detectar desgastes en materiales de control postural permite identificar oportunidades de ahorro y alinearse con los ODS mediante la reparación responsable.",
+    "justificacion_ca": "Detectar desgastos en materials de control postural permet identificar oportunitats d'estalvi i alinear-se amb els ODS mitjançant la reparació responsable.",
+    "actividades": [
+      {
+        "titulo_es": "Inspección de equipamiento postural y aprovechamiento de oportunidades ligadas a los ODS",
+        "titulo_ca": "Inspecció d'equipament postural i aprofitament d'oportunitats lligades als ODS",
+        "contexto_es": "En un gimnasio, el personal técnico comprueba la pérdida de presión de fitballs y busca repararlos con parches en lugar de desecharlos.",
+        "contexto_ca": "En un gimnàs, el personal tècnic comprova la pèrdua de pressió de fitballs i cerca reparar-los amb pegats en lloc de rebutjar-los.",
+        "desarrollo_es": "El alumnado aplica protocolos de inspección para detectar microfugas y roturas en balones y gomas de pilates (1153-2c), analizando los riesgos de generación de residuos y la oportunidad de promover el ODS 12 de producción y consumo responsables en el centro (1708-3b), definiendo acciones directas para alargar la vida útil del material (1708-3c).",
+        "desarrollo_ca": "L'alumnat aplica protocols d'inspecció per detectar microfues i trencaments en pilotes i gomes de pilates (1153-2c), analitzant els riscs de generació de residus i l'oportunitat de promoure l'ODS 12 de producció i consum responsables en el centre (1708-3b), definint accions directes per allargar la vida útil del material (1708-3c).",
+        "evidencia_es": "Taller de reparación y mantenimiento de implementos con balance de ahorro ecológico.",
+        "evidencia_ca": "Taller de reparació i manteniment d'implements amb balanç d'estalvi ecològic.",
+        "dua_es": "Guía de reparación paso a paso en imágenes, herramientas adaptadas y trabajo cooperativo.",
+        "dua_ca": "Guia de reparació pas a pas en imatges, eines adaptades i feina cooperativa.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Determinar espacios y medios auxiliares adaptados para discapacidad se vincula con los estándares internacionales de reporte en sostenibilidad.",
+    "justificacion_ca": "Determinar espais i mitjans auxiliars adaptats per a discapacitat es vincula amb els estàndards internacionals de report en sostenibilitat.",
+    "actividades": [
+      {
+        "titulo_es": "Diseño de espacios posturales inclusivos y métricas de desempeño social",
+        "titulo_ca": "Disseny d'espais posturals inclusius i mètriques d'acompliment social",
+        "contexto_es": "Una cadena de bienestar elabora su memoria bajo estándares Global Reporting Initiative (GRI) evaluando la accesibilidad de sus salas.",
+        "contexto_ca": "Una cadena de benestar elabora la memòria sota estàndards Global Reporting Initiative (GRI) avaluant l'accessibilitat de les seves sales.",
+        "desarrollo_es": "Los técnicos determinan los implementos y apoyos adaptados para garantizar la participación de personas con discapacidad en clases de higiene postural (1153-3g) y aplican los estándares y métricas de reporte en sostenibilidad para justificar el impacto social de estas medidas inclusivas (1708-1e).",
+        "desarrollo_ca": "Els tècnics determinen els implements i suports adaptats per garantir la participació de persones amb discapacitat en classes d'higiene postural (1153-3g) i apliquen els estàndards i mètriques de report en sostenibilitat per justificar l'impacte social d'aquestes mesures inclusives (1708-1e).",
+        "evidencia_es": "Apartado de inclusión social del informe de sostenibilidad con inventario de ayudas técnicas.",
+        "evidencia_ca": "Apartat d'inclusió social de l'informe de sostenibilitat amb inventari d'ajudes tècniques.",
+        "dua_es": "Indicadores GRI resumidos en fichas, ejemplos reales de memorias corporativas y trabajo en equipo.",
+        "dua_ca": "Indicadors GRI resumits en fitxes, exemples reals de memòries corporatives i feina en equip.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Supervisar el uso responsable de aparatos de bienestar por parte de los clientes se relaciona con los principios de inversión socialmente responsable en instalaciones.",
+    "justificacion_ca": "Supervisar l'ús responsable d'aparells de benestar per part dels clients es relaciona amb els principis d'inversió socialment responsable en instal·lacions.",
+    "actividades": [
+      {
+        "titulo_es": "Supervisión de máquinas de pilates y criterios de inversión socialmente responsable",
+        "titulo_ca": "Supervisió de màquines de pilates i criteris d'inversió socialment responsable",
+        "contexto_es": "Un fondo de inversión de impacto financia la apertura de un centro deportivo que prima la durabilidad de sus máquinas de biomecánica.",
+        "contexto_ca": "Un fons d'inversió d'impacte finança l'obertura d'un centre esportiu que prima la durabilitat de les seves màquines de biomecànica.",
+        "desarrollo_es": "El equipo supervisa que los socios manejen correctamente carros y poleas de pilates evitando golpes y sobrecargas estructurales (1153-4g), analizando cómo el cuidado patrimonial atrae fondos de inversión socialmente responsable comprometidos con la sostenibilidad (1708-1f).",
+        "desarrollo_ca": "L'equip supervisa que els socis manegin correctament carros i politges de pilates evitant cops i sobrecàrregues estructurals (1153-4g), analitzant com la cura patrimonial atreu fons d'inversió socialment responsable compromesos amb la sostenibilitat (1708-1f).",
+        "evidencia_es": "Informe de auditoría de uso de equipamiento y justificación de criterios de inversión responsable.",
+        "evidencia_ca": "Informe d'auditoria d'ús d'equipament i justificació de criteris d'inversió responsable.",
+        "dua_es": "Póster de uso correcto de poleas, tablas de criterios de fondos éticos y debate guiado.",
+        "dua_ca": "Pòster d'ús correcte de politges, taules de criteris de fons ètics i debat guiat.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Analizar estadísticamente el confort y los resultados en salas posturales fundamenta la selección ecodiseñada de colchonetas y materiales de bajo impacto.",
+    "justificacion_ca": "Analitzar estadísticament el confort i els resultats en sales posturals fonamenta la selecció ecodissenyada de matalassets i materials de baix impacte.",
+    "actividades": [
+      {
+        "titulo_es": "Análisis estadístico de confort y selección de colchonetas ecodiseñadas de corcho",
+        "titulo_ca": "Anàlisi estadística de confort i selecció de matalassets ecodissenyats de suro",
+        "contexto_es": "Un gimnasio valora sustituir las esterillas de PVC por colchonetas de corcho natural y caucho reciclado, midiendo la satisfacción del cliente.",
+        "contexto_ca": "Un gimnàs valora substituir les esterrilles de PVC per matalassets de suro natural i cautxú reciclat, mesurant la satisfacció del client.",
+        "desarrollo_es": "El alumnado procesa las encuestas de adherencia y comodidad con estadísticos descriptivos elementales (1153-5e) y fundamenta la compra de esterillas basadas en principios de ecodiseño y materiales biodegradables (1708-5e).",
+        "desarrollo_ca": "L'alumnat processa les enquestes d'adherència i comoditat amb estadístics descriptius elementals (1153-5e) i fonamenta la compra d'esterrilles basades en principis d'ecodisseny i materials biodegradables (1708-5e).",
+        "evidencia_es": "Estudio estadístico comparativo de confort y ficha de selección de material ecodiseñado.",
+        "evidencia_ca": "Estudi estadístic comparatiu de confort i fitxa de selecció de material ecodissenyat.",
+        "dua_es": "Muestras táctiles de materiales ecológicos, gráficos comparativos de barras y trabajo en parejas.",
+        "dua_ca": "Mostres tàctils de materials ecològics, gràfics comparatius de barres i feina en parelles.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Plantear propuestas de mejora en higiene postural se apoya en los estándares internacionales de sostenibilidad para reportar el desempeño de la instalación.",
+    "justificacion_ca": "Plantejar propostes de millora en higiene postural es recolza en els estàndards internacionals de sostenibilitat per reportar el rendiment de la instal·lació.",
+    "actividades": [
+      {
+        "titulo_es": "Propuestas de mejora postural y fijación de indicadores estandarizados de sostenibilidad",
+        "titulo_ca": "Propostes de millora postural i fixació d'indicadors estandarditzats de sostenibilitat",
+        "contexto_es": "Tras evaluar el primer año de funcionamiento de un centro de bienestar, el equipo docente formula medidas correctoras de calidad y eficiencia.",
+        "contexto_ca": "Després d'avaluar el primer any de funcionament d'un centre de benestar, l'equip docent formula mesures correctores de qualitat i eficiència.",
+        "desarrollo_es": "Los técnicos formulan acciones de mejora pedagógica y horaria basadas en el análisis de datos de los socios (1153-5f) y establecen las métricas de evaluación de la empresa de acuerdo con los estándares de sostenibilidad más utilizados (1708-6d).",
+        "desarrollo_ca": "Els tècnics formulen accions de millora pedagògica i horària basades en l'anàlisi de dades dels socis (1153-5f) i estableixen les mètriques d'avaluació de l'empresa d'acord amb els estàndards de sostenibilitat més utilitzats (1708-6d).",
+        "evidencia_es": "Plan de mejora de las actividades posturales integrado en el cuadro de mando de sostenibilidad.",
+        "evidencia_ca": "Pla de millora de les activitats posturals integrat en el quadre de comandament de sostenibilitat.",
+        "dua_es": "Cuadro de mando interactivo, rúbrica de propuestas de mejora y debate en pequeños grupos.",
+        "dua_ca": "Quadre de comandament interactiu, rúbrica de propostes de millora i debat en petits grups.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Comprender los beneficios continuados del control postural estimula el diseño de modelos de negocio ecosociales o de base tecnológica en salud raquídea.",
+    "justificacion_ca": "Comprendre els beneficis continuats del control postural estimula el disseny de models de negoci ecosocials o de base tecnològica en salut raquídia.",
+    "actividades": [
+      {
+        "titulo_es": "Diseño de un modelo de negocio ecosocial enfocado a la salud raquídea",
+        "titulo_ca": "Disseny d'un model de negoci ecosocial enfocat a la salut raquídia",
+        "contexto_es": "Un grupo de jóvenes entrenadores diseña una plataforma comunitaria de entrenamiento postural para trabajadores de oficina con dolor de espalda.",
+        "contexto_ca": "Un grup de joves entrenadors dissenya una plataforma comunitària d'entrenament postural per a treballadors d'oficina amb dolor d'esquena.",
+        "desarrollo_es": "El equipo analiza la técnica y las adaptaciones fisiológicas a largo plazo de las rutinas de estabilización central (1153-1a), estructurando los elementos clave de una propuesta emprendedora ecosocial que une prevención física y tecnología accesible (1710-5e).",
+        "desarrollo_ca": "L'equip analitza la tècnica i les adaptacions fisiològiques a llarg termini de les rutines d'estabilització central (1153-1a), estructurant els elements clau d'una proposta emprenedora ecosocial que uneix prevenció física i tecnologia accessible (1710-5e).",
+        "evidencia_es": "Memoria de diseño del modelo de negocio ecosocial con protocolo de higiene postural para oficinas.",
+        "evidencia_ca": "Memòria de disseny del model de negoci ecosocial amb protocol d'higiene postural per a oficines.",
+        "dua_es": "Lienzo de modelo de negocio ecosocial, diagramas anatómicos del raquis y trabajo en equipo.",
+        "dua_ca": "Llenç de model de negoci ecosocial, diagrames anatòmics del raquis i feina en equip.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1153",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Definir los objetivos y canales metodológicos de las sesiones posturales se vincula con los principios de la Economía del Bien Común en centros de bienestar.",
+    "justificacion_ca": "Definir els objectius i canals metodològics de les sessions posturals es vincula amb els principis de l'Economia del Bé Comú en centres de benestar.",
+    "actividades": [
+      {
+        "titulo_es": "Diseño de sesiones de bienestar alineadas con la Economía del Bien Común",
+        "titulo_ca": "Disseny de sessions de benestar alineades amb l'Economia del Bé Comú",
+        "contexto_es": "Un gimnasio cooperativo plantea una programación de clases de espalda basada en la cooperación intergeneracional y tarifas solidarias.",
+        "contexto_ca": "Un gimnàs cooperatiu planteja una programació de classes d'esquena basada en la cooperació intergeneracional i tarifes solidàries.",
+        "desarrollo_es": "Los técnicos definen los objetivos didácticos, el material auxiliar y los canales comunicativos de la sesión postural (1153-3a), evaluando la contribución de la Economía del Bien Común para garantizar un acceso equitativo y digno a la salud física (1710-4e).",
+        "desarrollo_ca": "Els tècnics defineixen els objectius didàctics, el material auxiliar i els canals comunicatius de la sessió postural (1153-3a), avaluant la contribució de l'Economia del Bé Comú per garantir un accés equitatiu i digne a la salut física (1710-4e).",
+        "evidencia_es": "Ficha de diseño de sesión postural solidaria y balance ético de accesibilidad económica.",
+        "evidencia_ca": "Fitxa de disseny de sessió postural solidària i balanç ètic d'accessibilitat econòmica.",
+        "dua_es": "Matriz del Bien Común simplificada, esquemas didácticos de sesión y debate reflexivo.",
+        "dua_ca": "Matriu del Bé Comú simplificada, esquemes didàctics de sessió i debat reflexiu.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  }
+]

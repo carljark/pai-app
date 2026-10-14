@@ -145,20 +145,19 @@ El componente `mapa-intermodular-view` organiza la navegación en 3 pasos vertic
 
 ## 6. Alta de una pestaña de mapa (ciclo y curso)
 
-Las pestañas del mapa se definen en un único lugar: `frontend/src/app/features/mapa-intermodular/services/mapa-tabs.config.ts` (`MAPA_TABS`). Cada entrada fija:
-- el nombre en castellano y catalán;
-- el nivel (`tipoNivel`) y el curso con que «Crear proyecto» abre el generador;
-- el módulo y RA seleccionados al abrir la pestaña.
+Las pestañas del mapa se declaran en el catálogo de niveles, `backend/src/data/niveles.ts`, en el array `mapas` de cada nivel. Cada entrada fija:
+- la pestaña (`tab`), que es el `MapaModule.tab` de MongoDB;
+- el curso que cubre, opcional: sin curso, el mapa abarca todo el ciclo, como en Estética o Cuidados Auxiliares;
+- el módulo y el RA seleccionados al abrir la pestaña.
 
-Las pestañas, el título de la cabecera, el subtítulo de 2.º curso y el resumen exportado se derivan de esa configuración.
+De ahí salen `MAPA_TABS` (el enum de `MapaModule` y las pestañas que admite `GET /api/mapa-intermodular`), el selector de ciclo y curso, el título de la cabecera y el nivel y curso con que «Crear proyecto» abre el generador. El frontend no se toca.
 
 Para añadir un ciclo o curso al mapa:
-1. Generar el JSON en `backend/src/data/mapa-intermodular/` con las reglas de la sección 4.2.
-2. Añadir el identificador de pestaña al enum de `MapaModule` y a `ALLOWED_TABS` de `mapa.controller.ts`.
-3. Crear una migración que sustituya solo esa pestaña (ver `15_ingest_mapa_educacion_infantil.ts`).
-4. Añadir la entrada en `MAPA_TABS`.
+1. Generar el JSON en `backend/src/data/mapa-intermodular/` con la herramienta de la sección 8.
+2. Crear una migración que sustituya solo esa pestaña (ver `36_ingest_mapa_cfgm_cuidados_auxiliares_enfermeria.ts`).
+3. Añadir la entrada en `mapas` del nivel y actualizar `niveles-catalogo.test.ts` y `mapa.test.ts`.
 
-Ciclos con mapa: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º) y CFGS Educación Infantil (1.º y 2.º).
+Ciclos con mapa: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º), CFGM Cuidados Auxiliares de Enfermería y CFGS Educación Infantil (1.º y 2.º). Los pendientes están en [mapas_intermodulares_pendientes.md](mapas_intermodulares_pendientes.md).
 
 El 1.º de Educación Infantil se rehízo en la tarea 191 (migración 19). Se tomaron las relaciones RA↔RA de los documentos de Drive y se redactó una actividad propia por relación, publicada en los dos RA conectados.
 
@@ -170,3 +169,50 @@ Comprobaciones que debe pasar cualquier mapa antes de ingerirse (aprendidas en l
 - **Sin catalanismos en `_es` ni castellano en `_ca`,** incluido el campo heredado `criteria` de `relatedCriteria`, que repite el texto castellano.
 - **Criterios oficiales:** el texto de los criterios del mapa debe ser el del currículo oficial (BOE); si el documento de origen lo abrevia, se sustituye por el oficial en ambos idiomas.
 - **Coherencia con la colección `ras`:** los textos catalanes de RA y criterios del mapa de FPB salen del mismo fichero que los RA (`backend/src/data/ras_fpb_catalan.data.ts`), para que el mapa y el generador muestren la misma traducción.
+
+## 8. Herramienta de generación: `scripts/mapa-intermodular/`
+
+Desde la tarea 223, los mapas nuevos se generan con `scripts/mapa-intermodular/mapa-intermodular.mts` a partir de un archivo de **relaciones RA↔RA**. Este archivo lo redacta una persona o una IA y el generador lo valida y lo convierte en el JSON del mapa. El modelo que redacta solo escribe lo pedagógico (qué criterios se relacionan y con qué actividad). El generador pone los textos oficiales de RA y criterios, la bidireccionalidad, las claves de filtrado y el formato que espera el frontend.
+
+### 8.1. Flujo
+
+```bash
+cd backend
+# 1. Ficha curricular (ficha.md, fuera de git) y config.json de módulos
+npx tsx ../scripts/mapa-intermodular/mapa-intermodular.mts ficha \
+  --nivel <NIVEL> --curso <1º|2º> --trabajo ../scripts/mapa-intermodular/fuentes/<TAB>
+# 2. Redactar relaciones*.json en esa carpeta
+# 3. Validar y generar
+npx tsx ../scripts/mapa-intermodular/mapa-intermodular.mts construir \
+  --nivel <NIVEL> --curso <1º|2º> --trabajo ../scripts/mapa-intermodular/fuentes/<TAB> \
+  --salida src/data/mapa-intermodular/<archivo>.json
+```
+
+Las fuentes (`config.json` y `relaciones*.json`) se versionan en `scripts/mapa-intermodular/fuentes/<TAB>/`. Así, si se corrige el texto de un RA o un criterio en `ras_*.data.ts`, basta con volver a ejecutar `construir` y crear una migración que recargue la pestaña. La generación es determinista: las mismas fuentes producen el mismo JSON.
+
+### 8.2. Formato de entrada
+
+- **`config.json`**: por módulo, `nombre_es/ca`, `tipo` (`especifico`, `comun` o `transversal`), `relacion` (el `relationType` de las conexiones que **llegan** a ese módulo), `color` e `icon`. `ficha` lo propone con los comunes ya resueltos (0156, 0179, 1664, 1665, 1708-1710 y 1713).
+- **`relaciones*.json`**: arrays de relaciones. Cada una tiene `a` y `b` (`{ modulo, ra, criterios: ["a", "c"] }`), `justificacion_es/ca` y `actividades`, con un mínimo de una. Los campos de cada actividad son `titulo`, `contexto`, `desarrollo`, `evidencia`, `dua` y `metodologia`, todos con sufijo `_es` y `_ca`.
+
+Correspondencia con el modelo del mapa: `contexto` → `motivatingFactor`, `desarrollo` → `description`, `evidencia` → `evidence`, `dua` → `diversitySupport` y `metodologia` → `justification` (con el prefijo «Metodología activa:»).
+
+### 8.3. Validaciones (bloquean la escritura)
+
+- Los RA y las letras de criterio existen en el curso; cada lado cita de 1 a 3 criterios y los dos lados son de módulos distintos.
+- No hay pares de RA repetidos y cada RA tiene entre 6 y 15 conexiones.
+- Hay al menos una actividad por relación, sin títulos repetidos dentro de un RA, ni en ES ni en CA.
+- Todos los textos existen en ES y CA, son distintos y no tienen marcas evidentes del otro idioma. El detector usa límites de palabra Unicode, porque `\b` de JavaScript no reconoce letras acentuadas y daba falsos positivos como «con» en «conèixer».
+- Las citas de criterios del desarrollo (`0011-1a`, `CAE2-3c`) coinciden en ES y CA y pertenecen a la relación.
+
+Son avisos, que no bloquean: criterios del curso sin ninguna conexión y criterios de la relación que el desarrollo no cita.
+
+### 8.4. Detalles del JSON generado
+
+- Cada relación se publica en los dos RA. Los criterios propios de cada conexión son los de su lado, y `relatedCriteria` contiene solo criterios del módulo destino, con texto oficial ES/CA.
+- `sourceCriteria` usa la clave corta `0011-1a`. Si el código del módulo tiene letras (`CAE1`), se omite el prefijo y queda `1a`: el filtro por criterio del frontend (`MapaIntermodularFacade.filteredConnections`) busca la letra dentro de `sourceCriteria`, y la «a», la «c» y la «e» de «CAE» darían coincidencias falsas. `criteriaKeys` lleva siempre las tres formas (`a`, `1a`, `CAE1-1a`).
+- Las conexiones de cada RA se ordenan por módulo y RA de destino, en el orden del catálogo.
+
+### 8.5. Encargarlo a otro modelo
+
+`scripts/mapa-intermodular/prompt.md` contiene el prompt completo (ficha, plan, redacción, validación, integración y entrega) para lanzarlo con otro agente, como Gemini con antigravity-cli. La lista de mapas pendientes con sus datos está en [mapas_intermodulares_pendientes.md](mapas_intermodulares_pendientes.md).

@@ -4,6 +4,9 @@ updates/
 # temp
 temp/
 
+# Fichas curriculares que genera la herramienta del mapa intermodular (se regeneran)
+scripts/mapa-intermodular/fuentes/*/ficha.md
+
 # Correcciones
 correcciones/
 # Dependencies

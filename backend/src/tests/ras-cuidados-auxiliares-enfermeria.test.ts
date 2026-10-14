@@ -57,7 +57,8 @@ describe('Datos del CFGM Cuidados Auxiliares de Enfermería', () => {
 
   it('tiene un único curso con todos los módulos y usa los nombres oficiales en el prompt', () => {
     const nivel = findNivel('CFGM_CUIDADOS_AUXILIARES_ENFERMERIA');
-    expect(nivel?.mapas).toBeUndefined();
+    // Mapa de todo el ciclo (un solo curso, sin `curso`), desde la tarea 223.
+    expect(nivel?.mapas).toEqual([{ tab: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', moduleCode: 'CAE1', raId: 'CAE1_RA1' }]);
     expect(nivel?.cursos.map((c) => c.curso)).toEqual(['1º']);
     expect(describeTargetCourse('CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', '1º')).toBe(
       '1º de CFGM Cuidados Auxiliares de Enfermería'

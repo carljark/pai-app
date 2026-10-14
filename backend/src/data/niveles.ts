@@ -155,6 +155,7 @@ export const NIVELES: readonly NivelEducativo[] = [
     // Título LOGSE (SAN23, RD 546/1995) con el currículo estatal: un curso en el centro más la FCT,
     // que no se carga. Los módulos no tienen código oficial: CAE1-CAE7 siguen su numeración en el RD.
     cursos: [{ curso: '1º', modulos: ['CAE1', 'CAE2', 'CAE3', 'CAE4', 'CAE5', 'CAE6', 'CAE7'] }],
+    mapas: [{ tab: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', moduleCode: 'CAE1', raId: 'CAE1_RA1' }],
   },
   {
     id: 'CFGS_EDUCACION_INFANTIL',

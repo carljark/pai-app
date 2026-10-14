@@ -18,7 +18,9 @@ import { up as runMigration21 } from '../migrations/21_reload_mapa_infantil_prim
 import { up as runMigration27 } from '../migrations/27_reload_cfgm_peluqueria_transversales';
 import { up as runMigration28 } from '../migrations/28_reload_transversales_canonicos';
 import { up as runMigration29 } from '../migrations/29_reload_mapa_fpb_catalan';
+import { up as runMigration36 } from '../migrations/36_ingest_mapa_cfgm_cuidados_auxiliares_enfermeria';
 import { RA } from '../models/RA';
+import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -457,6 +459,36 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL' })).toBe(1);
       await expectBidirectionalMap('CFGS_EDUCACION_INFANTIL_2', 9, 358, 3);
+    });
+
+    it('debería cargar con la migración 36 el mapa de Cuidados Auxiliares de Enfermería sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGM', order: 0, code: '0633', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration36();
+      await runMigration36();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
+      await expectBidirectionalMap('CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', 7, 272, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = CAE_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) {
+            expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+            // Sin el prefijo «CAEn», que haría coincidir las letras a, c y e en el filtro por criterio.
+            expect(c.sourceCriteria).toMatch(/^\d[a-z](, \d[a-z])*$/);
+          }
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGM_CUIDADOS_AUXILIARES_ENFERMERIA');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['CAE1', 'CAE2', 'CAE3', 'CAE4', 'CAE5', 'CAE6', 'CAE7']);
+      expect(res.body[1].name_ca).toBe("Tècniques bàsiques d'infermeria");
     });
   });
 });

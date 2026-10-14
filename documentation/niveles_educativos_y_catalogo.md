@@ -117,7 +117,7 @@ Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). No tien
 
 ## CFGM Cuidados Auxiliares de Enfermería (`CFGM_CUIDADOS_AUXILIARES_ENFERMERIA`)
 
-Ciclo SAN23 de la familia Sanidad (tarea 213). No tiene mapa intermodular. Es el primer título **LOGSE** del catálogo.
+Ciclo SAN23 de la familia Sanidad (tarea 213). Es el primer título **LOGSE** del catálogo. Tiene mapa intermodular desde la tarea 223: pestaña `CFGM_CUIDADOS_AUXILIARES_ENFERMERIA`, sin curso porque el ciclo tiene uno solo, con 136 relaciones y 272 conexiones. Si se recarga con el título LOE (ver «Sustitución prevista»), habrá que rehacer el mapa con los RA nuevos.
 
 ### Fuente normativa
 

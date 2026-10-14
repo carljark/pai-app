@@ -1,0 +1,62 @@
+{
+  "nivel": "CFGM_CUIDADOS_AUXILIARES_ENFERMERIA",
+  "curso": "1º",
+  "modulos": {
+    "CAE1": {
+      "nombre_es": "Operaciones administrativas y documentación sanitaria",
+      "nombre_ca": "Operacions administratives i documentació sanitària",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#60a5fa",
+      "icon": "book"
+    },
+    "CAE2": {
+      "nombre_es": "Técnicas básicas de enfermería",
+      "nombre_ca": "Tècniques bàsiques d'infermeria",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#f472b6",
+      "icon": "heart-pulse"
+    },
+    "CAE3": {
+      "nombre_es": "Higiene del medio hospitalario y limpieza de material",
+      "nombre_ca": "Higiene del medi hospitalari i neteja de material",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#34d399",
+      "icon": "flask-conical"
+    },
+    "CAE4": {
+      "nombre_es": "Promoción de la salud y apoyo psicológico al paciente",
+      "nombre_ca": "Promoció de la salut i suport psicològic al pacient",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#a78bfa",
+      "icon": "users"
+    },
+    "CAE5": {
+      "nombre_es": "Técnicas de ayuda odontológica/estomatológica",
+      "nombre_ca": "Tècniques d'ajuda odontològica/estomatològica",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "microscope"
+    },
+    "CAE6": {
+      "nombre_es": "Relaciones en el equipo de trabajo",
+      "nombre_ca": "Relacions en l'equip de treball",
+      "tipo": "transversal",
+      "relacion": "comunicacion",
+      "color": "#fb923c",
+      "icon": "hand"
+    },
+    "CAE7": {
+      "nombre_es": "Formación y orientación laboral",
+      "nombre_ca": "Formació i orientació laboral",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#fbbf24",
+      "icon": "briefcase"
+    }
+  }
+}

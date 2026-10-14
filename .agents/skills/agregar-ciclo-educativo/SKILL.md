@@ -341,7 +341,12 @@ Consultar [Lecciones Aprendidas de Cobertura](./references/lecciones_aprendidas_
 
 ## 7. Prompt para la Generación de Conexiones y Actividades del Mapa Intermodular (ruta FP, solo con mapa)
 
-Solo si se ha pedido el mapa del ciclo. Cuando se encargue a la IA o a un subagente generar los documentos curriculares markdown del mapa intermodular a partir del currículo oficial, se debe utilizar exactamente la siguiente instrucción directriz:
+Solo si se ha pedido el mapa del ciclo.
+
+> [!TIP]
+> **Camino recomendado (desde la tarea 223):** generar el mapa con `scripts/mapa-intermodular/mapa-intermodular.mts`. El modelo redacta relaciones RA↔RA con su actividad y el generador valida las reglas de esta sección y compone el JSON con los textos oficiales. Se documenta en `documentation/procesamiento_actividades_mapa_intermodular.md` (sección 8). Para encargarlo a otro modelo, usa `scripts/mapa-intermodular/prompt.md`. Los mapas pendientes están en `documentation/mapas_intermodulares_pendientes.md`.
+
+Cuando se encargue a la IA o a un subagente generar los documentos curriculares markdown del mapa intermodular a partir del currículo oficial, se debe utilizar exactamente la siguiente instrucción directriz:
 
 ```text
 Quiero que para el "mapa intermodular" busques las conexiones entre los modulos de un mismo curso. Tiene que seguir el mismo esquema curricular, explicitando los criterios de evaluacion relacionados con otros modulos y justificando la conexión, explicitando el codigo y el nombre de los otros RAs y Criterios de Evaluacion (CE). 

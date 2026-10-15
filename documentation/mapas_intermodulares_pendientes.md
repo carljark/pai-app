@@ -21,15 +21,15 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Enseñanza y Animación Sociodeportiva | 2.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA_2` | `mapa_cfgs_animacion_sociodeportiva_2.json` | 8 | 42 | 295 | 168 | ✅ Hecho (tarea 235, Gemini): 168 relaciones, 336 conexiones |
 | CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | ✅ Hecho (tarea 226, Claude): 145 relaciones, 290 conexiones. El borrador de Gemini (tarea 224) se descartó por tener textos de plantilla |
 | CFGS Integración Social | 2.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL_2` | `mapa_cfgs_integracion_social_2.json` | 9 | 44 | 346 | 176 | ✅ Hecho (tarea 225, Claude): 165 relaciones, 330 conexiones |
-| CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | Pendiente |
+| CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | ✅ Hecho (tarea 239, Claude): 187 relaciones, 374 conexiones |
 | CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | En curso (tarea 238, Gemini): [prompt](../scripts/mapa-intermodular/prompt_cfgs_laboratorio_clinico_2.md) |
 
-Quedan 4 pestañas, con unas 744 relaciones y otras tantas actividades bilingües. Una de ellas, Laboratorio Clínico 2.º, está en curso con Gemini (tarea 238).
+Quedan 3 pestañas, con unas 564 relaciones y otras tantas actividades bilingües. Una de ellas, Laboratorio Clínico 2.º, está en curso con Gemini (tarea 238).
 
 ## Orden sugerido
 
-1. **CFGS Laboratorio Clínico y Biomédico 2.º** (44 RA): en curso con Gemini (tarea 238). Después, su 1.º (45 RA), para completar el ciclo.
-2. Al final, **Guía en el Medio Natural** 2.º y 1.º (45 y 52 RA; el 1.º es el mayor).
+1. **CFGS Laboratorio Clínico y Biomédico 2.º** (44 RA): en curso con Gemini (tarea 238); el 1.º ya está hecho (tarea 239).
+2. **CFGM Guía en el Medio Natural** 2.º y 1.º (45 y 52 RA; el 1.º es el mayor).
 
 Al empezar un ciclo de dos cursos, conviene hacer los dos seguidos: así el selector del mapa muestra los dos cursos desde el principio.
 

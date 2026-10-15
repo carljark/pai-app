@@ -81,7 +81,9 @@ describe('Datos del CFGS Laboratorio Clínico y Biomédico', () => {
     const nivel = findNivel('CFGS_LABORATORIO_CLINICO');
     expect(nivel?.etapa).toBe('CFGS');
     expect(nivel?.codigoCaib).toBe('SAN36');
-    expect(nivel?.mapas).toBeUndefined();
+    expect(nivel?.mapas).toEqual([
+      { tab: 'CFGS_LABORATORIO_CLINICO', curso: '1º', moduleCode: '1367', raId: '1367_RA1' },
+    ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([7, 7]);
     expect(describeTargetCourse('CFGS_LABORATORIO_CLINICO', '2º'))
       .toBe('2º de CFGS Laboratorio Clínico y Biomédico');

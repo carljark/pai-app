@@ -256,6 +256,7 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '1º', modulos: ['1367', '1368', '1369', '1370', '0179', '1665', '1709'] },
       { curso: '2º', modulos: ['1371', '1372', '1373', '1374', '1375', '1708', '1710'] },
     ],
+    mapas: [{ tab: 'CFGS_LABORATORIO_CLINICO', curso: '1º', moduleCode: '1367', raId: '1367_RA1' }],
   },
   {
     // ESO ordinaria: Decreto 42/2025 (BOIB n.º 103, de 4/8/2025).

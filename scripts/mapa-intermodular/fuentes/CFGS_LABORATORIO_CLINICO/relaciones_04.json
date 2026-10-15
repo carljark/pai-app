@@ -1,0 +1,640 @@
+[
+  {
+    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["a"] },
+    "justificacion_es": "Un gráfico de control convierte los datos del control en información para decidir si se acepta una serie.",
+    "justificacion_ca": "Un gràfic de control converteix les dades del control en informació per decidir si s'accepta una sèrie.",
+    "actividades": [
+      {
+        "titulo_es": "Gráfico de Levey-Jennings del control de creatinina",
+        "titulo_ca": "Gràfic de Levey-Jennings del control de creatinina",
+        "contexto_es": "El técnico de mañana tiene una tabla con veinte valores de control y no sabe si la serie de hoy es aceptable.",
+        "contexto_ca": "El tècnic de matí té una taula amb vint valors de control i no sap si la sèrie d'avui és acceptable.",
+        "desarrollo_es": "El alumnado representa los valores del control en un gráfico digital aplicando las reglas de control (1368-5d). Explica la diferencia entre los datos sueltos de la tabla y la información que ofrece el gráfico para tomar decisiones (1665-5a).",
+        "desarrollo_ca": "L'alumnat representa els valors del control en un gràfic digital aplicant les regles de control (1368-5d). Explica la diferència entre les dades soltes de la taula i la informació que ofereix el gràfic per prendre decisions (1665-5a).",
+        "evidencia_es": "Gráfico de control con interpretación.",
+        "evidencia_ca": "Gràfic de control amb interpretació.",
+        "dua_es": "Plantilla de gráfico en hoja de cálculo.",
+        "dua_ca": "Plantilla de gràfic en full de càlcul.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["g"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["b"] },
+    "justificacion_es": "Los informes técnicos digitales se guardan y comparten en servicios en la nube.",
+    "justificacion_ca": "Els informes tècnics digitals es guarden i es comparteixen en serveis al núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Compartir informes técnicos con el laboratorio de referencia",
+        "titulo_ca": "Compartir informes tècnics amb el laboratori de referència",
+        "contexto_es": "Los informes de separación se enviaban por correo y a veces se perdían versiones.",
+        "contexto_ca": "Els informes de separació s'enviaven per correu i a vegades es perdien versions.",
+        "desarrollo_es": "El alumnado cumplimenta el informe técnico de una separación en soporte digital (1368-4g). Lo comparte en un espacio en la nube y explica qué funciones de la nube aprovecha, como el intercambio de información o el control de versiones (1665-3b).",
+        "desarrollo_ca": "L'alumnat emplena l'informe tècnic d'una separació en suport digital (1368-4g). El comparteix en un espai al núvol i explica quines funcions del núvol aprofita, com l'intercanvi d'informació o el control de versions (1665-3b).",
+        "evidencia_es": "Informe compartido y nota explicativa.",
+        "evidencia_ca": "Informe compartit i nota explicativa.",
+        "dua_es": "Tutorial de la plataforma con capturas.",
+        "dua_ca": "Tutorial de la plataforma amb captures.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["h"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["e"] },
+    "justificacion_es": "La telepatología transfiere imágenes entre hospitales gracias a las ventajas de la nube.",
+    "justificacion_ca": "La telepatologia transfereix imatges entre hospitals gràcies als avantatges del núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Telepatología entre Formentera y Palma",
+        "titulo_ca": "Telepatologia entre Formentera i Palma",
+        "contexto_es": "El hospital de Formentera no tiene patólogo y envía las imágenes de sus biopsias a Son Espases.",
+        "contexto_ca": "L'hospital de Formentera no té patòleg i envia les imatges de les seves biòpsies a Son Espases.",
+        "desarrollo_es": "El alumnado transfiere imágenes de preparaciones por distintos métodos, como correo seguro, servidor o plataforma (1368-6h). Identifica las ventajas que aporta la nube a este sistema conectado: rapidez, acceso remoto y menos traslados (1665-3e).",
+        "desarrollo_ca": "L'alumnat transfereix imatges de preparacions per diferents mètodes, com correu segur, servidor o plataforma (1368-6h). Identifica els avantatges que aporta el núvol a aquest sistema connectat: rapidesa, accés remot i menys trasllats (1665-3e).",
+        "evidencia_es": "Comparativa de métodos de transferencia.",
+        "evidencia_ca": "Comparativa de mètodes de transferència.",
+        "dua_es": "Esquema del circuito.",
+        "dua_ca": "Esquema del circuit.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["g"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["f"] },
+    "justificacion_es": "Un archivo de imágenes digitales crece rápido y suele almacenarse en la nube.",
+    "justificacion_ca": "Un arxiu d'imatges digitals creix ràpidament i se sol emmagatzemar al núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Archivo de imágenes de hematología en la nube",
+        "titulo_ca": "Arxiu d'imatges d'hematologia al núvol",
+        "contexto_es": "Hematología guarda miles de imágenes de frotis en un disco duro que está a punto de llenarse.",
+        "contexto_ca": "Hematologia guarda milers d'imatges de frotis en un disc dur que està a punt d'omplir-se.",
+        "desarrollo_es": "El alumnado elabora un archivo de imágenes digitales con nombres, carpetas y metadatos coherentes (1368-6g). Describe cómo se almacenaría en la nube, con copias de seguridad, permisos y tiempos de conservación (1665-5f).",
+        "desarrollo_ca": "L'alumnat elabora un arxiu d'imatges digitals amb noms, carpetes i metadades coherents (1368-6g). Descriu com s'emmagatzemaria al núvol, amb còpies de seguretat, permisos i temps de conservació (1665-5f).",
+        "evidencia_es": "Estructura del archivo y plan de almacenamiento.",
+        "evidencia_ca": "Estructura de l'arxiu i pla d'emmagatzematge.",
+        "dua_es": "Ejemplo de estructura de carpetas.",
+        "dua_ca": "Exemple d'estructura de carpetes.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA7", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "Los documentos del sistema de calidad se gestionan cada vez más con aplicaciones en la nube.",
+    "justificacion_ca": "Els documents del sistema de qualitat es gestionen cada vegada més amb aplicacions al núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Gestor documental de calidad en la nube",
+        "titulo_ca": "Gestor documental de qualitat al núvol",
+        "contexto_es": "En el laboratorio conviven tres versiones del mismo PNT y nadie sabe cuál es la vigente.",
+        "contexto_ca": "Al laboratori conviuen tres versions del mateix PNT i ningú no sap quina és la vigent.",
+        "desarrollo_es": "El alumnado identifica los documentos de un sistema de gestión de calidad: manual, procedimientos, instrucciones y registros (1368-7e). Describe la importancia del cloud computing para controlar sus versiones y que todo el personal acceda a la vigente (1665-5g).",
+        "desarrollo_ca": "L'alumnat identifica els documents d'un sistema de gestió de qualitat: manual, procediments, instruccions i registres (1368-7e). Descriu la importància del cloud computing per controlar-ne les versions i que tot el personal accedeixi a la vigent (1665-5g).",
+        "evidencia_es": "Mapa documental y propuesta de gestor.",
+        "evidencia_ca": "Mapa documental i proposta de gestor.",
+        "dua_es": "Pirámide documental ilustrada.",
+        "dua_ca": "Piràmide documental il·lustrada.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA1", "criterios": ["c", "f"] },
+    "justificacion_es": "Los equipos del laboratorio forman el entorno de planta, que debe conectarse con el sistema de información.",
+    "justificacion_ca": "Els equips del laboratori formen l'entorn de planta, que s'ha de connectar amb el sistema d'informació.",
+    "actividades": [
+      {
+        "titulo_es": "Conectar los equipos al sistema de información",
+        "titulo_ca": "Connectar els equips al sistema d'informació",
+        "contexto_es": "En el laboratorio, los resultados de algunos equipos se copian a mano en el ordenador y se cometen errores.",
+        "contexto_ca": "Al laboratori, els resultats d'alguns equips es copien a mà a l'ordinador i es cometen errors.",
+        "desarrollo_es": "El alumnado identifica los equipos básicos del laboratorio y sus aplicaciones (1368-1e). Diferencia el entorno de los equipos del de la gestión informática (1665-1c) y analiza por qué es importante conectarlos para evitar transcripciones manuales (1665-1f).",
+        "desarrollo_ca": "L'alumnat identifica els equips bàsics del laboratori i les seves aplicacions (1368-1e). Diferencia l'entorn dels equips del de la gestió informàtica (1665-1c) i analitza per què és important connectar-los per evitar transcripcions manuals (1665-1f).",
+        "evidencia_es": "Mapa de equipos y conexiones.",
+        "evidencia_ca": "Mapa d'equips i connexions.",
+        "dua_es": "Esquema con colores por entorno.",
+        "dua_ca": "Esquema amb colors per entorn.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["f"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["a"] },
+    "justificacion_es": "Los sistemas de autovalidación aplican reglas que deciden acciones de rechazo o corrección de forma automática.",
+    "justificacion_ca": "Els sistemes d'autovalidació apliquen regles que decideixen accions de rebuig o correcció de manera automàtica.",
+    "actividades": [
+      {
+        "titulo_es": "Autovalidación de resultados con reglas inteligentes",
+        "titulo_ca": "Autovalidació de resultats amb regles intel·ligents",
+        "contexto_es": "El laboratorio de urgencias quiere que los resultados normales se validen solos para ganar tiempo.",
+        "contexto_ca": "El laboratori d'urgències vol que els resultats normals es validin sols per guanyar temps.",
+        "desarrollo_es": "El alumnado considera las acciones de rechazo o corrección ante resultados fuera de control (1368-5f). Explica cómo la inteligencia artificial y las reglas automáticas pueden optimizar la validación y qué casos deben seguir revisándose a mano (1665-4a).",
+        "desarrollo_ca": "L'alumnat considera les accions de rebuig o correcció davant resultats fora de control (1368-5f). Explica com la intel·ligència artificial i les regles automàtiques poden optimitzar la validació i quins casos s'han de continuar revisant a mà (1665-4a).",
+        "evidencia_es": "Árbol de decisiones de validación.",
+        "evidencia_ca": "Arbre de decisions de validació.",
+        "dua_es": "Casos de ejemplo resueltos.",
+        "dua_ca": "Casos d'exemple resolts.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA3", "criterios": ["i"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["e"] },
+    "justificacion_es": "Los valoradores automáticos combinan el equipo de medida con el software de gestión de resultados.",
+    "justificacion_ca": "Els valoradors automàtics combinen l'equip de mesura amb el programari de gestió de resultats.",
+    "actividades": [
+      {
+        "titulo_es": "Curva de titulación con un valorador automático",
+        "titulo_ca": "Corba de titulació amb un valorador automàtic",
+        "contexto_es": "El laboratorio de control de calidad sustituye las buretas por un valorador automático conectado al ordenador.",
+        "contexto_ca": "El laboratori de control de qualitat substitueix les buretes per un valorador automàtic connectat a l'ordinador.",
+        "desarrollo_es": "El alumnado realiza una curva de titulación con técnica electroquímica (1368-3i). Analiza qué aporta la tecnología en la parte del equipo y en la parte de gestión, como la curva automática o el registro trazable (1665-2e).",
+        "desarrollo_ca": "L'alumnat fa una corba de titulació amb tècnica electroquímica (1368-3i). Analitza què aporta la tecnologia a la part de l'equip i a la part de gestió, com la corba automàtica o el registre traçable (1665-2e).",
+        "evidencia_es": "Curva obtenida y análisis tecnológico.",
+        "evidencia_ca": "Corba obtinguda i anàlisi tecnològica.",
+        "dua_es": "Simulación en línea de la titulación.",
+        "dua_ca": "Simulació en línia de la titulació.",
+        "metodologia_es": "práctica de laboratorio.",
+        "metodologia_ca": "pràctica de laboratori."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA7", "criterios": ["a"] },
+    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["a", "b"] },
+    "justificacion_es": "Las normas de calidad que el laboratorio decide cumplir son objetivos estratégicos que orientan su digitalización.",
+    "justificacion_ca": "Les normes de qualitat que el laboratori decideix complir són objectius estratègics que orienten la seva digitalització.",
+    "actividades": [
+      {
+        "titulo_es": "La acreditación como objetivo del plan digital",
+        "titulo_ca": "L'acreditació com a objectiu del pla digital",
+        "contexto_es": "La dirección del laboratorio quiere acreditarse y, a la vez, digitalizar sus procesos.",
+        "contexto_ca": "La direcció del laboratori vol acreditar-se i, alhora, digitalitzar els seus processos.",
+        "desarrollo_es": "El alumnado identifica las normas de calidad aplicables al laboratorio clínico y a anatomía patológica (1368-7a). Las convierte en objetivos estratégicos del plan de digitalización (1665-6a) y alinea las áreas de producción y de comunicación para lograrlos (1665-6b).",
+        "desarrollo_ca": "L'alumnat identifica les normes de qualitat aplicables al laboratori clínic i a anatomia patològica (1368-7a). Les converteix en objectius estratègics del pla de digitalització (1665-6a) i alinea les àrees de producció i de comunicació per aconseguir-los (1665-6b).",
+        "evidencia_es": "Documento de objetivos y alineación.",
+        "evidencia_ca": "Document d'objectius i alineació.",
+        "dua_es": "Resumen de normas en tabla.",
+        "dua_ca": "Resum de normes en taula.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Las tecnologías habilitadoras pueden reducir los residuos del laboratorio y hacerlo más sostenible.",
+    "justificacion_ca": "Les tecnologies habilitadores poden reduir els residus del laboratori i fer-lo més sostenible.",
+    "actividades": [
+      {
+        "titulo_es": "Menos residuos con analizadores de microvolumen",
+        "titulo_ca": "Menys residus amb analitzadors de microvolum",
+        "contexto_es": "El laboratorio genera cada año toneladas de residuos químicos y la gerencia busca reducirlos.",
+        "contexto_ca": "El laboratori genera cada any tones de residus químics i la gerència cerca reduir-los.",
+        "desarrollo_es": "El alumnado organiza la eliminación de residuos con orden, higiene y método (1368-2d). Relaciona tecnologías como los analizadores de microvolumen o la gestión digital del stock con una economía más sostenible y eficiente (1665-2c).",
+        "desarrollo_ca": "L'alumnat organitza l'eliminació de residus amb ordre, higiene i mètode (1368-2d). Relaciona tecnologies com els analitzadors de microvolum o la gestió digital de l'estoc amb una economia més sostenible i eficient (1665-2c).",
+        "evidencia_es": "Plan de reducción de residuos.",
+        "evidencia_ca": "Pla de reducció de residus.",
+        "dua_es": "Datos de consumo en gráfico.",
+        "dua_ca": "Dades de consum en gràfic.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA1", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["i"] },
+    "justificacion_es": "El inventario de reactivos debe integrarse con las aplicaciones y plataformas del laboratorio.",
+    "justificacion_ca": "L'inventari de reactius s'ha d'integrar amb les aplicacions i plataformes del laboratori.",
+    "actividades": [
+      {
+        "titulo_es": "Inventario de reactivos integrado con los analizadores",
+        "titulo_ca": "Inventari de reactius integrat amb els analitzadors",
+        "contexto_es": "Un reactivo caduca sin usarse mientras otro se agota en plena guardia porque nadie controla el stock.",
+        "contexto_ca": "Un reactiu caduca sense fer-se servir mentre un altre s'esgota en plena guàrdia perquè ningú no controla l'estoc.",
+        "desarrollo_es": "El alumnado identifica los reactivos del laboratorio por su naturaleza química y su pureza (1368-1d). Propone integrar el inventario con los analizadores y la plataforma de compras, para que el consumo real actualice el stock (1665-6i).",
+        "desarrollo_ca": "L'alumnat identifica els reactius del laboratori per la seva naturalesa química i la seva puresa (1368-1d). Proposa integrar l'inventari amb els analitzadors i la plataforma de compres, perquè el consum real actualitzi l'estoc (1665-6i).",
+        "evidencia_es": "Esquema de integración del inventario.",
+        "evidencia_ca": "Esquema d'integració de l'inventari.",
+        "dua_es": "Ejemplo de inventario digital.",
+        "dua_ca": "Exemple d'inventari digital.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA2", "criterios": ["f", "b"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Las medidas de protección del laboratorio se definen a partir de la evaluación de riesgos del puesto.",
+    "justificacion_ca": "Les mesures de protecció del laboratori es defineixen a partir de l'avaluació de riscs del lloc.",
+    "actividades": [
+      {
+        "titulo_es": "Evaluación de riesgos del puesto de técnico de laboratorio",
+        "titulo_ca": "Avaluació de riscs del lloc de tècnic de laboratori",
+        "contexto_es": "El servicio de prevención actualiza la evaluación de riesgos del laboratorio tras la llegada de nuevos equipos.",
+        "contexto_ca": "El servei de prevenció actualitza l'avaluació de riscs del laboratori després de l'arribada de nous equips.",
+        "desarrollo_es": "El alumnado determina la evaluación de riesgos del puesto y las técnicas de prevención y protección (1709-2c). Sigue los protocolos de prevención al manipular reactivos (1368-2b) y selecciona los equipos de protección individual y colectiva adecuados a cada riesgo (1368-2f).",
+        "desarrollo_ca": "L'alumnat determina l'avaluació de riscs del lloc i les tècniques de prevenció i protecció (1709-2c). Segueix els protocols de prevenció en manipular reactius (1368-2b) i selecciona els equips de protecció individual i col·lectiva adequats a cada risc (1368-2f).",
+        "evidencia_es": "Matriz de riesgos con medidas.",
+        "evidencia_ca": "Matriu de riscs amb mesures.",
+        "dua_es": "Fotografías de los EPI.",
+        "dua_ca": "Fotografies dels EPI.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["h"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["e"] },
+    "justificacion_es": "Aplicar las normas de prevención y protección ambiental es a la vez un derecho y un deber del técnico.",
+    "justificacion_ca": "Aplicar les normes de prevenció i protecció ambiental és alhora un dret i un deure del tècnic.",
+    "actividades": [
+      {
+        "titulo_es": "La campana de gases que no funciona",
+        "titulo_ca": "La campana de gasos que no funciona",
+        "contexto_es": "La campana de gases lleva una semana averiada y el jefe pide seguir trabajando con disolventes en la mesa.",
+        "contexto_ca": "La campana de gasos fa una setmana que està avariada i el cap demana continuar treballant amb dissolvents a la taula.",
+        "desarrollo_es": "El alumnado aplica las normas de calidad, prevención y protección ambiental en un análisis con disolventes (1368-4h). Determina los derechos y deberes del trabajador ante esa orden, como el derecho a no trabajar con riesgo grave (1709-2e).",
+        "desarrollo_ca": "L'alumnat aplica les normes de qualitat, prevenció i protecció ambiental en una anàlisi amb dissolvents (1368-4h). Determina els drets i deures del treballador davant aquesta ordre, com el dret a no treballar amb risc greu (1709-2e).",
+        "evidencia_es": "Análisis del caso y escrito de comunicación.",
+        "evidencia_ca": "Anàlisi del cas i escrit de comunicació.",
+        "dua_es": "Resumen de la ley de prevención.",
+        "dua_ca": "Resum de la llei de prevenció.",
+        "metodologia_es": "aprendizaje basado en dilemas.",
+        "metodologia_ca": "aprenentatge basat en dilemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA7", "criterios": ["h"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Valorar la gestión de la calidad es una actitud profesional que los laboratorios esperan de sus técnicos.",
+    "justificacion_ca": "Valorar la gestió de la qualitat és una actitud professional que els laboratoris esperen dels seus tècnics.",
+    "actividades": [
+      {
+        "titulo_es": "La calidad como actitud del técnico",
+        "titulo_ca": "La qualitat com a actitud del tècnic",
+        "contexto_es": "Una supervisora explica que prefiere contratar a alguien que registra bien las incidencias antes que a alguien rápido pero descuidado.",
+        "contexto_ca": "Una supervisora explica que prefereix contractar algú que registra bé les incidències abans que algú ràpid però descurat.",
+        "desarrollo_es": "El alumnado valora la importancia de la gestión de la calidad en el laboratorio (1368-7h). Reflexiona sobre qué actitudes y aptitudes del sector se relacionan con ella, como el rigor o la honestidad, y cuáles debe mejorar (1709-1c).",
+        "desarrollo_ca": "L'alumnat valora la importància de la gestió de la qualitat al laboratori (1368-7h). Reflexiona sobre quines actituds i aptituds del sector s'hi relacionen, com el rigor o l'honestedat, i quines ha de millorar (1709-1c).",
+        "evidencia_es": "Reflexión escrita y autoevaluación.",
+        "evidencia_ca": "Reflexió escrita i autoavaluació.",
+        "dua_es": "Escala de autoevaluación con ejemplos.",
+        "dua_ca": "Escala d'autoavaluació amb exemples.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["h"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["a", "g"] },
+    "justificacion_es": "La mejora continua de la calidad analítica se apoya en la formación permanente del técnico.",
+    "justificacion_ca": "La millora contínua de la qualitat analítica es recolza en la formació permanent del tècnic.",
+    "actividades": [
+      {
+        "titulo_es": "Mi plan de formación en calidad analítica",
+        "titulo_ca": "El meu pla de formació en qualitat analítica",
+        "contexto_es": "Los criterios de calidad cambian con nuevas normas y el laboratorio pide a sus técnicos que se formen cada año.",
+        "contexto_ca": "Els criteris de qualitat canvien amb noves normes i el laboratori demana als seus tècnics que es formin cada any.",
+        "desarrollo_es": "El alumnado valora la importancia del estudio de la calidad de los resultados (1368-5h). Toma conciencia de su responsabilidad en el aprendizaje permanente (1709-5a) e incluye objetivos de formación en calidad en su plan de desarrollo individual (1709-5g).",
+        "desarrollo_ca": "L'alumnat valora la importància de l'estudi de la qualitat dels resultats (1368-5h). Pren consciència de la seva responsabilitat en l'aprenentatge permanent (1709-5a) i inclou objectius de formació en qualitat al seu pla de desenvolupament individual (1709-5g).",
+        "evidencia_es": "Plan de desarrollo individual con objetivos.",
+        "evidencia_ca": "Pla de desenvolupament individual amb objectius.",
+        "dua_es": "Plantilla de plan.",
+        "dua_ca": "Plantilla de pla.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA1", "criterios": ["b"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["h"] },
+    "justificacion_es": "La exposición a desinfectantes puede causar alergias, y la vigilancia de la salud ayuda a detectarlas a tiempo.",
+    "justificacion_ca": "L'exposició a desinfectants pot causar al·lèrgies, i la vigilància de la salut ajuda a detectar-les a temps.",
+    "actividades": [
+      {
+        "titulo_es": "Dermatitis por desinfectantes en el laboratorio",
+        "titulo_ca": "Dermatitis per desinfectants al laboratori",
+        "contexto_es": "Dos técnicas del laboratorio tienen eccemas en las manos desde que se cambió el desinfectante de superficies.",
+        "contexto_ca": "Dues tècniques del laboratori tenen èczemes a les mans d'ençà que es va canviar el desinfectant de superfícies.",
+        "desarrollo_es": "El alumnado identifica las técnicas de limpieza y desinfección del laboratorio y los productos que usan (1368-1b). Determina los requisitos de la vigilancia de la salud del trabajador y su papel en la detección de dermatitis profesionales (1709-2h).",
+        "desarrollo_ca": "L'alumnat identifica les tècniques de neteja i desinfecció del laboratori i els productes que fan servir (1368-1b). Determina els requisits de la vigilància de la salut del treballador i el seu paper en la detecció de dermatitis professionals (1709-2h).",
+        "evidencia_es": "Ficha de productos y protocolo de vigilancia.",
+        "evidencia_ca": "Fitxa de productes i protocol de vigilància.",
+        "dua_es": "Fichas de seguridad resumidas.",
+        "dua_ca": "Fitxes de seguretat resumides.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["d"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "La patología digital crea nuevos puestos para técnicos que dominen la captación de imágenes.",
+    "justificacion_ca": "La patologia digital crea nous llocs per a tècnics que dominin la captació d'imatges.",
+    "actividades": [
+      {
+        "titulo_es": "Empleo en patología digital",
+        "titulo_ca": "Ocupació en patologia digital",
+        "contexto_es": "Un hospital privado de Palma busca técnicos para su nuevo servicio de escaneo de preparaciones.",
+        "contexto_ca": "Un hospital privat de Palma cerca tècnics per al seu nou servei d'escaneig de preparacions.",
+        "desarrollo_es": "El alumnado describe los sistemas de captación de imágenes digitales que usará el servicio (1368-6d). Analiza las oportunidades de empleo que abre la patología digital y los requisitos actuales del perfil (1709-1a).",
+        "desarrollo_ca": "L'alumnat descriu els sistemes de captació d'imatges digitals que farà servir el servei (1368-6d). Analitza les oportunitats d'ocupació que obre la patologia digital i els requisits actuals del perfil (1709-1a).",
+        "evidencia_es": "Análisis de la oferta y del perfil.",
+        "evidencia_ca": "Anàlisi de l'oferta i del perfil.",
+        "dua_es": "Oferta real resumida en una ficha.",
+        "dua_ca": "Oferta real resumida en una fitxa.",
+        "metodologia_es": "análisis documental.",
+        "metodologia_ca": "anàlisi documental."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "1370", "ra": "RA2", "criterios": ["b", "e"] },
+    "justificacion_es": "Las anomalías cromosómicas alteran la estructura y la función de las células y dan lugar a grupos de enfermedades.",
+    "justificacion_ca": "Les anomalies cromosòmiques alteren l'estructura i la funció de les cèl·lules i donen lloc a grups de malalties.",
+    "actividades": [
+      {
+        "titulo_es": "Trisomías y monosomías: de los cromosomas a la enfermedad",
+        "titulo_ca": "Trisomies i monosomies: dels cromosomes a la malaltia",
+        "contexto_es": "Una asociación de familias pide al laboratorio una charla sobre los síndromes cromosómicos más frecuentes.",
+        "contexto_ca": "Una associació de famílies demana al laboratori una xerrada sobre les síndromes cromosòmiques més freqüents.",
+        "desarrollo_es": "El alumnado caracteriza las anomalías cromosómicas más frecuentes, como las trisomías 21, 18 y 13 o el síndrome de Turner (1369-3b). Detalla cómo alteran la estructura y la función celular (1370-2b) y en qué grupos de enfermedades se clasifican (1370-2e).",
+        "desarrollo_ca": "L'alumnat caracteritza les anomalies cromosòmiques més freqüents, com les trisomies 21, 18 i 13 o la síndrome de Turner (1369-3b). Detalla com alteren l'estructura i la funció cel·lular (1370-2b) i en quins grups de malalties es classifiquen (1370-2e).",
+        "evidencia_es": "Presentación divulgativa para familias.",
+        "evidencia_ca": "Presentació divulgativa per a famílies.",
+        "dua_es": "Cariotipos ilustrados.",
+        "dua_ca": "Cariotips il·lustrats.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA3", "criterios": ["i"] },
+    "b": { "modulo": "1370", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "La fórmula cromosómica de las células tumorales orienta el diagnóstico y el tratamiento de algunas leucemias.",
+    "justificacion_ca": "La fórmula cromosòmica de les cèl·lules tumorals orienta el diagnòstic i el tractament d'algunes leucèmies.",
+    "actividades": [
+      {
+        "titulo_es": "El cromosoma Filadelfia en una leucemia",
+        "titulo_ca": "El cromosoma Filadèlfia en una leucèmia",
+        "contexto_es": "El cariotipo de médula ósea de un paciente con leucocitosis muestra una translocación entre los cromosomas 9 y 22.",
+        "contexto_ca": "El cariotip de medul·la òssia d'un pacient amb leucocitosi mostra una translocació entre els cromosomes 9 i 22.",
+        "desarrollo_es": "El alumnado determina la fórmula cromosómica del caso con la nomenclatura internacional (1369-3i). Describe las pruebas de diagnóstico de esta leucemia y las posibilidades terapéuticas que abre el hallazgo (1370-5g).",
+        "desarrollo_ca": "L'alumnat determina la fórmula cromosòmica del cas amb la nomenclatura internacional (1369-3i). Descriu les proves de diagnòstic d'aquesta leucèmia i les possibilitats terapèutiques que obre la troballa (1370-5g).",
+        "evidencia_es": "Fórmula cromosómica y ficha diagnóstica.",
+        "evidencia_ca": "Fórmula cromosòmica i fitxa diagnòstica.",
+        "dua_es": "Guía de nomenclatura con ejemplos.",
+        "dua_ca": "Guia de nomenclatura amb exemples.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1370", "ra": "RA4", "criterios": ["c"] },
+    "justificacion_es": "La PCR permite detectar distintos tipos de agentes infecciosos de forma rápida.",
+    "justificacion_ca": "La PCR permet detectar diferents tipus d'agents infecciosos de manera ràpida.",
+    "actividades": [
+      {
+        "titulo_es": "PCR múltiple para virus respiratorios",
+        "titulo_ca": "PCR múltiple per a virus respiratoris",
+        "contexto_es": "En pleno invierno, urgencias pide saber si los pacientes tienen gripe, virus respiratorio sincitial o coronavirus.",
+        "contexto_ca": "En ple hivern, urgències demana saber si els pacients tenen grip, virus respiratori sincicial o coronavirus.",
+        "desarrollo_es": "El alumnado describe los tipos de agentes infecciosos y sus diferencias (1370-4c). Explica la técnica de PCR, sus variantes como la PCR en tiempo real o múltiple y sus aplicaciones en el diagnóstico de infecciones (1369-5a).",
+        "desarrollo_ca": "L'alumnat descriu els tipus d'agents infecciosos i les seves diferències (1370-4c). Explica la tècnica de PCR, les seves variants com la PCR en temps real o múltiple i les seves aplicacions en el diagnòstic d'infeccions (1369-5a).",
+        "evidencia_es": "Infografía de PCR aplicada a infecciones.",
+        "evidencia_ca": "Infografia de PCR aplicada a infeccions.",
+        "dua_es": "Animación de la PCR.",
+        "dua_ca": "Animació de la PCR.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1370", "ra": "RA5", "criterios": ["h"] },
+    "justificacion_es": "La hibridación en cortes de tejido detecta alteraciones genéticas de los tumores más frecuentes.",
+    "justificacion_ca": "La hibridació en talls de teixit detecta alteracions genètiques dels tumors més freqüents.",
+    "actividades": [
+      {
+        "titulo_es": "FISH de HER2 en un cáncer de mama",
+        "titulo_ca": "FISH d'HER2 en un càncer de mama",
+        "contexto_es": "La inmunohistoquímica de un cáncer de mama da un resultado dudoso y el oncólogo pide una FISH de HER2.",
+        "contexto_ca": "La immunohistoquímica d'un càncer de mama dona un resultat dubtós i l'oncòleg demana una FISH d'HER2.",
+        "desarrollo_es": "El alumnado analiza las manifestaciones del cáncer de mama y por qué importa su estado HER2 (1370-5h). Caracteriza las técnicas de hibridación en soporte sólido, cromosomas y cortes de tejido, y explica cuál se usa en este caso (1369-6c).",
+        "desarrollo_ca": "L'alumnat analitza les manifestacions del càncer de mama i per què n'importa l'estat HER2 (1370-5h). Caracteritza les tècniques d'hibridació en suport sòlid, cromosomes i talls de teixit, i explica quina es fa servir en aquest cas (1369-6c).",
+        "evidencia_es": "Ficha del caso con la técnica elegida.",
+        "evidencia_ca": "Fitxa del cas amb la tècnica triada.",
+        "dua_es": "Imágenes de FISH positivas y negativas.",
+        "dua_ca": "Imatges de FISH positives i negatives.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA7", "criterios": ["i"] },
+    "b": { "modulo": "1370", "ra": "RA2", "criterios": ["g"] },
+    "justificacion_es": "La terapia génica es una de las posibilidades terapéuticas que abren la clonación y la secuenciación.",
+    "justificacion_ca": "La teràpia gènica és una de les possibilitats terapèutiques que obren la clonació i la seqüenciació.",
+    "actividades": [
+      {
+        "titulo_es": "Terapia génica para la atrofia muscular espinal",
+        "titulo_ca": "Teràpia gènica per a l'atròfia muscular espinal",
+        "contexto_es": "Una noticia sobre un tratamiento génico muy caro para bebés con atrofia muscular espinal genera debate en clase.",
+        "contexto_ca": "Una notícia sobre un tractament gènic molt car per a nadons amb atròfia muscular espinal genera debat a classe.",
+        "desarrollo_es": "El alumnado detalla las posibilidades terapéuticas frente a la enfermedad, de los fármacos a la cirugía (1370-2g). Describe cómo la clonación y la secuenciación permiten diseñar tratamientos de terapia génica como el del caso (1369-7i).",
+        "desarrollo_ca": "L'alumnat detalla les possibilitats terapèutiques davant la malaltia, dels fàrmacs a la cirurgia (1370-2g). Descriu com la clonació i la seqüenciació permeten dissenyar tractaments de teràpia gènica com el del cas (1369-7i).",
+        "evidencia_es": "Esquema del tratamiento y reflexión ética.",
+        "evidencia_ca": "Esquema del tractament i reflexió ètica.",
+        "dua_es": "Noticia en lectura fácil.",
+        "dua_ca": "Notícia en lectura fàcil.",
+        "metodologia_es": "debate ético.",
+        "metodologia_ca": "debat ètic."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA7", "criterios": ["h"] },
+    "b": { "modulo": "1370", "ra": "RA8", "criterios": ["g"] },
+    "justificacion_es": "Secuenciar los genes implicados en el metabolismo del colesterol permite diagnosticar la hipercolesterolemia familiar.",
+    "justificacion_ca": "Seqüenciar els gens implicats en el metabolisme del colesterol permet diagnosticar la hipercolesterolèmia familiar.",
+    "actividades": [
+      {
+        "titulo_es": "Leer la secuencia del gen del receptor de LDL",
+        "titulo_ca": "Llegir la seqüència del gen del receptor d'LDL",
+        "contexto_es": "Un chico de diecisiete años tiene el colesterol muy alto y su padre sufrió un infarto a los cuarenta.",
+        "contexto_ca": "Un jove de disset anys té el colesterol molt alt i el seu pare va patir un infart als quaranta.",
+        "desarrollo_es": "El alumnado detalla las repercusiones orgánicas del exceso de colesterol desde edades tempranas (1370-8g). Sigue los pasos de lectura e interpretación de una secuencia del gen del receptor de LDL para localizar la variante (1369-7h).",
+        "desarrollo_ca": "L'alumnat detalla les repercussions orgàniques de l'excés de colesterol des d'edats primerenques (1370-8g). Segueix els passos de lectura i interpretació d'una seqüència del gen del receptor d'LDL per localitzar la variant (1369-7h).",
+        "evidencia_es": "Electroferograma interpretado.",
+        "evidencia_ca": "Electroferograma interpretat.",
+        "dua_es": "Guía de lectura de electroferogramas.",
+        "dua_ca": "Guia de lectura d'electroferogrames.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "1370", "ra": "RA1", "criterios": ["b", "c"] },
+    "justificacion_es": "Para extraer ácidos nucleicos hay que entender dónde están en la célula y qué estructuras hay que romper.",
+    "justificacion_ca": "Per extreure àcids nucleics cal entendre on són a la cèl·lula i quines estructures s'han de trencar.",
+    "actividades": [
+      {
+        "titulo_es": "Romper la célula para sacar el ADN",
+        "titulo_ca": "Trencar la cèl·lula per treure l'ADN",
+        "contexto_es": "Un alumno pregunta por qué el protocolo de extracción tiene tantos pasos si «el ADN ya está ahí».",
+        "contexto_ca": "Un alumne demana per què el protocol d'extracció té tants passos si «l'ADN ja hi és».",
+        "desarrollo_es": "El alumnado describe la estructura celular y sus componentes, como la membrana, el núcleo y las mitocondrias (1370-1b), y la fisiología celular (1370-1c). Con ello describe el procedimiento de extracción y explica qué hace cada paso sobre la célula (1369-4a).",
+        "desarrollo_ca": "L'alumnat descriu l'estructura cel·lular i els seus components, com la membrana, el nucli i els mitocondris (1370-1b), i la fisiologia cel·lular (1370-1c). Amb això descriu el procediment d'extracció i explica què fa cada pas sobre la cèl·lula (1369-4a).",
+        "evidencia_es": "Esquema del protocolo relacionado con la célula.",
+        "evidencia_ca": "Esquema del protocol relacionat amb la cèl·lula.",
+        "dua_es": "Modelo tridimensional de célula.",
+        "dua_ca": "Model tridimensional de cèl·lula.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA2", "criterios": ["a", "c"] },
+    "b": { "modulo": "1370", "ra": "RA3", "criterios": ["a"] },
+    "justificacion_es": "Los cultivos citogenéticos de sangre se basan en estimular a los linfocitos, células del sistema inmune.",
+    "justificacion_ca": "Els cultius citogenètics de sang es basen a estimular els limfòcits, cèl·lules del sistema immunitari.",
+    "actividades": [
+      {
+        "titulo_es": "Por qué cultivamos linfocitos para el cariotipo",
+        "titulo_ca": "Per què cultivem limfòcits per al cariotip",
+        "contexto_es": "Un técnico en prácticas pregunta por qué no se cultivan los glóbulos rojos para hacer un cariotipo.",
+        "contexto_ca": "Un tècnic en pràctiques demana per què no es cultiven els glòbuls vermells per fer un cariotip.",
+        "desarrollo_es": "El alumnado describe los órganos y las células del sistema inmune, en especial los linfocitos (1370-3a). Caracteriza los métodos de cultivo celular para estudios citogenéticos (1369-2a) y realiza la puesta en marcha y el seguimiento de un cultivo de linfocitos (1369-2c).",
+        "desarrollo_ca": "L'alumnat descriu els òrgans i les cèl·lules del sistema immunitari, especialment els limfòcits (1370-3a). Caracteritza els mètodes de cultiu cel·lular per a estudis citogenètics (1369-2a) i fa la posada en marxa i el seguiment d'un cultiu de limfòcits (1369-2c).",
+        "evidencia_es": "Hoja de seguimiento del cultivo.",
+        "evidencia_ca": "Full de seguiment del cultiu.",
+        "dua_es": "Esquema de las células sanguíneas.",
+        "dua_ca": "Esquema de les cèl·lules sanguínies.",
+        "metodologia_es": "práctica de laboratorio.",
+        "metodologia_ca": "pràctica de laboratori."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA1", "criterios": ["b"] },
+    "b": { "modulo": "1370", "ra": "RA4", "criterios": ["b"] },
+    "justificacion_es": "Las condiciones de seguridad del laboratorio responden a los mecanismos de transmisión de los agentes infecciosos.",
+    "justificacion_ca": "Les condicions de seguretat del laboratori responen als mecanismes de transmissió dels agents infecciosos.",
+    "actividades": [
+      {
+        "titulo_es": "Niveles de bioseguridad según el agente",
+        "titulo_ca": "Nivells de bioseguretat segons l'agent",
+        "contexto_es": "El laboratorio va a procesar muestras de un brote de una infección poco común y debe decidir el nivel de contención.",
+        "contexto_ca": "El laboratori processarà mostres d'un brot d'una infecció poc comuna i ha de decidir el nivell de contenció.",
+        "desarrollo_es": "El alumnado detalla los mecanismos de transmisión de las enfermedades infecciosas (1370-4b). Con ellos define las condiciones de seguridad necesarias en el laboratorio de biología molecular según el nivel de bioseguridad (1369-1b).",
+        "desarrollo_ca": "L'alumnat detalla els mecanismes de transmissió de les malalties infeccioses (1370-4b). Amb ells defineix les condicions de seguretat necessàries al laboratori de biologia molecular segons el nivell de bioseguretat (1369-1b).",
+        "evidencia_es": "Tabla de niveles de bioseguridad.",
+        "evidencia_ca": "Taula de nivells de bioseguretat.",
+        "dua_es": "Esquema de los cuatro niveles.",
+        "dua_ca": "Esquema dels quatre nivells.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA6", "criterios": ["a", "d"] },
+    "b": { "modulo": "1370", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "Las sondas marcadas permiten detectar virus en los tejidos y diagnosticar infecciones como la del papiloma.",
+    "justificacion_ca": "Les sondes marcades permeten detectar virus als teixits i diagnosticar infeccions com la del papil·loma.",
+    "actividades": [
+      {
+        "titulo_es": "Detectar el virus del papiloma con sondas",
+        "titulo_ca": "Detectar el virus del papil·loma amb sondes",
+        "contexto_es": "Una citología cervical muestra alteraciones y el ginecólogo pide saber si hay virus del papiloma de alto riesgo.",
+        "contexto_ca": "Una citologia cervical mostra alteracions i el ginecòleg demana saber si hi ha virus del papil·loma d'alt risc.",
+        "desarrollo_es": "El alumnado define las características de la infección por el virus del papiloma humano (1370-4f). Define qué es una sonda y caracteriza los tipos de marcaje (1369-6a), y selecciona la sonda y el marcaje adecuados al sistema de detección del laboratorio (1369-6d).",
+        "desarrollo_ca": "L'alumnat defineix les característiques de la infecció pel virus del papil·loma humà (1370-4f). Defineix què és una sonda i caracteritza els tipus de marcatge (1369-6a), i selecciona la sonda i el marcatge adequats al sistema de detecció del laboratori (1369-6d).",
+        "evidencia_es": "Ficha técnica de la prueba.",
+        "evidencia_ca": "Fitxa tècnica de la prova.",
+        "dua_es": "Esquema de sonda y diana.",
+        "dua_ca": "Esquema de sonda i diana.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA5", "criterios": ["i", "f"] },
+    "b": { "modulo": "1370", "ra": "RA7", "criterios": ["b"] },
+    "justificacion_es": "Detectar la mutación del factor V Leiden explica por qué algunas personas forman trombos con facilidad.",
+    "justificacion_ca": "Detectar la mutació del factor V Leiden explica per què algunes persones formen trombes amb facilitat.",
+    "actividades": [
+      {
+        "titulo_es": "Trombosis en una joven que toma anticonceptivos",
+        "titulo_ca": "Trombosi en una jove que pren anticonceptius",
+        "contexto_es": "Una mujer de veinticinco años sufre una trombosis venosa y el hematólogo pide estudio de trombofilia.",
+        "contexto_ca": "Una dona de vint-i-cinc anys pateix una trombosi venosa i l'hematòleg demana estudi de trombofília.",
+        "desarrollo_es": "El alumnado detalla el proceso de formación de un trombo (1370-7b). Selecciona el marcador de peso molecular y el tipo de detección (1369-5f) y determina el tamaño de los fragmentos amplificados para saber si hay mutación (1369-5i).",
+        "desarrollo_ca": "L'alumnat detalla el procés de formació d'un trombe (1370-7b). Selecciona el marcador de pes molecular i el tipus de detecció (1369-5f) i determina la mida dels fragments amplificats per saber si hi ha mutació (1369-5i).",
+        "evidencia_es": "Gel interpretado con informe.",
+        "evidencia_ca": "Gel interpretat amb informe.",
+        "dua_es": "Imagen del gel con bandas marcadas.",
+        "dua_ca": "Imatge del gel amb bandes marcades.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1369", "ra": "RA7", "criterios": ["a", "b", "d"] },
+    "b": { "modulo": "1370", "ra": "RA3", "criterios": ["h"] },
+    "justificacion_es": "Muchas vacunas actuales se fabrican con técnicas de clonación de ácidos nucleicos.",
+    "justificacion_ca": "Moltes vacunes actuals es fabriquen amb tècniques de clonació d'àcids nucleics.",
+    "actividades": [
+      {
+        "titulo_es": "Cómo se fabrica la vacuna de la hepatitis B",
+        "titulo_ca": "Com es fabrica la vacuna de l'hepatitis B",
+        "contexto_es": "Al vacunarse de hepatitis B antes de las prácticas, varios alumnos preguntan cómo se fabrica la vacuna.",
+        "contexto_ca": "En vacunar-se d'hepatitis B abans de les pràctiques, diversos alumnes demanen com es fabrica la vacuna.",
+        "desarrollo_es": "El alumnado detalla la inmunización activa y pasiva (1370-3h). Describe el proceso de clonación del gen del antígeno (1369-7a), caracteriza las enzimas de restricción, los vectores y las células huésped (1369-7b) y detalla cómo se seleccionan las células recombinantes (1369-7d).",
+        "desarrollo_ca": "L'alumnat detalla la immunització activa i passiva (1370-3h). Descriu el procés de clonació del gen de l'antigen (1369-7a), caracteritza els enzims de restricció, els vectors i les cèl·lules hoste (1369-7b) i detalla com se seleccionen les cèl·lules recombinants (1369-7d).",
+        "evidencia_es": "Esquema del proceso de fabricación.",
+        "evidencia_ca": "Esquema del procés de fabricació.",
+        "dua_es": "Animación de la clonación.",
+        "dua_ca": "Animació de la clonació.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  }
+]

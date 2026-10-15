@@ -1,0 +1,596 @@
+[
+  {
+    "a": { "modulo": "1367", "ra": "RA7", "criterios": ["a", "b", "h"] },
+    "b": { "modulo": "1369", "ra": "RA4", "criterios": ["i"] },
+    "justificacion_es": "La extracción de ácidos nucleicos usa reactivos tóxicos que obligan a aplicar los protocolos de riesgo químico y de emergencia del laboratorio.",
+    "justificacion_ca": "L'extracció d'àcids nucleics fa servir reactius tòxics que obliguen a aplicar els protocols de risc químic i d'emergència del laboratori.",
+    "actividades": [
+      {
+        "titulo_es": "Fenol y cloroformo en la extracción de ADN",
+        "titulo_ca": "Fenol i cloroform en l'extracció d'ADN",
+        "contexto_es": "El laboratorio de genética de Son Espases todavía usa el método fenol-cloroformo para algunas muestras antiguas, y un técnico nuevo se ha salpicado la bata.",
+        "contexto_ca": "El laboratori de genètica de Son Espases encara fa servir el mètode fenol-cloroform per a algunes mostres antigues, i un tècnic nou s'ha esquitxat la bata.",
+        "desarrollo_es": "El alumnado identifica los riesgos del fenol, el cloroformo y el etanol a partir de sus fichas de seguridad (1367-7a) y sigue el protocolo de manipulación en campana de gases con guantes de nitrilo y gafas (1367-7b). Ensaya la actuación ante una salpicadura en la piel y su registro (1367-7h), y comprueba que todo el proceso de extracción respeta las normas de seguridad (1369-4i).",
+        "desarrollo_ca": "L'alumnat identifica els riscs del fenol, el cloroform i l'etanol a partir de les seves fitxes de seguretat (1367-7a) i segueix el protocol de manipulació en campana de gasos amb guants de nitril i ulleres (1367-7b). Assaja l'actuació davant un esquitx a la pell i el seu registre (1367-7h), i comprova que tot el procés d'extracció respecta les normes de seguretat (1369-4i).",
+        "evidencia_es": "Ficha de riesgos de los reactivos y registro del simulacro.",
+        "evidencia_ca": "Fitxa de riscs dels reactius i registre del simulacre.",
+        "dua_es": "Pictogramas de peligro ampliados y vídeo del protocolo.",
+        "dua_ca": "Pictogrames de perill ampliats i vídeo del protocol.",
+        "metodologia_es": "simulación de laboratorio.",
+        "metodologia_ca": "simulació de laboratori."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA7", "criterios": ["c", "d"] },
+    "b": { "modulo": "1368", "ra": "RA2", "criterios": ["c", "d"] },
+    "justificacion_es": "Los residuos de la sala de extracciones y los del laboratorio de análisis siguen la misma normativa y deben gestionarse con el mismo orden.",
+    "justificacion_ca": "Els residus de la sala d'extraccions i els del laboratori d'anàlisi segueixen la mateixa normativa i s'han de gestionar amb el mateix ordre.",
+    "actividades": [
+      {
+        "titulo_es": "Un punto limpio para el laboratorio del hospital comarcal",
+        "titulo_ca": "Un punt net per al laboratori de l'hospital comarcal",
+        "contexto_es": "En el Hospital de Manacor aparecen agujas en las bolsas de residuos generales y la empresa gestora amenaza con sanciones.",
+        "contexto_ca": "A l'Hospital de Manacor apareixen agulles a les bosses de residus generals i l'empresa gestora amenaça amb sancions.",
+        "desarrollo_es": "El alumnado identifica qué exige la normativa para cada tipo de residuo del laboratorio y de la sala de extracciones: biosanitario, químico, cortante y radiactivo (1367-7c) (1368-2c). Diseña la señalización de contenedores y la ruta de retirada, y organiza la gestión diaria con orden y método (1367-7d) (1368-2d).",
+        "desarrollo_ca": "L'alumnat identifica què exigeix la normativa per a cada tipus de residu del laboratori i de la sala d'extraccions: biosanitari, químic, tallant i radioactiu (1367-7c) (1368-2c). Dissenya la senyalització de contenidors i la ruta de retirada, i organitza la gestió diària amb ordre i mètode (1367-7d) (1368-2d).",
+        "evidencia_es": "Plano de contenedores y protocolo de gestión de residuos.",
+        "evidencia_ca": "Plànol de contenidors i protocol de gestió de residus.",
+        "dua_es": "Contenedores reales en el aula y fichas con colores.",
+        "dua_ca": "Contenidors reals a l'aula i fitxes amb colors.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA6", "criterios": ["b"] },
+    "b": { "modulo": "1368", "ra": "RA3", "criterios": ["d", "c"] },
+    "justificacion_es": "Preparar un conservante para una muestra exige seleccionar el material volumétrico y expresar bien su concentración.",
+    "justificacion_ca": "Preparar un conservant per a una mostra exigeix seleccionar el material volumètric i expressar bé la seva concentració.",
+    "actividades": [
+      {
+        "titulo_es": "Preparar formol tamponado para las biopsias",
+        "titulo_ca": "Preparar formol tamponat per a les biòpsies",
+        "contexto_es": "Se ha acabado el formol tamponado al 10 % en el quirófano y hay que preparar dos litros a partir de formaldehído al 37 %.",
+        "contexto_ca": "S'ha acabat el formol tamponat al 10 % al quiròfan i se n'han de preparar dos litres a partir de formaldehid al 37 %.",
+        "desarrollo_es": "El alumnado selecciona el conservante adecuado para cada tipo de muestra quirúrgica (1367-6b). Calcula la dilución y la expresa en distintas unidades, como porcentaje y molaridad (1368-3c), y elige el material volumétrico y los reactivos necesarios para prepararla con precisión (1368-3d).",
+        "desarrollo_ca": "L'alumnat selecciona el conservant adequat per a cada tipus de mostra quirúrgica (1367-6b). Calcula la dilució i l'expressa en diferents unitats, com percentatge i molaritat (1368-3c), i tria el material volumètric i els reactius necessaris per preparar-la amb precisió (1368-3d).",
+        "evidencia_es": "Hoja de cálculo de la dilución y etiqueta del frasco.",
+        "evidencia_ca": "Full de càlcul de la dilució i etiqueta del flascó.",
+        "dua_es": "Calculadora de diluciones y ejemplos resueltos.",
+        "dua_ca": "Calculadora de dilucions i exemples resolts.",
+        "metodologia_es": "práctica de laboratorio.",
+        "metodologia_ca": "pràctica de laboratori."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA4", "criterios": ["i", "d"] },
+    "b": { "modulo": "1368", "ra": "RA1", "criterios": ["d"] },
+    "justificacion_es": "Los aditivos de los tubos son reactivos con una naturaleza química y una pureza que determinan para qué análisis sirve cada muestra.",
+    "justificacion_ca": "Els additius dels tubs són reactius amb una naturalesa química i una puresa que determinen per a quina anàlisi serveix cada mostra.",
+    "actividades": [
+      {
+        "titulo_es": "Por qué cada tubo tiene un tapón de un color",
+        "titulo_ca": "Per què cada tub té un tap d'un color",
+        "contexto_es": "En la sala de extracciones de un centro de salud, un técnico en prácticas ha llenado un tubo de citrato para una glucosa.",
+        "contexto_ca": "A la sala d'extraccions d'un centre de salut, un tècnic en pràctiques ha omplert un tub de citrat per a una glucosa.",
+        "desarrollo_es": "El alumnado caracteriza los aditivos de cada tubo, como EDTA, citrato, heparina o fluoruro, según la determinación que permiten (1367-4i). Los identifica por su naturaleza química y su pureza (1368-1d) y simula la clasificación y el fraccionamiento de una tanda de tubos para enviarlos a cada sección (1367-4d).",
+        "desarrollo_ca": "L'alumnat caracteritza els additius de cada tub, com EDTA, citrat, heparina o fluorur, segons la determinació que permeten (1367-4i). Els identifica per la seva naturalesa química i la seva puresa (1368-1d) i simula la classificació i el fraccionament d'una tanda de tubs per enviar-los a cada secció (1367-4d).",
+        "evidencia_es": "Tabla de tubos y aditivos y registro de la clasificación.",
+        "evidencia_ca": "Taula de tubs i additius i registre de la classificació.",
+        "dua_es": "Tubos reales para manipular y código de colores.",
+        "dua_ca": "Tubs reals per manipular i codi de colors.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA2", "criterios": ["h"] },
+    "b": { "modulo": "1368", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "Controlar el almacén del laboratorio exige reconocer cada tipo de material y sus existencias.",
+    "justificacion_ca": "Controlar el magatzem del laboratori exigeix reconèixer cada tipus de material i les seves existències.",
+    "actividades": [
+      {
+        "titulo_es": "Inventario del almacén antes del pedido trimestral",
+        "titulo_ca": "Inventari del magatzem abans de la comanda trimestral",
+        "contexto_es": "El laboratorio del Hospital Mateu Orfila se ha quedado sin puntas de pipeta en plena guardia.",
+        "contexto_ca": "El laboratori de l'Hospital Mateu Orfila s'ha quedat sense puntes de pipeta en plena guàrdia.",
+        "desarrollo_es": "El alumnado identifica el material del almacén: vidrio, plástico de un solo uso, volumétrico y de conservación (1368-1a). Aplica las operaciones administrativas del control de existencias, como entradas, salidas, stock mínimo y punto de pedido, y prepara el pedido trimestral (1367-2h).",
+        "desarrollo_ca": "L'alumnat identifica el material del magatzem: vidre, plàstic d'un sol ús, volumètric i de conservació (1368-1a). Aplica les operacions administratives del control d'existències, com entrades, sortides, estoc mínim i punt de comanda, i prepara la comanda trimestral (1367-2h).",
+        "evidencia_es": "Hoja de existencias y pedido.",
+        "evidencia_ca": "Full d'existències i comanda.",
+        "dua_es": "Hoja de cálculo con fórmulas de stock mínimo.",
+        "dua_ca": "Full de càlcul amb fórmules d'estoc mínim.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1368", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "Los controles de calidad son también muestras biológicas que se reconstituyen y conservan con protocolos de seguridad y calidad.",
+    "justificacion_ca": "Els controls de qualitat són també mostres biològiques que es reconstitueixen i es conserven amb protocols de seguretat i qualitat.",
+    "actividades": [
+      {
+        "titulo_es": "Reconstituir los controles liofilizados sin errores",
+        "titulo_ca": "Reconstituir els controls liofilitzats sense errors",
+        "contexto_es": "Los controles de bioquímica dan valores bajos desde hace tres días y se sospecha que se reconstituyeron mal.",
+        "contexto_ca": "Els controls de bioquímica donen valors baixos des de fa tres dies i se sospita que es van reconstituir malament.",
+        "desarrollo_es": "El alumnado sigue los protocolos de prevención de riesgos biológicos y de calidad al manipular el material de control de origen humano (1367-6c). Identifica el protocolo de reconstitución y conservación de los controles, con tiempos, temperatura y alícuotas, para evitar problemas de calibración y validación (1368-5g).",
+        "desarrollo_ca": "L'alumnat segueix els protocols de prevenció de riscs biològics i de qualitat en manipular el material de control d'origen humà (1367-6c). Identifica el protocol de reconstitució i conservació dels controls, amb temps, temperatura i alíquotes, per evitar problemes de calibratge i validació (1368-5g).",
+        "evidencia_es": "Procedimiento de reconstitución revisado.",
+        "evidencia_ca": "Procediment de reconstitució revisat.",
+        "dua_es": "Secuencia ilustrada paso a paso.",
+        "dua_ca": "Seqüència il·lustrada pas a pas.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "1368", "ra": "RA7", "criterios": ["c", "d"] },
+    "justificacion_es": "El control de calidad de la fase preanalítica es uno de los elementos del sistema de calidad del laboratorio.",
+    "justificacion_ca": "El control de qualitat de la fase preanalítica és un dels elements del sistema de qualitat del laboratori.",
+    "actividades": [
+      {
+        "titulo_es": "Indicadores de calidad de la sala de extracciones",
+        "titulo_ca": "Indicadors de qualitat de la sala d'extraccions",
+        "contexto_es": "El laboratorio prepara la acreditación y el auditor pide indicadores de la fase preanalítica.",
+        "contexto_ca": "El laboratori prepara l'acreditació i l'auditor demana indicadors de la fase preanalítica.",
+        "desarrollo_es": "El alumnado diseña el control de calidad de cada fase de la recogida: identificación, tubo correcto, volumen y tiempo de entrega (1367-4e). Relaciona esos indicadores con los elementos del sistema de calidad del laboratorio (1368-7c) y los aplica durante una semana simulada (1368-7d).",
+        "desarrollo_ca": "L'alumnat dissenya el control de qualitat de cada fase de la recollida: identificació, tub correcte, volum i temps de lliurament (1367-4e). Relaciona aquests indicadors amb els elements del sistema de qualitat del laboratori (1368-7c) i els aplica durant una setmana simulada (1368-7d).",
+        "evidencia_es": "Cuadro de indicadores con resultados.",
+        "evidencia_ca": "Quadre d'indicadors amb resultats.",
+        "dua_es": "Plantilla de indicadores con ejemplos.",
+        "dua_ca": "Plantilla d'indicadors amb exemples.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA2", "criterios": ["i"] },
+    "b": { "modulo": "1368", "ra": "RA7", "criterios": ["e", "f"] },
+    "justificacion_es": "La trazabilidad de la documentación se apoya en los documentos y procedimientos del sistema de gestión de calidad.",
+    "justificacion_ca": "La traçabilitat de la documentació es recolza en els documents i procediments del sistema de gestió de qualitat.",
+    "actividades": [
+      {
+        "titulo_es": "Seguir el rastro de una muestra perdida",
+        "titulo_ca": "Seguir el rastre d'una mostra perduda",
+        "contexto_es": "Un paciente reclama porque su análisis de orina no aparece y nadie sabe dónde se perdió la muestra.",
+        "contexto_ca": "Un pacient reclama perquè la seva anàlisi d'orina no apareix i ningú no sap on es va perdre la mostra.",
+        "desarrollo_es": "El alumnado define el proceso de trazabilidad de la documentación, desde la solicitud hasta el informe (1367-2i). Identifica qué documentos del sistema de calidad recogen cada paso, como registros, PNT o hojas de incidencia (1368-7e), y redacta el procedimiento que faltaba para la recepción de orinas (1368-7f).",
+        "desarrollo_ca": "L'alumnat defineix el procés de traçabilitat de la documentació, des de la sol·licitud fins a l'informe (1367-2i). Identifica quins documents del sistema de qualitat recullen cada pas, com registres, PNT o fulls d'incidència (1368-7e), i redacta el procediment que faltava per a la recepció d'orines (1368-7f).",
+        "evidencia_es": "Diagrama de trazabilidad y PNT redactado.",
+        "evidencia_ca": "Diagrama de traçabilitat i PNT redactat.",
+        "dua_es": "Plantilla de PNT con apartados guiados.",
+        "dua_ca": "Plantilla de PNT amb apartats guiats.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA6", "criterios": ["d"] },
+    "b": { "modulo": "1368", "ra": "RA1", "criterios": ["e", "f"] },
+    "justificacion_es": "Neveras, congeladores y baños son equipos básicos cuyo uso y mantenimiento definen los PNT, y de ellos depende la conservación de las muestras.",
+    "justificacion_ca": "Geleres, congeladors i banys són equips bàsics l'ús i el manteniment dels quals defineixen els PNT, i d'ells depèn la conservació de les mostres.",
+    "actividades": [
+      {
+        "titulo_es": "El congelador de menos ochenta ha fallado de noche",
+        "titulo_ca": "El congelador de menys vuitanta ha fallat de nit",
+        "contexto_es": "La alarma del ultracongelador saltó de madrugada y nadie sabe si las muestras siguen siendo válidas.",
+        "contexto_ca": "L'alarma de l'ultracongelador va saltar de matinada i ningú no sap si les mostres continuen sent vàlides.",
+        "desarrollo_es": "El alumnado caracteriza los métodos físicos de conservación: refrigeración, congelación, ultracongelación y liofilización (1367-6d). Identifica los equipos básicos implicados y sus aplicaciones (1368-1e) e interpreta su PNT de uso y mantenimiento para decidir qué hacer con las muestras (1368-1f).",
+        "desarrollo_ca": "L'alumnat caracteritza els mètodes físics de conservació: refrigeració, congelació, ultracongelació i liofilització (1367-6d). Identifica els equips bàsics implicats i les seves aplicacions (1368-1e) i n'interpreta el PNT d'ús i manteniment per decidir què fer amb les mostres (1368-1f).",
+        "evidencia_es": "Informe de incidencia con decisión razonada.",
+        "evidencia_ca": "Informe d'incidència amb decisió raonada.",
+        "dua_es": "PNT resumido en diagrama.",
+        "dua_ca": "PNT resumit en diagrama.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA5", "criterios": ["b"] },
+    "b": { "modulo": "1369", "ra": "RA4", "criterios": ["h"] },
+    "justificacion_es": "Los biobancos almacenan ADN y ARN en condiciones que garantizan su conservación durante años.",
+    "justificacion_ca": "Els biobancs emmagatzemen ADN i ARN en condicions que en garanteixen la conservació durant anys.",
+    "actividades": [
+      {
+        "titulo_es": "Guardar ADN en el biobanco del instituto de investigación",
+        "titulo_ca": "Guardar ADN al biobanc de l'institut de recerca",
+        "contexto_es": "Un estudio sobre diabetes en Mallorca va a recoger muestras de dos mil personas para el biobanco del IdISBa.",
+        "contexto_ca": "Un estudi sobre diabetis a Mallorca recollirà mostres de dues mil persones per al biobanc de l'IdISBa.",
+        "desarrollo_es": "El alumnado colabora en el procesamiento, la preservación y el almacenamiento de las muestras para el biobanco (1367-5b). Define cómo almacenar el ADN y el ARN extraídos en condiciones óptimas: tampón, temperatura, alícuotas y registro (1369-4h).",
+        "desarrollo_ca": "L'alumnat col·labora en el processament, la preservació i l'emmagatzematge de les mostres per al biobanc (1367-5b). Defineix com emmagatzemar l'ADN i l'ARN extrets en condicions òptimes: tampó, temperatura, alíquotes i registre (1369-4h).",
+        "evidencia_es": "Protocolo de almacenamiento del biobanco.",
+        "evidencia_ca": "Protocol d'emmagatzematge del biobanc.",
+        "dua_es": "Esquema de la cadena de frío.",
+        "dua_ca": "Esquema de la cadena de fred.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA6", "criterios": ["a"] },
+    "b": { "modulo": "1369", "ra": "RA4", "criterios": ["b", "d"] },
+    "justificacion_es": "La estabilidad de cada muestra condiciona el procesamiento previo y el método de extracción de ácidos nucleicos.",
+    "justificacion_ca": "L'estabilitat de cada mostra condiciona el processament previ i el mètode d'extracció d'àcids nucleics.",
+    "actividades": [
+      {
+        "titulo_es": "Extraer ADN de sangre, saliva y tejido en parafina",
+        "titulo_ca": "Extreure ADN de sang, saliva i teixit en parafina",
+        "contexto_es": "Llegan al laboratorio de genética una sangre de hace cinco días, un kit de saliva y una biopsia en parafina.",
+        "contexto_ca": "Arriben al laboratori de genètica una sang de fa cinc dies, un kit de saliva i una biòpsia en parafina.",
+        "desarrollo_es": "El alumnado describe la caducidad y el tiempo máximo de demora de cada muestra (1367-6a). Define cómo cambia el procedimiento de extracción según el tipo de muestra (1369-4b) y realiza su procesamiento previo, como la lisis de eritrocitos o el desparafinado (1369-4d).",
+        "desarrollo_ca": "L'alumnat descriu la caducitat i el temps màxim de demora de cada mostra (1367-6a). Defineix com canvia el procediment d'extracció segons el tipus de mostra (1369-4b) i en fa el processament previ, com la lisi d'eritròcits o el desparafinat (1369-4d).",
+        "evidencia_es": "Tabla comparativa y registro de la práctica.",
+        "evidencia_ca": "Taula comparativa i registre de la pràctica.",
+        "dua_es": "Diagrama de flujo por tipo de muestra.",
+        "dua_ca": "Diagrama de flux per tipus de mostra.",
+        "metodologia_es": "práctica de laboratorio.",
+        "metodologia_ca": "pràctica de laboratori."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1369", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Los estudios citogenéticos son uno de los análisis cualitativos que pueden hacerse a partir de una muestra biológica.",
+    "justificacion_ca": "Els estudis citogenètics són una de les anàlisis qualitatives que es poden fer a partir d'una mostra biològica.",
+    "actividades": [
+      {
+        "titulo_es": "Qué puede decir un cariotipo de una muestra de sangre",
+        "titulo_ca": "Què pot dir un cariotip d'una mostra de sang",
+        "contexto_es": "Una pareja con abortos de repetición pide un estudio genético y el ginecólogo solicita cariotipos.",
+        "contexto_ca": "Una parella amb avortaments de repetició demana un estudi genètic i el ginecòleg sol·licita cariotips.",
+        "desarrollo_es": "El alumnado detalla qué análisis cualitativos pueden hacerse con una muestra de sangre con heparina (1367-3c). Describe las aplicaciones del cariotipo en el diagnóstico clínico, como las translocaciones equilibradas en los abortos de repetición (1369-3c).",
+        "desarrollo_ca": "L'alumnat detalla quines anàlisis qualitatives es poden fer amb una mostra de sang amb heparina (1367-3c). Descriu les aplicacions del cariotip en el diagnòstic clínic, com les translocacions equilibrades en els avortaments de repetició (1369-3c).",
+        "evidencia_es": "Ficha de aplicaciones del cariotipo.",
+        "evidencia_ca": "Fitxa d'aplicacions del cariotip.",
+        "dua_es": "Cariotipos reales ilustrados.",
+        "dua_ca": "Cariotips reals il·lustrats.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA4", "criterios": ["a", "b"] },
+    "b": { "modulo": "1369", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Para un cultivo celular, la muestra debe recogerse con el material y el protocolo adecuados al medio en que se va a sembrar.",
+    "justificacion_ca": "Per a un cultiu cel·lular, la mostra s'ha de recollir amb el material i el protocol adequats al medi en què es sembrarà.",
+    "actividades": [
+      {
+        "titulo_es": "Sangre heparinizada para el cultivo de linfocitos",
+        "titulo_ca": "Sang heparinitzada per al cultiu de limfòcits",
+        "contexto_es": "El laboratorio de citogenética rechaza dos muestras porque llegaron en tubos de EDTA y no crecieron.",
+        "contexto_ca": "El laboratori de citogenètica rebutja dues mostres perquè van arribar en tubs d'EDTA i no van créixer.",
+        "desarrollo_es": "El alumnado selecciona los materiales de recogida adecuados para un cultivo de linfocitos (1367-4a) y aplica la técnica de obtención según el protocolo de la unidad (1367-4b). Elige el medio de cultivo y los suplementos, como la fitohemaglutinina, en función del cultivo que hay que hacer (1369-2b).",
+        "desarrollo_ca": "L'alumnat selecciona els materials de recollida adequats per a un cultiu de limfòcits (1367-4a) i aplica la tècnica d'obtenció segons el protocol de la unitat (1367-4b). Tria el medi de cultiu i els suplements, com la fitohemaglutinina, en funció del cultiu que s'ha de fer (1369-2b).",
+        "evidencia_es": "Protocolo de recogida y ficha del medio.",
+        "evidencia_ca": "Protocol de recollida i fitxa del medi.",
+        "dua_es": "Tubos y medios para comparar.",
+        "dua_ca": "Tubs i medis per comparar.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA5", "criterios": ["c"] },
+    "b": { "modulo": "1369", "ra": "RA3", "criterios": ["d", "f"] },
+    "justificacion_es": "Las muestras líquidas obtenidas por punción, como el líquido amniótico, inician el cultivo y el bandeado cromosómico.",
+    "justificacion_ca": "Les mostres líquides obtingudes per punció, com el líquid amniòtic, inicien el cultiu i el bandatge cromosòmic.",
+    "actividades": [
+      {
+        "titulo_es": "Del líquido amniótico al cariotipo fetal",
+        "titulo_ca": "Del líquid amniòtic al cariotip fetal",
+        "contexto_es": "Llega una amniocentesis de la semana dieciséis y el obstetra necesita el resultado lo antes posible.",
+        "contexto_ca": "Arriba una amniocentesi de la setmana setze i l'obstetra necessita el resultat com més aviat millor.",
+        "desarrollo_es": "El alumnado aplica el protocolo de recepción de muestras líquidas obtenidas por punción (1367-5c). Pone en marcha el cultivo de amniocitos (1369-3d) y, con preparaciones de práctica, realiza las técnicas de tinción y bandeado G (1369-3f).",
+        "desarrollo_ca": "L'alumnat aplica el protocol de recepció de mostres líquides obtingudes per punció (1367-5c). Posa en marxa el cultiu d'amniòcits (1369-3d) i, amb preparacions de pràctica, fa les tècniques de tinció i bandatge G (1369-3f).",
+        "evidencia_es": "Hoja de trabajo del cultivo y preparaciones teñidas.",
+        "evidencia_ca": "Full de treball del cultiu i preparacions tenyides.",
+        "dua_es": "Vídeo del proceso completo.",
+        "dua_ca": "Vídeo del procés complet.",
+        "metodologia_es": "práctica de laboratorio.",
+        "metodologia_ca": "pràctica de laboratori."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA7", "criterios": ["e", "f"] },
+    "b": { "modulo": "1369", "ra": "RA1", "criterios": ["f", "b"] },
+    "justificacion_es": "La cabina de flujo laminar tiene riesgos propios que se controlan con su protocolo de trabajo y los equipos de protección adecuados.",
+    "justificacion_ca": "La cabina de flux laminar té riscs propis que es controlen amb el seu protocol de treball i els equips de protecció adequats.",
+    "actividades": [
+      {
+        "titulo_es": "Trabajar con seguridad en la cabina de bioseguridad",
+        "titulo_ca": "Treballar amb seguretat a la cabina de bioseguretat",
+        "contexto_es": "Un técnico deja la lámpara ultravioleta encendida mientras trabaja en la cabina y acaba con los ojos irritados.",
+        "contexto_ca": "Un tècnic deixa la làmpada ultraviolada encesa mentre treballa a la cabina i acaba amb els ulls irritats.",
+        "desarrollo_es": "El alumnado identifica los riesgos específicos de la cabina, como la radiación ultravioleta o el flujo alterado (1367-7e), y selecciona los equipos de protección individual y colectiva (1367-7f). Describe el protocolo de trabajo en la cabina (1369-1f) y las condiciones de seguridad del laboratorio de cultivos (1369-1b).",
+        "desarrollo_ca": "L'alumnat identifica els riscs específics de la cabina, com la radiació ultraviolada o el flux alterat (1367-7e), i selecciona els equips de protecció individual i col·lectiva (1367-7f). Descriu el protocol de treball a la cabina (1369-1f) i les condicions de seguretat del laboratori de cultius (1369-1b).",
+        "evidencia_es": "Lista de comprobación de la cabina.",
+        "evidencia_ca": "Llista de comprovació de la cabina.",
+        "dua_es": "Vídeo de buenas y malas prácticas.",
+        "dua_ca": "Vídeo de bones i males pràctiques.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA1", "criterios": ["d"] },
+    "b": { "modulo": "1369", "ra": "RA1", "criterios": ["a", "c"] },
+    "justificacion_es": "Las áreas de un laboratorio de genética son parte de las áreas funcionales del laboratorio clínico.",
+    "justificacion_ca": "Les àrees d'un laboratori de genètica són part de les àrees funcionals del laboratori clínic.",
+    "actividades": [
+      {
+        "titulo_es": "Visita virtual al laboratorio de genética",
+        "titulo_ca": "Visita virtual al laboratori de genètica",
+        "contexto_es": "El alumnado de primero no tiene claro qué se hace en cada área de un laboratorio hospitalario.",
+        "contexto_ca": "L'alumnat de primer no té clar què es fa a cada àrea d'un laboratori hospitalari.",
+        "desarrollo_es": "El alumnado enumera las funciones de las áreas del laboratorio clínico, como urgencias, bioquímica, hematología, microbiología y genética (1367-1d). En el laboratorio de genética identifica sus áreas de trabajo, como preanalítica, pre-PCR y post-PCR (1369-1a), y las técnicas de cada área (1369-1c).",
+        "desarrollo_ca": "L'alumnat enumera les funcions de les àrees del laboratori clínic, com urgències, bioquímica, hematologia, microbiologia i genètica (1367-1d). Al laboratori de genètica n'identifica les àrees de treball, com preanalítica, pre-PCR i post-PCR (1369-1a), i les tècniques de cada àrea (1369-1c).",
+        "evidencia_es": "Plano anotado del laboratorio.",
+        "evidencia_ca": "Plànol anotat del laboratori.",
+        "dua_es": "Vídeo de la visita y plano en blanco.",
+        "dua_ca": "Vídeo de la visita i plànol en blanc.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA6", "criterios": ["f", "g"] },
+    "b": { "modulo": "1369", "ra": "RA7", "criterios": ["f"] },
+    "justificacion_es": "Las muestras para secuenciar suelen enviarse a laboratorios de referencia y deben llegar bien procesadas, identificadas y registradas.",
+    "justificacion_ca": "Les mostres per seqüenciar se solen enviar a laboratoris de referència i han d'arribar ben processades, identificades i registrades.",
+    "actividades": [
+      {
+        "titulo_es": "Enviar ADN a secuenciar a un laboratorio de Barcelona",
+        "titulo_ca": "Enviar ADN a seqüenciar a un laboratori de Barcelona",
+        "contexto_es": "El hospital no tiene secuenciador y debe enviar diez muestras de ADN a un laboratorio de referencia en la península.",
+        "contexto_ca": "L'hospital no té seqüenciador i ha d'enviar deu mostres d'ADN a un laboratori de referència a la península.",
+        "desarrollo_es": "El alumnado describe el procesamiento de las muestras antes de secuenciarlas: cuantificación, purificación y alícuotas (1369-7f). Caracteriza el sistema de envío extrahospitalario y su embalaje (1367-6f) y verifica el etiquetado, el registro y la identificación de cada tubo (1367-6g).",
+        "desarrollo_ca": "L'alumnat descriu el processament de les mostres abans de seqüenciar-les: quantificació, purificació i alíquotes (1369-7f). Caracteritza el sistema d'enviament extrahospitalari i el seu embalatge (1367-6f) i verifica l'etiquetatge, el registre i la identificació de cada tub (1367-6g).",
+        "evidencia_es": "Paquete preparado y hoja de envío.",
+        "evidencia_ca": "Paquet preparat i full d'enviament.",
+        "dua_es": "Esquema del triple embalaje.",
+        "dua_ca": "Esquema del triple embalatge.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "1370", "ra": "RA1", "criterios": ["g", "h"] },
+    "justificacion_es": "Describir la región de la que se extrae una muestra requiere conocer las regiones corporales y la terminología de posición.",
+    "justificacion_ca": "Descriure la regió d'on s'extreu una mostra requereix conèixer les regions corporals i la terminologia de posició.",
+    "actividades": [
+      {
+        "titulo_es": "Mapa corporal de la sala de extracciones",
+        "titulo_ca": "Mapa corporal de la sala d'extraccions",
+        "contexto_es": "Un técnico nuevo no sabe localizar la vena basílica ni explicar en qué cara del brazo está.",
+        "contexto_ca": "Un tècnic nou no sap localitzar la vena basílica ni explicar en quina cara del braç és.",
+        "desarrollo_es": "El alumnado localiza las regiones y cavidades corporales de las que se obtienen muestras (1370-1g) y aplica la terminología de dirección y posición, como medial, proximal o anterior (1370-1h). Describe las características anatómicas de la fosa antecubital y del dorso de la mano para la punción venosa (1367-3b).",
+        "desarrollo_ca": "L'alumnat localitza les regions i cavitats corporals d'on s'obtenen mostres (1370-1g) i aplica la terminologia de direcció i posició, com medial, proximal o anterior (1370-1h). Descriu les característiques anatòmiques de la fossa antecubital i del dors de la mà per a la punció venosa (1367-3b).",
+        "evidencia_es": "Mapa corporal con puntos de extracción.",
+        "evidencia_ca": "Mapa corporal amb punts d'extracció.",
+        "dua_es": "Brazo de prácticas y láminas.",
+        "dua_ca": "Braç de pràctiques i làmines.",
+        "metodologia_es": "aprendizaje visual.",
+        "metodologia_ca": "aprenentatge visual."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA3", "criterios": ["f", "g"] },
+    "b": { "modulo": "1370", "ra": "RA8", "criterios": ["e"] },
+    "justificacion_es": "Factores del paciente como el ayuno, el sexo o la edad influyen en los resultados de las pruebas de diabetes.",
+    "justificacion_ca": "Factors del pacient com el dejuni, el sexe o l'edat influeixen en els resultats de les proves de diabetis.",
+    "actividades": [
+      {
+        "titulo_es": "Curva de glucosa a una embarazada",
+        "titulo_ca": "Corba de glucosa a una embarassada",
+        "contexto_es": "Una embarazada llega a la sobrecarga oral de glucosa tras desayunar y el resultado sale alterado.",
+        "contexto_ca": "Una embarassada arriba a la sobrecàrrega oral de glucosa després de berenar i el resultat surt alterat.",
+        "desarrollo_es": "El alumnado analiza el proceso fisiopatológico de la diabetes, incluida la gestacional (1370-8e). Define qué factores del paciente influyen en el resultado, como el ayuno, el ejercicio o el embarazo (1367-3f), y los aspectos de género que deben tenerse en cuenta en la salud de la mujer (1367-3g).",
+        "desarrollo_ca": "L'alumnat analitza el procés fisiopatològic de la diabetis, inclosa la gestacional (1370-8e). Defineix quins factors del pacient influeixen en el resultat, com el dejuni, l'exercici o l'embaràs (1367-3f), i els aspectes de gènere que s'han de tenir en compte en la salut de la dona (1367-3g).",
+        "evidencia_es": "Hoja de instrucciones para la prueba.",
+        "evidencia_ca": "Full d'instruccions per a la prova.",
+        "dua_es": "Infografía de la prueba.",
+        "dua_ca": "Infografia de la prova.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA4", "criterios": ["j"] },
+    "b": { "modulo": "1370", "ra": "RA7", "criterios": ["e", "d"] },
+    "justificacion_es": "Un paciente con cardiopatía isquémica puede sufrir una parada en la sala de extracciones, y el técnico debe aplicar soporte vital.",
+    "justificacion_ca": "Un pacient amb cardiopatia isquèmica pot patir una aturada a la sala d'extraccions, i el tècnic ha d'aplicar suport vital.",
+    "actividades": [
+      {
+        "titulo_es": "Dolor en el pecho durante la extracción",
+        "titulo_ca": "Dolor al pit durant l'extracció",
+        "contexto_es": "Un hombre de sesenta años se queja de opresión en el pecho mientras le sacan sangre y pierde el conocimiento.",
+        "contexto_ca": "Un home de seixanta anys es queixa d'opressió al pit mentre li treuen sang i perd el coneixement.",
+        "desarrollo_es": "El alumnado describe las características de la cardiopatía isquémica (1370-7e) y explica qué ocurre en el corazón cuando se bloquea el riego sanguíneo (1370-7d). Selecciona y practica con maniquí las técnicas de soporte vital básico hasta que llega el equipo de emergencias (1367-4j).",
+        "desarrollo_ca": "L'alumnat descriu les característiques de la cardiopatia isquèmica (1370-7e) i explica què passa al cor quan es bloqueja el reg sanguini (1370-7d). Selecciona i practica amb maniquí les tècniques de suport vital bàsic fins que arriba l'equip d'emergències (1367-4j).",
+        "evidencia_es": "Registro de la simulación de soporte vital.",
+        "evidencia_ca": "Registre de la simulació de suport vital.",
+        "dua_es": "Maniquí con indicadores y roles rotativos.",
+        "dua_ca": "Maniquí amb indicadors i rols rotatius.",
+        "metodologia_es": "simulación clínica.",
+        "metodologia_ca": "simulació clínica."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA4", "criterios": ["h", "g"] },
+    "b": { "modulo": "1370", "ra": "RA6", "criterios": ["b", "c"] },
+    "justificacion_es": "Atender bien al usuario en la extracción incluye reconocer síntomas y signos que indican que algo no va bien.",
+    "justificacion_ca": "Atendre bé l'usuari a l'extracció inclou reconèixer símptomes i signes que indiquen que alguna cosa no va bé.",
+    "actividades": [
+      {
+        "titulo_es": "Mareo, palidez y sudor en la sala de extracciones",
+        "titulo_ca": "Mareig, pal·lidesa i suor a la sala d'extraccions",
+        "contexto_es": "Cada mañana se marean dos o tres pacientes en la sala de extracciones del centro de salud.",
+        "contexto_ca": "Cada matí es marejen dos o tres pacients a la sala d'extraccions del centre de salut.",
+        "desarrollo_es": "El alumnado describe la sintomatología más frecuente y clasifica los signos clínicos que pueden aparecer durante una extracción (1370-6b) (1370-6c). Aplica protocolos de asistencia y comunicación con el paciente para prevenirlos (1367-4h) y realiza el proceso de recogida con autonomía y responsabilidad (1367-4g).",
+        "desarrollo_ca": "L'alumnat descriu la simptomatologia més freqüent i classifica els signes clínics que poden aparèixer durant una extracció (1370-6b) (1370-6c). Aplica protocols d'assistència i comunicació amb el pacient per prevenir-los (1367-4h) i fa el procés de recollida amb autonomia i responsabilitat (1367-4g).",
+        "evidencia_es": "Protocolo de atención ante reacciones vasovagales.",
+        "evidencia_ca": "Protocol d'atenció davant reaccions vasovagals.",
+        "dua_es": "Tabla de signos con imágenes.",
+        "dua_ca": "Taula de signes amb imatges.",
+        "metodologia_es": "simulación clínica.",
+        "metodologia_ca": "simulació clínica."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1370", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "Las biopsias obtenidas en quirófano son la base del diagnóstico del cáncer y requieren una recogida planificada.",
+    "justificacion_ca": "Les biòpsies obtingudes al quiròfan són la base del diagnòstic del càncer i requereixen una recollida planificada.",
+    "actividades": [
+      {
+        "titulo_es": "Recoger una biopsia de mama en el quirófano",
+        "titulo_ca": "Recollir una biòpsia de mama al quiròfan",
+        "contexto_es": "En una tumorectomía, el cirujano pide estudio intraoperatorio y la pieza debe llegar en fresco a anatomía patológica.",
+        "contexto_ca": "En una tumorectomia, el cirurgià demana estudi intraoperatori i la peça ha d'arribar en fresc a anatomia patològica.",
+        "desarrollo_es": "El alumnado planifica la recogida de muestras obtenidas por cirugía, con tiempos, recipientes y comunicación con el quirófano (1367-5a). Describe las pruebas de diagnóstico del cáncer de mama y las opciones terapéuticas que dependen del resultado (1370-5g).",
+        "desarrollo_ca": "L'alumnat planifica la recollida de mostres obtingudes per cirurgia, amb temps, recipients i comunicació amb el quiròfan (1367-5a). Descriu les proves de diagnòstic del càncer de mama i les opcions terapèutiques que depenen del resultat (1370-5g).",
+        "evidencia_es": "Circuito de la biopsia intraoperatoria.",
+        "evidencia_ca": "Circuit de la biòpsia intraoperatòria.",
+        "dua_es": "Diagrama del circuito.",
+        "dua_ca": "Diagrama del circuit.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA3", "criterios": ["a", "c"] },
+    "b": { "modulo": "1370", "ra": "RA4", "criterios": ["c", "f"] },
+    "justificacion_es": "Cada enfermedad infecciosa se diagnostica con un tipo de muestra y unos análisis cualitativos concretos.",
+    "justificacion_ca": "Cada malaltia infecciosa es diagnostica amb un tipus de mostra i unes anàlisis qualitatives concretes.",
+    "actividades": [
+      {
+        "titulo_es": "Qué muestra pedir ante cada infección",
+        "titulo_ca": "Quina mostra demanar davant cada infecció",
+        "contexto_es": "En urgencias llegan a la vez un niño con meningitis, una mujer con infección de orina y un hombre con neumonía.",
+        "contexto_ca": "A urgències arriben alhora un infant amb meningitis, una dona amb infecció d'orina i un home amb pneumònia.",
+        "desarrollo_es": "El alumnado describe el tipo de agente infeccioso más probable en cada caso (1370-4c) y las características de esas enfermedades (1370-4f). Caracteriza la muestra adecuada para cada una, como líquido cefalorraquídeo, orina o esputo (1367-3a), y los análisis cualitativos que se pueden hacer (1367-3c).",
+        "desarrollo_ca": "L'alumnat descriu el tipus d'agent infecciós més probable en cada cas (1370-4c) i les característiques d'aquestes malalties (1370-4f). Caracteritza la mostra adequada per a cadascuna, com líquid cefalorraquidi, orina o esput (1367-3a), i les anàlisis qualitatives que s'hi poden fer (1367-3c).",
+        "evidencia_es": "Tabla de infecciones, muestras y análisis.",
+        "evidencia_ca": "Taula d'infeccions, mostres i anàlisis.",
+        "dua_es": "Tarjetas de casos clínicos.",
+        "dua_ca": "Targetes de casos clínics.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA1", "criterios": ["a", "b"] },
+    "b": { "modulo": "1370", "ra": "RA2", "criterios": ["f"] },
+    "justificacion_es": "Las pruebas diagnósticas complementarias tienen un coste que el sistema sanitario debe gestionar con criterios de economía sanitaria.",
+    "justificacion_ca": "Les proves diagnòstiques complementàries tenen un cost que el sistema sanitari ha de gestionar amb criteris d'economia sanitària.",
+    "actividades": [
+      {
+        "titulo_es": "Cuánto cuesta un análisis en la sanidad pública y en la privada",
+        "titulo_ca": "Quant costa una anàlisi a la sanitat pública i a la privada",
+        "contexto_es": "Un paciente pregunta por qué en un laboratorio privado le piden más pruebas que en el centro de salud.",
+        "contexto_ca": "Un pacient demana per què en un laboratori privat li demanen més proves que al centre de salut.",
+        "desarrollo_es": "El alumnado clasifica los procedimientos diagnósticos complementarios: análisis, imagen, endoscopias y biopsias (1370-2f). Compara cómo se organizan en el sistema público y en el privado (1367-1a) y aplica principios de economía sanitaria, como coste y eficiencia, a la petición de pruebas (1367-1b).",
+        "desarrollo_ca": "L'alumnat classifica els procediments diagnòstics complementaris: anàlisis, imatge, endoscòpies i biòpsies (1370-2f). Compara com s'organitzen al sistema públic i al privat (1367-1a) i aplica principis d'economia sanitària, com cost i eficiència, a la petició de proves (1367-1b).",
+        "evidencia_es": "Cuadro comparativo de los dos sistemas.",
+        "evidencia_ca": "Quadre comparatiu dels dos sistemes.",
+        "dua_es": "Tarifas reales simplificadas.",
+        "dua_ca": "Tarifes reals simplificades.",
+        "metodologia_es": "análisis documental.",
+        "metodologia_ca": "anàlisi documental."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA2", "criterios": ["c"] },
+    "b": { "modulo": "1370", "ra": "RA2", "criterios": ["h", "i"] },
+    "justificacion_es": "Interpretar una solicitud de análisis exige entender la terminología clínica y cómo se construyen sus términos.",
+    "justificacion_ca": "Interpretar una sol·licitud d'anàlisi exigeix entendre la terminologia clínica i com es construeixen els seus termes.",
+    "actividades": [
+      {
+        "titulo_es": "Descifrar las peticiones de análisis del médico",
+        "titulo_ca": "Desxifrar les peticions d'anàlisi del metge",
+        "contexto_es": "Llegan peticiones con términos como hipercolesterolemia, hematuria o leucocitosis y el técnico en prácticas no sabe qué tubo usar.",
+        "contexto_ca": "Arriben peticions amb termes com hipercolesterolèmia, hematúria o leucocitosi i el tècnic en pràctiques no sap quin tub fer servir.",
+        "desarrollo_es": "El alumnado interpreta varias solicitudes de análisis y decide qué muestra hay que obtener en cada caso (1367-2c). Para ello analiza la etimología de los términos clínicos (1370-2h) y aplica las reglas de construcción con prefijos y sufijos (1370-2i).",
+        "desarrollo_ca": "L'alumnat interpreta diverses sol·licituds d'anàlisi i decideix quina mostra s'ha d'obtenir en cada cas (1367-2c). Per fer-ho analitza l'etimologia dels termes clínics (1370-2h) i aplica les regles de construcció amb prefixos i sufixos (1370-2i).",
+        "evidencia_es": "Glosario de términos y hojas de petición interpretadas.",
+        "evidencia_ca": "Glossari de termes i fulls de petició interpretats.",
+        "dua_es": "Tabla de prefijos y sufijos.",
+        "dua_ca": "Taula de prefixos i sufixos.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA3", "criterios": ["d", "e"] },
+    "b": { "modulo": "1370", "ra": "RA6", "criterios": ["a", "d"] },
+    "justificacion_es": "Los análisis cuantitativos y funcionales permiten valorar la actividad de los órganos y detectar su fallo.",
+    "justificacion_ca": "Les anàlisis quantitatives i funcionals permeten valorar l'activitat dels òrgans i detectar-ne la fallada.",
+    "actividades": [
+      {
+        "titulo_es": "Medir cómo funcionan los riñones",
+        "titulo_ca": "Mesurar com funcionen els ronyons",
+        "contexto_es": "Un paciente diabético tiene la creatinina alta y el nefrólogo pide un aclaramiento con orina de veinticuatro horas.",
+        "contexto_ca": "Un pacient diabètic té la creatinina alta i el nefròleg demana un aclariment amb orina de vint-i-quatre hores.",
+        "desarrollo_es": "El alumnado describe la actividad fisiológica del riñón (1370-6a) y las causas de su fallo, como la diabetes o la hipertensión (1370-6d). Clasifica los análisis cuantitativos que se hacen en sangre y orina (1367-3d) e identifica las pruebas funcionales, como el aclaramiento de creatinina (1367-3e).",
+        "desarrollo_ca": "L'alumnat descriu l'activitat fisiològica del ronyó (1370-6a) i les causes de la seva fallada, com la diabetis o la hipertensió (1370-6d). Classifica les anàlisis quantitatives que es fan en sang i orina (1367-3d) i identifica les proves funcionals, com l'aclariment de creatinina (1367-3e).",
+        "evidencia_es": "Ficha de pruebas de función renal.",
+        "evidencia_ca": "Fitxa de proves de funció renal.",
+        "dua_es": "Esquema del riñón y casos resueltos.",
+        "dua_ca": "Esquema del ronyó i casos resolts.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1367", "ra": "RA3", "criterios": ["h"] },
+    "b": { "modulo": "1370", "ra": "RA7", "criterios": ["b"] },
+    "justificacion_es": "Un tubo mal mezclado forma coágulos por los mismos mecanismos que la formación de un trombo.",
+    "justificacion_ca": "Un tub mal mesclat forma coàguls pels mateixos mecanismes que la formació d'un trombe.",
+    "actividades": [
+      {
+        "titulo_es": "Coágulos en los tubos de hemograma",
+        "titulo_ca": "Coàguls als tubs d'hemograma",
+        "contexto_es": "Hematología rechaza muchos tubos con microcoágulos que llegan de un centro de salud de la Part Forana.",
+        "contexto_ca": "Hematologia rebutja molts tubs amb microcoàguls que arriben d'un centre de salut de la Part Forana.",
+        "desarrollo_es": "El alumnado detalla el proceso de formación de un trombo y los factores de la coagulación (1370-7b). Con ello identifica los errores preanalíticos que provocan coágulos en el tubo, como no invertirlo, tardar en llenarlo o usar un compresor demasiado tiempo (1367-3h).",
+        "desarrollo_ca": "L'alumnat detalla el procés de formació d'un trombe i els factors de la coagulació (1370-7b). Amb això identifica els errors preanalítics que provoquen coàguls al tub, com no invertir-lo, tardar a omplir-lo o fer servir un compressor massa temps (1367-3h).",
+        "evidencia_es": "Cartel de prevención de errores preanalíticos.",
+        "evidencia_ca": "Cartell de prevenció d'errors preanalítics.",
+        "dua_es": "Animación de la cascada de coagulación.",
+        "dua_ca": "Animació de la cascada de coagulació.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  }
+]

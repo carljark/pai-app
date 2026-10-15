@@ -1,0 +1,62 @@
+{
+  "nivel": "CFGS_LABORATORIO_CLINICO",
+  "curso": "1º",
+  "modulos": {
+    "1367": {
+      "nombre_es": "Gestión de muestras biológicas",
+      "nombre_ca": "Gestió de mostres biològiques",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#f472b6",
+      "icon": "test-tube"
+    },
+    "1368": {
+      "nombre_es": "Técnicas generales de laboratorio",
+      "nombre_ca": "Tècniques generals de laboratori",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#34d399",
+      "icon": "flask-conical"
+    },
+    "1369": {
+      "nombre_es": "Biología molecular y citogenética",
+      "nombre_ca": "Biologia molecular i citogenètica",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#fb923c",
+      "icon": "dna"
+    },
+    "1370": {
+      "nombre_es": "Fisiopatología general",
+      "nombre_ca": "Fisiopatologia general",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#a78bfa",
+      "icon": "heart-pulse"
+    },
+    "1665": {
+      "nombre_es": "Digitalización aplicada a los sectores productivos",
+      "nombre_ca": "Digitalització aplicada als sectors productius",
+      "tipo": "comun",
+      "relacion": "digital",
+      "color": "#f87171",
+      "icon": "binary"
+    },
+    "1709": {
+      "nombre_es": "Itinerario personal para la empleabilidad I",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat I",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#4ade80",
+      "icon": "briefcase"
+    },
+    "0179": {
+      "nombre_es": "Inglés profesional",
+      "nombre_ca": "Anglès professional",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#38bdf8",
+      "icon": "languages"
+    }
+  }
+}

@@ -27,12 +27,14 @@ import { up as runMigration41 } from '../migrations/41_ingest_mapa_cfgm_atencion
 import { up as runMigration42 } from '../migrations/42_ingest_mapa_cfgm_atencion_dependencia';
 import { up as runMigration43 } from '../migrations/43_ingest_mapa_cfgs_animacion_sociodeportiva_2';
 import { up as runMigration44 } from '../migrations/44_ingest_mapa_cfgs_animacion_sociodeportiva';
+import { up as runMigration46 } from '../migrations/46_ingest_mapa_cfgs_laboratorio_clinico';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
 import { CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA as AF_RAS } from '../data/ras_cfgs_acondicionamiento_fisico.data';
 import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA as APSD_RAS } from '../data/ras_cfgm_atencion_dependencia.data';
 import { CFGS_ANIMACION_SOCIODEPORTIVA_RAS_DATA as ASD_RAS } from '../data/ras_cfgs_animacion_sociodeportiva.data';
+import { CFGS_LABORATORIO_CLINICO_RAS_DATA as LC_RAS } from '../data/ras_cfgs_laboratorio_clinico.data';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -721,6 +723,33 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.body.map((m: any) => m.code)).toEqual(['1124', '1136', '1138', '1139', '1141', '1143', '1665', '1709']);
       expect(res.body[0].name_es).toBe('Dinamización grupal');
       expect(res.body[0].name_ca).toBe('Dinamització grupal');
+    });
+
+    it('debería cargar con la migración 46 el 1.º de Laboratorio Clínico sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA', order: 0, code: '1124', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration46();
+      await runMigration46();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA' })).toBe(1);
+      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO', 7, 374, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_LABORATORIO_CLINICO' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = LC_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_LABORATORIO_CLINICO');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1367', '1368', '1369', '1370', '0179', '1665', '1709']);
+      expect(res.body[0].name_es).toBe('Gestión de muestras biológicas');
+      expect(res.body[0].name_ca).toBe('Gestió de mostres biològiques');
     });
   });
 });

@@ -1,3 +1,4 @@
+import type { CurriculumResolver } from './curriculum-resolver';
 import {
   HistoryTab,
   Project,
@@ -9,9 +10,12 @@ export type HistoryTabId = HistoryTab;
 
 export interface HistoryFilters {
   tab: HistoryTabId;
+  /** Curso del nivel; `null` abarca todos. */
+  curso: string | null;
   onlyMine: boolean;
   ownerId?: string;
   keywords: string[];
+  /** Clave del módulo o RA (`FilterOption.key`), igual en castellano y en catalán. */
   module: string | null;
   ra: string | null;
 }
@@ -84,34 +88,39 @@ export function sortByRelevance(projects: Project[], keywords: string[]): Projec
   return ranked.map((r) => r.project);
 }
 
-export function matchesProjectFilters(project: Project, filters: HistoryFilters): boolean {
-  // Al buscar por palabras se buscan proyectos de todos los niveles, no solo de la pestaña activa
-  if (filters.keywords.length === 0 && !matchesTab(project, filters.tab)) return false;
+export function projectCurso(project: Project): string {
+  return project.courseLevel || project.generatedContent?.courseLevel || '';
+}
+
+/** Nivel, curso y autoría: lo que acota las opciones de módulo y RA. */
+export function matchesScope(project: Project, filters: HistoryFilters): boolean {
   if (filters.onlyMine && filters.ownerId) {
     if (getOwnerId(project.userId) !== filters.ownerId) return false;
   }
-  if (filters.module && !projectModules(project).includes(filters.module)) return false;
-  if (filters.ra && !projectRas(project).includes(filters.ra)) return false;
-  return matchesKeywords(project, filters.keywords);
+  // Al buscar por palabras se buscan proyectos de todos los niveles, no solo del seleccionado
+  if (filters.keywords.length > 0) return true;
+  if (!matchesTab(project, filters.tab)) return false;
+  return !filters.curso || projectCurso(project) === filters.curso;
 }
 
-export function collectModuleOptions(projects: Project[]): string[] {
-  const set = new Set<string>();
-  projects.forEach((p) =>
-    projectModules(p).forEach((m) => {
-      if (m) set.add(m);
-    }),
+export function matchesCurriculum(
+  project: Project,
+  filters: Pick<HistoryFilters, 'module' | 'ra'>,
+  resolver: CurriculumResolver,
+): boolean {
+  const { module, ra } = filters;
+  if (module && !resolver.modulesOf(project).some((m) => m.key === module)) return false;
+  return !ra || resolver.itemsOf(project).some((r) => r.key === ra);
+}
+
+export function matchesProjectFilters(
+  project: Project,
+  filters: HistoryFilters,
+  resolver: CurriculumResolver,
+): boolean {
+  return (
+    matchesScope(project, filters) &&
+    matchesCurriculum(project, filters, resolver) &&
+    matchesKeywords(project, filters.keywords)
   );
-  return Array.from(set).sort((a, b) => a.localeCompare(b));
-}
-
-export function collectRaOptions(projects: Project[], module: string | null): string[] {
-  const set = new Set<string>();
-  projects.forEach((p) => {
-    if (module && !projectModules(p).includes(module)) return;
-    projectRas(p).forEach((r) => {
-      if (r) set.add(r);
-    });
-  });
-  return Array.from(set).sort((a, b) => a.localeCompare(b));
 }

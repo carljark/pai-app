@@ -32,8 +32,6 @@ export interface AfinidadEsoData {
   saberes: Record<string, { es: string[]; ca: string[] }>;
   conceptos_es: string[];
   conceptos_ca: string[];
-  /** `documento` (IES Cap de Llevant) o `ampliacion` (propuesta nueva). */
-  origen: 'documento' | 'ampliacion';
   fuentes: FuenteAfinidad[];
 }
 
@@ -58,7 +56,6 @@ const AfinidadEsoSchema = new Schema<IAfinidadEso>(
     saberes: { type: Schema.Types.Mixed, default: {} },
     conceptos_es: { type: [String], default: [] },
     conceptos_ca: { type: [String], default: [] },
-    origen: { type: String, enum: ['documento', 'ampliacion'], required: true },
     fuentes: { type: [Schema.Types.Mixed], default: [] }
   },
   { timestamps: true }

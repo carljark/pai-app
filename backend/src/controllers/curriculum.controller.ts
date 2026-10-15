@@ -80,7 +80,7 @@ const caToEs: Record<string, string> = Object.entries(esToCa).reduce((acc, [es, 
   return acc;
 }, {} as Record<string, string>);
 
-function mapRa(r: any, lang: 'ca' | 'es') {
+export function mapRa(r: any, lang: 'ca' | 'es') {
   const module = lang === 'ca' ? (r.module_ca || esToCaModules[r.module] || r.module) : (r.module_es || caToEsModules[r.module] || r.module);
   const description = lang === 'ca' ? (r.description_ca || r.description) : (r.description_es || r.description);
   const criterios = lang === 'ca' && r.criterios_ca && r.criterios_ca.length > 0 ? r.criterios_ca : (r.criterios_es || []);
@@ -104,7 +104,7 @@ export const getRas = async (req: any, res: Response) => {
   }
 };
 
-function mapCe(c: any, lang: 'ca' | 'es', curso: string) {
+export function mapCe(c: any, lang: 'ca' | 'es', curso: string) {
   const subjectBase = c.subject.startsWith('Matemàtiques') ? 'Matemàtiques' : c.subject;
   const area = lang === 'ca' ? (esToCa[c.area] || c.area) : (caToEs[c.area] || c.area);
   const subject = lang === 'ca' ? (esToCa[subjectBase] || subjectBase) : (caToEs[subjectBase] || subjectBase);

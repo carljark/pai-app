@@ -32,7 +32,7 @@
 
 - el desplegable de titulación y los cursos del generador;
 - los módulos de cada curso y su orden (`CurriculumFacade`); al cargar el catálogo, un nivel o curso guardado en `localStorage` que ya no existe pasa al nivel por defecto o al primer curso;
-- las pestañas del historial (una por nivel, con el `tipoNivel` como id) y los filtros de «Mis proyectos»;
+- los filtros del historial, en cascada como en el mapa: nivel (con el `tipoNivel` como id) → curso → módulo → RA (materia → CE en la ESO). El orden de los módulos sale de `cursos[].modulos`, y `GET /api/curriculum/filter-index` agrupa en una sola opción el mismo módulo o RA guardado en castellano y en catalán (tarea 229);
 - el nombre del nivel en tarjetas de inicio, «Mis proyectos», Taller (pipe `nivelNombre`) y exportación;
 - el selector de ciclo y curso del mapa, su selección inicial, el título y los textos con la sigla de la etapa.
 

@@ -118,6 +118,10 @@ export const TRANSLATIONS_CA = {
   homeFeature3Text: "Rúbriques per mòdul per a tot l'equip docent.",
   homeAiTitle: 'La IA proposa, tu decideixes.',
   homeAiText: 'Revisa i valida cada proposta: el teu criteri pedagògic és el que compta.',
+  homeCreditsLogoAlt:
+    'Logotips de la Universitat Rovira i Virgili, la Universitat de les Illes Balears, la Universitat de Lleida i la Universitat de Múrcia',
+  homeCreditsText:
+    "Plappin forma part d'un projecte de recerca del Màster Interuniversitari en Tecnologia Educativa: e-Learning i Gestió del Coneixement. Actualment es troba en la seva fase Beta.",
   homePill1: 'IA Generativa',
   homePill2: 'Exporta a Word',
   homePill3: 'Bilingüe ES / CA',
@@ -238,11 +242,19 @@ export const TRANSLATIONS_CA = {
   historySharedWith: 'Amb',
   historySearchPlaceholder: 'Cercar per paraules clau...',
   historySearchAllLevels:
-    'Cercant a tots els nivells. Buida el cercador per tornar a filtrar per pestanya.',
+    'Cercant a tots els nivells. Buida el cercador per tornar a filtrar per nivell.',
   historyFilterModule: 'Mòdul',
   historyFilterRa: 'RA',
   historyFilterAllModules: 'Tots els mòduls',
   historyFilterAllRas: 'Tots els RA',
+  historyFilterCourse: 'Curs',
+  historyFilterAllCourses: 'Tots',
+  historyFilterSubject: 'Matèria',
+  historyFilterCe: 'CE',
+  historyFilterAllSubjects: 'Totes les matèries',
+  historyFilterAllCes: 'Totes les CE',
+  historyFilterPickModule: 'Tria abans un mòdul',
+  historyFilterPickSubject: 'Tria abans una matèria',
   historyResultsCount: 'resultats',
   duplicateTitle: 'Ja existeixen projectes amb esta mateixa selecció',
   duplicateIntro:

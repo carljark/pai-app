@@ -1,0 +1,29 @@
+@use '../../../../../styles/variables' as variables;
+
+.home-credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$spacing-4;
+  margin-top: variables.$spacing-8;
+  padding: variables.$spacing-6 variables.$spacing-5;
+  border-top: 1px solid variables.$color-border;
+  background: variables.$color-surface;
+  border-radius: variables.$border-radius-lg;
+  text-align: center;
+}
+
+.home-credits__logos {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+}
+
+.home-credits__text {
+  margin: 0;
+  max-width: 680px;
+  font-size: variables.$font-size-sm;
+  line-height: 1.5;
+  color: variables.$color-text-muted;
+}

@@ -1,0 +1,84 @@
+@use '../../../../../styles/variables' as variables;
+@use '../../../../../styles/mixins' as mixins;
+
+.history-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: variables.$spacing-3 variables.$spacing-4;
+  width: 100%;
+  margin-top: variables.$spacing-3;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-1;
+    min-width: 0;
+
+    &--level {
+      flex: 1 1 100%;
+    }
+
+    &--wide {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__label {
+    font-size: variables.$font-size-sm;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$color-text-muted;
+  }
+
+  // Mientras se busca, nivel y curso no filtran: se atenúan para indicarlo
+  &--searching &__field--level,
+  &--searching &__segmented {
+    opacity: 0.55;
+  }
+
+  &__segmented {
+    display: inline-flex;
+    padding: 2px;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-lg;
+    background: variables.$color-primary-light;
+  }
+
+  &__curso {
+    min-width: 3.5rem;
+    padding: variables.$spacing-2 variables.$spacing-4;
+    border: none;
+    border-radius: variables.$border-radius-md;
+    background: transparent;
+    color: variables.$color-primary-dark;
+    font-weight: variables.$font-weight-medium;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover:not(.history-filters__curso--active) {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus-visible {
+      outline: 2px solid variables.$color-primary;
+      outline-offset: 2px;
+    }
+
+    &--active {
+      background: variables.$color-primary;
+      color: white;
+    }
+  }
+
+  @include mixins.mq(sm) {
+    &__field--level {
+      flex: 0 1 28rem;
+    }
+
+    &__field--wide {
+      flex: 1 1 22rem;
+    }
+  }
+}

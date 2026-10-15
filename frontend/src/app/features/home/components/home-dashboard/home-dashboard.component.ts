@@ -7,13 +7,14 @@ import { NivelesService } from '../../../../services/niveles.service';
 import { LayoutService } from '../../../../services/layout.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { HomeIntroComponent } from '../home-intro/home-intro.component';
+import { HomeCreditsComponent } from '../home-credits/home-credits.component';
 
 type AppView = 'home' | 'generator' | 'history' | 'taller' | 'admin';
 
 @Component({
   selector: 'app-home-dashboard',
   standalone: true,
-  imports: [CommonModule, HomeIntroComponent],
+  imports: [CommonModule, HomeIntroComponent, HomeCreditsComponent],
   templateUrl: './home-dashboard.component.html',
   styleUrl: './home-dashboard.component.scss',
 })

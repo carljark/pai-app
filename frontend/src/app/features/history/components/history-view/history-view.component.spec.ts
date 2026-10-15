@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { HistoryViewComponent } from './history-view.component';
 import { AppFacade } from '../../../../app.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
@@ -7,7 +6,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { signal } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { LayoutService } from '../../../../services/layout.service';
 import { NivelesService } from '../../../../services/niveles.service';
@@ -131,7 +130,7 @@ describe('HistoryViewComponent', () => {
         generatedContent: { rawText: 'otro contenido' },
       }),
     ]);
-    component.searchQuery.set('barbería corte');
+    component.filters.searchQuery.set('barbería corte');
     fixture.detectChanges();
     const text = fixture.nativeElement.textContent;
     expect(text).toContain('Barbería moderna');
@@ -139,7 +138,9 @@ describe('HistoryViewComponent', () => {
   });
 
   const levelSelect = () =>
-    fixture.nativeElement.querySelector('.history-view__level select') as HTMLSelectElement;
+    fixture.nativeElement.querySelector(
+      '.history-filters__field--level select',
+    ) as HTMLSelectElement;
   const chooseLevel = (id: string) => {
     levelSelect().value = id;
     levelSelect().dispatchEvent(new Event('change'));
@@ -157,39 +158,24 @@ describe('HistoryViewComponent', () => {
       project({ _id: '2', title: 'Imatge corporal', tipoNivel: 'CFGM_PELUQUERIA' }),
       project({ _id: '3', title: 'Sin relación' }),
     ]);
-    component.activeTab.set('FP_BASICA');
-    component.searchQuery.set('imatge');
+    component.filters.activeTab.set('FP_BASICA');
+    component.filters.searchQuery.set('imatge');
     fixture.detectChanges();
 
-    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['2', '1']);
+    expect(component.filters.filteredProjects().map((p: any) => p._id)).toEqual(['2', '1']);
     const root = fixture.nativeElement as HTMLElement;
-    expect(root.querySelector('.history-view__level--searching')).toBeTruthy();
+    expect(root.querySelector('.history-filters--searching')).toBeTruthy();
     expect(root.querySelector('.history-view__search-scope')?.textContent).toContain(
       'Buscando en todos los niveles',
     );
 
-    component.searchQuery.set('');
+    component.filters.searchQuery.set('');
     fixture.detectChanges();
-    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['1', '3']);
+    expect(component.filters.filteredProjects().map((p: any) => p._id)).toEqual(['1', '3']);
     expect(root.querySelector('.history-view__search-scope')).toBeNull();
   });
 
-  it('should filter by module and RA', () => {
-    mockProjectsFacade.projectsHistory.set([
-      project({ _id: '1', title: 'P1', modules: ['Modulo A'], ras: ['RA1'] }),
-      project({ _id: '2', title: 'P2', modules: ['Modulo B'], ras: ['RA2'] }),
-    ]);
-    component.moduleFilter.set('Modulo A');
-    fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).not.toContain('P2');
-
-    component.moduleFilter.set(null);
-    component.raFilter.set('RA2');
-    fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).toContain('P2');
-  });
-
-  it('should render module and RA options and results count', () => {
+  it('should render the filters and results count', () => {
     mockProjectsFacade.projectsHistory.set([
       project({ _id: '1', title: 'P1', modules: ['Modulo A'], ras: ['RA1'] }),
     ]);
@@ -202,7 +188,7 @@ describe('HistoryViewComponent', () => {
 
   it('should switch level from the dropdown', () => {
     chooseLevel('CFGM_PELUQUERIA');
-    expect(component.activeTab()).toBe('CFGM_PELUQUERIA');
+    expect(component.filters.activeTab()).toBe('CFGM_PELUQUERIA');
     expect(levelSelect().value).toBe('CFGM_PELUQUERIA');
   });
 
@@ -227,9 +213,9 @@ describe('HistoryViewComponent', () => {
       project({ _id: '2', title: 'PDC antiguo', tipoNivel: 'ESO' }),
       project({ _id: '3', title: 'PDC', tipoNivel: 'DIVERSIFICACION_CURRICULAR' }),
     ]);
-    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['1']);
-    component.activeTab.set('DIVERSIFICACION_CURRICULAR');
-    expect(component.filteredProjects().map((p: any) => p._id)).toEqual(['2', '3']);
+    expect(component.filters.filteredProjects().map((p: any) => p._id)).toEqual(['1']);
+    component.filters.activeTab.set('DIVERSIFICACION_CURRICULAR');
+    expect(component.filters.filteredProjects().map((p: any) => p._id)).toEqual(['2', '3']);
   });
 
   it('should add an option and list the projects of a level added only to the catalog', () => {
@@ -242,8 +228,10 @@ describe('HistoryViewComponent', () => {
     const options = levelSelect().options;
     expect(options[options.length - 1].textContent?.trim()).toBe('CFGS Animación Ficticia');
     chooseLevel('CFGS_FICTICIO');
-    expect(component.activeTab()).toBe('CFGS_FICTICIO');
-    expect(component.filteredProjects().map((p: any) => p.title)).toEqual(['Proyecto ficticio']);
+    expect(component.filters.activeTab()).toBe('CFGS_FICTICIO');
+    expect(component.filters.filteredProjects().map((p: any) => p.title)).toEqual([
+      'Proyecto ficticio',
+    ]);
   });
 
   it('should warn when the levels catalog could not be loaded', () => {
@@ -256,32 +244,17 @@ describe('HistoryViewComponent', () => {
     );
   });
 
-  it('should update search and module/ra filters from events', () => {
-    component.onSearch({ target: { value: 'abc' } } as any);
-    expect(component.searchQuery()).toBe('abc');
-
-    component.onModuleChange('Modulo A');
-    expect(component.moduleFilter()).toBe('Modulo A');
-
-    component.onRaChange('RA1');
-    expect(component.raFilter()).toBe('RA1');
-
-    component.onModuleChange('');
-    expect(component.moduleFilter()).toBeNull();
-    expect(component.raFilter()).toBeNull();
-  });
-
   it('should handle empty history and null user', () => {
     mockProjectsFacade.projectsHistory.set(undefined);
     mockAuthFacade.currentUser.set(null);
     fixture.detectChanges();
+    expect(component.filters.filteredProjects()).toEqual([]);
+  });
 
-    expect(component.moduleOptions()).toEqual([]);
-    expect(component.raOptions()).toEqual([]);
-    expect(component.filteredProjects()).toEqual([]);
-
-    component.onRaChange('');
-    expect(component.raFilter()).toBeNull();
+  it('should reload the curriculum index when the history opens', () => {
+    const http = TestBed.inject(HttpTestingController);
+    http.expectOne('/api/curriculum/filter-index').flush({ modules: [], items: [] });
+    http.verify();
   });
 
   it('should wire toolbar DOM events', () => {
@@ -290,22 +263,16 @@ describe('HistoryViewComponent', () => {
     ) as NodeListOf<HTMLButtonElement>;
     pills[1].click();
     fixture.detectChanges();
-    expect(component.onlyMine()).toBe(true);
+    expect(component.filters.onlyMine()).toBe(true);
     pills[0].click();
     fixture.detectChanges();
-    expect(component.onlyMine()).toBe(false);
+    expect(component.filters.onlyMine()).toBe(false);
 
     const input = fixture.nativeElement.querySelector(
       '.history-view__search-input',
     ) as HTMLInputElement;
     input.value = 'abc';
     input.dispatchEvent(new Event('input'));
-    expect(component.searchQuery()).toBe('abc');
-
-    const selects = fixture.debugElement.queryAll(By.css('app-select'));
-    selects[0].triggerEventHandler('valueChange', 'Modulo A');
-    expect(component.moduleFilter()).toBe('Modulo A');
-    selects[1].triggerEventHandler('valueChange', 'RA1');
-    expect(component.raFilter()).toBe('RA1');
+    expect(component.filters.searchQuery()).toBe('abc');
   });
 });

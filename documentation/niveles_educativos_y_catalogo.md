@@ -171,7 +171,7 @@ Ciclo AFD32 de la familia Actividades Físicas y Deportivas (tarea 214). Tiene m
 
 ## CFGS Enseñanza y Animación Sociodeportiva (`CFGS_ANIMACION_SOCIODEPORTIVA`)
 
-Ciclo AFD31 de la familia Actividades Físicas y Deportivas (tarea 216). Tiene mapa intermodular de 2.º desde la tarea 235 (pestaña `CFGS_ANIMACION_SOCIODEPORTIVA_2`, 168 relaciones y 336 conexiones); el 1.º aún no tiene mapa.
+Ciclo AFD31 de la familia Actividades Físicas y Deportivas (tarea 216). Los dos cursos tienen mapa intermodular: el 1.º desde la tarea 237 (pestaña `CFGS_ANIMACION_SOCIODEPORTIVA`, 192 relaciones y 384 conexiones) y el 2.º desde la tarea 235 (pestaña `CFGS_ANIMACION_SOCIODEPORTIVA_2`, 168 relaciones y 336 conexiones).
 
 ### Fuente normativa
 

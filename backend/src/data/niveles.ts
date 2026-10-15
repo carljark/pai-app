@@ -217,6 +217,7 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '2º', modulos: ['1123', '1137', '1140', '1142', '1144', '0179', '1708', '1710'] },
     ],
     mapas: [
+      { tab: 'CFGS_ANIMACION_SOCIODEPORTIVA', curso: '1º', moduleCode: '1124', raId: '1124_RA1' },
       { tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2', curso: '2º', moduleCode: '1123', raId: '1123_RA1' },
     ],
   },

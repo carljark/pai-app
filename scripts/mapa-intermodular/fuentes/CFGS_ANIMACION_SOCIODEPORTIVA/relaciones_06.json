@@ -1,0 +1,486 @@
+[
+  {
+    "a": { "modulo": "1139", "ra": "RA1", "criterios": ["e", "g"] },
+    "b": { "modulo": "1141", "ra": "RA1", "criterios": ["e"] },
+    "justificacion_es": "Interpretar reglamentos y experimentar con material adaptado es necesario tanto en los deportes individuales como en los de implementos.",
+    "justificacion_ca": "Interpretar reglaments i experimentar amb material adaptat és necessari tant en els esports individuals com en els d'implements.",
+    "actividades": [
+      {
+        "titulo_es": "Jornada de deporte adaptado: atletismo y boccia",
+        "titulo_ca": "Jornada d'esport adaptat: atletisme i boccia",
+        "contexto_es": "Una federación de deporte adaptado organiza una jornada escolar con atletismo para ciegos y boccia.",
+        "contexto_ca": "Una federació d'esport adaptat organitza una jornada escolar amb atletisme per a cecs i boccia.",
+        "desarrollo_es": "El alumnado interpreta las reglas básicas y la nomenclatura del atletismo adaptado (1139-1e) y de la boccia (1141-1e). Experimenta con materiales específicos y alternativos, como cuerdas guía, rampas de lanzamiento o bolas de distinta textura, para enseñar ambas disciplinas (1139-1g).",
+        "desarrollo_ca": "L'alumnat interpreta les regles bàsiques i la nomenclatura de l'atletisme adaptat (1139-1e) i de la boccia (1141-1e). Experimenta amb materials específics i alternatius, com cordes guia, rampes de llançament o boles de diferent textura, per ensenyar les dues disciplines (1139-1g).",
+        "evidencia_es": "Guía de reglas simplificada y fichas de material.",
+        "evidencia_ca": "Guia de regles simplificada i fitxes de material.",
+        "dua_es": "Reglamento en lectura fácil y material para probar.",
+        "dua_ca": "Reglament en lectura fàcil i material per provar.",
+        "metodologia_es": "aprendizaje experiencial.",
+        "metodologia_ca": "aprenentatge experiencial."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA2", "criterios": ["a"] },
+    "b": { "modulo": "1141", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "Seleccionar instalaciones con criterios de participación y seguridad es necesario cuando un mismo polideportivo acoge varias escuelas.",
+    "justificacion_ca": "Seleccionar instal·lacions amb criteris de participació i seguretat és necessari quan un mateix poliesportiu acull diverses escoles.",
+    "actividades": [
+      {
+        "titulo_es": "Repartir el polideportivo entre atletismo y tenis",
+        "titulo_ca": "Repartir el poliesportiu entre atletisme i tennis",
+        "contexto_es": "En el polideportivo de Sa Pobla, la escuela de atletismo y la de tenis quieren usar la misma franja horaria.",
+        "contexto_ca": "Al poliesportiu de sa Pobla, l'escola d'atletisme i la de tennis volen fer servir la mateixa franja horària.",
+        "desarrollo_es": "El alumnado define criterios para seleccionar las instalaciones y materiales del atletismo, buscando la máxima participación y seguridad (1139-2a). Hace lo mismo para la escuela de tenis (1141-2a) y propone un reparto de espacios y horarios que beneficie a ambas.",
+        "desarrollo_ca": "L'alumnat defineix criteris per seleccionar les instal·lacions i els materials de l'atletisme, cercant la màxima participació i seguretat (1139-2a). Fa el mateix per a l'escola de tennis (1141-2a) i proposa un repartiment d'espais i horaris que beneficiï totes dues.",
+        "evidencia_es": "Plano del polideportivo con el reparto propuesto.",
+        "evidencia_ca": "Plànol del poliesportiu amb el repartiment proposat.",
+        "dua_es": "Plano y tabla de criterios guiada.",
+        "dua_ca": "Plànol i taula de criteris guiada.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA5", "criterios": ["g"] },
+    "b": { "modulo": "1141", "ra": "RA4", "criterios": ["h"] },
+    "justificacion_es": "Las competiciones no oficiales de deportes individuales y de implementos comparten criterios de organización y control.",
+    "justificacion_ca": "Les competicions no oficials d'esports individuals i d'implements comparteixen criteris d'organització i control.",
+    "actividades": [
+      {
+        "titulo_es": "Olimpiada escolar con atletismo y tenis de mesa",
+        "titulo_ca": "Olimpíada escolar amb atletisme i tennis de taula",
+        "contexto_es": "Seis colegios de la comarca organizan una olimpiada de fin de curso con pruebas de atletismo y tenis de mesa.",
+        "contexto_ca": "Sis escoles de la comarca organitzen una olimpíada de final de curs amb proves d'atletisme i tennis de taula.",
+        "desarrollo_es": "El alumnado define los criterios para organizar y controlar las pruebas de atletismo: categorías, series, jueces y resultados (1139-5g). Hace lo mismo con el torneo de tenis de mesa (1141-4h) y coordina los horarios para que nadie coincida en dos pruebas.",
+        "desarrollo_ca": "L'alumnat defineix els criteris per organitzar i controlar les proves d'atletisme: categories, sèries, jutges i resultats (1139-5g). Fa el mateix amb el torneig de tennis de taula (1141-4h) i coordina els horaris perquè ningú no coincideixi en dues proves.",
+        "evidencia_es": "Reglamento y programa de la olimpiada.",
+        "evidencia_ca": "Reglament i programa de l'olimpíada.",
+        "dua_es": "Plantillas de cuadros de competición.",
+        "dua_ca": "Plantilles de quadres de competició.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1141", "ra": "RA5", "criterios": ["b"] },
+    "justificacion_es": "Los instrumentos de evaluación técnica, como las listas de control, se diseñan con la misma lógica en ambos tipos de deporte.",
+    "justificacion_ca": "Els instruments d'avaluació tècnica, com les llistes de control, es dissenyen amb la mateixa lògica en tots dos tipus d'esport.",
+    "actividades": [
+      {
+        "titulo_es": "Listas de control de la salida de crol y del saque de tenis",
+        "titulo_ca": "Llistes de control de la sortida de crol i del servei de tennis",
+        "contexto_es": "Un club polideportivo quiere un modelo común de evaluación técnica para todas sus escuelas.",
+        "contexto_ca": "Un club poliesportiu vol un model comú d'avaluació tècnica per a totes les seves escoles.",
+        "desarrollo_es": "El alumnado selecciona instrumentos para evaluar la técnica de la salida en natación según los objetivos (1139-6c) y adapta el mismo modelo para el saque de tenis (1141-5b). Los prueba con compañeros y compara su utilidad.",
+        "desarrollo_ca": "L'alumnat selecciona instruments per avaluar la tècnica de la sortida en natació segons els objectius (1139-6c) i adapta el mateix model per al servei de tennis (1141-5b). Els prova amb companys i en compara la utilitat.",
+        "evidencia_es": "Dos listas de control con resultados de prueba.",
+        "evidencia_ca": "Dues llistes de control amb resultats de prova.",
+        "dua_es": "Imágenes de cada fase del gesto.",
+        "dua_ca": "Imatges de cada fase del gest.",
+        "metodologia_es": "evaluación entre iguales.",
+        "metodologia_ca": "avaluació entre iguals."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA4", "criterios": ["f", "e"] },
+    "b": { "modulo": "1141", "ra": "RA3", "criterios": ["f"] },
+    "justificacion_es": "Los soportes informativos y el buen uso del espacio y el material refuerzan el aprendizaje en cualquier sesión deportiva.",
+    "justificacion_ca": "Els suports informatius i el bon ús de l'espai i el material reforcen l'aprenentatge en qualsevol sessió esportiva.",
+    "actividades": [
+      {
+        "titulo_es": "Carteles y vídeos de refuerzo en la sala polivalente",
+        "titulo_ca": "Cartells i vídeos de reforç a la sala polivalent",
+        "contexto_es": "En la sala polivalente se dan clases de gimnasia rítmica y de bádminton, y los alumnos olvidan las correcciones de una semana a otra.",
+        "contexto_ca": "A la sala polivalent es fan classes de gimnàstica rítmica i de bàdminton, i els alumnes obliden les correccions d'una setmana a l'altra.",
+        "desarrollo_es": "El alumnado prevé recursos de refuerzo informativo para la gimnasia rítmica, como fotos de las posiciones o vídeos cortos (1139-4f), y aplica criterios de eficacia y seguridad en el uso de la sala y los aparatos (1139-4e). Diseña también los soportes de refuerzo para el bádminton (1141-3f).",
+        "desarrollo_ca": "L'alumnat preveu recursos de reforç informatiu per a la gimnàstica rítmica, com fotos de les posicions o vídeos curts (1139-4f), i aplica criteris d'eficàcia i seguretat en l'ús de la sala i els aparells (1139-4e). Dissenya també els suports de reforç per al bàdminton (1141-3f).",
+        "evidencia_es": "Carteles y códigos QR con vídeos.",
+        "evidencia_ca": "Cartells i codis QR amb vídeos.",
+        "dua_es": "Soportes visuales y auditivos.",
+        "dua_ca": "Suports visuals i auditius.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA1", "criterios": ["c"] },
+    "b": { "modulo": "1141", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Los factores técnicos y tácticos de cada deporte determinan cómo se integran en las propuestas de enseñanza.",
+    "justificacion_ca": "Els factors tècnics i tàctics de cada esport determinen com s'integren en les propostes d'ensenyament.",
+    "actividades": [
+      {
+        "titulo_es": "Natación y pádel: cuánto pesa la táctica",
+        "titulo_ca": "Natació i pàdel: quant pesa la tàctica",
+        "contexto_es": "Un monitor que viene de la natación empieza a dar clases de pádel y repite las mismas tareas técnicas aisladas.",
+        "contexto_ca": "Un monitor que ve de la natació comença a fer classes de pàdel i repeteix les mateixes tasques tècniques aïllades.",
+        "desarrollo_es": "El alumnado valora cómo inciden los factores físicos, técnicos y tácticos de la natación en sus propuestas de enseñanza (1139-1c). Los compara con el pádel e integra los contenidos técnicos y táctico-estratégicos en una secuencia de tareas con situaciones de juego (1141-3c).",
+        "desarrollo_ca": "L'alumnat valora com incideixen els factors físics, tècnics i tàctics de la natació en les seves propostes d'ensenyament (1139-1c). Els compara amb el pàdel i integra els continguts tècnics i tacticoestratègics en una seqüència de tasques amb situacions de joc (1141-3c).",
+        "evidencia_es": "Comparativa y secuencia de tareas de pádel.",
+        "evidencia_ca": "Comparativa i seqüència de tasques de pàdel.",
+        "dua_es": "Esquema comparativo guiado.",
+        "dua_ca": "Esquema comparatiu guiat.",
+        "metodologia_es": "aprendizaje por comparación.",
+        "metodologia_ca": "aprenentatge per comparació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Los objetivos de una sesión concretan los objetivos de los niveles superiores del programa.",
+    "justificacion_ca": "Els objectius d'una sessió concreten els objectius dels nivells superiors del programa.",
+    "actividades": [
+      {
+        "titulo_es": "De los objetivos del programa a la sesión de gimnasia",
+        "titulo_ca": "Dels objectius del programa a la sessió de gimnàstica",
+        "contexto_es": "La escuela de gimnasia artística tiene un programa anual, pero cada monitor improvisa sus sesiones.",
+        "contexto_ca": "L'escola de gimnàstica artística té un programa anual, però cada monitor improvisa les seves sessions.",
+        "desarrollo_es": "El alumnado establece objetivos en cada nivel de concreción del programa: anual, trimestral y de unidad (1143-2c). A partir de ellos define los objetivos didácticos, los contenidos y la metodología de una sesión de suelo (1139-4a).",
+        "desarrollo_ca": "L'alumnat estableix objectius a cada nivell de concreció del programa: anual, trimestral i d'unitat (1143-2c). A partir d'aquests objectius defineix els objectius didàctics, els continguts i la metodologia d'una sessió de terra (1139-4a).",
+        "evidencia_es": "Cascada de objetivos y ficha de sesión.",
+        "evidencia_ca": "Cascada d'objectius i fitxa de sessió.",
+        "dua_es": "Pirámide de objetivos para completar.",
+        "dua_ca": "Piràmide d'objectius per completar.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA4", "criterios": ["d"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["c"] },
+    "justificacion_es": "Adaptar las tareas motrices exige tener en cuenta el desarrollo motor y la motivación de cada usuario.",
+    "justificacion_ca": "Adaptar les tasques motrius exigeix tenir en compte el desenvolupament motor i la motivació de cada usuari.",
+    "actividades": [
+      {
+        "titulo_es": "Salto de altura para un niño con dispraxia",
+        "titulo_ca": "Salt d'alçada per a un infant amb dispraxia",
+        "contexto_es": "En la escuela de atletismo hay un niño con dispraxia que se frustra en el salto de altura.",
+        "contexto_ca": "A l'escola d'atletisme hi ha un infant amb dispraxia que es frustra al salt d'alçada.",
+        "desarrollo_es": "El alumnado prevé adaptaciones de la tarea según su desarrollo motor, su comprensión y su motivación (1143-4c). Diseña la secuencia adaptada: carrera recta, gomas en lugar de listón y salto a colchoneta (1139-4d).",
+        "desarrollo_ca": "L'alumnat preveu adaptacions de la tasca segons el seu desenvolupament motor, la seva comprensió i la seva motivació (1143-4c). Dissenya la seqüència adaptada: carrera recta, gomes en lloc de llistó i salt a màrfega (1139-4d).",
+        "evidencia_es": "Secuencia adaptada con criterios.",
+        "evidencia_ca": "Seqüència adaptada amb criteris.",
+        "dua_es": "Material blando y metas pequeñas.",
+        "dua_ca": "Material tou i metes petites.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA6", "criterios": ["a"] },
+    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["b"] },
+    "justificacion_es": "Definir los aspectos técnicos significativos es el primer criterio para construir un instrumento de evaluación del aprendizaje.",
+    "justificacion_ca": "Definir els aspectes tècnics significatius és el primer criteri per construir un instrument d'avaluació de l'aprenentatge.",
+    "actividades": [
+      {
+        "titulo_es": "Rúbrica de la voltereta en la escuela de gimnasia",
+        "titulo_ca": "Rúbrica de la tombarella a l'escola de gimnàstica",
+        "contexto_es": "Los monitores de la escuela de gimnasia evalúan la voltereta «a ojo» y cada uno pone notas distintas.",
+        "contexto_ca": "Els monitors de l'escola de gimnàstica avaluen la tombarella «a ull» i cadascun posa notes diferents.",
+        "desarrollo_es": "El alumnado determina los aspectos técnicos significativos de la voltereta: agrupamiento, apoyo de manos y salida (1139-6a). Establece los criterios para elaborar una rúbrica que todos los monitores apliquen igual (1143-5b).",
+        "desarrollo_ca": "L'alumnat determina els aspectes tècnics significatius de la tombarella: agrupament, suport de mans i sortida (1139-6a). Estableix els criteris per elaborar una rúbrica que tots els monitors apliquin igual (1143-5b).",
+        "evidencia_es": "Rúbrica con niveles y ejemplos en vídeo.",
+        "evidencia_ca": "Rúbrica amb nivells i exemples en vídeo.",
+        "dua_es": "Rúbrica con imágenes por nivel.",
+        "dua_ca": "Rúbrica amb imatges per nivell.",
+        "metodologia_es": "diseño colaborativo.",
+        "metodologia_ca": "disseny col·laboratiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA5", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["f"] },
+    "justificacion_es": "La intensidad y la dificultad se adaptan teniendo en cuenta el momento madurativo de cada participante.",
+    "justificacion_ca": "La intensitat i la dificultat s'adapten tenint en compte el moment maduratiu de cada participant.",
+    "actividades": [
+      {
+        "titulo_es": "Natación para niños de tres a seis años",
+        "titulo_ca": "Natació per a infants de tres a sis anys",
+        "contexto_es": "En el curso de natación infantil se mezclan niños de tres años que no se sueltan con otros de seis que ya nadan.",
+        "contexto_ca": "Al curs de natació infantil es mesclen infants de tres anys que no es deixen anar amb altres de sis que ja neden.",
+        "desarrollo_es": "El alumnado valora la necesidad de adecuar la dificultad de las tareas al momento madurativo de cada niño (1143-1f). En la sesión adapta la intensidad y la dificultad variando el espacio, el material y la información que da a cada subgrupo (1139-5c).",
+        "desarrollo_ca": "L'alumnat valora la necessitat d'adequar la dificultat de les tasques al moment maduratiu de cada infant (1143-1f). A la sessió adapta la intensitat i la dificultat variant l'espai, el material i la informació que dona a cada subgrup (1139-5c).",
+        "evidencia_es": "Sesión con tres niveles y registro.",
+        "evidencia_ca": "Sessió amb tres nivells i registre.",
+        "dua_es": "Material de flotación variado y juego simbólico.",
+        "dua_ca": "Material de flotació variat i joc simbòlic.",
+        "metodologia_es": "aprendizaje por juego.",
+        "metodologia_ca": "aprenentatge pel joc."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1143", "ra": "RA3", "criterios": ["d"] },
+    "justificacion_es": "Adaptar espacios y materiales facilita que distintas personas aprendan y participen en la misma sesión.",
+    "justificacion_ca": "Adaptar espais i materials facilita que diferents persones aprenguin i participin a la mateixa sessió.",
+    "actividades": [
+      {
+        "titulo_es": "Tiro con arco accesible en el campamento",
+        "titulo_ca": "Tir amb arc accessible al campament",
+        "contexto_es": "En el campamento de verano hay un chico en silla de ruedas y una niña con baja visión que quieren hacer tiro con arco.",
+        "contexto_ca": "Al campament d'estiu hi ha un jove amb cadira de rodes i una nina amb baixa visió que volen fer tir amb arc.",
+        "desarrollo_es": "El alumnado adapta los espacios y materiales para que todos aprendan, como dianas grandes y de colores, línea de tiro accesible y arcos ligeros (1139-2d). Concreta la organización y los tiempos de práctica según las características de cada participante (1143-3d).",
+        "desarrollo_ca": "L'alumnat adapta els espais i els materials perquè tothom aprengui, com dianes grans i de colors, línia de tir accessible i arcs lleugers (1139-2d). Concreta l'organització i els temps de pràctica segons les característiques de cada participant (1143-3d).",
+        "evidencia_es": "Plano de la zona y ficha de adaptaciones.",
+        "evidencia_ca": "Plànol de la zona i fitxa d'adaptacions.",
+        "dua_es": "Material adaptado para probar.",
+        "dua_ca": "Material adaptat per provar.",
+        "metodologia_es": "aprendizaje inclusivo.",
+        "metodologia_ca": "aprenentatge inclusiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA1", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "Los factores de cada deporte individual orientan los criterios de secuenciación del programa de enseñanza.",
+    "justificacion_ca": "Els factors de cada esport individual orienten els criteris de seqüenciació del programa d'ensenyament.",
+    "actividades": [
+      {
+        "titulo_es": "Orden de los estilos en un programa de natación",
+        "titulo_ca": "Ordre dels estils en un programa de natació",
+        "contexto_es": "Una piscina enseña los cuatro estilos a la vez y los alumnos acaban sin dominar ninguno.",
+        "contexto_ca": "Una piscina ensenya els quatre estils alhora i els alumnes acaben sense dominar-ne cap.",
+        "desarrollo_es": "El alumnado valora cómo inciden los factores físicos y técnicos de cada estilo en la propuesta de enseñanza (1139-1c). Con ello define criterios de secuenciación del programa, como empezar por la flotación y el crol antes de la mariposa (1143-2d).",
+        "desarrollo_ca": "L'alumnat valora com incideixen els factors físics i tècnics de cada estil en la proposta d'ensenyament (1139-1c). Amb això defineix criteris de seqüenciació del programa, com començar per la flotació i el crol abans de la papallona (1143-2d).",
+        "evidencia_es": "Secuencia anual justificada.",
+        "evidencia_ca": "Seqüència anual justificada.",
+        "dua_es": "Vídeos de los estilos.",
+        "dua_ca": "Vídeos dels estils.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA3", "criterios": ["h"] },
+    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["f"] },
+    "justificacion_es": "El análisis de los supuestos de socorrismo necesita espacios para discutir e interpretar los datos recogidos.",
+    "justificacion_ca": "L'anàlisi dels supòsits de socorrisme necessita espais per discutir i interpretar les dades recollides.",
+    "actividades": [
+      {
+        "titulo_es": "Tiempos de respuesta de los socorristas a debate",
+        "titulo_ca": "Temps de resposta dels socorristes a debat",
+        "contexto_es": "Tras diez simulacros en una piscina, los tiempos de llegada a la víctima varían mucho entre socorristas.",
+        "contexto_ca": "Després de deu simulacres en una piscina, els temps d'arribada a la víctima varien molt entre socorristes.",
+        "desarrollo_es": "El alumnado analiza críticamente cada supuesto y propone mejoras justificadas (1139-3h). Concreta las situaciones y los datos que se discutirán en la reunión de evaluación, como los tiempos por puesto o por turno (1143-5f).",
+        "desarrollo_ca": "L'alumnat analitza críticament cada supòsit i proposa millores justificades (1139-3h). Concreta les situacions i les dades que es discutiran a la reunió d'avaluació, com els temps per lloc o per torn (1143-5f).",
+        "evidencia_es": "Tabla de tiempos y guion de discusión.",
+        "evidencia_ca": "Taula de temps i guió de discussió.",
+        "dua_es": "Gráfico de tiempos.",
+        "dua_ca": "Gràfic de temps.",
+        "metodologia_es": "análisis de datos.",
+        "metodologia_ca": "anàlisi de dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA2", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "La organización de las personas en el espacio define el papel que toman el técnico y los usuarios en cada tarea.",
+    "justificacion_ca": "L'organització de les persones a l'espai defineix el paper que prenen el tècnic i els usuaris a cada tasca.",
+    "actividades": [
+      {
+        "titulo_es": "Alumnos ayudantes en la escuela de atletismo",
+        "titulo_ca": "Alumnes ajudants a l'escola d'atletisme",
+        "contexto_es": "El entrenador tiene treinta niños y quiere que los mayores ayuden a los pequeños en algunas estaciones.",
+        "contexto_ca": "L'entrenador té trenta infants i vol que els grans ajudin els petits en algunes estacions.",
+        "desarrollo_es": "El alumnado define la organización de las personas, el material, el tiempo y el espacio en estaciones (1139-2c). Establece el papel del técnico y el de los alumnos ayudantes en cada tarea, como quién demuestra, quién corrige y quién recoge (1143-4e).",
+        "desarrollo_ca": "L'alumnat defineix l'organització de les persones, el material, el temps i l'espai en estacions (1139-2c). Estableix el paper del tècnic i el dels alumnes ajudants a cada tasca, com qui demostra, qui corregeix i qui recull (1143-4e).",
+        "evidencia_es": "Plano de estaciones con roles.",
+        "evidencia_ca": "Plànol d'estacions amb rols.",
+        "dua_es": "Tarjetas de rol con instrucciones.",
+        "dua_ca": "Targetes de rol amb instruccions.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA6", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["d", "c"] },
+    "justificacion_es": "Los datos cuantitativos de los deportes individuales alimentan sistemas de análisis de datos e inteligencia artificial.",
+    "justificacion_ca": "Les dades quantitatives dels esports individuals alimenten sistemes d'anàlisi de dades i intel·ligència artificial.",
+    "actividades": [
+      {
+        "titulo_es": "Miles de tiempos de la liga escolar de natación",
+        "titulo_ca": "Milers de temps de la lliga escolar de natació",
+        "contexto_es": "La federación tiene diez años de tiempos de la liga escolar y quiere predecir el rendimiento de los nadadores.",
+        "contexto_ca": "La federació té deu anys de temps de la lliga escolar i vol predir el rendiment dels nedadors.",
+        "desarrollo_es": "El alumnado selecciona los instrumentos y pruebas que miden los aspectos cuantitativos de la natación (1139-6d). Describe qué características convierten ese conjunto en Big Data (1665-5d) y cómo se relacionan el análisis de datos, el aprendizaje automático y la IA para hacer predicciones (1665-5c).",
+        "desarrollo_ca": "L'alumnat selecciona els instruments i les proves que mesuren els aspectes quantitatius de la natació (1139-6d). Descriu quines característiques converteixen aquest conjunt en Big Data (1665-5d) i com es relacionen l'anàlisi de dades, l'aprenentatge automàtic i la IA per fer prediccions (1665-5c).",
+        "evidencia_es": "Ficha de instrumentos y esquema de relaciones.",
+        "evidencia_ca": "Fitxa d'instruments i esquema de relacions.",
+        "dua_es": "Esquema visual con ejemplos.",
+        "dua_ca": "Esquema visual amb exemples.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["d"] },
+    "justificacion_es": "Los sensores de calidad del agua procesan datos en la red local de la instalación para vigilar su salubridad.",
+    "justificacion_ca": "Els sensors de qualitat de l'aigua processen dades a la xarxa local de la instal·lació per vigilar-ne la salubritat.",
+    "actividades": [
+      {
+        "titulo_es": "Sensores de cloro y pH en la piscina cubierta",
+        "titulo_ca": "Sensors de clor i pH a la piscina coberta",
+        "contexto_es": "La piscina cubierta instala sensores que miden el cloro y el pH y avisan al móvil del socorrista.",
+        "contexto_ca": "La piscina coberta instal·la sensors que mesuren el clor i el pH i avisen al mòbil del socorrista.",
+        "desarrollo_es": "El alumnado define los protocolos de vigilancia y actuación ante un cambio en las condiciones de salubridad del agua (1139-3c). Explica en qué capa de procesamiento, fog o mist, se toman las decisiones de alarma y por qué no se esperan a la nube (1665-3d).",
+        "desarrollo_ca": "L'alumnat defineix els protocols de vigilància i actuació davant un canvi en les condicions de salubritat de l'aigua (1139-3c). Explica en quina capa de processament, fog o mist, es prenen les decisions d'alarma i per què no s'esperen al núvol (1665-3d).",
+        "evidencia_es": "Protocolo de salubridad y esquema del sistema.",
+        "evidencia_ca": "Protocol de salubritat i esquema del sistema.",
+        "dua_es": "Esquema por capas con colores.",
+        "dua_ca": "Esquema per capes amb colors.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["a", "d"] },
+    "justificacion_es": "El análisis de vídeo con inteligencia artificial compara la demostración del técnico con la ejecución del aprendiz.",
+    "justificacion_ca": "L'anàlisi de vídeo amb intel·ligència artificial compara la demostració del tècnic amb l'execució de l'aprenent.",
+    "actividades": [
+      {
+        "titulo_es": "Comparar mi demostración con la del alumno con una aplicación",
+        "titulo_ca": "Comparar la meva demostració amb la de l'alumne amb una aplicació",
+        "contexto_es": "Una escuela de golf usa una aplicación que superpone el swing del alumno al del monitor y detecta diferencias.",
+        "contexto_ca": "Una escola de golf fa servir una aplicació que superposa el swing de l'alumne al del monitor i detecta diferències.",
+        "desarrollo_es": "El alumnado demuestra una acción técnica individual con la calidad suficiente para servir de modelo (1139-5d). Prueba la aplicación, explica cómo la IA automatiza la detección de errores (1665-4a) e identifica otros sectores en los que la IA está más implantada (1665-4d).",
+        "desarrollo_ca": "L'alumnat demostra una acció tècnica individual amb la qualitat suficient per servir de model (1139-5d). Prova l'aplicació, explica com la IA automatitza la detecció d'errors (1665-4a) i identifica altres sectors en què la IA està més implantada (1665-4d).",
+        "evidencia_es": "Vídeo comparado y ficha de la aplicación.",
+        "evidencia_ca": "Vídeo comparat i fitxa de l'aplicació.",
+        "dua_es": "Aplicación gratuita y tutorial.",
+        "dua_ca": "Aplicació gratuïta i tutorial.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA1", "criterios": ["c", "f", "g"] },
+    "justificacion_es": "Controlar los riesgos de una instalación combina la gestión de datos con los equipos técnicos de la planta.",
+    "justificacion_ca": "Controlar els riscs d'una instal·lació combina la gestió de dades amb els equips tècnics de la planta.",
+    "actividades": [
+      {
+        "titulo_es": "Mantenimiento conectado del complejo de piscinas",
+        "titulo_ca": "Manteniment connectat del complex de piscines",
+        "contexto_es": "El complejo de piscinas de Son Hugo quiere conectar su sistema de depuración con el programa de gestión de incidencias.",
+        "contexto_ca": "El complex de piscines de Son Hugo vol connectar el seu sistema de depuració amb el programa de gestió d'incidències.",
+        "desarrollo_es": "El alumnado diseña herramientas para el control permanente de riesgos, material e instalaciones (1139-2e). Diferencia el entorno técnico de las máquinas del entorno de gestión (1665-1c), analiza la importancia de conectarlos (1665-1f) y explica las ventajas de digitalizar el proceso de principio a fin (1665-1g).",
+        "desarrollo_ca": "L'alumnat dissenya eines per al control permanent de riscs, material i instal·lacions (1139-2e). Diferencia l'entorn tècnic de les màquines de l'entorn de gestió (1665-1c), analitza la importància de connectar-los (1665-1f) i explica els avantatges de digitalitzar el procés de principi a fi (1665-1g).",
+        "evidencia_es": "Herramienta de control y esquema de conexión.",
+        "evidencia_ca": "Eina de control i esquema de connexió.",
+        "dua_es": "Glosario técnico ilustrado.",
+        "dua_ca": "Glossari tècnic il·lustrat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA2", "criterios": ["g"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["g"] },
+    "justificacion_es": "El protocolo de seguridad del área de cada técnico forma parte del plan de emergencia de la empresa.",
+    "justificacion_ca": "El protocol de seguretat de l'àrea de cada tècnic forma part del pla d'emergència de l'empresa.",
+    "actividades": [
+      {
+        "titulo_es": "Protocolo de seguridad de la sala de musculación",
+        "titulo_ca": "Protocol de seguretat de la sala de musculació",
+        "contexto_es": "El nuevo gimnasio municipal pide a cada técnico el protocolo de su área para incluirlo en el plan de emergencia.",
+        "contexto_ca": "El nou gimnàs municipal demana a cada tècnic el protocol de la seva àrea per incloure'l al pla d'emergència.",
+        "desarrollo_es": "El alumnado elabora el protocolo de seguridad y prevención de riesgos de la sala de musculación (1139-2g). Valora cómo encaja en el plan preventivo del centro, con la secuencia de actuaciones en caso de emergencia (1709-2g).",
+        "desarrollo_ca": "L'alumnat elabora el protocol de seguretat i prevenció de riscs de la sala de musculació (1139-2g). Valora com encaixa en el pla preventiu del centre, amb la seqüència d'actuacions en cas d'emergència (1709-2g).",
+        "evidencia_es": "Protocolo del área.",
+        "evidencia_ca": "Protocol de l'àrea.",
+        "dua_es": "Plantilla de protocolo.",
+        "dua_ca": "Plantilla de protocol.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA3", "criterios": ["g"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["i", "h"] },
+    "justificacion_es": "Superar las pruebas de socorrismo es un hito con valor profesional y abre itinerarios formativos.",
+    "justificacion_ca": "Superar les proves de socorrisme és una fita amb valor professional i obre itineraris formatius.",
+    "actividades": [
+      {
+        "titulo_es": "Las pruebas de socorrista como paso profesional",
+        "titulo_ca": "Les proves de socorrista com a pas professional",
+        "contexto_es": "Muchos alumnos quieren trabajar de socorristas en verano, pero no saben qué titulación necesitan ni cómo prepararse.",
+        "contexto_ca": "Molts alumnes volen treballar de socorristes a l'estiu, però no saben quina titulació necessiten ni com preparar-se.",
+        "desarrollo_es": "El alumnado entrena y realiza las técnicas de socorrismo con los tiempos exigidos (1139-3g). Valora este logro como hito de su trayectoria con valor profesional (1709-4h) e identifica los itinerarios formativos relacionados, como el socorrismo en espacios naturales (1709-4i).",
+        "desarrollo_ca": "L'alumnat entrena i fa les tècniques de socorrisme amb els temps exigits (1139-3g). Valora aquest èxit com una fita de la seva trajectòria amb valor professional (1709-4h) i identifica els itineraris formatius relacionats, com el socorrisme en espais naturals (1709-4i).",
+        "evidencia_es": "Registro de marcas y mapa de itinerarios.",
+        "evidencia_ca": "Registre de marques i mapa d'itineraris.",
+        "dua_es": "Plan de entrenamiento progresivo.",
+        "dua_ca": "Pla d'entrenament progressiu.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "Los productos químicos del tratamiento del agua son un factor de riesgo laboral para el socorrista.",
+    "justificacion_ca": "Els productes químics del tractament de l'aigua són un factor de risc laboral per al socorrista.",
+    "actividades": [
+      {
+        "titulo_es": "Irritación por cloro en el turno de tarde",
+        "titulo_ca": "Irritació per clor al torn d'horabaixa",
+        "contexto_es": "Los socorristas de una piscina cubierta tienen tos e irritación de ojos por la tarde, cuando hay más bañistas.",
+        "contexto_ca": "Els socorristes d'una piscina coberta tenen tos i irritació d'ulls a l'horabaixa, quan hi ha més banyistes.",
+        "desarrollo_es": "El alumnado define el protocolo de vigilancia y actuación ante el cambio de las condiciones de salubridad del agua y del aire (1139-3c). Identifica la exposición a cloraminas como factor de riesgo, relaciona las condiciones de trabajo con la salud y valora la cultura preventiva (1709-2a).",
+        "desarrollo_ca": "L'alumnat defineix el protocol de vigilància i actuació davant el canvi de les condicions de salubritat de l'aigua i de l'aire (1139-3c). Identifica l'exposició a cloramines com a factor de risc, relaciona les condicions de feina amb la salut i valora la cultura preventiva (1709-2a).",
+        "evidencia_es": "Protocolo y ficha del riesgo químico.",
+        "evidencia_ca": "Protocol i fitxa del risc químic.",
+        "dua_es": "Infografía del riesgo.",
+        "dua_ca": "Infografia del risc.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1139", "ra": "RA1", "criterios": ["f"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "Conocer las condiciones de seguridad de los deportes individuales abre empleo en sectores como el turismo activo o el salvamento.",
+    "justificacion_ca": "Conèixer les condicions de seguretat dels esports individuals obre ocupació en sectors com el turisme actiu o el salvament.",
+    "actividades": [
+      {
+        "titulo_es": "Empleos donde la seguridad es lo primero",
+        "titulo_ca": "Ocupacions on la seguretat és el primer",
+        "contexto_es": "Las empresas de escalada, ciclismo y salvamento piden técnicos que sepan argumentar las condiciones de seguridad a sus clientes.",
+        "contexto_ca": "Les empreses d'escalada, ciclisme i salvament demanen tècnics que sàpiguen argumentar les condicions de seguretat als seus clients.",
+        "desarrollo_es": "El alumnado argumenta las características y condiciones de seguridad de tres deportes individuales: escalada, ciclismo y natación en mar (1139-1f). Analiza las ofertas de empleo de empresas de estos sectores y los requisitos que piden al perfil (1709-1a).",
+        "desarrollo_ca": "L'alumnat argumenta les característiques i les condicions de seguretat de tres esports individuals: escalada, ciclisme i natació a la mar (1139-1f). Analitza les ofertes d'ocupació d'empreses d'aquests sectors i els requisits que demanen al perfil (1709-1a).",
+        "evidencia_es": "Fichas de seguridad y análisis de ofertas.",
+        "evidencia_ca": "Fitxes de seguretat i anàlisi d'ofertes.",
+        "dua_es": "Ofertas seleccionadas.",
+        "dua_ca": "Ofertes seleccionades.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  }
+]

@@ -26,6 +26,7 @@ import { up as runMigration40 } from '../migrations/40_ingest_mapa_cfgs_acondici
 import { up as runMigration41 } from '../migrations/41_ingest_mapa_cfgm_atencion_dependencia_2';
 import { up as runMigration42 } from '../migrations/42_ingest_mapa_cfgm_atencion_dependencia';
 import { up as runMigration43 } from '../migrations/43_ingest_mapa_cfgs_animacion_sociodeportiva_2';
+import { up as runMigration44 } from '../migrations/44_ingest_mapa_cfgs_animacion_sociodeportiva';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
@@ -693,6 +694,33 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.body.map((m: any) => m.code)).toEqual(['1123', '1137', '1140', '1142', '1144', '0179', '1708', '1710']);
       expect(res.body[0].name_es).toBe('Actividades de ocio y tiempo libre');
       expect(res.body[0].name_ca).toBe("Activitats d'oci i temps lliure");
+    });
+
+    it('debería cargar con la migración 44 el 1.º de Animación Sociodeportiva sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2', order: 0, code: '1123', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration44();
+      await runMigration44();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2' })).toBe(1);
+      await expectBidirectionalMap('CFGS_ANIMACION_SOCIODEPORTIVA', 8, 384, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = ASD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_ANIMACION_SOCIODEPORTIVA');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1124', '1136', '1138', '1139', '1141', '1143', '1665', '1709']);
+      expect(res.body[0].name_es).toBe('Dinamización grupal');
+      expect(res.body[0].name_ca).toBe('Dinamització grupal');
     });
   });
 });

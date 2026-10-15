@@ -126,8 +126,8 @@ export const buildFilterIndex = (entries: { module: FilterModule; item: FilterIt
 export const getFilterIndex = async (_req: any, res: Response) => {
   try {
     const [ras, ces, usedModules, usedItems] = await Promise.all([
-      RA.find().select('-criterios_es -criterios_ca').lean(),
-      CE.find(),
+      RA.find().select('-criterios_es -criterios_ca').sort({ _id: 1 }).lean(),
+      CE.find().sort({ _id: 1 }),
       Project.distinct('modules'),
       Project.distinct('ras'),
     ]);

@@ -1,0 +1,596 @@
+[
+  {
+    "a": { "modulo": "1337", "ra": "RA4", "criterios": ["b", "d"] },
+    "b": { "modulo": "1339", "ra": "RA5", "criterios": ["f"] },
+    "justificacion_es": "Las habilidades para resolver incidencias en un descenso con cuerda dependen de la preparación física del guía.",
+    "justificacion_ca": "Les habilitats per resoldre incidències en un descens amb corda depenen de la preparació física del guia.",
+    "actividades": [
+      {
+        "titulo_es": "Entrenarse para rescatar a alguien bloqueado en la cuerda",
+        "titulo_ca": "Entrenar-se per rescatar algú bloquejat a la corda",
+        "contexto_es": "En un descenso, un participante se queda colgado a mitad de rápel y el guía tiene que subir a ayudarle.",
+        "contexto_ca": "En un descens, un participant es queda penjat a mig ràpel i el guia ha de pujar a ajudar-lo.",
+        "desarrollo_es": "El alumnado determina las habilidades necesarias para solventar incidencias en un descenso por cuerda (1339-5f). Valora las capacidades físicas que exigen los rescates terrestres (1337-4b) y adopta un plan de autoentrenamiento para ellos (1337-4d).",
+        "desarrollo_ca": "L'alumnat determina les habilitats necessàries per resoldre incidències en un descens per corda (1339-5f). Valora les capacitats físiques que exigeixen els rescats terrestres (1337-4b) i adopta un pla d'autoentrenament per a aquests rescats (1337-4d).",
+        "evidencia_es": "Plan de entrenamiento específico.",
+        "evidencia_ca": "Pla d'entrenament específic.",
+        "dua_es": "Ejercicios con varios niveles.",
+        "dua_ca": "Exercicis amb diversos nivells.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1339", "ra": "RA2", "criterios": ["c", "d"] },
+    "justificacion_es": "Los fenómenos del medio fluvial pueden causar hipotermia y ahogamiento, que hay que prevenir y atender.",
+    "justificacion_ca": "Els fenòmens del medi fluvial poden causar hipotèrmia i ofegament, que cal prevenir i atendre.",
+    "actividades": [
+      {
+        "titulo_es": "Hipotermia en un barranco acuático de primavera",
+        "titulo_ca": "Hipotèrmia en un barranc aquàtic de primavera",
+        "contexto_es": "En marzo, el agua del barranco está a doce grados y una participante empieza a tiritar sin control.",
+        "contexto_ca": "Al març, l'aigua del barranc és a dotze graus i una participant comença a tremolar sense control.",
+        "desarrollo_es": "El alumnado identifica la dinámica del agua en los fenómenos fluviales, como rebufos o sifones (1339-2c), y las técnicas preventivas y operativas para cada uno (1339-2d). Aplica en simulación los primeros auxilios ante la hipotermia como lesión por agente físico (1337-2e).",
+        "desarrollo_ca": "L'alumnat identifica la dinàmica de l'aigua en els fenòmens fluvials, com rebufs o sifons (1339-2c), i les tècniques preventives i operatives per a cadascun (1339-2d). Aplica en simulació els primers auxilis davant la hipotèrmia com a lesió per agent físic (1337-2e).",
+        "evidencia_es": "Ficha de fenómenos y protocolo de hipotermia.",
+        "evidencia_ca": "Fitxa de fenòmens i protocol d'hipotèrmia.",
+        "dua_es": "Esquemas de fenómenos fluviales.",
+        "dua_ca": "Esquemes de fenòmens fluvials.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA1", "criterios": ["g", "b"] },
+    "b": { "modulo": "1339", "ra": "RA5", "criterios": ["a"] },
+    "justificacion_es": "El protocolo de seguridad de una actividad de cuerdas incluye cómo valorar y priorizar a los heridos.",
+    "justificacion_ca": "El protocol de seguretat d'una activitat de cordes inclou com valorar i prioritzar els ferits.",
+    "actividades": [
+      {
+        "titulo_es": "Dos heridos en la vía ferrata",
+        "titulo_ca": "Dos ferits a la via ferrada",
+        "contexto_es": "En una vía ferrata, una piedra golpea a un participante y otro se corta la mano al intentar ayudarle.",
+        "contexto_ca": "En una via ferrada, una pedra colpeja un participant i un altre es talla la mà en intentar ajudar-lo.",
+        "desarrollo_es": "El alumnado sigue el protocolo específico de prevención y seguridad de la vía ferrata (1339-5a). Aplica la valoración inicial de los heridos (1337-1b) y determina las prioridades de actuación según la gravedad (1337-1g).",
+        "desarrollo_ca": "L'alumnat segueix el protocol específic de prevenció i seguretat de la via ferrada (1339-5a). Aplica la valoració inicial dels ferits (1337-1b) i determina les prioritats d'actuació segons la gravetat (1337-1g).",
+        "evidencia_es": "Registro del simulacro.",
+        "evidencia_ca": "Registre del simulacre.",
+        "dua_es": "Tarjetas de víctimas.",
+        "dua_ca": "Targetes de víctimes.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1339", "ra": "RA4", "criterios": ["d"] },
+    "justificacion_es": "Las técnicas de autoprotección se aplican al manipular a un usuario accidentado en una instalación de aventura.",
+    "justificacion_ca": "Les tècniques d'autoprotecció s'apliquen en manipular un usuari accidentat en una instal·lació d'aventura.",
+    "actividades": [
+      {
+        "titulo_es": "Bajar a un usuario herido de una plataforma",
+        "titulo_ca": "Baixar un usuari ferit d'una plataforma",
+        "contexto_es": "Un usuario se lesiona el hombro en una plataforma a ocho metros de altura del parque de aventura.",
+        "contexto_ca": "Un usuari es lesiona l'espatla en una plataforma a vuit metres d'altura del parc d'aventura.",
+        "desarrollo_es": "Con el usuario en la plataforma, el alumnado aplica el protocolo de colocación de los equipos de seguridad del usuario y los suyos propios (1339-4d). Aplica las técnicas de autoprotección al manipular y descender al accidentado (1337-1e).",
+        "desarrollo_ca": "Amb l'usuari a la plataforma, l'alumnat aplica el protocol de col·locació dels equips de seguretat de l'usuari i els seus propis (1339-4d). Aplica les tècniques d'autoprotecció en manipular i davallar l'accidentat (1337-1e).",
+        "evidencia_es": "Lista de verificación del rescate.",
+        "evidencia_ca": "Llista de verificació del rescat.",
+        "dua_es": "Práctica a baja altura.",
+        "dua_ca": "Pràctica a poca altura.",
+        "metodologia_es": "práctica guiada.",
+        "metodologia_ca": "pràctica guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA1", "criterios": ["c", "d"] },
+    "b": { "modulo": "1339", "ra": "RA3", "criterios": ["f"] },
+    "justificacion_es": "Señalar las zonas de peligro durante la progresión ayuda a prevenir situaciones de riesgo vital.",
+    "justificacion_ca": "Assenyalar les zones de perill durant la progressió ajuda a prevenir situacions de risc vital.",
+    "actividades": [
+      {
+        "titulo_es": "Zonas de peligro en la cresta del Puig de Galatzó",
+        "titulo_ca": "Zones de perill a la cresta del Puig de Galatzó",
+        "contexto_es": "En una ascensión con pasos de escalada, varios participantes se acercan demasiado al borde.",
+        "contexto_ca": "En una ascensió amb passos d'escalada, diversos participants s'acosten massa a la vora.",
+        "desarrollo_es": "El alumnado indica durante la progresión las zonas de peligro del terreno (1339-3f). Valora qué situaciones podrían suponer un riesgo vital y qué actuaciones conllevan (1337-1c), y distingue qué no debe hacer como primer interviniente ante una caída grave (1337-1d).",
+        "desarrollo_ca": "L'alumnat indica durant la progressió les zones de perill del terreny (1339-3f). Valora quines situacions podrien suposar un risc vital i quines actuacions comporten (1337-1c), i distingeix què no ha de fer com a primer intervinent davant una caiguda greu (1337-1d).",
+        "evidencia_es": "Mapa de la ruta con zonas de riesgo.",
+        "evidencia_ca": "Mapa de la ruta amb zones de risc.",
+        "dua_es": "Fotografías del recorrido.",
+        "dua_ca": "Fotografies del recorregut.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA2", "criterios": ["g"] },
+    "b": { "modulo": "1339", "ra": "RA4", "criterios": ["h"] },
+    "justificacion_es": "Un bloqueo por miedo en una instalación de aventura es una crisis de ansiedad que hay que saber controlar.",
+    "justificacion_ca": "Un bloqueig per por en una instal·lació d'aventura és una crisi d'ansietat que cal saber controlar.",
+    "actividades": [
+      {
+        "titulo_es": "Crisis de pánico en la tirolina",
+        "titulo_ca": "Crisi de pànic a la tirolina",
+        "contexto_es": "Una adolescente se bloquea en la plataforma de salida de la tirolina, llora y no quiere ni avanzar ni volver.",
+        "contexto_ca": "Una adolescent es bloqueja a la plataforma de sortida de la tirolina, plora i no vol ni avançar ni tornar.",
+        "desarrollo_es": "El alumnado explica las medidas ante situaciones de bloqueo o fatiga en una instalación de aventura (1339-4h). Especifica las técnicas para controlar la ansiedad y la angustia de la usuaria, como la respiración guiada y las opciones de salida (1337-2g).",
+        "desarrollo_ca": "L'alumnat explica les mesures davant situacions de bloqueig o fatiga en una instal·lació d'aventura (1339-4h). Especifica les tècniques per controlar l'ansietat i l'angoixa de la usuària, com la respiració guiada i les opcions de sortida (1337-2g).",
+        "evidencia_es": "Protocolo ante bloqueos.",
+        "evidencia_ca": "Protocol davant bloquejos.",
+        "dua_es": "Guion de frases tranquilizadoras.",
+        "dua_ca": "Guió de frases tranquil·litzadores.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA2", "criterios": ["f"] },
+    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["c", "k", "m"] },
+    "justificacion_es": "Atender a un turista accidentado exige comunicarse en inglés y pedir aclaraciones cuando no se entiende.",
+    "justificacion_ca": "Atendre un turista accidentat exigeix comunicar-se en anglès i demanar aclariments quan no s'entén.",
+    "actividades": [
+      {
+        "titulo_es": "Atender en inglés a un senderista herido",
+        "titulo_ca": "Atendre en anglès un excursionista ferit",
+        "contexto_es": "Un senderista escocés se ha caído en el camino de Sa Calobra y está asustado.",
+        "contexto_ca": "Un excursionista escocès ha caigut al camí de sa Calobra i està espantat.",
+        "desarrollo_es": "El alumnado describe estrategias de comunicación con el accidentado según su estado emocional (1337-2f). En inglés describe lo ocurrido, un hecho imprevisto (0156-3c), se comunica de forma espontánea y con la formalidad adecuada (0156-3k) y pide que repita lo que no entiende por su acento (0156-3m).",
+        "desarrollo_ca": "L'alumnat descriu estratègies de comunicació amb l'accidentat segons el seu estat emocional (1337-2f). En anglès descriu el que ha passat, un fet imprevist (0156-3c), es comunica de manera espontània i amb la formalitat adequada (0156-3k) i demana que repeteixi el que no entén pel seu accent (0156-3m).",
+        "evidencia_es": "Grabación del rol en inglés.",
+        "evidencia_ca": "Enregistrament del rol en anglès.",
+        "dua_es": "Frases de primeros auxilios en inglés.",
+        "dua_ca": "Frases de primers auxilis en anglès.",
+        "metodologia_es": "juego de rol en inglés.",
+        "metodologia_ca": "joc de rol en anglès."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA5", "criterios": ["g"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["g", "b"] },
+    "justificacion_es": "Las conductas peligrosas en una playa turística obligan a dar y entender instrucciones en inglés.",
+    "justificacion_ca": "Les conductes perilloses en una platja turística obliguen a donar i entendre instruccions en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Bañistas saltando desde las rocas",
+        "titulo_ca": "Banyistes saltant des de les roques",
+        "contexto_es": "Un grupo de turistas salta desde unas rocas prohibidas y discute con el socorrista en inglés.",
+        "contexto_ca": "Un grup de turistes salta des d'unes roques prohibides i discuteix amb el socorrista en anglès.",
+        "desarrollo_es": "Desde la torre de vigilancia, el alumnado activa el protocolo de actuación ante conductas peligrosas de los usuarios (1337-5g). Reconoce las instrucciones orales del coordinador por radio y si piden respuesta verbal o no (0156-1g), e identifica el hilo argumental y los roles en la discusión con los turistas (0156-1b).",
+        "desarrollo_ca": "Des de la torre de vigilància, l'alumnat activa el protocol d'actuació davant conductes perilloses dels usuaris (1337-5g). Reconeix les instruccions orals del coordinador per ràdio i si demanen resposta verbal o no (0156-1g), i identifica el fil argumental i els rols en la discussió amb els turistes (0156-1b).",
+        "evidencia_es": "Registro del incidente.",
+        "evidencia_ca": "Registre de l'incident.",
+        "dua_es": "Grabación de la conversación.",
+        "dua_ca": "Enregistrament de la conversa.",
+        "metodologia_es": "simulación auditiva.",
+        "metodologia_ca": "simulació auditiva."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA5", "criterios": ["f"] },
+    "b": { "modulo": "0156", "ra": "RA2", "criterios": ["i", "c"] },
+    "justificacion_es": "Los datos sobre ahogamientos se publican en informes internacionales en inglés.",
+    "justificacion_ca": "Les dades sobre ofegaments es publiquen en informes internacionals en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Informe mundial sobre ahogamientos",
+        "titulo_ca": "Informe mundial sobre ofegaments",
+        "contexto_es": "Una organización internacional publica en inglés un informe sobre ahogamientos en playas europeas.",
+        "contexto_ca": "Una organització internacional publica en anglès un informe sobre ofegaments a platges europees.",
+        "desarrollo_es": "El alumnado relaciona el informe con el ámbito del socorrismo (0156-2c) y extrae información específica, como las causas y los perfiles de las víctimas (0156-2i). Con ello valora los datos de accidentes en las playas de las Illes Balears y analiza sus causas (1337-5f).",
+        "desarrollo_ca": "L'alumnat relaciona l'informe amb l'àmbit del socorrisme (0156-2c) i extreu informació específica, com les causes i els perfils de les víctimes (0156-2i). Amb això valora les dades d'accidents a les platges de les Illes Balears i n'analitza les causes (1337-5f).",
+        "evidencia_es": "Resumen comparado de datos.",
+        "evidencia_ca": "Resum comparat de dades.",
+        "dua_es": "Gráficos del informe destacados.",
+        "dua_ca": "Gràfics de l'informe destacats.",
+        "metodologia_es": "lectura guiada en inglés.",
+        "metodologia_ca": "lectura guiada en anglès."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA7", "criterios": ["c"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["c", "d"] },
+    "justificacion_es": "En rescates con equipos internacionales, la comunicación por radio puede ser en inglés.",
+    "justificacion_ca": "En rescats amb equips internacionals, la comunicació per ràdio pot ser en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Mensajes de radio en inglés durante un rescate",
+        "titulo_ca": "Missatges de ràdio en anglès durant un rescat",
+        "contexto_es": "Un velero extranjero avisa por radio en inglés de un hombre al agua cerca de la embarcación de rescate.",
+        "contexto_ca": "Un veler estranger avisa per ràdio en anglès d'un home a l'aigua prop de l'embarcació de rescat.",
+        "desarrollo_es": "El alumnado reconoce la finalidad del mensaje de radio (0156-1c) y extrae la información específica, como posición y número de personas (0156-1d). Sigue los procedimientos de comunicación y coordinación con el resto del equipo desde la embarcación (1337-7c).",
+        "desarrollo_ca": "L'alumnat reconeix la finalitat del missatge de ràdio (0156-1c) i n'extreu la informació específica, com la posició i el nombre de persones (0156-1d). Segueix els procediments de comunicació i coordinació amb la resta de l'equip des de l'embarcació (1337-7c).",
+        "evidencia_es": "Hoja de registro del mensaje.",
+        "evidencia_ca": "Full de registre del missatge.",
+        "dua_es": "Alfabeto fonético internacional.",
+        "dua_ca": "Alfabet fonètic internacional.",
+        "metodologia_es": "simulación auditiva.",
+        "metodologia_ca": "simulació auditiva."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA1", "criterios": ["b"] },
+    "b": { "modulo": "0156", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "La valoración inicial de un accidentado extranjero se recoge en un parte que puede requerirse en inglés.",
+    "justificacion_ca": "La valoració inicial d'un accidentat estranger es recull en un comunicat que es pot requerir en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Parte de accidente en inglés para la aseguradora",
+        "titulo_ca": "Comunicat d'accident en anglès per a l'asseguradora",
+        "contexto_es": "La aseguradora de un turista británico pide un parte en inglés del accidente que sufrió en una ruta.",
+        "contexto_ca": "L'asseguradora d'un turista britànic demana un comunicat en anglès de l'accident que va patir en una ruta.",
+        "desarrollo_es": "El alumnado sigue las pautas de valoración inicial del accidentado según el protocolo (1337-1b). Cumplimenta el parte en inglés con las fórmulas y el vocabulario específicos (0156-4e).",
+        "desarrollo_ca": "L'alumnat segueix les pautes de valoració inicial de l'accidentat segons el protocol (1337-1b). Emplena el comunicat en anglès amb les fórmules i el vocabulari específics (0156-4e).",
+        "evidencia_es": "Parte de accidente cumplimentado.",
+        "evidencia_ca": "Comunicat d'accident emplenat.",
+        "dua_es": "Modelo de parte bilingüe.",
+        "dua_ca": "Model de comunicat bilingüe.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA6", "criterios": ["a"] },
+    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["g", "i"] },
+    "justificacion_es": "Explicar en inglés el desarrollo de un simulacro es útil en equipos de salvamento con personal extranjero.",
+    "justificacion_ca": "Explicar en anglès el desenvolupament d'un simulacre és útil en equips de salvament amb personal estranger.",
+    "actividades": [
+      {
+        "titulo_es": "Simulacro conjunto con socorristas británicos",
+        "titulo_ca": "Simulacre conjunt amb socorristes britànics",
+        "contexto_es": "Un club de salvamento británico hace un intercambio con un club de Alcúdia y participa en un simulacro.",
+        "contexto_ca": "Un club de salvament britànic fa un intercanvi amb un club d'Alcúdia i participa en un simulacre.",
+        "desarrollo_es": "El alumnado desempeña su función en el simulacro de rescate (1337-6a). Describe y secuencia en inglés el proceso (0156-3g) e intercambia información con los socorristas británicos por radio y en persona (0156-3i).",
+        "desarrollo_ca": "L'alumnat exerceix la seva funció en el simulacre de rescat (1337-6a). Descriu i seqüencia en anglès el procés (0156-3g) i intercanvia informació amb els socorristes britànics per ràdio i en persona (0156-3i).",
+        "evidencia_es": "Grabación de la explicación.",
+        "evidencia_ca": "Enregistrament de l'explicació.",
+        "dua_es": "Vocabulario de salvamento.",
+        "dua_ca": "Vocabulari de salvament.",
+        "metodologia_es": "simulación profesional.",
+        "metodologia_ca": "simulació professional."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "0156", "ra": "RA2", "criterios": ["b", "d"] },
+    "justificacion_es": "Las novedades sobre entrenamiento se publican en artículos en inglés que hay que leer comprensivamente.",
+    "justificacion_ca": "Les novetats sobre entrenament es publiquen en articles en anglès que cal llegir comprensivament.",
+    "actividades": [
+      {
+        "titulo_es": "Artículo en inglés sobre entrenamiento de socorristas",
+        "titulo_ca": "Article en anglès sobre entrenament de socorristes",
+        "contexto_es": "Una federación internacional de salvamento publica recomendaciones de entrenamiento complementario.",
+        "contexto_ca": "Una federació internacional de salvament publica recomanacions d'entrenament complementari.",
+        "desarrollo_es": "El alumnado lee de forma comprensiva el texto (0156-2b) y reconoce sus ideas principales sin entender cada palabra (0156-2d). Argumenta qué medidas complementarias propone para mejorar la eficacia del entrenamiento (1337-4e).",
+        "desarrollo_ca": "L'alumnat llegeix de manera comprensiva el text (0156-2b) i en reconeix les idees principals sense entendre cada paraula (0156-2d). Argumenta quines mesures complementàries proposa per millorar l'eficàcia de l'entrenament (1337-4e).",
+        "evidencia_es": "Resumen y propuesta de medidas.",
+        "evidencia_ca": "Resum i proposta de mesures.",
+        "dua_es": "Texto con glosario al margen.",
+        "dua_ca": "Text amb glossari al marge.",
+        "metodologia_es": "lectura guiada en inglés.",
+        "metodologia_ca": "lectura guiada en anglès."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["i"] },
+    "justificacion_es": "La entonación y los gestos ayudan a interpretar el estado emocional y a transmitir calma.",
+    "justificacion_ca": "L'entonació i els gests ajuden a interpretar l'estat emocional i a transmetre calma.",
+    "actividades": [
+      {
+        "titulo_es": "Leer el miedo en la voz de un turista",
+        "titulo_ca": "Llegir la por a la veu d'un turista",
+        "contexto_es": "Un turista dice en inglés que está bien, pero su voz y sus gestos indican lo contrario.",
+        "contexto_ca": "Un turista diu en anglès que està bé, però la seva veu i els seus gests indiquen el contrari.",
+        "desarrollo_es": "El alumnado analiza la entonación y los elementos visuales para identificar las intenciones y emociones del turista (0156-1i). Valora la importancia del autocontrol y de transmitirle confianza durante toda la actuación (1337-3a).",
+        "desarrollo_ca": "L'alumnat analitza l'entonació i els elements visuals per identificar les intencions i les emocions del turista (0156-1i). Valora la importància de l'autocontrol i de transmetre-li confiança durant tota l'actuació (1337-3a).",
+        "evidencia_es": "Análisis de vídeo.",
+        "evidencia_ca": "Anàlisi de vídeo.",
+        "dua_es": "Vídeos con pausas guiadas.",
+        "dua_ca": "Vídeos amb pauses guiades.",
+        "metodologia_es": "aprendizaje por observación.",
+        "metodologia_ca": "aprenentatge per observació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA5", "criterios": ["h"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["c", "d"] },
+    "justificacion_es": "La fauna y la flora de la zona de baño sufren impactos que también afectan a los bañistas y al turismo.",
+    "justificacion_ca": "La fauna i la flora de la zona de bany pateixen impactes que també afecten els banyistes i el turisme.",
+    "actividades": [
+      {
+        "titulo_es": "Medusas y posidonia en la playa de Es Trenc",
+        "titulo_ca": "Meduses i posidònia a la platja des Trenc",
+        "contexto_es": "En verano aumentan las medusas y algunos visitantes piden retirar la posidonia de la orilla.",
+        "contexto_ca": "A l'estiu augmenten les meduses i alguns visitants demanen retirar la posidònia de la vorera.",
+        "desarrollo_es": "El alumnado aplica los protocolos de análisis de la fauna y la flora de la zona de baño (1337-5h). Analiza el efecto de estos impactos sobre las personas y el turismo (1708-2c) e identifica medidas para minimizarlos, como informar sobre el valor de la posidonia (1708-2d).",
+        "desarrollo_ca": "L'alumnat aplica els protocols d'anàlisi de la fauna i la flora de la zona de bany (1337-5h). Analitza l'efecte d'aquests impactes sobre les persones i el turisme (1708-2c) i identifica mesures per minimitzar-los, com informar sobre el valor de la posidònia (1708-2d).",
+        "evidencia_es": "Cartel informativo para la playa.",
+        "evidencia_ca": "Cartell informatiu per a la platja.",
+        "dua_es": "Fotografías de especies.",
+        "dua_ca": "Fotografies d'espècies.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1708", "ra": "RA3", "criterios": ["a"] },
+    "justificacion_es": "La gestión segura de las zonas de baño se relaciona con los ODS de salud y de vida submarina.",
+    "justificacion_ca": "La gestió segura de les zones de bany es relaciona amb els ODS de salut i de vida submarina.",
+    "actividades": [
+      {
+        "titulo_es": "Las zonas de baño y los ODS",
+        "titulo_ca": "Les zones de bany i els ODS",
+        "contexto_es": "El ayuntamiento quiere optar a una bandera azul y pide al servicio de socorrismo un informe.",
+        "contexto_ca": "L'ajuntament vol optar a una bandera blava i demana al servei de socorrisme un informe.",
+        "desarrollo_es": "El alumnado comprueba las condiciones que deben cumplir la zona de baño y la de vigilancia (1337-5a). Identifica qué ODS son más relevantes para su actividad profesional, como el 3 y el 14 (1708-3a).",
+        "desarrollo_ca": "L'alumnat comprova les condicions que han de complir la zona de bany i la de vigilància (1337-5a). Identifica quins ODS són més rellevants per a la seva activitat professional, com el 3 i el 14 (1708-3a).",
+        "evidencia_es": "Informe para la candidatura.",
+        "evidencia_ca": "Informe per a la candidatura.",
+        "dua_es": "Lista de ODS con iconos.",
+        "dua_ca": "Llista d'ODS amb icones.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA4", "criterios": ["f"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "Planificar la comida y el agua de una ruta permite evaluar y reducir su impacto ambiental.",
+    "justificacion_ca": "Planificar el menjar i l'aigua d'una ruta permet avaluar i reduir-ne l'impacte ambiental.",
+    "actividades": [
+      {
+        "titulo_es": "Avituallamiento sin plástico para una travesía",
+        "titulo_ca": "Avituallament sense plàstic per a una travessia",
+        "contexto_es": "En una travesía de tres días, el grupo genera dos bolsas de envases al día.",
+        "contexto_ca": "En una travessia de tres dies, el grup genera dues bosses d'envasos al dia.",
+        "desarrollo_es": "El alumnado estima la comida y la hidratación necesarias según el itinerario (1337-4f). Evalúa el impacto de esas decisiones y propone alternativas como envases reutilizables y compra a granel (1708-5d).",
+        "desarrollo_ca": "L'alumnat estima el menjar i la hidratació necessaris segons l'itinerari (1337-4f). Avalua l'impacte d'aquestes decisions i proposa alternatives com envasos reutilitzables i compra a granel (1708-5d).",
+        "evidencia_es": "Plan de avituallamiento con cálculo de residuos.",
+        "evidencia_ca": "Pla d'avituallament amb càlcul de residus.",
+        "dua_es": "Calculadora de raciones.",
+        "dua_ca": "Calculadora de racions.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1708", "ra": "RA4", "criterios": ["d"] },
+    "justificacion_es": "Los materiales de salvamento pueden diseñarse con criterios de ecodiseño sin perder eficacia.",
+    "justificacion_ca": "Els materials de salvament es poden dissenyar amb criteris d'ecodisseny sense perdre eficàcia.",
+    "actividades": [
+      {
+        "titulo_es": "Tubos de rescate de material reciclado",
+        "titulo_ca": "Tubs de rescat de material reciclat",
+        "contexto_es": "Un fabricante ofrece tubos de rescate hechos con plástico recuperado del mar.",
+        "contexto_ca": "Un fabricant ofereix tubs de rescat fets amb plàstic recuperat de la mar.",
+        "desarrollo_es": "El alumnado selecciona los materiales adecuados para distintas intervenciones de rescate (1337-6c). Aplica principios de ecodiseño para valorar el nuevo tubo y propone mejoras (1708-4d).",
+        "desarrollo_ca": "L'alumnat selecciona els materials adequats per a diferents intervencions de rescat (1337-6c). Aplica principis d'ecodisseny per valorar el nou tub i proposa millores (1708-4d).",
+        "evidencia_es": "Ficha de valoración del material.",
+        "evidencia_ca": "Fitxa de valoració del material.",
+        "dua_es": "Material real para probar.",
+        "dua_ca": "Material real per provar.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA7", "criterios": ["a"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["i"] },
+    "justificacion_es": "Las embarcaciones de rescate deben cumplir la normativa ambiental de las zonas protegidas.",
+    "justificacion_ca": "Les embarcacions de rescat han de complir la normativa ambiental de les zones protegides.",
+    "actividades": [
+      {
+        "titulo_es": "Navegar en la reserva marina sin dañar el fondo",
+        "titulo_ca": "Navegar a la reserva marina sense danyar el fons",
+        "contexto_es": "El servicio de rescate debe operar dentro de una reserva marina con restricciones de velocidad y fondeo.",
+        "contexto_ca": "El servei de rescat ha d'operar dins una reserva marina amb restriccions de velocitat i fondeig.",
+        "desarrollo_es": "El alumnado relaciona las características de las embarcaciones con su uso en rescates (1337-7a). Aplica la normativa ambiental de la reserva en los protocolos del servicio (1708-5i).",
+        "desarrollo_ca": "L'alumnat relaciona les característiques de les embarcacions amb el seu ús en rescats (1337-7a). Aplica la normativa ambiental de la reserva als protocols del servei (1708-5i).",
+        "evidencia_es": "Protocolo adaptado a la reserva.",
+        "evidencia_ca": "Protocol adaptat a la reserva.",
+        "dua_es": "Mapa de la reserva con zonas marcadas.",
+        "dua_ca": "Mapa de la reserva amb zones marcades.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA5", "criterios": ["e"] },
+    "b": { "modulo": "1708", "ra": "RA6", "criterios": ["a", "b"] },
+    "justificacion_es": "La seguridad de una playa interesa a muchos grupos de interés con expectativas distintas.",
+    "justificacion_ca": "La seguretat d'una platja interessa molts grups d'interès amb expectatives diferents.",
+    "actividades": [
+      {
+        "titulo_es": "Quién se juega algo en la seguridad de la playa",
+        "titulo_ca": "Qui s'hi juga alguna cosa en la seguretat de la platja",
+        "contexto_es": "La empresa de socorrismo de una playa urbana prepara su primer informe de sostenibilidad.",
+        "contexto_ca": "L'empresa de socorrisme d'una platja urbana prepara el seu primer informe de sostenibilitat.",
+        "desarrollo_es": "El alumnado sigue el protocolo de seguridad y prevención de riesgos de su área (1337-5e). Identifica los grupos de interés del servicio (1708-6a) y analiza los aspectos ambientales, sociales y de gobernanza que les importan (1708-6b).",
+        "desarrollo_ca": "L'alumnat segueix el protocol de seguretat i prevenció de riscs de la seva àrea (1337-5e). Identifica els grups d'interès del servei (1708-6a) i analitza els aspectes ambientals, socials i de governança que els importen (1708-6b).",
+        "evidencia_es": "Mapa de grupos de interés.",
+        "evidencia_ca": "Mapa de grups d'interès.",
+        "dua_es": "Plantilla de mapa con ejemplos.",
+        "dua_ca": "Plantilla de mapa amb exemples.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "El calentamiento del mar cambia los riesgos del medio, como las picaduras, y es uno de los grandes retos ambientales.",
+    "justificacion_ca": "L'escalfament de la mar canvia els riscs del medi, com les picades, i és un dels grans reptes ambientals.",
+    "actividades": [
+      {
+        "titulo_es": "Más picaduras con el mar más caliente",
+        "titulo_ca": "Més picades amb la mar més calenta",
+        "contexto_es": "Los socorristas registran cada año más picaduras de medusa y de pez araña.",
+        "contexto_ca": "Els socorristes registren cada any més picades de medusa i d'aranya de mar.",
+        "desarrollo_es": "El alumnado indica las causas, síntomas, actuación y prevención de las picaduras más frecuentes en el mar (1337-2d). Identifica el calentamiento global como uno de los principales retos ambientales que explica el cambio (1708-2a).",
+        "desarrollo_ca": "L'alumnat indica les causes, els símptomes, l'actuació i la prevenció de les picades més freqüents a la mar (1337-2d). Identifica l'escalfament global com un dels principals reptes ambientals que expliquen el canvi (1708-2a).",
+        "evidencia_es": "Ficha de actuación y gráfico de tendencia.",
+        "evidencia_ca": "Fitxa d'actuació i gràfic de tendència.",
+        "dua_es": "Datos en gráfico.",
+        "dua_ca": "Dades en gràfic.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA5", "criterios": ["b"] },
+    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Las actitudes y aptitudes del socorrista son las que se valoran en los procesos selectivos del sector.",
+    "justificacion_ca": "Les actituds i aptituds del socorrista són les que es valoren en els processos selectius del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Superar la selección de socorristas de temporada",
+        "titulo_ca": "Superar la selecció de socorristes de temporada",
+        "contexto_es": "Una empresa de salvamento hace una selección con pruebas físicas, supuestos prácticos y entrevista.",
+        "contexto_ca": "Una empresa de salvament fa una selecció amb proves físiques, supòsits pràctics i entrevista.",
+        "desarrollo_es": "El alumnado analiza las actitudes, aptitudes y funciones del socorrista y su responsabilidad (1337-5b). Valora cuáles le permiten superar procesos selectivos públicos y privados del sector (1710-1c).",
+        "desarrollo_ca": "L'alumnat analitza les actituds, aptituds i funcions del socorrista i la seva responsabilitat (1337-5b). Valora quines li permeten superar processos selectius públics i privats del sector (1710-1c).",
+        "evidencia_es": "Plan de preparación personal.",
+        "evidencia_ca": "Pla de preparació personal.",
+        "dua_es": "Bases de selección resumidas.",
+        "dua_ca": "Bases de selecció resumides.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["g"] },
+    "justificacion_es": "Superar el fracaso en un auxilio exige inteligencia emocional y flexibilidad ante situaciones nuevas.",
+    "justificacion_ca": "Superar el fracàs en un auxili exigeix intel·ligència emocional i flexibilitat davant situacions noves.",
+    "actividades": [
+      {
+        "titulo_es": "Después de un rescate sin éxito",
+        "titulo_ca": "Després d'un rescat sense èxit",
+        "contexto_es": "Un socorrista joven participó en un rescate en el que el bañista no sobrevivió.",
+        "contexto_ca": "Un socorrista jove va participar en un rescat en què el banyista no va sobreviure.",
+        "desarrollo_es": "El alumnado especifica las técnicas para superar psicológicamente el fracaso en el auxilio (1337-3b). Las relaciona con estrategias de inteligencia emocional para reaccionar de forma flexible y positiva (1710-2g).",
+        "desarrollo_ca": "L'alumnat especifica les tècniques per superar psicològicament el fracàs en l'auxili (1337-3b). Les relaciona amb estratègies d'intel·ligència emocional per reaccionar de manera flexible i positiva (1710-2g).",
+        "evidencia_es": "Reflexión escrita.",
+        "evidencia_ca": "Reflexió escrita.",
+        "dua_es": "Aviso previo y participación voluntaria.",
+        "dua_ca": "Avís previ i participació voluntària.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA4", "criterios": ["c"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "Mantener el plan de autoentrenamiento durante la temporada exige gestionar bien el tiempo.",
+    "justificacion_ca": "Mantenir el pla d'autoentrenament durant la temporada exigeix gestionar bé el temps.",
+    "actividades": [
+      {
+        "titulo_es": "Entrenar en temporada alta sin dejar de trabajar",
+        "titulo_ca": "Entrenar en temporada alta sense deixar de treballar",
+        "contexto_es": "En agosto, los guías trabajan diez horas al día y abandonan su entrenamiento.",
+        "contexto_ca": "A l'agost, els guies fan deu hores de feina al dia i abandonen el seu entrenament.",
+        "desarrollo_es": "El alumnado adopta un plan de autoentrenamiento compatible con la temporada (1337-4c). Aplica técnicas de gestión del tiempo para encajarlo con el trabajo y el descanso (1710-2d).",
+        "desarrollo_ca": "L'alumnat adopta un pla d'autoentrenament compatible amb la temporada (1337-4c). Aplica tècniques de gestió del temps per encaixar-lo amb la feina i el descans (1710-2d).",
+        "evidencia_es": "Agenda semanal con entrenamiento.",
+        "evidencia_ca": "Agenda setmanal amb entrenament.",
+        "dua_es": "Plantilla de agenda.",
+        "dua_ca": "Plantilla d'agenda.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA6", "criterios": ["a"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "En un simulacro de rescate cada socorrista asume su función para lograr un objetivo compartido.",
+    "justificacion_ca": "En un simulacre de rescat cada socorrista assumeix la seva funció per aconseguir un objectiu compartit.",
+    "actividades": [
+      {
+        "titulo_es": "Cada uno en su puesto en el simulacro",
+        "titulo_ca": "Cadascú al seu lloc en el simulacre",
+        "contexto_es": "En el simulacro de temporada, el equipo de socorristas se estorba porque nadie tiene claro su papel.",
+        "contexto_ca": "Al simulacre de temporada, l'equip de socorristes s'entrebanca perquè ningú no té clar el seu paper.",
+        "desarrollo_es": "El alumnado desempeña la función encomendada en el simulacro de rescate (1337-6a). Participa en la fijación de objetivos y en la toma de decisiones del equipo, asumiendo la responsabilidad de las acciones (1710-2b).",
+        "desarrollo_ca": "L'alumnat exerceix la funció encomanada en el simulacre de rescat (1337-6a). Participa en la fixació d'objectius i en la presa de decisions de l'equip, assumint la responsabilitat de les accions (1710-2b).",
+        "evidencia_es": "Evaluación del simulacro.",
+        "evidencia_ca": "Avaluació del simulacre.",
+        "dua_es": "Tarjetas de funciones.",
+        "dua_ca": "Targetes de funcions.",
+        "metodologia_es": "simulación de equipo.",
+        "metodologia_ca": "simulació d'equip."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA7", "criterios": ["f"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["a", "e"] },
+    "justificacion_es": "Los drones y la tecnología digital aplicada al rescate son ejemplos de innovación en el sector.",
+    "justificacion_ca": "Els drons i la tecnologia digital aplicada al rescat són exemples d'innovació en el sector.",
+    "actividades": [
+      {
+        "titulo_es": "Drones para rescates junto a los acantilados",
+        "titulo_ca": "Drons per a rescats devora els penya-segats",
+        "contexto_es": "Un servicio de salvamento prueba drones para localizar a bañistas en zonas de acantilado.",
+        "contexto_ca": "Un servei de salvament prova drons per localitzar banyistes en zones de penya-segats.",
+        "desarrollo_es": "El alumnado analiza las técnicas de rescate desde embarcación y moto acuática cerca de acantilados (1337-7f). Identifica el concepto de innovación y su relación con el bienestar (1710-3a) y la competencia digital que exige manejar estas herramientas (1710-3e).",
+        "desarrollo_ca": "L'alumnat analitza les tècniques de rescat des d'embarcació i moto aquàtica prop de penya-segats (1337-7f). Identifica el concepte d'innovació i la seva relació amb el benestar (1710-3a) i la competència digital que exigeix manejar aquestes eines (1710-3e).",
+        "evidencia_es": "Informe sobre innovación en rescate.",
+        "evidencia_ca": "Informe sobre innovació en rescat.",
+        "dua_es": "Vídeos de drones de rescate.",
+        "dua_ca": "Vídeos de drons de rescat.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1337", "ra": "RA1", "criterios": ["h"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["e"] },
+    "justificacion_es": "Reconocer los factores que generan ansiedad ayuda al guía a canalizar también sus propias emociones.",
+    "justificacion_ca": "Reconèixer els factors que generen ansietat ajuda el guia a canalitzar també les seves pròpies emocions.",
+    "actividades": [
+      {
+        "titulo_es": "Las emociones del guía tras una emergencia",
+        "titulo_ca": "Les emocions del guia després d'una emergència",
+        "contexto_es": "Tras atender a un herido grave, una guía no puede dormir y discute con sus compañeros.",
+        "contexto_ca": "Després d'atendre un ferit greu, una guia no pot dormir i discuteix amb els seus companys.",
+        "desarrollo_es": "El alumnado identifica los factores que predisponen a la ansiedad en accidentes y emergencias (1337-1h). Aplica estrategias para canalizar las emociones y mantener una actitud flexible con el equipo (1710-2e).",
+        "desarrollo_ca": "L'alumnat identifica els factors que predisposen a l'ansietat en accidents i emergències (1337-1h). Aplica estratègies per canalitzar les emocions i mantenir una actitud flexible amb l'equip (1710-2e).",
+        "evidencia_es": "Plan personal de autocuidado.",
+        "evidencia_ca": "Pla personal d'autocura.",
+        "dua_es": "Técnicas de relajación en audio.",
+        "dua_ca": "Tècniques de relaxació en àudio.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  }
+]

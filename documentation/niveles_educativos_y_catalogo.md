@@ -89,7 +89,7 @@ Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208)
 
 ## CFGM Guía en el Medio Natural y de Tiempo Libre (`CFGM_GUIA_MEDIO_NATURAL`)
 
-Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). No tiene mapa intermodular.
+Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). El 2.º tiene mapa intermodular desde la tarea 240 (pestaña `CFGM_GUIA_MEDIO_NATURAL_2`, 184 relaciones y 368 conexiones); el 1.º aún no.
 
 ### Fuente normativa
 

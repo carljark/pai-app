@@ -14,7 +14,7 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGM Atención a Personas en Situación de Dependencia | 1.º | `CFGM_ATENCION_DEPENDENCIA` | `CFGM_ATENCION_DEPENDENCIA` | `mapa_cfgm_atencion_dependencia.json` | 8 | 40 | 306 | 160 | ✅ Hecho (tarea 234, Claude): 161 relaciones, 322 conexiones |
 | CFGM Atención a Personas en Situación de Dependencia | 2.º | `CFGM_ATENCION_DEPENDENCIA` | `CFGM_ATENCION_DEPENDENCIA_2` | `mapa_cfgm_atencion_dependencia_2.json` | 8 | 38 | 284 | 152 | ✅ Hecho (tarea 232, Claude): 153 relaciones, 306 conexiones |
 | CFGM Guía en el Medio Natural y de Tiempo Libre | 1.º | `CFGM_GUIA_MEDIO_NATURAL` | `CFGM_GUIA_MEDIO_NATURAL` | `mapa_cfgm_guia_medio_natural.json` | 9 | 52 | 335 | 208 | Pendiente |
-| CFGM Guía en el Medio Natural y de Tiempo Libre | 2.º | `CFGM_GUIA_MEDIO_NATURAL` | `CFGM_GUIA_MEDIO_NATURAL_2` | `mapa_cfgm_guia_medio_natural_2.json` | 8 | 45 | 316 | 180 | Pendiente |
+| CFGM Guía en el Medio Natural y de Tiempo Libre | 2.º | `CFGM_GUIA_MEDIO_NATURAL` | `CFGM_GUIA_MEDIO_NATURAL_2` | `mapa_cfgm_guia_medio_natural_2.json` | 8 | 45 | 316 | 180 | ✅ Hecho (tarea 240, Claude): 184 relaciones, 368 conexiones |
 | CFGS Acondicionamiento Físico | 1.º | `CFGS_ACONDICIONAMIENTO_FISICO` | `CFGS_ACONDICIONAMIENTO_FISICO` | `mapa_cfgs_acondicionamiento_fisico.json` | 7 | 43 | 321 | 172 | ✅ Hecho (tarea 228, Claude): 157 relaciones, 314 conexiones |
 | CFGS Acondicionamiento Físico | 2.º | `CFGS_ACONDICIONAMIENTO_FISICO` | `CFGS_ACONDICIONAMIENTO_FISICO_2` | `mapa_cfgs_acondicionamiento_fisico_2.json` | 7 | 35 | 248 | 140 | ✅ Hecho (tarea 227, Gemini): 140 relaciones, 280 conexiones |
 | CFGS Enseñanza y Animación Sociodeportiva | 1.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA` | `mapa_cfgs_animacion_sociodeportiva.json` | 8 | 48 | 339 | 192 | ✅ Hecho (tarea 237, Claude): 192 relaciones, 384 conexiones |
@@ -24,12 +24,12 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | ✅ Hecho (tarea 239, Claude): 187 relaciones, 374 conexiones |
 | CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | En curso (tarea 238, Gemini): [prompt](../scripts/mapa-intermodular/prompt_cfgs_laboratorio_clinico_2.md) |
 
-Quedan 3 pestañas, con unas 564 relaciones y otras tantas actividades bilingües. Una de ellas, Laboratorio Clínico 2.º, está en curso con Gemini (tarea 238).
+Quedan 2 pestañas, con unas 384 relaciones y otras tantas actividades bilingües. Una de ellas, Laboratorio Clínico 2.º, está en curso con Gemini (tarea 238).
 
 ## Orden sugerido
 
 1. **CFGS Laboratorio Clínico y Biomédico 2.º** (44 RA): en curso con Gemini (tarea 238); el 1.º ya está hecho (tarea 239).
-2. **CFGM Guía en el Medio Natural** 2.º y 1.º (45 y 52 RA; el 1.º es el mayor).
+2. **CFGM Guía en el Medio Natural 1.º** (52 RA, el mayor); el 2.º ya está hecho (tarea 240).
 
 Al empezar un ciclo de dos cursos, conviene hacer los dos seguidos: así el selector del mapa muestra los dos cursos desde el principio.
 

@@ -1,0 +1,596 @@
+[
+  {
+    "a": { "modulo": "1338", "ra": "RA6", "criterios": ["d"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["f", "c"] },
+    "justificacion_es": "Valorar los equipos de una ruta abre la puerta a elegir alternativas más sostenibles con beneficios demostrables.",
+    "justificacion_ca": "Valorar els equips d'una ruta obre la porta a triar alternatives més sostenibles amb beneficis demostrables.",
+    "actividades": [
+      {
+        "titulo_es": "Neoprenos de alquiler en lugar de comprarlos nuevos",
+        "titulo_ca": "Neoprens de lloguer en lloc de comprar-los nous",
+        "contexto_es": "La empresa compra cada temporada neoprenos nuevos y los antiguos acaban en la basura.",
+        "contexto_ca": "L'empresa compra cada temporada neoprens nous i els antics acaben als fems.",
+        "desarrollo_es": "El alumnado valora la adecuación de los equipos y materiales usados en las rutas (1338-6d). Contrasta los beneficios de alternativas circulares, como el alquiler o el reciclaje del neopreno, frente al modelo actual (1708-5c), y propone estrategias sostenibles para la empresa (1708-5f).",
+        "desarrollo_ca": "L'alumnat valora l'adequació dels equips i materials fets servir a les rutes (1338-6d). Contrasta els beneficis d'alternatives circulars, com el lloguer o el reciclatge del neoprè, enfront del model actual (1708-5c), i proposa estratègies sostenibles per a l'empresa (1708-5f).",
+        "evidencia_es": "Propuesta de gestión sostenible de equipos.",
+        "evidencia_ca": "Proposta de gestió sostenible d'equips.",
+        "dua_es": "Tabla comparativa guiada.",
+        "dua_ca": "Taula comparativa guiada.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "Las ayudas a participantes con discapacidad pueden diseñarse con pensamiento de diseño a partir de sus necesidades.",
+    "justificacion_ca": "Les ajudes a participants amb discapacitat es poden dissenyar amb pensament de disseny a partir de les seves necessitats.",
+    "actividades": [
+      {
+        "titulo_es": "Kayak adaptado diseñado con los usuarios",
+        "titulo_ca": "Caiac adaptat dissenyat amb els usuaris",
+        "contexto_es": "Una asociación de personas con lesión medular quiere hacer rutas en kayak pero los asientos no les sirven.",
+        "contexto_ca": "Una associació de persones amb lesió medul·lar vol fer rutes en caiac però els seients no els serveixen.",
+        "desarrollo_es": "El alumnado ejemplifica las ayudas a los participantes con discapacidad durante la ruta (1338-4e). Aplica estrategias de pensamiento de diseño con los usuarios para detectar sus necesidades y probar adaptaciones del asiento y la pala (1710-5d).",
+        "desarrollo_ca": "L'alumnat exemplifica les ajudes als participants amb discapacitat durant la ruta (1338-4e). Aplica estratègies de pensament de disseny amb els usuaris per detectar les seves necessitats i provar adaptacions del seient i la pala (1710-5d).",
+        "evidencia_es": "Prototipo de adaptación y conclusiones.",
+        "evidencia_ca": "Prototip d'adaptació i conclusions.",
+        "dua_es": "Material para prototipos.",
+        "dua_ca": "Material per a prototips.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA6", "criterios": ["b"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["f"] },
+    "justificacion_es": "Registrar las incidencias de tiempos ayuda a programar mejor las actividades siguientes.",
+    "justificacion_ca": "Registrar les incidències de temps ajuda a programar millor les activitats següents.",
+    "actividades": [
+      {
+        "titulo_es": "Las rutas siempre acaban tarde",
+        "titulo_ca": "Les rutes sempre acaben tard",
+        "contexto_es": "Las rutas de la mañana se alargan y los grupos de la tarde esperan media hora.",
+        "contexto_ca": "Les rutes del matí s'allarguen i els grups de l'horabaixa esperen mitja hora.",
+        "desarrollo_es": "El alumnado registra las incidencias de la actividad, de seguridad y de tiempos de varias rutas (1338-6b). Con esos datos programa las rutas con criterios de organización eficiente y previendo las dificultades (1710-2f).",
+        "desarrollo_ca": "L'alumnat registra les incidències de l'activitat, de seguretat i de temps de diverses rutes (1338-6b). Amb aquestes dades programa les rutes amb criteris d'organització eficient i preveient les dificultats (1710-2f).",
+        "evidencia_es": "Registro de tiempos y nuevo horario.",
+        "evidencia_ca": "Registre de temps i nou horari.",
+        "dua_es": "Hoja de registro con columnas.",
+        "dua_ca": "Full de registre amb columnes.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA3", "criterios": ["d"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["b", "h"] },
+    "justificacion_es": "Adaptar la navegación a personas con distintas capacidades puede inspirar una idea emprendedora.",
+    "justificacion_ca": "Adaptar la navegació a persones amb diferents capacitats pot inspirar una idea emprenedora.",
+    "actividades": [
+      {
+        "titulo_es": "Paddle surf para mayores como idea de negocio",
+        "titulo_ca": "Paddle surf per a majors com a idea de negoci",
+        "contexto_es": "Muchos jubilados extranjeros preguntan por actividades acuáticas suaves y no hay oferta.",
+        "contexto_ca": "Molts jubilats estrangers demanen activitats aquàtiques suaus i no n'hi ha oferta.",
+        "desarrollo_es": "El alumnado adecua la técnica de navegación a las características de personas mayores (1338-3d). Pone en práctica el proceso creativo para convertirlo en una idea emprendedora (1710-4b) y la valida con un prototipo de sesión de prueba (1710-4h).",
+        "desarrollo_ca": "L'alumnat adequa la tècnica de navegació a les característiques de persones grans (1338-3d). Posa en pràctica el procés creatiu per convertir-ho en una idea emprenedora (1710-4b) i la valida amb un prototip de sessió de prova (1710-4h).",
+        "evidencia_es": "Idea de negocio y resultado del prototipo.",
+        "evidencia_ca": "Idea de negoci i resultat del prototip.",
+        "dua_es": "Lienzo de idea con preguntas guía.",
+        "dua_ca": "Llenç d'idea amb preguntes guia.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA1", "criterios": ["e", "f"] },
+    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["g", "h"] },
+    "justificacion_es": "Prever peligros y puntos de reunión en una ruta acuática equivale a prever imprevistos y soluciones en el proyecto.",
+    "justificacion_ca": "Preveure perills i punts de reunió en una ruta aquàtica equival a preveure imprevists i solucions en el projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Imprevistos de la travesía en kayak del proyecto",
+        "titulo_ca": "Imprevists de la travessia en caiac del projecte",
+        "contexto_es": "El proyecto final del ciclo es una travesía de tres días en kayak por la costa norte de Mallorca.",
+        "contexto_ca": "El projecte final del cicle és una travessia de tres dies en caiac per la costa nord de Mallorca.",
+        "desarrollo_es": "El alumnado concreta las maniobras y los puntos de reunión y descanso (1338-1e) y las medidas para prevenir y resolver peligros (1338-1f). Los incorpora al proyecto como imprevistos posibles (1713-3g) con sus soluciones (1713-3h).",
+        "desarrollo_ca": "L'alumnat concreta les maniobres i els punts de reunió i descans (1338-1e) i les mesures per prevenir i resoldre perills (1338-1f). Els incorpora al projecte com a imprevists possibles (1713-3g) amb les seves solucions (1713-3h).",
+        "evidencia_es": "Anexo de imprevistos del proyecto.",
+        "evidencia_ca": "Annex d'imprevists del projecte.",
+        "dua_es": "Mapa de la costa con puntos.",
+        "dua_ca": "Mapa de la costa amb punts.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA6", "criterios": ["a", "b"] },
+    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["a"] },
+    "justificacion_es": "Los datos sobre el guía, el grupo y las incidencias alimentan el procedimiento de seguimiento del proyecto.",
+    "justificacion_ca": "Les dades sobre el guia, el grup i les incidències alimenten el procediment de seguiment del projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Diario de seguimiento de la travesía",
+        "titulo_ca": "Diari de seguiment de la travessia",
+        "contexto_es": "Durante la travesía del proyecto, cada día hay que dejar constancia de lo ocurrido.",
+        "contexto_ca": "Durant la travessia del projecte, cada dia s'ha de deixar constància del que ha passat.",
+        "desarrollo_es": "El alumnado define el procedimiento de seguimiento de las actividades del proyecto (1713-4a). Recoge datos sobre la actuación del guía y las reacciones del grupo (1338-6a) y registra las incidencias de seguridad y tiempos (1338-6b).",
+        "desarrollo_ca": "L'alumnat defineix el procediment de seguiment de les activitats del projecte (1713-4a). Recull dades sobre l'actuació del guia i les reaccions del grup (1338-6a) i registra les incidències de seguretat i temps (1338-6b).",
+        "evidencia_es": "Diario de seguimiento completado.",
+        "evidencia_ca": "Diari de seguiment completat.",
+        "dua_es": "Plantilla diaria.",
+        "dua_ca": "Plantilla diària.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA2", "criterios": ["b"] },
+    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["j", "i"] },
+    "justificacion_es": "Aparejar y comprobar las embarcaciones es un aspecto de calidad que debe quedar documentado en el proyecto.",
+    "justificacion_ca": "Aparellar i comprovar les embarcacions és un aspecte de qualitat que ha de quedar documentat en el projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Lista de comprobación de las embarcaciones del proyecto",
+        "titulo_ca": "Llista de comprovació de les embarcacions del projecte",
+        "contexto_es": "El proyecto de travesía necesita una lista común para aparejar los veleros ligeros antes de salir.",
+        "contexto_ca": "El projecte de travessia necessita una llista comuna per aparellar els velers lleugers abans de sortir.",
+        "desarrollo_es": "El alumnado apareja y desapareja la embarcación comprobando el estado de todas sus partes (1338-2b). Identifica los aspectos de calidad del proyecto relacionados con el material (1713-2j) y elabora la documentación de diseño de la lista de comprobación (1713-2i).",
+        "desarrollo_ca": "L'alumnat aparella i desaparella l'embarcació comprovant l'estat de totes les seves parts (1338-2b). Identifica els aspectes de qualitat del projecte relacionats amb el material (1713-2j) i elabora la documentació de disseny de la llista de comprovació (1713-2i).",
+        "evidencia_es": "Lista de comprobación validada.",
+        "evidencia_ca": "Llista de comprovació validada.",
+        "dua_es": "Fotografías de cada parte.",
+        "dua_ca": "Fotografies de cada part.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA1", "criterios": ["g"] },
+    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "Los medios para atender contingencias permiten solucionar desviaciones y documentar las intervenciones.",
+    "justificacion_ca": "Els mitjans per atendre contingències permeten solucionar desviacions i documentar les intervencions.",
+    "actividades": [
+      {
+        "titulo_es": "La embarcación de apoyo que no llegó",
+        "titulo_ca": "L'embarcació de suport que no va arribar",
+        "contexto_es": "En el segundo día de la travesía, la embarcación de apoyo se avería y no puede acompañar al grupo.",
+        "contexto_ca": "Al segon dia de la travessia, l'embarcació de suport s'avaria i no pot acompanyar el grup.",
+        "desarrollo_es": "El alumnado organiza los medios alternativos para atender contingencias desde el agua o desde tierra (1338-1g). Soluciona la desviación del proyecto y documenta la intervención (1713-4e).",
+        "desarrollo_ca": "L'alumnat organitza els mitjans alternatius per atendre contingències des de l'aigua o des de terra (1338-1g). Soluciona la desviació del projecte i documenta la intervenció (1713-4e).",
+        "evidencia_es": "Informe de la desviación y su solución.",
+        "evidencia_ca": "Informe de la desviació i la seva solució.",
+        "dua_es": "Plantilla de informe de incidencias.",
+        "dua_ca": "Plantilla d'informe d'incidències.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1338", "ra": "RA5", "criterios": ["f"] },
+    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["d"] },
+    "justificacion_es": "Conducir la embarcación de rescate es una actividad de riesgo que el proyecto debe identificar.",
+    "justificacion_ca": "Conduir l'embarcació de rescat és una activitat de risc que el projecte ha d'identificar.",
+    "actividades": [
+      {
+        "titulo_es": "Riesgos de la lancha de apoyo en el proyecto",
+        "titulo_ca": "Riscs de la llanxa de suport en el projecte",
+        "contexto_es": "El proyecto incluye una lancha de apoyo conducida por un técnico del grupo.",
+        "contexto_ca": "El projecte inclou una llanxa de suport conduïda per un tècnic del grup.",
+        "desarrollo_es": "El alumnado identifica las actividades del proyecto que implican riesgos, como la conducción de la lancha (1713-3d). Practica la conducción de la embarcación de rescate garantizando la seguridad del accidentado y del grupo (1338-5f).",
+        "desarrollo_ca": "L'alumnat identifica les activitats del projecte que impliquen riscs, com la conducció de la llanxa (1713-3d). Practica la conducció de l'embarcació de rescat garantint la seguretat de l'accidentat i del grup (1338-5f).",
+        "evidencia_es": "Ficha de riesgos y registro de práctica.",
+        "evidencia_ca": "Fitxa de riscs i registre de pràctica.",
+        "dua_es": "Práctica guiada con instructor.",
+        "dua_ca": "Pràctica guiada amb instructor.",
+        "metodologia_es": "práctica guiada.",
+        "metodologia_ca": "pràctica guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA4", "criterios": ["c", "e"] },
+    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["j"] },
+    "justificacion_es": "Muchos usuarios de los parques de aventura son turistas que reciben las normas en inglés.",
+    "justificacion_ca": "Molts usuaris dels parcs d'aventura són turistes que reben les normes en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Briefing en inglés del parque de aventura",
+        "titulo_ca": "Briefing en anglès del parc d'aventura",
+        "contexto_es": "Cada mañana llega al parque un grupo de turistas que no habla castellano.",
+        "contexto_ca": "Cada matí arriba al parc un grup de turistes que no parla castellà.",
+        "desarrollo_es": "El alumnado explica las normas de seguridad y uso de la instalación (1339-4c) y demuestra el manejo de los mosquetones y la polea (1339-4e). Hace la presentación en inglés de forma breve, clara y preparada (0156-3j).",
+        "desarrollo_ca": "L'alumnat explica les normes de seguretat i ús de la instal·lació (1339-4c) i demostra el maneig dels mosquetons i la politja (1339-4e). Fa la presentació en anglès de manera breu, clara i preparada (0156-3j).",
+        "evidencia_es": "Grabación del briefing.",
+        "evidencia_ca": "Enregistrament del briefing.",
+        "dua_es": "Guion bilingüe.",
+        "dua_ca": "Guió bilingüe.",
+        "metodologia_es": "simulación en inglés.",
+        "metodologia_ca": "simulació en anglès."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA3", "criterios": ["d"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["g"] },
+    "justificacion_es": "Las instrucciones de seguridad en un salto o tobogán deben entenderse y cumplirse aunque se den en inglés.",
+    "justificacion_ca": "Les instruccions de seguretat en un salt o tobogan s'han d'entendre i complir encara que es donin en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Saltar a la poza solo cuando el guía lo dice",
+        "titulo_ca": "Saltar al toll només quan el guia ho diu",
+        "contexto_es": "En un barranco con turistas, uno salta a una poza antes de que el guía compruebe la profundidad.",
+        "contexto_ca": "En un barranc amb turistes, un salta a un toll abans que el guia comprovi la fondària.",
+        "desarrollo_es": "El alumnado explica y demuestra los protocolos de seguridad en toboganes y saltos a pozas (1339-3d). Comprueba que los participantes reconocen las instrucciones orales en inglés y si exigen respuesta verbal o una acción (0156-1g).",
+        "desarrollo_ca": "L'alumnat explica i demostra els protocols de seguretat en tobogans i salts a tolls (1339-3d). Comprova que els participants reconeixen les instruccions orals en anglès i si exigeixen resposta verbal o una acció (0156-1g).",
+        "evidencia_es": "Protocolo de saltos y frases clave.",
+        "evidencia_ca": "Protocol de salts i frases clau.",
+        "dua_es": "Señales manuales acordadas.",
+        "dua_ca": "Senyals manuals acordats.",
+        "metodologia_es": "práctica guiada.",
+        "metodologia_ca": "pràctica guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "0156", "ra": "RA4", "criterios": ["j", "b"] },
+    "justificacion_es": "Algunos permisos para actividades en espacios naturales se piden por escrito a organismos o propietarios extranjeros.",
+    "justificacion_ca": "Alguns permisos per a activitats en espais naturals es demanen per escrit a organismes o propietaris estrangers.",
+    "actividades": [
+      {
+        "titulo_es": "Pedir permiso al propietario extranjero de una finca",
+        "titulo_ca": "Demanar permís al propietari estranger d'una finca",
+        "contexto_es": "El acceso a un barranco pasa por una finca de un propietario alemán que solo responde en inglés.",
+        "contexto_ca": "L'accés a un barranc passa per una finca d'un propietari alemany que només respon en anglès.",
+        "desarrollo_es": "Antes de la salida, el alumnado revisa con el protocolo de verificación la documentación y los permisos (1339-1a). Redacta en inglés un correo breve para solicitar el permiso de paso (0156-4j) con un texto claro sobre la actividad (0156-4b).",
+        "desarrollo_ca": "Abans de la sortida, l'alumnat revisa amb el protocol de verificació la documentació i els permisos (1339-1a). Redacta en anglès un correu breu per sol·licitar el permís de pas (0156-4j) amb un text clar sobre l'activitat (0156-4b).",
+        "evidencia_es": "Correo de solicitud.",
+        "evidencia_ca": "Correu de sol·licitud.",
+        "dua_es": "Modelo de correo.",
+        "dua_ca": "Model de correu.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA6", "criterios": ["d"] },
+    "b": { "modulo": "0156", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "La ficha de valoración de la actividad puede rellenarse en inglés para agencias extranjeras.",
+    "justificacion_ca": "La fitxa de valoració de l'activitat es pot emplenar en anglès per a agències estrangeres.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha de valoración en inglés para la agencia",
+        "titulo_ca": "Fitxa de valoració en anglès per a l'agència",
+        "contexto_es": "Una agencia de viajes británica pide la ficha de valoración de cada salida en inglés.",
+        "contexto_ca": "Una agència de viatges britànica demana la fitxa de valoració de cada sortida en anglès.",
+        "desarrollo_es": "El alumnado rellena la ficha de valoración de la actividad según el programa (1339-6d). La cumplimenta en inglés con las fórmulas y el vocabulario específicos (0156-4e).",
+        "desarrollo_ca": "L'alumnat emplena la fitxa de valoració de l'activitat segons el programa (1339-6d). L'emplena en anglès amb les fórmules i el vocabulari específics (0156-4e).",
+        "evidencia_es": "Ficha bilingüe.",
+        "evidencia_ca": "Fitxa bilingüe.",
+        "dua_es": "Glosario de valoración.",
+        "dua_ca": "Glossari de valoració.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA2", "criterios": ["b"] },
+    "b": { "modulo": "0156", "ra": "RA2", "criterios": ["i"] },
+    "justificacion_es": "La información sobre caudales y barrancos circula en foros y bases de datos internacionales en inglés.",
+    "justificacion_ca": "La informació sobre cabals i barrancs circula en fòrums i bases de dades internacionals en anglès.",
+    "actividades": [
+      {
+        "titulo_es": "Datos de caudal en un foro internacional de barranquismo",
+        "titulo_ca": "Dades de cabal en un fòrum internacional de barranquisme",
+        "contexto_es": "Antes de bajar un barranco, el guía consulta un foro internacional donde otros grupos informan del caudal.",
+        "contexto_ca": "Abans de baixar un barranc, el guia consulta un fòrum internacional on altres grups informen del cabal.",
+        "desarrollo_es": "El alumnado extrae información específica de los mensajes del foro en inglés (0156-2i). Con ella y con sus propias mediciones estima la peligrosidad del barranco calculando el caudal (1339-2b).",
+        "desarrollo_ca": "L'alumnat extreu informació específica dels missatges del fòrum en anglès (0156-2i). Amb ella i amb les seves pròpies mesures estima la perillositat del barranc calculant el cabal (1339-2b).",
+        "evidencia_es": "Cálculo del caudal y decisión.",
+        "evidencia_ca": "Càlcul del cabal i decisió.",
+        "dua_es": "Calculadora de caudal.",
+        "dua_ca": "Calculadora de cabal.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA4", "criterios": ["h"] },
+    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["i"] },
+    "justificacion_es": "La entonación y los gestos de un usuario extranjero revelan fatiga o bloqueo aunque diga que está bien.",
+    "justificacion_ca": "L'entonació i els gests d'un usuari estranger revelen fatiga o bloqueig encara que digui que està bé.",
+    "actividades": [
+      {
+        "titulo_es": "Detectar el bloqueo de un turista en el circuito",
+        "titulo_ca": "Detectar el bloqueig d'un turista al circuit",
+        "contexto_es": "Un turista dice en inglés que está bien, pero tiembla y no suelta el cable de seguridad.",
+        "contexto_ca": "Un turista diu en anglès que està bé, però tremola i no deixa anar el cable de seguretat.",
+        "desarrollo_es": "El alumnado analiza la entonación y los elementos visuales para identificar el estado real del usuario (0156-1i). Explica las medidas ante situaciones de fatiga o bloqueo en la instalación (1339-4h).",
+        "desarrollo_ca": "L'alumnat analitza l'entonació i els elements visuals per identificar l'estat real de l'usuari (0156-1i). Explica les mesures davant situacions de fatiga o bloqueig a la instal·lació (1339-4h).",
+        "evidencia_es": "Análisis del caso en vídeo.",
+        "evidencia_ca": "Anàlisi del cas en vídeo.",
+        "dua_es": "Vídeo con subtítulos.",
+        "dua_ca": "Vídeo amb subtítols.",
+        "metodologia_es": "aprendizaje por observación.",
+        "metodologia_ca": "aprenentatge per observació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA1", "criterios": ["b"] },
+    "b": { "modulo": "1708", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "El ciclo de vida de las cuerdas condiciona su mantenimiento, su retirada y su posible segundo uso.",
+    "justificacion_ca": "El cicle de vida de les cordes condiciona el seu manteniment, la seva retirada i el seu possible segon ús.",
+    "actividades": [
+      {
+        "titulo_es": "Segunda vida para las cuerdas retiradas",
+        "titulo_ca": "Segona vida per a les cordes retirades",
+        "contexto_es": "La empresa retira cada año decenas de metros de cuerda que ya no son seguras para la escalada.",
+        "contexto_ca": "L'empresa retira cada any desenes de metres de corda que ja no són segures per a l'escalada.",
+        "desarrollo_es": "El alumnado sigue los procedimientos de mantenimiento, transporte y almacenamiento de las cuerdas (1339-1b). Analiza su ciclo de vida y propone usos posteriores, como alfombras o correas (1708-4e).",
+        "desarrollo_ca": "L'alumnat segueix els procediments de manteniment, transport i emmagatzematge de les cordes (1339-1b). N'analitza el cicle de vida i proposa usos posteriors, com estores o corretges (1708-4e).",
+        "evidencia_es": "Ficha de ciclo de vida.",
+        "evidencia_ca": "Fitxa de cicle de vida.",
+        "dua_es": "Ejemplos de reutilización.",
+        "dua_ca": "Exemples de reutilització.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA2", "criterios": ["c"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "Los episodios de lluvias torrenciales y sequías alteran la dinámica fluvial de los barrancos.",
+    "justificacion_ca": "Els episodis de pluges torrencials i sequeres alteren la dinàmica fluvial dels barrancs.",
+    "actividades": [
+      {
+        "titulo_es": "Barrancos más secos y crecidas más bruscas",
+        "titulo_ca": "Barrancs més secs i crescudes més brusques",
+        "contexto_es": "Los guías veteranos notan que los torrentes llevan agua menos días pero las crecidas son más violentas.",
+        "contexto_ca": "Els guies veterans noten que els torrents duen aigua menys dies però les crescudes són més violentes.",
+        "desarrollo_es": "El alumnado identifica y describe la dinámica del agua en los fenómenos fluviales (1339-2c). Relaciona el cambio con el clima como uno de los principales retos ambientales (1708-2a).",
+        "desarrollo_ca": "L'alumnat identifica i descriu la dinàmica de l'aigua en els fenòmens fluvials (1339-2c). Relaciona el canvi amb el clima com un dels principals reptes ambientals (1708-2a).",
+        "evidencia_es": "Informe con testimonios y datos.",
+        "evidencia_ca": "Informe amb testimonis i dades.",
+        "dua_es": "Gráficos de lluvia.",
+        "dua_ca": "Gràfics de pluja.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "Equipar una cavidad con criterios de mínimo impacto es una medida para proteger el medio subterráneo.",
+    "justificacion_ca": "Equipar una cavitat amb criteris de mínim impacte és una mesura per protegir el medi subterrani.",
+    "actividades": [
+      {
+        "titulo_es": "Equipar una cueva sin dejar huella",
+        "titulo_ca": "Equipar una cova sense deixar petjada",
+        "contexto_es": "En una cueva con formaciones delicadas hay anclajes antiguos y restos de material abandonado.",
+        "contexto_ca": "En una cova amb formacions delicades hi ha ancoratges antics i restes de material abandonat.",
+        "desarrollo_es": "En la cueva, el alumnado practica el protocolo de equipamiento y desequipamiento de la cavidad (1339-3a). Identifica medidas para minimizar el impacto, como usar anclajes existentes o retirar el material abandonado (1708-2d).",
+        "desarrollo_ca": "A la cova, l'alumnat practica el protocol d'equipament i desequipament de la cavitat (1339-3a). Identifica mesures per minimitzar l'impacte, com fer servir ancoratges existents o retirar el material abandonat (1708-2d).",
+        "evidencia_es": "Protocolo de mínimo impacto.",
+        "evidencia_ca": "Protocol de mínim impacte.",
+        "dua_es": "Fotografías de la cueva.",
+        "dua_ca": "Fotografies de la cova.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA4", "criterios": ["b"] },
+    "b": { "modulo": "1708", "ra": "RA6", "criterios": ["a"] },
+    "justificacion_es": "Montar un parque de aventura afecta a vecinos, administración y clientes, grupos de interés de la empresa.",
+    "justificacion_ca": "Muntar un parc d'aventura afecta veïns, administració i clients, grups d'interès de l'empresa.",
+    "actividades": [
+      {
+        "titulo_es": "Circuito portátil en un pinar municipal",
+        "titulo_ca": "Circuit portàtil en un pinar municipal",
+        "contexto_es": "Una empresa quiere montar un circuito portátil de aventura en un pinar municipal durante las fiestas.",
+        "contexto_ca": "Una empresa vol muntar un circuit portàtil d'aventura en un pinar municipal durant les festes.",
+        "desarrollo_es": "Sobre el terreno, el alumnado ejecuta el protocolo de montaje y desmontaje de los elementos portátiles (1339-4b). Identifica los principales grupos de interés afectados por la actividad (1708-6a).",
+        "desarrollo_ca": "Sobre el terreny, l'alumnat executa el protocol de muntatge i desmuntatge dels elements portàtils (1339-4b). Identifica els principals grups d'interès afectats per l'activitat (1708-6a).",
+        "evidencia_es": "Plan de montaje y mapa de grupos de interés.",
+        "evidencia_ca": "Pla de muntatge i mapa de grups d'interès.",
+        "dua_es": "Secuencia de montaje ilustrada.",
+        "dua_ca": "Seqüència de muntatge il·lustrada.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1708", "ra": "RA1", "criterios": ["b"] },
+    "justificacion_es": "La seguridad de los clientes es un asunto social clave en la sostenibilidad de una empresa de aventura.",
+    "justificacion_ca": "La seguretat dels clients és un assumpte social clau en la sostenibilitat d'una empresa d'aventura.",
+    "actividades": [
+      {
+        "titulo_es": "La seguridad como compromiso de la empresa",
+        "titulo_ca": "La seguretat com a compromís de l'empresa",
+        "contexto_es": "Tras un accidente en otra empresa del sector, los clientes preguntan qué medidas de seguridad hay.",
+        "contexto_ca": "Després d'un accident en una altra empresa del sector, els clients demanen quines mesures de seguretat hi ha.",
+        "desarrollo_es": "El alumnado sigue el protocolo de prevención y seguridad en la actividad (1339-5a). Identifica la seguridad como asunto social que influye en la sostenibilidad y la reputación de la empresa (1708-1b).",
+        "desarrollo_ca": "L'alumnat segueix el protocol de prevenció i seguretat en l'activitat (1339-5a). Identifica la seguretat com a assumpte social que influeix en la sostenibilitat i la reputació de l'empresa (1708-1b).",
+        "evidencia_es": "Documento público de seguridad.",
+        "evidencia_ca": "Document públic de seguretat.",
+        "dua_es": "Ejemplos de otras empresas.",
+        "dua_ca": "Exemples d'altres empreses.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA6", "criterios": ["e"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["f", "e"] },
+    "justificacion_es": "Las medidas correctoras tras una actividad pueden incluir estrategias sostenibles y de ecodiseño.",
+    "justificacion_ca": "Les mesures correctores després d'una activitat poden incloure estratègies sostenibles i d'ecodisseny.",
+    "actividades": [
+      {
+        "titulo_es": "Transporte compartido y material ligero en las salidas",
+        "titulo_ca": "Transport compartit i material lleuger a les sortides",
+        "contexto_es": "La evaluación de las salidas muestra que cada cliente llega en su coche y se cargan mochilas muy pesadas.",
+        "contexto_ca": "L'avaluació de les sortides mostra que cada client arriba amb el seu cotxe i es carreguen motxilles molt pesants.",
+        "desarrollo_es": "El alumnado propone medidas correctoras de los desajustes detectados (1339-6e). Aplica estrategias sostenibles como el transporte compartido (1708-5f) y principios de ecodiseño en el material del grupo (1708-5e).",
+        "desarrollo_ca": "L'alumnat proposa mesures correctores dels desajustaments detectats (1339-6e). Aplica estratègies sostenibles com el transport compartit (1708-5f) i principis d'ecodisseny en el material del grup (1708-5e).",
+        "evidencia_es": "Plan de mejora sostenible.",
+        "evidencia_ca": "Pla de millora sostenible.",
+        "dua_es": "Calculadora de emisiones.",
+        "dua_ca": "Calculadora d'emissions.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["i"] },
+    "justificacion_es": "La señalización en cuevas debe cumplir la normativa ambiental que protege el patrimonio subterráneo.",
+    "justificacion_ca": "La senyalització en coves ha de complir la normativa ambiental que protegeix el patrimoni subterrani.",
+    "actividades": [
+      {
+        "titulo_es": "Señalizar el laberinto sin pintar la cueva",
+        "titulo_ca": "Senyalitzar el laberint sense pintar la cova",
+        "contexto_es": "Un grupo anterior pintó flechas en las paredes de una cueva protegida para orientarse.",
+        "contexto_ca": "Un grup anterior va pintar fletxes a les parets d'una cova protegida per orientar-se.",
+        "desarrollo_es": "El alumnado señaliza en lugares visibles las zonas conflictivas con material temporal y retirable (1339-3b). Aplica la normativa ambiental que prohíbe marcar las cavidades protegidas (1708-5i).",
+        "desarrollo_ca": "L'alumnat senyalitza en llocs visibles les zones conflictives amb material temporal i retirable (1339-3b). Aplica la normativa ambiental que prohibeix marcar les cavitats protegides (1708-5i).",
+        "evidencia_es": "Sistema de señalización temporal.",
+        "evidencia_ca": "Sistema de senyalització temporal.",
+        "dua_es": "Muestras de material de señalización.",
+        "dua_ca": "Mostres de material de senyalització.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "El rigor al comprobar las instalaciones es una de las actitudes que más se valoran en los procesos selectivos.",
+    "justificacion_ca": "El rigor en comprovar les instal·lacions és una de les actituds que més es valoren en els processos selectius.",
+    "actividades": [
+      {
+        "titulo_es": "Prueba práctica de revisión para monitor de parque",
+        "titulo_ca": "Prova pràctica de revisió per a monitor de parc",
+        "contexto_es": "Un parque de aventura selecciona monitores con una prueba de revisión de la instalación.",
+        "contexto_ca": "Un parc d'aventura selecciona monitors amb una prova de revisió de la instal·lació.",
+        "desarrollo_es": "En la prueba, el alumnado aplica el protocolo de comprobación de los elementos fijos de la instalación (1339-4a). Valora qué actitudes y aptitudes, como el rigor o la calma, le permiten superar este tipo de procesos selectivos (1710-1c).",
+        "desarrollo_ca": "A la prova, l'alumnat aplica el protocol de comprovació dels elements fixos de la instal·lació (1339-4a). Valora quines actituds i aptituds, com el rigor o la calma, li permeten superar aquest tipus de processos selectius (1710-1c).",
+        "evidencia_es": "Lista de revisión y autoevaluación.",
+        "evidencia_ca": "Llista de revisió i autoavaluació.",
+        "dua_es": "Lista con fotos de elementos.",
+        "dua_ca": "Llista amb fotos d'elements.",
+        "metodologia_es": "simulación de selección.",
+        "metodologia_ca": "simulació de selecció."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA5", "criterios": ["f"] },
+    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["g"] },
+    "justificacion_es": "Resolver una incidencia colgado de una cuerda exige flexibilidad y control emocional.",
+    "justificacion_ca": "Resoldre una incidència penjat d'una corda exigeix flexibilitat i control emocional.",
+    "actividades": [
+      {
+        "titulo_es": "Un nudo bloqueado a mitad de rápel",
+        "titulo_ca": "Un nus bloquejat a mig ràpel",
+        "contexto_es": "En un descenso, la cuerda de un participante se bloquea con un nudo y empieza a ponerse nervioso.",
+        "contexto_ca": "En un descens, la corda d'un participant es bloqueja amb un nus i comença a posar-se nerviós.",
+        "desarrollo_es": "El alumnado determina las habilidades necesarias para resolver la incidencia en el descenso (1339-5f). Reacciona de forma flexible y positiva, gestionando sus emociones y las del participante (1710-2g).",
+        "desarrollo_ca": "L'alumnat determina les habilitats necessàries per resoldre la incidència en el descens (1339-5f). Reacciona de manera flexible i positiva, gestionant les seves emocions i les del participant (1710-2g).",
+        "evidencia_es": "Registro de la práctica y reflexión.",
+        "evidencia_ca": "Registre de la pràctica i reflexió.",
+        "dua_es": "Práctica en pared de entrenamiento.",
+        "dua_ca": "Pràctica en paret d'entrenament.",
+        "metodologia_es": "simulación práctica.",
+        "metodologia_ca": "simulació pràctica."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA4", "criterios": ["f"] },
+    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["i"] },
+    "justificacion_es": "Explicar bien los niveles de un circuito es también la mejor forma de venderlo a nuevos clientes.",
+    "justificacion_ca": "Explicar bé els nivells d'un circuit és també la millor manera de vendre'l a nous clients.",
+    "actividades": [
+      {
+        "titulo_es": "Vídeo promocional de los niveles del circuito",
+        "titulo_ca": "Vídeo promocional dels nivells del circuit",
+        "contexto_es": "El parque de aventura quiere atraer a familias y necesita mostrar que hay circuitos para todas las edades.",
+        "contexto_ca": "El parc d'aventura vol atreure famílies i necessita mostrar que hi ha circuits per a totes les edats.",
+        "desarrollo_es": "El alumnado explica las técnicas de progresión de cada nivel de los circuitos (1339-4f). Experimenta con estrategias de marketing, como un vídeo corto para redes, para comunicar y vender la oferta (1710-4i).",
+        "desarrollo_ca": "L'alumnat explica les tècniques de progressió de cada nivell dels circuits (1339-4f). Experimenta amb estratègies de màrqueting, com un vídeo curt per a xarxes, per comunicar i vendre l'oferta (1710-4i).",
+        "evidencia_es": "Vídeo promocional para redes sociales.",
+        "evidencia_ca": "Vídeo promocional per a xarxes socials.",
+        "dua_es": "Guion gráfico.",
+        "dua_ca": "Guió gràfic.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA2", "criterios": ["f"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["d", "c"] },
+    "justificacion_es": "Diseñar entre todos un sistema de señalización en cuevas es un proceso de innovación colaborativa.",
+    "justificacion_ca": "Dissenyar entre tots un sistema de senyalització en coves és un procés d'innovació col·laborativa.",
+    "actividades": [
+      {
+        "titulo_es": "Señalización reflectante para caos de bloques",
+        "titulo_ca": "Senyalització reflectant per a caos de blocs",
+        "contexto_es": "El equipo de guías busca una forma de señalizar caos de bloques que sea segura y no dañe la cueva.",
+        "contexto_ca": "L'equip de guies cerca una manera de senyalitzar caos de blocs que sigui segura i no danyi la cova.",
+        "desarrollo_es": "El alumnado define el método de señalización según el material disponible (1339-2f). Pone en práctica el trabajo colaborativo para innovar (1710-3d) y aplica habilidades emprendedoras dentro de la empresa para proponer la solución (1710-3c).",
+        "desarrollo_ca": "L'alumnat defineix el mètode de senyalització segons el material disponible (1339-2f). Posa en pràctica el treball col·laboratiu per innovar (1710-3d) i aplica habilitats emprenedores dins l'empresa per proposar la solució (1710-3c).",
+        "evidencia_es": "Prototipo de señal y propuesta.",
+        "evidencia_ca": "Prototip de senyal i proposta.",
+        "dua_es": "Materiales variados para probar.",
+        "dua_ca": "Materials variats per provar.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1339", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["e"] },
+    "justificacion_es": "Los aparatos de orientación digitales exigen competencia digital para modernizar el trabajo del guía.",
+    "justificacion_ca": "Els aparells d'orientació digitals exigeixen competència digital per modernitzar la feina del guia.",
+    "actividades": [
+      {
+        "titulo_es": "GPS, aplicaciones y balizas en la montaña",
+        "titulo_ca": "GPS, aplicacions i balises a la muntanya",
+        "contexto_es": "La empresa quiere que todos los guías usen GPS y una aplicación de seguimiento en tiempo real.",
+        "contexto_ca": "L'empresa vol que tots els guies facin servir GPS i una aplicació de seguiment en temps real.",
+        "desarrollo_es": "El alumnado describe las características, el funcionamiento y el mantenimiento de los aparatos de orientación y comunicación (1339-1e). Desarrolla la competencia digital necesaria para usarlos y mejorar los procesos de la empresa (1710-3e).",
+        "desarrollo_ca": "L'alumnat descriu les característiques, el funcionament i el manteniment dels aparells d'orientació i comunicació (1339-1e). Desenvolupa la competència digital necessària per fer-los servir i millorar els processos de l'empresa (1710-3e).",
+        "evidencia_es": "Guía de uso de los aparatos.",
+        "evidencia_ca": "Guia d'ús dels aparells.",
+        "dua_es": "Tutoriales en vídeo.",
+        "dua_ca": "Tutorials en vídeo.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  }
+]

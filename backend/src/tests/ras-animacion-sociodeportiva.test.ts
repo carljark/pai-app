@@ -81,7 +81,9 @@ describe('Datos del CFGS Enseñanza y Animación Sociodeportiva', () => {
   it('separa por curso los módulos de FP Illes Balears y usa los nombres oficiales en el prompt', () => {
     const nivel = findNivel('CFGS_ANIMACION_SOCIODEPORTIVA');
     expect(nivel?.etapa).toBe('CFGS');
-    expect(nivel?.mapas).toBeUndefined();
+    expect(nivel?.mapas).toEqual([
+      { tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2', curso: '2º', moduleCode: '1123', raId: '1123_RA1' },
+    ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([8, 8]);
     expect(describeTargetCourse('CFGS_ANIMACION_SOCIODEPORTIVA', '2º'))
       .toBe('2º de CFGS Enseñanza y Animación Sociodeportiva');

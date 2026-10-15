@@ -1,0 +1,70 @@
+{
+  "nivel": "CFGS_ANIMACION_SOCIODEPORTIVA",
+  "curso": "2º",
+  "modulos": {
+    "1123": {
+      "nombre_es": "Actividades de ocio y tiempo libre",
+      "nombre_ca": "Activitats d'oci i temps lliure",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#f472b6",
+      "icon": "tent"
+    },
+    "1137": {
+      "nombre_es": "Planificación de la animación sociodeportiva",
+      "nombre_ca": "Planificació de l'animació socioesportiva",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#34d399",
+      "icon": "clipboard-list"
+    },
+    "1140": {
+      "nombre_es": "Actividades físico-deportivas de equipo",
+      "nombre_ca": "Activitats fisicoesportives d'equip",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#fb923c",
+      "icon": "trophy"
+    },
+    "1142": {
+      "nombre_es": "Actividades físico-deportivas para la inclusión social",
+      "nombre_ca": "Activitats fisicoesportives per a la inclusió social",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#a78bfa",
+      "icon": "accessibility"
+    },
+    "1144": {
+      "nombre_es": "Proyecto intermodular de enseñanza y animación sociodeportiva",
+      "nombre_ca": "Projecte intermodular d'ensenyament i animació socioesportiva",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "folder-kanban"
+    },
+    "1708": {
+      "nombre_es": "Sostenibilidad aplicada al sistema productivo",
+      "nombre_ca": "Sostenibilitat aplicada al sistema productiu",
+      "tipo": "comun",
+      "relacion": "sostenibilidad",
+      "color": "#4ade80",
+      "icon": "leaf"
+    },
+    "1710": {
+      "nombre_es": "Itinerario personal para la empleabilidad II",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat II",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#fbbf24",
+      "icon": "briefcase"
+    },
+    "0179": {
+      "nombre_es": "Inglés profesional",
+      "nombre_ca": "Anglès professional",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#f87171",
+      "icon": "languages"
+    }
+  }
+}

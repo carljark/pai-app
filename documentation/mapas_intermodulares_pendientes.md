@@ -18,13 +18,13 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Acondicionamiento Físico | 1.º | `CFGS_ACONDICIONAMIENTO_FISICO` | `CFGS_ACONDICIONAMIENTO_FISICO` | `mapa_cfgs_acondicionamiento_fisico.json` | 7 | 43 | 321 | 172 | ✅ Hecho (tarea 228, Claude): 157 relaciones, 314 conexiones |
 | CFGS Acondicionamiento Físico | 2.º | `CFGS_ACONDICIONAMIENTO_FISICO` | `CFGS_ACONDICIONAMIENTO_FISICO_2` | `mapa_cfgs_acondicionamiento_fisico_2.json` | 7 | 35 | 248 | 140 | ✅ Hecho (tarea 227, Gemini): 140 relaciones, 280 conexiones |
 | CFGS Enseñanza y Animación Sociodeportiva | 1.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA` | `mapa_cfgs_animacion_sociodeportiva.json` | 8 | 48 | 339 | 192 | Pendiente |
-| CFGS Enseñanza y Animación Sociodeportiva | 2.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA_2` | `mapa_cfgs_animacion_sociodeportiva_2.json` | 8 | 42 | 295 | 168 | Pendiente |
+| CFGS Enseñanza y Animación Sociodeportiva | 2.º | `CFGS_ANIMACION_SOCIODEPORTIVA` | `CFGS_ANIMACION_SOCIODEPORTIVA_2` | `mapa_cfgs_animacion_sociodeportiva_2.json` | 8 | 42 | 295 | 168 | ✅ Hecho (tarea 235, Gemini): 168 relaciones, 336 conexiones |
 | CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | ✅ Hecho (tarea 226, Claude): 145 relaciones, 290 conexiones. El borrador de Gemini (tarea 224) se descartó por tener textos de plantilla |
 | CFGS Integración Social | 2.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL_2` | `mapa_cfgs_integracion_social_2.json` | 9 | 44 | 346 | 176 | ✅ Hecho (tarea 225, Claude): 165 relaciones, 330 conexiones |
 | CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | Pendiente |
 | CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | Pendiente |
 
-Quedan 7 pestañas, con unas 1.264 relaciones y otras tantas actividades bilingües.
+Quedan 6 pestañas, con unas 1.096 relaciones y otras tantas actividades bilingües.
 
 ## Orden sugerido
 

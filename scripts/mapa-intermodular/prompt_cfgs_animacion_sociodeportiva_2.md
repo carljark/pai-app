@@ -1,6 +1,6 @@
 # Prompt: mapa intermodular de CFGS Enseñanza y Animación Sociodeportiva, 2.º
 
-Versión de [`prompt.md`](prompt.md) con los datos ya rellenos para el siguiente mapa de la [lista de pendientes](../../documentation/mapas_intermodulares_pendientes.md). Se reservaron la tarea 235 y la migración 43 el 15 de octubre de 2026, mientras la tarea 234 (CFGM Atención a la Dependencia 1.º, migración 42) se hacía en paralelo.
+Versión de [`prompt.md`](prompt.md) con los datos ya rellenos para el siguiente mapa de la [lista de pendientes](../../documentation/mapas_intermodulares_pendientes.md). Se reservaron la tarea 235 y la migración 43 el 15 de octubre de 2026, mientras la tarea 234 (CFGM Atención a la Dependencia 1.º, migración 42) se hacía en paralelo. La rama `feature/235_mapa_cfgs_animacion_sociodeportiva_2` se creó desde la 233 con este prompt dentro, para que Gemini lo lea directamente.
 
 ---
 
@@ -26,8 +26,8 @@ Datos de la tarea:
 - Número común de la tarea: 235 (reservado) → rama feature/235_mapa_cfgs_animacion_sociodeportiva_2 y registro tareas/235_mapa_cfgs_animacion_sociodeportiva_2.md. No lo recalcules: la 235 está reservada para este mapa aunque haya números mayores ocupados.
 - Migración: backend/src/migrations/43_ingest_mapa_cfgs_animacion_sociodeportiva_2.ts (la 43 está reservada; la 42 la usa otra tarea en paralelo).
 
-Rama de partida: crea la tuya desde origin/feature/233_fusion_mapas_y_tareas_229_231, que es la que está desplegada y tiene la herramienta con el validador:
-  git fetch && git switch -c feature/235_mapa_cfgs_animacion_sociodeportiva_2 origin/feature/233_fusion_mapas_y_tareas_229_231
+Rama de trabajo: feature/235_mapa_cfgs_animacion_sociodeportiva_2 ya existe (sale de la 233, que es la desplegada y tiene la herramienta con el validador) y contiene este prompt. Trabaja en ella; no crees otra:
+  git fetch && git switch feature/235_mapa_cfgs_animacion_sociodeportiva_2 && git pull
 Si el directorio no tiene node_modules, instala: cd backend && npm ci; cd frontend && npm ci --legacy-peer-deps.
 
 Lee antes AGENTS.md (§1, §2 y §8), la sección 8 de documentation/procesamiento_actividades_mapa_intermodular.md y scripts/mapa-intermodular/mapa-intermodular.mts. Toma como ejemplo de calidad las tareas 228 y 232 (tareas/228_mapa_cfgs_acondicionamiento_fisico_1.md, tareas/232_mapa_cfgm_atencion_dependencia_2.md y los relaciones*.json de scripts/mapa-intermodular/fuentes/CFGS_ACONDICIONAMIENTO_FISICO/ y CFGM_ATENCION_DEPENDENCIA_2/). Lee al menos 15 actividades de cada uno antes de redactar. El 2º de Acondicionamiento Físico (CFGS_ACONDICIONAMIENTO_FISICO_2) es de la misma familia profesional y tiene los mismos tres módulos comunes: úsalo para ver cómo se conectaron, pero NO reutilices sus actividades: las de este ciclo tratan de animación, ocio, deporte de equipo e inclusión, no de acondicionamiento físico.

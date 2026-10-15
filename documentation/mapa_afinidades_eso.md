@@ -28,6 +28,16 @@ Los textos oficiales de los criterios no se copian en las fichas. El endpoint lo
 
 La vista del mapa (`mapa-intermodular-view`) elige entre el acordeón de FP y la vista de afinidades según el `formato` de la pestaña. Con una pestaña de afinidades, `MapaIntermodularFacade.setTab` no pide módulos. El selector de pestañas es el mismo: la ESO aparece como un ciclo más, con los botones de curso 1.º a 4.º.
 
+### Crear un proyecto desde una ficha
+
+Cada ficha tiene el botón «Crear Proyecto con estos criterios» / «Crear Projecte amb aquests criteris», equivalente al «Crear Proyecto» de las conexiones de FP. `AfinidadProyectoService.crearProyecto` (en `features/mapa-intermodular/services/`):
+
+1. Fija en el generador la ESO ordinaria y el curso de la pestaña.
+2. Pide las CE de ese curso (`CurriculumFacade.fetchEsoCes`) en lugar de esperar al efecto que las recarga, para no seleccionar sobre las CE del nivel anterior.
+3. Traduce la ficha con `seleccionDeAfinidad` (`utils/afinidad-seleccion.ts`): cada criterio citado («2.1» de `MAT`) se asigna a su CE (`subjectCode` + `ce_num`); las materias van en el orden de la ficha, con la consultada primero. Las CE o criterios que no existen en el curso se omiten.
+4. Selecciona cada CE con solo los criterios citados (`CriteriosFacade.fijar`); si se citan todos, la CE queda completa.
+5. Abre el generador. Si falla la carga de CE, abre el generador con el nivel y el curso pero sin selección.
+
 ## Fuentes y criterios de revisión
 
 - **1.º-3.º.** 80 fichas del documento del centro (20 materias × 4 opciones). Todas las referencias «CA x.y» se validaron contra `curriculo-eso`: existen en la materia y se imparten en el curso de la ficha.

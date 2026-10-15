@@ -24,6 +24,7 @@ import { up as runMigration38 } from '../migrations/38_ingest_mapa_cfgs_integrac
 import { up as runMigration39 } from '../migrations/39_ingest_mapa_cfgs_acondicionamiento_fisico_2';
 import { up as runMigration40 } from '../migrations/40_ingest_mapa_cfgs_acondicionamiento_fisico';
 import { up as runMigration41 } from '../migrations/41_ingest_mapa_cfgm_atencion_dependencia_2';
+import { up as runMigration42 } from '../migrations/42_ingest_mapa_cfgm_atencion_dependencia';
 import { up as runMigration43 } from '../migrations/43_ingest_mapa_cfgs_animacion_sociodeportiva_2';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
@@ -637,6 +638,32 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.status).toBe(200);
       expect(res.body.map((m: any) => m.code)).toEqual(['0211', '0214', '0216', '0831', '0156', '1708', '1710', '1713']);
       expect(res.body[0].name_ca).toBe('Destreses socials');
+    });
+
+    it('debería cargar con la migración 42 el 1.º de Atención a la Dependencia sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO', order: 0, code: '1136', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration42();
+      await runMigration42();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
+      await expectBidirectionalMap('CFGM_ATENCION_DEPENDENCIA', 8, 322, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGM_ATENCION_DEPENDENCIA' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = APSD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGM_ATENCION_DEPENDENCIA');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['0020', '0210', '0212', '0213', '0215', '0217', '1664', '1709']);
+      expect(res.body[0].name_ca).toBe('Primers auxilis');
     });
 
     it('debería cargar con la migración 43 el 2.º de Animación Sociodeportiva sin tocar otras pestañas', async () => {

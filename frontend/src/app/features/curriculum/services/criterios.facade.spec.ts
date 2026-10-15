@@ -93,4 +93,13 @@ describe('CriteriosFacade', () => {
     selected.set(['CE1']);
     expect(facade.allChecked('CE1', [])).toBe(false);
   });
+
+  it('fixes a CE with only the given criteria, or all of them', () => {
+    facade.fijar('CE1', ['1.3', '1.1'], todos);
+    expect(selected()).toEqual(['CE1']);
+    expect(facade.payload()).toEqual([{ ce: 'CE1', ids: ['1.1', '1.3'] }]);
+    facade.fijar('CE1', ['1.1', '1.2', '1.3'], todos);
+    expect(selected()).toEqual(['CE1']);
+    expect(facade.payload()).toEqual([]);
+  });
 });

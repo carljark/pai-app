@@ -129,10 +129,13 @@ export class CurriculumFacade {
   }
 
   loadEsoCes(language: string, curso: string) {
+    this.fetchEsoCes(language, curso).subscribe((res) => this.esoCes.set(res));
+  }
+
+  /** CE de la ESO ordinaria de un curso, sin guardarlas en el estado. */
+  fetchEsoCes(language: string, curso: string) {
     const query = `lang=${language}&tipoNivel=ESO_ORDINARIA&curso=${encodeURIComponent(curso)}`;
-    this.http
-      .get<EvaluativeCriteria[]>(`${this.apiUrl}/ces?${query}`)
-      .subscribe((res) => this.esoCes.set(res));
+    return this.http.get<EvaluativeCriteria[]>(`${this.apiUrl}/ces?${query}`);
   }
 
   /** CE cargadas para el nivel activo (PDC o ESO ordinaria). */

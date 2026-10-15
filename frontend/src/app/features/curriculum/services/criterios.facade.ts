@@ -67,6 +67,12 @@ export class CriteriosFacade {
     );
   }
 
+  /** Selecciona la CE con solo los criterios `ids` (todos marcados si coinciden con la CE). */
+  fijar(key: string, ids: string[], todos: CriterioItem[]): void {
+    this.seleccionar(key);
+    this.guardar(key, ids, todos);
+  }
+
   /** Elecciones parciales para la petición de generación; vacío si todas las CE están completas. */
   payload(): CriterioSeleccionado[] {
     const selected = this.curriculum.selectedRas();

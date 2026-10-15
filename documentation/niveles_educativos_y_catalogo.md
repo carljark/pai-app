@@ -60,7 +60,7 @@ Al añadir un ciclo, estos módulos se copian de ahí, no de otra fuente. Si se 
 
 ## CFGM Atención a Personas en Situación de Dependencia (`CFGM_ATENCION_DEPENDENCIA`)
 
-Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208). El 2.º tiene mapa intermodular (tarea 232, pestaña `CFGM_ATENCION_DEPENDENCIA_2`); el 1.º aún no.
+Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208). Los dos cursos tienen mapa intermodular: el 1.º (tarea 234, pestaña `CFGM_ATENCION_DEPENDENCIA`) y el 2.º (tarea 232, pestaña `CFGM_ATENCION_DEPENDENCIA_2`).
 
 ### Fuente normativa
 

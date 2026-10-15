@@ -72,6 +72,7 @@ describe('Datos del CFGM Atención a Personas en Situación de Dependencia', () 
 
   it('usa los nombres oficiales del ciclo en el prompt', () => {
     expect(findNivel('CFGM_ATENCION_DEPENDENCIA')?.mapas).toEqual([
+      { tab: 'CFGM_ATENCION_DEPENDENCIA', curso: '1º', moduleCode: '0020', raId: '0020_RA1' },
       { tab: 'CFGM_ATENCION_DEPENDENCIA_2', curso: '2º', moduleCode: '0211', raId: '0211_RA1' },
     ]);
     expect(describeTargetCourse('CFGM_ATENCION_DEPENDENCIA', '2º')).toBe(

@@ -31,7 +31,7 @@ const modulosDe = (id: string) => findNivel(id)?.cursos.flatMap(c => c.modulos ?
 describe('Catálogo de niveles: datos para el frontend', () => {
   it('declara las pestañas del mapa con los ids históricos y su orden', () => {
     expect(MAPA_TABS).toEqual([
-      'FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
+      'FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
       'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2', 'CFGS_ACONDICIONAMIENTO_FISICO', 'CFGS_ACONDICIONAMIENTO_FISICO_2', 'CFGS_INTEGRACION_SOCIAL', 'CFGS_INTEGRACION_SOCIAL_2'
     ]);
   });
@@ -43,6 +43,7 @@ describe('Catálogo de niveles: datos para el frontend', () => {
       { nivel: 'CFGM_ESTETICA', tab: 'CFGM', moduleCode: '0633', raId: '0633_RA1' },
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA', curso: '1º', moduleCode: '0845', raId: '0845_RA1' },
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA_2', curso: '2º', moduleCode: '0640', raId: '0640_RA1' },
+      { nivel: 'CFGM_ATENCION_DEPENDENCIA', tab: 'CFGM_ATENCION_DEPENDENCIA', curso: '1º', moduleCode: '0020', raId: '0020_RA1' },
       { nivel: 'CFGM_ATENCION_DEPENDENCIA', tab: 'CFGM_ATENCION_DEPENDENCIA_2', curso: '2º', moduleCode: '0211', raId: '0211_RA1' },
       { nivel: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', tab: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', moduleCode: 'CAE1', raId: 'CAE1_RA1' },
       { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL', curso: '1º', moduleCode: '0011', raId: '0011_RA1' },

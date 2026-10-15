@@ -1,0 +1,288 @@
+[
+  {
+    "a": { "modulo": "0217", "ra": "RA4", "criterios": ["c"] },
+    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["g", "d"] },
+    "justificacion_es": "Los protocolos de higiene informatizados se guardan en sistemas a los que acceden distintas unidades del centro, que deben estar alineadas.",
+    "justificacion_ca": "Els protocols d'higiene informatitzats es guarden en sistemes als quals accedeixen diferents unitats del centre, que han d'estar alineades.",
+    "actividades": [
+      {
+        "titulo_es": "Quién ve el registro de higiene y para qué",
+        "titulo_ca": "Qui veu el registre d'higiene i per a què",
+        "contexto_es": "En la residencia, enfermería, cocina y lavandería consultan el registro de higiene, pero cada una pide datos distintos.",
+        "contexto_ca": "A la residència, infermeria, cuina i bugaderia consulten el registre d'higiene, però cadascuna demana dades diferents.",
+        "desarrollo_es": "El alumnado cumplimenta en la aplicación del centro el protocolo de observación de la higiene de un residente (0217-4c). Define dónde se almacenan esos datos y cómo accede cada unidad a ellos (1664-4g), y relaciona lo que necesita cada departamento con el objetivo común de atender bien al residente (1664-4d).",
+        "desarrollo_ca": "L'alumnat emplena a l'aplicació del centre el protocol d'observació de la higiene d'un resident (0217-4c). Defineix on s'emmagatzemen aquestes dades i com hi accedeix cada unitat (1664-4g), i relaciona el que necessita cada departament amb l'objectiu comú d'atendre bé el resident (1664-4d).",
+        "evidencia_es": "Registro digital y mapa de accesos por departamento.",
+        "evidencia_ca": "Registre digital i mapa d'accessos per departament.",
+        "dua_es": "Aplicación de demostración con tutorial.",
+        "dua_ca": "Aplicació de demostració amb tutorial.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA3", "criterios": ["e"] },
+    "b": { "modulo": "1664", "ra": "RA1", "criterios": ["f"] },
+    "justificacion_es": "Elegir entre material desechable y reutilizable esterilizado tiene un impacto ambiental que se puede comparar con los ODS.",
+    "justificacion_ca": "Triar entre material d'un sol ús i reutilitzable esterilitzat té un impacte ambiental que es pot comparar amb els ODS.",
+    "actividades": [
+      {
+        "titulo_es": "Cuñas desechables o reutilizables",
+        "titulo_ca": "Cunyes d'un sol ús o reutilitzables",
+        "contexto_es": "La residencia gasta cientos de cuñas y batas desechables al mes y la dirección estudia volver al material reutilizable.",
+        "contexto_ca": "La residència gasta centenars de cunyes i bates d'un sol ús al mes i la direcció estudia tornar al material reutilitzable.",
+        "desarrollo_es": "El alumnado aplica los métodos de limpieza, desinfección y esterilización del material reutilizable, con sus controles de calidad y la normativa de residuos (0217-3e). Compara después el impacto ambiental de ambos modelos y su relación con los Objetivos de Desarrollo Sostenible (1664-1f).",
+        "desarrollo_ca": "L'alumnat aplica els mètodes de neteja, desinfecció i esterilització del material reutilitzable, amb els seus controls de qualitat i la normativa de residus (0217-3e). Compara després l'impacte ambiental de tots dos models i la seva relació amb els Objectius de Desenvolupament Sostenible (1664-1f).",
+        "evidencia_es": "Informe comparativo con recomendación a la dirección.",
+        "evidencia_ca": "Informe comparatiu amb recomanació a la direcció.",
+        "dua_es": "Tabla de comparación guiada y datos de consumo.",
+        "dua_ca": "Taula de comparació guiada i dades de consum.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA2", "criterios": ["a"] },
+    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["b"] },
+    "justificacion_es": "Los colchones con sensores de presión aplican tecnologías como el IoT a la prevención de úlceras.",
+    "justificacion_ca": "Els matalassos amb sensors de pressió apliquen tecnologies com l'IoT a la prevenció de nafres.",
+    "actividades": [
+      {
+        "titulo_es": "Colchón inteligente contra las úlceras por presión",
+        "titulo_ca": "Matalàs intel·ligent contra les nafres per pressió",
+        "contexto_es": "La residencia prueba un colchón con sensores que avisa al móvil de la gerocultora cuando toca un cambio postural.",
+        "contexto_ca": "La residència prova un matalàs amb sensors que avisa al mòbil de la gerocultora quan toca un canvi postural.",
+        "desarrollo_es": "El alumnado explica las medidas preventivas de las úlceras y los productos sanitarios clásicos, como los colchones de aire o los apósitos (0217-2a). Después describe qué tecnologías incorpora el colchón inteligente, como el IoT y el análisis de datos, y qué aporta frente a un colchón convencional (1664-4b).",
+        "desarrollo_ca": "L'alumnat explica les mesures preventives de les nafres i els productes sanitaris clàssics, com els matalassos d'aire o els apòsits (0217-2a). Després descriu quines tecnologies incorpora el matalàs intel·ligent, com l'IoT i l'anàlisi de dades, i què aporta davant un matalàs convencional (1664-4b).",
+        "evidencia_es": "Ficha comparativa de productos preventivos.",
+        "evidencia_ca": "Fitxa comparativa de productes preventius.",
+        "dua_es": "Vídeo del fabricante y muestras de apósitos.",
+        "dua_ca": "Vídeo del fabricant i mostres d'apòsits.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "1664", "ra": "RA3", "criterios": ["e", "a"] },
+    "justificacion_es": "El seguimiento de la evolución de la persona se beneficia de registros en la nube accesibles para todo el equipo.",
+    "justificacion_ca": "El seguiment de l'evolució de la persona es beneficia de registres al núvol accessibles per a tot l'equip.",
+    "actividades": [
+      {
+        "titulo_es": "Fotografías de la herida en el historial compartido",
+        "titulo_ca": "Fotografies de la ferida a l'historial compartit",
+        "contexto_es": "Las técnicas de ayuda a domicilio fotografían la úlcera de Bernat cada semana y se las envían por mensajería a la enfermera.",
+        "contexto_ca": "Les tècniques d'ajuda a domicili fotografien la nafra d'en Bernat cada setmana i les envien per missatgeria a la infermera.",
+        "desarrollo_es": "El alumnado aplica técnicas e instrumentos de observación para seguir la evolución de la úlcera y registra los datos según el procedimiento (0217-4e). Identifica los niveles de la nube que usaría una plataforma segura para compartir las imágenes (1664-3a) y sus ventajas frente a la mensajería personal (1664-3e).",
+        "desarrollo_ca": "L'alumnat aplica tècniques i instruments d'observació per seguir l'evolució de la nafra i registra les dades segons el procediment (0217-4e). Identifica els nivells del núvol que faria servir una plataforma segura per compartir les imatges (1664-3a) i els seus avantatges davant la missatgeria personal (1664-3e).",
+        "evidencia_es": "Hoja de seguimiento y propuesta de plataforma.",
+        "evidencia_ca": "Full de seguiment i proposta de plataforma.",
+        "dua_es": "Escala visual de estadios y esquema de la nube.",
+        "dua_ca": "Escala visual d'estadis i esquema del núvol.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA2", "criterios": ["g"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["e", "f"] },
+    "justificacion_es": "Usar los equipos de protección individual es a la vez un derecho y un deber del trabajador, y su gestión implica a los delegados de prevención.",
+    "justificacion_ca": "Fer servir els equips de protecció individual és alhora un dret i un deure del treballador, i la seva gestió implica els delegats de prevenció.",
+    "actividades": [
+      {
+        "titulo_es": "No hay guantes de mi talla: derechos y deberes",
+        "titulo_ca": "No hi ha guants de la meva talla: drets i deures",
+        "contexto_es": "En la planta faltan guantes de talla pequeña y algunas gerocultoras hacen la higiene sin ellos.",
+        "contexto_ca": "A la planta falten guants de talla petita i algunes gerocultores fan la higiene sense guants.",
+        "desarrollo_es": "El alumnado repasa las medidas de prevención y protección individual en las actividades de higiene (0217-2g). Determina los derechos y deberes de trabajadoras y empresa en este caso (1709-2e) y explica cómo gestionar la queja a través de los delegados de prevención o del comité de seguridad (1709-2f).",
+        "desarrollo_ca": "L'alumnat repassa les mesures de prevenció i protecció individual en les activitats d'higiene (0217-2g). Determina els drets i deures de treballadores i empresa en aquest cas (1709-2e) i explica com gestionar la queixa a través dels delegats de prevenció o del comitè de seguretat (1709-2f).",
+        "evidencia_es": "Escrito de comunicación al delegado de prevención.",
+        "evidencia_ca": "Escrit de comunicació al delegat de prevenció.",
+        "dua_es": "Modelo de escrito y esquema de la organización preventiva.",
+        "dua_ca": "Model d'escrit i esquema de l'organització preventiva.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA3", "criterios": ["f"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["h"] },
+    "justificacion_es": "Las medidas de protección frente a infecciones se completan con la vigilancia de la salud del personal, incluida la vacunación.",
+    "justificacion_ca": "Les mesures de protecció davant infeccions es completen amb la vigilància de la salut del personal, inclosa la vacunació.",
+    "actividades": [
+      {
+        "titulo_es": "Brote de gripe en la residencia y salud del personal",
+        "titulo_ca": "Brot de grip a la residència i salut del personal",
+        "contexto_es": "Hay un brote de gripe en la residencia y varias gerocultoras no se han vacunado.",
+        "contexto_ca": "Hi ha un brot de grip a la residència i diverses gerocultores no s'han vacunat.",
+        "desarrollo_es": "El alumnado aplica las medidas de prevención y protección individual durante la higiene en una habitación con aislamiento (0217-3f). Después determina los requisitos de la vigilancia de la salud, como la vacunación o los reconocimientos médicos, y su importancia como medida preventiva (1709-2h).",
+        "desarrollo_ca": "L'alumnat aplica les mesures de prevenció i protecció individual durant la higiene en una habitació amb aïllament (0217-3f). Després determina els requisits de la vigilància de la salut, com la vacunació o els reconeixements mèdics, i la seva importància com a mesura preventiva (1709-2h).",
+        "evidencia_es": "Protocolo del brote con medidas para residentes y personal.",
+        "evidencia_ca": "Protocol del brot amb mesures per a residents i personal.",
+        "dua_es": "Infografía de medidas y práctica con EPI.",
+        "dua_ca": "Infografia de mesures i pràctica amb EPI.",
+        "metodologia_es": "simulación de crisis.",
+        "metodologia_ca": "simulació de crisi."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["i"] },
+    "justificacion_es": "Interpretar planes de cuidados con soltura abre itinerarios formativos hacia otros títulos sanitarios y sociales.",
+    "justificacion_ca": "Interpretar plans de cures amb facilitat obre itineraris formatius cap a altres títols sanitaris i socials.",
+    "actividades": [
+      {
+        "titulo_es": "Del plan de cuidados a mi itinerario formativo",
+        "titulo_ca": "Del pla de cures al meu itinerari formatiu",
+        "contexto_es": "A varias alumnas les gusta especialmente la parte sanitaria y se preguntan qué pueden estudiar después.",
+        "contexto_ca": "A diverses alumnes els agrada especialment la part sanitària i es demanen què poden estudiar després.",
+        "desarrollo_es": "El alumnado interpreta un plan de cuidados individualizado complejo, identificando quién hace cada cuidado: técnico, enfermería o fisioterapia (0217-1a). A partir de ahí identifica los itinerarios formativos que conducen a esas otras profesiones, como otros ciclos o grados, y sus requisitos de acceso (1709-4i).",
+        "desarrollo_ca": "L'alumnat interpreta un pla de cures individualitzat complex, identificant qui fa cada cura: tècnic, infermeria o fisioteràpia (0217-1a). A partir d'aquí identifica els itineraris formatius que condueixen a aquestes altres professions, com altres cicles o graus, i els seus requisits d'accés (1709-4i).",
+        "evidencia_es": "Plan de cuidados anotado y mapa de itinerarios formativos.",
+        "evidencia_ca": "Pla de cures anotat i mapa d'itineraris formatius.",
+        "dua_es": "Plan con colores por profesional y mapa visual.",
+        "dua_ca": "Pla amb colors per professional i mapa visual.",
+        "metodologia_es": "aprendizaje orientador.",
+        "metodologia_ca": "aprenentatge orientador."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA4", "criterios": ["g"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "El rigor en el control de la higiene es una de las actitudes profesionales que más valoran los empleadores del sector.",
+    "justificacion_ca": "El rigor en el control de la higiene és una de les actituds professionals que més valoren els ocupadors del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Rigor y discreción: lo que el sector espera de mí",
+        "titulo_ca": "Rigor i discreció: el que el sector espera de mi",
+        "contexto_es": "Una supervisora explica en clase que despidió a una técnica por firmar registros de higiene que no había hecho.",
+        "contexto_ca": "Una supervisora explica a classe que va acomiadar una tècnica per signar registres d'higiene que no havia fet.",
+        "desarrollo_es": "El alumnado argumenta por qué el control y el seguimiento de la higiene mejoran el bienestar de la persona usuaria (0217-4g). Después reflexiona sobre las actitudes y aptitudes que exige el sector, como el rigor, la honestidad o la discreción, y detecta en cuáles debe crecer (1709-1c).",
+        "desarrollo_ca": "L'alumnat argumenta per què el control i el seguiment de la higiene milloren el benestar de la persona usuària (0217-4g). Després reflexiona sobre les actituds i aptituds que exigeix el sector, com el rigor, l'honestedat o la discreció, i detecta en quines ha de créixer (1709-1c).",
+        "evidencia_es": "Reflexión escrita y autoevaluación de actitudes.",
+        "evidencia_ca": "Reflexió escrita i autoavaluació d'actituds.",
+        "dua_es": "Testimonio grabado y escala de autoevaluación.",
+        "dua_ca": "Testimoni enregistrat i escala d'autoavaluació.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1664", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["c", "d", "i"] },
+    "justificacion_es": "Las tecnologías habilitadoras que transforman el sector son también herramientas para construir el propio entorno de aprendizaje.",
+    "justificacion_ca": "Les tecnologies habilitadores que transformen el sector són també eines per construir el propi entorn d'aprenentatge.",
+    "actividades": [
+      {
+        "titulo_es": "Mi entorno de aprendizaje sobre tecnología para la dependencia",
+        "titulo_ca": "El meu entorn d'aprenentatge sobre tecnologia per a la dependència",
+        "contexto_es": "Cada año aparecen nuevos dispositivos para la atención a la dependencia y el alumnado necesita mantenerse al día.",
+        "contexto_ca": "Cada any apareixen nous dispositius per a l'atenció a la dependència i l'alumnat necessita mantenir-se al dia.",
+        "desarrollo_es": "El alumnado identifica las tecnologías habilitadoras actuales que definen un servicio digitalizado (1664-4a). Para seguirlas, conoce y utiliza herramientas como boletines, podcasts y redes profesionales (1709-5c), pone en práctica su competencia digital para organizarlas (1709-5d) y diseña su entorno personal de aprendizaje (1709-5i).",
+        "desarrollo_ca": "L'alumnat identifica les tecnologies habilitadores actuals que defineixen un servei digitalitzat (1664-4a). Per seguir-les, coneix i fa servir eines com butlletins, pòdcasts i xarxes professionals (1709-5c), posa en pràctica la seva competència digital per organitzar-les (1709-5d) i dissenya el seu entorn personal d'aprenentatge (1709-5i).",
+        "evidencia_es": "Mapa del entorno personal de aprendizaje con fuentes y herramientas.",
+        "evidencia_ca": "Mapa de l'entorn personal d'aprenentatge amb fonts i eines.",
+        "dua_es": "Ejemplos de entornos de aprendizaje y plantilla visual.",
+        "dua_ca": "Exemples d'entorns d'aprenentatge i plantilla visual.",
+        "metodologia_es": "aprendizaje autónomo guiado.",
+        "metodologia_ca": "aprenentatge autònom guiat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1664", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "La migración del sector a entornos 4.0 crea nuevos puestos para técnicos con competencias digitales.",
+    "justificacion_ca": "La migració del sector a entorns 4.0 crea nous llocs per a tècnics amb competències digitals.",
+    "actividades": [
+      {
+        "titulo_es": "Nuevos empleos en la atención conectada",
+        "titulo_ca": "Noves ocupacions en l'atenció connectada",
+        "contexto_es": "Una central de teleasistencia avanzada de Palma amplía plantilla y busca técnicos que sepan manejar plataformas y sensores.",
+        "contexto_ca": "Una central de teleassistència avançada de Palma amplia plantilla i cerca tècnics que sàpiguen manejar plataformes i sensors.",
+        "desarrollo_es": "El alumnado relaciona la digitalización de los servicios de atención con la mejora de sus resultados, como la rapidez de respuesta o la reducción de ingresos hospitalarios (1664-2e). Después analiza qué nuevas oportunidades de empleo genera esta transformación y qué requisitos piden (1709-1a).",
+        "desarrollo_ca": "L'alumnat relaciona la digitalització dels serveis d'atenció amb la millora dels seus resultats, com la rapidesa de resposta o la reducció d'ingressos hospitalaris (1664-2e). Després analitza quines noves oportunitats d'ocupació genera aquesta transformació i quins requisits demanen (1709-1a).",
+        "evidencia_es": "Informe sobre nuevos perfiles profesionales.",
+        "evidencia_ca": "Informe sobre nous perfils professionals.",
+        "dua_es": "Ofertas reales seleccionadas y glosario digital.",
+        "dua_ca": "Ofertes reals seleccionades i glossari digital.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1664", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["e", "f"] },
+    "justificacion_es": "La identidad digital profesional se construye sobre servicios en la nube, y conviene saber en qué nivel se guarda cada huella.",
+    "justificacion_ca": "La identitat digital professional es construeix sobre serveis al núvol, i convé saber en quin nivell es guarda cada empremta.",
+    "actividades": [
+      {
+        "titulo_es": "Mi huella digital como técnico en atención a la dependencia",
+        "titulo_ca": "La meva empremta digital com a tècnic en atenció a la dependència",
+        "contexto_es": "Una empresa de selección revisa las redes de los candidatos y encuentra fotos de residentes publicadas por una alumna en prácticas.",
+        "contexto_ca": "Una empresa de selecció revisa les xarxes dels candidats i hi troba fotos de residents publicades per una alumna en pràctiques.",
+        "desarrollo_es": "El alumnado identifica en qué nivel de la nube se alojan sus redes, su correo y sus documentos (1664-3a). Analiza el concepto de identidad digital y su impacto en la empleabilidad (1709-5e) y justifica cómo su entorno de aprendizaje y sus perfiles deben mejorar su imagen profesional (1709-5f).",
+        "desarrollo_ca": "L'alumnat identifica en quin nivell del núvol s'allotgen les seves xarxes, el seu correu i els seus documents (1664-3a). Analitza el concepte d'identitat digital i el seu impacte en l'ocupabilitat (1709-5e) i justifica com el seu entorn d'aprenentatge i els seus perfils han de millorar la seva imatge professional (1709-5f).",
+        "evidencia_es": "Auditoría de la propia identidad digital con plan de mejora.",
+        "evidencia_ca": "Auditoria de la pròpia identitat digital amb pla de millora.",
+        "dua_es": "Lista de comprobación de privacidad.",
+        "dua_ca": "Llista de comprovació de privacitat.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1664", "ra": "RA5", "criterios": ["a", "h"] },
+    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Un plan de transformación digital debe indicar cómo cambia la organización del trabajo y qué derechos afecta.",
+    "justificacion_ca": "Un pla de transformació digital ha d'indicar com canvia l'organització de la feina i quins drets afecta.",
+    "actividades": [
+      {
+        "titulo_es": "Cómo cambia mi trabajo si la residencia se digitaliza",
+        "titulo_ca": "Com canvia la meva feina si la residència es digitalitza",
+        "contexto_es": "La residencia Sa Torre anuncia un plan de digitalización y la plantilla teme por sus puestos y horarios.",
+        "contexto_ca": "La residència Sa Torre anuncia un pla de digitalització i la plantilla té por pels seus llocs i horaris.",
+        "desarrollo_es": "El alumnado define por bloques el funcionamiento actual de la residencia (1664-5a) y redacta la secuencia del plan de transformación con los recursos que necesita (1664-5h). En cada etapa identifica los cambios en la organización del trabajo, como la desconexión digital o el teletrabajo administrativo, y los derechos que implican (1709-3c).",
+        "desarrollo_ca": "L'alumnat defineix per blocs el funcionament actual de la residència (1664-5a) i redacta la seqüència del pla de transformació amb els recursos que necessita (1664-5h). A cada etapa identifica els canvis en l'organització de la feina, com la desconnexió digital o el teletreball administratiu, i els drets que impliquen (1709-3c).",
+        "evidencia_es": "Plan de transformación con análisis de impacto laboral.",
+        "evidencia_ca": "Pla de transformació amb anàlisi d'impacte laboral.",
+        "dua_es": "Diagrama guiado y fichas de derechos.",
+        "dua_ca": "Diagrama guiat i fitxes de drets.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "0217", "ra": "RA3", "criterios": ["e"] },
+    "b": { "modulo": "1664", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "Digitalizar la gestión de residuos sanitarios mejora su trazabilidad y reduce la cantidad que se genera.",
+    "justificacion_ca": "Digitalitzar la gestió de residus sanitaris en millora la traçabilitat i redueix la quantitat que se'n genera.",
+    "actividades": [
+      {
+        "titulo_es": "Trazabilidad digital de los residuos de la residencia",
+        "titulo_ca": "Traçabilitat digital dels residus de la residència",
+        "contexto_es": "La inspección detecta que la residencia no sabe cuántos residuos sanitarios genera ni cuándo los retira el gestor.",
+        "contexto_ca": "La inspecció detecta que la residència no sap quants residus sanitaris genera ni quan els retira el gestor.",
+        "desarrollo_es": "El alumnado aplica la limpieza, desinfección y esterilización de materiales siguiendo la normativa de residuos (0217-3e). Después analiza cómo un sistema digital, con contenedores pesados y registro automático, mejoraría la producción y la gestión de residuos del centro (1664-5g).",
+        "desarrollo_ca": "L'alumnat aplica la neteja, desinfecció i esterilització de materials seguint la normativa de residus (0217-3e). Després analitza com un sistema digital, amb contenidors pesats i registre automàtic, milloraria la producció i la gestió de residus del centre (1664-5g).",
+        "evidencia_es": "Propuesta de sistema de trazabilidad con estimación de mejoras.",
+        "evidencia_ca": "Proposta de sistema de traçabilitat amb estimació de millores.",
+        "dua_es": "Esquema del circuito de residuos con colores.",
+        "dua_ca": "Esquema del circuit de residus amb colors.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  }
+]

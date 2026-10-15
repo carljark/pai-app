@@ -72,6 +72,7 @@ describe('Datos del CFGM Guía en el Medio Natural y de Tiempo Libre', () => {
   it('separa por curso los módulos de FP Illes Balears y usa los nombres oficiales en el prompt', () => {
     const nivel = findNivel('CFGM_GUIA_MEDIO_NATURAL');
     expect(nivel?.mapas).toEqual([
+      { tab: 'CFGM_GUIA_MEDIO_NATURAL', curso: '1º', moduleCode: '1325', raId: '1325_RA1' },
       { tab: 'CFGM_GUIA_MEDIO_NATURAL_2', curso: '2º', moduleCode: '1328', raId: '1328_RA1' },
     ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([9, 8]);

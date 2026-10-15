@@ -145,7 +145,10 @@ export const NIVELES: readonly NivelEducativo[] = [
       { curso: '1º', modulos: ['1325', '1327', '1329', '1333', '1334', '1335', '1336', '1664', '1709'] },
       { curso: '2º', modulos: ['1328', '1337', '1338', '1339', '0156', '1708', '1710', '1713'] },
     ],
-    mapas: [{ tab: 'CFGM_GUIA_MEDIO_NATURAL_2', curso: '2º', moduleCode: '1328', raId: '1328_RA1' }],
+    mapas: [
+      { tab: 'CFGM_GUIA_MEDIO_NATURAL', curso: '1º', moduleCode: '1325', raId: '1325_RA1' },
+      { tab: 'CFGM_GUIA_MEDIO_NATURAL_2', curso: '2º', moduleCode: '1328', raId: '1328_RA1' },
+    ],
   },
   {
     id: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',

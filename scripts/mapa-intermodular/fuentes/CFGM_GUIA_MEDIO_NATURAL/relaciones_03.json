@@ -1,0 +1,932 @@
+[
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Las actividades ecuestres recreativas de la empresa deben encajar con el contexto y las finalidades del proyecto de tiempo libre.",
+    "justificacion_ca": "Les activitats eqüestres recreatives de l'empresa han d'encaixar amb el context i les finalitats del projecte de temps lliure.",
+    "actividades": [
+      {
+        "titulo_es": "Caballos en el proyecto de un casal de verano",
+        "titulo_ca": "Cavalls en el projecte d'un casal d'estiu",
+        "contexto_es": "Un ayuntamiento quiere incluir actividades con caballos en el casal de verano de un barrio.",
+        "contexto_ca": "Un ajuntament vol incloure activitats amb cavalls en el casal d'estiu d'un barri.",
+        "desarrollo_es": "Para la propuesta, el alumnado caracteriza los tipos de actividades recreativas que ofrece el centro ecuestre (1327-4a). Identifica el marco sociocultural del barrio (1335-1a) y valora si cada actividad es congruente con las finalidades del casal (1335-1b).",
+        "desarrollo_ca": "Per a la proposta, l'alumnat caracteritza els tipus d'activitats recreatives que ofereix el centre eqüestre (1327-4a). Identifica el marc sociocultural del barri (1335-1a) i valora si cada activitat és congruent amb les finalitats del casal (1335-1b).",
+        "evidencia_es": "Propuesta de actividades para el casal.",
+        "evidencia_ca": "Proposta d'activitats per al casal.",
+        "dua_es": "Catálogo de actividades con fotos.",
+        "dua_ca": "Catàleg d'activitats amb fotos.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "f"
+      ]
+    },
+    "justificacion_es": "Elegir espacios e instalaciones para una actividad ecuestre incluye prever cómo se evaluará.",
+    "justificacion_ca": "Triar espais i instal·lacions per a una activitat eqüestre inclou preveure com s'avaluarà.",
+    "actividades": [
+      {
+        "titulo_es": "Pista, picadero o campo abierto",
+        "titulo_ca": "Pista, picador o camp obert",
+        "contexto_es": "Una escuela pide una jornada ecuestre para cuarenta alumnos y el centro tiene una pista, un picadero y un prado.",
+        "contexto_ca": "Una escola demana una jornada eqüestre per a quaranta alumnes i el centre té una pista, un picador i un prat.",
+        "desarrollo_es": "Con el plano del centro, el alumnado selecciona los espacios, instalaciones y equipos para cada actividad (1327-4b). Asigna espacios y materiales a los grupos rotatorios (1335-2a) e incorpora pautas para evaluar la jornada (1335-2f).",
+        "desarrollo_ca": "Amb el plànol del centre, l'alumnat selecciona els espais, les instal·lacions i els equips per a cada activitat (1327-4b). Assigna espais i materials als grups rotatoris (1335-2a) i hi incorpora pautes per avaluar la jornada (1335-2f).",
+        "evidencia_es": "Plano de rotaciones y pautas de evaluación.",
+        "evidencia_ca": "Plànol de rotacions i pautes d'avaluació.",
+        "dua_es": "Plano del centro ampliado.",
+        "dua_ca": "Plànol del centre ampliat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Las gymkhanas a caballo son juegos que desarrollan habilidades y tienen valor educativo.",
+    "justificacion_ca": "Les gimcanes a cavall són jocs que desenvolupen habilitats i tenen valor educatiu.",
+    "actividades": [
+      {
+        "titulo_es": "Gymkhana de ponis con conos y aros",
+        "titulo_ca": "Gimcana de ponis amb cons i anelles",
+        "contexto_es": "En una fiesta de cumpleaños en el centro ecuestre, los niños piden juegos a caballo.",
+        "contexto_ca": "En una festa d'aniversari al centre eqüestre, els infants demanen jocs a cavall.",
+        "desarrollo_es": "Para la fiesta, el alumnado colabora en una gymkhana a caballo siguiendo el protocolo del centro (1327-5d). Elige juegos que desarrollan habilidades motrices y sociales (1335-2b) y argumenta su valor educativo ante las familias (1335-2c).",
+        "desarrollo_ca": "Per a la festa, l'alumnat col·labora en una gimcana a cavall seguint el protocol del centre (1327-5d). Tria jocs que desenvolupen habilitats motrius i socials (1335-2b) i n'argumenta el valor educatiu davant les famílies (1335-2c).",
+        "evidencia_es": "Fichas de juegos de la gymkhana.",
+        "evidencia_ca": "Fitxes de jocs de la gimcana.",
+        "dua_es": "Dibujos de cada prueba.",
+        "dua_ca": "Dibuixos de cada prova.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA5",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Las actividades ecuestres para personas con discapacidad exigen adaptar los recursos de animación.",
+    "justificacion_ca": "Les activitats eqüestres per a persones amb discapacitat exigeixen adaptar els recursos d'animació.",
+    "actividades": [
+      {
+        "titulo_es": "Una mañana ecuestre con un centro de día",
+        "titulo_ca": "Un matí eqüestre amb un centre de dia",
+        "contexto_es": "Un centro de día para personas con discapacidad intelectual visita el centro ecuestre.",
+        "contexto_ca": "Un centre de dia per a persones amb discapacitat intel·lectual visita el centre eqüestre.",
+        "desarrollo_es": "Durante la visita, el alumnado colabora en las actividades ecuestres de ocio siguiendo el protocolo para personas con discapacidad (1327-5g). Adapta los recursos de animación, como canciones y pictogramas, a la participación de cada persona (1335-3b).",
+        "desarrollo_ca": "Durant la visita, l'alumnat col·labora en les activitats eqüestres d'oci seguint el protocol per a persones amb discapacitat (1327-5g). Adapta els recursos d'animació, com cançons i pictogrames, a la participació de cada persona (1335-3b).",
+        "evidencia_es": "Programa adaptado de la mañana.",
+        "evidencia_ca": "Programa adaptat del matí.",
+        "dua_es": "Pictogramas de las actividades.",
+        "dua_ca": "Pictogrames de les activitats.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Los paseos en poni pueden ser una actividad recreativa más dentro de un campamento.",
+    "justificacion_ca": "Els passejos en poni poden ser una activitat recreativa més dins un campament.",
+    "actividades": [
+      {
+        "titulo_es": "Paseos en poni junto a las tiendas",
+        "titulo_ca": "Passejos en poni devora les tendes",
+        "contexto_es": "Un campamento de verano cerca de una finca ecuestre quiere ofrecer paseos en poni a los más pequeños.",
+        "contexto_ca": "Un campament d'estiu prop d'una finca eqüestre vol oferir passejos en poni als més petits.",
+        "desarrollo_es": "En el campamento, el alumnado organiza las actividades recreativas del entorno de la acampada (1335-5c). Guía del diestro a los ponis durante los paseos infantiles con turnos y normas claras (1327-5e).",
+        "desarrollo_ca": "Al campament, l'alumnat organitza les activitats recreatives de l'entorn de l'acampada (1335-5c). Guia els ponis de la mà durant els passejos infantils amb torns i normes clares (1327-5e).",
+        "evidencia_es": "Horario de paseos y normas.",
+        "evidencia_ca": "Horari de passejos i normes.",
+        "dua_es": "Normas con pictogramas.",
+        "dua_ca": "Normes amb pictogrames.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA6",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "e"
+      ]
+    },
+    "justificacion_es": "Los datos sobre la actuación del guía y el grupo se convierten en indicadores de evaluación que hay que comunicar.",
+    "justificacion_ca": "Les dades sobre l'actuació del guia i el grup es converteixen en indicadors d'avaluació que cal comunicar.",
+    "actividades": [
+      {
+        "titulo_es": "Cómo ha ido la ruta, en números",
+        "titulo_ca": "Com ha anat la ruta, en xifres",
+        "contexto_es": "La dirección del centro ecuestre pide saber si las rutas guiadas satisfacen a los clientes.",
+        "contexto_ca": "La direcció del centre eqüestre demana saber si les rutes guiades satisfan els clients.",
+        "desarrollo_es": "Tras varias rutas, el alumnado recoge datos sobre su propia actuación y las reacciones del grupo (1327-6a). Valora qué indicadores de evaluación son útiles (1335-6a) y transmite los resultados a la dirección y a los guías (1335-6e).",
+        "desarrollo_ca": "Després de diverses rutes, l'alumnat recull dades sobre la seva pròpia actuació i les reaccions del grup (1327-6a). Valora quins indicadors d'avaluació són útils (1335-6a) i transmet els resultats a la direcció i als guies (1335-6e).",
+        "evidencia_es": "Informe breve de indicadores.",
+        "evidencia_ca": "Informe breu d'indicadors.",
+        "dua_es": "Gráficos sencillos.",
+        "dua_ca": "Gràfics senzills.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA5",
+      "criterios": [
+        "b",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Informar de las normas y aplicar la normativa crea un entorno seguro para la actividad en el medio natural.",
+    "justificacion_ca": "Informar de les normes i aplicar la normativa crea un entorn segur per a l'activitat en el medi natural.",
+    "actividades": [
+      {
+        "titulo_es": "Normas para un paseo a caballo por el pinar",
+        "titulo_ca": "Normes per a un passeig a cavall pel pinar",
+        "contexto_es": "Un grupo de adolescentes hace un paseo a caballo por un pinar donde también hay senderistas.",
+        "contexto_ca": "Un grup d'adolescents fa un passeig a cavall per un pinar on també hi ha excursionistes.",
+        "desarrollo_es": "Al empezar, el alumnado informa a los participantes de las normas de la actividad (1327-5b) y aplica la normativa ambiental, de bienestar animal y de prevención (1327-5h). Así genera un entorno seguro que minimiza los riesgos del medio (1335-4d).",
+        "desarrollo_ca": "En començar, l'alumnat informa els participants de les normes de l'activitat (1327-5b) i aplica la normativa ambiental, de benestar animal i de prevenció (1327-5h). Així genera un entorn segur que minimitza els riscs del medi (1335-4d).",
+        "evidencia_es": "Decálogo del paseo.",
+        "evidencia_ca": "Decàleg del passeig.",
+        "dua_es": "Normas en tarjetas.",
+        "dua_ca": "Normes en targetes.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Cruzar un vado a caballo es un punto de dificultad de la ruta que exige criterios de seguridad acuática.",
+    "justificacion_ca": "Travessar un gual a cavall és un punt de dificultat de la ruta que exigeix criteris de seguretat aquàtica.",
+    "actividades": [
+      {
+        "titulo_es": "Cruzar el torrente después de la lluvia",
+        "titulo_ca": "Travessar el torrent després de la pluja",
+        "contexto_es": "Tras unas lluvias, el torrente que cruza la ruta ecuestre lleva más agua de lo normal.",
+        "contexto_ca": "Després d'unes pluges, el torrent que travessa la ruta eqüestre duu més aigua del normal.",
+        "desarrollo_es": "En el reconocimiento del terreno, el alumnado identifica el vado como punto de dificultad y dosifica el esfuerzo (1327-2b). Aplica criterios de seguridad acuática para decidir si se cruza, por dónde y con qué material (1336-1f).",
+        "desarrollo_ca": "En el reconeixement del terreny, l'alumnat identifica el gual com a punt de dificultat i dosifica l'esforç (1327-2b). Aplica criteris de seguretat aquàtica per decidir si es travessa, per on i amb quin material (1336-1f).",
+        "evidencia_es": "Ficha de decisión del vado.",
+        "evidencia_ca": "Fitxa de decisió del gual.",
+        "dua_es": "Fotografías del torrente.",
+        "dua_ca": "Fotografies del torrent.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Las fichas de valoración en la nube permiten analizar todas las actividades del centro.",
+    "justificacion_ca": "Les fitxes de valoració al núvol permeten analitzar totes les activitats del centre.",
+    "actividades": [
+      {
+        "titulo_es": "Fichas de valoración digitales",
+        "titulo_ca": "Fitxes de valoració digitals",
+        "contexto_es": "El centro ecuestre tiene cajas de fichas en papel que nadie consulta.",
+        "contexto_ca": "El centre eqüestre té capses de fitxes en paper que ningú no consulta.",
+        "desarrollo_es": "Tras cada actividad, el alumnado rellena la ficha de valoración según el programa (1327-6f). La digitaliza en la nube e identifica las ventajas que ofrece para el centro, como el acceso desde la cuadra o los resúmenes automáticos (1664-3e).",
+        "desarrollo_ca": "Després de cada activitat, l'alumnat emplena la fitxa de valoració segons el programa (1327-6f). La digitalitza al núvol i identifica els avantatges que ofereix al centre, com l'accés des de l'estable o els resums automàtics (1664-3e).",
+        "evidencia_es": "Formulario digital de valoración.",
+        "evidencia_ca": "Formulari digital de valoració.",
+        "dua_es": "Tutorial del formulario.",
+        "dua_ca": "Tutorial del formulari.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "justificacion_es": "Los localizadores GPS y las aplicaciones conectadas mejoran la comunicación con el grupo durante la ruta.",
+    "justificacion_ca": "Els localitzadors GPS i les aplicacions connectades milloren la comunicació amb el grup durant la ruta.",
+    "actividades": [
+      {
+        "titulo_es": "Seguir la ruta en tiempo real",
+        "titulo_ca": "Seguir la ruta en temps real",
+        "contexto_es": "La empresa quiere saber desde la base dónde está cada grupo de jinetes.",
+        "contexto_ca": "L'empresa vol saber des de la base on és cada grup de genets.",
+        "desarrollo_es": "Durante una ruta, el alumnado usa códigos de señales y aparatos de comunicación con el grupo y la base (1327-3d). Describe el IoT y los datos que generan los localizadores (1664-4b) y relaciona esta tecnología disruptiva con su aplicación concreta en el turismo ecuestre (1664-4f).",
+        "desarrollo_ca": "Durant una ruta, l'alumnat fa servir codis de senyals i aparells de comunicació amb el grup i la base (1327-3d). Descriu l'IoT i les dades que generen els localitzadors (1664-4b) i relaciona aquesta tecnologia disruptiva amb la seva aplicació concreta en el turisme eqüestre (1664-4f).",
+        "evidencia_es": "Informe de la prueba de seguimiento.",
+        "evidencia_ca": "Informe de la prova de seguiment.",
+        "dua_es": "Mapa con el recorrido registrado.",
+        "dua_ca": "Mapa amb el recorregut registrat.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Asignar caballos a participantes es una etapa del servicio que puede digitalizarse.",
+    "justificacion_ca": "Assignar cavalls a participants és una etapa del servei que es pot digitalitzar.",
+    "actividades": [
+      {
+        "titulo_es": "Asignar caballo al reservar en línea",
+        "titulo_ca": "Assignar cavall en reservar en línia",
+        "contexto_es": "El centro asigna los caballos a mano cada mañana y a veces repite errores de emparejamiento.",
+        "contexto_ca": "El centre assigna els cavalls a mà cada matí i de vegades repeteix errors d'aparellament.",
+        "desarrollo_es": "En el análisis, el alumnado establece criterios para asignar animales a cada perfil de participante (1327-4c). Identifica esa asignación como una etapa digitalizable (1664-5b) y define las tecnologías implicadas, como un formulario de reserva y una base de datos (1664-5c).",
+        "desarrollo_ca": "En l'anàlisi, l'alumnat estableix criteris per assignar animals a cada perfil de participant (1327-4c). Identifica aquesta assignació com una etapa digitalitzable (1664-5b) i defineix les tecnologies implicades, com un formulari de reserva i una base de dades (1664-5c).",
+        "evidencia_es": "Criterios de asignación y esquema digital.",
+        "evidencia_ca": "Criteris d'assignació i esquema digital.",
+        "dua_es": "Tabla de perfiles.",
+        "dua_ca": "Taula de perfils.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Los sensores conectados ayudan a comprobar el estado y la aptitud de los caballos.",
+    "justificacion_ca": "Els sensors connectats ajuden a comprovar l'estat i l'aptitud dels cavalls.",
+    "actividades": [
+      {
+        "titulo_es": "Un collar que vigila a los caballos de noche",
+        "titulo_ca": "Un collar que vigila els cavalls de nit",
+        "contexto_es": "Un proveedor ofrece collares con sensores que avisan si un caballo se tumba muchas veces, señal de cólico.",
+        "contexto_ca": "Un proveïdor ofereix collars amb sensors que avisen si un cavall s'ajeu moltes vegades, senyal de còlic.",
+        "desarrollo_es": "En la cuadra, el alumnado comprueba el estado y la aptitud de los caballos para la ruta (1327-1b). Describe cómo los collares combinan la parte física con el software, el IoT y las comunicaciones (1664-2c).",
+        "desarrollo_ca": "A l'estable, l'alumnat comprova l'estat i l'aptitud dels cavalls per a la ruta (1327-1b). Descriu com els collars combinen la part física amb el programari, l'IoT i les comunicacions (1664-2c).",
+        "evidencia_es": "Informe sobre el sistema de sensores.",
+        "evidencia_ca": "Informe sobre el sistema de sensors.",
+        "dua_es": "Esquema del sistema de sensores.",
+        "dua_ca": "Esquema del sistema de sensors.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "justificacion_es": "Preparar materiales para las actividades ecuestres permite comparar procesos lineales y circulares.",
+    "justificacion_ca": "Preparar materials per a les activitats eqüestres permet comparar processos lineals i circulars.",
+    "actividades": [
+      {
+        "titulo_es": "Herraduras, cuerdas y conos con segunda vida",
+        "titulo_ca": "Ferradures, cordes i cons amb segona vida",
+        "contexto_es": "El centro tira cada año herraduras gastadas, cuerdas rotas y material de juego viejo.",
+        "contexto_ca": "El centre llença cada any ferradures gastades, cordes rompudes i material de joc vell.",
+        "desarrollo_es": "Al preparar los materiales, el alumnado detecta qué se tira (1327-5a). Identifica procesos reales basados en economía lineal (1664-1d) y propone otros basados en economía circular, como reutilizar herraduras en juegos (1664-1e).",
+        "desarrollo_ca": "En preparar els materials, l'alumnat detecta què es llença (1327-5a). Identifica processos reals basats en economia lineal (1664-1d) i en proposa d'altres basats en economia circular, com reutilitzar ferradures en jocs (1664-1e).",
+        "evidencia_es": "Propuesta de reutilización.",
+        "evidencia_ca": "Proposta de reutilització.",
+        "dua_es": "Ejemplos de otras cuadras.",
+        "dua_ca": "Exemples d'altres estables.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Revisar y cuidar a los caballos tiene riesgos que deben evaluarse con técnicas de prevención.",
+    "justificacion_ca": "Revisar i tenir cura dels cavalls té riscs que s'han d'avaluar amb tècniques de prevenció.",
+    "actividades": [
+      {
+        "titulo_es": "Evaluar los riesgos de limpiar cascos",
+        "titulo_ca": "Avaluar els riscs de netejar cascs",
+        "contexto_es": "Limpiar los cascos de un caballo nervioso es una de las tareas con más accidentes del centro.",
+        "contexto_ca": "Netejar els cascs d'un cavall nerviós és una de les tasques amb més accidents del centre.",
+        "desarrollo_es": "En la cuadra, el alumnado aplica la normativa de bienestar animal y de prevención en la revisión de los caballos (1327-1h). Evalúa los riesgos de la tarea y define técnicas de prevención y protección (1709-2c).",
+        "desarrollo_ca": "A l'estable, l'alumnat aplica la normativa de benestar animal i de prevenció en la revisió dels cavalls (1327-1h). Avalua els riscs de la tasca i defineix tècniques de prevenció i protecció (1709-2c).",
+        "evidencia_es": "Ficha de evaluación de la tarea.",
+        "evidencia_ca": "Fitxa d'avaluació de la tasca.",
+        "dua_es": "Vídeo de la técnica segura.",
+        "dua_ca": "Vídeo de la tècnica segura.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA3",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "La normativa de la ruta ecuestre incluye protocolos de actuación en caso de emergencia.",
+    "justificacion_ca": "La normativa de la ruta eqüestre inclou protocols d'actuació en cas d'emergència.",
+    "actividades": [
+      {
+        "titulo_es": "Incendio cerca de la ruta",
+        "titulo_ca": "Incendi prop de la ruta",
+        "contexto_es": "En pleno verano, el grupo ve una columna de humo a dos kilómetros de la ruta.",
+        "contexto_ca": "En ple estiu, el grup veu una columna de fum a dos quilòmetres de la ruta.",
+        "desarrollo_es": "En la simulación, el alumnado aplica la normativa ambiental y de prevención durante la ruta (1327-3h). Analiza y sigue el protocolo de actuación en caso de emergencia para alejar al grupo y avisar al 112 (1709-2d).",
+        "desarrollo_ca": "En la simulació, l'alumnat aplica la normativa ambiental i de prevenció durant la ruta (1327-3h). Analitza i segueix el protocol d'actuació en cas d'emergència per allunyar el grup i avisar el 112 (1709-2d).",
+        "evidencia_es": "Protocolo ante incendios.",
+        "evidencia_ca": "Protocol davant incendis.",
+        "dua_es": "Mapa de vías de escape.",
+        "dua_ca": "Mapa de vies d'escapada.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Cumplir la normativa en las actividades recreativas depende de cómo la empresa organiza la prevención.",
+    "justificacion_ca": "Complir la normativa en les activitats recreatives depèn de com l'empresa organitza la prevenció.",
+    "actividades": [
+      {
+        "titulo_es": "Quién se ocupa de la prevención en el centro",
+        "titulo_ca": "Qui s'ocupa de la prevenció al centre",
+        "contexto_es": "Un centro ecuestre pequeño no sabe si debe contratar un servicio de prevención ajeno.",
+        "contexto_ca": "Un centre eqüestre petit no sap si ha de contractar un servei de prevenció aliè.",
+        "desarrollo_es": "Analizando el centro, el alumnado aplica la normativa ambiental, de bienestar animal y de prevención en las actividades recreativas (1327-4f). Clasifica las formas de gestionar la prevención según el tamaño de la empresa (1709-2f).",
+        "desarrollo_ca": "Analitzant el centre, l'alumnat aplica la normativa ambiental, de benestar animal i de prevenció en les activitats recreatives (1327-4f). Classifica les formes de gestionar la prevenció segons la mida de l'empresa (1709-2f).",
+        "evidencia_es": "Recomendación para el centro.",
+        "evidencia_ca": "Recomanació per al centre.",
+        "dua_es": "Esquema de modalidades.",
+        "dua_ca": "Esquema de modalitats.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Los paseos en coche de caballos de temporada se cubren con contratos que hay que conocer.",
+    "justificacion_ca": "Els passejos en cotxe de cavalls de temporada es cobreixen amb contractes que cal conèixer.",
+    "actividades": [
+      {
+        "titulo_es": "Contrato para la temporada de paseos",
+        "titulo_ca": "Contracte per a la temporada de passejos",
+        "contexto_es": "Una empresa de paseos en coche de caballos busca personal solo de mayo a octubre.",
+        "contexto_ca": "Una empresa de passejos en cotxe de cavalls cerca personal només de maig a octubre.",
+        "desarrollo_es": "A partir de la oferta, el alumnado describe las tareas de guiar paseos y colaborar en el enganche del coche de caballos (1327-5f). Compara las modalidades de contratación posibles, como el fijo discontinuo (1709-3b).",
+        "desarrollo_ca": "A partir de l'oferta, l'alumnat descriu les tasques de guiar passejos i col·laborar en l'enganxada del cotxe de cavalls (1327-5f). Compara les modalitats de contractació possibles, com el fix discontinu (1709-3b).",
+        "evidencia_es": "Comparativa de contratos.",
+        "evidencia_ca": "Comparativa de contractes.",
+        "dua_es": "Modelos oficiales resumidos.",
+        "dua_ca": "Models oficials resumits.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Demostrar técnicas ecuestres a un grupo pone en juego competencias personales y sociales valiosas para el empleo.",
+    "justificacion_ca": "Demostrar tècniques eqüestres a un grup posa en joc competències personals i socials valuoses per a l'ocupació.",
+    "actividades": [
+      {
+        "titulo_es": "Demostrar ante un grupo sin perder la calma",
+        "titulo_ca": "Demostrar davant un grup sense perdre la calma",
+        "contexto_es": "En una jornada de puertas abiertas, cada alumno debe demostrar una técnica ante el público.",
+        "contexto_ca": "En una jornada de portes obertes, cada alumne ha de demostrar una tècnica davant el públic.",
+        "desarrollo_es": "En la jornada, el alumnado describe y demuestra las técnicas ecuestres de las actividades (1327-4e). Después determina qué competencias personales y sociales, como la comunicación o la seguridad en sí mismo, ha puesto en juego (1709-4c).",
+        "desarrollo_ca": "A la jornada, l'alumnat descriu i demostra les tècniques eqüestres de les activitats (1327-4e). Després determina quines competències personals i socials, com la comunicació o la seguretat en un mateix, ha posat en joc (1709-4c).",
+        "evidencia_es": "Autoevaluación de competencias.",
+        "evidencia_ca": "Autoavaluació de competències.",
+        "dua_es": "Lista de competencias con ejemplos.",
+        "dua_ca": "Llista de competències amb exemples.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1327",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Corregir a los jinetes en ruta exige que el guía siga aprendiendo técnicas de forma responsable.",
+    "justificacion_ca": "Corregir els genets en ruta exigeix que el guia continuï aprenent tècniques de manera responsable.",
+    "actividades": [
+      {
+        "titulo_es": "El guía que también aprende",
+        "titulo_ca": "El guia que també aprèn",
+        "contexto_es": "Un guía joven nota que algunos jinetes no entienden sus correcciones.",
+        "contexto_ca": "Un guia jove nota que alguns genets no entenen les seves correccions.",
+        "desarrollo_es": "Tras la ruta, el alumnado revisa cómo demostró y corrigió las técnicas de equitación (1327-3b). Toma conciencia de su responsabilidad en el propio desarrollo profesional y busca formas de mejorar (1709-5a).",
+        "desarrollo_ca": "Després de la ruta, l'alumnat revisa com va demostrar i corregir les tècniques d'equitació (1327-3b). Pren consciència de la seva responsabilitat en el propi desenvolupament professional i cerca maneres de millorar (1709-5a).",
+        "evidencia_es": "Plan personal de mejora.",
+        "evidencia_ca": "Pla personal de millora.",
+        "dua_es": "Ejemplos de recursos formativos.",
+        "dua_ca": "Exemples de recursos formatius.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Buscar y archivar la información de la ruta incluye la documentación y los permisos que hay que verificar.",
+    "justificacion_ca": "Cercar i arxivar la informació de la ruta inclou la documentació i els permisos que cal verificar.",
+    "actividades": [
+      {
+        "titulo_es": "Dosier de una ruta por la Serra de Tramuntana",
+        "titulo_ca": "Dossier d'una ruta per la serra de Tramuntana",
+        "contexto_es": "Una empresa quiere ofrecer una ruta de montaña que pasa por fincas públicas y privadas.",
+        "contexto_ca": "Una empresa vol oferir una ruta de muntanya que passa per finques públiques i privades.",
+        "desarrollo_es": "Para la ruta, el alumnado establece cómo buscar, procesar y archivar la información (1329-1a). Con ese dosier verifica la documentación, los permisos y los recursos necesarios (1333-1a).",
+        "desarrollo_ca": "Per a la ruta, l'alumnat estableix com cercar, processar i arxivar la informació (1329-1a). Amb aquest dossier verifica la documentació, els permisos i els recursos necessaris (1333-1a).",
+        "evidencia_es": "Dosier de la ruta.",
+        "evidencia_ca": "Dossier de la ruta.",
+        "dua_es": "Estructura de carpetas.",
+        "dua_ca": "Estructura de carpetes.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Analizar el entorno ayuda a reconocer en el terreno los elementos que aparecen en el mapa.",
+    "justificacion_ca": "Analitzar l'entorn ajuda a reconèixer en el terreny els elements que apareixen al mapa.",
+    "actividades": [
+      {
+        "titulo_es": "Del mapa al paisaje del Puig de Massanella",
+        "titulo_ca": "Del mapa al paisatge del puig de Massanella",
+        "contexto_es": "En la salida de campo, el grupo no reconoce en el paisaje las formas que ha visto en el mapa.",
+        "contexto_ca": "A la sortida de camp, el grup no reconeix en el paisatge les formes que ha vist al mapa.",
+        "desarrollo_es": "Antes de la salida, el alumnado analiza las características geográficas, geológicas y biológicas del entorno (1329-1b). En el terreno identifica los elementos significativos representados en el mapa (1333-3a).",
+        "desarrollo_ca": "Abans de la sortida, l'alumnat analitza les característiques geogràfiques, geològiques i biològiques de l'entorn (1329-1b). Al terreny identifica els elements significatius representats al mapa (1333-3a).",
+        "evidencia_es": "Fotografías comparadas con el mapa.",
+        "evidencia_ca": "Fotografies comparades amb el mapa.",
+        "dua_es": "Mapa en relieve.",
+        "dua_ca": "Mapa en relleu.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Los factores que hacen difícil un recorrido determinan cómo adaptar la técnica de progresión.",
+    "justificacion_ca": "Els factors que fan difícil un recorregut determinen com adaptar la tècnica de progressió.",
+    "actividades": [
+      {
+        "titulo_es": "Un sendero con pasos expuestos",
+        "titulo_ca": "Un sender amb passos exposats",
+        "contexto_es": "El sendero previsto tiene pasos con caída lateral y tramos de roca resbaladiza.",
+        "contexto_ca": "El sender previst té passos amb caiguda lateral i trams de roca relliscosa.",
+        "desarrollo_es": "Sobre el recorrido, el alumnado analiza los factores que condicionan su dificultad y peligrosidad (1329-1d). Adecua la técnica de progresión a cada tramo y a las características del grupo (1333-2e).",
+        "desarrollo_ca": "Sobre el recorregut, l'alumnat analitza els factors que en condicionen la dificultat i la perillositat (1329-1d). Adequa la tècnica de progressió a cada tram i a les característiques del grup (1333-2e).",
+        "evidencia_es": "Ficha de tramos y técnicas.",
+        "evidencia_ca": "Fitxa de trams i tècniques.",
+        "dua_es": "Fotografías de cada paso.",
+        "dua_ca": "Fotografies de cada pas.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Los rumbos calculados en el diseño se comprueban en el recorrido y en un circuito de orientación.",
+    "justificacion_ca": "Els rumbs calculats en el disseny es comproven en el recorregut i en un circuit d'orientació.",
+    "actividades": [
+      {
+        "titulo_es": "Circuito de orientación con balizas en el pinar",
+        "titulo_ca": "Circuit d'orientació amb balises al pinar",
+        "contexto_es": "La clase prepara un circuito de orientación para practicar antes de una ruta real.",
+        "contexto_ca": "La classe prepara un circuit d'orientació per practicar abans d'una ruta real.",
+        "desarrollo_es": "En el aula, el alumnado calcula rumbos y azimut entre las balizas (1329-2e). En el pinar comprueba esos rumbos durante el recorrido (1333-3b) y completa el circuito con brújula y mapa (1333-3c).",
+        "desarrollo_ca": "A l'aula, l'alumnat calcula rumbs i azimut entre les balises (1329-2e). Al pinar comprova aquests rumbs durant el recorregut (1333-3b) i completa el circuit amb brúixola i mapa (1333-3c).",
+        "evidencia_es": "Tarjeta del circuito completada.",
+        "evidencia_ca": "Targeta del circuit completada.",
+        "dua_es": "Brújula con marcas de apoyo.",
+        "dua_ca": "Brúixola amb marques de suport.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
+    "justificacion_es": "Los desniveles y los códigos de dificultad del mapa indican dónde hay que señalizar zonas de peligro.",
+    "justificacion_ca": "Els desnivells i els codis de dificultat del mapa indiquen on cal senyalitzar zones de perill.",
+    "actividades": [
+      {
+        "titulo_es": "Señalizar los tramos peligrosos del recorrido",
+        "titulo_ca": "Senyalitzar els trams perillosos del recorregut",
+        "contexto_es": "Una carrera popular de montaña pasará por un tramo con mucha pendiente.",
+        "contexto_ca": "Una cursa popular de muntanya passarà per un tram amb molt de pendent.",
+        "desarrollo_es": "Con el mapa, el alumnado calcula desniveles y distancias (1329-2c) y detalla los códigos gráficos de los tramos difíciles (1329-2d). Sobre el terreno señaliza en lugares visibles las zonas conflictivas y de peligro (1333-1g).",
+        "desarrollo_ca": "Amb el mapa, l'alumnat calcula desnivells i distàncies (1329-2c) i detalla els codis gràfics dels trams difícils (1329-2d). Sobre el terreny senyalitza en llocs visibles les zones conflictives i de perill (1333-1g).",
+        "evidencia_es": "Plan de señalización.",
+        "evidencia_ca": "Pla de senyalització.",
+        "dua_es": "Leyenda de códigos ampliada.",
+        "dua_ca": "Llegenda de codis ampliada.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "El punto de final de etapa coincide a menudo con el lugar de pernoctación, que hay que elegir con criterio.",
+    "justificacion_ca": "El punt de final d'etapa coincideix sovint amb el lloc de pernoctació, que cal triar amb criteri.",
+    "actividades": [
+      {
+        "titulo_es": "Dónde acaba la primera etapa",
+        "titulo_ca": "On acaba la primera etapa",
+        "contexto_es": "Una travesía de dos días por la montaña necesita un punto de llegada donde dormir.",
+        "contexto_ca": "Una travessia de dos dies per la muntanya necessita un punt d'arribada on dormir.",
+        "desarrollo_es": "En el diseño, el alumnado determina los puntos de inicio y de final de cada etapa (1329-3a). Argumenta los criterios para elegir el lugar de pernoctación, como agua, refugio y seguridad (1333-4a).",
+        "desarrollo_ca": "En el disseny, l'alumnat determina els punts d'inici i de final de cada etapa (1329-3a). Argumenta els criteris per triar el lloc de pernoctació, com aigua, refugi i seguretat (1333-4a).",
+        "evidencia_es": "Ficha de etapas.",
+        "evidencia_ca": "Fitxa d'etapes.",
+        "dua_es": "Mapa con opciones marcadas.",
+        "dua_ca": "Mapa amb opcions marcades.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Prever la meteorología permite establecer cómo actuar ante condiciones adversas en el itinerario.",
+    "justificacion_ca": "Preveure la meteorologia permet establir com actuar davant condicions adverses en l'itinerari.",
+    "actividades": [
+      {
+        "titulo_es": "Nubes de tormenta sobre la cresta",
+        "titulo_ca": "Núvols de tempesta sobre la cresta",
+        "contexto_es": "A media mañana se forman cúmulos sobre la cresta que el grupo tiene que recorrer.",
+        "contexto_ca": "A mig matí es formen cúmuls sobre la cresta que el grup ha de recórrer.",
+        "desarrollo_es": "Antes y durante la ruta, el alumnado interpreta los mapas meteorológicos (1333-5a) e identifica los signos naturales de cambio (1333-5b). Establece el procedimiento ante las condiciones adversas (1329-5c) y justifica qué accidentes del terreno usar como refugio frente a la tormenta (1329-5f).",
+        "desarrollo_ca": "Abans i durant la ruta, l'alumnat interpreta els mapes meteorològics (1333-5a) i identifica els signes naturals de canvi (1333-5b). Estableix el procediment davant les condicions adverses (1329-5c) i justifica quins accidents del terreny fer servir com a refugi davant la tempesta (1329-5f).",
+        "evidencia_es": "Protocolo ante tormentas.",
+        "evidencia_ca": "Protocol davant tempestes.",
+        "dua_es": "Fotografías de nubes.",
+        "dua_ca": "Fotografies de núvols.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "La evacuación de un herido exige coordinarse con los servicios de emergencia de la zona.",
+    "justificacion_ca": "L'evacuació d'un ferit exigeix coordinar-se amb els serveis d'emergència de la zona.",
+    "actividades": [
+      {
+        "titulo_es": "Rescate con helicóptero en un torrente",
+        "titulo_ca": "Rescat amb helicòpter en un torrent",
+        "contexto_es": "Un participante se rompe el tobillo en el fondo de un torrente sin acceso para vehículos.",
+        "contexto_ca": "Un participant es romp el turmell al fons d'un torrent sense accés per a vehicles.",
+        "desarrollo_es": "En la simulación, el alumnado explica cómo coordinarse con el 112 y los bomberos de montaña (1329-5d). Demuestra las técnicas de aproximación y evacuación hasta una zona donde pueda llegar el helicóptero (1333-6b).",
+        "desarrollo_ca": "En la simulació, l'alumnat explica com coordinar-se amb el 112 i els bombers de muntanya (1329-5d). Demostra les tècniques d'aproximació i evacuació fins a una zona on pugui arribar l'helicòpter (1333-6b).",
+        "evidencia_es": "Registro del simulacro.",
+        "evidencia_ca": "Registre del simulacre.",
+        "dua_es": "Guion de la llamada al 112.",
+        "dua_ca": "Guió de la trucada al 112.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
+      }
+    ]
+  }
+]

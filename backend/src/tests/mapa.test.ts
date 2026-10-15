@@ -29,6 +29,7 @@ import { up as runMigration43 } from '../migrations/43_ingest_mapa_cfgs_animacio
 import { up as runMigration44 } from '../migrations/44_ingest_mapa_cfgs_animacion_sociodeportiva';
 import { up as runMigration46 } from '../migrations/46_ingest_mapa_cfgs_laboratorio_clinico';
 import { up as runMigration47 } from '../migrations/47_ingest_mapa_cfgm_guia_medio_natural_2';
+import { up as runMigration48 } from '../migrations/48_ingest_mapa_cfgm_guia_medio_natural';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
@@ -779,6 +780,33 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.body.map((m: any) => m.code)).toEqual(['1328', '1337', '1338', '1339', '0156', '1708', '1710', '1713']);
       expect(res.body[0].name_es).toBe('Atención a grupos');
       expect(res.body[0].name_ca).toBe('Atenció a grups');
+    });
+
+    it('debería cargar con la migración 48 el 1.º de Guía en el Medio Natural sin tocar el 2.º', async () => {
+      await MapaModule.create({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2', order: 0, code: '1328', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration48();
+      await runMigration48();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2' })).toBe(1);
+      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL', 9, 410, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGM_GUIA_MEDIO_NATURAL' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = GMN_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGM_GUIA_MEDIO_NATURAL');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1325', '1327', '1329', '1333', '1334', '1335', '1336', '1664', '1709']);
+      expect(res.body[0].name_es).toBe('Técnicas de equitación');
+      expect(res.body[0].name_ca).toBe("Tècniques d'equitació");
     });
   });
 });

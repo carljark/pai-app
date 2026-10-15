@@ -53,7 +53,11 @@
           {{ isCa() ? 'fitxes' : 'fichas' }}
         </h3>
         @for (a of facade.fichas(); track a.id) {
-          <app-afinidad-card [afinidad]="a" [materia]="facade.selectedMateria()" />
+          <app-afinidad-card
+            [afinidad]="a"
+            [materia]="facade.selectedMateria()"
+            (crearProyecto)="crearProyecto(a)"
+          />
         } @empty {
           <p class="afinidades-eso__estado">
             {{

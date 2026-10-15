@@ -146,4 +146,17 @@ describe('AfinidadCardComponent', () => {
     );
     expect(sabers).toEqual(['Matemáticas: .', 'Biología y Geología: Saber A; Saber B.']);
   });
+
+  it('emite crearProyecto al pulsar el botón, con el texto en ambos idiomas', () => {
+    render(FICHA_DOS, 'MAT');
+    let emitido = 0;
+    fixture.componentInstance.crearProyecto.subscribe(() => emitido++);
+    const boton = el.querySelector<HTMLButtonElement>('.afinidad-card__crear')!;
+    expect(boton.textContent?.trim()).toBe('Crear Proyecto con estos criterios');
+    boton.click();
+    expect(emitido).toBe(1);
+    layout.language.set('catalan');
+    fixture.detectChanges();
+    expect(boton.textContent?.trim()).toBe('Crear Projecte amb aquests criteris');
+  });
 });

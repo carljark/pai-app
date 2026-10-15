@@ -1,6 +1,7 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, inject, input, output } from '@angular/core';
 import { AfinidadEso, CriterioTexto, VinculoAfinidad } from '../../../models/afinidad-eso.model';
 import { AfinidadesEsoFacade } from '../../../services/afinidades-eso.facade';
+import { materiasEnOrden } from '../../../utils/afinidad-seleccion';
 import { LayoutService } from '../../../../../services/layout.service';
 
 /** Ficha de afinidad con el formato del documento de centro: ámbito, criterios, saberes y conceptos. */
@@ -18,14 +19,13 @@ export class AfinidadCardComponent {
   /** Materia desde la que se consulta la ficha: va primero y fija el nombre del ámbito. */
   materia = input.required<string>();
 
+  /** Crear un proyecto con los criterios de evaluación de la ficha. */
+  crearProyecto = output<void>();
+
   isCa = computed(() => this.layout.language() === 'catalan');
 
   /** Materias de la ficha con la materia consultada en primer lugar. */
-  materias = computed(() => {
-    const actual = this.materia();
-    const resto = this.afinidad().materias.filter((m) => m !== actual);
-    return this.afinidad().materias.includes(actual) ? [actual, ...resto] : resto;
-  });
+  materias = computed(() => materiasEnOrden(this.afinidad(), this.materia()));
 
   fuente = computed(() => this.afinidad().fuentes.find((f) => f.materia === this.materia()));
 

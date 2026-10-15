@@ -149,6 +149,11 @@
   color: variables.$color-text-muted;
 }
 
+.afinidad-card__acciones {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width: variables.$bp-md) {
   .afinidad-card__tabla {
     grid-template-columns: 1fr;

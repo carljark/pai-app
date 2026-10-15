@@ -4,6 +4,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { signal } from '@angular/core';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { AfinidadesEsoViewComponent } from './afinidades-eso-view.component';
+import { AfinidadProyectoService } from '../../services/afinidad-proyecto.service';
 import { LayoutService } from '../../../../services/layout.service';
 import { loadNivelesMock } from '../../../../testing/niveles.mock';
 import { AFINIDADES_1, AFINIDADES_2, NIVEL_AFINIDADES } from '../../../../testing/afinidades.mock';
@@ -138,5 +139,14 @@ describe('AfinidadesEsoViewComponent', () => {
     await flushTab('DESCONOCIDA', AFINIDADES_2);
     expect(el.querySelector('.afinidades-eso__titulo')?.textContent).toContain('ESO');
     expect(botones()[0]!.getAttribute('aria-pressed')).toBe('true');
+  });
+
+  it('crea un proyecto con la ficha pulsada, la materia activa y la pestaña', async () => {
+    const crear = vi
+      .spyOn(TestBed.inject(AfinidadProyectoService), 'crearProyecto')
+      .mockResolvedValue();
+    await flushTab('ESO_1', AFINIDADES_1);
+    el.querySelector<HTMLButtonElement>('.afinidad-card__crear')!.click();
+    expect(crear).toHaveBeenCalledWith(AFINIDADES_1.afinidades[0], 'MAT', 'ESO_1');
   });
 });

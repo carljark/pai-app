@@ -37,7 +37,9 @@
         <div class="afinidad-card__td" [attr.data-materia]="nombre(m)">
           @for (c of criterios(v, m); track c.id) {
             <details class="afinidad-card__criterio">
-              <summary class="afinidad-card__criterio-id">{{ isCa() ? 'CA' : 'CE' }} {{ c.id }}</summary>
+              <summary class="afinidad-card__criterio-id">
+                {{ isCa() ? 'CA' : 'CE' }} {{ c.id }}
+              </summary>
               <p class="afinidad-card__criterio-texto">{{ textoCriterio(c) }}</p>
             </details>
           }
@@ -67,4 +69,10 @@
       <span class="afinidad-card__concepto">{{ c }}</span>
     }
   </footer>
+
+  <div class="afinidad-card__acciones">
+    <button type="button" class="btn-primary afinidad-card__crear" (click)="crearProyecto.emit()">
+      {{ isCa() ? 'Crear Projecte amb aquests criteris' : 'Crear Proyecto con estos criterios' }}
+    </button>
+  </div>
 </article>

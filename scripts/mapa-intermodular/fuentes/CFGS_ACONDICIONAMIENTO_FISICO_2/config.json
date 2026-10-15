@@ -1,0 +1,62 @@
+{
+  "nivel": "CFGS_ACONDICIONAMIENTO_FISICO",
+  "curso": "2º",
+  "modulos": {
+    "1150": {
+      "nombre_es": "Actividades especializadas de acondicionamiento físico con soporte musical",
+      "nombre_ca": "Activitats especialitzades de condicionament físic amb suport musical",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#c084fc",
+      "icon": "sparkles"
+    },
+    "1152": {
+      "nombre_es": "Técnicas de hidrocinesia",
+      "nombre_ca": "Tècniques d'hidrocinèsia",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#34d399",
+      "icon": "waves"
+    },
+    "1153": {
+      "nombre_es": "Control postural, bienestar y mantenimiento funcional",
+      "nombre_ca": "Control postural, benestar i manteniment funcional",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#fb923c",
+      "icon": "heart-pulse"
+    },
+    "1154": {
+      "nombre_es": "Proyecto intermodular de acondicionamiento físico",
+      "nombre_ca": "Projecte intermodular de condicionament físic",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#fbbf24",
+      "icon": "folder-kanban"
+    },
+    "1708": {
+      "nombre_es": "Sostenibilidad aplicada al sistema productivo",
+      "nombre_ca": "Sostenibilitat aplicada al sistema productiu",
+      "tipo": "comun",
+      "relacion": "sostenibilidad",
+      "color": "#f87171",
+      "icon": "leaf"
+    },
+    "1710": {
+      "nombre_es": "Itinerario personal para la empleabilidad II",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat II",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#4ade80",
+      "icon": "briefcase"
+    },
+    "0179": {
+      "nombre_es": "Inglés profesional",
+      "nombre_ca": "Anglès professional",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#38bdf8",
+      "icon": "languages"
+    }
+  }
+}

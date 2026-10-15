@@ -81,6 +81,7 @@ describe('Datos del CFGS Acondicionamiento Físico', () => {
     expect(nivel?.etapa).toBe('CFGS');
     expect(nivel?.mapas).toEqual([
       { tab: 'CFGS_ACONDICIONAMIENTO_FISICO', curso: '1º', moduleCode: '1136', raId: '1136_RA1' },
+      { tab: 'CFGS_ACONDICIONAMIENTO_FISICO_2', curso: '2º', moduleCode: '1150', raId: '1150_RA1' },
     ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([7, 7]);
     expect(describeTargetCourse('CFGS_ACONDICIONAMIENTO_FISICO', '2º')).toBe('2º de CFGS Acondicionamiento Físico');

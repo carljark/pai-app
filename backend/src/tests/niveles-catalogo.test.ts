@@ -32,7 +32,7 @@ describe('Catálogo de niveles: datos para el frontend', () => {
   it('declara las pestañas del mapa con los ids históricos y su orden', () => {
     expect(MAPA_TABS).toEqual([
       'FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
-      'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2', 'CFGS_ACONDICIONAMIENTO_FISICO', 'CFGS_INTEGRACION_SOCIAL', 'CFGS_INTEGRACION_SOCIAL_2'
+      'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2', 'CFGS_ACONDICIONAMIENTO_FISICO', 'CFGS_ACONDICIONAMIENTO_FISICO_2', 'CFGS_INTEGRACION_SOCIAL', 'CFGS_INTEGRACION_SOCIAL_2'
     ]);
   });
 
@@ -48,6 +48,7 @@ describe('Catálogo de niveles: datos para el frontend', () => {
       { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL', curso: '1º', moduleCode: '0011', raId: '0011_RA1' },
       { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL_2', curso: '2º', moduleCode: '0013', raId: '0013_RA1' },
       { nivel: 'CFGS_ACONDICIONAMIENTO_FISICO', tab: 'CFGS_ACONDICIONAMIENTO_FISICO', curso: '1º', moduleCode: '1136', raId: '1136_RA1' },
+      { nivel: 'CFGS_ACONDICIONAMIENTO_FISICO', tab: 'CFGS_ACONDICIONAMIENTO_FISICO_2', curso: '2º', moduleCode: '1150', raId: '1150_RA1' },
       { nivel: 'CFGS_INTEGRACION_SOCIAL', tab: 'CFGS_INTEGRACION_SOCIAL', curso: '1º', moduleCode: '0337', raId: '0337_RA1' },
       { nivel: 'CFGS_INTEGRACION_SOCIAL', tab: 'CFGS_INTEGRACION_SOCIAL_2', curso: '2º', moduleCode: '0017', raId: '0017_RA1' },
       { nivel: 'ESO_ORDINARIA', tab: 'ESO_1', curso: '1º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },

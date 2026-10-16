@@ -818,7 +818,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration45();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_LABORATORIO_CLINICO' })).toBe(1);
-      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO_2', 7, 352, 1);
+      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO_2', 7, 348, 1);
       for (const doc of await MapaModule.find({ tab: 'CFGS_LABORATORIO_CLINICO_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = LC_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;

@@ -1,718 +1,206 @@
 [
   {
     "a": {
-      "modulo": "1374",
-      "ra": "RA3",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA1",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Correlacionar anomalías de la serie roja con anemias hemolíticas o carenciales se asocia con los criterios ASG de equidad sanitaria hospitalaria.",
-    "justificacion_ca": "Correlacionar anomalies de la sèrie vermella amb anèmies hemolítiques o carencials s'associa amb els criteris ASG d'equitat sanitària hospitalària.",
-    "actividades": [
-      {
-        "titulo_es": "Correlación de anisocitosis con parámetros del hemograma y factores ASG de equidad en la atención hematológica",
-        "titulo_ca": "Correlació d'anisocitosi amb paràmetres de l'hemograma i factors ASG d'equitat en l'atenció hematològica",
-        "contexto_es": "En el Hospital Son Llàtzer se realiza el diagnóstico diferencial de anemias microcíticas en pacientes vulnerables de la comarca.",
-        "contexto_ca": "A l'Hospital Son Llàtzer es realitza el diagnòstic diferencial d'anèmies microcítiques en pacients vulnerables de la comarca.",
-        "desarrollo_es": "Los técnicos relacionan la presencia de microcitos e hipocromía con el descenso del volumen corpuscular medio y aumento del ancho de distribución eritrocitaria (1374-3f). Analizan el impacto de los determinantes sociales en la incidencia de ferropenia e identifican los compromisos ASG del hospital para garantizar equidad terapéutica (1708-1b).",
-        "desarrollo_ca": "Els tècnics relacionen la presència de microcits i hipocromia amb el descens del volum corpuscular mitjà i augment de l'amplada de distribució eritrocitària (1374-3f). Analitzen l'impacte dels determinants socials en la incidència de ferropènia i identifiquen els compromisos ASG de l'hospital per garantir equitat terapèutica (1708-1b).",
-        "evidencia_es": "Informe hematológico interpretativo del frotis correlacionado con los índices eritrocitarios y memoria de equidad en salud del hospital.",
-        "evidencia_ca": "Informe hematològic interpretatiu del frotis correlacionat amb els índexs eritrocitaris i memòria d'equitat en salut de l'hospital.",
-        "dua_es": "Fórmula eritrocitaria con gráficos interactivos de dispersión y textos de criterios ASG en formato de lectura accesible.",
-        "dua_ca": "Fórmula eritrocitària amb gràfics interactius de dispersió i textos de criteris ASG en format de lectura accessible.",
-        "metodologia_es": "estudio interdisciplinar y análisis de equidad sanitaria.",
-        "metodologia_ca": "estudi interdisciplinari i anàlisi d'equitat sanitària."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA3",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA4",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Anotar y estructurar resultados analíticos de la serie roja en el informe clínico permite aplicar principios circulares de digitalización documental.",
-    "justificacion_ca": "Anotar i estructurar resultats analítics de la sèrie vermella en l'informe clínic permet aplicar principis circulars de digitalització documental.",
-    "actividades": [
-      {
-        "titulo_es": "Estructuración de informes de la serie roja y transición ecológica hacia la digitalización cero papel",
-        "titulo_ca": "Estructuració d'informes de la sèrie vermella i transició ecològica cap a la digitalització zero paper",
-        "contexto_es": "El laboratorio del Hospital Mateu Orfila de Menorca audita el flujo de información hematológica y el gasto en consumibles de oficina.",
-        "contexto_ca": "El laboratori de l'Hospital Mateu Orfila de Menorca audita el flux d'informació hematològica i la despesa en consumibles d'oficina.",
-        "desarrollo_es": "El alumnado transcribe y valida los valores de hemoglobina, hematocrito, recuento reticulocitario y morfología en el sistema informático del laboratorio (1374-3g). Identifican los principios de la economía circular proponiendo la eliminación total del papel impreso mediante portal web del paciente y firmas digitales validadas (1708-4b).",
-        "desarrollo_ca": "L'alumnat transcriu i valida els valors d'hemoglobina, hematòcrit, recompte reticulocitari i morfologia en el sistema informàtic del laboratori (1374-3g). Identifiquen els principis de l'economia circular proposant l'eliminació total del paper imprès mitjançant portal web del pacient i firmes digitals validades (1708-4b).",
-        "evidencia_es": "Informe digital del hemograma validado y propuesta operativa de desmaterialización de documentos en la sección analítica.",
-        "evidencia_ca": "Informe digital de l'hemograma validat i proposta operativa de desmaterialització de documents a la secció analítica.",
-        "dua_es": "Interfaz de validación analítica con aviso acústico de valores fuera de rango y propuesta de digitalización en diapositivas accesibles.",
-        "dua_ca": "Interfície de validació analítica amb avís acústic de valors fora de rang i proposta de digitalització en diapositives accessibles.",
-        "metodologia_es": "gestión de datos clínicos y transición ecológica.",
-        "metodologia_ca": "gestió de dades clíniques i transició ecològica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA3",
-      "criterios": [
-        "a"
-      ]
-    },
-    "b": {
       "modulo": "1710",
-      "ra": "RA2",
-      "criterios": [
-        "e"
-      ]
-    },
-    "justificacion_es": "Describir el proceso biológico de la eritropoyesis medular se complementa con el desarrollo de competencias de regulación emocional en el trabajo.",
-    "justificacion_ca": "Descriure el procés biològic de l'eritropoesi medul·lar es complementa amb el desenvolupament de competències de regulació emocional en el treball.",
-    "actividades": [
-      {
-        "titulo_es": "Cinética eritropoyética medular y estrategias de inteligencia emocional en el trabajo en equipo del laboratorio",
-        "titulo_ca": "Cinètica eritropoètica medul·lar i estratègies d'intel·ligència emocional en el treball en equip del laboratori",
-        "contexto_es": "En el laboratorio central de Son Espases se realizan sesiones formativas que combinan citología de médula ósea y habilidades blandas.",
-        "contexto_ca": "En el laboratori central de Son Espases es realitzen sessions formatives que combinen citologia de medul·la òssia i habilitats toves.",
-        "desarrollo_es": "El equipo describe las fases de maduración celular desde la célula madre hematopoyética pluripotente y la acción estimulante de la eritropoyetina renal (1374-3a). Aplican técnicas de autorregulación emocional y escucha activa para resolver desacuerdos técnicos y mantener una actitud empática con los compañeros de turno (1710-2e).",
-        "desarrollo_ca": "L'equip descriu les fases de maduració cel·lular des de la cèl·lula mare hematopoètica pluripotent i l'acció estimulant de l'eritropoetina renal (1374-3a). Apliquen tècniques d'autoregulació emocional i escolta activa per resoldre desacords tècnics i mantenir una actitud empàtica amb els companys de torn (1710-2e).",
-        "evidencia_es": "Diagrama de la diferenciación eritroide y registro de autoevaluación de inteligencia emocional y resolución de conflictos interpersonales.",
-        "evidencia_ca": "Diagrama de la diferenciació eritroide i registre d'autoavaluació d'intel·ligència emocional i resolució de conflictes interpersonals.",
-        "dua_es": "Esquemas animados de la eritropoyesis con voz explicativa y rúbricas de competencias emocionales adaptadas con iconografía sencilla.",
-        "dua_ca": "Esquemes animats de l'eritropoesi amb veu explicativa i rúbriques de competències emocionals adaptades amb iconografia senzilla.",
-        "metodologia_es": "aprendizaje fisiológico y desarrollo de competencias socioemocionales.",
-        "metodologia_ca": "aprenentatge fisiològic i desenvolupament de competències socioemocionals."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
       "ra": "RA4",
       "criterios": [
-        "e"
-      ]
-    },
-    "b": {
-      "modulo": "1375",
-      "ra": "RA1",
-      "criterios": [
-        "e"
-      ]
-    },
-    "justificacion_es": "Detectar blastos y displasias al microscopio óptico permite definir la tipología y alcance de proyectos de telecitología hematológica.",
-    "justificacion_ca": "Detectar blasts i displàsies al microscopi òptic permet definir la tipologia i abast de projectes de telecitologia hematològica.",
-    "actividades": [
-      {
-        "titulo_es": "Identificación microscópica de bastones de Auer en mieloblastos y formulación de proyectos asistenciales de telecitología",
-        "titulo_ca": "Identificació microscòpica de bastons d'Auer en mieloblasts i formulació de projectes assistencials de telecitologia",
-        "contexto_es": "El laboratorio hematológico de Son Espases y centros comarcales estudian la viabilidad de compartir frotis digitales de alta resolución.",
-        "contexto_ca": "El laboratori hematològic de Son Espases i centres comarcals estudien la viabilitat de compartir frotis digitals d'alta resolució.",
-        "desarrollo_es": "Los técnicos examinan frotis identificando mieloblastos con inclusiones citoplasmáticas en aguja características de leucemia mieloide aguda (1374-4e). Determinan el tipo de proyecto de innovación requerido para dar respuesta a la necesidad de soporte citológico urgente en hospitales periféricos (1375-1e).",
-        "desarrollo_ca": "Els tècnics examinen frotis identificant mieloblasts amb inclusions citoplasmàtiques en agulla característiques de leucèmia mieloide aguda (1374-4e). Determinen el tipus de projecte d'innovació requerit per donar resposta a la necessitat de suport citològic urgent en hospitals perifèrics (1375-1e).",
-        "evidencia_es": "Microfotografía anotada de blastos con bastones de Auer y ficha descriptiva del tipo de proyecto de telecitología hospitalaria.",
-        "evidencia_ca": "Microfotografia anotada de blasts amb bastons d'Auer i fitxa descriptiva del tipus de projecte de telecitologia hospitalària.",
-        "dua_es": "Atlas citológico con magnificación interactiva y capas de marcaje y plantilla de proyecto de innovación con soporte de lectura por voz.",
-        "dua_ca": "Atles citològic amb magnificació interactiva i capes de marcatge i plantilla de projecte d'innovació amb suport de lectura per veu.",
-        "metodologia_es": "citomorfología hematológica y diseño de proyectos innovadores.",
-        "metodologia_ca": "citomorfologia hematològica i disseny de projectes innovadors."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA4",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA1",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Conocer los trastornos neoplásicos leucocitarios impulsa la definición de estrategias adaptadas de búsqueda de empleo en unidades especializadas.",
-    "justificacion_ca": "Conèixer els trastorns neoplàsics leucocitaris impulsa la definició d'estratègies adaptades de cerca de feina en unitats especialitzades.",
-    "actividades": [
-      {
-        "titulo_es": "Clasificación de síndromes mieloproliferativos y estrategias de búsqueda activa de empleo en oncohematología",
-        "titulo_ca": "Classificació de síndromes mieloproliferatius i estratègies de cerca activa de feina en oncohematologia",
-        "contexto_es": "En Can Misses de Ibiza se imparte un seminario de actualización sobre leucemias crónicas y salidas laborales técnicas.",
-        "contexto_ca": "A Can Misses d'Eivissa s'imparteix un seminari d'actualització sobre leucèmies cròniques i sortides laborals tècniques.",
-        "desarrollo_es": "El alumnado describe las características clínicas y analíticas de la policitemia vera, trombocitemia esencial y leucemia mieloide crónica (1374-4f). Desarrollan estrategias de prospección laboral utilizando portales sectoriales de salud y contactando con comités de selección de servicios hospitalarios oncológicos (1710-1b).",
-        "desarrollo_ca": "L'alumnat descriu les característiques clíniques i analítiques de la policitèmia vera, trombocitèmia essencial i leucèmia mieloide crònica (1374-4f). Desenvolupen estratègies de prospecció laboral utilitzant portals sectorials de salut i contactant amb comitès de selecció de serveis hospitalaris oncològics (1710-1b).",
-        "evidencia_es": "Cuadro sinóptico de neoplasias hematológicas de serie blanca y plan personal de búsqueda activa de empleo en centros asistenciales.",
-        "evidencia_ca": "Quadre sinòptic de neoplàsies hematològiques de sèrie blanca i pla personal de cerca activa de feina en centres assistencials.",
-        "dua_es": "Tablas comparativas con contrastes de color adaptados y guía de búsqueda laboral con hiperenlaces y compatibilidad con lectores de pantalla.",
-        "dua_ca": "Taules comparatives amb contrastos de color adaptats i guia de cerca laboral amb hiperenllaços i compatibilitat amb lectors de pantalla.",
-        "metodologia_es": "oncohematología descriptiva e inserción profesional.",
-        "metodologia_ca": "oncohematologia descriptiva i inserció professional."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA4",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA2",
-      "criterios": [
-        "f"
-      ]
-    },
-    "justificacion_es": "Ejecutar tinciones citoquímicas de mieloperoxidasa exige una programación rigurosa del tiempo de reacción y reactivos para evitar errores.",
-    "justificacion_ca": "Executar tincions citoquímiques de mieloperoxidasa exigeix una programació rigorosa del temps de reacció i reactius per evitar errors.",
-    "actividades": [
-      {
-        "titulo_es": "Citoquímica de mieloperoxidasa en leucemias mieloides y organización eficiente de los tiempos de tinción",
-        "titulo_ca": "Citoquímica de mieloperoxidasa en leucèmies mieloides i organització eficient dels temps de tinció",
-        "contexto_es": "El laboratorio de hematología especial de Son Espases procesa extensiones medulares urgentes con técnicas enzimáticas citoquímicas.",
-        "contexto_ca": "El laboratori d'hematologia especial de Son Espases processa extensions medul·lars urgents amb tècniques enzimàtiques citoquímiques.",
-        "desarrollo_es": "Los técnicos realizan la tinción citoquímica con benzidina y agua oxigenada para evidenciar gránulos pardos de peroxidasa en blastos mieloides (1374-4g). Programan las fases de fijación, incubación enzimática y contratinción anticipando posibles fallos en la estabilidad de sustratos fotosensibles (1710-2f).",
-        "desarrollo_ca": "Els tècnics realitzen la tinció citoquímica amb benzidina i aigua oxigenada per evidenciar grànuls marrons de peroxidasa en blasts mieloides (1374-4g). Programen les fases de fixació, incubació enzimàtica i contratinció anticipant possibles fallades en l'estabilitat de substrats fotosensibles (1710-2f).",
-        "evidencia_es": "Frotis citoquímico teñido con positividad granular valorada e itinerario cronológico de la sesión de trabajo con margen de contingencia.",
-        "evidencia_ca": "Frotis citoquímic tenyit amb positivitat granular valorada i itinerari cronològic de la sessió de feina amb marge de contingència.",
-        "dua_es": "Temporizador con aviso acústico y visual para la tinción enzimática y diagrama de Gantt accesible para programación operativa.",
-        "dua_ca": "Temporitzador amb avís acústic i visual per a la tinció enzimàtica i diagrama de Gantt accessible per a programació operativa.",
-        "metodologia_es": "citoquímica hematológica y planificación operativa eficiente.",
-        "metodologia_ca": "citoquímica hematològica i planificació operativa eficient."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA4",
-      "criterios": [
-        "h",
         "i"
       ]
     },
     "b": {
-      "modulo": "1710",
+      "modulo": "1371",
       "ra": "RA5",
       "criterios": [
         "g"
       ]
     },
-    "justificacion_es": "Emitir informes hematológicos patológicos con rigor analítico permite evaluar la viabilidad de iniciativas emprendedoras en diagnóstico.",
-    "justificacion_ca": "Emetre informes hematològics patològics amb rigor analític permet avaluar la viabilitat d'iniciatives emprenedores en diagnòstic.",
+    "justificacion_es": "Un servicio de análisis de cálculos renales necesita estrategias de marketing que expliquen su valor a clínicos y pacientes.",
+    "justificacion_ca": "Un servei d'anàlisi de càlculs renals necessita estratègies de màrqueting que n'expliquin el valor a clínics i pacients.",
     "actividades": [
       {
-        "titulo_es": "Informe de trombocitopenia autoinmune y evaluación de viabilidad de una consultoría hematológica especializada",
-        "titulo_ca": "Informe de trombocitopènia autoimmune i avaluació de viabilitat d'una consultoria hematològica especialitzada",
-        "contexto_es": "En el Hospital de Manacor se revisan frotis con macroplaquetas y trombocitopenia severa en pacientes hematológicos ambulatorios.",
-        "contexto_ca": "A l'Hospital de Manacor es revisen frotis amb macroplaquetes i trombocitopènia severa en pacients hematològics ambulatoris.",
-        "desarrollo_es": "El alumnado correlaciona la trombocitopenia aislada con ausencia de agregados y plaquetas gigantes registrando el informe validado (1374-4h, 1374-4i). Aplican herramientas de análisis de viabilidad técnica, económica y de mercado para valorar la creación de un servicio de consultoría diagnóstica externa (1710-5g).",
-        "desarrollo_ca": "L'alumnat correlaciona la trombocitopènia aïllada amb absència d'agregats i plaquetes gegants registrant l'informe validat (1374-4h, 1374-4i). Apliquen eines d'anàlisi de viabilitat tècnica, econòmica i de mercat per valorar la creació d'un servei de consultoria diagnòstica externa (1710-5g).",
-        "evidencia_es": "Informe hematológico con comentarios interpretativos de la serie plaquetar y estudio de viabilidad técnica y económico-financiera del proyecto.",
-        "evidencia_ca": "Informe hematològic amb comentaris interpretatius de la sèrie plaquetària i estudi de viabilitat tècnica i economicofinancera del projecte.",
-        "dua_es": "Glosario interactivo de terminología hematológica y calculadoras de viabilidad con asistencia paso a paso en hoja de cálculo adaptada.",
-        "dua_ca": "Glossari interactiu de terminologia hematològica i calculadores de viabilitat amb assistència pas a pas en full de càlcul adaptat.",
-        "metodologia_es": "hematología diagnóstica y análisis de viabilidad emprendedora.",
-        "metodologia_ca": "hematologia diagnòstica i anàlisi de viabilitat emprenedora."
+        "titulo_es": "Dar a conocer un servicio de análisis de cálculos renales",
+        "titulo_ca": "Donar a conèixer un servei d'anàlisi de càlculs renals",
+        "contexto_es": "Un laboratorio privado de Palma empieza a analizar cálculos renales y nadie conoce el servicio.",
+        "contexto_ca": "Un laboratori privat de Palma comença a analitzar càlculs renals i ningú no coneix el servei.",
+        "desarrollo_es": "El alumnado realiza el análisis de cálculos urinarios e identifica su composición (1371-5g). Diseña una estrategia de marketing para urólogos y pacientes: mensaje, canales y una presentación breve de venta del servicio (1710-4i).",
+        "desarrollo_ca": "L'alumnat fa l'anàlisi de càlculs urinaris i n'identifica la composició (1371-5g). Dissenya una estratègia de màrqueting per a uròlegs i pacients: missatge, canals i una presentació breu de venda del servei (1710-4i).",
+        "evidencia_es": "Informe del cálculo y plan de marketing.",
+        "evidencia_ca": "Informe del càlcul i pla de màrqueting.",
+        "dua_es": "Plantilla de plan de marketing con ejemplos.",
+        "dua_ca": "Plantilla de pla de màrqueting amb exemples.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
       }
     ]
   },
   {
     "a": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1372",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Los autoanticuerpos del lupus son la base técnica de una iniciativa de innovación social con una asociación de pacientes.",
+    "justificacion_ca": "Els autoanticossos del lupus són la base tècnica d'una iniciativa d'innovació social amb una associació de pacients.",
+    "actividades": [
+      {
+        "titulo_es": "Explicar los autoanticuerpos a una asociación de pacientes con lupus",
+        "titulo_ca": "Explicar els autoanticossos a una associació de pacients amb lupus",
+        "contexto_es": "La asociación de pacientes con lupus de las Illes Balears pide ayuda para entender sus análisis.",
+        "contexto_ca": "L'associació de pacients amb lupus de les Illes Balears demana ajuda per entendre les seves anàlisis.",
+        "desarrollo_es": "Los estudiantes detallan los anticuerpos asociados al lupus y a otras enfermedades autoinmunes (1372-3a). Analizan qué es la innovación social (1710-5a) y reflexionan sobre el liderazgo ético que supone trabajar con pacientes, sin sustituir al médico (1710-5b).",
+        "desarrollo_ca": "Els estudiants detallen els anticossos associats al lupus i a altres malalties autoimmunes (1372-3a). Analitzen què és la innovació social (1710-5a) i reflexionen sobre el lideratge ètic que suposa treballar amb pacients, sense substituir el metge (1710-5b).",
+        "evidencia_es": "Material divulgativo validado por la asociación.",
+        "evidencia_ca": "Material divulgatiu validat per l'associació.",
+        "dua_es": "Material en lectura fácil con imágenes.",
+        "dua_ca": "Material en lectura fàcil amb imatges.",
+        "metodologia_es": "aprendizaje servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
       "modulo": "1374",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Los autoanalizadores hematológicos muestran cómo la tecnología cambia el modelo productivo del laboratorio.",
+    "justificacion_ca": "Els autoanalitzadors hematològics mostren com la tecnologia canvia el model productiu del laboratori.",
+    "actividades": [
+      {
+        "titulo_es": "Del recuento al microscopio a la cadena automatizada",
+        "titulo_ca": "Del recompte al microscopi a la cadena automatitzada",
+        "contexto_es": "Una técnica que se jubila en Son Espases cuenta cómo se hacían los hemogramas hace cuarenta años.",
+        "contexto_ca": "Una tècnica que es jubila a Son Espases explica com es feien els hemogrames fa quaranta anys.",
+        "desarrollo_es": "El grupo caracteriza los tipos de autoanalizadores y sus sistemas de medida actuales (1374-2a). A partir del testimonio reflexiona sobre la tecnología como base del cambio del modelo productivo y sobre las nuevas competencias que exige (1710-5c).",
+        "desarrollo_ca": "El grup caracteritza els tipus d'autoanalitzadors i els seus sistemes de mesura actuals (1374-2a). A partir del testimoni reflexiona sobre la tecnologia com a base del canvi del model productiu i sobre les noves competències que exigeix (1710-5c).",
+        "evidencia_es": "Línea del tiempo de la hematología automatizada.",
+        "evidencia_ca": "Línia del temps de l'hematologia automatitzada.",
+        "dua_es": "Línea del tiempo con fotos históricas.",
+        "dua_ca": "Línia del temps amb fotos històriques.",
+        "metodologia_es": "entrevista y reflexión.",
+        "metodologia_ca": "entrevista i reflexió."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1710",
       "ra": "RA5",
       "criterios": [
         "d"
       ]
     },
     "b": {
-      "modulo": "1375",
-      "ra": "RA3",
+      "modulo": "1373",
+      "ra": "RA6",
       "criterios": [
-        "f"
+        "a"
       ]
     },
-    "justificacion_es": "Realizar mediciones coagulométricas automáticas y manuales exige asignar recursos materiales, humanos y tiempos precisos de respuesta.",
-    "justificacion_ca": "Realitzar mesuraments coagulomètrics automàtics i manuals exigeix assignar recursos materials, humans i temps precisos de resposta.",
+    "justificacion_es": "El pensamiento de diseño ayuda a detectar necesidades sanitarias de población vulnerable, como el cribado de parasitosis en personas migrantes.",
+    "justificacion_ca": "El pensament de disseny ajuda a detectar necessitats sanitàries de població vulnerable, com el cribratge de parasitosis en persones migrants.",
     "actividades": [
       {
-        "titulo_es": "Determinación automatizada del tiempo de protrombina y planificación de recursos en el código ictus hospitalario",
-        "titulo_ca": "Determinació automatitzada del temps de protrombina i planificació de recursos en el codi ictus hospitalari",
-        "contexto_es": "El servicio de urgencias de Son Espases activa el código ictus y requiere resultados del perfil hemostático en menos de treinta minutos.",
-        "contexto_ca": "El servei d'urgències de Son Espases activa el codi ictus i requereix resultats del perfil hemostàtic en menys de trenta minuts.",
-        "desarrollo_es": "Los técnicos procesan muestras citratadas determinando tiempo de protrombina, fibrinógeno y TTPA en coagulómetro óptico-mecánico (1374-5d). Planifican los turnos del personal, provisión de reactivos y calibraciones para garantizar los tiempos críticos de respuesta asistencial del proyecto (1375-3f).",
-        "desarrollo_ca": "Els tècnics processen mostres citratades determinant temps de protrombina, fibrinogen i TTPA en coagulòmetre òptic-mecànic (1374-5d). Planifiquen els torns del personal, provisió de reactius i calibratges per garantir els temps crítics de resposta assistencial del projecte (1375-3f).",
-        "evidencia_es": "Trazado de la curva de coagulación con tiempo en segundos e INR junto con el cronograma y cuadrante de asignación del personal.",
-        "evidencia_ca": "Traçat de la corba de coagulació amb temps en segons i INR juntament amb el cronograma i quadrant d'assignació del personal.",
-        "dua_es": "Alarmas visuales y acústicas de tiempo límite analítico e interfaz de planificación de personal accesible con atajos de teclado.",
-        "dua_ca": "Alarmes visuals i acústiques de temps límit analític i interfície de planificació de personal accessible amb dreceres de teclat.",
-        "metodologia_es": "hemostasia urgente y gestión de recursos operativos.",
-        "metodologia_ca": "hemostàsia urgent i gestió de recursos operatius."
+        "titulo_es": "Cribado de parásitos para personas recién llegadas a Palma",
+        "titulo_ca": "Cribratge de paràsits per a persones arribades fa poc a Palma",
+        "contexto_es": "Una ONG de Palma que atiende a personas migrantes recién llegadas detecta muchas molestias digestivas sin diagnosticar.",
+        "contexto_ca": "Una ONG de Palma que atén persones migrants arribades fa poc detecta moltes molèsties digestives sense diagnosticar.",
+        "desarrollo_es": "El alumnado caracteriza los protocolos de identificación de parásitos más frecuentes según el origen geográfico (1373-6a). Aplica el pensamiento de diseño para detectar las necesidades reales: idioma, miedo, horarios y circuito de recogida de muestras (1710-5d).",
+        "desarrollo_ca": "L'alumnat caracteritza els protocols d'identificació de paràsits més freqüents segons l'origen geogràfic (1373-6a). Aplica el pensament de disseny per detectar les necessitats reals: idioma, por, horaris i circuit de recollida de mostres (1710-5d).",
+        "evidencia_es": "Mapa de empatía y propuesta de circuito.",
+        "evidencia_ca": "Mapa d'empatia i proposta de circuit.",
+        "dua_es": "Pictogramas multilingües para las instrucciones.",
+        "dua_ca": "Pictogrames multilingües per a les instruccions.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   },
   {
     "a": {
-      "modulo": "1374",
-      "ra": "RA5",
-      "criterios": [
-        "e"
-      ]
-    },
-    "b": {
-      "modulo": "1375",
-      "ra": "RA4",
-      "criterios": [
-        "e"
-      ]
-    },
-    "justificacion_es": "Definir valores de referencia biológicos en coagulación se integra en la elaboración del informe documental de evaluación del proyecto.",
-    "justificacion_ca": "Definir valors de referència biològics en coagulació s'integra en l'elaboració de l'informe documental d'avaluació del projecte.",
-    "actividades": [
-      {
-        "titulo_es": "Intervalos de referencia en dímero D por turbidimetría y documentación de evaluación del proyecto analítico",
-        "titulo_ca": "Intervals de referència en dímer D per turbidimetria i documentació d'avaluació del projecte analític",
-        "contexto_es": "En el Hospital Son Llàtzer se valida un nuevo ensayo turbidimétrico de dímero D para descartar tromboembolismo venoso en urgencias.",
-        "contexto_ca": "A l'Hospital Son Llàtzer es valida un nou assaig turbidimètric de dímer D per descartar tromboembolisme venós a urgències.",
-        "desarrollo_es": "El equipo define los rangos normales y el umbral de corte biológico de quinientos nanogramos por mililitro ajustado por edad (1374-5e). Elaboran el dosier documental de evaluación del proyecto con el análisis de concordancia clínica, especificidad y coste por determinación (1375-4e).",
-        "desarrollo_ca": "L'equip defineix els rangs normals i el llindar de tall biològic de cinc-cents nanograms per mil·lilitre ajustat per edat (1374-5e). Elaboren el dossier documental d'avaluació del projecte amb l'anàlisi de concordança clínica, especificitat i cost per determinació (1375-4e).",
-        "evidencia_es": "Curva de calibración de dímero D con intervalo de corte documentado y memoria de evaluación final del proyecto asistencial.",
-        "evidencia_ca": "Corba de calibratge de dímer D amb interval de tall documentat i memòria d'avaluació final del projecte assistencial.",
-        "dua_es": "Tablas de intervalos de referencia con realce visual dinámico y formulario de evaluación documental con navegación asistida.",
-        "dua_ca": "Taules d'intervals de referència amb realç visual dinàmic i formulari d'avaluació documental amb navegació assistida.",
-        "metodologia_es": "validación analítica y evaluación documental de proyectos.",
-        "metodologia_ca": "validació analítica i avaluació documental de projectes."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA5",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
       "modulo": "1710",
-      "ra": "RA1",
+      "ra": "RA5",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1371",
+      "ra": "RA4",
       "criterios": [
         "c"
       ]
     },
-    "justificacion_es": "Interpretar coagulopatías congénitas y adquiridas fortalece la destreza analítica necesaria para superar procesos de selección de personal.",
-    "justificacion_ca": "Interpretar coagulopaties congènites i adquirides enforteix la destresa analítica necessària per superar processos de selecció de personal.",
+    "justificacion_es": "Analizar la viabilidad de un laboratorio veterinario exige conocer los protocolos técnicos que ofrecerá, como las enzimas hepáticas.",
+    "justificacion_ca": "Analitzar la viabilitat d'un laboratori veterinari exigeix conèixer els protocols tècnics que oferirà, com els enzims hepàtics.",
     "actividades": [
       {
-        "titulo_es": "Diagnóstico diferencial de hemofilias por TTPA cruzado y simulación de casos clínicos en oposiciones sanitarias",
-        "titulo_ca": "Diagnòstic diferencial d'hemofílies per TTPA creuat i simulació de casos clínics en oposicions sanitàries",
-        "contexto_es": "En Can Misses de Ibiza se preparan pruebas técnicas para procesos selectivos del Servicio de Salud en el área de hemostasia.",
-        "contexto_ca": "A Can Misses d'Eivissa es preparen proves tècniques per a processos selectius del Servei de Salut a l'àrea d'hemostàsia.",
-        "desarrollo_es": "Los técnicos relacionan el alargamiento aislado del TTPA con déficit de factor VIII o IX realizando mezclas de plasma con corrección (1374-5f). Desarrollan habilidades para afrontar supuestos prácticos de selección demostrando rigor fisiopatológico y agilidad resolutiva (1710-1c).",
-        "desarrollo_ca": "Els tècnics relacionen l'allargament aïllat del TTPA amb dèficit de factor VIII o IX realitzant mescles de plasma amb correcció (1374-5f). Desenvolupen habilitats per afrontar supòsits pràctics de selecció demostrant rigor fisiopatològic i agilitat resolutiva (1710-1c).",
-        "evidencia_es": "Algoritmo interpretativo de coagulopatías resuelto e informe de desempeño en la prueba técnica simulada de selección de personal.",
-        "evidencia_ca": "Algorisme interpretatiu de coagulopaties resolt i informe d'acompliment en la prova tècnica simulada de selecció de personal.",
-        "dua_es": "Diagrama de flujo de coagulopatías en formato interactivo accesible y banco de supuestos prácticos con síntesis de voz.",
-        "dua_ca": "Diagrama de flux de coagulopaties en format interactiu accessible i banc de supòsits pràctics amb síntesi de veu.",
-        "metodologia_es": "resolución de casos clínicos y preparación para procesos de selección.",
-        "metodologia_ca": "resolució de casos clínics i preparació per a processos de selecció."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA5",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA3",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Dominar las pruebas de monitorización de anticoagulantes impulsa proyectos emprendedores de innovación social para pacientes en tratamiento.",
-    "justificacion_ca": "Dominar les proves de monitoratge d'anticoagulants impulsa projectes emprenedors d'innovació social per a pacients en tractament.",
-    "actividades": [
-      {
-        "titulo_es": "Actividad anti-factor Xa en heparinas de bajo peso molecular y emprendimiento ágil en autocontrol de anticoagulación",
-        "titulo_ca": "Activitat anti-factor Xa en heparines de baix pes molecular i emprenedoria àgil en autocontrol d'anticoagulació",
-        "contexto_es": "En el Hospital Comarcal de Inca se monitorizan pacientes con fibrilación auricular y trombosis venosa profunda en tratamiento.",
-        "contexto_ca": "En el laboratori de l'Hospital Comarcal d'Inca es monitoren pacients amb fibril·lació auricular i trombosi venosa profunda en tractament.",
-        "desarrollo_es": "El alumnado describe la cuantificación cromogénica de anti-Xa y control de INR para cumarínicos e inhibidores directos del factor Xa (1374-5g). Aplican metodologías de emprendimiento ágil como Lean Canvas para diseñar una aplicación comunitaria de seguimiento domiciliario de anticoagulados (1710-3b).",
-        "desarrollo_ca": "L'alumnat descriu la quantificació cromogènica d'anti-Xa i control d'INR per a cumarínics i inhibidors directes del factor Xa (1374-5g). Apliquen metodologies d'emprenedoria àgil com Lean Canvas per dissenyar una aplicació comunitària de seguiment domiciliari d'anticoagulats (1710-3b).",
-        "evidencia_es": "Curva de calibración cromogénica de anti-factor Xa y modelo Lean Canvas del servicio emprendedor de seguimiento digital.",
-        "evidencia_ca": "Corba de calibratge cromogènica d'anti-factor Xa i model Lean Canvas del servei emprenedor de seguiment digital.",
-        "dua_es": "Esquemas de dosificación con rangos en semáforo visual y lienzo Lean Canvas en formato digital accesible para teclado.",
-        "dua_ca": "Esquemes de dosificació amb rangs en semàfor visual i llenç Lean Canvas en format digital accessible per a teclat.",
-        "metodologia_es": "hemostasiología aplicada y emprendimiento ágil en salud.",
-        "metodologia_ca": "hemostasiologia aplicada i emprenedoria àgil en salut."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA5",
-      "criterios": [
-        "h",
-        "i"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA4",
-      "criterios": [
-        "f"
-      ]
-    },
-    "justificacion_es": "Validar pruebas hemostáticas con medidas estrictas de bioseguridad orienta el análisis de factores del entorno en modelos de emprendimiento.",
-    "justificacion_ca": "Validar proves hemostàtiques amb mesures estrictes de bioseguretat orienta l'anàlisi de factors de l'entorn en models d'emprenedoria.",
-    "actividades": [
-      {
-        "titulo_es": "Validación técnica de curvas de fibrina con bioseguridad y análisis del entorno sociodemográfico insular",
-        "titulo_ca": "Validació tècnica de corbes de fibrina amb bioseguretat i anàlisi de l'entorn sociodemogràfic insular",
-        "contexto_es": "El laboratorio del Hospital Mateu Orfila de Menorca audita los flujos analíticos de coagulación en relación con el envejecimiento poblacional.",
-        "contexto_ca": "El laboratori de l'Hospital Mateu Orfila de Menorca audita els fluxos analítics de coagulació en relació amb l'envelliment poblacional.",
-        "desarrollo_es": "Los técnicos validan técnicamente las cinéticas de formación de fibrina aplicando protocolos de bioseguridad frente a patógenos hemáticos (1374-5h, 1374-5i). Analizan las variables demográficas de dispersión y estacionalidad de Menorca para proyectar la viabilidad de servicios de analítica domiciliaria (1710-4f).",
-        "desarrollo_ca": "Els tècnics validen tècnicament les cinètiques de formació de fibrina aplicant protocols de bioseguretat enfront de patògens hemàtics (1374-5h, 1374-5i). Analitzen les variables demogràfiques de dispersió i estacionalitat de Menorca per projectar la viabilitat de serveis d'analítica domiciliària (1710-4f).",
-        "evidencia_es": "Informe de hemostasia validado según reglas de Westgard y análisis PESTEL del entorno sociosanitario para la idea emprendedora.",
-        "evidencia_ca": "Informe d'hemostàsia validat segons regles de Westgard i anàlisi PESTEL de l'entorn sociosanitari per a la idea emprenedora.",
-        "dua_es": "Reglas de control de calidad en formato gráfico de alto contraste y plantilla PESTEL estructurada con ejemplos explicativos.",
-        "dua_ca": "Regles de control de qualitat en format gràfic d'alt contrast i plantilla PESTEL estructurada amb exemples explicatius.",
-        "metodologia_es": "garantía de calidad en hemostasia y análisis del entorno.",
-        "metodologia_ca": "garantia de qualitat en hemostàsia i anàlisi de l'entorn."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA6",
-      "criterios": [
-        "e"
-      ]
-    },
-    "b": {
-      "modulo": "1375",
-      "ra": "RA2",
-      "criterios": [
-        "f"
-      ]
-    },
-    "justificacion_es": "Verificar la compatibilidad donante-receptor en pruebas cruzadas transfusionales permite elaborar el presupuesto económico en proyectos asistenciales.",
-    "justificacion_ca": "Verificar la compatibilitat donant-receptor en proves creuades transfusionals permet elaborar el pressupost econòmic en projectes assistencials.",
-    "actividades": [
-      {
-        "titulo_es": "Pruebas cruzadas de compatibilidad transfusional en tarjeta de gel y elaboración del presupuesto del proyecto",
-        "titulo_ca": "Proves creuades de compatibilitat transfusional en targeta de gel i elaboració del pressupost del projecte",
-        "contexto_es": "El Banc de Sang i Teixits de les Illes Balears diseña un proyecto de optimización del stock de hematíes compatibles para cirugía programada.",
-        "contexto_ca": "El Banc de Sang i Teixits de les Illes Balears dissenya un projecte d'optimització de l'estoc d'hematies compatibles per a cirurgia programada.",
-        "desarrollo_es": "El grupo de estudiantes efectúa la prueba cruzada mayor enfrentando suero del receptor y hematíes del donante en microcolumnas con antiglobulina humana (1374-6e). Desarrollan la estimación presupuestaria detallando costes directos de tarjetas de gel, reactivos de tipaje y costes indirectos de amortización (1375-2f).",
-        "desarrollo_ca": "El grup d'estudiants efectua la prova creuada major enfrontant sèrum del receptor i hematies del donant en microcolumnes amb antiglobulina humana (1374-6e). Desenvolupen l'estimació pressupostària detallant costos directes de targetes de gel, reactius de tipatge i costos indirectes d'amortització (1375-2f).",
-        "evidencia_es": "Tarjeta de gel con aglutinación negativa que confirma compatibilidad y hoja de presupuesto económico desglosado del proyecto.",
-        "evidencia_ca": "Targeta de gel amb aglutinació negativa que confirma compatibilitat i full de pressupost econòmic desglossat del projecte.",
-        "dua_es": "Visor retroiluminado para lectura nítida de microcolumnas de gel y plantilla de cálculo presupuestario con fórmulas asistidas.",
-        "dua_ca": "Visor retroil·luminat per a lectura nítida de microcolumnes de gel i plantilla de càlcul pressupostari amb fórmules assistides.",
-        "metodologia_es": "inmunohematología técnica y gestión presupuestaria de proyectos.",
-        "metodologia_ca": "immunohematologia tècnica i gestió pressupostària de projectes."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA6",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA2",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Validar pruebas de compatibilidad pretransfusional se vincula con los retos sociales derivados de la estacionalidad turística balear.",
-    "justificacion_ca": "Validar proves de compatibilitat pretransfusional es vincula amb els reptes socials derivats de l'estacionalitat turística balear.",
-    "actividades": [
-      {
-        "titulo_es": "Validación de compatibilidad serológica pretransfusional e impacto del turismo estacional en la reserva hemática insular",
-        "titulo_ca": "Validació de compatibilitat serològica pretransfusional i impacte del turisme estacional en la reserva hemàtica insular",
-        "contexto_es": "En el Hospital Son Llàtzer se registra un incremento de transfusiones de emergencia durante los meses de máxima afluencia turística.",
-        "contexto_ca": "A l'Hospital Son Llàtzer es registra un increment de transfusions d'emergència durant els mesos de màxima afluència turística.",
-        "desarrollo_es": "Los técnicos validan las pruebas de compatibilidad serológica y fenotipado eritrocitario extendido autorizando la transfusión segura de hematíes (1374-6f). Analizan cómo la presión turística masiva y la actividad hotelera impactan en la demanda de hemoderivados tensionando los recursos de salud insulares (1708-2b).",
-        "desarrollo_ca": "Els tècnics validen les proves de compatibilitat serològica i fenotipatge eritrocitari estès autoritzant la transfusió segura d'hematies (1374-6f). Analitzen com la pressió turística massiva i l'activitat hotelera impacten en la demanda d'hemoderivats tensionant els recursos de salut insulars (1708-2b).",
-        "evidencia_es": "Informe de validación transfusional conforme a protocolo e informe de impacto socioeconómico sobre el suministro de sangre.",
-        "evidencia_ca": "Informe de validació transfusional d'acord amb protocol i informe d'impacte socioeconòmic sobre el subministrament de sang.",
-        "dua_es": "Listas de verificación de compatibilidad con casillas táctiles de gran formato y gráficos interactivos de demanda transfusional estacional.",
-        "dua_ca": "Llistes de verificació de compatibilitat amb caselles tàctils de gran format i gràfics interactius de demanda transfusional estacional.",
-        "metodologia_es": "seguridad transfusional y análisis del entorno socioeconómico.",
-        "metodologia_ca": "seguretat transfusional i anàlisi de l'entorn socioeconòmic."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA6",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA6",
-      "criterios": [
-        "a"
-      ]
-    },
-    "justificacion_es": "Registrar los datos de compatibilidad pretransfusional en el informe clínico conecta con la rendición de cuentas ante grupos de interés del hospital.",
-    "justificacion_ca": "Registrar les dades de compatibilitat pretransfusional en l'informe clínic connecta amb la rendició de comptes davant grups d'interès de l'hospital.",
-    "actividades": [
-      {
-        "titulo_es": "Registro de concordancia inmunohematológica y mapa de partes interesadas en seguridad del paciente",
-        "titulo_ca": "Registre de concordança immunohematològica i mapa de parts interessades en seguretat del pacient",
-        "contexto_es": "La unidad de hemovigilancia del Hospital de Manacor monitoriza la trazabilidad documental de cada concentrado transfundido.",
-        "contexto_ca": "La unitat d'hemovigilància de l'Hospital de Manacor monitora la traçabilitat documental de cada concentrat transfundit.",
-        "desarrollo_es": "El alumnado anota en el informe del banco de sangre los resultados de escrutinio de anticuerpos irregulares, grupo ABO, Rh y lote de la bolsa (1374-6g). Identifican las expectativas del comité de transfusiones, familias y pacientes como grupos de interés clave del plan de sostenibilidad hospitalario (1708-6a).",
-        "desarrollo_ca": "L'alumnat anota en l'informe del banc de sang els resultats d'escrutini d'anticossos irregulars, grup ABO, Rh i lot de la bossa (1374-6g). Identifiquen les expectatives del comitè de transfusions, famílies i pacients com a grups d'interès clau del pla de sostenibilitat hospitalari (1708-6a).",
-        "evidencia_es": "Informe de compatibilidad debidamente cumplimentado y matriz de identificación de grupos de interés del servicio de transfusión.",
-        "evidencia_ca": "Informe de compatibilitat degudament emplenat i matriu d'identificació de grups d'interès del servei de transfusió.",
-        "dua_es": "Formularios de reporte con lectura por voz y mapa de actores con código cromático navegable mediante teclado.",
-        "dua_ca": "Formularis de report amb lectura per veu i mapa d'actors amb codi cromàtic navegable mitjançant teclat.",
-        "metodologia_es": "hemovigilancia documental y responsabilidad social hospitalaria.",
-        "metodologia_ca": "hemovigilància documental i responsabilitat social hospitalària."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA6",
-      "criterios": [
-        "h"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA2",
-      "criterios": [
-        "g"
-      ]
-    },
-    "justificacion_es": "Trabajar con normas estrictas de seguridad biológica en transfusiones exige resiliencia y gestión emocional ante urgencias vitales críticas.",
-    "justificacion_ca": "Treballar amb normes estrictes de seguretat biològica en transfusions exigeix resiliència i gestió emocional davant urgències vitals crítiques.",
-    "actividades": [
-      {
-        "titulo_es": "Protocolos de bioseguridad en banco de sangre y gestión emocional ante solicitudes de transfusión masiva",
-        "titulo_ca": "Protocols de bioseguretat en banc de sang i gestió emocional davant sol·licituds de transfusió massiva",
-        "contexto_es": "En el Banc de Sang i Teixits de les Illes Balears se activa el protocolo de transfusión urgente no cruzada por politraumatismo grave.",
-        "contexto_ca": "En el Banc de Sang i Teixits de les Illes Balears s'activa el protocol de transfusió urgent no creuada per politraumatisme greu.",
-        "desarrollo_es": "Los técnicos aplican barreras de bioseguridad individual manipulando tubos de sangre con guantes de nitrilo y protección facial frente a salpicaduras (1374-6h). Emplean estrategias de inteligencia emocional para gestionar el estrés, canalizar la tensión y reaccionar con serenidad y flexibilidad ante la urgencia crítica (1710-2g).",
-        "desarrollo_ca": "Els tècnics apliquen barreres de bioseguretat individual manipulant tubs de sang amb guants de nitril i protecció facial enfront d'esquitxades (1374-6h). Empren estratègies d'intel·ligència emocional per gestionar l'estrès, canalitzar la tensió i reaccionar amb serenitat i flexibilitat davant la urgència crítica (1710-2g).",
-        "evidencia_es": "Lista de verificación de bioseguridad en transfusión de emergencia y registro de autorregulación emocional en situaciones de alta presión.",
-        "evidencia_ca": "Llista de verificació de bioseguretat en transfusió d'emergència i registre d'autoregulació emocional en situacions d'alta pressió.",
-        "dua_es": "Listas de chequeo plastificadas con botones táctiles y guía de técnicas de respiración y relajación rápida para profesionales de guardia.",
-        "dua_ca": "Llistes de revisió plastificades amb botons tàctils i guia de tècniques de respiració i relaxació ràpida per a professionals de guàrdia.",
-        "metodologia_es": "simulación clínica de alta fidelidad y regulación emocional.",
-        "metodologia_ca": "simulació clínica d'alta fidelitat i regulació emocional."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA7",
-      "criterios": [
-        "a"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA5",
-      "criterios": [
-        "f"
-      ]
-    },
-    "justificacion_es": "Aplicar criterios de aceptación y rechazo de donantes de sangre impulsa estrategias sostenibles de reducción de mermas y caducidades.",
-    "justificacion_ca": "Aplicar criteris d'acceptació i rebuig de donants de sang impulsa estratègies sostenibles de reducció de mermes i caducitats.",
-    "actividades": [
-      {
-        "titulo_es": "Criterios de selección médica de donantes y estrategias sostenibles de minimización de descartes de hemoderivados",
-        "titulo_ca": "Criteris de selecció mèdica de donants i estratègies sostenibles de minimització de descarts d'hemoderivats",
-        "contexto_es": "En el Banc de Sang i Teixits de les Illes Balears se optimizan los circuitos de donación para evitar descartes innecesarios de bolsas.",
-        "contexto_ca": "En el Banc de Sang i Teixits de les Illes Balears s'optimitzen els circuits de donació per evitar descarts innecessaris de bosses.",
-        "desarrollo_es": "El equipo describe los criterios de hemoglobina mínima, viajes a zonas endémicas y control de constantes para aceptar al donante (1374-7a). Diseñan estrategias sostenibles de planificación de citas de aféresis adaptadas a la demanda real para minimizar caducidades de plaquetas y plasma (1708-5f).",
-        "desarrollo_ca": "L'equip descriu els criteris d'hemoglobina mínima, viatges a zones endèmiques i control de constants per acceptar el donant (1374-7a). Dissenyen estratègies sostenibles de planificació de cites d'afèresi adaptades a la demanda real per minimitzar caducitats de plaquetes i plasma (1708-5f).",
-        "evidencia_es": "Algoritmo de selección y exclusión de donantes y plan de optimización de existencias de hemoderivados con indicadores de merma.",
-        "evidencia_ca": "Algorisme de selecció i exclusió de donants i pla d'optimització d'existències d'hemoderivats amb indicadors de merma.",
-        "dua_es": "Árbol decisional de aptitud para donación en lectura fácil interactiva y gráficos de reservas de sangre con señales sonoras de alerta.",
-        "dua_ca": "Arbre decisional d'aptitud per a donació en lectura fàcil interactiva i gràfics de reserves de sang amb senyals sonors d'alerta.",
-        "metodologia_es": "selección transfusional y optimización sostenible de recursos.",
-        "metodologia_ca": "selecció transfusional i optimització sostenible de recursos."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1374",
-      "ra": "RA7",
-      "criterios": [
-        "b"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA2",
-      "criterios": [
-        "a"
-      ]
-    },
-    "justificacion_es": "Ejecutar la extracción y procesamiento seguro de sangre total requiere competencias empáticas y de comunicación para fidelizar donantes.",
-    "justificacion_ca": "Executar l'extracció i processament segur de sang total requereix competències empàtiques i de comunicació per fidelitzar donants.",
-    "actividades": [
-      {
-        "titulo_es": "Flebotomía estandarizada en donación altruista y desarrollo de competencias sociales para el empleo sanitario",
-        "titulo_ca": "Flebotomia estandarditzada en donació altruista i desenvolupament de competències socials per a l'ocupació sanitària",
-        "contexto_es": "En las unidades móviles del banco de sangre en Ibiza se atienden donaciones en campañas universitarias y comunitarias.",
-        "contexto_ca": "En les unitats mòbils del banc de sang a Eivissa s'atenen donacions en campanyes universitàries i comunitàries.",
-        "desarrollo_es": "Los técnicos caracterizan la venopunción con aguja de calibre 16, mezcla con solución CPDA-1 y pesado continuo en báscula agitative (1374-7b). Valoran la acogida cálida, empatía y calma en la atención al donante como competencias personales determinantes para la inserción laboral en hemodonación (1710-2a).",
-        "desarrollo_ca": "Els tècnics caracteritzen la venopunció amb agulla de calibre 16, mescla amb solució CPDA-1 i pesatge continu en bàscula agitativa (1374-7b). Valoren l'acollida càlida, empatia i calma en l'atenció al donant com a competències personals determinants per a la inserció laboral en hemodonació (1710-2a).",
-        "evidencia_es": "Protocolo técnico de flebotomía asistida y reporte de autoevaluación competencial en atención a personas usuarias del servicio de salud.",
-        "evidencia_ca": "Protocol tècnic de flebotomia assistida i report d'autoavaluació competencial en atenció a persones usuàries del servei de salut.",
-        "dua_es": "Simulador de venopunción con soporte táctil y guía de pautas de comunicación empática en formato de bolsillo plastificado.",
-        "dua_ca": "Simulador de venopunció amb suport tàctil i guia de pautes de comunicació empàtica en format de butxaca plastificat.",
-        "metodologia_es": "taller práctico de hemodonación y competencias interpersonales.",
-        "metodologia_ca": "taller pràctic d'hemodonació i competències interpersonals."
+        "titulo_es": "¿Es viable un laboratorio de análisis veterinarios en Manacor?",
+        "titulo_ca": "És viable un laboratori d'anàlisis veterinàries a Manacor?",
+        "contexto_es": "Dos técnicos piensan abrir en Manacor un laboratorio de bioquímica veterinaria para clínicas de pequeños animales.",
+        "contexto_ca": "Dos tècnics pensen obrir a Manacor un laboratori de bioquímica veterinària per a clíniques de petits animals.",
+        "desarrollo_es": "Los estudiantes interpretan los protocolos de determinación de enzimas hepáticas adaptados a perros y gatos (1371-4c). Aplican estrategias para analizar la viabilidad del proyecto: demanda, inversión, costes y punto de equilibrio (1710-5g).",
+        "desarrollo_ca": "Els estudiants interpreten els protocols de determinació d'enzims hepàtics adaptats a cans i moixos (1371-4c). Apliquen estratègies per analitzar la viabilitat del projecte: demanda, inversió, costos i punt d'equilibri (1710-5g).",
+        "evidencia_es": "Estudio de viabilidad con escenarios.",
+        "evidencia_ca": "Estudi de viabilitat amb escenaris.",
+        "dua_es": "Hoja de cálculo con escenarios ya preparados.",
+        "dua_ca": "Full de càlcul amb escenaris ja preparats.",
+        "metodologia_es": "estudio de viabilidad.",
+        "metodologia_ca": "estudi de viabilitat."
       }
     ]
   },
   {
     "a": {
       "modulo": "1375",
-      "ra": "RA1",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA3",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Definir las especificaciones técnicas de proyectos diagnósticos se alinea con el análisis de oportunidades y riesgos en las metas de los ODS.",
-    "justificacion_ca": "Definir les especificacions tècniques de projectes diagnòstics s'alinea amb l'anàlisi d'oportunitats i riscs en les fites dels ODS.",
-    "actividades": [
-      {
-        "titulo_es": "Especificaciones técnicas del proyecto de laboratorio y análisis de riesgos y oportunidades en los ODS",
-        "titulo_ca": "Especificacions tècniques del projecte de laboratori i anàlisi de riscs i oportunitats en els ODS",
-        "contexto_es": "El equipo técnico del Hospital Mateu Orfila de Menorca diseña el pliego para incorporar tecnología analítica de mínima emisión.",
-        "contexto_ca": "L'equip tècnic de l'Hospital Mateu Orfila de Menorca dissenya el plec per incorporar tecnologia analítica de mínima emissió.",
-        "desarrollo_es": "El grupo de estudiantes determina los requisitos de cadencia horaria, sensibilidad analítica y automatización del proyecto de renovación instrumental (1375-1f). Evalúan los riesgos de obsolescencia tecnológica y las oportunidades en los ODS 3, 9 y 12 para situar al centro como referencia en sostenibilidad insular (1708-3b).",
-        "desarrollo_ca": "El grup d'estudiants determina els requisits de cadència horària, sensibilitat analítica i automatització del projecte de renovació instrumental (1375-1f). Avaluen els riscs d'obsolescència tecnològica i les oportunitats en els ODS 3, 9 i 12 per situar el centre com a referència en sostenibilitat insular (1708-3b).",
-        "evidencia_es": "Documento de especificaciones técnicas del proyecto analítico y matriz de riesgos y oportunidades alineada con los ODS.",
-        "evidencia_ca": "Document d'especificacions tècniques del projecte analític i matriu de riscs i oportunitats alineada amb els ODS.",
-        "dua_es": "Matriz de especificaciones técnicas con campos desplegables accesibles y resumen de ODS en gráficos interactivos con soporte sonoro.",
-        "dua_ca": "Matriu d'especificacions tècniques amb camps desplegables accessibles i resum d'ODS en gràfics interactius amb suport sonor.",
-        "metodologia_es": "gestión técnica de proyectos y análisis estratégico de sostenibilidad.",
-        "metodologia_ca": "gestió tècnica de projectes i anàlisi estratègic de sostenibilitat."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1375",
-      "ra": "RA1",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA6",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Identificar obligaciones laborales y fiscales en proyectos clínicos conecta con la integración de factores ASG materiales para la organización.",
-    "justificacion_ca": "Identificar obligacions laborals i fiscals en projectes clínics connecta amb la integració de factors ASG materials per a l'organització.",
-    "actividades": [
-      {
-        "titulo_es": "Marco regulatorio y laboral del proyecto de laboratorio y priorización de factores ASG en la estrategia corporativa",
-        "titulo_ca": "Marc regulatori i laboral del projecte de laboratori i priorització de factors ASG en l'estratègia corporativa",
-        "contexto_es": "En la gerencia de Son Espases se auditan los proyectos de innovación diagnóstica frente al marco normativo y de responsabilidad social.",
-        "contexto_ca": "A la gerència de Son Espases s'auditen els projectes d'innovació diagnòstica enfront del marc normatiu i de responsabilitat social.",
-        "desarrollo_es": "Los técnicos determinan la normativa de prevención de riesgos biológicos, convenio colectivo y fiscalidad aplicable al proyecto asistencial (1375-1g). Analizan los asuntos ASG materiales identificando la reducción de desigualdades de salud y la transparencia organizativa en concordancia con los objetivos corporativos (1708-6b).",
-        "desarrollo_ca": "Els tècnics determinen la normativa de prevenció de riscs biològics, conveni col·lectiu i fiscalitat aplicable al projecte assistencial (1375-1g). Analitzen els assumptes ASG materials identificant la reducció de desigualtats de salut i la transparència organitzativa en concordança amb els objectius corporatius (1708-6b).",
-        "evidencia_es": "Dossier normativo y laboral del proyecto analítico y matriz de doble materialidad ASG elaborada para la empresa sanitaria.",
-        "evidencia_ca": "Dossier normatiu i laboral del projecte analític i matriu de doble materialitat ASG elaborada per a l'empresa sanitària.",
-        "dua_es": "Guía normativa con resúmenes en lectura facilitada y matriz de materialidad ASG interactiva con navegación mediante teclado.",
-        "dua_ca": "Guia normativa amb resums en lectura facilitada i matriu de materialitat ASG interactiva amb navegació mitjançant teclat.",
-        "metodologia_es": "marco normativo y auditoría de factores ASG.",
-        "metodologia_ca": "marc normatiu i auditoria de factors ASG."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1375",
-      "ra": "RA1",
-      "criterios": [
-        "h",
-        "i"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
       "ra": "RA1",
       "criterios": [
         "d"
       ]
     },
-    "justificacion_es": "Estructurar el guión de proyectos y buscar financiación pública para tecnología diagnóstica potencia la marca personal y empleabilidad técnica.",
-    "justificacion_ca": "Estructurar el guió de projectes i cercar finançament públic per a tecnologia diagnòstica potencia la marca personal i ocupabilitat tècnica.",
+    "b": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Las oportunidades de negocio del sector se valoran hoy junto a los riesgos y oportunidades que plantean los ODS.",
+    "justificacion_ca": "Les oportunitats de negoci del sector es valoren avui juntament amb els riscs i oportunitats que plantegen els ODS.",
     "actividades": [
       {
-        "titulo_es": "Guión de trabajo para proyectos de innovación diagnóstica y proyección de la marca personal en el sector biomédico",
-        "titulo_ca": "Guió de feina per a projectes d'innovació diagnòstica i projecció de la marca personal en el sector biomèdic",
-        "contexto_es": "Estudiantes de ciclo superior en Mallorca participan en la convocatoria balear de proyectos I+D en biotecnología aplicada.",
-        "contexto_ca": "Estudiants de cicle superior a Mallorca participen en la convocatòria balear de projectes R+D en biotecnologia aplicada.",
-        "desarrollo_es": "El equipo identifica convocatorias autonómicas de ayudas a la innovación tecnológica y redacta el guión metodológico del proyecto (1375-1h, 1375-1i). Proyectan su marca personal demostrando dominio en formulación de proyectos técnicos para posicionarse ventajosamente en el mercado de trabajo biomédico (1710-1d).",
-        "desarrollo_ca": "L'equip identifica convocatòries autonòmiques d'ajuts a la innovació tecnològica i redacta el guió metodològic del projecte (1375-1h, 1375-1i). Projecten la seva marca personal demostrant domini en formulació de projectes tècnics per posicionar-se avantatjosament en el mercat de feina biomèdic (1710-1d).",
-        "evidencia_es": "Memoria del guión de trabajo con fuentes de financiación identificadas y dosier digital de marca personal con propuesta de valor profesional.",
-        "evidencia_ca": "Memòria del guió de feina amb fonts de finançament identificades i dossier digital de marca personal amb proposta de valor professional.",
-        "dua_es": "Plantillas de redacción de proyectos con esquemas visuales y plataforma de porfolio profesional con diseño adaptable y soporte de audio.",
-        "dua_ca": "Plantilles de redacció de projectes amb esquemes visuals i plataforma de portafoli professional amb disseny adaptable i suport d'àudio.",
-        "metodologia_es": "gestión de proyectos I+D y desarrollo de marca personal.",
-        "metodologia_ca": "gestió de projectes R+D i desenvolupament de marca personal."
+        "titulo_es": "Oportunidades de negocio verdes en el laboratorio clínico",
+        "titulo_ca": "Oportunitats de negoci verdes al laboratori clínic",
+        "contexto_es": "Un grupo de alumnos busca una idea de proyecto que aproveche la transición sostenible de los laboratorios.",
+        "contexto_ca": "Un grup d'alumnes cerca una idea de projecte que aprofiti la transició sostenible dels laboratoris.",
+        "desarrollo_es": "El grupo valora las oportunidades previsibles en el sector: gestión de residuos, reacondicionamiento de equipos y consultoría ambiental (1375-1d). Para cada una analiza los riesgos y oportunidades que representan los ODS 3, 12 y 13 (1708-3b).",
+        "desarrollo_ca": "El grup valora les oportunitats previsibles al sector: gestió de residus, recondicionament d'equips i consultoria ambiental (1375-1d). Per a cadascuna analitza els riscs i oportunitats que representen els ODS 3, 12 i 13 (1708-3b).",
+        "evidencia_es": "Tabla de oportunidades priorizadas.",
+        "evidencia_ca": "Taula d'oportunitats prioritzades.",
+        "dua_es": "Tabla con iconos de los ODS.",
+        "dua_ca": "Taula amb icones dels ODS.",
+        "metodologia_es": "análisis estratégico.",
+        "metodologia_ca": "anàlisi estratègica."
       }
     ]
   },
@@ -721,7 +209,111 @@
       "modulo": "1375",
       "ra": "RA2",
       "criterios": [
-        "g"
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "El estudio de viabilidad técnica de un proyecto se completa con el análisis del ciclo de vida de lo que se propone.",
+    "justificacion_ca": "L'estudi de viabilitat tècnica d'un projecte es completa amb l'anàlisi del cicle de vida del que es proposa.",
+    "actividades": [
+      {
+        "titulo_es": "Viabilidad de un laboratorio con equipos reacondicionados",
+        "titulo_ca": "Viabilitat d'un laboratori amb equips recondicionats",
+        "contexto_es": "Un proyecto propone equipar un laboratorio veterinario de Eivissa con analizadores reacondicionados.",
+        "contexto_ca": "Un projecte proposa equipar un laboratori veterinari d'Eivissa amb analitzadors recondicionats.",
+        "desarrollo_es": "El alumnado realiza el estudio de viabilidad técnica: prestaciones, repuestos y servicio técnico (1375-2b). Lo completa analizando el ciclo de vida de los equipos reacondicionados frente a los nuevos (1708-4e).",
+        "desarrollo_ca": "L'alumnat fa l'estudi de viabilitat tècnica: prestacions, recanvis i servei tècnic (1375-2b). El completa analitzant el cicle de vida dels equips recondicionats davant els nous (1708-4e).",
+        "evidencia_es": "Estudio de viabilidad con análisis de ciclo de vida.",
+        "evidencia_ca": "Estudi de viabilitat amb anàlisi de cicle de vida.",
+        "dua_es": "Plantilla de estudio con secciones guiadas.",
+        "dua_ca": "Plantilla d'estudi amb seccions guiades.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Garantizar la calidad de un proyecto incluye medir su desempeño en sostenibilidad con estándares reconocidos.",
+    "justificacion_ca": "Garantir la qualitat d'un projecte inclou mesurar-ne l'acompliment en sostenibilitat amb estàndards reconeguts.",
+    "actividades": [
+      {
+        "titulo_es": "Calidad y sostenibilidad en un mismo cuadro de control",
+        "titulo_ca": "Qualitat i sostenibilitat en un mateix quadre de control",
+        "contexto_es": "Un proyecto de laboratorio privado quiere medir a la vez su calidad analítica y su desempeño ambiental.",
+        "contexto_ca": "Un projecte de laboratori privat vol mesurar alhora la qualitat analítica i l'acompliment ambiental.",
+        "desarrollo_es": "Los estudiantes identifican los aspectos que hay que controlar para garantizar la calidad del proyecto (1375-2i). Incorporan los principales estándares de métricas de sostenibilidad y explican cómo sirven para rendir cuentas (1708-1e).",
+        "desarrollo_ca": "Els estudiants identifiquen els aspectes que cal controlar per garantir la qualitat del projecte (1375-2i). Hi incorporen els principals estàndards de mètriques de sostenibilitat i expliquen com serveixen per retre comptes (1708-1e).",
+        "evidencia_es": "Cuadro de control integrado.",
+        "evidencia_ca": "Quadre de control integrat.",
+        "dua_es": "Ejemplo de cuadro de control rellenado.",
+        "dua_ca": "Exemple de quadre de control emplenat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "justificacion_es": "Los indicadores de calidad del proyecto y las métricas de sostenibilidad se recogen en un mismo informe de evaluación.",
+    "justificacion_ca": "Els indicadors de qualitat del projecte i les mètriques de sostenibilitat es recullen en un mateix informe d'avaluació.",
+    "actividades": [
+      {
+        "titulo_es": "El informe final del proyecto con indicadores de sostenibilidad",
+        "titulo_ca": "L'informe final del projecte amb indicadors de sostenibilitat",
+        "contexto_es": "El proyecto de laboratorio que el grupo ha desarrollado durante el curso debe cerrarse con un informe de evaluación.",
+        "contexto_ca": "El projecte de laboratori que el grup ha desenvolupat durant el curs s'ha de tancar amb un informe d'avaluació.",
+        "desarrollo_es": "El grupo define los indicadores de calidad del proyecto (1375-4b) y determina las métricas de sostenibilidad según los estándares más usados (1708-6d). Elabora la documentación de evaluación del proyecto (1375-4e) e integra en ella un informe de sostenibilidad con el plan y los indicadores (1708-6e).",
+        "desarrollo_ca": "El grup defineix els indicadors de qualitat del projecte (1375-4b) i determina les mètriques de sostenibilitat segons els estàndards més usats (1708-6d). Elabora la documentació d'avaluació del projecte (1375-4e) i hi integra un informe de sostenibilitat amb el pla i els indicadors (1708-6e).",
+        "evidencia_es": "Informe final con indicadores de calidad y sostenibilidad.",
+        "evidencia_ca": "Informe final amb indicadors de qualitat i sostenibilitat.",
+        "dua_es": "Plantilla de informe con ejemplos de cada apartado.",
+        "dua_ca": "Plantilla d'informe amb exemples de cada apartat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA3",
+      "criterios": [
+        "e"
       ]
     },
     "b": {
@@ -731,22 +323,90 @@
         "c"
       ]
     },
-    "justificacion_es": "Calcular la financiación para proyectos analíticos innovadores analiza los efectos de los costes sanitarios derivados de impactos ambientales.",
-    "justificacion_ca": "Calcular el finançament per a projectes analítics innovadors analitza els efectes dels costos sanitaris derivats d'impactes ambientals.",
+    "justificacion_es": "Los riesgos de ejecutar un proyecto de laboratorio incluyen sus impactos ambientales y sociales sobre las personas y el sector.",
+    "justificacion_ca": "Els riscs d'executar un projecte de laboratori inclouen els impactes ambientals i socials sobre les persones i el sector.",
     "actividades": [
       {
-        "titulo_es": "Plan financiero para modernización analítica y análisis de costes sanitarios derivados del cambio ambiental",
-        "titulo_ca": "Pla financer per a modernització analítica i anàlisi de costos sanitaris derivats del canvi ambiental",
-        "contexto_es": "En el Hospital de Manacor se diseña un proyecto de refuerzo analítico para patologías respiratorias y alérgicas emergentes.",
-        "contexto_ca": "A l'Hospital de Manacor es dissenya un projecte de reforç analític per a patologies respiratòries i al·lèrgiques emergents.",
-        "desarrollo_es": "Los técnicos cuantifican las necesidades de capital inicial, amortización y tesorería para poner en marcha el nuevo laboratorio de biología molecular (1375-2g). Analizan cómo las crisis ambientales y olas de calor incrementan el gasto asistencial justificando la inversión preventiva en tecnología de diagnóstico rápido (1708-2c).",
-        "desarrollo_ca": "Els tècnics quantifiquen les necessitats de capital inicial, amortització i tresoreria per posar en marxa el nou laboratori de biologia molecular (1375-2g). Analitzen com les crisis ambientals i onades de calor incrementen la despesa assistencial justificant la inversió preventiva en tecnologia de diagnòstic ràpid (1708-2c).",
-        "evidencia_es": "Plan financiero de tesorería a tres años y estudio de impacto económico-sanitario de los factores climáticos en la comarca.",
-        "evidencia_ca": "Pla financer de tresoreria a tres anys i estudi d'impacte economicosanitari dels factors climàtics a la comarca.",
-        "dua_es": "Hojas de balance financiero con fórmulas explicadas mediante texto y gráficos interactivos de costes asistenciales con leyendas sonoras.",
-        "dua_ca": "Fulls de balanç financer amb fórmules explicades mitjançant text i gràfics interactius de costos assistencials amb llegendes sonores.",
-        "metodologia_es": "gestión financiera de proyectos y evaluación de impactos socioambientales.",
-        "metodologia_ca": "gestió financera de projectes i avaluació d'impactes socioambientals."
+        "titulo_es": "Los impactos de abrir un laboratorio en un barrio de Palma",
+        "titulo_ca": "Els impactes d'obrir un laboratori en un barri de Palma",
+        "contexto_es": "El proyecto de un laboratorio de análisis en un bajo de un barrio residencial de Palma preocupa a los vecinos.",
+        "contexto_ca": "El projecte d'un laboratori d'anàlisis en un baix d'un barri residencial de Palma preocupa els veïns.",
+        "desarrollo_es": "El grupo identifica los riesgos de la ejecución del proyecto y define el plan de prevención (1375-3e). Analiza el efecto de los impactos ambientales y sociales sobre los vecinos y el sector: residuos, ruido, tráfico y empleo local (1708-2c).",
+        "desarrollo_ca": "El grup identifica els riscs de l'execució del projecte i defineix el pla de prevenció (1375-3e). Analitza l'efecte dels impactes ambientals i socials sobre els veïns i el sector: residus, renou, trànsit i ocupació local (1708-2c).",
+        "evidencia_es": "Matriz de riesgos e impactos.",
+        "evidencia_ca": "Matriu de riscs i impactes.",
+        "dua_es": "Matriz con colores de gravedad.",
+        "dua_ca": "Matriu amb colors de gravetat.",
+        "metodologia_es": "análisis de riesgos.",
+        "metodologia_ca": "anàlisi de riscs."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Clasificar las empresas del sector ayuda a identificar los grupos de interés de cada una para su plan de sostenibilidad.",
+    "justificacion_ca": "Classificar les empreses del sector ajuda a identificar els grups d'interès de cadascuna per al pla de sostenibilitat.",
+    "actividades": [
+      {
+        "titulo_es": "Grupos de interés de un laboratorio privado de Palma",
+        "titulo_ca": "Grups d'interès d'un laboratori privat de Palma",
+        "contexto_es": "Un laboratorio privado de Palma con cinco puntos de extracción quiere preparar su primer plan de sostenibilidad.",
+        "contexto_ca": "Un laboratori privat de Palma amb cinc punts d'extracció vol preparar el primer pla de sostenibilitat.",
+        "desarrollo_es": "El alumnado clasifica las empresas del sector por tamaño, titularidad y servicio y sitúa en ellas el laboratorio (1375-1a). Identifica sus grupos de interés: pacientes, mutuas, plantilla, proveedores y vecinos (1708-6a).",
+        "desarrollo_ca": "L'alumnat classifica les empreses del sector per mida, titularitat i servei i hi situa el laboratori (1375-1a). N'identifica els grups d'interès: pacients, mútues, plantilla, proveïdors i veïns (1708-6a).",
+        "evidencia_es": "Clasificación del sector y mapa de grupos de interés.",
+        "evidencia_ca": "Classificació del sector i mapa de grups d'interès.",
+        "dua_es": "Diagrama de círculos concéntricos.",
+        "dua_ca": "Diagrama de cercles concèntrics.",
+        "metodologia_es": "análisis de casos.",
+        "metodologia_ca": "anàlisi de casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Valorar oportunidades de negocio exige analizar el entorno general y específico en que se moverá la idea.",
+    "justificacion_ca": "Valorar oportunitats de negoci exigeix analitzar l'entorn general i específic en què es mourà la idea.",
+    "actividades": [
+      {
+        "titulo_es": "Oportunidades para un laboratorio en las islas menores",
+        "titulo_ca": "Oportunitats per a un laboratori a les illes menors",
+        "contexto_es": "Un grupo estudia si hay oportunidad para un laboratorio privado en Menorca o en Formentera.",
+        "contexto_ca": "Un grup estudia si hi ha oportunitat per a un laboratori privat a Menorca o a Formentera.",
+        "desarrollo_es": "Los estudiantes valoran las oportunidades de negocio previsibles en el sector en cada isla (1375-1d). Analizan los componentes del entorno general y específico: población, estacionalidad, competencia y transporte, y su impacto en la idea (1710-4f).",
+        "desarrollo_ca": "Els estudiants valoren les oportunitats de negoci previsibles al sector a cada illa (1375-1d). Analitzen els components de l'entorn general i específic: població, estacionalitat, competència i transport, i el seu impacte en la idea (1710-4f).",
+        "evidencia_es": "Análisis del entorno comparado por islas.",
+        "evidencia_ca": "Anàlisi de l'entorn comparat per illes.",
+        "dua_es": "Plantilla de análisis con datos de ejemplo.",
+        "dua_ca": "Plantilla d'anàlisi amb dades d'exemple.",
+        "metodologia_es": "estudio de mercado.",
+        "metodologia_ca": "estudi de mercat."
       }
     ]
   },
@@ -755,102 +415,100 @@
       "modulo": "1375",
       "ra": "RA2",
       "criterios": [
-        "h",
-        "i"
+        "g"
       ]
     },
     "b": {
       "modulo": "1710",
       "ra": "RA5",
       "criterios": [
-        "h",
-        "i"
-      ]
-    },
-    "justificacion_es": "Documentar el diseño y aseguramiento de calidad de un proyecto clínico se coordina con la búsqueda de finanzas éticas y participación comunitaria.",
-    "justificacion_ca": "Documentar el disseny i assegurament de qualitat d'un projecte clínic es coordina amb la cerca de finances ètiques i participació comunitària.",
-    "actividades": [
-      {
-        "titulo_es": "Diseño documental del proyecto analítico con aseguramiento de calidad y financiación socialmente responsable",
-        "titulo_ca": "Disseny documental del projecte analític amb assegurament de qualitat i finançament socialment responsable",
-        "contexto_es": "En Son Llàtzer se estructura un proyecto de screening poblacional en colaboración con entidades sociales y banca ética de Baleares.",
-        "contexto_ca": "A Son Llàtzer s'estructura un projecte de cribratge poblacional en col·laboració amb entitats socials i banca ètica de Balears.",
-        "desarrollo_es": "El alumnado redacta el manual de diseño del proyecto estableciendo puntos críticos de control y auditorías internas para garantizar calidad (1375-2h, 1375-2i). Investigan líneas de financiación en fondos de banca ética y definen el mapa de actores comunitarios y sanitarios implicados en el desarrollo del servicio (1710-5h, 1710-5i).",
-        "desarrollo_ca": "L'alumnat redacta el manual de disseny del projecte establint punts crítics de control i auditories internes per garantir qualitat (1375-2h, 1375-2i). Investiguen línies de finançament en fons de banca ètica i defineixen el mapa d'actors comunitaris i sanitaris implicats en el desenvolupament del servei (1710-5h, 1710-5i).",
-        "evidencia_es": "Dosier de diseño técnico con plan de calidad del proyecto y memoria de financiación ética con acuerdos de colaboración comunitaria.",
-        "evidencia_ca": "Dossier de disseny tècnic amb pla de qualitat del projecte i memòria de finançament ètica amb acords de col·laboració comunitària.",
-        "dua_es": "Diagrama de flujo de aseguramiento de calidad interactivo y mapa de agentes sociales con formato gráfico adaptado para lectores de pantalla.",
-        "dua_ca": "Diagrama de flux d'assegurament de qualitat interactiu i mapa d'agents socials amb format gràfic adaptat per a lectors de pantalla.",
-        "metodologia_es": "gestión integral de calidad y finanzas socialmente responsables.",
-        "metodologia_ca": "gestió integral de qualitat i finances socialment responsables."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1375",
-      "ra": "RA3",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA5",
-      "criterios": [
-        "g"
-      ]
-    },
-    "justificacion_es": "Efectuar la valoración económica de la implementación de actividades analíticas permite analizar el ciclo de vida del producto en el laboratorio.",
-    "justificacion_ca": "Efectuar la valoració econòmica de la implementació d'activitats analítiques permet analitzar el cicle de vida del producte al laboratori.",
-    "actividades": [
-      {
-        "titulo_es": "Valoración económica de la puesta en práctica analítica y análisis del ciclo de vida de los sistemas de coagulometría",
-        "titulo_ca": "Valoració econòmica de la posada en pràctica analítica i anàlisi del cicle de vida dels sistemes de coagulometria",
-        "contexto_es": "En Can Misses de Ibiza se planifica la adquisición e implantación de un sistema automatizado de pruebas hemostáticas.",
-        "contexto_ca": "A Can Misses d'Eivissa es planifica l'adquisició i implantació d'un sistema automatitzat de proves hemostàtiques.",
-        "desarrollo_es": "Los técnicos calculan los costes de instalación, calibración, reactivos por prueba y mano de obra para la puesta en marcha asistencial (1375-3g). Analizan las fases del ciclo de vida del analizador considerando la huella de fabricación, consumo eléctrico continuo y reciclaje final de componentes electrónicos (1708-5g).",
-        "desarrollo_ca": "Els tècnics calculen els costos d'instal·lació, calibratge, reactius per prova i mà d'obra per a la posada en marxa assistencial (1375-3g). Analitzen les fases del cicle de vida de l'analitzador considerant la petjada de fabricació, consum elèctric continu i reciclatge final de components electrònics (1708-5g).",
-        "evidencia_es": "Cuadro de costes de puesta en marcha del analizador e informe técnico del análisis de ciclo de vida del equipo analítico.",
-        "evidencia_ca": "Quadre de costos de posada en marxa de l'analitzador i informe tècnic de l'anàlisi de cicle de vida de l'equip analític.",
-        "dua_es": "Hojas de cálculo de costes con autocomprobación asistida y esquema visual interactivo de las fases del ciclo de vida.",
-        "dua_ca": "Fulls de càlcul de costos amb autocomprovació assistida i esquema visual interactiu de les fases del cicle de vida.",
-        "metodologia_es": "evaluación económica y análisis de ciclo de vida instrumental.",
-        "metodologia_ca": "avaluació econòmica i anàlisi de cicle de vida instrumental."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1375",
-      "ra": "RA3",
-      "criterios": [
         "h"
+      ]
+    },
+    "justificacion_es": "Identificar las necesidades de financiación de un proyecto lleva a investigar opciones financieras socialmente responsables.",
+    "justificacion_ca": "Identificar les necessitats de finançament d'un projecte porta a investigar opcions financeres socialment responsables.",
+    "actividades": [
+      {
+        "titulo_es": "Financiar un laboratorio con banca ética y microcréditos",
+        "titulo_ca": "Finançar un laboratori amb banca ètica i microcrèdits",
+        "contexto_es": "El proyecto de laboratorio de un grupo necesita 60.000 euros para equipos y local.",
+        "contexto_ca": "El projecte de laboratori d'un grup necessita 60.000 euros per a equips i local.",
+        "desarrollo_es": "El grupo identifica las necesidades de financiación para la puesta en marcha (1375-2g). Investiga opciones socialmente responsables: banca ética, micromecenazgo, cooperativas de crédito y ayudas públicas (1710-5h).",
+        "desarrollo_ca": "El grup identifica les necessitats de finançament per a la posada en marxa (1375-2g). Investiga opcions socialment responsables: banca ètica, micromecenatge, cooperatives de crèdit i ajudes públiques (1710-5h).",
+        "evidencia_es": "Plan de financiación con alternativas comparadas.",
+        "evidencia_ca": "Pla de finançament amb alternatives comparades.",
+        "dua_es": "Tabla comparativa de opciones financieras.",
+        "dua_ca": "Taula comparativa d'opcions financeres.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "d"
       ]
     },
     "b": {
       "modulo": "1710",
       "ra": "RA4",
       "criterios": [
-        "g"
+        "c"
       ]
     },
-    "justificacion_es": "Elaborar la documentación operativa para la ejecución del proyecto se combina con la realización de entrevistas a usuarios para validar la propuesta.",
-    "justificacion_ca": "Elaborar la documentació operativa per a l'execució del projecte es combina amb la realització d'entrevistes a usuaris per validar la proposta.",
+    "justificacion_es": "Los objetivos de un proyecto de laboratorio y su modelo de negocio se definen juntos.",
+    "justificacion_ca": "Els objectius d'un projecte de laboratori i el seu model de negoci es defineixen junts.",
     "actividades": [
       {
-        "titulo_es": "Documentación de ejecución del proyecto asistencial y validación de necesidades mediante entrevistas a profesionales clínicos",
-        "titulo_ca": "Documentació d'execució del projecte assistencial i validació de necessitats mitjançant entrevistes a professionals clínics",
-        "contexto_es": "En el Hospital Comarcal de Inca se desarrolla un proyecto para agilizar la entrega de analíticas urgentes a los médicos de urgencias.",
-        "contexto_ca": "En el laboratori de l'Hospital Comarcal d'Inca es desenvolupa un projecte per agilitzar el lliurament d'analítiques urgents als metges d'urgències.",
-        "desarrollo_es": "El equipo redacta los protocolos de transporte, registros de recepción de muestras y fichas de trazabilidad para la ejecución del servicio (1375-3h). Realizan entrevistas estructuradas a médicos y enfermeros de urgencias validando sus dificultades habituales y adaptando la solución propuesta a sus necesidades reales (1710-4g).",
-        "desarrollo_ca": "L'equip redacta els protocols de transport, registres de recepció de mostres i fitxes de traçabilitat per a l'execució del servei (1375-3h). Realitzen entrevistes estructurades a metges i infermers d'urgències validant les seves dificultats habituals i adaptant la solució proposada a les seves necessitats reals (1710-4g).",
-        "evidencia_es": "Manual de procedimientos operativos de ejecución del proyecto e informe de validación de problema con transcripción de entrevistas clínicas.",
-        "evidencia_ca": "Manual de procediments operatius d'execució del projecte i informe de validació de problema amb transcripció d'entrevistes clíniques.",
-        "dua_es": "Protocolos operativos con apoyo visual de diagramas de flujo y cuestionario de entrevistas accesible en formularios digitales por voz.",
-        "dua_ca": "Protocols operatius amb suport visual de diagrames de flux i qüestionari d'entrevistes accessible en formularis digitals per veu.",
-        "metodologia_es": "gestión operativa de proyectos y entrevistas de validación ágil.",
-        "metodologia_ca": "gestió operativa de projectes i entrevistes de validació àgil."
+        "titulo_es": "Objetivos y modelo de negocio de un laboratorio de alergia",
+        "titulo_ca": "Objectius i model de negoci d'un laboratori d'al·lèrgia",
+        "contexto_es": "Un grupo plantea un pequeño laboratorio especializado en pruebas de alergia para clínicas privadas de Palma.",
+        "contexto_ca": "Un grup planteja un petit laboratori especialitzat en proves d'al·lèrgia per a clíniques privades de Palma.",
+        "desarrollo_es": "El alumnado establece los objetivos que pretende conseguir y su alcance (1375-2d). Diseña el modelo de negocio derivado: clientes, propuesta de valor, recursos y fuentes de ingresos (1710-4c).",
+        "desarrollo_ca": "L'alumnat estableix els objectius que pretén aconseguir i el seu abast (1375-2d). Dissenya el model de negoci derivat: clients, proposta de valor, recursos i fonts d'ingressos (1710-4c).",
+        "evidencia_es": "Objetivos SMART y lienzo de modelo de negocio.",
+        "evidencia_ca": "Objectius SMART i llenç de model de negoci.",
+        "dua_es": "Lienzo con preguntas guía.",
+        "dua_ca": "Llenç amb preguntes guia.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Planificar recursos y tiempos de un proyecto exige técnicas de gestión del tiempo para el equipo.",
+    "justificacion_ca": "Planificar recursos i temps d'un projecte exigeix tècniques de gestió del temps per a l'equip.",
+    "actividades": [
+      {
+        "titulo_es": "Cronograma del proyecto intermodular del grupo",
+        "titulo_ca": "Cronograma del projecte intermodular del grup",
+        "contexto_es": "El grupo de proyecto tiene doce semanas para terminar y cada miembro hace también las prácticas.",
+        "contexto_ca": "El grup de projecte té dotze setmanes per acabar i cada membre fa també les pràctiques.",
+        "desarrollo_es": "Los estudiantes planifican la asignación de recursos materiales y humanos y los tiempos de ejecución (1375-3f). Aplican técnicas de gestión del tiempo, como la matriz de Eisenhower y bloques semanales, para cumplir los objetivos individuales y del equipo (1710-2d).",
+        "desarrollo_ca": "Els estudiants planifiquen l'assignació de recursos materials i humans i els temps d'execució (1375-3f). Apliquen tècniques de gestió del temps, com la matriu d'Eisenhower i blocs setmanals, per complir els objectius individuals i de l'equip (1710-2d).",
+        "evidencia_es": "Cronograma del proyecto con responsables.",
+        "evidencia_ca": "Cronograma del projecte amb responsables.",
+        "dua_es": "Plantilla de cronograma compartida en la nube.",
+        "dua_ca": "Plantilla de cronograma compartida al núvol.",
+        "metodologia_es": "planificación cooperativa.",
+        "metodologia_ca": "planificació cooperativa."
       }
     ]
   },
@@ -863,63 +521,28 @@
       ]
     },
     "b": {
-      "modulo": "1708",
-      "ra": "RA5",
-      "criterios": [
-        "h",
-        "i"
-      ]
-    },
-    "justificacion_es": "Evaluar la satisfacción de pacientes y usuarios del laboratorio clínico se integra con el cumplimiento estricto de la normativa ambiental.",
-    "justificacion_ca": "Avaluar la satisfacció de pacients i usuaris del laboratori clínic s'integra amb el compliment estricte de la normativa ambiental.",
-    "actividades": [
-      {
-        "titulo_es": "Evaluación de la experiencia de personas usuarias en extracciones y cumplimiento de la normativa ambiental hospitalaria",
-        "titulo_ca": "Avaluació de l'experiència de persones usuàries en extraccions i compliment de la normativa ambiental hospitalària",
-        "contexto_es": "El servicio de extracciones y recepción del Hospital Mateu Orfila de Menorca audita la calidad percibida y su gestión de residuos.",
-        "contexto_ca": "El servei d'extraccions i recepció de l'Hospital Mateu Orfila de Menorca audita la qualitat percebuda i la seva gestió de residus.",
-        "desarrollo_es": "El alumnado diseña y aplica encuestas de calidad percibida, tiempo de espera y trato recibido para evaluar el servicio prestado a pacientes (1375-4f). Verifican el cumplimiento de las normativas de segregación de residuos biocontaminados y límites de vertidos químicos garantizando estándares ecológicos en la producción analítica (1708-5h, 1708-5i).",
-        "desarrollo_ca": "L'alumnat dissenya i aplica enquestes de qualitat percebuda, temps d'espera i tracte rebut per avaluar el servei prestat a pacients (1375-4f). Verifiquen el compliment de les normatives de segregació de residus biocontaminats i límits de vessaments químics garantint estàndards ecològics en la producció analítica (1708-5h, 1708-5i).",
-        "evidencia_es": "Informe de resultados de encuestas de satisfacción de pacientes y certificado de conformidad ambiental de la sección de extracciones.",
-        "evidencia_ca": "Informe de resultats d'enquestes de satisfacció de pacients i certificat de conformitat ambiental de la secció d'extraccions.",
-        "dua_es": "Cuestionario de satisfacción en lectura fácil con escalas de caritas sonrientes y resumen normativo ambiental en formato infográfico.",
-        "dua_ca": "Qüestionari de satisfacció en lectura fàcil amb escales de cares somrients i resum normatiu ambiental en format infogràfic.",
-        "metodologia_es": "evaluación de la calidad del servicio y auditoría ambiental.",
-        "metodologia_ca": "avaluació de la qualitat del servei i auditoria ambiental."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1375",
+      "modulo": "1710",
       "ra": "RA4",
       "criterios": [
         "g"
       ]
     },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA6",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Garantizar el cumplimiento del pliego técnico de condiciones permite incorporar acciones de reducción de huella ecológica según criterios ASG.",
-    "justificacion_ca": "Garantir el compliment del plec tècnic de condicions permet incorporar accions de reducció de petjada ecològica segons criteris ASG.",
+    "justificacion_es": "La participación de los usuarios en la evaluación del proyecto se parece a las entrevistas de problema del emprendimiento.",
+    "justificacion_ca": "La participació dels usuaris en l'avaluació del projecte s'assembla a les entrevistes de problema de l'emprenedoria.",
     "actividades": [
       {
-        "titulo_es": "Verificación del pliego de condiciones técnicas del laboratorio y acciones de minimización de impactos ASG",
-        "titulo_ca": "Verificació del plec de condicions tècniques del laboratori i accions de minimització d'impactes ASG",
-        "contexto_es": "La gerencia de compras de Son Espases audita la contrata de analizadores automáticos revisando cláusulas de sostenibilidad.",
-        "contexto_ca": "La gerència de compres de Son Espases audita la contracta d'analitzadors automàtics revisant clàusules de sostenibilitat.",
-        "desarrollo_es": "Los técnicos auditan el cumplimiento de especificaciones de rendimiento, tiempo entre averías y precisión exigidas en el pliego de condiciones (1375-4g). Definen acciones operativas para aprovechar oportunidades ASG reduciendo embalajes plásticos y exigiendo vehículos eléctricos de transporte a los proveedores hospitalarios (1708-6c).",
-        "desarrollo_ca": "Els tècnics auditen el compliment d'especificacions de rendiment, temps entre avaries i precisió exigides en el plec de condicions (1375-4g). Defineixen accions operatives per aprofitar oportunitats ASG reduint embalatges plàstics i exigint vehicles elèctrics de transport als proveïdors hospitalaris (1708-6c).",
-        "evidencia_es": "Acta de control de cumplimiento del pliego de condiciones y plan de acción de mejora ambiental y gobernanza ASG.",
-        "evidencia_ca": "Acta de control de compliment del plec de condicions i pla d'acció de millora ambiental i governança ASG.",
-        "dua_es": "Matriz de control de pliegos con códigos de color de cumplimiento y documento de acciones ASG estructurado en formato accesible.",
-        "dua_ca": "Matriu de control de plecs amb codis de color de compliment i document d'accions ASG estructurat en format accessible.",
-        "metodologia_es": "auditoría técnica de contratación y gestión de sostenibilidad ASG.",
-        "metodologia_ca": "auditoria tècnica de contractació i gestió de sostenibilitat ASG."
+        "titulo_es": "Preguntar a los pacientes por el punto de extracción",
+        "titulo_ca": "Demanar als pacients pel punt d'extracció",
+        "contexto_es": "El grupo ha diseñado un nuevo punto de extracción para un laboratorio de Inca y quiere saber qué opinan los pacientes.",
+        "contexto_ca": "El grup ha dissenyat un nou punt d'extracció per a un laboratori d'Inca i vol saber què en pensen els pacients.",
+        "desarrollo_es": "El alumnado establece cómo participarán los usuarios en la evaluación y elabora los documentos (1375-4f). Realiza entrevistas de problema a pacientes para validar sus necesidades: horarios, esperas y accesibilidad (1710-4g).",
+        "desarrollo_ca": "L'alumnat estableix com participaran els usuaris en l'avaluació i n'elabora els documents (1375-4f). Fa entrevistes de problema a pacients per validar-ne les necessitats: horaris, esperes i accessibilitat (1710-4g).",
+        "evidencia_es": "Guion de entrevistas y síntesis de resultados.",
+        "evidencia_ca": "Guió d'entrevistes i síntesi de resultats.",
+        "dua_es": "Guion con preguntas en lenguaje claro.",
+        "dua_ca": "Guió amb preguntes en llenguatge clar.",
+        "metodologia_es": "investigación con usuarios.",
+        "metodologia_ca": "recerca amb usuaris."
       }
     ]
   },
@@ -933,28 +556,267 @@
     },
     "b": {
       "modulo": "1710",
-      "ra": "RA4",
+      "ra": "RA2",
       "criterios": [
-        "h",
+        "b"
+      ]
+    },
+    "justificacion_es": "Evaluar las actividades de un proyecto es una tarea de equipo que exige decidir juntos y asumir responsabilidades.",
+    "justificacion_ca": "Avaluar les activitats d'un projecte és una tasca d'equip que exigeix decidir junts i assumir responsabilitats.",
+    "actividades": [
+      {
+        "titulo_es": "La reunión de evaluación a mitad del proyecto",
+        "titulo_ca": "La reunió d'avaluació a la meitat del projecte",
+        "contexto_es": "A mitad de curso el grupo de proyecto detecta retrasos y debe evaluar qué ha funcionado.",
+        "contexto_ca": "A la meitat del curs el grup de projecte detecta retards i ha d'avaluar què ha funcionat.",
+        "desarrollo_es": "Los estudiantes definen el procedimiento de evaluación de las actividades del proyecto (1375-4a). En la reunión participan en la toma de decisiones del equipo, asumen las decisiones del grupo y comparten el liderazgo (1710-2b).",
+        "desarrollo_ca": "Els estudiants defineixen el procediment d'avaluació de les activitats del projecte (1375-4a). A la reunió participen en la presa de decisions de l'equip, assumeixen les decisions del grup i comparteixen el lideratge (1710-2b).",
+        "evidencia_es": "Acta de la reunión con decisiones.",
+        "evidencia_ca": "Acta de la reunió amb decisions.",
+        "dua_es": "Plantilla de acta y roles rotativos.",
+        "dua_ca": "Plantilla d'acta i rols rotatius.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
         "i"
       ]
     },
-    "justificacion_es": "Definir sistemas de evaluación de intervenciones técnicas se complementa con el prototipado y comunicación comercial de la solución innovadora.",
-    "justificacion_ca": "Definir sistemes d'avaluació d'intervencions tècniques es complementa amb el prototipatge i comunicació comercial de la solució innovadora.",
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "El guion de un proyecto incluye a los agentes implicados y su participación.",
+    "justificacion_ca": "El guió d'un projecte inclou els agents implicats i la seva participació.",
     "actividades": [
       {
-        "titulo_es": "Evaluación de intervenciones del proyecto de laboratorio, prototipado de kits y técnica de presentación pitch",
-        "titulo_ca": "Avaluació d'intervencions del projecte de laboratori, prototipatge de kits i tècnica de presentació pitch",
-        "contexto_es": "En el vivero de proyectos de innovación de Baleares se presenta una propuesta para descentralizar analíticas de cribado.",
-        "contexto_ca": "En el viver de projectes d'innovació de Balears es presenta una proposta per descentralitzar analítiques de cribratge.",
-        "desarrollo_es": "El equipo define los procedimientos e instrumentos cuantitativos para evaluar la eficacia y seguridad de las actividades del proyecto (1375-4a). Validan la solución mediante el prototipado físico y funcional del kit portátil de detección y diseñan una presentación pitch convincente con técnicas de comunicación y venta (1710-4h, 1710-4i).",
-        "desarrollo_ca": "L'equip defineix els procediments i instruments quantitatius per avaluar l'eficàcia i seguretat de les activitats del projecte (1375-4a). Validen la solució mitjançant el prototipatge físic i funcional del kit portàtil de detecció i dissenyen una presentació pitch convincent amb tècniques de comunicació i venda (1710-4h, 1710-4i).",
-        "evidencia_es": "Rúbrica de evaluación de intervenciones del proyecto, maqueta o prototipo del kit de diagnóstico rápido y vídeo de presentación comercial en formato pitch.",
-        "evidencia_ca": "Rúbrica d'avaluació d'intervencions del projecte, maqueta o prototip del kit de diagnòstic ràpid i vídeo de presentació comercial en format pitch.",
-        "dua_es": "Rúbricas de evaluación con formatos contrastados, modelo tridimensional accesible del prototipo y guion de pitch con consejos en audio.",
-        "dua_ca": "Rúbriques d'avaluació amb formats contrastats, model tridimensional accessible del prototip i guió de pitch amb consells en àudio.",
-        "metodologia_es": "evaluación de proyectos, prototipado y técnicas de comunicación.",
-        "metodologia_ca": "avaluació de projectes, prototipatge i tècniques de comunicació."
+        "titulo_es": "Quién participa en un proyecto de cribado comunitario",
+        "titulo_ca": "Qui participa en un projecte de cribratge comunitari",
+        "contexto_es": "El grupo prepara un proyecto de cribado de diabetes en mercados municipales de Palma.",
+        "contexto_ca": "El grup prepara un projecte de cribratge de diabetis en mercats municipals de Palma.",
+        "desarrollo_es": "El alumnado elabora el guion de trabajo del proyecto (1375-1i) y define los agentes implicados y su participación: ayuntamiento, centros de salud, comerciantes y laboratorio (1710-5i).",
+        "desarrollo_ca": "L'alumnat elabora el guió de feina del projecte (1375-1i) i defineix els agents implicats i la seva participació: ajuntament, centres de salut, comerciants i laboratori (1710-5i).",
+        "evidencia_es": "Guion del proyecto con mapa de agentes.",
+        "evidencia_ca": "Guió del projecte amb mapa d'agents.",
+        "dua_es": "Mapa de agentes con iconos.",
+        "dua_ca": "Mapa d'agents amb icones.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "h"
+      ]
+    },
+    "justificacion_es": "La inversión socialmente responsable conecta la sostenibilidad empresarial con las opciones de financiación de un proyecto.",
+    "justificacion_ca": "La inversió socialment responsable connecta la sostenibilitat empresarial amb les opcions de finançament d'un projecte.",
+    "actividades": [
+      {
+        "titulo_es": "Inversores que miran la sostenibilidad de un laboratorio",
+        "titulo_ca": "Inversors que miren la sostenibilitat d'un laboratori",
+        "contexto_es": "Un fondo de inversión de impacto valora entrar en un laboratorio de análisis de Palma.",
+        "contexto_ca": "Un fons d'inversió d'impacte valora entrar en un laboratori d'anàlisis de Palma.",
+        "desarrollo_es": "El grupo describe la inversión socialmente responsable y el papel de analistas e índices de sostenibilidad (1708-1f). Investiga qué opciones financieras de este tipo podrían apoyar el proyecto y qué exigen a cambio (1710-5h).",
+        "desarrollo_ca": "El grup descriu la inversió socialment responsable i el paper d'analistes i índexs de sostenibilitat (1708-1f). Investiga quines opcions financeres d'aquest tipus podrien donar suport al projecte i què exigeixen a canvi (1710-5h).",
+        "evidencia_es": "Informe de opciones de inversión responsable.",
+        "evidencia_ca": "Informe d'opcions d'inversió responsable.",
+        "dua_es": "Glosario financiero con ejemplos.",
+        "dua_ca": "Glossari financer amb exemples.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1708",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "La economía circular y la economía del bien común ofrecen marcos complementarios para una idea emprendedora en el laboratorio.",
+    "justificacion_ca": "L'economia circular i l'economia del bé comú ofereixen marcs complementaris per a una idea emprenedora al laboratori.",
+    "actividades": [
+      {
+        "titulo_es": "Recoger y reacondicionar material de laboratorio entre centros",
+        "titulo_ca": "Recollir i recondicionar material de laboratori entre centres",
+        "contexto_es": "Varios institutos de Mallorca tiran material de laboratorio en buen estado mientras otros no tienen suficiente.",
+        "contexto_ca": "Diversos instituts de Mallorca llencen material de laboratori en bon estat mentre que altres no en tenen prou.",
+        "desarrollo_es": "Los estudiantes identifican los principios de la economía circular aplicables al material de laboratorio (1708-4b). Analizan cómo la economía circular y la del bien común contribuyen a un modelo equitativo y sostenible para su idea de intercambio (1710-4e).",
+        "desarrollo_ca": "Els estudiants identifiquen els principis de l'economia circular aplicables al material de laboratori (1708-4b). Analitzen com l'economia circular i la del bé comú contribueixen a un model equitatiu i sostenible per a la seva idea d'intercanvi (1710-4e).",
+        "evidencia_es": "Propuesta de red de intercambio.",
+        "evidencia_ca": "Proposta de xarxa d'intercanvi.",
+        "dua_es": "Esquema de flujos de material.",
+        "dua_ca": "Esquema de fluxos de material.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Analizar los aspectos materiales de sostenibilidad y elaborar un balance social son dos caras de una empresa responsable.",
+    "justificacion_ca": "Analitzar els aspectes materials de sostenibilitat i elaborar un balanç social són dues cares d'una empresa responsable.",
+    "actividades": [
+      {
+        "titulo_es": "El balance social de una cooperativa de técnicos de laboratorio",
+        "titulo_ca": "El balanç social d'una cooperativa de tècnics de laboratori",
+        "contexto_es": "Cinco técnicos de laboratorio quieren crear en Palma una cooperativa de análisis clínicos.",
+        "contexto_ca": "Cinc tècnics de laboratori volen crear a Palma una cooperativa d'anàlisis clíniques.",
+        "desarrollo_es": "El grupo analiza los aspectos ambientales, sociales y de gobernanza materiales para la cooperativa y las expectativas de sus grupos de interés (1708-6b). Incorpora valores éticos y sociales a la idea mediante un modelo de balance social (1710-4d).",
+        "desarrollo_ca": "El grup analitza els aspectes ambientals, socials i de governança materials per a la cooperativa i les expectatives dels seus grups d'interès (1708-6b). Incorpora valors ètics i socials a la idea mitjançant un model de balanç social (1710-4d).",
+        "evidencia_es": "Borrador de balance social.",
+        "evidencia_ca": "Esborrany de balanç social.",
+        "dua_es": "Ejemplo de balance social comentado.",
+        "dua_ca": "Exemple de balanç social comentat.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Las acciones sostenibles desde el puesto de trabajo se convierten en estrategia cuando la empresa las incorpora a sus objetivos.",
+    "justificacion_ca": "Les accions sostenibles des del lloc de feina es converteixen en estratègia quan l'empresa les incorpora als seus objectius.",
+    "actividades": [
+      {
+        "titulo_es": "De una buena idea del técnico a la estrategia del laboratorio",
+        "titulo_ca": "D'una bona idea del tècnic a l'estratègia del laboratori",
+        "contexto_es": "Las propuestas de ahorro de un técnico de Son Llàtzer acaban siendo parte del plan estratégico del laboratorio.",
+        "contexto_ca": "Les propostes d'estalvi d'un tècnic de Son Llàtzer acaben sent part del pla estratègic del laboratori.",
+        "desarrollo_es": "El alumnado identifica acciones que puede hacer desde su actividad para atender retos ambientales (1708-3c). Incorpora los objetivos de las políticas de sostenibilidad a la estrategia empresarial del laboratorio con metas, responsables y plazos (1710-3f).",
+        "desarrollo_ca": "L'alumnat identifica accions que pot fer des de la seva activitat per atendre reptes ambientals (1708-3c). Incorpora els objectius de les polítiques de sostenibilitat a l'estratègia empresarial del laboratori amb fites, responsables i terminis (1710-3f).",
+        "evidencia_es": "Propuesta estratégica con metas.",
+        "evidencia_ca": "Proposta estratègica amb fites.",
+        "dua_es": "Plantilla de objetivos estratégicos.",
+        "dua_ca": "Plantilla d'objectius estratègics.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1708",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "justificacion_es": "Un modelo de negocio ecosocial se apoya en alianzas y en metas de desarrollo sostenible desde su diseño.",
+    "justificacion_ca": "Un model de negoci ecosocial es recolza en aliances i en fites de desenvolupament sostenible des del disseny.",
+    "actividades": [
+      {
+        "titulo_es": "Una empresa de recogida de muestras en bicicleta por Palma",
+        "titulo_ca": "Una empresa de recollida de mostres en bicicleta per Palma",
+        "contexto_es": "Unos alumnos proponen recoger muestras de los centros de salud del centro de Palma con bicicletas eléctricas.",
+        "contexto_ca": "Uns alumnes proposen recollir mostres dels centres de salut del centre de Palma amb bicicletes elèctriques.",
+        "desarrollo_es": "El grupo analiza las alianzas necesarias: ayuntamiento, IB-Salut y empresas de reparto (1708-2e). Analiza los elementos del modelo de negocio ecosocial (1710-5e) y alinea las metas de desarrollo sostenible con su diseño (1710-5f).",
+        "desarrollo_ca": "El grup analitza les aliances necessàries: ajuntament, IB-Salut i empreses de repartiment (1708-2e). Analitza els elements del model de negoci ecosocial (1710-5e) i alinea les fites de desenvolupament sostenible amb el disseny (1710-5f).",
+        "evidencia_es": "Modelo de negocio ecosocial con alianzas.",
+        "evidencia_ca": "Model de negoci ecosocial amb aliances.",
+        "dua_es": "Lienzo ecosocial con ejemplos.",
+        "dua_ca": "Llenç ecosocial amb exemples.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Conocer la Agenda 2030 y los aspectos ASG de una empresa forma parte de una buena estrategia de búsqueda de empleo.",
+    "justificacion_ca": "Conèixer l'Agenda 2030 i els aspectes ASG d'una empresa forma part d'una bona estratègia de cerca de feina.",
+    "actividades": [
+      {
+        "titulo_es": "La pregunta sobre sostenibilidad en una entrevista de trabajo",
+        "titulo_ca": "La pregunta sobre sostenibilitat en una entrevista de feina",
+        "contexto_es": "En una entrevista para un laboratorio privado de Palma preguntan a una candidata qué sabe de sostenibilidad.",
+        "contexto_ca": "En una entrevista per a un laboratori privat de Palma demanen a una candidata què sap de sostenibilitat.",
+        "desarrollo_es": "El grupo describe el concepto de sostenibilidad y los marcos internacionales, como la Agenda 2030 (1708-1a). Analiza qué aspectos ASG importan a los grupos de interés del laboratorio (1708-1d) e incorpora ese conocimiento a su estrategia de búsqueda de empleo (1710-1b).",
+        "desarrollo_ca": "El grup descriu el concepte de sostenibilitat i els marcs internacionals, com l'Agenda 2030 (1708-1a). Analitza quins aspectes ASG importen als grups d'interès del laboratori (1708-1d) i incorpora aquest coneixement a la seva estratègia de cerca de feina (1710-1b).",
+        "evidencia_es": "Respuesta preparada y ficha de la empresa.",
+        "evidencia_ca": "Resposta preparada i fitxa de l'empresa.",
+        "dua_es": "Guion de respuesta con ejemplos.",
+        "dua_ca": "Guió de resposta amb exemples.",
+        "metodologia_es": "simulación de entrevista.",
+        "metodologia_ca": "simulació d'entrevista."
       }
     ]
   }

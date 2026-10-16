@@ -1,6 +1,6 @@
 # Mapas intermodulares pendientes
 
-Los ciclos de FP se incorporan sin mapa intermodular (AGENTS.md §8), que se añade después y bajo demanda. Esta lista recoge los **7 últimos ciclos incorporados** (tareas 208-219), que aún no tienen mapa, con una pestaña por curso.
+Los ciclos de FP se incorporan sin mapa intermodular (AGENTS.md §8), que se añade después y bajo demanda. Esta lista recoge los **7 últimos ciclos incorporados** (tareas 208-219), que se incorporaron sin mapa, con una pestaña por curso. **Todos tienen ya su mapa.**
 
 Cada mapa se hace con la herramienta `scripts/mapa-intermodular/mapa-intermodular.mts` (ver [procesamiento_actividades_mapa_intermodular.md](procesamiento_actividades_mapa_intermodular.md), sección 8). Para encargarlo a otro modelo, usa el prompt de [`scripts/mapa-intermodular/prompt.md`](../scripts/mapa-intermodular/prompt.md) con los datos de la fila.
 
@@ -22,17 +22,21 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | ✅ Hecho (tarea 226, Claude): 145 relaciones, 290 conexiones. El borrador de Gemini (tarea 224) se descartó por tener textos de plantilla |
 | CFGS Integración Social | 2.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL_2` | `mapa_cfgs_integracion_social_2.json` | 9 | 44 | 346 | 176 | ✅ Hecho (tarea 225, Claude): 165 relaciones, 330 conexiones |
 | CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | ✅ Hecho (tarea 239, Claude): 187 relaciones, 374 conexiones |
-| CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | En curso (tarea 238, Gemini): [prompt](../scripts/mapa-intermodular/prompt_cfgs_laboratorio_clinico_2.md) |
+| CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | ✅ Hecho (tarea 238, Claude): 174 relaciones, 348 conexiones. El borrador de Gemini se rehízo porque sus actividades unían dos tareas sin relación |
 
-Solo queda 1 pestaña, Laboratorio Clínico 2.º, con unas 176 relaciones. Está en curso con Gemini (tarea 238).
+No queda ninguna pestaña pendiente: las 13 de la lista están hechas.
 
-## Orden sugerido
+## Orden seguido
 
-1. **CFGS Laboratorio Clínico y Biomédico 2.º** (44 RA): en curso con Gemini (tarea 238); el 1.º ya está hecho (tarea 239). Al fusionarlo hay que añadir el 2.º a la entrada `mapas` del ciclo.
+Los ciclos de dos cursos se hicieron con los dos cursos seguidos siempre que se pudo, para que el selector del mapa mostrara los dos desde el principio. Los últimos fueron Laboratorio Clínico (tareas 239 y 238) y Guía en el Medio Natural (tareas 240 y 241).
 
-Guía en el Medio Natural ya tiene los dos cursos (tareas 240 y 241).
+## Lecciones de los mapas encargados a otros modelos
 
-Al empezar un ciclo de dos cursos, conviene hacer los dos seguidos: así el selector del mapa muestra los dos cursos desde el principio.
+- Gemini hizo bien los mapas de Acondicionamiento Físico 2.º (tarea 227) y Animación Sociodeportiva 2.º (tarea 235).
+- Dos borradores se descartaron por la calidad de las actividades, aunque pasaban el validador:
+  - Integración Social, tarea 224: textos de plantilla.
+  - Laboratorio Clínico 2.º, tarea 238: 162 de 176 títulos eran «X y Y» y unían dos tareas sin relación, una por módulo.
+- El validador comprueba la forma, pero no si los dos lados de la relación son una misma tarea. Por eso, antes de fusionar un mapa ajeno, hay que leer una muestra de actividades.
 
 ## Notas
 

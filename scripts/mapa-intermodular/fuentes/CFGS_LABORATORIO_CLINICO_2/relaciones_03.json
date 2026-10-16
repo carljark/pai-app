@@ -1,8 +1,250 @@
 [
   {
     "a": {
-      "modulo": "1371",
-      "ra": "RA8",
+      "modulo": "1372",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA5",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "justificacion_es": "El síndrome antifosfolípido se estudia a la vez con autoanticuerpos y con pruebas de coagulación que detectan el anticoagulante lúpico.",
+    "justificacion_ca": "La síndrome antifosfolipídica s'estudia alhora amb autoanticossos i amb proves de coagulació que detecten l'anticoagulant lúpic.",
+    "actividades": [
+      {
+        "titulo_es": "Dos abortos y una trombosis en una mujer joven de Palma",
+        "titulo_ca": "Dos avortaments i una trombosi en una dona jove de Palma",
+        "contexto_es": "Una mujer de 32 años de Palma con dos abortos de repetición y una trombosis venosa reciente es remitida a hematología.",
+        "contexto_ca": "Una dona de 32 anys de Palma amb dos avortaments de repetició i una trombosi venosa recent és remesa a hematologia.",
+        "desarrollo_es": "En el laboratorio de hemostasia se eligen las pruebas que valoran cada fase de la coagulación: TTPa sensible y veneno de víbora de Russell diluido (1374-5b). El TTPa alargado que no corrige con plasma normal se relaciona con un anticoagulante lúpico (1374-5f). En inmunología se comprueban los controles de la anticardiolipina y la anti-beta2-glicoproteína antes de dar el resultado (1372-3f).",
+        "desarrollo_ca": "Al laboratori d'hemostàsia es trien les proves que valoren cada fase de la coagulació: TTPa sensible i verí d'escurçó de Russell diluït (1374-5b). El TTPa allargat que no corregeix amb plasma normal es relaciona amb un anticoagulant lúpic (1374-5f). A immunologia es comproven els controls de l'anticardiolipina i l'anti-beta2-glicoproteïna abans de donar el resultat (1372-3f).",
+        "evidencia_es": "Informe integrado de coagulación y autoanticuerpos.",
+        "evidencia_ca": "Informe integrat de coagulació i autoanticossos.",
+        "dua_es": "Esquema de la cascada de coagulación con las pruebas superpuestas.",
+        "dua_ca": "Esquema de la cascada de coagulació amb les proves superposades.",
+        "metodologia_es": "estudio de caso interdisciplinar.",
+        "metodologia_ca": "estudi de cas interdisciplinari."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1372",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA3",
+      "criterios": [
+        "g"
+      ]
+    },
+    "justificacion_es": "La ferritina, medida por inmunoensayo con su curva de calibración, es el dato que completa el informe de una anemia microcítica.",
+    "justificacion_ca": "La ferritina, mesurada per immunoassaig amb la seva corba de calibratge, és la dada que completa l'informe d'una anèmia microcítica.",
+    "actividades": [
+      {
+        "titulo_es": "La ferritina que cierra el informe de una anemia en el embarazo",
+        "titulo_ca": "La ferritina que tanca l'informe d'una anèmia a l'embaràs",
+        "contexto_es": "La matrona de Llucmajor pide completar el estudio de una gestante con hemoglobina de 9,8 g/dL y microcitosis.",
+        "contexto_ca": "La llevadora de Llucmajor demana completar l'estudi d'una gestant amb hemoglobina de 9,8 g/dL i microcitosi.",
+        "desarrollo_es": "Los técnicos representan la curva de calibración de la ferritina y comprueban que la muestra cae dentro del intervalo sin necesidad de dilución (1372-2h). Con el valor obtenido redactan el informe de la serie roja: hemoglobina, índices y ferritina baja que confirma la ferropenia (1374-3g).",
+        "desarrollo_ca": "Els tècnics representen la corba de calibratge de la ferritina i comproven que la mostra cau dins l'interval sense necessitat de dilució (1372-2h). Amb el valor obtingut redacten l'informe de la sèrie vermella: hemoglobina, índexs i ferritina baixa que confirma la ferropènia (1374-3g).",
+        "evidencia_es": "Curva de calibración comentada e informe de anemia.",
+        "evidencia_ca": "Corba de calibratge comentada i informe d'anèmia.",
+        "dua_es": "Plantilla de informe con ejemplo resuelto y glosario.",
+        "dua_ca": "Plantilla d'informe amb exemple resolt i glossari.",
+        "metodologia_es": "práctica de laboratorio con informe.",
+        "metodologia_ca": "pràctica de laboratori amb informe."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1372",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Una eosinofilia en el hemograma orienta hacia alergia o parasitosis, y la IgE total y específica ayudan a distinguirlas.",
+    "justificacion_ca": "Una eosinofília a l'hemograma orienta cap a al·lèrgia o parasitosi, i la IgE total i específica ajuden a distingir-les.",
+    "actividades": [
+      {
+        "titulo_es": "Un 18 % de eosinófilos en un niño con asma de Eivissa",
+        "titulo_ca": "Un 18 % d'eosinòfils en un nin amb asma d'Eivissa",
+        "contexto_es": "Un niño de Eivissa con asma mal controlada presenta un 18 % de eosinófilos en el hemograma de rutina.",
+        "contexto_ca": "Un nin d'Eivissa amb asma mal controlada presenta un 18 % d'eosinòfils a l'hemograma de rutina.",
+        "desarrollo_es": "El alumnado describe la morfología de los eosinófilos en la extensión y sus gránulos anaranjados (1374-4d). A partir de ese hallazgo revisa las técnicas de diagnóstico de la hipersensibilidad inmediata (1372-4a) y elige, según el equipo disponible, cómo medir IgE total y específica frente a ácaros (1372-4d).",
+        "desarrollo_ca": "L'alumnat descriu la morfologia dels eosinòfils a l'extensió i els seus grànuls ataronjats (1374-4d). A partir d'aquesta troballa revisa les tècniques de diagnòstic de la hipersensibilitat immediata (1372-4a) i tria, segons l'equip disponible, com mesurar la IgE total i específica contra àcars (1372-4d).",
+        "evidencia_es": "Fórmula leucocitaria revisada y propuesta de estudio alérgico.",
+        "evidencia_ca": "Fórmula leucocitària revisada i proposta d'estudi al·lèrgic.",
+        "dua_es": "Fichas de leucocitos con fotografía y descripción breve.",
+        "dua_ca": "Fitxes de leucòcits amb fotografia i descripció breu.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
+      "ra": "RA6",
+      "criterios": [
+        "g",
+        "h",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "El diagnóstico de la malaria se hace con extensiones de sangre teñidas, la técnica hematológica básica aplicada a la parasitología.",
+    "justificacion_ca": "El diagnòstic de la malària es fa amb extensions de sang tenyides, la tècnica hematològica bàsica aplicada a la parasitologia.",
+    "actividades": [
+      {
+        "titulo_es": "Fiebre alta tras volver de Guinea Ecuatorial",
+        "titulo_ca": "Febre alta després de tornar de Guinea Equatorial",
+        "contexto_es": "Un hombre de Palma que visitó a su familia en Guinea Ecuatorial llega a urgencias con fiebre de 40 grados y escalofríos.",
+        "contexto_ca": "Un home de Palma que va visitar la família a Guinea Equatorial arriba a urgències amb febre de 40 graus i calfreds.",
+        "desarrollo_es": "Los estudiantes preparan una gota gruesa y una extensión fina a mano (1374-1b) siguiendo el protocolo de tinción con Giemsa para parásitos sanguíneos (1373-6g). Identifican trofozoítos en anillo de Plasmodium falciparum (1373-6h) y descartan artefactos como plaquetas superpuestas a los hematíes o precipitados del colorante (1373-6i).",
+        "desarrollo_ca": "Els estudiants preparen una gota grossa i una extensió fina a mà (1374-1b) seguint el protocol de tinció amb Giemsa per a paràsits sanguinis (1373-6g). Identifiquen trofozoïts en anell de Plasmodium falciparum (1373-6h) i descarten artefactes com plaquetes superposades a les hematies o precipitats del colorant (1373-6i).",
+        "evidencia_es": "Preparaciones teñidas y cálculo de la parasitemia.",
+        "evidencia_ca": "Preparacions tenyides i càlcul de la parasitèmia.",
+        "dua_es": "Atlas de formas de Plasmodium y de artefactos frecuentes.",
+        "dua_ca": "Atles de formes de Plasmodium i d'artefactes freqüents.",
+        "metodologia_es": "práctica de microscopía.",
+        "metodologia_ca": "pràctica de microscòpia."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Al clasificar las células de una extensión de sangre el técnico puede encontrar bacterias, un hallazgo que obliga a aplicar criterios de microscopía microbiológica.",
+    "justificacion_ca": "En classificar les cèl·lules d'una extensió de sang el tècnic pot trobar bacteris, una troballa que obliga a aplicar criteris de microscòpia microbiològica.",
+    "actividades": [
+      {
+        "titulo_es": "Diplococos dentro de los neutrófilos de un paciente sin bazo",
+        "titulo_ca": "Diplococs dins els neutròfils d'un pacient sense melsa",
+        "contexto_es": "Un hombre esplenectomizado tras un accidente de moto llega en shock séptico al Hospital de Manacor.",
+        "contexto_ca": "Un home esplenectomitzat després d'un accident de moto arriba en xoc sèptic a l'Hospital de Manacor.",
+        "desarrollo_es": "Durante la fórmula manual el técnico clasifica neutrófilos, linfocitos y monocitos (1374-1e) y detecta diplococos dentro de algunos neutrófilos. Observa la extensión con objetivo de inmersión, describe la forma y la agrupación de las bacterias y avisa enseguida al laboratorio de microbiología (1373-2f).",
+        "desarrollo_ca": "Durant la fórmula manual el tècnic classifica neutròfils, limfòcits i monòcits (1374-1e) i detecta diplococs dins alguns neutròfils. Observa l'extensió amb objectiu d'immersió, descriu la forma i l'agrupació dels bacteris i avisa de seguida el laboratori de microbiologia (1373-2f).",
+        "evidencia_es": "Registro del hallazgo crítico con imagen y hora del aviso.",
+        "evidencia_ca": "Registre de la troballa crítica amb imatge i hora de l'avís.",
+        "dua_es": "Imágenes de bacterias intracelulares con zoom progresivo.",
+        "dua_ca": "Imatges de bacteris intracel·lulars amb zoom progressiu.",
+        "metodologia_es": "análisis de hallazgos críticos.",
+        "metodologia_ca": "anàlisi de troballes crítiques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
+      "ra": "RA7",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "En la mononucleosis el hemograma muestra linfocitos activados y el protocolo vírico confirma el virus de Epstein-Barr.",
+    "justificacion_ca": "En la mononucleosi l'hemograma mostra limfòcits activats i el protocol víric confirma el virus d'Epstein-Barr.",
+    "actividades": [
+      {
+        "titulo_es": "Linfocitos grandes en una estudiante con fiebre y anginas",
+        "titulo_ca": "Limfòcits grossos en una estudiant amb febre i angines",
+        "contexto_es": "Una estudiante de bachillerato de Maó tiene fiebre, anginas con placas y ganglios grandes desde hace una semana.",
+        "contexto_ca": "Una estudiant de batxillerat de Maó té febre, angines amb plaques i ganglis grossos des de fa una setmana.",
+        "desarrollo_es": "En la extensión el alumnado reconoce linfocitos activados de citoplasma amplio y basófilo y los distingue de las células precursoras de la serie mononuclear, que harían pensar en otra patología (1374-4b). Define el protocolo de laboratorio para la mononucleosis: anticuerpos heterófilos y, si son negativos, IgM frente a la cápside del VEB (1373-7c).",
+        "desarrollo_ca": "A l'extensió l'alumnat reconeix limfòcits activats de citoplasma ampli i basòfil i els distingeix de les cèl·lules precursores de la sèrie mononuclear, que farien pensar en una altra patologia (1374-4b). Defineix el protocol de laboratori per a la mononucleosi: anticossos heteròfils i, si són negatius, IgM contra la càpside del VEB (1373-7c).",
+        "evidencia_es": "Fórmula comentada y protocolo diagnóstico de la mononucleosis.",
+        "evidencia_ca": "Fórmula comentada i protocol diagnòstic de la mononucleosi.",
+        "dua_es": "Comparativa visual de linfocitos normales, activados y blastos.",
+        "dua_ca": "Comparativa visual de limfòcits normals, activats i blasts.",
+        "metodologia_es": "aprendizaje por casos.",
+        "metodologia_ca": "aprenentatge per casos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA7",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Los concentrados de plaquetas se conservan a temperatura ambiente y se controlan con cultivo bacteriano antes de liberarlos.",
+    "justificacion_ca": "Els concentrats de plaquetes es conserven a temperatura ambient i es controlen amb cultiu bacterià abans d'alliberar-los.",
+    "actividades": [
+      {
+        "titulo_es": "El cultivo que decide si un pool de plaquetas puede salir",
+        "titulo_ca": "El cultiu que decideix si un pool de plaquetes pot sortir",
+        "contexto_es": "El Banc de Sang i Teixits de les Illes Balears cultiva todos los pools de plaquetas antes de distribuirlos a los hospitales.",
+        "contexto_ca": "El Banc de Sang i Teixits de les Illes Balears cultiva tots els pools de plaquetes abans de distribuir-los als hospitals.",
+        "desarrollo_es": "Los alumnos etiquetan, registran y guardan los pools en agitación a 22 grados (1374-7e). Toman la muestra de control, la inoculan en frascos aerobio y anaerobio y, si hay positivo, siembran el contenido para aislar unidades formadoras de colonias (1373-4d).",
+        "desarrollo_ca": "Els alumnes etiqueten, registren i guarden els pools en agitació a 22 graus (1374-7e). Prenen la mostra de control, la inoculen en flascons aerobi i anaerobi i, si hi ha positiu, en sembren el contingut per aïllar unitats formadores de colònies (1373-4d).",
+        "evidencia_es": "Registro de trazabilidad del pool y del cultivo.",
+        "evidencia_ca": "Registre de traçabilitat del pool i del cultiu.",
+        "dua_es": "Diagrama de trazabilidad con códigos de barras simulados.",
+        "dua_ca": "Diagrama de traçabilitat amb codis de barres simulats.",
+        "metodologia_es": "simulación de procesos.",
+        "metodologia_ca": "simulació de processos."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
+      "ra": "RA7",
       "criterios": [
         "e"
       ]
@@ -14,1010 +256,787 @@
         "b"
       ]
     },
-    "justificacion_es": "Monitorizar concentraciones de fármacos inmunosupresores en sangre total se coordina con los protocolos de extracción y preparación de hemoderivados.",
-    "justificacion_ca": "Monitorar concentracions de fàrmacs immunosupressors en sang total es coordina amb els protocols d'extracció i preparació d'hemoderivats.",
+    "justificacion_es": "Cada donación se procesa y se estudia con técnicas moleculares de cribado vírico antes de obtener sus componentes.",
+    "justificacion_ca": "Cada donació es processa i s'estudia amb tècniques moleculars de cribratge víric abans d'obtenir-ne els components.",
     "actividades": [
       {
-        "titulo_es": "Monitorización farmacocinética de tacrolimus y procesado aséptico de bolsas de sangre total",
-        "titulo_ca": "Monitoratge farmacocinètic de tacrolimus i processament asèptic de bosses de sang total",
-        "contexto_es": "El servicio de trasplante de órganos de Son Espases vigila las concentraciones terapéuticas en receptores de injerto renal.",
-        "contexto_ca": "El servei de trasplantament d'òrgans de Son Espases vigila les concentracions terapèutiques en receptors d'empelt renal.",
-        "desarrollo_es": "El grupo de estudiantes determina los niveles de tacrolimus mediante enzimoinmunoanálisis de micropartículas quimioluminiscentes en sangre total con EDTA (1371-8e). A la par, caracterizan el circuito de extracción de donantes con anticoagulante CPD y el sellado dieléctrico de tubuladuras en banco de sangre (1374-7b).",
-        "desarrollo_ca": "El grup d'estudiants determina els nivells de tacrolimus mitjançant immunoassaig enzimàtic de micropartícules quimioluminescents en sang total amb EDTA (1371-8e). Alhora, caracteritzen el circuit d'extracció de donants amb anticoagulant CPD i el segellament dielèctric de tubuladures en banc de sang (1374-7b).",
-        "evidencia_es": "Curva farmacocinética con concentración en valle e informe técnico de control de peso y temperatura de unidades extraídas.",
-        "evidencia_ca": "Corba farmacocinètica amb concentració en vall i informe tècnic de control de pes i temperatura d'unitats extretes.",
-        "dua_es": "Guías visuales con rango terapéutico diferenciado en colores e instrucciones de sellado en soporte de audio y vídeo.",
-        "dua_ca": "Guies visuals amb rang terapèutic diferenciat en colors i instruccions de segellament en suport d'àudio i vídeo.",
-        "metodologia_es": "análisis farmacoterapéutico e inmunohematología técnica.",
-        "metodologia_ca": "anàlisi farmacoterapèutic i immunohematologia tècnica."
+        "titulo_es": "Del sillón de donación al cribado molecular en una mañana",
+        "titulo_ca": "De la butaca de donació al cribratge molecular en un matí",
+        "contexto_es": "La unidad móvil del Banc de Sang ha recogido 120 donaciones en Inca y las bolsas llegan a Palma a mediodía.",
+        "contexto_ca": "La unitat mòbil del Banc de Sang ha recollit 120 donacions a Inca i les bosses arriben a Palma a migdia.",
+        "desarrollo_es": "El grupo describe cómo se obtienen y procesan las unidades: tubos piloto, pesado y tiempo máximo hasta el fraccionamiento (1374-7b). Explica cómo se preparan las muestras de los tubos piloto en pools para la amplificación de ácidos nucleicos frente a VIH, VHB y VHC (1373-7e).",
+        "desarrollo_ca": "El grup descriu com s'obtenen i es processen les unitats: tubs pilot, pesatge i temps màxim fins al fraccionament (1374-7b). Explica com es preparen les mostres dels tubs pilot en pools per a l'amplificació d'àcids nucleics contra VIH, VHB i VHC (1373-7e).",
+        "evidencia_es": "Diagrama del circuito de la donación con tiempos.",
+        "evidencia_ca": "Diagrama del circuit de la donació amb temps.",
+        "dua_es": "Infografía del recorrido de una bolsa de sangre.",
+        "dua_ca": "Infografia del recorregut d'una bossa de sang.",
+        "metodologia_es": "estudio de procesos.",
+        "metodologia_ca": "estudi de processos."
       }
     ]
   },
   {
     "a": {
-      "modulo": "1371",
-      "ra": "RA8",
+      "modulo": "1373",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "i"
+      ]
+    },
+    "justificacion_es": "La leishmaniasis visceral produce pancitopenia y se diagnostica viendo amastigotes en el aspirado de médula ósea: hematología y parasitología en una misma preparación.",
+    "justificacion_ca": "La leishmaniosi visceral produeix pancitopènia i es diagnostica veient amastigots a l'aspirat de medul·la òssia: hematologia i parasitologia en una mateixa preparació.",
+    "actividades": [
+      {
+        "titulo_es": "Pancitopenia y bazo enorme en un niño de Manacor",
+        "titulo_ca": "Pancitopènia i melsa enorme en un nin de Manacor",
+        "contexto_es": "Un niño de dos años de Manacor, con un perro con leishmaniasis en casa, tiene fiebre de semanas, bazo enorme y pancitopenia.",
+        "contexto_ca": "Un nin de dos anys de Manacor, amb un ca amb leishmaniosi a casa, té febre de setmanes, melsa enorme i pancitopènia.",
+        "desarrollo_es": "Los estudiantes repasan la granulopoyesis y la trombopoyesis para entender por qué la invasión medular baja todas las series (1374-4a). Aplican el protocolo de identificación de Leishmania (1373-6a) y localizan amastigotes dentro de los macrófagos del aspirado (1373-6h). Anotan el hallazgo y la pancitopenia en el informe (1374-4i).",
+        "desarrollo_ca": "Els estudiants repassen la granulopoesi i la trombopoesi per entendre per què la invasió medul·lar fa baixar totes les sèries (1374-4a). Apliquen el protocol d'identificació de Leishmania (1373-6a) i localitzen amastigots dins els macròfags de l'aspirat (1373-6h). Anoten la troballa i la pancitopènia a l'informe (1374-4i).",
+        "evidencia_es": "Informe de médula con imagen de amastigotes.",
+        "evidencia_ca": "Informe de medul·la amb imatge d'amastigots.",
+        "dua_es": "Esquema de la médula ósea con las series y fotos de amastigotes.",
+        "dua_ca": "Esquema de la medul·la òssia amb les sèries i fotos d'amastigots.",
+        "metodologia_es": "estudio de caso de una zoonosis local.",
+        "metodologia_ca": "estudi de cas d'una zoonosi local."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA1",
       "criterios": [
         "f"
       ]
     },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA5",
-      "criterios": [
-        "d"
-      ]
-    },
-    "justificacion_es": "Realizar cribados toxicológicos de drogas de abuso se vincula con la evaluación del impacto ambiental derivado del uso de reactivos y solventes.",
-    "justificacion_ca": "Realitzar cribratges toxicològics de drogues d'abús es vincula amb l'avaluació de l'impacte ambiental derivat de l'ús de reactius i solvents.",
+    "justificacion_es": "Preparar una extensión de sangre de un caso importado con fiebre exige valorar el peligro del procedimiento y aplicar las normas de seguridad hematológicas.",
+    "justificacion_ca": "Preparar una extensió de sang d'un cas importat amb febre exigeix valorar el perill del procediment i aplicar les normes de seguretat hematològiques.",
     "actividades": [
       {
-        "titulo_es": "Cribado toxicológico de drogas en orina y evaluación del impacto ecológico de reactivos químicos",
-        "titulo_ca": "Cribratge toxicològic de drogues en orina i avaluació de l'impacte ecològic de reactius químics",
-        "contexto_es": "En el laboratorio de urgencias del Hospital Can Misses de Ibiza se analizan orinas para screening toxicológico tras intoxicaciones agudas.",
-        "contexto_ca": "En el laboratori d'urgències de l'Hospital Can Misses d'Eivissa s'analitzen orines per a cribratge toxicològic després d'intoxicacions agudes.",
-        "desarrollo_es": "Los técnicos ejecutan pruebas rápidas de inmunoensayo en casete y confirmación fotométrica para cannabis, cocaína y opiáceos (1371-8f). Calculan la huella ambiental del consumo de metanol y disolventes de elución proponiendo medidas individuales y colectivas de reducción de sustancias peligrosas (1708-5d).",
-        "desarrollo_ca": "Els tècnics executen proves ràpides d'immunoassaig en casset i confirmació fotomètrica per a cànnabis, cocaïna i opiàcis (1371-8f). Calculen la petjada ambiental del consum de metanol i dissolvents d'elució proposant mesures individuals i col·lectives de reducció de substàncies perilloses (1708-5d).",
-        "evidencia_es": "Panel de resultados toxicológicos con puntos de corte y matriz de evaluación del impacto de reactivos químicos en el laboratorio.",
-        "evidencia_ca": "Panell de resultats toxicològics amb punts de tall i matriu d'avaluació de l'impacte de reactius químics al laboratori.",
-        "dua_es": "Dispositivos de lectura con líneas reactivas de alto contraste e infografía digital sobre gestión de efluentes toxicológicos.",
-        "dua_ca": "Dispositius de lectura amb línies reactives d'alt contrast i infografia digital sobre gestió d'efluents toxicològics.",
-        "metodologia_es": "toxicología clínica y sostenibilidad ambiental.",
-        "metodologia_ca": "toxicologia clínica i sostenibilitat ambiental."
+        "titulo_es": "Una extensión urgente de un viajero con fiebre hemorrágica sospechosa",
+        "titulo_ca": "Una extensió urgent d'un viatger amb febre hemorràgica sospitosa",
+        "contexto_es": "Un viajero procedente de África occidental llega a urgencias con fiebre y sangrado de encías; el clínico pide hemograma y extensión.",
+        "contexto_ca": "Un viatger procedent de l'Àfrica occidental arriba a urgències amb febre i sagnat de genives; el clínic demana hemograma i extensió.",
+        "desarrollo_es": "El equipo identifica que destapar el tubo y hacer la extensión es el paso más peligroso del procedimiento si se sospecha un virus de grupo 4 (1373-1c). Aplica las normas de seguridad: avisa al responsable, trabaja en cabina, usa doble guante y protección ocular y fija la extensión antes de sacarla (1374-1f).",
+        "desarrollo_ca": "L'equip identifica que destapar el tub i fer l'extensió és el pas més perillós del procediment si se sospita un virus de grup 4 (1373-1c). Aplica les normes de seguretat: avisa el responsable, treballa en cabina, fa servir doble guant i protecció ocular i fixa l'extensió abans de treure-la (1374-1f).",
+        "evidencia_es": "Procedimiento de actuación para muestras de alto riesgo.",
+        "evidencia_ca": "Procediment d'actuació per a mostres d'alt risc.",
+        "dua_es": "Diagrama de decisión con colores de peligrosidad.",
+        "dua_ca": "Diagrama de decisió amb colors de perillositat.",
+        "metodologia_es": "simulación de protocolo.",
+        "metodologia_ca": "simulació de protocol."
       }
     ]
   },
   {
     "a": {
-      "modulo": "1371",
-      "ra": "RA8",
+      "modulo": "1373",
+      "ra": "RA1",
       "criterios": [
-        "g"
+        "d"
       ]
     },
     "b": {
-      "modulo": "1710",
+      "modulo": "1374",
+      "ra": "RA5",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "Los pinchazos y cortes al manipular tubos de coagulación son accidentes frecuentes del laboratorio que se previenen con normas y se resuelven con un protocolo.",
+    "justificacion_ca": "Les punxades i els talls en manipular tubs de coagulació són accidents freqüents del laboratori que es prevenen amb normes i es resolen amb un protocol.",
+    "actividades": [
+      {
+        "titulo_es": "Un corte al destapar un tubo de citrato roto",
+        "titulo_ca": "Un tall en destapar un tub de citrat romput",
+        "contexto_es": "Un técnico del laboratorio de coagulación de Son Llàtzer se corta con un tubo de citrato que se había roto en la centrífuga.",
+        "contexto_ca": "Un tècnic del laboratori de coagulació de Son Llàtzer es talla amb un tub de citrat que s'havia romput a la centrífuga.",
+        "desarrollo_es": "El alumnado propone soluciones a este tipo de accidente: tubos de plástico, centrífugas con tapa de seguridad y pinzas para retirar restos (1373-1d). Revisa cómo se trabaja con seguridad en el laboratorio de coagulación, desde la apertura de tubos hasta la notificación del accidente (1374-5i).",
+        "desarrollo_ca": "L'alumnat proposa solucions per a aquest tipus d'accident: tubs de plàstic, centrífugues amb tapa de seguretat i pinces per retirar restes (1373-1d). Revisa com es treballa amb seguretat al laboratori de coagulació, des de l'obertura de tubs fins a la notificació de l'accident (1374-5i).",
+        "evidencia_es": "Informe de accidente con medidas correctoras.",
+        "evidencia_ca": "Informe d'accident amb mesures correctores.",
+        "dua_es": "Pasos de actuación ante un corte en formato de cartel.",
+        "dua_ca": "Passos d'actuació davant un tall en format de cartell.",
+        "metodologia_es": "análisis de incidentes.",
+        "metodologia_ca": "anàlisi d'incidents reals."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1373",
       "ra": "RA2",
       "criterios": [
         "a"
       ]
     },
-    "justificacion_es": "Interpretar los marcadores bioquímicos de control gestacional favorece el desarrollo de habilidades de comunicación y empatía profesional.",
-    "justificacion_ca": "Interpretar els marcadors bioquímics de control gestacional afavoreix el desenvolupament d'habilitats de comunicació i empatia professional.",
-    "actividades": [
-      {
-        "titulo_es": "Marcadores bioquímicos de primer trimestre y competencias comunicativas en asesoramiento prenatal",
-        "titulo_ca": "Marcadors bioquímics de primer trimestre i competències comunicatives en assessorament prenatal",
-        "contexto_es": "La sección de cribado gestacional de Son Espases centraliza analíticas de gestantes de los centros de salud de Baleares.",
-        "contexto_ca": "La secció de cribratge gestacional de Son Espases centralitza analítiques de gestants dels centres de salut de Balears.",
-        "desarrollo_es": "El alumnado procesa las determinaciones de PAPP-A y beta-hCG libre calculando los múltiplos de la mediana ajustados por edad gestacional y peso (1371-8g). Valora la relevancia de la escucha activa, empatía y confidencialidad como competencias personales determinantes para la inserción y el desarrollo profesional en sanidad (1710-2a).",
-        "desarrollo_ca": "L'alumnat processa les determinacions de PAPP-A i beta-hCG lliure calculant els múltiples de la mediana ajustats per edat gestacional i pes (1371-8g). Valora la rellevància de l'escolta activa, empatia i confidencialitat com a competències personals determinants per a la inserció i el desenvolupament professional en sanitat (1710-2a).",
-        "evidencia_es": "Cálculo de riesgo integrado prenatal e informe de autoevaluación de competencias sociales en el entorno hospitalario.",
-        "evidencia_ca": "Càlcul de risc integrat prenatal i informe d'autoavaluació de competències socials en l'entorn hospitalari.",
-        "dua_es": "Simulador de cálculo de riesgo con explicaciones auditivas y rúbricas de competencias blandas en lectura accesible.",
-        "dua_ca": "Simulador de càlcul de risc amb explicacions auditives i rúbriques de competències toves en lectura accessible.",
-        "metodologia_es": "aprendizaje experiencial y desarrollo de competencias profesionales.",
-        "metodologia_ca": "aprenentatge experiencial i desenvolupament de competències professionals."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1371",
-      "ra": "RA8",
-      "criterios": [
-        "h"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA4",
-      "criterios": [
-        "e"
-      ]
-    },
-    "justificacion_es": "Conocer el panel de metabolopatías congénitas inspira proyectos basados en los principios de equidad del bien común y economía circular.",
-    "justificacion_ca": "Conèixer el panell de metabolopaties congènites inspira projectes basats en els principis d'equitat del bé comú i economia circular.",
-    "actividades": [
-      {
-        "titulo_es": "Cribado neonatal de metabolopatías e integración del bien común en programas de salud pública",
-        "titulo_ca": "Cribratge neonatal de metabolopaties i integració del bé comú en programes de salut pública",
-        "contexto_es": "El laboratorio autonómico de metabolopatías de Son Espases realiza la prueba del talón en papel de filtro para todos los recién nacidos de las islas.",
-        "contexto_ca": "El laboratori autonòmic de metabolopaties de Son Espases realitza la prova del taló en paper de filtre per a tots els acabats de néixer de les illes.",
-        "desarrollo_es": "Los técnicos enumeran y analizan las determinaciones diagnósticas para fenilcetonuria, hipotiroidismo congénito y déficit de acil-CoA deshidrogenasa en muestras secas (1371-8h). Examinan cómo este programa universal garantiza equidad y justicia distributiva en el modelo de Economía del Bien Común mejorando la sostenibilidad del sistema de salud (1710-4e).",
-        "desarrollo_ca": "Els tècnics enumeren i analitzen les determinacions diagnòstiques per a fenilcetonúria, hipotiroïdisme congènit i dèficit d'acil-CoA deshidrogenasa en mostres seques (1371-8h). Examinen com aquest programa universal garanteix equitat i justícia distributiva en el model d'Economia del Bé Comú millorant la sostenibilitat del sistema de salut (1710-4e).",
-        "evidencia_es": "Esquema del perfil metabólico de aminoácidos y carnitinas junto con un ensayo crítico sobre justicia distributiva sanitaria.",
-        "evidencia_ca": "Esquema del perfil metabòlic d'aminoàcids i carnitines juntament amb un assaig crític sobre justícia distributiva sanitària.",
-        "dua_es": "Infografías con texto de apoyo sonoro sobre los ciclos metabólicos neonatales y esquemas conceptuales interactivos del bien común.",
-        "dua_ca": "Infografies amb text de suport sonor sobre els cicles metabòlics neonatals i esquemes conceptuals interactius del bé comú.",
-        "metodologia_es": "estudio interdisciplinar y ética socioeconómica.",
-        "metodologia_ca": "estudi interdisciplinari i ètica socioeconòmica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA1",
-      "criterios": [
-        "c"
-      ]
-    },
     "b": {
       "modulo": "1374",
-      "ra": "RA2",
+      "ra": "RA5",
       "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Realizar diluciones seriadas en placas de microtitulación se combina con la interpretación técnica de histogramas y banderas de autoanalizadores.",
-    "justificacion_ca": "Realitzar dilucions seriades en plaques de microtitulació es combina amb la interpretació tècnica d'histogrames i banderes d'autoanalitzadors.",
-    "actividades": [
-      {
-        "titulo_es": "Dilución seriada en microtitulación y análisis de alarmas hematológicas por agregados plaquetarios",
-        "titulo_ca": "Dilució seriada en microtitulació i anàlisi d'alarmes hematològiques per agregats plaquetaris",
-        "contexto_es": "En el laboratorio de urgencias de Son Llàtzer se investigan falsas trombocitopenias asociadas a fenómenos inmunes en pacientes adultos.",
-        "contexto_ca": "En el laboratori d'urgències de Son Llàtzer s'investiguen falses trombocitopènies associades a fenòmens immunes en pacients adults.",
-        "desarrollo_es": "El equipo efectúa diluciones progresivas al medio en micropozos en U con solución salina tamponada para titular anticuerpos heterófilos (1372-1c). Analizan las alarmas instrumentales del contador hematológico revisando las banderas de distribución plaquetar y dispersión eritrocitaria (1374-2c).",
-        "desarrollo_ca": "L'equip efectua dilucions progressives al mig en micropous en U amb solució salina tamponada per titular anticossos heteròfils (1372-1c). Analitzen les alarmes instrumentals del comptador hematològic revisant les banderes de distribució plaquetària i dispersió eritrocitària (1374-2c).",
-        "evidencia_es": "Registro de titulación en placa de pocillos e informe del hemograma con explicación fisiopatológica de las alarmas generadas.",
-        "evidencia_ca": "Registre de titulació en placa de pous i informe de l'hemograma amb explicació fisiopatològica de les alarmes generades.",
-        "dua_es": "Plantillas de pipeteo con guía visual de pocillos y glosario interactivo con significado clínico de las banderas hematológicas.",
-        "dua_ca": "Plantilles de pipetatge amb guia visual de pous i glossari interactiu amb significat clínic de les banderes hematològiques.",
-        "metodologia_es": "práctica de microtécnicas e instrumentación analítica.",
-        "metodologia_ca": "pràctica de microtècniques i instrumentació analítica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA1",
-      "criterios": [
-        "d"
-      ]
-    },
-    "b": {
-      "modulo": "1374",
-      "ra": "RA7",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Aplicar reacciones de aglutinación y floculación se integra en el control biológico y fraccionamiento estandarizado de componentes sanguíneos.",
-    "justificacion_ca": "Aplicar reaccions d'aglutinació i floculació s'integra en el control biològic i fraccionament estandarditzat de components sanguinis.",
-    "actividades": [
-      {
-        "titulo_es": "Prueba de RPR en donantes de sangre y fraccionamiento centrífugo de concentrados de hematíes",
-        "titulo_ca": "Prova d'RPR en donants de sang i fraccionament centrífug de concentrats d'hematies",
-        "contexto_es": "El Banc de Sang i Teixits de les Illes Balears procesa hemodonaciones diarias asegurando la calidad y seguridad transfusional.",
-        "contexto_ca": "El Banc de Sang i Teixits de les Illes Balears processa hemodonacions diàries assegurant la qualitat i seguretat transfusional.",
-        "desarrollo_es": "Los técnicos realizan la prueba no treponémica de floculación en tarjeta con carbón activo para descartar lúes en donantes (1372-1d). Ejecutan la centrifugación programada a velocidad y tiempo estrictos para separar la sangre total en concentrado de hematíes, plasma fresco congelado y capa leucoplaquetaria (1374-7c).",
-        "desarrollo_ca": "Els tècnics realitzen la prova no treponèmica de floculació en targeta amb carbó actiu per descartar lues en donants (1372-1d). Executen la centrifugació programada a velocitat i temps estrictes per separar la sang total en concentrat d'hematies, plasma fresc congelat i capa leucoplaquetària (1374-7c).",
-        "evidencia_es": "Tarjeta de floculación con lectura positiva y negativa frente a controles y ficha de rendimiento de separación de hemoderivados.",
-        "evidencia_ca": "Targeta de floculació amb lectura positiva i negativa enfront de controls i fitxa de rendiment de separació d'hemoderivats.",
-        "dua_es": "Rotador serológico con velocidad digital audible y diagrama visual explicativo de las capas de centrifugación de la sangre.",
-        "dua_ca": "Rotador serològic amb velocitat digital audible i diagrama visual explicatiu de les capes de centrifugació de la sang.",
-        "metodologia_es": "práctica de inmunohematología y tecnología transfusional.",
-        "metodologia_ca": "pràctica d'immunohematologia i tecnologia transfusional."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA1",
-      "criterios": [
-        "e"
-      ]
-    },
-    "b": {
-      "modulo": "1375",
-      "ra": "RA3",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Expresar títulos serológicos en técnicas de aglutinación requiere gestionar los permisos y autorizaciones formales en proyectos analíticos.",
-    "justificacion_ca": "Expressar títols serològics en tècniques d'aglutinació requereix gestionar els permisos i autoritzacions formals en projectes analítics.",
-    "actividades": [
-      {
-        "titulo_es": "Titulación de aglutininas en rosa de Bengala y gestión documental de autorizaciones sanitarias",
-        "titulo_ca": "Titulació d'aglutinines en rosa de Bengala i gestió documental d'autoritzacions sanitàries",
-        "contexto_es": "En el Hospital de Manacor se diseña un estudio sobre zoonosis en trabajadores del sector ganadero de la comarca del Llevant.",
-        "contexto_ca": "A l'Hospital de Manacor es dissenya un estudi sobre zoonosi en treballadors del sector ramader de la comarca del Llevant.",
-        "desarrollo_es": "El alumnado calcula y expresa el título de anticuerpos aglutinantes como la inversa de la máxima dilución con reactividad visible (1372-1e). Redactan la solicitud de permisos al comité de ética asistencial y tramitan las autorizaciones de confidencialidad de datos para el despliegue del proyecto (1375-3c).",
-        "desarrollo_ca": "L'alumnat calcula i expressa el títol d'anticossos aglutinants com la inversa de la màxima dilució amb reactivitat visible (1372-1e). Redacten la sol·licitud de permisos al comitè d'ètica assistencial i tramiten les autoritzacions de confidencialitat de dades per al desplegament del projecte (1375-3c).",
-        "evidencia_es": "Informe serológico con expresión cuantitativa del título de aglutinación y dosier de autorizaciones administrativas del proyecto.",
-        "evidencia_ca": "Informe serològic amb expressió quantitativa del títol d'aglutinació i dossier d'autoritzacions administratives del projecte.",
-        "dua_es": "Formularios de consentimientos con soporte gráfico y hojas de cálculo con comprobación asistida de títulos de anticuerpos.",
-        "dua_ca": "Formularis de consentiments amb suport gràfic i fulls de càlcul amb comprovació assistida de títols d'anticossos.",
-        "metodologia_es": "gestión de proyectos clínicos y análisis serológico.",
-        "metodologia_ca": "gestió de projectes clínics i anàlisi serològic."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA1",
-      "criterios": [
+        "d",
         "f"
       ]
     },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA2",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Monitorear serológicamente infecciones transmisibles se conecta con el impacto socioeconómico que generan los flujos migratorios y el turismo.",
-    "justificacion_ca": "Monitorar serològicament infeccions transmissibles es connecta amb l'impacte socioeconòmic que generen els fluxos migratoris i el turisme.",
+    "justificacion_es": "La meningococemia fulminante produce una coagulación intravascular diseminada y deja ver diplococos característicos: las pruebas de hemostasia y la morfología bacteriana se interpretan a la vez.",
+    "justificacion_ca": "La meningococcèmia fulminant produeix una coagulació intravascular disseminada i deixa veure diplococs característics: les proves d'hemostàsia i la morfologia bacteriana s'interpreten alhora.",
     "actividades": [
       {
-        "titulo_es": "Algoritmo serológico de sífilis e impacto de la estacionalidad turística balear en la salud comunitaria",
-        "titulo_ca": "Algorisme serològic de sífilis i impacte de l'estacionalitat turística balear en la salut comunitària",
-        "contexto_es": "El servicio de epidemiología y laboratorio del Hospital Can Misses en Ibiza monitoriza las infecciones de transmisión sexual en temporada alta.",
-        "contexto_ca": "El servei d'epidemiologia i laboratori de l'Hospital Can Misses a Eivissa monitora les infeccions de transmissió sexual en temporada alta.",
-        "desarrollo_es": "Los técnicos aplican la pauta de cribado treponémico con quimioluminiscencia y posterior confirmación y seguimiento de títulos por RPR (1372-1f). Analizan cómo la presión turística masiva y la economía de servicios alteran los patrones epidemiológicos y saturan los recursos sanitarios locales (1708-2b).",
-        "desarrollo_ca": "Els tècnics apliquen la pauta de cribratge treponèmic amb quimioluminescència i posterior confirmació i seguiment de títols per RPR (1372-1f). Analitzen com la pressió turística massiva i l'economia de serveis alteren els patrons epidemiològics i saturen els recursos sanitaris locals (1708-2b).",
-        "evidencia_es": "Diagrama de flujo del algoritmo serológico validado y memoria diagnóstica sobre el impacto económico-social en la red sanitaria.",
-        "evidencia_ca": "Diagrama de flux de l'algorisme serològic validat i memòria diagnòstica sobre l'impacte econòmic-social a la xarxa sanitària.",
-        "dua_es": "Árboles de decisión diagnóstica con pictogramas intuitivos y datos demográficos presentados en tablas interactivas con lector de pantalla.",
-        "dua_ca": "Arbres de decisió diagnòstica amb pictogrames intuïtius i dades demogràfiques presentades en taules interactives amb lector de pantalla.",
-        "metodologia_es": "epidemiología clínica y análisis socioeconómico.",
-        "metodologia_ca": "epidemiologia clínica i anàlisi socioeconòmic."
+        "titulo_es": "Púrpura que avanza en horas en una adolescente de Felanitx",
+        "titulo_ca": "Púrpura que avança en hores en una adolescent de Felanitx",
+        "contexto_es": "Una adolescente de Felanitx ingresa con fiebre y manchas purpúricas que se extienden en pocas horas.",
+        "contexto_ca": "Una adolescent de Felanitx ingressa amb febre i taques purpúriques que s'estenen en poques hores.",
+        "desarrollo_es": "Los técnicos analizan en el coagulómetro el tiempo de protrombina, el TTPa, el fibrinógeno y el dímero D (1374-5d). Relacionan los resultados con una coagulación intravascular diseminada (1374-5f). En el Gram de la lesión describen diplococos gramnegativos en grano de café, típicos de Neisseria (1373-2a).",
+        "desarrollo_ca": "Els tècnics analitzen al coagulòmetre el temps de protrombina, el TTPa, el fibrinogen i el dímer D (1374-5d). Relacionen els resultats amb una coagulació intravascular disseminada (1374-5f). Al Gram de la lesió descriuen diplococs gramnegatius en gra de cafè, típics de Neisseria (1373-2a).",
+        "evidencia_es": "Informe de coagulación con alerta y descripción del Gram.",
+        "evidencia_ca": "Informe de coagulació amb alerta i descripció del Gram.",
+        "dua_es": "Tabla de patrones de coagulación con semáforo.",
+        "dua_ca": "Taula de patrons de coagulació amb semàfor.",
+        "metodologia_es": "simulación de caso crítico.",
+        "metodologia_ca": "simulació de cas crític."
       }
     ]
   },
   {
     "a": {
-      "modulo": "1372",
-      "ra": "RA1",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA4",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Interpretar y registrar reacciones de precipitación serológica permite adoptar principios de economía circular en consumibles de soporte.",
-    "justificacion_ca": "Interpretar i registrar reaccions de precipitació serològica permet adoptar principis d'economia circular en consumibles de suport.",
-    "actividades": [
-      {
-        "titulo_es": "Registro de halos de inmunodifusión radial y transición circular en soportes plásticos de laboratorio",
-        "titulo_ca": "Registre d'halos d'immunodifusió radial i transició circular en suports plàstics de laboratori",
-        "contexto_es": "En el Hospital Mateu Orfila de Menorca se cuantifican inmunoglobulinas séricas mediante técnicas tradicionales de difusión en gel.",
-        "contexto_ca": "A l'Hospital Mateu Orfila de Menorca es quantifiquen immunoglobulines sèriques mitjançant tècniques tradicionals de difusió en gel.",
-        "desarrollo_es": "El grupo de estudiantes mide con regla óptica el diámetro de los anillos de precipitación interpretando la concentración de IgG e IgA frente a la curva patrón (1372-1g). Formulan alternativas para sustituir placas plásticas de un solo uso por soportes reutilizables de vidrio esterilizable conforme a la economía verde (1708-4b).",
-        "desarrollo_ca": "El grup d'estudiants mesura amb regle òptic el diàmetre dels anells de precipitació interpretant la concentració d'IgG i IgA enfront de la corba patró (1372-1g). Formulen alternatives per substituir plaques plàstiques d'un sol ús per suports reutilitzables de vidre esterilitzable d'acord amb l'economia verda (1708-4b).",
-        "evidencia_es": "Curva de calibración diámetro frente a concentración y plan operativo de reducción de plásticos en la sección de serología.",
-        "evidencia_ca": "Corba de calibratge diàmetre enfront de concentració i pla operatiu de reducció de plàstics a la secció de serologia.",
-        "dua_es": "Visor digital con magnificación para medición de halos y matrices de comparación material accesibles mediante teclado.",
-        "dua_ca": "Visor digital amb magnificació per a mesurament d'halos i matrius de comparació material accessibles mitjançant teclat.",
-        "metodologia_es": "inmunometría experimental y diseño circular.",
-        "metodologia_ca": "immunometria experimental i disseny circular."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA1",
-      "criterios": [
-        "h",
-        "i"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA5",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Aplicar controles de calidad y prevención en técnicas serológicas fomenta un liderazgo ético y sostenible en las organizaciones de salud.",
-    "justificacion_ca": "Aplicar controls de qualitat i prevenció en tècniques serològiques fomenta un lideratge ètic i sostenible en les organitzacions de salut.",
-    "actividades": [
-      {
-        "titulo_es": "Control de calidad en aglutinación directa y liderazgo responsable en bioseguridad diagnóstica",
-        "titulo_ca": "Control de qualitat en aglutinació directa i lideratge responsable en bioseguretat diagnòstica",
-        "contexto_es": "El laboratorio central de Son Espases implanta círculos de calidad en el área de inmunología diagnóstica.",
-        "contexto_ca": "El laboratori central de Son Espases implanta cercles de qualitat a l'àrea d'immunologia diagnòstica.",
-        "desarrollo_es": "Los técnicos aplican las barreras de protección de riesgo biológico y protocolos de neutralización química de residuos infecciosos (1372-1h). Validan la repetibilidad con sueros de control positivo y negativo registrando coeficientes de variación (1372-1i), guiando una dinámica de equipo sobre liderazgo ético para promover la cultura de seguridad del paciente (1710-5b).",
-        "desarrollo_ca": "Els tècnics apliquen les barreres de protecció de risc biològic i protocols de neutralització química de residus infecciosos (1372-1h). Validen la repetibilitat amb sèrums de control positiu i negatiu registrant coeficients de variació (1372-1i), guiant una dinàmica d'equip sobre lideratge ètic per promoure la cultura de seguretat del pacient (1710-5b).",
-        "evidencia_es": "Gráfica de control analítico con reglas de Westgard y acta de acuerdos del taller de liderazgo ético hospitalario.",
-        "evidencia_ca": "Gràfica de control analític amb regles de Westgard i acta d'acords del taller de lideratge ètic hospitalari.",
-        "dua_es": "Formatos digitales de autoevaluación de bioseguridad y guiones de debate con preguntas clave redactadas de forma directa y clara.",
-        "dua_ca": "Formats digitals d'autoavaluació de bioseguretat i guions de debat amb preguntes clau redactades de manera directa i clara.",
-        "metodologia_es": "aseguramiento de la calidad y liderazgo colaborativo.",
-        "metodologia_ca": "assegurament de la qualitat i lideratge col·laboratiu."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "b"
-      ]
-    },
-    "b": {
-      "modulo": "1373",
-      "ra": "RA2",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Clasificar los marcadores de inmunoensayos primarios se complementa con la selección técnica de tinciones microbiológicas diferenciales.",
-    "justificacion_ca": "Classificar els marcadors d'immunoassajos primaris es complementa amb la selecció tècnica de tincions microbiològiques diferencials.",
-    "actividades": [
-      {
-        "titulo_es": "Sistemas de marcaje enzimático y fluorescente en inmunoensayos y tinción diferencial de esporas bacterianas",
-        "titulo_ca": "Sistemes de marcatge enzimàtic i fluorescent en immunoassajos i tinció diferencial d'espores bacterianes",
-        "contexto_es": "En el laboratorio comarcal de Son Llàtzer se organizan estaciones analíticas simultáneas de inmunología y microbiología.",
-        "contexto_ca": "En el laboratori comarcal de Son Llàtzer s'organitzen estacions analítiques simultànies d'immunologia i microbiologia.",
-        "desarrollo_es": "El alumnado clasifica los inmunoensayos según el trazador reconociendo reactivos con fosfatasa alcalina, peroxidasa, isotiocianato de fluoresceína y quelatos de europio (1372-2b). Seleccionan verde de malaquita y safranina con fijación por calor para teñir endosporas bacterianas de Bacillus en contraste con la forma vegetativa (1373-2b).",
-        "desarrollo_ca": "L'alumnat classifica els immunoassajos segons el traçador reconeixent reactius amb fosfatasa alcalina, peroxidasa, isotiocianat de fluoresceïna i quelats d'europi (1372-2b). Seleccionen verd de malaquita i safranina amb fixació per calor per tenyir endòspores bacterianes de Bacillus en contrast amb la forma vegetativa (1373-2b).",
-        "evidencia_es": "Cuadro sinóptico de marcadores moleculares e informe con microfotografía de la tinción de esporas de Schaeffer-Fulton.",
-        "evidencia_ca": "Quadre sinòptic de marcadors moleculars i informe amb microfotografia de la tinció d'espores de Schaeffer-Fulton.",
-        "dua_es": "Tablas comparativas con códigos de color de trazadores y temporizadores visuales para los pasos térmicos de tinción.",
-        "dua_ca": "Taules comparatives amb codis de color de traçadors i temporitzadors visuals per als passos tèrmics de tinció.",
-        "metodologia_es": "taller comparativo de marcadores y tinciones diferenciales.",
-        "metodologia_ca": "taller comparatiu de marcadors i tincions diferencials."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "c"
-      ]
-    },
-    "b": {
-      "modulo": "1373",
-      "ra": "RA5",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Diferenciar fases de unión y lavado en inmunoensayos se apoya en el control riguroso de tiempos e incubación de pruebas bacterianas.",
-    "justificacion_ca": "Diferenciar fases d'unió i rentat en immunoassajos es recolza en el control rigorós de temps i incubació de proves bacterianes.",
-    "actividades": [
-      {
-        "titulo_es": "Cinética de reacción en ELISA tipo sándwich y tiempos térmicos de galerías bioquímicas bacterianas",
-        "titulo_ca": "Cinètica de reacció en ELISA tipus sandvitx i temps tèrmics de galeries bioquímiques bacterianes",
-        "contexto_es": "En el laboratorio del Hospital Comarcal de Inca se procesan muestras de gastroenteritis aguda con estudio combinado inmune y bacteriológico.",
-        "contexto_ca": "En el laboratori de l'Hospital Comarcal d'Inca es processen mostres de gastroenteritis aguda amb estudi combinat immune i bacteriològic.",
-        "desarrollo_es": "Los técnicos detallan la fijación del antígeno, adición del conjugado con biotina y ciclos de lavado para eliminar fracciones libres en el microensayo (1372-2c). Inoculan tiras multiprueba de identificación bacteriana controlando la temperatura estricta de treinta y siete grados y el tiempo de lectura a veinticuatro horas (1373-5b).",
-        "desarrollo_ca": "Els tècnics detallen la fixació de l'antigen, addició del conjugat amb biotina i cicles de rentat per eliminar fraccions lliures en el microassaig (1372-2c). Inoculen tires multiprova d'identificació bacteriana controlant la temperatura estricta de trenta-set graus i el temps de lectura a vint-i-quatre hores (1373-5b).",
-        "evidencia_es": "Diagrama de flujo de las etapas del inmunoensayo y ficha de lectura de cambios cromáticos de la galería microbiana.",
-        "evidencia_ca": "Diagrama de flux de les etapes de l'immunoassaig i fitxa de lectura de canvis cromàtics de la galeria microbiana.",
-        "dua_es": "Secuencias animadas de unión antígeno-anticuerpo y hojas de registro térmico con alarmas visuales de finalización de incubación.",
-        "dua_ca": "Seqüències animades d'unió antigen-anticòs i fulls de registre tèrmic amb alarmes visuals d'acabament d'incubació.",
-        "metodologia_es": "práctica de procesos cinéticos e incubación clínica.",
-        "metodologia_ca": "pràctica de processos cinètics i incubació clínica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "d"
-      ]
-    },
-    "b": {
-      "modulo": "1374",
-      "ra": "RA5",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Comprender la instrumentación fotométrica y de luminiscencia facilita el manejo de los coagulómetros automáticos en el estudio de la hemostasia.",
-    "justificacion_ca": "Comprendre la instrumentació fotomètrica i de luminescència facilita el maneig dels coagulòmetres automàtics en l'estudi de l'hemostàsia.",
-    "actividades": [
-      {
-        "titulo_es": "Sistemas de lectura fotométrica en inmunoanalizadores y pruebas coagulométricas de hemostasia primaria y secundaria",
-        "titulo_ca": "Sistemes de lectura fotomètrica en immunoanalitzadors i proves coagulomètriques d'hemostàsia primària i secundària",
-        "contexto_es": "El laboratorio central de Son Espases calibra analizadores de hemostasia e inmunoquímica para el seguimiento de pacientes anticoagulados.",
-        "contexto_ca": "El laboratori central de Son Espases calibra analitzadors d'hemostàsia i immunoquímica per al seguiment de pacients anticoagulats.",
-        "desarrollo_es": "El equipo describe los componentes ópticos, filtros interferenciales y fotomultiplicadores de los equipos de inmunoensayo quimioluminiscente (1372-2d). Caracterizan los fundamentos analíticos del tiempo de protrombina, tiempo de tromboplastina parcial activada y fibrinógeno funcional según Clauss (1374-5b).",
-        "desarrollo_ca": "L'equip descriu els components òptics, filtres interferencials i fotomultiplicadors dels equips d'immunoassaig quimioluminescent (1372-2d). Caracteritzen els fonaments analítics del temps de protrombina, temps de tromboplastina parcial activada i fibrinogen funcional segons Clauss (1374-5b).",
-        "evidencia_es": "Esquema funcional de la ruta óptica del analizador y trazado de curvas coagulométricas con tiempos de coagulación en segundos.",
-        "evidencia_ca": "Esquema funcional de la ruta òptica de l'analitzador i traçat de corbes coagulomètriques amb temps de coagulació en segons.",
-        "dua_es": "Diagrama de bloques de los equipos con descripciones de componentes en audio y gráficos interactivos de curvas de agregación.",
-        "dua_ca": "Diagrama de blocs dels equips amb descripcions de components en àudio i gràfics interactius de corbes d'agregació.",
-        "metodologia_es": "instrucción técnica instrumental y hemostasiología.",
-        "metodologia_ca": "instrucció tècnica instrumental i hemostasiologia."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "e"
-      ]
-    },
-    "b": {
-      "modulo": "1374",
-      "ra": "RA7",
-      "criterios": [
-        "d"
-      ]
-    },
-    "justificacion_es": "Calibrar analizadores de inmunoensayo para marcadores infecciosos es indispensable previo a la preparación y liberación de hemoderivados.",
-    "justificacion_ca": "Calibrar analitzadors d'immunoassaig per a marcadors infecciosos és indispensable previ a la preparació i alliberament d'hemoderivats.",
-    "actividades": [
-      {
-        "titulo_es": "Calibración analítica de marcadores de serología viral y obtención estandarizada de concentrados plaquetarios",
-        "titulo_ca": "Calibratge analític de marcadors de serologia viral i obtenció estandarditzada de concentrats plaquetaris",
-        "contexto_es": "En el Banc de Sang i Teixits de les Illes Balears se procesan donaciones altruistas para abastecer a la red hospitalaria balear.",
-        "contexto_ca": "En el Banc de Sang i Teixits de les Illes Balears es processen donacions altruistes per abastir la xarxa hospitalària balear.",
-        "desarrollo_es": "Los estudiantes ejecutan el calibrado del inmunoanalizador quimioluminiscente pasando controles de antígeno de superficie de hepatitis B y anticuerpos de VIH (1372-2e). Realizan la preparación de una mezcla de plaquetas mediante leucorreducción en filtro y fraccionamiento de la capa leucocitaria (1374-7d).",
-        "desarrollo_ca": "Els estudiants executen el calibratge de l'immunoanalitzador quimioluminescent passant controls d'antigen de superfície d'hepatitis B i anticossos de VIH (1372-2e). Realitzen la preparació d'una mescla de plaquetes mitjançant leucorreducció en filtre i fraccionament de la capa leucocitària (1374-7d).",
-        "evidencia_es": "Informe de calibración validado con controles dentro de rango y bolsa de concentrado de plaquetas etiquetada conforme a la norma ISBT.",
-        "evidencia_ca": "Informe de calibratge validat amb controls dins de rang i bossa de concentrat de plaquetes etiquetada d'acord amb la norma ISBT.",
-        "dua_es": "Comprobaciones de pantalla con códigos de estado cromático y guías de paso con lupas iluminadas para el control de sellado de bolsas.",
-        "dua_ca": "Comprovacions de pantalla amb codis d'estat cromàtic i guies de pas amb lupes il·luminades per al control de segellament de bosses.",
-        "metodologia_es": "garantía de calidad transfusional e inmunoensayos.",
-        "metodologia_ca": "garantia de qualitat transfusional i immunoassajos."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA4",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "El control ordenado de gradillas en inmunoquímica automatizada permite cuantificar el ahorro de recursos en modelos circulares de laboratorio.",
-    "justificacion_ca": "El control ordenat de gradetes en immunoquímica automatitzada permet quantificar l'estalvi de recursos en models circulars de laboratori.",
-    "actividades": [
-      {
-        "titulo_es": "Carga sistematizada de muestras en carruseles y balance económico-ambiental frente al consumo lineal",
-        "titulo_ca": "Càrrega sistematitzada de mostres en carrusels i balanç econòmic-ambiental enfront del consum lineal",
-        "contexto_es": "El equipo de gestión analítica de Son Espases audita la eficiencia en el carrusel de muestras del módulo de inmunoensayos.",
-        "contexto_ca": "L'equip de gestió analítica de Son Espases audita l'eficiència en el carrusel de mostres del mòdul d'immunoassajos.",
-        "desarrollo_es": "El grupo de estudiantes verifica la correcta posición de tubos primarios, orientación del código de barras y retirada sincronizada tras la pipeteada (1372-2f). Comparan los beneficios del uso de reactivos concentrados y cartuchos recargables con el modelo convencional de cubetas de plástico desechadas sin tratamiento (1708-4c).",
-        "desarrollo_ca": "El grup d'estudiants verifica la correcta posició de tubs primaris, orientació del codi de barres i retirada sincronitzada després de la pipetada (1372-2f). Comparen els beneficis de l'ús de reactius concentrats i cartutxos recarregables amb el model convencional de cubetes de plàstic rebutjades sense tractament (1708-4c).",
-        "evidencia_es": "Registro de incidencias de colocación de muestras en gradilla y estudio comparativo de costes y residuos en formato circular.",
-        "evidencia_ca": "Registre d'incidències de col·locació de mostres en gradeta i estudi comparatiu de costos i residus en format circular.",
-        "dua_es": "Gradillas numeradas con realce táctil y tablas comparativas de costes con conversión gráfica instantánea.",
-        "dua_ca": "Gradetes numerades amb realç tàctil i taules comparatives de costos amb conversió gràfica instantània.",
-        "metodologia_es": "gestión analítica y auditoría de sostenibilidad.",
-        "metodologia_ca": "gestió analítica i auditoria de sostenibilitat."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA1",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Dominar la sistemática de los inmunoensayos clínicos fortalece el perfil competencial en los procesos selectivos de empleo sanitario.",
-    "justificacion_ca": "Dominar la sistemàtica dels immunoassajos clínics enforteix el perfil competencial en els processos selectius d'ocupació sanitària.",
-    "actividades": [
-      {
-        "titulo_es": "Determinación estandarizada de ferritina por quimioluminiscencia y estrategia de empleabilidad técnica",
-        "titulo_ca": "Determinació estandarditzada de ferritina per quimioluminescència i estratègia d'ocupabilitat tècnica",
-        "contexto_es": "Estudiantes de laboratorio en Mallorca simulan procesos selectivos para cubrir plazas técnicas en hospitales del Servicio de Salud IB-SALUT.",
-        "contexto_ca": "Estudiants de laboratori a Mallorca simulen processos selectius per cobrir places tècniques en hospitals del Servei de Salut IB-SALUT.",
-        "desarrollo_es": "Los técnicos ejecutan el protocolo completo de inmunoensayo en micropartículas para cuantificar ferritina sérica conforme a las especificaciones del fabricante (1372-2g). Diseñan un porfolio competencial y planifican canales de búsqueda de trabajo basados en redes profesionales y ofertas públicas de empleo del sector biomédico (1710-1b).",
-        "desarrollo_ca": "Els tècnics executen el protocol complet d'immunoassaig en micropartícules per quantificar ferritina sèrica d'acord amb les especificacions del fabricant (1372-2g). Dissenyen un portafoli competencial i planifiquen canals de cerca de feina basats en xarxes professionals i ofertes públiques d'ocupació del sector biomèdic (1710-1b).",
-        "evidencia_es": "Informe de calibración y resultados del analito junto con el dosier de competencias técnicas para procesos de selección laboral.",
-        "evidencia_ca": "Informe de calibratge i resultats de l'analit juntament amb el dossier de competències tècniques per a processos de selecció laboral.",
-        "dua_es": "Guías procedimentales en lectura facilitada y plantillas de porfolio profesional accesibles mediante navegación web adaptada.",
-        "dua_ca": "Guies procedimentals en lectura facilitada i plantilles de portafoli professional accessibles mitjançant navegació web adaptada.",
-        "metodologia_es": "simulación técnica y orientación laboral.",
-        "metodologia_ca": "simulació tècnica i orientació laboral."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA2",
-      "criterios": [
-        "h",
-        "i"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA3",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Trazar curvas de calibración con rigor de seguridad fomenta metodologías de emprendimiento ágil e investigación aplicada en el ámbito bioclínico.",
-    "justificacion_ca": "Traçar corbes de calibratge amb rigor de seguretat fomenta metodologies d'emprenedoria àgil i recerca aplicada en l'àmbit bioclínic.",
-    "actividades": [
-      {
-        "titulo_es": "Regresión no lineal en curvas de calibración de troponina y metodologías ágiles en emprendimiento biotecnológico",
-        "titulo_ca": "Regressió no lineal en corbes de calibratge de troponina i metodologies àgils en emprenedoria biotecnològica",
-        "contexto_es": "En el laboratorio del Hospital de Manacor se validan curvas de calibración para troponina I ultrasensible en un entorno de intraemprendimiento.",
-        "contexto_ca": "En el laboratori de l'Hospital de Manacor es validen corbes de calibratge per a troponina I ultrasensible en un entorn d'intraemprenedoria.",
-        "desarrollo_es": "El alumnado ajusta la curva logística de cuatro parámetros con seis calibradores para interpolar concentraciones analíticas (1372-2h). Aplican protocolos de protección frente a riesgos biológicos y químicos (1372-2i), utilizando marcos de trabajo ágiles como Scrum y Lean Startup para concebir un servicio de analítica urgente descentralizada (1710-3b).",
-        "desarrollo_ca": "L'alumnat ajusta la corba logística de quatre paràmetres amb sis calibradors per interpolar concentracions analítiques (1372-2h). Apliquen protocols de protecció enfront de riscs biològics i químics (1372-2i), utilitzant marcs de treball àgils com Scrum i Lean Startup per concebre un servei d'analítica urgent descentralitzada (1710-3b).",
-        "evidencia_es": "Gráfica de calibración con coeficiente de determinación e informe de propuesta ágil con tablero Kanban del proyecto innovador.",
-        "evidencia_ca": "Gràfica de calibratge amb coeficient de determinació i informe de proposta àgil amb tauler Kanban del projecte innovador.",
-        "dua_es": "Software matemático con gráficos interactivos con zoom y tableros visuales digitales con tarjetas de colores contrastadas.",
-        "dua_ca": "Programari matemàtic amb gràfics interactius amb zoom i taulers visuals digitals amb targetes de colors contrastades.",
-        "metodologia_es": "metodologías ágiles y bioanálisis cuantitativo.",
-        "metodologia_ca": "metodologies àgils i bioanàlisi quantitatiu."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA3",
-      "criterios": [
-        "d"
-      ]
-    },
-    "b": {
-      "modulo": "1373",
-      "ra": "RA1",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Montar preparaciones de inmunofluorescencia exige clasificar los niveles de riesgo biológico al manipular sueros con posibles patógenos víricos.",
-    "justificacion_ca": "Muntar preparacions d'immunofluorescència exigeix classificar els nivells de risc biològic en manipular sèrums amb possibles patògens vírics.",
-    "actividades": [
-      {
-        "titulo_es": "Preparación de cortes para inmunofluorescencia de anticuerpos y contención de riesgo biológico de nivel dos",
-        "titulo_ca": "Preparació de talls per a immunofluorescència d'anticossos i contenció de risc biològic de nivell dos",
-        "contexto_es": "El laboratorio de autoinmunidad de Son Espases procesa sueros de pacientes con sospecha de lupus eritematoso sistémico y hepatitis autoinmune.",
-        "contexto_ca": "El laboratori d'autoimmunitat de Son Espases processa sèrums de pacients amb sospita de lupus eritematós sistèmic i hepatitis autoimmune.",
-        "desarrollo_es": "Los técnicos incuban sueros sobre portas con cortes de triple tejido rata y fijan con medio de montaje tamponado con glicerol para microscopía (1372-3d). Identifican el nivel de bioseguridad 2 asociado a muestras séricas y aerosoles aplicando cabinas de seguridad microbiológica de flujo laminar vertical (1373-1c).",
-        "desarrollo_ca": "Els tècnics incuben sèrums sobre portes amb talls de triple teixit rata i fixen amb medi de muntatge tamponat amb glicerol per a microscòpia (1372-3d). Identifiquen el nivell de bioseguretat 2 associat a mostres sèriques i aerosols aplicant cabines de seguretat microbiològica de flux laminar vertical (1373-1c).",
-        "evidencia_es": "Portaobjetos montado sin burbujas listo para lectura fluorescente y lista de chequeo de seguridad biológica en cabina de clase II.",
-        "evidencia_ca": "Portaobjectes muntat sense bombolles a punt per a lectura fluorescent i llista de revisió de seguretat biològica en cabina de classe II.",
-        "dua_es": "Protocolo en atril táctil iluminado para trabajo en penumbra y señalética luminosa del estado de flujo de la cabina de seguridad.",
-        "dua_ca": "Protocol en faristol tàctil il·luminat per a treball en penombra i senyalètica lluminosa de l'estat de flux de la cabina de seguretat.",
-        "metodologia_es": "práctica de bioseguridad y microtécnica inmunocitoquímica.",
-        "metodologia_ca": "pràctica de bioseguretat i microtècnica immunocitoquímica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA3",
-      "criterios": [
-        "e"
-      ]
-    },
-    "b": {
-      "modulo": "1373",
-      "ra": "RA5",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Identificar patrones fluorescentes de anticuerpos antinucleares se articula con la ejecución de pruebas bioquímicas rápidas en microbiología.",
-    "justificacion_ca": "Identificar patrons fluorescents d'anticossos antinuclears s'articula amb l'execució de proves bioquímiques ràpides en microbiologia.",
-    "actividades": [
-      {
-        "titulo_es": "Patrones fluorescentes homogéneo y moteado en células HEp-2 y pruebas rápidas de catalasa y oxidasa",
-        "titulo_ca": "Patrons fluorescents homogeni i clapat en cèl·lules HEp-2 i proves ràpides de catalasa i oxidasa",
-        "contexto_es": "En el laboratorio de diagnóstico microbiológico e inmunológico de Can Misses en Ibiza se investigan cuadros febriles prolongados.",
-        "contexto_ca": "En el laboratori de diagnòstic microbiològic i immunològic de Can Misses a Eivissa s'investiguen quadres febrils perllongats.",
-        "desarrollo_es": "El alumnado discrimina al microscopio patrones antinucleares homogéneo, nucleolar y centromérico siguiendo la nomenclatura internacional ICAP (1372-3e). Ejecutan en paralelo las pruebas enzimáticas inmediatas de catalasa con peróxido de hidrógeno y oxidasa con reactivo de Kovacs sobre colonias sospechosas de aislamientos clínicos (1373-5c).",
-        "desarrollo_ca": "L'alumnat discrimina al microscopi patrons antinuclears homogeni, nucleolar i centromèric seguint la nomenclatura internacional ICAP (1372-3e). Executen en paral·lel les proves enzimàtiques immediates de catalasa amb peròxid d'hidrogen i oxidasa amb reactiu de Kovacs sobre colònies sospitoses d'aïllaments clínics (1373-5c).",
-        "evidencia_es": "Informe de patrón ANA según código ICAP y registro fotográfico de efervescencia y viraje cromático en portaobjetos.",
-        "evidencia_ca": "Informe de patró ANA segons codi ICAP i registre fotogràfic d'efervescència i viratge cromàtic en portaobjectes.",
-        "dua_es": "Atlas digital con clasificación ICAP accesible con zoom progresivo y tiras de oxidasa con cambio de color nítido para visión daltónica.",
-        "dua_ca": "Atles digital amb classificació ICAP accessible amb zoom progressiu i tires d'oxidasa amb canvi de color nítid per a visió daltònica.",
-        "metodologia_es": "práctica de microscopía de fluorescencia y bioquímica rápida.",
-        "metodologia_ca": "pràctica de microscòpia de fluorescència i bioquímica ràpida."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA3",
-      "criterios": [
-        "f"
-      ]
-    },
-    "b": {
-      "modulo": "1373",
-      "ra": "RA7",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Validar controles internos en inmunofluorescencia se coordina con los protocolos integrados de diagnóstico molecular y serológico de virus.",
-    "justificacion_ca": "Validar controls interns en immunofluorescència es coordina amb els protocols integrats de diagnòstic molecular i serològic de virus.",
-    "actividades": [
-      {
-        "titulo_es": "Control de calidad en inmunofluorescencia y algoritmo de detección serológica de citomegalovirus",
-        "titulo_ca": "Control de qualitat en immunofluorescència i algorisme de detecció serològica de citomegalovirus",
-        "contexto_es": "El servicio de virología y autoinmunidad de Son Llàtzer atiende peticiones de cribado en pacientes inmunodeprimidos con sospecha vírica o inmune.",
-        "contexto_ca": "El servei de virologia i autoimmunitat de Son Llàtzer atén peticions de cribratge en pacients immunodeprimits amb sospita vírica o immune.",
-        "desarrollo_es": "Los técnicos verifican la intensidad de fluorescencia del control positivo patrón y la ausencia de tinción basal en el control negativo (1372-3f). Definen y aplican el protocolo diagnóstico para infecciones por CMV combinando detección de IgM por quimioluminiscencia y avidez de IgG con cuantificación de ADN por PCR en tiempo real (1373-7c).",
-        "desarrollo_ca": "Els tècnics verifiquen la intensitat de fluorescència del control positiu patró i l'absència de tinció basal en el control negatiu (1372-3f). Defineixen i apliquen el protocol diagnòstic per a infeccions per CMV combinant detecció d'IgM per quimioluminescència i avidesa d'IgG amb quantificació d'ADN per PCR en temps real (1373-7c).",
-        "evidencia_es": "Hoja de validación de controles de fluorescencia y protocolo diagnóstico de infección vírica con algoritmo decisional.",
-        "evidencia_ca": "Full de validació de controls de fluorescència i protocol diagnòstic d'infecció vírica amb algorisme decisional.",
-        "dua_es": "Escala visual de gradación de fluorescencia de uno a cuatro cruces y diagramas de flujo con hiperenlaces descriptivos.",
-        "dua_ca": "Escala visual de gradació de fluorescència d'una a quatre creus i diagrames de flux amb hiperenllaços descriptius.",
-        "metodologia_es": "estudio interdisciplinar virológico e inmunológico.",
-        "metodologia_ca": "estudi interdisciplinari virològic i immunològic."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA3",
-      "criterios": [
-        "g"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA3",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "Establecer criterios de corte y validez en ensayos autoinmunes conecta con el análisis de riesgos y oportunidades en los ODS de salud pública.",
-    "justificacion_ca": "Establir criteris de tall i validesa en assajos autoimmunes connecta amb l'anàlisi de riscs i oportunitats en els ODS de salut pública.",
-    "actividades": [
-      {
-        "titulo_es": "Criterios de validez en anticuerpos anti-transglutaminasa y evaluación de oportunidades en el ODS de salud",
-        "titulo_ca": "Criteris de validesa en anticossos anti-transglutaminasa i avaluació d'oportunitats en l'ODS de salut",
-        "contexto_es": "En el Hospital Mateu Orfila de Menorca se revisan los valores de corte para el diagnóstico no invasivo de la enfermedad celíaca.",
-        "contexto_ca": "A l'Hospital Mateu Orfila de Menorca es revisen els valors de tall per al diagnòstic no invasiu de la malaltia celíaca.",
-        "desarrollo_es": "El equipo técnico define los criterios de validez analítica fijando el punto de corte diez veces superior al rango normal para evitar biopsias duodenales (1372-3g). Analizan los riesgos asistenciales del sobrediagnóstico y las oportunidades de bienestar social alineadas con la meta tres de los Objetivos de Desarrollo Sostenible (1708-3b).",
-        "desarrollo_ca": "L'equip tècnic defineix els criteris de validesa analítica fixant el punt de tall deu vegades superior al rang normal per evitar biòpsies duodenals (1372-3g). Analitzen els riscs assistencials del sobrediagnòstic i les oportunitats de benestar social alineades amb la fita tres dels Objectius de Desenvolupament Sostenible (1708-3b).",
-        "evidencia_es": "Informe de validación del punto de corte serológico y análisis DAFO de sostenibilidad orientado al ODS de salud y bienestar.",
-        "evidencia_ca": "Informe de validació del punt de tall serològic i anàlisi DAFO de sostenibilitat orientat a l'ODS de salut i benestar.",
-        "dua_es": "Gráficas ROC interactivas para análisis de sensibilidad y especificidad y organizadores gráficos DAFO en formato digital accesible.",
-        "dua_ca": "Gràfiques ROC interactives per a anàlisi de sensibilitat i especificitat i organitzadors gràfics DAFO en format digital accessible.",
-        "metodologia_es": "análisis crítico de validez diagnóstica y sostenibilidad.",
-        "metodologia_ca": "anàlisi crític de validesa diagnòstica i sostenibilitat."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA3",
-      "criterios": [
-        "h"
-      ]
-    },
-    "b": {
-      "modulo": "1708",
-      "ra": "RA4",
-      "criterios": [
-        "d"
-      ]
-    },
-    "justificacion_es": "Explorar técnicas multiplex de inmunoblot para autoanticuerpos orienta la aplicación del ecodiseño en dispositivos diagnósticos.",
-    "justificacion_ca": "Explorar tècniques múltiplex d'immunoblot per a autoanticossos orienta l'aplicació de l'ecodisseny en dispositius diagnòstics.",
-    "actividades": [
-      {
-        "titulo_es": "Inmunodot múltiple para perfil de miositis y aplicación de ecodiseño en tiras diagnósticas de nitrocelulosa",
-        "titulo_ca": "Immunodot múltiple per a perfil de miositis i aplicació d'ecodisseny en tires diagnòstiques de nitrocel·lulosa",
-        "contexto_es": "Investigadores del IdISBa y técnicos de Son Espases evalúan nuevos paneles serológicos para el estudio de miopatías inflamatorias.",
-        "contexto_ca": "Investigadors de l'IdISBa i tècnics de Son Espases avaluen nous panells serològics per a l'estudi de miopaties inflamatòries.",
-        "desarrollo_es": "El alumnado describe técnicas alternativas como el line-blot e inmunoensayo quimioluminiscente múltiple para detectar anticuerpos anti-Jo-1 y anti-Mi-2 (1372-3h). Proponen directrices de ecodiseño para miniaturizar las tiras de membrana, sustituir plásticos fósiles por polímeros compostables y optimizar reactivos de elución (1708-4d).",
-        "desarrollo_ca": "L'alumnat descriu tècniques alternatives com el line-blot i immunoassaig quimioluminescent múltiple per detectar anticossos anti-Jo-1 i anti-Mi-2 (1372-3h). Proposen directrius d'ecodisseny per miniaturitzar les tires de membrana, substituir plàstics fòssils per polímers compostables i optimitzar reactius d'elució (1708-4d).",
-        "evidencia_es": "Tira de inmunoblot leída por reflectometría con bandas identificadas y ficha técnica de ecodiseño del soporte analítico.",
-        "evidencia_ca": "Tira d'immunoblot llegida per reflectometria amb bandes identificades i fitxa tècnica d'ecodisseny del suport analític.",
-        "dua_es": "Lector digital de tiras con realce de contraste de bandas y matrices de materiales ecológicos con soporte textual y visual.",
-        "dua_ca": "Lector digital de tires amb realç de contrast de bandes i matrius de materials ecològics amb suport textual i visual.",
-        "metodologia_es": "innovación diagnóstica y ecodiseño de productos.",
-        "metodologia_ca": "innovació diagnòstica i ecodisseny de productes."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA4",
-      "criterios": [
-        "b"
-      ]
-    },
-    "b": {
       "modulo": "1373",
       "ra": "RA4",
       "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Verificar la correspondencia preanalítica en estudios de alergia se vincula con la calibración ambiental y térmica de las estufas de microbiología.",
-    "justificacion_ca": "Verificar la concordança preanalítica en estudis d'al·lèrgia es vincula amb el calibratge ambiental i tèrmic de les estufes de microbiologia.",
-    "actividades": [
-      {
-        "titulo_es": "Trazabilidad de alícuotas para inmunología alérgica y control de temperatura y atmósfera en cultivos",
-        "titulo_ca": "Traçabilitat d'alíquotes per a immunologia al·lèrgica i control de temperatura i atmosfera en cultius",
-        "contexto_es": "En el laboratorio comarcal de Inca se procesan muestras respiratorias y sueros de pacientes con rinitis alérgica estacional.",
-        "contexto_ca": "En el laboratori comarcal d'Inca es processen mostres respiratòries i sèrums de pacients amb rinitis al·lèrgica estacional.",
-        "desarrollo_es": "Los técnicos cotejan rigurosamente los volantes clínicos y las muestras de suero verificando alícuotas identificadas sin turbidez ni hemólisis (1372-4b). Fijan los parámetros de temperatura a treinta y cinco grados y atmósfera con cinco por ciento de dióxido de carbono para incubar placas bacterianas (1373-4c).",
-        "desarrollo_ca": "Els tècnics acaren rigorosament els volants clínics i les mostres de sèrum verificant alíquotes identificades sense tèrbolesa ni hemòlisi (1372-4b). Fixen els paràmetres de temperatura a trenta-cinc graus i atmosfera amb cinc per cent de diòxid de carboni per incubar plaques bacterianes (1373-4c).",
-        "evidencia_es": "Hoja de verificación preanalítica de muestras de alergia y registro gráfico de termohigrómetro de las estufas de incubación.",
-        "evidencia_ca": "Full de verificació preanalítica de mostres d'al·lèrgia i registre gràfic de termohigròmetre de les estufes d'incubació.",
-        "dua_es": "Pistas auditivas al escanear códigos de tubos y alarmas visuales programables de control térmico en pantallas digitales.",
-        "dua_ca": "Pistes auditives en escanejar codis de tubs i alarmes visuals programables de control tèrmic en pantalles digitals.",
-        "metodologia_es": "control de calidad preanalítico e incubación microbiológica.",
-        "metodologia_ca": "control de qualitat preanalític i incubació microbiològica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA4",
-      "criterios": [
-        "c"
-      ]
-    },
-    "b": {
-      "modulo": "1374",
-      "ra": "RA1",
-      "criterios": [
+        "c",
         "d"
-      ]
-    },
-    "justificacion_es": "Seleccionar extractos alergénicos polínicos se complementa con la búsqueda rigurosa de la zona ideal de lectura en extensiones sanguíneas.",
-    "justificacion_ca": "Seleccionar extractes al·lergènics pol·línics es complementa amb la cerca rigorosa de la zona ideal de lectura en extensions sanguínies.",
-    "actividades": [
-      {
-        "titulo_es": "Selección de extractos de Parietaria y gramíneas y delimitación de la zona de monocapa eritrocitaria",
-        "titulo_ca": "Selecció d'extractes de Parietaria i gramínies i delimitació de la zona de monocapa eritrocitària",
-        "contexto_es": "En el Hospital Can Misses de Ibiza se evalúa el perfil eosinofílico y alérgico de pacientes con asma bronquial infantil.",
-        "contexto_ca": "A l'Hospital Can Misses d'Eivissa s'avalua el perfil eosinofílic i al·lèrgic de pacients amb asma bronquial infantil.",
-        "desarrollo_es": "El equipo selecciona los paneles de extractos moleculares nativos y recombinantes de pólenes autóctonos mediterráneos para la prueba analítica (1372-4c). Delimitan microscópicamente la zona corporal de la extensión donde los eritrocitos se distribuyen homogéneamente sin solapamiento para contar eosinófilos (1374-1d).",
-        "desarrollo_ca": "L'equip selecciona els panells d'extractes moleculars natius i recombinants de pol·lens autòctons mediterranis per a la prova analítica (1372-4c). Delimiten microscòpicament la zona corporal de l'extensió on els eritròcits es distribueixen de manera homogènia sense encavalcament per comptar eosinòfils (1374-1d).",
-        "evidencia_es": "Listado de alérgenos seleccionados con código taxonómico y microfotografía de la monocapa celular óptima de estudio.",
-        "evidencia_ca": "Llistat d'al·lèrgens seleccionats amb codi taxonòmic i microfotografia de la monocapa cel·lular òptima d'estudi.",
-        "dua_es": "Buscador digital de alérgenos con sinónimos botánicos y retícula ocular virtual con ayuda táctil para fijar el campo de lectura.",
-        "dua_ca": "Cercador digital d'al·lèrgens amb sinònims botànics i reticle ocular virtual amb ajuda tàctil per fixar el camp de lectura.",
-        "metodologia_es": "taller práctico de alergología y morfología hematológica.",
-        "metodologia_ca": "taller pràctic d'al·lergologia i morfologia hematològica."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA4",
-      "criterios": [
-        "d"
-      ]
-    },
-    "b": {
-      "modulo": "1374",
-      "ra": "RA2",
-      "criterios": [
-        "d"
-      ]
-    },
-    "justificacion_es": "Describir técnicas inmunoquímicas para IgE total y específica se vincula con la evaluación de los recuentos absolutos y relativos del hemograma.",
-    "justificacion_ca": "Descriure tècniques immunoquímiques per a IgE total i específica es vincula amb l'avaluació dels recomptes absoluts i relatius de l'hemograma.",
-    "actividades": [
-      {
-        "titulo_es": "Técnicas de inmunoensayo fluorimétrico para IgE y correlación con el recuento leucocitario del hemograma",
-        "titulo_ca": "Tècniques d'immunoassaig fluorimètric per a IgE i correlació amb el recompte leucocitari de l'hemograma",
-        "contexto_es": "El laboratorio de análisis de Son Llàtzer procesa analíticas de pacientes con cuadros crónicos de eccema y atopia cutánea.",
-        "contexto_ca": "El laboratori d'anàlisi de Son Llàtzer processa analítiques de pacients amb quadres crònics d'èczema i atòpia cutània.",
-        "desarrollo_es": "El alumnado describe las metodologías FEIA y quimioluminiscencia sobre soporte sólido para la determinación cuantitativa de inmunoglobulina E (1372-4d). Correlacionan estos títulos con las concentraciones de leucocitos totales, recuento de eosinófilos y constantes plaquetarias emitidas por el contador celular (1374-2d).",
-        "desarrollo_ca": "L'alumnat descriu les metodologies FEIA i quimioluminescència sobre suport sòlid per a la determinació quantitativa d'immunoglobulina E (1372-4d). Correlacionen aquests títols amb les concentracions de leucòcits totals, recompte d'eosinòfils i constants plaquetàries emeses pel comptador cel·lular (1374-2d).",
-        "evidencia_es": "Ficha comparativa de métodos inmunoanalíticos de IgE y reporte del hemograma automatizado con fórmula leucocitaria.",
-        "evidencia_ca": "Fitxa comparativa de mètodes immunoanalítics d'IgE i report de l'hemograma automatitzat amb fórmula leucocitària.",
-        "dua_es": "Gráficas de dispersión automatizadas con etiquetas sonoras y tablas de intervalos biológicos de referencia con realce visual.",
-        "dua_ca": "Gràfiques de dispersió automatitzades amb etiquetes sonores i taules d'intervals biològics de referència amb realç visual.",
-        "metodologia_es": "análisis de casos clínicos hematológicos y alérgicos.",
-        "metodologia_ca": "anàlisi de casos clínics hematològics i al·lèrgics."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA4",
-      "criterios": [
-        "e"
       ]
     },
     "b": {
       "modulo": "1374",
       "ra": "RA6",
       "criterios": [
-        "d"
-      ]
-    },
-    "justificacion_es": "Conocer pruebas de hipersensibilidad celular retardada se asocia con el escrutinio de anticuerpos eritrocitarios irregulares por microcolumna.",
-    "justificacion_ca": "Conèixer proves d'hipersensibilitat cel·lular retardada s'associa amb l'escrutini d'anticossos eritrocitaris irregulars per microcolumna.",
-    "actividades": [
-      {
-        "titulo_es": "Prueba de transformación linfocítica celular y escrutinio de anticuerpos irregulares con panel eritrocitario",
-        "titulo_ca": "Prova de transformació limfocítica cel·lular i escrutini d'anticossos irregulars amb panell eritrocitari",
-        "contexto_es": "En el Hospital de Manacor se realiza el estudio preoperatorio complejo de una paciente con antecedente de reacciones alérgicas a fármacos.",
-        "contexto_ca": "A l'Hospital de Manacor es realitza l'estudi preoperatori complex d'una pacient amb antecedent de reaccions al·lèrgiques a fàrmacs.",
-        "desarrollo_es": "Los técnicos detallan la prueba de transformación linfocítica y liberación de sulfidoleucotrienos para diagnosticar hipersensibilidad tipo IV a contrastes y anestésicos (1372-4e). Realizan el escrutinio de anticuerpos irregulares en tarjeta de gel con panel de tres células eritrocitarias fenotipadas para garantizar seguridad transfusional (1374-6d).",
-        "desarrollo_ca": "Els tècnics detallen la prova de transformació limfocítica i alliberament de sulfidoleucotriens per diagnosticar hipersensibilitat tipus IV a contrastos i anestèsics (1372-4e). Realitzen l'escrutini d'anticossos irregulars en targeta de gel amb panell de tres cèl·lules eritrocitàries fenotipades per garantir seguretat transfusional (1374-6d).",
-        "evidencia_es": "Protocolo técnico de la prueba celular y matriz de reacciones en tarjeta de gel con lectura e interpretación inmunohematológica.",
-        "evidencia_ca": "Protocol tècnic de la prova cel·lular i matriu de reaccions en targeta de gel amb lectura i interpretació immunohematològica.",
-        "dua_es": "Lupa óptica retroiluminada para lectura de bandas de gel y esquemas explicativos en lenguaje sencillo de los tipos de hipersensibilidad.",
-        "dua_ca": "Lupa òptica retroil·luminada per a lectura de bandes de gel i esquemes explicatius en llenguatge senzill dels tipus d'hipersensibilitat.",
-        "metodologia_es": "estudio interdisciplinar prequirúrgico.",
-        "metodologia_ca": "estudi interdisciplinari prequirúrgic."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA4",
-      "criterios": [
+        "c",
         "f"
       ]
     },
-    "b": {
-      "modulo": "1375",
-      "ra": "RA4",
-      "criterios": [
-        "a"
-      ]
-    },
-    "justificacion_es": "Ejecutar inmunoensayos cuantitativos de alergia permite definir variables clave de seguimiento y control en proyectos analíticos de laboratorio.",
-    "justificacion_ca": "Executar immunoassajos quantitatius d'al·lèrgia permet definir variables clau de seguiment i control en projectes analítics de laboratori.",
+    "justificacion_es": "Una reacción febril durante una transfusión obliga a estudiar la compatibilidad y a cultivar la unidad: inmunohematología y microbiología trabajan sobre la misma bolsa.",
+    "justificacion_ca": "Una reacció febril durant una transfusió obliga a estudiar la compatibilitat i a cultivar la unitat: immunohematologia i microbiologia treballen sobre la mateixa bossa.",
     "actividades": [
       {
-        "titulo_es": "Dosificación de IgE específica frente a epítopos de veneno de himenópteros y matriz de indicadores del proyecto",
-        "titulo_ca": "Dosificació d'IgE específica enfront d'epítops de verí d'himenòpters i matriu d'indicadors del projecte",
-        "contexto_es": "La unidad de alergología diagnóstica de Son Espases evalúa proyectos de optimización de tiempos de respuesta en urgencias por anafilaxia.",
-        "contexto_ca": "La unitat d'al·lergologia diagnòstica de Son Espases avalua projectes d'optimització de temps de resposta a urgències per anafilaxi.",
-        "desarrollo_es": "El equipo procesa muestras séricas para determinar IgE específica frente a componentes recombinantes de veneno de abeja y avispa mediante inmunoensayo quimioluminiscente (1372-4f). Definen los procedimientos de evaluación del proyecto mediante indicadores de precisión, tiempo de respuesta y satisfacción de los clínicos usuarios (1375-4a).",
-        "desarrollo_ca": "L'equip processa mostres sèriques per determinar IgE específica enfront de components recombinants de verí d'abella i vespa mitjançant immunoassaig quimioluminescent (1372-4f). Defineixen els procediments d'avaluació del projecte mitjançant indicadors de precisió, temps de resposta i satisfacció dels clínics usuaris (1375-4a).",
-        "evidencia_es": "Resultados de IgE en kilounidades por litro y cuadro de mando con indicadores de seguimiento del proyecto de mejora.",
-        "evidencia_ca": "Resultats d'IgE en quilo-unitats per litre i quadre de comandament amb indicadors de seguiment del projecte de millora.",
-        "dua_es": "Gráficas de concentración con codificación de colores de alerta y hojas de control de calidad accesibles con atajos de teclado.",
-        "dua_ca": "Gràfiques de concentració amb codificació de colors d'alerta i fulls de control de qualitat accessibles amb dreceres de teclat.",
-        "metodologia_es": "gestión y control de proyectos biomédicos.",
-        "metodologia_ca": "gestió i control de projectes biomèdics."
+        "titulo_es": "Escalofríos a mitad de una transfusión de hematíes",
+        "titulo_ca": "Calfreds a la meitat d'una transfusió d'hematies",
+        "contexto_es": "Un paciente de cirugía de Can Misses presenta escalofríos y fiebre a mitad de una transfusión; se para y la bolsa vuelve al laboratorio.",
+        "contexto_ca": "Un pacient de cirurgia de Can Misses presenta calfreds i febre a la meitat d'una transfusió; s'atura i la bossa torna al laboratori.",
+        "desarrollo_es": "El banco de sangre repite la antiglobulina directa en la muestra posterior a la transfusión (1374-6c) y valida los resultados comparándolos con los previos (1374-6f). Del contenido de la bolsa se inocula una muestra en frascos, se incuba con los parámetros de un hemocultivo (1373-4c) y, si crece, se aíslan las colonias (1373-4d).",
+        "desarrollo_ca": "El banc de sang repeteix l'antiglobulina directa en la mostra posterior a la transfusió (1374-6c) i valida els resultats comparant-los amb els previs (1374-6f). Del contingut de la bossa s'inocula una mostra en flascons, s'incuba amb els paràmetres d'un hemocultiu (1373-4c) i, si creix, s'aïllen les colònies (1373-4d).",
+        "evidencia_es": "Informe de la reacción transfusional con ambos estudios.",
+        "evidencia_ca": "Informe de la reacció transfusional amb tots dos estudis.",
+        "dua_es": "Diagrama de actuación ante una reacción transfusional.",
+        "dua_ca": "Diagrama d'actuació davant una reacció transfusional.",
+        "metodologia_es": "simulación de incidente.",
+        "metodologia_ca": "simulació d'incident."
       }
     ]
   },
   {
     "a": {
-      "modulo": "1372",
-      "ra": "RA4",
+      "modulo": "1371",
+      "ra": "RA3",
       "criterios": [
         "g"
       ]
     },
     "b": {
-      "modulo": "1708",
-      "ra": "RA1",
-      "criterios": [
-        "b"
-      ]
-    },
-    "justificacion_es": "El orden y la limpieza meticulosa en los ensayos de alergia se vincula con los factores ambientales y de gobernanza (ASG) del hospital.",
-    "justificacion_ca": "L'ordre i la neteja meticulosa en els assajos d'al·lèrgia es vincula amb els factors ambientals i de governança (ASG) de l'hospital.",
-    "actividades": [
-      {
-        "titulo_es": "Protocolo de descontaminación de alérgenos en el banco de trabajo y gobierno corporativo ASG hospitalario",
-        "titulo_ca": "Protocol de descontamination d'al·lèrgens al banc de treball i govern corporatiu ASG hospitalari",
-        "contexto_es": "En el Hospital Mateu Orfila de Menorca se audita la sección de inmunología para renovar la certificación medioambiental y laboral.",
-        "contexto_ca": "A l'Hospital Mateu Orfila de Menorca s'audita la secció d'immunologia per renovar la certificació mediambiental i laboral.",
-        "desarrollo_es": "Los estudiantes aplican desnaturalización de residuos proteicos de extractos alergénicos con etanol al setenta por ciento y detergentes no iónicos asegurando orden escrupuloso (1372-4g). Identifican los pilares ASG de la organización analizando el compromiso de la gerencia con la salud laboral, transparencia y neutralidad climática (1708-1b).",
-        "desarrollo_ca": "Els estudiants apliquen desnaturalització de residus proteics d'extractes al·lergènics amb etanol al setanta per cent i detergents no iònics assegurant ordre escrupolós (1372-4g). Identifiquen els pilars ASG de l'organització analitzant el compromís de la gerència amb la salut laboral, transparència i neutralitat climàtica (1708-1b).",
-        "evidencia_es": "Lista de verificación de limpieza de la bancada analítica y memoria de los aspectos ASG prioritarios para el laboratorio.",
-        "evidencia_ca": "Llista de comprovació de neteja de la bancada analítica i memòria dels aspectes ASG prioritaris per al laboratori.",
-        "dua_es": "Listas de cotejo laminadas con casillas de gran formato y guía resumida de gobernanza ASG con apoyos visuales explicativos.",
-        "dua_ca": "Llistes d'acarament laminades amb caselles de gran format i guia resumida de governança ASG amb suports visuals explicatius.",
-        "metodologia_es": "auditoría de buenas prácticas y gobernanza sostenible.",
-        "metodologia_ca": "auditoria de bones pràctiques i governança sostenible."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA4",
-      "criterios": [
-        "a"
-      ]
-    },
-    "b": {
-      "modulo": "1710",
-      "ra": "RA3",
-      "criterios": [
-        "c"
-      ]
-    },
-    "justificacion_es": "Conocer los fundamentos de las reacciones de hipersensibilidad estimula iniciativas de intraemprendimiento e innovación diagnóstica en alergia.",
-    "justificacion_ca": "Conèixer els fonaments de les reaccions d'hipersensibilitat estimula iniciatives d'intraemprenedoria i innovació diagnòstica en al·lèrgia.",
-    "actividades": [
-      {
-        "titulo_es": "Diagnóstico de hipersensibilidad inmediata y propuesta intraemprendedora de test rápido en alergia alimentaria",
-        "titulo_ca": "Diagnòstic d'hipersensibilitat immediata i proposta intraemprenedora de test ràpid en al·lèrgia alimentària",
-        "contexto_es": "En Son Espases un grupo de trabajo multidisciplinar explora soluciones rápidas para la detección de alergia a frutos secos en atención primaria.",
-        "contexto_ca": "A Son Espases un grup de treball multidisciplinari explora solucions ràpides per a la detecció d'al·lèrgia a fruita seca en atenció primària.",
-        "desarrollo_es": "El alumnado describe las técnicas in vitro de activación de basófilos por citometría y cuantificación de mediadores preformados como triptasa e histamina (1372-4a). Aplican competencias de creatividad, resiliencia y pensamiento analítico para estructurar una propuesta intraemprendedora de detección rápida portátil en centros de salud (1710-3c).",
-        "desarrollo_ca": "L'alumnat descriu les tècniques in vitro d'activació de basòfils per citometria i quantificació de mediadors preformats com triptasa i histamina (1372-4a). Apliquen competències de creativitat, resiliència i pensament analític per estructurar una proposta intraemprenedora de detecció ràpida portàtil en centres de salut (1710-3c).",
-        "evidencia_es": "Esquema fisiopatológico de hipersensibilidad y memoria del proyecto intraemprendedor con modelo de implantación asistencial.",
-        "evidencia_ca": "Esquema fisiopatològic d'hipersensibilitat i memòria del projecte intraemprenedor amb model d'implantació assistencial.",
-        "dua_es": "Mapas visuales de cascada inmunológica interactivos y plantillas de ideación adaptadas a trabajo cooperativo accesible.",
-        "dua_ca": "Mapes visuals de cascada immunològica interactius i plantilles d'ideació adaptades a treball cooperatiu accessible.",
-        "metodologia_es": "intraemprendimiento e innovación en salud.",
-        "metodologia_ca": "intraemprenedoria i innovació en salut."
-      }
-    ]
-  },
-  {
-    "a": {
-      "modulo": "1372",
-      "ra": "RA5",
-      "criterios": [
-        "d"
-      ]
-    },
-    "b": {
-      "modulo": "1373",
+      "modulo": "1374",
       "ra": "RA6",
       "criterios": [
         "b"
       ]
     },
-    "justificacion_es": "Incubar muestras celulares con anticuerpos fluorocromados se complementa con la selección de medios específicos para aislamiento micológico.",
-    "justificacion_ca": "Incubar mostres cel·lulars amb anticossos fluorocromats es complementa amb la selecció de mitjans específics per a aïllament micològic.",
+    "justificacion_es": "La ictericia neonatal se interpreta midiendo la bilirrubina y estudiando el grupo del recién nacido y de la madre por si hay incompatibilidad.",
+    "justificacion_ca": "La icterícia neonatal s'interpreta mesurant la bilirubina i estudiant el grup del nadó i de la mare per si hi ha incompatibilitat.",
     "actividades": [
       {
-        "titulo_es": "Marcaje fluorocromático de poblaciones linfocitarias y aislamiento de levaduras en medios con antibióticos",
-        "titulo_ca": "Marcatge fluorocromàtic de poblacions limfocitàries i aïllament de llevats en mitjans amb antibiòtics",
-        "contexto_es": "El laboratorio de citometría y micología de Son Espases procesa muestras de un paciente trasplantado con sospecha de infección fúngica oportunista.",
-        "contexto_ca": "El laboratori de citometria i micologia de Son Espases processa mostres d'un pacient trasplantat amb sospita d'infecció fúngica oportunista.",
-        "desarrollo_es": "Los técnicos incuban células mononucleares con cócteles de monoclonales marcados con FITC, PE y APC para caracterizar el inmunofenotipo de linfocitos T (1372-5d). Seleccionan y preparan placas de agar Sabouraud cloranfenicol y agar cromogénico CHROMagar Candida para aislar levaduras inhibiendo la flora bacteriana comensal (1373-6b).",
-        "desarrollo_ca": "Els tècnics incuben cèl·lules mononuclears amb còctels de monoclonals marcats amb FITC, PE i APC per caracteritzar l'immunofenotip de limfòcits T (1372-5d). Seleccionen i preparen plaques d'agar Sabouraud cloranfenicol i agar cromogènic CHROMagar Candida per aïllar llevats inhibint la flora bacteriana comensal (1373-6b).",
-        "evidencia_es": "Dot plot citométrico con poblaciones teñidas y placas de cultivo con colonias de levaduras pigmentadas diferenciadas.",
-        "evidencia_ca": "Dot plot citomètric amb poblacions tenyides i plaques de cultiu amb colònies de llevats pigmentades diferenciades.",
-        "dua_es": "Gráficas de dispersión con leyendas de color configurables y cartas cromáticas de colonias de levaduras en papel plastificado.",
-        "dua_ca": "Gràfiques de dispersió amb llegendes de color configurables i cartes cromàtiques de colònies de llevats en paper plastificat.",
-        "metodologia_es": "práctica de citometría clínica y micología médica.",
-        "metodologia_ca": "pràctica de citometria clínica i micologia mèdica."
+        "titulo_es": "Un recién nacido amarillo a las veinte horas de vida",
+        "titulo_ca": "Un nadó groc a les vint hores de vida",
+        "contexto_es": "En la maternidad del Hospital de Manacor un recién nacido se pone amarillo antes de las veinticuatro horas de vida.",
+        "contexto_ca": "A la maternitat de l'Hospital de Manacor un nadó es posa groc abans de les vint-i-quatre hores de vida.",
+        "desarrollo_es": "El grupo relaciona una ictericia tan precoz con una causa hemolítica y no fisiológica (1371-3g). Determina el grupo ABO y el Rh del recién nacido en tarjeta de gel y lo compara con el de la madre, A positivo frente a O positivo (1374-6b).",
+        "desarrollo_ca": "El grup relaciona una icterícia tan precoç amb una causa hemolítica i no fisiològica (1371-3g). Determina el grup ABO i l'Rh del nadó en targeta de gel i el compara amb el de la mare, A positiu davant O positiu (1374-6b).",
+        "evidencia_es": "Hoja de resultados del recién nacido con la interpretación.",
+        "evidencia_ca": "Full de resultats del nadó amb la interpretació.",
+        "dua_es": "Gráfico de bilirrubina por horas de vida con zonas de riesgo.",
+        "dua_ca": "Gràfic de bilirubina per hores de vida amb zones de risc.",
+        "metodologia_es": "estudio de caso neonatal.",
+        "metodologia_ca": "estudi de cas neonatal."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1373",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "h"
+      ]
+    },
+    "justificacion_es": "Para plantear un proyecto de laboratorio hay que conocer las empresas del sector, y en microbiología la clasificación incluye su nivel de bioseguridad y su documentación.",
+    "justificacion_ca": "Per plantejar un projecte de laboratori cal conèixer les empreses del sector, i en microbiologia la classificació inclou el nivell de bioseguretat i la documentació.",
+    "actividades": [
+      {
+        "titulo_es": "Un mapa de los laboratorios de microbiología de las islas",
+        "titulo_ca": "Un mapa dels laboratoris de microbiologia de les illes",
+        "contexto_es": "El grupo de proyecto quiere saber qué laboratorios de microbiología hay en las Illes Balears y qué tipo de muestras pueden recibir.",
+        "contexto_ca": "El grup de projecte vol saber quins laboratoris de microbiologia hi ha a les Illes Balears i quin tipus de mostres poden rebre.",
+        "desarrollo_es": "El alumnado clasifica los laboratorios por titularidad y servicio: hospitalarios, privados, de salud pública, veterinarios y de aguas (1375-1a). Para cada uno caracteriza el nivel de bioseguridad de sus instalaciones (1373-1b), describe su estructura de áreas (1375-1b) y recoge qué documentación de prevención y medio ambiente debe tener al día (1373-1h).",
+        "desarrollo_ca": "L'alumnat classifica els laboratoris per titularitat i servei: hospitalaris, privats, de salut pública, veterinaris i d'aigües (1375-1a). Per a cadascun caracteritza el nivell de bioseguretat de les instal·lacions (1373-1b), descriu la seva estructura d'àrees (1375-1b) i recull quina documentació de prevenció i medi ambient ha de tenir al dia (1373-1h).",
+        "evidencia_es": "Mapa interactivo de laboratorios con fichas.",
+        "evidencia_ca": "Mapa interactiu de laboratoris amb fitxes.",
+        "dua_es": "Plantilla de ficha común y mapa con leyenda de colores.",
+        "dua_ca": "Plantilla de fitxa comuna i mapa amb llegenda de colors.",
+        "metodologia_es": "investigación en equipo.",
+        "metodologia_ca": "recerca en equip."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA7",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "La necesidad de plasma para fabricar medicamentos es una demanda real del sector que puede convertirse en un proyecto de obtención de hemoderivados.",
+    "justificacion_ca": "La necessitat de plasma per fabricar medicaments és una demanda real del sector que es pot convertir en un projecte d'obtenció d'hemoderivats.",
+    "actividades": [
+      {
+        "titulo_es": "Más plasma para fabricar inmunoglobulinas",
+        "titulo_ca": "Més plasma per fabricar immunoglobulines",
+        "contexto_es": "El Banc de Sang quiere aumentar la recogida de plasma para la industria que fabrica inmunoglobulinas y albúmina.",
+        "contexto_ca": "El Banc de Sang vol augmentar la recollida de plasma per a la indústria que fabrica immunoglobulines i albúmina.",
+        "desarrollo_es": "El grupo identifica qué demandan los hospitales y la industria: plasma de calidad, en volumen suficiente y con trazabilidad (1375-1c). En el laboratorio prepara plasma fresco congelado a partir de sangre total y anota tiempos, temperaturas y volúmenes como base del proyecto (1374-7d).",
+        "desarrollo_ca": "El grup identifica què demanden els hospitals i la indústria: plasma de qualitat, en volum suficient i amb traçabilitat (1375-1c). Al laboratori prepara plasma fresc congelat a partir de sang total i anota temps, temperatures i volums com a base del projecte (1374-7d).",
+        "evidencia_es": "Ficha de necesidades y registro de preparación del plasma.",
+        "evidencia_ca": "Fitxa de necessitats i registre de preparació del plasma.",
+        "dua_es": "Infografía del destino del plasma donado.",
+        "dua_ca": "Infografia del destí del plasma donat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1372",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Proponer la citometría de flujo para un hospital comarcal exige definir el proyecto y entender cómo funciona el equipo.",
+    "justificacion_ca": "Proposar la citometria de flux per a un hospital comarcal exigeix definir el projecte i entendre com funciona l'equip.",
+    "actividades": [
+      {
+        "titulo_es": "Citometría de flujo para el Hospital Comarcal de Inca",
+        "titulo_ca": "Citometria de flux per a l'Hospital Comarcal d'Inca",
+        "contexto_es": "El Hospital Comarcal de Inca envía a Palma todas sus muestras de citometría y el retraso afecta a los pacientes hematológicos.",
+        "contexto_ca": "L'Hospital Comarcal d'Inca envia a Palma totes les mostres de citometria i el retard afecta els pacients hematològics.",
+        "desarrollo_es": "El equipo identifica que el proyecto adecuado es instalar un citómetro de cuatro colores para los paneles más frecuentes (1375-1e). Detalla el funcionamiento del citómetro, fluídica, óptica y electrónica (1372-5a), y con ello determina las características que debe tener el proyecto: espacio, personal formado y conexión informática (1375-1f).",
+        "desarrollo_ca": "L'equip identifica que el projecte adequat és instal·lar un citòmetre de quatre colors per als panells més freqüents (1375-1e). Detalla el funcionament del citòmetre, fluídica, òptica i electrònica (1372-5a), i amb això determina les característiques que ha de tenir el projecte: espai, personal format i connexió informàtica (1375-1f).",
+        "evidencia_es": "Ficha técnica del proyecto con esquema del citómetro.",
+        "evidencia_ca": "Fitxa tècnica del projecte amb esquema del citòmetre.",
+        "dua_es": "Esquema del citómetro por bloques y glosario técnico.",
+        "dua_ca": "Esquema del citòmetre per blocs i glossari tècnic.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes reals."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1373",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Un laboratorio de análisis de aguas trabaja con recuentos bacterianos normalizados y está sujeto a obligaciones fiscales, laborales y de prevención.",
+    "justificacion_ca": "Un laboratori d'anàlisi d'aigües treballa amb recomptes bacterians normalitzats i està subjecte a obligacions fiscals, laborals i de prevenció.",
+    "actividades": [
+      {
+        "titulo_es": "Abrir un laboratorio de análisis de aguas en Inca",
+        "titulo_ca": "Obrir un laboratori d'anàlisi d'aigües a Inca",
+        "contexto_es": "Dos antiguos alumnos quieren abrir en Inca un pequeño laboratorio de análisis microbiológico de aguas de consumo y de piscinas.",
+        "contexto_ca": "Dos antics alumnes volen obrir a Inca un petit laboratori d'anàlisi microbiològica d'aigües de consum i de piscines.",
+        "desarrollo_es": "Los estudiantes aplican la técnica de recuento por filtración de membrana para coliformes y enterococos (1373-4f). A partir del servicio que van a ofrecer determinan las obligaciones del proyecto: alta fiscal, contratación, evaluación de riesgos y acreditación (1375-1g).",
+        "desarrollo_ca": "Els estudiants apliquen la tècnica de recompte per filtració de membrana per a coliformes i enterococs (1373-4f). A partir del servei que oferiran determinen les obligacions del projecte: alta fiscal, contractació, avaluació de riscs i acreditació (1375-1g).",
+        "evidencia_es": "Lista de obligaciones con plazos y hoja de recuento validada.",
+        "evidencia_ca": "Llista d'obligacions amb terminis i full de recompte validat.",
+        "dua_es": "Lista de comprobación de obligaciones con enlaces a modelos.",
+        "dua_ca": "Llista de comprovació d'obligacions amb enllaços a models.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1371",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "g"
+      ]
+    },
+    "justificacion_es": "Buscar financiación para renovar equipos obliga a conocer sus componentes y su principio de medida.",
+    "justificacion_ca": "Cercar finançament per renovar equips obliga a conèixer-ne els components i el principi de mesura.",
+    "actividades": [
+      {
+        "titulo_es": "Una subvención para renovar el osmómetro del laboratorio",
+        "titulo_ca": "Una subvenció per renovar l'osmòmetre del laboratori",
+        "contexto_es": "El laboratorio del Hospital de Formentera quiere presentarse a una convocatoria de ayudas para renovar equipos de bioquímica.",
+        "contexto_ca": "El laboratori de l'Hospital de Formentera vol presentar-se a una convocatòria d'ajudes per renovar equips de bioquímica.",
+        "desarrollo_es": "El grupo identifica la convocatoria de ayudas para tecnología sanitaria a la que puede optar el proyecto (1375-1h). En la memoria técnica describe el fundamento de la osmometría por descenso crioscópico (1371-1g) y los componentes del osmómetro y del analizador que se quieren sustituir (1371-1b).",
+        "desarrollo_ca": "El grup identifica la convocatòria d'ajudes per a tecnologia sanitària a la qual pot optar el projecte (1375-1h). En la memòria tècnica descriu el fonament de l'osmometria per descens crioscòpic (1371-1g) i els components de l'osmòmetre i de l'analitzador que es volen substituir (1371-1b).",
+        "evidencia_es": "Memoria técnica para la solicitud de ayuda.",
+        "evidencia_ca": "Memòria tècnica per a la sol·licitud d'ajuda.",
+        "dua_es": "Modelo de memoria con apartados guiados.",
+        "dua_ca": "Model de memòria amb apartats guiats.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA1",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1371",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Un atlas digital de sedimento urinario es un proyecto útil para el laboratorio que exige un guion de trabajo claro.",
+    "justificacion_ca": "Un atles digital de sediment urinari és un projecte útil per al laboratori que exigeix un guió de feina clar.",
+    "actividades": [
+      {
+        "titulo_es": "Un atlas digital del sedimento para el laboratorio de Can Misses",
+        "titulo_ca": "Un atles digital del sediment per al laboratori de Can Misses",
+        "contexto_es": "Los técnicos nuevos de Can Misses tienen dudas al identificar cilindros y cristales, y el laboratorio quiere un atlas propio.",
+        "contexto_ca": "Els tècnics nous de Can Misses tenen dubtes en identificar cilindres i cristalls, i el laboratori vol un atles propi.",
+        "desarrollo_es": "El alumnado elabora el guion de trabajo del proyecto: tareas, responsables, plazos y formato del atlas (1375-1i). Como primera tarea captura y clasifica imágenes de sedimentos reales y crea el archivo digital con nombres normalizados (1371-5d).",
+        "desarrollo_ca": "L'alumnat elabora el guió de feina del projecte: tasques, responsables, terminis i format de l'atles (1375-1i). Com a primera tasca captura i classifica imatges de sediments reals i crea l'arxiu digital amb noms normalitzats (1371-5d).",
+        "evidencia_es": "Guion del proyecto y primeras cincuenta imágenes catalogadas.",
+        "evidencia_ca": "Guió del projecte i primeres cinquanta imatges catalogades.",
+        "dua_es": "Plantilla de guion y convención de nombres con ejemplos.",
+        "dua_ca": "Plantilla de guió i convenció de noms amb exemples.",
+        "metodologia_es": "proyecto colaborativo.",
+        "metodologia_ca": "projecte col·laboratiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1373",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Valorar la sustitución de las galerías manuales por sistemas multiprueba automatizados exige recopilar información y estudiar la viabilidad técnica.",
+    "justificacion_ca": "Valorar la substitució de les galeries manuals per sistemes multiprova automatitzats exigeix recopilar informació i estudiar la viabilitat tècnica.",
+    "actividades": [
+      {
+        "titulo_es": "Galerías manuales o identificación automatizada en Can Misses",
+        "titulo_ca": "Galeries manuals o identificació automatitzada a Can Misses",
+        "contexto_es": "El laboratorio de microbiología de Can Misses identifica todavía muchas bacterias con galerías manuales y estudia automatizarlo.",
+        "contexto_ca": "El laboratori de microbiologia de Can Misses encara identifica molts bacteris amb galeries manuals i estudia automatitzar-ho.",
+        "desarrollo_es": "El grupo recopila información sobre los sistemas disponibles, sus paneles y su conexión al sistema informático (1375-2a). Utiliza en el laboratorio un sistema multiprueba para confirmar varios aislamientos (1373-5e) y, con los tiempos y resultados obtenidos, redacta el estudio de viabilidad técnica (1375-2b).",
+        "desarrollo_ca": "El grup recopila informació sobre els sistemes disponibles, els seus panells i la connexió al sistema informàtic (1375-2a). Fa servir al laboratori un sistema multiprova per confirmar diversos aïllaments (1373-5e) i, amb els temps i resultats obtinguts, redacta l'estudi de viabilitat tècnica (1375-2b).",
+        "evidencia_es": "Estudio de viabilidad técnica con datos propios.",
+        "evidencia_ca": "Estudi de viabilitat tècnica amb dades pròpies.",
+        "dua_es": "Tabla comparativa con criterios ponderados.",
+        "dua_ca": "Taula comparativa amb criteris ponderats.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1371",
+      "ra": "RA1",
+      "criterios": [
+        "j"
+      ]
+    },
+    "justificacion_es": "El presupuesto de un proyecto de bioquímica depende del uso eficiente de reactivos, calibradores y controles.",
+    "justificacion_ca": "El pressupost d'un projecte de bioquímica depèn de l'ús eficient de reactius, calibradors i controls.",
+    "actividades": [
+      {
+        "titulo_es": "El coste real de cada glucosa que se procesa",
+        "titulo_ca": "El cost real de cada glucosa que es processa",
+        "contexto_es": "La dirección de un laboratorio privado de Palma pide un presupuesto anual del área de bioquímica general.",
+        "contexto_ca": "La direcció d'un laboratori privat de Palma demana un pressupost anual de l'àrea de bioquímica general.",
+        "desarrollo_es": "Los estudiantes definen qué es un uso eficiente: tamaño de los kits, estabilidad a bordo y frecuencia de calibración (1371-1j). Prevén el personal y el material necesarios (1375-2e) y calculan el presupuesto con el coste por determinación, incluidos controles y repeticiones (1375-2f).",
+        "desarrollo_ca": "Els estudiants defineixen què és un ús eficient: mida dels kits, estabilitat a bord i freqüència de calibratge (1371-1j). Preveuen el personal i el material necessaris (1375-2e) i calculen el pressupost amb el cost per determinació, inclosos controls i repeticions (1375-2f).",
+        "evidencia_es": "Hoja de cálculo del presupuesto con justificación.",
+        "evidencia_ca": "Full de càlcul del pressupost amb justificació.",
+        "dua_es": "Plantilla de presupuesto con fórmulas ya preparadas.",
+        "dua_ca": "Plantilla de pressupost amb fórmules ja preparades.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1372",
+      "ra": "RA1",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "El diseño de un proyecto de serología debe prever cómo se garantizará la calidad de los ensayos.",
+    "justificacion_ca": "El disseny d'un projecte de serologia ha de preveure com es garantirà la qualitat dels assaigs.",
+    "actividades": [
+      {
+        "titulo_es": "Asegurar la calidad de un nuevo servicio de serología",
+        "titulo_ca": "Assegurar la qualitat d'un nou servei de serologia",
+        "contexto_es": "Un laboratorio privado de Maó quiere ofrecer serologías infecciosas y debe incluir en su proyecto el sistema de calidad.",
+        "contexto_ca": "Un laboratori privat de Maó vol oferir serologies infeccioses i ha d'incloure en el projecte el sistema de qualitat.",
+        "desarrollo_es": "Con los ensayos del laboratorio, el alumnado efectúa el control de calidad interno de una serie de serologías y lo registra (1372-1i). A partir de esa experiencia identifica qué aspectos debe controlar el proyecto: controles, intercomparaciones, formación y quejas (1375-2i).",
+        "desarrollo_ca": "Amb els assaigs del laboratori, l'alumnat fa el control de qualitat intern d'una sèrie de serologies i el registra (1372-1i). A partir d'aquesta experiència identifica quins aspectes ha de controlar el projecte: controls, intercomparacions, formació i queixes (1375-2i).",
+        "evidencia_es": "Registro de control y plan de calidad del proyecto.",
+        "evidencia_ca": "Registre de control i pla de qualitat del projecte.",
+        "dua_es": "Gráfico de Levey-Jennings explicado con colores.",
+        "dua_ca": "Gràfic de Levey-Jennings explicat amb colors.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "g",
+        "h"
+      ]
+    },
+    "justificacion_es": "Implantar la validación automática de hemogramas es un proyecto con fases y objetivos que parte de cómo el analizador expresa resultados y alarmas.",
+    "justificacion_ca": "Implantar la validació automàtica d'hemogrames és un projecte amb fases i objectius que parteix de com l'analitzador expressa resultats i alarmes.",
+    "actividades": [
+      {
+        "titulo_es": "Que el contador valide solo los hemogramas normales",
+        "titulo_ca": "Que el comptador validi només els hemogrames normals",
+        "contexto_es": "Hematología de Son Llàtzer procesa mil hemogramas al día y quiere que los normales se validen automáticamente.",
+        "contexto_ca": "Hematologia de Son Llàtzer processa mil hemogrames al dia i vol que els normals es validin automàticament.",
+        "desarrollo_es": "Los técnicos procesan muestras, obtienen los informes (1374-2g) y analizan las alarmas que emite el aparato (1374-2c). Validan manualmente una serie siguiendo el protocolo (1374-2h) para fijar el objetivo del proyecto, validar sin revisión el 60 % de hemogramas (1375-2d), y dividirlo en fases: reglas, prueba en paralelo e implantación (1375-2c).",
+        "desarrollo_ca": "Els tècnics processen mostres, obtenen els informes (1374-2g) i analitzen les alarmes que emet l'aparell (1374-2c). Validen manualment una sèrie seguint el protocol (1374-2h) per fixar l'objectiu del projecte, validar sense revisió el 60 % d'hemogrames (1375-2d), i dividir-lo en fases: regles, prova en paral·lel i implantació (1375-2c).",
+        "evidencia_es": "Documento de fases y objetivos con el análisis de alarmas.",
+        "evidencia_ca": "Document de fases i objectius amb l'anàlisi d'alarmes.",
+        "dua_es": "Tabla de alarmas con su significado y acción.",
+        "dua_ca": "Taula d'alarmes amb el significat i l'acció.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1371",
+      "ra": "RA3",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "La documentación de diseño de un proyecto de función renal incluye el modelo de informe técnico que se entregará.",
+    "justificacion_ca": "La documentació de disseny d'un projecte de funció renal inclou el model d'informe tècnic que es lliurarà.",
+    "actividades": [
+      {
+        "titulo_es": "Un informe de función renal más claro para atención primaria",
+        "titulo_ca": "Un informe de funció renal més clar per a atenció primària",
+        "contexto_es": "Los médicos de familia de Llucmajor piden un informe de función renal que incluya el filtrado estimado y la albuminuria en una sola hoja.",
+        "contexto_ca": "Els metges de família de Llucmajor demanen un informe de funció renal que inclogui el filtrat estimat i l'albuminúria en un sol full.",
+        "desarrollo_es": "El grupo cumplimenta varios informes técnicos de función renal con creatinina, urea, filtrado y cociente albúmina-creatinina (1371-3i). A partir de ellos define y elabora la documentación de diseño: nuevo modelo de informe, glosario y guía de interpretación (1375-2h).",
+        "desarrollo_ca": "El grup emplena diversos informes tècnics de funció renal amb creatinina, urea, filtrat i quocient albúmina-creatinina (1371-3i). A partir d'aquests defineix i elabora la documentació de disseny: nou model d'informe, glossari i guia d'interpretació (1375-2h).",
+        "evidencia_es": "Nuevo modelo de informe y guía de interpretación.",
+        "evidencia_ca": "Nou model d'informe i guia d'interpretació.",
+        "dua_es": "Informe con iconos y semáforo de valores.",
+        "dua_ca": "Informe amb icones i semàfor de valors.",
+        "metodologia_es": "diseño centrado en el usuario.",
+        "metodologia_ca": "disseny centrat en l'usuari."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1371",
+      "ra": "RA7",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Llevar gasómetros a la UCI es un proyecto que exige prever recursos y conocer las técnicas de gases, electrolitos y osmolalidad.",
+    "justificacion_ca": "Portar gasòmetres a l'UCI és un projecte que exigeix preveure recursos i conèixer les tècniques de gasos, electròlits i osmolalitat.",
+    "actividades": [
+      {
+        "titulo_es": "Gasómetros a pie de cama en la UCI de Can Misses",
+        "titulo_ca": "Gasòmetres a peu de llit a l'UCI de Can Misses",
+        "contexto_es": "La UCI de Can Misses quiere un gasómetro propio para no esperar los resultados del laboratorio central.",
+        "contexto_ca": "L'UCI de Can Misses vol un gasòmetre propi per no esperar els resultats del laboratori central.",
+        "desarrollo_es": "El alumnado describe cómo miden los electrodos de pH, pCO2, pO2, sodio y potasio (1371-7c) y cómo se calcula o mide la osmolalidad (1371-7b). Con esa base prevé los recursos del proyecto: equipo, cartuchos, controles, formación de enfermería y técnico responsable (1375-2e).",
+        "desarrollo_ca": "L'alumnat descriu com mesuren els elèctrodes de pH, pCO2, pO2, sodi i potassi (1371-7c) i com es calcula o es mesura l'osmolalitat (1371-7b). Amb aquesta base preveu els recursos del projecte: equip, cartutxos, controls, formació d'infermeria i tècnic responsable (1375-2e).",
+        "evidencia_es": "Tabla de recursos del proyecto con justificación técnica.",
+        "evidencia_ca": "Taula de recursos del projecte amb justificació tècnica.",
+        "dua_es": "Esquema de electrodos con colores y animación.",
+        "dua_ca": "Esquema d'elèctrodes amb colors i animació.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1372",
+      "ra": "RA7",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Antes de cambiar una técnica de histocompatibilidad hay que estudiar la viabilidad técnica del cambio a partir de la técnica actual.",
+    "justificacion_ca": "Abans de canviar una tècnica d'histocompatibilitat cal estudiar la viabilitat tècnica del canvi a partir de la tècnica actual.",
+    "actividades": [
+      {
+        "titulo_es": "¿Dejamos la microlinfocitotoxicidad por técnicas moleculares?",
+        "titulo_ca": "Deixam la microlimfocitotoxicitat per tècniques moleculars?",
+        "contexto_es": "El laboratorio de histocompatibilidad de Son Espases aún hace pruebas cruzadas por microlinfocitotoxicidad y se plantea cambiarlas.",
+        "contexto_ca": "El laboratori d'histocompatibilitat de Son Espases encara fa proves creuades per microlimfocitotoxicitat i es planteja canviar-les.",
+        "desarrollo_es": "Los alumnos leen al microscopio de fluorescencia las placas de microlinfocitotoxicidad y registran el porcentaje de células muertas (1372-7f). Con los tiempos y las dificultades de lectura elaboran el estudio de viabilidad técnica de pasar a técnicas en fase sólida o moleculares (1375-2b).",
+        "desarrollo_ca": "Els alumnes llegeixen al microscopi de fluorescència les plaques de microlimfocitotoxicitat i registren el percentatge de cèl·lules mortes (1372-7f). Amb els temps i les dificultats de lectura elaboren l'estudi de viabilitat tècnica de passar a tècniques en fase sòlida o moleculars (1375-2b).",
+        "evidencia_es": "Estudio de viabilidad con lecturas de placas.",
+        "evidencia_ca": "Estudi de viabilitat amb lectures de plaques.",
+        "dua_es": "Escala de lectura con imágenes de cada puntuación.",
+        "dua_ca": "Escala de lectura amb imatges de cada puntuació.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1373",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
+    "justificacion_es": "Preparar los medios de toda una semana es una actividad que hay que secuenciar y planificar en tiempos y personas.",
+    "justificacion_ca": "Preparar els medis de tota una setmana és una activitat que cal seqüenciar i planificar en temps i persones.",
+    "actividades": [
+      {
+        "titulo_es": "El planning de medios de cultivo de una semana con festivo",
+        "titulo_ca": "El planning de medis de cultiu d'una setmana amb festiu",
+        "contexto_es": "La semana de Sant Joan el laboratorio de microbiología de Ciutadella tiene un festivo y debe adelantar la preparación de medios.",
+        "contexto_ca": "La setmana de Sant Joan el laboratori de microbiologia de Ciutadella té un festiu i ha d'avançar la preparació de medis.",
+        "desarrollo_es": "El equipo describe los protocolos de preparación de medios sólidos y líquidos (1373-3c) y prepara un lote de placas (1373-3e). Con los tiempos medidos secuencia las tareas de la semana (1375-3a) y asigna personas, autoclave y estufas a cada día (1375-3f).",
+        "desarrollo_ca": "L'equip descriu els protocols de preparació de medis sòlids i líquids (1373-3c) i prepara un lot de plaques (1373-3e). Amb els temps mesurats seqüencia les tasques de la setmana (1375-3a) i assigna persones, autoclau i estufes a cada dia (1375-3f).",
+        "evidencia_es": "Cronograma semanal y registro del lote preparado.",
+        "evidencia_ca": "Cronograma setmanal i registre del lot preparat.",
+        "dua_es": "Diagrama de Gantt con colores por medio.",
+        "dua_ca": "Diagrama de Gantt amb colors per medi.",
+        "metodologia_es": "planificación cooperativa.",
+        "metodologia_ca": "planificació cooperativa."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1374",
+      "ra": "RA7",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Distribuir hemoderivados desde Palma a los hospitales de Menorca, Eivissa y Formentera es un reto logístico que hay que planificar.",
+    "justificacion_ca": "Distribuir hemoderivats des de Palma als hospitals de Menorca, Eivissa i Formentera és un repte logístic que cal planificar.",
+    "actividades": [
+      {
+        "titulo_es": "Hemoderivados en barco y en avión hacia Menorca y las Pitiusas",
+        "titulo_ca": "Hemoderivats en vaixell i en avió cap a Menorca i les Pitiüses",
+        "contexto_es": "Un temporal deja sin barcos a Menorca dos días y el hospital pide plaquetas urgentes al Banc de Sang.",
+        "contexto_ca": "Un temporal deixa sense vaixells Menorca dos dies i l'hospital demana plaquetes urgents al Banc de Sang.",
+        "desarrollo_es": "Los estudiantes gestionan la distribución de las unidades según las peticiones de cada hospital (1374-7f). Para el proyecto determinan los recursos logísticos: neveras validadas, registradores de temperatura, rutas alternativas y avisos (1375-3b).",
+        "desarrollo_ca": "Els estudiants gestionen la distribució de les unitats segons les peticions de cada hospital (1374-7f). Per al projecte determinen els recursos logístics: neveres validades, registradors de temperatura, rutes alternatives i avisos (1375-3b).",
+        "evidencia_es": "Plan logístico con escenarios de contingencia.",
+        "evidencia_ca": "Pla logístic amb escenaris de contingència.",
+        "dua_es": "Mapa de rutas con tiempos y medios de transporte.",
+        "dua_ca": "Mapa de rutes amb temps i mitjans de transport.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1375",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1372",
+      "ra": "RA7",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Un estudio de paternidad necesita permisos y consentimientos específicos además de la técnica de histocompatibilidad o de ADN.",
+    "justificacion_ca": "Un estudi de paternitat necessita permisos i consentiments específics a més de la tècnica d'histocompatibilitat o d'ADN.",
+    "actividades": [
+      {
+        "titulo_es": "Un estudio de paternidad pedido por un juzgado de Palma",
+        "titulo_ca": "Un estudi de paternitat demanat per un jutjat de Palma",
+        "contexto_es": "Un juzgado de Palma encarga a un laboratorio privado un estudio de paternidad con cadena de custodia.",
+        "contexto_ca": "Un jutjat de Palma encarrega a un laboratori privat un estudi de paternitat amb cadena de custòdia.",
+        "desarrollo_es": "El alumnado determina qué estudios genéticos se hacen en una prueba de paternidad y por qué hoy se usan marcadores de ADN además del HLA (1372-7c). Identifica los permisos y autorizaciones: orden judicial, consentimiento informado y cadena de custodia documentada (1375-3c).",
+        "desarrollo_ca": "L'alumnat determina quins estudis genètics es fan en una prova de paternitat i per què avui es fan servir marcadors d'ADN a més de l'HLA (1372-7c). Identifica els permisos i autoritzacions: ordre judicial, consentiment informat i cadena de custòdia documentada (1375-3c).",
+        "evidencia_es": "Expediente con autorizaciones y procedimiento técnico.",
+        "evidencia_ca": "Expedient amb autoritzacions i procediment tècnic.",
+        "dua_es": "Esquema de la cadena de custodia con firmas.",
+        "dua_ca": "Esquema de la cadena de custòdia amb signatures.",
+        "metodologia_es": "estudio de caso legal.",
+        "metodologia_ca": "estudi de cas legal."
       }
     ]
   }

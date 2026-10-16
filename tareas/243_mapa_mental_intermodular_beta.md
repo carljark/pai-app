@@ -55,7 +55,12 @@ Se publica para todos los usuarios con la etiqueta **«beta»**. Convive con la 
 - `cd frontend && npm test`: lint, 94 archivos de test, 993 tests en verde (1 omitido, ya existente) y umbrales de cobertura cumplidos. Todos los archivos nuevos tienen al menos un 93 % por métrica. `check-zoneless` también pasa.
 - `cd backend && npm test`: 39 archivos y 461 tests en verde.
 - `npx ng build`: compila. El bundle inicial transfiere unos 431 kB estimados.
-- **Revisión visual:** no se pudo levantar el entorno Docker (el daemon no estaba arrancado) ni conectar el navegador de Playwright. En su lugar se generó un SVG con las mismas funciones de árbol, layout y render y los datos reales de `mapa_cfgs_laboratorio_clinico_2.json`, y se revisó como imagen. De esa revisión salieron los dos ajustes de etiquetas descritos arriba. La comprobación interactiva se hace en producción tras el despliegue.
+- **Revisión visual:** no se pudo levantar el entorno Docker (el daemon no estaba arrancado) ni conectar el navegador de Playwright. En su lugar se generó un SVG con las mismas funciones de árbol, layout y render y los datos reales de `mapa_cfgs_laboratorio_clinico_2.json`, y se revisó como imagen. De esa revisión salieron los dos ajustes de etiquetas descritos arriba. La comprobación interactiva queda pendiente de hacerse en producción.
+- **Despliegue** con `./scripts/deploy-prod.sh` (commit `22528f8`):
+  - copia de seguridad previa `pai_db_20261016_152729.archive.gz`;
+  - contenedores `pai_frontend_prod` y `pai_backend_prod` levantados y migraciones al día;
+  - la API del mapa y el frontend responden 200;
+  - el bundle servido (`main-HMNHZIOC.js`) incluye el mapa mental.
 
 ## Desviaciones respecto al plan
 - **Filtro de la leyenda:** el plan hablaba de filtrar por tipo de competencia. Se implementó como leyenda pulsable en el propio mapa mental, y además se respetan la búsqueda y el filtro por tipo de módulo de la cabecera.

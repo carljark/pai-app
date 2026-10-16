@@ -1,4 +1,4 @@
-<div class="mapa-tabs">
+<div class="mapa-tabs" [class.mapa-tabs--inline]="inline()">
   <label class="mapa-tabs__field">
     <span class="mapa-tabs__label">{{ isCa() ? 'Cicle' : 'Ciclo' }}</span>
     <select
@@ -7,7 +7,10 @@
       (change)="selectCiclo($any($event.target).value)"
     >
       @for (ciclo of ciclos(); track ciclo.tipoNivel) {
-        <option [value]="ciclo.tipoNivel" [selected]="ciclo.tipoNivel === activeConfig()?.nivel?.id">
+        <option
+          [value]="ciclo.tipoNivel"
+          [selected]="ciclo.tipoNivel === activeConfig()?.nivel?.id"
+        >
           {{ cicloLabel(ciclo.tabs[0]!) }}
         </option>
       }

@@ -140,20 +140,27 @@ describe('MapaIntermodularViewComponent', () => {
     expect(component.isCa()).toBe(false);
   });
 
-  it('should click header main row and stats toggle button in DOM', () => {
+  it('pone título, ciclo, curso, selector de vista y filtros en la fila de la cabecera', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const mainRow = compiled.querySelector('.mapa-header__main-row') as HTMLElement;
-    expect(mainRow).toBeTruthy();
+    expect(mainRow.querySelector('.mapa-header__title')).toBeTruthy();
+    expect(
+      mainRow.querySelector('.mapa-header__slot .mapa-tabs--inline .mapa-tabs__select'),
+    ).toBeTruthy();
+    expect(mainRow.querySelector('.mapa-tabs__extra app-mapa-vista-toggle')).toBeTruthy();
     expect(component.headerExpanded()).toBe(false);
 
-    // Click main row to expand
+    // La fila ya no despliega la cabecera: solo el botón de filtros
     mainRow.click();
     fixture.detectChanges();
-    expect(component.headerExpanded()).toBe(true);
+    expect(component.headerExpanded()).toBe(false);
 
-    // Click toggle button inside main row
     const toggleBtn = compiled.querySelector('.mapa-stats-toggle-btn') as HTMLButtonElement;
-    expect(toggleBtn).toBeTruthy();
+    expect(toggleBtn.getAttribute('aria-expanded')).toBe('false');
+    toggleBtn.click();
+    fixture.detectChanges();
+    expect(component.headerExpanded()).toBe(true);
+    expect(toggleBtn.getAttribute('aria-expanded')).toBe('true');
     toggleBtn.click();
     fixture.detectChanges();
     expect(component.headerExpanded()).toBe(false);
@@ -697,10 +704,8 @@ describe('MapaIntermodularViewComponent', () => {
     expect(moduleSpy).toHaveBeenCalled();
 
     const mainRow = root.querySelector('.mapa-header__main-row') as HTMLElement;
-    mainRow.querySelector('.mapa-header__title-group')!.dispatchEvent(enter());
-    expect(headerSpy).not.toHaveBeenCalled();
     mainRow.dispatchEvent(enter());
-    expect(headerSpy).toHaveBeenCalled();
+    expect(headerSpy).not.toHaveBeenCalled();
   });
 
   it('should toggle accordion steps 1, 2 and 3 and update classes in DOM', () => {
@@ -1046,7 +1051,7 @@ describe('MapaIntermodularViewComponent', () => {
     fixture.detectChanges();
     (el.querySelectorAll('.mapa-tabs__curso')[1] as HTMLButtonElement).click();
     fixture.detectChanges();
-    (el.querySelector('.mapa-header__main-row') as HTMLElement).click();
+    (el.querySelector('.mapa-stats-toggle-btn') as HTMLElement).click();
     fixture.detectChanges();
 
     expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL_2');
@@ -1057,7 +1062,9 @@ describe('MapaIntermodularViewComponent', () => {
     expect(el.textContent).toContain('Mòduls CFGS');
     expect(el.textContent).toContain('Propostes d’Activitats i Reptes CFGS');
     expect(el.textContent).toContain('Aprenentatges i Diversitat CFGS:');
-    expect(el.querySelector('app-mapa-header')?.textContent).not.toContain('CFGM');
+    // La cabecera incluye el desplegable con todos los ciclos: se comprueban sus propios textos
+    expect(el.querySelector('.mapa-header__title')?.textContent).not.toContain('CFGM');
+    expect(el.querySelector('.mapa-header__expanded-body')?.textContent).not.toContain('CFGM');
     expect(el.querySelector('app-activities-grid')?.textContent).not.toContain('CFGM');
 
     component.layout.language.set('castellano');

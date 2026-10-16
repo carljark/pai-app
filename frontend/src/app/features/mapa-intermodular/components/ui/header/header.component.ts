@@ -28,8 +28,11 @@ export class MapaHeaderComponent {
   /** Pestaña activa con su nivel del catálogo. */
   tab = computed(() => this.niveles.mapaTab(this.activeTab()));
 
-  /** Título con el nombre del ciclo y el curso de la pestaña activa. */
-  title = computed(() => `Mapa intermodular del ${mapaTabLabel(this.tab(), this.isCa())}`);
+  /**
+   * Resto del título («del <ciclo> <curso>»): solo para lectores de pantalla, porque el ciclo
+   * y el curso ya se ven en los selectores de la misma fila.
+   */
+  titleDetail = computed(() => `del ${mapaTabLabel(this.tab(), this.isCa())}`);
 
   /** Subtítulo: el curso del mapa (o el único del ciclo) o, si abarca varios, el ciclo. */
   subtitle = computed(() => {

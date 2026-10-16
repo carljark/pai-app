@@ -71,6 +71,16 @@ A petición del usuario, tras ver la beta en producción:
 
 Verificación: `npm test` del frontend en verde, con dos comprobaciones nuevas de la posición del selector.
 
+## Ajuste posterior: título, ciclo, vista y filtros en una fila
+- **Dentro de la cabecera:** en los mapas de FP, `app-mapa-tabs` (con `inline`, sin caja propia) y el selector de vista se proyectan dentro de la fila principal de `app-mapa-header`, mediante el hueco `mapa-header__slot`.
+- **Escritorio (≥ 1024 px):** una sola fila con el título, el ciclo, el curso, la vista y el botón de filtros.
+- **Móvil:** el título y el botón de filtros arriba (en < 640 px el botón solo muestra el icono) y los selectores debajo a todo el ancho. Esta parte no se ha revisado en un navegador.
+- **Título:** se ve «Mapa intermodular». El resto («del <ciclo> <curso>») queda solo para lectores de pantalla, porque ya aparece en los selectores.
+- **Despliegue de la cabecera:** solo lo hace el botón de filtros, que ahora tiene `aria-expanded`. La fila ya no es pulsable porque contiene controles.
+- **Carga:** la cabecera se mantiene mientras carga un curso; el esqueleto sale debajo. Así el selector no salta de sitio al cambiar de ciclo.
+- **Afinidades de la ESO:** siguen con `app-mapa-tabs` suelto encima de su vista.
+- **Mapa mental:** pasa a `calc(100vh - 120px)` de alto.
+
 ## Desviaciones respecto al plan
 - **Filtro de la leyenda:** el plan hablaba de filtrar por tipo de competencia. Se implementó como leyenda pulsable en el propio mapa mental, y además se respetan la búsqueda y el filtro por tipo de módulo de la cabecera.
 - **Selector de vista:** va encima de la cabecera en lugar de en un hueco `ng-content` dentro de ella.

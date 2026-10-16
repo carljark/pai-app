@@ -1,3 +1,5 @@
+@use '../../../../../../styles/mixins' as mixins;
+
 /* Header Styles (Ultra Compact & Expandable) */
 .mapa-header {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
@@ -12,18 +14,47 @@
     padding: 14px 18px;
   }
 
+  /* Móvil: título y filtros arriba, selectores debajo a todo el ancho.
+     Escritorio: todo en una fila. */
   &__main-row {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-    cursor: pointer;
+    gap: 8px 12px;
   }
 
   &__title-group {
+    order: 1;
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
+  }
+
+  &__slot {
+    order: 3;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .mapa-stats-toggle-btn {
+    order: 2;
+  }
+
+  @include mixins.mq(lg) {
+    &__title-group {
+      flex: 0 0 auto;
+    }
+
+    &__slot {
+      order: 2;
+      flex: 1 1 0;
+    }
+
+    .mapa-stats-toggle-btn {
+      order: 3;
+    }
   }
 
   &__icon {
@@ -43,6 +74,30 @@
     color: #0c4a6e;
     margin: 0;
     line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  /* El ciclo y el curso ya se ven en los selectores: solo para lectores de pantalla. */
+  &__title-detail {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  &__filter-icon {
+    flex-shrink: 0;
+  }
+
+  /* En pantallas estrechas el botón de filtros solo muestra el icono. */
+  &__toggle-text {
+    display: none;
+
+    @include mixins.mq(sm) {
+      display: inline;
+    }
   }
 
   &__expanded-body {

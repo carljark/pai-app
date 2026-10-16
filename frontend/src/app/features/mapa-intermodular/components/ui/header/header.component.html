@@ -1,11 +1,5 @@
 <div class="mapa-header" [class.expanded]="headerExpanded()">
-  <div
-    class="mapa-header__main-row"
-    role="button"
-    tabindex="0"
-    (click)="toggleHeaderStatsHandler()"
-    (keydown.enter)="$event.target === $event.currentTarget && toggleHeaderStatsHandler()"
-  >
+  <div class="mapa-header__main-row">
     <div class="mapa-header__title-group">
       <div class="mapa-header__icon">
         <svg
@@ -26,16 +20,37 @@
           <line x1="16.5" y1="8.5" x2="13.5" y2="15.5"></line>
         </svg>
       </div>
-      <h1 class="mapa-header__title">{{ title() }}</h1>
+      <h1 class="mapa-header__title">
+        Mapa intermodular<span class="mapa-header__title-detail"> {{ titleDetail() }}</span>
+      </h1>
+    </div>
+
+    <div class="mapa-header__slot">
+      <ng-content />
     </div>
 
     <button
       class="mapa-stats-toggle-btn"
-      (click)="$event.stopPropagation(); toggleHeaderStatsHandler()"
+      (click)="toggleHeaderStatsHandler()"
       [title]="isCa() ? 'Mostrar o ocultar opcions' : 'Mostrar u ocultar opciones'"
+      [attr.aria-expanded]="headerExpanded()"
+      [attr.aria-label]="isCa() ? 'Filtres i estadístiques' : 'Filtros y estadísticas'"
     >
-      <span class="toggle-icon">{{ headerExpanded() ? '▲' : '▼' }}</span>
-      <span>{{
+      <svg
+        class="mapa-header__filter-icon"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+      </svg>
+      <span class="mapa-header__toggle-text">{{
         headerExpanded()
           ? isCa()
             ? 'Col·lapsar'
@@ -44,6 +59,7 @@
             ? 'Filtres i Estadístiques'
             : 'Filtros y Estadísticas'
       }}</span>
+      <span class="toggle-icon">{{ headerExpanded() ? '▲' : '▼' }}</span>
     </button>
   </div>
 

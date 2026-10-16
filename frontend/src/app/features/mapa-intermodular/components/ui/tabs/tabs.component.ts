@@ -32,6 +32,8 @@ export class MapaTabsComponent {
     return ciclos;
   });
   activeTab = input.required<MapaTab>();
+  /** Integrado en la fila de la cabecera del mapa, sin fondo ni bordes propios. */
+  inline = input(false);
 
   activeConfig = computed(() => this.niveles.mapaTab(this.activeTab()));
   cursos = computed(

@@ -22,7 +22,16 @@
     flex: 1 1 100%;
   }
 
+  /* Dentro de la cabecera del mapa: sin caja propia. */
+  &--inline {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+  }
+
   &__label {
+    white-space: nowrap;
     font-size: variables.$font-size-sm;
     font-weight: variables.$font-weight-medium;
     color: variables.$color-text-muted;
@@ -37,7 +46,9 @@
   }
 
   &__select {
+    flex: 1 1 auto;
     width: 100%;
+    min-width: 0;
     font-weight: variables.$font-weight-medium;
   }
 
@@ -80,6 +91,17 @@
   @include mixins.mq(sm) {
     &__field:first-child {
       flex: 0 1 28rem;
+    }
+  }
+
+  @include mixins.mq(lg) {
+    &--inline {
+      flex-wrap: nowrap;
+    }
+
+    &--inline &__field:first-child {
+      flex: 1 1 22rem;
+      max-width: 28rem;
     }
   }
 }

@@ -1,12 +1,7 @@
-<app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)">
-  @if (!isAfinidades() && !facade.isLoadingSeed()) {
-    <app-mapa-vista-toggle />
-  }
-</app-mapa-tabs>
-
 @if (isAfinidades()) {
+  <app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)" />
   <app-afinidades-eso-view [tab]="facade.activeTab()" />
-} @else if (!facade.isLoadingSeed()) {
+} @else {
   <app-mapa-header
     [headerExpanded]="headerExpanded()"
     [activeTab]="facade.activeTab()"
@@ -17,9 +12,16 @@
     (searchChange)="onSearch($event)"
     (typeFilterChange)="onSetTypeFilter($event)"
   >
+    <app-mapa-tabs [activeTab]="facade.activeTab()" [inline]="true" (tabChange)="setTab($event)">
+      <app-mapa-vista-toggle />
+    </app-mapa-tabs>
   </app-mapa-header>
 
-  @if (vistas.vista() === 'mental') {
+  @if (facade.isLoadingSeed()) {
+    <div class="mapa-loading-skeleton">
+      <app-skeleton-loader [lines]="6" [text]="trans.t().loadingData" />
+    </div>
+  } @else if (vistas.vista() === 'mental') {
     <app-mindmap-view (createProject)="createProjectFromConnection($event)" />
   } @else {
     <div class="mapa-vertical-accordions">
@@ -57,8 +59,4 @@
       </app-connections-list>
     </div>
   }
-} @else {
-  <div class="mapa-loading-skeleton">
-    <app-skeleton-loader [lines]="6" [text]="trans.t().loadingData" />
-  </div>
 }

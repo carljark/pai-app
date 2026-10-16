@@ -5,7 +5,7 @@ import { ActivityLog } from '../models/ActivityLog';
 /** Acciones de `ActivityLog` que cambian el proyecto (se excluyen exportaciones y telemetría). */
 export const CHANGE_ACTIONS = [
   'GENERATE_PROJECT', 'UPDATE_PROJECT', 'AI_REWRITE', 'IMPORT_DOCX', 'TRANSLATE_PROJECT',
-  'UPLOAD_FILE', 'DELETE_FILE', 'ADD_COLLABORATOR', 'REMOVE_COLLABORATOR'
+  'UPLOAD_FILE', 'DELETE_FILE', 'ADD_COLLABORATOR', 'REMOVE_COLLABORATOR', 'RENAME_PROJECT'
 ];
 const CHANGE_FILTER = { $or: [{ action: { $in: CHANGE_ACTIONS } }, { action: /^UPDATE_STATUS_/ }] };
 export const MAX_CHANGES = 100;

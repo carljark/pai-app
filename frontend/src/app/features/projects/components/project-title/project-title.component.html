@@ -1,0 +1,49 @@
+@if (editing()) {
+  <div class="project-title project-title--editing">
+    <input
+      #titleInput
+      class="project-title__input"
+      type="text"
+      [attr.aria-label]="trans.t().renameProjectLabel"
+      [maxLength]="maxLength"
+      [value]="draft()"
+      [disabled]="saving()"
+      (input)="draft.set($any($event.target).value)"
+      (keydown)="onKeydown($event)"
+    />
+    <button
+      type="button"
+      class="btn-primary project-title__save"
+      [disabled]="saving() || !draft().trim()"
+      (click)="save()"
+    >
+      {{ trans.t().renameProjectSave }}
+    </button>
+    <button
+      type="button"
+      class="btn-secondary project-title__cancel"
+      [disabled]="saving()"
+      (click)="cancel()"
+    >
+      {{ trans.t().renameProjectCancel }}
+    </button>
+    @if (failed()) {
+      <span class="project-title__error" role="alert">{{ trans.t().renameProjectError }}</span>
+    }
+  </div>
+} @else {
+  <div class="project-title">
+    <h3 class="project-title__text">{{ displayTitle() }}</h3>
+    @if (canRename()) {
+      <button
+        type="button"
+        class="project-title__edit"
+        [title]="trans.t().renameProject"
+        [attr.aria-label]="trans.t().renameProject"
+        (click)="startEdit()"
+      >
+        ✏️
+      </button>
+    }
+  </div>
+}

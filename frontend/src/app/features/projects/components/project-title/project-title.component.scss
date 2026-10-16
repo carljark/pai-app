@@ -1,0 +1,58 @@
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+
+  &--editing {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--c-text);
+    overflow-wrap: anywhere;
+  }
+
+  &__edit {
+    padding: 2px 6px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 0.9rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.6;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+      background: var(--c-surface-alt);
+    }
+  }
+
+  &__input {
+    flex: 1;
+    min-width: 200px;
+    padding: 6px 10px;
+    border: 1px solid var(--c-border);
+    border-radius: 8px;
+    background: var(--c-surface);
+    color: var(--c-text);
+    font-size: 1rem;
+  }
+
+  &__save,
+  &__cancel {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  &__error {
+    width: 100%;
+    font-size: 0.85rem;
+    color: var(--c-danger);
+  }
+}

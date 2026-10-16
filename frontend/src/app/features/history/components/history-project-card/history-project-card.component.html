@@ -1,7 +1,7 @@
 <div class="history-project-card">
   <div class="history-project-card__main">
     <div class="history-project-card__title-row">
-      <h3 class="history-project-card__title">{{ getDisplayTitle() }}</h3>
+      <app-project-title [project]="project()" [displayTitle]="getDisplayTitle()" />
       @if (isMyProject()) {
         <span class="history-project-card__tag history-project-card__tag--mine">{{
           trans.t().historyMyProjectBadge

@@ -285,6 +285,11 @@ export const TRANSLATIONS_CA = {
   editLockMine: "Tens el torn d'edició: la resta de participants no pot fer canvis mentre edites.",
   editReadOnly:
     "Només lectura: únicament l'autor i els col·laboradors convidats poden modificar aquest projecte.",
+  renameProject: 'Canviar el nom',
+  renameProjectLabel: 'Nom del projecte',
+  renameProjectSave: 'Desar',
+  renameProjectCancel: 'Cancel·lar',
+  renameProjectError: "No s'ha pogut canviar el nom del projecte.",
   changeLogTitle: 'Registre de canvis',
   changeLogEmpty: 'Encara no hi ha canvis registrats.',
   changeLogRefresh: 'Actualitzar',
@@ -301,6 +306,7 @@ export const TRANSLATIONS_CA = {
     DELETE_FILE: 'Va esborrar un recurs',
     ADD_COLLABORATOR: 'Va convidar un col·laborador',
     REMOVE_COLLABORATOR: 'Va treure un col·laborador',
+    RENAME_PROJECT: 'Va canviar el nom del projecte',
   } as Record<string, string>,
 
   // SOL·LICITUDS DE CENTRES

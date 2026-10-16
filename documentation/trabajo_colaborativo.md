@@ -26,6 +26,8 @@ Todas las rutas que modifican el proyecto pasan por `projectEditGuards` = `requi
 - `POST /api/projects/:id/files` y `DELETE /api/projects/:id/files/:filename` (los guards van **antes** de multer para no escribir en disco si se rechaza la petición)
 - `POST /api/projects/:id/edit-lock`
 
+`PATCH /api/projects/:id/title` (cambiar el nombre, tarea 242) solo pasa por `requireProjectEditor`. No pide el turno de edición porque el nombre no forma parte del contenido: se puede renombrar desde las listas aunque otra persona esté editando el documento.
+
 ## Turno de edición
 
 Bloqueo con caducidad guardado en `Project.editLock = { userId, userName, expiresAt }`.
@@ -57,7 +59,7 @@ Bloqueo con caducidad guardado en `Project.editLock = { userId, userName, expire
 ## Registro de cambios
 
 - Reutiliza `ActivityLog` con un índice `{ projectId: 1, createdAt: -1 }`.
-- Acciones registradas: `GENERATE_PROJECT`, `UPDATE_PROJECT`, `UPDATE_STATUS_*`, `AI_REWRITE` (con los primeros 200 caracteres de la instrucción), `IMPORT_DOCX`, `TRANSLATE_PROJECT`, `UPLOAD_FILE`, `DELETE_FILE`, `ADD_COLLABORATOR` y `REMOVE_COLLABORATOR`. Las exportaciones no cuentan como cambio.
+- Acciones registradas: `GENERATE_PROJECT`, `UPDATE_PROJECT`, `UPDATE_STATUS_*`, `AI_REWRITE` (con los primeros 200 caracteres de la instrucción), `IMPORT_DOCX`, `TRANSLATE_PROJECT`, `UPLOAD_FILE`, `DELETE_FILE`, `ADD_COLLABORATOR`, `REMOVE_COLLABORATOR` y `RENAME_PROJECT` (con el nombre nuevo y el anterior). Las exportaciones no cuentan como cambio.
 - `GET /api/projects/:id/changes` devuelve como mucho 100 entradas, de la más reciente a la más antigua, con nombre, email, acción, detalles y fecha.
 - Si falla el registro de un recurso, la subida o el borrado no se revierten (se anota en el log del servidor).
 - Frontend: `ProjectChangeLogComponent`, desplegable en el taller, con fecha y hora en el formato del idioma de la interfaz y etiquetas ES/CA (`changeActions`). Se recarga al editar, al cambiar el turno y con el botón «Actualizar».

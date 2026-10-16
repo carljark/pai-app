@@ -1,10 +1,12 @@
-<app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)"> </app-mapa-tabs>
+<app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)">
+  @if (!isAfinidades() && !facade.isLoadingSeed()) {
+    <app-mapa-vista-toggle />
+  }
+</app-mapa-tabs>
 
 @if (isAfinidades()) {
   <app-afinidades-eso-view [tab]="facade.activeTab()" />
 } @else if (!facade.isLoadingSeed()) {
-  <app-mapa-vista-toggle />
-
   <app-mapa-header
     [headerExpanded]="headerExpanded()"
     [activeTab]="facade.activeTab()"

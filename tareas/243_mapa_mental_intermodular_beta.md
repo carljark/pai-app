@@ -62,6 +62,15 @@ Se publica para todos los usuarios con la etiqueta **«beta»**. Convive con la 
   - la API del mapa y el frontend responden 200;
   - el bundle servido (`main-HMNHZIOC.js`) incluye el mapa mental.
 
+## Ajuste posterior: cabecera más compacta
+A petición del usuario, tras ver la beta en producción:
+- El selector de vista se proyecta con `ng-content` en `app-mapa-tabs`, en la misma fila que el selector de ciclo y curso.
+- Las etiquetas «Ciclo» y «Curso» pasan a ir en línea con su control.
+- Se reducen los márgenes y rellenos de `mapa-tabs` y `mapa-header`.
+- El mapa mental gana alto: `calc(100vh - 150px)`.
+
+Verificación: `npm test` del frontend en verde, con dos comprobaciones nuevas de la posición del selector.
+
 ## Desviaciones respecto al plan
 - **Filtro de la leyenda:** el plan hablaba de filtrar por tipo de competencia. Se implementó como leyenda pulsable en el propio mapa mental, y además se respetan la búsqueda y el filtro por tipo de módulo de la cabecera.
 - **Selector de vista:** va encima de la cabecera en lugar de en un hueco `ng-content` dentro de ella.

@@ -1106,6 +1106,7 @@ describe('MapaIntermodularViewComponent', () => {
     expect(el.querySelector('app-afinidades-eso-view')).toBeTruthy();
     expect(getAfinidades).toHaveBeenCalledWith('ESO_1');
     expect(el.querySelector('app-mapa-header')).toBeNull();
+    expect(el.querySelector('app-mapa-vista-toggle')).toBeNull();
     expect(el.querySelector('app-modulo-list')).toBeNull();
     expect(el.querySelector('app-ra-detail')).toBeNull();
     expect(el.querySelector('app-connections-list')).toBeNull();
@@ -1119,6 +1120,7 @@ describe('MapaIntermodularViewComponent', () => {
 
   it('el selector de vista cambia entre los acordeones y el mapa mental (beta)', async () => {
     const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.mapa-tabs__extra app-mapa-vista-toggle')).toBeTruthy();
     expect(el.querySelector('app-mapa-vista-toggle .vista-toggle__badge')?.textContent).toContain(
       'beta',
     );

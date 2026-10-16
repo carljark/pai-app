@@ -34,3 +34,26 @@ export function relationLabel(type: string, isCa: boolean): string {
 export function relationColor(type: string): string {
   return RELATION_COLORS[type as CompetenceType] ?? '#6b7280';
 }
+
+/** Entrada de la leyenda que filtra por tipo de competencia. */
+export interface LegendItem {
+  type: CompetenceType;
+  label: string;
+  color: string;
+  active: boolean;
+}
+
+/** Leyenda con los tipos presentes en el mapa, en orden fijo, marcando el activo. */
+export function buildLegend(
+  present: Iterable<string>,
+  active: string,
+  isCa: boolean,
+): LegendItem[] {
+  const types = new Set(present);
+  return RELATION_TYPES.filter((t) => types.has(t)).map((type) => ({
+    type,
+    label: relationLabel(type, isCa),
+    color: RELATION_COLORS[type],
+    active: active === type,
+  }));
+}

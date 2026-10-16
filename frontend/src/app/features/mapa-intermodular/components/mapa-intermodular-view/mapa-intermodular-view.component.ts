@@ -17,6 +17,7 @@ import { ConnectionsListComponent } from '../ui/connections-list/connections-lis
 import { AfinidadesEsoViewComponent } from '../afinidades-eso-view/afinidades-eso-view.component';
 import { VistaToggleComponent } from '../ui/vista-toggle/vista-toggle.component';
 import { MindmapViewComponent } from '../mindmap/mindmap-view/mindmap-view.component';
+import { PanoramaViewComponent } from '../panorama/panorama-view/panorama-view.component';
 import { MapaVistaService } from '../../services/mapa-vista.service';
 import { MapaProyectoService } from '../../services/mapa-proyecto.service';
 
@@ -34,6 +35,7 @@ import { MapaProyectoService } from '../../services/mapa-proyecto.service';
     AfinidadesEsoViewComponent,
     VistaToggleComponent,
     MindmapViewComponent,
+    PanoramaViewComponent,
   ],
   templateUrl: './mapa-intermodular-view.component.html',
   styleUrl: './mapa-intermodular-view.component.scss',

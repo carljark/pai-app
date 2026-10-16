@@ -1,0 +1,59 @@
+<div class="panorama-info" aria-live="polite">
+  @if (leaf(); as leaf) {
+    <span class="panorama-info__eyebrow">
+      <span class="panorama-info__swatch" [style.background]="leaf.color"></span>
+      {{ leaf.moduleCode }} · {{ leaf.moduleName }}
+    </span>
+    <p class="panorama-info__text">
+      <strong>{{ leaf.raCode }}.</strong> {{ leaf.text }}
+    </p>
+    <p class="panorama-info__counts">
+      <span class="panorama-info__count panorama-info__count--out">
+        {{ leaf.outgoing }} {{ isCa() ? 'sortints' : 'salientes' }}
+      </span>
+      <span class="panorama-info__count panorama-info__count--in">
+        {{ leaf.incoming }} {{ isCa() ? 'entrants' : 'entrantes' }}
+      </span>
+    </p>
+    <p class="panorama-info__hint">
+      {{ isCa() ? 'Prem per obrir-lo al mapa mental.' : 'Pulsa para abrirlo en el mapa mental.' }}
+    </p>
+  } @else if (arc(); as arc) {
+    <span class="panorama-info__eyebrow">
+      <span class="panorama-info__swatch" [style.background]="arc.color"></span>
+      {{ arc.code }}
+    </span>
+    <p class="panorama-info__text">
+      <strong>{{ arc.name }}</strong>
+    </p>
+    <p class="panorama-info__counts">
+      <span class="panorama-info__count panorama-info__count--out">
+        {{ arc.outgoing }} {{ isCa() ? 'sortints' : 'salientes' }}
+      </span>
+      <span class="panorama-info__count panorama-info__count--in">
+        {{ arc.incoming }} {{ isCa() ? 'entrants' : 'entrantes' }}
+      </span>
+    </p>
+  } @else {
+    <p class="panorama-info__text">
+      <strong>{{ totals().ras }}</strong> RA · <strong>{{ totals().connections }}</strong>
+      {{ isCa() ? 'connexions' : 'conexiones' }}
+    </p>
+    @if (totals().outside > 0) {
+      <p class="panorama-info__hint">
+        {{
+          isCa()
+            ? totals().outside + ' connexions amb destinació fora d’aquest curs no es dibuixen.'
+            : totals().outside + ' conexiones con destino fuera de este curso no se dibujan.'
+        }}
+      </p>
+    }
+    <p class="panorama-info__hint">
+      {{
+        isCa()
+          ? 'Passa el ratolí per un RA o un mòdul per veure’n les connexions.'
+          : 'Pasa el ratón por un RA o un módulo para ver sus conexiones.'
+      }}
+    </p>
+  }
+</div>

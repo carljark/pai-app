@@ -33,7 +33,7 @@ describe('ConnectionDrawerComponent', () => {
 
   it('muestra el recorrido de la conexión y el RA de origen', () => {
     const el: HTMLElement = render().nativeElement;
-    expect(el.querySelector('.connection-drawer__path')?.textContent).toMatch(
+    expect(el.querySelector('.mindmap-drawer__path')?.textContent).toMatch(
       /0001 · RA1\s*→\s*0002 · RA1/,
     );
     expect(el.textContent).toContain('RA de origen — Análisis clínico');
@@ -46,9 +46,7 @@ describe('ConnectionDrawerComponent', () => {
     const el: HTMLElement = render().nativeElement;
     expect(el.textContent).toContain('RA d’origen — Anàlisi clínica');
     expect(el.textContent).toContain('Resultat RA1 de 0001');
-    expect(el.querySelector('.connection-drawer__close')?.getAttribute('aria-label')).toBe(
-      'Tancar',
-    );
+    expect(el.querySelector('.mindmap-drawer__close')?.getAttribute('aria-label')).toBe('Tancar');
   });
 
   it('avisa al cerrar y al crear un proyecto', () => {
@@ -58,7 +56,7 @@ describe('ConnectionDrawerComponent', () => {
     fixture.componentInstance.closed.subscribe(closed);
     fixture.componentInstance.createProject.subscribe(created);
     const el: HTMLElement = fixture.nativeElement;
-    (el.querySelector('.connection-drawer__close') as HTMLButtonElement).click();
+    (el.querySelector('.mindmap-drawer__close') as HTMLButtonElement).click();
     (el.querySelector('.mapa-btn-action') as HTMLButtonElement).click();
     expect(closed).toHaveBeenCalled();
     expect(created).toHaveBeenCalledWith(connection);

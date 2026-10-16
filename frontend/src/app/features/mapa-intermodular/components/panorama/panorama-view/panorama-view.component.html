@@ -1,0 +1,42 @@
+<div class="panorama-view">
+  <div class="panorama-view__toolbar">
+    <p class="panorama-view__legend-key">
+      <span class="panorama-view__key panorama-view__key--out"></span>
+      {{ isCa() ? 'Sortints' : 'Salientes' }}
+      <span class="panorama-view__key panorama-view__key--in"></span>
+      {{ isCa() ? 'Entrants' : 'Entrantes' }}
+    </p>
+    <app-mindmap-legend
+      [items]="legend()"
+      [isCa]="isCa()"
+      (toggled)="toggleRelationFilter($event)"
+    />
+  </div>
+
+  @if (panorama().leaves.length > 0) {
+    <div class="panorama-view__stage">
+      <app-panorama-canvas
+        class="panorama-view__canvas"
+        [leaves]="leaves()"
+        [edges]="edges()"
+        [arcs]="panorama().arcs"
+        [radius]="panorama().radius"
+        [focus]="focus()"
+        [isCa]="isCa()"
+        (focusChange)="focus.set($event)"
+        (leafActivate)="openInMindmap($event)"
+      />
+      <app-panorama-info
+        class="panorama-view__info"
+        [leaf]="focusedLeaf()"
+        [arc]="focusedArc()"
+        [totals]="totals()"
+        [isCa]="isCa()"
+      />
+    </div>
+  } @else {
+    <p class="panorama-view__empty">
+      {{ isCa() ? 'Aquest mapa encara no té mòduls.' : 'Este mapa todavía no tiene módulos.' }}
+    </p>
+  }
+</div>

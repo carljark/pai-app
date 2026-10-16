@@ -72,6 +72,39 @@ describe('layoutMindmap', () => {
   });
 });
 
+describe('anillos adaptativos', () => {
+  it('agranda el primer anillo cuando hay muchos módulos', () => {
+    const many = Array.from({ length: 40 }, (_, i) => ({
+      ...mindmapModules()[1]!,
+      code: `M${i}`,
+    }));
+    const { nodes, radius } = layoutMindmap(
+      buildMindmapTree({
+        modules: many,
+        path: EMPTY_PATH,
+        isCa: false,
+        rootBadge: '',
+        rootLabel: '',
+      }),
+    );
+    expect(radius).toBeGreaterThan(FIRST_RING);
+    expect(radius).toBeLessThanOrEqual(FIRST_RING * 2.5);
+    expect(Math.hypot(nodes[1]!.x, nodes[1]!.y)).toBeCloseTo(radius);
+  });
+
+  it('con un solo hijo por nivel usa los radios base', () => {
+    const one = [mindmapModules()[1]!];
+    const tree1 = buildMindmapTree({
+      modules: one,
+      path: EMPTY_PATH,
+      isCa: false,
+      rootBadge: '',
+      rootLabel: '',
+    });
+    expect(layoutMindmap(tree1).radius).toBe(FIRST_RING);
+  });
+});
+
 describe('connectionArc', () => {
   it('une la conexión con su módulo de destino', () => {
     const { nodes } = layoutMindmap(tree(OPEN_PATH));

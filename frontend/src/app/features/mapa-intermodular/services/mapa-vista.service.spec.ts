@@ -33,4 +33,28 @@ describe('MapaVistaService', () => {
     service.setVista('mental');
     expect(service.vista()).toBe('mental');
   });
+
+  it('recuerda la panorámica y en la ESO la sustituye por el mapa mental', () => {
+    const service = TestBed.inject(MapaVistaService);
+    service.setVista('panoramica');
+    expect(service.vistaEso()).toBe('mental');
+    TestBed.resetTestingModule();
+    const reloaded = TestBed.inject(MapaVistaService);
+    expect(reloaded.vista()).toBe('panoramica');
+    reloaded.setVista('clasica');
+    expect(reloaded.vistaEso()).toBe('clasica');
+  });
+
+  it('ignora valores guardados desconocidos', () => {
+    localStorage.setItem('pai_mapa_vista', 'otra');
+    expect(TestBed.inject(MapaVistaService).vista()).toBe('clasica');
+  });
+
+  it('abre un RA en el mapa mental y lo entrega una sola vez', () => {
+    const service = TestBed.inject(MapaVistaService);
+    service.abrirEnMapaMental({ moduleCode: '0001', raId: '0001_RA1' });
+    expect(service.vista()).toBe('mental');
+    expect(service.tomarRaPendiente()).toEqual({ moduleCode: '0001', raId: '0001_RA1' });
+    expect(service.tomarRaPendiente()).toBeNull();
+  });
 });

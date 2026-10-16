@@ -21,7 +21,7 @@
         }
       </g>
 
-      @if (arc(); as d) {
+      @for (d of arcs(); track $index) {
         <path class="mindmap-canvas__arc" [attr.d]="d" />
       }
 

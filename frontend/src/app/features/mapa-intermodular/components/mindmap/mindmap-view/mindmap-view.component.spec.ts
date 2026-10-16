@@ -85,7 +85,7 @@ describe('MindmapViewComponent', () => {
     await click('RA1 Resultado');
     await click('0002 Módulo 0002');
     await click('RA1 Texto 0002 RA1');
-    (el.querySelector('.connection-drawer__close') as HTMLButtonElement).click();
+    (el.querySelector('.mindmap-drawer__close') as HTMLButtonElement).click();
     await render();
     expect(el.querySelector('app-connection-drawer')).toBeNull();
     await click('RA1 Texto 0002 RA1');
@@ -106,7 +106,7 @@ describe('MindmapViewComponent', () => {
   });
 
   it('la leyenda filtra por tipo de competencia', async () => {
-    const items = el.querySelectorAll('.mindmap-view__legend-item');
+    const items = el.querySelectorAll('.mindmap-legend__item');
     expect([...items].map((i) => i.textContent?.trim())).toEqual([
       'Ciencias Aplicadas',
       'Comunicación',
@@ -139,16 +139,14 @@ describe('MindmapViewComponent', () => {
     await render();
     expect(nodeIds()).toContain('RA1 Resultat RA1 de 0001');
     expect(el.querySelector('.mindmap-view__hint')?.textContent).toContain('Prem un RA');
-    expect(el.querySelector('.mindmap-view__legend-item')?.textContent).toContain(
-      'Ciències Aplicades',
-    );
+    expect(el.querySelector('.mindmap-legend__item')?.textContent).toContain('Ciències Aplicades');
   });
 
   it('avisa si el mapa no tiene módulos', async () => {
     facade.modules.set([]);
     await render();
     expect(el.querySelector('app-mindmap-canvas')).toBeNull();
-    expect(el.querySelector('.mindmap-view__legend')).toBeNull();
+    expect(el.querySelector('.mindmap-legend')).toBeNull();
     expect(el.textContent).toContain('Este mapa todavía no tiene módulos.');
     language.set('catalan');
     await render();

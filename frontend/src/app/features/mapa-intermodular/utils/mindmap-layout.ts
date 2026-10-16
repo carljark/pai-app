@@ -32,6 +32,11 @@ export function polar(angle: number, radius: number): [number, number] {
   return [radius * Math.sin(angle), -radius * Math.cos(angle)];
 }
 
+/** Distancia mínima (en el arco del anillo) entre dos nodos vecinos del mismo nivel. */
+const MIN_GAP = 84;
+/** Un anillo apiñado crece como mucho hasta este múltiplo de su radio base. */
+const MAX_SPREAD = 2.5;
+
 /** Árbol radial: posiciones de los nodos y trazos curvos entre padres e hijos. */
 export function layoutMindmap(root: MindmapNode): MindmapLayout {
   const laid = tree<MindmapNode>()
@@ -39,26 +44,61 @@ export function layoutMindmap(root: MindmapNode): MindmapLayout {
     .separation((a, b) => (a.parent === b.parent ? 1 : 2) / Math.max(a.depth, 1))(
     hierarchy(root, (n) => n.children),
   );
+  const radii = ringRadii(laid.descendants(), laid.height);
+  const radius = (depth: number) => radii[depth]!;
+  const path = linkRadial<HierarchyPointLink<MindmapNode>, PointNode>()
+    .angle((d) => d.x)
+    .radius((d) => radius(d.depth));
   return {
-    nodes: laid.descendants().map(toPositioned),
-    links: laid.links().map(toLink),
-    radius: ringRadius(laid.height),
+    nodes: laid.descendants().map((p) => toPositioned(p, radius(p.depth))),
+    links: laid.links().map((link) => toLink(link, path(link) ?? '')),
+    radius: radius(laid.height),
   };
 }
 
-function toPositioned(p: PointNode): PositionedNode {
-  const [x, y] = polar(p.x, ringRadius(p.depth));
+/**
+ * Radio de cada nivel: el base (`ringRadius`) o mayor si sus nodos quedan a menos de `MIN_GAP`,
+ * siempre al menos `RING_GAP` más allá del nivel anterior.
+ */
+export function ringRadii(nodes: PointNode[], height: number): number[] {
+  const angles = anglesByDepth(nodes);
+  const radii = [0];
+  for (let depth = 1; depth <= height; depth++) {
+    const base = ringRadius(depth);
+    const gap = minAngularGap(angles.get(depth) ?? []);
+    const needed = gap > 0 ? Math.min(MIN_GAP / gap, base * MAX_SPREAD) : base;
+    const previous = radii[depth - 1]!;
+    radii.push(Math.max(base, needed, previous + (depth === 1 ? FIRST_RING : RING_GAP)));
+  }
+  return radii;
+}
+
+function anglesByDepth(nodes: PointNode[]): Map<number, number[]> {
+  const byDepth = new Map<number, number[]>();
+  for (const n of nodes.filter((p) => p.depth > 0)) {
+    byDepth.set(n.depth, [...(byDepth.get(n.depth) ?? []), n.x]);
+  }
+  return byDepth;
+}
+
+/** Menor separación angular entre nodos consecutivos, contando la vuelta completa. */
+function minAngularGap(angles: number[]): number {
+  if (angles.length < 2) return 0;
+  const sorted = [...angles].sort((a, b) => a - b);
+  const gaps = sorted.slice(1).map((a, i) => a - sorted[i]!);
+  gaps.push(2 * Math.PI - sorted[sorted.length - 1]! + sorted[0]!);
+  return Math.min(...gaps);
+}
+
+function toPositioned(p: PointNode, radius: number): PositionedNode {
+  const [x, y] = polar(p.x, radius);
   return { node: p.data, x, y, depth: p.depth, isLeft: x < -1 };
 }
 
-const radialPath = linkRadial<HierarchyPointLink<MindmapNode>, PointNode>()
-  .angle((d) => d.x)
-  .radius((d) => ringRadius(d.depth));
-
-function toLink(link: HierarchyPointLink<MindmapNode>): MindmapLink {
+function toLink(link: HierarchyPointLink<MindmapNode>, path: string): MindmapLink {
   return {
     id: link.target.data.id,
-    path: radialPath(link) ?? '',
+    path,
     color: link.target.data.color,
     targetId: link.target.data.id,
   };

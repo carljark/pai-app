@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[244 — Vista panorámica de conexiones y mapa mental de la ESO (beta)](244_plan_panoramica_y_mapa_mental_eso.md)** · _Implementado (tarea 244)_  
+  Tercera vista del mapa de FP con todas las conexiones del curso agrupadas en un círculo de RA (*hierarchical edge bundling*) y salto al mapa mental; mapa mental beta del mapa de afinidades de la ESO (materias → afines → fichas).
+
 - **[243 — Mapa mental intermodular (beta)](243_plan_mapa_mental_intermodular_beta.md)** · _Implementado (tarea 243)_  
   Vista alternativa del mapa intermodular de FP como mapa mental (d3 para el cálculo y Angular para el SVG), con nodos que se despliegan, zoom y panel lateral de la conexión; visible para todos con la etiqueta «beta» y conviviendo con la vista clásica.
 

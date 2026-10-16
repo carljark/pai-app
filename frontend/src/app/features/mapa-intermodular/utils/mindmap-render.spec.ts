@@ -52,10 +52,20 @@ describe('renderLinks', () => {
 });
 
 describe('focusNodeId', () => {
-  it('apunta al nodo más profundo de la rama abierta', () => {
-    expect(focusNodeId(EMPTY_PATH)).toBe('root');
-    expect(focusNodeId({ ...EMPTY_PATH, moduleCode: '0001' })).toBe('m:0001');
-    expect(focusNodeId(PATH)).toBe('r:0001_RA1');
-    expect(focusNodeId({ ...PATH, groupCode: '0002' })).toBe('g:0001_RA1:0002');
+  const tree = (path: typeof PATH | typeof EMPTY_PATH) =>
+    buildMindmapTree({
+      modules: mindmapModules(),
+      path,
+      isCa: false,
+      rootBadge: '',
+      rootLabel: '',
+    });
+
+  it('apunta al nodo desplegado más profundo, sin contar la conexión elegida', () => {
+    expect(focusNodeId(tree(EMPTY_PATH))).toBe('root');
+    expect(focusNodeId(tree({ ...EMPTY_PATH, moduleCode: '0001' }))).toBe('m:0001');
+    expect(focusNodeId(tree(PATH))).toBe('r:0001_RA1');
+    const open = { ...PATH, groupCode: '0002', connectionIndex: 0 };
+    expect(focusNodeId(tree(open))).toBe('g:0001_RA1:0002');
   });
 });

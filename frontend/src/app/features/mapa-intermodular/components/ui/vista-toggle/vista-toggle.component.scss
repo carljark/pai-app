@@ -6,6 +6,7 @@
 
 .vista-toggle {
   display: inline-flex;
+  flex-wrap: wrap;
   padding: 3px;
   gap: 2px;
   border: 1px solid variables.$color-border;
@@ -16,7 +17,8 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 14px;
+    padding: 5px 12px;
+    white-space: nowrap;
     border: none;
     border-radius: variables.$border-radius-full;
     background: transparent;

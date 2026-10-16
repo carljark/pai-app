@@ -36,7 +36,8 @@ const FOCUS_SCALE = 0.8;
 export class MindmapCanvasComponent {
   nodes = input.required<RenderedNode[]>();
   links = input.required<RenderedLink[]>();
-  arc = input<string | null>(null);
+  /** Arcos de la hoja elegida hacia sus destinos (uno en FP; uno o dos en la ESO). */
+  arcs = input<string[]>([]);
   radius = input.required<number>();
   focusId = input<string>('root');
   isCa = input.required<boolean>();

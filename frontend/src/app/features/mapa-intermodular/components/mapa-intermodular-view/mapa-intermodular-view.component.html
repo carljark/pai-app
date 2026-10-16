@@ -1,5 +1,7 @@
 @if (isAfinidades()) {
-  <app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)" />
+  <app-mapa-tabs [activeTab]="facade.activeTab()" (tabChange)="setTab($event)">
+    <app-mapa-vista-toggle [conPanoramica]="false" />
+  </app-mapa-tabs>
   <app-afinidades-eso-view [tab]="facade.activeTab()" />
 } @else {
   <app-mapa-header
@@ -23,6 +25,8 @@
     </div>
   } @else if (vistas.vista() === 'mental') {
     <app-mindmap-view (createProject)="createProjectFromConnection($event)" />
+  } @else if (vistas.vista() === 'panoramica') {
+    <app-panorama-view />
   } @else {
     <div class="mapa-vertical-accordions">
       <app-modulo-list

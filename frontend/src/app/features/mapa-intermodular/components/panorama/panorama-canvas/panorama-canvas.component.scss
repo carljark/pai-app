@@ -1,0 +1,116 @@
+@use '../../../../../../styles/variables' as variables;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.panorama-canvas {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-surface;
+  overflow: hidden;
+
+  &__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__module {
+    cursor: default;
+  }
+
+  &__arc {
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+
+  &__module--active &__arc,
+  &__module:hover &__arc {
+    opacity: 1;
+  }
+
+  &__arc-label {
+    fill: variables.$color-text-main;
+    font-size: 13px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  &__edge {
+    fill: none;
+    stroke-width: 1.2;
+    stroke-opacity: 0.35;
+    pointer-events: none;
+    transition: stroke-opacity 0.2s ease;
+
+    &--dimmed {
+      stroke-opacity: 0.05;
+    }
+
+    &--out,
+    &--in {
+      stroke-width: 2.2;
+      stroke-opacity: 0.95;
+    }
+
+    &--out {
+      stroke: variables.$color-warning;
+    }
+
+    &--in {
+      stroke: variables.$color-info;
+    }
+  }
+
+  &__leaf {
+    cursor: pointer;
+    outline: none;
+    transition: opacity 0.2s ease;
+
+    &--dimmed {
+      opacity: 0.3;
+    }
+
+    &--active .panorama-canvas__label,
+    &--linked .panorama-canvas__label {
+      font-weight: 700;
+    }
+
+    &--active .panorama-canvas__dot {
+      stroke: variables.$color-text-main;
+      stroke-width: 2;
+    }
+
+    &:focus-visible .panorama-canvas__dot {
+      stroke: variables.$color-info;
+      stroke-width: 3;
+    }
+  }
+
+  &__hit {
+    fill: transparent;
+  }
+
+  &__label {
+    fill: variables.$color-text-main;
+    font-size: 11px;
+  }
+
+  &__controls {
+    position: absolute;
+    right: variables.$spacing-3;
+    bottom: variables.$spacing-3;
+  }
+}

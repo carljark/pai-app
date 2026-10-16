@@ -7,12 +7,14 @@ import { SkeletonLoaderComponent } from '../../../../components/skeleton-loader/
 import { AfinidadCardComponent } from '../ui/afinidad-card/afinidad-card.component';
 import { AfinidadProyectoService } from '../../services/afinidad-proyecto.service';
 import { AfinidadEso } from '../../models/afinidad-eso.model';
+import { MapaVistaService } from '../../services/mapa-vista.service';
+import { AfinidadesMindmapViewComponent } from '../afinidades-mindmap-view/afinidades-mindmap-view.component';
 
 /** Mapa de afinidades curriculares de un curso de la ESO: materias del curso y sus fichas. */
 @Component({
   selector: 'app-afinidades-eso-view',
   standalone: true,
-  imports: [SkeletonLoaderComponent, AfinidadCardComponent],
+  imports: [SkeletonLoaderComponent, AfinidadCardComponent, AfinidadesMindmapViewComponent],
   templateUrl: './afinidades-eso-view.component.html',
   styleUrl: './afinidades-eso-view.component.scss',
 })
@@ -21,6 +23,7 @@ export class AfinidadesEsoViewComponent {
   private layout = inject(LayoutService);
   private niveles = inject(NivelesService);
   private proyecto = inject(AfinidadProyectoService);
+  vistas = inject(MapaVistaService);
 
   tab = input.required<MapaTab>();
 

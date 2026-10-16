@@ -4,7 +4,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { mindmapModules } from '../../../testing/mindmap.mock';
 import type { MindmapNode } from '../models/mindmap.model';
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
-import { MindmapState } from './mindmap.state';
+import { MINDMAP_SELECTION, MindmapState } from './mindmap.state';
+import { MapaVistaService } from './mapa-vista.service';
 
 function node(partial: Partial<MindmapNode>): MindmapNode {
   return {
@@ -30,11 +31,13 @@ const CONNECTION = node({ kind: 'connection', raId: '0001_RA1', connectionIndex:
 describe('MindmapState', () => {
   let state: MindmapState;
   let facade: MapaIntermodularFacade;
+  const onSelect = vi.fn();
 
   beforeEach(() => {
+    onSelect.mockReset();
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [MindmapState],
+      providers: [MindmapState, { provide: MINDMAP_SELECTION, useValue: onSelect }],
     });
     facade = TestBed.inject(MapaIntermodularFacade);
     facade.modules.set(mindmapModules());
@@ -46,8 +49,7 @@ describe('MindmapState', () => {
     for (const n of [MODULE, RA, GROUP, CONNECTION]) state.activate(n);
   }
 
-  it('despliega la rama nivel a nivel y selecciona la conexión en la fachada', () => {
-    const selectRa = vi.spyOn(facade, 'selectRa');
+  it('despliega la rama nivel a nivel y avisa de la hoja elegida', () => {
     openAll();
     expect(state.path()).toEqual({
       moduleCode: '0001',
@@ -55,8 +57,7 @@ describe('MindmapState', () => {
       groupCode: '0002',
       connectionIndex: 2,
     });
-    expect(selectRa).toHaveBeenCalledWith('0001_RA1');
-    expect(state.selection()?.connection.targetRaCode).toBe('RA2');
+    expect(onSelect).toHaveBeenCalledWith(CONNECTION);
   });
 
   it('volver a pulsar un nodo lo pliega junto con sus descendientes', () => {
@@ -76,7 +77,6 @@ describe('MindmapState', () => {
     openAll();
     state.closeConnection();
     expect(state.path()).toMatchObject({ groupCode: '0002', connectionIndex: null });
-    expect(state.selection()).toBeNull();
   });
 
   it('pulsar el centro pliega todo', () => {
@@ -97,5 +97,27 @@ describe('MindmapState', () => {
     facade.activeTab.set('OTRO');
     TestBed.tick();
     expect(state.path().moduleCode).toBe('');
+  });
+
+  it('al llegar desde la panorámica abre el RA pendiente una sola vez', () => {
+    TestBed.inject(MapaVistaService).abrirEnMapaMental({ moduleCode: '0001', raId: '0001_RA2' });
+    facade.activeTab.set('OTRA');
+    TestBed.tick();
+    expect(state.path()).toMatchObject({ moduleCode: '0001', raId: '0001_RA2' });
+    facade.activeTab.set('OTRA_MAS');
+    TestBed.tick();
+    expect(state.path().moduleCode).toBe('');
+    localStorage.removeItem('pai_mapa_vista');
+  });
+
+  it('sin estrategia de selección, elegir una hoja solo cambia la rama', () => {
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [MindmapState],
+    });
+    const bare = TestBed.inject(MindmapState);
+    bare.activate(CONNECTION);
+    expect(bare.path().connectionIndex).toBe(2);
   });
 });

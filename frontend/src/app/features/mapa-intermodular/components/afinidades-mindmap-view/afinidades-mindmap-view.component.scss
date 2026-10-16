@@ -1,0 +1,53 @@
+@use '../../../../../styles/variables' as variables;
+
+:host {
+  display: block;
+}
+
+.afinidades-mindmap-view {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: variables.$spacing-3;
+  height: calc(100vh - 150px);
+  min-height: 520px;
+
+  &--with-drawer {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  }
+
+  &__stage {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-2;
+    min-height: 0;
+  }
+
+  &__hint {
+    margin: 0;
+    font-size: variables.$font-size-sm;
+    color: variables.$color-text-muted;
+  }
+
+  &__canvas {
+    flex: 1;
+    min-height: 0;
+  }
+
+  &__empty {
+    padding: variables.$spacing-8;
+    text-align: center;
+    color: variables.$color-text-muted;
+  }
+
+  &__drawer {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .afinidades-mindmap-view--with-drawer {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(360px, 1fr) auto;
+    height: auto;
+  }
+}

@@ -1,31 +1,36 @@
-import { Injectable, computed, effect, inject, signal, untracked } from '@angular/core';
+import { Injectable, InjectionToken, effect, inject, signal, untracked } from '@angular/core';
 import type { MindmapNode, MindmapPath } from '../models/mindmap.model';
-import { EMPTY_PATH, findSelectedConnection } from '../utils/mindmap-tree';
+import { EMPTY_PATH } from '../utils/mindmap-tree';
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
+import { MapaVistaService } from './mapa-vista.service';
+
+/** Qué hacer al elegir una hoja (en FP, apuntar la fachada a su RA de origen). */
+export const MINDMAP_SELECTION = new InjectionToken<(node: MindmapNode) => void>(
+  'MINDMAP_SELECTION',
+);
 
 /**
- * Rama abierta del mapa mental y filtro de la leyenda. Se provee en `MindmapViewComponent`,
- * así que cada visita al mapa mental empieza plegada.
+ * Rama abierta del mapa mental y filtro de la leyenda. Se provee en cada vista de mapa mental
+ * (FP y ESO), así que cada visita empieza plegada salvo que la panorámica pida abrir un RA.
  */
 @Injectable()
 export class MindmapState {
   private facade = inject(MapaIntermodularFacade);
+  private vistas = inject(MapaVistaService);
+  private onSelect = inject(MINDMAP_SELECTION, { optional: true });
 
   readonly path = signal<MindmapPath>(EMPTY_PATH);
   readonly relationFilter = signal<string>('all');
-
-  /** Conexión seleccionada con su módulo y RA de origen. */
-  readonly selection = computed(() => findSelectedConnection(this.facade.modules(), this.path()));
 
   /** Al cambiar de curso el mapa vuelve a mostrarse plegado. */
   constructor() {
     effect(() => {
       this.facade.activeTab();
-      untracked(() => this.reset());
+      untracked(() => this.restart());
     });
   }
 
-  /** Despliega o pliega el nodo; al elegir una conexión, la fachada apunta a su RA de origen. */
+  /** Despliega o pliega el nodo; al elegir una hoja avisa a la estrategia de selección. */
   activate(node: MindmapNode): void {
     const p = this.path();
     switch (node.kind) {
@@ -63,6 +68,12 @@ export class MindmapState {
     this.path.set(EMPTY_PATH);
   }
 
+  /** Plegado, o con el RA que dejó pendiente la panorámica ya abierto. */
+  private restart(): void {
+    const ra = this.vistas.tomarRaPendiente();
+    this.path.set(ra ? { ...EMPTY_PATH, ...ra } : EMPTY_PATH);
+  }
+
   private toggleModule(p: MindmapPath, code: string): void {
     this.path.set({ ...EMPTY_PATH, moduleCode: toggle(p.moduleCode, code) });
   }
@@ -71,7 +82,7 @@ export class MindmapState {
     const index = node.connectionIndex!;
     const next = p.connectionIndex === index ? null : index;
     this.path.set({ ...p, connectionIndex: next });
-    if (next !== null) this.facade.selectRa(node.raId!);
+    if (next !== null) this.onSelect?.(node);
   }
 }
 

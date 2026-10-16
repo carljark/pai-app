@@ -7,12 +7,13 @@ import type {
 } from '../../../models/mapa-intermodular.model';
 import type { MapaTab } from '../../../utils/mapa-labels';
 import { ConnectionCardComponent } from '../../ui/connection-card/connection-card.component';
+import { MindmapDrawerComponent } from '../mindmap-drawer/mindmap-drawer.component';
 
-/** Panel lateral con la conexión elegida en el mapa mental. */
+/** Panel lateral del mapa mental de FP: RA de origen y ficha de la conexión elegida. */
 @Component({
   selector: 'app-connection-drawer',
   standalone: true,
-  imports: [ConnectionCardComponent],
+  imports: [MindmapDrawerComponent, ConnectionCardComponent],
   templateUrl: './connection-drawer.component.html',
   styleUrl: './connection-drawer.component.scss',
 })

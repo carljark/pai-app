@@ -49,4 +49,26 @@ describe('VistaToggleComponent', () => {
     const { buttons } = render();
     expect(buttons[0]!.textContent).toContain('Vista clàssica');
   });
+
+  it('ofrece la panorámica en FP y la oculta en la ESO', async () => {
+    const { fixture, buttons } = render();
+    expect(buttons).toHaveLength(3);
+    expect(buttons[2]!.textContent).toContain('Panorámica');
+    buttons[2]!.click();
+    await fixture.whenStable();
+    expect(buttons[2]!.getAttribute('aria-pressed')).toBe('true');
+
+    fixture.componentRef.setInput('conPanoramica', false);
+    fixture.detectChanges();
+    const eso = fixture.nativeElement.querySelectorAll('.vista-toggle__option');
+    expect(eso).toHaveLength(2);
+    expect(eso[1].getAttribute('aria-pressed')).toBe('true');
+    localStorage.removeItem('pai_mapa_vista');
+  });
+
+  it('traduce la panorámica al catalán', () => {
+    language.set('catalan');
+    const { buttons } = render();
+    expect(buttons[2]!.textContent).toContain('Panoràmica');
+  });
 });

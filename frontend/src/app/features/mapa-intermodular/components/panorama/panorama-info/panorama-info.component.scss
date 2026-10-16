@@ -1,0 +1,66 @@
+@use '../../../../../../styles/variables' as variables;
+
+:host {
+  display: block;
+  pointer-events: none;
+}
+
+.panorama-info {
+  max-width: 320px;
+  padding: variables.$spacing-2 variables.$spacing-3;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  background: rgba(variables.$color-surface, 0.94);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-main;
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: variables.$font-size-xs;
+    font-weight: variables.$font-weight-semibold;
+    color: variables.$color-text-muted;
+  }
+
+  &__swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: variables.$border-radius-full;
+  }
+
+  &__text {
+    margin: variables.$spacing-1 0 0;
+    line-height: 1.4;
+  }
+
+  &__counts {
+    display: flex;
+    gap: variables.$spacing-2;
+    margin: variables.$spacing-1 0 0;
+  }
+
+  &__count {
+    padding: 1px 8px;
+    border-radius: variables.$border-radius-full;
+    font-size: variables.$font-size-xs;
+    font-weight: variables.$font-weight-semibold;
+
+    &--out {
+      background: variables.$color-warning-bg;
+      color: variables.$color-warning;
+    }
+
+    &--in {
+      background: variables.$color-info-bg;
+      color: variables.$color-info;
+    }
+  }
+
+  &__hint {
+    margin: variables.$spacing-1 0 0;
+    font-size: variables.$font-size-xs;
+    color: variables.$color-text-muted;
+  }
+}

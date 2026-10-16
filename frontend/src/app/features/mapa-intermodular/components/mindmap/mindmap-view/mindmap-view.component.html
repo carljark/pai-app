@@ -1,29 +1,12 @@
-<div class="mindmap-view" [class.mindmap-view--with-drawer]="!!state.selection()">
+<div class="mindmap-view" [class.mindmap-view--with-drawer]="!!selection()">
   <div class="mindmap-view__stage">
     <div class="mindmap-view__toolbar">
       <p class="mindmap-view__hint">{{ hint() }}</p>
-      @if (legend().length > 0) {
-        <div
-          class="mindmap-view__legend"
-          role="group"
-          [attr.aria-label]="
-            isCa() ? 'Filtra per tipus de competència' : 'Filtra por tipo de competencia'
-          "
-        >
-          @for (item of legend(); track item.type) {
-            <button
-              type="button"
-              class="mindmap-view__legend-item"
-              [class.mindmap-view__legend-item--active]="item.active"
-              [attr.aria-pressed]="item.active"
-              (click)="state.toggleRelationFilter(item.type)"
-            >
-              <span class="mindmap-view__legend-dot" [style.background]="item.color"></span>
-              {{ item.label }}
-            </button>
-          }
-        </div>
-      }
+      <app-mindmap-legend
+        [items]="legend()"
+        [isCa]="isCa()"
+        (toggled)="state.toggleRelationFilter($event)"
+      />
     </div>
 
     @if (facade.modules().length > 0) {
@@ -31,7 +14,7 @@
         class="mindmap-view__canvas"
         [nodes]="nodes()"
         [links]="links()"
-        [arc]="arc()"
+        [arcs]="arcs()"
         [radius]="radius()"
         [focusId]="focusId()"
         [isCa]="isCa()"
@@ -44,7 +27,7 @@
     }
   </div>
 
-  @if (state.selection(); as selection) {
+  @if (selection(); as selection) {
     <app-connection-drawer
       class="mindmap-view__drawer"
       [sourceModule]="selection.module"

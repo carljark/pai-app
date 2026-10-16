@@ -1,0 +1,25 @@
+<aside class="mindmap-drawer" [attr.aria-label]="eyebrow()">
+  <header class="mindmap-drawer__header">
+    <div>
+      <span class="mindmap-drawer__eyebrow">{{ eyebrow() }}</span>
+      <div class="mindmap-drawer__path">
+        <span class="mindmap-drawer__code">{{ from() }}</span>
+        <span class="mindmap-drawer__arrow" aria-hidden="true">→</span>
+        <span class="mindmap-drawer__code mindmap-drawer__code--target">{{ to() }}</span>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="mindmap-drawer__close"
+      (click)="closed.emit()"
+      [attr.aria-label]="isCa() ? 'Tancar' : 'Cerrar'"
+      [title]="isCa() ? 'Tancar (Esc)' : 'Cerrar (Esc)'"
+    >
+      ×
+    </button>
+  </header>
+
+  <div class="mindmap-drawer__body">
+    <ng-content />
+  </div>
+</aside>

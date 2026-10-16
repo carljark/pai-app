@@ -149,4 +149,13 @@ describe('AfinidadesEsoViewComponent', () => {
     el.querySelector<HTMLButtonElement>('.afinidad-card__crear')!.click();
     expect(crear).toHaveBeenCalledWith(AFINIDADES_1.afinidades[0], 'MAT', 'ESO_1');
   });
+
+  it('con la vista de mapa mental muestra el mapa mental de la ESO', async () => {
+    const { MapaVistaService } = await import('../../services/mapa-vista.service');
+    TestBed.inject(MapaVistaService).setVista('panoramica');
+    await flushTab('ESO_1', AFINIDADES_1);
+    expect(el.querySelector('app-afinidades-mindmap-view')).not.toBeNull();
+    expect(el.querySelector('.afinidades-eso__layout')).toBeNull();
+    localStorage.removeItem('pai_mapa_vista');
+  });
 });

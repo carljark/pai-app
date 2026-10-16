@@ -1,0 +1,22 @@
+@if (items().length > 0) {
+  <div
+    class="mindmap-legend"
+    role="group"
+    [attr.aria-label]="
+      isCa() ? 'Filtra per tipus de competència' : 'Filtra por tipo de competencia'
+    "
+  >
+    @for (item of items(); track item.type) {
+      <button
+        type="button"
+        class="mindmap-legend__item"
+        [class.mindmap-legend__item--active]="item.active"
+        [attr.aria-pressed]="item.active"
+        (click)="toggled.emit(item.type)"
+      >
+        <span class="mindmap-legend__dot" [style.background]="item.color"></span>
+        {{ item.label }}
+      </button>
+    }
+  </div>
+}

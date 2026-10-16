@@ -1,0 +1,83 @@
+<div class="panorama-canvas">
+  <svg
+    #svg
+    class="panorama-canvas__svg"
+    role="group"
+    [attr.aria-label]="
+      isCa()
+        ? 'Panoràmica: totes les connexions del curs. Arrossega per moure, roda per ampliar'
+        : 'Panorámica: todas las conexiones del curso. Arrastra para mover, rueda para ampliar'
+    "
+  >
+    <g [attr.transform]="groupTransform()">
+      @for (arc of arcs(); track arc.code) {
+        <g
+          class="panorama-canvas__module"
+          [class.panorama-canvas__module--active]="activeModule() === arc.code"
+          (mouseenter)="focusChange.emit({ kind: 'module', code: arc.code })"
+          (mouseleave)="focusChange.emit(null)"
+        >
+          <title>{{ arc.code }} · {{ arc.name }}</title>
+          <path class="panorama-canvas__arc" [attr.d]="arc.path" [attr.fill]="arc.color" />
+          <text
+            class="panorama-canvas__arc-label"
+            [attr.x]="arc.labelX"
+            [attr.y]="arc.labelY"
+            text-anchor="middle"
+            dy="0.35em"
+          >
+            {{ arc.code }}
+          </text>
+        </g>
+      }
+
+      <g class="panorama-canvas__edges">
+        @for (edge of edges(); track edge.id) {
+          <path
+            class="panorama-canvas__edge panorama-canvas__edge--{{ edge.state }}"
+            [attr.d]="edge.path"
+            [attr.stroke]="edge.color"
+          />
+        }
+      </g>
+
+      @for (leaf of leaves(); track leaf.id) {
+        <g
+          [class]="leafClasses(leaf)"
+          [attr.transform]="leaf.transform"
+          role="button"
+          tabindex="0"
+          [attr.aria-label]="ariaLabel(leaf)"
+          (mouseenter)="focusChange.emit({ kind: 'ra', id: leaf.id })"
+          (mouseleave)="focusChange.emit(null)"
+          (focus)="focusChange.emit({ kind: 'ra', id: leaf.id })"
+          (blur)="focusChange.emit(null)"
+          (pointerdown)="rememberPointer($event)"
+          (click)="activate(leaf)"
+          (keydown.enter)="activate(leaf, $event)"
+          (keydown.space)="activate(leaf, $event)"
+        >
+          <circle class="panorama-canvas__hit" r="12" />
+          <circle class="panorama-canvas__dot" r="4.5" [attr.fill]="leaf.color" />
+          <text
+            class="panorama-canvas__label"
+            [attr.x]="leaf.flipped ? -9 : 9"
+            [attr.text-anchor]="leaf.flipped ? 'end' : 'start'"
+            [attr.transform]="leaf.flipped ? 'rotate(180)' : null"
+            dy="0.32em"
+          >
+            {{ leaf.raCode }}
+          </text>
+        </g>
+      }
+    </g>
+  </svg>
+
+  <app-mindmap-controls
+    class="panorama-canvas__controls"
+    [isCa]="isCa()"
+    (zoomIn)="zoomBy(1.25)"
+    (zoomOut)="zoomBy(0.8)"
+    (fit)="fit()"
+  />
+</div>

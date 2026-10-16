@@ -27,6 +27,8 @@
           : 'No se han podido cargar las afinidades.'
       }}
     </p>
+  } @else if (vistas.vistaEso() === 'mental') {
+    <app-afinidades-mindmap-view [tab]="tab()" />
   } @else {
     <div class="afinidades-eso__layout">
       <nav class="afinidades-eso__materias" [attr.aria-label]="isCa() ? 'Matèries' : 'Materias'">

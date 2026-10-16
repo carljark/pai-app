@@ -22,4 +22,16 @@
     Mapa mental
     <span class="vista-toggle__badge">beta</span>
   </button>
+  @if (conPanoramica()) {
+    <button
+      type="button"
+      class="vista-toggle__option"
+      [class.vista-toggle__option--active]="vista() === 'panoramica'"
+      [attr.aria-pressed]="vista() === 'panoramica'"
+      (click)="select('panoramica')"
+    >
+      {{ isCa() ? 'Panoràmica' : 'Panorámica' }}
+      <span class="vista-toggle__badge">beta</span>
+    </button>
+  }
 </div>

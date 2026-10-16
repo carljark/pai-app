@@ -1113,7 +1113,8 @@ describe('MapaIntermodularViewComponent', () => {
     expect(el.querySelector('app-afinidades-eso-view')).toBeTruthy();
     expect(getAfinidades).toHaveBeenCalledWith('ESO_1');
     expect(el.querySelector('app-mapa-header')).toBeNull();
-    expect(el.querySelector('app-mapa-vista-toggle')).toBeNull();
+    // En la ESO el selector de vista no ofrece la panorámica
+    expect(el.querySelectorAll('app-mapa-vista-toggle .vista-toggle__option')).toHaveLength(2);
     expect(el.querySelector('app-modulo-list')).toBeNull();
     expect(el.querySelector('app-ra-detail')).toBeNull();
     expect(el.querySelector('app-connections-list')).toBeNull();
@@ -1166,6 +1167,30 @@ describe('MapaIntermodularViewComponent', () => {
     (el.querySelector('app-connection-drawer .mapa-btn-action') as HTMLButtonElement).click();
     expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
     expect(curriculum.selectedRas()[0]).toContain('Muestra una imagen personal');
+    component.vistas.setVista('clasica');
+    localStorage.removeItem('pai_mapa_vista');
+  });
+
+  it('la panorámica salta al mapa mental con el RA pulsado ya abierto', async () => {
+    const el = fixture.nativeElement as HTMLElement;
+    component.vistas.setVista('panoramica');
+    fixture.detectChanges();
+    await fixture.whenStable();
+    expect(el.querySelector('app-panorama-view')).toBeTruthy();
+    expect(el.querySelector('.mapa-vertical-accordions')).toBeNull();
+
+    const leaf = [...el.querySelectorAll('.panorama-canvas__leaf')].find((l) =>
+      l.getAttribute('aria-label')!.startsWith('3060 RA1'),
+    )!;
+    leaf.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    fixture.detectChanges();
+    await fixture.whenStable();
+    expect(el.querySelector('app-mindmap-view')).toBeTruthy();
+    expect(
+      el
+        .querySelector('.mindmap-canvas__node--ra.mindmap-canvas__node--expanded')
+        ?.getAttribute('aria-label'),
+    ).toMatch(/^RA1 /);
     component.vistas.setVista('clasica');
     localStorage.removeItem('pai_mapa_vista');
   });

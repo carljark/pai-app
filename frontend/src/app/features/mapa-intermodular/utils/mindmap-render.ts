@@ -1,5 +1,6 @@
 import type {
   MindmapLink,
+  MindmapNode,
   MindmapNodeKind,
   PositionedNode,
   RenderedLink,
@@ -34,10 +35,8 @@ export function renderLinks(links: MindmapLink[], nodes: RenderedNode[]): Render
   return links.map((link) => ({ ...link, faded: faded.has(link.targetId) }));
 }
 
-/** Nodo en el que se centra la cámara: el más profundo de la rama abierta. */
-export function focusNodeId(path: VisualContext['path']): string {
-  if (path.groupCode) return `g:${path.raId}:${path.groupCode}`;
-  if (path.raId) return `r:${path.raId}`;
-  if (path.moduleCode) return `m:${path.moduleCode}`;
-  return 'root';
+/** Nodo en el que se centra la cámara: el más profundo de la rama desplegada (sin las hojas). */
+export function focusNodeId(root: MindmapNode): string {
+  const open = root.children.find((n) => n.expanded && n.kind !== 'connection');
+  return open ? focusNodeId(open) : root.id;
 }

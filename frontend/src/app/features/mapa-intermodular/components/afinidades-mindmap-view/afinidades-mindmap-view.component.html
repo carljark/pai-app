@@ -1,0 +1,42 @@
+<div class="afinidades-mindmap-view" [class.afinidades-mindmap-view--with-drawer]="!!selection()">
+  <div class="afinidades-mindmap-view__stage">
+    <p class="afinidades-mindmap-view__hint">{{ hint() }}</p>
+    @if (facade.materias().length > 0) {
+      <app-mindmap-canvas
+        class="afinidades-mindmap-view__canvas"
+        [nodes]="nodes()"
+        [links]="links()"
+        [arcs]="arcs()"
+        [radius]="radius()"
+        [focusId]="focusId()"
+        [isCa]="isCa()"
+        (nodeActivate)="state.activate($event)"
+      />
+    } @else {
+      <p class="afinidades-mindmap-view__empty">
+        {{
+          isCa()
+            ? 'Aquest curs encara no té fitxes d’afinitat.'
+            : 'Este curso todavía no tiene fichas de afinidad.'
+        }}
+      </p>
+    }
+  </div>
+
+  @if (selection(); as selection) {
+    <app-mindmap-drawer
+      class="afinidades-mindmap-view__drawer"
+      [eyebrow]="isCa() ? 'Fitxa d’afinitat' : 'Ficha de afinidad'"
+      [from]="facade.materiaName(selection.materia, isCa())"
+      [to]="destino(selection.ficha, selection.materia)"
+      [isCa]="isCa()"
+      (closed)="state.closeConnection()"
+    >
+      <app-afinidad-card
+        [afinidad]="selection.ficha"
+        [materia]="selection.materia"
+        (crearProyecto)="crearProyecto(selection.ficha, selection.materia)"
+      />
+    </app-mindmap-drawer>
+  }
+</div>

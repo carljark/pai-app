@@ -2,15 +2,16 @@ import { Component, computed, inject, output } from '@angular/core';
 import { LayoutService } from '../../../../../services/layout.service';
 import { NivelesService } from '../../../../../services/niveles.service';
 import type { IntermodularConnection } from '../../../models/mapa-intermodular.model';
-import type { MindmapPath } from '../../../models/mindmap.model';
+import type { MindmapNode, MindmapPath } from '../../../models/mindmap.model';
 import { MapaIntermodularFacade } from '../../../services/mapa-intermodular.facade';
-import { MindmapState } from '../../../services/mindmap.state';
+import { MINDMAP_SELECTION, MindmapState } from '../../../services/mindmap.state';
 import { mapaTabLabel } from '../../../utils/mapa-labels';
 import { connectionArc, layoutMindmap } from '../../../utils/mindmap-layout';
 import { normalizeQuery, type VisualContext } from '../../../utils/mindmap-match';
 import { focusNodeId, renderLinks, renderNodes } from '../../../utils/mindmap-render';
-import { buildMindmapTree } from '../../../utils/mindmap-tree';
-import { RELATION_COLORS, RELATION_TYPES, relationLabel } from '../../../utils/relation-labels';
+import { buildMindmapTree, findSelectedConnection } from '../../../utils/mindmap-tree';
+import { buildLegend } from '../../../utils/relation-labels';
+import { MindmapLegendComponent } from '../mindmap-legend/mindmap-legend.component';
 import { ConnectionDrawerComponent } from '../connection-drawer/connection-drawer.component';
 import { MindmapCanvasComponent } from '../mindmap-canvas/mindmap-canvas.component';
 
@@ -44,8 +45,17 @@ function hintStep(path: MindmapPath): keyof typeof HINTS {
 @Component({
   selector: 'app-mindmap-view',
   standalone: true,
-  imports: [MindmapCanvasComponent, ConnectionDrawerComponent],
-  providers: [MindmapState],
+  imports: [MindmapCanvasComponent, ConnectionDrawerComponent, MindmapLegendComponent],
+  providers: [
+    MindmapState,
+    {
+      provide: MINDMAP_SELECTION,
+      useFactory: () => {
+        const facade = inject(MapaIntermodularFacade);
+        return (node: MindmapNode) => facade.selectRa(node.raId!);
+      },
+    },
+  ],
   templateUrl: './mindmap-view.component.html',
   styleUrl: './mindmap-view.component.scss',
   host: { '(keydown.escape)': 'state.closeConnection()' },
@@ -81,7 +91,10 @@ export class MindmapViewComponent {
   nodes = computed(() => renderNodes(this.positioned().nodes, this.visualContext()));
   links = computed(() => renderLinks(this.positioned().links, this.nodes()));
   radius = computed(() => this.positioned().radius);
-  focusId = computed(() => focusNodeId(this.state.path()));
+  focusId = computed(() => focusNodeId(this.tree()));
+
+  /** Conexión elegida con su módulo y RA de origen. */
+  selection = computed(() => findSelectedConnection(this.facade.modules(), this.state.path()));
   hint = computed(() => HINTS[hintStep(this.state.path())][this.isCa() ? 'ca' : 'es']);
 
   /** Sigla de la etapa en el nodo central («CFGS»). */
@@ -90,24 +103,22 @@ export class MindmapViewComponent {
     return tab ? this.niveles.sigla(tab.nivel) : '';
   });
 
-  /** Arco desde la conexión elegida hasta su módulo de destino. */
-  arc = computed(() => {
-    const selection = this.state.selection();
-    if (!selection) return null;
+  /** Arco desde la conexión elegida hasta su módulo de destino (si está en el mapa). */
+  arcs = computed(() => {
+    const selection = this.selection();
+    if (!selection) return [];
     const { raId, connectionIndex } = this.state.path();
     const id = `c:${raId}:${connectionIndex}`;
-    return connectionArc(this.positioned().nodes, id, selection.connection.targetModuleCode);
+    const arc = connectionArc(this.positioned().nodes, id, selection.connection.targetModuleCode);
+    return arc ? [arc] : [];
   });
 
   /** Tipos de competencia presentes en el mapa, para la leyenda que filtra. */
-  legend = computed(() => {
-    const present = new Set(this.tree().children.flatMap((m) => m.relationTypes));
-    const active = this.state.relationFilter();
-    return RELATION_TYPES.filter((t) => present.has(t)).map((type) => ({
-      type,
-      label: relationLabel(type, this.isCa()),
-      color: RELATION_COLORS[type],
-      active: active === type,
-    }));
-  });
+  legend = computed(() =>
+    buildLegend(
+      this.tree().children.flatMap((m) => m.relationTypes),
+      this.state.relationFilter(),
+      this.isCa(),
+    ),
+  );
 }

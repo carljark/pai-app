@@ -15,15 +15,14 @@ const OPEN: MindmapPath = {
 };
 
 function setPath(fixture: ComponentFixture<MindmapCanvasComponent>, path: MindmapPath) {
-  const laid = layoutMindmap(
-    buildMindmapTree({
-      modules: mindmapModules(),
-      path,
-      isCa: false,
-      rootBadge: 'CFGS',
-      rootLabel: 'Laboratorio',
-    }),
-  );
+  const tree = buildMindmapTree({
+    modules: mindmapModules(),
+    path,
+    isCa: false,
+    rootBadge: 'CFGS',
+    rootLabel: 'Laboratorio',
+  });
+  const laid = layoutMindmap(tree);
   const nodes = renderNodes(laid.nodes, {
     query: 'muestras',
     moduleType: 'all',
@@ -33,8 +32,8 @@ function setPath(fixture: ComponentFixture<MindmapCanvasComponent>, path: Mindma
   fixture.componentRef.setInput('nodes', nodes);
   fixture.componentRef.setInput('links', renderLinks(laid.links, nodes));
   fixture.componentRef.setInput('radius', laid.radius);
-  fixture.componentRef.setInput('focusId', focusNodeId(path));
-  fixture.componentRef.setInput('arc', path.connectionIndex === null ? null : 'M0,0Q1,1 2,2');
+  fixture.componentRef.setInput('focusId', focusNodeId(tree));
+  fixture.componentRef.setInput('arcs', path.connectionIndex === null ? [] : ['M0,0Q1,1 2,2']);
 }
 
 describe('MindmapCanvasComponent', () => {

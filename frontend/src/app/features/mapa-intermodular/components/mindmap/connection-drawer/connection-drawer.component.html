@@ -1,45 +1,22 @@
-<aside
-  class="connection-drawer"
-  [attr.aria-label]="isCa() ? 'Detall de la connexió' : 'Detalle de la conexión'"
+<app-mindmap-drawer
+  [eyebrow]="isCa() ? 'Connexió' : 'Conexión'"
+  [from]="sourceModule().code + ' · ' + sourceRa().code"
+  [to]="connection().targetModuleCode + ' · ' + connection().targetRaCode"
+  [isCa]="isCa()"
+  (closed)="closed.emit()"
 >
-  <header class="connection-drawer__header">
-    <div class="connection-drawer__route">
-      <span class="connection-drawer__eyebrow">{{ isCa() ? 'Connexió' : 'Conexión' }}</span>
-      <div class="connection-drawer__path">
-        <span class="connection-drawer__code"
-          >{{ sourceModule().code }} · {{ sourceRa().code }}</span
-        >
-        <span class="connection-drawer__arrow" aria-hidden="true">→</span>
-        <span class="connection-drawer__code connection-drawer__code--target">
-          {{ connection().targetModuleCode }} · {{ connection().targetRaCode }}
-        </span>
-      </div>
-    </div>
-    <button
-      type="button"
-      class="connection-drawer__close"
-      (click)="closed.emit()"
-      [attr.aria-label]="isCa() ? 'Tancar' : 'Cerrar'"
-      [title]="isCa() ? 'Tancar (Esc)' : 'Cerrar (Esc)'"
-    >
-      ×
-    </button>
-  </header>
+  <section class="connection-drawer__source">
+    <span class="connection-drawer__source-label">
+      {{ isCa() ? 'RA d’origen' : 'RA de origen' }} — {{ sourceModuleName() }}
+    </span>
+    <p class="connection-drawer__source-text">
+      <strong>{{ sourceRa().code }}.</strong> {{ sourceRaText() }}
+    </p>
+  </section>
 
-  <div class="connection-drawer__body">
-    <section class="connection-drawer__source">
-      <span class="connection-drawer__source-label">
-        {{ isCa() ? 'RA d’origen' : 'RA de origen' }} — {{ sourceModuleName() }}
-      </span>
-      <p class="connection-drawer__source-text">
-        <strong>{{ sourceRa().code }}.</strong> {{ sourceRaText() }}
-      </p>
-    </section>
-
-    <app-connection-card
-      [connection]="connection()"
-      [activeTab]="activeTab()"
-      (createProject)="createProject.emit($event)"
-    />
-  </div>
-</aside>
+  <app-connection-card
+    [connection]="connection()"
+    [activeTab]="activeTab()"
+    (createProject)="createProject.emit($event)"
+  />
+</app-mindmap-drawer>

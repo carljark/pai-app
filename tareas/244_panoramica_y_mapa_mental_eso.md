@@ -90,7 +90,13 @@ No hay cambios en el backend, migraciones ni dependencias nuevas.
   - panorámica de Laboratorio Clínico 2.º, sin resaltado y con `1373_RA5` resaltado;
   - panorámica de FP Básica: 65 RA, 435 curvas y 50 conexiones fuera del curso;
   - mapa mental de 3.º de ESO con una ficha de tres materias abierta.
-- **Pendiente:** la interacción real (ratón, toque y zoom) se comprueba en producción tras el despliegue.
+- **Pendiente:** la interacción real (ratón, toque y zoom) queda por comprobar en producción.
+- **`cd backend && npm test`:** 461 tests en verde, ejecutados por el hook de push.
+- **Despliegue** con `./scripts/deploy-prod.sh` (commit `4e392f6`):
+  - copia de seguridad previa;
+  - migraciones al día;
+  - la API y el frontend responden;
+  - el bundle servido incluye la panorámica y el mapa mental de la ESO.
 
 ## Desviaciones respecto al plan
 - **Ficha flotante y leyenda compartida:** se añadieron `PanoramaInfoComponent` (ficha flotante en lugar de tooltip) y `MindmapLegendComponent` (leyenda extraída para compartirla), para respetar los límites de tamaño.

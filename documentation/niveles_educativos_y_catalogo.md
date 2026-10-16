@@ -229,7 +229,7 @@ Título de Técnico Superior en Integración Social (SSC33), familia Servicios S
 
 ## CFGS Laboratorio Clínico y Biomédico (`CFGS_LABORATORIO_CLINICO`)
 
-Título de Técnico Superior en Laboratorio Clínico y Biomédico (SAN36), familia Sanidad. `codigoCaib: 'SAN36'`. Sin mapa intermodular (tarea 219).
+Título de Técnico Superior en Laboratorio Clínico y Biomédico (SAN36), familia Sanidad. `codigoCaib: 'SAN36'`. Incorporado en la tarea 219. Tiene mapa intermodular de 2.º curso (tarea 238, pestaña `CFGS_LABORATORIO_CLINICO_2`, 176 relaciones y 352 conexiones); el 1.º curso está pendiente.
 
 ### Fuente normativa
 

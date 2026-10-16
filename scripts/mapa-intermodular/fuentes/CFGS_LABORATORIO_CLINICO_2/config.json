@@ -1,0 +1,62 @@
+{
+  "nivel": "CFGS_LABORATORIO_CLINICO",
+  "curso": "2º",
+  "modulos": {
+    "1371": {
+      "nombre_es": "Análisis bioquímico",
+      "nombre_ca": "Anàlisi bioquímica",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#f472b6",
+      "icon": "flask-conical"
+    },
+    "1372": {
+      "nombre_es": "Técnicas de inmunodiagnóstico",
+      "nombre_ca": "Tècniques d'immunodiagnòstic",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#34d399",
+      "icon": "shield-check"
+    },
+    "1373": {
+      "nombre_es": "Microbiología clínica",
+      "nombre_ca": "Microbiologia clínica",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#fb923c",
+      "icon": "microscope"
+    },
+    "1374": {
+      "nombre_es": "Técnicas de análisis hematológico",
+      "nombre_ca": "Tècniques d'anàlisi hematològica",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#a78bfa",
+      "icon": "droplet"
+    },
+    "1375": {
+      "nombre_es": "Proyecto intermodular de laboratorio clínico y biomédico",
+      "nombre_ca": "Projecte intermodular de laboratori clínic i biomèdic",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "folder-kanban"
+    },
+    "1708": {
+      "nombre_es": "Sostenibilidad aplicada al sistema productivo",
+      "nombre_ca": "Sostenibilitat aplicada al sistema productiu",
+      "tipo": "comun",
+      "relacion": "sostenibilidad",
+      "color": "#4ade80",
+      "icon": "leaf"
+    },
+    "1710": {
+      "nombre_es": "Itinerario personal para la empleabilidad II",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat II",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#fbbf24",
+      "icon": "briefcase"
+    }
+  }
+}

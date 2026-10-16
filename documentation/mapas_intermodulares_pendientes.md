@@ -22,14 +22,14 @@ Las relaciones estimadas salen de unas 8 conexiones por RA: RA × 8 / 2, porque 
 | CFGS Integración Social | 1.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL` | `mapa_cfgs_integracion_social.json` | 7 | 37 | 299 | 148 | ✅ Hecho (tarea 226, Claude): 145 relaciones, 290 conexiones. El borrador de Gemini (tarea 224) se descartó por tener textos de plantilla |
 | CFGS Integración Social | 2.º | `CFGS_INTEGRACION_SOCIAL` | `CFGS_INTEGRACION_SOCIAL_2` | `mapa_cfgs_integracion_social_2.json` | 9 | 44 | 346 | 176 | ✅ Hecho (tarea 225, Claude): 165 relaciones, 330 conexiones |
 | CFGS Laboratorio Clínico y Biomédico | 1.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO` | `mapa_cfgs_laboratorio_clinico.json` | 7 | 45 | 360 | 180 | Pendiente |
-| CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | Pendiente |
+| CFGS Laboratorio Clínico y Biomédico | 2.º | `CFGS_LABORATORIO_CLINICO` | `CFGS_LABORATORIO_CLINICO_2` | `mapa_cfgs_laboratorio_clinico_2.json` | 7 | 44 | 335 | 176 | ✅ Hecho (tarea 238, Gemini): 176 relaciones, 352 conexiones |
 
-Quedan 5 pestañas, con unas 936 relaciones y otras tantas actividades bilingües.
+Quedan 4 pestañas, con unas 760 relaciones y otras tantas actividades bilingües.
 
 ## Orden sugerido
 
 1. **CFGS Enseñanza y Animación Sociodeportiva 1.º** (48 RA), para completar el ciclo: el 2.º ya está hecho (tarea 235).
-2. **CFGS Laboratorio Clínico y Biomédico** 2.º y 1.º (44 y 45 RA).
+2. **CFGS Laboratorio Clínico y Biomédico 1.º** (45 RA), para completar el ciclo: el 2.º ya está hecho (tarea 238).
 3. Al final, **Guía en el Medio Natural** 2.º y 1.º (45 y 52 RA; el 1.º es el mayor).
 
 Al empezar un ciclo de dos cursos, conviene hacer los dos seguidos: así el selector del mapa muestra los dos cursos desde el principio.

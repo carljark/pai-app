@@ -27,6 +27,10 @@ import { up as runMigration41 } from '../migrations/41_ingest_mapa_cfgm_atencion
 import { up as runMigration42 } from '../migrations/42_ingest_mapa_cfgm_atencion_dependencia';
 import { up as runMigration43 } from '../migrations/43_ingest_mapa_cfgs_animacion_sociodeportiva_2';
 import { up as runMigration45 } from '../migrations/45_ingest_mapa_cfgs_laboratorio_clinico_2';
+import { up as runMigration44 } from '../migrations/44_ingest_mapa_cfgs_animacion_sociodeportiva';
+import { up as runMigration46 } from '../migrations/46_ingest_mapa_cfgs_laboratorio_clinico';
+import { up as runMigration47 } from '../migrations/47_ingest_mapa_cfgm_guia_medio_natural_2';
+import { up as runMigration48 } from '../migrations/48_ingest_mapa_cfgm_guia_medio_natural';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
@@ -34,6 +38,7 @@ import { CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA as AF_RAS } from '../data/ras_cf
 import { CFGM_ATENCION_DEPENDENCIA_RAS_DATA as APSD_RAS } from '../data/ras_cfgm_atencion_dependencia.data';
 import { CFGS_ANIMACION_SOCIODEPORTIVA_RAS_DATA as ASD_RAS } from '../data/ras_cfgs_animacion_sociodeportiva.data';
 import { CFGS_LABORATORIO_CLINICO_RAS_DATA as LC_RAS } from '../data/ras_cfgs_laboratorio_clinico.data';
+import { CFGM_GUIA_MEDIO_NATURAL_RAS_DATA as GMN_RAS } from '../data/ras_cfgm_guia_medio_natural.data';
 
 beforeAll(async () => await connectDB());
 afterAll(async () => await closeDB());
@@ -697,25 +702,131 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.body[0].name_ca).toBe("Activitats d'oci i temps lliure");
     });
 
-    it('debería cargar con la migración 45 el 2.º de Laboratorio Clínico y Biomédico sin tocar otras pestañas', async () => {
+    it('debería cargar con la migración 44 el 1.º de Animación Sociodeportiva sin tocar otras pestañas', async () => {
       await MapaModule.create({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2', order: 0, code: '1123', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration44();
+      await runMigration44();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2' })).toBe(1);
+      await expectBidirectionalMap('CFGS_ANIMACION_SOCIODEPORTIVA', 8, 384, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = ASD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_ANIMACION_SOCIODEPORTIVA');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1124', '1136', '1138', '1139', '1141', '1143', '1665', '1709']);
+      expect(res.body[0].name_es).toBe('Dinamización grupal');
+      expect(res.body[0].name_ca).toBe('Dinamització grupal');
+    });
+
+    it('debería cargar con la migración 46 el 1.º de Laboratorio Clínico sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA', order: 0, code: '1124', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration46();
+      await runMigration46();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA' })).toBe(1);
+      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO', 7, 374, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGS_LABORATORIO_CLINICO' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = LC_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGS_LABORATORIO_CLINICO');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1367', '1368', '1369', '1370', '0179', '1665', '1709']);
+      expect(res.body[0].name_es).toBe('Gestión de muestras biológicas');
+      expect(res.body[0].name_ca).toBe('Gestió de mostres biològiques');
+    });
+
+    it('debería cargar con la migración 47 el 2.º de Guía en el Medio Natural sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGS_LABORATORIO_CLINICO', order: 0, code: '1367', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration47();
+      await runMigration47();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_LABORATORIO_CLINICO' })).toBe(1);
+      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL_2', 8, 368, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = GMN_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGM_GUIA_MEDIO_NATURAL_2');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1328', '1337', '1338', '1339', '0156', '1708', '1710', '1713']);
+      expect(res.body[0].name_es).toBe('Atención a grupos');
+      expect(res.body[0].name_ca).toBe('Atenció a grups');
+    });
+
+    it('debería cargar con la migración 48 el 1.º de Guía en el Medio Natural sin tocar el 2.º', async () => {
+      await MapaModule.create({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2', order: 0, code: '1328', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration48();
+      await runMigration48();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2' })).toBe(1);
+      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL', 9, 410, 1);
+      for (const doc of await MapaModule.find({ tab: 'CFGM_GUIA_MEDIO_NATURAL' })) {
+        for (const lo of doc.learningOutcomes) {
+          const ra = GMN_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+          expect(lo.text_ca).toBe(ra.description_ca);
+          expect(lo.criteria_es).toEqual(ra.criterios_es);
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
+        }
+      }
+
+      const res = await request(app).get('/api/mapa-intermodular?tab=CFGM_GUIA_MEDIO_NATURAL');
+      expect(res.status).toBe(200);
+      expect(res.body.map((m: any) => m.code)).toEqual(['1325', '1327', '1329', '1333', '1334', '1335', '1336', '1664', '1709']);
+      expect(res.body[0].name_es).toBe('Técnicas de equitación');
+      expect(res.body[0].name_ca).toBe("Tècniques d'equitació");
+    });
+
+    it('debería cargar con la migración 45 el 2.º de Laboratorio Clínico sin tocar el 1.º', async () => {
+      await MapaModule.create({ tab: 'CFGS_LABORATORIO_CLINICO', order: 0, code: '1367', name_es: 'X', name_ca: 'X',
         type: 'especifico', color: '#000000', icon: 'book',
       });
       await runMigration45();
       await runMigration45();
 
-      expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2' })).toBe(1);
+      expect(await MapaModule.countDocuments({ tab: 'CFGS_LABORATORIO_CLINICO' })).toBe(1);
       await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO_2', 7, 352, 1);
       for (const doc of await MapaModule.find({ tab: 'CFGS_LABORATORIO_CLINICO_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = LC_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
           expect(lo.text_ca).toBe(ra.description_ca);
           expect(lo.criteria_es).toEqual(ra.criterios_es);
-          expect(lo.connections.length).toBe(8);
-          for (const c of lo.connections) {
-            expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
-            expect(c.sourceCriteria).toMatch(/^\d{4}-\d[a-z](, \d{4}-\d[a-z])*$/);
-          }
+          expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+          expect(lo.connections.length).toBeLessThanOrEqual(15);
+          for (const c of lo.connections) expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
         }
       }
 

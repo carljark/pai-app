@@ -1302,6 +1302,21 @@ describe('ProjectsFacade', () => {
       expect(facade.projectsHistory()[0].title).toBe('Sin compartir');
     });
 
+    it('should rename a project and replace it in the history', () => {
+      facade.projectsHistory.set([
+        { _id: 'p1', title: 'Antiguo' },
+        { _id: 'p9', title: 'Otro' },
+      ] as any);
+
+      facade.renameProject('p1', 'Nuevo nombre').subscribe();
+      const req = httpMock.expectOne('/api/projects/p1/title');
+      expect(req.request.method).toBe('PATCH');
+      expect(req.request.body).toEqual({ title: 'Nuevo nombre' });
+      req.flush({ _id: 'p1', title: 'Nuevo nombre' });
+      expect(facade.projectsHistory()[0].title).toBe('Nuevo nombre');
+      expect(facade.projectsHistory()[1].title).toBe('Otro');
+    });
+
     it('should load the user directory and tolerate empty responses and errors', () => {
       (facade as any).loadDirectory();
       httpMock.expectOne('/api/users/directory').flush([{ _id: 'u2', name: 'Ana' }]);

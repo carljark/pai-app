@@ -1,0 +1,70 @@
+{
+  "nivel": "CFGS_ANIMACION_SOCIODEPORTIVA",
+  "curso": "1º",
+  "modulos": {
+    "1124": {
+      "nombre_es": "Dinamización grupal",
+      "nombre_ca": "Dinamització grupal",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#f472b6",
+      "icon": "users"
+    },
+    "1136": {
+      "nombre_es": "Valoración de la condición física e intervención en accidentes",
+      "nombre_ca": "Valoració de la condició física i intervenció en accidents",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#f87171",
+      "icon": "heart-pulse"
+    },
+    "1138": {
+      "nombre_es": "Juegos y actividades físico-recreativas y de animación turística",
+      "nombre_ca": "Jocs i activitats físiques recreatives i d'animació turística",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#fb923c",
+      "icon": "party-popper"
+    },
+    "1139": {
+      "nombre_es": "Actividades físico-deportivas individuales",
+      "nombre_ca": "Activitats fisicoesportives individuals",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#a78bfa",
+      "icon": "timer"
+    },
+    "1141": {
+      "nombre_es": "Actividades físico-deportivas de implementos",
+      "nombre_ca": "Activitats fisicoesportives amb objectes",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "target"
+    },
+    "1143": {
+      "nombre_es": "Metodología de la enseñanza de actividades físico-deportivas",
+      "nombre_ca": "Metodologia de l'ensenyament d'activitats fisicoesportives",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#34d399",
+      "icon": "graduation-cap"
+    },
+    "1665": {
+      "nombre_es": "Digitalización aplicada a los sectores productivos",
+      "nombre_ca": "Digitalització aplicada als sectors productius",
+      "tipo": "comun",
+      "relacion": "digital",
+      "color": "#4ade80",
+      "icon": "binary"
+    },
+    "1709": {
+      "nombre_es": "Itinerario personal para la empleabilidad I",
+      "nombre_ca": "Itinerari personal per a l’ocupabilitat I",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#fbbf24",
+      "icon": "briefcase"
+    }
+  }
+}

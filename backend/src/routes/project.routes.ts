@@ -5,9 +5,10 @@ import { listProjectChanges } from '../controllers/project-changes.controller';
 import { exportDocx, importDocx } from '../controllers/docx.controller';
 import { translateProject } from '../controllers/translation.controller';
 import { cloneProject } from '../controllers/project-clone.controller';
+import { renameProject } from '../controllers/project-title.controller';
 import filesRoutes from './files.routes';
 import { requireApproved, requireAiAccess } from '../middlewares/auth.middleware';
-import { projectEditGuards } from '../middlewares/project-access.middleware';
+import { projectEditGuards, requireProjectEditor } from '../middlewares/project-access.middleware';
 import { uploadMemory } from '../middlewares/upload.middleware';
 
 const router = Router();
@@ -32,6 +33,7 @@ router.post('/rewrite', requireApproved, requireAiAccess, ...projectEditGuards, 
 router.post('/:id/retry', requireApproved, requireAiAccess, retryProject);
 router.post('/:id/clone', requireApproved, cloneProject);
 router.post('/:id/translate', requireApproved, requireAiAccess, ...projectEditGuards, translateProject);
+router.patch('/:id/title', requireApproved, requireProjectEditor, renameProject);
 router.post('/:id/collaborators', requireApproved, addCollaborator);
 router.delete('/:id/collaborators/:userId', requireApproved, removeCollaborator);
 router.get('/', listProjects);

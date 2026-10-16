@@ -286,6 +286,11 @@ export const TRANSLATIONS_ES = {
     'Tienes el turno de edición: el resto de participantes no puede hacer cambios mientras editas.',
   editReadOnly:
     'Solo lectura: únicamente el autor y los colaboradores invitados pueden modificar este proyecto.',
+  renameProject: 'Cambiar el nombre',
+  renameProjectLabel: 'Nombre del proyecto',
+  renameProjectSave: 'Guardar',
+  renameProjectCancel: 'Cancelar',
+  renameProjectError: 'No se ha podido cambiar el nombre del proyecto.',
   changeLogTitle: 'Registro de cambios',
   changeLogEmpty: 'Todavía no hay cambios registrados.',
   changeLogRefresh: 'Actualizar',
@@ -302,6 +307,7 @@ export const TRANSLATIONS_ES = {
     DELETE_FILE: 'Borró un recurso',
     ADD_COLLABORATOR: 'Invitó a un colaborador',
     REMOVE_COLLABORATOR: 'Quitó a un colaborador',
+    RENAME_PROJECT: 'Cambió el nombre del proyecto',
   } as Record<string, string>,
 
   // SOLICITUDES DE CENTROS

@@ -1,0 +1,618 @@
+[
+  {
+    "a": { "modulo": "1141", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["a", "c"] },
+    "justificacion_es": "Clasificar los deportes de implementos por su lógica interna orienta qué modelo de enseñanza conviene, sobre todo para trabajar la toma de decisiones.",
+    "justificacion_ca": "Classificar els esports d'implements per la seva lògica interna orienta quin model d'ensenyament convé, sobretot per treballar la presa de decisions.",
+    "actividades": [
+      {
+        "titulo_es": "Enseñar tenis y hockey jugando desde el primer día",
+        "titulo_ca": "Ensenyar tennis i hoquei jugant des del primer dia",
+        "contexto_es": "Una escuela multideporte enseña la técnica de cada deporte aislada y los niños no saben qué hacer cuando juegan.",
+        "contexto_ca": "Una escola multiesport ensenya la tècnica de cada esport aïllada i els infants no saben què fer quan juguen.",
+        "desarrollo_es": "El alumnado compara clasificaciones de los deportes de implementos, como los de red o los de invasión, y sus criterios de agrupación (1141-1a). Analiza modelos de enseñanza como el tradicional y el comprensivo (1143-1a) y diferencia en cada deporte qué elementos de la tarea tienen que ver con la toma de decisiones (1143-1c).",
+        "desarrollo_ca": "L'alumnat compara classificacions dels esports d'implements, com els de xarxa o els d'invasió, i els seus criteris d'agrupació (1141-1a). Analitza models d'ensenyament com el tradicional i el comprensiu (1143-1a) i diferencia en cada esport quins elements de la tasca tenen a veure amb la presa de decisions (1143-1c).",
+        "evidencia_es": "Cuadro de clasificación y propuesta de modelo.",
+        "evidencia_ca": "Quadre de classificació i proposta de model.",
+        "dua_es": "Vídeos de ejemplo de cada modelo.",
+        "dua_ca": "Vídeos d'exemple de cada model.",
+        "metodologia_es": "aprendizaje por comparación.",
+        "metodologia_ca": "aprenentatge per comparació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA3", "criterios": ["a", "b"] },
+    "b": { "modulo": "1143", "ra": "RA3", "criterios": ["b", "c"] },
+    "justificacion_es": "Las fases y objetivos de la sesión determinan los materiales, espacios, tiempos y la organización de los recursos.",
+    "justificacion_ca": "Les fases i els objectius de la sessió determinen els materials, els espais, els temps i l'organització dels recursos.",
+    "actividades": [
+      {
+        "titulo_es": "Sesión de hockey en un patio escolar",
+        "titulo_ca": "Sessió d'hoquei en un pati escolar",
+        "contexto_es": "Una escuela de hockey sobre patines empieza a dar clases extraescolares en un patio con suelo de cemento y veinte niños.",
+        "contexto_ca": "Una escola d'hoquei sobre patins comença a fer classes extraescolars en un pati amb terra de ciment i vint infants.",
+        "desarrollo_es": "El alumnado identifica las fases de la sesión (1141-3a) y define sus objetivos, contenidos y metodología según la programación (1141-3b). Determina los materiales, espacios y tiempos de la unidad (1143-3b) y organiza a las personas y el material como recurso de enseñanza (1143-3c).",
+        "desarrollo_ca": "L'alumnat identifica les fases de la sessió (1141-3a) i en defineix els objectius, continguts i metodologia segons la programació (1141-3b). Determina els materials, espais i temps de la unitat (1143-3b) i organitza les persones i el material com a recurs d'ensenyament (1143-3c).",
+        "evidencia_es": "Ficha de sesión con plano organizativo.",
+        "evidencia_ca": "Fitxa de sessió amb plànol organitzatiu.",
+        "dua_es": "Plantilla de sesión y plano.",
+        "dua_ca": "Plantilla de sessió i plànol.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["b", "d"] },
+    "justificacion_es": "Integrar técnica y táctica en las tareas requiere progresiones coherentes con los objetivos de la programación.",
+    "justificacion_ca": "Integrar tècnica i tàctica a les tasques requereix progressions coherents amb els objectius de la programació.",
+    "actividades": [
+      {
+        "titulo_es": "Progresión del dos contra uno en hockey",
+        "titulo_ca": "Progressió del dos contra un a l'hoquei",
+        "contexto_es": "Los jugadores de hockey infantil dominan el pase en ejercicios, pero no lo usan en los partidos.",
+        "contexto_ca": "Els jugadors d'hoquei infantil dominen la passada en exercicis, però no la fan servir als partits.",
+        "desarrollo_es": "El alumnado integra contenidos técnicos y tácticos en una secuencia de tareas del pase a la situación de dos contra uno (1141-3c). La organiza como progresión según el tipo de contenido (1143-4b) y valora su coherencia con los objetivos de la programación (1143-4d).",
+        "desarrollo_ca": "L'alumnat integra continguts tècnics i tàctics en una seqüència de tasques de la passada a la situació de dos contra un (1141-3c). L'organitza com a progressió segons el tipus de contingut (1143-4b) i en valora la coherència amb els objectius de la programació (1143-4d).",
+        "evidencia_es": "Progresión de tareas con justificación.",
+        "evidencia_ca": "Progressió de tasques amb justificació.",
+        "dua_es": "Diagramas de cada tarea.",
+        "dua_ca": "Diagrames de cada tasca.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA2", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA3", "criterios": ["d"] },
+    "justificacion_es": "Modificar el espacio de juego es una forma de concretar los materiales y espacios según las características de los usuarios.",
+    "justificacion_ca": "Modificar l'espai de joc és una manera de concretar els materials i els espais segons les característiques dels usuaris.",
+    "actividades": [
+      {
+        "titulo_es": "Minitenis para niños de cinco años",
+        "titulo_ca": "Minitennis per a infants de cinc anys",
+        "contexto_es": "Un club quiere abrir una escuela de tenis para niños de cinco años, pero la pista es demasiado grande para ellos.",
+        "contexto_ca": "Un club vol obrir una escola de tennis per a infants de cinc anys, però la pista és massa gran per a ells.",
+        "desarrollo_es": "El alumnado modifica los espacios de juego con minipistas, redes bajas y pelotas de espuma (1141-2c). Concreta los materiales, los espacios, la organización y los tiempos de práctica según las características de los niños (1143-3d).",
+        "desarrollo_ca": "L'alumnat modifica els espais de joc amb minipistes, xarxes baixes i pilotes d'escuma (1141-2c). Concreta els materials, els espais, l'organització i els temps de pràctica segons les característiques dels infants (1143-3d).",
+        "evidencia_es": "Plano de la pista adaptada y ficha organizativa.",
+        "evidencia_ca": "Plànol de la pista adaptada i fitxa organitzativa.",
+        "dua_es": "Material de distintos tamaños.",
+        "dua_ca": "Material de diferents mides.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA4", "criterios": ["b"] },
+    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["b", "c"] },
+    "justificacion_es": "Una buena explicación destaca qué debe percibir el jugador y qué decisiones debe tomar en la tarea.",
+    "justificacion_ca": "Una bona explicació destaca què ha de percebre el jugador i quines decisions ha de prendre a la tasca.",
+    "actividades": [
+      {
+        "titulo_es": "Explicar el globo en pádel: qué mirar y cuándo usarlo",
+        "titulo_ca": "Explicar el globus al pàdel: què mirar i quan fer-lo servir",
+        "contexto_es": "Los alumnos de pádel saben hacer el globo, pero lo usan en el peor momento.",
+        "contexto_ca": "Els alumnes de pàdel saben fer el globus, però el fan servir en el pitjor moment.",
+        "desarrollo_es": "El alumnado diferencia los elementos perceptivos, como la posición de los rivales en la red (1143-1b), y los de decisión, como cuándo conviene jugar el globo (1143-1c). Con ello explica la tarea resaltando esos aspectos, anticipando errores y usando varios canales (1141-4b).",
+        "desarrollo_ca": "L'alumnat diferencia els elements perceptius, com la posició dels rivals a la xarxa (1143-1b), i els de decisió, com quan convé jugar el globus (1143-1c). Amb això explica la tasca remarcant aquests aspectes, anticipant errors i fent servir diversos canals (1141-4b).",
+        "evidencia_es": "Guion de explicación y vídeo.",
+        "evidencia_ca": "Guió d'explicació i vídeo.",
+        "dua_es": "Pizarra táctica magnética.",
+        "dua_ca": "Pissarra tàctica magnètica.",
+        "metodologia_es": "microenseñanza.",
+        "metodologia_ca": "microensenyament."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA5", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["a", "c"] },
+    "justificacion_es": "Evaluar la táctica obliga a elegir un modelo de evaluación y a comprobar si los espacios y recursos permiten observarla.",
+    "justificacion_ca": "Avaluar la tàctica obliga a triar un model d'avaluació i a comprovar si els espais i els recursos permeten observar-la.",
+    "actividades": [
+      {
+        "titulo_es": "Evaluar la táctica en partidos de voleibol reducidos",
+        "titulo_ca": "Avaluar la tàctica en partits de voleibol reduïts",
+        "contexto_es": "La escuela de voleibol solo evalúa gestos técnicos aislados y no sabe si los jugadores entienden el juego.",
+        "contexto_ca": "L'escola de voleibol només avalua gests tècnics aïllats i no sap si els jugadors entenen el joc.",
+        "desarrollo_es": "El alumnado contrasta modelos de evaluación de procesos de enseñanza (1143-5a) y selecciona instrumentos para evaluar los aprendizajes tácticos, como hojas de observación en partidos de tres contra tres (1141-5c). Establece también cómo comprobar si las pistas y el material permiten esa evaluación (1143-5c).",
+        "desarrollo_ca": "L'alumnat contrasta models d'avaluació de processos d'ensenyament (1143-5a) i selecciona instruments per avaluar els aprenentatges tàctics, com fulls d'observació en partits de tres contra tres (1141-5c). Estableix també com comprovar si les pistes i el material permeten aquesta avaluació (1143-5c).",
+        "evidencia_es": "Instrumento de observación táctica.",
+        "evidencia_ca": "Instrument d'observació tàctica.",
+        "dua_es": "Hoja con iconos de las acciones.",
+        "dua_ca": "Full amb icones de les accions.",
+        "metodologia_es": "evaluación auténtica.",
+        "metodologia_ca": "avaluació autèntica."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA1", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["e"] },
+    "justificacion_es": "Relacionar la técnica con las habilidades básicas ayuda a elegir la estrategia metodológica de un programa de iniciación.",
+    "justificacion_ca": "Relacionar la tècnica amb les habilitats bàsiques ajuda a triar l'estratègia metodològica d'un programa d'iniciació.",
+    "actividades": [
+      {
+        "titulo_es": "Del lanzamiento al saque: iniciación al bádminton",
+        "titulo_ca": "Del llançament al servei: iniciació al bàdminton",
+        "contexto_es": "Un programa municipal de iniciación al bádminton para niños de ocho años no consigue que golpeen el volante.",
+        "contexto_ca": "Un programa municipal d'iniciació al bàdminton per a infants de vuit anys no aconsegueix que colpegin el volant.",
+        "desarrollo_es": "El alumnado relaciona las técnicas del bádminton con habilidades básicas como lanzar, golpear o desplazarse (1141-1c). Con ello selecciona la estrategia metodológica más adecuada para el grupo, como partir del lanzamiento con la mano antes de usar la raqueta (1143-2e).",
+        "desarrollo_ca": "L'alumnat relaciona les tècniques del bàdminton amb habilitats bàsiques com llançar, colpejar o desplaçar-se (1141-1c). Amb això selecciona l'estratègia metodològica més adequada per al grup, com partir del llançament amb la mà abans de fer servir la raqueta (1143-2e).",
+        "evidencia_es": "Propuesta metodológica con tareas.",
+        "evidencia_ca": "Proposta metodològica amb tasques.",
+        "dua_es": "Volantes grandes y globos.",
+        "dua_ca": "Volants grans i globus.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["c", "e"] },
+    "justificacion_es": "El análisis táctico con inteligencia artificial empieza a usarse en la evaluación de los deportes de equipo y de implementos.",
+    "justificacion_ca": "L'anàlisi tàctica amb intel·ligència artificial comença a fer-se servir en l'avaluació dels esports d'equip i d'implements.",
+    "actividades": [
+      {
+        "titulo_es": "Mapas de calor en los partidos de pádel",
+        "titulo_ca": "Mapes de calor als partits de pàdel",
+        "contexto_es": "Un club de pádel instala cámaras que generan automáticamente mapas de calor y estadísticas de cada partido.",
+        "contexto_ca": "Un club de pàdel instal·la càmeres que generen automàticament mapes de calor i estadístiques de cada partit.",
+        "desarrollo_es": "El alumnado determina los aspectos técnicos y tácticos significativos para evaluar a los jugadores (1141-5a) y los compara con lo que mide el sistema. Debate la importancia presente y futura de la IA en el deporte (1665-4c) e identifica los lenguajes de programación con que se crean estas herramientas (1665-4e).",
+        "desarrollo_ca": "L'alumnat determina els aspectes tècnics i tàctics significatius per avaluar els jugadors (1141-5a) i els compara amb el que mesura el sistema. Debat la importància present i futura de la IA en l'esport (1665-4c) i identifica els llenguatges de programació amb què es creen aquestes eines (1665-4e).",
+        "evidencia_es": "Tabla comparativa y conclusiones del debate.",
+        "evidencia_ca": "Taula comparativa i conclusions del debat.",
+        "dua_es": "Ejemplos de mapas de calor.",
+        "dua_ca": "Exemples de mapes de calor.",
+        "metodologia_es": "debate crítico.",
+        "metodologia_ca": "debat crític."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA1", "criterios": ["d"] },
+    "justificacion_es": "Controlar el estado del material con herramientas digitales implica a departamentos que forman el entorno de gestión de la empresa.",
+    "justificacion_ca": "Controlar l'estat del material amb eines digitals implica departaments que formen l'entorn de gestió de l'empresa.",
+    "actividades": [
+      {
+        "titulo_es": "Inventario con códigos QR en el club de tenis",
+        "titulo_ca": "Inventari amb codis QR al club de tennis",
+        "contexto_es": "El club de tenis quiere saber en todo momento qué raquetas, redes y máquinas lanzapelotas están disponibles o averiadas.",
+        "contexto_ca": "El club de tennis vol saber en tot moment quines raquetes, xarxes i màquines llançapilotes estan disponibles o avariades.",
+        "desarrollo_es": "El alumnado diseña una herramienta de control permanente del estado del material y las instalaciones con códigos QR (1141-2d). Identifica qué departamentos del club, como administración, compras o mantenimiento, forman parte del entorno de gestión que usa esos datos (1665-1d).",
+        "desarrollo_ca": "L'alumnat dissenya una eina de control permanent de l'estat del material i les instal·lacions amb codis QR (1141-2d). Identifica quins departaments del club, com administració, compres o manteniment, formen part de l'entorn de gestió que fa servir aquestes dades (1665-1d).",
+        "evidencia_es": "Inventario digital y mapa de departamentos.",
+        "evidencia_ca": "Inventari digital i mapa de departaments.",
+        "dua_es": "Plantilla de inventario y generador de QR.",
+        "dua_ca": "Plantilla d'inventari i generador de QR.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA4", "criterios": ["h"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["e"] },
+    "justificacion_es": "Gestionar una competición en la nube permite que jugadores, árbitros y organizadores compartan resultados al momento.",
+    "justificacion_ca": "Gestionar una competició al núvol permet que jugadors, àrbitres i organitzadors comparteixin resultats al moment.",
+    "actividades": [
+      {
+        "titulo_es": "Liga de pádel con resultados en línea",
+        "titulo_ca": "Lliga de pàdel amb resultats en línia",
+        "contexto_es": "La liga de pádel de un municipio tiene cuarenta parejas y los resultados se pasan en papel al final del fin de semana.",
+        "contexto_ca": "La lliga de pàdel d'un municipi té quaranta parelles i els resultats es passen en paper al final del cap de setmana.",
+        "desarrollo_es": "El alumnado define los criterios de organización y control de la liga: categorías, calendario, resultados y clasificación (1141-4h). La configura en una plataforma en la nube y explica las ventajas que aporta frente al papel, como la actualización inmediata o el acceso desde el móvil (1665-3e).",
+        "desarrollo_ca": "L'alumnat defineix els criteris d'organització i control de la lliga: categories, calendari, resultats i classificació (1141-4h). La configura en una plataforma al núvol i explica els avantatges que aporta enfront del paper, com l'actualització immediata o l'accés des del mòbil (1665-3e).",
+        "evidencia_es": "Liga configurada y reglamento.",
+        "evidencia_ca": "Lliga configurada i reglament.",
+        "dua_es": "Tutorial de la plataforma con capturas paso a paso.",
+        "dua_ca": "Tutorial de la plataforma amb captures pas a pas.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "Los recursos de apoyo y consulta están hoy en servicios en la nube, cuya importancia conviene valorar.",
+    "justificacion_ca": "Els recursos de suport i consulta són avui en serveis al núvol, la importància dels quals convé valorar.",
+    "actividades": [
+      {
+        "titulo_es": "Banco de vídeos y fichas de la escuela de hockey",
+        "titulo_ca": "Banc de vídeos i fitxes de l'escola d'hoquei",
+        "contexto_es": "Cada entrenador de la escuela de hockey guarda sus vídeos y fichas en su móvil y no los comparte.",
+        "contexto_ca": "Cada entrenador de l'escola d'hoquei guarda els seus vídeos i fitxes al mòbil i no els comparteix.",
+        "desarrollo_es": "El alumnado selecciona recursos de apoyo y consulta: vídeos, manuales y aplicaciones de diagramas (1141-2e). Los organiza en un espacio compartido y describe la importancia del cloud computing para un equipo técnico (1665-5g).",
+        "desarrollo_ca": "L'alumnat selecciona recursos de suport i consulta: vídeos, manuals i aplicacions de diagrames (1141-2e). Els organitza en un espai compartit i descriu la importància del cloud computing per a un equip tècnic (1665-5g).",
+        "evidencia_es": "Banco de recursos organizado.",
+        "evidencia_ca": "Banc de recursos organitzat.",
+        "dua_es": "Estructura de carpetas sugerida.",
+        "dua_ca": "Estructura de carpetes suggerida.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA2", "criterios": ["g", "f"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "El protocolo de seguridad de una escuela deportiva parte de la evaluación de riesgos y de las medidas de protección.",
+    "justificacion_ca": "El protocol de seguretat d'una escola esportiva parteix de l'avaluació de riscs i de les mesures de protecció.",
+    "actividades": [
+      {
+        "titulo_es": "Protocolo de seguridad de la escuela de hockey sobre patines",
+        "titulo_ca": "Protocol de seguretat de l'escola d'hoquei sobre patins",
+        "contexto_es": "En la escuela de hockey sobre patines ha habido varios golpes porque algunos niños vienen sin protecciones.",
+        "contexto_ca": "A l'escola d'hoquei sobre patins hi ha hagut diversos cops perquè alguns infants vénen sense proteccions.",
+        "desarrollo_es": "El alumnado determina la evaluación de riesgos de la actividad y las técnicas de prevención y protección (1709-2c). Con ella elabora el protocolo de seguridad de la escuela (1141-2g) y concreta la vestimenta y el material personal obligatorio de los participantes (1141-2f).",
+        "desarrollo_ca": "L'alumnat determina l'avaluació de riscs de l'activitat i les tècniques de prevenció i protecció (1709-2c). Amb aquesta avaluació elabora el protocol de seguretat de l'escola (1141-2g) i concreta la vestimenta i el material personal obligatori dels participants (1141-2f).",
+        "evidencia_es": "Protocolo y lista de equipo obligatorio.",
+        "evidencia_ca": "Protocol i llista d'equip obligatori.",
+        "dua_es": "Fotografías del equipo de protección.",
+        "dua_ca": "Fotografies de l'equip de protecció.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA5", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["k"] },
+    "justificacion_es": "Hacer propuestas de mejora tras evaluar una escuela es un hábito que también sirve para el propio plan de acción profesional.",
+    "justificacion_ca": "Fer propostes de millora després d'avaluar una escola és un hàbit que també serveix per al propi pla d'acció professional.",
+    "actividades": [
+      {
+        "titulo_es": "Mejorar la escuela de bádminton y mejorar como entrenador",
+        "titulo_ca": "Millorar l'escola de bàdminton i millorar com a entrenador",
+        "contexto_es": "Al final de la temporada, el coordinador comparte con cada entrenador la evaluación de su grupo.",
+        "contexto_ca": "Al final de la temporada, el coordinador comparteix amb cada entrenador l'avaluació del seu grup.",
+        "desarrollo_es": "El alumnado elabora propuestas de mejora de la escuela a partir de la evaluación del proceso (1141-5e). Traslada las que dependen de su actuación a un plan de acción personal que refuerce sus fortalezas y trabaje sus áreas de mejora (1709-4k).",
+        "desarrollo_ca": "L'alumnat elabora propostes de millora de l'escola a partir de l'avaluació del procés (1141-5e). Trasllada les que depenen de la seva actuació a un pla d'acció personal que reforci les seves fortaleses i treballi les seves àrees de millora (1709-4k).",
+        "evidencia_es": "Propuestas de mejora y plan de acción.",
+        "evidencia_ca": "Propostes de millora i pla d'acció.",
+        "dua_es": "Plantilla de plan de acción.",
+        "dua_ca": "Plantilla de pla d'acció.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1141", "ra": "RA4", "criterios": ["c"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "La calidad de las demostraciones es una aptitud que los clubes valoran al contratar entrenadores.",
+    "justificacion_ca": "La qualitat de les demostracions és una aptitud que els clubs valoren en contractar entrenadors.",
+    "actividades": [
+      {
+        "titulo_es": "La prueba práctica para entrenador de tenis",
+        "titulo_ca": "La prova pràctica per a entrenador de tennis",
+        "contexto_es": "Un club de tenis contrata entrenadores tras una prueba en la que deben demostrar golpes a un grupo de niños.",
+        "contexto_ca": "Un club de tennis contracta entrenadors després d'una prova en què han de demostrar cops a un grup d'infants.",
+        "desarrollo_es": "El alumnado demuestra las acciones técnicas del tenis con calidad suficiente para que los niños se representen la tarea (1141-4c). Después reflexiona sobre las aptitudes y actitudes que el club valora en la prueba y sobre su zona de desarrollo próximo (1709-1c).",
+        "desarrollo_ca": "L'alumnat demostra les accions tècniques del tennis amb qualitat suficient perquè els infants es representin la tasca (1141-4c). Després reflexiona sobre les aptituds i actituds que el club valora a la prova i sobre la seva zona de desenvolupament proper (1709-1c).",
+        "evidencia_es": "Vídeo de la prueba y autoevaluación.",
+        "evidencia_ca": "Vídeo de la prova i autoavaluació.",
+        "dua_es": "Rúbrica de la prueba.",
+        "dua_ca": "Rúbrica de la prova.",
+        "metodologia_es": "simulación de selección.",
+        "metodologia_ca": "simulació de selecció."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA5", "criterios": ["f"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["e"] },
+    "justificacion_es": "Discutir e interpretar los datos de evaluación sigue las etapas de la ciencia de datos.",
+    "justificacion_ca": "Discutir i interpretar les dades d'avaluació segueix les etapes de la ciència de dades.",
+    "actividades": [
+      {
+        "titulo_es": "Datos de cinco escuelas deportivas sobre la mesa",
+        "titulo_ca": "Dades de cinc escoles esportives damunt la taula",
+        "contexto_es": "El área de deportes reúne los datos de asistencia y progreso de cinco escuelas para decidir cuáles ampliar.",
+        "contexto_ca": "L'àrea d'esports reuneix les dades d'assistència i progrés de cinc escoles per decidir quines ampliar.",
+        "desarrollo_es": "El alumnado describe las etapas de la ciencia de datos aplicadas a este caso: recogida, limpieza, análisis y comunicación (1665-5e). Concreta las situaciones y los elementos para discutir e interpretar los resultados en la reunión con los coordinadores (1143-5f).",
+        "desarrollo_ca": "L'alumnat descriu les etapes de la ciència de dades aplicades a aquest cas: recollida, neteja, anàlisi i comunicació (1665-5e). Concreta les situacions i els elements per discutir i interpretar els resultats a la reunió amb els coordinadors (1143-5f).",
+        "evidencia_es": "Informe de datos y guion de la reunión.",
+        "evidencia_ca": "Informe de dades i guió de la reunió.",
+        "dua_es": "Datos ya preparados en tabla.",
+        "dua_ca": "Dades ja preparades en taula.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA2", "criterios": ["a"] },
+    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["a"] },
+    "justificacion_es": "Los programas de enseñanza deben responder a los objetivos estratégicos de la institución que los promueve.",
+    "justificacion_ca": "Els programes d'ensenyament han de respondre als objectius estratègics de la institució que els promou.",
+    "actividades": [
+      {
+        "titulo_es": "Qué busca un ayuntamiento con sus escuelas deportivas",
+        "titulo_ca": "Què cerca un ajuntament amb les seves escoles esportives",
+        "contexto_es": "Un ayuntamiento quiere digitalizar la gestión de sus escuelas deportivas y empieza por definir qué quiere conseguir con ellas.",
+        "contexto_ca": "Un ajuntament vol digitalitzar la gestió de les seves escoles esportives i comença per definir què vol aconseguir amb aquestes escoles.",
+        "desarrollo_es": "El alumnado contextualiza los programas de enseñanza en la institución municipal que los promueve (1143-2a). Identifica los objetivos estratégicos del ayuntamiento, como la salud, la inclusión o la ocupación de los equipamientos, que guiarán el plan de digitalización (1665-6a).",
+        "desarrollo_ca": "L'alumnat contextualitza els programes d'ensenyament a la institució municipal que els promou (1143-2a). Identifica els objectius estratègics de l'ajuntament, com la salut, la inclusió o l'ocupació dels equipaments, que guiaran el pla de digitalització (1665-6a).",
+        "evidencia_es": "Documento de objetivos estratégicos.",
+        "evidencia_ca": "Document d'objectius estratègics.",
+        "dua_es": "Plan estratégico municipal resumido.",
+        "dua_ca": "Pla estratègic municipal resumit.",
+        "metodologia_es": "análisis documental.",
+        "metodologia_ca": "anàlisi documental."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["b", "c"] },
+    "justificacion_es": "Las tecnologías habilitadoras permiten crear materiales de enseñanza adaptados y más sostenibles.",
+    "justificacion_ca": "Les tecnologies habilitadores permeten crear materials d'ensenyament adaptats i més sostenibles.",
+    "actividades": [
+      {
+        "titulo_es": "Material adaptado impreso en 3D con plástico reciclado",
+        "titulo_ca": "Material adaptat imprès en 3D amb plàstic reciclat",
+        "contexto_es": "Un programa de deporte adaptado necesita empuñaduras especiales y la tienda tarda semanas en servirlas.",
+        "contexto_ca": "Un programa d'esport adaptat necessita empunyadures especials i la botiga tarda setmanes a servir-les.",
+        "desarrollo_es": "El alumnado define los materiales específicos o adaptados que necesita el programa (1143-3a). Relaciona la impresión 3D con la creación de nuevos productos y servicios (1665-2b) y con una economía más sostenible y eficiente al usar plástico reciclado y fabricar solo lo necesario (1665-2c).",
+        "desarrollo_ca": "L'alumnat defineix els materials específics o adaptats que necessita el programa (1143-3a). Relaciona la impressió 3D amb la creació de nous productes i serveis (1665-2b) i amb una economia més sostenible i eficient en fer servir plàstic reciclat i fabricar només el que és necessari (1665-2c).",
+        "evidencia_es": "Ficha de materiales y propuesta de fabricación.",
+        "evidencia_ca": "Fitxa de materials i proposta de fabricació.",
+        "dua_es": "Modelos impresos para tocar.",
+        "dua_ca": "Models impresos per tocar.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "La inteligencia artificial permite personalizar el aprendizaje según las características de cada usuario.",
+    "justificacion_ca": "La intel·ligència artificial permet personalitzar l'aprenentatge segons les característiques de cada usuari.",
+    "actividades": [
+      {
+        "titulo_es": "Un entrenador virtual que adapta los ejercicios",
+        "titulo_ca": "Un entrenador virtual que adapta els exercicis",
+        "contexto_es": "Una aplicación de entrenamiento promete adaptar las tareas al nivel y al ritmo de cada usuario sin monitor.",
+        "contexto_ca": "Una aplicació d'entrenament promet adaptar les tasques al nivell i al ritme de cada usuari sense monitor.",
+        "desarrollo_es": "El alumnado discrimina las características de los usuarios que influyen en el aprendizaje, como la edad, la experiencia o la motivación (1143-1e). Compara cómo las tiene en cuenta la aplicación y describe cómo influye la IA en el sector y qué papel sigue teniendo el técnico (1665-4f).",
+        "desarrollo_ca": "L'alumnat discrimina les característiques dels usuaris que influeixen en l'aprenentatge, com l'edat, l'experiència o la motivació (1143-1e). Compara com les té en compte l'aplicació i descriu com influeix la IA en el sector i quin paper continua tenint el tècnic (1665-4f).",
+        "evidencia_es": "Análisis crítico de la aplicación.",
+        "evidencia_ca": "Anàlisi crítica de l'aplicació.",
+        "dua_es": "Acceso de prueba y guía de análisis.",
+        "dua_ca": "Accés de prova i guia d'anàlisi.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA5", "criterios": ["g"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["a", "b"] },
+    "justificacion_es": "La actitud de mejora permanente en la calidad del servicio es la misma que sostiene la empleabilidad.",
+    "justificacion_ca": "L'actitud de millora permanent en la qualitat del servei és la mateixa que sosté l'ocupabilitat.",
+    "actividades": [
+      {
+        "titulo_es": "Mejorar siempre: el servicio y uno mismo",
+        "titulo_ca": "Millorar sempre: el servei i un mateix",
+        "contexto_es": "Una técnica con diez años en la misma escuela deportiva pierde su puesto cuando cambia la empresa adjudicataria.",
+        "contexto_ca": "Una tècnica amb deu anys a la mateixa escola esportiva perd el seu lloc quan canvia l'empresa adjudicatària.",
+        "desarrollo_es": "El alumnado valora la importancia de mantener una actitud permanente de mejora en la calidad del servicio (1143-5g). Relaciona esa actitud con la responsabilidad de seguir aprendiendo (1709-5a) y con la empleabilidad entendida como capacidad de adaptación al entorno laboral (1709-5b).",
+        "desarrollo_ca": "L'alumnat valora la importància de mantenir una actitud permanent de millora en la qualitat del servei (1143-5g). Relaciona aquesta actitud amb la responsabilitat de continuar aprenent (1709-5a) i amb l'ocupabilitat entesa com a capacitat d'adaptació a l'entorn laboral (1709-5b).",
+        "evidencia_es": "Reflexión escrita sobre el caso.",
+        "evidencia_ca": "Reflexió escrita sobre el cas.",
+        "dua_es": "Caso en audio y texto.",
+        "dua_ca": "Cas en àudio i text.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA2", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["b"] },
+    "justificacion_es": "Los programas públicos y privados de enseñanza deportiva piden requisitos distintos a los técnicos que contratan.",
+    "justificacion_ca": "Els programes públics i privats d'ensenyament esportiu demanen requisits diferents als tècnics que contracten.",
+    "actividades": [
+      {
+        "titulo_es": "Monitor en una escuela municipal o en un club privado",
+        "titulo_ca": "Monitor en una escola municipal o en un club privat",
+        "contexto_es": "Un alumno duda entre presentarse a la bolsa de monitores municipales o enviar el currículum a un club privado.",
+        "contexto_ca": "Un alumne dubta entre presentar-se a la borsa de monitors municipals o enviar el currículum a un club privat.",
+        "desarrollo_es": "El alumnado contextualiza los programas de enseñanza en la escuela municipal y en el club privado (1143-2a). Compara los requisitos de acceso de cada uno: méritos y pruebas en la función pública frente a experiencia y entrevista en la empresa privada (1709-1b).",
+        "desarrollo_ca": "L'alumnat contextualitza els programes d'ensenyament a l'escola municipal i al club privat (1143-2a). Compara els requisits d'accés de cadascun: mèrits i proves a la funció pública enfront d'experiència i entrevista a l'empresa privada (1709-1b).",
+        "evidencia_es": "Tabla comparativa de las dos vías.",
+        "evidencia_ca": "Taula comparativa de les dues vies.",
+        "dua_es": "Convocatoria resumida.",
+        "dua_ca": "Convocatòria resumida.",
+        "metodologia_es": "análisis documental.",
+        "metodologia_ca": "anàlisi documental."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["b", "d"] },
+    "justificacion_es": "Pensar en el papel del técnico en la enseñanza ayuda a definir las cualidades personales y las preferencias profesionales propias.",
+    "justificacion_ca": "Pensar en el paper del tècnic en l'ensenyament ajuda a definir les qualitats personals i les preferències professionals pròpies.",
+    "actividades": [
+      {
+        "titulo_es": "¿Guía, entrenador o animador? Mi papel preferido",
+        "titulo_ca": "Guia, entrenador o animador? El meu paper preferit",
+        "contexto_es": "Tras varias prácticas, el alumnado nota que se siente más cómodo en unos roles que en otros.",
+        "contexto_ca": "Després de diverses pràctiques, l'alumnat nota que se sent més còmode en uns rols que en altres.",
+        "desarrollo_es": "El alumnado establece el papel del técnico y de los usuarios en distintas tareas: dirigir, guiar o acompañar (1143-4e). Analiza qué cualidades personales encajan con cada papel (1709-4b) y señala sus preferencias profesionales y metas en el marco de su proyecto (1709-4d).",
+        "desarrollo_ca": "L'alumnat estableix el paper del tècnic i dels usuaris en diferents tasques: dirigir, guiar o acompanyar (1143-4e). Analitza quines qualitats personals encaixen amb cada paper (1709-4b) i assenyala les seves preferències professionals i metes en el marc del seu projecte (1709-4d).",
+        "evidencia_es": "Mapa de roles y proyecto profesional.",
+        "evidencia_ca": "Mapa de rols i projecte professional.",
+        "dua_es": "Plantilla visual de proyecto.",
+        "dua_ca": "Plantilla visual de projecte.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1665", "ra": "RA5", "criterios": ["i"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["e", "f"] },
+    "justificacion_es": "Cuidar la seguridad de los datos propios es parte de construir una identidad digital profesional.",
+    "justificacion_ca": "Tenir cura de la seguretat de les dades pròpies és part de construir una identitat digital professional.",
+    "actividades": [
+      {
+        "titulo_es": "Fotos de menores en mi perfil de monitor",
+        "titulo_ca": "Fotos de menors al meu perfil de monitor",
+        "contexto_es": "Un monitor publica en redes fotos de los niños del campamento y una familia se queja a la empresa.",
+        "contexto_ca": "Un monitor publica a les xarxes fotos dels infants del campament i una família es queixa a l'empresa.",
+        "desarrollo_es": "El alumnado valora la importancia de la seguridad y de la normativa sobre datos personales, especialmente de menores (1665-5i). Analiza el impacto de su identidad digital en la empleabilidad (1709-5e) y justifica cómo diseñar su presencia en línea para que mejore su imagen profesional (1709-5f).",
+        "desarrollo_ca": "L'alumnat valora la importància de la seguretat i de la normativa sobre dades personals, especialment de menors (1665-5i). Analitza l'impacte de la seva identitat digital en l'ocupabilitat (1709-5e) i justifica com dissenyar la seva presència en línia perquè millori la seva imatge professional (1709-5f).",
+        "evidencia_es": "Auditoría de perfiles y normas personales.",
+        "evidencia_ca": "Auditoria de perfils i normes personals.",
+        "dua_es": "Lista de comprobación de privacidad.",
+        "dua_ca": "Llista de comprovació de privacitat.",
+        "metodologia_es": "aprendizaje basado en dilemas.",
+        "metodologia_ca": "aprenentatge basat en dilemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1665", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "Entender qué es la digitalización ayuda a poner en práctica la propia competencia digital.",
+    "justificacion_ca": "Entendre què és la digitalització ajuda a posar en pràctica la pròpia competència digital.",
+    "actividades": [
+      {
+        "titulo_es": "Mi día de técnico deportivo, ¿cuánto es digital?",
+        "titulo_ca": "El meu dia de tècnic esportiu, quant és digital?",
+        "contexto_es": "Un técnico deportivo anota todo lo que hace en una jornada y descubre que la mitad de sus tareas ya son digitales.",
+        "contexto_ca": "Un tècnic esportiu anota tot el que fa en una jornada i descobreix que la meitat de les seves tasques ja són digitals.",
+        "desarrollo_es": "El alumnado describe en qué consiste el concepto de digitalización a partir de una jornada de trabajo real (1665-1a). Identifica qué competencias digitales necesita y las pone en práctica configurando sus herramientas de trabajo y aprendizaje (1709-5d).",
+        "desarrollo_ca": "L'alumnat descriu en què consisteix el concepte de digitalització a partir d'una jornada de feina real (1665-1a). Identifica quines competències digitals necessita i les posa en pràctica configurant les seves eines de feina i aprenentatge (1709-5d).",
+        "evidencia_es": "Diario de jornada y lista de competencias.",
+        "evidencia_ca": "Diari de jornada i llista de competències.",
+        "dua_es": "Plantilla de diario.",
+        "dua_ca": "Plantilla de diari.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1665", "ra": "RA4", "criterios": ["f"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "La inteligencia artificial cambia los puestos del sector y crea oportunidades de empleo nuevas.",
+    "justificacion_ca": "La intel·ligència artificial canvia els llocs del sector i crea oportunitats d'ocupació noves.",
+    "actividades": [
+      {
+        "titulo_es": "Ofertas que piden saber usar herramientas con IA",
+        "titulo_ca": "Ofertes que demanen saber fer servir eines amb IA",
+        "contexto_es": "Cada vez más ofertas de técnico deportivo piden manejar aplicaciones de entrenamiento con inteligencia artificial.",
+        "contexto_ca": "Cada vegada més ofertes de tècnic esportiu demanen manejar aplicacions d'entrenament amb intel·ligència artificial.",
+        "desarrollo_es": "El alumnado describe cómo influye la IA en el sector deportivo y de ocio (1665-4f). Analiza ofertas de empleo reales que piden estas competencias y los requisitos actuales del perfil profesional (1709-1a).",
+        "desarrollo_ca": "L'alumnat descriu com influeix la IA en el sector esportiu i d'oci (1665-4f). Analitza ofertes d'ocupació reals que demanen aquestes competències i els requisits actuals del perfil professional (1709-1a).",
+        "evidencia_es": "Análisis de ofertas.",
+        "evidencia_ca": "Anàlisi d'ofertes.",
+        "dua_es": "Ofertas seleccionadas y glosario.",
+        "dua_ca": "Ofertes seleccionades i glossari.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1665", "ra": "RA6", "criterios": ["k", "j"] },
+    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Un plan de digitalización debe documentar los cambios y valorar cómo afectan a la organización del trabajo y a los derechos.",
+    "justificacion_ca": "Un pla de digitalització ha de documentar els canvis i valorar com afecten l'organització de la feina i els drets.",
+    "actividades": [
+      {
+        "titulo_es": "El gimnasio digitalizado y los horarios del personal",
+        "titulo_ca": "El gimnàs digitalitzat i els horaris del personal",
+        "contexto_es": "Un gimnasio implanta clases virtuales y fichaje por aplicación, y los monitores temen tener que estar siempre conectados.",
+        "contexto_ca": "Un gimnàs implanta classes virtuals i fitxatge per aplicació, i els monitors tenen por d'haver d'estar sempre connectats.",
+        "desarrollo_es": "El alumnado valora si los recursos humanos del gimnasio son idóneos para el cambio (1665-6k) y documenta los cambios del plan según la estrategia (1665-6j). Identifica las características de estos nuevos entornos de trabajo y los derechos que implican, como la desconexión digital (1709-3c).",
+        "desarrollo_ca": "L'alumnat valora si els recursos humans del gimnàs són idonis per al canvi (1665-6k) i documenta els canvis del pla segons l'estratègia (1665-6j). Identifica les característiques d'aquests nous entorns de feina i els drets que impliquen, com la desconnexió digital (1709-3c).",
+        "evidencia_es": "Documento de cambios y análisis de derechos.",
+        "evidencia_ca": "Document de canvis i anàlisi de drets.",
+        "dua_es": "Esquema de derechos digitales.",
+        "dua_ca": "Esquema de drets digitals.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1665", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["c", "i"] },
+    "justificacion_es": "El entorno personal de aprendizaje se construye con servicios en la nube de distintos niveles.",
+    "justificacion_ca": "L'entorn personal d'aprenentatge es construeix amb serveis al núvol de diferents nivells.",
+    "actividades": [
+      {
+        "titulo_es": "Mi entorno de aprendizaje en la nube",
+        "titulo_ca": "El meu entorn d'aprenentatge al núvol",
+        "contexto_es": "Al empezar el ciclo, cada alumno tiene apuntes, vídeos y enlaces dispersos en varios dispositivos.",
+        "contexto_ca": "En començar el cicle, cada alumne té apunts, vídeos i enllaços dispersos en diversos dispositius.",
+        "desarrollo_es": "El alumnado identifica los niveles de la nube de los servicios que usa: almacenamiento, plataformas y aplicaciones (1665-3a). Conoce y utiliza herramientas para configurar su entorno personal de aprendizaje (1709-5c) y lo diseña para alcanzar su plan de desarrollo (1709-5i).",
+        "desarrollo_ca": "L'alumnat identifica els nivells del núvol dels serveis que fa servir: emmagatzematge, plataformes i aplicacions (1665-3a). Coneix i fa servir eines per configurar el seu entorn personal d'aprenentatge (1709-5c) i el dissenya per assolir el seu pla de desenvolupament (1709-5i).",
+        "evidencia_es": "Mapa del entorno personal de aprendizaje.",
+        "evidencia_ca": "Mapa de l'entorn personal d'aprenentatge.",
+        "dua_es": "Ejemplos de entornos y plantilla.",
+        "dua_ca": "Exemples d'entorns i plantilla.",
+        "metodologia_es": "aprendizaje autónomo guiado.",
+        "metodologia_ca": "aprenentatge autònom guiat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1665", "ra": "RA6", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["g"] },
+    "justificacion_es": "Pensar en las necesidades futuras de una empresa ayuda a imaginar las propias expectativas profesionales.",
+    "justificacion_ca": "Pensar en les necessitats futures d'una empresa ajuda a imaginar les pròpies expectatives professionals.",
+    "actividades": [
+      {
+        "titulo_es": "El centro deportivo dentro de diez años y yo en él",
+        "titulo_ca": "El centre esportiu d'aquí a deu anys i jo dins",
+        "contexto_es": "Una cadena de centros deportivos presenta su plan para 2035, con más servicios en línea y personalizados.",
+        "contexto_ca": "Una cadena de centres esportius presenta el seu pla per al 2035, amb més serveis en línia i personalitzats.",
+        "desarrollo_es": "El alumnado tiene en cuenta las necesidades presentes y futuras de la empresa al analizar su plan (1665-6e). A partir de ese escenario identifica sus expectativas de futuro profesional según sus competencias e intereses (1709-4g).",
+        "desarrollo_ca": "L'alumnat té en compte les necessitats presents i futures de l'empresa en analitzar el seu pla (1665-6e). A partir d'aquest escenari identifica les seves expectatives de futur professional segons les seves competències i interessos (1709-4g).",
+        "evidencia_es": "Escenario de futuro y reflexión personal.",
+        "evidencia_ca": "Escenari de futur i reflexió personal.",
+        "dua_es": "Plantilla de escenario.",
+        "dua_ca": "Plantilla d'escenari.",
+        "metodologia_es": "pensamiento prospectivo.",
+        "metodologia_ca": "pensament prospectiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1143", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Las estrategias metodológicas en línea han creado nuevas formas de trabajar como técnico, con derechos propios.",
+    "justificacion_ca": "Les estratègies metodològiques en línia han creat noves maneres de treballar com a tècnic, amb drets propis.",
+    "actividades": [
+      {
+        "titulo_es": "Dar clases deportivas por videollamada",
+        "titulo_ca": "Fer classes esportives per videotrucada",
+        "contexto_es": "Una plataforma ofrece a técnicos dar clases de entrenamiento por videollamada cobrando por sesión.",
+        "contexto_ca": "Una plataforma ofereix a tècnics fer classes d'entrenament per videotrucada cobrant per sessió.",
+        "desarrollo_es": "El alumnado selecciona estrategias metodológicas adecuadas a la enseñanza en línea y a ese tipo de grupo (1143-2e). Identifica las características de este nuevo entorno de trabajo y los derechos que implica para el técnico, como la cotización o la desconexión (1709-3c).",
+        "desarrollo_ca": "L'alumnat selecciona estratègies metodològiques adequades a l'ensenyament en línia i a aquest tipus de grup (1143-2e). Identifica les característiques d'aquest nou entorn de feina i els drets que implica per al tècnic, com la cotització o la desconnexió (1709-3c).",
+        "evidencia_es": "Propuesta metodológica e informe laboral.",
+        "evidencia_ca": "Proposta metodològica i informe laboral.",
+        "dua_es": "Simulación de clase en línea.",
+        "dua_ca": "Simulació de classe en línia.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  }
+]

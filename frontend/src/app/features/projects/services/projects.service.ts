@@ -68,6 +68,12 @@ export class ProjectsService {
       .pipe(map(fromProjectDto));
   }
 
+  renameProject(projectId: string, title: string): Observable<Project> {
+    return this.http
+      .patch<ProjectDto>(`${this.apiUrl}/${projectId}/title`, { title })
+      .pipe(map(fromProjectDto));
+  }
+
   removeCollaborator(projectId: string, userId: string): Observable<Project> {
     return this.http
       .delete<ProjectDto>(`${this.apiUrl}/${projectId}/collaborators/${userId}`)

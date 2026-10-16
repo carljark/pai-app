@@ -5,11 +5,12 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { Project, getOwnerId } from '../../../projects/models/project.model';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { TranslationService } from '../../../../services/translation.service';
+import { ProjectTitleComponent } from '../../../projects/components/project-title/project-title.component';
 
 @Component({
   selector: 'app-history-project-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectTitleComponent],
   templateUrl: './history-project-card.component.html',
   styleUrls: ['./history-project-card.component.scss'],
 })

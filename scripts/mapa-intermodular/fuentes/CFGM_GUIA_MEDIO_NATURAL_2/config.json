@@ -1,0 +1,70 @@
+{
+  "nivel": "CFGM_GUIA_MEDIO_NATURAL",
+  "curso": "2º",
+  "modulos": {
+    "1328": {
+      "nombre_es": "Atención a grupos",
+      "nombre_ca": "Atenció a grups",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#f472b6",
+      "icon": "users"
+    },
+    "1337": {
+      "nombre_es": "Socorrismo en el medio natural",
+      "nombre_ca": "Socorrisme en el medi natural",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#34d399",
+      "icon": "life-buoy"
+    },
+    "1338": {
+      "nombre_es": "Guía en el medio natural acuático",
+      "nombre_ca": "Guia en el medi aquàtic",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#fb923c",
+      "icon": "sailboat"
+    },
+    "1339": {
+      "nombre_es": "Maniobras con cuerdas",
+      "nombre_ca": "Maniobres amb cordes",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#a78bfa",
+      "icon": "mountain"
+    },
+    "1708": {
+      "nombre_es": "Sostenibilidad aplicada al sistema productivo",
+      "nombre_ca": "Sostenibilitat aplicada al sistema productiu",
+      "tipo": "comun",
+      "relacion": "sostenibilidad",
+      "color": "#f87171",
+      "icon": "leaf"
+    },
+    "1710": {
+      "nombre_es": "Itinerario personal para la empleabilidad II",
+      "nombre_ca": "Itinerari personal per a l'ocupabilitat II",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#4ade80",
+      "icon": "briefcase"
+    },
+    "1713": {
+      "nombre_es": "Proyecto intermodular",
+      "nombre_ca": "Projecte intermodular",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#fbbf24",
+      "icon": "folder-kanban"
+    },
+    "0156": {
+      "nombre_es": "Inglés profesional",
+      "nombre_ca": "Anglès professional",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#38bdf8",
+      "icon": "languages"
+    }
+  }
+}

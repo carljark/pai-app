@@ -1,0 +1,662 @@
+[
+  {
+    "a": { "modulo": "1136", "ra": "RA4", "criterios": ["f"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Los cuestionarios de necesidades y calidad de vida dan los argumentos para justificar un programa de enseñanza en su contexto.",
+    "justificacion_ca": "Els qüestionaris de necessitats i qualitat de vida donen els arguments per justificar un programa d'ensenyament en el seu context.",
+    "actividades": [
+      {
+        "titulo_es": "Justificar un programa de natación para embarazadas",
+        "titulo_ca": "Justificar un programa de natació per a embarassades",
+        "contexto_es": "El centro de salud de Marratxí propone al polideportivo un programa de natación para embarazadas y el concejal pide argumentos.",
+        "contexto_ca": "El centre de salut de Marratxí proposa al poliesportiu un programa de natació per a embarassades i el regidor demana arguments.",
+        "desarrollo_es": "El alumnado aplica cuestionarios y entrevistas para conocer las necesidades individuales, sociales y de calidad de vida de las futuras participantes (1136-4f). Con los resultados justifica el programa según las características y necesidades del municipio (1143-2b).",
+        "desarrollo_ca": "L'alumnat aplica qüestionaris i entrevistes per conèixer les necessitats individuals, socials i de qualitat de vida de les futures participants (1136-4f). Amb els resultats justifica el programa segons les característiques i les necessitats del municipi (1143-2b).",
+        "evidencia_es": "Informe de justificación para el ayuntamiento.",
+        "evidencia_ca": "Informe de justificació per a l'ajuntament.",
+        "dua_es": "Modelo de informe y datos de ejemplo.",
+        "dua_ca": "Model d'informe i dades d'exemple.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "Los informes de valoración elaborados con herramientas informáticas sirven para comprobar si se cumplen los objetivos de un programa.",
+    "justificacion_ca": "Els informes de valoració elaborats amb eines informàtiques serveixen per comprovar si es compleixen els objectius d'un programa.",
+    "actividades": [
+      {
+        "titulo_es": "Informe de fin de curso del programa de salud para mayores",
+        "titulo_ca": "Informe de final de curs del programa de salut per a majors",
+        "contexto_es": "El programa municipal de actividad física para mayores debe justificar ante el Consell si ha cumplido sus objetivos.",
+        "contexto_ca": "El programa municipal d'activitat física per a majors ha de justificar davant el Consell si ha complert els seus objectius.",
+        "desarrollo_es": "El alumnado elabora informes individuales y de grupo con una hoja de cálculo a partir de las fichas de control (1136-5d). Diseña un sistema para valorar el nivel de cumplimiento de cada objetivo del programa, con indicadores y umbrales (1143-5d).",
+        "desarrollo_ca": "L'alumnat elabora informes individuals i de grup amb un full de càlcul a partir de les fitxes de control (1136-5d). Dissenya un sistema per valorar el nivell de compliment de cada objectiu del programa, amb indicadors i llindars (1143-5d).",
+        "evidencia_es": "Informe con gráficos y tabla de cumplimiento.",
+        "evidencia_ca": "Informe amb gràfics i taula de compliment.",
+        "dua_es": "Plantilla de hoja de cálculo con fórmulas.",
+        "dua_ca": "Plantilla de full de càlcul amb fórmules.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA3", "criterios": ["d"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["b", "f"] },
+    "justificacion_es": "La secuencia de ejercicios para desarrollar una capacidad física es una progresión de enseñanza que facilita el aprendizaje.",
+    "justificacion_ca": "La seqüència d'exercicis per desenvolupar una capacitat física és una progressió d'ensenyament que facilita l'aprenentatge.",
+    "actividades": [
+      {
+        "titulo_es": "De la plancha al burpee: progresión para principiantes",
+        "titulo_ca": "De la planxa al burpee: progressió per a principiants",
+        "contexto_es": "En el entrenamiento funcional del parque, los principiantes intentan hacer burpees desde el primer día y se frustran.",
+        "contexto_ca": "A l'entrenament funcional del parc, els principiants intenten fer burpees des del primer dia i es frustren.",
+        "desarrollo_es": "El alumnado establece una secuencia de ejercicios que lleve de la plancha al burpee completo (1136-3d). La organiza como progresión de enseñanza según el tipo de contenido (1143-4b) y argumenta por qué progresar paso a paso facilita el aprendizaje y evita el abandono (1143-4f).",
+        "desarrollo_ca": "L'alumnat estableix una seqüència d'exercicis que porti de la planxa al burpee complet (1136-3d). L'organitza com a progressió d'ensenyament segons el tipus de contingut (1143-4b) i argumenta per què progressar pas a pas facilita l'aprenentatge i evita l'abandonament (1143-4f).",
+        "evidencia_es": "Progresión ilustrada en cinco niveles.",
+        "evidencia_ca": "Progressió il·lustrada en cinc nivells.",
+        "dua_es": "Vídeos de cada nivel.",
+        "dua_ca": "Vídeos de cada nivell.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["c"] },
+    "justificacion_es": "Adaptar un ejercicio a distintos niveles de fuerza y movilidad es la base de las adaptaciones de las tareas a cada usuario.",
+    "justificacion_ca": "Adaptar un exercici a diferents nivells de força i mobilitat és la base de les adaptacions de les tasques a cada usuari.",
+    "actividades": [
+      {
+        "titulo_es": "Una sentadilla para cada participante del casal",
+        "titulo_ca": "Un esquat per a cada participant del casal",
+        "contexto_es": "En la gimnasia del casal de mayores hay personas con prótesis de rodilla, otras con andador y otras que hacen senderismo.",
+        "contexto_ca": "A la gimnàstica del casal de gent gran hi ha persones amb pròtesi de genoll, altres amb caminador i altres que fan excursionisme.",
+        "desarrollo_es": "El alumnado adapta la sentadilla a distintos niveles de fuerza y amplitud de movimiento, desde levantarse de la silla hasta la sentadilla con peso (1136-2d). Prevé además adaptaciones de la explicación y de la motivación según la capacidad de comprensión y los intereses de cada participante (1143-4c).",
+        "desarrollo_ca": "L'alumnat adapta l'esquat a diferents nivells de força i amplitud de moviment, des d'aixecar-se de la cadira fins a l'esquat amb pes (1136-2d). Preveu a més adaptacions de l'explicació i de la motivació segons la capacitat de comprensió i els interessos de cada participant (1143-4c).",
+        "evidencia_es": "Ficha de variantes y guía para el monitor.",
+        "evidencia_ca": "Fitxa de variants i guia per al monitor.",
+        "dua_es": "Sillas, barras de apoyo y lastres variados.",
+        "dua_ca": "Cadires, barres de suport i llasts variats.",
+        "metodologia_es": "práctica guiada.",
+        "metodologia_ca": "pràctica guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA1", "criterios": ["f", "d"] },
+    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["d"] },
+    "justificacion_es": "Las estructuras anatómicas y la fisiología cardiorrespiratoria explican los límites del mecanismo de ejecución de una tarea motriz.",
+    "justificacion_ca": "Les estructures anatòmiques i la fisiologia cardiorespiratòria expliquen els límits del mecanisme d'execució d'una tasca motriu.",
+    "actividades": [
+      {
+        "titulo_es": "Por qué el niño se ahoga al nadar crol",
+        "titulo_ca": "Per què l'infant s'ofega en nedar crol",
+        "contexto_es": "En la escuela de natación, varios niños de ocho años nadan crol aguantando la respiración y paran a los diez metros.",
+        "contexto_ca": "A l'escola de natació, diversos infants de vuit anys neden crol aguantant la respiració i s'aturen als deu metres.",
+        "desarrollo_es": "El alumnado describe las estructuras del aparato respiratorio y del corazón (1136-1f) y la fisiología de la respiración durante el esfuerzo, con sus interacciones y su efecto en el rendimiento (1136-1d). Con ello diferencia qué parte del problema está en el mecanismo de ejecución, como la coordinación de la respiración con la brazada (1143-1d).",
+        "desarrollo_ca": "L'alumnat descriu les estructures de l'aparell respiratori i del cor (1136-1f) i la fisiologia de la respiració durant l'esforç, amb les seves interaccions i el seu efecte en el rendiment (1136-1d). Amb això diferencia quina part del problema és al mecanisme d'execució, com la coordinació de la respiració amb la braçada (1143-1d).",
+        "evidencia_es": "Esquema anatómico comentado y propuesta de ejercicios.",
+        "evidencia_ca": "Esquema anatòmic comentat i proposta d'exercicis.",
+        "dua_es": "Modelos anatómicos y vídeo subacuático.",
+        "dua_ca": "Models anatòmics i vídeo subaquàtic.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA7", "criterios": ["h"] },
+    "b": { "modulo": "1143", "ra": "RA3", "criterios": ["e"] },
+    "justificacion_es": "Un entorno de enseñanza seguro reduce los accidentes y también la ansiedad de los participantes ante la práctica.",
+    "justificacion_ca": "Un entorn d'ensenyament segur redueix els accidents i també l'ansietat dels participants davant la pràctica.",
+    "actividades": [
+      {
+        "titulo_es": "Escalada en el rocódromo sin miedo",
+        "titulo_ca": "Escalada al rocòdrom sense por",
+        "contexto_es": "Tras una caída aparatosa en el rocódromo, varios niños de la escuela tienen miedo de volver a subir.",
+        "contexto_ca": "Després d'una caiguda aparatosa al rocòdrom, diversos infants de l'escola tenen por de tornar a pujar.",
+        "desarrollo_es": "El alumnado identifica los factores que predisponen a la ansiedad tras un accidente, como haberlo visto o no entender qué pasó (1136-7h). Valora la importancia de generar un entorno de enseñanza seguro y lo concreta en medidas: colchonetas, revisión de nudos, alturas progresivas y explicación del incidente (1143-3e).",
+        "desarrollo_ca": "L'alumnat identifica els factors que predisposen a l'ansietat després d'un accident, com haver-lo vist o no entendre què va passar (1136-7h). Valora la importància de generar un entorn d'ensenyament segur i el concreta en mesures: màrfegues, revisió de nusos, altures progressives i explicació de l'incident (1143-3e).",
+        "evidencia_es": "Plan de seguridad y de recuperación de la confianza.",
+        "evidencia_ca": "Pla de seguretat i de recuperació de la confiança.",
+        "dua_es": "Participación voluntaria en las alturas.",
+        "dua_ca": "Participació voluntària a les altures.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA4", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA3", "criterios": ["d"] },
+    "justificacion_es": "Las ayudas que necesitan las personas con menos autonomía condicionan los materiales, los espacios y los tiempos de práctica.",
+    "justificacion_ca": "Les ajudes que necessiten les persones amb menys autonomia condicionen els materials, els espais i els temps de pràctica.",
+    "actividades": [
+      {
+        "titulo_es": "Gimnasia en silla para una residencia",
+        "titulo_ca": "Gimnàstica en cadira per a una residència",
+        "contexto_es": "Una residencia de Sineu pide un programa de actividad física para residentes que solo pueden hacer ejercicio sentados.",
+        "contexto_ca": "Una residència de Sineu demana un programa d'activitat física per a residents que només poden fer exercici asseguts.",
+        "desarrollo_es": "El alumnado prevé las ayudas que necesita cada residente según su grado de autonomía, como apoyo en los brazos o material ligero (1136-4c). Concreta los materiales, el espacio, la organización y los tiempos de práctica adecuados a sus características, como sesiones cortas en círculo (1143-3d).",
+        "desarrollo_ca": "L'alumnat preveu les ajudes que necessita cada resident segons el seu grau d'autonomia, com suport als braços o material lleuger (1136-4c). Concreta els materials, l'espai, l'organització i els temps de pràctica adequats a les seves característiques, com sessions curtes en cercle (1143-3d).",
+        "evidencia_es": "Ficha organizativa de la sesión.",
+        "evidencia_ca": "Fitxa organitzativa de la sessió.",
+        "dua_es": "Material de distintos pesos y texturas.",
+        "dua_ca": "Material de diferents pesos i textures.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA1", "criterios": ["b"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Los beneficios de la actividad física para la calidad de vida se traducen en objetivos concretos en cada nivel del programa.",
+    "justificacion_ca": "Els beneficis de l'activitat física per a la qualitat de vida es tradueixen en objectius concrets a cada nivell del programa.",
+    "actividades": [
+      {
+        "titulo_es": "Objetivos del programa Mallorca Camina",
+        "titulo_ca": "Objectius del programa Mallorca Camina",
+        "contexto_es": "Un consell insular lanza un programa de rutas a pie para personas sedentarias y necesita objetivos claros para cada nivel.",
+        "contexto_ca": "Un consell insular engega un programa de rutes a peu per a persones sedentàries i necessita objectius clars per a cada nivell.",
+        "desarrollo_es": "El alumnado argumenta las mejoras en la calidad de vida que aporta caminar con regularidad (1136-1b). Con esos argumentos establece objetivos para cada grado de concreción del programa: generales, por trimestre y por sesión (1143-2c).",
+        "desarrollo_ca": "L'alumnat argumenta les millores en la qualitat de vida que aporta caminar amb regularitat (1136-1b). Amb aquests arguments estableix objectius per a cada grau de concreció del programa: generals, per trimestre i per sessió (1143-2c).",
+        "evidencia_es": "Documento de objetivos del programa.",
+        "evidencia_ca": "Document d'objectius del programa.",
+        "dua_es": "Pirámide de objetivos para completar.",
+        "dua_ca": "Piràmide d'objectius per completar.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA6", "criterios": ["f"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "Enseñar automasaje y masaje entre compañeros exige definir bien el papel del técnico y el de los participantes.",
+    "justificacion_ca": "Ensenyar automassatge i massatge entre companys exigeix definir bé el paper del tècnic i el dels participants.",
+    "actividades": [
+      {
+        "titulo_es": "Masaje de recuperación entre compañeros del club de remo",
+        "titulo_ca": "Massatge de recuperació entre companys del club de rem",
+        "contexto_es": "El club de remo no tiene fisioterapeuta y los remeros quieren aprender a descargarse entre ellos tras las regatas.",
+        "contexto_ca": "El club de rem no té fisioterapeuta i els remers volen aprendre a descarregar-se entre ells després de les regates.",
+        "desarrollo_es": "El alumnado practica las maniobras básicas del masaje de recuperación en piernas y espalda (1136-6f). Después organiza una sesión de enseñanza en la que establece qué hace el técnico y qué hacen los remeros: demostración, práctica por parejas y supervisión (1143-4e).",
+        "desarrollo_ca": "L'alumnat practica les maniobres bàsiques del massatge de recuperació a cames i esquena (1136-6f). Després organitza una sessió d'ensenyament en què estableix què fa el tècnic i què fan els remers: demostració, pràctica per parelles i supervisió (1143-4e).",
+        "evidencia_es": "Ficha de maniobras y plan de la sesión.",
+        "evidencia_ca": "Fitxa de maniobres i pla de la sessió.",
+        "dua_es": "Vídeos de las maniobras y práctica sobre la propia pierna.",
+        "dua_ca": "Vídeos de les maniobres i pràctica sobre la pròpia cama.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["f"] },
+    "justificacion_es": "Los informes de valoración elaborados con herramientas informáticas se guardan cada vez más en la nube.",
+    "justificacion_ca": "Els informes de valoració elaborats amb eines informàtiques es guarden cada vegada més al núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Informes de valoración guardados en la nube del club",
+        "titulo_ca": "Informes de valoració guardats al núvol del club",
+        "contexto_es": "Los técnicos de un club de atletismo guardan los informes de cada atleta en sus ordenadores personales y se pierden al cambiar de técnico.",
+        "contexto_ca": "Els tècnics d'un club d'atletisme guarden els informes de cada atleta als seus ordinadors personals i es perden en canviar de tècnic.",
+        "desarrollo_es": "El alumnado elabora informes de valoración con un programa específico a partir de las fichas de control (1136-5d). Describe cómo se almacenarían en la nube del club, con carpetas, copias, permisos y versiones (1665-5f).",
+        "desarrollo_ca": "L'alumnat elabora informes de valoració amb un programa específic a partir de les fitxes de control (1136-5d). Descriu com s'emmagatzemarien al núvol del club, amb carpetes, còpies, permisos i versions (1665-5f).",
+        "evidencia_es": "Informe de un atleta y esquema de almacenamiento.",
+        "evidencia_ca": "Informe d'un atleta i esquema d'emmagatzematge.",
+        "dua_es": "Plantilla de informe y tutorial de la nube.",
+        "dua_ca": "Plantilla d'informe i tutorial del núvol.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA4", "criterios": ["b"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["a", "g"] },
+    "justificacion_es": "Los instrumentos de medida de la condición física incorporan hoy tecnologías habilitadoras digitales.",
+    "justificacion_ca": "Els instruments de mesura de la condició física incorporen avui tecnologies habilitadores digitals.",
+    "actividades": [
+      {
+        "titulo_es": "Del cronómetro a las células fotoeléctricas",
+        "titulo_ca": "Del cronòmetre a les cèl·lules fotoelèctriques",
+        "contexto_es": "El club quiere renovar sus instrumentos de medida y duda entre cronómetros, células fotoeléctricas, plataformas de salto y relojes con GPS.",
+        "contexto_ca": "El club vol renovar els seus instruments de mesura i dubta entre cronòmetres, cèl·lules fotoelèctriques, plataformes de salt i rellotges amb GPS.",
+        "desarrollo_es": "El alumnado selecciona instrumentos y máquinas según los parámetros que se quieren medir (1136-4b). Identifica qué tecnologías habilitadoras incorporan, como sensores, conectividad o análisis de datos (1665-2a), y elabora un informe que relacione cada tecnología con sus características y aplicaciones (1665-2g).",
+        "desarrollo_ca": "L'alumnat selecciona instruments i màquines segons els paràmetres que es volen mesurar (1136-4b). Identifica quines tecnologies habilitadores incorporen, com sensors, connectivitat o anàlisi de dades (1665-2a), i elabora un informe que relacioni cada tecnologia amb les seves característiques i aplicacions (1665-2g).",
+        "evidencia_es": "Informe comparativo de instrumentos.",
+        "evidencia_ca": "Informe comparatiu d'instruments.",
+        "dua_es": "Demostración con aparatos reales.",
+        "dua_ca": "Demostració amb aparells reals.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA5", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["a", "b"] },
+    "justificacion_es": "La inteligencia artificial puede automatizar el análisis de causa y efecto entre la actividad realizada y los datos de valoración.",
+    "justificacion_ca": "La intel·ligència artificial pot automatitzar l'anàlisi de causa i efecte entre l'activitat feta i les dades de valoració.",
+    "actividades": [
+      {
+        "titulo_es": "Lo que la aplicación del gimnasio deduce de los entrenamientos",
+        "titulo_ca": "El que l'aplicació del gimnàs dedueix dels entrenaments",
+        "contexto_es": "Un gimnasio municipal ofrece una aplicación que sugiere cambios de entrenamiento a partir de los datos de cada usuario.",
+        "contexto_ca": "Un gimnàs municipal ofereix una aplicació que suggereix canvis d'entrenament a partir de les dades de cada usuari.",
+        "desarrollo_es": "El alumnado establece a mano relaciones de causa y efecto entre la actividad de un usuario y sus registros sucesivos (1136-5e). Compara sus conclusiones con las de la aplicación y explica cómo la IA automatiza ese análisis (1665-4a) y por qué el análisis masivo de datos interesa a la empresa (1665-4b).",
+        "desarrollo_ca": "L'alumnat estableix a mà relacions de causa i efecte entre l'activitat d'un usuari i els seus registres successius (1136-5e). Compara les seves conclusions amb les de l'aplicació i explica com la IA automatitza aquesta anàlisi (1665-4a) i per què l'anàlisi massiva de dades interessa a l'empresa (1665-4b).",
+        "evidencia_es": "Análisis comparado propio y de la aplicación.",
+        "evidencia_ca": "Anàlisi comparada pròpia i de l'aplicació.",
+        "dua_es": "Datos en gráfico y plantilla de análisis.",
+        "dua_ca": "Dades en gràfic i plantilla d'anàlisi.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["c"] },
+    "justificacion_es": "Los relojes deportivos procesan en el propio dispositivo los datos de adaptación al esfuerzo antes de enviarlos a la nube.",
+    "justificacion_ca": "Els rellotges esportius processen al mateix dispositiu les dades d'adaptació a l'esforç abans d'enviar-les al núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Qué mide el reloj durante una carrera continua",
+        "titulo_ca": "Què mesura el rellotge durant una carrera contínua",
+        "contexto_es": "Los corredores del grupo de running consultan en el reloj su frecuencia cardíaca y no entienden por qué sube aunque mantengan el ritmo.",
+        "contexto_ca": "Els corredors del grup de running consulten al rellotge la seva freqüència cardíaca i no entenen per què puja encara que mantinguin el ritme.",
+        "desarrollo_es": "El alumnado describe los mecanismos de adaptación cardiorrespiratoria al esfuerzo y explica la deriva cardíaca con los datos del reloj (1136-1e). Después explica cómo el reloj procesa esos datos en el propio dispositivo para mostrar alertas al momento y qué relación tiene con la nube (1665-3c).",
+        "desarrollo_ca": "L'alumnat descriu els mecanismes d'adaptació cardiorespiratòria a l'esforç i explica la deriva cardíaca amb les dades del rellotge (1136-1e). Després explica com el rellotge processa aquestes dades al mateix dispositiu per mostrar alertes al moment i quina relació té amb el núvol (1665-3c).",
+        "evidencia_es": "Gráfico comentado de una carrera.",
+        "evidencia_ca": "Gràfic comentat d'una carrera.",
+        "dua_es": "Datos exportados y guía de lectura del gráfico.",
+        "dua_ca": "Dades exportades i guia de lectura del gràfic.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["f"] },
+    "justificacion_es": "Las aplicaciones de nutrición con inteligencia artificial muestran cómo influye la IA en el sector deportivo.",
+    "justificacion_ca": "Les aplicacions de nutrició amb intel·ligència artificial mostren com influeix la IA en el sector esportiu.",
+    "actividades": [
+      {
+        "titulo_es": "Balance energético calculado por una aplicación con IA",
+        "titulo_ca": "Balanç energètic calculat per una aplicació amb IA",
+        "contexto_es": "Una usuaria del gimnasio fotografía sus platos con una aplicación que calcula calorías y le dice cuánto debe entrenar.",
+        "contexto_ca": "Una usuària del gimnàs fotografia els seus plats amb una aplicació que calcula calories i li diu quant ha d'entrenar.",
+        "desarrollo_es": "El alumnado calcula a mano el balance energético entre la ingesta y la actividad de la usuaria durante un día (1136-6c). Lo compara con el resultado de la aplicación y describe cómo influye la IA en el sector del título y qué límites tiene (1665-4f).",
+        "desarrollo_ca": "L'alumnat calcula a mà el balanç energètic entre la ingesta i l'activitat de la usuària durant un dia (1136-6c). El compara amb el resultat de l'aplicació i descriu com influeix la IA en el sector del títol i quins límits té (1665-4f).",
+        "evidencia_es": "Cálculo comparado y reflexión crítica.",
+        "evidencia_ca": "Càlcul comparat i reflexió crítica.",
+        "dua_es": "Tablas de equivalencias y calculadora.",
+        "dua_ca": "Taules d'equivalències i calculadora.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA9", "criterios": ["c"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Los drones de salvamento son un ejemplo de cómo las tecnologías habilitadoras crean nuevos servicios de rescate.",
+    "justificacion_ca": "Els drons de salvament són un exemple de com les tecnologies habilitadores creen nous serveis de rescat.",
+    "actividades": [
+      {
+        "titulo_es": "Un dron lanza el flotador en la playa de Es Trenc",
+        "titulo_ca": "Un dron llança el flotador a la platja des Trenc",
+        "contexto_es": "El servicio de salvamento de una playa con mucho oleaje prueba un dron que lanza un flotador antes de que llegue el socorrista.",
+        "contexto_ca": "El servei de salvament d'una platja amb molt d'onatge prova un dron que llança un flotador abans que arribi el socorrista.",
+        "desarrollo_es": "El alumnado identifica y aplica los métodos básicos de rescate de un bañista desde la orilla y desde el agua (1136-9c). Analiza cómo el dron, con cámara, GPS y control remoto, crea un nuevo servicio de rescate y en qué casos complementa al socorrista (1665-2b).",
+        "desarrollo_ca": "L'alumnat identifica i aplica els mètodes bàsics de rescat d'un banyista des de la vorera i des de l'aigua (1136-9c). Analitza com el dron, amb càmera, GPS i control remot, crea un nou servei de rescat i en quins casos complementa el socorrista (1665-2b).",
+        "evidencia_es": "Protocolo combinado de rescate con dron.",
+        "evidencia_ca": "Protocol combinat de rescat amb dron.",
+        "dua_es": "Vídeos reales de rescates con dron.",
+        "dua_ca": "Vídeos reals de rescats amb dron.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA2", "criterios": ["f"] },
+    "b": { "modulo": "1665", "ra": "RA1", "criterios": ["e"] },
+    "justificacion_es": "Los programas para diseñar ejercicios son tecnologías típicas de la digitalización en el negocio de un centro deportivo.",
+    "justificacion_ca": "Els programes per dissenyar exercicis són tecnologies típiques de la digitalització en el negoci d'un centre esportiu.",
+    "actividades": [
+      {
+        "titulo_es": "Fichas de ejercicios con un programa de diseño",
+        "titulo_ca": "Fitxes d'exercicis amb un programa de disseny",
+        "contexto_es": "Un centro deportivo quiere enviar a sus socios fichas de ejercicios por su aplicación en lugar de en papel.",
+        "contexto_ca": "Un centre esportiu vol enviar als seus socis fitxes d'exercicis per la seva aplicació en lloc d'en paper.",
+        "desarrollo_es": "El alumnado representa los ejercicios con símbolos y esquemas gráficos usando un programa específico (1136-2f). Clasifica las tecnologías de digitalización que usa el centro, distinguiendo las de la sala, como máquinas conectadas, y las de gestión del negocio, como la aplicación de socios (1665-1e).",
+        "desarrollo_ca": "L'alumnat representa els exercicis amb símbols i esquemes gràfics fent servir un programa específic (1136-2f). Classifica les tecnologies de digitalització que fa servir el centre, distingint les de la sala, com màquines connectades, i les de gestió del negoci, com l'aplicació de socis (1665-1e).",
+        "evidencia_es": "Fichas digitales y clasificación de tecnologías.",
+        "evidencia_ca": "Fitxes digitals i classificació de tecnologies.",
+        "dua_es": "Biblioteca de figuras y tutorial.",
+        "dua_ca": "Biblioteca de figures i tutorial.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA4", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["i"] },
+    "justificacion_es": "Los datos de las pruebas cardiofuncionales son datos de salud especialmente protegidos.",
+    "justificacion_ca": "Les dades de les proves cardiofuncionals són dades de salut especialment protegides.",
+    "actividades": [
+      {
+        "titulo_es": "Electrocardiogramas de los socios: quién puede verlos",
+        "titulo_ca": "Electrocardiogrames dels socis: qui els pot veure",
+        "contexto_es": "Un gimnasio hace pruebas de esfuerzo a sus socios y guarda los resultados en una carpeta compartida con todo el personal.",
+        "contexto_ca": "Un gimnàs fa proves d'esforç als seus socis i guarda els resultats en una carpeta compartida amb tot el personal.",
+        "desarrollo_es": "El alumnado identifica los signos de riesgo que se observan antes y durante la prueba de esfuerzo (1136-4e). Valora la importancia de la seguridad de esos datos y la normativa que los protege, y propone quién debe tener acceso y cómo (1665-5i).",
+        "desarrollo_ca": "L'alumnat identifica els signes de risc que s'observen abans i durant la prova d'esforç (1136-4e). Valora la importància de la seguretat d'aquestes dades i la normativa que les protegeix, i proposa qui hi ha de tenir accés i com (1665-5i).",
+        "evidencia_es": "Protocolo de la prueba y política de acceso a los datos.",
+        "evidencia_ca": "Protocol de la prova i política d'accés a les dades.",
+        "dua_es": "Resumen de la normativa en lectura fácil.",
+        "dua_ca": "Resum de la normativa en lectura fàcil.",
+        "metodologia_es": "aprendizaje basado en dilemas.",
+        "metodologia_ca": "aprenentatge basat en dilemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["c", "f", "d"] },
+    "justificacion_es": "Decidir qué capacidades trabajar a partir de la valoración es un área de un centro deportivo que se puede digitalizar.",
+    "justificacion_ca": "Decidir quines capacitats treballar a partir de la valoració és una àrea d'un centre esportiu que es pot digitalitzar.",
+    "actividades": [
+      {
+        "titulo_es": "Digitalizar la valoración inicial del centro deportivo",
+        "titulo_ca": "Digitalitzar la valoració inicial del centre esportiu",
+        "contexto_es": "Un centro deportivo de Inca hace la valoración inicial en papel y tarda una semana en entregar el programa a cada socio.",
+        "contexto_ca": "Un centre esportiu d'Inca fa la valoració inicial en paper i tarda una setmana a lliurar el programa a cada soci.",
+        "desarrollo_es": "El alumnado determina, a partir de los datos de valoración, qué capacidades y métodos corresponden a tres socios tipo (1136-3c). Identifica qué partes de ese proceso se pueden digitalizar (1665-6c), con qué tecnología (1665-6f) y cómo encajarían con las áreas que siguen en papel, como la entrevista inicial (1665-6d).",
+        "desarrollo_ca": "L'alumnat determina, a partir de les dades de valoració, quines capacitats i mètodes corresponen a tres socis tipus (1136-3c). Identifica quines parts d'aquest procés es poden digitalitzar (1665-6c), amb quina tecnologia (1665-6f) i com encaixarien amb les àrees que continuen en paper, com l'entrevista inicial (1665-6d).",
+        "evidencia_es": "Mapa del proceso digitalizado.",
+        "evidencia_ca": "Mapa del procés digitalitzat.",
+        "dua_es": "Diagrama de flujo guiado.",
+        "dua_ca": "Diagrama de flux guiat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA7", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Las técnicas de autoprotección al manipular a un accidentado previenen accidentes de trabajo del propio técnico.",
+    "justificacion_ca": "Les tècniques d'autoprotecció en manipular un accidentat prevenen accidents de feina del mateix tècnic.",
+    "actividades": [
+      {
+        "titulo_es": "El monitor que se lesionó al levantar a un alumno",
+        "titulo_ca": "El monitor que es va lesionar en aixecar un alumne",
+        "contexto_es": "Un monitor de campamento se hace una hernia al levantar solo a un chico desmayado.",
+        "contexto_ca": "Un monitor de campament es fa una hèrnia en aixecar tot sol un jove desmaiat.",
+        "desarrollo_es": "El alumnado aplica técnicas de autoprotección para manipular a un accidentado, como pedir ayuda, flexionar las rodillas o usar medios de arrastre (1136-7e). Clasifica la lesión del monitor como daño profesional y distingue entre accidente de trabajo y enfermedad profesional (1709-2b).",
+        "desarrollo_ca": "L'alumnat aplica tècniques d'autoprotecció per manipular un accidentat, com demanar ajuda, flexionar els genolls o fer servir mitjans d'arrossegament (1136-7e). Classifica la lesió del monitor com a dany professional i distingeix entre accident de treball i malaltia professional (1709-2b).",
+        "evidencia_es": "Vídeo de la técnica y clasificación del daño.",
+        "evidencia_ca": "Vídeo de la tècnica i classificació del dany.",
+        "dua_es": "Práctica por parejas con maniquí.",
+        "dua_ca": "Pràctica per parelles amb maniquí.",
+        "metodologia_es": "aprendizaje experiencial.",
+        "metodologia_ca": "aprenentatge experiencial."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA9", "criterios": ["c"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["d", "g"] },
+    "justificacion_es": "El rescate en una instalación forma parte del plan de emergencia, que fija quién hace qué y en qué orden.",
+    "justificacion_ca": "El rescat en una instal·lació forma part del pla d'emergència, que fixa qui fa què i en quin ordre.",
+    "actividades": [
+      {
+        "titulo_es": "Simulacro de evacuación en el polideportivo",
+        "titulo_ca": "Simulacre d'evacuació al poliesportiu",
+        "contexto_es": "Durante una competición escolar se declara un incendio en los vestuarios del polideportivo con trescientas personas dentro.",
+        "contexto_ca": "Durant una competició escolar es declara un incendi als vestidors del poliesportiu amb tres-centes persones a dins.",
+        "desarrollo_es": "El alumnado aplica los métodos básicos de rescate de una persona atrapada por el humo (1136-9c). Analiza el protocolo de emergencia que se ha seguido (1709-2d) y valora el plan de autoprotección del polideportivo, con la secuencia de actuaciones de cada trabajador (1709-2g).",
+        "desarrollo_ca": "L'alumnat aplica els mètodes bàsics de rescat d'una persona atrapada pel fum (1136-9c). Analitza el protocol d'emergència que s'ha seguit (1709-2d) i valora el pla d'autoprotecció del poliesportiu, amb la seqüència d'actuacions de cada treballador (1709-2g).",
+        "evidencia_es": "Informe del simulacro con propuestas.",
+        "evidencia_ca": "Informe del simulacre amb propostes.",
+        "dua_es": "Plano con rutas y roles asignados.",
+        "dua_ca": "Plànol amb rutes i rols assignats.",
+        "metodologia_es": "simulacro con evaluación.",
+        "metodologia_ca": "simulacre amb avaluació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA8", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["i"] },
+    "justificacion_es": "La desobstrucción de la vía aérea es una de las técnicas básicas de primeros auxilios que deben conocer todos los trabajadores.",
+    "justificacion_ca": "La desobstrucció de la via aèria és una de les tècniques bàsiques de primers auxilis que han de conèixer tots els treballadors.",
+    "actividades": [
+      {
+        "titulo_es": "Atragantamiento en el comedor del campamento",
+        "titulo_ca": "Ennuegament al menjador del campament",
+        "contexto_es": "Durante la comida del campamento, una cocinera se atraganta y los monitores no saben qué hacer.",
+        "contexto_ca": "Durant el dinar del campament, una cuinera s'ennuega i els monitors no saben què fer.",
+        "desarrollo_es": "El alumnado aplica con maniquí las técnicas de desobstrucción de la vía aérea en adultos y niños (1136-8a). Las sitúa entre las técnicas de primeros auxilios que todo el personal debe conocer en el lugar de trabajo y revisa el botiquín del campamento (1709-2i).",
+        "desarrollo_ca": "L'alumnat aplica amb maniquí les tècniques de desobstrucció de la via aèria en adults i infants (1136-8a). Les situa entre les tècniques de primers auxilis que tot el personal ha de conèixer al lloc de feina i revisa la farmaciola del campament (1709-2i).",
+        "evidencia_es": "Registro de la práctica y lista del botiquín.",
+        "evidencia_ca": "Registre de la pràctica i llista de la farmaciola.",
+        "dua_es": "Maniquíes de adulto y niño.",
+        "dua_ca": "Maniquins d'adult i infant.",
+        "metodologia_es": "práctica guiada.",
+        "metodologia_ca": "pràctica guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA9", "criterios": ["b"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["e"] },
+    "justificacion_es": "Superar el fracaso en un auxilio y cuidar la autoestima ante los rechazos laborales piden recursos psicológicos parecidos.",
+    "justificacion_ca": "Superar el fracàs en un auxili i tenir cura de l'autoestima davant els rebuigs laborals demanen recursos psicològics semblants.",
+    "actividades": [
+      {
+        "titulo_es": "Levantarse después de un mal momento",
+        "titulo_ca": "Aixecar-se després d'un mal moment",
+        "contexto_es": "Un socorrista joven no pudo salvar a un bañista y desde entonces duda de presentarse a nuevas ofertas.",
+        "contexto_ca": "Un socorrista jove no va poder salvar un banyista i d'ençà dubta de presentar-se a noves ofertes.",
+        "desarrollo_es": "El alumnado especifica las técnicas para superar psicológicamente el fracaso en un auxilio, como hablarlo con el equipo o buscar apoyo profesional (1136-9b). Después valora cómo influye la autoestima en la búsqueda de empleo y qué estrategias la protegen (1709-4e).",
+        "desarrollo_ca": "L'alumnat especifica les tècniques per superar psicològicament el fracàs en un auxili, com parlar-ne amb l'equip o cercar suport professional (1136-9b). Després valora com influeix l'autoestima en la recerca de feina i quines estratègies la protegeixen (1709-4e).",
+        "evidencia_es": "Reflexión escrita y plan personal.",
+        "evidencia_ca": "Reflexió escrita i pla personal.",
+        "dua_es": "Testimonios en vídeo y diario libre.",
+        "dua_ca": "Testimonis en vídeo i diari lliure.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA1", "criterios": ["c"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["h"] },
+    "justificacion_es": "Los hábitos nocivos también afectan al trabajador deportivo, y la vigilancia de la salud ayuda a detectarlos.",
+    "justificacion_ca": "Els hàbits nocius també afecten el treballador esportiu, i la vigilància de la salut ajuda a detectar-los.",
+    "actividades": [
+      {
+        "titulo_es": "El reconocimiento médico de los monitores de verano",
+        "titulo_ca": "La revisió mèdica dels monitors d'estiu",
+        "contexto_es": "La empresa de campamentos ofrece un reconocimiento médico a sus monitores y muchos no lo hacen porque «son jóvenes».",
+        "contexto_ca": "L'empresa de campaments ofereix una revisió mèdica als seus monitors i molts no la fan perquè «són joves».",
+        "desarrollo_es": "El alumnado analiza cómo afectan el tabaco, el alcohol, el poco sueño o la mala alimentación a la salud y al rendimiento del monitor (1136-1c). Determina los requisitos de la vigilancia de la salud del trabajador y argumenta su importancia como medida preventiva (1709-2h).",
+        "desarrollo_ca": "L'alumnat analitza com afecten el tabac, l'alcohol, el poc son o la mala alimentació la salut i el rendiment del monitor (1136-1c). Determina els requisits de la vigilància de la salut del treballador i argumenta la seva importància com a mesura preventiva (1709-2h).",
+        "evidencia_es": "Campaña para los monitores.",
+        "evidencia_ca": "Campanya per als monitors.",
+        "dua_es": "Formato libre de campaña: cartel, vídeo o post.",
+        "dua_ca": "Format lliure de campanya: cartell, vídeo o post.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "Demostrar ejercicios muchas veces al día es un factor de riesgo laboral para el técnico si no cuida la ejecución.",
+    "justificacion_ca": "Demostrar exercicis moltes vegades al dia és un factor de risc laboral per al tècnic si no té cura de l'execució.",
+    "actividades": [
+      {
+        "titulo_es": "Ocho sesiones al día: los riesgos del monitor de sala",
+        "titulo_ca": "Vuit sessions al dia: els riscs del monitor de sala",
+        "contexto_es": "Una monitora de un gimnasio de Palma da ocho clases dirigidas al día y empieza a tener dolor de hombro.",
+        "contexto_ca": "Una monitora d'un gimnàs de Palma fa vuit classes dirigides al dia i comença a tenir dolor d'espatla.",
+        "desarrollo_es": "El alumnado define los aspectos de ejecución y las contraindicaciones de los ejercicios que la monitora demuestra más veces (1136-2e). Identifica los factores de riesgo de su puesto, como la repetición, la voz o la carga, y los relaciona con su salud (1709-2a).",
+        "desarrollo_ca": "L'alumnat defineix els aspectes d'execució i les contraindicacions dels exercicis que la monitora demostra més vegades (1136-2e). Identifica els factors de risc del seu lloc, com la repetició, la veu o la càrrega, i els relaciona amb la seva salut (1709-2a).",
+        "evidencia_es": "Ficha de riesgos del puesto con medidas.",
+        "evidencia_ca": "Fitxa de riscs del lloc amb mesures.",
+        "dua_es": "Lista de factores de riesgo con ejemplos.",
+        "dua_ca": "Llista de factors de risc amb exemples.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA4", "criterios": ["d"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Explicar con claridad cómo hacer una prueba y cómo usar los aparatos es una aptitud que el sector valora mucho.",
+    "justificacion_ca": "Explicar amb claredat com fer una prova i com fer servir els aparells és una aptitud que el sector valora molt.",
+    "actividades": [
+      {
+        "titulo_es": "Explicar el test de Cooper como en una entrevista",
+        "titulo_ca": "Explicar el test de Cooper com en una entrevista",
+        "contexto_es": "En un proceso de selección para monitor deportivo municipal se pide a cada candidato que explique una prueba de condición física.",
+        "contexto_ca": "En un procés de selecció per a monitor esportiu municipal es demana a cada candidat que expliqui una prova de condició física.",
+        "desarrollo_es": "El alumnado explica y demuestra cómo se realiza una prueba, cómo se usan los aparatos y qué normas de seguridad hay que seguir (1136-4d). Después reflexiona sobre qué actitudes y aptitudes ha mostrado, como la claridad o la seguridad, y cuáles le faltan para el puesto (1709-1c).",
+        "desarrollo_ca": "L'alumnat explica i demostra com es fa una prova, com es fan servir els aparells i quines normes de seguretat s'han de seguir (1136-4d). Després reflexiona sobre quines actituds i aptituds ha mostrat, com la claredat o la seguretat, i quines li falten per al lloc (1709-1c).",
+        "evidencia_es": "Vídeo de la explicación y autoevaluación.",
+        "evidencia_ca": "Vídeo de l'explicació i autoavaluació.",
+        "dua_es": "Guion de apoyo para la explicación.",
+        "dua_ca": "Guió de suport per a l'explicació.",
+        "metodologia_es": "simulación de selección.",
+        "metodologia_ca": "simulació de selecció."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["d"] },
+    "justificacion_es": "Elaborar informes con programas específicos es también una forma de practicar la competencia digital que pide la empleabilidad.",
+    "justificacion_ca": "Elaborar informes amb programes específics és també una manera de practicar la competència digital que demana l'ocupabilitat.",
+    "actividades": [
+      {
+        "titulo_es": "Aprender por mi cuenta un programa de valoración",
+        "titulo_ca": "Aprendre pel meu compte un programa de valoració",
+        "contexto_es": "Muchos centros deportivos piden experiencia con programas de valoración que no se usan en el instituto.",
+        "contexto_ca": "Molts centres esportius demanen experiència amb programes de valoració que no es fan servir a l'institut.",
+        "desarrollo_es": "El alumnado elige un programa de valoración en versión de prueba y elabora con él un informe a partir de fichas de control (1136-5d). Para aprenderlo usa tutoriales, foros y ayudas en línea, y documenta cómo ha puesto en práctica su competencia digital (1709-5d).",
+        "desarrollo_ca": "L'alumnat tria un programa de valoració en versió de prova i elabora amb aquest programa un informe a partir de fitxes de control (1136-5d). Per aprendre'l fa servir tutorials, fòrums i ajudes en línia, i documenta com ha posat en pràctica la seva competència digital (1709-5d).",
+        "evidencia_es": "Informe elaborado y diario de aprendizaje.",
+        "evidencia_ca": "Informe elaborat i diari d'aprenentatge.",
+        "dua_es": "Lista de programas y tutoriales.",
+        "dua_ca": "Llista de programes i tutorials.",
+        "metodologia_es": "aprendizaje autónomo guiado.",
+        "metodologia_ca": "aprenentatge autònom guiat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA6", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["i"] },
+    "justificacion_es": "Las técnicas hidrotermales abren itinerarios formativos hacia la hidrocinesia y el bienestar.",
+    "justificacion_ca": "Les tècniques hidrotermals obren itineraris formatius cap a la hidrocinèsia i el benestar.",
+    "actividades": [
+      {
+        "titulo_es": "Del circuito termal a un itinerario de especialización",
+        "titulo_ca": "Del circuit termal a un itinerari d'especialització",
+        "contexto_es": "Un hotel con spa busca técnicos que sepan guiar el circuito termal y hacer actividades acuáticas suaves.",
+        "contexto_ca": "Un hotel amb spa cerca tècnics que sàpiguen guiar el circuit termal i fer activitats aquàtiques suaus.",
+        "desarrollo_es": "El alumnado explica el procedimiento, las medidas preventivas y las contraindicaciones de un circuito termal con sauna, baño de vapor y ducha fría (1136-6e). Identifica los itinerarios formativos relacionados, como el ciclo de Acondicionamiento Físico o cursos de hidroterapia (1709-4i).",
+        "desarrollo_ca": "L'alumnat explica el procediment, les mesures preventives i les contraindicacions d'un circuit termal amb sauna, bany de vapor i dutxa freda (1136-6e). Identifica els itineraris formatius relacionats, com el cicle d'Acondicionament Físic o cursos d'hidroteràpia (1709-4i).",
+        "evidencia_es": "Guía del circuito y mapa de itinerarios.",
+        "evidencia_ca": "Guia del circuit i mapa d'itineraris.",
+        "dua_es": "Infografía del circuito.",
+        "dua_ca": "Infografia del circuit.",
+        "metodologia_es": "aprendizaje orientador.",
+        "metodologia_ca": "aprenentatge orientador."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["a", "h"] },
+    "justificacion_es": "Los principios del entrenamiento se revisan con la investigación, y el técnico debe mantenerse al día por su cuenta.",
+    "justificacion_ca": "Els principis de l'entrenament es revisen amb la recerca, i el tècnic s'ha de mantenir al dia pel seu compte.",
+    "actividades": [
+      {
+        "titulo_es": "Lo que ha cambiado en el entrenamiento en diez años",
+        "titulo_ca": "El que ha canviat en l'entrenament en deu anys",
+        "contexto_es": "Un monitor veterano sigue usando estiramientos antes del esfuerzo y series que hoy se consideran poco eficaces.",
+        "contexto_ca": "Un monitor veterà continua fent servir estiraments abans de l'esforç i sèries que avui es consideren poc eficaces.",
+        "desarrollo_es": "El alumnado relaciona los principios del entrenamiento con los mecanismos de adaptación según la evidencia actual (1136-3a). Toma conciencia de la responsabilidad de seguir aprendiendo toda la vida profesional (1709-5a) y aplica herramientas de aprendizaje autónomo, como alertas de revistas o pódcasts de divulgación (1709-5h).",
+        "desarrollo_ca": "L'alumnat relaciona els principis de l'entrenament amb els mecanismes d'adaptació segons l'evidència actual (1136-3a). Pren consciència de la responsabilitat de continuar aprenent tota la vida professional (1709-5a) i aplica eines d'aprenentatge autònom, com alertes de revistes o pòdcasts de divulgació (1709-5h).",
+        "evidencia_es": "Ficha de actualización y plan personal de lectura.",
+        "evidencia_ca": "Fitxa d'actualització i pla personal de lectura.",
+        "dua_es": "Artículos de divulgación seleccionados.",
+        "dua_ca": "Articles de divulgació seleccionats.",
+        "metodologia_es": "aprendizaje autónomo guiado.",
+        "metodologia_ca": "aprenentatge autònom guiat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA9", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "El autocontrol en situaciones de emergencia es una de las aptitudes que más se valoran en los puestos con responsabilidad sobre personas.",
+    "justificacion_ca": "L'autocontrol en situacions d'emergència és una de les aptituds que més es valoren en els llocs amb responsabilitat sobre persones.",
+    "actividades": [
+      {
+        "titulo_es": "Calma ante el grupo cuando algo sale mal",
+        "titulo_ca": "Calma davant el grup quan alguna cosa surt malament",
+        "contexto_es": "En una excursión escolar un niño se corta en la mano y el resto del grupo empieza a gritar y a llorar.",
+        "contexto_ca": "En una excursió escolar un infant es talla a la mà i la resta del grup comença a cridar i a plorar.",
+        "desarrollo_es": "En simulación, el alumnado valora la importancia de controlarse y transmitir confianza al niño herido y al grupo durante toda la actuación (1136-9a). Después reflexiona sobre las actitudes y competencias personales que exige el sector, como la serenidad, y en cuáles debe crecer (1709-1c).",
+        "desarrollo_ca": "En simulació, l'alumnat valora la importància de controlar-se i transmetre confiança a l'infant ferit i al grup durant tota l'actuació (1136-9a). Després reflexiona sobre les actituds i les competències personals que exigeix el sector, com la serenitat, i en quines ha de créixer (1709-1c).",
+        "evidencia_es": "Grabación de la simulación y reflexión.",
+        "evidencia_ca": "Enregistrament de la simulació i reflexió.",
+        "dua_es": "Técnicas de respiración practicadas antes.",
+        "dua_ca": "Tècniques de respiració practicades abans.",
+        "metodologia_es": "simulación con debriefing.",
+        "metodologia_ca": "simulació amb debriefing."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1136", "ra": "RA8", "criterios": ["d"] },
+    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["f", "g"] },
+    "justificacion_es": "Una lesión del propio técnico en el medio de trabajo activa las prestaciones de la Seguridad Social.",
+    "justificacion_ca": "Una lesió del mateix tècnic al medi de feina activa les prestacions de la Seguretat Social.",
+    "actividades": [
+      {
+        "titulo_es": "Rotura de ligamentos de un guía de barranquismo",
+        "titulo_ca": "Ruptura de lligaments d'un guia de barranquisme",
+        "contexto_es": "Un guía de barranquismo se rompe el ligamento de la rodilla en pleno agosto y estará tres meses de baja.",
+        "contexto_ca": "Un guia de barranquisme es romp el lligament del genoll en ple agost i estarà tres mesos de baixa.",
+        "desarrollo_es": "El alumnado indica las causas, los síntomas, la actuación y la prevención de las lesiones de rodilla más frecuentes en el barranquismo (1136-8d). Valora el papel de la Seguridad Social en este caso (1709-3f) y analiza qué prestación cobrará durante la suspensión del contrato (1709-3g).",
+        "desarrollo_ca": "L'alumnat indica les causes, els símptomes, l'actuació i la prevenció de les lesions de genoll més freqüents al barranquisme (1136-8d). Valora el paper de la Seguretat Social en aquest cas (1709-3f) i analitza quina prestació cobrarà durant la suspensió del contracte (1709-3g).",
+        "evidencia_es": "Ficha de la lesión y esquema de prestaciones.",
+        "evidencia_ca": "Fitxa de la lesió i esquema de prestacions.",
+        "dua_es": "Esquema visual de prestaciones.",
+        "dua_ca": "Esquema visual de prestacions.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  }
+]

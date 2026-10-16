@@ -200,6 +200,13 @@ export class ProjectsFacade {
       .pipe(tap({ next: (updated) => this.replaceInHistory(updated) }));
   }
 
+  /** Cambia el nombre del proyecto y actualiza el historial. */
+  renameProject(projectId: string, title: string) {
+    return this.projectsService
+      .renameProject(projectId, title)
+      .pipe(tap({ next: (updated) => this.replaceInHistory(updated) }));
+  }
+
   private replaceInHistory(updated: Project): void {
     this.projectsHistory.update((list) => list.map((p) => (p._id === updated._id ? updated : p)));
   }

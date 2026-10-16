@@ -1,0 +1,799 @@
+[
+  {
+    "a": {
+      "modulo": "1334",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "justificacion_es": "Aprender mecánica de bicicletas se apoya en un entorno personal de aprendizaje con recursos digitales.",
+    "justificacion_ca": "Aprendre mecànica de bicicletes es recolza en un entorn personal d'aprenentatge amb recursos digitals.",
+    "actividades": [
+      {
+        "titulo_es": "Mi biblioteca de tutoriales de mecánica",
+        "titulo_ca": "La meva biblioteca de tutorials de mecànica",
+        "contexto_es": "Cada bicicleta de la flota tiene componentes distintos y el manual no explica todos.",
+        "contexto_ca": "Cada bicicleta de la flota té components diferents i el manual no els explica tots.",
+        "desarrollo_es": "En el taller, el alumnado describe las piezas y componentes de la bicicleta y su función (1334-2a) y desmonta y monta sus elementos básicos (1334-2c). Busca tutoriales y foros fiables (1709-5c) y organiza con ellos su entorno personal de aprendizaje digital (1709-5d).",
+        "desarrollo_ca": "Al taller, l'alumnat descriu les peces i els components de la bicicleta i la seva funció (1334-2a) i en desmunta i munta els elements bàsics (1334-2c). Cerca tutorials i fòrums fiables (1709-5c) i organitza amb ells el seu entorn personal d'aprenentatge digital (1709-5d).",
+        "evidencia_es": "Biblioteca de recursos y práctica registrada.",
+        "evidencia_ca": "Biblioteca de recursos i pràctica registrada.",
+        "dua_es": "Despiece ilustrado de la bicicleta.",
+        "dua_ca": "Esquema il·lustrat de peces de la bicicleta.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1334",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "justificacion_es": "Las medidas para prevenir peligros en las rutas forman parte del plan preventivo de la empresa.",
+    "justificacion_ca": "Les mesures per prevenir perills a les rutes formen part del pla preventiu de l'empresa.",
+    "actividades": [
+      {
+        "titulo_es": "El plan de prevención de una empresa de bicicletas",
+        "titulo_ca": "El pla de prevenció d'una empresa de bicicletes",
+        "contexto_es": "Una empresa nueva de rutas en bicicleta todavía no tiene plan de prevención.",
+        "contexto_ca": "Una empresa nova de rutes en bicicleta encara no té pla de prevenció.",
+        "desarrollo_es": "Para la empresa, el alumnado determina las medidas para prevenir y resolver peligros en las rutas (1334-1d). Valora la importancia de recogerlas en un plan preventivo con los riesgos y las responsabilidades (1709-2g).",
+        "desarrollo_ca": "Per a l'empresa, l'alumnat determina les mesures per prevenir i resoldre perills a les rutes (1334-1d). Valora la importància de recollir-les en un pla preventiu amb els riscs i les responsabilitats (1709-2g).",
+        "evidencia_es": "Borrador del plan preventivo.",
+        "evidencia_ca": "Esborrany del pla preventiu.",
+        "dua_es": "Índice del plan.",
+        "dua_ca": "Índex del pla.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1334",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Calcular los recursos humanos de una ruta incluye entender cuánto cuesta y cobra un guía.",
+    "justificacion_ca": "Calcular els recursos humans d'una ruta inclou entendre quant costa i cobra un guia.",
+    "actividades": [
+      {
+        "titulo_es": "La nómina de un guía de bicicleta",
+        "titulo_ca": "La nòmina d'un guia de bicicleta",
+        "contexto_es": "Un guía recibe su primera nómina y no entiende las deducciones.",
+        "contexto_ca": "Un guia rep la seva primera nòmina i no entén les deduccions.",
+        "desarrollo_es": "Al planificar la temporada, el alumnado determina los recursos humanos de las rutas (1334-1b). Identifica los componentes del recibo de salario de un guía, como el salario base, los pluses y las deducciones (1709-3d).",
+        "desarrollo_ca": "En planificar la temporada, l'alumnat determina els recursos humans de les rutes (1334-1b). Identifica els components del rebut de salari d'un guia, com el salari base, els plusos i les deduccions (1709-3d).",
+        "evidencia_es": "Nómina comentada.",
+        "evidencia_ca": "Nòmina comentada.",
+        "dua_es": "Nómina con colores por apartado.",
+        "dua_ca": "Nòmina amb colors per apartat.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Los juegos acuáticos desarrollan habilidades motrices y pueden adaptarse a personas con discapacidad.",
+    "justificacion_ca": "Els jocs aquàtics desenvolupen habilitats motrius i es poden adaptar a persones amb discapacitat.",
+    "actividades": [
+      {
+        "titulo_es": "Juegos en la piscina para todos",
+        "titulo_ca": "Jocs a la piscina per a tothom",
+        "contexto_es": "Un grupo de un casal incluye a un niño con discapacidad motriz que quiere jugar en el agua.",
+        "contexto_ca": "Un grup d'un casal inclou un infant amb discapacitat motriu que vol jugar a l'aigua.",
+        "desarrollo_es": "En la piscina, el alumnado selecciona juegos que desarrollan habilidades motrices (1335-2b) y los adapta para el niño (1335-2g). Justifica las adaptaciones de las habilidades básicas en el agua (1336-1a) y relaciona cada juego con lo que desarrolla (1336-1b).",
+        "desarrollo_ca": "A la piscina, l'alumnat selecciona jocs que desenvolupen habilitats motrius (1335-2b) i els adapta per a l'infant (1335-2g). Justifica les adaptacions de les habilitats bàsiques a l'aigua (1336-1a) i relaciona cada joc amb el que desenvolupa (1336-1b).",
+        "evidencia_es": "Fichas de juegos adaptados.",
+        "evidencia_ca": "Fitxes de jocs adaptats.",
+        "dua_es": "Material de flotación variado.",
+        "dua_ca": "Material de flotació variat.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "c",
+        "f"
+      ]
+    },
+    "justificacion_es": "Acondicionar el espacio acuático es asignar materiales con criterios de seguridad.",
+    "justificacion_ca": "Condicionar l'espai aquàtic és assignar materials amb criteris de seguretat.",
+    "actividades": [
+      {
+        "titulo_es": "Preparar la piscina para una fiesta acuática",
+        "titulo_ca": "Preparar la piscina per a una festa aquàtica",
+        "contexto_es": "Un campamento urbano organiza una fiesta en la piscina municipal con sesenta niños.",
+        "contexto_ca": "Un campament urbà organitza una festa a la piscina municipal amb seixanta infants.",
+        "desarrollo_es": "Antes de la fiesta, el alumnado acondiciona el espacio según las actividades y la participación (1335-3e). Asigna los materiales recreativos a cada zona (1336-1c) y aplica criterios de seguridad en el uso del espacio (1336-1f).",
+        "desarrollo_ca": "Abans de la festa, l'alumnat condiciona l'espai segons les activitats i la participació (1335-3e). Assigna els materials recreatius a cada zona (1336-1c) i aplica criteris de seguretat en l'ús de l'espai (1336-1f).",
+        "evidencia_es": "Plano de zonas y materiales.",
+        "evidencia_ca": "Plànol de zones i materials.",
+        "dua_es": "Plano con colores.",
+        "dua_ca": "Plànol amb colors.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "justificacion_es": "Una cala es un espacio natural para actividades acuáticas que exigen control de la orientación y la respiración.",
+    "justificacion_ca": "Una cala és un espai natural per a activitats aquàtiques que exigeixen control de l'orientació i la respiració.",
+    "actividades": [
+      {
+        "titulo_es": "Juegos de inmersión en una cala",
+        "titulo_ca": "Jocs d'immersió en una cala",
+        "contexto_es": "Un grupo de jóvenes pasa una mañana en una cala de aguas tranquilas con gafas y tubo.",
+        "contexto_ca": "Un grup de joves passa un matí en una cala d'aigües tranquil·les amb ulleres i tub.",
+        "desarrollo_es": "En la cala, el alumnado aprovecha el medio natural para juegos de búsqueda en el fondo (1335-4b). Demuestra control de la orientación en zambullidas y giros (1336-1d) y coordina respiración y apnea con la flotación (1336-1e).",
+        "desarrollo_ca": "A la cala, l'alumnat aprofita el medi natural per a jocs de cerca al fons (1335-4b). Demostra control de l'orientació en capbussades i girs (1336-1d) i coordina respiració i apnea amb la flotació (1336-1e).",
+        "evidencia_es": "Ficha de la actividad en la cala.",
+        "evidencia_ca": "Fitxa de l'activitat a la cala.",
+        "dua_es": "Material de flotación disponible.",
+        "dua_ca": "Material de flotació disponible.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "El juego tiene valor educativo para aprender los fundamentos técnicos del crol.",
+    "justificacion_ca": "El joc té valor educatiu per aprendre els fonaments tècnics del crol.",
+    "actividades": [
+      {
+        "titulo_es": "Aprender crol jugando",
+        "titulo_ca": "Aprendre crol jugant",
+        "contexto_es": "Un grupo de niños se aburre con los largos y no mejora su técnica de crol.",
+        "contexto_ca": "Un grup d'infants s'avorreix amb els llargs i no millora la seva tècnica de crol.",
+        "desarrollo_es": "Primero, el alumnado aplica los fundamentos técnicos del crol en su propio nado (1336-2b). Después diseña juegos para enseñarlos y argumenta su valor educativo frente a los ejercicios repetitivos (1335-2c).",
+        "desarrollo_ca": "Primer, l'alumnat aplica els fonaments tècnics del crol en el seu propi nedar (1336-2b). Després dissenya jocs per ensenyar-los i n'argumenta el valor educatiu davant els exercicis repetitius (1335-2c).",
+        "evidencia_es": "Fichas de juegos de crol.",
+        "evidencia_ca": "Fitxes de jocs de crol.",
+        "dua_es": "Vídeo de la técnica.",
+        "dua_ca": "Vídeo de la tècnica.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA6",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "justificacion_es": "Las pruebas de natación son indicadores objetivos para evaluar la preparación del guía.",
+    "justificacion_ca": "Les proves de natació són indicadors objectius per avaluar la preparació del guia.",
+    "actividades": [
+      {
+        "titulo_es": "Indicadores de mi preparación acuática",
+        "titulo_ca": "Indicadors de la meva preparació aquàtica",
+        "contexto_es": "El ciclo exige marcas mínimas de natación y el alumnado quiere saber cómo progresa.",
+        "contexto_ca": "El cicle exigeix marques mínimes de natació i l'alumnat vol saber com progressa.",
+        "desarrollo_es": "Durante el trimestre, el alumnado realiza los 200 m a crol en el tiempo exigido (1336-6a) y los 50 m a crol (1336-6d). Valora qué indicadores sirven para evaluar su progresión y la de futuros grupos (1335-6a).",
+        "desarrollo_ca": "Durant el trimestre, l'alumnat fa els 200 m a crol en el temps exigit (1336-6a) i els 50 m a crol (1336-6d). Valora quins indicadors serveixen per avaluar la seva progressió i la de futurs grups (1335-6a).",
+        "evidencia_es": "Gráfica de progresión.",
+        "evidencia_ca": "Gràfica de progressió.",
+        "dua_es": "Tabla de marcas.",
+        "dua_ca": "Taula de marques.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "El movimiento ondulatorio de la mariposa puede trabajarse con técnicas de expresión corporal.",
+    "justificacion_ca": "El moviment ondulatori de la papallona es pot treballar amb tècniques d'expressió corporal.",
+    "actividades": [
+      {
+        "titulo_es": "Moverse como un delfín",
+        "titulo_ca": "Moure's com un dofí",
+        "contexto_es": "Un grupo de niños no consigue el movimiento ondulatorio de la mariposa.",
+        "contexto_ca": "Un grup d'infants no aconsegueix el moviment ondulatori de la papallona.",
+        "desarrollo_es": "En la piscina, el alumnado adopta un movimiento global del cuerpo con trayectoria ondulatoria (1336-5c). Diseña una actividad de expresión con música en la que los niños imitan delfines (1335-3a) y argumenta su valor para la creatividad (1335-3f).",
+        "desarrollo_ca": "A la piscina, l'alumnat adopta un moviment global del cos amb trajectòria ondulatòria (1336-5c). Dissenya una activitat d'expressió amb música en què els infants imiten dofins (1335-3a) i n'argumenta el valor per a la creativitat (1335-3f).",
+        "evidencia_es": "Ficha de la actividad expresiva.",
+        "evidencia_ca": "Fitxa de l'activitat expressiva.",
+        "dua_es": "Vídeo de delfines nadando.",
+        "dua_ca": "Vídeo de dofins nedant.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Nadar a braza en apnea permite observar el fondo marino en actividades de educación ambiental.",
+    "justificacion_ca": "Nedar a braça en apnea permet observar el fons marí en activitats d'educació ambiental.",
+    "actividades": [
+      {
+        "titulo_es": "Descubrir la posidonia buceando",
+        "titulo_ca": "Descobrir la posidònia capbussant",
+        "contexto_es": "Un grupo escolar visita una cala para conocer las praderas de posidonia.",
+        "contexto_ca": "Un grup escolar visita una cala per conèixer les praderies de posidònia.",
+        "desarrollo_es": "En la cala, el alumnado adapta la braza a desplazamientos subacuáticos en apnea (1336-4f). Aplica estrategias y pautas para que la actividad sea educativa y respetuosa con el fondo marino (1335-4c).",
+        "desarrollo_ca": "A la cala, l'alumnat adapta la braça a desplaçaments subaquàtics en apnea (1336-4f). Aplica estratègies i pautes perquè l'activitat sigui educativa i respectuosa amb el fons marí (1335-4c).",
+        "evidencia_es": "Guía de la actividad educativa.",
+        "evidencia_ca": "Guia de l'activitat educativa.",
+        "dua_es": "Láminas de especies marinas.",
+        "dua_ca": "Làmines d'espècies marines.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "justificacion_es": "Entrar al agua con seguridad es una de las medidas de prevención en una acampada junto al mar.",
+    "justificacion_ca": "Entrar a l'aigua amb seguretat és una de les mesures de prevenció en una acampada devora la mar.",
+    "actividades": [
+      {
+        "titulo_es": "Saltos al agua desde las rocas",
+        "titulo_ca": "Salts a l'aigua des de les roques",
+        "contexto_es": "Los jóvenes de una acampada en la costa quieren tirarse al agua desde las rocas.",
+        "contexto_ca": "Els joves d'una acampada a la costa volen tirar-se a l'aigua des de les roques.",
+        "desarrollo_es": "En la acampada, el alumnado formula las medidas de prevención de riesgos en el agua (1335-5e). Practica y enseña una salida segura y eficiente, como la de braza, desde poca altura (1336-4g).",
+        "desarrollo_ca": "A l'acampada, l'alumnat formula les mesures de prevenció de riscs a l'aigua (1335-5e). Practica i ensenya una sortida segura i eficient, com la de braça, des de poca altura (1336-4g).",
+        "evidencia_es": "Normas de entrada al agua.",
+        "evidencia_ca": "Normes d'entrada a l'aigua.",
+        "dua_es": "Fotografías de puntos seguros.",
+        "dua_ca": "Fotografies de punts segurs.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "El estilo espalda, con la cara fuera del agua, se adapta bien al perfil de personas mayores.",
+    "justificacion_ca": "L'estil esquena, amb la cara fora de l'aigua, s'adapta bé al perfil de persones grans.",
+    "actividades": [
+      {
+        "titulo_es": "Espalda para un grupo de mayores",
+        "titulo_ca": "Esquena per a un grup de gent gran",
+        "contexto_es": "Un grupo de personas mayores quiere nadar sin tener que meter la cara en el agua.",
+        "contexto_ca": "Un grup de persones grans vol nedar sense haver de ficar la cara a l'aigua.",
+        "desarrollo_es": "En la sesión, el alumnado adopta la posición hidrodinámica de la espalda (1336-3d). Propone juegos y ejercicios adaptados al perfil del grupo (1335-2d).",
+        "desarrollo_ca": "A la sessió, l'alumnat adopta la posició hidrodinàmica de l'esquena (1336-3d). Proposa jocs i exercicis adaptats al perfil del grup (1335-2d).",
+        "evidencia_es": "Programa de sesiones para mayores.",
+        "evidencia_ca": "Programa de sessions per a gent gran.",
+        "dua_es": "Material de flotación de apoyo.",
+        "dua_ca": "Material de flotació de suport.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "El registro de seguimiento muestra la progresión hacia objetivos técnicos como nadar 25 m a mariposa.",
+    "justificacion_ca": "El registre de seguiment mostra la progressió cap a objectius tècnics com nedar 25 m a papallona.",
+    "actividades": [
+      {
+        "titulo_es": "Diario hasta los 25 metros de mariposa",
+        "titulo_ca": "Diari fins als 25 metres de papallona",
+        "contexto_es": "Cada alumno se marca el reto de completar 25 m a mariposa antes de final de curso.",
+        "contexto_ca": "Cada alumne es marca el repte de completar 25 m a papallona abans de final de curs.",
+        "desarrollo_es": "Semana a semana, el alumnado cumplimenta un registro de seguimiento de sus sesiones (1335-6b). Al final completa un trayecto de 25 m coordinando brazada y patada de mariposa (1336-5f).",
+        "desarrollo_ca": "Setmana a setmana, l'alumnat emplena un registre de seguiment de les seves sessions (1335-6b). Al final completa un trajecte de 25 m coordinant braçada i batuda de papallona (1336-5f).",
+        "evidencia_es": "Registro de seguimiento.",
+        "evidencia_ca": "Registre de seguiment.",
+        "dua_es": "Plantilla semanal.",
+        "dua_ca": "Plantilla setmanal.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Nadar a braza de forma eficiente refuerza hábitos saludables en las actividades de tiempo libre.",
+    "justificacion_ca": "Nedar a braça de manera eficient reforça hàbits saludables en les activitats de temps lliure.",
+    "actividades": [
+      {
+        "titulo_es": "Nadar a braza sin dolor de cuello",
+        "titulo_ca": "Nedar a braça sense mal de coll",
+        "contexto_es": "Muchos adultos nadan a braza con la cabeza fuera del agua y acaban con dolor cervical.",
+        "contexto_ca": "Molts adults neden a braça amb el cap fora de l'aigua i acaben amb dolor cervical.",
+        "desarrollo_es": "En la piscina, el alumnado justifica los principios de avance en la braza (1336-4a) y adapta las fases respiratorias a la patada y la brazada (1336-4b). Lo explica a los participantes reforzando conductas saludables (1335-3c).",
+        "desarrollo_ca": "A la piscina, l'alumnat justifica els principis d'avanç en la braça (1336-4a) i adapta les fases respiratòries a la batuda i la braçada (1336-4b). Ho explica als participants reforçant conductes saludables (1335-3c).",
+        "evidencia_es": "Ficha de consejos de braza.",
+        "evidencia_ca": "Fitxa de consells de braça.",
+        "dua_es": "Vídeo comparado de dos técnicas.",
+        "dua_ca": "Vídeo comparat de dues tècniques.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
+    "justificacion_es": "Una travesía a nado entre dos calas puede ser una actividad del campamento si se domina el crol.",
+    "justificacion_ca": "Una travessia nedant entre dues cales pot ser una activitat del campament si es domina el crol.",
+    "actividades": [
+      {
+        "titulo_es": "Travesía a nado entre calas",
+        "titulo_ca": "Travessia nedant entre cales",
+        "contexto_es": "El campamento propone nadar de una cala a otra con una embarcación de apoyo.",
+        "contexto_ca": "El campament proposa nedar d'una cala a una altra amb una embarcació de suport.",
+        "desarrollo_es": "En el campamento, el alumnado organiza la travesía como actividad recreativa del entorno de la acampada (1335-5c). Adapta la respiración del crol a la intensidad (1336-2c) y practica la salida segura desde la orilla (1336-2e).",
+        "desarrollo_ca": "Al campament, l'alumnat organitza la travessia com a activitat recreativa de l'entorn de l'acampada (1335-5c). Adapta la respiració del crol a la intensitat (1336-2c) i practica la sortida segura des de la vora (1336-2e).",
+        "evidencia_es": "Plan de la travesía.",
+        "evidencia_ca": "Pla de la travessia.",
+        "dua_es": "Recorrido con boyas.",
+        "dua_ca": "Recorregut amb boies.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
+    "justificacion_es": "Grabar y analizar en vídeo los virajes y salidas es una forma de seguimiento con tecnología.",
+    "justificacion_ca": "Enregistrar i analitzar en vídeo els girs i les sortides és una forma de seguiment amb tecnologia.",
+    "actividades": [
+      {
+        "titulo_es": "Virajes de espalda a cámara lenta",
+        "titulo_ca": "Girs d'esquena a càmera lenta",
+        "contexto_es": "El alumnado no ve qué falla en sus virajes de espalda.",
+        "contexto_ca": "L'alumnat no veu què falla en els seus girs d'esquena.",
+        "desarrollo_es": "Por parejas, el alumnado integra el viraje en el nado continuo de espalda (1336-3c) y practica la salida con seguridad (1336-3e). Usa una aplicación de vídeo para el seguimiento y la evaluación de cada intento (1335-6d).",
+        "desarrollo_ca": "Per parelles, l'alumnat integra el gir en el nedar continu d'esquena (1336-3c) i practica la sortida amb seguretat (1336-3e). Fa servir una aplicació de vídeo per al seguiment i l'avaluació de cada intent (1335-6d).",
+        "evidencia_es": "Vídeos comentados.",
+        "evidencia_ca": "Vídeos comentats.",
+        "dua_es": "Pausas y dibujo sobre el vídeo.",
+        "dua_ca": "Pauses i dibuix sobre el vídeo.",
+        "metodologia_es": "evaluación entre iguales.",
+        "metodologia_ca": "avaluació entre iguals."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA6",
+      "criterios": [
+        "c",
+        "g"
+      ]
+    },
+    "justificacion_es": "La prevención de riesgos en actividades acuáticas exige que el monitor tenga un nivel de natación probado.",
+    "justificacion_ca": "La prevenció de riscs en activitats aquàtiques exigeix que el monitor tingui un nivell de natació provat.",
+    "actividades": [
+      {
+        "titulo_es": "Prueba de nivel para monitores de campamento",
+        "titulo_ca": "Prova de nivell per a monitors de campament",
+        "contexto_es": "Un campamento con actividades en el mar exige a sus monitores pruebas de natación.",
+        "contexto_ca": "Un campament amb activitats a la mar exigeix als seus monitors proves de natació.",
+        "desarrollo_es": "Antes del campamento, el alumnado formula las medidas de prevención de las actividades acuáticas (1335-5e). Realiza los 200 m a braza (1336-6c) y los 15 m de nado subacuático en apnea (1336-6g).",
+        "desarrollo_ca": "Abans del campament, l'alumnat formula les mesures de prevenció de les activitats aquàtiques (1335-5e). Fa els 200 m a braça (1336-6c) i els 15 m de natació subaquàtica en apnea (1336-6g).",
+        "evidencia_es": "Registro de pruebas y medidas.",
+        "evidencia_ca": "Registre de proves i mesures.",
+        "dua_es": "Entrenamiento previo guiado.",
+        "dua_ca": "Entrenament previ guiat.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "La normativa del tiempo libre incluye el convenio que regula las condiciones de los monitores.",
+    "justificacion_ca": "La normativa del temps lliure inclou el conveni que regula les condicions dels monitors.",
+    "actividades": [
+      {
+        "titulo_es": "El convenio del ocio educativo",
+        "titulo_ca": "El conveni del lleure educatiu",
+        "contexto_es": "Una monitora de colonias no sabe cuántas horas puede trabajar ni cómo se pagan las noches.",
+        "contexto_ca": "Una monitora de colònies no sap quantes hores pot treballar ni com es paguen les nits.",
+        "desarrollo_es": "Analizando el proyecto, el alumnado comprueba la aplicación de la normativa de tiempo libre (1335-1e). Analiza los derechos, obligaciones y condiciones del convenio de ocio educativo (1709-3a).",
+        "desarrollo_ca": "Analitzant el projecte, l'alumnat comprova l'aplicació de la normativa de temps lliure (1335-1e). Analitza els drets, les obligacions i les condicions del conveni de lleure educatiu (1709-3a).",
+        "evidencia_es": "Resumen del convenio.",
+        "evidencia_ca": "Resum del conveni.",
+        "dua_es": "Tabla de condiciones.",
+        "dua_ca": "Taula de condicions.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "La realidad aumentada es una tecnología disruptiva que se puede usar como recurso de animación.",
+    "justificacion_ca": "La realitat augmentada és una tecnologia disruptiva que es pot fer servir com a recurs d'animació.",
+    "actividades": [
+      {
+        "titulo_es": "Gymkhana con realidad aumentada en el bosque",
+        "titulo_ca": "Gimcana amb realitat augmentada al bosc",
+        "contexto_es": "Un grupo de adolescentes solo quiere mirar el móvil durante la excursión.",
+        "contexto_ca": "Un grup d'adolescents només vol mirar el mòbil durant l'excursió.",
+        "desarrollo_es": "Para la excursión, el alumnado usa recursos audiovisuales e informáticos como herramienta de animación (1335-3d). Relaciona la realidad aumentada con sus aplicaciones concretas en el turismo activo (1664-4f).",
+        "desarrollo_ca": "Per a l'excursió, l'alumnat fa servir recursos audiovisuals i informàtics com a eina d'animació (1335-3d). Relaciona la realitat augmentada amb les seves aplicacions concretes en el turisme actiu (1664-4f).",
+        "evidencia_es": "Diseño de la gymkhana digital.",
+        "evidencia_ca": "Disseny de la gimcana digital.",
+        "dua_es": "Tutorial de la aplicación.",
+        "dua_ca": "Tutorial de l'aplicació.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "f",
+        "g"
+      ]
+    },
+    "justificacion_es": "Los recursos de una acampada pueden gestionarse con herramientas digitales que reducen residuos.",
+    "justificacion_ca": "Els recursos d'una acampada es poden gestionar amb eines digitals que redueixen residus.",
+    "actividades": [
+      {
+        "titulo_es": "Un campamento con menos papel y menos basura",
+        "titulo_ca": "Un campament amb menys paper i menys fems",
+        "contexto_es": "Una entidad de tiempo libre quiere digitalizar inscripciones, menús y compras de sus campamentos.",
+        "contexto_ca": "Una entitat de temps lliure vol digitalitzar inscripcions, menús i compres dels seus campaments.",
+        "desarrollo_es": "Para el campamento, el alumnado establece los recursos materiales y humanos de la acampada (1335-5b). Elabora un informe de viabilidad de la digitalización (1664-5f) y analiza la mejora en la gestión de residuos (1664-5g).",
+        "desarrollo_ca": "Per al campament, l'alumnat estableix els recursos materials i humans de l'acampada (1335-5b). Elabora un informe de viabilitat de la digitalització (1664-5f) i analitza la millora en la gestió de residus (1664-5g).",
+        "evidencia_es": "Informe de viabilidad.",
+        "evidencia_ca": "Informe de viabilitat.",
+        "dua_es": "Plantilla de informe.",
+        "dua_ca": "Plantilla d'informe.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "d"
+      ]
+    },
+    "justificacion_es": "Flotar y nadar de espaldas es una actuación segura para un participante que cae al agua.",
+    "justificacion_ca": "Surar i nedar d'esquena és una actuació segura per a un participant que cau a l'aigua.",
+    "actividades": [
+      {
+        "titulo_es": "Caer al agua en una ruta costera",
+        "titulo_ca": "Caure a l'aigua en una ruta costanera",
+        "contexto_es": "En una ruta por la costa, un participante resbala y cae al agua vestido.",
+        "contexto_ca": "En una ruta per la costa, un participant rellisca i cau a l'aigua vestit.",
+        "desarrollo_es": "En la simulación, el alumnado concreta cómo debe actuar el participante y el grupo (1329-5e). En la piscina adopta la posición hidrodinámica de espalda (1336-3d) y aplica sus fundamentos técnicos para llegar a la orilla con poco esfuerzo (1336-3b).",
+        "desarrollo_ca": "En la simulació, l'alumnat concreta com ha d'actuar el participant i el grup (1329-5e). A la piscina adopta la posició hidrodinàmica d'esquena (1336-3d) i n'aplica els fonaments tècnics per arribar a la vora amb poc esforç (1336-3b).",
+        "evidencia_es": "Protocolo de caída al agua.",
+        "evidencia_ca": "Protocol de caiguda a l'aigua.",
+        "dua_es": "Práctica con ropa en la piscina.",
+        "dua_ca": "Pràctica amb roba a la piscina.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1336",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Ajustar la respiración a la intensidad del nado es un ejercicio de autoconocimiento físico.",
+    "justificacion_ca": "Ajustar la respiració a la intensitat del nedar és un exercici d'autoconeixement físic.",
+    "actividades": [
+      {
+        "titulo_es": "Conocer mis límites en el agua",
+        "titulo_ca": "Conèixer els meus límits a l'aigua",
+        "contexto_es": "Algunos alumnos se ahogan al acelerar y no saben por qué.",
+        "contexto_ca": "Alguns alumnes s'ofeguen en accelerar i no saben per què.",
+        "desarrollo_es": "En series de distinta intensidad, el alumnado adapta su respiración en el crol (1336-2c). Evalúa sus propias habilidades y motivaciones para el trabajo acuático (1709-4a).",
+        "desarrollo_ca": "En sèries de diferent intensitat, l'alumnat adapta la seva respiració en el crol (1336-2c). Avalua les seves pròpies habilitats i motivacions per al treball aquàtic (1709-4a).",
+        "evidencia_es": "Registro de series y reflexión.",
+        "evidencia_ca": "Registre de sèries i reflexió.",
+        "dua_es": "Escala de esfuerzo percibido.",
+        "dua_ca": "Escala d'esforç percebut.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1336",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "e",
+        "h"
+      ]
+    },
+    "justificacion_es": "Aprender el viraje con vídeos y compartirlo en redes afecta a la identidad digital del futuro guía.",
+    "justificacion_ca": "Aprendre el gir amb vídeos i compartir-lo a les xarxes afecta la identitat digital del futur guia.",
+    "actividades": [
+      {
+        "titulo_es": "El vídeo de mi viraje en las redes",
+        "titulo_ca": "El vídeo del meu gir a les xarxes",
+        "contexto_es": "Un alumno quiere publicar su progreso en natación en las redes sociales.",
+        "contexto_ca": "Un alumne vol publicar el seu progrés en natació a les xarxes socials.",
+        "desarrollo_es": "En la piscina, el alumnado integra el viraje en el nado continuo a crol (1336-2d) con ayuda de tutoriales (1709-5h). Antes de publicar su vídeo analiza su impacto en la identidad digital y la empleabilidad (1709-5e).",
+        "desarrollo_ca": "A la piscina, l'alumnat integra el gir en el nedar continu a crol (1336-2d) amb l'ajuda de tutorials (1709-5h). Abans de publicar el seu vídeo n'analitza l'impacte en la identitat digital i l'ocupabilitat (1709-5e).",
+        "evidencia_es": "Reflexión sobre la publicación.",
+        "evidencia_ca": "Reflexió sobre la publicació.",
+        "dua_es": "Ejemplos de perfiles profesionales.",
+        "dua_ca": "Exemples de perfils professionals.",
+        "metodologia_es": "aprendizaje reflexivo.",
+        "metodologia_ca": "aprenentatge reflexiu."
+      }
+    ]
+  }
+]

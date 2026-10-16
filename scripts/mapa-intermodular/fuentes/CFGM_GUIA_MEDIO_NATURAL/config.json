@@ -1,0 +1,78 @@
+{
+  "nivel": "CFGM_GUIA_MEDIO_NATURAL",
+  "curso": "1º",
+  "modulos": {
+    "1325": {
+      "nombre_es": "Técnicas de equitación",
+      "nombre_ca": "Tècniques d'equitació",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#f472b6",
+      "icon": "footprints"
+    },
+    "1327": {
+      "nombre_es": "Guía ecuestre",
+      "nombre_ca": "Guia eqüestre",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#34d399",
+      "icon": "map"
+    },
+    "1329": {
+      "nombre_es": "Organización de itinerarios",
+      "nombre_ca": "Organització d'itineraris",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#fb923c",
+      "icon": "compass"
+    },
+    "1333": {
+      "nombre_es": "Guía de baja y media montaña",
+      "nombre_ca": "Guia de baixa i mitjana muntanya",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#a78bfa",
+      "icon": "mountain-snow"
+    },
+    "1334": {
+      "nombre_es": "Guía de bicicleta",
+      "nombre_ca": "Guia de bicicleta",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#38bdf8",
+      "icon": "bike"
+    },
+    "1335": {
+      "nombre_es": "Técnicas de tiempo libre",
+      "nombre_ca": "Tècniques de temps lliure",
+      "tipo": "especifico",
+      "relacion": "comunicacion",
+      "color": "#f87171",
+      "icon": "party-popper"
+    },
+    "1336": {
+      "nombre_es": "Técnicas de natación",
+      "nombre_ca": "Tècniques de natació",
+      "tipo": "especifico",
+      "relacion": "ciencias",
+      "color": "#4ade80",
+      "icon": "waves"
+    },
+    "1664": {
+      "nombre_es": "Digitalización aplicada a los sectores productivos",
+      "nombre_ca": "Digitalització aplicada als sectors productius",
+      "tipo": "comun",
+      "relacion": "digital",
+      "color": "#fbbf24",
+      "icon": "binary"
+    },
+    "1709": {
+      "nombre_es": "Itinerario personal para la empleabilidad I",
+      "nombre_ca": "Itinerari personal per a l'ocupabilitat I",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#c084fc",
+      "icon": "briefcase"
+    }
+  }
+}

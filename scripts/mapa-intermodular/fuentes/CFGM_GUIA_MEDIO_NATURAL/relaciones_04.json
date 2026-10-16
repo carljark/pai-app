@@ -1,0 +1,933 @@
+[
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1333",
+      "ra": "RA7",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Las formas de registro diseñadas para el itinerario son las que el guía usa para valorar la ruta.",
+    "justificacion_ca": "Les formes de registre dissenyades per a l'itinerari són les que el guia fa servir per valorar la ruta.",
+    "actividades": [
+      {
+        "titulo_es": "Hoja de campo para la ruta del Galatzó",
+        "titulo_ca": "Full de camp per a la ruta del Galatzó",
+        "contexto_es": "La empresa quiere saber cómo reacciona el grupo en cada tramo de una ruta de montaña.",
+        "contexto_ca": "L'empresa vol saber com reacciona el grup en cada tram d'una ruta de muntanya.",
+        "desarrollo_es": "En el aula, el alumnado selecciona formas de registro de las reacciones del grupo y del técnico (1329-6a) y determina qué cuenta como incidencia de seguridad (1329-6d). En la ruta recoge con ellas datos sobre su actuación y la del grupo (1333-7a).",
+        "desarrollo_ca": "A l'aula, l'alumnat selecciona formes de registre de les reaccions del grup i del tècnic (1329-6a) i determina què compta com a incidència de seguretat (1329-6d). A la ruta recull amb aquestes formes dades sobre la seva actuació i la del grup (1333-7a).",
+        "evidencia_es": "Hoja de campo completada.",
+        "evidencia_ca": "Full de camp completat.",
+        "dua_es": "Casillas y escalas visuales.",
+        "dua_ca": "Caselles i escales visuals.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Leer el mapa para describir un recorrido incluye conocer la simbología propia de las rutas en bicicleta.",
+    "justificacion_ca": "Llegir el mapa per descriure un recorregut inclou conèixer la simbologia pròpia de les rutes en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Interpretar la ficha de una ruta de BTT",
+        "titulo_ca": "Interpretar la fitxa d'una ruta de BTT",
+        "contexto_es": "Un club ciclista comparte la descripción de una ruta de BTT llena de símbolos.",
+        "contexto_ca": "Un club ciclista comparteix la descripció d'una ruta de BTT plena de símbols.",
+        "desarrollo_es": "Con el mapa y la ficha, el alumnado explica las características del recorrido a partir de la cartografía (1329-2b). Identifica la simbología propia de las descripciones de rutas para bicicletas (1334-4c).",
+        "desarrollo_ca": "Amb el mapa i la fitxa, l'alumnat explica les característiques del recorregut a partir de la cartografia (1329-2b). Identifica la simbologia pròpia de les descripcions de rutes per a bicicletes (1334-4c).",
+        "evidencia_es": "Ficha comentada de la ruta.",
+        "evidencia_ca": "Fitxa comentada de la ruta.",
+        "dua_es": "Leyenda de símbolos.",
+        "dua_ca": "Llegenda de símbols.",
+        "metodologia_es": "lectura guiada de mapas.",
+        "metodologia_ca": "lectura guiada de mapes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
+    "justificacion_es": "Las herramientas digitales de diseño de itinerarios permiten crear roadbooks y descripciones para otros guías.",
+    "justificacion_ca": "Les eines digitals de disseny d'itineraris permeten crear roadbooks i descripcions per a altres guies.",
+    "actividades": [
+      {
+        "titulo_es": "Roadbook digital de una vuelta en bicicleta por el Pla",
+        "titulo_ca": "Roadbook digital d'una volta en bicicleta pel Pla",
+        "contexto_es": "La empresa quiere que todos sus guías de bicicleta usen las mismas descripciones de ruta.",
+        "contexto_ca": "L'empresa vol que tots els seus guies de bicicleta facin servir les mateixes descripcions de ruta.",
+        "desarrollo_es": "Con una aplicación de cartografía, el alumnado diseña el itinerario (1329-3f). Lo prueba interpretando el GPS sin frenar el ritmo de la ruta (1334-4b) y elabora una descripción que puedan usar otros técnicos (1334-4e).",
+        "desarrollo_ca": "Amb una aplicació de cartografia, l'alumnat dissenya l'itinerari (1329-3f). El prova interpretant el GPS sense frenar el ritme de la ruta (1334-4b) i elabora una descripció que puguin fer servir altres tècnics (1334-4e).",
+        "evidencia_es": "Roadbook y track de la ruta.",
+        "evidencia_ca": "Roadbook i track de la ruta.",
+        "dua_es": "Tutorial de la aplicación.",
+        "dua_ca": "Tutorial de l'aplicació.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "El desnivel y la distancia de un itinerario se contrastan con su ciclabilidad real.",
+    "justificacion_ca": "El desnivell i la distància d'un itinerari es contrasten amb la seva ciclabilitat real.",
+    "actividades": [
+      {
+        "titulo_es": "Una ruta de bicicleta para familias",
+        "titulo_ca": "Una ruta de bicicleta per a famílies",
+        "contexto_es": "Un hotel pide una ruta en bicicleta para familias con niños de ocho años.",
+        "contexto_ca": "Un hotel demana una ruta en bicicleta per a famílies amb infants de vuit anys.",
+        "desarrollo_es": "Sobre el plano, el alumnado traza distancia, desniveles y dificultades adaptados a las familias (1329-3b). Contrasta esa información con datos de ciclabilidad y duración de otras fuentes (1334-1a).",
+        "desarrollo_ca": "Sobre el plànol, l'alumnat traça distància, desnivells i dificultats adaptats a les famílies (1329-3b). Contrasta aquesta informació amb dades de ciclabilitat i durada d'altres fonts (1334-1a).",
+        "evidencia_es": "Propuesta de ruta familiar.",
+        "evidencia_ca": "Proposta de ruta familiar.",
+        "dua_es": "Perfil de ruta con colores.",
+        "dua_ca": "Perfil de ruta amb colors.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "La logística para participantes con discapacidad incluye adaptar las trazadas y los vehículos.",
+    "justificacion_ca": "La logística per a participants amb discapacitat inclou adaptar les traçades i els vehicles.",
+    "actividades": [
+      {
+        "titulo_es": "Ruta en tándem con personas ciegas",
+        "titulo_ca": "Ruta en tàndem amb persones cegues",
+        "contexto_es": "Una asociación de personas ciegas quiere hacer una ruta en tándem por la Vía Verde de Manacor.",
+        "contexto_ca": "Una associació de persones cegues vol fer una ruta en tàndem per la Via Verda de Manacor.",
+        "desarrollo_es": "Para la ruta, el alumnado detalla la logística teniendo en cuenta la participación de personas con discapacidad (1329-4b). Adecua las trazadas a las dificultades del terreno, a los participantes y a los tándems (1334-3e).",
+        "desarrollo_ca": "Per a la ruta, l'alumnat detalla la logística tenint en compte la participació de persones amb discapacitat (1329-4b). Adequa les traçades a les dificultats del terreny, als participants i als tàndems (1334-3e).",
+        "evidencia_es": "Plan logístico de la ruta adaptada.",
+        "evidencia_ca": "Pla logístic de la ruta adaptada.",
+        "dua_es": "Descripción oral del recorrido.",
+        "dua_ca": "Descripció oral del recorregut.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "El libro de ruta debe incluir itinerarios alternativos para los tramos peligrosos.",
+    "justificacion_ca": "El llibre de ruta ha d'incloure itineraris alternatius per als trams perillosos.",
+    "actividades": [
+      {
+        "titulo_es": "Libro de ruta con plan B",
+        "titulo_ca": "Llibre de ruta amb pla B",
+        "contexto_es": "Un tramo de la ruta en bicicleta pasa por una carretera con mucho tráfico los fines de semana.",
+        "contexto_ca": "Un tram de la ruta en bicicleta passa per una carretera amb molt de trànsit els caps de setmana.",
+        "desarrollo_es": "En el libro de ruta, el alumnado recoge el programa, el perfil y los puntos de referencia (1329-4d). Añade un itinerario alternativo para el tramo peligroso y lo recorre siguiendo criterios de seguridad (1334-4d).",
+        "desarrollo_ca": "Al llibre de ruta, l'alumnat recull el programa, el perfil i els punts de referència (1329-4d). Hi afegeix un itinerari alternatiu per al tram perillós i el recorre seguint criteris de seguretat (1334-4d).",
+        "evidencia_es": "Libro de ruta completo.",
+        "evidencia_ca": "Llibre de ruta complet.",
+        "dua_es": "Plantilla de libro de ruta.",
+        "dua_ca": "Plantilla de llibre de ruta.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Las medidas y el equipamiento de seguridad del itinerario se concretan en la preparación de la ruta en bicicleta.",
+    "justificacion_ca": "Les mesures i l'equipament de seguretat de l'itinerari es concreten en la preparació de la ruta en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Seguridad para una ruta nocturna en bicicleta",
+        "titulo_ca": "Seguretat per a una ruta nocturna en bicicleta",
+        "contexto_es": "La empresa quiere ofrecer una ruta en bicicleta al atardecer que vuelve de noche.",
+        "contexto_ca": "L'empresa vol oferir una ruta en bicicleta al capvespre que torna de nit.",
+        "desarrollo_es": "Para la ruta nocturna, el alumnado determina las medidas de seguridad según el recorrido y el grupo (1329-5a) y prevé el equipamiento individual y colectivo, como luces y chalecos (1329-5b). Concreta cómo prevenir y resolver los peligros durante el itinerario (1334-1d).",
+        "desarrollo_ca": "Per a la ruta nocturna, l'alumnat determina les mesures de seguretat segons el recorregut i el grup (1329-5a) i preveu l'equipament individual i col·lectiu, com llums i armilles (1329-5b). Concreta com prevenir i resoldre els perills durant l'itinerari (1334-1d).",
+        "evidencia_es": "Plan de seguridad nocturna.",
+        "evidencia_ca": "Pla de seguretat nocturna.",
+        "dua_es": "Lista de material con imágenes.",
+        "dua_ca": "Llista de material amb imatges.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA6",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Los instrumentos de seguimiento del itinerario recogen también datos sobre los equipos usados.",
+    "justificacion_ca": "Els instruments de seguiment de l'itinerari recullen també dades sobre els equips utilitzats.",
+    "actividades": [
+      {
+        "titulo_es": "Las bicicletas de alquiler no aguantan la ruta",
+        "titulo_ca": "Les bicicletes de lloguer no aguanten la ruta",
+        "contexto_es": "Tras varias salidas, varias bicicletas de alquiler han tenido averías en el mismo tramo.",
+        "contexto_ca": "Després de diverses sortides, diverses bicicletes de lloguer han tingut avaries al mateix tram.",
+        "desarrollo_es": "Con un formulario, el alumnado recoge las incidencias del ajuste de la ruta (1329-6b) y justifica la necesidad de recoger datos sobre los equipos (1329-6c). Con esos datos valora si las bicicletas son adecuadas para el recorrido (1334-6d).",
+        "desarrollo_ca": "Amb un formulari, l'alumnat recull les incidències de l'ajust de la ruta (1329-6b) i justifica la necessitat de recollir dades sobre els equips (1329-6c). Amb aquestes dades valora si les bicicletes són adequades per al recorregut (1334-6d).",
+        "evidencia_es": "Informe sobre las bicicletas.",
+        "evidencia_ca": "Informe sobre les bicicletes.",
+        "dua_es": "Formulario con opciones.",
+        "dua_ca": "Formulari amb opcions.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Los valores culturales y paisajísticos del entorno son los puntos de interés que el guía explica durante la ruta.",
+    "justificacion_ca": "Els valors culturals i paisatgístics de l'entorn són els punts d'interès que el guia explica durant la ruta.",
+    "actividades": [
+      {
+        "titulo_es": "En bicicleta por los molinos del Pla de Sant Jordi",
+        "titulo_ca": "En bicicleta pels molins del Pla de Sant Jordi",
+        "contexto_es": "Un grupo de turistas quiere una ruta en bicicleta que combine paisaje y patrimonio.",
+        "contexto_ca": "Un grup de turistes vol una ruta en bicicleta que combini paisatge i patrimoni.",
+        "desarrollo_es": "Al preparar la ruta, el alumnado considera los valores culturales y paisajísticos del entorno, como los molinos de agua (1329-1e). Durante la salida informa sobre esos puntos de interés, el material y las normas (1334-3b).",
+        "desarrollo_ca": "En preparar la ruta, l'alumnat considera els valors culturals i paisatgístics de l'entorn, com els molins d'aigua (1329-1e). Durant la sortida informa sobre aquests punts d'interès, el material i les normes (1334-3b).",
+        "evidencia_es": "Guion de paradas interpretativas.",
+        "evidencia_ca": "Guió d'aturades interpretatives.",
+        "dua_es": "Fotografías antiguas de los molinos.",
+        "dua_ca": "Fotografies antigues dels molins.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Las actividades recreativas complementan el itinerario según su intensidad y los objetivos del grupo.",
+    "justificacion_ca": "Les activitats recreatives complementen l'itinerari segons la seva intensitat i els objectius del grup.",
+    "actividades": [
+      {
+        "titulo_es": "Juegos en las paradas de una excursión escolar",
+        "titulo_ca": "Jocs a les aturades d'una excursió escolar",
+        "contexto_es": "Una excursión con alumnos de primaria tiene tramos largos y los niños se cansan pronto.",
+        "contexto_ca": "Una excursió amb alumnes de primària té trams llargs i els infants es cansen aviat.",
+        "desarrollo_es": "En el diseño, el alumnado prevé actividades recreativas según la intensidad del recorrido y el perfil de los niños (1329-3e). Las elabora como actividades complementarias a la ruta con objetivos claros (1335-5a).",
+        "desarrollo_ca": "En el disseny, l'alumnat preveu activitats recreatives segons la intensitat del recorregut i el perfil dels infants (1329-3e). Les elabora com a activitats complementàries a la ruta amb objectius clars (1335-5a).",
+        "evidencia_es": "Fichas de juegos para las paradas.",
+        "evidencia_ca": "Fitxes de jocs per a les aturades.",
+        "dua_es": "Material de juego ligero.",
+        "dua_ca": "Material de joc lleuger.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
+    "justificacion_es": "El entorno y el perfil de los participantes son la base tanto del itinerario como del proyecto de tiempo libre.",
+    "justificacion_ca": "L'entorn i el perfil dels participants són la base tant de l'itinerari com del projecte de temps lliure.",
+    "actividades": [
+      {
+        "titulo_es": "Excursiones para un centro de mayores",
+        "titulo_ca": "Excursions per a un centre de gent gran",
+        "contexto_es": "Un centro de mayores de un pueblo del interior quiere incluir salidas al campo en su programa anual.",
+        "contexto_ca": "Un centre de gent gran d'un poble de l'interior vol incloure sortides al camp en el seu programa anual.",
+        "desarrollo_es": "Para el programa, el alumnado analiza las características geográficas y socioeconómicas del entorno (1329-1b) y describe el perfil de las personas mayores (1329-1f). Identifica el marco sociocultural del proyecto (1335-1a) y vincula las salidas con las características de los destinatarios (1335-1c).",
+        "desarrollo_ca": "Per al programa, l'alumnat analitza les característiques geogràfiques i socioeconòmiques de l'entorn (1329-1b) i descriu el perfil de les persones grans (1329-1f). Identifica el marc sociocultural del projecte (1335-1a) i vincula les sortides amb les característiques dels destinataris (1335-1c).",
+        "evidencia_es": "Propuesta anual de salidas.",
+        "evidencia_ca": "Proposta anual de sortides.",
+        "dua_es": "Entrevista con el centro.",
+        "dua_ca": "Entrevista amb el centre.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Prever espacios y medios del recorrido incluye seleccionar los recursos para los juegos de naturaleza.",
+    "justificacion_ca": "Preveure espais i mitjans del recorregut inclou seleccionar els recursos per als jocs de natura.",
+    "actividades": [
+      {
+        "titulo_es": "Mochila de juegos de naturaleza",
+        "titulo_ca": "Motxilla de jocs de natura",
+        "contexto_es": "En una ruta con un grupo de scouts, el guía quiere jugar en un claro del bosque.",
+        "contexto_ca": "En una ruta amb un grup d'escoltes, el guia vol jugar en una clariana del bosc.",
+        "desarrollo_es": "En la planificación, el alumnado prevé los espacios y medios del recorrido y de las actividades (1329-4c). Selecciona los recursos para los juegos de naturaleza, como lupas, cuerdas o pañuelos (1335-4e).",
+        "desarrollo_ca": "En la planificació, l'alumnat preveu els espais i els mitjans del recorregut i de les activitats (1329-4c). Selecciona els recursos per als jocs de natura, com lupes, cordes o mocadors (1335-4e).",
+        "evidencia_es": "Inventario de la mochila de juegos.",
+        "evidencia_ca": "Inventari de la motxilla de jocs.",
+        "dua_es": "Lista con dibujos.",
+        "dua_ca": "Llista amb dibuixos.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Conocer la normativa ambiental del itinerario es también una oportunidad de educación ambiental.",
+    "justificacion_ca": "Conèixer la normativa ambiental de l'itinerari és també una oportunitat d'educació ambiental.",
+    "actividades": [
+      {
+        "titulo_es": "Por qué no se puede hacer fuego aquí",
+        "titulo_ca": "Per què no es pot fer foc aquí",
+        "contexto_es": "Un grupo de jóvenes pregunta por qué no pueden encender fuego en el área recreativa en verano.",
+        "contexto_ca": "Un grup de joves demana per què no poden encendre foc a l'àrea recreativa a l'estiu.",
+        "desarrollo_es": "Antes de la ruta, el alumnado revisa la normativa ambiental aplicable al itinerario (1329-1c). La explica al grupo como contenido de educación ambiental, relacionándola con el riesgo de incendio (1335-4a).",
+        "desarrollo_ca": "Abans de la ruta, l'alumnat revisa la normativa ambiental aplicable a l'itinerari (1329-1c). L'explica al grup com a contingut d'educació ambiental, relacionant-la amb el risc d'incendi (1335-4a).",
+        "evidencia_es": "Explicación preparada para el grupo.",
+        "evidencia_ca": "Explicació preparada per al grup.",
+        "dua_es": "Infografía sobre incendios.",
+        "dua_ca": "Infografia sobre incendis.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA6",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Las formas de registrar datos del itinerario pueden apoyarse en herramientas digitales de seguimiento.",
+    "justificacion_ca": "Les formes de registrar dades de l'itinerari es poden recolzar en eines digitals de seguiment.",
+    "actividades": [
+      {
+        "titulo_es": "Encuesta en el móvil al final de la excursión",
+        "titulo_ca": "Enquesta al mòbil al final de l'excursió",
+        "contexto_es": "Los participantes se van rápido al acabar y nadie rellena la hoja de valoración.",
+        "contexto_ca": "Els participants se'n van ràpid en acabar i ningú no emplena el full de valoració.",
+        "desarrollo_es": "Para resolverlo, el alumnado selecciona qué datos registrar sobre las reacciones del grupo y del técnico (1329-6a). Usa un formulario en el móvil con código QR para el seguimiento y la evaluación (1335-6d).",
+        "desarrollo_ca": "Per resoldre-ho, l'alumnat selecciona quines dades registrar sobre les reaccions del grup i del tècnic (1329-6a). Fa servir un formulari al mòbil amb codi QR per al seguiment i l'avaluació (1335-6d).",
+        "evidencia_es": "Formulario digital y resultados.",
+        "evidencia_ca": "Formulari digital i resultats.",
+        "dua_es": "Preguntas con emoticonos.",
+        "dua_ca": "Preguntes amb emoticones.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "En itinerarios costeros, la actuación ante el peligro incluye criterios de seguridad en el agua.",
+    "justificacion_ca": "En itineraris costaners, l'actuació davant el perill inclou criteris de seguretat a l'aigua.",
+    "actividades": [
+      {
+        "titulo_es": "Ruta costera con paso junto al mar",
+        "titulo_ca": "Ruta costanera amb pas devora la mar",
+        "contexto_es": "Un tramo del Camí de Cavalls pasa junto a rocas que el oleaje puede barrer.",
+        "contexto_ca": "Un tram del Camí de Cavalls passa devora roques que l'onatge pot escombrar.",
+        "desarrollo_es": "En el diseño, el alumnado concreta cómo actúan el grupo y cada participante si una ola alcanza el paso (1329-5e). Aplica criterios de seguridad en el agua para elegir el paso, el material y la posición de los guías (1336-1f).",
+        "desarrollo_ca": "En el disseny, l'alumnat concreta com actuen el grup i cada participant si una ona arriba al pas (1329-5e). Aplica criteris de seguretat a l'aigua per triar el pas, el material i la posició dels guies (1336-1f).",
+        "evidencia_es": "Protocolo del paso costero.",
+        "evidencia_ca": "Protocol del pas costaner.",
+        "dua_es": "Fotografías del tramo.",
+        "dua_ca": "Fotografies del tram.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Un baño en una cala puede ser la actividad recreativa del itinerario si se prevé su tiempo y material.",
+    "justificacion_ca": "Un bany en una cala pot ser l'activitat recreativa de l'itinerari si se'n preveu el temps i el material.",
+    "actividades": [
+      {
+        "titulo_es": "Juegos en el agua al final de la ruta",
+        "titulo_ca": "Jocs a l'aigua al final de la ruta",
+        "contexto_es": "Una ruta de verano termina en una cala y el grupo quiere bañarse y jugar.",
+        "contexto_ca": "Una ruta d'estiu acaba en una cala i el grup vol banyar-se i jugar.",
+        "desarrollo_es": "En el diseño, el alumnado establece el tiempo de la parada (1329-3c) y prevé la actividad recreativa según el cansancio del grupo (1329-3e). Relaciona los juegos acuáticos con las habilidades motrices que desarrollan (1336-1b) y asigna los materiales recreativos (1336-1c).",
+        "desarrollo_ca": "En el disseny, l'alumnat estableix el temps de l'aturada (1329-3c) i preveu l'activitat recreativa segons el cansament del grup (1329-3e). Relaciona els jocs aquàtics amb les habilitats motrius que desenvolupen (1336-1b) i assigna els materials recreatius (1336-1c).",
+        "evidencia_es": "Programa de la parada en la cala.",
+        "evidencia_ca": "Programa de l'aturada a la cala.",
+        "dua_es": "Fichas de juegos acuáticos.",
+        "dua_ca": "Fitxes de jocs aquàtics.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "justificacion_es": "El perfil del grupo de una ruta costera incluye su nivel de natación, que puede comprobarse con pruebas.",
+    "justificacion_ca": "El perfil del grup d'una ruta costanera inclou el seu nivell de natació, que es pot comprovar amb proves.",
+    "actividades": [
+      {
+        "titulo_es": "Prueba de natación antes del coasteering",
+        "titulo_ca": "Prova de natació abans del coasteering",
+        "contexto_es": "Una empresa de coasteering exige a sus guías y clientes un nivel mínimo de natación.",
+        "contexto_ca": "Una empresa de coasteering exigeix als seus guies i clients un nivell mínim de natació.",
+        "desarrollo_es": "Para la actividad, el alumnado describe el perfil de los participantes, incluido su nivel acuático (1329-1f). Realiza las pruebas de 200 m (1336-6a) y de 50 m a crol en el tiempo establecido (1336-6d) para valorar si cumple como guía.",
+        "desarrollo_ca": "Per a l'activitat, l'alumnat descriu el perfil dels participants, inclòs el seu nivell aquàtic (1329-1f). Fa les proves de 200 m (1336-6a) i de 50 m a crol en el temps establert (1336-6d) per valorar si compleix com a guia.",
+        "evidencia_es": "Registro de tiempos y perfil.",
+        "evidencia_ca": "Registre de temps i perfil.",
+        "dua_es": "Entrenamiento progresivo previo.",
+        "dua_ca": "Entrenament progressiu previ.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
+    "justificacion_es": "La nube facilita buscar, procesar y archivar la información de los itinerarios.",
+    "justificacion_ca": "El núvol facilita cercar, processar i arxivar la informació dels itineraris.",
+    "actividades": [
+      {
+        "titulo_es": "Biblioteca de rutas en la nube",
+        "titulo_ca": "Biblioteca de rutes al núvol",
+        "contexto_es": "Cada guía guarda sus mapas y fichas en su ordenador y la empresa pierde información cuando se van.",
+        "contexto_ca": "Cada guia desa els seus mapes i fitxes al seu ordinador i l'empresa perd informació quan se'n van.",
+        "desarrollo_es": "Para la empresa, el alumnado establece cómo buscar, procesar y archivar la información de las rutas (1329-1a). Usa las funciones de la nube para compartirla (1664-3b) e identifica las ventajas para el equipo (1664-3e).",
+        "desarrollo_ca": "Per a l'empresa, l'alumnat estableix com cercar, processar i arxivar la informació de les rutes (1329-1a). Fa servir les funcions del núvol per compartir-la (1664-3b) i n'identifica els avantatges per a l'equip (1664-3e).",
+        "evidencia_es": "Estructura de la biblioteca de rutas.",
+        "evidencia_ca": "Estructura de la biblioteca de rutes.",
+        "dua_es": "Guía de nombres de archivo.",
+        "dua_ca": "Guia de noms d'arxiu.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Las tecnologías habilitadoras, como el big data, mejoran el diseño de itinerarios.",
+    "justificacion_ca": "Les tecnologies habilitadores, com el big data, milloren el disseny d'itineraris.",
+    "actividades": [
+      {
+        "titulo_es": "Mapas de calor para diseñar rutas",
+        "titulo_ca": "Mapes de calor per dissenyar rutes",
+        "contexto_es": "Una aplicación deportiva publica mapas de calor con los caminos más usados de la isla.",
+        "contexto_ca": "Una aplicació esportiva publica mapes de calor amb els camins més usats de l'illa.",
+        "desarrollo_es": "Usando el mapa de calor, el alumnado diseña un itinerario con herramientas digitales (1329-3f). Describe cómo el big data y la IA generan esa información (1664-4b) y cómo mejoran la eficiencia del diseño (1664-4c).",
+        "desarrollo_ca": "Fent servir el mapa de calor, l'alumnat dissenya un itinerari amb eines digitals (1329-3f). Descriu com el big data i la IA generen aquesta informació (1664-4b) i com milloren l'eficiència del disseny (1664-4c).",
+        "evidencia_es": "Itinerario y análisis de la herramienta.",
+        "evidencia_ca": "Itinerari i anàlisi de l'eina.",
+        "dua_es": "Capturas comentadas.",
+        "dua_ca": "Captures comentades.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "justificacion_es": "Los mapas topográficos digitales y en 3D conectan el terreno físico con su modelo virtual.",
+    "justificacion_ca": "Els mapes topogràfics digitals i en 3D connecten el terreny físic amb el seu model virtual.",
+    "actividades": [
+      {
+        "titulo_es": "Del mapa de papel al mapa 3D",
+        "titulo_ca": "Del mapa de paper al mapa 3D",
+        "contexto_es": "La empresa duda si cambiar sus mapas de papel por aplicaciones con relieve en 3D.",
+        "contexto_ca": "L'empresa dubta si canviar els seus mapes de paper per aplicacions amb relleu en 3D.",
+        "desarrollo_es": "Comparando soportes, el alumnado interpreta la simbología del mapa topográfico (1329-2a). Describe cómo el modelo 3D relaciona el mundo físico y el virtual (1664-2d) y si el cambio mejoraría los resultados de la empresa (1664-2e).",
+        "desarrollo_ca": "Comparant suports, l'alumnat interpreta la simbologia del mapa topogràfic (1329-2a). Descriu com el model 3D relaciona el món físic i el virtual (1664-2d) i si el canvi milloraria els resultats de l'empresa (1664-2e).",
+        "evidencia_es": "Comparativa de soportes.",
+        "evidencia_ca": "Comparativa de suports.",
+        "dua_es": "Mapa en papel y en tableta.",
+        "dua_ca": "Mapa en paper i en tauleta.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Pedir permisos es una etapa del servicio que se puede digitalizar.",
+    "justificacion_ca": "Demanar permisos és una etapa del servei que es pot digitalitzar.",
+    "actividades": [
+      {
+        "titulo_es": "Permisos de acampada por sede electrónica",
+        "titulo_ca": "Permisos d'acampada per seu electrònica",
+        "contexto_es": "La empresa pierde días tramitando en papel los permisos de acampada en fincas públicas.",
+        "contexto_ca": "L'empresa perd dies tramitant en paper els permisos d'acampada en finques públiques.",
+        "desarrollo_es": "Para la travesía, el alumnado establece cómo obtener los permisos de acceso, circulación y pernoctación (1329-4a). Identifica esa tramitación como una etapa digitalizable del servicio (1664-5b).",
+        "desarrollo_ca": "Per a la travessia, l'alumnat estableix com obtenir els permisos d'accés, circulació i pernoctació (1329-4a). Identifica aquesta tramitació com una etapa digitalitzable del servei (1664-5b).",
+        "evidencia_es": "Procedimiento de solicitud digital.",
+        "evidencia_ca": "Procediment de sol·licitud digital.",
+        "dua_es": "Capturas paso a paso.",
+        "dua_ca": "Captures pas a pas.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "La normativa medioambiental de los itinerarios se relaciona con los modelos económicos y los ODS.",
+    "justificacion_ca": "La normativa mediambiental dels itineraris es relaciona amb els models econòmics i els ODS.",
+    "actividades": [
+      {
+        "titulo_es": "Turismo lineal o circular en la montaña",
+        "titulo_ca": "Turisme lineal o circular a la muntanya",
+        "contexto_es": "La saturación de algunas rutas obliga a limitar el acceso en temporada alta.",
+        "contexto_ca": "La saturació d'algunes rutes obliga a limitar l'accés en temporada alta.",
+        "desarrollo_es": "Analizando el caso, el alumnado revisa la normativa medioambiental que limita el acceso a las rutas (1329-1c). Compara el modelo de turismo lineal con uno circular según su impacto y los ODS (1664-1f).",
+        "desarrollo_ca": "Analitzant el cas, l'alumnat revisa la normativa mediambiental que limita l'accés a les rutes (1329-1c). Compara el model de turisme lineal amb un de circular segons el seu impacte i els ODS (1664-1f).",
+        "evidencia_es": "Tabla comparativa de modelos.",
+        "evidencia_ca": "Taula comparativa de models.",
+        "dua_es": "Iconos de los ODS.",
+        "dua_ca": "Icones dels ODS.",
+        "metodologia_es": "debate.",
+        "metodologia_ca": "debat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Valorar la normativa de prevención en el diseño de un itinerario es una evaluación de riesgos laborales del guía.",
+    "justificacion_ca": "Valorar la normativa de prevenció en el disseny d'un itinerari és una avaluació de riscs laborals del guia.",
+    "actividades": [
+      {
+        "titulo_es": "Los riesgos del guía también cuentan",
+        "titulo_ca": "Els riscs del guia també compten",
+        "contexto_es": "Al diseñar rutas, la empresa piensa en los clientes pero no en los riesgos de sus propios guías.",
+        "contexto_ca": "En dissenyar rutes, l'empresa pensa en els clients però no en els riscs dels seus propis guies.",
+        "desarrollo_es": "Al revisar el itinerario, el alumnado valora cómo se aplica la normativa de prevención en su diseño (1329-6f). Evalúa los riesgos del guía, como la carga de la mochila o el calor, y define medidas de protección (1709-2c).",
+        "desarrollo_ca": "En revisar l'itinerari, l'alumnat valora com s'aplica la normativa de prevenció en el seu disseny (1329-6f). Avalua els riscs del guia, com la càrrega de la motxilla o la calor, i defineix mesures de protecció (1709-2c).",
+        "evidencia_es": "Evaluación de riesgos del guía.",
+        "evidencia_ca": "Avaluació de riscs del guia.",
+        "dua_es": "Plantilla de evaluación.",
+        "dua_ca": "Plantilla d'avaluació.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1329",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Las características socioeconómicas del entorno explican las oportunidades de empleo de los guías.",
+    "justificacion_ca": "Les característiques socioeconòmiques de l'entorn expliquen les oportunitats de feina dels guies.",
+    "actividades": [
+      {
+        "titulo_es": "Dónde hay trabajo para guías en las Illes Balears",
+        "titulo_ca": "On hi ha feina per a guies a les Illes Balears",
+        "contexto_es": "La clase quiere saber en qué zonas y épocas del año hay más demanda de guías.",
+        "contexto_ca": "La classe vol saber en quines zones i èpoques de l'any hi ha més demanda de guies.",
+        "desarrollo_es": "Con datos de turismo, el alumnado analiza las características socioeconómicas de cada zona (1329-1b). Relaciona esos datos con las oportunidades de empleo y de inserción en el sector (1709-1a).",
+        "desarrollo_ca": "Amb dades de turisme, l'alumnat analitza les característiques socioeconòmiques de cada zona (1329-1b). Relaciona aquestes dades amb les oportunitats de feina i d'inserció en el sector (1709-1a).",
+        "evidencia_es": "Mapa de oportunidades de empleo.",
+        "evidencia_ca": "Mapa d'oportunitats de feina.",
+        "dua_es": "Datos en gráficos.",
+        "dua_ca": "Dades en gràfics.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Revisar el avituallamiento y el material es igual de necesario en una ruta a pie que en bicicleta.",
+    "justificacion_ca": "Revisar l'avituallament i el material és igual de necessari en una ruta a peu que en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Ruta de senderismo y bicicleta en un día",
+        "titulo_ca": "Ruta de senderisme i bicicleta en un dia",
+        "contexto_es": "Un grupo quiere subir en bicicleta hasta un collado y seguir a pie hasta la cima.",
+        "contexto_ca": "Un grup vol pujar en bicicleta fins a un coll i continuar a peu fins al cim.",
+        "desarrollo_es": "Para la jornada, el alumnado revisa el avituallamiento y el material individual y colectivo del tramo a pie (1333-1b). Selecciona la bicicleta y el material necesario para el tramo rodado (1334-1c).",
+        "desarrollo_ca": "Per a la jornada, l'alumnat revisa l'avituallament i el material individual i col·lectiu del tram a peu (1333-1b). Selecciona la bicicleta i el material necessari per al tram rodat (1334-1c).",
+        "evidencia_es": "Lista de material por tramo.",
+        "evidencia_ca": "Llista de material per tram.",
+        "dua_es": "Lista con fotografías.",
+        "dua_ca": "Llista amb fotografies.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Las técnicas para conocer el perfil de los participantes sirven en cualquier ruta guiada.",
+    "justificacion_ca": "Les tècniques per conèixer el perfil dels participants serveixen en qualsevol ruta guiada.",
+    "actividades": [
+      {
+        "titulo_es": "Conocer al grupo antes de salir",
+        "titulo_ca": "Conèixer el grup abans de sortir",
+        "contexto_es": "Un grupo de empresa reserva una actividad sin decir qué experiencia tiene.",
+        "contexto_ca": "Un grup d'empresa reserva una activitat sense dir quina experiència té.",
+        "desarrollo_es": "Antes de la salida, el alumnado aplica técnicas para valorar el perfil y la experiencia de los participantes (1333-2a) e informa sobre el itinerario y las normas (1333-2b). Compara esas técnicas con las formas de obtener información en una ruta en bicicleta (1334-3a).",
+        "desarrollo_ca": "Abans de la sortida, l'alumnat aplica tècniques per valorar el perfil i l'experiència dels participants (1333-2a) i informa sobre l'itinerari i les normes (1333-2b). Compara aquestes tècniques amb les formes d'obtenir informació en una ruta en bicicleta (1334-3a).",
+        "evidencia_es": "Cuestionario común.",
+        "evidencia_ca": "Qüestionari comú.",
+        "dua_es": "Preguntas cerradas.",
+        "dua_ca": "Preguntes tancades.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA6",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Las conductas de riesgo se previenen con pautas claras tanto a pie como en bicicleta.",
+    "justificacion_ca": "Les conductes de risc es prevenen amb pautes clares tant a peu com en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Calor, prisas y descensos rápidos",
+        "titulo_ca": "Calor, presses i descensos ràpids",
+        "contexto_es": "En una ruta de julio, algunos participantes beben poco y otros bajan corriendo.",
+        "contexto_ca": "En una ruta de juliol, alguns participants beuen poc i altres baixen corrent.",
+        "desarrollo_es": "Ante el caso, el alumnado especifica las medidas ante fatiga, insolación, deshidratación y conductas de riesgo (1333-2g). Marca las pautas equivalentes para las conductas temerarias en bicicleta (1334-6c).",
+        "desarrollo_ca": "Davant el cas, l'alumnat especifica les mesures davant fatiga, insolació, deshidratació i conductes de risc (1333-2g). Marca les pautes equivalents per a les conductes temeràries en bicicleta (1334-6c).",
+        "evidencia_es": "Decálogo de conductas seguras.",
+        "evidencia_ca": "Decàleg de conductes segures.",
+        "dua_es": "Pictogramas de pautas.",
+        "dua_ca": "Pictogrames de pautes.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  }
+]

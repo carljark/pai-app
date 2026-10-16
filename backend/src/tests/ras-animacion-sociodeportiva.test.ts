@@ -82,6 +82,7 @@ describe('Datos del CFGS Enseñanza y Animación Sociodeportiva', () => {
     const nivel = findNivel('CFGS_ANIMACION_SOCIODEPORTIVA');
     expect(nivel?.etapa).toBe('CFGS');
     expect(nivel?.mapas).toEqual([
+      { tab: 'CFGS_ANIMACION_SOCIODEPORTIVA', curso: '1º', moduleCode: '1124', raId: '1124_RA1' },
       { tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2', curso: '2º', moduleCode: '1123', raId: '1123_RA1' },
     ]);
     expect(nivel?.cursos.map((c) => c.modulos?.length)).toEqual([8, 8]);

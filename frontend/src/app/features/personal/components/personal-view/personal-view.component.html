@@ -140,9 +140,7 @@
       >
         <div>
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px">
-            <h3 style="margin: 0; font-size: 1.15rem; color: var(--c-text)">
-              {{ getDisplayTitle(project) }}
-            </h3>
+            <app-project-title [project]="project" [displayTitle]="getDisplayTitle(project)" />
             <span
               style="
                 font-size: 0.75rem;

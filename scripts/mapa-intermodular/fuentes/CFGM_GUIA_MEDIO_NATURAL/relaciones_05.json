@@ -1,0 +1,935 @@
+[
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA3",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Los instrumentos de orientación y el GPS se usan igual a pie que en bicicleta.",
+    "justificacion_ca": "Els instruments d'orientació i el GPS es fan servir igual a peu que en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Marcar coordenadas para la ruta mixta",
+        "titulo_ca": "Marcar coordenades per a la ruta mixta",
+        "contexto_es": "Una ruta combina un tramo a pie por un bosque y otro en bicicleta por pistas sin señalizar.",
+        "contexto_ca": "Una ruta combina un tram a peu per un bosc i un altre en bicicleta per pistes sense senyalitzar.",
+        "desarrollo_es": "En el tramo a pie, el alumnado usa brújula, altímetro y mapa (1333-3d) y toma las coordenadas de los cruces con el GPS (1333-3e). En el tramo en bicicleta se orienta con instrumentos, mapas e indicios naturales en las condiciones del día (1334-4a).",
+        "desarrollo_ca": "Al tram a peu, l'alumnat fa servir brúixola, altímetre i mapa (1333-3d) i pren les coordenades dels encreuaments amb el GPS (1333-3e). Al tram en bicicleta s'orienta amb instruments, mapes i indicis naturals en les condicions del dia (1334-4a).",
+        "evidencia_es": "Lista de coordenadas y track.",
+        "evidencia_ca": "Llista de coordenades i track.",
+        "dua_es": "Guía rápida del GPS.",
+        "dua_ca": "Guia ràpida del GPS.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Volver por el track del GPS es una forma segura de evacuar a parte del grupo.",
+    "justificacion_ca": "Tornar pel track del GPS és una manera segura d'evacuar part del grup.",
+    "actividades": [
+      {
+        "titulo_es": "Dos ciclistas tienen que volver antes",
+        "titulo_ca": "Dos ciclistes han de tornar abans",
+        "contexto_es": "A mitad de ruta, dos participantes se encuentran mal y deben regresar con uno de los guías.",
+        "contexto_ca": "A mitja ruta, dos participants es troben malament i han de tornar amb un dels guies.",
+        "desarrollo_es": "En la simulación, el alumnado prevé qué hacen los técnicos y el resto del grupo durante la evacuación (1334-5e). El guía que acompaña a los ciclistas realiza el camino de retorno con el GPS (1333-3f).",
+        "desarrollo_ca": "En la simulació, l'alumnat preveu què fan els tècnics i la resta del grup durant l'evacuació (1334-5e). El guia que acompanya els ciclistes fa el camí de retorn amb el GPS (1333-3f).",
+        "evidencia_es": "Plan de retorno parcial.",
+        "evidencia_ca": "Pla de retorn parcial.",
+        "dua_es": "Track de retorno precargado.",
+        "dua_ca": "Track de retorn precarregat.",
+        "metodologia_es": "simulación de escenario.",
+        "metodologia_ca": "simulació d'escenari."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Los aparatos de medición meteorológica ayudan a decidir cómo adaptar la ruta ante un fenómeno peligroso.",
+    "justificacion_ca": "Els aparells de mesura meteorològica ajuden a decidir com adaptar la ruta davant un fenomen perillós.",
+    "actividades": [
+      {
+        "titulo_es": "El viento sube durante la ruta en bicicleta",
+        "titulo_ca": "El vent puja durant la ruta en bicicleta",
+        "contexto_es": "En una ruta por la costa, el anemómetro marca rachas cada vez más fuertes.",
+        "contexto_ca": "En una ruta per la costa, l'anemòmetre marca ràfegues cada vegada més fortes.",
+        "desarrollo_es": "Durante la ruta, el alumnado describe el funcionamiento del anemómetro y el barómetro (1333-5c). Con sus lecturas simula las adaptaciones de la ruta en bicicleta ante el viento fuerte (1334-5c).",
+        "desarrollo_ca": "Durant la ruta, l'alumnat descriu el funcionament de l'anemòmetre i el baròmetre (1333-5c). Amb les seves lectures simula les adaptacions de la ruta en bicicleta davant el vent fort (1334-5c).",
+        "evidencia_es": "Registro de lecturas y decisiones.",
+        "evidencia_ca": "Registre de lectures i decisions.",
+        "dua_es": "Aparatos reales para probar.",
+        "dua_ca": "Aparells reals per provar.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "El protocolo de peligro de una travesía invernal combina la montaña nevada y los tramos en bicicleta.",
+    "justificacion_ca": "El protocol de perill d'una travessia hivernal combina la muntanya nevada i els trams en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Travesía de invierno en los Pirineos",
+        "titulo_ca": "Travessia d'hivern als Pirineus",
+        "contexto_es": "En un viaje de estudios, el grupo sube en bicicleta hasta un refugio y sigue con raquetas por la nieve.",
+        "contexto_ca": "En un viatge d'estudis, el grup puja en bicicleta fins a un refugi i continua amb raquetes per la neu.",
+        "desarrollo_es": "Para el viaje, el alumnado define el protocolo en caso de peligro (1333-6a), simula las adaptaciones ante una nevada (1333-6c) y determina las medidas de detección y rescate en avalancha (1333-6d). Lo integra con el protocolo de peligro del tramo en bicicleta (1334-5a).",
+        "desarrollo_ca": "Per al viatge, l'alumnat defineix el protocol en cas de perill (1333-6a), simula les adaptacions davant una nevada (1333-6c) i determina les mesures de detecció i rescat en allau (1333-6d). L'integra amb el protocol de perill del tram en bicicleta (1334-5a).",
+        "evidencia_es": "Protocolo integrado del viaje.",
+        "evidencia_ca": "Protocol integrat del viatge.",
+        "dua_es": "Diagrama de decisiones.",
+        "dua_ca": "Diagrama de decisions.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA7",
+      "criterios": [
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA6",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "justificacion_es": "La valoración de equipos y la ficha de la actividad siguen el mismo método en montaña y en bicicleta.",
+    "justificacion_ca": "La valoració d'equips i la fitxa de l'activitat segueixen el mateix mètode a muntanya i en bicicleta.",
+    "actividades": [
+      {
+        "titulo_es": "Balance del material de alquiler",
+        "titulo_ca": "Balanç del material de lloguer",
+        "contexto_es": "La empresa alquila botas, bastones y bicicletas, y los clientes se quejan de algunos equipos.",
+        "contexto_ca": "L'empresa lloga botes, bastons i bicicletes, i els clients es queixen d'alguns equips.",
+        "desarrollo_es": "Tras varias salidas, el alumnado valora la adecuación de los equipos de montaña (1333-7d) y de las bicicletas (1334-6d). Rellena la ficha de valoración de la ruta a pie (1333-7e) y la de la ruta en bicicleta (1334-6e) y propone medidas correctoras de los desajustes (1333-7f).",
+        "desarrollo_ca": "Després de diverses sortides, l'alumnat valora l'adequació dels equips de muntanya (1333-7d) i de les bicicletes (1334-6d). Emplena la fitxa de valoració de la ruta a peu (1333-7e) i la de la ruta en bicicleta (1334-6e) i proposa mesures correctores dels desajustaments (1333-7f).",
+        "evidencia_es": "Fichas de valoración y propuesta de cambios.",
+        "evidencia_ca": "Fitxes de valoració i proposta de canvis.",
+        "dua_es": "Ficha con escalas.",
+        "dua_ca": "Fitxa amb escales.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1334",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "En una ruta de bicicleta con acampada hay que identificar los lugares de peligro para prevenir riesgos.",
+    "justificacion_ca": "En una ruta de bicicleta amb acampada cal identificar els llocs de perill per prevenir riscs.",
+    "actividades": [
+      {
+        "titulo_es": "Bikepacking con noche al raso",
+        "titulo_ca": "Bikepacking amb nit a la serena",
+        "contexto_es": "Un grupo hace una ruta de dos días en bicicleta con alforjas y quiere dormir en una zona de acampada.",
+        "contexto_ca": "Un grup fa una ruta de dos dies en bicicleta amb alforges i vol dormir en una zona d'acampada.",
+        "desarrollo_es": "En la zona de acampada, el alumnado identifica los lugares de peligro, como cauces secos o árboles muertos (1333-4c). Determina las medidas para prevenir y resolver esos peligros dentro del itinerario en bicicleta (1334-1d).",
+        "desarrollo_ca": "A la zona d'acampada, l'alumnat identifica els llocs de perill, com llits secs o arbres morts (1333-4c). Determina les mesures per prevenir i resoldre aquests perills dins l'itinerari en bicicleta (1334-1d).",
+        "evidencia_es": "Croquis de la zona con riesgos.",
+        "evidencia_ca": "Croquis de la zona amb riscs.",
+        "dua_es": "Fotografías de ejemplos.",
+        "dua_ca": "Fotografies d'exemples.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Acondicionar una acampada y fijar normas de convivencia es parte de los recursos de un campamento.",
+    "justificacion_ca": "Condicionar una acampada i fixar normes de convivència és part dels recursos d'un campament.",
+    "actividades": [
+      {
+        "titulo_es": "Montar el campamento de un grupo de jóvenes",
+        "titulo_ca": "Muntar el campament d'un grup de joves",
+        "contexto_es": "Un grupo de veinte jóvenes acampa tres noches en una zona autorizada de la Serra de Tramuntana.",
+        "contexto_ca": "Un grup de vint joves acampa tres nits en una zona autoritzada de la serra de Tramuntana.",
+        "desarrollo_es": "Al llegar, el alumnado acondiciona la zona de acampada (1333-4b) y establece un protocolo de comportamiento del grupo (1333-4e). Concreta los recursos materiales y humanos de la acampada colectiva respetando el entorno (1335-5b).",
+        "desarrollo_ca": "En arribar, l'alumnat condiciona la zona d'acampada (1333-4b) i estableix un protocol de comportament del grup (1333-4e). Concreta els recursos materials i humans de l'acampada col·lectiva respectant l'entorn (1335-5b).",
+        "evidencia_es": "Plano del campamento y normas.",
+        "evidencia_ca": "Plànol del campament i normes.",
+        "dua_es": "Normas con pictogramas.",
+        "dua_ca": "Normes amb pictogrames.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA4",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Montar tiendas y refugios de fortuna puede convertirse en una actividad educativa en el medio natural.",
+    "justificacion_ca": "Muntar tendes i refugis de fortuna es pot convertir en una activitat educativa en el medi natural.",
+    "actividades": [
+      {
+        "titulo_es": "Reto de refugios en el bosque",
+        "titulo_ca": "Repte de refugis al bosc",
+        "contexto_es": "En una colonia, los niños tienen que aprender a montar una tienda y a protegerse si se hace de noche.",
+        "contexto_ca": "En una colònia, els infants han d'aprendre a muntar una tenda i a protegir-se si es fa de nit.",
+        "desarrollo_es": "En el bosque, el alumnado explica y demuestra el montaje de la tienda (1333-4d) y construye un refugio de fortuna con ramas y una lona (1333-4f). Lo plantea como reto educativo con pautas de actuación para los niños (1335-4c).",
+        "desarrollo_ca": "Al bosc, l'alumnat explica i demostra el muntatge de la tenda (1333-4d) i construeix un refugi de fortuna amb branques i una lona (1333-4f). Ho planteja com a repte educatiu amb pautes d'actuació per als infants (1335-4c).",
+        "evidencia_es": "Ficha del reto y fotografías.",
+        "evidencia_ca": "Fitxa del repte i fotografies.",
+        "dua_es": "Pasos ilustrados del montaje.",
+        "dua_ca": "Passos il·lustrats del muntatge.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "justificacion_es": "Un circuito de orientación con balizas es también un juego para el campamento.",
+    "justificacion_ca": "Un circuit d'orientació amb balises és també un joc per al campament.",
+    "actividades": [
+      {
+        "titulo_es": "Búsqueda del tesoro con brújula",
+        "titulo_ca": "Cerca del tresor amb brúixola",
+        "contexto_es": "Los monitores de un campamento quieren un juego de tarde que enseñe a orientarse.",
+        "contexto_ca": "Els monitors d'un campament volen un joc d'horabaixa que ensenyi a orientar-se.",
+        "desarrollo_es": "Primero, el alumnado realiza un circuito de orientación con balizas, brújula y mapa (1333-3c). Después lo adapta como juego de búsqueda del tesoro usando las herramientas de orientación (1335-5d).",
+        "desarrollo_ca": "Primer, l'alumnat fa un circuit d'orientació amb balises, brúixola i mapa (1333-3c). Després l'adapta com a joc de cerca del tresor fent servir les eines d'orientació (1335-5d).",
+        "evidencia_es": "Mapa del juego y pistas.",
+        "evidencia_ca": "Mapa del joc i pistes.",
+        "dua_es": "Pistas con dibujos.",
+        "dua_ca": "Pistes amb dibuixos.",
+        "metodologia_es": "aprendizaje lúdico.",
+        "metodologia_ca": "aprenentatge lúdic."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Las ayudas a participantes con discapacidad en la montaña también exigen adaptar los recursos de animación.",
+    "justificacion_ca": "Les ajudes a participants amb discapacitat a la muntanya també exigeixen adaptar els recursos d'animació.",
+    "actividades": [
+      {
+        "titulo_es": "Excursión con una silla todoterreno",
+        "titulo_ca": "Excursió amb una cadira tot terreny",
+        "contexto_es": "Un grupo incluye a una persona usuaria de silla de ruedas que irá en una silla todoterreno con barras.",
+        "contexto_ca": "Un grup inclou una persona usuària de cadira de rodes que anirà en una cadira tot terreny amb barres.",
+        "desarrollo_es": "Durante la excursión, el alumnado ejemplifica las ayudas en la progresión, como el relevo de los porteadores (1333-2f). Adapta las actividades de animación de las paradas para que participe todo el grupo (1335-3b).",
+        "desarrollo_ca": "Durant l'excursió, l'alumnat exemplifica les ajudes en la progressió, com el relleu dels portadors (1333-2f). Adapta les activitats d'animació de les aturades perquè hi participi tot el grup (1335-3b).",
+        "evidencia_es": "Plan de ayudas y actividades adaptadas.",
+        "evidencia_ca": "Pla d'ajudes i activitats adaptades.",
+        "dua_es": "Vídeo de la silla todoterreno.",
+        "dua_ca": "Vídeo de la cadira tot terreny.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Observar los signos de la naturaleza sirve para prever el tiempo y para conocer la flora y la fauna.",
+    "justificacion_ca": "Observar els signes de la natura serveix per preveure el temps i per conèixer la flora i la fauna.",
+    "actividades": [
+      {
+        "titulo_es": "Las golondrinas vuelan bajo",
+        "titulo_ca": "Les orenetes volen baix",
+        "contexto_es": "En una salida con escolares, el guía quiere enseñar a leer el cielo y los animales.",
+        "contexto_ca": "En una sortida amb escolars, el guia vol ensenyar a llegir el cel i els animals.",
+        "desarrollo_es": "Durante la salida, el alumnado identifica los signos naturales de cambio de tiempo, como nubes o el vuelo de las aves (1333-5b). Establece pautas para que los niños observen la flora y la fauna asociadas a esos cambios (1335-4f).",
+        "desarrollo_ca": "Durant la sortida, l'alumnat identifica els signes naturals de canvi de temps, com núvols o el vol de les aus (1333-5b). Estableix pautes perquè els infants observin la flora i la fauna associades a aquests canvis (1335-4f).",
+        "evidencia_es": "Cuaderno de observación.",
+        "evidencia_ca": "Quadern d'observació.",
+        "dua_es": "Láminas de nubes y aves.",
+        "dua_ca": "Làmines de núvols i aus.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA6",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Los protocolos de emergencia del campamento de invierno incluyen la extracción de una víctima de alud.",
+    "justificacion_ca": "Els protocols d'emergència del campament d'hivern inclouen l'extracció d'una víctima d'allau.",
+    "actividades": [
+      {
+        "titulo_es": "Simulacro de alud en el campamento de nieve",
+        "titulo_ca": "Simulacre d'allau al campament de neu",
+        "contexto_es": "Un campamento de nieve para jóvenes incluye una salida con raquetas por una ladera con riesgo de alud.",
+        "contexto_ca": "Un campament de neu per a joves inclou una sortida amb raquetes per un vessant amb risc d'allau.",
+        "desarrollo_es": "En el simulacro, el alumnado aplica el procedimiento de extracción de una víctima enterrada (1333-6e). Lo integra en los protocolos de emergencia de las actividades del campamento (1335-5f).",
+        "desarrollo_ca": "En el simulacre, l'alumnat aplica el procediment d'extracció d'una víctima colgada (1333-6e). L'integra en els protocols d'emergència de les activitats del campament (1335-5f).",
+        "evidencia_es": "Registro del simulacro.",
+        "evidencia_ca": "Registre del simulacre.",
+        "dua_es": "Roles asignados con tarjetas.",
+        "dua_ca": "Rols assignats amb targetes.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA7",
+      "criterios": [
+        "a",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA6",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Los datos sobre el guía y el grupo forman parte de los registros e informes de evaluación del tiempo libre.",
+    "justificacion_ca": "Les dades sobre el guia i el grup formen part dels registres i informes d'avaluació del temps lliure.",
+    "actividades": [
+      {
+        "titulo_es": "Memoria de un programa de excursiones",
+        "titulo_ca": "Memòria d'un programa d'excursions",
+        "contexto_es": "Un ayuntamiento ha financiado diez excursiones para jóvenes y pide una memoria final.",
+        "contexto_ca": "Un ajuntament ha finançat deu excursions per a joves i demana una memòria final.",
+        "desarrollo_es": "Durante el programa, el alumnado recoge datos sobre la actuación del guía y las reacciones del grupo (1333-7a) y cumplimenta registros de seguimiento (1335-6b). Al final elabora los informes de cada salida (1333-7g) y la memoria de evaluación (1335-6c).",
+        "desarrollo_ca": "Durant el programa, l'alumnat recull dades sobre l'actuació del guia i les reaccions del grup (1333-7a) i emplena registres de seguiment (1335-6b). Al final elabora els informes de cada sortida (1333-7g) i la memòria d'avaluació (1335-6c).",
+        "evidencia_es": "Memoria del programa.",
+        "evidencia_ca": "Memòria del programa.",
+        "dua_es": "Índice de la memoria.",
+        "dua_ca": "Índex de la memòria.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1335",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Señalizar las zonas de peligro es una medida de seguridad en cualquier actividad de tiempo libre.",
+    "justificacion_ca": "Senyalitzar les zones de perill és una mesura de seguretat en qualsevol activitat de temps lliure.",
+    "actividades": [
+      {
+        "titulo_es": "Zona de juegos junto a un barranco",
+        "titulo_ca": "Zona de jocs devora un barranc",
+        "contexto_es": "El prado elegido para los juegos de una colonia termina en un pequeño barranco.",
+        "contexto_ca": "El prat triat per als jocs d'una colònia acaba en un petit barranc.",
+        "desarrollo_es": "Antes de empezar, el alumnado señaliza en lugares visibles la zona de peligro (1333-1g). Organiza los juegos teniendo en cuenta las medidas de seguridad y prevención (1335-2e).",
+        "desarrollo_ca": "Abans de començar, l'alumnat senyalitza en llocs visibles la zona de perill (1333-1g). Organitza els jocs tenint en compte les mesures de seguretat i prevenció (1335-2e).",
+        "evidencia_es": "Croquis del espacio de juego.",
+        "evidencia_ca": "Croquis de l'espai de joc.",
+        "dua_es": "Cintas y conos de colores.",
+        "dua_ca": "Cintes i cons de colors.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1336",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "El protocolo de comportamiento de una acampada junto al río incluye normas de seguridad para el baño.",
+    "justificacion_ca": "El protocol de comportament d'una acampada devora el riu inclou normes de seguretat per al bany.",
+    "actividades": [
+      {
+        "titulo_es": "Bañarse en la poza del campamento",
+        "titulo_ca": "Banyar-se al gorg del campament",
+        "contexto_es": "La zona de acampada está junto a una poza y el grupo quiere bañarse al atardecer.",
+        "contexto_ca": "La zona d'acampada és devora un gorg i el grup vol banyar-se al capvespre.",
+        "desarrollo_es": "En la acampada, el alumnado establece el protocolo de comportamiento del grupo, incluidos los horarios de baño (1333-4e). Aplica criterios de seguridad acuática en el uso de la poza, como profundidad, vigilancia y saltos (1336-1f).",
+        "desarrollo_ca": "A l'acampada, l'alumnat estableix el protocol de comportament del grup, inclosos els horaris de bany (1333-4e). Aplica criteris de seguretat aquàtica en l'ús del gorg, com fondària, vigilància i salts (1336-1f).",
+        "evidencia_es": "Normas de baño del campamento.",
+        "evidencia_ca": "Normes de bany del campament.",
+        "dua_es": "Señales de zona de baño.",
+        "dua_ca": "Senyals de zona de bany.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "La cobertura de los aparatos determina qué soluciones IoT y de comunicación sirven en la montaña.",
+    "justificacion_ca": "La cobertura dels aparells determina quines solucions IoT i de comunicació serveixen a la muntanya.",
+    "actividades": [
+      {
+        "titulo_es": "Comunicador por satélite en la montaña",
+        "titulo_ca": "Comunicador per satèl·lit a la muntanya",
+        "contexto_es": "La empresa estudia comprar comunicadores por satélite para las zonas sin cobertura móvil.",
+        "contexto_ca": "L'empresa estudia comprar comunicadors per satèl·lit per a les zones sense cobertura mòbil.",
+        "desarrollo_es": "Sobre el mapa de la ruta, el alumnado comprueba las zonas de cobertura y las bandas de emisión (1333-1e). Describe cómo el comunicador combina el aparato físico con el software y las comunicaciones por satélite (1664-2c).",
+        "desarrollo_ca": "Sobre el mapa de la ruta, l'alumnat comprova les zones de cobertura i les bandes d'emissió (1333-1e). Descriu com el comunicador combina l'aparell físic amb el programari i les comunicacions per satèl·lit (1664-2c).",
+        "evidencia_es": "Informe de cobertura y propuesta.",
+        "evidencia_ca": "Informe de cobertura i proposta.",
+        "dua_es": "Mapa de cobertura coloreado.",
+        "dua_ca": "Mapa de cobertura acolorit.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "justificacion_es": "Las coordenadas del GPS alimentan aplicaciones con IA y big data aplicadas a la montaña.",
+    "justificacion_ca": "Les coordenades del GPS alimenten aplicacions amb IA i big data aplicades a la muntanya.",
+    "actividades": [
+      {
+        "titulo_es": "Una aplicación que avisa de desvíos",
+        "titulo_ca": "Una aplicació que avisa de desviaments",
+        "contexto_es": "Una aplicación de senderismo avisa cuando el usuario se sale del track previsto.",
+        "contexto_ca": "Una aplicació de senderisme avisa quan l'usuari surt del track previst.",
+        "desarrollo_es": "Con el GPS, el alumnado describe cómo tomar y guardar coordenadas (1333-3e). Explica cómo la aplicación usa datos e IA para detectar desvíos (1664-4b) y relaciona esta tecnología con aplicaciones concretas del sector (1664-4f).",
+        "desarrollo_ca": "Amb el GPS, l'alumnat descriu com prendre i desar coordenades (1333-3e). Explica com l'aplicació fa servir dades i IA per detectar desviaments (1664-4b) i relaciona aquesta tecnologia amb aplicacions concretes del sector (1664-4f).",
+        "evidencia_es": "Ficha técnica de la aplicación.",
+        "evidencia_ca": "Fitxa tècnica de l'aplicació.",
+        "dua_es": "Prueba guiada en el patio.",
+        "dua_ca": "Prova guiada al pati.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "justificacion_es": "Los modelos meteorológicos se procesan en la nube y llegan al guía a través de aplicaciones.",
+    "justificacion_ca": "Els models meteorològics es processen al núvol i arriben al guia a través d'aplicacions.",
+    "actividades": [
+      {
+        "titulo_es": "Del satélite al móvil del guía",
+        "titulo_ca": "Del satèl·lit al mòbil del guia",
+        "contexto_es": "Antes de una ruta, el guía consulta tres aplicaciones que dan previsiones distintas.",
+        "contexto_ca": "Abans d'una ruta, el guia consulta tres aplicacions que donen previsions diferents.",
+        "desarrollo_es": "Con varias fuentes, el alumnado interpreta los mapas meteorológicos (1333-5a). Explica cómo la nube procesa e intercambia los datos (1664-3b) y qué papel tiene el edge computing en las estaciones locales (1664-3c).",
+        "desarrollo_ca": "Amb diverses fonts, l'alumnat interpreta els mapes meteorològics (1333-5a). Explica com el núvol processa i intercanvia les dades (1664-3b) i quin paper té l'edge computing en les estacions locals (1664-3c).",
+        "evidencia_es": "Comparativa de previsiones.",
+        "evidencia_ca": "Comparativa de previsions.",
+        "dua_es": "Esquema del flujo de datos.",
+        "dua_ca": "Esquema del flux de dades.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA5",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "justificacion_es": "Los sensores en la nieve aportan datos para prever el riesgo de aludes.",
+    "justificacion_ca": "Els sensors a la neu aporten dades per preveure el risc d'allaus.",
+    "actividades": [
+      {
+        "titulo_es": "Estaciones automáticas y riesgo de aludes",
+        "titulo_ca": "Estacions automàtiques i risc d'allaus",
+        "contexto_es": "En un viaje al Pirineo, el grupo consulta el boletín de aludes elaborado con estaciones automáticas.",
+        "contexto_ca": "En un viatge al Pirineu, el grup consulta el butlletí d'allaus elaborat amb estacions automàtiques.",
+        "desarrollo_es": "En una calicata, el alumnado identifica los estratos de la nieve (1333-5d) e interpreta la información para prever el riesgo de alud (1333-5e). Relaciona la implantación de sensores y el tratamiento de datos con la mejora del boletín (1664-4e).",
+        "desarrollo_ca": "En una cata, l'alumnat identifica els estrats de la neu (1333-5d) i interpreta la informació per preveure el risc d'allau (1333-5e). Relaciona la implantació de sensors i el tractament de dades amb la millora del butlletí (1664-4e).",
+        "evidencia_es": "Ficha de la calicata y del boletín.",
+        "evidencia_ca": "Fitxa de la cata i del butlletí.",
+        "dua_es": "Esquema de estratos.",
+        "dua_ca": "Esquema d'estrats.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Los detectores de víctimas de alud son sistemas ciberfísicos que combinan hardware y señal.",
+    "justificacion_ca": "Els detectors de víctimes d'allau són sistemes ciberfísics que combinen maquinari i senyal.",
+    "actividades": [
+      {
+        "titulo_es": "Cómo funciona un detector de víctimas de alud",
+        "titulo_ca": "Com funciona un detector de víctimes d'allau",
+        "contexto_es": "El grupo practica la búsqueda con detectores antes de una salida con raquetas.",
+        "contexto_ca": "El grup practica la cerca amb detectors abans d'una sortida amb raquetes.",
+        "desarrollo_es": "En la práctica, el alumnado explica el uso de los detectores y del material de rescate (1333-6f). Relaciona estos aparatos con los sistemas ciberfísicos y la evolución tecnológica (1664-2a).",
+        "desarrollo_ca": "En la pràctica, l'alumnat explica l'ús dels detectors i del material de rescat (1333-6f). Relaciona aquests aparells amb els sistemes ciberfísics i l'evolució tecnològica (1664-2a).",
+        "evidencia_es": "Ficha de funcionamiento del detector.",
+        "evidencia_ca": "Fitxa de funcionament del detector.",
+        "dua_es": "Práctica en el patio.",
+        "dua_ca": "Pràctica al pati.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA7",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "justificacion_es": "Registrar incidencias en tiempo real requiere entender los niveles de la nube.",
+    "justificacion_ca": "Registrar incidències en temps real requereix entendre els nivells del núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Incidencias registradas sin cobertura",
+        "titulo_ca": "Incidències registrades sense cobertura",
+        "contexto_es": "Los guías registran incidencias con el móvil, pero muchas zonas de montaña no tienen cobertura.",
+        "contexto_ca": "Els guies registren incidències amb el mòbil, però moltes zones de muntanya no tenen cobertura.",
+        "desarrollo_es": "Durante la ruta, el alumnado registra las incidencias de la actividad, la seguridad y los tiempos (1333-7b). Identifica los niveles de la nube (1664-3a) y explica cómo el fog y el mist guardan los datos hasta recuperar la conexión (1664-3d).",
+        "desarrollo_ca": "Durant la ruta, l'alumnat registra les incidències de l'activitat, la seguretat i els temps (1333-7b). Identifica els nivells del núvol (1664-3a) i explica com el fog i el mist guarden les dades fins a recuperar la connexió (1664-3d).",
+        "evidencia_es": "Registro digital de incidencias.",
+        "evidencia_ca": "Registre digital d'incidències.",
+        "dua_es": "Esquema de niveles.",
+        "dua_ca": "Esquema de nivells.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Elegir cómo transportar y guardar el material influye en su duración y en su impacto ambiental.",
+    "justificacion_ca": "Triar com transportar i guardar el material influeix en la seva durada i en el seu impacte ambiental.",
+    "actividades": [
+      {
+        "titulo_es": "Que las mochilas duren más",
+        "titulo_ca": "Que les motxilles durin més",
+        "contexto_es": "La empresa cambia cada dos años mochilas y tiendas porque se estropean en el almacén.",
+        "contexto_ca": "L'empresa canvia cada dos anys motxilles i tendes perquè es fan malbé al magatzem.",
+        "desarrollo_es": "En el almacén, el alumnado selecciona el transporte y el almacenamiento que aseguran la durabilidad del material (1333-1f). Analiza cada etapa del modelo lineal y del circular y su repercusión ambiental (1664-1b).",
+        "desarrollo_ca": "Al magatzem, l'alumnat selecciona el transport i l'emmagatzematge que asseguren la durabilitat del material (1333-1f). Analitza cada etapa del model lineal i del circular i la seva repercussió ambiental (1664-1b).",
+        "evidencia_es": "Propuesta de almacenamiento.",
+        "evidencia_ca": "Proposta d'emmagatzematge.",
+        "dua_es": "Esquema de las dos economías.",
+        "dua_ca": "Esquema de les dues economies.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Comprobar los elementos de seguridad forma parte de la evaluación de riesgos del puesto de guía.",
+    "justificacion_ca": "Comprovar els elements de seguretat forma part de l'avaluació de riscs del lloc de guia.",
+    "actividades": [
+      {
+        "titulo_es": "Material de seguridad caducado",
+        "titulo_ca": "Material de seguretat caducat",
+        "contexto_es": "En la revisión, el alumnado encuentra mantas térmicas y vendas caducadas en el botiquín del grupo.",
+        "contexto_ca": "En la revisió, l'alumnat troba mantes tèrmiques i benes caducades a la farmaciola del grup.",
+        "desarrollo_es": "Tras la revisión, el alumnado comprueba el estado de los elementos de seguridad de su área (1333-1c). Evalúa el riesgo que supone el material caducado y define medidas de prevención (1709-2c).",
+        "desarrollo_ca": "Després de la revisió, l'alumnat comprova l'estat dels elements de seguretat de la seva àrea (1333-1c). Avalua el risc que suposa el material caducat i defineix mesures de prevenció (1709-2c).",
+        "evidencia_es": "Calendario de revisiones.",
+        "evidencia_ca": "Calendari de revisions.",
+        "dua_es": "Lista de comprobación del botiquín.",
+        "dua_ca": "Llista de comprovació de la farmaciola.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "La insolación y la deshidratación requieren primeros auxilios en el lugar donde ocurren.",
+    "justificacion_ca": "La insolació i la deshidratació requereixen primers auxilis al lloc on passen.",
+    "actividades": [
+      {
+        "titulo_es": "Golpe de calor en la subida",
+        "titulo_ca": "Cop de calor a la pujada",
+        "contexto_es": "En una subida al sol, un participante se marea, suda mucho y tiene la piel caliente.",
+        "contexto_ca": "En una pujada al sol, un participant es mareja, sua molt i té la pell calenta.",
+        "desarrollo_es": "En la simulación, el alumnado especifica las medidas ante la insolación y la deshidratación (1333-2g). Aplica las técnicas básicas de primeros auxilios en el lugar, como sombra, enfriamiento e hidratación (1709-2i).",
+        "desarrollo_ca": "En la simulació, l'alumnat especifica les mesures davant la insolació i la deshidratació (1333-2g). Aplica les tècniques bàsiques de primers auxilis al lloc, com ombra, refredament i hidratació (1709-2i).",
+        "evidencia_es": "Registro de la actuación.",
+        "evidencia_ca": "Registre de l'actuació.",
+        "dua_es": "Ficha de síntomas.",
+        "dua_ca": "Fitxa de símptomes.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "i"
+      ]
+    },
+    "justificacion_es": "Las técnicas de rescate en aludes forman parte de itinerarios formativos especializados.",
+    "justificacion_ca": "Les tècniques de rescat en allaus formen part d'itineraris formatius especialitzats.",
+    "actividades": [
+      {
+        "titulo_es": "Seguir formándose en rescate en nieve",
+        "titulo_ca": "Continuar formant-se en rescat en neu",
+        "contexto_es": "Varios alumnos quieren trabajar en invierno en estaciones de esquí del Pirineo.",
+        "contexto_ca": "Diversos alumnes volen treballar a l'hivern en estacions d'esquí del Pirineu.",
+        "desarrollo_es": "Tras la práctica, el alumnado determina las medidas de detección y rescate en aludes (1333-6d). Identifica los itinerarios formativos que le permitirían especializarse, como los técnicos deportivos de montaña (1709-4i).",
+        "desarrollo_ca": "Després de la pràctica, l'alumnat determina les mesures de detecció i rescat en allaus (1333-6d). Identifica els itineraris formatius que li permetrien especialitzar-se, com els tècnics esportius de muntanya (1709-4i).",
+        "evidencia_es": "Mapa de itinerarios formativos.",
+        "evidencia_ca": "Mapa d'itineraris formatius.",
+        "dua_es": "Esquema de titulaciones.",
+        "dua_ca": "Esquema de titulacions.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Las acampadas con grupos plantean derechos y obligaciones laborales sobre jornada y descanso.",
+    "justificacion_ca": "Les acampades amb grups plantegen drets i obligacions laborals sobre jornada i descans.",
+    "actividades": [
+      {
+        "titulo_es": "Las noches de acampada también son trabajo",
+        "titulo_ca": "Les nits d'acampada també són feina",
+        "contexto_es": "Un guía pasa tres noches con un grupo y su contrato solo cuenta las horas de ruta.",
+        "contexto_ca": "Un guia passa tres nits amb un grup i el seu contracte només compta les hores de ruta.",
+        "desarrollo_es": "Analizando el caso, el alumnado describe el protocolo de comportamiento de la acampada y la vigilancia que exige (1333-4e). Analiza los derechos y obligaciones de la relación laboral y las condiciones pactadas en el convenio (1709-3a).",
+        "desarrollo_ca": "Analitzant el cas, l'alumnat descriu el protocol de comportament de l'acampada i la vigilància que exigeix (1333-4e). Analitza els drets i les obligacions de la relació laboral i les condicions pactades en el conveni (1709-3a).",
+        "evidencia_es": "Informe sobre el caso.",
+        "evidencia_ca": "Informe sobre el cas.",
+        "dua_es": "Extracto del convenio.",
+        "dua_ca": "Extracte del conveni.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "1333",
+      "ra": "RA7",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "g"
+      ]
+    },
+    "justificacion_es": "Un accidente del guía registrado como incidencia tiene consecuencias en su relación laboral.",
+    "justificacion_ca": "Un accident del guia registrat com a incidència té conseqüències en la seva relació laboral.",
+    "actividades": [
+      {
+        "titulo_es": "El guía lesionado durante la ruta",
+        "titulo_ca": "El guia lesionat durant la ruta",
+        "contexto_es": "Un guía se lesiona la rodilla en una ruta y no podrá trabajar en dos meses.",
+        "contexto_ca": "Un guia es lesiona el genoll en una ruta i no podrà treballar en dos mesos.",
+        "desarrollo_es": "A partir del caso, el alumnado registra la incidencia de seguridad en el informe de la ruta (1333-7b). Identifica los recursos laborales ante esta situación (1709-3e) y la prestación por incapacidad temporal que le corresponde (1709-3g).",
+        "desarrollo_ca": "A partir del cas, l'alumnat registra la incidència de seguretat a l'informe de la ruta (1333-7b). Identifica els recursos laborals davant aquesta situació (1709-3e) i la prestació per incapacitat temporal que li correspon (1709-3g).",
+        "evidencia_es": "Informe del caso.",
+        "evidencia_ca": "Informe del cas.",
+        "dua_es": "Esquema de la prestación.",
+        "dua_ca": "Esquema de la prestació.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      }
+    ]
+  }
+]

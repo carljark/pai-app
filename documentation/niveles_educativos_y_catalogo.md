@@ -89,7 +89,7 @@ Ciclo SSC21 de la familia Servicios Socioculturales y a la Comunidad (tarea 208)
 
 ## CFGM Guía en el Medio Natural y de Tiempo Libre (`CFGM_GUIA_MEDIO_NATURAL`)
 
-Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). No tiene mapa intermodular.
+Ciclo AFD21 de la familia Actividades Físicas y Deportivas (tarea 212). Tiene mapa intermodular en los dos cursos: el 1.º desde la tarea 241 (pestaña `CFGM_GUIA_MEDIO_NATURAL`, 205 relaciones y 410 conexiones) y el 2.º desde la tarea 240 (pestaña `CFGM_GUIA_MEDIO_NATURAL_2`, 184 relaciones y 368 conexiones).
 
 ### Fuente normativa
 
@@ -171,7 +171,7 @@ Ciclo AFD32 de la familia Actividades Físicas y Deportivas (tarea 214). Tiene m
 
 ## CFGS Enseñanza y Animación Sociodeportiva (`CFGS_ANIMACION_SOCIODEPORTIVA`)
 
-Ciclo AFD31 de la familia Actividades Físicas y Deportivas (tarea 216). Tiene mapa intermodular de 2.º desde la tarea 235 (pestaña `CFGS_ANIMACION_SOCIODEPORTIVA_2`, 168 relaciones y 336 conexiones); el 1.º aún no tiene mapa.
+Ciclo AFD31 de la familia Actividades Físicas y Deportivas (tarea 216). Los dos cursos tienen mapa intermodular: el 1.º desde la tarea 237 (pestaña `CFGS_ANIMACION_SOCIODEPORTIVA`, 192 relaciones y 384 conexiones) y el 2.º desde la tarea 235 (pestaña `CFGS_ANIMACION_SOCIODEPORTIVA_2`, 168 relaciones y 336 conexiones).
 
 ### Fuente normativa
 
@@ -229,7 +229,7 @@ Título de Técnico Superior en Integración Social (SSC33), familia Servicios S
 
 ## CFGS Laboratorio Clínico y Biomédico (`CFGS_LABORATORIO_CLINICO`)
 
-Título de Técnico Superior en Laboratorio Clínico y Biomédico (SAN36), familia Sanidad. `codigoCaib: 'SAN36'`. Incorporado en la tarea 219. Tiene mapa intermodular de 2.º curso (tarea 238, pestaña `CFGS_LABORATORIO_CLINICO_2`, 176 relaciones y 352 conexiones); el 1.º curso está pendiente.
+Título de Técnico Superior en Laboratorio Clínico y Biomédico (SAN36), familia Sanidad. `codigoCaib: 'SAN36'`. El 1.º tiene mapa intermodular desde la tarea 239 (pestaña `CFGS_LABORATORIO_CLINICO`, 187 relaciones y 374 conexiones); el 2.º aún no.
 
 ### Fuente normativa
 

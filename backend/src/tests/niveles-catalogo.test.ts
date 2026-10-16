@@ -31,8 +31,8 @@ const modulosDe = (id: string) => findNivel(id)?.cursos.flatMap(c => c.modulos ?
 describe('Catálogo de niveles: datos para el frontend', () => {
   it('declara las pestañas del mapa con los ids históricos y su orden', () => {
     expect(MAPA_TABS).toEqual([
-      'FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
-      'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2', 'CFGS_ACONDICIONAMIENTO_FISICO', 'CFGS_ACONDICIONAMIENTO_FISICO_2', 'CFGS_ANIMACION_SOCIODEPORTIVA_2', 'CFGS_INTEGRACION_SOCIAL', 'CFGS_INTEGRACION_SOCIAL_2', 'CFGS_LABORATORIO_CLINICO_2'
+      'FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_GUIA_MEDIO_NATURAL', 'CFGM_GUIA_MEDIO_NATURAL_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
+      'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2', 'CFGS_ACONDICIONAMIENTO_FISICO', 'CFGS_ACONDICIONAMIENTO_FISICO_2', 'CFGS_ANIMACION_SOCIODEPORTIVA', 'CFGS_ANIMACION_SOCIODEPORTIVA_2', 'CFGS_INTEGRACION_SOCIAL', 'CFGS_INTEGRACION_SOCIAL_2', 'CFGS_LABORATORIO_CLINICO', 'CFGS_LABORATORIO_CLINICO_2'
     ]);
   });
 
@@ -45,14 +45,18 @@ describe('Catálogo de niveles: datos para el frontend', () => {
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA_2', curso: '2º', moduleCode: '0640', raId: '0640_RA1' },
       { nivel: 'CFGM_ATENCION_DEPENDENCIA', tab: 'CFGM_ATENCION_DEPENDENCIA', curso: '1º', moduleCode: '0020', raId: '0020_RA1' },
       { nivel: 'CFGM_ATENCION_DEPENDENCIA', tab: 'CFGM_ATENCION_DEPENDENCIA_2', curso: '2º', moduleCode: '0211', raId: '0211_RA1' },
+      { nivel: 'CFGM_GUIA_MEDIO_NATURAL', tab: 'CFGM_GUIA_MEDIO_NATURAL', curso: '1º', moduleCode: '1325', raId: '1325_RA1' },
+      { nivel: 'CFGM_GUIA_MEDIO_NATURAL', tab: 'CFGM_GUIA_MEDIO_NATURAL_2', curso: '2º', moduleCode: '1328', raId: '1328_RA1' },
       { nivel: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', tab: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', moduleCode: 'CAE1', raId: 'CAE1_RA1' },
       { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL', curso: '1º', moduleCode: '0011', raId: '0011_RA1' },
       { nivel: 'CFGS_EDUCACION_INFANTIL', tab: 'CFGS_EDUCACION_INFANTIL_2', curso: '2º', moduleCode: '0013', raId: '0013_RA1' },
       { nivel: 'CFGS_ACONDICIONAMIENTO_FISICO', tab: 'CFGS_ACONDICIONAMIENTO_FISICO', curso: '1º', moduleCode: '1136', raId: '1136_RA1' },
       { nivel: 'CFGS_ACONDICIONAMIENTO_FISICO', tab: 'CFGS_ACONDICIONAMIENTO_FISICO_2', curso: '2º', moduleCode: '1150', raId: '1150_RA1' },
+      { nivel: 'CFGS_ANIMACION_SOCIODEPORTIVA', tab: 'CFGS_ANIMACION_SOCIODEPORTIVA', curso: '1º', moduleCode: '1124', raId: '1124_RA1' },
       { nivel: 'CFGS_ANIMACION_SOCIODEPORTIVA', tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2', curso: '2º', moduleCode: '1123', raId: '1123_RA1' },
       { nivel: 'CFGS_INTEGRACION_SOCIAL', tab: 'CFGS_INTEGRACION_SOCIAL', curso: '1º', moduleCode: '0337', raId: '0337_RA1' },
       { nivel: 'CFGS_INTEGRACION_SOCIAL', tab: 'CFGS_INTEGRACION_SOCIAL_2', curso: '2º', moduleCode: '0017', raId: '0017_RA1' },
+      { nivel: 'CFGS_LABORATORIO_CLINICO', tab: 'CFGS_LABORATORIO_CLINICO', curso: '1º', moduleCode: '1367', raId: '1367_RA1' },
       { nivel: 'CFGS_LABORATORIO_CLINICO', tab: 'CFGS_LABORATORIO_CLINICO_2', curso: '2º', moduleCode: '1371', raId: '1371_RA1' },
       { nivel: 'ESO_ORDINARIA', tab: 'ESO_1', curso: '1º', formato: 'afinidades', moduleCode: 'biologia_geologia', raId: '' },
       { nivel: 'ESO_ORDINARIA', tab: 'ESO_2', curso: '2º', formato: 'afinidades', moduleCode: 'educacion_fisica', raId: '' },

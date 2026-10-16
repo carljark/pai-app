@@ -1,0 +1,728 @@
+[
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["g"] },
+    "b": { "modulo": "1139", "ra": "RA2", "criterios": ["f"] },
+    "justificacion_es": "Indicar la vestimenta y el material personal adecuados es una medida de seguridad común a la animación y a los deportes individuales.",
+    "justificacion_ca": "Indicar la vestimenta i el material personal adequats és una mesura de seguretat comuna a l'animació i als esports individuals.",
+    "actividades": [
+      {
+        "titulo_es": "Qué llevar a la jornada de orientación y patines",
+        "titulo_ca": "Què dur a la jornada d'orientació i patins",
+        "contexto_es": "El hotel organiza una jornada con orientación en el pinar por la mañana y patinaje en el paseo por la tarde, y muchos huéspedes llegan en chanclas.",
+        "contexto_ca": "L'hotel organitza una jornada amb orientació al pinar al matí i patinatge al passeig a l'horabaixa, i molts hostes arriben amb xancletes.",
+        "desarrollo_es": "El alumnado indica la vestimenta y el material personal que deben llevar los huéspedes a la actividad de orientación (1138-2g). Concreta también el equipo personal para el patinaje, como casco, protecciones y calzado, para que sea idóneo y seguro (1139-2f).",
+        "desarrollo_ca": "L'alumnat indica la vestimenta i el material personal que han de dur els hostes a l'activitat d'orientació (1138-2g). Concreta també l'equip personal per al patinatge, com casc, proteccions i calçat, perquè sigui idoni i segur (1139-2f).",
+        "evidencia_es": "Cartel informativo bilingüe para huéspedes.",
+        "evidencia_ca": "Cartell informatiu bilingüe per a hostes.",
+        "dua_es": "Cartel con iconos y pocas palabras.",
+        "dua_ca": "Cartell amb icones i poques paraules.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["f"] },
+    "b": { "modulo": "1139", "ra": "RA4", "criterios": ["g", "h"] },
+    "justificacion_es": "Prever riesgos y alternativas ante las contingencias es parte del diseño tanto de una actividad turística como de una sesión deportiva.",
+    "justificacion_ca": "Preveure riscs i alternatives davant les contingències és part del disseny tant d'una activitat turística com d'una sessió esportiva.",
+    "actividades": [
+      {
+        "titulo_es": "Plan B para la ruta de kayak cuando sube el viento",
+        "titulo_ca": "Pla B per a la ruta de caiac quan puja el vent",
+        "contexto_es": "Una empresa de turismo activo de Portocolom tiene reservada una ruta de kayak y la previsión anuncia tramontana.",
+        "contexto_ca": "Una empresa de turisme actiu de Portocolom té reservada una ruta de caiac i la previsió anuncia tramuntana.",
+        "desarrollo_es": "El alumnado prevé las situaciones de riesgo de la sesión de kayak, como vuelcos, viento y frío, y las medidas de seguridad correspondientes (1139-4h). Prepara actividades alternativas por si cambian las condiciones (1139-4g) y una alternativa turística en tierra para no cancelar la experiencia del cliente (1138-1f).",
+        "desarrollo_ca": "L'alumnat preveu les situacions de risc de la sessió de caiac, com bolcades, vent i fred, i les mesures de seguretat corresponents (1139-4h). Prepara activitats alternatives per si canvien les condicions (1139-4g) i una alternativa turística a terra per no cancel·lar l'experiència del client (1138-1f).",
+        "evidencia_es": "Plan de contingencias con tres escenarios.",
+        "evidencia_ca": "Pla de contingències amb tres escenaris.",
+        "dua_es": "Mapas meteorológicos y plantilla.",
+        "dua_ca": "Mapes meteorològics i plantilla.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA5", "criterios": ["g"] },
+    "b": { "modulo": "1139", "ra": "RA5", "criterios": ["h"] },
+    "justificacion_es": "Usar el material con criterios de durabilidad y dejar la instalación en orden son hábitos del mismo buen técnico.",
+    "justificacion_ca": "Fer servir el material amb criteris de durabilitat i deixar la instal·lació en ordre són hàbits del mateix bon tècnic.",
+    "actividades": [
+      {
+        "titulo_es": "El material que dura toda la temporada",
+        "titulo_ca": "El material que dura tota la temporada",
+        "contexto_es": "Al final de cada verano el hotel tira la mitad del material de juegos y de atletismo porque está roto o perdido.",
+        "contexto_ca": "Al final de cada estiu l'hotel llença la meitat del material de jocs i d'atletisme perquè està romput o perdut.",
+        "desarrollo_es": "El alumnado establece cómo usar los equipos y materiales del miniclub con criterios de rentabilidad y durabilidad (1138-5g). En la sesión de atletismo controla el uso del material y recoloca los equipamientos al terminar, dejando la instalación en perfecto estado (1139-5h).",
+        "desarrollo_ca": "L'alumnat estableix com fer servir els equips i materials del miniclub amb criteris de rendibilitat i durabilitat (1138-5g). A la sessió d'atletisme controla l'ús del material i recol·loca els equipaments en acabar, deixant la instal·lació en perfecte estat (1139-5h).",
+        "evidencia_es": "Normas de uso y registro de recogida.",
+        "evidencia_ca": "Normes d'ús i registre de recollida.",
+        "dua_es": "Etiquetas de colores para cada material.",
+        "dua_ca": "Etiquetes de colors per a cada material.",
+        "metodologia_es": "aprendizaje situado.",
+        "metodologia_ca": "aprenentatge situat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA3", "criterios": ["h"] },
+    "b": { "modulo": "1139", "ra": "RA3", "criterios": ["a", "b"] },
+    "justificacion_es": "Colocarse en el lugar adecuado permite al animador y al socorrista anticiparse a las conductas peligrosas en el agua.",
+    "justificacion_ca": "Col·locar-se al lloc adequat permet a l'animador i al socorrista anticipar-se a les conductes perilloses a l'aigua.",
+    "actividades": [
+      {
+        "titulo_es": "Vigilar la piscina del hotel durante el aquagym",
+        "titulo_ca": "Vigilar la piscina de l'hotel durant l'aquagym",
+        "contexto_es": "Mientras el animador dirige el aquagym, unos adolescentes se tiran de cabeza en la zona poco profunda.",
+        "contexto_ca": "Mentre l'animador dirigeix l'aquagym, uns adolescents es tiren de cap a la zona poc fonda.",
+        "desarrollo_es": "El alumnado establece la jerarquía de peligros de la piscina del hotel y el protocolo de supervisión (1139-3a). Define las conductas peligrosas de los usuarios, como saltos o carreras, y sus posibles consecuencias (1139-3b). Durante la actividad, elige el lugar que le permite comunicar, controlar al grupo y anticiparse a las contingencias (1138-3h).",
+        "desarrollo_ca": "L'alumnat estableix la jerarquia de perills de la piscina de l'hotel i el protocol de supervisió (1139-3a). Defineix les conductes perilloses dels usuaris, com salts o carreres, i les seves possibles conseqüències (1139-3b). Durant l'activitat, tria el lloc que li permet comunicar, controlar el grup i anticipar-se a les contingències (1138-3h).",
+        "evidencia_es": "Plano de la piscina con zonas de riesgo y posiciones.",
+        "evidencia_ca": "Plànol de la piscina amb zones de risc i posicions.",
+        "dua_es": "Plano en papel y fotos de la instalación.",
+        "dua_ca": "Plànol en paper i fotos de la instal·lació.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1139", "ra": "RA6", "criterios": ["e"] },
+    "justificacion_es": "Las herramientas digitales permiten recoger la satisfacción de los participantes y hacer el seguimiento de la actividad.",
+    "justificacion_ca": "Les eines digitals permeten recollir la satisfacció dels participants i fer el seguiment de l'activitat.",
+    "actividades": [
+      {
+        "titulo_es": "Encuesta con código QR al terminar la clase de surf",
+        "titulo_ca": "Enquesta amb codi QR en acabar la classe de surf",
+        "contexto_es": "La escuela de surf de una playa de Calvià quiere saber qué opinan sus alumnos sin repartir papeles mojados.",
+        "contexto_ca": "L'escola de surf d'una platja de Calvià vol saber què opinen els seus alumnes sense repartir papers banyats.",
+        "desarrollo_es": "El alumnado diseña una herramienta que aporte datos sobre la consecución de objetivos y la satisfacción de los alumnos (1139-6e). La publica con un código QR y usa las tecnologías de la información para el seguimiento y la evaluación de las clases (1138-6c).",
+        "desarrollo_ca": "L'alumnat dissenya una eina que aporti dades sobre la consecució d'objectius i la satisfacció dels alumnes (1139-6e). La publica amb un codi QR i fa servir les tecnologies de la informació per al seguiment i l'avaluació de les classes (1138-6c).",
+        "evidencia_es": "Encuesta digital y resumen de resultados.",
+        "evidencia_ca": "Enquesta digital i resum de resultats.",
+        "dua_es": "Encuesta con caritas y en varios idiomas.",
+        "dua_ca": "Enquesta amb caretes i en diversos idiomes.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "1139", "ra": "RA1", "criterios": ["d"] },
+    "justificacion_es": "El medio natural y la estación condicionan las propuestas de ocio y de enseñanza de los deportes individuales.",
+    "justificacion_ca": "El medi natural i l'estació condicionen les propostes d'oci i d'ensenyament dels esports individuals.",
+    "actividades": [
+      {
+        "titulo_es": "Bicicleta en invierno por la Serra de Tramuntana",
+        "titulo_ca": "Bicicleta a l'hivern per la serra de Tramuntana",
+        "contexto_es": "Un hotel de ciclistas quiere ofrecer salidas guiadas de noviembre a marzo, cuando hay lluvia, viento y menos horas de luz.",
+        "contexto_ca": "Un hotel de ciclistes vol oferir sortides guiades de novembre a març, quan hi ha pluja, vent i menys hores de llum.",
+        "desarrollo_es": "El alumnado tiene en cuenta los factores ambientales y estacionales al diseñar las salidas: horarios, rutas resguardadas y planes de lluvia (1138-1a). Valora cómo influye el medio, como las pendientes, el firme mojado o el frío en las bajadas, en las propuestas de enseñanza y recreación (1139-1d).",
+        "desarrollo_ca": "L'alumnat té en compte els factors ambientals i estacionals en dissenyar les sortides: horaris, rutes arrecerades i plans de pluja (1138-1a). Valora com influeix el medi, com els pendents, el ferm banyat o el fred a les baixades, en les propostes d'ensenyament i recreació (1139-1d).",
+        "evidencia_es": "Calendario de salidas con criterios estacionales.",
+        "evidencia_ca": "Calendari de sortides amb criteris estacionals.",
+        "dua_es": "Mapas de rutas y datos climáticos.",
+        "dua_ca": "Mapes de rutes i dades climàtiques.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "1141", "ra": "RA4", "criterios": ["c"] },
+    "justificacion_es": "Demostrar con calidad un gesto con implemento es la base para que el turista o el alumno se lo represente y lo imite.",
+    "justificacion_ca": "Demostrar amb qualitat un gest amb implement és la base perquè el turista o l'alumne se'l representi i l'imiti.",
+    "actividades": [
+      {
+        "titulo_es": "Clase exprés de golf para huéspedes",
+        "titulo_ca": "Classe exprés de golf per a hostes",
+        "contexto_es": "El hotel ofrece media hora de iniciación al golf en su campo de prácticas a huéspedes que nunca han cogido un palo.",
+        "contexto_ca": "L'hotel ofereix mitja hora d'iniciació al golf al seu camp de pràctiques a hostes que mai no han agafat un pal.",
+        "desarrollo_es": "El alumnado demuestra cómo coger el palo y realizar el swing, destacando los detalles clave (1138-5d). Ejecuta la demostración con la calidad suficiente para que los huéspedes se representen bien el movimiento, de frente y de perfil (1141-4c).",
+        "desarrollo_ca": "L'alumnat demostra com agafar el pal i fer el swing, destacant els detalls clau (1138-5d). Executa la demostració amb la qualitat suficient perquè els hostes es representin bé el moviment, de cara i de perfil (1141-4c).",
+        "evidencia_es": "Vídeo de la demostración con autoevaluación.",
+        "evidencia_ca": "Vídeo de la demostració amb autoavaluació.",
+        "dua_es": "Palos de distintas longitudes y bolas de espuma.",
+        "dua_ca": "Pals de diferents longituds i boles d'escuma.",
+        "metodologia_es": "microenseñanza.",
+        "metodologia_ca": "microensenyament."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["c", "b"] },
+    "b": { "modulo": "1141", "ra": "RA1", "criterios": ["g"] },
+    "justificacion_es": "Adaptar el material y los espacios con recursos alternativos permite jugar con seguridad a todo tipo de participantes.",
+    "justificacion_ca": "Adaptar el material i els espais amb recursos alternatius permet jugar amb seguretat a tota mena de participants.",
+    "actividades": [
+      {
+        "titulo_es": "Bádminton en la terraza con material alternativo",
+        "titulo_ca": "Bàdminton a la terrassa amb material alternatiu",
+        "contexto_es": "El hotel no tiene pista de bádminton, pero los huéspedes lo piden y la terraza tiene viento y suelo de baldosa.",
+        "contexto_ca": "L'hotel no té pista de bàdminton, però els hostes el demanen i la terrassa té vent i terra de rajola.",
+        "desarrollo_es": "El alumnado experimenta con materiales alternativos y adaptados, como volantes de exterior, globos o raquetas grandes (1141-1g). Revisa y adapta el material para que se juegue con seguridad (1138-2c) y establece las condiciones de seguridad y accesibilidad de la terraza (1138-2b).",
+        "desarrollo_ca": "L'alumnat experimenta amb materials alternatius i adaptats, com volants d'exterior, globus o raquetes grans (1141-1g). Revisa i adapta el material perquè es jugui amb seguretat (1138-2c) i estableix les condicions de seguretat i accessibilitat de la terrassa (1138-2b).",
+        "evidencia_es": "Ficha de material alternativo y plano de la zona.",
+        "evidencia_ca": "Fitxa de material alternatiu i plànol de la zona.",
+        "dua_es": "Material variado para probar libremente.",
+        "dua_ca": "Material variat per provar lliurement.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA5", "criterios": ["h", "e"] },
+    "b": { "modulo": "1141", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Modificar el espacio de juego es una solución constructiva a las contingencias que surgen durante una actividad.",
+    "justificacion_ca": "Modificar l'espai de joc és una solució constructiva a les contingències que sorgeixen durant una activitat.",
+    "actividades": [
+      {
+        "titulo_es": "La pista de voley playa se queda pequeña",
+        "titulo_ca": "La pista de vòlei platja es queda petita",
+        "contexto_es": "Al torneo de voley playa del hotel se apuntan el doble de personas de lo previsto y muchas no habían jugado nunca.",
+        "contexto_ca": "Al torneig de vòlei platja de l'hotel s'apunten el doble de persones de les previstes i moltes no havien jugat mai.",
+        "desarrollo_es": "El alumnado soluciona de forma constructiva la contingencia (1138-5h) modificando los espacios de juego: dos minicampos, red más baja y reglas simplificadas para que todos aprendan y participen (1141-2c). Durante los partidos corrige al momento los errores de ejecución más frecuentes (1138-5e).",
+        "desarrollo_ca": "L'alumnat soluciona de manera constructiva la contingència (1138-5h) modificant els espais de joc: dos minicamps, xarxa més baixa i regles simplificades perquè tothom aprengui i participi (1141-2c). Durant els partits corregeix a l'instant els errors d'execució més freqüents (1138-5e).",
+        "evidencia_es": "Plano de los minicampos y normas adaptadas.",
+        "evidencia_ca": "Plànol dels minicamps i normes adaptades.",
+        "dua_es": "Pelotas blandas y cuerdas en lugar de red.",
+        "dua_ca": "Pilotes toves i cordes en lloc de xarxa.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "1141", "ra": "RA4", "criterios": ["a"] },
+    "justificacion_es": "Abrir y cerrar una actividad con mensajes motivadores favorece que los participantes vuelvan.",
+    "justificacion_ca": "Obrir i tancar una activitat amb missatges motivadors afavoreix que els participants tornin.",
+    "actividades": [
+      {
+        "titulo_es": "Saludo y despedida del torneo de petanca",
+        "titulo_ca": "Salutació i comiat del torneig de petanca",
+        "contexto_es": "Al torneo semanal de petanca del hotel vienen siempre los mismos y los nuevos huéspedes no se acercan.",
+        "contexto_ca": "Al torneig setmanal de petanca de l'hotel hi venen sempre els mateixos i els hostes nous no s'hi acosten.",
+        "desarrollo_es": "El alumnado prepara mensajes de inicio y cierre del torneo que inviten a participar y a repetir (1138-3a). Los adapta a la sesión de enseñanza de petanca, proporcionando al principio y al final una información con enfoque motivador (1141-4a).",
+        "desarrollo_ca": "L'alumnat prepara missatges d'inici i tancament del torneig que convidin a participar i a repetir (1138-3a). Els adapta a la sessió d'ensenyament de petanca, proporcionant al principi i al final una informació amb enfocament motivador (1141-4a).",
+        "evidencia_es": "Guion de inicio y cierre.",
+        "evidencia_ca": "Guió d'inici i tancament.",
+        "dua_es": "Frases modelo en varios idiomas.",
+        "dua_ca": "Frases model en diversos idiomes.",
+        "metodologia_es": "simulación comunicativa.",
+        "metodologia_ca": "simulació comunicativa."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["e"] },
+    "b": { "modulo": "1141", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "Ubicar bien el material y controlar su estado alarga su vida y evita accidentes.",
+    "justificacion_ca": "Ubicar bé el material i controlar-ne l'estat allarga la seva vida i evita accidents.",
+    "actividades": [
+      {
+        "titulo_es": "Almacén de raquetas y pelotas en orden",
+        "titulo_ca": "Magatzem de raquetes i pilotes en ordre",
+        "contexto_es": "En el almacén del club se mezclan raquetas rotas con nuevas y nadie sabe qué hay disponible.",
+        "contexto_ca": "Al magatzem del club es mesclen raquetes rompudes amb noves i ningú no sap què hi ha disponible.",
+        "desarrollo_es": "El alumnado decide la ubicación del material según las actividades y prevé su recogida para conservarlo en buen estado (1138-2e). Diseña una herramienta de control permanente del estado del material y de las pistas, con revisiones y bajas (1141-2d).",
+        "desarrollo_ca": "L'alumnat decideix la ubicació del material segons les activitats i en preveu la recollida per conservar-lo en bon estat (1138-2e). Dissenya una eina de control permanent de l'estat del material i de les pistes, amb revisions i baixes (1141-2d).",
+        "evidencia_es": "Plano del almacén e inventario de control.",
+        "evidencia_ca": "Plànol del magatzem i inventari de control.",
+        "dua_es": "Inventario con fotografías.",
+        "dua_ca": "Inventari amb fotografies.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["d"] },
+    "b": { "modulo": "1141", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Distribuir bien los recursos y organizar a las personas en el espacio es lo que permite la máxima participación.",
+    "justificacion_ca": "Distribuir bé els recursos i organitzar les persones a l'espai és el que permet la màxima participació.",
+    "actividades": [
+      {
+        "titulo_es": "Cuarenta niños y seis raquetas: organizar la sesión",
+        "titulo_ca": "Quaranta infants i sis raquetes: organitzar la sessió",
+        "contexto_es": "El casal de verano tiene cuarenta niños para la sesión de tenis y solo seis raquetas en buen estado.",
+        "contexto_ca": "El casal d'estiu té quaranta infants per a la sessió de tennis i només sis raquetes en bon estat.",
+        "desarrollo_es": "El alumnado analiza y distribuye los recursos disponibles para que participen todos, combinando raquetas con palas y manos (1138-1d). Define la organización de las personas, el material, el tiempo y el espacio con estaciones rotativas (1141-2b).",
+        "desarrollo_ca": "L'alumnat analitza i distribueix els recursos disponibles perquè hi participin tots, combinant raquetes amb pales i mans (1138-1d). Defineix l'organització de les persones, el material, el temps i l'espai amb estacions rotatives (1141-2b).",
+        "evidencia_es": "Plano de estaciones y horario de rotaciones.",
+        "evidencia_ca": "Plànol d'estacions i horari de rotacions.",
+        "dua_es": "Estaciones con distinto nivel.",
+        "dua_ca": "Estacions amb diferent nivell.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["b"] },
+    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["f"] },
+    "justificacion_es": "Las características de cada grupo de edad marcan la dificultad que se puede pedir en un juego.",
+    "justificacion_ca": "Les característiques de cada grup d'edat marquen la dificultat que es pot demanar en un joc.",
+    "actividades": [
+      {
+        "titulo_es": "Un mismo juego para el miniclub de 4 y de 10 años",
+        "titulo_ca": "Un mateix joc per al miniclub de 4 i de 10 anys",
+        "contexto_es": "En el miniclub conviven niños de cuatro a diez años y los juegos aburren a los mayores o frustran a los pequeños.",
+        "contexto_ca": "Al miniclub hi conviuen infants de quatre a deu anys i els jocs avorreixen els grans o frustren els petits.",
+        "desarrollo_es": "El alumnado tiene en cuenta las características, necesidades e intereses de cada franja de edad al diseñar los juegos (1138-1b). Valora cómo adecuar la dificultad de las tareas motrices al momento madurativo de cada niño, con reglas y roles distintos en el mismo juego (1143-1f).",
+        "desarrollo_ca": "L'alumnat té en compte les característiques, les necessitats i els interessos de cada franja d'edat en dissenyar els jocs (1138-1b). Valora com adequar la dificultat de les tasques motrius al moment maduratiu de cada infant, amb regles i rols diferents en el mateix joc (1143-1f).",
+        "evidencia_es": "Fichero de juegos con variantes por edad.",
+        "evidencia_ca": "Fitxer de jocs amb variants per edat.",
+        "dua_es": "Fichas con dibujos y variantes por colores.",
+        "dua_ca": "Fitxes amb dibuixos i variants per colors.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA5", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["f"] },
+    "justificacion_es": "Adaptar una actividad y un programa a la diversidad de los participantes son dos caras del mismo trabajo inclusivo.",
+    "justificacion_ca": "Adaptar una activitat i un programa a la diversitat dels participants són dues cares de la mateixa feina inclusiva.",
+    "actividades": [
+      {
+        "titulo_es": "Taller de malabares para un grupo con discapacidad intelectual",
+        "titulo_ca": "Taller de malabars per a un grup amb discapacitat intel·lectual",
+        "contexto_es": "Un centro ocupacional de Palma reserva el taller de malabares del programa de verano para doce usuarios.",
+        "contexto_ca": "Un centre ocupacional de Palma reserva el taller de malabars del programa d'estiu per a dotze usuaris.",
+        "desarrollo_es": "El alumnado adapta el programa de talleres a la diversidad de los usuarios del centro ocupacional (1143-2f). En la sesión ajusta la actividad a las características de cada participante con pañuelos, pelotas blandas y retos individuales (1138-5c).",
+        "desarrollo_ca": "L'alumnat adapta el programa de tallers a la diversitat dels usuaris del centre ocupacional (1143-2f). A la sessió ajusta l'activitat a les característiques de cada participant amb mocadors, pilotes toves i reptes individuals (1138-5c).",
+        "evidencia_es": "Programa adaptado y ficha de sesión.",
+        "evidencia_ca": "Programa adaptat i fitxa de sessió.",
+        "dua_es": "Material de distintos tamaños y pesos.",
+        "dua_ca": "Material de diferents mides i pesos.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA6", "criterios": ["d", "e"] },
+    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["e"] },
+    "justificacion_es": "El informe de evaluación debe acabar con propuestas de cambio que resuelvan los desajustes detectados.",
+    "justificacion_ca": "L'informe d'avaluació ha d'acabar amb propostes de canvi que resolguin els desajustaments detectats.",
+    "actividades": [
+      {
+        "titulo_es": "Informe de la temporada de animación del hotel",
+        "titulo_ca": "Informe de la temporada d'animació de l'hotel",
+        "contexto_es": "La dirección del hotel pide al jefe de animación un informe de la temporada antes de renovar el contrato con la empresa.",
+        "contexto_ca": "La direcció de l'hotel demana al cap d'animació un informe de la temporada abans de renovar el contracte amb l'empresa.",
+        "desarrollo_es": "El alumnado elabora el informe con la información recogida durante toda la temporada (1138-6d) y formula propuestas de mejora razonadas (1138-6e). Las redacta como fórmulas concretas de cambio que resuelvan los desajustes detectados, con responsable y plazo (1143-5e).",
+        "desarrollo_ca": "L'alumnat elabora l'informe amb la informació recollida durant tota la temporada (1138-6d) i formula propostes de millora raonades (1138-6e). Les redacta com a fórmules concretes de canvi que resolguin els desajustaments detectats, amb responsable i termini (1143-5e).",
+        "evidencia_es": "Informe de la temporada con propuestas de cambio.",
+        "evidencia_ca": "Informe de la temporada amb propostes de canvi.",
+        "dua_es": "Estructura de informe con apartados.",
+        "dua_ca": "Estructura d'informe amb apartats.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA3", "criterios": ["e", "f"] },
+    "b": { "modulo": "1143", "ra": "RA4", "criterios": ["a"] },
+    "justificacion_es": "Ordenar las tareas por dificultad facilita adaptar la intensidad y corregir los errores sobre la marcha.",
+    "justificacion_ca": "Ordenar les tasques per dificultat facilita adaptar la intensitat i corregir els errors sobre la marxa.",
+    "actividades": [
+      {
+        "titulo_es": "Escalera de retos en el circuito de aventura",
+        "titulo_ca": "Escala de reptes al circuit d'aventura",
+        "contexto_es": "En el circuito de aventura del campamento, unos niños se aburren en los primeros obstáculos y otros se atascan.",
+        "contexto_ca": "Al circuit d'aventura del campament, uns infants s'avorreixen als primers obstacles i altres s'encallen.",
+        "desarrollo_es": "El alumnado ordena los obstáculos según su perfil de dificultad (1143-4a). Durante la actividad adapta la intensidad y la dificultad a cada participante (1138-3e) y corrige en el momento los errores de ejecución, actuando sobre sus causas (1138-3f).",
+        "desarrollo_ca": "L'alumnat ordena els obstacles segons el seu perfil de dificultat (1143-4a). Durant l'activitat adapta la intensitat i la dificultat a cada participant (1138-3e) i corregeix en el moment els errors d'execució, actuant sobre les seves causes (1138-3f).",
+        "evidencia_es": "Circuito ordenado con niveles y registro de correcciones.",
+        "evidencia_ca": "Circuit ordenat amb nivells i registre de correccions.",
+        "dua_es": "Obstáculos con varias versiones.",
+        "dua_ca": "Obstacles amb diverses versions.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["a"] },
+    "b": { "modulo": "1143", "ra": "RA3", "criterios": ["a"] },
+    "justificacion_es": "Los recursos de apoyo y consulta ayudan a definir los materiales específicos o adaptados de un programa.",
+    "justificacion_ca": "Els recursos de suport i consulta ajuden a definir els materials específics o adaptats d'un programa.",
+    "actividades": [
+      {
+        "titulo_es": "Biblioteca de recursos para el programa de juegos tradicionales",
+        "titulo_ca": "Biblioteca de recursos per al programa de jocs tradicionals",
+        "contexto_es": "Un ayuntamiento quiere recuperar los juegos tradicionales mallorquines en sus escuelas deportivas.",
+        "contexto_ca": "Un ajuntament vol recuperar els jocs tradicionals mallorquins a les seves escoles esportives.",
+        "desarrollo_es": "El alumnado selecciona recursos de apoyo y consulta: libros, archivos sonoros, vídeos y testimonios de personas mayores (1138-2a). A partir de ellos define los materiales específicos o adaptados que necesita el programa, como baldufes, cordes o bitlles (1143-3a).",
+        "desarrollo_ca": "L'alumnat selecciona recursos de suport i consulta: llibres, arxius sonors, vídeos i testimonis de persones grans (1138-2a). A partir d'aquests recursos defineix els materials específics o adaptats que necessita el programa, com baldufes, cordes o bitlles (1143-3a).",
+        "evidencia_es": "Catálogo de recursos y de materiales.",
+        "evidencia_ca": "Catàleg de recursos i de materials.",
+        "dua_es": "Recursos en varios formatos.",
+        "dua_ca": "Recursos en diversos formats.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["b"] },
+    "justificacion_es": "Promocionar un programa es más fácil cuando está bien justificado según las necesidades del contexto.",
+    "justificacion_ca": "Promocionar un programa és més fàcil quan està ben justificat segons les necessitats del context.",
+    "actividades": [
+      {
+        "titulo_es": "Campaña para la escuela de vela adaptada",
+        "titulo_ca": "Campanya per a l'escola de vela adaptada",
+        "contexto_es": "Un club náutico abre una escuela de vela adaptada y en la primera convocatoria solo se inscriben dos personas.",
+        "contexto_ca": "Un club nàutic obre una escola de vela adaptada i a la primera convocatòria només s'hi inscriuen dues persones.",
+        "desarrollo_es": "El alumnado justifica el programa según las características y necesidades del contexto, con datos de personas con discapacidad en el municipio (1143-2b). Diseña técnicas y estrategias para promocionarlo, como vídeos con usuarios, visitas a asociaciones y jornadas de puertas abiertas (1138-1e).",
+        "desarrollo_ca": "L'alumnat justifica el programa segons les característiques i les necessitats del context, amb dades de persones amb discapacitat al municipi (1143-2b). Dissenya tècniques i estratègies per promocionar-lo, com vídeos amb usuaris, visites a associacions i jornades de portes obertes (1138-1e).",
+        "evidencia_es": "Justificación del programa y plan de difusión.",
+        "evidencia_ca": "Justificació del programa i pla de difusió.",
+        "dua_es": "Plantillas de cartel y vídeo.",
+        "dua_ca": "Plantilles de cartell i vídeo.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA3", "criterios": ["c"] },
+    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["b"] },
+    "justificacion_es": "Una buena demostración resalta los estímulos que el aprendiz debe percibir para ejecutar la tarea.",
+    "justificacion_ca": "Una bona demostració remarca els estímuls que l'aprenent ha de percebre per executar la tasca.",
+    "actividades": [
+      {
+        "titulo_es": "Demostrar el juego de la gallinita ciega con todos los sentidos",
+        "titulo_ca": "Demostrar el joc de la gallineta cega amb tots els sentits",
+        "contexto_es": "En un juego de sensibilización con ojos vendados, los participantes no saben qué sonidos deben seguir.",
+        "contexto_ca": "En un joc de sensibilització amb els ulls embenats, els participants no saben quins sons han de seguir.",
+        "desarrollo_es": "El alumnado diferencia los elementos de la tarea relacionados con la percepción: sonidos, contacto y orientación (1143-1b). Demuestra el juego destacando esos estímulos, anticipa errores y usa varios canales para asegurarse de que todos lo entienden (1138-3c).",
+        "desarrollo_ca": "L'alumnat diferencia els elements de la tasca relacionats amb la percepció: sons, contacte i orientació (1143-1b). Demostra el joc destacant aquests estímuls, anticipa errors i fa servir diversos canals per assegurar-se que tothom ho entén (1138-3c).",
+        "evidencia_es": "Ficha del juego con análisis perceptivo.",
+        "evidencia_ca": "Fitxa del joc amb anàlisi perceptiva.",
+        "dua_es": "Participación con o sin venda.",
+        "dua_ca": "Participació amb bena o sense.",
+        "metodologia_es": "aprendizaje experiencial.",
+        "metodologia_ca": "aprenentatge experiencial."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["e"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["d"] },
+    "justificacion_es": "La promoción digital de actividades ha creado nuevos mercados para las empresas de ocio.",
+    "justificacion_ca": "La promoció digital d'activitats ha creat nous mercats per a les empreses d'oci.",
+    "actividades": [
+      {
+        "titulo_es": "Vender una ruta de snorkel en plataformas de experiencias",
+        "titulo_ca": "Vendre una ruta d'snorkel en plataformes d'experiències",
+        "contexto_es": "Una pequeña empresa de snorkel de Menorca solo vende en su puesto del puerto y quiere llegar a turistas antes del viaje.",
+        "contexto_ca": "Una petita empresa d'snorkel de Menorca només ven a la seva parada del port i vol arribar a turistes abans del viatge.",
+        "desarrollo_es": "El alumnado diseña técnicas y estrategias de promoción de la ruta en redes y plataformas de experiencias turísticas (1138-1e). Identifica qué nuevos mercados han generado esas tecnologías digitales, como las reservas anticipadas o el público internacional (1665-2d).",
+        "desarrollo_ca": "L'alumnat dissenya tècniques i estratègies de promoció de la ruta a xarxes i plataformes d'experiències turístiques (1138-1e). Identifica quins mercats nous han generat aquestes tecnologies digitals, com les reserves anticipades o el públic internacional (1665-2d).",
+        "evidencia_es": "Ficha de producto y plan de promoción digital.",
+        "evidencia_ca": "Fitxa de producte i pla de promoció digital.",
+        "dua_es": "Ejemplos reales de fichas en plataformas.",
+        "dua_ca": "Exemples reals de fitxes en plataformes.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA6", "criterios": ["c"] },
+    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["e", "h"] },
+    "justificacion_es": "El seguimiento digital de las actividades genera datos que siguen las etapas de la ciencia de datos.",
+    "justificacion_ca": "El seguiment digital de les activitats genera dades que segueixen les etapes de la ciència de dades.",
+    "actividades": [
+      {
+        "titulo_es": "Qué actividades prefieren los huéspedes según su país",
+        "titulo_ca": "Quines activitats prefereixen els hostes segons el seu país",
+        "contexto_es": "La cadena hotelera tiene datos de participación de tres hoteles durante dos temporadas y quiere planificar la siguiente.",
+        "contexto_ca": "La cadena hotelera té dades de participació de tres hotels durant dues temporades i vol planificar la següent.",
+        "desarrollo_es": "El alumnado usa una hoja de cálculo para el seguimiento y la evaluación de las actividades (1138-6c). Recorre las etapas de la ciencia de datos con ese conjunto: preparar, explorar, analizar y comunicar (1665-5e), e identifica qué objetivo persigue la cadena con ese análisis (1665-5h).",
+        "desarrollo_ca": "L'alumnat fa servir un full de càlcul per al seguiment i l'avaluació de les activitats (1138-6c). Recorre les etapes de la ciència de dades amb aquest conjunt: preparar, explorar, analitzar i comunicar (1665-5e), i identifica quin objectiu persegueix la cadena amb aquesta anàlisi (1665-5h).",
+        "evidencia_es": "Informe con gráficos por país y tipo de actividad.",
+        "evidencia_ca": "Informe amb gràfics per país i tipus d'activitat.",
+        "dua_es": "Datos ya limpios y tablas dinámicas guiadas.",
+        "dua_ca": "Dades ja netes i taules dinàmiques guiades.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA4", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA1", "criterios": ["e"] },
+    "justificacion_es": "El equipo técnico de una velada incorpora tecnologías digitales que el animador debe saber usar.",
+    "justificacion_ca": "L'equip tècnic d'una vetllada incorpora tecnologies digitals que l'animador ha de saber fer servir.",
+    "actividades": [
+      {
+        "titulo_es": "Mesa de sonido digital para el espectáculo",
+        "titulo_ca": "Taula de so digital per a l'espectacle",
+        "contexto_es": "El hotel cambia la mesa de sonido por una digital controlada desde una tableta y los animadores no saben usarla.",
+        "contexto_ca": "L'hotel canvia la taula de so per una de digital controlada des d'una tauleta i els animadors no saben fer-la servir.",
+        "desarrollo_es": "El alumnado usa el sonido, las luces y los micrófonos de manera eficaz durante un ensayo, cuidando su duración y funcionamiento (1138-4d). Identifica qué tecnologías digitales del espectáculo pertenecen a la parte técnica y cuáles a la gestión, como la venta de entradas (1665-1e).",
+        "desarrollo_ca": "L'alumnat fa servir el so, els llums i els micròfons de manera eficaç durant un assaig, tenint cura de la seva durada i funcionament (1138-4d). Identifica quines tecnologies digitals de l'espectacle pertanyen a la part tècnica i quines a la gestió, com la venda d'entrades (1665-1e).",
+        "evidencia_es": "Guía rápida del equipo y clasificación de tecnologías.",
+        "evidencia_ca": "Guia ràpida de l'equip i classificació de tecnologies.",
+        "dua_es": "Tutorial en vídeo y práctica por parejas.",
+        "dua_ca": "Tutorial en vídeo i pràctica per parelles.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["f"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["b"] },
+    "justificacion_es": "Los protocolos de coordinación funcionan mejor si todo el equipo accede a la misma información en tiempo real.",
+    "justificacion_ca": "Els protocols de coordinació funcionen millor si tot l'equip accedeix a la mateixa informació en temps real.",
+    "actividades": [
+      {
+        "titulo_es": "Coordinar un festival deportivo con una aplicación compartida",
+        "titulo_ca": "Coordinar un festival esportiu amb una aplicació compartida",
+        "contexto_es": "En el festival deportivo del municipio trabajan veinte monitores en ocho espacios y la coordinación por teléfono falla.",
+        "contexto_ca": "Al festival esportiu del municipi hi treballen vint monitors en vuit espais i la coordinació per telèfon falla.",
+        "desarrollo_es": "El alumnado diseña el protocolo de coordinación de todos los técnicos para resolver contingencias (1138-2f). Lo implementa con una aplicación compartida en la nube y explica qué funciones de la nube aprovecha, como el intercambio de información y la ejecución de la aplicación desde cualquier móvil (1665-3b).",
+        "desarrollo_ca": "L'alumnat dissenya el protocol de coordinació de tots els tècnics per resoldre contingències (1138-2f). L'implementa amb una aplicació compartida al núvol i explica quines funcions del núvol aprofita, com l'intercanvi d'informació i l'execució de l'aplicació des de qualsevol mòbil (1665-3b).",
+        "evidencia_es": "Protocolo y espacio compartido configurado.",
+        "evidencia_ca": "Protocol i espai compartit configurat.",
+        "dua_es": "Plantilla de protocolo y guía de la aplicación.",
+        "dua_ca": "Plantilla de protocol i guia de l'aplicació.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA6", "criterios": ["a"] },
+    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["c"] },
+    "justificacion_es": "La inteligencia artificial empieza a usarse para evaluar la adecuación de las actividades a los participantes.",
+    "justificacion_ca": "La intel·ligència artificial comença a fer-se servir per avaluar l'adequació de les activitats als participants.",
+    "actividades": [
+      {
+        "titulo_es": "¿Puede una IA evaluar nuestras actividades?",
+        "titulo_ca": "Pot una IA avaluar les nostres activitats?",
+        "contexto_es": "Una empresa ofrece al hotel un programa que analiza las reseñas en línea y puntúa cada actividad de animación.",
+        "contexto_ca": "Una empresa ofereix a l'hotel un programa que analitza les ressenyes en línia i puntua cada activitat d'animació.",
+        "desarrollo_es": "El alumnado aplica sus propias técnicas e instrumentos para evaluar la adecuación de tres actividades a los objetivos y a los huéspedes (1138-6a). Compara su evaluación con la del programa y debate la importancia presente y futura de la IA en este tipo de tareas (1665-4c).",
+        "desarrollo_ca": "L'alumnat aplica les seves pròpies tècniques i instruments per avaluar l'adequació de tres activitats als objectius i als hostes (1138-6a). Compara la seva avaluació amb la del programa i debat la importància present i futura de la IA en aquesta mena de tasques (1665-4c).",
+        "evidencia_es": "Evaluación comparada y conclusiones del debate.",
+        "evidencia_ca": "Avaluació comparada i conclusions del debat.",
+        "dua_es": "Reseñas seleccionadas y tarjetas de opinión.",
+        "dua_ca": "Ressenyes seleccionades i targetes d'opinió.",
+        "metodologia_es": "debate crítico.",
+        "metodologia_ca": "debat crític."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["e", "f"] },
+    "justificacion_es": "Las proyecciones y la realidad aumentada aplican tecnologías habilitadoras a la ambientación de las actividades.",
+    "justificacion_ca": "Les projeccions i la realitat augmentada apliquen tecnologies habilitadores a l'ambientació de les activitats.",
+    "actividades": [
+      {
+        "titulo_es": "Ambientación inmersiva para la noche temática",
+        "titulo_ca": "Ambientació immersiva per a la nit temàtica",
+        "contexto_es": "El hotel quiere renovar su noche temática con proyecciones en las paredes y un juego de realidad aumentada para los niños.",
+        "contexto_ca": "L'hotel vol renovar la seva nit temàtica amb projeccions a les parets i un joc de realitat augmentada per als infants.",
+        "desarrollo_es": "El alumnado señala los elementos de ambientación y decoración que crean el clima de la noche temática (1138-2d). Analiza cómo intervienen las tecnologías habilitadoras en la parte técnica y en la parte de negocio del hotel (1665-2e) y qué mejoras aportan frente a la decoración tradicional (1665-2f).",
+        "desarrollo_ca": "L'alumnat assenyala els elements d'ambientació i decoració que creen el clima de la nit temàtica (1138-2d). Analitza com intervenen les tecnologies habilitadores en la part tècnica i en la part de negoci de l'hotel (1665-2e) i quines millores aporten davant la decoració tradicional (1665-2f).",
+        "evidencia_es": "Propuesta de ambientación con análisis tecnológico.",
+        "evidencia_ca": "Proposta d'ambientació amb anàlisi tecnològica.",
+        "dua_es": "Ejemplos en vídeo de ambientaciones.",
+        "dua_ca": "Exemples en vídeo d'ambientacions.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA3", "criterios": ["b"] },
+    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["a"] },
+    "justificacion_es": "La información sobre el medio y el material puede llegar al participante a través de una aplicación en la nube.",
+    "justificacion_ca": "La informació sobre el medi i el material pot arribar al participant a través d'una aplicació al núvol.",
+    "actividades": [
+      {
+        "titulo_es": "Instrucciones de seguridad en la aplicación del hotel",
+        "titulo_ca": "Instruccions de seguretat a l'aplicació de l'hotel",
+        "contexto_es": "Los huéspedes que reservan paddle surf reciben las instrucciones de seguridad en la aplicación del hotel antes de llegar a la playa.",
+        "contexto_ca": "Els hostes que reserven paddle surf reben les instruccions de seguretat a l'aplicació de l'hotel abans d'arribar a la platja.",
+        "desarrollo_es": "El alumnado redacta la información sobre el medio, la instalación y el material para que los participantes confíen desde el principio (1138-3b). Identifica en qué niveles de la nube funciona la aplicación del hotel: infraestructura, plataforma y software (1665-3a).",
+        "desarrollo_ca": "L'alumnat redacta la informació sobre el medi, la instal·lació i el material perquè els participants confiïn des del principi (1138-3b). Identifica en quins nivells del núvol funciona l'aplicació de l'hotel: infraestructura, plataforma i programari (1665-3a).",
+        "evidencia_es": "Texto de instrucciones y esquema de niveles.",
+        "evidencia_ca": "Text d'instruccions i esquema de nivells.",
+        "dua_es": "Versión con imágenes y audio.",
+        "dua_ca": "Versió amb imatges i àudio.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["d"] },
+    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["i", "b"] },
+    "justificacion_es": "Optimizar los recursos de las actividades exige integrar las reservas con la gestión del hotel.",
+    "justificacion_ca": "Optimitzar els recursos de les activitats exigeix integrar les reserves amb la gestió de l'hotel.",
+    "actividades": [
+      {
+        "titulo_es": "Reservas de actividades conectadas con la recepción",
+        "titulo_ca": "Reserves d'activitats connectades amb la recepció",
+        "contexto_es": "En el hotel, las actividades se apuntan en una libreta y la recepción no sabe cuántas plazas quedan.",
+        "contexto_ca": "A l'hotel, les activitats s'apunten en una llibreta i la recepció no sap quantes places queden.",
+        "desarrollo_es": "El alumnado analiza y distribuye los recursos de las actividades para lograr la máxima participación (1138-1d). Propone alinear el área de animación con la de recepción y comunicaciones (1665-6b) e integrar los datos de reservas con la aplicación y la plataforma del hotel (1665-6i).",
+        "desarrollo_ca": "L'alumnat analitza i distribueix els recursos de les activitats per aconseguir la màxima participació (1138-1d). Proposa alinear l'àrea d'animació amb la de recepció i comunicacions (1665-6b) i integrar les dades de reserves amb l'aplicació i la plataforma de l'hotel (1665-6i).",
+        "evidencia_es": "Esquema de integración de reservas.",
+        "evidencia_ca": "Esquema d'integració de reserves.",
+        "dua_es": "Diagrama guiado.",
+        "dua_ca": "Diagrama guiat.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA1", "criterios": ["g"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "El protocolo de seguridad de una actividad parte de la evaluación de riesgos del puesto de trabajo del animador.",
+    "justificacion_ca": "El protocol de seguretat d'una activitat parteix de l'avaluació de riscs del lloc de feina de l'animador.",
+    "actividades": [
+      {
+        "titulo_es": "Riesgos del animador en la piscina y el escenario",
+        "titulo_ca": "Riscs de l'animador a la piscina i l'escenari",
+        "contexto_es": "Un animador se resbala en el borde de la piscina y otro se quema con un foco del escenario en la misma semana.",
+        "contexto_ca": "Un animador rellisca a la vora de la piscina i un altre es crema amb un focus de l'escenari la mateixa setmana.",
+        "desarrollo_es": "El alumnado determina la evaluación de riesgos del puesto de animador y las técnicas de prevención y protección para cada riesgo (1709-2c). Con ello elabora el protocolo de seguridad y prevención de riesgos de su área de responsabilidad (1138-1g).",
+        "desarrollo_ca": "L'alumnat determina l'avaluació de riscs del lloc d'animador i les tècniques de prevenció i protecció per a cada risc (1709-2c). Amb això elabora el protocol de seguretat i prevenció de riscs de la seva àrea de responsabilitat (1138-1g).",
+        "evidencia_es": "Matriz de riesgos y protocolo.",
+        "evidencia_ca": "Matriu de riscs i protocol.",
+        "dua_es": "Fotografías de los espacios.",
+        "dua_ca": "Fotografies dels espais.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Presentar una velada pone a prueba aptitudes que los hoteles buscan en sus animadores.",
+    "justificacion_ca": "Presentar una vetllada posa a prova aptituds que els hotels cerquen en els seus animadors.",
+    "actividades": [
+      {
+        "titulo_es": "Casting de presentadores para la temporada",
+        "titulo_ca": "Càsting de presentadors per a la temporada",
+        "contexto_es": "Una empresa de animación hace un casting en el que cada candidato debe presentar dos minutos de una velada.",
+        "contexto_ca": "Una empresa d'animació fa un càsting en què cada candidat ha de presentar dos minuts d'una vetllada.",
+        "desarrollo_es": "El alumnado realiza la presentación y la despedida de una velada adaptándose al público asistente (1138-4a). Después reflexiona sobre las actitudes y aptitudes que el sector pide, como desparpajo, idiomas o resistencia, y detecta las que debe desarrollar (1709-1c).",
+        "desarrollo_ca": "L'alumnat fa la presentació i el comiat d'una vetllada adaptant-se al públic assistent (1138-4a). Després reflexiona sobre les actituds i aptituds que demana el sector, com desimboltura, idiomes o resistència, i detecta les que ha de desenvolupar (1709-1c).",
+        "evidencia_es": "Vídeo del casting y autoevaluación.",
+        "evidencia_ca": "Vídeo del càsting i autoavaluació.",
+        "dua_es": "Guion de apoyo y opción en pareja.",
+        "dua_ca": "Guió de suport i opció en parella.",
+        "metodologia_es": "simulación de selección.",
+        "metodologia_ca": "simulació de selecció."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "justificacion_es": "La animación vinculada a la cultura local es un nicho de empleo creciente en un destino turístico.",
+    "justificacion_ca": "L'animació vinculada a la cultura local és un nínxol d'ocupació creixent en una destinació turística.",
+    "actividades": [
+      {
+        "titulo_es": "Empleo en turismo cultural y de experiencias",
+        "titulo_ca": "Ocupació en turisme cultural i d'experiències",
+        "contexto_es": "Las administraciones de las islas quieren alargar la temporada con turismo cultural y gastronómico.",
+        "contexto_ca": "Les administracions de les illes volen allargar la temporada amb turisme cultural i gastronòmic.",
+        "desarrollo_es": "El alumnado diseña una actividad que vincula una fiesta o tradición local con la experiencia del turista (1138-5a). Analiza las oportunidades de empleo que abre este tipo de turismo fuera de temporada y los requisitos que piden las empresas (1709-1a).",
+        "desarrollo_ca": "L'alumnat dissenya una activitat que vincula una festa o tradició local amb l'experiència del turista (1138-5a). Analitza les oportunitats d'ocupació que obre aquest tipus de turisme fora de temporada i els requisits que demanen les empreses (1709-1a).",
+        "evidencia_es": "Ficha de actividad y análisis de empleo.",
+        "evidencia_ca": "Fitxa d'activitat i anàlisi d'ocupació.",
+        "dua_es": "Calendario de fiestas y ofertas reales.",
+        "dua_ca": "Calendari de festes i ofertes reals.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA4", "criterios": ["b"] },
+    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["b", "d"] },
+    "justificacion_es": "El horario de las veladas condiciona el tipo de contrato y la nómina del animador.",
+    "justificacion_ca": "L'horari de les vetllades condiciona el tipus de contracte i la nòmina de l'animador.",
+    "actividades": [
+      {
+        "titulo_es": "Contrato fijo discontinuo y nocturnidad del animador",
+        "titulo_ca": "Contracte fix discontinu i nocturnitat de l'animador",
+        "contexto_es": "Un animador firma un contrato fijo discontinuo y no entiende por qué su nómina varía cada mes.",
+        "contexto_ca": "Un animador signa un contracte fix discontinu i no entén per què la seva nòmina varia cada mes.",
+        "desarrollo_es": "El alumnado elabora el guion de una semana de veladas con sus tiempos y pausas (1138-4b). Compara las modalidades de contratación habituales en la animación turística (1709-3b) e identifica los componentes de una nómina con pluses de nocturnidad y festivos (1709-3d).",
+        "desarrollo_ca": "L'alumnat elabora el guió d'una setmana de vetllades amb els temps i les pauses (1138-4b). Compara les modalitats de contractació habituals en l'animació turística (1709-3b) i identifica els components d'una nòmina amb plusos de nocturnitat i festius (1709-3d).",
+        "evidencia_es": "Guion semanal y nómina analizada.",
+        "evidencia_ca": "Guió setmanal i nòmina analitzada.",
+        "dua_es": "Nómina con colores por apartado.",
+        "dua_ca": "Nòmina amb colors per apartat.",
+        "metodologia_es": "análisis documental.",
+        "metodologia_ca": "anàlisi documental."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA2", "criterios": ["h"] },
+    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["e", "f"] },
+    "justificacion_es": "Supervisar los medios de seguridad es un deber del técnico, y su gestión implica a los representantes de prevención.",
+    "justificacion_ca": "Supervisar els mitjans de seguretat és un deure del tècnic, i la seva gestió implica els representants de prevenció.",
+    "actividades": [
+      {
+        "titulo_es": "El extintor caducado del almacén de material",
+        "titulo_ca": "L'extintor caducat del magatzem de material",
+        "contexto_es": "Al revisar los medios de seguridad antes de una actividad, un animador descubre que el extintor del almacén está caducado.",
+        "contexto_ca": "En revisar els mitjans de seguretat abans d'una activitat, un animador descobreix que l'extintor del magatzem està caducat.",
+        "desarrollo_es": "El alumnado supervisa sobre el terreno los medios de seguridad de su área y comprueba si están en uso (1138-2h). Determina los derechos y deberes del trabajador ante esa situación (1709-2e) y a quién debe comunicarla según la organización preventiva de la empresa (1709-2f).",
+        "desarrollo_ca": "L'alumnat supervisa sobre el terreny els mitjans de seguretat de la seva àrea i comprova si estan en ús (1138-2h). Determina els drets i deures del treballador davant aquesta situació (1709-2e) i a qui l'ha de comunicar segons l'organització preventiva de l'empresa (1709-2f).",
+        "evidencia_es": "Lista de revisión y comunicación escrita.",
+        "evidencia_ca": "Llista de revisió i comunicació escrita.",
+        "dua_es": "Modelo de comunicación.",
+        "dua_ca": "Model de comunicació.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "1138", "ra": "RA6", "criterios": ["e"] },
+    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["g"] },
+    "justificacion_es": "Formular propuestas de mejora de una actividad es un hábito que también sirve para el propio plan de desarrollo.",
+    "justificacion_ca": "Formular propostes de millora d'una activitat és un hàbit que també serveix per al propi pla de desenvolupament.",
+    "actividades": [
+      {
+        "titulo_es": "Mejorar la actividad y mejorar como animador",
+        "titulo_ca": "Millorar l'activitat i millorar com a animador",
+        "contexto_es": "Tras su primera semana de prácticas en un hotel, cada alumno recibe la valoración de su tutor y de los huéspedes.",
+        "contexto_ca": "Després de la primera setmana de pràctiques en un hotel, cada alumne rep la valoració del seu tutor i dels hostes.",
+        "desarrollo_es": "El alumnado formula propuestas de mejora de la actividad que ha dirigido a partir de la evaluación (1138-6e). Traslada las que dependen de él a su plan de desarrollo individual como objetivos para mejorar su empleabilidad (1709-5g).",
+        "desarrollo_ca": "L'alumnat formula propostes de millora de l'activitat que ha dirigit a partir de l'avaluació (1138-6e). Trasllada les que depenen d'ell al seu pla de desenvolupament individual com a objectius per millorar la seva ocupabilitat (1709-5g).",
+        "evidencia_es": "Propuestas de mejora y plan de desarrollo actualizado.",
+        "evidencia_ca": "Propostes de millora i pla de desenvolupament actualitzat.",
+        "dua_es": "Plantilla de plan.",
+        "dua_ca": "Plantilla de pla.",
+        "metodologia_es": "aprendizaje autorregulado.",
+        "metodologia_ca": "aprenentatge autoregulat."
+      }
+    ]
+  }
+]

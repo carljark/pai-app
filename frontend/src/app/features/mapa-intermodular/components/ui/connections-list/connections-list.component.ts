@@ -3,13 +3,13 @@ import { LayoutService } from '../../../../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
 import { IntermodularConnection } from '@mapa-intermodular/models/mapa-intermodular.model';
 import { CommonModule } from '@angular/common';
-import { ActivitiesGridComponent } from '../activities-grid/activities-grid.component';
+import { ConnectionCardComponent } from '../connection-card/connection-card.component';
 import { MapaTab } from '../../../utils/mapa-labels';
 
 @Component({
   selector: 'app-connections-list',
   standalone: true,
-  imports: [CommonModule, ActivitiesGridComponent],
+  imports: [CommonModule, ConnectionCardComponent],
   templateUrl: './connections-list.component.html',
   styleUrl: './connections-list.component.scss',
 })
@@ -41,18 +41,5 @@ export class ConnectionsListComponent {
       critText.match(/^(?:(?:\d+-)?(\d*[a-z])|[a-z])[).\s]/i) ||
       critText.match(/(?:^|\b|-)(\d*[a-z])[).\s]/i);
     return m ? m[1].toLowerCase() : 'CE';
-  }
-
-  getRelationLabel(type: string): string {
-    const labels: Record<string, { es: string; ca: string }> = {
-      ciencias: { es: 'Ciencias Aplicadas', ca: 'Ciències Aplicades' },
-      comunicacion: { es: 'Comunicación', ca: 'Comunicació' },
-      empleabilidad: { es: 'Empleabilidad / FOL', ca: 'Ocupabilitat / FOL' },
-      cliente: { es: 'Atención al Cliente', ca: 'Atenció al Client' },
-      sostenibilidad: { es: 'Sostenibilidad', ca: 'Sostenibilitat' },
-      digital: { es: 'Digital / Redes', ca: 'Digital / Xarxes' },
-      tecnica: { es: 'Técnica Práctica', ca: 'Tècnica Pràctica' },
-    };
-    return this.isCa() ? labels[type]?.ca || type : labels[type]?.es || type;
   }
 }

@@ -1,0 +1,29 @@
+@use '../../../../../../styles/variables' as variables;
+
+.mindmap-controls {
+  display: flex;
+  gap: variables.$spacing-1;
+
+  &__button {
+    min-width: 34px;
+    height: 34px;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-md;
+    background: variables.$color-surface;
+    color: variables.$color-text-main;
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-semibold;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background: variables.$color-primary-light;
+      border-color: variables.$color-primary;
+    }
+
+    &--wide {
+      padding: 0 variables.$spacing-3;
+      font-size: variables.$font-size-sm;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@use '../../../../../../styles/variables' as variables;
+
+:host {
+  display: block;
+}
+
+.mindmap-view {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: variables.$spacing-3;
+  height: calc(100vh - 220px);
+  min-height: 520px;
+
+  &--with-drawer {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  }
+
+  &__stage {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-2;
+    min-height: 0;
+  }
+
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: variables.$spacing-2;
+  }
+
+  &__hint {
+    margin: 0;
+    font-size: variables.$font-size-sm;
+    color: variables.$color-text-muted;
+  }
+
+  &__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-1;
+  }
+
+  &__legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-full;
+    background: variables.$color-surface;
+    color: variables.$color-text-main;
+    font-size: variables.$font-size-xs;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      border-color: variables.$color-primary;
+    }
+
+    &--active {
+      background: variables.$color-primary-light;
+      border-color: variables.$color-primary;
+      font-weight: variables.$font-weight-semibold;
+    }
+  }
+
+  &__legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: variables.$border-radius-full;
+  }
+
+  &__canvas {
+    flex: 1;
+    min-height: 0;
+  }
+
+  &__empty {
+    padding: variables.$spacing-8;
+    text-align: center;
+    color: variables.$color-text-muted;
+  }
+
+  &__drawer {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .mindmap-view--with-drawer {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(360px, 1fr) auto;
+    height: auto;
+  }
+}

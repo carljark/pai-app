@@ -1,0 +1,58 @@
+<div class="mindmap-view" [class.mindmap-view--with-drawer]="!!state.selection()">
+  <div class="mindmap-view__stage">
+    <div class="mindmap-view__toolbar">
+      <p class="mindmap-view__hint">{{ hint() }}</p>
+      @if (legend().length > 0) {
+        <div
+          class="mindmap-view__legend"
+          role="group"
+          [attr.aria-label]="
+            isCa() ? 'Filtra per tipus de competència' : 'Filtra por tipo de competencia'
+          "
+        >
+          @for (item of legend(); track item.type) {
+            <button
+              type="button"
+              class="mindmap-view__legend-item"
+              [class.mindmap-view__legend-item--active]="item.active"
+              [attr.aria-pressed]="item.active"
+              (click)="state.toggleRelationFilter(item.type)"
+            >
+              <span class="mindmap-view__legend-dot" [style.background]="item.color"></span>
+              {{ item.label }}
+            </button>
+          }
+        </div>
+      }
+    </div>
+
+    @if (facade.modules().length > 0) {
+      <app-mindmap-canvas
+        class="mindmap-view__canvas"
+        [nodes]="nodes()"
+        [links]="links()"
+        [arc]="arc()"
+        [radius]="radius()"
+        [focusId]="focusId()"
+        [isCa]="isCa()"
+        (nodeActivate)="state.activate($event)"
+      />
+    } @else {
+      <p class="mindmap-view__empty">
+        {{ isCa() ? 'Aquest mapa encara no té mòduls.' : 'Este mapa todavía no tiene módulos.' }}
+      </p>
+    }
+  </div>
+
+  @if (state.selection(); as selection) {
+    <app-connection-drawer
+      class="mindmap-view__drawer"
+      [sourceModule]="selection.module"
+      [sourceRa]="selection.ra"
+      [connection]="selection.connection"
+      [activeTab]="facade.activeTab()"
+      (closed)="state.closeConnection()"
+      (createProject)="createProject.emit($event)"
+    />
+  }
+</div>

@@ -1116,4 +1116,48 @@ describe('MapaIntermodularViewComponent', () => {
     expect(el.querySelector('app-afinidades-eso-view')).toBeNull();
     expect(el.querySelector('app-mapa-header')).toBeTruthy();
   });
+
+  it('el selector de vista cambia entre los acordeones y el mapa mental (beta)', async () => {
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('app-mapa-vista-toggle .vista-toggle__badge')?.textContent).toContain(
+      'beta',
+    );
+    expect(el.querySelector('.mapa-vertical-accordions')).toBeTruthy();
+    expect(el.querySelector('app-mindmap-view')).toBeNull();
+
+    const options = el.querySelectorAll('.vista-toggle__option') as NodeListOf<HTMLButtonElement>;
+    options[1]!.click();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    expect(el.querySelector('app-mindmap-view')).toBeTruthy();
+    expect(el.querySelector('.mapa-vertical-accordions')).toBeNull();
+    expect(el.querySelector('app-mapa-header')).toBeTruthy();
+
+    options[0]!.click();
+    fixture.detectChanges();
+    expect(el.querySelector('.mapa-vertical-accordions')).toBeTruthy();
+    localStorage.removeItem('pai_mapa_vista');
+  });
+
+  it('«Crear proyecto» del mapa mental abre el generador con el RA de origen', async () => {
+    const el = fixture.nativeElement as HTMLElement;
+    component.vistas.setVista('mental');
+    fixture.detectChanges();
+    await fixture.whenStable();
+    const clickNode = async (selector: string) => {
+      el.querySelector(selector)!.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      fixture.detectChanges();
+      await fixture.whenStable();
+    };
+    await clickNode('.mindmap-canvas__node--module[aria-label^="3060"]');
+    await clickNode('.mindmap-canvas__node--ra[aria-label^="RA1 "]');
+    await clickNode('.mindmap-canvas__node--group');
+    await clickNode('.mindmap-canvas__node--connection');
+
+    (el.querySelector('app-connection-drawer .mapa-btn-action') as HTMLButtonElement).click();
+    expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
+    expect(curriculum.selectedRas()[0]).toContain('Muestra una imagen personal');
+    component.vistas.setVista('clasica');
+    localStorage.removeItem('pai_mapa_vista');
+  });
 });

@@ -1,0 +1,124 @@
+@use '../../../../../../styles/variables' as variables;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.connection-drawer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: variables.$color-background;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  overflow: hidden;
+  animation: connection-drawer-in 0.25s ease-out;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: variables.$spacing-3;
+    padding: variables.$spacing-3 variables.$spacing-4;
+    background: variables.$color-surface;
+    border-bottom: 1px solid variables.$color-border;
+  }
+
+  &__eyebrow {
+    display: block;
+    font-size: variables.$font-size-xs;
+    font-weight: variables.$font-weight-semibold;
+    color: variables.$color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__path {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: variables.$spacing-2;
+    margin-top: variables.$spacing-1;
+  }
+
+  &__code {
+    padding: 2px variables.$spacing-2;
+    border-radius: variables.$border-radius-full;
+    background: variables.$color-primary-light;
+    color: variables.$color-primary-dark;
+    font-size: variables.$font-size-sm;
+    font-weight: 700;
+
+    &--target {
+      background: variables.$color-warning-bg;
+      color: variables.$color-text-main;
+    }
+  }
+
+  &__arrow {
+    color: variables.$color-warning;
+    font-weight: 700;
+  }
+
+  &__close {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-md;
+    background: variables.$color-surface;
+    color: variables.$color-text-muted;
+    font-size: variables.$font-size-xl;
+    line-height: 1;
+    cursor: pointer;
+
+    &:hover {
+      background: variables.$color-surface-alt;
+      color: variables.$color-text-main;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    overflow-y: auto;
+    padding: variables.$spacing-3;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-3;
+  }
+
+  &__source {
+    padding: variables.$spacing-3;
+    border-left: 3px solid variables.$color-primary;
+    border-radius: variables.$border-radius-md;
+    background: variables.$color-surface;
+  }
+
+  &__source-label {
+    display: block;
+    font-size: variables.$font-size-xs;
+    font-weight: variables.$font-weight-semibold;
+    color: variables.$color-text-muted;
+  }
+
+  &__source-text {
+    margin: variables.$spacing-1 0 0;
+    font-size: variables.$font-size-sm;
+    color: variables.$color-text-main;
+    line-height: 1.45;
+  }
+}
+
+@keyframes connection-drawer-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connection-drawer {
+    animation: none;
+  }
+}

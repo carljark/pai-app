@@ -1,0 +1,55 @@
+@use '../../../../../../styles/variables' as variables;
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: variables.$spacing-2;
+}
+
+.vista-toggle {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-surface-alt;
+
+  &__option {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border: none;
+    border-radius: variables.$border-radius-full;
+    background: transparent;
+    color: variables.$color-text-muted;
+    font-size: variables.$font-size-sm;
+    font-weight: variables.$font-weight-medium;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      color: variables.$color-text-main;
+    }
+
+    &--active {
+      background: variables.$color-surface;
+      color: variables.$color-primary-dark;
+      font-weight: variables.$font-weight-semibold;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__badge {
+    padding: 1px 6px;
+    border-radius: variables.$border-radius-full;
+    background: variables.$color-warning-bg;
+    color: variables.$color-warning;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}

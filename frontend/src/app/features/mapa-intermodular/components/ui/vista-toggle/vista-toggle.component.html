@@ -1,0 +1,25 @@
+<div
+  class="vista-toggle"
+  role="group"
+  [attr.aria-label]="isCa() ? 'Forma de veure el mapa' : 'Forma de ver el mapa'"
+>
+  <button
+    type="button"
+    class="vista-toggle__option"
+    [class.vista-toggle__option--active]="vista() === 'clasica'"
+    [attr.aria-pressed]="vista() === 'clasica'"
+    (click)="select('clasica')"
+  >
+    {{ isCa() ? 'Vista clàssica' : 'Vista clásica' }}
+  </button>
+  <button
+    type="button"
+    class="vista-toggle__option"
+    [class.vista-toggle__option--active]="vista() === 'mental'"
+    [attr.aria-pressed]="vista() === 'mental'"
+    (click)="select('mental')"
+  >
+    Mapa mental
+    <span class="vista-toggle__badge">beta</span>
+  </button>
+</div>

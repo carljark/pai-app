@@ -1,0 +1,27 @@
+<div class="mindmap-controls">
+  <button
+    type="button"
+    class="mindmap-controls__button"
+    (click)="zoomIn.emit()"
+    aria-label="Ampliar"
+    title="Ampliar"
+  >
+    +
+  </button>
+  <button
+    type="button"
+    class="mindmap-controls__button"
+    (click)="zoomOut.emit()"
+    [attr.aria-label]="isCa() ? 'Reduir' : 'Reducir'"
+    [title]="isCa() ? 'Reduir' : 'Reducir'"
+  >
+    −
+  </button>
+  <button
+    type="button"
+    class="mindmap-controls__button mindmap-controls__button--wide"
+    (click)="fit.emit()"
+  >
+    {{ isCa() ? 'Reenquadrar' : 'Reencuadrar' }}
+  </button>
+</div>

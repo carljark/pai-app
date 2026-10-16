@@ -1,0 +1,81 @@
+<div class="mindmap-canvas">
+  <svg
+    #svg
+    class="mindmap-canvas__svg"
+    role="group"
+    [attr.aria-label]="
+      isCa()
+        ? 'Mapa mental: arrossega per moure, roda per ampliar'
+        : 'Mapa mental: arrastra para mover, rueda para ampliar'
+    "
+  >
+    <g [attr.transform]="groupTransform()">
+      <g class="mindmap-canvas__links">
+        @for (link of links(); track link.id) {
+          <path
+            class="mindmap-canvas__link"
+            [class.mindmap-canvas__link--faded]="link.faded"
+            [attr.d]="link.path"
+            [attr.stroke]="link.color"
+          />
+        }
+      </g>
+
+      @if (arc(); as d) {
+        <path class="mindmap-canvas__arc" [attr.d]="d" />
+      }
+
+      @for (item of nodes(); track item.node.id) {
+        <g
+          [class]="item.view.classes"
+          [attr.transform]="item.view.transform"
+          role="button"
+          tabindex="0"
+          [attr.aria-label]="item.view.ariaLabel"
+          [attr.aria-expanded]="item.node.expandable ? item.node.expanded : null"
+          [attr.aria-pressed]="item.node.kind === 'connection' ? item.node.expanded : null"
+          (click)="activate(item)"
+          (keydown.enter)="activate(item, $event)"
+          (keydown.space)="activate(item, $event)"
+        >
+          <title>{{ item.node.label }}</title>
+          <circle class="mindmap-canvas__halo" [attr.r]="item.view.radius + 6" />
+          <circle
+            class="mindmap-canvas__circle"
+            [attr.r]="item.view.radius"
+            [attr.fill]="item.node.color"
+          />
+          <text class="mindmap-canvas__badge" text-anchor="middle" dy="0.35em">
+            {{ item.node.badge }}
+          </text>
+          @if (item.view.showCount) {
+            <g class="mindmap-canvas__count" [attr.transform]="item.view.countTransform">
+              <circle class="mindmap-canvas__count-bubble" r="9" />
+              <text class="mindmap-canvas__count-text" text-anchor="middle" dy="0.35em">
+                {{ item.node.count }}
+              </text>
+            </g>
+          }
+          <text class="mindmap-canvas__label" [attr.text-anchor]="item.view.labelAnchor">
+            @for (line of item.lines; track $index) {
+              <tspan
+                [attr.x]="item.view.labelX"
+                [attr.dy]="$first ? item.view.labelFirstDy : '1.2em'"
+              >
+                {{ line }}
+              </tspan>
+            }
+          </text>
+        </g>
+      }
+    </g>
+  </svg>
+
+  <app-mindmap-controls
+    class="mindmap-canvas__controls"
+    [isCa]="isCa()"
+    (zoomIn)="zoomBy(1.25)"
+    (zoomOut)="zoomBy(0.8)"
+    (fit)="fit()"
+  />
+</div>

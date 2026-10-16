@@ -1,0 +1,184 @@
+@use '../../../../../../styles/variables' as variables;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.mindmap-canvas {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+  border-radius: variables.$border-radius-lg;
+  background:
+    radial-gradient(circle at center, rgba(variables.$color-primary, 0.06) 0, transparent 60%),
+    radial-gradient(rgba(variables.$color-text-light, 0.35) 1px, transparent 1px) 0 0 / 22px 22px,
+    variables.$color-surface;
+  border: 1px solid variables.$color-border;
+  overflow: hidden;
+
+  &__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__link {
+    fill: none;
+    stroke-width: 2;
+    stroke-opacity: 0.55;
+    transition: stroke-opacity 0.3s ease;
+
+    &--faded {
+      stroke-opacity: 0.12;
+    }
+  }
+
+  &__arc {
+    fill: none;
+    stroke: variables.$color-warning;
+    stroke-width: 3;
+    stroke-dasharray: 8 6;
+    animation: mindmap-canvas-dash 1.2s linear infinite;
+    pointer-events: none;
+  }
+
+  &__node {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    outline: none;
+
+    &--muted {
+      opacity: 0.45;
+    }
+
+    &--dimmed {
+      opacity: 0.18;
+    }
+
+    &:hover .mindmap-canvas__circle {
+      filter: brightness(1.12);
+    }
+
+    &:hover,
+    &:focus-visible,
+    &--expanded,
+    &--match {
+      opacity: 1;
+    }
+
+    &:focus-visible .mindmap-canvas__halo {
+      stroke: variables.$color-info;
+      stroke-opacity: 1;
+    }
+
+    &--expandable .mindmap-canvas__halo {
+      stroke-dasharray: 3 3;
+      stroke-opacity: 0.6;
+    }
+
+    &--expanded .mindmap-canvas__halo {
+      stroke: variables.$color-primary;
+      stroke-dasharray: none;
+      stroke-opacity: 1;
+    }
+
+    &--match .mindmap-canvas__halo {
+      stroke: variables.$color-warning;
+      stroke-width: 3;
+      stroke-dasharray: none;
+      stroke-opacity: 1;
+    }
+
+    &--root .mindmap-canvas__badge {
+      font-size: 13px;
+    }
+
+    &--root .mindmap-canvas__label {
+      font-size: 13px;
+      font-weight: variables.$font-weight-semibold;
+      fill: variables.$color-text-main;
+    }
+
+    &--module .mindmap-canvas__label {
+      font-weight: variables.$font-weight-semibold;
+    }
+
+    &--connection.mindmap-canvas__node--expanded .mindmap-canvas__halo {
+      stroke: variables.$color-warning;
+      stroke-width: 3;
+    }
+  }
+
+  &__halo {
+    fill: variables.$color-surface;
+    stroke: variables.$color-text-light;
+    stroke-width: 2;
+    stroke-opacity: 0;
+    transition: stroke-opacity 0.2s ease;
+  }
+
+  &__circle {
+    stroke: variables.$color-surface;
+    stroke-width: 2;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
+  }
+
+  &__badge {
+    fill: variables.$color-surface;
+    font-size: 10px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  &__count {
+    pointer-events: none;
+  }
+
+  &__count-bubble {
+    fill: variables.$color-surface;
+    stroke: variables.$color-text-muted;
+    stroke-width: 1;
+  }
+
+  &__count-text {
+    fill: variables.$color-text-main;
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  &__label {
+    fill: variables.$color-text-main;
+    font-size: 12px;
+    paint-order: stroke;
+    stroke: variables.$color-surface;
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    pointer-events: none;
+  }
+
+  &__controls {
+    position: absolute;
+    right: variables.$spacing-3;
+    bottom: variables.$spacing-3;
+  }
+}
+
+@keyframes mindmap-canvas-dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mindmap-canvas__arc {
+    animation: none;
+  }
+}

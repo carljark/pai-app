@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[243 — Mapa mental intermodular (beta)](243_plan_mapa_mental_intermodular_beta.md)** · _Implementado (tarea 243)_  
+  Vista alternativa del mapa intermodular de FP como mapa mental (d3 para el cálculo y Angular para el SVG), con nodos que se despliegan, zoom y panel lateral de la conexión; visible para todos con la etiqueta «beta» y conviviendo con la vista clásica.
+
 - **[220 — Clonar proyectos y desplegable de ciclos](220_plan_clonar_proyectos_y_desplegable_de_ciclos.md)** · _Implementado (tarea 220)_  
   Botón «Copiar» en el historial y en el área personal que crea una copia propia titulada «Copia de …» (contenido, traducciones y archivos); las pestañas y pills de nivel pasan a ser un menú desplegable.
 

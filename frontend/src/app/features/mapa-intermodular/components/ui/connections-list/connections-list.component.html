@@ -58,89 +58,11 @@
     <div class="mapa-connections-section">
       <div class="mapa-connections-list">
         @for (conn of connections(); track $index) {
-          <div class="mapa-connection-card">
-            <div class="mapa-conn-header">
-              <div class="mapa-conn-target">
-                <span class="mapa-conn-badge">{{ conn.targetModuleCode }}</span>
-                <div>
-                  <strong class="mapa-conn-mod-name">{{
-                    isCa() ? conn.targetModuleName_ca : conn.targetModuleName_es
-                  }}</strong>
-                  @if (conn.title_es) {
-                    <div class="mapa-conn-coincidence-subtitle">
-                      {{ isCa() ? (conn.title_ca ?? conn.title_es) : conn.title_es }}
-                    </div>
-                  }
-                </div>
-                <span class="mapa-target-ra-pill">{{ conn.targetRaCode }}</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap">
-                <span class="mapa-relation-type-tag" [class]="'tag-' + conn.relationType">
-                  {{ getRelationLabel(conn.relationType) }}
-                </span>
-                <button
-                  class="mapa-btn-action mapa-btn-action--primary mapa-btn-action--sm"
-                  (click)="createProject.emit(conn)"
-                >
-                  {{ isCa() ? 'Crear Projecte' : 'Crear Proyecto' }}
-                </button>
-              </div>
-            </div>
-
-            <p class="mapa-target-ra-desc">
-              {{ isCa() ? conn.targetRaText_ca : conn.targetRaText_es }}
-            </p>
-
-            <div class="mapa-criteria-breakdown">
-              @if (conn.sourceCriteria) {
-                <div class="mapa-crit-row">
-                  <span class="mapa-crit-badge-label mapa-crit-badge--source">
-                    {{ isCa() ? 'Criteris propis implicats:' : 'Criterios propios implicados:' }}
-                  </span>
-                  <span class="mapa-crit-badge-text">{{ conn.sourceCriteria }}</span>
-                </div>
-              }
-
-              @if (conn.relatedCriteria && conn.relatedCriteria.length > 0) {
-                <div class="mapa-crit-row mapa-crit-row--related">
-                  <span class="mapa-crit-badge-label mapa-crit-badge--target">
-                    {{
-                      isCa()
-                        ? "Criteris d'altres mòduls relacionats:"
-                        : 'Criterios de otros módulos relacionados:'
-                    }}
-                  </span>
-                  <div class="mapa-related-chips-wrap">
-                    @for (rel of conn.relatedCriteria; track rel.moduleCode + rel.criteria) {
-                      <div class="mapa-related-chip-item">
-                        <span class="mapa-related-code-tag">{{ rel.moduleCode }}</span>
-                        <span class="mapa-related-name-tag"
-                          >{{
-                            isCa() ? rel.moduleName_ca || rel.moduleName_es : rel.moduleName_es
-                          }}:</span
-                        >
-                        <strong class="mapa-related-crit-tag">{{
-                          isCa() ? rel.criteria_ca || rel.criteria : rel.criteria_es || rel.criteria
-                        }}</strong>
-                      </div>
-                    }
-                  </div>
-                </div>
-              }
-            </div>
-
-            <div class="mapa-justification-box">
-              <span class="mapa-just-label">{{
-                isCa()
-                  ? 'Justificació Curricular i Anàlisi de Coincidència:'
-                  : 'Justificación Curricular y Análisis de Coincidencia:'
-              }}</span>
-              <p>{{ isCa() ? conn.justification_ca : conn.justification_es }}</p>
-            </div>
-
-            <app-activities-grid [activities]="conn.activities || []" [activeTab]="activeTab()">
-            </app-activities-grid>
-          </div>
+          <app-connection-card
+            [connection]="conn"
+            [activeTab]="activeTab()"
+            (createProject)="createProject.emit($event)"
+          />
         } @empty {
           <div class="mapa-empty-state">
             {{

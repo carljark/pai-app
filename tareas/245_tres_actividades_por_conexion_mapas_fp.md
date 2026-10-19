@@ -76,3 +76,11 @@ Permisos del lanzador:
   - Caben de sobra en el contexto del modelo y, si un tramo falla, se pierde poco.
   - Los mapas distintos se ejecutaron en paralelo. Para ello, el aviso de cambios en archivos versionados ignora las fuentes y los JSON de los mapas, que reescribe `incorporar.py` desde otro proceso.
 - **La migración 49 sustituye cada pestaña entera.** Borra y vuelve a insertar sus módulos en `MapaModule`, igual que las migraciones de mapas anteriores. Los mapas solo contienen datos curriculares, no datos de usuarios.
+
+## Despliegue
+
+- **Fecha:** 19 de octubre de 2026.
+- **Qué se desplegó:** el commit `3d5f73c` de la rama `feature/245_tres_actividades_por_conexion_mapas_fp`, con `./scripts/deploy-prod.sh`.
+- **Copia de seguridad previa:** `pai_db_20261019_015815.archive.gz`.
+- **Migración:** la 49 se aplicó al arrancar.
+- **Comprobación:** se consultó la API de producción (`/api/mapa-intermodular?tab=…`) para las 15 pestañas. Todas devuelven las mismas conexiones que sus JSON, y ninguna conexión tiene menos de 3 actividades.

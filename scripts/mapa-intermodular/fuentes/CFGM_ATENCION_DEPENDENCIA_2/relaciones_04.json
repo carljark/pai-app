@@ -1,7 +1,21 @@
 [
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["b", "c", "d"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "c",
+        "d"
+      ]
+    },
     "justificacion_es": "Conocer la estructura del servicio de teleasistencia es caracterizar una de las empresas tipo del sector.",
     "justificacion_ca": "Conèixer l'estructura del servei de teleassistència és caracteritzar una de les empreses tipus del sector.",
     "actividades": [
@@ -18,12 +32,54 @@
         "dua_ca": "Plantilla d'organigrama i guió de preguntes per a la visita.",
         "metodologia_es": "visita de estudio.",
         "metodologia_ca": "visita d'estudi."
+      },
+      {
+        "titulo_es": "Entrevista a la coordinadora de la central",
+        "titulo_ca": "Entrevista amb la coordinadora de la central",
+        "contexto_es": "Una teleoperadora nueva llega a la central de teleasistencia de Palma y necesita saber a quién dirigirse en cada situación.",
+        "contexto_ca": "Una teleoperadora nova arriba a la central de teleassistència de Palma i necessita saber a qui adreçar-se en cada situació.",
+        "desarrollo_es": "Tras preparar un guion de preguntas, el alumnado entrevista a una coordinadora y describe las características, funciones y estructura del servicio de teleasistencia (0831-1a). Con sus respuestas dibuja la estructura organizativa de la empresa (1713-1b), caracteriza los principales departamentos (1713-1c) y determina las funciones de cada uno (1713-1d).",
+        "desarrollo_ca": "Després de preparar un guió de preguntes, l'alumnat entrevista una coordinadora i descriu les característiques, funcions i estructura del servei de teleassistència (0831-1a). Amb les seves respostes dibuixa l'estructura organitzativa de l'empresa (1713-1b), caracteritza els principals departaments (1713-1c) i determina les funcions de cadascun (1713-1d).",
+        "evidencia_es": "Organigrama con las funciones de cada departamento extraídas de la entrevista.",
+        "evidencia_ca": "Organigrama amb les funcions de cada departament extretes de l'entrevista.",
+        "dua_es": "Guion de preguntas con ejemplos y opción de enviar la entrevista por escrito o grabarla en audio.",
+        "dua_ca": "Guió de preguntes amb exemples i opció d'enviar l'entrevista per escrit o gravar-la en àudio.",
+        "metodologia_es": "entrevista a profesionales.",
+        "metodologia_ca": "entrevista a professionals."
+      },
+      {
+        "titulo_es": "Clasificación de tarjetas: quién hace qué",
+        "titulo_ca": "Classificació de targetes: qui fa què",
+        "contexto_es": "Una empresa que presta teleasistencia en varios municipios de la isla quiere que su plantilla nueva entienda en una tarde cómo se reparte el trabajo.",
+        "contexto_ca": "Una empresa que presta teleassistència en diversos municipis de l'illa vol que la seva plantilla nova entengui en una tarda com es reparteix la feina.",
+        "desarrollo_es": "En un juego de clasificación de tarjetas, el alumnado ordena las funciones del servicio de teleasistencia y su estructura (0831-1a), construye el organigrama de la empresa (1713-1b), agrupa las tareas por departamentos (1713-1c) y asigna las funciones de cada departamento (1713-1d).",
+        "desarrollo_ca": "En un joc de classificació de targetes, l'alumnat ordena les funcions del servei de teleassistència i la seva estructura (0831-1a), construeix l'organigrama de l'empresa (1713-1b), agrupa les tasques per departaments (1713-1c) i assigna les funcions de cada departament (1713-1d).",
+        "evidencia_es": "Panel final con las tarjetas pegadas y el organigrama resultante fotografiado.",
+        "evidencia_ca": "Panell final amb les targetes enganxades i l'organigrama resultant fotografiat.",
+        "dua_es": "Tarjetas con iconos y colores por departamento, y trabajo por parejas con turnos de colocación.",
+        "dua_ca": "Targetes amb icones i colors per departament, i treball per parelles amb torns de col·locació.",
+        "metodologia_es": "gamificación con clasificación de tarjetas.",
+        "metodologia_ca": "gamificació amb classificació de targetes."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["b", "c"] },
-    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["d", "e"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA3",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
     "justificacion_es": "Montar un puesto de operador para un proyecto obliga a identificar sus riesgos y aplicar el plan de prevención.",
     "justificacion_ca": "Muntar un lloc d'operador per a un projecte obliga a identificar-ne els riscs i aplicar el pla de prevenció.",
     "actividades": [
@@ -40,12 +96,53 @@
         "dua_ca": "Fotos de llocs correctes i incorrectes i llista il·lustrada.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Auditoría cruzada de puestos de operador",
+        "titulo_ca": "Auditoria creuada de llocs d'operador",
+        "contexto_es": "Una empresa de teleasistencia de Inca ha recibido quejas de dolor de espalda en su sala de operadores y encarga al grupo una revisión externa.",
+        "contexto_ca": "Una empresa de teleassistència d'Inca ha rebut queixes de mal d'esquena a la seva sala d'operadors i encarrega al grup una revisió externa.",
+        "desarrollo_es": "Por parejas, revisan el estado del puesto de otro equipo y reordenan mesa, cableado y mobiliario siguiendo criterios de orden y limpieza (0831-1b). Explican con sus palabras las pautas de higiene, postura y trato entre compañeros que protegen la salud (0831-1c). Después detectan qué tareas del plan del proyecto exponen a riesgos (1713-3d) y proponen equipos y medidas preventivas para cada una (1713-3e).",
+        "desarrollo_ca": "Per parelles, revisen l'estat del lloc d'un altre equip i reordenen taula, cablejat i mobiliari seguint criteris d'ordre i neteja (0831-1b). Expliquen amb les seves paraules les pautes d'higiene, postura i tracte entre companys que protegeixen la salut (0831-1c). Després detecten quines tasques del pla del projecte exposen a riscs (1713-3d) i proposen equips i mesures preventives per a cadascuna (1713-3e).",
+        "evidencia_es": "Informe de auditoría con fotografías del antes y el después y tabla de medidas preventivas.",
+        "evidencia_ca": "Informe d'auditoria amb fotografies d'abans i després i taula de mesures preventives.",
+        "dua_es": "Plantilla de auditoría con casillas y pictogramas, y opción de entregar el informe en audio.",
+        "dua_ca": "Plantilla d'auditoria amb caselles i pictogrames, i opció de lliurar l'informe en àudio.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Simulacro de turno con inspector de riesgos",
+        "titulo_ca": "Simulacre de torn amb inspector de riscos",
+        "contexto_es": "El comité de seguridad de un servicio de teleasistencia de Palma visita la sala sin avisar y el equipo debe mostrar que trabaja con seguridad.",
+        "contexto_ca": "El comitè de seguretat d'un servei de teleassistència de Palma visita la sala sense avisar i l'equip ha de mostrar que treballa amb seguretat.",
+        "desarrollo_es": "Un grupo hace de personal operador y otro de comité inspector. Los operadores presentan su espacio de trabajo ordenado y limpio y justifican cada elección (0831-1b) y recitan las normas de ergonomía y comunicación que cuidan su salud (0831-1c). Los inspectores señalan las actividades del proyecto con riesgo (1713-3d) y comprueban si el plan de prevención recoge los medios necesarios (1713-3e).",
+        "desarrollo_ca": "Un grup fa de personal operador i un altre de comitè inspector. Els operadors presenten el seu espai de treball ordenat i net i justifiquen cada elecció (0831-1b) i recorden les normes d'ergonomia i comunicació que cuiden la seva salut (0831-1c). Els inspectors assenyalen les activitats del projecte amb risc (1713-3d) i comproven si el pla de prevenció recull els mitjans necessaris (1713-3e).",
+        "evidencia_es": "Acta de la inspección con las incidencias detectadas y las correcciones acordadas.",
+        "evidencia_ca": "Acta de la inspecció amb les incidències detectades i les correccions acordades.",
+        "dua_es": "Guion de roles con frases de apoyo y posibilidad de elegir el papel que resulte más cómodo.",
+        "dua_ca": "Guió de rols amb frases de suport i possibilitat d'escollir el paper que resulti més còmode.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA4", "criterios": ["c", "d"] },
-    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["f"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA4",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Los informes de seguimiento de la teleasistencia son el modelo para documentar la evaluación de un proyecto de llamadas.",
     "justificacion_ca": "Els informes de seguiment de la teleassistència són el model per documentar l'avaluació d'un projecte de trucades.",
     "actividades": [
@@ -62,12 +159,53 @@
         "dua_ca": "Models d'informe i redacció per apartats.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Dosier de seguimiento del primer mes",
+        "titulo_ca": "Dossier de seguiment del primer mes",
+        "contexto_es": "La coordinadora de un servicio de teleasistencia de Manacor pide un dosier que resuma el primer mes de funcionamiento ante la entidad financiadora.",
+        "contexto_ca": "La coordinadora d'un servei de teleassistència de Manacor demana un dossier que resumeixi el primer mes de funcionament davant l'entitat finançadora.",
+        "desarrollo_es": "El alumnado clasifica en un cuadro los distintos informes que genera un servicio de teleasistencia (0831-4c). Redacta un informe de seguimiento con datos de llamadas simuladas (0831-4d) y diseña los formularios y los indicadores con los que se evaluarán las actividades y el conjunto del proyecto (1713-4f).",
+        "desarrollo_ca": "L'alumnat classifica en un quadre els diferents informes que genera un servei de teleassistència (0831-4c). Redacta un informe de seguiment amb dades de trucades simulades (0831-4d) i dissenya els formularis i els indicadors amb què s'avaluaran les activitats i el conjunt del projecte (1713-4f).",
+        "evidencia_es": "Dosier con el cuadro de tipos de informe, un informe de seguimiento y los formularios de evaluación.",
+        "evidencia_ca": "Dossier amb el quadre de tipus d'informe, un informe de seguiment i els formularis d'avaluació.",
+        "dua_es": "Modelo de informe parcialmente rellenado y ejemplos de indicadores visuales.",
+        "dua_ca": "Model d'informe parcialment emplenat i exemples d'indicadors visuals.",
+        "metodologia_es": "aprendizaje basado en productos.",
+        "metodologia_ca": "aprenentatge basat en productes."
+      },
+      {
+        "titulo_es": "Rincones del informe: de la llamada a la evaluación",
+        "titulo_ca": "Racons de l'informe: de la trucada a l'avaluació",
+        "contexto_es": "Para preparar la jornada de puertas abiertas del centro de Sa Pobla, el grupo monta un circuito donde las familias ven cómo se documenta un servicio.",
+        "contexto_ca": "Per preparar la jornada de portes obertes del centre de sa Pobla, el grup munta un circuit on les famílies veuen com es documenta un servei.",
+        "desarrollo_es": "En tres rincones rotativos, el alumnado describe sobre paneles los tipos de informe del servicio (0831-4c), completa un informe de seguimiento a partir de un registro de llamadas ficticio (0831-4d) y prepara la documentación con la que se valorarían las actividades y el proyecto completo (1713-4f).",
+        "desarrollo_ca": "En tres racons rotatius, l'alumnat descriu sobre panells els tipus d'informe del servei (0831-4c), completa un informe de seguiment a partir d'un registre de trucades fictici (0831-4d) i prepara la documentació amb què es valorarien les activitats i el projecte complet (1713-4f).",
+        "evidencia_es": "Paneles expuestos y carpeta con los tres documentos elaborados en el circuito.",
+        "evidencia_ca": "Panells exposats i carpeta amb els tres documents elaborats al circuit.",
+        "dua_es": "Rincones con consignas escritas y en pictogramas, y tiempo flexible en cada estación.",
+        "dua_ca": "Racons amb consignes escrites i en pictogrames, i temps flexible a cada estació.",
+        "metodologia_es": "rincones de aprendizaje.",
+        "metodologia_ca": "racons d'aprenentatge."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA3", "criterios": ["b", "d"] },
-    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["c"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Verificar altas y actualizar datos en la aplicación es transmitir información al equipo por medios informáticos.",
     "justificacion_ca": "Verificar altes i actualitzar dades a l'aplicació és transmetre informació a l'equip per mitjans informàtics.",
     "actividades": [
@@ -84,12 +222,52 @@
         "dua_ca": "Tutorial del full compartit i recordatoris automàtics.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Altas verificadas y compartidas en la nube",
+        "titulo_ca": "Altes verificades i compartides al núvol",
+        "contexto_es": "Una entidad de atención domiciliaria de Ibiza estrena un documento compartido en línea para que todos los turnos vean las nuevas altas del servicio.",
+        "contexto_ca": "Una entitat d'atenció domiciliària d'Eivissa estrena un document compartit en línia perquè tots els torns vegin les noves altes del servei.",
+        "desarrollo_es": "Cada pareja recibe una solicitud ficticia y comprueba que la persona figura dada de alta en el servicio (0831-3b). Después corrige en la aplicación los datos que han cambiado (0831-3d) y avisa al resto del grupo mediante un tablón digital compartido, redactando mensajes breves y ordenados (1713-5c).",
+        "desarrollo_ca": "Cada parella rep una sol·licitud fictícia i comprova que la persona figura donada d'alta al servei (0831-3b). Després corregeix a l'aplicació les dades que han canviat (0831-3d) i avisa la resta del grup per mitjà d'un tauler digital compartit, redactant missatges breus i ordenats (1713-5c).",
+        "evidencia_es": "Registro de altas verificadas y captura del tablón digital con los avisos enviados.",
+        "evidencia_ca": "Registre d'altes verificades i captura del tauler digital amb els avisos enviats.",
+        "dua_es": "Mensajes plantilla para los avisos y lector de pantalla disponible durante la tarea.",
+        "dua_ca": "Missatges plantilla per als avisos i lector de pantalla disponible durant la tasca.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Reto: cero errores en el parte de altas",
+        "titulo_ca": "Repte: zero errors al part d'altes",
+        "contexto_es": "El servicio de teleasistencia de un consell insular detecta que dos personas usuarias recibieron llamadas con datos antiguos y lanza un reto de calidad.",
+        "contexto_ca": "El servei de teleassistència d'un consell insular detecta que dues persones usuàries van rebre trucades amb dades antigues i llança un repte de qualitat.",
+        "desarrollo_es": "Los equipos compiten por completar una batería de fichas sin fallos: comprueban en el sistema que cada alta es válida (0831-3b) y actualizan los datos modificados en la aplicación (0831-3d). Al terminar, comunican su resultado al resto de equipos con un chat del aula y un mensaje estructurado (1713-5c).",
+        "desarrollo_ca": "Els equips competeixen per completar una bateria de fitxes sense errors: comproven al sistema que cada alta és vàlida (0831-3b) i actualitzen les dades modificades a l'aplicació (0831-3d). En acabar, comuniquen el seu resultat a la resta d'equips amb un xat de l'aula i un missatge estructurat (1713-5c).",
+        "evidencia_es": "Marcador del reto con las fichas corregidas y el mensaje final enviado.",
+        "evidencia_ca": "Marcador del repte amb les fitxes corregides i el missatge final enviat.",
+        "dua_es": "Fichas con lectura fácil y posibilidad de repetir la ronda sin penalización.",
+        "dua_ca": "Fitxes amb lectura fàcil i possibilitat de repetir la ronda sense penalització.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["b"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "El relevo entre turnos combina medios técnicos y comunicación verbal con compañeros y con la coordinación.",
     "justificacion_ca": "El relleu entre torns combina mitjans tècnics i comunicació verbal amb els companys i amb la coordinació.",
     "actividades": [
@@ -106,12 +284,53 @@
         "dua_ca": "Targeta de relleu amb apartats fixos.",
         "metodologia_es": "simulación.",
         "metodologia_ca": "simulació."
+      },
+      {
+        "titulo_es": "Cadena de relevo entre tres turnos",
+        "titulo_ca": "Cadena de relleu entre tres torns",
+        "contexto_es": "En una central de Menorca, el turno de noche se quejó de que llegaba sin saber qué había pasado por la tarde y se decide ensayar un relevo mejor.",
+        "contexto_ca": "En una central de Menorca, el torn de nit es va queixar que arribava sense saber què havia passat a la tarda i es decideix assajar un relleu millor.",
+        "desarrollo_es": "El alumnado divide la clase en tres turnos y debate qué herramientas técnicas, como libro de incidencias o aviso en pantalla, ayudan a pasar información entre ellos (0831-4a). Después ensaya el relevo oral entre compañeros del mismo nivel y hacia la coordinación, con un mensaje claro en cada dirección (1713-5b).",
+        "desarrollo_ca": "L'alumnat divideix la classe en tres torns i debat quines eines tècniques, com ara llibre d'incidències o avís en pantalla, ajuden a passar informació entre ells (0831-4a). Després assaja el relleu oral entre companys del mateix nivell i cap a la coordinació, amb un missatge clar en cada direcció (1713-5b).",
+        "evidencia_es": "Grabación del relevo en cadena y cuadro comparativo de las herramientas valoradas.",
+        "evidencia_ca": "Gravació del relleu en cadena i quadre comparatiu de les eines valorades.",
+        "dua_es": "Guion de relevo con apartados fijos y cronómetro visible para ordenar la intervención.",
+        "dua_ca": "Guió de relleu amb apartats fixos i cronòmetre visible per ordenar la intervenció.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Investigamos cómo se pierde la información",
+        "titulo_ca": "Investiguem com es perd la informació",
+        "contexto_es": "Una residencia de Sóller quiere entender por qué algunos avisos de una guardia no llegaron al personal de la siguiente y pide al grupo un pequeño estudio.",
+        "contexto_ca": "Una residència de Sóller vol entendre per què alguns avisos d'una guàrdia no van arribar al personal de la següent i demana al grup un petit estudi.",
+        "desarrollo_es": "Con entrevistas breves a profesionales del sector, el alumnado reúne y explica los medios técnicos que facilitan el paso de información entre turnos (0831-4a). Luego practica en un taller comunicar mensajes verbales hacia compañeros y hacia superiores con orden y claridad (1713-5b).",
+        "desarrollo_ca": "Amb entrevistes breus a professionals del sector, l'alumnat recull i explica els mitjans tècnics que faciliten el pas d'informació entre torns (0831-4a). Després practica en un taller comunicar missatges verbals cap a companys i cap a superiors amb ordre i claredat (1713-5b).",
+        "evidencia_es": "Resumen de la investigación y grabación de dos mensajes verbales, uno horizontal y otro vertical.",
+        "evidencia_ca": "Resum de la investigació i gravació de dos missatges verbals, un d'horitzontal i un de vertical.",
+        "dua_es": "Entrevistas con preguntas guiadas y opción de hacerlas por escrito o por audio.",
+        "dua_ca": "Entrevistes amb preguntes guiades i opció de fer-les per escrit o per àudio.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "0156", "ra": "RA1", "criterios": ["a", "c"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
     "justificacion_es": "Muchas personas usuarias de Baleares son extranjeras; atender sus llamadas exige entender el contexto y la finalidad del mensaje en inglés.",
     "justificacion_ca": "Moltes persones usuàries de les Balears són estrangeres; atendre'n les trucades exigeix entendre el context i la finalitat del missatge en anglès.",
     "actividades": [
@@ -128,12 +347,55 @@
         "dua_ca": "Àudios amb diferents accents i guió bilingüe del protocol.",
         "metodologia_es": "simulación telefónica.",
         "metodologia_ca": "simulació telefònica."
+      },
+      {
+        "titulo_es": "Llamadas de turistas a la central",
+        "titulo_ca": "Trucades de turistes a la central",
+        "contexto_es": "En temporada alta, la central de teleasistencia de Calvià recibe llamadas de visitantes alojados en casas de familiares mayores y debe atenderlos en inglés.",
+        "contexto_ca": "En temporada alta, la central de teleassistència de Calvià rep trucades de visitants allotjats a cases de familiars grans i els ha d'atendre en anglès.",
+        "desarrollo_es": "Dentro de un juego de rol, el alumnado atiende llamadas ficticias con saludo, desarrollo y despedida según el protocolo (0831-3a). Antes de responder, analiza en una ficha el contexto y el tipo de hablante de la grabación (0156-1a) y detecta si la llamada es una consulta, un aviso o una urgencia (0156-1c).",
+        "desarrollo_ca": "Dins un joc de rol, l'alumnat atén trucades fictícies amb salutació, desenvolupament i comiat segons el protocol (0831-3a). Abans de respondre, analitza en una fitxa el context i el tipus de parlant de l'enregistrament (0156-1a) i detecta si la trucada és una consulta, un avís o una urgència (0156-1c).",
+        "evidencia_es": "Ficha de análisis de tres llamadas y grabación de una respuesta siguiendo el protocolo.",
+        "evidencia_ca": "Fitxa d'anàlisi de tres trucades i gravació d'una resposta seguint el protocol.",
+        "dua_es": "Audios con transcripción opcional y posibilidad de escucharlos a velocidad reducida.",
+        "dua_ca": "Àudios amb transcripció opcional i possibilitat d'escoltar-los a velocitat reduïda.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Escuchar antes de contestar: podcast de llamadas",
+        "titulo_ca": "Escoltar abans de contestar: pòdcast de trucades",
+        "contexto_es": "Una academia de idiomas de Palma colabora con el ciclo para crear un pódcast de llamadas reales simuladas dirigido a profesionales de la teleasistencia.",
+        "contexto_ca": "Una acadèmia d'idiomes de Palma col·labora amb el cicle per crear un pòdcast de trucades reals simulades adreçat a professionals de la teleassistència.",
+        "desarrollo_es": "En casa, el alumnado escucha los episodios y anota dónde, quién y en qué circunstancias se produce cada mensaje (0156-1a) y qué pretende quien llama (0156-1c). En clase, coloca en una escala cada llamada según el protocolo de presentación, desarrollo y despedida que habría que seguir (0831-3a).",
+        "desarrollo_ca": "A casa, l'alumnat escolta els episodis i anota on, qui i en quines circumstàncies es produeix cada missatge (0156-1a) i què pretén qui truca (0156-1c). A classe, col·loca en una escala cada trucada segons el protocol de presentació, desenvolupament i comiat que caldria seguir (0831-3a).",
+        "evidencia_es": "Diario de escucha con las notas de cada episodio y escala de protocolo completada.",
+        "evidencia_ca": "Diari d'escolta amb les notes de cada episodi i escala de protocol completada.",
+        "dua_es": "Episodios cortos con subtítulos y glosario de vocabulario clave en la plataforma del aula.",
+        "dua_ca": "Episodis curts amb subtítols i glossari de vocabulari clau a la plataforma de l'aula.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA2", "criterios": ["e", "g"] },
-    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["b", "i", "k"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA2",
+      "criterios": [
+        "e",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "i",
+        "k"
+      ]
+    },
     "justificacion_es": "Las llamadas salientes a personas usuarias extranjeras deben seguir el protocolo también en inglés.",
     "justificacion_ca": "Les trucades sortints a persones usuàries estrangeres han de seguir el protocol també en anglès.",
     "actividades": [
@@ -150,12 +412,53 @@
         "dua_ca": "Targetes de frases útils i assaig previ en parelles.",
         "metodologia_es": "juego de rol.",
         "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Campaña de llamadas a mayores en inglés",
+        "titulo_ca": "Campanya de trucades a grans en anglès",
+        "contexto_es": "Una asociación de residentes británicos de Santa Eulària organiza una campaña de llamadas de compañía y pide voluntariado formado en inglés.",
+        "contexto_ca": "Una associació de residents britànics de Santa Eulària organitza una campanya de trucades de companyia i demana voluntariat format en anglès.",
+        "desarrollo_es": "Con un guion mínimo, cada persona prepara y hace una llamada saliente en la que abre con un saludo personalizado (0831-2e), usa conectores y expresiones de interacción adecuados (0156-3b), mantiene un intercambio fluido de información concreta (0156-3i), cambia de registro según su interlocutor (0156-3k) y cierra con la despedida del protocolo (0831-2g).",
+        "desarrollo_ca": "Amb un guió mínim, cada persona prepara i fa una trucada sortint en què obri amb una salutació personalitzada (0831-2e), usa connectors i expressions d'interacció adequats (0156-3b), manté un intercanvi fluid d'informació concreta (0156-3i), canvia de registre segons el seu interlocutor (0156-3k) i tanca amb el comiat del protocol (0831-2g).",
+        "evidencia_es": "Grabación de la llamada y rúbrica de coevaluación entre iguales.",
+        "evidencia_ca": "Gravació de la trucada i rúbrica de coavaluació entre iguals.",
+        "dua_es": "Tarjetas de frases de apoyo y posibilidad de ensayar la llamada antes de grabarla.",
+        "dua_ca": "Targetes de frases de suport i possibilitat d'assajar la trucada abans de gravar-la.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Tertulia telefónica: formal o informal",
+        "titulo_ca": "Tertúlia telefònica: formal o informal",
+        "contexto_es": "En un centro de día de Maó, la dirección quiere que el personal sepa adaptar el tono según hable con una persona usuaria, una familiar o un médico.",
+        "contexto_ca": "En un centre de dia de Maó, la direcció vol que el personal sàpiga adaptar el to segons parli amb una persona usuària, una familiar o un metge.",
+        "desarrollo_es": "El alumnado debate en inglés qué saludos personalizados resultan más cercanos y cuáles protocolarios (0831-2e). Después, en tríos, simula tres llamadas con distinto grado de formalidad, usando nexos y estrategias de conversación (0156-3b), sosteniendo el intercambio con soltura (0156-3i), reaccionando sin guion (0156-3k) y despidiéndose según el protocolo (0831-2g).",
+        "desarrollo_ca": "L'alumnat debat en anglès quines salutacions personalitzades resulten més properes i quines protocol·làries (0831-2e). Després, en trios, simula tres trucades amb diferent grau de formalitat, usant connectors i estratègies de conversa (0156-3b), mantenint l'intercanvi amb soltesa (0156-3i), reaccionant sense guió (0156-3k) i acomiadant-se segons el protocol (0831-2g).",
+        "evidencia_es": "Ficha de observación entre iguales y grabación de las tres llamadas simuladas.",
+        "evidencia_ca": "Fitxa d'observació entre iguals i gravació de les tres trucades simulades.",
+        "dua_es": "Cartel con niveles de formalidad y ejemplos, y roles intercambiables dentro del trío.",
+        "dua_ca": "Cartell amb nivells de formalitat i exemples, i rols intercanviables dins el trio.",
+        "metodologia_es": "debate y simulación.",
+        "metodologia_ca": "debat i simulació."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA3", "criterios": ["f"] },
-    "b": { "modulo": "0156", "ra": "RA3", "criterios": ["c", "m"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "m"
+      ]
+    },
     "justificacion_es": "En una emergencia con una persona que solo habla inglés hay que describir lo que ocurre y pedir aclaraciones sin perder tiempo.",
     "justificacion_ca": "En una emergència amb una persona que només parla anglès cal descriure el que passa i demanar aclariments sense perdre temps.",
     "actividades": [
@@ -172,12 +475,53 @@
         "dua_ca": "Targeta de frases d'emergència i repetició de la simulació.",
         "metodologia_es": "simulación de emergencias.",
         "metodologia_ca": "simulació d'emergències."
+      },
+      {
+        "titulo_es": "Taller de crisis: un turista se ha caído",
+        "titulo_ca": "Taller de crisi: un turista ha caigut",
+        "contexto_es": "Un hotel de Alcúdia pide formación a su personal para atender en inglés a clientes mayores que caen o se desorientan en la zona de piscinas.",
+        "contexto_ca": "Un hotel d'Alcúdia demana formació al seu personal per atendre en anglès clients grans que cauen o es desorienten a la zona de piscines.",
+        "desarrollo_es": "El alumnado atiende en inglés una llamada de crisis y aplica el protocolo de actuación ante emergencias (0831-3f), cuenta con palabras sencillas el suceso inesperado a los servicios de ayuda (0156-3c) y pide a quien llama que repita o aclare lo que no ha entendido (0156-3m).",
+        "desarrollo_ca": "L'alumnat atén en anglès una trucada de crisi i aplica el protocol d'actuació davant emergències (0831-3f), conta amb paraules senzilles el succés inesperat als serveis d'ajuda (0156-3c) i demana a qui truca que repeteixi o aclareixi el que no ha entès (0156-3m).",
+        "evidencia_es": "Grabación de la llamada de crisis y lista de comprobación del protocolo seguido.",
+        "evidencia_ca": "Gravació de la trucada de crisi i llista de comprovació del protocol seguit.",
+        "dua_es": "Banco de frases de emergencia con pictogramas y opción de actuar como observador en la primera ronda.",
+        "dua_ca": "Banc de frases d'emergència amb pictogrames i opció d'actuar com a observador a la primera ronda.",
+        "metodologia_es": "estaciones de aprendizaje.",
+        "metodologia_ca": "estacions d'aprenentatge."
+      },
+      {
+        "titulo_es": "Cuéntalo claro: el parte de la emergencia",
+        "titulo_ca": "Conta-ho clar: el part de l'emergència",
+        "contexto_es": "El 112 de las Illes Balears recomienda que las centrales de teleasistencia sepan transmitir en inglés qué ha pasado cuando la persona afectada es extranjera.",
+        "contexto_ca": "El 112 de les Illes Balears recomana que les centrals de teleassistència sàpiguen transmetre en anglès què ha passat quan la persona afectada és estrangera.",
+        "desarrollo_es": "En parejas, un miembro hace de persona angustiada y el otro de operador; este sigue los pasos que corresponden ante una situación de emergencia (0831-3f), relata de forma breve el hecho imprevisto como si lo comunicara a una ambulancia (0156-3c) y solicita que se reformule cuanto no le ha quedado claro (0156-3m). Después intercambian los papeles.",
+        "desarrollo_ca": "En parelles, un membre fa de persona angoixada i l'altre d'operador; aquest segueix els passos que corresponen davant una situació d'emergència (0831-3f), relata de manera breu el fet imprevist com si el comuniqués a una ambulància (0156-3c) i sol·licita que es reformuli tot allò que no li ha quedat clar (0156-3m). Després intercanvien els papers.",
+        "evidencia_es": "Informe breve en inglés del suceso y grabación del diálogo de la pareja.",
+        "evidencia_ca": "Informe breu en anglès del succés i gravació del diàleg de la parella.",
+        "dua_es": "Escenarios entregados en tarjetas con imágenes y tiempo extra para preparar el relato.",
+        "dua_ca": "Escenaris lliurats en targetes amb imatges i temps extra per preparar el relat.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA4", "criterios": ["b"] },
-    "b": { "modulo": "0156", "ra": "RA4", "criterios": ["f", "i"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA4",
+      "criterios": [
+        "f",
+        "i"
+      ]
+    },
     "justificacion_es": "Registrar en inglés las llamadas con personas extranjeras exige tomar notas claras y rellenar plantillas con apoyos.",
     "justificacion_ca": "Registrar en anglès les trucades amb persones estrangeres exigeix prendre notes clares i emplenar plantilles amb suports.",
     "actividades": [
@@ -194,12 +538,53 @@
         "dua_ca": "Plantilla amb icones i banc de paraules clau.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Mensajes a compañeros que no hablan español",
+        "titulo_ca": "Missatges a companys que no parlen castellà",
+        "contexto_es": "Una empresa de teleasistencia de Palma incorpora personal extranjero en el turno de noche y necesita que las notas de cada llamada se entiendan en inglés.",
+        "contexto_ca": "Una empresa de teleassistència de Palma incorpora personal estranger al torn de nit i necessita que les notes de cada trucada s'entenguin en anglès.",
+        "desarrollo_es": "Con un registro de llamadas ficticio, el alumnado aplica la técnica de anotación de datos de la central (0831-4b), completa en inglés una plantilla de aviso con apoyo de imágenes y frases clave (0156-4f) y redacta notas y mensajes breves para el turno siguiente (0156-4i).",
+        "desarrollo_ca": "Amb un registre de trucades fictici, l'alumnat aplica la tècnica d'anotació de dades de la central (0831-4b), completa en anglès una plantilla d'avís amb suport d'imatges i frases clau (0156-4f) i redacta notes i missatges breus per al torn següent (0156-4i).",
+        "evidencia_es": "Plantilla de aviso completada y tres mensajes escritos en inglés.",
+        "evidencia_ca": "Plantilla d'avís completada i tres missatges escrits en anglès.",
+        "dua_es": "Plantilla bilingüe con imágenes y corrector ortográfico activado durante la redacción.",
+        "dua_ca": "Plantilla bilingüe amb imatges i corrector ortogràfic activat durant la redacció.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
+      },
+      {
+        "titulo_es": "Retransmisión escrita de una noche de guardia",
+        "titulo_ca": "Retransmissió escrita d'una nit de guàrdia",
+        "contexto_es": "Una cooperativa de cuidados de Eivissa publica un blog interno bilingüe donde se cuentan los turnos para que el personal extranjero siga las incidencias.",
+        "contexto_ca": "Una cooperativa de cures d'Eivissa publica un blog intern bilingüe on es compten els torns perquè el personal estranger segueixi les incidències.",
+        "desarrollo_es": "El alumnado escucha un audio de simulación de turno y registra las incidencias con las técnicas habituales de la central (0831-4b). A partir de unas viñetas y de una lista de expresiones, termina un texto en inglés ya empezado (0156-4f) y toma notas rápidas de lo que dicen las voces para dejar mensajes (0156-4i).",
+        "desarrollo_ca": "L'alumnat escolta un àudio de simulació de torn i registra les incidències amb les tècniques habituals de la central (0831-4b). A partir d'unes vinyetes i d'una llista d'expressions, acaba un text en anglès ja començat (0156-4f) i pren notes ràpides del que diuen les veus per deixar missatges (0156-4i).",
+        "evidencia_es": "Entrada de blog en inglés y cuaderno de notas tomadas durante la escucha.",
+        "evidencia_ca": "Entrada de blog en anglès i quadern de notes preses durant l'escolta.",
+        "dua_es": "Audio dividido en fragmentos con pausas y vocabulario de apoyo en un margen.",
+        "dua_ca": "Àudio dividit en fragments amb pauses i vocabulari de suport en un marge.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["e", "g"] },
-    "b": { "modulo": "0156", "ra": "RA2", "criterios": ["g"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "e",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Muchos programas de la central muestran avisos y errores en inglés que hay que interpretar para resolver contingencias.",
     "justificacion_ca": "Molts programes de la central mostren avisos i errors en anglès que cal interpretar per resoldre contingències.",
     "actividades": [
@@ -216,12 +601,52 @@
         "dua_ca": "Captures de pantalla i glossari tècnic.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Manual de supervivencia del soporte telemático",
+        "titulo_ca": "Manual de supervivència del suport telemàtic",
+        "contexto_es": "Un proveedor internacional de dispositivos de teleasistencia con delegación en Palma envía manuales en inglés y pide al alumnado una versión útil para el personal.",
+        "contexto_ca": "Un proveïdor internacional de dispositius de teleassistència amb delegació a Palma envia manuals en anglès i demana a l'alumnat una versió útil per al personal.",
+        "desarrollo_es": "El alumnado usa las aplicaciones y herramientas telemáticas de la central para seguir un manual en inglés (0831-1e), interpreta los avisos y mensajes de error que le llegan por pantalla (0156-2g) y recopila en una tabla las incidencias más habituales con su solución (0831-1g).",
+        "desarrollo_ca": "L'alumnat usa les aplicacions i eines telemàtiques de la central per seguir un manual en anglès (0831-1e), interpreta els avisos i missatges d'error que li arriben per pantalla (0156-2g) i recopila en una taula les incidències més habituals amb la seva solució (0831-1g).",
+        "evidencia_es": "Tabla de incidencias con su traducción y captura de los pasos seguidos en la aplicación.",
+        "evidencia_ca": "Taula d'incidències amb la seva traducció i captura dels passos seguits a l'aplicació.",
+        "dua_es": "Capturas anotadas del manual y diccionario técnico en línea permitido durante toda la tarea.",
+        "dua_ca": "Captures anotades del manual i diccionari tècnic en línia permès durant tota la tasca.",
+        "metodologia_es": "aprendizaje basado en productos.",
+        "metodologia_ca": "aprenentatge basat en productes."
+      },
+      {
+        "titulo_es": "Escape room: la central está bloqueada",
+        "titulo_ca": "Escape room: la central està bloquejada",
+        "contexto_es": "En una jornada del ciclo en Manacor, el grupo diseña una sala de escape donde el equipo debe reparar un fallo informático con mensajes solo en inglés.",
+        "contexto_ca": "En una jornada del cicle a Manacor, el grup dissenya una sala d'escapada on l'equip ha de reparar una fallada informàtica amb missatges només en anglès.",
+        "desarrollo_es": "Cada equipo resuelve pruebas encadenadas: abre y maneja los programas de teleasistencia (0831-1e), averigua qué dicen los avisos recibidos por correo y por pantalla (0156-2g) y sabe qué hacer en las contingencias más comunes de las herramientas telemáticas (0831-1g).",
+        "desarrollo_ca": "Cada equip resol proves encadenades: obri i maneja els programes de teleassistència (0831-1e), esbrina què diuen els avisos rebuts per correu i per pantalla (0156-2g) i sap què fer en les contingències més comunes de les eines telemàtiques (0831-1g).",
+        "evidencia_es": "Hoja de pistas resuelta y registro del tiempo de cada prueba superada.",
+        "evidencia_ca": "Full de pistes resolt i registre del temps de cada prova superada.",
+        "dua_es": "Pistas graduadas en tres niveles de ayuda y reparto de tareas según las fortalezas de cada persona.",
+        "dua_ca": "Pistes graduades en tres nivells d'ajuda i repartiment de tasques segons les fortaleses de cada persona.",
+        "metodologia_es": "gamificación con escape room.",
+        "metodologia_ca": "gamificació amb escape room."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA3", "criterios": ["c"] },
-    "b": { "modulo": "0156", "ra": "RA4", "criterios": ["c"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0156",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Una guía escrita en inglés y bien organizada ayuda a explicar el terminal a personas usuarias extranjeras.",
     "justificacion_ca": "Una guia escrita en anglès i ben organitzada ajuda a explicar el terminal a persones usuàries estrangeres.",
     "actividades": [
@@ -238,12 +663,53 @@
         "dua_ca": "Model de guia amb imatges i revisió entre iguals.",
         "metodologia_es": "aprendizaje basado en productos.",
         "metodologia_ca": "aprenentatge basat en productes."
+      },
+      {
+        "titulo_es": "Entrega del terminal a una visitante alemana",
+        "titulo_ca": "Lliurament del terminal a una visitant alemanya",
+        "contexto_es": "Una mujer alemana de 80 años pasa el invierno en Pollença y la central le instala un terminal de teleasistencia con ayuda de una persona intérprete.",
+        "contexto_ca": "Una dona alemanya de 80 anys passa l'hivern a Pollença i la central li instal·la un terminal de teleassistència amb l'ajuda d'una persona intèrpret.",
+        "desarrollo_es": "Durante un juego de rol, el alumnado explica a la persona usuaria qué ofrece el servicio y cómo se maneja el terminal y sus accesorios, con ritmo, vocabulario y ejemplos ajustados a su edad y a su nivel de idioma (0831-3c). Después entrega por escrito un resumen en inglés cuyas ideas siguen un orden lógico y bien enlazado (0156-4c).",
+        "desarrollo_ca": "Durant un joc de rol, l'alumnat explica a la persona usuària què ofereix el servei i com es maneja el terminal i els seus accessoris, amb ritme, vocabulari i exemples ajustats a la seva edat i al seu nivell d'idioma (0831-3c). Després lliura per escrit un resum en anglès les idees del qual segueixen un ordre lògic i ben enllaçat (0156-4c).",
+        "evidencia_es": "Resumen escrito en inglés y grabación de la explicación oral a la persona usuaria.",
+        "evidencia_ca": "Resum escrit en anglès i gravació de l'explicació oral a la persona usuària.",
+        "dua_es": "Ficha con imágenes del terminal y conectores de ejemplo para estructurar el resumen.",
+        "dua_ca": "Fitxa amb imatges del terminal i connectors d'exemple per estructurar el resum.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Instrucciones de uso a la medida de cada persona",
+        "titulo_ca": "Instruccions d'ús a mida de cada persona",
+        "contexto_es": "Una asociación de mayores extranjeros de Santanyí pide folletos distintos según la autonomía, la vista y el idioma de cada socio.",
+        "contexto_ca": "Una associació de grans estrangers de Santanyí demana fulletons diferents segons l'autonomia, la vista i l'idioma de cada soci.",
+        "desarrollo_es": "Usando perfiles ficticios de personas usuarias, el grupo piensa qué necesita cada una y adapta la explicación de las prestaciones y del manejo de los dispositivos (0831-3c). Con ese criterio redacta en inglés una ficha para cada perfil, cuidando que las ideas se presenten con orden y de forma cohesionada (0156-4c).",
+        "desarrollo_ca": "Usant perfils fictícies de persones usuàries, el grup pensa què necessita cadascuna i adapta l'explicació de les prestacions i del maneig dels dispositius (0831-3c). Amb aquest criteri redacta en anglès una fitxa per a cada perfil, tenint cura que les idees es presentin amb ordre i de manera cohesionada (0156-4c).",
+        "evidencia_es": "Tres fichas de uso en inglés adaptadas a tres perfiles distintos.",
+        "evidencia_ca": "Tres fitxes d'ús en anglès adaptades a tres perfils diferents.",
+        "dua_es": "Mapa de empatía impreso y plantilla de ficha con apartados rotulados.",
+        "dua_ca": "Mapa d'empatia imprès i plantilla de fitxa amb apartats retolats.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["f"] },
-    "b": { "modulo": "1708", "ra": "RA4", "criterios": ["e", "f"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
     "justificacion_es": "Los terminales y dispositivos de teleasistencia tienen un ciclo de vida que acaba en residuos electrónicos.",
     "justificacion_ca": "Els terminals i dispositius de teleassistència tenen un cicle de vida que acaba en residus electrònics.",
     "actividades": [
@@ -260,12 +726,53 @@
         "dua_ca": "Equips reals per manipular i diagrama per completar.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Dónde acaba un pulsador de emergencia",
+        "titulo_ca": "On acaba un polsador d'emergència",
+        "contexto_es": "Un gestor de residuos de Mallorca explica que cada año llegan al punto limpio miles de aparatos electrónicos de servicios asistenciales.",
+        "contexto_ca": "Un gestor de residus de Mallorca explica que cada any arriben al punt net milers d'aparells electrònics de serveis assistencials.",
+        "desarrollo_es": "El alumnado revisa el funcionamiento de pulsadores, medallones y baterías de teleasistencia (0831-1f), investiga qué materiales y fases de producción tiene un pulsador y qué criterios sostenibles los acompañan (1708-4f) y dibuja el recorrido del aparato desde su fabricación hasta su desecho (1708-4e).",
+        "desarrollo_ca": "L'alumnat revisa el funcionament de polsadors, medallons i bateries de teleassistència (0831-1f), investiga quins materials i fases de producció té un polsador i quins criteris sostenibles els acompanyen (1708-4f) i dibuixa el recorregut de l'aparell des de la fabricació fins al rebuig (1708-4e).",
+        "evidencia_es": "Infografía del recorrido del dispositivo con su ficha de revisión técnica.",
+        "evidencia_ca": "Infografia del recorregut del dispositiu amb la seva fitxa de revisió tècnica.",
+        "dua_es": "Fuentes de consulta en lectura fácil y posibilidad de hacer la infografía en papel o digital.",
+        "dua_ca": "Fonts de consulta en lectura fàcil i possibilitat de fer la infografia en paper o digital.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
+      },
+      {
+        "titulo_es": "Mesa redonda sobre renovar o reparar dispositivos",
+        "titulo_ca": "Taula rodona sobre renovar o reparar dispositius",
+        "contexto_es": "El consell insular debate si conviene sustituir cada cinco años los terminales de teleasistencia o repararlos para alargar su vida útil.",
+        "contexto_ca": "El consell insular debat si convé substituir cada cinc anys els terminals de teleassistència o reparar-los per allargar-ne la vida útil.",
+        "desarrollo_es": "Cada grupo defiende un papel (técnica de mantenimiento, fabricante, gestora pública o ecologista) y primero comprueba el estado real de un lote de dispositivos (0831-1f). Argumenta usando datos de su ciclo de vida (1708-4e) y de los procesos de fabricación y criterios de sostenibilidad que se aplican (1708-4f).",
+        "desarrollo_ca": "Cada grup defensa un paper (tècnica de manteniment, fabricant, gestora pública o ecologista) i primer comprova l'estat real d'un lot de dispositius (0831-1f). Argumenta usant dades del seu cicle de vida (1708-4e) i dels processos de fabricació i criteris de sostenibilitat que s'apliquen (1708-4f).",
+        "evidencia_es": "Acta de la mesa redonda con la decisión consensuada y los datos que la sostienen.",
+        "evidencia_ca": "Acta de la taula rodona amb la decisió consensuada i les dades que la sostenen.",
+        "dua_es": "Tarjetas de rol con argumentos de arranque y moderación con turnos de palabra visibles.",
+        "dua_ca": "Targetes de rol amb arguments d'arrencada i moderació amb torns de paraula visibles.",
+        "metodologia_es": "debate con roles.",
+        "metodologia_ca": "debat amb rols."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["b"] },
-    "b": { "modulo": "1708", "ra": "RA5", "criterios": ["d", "f"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA5",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
     "justificacion_es": "Organizar el puesto de operador incluye reducir su consumo energético y de material.",
     "justificacion_ca": "Organitzar el lloc d'operador inclou reduir-ne el consum energètic i de material.",
     "actividades": [
@@ -282,12 +789,53 @@
         "dua_ca": "Mesurador de consum i plantilla d'auditoria guiada.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Medimos la huella energética de la sala",
+        "titulo_ca": "Mesurem l'empremta energètica de la sala",
+        "contexto_es": "La central de un ayuntamiento de Mallorca quiere rebajar su factura eléctrica y estudia los hábitos de uso de pantallas y luces de la sala de operadores.",
+        "contexto_ca": "La central d'un ajuntament de Mallorca vol rebaixar la seva factura elèctrica i estudia els hàbits d'ús de pantalles i llums de la sala d'operadors.",
+        "desarrollo_es": "Con un medidor de consumo, el alumnado registra el gasto de equipos, iluminación y climatización de su puesto y valora el efecto de sus rutinas diarias y profesionales (1708-5d). Reordena el espacio con orden, limpieza y seguridad (0831-1b) y prueba medidas como apagar equipos o aprovechar la luz natural (1708-5f).",
+        "desarrollo_ca": "Amb un mesurador de consum, l'alumnat registra la despesa d'equips, il·luminació i climatització del seu lloc i valora l'efecte de les seves rutines diàries i professionals (1708-5d). Reordena l'espai amb ordre, neteja i seguretat (0831-1b) i prova mesures com apagar equips o aprofitar la llum natural (1708-5f).",
+        "evidencia_es": "Tabla de consumos antes y después y cartel con los cambios aplicados.",
+        "evidencia_ca": "Taula de consums abans i després i cartell amb els canvis aplicats.",
+        "dua_es": "Gráficos de barras en blanco para volcar los datos y pareja de apoyo en las mediciones.",
+        "dua_ca": "Gràfics de barres en blanc per abocar-hi les dades i parella de suport en els mesuraments.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Brigada verde en la central de teleasistencia",
+        "titulo_ca": "Brigada verda a la central de teleassistència",
+        "contexto_es": "Un instituto de Ciutadella ofrece su aula de prácticas como central piloto y el alumnado actúa como brigada de mejora ambiental durante una semana.",
+        "contexto_ca": "Un institut de Ciutadella ofereix la seva aula de pràctiques com a central pilot i l'alumnat actua com a brigada de millora ambiental durant una setmana.",
+        "desarrollo_es": "Como aprendizaje-servicio para el propio centro, el grupo ordena y limpia los puestos de operador según criterios de seguridad (0831-1b), calcula el impacto de las actividades que allí se realizan (1708-5d) y pone en marcha medidas de ahorro de papel, energía y tóner (1708-5f).",
+        "desarrollo_ca": "Com a aprenentatge-servei per al propi centre, el grup ordena i neteja els llocs d'operador segons criteris de seguretat (0831-1b), calcula l'impacte de les activitats que s'hi duen a terme (1708-5d) i posa en marxa mesures d'estalvi de paper, energia i tòner (1708-5f).",
+        "evidencia_es": "Informe de la brigada con medidas implantadas y fotografías del espacio.",
+        "evidencia_ca": "Informe de la brigada amb mesures implantades i fotografies de l'espai.",
+        "dua_es": "Reparto de funciones por intereses y carteles con pictogramas para las rutinas de ahorro.",
+        "dua_ca": "Repartiment de funcions per interessos i cartells amb pictogrames per a les rutines d'estalvi.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA2", "criterios": ["c"] },
-    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["c", "d"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
     "justificacion_es": "Las agendas de llamadas son una medida concreta para reducir el impacto de retos sociales como la soledad o el aislamiento.",
     "justificacion_ca": "Les agendes de trucades són una mesura concreta per reduir l'impacte de reptes socials com la soledat o l'aïllament.",
     "actividades": [
@@ -304,12 +852,52 @@
         "dua_ca": "Mapa de la comarca i fitxes de persones usuàries.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Soledad no deseada: diseñamos un plan de llamadas",
+        "titulo_ca": "Soledat no desitjada: dissenyem un pla de trucades",
+        "contexto_es": "Un ayuntamiento del Raiguer detecta que muchas personas mayores viven solas y sin contacto y propone un servicio telefónico de compañía.",
+        "contexto_ca": "Un ajuntament del Raiguer detecta que moltes persones grans viuen soles i sense contacte i proposa un servei telefònic de companyia.",
+        "desarrollo_es": "Con una dinámica de design thinking, el grupo analiza cómo afecta la soledad a las personas y a los sectores productivos (1708-2c) y define acciones para reducirla (1708-2d). Con ello construye un calendario de llamadas ordenado por número, tipo y prioridad siguiendo el protocolo (0831-2c).",
+        "desarrollo_ca": "Amb una dinàmica de design thinking, el grup analitza com afecta la soledat les persones i els sectors productius (1708-2c) i defineix accions per reduir-la (1708-2d). Amb això construeix un calendari de trucades ordenat per nombre, tipus i prioritat seguint el protocol (0831-2c).",
+        "evidencia_es": "Mapa de empatía, prototipo de calendario y breve justificación de las acciones elegidas.",
+        "evidencia_ca": "Mapa d'empatia, prototip de calendari i breu justificació de les accions escollides.",
+        "dua_es": "Calendario con colores por prioridad y plantillas de lluvia de ideas en formato mural.",
+        "dua_ca": "Calendari amb colors per prioritat i plantilles de pluja d'idees en format mural.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
+      },
+      {
+        "titulo_es": "Llamadas con sentido: un voluntariado en el barrio",
+        "titulo_ca": "Trucades amb sentit: un voluntariat al barri",
+        "contexto_es": "Una asociación vecinal de Palma busca jóvenes que llamen cada semana a personas mayores aisladas del barrio de Son Gotleu.",
+        "contexto_ca": "Una associació veïnal de Palma cerca joves que truquin cada setmana a persones grans aïllades del barri de Son Gotleu.",
+        "desarrollo_es": "En un proyecto de aprendizaje-servicio, el alumnado programa las llamadas según número, tipo y prioridad del protocolo (0831-2c) y explica a la asociación cómo el aislamiento afecta a la salud y a la economía del municipio (1708-2c). Concluye proponiendo medidas que reduzcan esos impactos sociales (1708-2d).",
+        "desarrollo_ca": "En un projecte d'aprenentatge-servei, l'alumnat programa les trucades segons nombre, tipus i prioritat del protocol (0831-2c) i explica a l'associació com l'aïllament afecta la salut i l'economia del municipi (1708-2c). Conclou proposant mesures que redueixin aquests impactes socials (1708-2d).",
+        "evidencia_es": "Programa semanal de llamadas y nota informativa para la asociación vecinal.",
+        "evidencia_ca": "Programa setmanal de trucades i nota informativa per a l'associació veïnal.",
+        "dua_es": "Guion de llamada con frases de arranque y opción de practicar antes con un compañero.",
+        "dua_ca": "Guió de trucada amb frases d'arrencada i opció de practicar abans amb un company.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA4", "criterios": ["h"] },
-    "b": { "modulo": "1708", "ra": "RA3", "criterios": ["c"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA4",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "La emergencia climática crea nuevas necesidades en teleasistencia que obligan a actualizar la competencia profesional.",
     "justificacion_ca": "L'emergència climàtica crea noves necessitats en teleassistència que obliguen a actualitzar la competència professional.",
     "actividades": [
@@ -326,12 +914,52 @@
         "dua_ca": "Notícies de la DANA en format accessible i feina en grup.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Simulacro de ola de calor en la central",
+        "titulo_ca": "Simulacre d'onada de calor a la central",
+        "contexto_es": "Ante los episodios de calor extremo en verano, Protección Civil pide a las centrales de teleasistencia que ensayen cómo reforzar el servicio a personas vulnerables.",
+        "contexto_ca": "Davant els episodis de calor extrem a l'estiu, Protecció Civil demana a les centrals de teleassistència que assagin com reforçar el servei a persones vulnerables.",
+        "desarrollo_es": "Simulan un día de calor extremo y deciden qué acciones debe llevar a cabo la plantilla, desde su trabajo y desde su entorno, ante los retos ambientales que aparecen (1708-3c). Anotan qué conocimientos y habilidades nuevos necesitarían los profesionales y valoran por qué hay que actualizarse (0831-4h).",
+        "desarrollo_ca": "Simulen un dia de calor extrem i decideixen quines accions ha de dur a terme la plantilla, des de la seva feina i des del seu entorn, davant els reptes ambientals que apareixen (1708-3c). Anoten quins coneixements i habilitats nous necessitarien els professionals i valoren per què cal actualitzar-se (0831-4h).",
+        "evidencia_es": "Plan de actuación para el día de calor extremo y lista de competencias a reforzar.",
+        "evidencia_ca": "Pla d'actuació per al dia de calor extrem i llista de competències a reforçar.",
+        "dua_es": "Escenario del simulacro entregado por escrito y en vídeo, con tiempos de respuesta flexibles.",
+        "dua_ca": "Escenari del simulacre lliurat per escrit i en vídeo, amb temps de resposta flexibles.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      },
+      {
+        "titulo_es": "Entrevistamos a profesionales del cambio",
+        "titulo_ca": "Entrevistem professionals del canvi",
+        "contexto_es": "El colegio profesional de trabajo social de las Illes Balears invita al grupo a una jornada sobre cómo se adapta la atención a las crisis climáticas.",
+        "contexto_ca": "El col·legi professional de treball social de les Illes Balears convida el grup a una jornada sobre com s'adapta l'atenció a les crisis climàtiques.",
+        "desarrollo_es": "El alumnado prepara y realiza entrevistas a profesionales de la atención a personas mayores para averiguar qué acciones concretas hacen ante los retos ambientales y sociales (1708-3c) y cómo han tenido que cambiar su formación y su manera de trabajar en teleasistencia (0831-4h).",
+        "desarrollo_ca": "L'alumnat prepara i realitza entrevistes a professionals de l'atenció a persones grans per esbrinar quines accions concretes fan davant els reptes ambientals i socials (1708-3c) i com han hagut de canviar la seva formació i la seva manera de treballar en teleassistència (0831-4h).",
+        "evidencia_es": "Guion de entrevista y resumen audiovisual de lo aprendido.",
+        "evidencia_ca": "Guió d'entrevista i resum audiovisual del que s'ha après.",
+        "dua_es": "Preguntas orientativas sugeridas y elección entre entrevista presencial, telefónica o por escrito.",
+        "dua_ca": "Preguntes orientatives suggerides i elecció entre entrevista presencial, telefònica o per escrit.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["d"] },
-    "b": { "modulo": "1708", "ra": "RA6", "criterios": ["b"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "La calidad del servicio en todos los turnos es una de las expectativas principales de los grupos de interés de la teleasistencia.",
     "justificacion_ca": "La qualitat del servei a tots els torns és una de les expectatives principals dels grups d'interès de la teleassistència.",
     "actividades": [
@@ -348,12 +976,53 @@
         "dua_ca": "Plantilla de matriu amb exemples de cada grup.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Mesa de grupos de interés sobre el protocolo",
+        "titulo_ca": "Taula de grups d'interès sobre el protocol",
+        "contexto_es": "Una empresa de teleasistencia de Mallorca reúne a personas usuarias, familias, plantilla y administración para revisar la calidad de su servicio nocturno.",
+        "contexto_ca": "Una empresa de teleassistència de Mallorca reuneix persones usuàries, famílies, plantilla i administració per revisar la qualitat del seu servei nocturn.",
+        "desarrollo_es": "En un juego de rol, cada participante encarna a un grupo de interés y expresa qué espera de la empresa, y el alumnado analiza qué aspectos ASG tienen más peso para los objetivos del negocio (1708-6b). Defiende, con argumentos, por qué seguir los protocolos garantiza calidad en todos los turnos (0831-1d).",
+        "desarrollo_ca": "En un joc de rol, cada participant encarna un grup d'interès i expressa què espera de l'empresa, i l'alumnat analitza quins aspectes ASG tenen més pes per als objectius del negoci (1708-6b). Defensa, amb arguments, per què seguir els protocols garanteix qualitat en tots els torns (0831-1d).",
+        "evidencia_es": "Matriz de expectativas por grupo de interés y acta de los argumentos defendidos.",
+        "evidencia_ca": "Matriu d'expectatives per grup d'interès i acta dels arguments defensats.",
+        "dua_es": "Tarjetas de rol con frases de apoyo y matriz con ejemplos ya rellenados.",
+        "dua_ca": "Targetes de rol amb frases de suport i matriu amb exemples ja emplenats.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Rutas de calidad en tres estaciones de turno",
+        "titulo_ca": "Rutes de qualitat en tres estacions de torn",
+        "contexto_es": "En una feria de empleo de Palma, el ciclo monta un recorrido que enseña a visitantes cómo la calidad depende de lo que cada turno hace.",
+        "contexto_ca": "En una fira d'ocupació de Palma, el cicle munta un recorregut que ensenya als visitants com la qualitat depèn del que fa cada torn.",
+        "desarrollo_es": "En tres estaciones de turno (mañana, tarde y noche), el alumnado justifica por qué el protocolo mejora la calidad del servicio (0831-1d). En cada una recoge las expectativas de un grupo de interés y valora la importancia de esos aspectos para los objetivos de la empresa (1708-6b).",
+        "desarrollo_ca": "En tres estacions de torn (matí, tarda i nit), l'alumnat justifica per què el protocol millora la qualitat del servei (0831-1d). En cadascuna recull les expectatives d'un grup d'interès i valora la importància d'aquests aspectes per als objectius de l'empresa (1708-6b).",
+        "evidencia_es": "Tres paneles de estación con justificación del protocolo y expectativas recogidas.",
+        "evidencia_ca": "Tres panells d'estació amb justificació del protocol i expectatives recollides.",
+        "dua_es": "Paneles con esquema fijo y señales de color para indicar qué turno corresponde a cada estación.",
+        "dua_ca": "Panells amb esquema fix i senyals de color per indicar quin torn correspon a cada estació.",
+        "metodologia_es": "estaciones de aprendizaje.",
+        "metodologia_ca": "estacions d'aprenentatge."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "1708", "ra": "RA1", "criterios": ["b", "d"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "d"
+      ]
+    },
     "justificacion_es": "La teleasistencia es un servicio con un fuerte componente social cuyos aspectos ASG afectan a sus grupos de interés.",
     "justificacion_ca": "La teleassistència és un servei amb un fort component social els aspectes ASG del qual afecten els seus grups d'interès.",
     "actividades": [
@@ -370,12 +1039,53 @@
         "dua_ca": "Esquema ASG amb exemples i feina en trios.",
         "metodologia_es": "aprendizaje cooperativo.",
         "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Radiografía ASG de un servicio de teleasistencia",
+        "titulo_ca": "Radiografia ASG d'un servei de teleassistència",
+        "contexto_es": "Un fondo de inversión con sede en Palma quiere valorar a una empresa de teleasistencia y solicita al alumnado una ficha que describa su perfil social y ambiental.",
+        "contexto_ca": "Un fons d'inversió amb seu a Palma vol valorar una empresa de teleassistència i sol·licita a l'alumnat una fitxa que descrigui el seu perfil social i ambiental.",
+        "desarrollo_es": "El alumnado describe en un esquema las características, funciones y estructura del servicio (0831-1a), identifica qué asuntos ambientales, sociales y de gobernanza influyen en su desarrollo (1708-1b) y ordena los más relevantes para sus grupos de interés según el riesgo o la oportunidad que representan (1708-1d).",
+        "desarrollo_ca": "L'alumnat descriu en un esquema les característiques, funcions i estructura del servei (0831-1a), identifica quins assumptes ambientals, socials i de governança influeixen en el seu desenvolupament (1708-1b) i ordena els més rellevants per als seus grups d'interès segons el risc o l'oportunitat que representen (1708-1d).",
+        "evidencia_es": "Ficha ASG con el esquema del servicio y la tabla de riesgos y oportunidades ordenada.",
+        "evidencia_ca": "Fitxa ASG amb l'esquema del servei i la taula de riscos i oportunitats ordenada.",
+        "dua_es": "Modelo de ficha con ejemplos de otro sector y glosario ilustrado de los términos ASG.",
+        "dua_ca": "Model de fitxa amb exemples d'un altre sector i glossari il·lustrat dels termes ASG.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
+      },
+      {
+        "titulo_es": "Duelo de prioridades: ¿qué importa más?",
+        "titulo_ca": "Duel de prioritats: què importa més?",
+        "contexto_es": "El patronato de una fundación de atención a la dependencia de Menorca debe elegir qué aspectos ASG priorizar en su próximo plan estratégico.",
+        "contexto_ca": "El patronat d'una fundació d'atenció a la dependència de Menorca ha d'escollir quins aspectes ASG prioritzar en el seu proper pla estratègic.",
+        "desarrollo_es": "Tras estudiar cómo se organiza y qué hace el servicio de teleasistencia (0831-1a), dos bandos debaten qué asuntos ambientales, sociales y de gobernanza le influyen más (1708-1b) y justifican su ranking explicando para quién es importante cada aspecto y qué riesgos u oportunidades le supone (1708-1d).",
+        "desarrollo_ca": "Després d'estudiar com s'organitza i què fa el servei de teleassistència (0831-1a), dos bàndols debaten quins assumptes ambientals, socials i de governança li influeixen més (1708-1b) i justifiquen el seu rànquing explicant per a qui és important cada aspecte i quins riscos o oportunitats li suposa (1708-1d).",
+        "evidencia_es": "Ranking razonado de aspectos ASG y acta de la votación final del patronato.",
+        "evidencia_ca": "Rànquing raonat d'aspectes ASG i acta de la votació final del patronat.",
+        "dua_es": "Tarjetas de argumentos para ambos bandos y turnos de palabra cronometrados.",
+        "dua_ca": "Targetes d'arguments per als dos bàndols i torns de paraula cronometrats.",
+        "metodologia_es": "debate.",
+        "metodologia_ca": "debat."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["h"] },
-    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["b", "c"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
     "justificacion_es": "La tecnología transforma la atención, pero un liderazgo ético debe garantizar la confidencialidad y la intimidad.",
     "justificacion_ca": "La tecnologia transforma l'atenció, però un lideratge ètic ha de garantir la confidencialitat i la intimitat.",
     "actividades": [
@@ -392,12 +1102,52 @@
         "dua_ca": "Rols assignats amb arguments de partida.",
         "metodologia_es": "debate.",
         "metodologia_ca": "debat."
+      },
+      {
+        "titulo_es": "Caso: la hija pide acceso a las llamadas",
+        "titulo_ca": "Cas: la filla demana accés a les trucades",
+        "contexto_es": "La hija de una usuaria de Felanitx pide a la central que le deje escuchar las grabaciones de su madre para sentirse más tranquila.",
+        "contexto_ca": "La filla d'una usuària de Felanitx demana a la central que li deixi escoltar els enregistraments de sa mare per sentir-se més tranquil·la.",
+        "desarrollo_es": "En un análisis de caso, el alumnado explica a la familia por qué hay que proteger la información y el derecho a la intimidad de la usuaria (0831-1h), reflexiona sobre cómo una dirección con valores éticos y sostenibles decidiría (1710-5b) y valora hasta qué punto la tecnología de grabación cambia el modelo de trabajo (1710-5c).",
+        "desarrollo_ca": "En una anàlisi de cas, l'alumnat explica a la família per què cal protegir la informació i el dret a la intimitat de la usuària (0831-1h), reflexiona sobre com ho decidiria una direcció amb valors ètics i sostenibles (1710-5b) i valora fins a quin punt la tecnologia d'enregistrament canvia el model de treball (1710-5c).",
+        "evidencia_es": "Respuesta razonada a la familia y breve reflexión escrita sobre el caso.",
+        "evidencia_ca": "Resposta raonada a la família i breu reflexió escrita sobre el cas.",
+        "dua_es": "Caso narrado en texto y en audio, con preguntas guía para ordenar la reflexión.",
+        "dua_ca": "Cas narrat en text i en àudio, amb preguntes guia per ordenar la reflexió.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Código ético para una central conectada",
+        "titulo_ca": "Codi ètic per a una central connectada",
+        "contexto_es": "Una startup balear de teleasistencia con sensores domésticos necesita un decálogo interno antes de empezar a captar datos de sus clientes.",
+        "contexto_ca": "Una startup balear de teleassistència amb sensors domèstics necessita un decàleg intern abans de començar a captar dades dels seus clients.",
+        "desarrollo_es": "Con la metodología de design thinking, los equipos justifican qué normas de confidencialidad e intimidad debe incluir el decálogo (0831-1h), imaginan cómo lideraría ética y sosteniblemente la dirección de la empresa (1710-5b) y analizan qué papel juega la tecnología en la transformación del sector (1710-5c).",
+        "desarrollo_ca": "Amb la metodologia de design thinking, els equips justifiquen quines normes de confidencialitat i intimitat ha d'incloure el decàleg (0831-1h), imaginen com lideraria ètica i sosteniblement la direcció de l'empresa (1710-5b) i analitzen quin paper té la tecnologia en la transformació del sector (1710-5c).",
+        "evidencia_es": "Decálogo ético ilustrado y prototipo de cartel para la sala de operadores.",
+        "evidencia_ca": "Decàleg ètic il·lustrat i prototip de cartell per a la sala d'operadors.",
+        "dua_es": "Banco de ejemplos de códigos éticos y posibilidad de presentar el decálogo en vídeo.",
+        "dua_ca": "Banc d'exemples de codis ètics i possibilitat de presentar el decàleg en vídeo.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA2", "criterios": ["a"] },
-    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["e"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Acceder con seguridad a las aplicaciones del servicio es parte de la competencia digital que exige el sector.",
     "justificacion_ca": "Accedir amb seguretat a les aplicacions del servei és part de la competència digital que exigeix el sector.",
     "actividades": [
@@ -414,12 +1164,53 @@
         "dua_ca": "Tutorial pas a pas i ajuda entre iguals.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Cazadores de fallos de acceso",
+        "titulo_ca": "Caçadors de fallades d'accés",
+        "contexto_es": "Una central de teleasistencia de Palma ha tenido varios intentos de acceso no autorizado y organiza un concurso interno de seguridad digital.",
+        "contexto_ca": "Una central de teleassistència de Palma ha tingut diversos intents d'accés no autoritzat i organitza un concurs intern de seguretat digital.",
+        "desarrollo_es": "Por equipos, el alumnado entra en la aplicación con la clave asignada y supera pruebas sobre acceso seguro (0831-2a). Con cada acierto suma puntos en un marcador y refuerza las destrezas digitales que necesita para modernizar el sector (1710-3e).",
+        "desarrollo_ca": "Per equips, l'alumnat entra a l'aplicació amb la clau assignada i supera proves sobre accés segur (0831-2a). Amb cada encert suma punts en un marcador i reforça les destreses digitals que necessita per modernitzar el sector (1710-3e).",
+        "evidencia_es": "Marcador del concurso y registro de las pruebas superadas por cada equipo.",
+        "evidencia_ca": "Marcador del concurs i registre de les proves superades per cada equip.",
+        "dua_es": "Pruebas con distintos niveles de dificultad y guía visual de cada paso del acceso.",
+        "dua_ca": "Proves amb diferents nivells de dificultat i guia visual de cada pas de l'accés.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Mentores digitales: acceso a la aplicación",
+        "titulo_ca": "Mentors digitals: accés a l'aplicació",
+        "contexto_es": "El personal veterano de un servicio de teleasistencia de Ibiza tiene dudas con la nueva aplicación y pide ayuda al alumnado del ciclo.",
+        "contexto_ca": "El personal veterà d'un servei de teleassistència d'Eivissa té dubtes amb la nova aplicació i demana ajuda a l'alumnat del cicle.",
+        "desarrollo_es": "En grupos cooperativos, cada integrante domina una parte del proceso de entrada a la aplicación con su contraseña (0831-2a) y la enseña al resto. Después diseñan una breve sesión de formación que demuestre la competencia digital necesaria para mejorar procesos e innovar (1710-3e).",
+        "desarrollo_ca": "En grups cooperatius, cada integrant domina una part del procés d'entrada a l'aplicació amb la seva contrasenya (0831-2a) i l'ensenya a la resta. Després dissenyen una breu sessió de formació que demostri la competència digital necessària per millorar processos i innovar (1710-3e).",
+        "evidencia_es": "Guía de formación en formato breve y sesión impartida a un grupo de mayores.",
+        "evidencia_ca": "Guia de formació en format breu i sessió impartida a un grup de grans.",
+        "dua_es": "Reparto de partes del proceso por afinidad y ayuda de capturas de pantalla paso a paso.",
+        "dua_ca": "Repartiment de parts del procés per afinitat i ajuda de captures de pantalla pas a pas.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA3", "criterios": ["g"] },
-    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["a", "f"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA3",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "f"
+      ]
+    },
     "justificacion_es": "Las demandas que la central no puede resolver revelan problemas de las personas que pueden convertirse en oportunidades.",
     "justificacion_ca": "Les demandes que la central no pot resoldre revelen problemes de les persones que es poden convertir en oportunitats.",
     "actividades": [
@@ -436,12 +1227,53 @@
         "dua_ca": "Registre de trucades resumit i plantilla d'anàlisi de l'entorn.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Mapa de necesidades sin cubrir del municipio",
+        "titulo_ca": "Mapa de necessitats sense cobrir del municipi",
+        "contexto_es": "Un ayuntamiento de Menorca revisa qué peticiones recibe su servicio de teleasistencia y no puede atender, y busca ideas de proyecto para cubrirlas.",
+        "contexto_ca": "Un ajuntament de Menorca revisa quines peticions rep el seu servei de teleassistència i no pot atendre, i cerca idees de projecte per cobrir-les.",
+        "desarrollo_es": "Con el método de design thinking, el alumnado revisa qué recursos conviene activar ante cada demanda que llega a la central (0831-3g), extrae los problemas reales que sufren las personas destinatarias antes de proponer soluciones (1710-4a) y estudia cómo el entorno general y específico afecta a la idea emprendedora (1710-4f).",
+        "desarrollo_ca": "Amb el mètode de design thinking, l'alumnat revisa quins recursos convé activar davant cada demanda que arriba a la central (0831-3g), extreu els problemes reals que pateixen les persones destinatàries abans de proposar solucions (1710-4a) i estudia com l'entorn general i específic afecta la idea emprenedora (1710-4f).",
+        "evidencia_es": "Mapa de necesidades con tres problemas priorizados y un esbozo de idea emprendedora.",
+        "evidencia_ca": "Mapa de necessitats amb tres problemes prioritzats i un esbós d'idea emprenedora.",
+        "dua_es": "Mapa de partida con iconos y entrevistas ya transcritas para quien necesite más apoyo.",
+        "dua_ca": "Mapa de partida amb icones i entrevistes ja transcrites per a qui necessiti més suport.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
+      },
+      {
+        "titulo_es": "Hacemos de consultora de nuevas ideas",
+        "titulo_ca": "Fem de consultora de noves idees",
+        "contexto_es": "Una consultora de emprendimiento social de Palma recibe a una central de teleasistencia que quiere ampliar servicios y necesita estudiar su viabilidad.",
+        "contexto_ca": "Una consultora d'emprenedoria social de Palma rep una central de teleassistència que vol ampliar serveis i necessita estudiar-ne la viabilitat.",
+        "desarrollo_es": "En un juego de rol entre clientela y consultores, la central expone casos reales de demanda y los consultores deciden qué recursos habría que poner en marcha (0831-3g). Después identifican los problemas de las personas destinatarias detrás de esas peticiones (1710-4a) y analizan el entorno que condicionaría un posible negocio (1710-4f).",
+        "desarrollo_ca": "En un joc de rol entre clientela i consultors, la central exposa casos reals de demanda i els consultors decideixen quins recursos caldria posar en marxa (0831-3g). Després identifiquen els problemes de les persones destinatàries darrere d'aquestes peticions (1710-4a) i analitzen l'entorn que condicionaria un possible negoci (1710-4f).",
+        "evidencia_es": "Informe de consultoría con los problemas detectados y el análisis del entorno.",
+        "evidencia_ca": "Informe de consultoria amb els problemes detectats i l'anàlisi de l'entorn.",
+        "dua_es": "Fichas de rol con pautas de preguntas y esquema fijo para organizar el informe.",
+        "dua_ca": "Fitxes de rol amb pautes de preguntes i esquema fix per organitzar l'informe.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0831", "ra": "RA1", "criterios": ["d"] },
-    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["d", "f"] },
+    "a": {
+      "modulo": "0831",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA2",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
     "justificacion_es": "Mantener la calidad en turnos de 24 horas exige gestionar bien el tiempo y programar las tareas con previsión.",
     "justificacion_ca": "Mantenir la qualitat en torns de 24 hores exigeix gestionar bé el temps i programar les tasques amb previsió.",
     "actividades": [
@@ -458,6 +1290,34 @@
         "dua_ca": "Full de càlcul amb plantilla i exemple de setmana.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Liga de turnos: el protocolo bajo presión",
+        "titulo_ca": "Lliga de torns: el protocol sota pressió",
+        "contexto_es": "Una empresa de teleasistencia de Palma que trabaja las 24 horas quiere que sus equipos de mañana, tarde y noche compitan por la mejor puntuación de calidad.",
+        "contexto_ca": "Una empresa de teleassistència de Palma que treballa les 24 hores vol que els seus equips de matí, tarda i nit competeixin per la millor puntuació de qualitat.",
+        "desarrollo_es": "Cada equipo de la clase juega tres rondas con incidencias que se encadenan de un turno a otro; en cada ronda razona por qué el protocolo garantiza el mismo nivel de calidad (0831-1d), reparte el tiempo disponible entre los objetivos del equipo (1710-2d) y programa las tareas pensando en las posibles dificultades (1710-2f).",
+        "desarrollo_ca": "Cada equip de la classe juga tres rondes amb incidències que s'encadenen d'un torn a un altre; en cada ronda raona per què el protocol garanteix el mateix nivell de qualitat (0831-1d), reparteix el temps disponible entre els objectius de l'equip (1710-2d) i programa les tasques pensant en les possibles dificultats (1710-2f).",
+        "evidencia_es": "Tabla de puntuación de la liga y planificación horaria de cada equipo.",
+        "evidencia_ca": "Taula de puntuació de la lliga i planificació horària de cada equip.",
+        "dua_es": "Reloj de arena visible y tarjetas con ejemplos de imprevistos para quien necesite más guía.",
+        "dua_ca": "Rellotge de sorra visible i targetes amb exemples d'imprevistos per a qui necessiti més guia.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Qué pasó con el turno de las tres de la madrugada",
+        "titulo_ca": "Què va passar amb el torn de les tres de la matinada",
+        "contexto_es": "Un servicio de teleasistencia de Eivissa analiza un fallo ocurrido durante una guardia en la que dos avisos quedaron sin atender por falta de organización.",
+        "contexto_ca": "Un servei de teleassistència d'Eivissa analitza una fallada ocorreguda durant una guàrdia en què dos avisos van quedar sense atendre per manca d'organització.",
+        "desarrollo_es": "El alumnado estudia el informe del incidente y argumenta cómo habrían cambiado los hechos de seguirse los protocolos establecidos en cada turno (0831-1d). Después rehace el cuadrante con técnicas de gestión del tiempo para repartir el trabajo del equipo (1710-2d) y prevé las dificultades de las horas nocturnas al programar las actividades (1710-2f).",
+        "desarrollo_ca": "L'alumnat estudia l'informe de l'incident i argumenta com haurien canviat els fets de seguir-se els protocols establerts en cada torn (0831-1d). Després refà el quadrant amb tècniques de gestió del temps per repartir la feina de l'equip (1710-2d) i preveu les dificultats de les hores nocturnes en programar les activitats (1710-2f).",
+        "evidencia_es": "Análisis del incidente y cuadrante corregido con una previsión de imprevistos.",
+        "evidencia_ca": "Anàlisi de l'incident i quadrant corregit amb una previsió d'imprevistos.",
+        "dua_es": "Informe del incidente con línea de tiempo ilustrada y plantilla de cuadrante ya maquetada.",
+        "dua_ca": "Informe de l'incident amb línia de temps il·lustrada i plantilla de quadrant ja maquetada.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
       }
     ]
   }

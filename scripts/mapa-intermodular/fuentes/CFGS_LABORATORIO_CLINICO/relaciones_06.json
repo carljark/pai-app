@@ -1,7 +1,19 @@
 [
   {
-    "a": { "modulo": "1370", "ra": "RA6", "criterios": ["f"] },
-    "b": { "modulo": "0179", "ra": "RA4", "criterios": ["g"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Resumir una historia clínica en inglés exige dominar la terminología clínica en los dos idiomas.",
     "justificacion_ca": "Resumir una història clínica en anglès exigeix dominar la terminologia clínica en els dos idiomes.",
     "actividades": [
@@ -18,12 +30,54 @@
         "dua_ca": "Glossari bilingüe de nefrologia.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Ficha clínica bilingüe de un paciente con diabetes",
+        "titulo_ca": "Fitxa clínica bilingüe d'un pacient amb diabetis",
+        "contexto_es": "El archivo del hospital Universitario Son Espases recibe historias de pacientes derivados de otros países.",
+        "contexto_ca": "L'arxiu de l'hospital Universitari Son Espases rep històries de pacients derivats d'altres països.",
+        "desarrollo_es": "El alumnado redacta con terminología clínica precisa las alteraciones que presenta el paciente (1370-6f). Resume en inglés los apartados esenciales de la historia, eligiendo los recursos lingüísticos que mejor encajan con el destinatario (0179-4g).",
+        "desarrollo_ca": "L'alumnat redacta amb terminologia clínica precisa les alteracions que presenta el pacient (1370-6f). Resumeix en anglès els apartats essencials de la història, triant els recursos lingüístics que millor encaixen amb el destinatari (0179-4g).",
+        "evidencia_es": "Ficha clínica resumida en inglés.",
+        "evidencia_ca": "Fitxa clínica resumida en anglès.",
+        "dua_es": "Plantilla con apartados y conectores.",
+        "dua_ca": "Plantilla amb apartats i connectors.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Reto de traducción clínica para una ONG sanitaria",
+        "titulo_ca": "Repte de traducció clínica per a una ONG sanitària",
+        "contexto_es": "Una entidad que atiende a personas migrantes en Palma pide ayuda para entender informes médicos en inglés.",
+        "contexto_ca": "Una entitat que atén persones migrants a Palma demana ajuda per entendre informes mèdics en anglès.",
+        "desarrollo_es": "El reto consiste en preparar un resumen en inglés de varios informes médicos anonimizados, ajustando el léxico al lector (0179-4g). Para lograrlo, el alumnado revisa y emplea correctamente la terminología clínica de cada diagnóstico (1370-6f).",
+        "desarrollo_ca": "El repte consisteix a preparar un resum en anglès de diversos informes mèdics anonimitzats, ajustant el lèxic al lector (0179-4g). Per aconseguir-ho, l'alumnat revisa i fa servir correctament la terminologia clínica de cada diagnòstic (1370-6f).",
+        "evidencia_es": "Dossier de resúmenes en inglés con glosario.",
+        "evidencia_ca": "Dossier de resums en anglès amb glossari.",
+        "dua_es": "Informes con notas al margen.",
+        "dua_ca": "Informes amb notes al marge.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA7", "criterios": ["e"] },
-    "b": { "modulo": "0179", "ra": "RA1", "criterios": ["a", "b", "e"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA7",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b",
+        "e"
+      ]
+    },
     "justificacion_es": "Los vídeos divulgativos en inglés sobre el infarto ayudan a repasar la cardiopatía isquémica.",
     "justificacion_ca": "Els vídeos divulgatius en anglès sobre l'infart ajuden a repassar la cardiopatia isquèmica.",
     "actividades": [
@@ -40,12 +94,53 @@
         "dua_ca": "Vídeo amb subtítols en anglès.",
         "metodologia_es": "aula invertida.",
         "metodologia_ca": "aula inversa."
+      },
+      {
+        "titulo_es": "Podcast en inglés sobre hábitos y riesgo coronario",
+        "titulo_ca": "Podcast en anglès sobre hàbits i risc coronari",
+        "contexto_es": "La radio municipal de Manacor emite un espacio juvenil de salud y busca episodios cortos en inglés.",
+        "contexto_ca": "La ràdio municipal de Manacor emet un espai juvenil de salut i cerca episodis curts en anglès.",
+        "desarrollo_es": "Antes de grabar, el alumnado escucha dos episodios y señala la idea principal de cada uno (0179-1a) y la finalidad con la que se emiten (0179-1b). También identifica el hilo del relato y el papel de cada voz (0179-1e) y aprovecha esos testimonios para describir las características de la cardiopatía isquémica (1370-7e).",
+        "desarrollo_ca": "Abans de gravar, l'alumnat escolta dos episodis i assenyala la idea principal de cadascun (0179-1a) i la finalitat amb què s'emeten (0179-1b). També identifica el fil del relat i el paper de cada veu (0179-1e) i aprofita aquests testimonis per descriure les característiques de la cardiopatia isquèmica (1370-7e).",
+        "evidencia_es": "Episodio grabado y ficha de escucha.",
+        "evidencia_ca": "Episodi enregistrat i fitxa d'escolta.",
+        "dua_es": "Guion con marcas de tiempo.",
+        "dua_ca": "Guió amb marques de temps.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Coloquio en inglés sobre campañas contra el colesterol",
+        "titulo_ca": "Col·loqui en anglès sobre campanyes contra el colesterol",
+        "contexto_es": "Una campaña británica de salud cardiovascular llega al centro en forma de cuñas radiofónicas.",
+        "contexto_ca": "Una campanya britànica de salut cardiovascular arriba al centre en forma de falques radiofòniques.",
+        "desarrollo_es": "Con auriculares, cada grupo escucha tres cuñas y anota la idea principal de cada mensaje (0179-1a) y qué pretende conseguir cada emisor (0179-1b). En el coloquio reconstruye el hilo argumental y los papeles que aparecen (0179-1e) y los compara con las características de la cardiopatía isquémica (1370-7e).",
+        "desarrollo_ca": "Amb auriculars, cada grup escolta tres falques i anota la idea principal de cada missatge (0179-1a) i què pretén aconseguir cada emissor (0179-1b). Al col·loqui reconstrueix el fil argumental i els papers que hi apareixen (0179-1e) i els compara amb les característiques de la cardiopatia isquèmica (1370-7e).",
+        "evidencia_es": "Acta del coloquio con las conclusiones.",
+        "evidencia_ca": "Acta del col·loqui amb les conclusions.",
+        "dua_es": "Cuñas con transcripción y velocidad reducida.",
+        "dua_ca": "Falques amb transcripció i velocitat reduïda.",
+        "metodologia_es": "debate.",
+        "metodologia_ca": "debat."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA1", "criterios": ["h", "f"] },
-    "b": { "modulo": "0179", "ra": "RA4", "criterios": ["d"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA1",
+      "criterios": [
+        "h",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Etiquetar un esquema anatómico en inglés combina apoyos visuales con la terminología de posición.",
     "justificacion_ca": "Etiquetar un esquema anatòmic en anglès combina suports visuals amb la terminologia de posició.",
     "actividades": [
@@ -62,12 +157,53 @@
         "dua_ca": "Làmines mudes per completar.",
         "metodologia_es": "aprendizaje visual.",
         "metodologia_ca": "aprenentatge visual."
+      },
+      {
+        "titulo_es": "Gimnasio de términos de posición en inglés",
+        "titulo_ca": "Gimnàs de termes de posició en anglès",
+        "contexto_es": "El aula de prácticas del ciclo se convierte en un circuito con estaciones para repasar anatomía antes del examen.",
+        "contexto_ca": "L'aula de pràctiques del cicle es converteix en un circuit amb estacions per repassar anatomia abans de l'examen.",
+        "desarrollo_es": "En cada estación hay una lámina y una tarjeta en inglés que hay que completar con apoyos visuales y claves lingüísticas (0179-4d). Al pasar por todas, el alumnado enuncia los sistemas del organismo y su composición (1370-1f) y aplica la terminología de dirección y posición (1370-1h).",
+        "desarrollo_ca": "A cada estació hi ha una làmina i una targeta en anglès que cal emplenar amb suports visuals i claus lingüístiques (0179-4d). En passar per totes, l'alumnat enuncia els sistemes de l'organisme i la seva composició (1370-1f) i aplica la terminologia de direcció i posició (1370-1h).",
+        "evidencia_es": "Cuaderno de estaciones completado.",
+        "evidencia_ca": "Quadern d'estacions completat.",
+        "dua_es": "Códigos QR con audio de pronunciación.",
+        "dua_ca": "Codis QR amb àudio de pronunciació.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
+      },
+      {
+        "titulo_es": "Maqueta corporal rotulada para una visita guiada",
+        "titulo_ca": "Maqueta corporal retolada per a una visita guiada",
+        "contexto_es": "El instituto abre sus puertas en la semana cultural y el alumnado guiará a las familias por un cuerpo humano a escala.",
+        "contexto_ca": "L'institut obre les portes a la setmana cultural i l'alumnat guiarà les famílies per un cos humà a escala.",
+        "desarrollo_es": "Cada grupo construye una maqueta y completa las etiquetas en inglés con apoyos visuales y claves lingüísticas (0179-4d). Durante la visita enuncia los sistemas del organismo y su composición (1370-1f) y explica la posición de cada órgano con la terminología de dirección (1370-1h).",
+        "desarrollo_ca": "Cada grup construeix una maqueta i completa les etiquetes en anglès amb suports visuals i claus lingüístiques (0179-4d). Durant la visita enuncia els sistemes de l'organisme i la seva composició (1370-1f) i explica la posició de cada òrgan amb la terminologia de direcció (1370-1h).",
+        "evidencia_es": "Maqueta etiquetada y guion de la visita.",
+        "evidencia_ca": "Maqueta etiquetada i guió de la visita.",
+        "dua_es": "Etiquetas de colores distintos por sistema.",
+        "dua_ca": "Etiquetes de colors diferents per sistema.",
+        "metodologia_es": "aula invertida.",
+        "metodologia_ca": "aula inversa."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "0179", "ra": "RA5", "criterios": ["a", "c"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
     "justificacion_es": "Las costumbres alimentarias y de viaje de otros países influyen en las fuentes de infección de los turistas.",
     "justificacion_ca": "Els costums alimentaris i de viatge d'altres països influeixen en les fonts d'infecció dels turistes.",
     "actividades": [
@@ -84,12 +220,53 @@
         "dua_ca": "Mapa de països i costums.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Simulación de una inspección alimentaria en un hotel",
+        "titulo_ca": "Simulació d'una inspecció alimentària en un hotel",
+        "contexto_es": "Un hotel de Platja de Palma recibe la visita de salud pública tras varias quejas por gastroenteritis.",
+        "contexto_ca": "Un hotel de Platja de Palma rep la visita de salut pública després de diverses queixes per gastroenteritis.",
+        "desarrollo_es": "En la visita al hotel, el alumnado describe las características de las fuentes de infección que puede haber en una cocina, como el agua o los manipuladores (1370-4a). Después define los rasgos de las costumbres alimentarias de los huéspedes extranjeros (0179-5a) e identifica los valores y creencias que explican sus hábitos (0179-5c).",
+        "desarrollo_ca": "A la visita a l'hotel, l'alumnat descriu les característiques de les fonts d'infecció que hi pot haver en una cuina, com l'aigua o els manipuladors (1370-4a). Després defineix els trets dels costums alimentaris dels hostes estrangers (0179-5a) i identifica els valors i les creences que expliquen els seus hàbits (0179-5c).",
+        "evidencia_es": "Acta de inspección simulada con propuestas.",
+        "evidencia_ca": "Acta d'inspecció simulada amb propostes.",
+        "dua_es": "Lista de verificación con iconos.",
+        "dua_ca": "Llista de verificació amb icones.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      },
+      {
+        "titulo_es": "Guía de viaje saludable para el alumnado Erasmus",
+        "titulo_ca": "Guia de viatge saludable per a l'alumnat Erasmus",
+        "contexto_es": "El centro recibe estudiantes de intercambio y quiere prevenir infecciones durante sus primeras semanas en la isla.",
+        "contexto_ca": "El centre rep estudiants d'intercanvi i vol prevenir infeccions durant les seves primeres setmanes a l'illa.",
+        "desarrollo_es": "Tras una búsqueda guiada, el alumnado describe las fuentes de infección más habituales en los viajes y en los alimentos crudos (1370-4a). Con esa información define los rasgos de las costumbres de los países de origen (0179-5a) e identifica sus valores y creencias para dar consejos respetuosos (0179-5c).",
+        "desarrollo_ca": "Després d'una recerca guiada, l'alumnat descriu les fonts d'infecció més habituals en els viatges i en els aliments crus (1370-4a). Amb aquesta informació defineix els trets dels costums dels països d'origen (0179-5a) i identifica els seus valors i creences per donar consells respectuosos (0179-5c).",
+        "evidencia_es": "Guía breve ilustrada en dos idiomas.",
+        "evidencia_ca": "Guia breu il·lustrada en dos idiomes.",
+        "dua_es": "Fuentes web preseleccionadas y resumidas.",
+        "dua_ca": "Fonts web preseleccionades i resumides.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA8", "criterios": ["c"] },
-    "b": { "modulo": "0179", "ra": "RA1", "criterios": ["d", "h"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA8",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "d",
+        "h"
+      ]
+    },
     "justificacion_es": "Las charlas en inglés sobre dietas suelen mezclar datos con opiniones del ponente que hay que saber detectar.",
     "justificacion_ca": "Les xerrades en anglès sobre dietes solen barrejar dades amb opinions del ponent que cal saber detectar.",
     "actividades": [
@@ -106,12 +283,53 @@
         "dua_ca": "Transcripció del vídeo.",
         "metodologia_es": "pensamiento crítico.",
         "metodologia_ca": "pensament crític."
+      },
+      {
+        "titulo_es": "Estudio de un caso de escorbuto en un crucero",
+        "titulo_ca": "Estudi d'un cas d'escorbut en un creuer",
+        "contexto_es": "Un crucero que hace escala en Palma desembarca a un pasajero con síntomas de falta de vitamina C.",
+        "contexto_ca": "Un creuer que fa escala a Palma desembarca un passatger amb símptomes de manca de vitamina C.",
+        "desarrollo_es": "A partir del relato de un pasajero y de una entrevista al médico, se detecta el punto de vista y la actitud de cada interlocutor (0179-1d). El alumnado acepta comprender el mensaje de forma global sin retener cada palabra (0179-1h) y describe las consecuencias fisiopatológicas de la carencia alimenticia que sufre (1370-8c).",
+        "desarrollo_ca": "A partir del relat d'un passatger i d'una entrevista al metge, es detecta el punt de vista i l'actitud de cada interlocutor (0179-1d). L'alumnat accepta comprendre el missatge de manera global sense retenir cada paraula (0179-1h) i descriu les conseqüències fisiopatològiques de la carència alimentària que pateix (1370-8c).",
+        "evidencia_es": "Informe del caso con el análisis del relato.",
+        "evidencia_ca": "Informe del cas amb l'anàlisi del relat.",
+        "dua_es": "Audio con pausas marcadas.",
+        "dua_ca": "Àudio amb pauses marcades.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Problema real de una dieta insuficiente en un comedor social",
+        "titulo_ca": "Problema real d'una dieta insuficient en un menjador social",
+        "contexto_es": "Un comedor social de Palma detecta que muchas personas mayores apenas toman fruta ni verdura.",
+        "contexto_ca": "Un menjador social de Palma detecta que moltes persones grans gairebé no prenen fruita ni verdura.",
+        "desarrollo_es": "Partiendo de entrevistas en inglés a voluntarios, el alumnado identifica el punto de vista y la actitud de quien habla (0179-1d) y practica la comprensión global sin traducir palabra por palabra (0179-1h). Con esas pistas describe las consecuencias fisiopatológicas de las carencias alimenticias detectadas (1370-8c).",
+        "desarrollo_ca": "Partint d'entrevistes en anglès a voluntaris, l'alumnat identifica el punt de vista i l'actitud de qui parla (0179-1d) i practica la comprensió global sense traduir paraula per paraula (0179-1h). Amb aquestes pistes descriu les conseqüències fisiopatològiques de les carències alimentàries detectades (1370-8c).",
+        "evidencia_es": "Propuesta de mejora con justificación.",
+        "evidencia_ca": "Proposta de millora amb justificació.",
+        "dua_es": "Preguntas guía antes de cada audio.",
+        "dua_ca": "Preguntes guia abans de cada àudio.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA5", "criterios": ["f"] },
-    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["d", "f"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA4",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
     "justificacion_es": "La inteligencia artificial ya ayuda en el cribado de algunos cánceres, y el sector sanitario es uno de los más afectados.",
     "justificacion_ca": "La intel·ligència artificial ja ajuda en el cribratge d'alguns càncers, i el sector sanitari és un dels més afectats.",
     "actividades": [
@@ -128,12 +346,52 @@
         "dua_ca": "Notícies seleccionades.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Rediseñar el aviso de las mamografías del área de salud",
+        "titulo_ca": "Redissenyar l'avís de les mamografies de l'àrea de salut",
+        "contexto_es": "El área de salud de Menorca comprueba que muchas mujeres no acuden a las mamografías de cribado.",
+        "contexto_ca": "L'àrea de salut de Menorca comprova que moltes dones no acudeixen a les mamografies de cribratge.",
+        "desarrollo_es": "Los grupos revisan los sistemas de prevención y diagnóstico precoz del cáncer de mama (1370-5f) y localizan la sanidad entre los sectores donde la IA ya está más implantada (1665-4d). A continuación describen cómo la IA puede influir en el cribado y en el trabajo del laboratorio (1665-4f).",
+        "desarrollo_ca": "Els grups revisen els sistemes de prevenció i diagnòstic precoç del càncer de mama (1370-5f) i localitzen la sanitat entre els sectors on la IA ja està més implantada (1665-4d). A continuació descriuen com la IA pot influir en el cribratge i en la feina del laboratori (1665-4f).",
+        "evidencia_es": "Prototipo del aviso y memoria del proceso.",
+        "evidencia_ca": "Prototip de l'avís i memòria del procés.",
+        "dua_es": "Plantillas de bocetos y ejemplos previos.",
+        "dua_ca": "Plantilles d'esbossos i exemples previs.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Taller de prevención del melanoma para compañeros",
+        "titulo_ca": "Taller de prevenció del melanoma per a companys",
+        "contexto_es": "Antes de las actividades de playa, el centro propone un taller entre cursos sobre protección solar y detección temprana.",
+        "contexto_ca": "Abans de les activitats de platja, el centre proposa un taller entre cursos sobre protecció solar i detecció primerenca.",
+        "desarrollo_es": "Los alumnos de segundo curso preparan y tutorizan el taller sobre los sistemas de prevención y diagnóstico precoz del cáncer de piel (1370-5f). Presentan también una aplicación que analiza imágenes con IA y sitúan la sanidad como sector puntero en su implantación (1665-4d), describiendo su efecto en el diagnóstico (1665-4f).",
+        "desarrollo_ca": "Els alumnes de segon curs preparen i tutoritzen el taller sobre els sistemes de prevenció i diagnòstic precoç del càncer de pell (1370-5f). Presenten també una aplicació que analitza imatges amb IA i situen la sanitat com a sector punter en la seva implantació (1665-4d), tot descrivint el seu efecte en el diagnòstic (1665-4f).",
+        "evidencia_es": "Materiales del taller y ficha de autoevaluación.",
+        "evidencia_ca": "Materials del taller i fitxa d'autoavaluació.",
+        "dua_es": "Rol de tutor con guion de apoyo.",
+        "dua_ca": "Rol de tutor amb guió de suport.",
+        "metodologia_es": "tutoría entre iguales.",
+        "metodologia_ca": "tutoria entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA6", "criterios": ["b"] },
-    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["c"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Los dispositivos que detectan síntomas procesan los datos en el propio aparato antes de enviarlos.",
     "justificacion_ca": "Els dispositius que detecten símptomes processen les dades al mateix aparell abans d'enviar-les.",
     "actividades": [
@@ -150,12 +408,53 @@
         "dua_ca": "Vídeo del funcionament del rellotge.",
         "metodologia_es": "aprendizaje por indagación.",
         "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Monitor de constantes con aviso en el propio dispositivo",
+        "titulo_ca": "Monitor de constants amb avís al mateix dispositiu",
+        "contexto_es": "Una residencia de personas mayores de Ciutadella instala pulseras que avisan al personal si alguien se marea.",
+        "contexto_ca": "Una residència de persones grans de Ciutadella instal·la polseres que avisen el personal si algú es mareja.",
+        "desarrollo_es": "Con las pulseras instaladas, el alumnado describe la sintomatología más frecuente por aparatos que estos dispositivos pueden vigilar, como las caídas o las arritmias (1370-6b). Explica después qué datos procesa la pulsera en el propio aparato y cómo se relaciona ese tratamiento local con la nube (1665-3c).",
+        "desarrollo_ca": "Amb les polseres instal·lades, l'alumnat descriu la simptomatologia més freqüent per aparells que aquests dispositius poden vigilar, com les caigudes o les arrítmies (1370-6b). Explica després quines dades processa la polsera al mateix aparell i com es relaciona aquest tractament local amb el núvol (1665-3c).",
+        "evidencia_es": "Esquema del flujo de datos y ficha de síntomas.",
+        "evidencia_ca": "Esquema del flux de dades i fitxa de símptomes.",
+        "dua_es": "Diagrama del circuito ya iniciado.",
+        "dua_ca": "Diagrama del circuit ja iniciat.",
+        "metodologia_es": "aprendizaje experiencial.",
+        "metodologia_ca": "aprenentatge experiencial."
+      },
+      {
+        "titulo_es": "Termómetro inteligente en una farmacia de Alaior",
+        "titulo_ca": "Termòmetre intel·ligent en una farmàcia d'Alaior",
+        "contexto_es": "Una farmacia de Alaior prueba un termómetro que envía alertas cuando la fiebre sube de golpe.",
+        "contexto_ca": "Una farmàcia d'Alaior prova un termòmetre que envia alertes quan la febre puja de cop.",
+        "desarrollo_es": "Cada estudiante describe la sintomatología por aparatos más habitual en los procesos febriles (1370-6b). Investiga qué cálculo hace el termómetro antes de enviar el dato y por qué eso es un ejemplo de procesamiento en el borde relacionado con la nube (1665-3c).",
+        "desarrollo_ca": "Cada estudiant descriu la simptomatologia per aparells més habitual en els processos febrils (1370-6b). Investiga quin càlcul fa el termòmetre abans d'enviar la dada i per què això és un exemple de processament a la vora relacionat amb el núvol (1665-3c).",
+        "evidencia_es": "Informe del funcionamiento y tabla de síntomas.",
+        "evidencia_ca": "Informe del funcionament i taula de símptomes.",
+        "dua_es": "Glosario visual de términos de red.",
+        "dua_ca": "Glossari visual de termes de xarxa.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA7", "criterios": ["g"] },
-    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["b", "d"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA7",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "d"
+      ]
+    },
     "justificacion_es": "El teleictus aplica tecnologías habilitadoras a la atención del accidente cerebrovascular y abre nuevos servicios.",
     "justificacion_ca": "El teleictus aplica tecnologies habilitadores a l'atenció de l'accident cerebrovascular i obre nous serveis.",
     "actividades": [
@@ -172,12 +471,53 @@
         "dua_ca": "Vídeo divulgatiu del servei.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Código ictus en un centro de salud de Formentera",
+        "titulo_ca": "Codi ictus en un centre de salut de Formentera",
+        "contexto_es": "El centro de salud de Formentera activa el código ictus y necesita apoyo de un hospital de referencia por vía digital.",
+        "contexto_ca": "El centre de salut de Formentera activa el codi ictus i necessita suport d'un hospital de referència per via digital.",
+        "desarrollo_es": "Ante la activación del código ictus, el alumnado relaciona los trastornos hemodinámicos con los accidentes cerebrovasculares (1370-7g). Analiza qué tecnologías habilitadoras digitales sostienen el traslado de pruebas e imágenes (1665-2b) y qué nuevos mercados o servicios sanitarios han surgido a su alrededor (1665-2d).",
+        "desarrollo_ca": "Davant l'activació del codi ictus, l'alumnat relaciona els trastorns hemodinàmics amb els accidents cerebrovasculars (1370-7g). Analitza quines tecnologies habilitadores digitals sostenen el trasllat de proves i imatges (1665-2b) i quins nous mercats o serveis sanitaris han sorgit al seu voltant (1665-2d).",
+        "evidencia_es": "Mapa del proceso con las tecnologías implicadas.",
+        "evidencia_ca": "Mapa del procés amb les tecnologies implicades.",
+        "dua_es": "Esquema del proceso en blanco para completar.",
+        "dua_ca": "Esquema del procés en blanc per completar.",
+        "metodologia_es": "aprendizaje dialógico.",
+        "metodologia_ca": "aprenentatge dialògic."
+      },
+      {
+        "titulo_es": "Carrera solidaria contra el ictus con app de seguimiento",
+        "titulo_ca": "Cursa solidària contra l'ictus amb app de seguiment",
+        "contexto_es": "La asociación de pacientes de ictus de Mallorca organiza una carrera popular y busca voluntariado del ciclo.",
+        "contexto_ca": "L'associació de pacients d'ictus de Mallorca organitza una cursa popular i cerca voluntariat del cicle.",
+        "desarrollo_es": "Divididos en comisiones, el alumnado relaciona los trastornos hemodinámicos con los accidentes cerebrovasculares que se explican en la carrera (1370-7g). Cada equipo explica cómo la aplicación de seguimiento usa tecnologías habilitadoras para funcionar (1665-2b) y qué nuevos servicios de salud preventiva han aparecido con ellas (1665-2d).",
+        "desarrollo_ca": "Dividits en comissions, l'alumnat relaciona els trastorns hemodinàmics amb els accidents cerebrovasculars que s'expliquen a la cursa (1370-7g). Cada equip explica com l'aplicació de seguiment fa servir tecnologies habilitadores per funcionar (1665-2b) i quins nous serveis de salut preventiva han aparegut amb aquestes (1665-2d).",
+        "evidencia_es": "Póster del equipo y conclusiones del voluntariado.",
+        "evidencia_ca": "Pòster de l'equip i conclusions del voluntariat.",
+        "dua_es": "Reparto de tareas por perfiles del equipo.",
+        "dua_ca": "Repartiment de tasques per perfils de l'equip.",
+        "metodologia_es": "aprendizaje colaborativo.",
+        "metodologia_ca": "aprenentatge col·laboratiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA8", "criterios": ["b"] },
-    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["e", "d"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA8",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "d"
+      ]
+    },
     "justificacion_es": "Los sensores de glucosa conectados permiten seguir de cerca alteraciones metabólicas como la diabetes.",
     "justificacion_ca": "Els sensors de glucosa connectats permeten seguir de prop alteracions metabòliques com la diabetis.",
     "actividades": [
@@ -194,12 +534,53 @@
         "dua_ca": "Sensor real per observar.",
         "metodologia_es": "aprendizaje por indagación.",
         "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Rediseñar la consulta de endocrinología de Manacor",
+        "titulo_ca": "Redissenyar la consulta d'endocrinologia de Manacor",
+        "contexto_es": "El centro de salud de Manacor quiere seguir a los pacientes con trastornos metabólicos mediante sensores conectados que avisen al personal.",
+        "contexto_ca": "El centre de salut de Manacor vol fer el seguiment dels pacients amb trastorns metabòlics mitjançant sensors connectats que avisin el personal.",
+        "desarrollo_es": "El alumnado asume el reto de rediseñar ese seguimiento: describe las alteraciones endocrino-metabólicas más frecuentes y sus señales clínicas (1370-8b). Decide qué datos conviene enviar a la nube y con qué ventajas de disponibilidad (1665-3e), y ubica el procesado inmediato del sensor y el análisis remoto entre las capas fog y mist (1665-3d).",
+        "desarrollo_ca": "L'alumnat assumeix el repte de redissenyar aquest seguiment: descriu les alteracions endocrinometabòliques més freqüents i els seus senyals clínics (1370-8b). Decideix quines dades convé enviar al núvol i amb quins avantatges de disponibilitat (1665-3e), i ubica el processament immediat del sensor i l'anàlisi remot entre les capes fog i mist (1665-3d).",
+        "evidencia_es": "Plano de la consulta conectada con las alertas previstas.",
+        "evidencia_ca": "Plànol de la consulta connectada amb les alertes previstes.",
+        "dua_es": "Esquema de capas con colores para ordenar las decisiones.",
+        "dua_ca": "Esquema de capes amb colors per ordenar les decisions.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Simulación de una alerta nocturna de cetonas",
+        "titulo_ca": "Simulació d'una alerta nocturna de cetones",
+        "contexto_es": "En un laboratorio de urgencias de Ibiza entra a las tres de la madrugada un aviso del sensor de un adolescente con diabetes descompensada.",
+        "contexto_ca": "En un laboratori d'urgències d'Eivissa entra a les tres de la matinada un avís del sensor d'un adolescent amb diabetis descompensada.",
+        "desarrollo_es": "El grupo representa por turnos la guardia e interpreta el cuadro endocrino-metabólico que explica la descompensación (1370-8b). Después traza el camino del dato desde el sensor hasta el servidor del hospital, indicando las ventajas del núvol para avisar a distancia (1665-3e) y decidiendo qué parte se resuelve en las capas fog y mist (1665-3d).",
+        "desarrollo_ca": "El grup representa per torns la guàrdia i interpreta el quadre endocrinometabòlic que explica la descompensació (1370-8b). Després traça el camí de la dada des del sensor fins al servidor de l'hospital, indicant els avantatges del núvol per avisar a distància (1665-3e) i decidint quina part es resol en les capes fog i mist (1665-3d).",
+        "evidencia_es": "Guion de la guardia simulada y esquema del flujo de datos.",
+        "evidencia_ca": "Guió de la guàrdia simulada i esquema del flux de dades.",
+        "dua_es": "Ficha de registro con pictogramas para anotar el turno.",
+        "dua_ca": "Fitxa de registre amb pictogrames per anotar el torn.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA2", "criterios": ["f", "c"] },
-    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["c"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA2",
+      "criterios": [
+        "f",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Los sistemas de apoyo al diagnóstico combinan análisis de datos y aprendizaje automático sobre los elementos de la patología.",
     "justificacion_ca": "Els sistemes de suport al diagnòstic combinen anàlisi de dades i aprenentatge automàtic sobre els elements de la patologia.",
     "actividades": [
@@ -216,12 +597,52 @@
         "dua_ca": "Esquema de relacions.",
         "metodologia_es": "pensamiento crítico.",
         "metodologia_ca": "pensament crític."
+      },
+      {
+        "titulo_es": "Clase invertida sobre una analítica anómala",
+        "titulo_ca": "Classe invertida sobre una analítica anòmala",
+        "contexto_es": "El alumnado llega a clase tras visionar en casa un vídeo sobre una analítica alterada y con las dudas ya anotadas.",
+        "contexto_ca": "L'alumnat arriba a classe després de visionar a casa un vídeo sobre una analítica alterada i amb els dubtes ja anotats.",
+        "desarrollo_es": "En el aula se contrastan los elementos que constituyen la patología que aparece en el vídeo (1370-2c) y se clasifican los procedimientos diagnósticos complementarios que se le podrían pedir (1370-2f). Un grupo explica después cómo un sistema entrenado con grandes volúmenes de datos llega a sugerir pruebas, distinguiendo análisis de datos, aprendizaje automático e IA (1665-5c).",
+        "desarrollo_ca": "A l'aula es contrasten els elements que constitueixen la patologia que apareix al vídeo (1370-2c) i es classifiquen els procediments diagnòstics complementaris que se li podrien demanar (1370-2f). Un grup explica després com un sistema entrenat amb grans volums de dades arriba a suggerir proves, distingint anàlisi de dades, aprenentatge automàtic i IA (1665-5c).",
+        "evidencia_es": "Mural comparativo de la analítica y del sistema entrenado.",
+        "evidencia_ca": "Mural comparatiu de l'analítica i del sistema entrenat.",
+        "dua_es": "Vídeo con subtítulos y guion de visionado.",
+        "dua_ca": "Vídeo amb subtítols i guió de visionat.",
+        "metodologia_es": "aula invertida.",
+        "metodologia_ca": "classe invertida."
+      },
+      {
+        "titulo_es": "Rompecabezas de pruebas diagnósticas por especialidades",
+        "titulo_ca": "Trencaclosques de proves diagnòstiques per especialitats",
+        "contexto_es": "El laboratorio del hospital recibe peticiones analíticas muy distintas y cada técnico domina solo unas cuantas.",
+        "contexto_ca": "El laboratori de l'hospital rep peticions analítiques molt diverses i cada tècnic en domina només unes quantes.",
+        "desarrollo_es": "Cada estudiante se especializa en un bloque de pruebas y después lo enseña a su grupo, hasta describir entre todos los elementos que constituyen las patologías de los casos (1370-2c). El grupo clasifica los procedimientos diagnósticos complementarios de cada caso (1370-2f) y valora cómo cambia la ayuda de un sistema de IA cuando se alimenta con más datos de análisis y aprendizaje automático (1665-5c).",
+        "desarrollo_ca": "Cada estudiant s'especialitza en un bloc de proves i després l'ensenya al seu grup, fins a descriure entre tots els elements que constitueixen les patologies dels casos (1370-2c). El grup classifica els procediments diagnòstics complementaris de cada cas (1370-2f) i valora com canvia l'ajuda d'un sistema d'IA quan s'alimenta amb més dades d'anàlisi i aprenentatge automàtic (1665-5c).",
+        "evidencia_es": "Tabla de especialidades con las pruebas asignadas.",
+        "evidencia_ca": "Taula d'especialitats amb les proves assignades.",
+        "dua_es": "Textos de cada bloque con el vocabulario resaltado.",
+        "dua_ca": "Textos de cada bloc amb el vocabulari ressaltat.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["h"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA5",
+      "criterios": [
+        "h"
+      ]
+    },
     "justificacion_es": "La vigilancia epidemiológica usa la ciencia de datos para localizar las fuentes de infección.",
     "justificacion_ca": "La vigilància epidemiològica fa servir la ciència de dades per localitzar les fonts d'infecció.",
     "actividades": [
@@ -238,12 +659,52 @@
         "dua_ca": "Mapa base amb dades fictícies.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Investigación guiada de un brote en una residencia de Felanitx",
+        "titulo_ca": "Recerca guiada d'un brot en una residència de Felanitx",
+        "contexto_es": "En una residencia de Felanitx varios usuarios presentan síntomas digestivos y el equipo de enfermería pide ayuda al laboratorio.",
+        "contexto_ca": "En una residència de Felanitx diversos usuaris presenten símptomes digestius i l'equip d'infermeria demana ajuda al laboratori.",
+        "desarrollo_es": "Guiado por un protocolo de preguntas, el alumnado describe las fuentes de infección posibles en la residencia, desde el agua hasta los alimentos y el propio personal (1370-4a). Analiza con datos ficticios qué objetivo persigue la ciencia de datos en este rastreo, sobre todo acotar el foco común de las personas afectadas (1665-5h).",
+        "desarrollo_ca": "Guiat per un protocol de preguntes, l'alumnat descriu les fonts d'infecció possibles a la residència, des de l'aigua fins als aliments i el mateix personal (1370-4a). Analitza amb dades fictícies quin objectiu persegueix la ciència de dades en aquest rastreig, sobretot acotar el focus comú de les persones afectades (1665-5h).",
+        "evidencia_es": "Informe de rastreo con la fuente probable descartada.",
+        "evidencia_ca": "Informe de rastreig amb la font probable descartada.",
+        "dua_es": "Protocolo con preguntas guía y datos ya tabulados.",
+        "dua_ca": "Protocol amb preguntes guia i dades ja tabulades.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Campaña de agua segura para el vecindario",
+        "titulo_ca": "Campanya d'aigua segura per al veïnat",
+        "contexto_es": "Una asociación vecinal de Palma pide al centro una explicación sencilla sobre cómo se controla el agua de consumo.",
+        "contexto_ca": "Una associació veïnal de Palma demana al centre una explicació senzilla sobre com es controla l'aigua de consum.",
+        "desarrollo_es": "Como servicio a esa entidad, el alumnado prepara y presenta una campaña en la que describe las características de las fuentes de infección hídricas y alimentarias (1370-4a). Con analíticas ficticias de la red municipal identifica qué objetivo de la ciencia de datos se persigue al vigilar el agua de la ciudad (1665-5h).",
+        "desarrollo_ca": "Com a servei a aquesta entitat, l'alumnat prepara i presenta una campanya en què descriu les característiques de les fonts d'infecció hídriques i alimentàries (1370-4a). Amb analítiques fictícies de la xarxa municipal identifica quin objectiu de la ciència de dades es persegueix en vigilar l'aigua de la ciutat (1665-5h).",
+        "evidencia_es": "Folleto y charla vecinal sobre el agua de consumo.",
+        "evidencia_ca": "Fullet i xerrada veïnal sobre l'aigua de consum.",
+        "dua_es": "Folleto con textos breves y apoyos visuales.",
+        "dua_ca": "Fullet amb textos breus i suports visuals.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA4", "criterios": ["b"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["b"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Las infecciones adquiridas en el laboratorio son enfermedades profesionales del técnico.",
     "justificacion_ca": "Les infeccions adquirides al laboratori són malalties professionals del tècnic.",
     "actividades": [
@@ -260,12 +721,52 @@
         "dua_ca": "Esquema de vies de transmissió al laboratori.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de rol entre el técnico accidentado y prevención",
+        "titulo_ca": "Joc de rol entre el tècnic accidentat i prevenció",
+        "contexto_es": "Un técnico de un laboratorio privado de Palma se pincha con una aguja tras procesar la muestra de un paciente con hepatitis.",
+        "contexto_ca": "Un tècnic d'un laboratori privat de Palma es punxa amb una agulla després de processar la mostra d'un pacient amb hepatitis.",
+        "desarrollo_es": "Se reparten los papeles de técnico, responsable de prevención y delegado de personal. En la escena se detallan los mecanismos de transmisión implicados en el pinchazo y en el manejo posterior de la muestra (1370-4b). Quien hace de prevención clasifica después el suceso como accidente de trabajo y aclara por qué no se trata de una enfermedad profesional (1709-2b).",
+        "desarrollo_ca": "Es reparteixen els papers de tècnic, responsable de prevenció i delegat de personal. A l'escena es detallen els mecanismes de transmissió implicats en la punxada i en el maneig posterior de la mostra (1370-4b). Qui fa de prevenció classifica després el succés com a accident de treball i aclareix per què no es tracta d'una malaltia professional (1709-2b).",
+        "evidencia_es": "Acta del incidente redactada al final de la escena.",
+        "evidencia_ca": "Acta de l'incident redactada al final de l'escena.",
+        "dua_es": "Tarjetas de rol con las frases clave de cada personaje.",
+        "dua_ca": "Targetes de rol amb les frases clau de cada personatge.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Concurso de barreras contra la transmisión en el laboratorio",
+        "titulo_ca": "Concurso de barreres contra la transmissió al laboratori",
+        "contexto_es": "La semana de la seguridad del centro se convierte en una competición por equipos sobre riesgos biológicos.",
+        "contexto_ca": "La setmana de la seguretat del centre es converteix en una competició per equips sobre riscos biològics.",
+        "desarrollo_es": "Los equipos superan retos cronometrados en los que deben detallar el mecanismo de transmisión de cada escena simulada: aire, contacto o gotas (1370-4b). Cada acierto suma puntos si además se clasifica bien el daño profesional asociado y se distingue de otras contingencias (1709-2b).",
+        "desarrollo_ca": "Els equips superen reptes cronometrats en què han de detallar el mecanisme de transmissió de cada escena simulada: aire, contacte o gotes (1370-4b). Cada encert suma punts si a més es classifica bé el dany professional associat i es distingeix d'altres contingències (1709-2b).",
+        "evidencia_es": "Marcador final con la justificación de cada respuesta.",
+        "evidencia_ca": "Marcador final amb la justificació de cada resposta.",
+        "dua_es": "Comodines de ayuda y tiempo flexible por equipo.",
+        "dua_ca": "Comodins d'ajuda i temps flexible per equip.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA3", "criterios": ["h"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["h"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA3",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
     "justificacion_es": "La vacunación del personal es una medida de vigilancia de la salud basada en la inmunización activa.",
     "justificacion_ca": "La vacunació del personal és una mesura de vigilància de la salut basada en la immunització activa.",
     "actividades": [
@@ -282,12 +783,52 @@
         "dua_ca": "Calendari visual.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Debate sobre la vacunación obligatoria del personal sanitario",
+        "titulo_ca": "Debat sobre la vacunació obligatòria del personal sanitari",
+        "contexto_es": "El comité de seguridad y salud del hospital propone exigir la vacuna de la gripe al personal y pide una recomendación razonada.",
+        "contexto_ca": "El comitè de seguretat i salut de l'hospital proposa exigir la vacuna de la grip al personal i demana una recomanació raonada.",
+        "desarrollo_es": "Dos equipos defienden posturas contrarias y argumentan con datos cómo actúan la inmunización activa y la pasiva en cada caso (1370-3h). La moderación resume después las condiciones de vigilancia de la salud que ya existen, entre ellas las serologías y los reconocimientos periódicos, para enmarcar la decisión (1709-2h).",
+        "desarrollo_ca": "Dos equips defensen postures contràries i argumenten amb dades com actuen la immunització activa i la passiva en cada cas (1370-3h). La moderació resumeix després les condicions de vigilància de la salut que ja existeixen, entre elles les serologies i els reconeixements periòdics, per emmarcar la decisió (1709-2h).",
+        "evidencia_es": "Acta del debate con la recomendación final del comité.",
+        "evidencia_ca": "Acta del debat amb la recomanació final del comitè.",
+        "dua_es": "Dossier con las cifras y los turnos de palabra fijados.",
+        "dua_ca": "Dossier amb les xifres i els torns de paraula fixats.",
+        "metodologia_es": "debate reglado.",
+        "metodologia_ca": "debat reglat."
+      },
+      {
+        "titulo_es": "Tutoría entre compañeros para revisar el carné de vacunación",
+        "titulo_ca": "Tutoria entre companys per revisar el carnet de vacunació",
+        "contexto_es": "Antes de las prácticas, cada estudiante revisa su historial vacunal y ayuda a un compañero a revisar el suyo.",
+        "contexto_ca": "Abans de les pràctiques, cada estudiant revisa el seu historial vacunal i ajuda un company a revisar el seu.",
+        "desarrollo_es": "Por parejas, una persona revisa el historial de la otra y explica las diferencias entre la protección que da una vacuna y la que aportan los anticuerpos administrados (1370-3h). Las dos comprueban después qué requisitos de vigilancia de la salud pediría el servicio de prevención a quien trabaja en el laboratorio (1709-2h).",
+        "desarrollo_ca": "Per parelles, una persona revisa l'historial de l'altra i explica les diferències entre la protecció que dona una vacuna i la que aporten els anticossos administrats (1370-3h). Totes dues comproven després quins requisits de vigilància de la salut demanaria el servei de prevenció a qui treballa al laboratori (1709-2h).",
+        "evidencia_es": "Historial revisado con las incidencias anotadas por la pareja.",
+        "evidencia_ca": "Historial revisat amb les incidències anotades per la parella.",
+        "dua_es": "Guion de revisión por pasos con casillas para marcar.",
+        "dua_ca": "Guió de revisió per passos amb caselles per marcar.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA5", "criterios": ["d"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "El formaldehído de anatomía patológica es un agente carcinógeno y un factor de riesgo laboral.",
     "justificacion_ca": "El formaldehid d'anatomia patològica és un agent carcinogen i un factor de risc laboral.",
     "actividades": [
@@ -304,12 +845,53 @@
         "dua_ca": "Fitxa de seguretat resumida.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Rediseñar la sala de tallado sin formaldehído",
+        "titulo_ca": "Redissenyar la sala de tall sense formaldehid",
+        "contexto_es": "El hospital quiere sustituir progresivamente el formol de anatomía patológica y pide ideas al alumnado del ciclo.",
+        "contexto_ca": "L'hospital vol substituir progressivament el formol d'anatomia patològica i demana idees a l'alumnat del cicle.",
+        "desarrollo_es": "Tras observar el problema y entrevistar a un técnico, el alumnado clasifica los agentes carcinógenos y sitúa el formol y otras sustancias presentes en el servicio (1370-5d). Después prototipa medidas y argumenta por qué mejoran la cultura preventiva del área de tallado (1709-2a).",
+        "desarrollo_ca": "Després d'observar el problema i entrevistar un tècnic, l'alumnat classifica els agents carcinògens i hi situa el formol i altres substàncies presents al servei (1370-5d). Després prototipa mesures i argumenta per què milloren la cultura preventiva de l'àrea de tall (1709-2a).",
+        "evidencia_es": "Prototipo de la nueva sala con las medidas priorizadas.",
+        "evidencia_ca": "Prototip de la nova sala amb les mesures prioritzades.",
+        "dua_es": "Plantillas de bocetos y revistas para recortar.",
+        "dua_ca": "Plantilles d'esbossos i revistes per retallar.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Puzle de riesgos en el servicio de anatomía patológica",
+        "titulo_ca": "Puzle de riscos al servei d'anatomia patològica",
+        "contexto_es": "Cinco grupos se reparten los riesgos detectados en una inspección reciente al servicio de anatomía patológica.",
+        "contexto_ca": "Cinc grups es reparteixen els riscos detectats en una inspecció recent al servei d'anatomia patològica.",
+        "desarrollo_es": "Cada grupo estudia un riesgo, lo clasifica entre los agentes carcinógenos conocidos (1370-5d) y luego lo explica a los demás hasta completar el mapa del servicio. La puesta en común final justifica qué factores de riesgo son más habituales allí y cómo reforzar la cultura preventiva (1709-2a).",
+        "desarrollo_ca": "Cada grup estudia un risc, el classifica entre els agents carcinògens coneguts (1370-5d) i després l'explica als altres fins a completar el mapa del servei. La posada en comú final justifica quins factors de risc són més habituals allà i com reforçar la cultura preventiva (1709-2a).",
+        "evidencia_es": "Mapa completo del servicio con los riesgos clasificados.",
+        "evidencia_ca": "Mapa complet del servei amb els riscos classificats.",
+        "dua_es": "Fichas de un solo riesgo con lenguaje sencillo.",
+        "dua_ca": "Fitxes d'un sol risc amb llenguatge senzill.",
+        "metodologia_es": "técnica del puzle.",
+        "metodologia_ca": "tècnica del puzle."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA6", "criterios": ["e"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["f", "g"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA6",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "f",
+        "g"
+      ]
+    },
     "justificacion_es": "Una enfermedad que provoca insuficiencia puede llevar a una baja larga con prestaciones de la Seguridad Social.",
     "justificacion_ca": "Una malaltia que provoca insuficiència pot dur a una baixa llarga amb prestacions de la Seguretat Social.",
     "actividades": [
@@ -326,12 +908,54 @@
         "dua_ca": "Simulador de prestacions en línia.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Estaciones de trabajo sobre una baja de larga duración",
+        "titulo_ca": "Estacions de treball sobre una baixa de llarga durada",
+        "contexto_es": "Una compañera del laboratorio acumula tres meses de baja por una insuficiencia renal y al acabar el contrato de sustitución surgen dudas sobre las prestaciones.",
+        "contexto_ca": "Una companya del laboratori acumula tres mesos de baixa per una insuficiència renal i en acabar el contracte de substitució sorgeixen dubtes sobre les prestacions.",
+        "desarrollo_es": "Cuatro estaciones esperan al alumnado: en la primera detalla las manifestaciones de la insuficiencia renal y de otras insuficiencias (1370-6e); en la segunda se valora el papel de la Seguridad Social en la vida del paciente (1709-3f). Las dos últimas trabajan con casos breves las prestaciones por suspensión y por extinción del contrato (1709-3g).",
+        "desarrollo_ca": "Quatre estacions esperen l'alumnat: a la primera detalla les manifestacions de la insuficiència renal i d'altres insuficiències (1370-6e); a la segona es valora el paper de la Seguretat Social en la vida del pacient (1709-3f). Les dues darreres treballen amb casos breus les prestacions per suspensió i per extinció del contracte (1709-3g).",
+        "evidencia_es": "Cuaderno de estaciones con las conclusiones de cada parada.",
+        "evidencia_ca": "Quadern d'estacions amb les conclusions de cada parada.",
+        "dua_es": "En cada estación, un caso resuelto como modelo.",
+        "dua_ca": "A cada estació, un cas resolt com a model.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
+      },
+      {
+        "titulo_es": "Café del mundo: Seguridad Social y vida cotidiana",
+        "titulo_ca": "Cafè del món: Seguretat Social i vida quotidiana",
+        "contexto_es": "El centro celebra una jornada sobre salud y derecho a la protección con mesas redondas informales.",
+        "contexto_ca": "El centre celebra una jornada sobre salut i dret a la protecció amb taules rodones informals.",
+        "desarrollo_es": "En mesas sucesivas, el alumnado comenta un caso de insuficiencia y anota en el mantel de papel cómo se manifiesta la enfermedad en la vida diaria (1370-6e). Otras mesas discuten qué aporta la Seguridad Social a quien enferma (1709-3f) y qué prestaciones acompañan a la suspensión o al fin del contrato (1709-3g).",
+        "desarrollo_ca": "En taules successives, l'alumnat comenta un cas d'insuficiència i anota al mantell de paper com es manifesta la malaltia en la vida diària (1370-6e). Altres taules discuteixen què aporta la Seguretat Social a qui emmalalteix (1709-3f) i quines prestacions acompanyen la suspensió o el final del contracte (1709-3g).",
+        "evidencia_es": "Manteles de papel recogidos y conclusiones comunes.",
+        "evidencia_ca": "Mantells de paper recollits i conclusions comunes.",
+        "dua_es": "Preguntas escritas en cada mesa para orientar la conversación.",
+        "dua_ca": "Preguntes escrites a cada taula per orientar la conversa.",
+        "metodologia_es": "world café.",
+        "metodologia_ca": "cafè del món."
       }
     ]
   },
   {
-    "a": { "modulo": "1370", "ra": "RA2", "criterios": ["a", "d"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["h", "b"] },
+    "a": {
+      "modulo": "1370",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "h",
+        "b"
+      ]
+    },
     "justificacion_es": "La fisiopatología avanza deprisa, y el técnico necesita herramientas de aprendizaje autónomo para adaptarse.",
     "justificacion_ca": "La fisiopatologia avança de pressa, i el tècnic necessita eines d'aprenentatge autònom per adaptar-s'hi.",
     "actividades": [
@@ -348,12 +972,52 @@
         "dua_ca": "Llista de fonts recomanades.",
         "metodologia_es": "aprendizaje autónomo guiado.",
         "metodologia_ca": "aprenentatge autònom guiat."
+      },
+      {
+        "titulo_es": "Proyecto de una guía viva sobre la evolución de la enfermedad",
+        "titulo_ca": "Projecte d'una guia viva sobre l'evolució de la malaltia",
+        "contexto_es": "Un equipo del laboratorio quiere entender por qué una misma enfermedad evoluciona de forma distinta en dos pacientes y decide construir una guía que puedan actualizar.",
+        "contexto_ca": "Un equip del laboratori vol entendre per què una mateixa malaltia evoluciona de manera diferent en dos pacients i decideix construir una guia que puguin actualitzar.",
+        "desarrollo_es": "A lo largo del proyecto el alumnado describe el proceso dinámico de la enfermedad en los dos casos (1370-2a) y define las partes de la clínica que van apareciendo (1370-2d). Aprende a usar por su cuenta herramientas digitales de estudio y de archivo de fuentes (1709-5h) y relaciona esa autonomía con la capacidad de adaptación del técnico (1709-5b).",
+        "desarrollo_ca": "Al llarg del projecte l'alumnat descriu el procés dinàmic de la malaltia en els dos casos (1370-2a) i defineix les parts de la clínica que van apareixent (1370-2d). Aprèn a fer servir pel seu compte eines digitals d'estudi i d'arxiu de fonts (1709-5h) i relaciona aquesta autonomia amb la capacitat d'adaptació del tècnic (1709-5b).",
+        "evidencia_es": "Guía viva con las dos evoluciones comparadas.",
+        "evidencia_ca": "Guia viva amb les dues evolucions comparades.",
+        "dua_es": "Plantilla de guía con apartados fijos y ejemplos.",
+        "dua_ca": "Plantilla de guia amb apartats fixos i exemples.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Equipos que comparan la clínica de dos pacientes",
+        "titulo_ca": "Equips que comparen la clínica de dos pacients",
+        "contexto_es": "Dos pacientes ingresan el mismo día con la misma enfermedad pero evolucionan de forma muy distinta, y el equipo médico pide hipótesis.",
+        "contexto_ca": "Dos pacients ingressen el mateix dia amb la mateixa malaltia però evolucionen de manera molt diferent, i l'equip mèdic demana hipòtesis.",
+        "desarrollo_es": "Con una prueba individual previa, los equipos comparan cómo avanza la enfermedad en cada paciente (1370-2a) y qué partes de la clínica se manifiestan en cada momento (1370-2d). Cada equipo presenta después qué herramienta de estudio autónomo le ha servido para prepararse (1709-5h) y en qué le mejora como futuro profesional (1709-5b).",
+        "desarrollo_ca": "Amb una prova individual prèvia, els equips comparen com avança la malaltia en cada pacient (1370-2a) i quines parts de la clínica es manifesten en cada moment (1370-2d). Cada equip presenta després quina eina d'estudi autònom li ha servit per preparar-se (1709-5h) i en què el millora com a futur professional (1709-5b).",
+        "evidencia_es": "Informe de equipo con las hipótesis sobre la evolución.",
+        "evidencia_ca": "Informe d'equip amb les hipòtesis sobre l'evolució.",
+        "dua_es": "Prueba individual con dos niveles de dificultad.",
+        "dua_ca": "Prova individual amb dos nivells de dificultat.",
+        "metodologia_es": "aprendizaje basado en equipos.",
+        "metodologia_ca": "aprenentatge basat en equips."
       }
     ]
   },
   {
-    "a": { "modulo": "0179", "ra": "RA2", "criterios": ["h"] },
-    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["c"] },
+    "a": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Las noticias en inglés sobre inteligencia artificial muestran su importancia presente y futura.",
     "justificacion_ca": "Les notícies en anglès sobre intel·ligència artificial mostren la seva importància present i futura.",
     "actividades": [
@@ -370,12 +1034,52 @@
         "dua_ca": "Notícies de diferent extensió.",
         "metodologia_es": "lectura crítica.",
         "metodologia_ca": "lectura crítica guiada."
+      },
+      {
+        "titulo_es": "Visita virtual a un laboratorio británico con IA",
+        "titulo_ca": "Visita virtual a un laboratori britànic amb IA",
+        "contexto_es": "Un laboratorio de Bristol abre una visita en línea en inglés para estudiantes y muestra cómo reparte el trabajo con la inteligencia artificial.",
+        "contexto_ca": "Un laboratori de Bristol obre una visita en línia en anglès per a estudiants i mostra com reparteix la feina amb la intel·ligència artificial.",
+        "desarrollo_es": "Durante la visita en inglés, el alumnado localiza y anota el contenido y la relevancia de los artículos e informes que se comentan (0179-2h). Al terminar, valora hasta qué punto la IA es importante hoy y lo será en el futuro del laboratorio (1665-4c).",
+        "desarrollo_ca": "Durant la visita en anglès, l'alumnat localitza i anota el contingut i la rellevància dels articles i informes que es comenten (0179-2h). En acabar, valora fins a quin punt la IA és important avui i ho serà en el futur del laboratori (1665-4c).",
+        "evidencia_es": "Cuaderno de la visita con las valoraciones sobre la IA.",
+        "evidencia_ca": "Quadern de la visita amb les valoracions sobre la IA.",
+        "dua_es": "Glosario bilingüe de los términos técnicos de la visita.",
+        "dua_ca": "Glossari bilingüe dels termes tècnics de la visita.",
+        "metodologia_es": "aprendizaje experiencial.",
+        "metodologia_ca": "aprenentatge experiencial."
+      },
+      {
+        "titulo_es": "Tertulia sobre un informe de IA diagnóstica",
+        "titulo_ca": "Tertúlia sobre un informe d'IA diagnòstica",
+        "contexto_es": "La biblioteca del barrio y el centro organizan una tertulia abierta a partir de un informe en inglés sobre diagnóstico asistido por IA.",
+        "contexto_ca": "La biblioteca del barri i el centre organitzen una tertúlia oberta a partir d'un informe en anglès sobre diagnòstic assistit per IA.",
+        "desarrollo_es": "Cada participante llega con el informe leído y dos ideas marcadas, y en la tertulia expone qué contenido es esencial y por qué lo considera importante (0179-2h). La conversación termina valorando el peso actual y futuro de la IA en el diagnóstico (1665-4c), con turnos de palabra iguales.",
+        "desarrollo_ca": "Cada participant arriba amb l'informe llegit i dues idees marcades, i a la tertúlia exposa quin contingut és essencial i per què el considera important (0179-2h). La conversa acaba valorant el pes actual i futur de la IA en el diagnòstic (1665-4c), amb torns de paraula iguals.",
+        "evidencia_es": "Reseña escrita con las ideas acordadas en la tertulia.",
+        "evidencia_ca": "Ressenya escrita amb les idees acordades a la tertúlia.",
+        "dua_es": "Informe dividido en partes con títulos numerados.",
+        "dua_ca": "Informe dividit en parts amb títols numerats.",
+        "metodologia_es": "aprendizaje dialógico.",
+        "metodologia_ca": "aprenentatge dialògic."
       }
     ]
   },
   {
-    "a": { "modulo": "0179", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["g"] },
+    "a": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Un informe en inglés sobre tecnologías del laboratorio exige sintetizar información de varias fuentes.",
     "justificacion_ca": "Un informe en anglès sobre tecnologies del laboratori exigeix sintetitzar informació de diverses fonts.",
     "actividades": [
@@ -392,12 +1096,53 @@
         "dua_ca": "Plantilla d'informe amb connectors.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Informe en inglés para una feria de ciencia",
+        "titulo_ca": "Informe en anglès per a una fira de ciència",
+        "contexto_es": "El centro presenta en una feria científica de Palma una comparativa de las tecnologías digitales usadas en dos laboratorios.",
+        "contexto_ca": "El centre presenta en una fira científica de Palma una comparativa de les tecnologies digitals usades en dos laboratoris.",
+        "desarrollo_es": "Siguiendo pasos de indagación, el alumnado reúne datos de dos laboratorios y redacta en inglés un texto claro que sintetiza y evalúa la información de las fuentes consultadas (0179-4a). El resultado se organiza como un informe que relaciona cada tecnología con sus características y sus áreas de aplicación (1665-2g).",
+        "desarrollo_ca": "Seguint passos d'indagació, l'alumnat reuneix dades de dos laboratoris i redacta en anglès un text clar que sintetitza i avalua la informació de les fonts consultades (0179-4a). El resultat s'organitza com un informe que relaciona cada tecnologia amb les seves característiques i les seves àrees d'aplicació (1665-2g).",
+        "evidencia_es": "Póster con el informe en inglés para la feria.",
+        "evidencia_ca": "Pòster amb l'informe en anglès per a la fira.",
+        "dua_es": "Banco de frases y conectores en inglés para el informe.",
+        "dua_ca": "Banc de frases i connectors en anglès per a l'informe.",
+        "metodologia_es": "método científico guiado.",
+        "metodologia_ca": "mètode científic guiat."
+      },
+      {
+        "titulo_es": "Detectives de tecnologías digitales en el laboratorio",
+        "titulo_ca": "Detectius de tecnologies digitals al laboratori",
+        "contexto_es": "Un equipo de mantenimiento instala aparatos nuevos y el alumnado debe averiguar qué tecnología incorpora cada uno sin mirar los manuales.",
+        "contexto_ca": "Un equip de manteniment instal·la aparells nous i l'alumnat ha d'esbrinar quina tecnologia incorpora cada un sense mirar els manuals.",
+        "desarrollo_es": "Explorando los aparatos y sus etiquetas, el alumnado deduce qué tecnología digital hay detrás de cada uno. Escribe después un texto claro en inglés que sintetiza y valora la información obtenida de varias fichas técnicas (0179-4a) y lo convierte en un informe que asocia tecnología, características y aplicaciones (1665-2g).",
+        "desarrollo_ca": "Explorant els aparells i les seves etiquetes, l'alumnat dedueix quina tecnologia digital hi ha darrere de cada un. Escriu després un text clar en anglès que sintetitza i valora la informació obtinguda de diverses fitxes tècniques (0179-4a) i el converteix en un informe que associa cada tecnologia amb les seves característiques i aplicacions (1665-2g).",
+        "evidencia_es": "Informe en inglés con la tecnología asignada a cada aparato.",
+        "evidencia_ca": "Informe en anglès amb la tecnologia assignada a cada aparell.",
+        "dua_es": "Fichas técnicas resumidas con apartados idénticos.",
+        "dua_ca": "Fitxes tècniques resumides amb apartats idèntics.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
       }
     ]
   },
   {
-    "a": { "modulo": "0179", "ra": "RA3", "criterios": ["i"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["c", "e"] },
+    "a": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
     "justificacion_es": "Expresarse con fluidez en inglés es una competencia con valor para el empleo que refuerza la autoestima.",
     "justificacion_ca": "Expressar-se amb fluïdesa en anglès és una competència amb valor per a l'ocupació que reforça l'autoestima.",
     "actividades": [
@@ -414,12 +1159,53 @@
         "dua_ca": "Preparació prèvia per parelles.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Simulación de entrevista en la feria de empleo",
+        "titulo_ca": "Simulació d'entrevista a la fira d'ocupació",
+        "contexto_es": "Un centro de Formación Profesional de Palma organiza una feria de empleo simulada con empresas del sector sanitario.",
+        "contexto_ca": "Un centre de Formació Professional de Palma organitza una fira d'ocupació simulada amb empreses del sector sanitari.",
+        "desarrollo_es": "Cada alumno defiende su candidatura ante un tribunal que representa a un laboratorio clínico y responde con fluidez a preguntas sobre su formación y su experiencia (0179-3i). Después resume por escrito las competencias personales y sociales que ha puesto en juego durante la entrevista (1709-4c) y explica cómo ha gestionado los nervios y qué efecto ha tenido en su autoestima (1709-4e).",
+        "desarrollo_ca": "Cada alumne defensa la seva candidatura davant un tribunal que representa un laboratori clínic i respon amb fluïdesa a preguntes sobre la seva formació i la seva experiència (0179-3i). Després resumeix per escrit les competències personals i socials que ha posat en joc durant l'entrevista (1709-4c) i explica com ha gestionat els nervis i quin efecte ha tingut en la seva autoestima (1709-4e).",
+        "evidencia_es": "Rúbrica de la entrevista y ficha de autoevaluación.",
+        "evidencia_ca": "Rúbrica de l'entrevista i fitxa d'autoavaluació.",
+        "dua_es": "Guion con preguntas frecuentes y tiempo extra de preparación.",
+        "dua_ca": "Guió amb preguntes freqüents i temps extra de preparació.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Pódcast sobre competencias y autoestima",
+        "titulo_ca": "Pòdcast sobre competències i autoestima",
+        "contexto_es": "La radio del instituto emite una serie sobre inserción laboral dirigida a estudiantes de FP.",
+        "contexto_ca": "La ràdio de l'institut emet una sèrie sobre inserció laboral adreçada a estudiants de FP.",
+        "desarrollo_es": "En grupos de tres, el alumnado graba un episodio en inglés en el que valora su trayectoria y sus metas profesionales argumentando con detalle sus ideas (0179-3i). Antes de grabar, cada grupo elabora una lista de competencias personales y sociales útiles para trabajar en un laboratorio (1709-4c) y discute cómo la confianza en uno mismo condiciona el acceso al empleo (1709-4e).",
+        "desarrollo_ca": "En grups de tres, l'alumnat enregistra un episodi en anglès en què valora la seva trajectòria i les seves metes professionals argumentant amb detall les seves idees (0179-3i). Abans d'enregistrar, cada grup elabora una llista de competències personals i socials útils per treballar en un laboratori (1709-4c) i discuteix com la confiança en un mateix condiciona l'accés a l'ocupació (1709-4e).",
+        "evidencia_es": "Episodio de pódcast y guion previo.",
+        "evidencia_ca": "Episodi de pòdcast i guió previ.",
+        "dua_es": "Reparto de roles según las destrezas orales y apoyo con tarjetas de vocabulario.",
+        "dua_ca": "Repartiment de rols segons les destreses orals i suport amb targetes de vocabulari.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "0179", "ra": "RA4", "criterios": ["f", "h"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "a": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "f",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Las cartas de presentación en inglés abren oportunidades de empleo en laboratorios del extranjero.",
     "justificacion_ca": "Les cartes de presentació en anglès obren oportunitats d'ocupació en laboratoris de l'estranger.",
     "actividades": [
@@ -436,12 +1222,52 @@
         "dua_ca": "Model de carta comentat.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Taller de correos formales para vacantes europeas",
+        "titulo_ca": "Taller de correus formals per a vacants europees",
+        "contexto_es": "Un laboratorio de Múnich publica varias vacantes y pide que las candidaturas lleguen por correo electrónico.",
+        "contexto_ca": "Un laboratori de Munic publica diverses vacants i demana que les candidatures arribin per correu electrònic.",
+        "desarrollo_es": "El alumnado compara ofertas reales de empleo del sector y anota los requisitos que pide cada empresa (1709-1a). Después escribe un correo electrónico formal en inglés para solicitar una de las plazas, con el saludo y la despedida propios del género (0179-4f) y con un tratamiento respetuoso del destinatario (0179-4h).",
+        "desarrollo_ca": "L'alumnat compara ofertes reals d'ocupació del sector i anota els requisits que demana cada empresa (1709-1a). Després escriu un correu electrònic formal en anglès per sol·licitar una de les places, amb la salutació i el comiat propis del gènere (0179-4f) i amb un tracte respectuós cap al destinatari (0179-4h).",
+        "evidencia_es": "Correo electrónico formal entregado.",
+        "evidencia_ca": "Correu electrònic formal lliurat.",
+        "dua_es": "Plantilla de correo con conectores y frases modelo.",
+        "dua_ca": "Plantilla de correu amb connectors i frases model.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de mesa de ofertas del sector sanitario",
+        "titulo_ca": "Joc de taula d'ofertes del sector sanitari",
+        "contexto_es": "Los estudiantes desconocen cuántos perfiles distintos existen en un laboratorio clínico.",
+        "contexto_ca": "Els estudiants desconeixen quants perfils diferents existeixen en un laboratori clínic.",
+        "desarrollo_es": "Por equipos, el alumnado avanza por un tablero cuyas casillas describen puestos del sector, identifica sus requisitos y completa una ficha de cada uno (1709-1a). Cuando una casilla lo pide, redacta una nota formal en inglés dirigida a un responsable de recursos humanos (0179-4f) ajustando las expresiones de cortesía al contexto (0179-4h).",
+        "desarrollo_ca": "Per equips, l'alumnat avança per un tauler les caselles del qual descriuen llocs del sector, n'identifica els requisits i completa una fitxa de cadascun (1709-1a). Quan una casella ho demana, redacta una nota formal en anglès adreçada a un responsable de recursos humans (0179-4f) ajustant les expressions de cortesia al context (0179-4h).",
+        "evidencia_es": "Fichas de puestos y nota formal.",
+        "evidencia_ca": "Fitxes de llocs i nota formal.",
+        "dua_es": "Tablero con apoyos visuales y comodines de ayuda.",
+        "dua_ca": "Tauler amb suports visuals i comodins d'ajuda.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "0179", "ra": "RA5", "criterios": ["d"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["c"] },
+    "a": {
+      "modulo": "0179",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Las fuentes en inglés sobre la profesión enriquecen el entorno personal de aprendizaje.",
     "justificacion_ca": "Les fonts en anglès sobre la professió enriqueixen l'entorn personal d'aprenentatge.",
     "actividades": [
@@ -458,12 +1284,53 @@
         "dua_ca": "Fonts classificades per nivell d'anglès.",
         "metodologia_es": "aprendizaje autónomo guiado.",
         "metodologia_ca": "aprenentatge autònom guiat."
+      },
+      {
+        "titulo_es": "Una reunión de equipo con el proveedor británico",
+        "titulo_ca": "Una reunió d'equip amb el proveïdor britànic",
+        "contexto_es": "Un proveedor de reactivos de Manchester visita el laboratorio del Hospital de Son Llàtzer y comparte con el equipo un correo con las normas de la visita.",
+        "contexto_ca": "Un proveïdor de reactius de Manchester visita el laboratori de l'Hospital de Son Llàtzer i comparteix amb l'equip un correu amb les normes de la visita.",
+        "desarrollo_es": "Por parejas, se prepara y se representa una reunión breve con el proveedor siguiendo el correo, y se anotan las costumbres profesionales que aparecen: puntualidad, confirmación de pedidos y trato al cliente (0179-5d). Después cada estudiante añade a su entorno personal de aprendizaje una carpeta con vocabulario y contactos del sector (1709-5c).",
+        "desarrollo_ca": "Per parelles, es prepara i es representa una reunió breu amb el proveïdor seguint el correu, i s'anoten els costums professionals que hi apareixen: puntualitat, confirmació de comandes i tracte al client (0179-5d). Després cada estudiant afegeix al seu entorn personal d'aprenentatge una carpeta amb vocabulari i contactes del sector (1709-5c).",
+        "evidencia_es": "Ficha de costumbres profesionales y carpeta creada.",
+        "evidencia_ca": "Fitxa de costums professionals i carpeta creada.",
+        "dua_es": "Correo con glosario lateral de términos clave.",
+        "dua_ca": "Correu amb glossari lateral de termes clau.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "El pódcast del laboratorio de Manchester",
+        "titulo_ca": "El pòdcast del laboratori de Manchester",
+        "contexto_es": "Un pódcast británico para técnicos de laboratorio dedica un episodio a la relación con los pacientes y con los compañeros de quirófano.",
+        "contexto_ca": "Un pòdcast britànic per a tècnics de laboratori dedica un episodi a la relació amb els pacients i amb els companys de quiròfan.",
+        "desarrollo_es": "La clase escucha el episodio con una guía de escucha y debate qué comportamientos profesionales se valoran en el Reino Unido (0179-5d). Cada estudiante elige una idea y la convierte en un recurso de su entorno personal de aprendizaje, con una nota y una etiqueta (1709-5c).",
+        "desarrollo_ca": "La classe escolta l'episodi amb una guia d'escolta i debat quins comportaments professionals es valoren al Regne Unit (0179-5d). Cada estudiant tria una idea i la converteix en un recurs del seu entorn personal d'aprenentatge, amb una nota i una etiqueta (1709-5c).",
+        "evidencia_es": "Resumen del episodio y recurso etiquetado.",
+        "evidencia_ca": "Resum de l'episodi i recurs etiquetat.",
+        "dua_es": "Transcripción del pódcast y velocidad ajustable.",
+        "dua_ca": "Transcripció del pòdcast i velocitat ajustable.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
   {
-    "a": { "modulo": "1665", "ra": "RA5", "criterios": ["i"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["e", "f"] },
+    "a": {
+      "modulo": "1665",
+      "ra": "RA5",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
     "justificacion_es": "Publicar imágenes del laboratorio en redes afecta a la seguridad de los datos y a la identidad digital profesional.",
     "justificacion_ca": "Publicar imatges del laboratori a les xarxes afecta la seguretat de les dades i la identitat digital professional.",
     "actividades": [
@@ -480,12 +1347,52 @@
         "dua_ca": "Llista de comprovació de privacitat.",
         "metodologia_es": "aprendizaje basado en dilemas.",
         "metodologia_ca": "aprenentatge basat en dilemes."
+      },
+      {
+        "titulo_es": "Rastrear una brecha en el servidor de urgencias",
+        "titulo_ca": "Rastrejar una bretxa al servidor d'urgències",
+        "contexto_es": "El servidor donde se guardan informes de urgencias del Hospital de Inca aparece abierto a una red externa y hay que reconstruir qué pasó.",
+        "contexto_ca": "El servidor on es guarden informes d'urgències de l'Hospital d'Inca apareix obert a una xarxa externa i cal reconstruir què va passar.",
+        "desarrollo_es": "En equipos, se reconstruye la cronología del incidente y se valora qué normativa de protección de datos se ha incumplido (1665-5i). Después cada estudiante revisa qué rastro deja su perfil digital como futura técnica y argumenta si favorece o perjudica su empleabilidad (1709-5e). El grupo cierra con una propuesta de presencia en línea coherente con su plan individual (1709-5f).",
+        "desarrollo_ca": "En equips, es reconstrueix la cronologia de l'incident i es valora quina normativa de protecció de dades s'ha incomplert (1665-5i). Després cada estudiant revisa quina petjada deixa el seu perfil digital com a futura tècnica i argumenta si afavoreix o perjudica la seva ocupabilitat (1709-5e). El grup tanca amb una proposta de presència en línia coherent amb el seu pla individual (1709-5f).",
+        "evidencia_es": "Informe del incidente y propuesta de perfil profesional.",
+        "evidencia_ca": "Informe de l'incident i proposta de perfil professional.",
+        "dua_es": "Línea de tiempo pautada con huecos para completar.",
+        "dua_ca": "Línia temporal pautada amb buits per completar.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Auditar la nube donde guardo mis apuntes",
+        "titulo_ca": "Auditar el núvol on deso els meus apunts",
+        "contexto_es": "Una estudiante de prácticas descubre que su carpeta compartida contiene informes de pacientes y que el enlace está abierto a cualquiera.",
+        "contexto_ca": "Una estudiant de pràctiques descobreix que la seva carpeta compartida conté informes de pacients i que l'enllaç està obert a tothom.",
+        "desarrollo_es": "Cada pareja audita una carpeta real de trabajo con una lista de comprobación y justifica qué medidas exige la normativa de datos (1665-5i). A partir del resultado, se analiza cómo un descuido así afecta a la identidad digital profesional (1709-5e) y se rediseña el entorno de aprendizaje para que sea seguro y demuestre competencia (1709-5f).",
+        "desarrollo_ca": "Cada parella audita una carpeta real de feina amb una llista de comprovació i justifica quines mesures exigeix la normativa de dades (1665-5i). A partir del resultat, s'analitza com un descuit així afecta la identitat digital professional (1709-5e) i es redissenya l'entorn d'aprenentatge perquè sigui segur i demostri competència (1709-5f).",
+        "evidencia_es": "Auditoría con capturas y entorno rediseñado.",
+        "evidencia_ca": "Auditoria amb captures i entorn redissenyat.",
+        "dua_es": "Lista de comprobación con iconos y pasos numerados.",
+        "dua_ca": "Llista de comprovació amb icones i passos numerats.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1665", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["d"] },
+    "a": {
+      "modulo": "1665",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Entender la digitalización del laboratorio lleva a poner en práctica la propia competencia digital.",
     "justificacion_ca": "Entendre la digitalització del laboratori porta a posar en pràctica la pròpia competència digital.",
     "actividades": [
@@ -502,12 +1409,52 @@
         "dua_ca": "Entrevista en vídeo amb subtítols.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Del papel al LIS en una analítica",
+        "titulo_ca": "De la llibreta al LIS en una analítica",
+        "contexto_es": "El laboratorio de un centro de salud de Felanitx sigue anotando resultados en papel antes de pasarlos al sistema informático.",
+        "contexto_ca": "El laboratori d'un centre de salut de Felanitx continua anotant resultats en paper abans de passar-los al sistema informàtic.",
+        "desarrollo_es": "Con una analítica simulada, el equipo dibuja el circuito que va del tubo al informe y explica qué aporta digitalizarlo frente a solo mecanizarlo (1665-1a). Después monta una hoja de cálculo compartida con la trazabilidad de la muestra y configura avisos en su agenda para practicar la competencia digital (1709-5d).",
+        "desarrollo_ca": "Amb una analítica simulada, l'equip dibuixa el circuit que va del tub a l'informe i explica què aporta digitalitzar-lo enfront de només mecanitzar-lo (1665-1a). Després munta un full de càlcul compartit amb la traçabilitat de la mostra i configura avisos a la seva agenda per practicar la competència digital (1709-5d).",
+        "evidencia_es": "Esquema del circuito digitalizado y hoja de trazabilidad.",
+        "evidencia_ca": "Esquema del circuit digitalitzat i full de traçabilitat.",
+        "dua_es": "Analítica impresa con colores por fases.",
+        "dua_ca": "Analítica impresa amb colors per fases.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Feria de herramientas digitales del laboratorio",
+        "titulo_ca": "Fira d'eines digitals del laboratori",
+        "contexto_es": "El centro celebra una feria de herramientas digitales para el ciclo y cada rincón presenta una solución distinta.",
+        "contexto_ca": "El centre celebra una fira d'eines digitals per al cicle i cada racó presenta una solució diferent.",
+        "desarrollo_es": "En estaciones rotatorias, el alumnado prueba una herramienta por rincón —gestor de referencias, tablero de tareas, bloc de notas y repositorio de imágenes— y explica qué aporta al concepto de digitalización (1665-1a). Al final elige las dos que incorporará a su rutina y las configura con una estructura común (1709-5d).",
+        "desarrollo_ca": "En estacions rotatòries, l'alumnat prova una eina per racó —gestor de referències, tauler de tasques, bloc de notes i repositori d'imatges— i explica què aporta al concepte de digitalització (1665-1a). Al final tria les dues que incorporarà a la seva rutina i les configura amb una estructura comuna (1709-5d).",
+        "evidencia_es": "Ficha de cada rincón y selección razonada.",
+        "evidencia_ca": "Fitxa de cada racó i selecció raonada.",
+        "dua_es": "Rincones con instrucciones en audio y en papel.",
+        "dua_ca": "Racons amb instruccions en àudio i en paper.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
       }
     ]
   },
   {
-    "a": { "modulo": "1665", "ra": "RA4", "criterios": ["f"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "a": {
+      "modulo": "1665",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "La inteligencia artificial transforma los puestos del laboratorio y los requisitos de las ofertas.",
     "justificacion_ca": "La intel·ligència artificial transforma els llocs del laboratori i els requisits de les ofertes.",
     "actividades": [
@@ -524,12 +1471,53 @@
         "dua_ca": "Ofertes resumides.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "La IA que criba citologías, a debate",
+        "titulo_ca": "La IA que criba citologies, a debat",
+        "contexto_es": "Un laboratorio de Palma empieza a usar un sistema de IA que ordena citologías por riesgo antes de que las vea el citotécnico.",
+        "contexto_ca": "Un laboratori de Palma comença a fer servir un sistema d'IA que ordena citologies per risc abans que les vegi el citotècnic.",
+        "desarrollo_es": "Dos equipos preparan posturas a favor y en contra del cribado automático y describen cómo cambia el sector y el trabajo diario (1665-4f). El debate se cierra con un análisis de los requisitos que ya aparecen en las ofertas para el perfil profesional (1709-1a).",
+        "desarrollo_ca": "Dos equips preparen postures a favor i en contra del cribratge automàtic i descriuen com canvia el sector i la feina diària (1665-4f). El debat es tanca amb una anàlisi dels requisits que ja apareixen a les ofertes per al perfil professional (1709-1a).",
+        "evidencia_es": "Dosier de argumentos y conclusiones del debate.",
+        "evidencia_ca": "Dossier d'arguments i conclusions del debat.",
+        "dua_es": "Fichas de argumentos con nivel de lectura adaptado.",
+        "dua_ca": "Fitxes d'arguments amb nivell de lectura adaptat.",
+        "metodologia_es": "debate.",
+        "metodologia_ca": "debat."
+      },
+      {
+        "titulo_es": "Puestos emergentes en el laboratorio con IA",
+        "titulo_ca": "Llocs emergents al laboratori amb IA",
+        "contexto_es": "La bolsa de empleo del hospital publica tres vacantes nuevas: validador de imágenes, gestor de datos clínicos y técnico de apoyo a la IA.",
+        "contexto_ca": "La borsa de feina de l'hospital publica tres vacants noves: validador d'imatges, gestor de dades clíniques i tècnic de suport a la IA.",
+        "desarrollo_es": "Cada grupo investiga una de las tres vacantes y describe cómo la IA influye en ese puesto y en el conjunto del sector (1665-4f). Luego compara los requisitos con su propio perfil y analiza las oportunidades de inserción y sus exigencias actuales (1709-1a).",
+        "desarrollo_ca": "Cada grup investiga una de les tres vacants i descriu com la IA influeix en aquell lloc i en el conjunt del sector (1665-4f). Després compara els requisits amb el seu propi perfil i analitza les oportunitats d'inserció i les exigències actuals (1709-1a).",
+        "evidencia_es": "Ficha comparativa de las tres vacantes.",
+        "evidencia_ca": "Fitxa comparativa de les tres vacants.",
+        "dua_es": "Ofertas resumidas con glosario de términos de IA.",
+        "dua_ca": "Ofertes resumides amb glossari de termes d'IA.",
+        "metodologia_es": "técnica del puzle.",
+        "metodologia_ca": "tècnica del trencaclosques."
       }
     ]
   },
   {
-    "a": { "modulo": "1665", "ra": "RA6", "criterios": ["k", "j"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["c"] },
+    "a": {
+      "modulo": "1665",
+      "ra": "RA6",
+      "criterios": [
+        "k",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Un plan de digitalización del laboratorio cambia la organización del trabajo y debe documentarse.",
     "justificacion_ca": "Un pla de digitalització del laboratori canvia l'organització de la feina i s'ha de documentar.",
     "actividades": [
@@ -546,12 +1534,52 @@
         "dua_ca": "Esquema de drets laborals.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Reorganizar la recepción sin perder derechos",
+        "titulo_ca": "Reorganitzar la recepció sense perdre drets",
+        "contexto_es": "La dirección del laboratorio quiere implantar un turno rotativo nuevo para cubrir la recepción de muestras hasta las diez de la noche.",
+        "contexto_ca": "La direcció del laboratori vol implantar un torn rotatiu nou per cobrir la recepció de mostres fins a les deu de la nit.",
+        "desarrollo_es": "El equipo valora si la plantilla actual puede asumir el cambio de turno o si hace falta formación y refuerzo (1665-6k). Después redacta un acta con los cambios acordados según la estrategia del centro (1665-6j) e identifica los rasgos del nuevo entorno de trabajo y los derechos que activa (1709-3c).",
+        "desarrollo_ca": "L'equip valora si la plantilla actual pot assumir el canvi de torn o si cal formació i reforç (1665-6k). Després redacta una acta amb els canvis acordats segons l'estratègia del centre (1665-6j) i identifica els trets del nou entorn de feina i els drets que activa (1709-3c).",
+        "evidencia_es": "Acta de la reunión y análisis de derechos.",
+        "evidencia_ca": "Acta de la reunió i anàlisi de drets.",
+        "dua_es": "Plantilla de acta con apartados fijos.",
+        "dua_ca": "Plantilla d'acta amb apartats fixos.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      },
+      {
+        "titulo_es": "El diario de un proyecto de digitalización",
+        "titulo_ca": "El diari d'un projecte de digitalització",
+        "contexto_es": "Un laboratorio privado de Manacor pide al alumnado que lleve el diario de decisiones de su plan de digitalización durante cuatro semanas.",
+        "contexto_ca": "Un laboratori privat de Manacor demana a l'alumnat que dugui el diari de decisions del seu pla de digitalització durant quatre setmanes.",
+        "desarrollo_es": "Semana a semana, cada estudiante anota una decisión sobre personas y recursos y comprueba si son idóneos para el objetivo (1665-6k). Cada entrada se documenta con la evidencia que la justifica (1665-6j) y la última describe el modelo de organización surgido y los derechos que conlleva (1709-3c).",
+        "desarrollo_ca": "Setmana a setmana, cada estudiant anota una decisió sobre persones i recursos i comprova si són idonis per a l'objectiu (1665-6k). Cada entrada es documenta amb l'evidència que la justifica (1665-6j) i la darrera descriu el model d'organització sorgit i els drets que comporta (1709-3c).",
+        "evidencia_es": "Diario de decisiones con anexos.",
+        "evidencia_ca": "Diari de decisions amb annexos.",
+        "dua_es": "Diario con preguntas guía en cada entrada.",
+        "dua_ca": "Diari amb preguntes guia a cada entrada.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
       }
     ]
   },
   {
-    "a": { "modulo": "1665", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["i"] },
+    "a": {
+      "modulo": "1665",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "i"
+      ]
+    },
     "justificacion_es": "Diseñar un entorno de aprendizaje en la nube exige conocer qué servicios y niveles se usan.",
     "justificacion_ca": "Dissenyar un entorn d'aprenentatge al núvol exigeix conèixer quins serveis i nivells es fan servir.",
     "actividades": [
@@ -568,12 +1596,52 @@
         "dua_ca": "Exemples d'entorns.",
         "metodologia_es": "aprendizaje autónomo guiado.",
         "metodologia_ca": "aprenentatge autònom guiat."
+      },
+      {
+        "titulo_es": "Tres niveles de nube para tres asignaturas",
+        "titulo_ca": "Tres nivells de núvol per a tres assignatures",
+        "contexto_es": "El aula del ciclo comparte apuntes en tres servicios distintos y nadie sabe cuál conviene usar para qué.",
+        "contexto_ca": "L'aula del cicle comparteix apunts en tres serveis diferents i ningú no sap quin convé fer servir per a què.",
+        "desarrollo_es": "Con un juego de cartas, cada grupo empareja servicios digitales con los niveles de nube y explica qué ofrece cada uno (1665-3a). Después contrasta su elección con el plan de desarrollo individual que tiene escrito y anota qué le falta por cubrir (1709-5i).",
+        "desarrollo_ca": "Amb un joc de cartes, cada grup emparella serveis digitals amb els nivells de núvol i explica què ofereix cada un (1665-3a). Després contrasta la seva tria amb el pla de desenvolupament individual que té escrit i anota què li falta per cobrir (1709-5i).",
+        "evidencia_es": "Cuadro comparativo y lista de carencias.",
+        "evidencia_ca": "Quadre comparatiu i llista de mancances.",
+        "dua_es": "Cartas con código de color y leyenda.",
+        "dua_ca": "Cartes amb codi de color i llegenda.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Diseñar mi escritorio digital de prácticas",
+        "titulo_ca": "Dissenyar el meu escriptori digital de pràctiques",
+        "contexto_es": "Antes de empezar las prácticas, cada estudiante debe tener un escritorio digital único con protocolos, contactos y recordatorios.",
+        "contexto_ca": "Abans de començar les pràctiques, cada estudiant ha de tenir un escriptori digital únic amb protocols, contactes i recordatoris.",
+        "desarrollo_es": "Antes de empezar las prácticas, cada estudiante monta un escritorio digital único con protocolos, contactos y recordatorios. Al organizarlo, identifica qué nivel de nube corresponde a cada pieza (1665-3a) y justifica por qué esa estructura le ayuda a avanzar hacia su plan de desarrollo individual (1709-5i).",
+        "desarrollo_ca": "Abans de començar les pràctiques, cada estudiant munta un escriptori digital únic amb protocols, contactes i recordatoris. En organitzar-lo, identifica quin nivell de núvol correspon a cada peça (1665-3a) i justifica per què aquesta estructura l'ajuda a avançar cap al seu pla de desenvolupament individual (1709-5i).",
+        "evidencia_es": "Escritorio digital montado y justificación.",
+        "evidencia_ca": "Escriptori digital muntat i justificació.",
+        "dua_es": "Plantilla visual con zonas y ejemplos.",
+        "dua_ca": "Plantilla visual amb zones i exemples.",
+        "metodologia_es": "rutinas de pensamiento.",
+        "metodologia_ca": "rutines de pensament."
       }
     ]
   },
   {
-    "a": { "modulo": "1665", "ra": "RA6", "criterios": ["e"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["g"] },
+    "a": {
+      "modulo": "1665",
+      "ra": "RA6",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Analizar las necesidades futuras del laboratorio ayuda a imaginar las propias expectativas profesionales.",
     "justificacion_ca": "Analitzar les necessitats futures del laboratori ajuda a imaginar les pròpies expectatives professionals.",
     "actividades": [
@@ -590,6 +1658,34 @@
         "dua_ca": "Plantilla d'escenari.",
         "metodologia_es": "pensamiento prospectivo.",
         "metodologia_ca": "pensament prospectiu."
+      },
+      {
+        "titulo_es": "Entrevista a una técnica del laboratorio del futuro",
+        "titulo_ca": "Entrevista a una tècnica del laboratori del futur",
+        "contexto_es": "Una técnica de anatomía patológica del Hospital de Manacor acepta explicar cómo imagina su trabajo dentro de diez años.",
+        "contexto_ca": "Una tècnica d'anatomia patològica de l'Hospital de Manacor accepta explicar com imagina la seva feina d'aquí a deu anys.",
+        "desarrollo_es": "Preparada la entrevista en clase, el alumnado pregunta por las necesidades presentes y futuras del servicio y las contrasta con el plan del centro (1665-6e). Después cada estudiante concreta qué expectativas de futuro tiene y qué competencias e intereses debe reforzar para la inserción (1709-4g).",
+        "desarrollo_ca": "Amb l'entrevista preparada a classe, l'alumnat pregunta per les necessitats presents i futures del servei i les contrasta amb el pla del centre (1665-6e). Després cada estudiant concreta quines expectatives de futur té i quines competències i interessos ha de reforçar per a la inserció (1709-4g).",
+        "evidencia_es": "Guion de entrevista y ficha de expectativas.",
+        "evidencia_ca": "Guió d'entrevista i fitxa d'expectatives.",
+        "dua_es": "Guion con preguntas modelo y turnos de palabra.",
+        "dua_ca": "Guió amb preguntes model i torns de paraula.",
+        "metodologia_es": "entrevista guiada.",
+        "metodologia_ca": "entrevista pautada."
+      },
+      {
+        "titulo_es": "Mi hoja de ruta ante la automatización",
+        "titulo_ca": "El meu full de ruta davant l'automatització",
+        "contexto_es": "Tras leer que el 40 % de las tareas del laboratorio podrían automatizarse, una estudiante se plantea si su futuro profesional sigue teniendo sentido.",
+        "contexto_ca": "Després de llegir que el 40 % de les tasques del laboratori es podrien automatitzar, una estudiant es planteja si el seu futur professional encara té sentit.",
+        "desarrollo_es": "En parejas, se analiza qué necesidades futuras del laboratorio justifican la automatización y cuáles no (1665-6e). Cada estudiante dibuja después su hoja de ruta con expectativas, competencias e intereses, y la contrasta con un compañero (1709-4g).",
+        "desarrollo_ca": "Per parelles, s'analitza quines necessitats futures del laboratori justifiquen l'automatització i quines no (1665-6e). Cada estudiant dibuixa després el seu full de ruta amb expectatives, competències i interessos, i el contrasta amb un company (1709-4g).",
+        "evidencia_es": "Hoja de ruta personal con hitos.",
+        "evidencia_ca": "Full de ruta personal amb fites.",
+        "dua_es": "Plantilla de hoja de ruta con iconos.",
+        "dua_ca": "Plantilla de full de ruta amb icones.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   }

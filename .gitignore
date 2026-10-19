@@ -7,6 +7,9 @@ temp/
 # Fichas curriculares que genera la herramienta del mapa intermodular (se regeneran)
 scripts/mapa-intermodular/fuentes/*/ficha.md
 
+# Lotes y herramientas temporales para ampliar los mapas a tres actividades por conexión (tarea 245)
+scripts/mapa-intermodular/tres-actividades/
+
 # Correcciones
 correcciones/
 # Dependencies

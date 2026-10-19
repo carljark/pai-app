@@ -24,7 +24,7 @@ Datos de la tarea:
   1375 Proyecto intermodular de laboratorio clínico y biomédico (4 RA)
   1708 Sostenibilidad aplicada al sistema productivo (6 RA)
   1710 Itinerario personal para la empleabilidad II (5 RA)
-- Tamaño orientativo: unas 176 relaciones (≈ 352 conexiones), una actividad por relación.
+- Tamaño orientativo: unas 176 relaciones (≈ 352 conexiones), tres actividades por relación (cada relación genera dos conexiones, y cada conexión muestra las tres).
 - Número común de la tarea: 238 (reservado) → rama feature/238_mapa_cfgs_laboratorio_clinico_2 y registro tareas/238_mapa_cfgs_laboratorio_clinico_2.md. No lo recalcules: la 238 está reservada para este mapa aunque haya números mayores ocupados.
 - Migración: backend/src/migrations/45_ingest_mapa_cfgs_laboratorio_clinico_2.ts (la 45 está reservada; la 44 la usa otra tarea en paralelo).
 
@@ -55,7 +55,7 @@ PASO 3. Plan de relaciones. Una relación une dos RA de módulos distintos del 2
 Los módulos comunes (1708 y 1710) tienen 11 de los 44 RA y necesitan 6 relaciones por RA cada uno. Busca situaciones reales: residuos biosanitarios y químicos, consumo de reactivos y energía de los analizadores, plásticos de un solo uso, huella de carbono del transporte de muestras, ODS en un hospital; bolsas de empleo del IB-Salut, laboratorios privados y de investigación, marca personal, entrevistas por competencias, emprendimiento en análisis veterinarios o de aguas…
 1371 tiene 8 RA y 1372-1374 tienen 7 cada uno: reparte bien sus relaciones para que todos sus RA lleguen a 6.
 
-PASO 4. Redacción. Escribe las relaciones en varios archivos scripts/mapa-intermodular/fuentes/CFGS_LABORATORIO_CLINICO_2/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json), de 25-30 relaciones cada uno para no truncar la salida. Cada relación tiene UNA actividad propia y bien desarrollada, con este formato:
+PASO 4. Redacción. Escribe las relaciones en varios archivos scripts/mapa-intermodular/fuentes/CFGS_LABORATORIO_CLINICO_2/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json), de 25-30 relaciones cada uno para no truncar la salida. Cada relación tiene al menos TRES actividades propias, distintas entre sí (metodología y producto) y bien desarrolladas, con este formato:
 
 [
   {
@@ -75,6 +75,8 @@ PASO 4. Redacción. Escribe las relaciones en varios archivos scripts/mapa-inter
     ]
   }
 ]
+
+El array "actividades" lleva como mínimo TRES objetos como el del ejemplo (el validador rechaza las relaciones con menos).
 
 Reglas de redacción (el validador rechaza lo que las incumple):
 - PROHIBIDO generar los textos con scripts, plantillas o combinando fragmentos de los criterios. Cada actividad se redacta a mano para su relación, como haría un docente. Un borrador anterior de otro modelo (tarea 224) se descartó entero por esto.

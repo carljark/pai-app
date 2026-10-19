@@ -36,7 +36,7 @@ PASO 3. Plan de relaciones. Una relación une dos RA de módulos distintos del m
 5. La relación debe ser pedagógicamente real: los criterios de los dos lados se trabajan juntos en una misma tarea profesional. No conectes por palabras sueltas.
 Reparte las relaciones entre todos los módulos. Los módulos comunes y transversales también necesitan 6 relaciones por RA: conéctalos con situaciones profesionales del ciclo.
 
-PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa-intermodular/fuentes/<TAB>/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json). Cada relación tiene UNA actividad propia y bien desarrollada, con este formato:
+PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa-intermodular/fuentes/<TAB>/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json). Cada relación tiene al menos TRES actividades propias, distintas entre sí (metodología y producto) y bien desarrolladas, con este formato:
 
 [
   {
@@ -56,6 +56,8 @@ PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa
     ]
   }
 ]
+
+El array "actividades" lleva como mínimo TRES objetos como el del ejemplo (el validador rechaza las relaciones con menos).
 
 Reglas de redacción:
 - La actividad trabaja los criterios citados de AMBOS lados, y el desarrollo los cita todos con su código completo (módulo-númeroRA+letra). Si el código del módulo lleva letras (CAE1…), usa CAE1-1a.

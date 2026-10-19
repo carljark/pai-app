@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[245 — Tres actividades por conexión en todos los mapas intermodulares de FP](245_plan_tres_actividades_por_conexion_mapas_fp.md)** · _Implementado (tarea 245)_  
+  Dos actividades bilingües nuevas por relación en los 13 mapas que tienen una sola, Peluquería completada hasta tres y la regla de «al menos tres» en el generador, la skill y AGENTS.md.
+
 - **[244 — Vista panorámica de conexiones y mapa mental de la ESO (beta)](244_plan_panoramica_y_mapa_mental_eso.md)** · _Implementado (tarea 244)_  
   Tercera vista del mapa de FP con todas las conexiones del curso agrupadas en un círculo de RA (*hierarchical edge bundling*) y salto al mapa mental; mapa mental beta del mapa de afinidades de la ESO (materias → afines → fichas).
 

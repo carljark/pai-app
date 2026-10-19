@@ -31,6 +31,7 @@ import { up as runMigration44 } from '../migrations/44_ingest_mapa_cfgs_animacio
 import { up as runMigration46 } from '../migrations/46_ingest_mapa_cfgs_laboratorio_clinico';
 import { up as runMigration47 } from '../migrations/47_ingest_mapa_cfgm_guia_medio_natural_2';
 import { up as runMigration48 } from '../migrations/48_ingest_mapa_cfgm_guia_medio_natural';
+import { up as runMigration49, TABS_TRES_ACTIVIDADES } from '../migrations/49_reload_mapas_tres_actividades';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
@@ -200,8 +201,8 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
         });
       });
 
-      expect(actsPelu1).toBe(843);
-      expect(actsPelu2).toBe(1407);
+      expect(actsPelu1).toBe(1150);
+      expect(actsPelu2).toBe(1640);
       expect(connsPelu1).toBe(375);
       expect(connsPelu2).toBe(367);
       expect(emptyConnsPelu1).toBe(0);
@@ -251,7 +252,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
 
       expect(conns848).toBe(51);
       expect(empty848).toBe(0);
-      expect(titles.size).toBe(108);
+      expect(titles.size).toBe(163);
     });
 
     it('debería corregir con la migración 14 el catalán de 1708 y 1710 en Peluquería 2º', async () => {
@@ -435,7 +436,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
             expect(lo.connections.length).toBeGreaterThanOrEqual(6);
             expect(lo.connections.length).toBeLessThanOrEqual(15);
             for (const c of lo.connections) {
-              expect(c.activities.length).toBeGreaterThanOrEqual(1);
+              expect(c.activities.length).toBeGreaterThanOrEqual(3);
               expect(c.relatedCriteria.length).toBeLessThanOrEqual(3);
             }
             total += lo.connections.length;
@@ -487,7 +488,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration36();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
-      await expectBidirectionalMap('CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', 7, 272, 1);
+      await expectBidirectionalMap('CFGM_CUIDADOS_AUXILIARES_ENFERMERIA', 7, 272, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = CAE_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -517,7 +518,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration37();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
-      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL', 7, 290, 1);
+      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL', 7, 290, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_INTEGRACION_SOCIAL' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = IS_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -547,7 +548,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration38();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_EDUCACION_INFANTIL_2' })).toBe(1);
-      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL_2', 9, 330, 1);
+      await expectBidirectionalMap('CFGS_INTEGRACION_SOCIAL_2', 9, 330, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_INTEGRACION_SOCIAL_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = IS_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -573,7 +574,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration40();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_INTEGRACION_SOCIAL' })).toBe(1);
-      await expectBidirectionalMap('CFGS_ACONDICIONAMIENTO_FISICO', 7, 314, 1);
+      await expectBidirectionalMap('CFGS_ACONDICIONAMIENTO_FISICO', 7, 314, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = AF_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -599,7 +600,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration39();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
-      await expectBidirectionalMap('CFGS_ACONDICIONAMIENTO_FISICO_2', 7, 280, 1);
+      await expectBidirectionalMap('CFGS_ACONDICIONAMIENTO_FISICO_2', 7, 280, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = AF_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -629,7 +630,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration41();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
-      await expectBidirectionalMap('CFGM_ATENCION_DEPENDENCIA_2', 8, 306, 1);
+      await expectBidirectionalMap('CFGM_ATENCION_DEPENDENCIA_2', 8, 306, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGM_ATENCION_DEPENDENCIA_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = APSD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -655,7 +656,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration42();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
-      await expectBidirectionalMap('CFGM_ATENCION_DEPENDENCIA', 8, 322, 1);
+      await expectBidirectionalMap('CFGM_ATENCION_DEPENDENCIA', 8, 322, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGM_ATENCION_DEPENDENCIA' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = APSD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -681,7 +682,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration43();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_ACONDICIONAMIENTO_FISICO' })).toBe(1);
-      await expectBidirectionalMap('CFGS_ANIMACION_SOCIODEPORTIVA_2', 8, 336, 1);
+      await expectBidirectionalMap('CFGS_ANIMACION_SOCIODEPORTIVA_2', 8, 336, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = ASD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -710,7 +711,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration44();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA_2' })).toBe(1);
-      await expectBidirectionalMap('CFGS_ANIMACION_SOCIODEPORTIVA', 8, 384, 1);
+      await expectBidirectionalMap('CFGS_ANIMACION_SOCIODEPORTIVA', 8, 384, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = ASD_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -737,7 +738,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration46();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_ANIMACION_SOCIODEPORTIVA' })).toBe(1);
-      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO', 7, 374, 1);
+      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO', 7, 374, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_LABORATORIO_CLINICO' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = LC_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -764,7 +765,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration47();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_LABORATORIO_CLINICO' })).toBe(1);
-      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL_2', 8, 368, 1);
+      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL_2', 8, 368, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = GMN_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -791,7 +792,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration48();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGM_GUIA_MEDIO_NATURAL_2' })).toBe(1);
-      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL', 9, 410, 1);
+      await expectBidirectionalMap('CFGM_GUIA_MEDIO_NATURAL', 9, 410, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGM_GUIA_MEDIO_NATURAL' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = GMN_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -818,7 +819,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       await runMigration45();
 
       expect(await MapaModule.countDocuments({ tab: 'CFGS_LABORATORIO_CLINICO' })).toBe(1);
-      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO_2', 7, 348, 1);
+      await expectBidirectionalMap('CFGS_LABORATORIO_CLINICO_2', 7, 348, 3);
       for (const doc of await MapaModule.find({ tab: 'CFGS_LABORATORIO_CLINICO_2' })) {
         for (const lo of doc.learningOutcomes) {
           const ra = LC_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
@@ -836,7 +837,26 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.body[0].name_es).toBe('Análisis bioquímico');
       expect(res.body[0].name_ca).toBe('Anàlisi bioquímica');
     });
+
+    it('debería recargar con la migración 49 los mapas con tres actividades por conexión sin tocar otras pestañas', async () => {
+      await MapaModule.create({ tab: 'CFGM', order: 0, code: '0633', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration49();
+      await runMigration49();
+
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
+      for (const tab of Object.keys(TABS_TRES_ACTIVIDADES)) {
+        const docs = await MapaModule.find({ tab });
+        expect(docs.length).toBeGreaterThan(0);
+        for (const doc of docs) {
+          for (const lo of doc.learningOutcomes) {
+            const titles = lo.connections.flatMap((c: any) => c.activities.map((a: any) => a.title_es));
+            expect(new Set(titles).size).toBe(titles.length);
+            for (const c of lo.connections) expect(c.activities.length).toBeGreaterThanOrEqual(3);
+          }
+        }
+      }
+    });
   });
 });
-
-

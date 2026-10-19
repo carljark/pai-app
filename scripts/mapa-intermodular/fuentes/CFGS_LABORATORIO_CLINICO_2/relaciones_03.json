@@ -31,6 +31,34 @@
         "dua_ca": "Esquema de la cascada de coagulació amb les proves superposades.",
         "metodologia_es": "estudio de caso interdisciplinar.",
         "metodologia_ca": "estudi de cas interdisciplinari."
+      },
+      {
+        "titulo_es": "Un control de calidad fallido en el laboratorio de coagulación",
+        "titulo_ca": "Un control de qualitat fallit al laboratori de coagulació",
+        "contexto_es": "Una mañana el control interno del coagulómetro de un hospital comarcal queda fuera de rango y hay que decidir si los resultados del día son válidos.",
+        "contexto_ca": "Un matí el control intern del coagulòmetre d'un hospital comarcal queda fora de rang i cal decidir si els resultats del dia són vàlids.",
+        "desarrollo_es": "Partiendo del registro del día, el alumnado revisa si los controles del autoensayo están dentro de rango antes de informar (1372-3f). Repasa qué prueba valora cada fase de la coagulación, del TTPa al tiempo de protrombina, para localizar el problema (1374-5b). Termina relacionando la desviación observada con las alteraciones de la hemostasia más probables (1374-5f).",
+        "desarrollo_ca": "Partint del registre del dia, l'alumnat revisa si els controls de l'autoassaig són dins de rang abans d'informar (1372-3f). Repassa quina prova valora cada fase de la coagulació, del TTPa al temps de protrombina, per localitzar el problema (1374-5b). Acaba relacionant la desviació observada amb les alteracions de l'hemostàsia més probables (1374-5f).",
+        "evidencia_es": "Registro de control con la decisión de validar o repetir la serie.",
+        "evidencia_ca": "Registre de control amb la decisió de validar o repetir la sèrie.",
+        "dua_es": "Gráfico de Levey-Jennings ampliado con semáforo de aceptación.",
+        "dua_ca": "Gràfic de Levey-Jennings ampliat amb semàfor d'acceptació.",
+        "metodologia_es": "análisis de una incidencia de calidad.",
+        "metodologia_ca": "anàlisi d'una incidència de qualitat."
+      },
+      {
+        "titulo_es": "Role-play de un resultado de coagulación dudoso en urgencias",
+        "titulo_ca": "Role-play d'un resultat de coagulació dubtós a urgències",
+        "contexto_es": "En urgencias de Son Espases un paciente con sangrado activo espera mientras el laboratorio duda de la validez de un TTPa muy alargado.",
+        "contexto_ca": "A urgències de Son Espases un pacient amb sagnat actiu espera mentre el laboratori dubta de la validesa d'un TTPa molt allargat.",
+        "desarrollo_es": "Dos estudiantes representan al personal del laboratorio y al de urgencias, que discuten si repetir la prueba o informar el resultado (1374-5b). El alumnado reconstruye las fases de la coagulación afectadas y las alteraciones compatibles con el patrón (1374-5f). Antes de informar se confirma que los controles del autoensayo vuelven a estar en rango (1372-3f).",
+        "desarrollo_ca": "Dos estudiants representen el personal del laboratori i el d'urgències, que discuteixen si repetir la prova o informar el resultat (1374-5b). L'alumnat reconstrueix les fases de la coagulació afectades i les alteracions compatibles amb el patró (1374-5f). Abans d'informar es confirma que els controls de l'autoassaig tornen a estar dins de rang (1372-3f).",
+        "evidencia_es": "Acta del role-play con la decisión razonada del laboratorio.",
+        "evidencia_ca": "Acta del role-play amb la decisió raonada del laboratori.",
+        "dua_es": "Tarjetas de rol con las preguntas clave de cada personaje.",
+        "dua_ca": "Targetes de rol amb les preguntes clau de cada personatge.",
+        "metodologia_es": "juego de rol clínico.",
+        "metodologia_ca": "joc de rol clínic."
       }
     ]
   },
@@ -65,6 +93,34 @@
         "dua_ca": "Plantilla d'informe amb exemple resolt i glossari.",
         "metodologia_es": "práctica de laboratorio con informe.",
         "metodologia_ca": "pràctica de laboratori amb informe."
+      },
+      {
+        "titulo_es": "Una curva de calibración que invalida la ferritina",
+        "titulo_ca": "Una corba de calibratge que invalida la ferritina",
+        "contexto_es": "En el cribado de donantes de sangre una ferritina baja dispara el rechazo, pero la curva de calibración del día parece mal construida.",
+        "contexto_ca": "Al cribratge de donants de sang una ferritina baixa dispara el rebuig, però la corba de calibratge del dia sembla mal construïda.",
+        "desarrollo_es": "Con la hoja del cribado en la mano, el alumnado revisa los puntos de la curva de calibración de la ferritina y detecta qué estándar se ha pipeteado mal (1372-2h). Corrige la curva, anota los resultados en el informe de la serie roja del donante y decide si se puede aceptar la donación (1374-3g).",
+        "desarrollo_ca": "Amb el full del cribratge a la mà, l'alumnat revisa els punts de la corba de calibratge de la ferritina i detecta quin estàndard s'ha pipetejat malament (1372-2h). Corregeix la corba, anota els resultats a l'informe de la sèrie vermella del donant i decideix si es pot acceptar la donació (1374-3g).",
+        "evidencia_es": "Curva corregida y hoja de informe del donante revisada.",
+        "evidencia_ca": "Corba corregida i full d'informe del donant revisat.",
+        "dua_es": "Gráfico con los puntos ya situados para discutir la recta.",
+        "dua_ca": "Gràfic amb els punts ja situats per discutir la recta.",
+        "metodologia_es": "análisis de errores.",
+        "metodologia_ca": "anàlisi d'errors."
+      },
+      {
+        "titulo_es": "Puzle de casos de anemia en cuatro consultas de Mallorca",
+        "titulo_ca": "Trencaclosques de casos d'anèmia en quatre consultes de Mallorca",
+        "contexto_es": "Cuatro centros de salud de Mallorca remiten anemias microcíticas distintas y el laboratorio debe completar cada informe.",
+        "contexto_ca": "Quatre centres de salut de Mallorca remeten anèmies microcítiques diferents i el laboratori ha de completar cada informe.",
+        "desarrollo_es": "En grupos cooperativos cada estudiante domina un caso y después lo explica a los demás. Representan la curva de calibración del analito correspondiente y comprueban su intervalo de medida (1372-2h). A continuación anotan en cada informe de serie roja los resultados del caso asignado (1374-3g).",
+        "desarrollo_ca": "En grups cooperatius cada estudiant domina un cas i després l'explica als altres. Representen la corba de calibratge de l'analit corresponent i comproven el seu interval de mesura (1372-2h). A continuació anoten a cada informe de sèrie vermella els resultats del cas assignat (1374-3g).",
+        "evidencia_es": "Informes de los cuatro casos con su curva de calibración.",
+        "evidencia_ca": "Informes dels quatre casos amb la seva corba de calibratge.",
+        "dua_es": "Fichas de experto con el vocabulario clave subrayado.",
+        "dua_ca": "Fitxes d'expert amb el vocabulari clau subratllat.",
+        "metodologia_es": "aprendizaje cooperativo tipo puzle.",
+        "metodologia_ca": "aprenentatge cooperatiu tipus trencaclosques."
       }
     ]
   },
@@ -100,6 +156,34 @@
         "dua_ca": "Fitxes de leucòcits amb fotografia i descripció breu.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Urticaria en el comedor de un colegio de Alaior",
+        "titulo_ca": "Urticària al menjador d'una escola d'Alaior",
+        "contexto_es": "Tras una comida de pescado en el comedor de un colegio de Alaior, ocho alumnos presentan urticaria y el laboratorio recibe sus hemogramas.",
+        "contexto_ca": "Després d'un menjar de peix al menjador d'una escola d'Alaior, vuit alumnes presenten urticària i el laboratori rep els seus hemogrames.",
+        "desarrollo_es": "Desde el hemograma de cada niño, el alumnado describe las alteraciones morfológicas de los leucocitos, en especial los eosinófilos y su relación con la plaquetopenia leve observada (1374-4d). Después detalla las técnicas disponibles para el diagnóstico de la hipersensibilidad inmediata (1372-4a) y decide, según el equipo del laboratorio, cómo medir la IgE específica frente a Anisakis (1372-4d).",
+        "desarrollo_ca": "Des de l'hemograma de cada nin, l'alumnat descriu les alteracions morfològiques dels leucòcits, sobretot els eosinòfils i la seva relació amb la plaquetopènia lleu observada (1374-4d). Després detalla les tècniques disponibles per al diagnòstic de la hipersensibilitat immediata (1372-4a) i decideix, segons l'equip del laboratori, com mesurar la IgE específica contra Anisakis (1372-4d).",
+        "evidencia_es": "Informe morfológico y propuesta de estudio de IgE específica.",
+        "evidencia_ca": "Informe morfològic i proposta d'estudi d'IgE específica.",
+        "dua_es": "Atlas de eosinófilos y fichas de alérgenos alimentarios.",
+        "dua_ca": "Atles d'eosinòfils i fitxes d'al·lèrgens alimentaris.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Diseñar el circuito de alergias del laboratorio de Ibiza",
+        "titulo_ca": "Dissenyar el circuit d'al·lèrgies del laboratori d'Eivissa",
+        "contexto_es": "El laboratorio del Hospital Can Misses quiere reorganizar la petición de pruebas de alergia para reducir los envíos a Palma.",
+        "contexto_ca": "El laboratori de l'Hospital Can Misses vol reorganitzar la petició de proves d'al·lèrgia per reduir els enviaments a Palma.",
+        "desarrollo_es": "Los grupos entrevistan al personal y prototipan un circuito que detalle las técnicas de estudio de la hipersensibilidad (1372-4a). Eligen cómo detectar la IgE según los equipos disponibles en el centro (1372-4d) y revisan la morfología de los leucocitos que justifica cada petición (1374-4d).",
+        "desarrollo_ca": "Els grups entrevisten el personal i prototipen un circuit que detalli les tècniques d'estudi de la hipersensibilitat (1372-4a). Trien com detectar la IgE segons els equips disponibles al centre (1372-4d) i revisen la morfologia dels leucòcits que justifica cada petició (1374-4d).",
+        "evidencia_es": "Prototipo del circuito de peticiones de alergia.",
+        "evidencia_ca": "Prototip del circuit de peticions d'al·lèrgia.",
+        "dua_es": "Plantillas de mapa de proceso y rotuladores de colores.",
+        "dua_ca": "Plantilles de mapa de procés i retoladors de colors.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   },
@@ -136,6 +220,34 @@
         "dua_ca": "Atles de formes de Plasmodium i d'artefactes freqüents.",
         "metodologia_es": "práctica de microscopía.",
         "metodologia_ca": "pràctica de microscòpia."
+      },
+      {
+        "titulo_es": "Un brote de diarrea en una escuela de Santanyí",
+        "titulo_ca": "Un brot de diarrea en una escola de Santanyí",
+        "contexto_es": "Salud Pública pide al laboratorio estudiar las heces de varios niños de una escuela de Santanyí con diarrea.",
+        "contexto_ca": "Salut Pública demana al laboratori estudiar les femtes de diversos nins d'una escola de Santanyí amb diarrea.",
+        "desarrollo_es": "Con las muestras de heces ya recibidas, el alumnado prepara los frotis según el protocolo y los tiñe (1373-6g), apoyándose en la experiencia previa de extensión sanguínea (1374-1b). Identifica quistes de Giardia y huevos de Ascaris en las preparaciones (1373-6h) y descarta artefactos como granos de almidón o células vegetales (1373-6i).",
+        "desarrollo_ca": "Amb les mostres de femta ja rebudes, l'alumnat prepara les extensions segons el protocol i les tenyeix (1373-6g), amb l'experiència prèvia d'extensió sanguínia (1374-1b). Identifica quists de Giardia i ous d'Ascaris a les preparacions (1373-6h) i descarta artefactes com grans de midó o cèl·lules vegetals (1373-6i).",
+        "evidencia_es": "Preparaciones comentadas y diagnóstico del brote.",
+        "evidencia_ca": "Preparacions comentades i diagnòstic del brot.",
+        "dua_es": "Láminas con formas parasitarias y artefactos parecidos.",
+        "dua_ca": "Làmines amb formes parasitàries i artefactes semblants.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Estaciones de diagnóstico parasitológico en el laboratorio",
+        "titulo_ca": "Estacions de diagnòstic parasitari al laboratori",
+        "contexto_es": "En el aula se montan cuatro estaciones de trabajo con muestras simuladas de distintos pacientes con sospecha de parasitosis intestinal.",
+        "contexto_ca": "A l'aula es munten quatre estacions de treball amb mostres simulades de diferents pacients amb sospita de parasitosis intestinal.",
+        "desarrollo_es": "En cada estación el alumnado realiza una tarea distinta: preparar el frotis, teñirlo, observar y comparar. En la de preparación aplica el protocolo de la extensión de heces (1373-6g) y la técnica de extensión (1374-1b); en la de observación identifica formas parasitarias (1373-6h) y en la de revisión discute los posibles artefactos (1373-6i).",
+        "desarrollo_ca": "A cada estació l'alumnat fa una tasca diferent: preparar l'extensió, tenyir-la, observar i comparar. A la de preparació aplica el protocol de l'extensió de femta (1373-6g) i la tècnica d'extensió (1374-1b); a la d'observació identifica formes parasitàries (1373-6h) i a la de revisió discuteix els possibles artefactes (1373-6i).",
+        "evidencia_es": "Cuaderno de las cuatro estaciones con los hallazgos.",
+        "evidencia_ca": "Quadern de les quatre estacions amb les troballes.",
+        "dua_es": "Instrucciones de cada estación en audio y por escrito.",
+        "dua_ca": "Instruccions de cada estació en àudio i per escrit.",
+        "metodologia_es": "rincones por estaciones.",
+        "metodologia_ca": "racons per estacions."
       }
     ]
   },
@@ -170,6 +282,34 @@
         "dua_ca": "Imatges de bacteris intracel·lulars amb zoom progressiu.",
         "metodologia_es": "análisis de hallazgos críticos.",
         "metodologia_ca": "anàlisi de troballes crítiques."
+      },
+      {
+        "titulo_es": "Bacteriemia oculta en un lactante con fiebre en Menorca",
+        "titulo_ca": "Bacterièmia oculta en un lactant amb febre a Menorca",
+        "contexto_es": "Un lactante de Ferreries llega con fiebre y mal estado general; urgencias pide un hemograma urgente con observación de la extensión.",
+        "contexto_ca": "Un lactant de Ferreries arriba amb febre i mal estat general; urgències demana un hemograma urgent amb observació de l'extensió.",
+        "desarrollo_es": "El alumnado clasifica las células maduras de la extensión y detecta que la fórmula es normal (1374-1e). Observa después la misma preparación en busca de microorganismos con objetivo de inmersión, describe lo que ve y lo comunica al laboratorio de microbiología (1373-2f).",
+        "desarrollo_ca": "L'alumnat classifica les cèl·lules madures de l'extensió i detecta que la fórmula és normal (1374-1e). Observa després la mateixa preparació a la recerca de microorganismes amb objectiu d'immersió, descriu el que veu i ho comunica al laboratori de microbiologia (1373-2f).",
+        "evidencia_es": "Informe de microscopía con la descripción de la observación.",
+        "evidencia_ca": "Informe de microscòpia amb la descripció de l'observació.",
+        "dua_es": "Monitor con la imagen ampliada compartida para comentar.",
+        "dua_ca": "Monitor amb la imatge ampliada compartida per comentar.",
+        "metodologia_es": "estudio de caso clínico.",
+        "metodologia_ca": "estudi de cas clínic."
+      },
+      {
+        "titulo_es": "Debate sobre una inclusión dudosa entre hematólogos y microbiólogos",
+        "titulo_ca": "Debat sobre una inclusió dubtosa entre hematòlegs i microbiòlegs",
+        "contexto_es": "En la sesión conjunta dos servicios discuten si unos puntos intracelulares de la extensión son bacterias o artefactos de tinción.",
+        "contexto_ca": "A la sessió conjunta dos serveis discuteixen si uns punts intracel·lulars de l'extensió són bacteris o artefactes de tinció.",
+        "desarrollo_es": "Con una extensión teñida, cada bando defiende su interpretación usando los criterios de clasificación celular para descartar que los puntos sean gránulos celulares (1374-1e). Después observan la preparación al microscopio y comprueban la forma y la disposición real de las inclusiones (1373-2f).",
+        "desarrollo_ca": "Amb una extensió tenyida, cada bàndol defensa la seva interpretació usant els criteris de classificació cel·lular per descartar que els punts siguin grànuls cel·lulars (1374-1e). Després observen la preparació al microscopi i comproven la forma i la disposició real de les inclusions (1373-2f).",
+        "evidencia_es": "Conclusión razonada del debate con las imágenes observadas.",
+        "evidencia_ca": "Conclusió raonada del debat amb les imatges observades.",
+        "dua_es": "Fichas con argumentos a favor y en contra ya redactados.",
+        "dua_ca": "Fitxes amb arguments a favor i en contra ja redactats.",
+        "metodologia_es": "debate dirigido.",
+        "metodologia_ca": "debat dirigit."
       }
     ]
   },
@@ -204,6 +344,34 @@
         "dua_ca": "Comparativa visual de limfòcits normals, activats i blasts.",
         "metodologia_es": "aprendizaje por casos.",
         "metodologia_ca": "aprenentatge per casos."
+      },
+      {
+        "titulo_es": "El protocolo vírico de un brote de paperas",
+        "titulo_ca": "El protocol vièric d'un brot de galteres",
+        "contexto_es": "Un instituto de Ciutadella notifica varios casos sospechosos de paperas y Salud Pública pregunta qué pruebas puede ofrecer el laboratorio.",
+        "contexto_ca": "Un institut de Ciutadella notifica diversos casos sospitosos de galteres i Salut Pública demana quines proves pot oferir el laboratori.",
+        "desarrollo_es": "Los grupos definen el protocolo de diagnóstico vírico según la muestra y el tiempo de evolución, combinando serología y PCR (1373-7c). Revisan los hemogramas de los casos y describen los precursores de la serie mononuclear para no confundirlos con linfocitos reactivos (1374-4b).",
+        "desarrollo_ca": "Els grups defineixen el protocol de diagnòstic vièric segons la mostra i el temps d'evolució, combinant serologia i PCR (1373-7c). Revisen els hemogrames dels casos i descriuen els precursors de la sèrie mononuclear per no confondre'ls amb limfòcits reactius (1374-4b).",
+        "evidencia_es": "Protocolo vírico y comentario de los hemogramas del brote.",
+        "evidencia_ca": "Protocol vièric i comentari dels hemogrames del brot.",
+        "dua_es": "Línea de tiempo de la infección con las pruebas recomendadas.",
+        "dua_ca": "Línia de temps de la infecció amb les proves recomanades.",
+        "metodologia_es": "simulación de salud pública.",
+        "metodologia_ca": "simulació de salut pública."
+      },
+      {
+        "titulo_es": "Guía de diagnóstico del virus respiratorio sincitial para pediatría",
+        "titulo_ca": "Guia de diagnòstic del virus respiratori sincitial per a pediatria",
+        "contexto_es": "La planta de pediatría del Hospital Son Espases pide una guía rápida para decidir qué muestra enviar según la edad del niño.",
+        "contexto_ca": "La planta de pediatria de l'Hospital Son Espases demana una guia ràpida per decidir quina mostra enviar segons l'edat del nin.",
+        "desarrollo_es": "En equipos, el alumnado construye una guía que defina el protocolo de diagnóstico de las infecciones víricas respiratorias (1373-7c). La ilustra también con imágenes de precursores y células maduras de la serie granulocítica y mononuclear para interpretar los hemogramas pediátricos (1374-4b).",
+        "desarrollo_ca": "En equips, l'alumnat construeix una guia que defineixi el protocol de diagnòstic de les infeccions víriques respiratòries (1373-7c). La il·lustra també amb imatges de precursors i cèl·lules madures de la sèrie granulocítica i mononuclear per interpretar els hemogrames pediàtrics (1374-4b).",
+        "evidencia_es": "Guía ilustrada validada por la unidad de pediatría.",
+        "evidencia_ca": "Guia il·lustrada validada per la unitat de pediatria.",
+        "dua_es": "Plantilla de guía con apartados fijos y banco de imágenes.",
+        "dua_ca": "Plantilla de guia amb apartats fixs i banc d'imatges.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
       }
     ]
   },
@@ -238,6 +406,34 @@
         "dua_ca": "Diagrama de traçabilitat amb codis de barres simulats.",
         "metodologia_es": "simulación de procesos.",
         "metodologia_ca": "simulació de processos."
+      },
+      {
+        "titulo_es": "Una unidad de hematíes con etiqueta ilegible en el almacén",
+        "titulo_ca": "Una unitat d'hematies amb etiqueta il·legible al magatzem",
+        "contexto_es": "En el almacén del banco de sangre aparece una unidad de hematíes sin fecha de caducidad legible y hay que decidir su destino.",
+        "contexto_ca": "Al magatzem del banc de sang apareix una unitat d'hematies sense data de caducitat llegible i cal decidir-ne el destí.",
+        "desarrollo_es": "Ante una etiqueta ilegible, el alumnado revisa el circuito de registro, etiquetado y conservación de los hemoderivados para reconstruir la trazabilidad de la unidad (1374-7e). Si procede, toma una muestra de control, la cultiva e intenta aislar unidades formadoras de colonias (1373-4d) antes de retirar o liberar la unidad.",
+        "desarrollo_ca": "Davant una etiqueta il·legible, l'alumnat revisa el circuit de registre, etiquetatge i conservació dels hemoderivats per reconstruir la traçabilitat de la unitat (1374-7e). Si escau, pren una mostra de control, la cultiva i intenta aïllar unitats formadores de colònies (1373-4d) abans de retirar o alliberar la unitat.",
+        "evidencia_es": "Informe de trazabilidad con la decisión sobre la unidad.",
+        "evidencia_ca": "Informe de traçabilitat amb la decisió sobre la unitat.",
+        "dua_es": "Etiquetas simuladas con códigos y lista de comprobación.",
+        "dua_ca": "Etiquetes simulades amb codis i llista de comprovació.",
+        "metodologia_es": "resolución de incidencias.",
+        "metodologia_ca": "resolució d'incidències."
+      },
+      {
+        "titulo_es": "Formar al personal novel en la conservación de hemoderivados",
+        "titulo_ca": "Formar el personal novell en la conservació d'hemoderivats",
+        "contexto_es": "El banco de sangre incorpora dos técnicos nuevos y el alumnado prepara una sesión para enseñarles a conservar y liberar componentes.",
+        "contexto_ca": "El banc de sang incorpora dos tècnics nous i l'alumnat prepara una sessió per ensenyar-los a conservar i alliberar components.",
+        "desarrollo_es": "Cada estudiante se prepara un apartado y lo explica a los compañeros: registro y etiquetado de los hemoderivados (1374-7e) y control microbiológico por aislamiento de colonias (1373-4d). Se evalúan entre iguales con una rúbrica.",
+        "desarrollo_ca": "Cada estudiant es prepara un apartat i l'explica als companys: registre i etiquetatge dels hemoderivats (1374-7e) i control microbiològic per aïllament de colònies (1373-4d). S'avaluen entre iguals amb una rúbrica.",
+        "evidencia_es": "Sesión formativa impartida y rúbrica de coevaluación.",
+        "evidencia_ca": "Sessió formativa impartida i rúbrica de coavaluació.",
+        "dua_es": "Guion de la exposición con ideas clave para cada ponente.",
+        "dua_ca": "Guió de l'exposició amb idees clau per a cada ponent.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   },
@@ -272,6 +468,34 @@
         "dua_ca": "Infografia del recorregut d'una bossa de sang.",
         "metodologia_es": "estudio de procesos.",
         "metodologia_ca": "estudi de processos."
+      },
+      {
+        "titulo_es": "Un simulacro de donación con avería en la nevera",
+        "titulo_ca": "Un simulacre de donació amb avaria a la nevera",
+        "contexto_es": "Durante la donación colectiva en el polideportivo de Manacor se avería la nevera portátil y hay que decidir qué bolsas se conservan.",
+        "contexto_ca": "Durant la donació col·lectiva al poliesportiu de Manacor s'avaria la nevera portàtil i cal decidir quines bosses es conserven.",
+        "desarrollo_es": "Los equipos reconstruyen los pasos de obtención y procesamiento de las unidades y determinan el tiempo máximo admisible sin refrigeración (1374-7b). Después explican cómo procesarían las muestras de los tubos piloto para las pruebas moleculares sin que afecte al resultado (1373-7e).",
+        "desarrollo_ca": "Els equips reconstrueixen els passos d'obtenció i processament de les unitats i determinen el temps màxim admissible sense refrigeració (1374-7b). Després expliquen com processarien les mostres dels tubs pilot per a les proves moleculars sense que afecti el resultat (1373-7e).",
+        "evidencia_es": "Informe del simulacro con las unidades descartadas y conservadas.",
+        "evidencia_ca": "Informe del simulacre amb les unitats descartades i conservades.",
+        "dua_es": "Mapa del proceso con las decisiones marcadas paso a paso.",
+        "dua_ca": "Mapa del procés amb les decisions marcades pas a pas.",
+        "metodologia_es": "simulación de incidencias.",
+        "metodologia_ca": "simulació d'incidències."
+      },
+      {
+        "titulo_es": "Investigar el cribado de una donación con ventana inmunológica",
+        "titulo_ca": "Investigar el cribratge d'una donació amb finestra immunològica",
+        "contexto_es": "Un donante habitual da positivo en una prueba serológica del cribado y el laboratorio duda por la ventana inmunológica.",
+        "contexto_ca": "Un donant habitual dóna positiu en una prova serològica del cribratge i el laboratori dubta per la finestra immunològica.",
+        "desarrollo_es": "El alumnado indaga en el circuito completo de la donación y describe cómo se obtiene y se procesa cada unidad (1374-7b). Diseña también el procesamiento de las muestras para las técnicas moleculares que acortan la ventana inmunológica y lo justifica (1373-7e).",
+        "desarrollo_ca": "L'alumnat indaga en el circuit complet de la donació i descriu com s'obté i es processa cada unitat (1374-7b). Dissenya també el processament de les mostres per a les tècniques moleculars que escurcen la finestra immunològica i ho justifica (1373-7e).",
+        "evidencia_es": "Informe de investigación sobre el cribado del donante.",
+        "evidencia_ca": "Informe de recerca sobre el cribratge del donant.",
+        "dua_es": "Enlaces y artículos resumidos con preguntas guía.",
+        "dua_ca": "Enllaços i articles resumits amb preguntes guia.",
+        "metodologia_es": "investigación con webquest.",
+        "metodologia_ca": "recerca amb webquesta."
       }
     ]
   },
@@ -308,6 +532,34 @@
         "dua_ca": "Esquema de la medul·la òssia amb les sèries i fotos d'amastigots.",
         "metodologia_es": "estudio de caso de una zoonosis local.",
         "metodologia_ca": "estudi de cas d'una zoonosi local."
+      },
+      {
+        "titulo_es": "Un trivial de parásitos y series sanguíneas",
+        "titulo_ca": "Un trivial de paràsits i sèries sanguínies",
+        "contexto_es": "El laboratorio de microbiología de Ciutadella prepara una jornada de repaso por equipos antes de las prácticas y el alumnado de FP colabora montando el juego.",
+        "contexto_ca": "El laboratori de microbiologia de Ciutadella prepara una jornada de repàs per equips abans de les pràctiques i l'alumnat de FP col·labora muntant el joc.",
+        "desarrollo_es": "Por equipos, el alumnado selecciona para cada ficha el procedimiento de identificación del parásito que corresponde: concentración, tinción y observación al microscopio (1373-6a). Después localiza en los frotis las estructuras que permiten el diagnóstico, como trofozoítos con núcleo y cromatina periférica (1373-6h). Para ganar la ronda final encadena la invasión parasitaria de la médula con la bajada de neutrófilos y plaquetas, recordando cómo maduran los granulocitos y cómo se producen las plaquetas (1374-4a), y anota cada pareja hallazgo-serie en el informe (1374-4i).",
+        "desarrollo_ca": "Per equips, l'alumnat selecciona per a cada fitxa el procediment d'identificació del paràsit que correspon: concentració, tinció i observació al microscopi (1373-6a). Després localitza a les extensions les estructures que permeten el diagnòstic, com trofozoïts amb nucli i cromatina perifèrica (1373-6h). Per guanyar la ronda final encadena la invasió parasitària de la medul·la amb la baixada de neutròfils i plaquetes, recordant com maduren els granulòcits i com es produeixen les plaquetes (1374-4a), i anota cada parella troballa-sèrie a l'informe (1374-4i).",
+        "evidencia_es": "Puntuación de las rondas con las fichas de identificación resueltas.",
+        "evidencia_ca": "Puntuació de les rondes amb les fitxes d'identificació resoltes.",
+        "dua_es": "Fichas de parásitos con imagen, nombre y nivel de dificultad.",
+        "dua_ca": "Fitxes de paràsits amb imatge, nom i nivell de dificultat.",
+        "metodologia_es": "gamificación por equipos.",
+        "metodologia_ca": "gamificació per equips."
+      },
+      {
+        "titulo_es": "Una guía de parásitos para el laboratorio de Maó",
+        "titulo_ca": "Una guia de paràsits per al laboratori de Maó",
+        "contexto_es": "Un laboratorio privado de Maó renueva la plantilla y pide al centro formativo una guía rápida de parásitos en frotis para el personal nuevo.",
+        "contexto_ca": "Un laboratori privat de Maó renova la plantilla i demana al centre formatiu una guia ràpida de paràsits en extensions per al personal nou.",
+        "desarrollo_es": "Cada estudiante estudia en casa un protocolo distinto —concentración, tinción de Ziehl, cultivo— y lo explica a sus compañeros en la sesión presencial (1373-6a). Con las preparaciones del laboratorio buscan y fotografían las estructuras que confirman el diagnóstico en cada frotis (1373-6h). Además atan la invasión medular de un parásito con la caída de las tres series, repasando cómo maduran los granulocitos y cómo se producen las plaquetas (1374-4a), y recogen los resultados en el informe del caso (1374-4i).",
+        "desarrollo_ca": "Cada estudiant estudia a casa un protocol diferent —concentració, tinció de Ziehl, cultiu— i l'explica als companys a la sessió presencial (1373-6a). Amb les preparacions del laboratori cerquen i fotografien les estructures que confirmen el diagnòstic a cada extensió (1373-6h). A més, lliguen la invasió medul·lar d'un paràsit amb la caiguda de les tres sèries, repassant com maduren els granulòcits i com es produeixen les plaquetes (1374-4a), i recullen els resultats a l'informe del cas (1374-4i).",
+        "evidencia_es": "Página de la guía con fotos propias y comentario del caso.",
+        "evidencia_ca": "Pàgina de la guia amb fotos pròpies i comentari del cas.",
+        "dua_es": "Guion de la exposición con tres apartados fijos.",
+        "dua_ca": "Guió de l'exposició amb tres apartats fixos.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
@@ -342,6 +594,34 @@
         "dua_ca": "Diagrama de decisió amb colors de perillositat.",
         "metodologia_es": "simulación de protocolo.",
         "metodologia_ca": "simulació de protocol."
+      },
+      {
+        "titulo_es": "Tres papeles ante una muestra de riesgo",
+        "titulo_ca": "Tres papers davant una mostra de risc",
+        "contexto_es": "En el laboratorio central de un hospital de Palma aparece un tubo de sangre sin tapón con etiqueta de alto riesgo biológico y el equipo debe reaccionar.",
+        "contexto_ca": "Al laboratori central d'un hospital de Palma apareix un tub de sang sense tap amb etiqueta d'alt risc biològic i l'equip ha de reaccionar.",
+        "desarrollo_es": "Tres estudiantes asumen papeles distintos —quien manipula, quien supervisa y quien gestiona la prevención— y valoran el peligro de cada paso, desde el transporte hasta el frotis, según el grupo del microorganismo (1373-1c). Representan la intervención completa aplicando las normas de seguridad del procedimiento hematológico, con cabina, guantes y fijación previa de la extensión (1374-1f). Cierran con una puesta en común en la que cada papel propone una mejora.",
+        "desarrollo_ca": "Tres estudiants assumeixen papers diferents —qui manipula, qui supervisa i qui gestiona la prevenció— i valoren el perill de cada pas, des del transport fins a l'extensió, segons el grup del microorganisme (1373-1c). Representen la intervenció completa aplicant les normes de seguretat del procediment hematològic, amb cabina, guants i fixació prèvia de l'extensió (1374-1f). Tanquen amb una posada en comú en què cada paper proposa una millora.",
+        "evidencia_es": "Vídeo corto de la representación y lista de comprobación de seguridad.",
+        "evidencia_ca": "Vídeo curt de la representació i llista de comprovació de seguretat.",
+        "dua_es": "Fichas de papel con las frases clave que puede decir cada personaje.",
+        "dua_ca": "Fitxes de paper amb les frases clau que pot dir cada personatge.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Puzzle de bioseguridad para un frotis complicado",
+        "titulo_ca": "Puzzle de bioseguretat per a una extensió complicada",
+        "contexto_es": "El servicio de hematología de un hospital de Menorca espera muestras de un paciente con sospecha de infección por un virus de grupo 4 y hay que preparar el trabajo.",
+        "contexto_ca": "El servei d'hematologia d'un hospital de Menorca espera mostres d'un pacient amb sospita d'infecció per un virus de grup 4 i cal preparar la feina.",
+        "desarrollo_es": "Cada grupo de expertos estudia una parte del caso y después la enseña a los demás: unos valoran el peligro del procedimiento con la muestra (1373-1c) y otros preparan las normas de seguridad que se aplicarán en el laboratorio de hematología (1374-1f). La sesión acaba con la reconstrucción conjunta, por el grupo base, de la secuencia de trabajo con una muestra peligrosa.",
+        "desarrollo_ca": "Cada grup d'experts estudia una part del cas i després l'ensenya als altres: uns valoren el perill del procediment amb la mostra (1373-1c) i altres preparen les normes de seguretat que s'aplicaran al laboratori d'hematologia (1374-1f). La sessió acaba amb la reconstrucció conjunta, pel grup base, de la seqüència de feina amb una mostra perillosa.",
+        "evidencia_es": "Protocolo de trabajo reconstruido por el grupo base.",
+        "evidencia_ca": "Protocol de feina reconstruït pel grup base.",
+        "dua_es": "Textos de experto con vocabulario destacado y resumen al margen.",
+        "dua_ca": "Textos d'expert amb vocabulari destacat i resum al marge.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
@@ -376,6 +656,34 @@
         "dua_ca": "Passos d'actuació davant un tall en format de cartell.",
         "metodologia_es": "análisis de incidentes.",
         "metodologia_ca": "anàlisi d'incidents reals."
+      },
+      {
+        "titulo_es": "Plástico o vidrio en el laboratorio de coagulación",
+        "titulo_ca": "Plàstic o vidre al laboratori de coagulació",
+        "contexto_es": "Dos técnicos del laboratorio de coagulación de un hospital de Formentera discuten si hay que retirar todo el material de vidrio después de romperse dos tubos la misma semana.",
+        "contexto_ca": "Dos tècnics del laboratori de coagulació d'un hospital de Formentera discuteixen si cal retirar tot el material de vidre després d'haver-se romput dos tubs la mateixa setmana.",
+        "desarrollo_es": "La clase se divide en dos posiciones y cada una defiende con argumentos qué medidas reducen mejor los accidentes más habituales del banco de coagulación: cortes al destapar tubos, pinchazos y salpicaduras (1373-1d). Cada intervención va acompañada de la norma de trabajo que la respalda, desde el uso de contenedores rígidos hasta la comunicación del incidente (1374-5i). El debate termina con una lista de medidas consensuada.",
+        "desarrollo_ca": "La classe es divideix en dues posicions i cada una defensa amb arguments quines mesures redueixen millor els accidents més habituals del banc de coagulació: talls en destapar tubs, punxades i esquitxades (1373-1d). Cada intervenció va acompanyada de la norma de feina que la sosté, des de l'ús de contenidors rígids fins a la comunicació de l'incident (1374-5i). El debat acaba amb una llista de mesures consensuada.",
+        "evidencia_es": "Acta del debate con las medidas acordadas.",
+        "evidencia_ca": "Acta del debat amb les mesures acordades.",
+        "dua_es": "Tarjetas de argumento con datos y espacio para anotar dudas.",
+        "dua_ca": "Targetes d'argument amb dades i espai per anotar dubtes.",
+        "metodologia_es": "debate guiado.",
+        "metodologia_ca": "debat guiat."
+      },
+      {
+        "titulo_es": "Un taller de tubos seguros entre dos promociones",
+        "titulo_ca": "Un taller de tubs segurs entre dues promocions",
+        "contexto_es": "Los alumnos de segundo curso de un centro de Palma enseñan a los de primero a manipular tubos de coagulación sin cortarse.",
+        "contexto_ca": "Els alumnes de segon curs d'un centre de Palma ensenyen als de primer a manipular tubs de coagulació sense tallar-se.",
+        "desarrollo_es": "La pareja de estudiantes mayores prepara una estación donde muestra cómo abrir tubos, centrifugar y desechar el material para evitar los accidentes que vieron el curso pasado (1373-1d). Los compañeros de primero ejecutan la secuencia mientras el tutor corrige y recuerda la norma de seguridad que se aplica en cada paso (1374-5i).",
+        "desarrollo_ca": "La parella d'estudiants més grans prepara una estació on mostra com obrir tubs, centrifugar i llençar el material per evitar els accidents que van veure el curs passat (1373-1d). Els companys de primer executen la seqüència mentre el tutor corregeix i recorda la norma de seguretat que s'aplica a cada pas (1374-5i).",
+        "evidencia_es": "Lista de comprobación firmada por el tutor y el aprendiz.",
+        "evidencia_ca": "Llista de comprovació signada pel tutor i l'aprenent.",
+        "dua_es": "Guion fotografiado paso a paso para el compañero tutor.",
+        "dua_ca": "Guió fotografiat pas a pas per al company tutor.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   },
@@ -411,6 +719,34 @@
         "dua_ca": "Taula de patrons de coagulació amb semàfor.",
         "metodologia_es": "simulación de caso crítico.",
         "metodologia_ca": "simulació de cas crític."
+      },
+      {
+        "titulo_es": "Una neumonía grave con coagulación alterada",
+        "titulo_ca": "Una pneumònia greu amb coagulació alterada",
+        "contexto_es": "Un hombre mayor ingresa en el hospital de Inca con una neumonía grave y las pruebas de coagulación empiezan a desviarse.",
+        "contexto_ca": "Un home gran ingressa a l'hospital d'Inca amb una pneumònia greu i les proves de coagulació comencen a desviar-se.",
+        "desarrollo_es": "Guiados por preguntas, los estudiantes buscan en la bibliografía qué microorganismo en cadenas aparece en el Gram del esputo y describen cómo son esas bacterias al microscopio y cómo se tiñen (1373-2a). Analizan en el coagulómetro el tiempo de protrombina, el TTPa, el fibrinógeno y el dímero D del paciente (1374-5d) y relacionan los valores con una coagulopatía de consumo (1374-5f).",
+        "desarrollo_ca": "Guiats per preguntes, els estudiants cerquen a la bibliografia quin microorganisme en cadenes apareix al Gram de l'esput i descriuen com són aquests bacteris al microscopi i com es tenyen (1373-2a). Analitzen al coagulòmetre el temps de protrombina, el TTPa, el fibrinogen i el dímer D del pacient (1374-5d) i relacionen els valors amb una coagulopatia de consum (1374-5f).",
+        "evidencia_es": "Cuaderno de investigación con respuesta razonada a cada pregunta.",
+        "evidencia_ca": "Quadern de recerca amb resposta raonada a cada pregunta.",
+        "dua_es": "Cuestionario guía con pistas y enlaces a la bibliografía del aula.",
+        "dua_ca": "Qüestionari guia amb pistes i enllaços a la bibliografia de l'aula.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Estaciones para leer Gram y coagulación",
+        "titulo_ca": "Estacions per llegir Gram i coagulació",
+        "contexto_es": "El aula taller del ciclo, en un centro de Eivissa, se organiza por rincones para repasar cómo se leen una tinción de Gram y un coagulograma.",
+        "contexto_ca": "L'aula taller del cicle, en un centre d'Eivissa, s'organitza per racons per repassar com es llegeixen una tinció de Gram i un coagulograma.",
+        "desarrollo_es": "En la estación del microscopio el alumnado describe la forma y el comportamiento tintóreo de los microorganismos en varias tinciones de muestras clínicas (1373-2a). En la del coagulómetro determina los parámetros de la hemostasia de dos casos (1374-5d) y, en la de interpretación, empareja cada patrón con la alteración correspondiente (1374-5f). Al final del circuito se revisan las respuestas de las tres estaciones.",
+        "desarrollo_ca": "A l'estació del microscopi l'alumnat descriu la forma i el comportament tintorial dels microorganismes en diverses tincions de mostres clíniques (1373-2a). A la del coagulòmetre determina els paràmetres de l'hemostàsia de dos casos (1374-5d) i, a la d'interpretació, aparella cada patró amb l'alteració corresponent (1374-5f). Al final del circuit es revisen les respostes de les tres estacions.",
+        "evidencia_es": "Ficha de respuestas de las tres estaciones.",
+        "evidencia_ca": "Fitxa de respostes de les tres estacions.",
+        "dua_es": "Estaciones numeradas y tareas escritas con tipografía ampliada.",
+        "dua_ca": "Estacions numerades i tasques escrites amb tipografia ampliada.",
+        "metodologia_es": "estaciones de trabajo.",
+        "metodologia_ca": "estacions de treball."
       }
     ]
   },
@@ -447,6 +783,34 @@
         "dua_ca": "Diagrama d'actuació davant una reacció transfusional.",
         "metodologia_es": "simulación de incidente.",
         "metodologia_ca": "simulació d'incident."
+      },
+      {
+        "titulo_es": "Rediseñar el estudio de una bolsa sospechosa",
+        "titulo_ca": "Redissenyar l'estudi d'una bossa sospitosa",
+        "contexto_es": "El banco de sangre de un hospital de Palma quiere mejorar cómo se estudia una unidad devuelta por una reacción febril y pide ideas al alumnado.",
+        "contexto_ca": "El banc de sang d'un hospital de Palma vol millorar com s'estudia una unitat tornada per una reacció febril i demana idees a l'alumnat.",
+        "desarrollo_es": "El equipo define el problema con las personas implicadas y después imagina y prototipa un circuito nuevo. El prototipo decide con qué medio, temperatura y tiempo se incubará la unidad devuelta (1373-4c) y cómo se aislarán las colonias si hay crecimiento (1373-4d). Se comprueba también si el circuito permite repetir la antiglobulina directa y la indirecta de la muestra posterior (1374-6c) y validar los resultados comparándolos con los previos (1374-6f).",
+        "desarrollo_ca": "L'equip defineix el problema amb les persones implicades i després imagina i prototipa un circuit nou. El prototip decideix amb quin medi, temperatura i temps s'incubarà la unitat tornada (1373-4c) i com s'aïllaran les colònies si hi ha creixement (1373-4d). Es comprova també si el circuit permet repetir l'antiglobulina directa i la indirecta de la mostra posterior (1374-6c) i validar els resultats comparant-los amb els previs (1374-6f).",
+        "evidencia_es": "Maqueta del circuito con las tarjetas de proceso.",
+        "evidencia_ca": "Maqueta del circuit amb les targetes de procés.",
+        "dua_es": "Plantillas de ideación con pictogramas y turnos de palabra marcados.",
+        "dua_ca": "Plantilles d'ideació amb pictogrames i torns de paraula marcats.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Alerta por una unidad de hematíes contaminada",
+        "titulo_ca": "Alerta per una unitat d'hematies contaminada",
+        "contexto_es": "El servicio de transfusión de un hospital de Mallorca activa el protocolo ante la sospecha de contaminación bacteriana de una unidad de hematíes.",
+        "contexto_ca": "El servei de transfusió d'un hospital de Mallorca activa el protocol davant la sospita de contaminació bacteriana d'una unitat d'hematies.",
+        "desarrollo_es": "Con el cronómetro en marcha, el equipo monta las placas e incuba el contenido de la bolsa con el medio y la temperatura adecuados a cada microorganismo (1373-4c), y realiza el aislamiento de las colonias que aparecen para poder identificarlas (1373-4d). En paralelo, otra pareja repite la antiglobulina directa y la indirecta del receptor (1374-6c) y valida los resultados antes de informar (1374-6f).",
+        "desarrollo_ca": "Amb el cronòmetre en marxa, l'equip munta les plaques i incuba el contingut de la bossa amb el medi i la temperatura adequats a cada microorganisme (1373-4c), i fa l'aïllament de les colònies que apareixen per poder identificar-les (1373-4d). En paral·lel, una altra parella repeteix l'antiglobulina directa i la indirecta del receptor (1374-6c) i valida els resultats abans d'informar (1374-6f).",
+        "evidencia_es": "Informe de simulación con tiempos y resultados.",
+        "evidencia_ca": "Informe de simulació amb temps i resultats.",
+        "dua_es": "Cronograma de actuación con tiempos objetivo y colores por tarea.",
+        "dua_ca": "Cronograma d'actuació amb temps objectiu i colors per tasca.",
+        "metodologia_es": "simulación de alerta sanitaria.",
+        "metodologia_ca": "simulació d'alerta sanitària."
       }
     ]
   },
@@ -481,6 +845,34 @@
         "dua_ca": "Gràfic de bilirubina per hores de vida amb zones de risc.",
         "metodologia_es": "estudio de caso neonatal.",
         "metodologia_ca": "estudi de cas neonatal."
+      },
+      {
+        "titulo_es": "Bilirrubina alta en un paciente con anemia hemolítica",
+        "titulo_ca": "Bilirubina alta en un pacient amb anèmia hemolítica",
+        "contexto_es": "Un hombre joven de Sineu llega a consulta con ictericia, orina oscura y anemia, y el laboratorio debe orientar el caso.",
+        "contexto_ca": "Un home jove de Sineu arriba a consulta amb icterícia, orina fosca i anèmia, i el laboratori ha d'orientar el cas.",
+        "desarrollo_es": "El reto consiste en explicar en un póster qué síndrome hemolítico encaja con la bilirrubina, la LDH y la haptoglobina del paciente y qué otras magnitudes conviene pedir (1371-3g). Para completar el estudio, el alumnado determina el grupo ABO y el factor Rh en tarjeta de gel y comprueba si hay discrepancia con el grupo registrado en la historia (1374-6b).",
+        "desarrollo_ca": "El repte consisteix a explicar en un pòster quina síndrome hemolítica encaixa amb la bilirubina, la LDH i l'haptoglobina del pacient i quines altres magnituds convé demanar (1371-3g). Per completar l'estudi, l'alumnat determina el grup ABO i el factor Rh en targeta de gel i comprova si hi ha discrepància amb el grup registrat a la història (1374-6b).",
+        "evidencia_es": "Póster con la explicación del síndrome y la determinación del grupo.",
+        "evidencia_ca": "Pòster amb l'explicació de la síndrome i la determinació del grup.",
+        "dua_es": "Plantilla del póster con apartados fijos y banco de palabras clave.",
+        "dua_ca": "Plantilla del pòster amb apartats fixos i banc de paraules clau.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Problema de laboratorio: ictericia y grupo discordante",
+        "titulo_ca": "Problema de laboratori: icterícia i grup discordant",
+        "contexto_es": "El laboratorio de un hospital de Eivissa recibe dos peticiones urgentes que no cuadran: una bilirrubina muy elevada y un grupo sanguíneo distinto del que consta en la historia.",
+        "contexto_ca": "El laboratori d'un hospital d'Eivissa rep dues peticions urgents que no quadren: una bilirubina molt elevada i un grup sanguini diferent del que consta a la història.",
+        "desarrollo_es": "El grupo trabaja el problema en tres fases: primero decide qué magnitudes bioquímicas pide y qué síndrome explica la elevación de la bilirrubina (1371-3g); después revisa el procedimiento del grupo ABO y del factor Rh en tarjeta de gel para repetirlo con muestra fresca (1374-6b); y por último discute las causas posibles de la discrepancia y cómo se informa.",
+        "desarrollo_ca": "El grup treballa el problema en tres fases: primer decideix quines magnituds bioquímiques demana i quina síndrome explica l'elevació de la bilirubina (1371-3g); després revisa el procediment del grup ABO i del factor Rh en targeta de gel per repetir-lo amb mostra fresca (1374-6b); i finalment discuteix les causes possibles de la discrepància i com s'informa.",
+        "evidencia_es": "Informe de resolución del problema con las decisiones tomadas.",
+        "evidencia_ca": "Informe de resolució del problema amb les decisions preses.",
+        "dua_es": "Enunciado del problema por fases con preguntas de apoyo.",
+        "dua_ca": "Enunciat del problema per fases amb preguntes de suport.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
       }
     ]
   },
@@ -517,6 +909,34 @@
         "dua_ca": "Plantilla de fitxa comuna i mapa amb llegenda de colors.",
         "metodologia_es": "investigación en equipo.",
         "metodologia_ca": "recerca en equip."
+      },
+      {
+        "titulo_es": "Anteproyecto de un laboratorio de microbiología comarcal",
+        "titulo_ca": "Avantprojecte d'un laboratori de microbiologia comarcal",
+        "contexto_es": "Un grupo sanitario privado quiere abrir un laboratorio de microbiología en Alaior y pide al centro educativo un anteproyecto realista.",
+        "contexto_ca": "Un grup sanitari privat vol obrir un laboratori de microbiologia a Alaior i demana al centre educatiu un avantprojecte realista.",
+        "desarrollo_es": "El equipo clasifica las empresas del sector sanitario de las islas por titularidad y cartera de servicios para decidir con qué modelo compara el nuevo laboratorio (1375-1a). Después reparte el centro que va a proyectar en áreas con sus departamentos (1375-1b), asigna el nivel de bioseguridad que necesita cada zona según las muestras que procesará (1373-1b) y concreta qué papeles de prevención y de protección ambiental deberá mantener al día (1373-1h).",
+        "desarrollo_ca": "L'equip classifica les empreses del sector sanitari de les illes per titularitat i cartera de serveis per decidir amb quin model compara el nou laboratori (1375-1a). Després reparteix el centre que projectarà en àrees amb els seus departaments (1375-1b), assigna el nivell de bioseguretat que necessita cada zona segons les mostres que processarà (1373-1b) i concreta quins papers de prevenció i de protecció ambiental haurà de mantenir al dia (1373-1h).",
+        "evidencia_es": "Anteproyecto con organigrama, plano de áreas y listado documental.",
+        "evidencia_ca": "Avantprojecte amb organigrama, plànol d'àrees i llistat documental.",
+        "dua_es": "Plantilla de proyecto con apartados y algún ejemplo resuelto.",
+        "dua_ca": "Plantilla de projecte amb apartats i qualque exemple resolt.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Mesas rotatorias sobre bioseguridad y empresas del sector",
+        "titulo_ca": "Taules rotatòries sobre bioseguretat i empreses del sector",
+        "contexto_es": "En la jornada intermodular del centro se montan varias mesas con profesionales de laboratorios de las islas para hablar de organización y seguridad.",
+        "contexto_ca": "A la jornada intermodular del centre es munten diverses taules amb professionals de laboratoris de les illes per parlar d'organització i seguretat.",
+        "desarrollo_es": "Cada mesa analiza un tipo de laboratorio diferente y anota a qué categoría de empresa del sector pertenece y qué servicio ofrece (1375-1a). Al cambiar de mesa, el grupo añade el reparto de áreas y las tareas de los departamentos que faltan (1375-1b). Las dos últimas rondas se dedican a comparar el nivel de bioseguridad de cada instalación (1373-1b) y a revisar la documentación de prevención y ambiental que ha aportado cada mesa (1373-1h).",
+        "desarrollo_ca": "Cada taula analitza un tipus de laboratori diferent i anota a quina categoria d'empresa del sector pertany i quin servei ofereix (1375-1a). En canviar de taula, el grup afegeix el repartiment d'àrees i les tasques dels departaments que falten (1375-1b). Les dues darreres rondes es dediquen a comparar el nivell de bioseguretat de cada instal·lació (1373-1b) i a repassar la documentació de prevenció i ambiental que ha aportat cada taula (1373-1h).",
+        "evidencia_es": "Manteles de papel fotografiados con los acuerdos de cada mesa.",
+        "evidencia_ca": "Estovalles de paper fotografiades amb els acords de cada taula.",
+        "dua_es": "Rotación marcada con colores y una pregunta por ronda en cada mantel.",
+        "dua_ca": "Rotació marcada amb colors i una pregunta per ronda a cada estovalla.",
+        "metodologia_es": "world café.",
+        "metodologia_ca": "cafè del món."
       }
     ]
   },
@@ -551,6 +971,34 @@
         "dua_ca": "Infografia del destí del plasma donat.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Una campaña de donación de plasma para el hospital",
+        "titulo_ca": "Una campanya de donació de plasma per a l'hospital",
+        "contexto_es": "El alumnado colabora con la unidad de donación de un hospital de Menorca en una campaña para captar donantes de plasma.",
+        "contexto_ca": "L'alumnat col·labora amb la unitat de donació d'un hospital de Menorca en una campanya per captar donants de plasma.",
+        "desarrollo_es": "Después de entrevistar al personal de la unidad, el grupo detecta qué necesita el servicio para no quedarse sin plasma: donantes frecuentes, tiempos cortos y trazabilidad de cada unidad (1375-1c). Con esa información organiza el servicio a la comunidad y prepara plasma fresco congelado a partir de sangre total, registrando temperaturas, tiempos de centrifugación y volúmenes (1374-7d).",
+        "desarrollo_ca": "Després d'entrevistar el personal de la unitat, el grup detecta què necessita el servei per no quedar-se sense plasma: donants freqüents, temps curts i traçabilitat de cada unitat (1375-1c). Amb aquesta informació organitza el servei a la comunitat i prepara plasma fresc congelat a partir de sang total, registrant temperatures, temps de centrifugació i volums (1374-7d).",
+        "evidencia_es": "Díptico de la campaña y registro de las unidades preparadas.",
+        "evidencia_ca": "Díptic de la campanya i registre de les unitats preparades.",
+        "dua_es": "Díptico de lectura fácil y versión en audio accesible con un código QR.",
+        "dua_ca": "Díptic de lectura fàcil i versió en àudio accessible amb un codi QR.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
+      },
+      {
+        "titulo_es": "Un mural visual del recorrido de una donación de sangre",
+        "titulo_ca": "Un mural visual del recorregut d'una donació de sang",
+        "contexto_es": "La sala de espera del banco de sangre de un hospital de Palma necesita explicar a los donantes qué ocurre con su sangre desde que sale del brazo.",
+        "contexto_ca": "La sala d'espera del banc de sang d'un hospital de Palma necessita explicar als donants què passa amb la seva sang des que surt del braç.",
+        "desarrollo_es": "El grupo dibuja en un mural el circuito completo de la donación y señala dónde aparecen las necesidades que reclaman los servicios: plasma para la industria, plaquetas para oncología y hematíes para cirugía (1375-1c). Cada parada del mural lleva un icono del hemoderivado que se obtiene y de los datos que se registran al prepararlo, separación, congelación y etiquetado incluidos (1374-7d).",
+        "desarrollo_ca": "El grup dibuixa en un mural el circuit complet de la donació i assenyala on apareixen les necessitats que reclamen els serveis: plasma per a la indústria, plaquetes per a oncologia i hematies per a cirurgia (1375-1c). Cada parada del mural porta una icona de l'hemoderivat que s'obté i de les dades que es registren en preparar-lo, separació, congelació i etiquetatge inclosos (1374-7d).",
+        "evidencia_es": "Mural expuesto con leyenda y fichas de cada parada.",
+        "evidencia_ca": "Mural exposat amb llegenda i fitxes de cada parada.",
+        "dua_es": "Plantillas de iconos y color asignado a cada tipo de hemoderivado.",
+        "dua_ca": "Plantilles d'icones i color assignat a cada tipus d'hemoderivat.",
+        "metodologia_es": "visual thinking.",
+        "metodologia_ca": "pensament visual."
       }
     ]
   },
@@ -586,6 +1034,34 @@
         "dua_ca": "Esquema del citòmetre per blocs i glossari tècnic.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes reals."
+      },
+      {
+        "titulo_es": "Comparar tres proyectos con rutinas de pensamiento",
+        "titulo_ca": "Comparar tres projectes amb rutines de pensament",
+        "contexto_es": "El laboratorio de hematología de un hospital de las islas tiene un citómetro antiguo que falla cada semana y la dirección duda entre repararlo, sustituirlo o seguir enviando las muestras a Palma.",
+        "contexto_ca": "El laboratori d'hematologia d'un hospital de les illes té un citòmetre antic que falla cada setmana i la direcció dubta entre reparar-lo, substituir-lo o continuar enviant les mostres a Palma.",
+        "desarrollo_es": "Con la rutina «veo, pienso, me pregunto» aplicada a las tres alternativas, el grupo decide qué tipo de proyecto responde mejor al problema y por qué (1375-1e). Después explica cómo funciona el equipo por dentro, con sus bloques fluídico, óptico y electrónico (1372-5a), para poder exigir las características técnicas de la opción elegida y fijar las condiciones del proyecto: espacio, formación del personal y mantenimiento (1375-1f).",
+        "desarrollo_ca": "Amb la rutina «veig, pens, em deman» aplicada a les tres alternatives, el grup decideix quin tipus de projecte respon millor al problema i per què (1375-1e). Després explica com funciona l'equip per dins, amb els seus blocs fluídic, òptic i electrònic (1372-5a), per poder exigir les característiques tècniques de l'opció triada i fixar les condicions del projecte: espai, formació del personal i manteniment (1375-1f).",
+        "evidencia_es": "Tabla comparativa de las tres alternativas con decisión argumentada.",
+        "evidencia_ca": "Taula comparativa de les tres alternatives amb decisió argumentada.",
+        "dua_es": "Organizador gráfico de la rutina con tres columnas separadas.",
+        "dua_ca": "Organitzador gràfic de la rutina amb tres columnes separades.",
+        "metodologia_es": "rutinas de pensamiento.",
+        "metodologia_ca": "rutines de pensament."
+      },
+      {
+        "titulo_es": "Preguntas para justificar un citómetro de urgencias",
+        "titulo_ca": "Preguntes per justificar un citòmetre d'urgències",
+        "contexto_es": "El área de urgencias de un hospital de Eivissa pregunta al centro si tendría sentido disponer de un citómetro propio durante el verano.",
+        "contexto_ca": "L'àrea d'urgències d'un hospital d'Eivissa demana al centre si tendria sentit disposar d'un citòmetre propi durant l'estiu.",
+        "desarrollo_es": "El docente conduce una conversación de preguntas encadenadas y el alumnado justifica cada paso: qué tipo de proyecto da respuesta a la demanda (1375-1e), qué características debe reunir según los paneles que se van a hacer (1375-1f) y cómo funciona el equipo propuesto, con su parte fluídica, óptica y electrónica (1372-5a). Las respuestas quedan escritas en la pizarra y se revisan al final.",
+        "desarrollo_ca": "El docent condueix una conversa de preguntes encadenades i l'alumnat justifica cada pas: quin tipus de projecte dona resposta a la demanda (1375-1e), quines característiques ha de reunir segons els panells que es faran (1375-1f) i com funciona l'equip proposat, amb la seva part fluídica, òptica i electrònica (1372-5a). Les respostes queden escrites a la pissarra i es revisen al final.",
+        "evidencia_es": "Guion de preguntas con las respuestas consensuadas del grupo.",
+        "evidencia_ca": "Guió de preguntes amb les respostes consensuades del grup.",
+        "dua_es": "Preguntas encadenadas entregadas por escrito con tiempo de reflexión individual.",
+        "dua_ca": "Preguntes encadenades lliurades per escrit amb temps de reflexió individual.",
+        "metodologia_es": "método socrático.",
+        "metodologia_ca": "mètode socràtic."
       }
     ]
   },
@@ -620,6 +1096,34 @@
         "dua_ca": "Llista de comprovació d'obligacions amb enllaços a models.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Una cooperativa de análisis de aguas en Menorca",
+        "titulo_ca": "Una cooperativa d'anàlisi d'aigües a Menorca",
+        "contexto_es": "Un grupo de vecinos de Ferreries quiere crear una cooperativa para analizar el agua de sus pozos y consulta al alumnado del ciclo.",
+        "contexto_ca": "Un grup de veïns de Ferreries vol crear una cooperativa per analitzar l'aigua dels seus pous i consulta l'alumnat del cicle.",
+        "desarrollo_es": "En grupos interactivos, con la participación de una técnica de una cooperativa real, el alumnado contrasta qué trámites fiscales y laborales y qué medidas de prevención tendría que asumir la nueva entidad y en qué condiciones se aplican (1375-1g). Después pone a punto el servicio analítico haciendo el recuento de colonias por filtración de membrana del agua de dos pozos y comparando los resultados con los límites legales (1373-4f).",
+        "desarrollo_ca": "En grups interactius, amb la participació d'una tècnica d'una cooperativa real, l'alumnat contrasta quins tràmits fiscals i laborals i quines mesures de prevenció hauria d'assumir la nova entitat i en quines condicions s'apliquen (1375-1g). Després posa a punt el servei analític fent el recompte de colònies per filtració de membrana de l'aigua de dos pous i comparant els resultats amb els límits legals (1373-4f).",
+        "evidencia_es": "Cuadro de obligaciones de la cooperativa y hoja de recuentos.",
+        "evidencia_ca": "Quadre d'obligacions de la cooperativa i full de recomptes.",
+        "dua_es": "Aportaciones escritas en tarjetas para que todo el mundo participe en igualdad.",
+        "dua_ca": "Aportacions escrites en targetes perquè tothom participi en igualtat.",
+        "metodologia_es": "aprendizaje dialógico.",
+        "metodologia_ca": "aprenentatge dialògic."
+      },
+      {
+        "titulo_es": "Vivir una inspección sanitaria en una piscina municipal",
+        "titulo_ca": "Viure una inspecció sanitària en una piscina municipal",
+        "contexto_es": "La piscina municipal de Sant Francesc, en Formentera, recibe la visita anual de la inspección sanitaria y el alumnado acompaña al técnico durante toda la jornada.",
+        "contexto_ca": "La piscina municipal de Sant Francesc, a Formentera, rep la visita anual de la inspecció sanitària i l'alumnat acompanya el tècnic durant tota la jornada.",
+        "desarrollo_es": "El alumnado se reparte las tareas reales de la inspección y registra lo que va observando: antes de empezar revisa qué trámites fiscales, laborales y de prevención tiene que cumplir la instalación para poder abrir y funcionar (1375-1g). Durante la visita toma muestras de dos puntos de la piscina y del vaso de compensación y hace el recuento de colonias en el laboratorio del centro (1373-4f).",
+        "desarrollo_ca": "L'alumnat es reparteix les tasques reals de la inspecció i registra el que va observant: abans de començar revisa quins tràmits fiscals, laborals i de prevenció ha de complir la instal·lació per poder obrir i funcionar (1375-1g). Durant la visita pren mostres de dos punts de la piscina i del vas de compensació i fa el recompte de colònies al laboratori del centre (1373-4f).",
+        "evidencia_es": "Diario de la jornada con las muestras y el recuento final.",
+        "evidencia_ca": "Diari de la jornada amb les mostres i el recompte final.",
+        "dua_es": "Diario con casillas y apartados fijos para anotar sin perderse.",
+        "dua_ca": "Diari amb caselles i apartats fixos per anotar sense perdre's.",
+        "metodologia_es": "aprendizaje vivencial.",
+        "metodologia_ca": "aprenentatge vivencial."
       }
     ]
   },
@@ -655,6 +1159,34 @@
         "dua_ca": "Model de memòria amb apartats guiats.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Financiar un analizador de iones en Manacor",
+        "titulo_ca": "Finançar un analitzador d'ions a Manacor",
+        "contexto_es": "El laboratorio del Hospital de Manacor estudia sustituir su equipo de bioquímica y busca con qué ayudas públicas podría pagarlo.",
+        "contexto_ca": "El laboratori de l'Hospital de Manacor estudia substituir el seu equip de bioquímica i cerca amb quines ajudes públiques el podria pagar.",
+        "desarrollo_es": "Por parejas se rastrean las convocatorias vigentes de ayudas a tecnología sanitaria y se elige la que mejor encaja (1375-1h). Después se etiquetan los componentes principales en el esquema del analizador, incluidas las sondas y la bomba peristáltica (1371-1b). Se cierra la propuesta explicando por qué la osmometría crioscópica y la de presión de vapor dan resultados distintos (1371-1g).",
+        "desarrollo_ca": "Per parelles es rastregen les convocatòries vigents d'ajudes a tecnologia sanitària i se tria la que millor encaixa (1375-1h). Després s'etiqueten els components principals a l'esquema de l'analitzador, incloses les sondes i la bomba peristàltica (1371-1b). Es tanca la proposta explicant per què l'osmometria crioscòpica i la de pressió de vapor donen resultats diferents (1371-1g).",
+        "evidencia_es": "Dossier de candidatura con el esquema del equipo etiquetado.",
+        "evidencia_ca": "Dossier de candidatura amb l'esquema de l'equip etiquetat.",
+        "dua_es": "Esquema del equipo entregado ya numerado para completar con etiquetas.",
+        "dua_ca": "Esquema de l'equip lliurat ja numerat per completar amb etiquetes.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Micromecenazgo para reponer el osmómetro de Alaior",
+        "titulo_ca": "Micromecenatge per reposar l'osmòmetre d'Alaior",
+        "contexto_es": "Un laboratorio pequeño de Alaior no consigue financiación pública y valora una campaña de micromecenazgo para reponer su osmómetro averiado.",
+        "contexto_ca": "Un laboratori petit d'Alaior no aconsegueix finançament públic i valora una campanya de micromecenatge per reposar el seu osmòmetre avariat.",
+        "desarrollo_es": "El equipo compara las bases de dos ayudas públicas y de una plataforma de micromecenazgo para decidir cuál le conviene (1375-1h). Después identifica qué piezas del osmómetro y del baño termostático habría que adquirir y cuáles se pueden recuperar (1371-1b). Termina redactando la ficha divulgativa, donde explica el descenso del punto de congelación como base de la medida (1371-1g).",
+        "desarrollo_ca": "L'equip compara les bases de dues ajudes públiques i d'una plataforma de micromecenatge per decidir quina li convé (1375-1h). Després identifica quines peces de l'osmòmetre i del bany termostàtic caldria adquirir i quines es poden recuperar (1371-1b). Acaba redactant la fitxa divulgativa, on explica el descens del punt de congelació com a base de la mesura (1371-1g).",
+        "evidencia_es": "Ficha divulgativa de la campaña con el listado de piezas.",
+        "evidencia_ca": "Fitxa divulgativa de la campanya amb la llista de peces.",
+        "dua_es": "Plantilla de comparación de convocatorias con tres apartados fijos.",
+        "dua_ca": "Plantilla de comparació de convocatòries amb tres apartats fixos.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
       }
     ]
   },
@@ -689,6 +1221,34 @@
         "dua_ca": "Plantilla de guió i convenció de noms amb exemples.",
         "metodologia_es": "proyecto colaborativo.",
         "metodologia_ca": "projecte col·laboratiu."
+      },
+      {
+        "titulo_es": "Un banco de imágenes de orina para el turno de noche",
+        "titulo_ca": "Un banc d'imatges d'orina per al torn de nit",
+        "contexto_es": "El personal de guardia del laboratorio de Son Espases reclama un banco de imágenes de sedimento para consultar dudas a las tres de la mañana.",
+        "contexto_ca": "El personal de guàrdia del laboratori de Son Espases reclama un banc d'imatges de sediment per consultar dubtes a les tres de la matinada.",
+        "desarrollo_es": "En grupos se reparten las tareas del proyecto, se fijan hitos semanales y se acuerda el índice del banco (1375-1i). Cada grupo fotografía veinte campos de sedimento al microscopio y los guarda en una carpeta compartida con nombre, aumento y hallazgo (1371-5d). Una puesta en común revisa que ningún archivo quede sin catalogar.",
+        "desarrollo_ca": "En grups es reparteixen les tasques del projecte, es fixen fites setmanals i s'acorda l'índex del banc (1375-1i). Cada grup fotografia vint camps de sediment al microscopi i els desa en una carpeta compartida amb nom, augment i troballa (1371-5d). Una posada en comú revisa que cap arxiu quedi sense catalogar.",
+        "evidencia_es": "Cronograma del proyecto y carpeta compartida de imágenes catalogadas.",
+        "evidencia_ca": "Cronograma del projecte i carpeta compartida d'imatges catalogades.",
+        "dua_es": "Plantilla de cronograma con colores por responsable.",
+        "dua_ca": "Plantilla de cronograma amb colors per responsable.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Cómo explicar un sedimento a quien empieza",
+        "titulo_ca": "Com explicar un sediment a qui comença",
+        "contexto_es": "Una técnica recién incorporada al laboratorio de Inca confunde los cilindros hialinos con los granulosos y pide material de apoyo.",
+        "contexto_ca": "Una tècnica acabada d'incorporar al laboratori d'Inca confon els cilindres hialins amb els granulars i demana material de suport.",
+        "desarrollo_es": "El alumnado negocia por escrito qué producto entregará, con qué formato y en qué plazos (1375-1i). Después monta el archivo de imágenes clasificadas por tipo de cilindro, cristal y célula, con una ficha breve por imagen (1371-5d). Se cierra con una revisión cruzada entre compañeros.",
+        "desarrollo_ca": "L'alumnat negocia per escrit quin producte lliurarà, amb quin format i en quins terminis (1375-1i). Després munta l'arxiu d'imatges classificades per tipus de cilindre, cristall i cèl·lula, amb una fitxa breu per imatge (1371-5d). Es tanca amb una revisió creuada entre companys.",
+        "evidencia_es": "Contrato de trabajo y archivo de imágenes con fichas.",
+        "evidencia_ca": "Contracte de feina i arxiu d'imatges amb fitxes.",
+        "dua_es": "Plantilla de ficha de imagen con los campos imprescindibles resaltados.",
+        "dua_ca": "Plantilla de fitxa d'imatge amb els camps imprescindibles ressaltats.",
+        "metodologia_es": "contrato didáctico.",
+        "metodologia_ca": "contracte didàctic."
       }
     ]
   },
@@ -724,6 +1284,34 @@
         "dua_ca": "Taula comparativa amb criteris ponderats.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Una tarjeta multiprueba para las enterobacterias de Manacor",
+        "titulo_ca": "Una targeta multiprova per als enterobacteris de Manacor",
+        "contexto_es": "El laboratorio de microbiología de Manacor recibe muchas enterobacterias y duda si dejar las galerías manuales.",
+        "contexto_ca": "El laboratori de microbiologia de Manacor rep molts enterobacteris i dubta si deixar les galeries manuals.",
+        "desarrollo_es": "Los grupos recopilan fichas técnicas y precios de dos tarjetas multiprueba y las comparan con el método manual (1375-2a). Después justifican la elección con criterios de tiempo, coste y trazabilidad en un informe de viabilidad (1375-2b). La comprobación práctica se hace inoculando y leyendo varias tarjetas con aislamientos del propio laboratorio (1373-5e).",
+        "desarrollo_ca": "Els grups recopilen fitxes tècniques i preus de dues targetes multiprova i les comparen amb el mètode manual (1375-2a). Després justifiquen l'elecció amb criteris de temps, cost i traçabilitat en un informe de viabilitat (1375-2b). La comprovació pràctica es fa inoculant i llegint diverses targetes amb aïllaments del mateix laboratori (1373-5e).",
+        "evidencia_es": "Informe comparativo con las lecturas de las tarjetas.",
+        "evidencia_ca": "Informe comparatiu amb les lectures de les targetes.",
+        "dua_es": "Rúbrica de valoración con pesos ya asignados.",
+        "dua_ca": "Rúbrica de valoració amb pesos ja assignats.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Estaciones para decidir el método de identificación",
+        "titulo_ca": "Estacions per decidir el mètode d'identificació",
+        "contexto_es": "El servicio de microbiología del Hospital de Formentera quiere formación rápida para decidir cuándo basta una prueba rápida y cuándo hace falta una galería completa.",
+        "contexto_ca": "El servei de microbiologia de l'Hospital de Formentera vol formació ràpida per decidir quan basta una prova ràpida i quan cal una galeria completa.",
+        "desarrollo_es": "El aula se organiza en cuatro estaciones con materiales distintos sobre identificación bacteriana y cada grupo pasa por todas recogiendo datos (1375-2a). Con lo aprendido redacta en una parada final el estudio de viabilidad de incorporar sistemas multiprueba (1375-2b). En otra estación se siembra una tarjeta multiprueba y se interpreta su lectura con la tabla de códigos (1373-5e).",
+        "desarrollo_ca": "L'aula s'organitza en quatre estacions amb materials diferents sobre identificació bacteriana i cada grup passa per totes recollint dades (1375-2a). Amb el que ha après redacta en una parada final l'estudi de viabilitat d'incorporar sistemes multiprova (1375-2b). En una altra estació es sembra una targeta multiprova i s'interpreta la seva lectura amb la taula de codis (1373-5e).",
+        "evidencia_es": "Cuaderno de estaciones y estudio de viabilidad.",
+        "evidencia_ca": "Quadern d'estacions i estudi de viabilitat.",
+        "dua_es": "Instrucciones de cada estación con pictogramas y tiempos.",
+        "dua_ca": "Instruccions de cada estació amb pictogrames i temps.",
+        "metodologia_es": "rincones de aprendizaje.",
+        "metodologia_ca": "racons d'aprenentatge."
       }
     ]
   },
@@ -759,6 +1347,34 @@
         "dua_ca": "Plantilla de pressupost amb fórmules ja preparades.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Presupuesto de un cribado de tiroides en Eivissa",
+        "titulo_ca": "Pressupost d'un cribratge de tiroide a Eivissa",
+        "contexto_es": "Un centro de salud de Eivissa quiere ofrecer un cribado de TSH y el laboratorio debe calcular cuánto costará y con qué personal.",
+        "contexto_ca": "Un centre de salut d'Eivissa vol oferir un cribratge de TSH i el laboratori ha de calcular quant costarà i amb quin personal.",
+        "desarrollo_es": "Se listan los recursos necesarios, desde reactivos y controles hasta las horas de técnico y de facultativo (1375-2e). A continuación se calcula el presupuesto del cribado con el precio unitario y el número previsto de determinaciones (1375-2f). Antes se han fijado criterios de uso eficiente: agrupar muestras, evitar calibraciones innecesarias y vigilar caducidades (1371-1j).",
+        "desarrollo_ca": "Es llisten els recursos necessaris, des de reactius i controls fins a les hores de tècnic i de facultatiu (1375-2e). A continuació es calcula el pressupost del cribratge amb el preu unitari i el nombre previst de determinacions (1375-2f). Abans s'han fixat criteris d'ús eficient: agrupar mostres, evitar calibratges innecessaris i vigilar caducitats (1371-1j).",
+        "evidencia_es": "Presupuesto del cribado con la previsión de recursos.",
+        "evidencia_ca": "Pressupost del cribratge amb la previsió de recursos.",
+        "dua_es": "Hoja de cálculo con las celdas de resultado bloqueadas y ayudas emergentes.",
+        "dua_ca": "Full de càlcul amb les cel·les de resultat bloquejades i ajudes emergents.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Rebajar el gasto de reactivos en el turno de tarde",
+        "titulo_ca": "Retallar la despesa de reactius al torn de tarda",
+        "contexto_es": "La supervisora de un laboratorio de Palma pide al alumnado ideas para bajar el gasto en reactivos sin perder calidad.",
+        "contexto_ca": "La supervisora d'un laboratori de Palma demana a l'alumnat idees per baixar la despesa en reactius sense perdre qualitat.",
+        "desarrollo_es": "El grupo entrevista a personal del laboratorio para saber qué material y qué refuerzo de personal haría falta (1375-2e). Traduce después las medidas a euros en un presupuesto con el gasto actual y el previsto (1375-2f). Para cerrar, mide cuántos reactivos se descartan en una semana y define con esos datos qué es un uso eficiente (1371-1j).",
+        "desarrollo_ca": "El grup entrevista personal del laboratori per saber quin material i quin reforç de personal caldria (1375-2e). Tradueix després les mesures a euros en un pressupost amb la despesa actual i la prevista (1375-2f). Per acabar, mesura quants reactius es descarten en una setmana i defineix amb aquestes dades què és un ús eficient (1371-1j).",
+        "evidencia_es": "Propuesta de mejora con el ahorro estimado.",
+        "evidencia_ca": "Proposta de millora amb l'estalvi estimat.",
+        "dua_es": "Guion de entrevista con preguntas cerradas y espacio para anotar.",
+        "dua_ca": "Guió d'entrevista amb preguntes tancades i espai per anotar.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
@@ -793,6 +1409,34 @@
         "dua_ca": "Gràfic de Levey-Jennings explicat amb colors.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Un serólogo externo revisa nuestras ELISA de Manacor",
+        "titulo_ca": "Un seròleg extern revisa les nostres ELISA de Manacor",
+        "contexto_es": "Un laboratorio de Manacor se somete a una revisión externa de calidad y necesita demostrar cómo controla sus ensayos de ELISA.",
+        "contexto_ca": "Un laboratori de Manacor se sotmet a una revisió externa de qualitat i necessita demostrar com controla els seus assajos d'ELISA.",
+        "desarrollo_es": "Antes de la visita del auditor, cada pareja decide qué aspectos de calidad debe vigilar un servicio de serología (1375-2i). Después procesa una placa de ELISA con su control positivo y negativo y anota los valores obtenidos (1372-1i). La sesión acaba con la auditoría simulada y la respuesta a las preguntas preparadas.",
+        "desarrollo_ca": "Abans de la visita de l'auditor, cada parella decideix quins aspectes de qualitat ha de vigilar un servei de serologia (1375-2i). Després processa una placa d'ELISA amb el seu control positiu i negatiu i anota els valors obtinguts (1372-1i). La sessió acaba amb l'auditoria simulada i la resposta a les preguntes preparades.",
+        "evidencia_es": "Registro de la placa y guion de auditoría respondido.",
+        "evidencia_ca": "Registre de la placa i guió d'auditoria respost.",
+        "dua_es": "Lista de preguntas de auditoría con las clave destacadas.",
+        "dua_ca": "Llista de preguntes d'auditoria amb les clau destacades.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Comparar laboratorios para afinar el control de serología",
+        "titulo_ca": "Comparar laboratoris per afinar el control de serologia",
+        "contexto_es": "Dos laboratorios de Menorca intercambian resultados de serología y quieren saber por qué no coinciden del todo.",
+        "contexto_ca": "Dos laboratoris de Menorca intercanvien resultats de serologia i volen saber per què no coincideixen del tot.",
+        "desarrollo_es": "Cada equipo propone qué aspectos de calidad debería vigilar el proyecto conjunto: controles, calibración, temperaturas y registro (1375-2i). Luego ejecuta la misma serología en condiciones distintas y calcula la dispersión de sus resultados (1372-1i). Se cierra con un mural de acuerdos entre los dos grupos.",
+        "desarrollo_ca": "Cada equip proposa quins aspectes de qualitat hauria de vigilar el projecte conjunt: controls, calibratge, temperatures i registre (1375-2i). Després executa la mateixa serologia en condicions diferents i calcula la dispersió dels seus resultats (1372-1i). Es tanca amb un mural d'acords entre els dos grups.",
+        "evidencia_es": "Mural de acuerdos con la dispersión de resultados.",
+        "evidencia_ca": "Mural d'acords amb la dispersió de resultats.",
+        "dua_es": "Mural con tarjetas de colores para ordenar los aspectos de calidad.",
+        "dua_ca": "Mural amb targetes de colors per ordenar els aspectes de qualitat.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   },
@@ -830,6 +1474,34 @@
         "dua_ca": "Taula d'alarmes amb el significat i l'acció.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Fases para validar hemogramas pediátricos",
+        "titulo_ca": "Fases per validar hemogrames pediàtrics",
+        "contexto_es": "El laboratorio de pediatría de Son Espases quiere validar sin revisión los hemogramas de niños sanos, donde las alarmas saltan a menudo.",
+        "contexto_ca": "El laboratori de pediatria de Son Espases vol validar sense revisió els hemogrames d'infants sans, on les alarmes salten sovint.",
+        "desarrollo_es": "Los alumnos procesan una serie de muestras pediátricas y obtienen el informe de cada una (1374-2g). Comparan las alarmas emitidas con la morfología observada al microscopio (1374-2c) y validan los informes siguiendo el protocolo del servicio (1374-2h). Con ese material acotan el alcance del proyecto, validar sin revisión el 50 % de los hemogramas pediátricos normales (1375-2d), y lo dividen en fases con sus entregables (1375-2c).",
+        "desarrollo_ca": "Els alumnes processen una sèrie de mostres pediàtriques i obtenen l'informe de cada una (1374-2g). Comparen les alarmes emeses amb la morfologia observada al microscopi (1374-2c) i validen els informes seguint el protocol del servei (1374-2h). Amb aquest material acoten l'abast del projecte, validar sense revisió el 50 % dels hemogrames pediàtrics normals (1375-2d), i el divideixen en fases amb els seus lliuraments (1375-2c).",
+        "evidencia_es": "Documento de alcance y fases con informes validados.",
+        "evidencia_ca": "Document d'abast i fases amb informes validats.",
+        "dua_es": "Diario de sesiones con la fase del proyecto marcada cada día.",
+        "dua_ca": "Diari de sessions amb la fase del projecte marcada cada dia.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Un tablero de alarmas para el servicio de urgencias",
+        "titulo_ca": "Un tauler d'alarmes per al servei d'urgències",
+        "contexto_es": "Urgencias del Hospital Comarcal de Inca pregunta qué significan las marcas que acompañan a los hemogramas que recibe.",
+        "contexto_ca": "Urgències de l'Hospital Comarcal d'Inca pregunta què signifiquen les marques que acompanyen els hemogrames que rep.",
+        "desarrollo_es": "Después de revisar en casa la guía del analizador, el grupo analiza las muestras de un turno y extrae los informes con sus marcas y alarmas (1374-2g). En clase clasifica cada alarma según lo que expresa el aparato y su utilidad clínica (1374-2c). Luego valida los informes dudosos con el protocolo y decide cuáles requerían revisión (1374-2h). El resultado concreta los objetivos y las fases del proyecto de mejora del informe (1375-2d) (1375-2c).",
+        "desarrollo_ca": "Després de revisar a casa la guia de l'analitzador, el grup analitza les mostres d'un torn i extreu els informes amb les seves marques i alarmes (1374-2g). A classe classifica cada alarma segons el que expressa l'aparell i la seva utilitat clínica (1374-2c). Després valida els informes dubtosos amb el protocol i decideix quins requerien revisió (1374-2h). El resultat concreta els objectius i les fases del projecte de millora de l'informe (1375-2d) (1375-2c).",
+        "evidencia_es": "Tablero de alarmas con la propuesta de informe.",
+        "evidencia_ca": "Tauler d'alarmes amb la proposta d'informe.",
+        "dua_es": "Tablero con alarmas agrupadas por colores según su gravedad.",
+        "dua_ca": "Tauler amb alarmes agrupades per colors segons la seva gravetat.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
@@ -864,6 +1536,34 @@
         "dua_ca": "Informe amb icones i semàfor de valors.",
         "metodologia_es": "diseño centrado en el usuario.",
         "metodologia_ca": "disseny centrat en l'usuari."
+      },
+      {
+        "titulo_es": "Un protocolo de iones para el laboratorio de Felanitx",
+        "titulo_ca": "Un protocol d'ions per al laboratori de Felanitx",
+        "contexto_es": "El laboratorio de Felanitx atiende pacientes con deshidratación y quiere un protocolo propio de iones con informes fáciles de leer.",
+        "contexto_ca": "El laboratori de Felanitx atén pacients amb deshidratació i vol un protocol propi d'ions amb informes fàcils de llegir.",
+        "desarrollo_es": "Cada grupo rellena informes técnicos de sodio, potasio y cloruro a partir de muestras problema (1371-3i). Después se reúnen todos los informes y se decide qué documentación necesita el proyecto: plantilla, criterios de aceptación y registro de incidencias (1375-2h). Un mural con todas las propuestas se ordena por prioridad.",
+        "desarrollo_ca": "Cada grup emplena informes tècnics de sodi, potassi i clorur a partir de mostres problema (1371-3i). Després es reuneixen tots els informes i es decideix quina documentació necessita el projecte: plantilla, criteris d'acceptació i registre d'incidències (1375-2h). Un mural amb totes les propostes s'ordena per prioritat.",
+        "evidencia_es": "Dossier documental del proyecto con los informes modelo.",
+        "evidencia_ca": "Dossier documental del projecte amb els informes model.",
+        "dua_es": "Informes con huecos para completar y valores de referencia al margen.",
+        "dua_ca": "Informes amb buits per completar i valors de referència al marge.",
+        "metodologia_es": "tormenta de ideas estructurada.",
+        "metodologia_ca": "pluja d'idees estructurada."
+      },
+      {
+        "titulo_es": "¿Quién debe firmar un informe de bioquímica urgente?",
+        "titulo_ca": "Qui ha de signar un informe de bioquímica urgent?",
+        "contexto_es": "En un laboratorio de Palma se discute si los informes urgentes de bioquímica los debe firmar el facultativo o el técnico responsable.",
+        "contexto_ca": "En un laboratori de Palma es discuteix si els informes urgents de bioquímica els ha de signar el facultatiu o el tècnic responsable.",
+        "desarrollo_es": "El grupo cumplimenta informes técnicos de glucosa, urea y creatinina de casos urgentes (1371-3i). Con ellos sobre la mesa se abre un debate por turnos sobre qué documentación debe definir el proyecto para evitar errores de identificación (1375-2h). Se cierra con una lista consensuada de documentos y responsables.",
+        "desarrollo_ca": "El grup emplena informes tècnics de glucosa, urea i creatinina de casos urgents (1371-3i). Amb aquests sobre la taula s'obre un debat per torns sobre quina documentació ha de definir el projecte per evitar errors d'identificació (1375-2h). Es tanca amb una llista consensuada de documents i responsables.",
+        "evidencia_es": "Lista consensuada de documentos y responsables.",
+        "evidencia_ca": "Llista consensuada de documents i responsables.",
+        "dua_es": "Turnos de palabra con tarjetas y tiempo cronometrado.",
+        "dua_ca": "Torns de paraula amb targetes i temps cronometrat.",
+        "metodologia_es": "debate dirigido.",
+        "metodologia_ca": "debat dirigit."
       }
     ]
   },
@@ -899,6 +1599,34 @@
         "dua_ca": "Esquema d'elèctrodes amb colors i animació.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Un laboratorio móvil de gases para las Pitiusas",
+        "titulo_ca": "Un laboratori mòbil de gasos per a les Pitiüses",
+        "contexto_es": "La gerencia de un hospital de Formentera propone un carro de gases y electrolitos que rote entre consultas y urgencias.",
+        "contexto_ca": "La gerència d'un hospital de Formentera proposa un carro de gasos i electròlits que roti entre consultes i urgències.",
+        "desarrollo_es": "Por equipos se describe cómo se mide la osmolalidad por descenso crioscópico y cuándo conviene calcularla (1371-7b). Después se detalla el funcionamiento de los electrodos de gases, sodio y potasio del analizador portátil (1371-7c). Con esa información se fija la lista de recursos del proyecto: carro, cartuchos, controles, repuestos y formación del personal (1375-2e).",
+        "desarrollo_ca": "Per equips es descriu com es mesura l'osmolalitat per descens crioscòpic i quan convé calcular-la (1371-7b). Després es detalla el funcionament dels elèctrodes de gasos, sodi i potassi de l'analitzador portàtil (1371-7c). Amb aquesta informació es fixa la llista de recursos del projecte: carro, cartutxos, controls, recanvis i formació del personal (1375-2e).",
+        "evidencia_es": "Ficha de recursos del carro con la descripción técnica.",
+        "evidencia_ca": "Fitxa de recursos del carro amb la descripció tècnica.",
+        "dua_es": "Ficha con apartados numerados y espacio para dibujar el electrodo.",
+        "dua_ca": "Fitxa amb apartats numerats i espai per dibuixar l'elèctrode.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Visita a la UCI para ubicar el gasómetro",
+        "titulo_ca": "Visita a l'UCI per ubicar el gasòmetre",
+        "contexto_es": "La UCI de un hospital de Mallorca invita al alumnado a ver dónde colocaría el gasómetro y qué necesita el puesto.",
+        "contexto_ca": "L'UCI d'un hospital de Mallorca convida l'alumnat a veure on col·locaria el gasòmetre i què necessita el lloc.",
+        "desarrollo_es": "Durante la visita el alumnado toma nota de cómo se determina la osmolalidad y con qué frecuencia se solicita (1371-7b). También observa y pregunta por la calibración de los electrodos de gases y electrolitos del equipo de la unidad (1371-7c). De vuelta al aula convierte las notas en la previsión de recursos: consumibles, controles, enchufes y personal formado (1375-2e).",
+        "desarrollo_ca": "Durant la visita l'alumnat pren nota de com es determina l'osmolalitat i amb quina freqüència es demana (1371-7b). També observa i pregunta per la calibració dels elèctrodes de gasos i electròlits de l'equip de la unitat (1371-7c). De tornada a l'aula converteix les notes en la previsió de recursos: consumibles, controls, endolls i personal format (1375-2e).",
+        "evidencia_es": "Cuaderno de visita con la previsión de recursos.",
+        "evidencia_ca": "Quadern de visita amb la previsió de recursos.",
+        "dua_es": "Cuaderno de visita con preguntas guía y casillas para marcar.",
+        "dua_ca": "Quadern de visita amb preguntes guia i caselles per marcar.",
+        "metodologia_es": "salida de campo guiada.",
+        "metodologia_ca": "sortida de camp guiada."
       }
     ]
   },
@@ -933,6 +1661,34 @@
         "dua_ca": "Escala de lectura amb imatges de cada puntuació.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Un concurso sobre técnicas de histocompatibilidad",
+        "titulo_ca": "Un concurs sobre tècniques d'histocompatibilitat",
+        "contexto_es": "El laboratorio de inmunología de un hospital de Mallorca organiza una jornada para decidir si cambia su método de pruebas cruzadas.",
+        "contexto_ca": "El laboratori d'immunologia d'un hospital de Mallorca organitza una jornada per decidir si canvia el seu mètode de proves creuades.",
+        "desarrollo_es": "Los equipos leen al microscopio de fluorescencia varias placas de microlinfocitotoxicidad y puntúan el porcentaje de células muertas (1372-7f). Esos datos alimentan un concurso por rondas en el que cada equipo defiende una opción técnica distinta (1375-2b). Gana la propuesta mejor argumentada según los criterios de viabilidad acordados.",
+        "desarrollo_ca": "Els equips llegeixen al microscopi de fluorescència diverses plaques de microlimfocitotoxicitat i puntuen el percentatge de cèl·lules mortes (1372-7f). Aquestes dades alimenten un concurs per rondes en què cada equip defensa una opció tècnica diferent (1375-2b). Guanya la proposta millor argumentada segons els criteris de viabilitat acordats.",
+        "evidencia_es": "Ficha de puntuación de las placas y propuesta defendida.",
+        "evidencia_ca": "Fitxa de puntuació de les plaques i proposta defensada.",
+        "dua_es": "Rondas con comodines de ayuda y tiempos cortos.",
+        "dua_ca": "Rondes amb comodins d'ajuda i temps curts.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Diario de un cambio de técnica en inmunología",
+        "titulo_ca": "Diari d'un canvi de tècnica en immunologia",
+        "contexto_es": "Una técnica del laboratorio de inmunología de Son Espases se plantea formarse en técnicas moleculares y quiere dejar constancia de su proceso.",
+        "contexto_ca": "Una tècnica del laboratori d'immunologia de Son Espases es planteja formar-se en tècniques moleculars i vol deixar constància del seu procés.",
+        "desarrollo_es": "El alumnado lee placas de microlinfocitotoxicidad al microscopio de fluorescencia y registra sus lecturas en un diario de aprendizaje (1372-7f). Cada semana añade una entrada con lo aprendido, las dudas y las evidencias que apoyan o descartan el cambio de técnica (1375-2b). El diario se comparte en tutoría para ajustar el plan.",
+        "desarrollo_ca": "L'alumnat llegeix plaques de microlimfocitotoxicitat al microscopi de fluorescència i registra les seves lectures en un diari d'aprenentatge (1372-7f). Cada setmana afegeix una entrada amb el que ha après, els dubtes i les evidències que donen suport o descarten el canvi de tècnica (1375-2b). El diari es comparteix en tutoria per ajustar el pla.",
+        "evidencia_es": "Diario de aprendizaje con las lecturas de placas.",
+        "evidencia_ca": "Diari d'aprenentatge amb les lectures de plaques.",
+        "dua_es": "Diario con apartados fijos y ejemplos de entrada resuelta.",
+        "dua_ca": "Diari amb apartats fixos i exemples d'entrada resolta.",
+        "metodologia_es": "portafolio reflexivo.",
+        "metodologia_ca": "portafoli reflexiu."
       }
     ]
   },
@@ -969,6 +1725,34 @@
         "dua_ca": "Diagrama de Gantt amb colors per medi.",
         "metodologia_es": "planificación cooperativa.",
         "metodologia_ca": "planificació cooperativa."
+      },
+      {
+        "titulo_es": "Montar la sección de medios del hospital de Inca",
+        "titulo_ca": "Muntar la secció de medis de l'hospital d'Inca",
+        "contexto_es": "El hospital comarcal de Inca estrena una unidad de microbiología y el equipo debe organizar desde cero la preparación de medios con el material que le han asignado.",
+        "contexto_ca": "L'hospital comarcal d'Inca estrena una unitat de microbiologia i l'equip ha d'organitzar des de zero la preparació de medis amb el material assignat.",
+        "desarrollo_es": "Por parejas redactan las fichas de los protocolos de medios sólidos y líquidos para la unidad nueva (1373-3c) y preparan un caldo y una tanda de placas comprobando la esterilidad (1373-3e). Después ordenan las tareas de la posada en marcha (1375-3a) y fijan qué recursos, personas y tiempos hará falta en cada fase (1375-3f).",
+        "desarrollo_ca": "Per parelles redacten les fitxes dels protocols de medis sòlids i líquids per a la unitat nova (1373-3c) i preparen un brou i una tanda de plaques comprovant-ne l'esterilitat (1373-3e). Després ordenen les tasques de la posada en marxa (1375-3a) i fixen quins recursos, persones i temps caldran a cada fase (1375-3f).",
+        "evidencia_es": "Dossier de protocolos y cronograma de la posada en marcha.",
+        "evidencia_ca": "Dossier de protocols i cronograma de la posada en marxa.",
+        "dua_es": "Fichas de protocolo con pictogramas y pasos numerados.",
+        "dua_ca": "Fitxes de protocol amb pictogrames i passos numerats.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Cuatro estaciones para preparar medios distintos",
+        "titulo_ca": "Quatre estacions per preparar medis diferents",
+        "contexto_es": "La semana de prácticas en el laboratorio del Hospital Universitari Son Espases se organiza en estaciones para aprovechar los dos autoclaves disponibles.",
+        "contexto_ca": "La setmana de pràctiques al laboratori de l'Hospital Universitari Son Espases s'organitza en estacions per aprofitar els dos autoclaus disponibles.",
+        "desarrollo_es": "Los equipos rotan por cuatro estaciones (agar sangre, agar MacConkey, caldo tioglicolato y control de esterilidad): en cada una describen el protocolo correspondiente (1373-3c) y preparan el medio asignado (1373-3e). Al acabar comparan los pasos seguidos y acuerdan un orden único de trabajo para todo el grupo (1375-3a), con un reparto de recursos y tiempos revisado (1375-3f).",
+        "desarrollo_ca": "Els equips roten per quatre estacions (agar sang, agar MacConkey, brou tioglicolat i control d'esterilitat): a cadascuna descriuen el protocol corresponent (1373-3c) i preparen el medi assignat (1373-3e). En acabar comparen els passos seguits i acorden un ordre únic de treball per a tot el grup (1375-3a), amb un repartiment de recursos i temps revisat (1375-3f).",
+        "evidencia_es": "Guía de las cuatro estaciones y plan de trabajo común.",
+        "evidencia_ca": "Guia de les quatre estacions i pla de treball comú.",
+        "dua_es": "Tarjetas de estación con los pasos y tiempos orientativos.",
+        "dua_ca": "Targetes d'estació amb els passos i temps orientatius.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
       }
     ]
   },
@@ -1003,6 +1787,34 @@
         "dua_ca": "Mapa de rutes amb temps i mitjans de transport.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Una nevera portátil que se queda sin batería",
+        "titulo_ca": "Una nevera portàtil que es queda sense bateria",
+        "contexto_es": "En un traslado de concentrados de hematíes del Banc de Sang de Palma al Hospital de Inca, el registrador de temperatura avisa de una subida durante el trayecto.",
+        "contexto_ca": "En un trasllat de concentrats d'hematies del Banc de Sang de Palma a l'Hospital d'Inca, el registrador de temperatura avisa d'una pujada durant el trajecte.",
+        "desarrollo_es": "Tras el aviso del registrador, los estudiantes reparten las unidades según las peticiones y prioridades de cada servicio (1374-7f). Después revisan la logística del transporte frigorífico, calculan autonomías y proponen mejoras en recursos y avisos (1375-3b).",
+        "desarrollo_ca": "Després de l'avís del registrador, els estudiants reparteixen les unitats segons les peticions i prioritats de cada servei (1374-7f). Tot seguit revisen la logística del transport frigorífic, calculen autonomies i proposen millores en recursos i avisos (1375-3b).",
+        "evidencia_es": "Registro de distribución y propuesta de mejora del transporte.",
+        "evidencia_ca": "Registre de distribució i proposta de millora del transport.",
+        "dua_es": "Plantilla de registro con campos fijos y calculadora de autonomía.",
+        "dua_ca": "Plantilla de registre amb camps fixos i calculadora d'autonomia.",
+        "metodologia_es": "simulación de incidencias.",
+        "metodologia_ca": "simulació d'incidències."
+      },
+      {
+        "titulo_es": "Mesa de coordinación de hemoderivados entre islas",
+        "titulo_ca": "Taula de coordinació d'hemoderivats entre illes",
+        "contexto_es": "Cada viernes el Banc de Sang y los hospitales de referencia revisan las existencias y las peticiones previstas para el fin de semana.",
+        "contexto_ca": "Cada divendres el Banc de Sang i els hospitals de referència revisen les existències i les peticions previstes per al cap de setmana.",
+        "desarrollo_es": "Con roles asignados (Banco, hospital grande, hospital comarcal y transporte), el grupo negocia la distribución de las unidades disponibles según las peticiones recibidas (1374-7f) y concreta qué recursos y logística hará falta para cumplirla (1375-3b).",
+        "desarrollo_ca": "Amb rols assignats (Banc, hospital gran, hospital comarcal i transport), el grup negocia la distribució de les unitats disponibles segons les peticions rebudes (1374-7f) i concreta quins recursos i quina logística caldran per complir-la (1375-3b).",
+        "evidencia_es": "Acta de la mesa con el reparto acordado y los medios previstos.",
+        "evidencia_ca": "Acta de la taula amb el repartiment acordat i els mitjans prevists.",
+        "dua_es": "Guion de rol con la postura y los datos de cada personaje.",
+        "dua_ca": "Guió de rol amb la postura i les dades de cada personatge.",
+        "metodologia_es": "negociación por roles.",
+        "metodologia_ca": "negociació per rols."
       }
     ]
   },
@@ -1037,6 +1849,34 @@
         "dua_ca": "Esquema de la cadena de custòdia amb signatures.",
         "metodologia_es": "estudio de caso legal.",
         "metodologia_ca": "estudi de cas legal."
+      },
+      {
+        "titulo_es": "Auditoría de expedientes en un laboratorio de genética",
+        "titulo_ca": "Auditoria d'expedients en un laboratori de genètica",
+        "contexto_es": "Un laboratorio de genética de Palma afronta la auditoría de acreditación y revisa los expedientes de paternidad del último año.",
+        "contexto_ca": "Un laboratori de genètica de Palma afronta l'auditoria d'acreditació i revisa els expedients de paternitat de l'últim any.",
+        "desarrollo_es": "Los estudiantes auditan expedientes anonimizados: comprueban si constan los estudios de histocompatibilidad y de marcadores de ADN que se han hecho en cada caso (1372-7c). Después elaboran la lista de permisos, consentimientos y autorizaciones que falta en cada expediente (1375-3c).",
+        "desarrollo_ca": "Els estudiants auditen expedients anonimitzats: comproven si hi consten els estudis d'histocompatibilitat i de marcadors d'ADN fets a cada cas (1372-7c). Després elaboren la llista de permisos, consentiments i autoritzacions que manquen a cada expedient (1375-3c).",
+        "evidencia_es": "Informe de auditoría con las no conformidades detectadas.",
+        "evidencia_ca": "Informe d'auditoria amb les no conformitats detectades.",
+        "dua_es": "Lista de verificación con casillas y ejemplos de documentación válida.",
+        "dua_ca": "Llista de verificació amb caselles i exemples de documentació vàlida.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Rediseñar el circuito de consentimiento de un estudio familiar",
+        "titulo_ca": "Redissenyar el circuit de consentiment d'un estudi familiar",
+        "contexto_es": "Las familias que acuden a un estudio de paternidad en Eivissa se pierden entre formularios y el laboratorio quiere simplificar el proceso.",
+        "contexto_ca": "Les famílies que acudeixen a un estudi de paternitat a Eivissa es perden entre formularis i el laboratori vol simplificar el procés.",
+        "desarrollo_es": "Partiendo de la información trabajada en casa, el grupo identifica qué se determina en un estudio de histocompatibilidad para filiación (1372-7c) y detecta los puntos de fricción del circuito documental. Con técnicas de prototipado propone un circuito nuevo de permisos y autorizaciones (1375-3c) y lo prueba con un caso simulado.",
+        "desarrollo_ca": "Partint de la informació treballada a casa, el grup identifica què es determina en un estudi d'histocompatibilitat per a filiació (1372-7c) i detecta els punts de fricció del circuit documental. Amb tècniques de prototipatge proposa un circuit nou de permisos i autoritzacions (1375-3c) i el prova amb un cas simulat.",
+        "evidencia_es": "Prototipo del circuito y simulacro documentado con un caso.",
+        "evidencia_ca": "Prototip del circuit i simulacre documentat amb un cas.",
+        "dua_es": "Plantillas de formulario simplificado con lenguaje claro.",
+        "dua_ca": "Plantilles de formulari simplificat amb llenguatge clar.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   }

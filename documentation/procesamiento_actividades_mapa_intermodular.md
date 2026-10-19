@@ -106,7 +106,7 @@ La solución definitiva consta de tres capas clave:
    En lugar de incrustar semillas gigantes de decenas de megabytes en archivos `.ts` de Angular (que agotaban el heap de Node.js en Vitest y en el build de producción en EC2), los datasets se almacenan como JSON limpios en `backend/src/data/mapa-intermodular/` y se persisten en MongoDB en la colección `mapamodules`. El frontend los recupera bajo demanda vía `MapaIntermodularService.getModules(tab)` con un tiempo de carga instantáneo.
 
 2. **Deduplicación Rigurosa de Actividades y Cero Conexiones Vacías:**
-   - **Prohibición de conexiones vacías:** Queda terminantemente prohibido generar conexiones con `activities: []`. Toda conexión del grafo debe ofrecer obligatoriamente al menos una actividad formativa (`activities.length >= 1`). Si un cruce curricular no tiene actividad propuesta, no se instancia en el grafo.
+   - **Prohibición de conexiones vacías:** Queda terminantemente prohibido generar conexiones con `activities: []`. Toda conexión del grafo debe ofrecer obligatoriamente al menos tres actividades formativas (`activities.length >= 3`). Si un cruce curricular no tiene actividad propuesta, no se instancia en el grafo.
    - **Volumen equilibrado:** Cada Resultado de Aprendizaje (RA) dispone de entre **6 y 15 conexiones intermodulares** (media de ~8 a 12 por RA), evitando la saturación con cientos de tarjetas vacías o redundantes.
    - **Deduplicación por RA:** Cada actividad formativa es única dentro de su RA y módulo por título y desarrollo.
 
@@ -193,7 +193,7 @@ Las fuentes (`config.json` y `relaciones*.json`) se versionan en `scripts/mapa-i
 ### 8.2. Formato de entrada
 
 - **`config.json`**: por módulo, `nombre_es/ca`, `tipo` (`especifico`, `comun` o `transversal`), `relacion` (el `relationType` de las conexiones que **llegan** a ese módulo), `color` e `icon`. `ficha` lo propone con los comunes ya resueltos (0156, 0179, 1664, 1665, 1708-1710 y 1713).
-- **`relaciones*.json`**: arrays de relaciones. Cada una tiene `a` y `b` (`{ modulo, ra, criterios: ["a", "c"] }`), `justificacion_es/ca` y `actividades`, con un mínimo de una. Los campos de cada actividad son `titulo`, `contexto`, `desarrollo`, `evidencia`, `dua` y `metodologia`, todos con sufijo `_es` y `_ca`.
+- **`relaciones*.json`**: arrays de relaciones. Cada una tiene `a` y `b` (`{ modulo, ra, criterios: ["a", "c"] }`), `justificacion_es/ca` y `actividades`, con un mínimo de tres. Los campos de cada actividad son `titulo`, `contexto`, `desarrollo`, `evidencia`, `dua` y `metodologia`, todos con sufijo `_es` y `_ca`.
 
 Correspondencia con el modelo del mapa: `contexto` → `motivatingFactor`, `desarrollo` → `description`, `evidencia` → `evidence`, `dua` → `diversitySupport` y `metodologia` → `justification` (con el prefijo «Metodología activa:»).
 
@@ -201,7 +201,7 @@ Correspondencia con el modelo del mapa: `contexto` → `motivatingFactor`, `desa
 
 - Los RA y las letras de criterio existen en el curso; cada lado cita de 1 a 3 criterios y los dos lados son de módulos distintos.
 - No hay pares de RA repetidos y cada RA tiene entre 6 y 15 conexiones.
-- Hay al menos una actividad por relación, sin títulos repetidos dentro de un RA, ni en ES ni en CA.
+- Hay al menos tres actividades por relación, sin títulos repetidos dentro de un RA, ni en ES ni en CA.
 - Todos los textos existen en ES y CA, son distintos y no tienen marcas evidentes del otro idioma. El detector usa límites de palabra Unicode, porque `\b` de JavaScript no reconoce letras acentuadas y daba falsos positivos como «con» en «conèixer».
 - Las citas de criterios del desarrollo (`0011-1a`, `CAE2-3c`) coinciden en ES y CA y pertenecen a la relación.
 

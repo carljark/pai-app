@@ -23,6 +23,8 @@ const ACTIVITY_FIELDS = ['titulo', 'contexto', 'desarrollo', 'evidencia', 'dua',
 const RELATION_TYPES = ['tecnica', 'ciencias', 'comunicacion', 'empleabilidad', 'cliente', 'sostenibilidad', 'digital'];
 const MIN_CONN = 6;
 const MAX_CONN = 15;
+/** Cada relación aporta sus actividades a las dos conexiones que genera (tarea 245). */
+const MIN_ACTIVIDADES = 3;
 const PALETTE = ['#f472b6', '#34d399', '#fb923c', '#a78bfa', '#38bdf8', '#f87171', '#4ade80', '#fbbf24', '#c084fc', '#60a5fa'];
 const ICONS = ['heart-pulse', 'microscope', 'flask-conical', 'users', 'book', 'hand', 'leaf', 'briefcase', 'compass', 'atom'];
 
@@ -167,7 +169,9 @@ function checkRelacion(rel: Relacion, byModule: Map<string, Ra[]>, where: string
   checkLado(rel.b, byModule, where);
   if (rel.a?.modulo === rel.b?.modulo) fail(`${where}: los dos lados son del mismo módulo (${rel.a.modulo})`);
   checkTextos(rel, ['justificacion'], where);
-  if (!Array.isArray(rel.actividades) || rel.actividades.length < 1) fail(`${where}: la relación no tiene actividades`);
+  if (!Array.isArray(rel.actividades) || rel.actividades.length < MIN_ACTIVIDADES) {
+    fail(`${where}: la relación necesita al menos ${MIN_ACTIVIDADES} actividades`);
+  }
   (rel.actividades ?? []).forEach((act, i) => {
     checkTextos(act, ACTIVITY_FIELDS, `${where} actividad ${i + 1}`);
     checkCitas(act, rel, `${where} actividad ${i + 1}`);

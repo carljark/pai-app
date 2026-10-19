@@ -1,7 +1,19 @@
 [
   {
-    "a": { "modulo": "1339", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["c"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Las actividades de escalada y barranquismo del proyecto necesitan permisos que hay que identificar y verificar.",
     "justificacion_ca": "Les activitats d'escalada i barranquisme del projecte necessiten permisos que cal identificar i verificar.",
     "actividades": [
@@ -18,12 +30,53 @@
         "dua_ca": "Llista d'organismes amb enllaços.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Carpeta de autorizaciones para una vía ferrata",
+        "titulo_ca": "Carpeta d'autoritzacions per a una via ferrada",
+        "contexto_es": "Una empresa de Sóller quiere abrir una vía ferrata guiada para el verano y debe reunir toda la documentación antes de anunciarla.",
+        "contexto_ca": "Una empresa de Sóller vol obrir una via ferrada guiada per a l'estiu i ha de reunir tota la documentació abans d'anunciar-la.",
+        "desarrollo_es": "Revisan la documentación, los permisos y los recursos necesarios para realizar la actividad con grupos, siguiendo el protocolo (1339-1a). Después elaboran una lista de las autorizaciones que hay que solicitar a cada administración y los plazos de tramitación (1713-3c).",
+        "desarrollo_ca": "Revisen la documentació, els permisos i els recursos necessaris per realitzar l'activitat amb grups, seguint el protocol (1339-1a). Després elaboren una llista de les autoritzacions que cal sol·licitar a cada administració i els terminis de tramitació (1713-3c).",
+        "evidencia_es": "Carpeta de documentación con el calendario de trámites.",
+        "evidencia_ca": "Carpeta de documentació amb el calendari de tràmits.",
+        "dua_es": "Modelo de carpeta con apartados codificados por colores y ejemplos de solicitudes ya cumplimentadas.",
+        "dua_ca": "Model de carpeta amb apartats codificats per colors i exemples de sol·licituds ja emplenades.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Ventanilla de la administración simulada",
+        "titulo_ca": "Finestreta de l'administració simulada",
+        "contexto_es": "El Consell de Mallorca atiende solicitudes de empresas que quieren organizar actividades de escalada y barranquismo en espacios protegidos.",
+        "contexto_ca": "El Consell de Mallorca atén sol·licituds d'empreses que volen organitzar activitats d'escalada i barranquisme en espais protegits.",
+        "desarrollo_es": "Unos equipos presentan su solicitud tras comprobar que tienen completos los documentos y recursos de la actividad (1339-1a). Otros hacen de personal técnico y señalan qué permisos y autorizaciones faltan o se han pedido mal (1713-3c); luego se invierten los papeles.",
+        "desarrollo_ca": "Uns equips presenten la sol·licitud després de comprovar que tenen complets els documents i recursos de l'activitat (1339-1a). Uns altres fan de personal tècnic i assenyalen quins permisos i autoritzacions falten o s'han demanat malament (1713-3c); després s'inverteixen els papers.",
+        "evidencia_es": "Expediente de solicitud con el informe de subsanación del técnico.",
+        "evidencia_ca": "Expedient de sol·licitud amb l'informe d'esmena del tècnic.",
+        "dua_es": "Guion de atención al público y lista de requisitos visible durante toda la simulación.",
+        "dua_ca": "Guió d'atenció al públic i llista de requisits visible durant tota la simulació.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "1339", "ra": "RA2", "criterios": ["a", "e"] },
-    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["d"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "La espeleología es la actividad de mayor riesgo del proyecto y exige prever las vías de escape.",
     "justificacion_ca": "L'espeleologia és l'activitat de més risc del projecte i exigeix preveure les vies d'escapada.",
     "actividades": [
@@ -40,12 +93,52 @@
         "dua_ca": "Plànol ampliat i en relleu.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Topo de seguridad para una cueva con dos bocas",
+        "titulo_ca": "Topo de seguretat per a una cova amb dues boques",
+        "contexto_es": "Un grupo de jóvenes del Raiguer visitará una cueva de Artà y el equipo guía debe preparar el plan de actuación por si ocurre algo.",
+        "contexto_ca": "Un grup de joves del Raiguer visitarà una cova d'Artà i l'equip guia ha de preparar el pla d'actuació per si passa res.",
+        "desarrollo_es": "Seleccionan los datos que importan para prevenir riesgos en la visita (1339-2a) y marcan sobre el plano de la cavidad las vías de escape según el tipo de contingencia (1339-2e). Con ello listan las actividades del proyecto que implican más riesgo (1713-3d).",
+        "desarrollo_ca": "Seleccionen les dades que importen per prevenir riscs a la visita (1339-2a) i marquen sobre el plànol de la cavitat les vies d'escapament segons el tipus de contingència (1339-2e). Amb això llisten les activitats del projecte que impliquen més risc (1713-3d).",
+        "evidencia_es": "Plano anotado con las vías de escape y la lista de actividades de riesgo.",
+        "evidencia_ca": "Plànol anotat amb les vies d'escapament i la llista d'activitats de risc.",
+        "dua_es": "Plano ampliado con símbolos normalizados y leyenda de apoyo.",
+        "dua_ca": "Plànol ampliat amb símbols normalitzats i llegenda de suport.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Matriz de riesgos por estaciones",
+        "titulo_ca": "Matriu de riscs per estacions",
+        "contexto_es": "El proyecto de un campamento en la Serra de Tramuntana combina espeleología, rápel y marcha nocturna y necesita una valoración previa de riesgos.",
+        "contexto_ca": "El projecte d'un campament a la Serra de Tramuntana combina espeleologia, ràpel i marxa nocturna i necessita una valoració prèvia de riscs.",
+        "desarrollo_es": "Los equipos rotan por estaciones y en cada una escogen la información relevante para prevenir los riesgos de esa actividad (1339-2a). En la estación de la cueva trazan las salidas de emergencia sobre el plano (1339-2e) y puntúan los riesgos en una matriz común del proyecto (1713-3d).",
+        "desarrollo_ca": "Els equips roten per estacions i a cadascuna trien la informació rellevant per prevenir els riscs d'aquesta activitat (1339-2a). A l'estació de la cova tracen les sortides d'emergència sobre el plànol (1339-2e) i puntuen els riscs en una matriu comuna del projecte (1713-3d).",
+        "evidencia_es": "Matriz de riesgos completa con las medidas preventivas de cada estación.",
+        "evidencia_ca": "Matriu de riscs completa amb les mesures preventives de cada estació.",
+        "dua_es": "Escala de puntuación con colores tipo semáforo y ejemplo resuelto en la primera estación.",
+        "dua_ca": "Escala de puntuació amb colors de semàfor i exemple resolt a la primera estació.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
       }
     ]
   },
   {
-    "a": { "modulo": "1339", "ra": "RA6", "criterios": ["f"] },
-    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["f"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "El informe de cada actividad de cuerdas forma parte de la documentación de evaluación del proyecto.",
     "justificacion_ca": "L'informe de cada activitat de cordes forma part de la documentació d'avaluació del projecte.",
     "actividades": [
@@ -62,12 +155,52 @@
         "dua_ca": "Exemple d'informe complet.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Informe de actividad con rúbrica compartida",
+        "titulo_ca": "Informe d'activitat amb rúbrica compartida",
+        "contexto_es": "El proyecto de un campamento de aventura en Capdepera cierra cada jornada con un informe que la coordinación revisa a primera hora.",
+        "contexto_ca": "El projecte d'un campament d'aventura a Capdepera tanca cada jornada amb un informe que la coordinació revisa a primera hora.",
+        "desarrollo_es": "Tras una práctica de descenso, cada persona redacta el informe de la actividad realizada (1339-6f). El equipo lo contrasta con una rúbrica que define la documentación necesaria para evaluar la actividad y el conjunto del proyecto (1713-4f).",
+        "desarrollo_ca": "Després d'una pràctica de descens, cada persona redacta l'informe de l'activitat realitzada (1339-6f). L'equip el contrasta amb una rúbrica que defineix la documentació necessària per avaluar l'activitat i el conjunt del projecte (1713-4f).",
+        "evidencia_es": "Informe de la actividad con la rúbrica cumplimentada.",
+        "evidencia_ca": "Informe de l'activitat amb la rúbrica emplenada.",
+        "dua_es": "Informe con esquema de apartados y opción de incorporar fotografías con pies explicativos.",
+        "dua_ca": "Informe amb esquema d'apartats i opció d'incorporar fotografies amb peus explicatius.",
+        "metodologia_es": "evaluación formativa con rúbrica.",
+        "metodologia_ca": "avaluació formativa amb rúbrica."
+      },
+      {
+        "titulo_es": "Informe en vídeo del cierre de jornada",
+        "titulo_ca": "Informe en vídeo del tancament de jornada",
+        "contexto_es": "Una empresa de multiaventura de Alcúdia prueba un formato más ágil para documentar cada salida y evaluar el proyecto al final de temporada.",
+        "contexto_ca": "Una empresa de multiaventura d'Alcúdia prova un format més àgil per documentar cada sortida i avaluar el projecte al final de temporada.",
+        "desarrollo_es": "Se graban un breve vídeo en el que presentan el informe de la actividad guiada, con lo ocurrido y lo mejorable (1339-6f). Después transcriben los datos clave a la ficha de evaluación del proyecto y deciden qué documentos hacen falta para valorarlo en conjunto (1713-4f).",
+        "desarrollo_ca": "Es graven un breu vídeo en què presenten l'informe de l'activitat guiada, amb el que ha passat i el que es pot millorar (1339-6f). Després transcriuen les dades clau a la fitxa d'avaluació del projecte i decideixen quins documents calen per valorar-lo en conjunt (1713-4f).",
+        "evidencia_es": "Vídeo-informe de dos minutos y ficha de evaluación asociada.",
+        "evidencia_ca": "Vídeo-informe de dos minuts i fitxa d'avaluació associada.",
+        "dua_es": "Guion previo del vídeo y posibilidad de presentarlo en audio o con subtítulos.",
+        "dua_ca": "Guió previ del vídeo i possibilitat de presentar-lo en àudio o amb subtítols.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
   {
-    "a": { "modulo": "1339", "ra": "RA5", "criterios": ["e"] },
-    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["b"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "La calidad de la instalación de las cuerdas es un resultado verificable de la actividad.",
     "justificacion_ca": "La qualitat de la instal·lació de les cordes és un resultat verificable de l'activitat.",
     "actividades": [
@@ -84,12 +217,52 @@
         "dua_ca": "Esquemes d'instal·lació.",
         "metodologia_es": "evaluación entre iguales.",
         "metodologia_ca": "avaluació entre iguals."
+      },
+      {
+        "titulo_es": "Auditoría de calidad de una línea de vida",
+        "titulo_ca": "Auditoria de qualitat d'una línia de vida",
+        "contexto_es": "Antes de abrir un recorrido de vía ferrata cerca de Bunyola, la empresa pide una auditoría interna de las cuerdas instaladas.",
+        "contexto_ca": "Abans d'obrir un recorregut de via ferrada prop de Bunyola, l'empresa demana una auditoria interna de les cordes instal·lades.",
+        "desarrollo_es": "Un equipo instala las cuerdas de progresión de un tramo y deja registradas sus decisiones (1339-5e). Otro lo audita con una lista de control, verifica la calidad del resultado de la actividad (1713-4b) y propone mejoras antes de dar el visto bueno.",
+        "desarrollo_ca": "Un equip instal·la les cordes de progressió d'un tram i deixa registrades les seves decisions (1339-5e). Un altre l'audita amb una llista de control, verifica la qualitat del resultat de l'activitat (1713-4b) i proposa millores abans de donar el vistiplau.",
+        "evidencia_es": "Informe de auditoría con la lista de control firmada.",
+        "evidencia_ca": "Informe d'auditoria amb la llista de control signada.",
+        "dua_es": "Lista de control con fotografías de ejemplos correctos e incorrectos.",
+        "dua_ca": "Llista de control amb fotografies d'exemples correctes i incorrectes.",
+        "metodologia_es": "simulación de auditoría.",
+        "metodologia_ca": "simulació d'auditoria."
+      },
+      {
+        "titulo_es": "Reto de las cuerdas sin fallos",
+        "titulo_ca": "Repte de les cordes sense errors",
+        "contexto_es": "Un centro de aventura de Calvià quiere premiar al equipo que consiga una instalación de cuerdas perfecta en la jornada de puertas abiertas.",
+        "contexto_ca": "Un centre d'aventura de Calvià vol premiar l'equip que aconsegueixi una instal·lació de cordes perfecta a la jornada de portes obertes.",
+        "desarrollo_es": "Los equipos compiten por instalar correctamente las cuerdas de progresión en el menor tiempo posible sin sacrificar la seguridad (1339-5e). Los puntos se otorgan según criterios de calidad que el propio grupo ha definido para verificar el resultado de cada tramo (1713-4b).",
+        "desarrollo_ca": "Els equips competeixen per instal·lar correctament les cordes de progressió en el menor temps possible sense sacrificar la seguretat (1339-5e). Els punts s'atorguen segons criteris de qualitat que el mateix grup ha definit per verificar el resultat de cada tram (1713-4b).",
+        "evidencia_es": "Tabla de puntuación del reto con los criterios de calidad aplicados.",
+        "evidencia_ca": "Taula de puntuació del repte amb els criteris de qualitat aplicats.",
+        "dua_es": "Criterios de puntuación entregados con antelación y participación en equipos de ritmo equilibrado.",
+        "dua_ca": "Criteris de puntuació lliurats amb antelació i participació en equips de ritme equilibrat.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "1339", "ra": "RA4", "criterios": ["g"] },
-    "b": { "modulo": "1713", "ra": "RA4", "criterios": ["d"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Cuando no se cumplen las normas de seguridad hay que informar de la desviación al responsable del proyecto.",
     "justificacion_ca": "Quan no es compleixen les normes de seguretat cal informar de la desviació al responsable del projecte.",
     "actividades": [
@@ -106,12 +279,52 @@
         "dua_ca": "Model de comunicat.",
         "metodologia_es": "simulación de escenario.",
         "metodologia_ca": "simulació d'escenari."
+      },
+      {
+        "titulo_es": "Parte de desviaciones en la tirolina",
+        "titulo_ca": "Part de desviacions a la tirolina",
+        "contexto_es": "En un parque de aventura de Palma, el monitor detecta que un grupo de adolescentes ignora las normas en la plataforma de la tirolina.",
+        "contexto_ca": "En un parc d'aventura de Palma, el monitor detecta que un grup d'adolescents ignora les normes a la plataforma de la tirolina.",
+        "desarrollo_es": "Observan un vídeo con prácticas incorrectas y comprueban qué normas de seguridad no se están cumpliendo (1339-4g). Después redactan el parte que informa de las desviaciones a la persona responsable del proyecto y proponen cómo evitarlas (1713-4d).",
+        "desarrollo_ca": "Observen un vídeo amb pràctiques incorrectes i comproven quines normes de seguretat no s'estan complint (1339-4g). Després redacten el part que informa de les desviacions a la persona responsable del projecte i proposen com evitar-les (1713-4d).",
+        "evidencia_es": "Parte de desviaciones redactado con claridad y con propuestas de corrección.",
+        "evidencia_ca": "Part de desviacions redactat amb claredat i amb propostes de correcció.",
+        "dua_es": "Modelo de parte con campos guiados y frases de apoyo para describir los hechos.",
+        "dua_ca": "Model de part amb camps guiats i frases de suport per descriure els fets.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Reunión de coordinación de media jornada",
+        "titulo_ca": "Reunió de coordinació de mitja jornada",
+        "contexto_es": "Durante un proyecto con varios monitores en el Parc Natural de s'Albufera, cada mediodía el equipo se reúne para poner en común lo ocurrido.",
+        "contexto_ca": "Durant un projecte amb diversos monitors al Parc Natural de s'Albufera, cada migdia l'equip es reuneix per posar en comú el que ha passat.",
+        "desarrollo_es": "Cada miembro supervisa un puesto del circuito y controla que se cumplan las normas de seguridad allí (1339-4g). En la reunión comparten lo observado y deciden cómo y a quién se comunican las desviaciones detectadas (1713-4d).",
+        "desarrollo_ca": "Cada membre supervisa un lloc del circuit i controla que s'hi compleixin les normes de seguretat (1339-4g). A la reunió comparteixen el que han observat i decideixen com i a qui es comuniquen les desviacions detectades (1713-4d).",
+        "evidencia_es": "Acta de la reunión con las desviaciones y los responsables de comunicarlas.",
+        "evidencia_ca": "Acta de la reunió amb les desviacions i els responsables de comunicar-les.",
+        "dua_es": "Reparto de roles de secretaría y moderación rotatorios, con orden del día visible.",
+        "dua_ca": "Repartiment de rols de secretaria i moderació rotatoris, amb ordre del dia visible.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1339", "ra": "RA1", "criterios": ["c"] },
-    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["g"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "El avituallamiento y el material deportivo son recursos materiales que el proyecto debe prever.",
     "justificacion_ca": "L'avituallament i el material esportiu són recursos materials que el projecte ha de preveure.",
     "actividades": [
@@ -128,12 +341,53 @@
         "dua_ca": "Full de càlcul amb plantilla.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Presupuesto de material para tres jornadas",
+        "titulo_ca": "Pressupost de material per a tres jornades",
+        "contexto_es": "Un club juvenil de Manacor encarga un proyecto de actividades verticales con un presupuesto limitado para material y personal.",
+        "contexto_ca": "Un club juvenil de Manacor encarrega un projecte d'activitats verticals amb un pressupost limitat per a material i personal.",
+        "desarrollo_es": "Revisan el avituallamiento y el material deportivo individual y colectivo de escalada, barrancos y espeleología (1339-1c). Con esos datos calculan qué recursos materiales y humanos hay que prever y cuánto cuestan en el proyecto (1713-2g).",
+        "desarrollo_ca": "Revisen l'avituallament i el material esportiu individual i col·lectiu d'escalada, barrancs i espeleologia (1339-1c). Amb aquestes dades calculen quins recursos materials i humans cal preveure i quant costen al projecte (1713-2g).",
+        "evidencia_es": "Hoja de cálculo con el material revisado y el presupuesto por jornada.",
+        "evidencia_ca": "Full de càlcul amb el material revisat i el pressupost per jornada.",
+        "dua_es": "Hoja de cálculo con plantilla base y fórmulas ya preparadas.",
+        "dua_ca": "Full de càlcul amb plantilla base i fórmules ja preparades.",
+        "metodologia_es": "resolución de problemas.",
+        "metodologia_ca": "resolució de problemes."
+      },
+      {
+        "titulo_es": "Puestos de revisión de material y personal",
+        "titulo_ca": "Llocs de revisió de material i personal",
+        "contexto_es": "La víspera de un campamento de aventura en Sant Joan, el equipo debe asegurarse de contar con todo el equipo y las personas necesarias.",
+        "contexto_ca": "La vigília d'un campament d'aventura a Sant Joan, l'equip s'ha d'assegurar de comptar amb tot l'equip i les persones necessàries.",
+        "desarrollo_es": "En tres puestos de revisión, comprueban el avituallamiento y los materiales deportivos de cada actividad del campamento (1339-1c). Al terminar suman lo que falta y estiman el personal necesario para completar los recursos previstos del proyecto (1713-2g).",
+        "desarrollo_ca": "En tres llocs de revisió, comproven l'avituallament i els materials esportius de cada activitat del campament (1339-1c). En acabar sumen el que falta i estimen el personal necessari per completar els recursos previstos del projecte (1713-2g).",
+        "evidencia_es": "Lista de faltas y compras con la dotación de personal propuesta.",
+        "evidencia_ca": "Llista de mancances i compres amb la dotació de personal proposada.",
+        "dua_es": "Itinerario entre puestos con tarjetas ilustradas y pausa para consultar dudas.",
+        "dua_ca": "Itinerari entre llocs amb targetes il·lustrades i pausa per consultar dubtes.",
+        "metodologia_es": "aprendizaje por rincones.",
+        "metodologia_ca": "aprenentatge per racons."
       }
     ]
   },
   {
-    "a": { "modulo": "1339", "ra": "RA6", "criterios": ["b"] },
-    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["c", "a"] },
+    "a": {
+      "modulo": "1339",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "a"
+      ]
+    },
     "justificacion_es": "Las incidencias registradas en cada actividad deben compartirse con el equipo de forma ordenada.",
     "justificacion_ca": "Les incidències registrades en cada activitat s'han de compartir amb l'equip de manera ordenada.",
     "actividades": [
@@ -150,12 +404,53 @@
         "dua_ca": "Formulari amb camps guiats.",
         "metodologia_es": "trabajo colaborativo.",
         "metodologia_ca": "treball col·laboratiu."
+      },
+      {
+        "titulo_es": "Panel digital de incidencias del equipo",
+        "titulo_ca": "Panell digital d'incidències de l'equip",
+        "contexto_es": "Las incidencias de un campamento de barrancos en Mallorca se perdían entre turnos y la coordinación propone un panel compartido en línea.",
+        "contexto_ca": "Les incidències d'un campament de barrancs a Mallorca es perdien entre torns i la coordinació proposa un panell compartit en línia.",
+        "desarrollo_es": "Antes de clase estudian un vídeo sobre cómo registrar las incidencias de seguridad y de tiempos de una actividad (1339-6b). En el aula alimentan un panel digital compartido con ellas, utilizando medios informáticos entre los miembros del grupo (1713-5c) y manteniendo una forma de trabajo metódica (1713-5a).",
+        "desarrollo_ca": "Abans de classe estudien un vídeo sobre com registrar les incidències de seguretat i de temps d'una activitat (1339-6b). A l'aula alimenten un panell digital compartit amb elles, utilitzant mitjans informàtics entre els membres del grup (1713-5c) i mantenint una manera de treballar metòdica (1713-5a).",
+        "evidencia_es": "Panel digital con las incidencias registradas y ordenadas por tipo.",
+        "evidencia_ca": "Panell digital amb les incidències registrades i ordenades per tipus.",
+        "dua_es": "Vídeo previo con subtítulos y plantilla del panel con categorías predefinidas.",
+        "dua_ca": "Vídeo previ amb subtítols i plantilla del panell amb categories predefinides.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
+      },
+      {
+        "titulo_es": "Relevo de turno entre equipos de guías",
+        "titulo_ca": "Relleu de torn entre equips de guies",
+        "contexto_es": "En un centro de multiaventura de Alcúdia el equipo de mañana debe traspasar al de tarde todo lo ocurrido durante la actividad.",
+        "contexto_ca": "En un centre de multiaventura d'Alcúdia l'equip de matí ha de traspassar al de tarda tot el que ha passat durant l'activitat.",
+        "desarrollo_es": "Un equipo vive una simulación y anota las incidencias sobre la actividad, la seguridad y los tiempos (1339-6b). Luego lo transmite al equipo siguiente con una nota en línea compartida (1713-5c) de manera clara y secuenciada (1713-5a), y este verifica si lo ha entendido.",
+        "desarrollo_ca": "Un equip viu una simulació i anota les incidències sobre l'activitat, la seguretat i els temps (1339-6b). Després ho transmet a l'equip següent amb una nota en línia compartida (1713-5c) de manera clara i seqüenciada (1713-5a), i aquest verifica si ho ha entès.",
+        "evidencia_es": "Nota de relevo compartida y comprobación de lo comprendido por el equipo receptor.",
+        "evidencia_ca": "Nota de relleu compartida i comprovació del que ha entès l'equip receptor.",
+        "dua_es": "Nota de relevo con estructura fija y posibilidad de complementarla con audio.",
+        "dua_ca": "Nota de relleu amb estructura fixa i possibilitat de complementar-la amb àudio.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA2", "criterios": ["h"] },
-    "b": { "modulo": "1708", "ra": "RA1", "criterios": ["a", "c"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
     "justificacion_es": "Los marcos internacionales de sostenibilidad y la Agenda 2030 se publican sobre todo en inglés.",
     "justificacion_ca": "Els marcs internacionals de sostenibilitat i l'Agenda 2030 es publiquen sobretot en anglès.",
     "actividades": [
@@ -172,12 +467,52 @@
         "dua_ca": "Textos adaptats per nivells.",
         "metodologia_es": "lectura guiada en inglés.",
         "metodologia_ca": "lectura guiada en anglès."
+      },
+      {
+        "titulo_es": "Detectives de textos sobre desarrollo sostenible",
+        "titulo_ca": "Detectius de textos sobre desenvolupament sostenible",
+        "contexto_es": "Una guía de Menorca recibe documentos en inglés de organismos internacionales y debe decidir cuáles son útiles para su empresa.",
+        "contexto_ca": "Una guia de Menorca rep documents en anglès d'organismes internacionals i ha de decidir quins són útils per a la seva empresa.",
+        "desarrollo_es": "Reciben textos en inglés de distintos formatos y reconocen la finalidad de cada uno (0156-2h). Con ellos explican qué es la sostenibilidad y qué marcos internacionales la regulan (1708-1a), y vinculan los ODS con la Agenda 2030 (1708-1c).",
+        "desarrollo_ca": "Reben textos en anglès de diversos formats i reconeixen la finalitat de cadascun (0156-2h). Amb ells expliquen què és la sostenibilitat i quins marcs internacionals la regulen (1708-1a), i vinculen els ODS amb l'Agenda 2030 (1708-1c).",
+        "evidencia_es": "Fichas de análisis de cada texto con su finalidad y su relación con los ODS.",
+        "evidencia_ca": "Fitxes d'anàlisi de cada text amb la seva finalitat i la seva relació amb els ODS.",
+        "dua_es": "Glosario bilingüe y textos con las palabras clave resaltadas.",
+        "dua_ca": "Glossari bilingüe i textos amb les paraules clau ressaltades.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Rompecabezas de la Agenda 2030 en inglés",
+        "titulo_ca": "Trencaclosques de l'Agenda 2030 en anglès",
+        "contexto_es": "Un hotel rural de Ibiza prepara su formación interna sobre sostenibilidad usando materiales de Naciones Unidas.",
+        "contexto_ca": "Un hotel rural d'Eivissa prepara la seva formació interna sobre sostenibilitat fent servir materials de Nacions Unides.",
+        "desarrollo_es": "Cada persona del grupo experto lee un fragmento distinto en inglés y reconoce su finalidad (0156-2h). Al volver a su grupo base, cada una expone el sentido del desarrollo sostenible y sus marcos internacionales (1708-1a) y cómo los ODS contribuyen a alcanzar la Agenda 2030 (1708-1c).",
+        "desarrollo_ca": "Cada persona del grup expert llegeix un fragment diferent en anglès i en reconeix la finalitat (0156-2h). En tornar al seu grup base, cadascuna exposa el sentit del desenvolupament sostenible i els seus marcs internacionals (1708-1a) i com els ODS contribueixen a assolir l'Agenda 2030 (1708-1c).",
+        "evidencia_es": "Cartel del grupo base que resume los ODS con las ideas de cada fragmento.",
+        "evidencia_ca": "Cartell del grup base que resumeix els ODS amb les idees de cada fragment.",
+        "dua_es": "Fragmentos de longitud y dificultad graduadas y apoyo de diccionario en línea.",
+        "dua_ca": "Fragments de longitud i dificultat graduades i suport de diccionari en línia.",
+        "metodologia_es": "método puzle.",
+        "metodologia_ca": "mètode trencaclosques."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["e"] },
-    "b": { "modulo": "1708", "ra": "RA3", "criterios": ["b"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Debatir los riesgos y oportunidades de los ODS en inglés practica la expresión de opiniones.",
     "justificacion_ca": "Debatre els riscs i les oportunitats dels ODS en anglès practica l'expressió d'opinions.",
     "actividades": [
@@ -194,12 +529,52 @@
         "dua_ca": "Frases per opinar en anglès.",
         "metodologia_es": "debate.",
         "metodologia_ca": "debat."
+      },
+      {
+        "titulo_es": "Mesa redonda sobre riesgos y oportunidades de los ODS",
+        "titulo_ca": "Taula rodona sobre riscs i oportunitats dels ODS",
+        "contexto_es": "Una feria de turismo sostenible en Palma invita a guías locales a explicar en inglés cómo afectan los ODS a su trabajo.",
+        "contexto_ca": "Una fira de turisme sostenible a Palma convida guies locals a explicar en anglès com afecten els ODS la seva feina.",
+        "desarrollo_es": "Analizan los riesgos y las oportunidades que los ODS suponen para una empresa de turismo activo (1708-3b). Después las defienden en una mesa redonda, expresando con claridad en inglés sus ideas y opiniones (0156-3e).",
+        "desarrollo_ca": "Analitzen els riscs i les oportunitats que els ODS suposen per a una empresa de turisme actiu (1708-3b). Després les defensen en una taula rodona, expressant amb claredat en anglès les seves idees i opinions (0156-3e).",
+        "evidencia_es": "Intervenciones grabadas en la mesa redonda y esquema de argumentos.",
+        "evidencia_ca": "Intervencions gravades a la taula rodona i esquema d'arguments.",
+        "dua_es": "Frases útiles para opinar en inglés y turnos preparados por escrito.",
+        "dua_ca": "Frases útils per opinar en anglès i torns preparats per escrit.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Entrevista radiofónica sobre turismo y Agenda 2030",
+        "titulo_ca": "Entrevista radiofònica sobre turisme i Agenda 2030",
+        "contexto_es": "Una emisora local de Menorca para turistas en inglés entrevista a guías sobre el impacto de los ODS en sus excursiones.",
+        "contexto_ca": "Una emissora local de Menorca per a turistes en anglès entrevista guies sobre l'impacte dels ODS en les seves excursions.",
+        "desarrollo_es": "Por parejas, preparan las preguntas sobre los riesgos y las oportunidades que los ODS representan para su oficio (1708-3b). Entrevistador y entrevistado representan el programa en inglés y comparten sus opiniones y sentimientos sobre las respuestas (0156-3e).",
+        "desarrollo_ca": "Per parelles, preparen les preguntes sobre els riscs i les oportunitats que els ODS representen per a la seva professió (1708-3b). Entrevistador i entrevistat representen el programa en anglès i comparteixen les seves opinions i sentiments sobre les respostes (0156-3e).",
+        "evidencia_es": "Grabación del programa de radio de cinco minutos.",
+        "evidencia_ca": "Gravació del programa de ràdio de cinc minuts.",
+        "dua_es": "Guion de preguntas con vocabulario de apoyo y posibilidad de repetir la grabación.",
+        "dua_ca": "Guió de preguntes amb vocabulari de suport i possibilitat de repetir la gravació.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["c"] },
-    "b": { "modulo": "1708", "ra": "RA6", "criterios": ["e"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Un informe de sostenibilidad en inglés exige organizar la información con coherencia.",
     "justificacion_ca": "Un informe de sostenibilitat en anglès exigeix organitzar la informació amb coherència.",
     "actividades": [
@@ -216,12 +591,52 @@
         "dua_ca": "Connectors textuals en llista.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Resumen ejecutivo del plan de sostenibilidad",
+        "titulo_ca": "Resum executiu del pla de sostenibilitat",
+        "contexto_es": "Una agencia de ecoturismo de Mallorca quiere presentar a inversores británicos las líneas principales de su plan sostenible.",
+        "contexto_ca": "Una agència d'ecoturisme de Mallorca vol presentar a inversors britànics les línies principals del seu pla sostenible.",
+        "desarrollo_es": "Seleccionan los indicadores y las acciones más significativos del plan de la empresa (1708-6e). Los ordenan en un resumen ejecutivo en inglés con una estructura lógica y conectores que dan cohesión al texto (0156-4c).",
+        "desarrollo_ca": "Seleccionen els indicadors i les accions més significatius del pla de l'empresa (1708-6e). Els ordenen en un resum executiu en anglès amb una estructura lògica i connectors que donen cohesió al text (0156-4c).",
+        "evidencia_es": "Resumen ejecutivo en inglés de una página.",
+        "evidencia_ca": "Resum executiu en anglès d'una pàgina.",
+        "dua_es": "Plantilla del resumen con conectores sugeridos y revisión por parejas del texto.",
+        "dua_ca": "Plantilla del resum amb connectors suggerits i revisió per parelles del text.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Taller de redacción con revisión cruzada",
+        "titulo_ca": "Taller de redacció amb revisió creuada",
+        "contexto_es": "Una cooperativa de guías de Formentera publicará su primera memoria de sostenibilidad en inglés y necesita pulir el texto antes de enviarlo.",
+        "contexto_ca": "Una cooperativa de guies de Formentera publicarà la seva primera memòria de sostenibilitat en anglès i necessita polir el text abans d'enviar-lo.",
+        "desarrollo_es": "Cada equipo redacta la parte del informe de sostenibilidad que recoge el plan y los indicadores propuestos (1708-6e). Intercambian los borradores con otro equipo, que revisa si la información está organizada con coherencia y cohesión (0156-4c) y sugiere mejoras.",
+        "desarrollo_ca": "Cada equip redacta la part de l'informe de sostenibilitat que recull el pla i els indicadors proposats (1708-6e). Intercanvien els esborranys amb un altre equip, que revisa si la informació està organitzada amb coherència i cohesió (0156-4c) i suggereix millores.",
+        "evidencia_es": "Borrador corregido con los comentarios del equipo revisor y versión final.",
+        "evidencia_ca": "Esborrany corregit amb els comentaris de l'equip revisor i versió final.",
+        "dua_es": "Lista de revisión con pocas preguntas claras y correctores en línea opcionales.",
+        "dua_ca": "Llista de revisió amb poques preguntes clares i correctors en línia opcionals.",
+        "metodologia_es": "evaluación entre iguales.",
+        "metodologia_ca": "avaluació entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA5", "criterios": ["b"] },
-    "b": { "modulo": "1708", "ra": "RA2", "criterios": ["e"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1708",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Las alianzas internacionales por el medio ambiente exigen conocer las normas sociales de cada país.",
     "justificacion_ca": "Les aliances internacionals pel medi ambient exigeixen conèixer les normes socials de cada país.",
     "actividades": [
@@ -238,12 +653,53 @@
         "dua_ca": "Vídeos sobre costums.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Guía de etiqueta para socios de un proyecto europeo",
+        "titulo_ca": "Guia d'etiqueta per a socis d'un projecte europeu",
+        "contexto_es": "Un consorcio de espacios naturales de varios países europeos se reúne en Mallorca y el equipo de guías debe acoger a las delegaciones.",
+        "contexto_ca": "Un consorci d'espais naturals de diversos països europeus es reuneix a Mallorca i l'equip de guies ha d'acollir les delegacions.",
+        "desarrollo_es": "Cada grupo describe los protocolos y normas de relación social de un país socio (0156-5b). Con ellos elaboran una guía de buenas prácticas para sostener la alianza, explicando por qué trabajar de forma coordinada ayuda a afrontar los retos ambientales y sociales (1708-2e).",
+        "desarrollo_ca": "Cada grup descriu els protocols i les normes de relació social d'un país soci (0156-5b). Amb ells elaboren una guia de bones pràctiques per sostenir l'aliança, explicant per què treballar de manera coordinada ajuda a afrontar els reptes ambientals i socials (1708-2e).",
+        "evidencia_es": "Guía breve de etiqueta y cooperación entre países socios.",
+        "evidencia_ca": "Guia breu d'etiqueta i cooperació entre països socis.",
+        "dua_es": "Guía con ejemplos ilustrados de saludos y gestos y revisión previa del vocabulario.",
+        "dua_ca": "Guia amb exemples il·lustrats de salutacions i gestos i revisió prèvia del vocabulari.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
+      },
+      {
+        "titulo_es": "Videollamada de alianza con una reserva escocesa",
+        "titulo_ca": "Videotrucada d'aliança amb una reserva escocesa",
+        "contexto_es": "Una reserva natural de Escocia propone firmar un acuerdo de colaboración con un parque de Mallorca para proteger sus ecosistemas.",
+        "contexto_ca": "Una reserva natural d'Escòcia proposa signar un acord de col·laboració amb un parc de Mallorca per protegir els seus ecosistemes.",
+        "desarrollo_es": "Se reparten los papeles de las dos delegaciones y se preparan describiendo antes las normas de relación social del otro país (0156-5b). Durante la videollamada ensayada debaten cómo una alianza transversal y coordinada permitiría abordar con éxito los retos ambientales y sociales comunes (1708-2e).",
+        "desarrollo_ca": "Es reparteixen els papers de les dues delegacions i es preparen descrivint abans les normes de relació social de l'altre país (0156-5b). Durant la videotrucada assajada debaten com una aliança transversal i coordinada permetria abordar amb èxit els reptes ambientals i socials comuns (1708-2e).",
+        "evidencia_es": "Borrador del acuerdo de colaboración y valoración de la reunión.",
+        "evidencia_ca": "Esborrany de l'acord de col·laboració i valoració de la reunió.",
+        "dua_es": "Fichas de protocolo de bolsillo y roles que incluyen la figura del intérprete de apoyo.",
+        "dua_ca": "Fitxes de protocol de butxaca i rols que inclouen la figura de l'intèrpret de suport.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["l"] },
-    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA3",
+      "criterios": [
+        "l"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "Las empresas de turismo activo hacen a menudo parte de la entrevista de trabajo en inglés.",
     "justificacion_ca": "Les empreses de turisme actiu fan sovint part de l'entrevista de feina en anglès.",
     "actividades": [
@@ -260,12 +716,52 @@
         "dua_ca": "Banc de preguntes freqüents.",
         "metodologia_es": "juego de rol.",
         "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Banco de preguntas para entrevistas de temporada",
+        "titulo_ca": "Banc de preguntes per a entrevistes de temporada",
+        "contexto_es": "Cada primavera, las empresas de turismo activo de Mallorca contratan guías y suelen empezar con una entrevista breve en inglés.",
+        "contexto_ca": "Cada primavera, les empreses de turisme actiu de Mallorca contracten guies i solen començar amb una entrevista breu en anglès.",
+        "desarrollo_es": "Investigan las técnicas de selección de personal más utilizadas hoy en el sector (1710-1a) y recopilan las preguntas más habituales. Responden a ellas en inglés sobre su vida socio-profesional (0156-3l) y diseñan una estrategia personal de búsqueda de empleo (1710-1b).",
+        "desarrollo_ca": "Investiguen les tècniques de selecció de personal més utilitzades avui al sector (1710-1a) i recopilen les preguntes més habituals. Hi responen en anglès sobre la seva vida socioprofessional (0156-3l) i dissenyen una estratègia personal de cerca de feina (1710-1b).",
+        "evidencia_es": "Banco de preguntas con respuestas grabadas y plan personal de búsqueda de empleo.",
+        "evidencia_ca": "Banc de preguntes amb respostes gravades i pla personal de cerca de feina.",
+        "dua_es": "Preguntas ordenadas por dificultad y modelos de respuesta en audio.",
+        "dua_ca": "Preguntes ordenades per dificultat i models de resposta en àudio.",
+        "metodologia_es": "gamificación con tarjetas.",
+        "metodologia_ca": "gamificació amb targetes."
+      },
+      {
+        "titulo_es": "Proceso de selección por videollamada",
+        "titulo_ca": "Procés de selecció per videotrucada",
+        "contexto_es": "Una cadena de hoteles con actividades de naturaleza en Menorca selecciona guías de forma remota entre candidatos de varios países.",
+        "contexto_ca": "Una cadena d'hotels amb activitats de natura a Menorca selecciona guies de manera remota entre candidats de diversos països.",
+        "desarrollo_es": "Comparan las técnicas de selección que hoy usan las empresas del sector, en especial las pruebas a distancia (1710-1a). Después realizan una entrevista simulada por videollamada en inglés en la que responden a preguntas sobre su perfil (0156-3l) y plantean la estrategia de búsqueda que aplicarían (1710-1b).",
+        "desarrollo_ca": "Comparen les tècniques de selecció que avui fan servir les empreses del sector, en especial les proves a distància (1710-1a). Després fan una entrevista simulada per videotrucada en anglès en què responen a preguntes sobre el seu perfil (0156-3l) i plantegen l'estratègia de cerca que aplicarien (1710-1b).",
+        "evidencia_es": "Grabación de la entrevista simulada y plan de mejora personal.",
+        "evidencia_ca": "Gravació de l'entrevista simulada i pla de millora personal.",
+        "dua_es": "Posibilidad de ensayar con un compañero y de recibir las preguntas por escrito.",
+        "dua_ca": "Possibilitat d'assajar amb un company i de rebre les preguntes per escrit.",
+        "metodologia_es": "simulación de selección.",
+        "metodologia_ca": "simulació de selecció."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["h"] },
-    "b": { "modulo": "1710", "ra": "RA1", "criterios": ["b"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA4",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Buscar trabajo en el extranjero exige escribir cartas de presentación formales en inglés.",
     "justificacion_ca": "Cercar feina a l'estranger exigeix escriure cartes de presentació formals en anglès.",
     "actividades": [
@@ -282,12 +778,53 @@
         "dua_ca": "Model de carta comentat.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Solicitud de información a un centro de Nueva Zelanda",
+        "titulo_ca": "Sol·licitud d'informació a un centre de Nova Zelanda",
+        "contexto_es": "Una joven guía de Ibiza quiere hacer prácticas de verano en un centro de turismo de aventura de Nueva Zelanda.",
+        "contexto_ca": "Una jove guia d'Eivissa vol fer pràctiques d'estiu en un centre de turisme d'aventura de Nova Zelanda.",
+        "desarrollo_es": "Redactan un correo electrónico formal en inglés que solicita información sobre las plazas y las condiciones del centro (0156-4h). Antes de enviarlo, justifican qué estrategia de búsqueda de empleo, entre las actuales, es la que mejor se ajusta al sector (1710-1b).",
+        "desarrollo_ca": "Redacten un correu electrònic formal en anglès que sol·licita informació sobre les places i les condicions del centre (0156-4h). Abans d'enviar-lo, justifiquen quina estratègia de cerca de feina, entre les actuals, és la que s'ajusta millor al sector (1710-1b).",
+        "evidencia_es": "Correo formal en inglés y breve justificación de la estrategia elegida.",
+        "evidencia_ca": "Correu formal en anglès i breu justificació de l'estratègia triada.",
+        "dua_es": "Estructura del correo con frases modelo para cada parte.",
+        "dua_ca": "Estructura del correu amb frases model per a cada part.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Campaña de candidaturas espontáneas al extranjero",
+        "titulo_ca": "Campanya de candidatures espontànies a l'estranger",
+        "contexto_es": "Un grupo de recién titulados de Palma decide enviar candidaturas espontáneas a empresas de turismo activo de países de habla inglesa.",
+        "contexto_ca": "Un grup de recent titulats de Palma decideix enviar candidatures espontànies a empreses de turisme actiu de països de parla anglesa.",
+        "desarrollo_es": "En un taller de escritura, el alumnado redacta correspondencia formal en inglés que sirve para solicitar un servicio o preguntar por vacantes (0156-4h). Cada texto se acompaña de un plan de búsqueda de empleo que utiliza las técnicas actuales más extendidas (1710-1b).",
+        "desarrollo_ca": "En un taller d'escriptura, l'alumnat redacta correspondència formal en anglès que serveix per sol·licitar un servei o preguntar per vacants (0156-4h). Cada text s'acompanya d'un pla de cerca de feina que utilitza les tècniques actuals més esteses (1710-1b).",
+        "evidencia_es": "Tres borradores de correspondencia y un calendario de envío de candidaturas.",
+        "evidencia_ca": "Tres esborranys de correspondència i un calendari d'enviament de candidatures.",
+        "dua_es": "Ejemplos de correos bien y mal redactados y revisión ortográfica asistida.",
+        "dua_ca": "Exemples de correus ben i mal redactats i revisió ortogràfica assistida.",
+        "metodologia_es": "taller de escritura.",
+        "metodologia_ca": "taller d'escriptura."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA1", "criterios": ["f", "h"] },
-    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["c"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA1",
+      "criterios": [
+        "f",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Los reportajes en inglés sobre tecnología en el turismo ayudan a reflexionar sobre el cambio del modelo productivo.",
     "justificacion_ca": "Els reportatges en anglès sobre tecnologia en el turisme ajuden a reflexionar sobre el canvi del model productiu.",
     "actividades": [
@@ -304,12 +841,52 @@
         "dua_ca": "Subtítols en anglès.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Pódcast británico sobre tecnología y turismo",
+        "titulo_ca": "Pòdcast britànic sobre tecnologia i turisme",
+        "contexto_es": "Un pódcast de una emisora británica analiza cómo las aplicaciones y los drones están cambiando la forma de organizar excursiones.",
+        "contexto_ca": "Un pòdcast d'una emissora britànica analitza com les aplicacions i els drons estan canviant la manera d'organitzar excursions.",
+        "desarrollo_es": "Escuchan el pódcast, identifican las ideas principales y las resumen con claridad (0156-1f). Asumen que no hace falta entender cada palabra para captar el sentido global (0156-1h) y discuten si la tecnología puede transformar el modelo productivo del turismo (1710-5c).",
+        "desarrollo_ca": "Escolten el pòdcast, identifiquen les idees principals i les resumeixen amb claredat (0156-1f). Assumeixen que no cal entendre cada paraula per captar el sentit global (0156-1h) i discuteixen si la tecnologia pot transformar el model productiu del turisme (1710-5c).",
+        "evidencia_es": "Resumen oral de tres ideas y breve opinión sobre el cambio de modelo.",
+        "evidencia_ca": "Resum oral de tres idees i breu opinió sobre el canvi de model.",
+        "dua_es": "Audio con transcripción disponible y posibilidad de escucharlo dos veces.",
+        "dua_ca": "Àudio amb transcripció disponible i possibilitat d'escoltar-lo dues vegades.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Cinefórum de una charla sobre innovación en la naturaleza",
+        "titulo_ca": "Cinefòrum d'una xerrada sobre innovació a la natura",
+        "contexto_es": "El instituto proyecta una charla en inglés de un emprendedor que usa tecnología para gestionar visitas sostenibles en espacios naturales.",
+        "contexto_ca": "L'institut projecta una xerrada en anglès d'un emprenedor que usa tecnologia per gestionar visites sostenibles en espais naturals.",
+        "desarrollo_es": "Tras visionar la charla, ordenan sus ideas principales y las presentan en un resumen (0156-1f), valorando lo importante que es entender el mensaje de forma global (0156-1h). En el coloquio final reflexionan sobre la tecnología como base del cambio en el modelo productivo de su sector (1710-5c).",
+        "desarrollo_ca": "Després de visionar la xerrada, ordenen les idees principals i les presenten en un resum (0156-1f), valorant com és d'important entendre el missatge de manera global (0156-1h). Al col·loqui final reflexionen sobre la tecnologia com a base del canvi en el model productiu del seu sector (1710-5c).",
+        "evidencia_es": "Ficha del cinefórum con el resumen y las conclusiones del coloquio.",
+        "evidencia_ca": "Fitxa del cinefòrum amb el resum i les conclusions del col·loqui.",
+        "dua_es": "Subtítulos en inglés, preguntas guía previas y aportación oral o escrita en el coloquio.",
+        "dua_ca": "Subtítols en anglès, preguntes guia prèvies i aportació oral o escrita al col·loqui.",
+        "metodologia_es": "cinefórum.",
+        "metodologia_ca": "cinefòrum."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA2", "criterios": ["d"] },
-    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["f"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Los informes del sector turístico en inglés permiten analizar el entorno de una idea emprendedora.",
     "justificacion_ca": "Els informes del sector turístic en anglès permeten analitzar l'entorn d'una idea emprenedora.",
     "actividades": [
@@ -326,12 +903,52 @@
         "dua_ca": "Gràfics destacats de l'informe.",
         "metodologia_es": "lectura guiada en inglés.",
         "metodologia_ca": "lectura guiada en anglès."
+      },
+      {
+        "titulo_es": "Análisis del entorno con un estudio de mercado",
+        "titulo_ca": "Anàlisi de l'entorn amb un estudi de mercat",
+        "contexto_es": "Dos antiguos alumnos de Santanyí quieren montar una empresa de rutas guiadas y han localizado un estudio de mercado en inglés.",
+        "contexto_ca": "Dos antics alumnes de Santanyí volen muntar una empresa de rutes guiades i han localitzat un estudi de mercat en anglès.",
+        "desarrollo_es": "Leen el estudio y reconocen las ideas principales sin traducir cada palabra (0156-2d). Después clasifican los factores del entorno general y específico que aparecen y estiman cómo influyen en la idea emprendedora (1710-4f).",
+        "desarrollo_ca": "Llegeixen l'estudi i reconeixen les idees principals sense traduir cada paraula (0156-2d). Després classifiquen els factors de l'entorn general i específic que hi apareixen i estimen com influeixen en la idea emprenedora (1710-4f).",
+        "evidencia_es": "Mapa del entorno con los factores clasificados y su impacto.",
+        "evidencia_ca": "Mapa de l'entorn amb els factors classificats i el seu impacte.",
+        "dua_es": "Texto con apartados señalados, glosario y esquema de clasificación ya preparado.",
+        "dua_ca": "Text amb apartats assenyalats, glossari i esquema de classificació ja preparat.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Lectura veloz de titulares del sector",
+        "titulo_ca": "Lectura ràpida de titulars del sector",
+        "contexto_es": "Un asesor de empresas de Ibiza recibe cada semana boletines en inglés y necesita sacar lo esencial en pocos minutos.",
+        "contexto_ca": "Un assessor d'empreses d'Eivissa rep cada setmana butlletins en anglès i necessita treure'n l'essencial en pocs minuts.",
+        "desarrollo_es": "Rotan por mesas con noticias breves del sector turístico y localizan la información relevante en cada una sin leerla entera (0156-2d). Para cada noticia anotan en un cuadro qué parte del entorno de una idea emprendedora afecta y cómo (1710-4f).",
+        "desarrollo_ca": "Roten per taules amb notícies breus del sector turístic i localitzen la informació rellevant a cadascuna sense llegir-la sencera (0156-2d). Per a cada notícia anoten en un quadre quina part de l'entorn d'una idea emprenedora afecta i com (1710-4f).",
+        "evidencia_es": "Cuadro de noticias con el impacto en la idea emprendedora.",
+        "evidencia_ca": "Quadre de notícies amb l'impacte en la idea emprenedora.",
+        "dua_es": "Noticias con distinta longitud y cronómetro visible que se puede ampliar.",
+        "dua_ca": "Notícies amb diferent longitud i cronòmetre visible que es pot ampliar.",
+        "metodologia_es": "aprendizaje por rincones.",
+        "metodologia_ca": "aprenentatge per racons."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA5", "criterios": ["e"] },
-    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["i"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "i"
+      ]
+    },
     "justificacion_es": "Vender a clientes extranjeros exige aplicar sus normas de relación social en la comunicación comercial.",
     "justificacion_ca": "Vendre a clients estrangers exigeix aplicar les seves normes de relació social en la comunicació comercial.",
     "actividades": [
@@ -348,12 +965,52 @@
         "dua_ca": "Guió de venda en anglès.",
         "metodologia_es": "juego de rol.",
         "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Correo comercial para un touroperador alemán",
+        "titulo_ca": "Correu comercial per a un touroperador alemany",
+        "contexto_es": "Un touroperador alemán busca nuevas excursiones de naturaleza en Mallorca y una empresa local quiere presentarse como proveedor.",
+        "contexto_ca": "Un touroperador alemany busca noves excursions de natura a Mallorca i una empresa local vol presentar-se com a proveïdor.",
+        "desarrollo_es": "Estudian las normas de relación social del cliente y las aplican en un correo comercial en inglés (0156-5e). Con ese mensaje ponen en práctica una estrategia de marketing orientada a vender la excursión a ese tipo de cliente (1710-4i).",
+        "desarrollo_ca": "Estudien les normes de relació social del client i les apliquen en un correu comercial en anglès (0156-5e). Amb aquest missatge posen en pràctica una estratègia de màrqueting orientada a vendre l'excursió a aquest tipus de client (1710-4i).",
+        "evidencia_es": "Correo comercial en inglés adaptado al cliente.",
+        "evidencia_ca": "Correu comercial en anglès adaptat al client.",
+        "dua_es": "Fichas de cortesía con fórmulas de saludo y despedida para cada cultura.",
+        "dua_ca": "Fitxes de cortesia amb fórmules de salutació i comiat per a cada cultura.",
+        "metodologia_es": "aprendizaje basado en tareas.",
+        "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Visita comercial de una agencia nórdica",
+        "titulo_ca": "Visita comercial d'una agència nòrdica",
+        "contexto_es": "Una agencia de viajes escandinava visita Mallorca para decidir qué empresas de turismo activo incluirá en su catálogo.",
+        "contexto_ca": "Una agència de viatges escandinava visita Mallorca per decidir quines empreses de turisme actiu inclourà al seu catàleg.",
+        "desarrollo_es": "Un equipo hace de agencia visitante y otro de empresa anfitriona, que le recibe respetando las normas de relación social de su país (0156-5e). La empresa defiende su oferta con una estrategia de comunicación y venta que ya ha probado en la práctica (1710-4i).",
+        "desarrollo_ca": "Un equip fa d'agència visitant i un altre d'empresa amfitriona, que la rep respectant les normes de relació social del seu país (0156-5e). L'empresa defensa la seva oferta amb una estratègia de comunicació i venda que ja ha provat a la pràctica (1710-4i).",
+        "evidencia_es": "Dossier comercial presentado y valoración de la agencia visitante.",
+        "evidencia_ca": "Dossier comercial presentat i valoració de l'agència visitant.",
+        "dua_es": "Guion del anfitrión con frases útiles y observador que da retorno al final.",
+        "dua_ca": "Guió de l'amfitrió amb frases útils i observador que dona retorn al final.",
+        "metodologia_es": "simulación de visita comercial.",
+        "metodologia_ca": "simulació de visita comercial."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["f"] },
-    "b": { "modulo": "1710", "ra": "RA2", "criterios": ["c"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Presentar en inglés las tareas propias de la profesión incorpora técnicas de comunicación oral.",
     "justificacion_ca": "Presentar en anglès les tasques pròpies de la professió incorpora tècniques de comunicació oral.",
     "actividades": [
@@ -370,12 +1027,52 @@
         "dua_ca": "Suport visual amb fotos.",
         "metodologia_es": "aprendizaje integrado de contenidos y lengua.",
         "metodologia_ca": "aprenentatge integrat de continguts i llengua."
+      },
+      {
+        "titulo_es": "Vídeo de presentación del oficio de guía",
+        "titulo_ca": "Vídeo de presentació de l'ofici de guia",
+        "contexto_es": "El instituto prepara un vídeo en inglés para presentar a alumnado extranjero qué hace un guía de montaña en las Illes Balears.",
+        "contexto_ca": "L'institut prepara un vídeo en anglès per presentar a alumnat estranger què fa un guia de muntanya a les Illes Balears.",
+        "desarrollo_es": "Enumeran en inglés las tareas propias de su profesión y las organizan en un guion (0156-3f). Lo graban aplicando técnicas de presentación oral que incorporan a su proceso de aprendizaje (1710-2c).",
+        "desarrollo_ca": "Enumeren en anglès les tasques pròpies de la seva professió i les organitzen en un guió (0156-3f). El graven aplicant tècniques de presentació oral que incorporen al seu procés d'aprenentatge (1710-2c).",
+        "evidencia_es": "Vídeo de un minuto con el guion que lo acompaña.",
+        "evidencia_ca": "Vídeo d'un minut amb el guió que l'acompanya.",
+        "dua_es": "Grabación por partes que se puede repetir y apoyo de imágenes en el guion.",
+        "dua_ca": "Gravació per parts que es pot repetir i suport d'imatges al guió.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Charlas relámpago en una feria de empleo",
+        "titulo_ca": "Xerrades llampec en una fira d'ocupació",
+        "contexto_es": "En una feria de empleo de Palma, jóvenes de distintos países preguntan en inglés qué funciones tiene un guía en un parque natural.",
+        "contexto_ca": "En una fira d'ocupació de Palma, joves de diversos països pregunten en anglès quines funcions té un guia en un parc natural.",
+        "desarrollo_es": "Cada persona prepara una charla de dos minutos en la que enumera las actividades propias de su futuro puesto (0156-3f). Tras cada charla el público da su opinión, y la persona anota las técnicas de comunicación oral que le han funcionado y las incorpora a su aprendizaje (1710-2c).",
+        "desarrollo_ca": "Cada persona prepara una xerrada de dos minuts en què enumera les activitats pròpies del seu futur lloc (0156-3f). Després de cada xerrada el públic dona la seva opinió, i la persona anota les tècniques de comunicació oral que li han funcionat i les incorpora al seu aprenentatge (1710-2c).",
+        "evidencia_es": "Charla relámpago presentada y ficha personal de mejora de la comunicación oral.",
+        "evidencia_ca": "Xerrada llampec presentada i fitxa personal de millora de la comunicació oral.",
+        "dua_es": "Tarjetas de apoyo con palabras clave y opción de empezar ante un grupo pequeño.",
+        "dua_ca": "Targetes de suport amb paraules clau i opció de començar davant d'un grup petit.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA3", "criterios": ["j"] },
-    "b": { "modulo": "1713", "ra": "RA2", "criterios": ["k"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA3",
+      "criterios": [
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA2",
+      "criterios": [
+        "k"
+      ]
+    },
     "justificacion_es": "Presentar el proyecto en inglés amplía su difusión y entrena la presentación pública.",
     "justificacion_ca": "Presentar el projecte en anglès n'amplia la difusió i entrena la presentació pública.",
     "actividades": [
@@ -392,12 +1089,52 @@
         "dua_ca": "Assaig previ amb companys.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Demo day con empresas y entidades invitadas",
+        "titulo_ca": "Demo day amb empreses i entitats convidades",
+        "contexto_es": "Al final del ciclo, el centro invita a empresas de turismo activo de Mallorca y a agencias extranjeras a conocer los proyectos del alumnado.",
+        "contexto_ca": "Al final del cicle, el centre convida empreses de turisme actiu de Mallorca i agències estrangeres a conèixer els projectes de l'alumnat.",
+        "desarrollo_es": "Preparan una presentación breve en inglés con los protocolos adecuados, con las ideas más relevantes del proyecto (0156-3j). La exponen en público ante los invitados y recogen sus preguntas y comentarios (1713-2k).",
+        "desarrollo_ca": "Preparen una presentació breu en anglès amb els protocols adequats, amb les idees més rellevants del projecte (0156-3j). L'exposen en públic davant dels convidats i recullen les seves preguntes i comentaris (1713-2k).",
+        "evidencia_es": "Presentación breve en inglés y registro de preguntas recibidas.",
+        "evidencia_ca": "Presentació breu en anglès i registre de preguntes rebudes.",
+        "dua_es": "Diapositivas con más imágenes que texto y ensayo previo a puerta cerrada.",
+        "dua_ca": "Diapositives amb més imatges que text i assaig previ a porta tancada.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Presentación exprés en el ascensor",
+        "titulo_ca": "Presentació exprés a l'ascensor",
+        "contexto_es": "Una responsable de turismo de una aerolínea coincide un minuto con el equipo en un ascensor y les pide que le cuenten su proyecto en inglés.",
+        "contexto_ca": "Una responsable de turisme d'una aerolínia coincideix un minut amb l'equip en un ascensor i els demana que li expliquin el seu projecte en anglès.",
+        "desarrollo_es": "Condensan el proyecto en un discurso de un minuto en inglés con los elementos de una presentación breve y preparada (0156-3j). Lo ensayan por parejas y lo exponen ante la clase, que valora qué ideas relevantes han quedado claras para el público (1713-2k).",
+        "desarrollo_ca": "Condensen el projecte en un discurs d'un minut en anglès amb els elements d'una presentació breu i preparada (0156-3j). L'assagen per parelles i l'exposen davant de la classe, que valora quines idees rellevants han quedat clares per al públic (1713-2k).",
+        "evidencia_es": "Discurso de un minuto presentado en público y ficha de valoración de la clase.",
+        "evidencia_ca": "Discurs d'un minut presentat en públic i fitxa de valoració de la classe.",
+        "dua_es": "Estructura de tres frases clave a modo de guion y posibilidad de grabarse.",
+        "dua_ca": "Estructura de tres frases clau a manera de guió i possibilitat de gravar-se.",
+        "metodologia_es": "aprendizaje cooperativo con evaluación entre iguales.",
+        "metodologia_ca": "aprenentatge cooperatiu amb avaluació entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1713", "ra": "RA3", "criterios": ["i"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA3",
+      "criterios": [
+        "i"
+      ]
+    },
     "justificacion_es": "Parte de la documentación del proyecto, como avisos o notas a participantes, debe redactarse en inglés.",
     "justificacion_ca": "Part de la documentació del projecte, com avisos o notes als participants, s'ha de redactar en anglès.",
     "actividades": [
@@ -414,12 +1151,53 @@
         "dua_ca": "Models de notes breus.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Dossier de bienvenida en inglés para el campamento",
+        "titulo_ca": "Dossier de benvinguda en anglès per al campament",
+        "contexto_es": "Un grupo de estudiantes de Irlanda pasará una semana en un campamento de aventura en Menorca y necesita información clara al llegar.",
+        "contexto_ca": "Un grup d'estudiants d'Irlanda passarà una setmana en un campament d'aventura a Menorca i necessita informació clara en arribar.",
+        "desarrollo_es": "Seleccionan la estructura, el vocabulario y las convenciones adecuadas para un dossier informativo en inglés (0156-4a). Lo elaboran como parte de la documentación del plan de intervención del proyecto (1713-3i).",
+        "desarrollo_ca": "Seleccionen l'estructura, el vocabulari i les convencions adequades per a un dossier informatiu en anglès (0156-4a). L'elaboren com a part de la documentació del pla d'intervenció del projecte (1713-3i).",
+        "evidencia_es": "Dossier de bienvenida de dos páginas en inglés.",
+        "evidencia_ca": "Dossier de benvinguda de dues pàgines en anglès.",
+        "dua_es": "Plantillas de distintos tipos de documento y pictogramas para el vocabulario clave.",
+        "dua_ca": "Plantilles de diferents tipus de document i pictogrames per al vocabulari clau.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Cartelería de seguridad bilingüe para el refugio",
+        "titulo_ca": "Cartelleria de seguretat bilingüe per al refugi",
+        "contexto_es": "El refugio donde se aloja el proyecto recibe a visitantes de distintos países y necesita carteles claros sobre normas y emergencias.",
+        "contexto_ca": "El refugi on s'allotja el projecte rep visitants de diversos països i necessita cartells clars sobre normes i emergències.",
+        "desarrollo_es": "Escogen el tipo de texto y las estructuras más apropiadas para un aviso corto y directo en inglés (0156-4a). Los redactan y los incorporan al conjunto de documentos necesarios para ejecutar el proyecto (1713-3i).",
+        "desarrollo_ca": "Trien el tipus de text i les estructures més apropiades per a un avís curt i directe en anglès (0156-4a). Els redacten i els incorporen al conjunt de documents necessaris per executar el projecte (1713-3i).",
+        "evidencia_es": "Conjunto de cinco carteles bilingües listos para imprimir.",
+        "evidencia_ca": "Conjunt de cinc cartells bilingües llestos per imprimir.",
+        "dua_es": "Banco de verbos de aviso con ejemplos y carteles con iconos normalizados.",
+        "dua_ca": "Banc de verbs d'avís amb exemples i cartells amb icones normalitzades.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA1", "criterios": ["a", "e"] },
-    "b": { "modulo": "1713", "ra": "RA5", "criterios": ["d"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Los vídeos técnicos en inglés del sector enseñan los términos estándar de la profesión.",
     "justificacion_ca": "Els vídeos tècnics en anglès del sector ensenyen els termes estàndard de la professió.",
     "actividades": [
@@ -436,12 +1214,52 @@
         "dua_ca": "Vídeo amb pauses.",
         "metodologia_es": "aprendizaje integrado de contenidos y lengua.",
         "metodologia_ca": "aprenentatge integrat de continguts i llengua."
+      },
+      {
+        "titulo_es": "Glosario ilustrado a partir de un tutorial técnico",
+        "titulo_ca": "Glossari il·lustrat a partir d'un tutorial tècnic",
+        "contexto_es": "Un canal de formación de cuerdas publica tutoriales en inglés y el equipo quiere reunir los términos que se usan en el sector.",
+        "contexto_ca": "Un canal de formació de cordes publica tutorials en anglès i l'equip vol reunir els termes que s'utilitzen al sector.",
+        "desarrollo_es": "Analizan el contexto y las características del mensaje de un tutorial en inglés (0156-1a). Ordenan los pasos que se explican (0156-1e) y reúnen en un glosario ilustrado los términos técnicos estándar del sector en varias lenguas (1713-5d).",
+        "desarrollo_ca": "Analitzen el context i les característiques del missatge d'un tutorial en anglès (0156-1a). Ordenen els passos que s'expliquen (0156-1e) i reuneixen en un glossari il·lustrat els termes tècnics estàndard del sector en diverses llengües (1713-5d).",
+        "evidencia_es": "Glosario ilustrado de veinte términos con su equivalencia en tres lenguas.",
+        "evidencia_ca": "Glossari il·lustrat de vint termes amb la seva equivalència en tres llengües.",
+        "dua_es": "Vídeo con subtítulos y posibilidad de pausarlo y de dibujar en lugar de escribir.",
+        "dua_ca": "Vídeo amb subtítols i possibilitat de pausar-lo i de dibuixar en lloc d'escriure.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
+      },
+      {
+        "titulo_es": "Dictado de un procedimiento paso a paso",
+        "titulo_ca": "Dictat d'un procediment pas a pas",
+        "contexto_es": "Un instructor extranjero explica en inglés cómo preparar un anclaje para un descenso y el equipo de guías debe reproducirlo con exactitud.",
+        "contexto_ca": "Un instructor estranger explica en anglès com preparar un ancoratge per a un descens i l'equip de guies l'ha de reproduir amb exactitud.",
+        "desarrollo_es": "Escuchan la explicación y sitúan el mensaje en su contexto antes de reproducirlo (0156-1a). Por parejas, recomponen la secuencia de acciones en el orden correcto (0156-1e) y marcan cada término técnico que reconocen como estándar del sector en otras lenguas (1713-5d).",
+        "desarrollo_ca": "Escolten l'explicació i situen el missatge en el seu context abans de reproduir-lo (0156-1a). Per parelles, recomponen la seqüència d'accions en l'ordre correcte (0156-1e) i marquen cada terme tècnic que reconeixen com a estàndard del sector en altres llengües (1713-5d).",
+        "evidencia_es": "Secuencia de acciones reconstruida con los términos técnicos señalados.",
+        "evidencia_ca": "Seqüència d'accions reconstruïda amb els termes tècnics assenyalats.",
+        "dua_es": "Tarjetas con los pasos desordenados y audio que se puede repetir a velocidad reducida.",
+        "dua_ca": "Targetes amb els passos desordenats i àudio que es pot repetir a velocitat reduïda.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "0156", "ra": "RA2", "criterios": ["i"] },
-    "b": { "modulo": "1713", "ra": "RA1", "criterios": ["a"] },
+    "a": {
+      "modulo": "0156",
+      "ra": "RA2",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1713",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Las webs en inglés de las empresas del sector permiten identificar los modelos de empresa más representativos.",
     "justificacion_ca": "Les webs en anglès de les empreses del sector permeten identificar els models d'empresa més representatius.",
     "actividades": [
@@ -458,12 +1276,53 @@
         "dua_ca": "Plantilla de cerca.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Inversores extranjeros buscan empresa de aventura",
+        "titulo_ca": "Inversors estrangers cerquen empresa d'aventura",
+        "contexto_es": "Un grupo inversor británico visita Mallorca y quiere decidir en qué empresa de turismo activo apostar.",
+        "contexto_ca": "Un grup inversor britànic visita Mallorca i vol decidir en quina empresa de turisme actiu apostar.",
+        "desarrollo_es": "Cada pareja hace de asesor y estudia en inglés folletos, webs y dosieres de varias empresas, de los que saca los datos clave (0156-2i). Después defiende ante los «inversores» qué modelos de empresa son los más representativos del sector (1713-1a).",
+        "desarrollo_ca": "Cada parella fa d'assessor i estudia en anglès fullets, webs i dossiers de diverses empreses, dels quals treu les dades clau (0156-2i). Després defensa davant els «inversors» quins models d'empresa són els més representatius del sector (1713-1a).",
+        "evidencia_es": "Recomendación oral en inglés con ficha de datos.",
+        "evidencia_ca": "Recomanació oral en anglès amb fitxa de dades.",
+        "dua_es": "Glosario bilingüe de vocabulario empresarial con imágenes.",
+        "dua_ca": "Glossari bilingüe de vocabulari empresarial amb imatges.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Puzle de textos sobre empresas de turismo activo",
+        "titulo_ca": "Puzle de textos sobre empreses de turisme actiu",
+        "contexto_es": "El departamento de Actividades Físicas quiere un catálogo de empresas del sector con información tomada de fuentes en inglés.",
+        "contexto_ca": "El departament d'Activitats Físiques vol un catàleg d'empreses del sector amb informació presa de fonts en anglès.",
+        "desarrollo_es": "En grupos de expertos, cada persona lee un tipo de soporte distinto (web, reseña de clientes o memoria anual) y localiza los datos concretos que necesita (0156-2i). Al volver a su grupo base, ponen en común lo aprendido y agrupan las empresas en tipos para clasificar las más representativas (1713-1a).",
+        "desarrollo_ca": "En grups d'experts, cada persona llegeix un tipus de suport diferent (web, ressenya de clients o memòria anual) i localitza les dades concretes que necessita (0156-2i). En tornar al seu grup base, posen en comú el que han après i agrupen les empreses en tipus per classificar les més representatives (1713-1a).",
+        "evidencia_es": "Catálogo clasificado de empresas tipo.",
+        "evidencia_ca": "Catàleg classificat d'empreses tipus.",
+        "dua_es": "Textos con tres niveles de dificultad lectora a elegir.",
+        "dua_ca": "Textos amb tres nivells de dificultat lectora a triar.",
+        "metodologia_es": "aprendizaje cooperativo en puzle.",
+        "metodologia_ca": "aprenentatge cooperatiu en trencaclosques."
       }
     ]
   },
   {
-    "a": { "modulo": "1708", "ra": "RA1", "criterios": ["f"] },
-    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["h", "b"] },
+    "a": {
+      "modulo": "1708",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "h",
+        "b"
+      ]
+    },
     "justificacion_es": "Financiar una empresa de forma responsable conecta la inversión sostenible con el liderazgo ético.",
     "justificacion_ca": "Finançar una empresa de manera responsable connecta la inversió sostenible amb el lideratge ètic.",
     "actividades": [
@@ -480,12 +1339,52 @@
         "dua_ca": "Glossari financer.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Comité de inversión para una cooperativa de kayak",
+        "titulo_ca": "Comitè d'inversió per a una cooperativa de caiac",
+        "contexto_es": "Una cooperativa de guías de kayak de Pollença necesita renovar embarcaciones y debate dónde conseguir el dinero.",
+        "contexto_ca": "Una cooperativa de guies de caiac de Pollença necessita renovar embarcacions i debat on aconseguir els diners.",
+        "desarrollo_es": "El alumnado simula un comité con roles de analista, inversor, agencia de calificación y socio de la cooperativa, y describe cómo cada uno fomenta la sostenibilidad mediante índices y criterios de inversión (1708-1f). Con esos argumentos, el comité elige las opciones financieras responsables (1710-5h) y fija qué liderazgo ético debe ejercer la cooperativa ante sus socios (1710-5b).",
+        "desarrollo_ca": "L'alumnat simula un comitè amb rols d'analista, inversor, agència de qualificació i soci de la cooperativa, i descriu com cadascun fomenta la sostenibilitat mitjançant índexs i criteris d'inversió (1708-1f). Amb aquests arguments, el comitè tria les opcions financeres responsables (1710-5h) i fixa quin lideratge ètic ha d'exercir la cooperativa davant els seus socis (1710-5b).",
+        "evidencia_es": "Acta del comité con la decisión de financiación razonada.",
+        "evidencia_ca": "Acta del comitè amb la decisió de finançament raonada.",
+        "dua_es": "Tarjetas de rol con frases de apoyo para intervenir.",
+        "dua_ca": "Targetes de rol amb frases de suport per intervenir.",
+        "metodologia_es": "simulación de un comité de decisión.",
+        "metodologia_ca": "simulació d'un comitè de decisió."
+      },
+      {
+        "titulo_es": "Debate sobre crowdfunding o banca ética",
+        "titulo_ca": "Debat sobre micromecenatge o banca ètica",
+        "contexto_es": "Una asociación de guías de Menorca duda entre lanzar una campaña de micromecenazgo o pedir un préstamo a una entidad de banca ética.",
+        "contexto_ca": "Una associació de guies de Menorca dubta entre llançar una campanya de micromecenatge o demanar un préstec a una entitat de banca ètica.",
+        "desarrollo_es": "Dos equipos preparan posturas enfrentadas y recogen cómo las agencias e índices de sostenibilidad influyen en la confianza de los inversores (1708-1f). En el debate comparan las alternativas de financiación responsable (1710-5h) y argumentan qué dirección ética y sostenible conviene a la asociación (1710-5b).",
+        "desarrollo_ca": "Dos equips preparen postures enfrontades i recullen com les agències i els índexs de sostenibilitat influeixen en la confiança dels inversors (1708-1f). En el debat comparen les alternatives de finançament responsable (1710-5h) i argumenten quina direcció ètica i sostenible convé a l'associació (1710-5b).",
+        "evidencia_es": "Cuadro de argumentos a favor y en contra con conclusión del grupo.",
+        "evidencia_ca": "Quadre d'arguments a favor i en contra amb conclusió del grup.",
+        "dua_es": "Turnos de palabra cronometrados y guion de argumentos facilitado.",
+        "dua_ca": "Torns de paraula cronometrats i guió d'arguments facilitat.",
+        "metodologia_es": "debate estructurado.",
+        "metodologia_ca": "debat estructurat."
       }
     ]
   },
   {
-    "a": { "modulo": "1708", "ra": "RA4", "criterios": ["b"] },
-    "b": { "modulo": "1710", "ra": "RA4", "criterios": ["e"] },
+    "a": {
+      "modulo": "1708",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "La economía circular y la del bien común orientan modelos de negocio más justos y sostenibles.",
     "justificacion_ca": "L'economia circular i la del bé comú orienten models de negoci més justos i sostenibles.",
     "actividades": [
@@ -502,12 +1401,53 @@
         "dua_ca": "Esquema del model circular.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Del cubo amarillo al ciclo cerrado",
+        "titulo_ca": "Del cubell groc al cicle tancat",
+        "contexto_es": "Una empresa de rutas por la Serra de Tramuntana genera botellas, envoltorios y material roto que acaba en el contenedor.",
+        "contexto_ca": "Una empresa de rutes per la Serra de Tramuntana genera ampolles, embolcalls i material trencat que acaba al contenidor.",
+        "desarrollo_es": "En estaciones sucesivas, el alumnado clasifica los residuos de una jornada de rutas y reconoce qué principios de economía verde y circular permitirían reducirlos o reutilizarlos (1708-4b). En la última estación estudia cómo la economía del bien común y la circular sostienen un modelo más justo para la empresa y su comunidad (1710-4e).",
+        "desarrollo_ca": "En estacions successives, l'alumnat classifica els residus d'una jornada de rutes i reconeix quins principis d'economia verda i circular permetrien reduir-los o reutilitzar-los (1708-4b). A l'última estació estudia com l'economia del bé comú i la circular sostenen un model més just per a l'empresa i la seva comunitat (1710-4e).",
+        "evidencia_es": "Dosier de estaciones con propuesta de cierre de ciclo.",
+        "evidencia_ca": "Dossier d'estacions amb proposta de tancament de cicle.",
+        "dua_es": "Pictogramas en cada estación y opción de responder oralmente.",
+        "dua_ca": "Pictogrames a cada estació i opció de respondre oralment.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
+      },
+      {
+        "titulo_es": "Mercadillo de economía circular en el instituto",
+        "titulo_ca": "Mercat d'economia circular a l'institut",
+        "contexto_es": "El instituto organiza un mercadillo solidario y quiere que los puestos de turismo activo muestren ideas de modelos económicos justos.",
+        "contexto_ca": "L'institut organitza un mercat solidari i vol que les parades de turisme actiu mostrin idees de models econòmics justos.",
+        "desarrollo_es": "Cada grupo monta un puesto con un producto o servicio de aventura reutilizado y explica a las visitas los principios de economía verde y circular que aplica (1708-4b). Registra después en un cuaderno cómo su propuesta aporta equidad y sostenibilidad según la economía del bien común (1710-4e).",
+        "desarrollo_ca": "Cada grup munta una parada amb un producte o servei d'aventura reutilitzat i explica als visitants els principis d'economia verda i circular que aplica (1708-4b). Registra després en un quadern com la seva proposta aporta equitat i sostenibilitat segons l'economia del bé comú (1710-4e).",
+        "evidencia_es": "Puesto presentado y cuaderno de reflexión.",
+        "evidencia_ca": "Parada presentada i quadern de reflexió.",
+        "dua_es": "Rúbrica visual compartida desde el inicio del montaje.",
+        "dua_ca": "Rúbrica visual compartida des de l'inici del muntatge.",
+        "metodologia_es": "aprendizaje basado en la exposición pública.",
+        "metodologia_ca": "aprenentatge basat en l'exposició pública."
       }
     ]
   },
   {
-    "a": { "modulo": "1708", "ra": "RA2", "criterios": ["e"] },
-    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["d", "b"] },
+    "a": {
+      "modulo": "1708",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA3",
+      "criterios": [
+        "d",
+        "b"
+      ]
+    },
     "justificacion_es": "Las alianzas entre entidades para retos ambientales son también una forma colaborativa de innovar y emprender.",
     "justificacion_ca": "Les aliances entre entitats per a reptes ambientals són també una forma col·laborativa d'innovar i emprendre.",
     "actividades": [
@@ -524,12 +1464,52 @@
         "dua_ca": "Rols definits en el grup.",
         "metodologia_es": "aprendizaje-servicio.",
         "metodologia_ca": "aprenentatge servei."
+      },
+      {
+        "titulo_es": "Cumbre de entidades por la Albufera",
+        "titulo_ca": "Cimera d'entitats per l'Albufera",
+        "contexto_es": "El Parc Natural de s'Albufera sufre presión de visitantes y vertidos, y varias entidades deben acordar cómo actuar juntas.",
+        "contexto_ca": "El Parc Natural de s'Albufera pateix pressió de visitants i abocaments, i diverses entitats han d'acordar com actuar juntes.",
+        "desarrollo_es": "El alumnado representa a ayuntamiento, empresa de guías, ONG y vecindario en una cumbre y analiza por qué solo una acción coordinada resuelve el reto ambiental (1708-2e). En el reparto de tareas practica el trabajo colaborativo (1710-3d) y recurre a una metodología de emprendimiento para convertir el acuerdo en una propuesta innovadora (1710-3b).",
+        "desarrollo_ca": "L'alumnat representa ajuntament, empresa de guies, ONG i veïnat en una cimera i analitza per què només una acció coordinada resol el repte ambiental (1708-2e). En el repartiment de tasques practica el treball col·laboratiu (1710-3d) i recorre a una metodologia d'emprenedoria per convertir l'acord en una proposta innovadora (1710-3b).",
+        "evidencia_es": "Declaración conjunta con compromisos por entidad.",
+        "evidencia_ca": "Declaració conjunta amb compromisos per entitat.",
+        "dua_es": "Fichas de personaje con intereses y datos de partida.",
+        "dua_ca": "Fitxes de personatge amb interessos i dades de partida.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Taller de ideas para una red de playas limpias",
+        "titulo_ca": "Taller d'idees per a una xarxa de platges netes",
+        "contexto_es": "Varios clubes náuticos de Ibiza quieren una red conjunta de limpieza de calas y piden ideas al alumnado.",
+        "contexto_ca": "Diversos clubs nàutics d'Eivissa volen una xarxa conjunta de neteja de cales i demanen idees a l'alumnat.",
+        "desarrollo_es": "Con la técnica del mapa de actores, el alumnado valora qué alianzas transversales hacen falta para afrontar los retos ambientales y sociales de las calas (1708-2e). Luego aplica una metodología ágil de ideación, en la que cada equipo prototipa una solución y colabora con los demás para mejorarla (1710-3b) (1710-3d).",
+        "desarrollo_ca": "Amb la tècnica del mapa d'actors, l'alumnat valora quines aliances transversals calen per afrontar els reptes ambientals i socials de les cales (1708-2e). Després aplica una metodologia àgil d'ideació, en què cada equip prototipa una solució i col·labora amb els altres per millorar-la (1710-3b) (1710-3d).",
+        "evidencia_es": "Prototipo en cartulina de la red y mapa de actores.",
+        "evidencia_ca": "Prototip en cartolina de la xarxa i mapa d'actors.",
+        "dua_es": "Materiales manipulables para prototipar sin depender de la escritura.",
+        "dua_ca": "Materials manipulables per prototipar sense dependre de l'escriptura.",
+        "metodologia_es": "pensamiento de diseño con prototipado rápido.",
+        "metodologia_ca": "pensament de disseny amb prototipatge ràpid."
       }
     ]
   },
   {
-    "a": { "modulo": "1708", "ra": "RA3", "criterios": ["b"] },
-    "b": { "modulo": "1710", "ra": "RA3", "criterios": ["f"] },
+    "a": {
+      "modulo": "1708",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Los riesgos y oportunidades de los ODS deben integrarse en la estrategia empresarial.",
     "justificacion_ca": "Els riscs i les oportunitats dels ODS s'han d'integrar en l'estratègia empresarial.",
     "actividades": [
@@ -546,12 +1526,53 @@
         "dua_ca": "Matriu amb exemples.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Semáforo de riesgos ODS en un centro de buceo",
+        "titulo_ca": "Semàfor de riscos ODS en un centre de busseig",
+        "contexto_es": "Un centro de buceo de Formentera quiere saber qué le pone en peligro y qué le beneficia de los Objetivos de Desarrollo Sostenible.",
+        "contexto_ca": "Un centre de busseig de Formentera vol saber què el posa en perill i què el beneficia dels Objectius de Desenvolupament Sostenible.",
+        "desarrollo_es": "Con tarjetas de colores, el alumnado clasifica los riesgos y las oportunidades que los ODS suponen para el centro (1708-3b). A partir del semáforo propone qué objetivos y políticas ambientales deben entrar en la estrategia de la empresa (1710-3f).",
+        "desarrollo_ca": "Amb targetes de colors, l'alumnat classifica els riscos i les oportunitats que els ODS suposen per al centre (1708-3b). A partir del semàfor proposa quins objectius i polítiques ambientals han d'entrar a l'estratègia de l'empresa (1710-3f).",
+        "evidencia_es": "Semáforo de riesgos con tres líneas estratégicas.",
+        "evidencia_ca": "Semàfor de riscos amb tres línies estratègiques.",
+        "dua_es": "Tarjetas con código de color y texto breve.",
+        "dua_ca": "Targetes amb codi de color i text breu.",
+        "metodologia_es": "gamificación con tarjetas.",
+        "metodologia_ca": "gamificació amb targetes."
+      },
+      {
+        "titulo_es": "Consejo de administración de una empresa de barrancos",
+        "titulo_ca": "Consell d'administració d'una empresa de barrancs",
+        "contexto_es": "Una empresa de descenso de barrancos de Sóller debe presentar a su consejo cómo encajar la sostenibilidad en el plan del próximo año.",
+        "contexto_ca": "Una empresa de descens de barrancs de Sóller ha de presentar al seu consell com encaixar la sostenibilitat en el pla de l'any vinent.",
+        "desarrollo_es": "El alumnado, en el papel de equipo directivo, analiza qué riesgos y oportunidades suponen los ODS para el negocio (1708-3b). Redacta luego un resumen para el consejo que incorpora a la estrategia las políticas de sostenibilidad y medio ambiente (1710-3f).",
+        "desarrollo_ca": "L'alumnat, en el paper d'equip directiu, analitza quins riscos i oportunitats suposen els ODS per al negoci (1708-3b). Redacta després un resum per al consell que incorpora a l'estratègia les polítiques de sostenibilitat i medi ambient (1710-3f).",
+        "evidencia_es": "Informe breve para el consejo con decisiones propuestas.",
+        "evidencia_ca": "Informe breu per al consell amb decisions proposades.",
+        "dua_es": "Modelo de informe con apartados guiados y ejemplos.",
+        "dua_ca": "Model d'informe amb apartats guiats i exemples.",
+        "metodologia_es": "juego de rol directivo.",
+        "metodologia_ca": "joc de rol directiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1708", "ra": "RA6", "criterios": ["d"] },
-    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["f", "e"] },
+    "a": {
+      "modulo": "1708",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "f",
+        "e"
+      ]
+    },
     "justificacion_es": "Un modelo de negocio ecosocial necesita métricas de sostenibilidad para comprobar si cumple sus metas.",
     "justificacion_ca": "Un model de negoci ecosocial necessita mètriques de sostenibilitat per comprovar si compleix les seves metes.",
     "actividades": [
@@ -568,12 +1589,53 @@
         "dua_ca": "Llenç de model de negoci imprès.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Cuadro de mando verde para rutas ecosociales",
+        "titulo_ca": "Quadre de comandament verd per a rutes ecosocials",
+        "contexto_es": "Una start-up de rutas ecosociales por Mallorca debe demostrar a sus patrocinadores que cumple lo que promete.",
+        "contexto_ca": "Una start-up de rutes ecosocials per Mallorca ha de demostrar als seus patrocinadors que compleix el que promet.",
+        "desarrollo_es": "El alumnado revisa su modelo de negocio, reconoce cada bloque ecosocial (1710-5e) y relaciona cada meta de desarrollo sostenible con una parte del modelo (1710-5f). Después elige los estándares de sostenibilidad más usados para fijar las métricas de desempeño (1708-6d).",
+        "desarrollo_ca": "L'alumnat revisa el seu model de negoci, reconeix cada bloc ecosocial (1710-5e) i relaciona cada meta de desenvolupament sostenible amb una part del model (1710-5f). Després tria els estàndards de sostenibilitat més utilitzats per fixar les mètriques de desempenyorament (1708-6d).",
+        "evidencia_es": "Cuadro de mando con métricas y metas vinculadas al modelo.",
+        "evidencia_ca": "Quadre de comandament amb mètriques i metes vinculades al model.",
+        "dua_es": "Plantilla de hoja de cálculo ya estructurada.",
+        "dua_ca": "Plantilla de full de càlcul ja estructurada.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Rendición de cuentas ante los patrocinadores",
+        "titulo_ca": "Rendició de comptes davant dels patrocinadors",
+        "contexto_es": "Al cerrar la temporada, una empresa de ecoturismo de Menorca presenta resultados ante quienes la han financiado.",
+        "contexto_ca": "En tancar la temporada, una empresa d'ecoturisme de Menorca presenta resultats davant dels qui l'han finançada.",
+        "desarrollo_es": "En una simulación de junta, cada equipo analiza el modelo de negocio ecosocial de la empresa (1710-5e) y comprueba si sus metas de sostenibilidad se reflejan en el diseño (1710-5f). Para respaldar sus conclusiones, define las métricas según estándares reconocidos (1708-6d).",
+        "desarrollo_ca": "En una simulació de junta, cada equip analitza el model de negoci ecosocial de l'empresa (1710-5e) i comprova si les seves metes de sostenibilitat es reflecteixen en el disseny (1710-5f). Per recolzar les seves conclusions, defineix les mètriques segons estàndards reconeguts (1708-6d).",
+        "evidencia_es": "Presentación de resultados con tabla de indicadores.",
+        "evidencia_ca": "Presentació de resultats amb taula d'indicadors.",
+        "dua_es": "Gráficos de ejemplo y tiempo ampliado para exponer.",
+        "dua_ca": "Gràfics d'exemple i temps ampliat per exposar.",
+        "metodologia_es": "simulación de junta de patrocinadores.",
+        "metodologia_ca": "simulació de junta de patrocinadors."
       }
     ]
   },
   {
-    "a": { "modulo": "1708", "ra": "RA5", "criterios": ["a", "b"] },
-    "b": { "modulo": "1710", "ra": "RA5", "criterios": ["a"] },
+    "a": {
+      "modulo": "1708",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1710",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Entender el modelo de consumo actual y la economía circular inspira el emprendimiento social.",
     "justificacion_ca": "Entendre el model de consum actual i l'economia circular inspira l'emprenedoria social.",
     "actividades": [
@@ -590,6 +1652,34 @@
         "dua_ca": "Vídeo de l'empresa social.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Cada excursión deja una huella: vídeo-fórum",
+        "titulo_ca": "Cada excursió deixa una petjada: vídeo-fòrum",
+        "contexto_es": "Un documental sobre la saturación de calas en verano abre el debate en clase sobre qué turismo queremos.",
+        "contexto_ca": "Un documental sobre la saturació de cales a l'estiu obre el debat a classe sobre quin turisme volem.",
+        "desarrollo_es": "Tras el visionado, el alumnado describe cómo funciona el modelo actual de producción y consumo turístico (1708-5a) y qué principios de economía circular lo corregirían (1708-5b). Cierra con una ronda de ideas sobre qué innovaciones sociales podrían surgir de ahí (1710-5a).",
+        "desarrollo_ca": "Després del visionat, l'alumnat descriu com funciona el model actual de producció i consum turístic (1708-5a) i quins principis d'economia circular el corregirien (1708-5b). Tanca amb una ronda d'idees sobre quines innovacions socials podrien sorgir d'aquí (1710-5a).",
+        "evidencia_es": "Mapa de ideas del vídeo-fórum.",
+        "evidencia_ca": "Mapa d'idees del vídeo-fòrum.",
+        "dua_es": "Documental subtitulado y guía de preguntas previa.",
+        "dua_ca": "Documental subtitulat i guia de preguntes prèvia.",
+        "metodologia_es": "clase invertida con vídeo-fórum.",
+        "metodologia_ca": "classe invertida amb vídeo-fòrum."
+      },
+      {
+        "titulo_es": "Entrevistas a emprendedores de la economía circular",
+        "titulo_ca": "Entrevistes a emprenedors de l'economia circular",
+        "contexto_es": "Varias cooperativas de reciclaje y reparación de material deportivo de las islas aceptan responder preguntas del alumnado.",
+        "contexto_ca": "Diverses cooperatives de reciclatge i reparació de material esportiu de les illes accepten respondre preguntes de l'alumnat.",
+        "desarrollo_es": "Cada grupo prepara un guion para entender qué modelo de producción y consumo critican sus entrevistados (1708-5a) y qué principios verdes y circulares aplican (1708-5b). Al analizar las respuestas, identifica los conceptos básicos de emprendimiento e innovación social que aparecen en cada caso (1710-5a).",
+        "desarrollo_ca": "Cada grup prepara un guió per entendre quin model de producció i consum critiquen els seus entrevistats (1708-5a) i quins principis verds i circulars apliquen (1708-5b). En analitzar les respostes, identifica els conceptes bàsics d'emprenedoria i innovació social que apareixen en cada cas (1710-5a).",
+        "evidencia_es": "Guion de entrevista y resumen comparativo de los casos.",
+        "evidencia_ca": "Guió d'entrevista i resum comparatiu dels casos.",
+        "dua_es": "Preguntas modelo y opción de grabar las respuestas.",
+        "dua_ca": "Preguntes model i opció de gravar les respostes.",
+        "metodologia_es": "investigación mediante entrevistas.",
+        "metodologia_ca": "recerca mitjançant entrevistes."
       }
     ]
   }

@@ -22,7 +22,7 @@ Datos de la tarea:
   0179 Inglés profesional (5 RA)
   1708 Sostenibilidad aplicada al sistema productivo (6 RA)
   1710 Itinerario personal para la empleabilidad II (5 RA)
-- Tamaño orientativo: unas 168 relaciones (≈ 336 conexiones), una actividad por relación.
+- Tamaño orientativo: unas 168 relaciones (≈ 336 conexiones), tres actividades por relación (cada relación genera dos conexiones, y cada conexión muestra las tres).
 - Número común de la tarea: 235 (reservado) → rama feature/235_mapa_cfgs_animacion_sociodeportiva_2 y registro tareas/235_mapa_cfgs_animacion_sociodeportiva_2.md. No lo recalcules: la 235 está reservada para este mapa aunque haya números mayores ocupados.
 - Migración: backend/src/migrations/43_ingest_mapa_cfgs_animacion_sociodeportiva_2.ts (la 43 está reservada; la 42 la usa otra tarea en paralelo).
 
@@ -54,7 +54,7 @@ Este curso tiene tres módulos comunes (0179, 1708, 1710) con 16 de los 42 RA: n
 1142 tiene 7 RA: reparte bien sus relaciones con los demás módulos para que todos sus RA lleguen a 6.
 Puedes usar un script temporal (fuera de backend/ y frontend/, y bórralo después) solo para contar grados, pares y cobertura del plan.
 
-PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa-intermodular/fuentes/CFGS_ANIMACION_SOCIODEPORTIVA_2/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json). Escribe un archivo por módulo o por bloques de 20-30 relaciones para no truncar la salida. Cada relación tiene UNA actividad propia y bien desarrollada, con este formato:
+PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa-intermodular/fuentes/CFGS_ANIMACION_SOCIODEPORTIVA_2/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json). Escribe un archivo por módulo o por bloques de 20-30 relaciones para no truncar la salida. Cada relación tiene al menos TRES actividades propias, distintas entre sí (metodología y producto) y bien desarrolladas, con este formato:
 
 [
   {
@@ -74,6 +74,8 @@ PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa
     ]
   }
 ]
+
+El array "actividades" lleva como mínimo TRES objetos como el del ejemplo (el validador rechaza las relaciones con menos).
 
 Reglas de redacción (el validador rechaza lo que las incumple):
 - PROHIBIDO generar los textos con scripts, plantillas o combinando fragmentos de los criterios. Cada actividad se redacta a mano para su relación, como haría un docente. Un borrador anterior de otro modelo (tarea 224) se descartó entero por esto.

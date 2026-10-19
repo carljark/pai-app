@@ -21,7 +21,7 @@ Datos de la tarea:
   0344 Metodología de la intervención social (5 RA)
   1665 Digitalización aplicada a los sectores productivos (6 RA)
   1709 Itinerario personal para la empleabilidad I (5 RA)
-- Tamaño orientativo: unas 150 relaciones (≈ 300 conexiones), una actividad por relación.
+- Tamaño orientativo: unas 150 relaciones (≈ 300 conexiones), tres actividades por relación (cada relación genera dos conexiones, y cada conexión muestra las tres).
 - Número común de la tarea: 224 → rama feature/224_mapa_cfgs_integracion_social y registro tareas/224_mapa_cfgs_integracion_social.md. Compruébalo antes con el comando de AGENTS.md §1.1; si ya está ocupado, usa el que dé el comando.
 - Migración: backend/src/migrations/37_ingest_mapa_cfgs_integracion_social.ts. Si el 37 ya existe, usa el siguiente número libre.
 
@@ -47,7 +47,7 @@ PASO 3. Plan de relaciones. Una relación une dos RA de módulos distintos del 1
 5. La relación debe ser pedagógicamente real: los criterios de los dos lados se trabajan juntos en una misma tarea profesional de integración social (proyectos de intervención, mediación vecinal, itinerarios de inserción, apoyo a la autonomía en domicilio o centro, trabajo con colectivos en riesgo de exclusión…). No conectes por palabras sueltas.
 Reparte las relaciones entre todos los módulos. 1665 y 1709 también necesitan 6 relaciones por RA: conéctalos con situaciones reales del ciclo (herramientas digitales para la intervención, gestión de datos de usuarios, empleabilidad propia y de las personas usuarias…).
 
-PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa-intermodular/fuentes/CFGS_INTEGRACION_SOCIAL/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json). Puedes escribir un archivo por módulo para no truncar la salida. Cada relación tiene UNA actividad propia y bien desarrollada, con este formato:
+PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa-intermodular/fuentes/CFGS_INTEGRACION_SOCIAL/relaciones_NN.json (arrays JSON; el generador une todos los relaciones*.json). Puedes escribir un archivo por módulo para no truncar la salida. Cada relación tiene al menos TRES actividades propias, distintas entre sí (metodología y producto) y bien desarrolladas, con este formato:
 
 [
   {
@@ -67,6 +67,8 @@ PASO 4. Redacción. Escribe las relaciones en uno o varios archivos scripts/mapa
     ]
   }
 ]
+
+El array "actividades" lleva como mínimo TRES objetos como el del ejemplo (el validador rechaza las relaciones con menos).
 
 Reglas de redacción:
 - La actividad trabaja los criterios citados de AMBOS lados, y el desarrollo los cita todos con su código completo (módulo-númeroRA+letra, p. ej. 0342-3b). Las citas deben ser las mismas, en el mismo orden, en _es y en _ca.

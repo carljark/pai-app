@@ -1,7 +1,19 @@
 [
   {
-    "a": { "modulo": "1368", "ra": "RA1", "criterios": ["b"] },
-    "b": { "modulo": "1369", "ra": "RA1", "criterios": ["e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Trabajar en esterilidad con cultivos y reactivos depende de elegir bien las técnicas de limpieza, desinfección y esterilización.",
     "justificacion_ca": "Treballar en esterilitat amb cultius i reactius depèn de triar bé les tècniques de neteja, desinfecció i esterilització.",
     "actividades": [
@@ -18,12 +30,53 @@
         "dua_ca": "Indicadors d'esterilització reals per observar.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Vídeo tutorial sobre el ciclo de esterilización",
+        "titulo_ca": "Vídeo tutorial sobre el cicle d'esterilització",
+        "contexto_es": "El servicio de esterilización de un hospital de Manacor pide al centro un vídeo corto para formar a personal nuevo.",
+        "contexto_ca": "El servei d'esterilització d'un hospital de Manacor demana al centre un vídeo curt per formar personal nou.",
+        "desarrollo_es": "En casa, el alumnado estudia las técnicas de limpieza, desinfección y esterilización y sus controles (1368-1b). En clase graba un vídeo donde explica las normas de manipulación de material y reactivos en condiciones de esterilidad (1369-1e).",
+        "desarrollo_ca": "A casa, l'alumnat estudia les tècniques de neteja, desinfecció i esterilització i els seus controls (1368-1b). A classe enregistra un vídeo on explica les normes de manipulació de material i reactius en condicions d'esterilitat (1369-1e).",
+        "evidencia_es": "Vídeo tutorial y guion previo.",
+        "evidencia_ca": "Vídeo tutorial i guió previ.",
+        "dua_es": "Guion con apartados fijos para grabar.",
+        "dua_ca": "Guió amb apartats fixos per enregistrar.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
+      },
+      {
+        "titulo_es": "Auditoría del material estéril de un lote",
+        "titulo_ca": "Auditoria del material estèril d'un lot",
+        "contexto_es": "Un lote de material de un solo uso llega con el envoltorio dañado y hay que decidir si se puede usar.",
+        "contexto_ca": "Un lot de material d'un sol ús arriba amb l'embolcall danyat i cal decidir si es pot usar.",
+        "desarrollo_es": "En parejas, el alumnado revisa las técnicas de limpieza, desinfección y esterilización aplicables al material recibido (1368-1b). Después consensúa las normas de manipulación en esterilidad que garantizan que el lote sirva o se deseche (1369-1e).",
+        "desarrollo_ca": "En parelles, l'alumnat revisa les tècniques de neteja, desinfecció i esterilització aplicables al material rebut (1368-1b). Després consensua les normes de manipulació en esterilitat que garanteixen que el lot serveixi o es descarti (1369-1e).",
+        "evidencia_es": "Acta de la auditoría con decisión razonada.",
+        "evidencia_ca": "Acta de l'auditoria amb decisió raonada.",
+        "dua_es": "Lista de comprobación con dibujos del envoltorio correcto.",
+        "dua_ca": "Llista de comprovació amb dibuixos de l'embolcall correcte.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA3", "criterios": ["b", "c"] },
-    "b": { "modulo": "1369", "ra": "RA2", "criterios": ["b"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Preparar un medio de cultivo con sus suplementos exige calcular masas, volúmenes y concentraciones.",
     "justificacion_ca": "Preparar un medi de cultiu amb els seus suplements exigeix calcular masses, volums i concentracions.",
     "actividades": [
@@ -40,12 +93,52 @@
         "dua_ca": "Plantilla de càlcul amb fórmules.",
         "metodologia_es": "práctica de laboratorio.",
         "metodologia_ca": "pràctica de laboratori."
+      },
+      {
+        "titulo_es": "Salvar el cultivo con medio caducado",
+        "titulo_ca": "Salvar el cultiu amb medi caducat",
+        "contexto_es": "El medio completo de un cultivo de linfocitos se ha caducado y hay que prepararlo de nuevo antes de la incubación.",
+        "contexto_ca": "El medi complet d'un cultiu de limfòcits s'ha caducat i cal preparar-lo de nou abans de la incubació.",
+        "desarrollo_es": "El reto es reponer el medio sin perder el cultivo. El alumnado selecciona el medio y los suplementos según el tipo de célula (1369-2b), calcula masas, volúmenes y concentraciones de cada componente (1368-3b) y expresa el resultado en las unidades que pide la ficha del cultivo (1368-3c).",
+        "desarrollo_ca": "El repte és reposar el medi sense perdre el cultiu. L'alumnat selecciona el medi i els suplements segons el tipus de cèl·lula (1369-2b), calcula masses, volums i concentracions de cada component (1368-3b) i expressa el resultat en les unitats que demana la fitxa del cultiu (1368-3c).",
+        "evidencia_es": "Medio repuesto con hoja de cálculos validada.",
+        "evidencia_ca": "Medi reposat amb full de càlculs validat.",
+        "dua_es": "Calculadora y tabla de conversión de unidades.",
+        "dua_ca": "Calculadora i taula de conversió d'unitats.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Dos formas de preparar el mismo medio",
+        "titulo_ca": "Dues maneres de preparar el mateix medi",
+        "contexto_es": "Dos técnicos defienden maneras distintas de suplementar un medio y el grupo debe decidir cuál seguir.",
+        "contexto_ca": "Dos tècnics defensen maneres diferents de suplementar un medi i el grup ha de decidir quina seguir.",
+        "desarrollo_es": "Cada equipo defiende su propuesta de medio y suplementos para un cultivo concreto (1369-2b). En el debate se comparan las concentraciones expresadas en distintas unidades (1368-3c) y se revisan los cálculos de masas y volúmenes que las sustentan (1368-3b).",
+        "desarrollo_ca": "Cada equip defensa la seva proposta de medi i suplements per a un cultiu concret (1369-2b). Al debat es comparen les concentracions expressades en diferents unitats (1368-3c) i es revisen els càlculs de masses i volums que les sustenten (1368-3b).",
+        "evidencia_es": "Acta del debate con la propuesta elegida.",
+        "evidencia_ca": "Acta del debat amb la proposta triada.",
+        "dua_es": "Turnos de palabra con guion de argumentos.",
+        "dua_ca": "Torns de paraula amb guió d'arguments.",
+        "metodologia_es": "debate.",
+        "metodologia_ca": "debat."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA3", "criterios": ["d"] },
-    "b": { "modulo": "1369", "ra": "RA4", "criterios": ["c"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Las soluciones de extracción de ácidos nucleicos se preparan con el material volumétrico y los reactivos adecuados.",
     "justificacion_ca": "Les solucions d'extracció d'àcids nucleics es preparen amb el material volumètric i els reactius adequats.",
     "actividades": [
@@ -62,12 +155,53 @@
         "dua_ca": "Recepta del tampó pas a pas.",
         "metodologia_es": "práctica de laboratorio.",
         "metodologia_ca": "pràctica de laboratori."
+      },
+      {
+        "titulo_es": "Rediseñar un kit de extracción casero",
+        "titulo_ca": "Redissenyar un kit d'extracció casolà",
+        "contexto_es": "El kit de extracción se agota a mitad de curso y el laboratorio quiere una alternativa preparada en casa.",
+        "contexto_ca": "El kit d'extracció s'esgota a meitat de curs i el laboratori vol una alternativa preparada a casa.",
+        "desarrollo_es": "Tras idear y prototipar una solución, el alumnado elige el material volumétrico y los reactivos que usará en lugar del kit comercial (1368-3d). Después prepara las soluciones de extracción siguiendo el protocolo y las etiqueta con todos los datos (1369-4c).",
+        "desarrollo_ca": "Després d'idear i prototipar una solució, l'alumnat tria el material volumètric i els reactius que farà servir en lloc del kit comercial (1368-3d). Després prepara les solucions d'extracció seguint el protocol i les etiqueta amb totes les dades (1369-4c).",
+        "evidencia_es": "Prototipo del kit y soluciones etiquetadas.",
+        "evidencia_ca": "Prototip del kit i solucions etiquetades.",
+        "dua_es": "Banco de materiales y reactivos con imágenes.",
+        "dua_ca": "Banc de materials i reactius amb imatges.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Qué reactivo falla en las extracciones",
+        "titulo_ca": "Quin reactiu falla a les extraccions",
+        "contexto_es": "Las extracciones de la semana dan un rendimiento muy bajo y el grupo investiga qué reactivo puede estar detrás.",
+        "contexto_ca": "Les extraccions de la setmana donen un rendiment molt baix i el grup investiga quin reactiu pot estar-hi darrere.",
+        "desarrollo_es": "El alumnado revisa el material volumétrico y los reactivos empleados y comprueba su estado y caducidad (1368-3d). Reproduce la preparación de las soluciones siguiendo el protocolo hasta detectar qué paso introduce el error (1369-4c).",
+        "desarrollo_ca": "L'alumnat revisa el material volumètric i els reactius emprats i comprova el seu estat i la seva caducitat (1368-3d). Reprodueix la preparació de les solucions seguint el protocol fins a detectar quin pas introdueix l'error (1369-4c).",
+        "evidencia_es": "Informe de investigación con el paso corregido.",
+        "evidencia_ca": "Informe de recerca amb el pas corregit.",
+        "dua_es": "Diario de laboratorio con preguntas guía.",
+        "dua_ca": "Dietari de laboratori amb preguntes guia.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["e"] },
-    "b": { "modulo": "1369", "ra": "RA5", "criterios": ["g", "h"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA5",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
     "justificacion_es": "La electroforesis en gel es la técnica de separación que permite ver los productos de una PCR.",
     "justificacion_ca": "L'electroforesi en gel és la tècnica de separació que permet veure els productes d'una PCR.",
     "actividades": [
@@ -84,12 +218,54 @@
         "dua_ca": "Simulador en línia d'electroforesi.",
         "metodologia_es": "práctica de laboratorio.",
         "metodologia_ca": "pràctica de laboratori."
+      },
+      {
+        "titulo_es": "Electroforesis para un estudio de filiación",
+        "titulo_ca": "Electroforesi per a un estudi de filiació",
+        "contexto_es": "Un despacho de abogados de Palma pide un informe sencillo sobre un caso ficticio de paternidad.",
+        "contexto_ca": "Un despatx d'advocats de Palma demana un informe senzill sobre un cas fictici de paternitat.",
+        "desarrollo_es": "Por equipos, el alumnado realiza las separaciones por electroforesis de las muestras problema (1368-4e). Carga el marcador, las muestras y los controles en el gel (1369-5g) y programa las condiciones de la técnica según el protocolo (1369-5h).",
+        "desarrollo_ca": "Per equips, l'alumnat fa les separacions per electroforesi de les mostres problema (1368-4e). Carrega al gel el marcador, les mostres i els controls (1369-5g) i programa les condicions de la tècnica segons el protocol (1369-5h).",
+        "evidencia_es": "Informe pericial del gel interpretado.",
+        "evidencia_ca": "Informe pericial del gel interpretat.",
+        "dua_es": "Plantilla de informe con apartados marcados.",
+        "dua_ca": "Plantilla d'informe amb apartats marcats.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Electroforesis que no separa las bandas",
+        "titulo_ca": "Electroforesi que no separa les bandes",
+        "contexto_es": "Una electroforesis sale con las bandas apelotonadas y sin resolver, y hay que averiguar por qué.",
+        "contexto_ca": "Una electroforesi surt amb les bandes apinyades i sense resoldre, i cal esbrinar per què.",
+        "desarrollo_es": "El alumnado revisa la separación por filtración, centrifugación y electroforesis que ha fallado (1368-4e). Comprueba la carga del marcador, las muestras y los controles (1369-5g) y las condiciones programadas en la cubeta (1369-5h) para localizar el error.",
+        "desarrollo_ca": "L'alumnat revisa la separació per filtració, centrifugació i electroforesi que ha fallat (1368-4e). Comprova la càrrega del marcador, les mostres i els controls (1369-5g) i les condicions programades a la cubeta (1369-5h) per localitzar l'error.",
+        "evidencia_es": "Análisis del caso con medidas correctoras.",
+        "evidencia_ca": "Anàlisi del cas amb mesures correctores.",
+        "dua_es": "Galería de imágenes de geles bien y mal resueltos.",
+        "dua_ca": "Galeria d'imatges de gels ben i mal resolts.",
+        "metodologia_es": "método del caso.",
+        "metodologia_ca": "mètode del cas."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["c", "d", "f"] },
-    "b": { "modulo": "1369", "ra": "RA4", "criterios": ["e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA4",
+      "criterios": [
+        "c",
+        "d",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "La extracción de ADN combina la preparación de equipos y reactivos con separaciones por centrifugación.",
     "justificacion_ca": "L'extracció d'ADN combina la preparació d'equips i reactius amb separacions per centrifugació.",
     "actividades": [
@@ -106,12 +282,55 @@
         "dua_ca": "Protocol il·lustrat en targetes.",
         "metodologia_es": "práctica de laboratorio.",
         "metodologia_ca": "pràctica de laboratori."
+      },
+      {
+        "titulo_es": "Turno real de extracción de ADN",
+        "titulo_ca": "Torn real d'extracció d'ADN",
+        "contexto_es": "El laboratorio simula un turno con quince muestras y tiempos de entrega ajustados.",
+        "contexto_ca": "El laboratori simula un torn amb quinze mostres i temps de lliurament ajustats.",
+        "desarrollo_es": "Con tiempos reales, el alumnado selecciona, prepara y calibra los equipos para el método de separación (1368-4c) y dispone el material y los reactivos (1368-4d). Obtiene el ADN siguiendo el protocolo (1369-4e) y registra los datos de cada paso (1368-4f).",
+        "desarrollo_ca": "Amb temps reals, l'alumnat selecciona, prepara i calibra els equips per al mètode de separació (1368-4c) i disposa el material i els reactius (1368-4d). Obté l'ADN seguint el protocol (1369-4e) i registra les dades de cada pas (1368-4f).",
+        "evidencia_es": "Registro de tiempos y hoja de datos del turno.",
+        "evidencia_ca": "Registre de temps i full de dades del torn.",
+        "dua_es": "Tiempos ampliados en el primer ensayo.",
+        "dua_ca": "Temps ampliats al primer assaig.",
+        "metodologia_es": "simulación clínica.",
+        "metodologia_ca": "simulació clínica."
+      },
+      {
+        "titulo_es": "Enseñar la extracción a un compañero nuevo",
+        "titulo_ca": "Ensenyar l'extracció a un company nou",
+        "contexto_es": "Un compañero que faltó a la práctica anterior tiene que recuperar la extracción de ADN antes del examen.",
+        "contexto_ca": "Un company que va faltar a la pràctica anterior ha de recuperar l'extracció d'ADN abans de l'examen.",
+        "desarrollo_es": "El alumnado que domina la técnica tutoriza a un igual: prepara y calibra la centrífuga (1368-4c), organiza el material y los reactivos (1368-4d) y guía la obtención del ADN por el protocolo (1369-4e). El tutorizado recoge los datos de los resultados y los revisa con su compañero (1368-4f).",
+        "desarrollo_ca": "L'alumnat que domina la tècnica tutela un igual: prepara i calibra la centrífuga (1368-4c), organitza el material i els reactius (1368-4d) i guia l'obtenció de l'ADN pel protocol (1369-4e). El tutoritzat recull les dades dels resultats i les revisa amb el seu company (1368-4f).",
+        "evidencia_es": "Lista de la técnica a cargo del compañero tutorizado.",
+        "evidencia_ca": "Llista de la tècnica a càrrec del company tutoritzat.",
+        "dua_es": "Guion de la técnica con dibujos y palabras clave.",
+        "dua_ca": "Guió de la tècnica amb dibuixos i paraules clau.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["c", "e"] },
-    "b": { "modulo": "1369", "ra": "RA3", "criterios": ["g", "h", "e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA6",
+      "criterios": [
+        "c",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA3",
+      "criterios": [
+        "g",
+        "h",
+        "e"
+      ]
+    },
     "justificacion_es": "El análisis de un cariotipo se hace al microscopio y con imágenes digitales de las metafases.",
     "justificacion_ca": "L'anàlisi d'un cariotip es fa al microscopi i amb imatges digitals de les metafases.",
     "actividades": [
@@ -128,12 +347,52 @@
         "dua_ca": "Imatges de metafases ja capturades com a alternativa.",
         "metodologia_es": "práctica de laboratorio.",
         "metodologia_ca": "pràctica de laboratori."
+      },
+      {
+        "titulo_es": "Repartir el cariotipo por especialidades",
+        "titulo_ca": "Repartir el cariotip per especialitats",
+        "contexto_es": "El laboratorio recibe un caso con varias extensiones y solo algunas metafases sirven para el diagnóstico.",
+        "contexto_ca": "El laboratori rep un cas amb diverses extensions i només algunes metafases serveixen per al diagnòstic.",
+        "desarrollo_es": "El grupo se reparte el trabajo en partes: unos realizan el sacrificio celular y preparan las extensiones (1369-3e), otros enfocan las metafases (1368-6c) y capturan sus imágenes (1368-6e). Después cada especialista cuenta los cromosomas y determina el sexo (1369-3g) y ordena y empareja los cromosomas (1369-3h), y todos reconstruyen el cariotipo conjunto.",
+        "desarrollo_ca": "El grup es reparteix la feina en parts: uns fan el sacrifici cel·lular i preparen les extensions (1369-3e), altres enfoquen les metafases (1368-6c) i n'enregistren les imatges (1368-6e). Després cada especialista compta els cromosomes i determina el sexe (1369-3g) i ordena i aparella els cromosomes (1369-3h), i tots reconstrueixen el cariotip conjunt.",
+        "evidencia_es": "Cariotipo final con el reparto de tareas.",
+        "evidencia_ca": "Cariotip final amb el repartiment de tasques.",
+        "dua_es": "Fichas de experto con los pasos de cada parte.",
+        "dua_ca": "Fitxes d'expert amb els passos de cada part.",
+        "metodologia_es": "técnica del rompecabezas.",
+        "metodologia_ca": "tècnica del trencaclosques."
+      },
+      {
+        "titulo_es": "Una mañana en el laboratorio de citogenética",
+        "titulo_ca": "Un matí al laboratori de citogenètica",
+        "contexto_es": "El alumnado pasa una sesión completa imitando el trabajo diario de un laboratorio de citogenética de referencia.",
+        "contexto_ca": "L'alumnat passa una sessió completa imitant la feina diària d'un laboratori de citogenètica de referència.",
+        "desarrollo_es": "En una rotación de tareas, el alumnado realiza el sacrificio celular y las extensiones cromosómicas (1369-3e), enfoca las preparaciones al microscopio (1368-6c) y captura las imágenes de las mejores metafases (1368-6e). Con esas imágenes recuenta los cromosomas y determina el sexo (1369-3g) y ordena y empareja los cromosomas (1369-3h).",
+        "desarrollo_ca": "En una rotació de tasques, l'alumnat fa el sacrifici cel·lular i les extensions cromosòmiques (1369-3e), enfoca les preparacions al microscopi (1368-6c) i enregistra les imatges de les millors metafases (1368-6e). Amb aquestes imatges recompta els cromosomes i determina el sexe (1369-3g) i ordena i aparella els cromosomes (1369-3h).",
+        "evidencia_es": "Diario de la jornada con el cariotipo obtenido.",
+        "evidencia_ca": "Dietari de la jornada amb el cariotip obtingut.",
+        "dua_es": "Roles rotatorios adaptados al ritmo de cada estudiante.",
+        "dua_ca": "Rols rotatoris adaptats al ritme de cada estudiant.",
+        "metodologia_es": "aprendizaje vivencial.",
+        "metodologia_ca": "aprenentatge vivencial."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["f"] },
-    "b": { "modulo": "1369", "ra": "RA6", "criterios": ["f"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA6",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Verificar una técnica de hibridación con fluorescencia depende de la calidad de la imagen digital procesada.",
     "justificacion_ca": "Verificar una tècnica d'hibridació amb fluorescència depèn de la qualitat de la imatge digital processada.",
     "actividades": [
@@ -150,12 +409,53 @@
         "dua_ca": "Programa d'imatge gratuït i tutorial.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Comparar dos imágenes de FISH en pantalla",
+        "titulo_ca": "Comparar dues imatges de FISH en pantalla",
+        "contexto_es": "El grupo visiona vídeos de dos laboratorios que procesan una FISH de la misma muestra con resultados distintos.",
+        "contexto_ca": "El grup visiona vídeos de dos laboratoris que processen una FISH de la mateixa mostra amb resultats diferents.",
+        "desarrollo_es": "Tras el visionado, el alumnado procesa las imágenes digitales de cada laboratorio ajustando contraste y canales para mejorar su calidad (1368-6f). Después compara las señales resultantes y dictamina si la técnica de hibridación funcionó en cada caso (1369-6f).",
+        "desarrollo_ca": "Després del visionat, l'alumnat processa les imatges digitals de cada laboratori ajustant contrast i canals per millorar-ne la qualitat (1368-6f). Després compara els senyals resultants i dictamina si la tècnica d'hibridació va funcionar en cada cas (1369-6f).",
+        "evidencia_es": "Ficha comparativa de las dos imágenes.",
+        "evidencia_ca": "Fitxa comparativa de les dues imatges.",
+        "dua_es": "Subtítulos y pausas guiadas en el vídeo.",
+        "dua_ca": "Subtítols i pauses guiades al vídeo.",
+        "metodologia_es": "video-fórum.",
+        "metodologia_ca": "videofòrum."
+      },
+      {
+        "titulo_es": "Mejorar una imagen sin falsearla",
+        "titulo_ca": "Millorar una imatge sense falsejar-la",
+        "contexto_es": "Un resident pregunta hasta dónde se puede retocar una imagen de FISH sin invalidar el informe.",
+        "contexto_ca": "Un resident pregunta fins a on es pot retocar una imatge de FISH sense invalidar l'informe.",
+        "desarrollo_es": "El alumnado experimenta con distintas herramientas hasta descubrir qué ajustes mejoran la imagen digital sin alterar la señal real (1368-6f). A continuación aplica esos ajustes a un caso ciego y decide si la técnica de hibridación puede darse por válida (1369-6f).",
+        "desarrollo_ca": "L'alumnat experimenta amb diferents eines fins a descobrir quins ajustos milloren la imatge digital sense alterar el senyal real (1368-6f). A continuació aplica aquests ajustos a un cas cec i decideix si la tècnica d'hibridació es pot donar per vàlida (1369-6f).",
+        "evidencia_es": "Guía de buenas prácticas con ejemplos propios.",
+        "evidencia_ca": "Guia de bones pràctiques amb exemples propis.",
+        "dua_es": "Varias imágenes de práctica de dificultad creciente.",
+        "dua_ca": "Diverses imatges de pràctica de dificultat creixent.",
+        "metodologia_es": "aprendizaje por descubrimiento.",
+        "metodologia_ca": "aprenentatge per descobriment."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["b", "c"] },
-    "b": { "modulo": "1369", "ra": "RA4", "criterios": ["g"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA5",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Comprobar la calidad del ADN extraído requiere criterios de aceptación definidos y valorar los datos frente a ellos.",
     "justificacion_ca": "Comprovar la qualitat de l'ADN extret requereix criteris d'acceptació definits i valorar les dades davant d'aquests criteris.",
     "actividades": [
@@ -172,12 +472,52 @@
         "dua_ca": "Rangs de referència en taula de colors.",
         "metodologia_es": "aprendizaje basado en datos.",
         "metodologia_ca": "aprenentatge basat en dades."
+      },
+      {
+        "titulo_es": "Panel de control de la calidad del ADN",
+        "titulo_ca": "Quadre de comandament de la qualitat de l'ADN",
+        "contexto_es": "El responsable de calidad pide un panel sencillo para ver de un vistazo qué muestras de ADN pasan el control.",
+        "contexto_ca": "El responsable de qualitat demana un quadre senzill per veure d'un cop d'ull quines mostres d'ADN passen el control.",
+        "desarrollo_es": "Antes de clase, el alumnado estudia cómo se mide la calidad de los ácidos nucleicos (1369-4g). En clase monta un panel con los criterios de aceptación o rechazo de cada ratio (1368-5b) y valora los datos de la tanda para marcar las muestras que se repiten (1368-5c).",
+        "desarrollo_ca": "Abans de classe, l'alumnat estudia com es mesura la qualitat dels àcids nucleics (1369-4g). A classe munta un quadre amb els criteris d'acceptació o rebuig de cada ràtio (1368-5b) i valora les dades de la tanda per marcar les mostres que es repeteixen (1368-5c).",
+        "evidencia_es": "Panel visual con la decisión por muestra.",
+        "evidencia_ca": "Quadre visual amb la decisió per mostra.",
+        "dua_es": "Plantilla de panel semicompletada.",
+        "dua_ca": "Plantilla de quadre semicompletada.",
+        "metodologia_es": "aula invertida.",
+        "metodologia_ca": "classe inversa."
+      },
+      {
+        "titulo_es": "Decidir qué muestras se repiten",
+        "titulo_ca": "Decidir quines mostres es repeteixen",
+        "contexto_es": "El laboratorio tiene que entregar un panel de secuenciación mañana y tres muestras dudosas lo ponen en riesgo.",
+        "contexto_ca": "El laboratori ha de lliurar un panell de seqüenciació demà i tres mostres dubtoses ho posen en risc.",
+        "desarrollo_es": "Ante el problema del plazo, el alumnado comprueba la calidad de los ácidos nucleicos disponibles (1369-4g), fija los criterios de aceptación que aplicará (1368-5b) y valora cada muestra frente a ellos para decidir cuáles repite (1368-5c).",
+        "desarrollo_ca": "Davant el problema del termini, l'alumnat comprova la qualitat dels àcids nucleics disponibles (1369-4g), fixa els criteris d'acceptació que aplicarà (1368-5b) i valora cada mostra davant d'aquests per decidir quines repeteix (1368-5c).",
+        "evidencia_es": "Decisión razonada muestra a muestra.",
+        "evidencia_ca": "Decisió raonada mostra a mostra.",
+        "dua_es": "Caso con datos ya tabulados como apoyo.",
+        "dua_ca": "Cas amb dades ja tabulades com a suport.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA1", "criterios": ["c"] },
-    "b": { "modulo": "1369", "ra": "RA5", "criterios": ["c"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA5",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "La mezcla de reactivos de una PCR exige agua de la calidad adecuada para no inhibir la reacción.",
     "justificacion_ca": "La mescla de reactius d'una PCR exigeix aigua de la qualitat adequada per no inhibir la reacció.",
     "actividades": [
@@ -194,12 +534,53 @@
         "dua_ca": "Calculadora de mescla mestra.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Auditoría del agua en la unidad de PCR",
+        "titulo_ca": "Auditoria de l'aigua a la unitat de PCR",
+        "contexto_es": "El laboratorio de un hospital de Palma recibe una queja interna porque tres PCR consecutivas salen negativas sin causa aparente.",
+        "contexto_ca": "El laboratori d'un hospital de Palma rep una queixa interna perquè tres PCR consecutives surten negatives sense cap causa aparent.",
+        "desarrollo_es": "Por equipos, el alumnado revisa la trazabilidad del agua almacenada en el área de biología molecular e identifica los tipos de agua disponibles y sus métodos de obtención (1368-1c). Cada equipo repite después la preparación de la mezcla de reactivos siguiendo el protocolo y la lista de trabajo, y compara el resultado con el del agua que había provocado el fallo (1369-5c).",
+        "desarrollo_ca": "Per equips, l'alumnat revisa la traçabilitat de l'aigua emmagatzemada a l'àrea de biologia molecular i identifica els tipus d'aigua disponibles i els seus mètodes d'obtenció (1368-1c). Cada equip repeteix després la preparació de la mescla de reactius seguint el protocol i la llista de treball, i compara el resultat amb el de l'aigua que havia provocat la fallada (1369-5c).",
+        "evidencia_es": "Informe de auditoría con la mezcla corregida.",
+        "evidencia_ca": "Informe d'auditoria amb la mescla corregida.",
+        "dua_es": "Plantilla de informe con apartados fijos y espacio para dibujar el envase.",
+        "dua_ca": "Plantilla d'informe amb apartats fixos i espai per dibuixar l'envàs.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Gincana de aguas y mezclas en el laboratorio",
+        "titulo_ca": "Gimcana d'aigües i mescles al laboratori",
+        "contexto_es": "En la semana cultural de un centro de Manacor se monta una gincana en la que cada prueba obliga a elegir el agua correcta antes de preparar nada.",
+        "contexto_ca": "A la setmana cultural d'un centre de Manacor es munta una gimcana en què cada prova obliga a triar l'aigua correcta abans de preparar res.",
+        "desarrollo_es": "Cada estación reparte una tarjeta con una técnica distinta y el alumnado debe justificar qué tipo de agua conviene y por qué método se obtiene (1368-1c). Al superar la estación prepara la mezcla de reactivos que indican el protocolo y la lista de trabajo (1369-5c) y sella el pasaporte de la gincana.",
+        "desarrollo_ca": "Cada estació reparteix una targeta amb una tècnica diferent i l'alumnat ha de justificar quin tipus d'aigua convé i per quin mètode s'obté (1368-1c). En superar l'estació prepara la mescla de reactius que indiquen el protocol i la llista de treball (1369-5c) i segella el passaport de la gimcana.",
+        "evidencia_es": "Pasaporte de estaciones con las mezclas anotadas.",
+        "evidencia_ca": "Passaport d'estacions amb les mescles anotades.",
+        "dua_es": "Tarjetas con pictogramas e instrucciones de dos líneas.",
+        "dua_ca": "Targetes amb pictogrames i instruccions de dues línies.",
+        "metodologia_es": "gamificación por estaciones.",
+        "metodologia_ca": "gamificació per estacions."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA2", "criterios": ["e", "h"] },
-    "b": { "modulo": "1369", "ra": "RA1", "criterios": ["d"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA2",
+      "criterios": [
+        "e",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Los equipos básicos de un laboratorio de biología molecular tienen riesgos específicos y protocolos de emergencia propios.",
     "justificacion_ca": "Els equips bàsics d'un laboratori de biologia molecular tenen riscs específics i protocols d'emergència propis.",
     "actividades": [
@@ -216,12 +597,52 @@
         "dua_ca": "Fotografies dels equips.",
         "metodologia_es": "aprendizaje basado en casos.",
         "metodologia_ca": "aprenentatge basat en casos."
+      },
+      {
+        "titulo_es": "Simulacro de vertido en biología molecular",
+        "titulo_ca": "Simulacre d'abocament en biologia molecular",
+        "contexto_es": "El servicio de prevención de un hospital de Inca programa un simulacro sin aviso previo en la sala de extracción de ácidos nucleicos.",
+        "contexto_ca": "El servei de prevenció d'un hospital d'Inca programa un simulacre sense avís previ a la sala d'extracció d'àcids nucleics.",
+        "desarrollo_es": "El alumnado anticipa los riesgos específicos de cada equipo de la sala antes de que arranque el simulacro (1368-2e) y aplica y registra en la hoja de incidencias el protocolo de emergencia previsto para el vertido (1368-2h). Al terminar, revisa qué equipos básicos y materiales han intervenido en la respuesta y con qué función (1369-1d).",
+        "desarrollo_ca": "L'alumnat anticipa els riscs específics de cada equip de la sala abans que arranqui el simulacre (1368-2e) i aplica i registra al full d'incidències el protocol d'emergència previst per a l'abocament (1368-2h). En acabar, revisa quins equips bàsics i materials han intervingut en la resposta i amb quina funció (1369-1d).",
+        "evidencia_es": "Hoja de incidencias del simulacro cumplimentada.",
+        "evidencia_ca": "Full d'incidències del simulacre emplenat.",
+        "dua_es": "Guion de actuación con pasos numerados y tiempos.",
+        "dua_ca": "Guió d'actuació amb passos numerats i temps.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      },
+      {
+        "titulo_es": "Panel de riesgos para el personal de nueva incorporación",
+        "titulo_ca": "Panell de riscs per al personal de nova incorporació",
+        "contexto_es": "La dirección de un centro de investigación de Palma pide señalizar mejor el laboratorio porque el personal recién llegado no localiza los protocolos de emergencia.",
+        "contexto_ca": "La direcció d'un centre de recerca de Palma demana senyalitzar millor el laboratori perquè el personal acabat d'arribar no localitza els protocols d'emergència.",
+        "desarrollo_es": "Aplicando pensamiento de diseño, el alumnado cataloga los equipos básicos y materiales de la sala (1369-1d), asigna a cada uno los riesgos específicos que detecta (1368-2e) y decide cómo se aplicará y quedará registrado cada protocolo de emergencia (1368-2h). El panel resultante se cuelga en el aula-taller y lo prueba otro grupo, que anota las dudas que le surgen.",
+        "desarrollo_ca": "Aplicant pensament de disseny, l'alumnat cataloga els equips bàsics i els materials de la sala (1369-1d), assigna a cadascun els riscs específics que detecta (1368-2e) i decideix com s'aplicarà i quedarà registrat cada protocol d'emergència (1368-2h). El panell resultant es penja a l'aula-taller i el prova un altre grup, que anota els dubtes que li sorgeixen.",
+        "evidencia_es": "Panel visual de riesgos con los protocolos asociados.",
+        "evidencia_ca": "Panell visual de riscs amb els protocols associats.",
+        "dua_es": "Banco de iconos y rotuladores para quien prefiera expresarse sin texto.",
+        "dua_ca": "Banc d'icones i retoladors per a qui prefereixi expressar-se sense text.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA7", "criterios": ["f"] },
-    "b": { "modulo": "1369", "ra": "RA5", "criterios": ["d"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA7",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Documentar un procedimiento de laboratorio garantiza que todos dispensen los volúmenes de una PCR de la misma forma.",
     "justificacion_ca": "Documentar un procediment de laboratori garanteix que tothom dispensi els volums d'una PCR de la mateixa manera.",
     "actividades": [
@@ -238,12 +659,53 @@
         "dua_ca": "Plantilla de PNT i de placa.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Dispensar la PCR de una muestra urgente",
+        "titulo_ca": "Dispensar la PCR d'una mostra urgent",
+        "contexto_es": "Un hospital de Menorca recibe a las 22 h una muestra de líquido cefalorraquídeo y el técnico de guardia debe montar la PCR sin margen de error.",
+        "contexto_ca": "Un hospital de Menorca rep a les 22 h una mostra de líquid cefalorraquidi i el tècnic de guàrdia ha de muntar la PCR sense marge d'error.",
+        "desarrollo_es": "Por parejas, el alumnado monta la placa siguiendo el procedimiento normalizado y dispensa con micropipeta los volúmenes de muestra, control positivo y mezcla de reactivos (1369-5d). A continuación anota cada paso y cada volumen en la hoja de registro del sistema de calidad del laboratorio (1368-7f).",
+        "desarrollo_ca": "Per parelles, l'alumnat munta la placa seguint el procediment normalitzat i dispensa amb micropipeta els volums de mostra, control positiu i mescla de reactius (1369-5d). A continuació anota cada pas i cada volum al full de registre del sistema de qualitat del laboratori (1368-7f).",
+        "evidencia_es": "Placa montada y hoja de registro de volúmenes firmada.",
+        "evidencia_ca": "Placa muntada i full de registre de volums signat.",
+        "dua_es": "Tarjeta plastificada con el esquema de volúmenes pegada a la gradilla.",
+        "dua_ca": "Targeta plastificada amb l'esquema de volums enganxada a la gradeta.",
+        "metodologia_es": "simulación de guardia.",
+        "metodologia_ca": "simulació de guàrdia."
+      },
+      {
+        "titulo_es": "Vídeo tutorial del montaje de una PCR",
+        "titulo_ca": "Vídeo tutorial del muntatge d'una PCR",
+        "contexto_es": "El laboratorio de un centro de salud de Inca graba sus propios tutoriales para el personal de nueva incorporación.",
+        "contexto_ca": "El laboratori d'un centre de salut d'Inca enregistra els seus propis tutorials per al personal de nova incorporació.",
+        "desarrollo_es": "En grupos cooperativos, el alumnado graba los pasos de dispensación de muestra, controles y mezcla en la placa (1369-5d). Antes elabora el guion técnico con el formato documental del laboratorio y la lista de comprobaciones previas (1368-7f).",
+        "desarrollo_ca": "En grups cooperatius, l'alumnat enregistra els passos de dispensació de mostra, controls i mescla a la placa (1369-5d). Abans elabora el guió tècnic amb el format documental del laboratori i la llista de comprovacions prèvies (1368-7f).",
+        "evidencia_es": "Vídeo tutorial y guion documentado.",
+        "evidencia_ca": "Vídeo tutorial i guió documentat.",
+        "dua_es": "Guion con pictogramas y subtítulos incrustados.",
+        "dua_ca": "Guió amb pictogrames i subtítols incrustats.",
+        "metodologia_es": "aprendizaje cooperativo con vídeo.",
+        "metodologia_ca": "aprenentatge cooperatiu amb vídeo."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA3", "criterios": ["g", "h"] },
-    "b": { "modulo": "1369", "ra": "RA5", "criterios": ["b"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA3",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1369",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "El pH de los tampones de PCR y electroforesis debe comprobarse con un pHmetro calibrado.",
     "justificacion_ca": "El pH dels tampons de PCR i electroforesi s'ha de comprovar amb un pHmetre calibrat.",
     "actividades": [
@@ -260,12 +722,53 @@
         "dua_ca": "Vídeo del calibratge.",
         "metodologia_es": "práctica de laboratorio.",
         "metodologia_ca": "pràctica de laboratori."
+      },
+      {
+        "titulo_es": "Calibrar el pHmetro de la sala de PCR",
+        "titulo_ca": "Calibrar el pHmetre de la sala de PCR",
+        "contexto_es": "La sala de biología molecular de un hospital de Palma estrena un pHmetro y nadie ha firmado todavía su primera calibración.",
+        "contexto_ca": "La sala de biologia molecular d'un hospital de Palma estrena un pHmetre i ningú no ha signat encara el seu primer calibratge.",
+        "desarrollo_es": "Con los tampones patrón, el alumnado calibra el pHmetro y anota la pendiente obtenida (1368-3g). Después mide el pH de las disoluciones de trabajo (1368-3h) y selecciona los reactivos y materiales necesarios para la amplificación y la electroforesis (1369-5b).",
+        "desarrollo_ca": "Amb els tampons patró, l'alumnat calibra el pHmetre i anota el pendent obtingut (1368-3g). Després mesura el pH de les dissolucions de treball (1368-3h) i selecciona els reactius i els materials necessaris per a l'amplificació i l'electroforesi (1369-5b).",
+        "evidencia_es": "Hoja de calibración con la pendiente y las medidas.",
+        "evidencia_ca": "Full de calibratge amb el pendent i les mesures.",
+        "dua_es": "Registro con casillas y valores de referencia impresos.",
+        "dua_ca": "Registre amb caselles i valors de referència impresos.",
+        "metodologia_es": "práctica guiada por estaciones.",
+        "metodologia_ca": "pràctica guiada per estacions."
+      },
+      {
+        "titulo_es": "El pHmetro descalibrado de la guardia",
+        "titulo_ca": "El pHmetre descalibrat de la guàrdia",
+        "contexto_es": "En un turno de noche de un laboratorio de Manacor, los resultados de pH salen desplazados y hay que averiguar por qué.",
+        "contexto_ca": "En un torn de nit d'un laboratori de Manacor, els resultats de pH surten desplaçats i cal esbrinar per què.",
+        "desarrollo_es": "A partir del caso, el alumnado revisa los materiales y reactivos usados en la amplificación (1369-5b) y comprueba el estado de los electrodos del aparato. Repite la calibración siguiendo el procedimiento normalizado (1368-3g) y compara sus medidas con las del turno anterior (1368-3h).",
+        "desarrollo_ca": "A partir del cas, l'alumnat revisa els materials i reactius emprats en l'amplificació (1369-5b) i comprova l'estat dels elèctrodes de l'aparell. Repeteix el calibratge seguint el procediment normalitzat (1368-3g) i compara les seves mesures amb les del torn anterior (1368-3h).",
+        "evidencia_es": "Informe de incidencia con la causa del desajuste.",
+        "evidencia_ca": "Informe d'incidència amb la causa del desajust.",
+        "dua_es": "Protocolo de calibración resumido en tres pasos.",
+        "dua_ca": "Protocol de calibratge resumit en tres passos.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["a", "b"] },
-    "b": { "modulo": "1370", "ra": "RA1", "criterios": ["b"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA6",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Las características de cada microscopio determinan qué estructuras celulares pueden observarse.",
     "justificacion_ca": "Les característiques de cada microscopi determinen quines estructures cel·lulars es poden observar.",
     "actividades": [
@@ -282,12 +785,53 @@
         "dua_ca": "Imatges de microscòpia electrònica per comparar.",
         "metodologia_es": "aprendizaje por descubrimiento.",
         "metodologia_ca": "aprenentatge per descobriment."
+      },
+      {
+        "titulo_es": "Montar un microscopio a ciegas",
+        "titulo_ca": "Muntar un microscopi a cegues",
+        "contexto_es": "El taller de un instituto de Felanitx recibe microscopios donados sin manual y el profesorado pide al alumnado que los ponga a punto.",
+        "contexto_ca": "El taller d'un institut de Felanitx rep microscopis donats sense manual i el professorat demana a l'alumnat que els posi a punt.",
+        "desarrollo_es": "Sin consultar el manual, cada pareja identifica las partes del microscopio óptico y explica su función al resto de la clase (1368-6b). Después compara las características ópticas de un binocular y un trinocular del taller (1368-6a) y observa células epiteliales para localizar núcleo, membrana y citoplasma (1370-1b).",
+        "desarrollo_ca": "Sense consultar el manual, cada parella identifica les parts del microscopi òptic i n'explica la funció a la resta de la classe (1368-6b). Després compara les característiques òptiques d'un binocular i un trinocular del taller (1368-6a) i observa cèl·lules epitelials per localitzar-hi nucli, membrana i citoplasma (1370-1b).",
+        "evidencia_es": "Ficha de montaje con el esquema rotulado y la observación celular.",
+        "evidencia_ca": "Fitxa de muntatge amb l'esquema rotulat i l'observació cel·lular.",
+        "dua_es": "Esquema mudo del microscopio para completar con etiquetas.",
+        "dua_ca": "Esquema mut del microscopi per completar amb etiquetes.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
+      },
+      {
+        "titulo_es": "Feria de microscopios del laboratorio escolar",
+        "titulo_ca": "Fira de microscopis del laboratori escolar",
+        "contexto_es": "Con motivo de la semana de la ciencia, un centro de Ciutadella abre el laboratorio a las familias.",
+        "contexto_ca": "Amb motiu de la setmana de la ciència, un centre de Ciutadella obre el laboratori a les famílies.",
+        "desarrollo_es": "Preparando la visita, el alumnado elabora carteles que describen los tipos de microscopios y sus características ópticas (1368-6a) y prepara una demostración del funcionamiento del microscopio óptico (1368-6b). En cada estación explica al público qué estructuras celulares se distinguen en la preparación (1370-1b).",
+        "desarrollo_ca": "Tot preparant la visita, l'alumnat elabora cartells que descriuen els tipus de microscopis i les seves característiques òptiques (1368-6a) i prepara una demostració del funcionament del microscopi òptic (1368-6b). A cada estació explica al públic quines estructures cel·lulars es distingeixen a la preparació (1370-1b).",
+        "evidencia_es": "Carteles y demostración evaluada con rúbrica.",
+        "evidencia_ca": "Cartells i demostració avaluada amb rúbrica.",
+        "dua_es": "Guion de la explicación con apoyos visuales.",
+        "dua_ca": "Guió de l'explicació amb suports visuals.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["d"] },
-    "b": { "modulo": "1370", "ra": "RA5", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA6",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "La imagen digital de las preparaciones histológicas permite comparar tumores benignos y malignos.",
     "justificacion_ca": "La imatge digital de les preparacions histològiques permet comparar tumors benignes i malignes.",
     "actividades": [
@@ -304,12 +848,52 @@
         "dua_ca": "Imatges amb anotacions.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Comparar biopsias en la pantalla del aula",
+        "titulo_ca": "Comparar biòpsies a la pantalla de l'aula",
+        "contexto_es": "El servicio de anatomía patológica de un hospital de Mallorca cede imágenes escaneadas para que el alumnado practique antes de las prácticas.",
+        "contexto_ca": "El servei d'anatomia patològica d'un hospital de Mallorca cedeix imatges escanejades perquè l'alumnat practiqui abans de les pràctiques.",
+        "desarrollo_es": "Con un visor de imágenes digitales, el alumnado explica cómo se captan las preparaciones con cámara y escáner de portaobjetos (1368-6d). A continuación clasifica las neoplasias según su origen y comportamiento (1370-5a) y justifica qué rasgos separan las benignas de las malignas (1370-5b).",
+        "desarrollo_ca": "Amb un visor d'imatges digitals, l'alumnat explica com es capturen les preparacions amb càmera i escàner de portaobjectes (1368-6d). A continuació classifica les neoplàsies segons l'origen i el comportament (1370-5a) i justifica quins trets separen les benignes de les malignes (1370-5b).",
+        "evidencia_es": "Tabla comparativa de casos con la captura comentada.",
+        "evidencia_ca": "Taula comparativa de casos amb la captura comentada.",
+        "dua_es": "Imágenes ampliables con zoom y leyendas.",
+        "dua_ca": "Imatges ampliables amb zoom i llegendes.",
+        "metodologia_es": "aprendizaje basado en casos.",
+        "metodologia_ca": "aprenentatge basat en casos."
+      },
+      {
+        "titulo_es": "Juego de pistas con imágenes histológicas",
+        "titulo_ca": "Joc de pistes amb imatges histològiques",
+        "contexto_es": "En el laboratorio del centro se prepara una yincana para repasar anatomía patológica antes del examen.",
+        "contexto_ca": "Al laboratori del centre es prepara una gimcana per repassar anatomia patològica abans de l'examen.",
+        "desarrollo_es": "Cada equipo recibe cinco microfotografías y debe deducir de qué sistema de captación procede cada una (1368-6d). Después clasifica las neoplasias de las imágenes (1370-5a) y caracteriza las benignas frente a las malignas para superar la prueba (1370-5b).",
+        "desarrollo_ca": "Cada equip rep cinc microfotografies i ha de deduir de quin sistema de captació procedeix cadascuna (1368-6d). Després classifica les neoplàsies de les imatges (1370-5a) i caracteritza les benignes davant les malignes per superar la prova (1370-5b).",
+        "evidencia_es": "Hoja de respuestas razonadas del equipo.",
+        "evidencia_ca": "Full de respostes raonades de l'equip.",
+        "dua_es": "Plantilla con pistas y glosario de términos.",
+        "dua_ca": "Plantilla amb pistes i glossari de termes.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["a"] },
-    "b": { "modulo": "1370", "ra": "RA8", "criterios": ["e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA8",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Los parámetros estadísticos permiten valorar si un resultado de glucosa es fiable para diagnosticar la diabetes.",
     "justificacion_ca": "Els paràmetres estadístics permeten valorar si un resultat de glucosa és fiable per diagnosticar la diabetis.",
     "actividades": [
@@ -326,12 +910,54 @@
         "dua_ca": "Full de càlcul amb fórmules.",
         "metodologia_es": "aprendizaje basado en datos.",
         "metodologia_ca": "aprenentatge basat en dades."
+      },
+      {
+        "titulo_es": "Es fiable esta glucosa de urgencias",
+        "titulo_ca": "És fiable aquesta glucosa d'urgències",
+        "contexto_es": "En un centro de salud de Eivissa, dos glucemias del mismo paciente salen muy distintas y el médico duda de cuál creer.",
+        "contexto_ca": "En un centre de salut d'Eivissa, dues glucèmies del mateix pacient surten molt diferents i el metge dubta de quina creure.",
+        "desarrollo_es": "Tras revisar las dos glucemias, el alumnado analiza el proceso fisiopatológico de la diabetes y sus puntos de corte diagnósticos (1370-8e). Después calcula la dispersión de las réplicas y elige los parámetros estadísticos que mejor describen la fiabilidad del resultado (1368-5a).",
+        "desarrollo_ca": "Després de revisar les dues glucèmies, l'alumnat analitza el procés fisiopatològic de la diabetis i els seus punts de tall diagnòstics (1370-8e). Tot seguit calcula la dispersió de les rèpliques i tria els paràmetres estadístics que millor descriuen la fiabilitat del resultat (1368-5a).",
+        "evidencia_es": "Nota técnica con los estadísticos elegidos y la conclusión.",
+        "evidencia_ca": "Nota tècnica amb els estadístics triats i la conclusió.",
+        "dua_es": "Calculadora y plantilla con los pasos numerados.",
+        "dua_ca": "Calculadora i plantilla amb els passos numerats.",
+        "metodologia_es": "análisis de caso clínico.",
+        "metodologia_ca": "anàlisi de cas clínic."
+      },
+      {
+        "titulo_es": "Elegir el estadístico adecuado para la glucosa",
+        "titulo_ca": "Triar l'estadístic adequat per a la glucosa",
+        "contexto_es": "Un laboratorio de Palma quiere decidir qué parámetro resume mejor la variabilidad de su control de glucosa.",
+        "contexto_ca": "Un laboratori de Palma vol decidir quin paràmetre resumeix millor la variabilitat del seu control de glucosa.",
+        "desarrollo_es": "Cada equipo analiza el proceso fisiopatológico de la diabetes y sus criterios analíticos de diagnóstico (1370-8e). Después compara la media, la desviación estándar y el coeficiente de variación de los datos del control y defiende cuál resulta más útil para juzgar la fiabilidad (1368-5a).",
+        "desarrollo_ca": "Cada equip analitza el procés fisiopatològic de la diabetis i els seus criteris analítics de diagnòstic (1370-8e). Després compara la mitjana, la desviació estàndard i el coeficient de variació de les dades del control i defensa quin resulta més útil per jutjar la fiabilitat (1368-5a).",
+        "evidencia_es": "Cartel comparativo con la defensa del parámetro elegido.",
+        "evidencia_ca": "Cartell comparatiu amb la defensa del paràmetre triat.",
+        "dua_es": "Datos precargados en una hoja de cálculo con gráficos automáticos.",
+        "dua_ca": "Dades precarregades en un full de càlcul amb gràfics automàtics.",
+        "metodologia_es": "panel de expertos.",
+        "metodologia_ca": "panell d'experts."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA3", "criterios": ["e", "f"] },
-    "b": { "modulo": "1370", "ra": "RA6", "criterios": ["d", "e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA6",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
     "justificacion_es": "El pH de la sangre refleja el fallo de órganos como el pulmón o el riñón.",
     "justificacion_ca": "El pH de la sang reflecteix la fallada d'òrgans com el pulmó o el ronyó.",
     "actividades": [
@@ -348,12 +974,53 @@
         "dua_ca": "Esquema de l'equilibri àcid-base.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Explicar la acidosis a la familia",
+        "titulo_ca": "Explicar l'acidosi a la família",
+        "contexto_es": "En la UCI de un hospital de Palma, una familia pregunta por qué el abuelo respira tan mal y qué significan los números de la gasometría.",
+        "contexto_ca": "A la UCI d'un hospital de Palma, una família demana per què l'avi respira tan malament i què signifiquen els números de la gasometria.",
+        "desarrollo_es": "Ante la pregunta de la familia, el alumnado define los métodos de cálculo y medida electroquímica del pH (1368-3e) e identifica los electrodos y el funcionamiento del gasómetro (1368-3f). Con esa base explica en lenguaje sencillo las causas del fallo orgánico del paciente (1370-6d) y las manifestaciones de su insuficiencia (1370-6e).",
+        "desarrollo_ca": "Davant la pregunta de la família, l'alumnat defineix els mètodes de càlcul i mesura electroquímica del pH (1368-3e) i identifica els elèctrodes i el funcionament del gasòmetre (1368-3f). Amb aquesta base explica en llenguatge senzill les causes de la fallada orgànica del pacient (1370-6d) i les manifestacions de la seva insuficiència (1370-6e).",
+        "evidencia_es": "Guion de la explicación y esquema del gasómetro.",
+        "evidencia_ca": "Guió de l'explicació i esquema del gasòmetre.",
+        "dua_es": "Glosario de términos con sinónimos cotidianos.",
+        "dua_ca": "Glossari de termes amb sinònims quotidians.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Diseñar un simulador casero de pH sanguíneo",
+        "titulo_ca": "Dissenyar un simulador casolà de pH sanguini",
+        "contexto_es": "El taller de fisiopatología quiere un modelo que muestre cómo cambia el pH cuando falla el riñón o el pulmón.",
+        "contexto_ca": "El taller de fisiopatologia vol un model que mostri com canvia el pH quan falla el ronyó o el pulmó.",
+        "desarrollo_es": "En equipos, el alumnado construye un montaje con indicadores y explica los métodos de cálculo y medida electroquímica del pH que reproduce (1368-3e), señalando qué componente equivaldría al electrodo del aparato real (1368-3f). Luego relaciona cada cambio de color con las causas de fallo orgánico (1370-6d) y con las manifestaciones de la insuficiencia (1370-6e).",
+        "desarrollo_ca": "En equips, l'alumnat construeix un muntatge amb indicadors i explica els mètodes de càlcul i mesura electroquímica del pH que reprodueix (1368-3e), assenyalant quin component equivaldria a l'elèctrode de l'aparell real (1368-3f). Després relaciona cada canvi de color amb les causes de fallada orgànica (1370-6d) i amb les manifestacions de la insuficiència (1370-6e).",
+        "evidencia_es": "Prototipo, ficha técnica y explicación del modelo.",
+        "evidencia_ca": "Prototip, fitxa tècnica i explicació del model.",
+        "dua_es": "Material manipulativo y guion de montaje por pasos.",
+        "dua_ca": "Material manipulatiu i guió de muntatge per passos.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["b", "a"] },
-    "b": { "modulo": "1370", "ra": "RA8", "criterios": ["g"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA8",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "La medida del colesterol en el analizador se basa en principios de análisis instrumental cuyo resultado tiene consecuencias clínicas.",
     "justificacion_ca": "La mesura del colesterol a l'analitzador es basa en principis d'anàlisi instrumental el resultat dels quals té conseqüències clíniques.",
     "actividades": [
@@ -370,12 +1037,53 @@
         "dua_ca": "Pràctica amb espectrofotòmetre de l'aula.",
         "metodologia_es": "aprendizaje por descubrimiento.",
         "metodologia_ca": "aprenentatge per descobriment."
+      },
+      {
+        "titulo_es": "Desmontar el espectrofotómetro paso a paso",
+        "titulo_ca": "Desmuntar l'espectrofotòmetre pas a pas",
+        "contexto_es": "Un centro de Formación Profesional de Palma recibe un espectrofotómetro antiguo para despiece didáctico.",
+        "contexto_ca": "Un centre de Formació Professional de Palma rep un espectrofotòmetre antic per desmuntar-lo amb finalitats didàctiques.",
+        "desarrollo_es": "Guiados por el PNT, el alumnado localiza la lámpara, el monocromador y el detector y los relaciona con su función (1368-4a) y con los principios del análisis instrumental (1368-4b). Después explica qué repercusión orgánica tiene un colesterol elevado en un paciente real (1370-8g).",
+        "desarrollo_ca": "Guiats pel PNT, l'alumnat localitza la làmpada, el monocromador i el detector i els relaciona amb la seva funció (1368-4a) i amb els principis de l'anàlisi instrumental (1368-4b). Després explica quina repercussió orgànica té un colesterol elevat en un pacient real (1370-8g).",
+        "evidencia_es": "Esquema rotulado del equipo y ficha clínica del caso.",
+        "evidencia_ca": "Esquema rotulat de l'equip i fitxa clínica del cas.",
+        "dua_es": "Fotografías del interior del equipo con etiquetas.",
+        "dua_ca": "Fotografies de l'interior de l'equip amb etiquetes.",
+        "metodologia_es": "aprendizaje por indagación.",
+        "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Campaña de colesterol en el mercado municipal",
+        "titulo_ca": "Campanya de colesterol al mercat municipal",
+        "contexto_es": "Un centro de Manacor colabora con una campaña de hábitos saludables y necesita explicar cómo se mide el colesterol.",
+        "contexto_ca": "Un centre de Manacor col·labora amb una campanya d'hàbits saludables i necessita explicar com es mesura el colesterol.",
+        "desarrollo_es": "En el mercado municipal, el alumnado monta un puesto informativo donde describe los componentes del analizador y su funcionamiento (1368-4a) y los principios de la técnica enzimática según el PNT (1368-4b). En el material divulgativo detalla las repercusiones orgánicas del exceso de colesterol (1370-8g).",
+        "desarrollo_ca": "Al mercat municipal, l'alumnat munta una parada informativa on descriu els components de l'analitzador i el seu funcionament (1368-4a) i els principis de la tècnica enzimàtica segons el PNT (1368-4b). Al material divulgatiu detalla les repercussions orgàniques de l'excés de colesterol (1370-8g).",
+        "evidencia_es": "Díptico divulgativo y atención al público en el puesto.",
+        "evidencia_ca": "Díptic divulgatiu i atenció al públic a la parada.",
+        "dua_es": "Díptico con pictogramas y versión de lectura fácil.",
+        "dua_ca": "Díptic amb pictogrames i versió de lectura fàcil.",
+        "metodologia_es": "aprendizaje basado en proyectos comunitarios.",
+        "metodologia_ca": "aprenentatge basat en projectes comunitaris."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["e"] },
-    "b": { "modulo": "1370", "ra": "RA3", "criterios": ["f", "g"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA3",
+      "criterios": [
+        "f",
+        "g"
+      ]
+    },
     "justificacion_es": "La electroforesis de proteínas del suero ayuda a detectar enfermedades del sistema inmune.",
     "justificacion_ca": "L'electroforesi de proteïnes del sèrum ajuda a detectar malalties del sistema immunitari.",
     "actividades": [
@@ -392,12 +1100,52 @@
         "dua_ca": "Proteïnogrames d'exemple comentats.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Electroforesis de sueros con inmunodeficiencia",
+        "titulo_ca": "Electroforesi de sèrums amb immunodeficiència",
+        "contexto_es": "El laboratorio de un hospital de Inca recibe sueros de pacientes con infecciones repetidas y quiere comparar sus patrones.",
+        "contexto_ca": "El laboratori d'un hospital d'Inca rep sèrums de pacients amb infeccions repetides i vol comparar-ne els patrons.",
+        "desarrollo_es": "Los equipos realizan una electroforesis de proteínas séricas y separan las fracciones del gel (1368-4e). Después clasifican la patología del sistema inmune que refleja cada patrón (1370-3f) y describen las más frecuentes en la consulta (1370-3g).",
+        "desarrollo_ca": "Els equips fan una electroforesi de proteïnes sèriques i separen les fraccions del gel (1368-4e). Després classifiquen la patologia del sistema immunitari que reflecteix cada patró (1370-3f) i descriuen les més freqüents a la consulta (1370-3g).",
+        "evidencia_es": "Gel fotografiado y tabla de patrones inmunitarios.",
+        "evidencia_ca": "Gel fotografiat i taula de patrons immunitaris.",
+        "dua_es": "Guía de interpretación con los patrones normales marcados.",
+        "dua_ca": "Guia d'interpretació amb els patrons normals marcats.",
+        "metodologia_es": "instrucción entre pares.",
+        "metodologia_ca": "instrucció entre parells."
+      },
+      {
+        "titulo_es": "Separar proteínas con tres técnicas distintas",
+        "titulo_ca": "Separar proteïnes amb tres tècniques diferents",
+        "contexto_es": "El alumnado compara filtración, centrifugación y electroforesis para decidir cuál conviene en cada muestra.",
+        "contexto_ca": "L'alumnat compara filtració, centrifugació i electroforesi per decidir quina convé a cada mostra.",
+        "desarrollo_es": "En estaciones rotativas, cada grupo aplica filtración, centrifugación y electroforesis a alícuotas de la misma muestra (1368-4e). Con los resultados clasifica la patología del sistema inmune que se investiga (1370-3f) y describe las patologías más frecuentes asociadas (1370-3g).",
+        "desarrollo_ca": "En estacions rotatives, cada grup aplica filtració, centrifugació i electroforesi a alíquotes de la mateixa mostra (1368-4e). Amb els resultats classifica la patologia del sistema immunitari que s'investiga (1370-3f) i descriu les patologies més freqüents associades (1370-3g).",
+        "evidencia_es": "Cuaderno de laboratorio con las tres separaciones comparadas.",
+        "evidencia_ca": "Quadern de laboratori amb les tres separacions comparades.",
+        "dua_es": "Instrucciones gráficas en cada estación.",
+        "dua_ca": "Instruccions gràfiques a cada estació.",
+        "metodologia_es": "laboratorio rotativo.",
+        "metodologia_ca": "laboratori rotatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA7", "criterios": ["b"] },
-    "b": { "modulo": "1370", "ra": "RA2", "criterios": ["f"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA7",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "La certificación de calidad da confianza en las pruebas diagnósticas complementarias que hace el laboratorio.",
     "justificacion_ca": "La certificació de qualitat dona confiança en les proves diagnòstiques complementàries que fa el laboratori.",
     "actividades": [
@@ -414,12 +1162,54 @@
         "dua_ca": "Exemples de certificats reals.",
         "metodologia_es": "análisis documental.",
         "metodologia_ca": "anàlisi documental."
+      },
+      {
+        "titulo_es": "Simulacro de auditoría en el laboratorio del centro",
+        "titulo_ca": "Simulacre d'auditoria al laboratori del centre",
+        "contexto_es": "El laboratorio del instituto se prepara para una visita de certificación y el alumnado hace de auditor.",
+        "contexto_ca": "El laboratori de l'institut es prepara per a una visita de certificació i l'alumnat fa d'auditor.",
+        "desarrollo_es": "Repartidos en equipo auditor y equipo auditado, el alumnado clasifica los procedimientos diagnósticos complementarios que ofrece el laboratorio (1370-2f) y revisa si están documentados y normalizados. En el informe final explica las ventajas de la certificación para el centro (1368-7b).",
+        "desarrollo_ca": "Repartits en equip auditor i equip auditat, l'alumnat classifica els procediments diagnòstics complementaris que ofereix el laboratori (1370-2f) i revisa si estan documentats i normalitzats. A l'informe final explica els avantatges de la certificació per al centre (1368-7b).",
+        "evidencia_es": "Informe de auditoría con hallazgos y conclusiones.",
+        "evidencia_ca": "Informe d'auditoria amb troballes i conclusions.",
+        "dua_es": "Lista de verificación con los puntos que hay que comprobar.",
+        "dua_ca": "Llista de verificació amb els punts que cal comprovar.",
+        "metodologia_es": "auditoría simulada.",
+        "metodologia_ca": "auditoria simulada."
+      },
+      {
+        "titulo_es": "Debate sobre certificar el laboratorio",
+        "titulo_ca": "Debat sobre certificar el laboratori",
+        "contexto_es": "La dirección de un laboratorio de Menorca plantea recortar el presupuesto de calidad y el comité debe decidir.",
+        "contexto_ca": "La direcció d'un laboratori de Menorca planteja retallar el pressupost de qualitat i el comitè ha de decidir.",
+        "desarrollo_es": "Dos grupos defienden posturas opuestas sobre la certificación y, antes de empezar, clasifican las pruebas diagnósticas complementarias que ofrece el laboratorio (1370-2f). Cada intervención debe explicar una ventaja concreta de normalizar y certificar la calidad (1368-7b).",
+        "desarrollo_ca": "Dos grups defensen postures oposades sobre la certificació i, abans de començar, classifiquen les proves diagnòstiques complementàries que ofereix el laboratori (1370-2f). Cada intervenció ha d'explicar un avantatge concret de normalitzar i certificar la qualitat (1368-7b).",
+        "evidencia_es": "Acta del debate con los argumentos por escrito.",
+        "evidencia_ca": "Acta del debat amb els arguments per escrit.",
+        "dua_es": "Fichas de rol con los argumentos y el turno de palabra.",
+        "dua_ca": "Fitxes de rol amb els arguments i el torn de paraula.",
+        "metodologia_es": "debate estructurado.",
+        "metodologia_ca": "debat estructurat."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA2", "criterios": ["a", "i"] },
-    "b": { "modulo": "1370", "ra": "RA4", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "1370",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "Conocer cómo se transmiten las infecciones explica los riesgos biológicos del laboratorio y por qué cumplir las normas.",
     "justificacion_ca": "Conèixer com es transmeten les infeccions explica els riscs biològics del laboratori i per què complir les normes.",
     "actividades": [
@@ -436,12 +1226,53 @@
         "dua_ca": "Esquema de vies de transmissió.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Rastrear un brote en la sala de extracciones",
+        "titulo_ca": "Rastrejar un brot a la sala d'extraccions",
+        "contexto_es": "Tres usuarios de un centro de salud de Formentera presentan la misma infección tras coincidir en la sala de extracciones.",
+        "contexto_ca": "Tres usuaris d'un centre de salut de Formentera presenten la mateixa infecció després de coincidir a la sala d'extraccions.",
+        "desarrollo_es": "Para reconstruir el brote, el alumnado describe las fuentes de infección del caso (1370-4a) y detalla los mecanismos de transmisión posibles en la sala (1370-4b). Con esa información identifica los riesgos biológicos de las muestras y reactivos implicados (1368-2a) y valora si se cumplieron las normas de seguridad (1368-2i).",
+        "desarrollo_ca": "Per reconstruir el brot, l'alumnat descriu les fonts d'infecció del cas (1370-4a) i detalla els mecanismes de transmissió possibles a la sala (1370-4b). Amb aquesta informació identifica els riscs biològics de les mostres i reactius implicats (1368-2a) i valora si es van complir les normes de seguretat (1368-2i).",
+        "evidencia_es": "Informe de rastreo con el eslabón más probable.",
+        "evidencia_ca": "Informe de rastreig amb l'eslavó més probable.",
+        "dua_es": "Cronograma de los contactos ya ordenado.",
+        "dua_ca": "Cronograma dels contactes ja ordenat.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
+      },
+      {
+        "titulo_es": "El carrito de seguridad a examen",
+        "titulo_ca": "El carro de seguretat a examen",
+        "contexto_es": "Antes de empezar las prácticas, el laboratorio del centro revisa si el material de seguridad y las señalizaciones son suficientes.",
+        "contexto_ca": "Abans de començar les pràctiques, el laboratori del centre revisa si el material de seguretat i la senyalització són suficients.",
+        "desarrollo_es": "En parejas, el alumnado recorre las zonas del laboratorio y describe las fuentes de infección que identifica en cada una (1370-4a) y los mecanismos de transmisión asociados a cada tarea (1370-4b). A continuación clasifica los reactivos y residuos según su riesgo (1368-2a) y justifica por escrito cada norma que propondría (1368-2i).",
+        "desarrollo_ca": "Per parelles, l'alumnat recorre les zones del laboratori i descriu les fonts d'infecció que identifica a cadascuna (1370-4a) i els mecanismes de transmissió associats a cada tasca (1370-4b). A continuació classifica els reactius i residus segons el risc (1368-2a) i justifica per escrit cada norma que proposaria (1368-2i).",
+        "evidencia_es": "Plano del laboratorio señalizado y decálogo de normas.",
+        "evidencia_ca": "Plànol del laboratori senyalitzat i decàleg de normes.",
+        "dua_es": "Pictogramas de peligro plastificados para clasificar.",
+        "dua_ca": "Pictogrames de perill plastificats per classificar.",
+        "metodologia_es": "rincones de trabajo.",
+        "metodologia_ca": "racons de treball."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA1", "criterios": ["f"] },
-    "b": { "modulo": "0179", "ra": "RA2", "criterios": ["i", "e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "i",
+        "e"
+      ]
+    },
     "justificacion_es": "Los PNT de muchos equipos parten de manuales del fabricante escritos en inglés.",
     "justificacion_ca": "Els PNT de molts equips parteixen de manuals del fabricant escrits en anglès.",
     "actividades": [
@@ -458,12 +1289,52 @@
         "dua_ca": "Glossari tècnic anglès-castellà.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "El manual del espectrofotómetro que nadie entiende",
+        "titulo_ca": "El manual de l'espectrofotòmetre que ningú no entén",
+        "contexto_es": "En el laboratorio del centro de Palma llega un espectrofotómetro donado y su manual en inglés está incompleto.",
+        "contexto_ca": "Al laboratori del centre de Palma arriba un espectrofotòmetre donat i el seu manual en anglès és incomplet.",
+        "desarrollo_es": "Por parejas, el alumnado lee de forma autónoma los apartados del manual que describen el encendido y la limpieza del equipo (0179-2e). Después contrasta esa información con el vídeo de instalación que envió el fabricante y anota las instrucciones que faltan en el papel (0179-2i). Con todo ello redacta el PNT de uso y mantenimiento del espectrofotómetro para el resto del grupo (1368-1f).",
+        "desarrollo_ca": "Per parelles, l'alumnat llegeix de manera autònoma els apartats del manual que descriuen l'encesa i la neteja de l'equip (0179-2e). Després contrasta aquesta informació amb el vídeo d'instal·lació que va enviar el fabricant i anota les instruccions que falten al paper (0179-2i). Amb tot això redacta el PNT d'ús i manteniment de l'espectrofotòmetre per a la resta del grup (1368-1f).",
+        "evidencia_es": "PNT del espectrofotómetro con las lagunas del manual resueltas.",
+        "evidencia_ca": "PNT de l'espectrofotòmetre amb els buits del manual resolts.",
+        "dua_es": "Manual dividido en tarjetas con una idea por tarjeta.",
+        "dua_ca": "Manual dividit en targetes amb una idea per targeta.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Revisión cruzada de los PNT del laboratorio",
+        "titulo_ca": "Revisió creuada dels PNT del laboratori",
+        "contexto_es": "El responsable de calidad detecta que varios procedimientos de equipos están desactualizados y pide al alumnado que los revise.",
+        "contexto_ca": "El responsable de qualitat detecta que diversos procediments d'equips estan desactualitzats i demana a l'alumnat que els revisi.",
+        "desarrollo_es": "Cada equipo recibe el PNT de un aparato que no ha montado y busca en la guía rápida en inglés los datos de calibración (0179-2e). A continuación resuelve las dudas con el vídeo tutorial del proveedor alojado en la plataforma del centro (0179-2i). Por último corrige y completa el procedimiento con los pasos de uso y mantenimiento que faltaban (1368-1f).",
+        "desarrollo_ca": "Cada equip rep el PNT d'un aparell que no ha muntat i cerca a la guia ràpida en anglès les dades de calibratge (0179-2e). A continuació resol els dubtes amb el vídeo tutorial del proveïdor allotjat a la plataforma del centre (0179-2i). Finalment corregeix i completa el procediment amb els passos d'ús i manteniment que faltaven (1368-1f).",
+        "evidencia_es": "PNT corregido con marcas de revisión.",
+        "evidencia_ca": "PNT corregit amb marques de revisió.",
+        "dua_es": "Plantilla de PNT con apartados fijos y ejemplos.",
+        "dua_ca": "Plantilla de PNT amb apartats fixos i exemples.",
+        "metodologia_es": "tutoría entre iguales.",
+        "metodologia_ca": "tutoria entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA2", "criterios": ["g"] },
-    "b": { "modulo": "0179", "ra": "RA4", "criterios": ["d"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "La señalización de seguridad combina pictogramas y textos breves, a menudo en inglés.",
     "justificacion_ca": "La senyalització de seguretat combina pictogrames i textos breus, sovint en anglès.",
     "actividades": [
@@ -480,12 +1351,52 @@
         "dua_ca": "Banc de pictogrames oficials.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Yincana de señales por el laboratorio",
+        "titulo_ca": "Gimcana de senyals pel laboratori",
+        "contexto_es": "El laboratorio del instituto de Inca estrena un recorrido de seguridad para las visitas de familias.",
+        "contexto_ca": "El laboratori de l'institut d'Inca estrena un recorregut de seguretat per a les visites de famílies.",
+        "desarrollo_es": "Repartidos en estaciones, el alumnado clasifica las señales de obligación, advertencia y prohibición y explica qué alcance tiene cada tipo (1368-2g). Después completa una ficha en inglés de cada señal con pictogramas y palabras clave (0179-4d).",
+        "desarrollo_ca": "Repartits en estacions, l'alumnat classifica els senyals d'obligació, advertència i prohibició i explica quin abast té cada tipus (1368-2g). Després completa una fitxa en anglès de cada senyal amb pictogrames i paraules clau (0179-4d).",
+        "evidencia_es": "Fichas de las señales con la explicación de su alcance.",
+        "evidencia_ca": "Fitxes dels senyals amb l'explicació del seu abast.",
+        "dua_es": "Tarjetas con el pictograma y la palabra clave ya escrita.",
+        "dua_ca": "Targetes amb el pictograma i la paraula clau ja escrita.",
+        "metodologia_es": "rincones de trabajo.",
+        "metodologia_ca": "racons de treball."
+      },
+      {
+        "titulo_es": "Guía visual de seguridad para el alumnado visitante",
+        "titulo_ca": "Guia visual de seguretat per a l'alumnat visitant",
+        "contexto_es": "Un grupo de estudiantes de un centro de Menorca visita el laboratorio y no domina el castellano.",
+        "contexto_ca": "Un grup d'estudiants d'un centre de Menorca visita el laboratori i no domina el castellà.",
+        "desarrollo_es": "En equipos, el alumnado define el significado y el alcance de las señales que hay en cada zona del laboratorio (1368-2g). Luego diseña una guía de una página en inglés con pictogramas, frases cortas y claves lingüísticas para completar (0179-4d).",
+        "desarrollo_ca": "En equips, l'alumnat defineix el significat i l'abast dels senyals que hi ha a cada zona del laboratori (1368-2g). Després dissenya una guia d'una pàgina en anglès amb pictogrames, frases curtes i claus lingüístiques per completar (0179-4d).",
+        "evidencia_es": "Guía visual de una página revisada por el equipo.",
+        "evidencia_ca": "Guia visual d'una pàgina revisada per l'equip.",
+        "dua_es": "Banco de frases modelo en inglés.",
+        "dua_ca": "Banc de frases model en anglès.",
+        "metodologia_es": "design thinking.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA4", "criterios": ["g"] },
-    "b": { "modulo": "0179", "ra": "RA4", "criterios": ["e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Los informes técnicos de análisis a veces deben enviarse en inglés a colaboradores internacionales.",
     "justificacion_ca": "Els informes tècnics d'anàlisi a vegades s'han d'enviar en anglès a col·laboradors internacionals.",
     "actividades": [
@@ -502,12 +1413,53 @@
         "dua_ca": "Model d'informe científic en anglès.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "El fraccionamiento que no cuadraba",
+        "titulo_ca": "El fraccionament que no quadrava",
+        "contexto_es": "Una muestra de suero llega al laboratorio de referencia de Barcelona con un volumen menor del esperado.",
+        "contexto_ca": "Una mostra de sèrum arriba al laboratori de referència de Barcelona amb un volum més petit de l'esperat.",
+        "desarrollo_es": "El alumnado revisa la separación realizada y cumplimenta en la aplicación del centro el informe técnico del análisis (1368-4g). Después redacta en inglés un resumen para el centro solicitante que destaque los datos significativos y aporte los detalles que los apoyan (0179-4e).",
+        "desarrollo_ca": "L'alumnat revisa la separació feta i emplena a l'aplicació del centre l'informe tècnic de l'anàlisi (1368-4g). Després redacta en anglès un resum per al centre sol·licitant que destaqui les dades significatives i aporti els detalls que les donen suport (0179-4e).",
+        "evidencia_es": "Informe digital y resumen en inglés con los datos clave.",
+        "evidencia_ca": "Informe digital i resum en anglès amb les dades clau.",
+        "dua_es": "Plantilla digital con los apartados del informe ya rotulados.",
+        "dua_ca": "Plantilla digital amb els apartats de l'informe ja rotulats.",
+        "metodologia_es": "análisis de casos.",
+        "metodologia_ca": "anàlisi de casos."
+      },
+      {
+        "titulo_es": "Informe digital de una extracción líquido-líquido",
+        "titulo_ca": "Informe digital d'una extracció líquid-líquid",
+        "contexto_es": "Un hospital comarcal de Mallorca necesita documentar cada extracción para una revisión interna del servicio.",
+        "contexto_ca": "Un hospital comarcal de Mallorca necessita documentar cada extracció per a una revisió interna del servei.",
+        "desarrollo_es": "Cada pareja realiza una extracción líquido-líquido y registra el proceso en el informe técnico digital del servicio (1368-4g). A continuación elabora la versión inglesa del apartado de resultados, subrayando los hallazgos significativos y añadiendo los detalles que los justifican (0179-4e).",
+        "desarrollo_ca": "Cada parella realitza una extracció líquid-líquid i registra el procés a l'informe tècnic digital del servei (1368-4g). A continuació elabora la versió anglesa de l'apartat de resultats, subratllant les troballes significatives i afegint-hi els detalls que les justifiquen (0179-4e).",
+        "evidencia_es": "Informe digital bilingüe de la extracción.",
+        "evidencia_ca": "Informe digital bilingüe de l'extracció.",
+        "dua_es": "Guion de redacción con conectores y verbos en inglés.",
+        "dua_ca": "Guió de redacció amb connectors i verbs en anglès.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA7", "criterios": ["g"] },
-    "b": { "modulo": "0179", "ra": "RA3", "criterios": ["b", "g"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA7",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "g"
+      ]
+    },
     "justificacion_es": "Algunas auditorías de calidad las hacen auditores extranjeros que se comunican en inglés.",
     "justificacion_ca": "Algunes auditories de qualitat les fan auditors estrangers que es comuniquen en anglès.",
     "actividades": [
@@ -524,12 +1476,52 @@
         "dua_ca": "Preguntes tipus d'auditoria.",
         "metodologia_es": "juego de rol en inglés.",
         "metodologia_ca": "joc de rol en anglès."
+      },
+      {
+        "titulo_es": "Simulacro de auditoría interna en el laboratorio",
+        "titulo_ca": "Simulacre d'auditoria interna al laboratori",
+        "contexto_es": "El laboratorio del centro se prepara para una certificación y el ciclo formativo organiza un simulacro.",
+        "contexto_ca": "El laboratori del centre es prepara per a una certificació i el cicle formatiu organitza un simulacre.",
+        "desarrollo_es": "El alumnado identifica qué tipo de auditoría corresponde al simulacro y con qué parte de la evaluación de la calidad se relaciona (1368-7g). Después, por parejas, intercambia en inglés información detallada sobre registros y no conformidades (0179-3b) y pide aclaraciones cuando una pregunta no se entiende (0179-3g).",
+        "desarrollo_ca": "L'alumnat identifica quin tipus d'auditoria correspon al simulacre i amb quina part de l'avaluació de la qualitat es relaciona (1368-7g). Després, per parelles, intercanvia en anglès informació detallada sobre registres i no conformitats (0179-3b) i demana aclariments quan una pregunta no s'entén (0179-3g).",
+        "evidencia_es": "Acta del simulacro con las preguntas y respuestas.",
+        "evidencia_ca": "Acta del simulacre amb les preguntes i les respostes.",
+        "dua_es": "Guion con preguntas frecuentes de auditoría ordenadas por bloques.",
+        "dua_ca": "Guió amb preguntes freqüents d'auditoria ordenades per blocs.",
+        "metodologia_es": "simulación.",
+        "metodologia_ca": "simulació."
+      },
+      {
+        "titulo_es": "Entrevista en inglés al responsable de calidad",
+        "titulo_ca": "Entrevista en anglès al responsable de qualitat",
+        "contexto_es": "La radio del centro graba una serie de pódcasts sobre oficios técnicos y dedica un capítulo al laboratorio clínico.",
+        "contexto_ca": "La ràdio del centre enregistra una sèrie de pòdcasts sobre oficis tècnics i dedica un capítol al laboratori clínic.",
+        "desarrollo_es": "Antes de grabar, el alumnado distingue las auditorías internas, externas y de acreditación y las sitúa en la evaluación de la calidad (1368-7g). En la entrevista intercambia con fluidez datos concretos sobre el sistema de calidad en inglés (0179-3b) y ensaya la petición de reformulación cuando una respuesta se alarga (0179-3g).",
+        "desarrollo_ca": "Abans d'enregistrar, l'alumnat distingeix les auditories internes, externes i d'acreditació i les situa en l'avaluació de la qualitat (1368-7g). A l'entrevista intercanvia amb fluïdesa dades concretes sobre el sistema de qualitat en anglès (0179-3b) i assaja la petició de reformulació quan una resposta s'allarga (0179-3g).",
+        "evidencia_es": "Archivo de audio de la entrevista y ficha previa de auditorías.",
+        "evidencia_ca": "Fitxer d'àudio de l'entrevista i fitxa prèvia d'auditories.",
+        "dua_es": "Preguntas preparadas con antelación y tarjetas de apoyo.",
+        "dua_ca": "Preguntes preparades amb antelació i targetes de suport.",
+        "metodologia_es": "aprendizaje dialógico.",
+        "metodologia_ca": "aprenentatge dialògic."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["h"] },
-    "b": { "modulo": "0179", "ra": "RA1", "criterios": ["g"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA5",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "La formación continua en calidad analítica se ofrece a menudo en seminarios en línea en inglés.",
     "justificacion_ca": "La formació contínua en qualitat analítica s'ofereix sovint en seminaris en línia en anglès.",
     "actividades": [
@@ -546,12 +1538,52 @@
         "dua_ca": "Subtítols i transcripció.",
         "metodologia_es": "aula invertida.",
         "metodologia_ca": "aula inversa."
+      },
+      {
+        "titulo_es": "Debate tras escuchar un pódcast sobre errores preanalíticos",
+        "titulo_ca": "Debat després d'escoltar un pòdcast sobre errors preanalítics",
+        "contexto_es": "El equipo del laboratorio discute por un aumento de muestras rechazadas en el turno de tarde.",
+        "contexto_ca": "L'equip del laboratori discuteix per un augment de mostres rebutjades al torn de tarda.",
+        "desarrollo_es": "El alumnado escucha un episodio en inglés sobre errores preanalíticos y anota las ideas principales que se defienden (0179-1g). Después debate en dos grupos si merece la pena invertir tiempo en estudiar la calidad de los resultados y aporta ejemplos del episodio (1368-5h).",
+        "desarrollo_ca": "L'alumnat escolta un episodi en anglès sobre errors preanalítics i anota les idees principals que s'hi defensen (0179-1g). Després debat en dos grups si val la pena invertir temps a estudiar la qualitat dels resultats i aporta exemples de l'episodi (1368-5h).",
+        "evidencia_es": "Notas de escucha y conclusiones del debate.",
+        "evidencia_ca": "Notes d'escolta i conclusions del debat.",
+        "dua_es": "Pódcast con transcripción y velocidad ajustable.",
+        "dua_ca": "Pòdcast amb transcripció i velocitat ajustable.",
+        "metodologia_es": "debate.",
+        "metodologia_ca": "debat."
+      },
+      {
+        "titulo_es": "Mural colaborativo sobre la charla de un congreso",
+        "titulo_ca": "Mural col·laboratiu sobre la xerrada d'un congrés",
+        "contexto_es": "El centro proyecta la grabación de una ponencia internacional sobre fiabilidad analítica.",
+        "contexto_ca": "El centre projecta l'enregistrament d'una ponència internacional sobre fiabilitat analítica.",
+        "desarrollo_es": "Por tríos, el alumnado extrae las ideas principales de la ponencia mientras la escucha (0179-1g). Luego construye un mural que relaciona esas ideas con situaciones reales del laboratorio y argumenta por qué conviene estudiar la calidad de los resultados (1368-5h).",
+        "desarrollo_ca": "Per trios, l'alumnat extreu les idees principals de la ponència mentre l'escolta (0179-1g). Després construeix un mural que relaciona aquestes idees amb situacions reals del laboratori i argumenta per què convé estudiar la qualitat dels resultats (1368-5h).",
+        "evidencia_es": "Mural con ideas principales y ejemplos comentados.",
+        "evidencia_ca": "Mural amb idees principals i exemples comentats.",
+        "dua_es": "Plantilla de mural con huecos y palabras clave.",
+        "dua_ca": "Plantilla de mural amb buits i paraules clau.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "recerca guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "0179", "ra": "RA3", "criterios": ["e"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Describir en inglés las reacciones de preparación de una disolución exige usar bien la terminología de la profesión.",
     "justificacion_ca": "Descriure en anglès les reaccions de preparació d'una dissolució exigeix fer servir bé la terminologia de la professió.",
     "actividades": [
@@ -568,12 +1600,52 @@
         "dua_ca": "Llista de termes amb pronunciació.",
         "metodologia_es": "aprendizaje integrado de contenidos y lengua.",
         "metodologia_ca": "aprenentatge integrat de continguts i llengua."
+      },
+      {
+        "titulo_es": "Dramatización de una preparación salina en inglés",
+        "titulo_ca": "Dramatització d'una preparació salina en anglès",
+        "contexto_es": "El laboratorio recibe a una técnica invitada de un centro de Cerdeña que solo habla inglés.",
+        "contexto_ca": "El laboratori rep una tècnica convidada d'un centre de Sardenya que només parla anglès.",
+        "desarrollo_es": "El alumnado identifica las reacciones que ocurren al preparar la disolución salina, como la hidratación de los iones (1368-3a). Después representa ante la invitada el proceso completo en inglés, empleando con precisión los términos de material, concentración y reacción (0179-3e).",
+        "desarrollo_ca": "L'alumnat identifica les reaccions que ocorren en preparar la dissolució salina, com la hidratació dels ions (1368-3a). Després representa davant la convidada el procés complet en anglès, emprant amb precisió els termes de material, concentració i reacció (0179-3e).",
+        "evidencia_es": "Escena grabada y lista de términos usados correctamente.",
+        "evidencia_ca": "Escena enregistrada i llista de termes emprats correctament.",
+        "dua_es": "Fraseología de laboratorio con pronunciación figurada.",
+        "dua_ca": "Fraseologia de laboratori amb pronunciació figurada.",
+        "metodologia_es": "dramatización.",
+        "metodologia_ca": "dramatització."
+      },
+      {
+        "titulo_es": "Feria de disoluciones explicadas en inglés",
+        "titulo_ca": "Fira de dissolucions explicades en anglès",
+        "contexto_es": "La semana de la ciencia del centro abre el laboratorio a otros grupos y a las familias.",
+        "contexto_ca": "La setmana de la ciència del centre obre el laboratori a altres grups i a les famílies.",
+        "desarrollo_es": "Cada estación prepara una disolución distinta y señala las reacciones implicadas en su formación (1368-3a). Los responsables explican en inglés a los visitantes qué ocurre y qué material utilizan, cuidando la terminología profesional (0179-3e).",
+        "desarrollo_ca": "Cada estació prepara una dissolució diferent i assenyala les reaccions implicades en la seva formació (1368-3a). Els responsables expliquen en anglès als visitants què ocorre i quin material utilitzen, cuidant la terminologia professional (0179-3e).",
+        "evidencia_es": "Ficha de la estación y valoración de las explicaciones orales.",
+        "evidencia_ca": "Fitxa de l'estació i valoració de les explicacions orals.",
+        "dua_es": "Cartel de apoyo con el vocabulario mínimo de la estación.",
+        "dua_ca": "Cartell de suport amb el vocabulari mínim de l'estació.",
+        "metodologia_es": "aprendizaje experiencial.",
+        "metodologia_ca": "aprenentatge experiencial."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA6", "criterios": ["i"] },
-    "b": { "modulo": "0179", "ra": "RA4", "criterios": ["f"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA6",
+      "criterios": [
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Al enviar imágenes a otro centro, la carta de acompañamiento debe respetar la confidencialidad y las fórmulas de cortesía.",
     "justificacion_ca": "En enviar imatges a un altre centre, la carta d'acompanyament ha de respectar la confidencialitat i les fórmules de cortesia.",
     "actividades": [
@@ -590,12 +1662,52 @@
         "dua_ca": "Model de carta formal.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "El caso de la imagen enviada sin anonimizar",
+        "titulo_ca": "El cas de la imatge enviada sense anonimitzar",
+        "contexto_es": "Una incidencia en el envío de una laminilla digital a otro centro obliga a revisar el procedimiento.",
+        "contexto_ca": "Una incidència en l'enviament d'una lamineta digital a un altre centre obliga a revisar el procediment.",
+        "desarrollo_es": "El alumnado analiza qué falló en la transferencia y aplica las normas de calidad y confidencialidad para corregir el envío (1368-6i). Después redacta en inglés una carta formal al centro receptor que explique la incidencia y retome el caso con las fórmulas de cortesía adecuadas (0179-4f).",
+        "desarrollo_ca": "L'alumnat analitza què va fallar en la transferència i aplica les normes de qualitat i confidencialitat per corregir l'enviament (1368-6i). Després redacta en anglès una carta formal al centre receptor que expliqui la incidència i reprengui el cas amb les fórmules de cortesia adequades (0179-4f).",
+        "evidencia_es": "Carta formal en inglés y registro de la corrección.",
+        "evidencia_ca": "Carta formal en anglès i registre de la correcció.",
+        "dua_es": "Modelo de carta con huecos y expresiones de cortesía.",
+        "dua_ca": "Model de carta amb buits i expressions de cortesia.",
+        "metodologia_es": "estudio de incidentes.",
+        "metodologia_ca": "estudi d'incidents."
+      },
+      {
+        "titulo_es": "Oficina de telepatología entre dos centros",
+        "titulo_ca": "Oficina de telepatologia entre dos centres",
+        "contexto_es": "Dos centros de Mallorca acuerdan compartir imágenes de casos difíciles dentro de un proyecto de aprendizaje.",
+        "contexto_ca": "Dos centres de Mallorca acorden compartir imatges de casos difícils dins un projecte d'aprenentatge.",
+        "desarrollo_es": "En una simulación por turnos, el alumnado prepara el envío de imágenes aplicando las reglas de calidad y confidencialidad del centro (1368-6i). También escribe en inglés la carta formal que acompaña cada envío, con el saludo, la petición y la despedida propios del registro (0179-4f).",
+        "desarrollo_ca": "En una simulació per torns, l'alumnat prepara l'enviament d'imatges aplicant les regles de qualitat i confidencialitat del centre (1368-6i). També escriu en anglès la carta formal que acompanya cada enviament, amb la salutació, la petició i el comiat propis del registre (0179-4f).",
+        "evidencia_es": "Expediente del envío con la carta formal y la lista de comprobación.",
+        "evidencia_ca": "Expedient de l'enviament amb la carta formal i la llista de comprovació.",
+        "dua_es": "Lista de comprobación de privacidad antes de enviar.",
+        "dua_ca": "Llista de comprovació de privacitat abans d'enviar.",
+        "metodologia_es": "trabajo por proyectos.",
+        "metodologia_ca": "treball per projectes."
       }
     ]
   },
   {
-    "a": { "modulo": "1368", "ra": "RA5", "criterios": ["e"] },
-    "b": { "modulo": "0179", "ra": "RA2", "criterios": ["j"] },
+    "a": {
+      "modulo": "1368",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "0179",
+      "ra": "RA2",
+      "criterios": [
+        "j"
+      ]
+    },
     "justificacion_es": "Las especificaciones de los informes de control a veces vienen de guías internacionales que hay que traducir.",
     "justificacion_ca": "Les especificacions dels informes de control a vegades vénen de guies internacionals que s'han de traduir.",
     "actividades": [
@@ -612,6 +1724,34 @@
         "dua_ca": "Traductor i glossari de suport.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Traducción cooperativa de la guía de un proveedor",
+        "titulo_ca": "Traducció cooperativa de la guia d'un proveïdor",
+        "contexto_es": "El proveedor de reactivos envía las especificaciones de un nuevo kit solo en inglés.",
+        "contexto_ca": "El proveïdor de reactius envia les especificacions d'un kit nou només en anglès.",
+        "desarrollo_es": "Organizados con la técnica del puzle, cada experto traduce una parte de las especificaciones con glosario y diccionario (0179-2j). Después el grupo recompone el documento y elabora el informe técnico digital con los criterios de uso del kit (1368-5e).",
+        "desarrollo_ca": "Organitzats amb la tècnica del trencaclosques, cada expert tradueix una part de les especificacions amb glossari i diccionari (0179-2j). Després el grup recompon el document i elabora l'informe tècnic digital amb els criteris d'ús del kit (1368-5e).",
+        "evidencia_es": "Informe digital del kit con la traducción revisada.",
+        "evidencia_ca": "Informe digital del kit amb la traducció revisada.",
+        "dua_es": "Glosario compartido y texto dividido en fragmentos cortos.",
+        "dua_ca": "Glossari compartit i text dividit en fragments curts.",
+        "metodologia_es": "puzle de Aronson.",
+        "metodologia_ca": "trencaclosques d'Aronson."
+      },
+      {
+        "titulo_es": "Reto: documentar el control de un analizador nuevo",
+        "titulo_ca": "Repte: documentar el control d'un analitzador nou",
+        "contexto_es": "El laboratorio estrena un analizador y necesita un informe técnico antes de la primera jornada.",
+        "contexto_ca": "El laboratori estrena un analitzador i necessita un informe tècnic abans de la primera jornada.",
+        "desarrollo_es": "El reto consiste en preparar el informe técnico digital del analizador siguiendo las especificaciones del fabricante (1368-5e). Para ello el alumnado traduce primero las páginas clave del manual con los apoyos disponibles (0179-2j) y reparte las secciones entre los miembros del equipo.",
+        "desarrollo_ca": "El repte consisteix a preparar l'informe tècnic digital de l'analitzador seguint les especificacions del fabricant (1368-5e). Per fer-ho l'alumnat tradueix primer les pàgines clau del manual amb els suports disponibles (0179-2j) i reparteix les seccions entre els membres de l'equip.",
+        "evidencia_es": "Informe técnico digital entregado antes de la fecha límite.",
+        "evidencia_ca": "Informe tècnic digital lliurat abans de la data límit.",
+        "dua_es": "Reparto de secciones según el perfil de cada estudiante.",
+        "dua_ca": "Repartiment de seccions segons el perfil de cada estudiant.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
       }
     ]
   }

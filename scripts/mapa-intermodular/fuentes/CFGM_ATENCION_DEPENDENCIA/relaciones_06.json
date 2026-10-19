@@ -1,7 +1,20 @@
 [
   {
-    "a": { "modulo": "0217", "ra": "RA4", "criterios": ["c"] },
-    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["g", "d"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "g",
+        "d"
+      ]
+    },
     "justificacion_es": "Los protocolos de higiene informatizados se guardan en sistemas a los que acceden distintas unidades del centro, que deben estar alineadas.",
     "justificacion_ca": "Els protocols d'higiene informatitzats es guarden en sistemes als quals accedeixen diferents unitats del centre, que han d'estar alineades.",
     "actividades": [
@@ -18,12 +31,52 @@
         "dua_ca": "Aplicació de demostració amb tutorial.",
         "metodologia_es": "aprendizaje basado en casos.",
         "metodologia_ca": "aprenentatge basat en casos."
+      },
+      {
+        "titulo_es": "Del registro en papel a la aplicación de la residencia",
+        "titulo_ca": "Del registre en paper a l'aplicació de la residència",
+        "contexto_es": "Una residencia de Maó sustituye sus hojas de observación en papel por una aplicación compartida entre todas las unidades.",
+        "contexto_ca": "Una residència de Maó substitueix els fulls d'observació en paper per una aplicació compartida entre totes les unitats.",
+        "desarrollo_es": "Cumplimentan protocolos de observación en papel y en la aplicación siguiendo las pautas de cada caso (0217-4c). Definen dónde se guardan esos datos, con sistemas de almacenamiento no convencionales y sus accesos desde cada unidad (1664-4g), y comprueban si enfermería, cocina y lavandería trabajan alineadas con el objetivo común (1664-4d).",
+        "desarrollo_ca": "Emplenen protocols d'observació en paper i a l'aplicació seguint les pautes de cada cas (0217-4c). Defineixen on es guarden aquestes dades, amb sistemes d'emmagatzematge no convencionals i els accessos des de cada unitat (1664-4g), i comproven si infermeria, cuina i bugaderia treballen alineades amb l'objectiu comú (1664-4d).",
+        "evidencia_es": "Registro cumplimentado y esquema de accesos por unidad.",
+        "evidencia_ca": "Registre emplenat i esquema d'accessos per unitat.",
+        "dua_es": "Formulario digital con campos autocompletables y versión impresa en letra grande.",
+        "dua_ca": "Formulari digital amb camps autocompletables i versió impresa en lletra grossa.",
+        "metodologia_es": "simulación con herramientas digitales.",
+        "metodologia_ca": "simulació amb eines digitals."
+      },
+      {
+        "titulo_es": "Coordinación entre unidades sobre quién accede al registro",
+        "titulo_ca": "Coordinació entre unitats sobre qui accedeix al registre",
+        "contexto_es": "En una residencia de Alcúdia, enfermería y cocina discrepan sobre quién debe poder consultar los registros de higiene.",
+        "contexto_ca": "En una residència d'Alcúdia, infermeria i cuina discrepen sobre qui ha de poder consultar els registres d'higiene.",
+        "desarrollo_es": "Rellenan registros de observación manuales y en formato informatizado (0217-4c). En una reunión con roles de cada unidad defienden qué sistema de almacenamiento y de acceso necesitan (1664-4g) y acuerdan cómo alinear las unidades con el objetivo del sistema (1664-4d).",
+        "desarrollo_ca": "Emplenen registres d'observació manuals i en format informatitzat (0217-4c). En una reunió amb rols de cada unitat defensen quin sistema d'emmagatzematge i d'accés necessiten (1664-4g) i acorden com alinear les unitats amb l'objectiu del sistema (1664-4d).",
+        "evidencia_es": "Acta de la reunión con los acuerdos de acceso.",
+        "evidencia_ca": "Acta de la reunió amb els acords d'accés.",
+        "dua_es": "Tarjetas de rol con argumentos de partida y vídeo explicativo subtitulado.",
+        "dua_ca": "Targetes de rol amb arguments de partida i vídeo explicatiu subtitulat.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA3", "criterios": ["e"] },
-    "b": { "modulo": "1664", "ra": "RA1", "criterios": ["f"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Elegir entre material desechable y reutilizable esterilizado tiene un impacto ambiental que se puede comparar con los ODS.",
     "justificacion_ca": "Triar entre material d'un sol ús i reutilitzable esterilitzat té un impacte ambiental que es pot comparar amb els ODS.",
     "actividades": [
@@ -40,12 +93,52 @@
         "dua_ca": "Taula de comparació guiada i dades de consum.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Balance ambiental del material reutilizable esterilizado",
+        "titulo_ca": "Balanç ambiental del material reutilitzable esterilitzat",
+        "contexto_es": "Un centro sociosanitario de Manacor estudia sustituir parte de su material desechable por material reutilizable esterilizado.",
+        "contexto_ca": "Un centre sociosanitari de Manacor estudia substituir part del material d'un sol ús per material reutilitzable esterilitzat.",
+        "desarrollo_es": "Aplican los métodos de limpieza, desinfección y esterilización a material de uso común, respetando los controles de calidad y la normativa de residuos (0217-3e). Comparan el modelo desechable con el reutilizable según su impacto medioambiental y los ODS (1664-1f).",
+        "desarrollo_ca": "Apliquen els mètodes de neteja, desinfecció i esterilització a material d'ús comú, respectant els controls de qualitat i la normativa de residus (0217-3e). Comparen el model d'un sol ús amb el reutilitzable segons l'impacte mediambiental i els ODS (1664-1f).",
+        "evidencia_es": "Tabla comparativa de impactos con una recomendación final.",
+        "evidencia_ca": "Taula comparativa d'impactes amb una recomanació final.",
+        "dua_es": "Pasos del proceso en vídeo de demostración y tarjetas secuenciadas.",
+        "dua_ca": "Passos del procés en vídeo de demostració i targetes seqüenciades.",
+        "metodologia_es": "estudio de caso con práctica de taller.",
+        "metodologia_ca": "estudi de cas amb pràctica de taller."
+      },
+      {
+        "titulo_es": "Consejo de sostenibilidad sobre el material sanitario",
+        "titulo_ca": "Consell de sostenibilitat sobre el material sanitari",
+        "contexto_es": "La dirección de una residencia de Eivissa se compromete con los ODS y revisa su gasto anual en material.",
+        "contexto_ca": "La direcció d'una residència d'Eivissa es compromet amb els ODS i revisa la despesa anual en material.",
+        "desarrollo_es": "Practican una limpieza, desinfección y esterilización completa de material de uso común, anotando los controles de calidad y el destino de los residuos (0217-3e). Debaten en un consejo qué opción reduce más el impacto y cómo se alinea con los ODS (1664-1f).",
+        "desarrollo_ca": "Practiquen una neteja, desinfecció i esterilització completa de material d'ús comú, anotant els controls de qualitat i la destinació dels residus (0217-3e). Debaten en un consell quina opció redueix més l'impacte i com s'alinea amb els ODS (1664-1f).",
+        "evidencia_es": "Registro del proceso y acta del consejo.",
+        "evidencia_ca": "Registre del procés i acta del consell.",
+        "dua_es": "Guion de debate con frases de apertura y tiempo extra para preparar la intervención.",
+        "dua_ca": "Guió de debat amb frases d'obertura i temps extra per preparar la intervenció.",
+        "metodologia_es": "debate con simulación de consejo.",
+        "metodologia_ca": "debat amb simulació de consell."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA2", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["b"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Los colchones con sensores de presión aplican tecnologías como el IoT a la prevención de úlceras.",
     "justificacion_ca": "Els matalassos amb sensors de pressió apliquen tecnologies com l'IoT a la prevenció de nafres.",
     "actividades": [
@@ -62,12 +155,53 @@
         "dua_ca": "Vídeo del fabricant i mostres d'apòsits.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Folleto para familias sobre prevención de úlceras",
+        "titulo_ca": "Fullet per a famílies sobre prevenció d'úlceres",
+        "contexto_es": "Familias cuidadoras de un pueblo del Pla de Mallorca piden saber cómo evitar las úlceras de sus padres encamados.",
+        "contexto_ca": "Famílies cuidadores d'un poble del Pla de Mallorca demanen saber com evitar les nafres dels pares enllitats.",
+        "desarrollo_es": "Explican las medidas preventivas de las úlceras por presión y los productos sanitarios que ayudan a prevenirlas y tratarlas (0217-2a). Investigan qué tecnologías, como IoT, inteligencia artificial o gemelos digitales, ya se aplican a ese cuidado y describen sus características (1664-4b).",
+        "desarrollo_ca": "Expliquen les mesures preventives de les úlceres per pressió i els productes sanitaris que ajuden a prevenir-les i tractar-les (0217-2a). Investiguen quines tecnologies, com ara IoT, intel·ligència artificial o bessons digitals, ja s'apliquen a aquesta cura i en descriuen les característiques (1664-4b).",
+        "evidencia_es": "Folleto informativo con un apartado tecnológico.",
+        "evidencia_ca": "Fullet informatiu amb un apartat tecnològic.",
+        "dua_es": "Folleto con iconos y versión en audio para quien lee con dificultad.",
+        "dua_ca": "Fullet amb icones i versió en àudio per a qui llegeix amb dificultat.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Feria de tecnologías contra las úlceras por presión",
+        "titulo_ca": "Fira de tecnologies contra les úlceres per pressió",
+        "contexto_es": "Una feria de innovación sociosanitaria en Palma muestra a las residencias novedades para el cuidado de la piel.",
+        "contexto_ca": "Una fira d'innovació sociosanitària a Palma mostra a les residències novetats per a la cura de la pell.",
+        "desarrollo_es": "Cada equipo prepara un puesto sobre una tecnología, como IoT, realidad virtual, robótica colaborativa o gemelo digital, y describe sus características y aplicaciones (1664-4b). En el puesto añade cómo ayuda a aplicar las medidas preventivas de las úlceras por presión y los productos sanitarios (0217-2a).",
+        "desarrollo_ca": "Cada equip prepara una parada sobre una tecnologia, com ara IoT, realitat virtual, robòtica col·laborativa o bessó digital, i en descriu les característiques i aplicacions (1664-4b). A la parada afegeix com ajuda a aplicar les mesures preventives de les úlceres per pressió i els productes sanitaris (0217-2a).",
+        "evidencia_es": "Puesto con maqueta y ficha técnica de la tecnología.",
+        "evidencia_ca": "Parada amb maqueta i fitxa tècnica de la tecnologia.",
+        "dua_es": "Puestos con demostración táctil y guion de exposición.",
+        "dua_ca": "Parades amb demostració tàctil i guió d'exposició.",
+        "metodologia_es": "aprendizaje cooperativo en formato feria.",
+        "metodologia_ca": "aprenentatge cooperatiu en format fira."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA4", "criterios": ["e"] },
-    "b": { "modulo": "1664", "ra": "RA3", "criterios": ["e", "a"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "a"
+      ]
+    },
     "justificacion_es": "El seguimiento de la evolución de la persona se beneficia de registros en la nube accesibles para todo el equipo.",
     "justificacion_ca": "El seguiment de l'evolució de la persona es beneficia de registres al núvol accessibles per a tot l'equip.",
     "actividades": [
@@ -84,12 +218,53 @@
         "dua_ca": "Escala visual d'estadis i esquema del núvol.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Evolución de la persona en la nube del equipo",
+        "titulo_ca": "Evolució de la persona al núvol de l'equip",
+        "contexto_es": "Un equipo de teleasistencia de Eivissa necesita que todos sus miembros consulten a la vez los datos de seguimiento de cada usuario.",
+        "contexto_ca": "Un equip de teleassistència d'Eivissa necessita que tots els membres consultin alhora les dades de seguiment de cada usuari.",
+        "desarrollo_es": "Aplican técnicas de observación a un caso simulado y registran los datos de evolución según el procedimiento (0217-4e). Distinguen los niveles de la nube donde podría alojarse el historial (1664-3a) y listan las ventajas de usarla en sistemas conectados (1664-3e).",
+        "desarrollo_ca": "Apliquen tècniques d'observació a un cas simulat i registren les dades d'evolució segons el procediment (0217-4e). Distingeixen els nivells del núvol on es podria allotjar l'historial (1664-3a) i llisten els avantatges d'usar-lo en sistemes connectats (1664-3e).",
+        "evidencia_es": "Registro de evolución y ficha de niveles de la nube.",
+        "evidencia_ca": "Registre d'evolució i fitxa de nivells del núvol.",
+        "dua_es": "Caso con imágenes de ejemplo y formulario por pasos.",
+        "dua_ca": "Cas amb imatges d'exemple i formulari per passos.",
+        "metodologia_es": "estudio de caso con rol de observador.",
+        "metodologia_ca": "estudi de cas amb rol d'observador."
+      },
+      {
+        "titulo_es": "Concurso sobre el historial en la nube",
+        "titulo_ca": "Concurs sobre l'historial al núvol",
+        "contexto_es": "El equipo de una residencia de Menorca debate si migra sus registros de seguimiento a un servicio en la nube.",
+        "contexto_ca": "L'equip d'una residència de Menorca debat si migra els registres de seguiment a un servei al núvol.",
+        "desarrollo_es": "Observan con una pauta a una persona simulada y registran su evolución (0217-4e). Después juegan a un concurso de preguntas sobre las ventajas de la nube en sistemas conectados (1664-3e) y sobre sus distintos niveles (1664-3a).",
+        "desarrollo_ca": "Observen amb una pauta una persona simulada i registren l'evolució (0217-4e). Després juguen a un concurs de preguntes sobre els avantatges del núvol en sistemes connectats (1664-3e) i sobre els seus diferents nivells (1664-3a).",
+        "evidencia_es": "Registro de observación y tablero de preguntas respondidas.",
+        "evidencia_ca": "Registre d'observació i tauler de preguntes contestades.",
+        "dua_es": "Preguntas con imagen y tiempo de respuesta adaptable.",
+        "dua_ca": "Preguntes amb imatge i temps de resposta adaptable.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA2", "criterios": ["g"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["e", "f"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
     "justificacion_es": "Usar los equipos de protección individual es a la vez un derecho y un deber del trabajador, y su gestión implica a los delegados de prevención.",
     "justificacion_ca": "Fer servir els equips de protecció individual és alhora un dret i un deure del treballador, i la seva gestió implica els delegats de prevenció.",
     "actividades": [
@@ -106,12 +281,52 @@
         "dua_ca": "Model d'escrit i esquema de l'organització preventiva.",
         "metodologia_es": "aprendizaje basado en casos.",
         "metodologia_ca": "aprenentatge basat en casos."
+      },
+      {
+        "titulo_es": "Asamblea de prevención en la residencia de Maó",
+        "titulo_ca": "Assemblea de prevenció a la residència de Maó",
+        "contexto_es": "En una residencia de Maó falta material de protección y las gerocultoras no saben a quién dirigirse.",
+        "contexto_ca": "En una residència de Maó falta material de protecció i les gerocultores no saben a qui adreçar-se.",
+        "desarrollo_es": "Adoptan medidas de prevención, seguridad y protección individual durante una práctica de aseo simulada (0217-2g). Después, en una asamblea con roles, determinan los derechos y deberes de la plantilla en prevención (1709-2e) y distinguen las formas de gestión de la prevención y la representación de las personas trabajadoras (1709-2f).",
+        "desarrollo_ca": "Adopten mesures de prevenció, seguretat i protecció individual durant una pràctica d'higiene simulada (0217-2g). Després, en una assemblea amb rols, determinen els drets i deures de la plantilla en prevenció (1709-2e) i distingeixen les formes de gestió de la prevenció i la representació de les persones treballadores (1709-2f).",
+        "evidencia_es": "Acta de la asamblea con la solicitud formal de material.",
+        "evidencia_ca": "Acta de l'assemblea amb la sol·licitud formal de material.",
+        "dua_es": "Roles con guion de partida y glosario de términos de prevención.",
+        "dua_ca": "Rols amb guió de partida i glossari de termes de prevenció.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Vídeo de acogida sobre equipos de protección",
+        "titulo_ca": "Vídeo d'acollida sobre equips de protecció",
+        "contexto_es": "Una residencia de Pollença incorpora a tres gerocultoras nuevas y quiere un recurso de acogida sobre protección personal.",
+        "contexto_ca": "Una residència de Pollença incorpora tres gerocultores noves i vol un recurs d'acollida sobre protecció personal.",
+        "desarrollo_es": "Preparan un vídeo que muestra cómo adoptar las medidas de prevención y protección individual durante la higiene de una persona (0217-2g). El vídeo explica los derechos y deberes en materia de prevención (1709-2e) y cómo se gestiona la prevención y se representa al personal en la empresa (1709-2f).",
+        "desarrollo_ca": "Preparen un vídeo que mostra com adoptar les mesures de prevenció i protecció individual durant la higiene d'una persona (0217-2g). El vídeo explica els drets i deures en matèria de prevenció (1709-2e) i com es gestiona la prevenció i es representa el personal a l'empresa (1709-2f).",
+        "evidencia_es": "Vídeo de acogida de dos minutos con su guion.",
+        "evidencia_ca": "Vídeo d'acollida de dos minuts amb el guió.",
+        "dua_es": "Vídeo subtitulado en dos idiomas y guion en lectura fácil.",
+        "dua_ca": "Vídeo subtitulat en dues llengües i guió en lectura fàcil.",
+        "metodologia_es": "aprendizaje basado en proyectos audiovisuales.",
+        "metodologia_ca": "aprenentatge basat en projectes audiovisuals."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA3", "criterios": ["f"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["h"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
     "justificacion_es": "Las medidas de protección frente a infecciones se completan con la vigilancia de la salud del personal, incluida la vacunación.",
     "justificacion_ca": "Les mesures de protecció davant infeccions es completen amb la vigilància de la salut del personal, inclosa la vacunació.",
     "actividades": [
@@ -128,12 +343,52 @@
         "dua_ca": "Infografia de mesures i pràctica amb EPI.",
         "metodologia_es": "simulación de crisis.",
         "metodologia_ca": "simulació de crisi."
+      },
+      {
+        "titulo_es": "Campaña de vigilancia de la salud del personal",
+        "titulo_ca": "Campanya de vigilància de la salut del personal",
+        "contexto_es": "La mutua de una residencia de Sant Josep ofrece reconocimientos médicos, pero casi nadie de la plantilla acude.",
+        "contexto_ca": "La mútua d'una residència de Sant Josep ofereix reconeixements mèdics, però quasi ningú de la plantilla hi va.",
+        "desarrollo_es": "Adoptan medidas de prevención, seguridad y protección individual al limpiar una habitación de aislamiento simulada (0217-3f). Con lo aprendido diseñan una campaña que explica los requisitos y condiciones de la vigilancia de la salud del personal y su importancia como medida preventiva (1709-2h).",
+        "desarrollo_ca": "Adopten mesures de prevenció, seguretat i protecció individual en netejar una habitació d'aïllament simulada (0217-3f). Amb allò après dissenyen una campanya que explica els requisits i condicions de la vigilància de la salut del personal i la importància com a mesura preventiva (1709-2h).",
+        "evidencia_es": "Cartel y mensaje de la campaña entregados a la residencia.",
+        "evidencia_ca": "Cartell i missatge de la campanya lliurats a la residència.",
+        "dua_es": "Cartel con pictogramas y versión en audio para el personal.",
+        "dua_ca": "Cartell amb pictogrames i versió en àudio per al personal.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Tertulia sobre el reconocimiento médico anual",
+        "titulo_ca": "Tertúlia sobre el reconeixement mèdic anual",
+        "contexto_es": "Una gerocultora de Inca duda si hacerse el reconocimiento médico que ofrece la empresa cada año.",
+        "contexto_ca": "Una gerocultora d'Inca dubta si fer-se el reconeixement mèdic que l'empresa ofereix cada any.",
+        "desarrollo_es": "Practican la secuencia correcta de equipos de protección al limpiar superficies contaminadas (0217-3f). Después debaten con casos anonimizados qué condiciones debe cumplir la vigilancia de la salud y por qué complementa la protección (1709-2h).",
+        "desarrollo_ca": "Practiquen la seqüència correcta d'equips de protecció en netejar superfícies contaminades (0217-3f). Després debaten amb casos anonimitzats quines condicions ha de complir la vigilància de la salut i per què complementa la protecció (1709-2h).",
+        "evidencia_es": "Decálogo de la vigilancia de la salud elaborado en grupo.",
+        "evidencia_ca": "Decàleg de la vigilància de la salut elaborat en grup.",
+        "dua_es": "Casos en formato audio y tarjetas de argumentos.",
+        "dua_ca": "Casos en format àudio i targetes d'arguments.",
+        "metodologia_es": "tertulia dialógica.",
+        "metodologia_ca": "tertúlia dialògica."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["i"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "i"
+      ]
+    },
     "justificacion_es": "Interpretar planes de cuidados con soltura abre itinerarios formativos hacia otros títulos sanitarios y sociales.",
     "justificacion_ca": "Interpretar plans de cures amb facilitat obre itineraris formatius cap a altres títols sanitaris i socials.",
     "actividades": [
@@ -150,12 +405,52 @@
         "dua_ca": "Pla amb colors per professional i mapa visual.",
         "metodologia_es": "aprendizaje orientador.",
         "metodologia_ca": "aprenentatge orientador."
+      },
+      {
+        "titulo_es": "Mapa de rutas formativas tras el plan de cuidados",
+        "titulo_ca": "Mapa de rutes formatives després del pla de cures",
+        "contexto_es": "Una alumna de Ibiza, tras trabajar un plan de cuidados en las prácticas, duda entre empezar a trabajar o seguir estudiando.",
+        "contexto_ca": "Una alumna d'Eivissa, després de treballar un pla de cures a les pràctiques, dubta entre començar a treballar o continuar estudiant.",
+        "desarrollo_es": "Interpretan un plan de cuidados individualizado y destacan las competencias que han usado (0217-1a). Con una orientadora identifican los itinerarios formativos relacionados con el perfil (1709-4i) y dibujan un mapa con las rutas posibles y sus pasarelas.",
+        "desarrollo_ca": "Interpreten un pla de cures individualitzat i destaquen les competències que han fet servir (0217-1a). Amb una orientadora identifiquen els itineraris formatius relacionats amb el perfil (1709-4i) i dibuixen un mapa amb les rutes possibles i les passarel·les.",
+        "evidencia_es": "Mapa de itinerarios con la ruta personal elegida.",
+        "evidencia_ca": "Mapa d'itineraris amb la ruta personal triada.",
+        "dua_es": "Mapa con iconos y entrevista guiada con la orientadora.",
+        "dua_ca": "Mapa amb icones i entrevista guiada amb l'orientadora.",
+        "metodologia_es": "design thinking aplicado a la orientación.",
+        "metodologia_ca": "design thinking aplicat a l'orientació."
+      },
+      {
+        "titulo_es": "Mesa redonda con antiguas alumnas",
+        "titulo_ca": "Taula rodona amb antigues alumnes",
+        "contexto_es": "El instituto invita a antiguas alumnas que hoy estudian enfermería o integración social en la UIB y en otros centros.",
+        "contexto_ca": "L'institut convida antigues alumnes que avui estudien infermeria o integració social a la UIB i en altres centres.",
+        "desarrollo_es": "Interpretan un plan de cuidados individualizado y detectan qué parte les motiva más, para preparar preguntas (0217-1a). Con los testimonios de la mesa redonda identifican los itinerarios formativos profesionales relacionados con su perfil (1709-4i).",
+        "desarrollo_ca": "Interpreten un pla de cures individualitzat i detecten quina part els motiva més, per preparar preguntes (0217-1a). Amb els testimonis de la taula rodona identifiquen els itineraris formatius professionals relacionats amb el seu perfil (1709-4i).",
+        "evidencia_es": "Cuaderno de la mesa redonda con los itinerarios anotados.",
+        "evidencia_ca": "Quadern de la taula rodona amb els itineraris anotats.",
+        "dua_es": "Preguntas en tarjetas y opción de formularlas por escrito.",
+        "dua_ca": "Preguntes en targetes i opció de formular-les per escrit.",
+        "metodologia_es": "aprendizaje con testimonios externos.",
+        "metodologia_ca": "aprenentatge amb testimonis externs."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA4", "criterios": ["g"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["c"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "El rigor en el control de la higiene es una de las actitudes profesionales que más valoran los empleadores del sector.",
     "justificacion_ca": "El rigor en el control de la higiene és una de les actituds professionals que més valoren els ocupadors del sector.",
     "actividades": [
@@ -172,12 +467,54 @@
         "dua_ca": "Testimoni enregistrat i escala d'autoavaluació.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Dilema del registro incompleto en el centro de día",
+        "titulo_ca": "Dilema del registre incomplet al centre de dia",
+        "contexto_es": "En un centro de día de Santa Margalida una técnica olvida anotar una cura y la supervisora debe decidir cómo reaccionar.",
+        "contexto_ca": "En un centre de dia de Santa Margalida una tècnica oblida anotar una cura i la supervisora ha de decidir com reaccionar.",
+        "desarrollo_es": "Dramatizan la situación y argumentan por qué el control y seguimiento de la atención higiénica mejora el bienestar de la persona usuaria (0217-4g). Reflexionan sobre las actitudes y aptitudes que el sector espera ante un registro incompleto y localizan las competencias personales y sociales que deben desarrollar (1709-1c).",
+        "desarrollo_ca": "Dramatitzen la situació i argumenten per què el control i seguiment de l'atenció higiènica millora el benestar de la persona usuària (0217-4g). Reflexionen sobre les actituds i aptituds que el sector espera davant un registre incomplet i localitzen les competències personals i socials que han de desenvolupar (1709-1c).",
+        "evidencia_es": "Guion dramatizado y lista de actitudes profesionales.",
+        "evidencia_ca": "Guió dramatitzat i llista d'actituds professionals.",
+        "dua_es": "Situaciones con guion de partida y observadores con pauta de escucha.",
+        "dua_ca": "Situacions amb guió de partida i observadors amb pauta d'escolta.",
+        "metodologia_es": "dramatización de dilemas.",
+        "metodologia_ca": "dramatització de dilemes."
+      },
+      {
+        "titulo_es": "Juego de situaciones para el perfil profesional",
+        "titulo_ca": "Joc de situacions per al perfil professional",
+        "contexto_es": "Una empresa de servicios sociales de Mallorca añade a sus procesos de selección una prueba de situaciones profesionales.",
+        "contexto_ca": "Una empresa de serveis socials de Mallorca afegeix als processos de selecció una prova de situacions professionals.",
+        "desarrollo_es": "Resuelven en equipo un juego de situaciones donde un control deficiente de la higiene perjudica el bienestar de la persona atendida (0217-4g). Con las decisiones tomadas elaboran un perfil de actitudes y aptitudes e identifican su zona de desarrollo próximo (1709-1c).",
+        "desarrollo_ca": "Resolen en equip un joc de situacions on un control deficient de la higiene perjudica el benestar de la persona atesa (0217-4g). Amb les decisions preses elaboren un perfil d'actituds i aptituds i identifiquen la zona de desenvolupament pròxim (1709-1c).",
+        "evidencia_es": "Perfil de actitudes con un plan de crecimiento personal.",
+        "evidencia_ca": "Perfil d'actituds amb un pla de creixement personal.",
+        "dua_es": "Situaciones con imágenes y tiempos de respuesta flexibles.",
+        "dua_ca": "Situacions amb imatges i temps de resposta flexibles.",
+        "metodologia_es": "gamificación con juego de situaciones.",
+        "metodologia_ca": "gamificació amb joc de situacions."
       }
     ]
   },
   {
-    "a": { "modulo": "1664", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["c", "d", "i"] },
+    "a": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "d",
+        "i"
+      ]
+    },
     "justificacion_es": "Las tecnologías habilitadoras que transforman el sector son también herramientas para construir el propio entorno de aprendizaje.",
     "justificacion_ca": "Les tecnologies habilitadores que transformen el sector són també eines per construir el propi entorn d'aprenentatge.",
     "actividades": [
@@ -194,12 +531,52 @@
         "dua_ca": "Exemples d'entorns d'aprenentatge i plantilla visual.",
         "metodologia_es": "aprendizaje autónomo guiado.",
         "metodologia_ca": "aprenentatge autònom guiat."
+      },
+      {
+        "titulo_es": "Tablero de vigilancia tecnológica de la dependencia",
+        "titulo_ca": "Tauler de vigilància tecnològica de la dependència",
+        "contexto_es": "Cada trimestre llegan al sector robots de compañía, sensores y aplicaciones nuevas, y el grupo quiere seguirlos sin perderse.",
+        "contexto_ca": "Cada trimestre arriben al sector robots de companyia, sensors i aplicacions noves, i el grup vol seguir-los sense perdre's.",
+        "desarrollo_es": "Identifican las tecnologías habilitadoras actuales que definen un sistema digitalizado de atención (1664-4a). Escogen herramientas y fuentes para un entorno personal de aprendizaje sobre ellas (1709-5c), lo configuran con su competencia digital (1709-5d) y diseñan el entorno que les llevará a su plan de desarrollo individual (1709-5i).",
+        "desarrollo_ca": "Identifiquen les tecnologies habilitadores actuals que defineixen un sistema digitalitzat d'atenció (1664-4a). Trien eines i fonts per a un entorn personal d'aprenentatge sobre aquestes (1709-5c), el configuren amb la competència digital (1709-5d) i dissenyen l'entorn que els portarà al pla de desenvolupament individual (1709-5i).",
+        "evidencia_es": "Tablero digital del entorno de aprendizaje configurado.",
+        "evidencia_ca": "Tauler digital de l'entorn d'aprenentatge configurat.",
+        "dua_es": "Tutoriales paso a paso y libertad para elegir la plataforma.",
+        "dua_ca": "Tutorials pas a pas i llibertat per triar la plataforma.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Círculos de estudio sobre dispositivos de teleasistencia",
+        "titulo_ca": "Cercles d'estudi sobre dispositius de teleassistència",
+        "contexto_es": "Un centro de teleasistencia de Palma anuncia nuevos dispositivos y pide a su plantilla que se forme por su cuenta.",
+        "contexto_ca": "Un centre de teleassistència de Palma anuncia nous dispositius i demana a la plantilla que es formi pel seu compte.",
+        "desarrollo_es": "Reconocen las tecnologías habilitadoras que caracterizan un sistema de teleasistencia digitalizado (1664-4a). Cada círculo prueba aplicaciones y comunidades en línea para su entorno de aprendizaje (1709-5c), practica su competencia digital configurándolo (1709-5d) y diseña el entorno con el que alcanzará su plan de desarrollo individual (1709-5i).",
+        "desarrollo_ca": "Reconeixen les tecnologies habilitadores que caracteritzen un sistema de teleassistència digitalitzat (1664-4a). Cada cercle prova aplicacions i comunitats en línia per a l'entorn d'aprenentatge (1709-5c), practica la competència digital configurant-lo (1709-5d) i dissenya l'entorn amb el qual assolirà el pla de desenvolupament individual (1709-5i).",
+        "evidencia_es": "Ruta de aprendizaje trimestral con recursos seleccionados.",
+        "evidencia_ca": "Ruta d'aprenentatge trimestral amb recursos seleccionats.",
+        "dua_es": "Plantillas de ruta con ejemplos y opción de trabajar en papel.",
+        "dua_ca": "Plantilles de ruta amb exemples i opció de treballar en paper.",
+        "metodologia_es": "círculos de estudio cooperativos.",
+        "metodologia_ca": "cercles d'estudi cooperatius."
       }
     ]
   },
   {
-    "a": { "modulo": "1664", "ra": "RA2", "criterios": ["e"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "a": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "La migración del sector a entornos 4.0 crea nuevos puestos para técnicos con competencias digitales.",
     "justificacion_ca": "La migració del sector a entorns 4.0 crea nous llocs per a tècnics amb competències digitals.",
     "actividades": [
@@ -216,12 +593,53 @@
         "dua_ca": "Ofertes reals seleccionades i glossari digital.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Radar de ofertas en entornos digitalizados",
+        "titulo_ca": "Radar d'ofertes en entorns digitalitzats",
+        "contexto_es": "Tres residencias de Mallorca anuncian que migran a entornos 4.0 y publican vacantes con perfiles nuevos.",
+        "contexto_ca": "Tres residències de Mallorca anuncien que migren a entorns 4.0 i publiquen vacants amb perfils nous.",
+        "desarrollo_es": "Relacionan casos de migración a entornos 4.0 con la mejora de los resultados de las empresas (1664-2e). Con ofertas reales analizan las oportunidades de empleo que surgen y los requisitos actuales para el perfil (1709-1a).",
+        "desarrollo_ca": "Relacionen casos de migració a entorns 4.0 amb la millora dels resultats de les empreses (1664-2e). Amb ofertes reals analitzen les oportunitats d'ocupació que sorgeixen i els requisits actuals per al perfil (1709-1a).",
+        "evidencia_es": "Radar con ofertas clasificadas por requisitos.",
+        "evidencia_ca": "Radar amb ofertes classificades per requisits.",
+        "dua_es": "Ofertas en tarjetas con colores por tipo de requisito.",
+        "dua_ca": "Ofertes en targetes amb colors per tipus de requisit.",
+        "metodologia_es": "aprendizaje basado en el análisis de datos.",
+        "metodologia_ca": "aprenentatge basat en l'anàlisi de dades."
+      },
+      {
+        "titulo_es": "Visita de una empresa de domótica asistencial",
+        "titulo_ca": "Visita d'una empresa de domòtica assistencial",
+        "contexto_es": "Una empresa de domótica asistencial de Ibiza visita el instituto para explicar cómo creció tras digitalizarse.",
+        "contexto_ca": "Una empresa de domòtica assistencial d'Eivissa visita l'institut per explicar com va créixer després de digitalitzar-se.",
+        "desarrollo_es": "Preparan preguntas para saber cómo la migración a entornos 4.0 mejoró los resultados de la empresa (1664-2e). A partir de las respuestas analizan qué oportunidades de empleo y requisitos del perfil han aparecido en el sector (1709-1a).",
+        "desarrollo_ca": "Preparen preguntes per saber com la migració a entorns 4.0 va millorar els resultats de l'empresa (1664-2e). A partir de les respostes analitzen quines oportunitats d'ocupació i requisits del perfil han aparegut al sector (1709-1a).",
+        "evidencia_es": "Crónica de la visita con una tabla de requisitos del perfil.",
+        "evidencia_ca": "Crònica de la visita amb una taula de requisits del perfil.",
+        "dua_es": "Preguntas preparadas por equipos y crónica admitida en formato audio.",
+        "dua_ca": "Preguntes preparades per equips i crònica admesa en format àudio.",
+        "metodologia_es": "aprendizaje con experto invitado.",
+        "metodologia_ca": "aprenentatge amb expert convidat."
       }
     ]
   },
   {
-    "a": { "modulo": "1664", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["e", "f"] },
+    "a": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
     "justificacion_es": "La identidad digital profesional se construye sobre servicios en la nube, y conviene saber en qué nivel se guarda cada huella.",
     "justificacion_ca": "La identitat digital professional es construeix sobre serveis al núvol, i convé saber en quin nivell es guarda cada empremta.",
     "actividades": [
@@ -238,12 +656,53 @@
         "dua_ca": "Llista de comprovació de privacitat.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Mapa de niveles de la nube y mi huella",
+        "titulo_ca": "Mapa de nivells del núvol i la meva petjada",
+        "contexto_es": "Una alumna descubre que su cuenta de mensajería comparte con un enlace público la carpeta de fotos de una fiesta.",
+        "contexto_ca": "Una alumna descobreix que el seu compte de missatgeria comparteix amb un enllaç públic la carpeta de fotos d'una festa.",
+        "desarrollo_es": "Clasifican en qué nivel de la nube se guardan su correo, sus redes, su almacenamiento y sus herramientas de trabajo (1664-3a). Analizan cómo la identidad digital resultante influye en su empleabilidad (1709-5e) y justifican el diseño de un entorno de aprendizaje que la mejora (1709-5f).",
+        "desarrollo_ca": "Classifiquen en quin nivell del núvol es guarden el correu, les xarxes, l'emmagatzematge i les eines de treball (1664-3a). Analitzen com la identitat digital resultant influeix en l'ocupabilitat (1709-5e) i justifiquen el disseny d'un entorn d'aprenentatge que la millora (1709-5f).",
+        "evidencia_es": "Mapa de la huella digital con un plan de mejora.",
+        "evidencia_ca": "Mapa de la petjada digital amb un pla de millora.",
+        "dua_es": "Mapa con iconos de servicios y asesoría individual breve.",
+        "dua_ca": "Mapa amb icones de serveis i assessorament individual breu.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Tres candidatos y su identidad digital",
+        "titulo_ca": "Tres candidats i la seva identitat digital",
+        "contexto_es": "En unas jornadas de empleo en Manacor, una orientadora propone cuidar el perfil profesional en línea antes de buscar trabajo.",
+        "contexto_ca": "En unes jornades d'ocupació a Manacor, una orientadora proposa cuidar el perfil professional en línia abans de cercar feina.",
+        "desarrollo_es": "Identifican los niveles de la nube en los que se alojan sus perfiles y documentos (1664-3a). Estudian el caso de tres candidatos ficticios para analizar el impacto de su identidad digital en la empleabilidad (1709-5e) y justifican el entorno de aprendizaje que construirían para mejorarla (1709-5f).",
+        "desarrollo_ca": "Identifiquen els nivells del núvol on s'allotgen els perfils i documents (1664-3a). Estudien el cas de tres candidats fictici per analitzar l'impacte de la seva identitat digital en l'ocupabilitat (1709-5e) i justifiquen l'entorn d'aprenentatge que construirien per millorar-la (1709-5f).",
+        "evidencia_es": "Informe del caso con recomendaciones para cada candidato.",
+        "evidencia_ca": "Informe del cas amb recomanacions per a cada candidat.",
+        "dua_es": "Casos en audio y plantilla de recomendaciones.",
+        "dua_ca": "Casos en àudio i plantilla de recomanacions.",
+        "metodologia_es": "estudio de casos.",
+        "metodologia_ca": "estudi de casos."
       }
     ]
   },
   {
-    "a": { "modulo": "1664", "ra": "RA5", "criterios": ["a", "h"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["c"] },
+    "a": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Un plan de transformación digital debe indicar cómo cambia la organización del trabajo y qué derechos afecta.",
     "justificacion_ca": "Un pla de transformació digital ha d'indicar com canvia l'organització de la feina i quins drets afecta.",
     "actividades": [
@@ -260,12 +719,52 @@
         "dua_ca": "Diagrama guiat i fitxes de drets.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Residencia clásica y residencia digital en bloques",
+        "titulo_ca": "Residència clàssica i residència digital en blocs",
+        "contexto_es": "Una residencia de Llucmajor planea pasar del control en papel a tabletas y quiere explicar a la plantilla qué cambiará.",
+        "contexto_ca": "Una residència de Llucmajor planeja passar del control en paper a tauletes i vol explicar a la plantilla què canviarà.",
+        "desarrollo_es": "Definen a nivel de bloques el funcionamiento de la residencia clásica (1664-5a) y documentan la secuencia del plan de transformación y los recursos empleados (1664-5h). Revisan después qué nuevos entornos de organización del trabajo aparecen y qué derechos conllevan (1709-3c).",
+        "desarrollo_ca": "Defineixen a nivell de blocs el funcionament de la residència clàssica (1664-5a) i documenten la seqüència del pla de transformació i els recursos emprats (1664-5h). Revisen després quins nous entorns d'organització del treball apareixen i quins drets comporten (1709-3c).",
+        "evidencia_es": "Diagrama de bloques y documento de secuencia con un apartado laboral.",
+        "evidencia_ca": "Diagrama de blocs i document de seqüència amb un apartat laboral.",
+        "dua_es": "Plantilla de diagrama con bloques prediseñados y lista de verificación.",
+        "dua_ca": "Plantilla de diagrama amb blocs predissenyats i llista de verificació.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Asamblea de plantilla ante el plan digital",
+        "titulo_ca": "Assemblea de plantilla davant el pla digital",
+        "contexto_es": "La dirección de un centro de día de Ibiza presenta a su plantilla un plan de digitalización con teletrabajo parcial para la administración.",
+        "contexto_ca": "La direcció d'un centre de dia d'Eivissa presenta a la plantilla un pla de digitalització amb teletreball parcial per a l'administració.",
+        "desarrollo_es": "En una asamblea con roles de dirección, plantilla y representantes, dibujan en bloques el funcionamiento clásico del centro (1664-5a) y presentan un documento con la secuencia del plan y los recursos (1664-5h). La plantilla debate qué nuevos entornos de organización del trabajo supone y qué derechos conllevan (1709-3c).",
+        "desarrollo_ca": "En una assemblea amb rols de direcció, plantilla i representants, dibuixen en blocs el funcionament clàssic del centre (1664-5a) i presenten un document amb la seqüència del pla i els recursos (1664-5h). La plantilla debat quins nous entorns d'organització del treball suposa i quins drets comporten (1709-3c).",
+        "evidencia_es": "Acta de la asamblea y documento del plan presentado.",
+        "evidencia_ca": "Acta de l'assemblea i document del pla presentat.",
+        "dua_es": "Roles con guion y turnos de palabra moderados.",
+        "dua_ca": "Rols amb guió i torns de paraula moderats.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0217", "ra": "RA3", "criterios": ["e"] },
-    "b": { "modulo": "1664", "ra": "RA5", "criterios": ["g"] },
+    "a": {
+      "modulo": "0217",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Digitalizar la gestión de residuos sanitarios mejora su trazabilidad y reduce la cantidad que se genera.",
     "justificacion_ca": "Digitalitzar la gestió de residus sanitaris en millora la traçabilitat i redueix la quantitat que se'n genera.",
     "actividades": [
@@ -282,6 +781,34 @@
         "dua_ca": "Esquema del circuit de residus amb colors.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Pesaje y trazabilidad de los residuos del material",
+        "titulo_ca": "Pesatge i traçabilitat dels residus del material",
+        "contexto_es": "Una residencia de Sóller quiere reducir lo que paga por la recogida de residuos sanitarios.",
+        "contexto_ca": "Una residència de Sóller vol reduir el que paga per la recollida de residus sanitaris.",
+        "desarrollo_es": "Aplican métodos de limpieza, desinfección y esterilización de material de uso común respetando la normativa de residuos (0217-3e) y cuantifican los residuos que genera cada método. Proponen sensores y registros digitales que mejoren la producción y gestión de esos residuos (1664-5g).",
+        "desarrollo_ca": "Apliquen mètodes de neteja, desinfecció i esterilització de material d'ús comú respectant la normativa de residus (0217-3e) i quantifiquen els residus que genera cada mètode. Proposen sensors i registres digitals que millorin la producció i gestió d'aquests residus (1664-5g).",
+        "evidencia_es": "Cuadro de residuos por método con una propuesta digital.",
+        "evidencia_ca": "Quadre de residus per mètode amb una proposta digital.",
+        "dua_es": "Tablas con unidades indicadas y calculadora disponible.",
+        "dua_ca": "Taules amb unitats indicades i calculadora disponible.",
+        "metodologia_es": "aprendizaje basado en datos.",
+        "metodologia_ca": "aprenentatge basat en dades."
+      },
+      {
+        "titulo_es": "Prototipo digital para generar menos residuos",
+        "titulo_ca": "Prototip digital per generar menys residus",
+        "contexto_es": "La comisión de calidad de un centro sociosanitario de Eivissa pide ideas para generar menos residuos.",
+        "contexto_ca": "La comissió de qualitat d'un centre sociosanitari d'Eivissa demana idees per generar menys residus.",
+        "desarrollo_es": "Entrevistan al personal de limpieza y esterilización para entender cómo aplican los métodos y controles de calidad según la normativa de residuos (0217-3e). Prototipan una herramienta digital que mejore la producción y gestión de residuos del centro (1664-5g).",
+        "desarrollo_ca": "Entrevisten el personal de neteja i esterilització per entendre com apliquen els mètodes i controls de qualitat segons la normativa de residus (0217-3e). Prototipen una eina digital que millori la producció i gestió de residus del centre (1664-5g).",
+        "evidencia_es": "Prototipo de la herramienta y presentación breve.",
+        "evidencia_ca": "Prototip de l'eina i presentació breu.",
+        "dua_es": "Entrevistas con guion previo y prototipo en papel o en formato digital.",
+        "dua_ca": "Entrevistes amb guió previ i prototip en paper o en format digital.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
       }
     ]
   }

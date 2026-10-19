@@ -1,7 +1,19 @@
 [
   {
-    "a": { "modulo": "0212", "ra": "RA1", "criterios": ["b"] },
-    "b": { "modulo": "0213", "ra": "RA3", "criterios": ["e"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Conocer qué habilidades de autonomía tiene la persona es el punto de partida de las actividades para mantenerlas.",
     "justificacion_ca": "Conèixer quines habilitats d'autonomia té la persona és el punt de partida de les activitats per mantenir-les.",
     "actividades": [
@@ -18,12 +30,53 @@
         "dua_ca": "Materials reals de diferents mides i fitxes amb imatges.",
         "metodologia_es": "taller por estaciones.",
         "metodologia_ca": "taller per estacions."
+      },
+      {
+        "titulo_es": "Qué sabe hacer Ana: observación y plan de mantenimiento",
+        "titulo_ca": "Què sap fer na Ana: observació i pla de manteniment",
+        "contexto_es": "Ana, de 78 años, vive en una residencia de Sant Josep y su familia quiere que conserve sus habilidades diarias.",
+        "contexto_ca": "Na Ana, de 78 anys, viu en una residència de Sant Josep i la seva família vol que conservi les seves habilitats diàries.",
+        "desarrollo_es": "Observan un vídeo de Ana en su rutina y caracterizan sus habilidades de autonomía personal (0212-1b). Con ese perfil diseñan y ponen en práctica una sesión de actividades para mantener y mejorar su autonomía (0213-3e).",
+        "desarrollo_ca": "Observen un vídeo d'Ana en la seva rutina i en caracteritzen les habilitats d'autonomia personal (0212-1b). Amb aquest perfil dissenyen i posen en pràctica una sessió d'activitats per mantenir i millorar la seva autonomia (0213-3e).",
+        "evidencia_es": "Perfil de habilidades de Ana y sesión de actividades diseñada y aplicada.",
+        "evidencia_ca": "Perfil d'habilitats d'Ana i sessió d'activitats dissenyada i aplicada.",
+        "dua_es": "Vídeo con subtítulos y plantilla de observación con las habilidades ya listadas.",
+        "dua_ca": "Vídeo amb subtítols i plantilla d'observació amb les habilitats ja llistades.",
+        "metodologia_es": "estudio de caso con vídeo.",
+        "metodologia_ca": "estudi de cas amb vídeo."
+      },
+      {
+        "titulo_es": "Diseñamos el juego de mesa de la autonomía",
+        "titulo_ca": "Dissenyem el joc de taula de l'autonomia",
+        "contexto_es": "Un centro de día de Santa Eulària organiza una tarde de juegos con personas mayores.",
+        "contexto_ca": "Un centre de dia de Santa Eulària organitza una tarda de jocs amb persones grans.",
+        "desarrollo_es": "Crean un juego de mesa cuyas casillas representan habilidades de autonomía personal, que caracterizan con ejemplos de la vida cotidiana (0212-1b). Lo juegan con otro grupo como actividad de mantenimiento y mejora de la autonomía y recogen cómo ha funcionado (0213-3e).",
+        "desarrollo_ca": "Creen un joc de taula les caselles del qual representen habilitats d'autonomia personal, que caracteritzen amb exemples de la vida quotidiana (0212-1b). El juguen amb un altre grup com a activitat de manteniment i millora de l'autonomia i recullen com ha funcionat (0213-3e).",
+        "evidencia_es": "Juego de mesa terminado y hoja de valoración tras la partida.",
+        "evidencia_ca": "Joc de taula acabat i full de valoració després de la partida.",
+        "dua_es": "Reglas en lectura fácil y casillas con imágenes grandes.",
+        "dua_ca": "Regles en lectura fàcil i caselles amb imatges grans.",
+        "metodologia_es": "diseño de un juego de mesa.",
+        "metodologia_ca": "disseny d'un joc de taula."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["f"] },
-    "b": { "modulo": "0213", "ra": "RA1", "criterios": ["e", "d"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA1",
+      "criterios": [
+        "e",
+        "d"
+      ]
+    },
     "justificacion_es": "La adaptación de la persona mayor al ingreso mejora si su habitación tiene objetos propios y si ella y su familia saben cómo usar los espacios.",
     "justificacion_ca": "L'adaptació de la persona gran a l'ingrés millora si la seva habitació té objectes propis i si ella i la seva família saben com fer servir els espais.",
     "actividades": [
@@ -40,12 +93,53 @@
         "dua_ca": "Banc d'imatges d'habitacions i plantilla de guió.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Bienvenida navideña para Mercè",
+        "titulo_ca": "Benvinguda nadalenca per a na Mercè",
+        "contexto_es": "Una residencia de Sineu recibe en diciembre a Mercè, que llega con miedo a un entorno desconocido.",
+        "contexto_ca": "Una residència de Sineu rep al desembre na Mercè, que arriba amb por a un entorn desconegut.",
+        "desarrollo_es": "Describen las conductas y comportamientos característicos de las personas mayores durante la adaptación al servicio y al profesional de referencia (0212-2f). Decoran un espacio del aula adaptándolo a la persona, al calendario y al entorno cultural (0213-1e) y orientan a la familia sobre espacios y materiales que favorezcan su desenvolvimiento autónomo (0213-1d).",
+        "desarrollo_ca": "Descriuen les conductes i comportaments característics de les persones grans durant l'adaptació al servei i al professional de referència (0212-2f). Decoren un espai de l'aula adaptant-lo a la persona, al calendari i a l'entorn cultural (0213-1e) i orienten la família sobre espais i materials que afavoreixin el seu desenvolupament autònom (0213-1d).",
+        "evidencia_es": "Espacio decorado y guía breve para la familia sobre espacios y materiales.",
+        "evidencia_ca": "Espai decorat i guia breu per a la família sobre espais i materials.",
+        "dua_es": "Elección del material decorativo y guía para la familia con pictogramas.",
+        "dua_ca": "Elecció del material decoratiu i guia per a la família amb pictogrames.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Dramatización del primer día en el centro de día",
+        "titulo_ca": "Dramatització del primer dia al centre de dia",
+        "contexto_es": "En un centro de día de Ciutadella, el primer día de Joan Josep genera inquietud en su hija cuidadora.",
+        "contexto_ca": "En un centre de dia de Ciutadella, el primer dia d'en Joan Josep genera inquietud en la seva filla cuidadora.",
+        "desarrollo_es": "Ensayan la acogida con un compañero que representa el período de adaptación, mostrando las conductas características que un mayor presenta esos días (0212-2f). El técnico orienta al usuario y a su hija sobre espacios y materiales que favorecen su autonomía y su convivencia (0213-1d) y propone cambios en la decoración según el programa de actividades (0213-1e).",
+        "desarrollo_ca": "Assagen l'acollida amb un company que representa el període d'adaptació, mostrant les conductes característiques que una persona gran presenta aquests dies (0212-2f). El tècnic orienta l'usuari i la seva filla sobre espais i materials que afavoreixen la seva autonomia i la seva convivència (0213-1d) i proposa canvis en la decoració segons el programa d'activitats (0213-1e).",
+        "evidencia_es": "Guion de la dramatización y lista de cambios propuestos en el espacio.",
+        "evidencia_ca": "Guió de la dramatització i llista de canvis proposats a l'espai.",
+        "dua_es": "Rotación de papeles y guion con frases modelo para la acogida.",
+        "dua_ca": "Rotació de papers i guió amb frases model per a l'acollida.",
+        "metodologia_es": "dramatización (juego de rol).",
+        "metodologia_ca": "dramatització (joc de rol)."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["h", "d"] },
-    "b": { "modulo": "0213", "ra": "RA2", "criterios": ["g"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "h",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Comprender cómo la enfermedad mental influye en la conducta es imprescindible para aplicar técnicas de modificación de conducta sin culpabilizar.",
     "justificacion_ca": "Comprendre com la malaltia mental influeix en la conducta és imprescindible per aplicar tècniques de modificació de conducta sense culpabilitzar.",
     "actividades": [
@@ -62,12 +156,53 @@
         "dua_ca": "Guió de rol i opció de participar com a observador amb plantilla.",
         "metodologia_es": "juego de rol con análisis.",
         "metodologia_ca": "joc de rol amb anàlisi."
+      },
+      {
+        "titulo_es": "Diario de Carmen, con trastorno bipolar",
+        "titulo_ca": "Diari de la Carme, amb trastorn bipolar",
+        "contexto_es": "En un centro de día de Manacor, Carmen alterna semanas de mucha energía con semanas en que no sale de casa, y sus compañeros creen que lo hace por pereza.",
+        "contexto_ca": "En un centre de dia de Manacor, la Carme alterna setmanes de molta energia amb setmanes en què no surt de casa, i els companys creuen que ho fa per mandra.",
+        "desarrollo_es": "Con un diario simulado de seis semanas, el alumnado detecta cómo la enfermedad modifica el comportamiento de Carmen (0212-4h) y cómo condiciona sus relaciones y su autonomía (0212-4d). Después propone, en equipo, un registro de conductas y una técnica de modificación de conducta con refuerzo positivo, además de una pauta para resolver los roces en el grupo (0213-2g).",
+        "desarrollo_ca": "Amb un diari simulat de sis setmanes, l'alumnat detecta com la malaltia modifica el comportament de la Carme (0212-4h) i com condiciona les seves relacions i la seva autonomia (0212-4d). Després proposa, en equip, un registre de conductes i una tècnica de modificació de conducta amb reforç positiu, a més d'una pauta per resoldre les friccions al grup (0213-2g).",
+        "evidencia_es": "Diario analizado con registro de conductas y propuesta de refuerzo.",
+        "evidencia_ca": "Diari analitzat amb registre de conductes i proposta de reforç.",
+        "dua_es": "Diario en texto, en audio o con viñetas, a elección del equipo.",
+        "dua_ca": "Diari en text, en àudio o amb vinyetes, a elecció de l'equip.",
+        "metodologia_es": "estudio de caso con trabajo cooperativo.",
+        "metodologia_ca": "estudi de cas amb treball cooperatiu."
+      },
+      {
+        "titulo_es": "Reto de la convivencia en la vivienda tutelada",
+        "titulo_ca": "Repte de la convivència a l'habitatge tutelat",
+        "contexto_es": "Una vivienda tutelada de Palma con tres inquilinos con trastornos mentales recibe quejas vecinales por ruidos nocturnos y discusiones por el uso de la cocina.",
+        "contexto_ca": "Un habitatge tutelat de Palma amb tres llogaters amb trastorns mentals rep queixes veïnals per sorolls nocturns i discussions per l'ús de la cuina.",
+        "desarrollo_es": "Tras ver en casa un vídeo breve sobre trastornos mentales, el alumnado explica en clase cómo las enfermedades alteran la vida personal y social de los inquilinos (0212-4d) y por qué sus conductas no son una provocación (0212-4h). Luego diseña un reto de convivencia con normas pactadas y recursos de mediación (0213-2g).",
+        "desarrollo_ca": "Després de veure a casa un vídeo breu sobre trastorns mentals, l'alumnat explica a classe com les malalties alteren la vida personal i social dels llogaters (0212-4d) i per què les seves conductes no són una provocació (0212-4h). Tot seguit dissenya un repte de convivència amb normes pactades i recursos de mediació (0213-2g).",
+        "evidencia_es": "Carta de convivencia ilustrada con protocolo de mediación.",
+        "evidencia_ca": "Carta de convivència il·lustrada amb protocol de mediació.",
+        "dua_es": "Vídeo con subtítulos y guion de preguntas previo para anticipar los contenidos.",
+        "dua_ca": "Vídeo amb subtítols i guió de preguntes previ per anticipar els continguts.",
+        "metodologia_es": "clase invertida y aprendizaje basado en retos.",
+        "metodologia_ca": "classe invertida i aprenentatge basat en reptes."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["a"] },
-    "b": { "modulo": "0213", "ra": "RA3", "criterios": ["a", "h"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "h"
+      ]
+    },
     "justificacion_es": "Los cambios del envejecimiento afectan a la motivación y al modo de aprender, y las actividades deben tenerlos en cuenta.",
     "justificacion_ca": "Els canvis de l'envelliment afecten la motivació i la manera d'aprendre, i les activitats els han de tenir en compte.",
     "actividades": [
@@ -84,12 +219,53 @@
         "dua_ca": "Simulador de pèrdua auditiva i plantilla de sessió.",
         "metodologia_es": "pensamiento de diseño.",
         "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Estaciones de memoria para mayores de Sóller",
+        "titulo_ca": "Estacions de memòria per a grans de Sóller",
+        "contexto_es": "El hogar de personas mayores de Sóller quiere renovar su programa de estimulación y empezar con una sesión de prueba para ver qué motiva a cada grupo.",
+        "contexto_ca": "La llar de persones grans de Sóller vol renovar el seu programa d'estimulació i començar amb una sessió de prova per veure què motiva cada grup.",
+        "desarrollo_es": "El alumnado explica los cambios del envejecimiento que dificultan la vida diaria (0212-2a), recorre tres estaciones donde compara cómo aprenden y se motivan una persona mayor, otra con discapacidad y otra enferma (0213-3a). A partir de lo observado, organiza una sesión de ejercicios de memoria y aplica técnicas de refuerzo y de elección guiada para que cada participante se implique (0213-3h).",
+        "desarrollo_ca": "L'alumnat explica els canvis de l'envelliment que dificulten la vida diària (0212-2a), recorre tres estacions on compara com aprenen i es motiven una persona gran, una altra amb discapacitat i una altra malalta (0213-3a). A partir del que ha observat, organitza una sessió d'exercicis de memòria i aplica tècniques de reforç i d'elecció guiada perquè cada participant s'hi impliqui (0213-3h).",
+        "evidencia_es": "Fichas de observación por estación y guion de la sesión de memoria.",
+        "evidencia_ca": "Fitxes d'observació per estació i guió de la sessió de memòria.",
+        "dua_es": "Estaciones con consignas en lectura fácil y pictogramas.",
+        "dua_ca": "Estacions amb consignes en lectura fàcil i pictogrames.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
+      },
+      {
+        "titulo_es": "Concurso de recuerdos con puntos y premios",
+        "titulo_ca": "Concurs de records amb punts i premis",
+        "contexto_es": "En la residencia de Felanitx, los residentes abandonan los ejercicios cognitivos a los diez minutos porque los consideran infantiles.",
+        "contexto_ca": "A la residència de Felanitx, els residents abandonen els exercicis cognitius als deu minuts perquè els consideren infantils.",
+        "desarrollo_es": "El alumnado relaciona los cambios del envejecimiento con las dificultades diarias (0212-2a) y describe qué factores de la edad, la discapacidad o la enfermedad cambian el interés y el ritmo de aprendizaje de los residentes (0213-3a). Con esos datos crea un concurso de recuerdos con puntuación cooperativa y recompensas simbólicas, y justifica cada elemento como técnica de motivación (0213-3h).",
+        "desarrollo_ca": "L'alumnat relaciona els canvis de l'envelliment amb les dificultats diàries (0212-2a) i descriu quins factors de l'edat, la discapacitat o la malaltia canvien l'interès i el ritme d'aprenentatge dels residents (0213-3a). Amb aquestes dades crea un concurs de records amb puntuació cooperativa i recompenses simbòliques, i justifica cada element com a tècnica de motivació (0213-3h).",
+        "evidencia_es": "Reglas del concurso y tabla que vincula cada elemento con una técnica de motivación.",
+        "evidencia_ca": "Regles del concurs i taula que vincula cada element amb una tècnica de motivació.",
+        "dua_es": "Preguntas del concurso con tres niveles de dificultad y apoyo visual.",
+        "dua_ca": "Preguntes del concurs amb tres nivells de dificultat i suport visual.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA3", "criterios": ["c"] },
-    "b": { "modulo": "0213", "ra": "RA2", "criterios": ["a", "c"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
     "justificacion_es": "Las necesidades sociales de las personas con discapacidad orientan qué recursos y técnicas se eligen para desarrollar sus habilidades sociales.",
     "justificacion_ca": "Les necessitats socials de les persones amb discapacitat orienten quins recursos i tècniques es trien per desenvolupar-ne les habilitats socials.",
     "actividades": [
@@ -106,12 +282,54 @@
         "dua_ca": "Mapa de relacions amb cercles concèntrics i pictogrames.",
         "metodologia_es": "aprendizaje cooperativo.",
         "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Juego de rol en la asociación de Down de Ibiza",
+        "titulo_ca": "Joc de rol a l'associació de Down d'Eivissa",
+        "contexto_es": "Una asociación de Ibiza organiza un encuentro de jóvenes con síndrome de Down que casi no tienen amistades fuera de su grupo de apoyo.",
+        "contexto_ca": "Una associació d'Eivissa organitza una trobada de joves amb síndrome de Down que gairebé no tenen amistats fora del seu grup de suport.",
+        "desarrollo_es": "El alumnado interpreta situaciones del encuentro para detectar qué necesidades psicológicas y sociales tienen estos jóvenes (0212-3c) y cuáles son las necesidades de sus relaciones personales (0213-2a). Después elige y prueba recursos y estrategias para entrenar habilidades como saludar, iniciar una conversación o pedir ayuda (0213-2c).",
+        "desarrollo_ca": "L'alumnat interpreta situacions de la trobada per detectar quines necessitats psicològiques i socials tenen aquests joves (0212-3c) i quines són les necessitats de les seves relacions personals (0213-2a). Després tria i prova recursos i estratègies per entrenar habilitats com saludar, iniciar una conversa o demanar ajuda (0213-2c).",
+        "evidencia_es": "Guion de las escenas y ficha de estrategias probadas.",
+        "evidencia_ca": "Guió de les escenes i fitxa d'estratègies provades.",
+        "dua_es": "Escenas con tarjetas de apoyo y turnos de observación con rúbrica visual.",
+        "dua_ca": "Escenes amb targetes de suport i torns d'observació amb rúbrica visual.",
+        "metodologia_es": "juego de rol y aprendizaje cooperativo.",
+        "metodologia_ca": "joc de rol i aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Tertulia sobre soledad y discapacidad",
+        "titulo_ca": "Tertúlia sobre soledat i discapacitat",
+        "contexto_es": "En un instituto de Inca, la tutora propone una tertulia con un grupo de jóvenes del centro ocupacional del municipio para hablar de la soledad no deseada.",
+        "contexto_ca": "En un institut d'Inca, la tutora proposa una tertúlia amb un grup de joves del centre ocupacional del municipi per parlar de la solitud no desitjada.",
+        "desarrollo_es": "Tras entrevistar a los jóvenes con preguntas preparadas, el alumnado resume sus necesidades psicológicas y sociales (0212-3c) y las relaciona con lo que necesitan para sentirse acompañados en su vida social (0213-2a). Con ello elabora un catálogo de recursos y técnicas que podrían ayudarles a ampliar su círculo (0213-2c).",
+        "desarrollo_ca": "Després d'entrevistar els joves amb preguntes preparades, l'alumnat resumeix les seves necessitats psicològiques i socials (0212-3c) i les relaciona amb el que necessiten per sentir-se acompanyats en la seva vida social (0213-2a). Amb això elabora un catàleg de recursos i tècniques que els podrien ajudar a ampliar el seu cercle (0213-2c).",
+        "evidencia_es": "Resumen de la tertulia y catálogo de recursos sociales.",
+        "evidencia_ca": "Resum de la tertúlia i catàleg de recursos socials.",
+        "dua_es": "Entrevistas con pregunta escrita, oral o con imágenes, según preferencia del joven.",
+        "dua_ca": "Entrevistes amb pregunta escrita, oral o amb imatges, segons la preferència del jove.",
+        "metodologia_es": "tertulia dialógica y entrevista.",
+        "metodologia_ca": "tertúlia dialògica i entrevista."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["e", "b"] },
-    "b": { "modulo": "0213", "ra": "RA3", "criterios": ["b", "d"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "d"
+      ]
+    },
     "justificacion_es": "Las necesidades de una persona con demencia orientan las estrategias y los materiales de estimulación cognitiva.",
     "justificacion_ca": "Les necessitats d'una persona amb demència orienten les estratègies i els materials d'estimulació cognitiva.",
     "actividades": [
@@ -128,12 +346,53 @@
         "dua_ca": "Elecció de l'ofici de l'usuari i materials reciclats.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Rincón de la abuela Aina que olvida sus cosas",
+        "titulo_ca": "Racó de l'àvia Aina que oblida les seves coses",
+        "contexto_es": "Aina, con demencia leve, vive en un pueblo de Mallorca y se angustia cuando no encuentra sus objetos de siempre; la residencia quiere crear en su habitación un espacio que la tranquilice.",
+        "contexto_ca": "L'Aina, amb demència lleu, viu en un poble de Mallorca i s'angoixa quan no troba els seus objectes de sempre; la residència vol crear a la seva habitació un espai que la tranquil·litzi.",
+        "desarrollo_es": "El alumnado identifica qué necesidades asistenciales y psicosociales plantea la demencia (0212-4e) y qué características psicológicas y sociales tiene Aina (0212-4b). Después elige estrategias de estimulación cognitiva y construye con materiales sencillos y originales un rincón de recuerdos que mantenga sus capacidades (0213-3b) (0213-3d).",
+        "desarrollo_ca": "L'alumnat identifica quines necessitats assistencials i psicosocials planteja la demència (0212-4e) i quines característiques psicològiques i socials té l'Aina (0212-4b). Després tria estratègies d'estimulació cognitiva i construeix amb materials senzills i originals un racó de records que mantingui les seves capacitats (0213-3b) (0213-3d).",
+        "evidencia_es": "Rincón de recuerdos montado y memoria justificativa de las estrategias.",
+        "evidencia_ca": "Racó de records muntat i memòria justificativa de les estratègies.",
+        "dua_es": "Montaje con materiales a elegir y opción de entregar la memoria en vídeo.",
+        "dua_ca": "Muntatge amb materials a escollir i opció de lliurar la memòria en vídeo.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Feria de juegos cognitivos con familias",
+        "titulo_ca": "Fira de jocs cognitius amb famílies",
+        "contexto_es": "La asociación de familiares de enfermos de Alzheimer de Menorca prepara una feria para que las familias practiquen en casa actividades de estimulación con sus allegados.",
+        "contexto_ca": "L'associació de familiars de malalts d'Alzheimer de Menorca prepara una fira perquè les famílies practiquin a casa activitats d'estimulació amb els seus éssers estimats.",
+        "desarrollo_es": "El alumnado explica a las familias, con un caso ficticio, qué necesidades psicológicas y sociales aparecen según el tipo de enfermedad (0212-4b) y qué apoyo asistencial requiere cada una (0212-4e). Para ello prepara juegos cognitivos con objetos cotidianos reciclados (0213-3d) y muestra qué estrategias de intervención aplicar en cada uno (0213-3b).",
+        "desarrollo_ca": "L'alumnat explica a les famílies, amb un cas fictici, quines necessitats psicològiques i socials apareixen segons el tipus de malaltia (0212-4b) i quin suport assistencial requereix cadascuna (0212-4e). Per això prepara jocs cognitius amb objectes quotidians reciclats (0213-3d) i mostra quines estratègies d'intervenció aplicar en cadascun (0213-3b).",
+        "evidencia_es": "Juegos cognitivos expuestos y cartel explicativo para las familias.",
+        "evidencia_ca": "Jocs cognitius exposats i cartell explicatiu per a les famílies.",
+        "dua_es": "Cartel con letra grande, pictogramas y versión audiodescrita.",
+        "dua_ca": "Cartell amb lletra grossa, pictogrames i versió audiodescrita.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["g"] },
-    "b": { "modulo": "0213", "ra": "RA6", "criterios": ["b", "c"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA6",
+      "criterios": [
+        "b",
+        "c"
+      ]
+    },
     "justificacion_es": "Las necesidades de orientación de los cuidadores familiares se atienden ofreciéndoles recursos y ayudándoles a solicitar prestaciones.",
     "justificacion_ca": "Les necessitats d'orientació dels cuidadors familiars s'atenen oferint-los recursos i ajudant-los a sol·licitar prestacions.",
     "actividades": [
@@ -150,12 +409,52 @@
         "dua_ca": "Plantilla de fitxa i enllaços a webs oficials.",
         "metodologia_es": "aprendizaje-servicio.",
         "metodologia_ca": "aprenentatge servei."
+      },
+      {
+        "titulo_es": "Mesa de ayudas para cuidadores en Alcúdia",
+        "titulo_ca": "Taula d'ajudes per a cuidadors a Alcúdia",
+        "contexto_es": "El ayuntamiento de Alcúdia instala una mesa informativa en el mercado para atender a familiares que cuidan a personas mayores sin ningún apoyo.",
+        "contexto_ca": "L'ajuntament d'Alcúdia instal·la una taula informativa al mercat per atendre familiars que cuiden persones grans sense cap suport.",
+        "desarrollo_es": "El alumnado atiende en la mesa a personas interpretadas por compañeros y detecta qué necesidades de orientación y apoyo tienen los cuidadores familiares (0212-2g). Con una base de datos de recursos de la isla, orienta a cada familia, elabora una ficha de prestaciones económicas (0213-6b) y le explica cómo tramitar la más adecuada (0213-6c).",
+        "desarrollo_ca": "L'alumnat atén a la taula persones interpretades per companys i detecta quines necessitats d'orientació i suport tenen els cuidadors familiars (0212-2g). Amb una base de dades de recursos de l'illa, orienta cada família, elabora una fitxa de prestacions econòmiques (0213-6b) i li explica com tramitar la més adequada (0213-6c).",
+        "evidencia_es": "Fichas de orientación entregadas y guía de trámites paso a paso.",
+        "evidencia_ca": "Fitxes d'orientació lliurades i guia de tràmits pas a pas.",
+        "dua_es": "Perfiles de familias en tarjetas con distintos niveles de complejidad.",
+        "dua_ca": "Perfils de famílies en targetes amb diferents nivells de complexitat.",
+        "metodologia_es": "simulación de atención al público.",
+        "metodologia_ca": "simulació d'atenció al públic."
+      },
+      {
+        "titulo_es": "Guía de apoyo para familias cuidadoras de Ibiza",
+        "titulo_ca": "Guia de suport per a famílies cuidadores d'Eivissa",
+        "contexto_es": "Una trabajadora social de Santa Eulària recibe cada semana consultas de hijas e hijos agotados que no saben por dónde empezar a pedir ayudas.",
+        "contexto_ca": "Una treballadora social de Santa Eulària rep cada setmana consultes de filles i fills esgotats que no saben per on començar a demanar ajudes.",
+        "desarrollo_es": "En grupos cooperativos, el alumnado reparte tareas para recoger qué necesita de orientación y apoyo un cuidador familiar de una persona mayor (0212-2g), reunir un fichero de recursos sociales y prestaciones (0213-6b) y explicar las gestiones necesarias para solicitarlas (0213-6c). Cada grupo se convierte en experto en un bloque y lo enseña a los demás.",
+        "desarrollo_ca": "En grups cooperatius, l'alumnat reparteix tasques per recollir què necessita d'orientació i suport un cuidador familiar d'una persona gran (0212-2g), reunir un fitxer de recursos socials i prestacions (0213-6b) i explicar les gestions necessàries per sol·licitar-les (0213-6c). Cada grup esdevé expert en un bloc i l'ensenya als altres.",
+        "evidencia_es": "Guía impresa de recursos y trámites elaborada por el grupo.",
+        "evidencia_ca": "Guia impresa de recursos i tràmits elaborada pel grup.",
+        "dua_es": "Reparto de roles por fortalezas y plantilla de maquetación.",
+        "dua_ca": "Repartiment de rols per fortaleses i plantilla de maquetació.",
+        "metodologia_es": "puzle de Aronson.",
+        "metodologia_ca": "puzle d'Aronson."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA1", "criterios": ["f"] },
-    "b": { "modulo": "0213", "ra": "RA5", "criterios": ["h"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA5",
+      "criterios": [
+        "h"
+      ]
+    },
     "justificacion_es": "Respetar la capacidad de elección incluye que la persona decida cómo ocupa su tiempo libre y si participa o no.",
     "justificacion_ca": "Respectar la capacitat d'elecció inclou que la persona decideixi com ocupa el seu temps lliure i si hi participa o no.",
     "actividades": [
@@ -172,12 +471,53 @@
         "dua_ca": "Targetes d'arguments i moderació amb torns marcats.",
         "metodologia_es": "debate de dilemas éticos.",
         "metodologia_ca": "debat de dilemes ètics."
+      },
+      {
+        "titulo_es": "Cine fórum: elegir cómo pasar la tarde",
+        "titulo_ca": "Cinefòrum: triar com passar la tarda",
+        "contexto_es": "Un centro de día de Marratxí proyecta un cortometraje sobre un hombre mayor al que nadie pregunta qué le apetece hacer por la tarde.",
+        "contexto_ca": "Un centre de dia de Marratxí projecta un curtmetratge sobre un home gran a qui ningú no pregunta què li abelleix fer a la tarda.",
+        "desarrollo_es": "Tras el cortometraje, el alumnado defiende en un debate por qué hay que respetar la capacidad de elección de la persona dependiente (0212-1f). Después propone una forma de preguntar y registrar sus preferencias, y argumenta que su autodeterminación prevalece al organizar el tiempo libre y las actividades de animación (0213-5h).",
+        "desarrollo_ca": "Després del curtmetratge, l'alumnat defensa en un debat per què cal respectar la capacitat d'elecció de la persona dependent (0212-1f). Tot seguit proposa una manera de preguntar i registrar les seves preferències, i argumenta que la seva autodeterminació preval en organitzar el temps lliure i les activitats d'animació (0213-5h).",
+        "evidencia_es": "Acta del debate y cuestionario de preferencias de ocio.",
+        "evidencia_ca": "Acta del debat i qüestionari de preferències d'oci.",
+        "dua_es": "Cortometraje con subtítulos y debate con turnos de palabra visibles.",
+        "dua_ca": "Curtmetratge amb subtítols i debat amb torns de paraula visibles.",
+        "metodologia_es": "cine fórum.",
+        "metodologia_ca": "cinefòrum."
+      },
+      {
+        "titulo_es": "Asamblea de residentes sobre su programa de ocio",
+        "titulo_ca": "Assemblea de residents sobre el seu programa d'oci",
+        "contexto_es": "La residencia de Maó revisa su programa trimestral de animación y la dirección quiere que los propios residentes decidan qué se mantiene.",
+        "contexto_ca": "La residència de Maó revisa el seu programa trimestral d'animació i la direcció vol que els mateixos residents decideixin què es manté.",
+        "desarrollo_es": "El alumnado prepara y dinamiza una asamblea en la que las personas usuarias deciden con libertad y garantías (0212-1f). Con las votaciones, redacta un programa de ocio que justifica el respeto a los intereses y a la autodeterminación de cada residente, incluso de quien prefiere no participar (0213-5h).",
+        "desarrollo_ca": "L'alumnat prepara i dinamitza una assemblea en què les persones usuàries decideixen amb llibertat i garanties (0212-1f). Amb les votacions, redacta un programa d'oci que justifica el respecte als interessos i a l'autodeterminació de cada resident, fins i tot de qui prefereix no participar-hi (0213-5h).",
+        "evidencia_es": "Programa trimestral de ocio redactado a partir de la votación.",
+        "evidencia_ca": "Programa trimestral d'oci redactat a partir de la votació.",
+        "dua_es": "Votación con papeletas de colores, símbolos y ayuda de un compañero lector.",
+        "dua_ca": "Votació amb paperetes de colors, símbols i ajuda d'un company lector.",
+        "metodologia_es": "asamblea participativa.",
+        "metodologia_ca": "assemblea participativa."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["b"] },
-    "b": { "modulo": "0215", "ra": "RA5", "criterios": ["f", "c"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA5",
+      "criterios": [
+        "f",
+        "c"
+      ]
+    },
     "justificacion_es": "Las patologías más frecuentes de las personas mayores, como la diabetes o la hipertensión, determinan su dieta.",
     "justificacion_ca": "Les patologies més freqüents de les persones grans, com la diabetis o la hipertensió, determinen la seva dieta.",
     "actividades": [
@@ -194,12 +534,53 @@
         "dua_ca": "Plantilla de menú i semàfor d'aliments.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Detectives de la dieta en el hogar de mayores",
+        "titulo_ca": "Detectius de la dieta a la llar de grans",
+        "contexto_es": "En una residencia de Calvià varios residentes han ingresado en el hospital por descompensaciones de la tensión y del azúcar tras comer lo que traían sus familias.",
+        "contexto_ca": "En una residència de Calvià diversos residents han ingressat a l'hospital per descompensacions de la tensió i del sucre després de menjar el que portaven les seves famílies.",
+        "desarrollo_es": "Como detectives, los equipos reconocen las patologías más frecuentes de los residentes a partir de sus historias (0212-2b) y descubren qué errores de alimentación las agravan. Luego describen cómo es una dieta saludable adaptada a cada patología (0215-5c) y eligen los alimentos de la ingesta diaria según las prescripciones (0215-5f).",
+        "desarrollo_ca": "Com a detectius, els equips reconeixen les patologies més freqüents dels residents a partir de les seves històries (0212-2b) i descobreixen quins errors d'alimentació les agreugen. Després descriuen com és una dieta saludable adaptada a cada patologia (0215-5c) i trien els aliments de la ingesta diària segons les prescripcions (0215-5f).",
+        "evidencia_es": "Informe de hallazgos con la lista de alimentos permitidos y desaconsejados.",
+        "evidencia_ca": "Informe de troballes amb la llista d'aliments permesos i desaconsellats.",
+        "dua_es": "Historias en texto o en audio y tabla de alimentos con fotografías.",
+        "dua_ca": "Històries en text o en àudio i taula d'aliments amb fotografies.",
+        "metodologia_es": "gamificación con misión de investigación.",
+        "metodologia_ca": "gamificació amb missió d'investigació."
+      },
+      {
+        "titulo_es": "Cartel de la pirámide para abuelos con colesterol",
+        "titulo_ca": "Cartell de la piràmide per a avis amb colesterol",
+        "contexto_es": "Un centro de salud de Ciutadella pide al centro educativo un material visual para pacientes mayores con colesterol alto, artrosis y osteoporosis que comen solos.",
+        "contexto_ca": "Un centre de salut de Ciutadella demana al centre educatiu un material visual per a pacients grans amb colesterol alt, artrosi i osteoporosi que mengen sols.",
+        "desarrollo_es": "El alumnado resume las patologías habituales en la vejez y qué alimentos las favorecen o las frenan (0212-2b). Con ellas diseña un cartel que explica las características de una dieta saludable (0215-5c) y propone un día de comidas con los alimentos concretos que cumplen la prescripción (0215-5f).",
+        "desarrollo_ca": "L'alumnat resumeix les patologies habituals en la vellesa i quins aliments les afavoreixen o les frenen (0212-2b). Amb elles dissenya un cartell que explica les característiques d'una dieta saludable (0215-5c) i proposa un dia de menjars amb els aliments concrets que compleixen la prescripció (0215-5f).",
+        "evidencia_es": "Cartel ilustrado con el menú de un día adaptado.",
+        "evidencia_ca": "Cartell il·lustrat amb el menú d'un dia adaptat.",
+        "dua_es": "Plantillas de cartel con distintos grados de ayuda y elección de formato digital o en papel.",
+        "dua_ca": "Plantilles de cartell amb diferents graus d'ajuda i elecció de format digital o en paper.",
+        "metodologia_es": "diseño de materiales divulgativos.",
+        "metodologia_ca": "disseny de materials divulgatius."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA1", "criterios": ["c", "h"] },
-    "b": { "modulo": "0215", "ra": "RA1", "criterios": ["e"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA1",
+      "criterios": [
+        "c",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Las necesidades que debe cubrir el servicio en el domicilio dependen de los factores que favorecen la autonomía y del apoyo de la familia.",
     "justificacion_ca": "Les necessitats que ha de cobrir el servei al domicili depenen dels factors que afavoreixen l'autonomia i del suport de la família.",
     "actividades": [
@@ -216,12 +597,53 @@
         "dua_ca": "Guió d'observació amb preguntes i caselles.",
         "metodologia_es": "simulación de visita domiciliaria.",
         "metodologia_ca": "simulació de visita domiciliària."
+      },
+      {
+        "titulo_es": "Visita en la casa de pueblo de Bartomeu",
+        "titulo_ca": "Visita a la casa de poble d'en Bartomeu",
+        "contexto_es": "Bartomeu, viudo de 84 años, vive en una casa de piedra de Sencelles con escaleras empinadas, y su hija desea que se organice el apoyo antes de que se caiga.",
+        "contexto_ca": "En Bartomeu, vidu de 84 anys, viu en una casa de pedra de Sencelles amb escales empinades, i la seva filla desitja que s'organitzi el suport abans que caigui.",
+        "desarrollo_es": "Con un plano de la vivienda y entrevistas grabadas, el alumnado señala qué factores del entorno y de la familia favorecen o frenan la autonomía de Bartomeu (0212-1c) y valora el papel de su hija en su bienestar (0212-1h). Después elabora un listado priorizado de necesidades que el servicio ha de cubrir en la casa (0215-1e).",
+        "desarrollo_ca": "Amb un plànol de l'habitatge i entrevistes gravades, l'alumnat assenyala quins factors de l'entorn i de la família afavoreixen o frenen l'autonomia d'en Bartomeu (0212-1c) i valora el paper de la seva filla en el seu benestar (0212-1h). Després elabora un llistat prioritzat de necessitats que el servei ha de cobrir a la casa (0215-1e).",
+        "evidencia_es": "Plano anotado y listado priorizado de necesidades domiciliarias.",
+        "evidencia_ca": "Plànol anotat i llistat prioritzat de necessitats domiciliàries.",
+        "dua_es": "Plano en papel o maqueta digital y entrevistas con transcripción.",
+        "dua_ca": "Plànol en paper o maqueta digital i entrevistes amb transcripció.",
+        "metodologia_es": "estudio de caso con material audiovisual.",
+        "metodologia_ca": "estudi de cas amb material audiovisual."
+      },
+      {
+        "titulo_es": "Mapa de apoyos de Francina en Sant Antoni",
+        "titulo_ca": "Mapa de suports de la Francina a Sant Antoni",
+        "contexto_es": "Francina, de 81 años, vive en Sant Antoni de Portmany con una vecina que la ayuda y una nuera que trabaja de noche; el servicio social debe decidir qué atención necesita.",
+        "contexto_ca": "La Francina, de 81 anys, viu a Sant Antoni de Portmany amb una veïna que l'ajuda i una nora que treballa de nit; el servei social ha de decidir quina atenció necessita.",
+        "desarrollo_es": "En equipos, el alumnado dibuja un mapa de apoyos que muestra qué factores mantienen o debilitan la vida independiente de Francina (0212-1c) y cómo la familia y el entorno influyen en su bienestar (0212-1h). Con ese mapa deduce qué necesidades y demandas debe cubrir el servicio de ayuda a domicilio (0215-1e).",
+        "desarrollo_ca": "En equips, l'alumnat dibuixa un mapa de suports que mostra quins factors mantenen o afebleixen la vida independent de la Francina (0212-1c) i com la família i l'entorn influeixen en el seu benestar (0212-1h). Amb aquest mapa dedueix quines necessitats i demandes ha de cobrir el servei d'ajuda a domicili (0215-1e).",
+        "evidencia_es": "Mapa de apoyos y síntesis de demandas del servicio.",
+        "evidencia_ca": "Mapa de suports i síntesi de demandes del servei.",
+        "dua_es": "Mapa con símbolos normalizados y opción de exponerlo de forma oral o escrita.",
+        "dua_ca": "Mapa amb símbols normalitzats i opció d'exposar-lo de manera oral o escrita.",
+        "metodologia_es": "mapa conceptual colaborativo.",
+        "metodologia_ca": "mapa conceptual col·laboratiu."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA3", "criterios": ["b"] },
-    "b": { "modulo": "0215", "ra": "RA3", "criterios": ["c", "a"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "a"
+      ]
+    },
     "justificacion_es": "Hacer la compra es una actividad cotidiana en la que una discapacidad intelectual plantea dificultades concretas que se pueden apoyar.",
     "justificacion_ca": "Fer la compra és una activitat quotidiana en què una discapacitat intel·lectual planteja dificultats concretes que es poden recolzar.",
     "actividades": [
@@ -238,12 +660,53 @@
         "dua_ca": "Fullets reals retallables i banc de pictogrames.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Compra con apoyo: Mateu en el supermercado",
+        "titulo_ca": "Compra amb suport: en Mateu al supermercat",
+        "contexto_es": "Mateu, con discapacidad intelectual, quiere hacer la compra solo en un supermercado de Manacor, pero se bloquea ante los folletos y los precios.",
+        "contexto_ca": "En Mateu, amb discapacitat intelectual, vol fer la compra sol en un supermercat de Manacor, però es bloqueja davant dels fullets i els preus.",
+        "desarrollo_es": "El alumnado relaciona el tipo de discapacidad de Mateu con las dificultades que le plantea la compra (0212-3b). Después analiza folletos publicitarios y selecciona con él los productos necesarios (0215-3a), y fabrica una lista de la compra con apoyos visuales para ir al supermercado (0215-3c).",
+        "desarrollo_ca": "L'alumnat relaciona el tipus de discapacitat d'en Mateu amb les dificultats que li planteja la compra (0212-3b). Després analitza fullets publicitaris i selecciona amb ell els productes necessaris (0215-3a), i fabrica una llista de la compra amb suports visuals per anar al supermercat (0215-3c).",
+        "evidencia_es": "Lista de la compra ilustrada y registro de la salida simulada.",
+        "evidencia_ca": "Llista de la compra il·lustrada i registre de la sortida simulada.",
+        "dua_es": "Folletos reales con selección previa y glosario de precios con símbolos.",
+        "dua_ca": "Fullets reals amb selecció prèvia i glossari de preus amb símbols.",
+        "metodologia_es": "aprendizaje situado en un supermercado simulado.",
+        "metodologia_ca": "aprenentatge situat en un supermercat simulat."
+      },
+      {
+        "titulo_es": "Libro de recetas y compra para un piso compartido",
+        "titulo_ca": "Llibre de receptes i compra per a un pis compartit",
+        "contexto_es": "Cuatro jóvenes con discapacidades distintas comparten un piso de la Fundació de Palma y quieren decidir juntos qué comprar para la semana.",
+        "contexto_ca": "Quatre joves amb discapacitats diferents comparteixen un pis de la Fundació de Palma i volen decidir junts què comprar per a la setmana.",
+        "desarrollo_es": "Cada equipo se encarga de un joven y explica qué dificultades de la vida diaria implica su discapacidad al hacer la compra (0212-3b). Después compara folletos de tres cadenas, elige las mejores ofertas (0215-3a) y elabora la lista de la compra común de la semana (0215-3c).",
+        "desarrollo_ca": "Cada equip s'encarrega d'un jove i explica quines dificultats de la vida diària implica la seva discapacitat en fer la compra (0212-3b). Després compara fullets de tres cadenes, tria les millors ofertes (0215-3a) i elabora la llista de la compra comuna de la setmana (0215-3c).",
+        "evidencia_es": "Lista de compra semanal acordada con tabla comparativa de ofertas.",
+        "evidencia_ca": "Llista de compra setmanal acordada amb taula comparativa d'ofertes.",
+        "dua_es": "Tabla comparativa con casillas ya estructuradas y calculadora disponible.",
+        "dua_ca": "Taula comparativa amb caselles ja estructurades i calculadora disponible.",
+        "metodologia_es": "aprendizaje cooperativo por equipos de casos.",
+        "metodologia_ca": "aprenentatge cooperatiu per equips de casos."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "0215", "ra": "RA6", "criterios": ["c", "f"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA6",
+      "criterios": [
+        "c",
+        "f"
+      ]
+    },
     "justificacion_es": "Las enfermedades crónicas obligan a adaptar las recetas familiares a las necesidades de la persona enferma.",
     "justificacion_ca": "Les malalties cròniques obliguen a adaptar les receptes familiars a les necessitats de la persona malalta.",
     "actividades": [
@@ -260,12 +723,53 @@
         "dua_ca": "Receptes amb passos il·lustrats i taula d'aliments permesos.",
         "metodologia_es": "taller de cocina.",
         "metodologia_ca": "taller de cuina."
+      },
+      {
+        "titulo_es": "Recetas para tres momentos de la enfermedad",
+        "titulo_ca": "Receptes per a tres moments de la malaltia",
+        "contexto_es": "Una familia de Santanyí cuida a un abuelo que ha pasado por una neumonía, tiene diabetes desde hace años y ahora recibe cuidados paliativos en casa.",
+        "contexto_ca": "Una família de Santanyí cuida un avi que ha passat per una pneumònia, té diabetis des de fa anys i ara rep cures pal·liatives a casa.",
+        "desarrollo_es": "El alumnado compara cómo afectan a la autonomía de una misma persona la enfermedad aguda, la crónica y la terminal (0212-4a). Para cada etapa recopila y ajusta una receta a las raciones y necesidades (0215-6c), y cocina primeros y segundos platos o postres adecuados a cada momento (0215-6f).",
+        "desarrollo_ca": "L'alumnat compara com afecten l'autonomia d'una mateixa persona la malaltia aguda, la crònica i la terminal (0212-4a). Per a cada etapa recopila i ajusta una recepta a les racions i necessitats (0215-6c), i cuina primers i segons plats o postres adequats a cada moment (0215-6f).",
+        "evidencia_es": "Recetario de tres etapas y fotografías de los platos elaborados.",
+        "evidencia_ca": "Receptari de tres etapes i fotografies dels plats elaborats.",
+        "dua_es": "Recetas con pictogramas de pasos y rol de ayudante en la cocina.",
+        "dua_ca": "Receptes amb pictogrames de passos i rol d'ajudant a la cuina.",
+        "metodologia_es": "aprendizaje por proyectos con cocina real.",
+        "metodologia_ca": "aprenentatge per projectes amb cuina real."
+      },
+      {
+        "titulo_es": "Concurso de cocina adaptada en el aula taller",
+        "titulo_ca": "Concurs de cuina adaptada a l'aula taller",
+        "contexto_es": "El centro organiza un concurso de cocina en el que cada equipo recibe la ficha de una persona con enfermedad aguda, crónica o terminal y debe cocinar para ella.",
+        "contexto_ca": "El centre organitza un concurs de cuina en què cada equip rep la fitxa d'una persona amb malaltia aguda, crònica o terminal i ha de cuinar per a ella.",
+        "desarrollo_es": "Cada equipo analiza cómo condiciona la autonomía de su persona el tipo de enfermedad que padece (0212-4a), busca recetas familiares y las modifica en cantidades y tiempos (0215-6c). Después las cocina y las presenta a un jurado que valora la adecuación a las necesidades de la persona (0215-6f).",
+        "desarrollo_ca": "Cada equip analitza com condiciona l'autonomia de la seva persona el tipus de malaltia que pateix (0212-4a), cerca receptes familiars i les modifica en quantitats i temps (0215-6c). Després les cuina i les presenta a un jurat que valora l'adequació a les necessitats de la persona (0215-6f).",
+        "evidencia_es": "Plato presentado con ficha de adaptación firmada por el jurado.",
+        "evidencia_ca": "Plat presentat amb fitxa d'adaptació signada pel jurat.",
+        "dua_es": "Jurado con rúbrica de criterios en lectura fácil y tiempos flexibles.",
+        "dua_ca": "Jurat amb rúbrica de criteris en lectura fàcil i temps flexibles.",
+        "metodologia_es": "gamificación en forma de concurso.",
+        "metodologia_ca": "gamificació en forma de concurs."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["c"] },
-    "b": { "modulo": "0215", "ra": "RA2", "criterios": ["e", "h"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA2",
+      "criterios": [
+        "e",
+        "h"
+      ]
+    },
     "justificacion_es": "Las necesidades de las personas mayores, a menudo con pensiones bajas, condicionan cómo se reparte el presupuesto del hogar.",
     "justificacion_ca": "Les necessitats de les persones grans, sovint amb pensions baixes, condicionen com es reparteix el pressupost de la llar.",
     "actividades": [
@@ -282,12 +786,52 @@
         "dua_ca": "Full de càlcul amb fórmules i factures reals simplificades.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Presupuesto doméstico de Biel y Catalina, jubilados",
+        "titulo_ca": "Pressupost domèstic d'en Biel i na Catalina, jubilats",
+        "contexto_es": "Biel y Catalina, jubilados de Llucmajor, cobran dos pensiones modestas y tienen que pagar una farmacia cada vez más cara, el IBI y la comunidad.",
+        "contexto_ca": "En Biel i na Catalina, jubilats de Llucmajor, cobren dues pensions modestes i han de pagar una farmàcia cada vegada més cara, l'IBI i la comunitat.",
+        "desarrollo_es": "Con los datos de la pareja, el alumnado resume qué necesidades suelen tener las personas mayores (0212-2c) y enumera qué factores determinan cómo reparten el presupuesto mensual (0215-2e). Luego construye una hoja de cálculo y valora por qué deben equilibrarse los ingresos y los gastos (0215-2h).",
+        "desarrollo_ca": "Amb les dades de la parella, l'alumnat resumeix quines necessitats solen tenir les persones grans (0212-2c) i enumera quins factors determinen com reparteixen el pressupost mensual (0215-2e). Després construeix un full de càlcul i valora per què s'han d'equilibrar els ingressos i les despeses (0215-2h).",
+        "evidencia_es": "Hoja de cálculo del presupuesto con conclusiones escritas.",
+        "evidencia_ca": "Full de càlcul del pressupost amb conclusions escrites.",
+        "dua_es": "Hoja de cálculo con plantilla precompletada y calculadora de apoyo.",
+        "dua_ca": "Full de càlcul amb plantilla precompletada i calculadora de suport.",
+        "metodologia_es": "aprendizaje basado en datos con hoja de cálculo.",
+        "metodologia_ca": "aprenentatge basat en dades amb full de càlcul."
+      },
+      {
+        "titulo_es": "Taller de economía del hogar con vecinas mayores",
+        "titulo_ca": "Taller d'economia de la llar amb veïnes grans",
+        "contexto_es": "El centro cívico de Es Molinar de Palma pide ayuda para un taller de economía doméstica dirigido a mujeres mayores que gestionan solas sus facturas.",
+        "contexto_ca": "El centre cívic des Molinar de Palma demana ajuda per a un taller d'economia domèstica adreçat a dones grans que gestionen soles les seves factures.",
+        "desarrollo_es": "El alumnado escucha las inquietudes de las participantes para entender sus necesidades como personas mayores (0212-2c). Prepara una dinámica con sobres de dinero que muestra qué factores condicionan el reparto del presupuesto (0215-2e) y por qué conviene ajustar los gastos a los ingresos (0215-2h).",
+        "desarrollo_ca": "L'alumnat escolta les inquietuds de les participants per entendre les seves necessitats com a persones grans (0212-2c). Prepara una dinàmica amb sobres de diners que mostra quins factors condicionen el repartiment del pressupost (0215-2e) i per què convé ajustar les despeses als ingressos (0215-2h).",
+        "evidencia_es": "Guion de la dinámica de sobres y valoración del taller por las participantes.",
+        "evidencia_ca": "Guió de la dinàmica de sobres i valoració del taller per les participants.",
+        "dua_es": "Dinámica con billetes de juguete, texto en letra grande y apoyo oral.",
+        "dua_ca": "Dinàmica amb bitllets de joguina, text en lletra grossa i suport oral.",
+        "metodologia_es": "aprendizaje-servicio con taller comunitario.",
+        "metodologia_ca": "aprenentatge-servei amb taller comunitari."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "0215", "ra": "RA4", "criterios": ["b"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Promover la vida independiente pasa por enseñar a la persona a usar los electrodomésticos de su casa con seguridad.",
     "justificacion_ca": "Promoure la vida independent passa per ensenyar la persona a fer servir els electrodomèstics de casa seva amb seguretat.",
     "actividades": [
@@ -304,12 +848,52 @@
         "dua_ca": "Adhesius de colors per als programes i vídeo curt.",
         "metodologia_es": "instrucción directa con práctica guiada.",
         "metodologia_ca": "instrucció directa amb pràctica guiada."
+      },
+      {
+        "titulo_es": "Manual ilustrado de electrodomésticos para Rafel",
+        "titulo_ca": "Manual il·lustrat d'electrodomèstics per a en Rafel",
+        "contexto_es": "Rafel, de 76 años, ha perdido a su mujer y se avergüenza de no saber usar el microondas ni la plancha que ella manejaba siempre.",
+        "contexto_ca": "En Rafel, de 76 anys, ha perdut la dona i s'avergonyeix de no saber utilitzar el microones ni la planxa que ella feia servir sempre.",
+        "desarrollo_es": "El alumnado explica qué pasos de la promoción de la autonomía personal pueden ayudar a Rafel a recuperar su vida independiente (0212-1a). Después prepara un manual ilustrado con el manejo, los riesgos y el mantenimiento de cada electrodoméstico del hogar (0215-4b).",
+        "desarrollo_ca": "L'alumnat explica quins passos de la promoció de l'autonomia personal poden ajudar en Rafel a recuperar la seva vida independent (0212-1a). Després prepara un manual il·lustrat amb l'ús, els riscos i el manteniment de cada electrodomèstic de la llar (0215-4b).",
+        "evidencia_es": "Manual ilustrado de uso seguro de los electrodomésticos.",
+        "evidencia_ca": "Manual il·lustrat d'ús segur dels electrodomèstics.",
+        "dua_es": "Manual con fotografías propias, pasos numerados y versión audiodescrita.",
+        "dua_ca": "Manual amb fotografies pròpies, passos numerats i versió audiodescrita.",
+        "metodologia_es": "aprendizaje basado en la elaboración de un producto.",
+        "metodologia_ca": "aprenentatge basat en l'elaboració d'un producte."
+      },
+      {
+        "titulo_es": "Escape room de los peligros de la lavandería",
+        "titulo_ca": "Escape room dels perills de la bugaderia",
+        "contexto_es": "La asociación de vecinos de Sa Pobla prepara una sesión para mayores sobre accidentes frecuentes con la plancha, la secadora y el hornillo en casa.",
+        "contexto_ca": "L'associació de veïns de sa Pobla prepara una sessió per a grans sobre accidents freqüents amb la planxa, la eixugadora i el fogonet a casa.",
+        "desarrollo_es": "Dentro de un escape room, el alumnado resuelve pruebas que ligan los procesos de promoción de la autonomía personal con tareas cotidianas del hogar (0212-1a). Para salir, debe identificar el tipo, el manejo y los riesgos de cada aparato (0215-4b).",
+        "desarrollo_ca": "Dins d'un escape room, l'alumnat resol proves que lliguen els processos de promoció de l'autonomia personal amb tasques quotidianes de la llar (0212-1a). Per sortir, ha d'identificar el tipus, l'ús i els riscos de cada aparell (0215-4b).",
+        "evidencia_es": "Pruebas resueltas y ficha de riesgos de cada aparato.",
+        "evidencia_ca": "Proves resoltes i fitxa de riscos de cada aparell.",
+        "dua_es": "Pistas graduadas por niveles y tiempo ampliable.",
+        "dua_ca": "Pistes graduades per nivells i temps ampliable.",
+        "metodologia_es": "gamificación con escape room.",
+        "metodologia_ca": "gamificació amb escape room."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["d"] },
-    "b": { "modulo": "0217", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "La inmovilidad y la desnutrición, manifestaciones del deterioro en la vejez, favorecen las úlceras por presión.",
     "justificacion_ca": "La immobilitat i la desnutrició, manifestacions del deteriorament a la vellesa, afavoreixen les nafres per pressió.",
     "actividades": [
@@ -326,12 +910,53 @@
         "dua_ca": "Imatges dels estadis de la nafra i mostres de productes.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Protocolo de prevención de úlceras para Tomeu",
+        "titulo_ca": "Protocol de prevenció d'úlceres per a en Tomeu",
+        "contexto_es": "Tomeu, de 88 años, pierde peso en una residencia de Pollença y pasa horas sentado en la misma silla sin que nadie le cambie de postura.",
+        "contexto_ca": "En Tomeu, de 88 anys, perd pes en una residència de Pollença i passa hores assegut a la mateixa cadira sense que ningú li canviï la postura.",
+        "desarrollo_es": "El alumnado identifica qué manifestaciones del deterioro personal propias de la vejez aparecen en la historia de Tomeu (0212-2d). A partir de ellas redacta un protocolo con las medidas preventivas de las úlceras y los productos sanitarios adecuados (0217-2a).",
+        "desarrollo_ca": "L'alumnat identifica quines manifestacions del deteriorament personal pròpies de la vellesa apareixen en la història d'en Tomeu (0212-2d). A partir d'elles redacta un protocol amb les mesures preventives de les úlceres i els productes sanitaris adequats (0217-2a).",
+        "evidencia_es": "Protocolo de prevención con calendario de cambios posturales.",
+        "evidencia_ca": "Protocol de prevenció amb calendari de canvis posturals.",
+        "dua_es": "Protocolo en tabla con iconos y modelo de ejemplo ya resuelto.",
+        "dua_ca": "Protocol en taula amb icones i model d'exemple ja resolt.",
+        "metodologia_es": "aprendizaje basado en problemas.",
+        "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Visita guiada a la ortopedia y la farmacia",
+        "titulo_ca": "Visita guiada a l'ortopèdia i a la farmàcia",
+        "contexto_es": "Una ortopedia de Palma ofrece al centro educativo una visita guiada para mostrar productos de prevención que usan las familias de personas mayores encamadas.",
+        "contexto_ca": "Una ortopèdia de Palma ofereix al centre educatiu una visita guiada per mostrar productes de prevenció que fan servir les famílies de persones grans enllitades.",
+        "desarrollo_es": "Durante la visita, el alumnado conecta cada producto con alguna manifestación del deterioro físico y social de la persona mayor, como la inmovilidad, la pérdida de apetito o el aislamiento (0212-2d). Luego clasifica en un catálogo qué productos sanitarios previenen o tratan las úlceras y cuándo usarlos (0217-2a).",
+        "desarrollo_ca": "Durant la visita, l'alumnat connecta cada producte amb alguna manifestació del deteriorament físic i social de la persona gran, com la immobilitat, la pèrdua de gana o l'aïllament (0212-2d). Després classifica en un catàleg quins productes sanitaris prevenen o tracten les úlceres i quan fer-los servir (0217-2a).",
+        "evidencia_es": "Catálogo fotográfico de productos con su indicación y uso.",
+        "evidencia_ca": "Catàleg fotogràfic de productes amb la seva indicació i ús.",
+        "dua_es": "Cuaderno de visita con pautas de observación y opción de grabar notas de voz.",
+        "dua_ca": "Quadern de visita amb pautes d'observació i opció de gravar notes de veu.",
+        "metodologia_es": "aprendizaje experiencial fuera del aula.",
+        "metodologia_ca": "aprenentatge experiencial fora de l'aula."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA1", "criterios": ["e"] },
-    "b": { "modulo": "0217", "ra": "RA4", "criterios": ["d", "b"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA4",
+      "criterios": [
+        "d",
+        "b"
+      ]
+    },
     "justificacion_es": "Los momentos de higiene permiten observar los primeros indicadores de pérdida de autonomía y recoger información de la persona.",
     "justificacion_ca": "Els moments d'higiene permeten observar els primers indicadors de pèrdua d'autonomia i recollir informació de la persona.",
     "actividades": [
@@ -348,12 +973,54 @@
         "dua_ca": "Llista d'indicadors amb exemples i entrevista amb preguntes tancades.",
         "metodologia_es": "aprendizaje basado en la observación.",
         "metodologia_ca": "aprenentatge basat en l'observació."
+      },
+      {
+        "titulo_es": "Ficha de seguimiento del aseo de Pere",
+        "titulo_ca": "Fitxa de seguiment de l'aseig d'en Pere",
+        "contexto_es": "Pere, de 82 años, vive con su hija en Alaró y, desde hace unos meses, se niega a lavarse las manos y se viste con la misma camisa varios días.",
+        "contexto_ca": "En Pere, de 82 anys, viu amb la seva filla a Alaró i, des de fa uns mesos, es nega a rentar-se les mans i es vesteix amb la mateixa camisa durant diversos dies.",
+        "desarrollo_es": "El alumnado analiza el caso para reconocer qué indicadores generales apuntan a una pérdida de autonomía (0212-1e). Luego diseña, para el momento del aseo, una entrevista y un cuestionario para obtener información de Pere y de su hija (0217-4d), y una ficha donde anotar la higiene realizada y las incidencias (0217-4b).",
+        "desarrollo_ca": "L'alumnat analitza el cas per reconèixer quins indicadors generals apunten a una pèrdua d'autonomia (0212-1e). Després dissenya, per al moment de l'aseig, una entrevista i un qüestionari per obtenir informació d'en Pere i de la seva filla (0217-4d), i una fitxa on anotar la higiene feta i les incidències (0217-4b).",
+        "evidencia_es": "Entrevista, cuestionario y ficha de registro diario de higiene.",
+        "evidencia_ca": "Entrevista, qüestionari i fitxa de registre diari d'higiene.",
+        "dua_es": "Cuestionario con respuestas de escala visual y ficha en papel o en tableta.",
+        "dua_ca": "Qüestionari amb respostes d'escala visual i fitxa en paper o en tauleta.",
+        "metodologia_es": "aprendizaje basado en el diseño de instrumentos.",
+        "metodologia_ca": "aprenentatge basat en el disseny d'instruments."
+      },
+      {
+        "titulo_es": "Juicio simulado a una valoración tardía",
+        "titulo_ca": "Judici simulat a una valoració tardana",
+        "contexto_es": "En una residencia de Santa Ponça, la familia de una usuaria reclama porque nadie anotó a tiempo que ya no podía ducharse sin ayuda.",
+        "contexto_ca": "En una residència de Santa Ponça, la família d'una usuària reclama perquè ningú no va anotar a temps que ja no es podia dutxar sense ajuda.",
+        "desarrollo_es": "En un juicio simulado, unos equipos defienden que los indicadores de pérdida de autonomía estaban presentes desde hacía semanas (0212-1e), mientras otros revisan qué información de la persona se recogió con los instrumentos de la residencia (0217-4d). Finalmente proponen mejoras en el registro de la higiene y de las contingencias (0217-4b).",
+        "desarrollo_ca": "En un judici simulat, uns equips defensen que els indicadors de pèrdua d'autonomia hi eren des de feia setmanes (0212-1e), mentre que altres revisen quina informació de la persona es va recollir amb els instruments de la residència (0217-4d). Finalment proposen millores en el registre de la higiene i de les contingències (0217-4b).",
+        "evidencia_es": "Informe de la sentencia con propuestas de mejora del registro.",
+        "evidencia_ca": "Informe de la sentència amb propostes de millora del registre.",
+        "dua_es": "Roles de juicio con guion de intervención y tiempo de preparación.",
+        "dua_ca": "Rols de judici amb guió d'intervenció i temps de preparació.",
+        "metodologia_es": "juicio simulado.",
+        "metodologia_ca": "judici simulat."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA3", "criterios": ["d"] },
-    "b": { "modulo": "0217", "ra": "RA1", "criterios": ["b", "f", "c"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "f",
+        "c"
+      ]
+    },
     "justificacion_es": "El tipo y el nivel de discapacidad determinan qué atenciones higiénicas necesita la persona y cuánto puede participar en ellas.",
     "justificacion_ca": "El tipus i el nivell de discapacitat determinen quines atencions higièniques necessita la persona i quant hi pot participar.",
     "actividades": [
@@ -370,12 +1037,53 @@
         "dua_ca": "Fitxes dels usuaris amb imatge i quadre parcialment emplenat.",
         "metodologia_es": "trabajo cooperativo por casos.",
         "metodologia_ca": "treball cooperatiu per casos."
+      },
+      {
+        "titulo_es": "Plan higiénico para Cati, con paraplejia",
+        "titulo_ca": "Pla higiènic per a na Cati, amb paraplegia",
+        "contexto_es": "Cati, de 35 años y con paraplejia, ha vuelto a su casa de Inca tras la rehabilitación y quiere seguir lavándose sola en la medida de lo posible.",
+        "contexto_ca": "La Cati, de 35 anys i amb paraplegia, ha tornat a casa seva a Inca després de la rehabilitació i vol continuar rentant-se sola en la mesura que pugui.",
+        "desarrollo_es": "El alumnado relaciona el nivel de discapacidad de Cati con el grado de dependencia y el tipo de apoyo que necesita (0212-3d). Concreta qué atenciones higiénicas requiere según su salud (0217-1b), cómo la dificultan sus circunstancias en la vida diaria (0217-1c) y qué posibilidades de participación debe mantener (0217-1f).",
+        "desarrollo_ca": "L'alumnat relaciona el nivell de discapacitat de la Cati amb el grau de dependència i el tipus de suport que necessita (0212-3d). Concreta quines atencions higièniques requereix segons la seva salut (0217-1b), com la dificulten les seves circumstàncies a la vida diària (0217-1c) i quines possibilitats de participació ha de mantenir (0217-1f).",
+        "evidencia_es": "Plan de higiene con apartado de participación de la usuaria.",
+        "evidencia_ca": "Pla d'higiene amb apartat de participació de la usuària.",
+        "dua_es": "Plan en plantilla guiada y ejemplo de otra usuaria como referencia.",
+        "dua_ca": "Pla en plantilla guiada i exemple d'una altra usuària com a referència.",
+        "metodologia_es": "aprendizaje basado en la planificación de casos.",
+        "metodologia_ca": "aprenentatge basat en la planificació de casos."
+      },
+      {
+        "titulo_es": "Mesa redonda con profesionales y usuarios",
+        "titulo_ca": "Taula rodona amb professionals i usuaris",
+        "contexto_es": "Una asociación de personas con discapacidad física de Mallorca invita al centro a una mesa redonda para explicar cómo quieren recibir el apoyo en la higiene diaria.",
+        "contexto_ca": "Una associació de persones amb discapacitat física de Mallorca convida el centre a una taula rodona per explicar com volen rebre el suport en la higiene diària.",
+        "desarrollo_es": "Con las preguntas que ha preparado, el alumnado conoce cómo se relacionan los tipos y niveles de discapacidad con el grado de dependencia (0212-3d) y cómo influye cada circunstancia en la vida cotidiana de los participantes (0217-1c). Redacta después un argumentario sobre la autonomía que hay que respetar (0217-1f) y las atenciones higiénicas que corresponden a cada caso (0217-1b).",
+        "desarrollo_ca": "Amb les preguntes que ha preparat, l'alumnat coneix com es relacionen els tipus i els nivells de discapacitat amb el grau de dependència (0212-3d) i com influeix cada circumstància en la vida quotidiana dels participants (0217-1c). Redacta després un argumentari sobre l'autonomia que cal respectar (0217-1f) i les atencions higièniques que corresponen a cada cas (0217-1b).",
+        "evidencia_es": "Preguntas preparadas y argumentario final sobre autonomía en la higiene.",
+        "evidencia_ca": "Preguntes preparades i argumentari final sobre autonomia en la higiene.",
+        "dua_es": "Preguntas con banco de frases de apoyo y sala accesible para todo el alumnado.",
+        "dua_ca": "Preguntes amb banc de frases de suport i sala accessible per a tot l'alumnat.",
+        "metodologia_es": "mesa redonda con testimonios.",
+        "metodologia_ca": "taula rodona amb testimonis."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["c"] },
-    "b": { "modulo": "0217", "ra": "RA2", "criterios": ["d", "b"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "d",
+        "b"
+      ]
+    },
     "justificacion_es": "Las características de la enfermedad mental ayudan a entender por qué una persona rechaza el aseo y cómo apoyarla sin imponer.",
     "justificacion_ca": "Les característiques de la malaltia mental ajuden a entendre per què una persona rebutja la higiene i com recolzar-la sense imposar.",
     "actividades": [
@@ -392,12 +1100,53 @@
         "dua_ca": "Fitxes resum de les malalties i pràctica amb maniquí.",
         "metodologia_es": "simulación con debriefing.",
         "metodologia_ca": "simulació amb debriefing."
+      },
+      {
+        "titulo_es": "Narrar el aseo de Joan con voces internas",
+        "titulo_ca": "Narrar l'aseig d'en Joan amb veus internes",
+        "contexto_es": "Joan, con depresión grave, vive en un piso de Palma y rechaza el afeitado y el lavado de dientes porque dice que no le importa nada.",
+        "contexto_ca": "En Joan, amb depressió greu, viu en un pis de Palma i rebutja l'afaitada i el raspallat de dents perquè diu que no li importa res.",
+        "desarrollo_es": "El alumnado define las características de las enfermedades mentales más frecuentes, entre ellas la depresión, para entender el rechazo de Joan (0212-4c). Escribe después una escena del aseo con sus voces internas y aplica un aseo parcial ajustado a su estado (0217-2b), mostrando cómo impulsar su autonomía (0217-2d).",
+        "desarrollo_ca": "L'alumnat defineix les característiques de les malalties mentals més freqüents, entre les quals la depressió, per entendre el rebuig d'en Joan (0212-4c). Escriu després una escena de l'aseig amb les seves veus internes i aplica un aseig parcial ajustat al seu estat (0217-2b), mostrant com impulsar la seva autonomia (0217-2d).",
+        "evidencia_es": "Escena narrada y registro del aseo parcial practicado.",
+        "evidencia_ca": "Escena narrada i registre de l'aseig parcial practicat.",
+        "dua_es": "Escena escrita, grabada o dramatizada, y práctica con maniquí o con una pareja.",
+        "dua_ca": "Escena escrita, gravada o dramatitzada, i pràctica amb maniquí o amb una parella.",
+        "metodologia_es": "aprendizaje narrativo con práctica guiada.",
+        "metodologia_ca": "aprenentatge narratiu amb pràctica guiada."
+      },
+      {
+        "titulo_es": "Rincones sobre trastornos y hábitos de higiene",
+        "titulo_ca": "Racons sobre trastorns i hàbits d'higiene",
+        "contexto_es": "El módulo de práctica del centro prepara cuatro rincones donde se trabajan casos de ansiedad, depresión, esquizofrenia y trastorno bipolar con dificultades en el cuidado personal.",
+        "contexto_ca": "El mòdul de pràctica del centre prepara quatre racons on es treballen casos d'ansietat, depressió, esquizofrènia i trastorn bipolar amb dificultats en la cura personal.",
+        "desarrollo_es": "En cada rincón, los equipos definen las características del trastorno y explican qué efectos tiene sobre el cuidado personal (0212-4c). Luego practican el procedimiento de aseo que mejor se adapta al estado de la persona (0217-2b) y muestran sensibilidad al fomentar sus decisiones y su iniciativa (0217-2d).",
+        "desarrollo_ca": "A cada racó, els equips defineixen les característiques del trastorn i expliquen quins efectes té sobre la cura personal (0212-4c). Després practiquen el procediment d'aseig que s'adapta millor a l'estat de la persona (0217-2b) i mostren sensibilitat en fomentar-ne les decisions i la iniciativa (0217-2d).",
+        "evidencia_es": "Cuaderno de rincones con cuatro fichas de procedimiento.",
+        "evidencia_ca": "Quadern de racons amb quatre fitxes de procediment.",
+        "dua_es": "Rincones con consignas escritas, en audio y con ejemplos resueltos.",
+        "dua_ca": "Racons amb consignes escrites, en àudio i amb exemples resolts.",
+        "metodologia_es": "rincones de aprendizaje.",
+        "metodologia_ca": "racons d'aprenentatge."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["g"] },
-    "b": { "modulo": "0217", "ra": "RA3", "criterios": ["h", "g"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA3",
+      "criterios": [
+        "h",
+        "g"
+      ]
+    },
     "justificacion_es": "Los cuidadores no profesionales de personas enfermas necesitan orientación sobre cómo mantener limpio y seguro el entorno.",
     "justificacion_ca": "Els cuidadors no professionals de persones malaltes necessiten orientació sobre com mantenir net i segur l'entorn.",
     "actividades": [
@@ -414,12 +1163,53 @@
         "dua_ca": "Guia amb il·lustracions i lletra grossa.",
         "metodologia_es": "simulación de educación sanitaria.",
         "metodologia_ca": "simulació d'educació sanitària."
+      },
+      {
+        "titulo_es": "Taller para cuidadoras de personas con ELA",
+        "titulo_ca": "Taller per a cuidadores de persones amb ELA",
+        "contexto_es": "Una asociación de familiares de personas con enfermedades neurodegenerativas de Mallorca pide un taller sobre el cuidado del hogar de pacientes con ELA.",
+        "contexto_ca": "Una associació de familiars de persones amb malalties neurodegeneratives de Mallorca demana un taller sobre la cura de la llar de pacients amb ELA.",
+        "desarrollo_es": "El alumnado describe qué orientación y apoyo necesitan quienes cuidan a una persona enferma sin ser profesionales (0212-4g). Después organiza una charla práctica con la que informa de las condiciones que debe reunir el entorno (0217-3g) y de cómo usar los productos y materiales de limpieza (0217-3h).",
+        "desarrollo_ca": "L'alumnat descriu quina orientació i suport necessiten els qui cuiden una persona malalta sense ser professionals (0212-4g). Després organitza una xerrada pràctica amb què informa de les condicions que ha de reunir l'entorn (0217-3g) i de com utilitzar els productes i materials de neteja (0217-3h).",
+        "evidencia_es": "Guion de la charla y folleto con recomendaciones para el hogar.",
+        "evidencia_ca": "Guió de la xerrada i tríptic amb recomanacions per a la llar.",
+        "dua_es": "Folleto con pictogramas, versión en audio y demostración práctica de cada producto.",
+        "dua_ca": "Tríptic amb pictogrames, versió en àudio i demostració pràctica de cada producte.",
+        "metodologia_es": "aprendizaje-servicio con demostración.",
+        "metodologia_ca": "aprenentatge-servei amb demostració."
+      },
+      {
+        "titulo_es": "Podcast de consejos para cuidar sin ser técnico",
+        "titulo_ca": "Pòdcast de consells per cuidar sense ser tècnic",
+        "contexto_es": "Radio Ciutadella ofrece un espacio semanal para consejos de salud y el centro educativo prepara un episodio para familias que cuidan en casa a personas enfermas.",
+        "contexto_ca": "Ràdio Ciutadella ofereix un espai setmanal per a consells de salut i el centre educatiu prepara un episodi per a famílies que cuiden a casa persones malaltes.",
+        "desarrollo_es": "El alumnado escribe el guion de un pódcast donde explica las necesidades de orientación de los cuidadores no profesionales (0212-4g). Incluye pautas claras sobre las condiciones higiénicas del entorno (0217-3g) y sobre el uso seguro de los productos y materiales (0217-3h), y las graba para su difusión.",
+        "desarrollo_ca": "L'alumnat escriu el guió d'un pòdcast on explica les necessitats d'orientació dels cuidadors no professionals (0212-4g). Hi inclou pautes clares sobre les condicions higièniques de l'entorn (0217-3g) i sobre l'ús segur dels productes i materials (0217-3h), i les grava per a difondre-les.",
+        "evidencia_es": "Episodio de pódcast grabado con su guion.",
+        "evidencia_ca": "Episodi de pòdcast gravat amb el seu guió.",
+        "dua_es": "Guion con transcripción y opción de intervenir en voz o con efectos sonoros.",
+        "dua_ca": "Guió amb transcripció i opció d'intervenir en veu o amb efectes sonors.",
+        "metodologia_es": "aprendizaje basado en proyectos de comunicación.",
+        "metodologia_ca": "aprenentatge basat en projectes de comunicació."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["h"] },
-    "b": { "modulo": "1664", "ra": "RA2", "criterios": ["d", "f"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
     "justificacion_es": "Instalar tecnología conectada en casa de una persona mayor debe respetar su decisión, aunque aporte ventajas a la familia y al servicio.",
     "justificacion_ca": "Instal·lar tecnologia connectada a casa d'una persona gran ha de respectar la seva decisió, encara que aporti avantatges a la família i al servei.",
     "actividades": [
@@ -436,12 +1226,53 @@
         "dua_ca": "Vídeo explicatiu dels sensors i targetes d'arguments.",
         "metodologia_es": "debate ético.",
         "metodologia_ca": "debat ètic."
+      },
+      {
+        "titulo_es": "Mi casa inteligente: ¿la quiero o no?",
+        "titulo_ca": "La meva casa intel·ligent: la vull o no?",
+        "contexto_es": "A una vecina de Capdepera de 85 años le ofrecen un pack de altavoz inteligente y sensores de apertura de puerta, pero no sabe si quiere vivir vigilada.",
+        "contexto_ca": "A una veïna de Capdepera de 85 anys li ofereixen un pack d'altaveu intel·ligent i sensors d'obertura de porta, però no sap si vol viure vigilada.",
+        "desarrollo_es": "El alumnado describe cómo conviven el mundo físico y el virtual en una vivienda conectada (1664-2d) y enumera las ventajas que ofrece a clientes y a empresas del servicio (1664-2f). Después elabora un documento de consentimiento que respeta las decisiones e intereses de la vecina antes de instalar nada (0212-2h).",
+        "desarrollo_ca": "L'alumnat descriu com conviuen el món físic i el virtual en un habitatge connectat (1664-2d) i enumera els avantatges que ofereix a clients i a empreses del servei (1664-2f). Després elabora un document de consentiment que respecta les decisions i els interessos de la veïna abans d'instal·lar res (0212-2h).",
+        "evidencia_es": "Documento de consentimiento informado en lectura fácil.",
+        "evidencia_ca": "Document de consentiment informat en lectura fàcil.",
+        "dua_es": "Documento de consentimiento con símbolos y explicación oral individual.",
+        "dua_ca": "Document de consentiment amb símbols i explicació oral individual.",
+        "metodologia_es": "aprendizaje basado en la elaboración de documentos.",
+        "metodologia_ca": "aprenentatge basat en l'elaboració de documents."
+      },
+      {
+        "titulo_es": "Feria de gadgets para mayores con voz propia",
+        "titulo_ca": "Fira de gadgets per a grans amb veu pròpia",
+        "contexto_es": "El ayuntamiento de Marratxí organiza una feria de tecnología para el hogar de personas mayores y quiere que ellas opinen antes de comprar nada.",
+        "contexto_ca": "L'ajuntament de Marratxí organitza una fira de tecnologia per a la llar de persones grans i vol que elles opinin abans de comprar res.",
+        "desarrollo_es": "El alumnado monta un expositor donde explica qué relación hay entre lo físico y lo digital en cada dispositivo (1664-2d) y qué ventajas aporta a los clientes y a las empresas (1664-2f). Recoge luego en un panel las opiniones de los mayores, que deben ser respetadas siempre antes que las de la familia (0212-2h).",
+        "desarrollo_ca": "L'alumnat munta un expositor on explica quina relació hi ha entre el físic i el digital en cada dispositiu (1664-2d) i quins avantatges aporta als clients i a les empreses (1664-2f). Recull després en un panell les opinions dels grans, que han de ser respectades sempre abans que les de la família (0212-2h).",
+        "evidencia_es": "Expositor con fichas de dispositivos y panel de opiniones de los mayores.",
+        "evidencia_ca": "Expositor amb fitxes de dispositius i panell d'opinions dels grans.",
+        "dua_es": "Fichas con texto, imagen y código QR de audio y turnos para atender al público.",
+        "dua_ca": "Fitxes amb text, imatge i codi QR d'àudio i torns per atendre el públic.",
+        "metodologia_es": "aprendizaje basado en exposición y feria.",
+        "metodologia_ca": "aprenentatge basat en exposició i fira."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["f", "b"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "f",
+        "b"
+      ]
+    },
     "justificacion_es": "El concepto de discapacidad ha evolucionado de la mano de los avances tecnológicos, que hoy abren nuevas posibilidades de autonomía.",
     "justificacion_ca": "El concepte de discapacitat ha evolucionat de la mà dels avanços tecnològics, que avui obren noves possibilitats d'autonomia.",
     "actividades": [
@@ -458,12 +1289,52 @@
         "dua_ca": "Format mural o digital i fonts en vídeo.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Cápsula de la discapacidad con gemelos digitales",
+        "titulo_ca": "Càpsula de la discapacitat amb bessons digitals",
+        "contexto_es": "Un museo de Palma prepara una sala sobre cómo ha cambiado la mirada hacia las personas con discapacidad y busca ejemplos con tecnología actual.",
+        "contexto_ca": "Un museu de Palma prepara una sala sobre com ha canviat la mirada cap a les persones amb discapacitat i cerca exemples amb tecnologia actual.",
+        "desarrollo_es": "El alumnado explica cómo ha evolucionado el concepto de discapacidad con los cambios sociales, económicos y científicos (0212-3a). Después describe las características de la inteligencia artificial, la realidad virtual o la robótica colaborativa (1664-4b) y las vincula con aplicaciones que mejoran la autonomía (1664-4f).",
+        "desarrollo_ca": "L'alumnat explica com ha evolucionat el concepte de discapacitat amb els canvis socials, econòmics i científics (0212-3a). Després descriu les característiques de la intel·ligència artificial, la realitat virtual o la robòtica col·laborativa (1664-4b) i les vincula amb aplicacions que milloren l'autonomia (1664-4f).",
+        "evidencia_es": "Cápsula audiovisual breve con ejemplos de tecnología y accesibilidad.",
+        "evidencia_ca": "Càpsula audiovisual breu amb exemples de tecnologia i accessibilitat.",
+        "dua_es": "Cápsula con subtítulos y audiodescripción, y guion multiformato.",
+        "dua_ca": "Càpsula amb subtítols i audiodescripció, i guió multiformat.",
+        "metodologia_es": "aprendizaje basado en la creación audiovisual.",
+        "metodologia_ca": "aprenentatge basat en la creació audiovisual."
+      },
+      {
+        "titulo_es": "Debate sobre robots de compañía y accesibilidad",
+        "titulo_ca": "Debat sobre robots de companyia i accessibilitat",
+        "contexto_es": "Una fundación de Mallorca debate si debe comprar un robot colaborativo y gafas de realidad virtual para su centro de atención a personas con discapacidad.",
+        "contexto_ca": "Una fundació de Mallorca debat si ha de comprar un robot col·laboratiu i ulleres de realitat virtual per al seu centre d'atenció a persones amb discapacitat.",
+        "desarrollo_es": "En un debate estructurado, los equipos defienden o cuestionan cada tecnología (1664-4b) y argumentan qué aplicaciones concretas ofrece para los distintos sectores (1664-4f). Durante el debate recuerdan cómo el concepto de discapacidad ha ido evolucionando con la sociedad y la ciencia (0212-3a).",
+        "desarrollo_ca": "En un debat estructurat, els equips defensen o qüestionen cada tecnologia (1664-4b) i argumenten quines aplicacions concretes ofereix per als diferents sectors (1664-4f). Durant el debat recorden com el concepte de discapacitat ha anat evolucionant amb la societat i la ciència (0212-3a).",
+        "evidencia_es": "Acta del debate con la decisión de compra justificada.",
+        "evidencia_ca": "Acta del debat amb la decisió de compra justificada.",
+        "dua_es": "Debate con turnos de palabra, tarjetas de argumentos y un moderador de apoyo.",
+        "dua_ca": "Debat amb torns de paraula, targetes d'arguments i un moderador de suport.",
+        "metodologia_es": "debate estructurado.",
+        "metodologia_ca": "debat estructurat."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["e"] },
-    "b": { "modulo": "1664", "ra": "RA3", "criterios": ["e"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "La monitorización remota en la nube permite atender necesidades de apoyo de personas con enfermedades crónicas sin desplazarse.",
     "justificacion_ca": "La monitorització remota al núvol permet atendre necessitats de suport de persones amb malalties cròniques sense desplaçar-se.",
     "actividades": [
@@ -480,12 +1351,52 @@
         "dua_ca": "Demostració amb aparells reals i taula guiada.",
         "metodologia_es": "análisis de caso.",
         "metodologia_ca": "anàlisi de cas."
+      },
+      {
+        "titulo_es": "Telemonitorización de Margalida con EPOC",
+        "titulo_ca": "Telemonitoratge de na Margalida amb MPOC",
+        "contexto_es": "Margalida, con EPOC avanzada, vive en Banyalbufar y cada visita al hospital supone horas de carretera; el centro de salud le ofrece un pulsioxímetro conectado.",
+        "contexto_ca": "Na Margalida, amb MPOC avançada, viu a Banyalbufar i cada visita a l'hospital suposa hores de carretera; el centre de salut li ofereix un pulsioxímetre connectat.",
+        "desarrollo_es": "El alumnado determina qué necesidades de apoyo asistencial y psicosocial tiene una persona con enfermedad respiratoria crónica (0212-4e). Después dibuja el recorrido de sus datos hasta el servidor y señala qué ventajas ofrece la nube a los sistemas conectados que la atienden (1664-3e).",
+        "desarrollo_ca": "L'alumnat determina quines necessitats de suport assistencial i psicosocial té una persona amb malaltia respiratòria crònica (0212-4e). Després dibuixa el recorregut de les seves dades fins al servidor i assenyala quins avantatges ofereix el núvol als sistemes connectats que l'atenen (1664-3e).",
+        "evidencia_es": "Esquema del flujo de datos con la lista de necesidades cubiertas.",
+        "evidencia_ca": "Esquema del flux de dades amb la llista de necessitats cobertes.",
+        "dua_es": "Esquema con plantilla de iconos y explicación oral opcional.",
+        "dua_ca": "Esquema amb plantilla d'icones i explicació oral opcional.",
+        "metodologia_es": "aprendizaje visual con esquemas.",
+        "metodologia_ca": "aprenentatge visual amb esquemes."
+      },
+      {
+        "titulo_es": "Hackatón de ideas para pacientes crónicos rurales",
+        "titulo_ca": "Hackató d'idees per a pacients crònics rurals",
+        "contexto_es": "El IB-Salut propone a estudiantes de Menorca un reto de una mañana para mejorar el seguimiento de pacientes con diabetes y cardiopatías que viven lejos del centro de salud.",
+        "contexto_ca": "L'IB-Salut proposa a estudiants de Menorca un repte d'un matí per millorar el seguiment de pacients amb diabetis i cardiopaties que viuen lluny del centre de salut.",
+        "desarrollo_es": "Los equipos analizan qué apoyo asistencial y psicosocial necesita cada tipo de enfermedad crónica (0212-4e). Después inventan una solución conectada y defienden en un minuto qué ventajas aportaría la nube a ese sistema (1664-3e).",
+        "desarrollo_ca": "Els equips analitzen quin suport assistencial i psicosocial necessita cada tipus de malaltia crònica (0212-4e). Després inventen una solució connectada i defensen en un minut quins avantatges aportaria el núvol a aquest sistema (1664-3e).",
+        "evidencia_es": "Prototipo en papel de la solución y presentación de un minuto.",
+        "evidencia_ca": "Prototip en paper de la solució i presentació d'un minut.",
+        "dua_es": "Prototipo en papel, maqueta o diapositiva, a elección del equipo.",
+        "dua_ca": "Prototip en paper, maqueta o diapositiva, a elecció de l'equip.",
+        "metodologia_es": "hackatón de aula.",
+        "metodologia_ca": "hackató d'aula."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA2", "criterios": ["g"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "El apoyo a los cuidadores familiares abre nuevos yacimientos de empleo para el técnico, como el respiro familiar.",
     "justificacion_ca": "El suport als cuidadors familiars obre nous jaciments d'ocupació per al tècnic, com el respir familiar.",
     "actividades": [
@@ -502,12 +1413,52 @@
         "dua_ca": "Llistat de webs d'ocupació i plantilla d'informe.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Entrevista a una profesional del respiro familiar",
+        "titulo_ca": "Entrevista a una professional del respir familiar",
+        "contexto_es": "Una trabajadora de un servicio de respiro de Eivissa explica al centro que le cuesta encontrar técnicos que sepan acompañar tanto a la persona mayor como a quien la cuida.",
+        "contexto_ca": "Una treballadora d'un servei de respir d'Eivissa explica al centre que li costa trobar tècnics que sàpiguen acompanyar tant la persona gran com qui la cuida.",
+        "desarrollo_es": "El alumnado le pregunta qué orientación y apoyo reclaman los cuidadores familiares de personas mayores (0212-2g). Con sus respuestas, analiza las oportunidades de empleo del sector y sus requisitos para el perfil profesional del título (1709-1a), y redacta un anuncio de oferta de trabajo.",
+        "desarrollo_ca": "L'alumnat li pregunta quina orientació i quin suport reclamen els cuidadors familiars de persones grans (0212-2g). Amb les seves respostes, analitza les oportunitats d'ocupació del sector i els seus requisits per al perfil professional del títol (1709-1a), i redacta un anunci d'oferta de feina.",
+        "evidencia_es": "Anuncio de oferta de empleo y resumen de la entrevista.",
+        "evidencia_ca": "Anunci d'oferta d'ocupació i resum de l'entrevista.",
+        "dua_es": "Preguntas ensayadas en parejas y respuesta registrada por escrito o en audio.",
+        "dua_ca": "Preguntes assajades en parelles i resposta registrada per escrit o en àudio.",
+        "metodologia_es": "entrevista a una profesional del sector.",
+        "metodologia_ca": "entrevista a una professional del sector."
+      },
+      {
+        "titulo_es": "Mapa de yacimientos de empleo en el cuidado",
+        "titulo_ca": "Mapa de jaciments d'ocupació en la cura",
+        "contexto_es": "El servicio de empleo de Mallorca pide al alumnado un mapa que muestre dónde crece la demanda de profesionales de apoyo a familias cuidadoras.",
+        "contexto_ca": "El servei d'ocupació de Mallorca demana a l'alumnat un mapa que mostri on creix la demanda de professionals de suport a famílies cuidadores.",
+        "desarrollo_es": "En grupos cooperativos, el alumnado resume las necesidades de las familias que cuidan a personas mayores (0212-2g). Con ello sitúa en un mapa las empresas y entidades que ofrecen empleo en el sector y compara los requisitos actuales de cada puesto (1709-1a).",
+        "desarrollo_ca": "En grups cooperatius, l'alumnat resumeix les necessitats de les famílies que cuiden persones grans (0212-2g). Amb això situa en un mapa les empreses i entitats que ofereixen feina al sector i compara els requisits actuals de cada lloc (1709-1a).",
+        "evidencia_es": "Mapa de entidades empleadoras con tabla de requisitos.",
+        "evidencia_ca": "Mapa d'entitats ocupadores amb taula de requisits.",
+        "dua_es": "Mapa digital o en papel y tabla de requisitos con iconos.",
+        "dua_ca": "Mapa digital o en paper i taula de requisits amb icones.",
+        "metodologia_es": "aprendizaje cooperativo con cartografía.",
+        "metodologia_ca": "aprenentatge cooperatiu amb cartografia."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["f"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Atender las necesidades psicológicas de personas con enfermedad mental expone al técnico a riesgos psicosociales que conviene prevenir.",
     "justificacion_ca": "Atendre les necessitats psicològiques de persones amb malaltia mental exposa el tècnic a riscs psicosocials que convé prevenir.",
     "actividades": [
@@ -524,12 +1475,53 @@
         "dua_ca": "Testimonis en vídeo i esquema guiat.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Mapa de riesgos psicosociales en una residencia",
+        "titulo_ca": "Mapa de riscos psicosocials en una residència",
+        "contexto_es": "Una residencia de salud mental de Palma observa un aumento de bajas entre su personal y quiere identificar qué situaciones del trato diario generan más desgaste.",
+        "contexto_ca": "Una residència de salut mental de Palma observa un augment de baixes entre el seu personal i vol identificar quines situacions del tracte diari generen més desgast.",
+        "desarrollo_es": "El alumnado describe las pautas de atención a las necesidades psicológicas y sociales de las personas enfermas (0212-4f). A continuación señala dónde cada pauta expone al personal a un riesgo psicosocial y valora la cultura preventiva que lo evitaría (1709-2a).",
+        "desarrollo_ca": "L'alumnat descriu les pautes d'atenció a les necessitats psicològiques i socials de les persones malaltes (0212-4f). A continuació assenyala on cada pauta exposa el personal a un risc psicosocial i valora la cultura preventiva que l'evitaria (1709-2a).",
+        "evidencia_es": "Mapa de riesgos con medidas preventivas para el personal.",
+        "evidencia_ca": "Mapa de riscs amb mesures preventives per al personal.",
+        "dua_es": "Mapa con semáforo de colores y palabras clave de apoyo.",
+        "dua_ca": "Mapa amb semàfor de colors i paraules clau de suport.",
+        "metodologia_es": "análisis de riesgos en equipo.",
+        "metodologia_ca": "anàlisi de riscs en equip."
+      },
+      {
+        "titulo_es": "Rol de comité de seguridad y salud",
+        "titulo_ca": "Rol de comitè de seguretat i salut",
+        "contexto_es": "La dirección de un centro de salud mental de Inca convoca al comité para revisar una agresión verbal sufrida por una técnica durante un taller de convivencia.",
+        "contexto_ca": "La direcció d'un centre de salut mental d'Inca convoca el comitè per revisar una agressió verbal soferta per una tècnica durant un taller de convivència.",
+        "desarrollo_es": "Cada alumno asume un papel en la reunión: la técnica, el usuario, el delegado y la dirección. Juntos revisan cómo las pautas de atención a las necesidades psicológicas y sociales de los usuarios pueden prevenir conflictos (0212-4f) y proponen medidas que protejan la salud laboral del personal (1709-2a).",
+        "desarrollo_ca": "Cada alumne assumeix un paper a la reunió: la tècnica, l'usuari, el delegat i la direcció. Plegats revisen com les pautes d'atenció a les necessitats psicològiques i socials dels usuaris poden prevenir conflictes (0212-4f) i proposen mesures que protegeixin la salut laboral del personal (1709-2a).",
+        "evidencia_es": "Acta de la reunión con medidas preventivas acordadas.",
+        "evidencia_ca": "Acta de la reunió amb mesures preventives acordades.",
+        "dua_es": "Fichas de rol con frases de arranque y observador con rúbrica.",
+        "dua_ca": "Fitxes de rol amb frases d'arrencada i observador amb rúbrica.",
+        "metodologia_es": "juego de rol de reunión.",
+        "metodologia_ca": "joc de rol de reunió."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA3", "criterios": ["h"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["h", "e"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA3",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "h",
+        "e"
+      ]
+    },
     "justificacion_es": "Las experiencias previas con personas con discapacidad son hitos vitales con valor profesional que refuerzan la autoestima en la búsqueda de empleo.",
     "justificacion_ca": "Les experiències prèvies amb persones amb discapacitat són fites vitals amb valor professional que reforcen l'autoestima en la recerca de feina.",
     "actividades": [
@@ -546,12 +1538,52 @@
         "dua_ca": "Relat en text, àudio o vídeo.",
         "metodologia_es": "aprendizaje narrativo.",
         "metodologia_ca": "aprenentatge narratiu."
+      },
+      {
+        "titulo_es": "Currículum que cuenta mi voluntariado inclusivo",
+        "titulo_ca": "Currículum que explica el meu voluntariat inclusiu",
+        "contexto_es": "Un equipo de Selecció de Personal de una entidad del tercer sector de Mallorca valora más las vivencias de voluntariado inclusivo que muchas certificaciones.",
+        "contexto_ca": "Un equip de Selecció de Personal d'una entitat del tercer sector de Mallorca valora més les vivències de voluntariat inclusiu que moltes certificacions.",
+        "desarrollo_es": "El alumnado selecciona episodios de su recorrido que le han mostrado el valor de respetar las decisiones y los intereses de las personas con discapacidad (0212-3h). Los redacta como hitos con valor profesional (1709-4h) y trabaja su autoestima al presentarlos en una carta de motivación (1709-4e).",
+        "desarrollo_ca": "L'alumnat selecciona episodis del seu recorregut que li han mostrat el valor de respectar les decisions i els interessos de les persones amb discapacitat (0212-3h). Els redacta com a fites amb valor professional (1709-4h) i treballa la seva autoestima en presentar-los en una carta de motivació (1709-4e).",
+        "evidencia_es": "Carta de motivación con tres hitos profesionales.",
+        "evidencia_ca": "Carta de motivació amb tres fites professionals.",
+        "dua_es": "Carta con plantilla de frases y revisión entre iguales.",
+        "dua_ca": "Carta amb plantilla de frases i revisió entre iguals.",
+        "metodologia_es": "portafolio reflexivo.",
+        "metodologia_ca": "portafoli reflexiu."
+      },
+      {
+        "titulo_es": "Simulacro de entrevista de empleo inclusiva",
+        "titulo_ca": "Simulacre d'entrevista d'ocupació inclusiva",
+        "contexto_es": "Una empresa de servicios de apoyo a personas con discapacidad de Menorca abre un proceso de selección y busca candidatos que sepan hablar de su relación con ellas.",
+        "contexto_ca": "Una empresa de serveis de suport a persones amb discapacitat de Menorca obre un procés de selecció i cerca candidats que sàpiguen parlar de la seva relació amb elles.",
+        "desarrollo_es": "En parejas, un alumno entrevista y el otro responde, argumentando por qué hay que respetar las decisiones e intereses de las personas con discapacidad (0212-3h). Quien responde refuerza su autoestima al hablar de sus logros (1709-4e) y relaciona sus experiencias previas con su futuro laboral (1709-4h).",
+        "desarrollo_ca": "En parelles, un alumne entrevista i l'altre respon, argumentant per què cal respectar les decisions i interessos de les persones amb discapacitat (0212-3h). Qui respon reforça la seva autoestima en parlar dels seus assoliments (1709-4e) i relaciona les seves experiències prèvies amb el seu futur laboral (1709-4h).",
+        "evidencia_es": "Grabación de la entrevista y guía de autoevaluación.",
+        "evidencia_ca": "Gravació de l'entrevista i guia d'autoavaluació.",
+        "dua_es": "Guion de preguntas previo y opción de repetir la grabación.",
+        "dua_ca": "Guió de preguntes previ i opció de repetir la gravació.",
+        "metodologia_es": "simulación de entrevista con coevaluación.",
+        "metodologia_ca": "simulació d'entrevista amb coavaluació."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA3", "criterios": ["f"] },
-    "b": { "modulo": "0213", "ra": "RA6", "criterios": ["e"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "0213",
+      "ra": "RA6",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Las familias de personas con discapacidad necesitan orientación, y las herramientas digitales permiten localizar los recursos que les ayudan.",
     "justificacion_ca": "Les famílies de persones amb discapacitat necessiten orientació, i les eines digitals permeten localitzar els recursos que les ajuden.",
     "actividades": [
@@ -568,12 +1600,53 @@
         "dua_ca": "Guia de cerca amb paraules clau suggerides.",
         "metodologia_es": "investigación en red.",
         "metodologia_ca": "recerca en xarxa."
+      },
+      {
+        "titulo_es": "Guía digital de recursos para familias con TEA",
+        "titulo_ca": "Guia digital de recursos per a famílies amb TEA",
+        "contexto_es": "La asociación de autismo de Mallorca quiere una página con recursos comunitarios para familias que acaban de recibir un diagnóstico y están desorientadas.",
+        "contexto_ca": "L'associació d'autisme de Mallorca vol una pàgina amb recursos comunitaris per a famílies que acaben de rebre un diagnòstic i estan desorientades.",
+        "desarrollo_es": "Tras conversar con familias, el alumnado describe qué orientación y apoyo precisan los cuidadores no profesionales de una persona con discapacidad (0212-3f). Utiliza buscadores y mapas en línea para localizar recursos comunitarios y los ordena en una página web sencilla (0213-6e).",
+        "desarrollo_ca": "Després de conversar amb famílies, l'alumnat descriu quina orientació i quin suport necessiten els cuidadors no professionals d'una persona amb discapacitat (0212-3f). Utilitza cercadors i mapes en línia per localitzar recursos comunitaris i els ordena en una pàgina web senzilla (0213-6e).",
+        "evidencia_es": "Página web de recursos clasificada por necesidades de las familias.",
+        "evidencia_ca": "Pàgina web de recursos classificada per necessitats de les famílies.",
+        "dua_es": "Plantilla de página prediseñada y ayuda de un compañero con experiencia digital.",
+        "dua_ca": "Plantilla de pàgina predissenyada i ajuda d'un company amb experiència digital.",
+        "metodologia_es": "aprendizaje basado en proyectos digitales.",
+        "metodologia_ca": "aprenentatge basat en projectes digitals."
+      },
+      {
+        "titulo_es": "Cita con la orientadora: simulación en parejas",
+        "titulo_ca": "Cita amb l'orientadora: simulació en parelles",
+        "contexto_es": "Un padre de Sant Josep, cuyo hijo de seis años tiene parálisis cerebral, acude a un servicio social buscando actividades y servicios cerca de casa.",
+        "contexto_ca": "Un pare de Sant Josep, el fill del qual de sis anys té paràlisi cerebral, acudeix a un servei social cercant activitats i serveis a prop de casa.",
+        "desarrollo_es": "Una persona de la pareja interpreta al padre y la otra, a la orientadora. Ella detecta las necesidades de orientación y apoyo de los cuidadores no profesionales (0212-3f) y le muestra cómo localizar recursos comunitarios con las tecnologías de la información y la comunicación (0213-6e).",
+        "desarrollo_ca": "Una persona de la parella interpreta el pare i l'altra, l'orientadora. Ella detecta les necessitats d'orientació i suport dels cuidadors no professionals (0212-3f) i li mostra com localitzar recursos comunitaris amb les tecnologies de la informació i la comunicació (0213-6e).",
+        "evidencia_es": "Hoja de derivación con recursos localizados y comentario del observador.",
+        "evidencia_ca": "Full de derivació amb recursos localitzats i comentari de l'observador.",
+        "dua_es": "Intercambio de papeles para repetir la escena y soporte de ordenador o tableta.",
+        "dua_ca": "Intercanvi de papers per repetir l'escena i suport d'ordinador o tauleta.",
+        "metodologia_es": "simulación en parejas.",
+        "metodologia_ca": "simulació en parelles."
       }
     ]
   },
   {
-    "a": { "modulo": "0212", "ra": "RA4", "criterios": ["d"] },
-    "b": { "modulo": "0215", "ra": "RA7", "criterios": ["a", "e"] },
+    "a": {
+      "modulo": "0212",
+      "ra": "RA4",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0215",
+      "ra": "RA7",
+      "criterios": [
+        "a",
+        "e"
+      ]
+    },
     "justificacion_es": "La enfermedad mental puede deteriorar la vida en el domicilio, y el seguimiento del plan detecta cuándo hace falta otro profesional.",
     "justificacion_ca": "La malaltia mental pot deteriorar la vida al domicili, i el seguiment del pla detecta quan cal un altre professional.",
     "actividades": [
@@ -590,12 +1663,52 @@
         "dua_ca": "Fotografies del domicili en diferents visites i escala visual.",
         "metodologia_es": "estudio de caso evolutivo.",
         "metodologia_ca": "estudi de cas evolutiu."
+      },
+      {
+        "titulo_es": "Seguimiento del piso de Maria con alarma",
+        "titulo_ca": "Seguiment del pis de na Maria amb alarma",
+        "contexto_es": "Maria, con trastorno bipolar, vive sola en Es Castell y su hermana avisa de que ha dejado de abrir las persianas y la nevera está casi vacía.",
+        "contexto_ca": "Na Maria, amb trastorn bipolar, viu sola al Castell i la seva germana avisa que ha deixat d'obrir les persianes i la nevera està gairebé buida.",
+        "desarrollo_es": "El alumnado describe cómo esta enfermedad mental afecta a la autonomía personal y social de Maria (0212-4d). Después identifica las fuentes de información y las técnicas de seguimiento que permitirían detectar riesgos (0215-7a) y señala cuándo deben intervenir otros profesionales (0215-7e).",
+        "desarrollo_ca": "L'alumnat descriu com aquesta malaltia mental afecta l'autonomia personal i social de na Maria (0212-4d). Després identifica les fonts d'informació i les tècniques de seguiment que permetrien detectar riscs (0215-7a) i assenyala quan han d'intervenir altres professionals (0215-7e).",
+        "evidencia_es": "Cronograma de seguimiento con criterios de derivación.",
+        "evidencia_ca": "Cronograma de seguiment amb criteris de derivació.",
+        "dua_es": "Cronograma en plantilla de calendario y casos con y sin palabras clave.",
+        "dua_ca": "Cronograma en plantilla de calendari i casos amb i sense paraules clau.",
+        "metodologia_es": "aprendizaje basado en la planificación.",
+        "metodologia_ca": "aprenentatge basat en la planificació."
+      },
+      {
+        "titulo_es": "Comisión de coordinación sociosanitaria",
+        "titulo_ca": "Comissió de coordinació sociosanitària",
+        "contexto_es": "En Manacor, la auxiliar de ayuda a domicilio, la enfermera del centro de salud y la trabajadora social deben coordinarse por un usuario con esquizofrenia que deja de tomar la medicación.",
+        "contexto_ca": "A Manacor, l'auxiliar d'ajuda a domicili, la infermera del centre de salut i la treballadora social s'han de coordinar per un usuari amb esquizofrènia que deixa de prendre la medicació.",
+        "desarrollo_es": "En una reunión simulada, cada papel explica cómo la enfermedad mental modifica la autonomía y la vida social del usuario (0212-4d). Los equipos acuerdan las fuentes de información y las técnicas de seguimiento que usarán (0215-7a) y definen en qué casos acudirán a otros especialistas (0215-7e).",
+        "desarrollo_ca": "En una reunió simulada, cada paper explica com la malaltia mental modifica l'autonomia i la vida social de l'usuari (0212-4d). Els equips acorden les fonts d'informació i les tècniques de seguiment que faran servir (0215-7a) i defineixen en quins casos acudiran a altres especialistes (0215-7e).",
+        "evidencia_es": "Protocolo de coordinación firmado por los tres perfiles.",
+        "evidencia_ca": "Protocol de coordinació signat pels tres perfils.",
+        "dua_es": "Tarjetas con la función de cada profesional y esquema de la reunión.",
+        "dua_ca": "Targetes amb la funció de cada professional i esquema de la reunió.",
+        "metodologia_es": "simulación de comisión interprofesional.",
+        "metodologia_ca": "simulació de comissió interprofessional."
       }
     ]
   },
   {
-    "a": { "modulo": "0020", "ra": "RA3", "criterios": ["c"] },
-    "b": { "modulo": "0212", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "0020",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "0212",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Los cambios del envejecimiento, como la fragilidad ósea o la rigidez, condicionan las posturas seguras tras una caída.",
     "justificacion_ca": "Els canvis de l'envelliment, com la fragilitat òssia o la rigidesa, condicionen les postures segures després d'una caiguda.",
     "actividades": [
@@ -612,6 +1725,34 @@
         "dua_ca": "Vestit de simulació d'envelliment i maniquí.",
         "metodologia_es": "simulación práctica.",
         "metodologia_ca": "simulació pràctica."
+      },
+      {
+        "titulo_es": "Cuidado postural mientras llega el 061",
+        "titulo_ca": "Cura postural mentre arriba el 061",
+        "contexto_es": "Una residente de Inca de 87 años con osteoporosis se queja de dolor intenso en la cadera tras resbalar en el baño, y el personal debe actuar hasta que llegue la ambulancia.",
+        "contexto_ca": "Una resident d'Inca de 87 anys amb osteoporosi es queixa de dolor intens al maluc després d'esvarar al bany, i el personal ha d'actuar fins que arribi l'ambulància.",
+        "desarrollo_es": "El alumnado explica cómo los cambios biológicos, psicológicos y sociales del envejecimiento influyen en la gravedad de una caída (0212-2a). Después caracteriza y practica las medidas posturales más seguras para una persona lesionada (0020-3c).",
+        "desarrollo_ca": "L'alumnat explica com els canvis biològics, psicològics i socials de l'envelliment influeixen en la gravetat d'una caiguda (0212-2a). Després caracteritza i practica les mesures posturals més segures per a una persona lesionada (0020-3c).",
+        "evidencia_es": "Lista de comprobación de la postura segura y vídeo de la práctica.",
+        "evidencia_ca": "Llista de comprovació de la postura segura i vídeo de la pràctica.",
+        "dua_es": "Práctica por turnos con vídeo de apoyo y lista de verificación visual.",
+        "dua_ca": "Pràctica per torns amb vídeo de suport i llista de verificació visual.",
+        "metodologia_es": "aprendizaje basado en la práctica con vídeo.",
+        "metodologia_ca": "aprenentatge basat en la pràctica amb vídeo."
+      },
+      {
+        "titulo_es": "Taller de caídas con un geriatra invitado",
+        "titulo_ca": "Taller de caigudes amb un geriatre convidat",
+        "contexto_es": "Un geriatra del hospital Son Llàtzer visita el aula para explicar por qué las caídas de personas mayores tienen consecuencias distintas a las de un adulto joven.",
+        "contexto_ca": "Un geriatre de l'hospital Son Llàtzer visita l'aula per explicar per què les caigudes de persones grans tenen conseqüències diferents de les d'un adult jove.",
+        "desarrollo_es": "Con ayuda del geriatra, el alumnado relaciona los cambios del envejecimiento con las dificultades que provocan en la vida diaria y en un accidente (0212-2a). En estaciones de práctica, comprueba qué medidas posturales son adecuadas ante distintas lesiones (0020-3c).",
+        "desarrollo_ca": "Amb l'ajuda del geriatre, l'alumnat relaciona els canvis de l'envelliment amb les dificultats que provoquen a la vida diària i en un accident (0212-2a). En estacions de pràctica, comprova quines mesures posturals són adequades davant diferents lesions (0020-3c).",
+        "evidencia_es": "Cuaderno del taller con las posturas de cada lesión.",
+        "evidencia_ca": "Quadern del taller amb les postures de cada lesió.",
+        "dua_es": "Cuaderno con dibujos esquemáticos y tiempo de práctica ampliable.",
+        "dua_ca": "Quadern amb dibuixos esquemàtics i temps de pràctica ampliable.",
+        "metodologia_es": "taller con experto invitado.",
+        "metodologia_ca": "taller amb expert convidat."
       }
     ]
   }

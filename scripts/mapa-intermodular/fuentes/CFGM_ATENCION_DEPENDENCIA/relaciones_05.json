@@ -1,7 +1,20 @@
 [
   {
-    "a": { "modulo": "0215", "ra": "RA4", "criterios": ["f", "h"] },
-    "b": { "modulo": "0217", "ra": "RA3", "criterios": ["e"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA4",
+      "criterios": [
+        "f",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "La ropa de una persona incontinente o con una infección se lava con técnicas y desinfección específicas, interpretando bien las etiquetas.",
     "justificacion_ca": "La roba d'una persona incontinent o amb una infecció es renta amb tècniques i desinfecció específiques, interpretant bé les etiquetes.",
     "actividades": [
@@ -18,12 +31,52 @@
         "dua_ca": "Taula de símbols d'etiquetes i peces reals.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Lavandería de prueba para ropa sucia con etiquetas",
+        "titulo_ca": "Bugaderia de prova per a roba bruta amb etiquetes",
+        "contexto_es": "Tras una gripe en una residencia de Sa Pobla, hay que lavar sábanas, pijamas y ropa delicada con etiquetas poco legibles.",
+        "contexto_ca": "Després d'una grip en una residència de Sa Pobla, cal rentar llençols, pijames i roba delicada amb etiquetes poc llegibles.",
+        "desarrollo_es": "Clasifican la ropa según sus símbolos de etiquetado (0215-4h) y describen el tipo de lavado, a mano o a máquina, según manchas y suciedad (0215-4f). Aplican el método de limpieza y desinfección de lencería respetando el control de calidad y la gestión de residuos (0217-3e).",
+        "desarrollo_ca": "Classifiquen la roba segons els seus símbols d'etiquetatge (0215-4h) i descriuen el tipus de rentat, a mà o a màquina, segons taques i brutícia (0215-4f). Apliquen el mètode de neteja i desinfecció de llenceria respectant el control de qualitat i la gestió de residus (0217-3e).",
+        "evidencia_es": "Tabla de clasificación de prendas y registro del lavado con su desinfección.",
+        "evidencia_ca": "Taula de classificació de peces i registre del rentat amb la seva desinfecció.",
+        "dua_es": "Glosario ilustrado de símbolos de lavado y práctica por parejas con roles rotatorios.",
+        "dua_ca": "Glossari il·lustrat de símbols de rentat i pràctica per parelles amb rols rotatoris.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Manual del buen lavado para voluntarios",
+        "titulo_ca": "Manual del bon rentat per a voluntaris",
+        "contexto_es": "Una entidad de Cáritas en Palma recibe donaciones de ropa y necesita que sus voluntarios la traten con higiene.",
+        "contexto_ca": "Una entitat de Càritas a Palma rep donacions de roba i necessita que els seus voluntaris la tractin amb higiene.",
+        "desarrollo_es": "Redactan un manual con instrucciones para interpretar el etiquetado y ordenar la ropa (0215-4h). Incluyen las técnicas de lavado según prenda, mancha y suciedad (0215-4f) y los pasos de limpieza y desinfección que garantizan la calidad y el tratamiento correcto de los residuos (0217-3e).",
+        "desarrollo_ca": "Redacten un manual amb instruccions per interpretar l'etiquetatge i ordenar la roba (0215-4h). Hi inclouen les tècniques de rentat segons peça, taca i brutícia (0215-4f) i els passos de neteja i desinfecció que garanteixen la qualitat i el tractament correcte dels residus (0217-3e).",
+        "evidencia_es": "Manual ilustrado de dos páginas probado con un voluntario.",
+        "evidencia_ca": "Manual il·lustrat de dues pàgines provat amb un voluntari.",
+        "dua_es": "Manual con fotos reales y versión resumida en pictogramas.",
+        "dua_ca": "Manual amb fotos reals i versió resumida en pictogrames.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "0217", "ra": "RA2", "criterios": ["g"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "Los absorbentes y otros residuos de la higiene se manipulan con protección individual y se separan del resto de basura del domicilio.",
     "justificacion_ca": "Els absorbents i altres residus de la higiene es manipulen amb protecció individual i se separen de la resta de fems del domicili.",
     "actividades": [
@@ -40,12 +93,52 @@
         "dua_ca": "Contenidors de colors a l'aula i guia il·lustrada.",
         "metodologia_es": "práctica por estaciones.",
         "metodologia_ca": "pràctica per estacions."
+      },
+      {
+        "titulo_es": "Investigación: ¿adónde va la basura sanitaria?",
+        "titulo_ca": "Investigació: on va la brossa sanitària?",
+        "contexto_es": "Un técnico de Ciutadella pregunta qué debe hacer con las bolsas de residuos de curas tras atender a un hombre con una úlcera en el talón.",
+        "contexto_ca": "Un tècnic de Ciutadella pregunta què ha de fer amb les bosses de residus de cures després d'atendre un home amb una úlcera al taló.",
+        "desarrollo_es": "Investigan qué tipos de residuos y basuras genera un domicilio con cuidados, desde guantes a envases, y cómo se separan (0215-4a). Después seleccionan las medidas de prevención y protección individual necesarias en la manipulación (0217-2g).",
+        "desarrollo_ca": "Investiguen quins tipus de residus i escombraries genera un domicili amb cures, des de guants fins a envasos, i com se separen (0215-4a). Després seleccionen les mesures de prevenció i protecció individual necessàries en la manipulació (0217-2g).",
+        "evidencia_es": "Cartel con las categorías de residuos y las medidas de protección.",
+        "evidencia_ca": "Cartell amb les categories de residus i les mesures de protecció.",
+        "dua_es": "Contenedores de colores rotulados con foto y opción de exponer en pareja.",
+        "dua_ca": "Contenidors de colors retolats amb foto i opció d'exposar per parelles.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
+      },
+      {
+        "titulo_es": "Cadena de residuos: dinámica de roles",
+        "titulo_ca": "Cadena de residus: dinàmica de rols",
+        "contexto_es": "En el servicio de ayuda a domicilio de Marratxí, cada paso del manejo de residuos lo hace una persona distinta.",
+        "contexto_ca": "Al servei d'ajuda a domicili de Marratxí, cada pas del maneig de residus el fa una persona diferent.",
+        "desarrollo_es": "Cada estudiante asume un rol, desde la auxiliar hasta quien transporta la bolsa a la calle. Entre todos analizan los residuos que se generan en cada paso (0215-4a) y las medidas de seguridad y protección individual que cada rol debe adoptar (0217-2g).",
+        "desarrollo_ca": "Cada estudiant assumeix un rol, des de l'auxiliar fins a qui transporta la bossa al carrer. Entre tots analitzen els residus que es generen en cada pas (0215-4a) i les mesures de seguretat i protecció individual que cada rol ha d'adoptar (0217-2g).",
+        "evidencia_es": "Esquema de la cadena de residuos con las medidas de protección de cada rol.",
+        "evidencia_ca": "Esquema de la cadena de residus amb les mesures de protecció de cada rol.",
+        "dua_es": "Tarjetas de rol con imagen y pasos numerados.",
+        "dua_ca": "Targetes de rol amb imatge i passos numerats.",
+        "metodologia_es": "dinámica de roles en cadena.",
+        "metodologia_ca": "dinàmica de rols en cadena."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA1", "criterios": ["d"] },
-    "b": { "modulo": "0217", "ra": "RA1", "criterios": ["g"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA1",
+      "criterios": [
+        "g"
+      ]
+    },
     "justificacion_es": "La secuencia de tareas domésticas de la mañana se organiza alrededor del aseo y de los recursos que indica el plan de cuidados.",
     "justificacion_ca": "La seqüència de tasques domèstiques del matí s'organitza al voltant de la higiene i dels recursos que indica el pla de cures.",
     "actividades": [
@@ -62,12 +155,53 @@
         "dua_ca": "Targetes de tasques per ordenar damunt la taula.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Agenda visual para un día completo de cuidados",
+        "titulo_ca": "Agenda visual per a un dia complet de cures",
+        "contexto_es": "Una auxiliar nueva en Alcúdia empieza el lunes en un domicilio y no sabe por dónde comenzar entre aseo, camas y compra.",
+        "contexto_ca": "Una auxiliar nova a Alcúdia comença dilluns en un domicili i no sap per on començar entre higiene, llits i compra.",
+        "desarrollo_es": "Elaboran una agenda visual que ordena en el tiempo las tareas domésticas del día según el plan de trabajo y las adaptaciones previstas (0215-1d). Anexan la lista de recursos que indica el plan de cuidados, como silla de ducha o guantes (0217-1g).",
+        "desarrollo_ca": "Elaboren una agenda visual que ordena en el temps les tasques domèstiques del dia segons el pla de treball i les adaptacions previstes (0215-1d). Hi annexen la llista de recursos que indica el pla de cures, com cadira de dutxa o guants (0217-1g).",
+        "evidencia_es": "Agenda visual de una jornada y lista de recursos asociada.",
+        "evidencia_ca": "Agenda visual d'una jornada i llista de recursos associada.",
+        "dua_es": "Agenda con colores por tarea y versión editable en papel o en pantalla.",
+        "dua_ca": "Agenda amb colors per tasca i versió editable en paper o en pantalla.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Cuadro de turnos de la mañana en un domicilio compartido",
+        "titulo_ca": "Quadre de torns del matí en un domicili compartit",
+        "contexto_es": "En Formentera, dos auxiliares atienden juntas a una pareja y cada una hace lo que cree mejor, repitiendo o dejando tareas.",
+        "contexto_ca": "A Formentera, dues auxiliars atenen juntes una parella i cadascuna fa el que creu millor, repetint o deixant tasques.",
+        "desarrollo_es": "En parejas, reparten y secuencian las tareas domésticas del día según el plan de trabajo (0215-1d) y comprueban qué recursos del plan de vida independiente necesita cada una para cumplirlas (0217-1g). Ensayan el cambio de turno con sus propias notas.",
+        "desarrollo_ca": "En parelles, reparteixen i seqüencien les tasques domèstiques del dia segons el pla de treball (0215-1d) i comproven quins recursos del pla de vida independent necessita cadascuna per complir-les (0217-1g). Assagen el canvi de torn amb les seves pròpies notes.",
+        "evidencia_es": "Cuadro de reparto de tareas y recursos por auxiliar.",
+        "evidencia_ca": "Quadre de repartiment de tasques i recursos per auxiliar.",
+        "dua_es": "Cuadro con casillas para marcar y tarjetas de tarea movibles.",
+        "dua_ca": "Quadre amb caselles per marcar i targetes de tasca mòbils.",
+        "metodologia_es": "aprendizaje cooperativo por parejas.",
+        "metodologia_ca": "aprenentatge cooperatiu per parelles."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA5", "criterios": ["a", "b"] },
-    "b": { "modulo": "0217", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Una alimentación rica en proteínas y bien hidratada es una de las medidas preventivas de las úlceras por presión.",
     "justificacion_ca": "Una alimentació rica en proteïnes i ben hidratada és una de les mesures preventives de les nafres per pressió.",
     "actividades": [
@@ -84,12 +218,52 @@
         "dua_ca": "Roda dels aliments manipulable.",
         "metodologia_es": "aprendizaje basado en casos.",
         "metodologia_ca": "aprenentatge basat en casos."
+      },
+      {
+        "titulo_es": "Menú rico en proteína para cuidar la piel",
+        "titulo_ca": "Menú ric en proteïna per cuidar la pell",
+        "contexto_es": "La nutricionista del centro de salud de Manacor recomienda a la familia de Guillem que cambie su menú para ayudar a cicatrizar sus lesiones cutáneas.",
+        "contexto_ca": "La nutricionista del centre de salut de Manacor recomana a la família d'en Guillem que canviï el seu menú per ajudar a cicatritzar les lesions cutànies.",
+        "desarrollo_es": "Repasan los conceptos de alimentación y nutrición que afectan a la piel (0215-5a) y clasifican los alimentos del menú según sus características (0215-5b). Explican a la familia las medidas y los productos sanitarios preventivos y de tratamiento de las úlceras (0217-2a).",
+        "desarrollo_ca": "Repassen els conceptes d'alimentació i nutrició que afecten la pell (0215-5a) i classifiquen els aliments del menú segons les seves característiques (0215-5b). Expliquen a la família les mesures i els productes sanitaris preventius i de tractament de les úlceres (0217-2a).",
+        "evidencia_es": "Menú semanal con alimentos clasificados y hoja de medidas preventivas.",
+        "evidencia_ca": "Menú setmanal amb aliments classificats i full de mesures preventives.",
+        "dua_es": "Alimentos en fotos reales para clasificar y glosario con definiciones breves.",
+        "dua_ca": "Aliments en fotos reals per classificar i glossari amb definicions breus.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Taller de cocina y prevención de úlceras",
+        "titulo_ca": "Taller de cuina i prevenció d'úlceres",
+        "contexto_es": "Un grupo de familias cuidadoras de Inca pide en el centro de salud una sesión práctica que combine comer bien y evitar las úlceras.",
+        "contexto_ca": "Un grup de famílies cuidadores d'Inca demana al centre de salut una sessió pràctica que combini menjar bé i evitar les úlceres.",
+        "desarrollo_es": "Dirigen un taller en el que se explican los conceptos de nutrición básicos (0215-5a) y se agrupan los alimentos por sus características con un juego de cartas (0215-5b). Enlazan con una demostración de los productos y medidas que previenen las úlceras por presión (0217-2a).",
+        "desarrollo_ca": "Dirigeixen un taller on s'expliquen els conceptes de nutrició bàsics (0215-5a) i s'agrupen els aliments per les seves característiques amb un joc de cartes (0215-5b). Enllacen amb una demostració dels productes i mesures que prevenen les úlceres per pressió (0217-2a).",
+        "evidencia_es": "Juego de cartas de alimentos y guion del taller con la demostración.",
+        "evidencia_ca": "Joc de cartes d'aliments i guió del taller amb la demostració.",
+        "dua_es": "Cartas con imágenes y texto, y demostración con muestra de productos para tocar.",
+        "dua_ca": "Cartes amb imatges i text, i demostració amb mostra de productes per tocar.",
+        "metodologia_es": "aprendizaje-servicio con taller.",
+        "metodologia_ca": "aprenentatge-servei amb taller."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA3", "criterios": ["d"] },
-    "b": { "modulo": "0217", "ra": "RA2", "criterios": ["h"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "h"
+      ]
+    },
     "justificacion_es": "Leer el etiquetado de los productos de higiene permite informar a la persona y a sus cuidadores sobre cuáles usar y cómo.",
     "justificacion_ca": "Llegir l'etiquetatge dels productes d'higiene permet informar la persona i els seus cuidadors sobre quins fer servir i com.",
     "actividades": [
@@ -106,12 +280,52 @@
         "dua_ca": "Envasos reals i lupa per llegir etiquetes.",
         "metodologia_es": "aprendizaje por indagación.",
         "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Detectives de etiquetas del baño",
+        "titulo_ca": "Detectius d'etiquetes del bany",
+        "contexto_es": "En una farmacia de Palma preguntan por jabones, cremas y toallitas para una persona mayor con piel atópica.",
+        "contexto_ca": "En una farmàcia de Palma pregunten per sabons, cremes i tovalloles per a una persona gran amb pell atòpica.",
+        "desarrollo_es": "Analizan el etiquetado de varios productos de higiene y de consumo, comparando ingredientes y advertencias (0215-3d). Con lo aprendido preparan una información clara para la persona y su familia sobre hábitos saludables y el uso correcto de cada producto (0217-2h).",
+        "desarrollo_ca": "Analitzen l'etiquetatge de diversos productes d'higiene i de consum, comparant ingredients i advertències (0215-3d). Amb el que han après preparen una informació clara per a la persona i la seva família sobre hàbits saludables i l'ús correcte de cada producte (0217-2h).",
+        "evidencia_es": "Tabla comparativa de etiquetas y hoja de consejos para la familia.",
+        "evidencia_ca": "Taula comparativa d'etiquetes i full de consells per a la família.",
+        "dua_es": "Lupas y etiquetas ampliadas, y consejos en lectura fácil.",
+        "dua_ca": "Lupes i etiquetes ampliades, i consells en lectura fàcil.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Visita simulada a la farmacia del barrio",
+        "titulo_ca": "Visita simulada a la farmàcia del barri",
+        "contexto_es": "Un cuidador de Sant Antoni va a la farmacia con una lista de la compra y no sabe cuál de las opciones conviene a su madre.",
+        "contexto_ca": "Un cuidador de Sant Antoni va a la farmàcia amb una llista de la compra i no sap quina de les opcions convé a la seva mare.",
+        "desarrollo_es": "Montan una farmacia en el aula: unos hacen de farmacéuticos y analizan las etiquetas de los productos que ofrecen (0215-3d), otros de cuidadores. Los farmacéuticos informan sobre hábitos higiénicos saludables y sobre cómo se usan los productos (0217-2h).",
+        "desarrollo_ca": "Munten una farmàcia a l'aula: uns fan de farmacèutics i analitzen les etiquetes dels productes que ofereixen (0215-3d), altres de cuidadors. Els farmacèutics informen sobre hàbits higiènics saludables i sobre com s'usen els productes (0217-2h).",
+        "evidencia_es": "Hoja de recomendaciones entregada al cuidador y rúbrica de la simulación.",
+        "evidencia_ca": "Full de recomanacions lliurat al cuidador i rúbrica de la simulació.",
+        "dua_es": "Etiquetas reales con ayudas para la lectura y guion de respuestas posibles.",
+        "dua_ca": "Etiquetes reals amb ajudes per a la lectura i guió de respostes possibles.",
+        "metodologia_es": "juego de rol en escenario simulado.",
+        "metodologia_ca": "joc de rol en escenari simulat."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA7", "criterios": ["b"] },
-    "b": { "modulo": "0217", "ra": "RA1", "criterios": ["h"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA7",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
     "justificacion_es": "El seguimiento del domicilio puede detectar que hace falta una ayuda técnica para la higiene y elegir el recurso adecuado.",
     "justificacion_ca": "El seguiment del domicili pot detectar que cal una ajuda tècnica per a la higiene i triar el recurs adequat.",
     "actividades": [
@@ -128,12 +342,52 @@
         "dua_ca": "Catàleg visual i visita virtual a una ortopèdia.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Catálogo de ayudas técnicas para el baño",
+        "titulo_ca": "Catàleg d'ajudes tècniques per al bany",
+        "contexto_es": "La asociación de familiares de Alzheimer de Mahón recibe consultas sobre qué ayudas comprar para que sus mayores se aseen con seguridad.",
+        "contexto_ca": "L'associació de familiars d'Alzheimer de Maó rep consultes sobre quines ajudes comprar perquè els seus grans s'higienitzin amb seguretat.",
+        "desarrollo_es": "Analizan en un catálogo comercial los recursos disponibles y los seleccionan según las necesidades de tres perfiles de usuarios (0215-7b). Proponen para cada perfil las ayudas técnicas que facilitan su autonomía en la higiene (0217-1h).",
+        "desarrollo_ca": "Analitzen en un catàleg comercial els recursos disponibles i els seleccionen segons les necessitats de tres perfils d'usuaris (0215-7b). Proposen per a cada perfil les ajudes tècniques que faciliten la seva autonomia en la higiene (0217-1h).",
+        "evidencia_es": "Catálogo propio con tres perfiles y las ayudas recomendadas para cada uno.",
+        "evidencia_ca": "Catàleg propi amb tres perfils i les ajudes recomanades per a cadascun.",
+        "dua_es": "Catálogo con fotos y precios aproximados, y perfiles descritos con pictogramas.",
+        "dua_ca": "Catàleg amb fotos i preus aproximats, i perfils descrits amb pictogrames.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
+      },
+      {
+        "titulo_es": "Probar ayudas técnicas con voluntarios",
+        "titulo_ca": "Provar ajudes tècniques amb voluntaris",
+        "contexto_es": "Una tienda de ortopedia de Palma cede por una mañana sillas de ducha, asideros y alfombrillas para que el alumnado las pruebe.",
+        "contexto_ca": "Una botiga d'ortopèdia de Palma cedeix per un matí cadires de dutxa, agafadors i estoretes perquè l'alumnat les provi.",
+        "desarrollo_es": "Por estaciones, comprueban qué ayuda técnica favorece la autonomía para cada necesidad de higiene y lo proponen (0217-1h). Registran qué recursos, de los analizados, se ajustan mejor a las necesidades de la persona atendida (0215-7b).",
+        "desarrollo_ca": "Per estacions, comproven quina ajuda tècnica afavoreix l'autonomia per a cada necessitat d'higiene i ho proposen (0217-1h). Registren quins recursos, dels analitzats, s'ajusten millor a les necessitats de la persona atesa (0215-7b).",
+        "evidencia_es": "Ficha de cada estación con la ayuda probada y su valoración.",
+        "evidencia_ca": "Fitxa de cada estació amb l'ajuda provada i la seva valoració.",
+        "dua_es": "Estaciones con ayuda de un compañero y alternativas para quien no pueda manipular el material.",
+        "dua_ca": "Estacions amb ajuda d'un company i alternatives per a qui no pugui manipular el material.",
+        "metodologia_es": "aprendizaje por estaciones prácticas.",
+        "metodologia_ca": "aprenentatge per estacions pràctiques."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA1", "criterios": ["h"] },
-    "b": { "modulo": "0217", "ra": "RA2", "criterios": ["c"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "0217",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Ajustar la secuencia del vestido y otras tareas ahorra esfuerzos a una persona que se fatiga con facilidad.",
     "justificacion_ca": "Ajustar la seqüència del vestit i d'altres tasques estalvia esforços a una persona que es cansa amb facilitat.",
     "actividades": [
@@ -150,12 +404,53 @@
         "dua_ca": "Ajudes per vestir-se reals i seqüència amb imatges.",
         "metodologia_es": "práctica guiada.",
         "metodologia_ca": "pràctica guiada."
+      },
+      {
+        "titulo_es": "Cronómetro de la rutina matinal",
+        "titulo_ca": "Cronòmetre de la rutina matinal",
+        "contexto_es": "Una auxiliar de Felanitx dispone de cuarenta minutos para vestir a Margalida, que tarda y se frustra cuando la apresuran.",
+        "contexto_ca": "Una auxiliar de Felanitx disposa de quaranta minuts per vestir na Margalida, que triga i es frustra quan la pressionen.",
+        "desarrollo_es": "Cronometran dos secuencias posibles de la mañana y deciden cuál rentabiliza mejor el tiempo y el esfuerzo (0215-1h). Aplican la mejor con técnicas de vestido y calzado ajustadas al nivel de autonomía de Margalida (0217-2c).",
+        "desarrollo_ca": "Cronometren dues seqüències possibles del matí i decideixen quina rendibilitza millor el temps i l'esforç (0215-1h). Apliquen la millor amb tècniques de vestit i calçat ajustades al nivell d'autonomia de na Margalida (0217-2c).",
+        "evidencia_es": "Tabla de tiempos de las dos secuencias y registro de la elegida.",
+        "evidencia_ca": "Taula de temps de les dues seqüències i registre de l'escollida.",
+        "dua_es": "Cronómetro visual y práctica sin prisa antes de la prueba cronometrada.",
+        "dua_ca": "Cronòmetre visual i pràctica sense pressa abans de la prova cronometrada.",
+        "metodologia_es": "aprendizaje basado en la experimentación.",
+        "metodologia_ca": "aprenentatge basat en l'experimentació."
+      },
+      {
+        "titulo_es": "Guía de vestido para el equipo del turno de mañana",
+        "titulo_ca": "Guia de vestit per a l'equip del torn de matí",
+        "contexto_es": "El equipo de un centro de día de Sóller quiere unificar cómo se viste a cada persona para no perder minutos en el cambio de relevo.",
+        "contexto_ca": "L'equip d'un centre de dia de Sóller vol unificar com es vesteix cada persona per no perdre minuts en el canvi de relleu.",
+        "desarrollo_es": "Observan una sesión grabada y diseñan una guía por persona con la técnica de vestido y calzado según su autonomía (0217-2c). Reordenan los pasos para ganar tiempo y esfuerzo y explican por qué importa ajustar la secuencia (0215-1h).",
+        "desarrollo_ca": "Observen una sessió gravada i dissenyen una guia per persona amb la tècnica de vestit i calçat segons la seva autonomia (0217-2c). Reordenen els passos per guanyar temps i esforç i expliquen per què importa ajustar la seqüència (0215-1h).",
+        "evidencia_es": "Guía ilustrada por persona con los pasos ordenados.",
+        "evidencia_ca": "Guia il·lustrada per persona amb els passos ordenats.",
+        "dua_es": "Vídeo subtitulado para la observación y guía en formato fotográfico.",
+        "dua_ca": "Vídeo subtitulat per a l'observació i guia en format fotogràfic.",
+        "metodologia_es": "análisis de vídeo y mejora continua.",
+        "metodologia_ca": "anàlisi de vídeo i millora contínua."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA2", "criterios": ["g", "h"] },
-    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["e"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA2",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Las aplicaciones que automatizan el control del gasto doméstico ayudan a equilibrar ingresos y gastos con menos esfuerzo.",
     "justificacion_ca": "Les aplicacions que automatitzen el control de la despesa domèstica ajuden a equilibrar ingressos i despeses amb menys esforç.",
     "actividades": [
@@ -172,12 +467,52 @@
         "dua_ca": "Dades ja preparades i tutorial de l'aplicació.",
         "metodologia_es": "aprendizaje basado en datos.",
         "metodologia_ca": "aprenentatge basat en dades."
+      },
+      {
+        "titulo_es": "Cuentas de tres hogares con sensores de consumo",
+        "titulo_ca": "Comptes de tres llars amb sensors de consum",
+        "contexto_es": "Una cooperativa de Binissalem instala contadores inteligentes de luz y agua en hogares con personas dependientes.",
+        "contexto_ca": "Una cooperativa de Binissalem instal·la comptadors intel·ligents de llum i aigua en llars amb persones dependents.",
+        "desarrollo_es": "Analizan los gastos mensuales de tres unidades de convivencia a partir de datos de consumo (0215-2g). Calculan la diferencia entre ingresos y gastos de cada una y explican por qué necesitan equilibrarlos (0215-2h). Relacionan los sensores y el tratamiento de datos con el ahorro y la competitividad (1664-4e).",
+        "desarrollo_ca": "Analitzen les despeses mensuals de tres unitats de convivència a partir de dades de consum (0215-2g). Calculen la diferència entre ingressos i despeses de cadascuna i expliquen per què necessiten equilibrar-los (0215-2h). Relacionen els sensors i el tractament de dades amb l'estalvi i la competitivitat (1664-4e).",
+        "evidencia_es": "Tabla de ingresos y gastos de los tres hogares con una conclusión sobre el ahorro posible.",
+        "evidencia_ca": "Taula d'ingressos i despeses de les tres llars amb una conclusió sobre l'estalvi possible.",
+        "dua_es": "Datos en tablas con colores y calculadora; presentación escrita u oral.",
+        "dua_ca": "Dades en taules amb colors i calculadora; presentació escrita o oral.",
+        "metodologia_es": "análisis de datos en equipo.",
+        "metodologia_ca": "anàlisi de dades en equip."
+      },
+      {
+        "titulo_es": "Asesoría de ahorro para una cooperativa de servicios",
+        "titulo_ca": "Assessoria d'estalvi per a una cooperativa de serveis",
+        "contexto_es": "Una cooperativa de cuidados de Ibiza duda si invertir en automatizar su facturación y control de gastos.",
+        "contexto_ca": "Una cooperativa de cures d'Eivissa dubta si invertir a automatitzar la seva facturació i el control de despeses.",
+        "desarrollo_es": "Como consultores, analizan los gastos mensuales de la cooperativa y de las unidades de convivencia que atiende (0215-2g). Plantean si los ingresos cubren los gastos tras la inversión (0215-2h). Presentan con qué tecnologías habilitadoras se reducirían costes y mejoraría la competitividad del servicio (1664-4e).",
+        "desarrollo_ca": "Com a consultors, analitzen les despeses mensuals de la cooperativa i de les unitats de convivència que atén (0215-2g). Plantegen si els ingressos cobreixen les despeses després de la inversió (0215-2h). Presenten amb quines tecnologies habilitadores es reduirien costos i milloraria la competitivitat del servei (1664-4e).",
+        "evidencia_es": "Informe de asesoría con un balance simple y tres recomendaciones.",
+        "evidencia_ca": "Informe d'assessoria amb un balanç simple i tres recomanacions.",
+        "dua_es": "Plantilla de balance prediseñada y roles de analista, redactor y portavoz.",
+        "dua_ca": "Plantilla de balanç predissenyada i rols d'analista, redactor i portaveu.",
+        "metodologia_es": "consultoría simulada.",
+        "metodologia_ca": "consultoria simulada."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA2", "criterios": ["f"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "La publicidad en línea y los comparadores ofrecen ventajas al comprador, pero también trampas que hay que saber detectar.",
     "justificacion_ca": "La publicitat en línia i els comparadors ofereixen avantatges al comprador, però també paranys que cal saber detectar.",
     "actividades": [
@@ -194,12 +529,53 @@
         "dua_ca": "Fullets reals i ordinador amb comparador guiat.",
         "metodologia_es": "aprendizaje por comparación.",
         "metodologia_ca": "aprenentatge per comparació."
+      },
+      {
+        "titulo_es": "Debate sobre la compra digital del mercado",
+        "titulo_ca": "Debat sobre la compra digital del mercat",
+        "contexto_es": "El mercado municipal de Manacor estrena un servicio de pedidos por móvil y Antònia, usuaria de teleasistencia, duda si le conviene.",
+        "contexto_ca": "El mercat municipal de Manacor estrena un servei de comandes per mòbil i na Antònia, usuària de teleassistència, dubta si li convé.",
+        "desarrollo_es": "Dos equipos revisan catálogos y anuncios del mercado y de plataformas de reparto para escoger los productos de una cesta semanal (0215-3a). Después se enfrentan en un debate sobre si la compra digital beneficia más al cliente o a la empresa y concluyen con una lista de ventajas para ambos (1664-2f).",
+        "desarrollo_ca": "Dos equips revisen catàlegs i anuncis del mercat i de plataformes de repartiment per escollir els productes d'una cistella setmanal (0215-3a). Després s'enfronten en un debat sobre si la compra digital beneficia més el client o l'empresa i conclouen amb una llista d'avantatges per als dos (1664-2f).",
+        "evidencia_es": "Acta del debate con la tabla de ventajas de cada parte.",
+        "evidencia_ca": "Acta del debat amb la taula d'avantatges de cada part.",
+        "dua_es": "Guion de argumentos con pictogramas y turnos de palabra cronometrados.",
+        "dua_ca": "Guió d'arguments amb pictogrames i torns de paraula cronometrats.",
+        "metodologia_es": "debate estructurado.",
+        "metodologia_ca": "debat estructurat."
+      },
+      {
+        "titulo_es": "Guía de compra segura para el centro de día",
+        "titulo_ca": "Guia de compra segura per al centre de dia",
+        "contexto_es": "El centro de día de Inca quiere ayudar a las personas mayores a no caer en ofertas engañosas cuando compran por internet.",
+        "contexto_ca": "El centre de dia d'Inca vol ajudar les persones grans a no caure en ofertes enganyoses quan compren per internet.",
+        "desarrollo_es": "Recogen publicidad de supermercados de la zona y seleccionan los productos más adecuados para un hogar con pensión ajustada (0215-3a). Con las personas usuarias del centro contrastan qué les aporta pedir en línea frente a ir a la tienda y resumen lo que ganan clientes y comercios (1664-2f).",
+        "desarrollo_ca": "Recullen publicitat de supermercats de la zona i seleccionen els productes més adequats per a una llar amb pensió ajustada (0215-3a). Amb les persones usuàries del centre contrasten què els aporta demanar en línia davant d'anar a la botiga i resumeixen el que guanyen clients i comerços (1664-2f).",
+        "evidencia_es": "Guía ilustrada de compra entregada al centro de día.",
+        "evidencia_ca": "Guia il·lustrada de compra lliurada al centre de dia.",
+        "dua_es": "Letra grande y versión en audio de la guía para quien lee con dificultad.",
+        "dua_ca": "Lletra grossa i versió en àudio de la guia per a qui llegeix amb dificultat.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA1", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "Los residuos domésticos muestran las etapas de la economía lineal y circular y su repercusión ambiental.",
     "justificacion_ca": "Els residus domèstics mostren les etapes de l'economia lineal i circular i la seva repercussió ambiental.",
     "actividades": [
@@ -216,12 +592,53 @@
         "dua_ca": "Diagrama amb imatges i calendari de colors.",
         "metodologia_es": "aprendizaje por indagación.",
         "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Auditoría de la basura de una vivienda",
+        "titulo_ca": "Auditoria de les fems d'un habitatge",
+        "contexto_es": "La comunidad de vecinos de un bloque de Sant Antoni de Portmany quiere reducir la basura que genera cada piso.",
+        "contexto_ca": "La comunitat de veïns d'un bloc de Sant Antoni de Portmany vol reduir les fems que genera cada pis.",
+        "desarrollo_es": "Por equipos clasifican los residuos de una bolsa de basura simulada de un domicilio con una persona dependiente (0215-4a). Dibujan el recorrido de cada residuo en un modelo lineal y en uno circular, señalando sus etapas típicas (1664-1a), y estiman el daño ambiental que provoca cada etapa (1664-1b).",
+        "desarrollo_ca": "Per equips classifiquen els residus d'una bossa d'escombraries simulada d'un domicili amb una persona dependent (0215-4a). Dibuixen el recorregut de cada residu en un model lineal i en un de circular, assenyalant-ne les etapes típiques (1664-1a), i estimen el dany ambiental que provoca cada etapa (1664-1b).",
+        "evidencia_es": "Informe de la auditoría con el esquema de ambos modelos.",
+        "evidencia_ca": "Informe de l'auditoria amb l'esquema dels dos models.",
+        "dua_es": "Residuos reales etiquetados con pictogramas y reparto de roles rotativos.",
+        "dua_ca": "Residus reals etiquetats amb pictogrames i repartiment de rols rotatius.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Baraja del recorrido de los residuos",
+        "titulo_ca": "Baralla del recorregut dels residus",
+        "contexto_es": "Una jornada de educación ambiental para familias de Calvià busca materiales lúdicos sobre qué pasa con lo que se tira en casa.",
+        "contexto_ca": "Una jornada d'educació ambiental per a famílies de Calvià busca materials lúdics sobre què passa amb allò que es llança a casa.",
+        "desarrollo_es": "Crean un juego de cartas con los residuos más frecuentes de un domicilio y su tipo (0215-4a). Las cartas obligan a ordenar las etapas de un producto en el modelo lineal y en el circular (1664-1a) y a decidir qué etapa daña más al medio ambiente (1664-1b).",
+        "desarrollo_ca": "Creen un joc de cartes amb els residus més freqüents d'un domicili i el seu tipus (0215-4a). Les cartes obliguen a ordenar les etapes d'un producte en el model lineal i en el circular (1664-1a) i a decidir quina etapa fa més mal al medi ambient (1664-1b).",
+        "evidencia_es": "Baraja terminada con su hoja de reglas.",
+        "evidencia_ca": "Baralla acabada amb el full de regles.",
+        "dua_es": "Cartas con colores contrastados, tipografía accesible y una versión con solo imágenes.",
+        "dua_ca": "Cartes amb colors contrastats, tipografia accessible i una versió només amb imatges.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA6", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA1", "criterios": ["d", "e"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA6",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
     "justificacion_es": "La cocina de aprovechamiento aplica la economía circular al hogar, siempre que se respeten las medidas de higiene.",
     "justificacion_ca": "La cuina d'aprofitament aplica l'economia circular a la llar, sempre que es respectin les mesures d'higiene.",
     "actividades": [
@@ -238,12 +655,53 @@
         "dua_ca": "Receptes il·lustrades i elaboració en grup.",
         "metodologia_es": "taller de cocina.",
         "metodologia_ca": "taller de cuina."
+      },
+      {
+        "titulo_es": "Menú de aprovechamiento por equipos expertos",
+        "titulo_ca": "Menú d'aprofitament per equips experts",
+        "contexto_es": "El comedor social de Ciutadella recibe excedentes de la frutería del barrio y debe convertirlos en menús sin riesgos.",
+        "contexto_ca": "El menjador social de Ciutadella rep excedents de la fruiteria del barri i els ha de convertir en menús sense riscos.",
+        "desarrollo_es": "Cada equipo experto estudia un grupo de alimentos y fija las medidas de higiene, prevención de riesgos y eliminación de restos para prepararlos (0215-6a). Al reunirse los equipos, describen un proceso real de la cocina basado en la economía lineal (1664-1d) y proponen cómo convertirlo en circular (1664-1e).",
+        "desarrollo_ca": "Cada equip expert estudia un grup d'aliments i fixa les mesures d'higiene, prevenció de riscos i eliminació de restes per preparar-los (0215-6a). Quan els equips es reuneixen, descriuen un procés real de la cuina basat en l'economia lineal (1664-1d) i proposen com convertir-lo en circular (1664-1e).",
+        "evidencia_es": "Menú semanal con su ficha de higiene y aprovechamiento.",
+        "evidencia_ca": "Menú setmanal amb la fitxa d'higiene i aprofitament.",
+        "dua_es": "Fichas con fotografías de cada paso y dos formatos de lectura.",
+        "dua_ca": "Fitxes amb fotografies de cada pas i dos formats de lectura.",
+        "metodologia_es": "aprendizaje cooperativo en puzle.",
+        "metodologia_ca": "aprenentatge cooperatiu en trencaclosques."
+      },
+      {
+        "titulo_es": "Del cubo del comedor al compostaje",
+        "titulo_ca": "Del cubell del menjador al compostatge",
+        "contexto_es": "La cantina del instituto tira cada día las mondas y los restos mientras el huerto escolar necesita abono.",
+        "contexto_ca": "La cantina de l'institut llança cada dia les pelades i les restes mentre l'hort escolar necessita adob.",
+        "desarrollo_es": "Observan cómo la cantina gestiona los restos del servicio y señalan las medidas de higiene y seguridad que deberían aplicarse al manipularlos (0215-6a). Describen el recorrido actual de esos alimentos como proceso lineal (1664-1d) y diseñan otro con compostaje y reutilización (1664-1e).",
+        "desarrollo_ca": "Observen com la cantina gestiona les restes del servei i assenyalen les mesures d'higiene i seguretat que s'haurien d'aplicar en manipular-les (0215-6a). Descriuen el recorregut actual d'aquests aliments com a procés lineal (1664-1d) i dissenyen un altre amb compostatge i reutilització (1664-1e).",
+        "evidencia_es": "Cartel con los dos recorridos y el protocolo de higiene.",
+        "evidencia_ca": "Cartell amb els dos recorreguts i el protocol d'higiene.",
+        "dua_es": "Guion de observación con casillas para marcar y opción de trabajar con fotografías.",
+        "dua_ca": "Guió d'observació amb caselles per marcar i opció de treballar amb fotografies.",
+        "metodologia_es": "investigación de campo guiada.",
+        "metodologia_ca": "investigació de camp guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA4", "criterios": ["b"] },
-    "b": { "modulo": "1664", "ra": "RA2", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "Los electrodomésticos inteligentes son sistemas ciberfísicos que automatizan tareas domésticas.",
     "justificacion_ca": "Els electrodomèstics intel·ligents són sistemes ciberfísics que automatitzen tasques domèstiques.",
     "actividades": [
@@ -260,12 +718,53 @@
         "dua_ca": "Manual simplificat i vídeo del fabricant.",
         "metodologia_es": "aprendizaje por descubrimiento.",
         "metodologia_ca": "aprenentatge per descobriment."
+      },
+      {
+        "titulo_es": "Visita del técnico a la casa conectada",
+        "titulo_ca": "Visita del tècnic a la casa connectada",
+        "contexto_es": "Un técnico visita un domicilio de Felanitx para instalar una plancha y una aspiradora robot que se conectan al wifi.",
+        "contexto_ca": "Un tècnic visita un domicili de Felanitx per instal·lar una planxa i una aspiradora robot que es connecten al wifi.",
+        "desarrollo_es": "En parejas de técnico y usuario, simulan la presentación de cada electrodoméstico explicando su manejo, sus riesgos y su mantenimiento (0215-4b). Después sitúan los aparatos conectados en la evolución industrial, relacionándolos con los sistemas ciberfísicos (1664-2a), y explican qué cambia respecto a los automatismos antiguos (1664-2b).",
+        "desarrollo_ca": "En parelles de tècnic i usuari, simulen la presentació de cada electrodomèstic explicant-ne el maneig, els riscos i el manteniment (0215-4b). Després situen els aparells connectats en l'evolució industrial, relacionant-los amb els sistemes ciberfísics (1664-2a), i expliquen què canvia respecte dels automatismes antics (1664-2b).",
+        "evidencia_es": "Grabación breve de la simulación y ficha de cada aparato.",
+        "evidencia_ca": "Gravació breu de la simulació i fitxa de cada aparell.",
+        "dua_es": "Tarjetas de rol con frases modelo y posibilidad de grabar en vez de actuar en directo.",
+        "dua_ca": "Targetes de rol amb frases model i possibilitat de gravar en lloc d'actuar en directe.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Museo de la colada en tres generaciones",
+        "titulo_ca": "Museu de la bugada en tres generacions",
+        "contexto_es": "El museo etnológico de Muro prepara una exposición sobre cómo ha cambiado la forma de lavar la ropa.",
+        "contexto_ca": "El museu etnològic de Muro prepara una exposició sobre com ha canviat la manera de rentar la roba.",
+        "desarrollo_es": "Recorren estaciones con una lavadora manual, una automática y otra inteligente, e identifican en cada una su tipo, su manejo y sus riesgos de uso (0215-4b). Con una línea del tiempo relacionan la última con los sistemas ciberfísicos (1664-2a) y analizan cómo han cambiado los sistemas automatizados (1664-2b).",
+        "desarrollo_ca": "Recorren estacions amb una rentadora manual, una d'automàtica i una altra d'intel·ligent, i identifiquen en cadascuna el tipus, el maneig i els riscos d'ús (0215-4b). Amb una línia del temps relacionen la darrera amb els sistemes ciberfísics (1664-2a) i analitzen com han canviat els sistemes automatitzats (1664-2b).",
+        "evidencia_es": "Panel expositivo con la línea del tiempo de la colada.",
+        "evidencia_ca": "Plafó expositiu amb la línia del temps de la bugada.",
+        "dua_es": "Estaciones con modalidades táctil, visual y escrita, y tiempos flexibles.",
+        "dua_ca": "Estacions amb modalitats tàctil, visual i escrita, i temps flexibles.",
+        "metodologia_es": "rincones o estaciones.",
+        "metodologia_ca": "racons o estacions."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA7", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA3", "criterios": ["c", "d"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA7",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
     "justificacion_es": "Los sensores del hogar procesan datos cerca de la persona para detectar situaciones de riesgo sin depender de la nube.",
     "justificacion_ca": "Els sensors de la llar processen dades a prop de la persona per detectar situacions de risc sense dependre del núvol.",
     "actividades": [
@@ -282,12 +781,54 @@
         "dua_ca": "Kit real o simulat i esquema per capes.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Prototipo de vigilancia con datos cercanos",
+        "titulo_ca": "Prototip de vigilància amb dades properes",
+        "contexto_es": "Una cooperativa de servicios sociales de Menorca quiere vigilar la seguridad de usuarios que viven solos en casas de campo con mala cobertura.",
+        "contexto_ca": "Una cooperativa de serveis socials de Menorca vol vigilar la seguretat d'usuaris que viuen sols en cases de camp amb mala cobertura.",
+        "desarrollo_es": "Estudian qué fuentes de información y técnicas de seguimiento permiten detectar situaciones de riesgo en esos domicilios (0215-7a). Proponen un sistema que procese los datos en un dispositivo cercano y describen su relación con la nube (1664-3c), ubicando cada pieza en las zonas fog y mist (1664-3d).",
+        "desarrollo_ca": "Estudien quines fonts d'informació i tècniques de seguiment permeten detectar situacions de risc en aquests domicilis (0215-7a). Proposen un sistema que processi les dades en un dispositiu proper i descriuen la relació amb el núvol (1664-3c), ubicant cada peça a les zones fog i mist (1664-3d).",
+        "evidencia_es": "Prototipo en papel del sistema con el esquema de zonas.",
+        "evidencia_ca": "Prototip en paper del sistema amb l'esquema de zones.",
+        "dua_es": "Plantillas de esquema con piezas recortables y glosario con dibujos.",
+        "dua_ca": "Plantilles d'esquema amb peces retallables i glossari amb dibuixos.",
+        "metodologia_es": "pensamiento de diseño (design thinking).",
+        "metodologia_ca": "pensament de disseny (design thinking)."
+      },
+      {
+        "titulo_es": "Simulacro de apagón de internet en teleasistencia",
+        "titulo_ca": "Simulacre d'apagada d'internet en teleassistència",
+        "contexto_es": "Durante una tormenta en Eivissa se cae la conexión y los sensores del servicio de teleasistencia dejan de enviar datos a la nube.",
+        "contexto_ca": "Durant una tempesta a Eivissa cau la connexió i els sensors del servei de teleassistència deixen d'enviar dades al núvol.",
+        "desarrollo_es": "Con una simulación por fases, el equipo sigue el plan de trabajo y decide qué información sigue disponible para detectar un riesgo (0215-7a). Explica qué datos puede resolver el edge computing sin depender de la nube (1664-3c) y qué papel juegan fog y mist en mantener el servicio (1664-3d).",
+        "desarrollo_ca": "Amb una simulació per fases, l'equip segueix el pla de treball i decideix quina informació continua disponible per detectar un risc (0215-7a). Explica quines dades pot resoldre l'edge computing sense dependre del núvol (1664-3c) i quin paper tenen fog i mist per mantenir el servei (1664-3d).",
+        "evidencia_es": "Diario del simulacro con las decisiones razonadas.",
+        "evidencia_ca": "Diari del simulacre amb les decisions raonades.",
+        "dua_es": "Cronología con tarjetas de eventos y apoyo de un compañero tutor.",
+        "dua_ca": "Cronologia amb targetes d'esdeveniments i suport d'un company tutor.",
+        "metodologia_es": "simulación con toma de decisiones.",
+        "metodologia_ca": "simulació amb presa de decisions."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA1", "criterios": ["a"] },
-    "b": { "modulo": "1664", "ra": "RA5", "criterios": ["c", "d", "e"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "d",
+        "e"
+      ]
+    },
     "justificacion_es": "Digitalizar el plan de trabajo domiciliario obliga a definir qué tecnología usa cada etapa y cómo se conecta con el resto.",
     "justificacion_ca": "Digitalitzar el pla de treball domiciliari obliga a definir quina tecnologia fa servir cada etapa i com es connecta amb la resta.",
     "actividades": [
@@ -304,12 +845,53 @@
         "dua_ca": "Eina de diagrames amb plantilles.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Plan de trabajo digital en diagrama de bloques",
+        "titulo_ca": "Pla de treball digital en diagrama de blocs",
+        "contexto_es": "Una entidad de Sóller coordina a seis auxiliares y quiere que el plan de cada domicilio se consulte en tiempo real.",
+        "contexto_ca": "Una entitat de Sóller coordina sis auxiliars i vol que el pla de cada domicili es consulti en temps real.",
+        "desarrollo_es": "Parten de un plan de trabajo real y señalan sus características (0215-1a). Escogen la tecnología de cada etapa, como tableta, aplicación o etiquetas de identificación (1664-5c), definen cómo se conecta cada etapa con el resto del sistema (1664-5d) y lo dibujan en un diagrama de bloques (1664-5e).",
+        "desarrollo_ca": "Parteixen d'un pla de treball real i en senyalen les característiques (0215-1a). Escullen la tecnologia de cada etapa, com ara tauleta, aplicació o etiquetes d'identificació (1664-5c), defineixen com es connecta cada etapa amb la resta del sistema (1664-5d) i ho dibuixen en un diagrama de blocs (1664-5e).",
+        "evidencia_es": "Diagrama de bloques comentado del plan digitalizado.",
+        "evidencia_ca": "Diagrama de blocs comentat del pla digitalitzat.",
+        "dua_es": "Bloques con iconos para recortar y glosario visual de tecnologías.",
+        "dua_ca": "Blocs amb icones per retallar i glossari visual de tecnologies.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Maratón de ideas para la ayuda a domicilio",
+        "titulo_ca": "Marató d'idees per a l'ajuda a domicili",
+        "contexto_es": "Un ayuntamiento del Pla de Mallorca convoca un maratón de ideas para modernizar su servicio de ayuda a domicilio.",
+        "contexto_ca": "Un ajuntament del Pla de Mallorca convoca una marató d'idees per modernitzar el servei d'ajuda a domicili.",
+        "desarrollo_es": "En una sesión intensiva, los equipos describen las características del plan de trabajo que hay que digitalizar (0215-1a). Eligen las tecnologías de cada etapa (1664-5c), explican su conexión con el resto del servicio (1664-5d) y presentan un diagrama de bloques en un pitch de tres minutos (1664-5e).",
+        "desarrollo_ca": "En una sessió intensiva, els equips descriuen les característiques del pla de treball que cal digitalitzar (0215-1a). Trien les tecnologies de cada etapa (1664-5c), expliquen la connexió amb la resta del servei (1664-5d) i presenten un diagrama de blocs en un pitch de tres minuts (1664-5e).",
+        "evidencia_es": "Pitch grabado y diagrama de blocs de la propuesta.",
+        "evidencia_ca": "Pitch gravat i diagrama de blocs de la proposta.",
+        "dua_es": "Guion de pitch con frases modelo y opción de presentar en parejas.",
+        "dua_ca": "Guió de pitch amb frases model i opció de presentar en parelles.",
+        "metodologia_es": "aprendizaje cooperativo en formato de maratón.",
+        "metodologia_ca": "aprenentatge cooperatiu en format de marató."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA2", "criterios": ["d", "f"] },
-    "b": { "modulo": "1664", "ra": "RA5", "criterios": ["f"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA2",
+      "criterios": [
+        "d",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Instalar domótica es un gasto extraordinario cuya viabilidad hay que estudiar frente a los gastos ordinarios del hogar.",
     "justificacion_ca": "Instal·lar domòtica és una despesa extraordinària la viabilitat de la qual cal estudiar davant les despeses ordinàries de la llar.",
     "actividades": [
@@ -326,12 +908,53 @@
         "dua_ca": "Pressuposts reals i full de càlcul guiat.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Las cuentas de la casa de Pilar",
+        "titulo_ca": "Els comptes de la casa de na Pilar",
+        "contexto_es": "Los hijos de Pilar, en Llucmajor, dudan entre contratar teleasistencia avanzada con sensores o reformar el baño de su madre.",
+        "contexto_ca": "Els fills de na Pilar, a Llucmajor, dubten entre contractar teleassistència avançada amb sensors o reformar el bany de la mare.",
+        "desarrollo_es": "Clasifican los gastos ordinarios y de aprovisionamiento de una unidad de convivencia tipo (0215-2f) y reúnen en un dossier los gastos extraordinarios que se avecinan (0215-2d). Redactan un informe de viabilidad con las mejoras que aportaría la teleasistencia (1664-5f).",
+        "desarrollo_ca": "Classifiquen les despeses ordinàries i d'aprovisionament d'una unitat de convivència tipus (0215-2f) i reuneixen en un dossier les despeses extraordinàries que s'acosten (0215-2d). Redacten un informe de viabilitat amb les millores que aportaria la teleassistència (1664-5f).",
+        "evidencia_es": "Dossier de gastos e informe de viabilidad.",
+        "evidencia_ca": "Dossier de despeses i informe de viabilitat.",
+        "dua_es": "Hoja de cálculo con plantilla precargada y calculadora disponible.",
+        "dua_ca": "Full de càlcul amb plantilla precarregada i calculadora disponible.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Presupuesto participativo de la residencia",
+        "titulo_ca": "Pressupost participatiu de la residència",
+        "contexto_es": "El consejo de usuarios de una residencia de Alcúdia debe repartir un fondo anual entre mejoras tecnológicas y gastos corrientes.",
+        "contexto_ca": "El consell d'usuaris d'una residència d'Alcúdia ha de repartir un fons anual entre millores tecnològiques i despeses corrents.",
+        "desarrollo_es": "Con roles de familia, dirección y personal, enumeran los gastos ordinarios y de aprovisionamiento y los separan de las inversiones (0215-2f). Elaboran un dossier con los gastos extraordinarios previstos (0215-2d) y defienden con un informe de viabilidad la mejora que priorizan (1664-5f).",
+        "desarrollo_ca": "Amb rols de família, direcció i personal, enumeren les despeses ordinàries i d'aprovisionament i les separen de les inversions (0215-2f). Elaboren un dossier amb les despeses extraordinàries previstes (0215-2d) i defensen amb un informe de viabilitat la millora que prioritzen (1664-5f).",
+        "evidencia_es": "Acta de la asamblea con el informe de viabilidad adjunto.",
+        "evidencia_ca": "Acta de l'assemblea amb l'informe de viabilitat adjunt.",
+        "dua_es": "Tarjetas de rol con argumentos de apoyo y glosario de términos económicos.",
+        "dua_ca": "Targetes de rol amb arguments de suport i glossari de termes econòmics.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA4", "criterios": ["e", "g"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["c"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "El domicilio es el lugar de trabajo de la auxiliar, y sus riesgos eléctricos y químicos deben evaluarse y prevenirse.",
     "justificacion_ca": "El domicili és el lloc de feina de l'auxiliar, i els seus riscs elèctrics i químics s'han d'avaluar i prevenir.",
     "actividades": [
@@ -348,12 +971,52 @@
         "dua_ca": "Fotografies d'instal·lacions per identificar riscs.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Revisión eléctrica del piso de Biel",
+        "titulo_ca": "Revisió elèctrica del pis d'en Biel",
+        "contexto_es": "Biel vive solo en un piso de Palma con regletas encadenadas y cables pelados, y la auxiliar teme un accidente.",
+        "contexto_ca": "En Biel viu sol en un pis de Palma amb regletes encadenades i cables pelats, i l'auxiliar tem un accident.",
+        "desarrollo_es": "Visitan una vivienda simulada y describen los riesgos que se derivan del uso de las instalaciones eléctricas (0215-4e). Valoran si se cumplen las normas de seguridad, higiene y eliminación de productos en las tareas de mantenimiento (0215-4g) y elaboran una evaluación de riesgos con las técnicas de prevención y protección aplicables (1709-2c).",
+        "desarrollo_ca": "Visiten un habitatge simulat i descriuen els riscos que es deriven de l'ús de les instal·lacions elèctriques (0215-4e). Valoren si es compleixen les normes de seguretat, higiene i eliminació de productes en les tasques de manteniment (0215-4g) i elaboren una avaluació de riscos amb les tècniques de prevenció i protecció aplicables (1709-2c).",
+        "evidencia_es": "Informe de evaluación de riesgos con fotografías de la vivienda.",
+        "evidencia_ca": "Informe d'avaluació de riscos amb fotografies de l'habitatge.",
+        "dua_es": "Lista de verificación con pictogramas y fotografías del mismo espacio.",
+        "dua_ca": "Llista de verificació amb pictogrames i fotografies del mateix espai.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Escape room de la casa peligrosa",
+        "titulo_ca": "Escape room de la casa perillosa",
+        "contexto_es": "Una mutua del sector organiza en Inca una jornada de prevención para auxiliares de ayuda a domicilio.",
+        "contexto_ca": "Una mútua del sector organitza a Inca una jornada de prevenció per a auxiliars d'ajuda a domicili.",
+        "desarrollo_es": "Para salir de la sala, resuelven pruebas sobre los riesgos del uso de enchufes y cuadros eléctricos (0215-4e) y sobre el cumplimiento de normas al mantener el hogar (0215-4g). La última prueba exige decidir qué técnicas de prevención y protección aplicar tras evaluar los riesgos (1709-2c).",
+        "desarrollo_ca": "Per sortir de la sala, resolen proves sobre els riscos de l'ús d'endolls i quadres elèctrics (0215-4e) i sobre el compliment de normes en mantenir la llar (0215-4g). L'última prova exigeix decidir quines tècniques de prevenció i protecció aplicar després d'avaluar els riscos (1709-2c).",
+        "evidencia_es": "Hoja de resolución del escape room con el plan de prevención.",
+        "evidencia_ca": "Full de resolució de l'escape room amb el pla de prevenció.",
+        "dua_es": "Pistas graduadas en tres niveles y tiempo ampliable.",
+        "dua_ca": "Pistes graduades en tres nivells i temps ampliable.",
+        "metodologia_es": "gamificación con escape room.",
+        "metodologia_ca": "gamificació amb escape room."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA2", "criterios": ["a"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["d"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Saber leer documentos económicos sirve tanto para la gestión del hogar del usuario como para entender la propia nómina.",
     "justificacion_ca": "Saber llegir documents econòmics serveix tant per a la gestió de la llar de l'usuari com per entendre la pròpia nòmina.",
     "actividades": [
@@ -370,12 +1033,52 @@
         "dua_ca": "Documents amb colors per apartat.",
         "metodologia_es": "análisis documental.",
         "metodologia_ca": "anàlisi documental."
+      },
+      {
+        "titulo_es": "Estaciones de documentos económicos del hogar",
+        "titulo_ca": "Estacions de documents econòmics de la llar",
+        "contexto_es": "Una gestoría de Manacor atiende a diario a familias que no saben qué hacer con los papeles de la casa.",
+        "contexto_ca": "Una gestoria de Manacor atén cada dia famílies que no saben què fer amb els papers de la casa.",
+        "desarrollo_es": "Pasan por estaciones con facturas de luz, recibos de comunidad y extractos bancarios de una unidad de convivencia y analizan qué gastos recoge cada documento (0215-2a). En la última estación desglosan los componentes de un recibo de salario anonimizado (1709-3d) y comparan ambas lecturas.",
+        "desarrollo_ca": "Passen per estacions amb factures de llum, rebuts de comunitat i extractes bancaris d'una unitat de convivència i analitzen quines despeses recull cada document (0215-2a). A l'última estació desglossen els components d'un rebut de salari anonimitzat (1709-3d) i comparen totes dues lectures.",
+        "evidencia_es": "Cuaderno de estaciones con un glosario de términos.",
+        "evidencia_ca": "Quadern d'estacions amb un glossari de termes.",
+        "dua_es": "Documentos ampliados y glosario ilustrado en cada estación.",
+        "dua_ca": "Documents ampliats i glossari il·lustrat a cada estació.",
+        "metodologia_es": "rincones o estaciones.",
+        "metodologia_ca": "racons o estacions."
+      },
+      {
+        "titulo_es": "Mi primera nómina y el presupuesto familiar",
+        "titulo_ca": "La meva primera nòmina i el pressupost familiar",
+        "contexto_es": "Una alumna en prácticas en Eivissa cobra su primera nómina mientras ayuda a su abuelo a ordenar los papeles de casa.",
+        "contexto_ca": "Una alumna en pràctiques a Eivissa cobra la primera nòmina mentre ajuda l'avi a ordenar els papers de casa.",
+        "desarrollo_es": "Con vídeos vistos en casa, abordan en clase una carpeta de papeles de un hogar simulado y analizan la documentación de sus gastos (0215-2a). Después identifican cada componente de un recibo de salario y lo cuadran con un presupuesto mensual (1709-3d).",
+        "desarrollo_ca": "Amb vídeos vistos a casa, aborden a classe una carpeta de papers d'una llar simulada i analitzen la documentació de les despeses (0215-2a). Després identifiquen cada component d'un rebut de salari i el quadren amb un pressupost mensual (1709-3d).",
+        "evidencia_es": "Presupuesto mensual con la nómina desglosada.",
+        "evidencia_ca": "Pressupost mensual amb la nòmina desglossada.",
+        "dua_es": "Nóminas con códigos de color y vídeos subtitulados que se pueden repetir.",
+        "dua_ca": "Nòmines amb codis de color i vídeos subtitulats que es poden repetir.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA6", "criterios": ["g"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["b"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA6",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Las normas de seguridad en la manipulación de alimentos previenen cortes y quemaduras, que son accidentes de trabajo.",
     "justificacion_ca": "Les normes de seguretat en la manipulació d'aliments prevenen talls i cremades, que són accidents de feina.",
     "actividades": [
@@ -392,12 +1095,52 @@
         "dua_ca": "Comunicats d'accident simplificats.",
         "metodologia_es": "estudio de casos reales.",
         "metodologia_ca": "estudi de casos reals."
+      },
+      {
+        "titulo_es": "Reunión de la mutua tras los accidentes",
+        "titulo_ca": "Reunió de la mútua després dels accidents",
+        "contexto_es": "Tras tres incidentes en cocinas de domicilios de Marratxí, la mutua reúne a auxiliares y técnicos de prevención.",
+        "contexto_ca": "Després de tres incidents en cuines de domicilis de Marratxí, la mútua reuneix auxiliars i tècnics de prevenció.",
+        "desarrollo_es": "En una reunión simulada, defienden las normas de seguridad e higiene para manipular y procesar alimentos (0215-6g). Clasifican los daños que pueden sufrir en esa tarea, distinguiendo entre accidente de trabajo y enfermedad profesional (1709-2b).",
+        "desarrollo_ca": "En una reunió simulada, defensen les normes de seguretat i higiene per manipular i processar aliments (0215-6g). Classifiquen els danys que poden patir en aquesta tasca, distingint entre accident de treball i malaltia professional (1709-2b).",
+        "evidencia_es": "Acta de la reunión con el cuadro de daños clasificado.",
+        "evidencia_ca": "Acta de la reunió amb el quadre de danys classificats.",
+        "dua_es": "Guion de roles con vocabulario de apoyo y turnos de intervención.",
+        "dua_ca": "Guió de rols amb vocabulari de suport i torns d'intervenció.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Cartel de cocina segura para familias cuidadoras",
+        "titulo_ca": "Cartell de cuina segura per a famílies cuidadores",
+        "contexto_es": "El centro de día de Santanyí quiere carteles claros para las cocinas de las familias que cuidan a sus mayores.",
+        "contexto_ca": "El centre de dia de Santanyí vol cartells clars per a les cuines de les famílies que cuiden els seus grans.",
+        "desarrollo_es": "Reúnen las normas de seguridad e higiene que hay que cumplir al manipular y procesar alimentos y las ilustran en un cartel (0215-6g). Añaden un apartado que clasifica los daños profesionales más probables de la tarea (1709-2b) y lo entregan al centro.",
+        "desarrollo_ca": "Reuneixen les normes de seguretat i higiene que cal complir en manipular i processar aliments i les il·lustren en un cartell (0215-6g). Hi afegeixen un apartat que classifica els danys professionals més probables de la tasca (1709-2b) i el lliuren al centre.",
+        "evidencia_es": "Cartel ilustrado entregado al centro de día.",
+        "evidencia_ca": "Cartell il·lustrat lliurat al centre de dia.",
+        "dua_es": "Carteles con pictogramas y versiones en los dos idiomas oficiales.",
+        "dua_ca": "Cartells amb pictogrames i versions en les dues llengües oficials.",
+        "metodologia_es": "aprendizaje-servicio con producto real.",
+        "metodologia_ca": "aprenentatge-servei amb producte real."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA1", "criterios": ["c"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Las tareas que se realizan en el domicilio definen el perfil que buscan las ofertas de empleo de ayuda a domicilio.",
     "justificacion_ca": "Les tasques que es fan al domicili defineixen el perfil que cerquen les ofertes de feina d'ajuda a domicili.",
     "actividades": [
@@ -414,12 +1157,53 @@
         "dua_ca": "Ofertes seleccionades i taula guiada.",
         "metodologia_es": "análisis documental.",
         "metodologia_ca": "anàlisi documental."
+      },
+      {
+        "titulo_es": "Entrevista para auxiliar de ayuda a domicilio",
+        "titulo_ca": "Entrevista per a auxiliar d'ajuda a domicili",
+        "contexto_es": "Una empresa de Alcúdia busca auxiliares para la temporada de verano y entrevista a las candidatas.",
+        "contexto_ca": "Una empresa d'Alcúdia cerca auxiliars per a la temporada d'estiu i entrevista les candidates.",
+        "desarrollo_es": "Como candidatas y entrevistadoras, enumeran las tareas que se han de realizar en un domicilio tipo (0215-1c). Con ellas responden en la entrevista sobre las oportunidades de empleo del sector y los requisitos actuales que la empresa pide para el perfil (1709-1a).",
+        "desarrollo_ca": "Com a candidates i entrevistadores, enumeren les tasques que s'han de fer en un domicili tipus (0215-1c). Amb elles responen a l'entrevista sobre les oportunitats d'ocupació del sector i els requisits actuals que l'empresa demana per al perfil (1709-1a).",
+        "evidencia_es": "Grabación de la entrevista y ficha de tareas del puesto.",
+        "evidencia_ca": "Gravació de l'entrevista i fitxa de tasques del lloc.",
+        "dua_es": "Preguntas de entrevista entregadas con antelación y ensayo previo en parejas.",
+        "dua_ca": "Preguntes d'entrevista lliurades amb antelació i assaig previ en parelles.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Infografía del puesto para la feria de empleo",
+        "titulo_ca": "Infografia del lloc per a la fira d'ocupació",
+        "contexto_es": "El servicio de orientación del instituto prepara en Palma una feria de empleo sociosanitario para el alumnado de último curso.",
+        "contexto_ca": "El servei d'orientació de l'institut prepara a Palma una fira d'ocupació sociosanitària per a l'alumnat d'últim curs.",
+        "desarrollo_es": "Tras entrevistar a una profesional del sector, listan las tareas que ocupan un día en el domicilio de una persona dependiente (0215-1c). Cruzan esa lista con ofertas reales para analizar las oportunidades de inserción y los requisitos actuales del perfil (1709-1a).",
+        "desarrollo_ca": "Després d'entrevistar una professional del sector, llisten les tasques que ocupen un dia al domicili d'una persona dependent (0215-1c). Creuen aquesta llista amb ofertes reals per analitzar les oportunitats d'inserció i els requisits actuals del perfil (1709-1a).",
+        "evidencia_es": "Infografía del puesto con tareas, oportunidades y requisitos.",
+        "evidencia_ca": "Infografia del lloc amb tasques, oportunitats i requisits.",
+        "dua_es": "Preguntas para la entrevista en tarjetas y opción de enviarlas por escrito.",
+        "dua_ca": "Preguntes per a l'entrevista en targetes i opció d'enviar-les per escrit.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA5", "criterios": ["d"] },
-    "b": { "modulo": "1709", "ra": "RA5", "criterios": ["c", "h"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "h"
+      ]
+    },
     "justificacion_es": "Aprender por cuenta propia sobre raciones y nutrición exige construir un entorno personal de aprendizaje con fuentes fiables.",
     "justificacion_ca": "Aprendre pel propi compte sobre racions i nutrició exigeix construir un entorn personal d'aprenentatge amb fonts fiables.",
     "actividades": [
@@ -436,12 +1220,53 @@
         "dua_ca": "Llista inicial de fonts i plantilla del mapa.",
         "metodologia_es": "aprendizaje autónomo guiado.",
         "metodologia_ca": "aprenentatge autònom guiat."
+      },
+      {
+        "titulo_es": "Mini-formación entre iguales sobre raciones",
+        "titulo_ca": "Miniformació entre iguals sobre racions",
+        "contexto_es": "Una nutricionista de un centro de salud de sa Pobla aconseja a un usuario con diabetes medir sus raciones, y la auxiliar quiere aprender a explicárselo.",
+        "contexto_ca": "Una nutricionista d'un centre de salut de sa Pobla aconsella a un usuari amb diabetis mesurar les racions, i l'auxiliar vol aprendre a explicar-li-ho.",
+        "desarrollo_es": "Identifican raciones y medidas caseras con utensilios reales de cocina (0215-5d). Seleccionan herramientas y fuentes fiables para montar un entorno personal de aprendizaje sobre nutrición (1709-5c) y lo ponen a prueba preparando una mini-formación para un compañero (1709-5h).",
+        "desarrollo_ca": "Identifiquen racions i mesures casolanes amb estris reals de cuina (0215-5d). Seleccionen eines i fonts fiables per muntar un entorn personal d'aprenentatge sobre nutrició (1709-5c) i el posen a prova preparant una miniformació per a un company (1709-5h).",
+        "evidencia_es": "Mapa del entorno de aprendizaje y guion de la mini-formación.",
+        "evidencia_ca": "Mapa de l'entorn d'aprenentatge i guió de la miniformació.",
+        "dua_es": "Tabla de equivalencias con fotos de medidas caseras y libertad para elegir el formato de la formación.",
+        "dua_ca": "Taula d'equivalències amb fotos de mesures casolanes i llibertat per triar el format de la formació.",
+        "metodologia_es": "aprendizaje entre iguales.",
+        "metodologia_ca": "aprenentatge entre iguals."
+      },
+      {
+        "titulo_es": "Reto de la despensa con fuentes fiables",
+        "titulo_ca": "Repte de la rebosteria amb fonts fiables",
+        "contexto_es": "Un grupo de mayores de un hogar de Felanitx pide consejos fiables para no servirse raciones excesivas.",
+        "contexto_ca": "Un grup de grans d'una llar de Felanitx demana consells fiables per no servir-se racions excessives.",
+        "desarrollo_es": "Pesan y miden raciones habituales con cucharas, tazas y balanza (0215-5d). Contrastan aplicaciones y páginas de nutrición y eligen las que formarán su entorno de aprendizaje (1709-5c); con esas herramientas resuelven por su cuenta un reto de menús para un día (1709-5h).",
+        "desarrollo_ca": "Pesen i mesuren racions habituals amb cullerotes, tasses i balança (0215-5d). Contrasten aplicacions i pàgines de nutrició i trien les que formaran el seu entorn d'aprenentatge (1709-5c); amb aquestes eines resolen pel seu compte un repte de menús per a un dia (1709-5h).",
+        "evidencia_es": "Menú de un día con raciones calculadas y fuentes citadas.",
+        "evidencia_ca": "Menú d'un dia amb racions calculades i fonts citades.",
+        "dua_es": "Balanza con pantalla grande y recipientes con las medidas marcadas.",
+        "dua_ca": "Balança amb pantalla gran i recipients amb les mesures marcades.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA7", "criterios": ["f"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["k", "j"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA7",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "k",
+        "j"
+      ]
+    },
     "justificacion_es": "La evaluación que mejora la calidad del servicio también sirve para fijar objetivos y un plan de mejora profesional propio.",
     "justificacion_ca": "L'avaluació que millora la qualitat del servei també serveix per fixar objectius i un pla de millora professional propi.",
     "actividades": [
@@ -458,12 +1283,52 @@
         "dua_ca": "Plantilla d'objectius SMART amb exemples.",
         "metodologia_es": "aprendizaje autorregulado.",
         "metodologia_ca": "aprenentatge autoregulat."
+      },
+      {
+        "titulo_es": "Del buzón de sugerencias a mi plan de acción",
+        "titulo_ca": "De la bústia de suggeriments al meu pla d'acció",
+        "contexto_es": "Una residencia de un pueblo de Mallorca abre un buzón de sugerencias y las auxiliares reciben comentarios sobre su trato.",
+        "contexto_ca": "Una residència d'un poble de Mallorca obri una bústia de suggeriments i les auxiliars reben comentaris sobre el tracte.",
+        "desarrollo_es": "Analizan los resultados de una evaluación del servicio y valoran cómo ayuda a mejorar su calidad (0215-7f). A partir de ahí trazan un plan de acción con áreas de mejora y fortalezas con valor para el empleo (1709-4k) y formulan objetivos y metas profesionales para su empleabilidad (1709-4j).",
+        "desarrollo_ca": "Analitzen els resultats d'una avaluació del servei i valoren com ajuda a millorar-ne la qualitat (0215-7f). A partir d'això tracen un pla d'acció amb àrees de millora i fortaleses amb valor per a l'ocupació (1709-4k) i formulen objectius i metes professionals per a l'ocupabilitat (1709-4j).",
+        "evidencia_es": "Plan de acción personal con indicadores de seguimiento.",
+        "evidencia_ca": "Pla d'acció personal amb indicadors de seguiment.",
+        "dua_es": "Plantilla de objetivos con ejemplos resueltos y tutoría individual breve.",
+        "dua_ca": "Plantilla d'objectius amb exemples resolts i tutoria individual breu.",
+        "metodologia_es": "tutoría entre iguales.",
+        "metodologia_ca": "tutoria entre iguals."
+      },
+      {
+        "titulo_es": "Rueda de coevaluación del servicio simulado",
+        "titulo_ca": "Roda de coavaluació del servei simulat",
+        "contexto_es": "Al acabar el primer trimestre de prácticas en Menorca, el grupo quiere saber qué ha hecho bien y qué debe mejorar.",
+        "contexto_ca": "En acabar el primer trimestre de pràctiques a Menorca, el grup vol saber què ha fet bé i què ha de millorar.",
+        "desarrollo_es": "En círculos de coevaluación, valoran la importancia de evaluar para mejorar la calidad de un servicio simulado (0215-7f). Cada persona recibe observaciones de sus compañeros, define su plan de acción (1709-4k) y fija metas a corto y medio plazo (1709-4j).",
+        "desarrollo_ca": "En cercles de coavaluació, valoren la importància d'avaluar per millorar la qualitat d'un servei simulat (0215-7f). Cada persona rep observacions dels companys, defineix el pla d'acció (1709-4k) i fixa metes a curt i mitjà termini (1709-4j).",
+        "evidencia_es": "Ficha de coevaluación y hoja de metas personales.",
+        "evidencia_ca": "Fitxa de coavaluació i full de metes personals.",
+        "dua_es": "Observaciones con frases de inicio y opción de recibirlas de forma anónima.",
+        "dua_ca": "Observacions amb frases d'inici i opció de rebre-les de manera anònima.",
+        "metodologia_es": "aprendizaje cooperativo con coevaluación.",
+        "metodologia_ca": "aprenentatge cooperatiu amb coavaluació."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA5", "criterios": ["e"] },
-    "b": { "modulo": "1664", "ra": "RA4", "criterios": ["f"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Las aplicaciones que leen el etiquetado nutricional con la cámara son una aplicación concreta de las tecnologías disruptivas.",
     "justificacion_ca": "Les aplicacions que llegeixen l'etiquetatge nutricional amb la càmera són una aplicació concreta de les tecnologies disruptives.",
     "actividades": [
@@ -480,12 +1345,53 @@
         "dua_ca": "Envasos reals i guia de lectura d'etiquetes.",
         "metodologia_es": "aprendizaje por indagación.",
         "metodologia_ca": "aprenentatge per indagació."
+      },
+      {
+        "titulo_es": "Etiqueta contra aplicación: ¿quién lee mejor?",
+        "titulo_ca": "Etiqueta contra aplicació: qui llegeix millor?",
+        "contexto_es": "Una asociación de personas con diabetes de Palma busca aplicaciones que ayuden a entender las etiquetas del supermercado.",
+        "contexto_ca": "Una associació de persones amb diabetis de Palma cerca aplicacions que ajudin a entendre les etiquetes del supermercat.",
+        "desarrollo_es": "Analizan el etiquetado nutricional de envases reales (0215-5e) y lo contrastan con la lectura que hacen aplicaciones de reconocimiento de imagen. Anotan qué tecnologías disruptivas hay detrás y con qué aplicaciones concretas se asocian (1664-4f).",
+        "desarrollo_ca": "Analitzen l'etiquetatge nutricional d'envasos reals (0215-5e) i el contrasten amb la lectura que fan aplicacions de reconeixement d'imatge. Anoten quines tecnologies disruptives hi ha al darrere i amb quines aplicacions concretes s'associen (1664-4f).",
+        "evidencia_es": "Tabla comparativa de lectura humana y lectura de la aplicación.",
+        "evidencia_ca": "Taula comparativa de lectura humana i lectura de l'aplicació.",
+        "dua_es": "Etiquetas ampliadas con código de colores tipo semáforo.",
+        "dua_ca": "Etiquetes ampliades amb codi de colors tipus semàfor.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Consulta con dietista y lector de etiquetas",
+        "titulo_ca": "Consulta amb dietista i lector d'etiquetes",
+        "contexto_es": "En una consulta de atención primaria de Inca, una dietista propone a un paciente una aplicación que lee etiquetas.",
+        "contexto_ca": "En una consulta d'atenció primària d'Inca, una dietista proposa a un pacient una aplicació que llegeix etiquetes.",
+        "desarrollo_es": "Con los roles de dietista, paciente y familiar, analizan el etiquetado nutricional de alimentos envasados para decidir una compra (0215-5e). Explican con ejemplos cómo la inteligencia artificial y otras tecnologías disruptivas se aplican a este servicio (1664-4f).",
+        "desarrollo_ca": "Amb els rols de dietista, pacient i familiar, analitzen l'etiquetatge nutricional d'aliments envasats per decidir una compra (0215-5e). Expliquen amb exemples com la intel·ligència artificial i altres tecnologies disruptives s'apliquen a aquest servei (1664-4f).",
+        "evidencia_es": "Guion de la consulta y ficha de tecnologías aplicadas.",
+        "evidencia_ca": "Guió de la consulta i fitxa de tecnologies aplicades.",
+        "dua_es": "Roles con frases modelo y etiquetas reales ampliadas.",
+        "dua_ca": "Rols amb frases model i etiquetes reals ampliades.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA3", "criterios": ["c"] },
-    "b": { "modulo": "1664", "ra": "RA1", "criterios": ["c", "a"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1664",
+      "ra": "RA1",
+      "criterios": [
+        "c",
+        "a"
+      ]
+    },
     "justificacion_es": "Una lista de la compra pensada con criterios circulares reduce envases y facilita el reciclaje.",
     "justificacion_ca": "Una llista de la compra pensada amb criteris circulars redueix envasos i facilita el reciclatge.",
     "actividades": [
@@ -502,12 +1408,54 @@
         "dua_ca": "Llista amb imatges de productes i alternatives.",
         "metodologia_es": "aprendizaje basado en retos.",
         "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Cesta circular para el banco de alimentos",
+        "titulo_ca": "Cistella circular per al banc d'aliments",
+        "contexto_es": "Un banco de alimentos de Palma reparte cestas con muchos envases que luego acaban sin reciclar.",
+        "contexto_ca": "Un banc d'aliments de Palma reparteix cistelles amb molts d'envasos que després acaben sense reciclar.",
+        "desarrollo_es": "Determinan la lista de la compra de una cesta semanal para una unidad de convivencia (0215-3c). Revisan cada producto valorando qué papel juega el reciclaje en el modelo económico (1664-1c) y sitúan su envase en las etapas típicas del modelo lineal y del circular (1664-1a).",
+        "desarrollo_ca": "Determinen la llista de la compra d'una cistella setmanal per a una unitat de convivència (0215-3c). Revisen cada producte valorant quin paper té el reciclatge en el model econòmic (1664-1c) i situen l'envàs en les etapes típiques del model lineal i del circular (1664-1a).",
+        "evidencia_es": "Lista de la compra revisada con una nota de reciclaje por producto.",
+        "evidencia_ca": "Llista de la compra revisada amb una nota de reciclatge per producte.",
+        "dua_es": "Lista con imágenes de los productos y casillas para marcar.",
+        "dua_ca": "Llista amb imatges dels productes i caselles per marcar.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Compra a granel en la tienda de Pollença",
+        "titulo_ca": "Compra a granel a la botiga de Pollença",
+        "contexto_es": "Una tienda a granel de Pollença organiza un taller para enseñar a clientes mayores a comprar sin envases.",
+        "contexto_ca": "Una botiga a granel de Pollença organitza un taller per ensenyar clients grans a comprar sense envasos.",
+        "desarrollo_es": "Simulan una compra en la tienda a granel y elaboran la lista con lo necesario para la semana (0215-3c). Comparan lo comprado con lo que se compraría envasado, valoran la importancia del reciclaje (1664-1c) e identifican las etapas típicas de cada modelo económico (1664-1a).",
+        "desarrollo_ca": "Simulen una compra a la botiga a granel i elaboren la llista amb el necessari per a la setmana (0215-3c). Comparen allò comprat amb el que es compraria envasat, valoren la importància del reciclatge (1664-1c) i identifiquen les etapes típiques de cada model econòmic (1664-1a).",
+        "evidencia_es": "Ticket comparado y mural de etapas de cada modelo.",
+        "evidencia_ca": "Tiquet comparat i mural d'etapes de cada model.",
+        "dua_es": "Balanzas con pesos marcados y rol de cajero rotativo.",
+        "dua_ca": "Balances amb pesos marcats i rol de caixer rotatiu.",
+        "metodologia_es": "simulación de compra.",
+        "metodologia_ca": "simulació de compra."
       }
     ]
   },
   {
-    "a": { "modulo": "0215", "ra": "RA1", "criterios": ["g", "h"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["c", "a"] },
+    "a": {
+      "modulo": "0215",
+      "ra": "RA1",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "a"
+      ]
+    },
     "justificacion_es": "El tipo de plan domiciliario y la secuencia de visitas determinan la jornada de la auxiliar, regulada por el convenio del sector.",
     "justificacion_ca": "El tipus de pla domiciliari i la seqüència de visites determinen la jornada de l'auxiliar, regulada pel conveni del sector.",
     "actividades": [
@@ -524,6 +1472,34 @@
         "dua_ca": "Mapa amb temps de desplaçament i extracte del conveni.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Mesa de negociación de las rutas semanales",
+        "titulo_ca": "Taula de negociació de les rutes setmanals",
+        "contexto_es": "La plantilla de una empresa de ayuda a domicilio de Mallorca negocia cómo organizar las visitas de la semana.",
+        "contexto_ca": "La plantilla d'una empresa d'ajuda a domicili de Mallorca negocia com organitzar les visites de la setmana.",
+        "desarrollo_es": "Distinguen los tipos de planes de atención a personas en situación de dependencia en el domicilio (0215-1g) y valoran cómo ajustar la secuencia de actividades para rentabilizar tiempo y esfuerzos (0215-1h). En la mesa, localizan en el convenio las características de los nuevos entornos de organización del trabajo (1709-3c) y los derechos y obligaciones de la jornada (1709-3a).",
+        "desarrollo_ca": "Distingeixen els tipus de plans d'atenció a persones en situació de dependència al domicili (0215-1g) i valoren com ajustar la seqüència d'activitats per rendibilitzar temps i esforços (0215-1h). A la taula, localitzen al conveni les característiques dels nous entorns d'organització del treball (1709-3c) i els drets i obligacions de la jornada (1709-3a).",
+        "evidencia_es": "Propuesta de calendario con las cláusulas del convenio citadas.",
+        "evidencia_ca": "Proposta de calendari amb les clàusules del conveni citades.",
+        "dua_es": "Convenio con extractos subrayados y glosario de términos legales.",
+        "dua_ca": "Conveni amb extractes subratllats i glossari de termes legals.",
+        "metodologia_es": "simulación de una mesa de negociación.",
+        "metodologia_ca": "simulació d'una taula de negociació."
+      },
+      {
+        "titulo_es": "Rompecabezas del cuadrante semanal de visitas",
+        "titulo_ca": "Trencaclosques del quadrant setmanal de visites",
+        "contexto_es": "Una auxiliar de Calvià alterna visitas, formación y guardias, y no sabe si su horario respeta lo pactado.",
+        "contexto_ca": "Una auxiliar de Calvià alterna visites, formació i guàrdies, i no sap si l'horari respecta el que s'ha pactat.",
+        "desarrollo_es": "Reciben tarjetas con distintos planes de atención (0215-1g) y las ordenan en una semana tipo, ajustando la secuencia para ahorrar desplazamientos (0215-1h). Después revisan con el convenio si la semana respeta los derechos y obligaciones pactados (1709-3a) y qué cambia en los nuevos entornos de organización del trabajo (1709-3c).",
+        "desarrollo_ca": "Reben targetes amb diferents plans d'atenció (0215-1g) i les ordenen en una setmana tipus, ajustant la seqüència per estalviar desplaçaments (0215-1h). Després revisen amb el conveni si la setmana respecta els drets i obligacions pactats (1709-3a) i què canvia en els nous entorns d'organització del treball (1709-3c).",
+        "evidencia_es": "Cuadrante semanal justificado con artículos del convenio.",
+        "evidencia_ca": "Quadrant setmanal justificat amb articles del conveni.",
+        "dua_es": "Tarjetas de colores y cuadrante magnético o digital.",
+        "dua_ca": "Targetes de colors i quadrant magnètic o digital.",
+        "metodologia_es": "gamificación con tarjetas.",
+        "metodologia_ca": "gamificació amb targetes."
       }
     ]
   }

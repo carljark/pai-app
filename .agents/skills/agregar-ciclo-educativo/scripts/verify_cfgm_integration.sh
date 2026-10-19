@@ -87,7 +87,7 @@ for m in modules:
         for c in lo.get('connections', []):
             total_conns += 1
             acts = c.get('activities', [])
-            if not acts or len(acts) == 0:
+            if len(acts) < 3:
                 empty_conns += 1
             total_acts += len(acts)
 
@@ -97,10 +97,10 @@ print(f'     • Conexiones totales: {total_conns} (Media: {avg_conns} por RA)')
 print(f'     • Actividades formativas: {total_acts}')
 
 if empty_conns > 0:
-    print(f'  ❌ ERROR: Existen {empty_conns} conexiones vacías sin actividades asociadas.')
+    print(f'  ❌ ERROR: Existen {empty_conns} conexiones con menos de tres actividades.')
     sys.exit(1)
 else:
-    print('  ✅ Cero conexiones vacías: el 100% de las conexiones tiene al menos una actividad.')
+    print('  ✅ El 100% de las conexiones tiene al menos tres actividades.')
 
 if avg_conns > 25:
     print(f'  ⚠️ ADVERTENCIA: La media de conexiones por RA ({avg_conns}) es inusualmente alta.')

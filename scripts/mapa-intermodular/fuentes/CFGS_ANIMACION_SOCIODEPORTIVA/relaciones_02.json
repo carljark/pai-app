@@ -1,7 +1,19 @@
 [
   {
-    "a": { "modulo": "1124", "ra": "RA1", "criterios": ["b"] },
-    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "El ámbito de intervención del técnico se concreta en las instituciones que promueven programas de enseñanza deportiva.",
     "justificacion_ca": "L'àmbit d'intervenció del tècnic es concreta en les institucions que promouen programes d'ensenyament esportiu.",
     "actividades": [
@@ -18,12 +30,52 @@
         "dua_ca": "Plantilla de mapa conceptual i enllaços seleccionats.",
         "metodologia_es": "investigación guiada.",
         "metodologia_ca": "recerca guiada."
+      },
+      {
+        "titulo_es": "Feria de programas deportivos de las instituciones de Mallorca",
+        "titulo_ca": "Fira de programes esportius de les institucions de Mallorca",
+        "contexto_es": "El centro organiza una feria para que el alumnado de primero vea en qué instituciones puede acabar trabajando.",
+        "contexto_ca": "El centre organitza una fira perquè l'alumnat de primer vegi en quines institucions pot acabar treballant.",
+        "desarrollo_es": "Cada equipo escoge una institución, como un ayuntamiento, un club, una federación, un hotel o una fundación, y prepara un puesto para la feria. En él explica el ámbito de intervención del técnico superior en animación sociodeportiva: deporte escolar, ocio, turismo, salud e inclusión (1124-1b). El proyecto se cierra con un programa de enseñanza contextualizado en esa institución, con sus destinatarios, espacios y recursos (1143-2a).",
+        "desarrollo_ca": "Cada equip tria una institució, com un ajuntament, un club, una federació, un hotel o una fundació, i prepara un estand per a la fira. Hi explica l'àmbit d'intervenció del tècnic superior en animació socioesportiva: esport escolar, oci, turisme, salut i inclusió (1124-1b). El projecte es tanca amb un programa d'ensenyament contextualitzat en aquesta institució, amb els destinataris, els espais i els recursos (1143-2a).",
+        "evidencia_es": "Puesto de feria con programa de enseñanza contextualizado.",
+        "evidencia_ca": "Estand de fira amb programa d'ensenyament contextualitzat.",
+        "dua_es": "Guion del puesto y reparto de tareas por fortalezas.",
+        "dua_ca": "Guió de l'estand i repartiment de tasques per fortaleses.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Ruta de visitas a tres entidades deportivas de Ibiza",
+        "titulo_ca": "Ruta de visites a tres entitats esportives d'Eivissa",
+        "contexto_es": "El alumnado visita tres entidades deportivas de Ibiza y debe sacar conclusiones distintas según su punto de partida.",
+        "contexto_ca": "L'alumnat visita tres entitats esportives d'Eivissa i ha de treure conclusions diferents segons el seu punt de partida.",
+        "desarrollo_es": "El alumnado elige entre tres niveles de profundidad para cada visita. En todos los casos identifica el ámbito de intervención del técnico superior y las funciones que se desempeñan en cada entidad (1124-1b). Con la información recogida elabora un programa de enseñanza adaptado a una de esas instituciones, justificando el contexto en el que se aplicaría (1143-2a).",
+        "desarrollo_ca": "L'alumnat tria entre tres nivells de profunditat per a cada visita. En tots els casos identifica l'àmbit d'intervenció del tècnic superior i les funcions que es duen a terme a cada entitat (1124-1b). Amb la informació recollida elabora un programa d'ensenyament adaptat a una d'aquestes institucions, justificant el context en què s'aplicaria (1143-2a).",
+        "evidencia_es": "Ficha de visitas y programa de enseñanza justificado.",
+        "evidencia_ca": "Fitxa de visites i programa d'ensenyament justificat.",
+        "dua_es": "Tres niveles de ficha con apoyo decreciente.",
+        "dua_ca": "Tres nivells de fitxa amb suport decreixent.",
+        "metodologia_es": "aprendizaje autónomo por niveles.",
+        "metodologia_ca": "aprenentatge autònom per nivells."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA2", "criterios": ["e"] },
-    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["e"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Los métodos activos de dinamización y las estrategias metodológicas de la enseñanza deportiva persiguen lo mismo: que el participante sea protagonista.",
     "justificacion_ca": "Els mètodes actius de dinamització i les estratègies metodològiques de l'ensenyament esportiu persegueixen el mateix: que el participant sigui protagonista.",
     "actividades": [
@@ -40,12 +92,52 @@
         "dua_ca": "Reptes amb diversos nivells de dificultat.",
         "metodologia_es": "aprendizaje por descubrimiento.",
         "metodologia_ca": "aprenentatge per descobriment."
+      },
+      {
+        "titulo_es": "Liga de retos cooperativos en el polideportivo de Inca",
+        "titulo_ca": "Lliga de reptes cooperatius al poliesportiu d'Inca",
+        "contexto_es": "En el casal de verano de Inca, un grupo de treinta niños se dispersa cuando las esperas se alargan y el monitor necesita que todos participen a la vez.",
+        "contexto_ca": "Al casal d'estiu d'Inca, un grup de trenta infants es dispersa quan les esperes s'allarguen i el monitor necessita que tots participin alhora.",
+        "desarrollo_es": "El alumnado diseña una liga de retos por equipos y escoge la estrategia metodológica que mejor encaja con el grupo y con el tipo de actividad (1143-2e). Aplica después métodos activos que aseguran la participación de todo el mundo, sin eliminados ni colas, y anota quién interviene en cada reto (1124-2e).",
+        "desarrollo_ca": "L'alumnat dissenya una lliga de reptes per equips i tria l'estratègia metodològica que millor encaixa amb el grup i amb el tipus d'activitat (1143-2e). Aplica després mètodes actius que asseguren la participació de tothom, sense eliminats ni cues, i anota qui intervé en cada repte (1124-2e).",
+        "evidencia_es": "Ficha de la liga con la estrategia elegida y el registro de intervenciones.",
+        "evidencia_ca": "Fitxa de la lliga amb l'estratègia triada i el registre d'intervencions.",
+        "dua_es": "Retos con material manipulable y tarjetas con pictogramas.",
+        "dua_ca": "Reptes amb material manipulable i targetes amb pictogrames.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Sesión abierta para las familias del barrio",
+        "titulo_ca": "Sessió oberta per a les famílies del barri",
+        "contexto_es": "El centro cívico de Manacor pide al ciclo una jornada de juego compartido para las familias de la zona, con edades muy distintas en la misma pista.",
+        "contexto_ca": "El centre cívic de Manacor demana al cicle una jornada de joc compartit per a les famílies de la zona, amb edats molt diferents a la mateixa pista.",
+        "desarrollo_es": "El alumnado prepara una jornada de juego compartido y justifica qué estrategia metodológica conviene a cada franja de edad y a cada tipo de actividad (1143-2e). Durante la sesión usa métodos activos de participación, como parejas rotativas y materiales adaptados, para que nadie quede fuera (1124-2e).",
+        "desarrollo_ca": "L'alumnat prepara una jornada de joc compartit i justifica quina estratègia metodològica convé a cada franja d'edat i a cada tipus d'activitat (1143-2e). Durant la sessió fa servir mètodes actius de participació, com parelles rotatives i materials adaptats, perquè ningú no quedi fora (1124-2e).",
+        "evidencia_es": "Plan de la jornada y valoración de la participación registrada.",
+        "evidencia_ca": "Pla de la jornada i valoració de la participació registrada.",
+        "dua_es": "Itinerario con estaciones de dificultad creciente y apoyo de un compañero guía.",
+        "dua_ca": "Itinerari amb estacions de dificultat creixent i suport d'un company guia.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA3", "criterios": ["a"] },
-    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["b"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Los elementos de la comunicación determinan qué información percibe el aprendiz de la tarea motriz.",
     "justificacion_ca": "Els elements de la comunicació determinen quina informació percep l'aprenent de la tasca motriu.",
     "actividades": [
@@ -62,12 +154,52 @@
         "dua_ca": "Vídeo de l'escena i esquema de la comunicació.",
         "metodologia_es": "análisis de vídeo.",
         "metodologia_ca": "anàlisi de vídeo."
+      },
+      {
+        "titulo_es": "Ensayo de consignas en el club náutico",
+        "titulo_ca": "Assaig de consignes al club nàutic",
+        "contexto_es": "En el club náutico de Pollença, los monitores en prácticas dan las instrucciones de vela de espaldas al viento y el grupo no entiende qué debe mirar.",
+        "contexto_ca": "Al club nàutic de Pollença, els monitors en pràctiques donen les instruccions de vela d'esquena al vent i el grup no entén què ha de mirar.",
+        "desarrollo_es": "El alumnado representa por parejas distintas maneras de dar una consigna y analiza qué cambia en el emisor, el mensaje, el canal y el receptor (1124-3a). Después identifica los elementos perceptivos de la maniobra, como la dirección del viento o la posición de las manos, que el aprendiz debe captar para ejecutarla bien (1143-1b).",
+        "desarrollo_ca": "L'alumnat representa per parelles diverses maneres de donar una consigna i analitza què canvia en l'emissor, el missatge, el canal i el receptor (1124-3a). Després identifica els elements perceptius de la maniobra, com la direcció del vent o la posició de les mans, que l'aprenent ha de captar per executar-la bé (1143-1b).",
+        "evidencia_es": "Escenas representadas y tabla de análisis de la consigna.",
+        "evidencia_ca": "Escenes representades i taula d'anàlisi de la consigna.",
+        "dua_es": "Guion de la representación y grabación en audio para revisar la consigna.",
+        "dua_ca": "Guió de la representació i enregistrament d'àudio per revisar la consigna.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Explicar el bote sin mirar la pelota",
+        "titulo_ca": "Explicar el bot sense mirar la pilota",
+        "contexto_es": "Un grupo de tecnificación de baloncesto de Palma repite mal el bote de protección porque nadie les ha dicho dónde mirar mientras botan.",
+        "contexto_ca": "Un grup de tecnificació de bàsquet de Palma repeteix malament el bot de protecció perquè ningú no els ha dit on mirar mentre boten.",
+        "desarrollo_es": "Antes de la sesión, el alumnado observa un vídeo corto en casa y anota qué señales necesita percibir quien aprende a botar, como las manos del defensor o el espacio libre (1143-1b). En clase explica la tarea a un compañero y revisa con él la claridad del mensaje, el canal escogido y el ruido del pabellón (1124-3a).",
+        "desarrollo_ca": "Abans de la sessió, l'alumnat observa un vídeo curt a casa i anota quines senyals necessita percebre qui aprèn a botar, com les mans del defensor o l'espai lliure (1143-1b). A classe explica la tasca a un company i revisa amb ell la claredat del missatge, el canal triat i el renou del pavelló (1124-3a).",
+        "evidencia_es": "Notas previas del vídeo y microenseñanza grabada de la tarea.",
+        "evidencia_ca": "Notes prèvies del vídeo i microensenyament enregistrat de la tasca.",
+        "dua_es": "Vídeo con subtítulos y listado de señales clave visible en la pista.",
+        "dua_ca": "Vídeo amb subtítols i llistat de senyals clau visible a la pista.",
+        "metodologia_es": "clase invertida.",
+        "metodologia_ca": "classe invertida."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA6", "criterios": ["b"] },
-    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["f"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA6",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Los datos sociométricos de un grupo son material para discutir e interpretar en la evaluación del proceso de enseñanza.",
     "justificacion_ca": "Les dades sociomètriques d'un grup són material per discutir i interpretar en l'avaluació del procés d'ensenyament.",
     "actividades": [
@@ -84,12 +216,52 @@
         "dua_ca": "Programa gratuït de sociogrames i exemple resolt.",
         "metodologia_es": "investigación social aplicada.",
         "metodologia_ca": "recerca social aplicada."
+      },
+      {
+        "titulo_es": "Encuesta de convivencia en el campamento de Santanyí",
+        "titulo_ca": "Enquesta de convivència al campament de Santanyí",
+        "contexto_es": "En el campamento de Santanyí, los monitores notan grupos cerrados y quieren entender qué pasa antes de cambiar la organización de las veladas.",
+        "contexto_ca": "Al campament de Santanyí, els monitors noten grups tancats i volen entendre què passa abans de canviar l'organització de les vetlades.",
+        "desarrollo_es": "El alumnado aplica una encuesta sociométrica y un sencillo registro de interacciones a un campamento simulado (1124-6b). Con los datos, prepara una sesión de discusión en la que el equipo de monitores interpreta qué situaciones del día a día explican las relaciones detectadas (1143-5f).",
+        "desarrollo_ca": "L'alumnat aplica una enquesta sociomètrica i un registre senzill d'interaccions a un campament simulat (1124-6b). Amb les dades, prepara una sessió de discussió en què l'equip de monitors interpreta quines situacions del dia a dia expliquen les relacions detectades (1143-5f).",
+        "evidencia_es": "Informe de datos y acta de la sesión de discusión.",
+        "evidencia_ca": "Informe de dades i acta de la sessió de discussió.",
+        "dua_es": "Plantilla de encuesta con respuestas de imagen y datos ya tabulados.",
+        "dua_ca": "Plantilla d'enquesta amb respostes d'imatge i dades ja tabulades.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Grupo que se rompe en la piscina municipal",
+        "titulo_ca": "Grup que es trenca a la piscina municipal",
+        "contexto_es": "En el curso de natación de la piscina municipal de Felanitx, un subgrupo ha dejado de hablar al resto y las clases se han vuelto tensas.",
+        "contexto_ca": "Al curs de natació de la piscina municipal de Felanitx, un subgrup ha deixat de parlar amb la resta i les classes s'han tornat tenses.",
+        "desarrollo_es": "El alumnado recoge indicadores de relación con un cuestionario de nominaciones y con observación directa de las tandas de nado (1124-6b). A partir de los resultados, propone preguntas y situaciones concretas para que el equipo docente discuta e interprete las causas y acuerde cambios en el programa (1143-5f).",
+        "desarrollo_ca": "L'alumnat recull indicadors de relació amb un qüestionari de nominacions i amb observació directa de les tandes de natació (1124-6b). A partir dels resultats, proposa preguntes i situacions concretes perquè l'equip docent discuteixi i interpreti les causes i acordi canvis en el programa (1143-5f).",
+        "evidencia_es": "Cuestionario tabulado y guion de preguntas para el equipo docente.",
+        "evidencia_ca": "Qüestionari tabulat i guió de preguntes per a l'equip docent.",
+        "dua_es": "Cuestionario en formato digital con lectura fácil y apoyo de un compañero.",
+        "dua_ca": "Qüestionari en format digital amb lectura fàcil i suport d'un company.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA1", "criterios": ["d"] },
-    "b": { "modulo": "1143", "ra": "RA1", "criterios": ["e"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA1",
+      "criterios": [
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA1",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "En la adolescencia, la imagen que uno cree dar ante el grupo influye mucho en cómo aprende una habilidad deportiva.",
     "justificacion_ca": "A l'adolescència, la imatge que un creu donar davant el grup influeix molt en com aprèn una habilitat esportiva.",
     "actividades": [
@@ -106,12 +278,52 @@
         "dua_ca": "Cas en vídeo curt i preguntes guia.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "El qué dirán en la primera clase de pádel",
+        "titulo_ca": "El què diran en la primera classe de pàdel",
+        "contexto_es": "En un instituto de Manacor, un grupo de chicos de tercero de ESO abandona la clase de pádel porque cree que sus compañeros populares se ríen de sus fallos.",
+        "contexto_ca": "En un institut de Manacor, un grup de xicots de tercer d'ESO abandona la classe de pàdel perquè creu que els seus companys populars es riuen dels seus errors.",
+        "desarrollo_es": "Por parejas, el alumnado representa la escena desde dos papeles: el adolescente que teme quedar mal y el monitor que lo observa. Tras la escenificación, explica cómo la percepción de los demás y la búsqueda de aceptación condicionan la formación del grupo (1124-1d). Después recoge las características de los usuarios que frenan o favorecen el aprendizaje de un golpe nuevo y las anota en una ficha de intervención (1143-1e).",
+        "desarrollo_ca": "Per parelles, l'alumnat representa l'escena des de dos papers: l'adolescent que tem quedar malament i el monitor que l'observa. Després de l'escenificació, explica com la percepció dels altres i la cerca d'acceptació condicionen la formació del grup (1124-1d). A continuació recull les característiques dels usuaris que frenen o afavoreixen l'aprenentatge d'un cop nou i les anota en una fitxa d'intervenció (1143-1e).",
+        "evidencia_es": "Ficha de intervención con las observaciones de la escenificación.",
+        "evidencia_ca": "Fitxa d'intervenció amb les observacions de l'escenificació.",
+        "dua_es": "Los papeles pueden representarse con guion cerrado o improvisando, según la comodidad de cada estudiante.",
+        "dua_ca": "Els papers es poden representar amb guió tancat o improvisant, segons la comoditat de cada estudiant.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Mapa de miradas en el gimnasio del instituto",
+        "titulo_ca": "Mapa de mirades al gimnàs de l'institut",
+        "contexto_es": "El departamento de Educación Física de un instituto de Inca detecta que las alumnas de segundo evitan los ejercicios de equilibrio cuando hay público en las gradas.",
+        "contexto_ca": "El departament d'Educació Física d'un institut d'Inca detecta que les alumnes de segon eviten els exercicis d'equilibri quan hi ha públic a la graderia.",
+        "desarrollo_es": "En pequeños equipos de investigación, el alumnado observa una sesión grabada y marca en un plano del gimnasio dónde se colocan los chicos y las chicas y quién se agrupa con quién. Interpreta esos patrones con los procesos de cognición social que explican la creación de subgrupos (1124-1d). Contrasta luego las características de las usuarias, como la edad o la autoestima, con las dificultades de aprendizaje observadas (1143-1e).",
+        "desarrollo_ca": "En petits equips d'investigació, l'alumnat observa una sessió gravada i marca en un plànol del gimnàs on es col·loquen els xics i les xiques i qui s'agrupa amb qui. Interpreta aquests patrons amb els processos de cognició social que expliquen la creació de subgrups (1124-1d). Contrasta després les característiques de les usuàries, com l'edat o l'autoestima, amb les dificultats d'aprenentatge observades (1143-1e).",
+        "evidencia_es": "Plano anotado y breve informe de conclusiones.",
+        "evidencia_ca": "Plànol anotat i breu informe de conclusions.",
+        "dua_es": "El plano puede completarse con pegatinas de colores o con descripción oral grabada.",
+        "dua_ca": "El plànol es pot completar amb adhesius de colors o amb descripció oral gravada.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA3", "criterios": ["f"] },
-    "b": { "modulo": "1143", "ra": "RA2", "criterios": ["f"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA3",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA2",
+      "criterios": [
+        "f"
+      ]
+    },
     "justificacion_es": "Adecuar un programa a la diversidad exige también adaptar la comunicación a la diversidad cultural y funcional de los participantes.",
     "justificacion_ca": "Adequar un programa a la diversitat exigeix també adaptar la comunicació a la diversitat cultural i funcional dels participants.",
     "actividades": [
@@ -128,12 +340,52 @@
         "dua_ca": "Diccionari visual de futbol.",
         "metodologia_es": "aprendizaje-servicio.",
         "metodologia_ca": "aprenentatge servei."
+      },
+      {
+        "titulo_es": "Mensajes que todos entienden en el torneo inclusivo",
+        "titulo_ca": "Missatges que tothom entén al torneig inclusiu",
+        "contexto_es": "Un club de Palma organiza un torneo de petanca con jugadores de varias nacionalidades, personas sordas y usuarios de silla de ruedas, y necesita que las normas se comprendan sin ambigüedad.",
+        "contexto_ca": "Un club de Palma organitza un torneig de petanca amb jugadors de diverses nacionalitats, persones sordes i usuaris de cadira de rodes, i necessita que les normes s'entenguin sense ambigüitat.",
+        "desarrollo_es": "El alumnado actúa como comité de comunicación y elige, para cada colectivo, el canal y el lenguaje más apropiado: pictogramas, lengua de signos básica, mensajes breves o demostración (1124-3f). Después revisa el programa del torneo y modifica reglas y espacios para que todos los perfiles puedan competir en igualdad (1143-2f).",
+        "desarrollo_ca": "L'alumnat actua com a comitè de comunicació i tria, per a cada col·lectiu, el canal i el llenguatge més apropiat: pictogrames, llengua de signes bàsica, missatges breus o demostració (1124-3f). Després revisa el programa del torneig i en modifica regles i espais perquè tots els perfils puguin competir en igualtat (1143-2f).",
+        "evidencia_es": "Cartel de normas multicanal y programa del torneo adaptado.",
+        "evidencia_ca": "Cartell de normes multicanal i programa del torneig adaptat.",
+        "dua_es": "Plantillas de pictogramas ya preparadas para quien necesite apoyo visual.",
+        "dua_ca": "Plantilles de pictogrames ja preparades per a qui necessiti suport visual.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Rincones de comunicación para un programa de yoga diverso",
+        "titulo_ca": "Racons de comunicació per a un programa de ioga divers",
+        "contexto_es": "El centro cívico de Sant Antoni de Portmany abre un grupo de yoga al que se apuntan personas mayores, trabajadoras de temporada recién llegadas y una usuaria con baja visión.",
+        "contexto_ca": "El centre cívic de Sant Antoni de Portmany obri un grup de ioga al qual s'apunten persones grans, treballadores de temporada acabades d'arribar i una usuària amb baixa visió.",
+        "desarrollo_es": "Se organizan tres rincones y cada equipo rota por ellos: uno para comunicar consignas sin palabras, otro para hacerlo con apoyo verbal descriptivo y otro para traducirlas a distintos idiomas. En ellos elige las técnicas de comunicación apropiadas para cada situación de diversidad (1124-3f). Con lo aprendido, reajusta ejercicios y progresiones del programa trimestral para cada perfil (1143-2f).",
+        "desarrollo_ca": "S'organitzen tres racons i cada equip hi rota: un per comunicar consignes sense paraules, un altre per fer-ho amb suport verbal descriptiu i un altre per traduir-les a diferents idiomes. En aquests racons tria les tècniques de comunicació apropiades per a cada situació de diversitat (1124-3f). Amb allò après, reajusta exercicis i progressions del programa trimestral per a cada perfil (1143-2f).",
+        "evidencia_es": "Guía de consignas por perfil y programa trimestral reajustado.",
+        "evidencia_ca": "Guia de consignes per perfil i programa trimestral reajustat.",
+        "dua_es": "Cada rincón ofrece las instrucciones en formato escrito, audio y esquema gráfico.",
+        "dua_ca": "Cada racó ofereix les instruccions en format escrit, àudio i esquema gràfic.",
+        "metodologia_es": "rincones de aprendizaje.",
+        "metodologia_ca": "racons d'aprenentatge."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA4", "criterios": ["f"] },
-    "b": { "modulo": "1143", "ra": "RA5", "criterios": ["d"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA4",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1143",
+      "ra": "RA5",
+      "criterios": [
+        "d"
+      ]
+    },
     "justificacion_es": "Supervisar el trabajo de cada miembro del equipo es parte del sistema que valora si se cumplen los objetivos del programa.",
     "justificacion_ca": "Supervisar la feina de cada membre de l'equip és part del sistema que valora si es compleixen els objectius del programa.",
     "actividades": [
@@ -150,12 +402,54 @@
         "dua_ca": "Plantilla de tauler en full de càlcul.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Cuadro de mando de la liga de baloncesto escolar",
+        "titulo_ca": "Quadre de comandament de la lliga de bàsquet escolar",
+        "contexto_es": "Una liga de baloncesto escolar de Ibiza reparte tareas entre monitores, árbitros y delegados, pero nadie comprueba que cada uno cumpla lo que se le encargó.",
+        "contexto_ca": "Una lliga de bàsquet escolar d'Eivissa reparteix tasques entre monitors, àrbitres i delegats, però ningú no comprova que cadascú compleixi allò que se li va encarregar.",
+        "desarrollo_es": "El alumnado diseña un cuadro de mando con las funciones de cada miembro y los procedimientos para supervisar y evaluar su cumplimiento semana a semana (1124-4f). Después añade al cuadro los sistemas de valoración que permiten saber si se alcanzan los objetivos de la liga, como asistencia, partidos celebrados y satisfacción de las familias (1143-5d).",
+        "desarrollo_ca": "L'alumnat dissenya un quadre de comandament amb les funcions de cada membre i els procediments per supervisar i avaluar-ne el compliment setmana a setmana (1124-4f). Després hi afegeix els sistemes de valoració que permeten saber si s'assoleixen els objectius de la lliga, com ara assistència, partits celebrats i satisfacció de les famílies (1143-5d).",
+        "evidencia_es": "Cuadro de mando con funciones, indicadores y frecuencia de revisión.",
+        "evidencia_ca": "Quadre de comandament amb funcions, indicadors i freqüència de revisió.",
+        "dua_es": "El cuadro puede elaborarse en hoja de cálculo, en papel o en un mural.",
+        "dua_ca": "El quadre es pot elaborar en full de càlcul, en paper o en un mural.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Auditoría simulada de una escuela de vela",
+        "titulo_ca": "Auditoria simulada d'una escola de vela",
+        "contexto_es": "La escuela de vela de un club náutico de Mahón recibe la visita de una auditora externa que debe comprobar si el equipo cumple sus funciones y si el programa logra sus metas.",
+        "contexto_ca": "L'escola de vela d'un club nàutic de Maó rep la visita d'una auditora externa que ha de comprovar si l'equip compleix les seves funcions i si el programa assoleix les metes.",
+        "desarrollo_es": "Una mitad de la clase hace de equipo de la escuela y la otra, de auditores. Los auditores plantean preguntas y piden registros para comprobar cómo se supervisa el trabajo de cada miembro del equipo (1124-4f). Después elaboran juntos un informe que valora el grado de logro de los objetivos y propone cómo medirlo en el futuro (1143-5d).",
+        "desarrollo_ca": "Una meitat de la classe fa d'equip de l'escola i l'altra, d'auditors. Els auditors plantegen preguntes i demanen registres per comprovar com se supervisa la feina de cada membre de l'equip (1124-4f). Després elaboren conjuntament un informe que valora el grau d'assoliment dels objectius i proposa com mesurar-lo en el futur (1143-5d).",
+        "evidencia_es": "Informe de auditoría con hallazgos y propuestas de mejora.",
+        "evidencia_ca": "Informe d'auditoria amb troballes i propostes de millora.",
+        "dua_es": "Guion de preguntas de auditoría entregado de antemano con ejemplos de respuesta.",
+        "dua_ca": "Guió de preguntes d'auditoria lliurat per endavant amb exemples de resposta.",
+        "metodologia_es": "simulación profesional.",
+        "metodologia_ca": "simulació professional."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA6", "criterios": ["d", "e"] },
-    "b": { "modulo": "1665", "ra": "RA5", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA6",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "Un formulario digital genera datos que solo se convierten en información útil si se gestionan durante todo su ciclo de vida.",
     "justificacion_ca": "Un formulari digital genera dades que només es converteixen en informació útil si es gestionen durant tot el seu cicle de vida.",
     "actividades": [
@@ -172,12 +466,52 @@
         "dua_ca": "Tutorial de formularis en línia.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "De la hoja en papel al registro digital de asistencia",
+        "titulo_ca": "Del full en paper al registre digital d'assistència",
+        "contexto_es": "Un casal de verano de Calvià apunta la asistencia y las incidencias en hojas sueltas que se pierden, y la coordinadora quiere digitalizar el proceso.",
+        "contexto_ca": "Un casal d'estiu de Calvià apunta l'assistència i les incidències en fulls solts que es perden, i la coordinadora vol digitalitzar el procés.",
+        "desarrollo_es": "El alumnado diseña una hoja de registro digital con los campos que el equipo de monitores necesita rellenar cada día (1124-6d) y la prueba durante una jornada simulada, anotando los datos en el soporte previsto (1124-6e). A continuación clasifica cada campo como dato aislado o como información útil para la coordinación (1665-5a) y señala qué ocurre con esos datos desde que se recogen hasta que se borran (1665-5b).",
+        "desarrollo_ca": "L'alumnat dissenya un full de registre digital amb els camps que l'equip de monitors necessita omplir cada dia (1124-6d) i el prova durant una jornada simulada, anotant les dades en el suport previst (1124-6e). A continuació classifica cada camp com a dada aïllada o com a informació útil per a la coordinació (1665-5a) i assenyala què passa amb aquestes dades des que es recullen fins que s'esborren (1665-5b).",
+        "evidencia_es": "Plantilla digital de registro probada y cuadro de clasificación de campos.",
+        "evidencia_ca": "Plantilla digital de registre provada i quadre de classificació de camps.",
+        "dua_es": "Se ofrece una plantilla base con campos de ejemplo para quien necesite un punto de partida.",
+        "dua_ca": "S'ofereix una plantilla base amb camps d'exemple per a qui necessiti un punt de partida.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Qué pasa con los datos de las familias del campus",
+        "titulo_ca": "Què passa amb les dades de les famílies del campus",
+        "contexto_es": "Un campus deportivo de Santa Eulària recoge por internet las inscripciones, alergias y teléfonos de las familias y ha recibido una queja por conservar los datos demasiado tiempo.",
+        "contexto_ca": "Un campus esportiu de Santa Eulària recull per internet les inscripcions, les al·lèrgies i els telèfons de les famílies i ha rebut una queixa per conservar les dades massa temps.",
+        "desarrollo_es": "En un estudio de caso, el alumnado lee la queja, separa qué son datos sueltos y qué es información con valor para el servicio (1665-5a) y dibuja el recorrido de los datos desde la inscripción hasta su eliminación (1665-5b). Con ese análisis propone un cuestionario de recogida con solo lo imprescindible (1124-6d) y un modelo de registro de incidencias del campus (1124-6e).",
+        "desarrollo_ca": "En un estudi de cas, l'alumnat llegeix la queixa, separa què són dades soltes i què és informació amb valor per al servei (1665-5a) i dibuixa el recorregut de les dades des de la inscripció fins a l'eliminació (1665-5b). Amb aquesta anàlisi proposa un qüestionari de recollida amb només allò imprescindible (1124-6d) i un model de registre d'incidències del campus (1124-6e).",
+        "evidencia_es": "Esquema del recorrido de los datos y cuestionario de inscripción reformulado.",
+        "evidencia_ca": "Esquema del recorregut de les dades i qüestionari d'inscripció reformulat.",
+        "dua_es": "El caso se presenta en texto y en un esquema visual, con glosario de términos.",
+        "dua_ca": "El cas es presenta en text i en un esquema visual, amb glossari de termes.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA4", "criterios": ["e"] },
-    "b": { "modulo": "1665", "ra": "RA1", "criterios": ["b"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Las herramientas digitales de coordinación cambian cómo se organiza la secuencia de tareas de un equipo.",
     "justificacion_ca": "Les eines digitals de coordinació canvien com s'organitza la seqüència de tasques d'un equip.",
     "actividades": [
@@ -194,12 +528,53 @@
         "dua_ca": "Plantilla de tauler ja creada.",
         "metodologia_es": "aprendizaje basado en proyectos.",
         "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Secuencia de tareas con aplicación compartida en el triatlón",
+        "titulo_ca": "Seqüència de tasques amb aplicació compartida al triatló",
+        "contexto_es": "La organización de un triatlón popular en Alcúdia coordina a más de cuarenta voluntarios y quiere dejar atrás las llamadas telefónicas de última hora.",
+        "contexto_ca": "L'organització d'un triatló popular a Alcúdia coordina més de quaranta voluntaris i vol deixar enrere les trucades telefòniques d'última hora.",
+        "desarrollo_es": "Con una herramienta de planificación compartida, el alumnado ordena las tareas de la jornada por zonas y horarios y asigna a cada voluntario su orden de actuación (1124-4e). Después analiza cómo cambia la organización de la entidad al pasar de la llamada a la coordinación digital y qué cambios exige a la plantilla (1665-1b).",
+        "desarrollo_ca": "Amb una eina de planificació compartida, l'alumnat ordena les tasques de la jornada per zones i horaris i assigna a cada voluntari el seu ordre d'actuació (1124-4e). Després analitza com canvia l'organització de l'entitat en passar de la trucada a la coordinació digital i quins canvis exigeix a la plantilla (1665-1b).",
+        "evidencia_es": "Tablero compartido con la secuencia de tareas y nota sobre el cambio organizativo.",
+        "evidencia_ca": "Tauler compartit amb la seqüència de tasques i nota sobre el canvi organitzatiu.",
+        "dua_es": "Tutorial en vídeo corto de la herramienta y versión impresa del tablero.",
+        "dua_ca": "Tutorial en vídeo curt de l'eina i versió impresa del tauler.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Antes y después de digitalizar la gestión del club",
+        "titulo_ca": "Abans i després de digitalitzar la gestió del club",
+        "contexto_es": "Un club de piragüismo de Pollença ha pasado de llevar los turnos en una pizarra a gestionarlos con una aplicación, y los monitores veteranos se sienten perdidos.",
+        "contexto_ca": "Un club de piragüisme de Pollença ha passat de portar els torns en una pissarra a gestionar-los amb una aplicació, i els monitors veterans se senten perduts.",
+        "desarrollo_es": "El alumnado entrevista a un monitor veterano y a un joven en prácticas y compara cómo se coordinaba la secuencia de tareas antes y cómo se hace ahora (1124-4e). Con ambas versiones, elabora una línea del tiempo que muestra qué cambios en la organización del club trajo la tecnología digital (1665-1b).",
+        "desarrollo_ca": "L'alumnat entrevista un monitor veterà i un jove en pràctiques i compara com es coordinava la seqüència de tasques abans i com es fa ara (1124-4e). Amb totes dues versions, elabora una línia del temps que mostra quins canvis en l'organització del club va portar la tecnologia digital (1665-1b).",
+        "evidencia_es": "Línea del tiempo comparativa con las dos formas de coordinar.",
+        "evidencia_ca": "Línia del temps comparativa amb les dues maneres de coordinar.",
+        "dua_es": "Preguntas de la entrevista preparadas y posibilidad de grabarla en audio.",
+        "dua_ca": "Preguntes de l'entrevista preparades i possibilitat de gravar-la en àudio.",
+        "metodologia_es": "aprendizaje basado en entrevistas.",
+        "metodologia_ca": "aprenentatge basat en entrevistes."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA2", "criterios": ["e"] },
-    "b": { "modulo": "1665", "ra": "RA3", "criterios": ["b", "e"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
     "justificacion_es": "Las plataformas de juegos y votaciones en la nube son métodos activos que multiplican la participación en un grupo grande.",
     "justificacion_ca": "Les plataformes de jocs i votacions al núvol són mètodes actius que multipliquen la participació en un grup gran.",
     "actividades": [
@@ -216,12 +591,52 @@
         "dua_ca": "Alternativa amb targetes de colors per a qui no tingui mòbil.",
         "metodologia_es": "gamificación.",
         "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Escape room con votación en la nube",
+        "titulo_ca": "Escape room amb votació al núvol",
+        "contexto_es": "Un hotel de Playa de Palma quiere una velada de equipos para ciento veinte huéspedes en la que todo el mundo participe, no solo los más lanzados.",
+        "contexto_ca": "Un hotel de Platja de Palma vol una vetllada d'equips per a cent vint hostes en què tothom participi, no només els més decidits.",
+        "desarrollo_es": "El alumnado diseña un escape room por equipos con pruebas que se resuelven y votan desde una plataforma en línea, y define cómo reparte los turnos para generar participación activa en todo el grupo (1124-2e). Antes de lanzarlo, enumera qué funciones de la nube hacen posible el juego (1665-3b) y qué ventajas aporta frente a una versión en papel (1665-3e).",
+        "desarrollo_ca": "L'alumnat dissenya un escape room per equips amb proves que es resolen i es voten des d'una plataforma en línia, i defineix com reparteix els torns per generar participació activa en tot el grup (1124-2e). Abans de llançar-lo, enumera quines funcions del núvol fan possible el joc (1665-3b) i quins avantatges aporta davant d'una versió en paper (1665-3e).",
+        "evidencia_es": "Guion del escape room y ficha de funciones y ventajas de la nube.",
+        "evidencia_ca": "Guió de l'escape room i fitxa de funcions i avantatges del núvol.",
+        "dua_es": "Las pruebas admiten resolución individual o en equipo y tienen pistas escalonadas.",
+        "dua_ca": "Les proves admeten resolució individual o en equip i tenen pistes escalonades.",
+        "metodologia_es": "aprendizaje basado en juegos.",
+        "metodologia_ca": "aprenentatge basat en jocs."
+      },
+      {
+        "titulo_es": "Asamblea participativa con pizarra colaborativa en línea",
+        "titulo_ca": "Assemblea participativa amb pissarra col·laborativa en línia",
+        "contexto_es": "La asociación de vecinos de Es Castell prepara las fiestas del barrio y quiere recoger ideas de personas que no suelen ir a las reuniones presenciales.",
+        "contexto_ca": "L'associació de veïns des Castell prepara les festes del barri i vol recollir idees de persones que no solen anar a les reunions presencials.",
+        "desarrollo_es": "En una asamblea simulada, el alumnado dinamiza la sesión con métodos activos como lluvia de ideas, votación con puntos y rondas de mejora para que todas las voces cuenten (1124-2e). Desde la pizarra colaborativa en línea que usa, explica qué hace la nube con la información compartida (1665-3b) y por qué facilita el trabajo de un grupo disperso (1665-3e).",
+        "desarrollo_ca": "En una assemblea simulada, l'alumnat dinamitza la sessió amb mètodes actius com pluja d'idees, votació amb punts i rondes de millora perquè totes les veus comptin (1124-2e). Des de la pissarra col·laborativa en línia que utilitza, explica què fa el núvol amb la informació compartida (1665-3b) i per què facilita la feina d'un grup dispers (1665-3e).",
+        "evidencia_es": "Pizarra colaborativa con las ideas votadas y breve explicación oral de la nube.",
+        "evidencia_ca": "Pissarra col·laborativa amb les idees votades i breu explicació oral del núvol.",
+        "dua_es": "Se admite participar con texto, voz o dibujo en la pizarra.",
+        "dua_ca": "S'admet participar amb text, veu o dibuix a la pissarra.",
+        "metodologia_es": "dinámica de grupo participativa.",
+        "metodologia_ca": "dinàmica de grup participativa."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA1", "criterios": ["c"] },
-    "b": { "modulo": "1665", "ra": "RA4", "criterios": ["b"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "El análisis de grandes cantidades de datos con inteligencia artificial puede ayudar a detectar necesidades de intervención en los grupos.",
     "justificacion_ca": "L'anàlisi de grans quantitats de dades amb intel·ligència artificial pot ajudar a detectar necessitats d'intervenció en els grups.",
     "actividades": [
@@ -238,12 +653,53 @@
         "dua_ca": "Mostra reduïda de comentaris per llegir a mà.",
         "metodologia_es": "aprendizaje basado en datos.",
         "metodologia_ca": "aprenentatge basat en dades."
+      },
+      {
+        "titulo_es": "Termómetro de necesidades con ayuda de la IA",
+        "titulo_ca": "Termòmetre de necessitats amb ajuda de la IA",
+        "contexto_es": "El servicio de juventud de Marratxí recibe cientos de respuestas abiertas de adolescentes sobre su ocio y necesita saber qué grupos piden intervención con más urgencia.",
+        "contexto_ca": "El servei de joventut de Marratxí rep centenars de respostes obertes d'adolescents sobre el seu oci i necessita saber quins grups demanen intervenció amb més urgència.",
+        "desarrollo_es": "El alumnado prueba una herramienta de inteligencia artificial para agrupar las respuestas por temas y explica cómo la recogida masiva de datos y su análisis ahorran tiempo y dinero a la entidad (1665-4b). Con esos resultados, prioriza las necesidades de intervención detectadas y las argumenta ante el equipo (1124-1c).",
+        "desarrollo_ca": "L'alumnat prova una eina d'intel·ligència artificial per agrupar les respostes per temes i explica com la recollida massiva de dades i la seva anàlisi estalvien temps i diners a l'entitat (1665-4b). Amb aquests resultats, prioritza les necessitats d'intervenció detectades i les argumenta davant l'equip (1124-1c).",
+        "evidencia_es": "Tabla de temas priorizados con justificación de cada intervención.",
+        "evidencia_ca": "Taula de temes prioritzats amb justificació de cada intervenció.",
+        "dua_es": "Respuestas de ejemplo ya ordenadas y glosario de términos de datos.",
+        "dua_ca": "Respostes d'exemple ja ordenades i glossari de termes de dades.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Debate: ¿puede un algoritmo decidir qué necesita el grupo?",
+        "titulo_ca": "Debat: pot un algoritme decidir què necessita el grup?",
+        "contexto_es": "Una empresa de ocio de Magaluf ofrece un programa que, a partir de las opiniones de los clientes, propone qué actividades reforzar en cada grupo, y la dirección duda de fiarse de él.",
+        "contexto_ca": "Una empresa d'oci de Magaluf ofereix un programa que, a partir de les opinions dels clients, proposa quines activitats reforçar en cada grup, i la direcció dubta de refiar-se'n.",
+        "desarrollo_es": "La clase se divide en dos bandos con turnos de réplica: uno defiende el análisis automático de datos masivos y su rentabilidad (1665-4b), y otro sostiene que el monitor debe valorar en persona qué necesita cada grupo (1124-1c). Al final, cada estudiante redacta una postura propia razonada.",
+        "desarrollo_ca": "La classe es divideix en dos bàndols amb torns de rèplica: un defensa l'anàlisi automàtica de dades massives i la seva rendibilitat (1665-4b), i l'altre sosté que el monitor ha de valorar en persona què necessita cada grup (1124-1c). Al final, cada estudiant redacta una postura pròpia raonada.",
+        "evidencia_es": "Postura individual razonada tras el debate.",
+        "evidencia_ca": "Postura individual raonada després del debat.",
+        "dua_es": "Rol del bando asignado al azar y tarjetas con argumentos para quien lo necesite.",
+        "dua_ca": "Rol del bàndol assignat a l'atzar i targetes amb arguments per a qui ho necessiti.",
+        "metodologia_es": "debate estructurado.",
+        "metodologia_ca": "debat estructurat."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA6", "criterios": ["a"] },
-    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["h", "g"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA6",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA6",
+      "criterios": [
+        "h",
+        "g"
+      ]
+    },
     "justificacion_es": "Digitalizar la evaluación de un servicio exige definir qué indicadores se tratan, cómo se analizan y qué riesgos de seguridad tienen.",
     "justificacion_ca": "Digitalitzar l'avaluació d'un servei exigeix definir quins indicadors es tracten, com s'analitzen i quins riscs de seguretat tenen.",
     "actividades": [
@@ -260,12 +716,52 @@
         "dua_ca": "Llista de verificació de seguretat.",
         "metodologia_es": "aprendizaje basado en problemas.",
         "metodologia_ca": "aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Hoja de ruta para digitalizar la evaluación de un club",
+        "titulo_ca": "Full de ruta per digitalitzar l'avaluació d'un club",
+        "contexto_es": "Un club de senderismo de Sóller quiere evaluar sus salidas con un panel digital, pero la junta teme que los datos de los socios no estén seguros.",
+        "contexto_ca": "Un club de senderisme de Sóller vol avaluar les seves sortides amb un panell digital, però la junta tem que les dades dels socis no estiguin segures.",
+        "desarrollo_es": "El alumnado elige los indicadores que medirán la calidad de las salidas (1124-6a), decide cómo se tratarán y analizarán los datos del panel (1665-6h) y localiza dónde podrían producirse fugas o accesos indebidos (1665-6g). Lo reúne todo en una hoja de ruta que presenta a la junta.",
+        "desarrollo_ca": "L'alumnat tria els indicadors que mesuraran la qualitat de les sortides (1124-6a), decideix com es tractaran i s'analitzaran les dades del panell (1665-6h) i localitza on es podrien produir fugues o accessos indeguts (1665-6g). Ho reuneix tot en un full de ruta que presenta a la junta.",
+        "evidencia_es": "Hoja de ruta con indicadores, tratamiento de datos y riesgos.",
+        "evidencia_ca": "Full de ruta amb indicadors, tractament de dades i riscos.",
+        "dua_es": "La presentación puede hacerse en directo o en vídeo grabado.",
+        "dua_ca": "La presentació es pot fer en directe o en vídeo gravat.",
+        "metodologia_es": "aprendizaje basado en proyectos.",
+        "metodologia_ca": "aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Taller de riesgos del panel de evaluación del gimnasio",
+        "titulo_ca": "Taller de riscos del panell d'avaluació del gimnàs",
+        "contexto_es": "Un gimnasio municipal de Llucmajor estrena un panel digital con la valoración de usuarios y monitores y quiere saber qué podría salir mal antes de ponerlo en marcha.",
+        "contexto_ca": "Un gimnàs municipal de Llucmajor estrena un panell digital amb la valoració d'usuaris i monitors i vol saber què podria anar malament abans de posar-lo en marxa.",
+        "desarrollo_es": "En una sesión de pensamiento de diseño, el alumnado crea tarjetas con los indicadores que mejor reflejan el servicio (1124-6a), las ordena en un mapa de datos con su forma de tratamiento y análisis (1665-6h) y añade a cada área las brechas de seguridad que imagina (1665-6g). Cada equipo defiende su mapa ante otro que hace de cliente.",
+        "desarrollo_ca": "En una sessió de pensament de disseny, l'alumnat crea targetes amb els indicadors que millor reflecteixen el servei (1124-6a), les ordena en un mapa de dades amb la seva forma de tractament i anàlisi (1665-6h) i afegeix a cada àrea les bretxes de seguretat que imagina (1665-6g). Cada equip defensa el seu mapa davant d'un altre que fa de client.",
+        "evidencia_es": "Mapa de datos con tarjetas de indicadores y riesgos.",
+        "evidencia_ca": "Mapa de dades amb targetes d'indicadors i riscos.",
+        "dua_es": "Las tarjetas pueden escribirse a mano o prepararse en formato digital.",
+        "dua_ca": "Les targetes es poden escriure a mà o preparar en format digital.",
+        "metodologia_es": "pensamiento de diseño.",
+        "metodologia_ca": "pensament de disseny."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA4", "criterios": ["a"] },
-    "b": { "modulo": "1665", "ra": "RA6", "criterios": ["k"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA6",
+      "criterios": [
+        "k"
+      ]
+    },
     "justificacion_es": "Los perfiles del equipo determinan si una empresa de ocio está preparada para digitalizarse o necesita formación.",
     "justificacion_ca": "Els perfils de l'equip determinen si una empresa d'oci està preparada per digitalitzar-se o necessita formació.",
     "actividades": [
@@ -282,12 +778,52 @@
         "dua_ca": "Fitxes de perfil i plantilla de pla.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Radiografía del equipo de una empresa de multiaventura",
+        "titulo_ca": "Radiografia de l'equip d'una empresa de multiaventura",
+        "contexto_es": "Una empresa de multiaventura de Sa Pobla quiere introducir un sistema de reservas en línea y cuenta con guías de perfiles muy distintos, desde veteranos hasta estudiantes de temporada.",
+        "contexto_ca": "Una empresa de multiaventura de Sa Pobla vol introduir un sistema de reserves en línia i compta amb guies de perfils molt diferents, des de veterans fins a estudiants de temporada.",
+        "desarrollo_es": "El alumnado describe la situación de trabajo del equipo y la formación y funciones de cada profesional (1124-4a) y, a partir de esa radiografía, decide si los recursos humanos son adecuados para el cambio digital y qué formación previa haría falta (1665-6k). Presenta el diagnóstico en un breve informe a la gerencia.",
+        "desarrollo_ca": "L'alumnat descriu la situació de treball de l'equip i la formació i les funcions de cada professional (1124-4a) i, a partir d'aquesta radiografia, decideix si els recursos humans són adequats per al canvi digital i quina formació prèvia caldria (1665-6k). Presenta el diagnòstic en un breu informe a la gerència.",
+        "evidencia_es": "Informe de diagnóstico con perfiles del equipo y plan de formación.",
+        "evidencia_ca": "Informe de diagnòstic amb perfils de l'equip i pla de formació.",
+        "dua_es": "Perfiles de ejemplo en tarjetas para evitar partir de una hoja en blanco.",
+        "dua_ca": "Perfils d'exemple en targetes per evitar partir d'un full en blanc.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Cambio de turno: el equipo ante el sistema de fichaje digital",
+        "titulo_ca": "Canvi de torn: l'equip davant el sistema de fitxatge digital",
+        "contexto_es": "Un parque acuático de Mallorca sustituye el cuaderno de turnos por un fichaje digital y parte de la plantilla se muestra reticente.",
+        "contexto_ca": "Un parc aquàtic de Mallorca substitueix el quadern de torns per un fitxatge digital i part de la plantilla es mostra reticent.",
+        "desarrollo_es": "En una simulación de reunión de equipo, cada estudiante asume un perfil profesional distinto, con su situación de trabajo y su actitud ante el cambio (1124-4a). Entre todos concluyen qué personas están listas para la herramienta y quiénes necesitan acompañamiento, para valorar si los recursos humanos son idóneos (1665-6k).",
+        "desarrollo_ca": "En una simulació de reunió d'equip, cada estudiant assumeix un perfil professional diferent, amb la seva situació de treball i la seva actitud davant el canvi (1124-4a). Entre tots conclouen quines persones estan preparades per a l'eina i quines necessiten acompanyament, per valorar si els recursos humans són idonis (1665-6k).",
+        "evidencia_es": "Acta de la reunión con la valoración de idoneidad del personal.",
+        "evidencia_ca": "Acta de la reunió amb la valoració d'idoneïtat del personal.",
+        "dua_es": "Fichas de perfil con frases de apoyo para quien prefiera improvisar menos.",
+        "dua_ca": "Fitxes de perfil amb frases de suport per a qui prefereixi improvisar menys.",
+        "metodologia_es": "simulación de reunión de equipo.",
+        "metodologia_ca": "simulació de reunió d'equip."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA3", "criterios": ["c"] },
-    "b": { "modulo": "1665", "ra": "RA2", "criterios": ["b"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1665",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
     "justificacion_es": "Las tecnologías habilitadoras ofrecen nuevos canales para adaptar la comunicación con los participantes de un servicio de ocio.",
     "justificacion_ca": "Les tecnologies habilitadores ofereixen nous canals per adaptar la comunicació amb els participants d'un servei d'oci.",
     "actividades": [
@@ -304,12 +840,52 @@
         "dua_ca": "Exemples d'aplicacions i plantilles.",
         "metodologia_es": "pensamiento de diseño.",
         "metodologia_ca": "pensament de disseny."
+      },
+      {
+        "titulo_es": "Ruta de realidad aumentada para un grupo de cruceristas",
+        "titulo_ca": "Ruta de realitat augmentada per a un grup de creueristes",
+        "contexto_es": "Una agencia de Palma quiere ofrecer a cruceristas de paso una ruta por el casco antiguo con contenidos en realidad aumentada, pero los grupos llegan con edades e idiomas muy variados.",
+        "contexto_ca": "Una agència de Palma vol oferir a creueristes de pas una ruta pel casc antic amb continguts en realitat augmentada, però els grups arriben amb edats i idiomes molt variats.",
+        "desarrollo_es": "El alumnado analiza qué tecnologías habilitadoras convierten la ruta en un producto o servicio nuevo, como el móvil, los códigos QR y la propia realidad aumentada (1665-2b). Por equipos, adapta el modo de comunicar cada parada al público al que se dirige: familias, mayores o grupos con otro idioma (1124-3c).",
+        "desarrollo_ca": "L'alumnat analitza quines tecnologies habilitadores converteixen la ruta en un producte o servei nou, com ara el mòbil, els codis QR i la mateixa realitat augmentada (1665-2b). Per equips, adapta la manera de comunicar cada parada al públic al qual s'adreça: famílies, grans o grups amb un altre idioma (1124-3c).",
+        "evidencia_es": "Guion de la ruta con las adaptaciones comunicativas por tipo de público.",
+        "evidencia_ca": "Guió de la ruta amb les adaptacions comunicatives per tipus de públic.",
+        "dua_es": "Los textos de cada parada se ofrecen con lectura fácil y con audio.",
+        "dua_ca": "Els textos de cada parada s'ofereixen amb lectura fàcil i amb àudio.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Estaciones de tecnología para animar a la tercera edad",
+        "titulo_ca": "Estacions de tecnologia per animar la tercera edat",
+        "contexto_es": "Una residencia de Felanitx quiere que sus usuarios participen en actividades con tabletas, altavoces inteligentes y gafas de realidad virtual, aunque muchos nunca las han usado.",
+        "contexto_ca": "Una residència de Felanitx vol que els seus usuaris participin en activitats amb tauletes, altaveus intel·ligents i ulleres de realitat virtual, tot i que molts no n'han utilitzat mai.",
+        "desarrollo_es": "En tres estaciones, el alumnado prueba una tecnología habilitadora en cada una y anota qué nuevo servicio de animación permite ofrecer (1665-2b). En cada estación practica cómo explicar su uso adaptando el lenguaje, el ritmo y el tono a un grupo de personas mayores (1124-3c).",
+        "desarrollo_ca": "En tres estacions, l'alumnat prova una tecnologia habilitadora en cada una i anota quin nou servei d'animació permet oferir (1665-2b). En cada estació practica com explicar-ne l'ús adaptant el llenguatge, el ritme i el to a un grup de persones grans (1124-3c).",
+        "evidencia_es": "Cuaderno de estaciones con servicios posibles y frases adaptadas.",
+        "evidencia_ca": "Quadern d'estacions amb serveis possibles i frases adaptades.",
+        "dua_es": "Cada estación incluye instrucciones con imágenes y un compañero de apoyo.",
+        "dua_ca": "Cada estació inclou instruccions amb imatges i un company de suport.",
+        "metodologia_es": "estaciones de aprendizaje.",
+        "metodologia_ca": "estacions d'aprenentatge."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA4", "criterios": ["g"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["a"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA4",
+      "criterios": [
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "El clima de igualdad en un equipo también depende de que se respeten los derechos que fija el convenio colectivo.",
     "justificacion_ca": "El clima d'igualtat en un equip també depèn que es respectin els drets que fixa el conveni col·lectiu.",
     "actividades": [
@@ -326,12 +902,52 @@
         "dua_ca": "Extracte del conveni amb glossari.",
         "metodologia_es": "análisis documental.",
         "metodologia_ca": "anàlisi documental."
+      },
+      {
+        "titulo_es": "Convenio en mano: igualdad en el equipo de monitores",
+        "titulo_ca": "Conveni a la mà: igualtat a l'equip de monitors",
+        "contexto_es": "Un centro de ocio de Ciutadella detecta que las monitoras cobran menos pluses que sus compañeros y el ambiente del equipo empieza a resentirse.",
+        "contexto_ca": "Un centre d'oci de Ciutadella detecta que les monitores cobren menys plusos que els seus companys i l'ambient de l'equip comença a ressentir-se.",
+        "desarrollo_es": "En un juego de rol, la mitad de la clase actúa como representantes de la plantilla y la otra mitad como dirección. Todos consultan el convenio colectivo del sector para localizar los derechos y obligaciones que amparan la igualdad (1709-3a). Con esa base, negocian medidas para consolidar un clima de trabajo adecuado y la promoción de la igualdad en el equipo (1124-4g).",
+        "desarrollo_ca": "En un joc de rol, la meitat de la classe actua com a representants de la plantilla i l'altra meitat com a direcció. Tots consulten el conveni col·lectiu del sector per localitzar els drets i les obligacions que emparen la igualtat (1709-3a). Amb aquesta base, negocien mesures per consolidar un clima de treball adequat i la promoció de la igualtat a l'equip (1124-4g).",
+        "evidencia_es": "Acta de negociación con las medidas acordadas.",
+        "evidencia_ca": "Acta de negociació amb les mesures acordades.",
+        "dua_es": "Extractos del convenio ya subrayados y con glosario para quien lo necesite.",
+        "dua_ca": "Extractes del conveni ja subratllats i amb glossari per a qui ho necessiti.",
+        "metodologia_es": "juego de rol.",
+        "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Buzón de ideas para un ambiente igualitario",
+        "titulo_ca": "Bústia d'idees per a un ambient igualitari",
+        "contexto_es": "La junta de un club deportivo de Santanyí quiere un plan de convivencia que garantice el trato igualitario en el cuerpo técnico y se ajuste a lo pactado en el convenio.",
+        "contexto_ca": "La junta d'un club esportiu de Santanyí vol un pla de convivència que garanteixi el tracte igualitari en el cos tècnic i s'ajusti al que s'ha pactat en el conveni.",
+        "desarrollo_es": "Trabajando en equipo cooperativo, cada miembro estudia un bloque del convenio, como jornada, descansos o permisos, y explica a los demás qué derechos y obligaciones recoge (1709-3a). Entre todos redactan una propuesta de buenas prácticas para fomentar un clima de equipo sano e igualitario (1124-4g).",
+        "desarrollo_ca": "Treballant en equip cooperatiu, cada membre estudia un bloc del conveni, com ara jornada, descansos o permisos, i explica als altres quins drets i obligacions recull (1709-3a). Entre tots redacten una proposta de bones pràctiques per fomentar un clima d'equip sa i igualitari (1124-4g).",
+        "evidencia_es": "Propuesta de buenas prácticas firmada por todo el equipo.",
+        "evidencia_ca": "Proposta de bones pràctiques signada per tot l'equip.",
+        "dua_es": "Reparto de bloques del convenio según la extensión y dificultad que cada persona elija.",
+        "dua_ca": "Repartiment de blocs del conveni segons l'extensió i la dificultat que cada persona triï.",
+        "metodologia_es": "puzle de Aronson.",
+        "metodologia_ca": "trencaclosques d'Aronson."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA5", "criterios": ["b"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["a"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
     "justificacion_es": "Los conflictos mal gestionados con participantes y familias son un riesgo psicosocial para el técnico deportivo.",
     "justificacion_ca": "Els conflictes mal gestionats amb participants i famílies són un risc psicosocial per al tècnic esportiu.",
     "actividades": [
@@ -348,12 +964,53 @@
         "dua_ca": "Missatges reals anonimitzats per analitzar.",
         "metodologia_es": "estudio de caso.",
         "metodologia_ca": "estudi de cas."
+      },
+      {
+        "titulo_es": "Mediación entre entrenadores y estrés laboral",
+        "titulo_ca": "Mediació entre entrenadors i estrès laboral",
+        "contexto_es": "En una escuela de fútbol de Son Ferriol, dos entrenadores llevan semanas sin hablarse por el reparto de campos, y uno de ellos ha pedido la baja por ansiedad.",
+        "contexto_ca": "En una escola de futbol de Son Ferriol, dos entrenadors fa setmanes que no es parlen pel repartiment de camps, i un d'ells ha demanat la baixa per ansietat.",
+        "desarrollo_es": "El alumnado ensaya una mediación entre los dos entrenadores aplicando técnicas de gestión de conflictos dentro del grupo (1124-5b). Después analiza el caso como riesgo psicosocial, relaciona la tensión sostenida con la salud de la persona trabajadora y propone medidas preventivas para la entidad (1709-2a).",
+        "desarrollo_ca": "L'alumnat assaja una mediació entre els dos entrenadors aplicant tècniques de gestió de conflictes dins del grup (1124-5b). Després analitza el cas com a risc psicosocial, relaciona la tensió sostinguda amb la salut de la persona treballadora i proposa mesures preventives per a l'entitat (1709-2a).",
+        "evidencia_es": "Registro de la mediación y listado de medidas preventivas.",
+        "evidencia_ca": "Registre de la mediació i llistat de mesures preventives.",
+        "dua_es": "Guion de mediación con frases modelo y posibilidad de grabar el ensayo en vídeo.",
+        "dua_ca": "Guió de mediació amb frases model i possibilitat de gravar l'assaig en vídeo.",
+        "metodologia_es": "simulación de mediación.",
+        "metodologia_ca": "simulació de mediació."
+      },
+      {
+        "titulo_es": "Mapa de factores psicosociales del club de pádel",
+        "titulo_ca": "Mapa de factors psicosocials del club de pàdel",
+        "contexto_es": "Un club de pádel de Palma ha visto crecer las discusiones entre monitores, jugadores y madres y padres, y la dirección quiere evitar que acaben afectando a la salud del personal.",
+        "contexto_ca": "Un club de pàdel de Palma ha vist créixer les discussions entre monitors, jugadors i mares i pares, i la direcció vol evitar que acabin afectant la salut del personal.",
+        "desarrollo_es": "En una investigación guiada, el alumnado revisa registros de incidencias anonimizados, identifica los conflictos más repetidos y los clasifica según el tipo de técnica de gestión que corresponde aplicar (1124-5b). Sobre un mapa del club, marca los factores de riesgo psicosocial que generan y los daños que pueden causar a la persona trabajadora (1709-2a).",
+        "desarrollo_ca": "En una investigació guiada, l'alumnat revisa registres d'incidències anonimitzats, identifica els conflictes més repetits i els classifica segons el tipus de tècnica de gestió que correspon aplicar (1124-5b). Sobre un mapa del club, marca els factors de risc psicosocial que generen i els danys que poden causar a la persona treballadora (1709-2a).",
+        "evidencia_es": "Mapa de riesgos psicosociales con la técnica de gestión asignada a cada conflicto.",
+        "evidencia_ca": "Mapa de riscos psicosocials amb la tècnica de gestió assignada a cada conflicte.",
+        "dua_es": "Registros de incidencias en versión reducida y con lectura facilitada.",
+        "dua_ca": "Registres d'incidències en versió reduïda i amb lectura facilitada.",
+        "metodologia_es": "investigación guiada.",
+        "metodologia_ca": "investigació guiada."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA6", "criterios": ["c"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["a", "f"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA6",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "f"
+      ]
+    },
     "justificacion_es": "Autoevaluar el punto de partida como dinamizador es un ejercicio de autoconocimiento útil para la inserción profesional.",
     "justificacion_ca": "Autoavaluar el punt de partida com a dinamitzador és un exercici d'autoconeixement útil per a la inserció professional.",
     "actividades": [
@@ -370,12 +1027,53 @@
         "dua_ca": "Rúbrica amb exemples i tutoria individual.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Brújula personal: de dónde parto como animador",
+        "titulo_ca": "Brúixola personal: d'on parteixo com a animador",
+        "contexto_es": "Una bolsa de empleo juvenil de Inca ofrece una sesión para que quienes terminan el ciclo descubran en qué punto están antes de buscar su primera temporada.",
+        "contexto_ca": "Una borsa de treball juvenil d'Inca ofereix una sessió perquè els qui acaben el cicle descobreixin en quin punt són abans de cercar la primera temporada.",
+        "desarrollo_es": "Cada estudiante completa una brújula con su situación personal y social de partida como profesional de la dinamización (1124-6c). Después recorre tres puestos de reflexión donde anota sus intereses, motivaciones y habilidades (1709-4a) y construye su matriz de fortalezas, debilidades, amenazas y oportunidades para entrar en el mercado laboral (1709-4f).",
+        "desarrollo_ca": "Cada estudiant completa una brúixola amb la seva situació personal i social de partida com a professional de la dinamització (1124-6c). Després recorre tres llocs de reflexió on anota els seus interessos, motivacions i habilitats (1709-4a) i construeix la seva matriu de fortaleses, debilitats, amenaces i oportunitats per entrar al mercat laboral (1709-4f).",
+        "evidencia_es": "Brújula personal y matriz DAFO individual.",
+        "evidencia_ca": "Brúixola personal i matriu DAFO individual.",
+        "dua_es": "Las reflexiones pueden entregarse por escrito, en audio o con un esquema visual.",
+        "dua_ca": "Les reflexions es poden lliurar per escrit, en àudio o amb un esquema visual.",
+        "metodologia_es": "aprendizaje por estaciones.",
+        "metodologia_ca": "aprenentatge per estacions."
+      },
+      {
+        "titulo_es": "Espejo entre iguales para dinamizadores en prácticas",
+        "titulo_ca": "Mirall entre iguals per a dinamitzadors en pràctiques",
+        "contexto_es": "Al volver de las prácticas en hoteles y ayuntamientos de Mallorca, los estudiantes de un grupo dudan de cuáles son sus verdaderas capacidades como animadores.",
+        "contexto_ca": "En tornar de les pràctiques en hotels i ajuntaments de Mallorca, els estudiants d'un grup dubten de quines són les seves veritables capacitats com a animadors.",
+        "desarrollo_es": "En parejas, cada estudiante entrevista a su compañero sobre su situación de partida personal y social tras las prácticas y le devuelve lo que ha observado (1124-6c). A partir del espejo recibido, cada uno revisa sus intereses y habilidades (1709-4a) y redacta su propio análisis de fortalezas, debilidades, amenazas y oportunidades (1709-4f).",
+        "desarrollo_ca": "En parelles, cada estudiant entrevista el seu company sobre la seva situació de partida personal i social després de les pràctiques i li retorna allò que ha observat (1124-6c). A partir del mirall rebut, cadascú revisa els seus interessos i habilitats (1709-4a) i redacta la seva pròpia anàlisi de fortaleses, debilitats, amenaces i oportunitats (1709-4f).",
+        "evidencia_es": "Entrevista cruzada resumida y análisis personal revisado.",
+        "evidencia_ca": "Entrevista creuada resumida i anàlisi personal revisada.",
+        "dua_es": "Preguntas guía para la entrevista y tiempo extra para quien lo pida.",
+        "dua_ca": "Preguntes guia per a l'entrevista i temps extra per a qui ho demani.",
+        "metodologia_es": "tutoría entre iguales.",
+        "metodologia_ca": "tutoria entre iguals."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA1", "criterios": ["b"] },
-    "b": { "modulo": "1709", "ra": "RA1", "criterios": ["a", "b"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA1",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
     "justificacion_es": "El ámbito de intervención del técnico se traduce en oportunidades de empleo, tanto en la administración como en la empresa privada.",
     "justificacion_ca": "L'àmbit d'intervenció del tècnic es tradueix en oportunitats d'ocupació, tant a l'administració com a l'empresa privada.",
     "actividades": [
@@ -392,12 +1090,52 @@
         "dua_ca": "Ofertes resumides en lectura fàcil.",
         "metodologia_es": "análisis documental.",
         "metodologia_ca": "anàlisi documental."
+      },
+      {
+        "titulo_es": "Feria de empleo del ocio: público contra privado",
+        "titulo_ca": "Fira d'ocupació de l'oci: públic contra privat",
+        "contexto_es": "El Consell de Mallorca organiza una feria de empleo en Palma en la que conviven un instituto municipal de deportes, hoteles y empresas de turismo activo.",
+        "contexto_ca": "El Consell de Mallorca organitza una fira d'ocupació a Palma en què conviuen un institut municipal d'esports, hotels i empreses de turisme actiu.",
+        "desarrollo_es": "En una feria simulada, el alumnado visita varios puestos y recoge las oportunidades de empleo reales y los requisitos actuales de cada perfil (1709-1a). Compara las exigencias del acceso a la función pública con las del sector privado (1709-1b) y, con ello, define el campo de actuación del técnico superior en cada entorno (1124-1b).",
+        "desarrollo_ca": "En una fira simulada, l'alumnat visita diversos estands i recull les oportunitats d'ocupació reals i els requisits actuals de cada perfil (1709-1a). Compara les exigències de l'accés a la funció pública amb les del sector privat (1709-1b) i, amb això, defineix el camp d'actuació del tècnic superior en cada entorn (1124-1b).",
+        "evidencia_es": "Cuadro comparativo de perfiles, requisitos y vías de acceso.",
+        "evidencia_ca": "Quadre comparatiu de perfils, requisits i vies d'accés.",
+        "dua_es": "Cada puesto de la feria ofrece su información en folleto, audio y cartel esquemático.",
+        "dua_ca": "Cada estand de la fira ofereix la seva informació en fullet, àudio i cartell esquemàtic.",
+        "metodologia_es": "simulación de feria de empleo.",
+        "metodologia_ca": "simulació de fira d'ocupació."
+      },
+      {
+        "titulo_es": "Currículum con destino: plaza de monitor en tres escenarios",
+        "titulo_ca": "Currículum amb destinació: plaça de monitor en tres escenaris",
+        "contexto_es": "Una joven técnica de Eivissa duda entre presentarse a una oposición de un ayuntamiento, a una oferta de un club privado o a un puesto de temporada en un hotel.",
+        "contexto_ca": "Una jove tècnica d'Eivissa dubta entre presentar-se a una oposició d'un ajuntament, a una oferta d'un club privat o a un lloc de temporada en un hotel.",
+        "desarrollo_es": "Con un enfoque de estudio de caso, el alumnado analiza las tres ofertas y los requisitos que piden hoy a una persona con este perfil (1709-1a). Contrasta las exigencias de acceso a la función pública y a la empresa privada (1709-1b) y justifica en qué ámbito de intervención podría desempeñarse mejor la técnica (1124-1b).",
+        "desarrollo_ca": "Amb un enfocament d'estudi de cas, l'alumnat analitza les tres ofertes i els requisits que demanen avui a una persona amb aquest perfil (1709-1a). Contrasta les exigències d'accés a la funció pública i a l'empresa privada (1709-1b) i justifica en quin àmbit d'intervenció podria exercir millor la tècnica (1124-1b).",
+        "evidencia_es": "Informe de recomendación con la opción más adecuada y sus motivos.",
+        "evidencia_ca": "Informe de recomanació amb l'opció més adequada i els seus motius.",
+        "dua_es": "Las tres ofertas se entregan resumidas en un cuadro comparativo vacío para completar.",
+        "dua_ca": "Les tres ofertes es lliuren resumides en un quadre comparatiu buit per completar.",
+        "metodologia_es": "estudio de caso.",
+        "metodologia_ca": "estudi de cas."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA3", "criterios": ["e"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["c"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
     "justificacion_es": "Las habilidades de comunicación son de las competencias personales más valoradas por quienes contratan animadores.",
     "justificacion_ca": "Les habilitats de comunicació són de les competències personals més valorades per qui contracta animadors.",
     "actividades": [
@@ -414,12 +1152,52 @@
         "dua_ca": "Rol d'observador com a alternativa.",
         "metodologia_es": "simulación de selección.",
         "metodologia_ca": "simulació de selecció."
+      },
+      {
+        "titulo_es": "Mi comunicación en el centro de selección",
+        "titulo_ca": "La meva comunicació al centre de selecció",
+        "contexto_es": "Una cadena hotelera de Alcúdia convoca un centro de selección de animadores para la próxima temporada con pruebas de presentación, escucha y trabajo en grupo.",
+        "contexto_ca": "Una cadena hotelera d'Alcúdia convoca un centre de selecció d'animadors per a la propera temporada amb proves de presentació, escolta i treball en grup.",
+        "desarrollo_es": "El alumnado supera tres pruebas en las que pone en práctica las habilidades de comunicación que favorecen el proceso comunicativo, como la escucha activa o la claridad del mensaje (1124-3e). Después, a partir de la valoración recibida, anota las competencias personales y sociales que más valor tienen para el empleo en su perfil (1709-4c).",
+        "desarrollo_ca": "L'alumnat supera tres proves en què posa en pràctica les habilitats de comunicació que afavoreixen el procés comunicatiu, com l'escolta activa o la claredat del missatge (1124-3e). Després, a partir de la valoració rebuda, anota les competències personals i socials que tenen més valor per a l'ocupació en el seu perfil (1709-4c).",
+        "evidencia_es": "Hoja de valoración de las pruebas y listado de competencias propias.",
+        "evidencia_ca": "Full de valoració de les proves i llistat de competències pròpies.",
+        "dua_es": "Las pruebas pueden hacerse en grupo pequeño si hay dificultad para hablar ante toda la clase.",
+        "dua_ca": "Les proves es poden fer en grup petit si hi ha dificultat per parlar davant de tota la classe.",
+        "metodologia_es": "gamificación.",
+        "metodologia_ca": "gamificació."
+      },
+      {
+        "titulo_es": "Portafolio de habilidades que contratan",
+        "titulo_ca": "Portafoli d'habilitats que contracten",
+        "contexto_es": "Una empresa de turismo activo de Pollença publica una oferta y reconoce que descarta candidatos que no saben explicar cómo se comunican con el público.",
+        "contexto_ca": "Una empresa de turisme actiu de Pollença publica una oferta i reconeix que descarta candidats que no saben explicar com es comuniquen amb el públic.",
+        "desarrollo_es": "Para cada habilidad de comunicación que favorece el proceso comunicativo, el alumnado describe una situación real de las prácticas o de su vida en la que la ha usado (1124-3e). Con esas evidencias monta un portafolio que justifica qué competencias personales y sociales aporta al empleo (1709-4c).",
+        "desarrollo_ca": "Per a cada habilitat de comunicació que afavoreix el procés comunicatiu, l'alumnat descriu una situació real de les pràctiques o de la seva vida en què l'ha utilitzada (1124-3e). Amb aquestes evidències munta un portafoli que justifica quines competències personals i socials aporta a l'ocupació (1709-4c).",
+        "evidencia_es": "Portafolio con situaciones reales por habilidad.",
+        "evidencia_ca": "Portafoli amb situacions reals per habilitat.",
+        "dua_es": "El portafolio puede ser escrito, en vídeo o un mural con imágenes.",
+        "dua_ca": "El portafoli pot ser escrit, en vídeo o un mural amb imatges.",
+        "metodologia_es": "aprendizaje basado en portafolio.",
+        "metodologia_ca": "aprenentatge basat en portafoli."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA5", "criterios": ["e"] },
-    "b": { "modulo": "1709", "ra": "RA4", "criterios": ["j"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA5",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA4",
+      "criterios": [
+        "j"
+      ]
+    },
     "justificacion_es": "El mismo proceso de toma de decisiones que se usa con los grupos sirve para fijar los propios objetivos profesionales.",
     "justificacion_ca": "El mateix procés de presa de decisions que es fa servir amb els grups serveix per fixar els propis objectius professionals.",
     "actividades": [
@@ -436,12 +1214,52 @@
         "dua_ca": "Plantilla de matriu i exemples.",
         "metodologia_es": "aprendizaje reflexivo.",
         "metodologia_ca": "aprenentatge reflexiu."
+      },
+      {
+        "titulo_es": "Árbol de decisiones para mi primer contrato",
+        "titulo_ca": "Arbre de decisions per al meu primer contracte",
+        "contexto_es": "Una estudiante de Formentera recibe a la vez una oferta de socorrista en un hotel y una beca para un curso de monitor de buceo, y tiene que contestar esta semana.",
+        "contexto_ca": "Una estudiant de Formentera rep alhora una oferta de socorrista en un hotel i una beca per a un curs de monitor de busseig, i ha de contestar aquesta setmana.",
+        "desarrollo_es": "El alumnado dibuja un árbol de decisiones que recorre las fases del proceso de toma de decisiones: definir el problema, buscar alternativas, valorarlas y elegir (1124-5e). Aplica ese árbol a su propia trayectoria y concreta metas personales y profesionales con plazos para mejorar su empleabilidad (1709-4j).",
+        "desarrollo_ca": "L'alumnat dibuixa un arbre de decisions que recorre les fases del procés de presa de decisions: definir el problema, cercar alternatives, valorar-les i triar (1124-5e). Aplica aquest arbre a la seva pròpia trajectòria i concreta metes personals i professionals amb terminis per millorar la seva ocupabilitat (1709-4j).",
+        "evidencia_es": "Árbol de decisiones y cuadro de metas con plazos.",
+        "evidencia_ca": "Arbre de decisions i quadre de metes amb terminis.",
+        "dua_es": "Plantilla del árbol en tamaño grande, con ejemplos resueltos.",
+        "dua_ca": "Plantilla de l'arbre en format gran, amb exemples resolts.",
+        "metodologia_es": "aprendizaje basado en decisiones.",
+        "metodologia_ca": "aprenentatge basat en decisions."
+      },
+      {
+        "titulo_es": "Consejo de amigos críticos antes de elegir rumbo",
+        "titulo_ca": "Consell d'amics crítics abans de triar rumb",
+        "contexto_es": "Al final del ciclo, varios estudiantes de Sant Antoni se debaten entre trabajar la temporada de verano o seguir estudiando, y piden opinión a sus compañeros.",
+        "contexto_ca": "Al final del cicle, diversos estudiants de Sant Antoni es debaten entre treballar la temporada d'estiu o continuar estudiant, i demanen l'opinió dels seus companys.",
+        "desarrollo_es": "En grupos de cuatro, cada estudiante expone su dilema y el resto le guía por las fases del proceso de toma de decisiones, de la formulación del problema a la elección y su seguimiento (1124-5e). Quien expone cierra con un plan de objetivos y metas realistas para mejorar su inserción laboral (1709-4j).",
+        "desarrollo_ca": "En grups de quatre, cada estudiant exposa el seu dilema i la resta el guia per les fases del procés de presa de decisions, de la formulació del problema a l'elecció i el seguiment (1124-5e). Qui exposa tanca amb un pla d'objectius i metes realistes per millorar la seva inserció laboral (1709-4j).",
+        "evidencia_es": "Registro de fases del consejo y plan personal de objetivos.",
+        "evidencia_ca": "Registre de fases del consell i pla personal d'objectius.",
+        "dua_es": "Tarjetas con preguntas para cada fase, útiles para quien se bloquea al empezar.",
+        "dua_ca": "Targetes amb preguntes per a cada fase, útils per a qui es bloqueja en començar.",
+        "metodologia_es": "aprendizaje cooperativo.",
+        "metodologia_ca": "aprenentatge cooperatiu."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA4", "criterios": ["h"] },
-    "b": { "modulo": "1709", "ra": "RA2", "criterios": ["i"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA4",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA2",
+      "criterios": [
+        "i"
+      ]
+    },
     "justificacion_es": "La formación del equipo en seguridad incluye los primeros auxilios ante accidentes laborales del propio personal.",
     "justificacion_ca": "La formació de l'equip en seguretat inclou els primers auxilis davant accidents laborals del mateix personal.",
     "actividades": [
@@ -458,12 +1276,52 @@
         "dua_ca": "Farmaciola real per revisar.",
         "metodologia_es": "aprendizaje basado en tareas.",
         "metodologia_ca": "aprenentatge basat en tasques."
+      },
+      {
+        "titulo_es": "Taller exprés de seguridad y primeros auxilios para la plantilla",
+        "titulo_ca": "Taller exprés de seguretat i primers auxilis per a la plantilla",
+        "contexto_es": "Un polideportivo de Manacor sufre dos esguinces y un corte entre su personal en un mes y la coordinadora quiere reforzar la formación interna.",
+        "contexto_ca": "Un poliesportiu de Manacor pateix dos esguinços i un tall entre el seu personal en un mes i la coordinadora vol reforçar la formació interna.",
+        "desarrollo_es": "El alumnado diseña un taller de una hora para la plantilla con las técnicas y protocolos de seguridad que cada trabajador debe conocer (1124-4h). Dentro del taller incluye una estación práctica en la que se presentan las técnicas básicas de primeros auxilios según el tipo de daño y el contenido del botiquín (1709-2i).",
+        "desarrollo_ca": "L'alumnat dissenya un taller d'una hora per a la plantilla amb les tècniques i els protocols de seguretat que cada treballador ha de conèixer (1124-4h). Dins del taller inclou una estació pràctica en què es presenten les tècniques bàsiques de primers auxilis segons el tipus de dany i el contingut de la farmaciola (1709-2i).",
+        "evidencia_es": "Programa del taller y ficha de la estación práctica.",
+        "evidencia_ca": "Programa del taller i fitxa de l'estació pràctica.",
+        "dua_es": "Material en formato imagen y vídeo para quien aprende mejor sin texto.",
+        "dua_ca": "Material en format imatge i vídeo per a qui aprèn millor sense text.",
+        "metodologia_es": "aprendizaje basado en retos.",
+        "metodologia_ca": "aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Simulacro sorpresa: accidente laboral en el gimnasio",
+        "titulo_ca": "Simulacre sorpresa: accident laboral al gimnàs",
+        "contexto_es": "Durante un turno de tarde en un gimnasio de Llucmajor, una monitora se desmaya al recoger material y los compañeros no saben quién debe hacer qué.",
+        "contexto_ca": "Durant un torn de tarda en un gimnàs de Llucmajor, una monitora es desmaia en recollir material i els companys no saben qui ha de fer què.",
+        "desarrollo_es": "En una simulación de emergencia, el alumnado reparte tareas con el protocolo de seguridad que ha de conocer todo el equipo (1124-4h) y practica las técnicas básicas de primeros auxilios y el uso del botiquín ante el tipo de daño planteado (1709-2i). Al terminar, los observadores analizan qué mejorar en la formación del equipo.",
+        "desarrollo_ca": "En una simulació d'emergència, l'alumnat reparteix tasques amb el protocol de seguretat que ha de conèixer tot l'equip (1124-4h) i practica les tècniques bàsiques de primers auxilis i l'ús de la farmaciola davant del tipus de dany plantejat (1709-2i). En acabar, els observadors analitzen què millorar en la formació de l'equip.",
+        "evidencia_es": "Hoja de observación del simulacro con mejoras propuestas.",
+        "evidencia_ca": "Full d'observació del simulacre amb millores proposades.",
+        "dua_es": "Los papeles de víctima y observador permiten participar sin esfuerzo físico.",
+        "dua_ca": "Els papers de víctima i observador permeten participar sense esforç físic.",
+        "metodologia_es": "simulación de emergencia.",
+        "metodologia_ca": "simulació d'emergència."
       }
     ]
   },
   {
-    "a": { "modulo": "1124", "ra": "RA5", "criterios": ["f"] },
-    "b": { "modulo": "1709", "ra": "RA3", "criterios": ["e"] },
+    "a": {
+      "modulo": "1124",
+      "ra": "RA5",
+      "criterios": [
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "1709",
+      "ra": "RA3",
+      "criterios": [
+        "e"
+      ]
+    },
     "justificacion_es": "Comunicar bien un conflicto laboral ayuda a resolverlo, pero también hay que conocer los recursos laborales a los que se puede acudir.",
     "justificacion_ca": "Comunicar bé un conflicte laboral ajuda a resoldre'l, però també cal conèixer els recursos laborals als quals es pot acudir.",
     "actividades": [
@@ -480,6 +1338,34 @@
         "dua_ca": "Frases model i esquema de recursos.",
         "metodologia_es": "juego de rol.",
         "metodologia_ca": "joc de rol."
+      },
+      {
+        "titulo_es": "Mesa redonda con la mediadora del club náutico",
+        "titulo_ca": "Taula rodona amb la mediadora del club nàutic",
+        "contexto_es": "En un club náutico de Palma, dos monitoras y la coordinadora discuten por los turnos de julio y el ambiente del equipo se ha roto.",
+        "contexto_ca": "En un club nàutic de Palma, dues monitores i la coordinadora discuteixen pels torns de juliol i l'ambient de l'equip s'ha romput.",
+        "desarrollo_es": "Por equipos, el alumnado prepara la postura de cada parte y ensaya cómo expresar el desacuerdo sin atacar a la persona, cuidando el lenguaje y la escucha (1124-5f). Después, la mesa redonda identifica a qué recursos laborales puede acudir cada parte si el acuerdo no llega, desde la representación sindical hasta la inspección (1709-3e).",
+        "desarrollo_ca": "Per equips, l'alumnat prepara la postura de cada part i assaja com expressar el desacord sense atacar la persona, cuidant el llenguatge i l'escolta (1124-5f). Després, la taula rodona identifica a quins recursos laborals pot acudir cada part si no s'arriba a un acord, des de la representació sindical fins a la inspecció (1709-3e).",
+        "evidencia_es": "Acta de la mesa redonda con acuerdos y recursos.",
+        "evidencia_ca": "Acta de la taula rodona amb acords i recursos.",
+        "dua_es": "Turnos de palabra escritos y guion de escucha activa.",
+        "dua_ca": "Torns de paraula escrits i guió d'escolta activa.",
+        "metodologia_es": "debate estructurado con roles.",
+        "metodologia_ca": "debat estructurat amb rols."
+      },
+      {
+        "titulo_es": "Punto de escucha para monitores del campamento",
+        "titulo_ca": "Punt d'escolta per als monitors del campament",
+        "contexto_es": "La empresa de un campamento de Alcúdia recibe quejas de las familias por el trato entre monitores y pide al centro un servicio de apoyo para el equipo.",
+        "contexto_ca": "L'empresa d'un campament d'Alcúdia rep queixes de les famílies pel tracte entre monitors i demana al centre un servei de suport per a l'equip.",
+        "desarrollo_es": "El alumnado monta un punto de escucha en el campamento y practica cómo reformular las quejas y acompañar al monitor que se siente señalado, sin culpabilizar (1124-5f). Además elabora una guía de derivación con los recursos laborales a los que puede acudir el equipo cuando el problema no se resuelve dentro de la empresa (1709-3e).",
+        "desarrollo_ca": "L'alumnat munta un punt d'escolta al campament i practica com reformular les queixes i acompanyar el monitor que se sent assenyalat, sense culpabilitzar (1124-5f). A més, elabora una guia de derivació amb els recursos laborals als quals pot acudir l'equip quan el problema no es resol dins l'empresa (1709-3e).",
+        "evidencia_es": "Guía de derivación y registro de las entrevistas.",
+        "evidencia_ca": "Guia de derivació i registre de les entrevistes.",
+        "dua_es": "Ficha de reformulación con ejemplos de frases.",
+        "dua_ca": "Fitxa de reformulació amb exemples de frases.",
+        "metodologia_es": "aprendizaje-servicio.",
+        "metodologia_ca": "aprenentatge servei."
       }
     ]
   }

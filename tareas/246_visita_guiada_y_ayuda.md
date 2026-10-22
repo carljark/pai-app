@@ -81,6 +81,10 @@ Detalle completo en `documentation/visita_guiada.md`.
   - `npm test` (lint, tests, cobertura global y por archivo, y comprobación zoneless): 112 archivos, 1096 tests en verde, «All coverage thresholds met» y «Zoneless check passed».
 - `npx ng build`: el build de producción se completa.
 - Paridad ES/CA del proyecto de ejemplo: la comprueba un test (mismos encabezados y filas de tabla) y el agente `traductor-es-ca` (32 encabezados, 32 filas de tabla y 5 casillas en cada idioma).
+- **Despliegue en producción** (22-10-2026) con `./scripts/deploy-prod.sh` del commit `f1a597b`:
+  - copia de seguridad previa `pai_db_20261022_211143.archive.gz`;
+  - «Migración 50_proyecto_ejemplo completada»;
+  - la API y el frontend responden 200.
 - **No verificado:** la revisión visual en el navegador (bienvenida, las cuatro visitas en escritorio y en móvil). Docker no estaba en marcha en local y el MCP de Playwright no conectó, así que queda pendiente de comprobar a mano tras el despliegue.
 
 ## Desviaciones respecto al plan

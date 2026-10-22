@@ -1,4 +1,15 @@
-@if (editLock.readOnly()) {
+@if (exampleProject(); as project) {
+  <div class="edit-lock-banner edit-lock-banner--example" role="status" data-tour="taller-example">
+    <span class="edit-lock-banner__text">📘 {{ help.t().example.banner }}</span>
+    <button
+      type="button"
+      class="btn-primary edit-lock-banner__action"
+      (click)="appFacade.cloneProject(project)"
+    >
+      {{ help.t().example.copy }}
+    </button>
+  </div>
+} @else if (editLock.readOnly()) {
   <div class="edit-lock-banner edit-lock-banner--readonly" role="status">
     <span class="edit-lock-banner__text">🔒 {{ trans.t().editReadOnly }}</span>
   </div>

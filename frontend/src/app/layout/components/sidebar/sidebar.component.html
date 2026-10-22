@@ -87,6 +87,7 @@
       (click)="layout.switchView('generator')"
       [class.active]="layout.currentView() === 'generator'"
       class="nav-item"
+      data-tour="sidebar-generator"
       [attr.data-tooltip]="trans.t().sidebarNewProject"
     >
       <svg
@@ -108,6 +109,7 @@
       (click)="projects.loadHistory(); layout.switchView('personal')"
       [class.active]="layout.currentView() === 'personal'"
       class="nav-item"
+      data-tour="sidebar-personal"
       [attr.data-tooltip]="trans.t().sidebarPersonal"
     >
       <svg
@@ -129,6 +131,7 @@
       (click)="projects.loadHistory(); layout.switchView('history')"
       [class.active]="layout.currentView() === 'history'"
       class="nav-item"
+      data-tour="sidebar-history"
       [attr.data-tooltip]="trans.t().sidebarHistory"
     >
       <svg
@@ -148,6 +151,7 @@
       (click)="layout.switchView('taller')"
       [class.active]="layout.currentView() === 'taller'"
       class="nav-item"
+      data-tour="sidebar-taller"
       [attr.data-tooltip]="trans.t().sidebarTaller"
     >
       <svg
@@ -167,6 +171,7 @@
       (click)="layout.switchView('mapa')"
       [class.active]="layout.currentView() === 'mapa'"
       class="nav-item"
+      data-tour="sidebar-mapa"
       [attr.data-tooltip]="trans.t().sidebarMapa"
     >
       <svg
@@ -212,6 +217,7 @@
       (click)="layout.switchView('solicitudes')"
       [class.active]="layout.currentView() === 'solicitudes'"
       class="nav-item"
+      data-tour="sidebar-solicitudes"
       [attr.data-tooltip]="trans.t().sidebarSolicitudes"
     >
       <svg
@@ -261,6 +267,29 @@
     <div style="height: 1px; background: #e5e7eb; margin: 12px 0"></div>
 
     <app-notifications-badge [projects]="projects.projectsHistory()"></app-notifications-badge>
+
+    <button
+      class="nav-item"
+      data-tour="sidebar-help"
+      [attr.data-tooltip]="help.t().sidebarLabel"
+      (click)="onboarding.helpOpen.set(true)"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span class="nav-text">{{ help.t().sidebarLabel }}</span>
+    </button>
 
     <button
       class="nav-item"

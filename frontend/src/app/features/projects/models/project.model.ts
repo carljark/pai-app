@@ -98,6 +98,8 @@ export interface Project {
   language?: ContentLanguage;
   contentVersion?: number;
   translations?: Partial<Record<ContentLanguage, ProjectTranslation>>;
+  /** Proyecto de ejemplo de la visita guiada: de solo lectura salvo para administradores. */
+  isExample?: boolean;
 }
 
 export interface Collaborator {

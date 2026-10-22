@@ -1,5 +1,5 @@
 <!-- Lado Izquierdo: Acordeones de Selección -->
-<div class="selection-list">
+<div class="selection-list" data-tour="generator-curriculum">
   @for (group of facade.groupedItems(); track $index) {
     <details
       class="selection-group"
@@ -43,6 +43,7 @@
 <!-- Lado Derecho: Carrito Flotante (Floating Action Box) -->
 <div
   class="floating-cart"
+  data-tour="generator-cart"
   appDraggablePanel=".floating-cart__header"
   storageKey="plappin.floatingCartPosition"
   #drag="draggablePanel"

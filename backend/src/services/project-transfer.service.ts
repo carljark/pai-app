@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Project, CONTENT_LANGUAGES } from '../models/Project';
+import { Project, CONTENT_LANGUAGES, NOT_EXAMPLE } from '../models/Project';
 
 /**
  * Exportación e importación de proyectos entre instalaciones (producción ↔ local) o entre usuarios.
@@ -56,7 +56,7 @@ export const serializeProject = (p: any) => ({
 /** Todos los proyectos terminados o, si se indican, solo los de `ids` (que también deben estar terminados). */
 export const buildProjectsExport = async (ids: string[] = []) => {
   const validIds = ids.filter(id => mongoose.isValidObjectId(id));
-  const filter = { status: { $in: EXPORTABLE_STATUSES }, ...(ids.length ? { _id: { $in: validIds } } : {}) };
+  const filter = { status: { $in: EXPORTABLE_STATUSES }, ...NOT_EXAMPLE, ...(ids.length ? { _id: { $in: validIds } } : {}) };
   const projects = await Project.find(filter)
     .sort({ createdAt: 1 })
     .populate('userId', 'name email')
@@ -81,7 +81,7 @@ export const validateTransferPayload = (body: any): string | null => {
 
 /** Lista ligera de los proyectos exportables (de cualquier usuario) para elegir cuáles exportar. */
 export const listExportableProjects = async () => {
-  const projects = await Project.find({ status: { $in: EXPORTABLE_STATUSES } })
+  const projects = await Project.find({ status: { $in: EXPORTABLE_STATUSES }, ...NOT_EXAMPLE })
     .select('title modules tipoNivel courseLevel status language createdAt userId')
     .sort({ createdAt: -1 })
     .populate('userId', 'name email')

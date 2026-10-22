@@ -1,0 +1,76 @@
+@if (onboarding.helpOpen()) {
+  <div class="help-panel">
+    <button
+      type="button"
+      class="help-panel__backdrop"
+      [attr.aria-label]="t().panel.close"
+      tabindex="-1"
+      (click)="close()"
+    ></button>
+    <aside
+      class="help-panel__drawer"
+      tabindex="-1"
+      (keydown.escape)="close()"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="help-panel-title"
+    >
+      <header class="help-panel__header">
+        <h2 id="help-panel-title" class="help-panel__title">{{ t().panel.title }}</h2>
+        <button
+          #closeButton
+          type="button"
+          class="help-panel__close"
+          [attr.aria-label]="t().panel.close"
+          (click)="close()"
+        >
+          ×
+        </button>
+      </header>
+
+      <section class="help-panel__section">
+        <h3 class="help-panel__section-title">{{ t().panel.toursTitle }}</h3>
+        <ul class="help-panel__tours">
+          @for (item of items(); track item.id) {
+            <li class="help-panel__tour" [class.help-panel__tour--completed]="item.completed">
+              <div class="help-panel__tour-body">
+                <strong class="help-panel__tour-title">
+                  {{ item.title }}
+                  @if (item.completed) {
+                    <span class="help-panel__tour-badge">✓ {{ t().panel.completed }}</span>
+                  }
+                </strong>
+                <span class="help-panel__tour-text">{{ item.description }}</span>
+              </div>
+              <button
+                type="button"
+                class="btn-primary help-panel__tour-start"
+                (click)="startTour(item.id)"
+              >
+                {{ t().panel.startTour }}
+              </button>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <section class="help-panel__section">
+        <h3 class="help-panel__section-title">{{ t().panel.faqTitle }}</h3>
+        @for (entry of t().faq; track entry.question) {
+          <details class="help-panel__faq">
+            <summary class="help-panel__faq-question">{{ entry.question }}</summary>
+            <p class="help-panel__faq-answer">{{ entry.answer }}</p>
+          </details>
+        }
+      </section>
+
+      <section class="help-panel__section help-panel__contact">
+        <h3 class="help-panel__section-title">{{ t().panel.contactTitle }}</h3>
+        <p class="help-panel__contact-text">{{ t().panel.contactText }}</p>
+        <button type="button" class="btn-secondary help-panel__contact-button" (click)="contact()">
+          {{ t().panel.contactButton }}
+        </button>
+      </section>
+    </aside>
+  </div>
+}

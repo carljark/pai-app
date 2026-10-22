@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { generateProject, listProjects, getProject, updateProject, deleteProject, streamUpdates, rewriteSection, retryProject } from '../controllers/project.controller';
+import { generateProject, listProjects, getProject, getExampleProject, updateProject, deleteProject, streamUpdates, rewriteSection, retryProject } from '../controllers/project.controller';
 import { addCollaborator, removeCollaborator, getEditLock, takeEditLock, leaveEditLock } from '../controllers/collaboration.controller';
 import { listProjectChanges } from '../controllers/project-changes.controller';
 import { exportDocx, importDocx } from '../controllers/docx.controller';
@@ -28,6 +28,7 @@ router.get('/:id/changes', listProjectChanges);
 
 // Rutas de Proyectos
 router.get('/stream', streamUpdates);
+router.get('/example', getExampleProject);
 router.post('/generate', requireApproved, requireAiAccess, generateProject);
 router.post('/rewrite', requireApproved, requireAiAccess, ...projectEditGuards, rewriteSection);
 router.post('/:id/retry', requireApproved, requireAiAccess, retryProject);

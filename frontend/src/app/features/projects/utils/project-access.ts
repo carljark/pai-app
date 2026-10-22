@@ -5,7 +5,8 @@ const userIdOf = (user: User | null | undefined): string | undefined => user?._i
 
 /**
  * Mismas reglas que el backend: pueden modificar el proyecto su autor, los colaboradores
- * invitados y los administradores; para el resto es de solo lectura.
+ * invitados y los administradores; para el resto es de solo lectura. El proyecto de ejemplo
+ * solo lo modifican los administradores.
  */
 export function canEditProject(
   project: Project | null | undefined,
@@ -13,6 +14,8 @@ export function canEditProject(
 ): boolean {
   const userId = userIdOf(user);
   if (!project || !userId) return false;
-  if (user?.role === 'admin' || getOwnerId(project.userId) === userId) return true;
+  if (user?.role === 'admin') return true;
+  if (project.isExample) return false;
+  if (getOwnerId(project.userId) === userId) return true;
   return (project.collaborators || []).some((c) => getOwnerId(c.userId) === userId);
 }

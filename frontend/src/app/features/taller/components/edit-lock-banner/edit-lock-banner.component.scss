@@ -31,6 +31,16 @@
   background: variables.$color-surface-alt;
 }
 
+.edit-lock-banner--example {
+  border-left-color: variables.$color-primary;
+  background: variables.$color-primary-light;
+  flex-wrap: wrap;
+}
+
+.edit-lock-banner__action {
+  flex-shrink: 0;
+}
+
 .edit-lock-banner--mine {
   border-left-color: variables.$color-success;
   background: variables.$color-success-bg;

@@ -3,6 +3,7 @@
 @use 'reset';
 @use 'layout';
 @use 'components';
+@use 'tour';
 
 :root {
   --c-primary: #{variables.$color-primary};

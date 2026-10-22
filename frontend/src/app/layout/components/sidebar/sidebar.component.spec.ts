@@ -5,6 +5,7 @@ import { TranslationService } from '../../../services/translation.service';
 import { AuthFacade } from '../../../features/auth/services/auth.facade';
 import { ProjectsFacade } from '../../../features/projects/services/projects.facade';
 import { NotificationsFacade } from '../../../features/notifications/services/notifications.facade';
+import { OnboardingFacade } from '../../../features/help/services/onboarding.facade';
 import { signal } from '@angular/core';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 
@@ -63,6 +64,8 @@ describe('SidebarComponent', () => {
     markAsRead: vi.fn(),
   };
 
+  const mockOnboarding = { helpOpen: signal(false) };
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SidebarComponent],
@@ -72,6 +75,7 @@ describe('SidebarComponent', () => {
         { provide: AuthFacade, useValue: mockAuth },
         { provide: ProjectsFacade, useValue: mockProjects },
         { provide: NotificationsFacade, useValue: mockNotifications },
+        { provide: OnboardingFacade, useValue: mockOnboarding },
       ],
     }).compileComponents();
 
@@ -97,6 +101,16 @@ describe('SidebarComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('el botón «Ayuda» abre el panel de ayuda y se puede señalar en la visita', () => {
+    mockOnboarding.helpOpen.set(false);
+    mockLayout.language.set('castellano');
+    fixture.detectChanges();
+    const help = fixture.nativeElement.querySelector('[data-tour="sidebar-help"]') as HTMLElement;
+    expect(help.textContent).toContain('Ayuda');
+    help.click();
+    expect(mockOnboarding.helpOpen()).toBe(true);
   });
 
   it('should toggle sidebar', () => {

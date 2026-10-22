@@ -1,0 +1,23 @@
+@use '../../../../../styles/variables' as variables;
+
+.help-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border: 2px solid variables.$color-primary;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-surface;
+  color: variables.$color-primary;
+  font-size: variables.$font-size-base;
+  font-weight: variables.$font-weight-semibold;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: variables.$color-primary;
+    color: variables.$color-surface;
+  }
+}

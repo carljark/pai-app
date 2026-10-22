@@ -66,6 +66,12 @@
   border-bottom: 1px solid variables.$color-border;
   flex-wrap: wrap;
   gap: variables.$spacing-4;
+  // Título con el botón «?» de la visita guiada a su lado
+  &-heading {
+    display: flex;
+    align-items: center;
+    gap: variables.$spacing-3;
+  }
   &-title {
     font-size: variables.$font-size-xl;
     font-weight: variables.$font-weight-semibold;

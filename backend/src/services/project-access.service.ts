@@ -21,8 +21,10 @@ export const participantIdsOf = (project: any): string[] => {
 export const canManageCollaborators = (project: any, user: any): boolean =>
   user?.role === 'admin' || ownerIdOf(project) === idOf(user);
 
+/** El proyecto de ejemplo solo lo modifican los administradores. */
 export const canEditProject = (project: any, user: any): boolean => {
   const userId = idOf(user);
   if (!project || !userId) return false;
-  return user.role === 'admin' || participantIdsOf(project).includes(userId);
+  if (user.role === 'admin') return true;
+  return !project.isExample && participantIdsOf(project).includes(userId);
 };

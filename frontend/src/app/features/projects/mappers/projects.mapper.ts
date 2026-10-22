@@ -58,6 +58,7 @@ export interface ProjectDto {
   language?: ContentLanguage;
   contentVersion?: number;
   translations?: Partial<Record<ContentLanguage, ProjectTranslation>>;
+  isExample?: boolean;
 }
 
 export interface ProjectFileDto {
@@ -175,15 +176,28 @@ function mapGeneratedContent(dto: ProjectDto['generatedContent']): GeneratedCont
   };
 }
 
+/** El proyecto de ejemplo no tiene autor: se trata como un id vacío. */
 function mapUserId(
-  userId: string | { _id: string; name: string },
+  userId: string | { _id: string; name: string } | undefined,
 ): string | { _id: string; name: string } {
-  return userId;
+  return userId ?? '';
 }
 
 function mapCollaborators(dto: ProjectDto['collaborators']) {
   if (!Array.isArray(dto)) return [];
   return dto.map((c) => ({ userId: c.userId, addedAt: c.addedAt }));
+}
+
+/** Datos de la generación: error y proveedor/modelo de IA utilizados. */
+function mapGenerationInfo(dto: ProjectDto) {
+  return {
+    error: dto.error,
+    errorDetail: dto.errorDetail,
+    generationTimeMs: dto.generationTimeMs,
+    aiProvider: dto.aiProvider,
+    usedAiProvider: dto.usedAiProvider,
+    usedModel: dto.usedModel,
+  };
 }
 
 export function fromProjectDto(dto: ProjectDto): Project {
@@ -200,15 +214,11 @@ export function fromProjectDto(dto: ProjectDto): Project {
     collaborators: mapCollaborators(dto.collaborators),
     createdAt: dto.createdAt,
     updatedAt: dto.updatedAt,
-    error: dto.error,
-    errorDetail: dto.errorDetail,
-    generationTimeMs: dto.generationTimeMs,
-    aiProvider: dto.aiProvider,
-    usedAiProvider: dto.usedAiProvider,
-    usedModel: dto.usedModel,
+    ...mapGenerationInfo(dto),
     language: dto.language,
     contentVersion: dto.contentVersion,
     translations: dto.translations,
+    ...(dto.isExample ? { isExample: true } : {}),
   };
 }
 

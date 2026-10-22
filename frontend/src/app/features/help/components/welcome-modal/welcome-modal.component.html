@@ -1,0 +1,55 @@
+@if (onboarding.welcomeVisible()) {
+  <div class="welcome-modal">
+    <div
+      class="welcome-modal__dialog"
+      tabindex="-1"
+      (keydown.escape)="later()"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="welcome-modal-title"
+      aria-describedby="welcome-modal-intro"
+    >
+      <div
+        class="welcome-modal__languages"
+        role="group"
+        [attr.aria-label]="t().welcome.languageLabel"
+      >
+        <span class="welcome-modal__languages-label">{{ t().welcome.languageLabel }}</span>
+        <div class="welcome-modal__segmented">
+          @for (language of languages; track language.value) {
+            <button
+              type="button"
+              class="welcome-modal__language"
+              [class.welcome-modal__language--active]="layout.language() === language.value"
+              [attr.aria-pressed]="layout.language() === language.value"
+              (click)="setLanguage(language.value)"
+            >
+              {{ language.label }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <img class="welcome-modal__logo" src="logo-transparent.png" alt="Plappin" />
+      <h2 id="welcome-modal-title" class="welcome-modal__title">{{ t().welcome.title }}</h2>
+      <p id="welcome-modal-intro" class="welcome-modal__intro">{{ t().welcome.intro }}</p>
+
+      <div class="welcome-modal__actions">
+        <button
+          #startButton
+          type="button"
+          class="btn-primary welcome-modal__start"
+          (click)="start()"
+        >
+          {{ t().welcome.start }}
+        </button>
+        <button type="button" class="btn-secondary welcome-modal__later" (click)="later()">
+          {{ t().welcome.later }}
+        </button>
+        <button type="button" class="welcome-modal__never" (click)="never()">
+          {{ t().welcome.never }}
+        </button>
+      </div>
+    </div>
+  </div>
+}

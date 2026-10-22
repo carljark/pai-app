@@ -5,6 +5,8 @@ import { TranslationService } from '../../../services/translation.service';
 import { AuthFacade } from '../../../features/auth/services/auth.facade';
 import { ProjectsFacade } from '../../../features/projects/services/projects.facade';
 import { NotificationsBadgeComponent } from '../../../features/notifications/components/notifications-badge/notifications-badge.component';
+import { HelpTextsService } from '../../../features/help/services/help-texts.service';
+import { OnboardingFacade } from '../../../features/help/services/onboarding.facade';
 
 @Component({
   selector: 'app-sidebar',
@@ -17,6 +19,8 @@ export class SidebarComponent {
   trans = inject(TranslationService);
   auth = inject(AuthFacade);
   projects = inject(ProjectsFacade);
+  help = inject(HelpTextsService);
+  onboarding = inject(OnboardingFacade);
 
   toggleLanguage() {
     this.layout.language.set(this.layout.language() === 'castellano' ? 'catalan' : 'castellano');

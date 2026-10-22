@@ -182,8 +182,11 @@
   </div>
 } @else {
   <div class="app-header app-header--sticky">
-    <h2 class="app-header-title">{{ trans.t().workshopTitle }}</h2>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap">
+    <div class="app-header-heading">
+      <h2 class="app-header-title">{{ trans.t().workshopTitle }}</h2>
+      <app-help-button tour="taller" />
+    </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap" data-tour="taller-actions">
       <button (click)="downloadWord()" class="btn-secondary">
         <svg
           width="16"
@@ -260,7 +263,11 @@
   </div>
 
   <div class="taller-layout" [class.resources-collapsed]="isMobileResourcesCollapsed()">
-    <div class="card taller-content" style="flex: 1; min-width: 0; position: relative">
+    <div
+      class="card taller-content"
+      style="flex: 1; min-width: 0; position: relative"
+      data-tour="taller-content"
+    >
       @if (projects.isThinking()) {
         <div
           style="
@@ -359,7 +366,11 @@
 
     @if (!isSidebarCollapsed()) {
       <div class="taller-sidebar-container" style="flex: 1; width: 100%; max-width: 400px">
-        <div class="card taller-sidebar" [class.collapsed]="isMobileResourcesCollapsed()">
+        <div
+          class="card taller-sidebar"
+          [class.collapsed]="isMobileResourcesCollapsed()"
+          data-tour="taller-resources"
+        >
           <div
             style="
               display: flex;

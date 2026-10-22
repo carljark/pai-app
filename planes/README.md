@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[246 — Visita guiada y menú de Ayuda para docentes](246_plan_visita_guiada_y_ayuda.md)** · _Implementado (tarea 246)_  
+  Bienvenida con elección de idioma para todos los usuarios, botón «Ayuda» con cuatro visitas guiadas cortas (driver.js), preguntas frecuentes y un proyecto de ejemplo bilingüe de solo lectura sobre el que se hace la visita del taller.
+
 - **[245 — Tres actividades por conexión en todos los mapas intermodulares de FP](245_plan_tres_actividades_por_conexion_mapas_fp.md)** · _Implementado (tarea 245)_  
   Dos actividades bilingües nuevas por relación en los 13 mapas que tienen una sola, Peluquería completada hasta tres y la regla de «al menos tres» en el generador, la skill y AGENTS.md.
 

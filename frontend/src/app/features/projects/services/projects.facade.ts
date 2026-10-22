@@ -73,6 +73,8 @@ export class ProjectsFacade {
   // STATE - Taller (Proyecto Activo)
   // ============================================
   currentProjectId = signal<string | null>(null);
+  /** Proyecto de ejemplo abierto en el taller: no está en el historial. */
+  exampleProject = signal<Project | null>(null);
   generatedProject = signal<string>('');
   /** Idioma del texto de `generatedProject`: se usa al guardar y al exportar. */
   contentLanguage = signal<ContentLanguage>('castellano');
@@ -99,9 +101,12 @@ export class ProjectsFacade {
   // ============================================
   // COMPUTED - Derivados
   // ============================================
-  currentProject = computed(() =>
-    this.projectsHistory().find((p) => p._id === this.currentProjectId()),
-  );
+  currentProject = computed(() => {
+    const id = this.currentProjectId();
+    const example = this.exampleProject();
+    if (example && example._id === id) return example;
+    return this.projectsHistory().find((p) => p._id === id);
+  });
 
   myProjects = computed(() => {
     const user = this.authFacade.currentUser();

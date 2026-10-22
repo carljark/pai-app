@@ -157,6 +157,11 @@ export class ProjectsService {
     return `${this.apiUrl}/${projectId}/files/${filename}`;
   }
 
+  /** Proyecto de ejemplo de la visita guiada del taller. */
+  getExampleProject(): Observable<Project> {
+    return this.http.get<ProjectDto>(`${this.apiUrl}/example`).pipe(map(fromProjectDto));
+  }
+
   /** Proyecto actualizado (se usa para seguir el progreso de una traducción). */
   getProject(projectId: string): Observable<Project> {
     return this.http.get<ProjectDto>(`${this.apiUrl}/${projectId}`).pipe(map(fromProjectDto));

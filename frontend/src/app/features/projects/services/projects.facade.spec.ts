@@ -5,6 +5,7 @@ import {
   TestRequest,
 } from '@angular/common/http/testing';
 import { ProjectsFacade } from './projects.facade';
+import { ProjectsService } from './projects.service';
 import { CurriculumFacade } from '../../curriculum/services/curriculum.facade';
 import { CriteriosFacade } from '../../curriculum/services/criterios.facade';
 import { AuthFacade } from '../../auth/services/auth.facade';
@@ -159,6 +160,27 @@ describe('ProjectsFacade', () => {
     facade.currentProjectId.set('2');
 
     expect(facade.currentProject()?.title).toBe('P2');
+  });
+
+  it('el proyecto de ejemplo abierto es el actual aunque no esté en el historial', () => {
+    facade.projectsHistory.set([createMockProject({ _id: '1', title: 'P1' })]);
+    facade.exampleProject.set(createMockProject({ _id: 'ex', title: 'Ejemplo', isExample: true }));
+    facade.currentProjectId.set('ex');
+    expect(facade.currentProject()?.title).toBe('Ejemplo');
+
+    facade.currentProjectId.set('1');
+    expect(facade.currentProject()?.title).toBe('P1');
+  });
+
+  it('pide el proyecto de ejemplo a la API', () => {
+    let title = '';
+    TestBed.inject(ProjectsService)
+      .getExampleProject()
+      .subscribe((p) => (title = p.title));
+    httpMock
+      .expectOne('/api/projects/example')
+      .flush({ _id: 'ex', title: 'Ejemplo', status: 'publicado', isExample: true });
+    expect(title).toBe('Ejemplo');
   });
 
   it('should delete project via HTTP', () => {

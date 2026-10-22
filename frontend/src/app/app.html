@@ -54,6 +54,10 @@
 </div>
 
 <!-- Modals -->
+@if (authService.currentUser()) {
+  <app-welcome-modal></app-welcome-modal>
+  <app-help-panel></app-help-panel>
+}
 @if (appFacade.showInfoModal()) {
   <app-info-modal
     [title]="appFacade.infoTitle()"

@@ -26,4 +26,11 @@ describe('canEditProject', () => {
     expect(canEditProject(project, null)).toBe(false);
     expect(canEditProject(undefined, { _id: 'autor', name: '', email: '' })).toBe(false);
   });
+
+  it('el proyecto de ejemplo solo lo modifican los administradores', () => {
+    const example = asProject({ ...project, isExample: true });
+    expect(canEditProject(example, { _id: 'autor', name: '', email: '' })).toBe(false);
+    expect(canEditProject(example, { _id: 'mate', name: '', email: '' })).toBe(false);
+    expect(canEditProject(example, { _id: 'x', name: '', email: '', role: 'admin' })).toBe(true);
+  });
 });

@@ -1,6 +1,6 @@
 import type { Response } from 'express';
 import mongoose from 'mongoose';
-import { Project } from '../models/Project';
+import { Project, NOT_EXAMPLE } from '../models/Project';
 import { ActivityLog } from '../models/ActivityLog';
 import { Settings } from '../models/Settings';
 import { FpbMatch } from '../models/FpbMatch';
@@ -136,7 +136,7 @@ export const buildApprovedProjectsContext = async (criteria: {
   tipoNivel?: string;
   courseLevel?: string;
 }): Promise<string> => {
-  const baseFilter: Record<string, any> = { status: 'publicado' };
+  const baseFilter: Record<string, any> = { status: 'publicado', ...NOT_EXAMPLE };
   if (criteria.tipoNivel) baseFilter.tipoNivel = criteria.tipoNivel;
 
   const query = {
@@ -413,10 +413,10 @@ export const listProjects = async (req: any, res: Response) => {
   try {
     const { mine } = req.query;
     const userId = req.user?._id;
-    let filter: any = {};
+    let filter: any = { ...NOT_EXAMPLE };
 
     if (mine === 'true') {
-      filter = { userId };
+      filter = { userId, ...NOT_EXAMPLE };
     }
     const projects = await Project.find(filter).sort({ createdAt: -1 }).populate(PROJECT_POPULATE);
     res.json(projects);
@@ -432,6 +432,17 @@ export const getProject = async (req: any, res: Response) => {
     res.json(project);
   } catch (error) {
     res.status(500).json({ error: "Error al cargar proyecto" });
+  }
+};
+
+/** GET /api/projects/example — el proyecto de ejemplo de la visita guiada del taller. */
+export const getExampleProject = async (_req: any, res: Response) => {
+  try {
+    const project = await Project.findOne({ isExample: true }).populate(PROJECT_POPULATE);
+    if (!project) return res.status(404).json({ error: "No hay proyecto de ejemplo" });
+    res.json(project);
+  } catch (error) {
+    res.status(500).json({ error: "Error al cargar el proyecto de ejemplo" });
   }
 };
 

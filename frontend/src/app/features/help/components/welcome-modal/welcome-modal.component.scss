@@ -1,0 +1,117 @@
+@use '../../../../../styles/variables' as variables;
+
+.welcome-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: variables.$spacing-4;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.welcome-modal__dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$spacing-4;
+  width: 100%;
+  max-width: 34rem;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: variables.$spacing-8 variables.$spacing-6;
+  border-radius: 0.75rem;
+  background: variables.$color-surface;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.welcome-modal__languages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$spacing-2;
+  width: 100%;
+  padding-bottom: variables.$spacing-4;
+  border-bottom: 1px solid variables.$color-border;
+}
+
+.welcome-modal__languages-label {
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-muted;
+}
+
+.welcome-modal__segmented {
+  display: inline-flex;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-full;
+  overflow: hidden;
+}
+
+.welcome-modal__language {
+  min-width: 7.5rem;
+  padding: variables.$spacing-2 variables.$spacing-4;
+  border: none;
+  background: variables.$color-surface;
+  color: variables.$color-text-main;
+  font-size: variables.$font-size-base;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid variables.$color-border-focus;
+    outline-offset: -2px;
+  }
+}
+
+.welcome-modal__language--active {
+  background: variables.$color-primary;
+  color: variables.$color-surface;
+  font-weight: variables.$font-weight-semibold;
+}
+
+.welcome-modal__logo {
+  height: 3rem;
+  object-fit: contain;
+}
+
+.welcome-modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: variables.$color-primary-dark;
+}
+
+.welcome-modal__intro {
+  margin: 0;
+  font-size: variables.$font-size-lg;
+  line-height: 1.5;
+  color: variables.$color-text-main;
+}
+
+.welcome-modal__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: variables.$spacing-3;
+  width: 100%;
+  max-width: 20rem;
+  margin-top: variables.$spacing-2;
+}
+
+.welcome-modal__start,
+.welcome-modal__later {
+  justify-content: center;
+  padding: variables.$spacing-3 variables.$spacing-4;
+  font-size: variables.$font-size-base;
+}
+
+.welcome-modal__never {
+  padding: variables.$spacing-2;
+  border: none;
+  background: none;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+  text-decoration: underline;
+  cursor: pointer;
+}

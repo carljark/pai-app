@@ -1,6 +1,6 @@
 import type { Response } from 'express';
 import { Notification } from '../models/Notification';
-import { Project } from '../models/Project';
+import { Project, NOT_EXAMPLE } from '../models/Project';
 
 function getNotifType(status: string): string {
   if (status === 'borrador' || status === 'publicado') return 'PROJECT_COMPLETED';
@@ -12,7 +12,7 @@ async function backfillNotificationsIfEmpty() {
   const count = await Notification.countDocuments({ recipientId: null });
   if (count > 0) return;
 
-  const existingProjects = await Project.find().populate('userId', 'name email').limit(50);
+  const existingProjects = await Project.find(NOT_EXAMPLE).populate('userId', 'name email').limit(50);
   for (const p of existingProjects) {
     await Notification.create({
       projectId: p._id,

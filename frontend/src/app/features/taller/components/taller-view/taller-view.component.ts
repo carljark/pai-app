@@ -25,6 +25,7 @@ import {
   SelectOption,
 } from '../../../../components/app-select/app-select.component';
 
+import { HelpButtonComponent } from '../../../help/components/help-button/help-button.component';
 @Component({
   selector: 'app-taller-view',
   standalone: true,
@@ -36,6 +37,7 @@ import {
     TranslationBannerComponent,
     EditLockBannerComponent,
     ProjectChangeLogComponent,
+    HelpButtonComponent,
     NivelNombrePipe,
   ],
   templateUrl: './taller-view.component.html',

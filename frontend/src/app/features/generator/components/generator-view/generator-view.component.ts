@@ -15,10 +15,11 @@ import {
   SelectOption,
 } from '../../../../components/app-select/app-select.component';
 
+import { HelpButtonComponent } from '../../../help/components/help-button/help-button.component';
 @Component({
   selector: 'app-generator-view',
   standalone: true,
-  imports: [CommonModule, CurriculumSelectorComponent, AppSelectComponent],
+  imports: [CommonModule, CurriculumSelectorComponent, AppSelectComponent, HelpButtonComponent],
   templateUrl: './generator-view.component.html',
   styleUrls: ['./generator-view.component.scss'],
 })

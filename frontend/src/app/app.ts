@@ -21,6 +21,8 @@ import { MapaIntermodularViewComponent } from './features/mapa-intermodular/comp
 import { PersonalViewComponent } from './features/personal/components/personal-view/personal-view.component';
 import { FeedbackViewComponent } from './features/feedback/components/feedback-view/feedback-view.component';
 import { SolicitudesViewComponent } from './features/solicitudes/components/solicitudes-view/solicitudes-view.component';
+import { WelcomeModalComponent } from './features/help/components/welcome-modal/welcome-modal.component';
+import { HelpPanelComponent } from './features/help/components/help-panel/help-panel.component';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +45,8 @@ import { SolicitudesViewComponent } from './features/solicitudes/components/soli
     SolicitudesViewComponent,
     TallerViewComponent,
     MapaIntermodularViewComponent,
+    WelcomeModalComponent,
+    HelpPanelComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

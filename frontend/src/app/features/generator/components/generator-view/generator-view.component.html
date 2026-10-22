@@ -1,9 +1,12 @@
 <div class="app-header">
-  <h2 class="app-header-title">{{ trans.t().subtitle }}</h2>
+  <div class="app-header-heading">
+    <h2 class="app-header-title">{{ trans.t().subtitle }}</h2>
+    <app-help-button tour="generator" />
+  </div>
 </div>
 <div class="card">
   <!-- Fila 1: titulación (desplegable) y curso (solo si la titulación tiene más de uno) -->
-  <div class="generator-view__level-row">
+  <div class="generator-view__level-row" data-tour="generator-level">
     <div class="form-group generator-view__level">
       <label for="generator-level-select">{{ trans.t().generatorLevelLabel }}</label>
       <app-select
@@ -43,7 +46,7 @@
 
   <!-- Fila 2: metodología y (si admin) IA/modelo -->
   <div class="form-row">
-    <div class="form-group form-group-methodology">
+    <div class="form-group form-group-methodology" data-tour="generator-methodology">
       <label for="generator-methodology-select">{{ trans.t().generatorMethodologyLabel }}</label>
       <app-select
         inputId="generator-methodology-select"
@@ -79,7 +82,7 @@
     }
   </div>
 
-  <div class="form-group" style="margin-top: 12px">
+  <div class="form-group" style="margin-top: 12px" data-tour="generator-collaborators">
     <span class="form-group__label" id="generator-collaborators-label">{{
       trans.t().generatorCollaboratorsLabel
     }}</span>
@@ -147,7 +150,7 @@
     }
   </div>
 
-  <div class="form-group extra-instructions-group">
+  <div class="form-group extra-instructions-group" data-tour="generator-extra">
     <label for="generator-extra-instructions" class="extra-instructions-label">
       <span>{{ trans.t().generatorExtraInstructionsLabel }}</span>
       <span class="optional-text">{{ trans.t().generatorExtraInstructionsOptional }}</span>

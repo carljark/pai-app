@@ -11,7 +11,11 @@ const turndownService = new TurndownService({ headingStyle: 'atx' });
 
 export const exportDocx = async (req: any, res: Response) => {
   try {
-    const project = await Project.findOne({ _id: req.params.id, userId: req.user._id });
+    // Cada docente exporta sus proyectos; el de ejemplo lo puede exportar cualquiera
+    const project = await Project.findOne({
+      _id: req.params.id,
+      $or: [{ userId: req.user._id }, { isExample: true }]
+    });
     // `?lang=` exporta la versión que el usuario está viendo (traducción si existe)
     const text = project ? pickProjectText(project, req.query.lang) : undefined;
     if (!project || !text) {

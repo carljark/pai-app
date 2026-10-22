@@ -1,0 +1,149 @@
+@use '../../../../../styles/variables' as variables;
+
+.help-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.help-panel__backdrop {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.help-panel__drawer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-6;
+  width: 100%;
+  max-width: 26rem;
+  height: 100%;
+  overflow-y: auto;
+  padding: variables.$spacing-6;
+  background: variables.$color-surface;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.help-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help-panel__title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: variables.$color-primary-dark;
+}
+
+.help-panel__close {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-surface-alt;
+  color: variables.$color-text-main;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.help-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-3;
+}
+
+.help-panel__section-title {
+  margin: 0;
+  font-size: variables.$font-size-lg;
+  color: variables.$color-text-main;
+}
+
+.help-panel__tours {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-panel__tour {
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-3;
+  padding: variables.$spacing-3 variables.$spacing-4;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+}
+
+.help-panel__tour--completed {
+  background: variables.$color-success-bg;
+  border-color: variables.$color-success;
+}
+
+.help-panel__tour-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: variables.$spacing-1;
+}
+
+.help-panel__tour-title {
+  font-size: variables.$font-size-base;
+}
+
+.help-panel__tour-badge {
+  margin-left: variables.$spacing-2;
+  font-size: variables.$font-size-xs;
+  font-weight: variables.$font-weight-medium;
+  color: variables.$color-success;
+}
+
+.help-panel__tour-text {
+  font-size: variables.$font-size-sm;
+  color: variables.$color-text-muted;
+}
+
+.help-panel__tour-start {
+  flex-shrink: 0;
+}
+
+.help-panel__faq {
+  border-bottom: 1px solid variables.$color-border;
+  padding-bottom: variables.$spacing-2;
+}
+
+.help-panel__faq-question {
+  padding: variables.$spacing-2 0;
+  font-weight: variables.$font-weight-medium;
+  cursor: pointer;
+}
+
+.help-panel__faq-answer {
+  margin: 0;
+  color: variables.$color-text-muted;
+  line-height: 1.5;
+}
+
+.help-panel__contact {
+  padding: variables.$spacing-4;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-primary-light;
+}
+
+.help-panel__contact-text {
+  margin: 0;
+  color: variables.$color-text-main;
+}
+
+.help-panel__contact-button {
+  align-self: flex-start;
+}

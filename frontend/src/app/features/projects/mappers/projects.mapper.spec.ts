@@ -76,6 +76,13 @@ describe('Projects Mapper', () => {
       expect(result.modules).toEqual(['mod1', 'mod2']);
       expect(result.generatedContent).toBeDefined();
       expect(result.userId).toBe('u1');
+      expect(result.isExample).toBeUndefined();
+    });
+
+    it('marca el proyecto de ejemplo, que no tiene autor', () => {
+      const result = fromProjectDto({ ...baseDto, userId: undefined, isExample: true } as any);
+      expect(result.isExample).toBe(true);
+      expect(result.userId).toBe('');
     });
 
     it('should keep the generation error and AI metadata for the history', () => {

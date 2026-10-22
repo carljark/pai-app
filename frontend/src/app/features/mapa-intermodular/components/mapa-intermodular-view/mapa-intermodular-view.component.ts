@@ -21,6 +21,7 @@ import { PanoramaViewComponent } from '../panorama/panorama-view/panorama-view.c
 import { MapaVistaService } from '../../services/mapa-vista.service';
 import { MapaProyectoService } from '../../services/mapa-proyecto.service';
 
+import { HelpButtonComponent } from '../../../help/components/help-button/help-button.component';
 @Component({
   selector: 'app-mapa-intermodular-view',
   standalone: true,
@@ -36,6 +37,7 @@ import { MapaProyectoService } from '../../services/mapa-proyecto.service';
     VistaToggleComponent,
     MindmapViewComponent,
     PanoramaViewComponent,
+    HelpButtonComponent,
   ],
   templateUrl: './mapa-intermodular-view.component.html',
   styleUrl: './mapa-intermodular-view.component.scss',

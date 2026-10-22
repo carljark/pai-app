@@ -12,6 +12,7 @@ import { loadNivelesMock, NIVELES_MOCK } from '../../../../testing/niveles.mock'
 import { AfinidadesEsoService } from '../../services/afinidades-eso.service';
 import { AFINIDADES_1, NIVEL_AFINIDADES } from '../../../../testing/afinidades.mock';
 import { of } from 'rxjs';
+import { TourService } from '../../../help/services/tour.service';
 
 describe('MapaIntermodularViewComponent', () => {
   let component: MapaIntermodularViewComponent;
@@ -42,6 +43,7 @@ describe('MapaIntermodularViewComponent', () => {
         CurriculumFacade,
         { provide: LayoutService, useValue: mockLayout },
         { provide: TranslationService, useValue: mockTrans },
+        { provide: TourService, useValue: { start: vi.fn() } },
       ],
     }).compileComponents();
     loadNivelesMock();

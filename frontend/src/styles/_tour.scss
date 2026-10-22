@@ -1,0 +1,53 @@
+@use 'variables';
+
+// Visitas guiadas (driver.js): textos grandes y botones cómodos para docentes, con la paleta
+// corporativa. La clase `plappin-tour` la añade TourService a cada globo.
+.driver-popover.plappin-tour {
+  min-width: 18rem;
+  max-width: 22rem;
+  padding: variables.$spacing-5;
+  border-radius: variables.$border-radius-lg;
+  font-family: variables.$font-family-sans;
+  color: variables.$color-text-main;
+
+  .driver-popover-title {
+    font-size: variables.$font-size-lg;
+    color: variables.$color-primary-dark;
+  }
+
+  .driver-popover-description {
+    font-size: variables.$font-size-base;
+    line-height: 1.5;
+  }
+
+  .driver-popover-progress-text {
+    font-size: variables.$font-size-sm;
+    color: variables.$color-text-muted;
+  }
+
+  .driver-popover-footer-btn {
+    padding: variables.$spacing-2 variables.$spacing-4;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-md;
+    font-size: variables.$font-size-sm;
+    text-shadow: none;
+  }
+
+  .driver-popover-next-btn {
+    border-color: variables.$color-primary;
+    background: variables.$color-primary;
+    color: variables.$color-surface;
+
+    &:hover,
+    &:focus {
+      background: variables.$color-primary-dark;
+    }
+  }
+
+  .driver-popover-close-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+    color: variables.$color-text-muted;
+  }
+}

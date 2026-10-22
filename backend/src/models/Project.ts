@@ -75,8 +75,13 @@ const ProjectSchema = new mongoose.Schema({
   importedAt: Date,
   /** Proyecto del que se copió (POST /api/projects/:id/clone). */
   clonedFrom: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
+  /** Proyecto de ejemplo de la visita guiada: de solo lectura y fuera de los listados. */
+  isExample: { type: Boolean, default: false, index: true },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 });
 
 export const Project = mongoose.model('Project', ProjectSchema);
+
+/** Filtro que deja fuera el proyecto de ejemplo de los listados y consultas de proyectos. */
+export const NOT_EXAMPLE = { isExample: { $ne: true } } as const;

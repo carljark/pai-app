@@ -38,6 +38,10 @@
   }
 
   &__extra {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: variables.$spacing-2;
     margin-left: auto;
 
     &:empty {

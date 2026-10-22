@@ -28,6 +28,9 @@ describe('TourService', () => {
       document.body.appendChild(el);
     });
 
+  const addAllAnchors = (id: keyof typeof TOURS) =>
+    addAnchors(...TOURS[id].steps.flatMap((s) => (s.anchor ? [s.anchor] : [])));
+
   /** Lanza la visita avanzando los renders que espera `afterNextRender`. */
   const run = async (id: Parameters<TourService['start']>[0]) => {
     const done = service.start(id);
@@ -110,22 +113,21 @@ describe('TourService', () => {
       HELP_CA.tours.mapa.steps[0]!.title,
       HELP_CA.tours.mapa.steps[1]!.title,
     ]);
-  });
+  }, 5000);
 
   it('la visita del menú despliega la barra lateral', async () => {
-    addAnchors('sidebar-generator');
+    addAllAnchors('intro');
     await run('intro');
     expect(layout.isSidebarCollapsed()).toBe(false);
-    expect(config.steps).toHaveLength(1);
-    expect(config.showProgress).toBe(false);
+    expect(config.steps).toHaveLength(7);
   });
 
   it('la visita del taller abre el proyecto de ejemplo e incluye el paso final sin elemento', async () => {
-    addAnchors('taller-example', 'taller-content');
     await run('taller');
     expect(example.open).toHaveBeenCalled();
-    expect(config.steps).toHaveLength(3);
-    expect(config.steps[2].element).toBeUndefined();
+    expect(config.steps).toHaveLength(1);
+    expect(config.steps[0].element).toBeUndefined();
+    expect(config.showProgress).toBe(false);
   });
 
   it('no empieza si no se puede abrir el proyecto de ejemplo', async () => {
@@ -135,9 +137,12 @@ describe('TourService', () => {
   });
 
   it('espera a que aparezcan los elementos que llegan más tarde', async () => {
-    setTimeout(() => addAnchors('mapa-tabs'), 150);
+    addAnchors('mapa-tabs');
+    setTimeout(() => addAllAnchors('mapa'), 150);
+    const started = Date.now();
     await run('mapa');
-    expect(config.steps).toHaveLength(1);
+    expect(config.steps).toHaveLength(5);
+    expect(Date.now() - started).toBeLessThan(1500);
   });
 
   it('si no aparece ningún elemento, no empieza', async () => {
@@ -146,16 +151,16 @@ describe('TourService', () => {
   }, 5000);
 
   it('terminar en el último paso la marca como completada', async () => {
-    addAnchors('mapa-tabs');
+    addAllAnchors('mapa');
     await run('mapa');
-    endTour(true, 0);
+    endTour(true, 4);
     expect(onboarding.markCompleted).toHaveBeenCalledWith('mapa');
     expect(telemetry.logEvent).toHaveBeenCalledWith('TOUR_COMPLETED', undefined, { tour: 'mapa' });
     expect(fakeDriver.destroy).toHaveBeenCalled();
   });
 
   it('cerrar antes del final cuenta como abandonada, con el paso', async () => {
-    addAnchors('mapa-tabs', 'mapa-vista');
+    addAllAnchors('mapa');
     await run('mapa');
     endTour(false, 1);
     expect(onboarding.markCompleted).not.toHaveBeenCalled();
@@ -172,7 +177,7 @@ describe('TourService', () => {
   });
 
   it('empezar otra visita cierra la que estaba en marcha', async () => {
-    addAnchors('mapa-tabs');
+    addAllAnchors('mapa');
     await run('mapa');
     await run('mapa');
     expect(fakeDriver.destroy).toHaveBeenCalledTimes(1);

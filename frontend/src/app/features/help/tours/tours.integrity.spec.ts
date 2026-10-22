@@ -28,12 +28,39 @@ import vista from '../../mapa-intermodular/components/ui/vista-toggle/vista-togg
   loader: 'text',
 };
 
+import modulos from '../../mapa-intermodular/components/ui/modulo-list/modulo-list.component.html' with {
+  loader: 'text',
+};
+import raDetail from '../../mapa-intermodular/components/ui/ra-detail/ra-detail.component.html' with {
+  loader: 'text',
+};
+import conexiones from '../../mapa-intermodular/components/ui/connections-list/connections-list.component.html' with {
+  loader: 'text',
+};
+
 /** Plantillas en las que están las anclas `data-tour` de las visitas. */
-const TEMPLATES = [sidebar, generator, selector, taller, banner, mapa, tabs, vista];
+const TEMPLATES = [
+  sidebar,
+  generator,
+  selector,
+  taller,
+  banner,
+  mapa,
+  tabs,
+  vista,
+  modulos,
+  raDetail,
+  conexiones,
+];
+
+/** Anclas fijas (`data-tour="x"`) y enlazadas (`[attr.data-tour]="cond ? 'x' : null"`). */
+const ANCHOR_PATTERNS = [/\sdata-tour="([^"]+)"/g, /\[attr\.data-tour\]="[^"']*'([^'"]+)'[^"]*"/g];
 
 const anchorsInTemplates = (): Set<string> =>
   new Set(
-    TEMPLATES.flatMap((html) => [...html.matchAll(/data-tour="([^"]+)"/g)].map((m) => m[1]!)),
+    TEMPLATES.flatMap((html) =>
+      ANCHOR_PATTERNS.flatMap((pattern) => [...html.matchAll(pattern)].map((m) => m[1]!)),
+    ),
   );
 
 describe('Integridad de las visitas guiadas', () => {

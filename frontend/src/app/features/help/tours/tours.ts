@@ -25,7 +25,7 @@ const GENERATOR: TourDefinition = {
     { anchor: 'generator-methodology', side: 'bottom' },
     { anchor: 'generator-collaborators', side: 'bottom' },
     { anchor: 'generator-extra', side: 'top' },
-    { anchor: 'generator-curriculum', side: 'right' },
+    { anchor: 'generator-curriculum', side: 'bottom' },
     { anchor: 'generator-cart', side: 'left' },
   ],
 };

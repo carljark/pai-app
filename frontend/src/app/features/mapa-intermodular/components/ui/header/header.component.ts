@@ -6,10 +6,11 @@ import { MapaStats } from '../../../models/mapa-intermodular.model';
 import { MapaTab, cursoLargo, mapaCicloLabel, mapaTabLabel } from '../../../utils/mapa-labels';
 import { NivelesService } from '../../../../../services/niveles.service';
 
+import { HelpButtonComponent } from '../../../../help/components/help-button/help-button.component';
 @Component({
   selector: 'app-mapa-header',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HelpButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

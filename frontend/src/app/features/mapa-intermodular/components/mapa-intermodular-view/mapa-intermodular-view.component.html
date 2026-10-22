@@ -17,7 +17,6 @@
   >
     <app-mapa-tabs [activeTab]="facade.activeTab()" [inline]="true" (tabChange)="setTab($event)">
       <app-mapa-vista-toggle />
-      <app-help-button tour="mapa" />
     </app-mapa-tabs>
   </app-mapa-header>
 
@@ -32,7 +31,6 @@
   } @else {
     <div class="mapa-vertical-accordions">
       <app-modulo-list
-        data-tour="mapa-modulos"
         [modules]="facade.filteredModules()"
         [selectedModuleCode]="facade.selectedModuleCode()"
         [selectedRaId]="facade.selectedRaId()"
@@ -45,7 +43,6 @@
       </app-modulo-list>
 
       <app-ra-detail
-        data-tour="mapa-ra"
         [step2Open]="step2Open()"
         [selectedCriterion]="facade.selectedCriterion()"
         (criterionSelected)="onSelectCriterion($event)"
@@ -56,7 +53,6 @@
       </app-ra-detail>
 
       <app-connections-list
-        data-tour="mapa-conexiones"
         [connections]="facade.filteredConnections()"
         [selectedCriterion]="facade.selectedCriterion()"
         [step3Open]="step3Open()"

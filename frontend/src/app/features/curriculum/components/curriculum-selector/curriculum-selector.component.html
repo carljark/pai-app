@@ -1,7 +1,9 @@
 <!-- Lado Izquierdo: Acordeones de Selección -->
-<div class="selection-list" data-tour="generator-curriculum">
-  @for (group of facade.groupedItems(); track $index) {
+<div class="selection-list">
+  @for (group of facade.groupedItems(); track $index; let first = $first) {
+    <!-- La visita guiada señala el primer módulo: la lista entera no cabe en pantalla -->
     <details
+      [attr.data-tour]="first ? 'generator-curriculum' : null"
       class="selection-group"
       [open]="isGroupOpen($index)"
       (toggle)="onGroupToggle($index, $event)"

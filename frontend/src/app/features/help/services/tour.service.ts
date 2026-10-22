@@ -14,7 +14,7 @@ export const TOUR_DRIVER = new InjectionToken<(config: Config) => Driver>('TOUR_
   factory: () => driver,
 });
 
-/** Espera máxima a que aparezca el primer elemento de la visita (datos que llegan por HTTP). */
+/** Espera máxima a que aparezcan los elementos de la visita (datos que llegan por HTTP). */
 const ANCHOR_TIMEOUT_MS = 2000;
 const ANCHOR_POLL_MS = 100;
 
@@ -55,14 +55,18 @@ export class TourService {
     return true;
   }
 
-  /** Tras el render, espera (como mucho 2 s) a que exista algún elemento de la visita. */
+  /**
+   * Tras el render, espera (como mucho 2 s) a que estén todos los elementos de la visita: el
+   * mapa pinta sus pestañas antes de que lleguen los datos de los pasos. Si alguno no llega
+   * (p. ej. el mapa de afinidades de la ESO no tiene pasos), sigue con los que haya.
+   */
   private async waitForAnchors(tour: TourDefinition): Promise<void> {
     await new Promise<void>((resolve) =>
       afterNextRender(() => resolve(), { injector: this.injector }),
     );
     const anchors = tour.steps.map((s) => s.anchor).filter((a): a is string => a !== null);
     for (let waited = 0; waited < ANCHOR_TIMEOUT_MS; waited += ANCHOR_POLL_MS) {
-      if (anchors.some((a) => document.querySelector(anchorSelector(a)))) return;
+      if (anchors.every((a) => document.querySelector(anchorSelector(a)))) return;
       await wait(ANCHOR_POLL_MS);
     }
   }
@@ -89,7 +93,8 @@ export class TourService {
       prevBtnText: nav.prev,
       doneBtnText: nav.done,
       popoverClass: 'plappin-tour',
-      smoothScroll: true,
+      // Sin desplazamiento suave: con él, el globo se coloca antes de que acabe de moverse la página
+      smoothScroll: false,
       onDestroyStarted: (_el, _step, { driver: d }) => this.finish(tour.id, d),
     });
     this.active = instance;

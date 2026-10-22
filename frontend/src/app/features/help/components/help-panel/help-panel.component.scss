@@ -101,7 +101,9 @@
 }
 
 .help-panel__tour-badge {
+  display: inline-block;
   margin-left: variables.$spacing-2;
+  white-space: nowrap;
   font-size: variables.$font-size-xs;
   font-weight: variables.$font-weight-medium;
   color: variables.$color-success;

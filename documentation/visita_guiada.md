@@ -31,11 +31,11 @@ Ayuda para docentes sin perfil técnico: una bienvenida con elección de idioma,
   - el tipo `HelpTexts` obliga a que los dos idiomas tengan las mismas claves;
   - el test `tours.integrity.spec.ts` comprueba que haya tantos textos como pasos y que cada ancla exista en las plantillas.
 
-### Motor: `TourService` (driver.js 1.8.0, MIT)
+### Motor: `TourService` (driver.js 1.10.2, MIT)
 
 1. Cierra la visita en curso y el panel de Ayuda.
 2. Lleva a la pantalla de la visita (`layout.switchView`). En la visita del menú despliega la barra lateral; en la del taller abre el proyecto de ejemplo.
-3. Espera al render (`afterNextRender`) y hasta 2 s a que aparezca algún ancla, porque el mapa carga sus datos por HTTP.
+3. Espera al render (`afterNextRender`) y hasta 2 s a que estén **todas** las anclas: el mapa pinta las pestañas antes de que lleguen por HTTP los datos de los pasos. Si alguna no llega (el mapa de afinidades de la ESO no tiene pasos), sigue con las que haya.
 4. Omite los pasos cuyo elemento no está en pantalla (por ejemplo, un panel plegado o la ESO en el mapa) en lugar de romper la visita.
 5. **Terminar en el último paso** guarda la visita en `completedTours` y registra `TOUR_COMPLETED`. **Cerrar antes** registra `TOUR_ABANDONED` con el número de paso. Al empezar se registra `TOUR_STARTED`. Los tres eventos van a `ActivityLog` por `POST /api/telemetry/event`.
 
@@ -43,10 +43,11 @@ Otros detalles:
 - El motor se inyecta con el token `TOUR_DRIVER`, que los tests sustituyen por un doble.
 - Los estilos de los globos están en `src/styles/_tour.scss` (clase `plappin-tour`, paleta de `_variables.scss`) sobre `driver.js/dist/driver.css`, incluido en `angular.json`.
 - driver.js no depende de zone.js: trabaja sobre el DOM.
+- El desplazamiento es instantáneo (`smoothScroll: false`): con el desplazamiento suave, driver.js colocaba el globo antes de que la página acabara de moverse y tapaba el elemento.
 
 ### Añadir o cambiar una visita
 
-1. Pon `data-tour="nombre"` en el elemento de la plantilla. Si el elemento es el host de un componente, comprueba que tiene `:host { display: block }` o algo similar; si no, el resaltado no tendrá tamaño.
+1. Pon `data-tour="nombre"` en un elemento con caja propia. **No lo pongas en un host con `display: contents`** (como los pasos del mapa) ni en un elemento más alto que la pantalla: el globo se descoloca. Por eso los pasos del mapa señalan su cabecera y el paso del currículo del generador señala solo el primer módulo (`[attr.data-tour]="first ? '…' : null"`).
 2. Añade el paso en `tours.ts` y su texto, en la misma posición, en `help.es.ts` y `help.ca.ts`.
 3. Para una visita nueva, añade su id en `TourId`/`TOUR_IDS` del frontend y en `backend/src/data/tours.ts`. El backend rechaza ids desconocidos.
 4. Añade la plantilla a la lista de `tours.integrity.spec.ts` si es nueva.

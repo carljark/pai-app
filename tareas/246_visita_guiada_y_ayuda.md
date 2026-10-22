@@ -42,7 +42,7 @@ Detalle completo en `documentation/visita_guiada.md`.
 9. `backend/src/data/proyecto-ejemplo/` (nuevo): JSON de metadatos y contenido en castellano y catalán balear.
 10. `backend/src/migrations/50_proyecto_ejemplo.ts` (nueva).
 11. `backend/src/tests/onboarding.test.ts` y `backend/src/tests/project-example.test.ts` (nuevos).
-12. `frontend/package.json`, `package-lock.json` y `angular.json`: `driver.js` 1.8.0 (versión exacta) y su CSS.
+12. `frontend/package.json`, `package-lock.json` y `angular.json`: `driver.js` 1.10.2 (versión exacta) y su CSS.
 13. `frontend/src/app/features/help/**` (nuevo): modelo, visitas, textos ES/CA, servicios, componentes y sus specs, incluido `tours.integrity.spec.ts`.
 14. `frontend/src/app/testing/text-imports.d.ts` (nuevo): tipos para importar plantillas como texto en los tests.
 15. `frontend/src/app/app.{ts,html}`: monta la bienvenida y el panel de Ayuda.
@@ -60,7 +60,7 @@ Detalle completo en `documentation/visita_guiada.md`.
 
 ## Decisiones técnicas
 - **driver.js en lugar de una implementación propia.** Ya resuelve el resaltado, la colocación, el teclado y el desplazamiento; es MIT, pesa unos 5 KB y no depende de zone.js.
-  - Se fijó la 1.8.0 (julio de 2026) y no la 1.10.x, publicada días antes, por prudencia con la cadena de suministro.
+  - Primero se fijó la 1.8.0 por prudencia (la 1.10.x tenía días). A petición del usuario se actualizó a la **1.10.2**, la última, tras comprobar que la publica el mismo autor que las anteriores (`kamranahmedse`), que no tiene dependencias ni scripts de instalación y que su API (`onDestroyStarted`, `isLastStep`, `getActiveIndex`, textos y progreso) no cambia.
   - Se instaló desde `registry.npmjs.org`, porque el `.npmrc` global apunta a un registro interno que no responde desde esta máquina.
 - **Motor inyectable (`TOUR_DRIVER`)** para simularlo en los tests.
 - **Progreso en el backend** y no en localStorage: los docentes cambian de ordenador, y «bienvenida para todos» exige saber quién la cerró.
@@ -85,11 +85,18 @@ Detalle completo en `documentation/visita_guiada.md`.
   - copia de seguridad previa `pai_db_20261022_211143.archive.gz`;
   - «Migración 50_proyecto_ejemplo completada»;
   - la API y el frontend responden 200.
-- **No verificado:** la revisión visual en el navegador (bienvenida, las cuatro visitas en escritorio y en móvil). Docker no estaba en marcha en local y el MCP de Playwright no conectó, así que queda pendiente de comprobar a mano tras el despliegue.
+- **Revisión visual** (segunda iteración, con Docker en local): un script temporal de `playwright-core` con el Chrome del sistema recorrió la bienvenida (ES/CA), el panel de Ayuda y las cuatro visitas completas, a 1366×820 y a 390×844, y se revisaron las capturas. Sin errores de página. Lo que se encontró y se corrigió:
+  - el globo del primer paso del taller tapaba el aviso, porque se colocaba antes de terminar el desplazamiento suave → `smoothScroll: false`;
+  - el paso del currículo del generador resaltaba una lista más alta que la pantalla → ahora señala el primer módulo;
+  - el mapa solo mostraba 2 de los 5 pasos: la visita empezaba al aparecer las pestañas, antes de que llegaran los pasos → ahora espera a todas las anclas (máximo 2 s);
+  - los pasos del mapa apuntaban a hosts con `display: contents` (sin caja) → las anclas pasan a la cabecera de cada paso;
+  - el «?» del mapa bajaba a otra línea y después partía en dos el selector de vista → ahora va junto al título «Mapa intermodular» y el hueco de las pestañas no se encoge;
+  - la etiqueta «✓ Hecha» del panel se partía → `white-space: nowrap`.
+- Tras los cambios: `npm test` del frontend (112 archivos, 1096 tests, umbrales de cobertura y zoneless) en verde, y `npx ng build` correcto.
 
 ## Desviaciones respecto al plan
 - **Contenido del ejemplo:** el plan preveía generarlo con la propia app. Se redactó a mano, con el mismo formato que produce el generador y los RA y criterios oficiales del archivo de datos: un proyecto más corto y revisable, sin depender de Docker ni de las claves de IA. La traducción la hizo el agente `traductor-es-ca`.
 - **Contenido en Markdown:** el texto va en dos archivos Markdown (ES y CA) junto al JSON de metadatos, en lugar de dentro del JSON.
 - **Textos de la ayuda:** van en `features/help/i18n/` en lugar de `translations.*.ts`.
 - **Borrado del ejemplo:** `deleteProject` no se tocó, porque ya impedía borrar a quien no es el autor (el ejemplo no tiene autor). Solo un administrador puede borrarlo.
-- **Botón «?» del mapa:** va en la fila de pestañas, que existe en el mapa de FP y en el de afinidades de la ESO, y no junto a un título.
+- **Botón «?» del mapa:** en el mapa de FP va junto al título «Mapa intermodular». En el de afinidades de la ESO, que no tiene esa cabecera, va en la fila de pestañas.

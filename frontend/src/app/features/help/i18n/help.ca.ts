@@ -118,7 +118,7 @@ export const HELP_CA: HelpTexts = {
         },
         {
           title: 'Recursos i assistent',
-          text: "Demana canvis a l'assistent amb les teves paraules («afegeix una activitat d'avaluació») i adjunta materials del projecte.",
+          text: "En els teus projectes (o en la teva còpia d'aquest) podràs demanar canvis a l'assistent amb les teves paraules («afegeix una activitat d'avaluació») i adjuntar materials del projecte.",
         },
         {
           title: 'Ara és el teu torn',

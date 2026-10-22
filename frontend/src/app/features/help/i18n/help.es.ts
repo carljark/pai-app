@@ -118,7 +118,7 @@ export const HELP_ES: HelpTexts = {
         },
         {
           title: 'Recursos y asistente',
-          text: 'Pide cambios al asistente con tus palabras («añade una actividad de evaluación») y adjunta materiales del proyecto.',
+          text: 'En tus proyectos (o en tu copia de este) podrás pedir cambios al asistente con tus palabras («añade una actividad de evaluación») y adjuntar materiales del proyecto.',
         },
         {
           title: 'Ahora te toca a ti',

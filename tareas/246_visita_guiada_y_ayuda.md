@@ -96,6 +96,7 @@ Detalle completo en `documentation/visita_guiada.md`.
   - copia de seguridad previa `pai_db_20261022_213954.archive.gz`;
   - migraciones al día;
   - la API y el frontend responden.
+- **Texto del paso 4 de la visita del taller**: invitaba a pedir cambios al asistente justo cuando, en el proyecto de ejemplo (solo lectura), el asistente está desactivado. Ahora dice «En tus proyectos (o en tu copia de este) podrás pedir cambios al asistente…», en castellano y en catalán.
 - Tras los cambios: `npm test` del frontend (112 archivos, 1096 tests, umbrales de cobertura y zoneless) en verde, y `npx ng build` correcto.
 
 ## Desviaciones respecto al plan

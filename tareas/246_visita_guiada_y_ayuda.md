@@ -92,6 +92,10 @@ Detalle completo en `documentation/visita_guiada.md`.
   - los pasos del mapa apuntaban a hosts con `display: contents` (sin caja) → las anclas pasan a la cabecera de cada paso;
   - el «?» del mapa bajaba a otra línea y después partía en dos el selector de vista → ahora va junto al título «Mapa intermodular» y el hueco de las pestañas no se encoge;
   - la etiqueta «✓ Hecha» del panel se partía → `white-space: nowrap`.
+- **Segundo despliegue** (22-10-2026) del commit `0105c0f`:
+  - copia de seguridad previa `pai_db_20261022_213954.archive.gz`;
+  - migraciones al día;
+  - la API y el frontend responden.
 - Tras los cambios: `npm test` del frontend (112 archivos, 1096 tests, umbrales de cobertura y zoneless) en verde, y `npx ng build` correcto.
 
 ## Desviaciones respecto al plan

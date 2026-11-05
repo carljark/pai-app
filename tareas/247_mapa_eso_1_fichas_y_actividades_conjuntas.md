@@ -69,7 +69,7 @@ Los 16 tramos validaron. DeepSeek corrigió dentro de su propia sesión los poco
   - De las 66 parejas posibles se dejaron fuera las 24 menos naturales (p. ej. Cultura Clásica–Entornos Digitales).
   - Las dos fichas más débiles del catálogo (la 32 y la 43) se señalaron al usuario antes de redactarlas.
 - **Normalización de saberes en `incorporar.py`.** DeepSeek los redactó como frases con mayúscula y punto final (398 de 480), mientras que las fichas existentes usan expresiones breves que la ficha une con «; ». Se quita el punto final y se pone en minúscula la inicial de todos menos el primero. Antes se comprobó que ninguno empieza por un nombre propio.
-- **Coste.** OpenRouter marcaba 0,197 $ con 14 de los 16 tramos hechos, así que el total ronda los 0,22 $ para 129 actividades y 22 fichas. La estimación final de opencode (`opencode stats`) es de 0,19 $, algo más baja que lo que factura OpenRouter.
+- **Coste.** OpenRouter factura **0,253 $** por DeepSeek V4.1 Flash el 5-11-2026, contando las pruebas y las correcciones dentro de cada sesión. Son unos 0,002 $ por actividad: 129 actividades más el texto de 22 fichas. La estimación de opencode (`opencode stats`) es de 0,19 $, más baja que lo que factura OpenRouter. Conviene tener en cuenta esa diferencia al presupuestar otras tareas con opencode.
 
 ## Verificación
 - `afinidades-datos.test.ts` y `afinidades.test.ts`: 37/37 con los datos definitivos.

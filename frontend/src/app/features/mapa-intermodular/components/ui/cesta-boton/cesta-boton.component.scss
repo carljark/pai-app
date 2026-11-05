@@ -1,0 +1,9 @@
+@use '../step-shared';
+
+:host {
+  display: inline-flex;
+}
+
+.cesta-boton {
+  white-space: nowrap;
+}

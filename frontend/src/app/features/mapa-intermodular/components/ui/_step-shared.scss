@@ -180,6 +180,18 @@
     color: white;
   }
 
+  // Acompaña al principal (p. ej. «Añadir a la cesta» junto a «Crear Proyecto»).
+  &--secondary {
+    background: white;
+    color: #047857;
+    box-shadow: inset 0 0 0 1px #10b981;
+  }
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: default;
+  }
+
   &--sm {
     padding: 4px 8px;
     font-size: 0.74rem;

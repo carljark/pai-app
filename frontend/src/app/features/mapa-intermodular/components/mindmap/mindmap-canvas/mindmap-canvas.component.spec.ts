@@ -135,6 +135,35 @@ describe('MindmapCanvasComponent', () => {
     expect(el.querySelector('svg')?.getAttribute('aria-label')).toContain('arrossega');
   });
 
+  /** d3-drag escucha el movimiento en `event.view`; jsdom no deja pasarla en el constructor. */
+  function mouse(type: string, x: number, target: EventTarget = document.defaultView!): void {
+    const event = new MouseEvent(type, { bubbles: true, cancelable: true, clientX: x });
+    Object.defineProperty(event, 'view', { value: document.defaultView });
+    target.dispatchEvent(event);
+  }
+
+  it('con destino, arrastrar la bola de un módulo y soltarla dentro la entrega', () => {
+    const target = { contains: vi.fn(() => true), track: vi.fn() };
+    const dropped = vi.fn();
+    fixture.componentInstance.unitDrop.subscribe(dropped);
+    fixture.componentRef.setInput('dropTarget', target);
+    fixture.detectChanges();
+    mouse('mousedown', 10, nodeEl('0001')!.querySelector('circle')!);
+    mouse('mousemove', 60);
+    mouse('mouseup', 60);
+    expect(target.track).toHaveBeenCalledWith(expect.objectContaining({ badge: '0001' }));
+    expect(dropped).toHaveBeenCalledWith('0001');
+  });
+
+  it('sin destino, las bolas no se arrastran', () => {
+    const dropped = vi.fn();
+    fixture.componentInstance.unitDrop.subscribe(dropped);
+    mouse('mousedown', 10, nodeEl('0001')!);
+    mouse('mousemove', 60);
+    mouse('mouseup', 60);
+    expect(dropped).not.toHaveBeenCalled();
+  });
+
   it('no hace nada con el zoom antes de enlazarlo', () => {
     const fresh = TestBed.createComponent(MindmapCanvasComponent);
     expect(() => {

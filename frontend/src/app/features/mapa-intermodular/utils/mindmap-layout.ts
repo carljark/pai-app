@@ -131,6 +131,24 @@ export function fitTransform(radius: number, width: number, height: number): Vie
   return { x: width / 2, y: height / 2, k: Math.min(Math.max(k, 0.25), 1.2) };
 }
 
+/** Acerca (`factor` > 1) o aleja la vista manteniendo fijo el centro del lienzo. */
+export function zoomAroundCenter(
+  t: ViewTransform,
+  factor: number,
+  width: number,
+  height: number,
+): ViewTransform {
+  const cx = width / 2;
+  const cy = height / 2;
+  return { x: cx - (cx - t.x) * factor, y: cy - (cy - t.y) * factor, k: t.k * factor };
+}
+
+/** Punto desplazado `distance` unidades alejándose del centro. */
+export function outward(x: number, y: number, distance: number): [number, number] {
+  const r = Math.hypot(x, y) || 1;
+  return [x + (x / r) * distance, y + (y / r) * distance];
+}
+
 /** Transformación que lleva el punto (x, y) del mapa al centro del lienzo con la escala `k`. */
 export function focusTransform(
   x: number,

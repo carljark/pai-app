@@ -7,6 +7,12 @@ import { AFINIDADES_1, NIVEL_AFINIDADES } from '../../../../testing/afinidades.m
 import { loadNivelesMock } from '../../../../testing/niveles.mock';
 import { AfinidadProyectoService } from '../../services/afinidad-proyecto.service';
 import { AfinidadesEsoFacade } from '../../services/afinidades-eso.facade';
+import { By } from '@angular/platform-browser';
+import { CestaDropService } from '../../services/cesta-drop.service';
+import { CestaFacade } from '../../services/cesta.facade';
+import { MapaIntermodularFacade } from '../../services/mapa-intermodular.facade';
+import { PlappSoundService } from '../../services/plapp-sound.service';
+import { MindmapCanvasComponent } from '../mindmap/mindmap-canvas/mindmap-canvas.component';
 import { AfinidadesMindmapViewComponent } from './afinidades-mindmap-view.component';
 
 describe('AfinidadesMindmapViewComponent', () => {
@@ -24,6 +30,7 @@ describe('AfinidadesMindmapViewComponent', () => {
       providers: [
         { provide: LayoutService, useValue: { language } },
         { provide: AfinidadProyectoService, useValue: { crearProyecto } },
+        { provide: PlappSoundService, useValue: { plapp: vi.fn() } },
       ],
     }).compileComponents();
     loadNivelesMock([NIVEL_AFINIDADES]);
@@ -73,8 +80,22 @@ describe('AfinidadesMindmapViewComponent', () => {
     await click('.mindmap-canvas__node--group[aria-label^="MAT"]');
     await click('.mindmap-canvas__node--connection[aria-label^="1 "]');
     const card = el.querySelector('app-afinidad-card')!;
-    (card.querySelector('button') as HTMLButtonElement).click();
+    (card.querySelector('.afinidad-card__crear') as HTMLButtonElement).click();
     expect(crearProyecto).toHaveBeenCalledWith(AFINIDADES_1.afinidades[0], 'BYG', 'ESO_1');
+  });
+
+  it('soltar la bola de una materia en la cesta la mete en ella', async () => {
+    sessionStorage.clear();
+    TestBed.inject(MapaIntermodularFacade).activeTab.set('ESO_1');
+    const canvas = fixture.debugElement.query(By.directive(MindmapCanvasComponent));
+    expect(canvas.componentInstance.dropTarget()).toBe(TestBed.inject(CestaDropService));
+    canvas.componentInstance.unitDrop.emit('MAT');
+    expect(
+      TestBed.inject(CestaFacade)
+        .grupos()
+        .map((g) => g.unidad),
+    ).toEqual(['MAT']);
+    sessionStorage.clear();
   });
 
   it('cierra el panel con su botón o con Esc', async () => {

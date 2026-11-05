@@ -44,7 +44,7 @@ const TALLER: TourDefinition = {
   ],
 };
 
-/** Mapa intermodular (en la ESO, el de afinidades solo tiene los dos primeros pasos). */
+/** Mapa intermodular (en la ESO, el de afinidades no tiene los tres pasos de la FP). */
 const MAPA: TourDefinition = {
   id: 'mapa',
   view: 'mapa',
@@ -54,6 +54,7 @@ const MAPA: TourDefinition = {
     { anchor: 'mapa-modulos', side: 'top' },
     { anchor: 'mapa-ra', side: 'top' },
     { anchor: 'mapa-conexiones', side: 'top' },
+    { anchor: 'mapa-cesta', side: 'left' },
   ],
 };
 

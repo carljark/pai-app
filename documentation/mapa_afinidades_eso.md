@@ -67,6 +67,10 @@ Campo opcional `actividades` de la ficha. Por ahora solo lo tienen las fichas de
 
 22 fichas nuevas (`ESO1-22` a `ESO1-43`), hasta 43 fichas y 42 de las 66 parejas posibles de materias. Cada materia aparece en al menos 6 fichas de 1.º (en 2.º-4.º el mínimo sigue siendo 3). El esqueleto de cada ficha (materias, ámbito y criterios de cada vínculo) se eligió a mano y se validó contra `curriculo-eso`. Los resúmenes, las relaciones, los saberes y los conceptos se redactaron con DeepSeek. Su única fuente es la de la materia que va primero.
 
+## Cesta (tarea 249)
+
+Cada ficha tiene «Añadir a la cesta» junto a «Crear Proyecto con estos criterios», y en el mapa mental las materias se arrastran a la cesta para reunir sus criterios en común. Detalles: [`cesta_mapas.md`](cesta_mapas.md).
+
 ## Mantenimiento
 
 Para cambiar o añadir fichas, edita los JSON y crea una **migración nueva** que vuelva a ejecutar la ingesta (`up` de la 25). La 25 ya consta como aplicada en producción y no se reejecuta. Las traducciones se hacen con el agente `traductor-es-ca` (`.claude/agents/traductor-es-ca.md`).

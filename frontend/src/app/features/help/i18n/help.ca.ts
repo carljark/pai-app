@@ -150,6 +150,10 @@ export const HELP_CA: HelpTexts = {
           title: 'Pas 3: connexions',
           text: 'Veuràs amb quins altres mòduls es relaciona i activitats per treballar-los junts. Des d’aquí pots crear un projecte amb aquesta connexió.',
         },
+        {
+          title: 'La cistella',
+          text: 'Per a un projecte amb diversos mòduls o matèries, prem «Afegeix a la cistella» a les connexions o fitxes que t’interessin, o arrossega les boles del mapa mental fins aquí: s’hi afegeix el que tenen en comú. Després, crea el projecte amb tot el que hi ha a la cistella.',
+        },
       ],
     },
   },

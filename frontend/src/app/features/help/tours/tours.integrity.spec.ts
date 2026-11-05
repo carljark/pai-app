@@ -37,6 +37,9 @@ import raDetail from '../../mapa-intermodular/components/ui/ra-detail/ra-detail.
 import conexiones from '../../mapa-intermodular/components/ui/connections-list/connections-list.component.html' with {
   loader: 'text',
 };
+import cesta from '../../mapa-intermodular/components/ui/cesta/cesta.component.html' with {
+  loader: 'text',
+};
 
 /** Plantillas en las que están las anclas `data-tour` de las visitas. */
 const TEMPLATES = [
@@ -51,6 +54,7 @@ const TEMPLATES = [
   modulos,
   raDetail,
   conexiones,
+  cesta,
 ];
 
 /** Anclas fijas (`data-tour="x"`) y enlazadas (`[attr.data-tour]="cond ? 'x' : null"`). */

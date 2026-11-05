@@ -3,6 +3,8 @@ import { LayoutService } from '../../../../../services/layout.service';
 import { NivelesService } from '../../../../../services/niveles.service';
 import type { IntermodularConnection } from '../../../models/mapa-intermodular.model';
 import type { MindmapNode, MindmapPath } from '../../../models/mindmap.model';
+import { CestaDropService } from '../../../services/cesta-drop.service';
+import { CestaFacade } from '../../../services/cesta.facade';
 import { MapaIntermodularFacade } from '../../../services/mapa-intermodular.facade';
 import { MINDMAP_SELECTION, MindmapState } from '../../../services/mindmap.state';
 import { mapaTabLabel } from '../../../utils/mapa-labels';
@@ -18,8 +20,8 @@ import { MindmapCanvasComponent } from '../mindmap-canvas/mindmap-canvas.compone
 /** Indicación de qué pulsar a continuación, según lo que haya desplegado. */
 const HINTS: Record<'module' | 'ra' | 'group' | 'connection', { es: string; ca: string }> = {
   module: {
-    es: 'Pulsa un módulo para ver sus resultados de aprendizaje.',
-    ca: 'Prem un mòdul per veure’n els resultats d’aprenentatge.',
+    es: 'Pulsa un módulo para ver sus resultados de aprendizaje, o arrástralo a la cesta.',
+    ca: 'Prem un mòdul per veure’n els resultats d’aprenentatge, o arrossega’l a la cistella.',
   },
   ra: {
     es: 'Pulsa un RA para ver con qué módulos conecta.',
@@ -63,6 +65,8 @@ function hintStep(path: MindmapPath): keyof typeof HINTS {
 export class MindmapViewComponent {
   facade = inject(MapaIntermodularFacade);
   state = inject(MindmapState);
+  cesta = inject(CestaFacade);
+  drop = inject(CestaDropService);
   private layout = inject(LayoutService);
   private niveles = inject(NivelesService);
 

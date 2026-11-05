@@ -7,8 +7,9 @@ import { RaReference, connectionTargetRef, findCurriculumMatch } from '../utils/
 import { MapaIntermodularFacade } from './mapa-intermodular.facade';
 
 /**
- * Abre el generador desde el mapa intermodular (vista clásica o mapa mental) con el nivel y el
- * curso de la pestaña y el RA de origen seguido de los RA destino seleccionados.
+ * Abre el generador desde el mapa intermodular (vista clásica, mapa mental o cesta) con el nivel
+ * y el curso de la pestaña y los RA elegidos: el de origen seguido de los de destino, o los de
+ * la cesta.
  */
 @Injectable({ providedIn: 'root' })
 export class MapaProyectoService {
@@ -21,8 +22,13 @@ export class MapaProyectoService {
 
   /** Con `connection`, su RA destino; sin ella, los de todas las conexiones filtradas. */
   crearDesdeConexion(connection?: IntermodularConnection): void {
+    this.crearDesdeReferencias(this.collectRefs(connection));
+  }
+
+  /** Abre el generador con los RA indicados (los de una conexión o los de la cesta). */
+  crearDesdeReferencias(refs: RaReference[]): void {
     this.syncCurriculumLevel();
-    const selected = this.collectSelectedRas(connection);
+    const selected = this.matchRefs(refs);
     if (selected.length > 0) this.curriculum.selectedRas.set(selected);
     this.layout.switchView('generator');
   }
@@ -36,13 +42,13 @@ export class MapaProyectoService {
   }
 
   /** RA de origen seguido de los RAs destino de la conexión (o de todas las filtradas). */
-  private collectSelectedRas(connection?: IntermodularConnection): string[] {
+  private collectRefs(connection?: IntermodularConnection): RaReference[] {
     const activeRa = this.facade.selectedRa();
     const activeModule = this.facade.selectedModule();
     if (!activeRa || !activeModule) return [];
 
     const conns = connection ? [connection] : this.facade.filteredConnections();
-    const refs: RaReference[] = [
+    return [
       {
         moduleCode: activeModule.code,
         moduleName: activeModule.name_es,
@@ -52,6 +58,10 @@ export class MapaProyectoService {
       },
       ...conns.map(connectionTargetRef),
     ];
+  }
+
+  /** Descripciones del currículum del generador para los RA del mapa, sin repetir. */
+  private matchRefs(refs: RaReference[]): string[] {
     const allRas = this.curriculum.ras();
     const selected: string[] = [];
     for (const ref of refs) {

@@ -1,0 +1,79 @@
+@let isCa = cesta.isCa();
+<section
+  class="cesta-panel"
+  role="dialog"
+  [attr.aria-label]="isCa ? 'Cistella del projecte' : 'Cesta del proyecto'"
+>
+  <header class="cesta-panel__cabecera">
+    <h3 class="cesta-panel__titulo">
+      {{ isCa ? 'Cistella del projecte' : 'Cesta del proyecto' }}
+    </h3>
+    <button
+      type="button"
+      class="cesta-panel__cerrar"
+      [attr.aria-label]="isCa ? 'Tanca la cistella' : 'Cerrar la cesta'"
+      (click)="cerrar.emit()"
+    >
+      ✕
+    </button>
+  </header>
+
+  <div class="cesta-panel__contenido">
+    @for (g of cesta.grupos(); track g.unidad) {
+      <article class="cesta-panel__grupo">
+        <div class="cesta-panel__grupo-cabecera">
+          <strong class="cesta-panel__nombre">{{ cesta.nombre(g.unidad) }}</strong>
+          <button
+            type="button"
+            class="cesta-panel__quitar"
+            [attr.aria-label]="(isCa ? 'Treu ' : 'Quitar ') + cesta.nombre(g.unidad)"
+            (click)="cesta.quitarUnidad(g.unidad)"
+          >
+            ✕
+          </button>
+        </div>
+        @if (g.claves.length > 0) {
+          <ul class="cesta-panel__claves">
+            @for (c of g.claves; track c) {
+              <li class="cesta-panel__clave">
+                {{ cesta.etiqueta(c) }}
+                <button
+                  type="button"
+                  class="cesta-panel__quitar-clave"
+                  [attr.aria-label]="(isCa ? 'Treu ' : 'Quitar ') + cesta.etiqueta(c)"
+                  (click)="cesta.quitarClave(g.unidad, c)"
+                >
+                  ✕
+                </button>
+              </li>
+            }
+          </ul>
+        } @else {
+          <p class="cesta-panel__aviso">{{ sinClaves() }}</p>
+        }
+      </article>
+    } @empty {
+      <p class="cesta-panel__vacia">{{ textos().vacia }}</p>
+    }
+  </div>
+
+  <footer class="cesta-panel__acciones">
+    <button
+      type="button"
+      class="btn-secondary cesta-panel__vaciar"
+      [disabled]="cesta.grupos().length === 0"
+      (click)="cesta.vaciar()"
+    >
+      {{ isCa ? 'Buida' : 'Vaciar' }}
+    </button>
+    <button
+      type="button"
+      class="btn-primary cesta-panel__crear"
+      [disabled]="cesta.totalClaves() === 0"
+      (click)="crear()"
+    >
+      {{ isCa ? 'Crear Projecte amb la cistella' : 'Crear Proyecto con la cesta' }}
+      ({{ cesta.totalClaves() }})
+    </button>
+  </footer>
+</section>

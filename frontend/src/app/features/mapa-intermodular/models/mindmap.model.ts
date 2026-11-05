@@ -73,3 +73,19 @@ export interface RenderedNode extends PositionedNode {
 export interface RenderedLink extends MindmapLink {
   faded: boolean;
 }
+
+/** Bola que se arrastra desde el mapa mental, en coordenadas de la ventana. */
+export interface DragGhost {
+  x: number;
+  y: number;
+  color: string;
+  badge: string;
+}
+
+/** Destino donde se pueden soltar las bolas del mapa mental (la cesta). */
+export interface MindmapDropTarget {
+  /** El punto (coordenadas de la ventana) cae dentro del destino. */
+  contains(x: number, y: number): boolean;
+  /** Bola que se arrastra ahora, o `null` al terminar. */
+  track(ghost: DragGhost | null): void;
+}

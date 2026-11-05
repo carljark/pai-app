@@ -1,0 +1,129 @@
+@use '../../../../../../styles/variables' as variables;
+
+.cesta {
+  position: fixed;
+  right: variables.$spacing-6;
+  bottom: variables.$spacing-6;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: variables.$spacing-3;
+}
+
+.cesta__boton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: variables.$spacing-2;
+  padding: variables.$spacing-3 variables.$spacing-5;
+  border: 2px solid variables.$color-primary;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-surface;
+  color: variables.$color-primary-dark;
+  font-weight: variables.$font-weight-semibold;
+  box-shadow: variables.$shadow-md;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: variables.$color-primary-light;
+  }
+}
+
+.cesta__boton--sobre {
+  transform: scale(1.15);
+  background: variables.$color-primary-light;
+  border-style: dashed;
+}
+
+.cesta__boton--recibe {
+  animation: cesta-recibe 0.45s ease-out;
+}
+
+.cesta__icono {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cesta__contador {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 variables.$spacing-1;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-primary;
+  color: variables.$color-surface;
+  font-size: variables.$font-size-xs;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.cesta__panel {
+  display: block;
+}
+
+.cesta__fantasma {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: variables.$border-radius-full;
+  color: variables.$color-surface;
+  font-size: variables.$font-size-xs;
+  font-weight: variables.$font-weight-semibold;
+  box-shadow: variables.$shadow-md;
+  opacity: 0.85;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.cesta__fantasma--sobre {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+@keyframes cesta-recibe {
+  0% {
+    transform: scale(1.15);
+  }
+  35% {
+    transform: scale(0.85) rotate(-6deg);
+  }
+  70% {
+    transform: scale(1.08) rotate(4deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cesta__boton--recibe {
+    animation: none;
+  }
+}
+
+@media (max-width: variables.$bp-md) {
+  .cesta {
+    right: variables.$spacing-4;
+    bottom: variables.$spacing-4;
+  }
+
+  .cesta__texto {
+    display: none;
+  }
+}

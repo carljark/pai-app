@@ -32,6 +32,7 @@
           role="button"
           tabindex="0"
           [attr.aria-label]="item.view.ariaLabel"
+          [attr.data-node-id]="item.node.id"
           [attr.aria-expanded]="item.node.expandable ? item.node.expanded : null"
           [attr.aria-pressed]="item.node.kind === 'connection' ? item.node.expanded : null"
           (click)="activate(item)"

@@ -3,7 +3,9 @@ import { TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { LayoutService } from '../../../../../services/layout.service';
 import { loadNivelesMock } from '../../../../../testing/niveles.mock';
-import { mockConnection } from '../../../../../testing/mindmap.mock';
+import { mindmapModules, mockConnection } from '../../../../../testing/mindmap.mock';
+import { CestaFacade } from '../../../services/cesta.facade';
+import { MapaIntermodularFacade } from '../../../services/mapa-intermodular.facade';
 import type { IntermodularConnection } from '../../../models/mapa-intermodular.model';
 import { ConnectionCardComponent } from './connection-card.component';
 
@@ -76,7 +78,27 @@ describe('ConnectionCardComponent', () => {
     const fixture = render(full);
     const emitted = vi.fn();
     fixture.componentInstance.createProject.subscribe(emitted);
-    (fixture.nativeElement.querySelector('.mapa-btn-action') as HTMLButtonElement).click();
+    (fixture.nativeElement.querySelector('.mapa-btn-action--primary') as HTMLButtonElement).click();
     expect(emitted).toHaveBeenCalledWith(full);
+  });
+
+  it('«Añadir a la cesta» guarda el RA de origen activo y el de destino', () => {
+    sessionStorage.clear();
+    const mapa = TestBed.inject(MapaIntermodularFacade);
+    mapa.modules.set(mindmapModules());
+    mapa.activeTab.set('FPB');
+    mapa.selectRa('0001_RA2');
+    const fixture = render(mapa.selectedRa()!.connections[0]!);
+    const boton = () => fixture.nativeElement.querySelector('.cesta-boton') as HTMLButtonElement;
+    expect(boton().textContent?.trim()).toBe('Añadir a la cesta');
+    boton().click();
+    fixture.detectChanges();
+    expect(boton().textContent?.trim()).toBe('En la cesta ✓');
+    expect(
+      TestBed.inject(CestaFacade)
+        .grupos()
+        .map((g) => g.claves),
+    ).toEqual([['RA2'], ['RA1']]);
+    sessionStorage.clear();
   });
 });

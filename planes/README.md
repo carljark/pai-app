@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[249 — Cesta de materias y módulos en los mapas (ESO y FP)](249_plan_cesta_de_materias_mapas.md)** · _Implementado (tarea 249)_  
+  Botón «Añadir a la cesta» en la vista clásica y cesta en el mapa mental a la que se arrastran las bolas de materias o módulos (con sonido «PLAPP»). Lo arrastrado aporta los criterios o RA que tiene en común con el resto de la cesta, para crear un proyecto con varias materias o módulos.
+
 - **[248 — Despliegue automático desde main con GitHub Actions](248_plan_despliegue_automatico_github_actions.md)** · _Implementado (tarea 248)_  
   CI en cada push y PR, y despliegue automático de cada commit de `main` con el CI en verde: imágenes construidas en GitHub y publicadas en GHCR, y el EC2 solo las descarga, con copia de seguridad previa y vuelta atrás a las imágenes anteriores.
 

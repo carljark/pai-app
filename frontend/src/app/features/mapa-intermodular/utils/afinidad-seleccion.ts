@@ -15,7 +15,7 @@ export function materiasEnOrden(afinidad: AfinidadEso, principal: string): strin
 }
 
 /** Criterios citados de una materia en todos los vínculos de la ficha, sin repetir. */
-function criteriosDeMateria(afinidad: AfinidadEso, materia: string): string[] {
+export function criteriosDeMateria(afinidad: AfinidadEso, materia: string): string[] {
   const ids = afinidad.vinculos.flatMap((v) => v.criterios[materia] ?? []);
   return [...new Set(ids)];
 }
@@ -40,9 +40,23 @@ export function seleccionDeAfinidad(
   principal: string,
   ces: EvaluativeCriteria[],
 ): SeleccionCe[] {
+  const pares = materiasEnOrden(afinidad, principal).map(
+    (m): CriteriosDeMateria => [m, criteriosDeMateria(afinidad, m)],
+  );
+  return seleccionDeCriterios(pares, ces);
+}
+
+/** Materia y los criterios («1.1») que se quieren seleccionar de ella. */
+export type CriteriosDeMateria = [materia: string, criterios: string[]];
+
+/** Selección del generador para unos criterios agrupados por materia (ficha o cesta). */
+export function seleccionDeCriterios(
+  pares: CriteriosDeMateria[],
+  ces: EvaluativeCriteria[],
+): SeleccionCe[] {
   const seleccion: SeleccionCe[] = [];
-  for (const materia of materiasEnOrden(afinidad, principal)) {
-    for (const [num, ids] of porCe(criteriosDeMateria(afinidad, materia))) {
+  for (const [materia, criterios] of pares) {
+    for (const [num, ids] of porCe(criterios)) {
       const ce = ces.find((c) => c.subjectCode === materia && c.ce_num === num);
       const todos = ce?.criteriosDetalle ?? [];
       const validos = ids.filter((id) => todos.some((c) => c.id === id));

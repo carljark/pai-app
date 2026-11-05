@@ -5,6 +5,8 @@ import type { AfinidadEso, AfinidadesCurso } from '../../models/afinidad-eso.mod
 import type { MindmapPath } from '../../models/mindmap.model';
 import { AfinidadProyectoService } from '../../services/afinidad-proyecto.service';
 import { AfinidadesEsoFacade } from '../../services/afinidades-eso.facade';
+import { CestaDropService } from '../../services/cesta-drop.service';
+import { CestaFacade } from '../../services/cesta.facade';
 import { MindmapState } from '../../services/mindmap.state';
 import { buildAfinidadesTree, findSelectedFicha } from '../../utils/afinidades-mindmap-tree';
 import { MapaTab, mapaTabLabel } from '../../utils/mapa-labels';
@@ -17,8 +19,8 @@ import { AfinidadCardComponent } from '../ui/afinidad-card/afinidad-card.compone
 /** Indicación de qué pulsar a continuación, según lo que haya desplegado. */
 const HINTS = {
   materia: {
-    es: 'Pulsa una materia para ver con qué materias comparte fichas.',
-    ca: 'Prem una matèria per veure amb quines matèries comparteix fitxes.',
+    es: 'Pulsa una materia para ver con qué materias comparte fichas, o arrástrala a la cesta.',
+    ca: 'Prem una matèria per veure amb quines matèries comparteix fitxes, o arrossega-la a la cistella.',
   },
   afin: {
     es: 'Pulsa una materia afín para ver sus fichas.',
@@ -51,6 +53,8 @@ function hintStep(path: MindmapPath): keyof typeof HINTS {
 export class AfinidadesMindmapViewComponent {
   facade = inject(AfinidadesEsoFacade);
   state = inject(MindmapState);
+  cesta = inject(CestaFacade);
+  drop = inject(CestaDropService);
   private layout = inject(LayoutService);
   private niveles = inject(NivelesService);
   private proyecto = inject(AfinidadProyectoService);

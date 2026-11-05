@@ -150,6 +150,10 @@ export const HELP_ES: HelpTexts = {
           title: 'Paso 3: conexiones',
           text: 'Verás con qué otros módulos se relaciona y actividades para trabajarlos juntos. Desde aquí puedes crear un proyecto con esa conexión.',
         },
+        {
+          title: 'La cesta',
+          text: 'Para un proyecto con varios módulos o materias, pulsa «Añadir a la cesta» en las conexiones o fichas que te interesen, o arrastra las bolas del mapa mental hasta aquí: se añade lo que tienen en común. Después, crea el proyecto con todo lo de la cesta.',
+        },
       ],
     },
   },

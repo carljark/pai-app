@@ -7,8 +7,6 @@ import { LayoutService } from '../../../../services/layout.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { IntermodularConnection } from '../../models/mapa-intermodular.model';
 import { SkeletonLoaderComponent } from '../../../../components/skeleton-loader/skeleton-loader.component';
-
-// UI Components
 import { MapaTabsComponent } from '../ui/tabs/tabs.component';
 import { MapaHeaderComponent } from '../ui/header/header.component';
 import { ModuloListComponent } from '../ui/modulo-list/modulo-list.component';
@@ -20,7 +18,7 @@ import { MindmapViewComponent } from '../mindmap/mindmap-view/mindmap-view.compo
 import { PanoramaViewComponent } from '../panorama/panorama-view/panorama-view.component';
 import { MapaVistaService } from '../../services/mapa-vista.service';
 import { MapaProyectoService } from '../../services/mapa-proyecto.service';
-
+import { CestaComponent } from '../ui/cesta/cesta.component';
 import { HelpButtonComponent } from '../../../help/components/help-button/help-button.component';
 @Component({
   selector: 'app-mapa-intermodular-view',
@@ -38,6 +36,7 @@ import { HelpButtonComponent } from '../../../help/components/help-button/help-b
     MindmapViewComponent,
     PanoramaViewComponent,
     HelpButtonComponent,
+    CestaComponent,
   ],
   templateUrl: './mapa-intermodular-view.component.html',
   styleUrl: './mapa-intermodular-view.component.scss',

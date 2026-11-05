@@ -57,7 +57,7 @@ describe('ConnectionDrawerComponent', () => {
     fixture.componentInstance.createProject.subscribe(created);
     const el: HTMLElement = fixture.nativeElement;
     (el.querySelector('.mindmap-drawer__close') as HTMLButtonElement).click();
-    (el.querySelector('.mapa-btn-action') as HTMLButtonElement).click();
+    (el.querySelector('.mapa-btn-action--primary') as HTMLButtonElement).click();
     expect(closed).toHaveBeenCalled();
     expect(created).toHaveBeenCalledWith(connection);
   });

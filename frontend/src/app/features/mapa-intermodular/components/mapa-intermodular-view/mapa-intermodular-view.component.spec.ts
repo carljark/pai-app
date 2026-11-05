@@ -1166,7 +1166,9 @@ describe('MapaIntermodularViewComponent', () => {
     await clickNode('.mindmap-canvas__node--group');
     await clickNode('.mindmap-canvas__node--connection');
 
-    (el.querySelector('app-connection-drawer .mapa-btn-action') as HTMLButtonElement).click();
+    (
+      el.querySelector('app-connection-drawer .mapa-btn-action--primary') as HTMLButtonElement
+    ).click();
     expect(mockLayout.switchView).toHaveBeenCalledWith('generator');
     expect(curriculum.selectedRas()[0]).toContain('Muestra una imagen personal');
     component.vistas.setVista('clasica');

@@ -1,6 +1,8 @@
 import { Component, computed, inject, input, output } from '@angular/core';
 import { AfinidadEso, CriterioTexto, VinculoAfinidad } from '../../../models/afinidad-eso.model';
 import { AfinidadesEsoFacade } from '../../../services/afinidades-eso.facade';
+import { CestaFacade } from '../../../services/cesta.facade';
+import { CestaBotonComponent } from '../cesta-boton/cesta-boton.component';
 import { materiasEnOrden } from '../../../utils/afinidad-seleccion';
 import { LayoutService } from '../../../../../services/layout.service';
 import { AfinidadActividadesComponent } from '../afinidad-actividades/afinidad-actividades.component';
@@ -9,13 +11,14 @@ import { AfinidadActividadesComponent } from '../afinidad-actividades/afinidad-a
 @Component({
   selector: 'app-afinidad-card',
   standalone: true,
-  imports: [AfinidadActividadesComponent],
+  imports: [AfinidadActividadesComponent, CestaBotonComponent],
   templateUrl: './afinidad-card.component.html',
   styleUrl: './afinidad-card.component.scss',
 })
 export class AfinidadCardComponent {
   private layout = inject(LayoutService);
   private facade = inject(AfinidadesEsoFacade);
+  cesta = inject(CestaFacade);
 
   afinidad = input.required<AfinidadEso>();
   /** Materia desde la que se consulta la ficha: va primero y fija el nombre del ámbito. */
@@ -28,6 +31,8 @@ export class AfinidadCardComponent {
 
   /** Materias de la ficha con la materia consultada en primer lugar. */
   materias = computed(() => materiasEnOrden(this.afinidad(), this.materia()));
+
+  enCesta = computed(() => this.cesta.fichaEnCesta(this.afinidad()));
 
   fuente = computed(() => this.afinidad().fuentes.find((f) => f.materia === this.materia()));
 

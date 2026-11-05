@@ -79,6 +79,7 @@
   </footer>
 
   <div class="afinidad-card__acciones">
+    <app-cesta-boton [enCesta]="enCesta()" (anadir)="cesta.anadirFicha(afinidad())" />
     <button type="button" class="btn-primary afinidad-card__crear" (click)="crearProyecto.emit()">
       {{ isCa() ? 'Crear Projecte amb aquests criteris' : 'Crear Proyecto con estos criterios' }}
     </button>

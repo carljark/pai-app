@@ -1,0 +1,7 @@
+<button type="button" [class]="clases()" [disabled]="enCesta()" (click)="anadir.emit()">
+  @if (enCesta()) {
+    {{ isCa() ? 'A la cistella ✓' : 'En la cesta ✓' }}
+  } @else {
+    {{ isCa() ? 'Afegeix a la cistella' : 'Añadir a la cesta' }}
+  }
+</button>

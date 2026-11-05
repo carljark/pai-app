@@ -96,6 +96,10 @@ En las pestañas de afinidades, el selector ofrece «Vista clásica» y «Mapa m
 
 `ringRadii` agranda cada anillo por separado (hasta ×2,5 de su radio base) cuando dos nodos vecinos del mismo nivel quedarían a menos de 84 px. Un escalado uniforme no serviría, porque el encuadre automático lo deshace. Es necesario con 17 materias en 3.º de ESO y con cursos de FP con muchos módulos.
 
+## Cesta (tarea 249)
+
+Las bolas de materia o módulo se pueden arrastrar hasta la cesta flotante (con un «PLAPP» al soltarlas) para crear un proyecto con lo que tienen en común. El arrastre usa `d3-drag`, enlazado antes que el zoom, y solo se activa si el lienzo recibe `[dropTarget]`. Detalles: [`cesta_mapas.md`](cesta_mapas.md).
+
 ## Pendiente
 
 - Adaptación específica a móvil (hoy el lienzo admite pellizco y el panel pasa debajo en pantallas estrechas).

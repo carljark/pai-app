@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { attachZoom, canvasSize } from './mindmap-zoom';
+import { attachZoom, canvasSize, zoomFilter } from './mindmap-zoom';
 
 function makeSvg(width = 0, height = 0): SVGSVGElement {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -12,6 +12,28 @@ function makeSvg(width = 0, height = 0): SVGSVGElement {
 describe('mindmap-zoom', () => {
   afterEach(() => {
     document.body.innerHTML = '';
+  });
+
+  it('no mueve el mapa con gestos que empiezan sobre una bola arrastrable', () => {
+    const bola = document.createElement('span');
+    const filtro = zoomFilter((t) => t === bola);
+    const evento = (type: string, init: MouseEventInit, target: EventTarget | null) => {
+      const e = new MouseEvent(type, init);
+      Object.defineProperty(e, 'target', { value: target });
+      return e;
+    };
+    expect(filtro(evento('mousedown', {}, document.body))).toBe(true);
+    expect(filtro(evento('mousedown', {}, bola))).toBe(false);
+    expect(filtro(evento('wheel', { ctrlKey: true }, bola))).toBe(true);
+    expect(filtro(evento('mousedown', { ctrlKey: true }, document.body))).toBe(false);
+    expect(filtro(evento('mousedown', { button: 2 }, document.body))).toBe(false);
+  });
+
+  it('desengancha también el arrastre al destruirse', () => {
+    const subject = vi.fn(() => null);
+    const zoom = attachZoom(makeSvg(), vi.fn(), { subject, target: () => null, drop: vi.fn() });
+    zoom.destroy();
+    expect(subject).not.toHaveBeenCalled();
   });
 
   it('usa el tamaño del lienzo o uno por defecto si aún no tiene', () => {

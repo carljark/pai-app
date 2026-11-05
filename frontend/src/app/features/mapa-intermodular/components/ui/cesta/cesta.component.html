@@ -1,0 +1,41 @@
+<div class="cesta" data-tour="mapa-cesta">
+  @if (abierta()) {
+    <app-cesta-panel class="cesta__panel" (cerrar)="abierta.set(false)" />
+  }
+  <button
+    #zona
+    type="button"
+    class="cesta__boton"
+    [class.cesta__boton--sobre]="drop.over()"
+    [class.cesta__boton--recibe]="recibiendo()"
+    [attr.aria-expanded]="abierta()"
+    [attr.aria-label]="
+      cesta.isCa()
+        ? 'Cistella del projecte: ' + total() + (total() === 1 ? ' element' : ' elements')
+        : 'Cesta del proyecto: ' + total() + (total() === 1 ? ' elemento' : ' elementos')
+    "
+    (click)="alternar()"
+  >
+    <svg class="cesta__icono" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 10h14l-1.6 9.2a1.5 1.5 0 0 1-1.5 1.3H8.1a1.5 1.5 0 0 1-1.5-1.3z" />
+      <path d="M3 10h18M8.5 10 11 4M15.5 10 13 4M9.5 14v3M12 14v3M14.5 14v3" />
+    </svg>
+    <span class="cesta__texto">{{ cesta.isCa() ? 'Cistella' : 'Cesta' }}</span>
+    @if (total() > 0) {
+      <span class="cesta__contador">{{ total() }}</span>
+    }
+  </button>
+</div>
+
+@if (drop.ghost(); as ghost) {
+  <div
+    class="cesta__fantasma"
+    [class.cesta__fantasma--sobre]="drop.over()"
+    [style.left.px]="ghost.x"
+    [style.top.px]="ghost.y"
+    [style.background-color]="ghost.color"
+    aria-hidden="true"
+  >
+    {{ ghost.badge }}
+  </div>
+}

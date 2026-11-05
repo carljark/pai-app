@@ -6,6 +6,11 @@ import { LayoutService } from '../../../../../services/layout.service';
 import { loadNivelesMock } from '../../../../../testing/niveles.mock';
 import { mindmapModules } from '../../../../../testing/mindmap.mock';
 import { MapaIntermodularFacade } from '../../../services/mapa-intermodular.facade';
+import { By } from '@angular/platform-browser';
+import { CestaDropService } from '../../../services/cesta-drop.service';
+import { CestaFacade } from '../../../services/cesta.facade';
+import { PlappSoundService } from '../../../services/plapp-sound.service';
+import { MindmapCanvasComponent } from '../mindmap-canvas/mindmap-canvas.component';
 import { MindmapViewComponent } from './mindmap-view.component';
 
 describe('MindmapViewComponent', () => {
@@ -18,7 +23,10 @@ describe('MindmapViewComponent', () => {
     language.set('castellano');
     await TestBed.configureTestingModule({
       imports: [MindmapViewComponent, HttpClientTestingModule],
-      providers: [{ provide: LayoutService, useValue: { language } }],
+      providers: [
+        { provide: LayoutService, useValue: { language } },
+        { provide: PlappSoundService, useValue: { plapp: vi.fn() } },
+      ],
     }).compileComponents();
     loadNivelesMock();
     facade = TestBed.inject(MapaIntermodularFacade);
@@ -50,6 +58,19 @@ describe('MindmapViewComponent', () => {
     );
     expect(el.querySelector('.mindmap-view__hint')?.textContent).toContain('Pulsa un módulo');
     expect(el.querySelector('app-connection-drawer')).toBeNull();
+  });
+
+  it('soltar la bola de un módulo en la cesta lo mete en ella', () => {
+    sessionStorage.clear();
+    const canvas = fixture.debugElement.query(By.directive(MindmapCanvasComponent));
+    expect(canvas.componentInstance.dropTarget()).toBe(TestBed.inject(CestaDropService));
+    canvas.componentInstance.unitDrop.emit('0001');
+    expect(
+      TestBed.inject(CestaFacade)
+        .grupos()
+        .map((g) => g.unidad),
+    ).toEqual(['0001']);
+    sessionStorage.clear();
   });
 
   it('despliega módulo, RA y grupo y abre el panel de la conexión', async () => {
@@ -101,7 +122,9 @@ describe('MindmapViewComponent', () => {
     await click('RA2 Resultado');
     await click('0002 Módulo 0002');
     await click('RA1 Texto 0002 RA1');
-    (el.querySelector('app-connection-drawer .mapa-btn-action') as HTMLButtonElement).click();
+    (
+      el.querySelector('app-connection-drawer .mapa-btn-action--primary') as HTMLButtonElement
+    ).click();
     expect(created.mock.calls[0]![0].relationType).toBe('ciencias');
   });
 

@@ -18,7 +18,9 @@
         [radius]="radius()"
         [focusId]="focusId()"
         [isCa]="isCa()"
+        [dropTarget]="drop"
         (nodeActivate)="state.activate($event)"
+        (unitDrop)="cesta.meterUnidad($event)"
       />
     } @else {
       <p class="mindmap-view__empty">

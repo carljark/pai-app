@@ -2,16 +2,19 @@ import { Component, inject, computed, input, Output, EventEmitter } from '@angul
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../../../../services/layout.service';
 import { MapaIntermodularFacade } from '@mapa-intermodular/services/mapa-intermodular.facade';
+import { CestaFacade } from '@mapa-intermodular/services/cesta.facade';
+import { CestaBotonComponent } from '../cesta-boton/cesta-boton.component';
 
 @Component({
   selector: 'app-ra-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CestaBotonComponent],
   templateUrl: './ra-detail.component.html',
   styleUrl: './ra-detail.component.scss',
 })
 export class RaDetailComponent {
   facade = inject(MapaIntermodularFacade);
+  cesta = inject(CestaFacade);
   layout = inject(LayoutService);
   isCa = computed(() => this.layout.language() === 'catalan');
 

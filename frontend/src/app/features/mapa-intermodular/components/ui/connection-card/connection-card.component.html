@@ -19,6 +19,11 @@
       <span class="mapa-relation-type-tag" [class]="'tag-' + conn.relationType">
         {{ getRelationLabel(conn.relationType) }}
       </span>
+      <app-cesta-boton
+        aspecto="mapa-sm"
+        [enCesta]="enCesta()"
+        (anadir)="cesta.anadirConexion(conn)"
+      />
       <button
         class="mapa-btn-action mapa-btn-action--primary mapa-btn-action--sm"
         (click)="createProject.emit(conn)"

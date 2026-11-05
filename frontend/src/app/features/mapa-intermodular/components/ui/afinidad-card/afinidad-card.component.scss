@@ -151,7 +151,9 @@
 
 .afinidad-card__acciones {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  gap: variables.$spacing-2;
 }
 
 @media (max-width: variables.$bp-md) {

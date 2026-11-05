@@ -141,7 +141,7 @@ describe('TourService', () => {
     setTimeout(() => addAllAnchors('mapa'), 150);
     const started = Date.now();
     await run('mapa');
-    expect(config.steps).toHaveLength(5);
+    expect(config.steps).toHaveLength(TOURS.mapa.steps.length);
     expect(Date.now() - started).toBeLessThan(1500);
   });
 

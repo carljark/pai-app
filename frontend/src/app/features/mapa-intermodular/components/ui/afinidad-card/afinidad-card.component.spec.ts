@@ -4,6 +4,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { AfinidadCardComponent } from './afinidad-card.component';
 import { AfinidadesEsoFacade } from '../../../services/afinidades-eso.facade';
 import { AfinidadesEsoService } from '../../../services/afinidades-eso.service';
+import { CestaFacade } from '../../../services/cesta.facade';
 import { LayoutService } from '../../../../../services/layout.service';
 import { AfinidadEso } from '../../../models/afinidad-eso.model';
 import {
@@ -162,6 +163,23 @@ describe('AfinidadCardComponent', () => {
       e.textContent?.replace(/\s+/g, ' ').trim(),
     );
     expect(materias).toEqual(['Matemáticas: CE 2.1', 'Biología y Geología: CE 1.1']);
+  });
+
+  it('«Añadir a la cesta» guarda los criterios de la ficha y lo indica', () => {
+    sessionStorage.clear();
+    render(FICHA_DOS, 'MAT');
+    const boton = () => el.querySelector<HTMLButtonElement>('.cesta-boton')!;
+    const acciones = Array.from(el.querySelectorAll('.afinidad-card__acciones button'));
+    expect(acciones.map((b) => b.textContent?.trim())).toEqual([
+      'Añadir a la cesta',
+      'Crear Proyecto con estos criterios',
+    ]);
+    boton().click();
+    fixture.detectChanges();
+    expect(boton().textContent?.trim()).toBe('En la cesta ✓');
+    expect(boton().disabled).toBe(true);
+    expect(TestBed.inject(CestaFacade).totalClaves()).toBe(3);
+    sessionStorage.clear();
   });
 
   it('emite crearProyecto al pulsar el botón, con el texto en ambos idiomas', () => {

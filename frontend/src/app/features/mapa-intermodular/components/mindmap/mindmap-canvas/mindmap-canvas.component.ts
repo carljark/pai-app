@@ -12,11 +12,19 @@ import {
   untracked,
   viewChild,
 } from '@angular/core';
-import type { MindmapNode, RenderedLink, RenderedNode } from '../../../models/mindmap.model';
+import type {
+  MindmapDropTarget,
+  MindmapNode,
+  RenderedLink,
+  RenderedNode,
+} from '../../../models/mindmap.model';
+import { subjectFor } from '../../../utils/mindmap-drag';
 import {
   RING_GAP,
   fitTransform,
   focusTransform,
+  outward,
+  zoomAroundCenter,
   type ViewTransform,
 } from '../../../utils/mindmap-layout';
 import { attachZoom, type ZoomController } from '../../../utils/mindmap-zoom';
@@ -41,8 +49,11 @@ export class MindmapCanvasComponent {
   radius = input.required<number>();
   focusId = input<string>('root');
   isCa = input.required<boolean>();
+  /** Con destino, las bolas de materia o módulo se pueden arrastrar hasta él (la cesta). */
+  dropTarget = input<MindmapDropTarget | null>(null);
 
   nodeActivate = output<MindmapNode>();
+  unitDrop = output<string>();
 
   private svgRef = viewChild.required<ElementRef<SVGSVGElement>>('svg');
   private zoom: ZoomController | null = null;
@@ -55,7 +66,11 @@ export class MindmapCanvasComponent {
 
   constructor() {
     afterNextRender(() => {
-      this.zoom = attachZoom(this.svgRef().nativeElement, (t) => this.transform.set(t));
+      this.zoom = attachZoom(this.svgRef().nativeElement, (t) => this.transform.set(t), {
+        subject: (t) => (this.dropTarget() ? subjectFor(this.nodes(), t) : null),
+        target: () => this.dropTarget(),
+        drop: (unit) => this.unitDrop.emit(unit),
+      });
       this.recenter(false);
     });
     effect(() => {
@@ -82,11 +97,7 @@ export class MindmapCanvasComponent {
   zoomBy(factor: number): void {
     if (!this.zoom) return;
     const { width, height } = this.zoom.size();
-    const { x, y, k } = this.transform();
-    const cx = width / 2;
-    const cy = height / 2;
-    const next = { x: cx - (cx - x) * factor, y: cy - (cy - y) * factor, k: k * factor };
-    this.zoom.apply(next, true);
+    this.zoom.apply(zoomAroundCenter(this.transform(), factor, width, height), true);
   }
 
   /** Centra la cámara en la rama abierta, desplazada hacia fuera para que se vean sus hijos. */
@@ -99,10 +110,4 @@ export class MindmapCanvasComponent {
     const [x, y] = outward(target.x, target.y, RING_GAP / 2);
     this.zoom.apply(focusTransform(x, y, scale, width, height), animate);
   }
-}
-
-/** Punto desplazado `distance` unidades alejándose del centro. */
-function outward(x: number, y: number, distance: number): [number, number] {
-  const r = Math.hypot(x, y) || 1;
-  return [x + (x / r) * distance, y + (y / r) * distance];
 }

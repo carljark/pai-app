@@ -85,7 +85,13 @@ Los 16 tramos validaron. DeepSeek corrigió dentro de su propia sesión los poco
   - lectura completa de 8 actividades y 2 fichas nuevas en ES/CA.
 
   No hay nombres de personas ni datos oficiales inventados, y el catalán es correcto.
-- **No se hizo la revisión visual en local**, porque Docker no estaba arrancado. Se comprueba en producción tras el despliegue.
+- **No se hizo la revisión visual en local**, porque Docker no estaba arrancado, ni tampoco en producción con navegador. La vista queda cubierta por los specs de `afinidad-actividades` y `afinidad-card`, pero falta comprobarla a ojo.
+- **Despliegue en producción** (5-11-2026) con `./scripts/deploy-prod.sh` del commit `a6901dc`:
+  - copia de seguridad `pai_db_20261105_194646.archive.gz`;
+  - migración `51_reload_afinidades_eso` completada;
+  - `GET /api/afinidades-eso?tab=ESO_1` devuelve 43 fichas y 129 actividades (al menos 3 por ficha; cada materia en 6 fichas o más);
+  - `tab=ESO_2` devuelve sus 29 fichas sin actividades;
+  - contenedores `pai_backend_prod` y `pai_frontend_prod` arriba.
 
 ## Desviaciones respecto al plan
 - **Detección de cambios ajenos en `lanzar.sh`.** Detuvo dos veces la cola (tramos 002 y 013) por falsos positivos: mientras corrían, se estaban editando el frontend y la documentación. Se relanzó sin tocar archivos versionados; los tramos ya validados se saltaron.

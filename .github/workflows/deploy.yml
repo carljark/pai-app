@@ -17,10 +17,6 @@ on:
     workflows: [CI]
     types: [completed]
     branches: [main]
-  # TEMPORAL (tarea 248): probar el despliegue desde la rama antes de integrar en main.
-  # workflow_dispatch solo está disponible cuando el workflow ya está en main. Se quita antes del merge.
-  push:
-    branches: [feature/248_despliegue_automatico_github_actions]
   workflow_dispatch:
     inputs:
       ref:
@@ -41,7 +37,7 @@ jobs:
     name: Construir y publicar ${{ matrix.svc }}
     # Solo commits de main con el CI en verde (o lanzado a mano)
     if: >-
-      github.event_name == 'workflow_dispatch' || github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
       (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
     runs-on: ubuntu-latest
     permissions:

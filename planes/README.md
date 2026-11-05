@@ -4,7 +4,7 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
-- **[248 — Despliegue automático desde main con GitHub Actions](248_plan_despliegue_automatico_github_actions.md)** · _Aprobado_  
+- **[248 — Despliegue automático desde main con GitHub Actions](248_plan_despliegue_automatico_github_actions.md)** · _Implementado (tarea 248)_  
   CI en cada push y PR, y despliegue automático de cada commit de `main` con el CI en verde: imágenes construidas en GitHub y publicadas en GHCR, y el EC2 solo las descarga, con copia de seguridad previa y vuelta atrás a las imágenes anteriores.
 
 - **[247 — Ampliación del mapa de afinidades de 1.º de ESO y actividades conjuntas](247_plan_mapa_eso_1_fichas_y_actividades_conjuntas.md)** · _Implementado (tarea 247)_  

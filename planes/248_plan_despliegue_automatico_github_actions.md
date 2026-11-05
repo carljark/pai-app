@@ -1,7 +1,7 @@
 # Plan 248: Despliegue automático desde main con GitHub Actions
 
 > **Fecha:** 5 de noviembre de 2026
-> **Estado:** Aprobado
+> **Estado:** Implementado (tarea 248)
 > **Partes afectadas:** despliegue / CI / documentación y reglas del agente (AGENTS.md, CLAUDE.md)
 
 ---

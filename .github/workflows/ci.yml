@@ -1,0 +1,48 @@
+name: CI
+
+# Tests completos en cada push (cualquier rama) y en cada PR. Un commit de main en verde dispara
+# el despliegue (deploy.yml). Ver documentation/despliegue_produccion.md.
+on:
+  push:
+  pull_request:
+
+# Un push nuevo a la misma rama cancela el CI anterior de esa rama
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      # Vitest + supertest + mongodb-memory-server, con el umbral de cobertura del 90 %
+      - run: npm run test:cov
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      # --legacy-peer-deps: conflicto de peer de katex con ngx-markdown (ver CLAUDE.md)
+      - run: npm ci --legacy-peer-deps
+      # Lint, tests, cobertura por archivo (check-coverage.js) y comprobación zoneless
+      - run: npm test
+      - run: npm run build -- --configuration production

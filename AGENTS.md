@@ -6,11 +6,17 @@ Estas reglas consolidan las instrucciones globales de `GEMINI.md` y las directri
 
 El agente se encarga de todo el ciclo de cada tarea, salvo que el usuario indique otra cosa:
 
-1. **Rama.** Cambios pequeños y acotados: en la rama de trabajo actual. Tareas grandes (funcionalidad nueva, migraciones, muchos archivos o riesgo alto): rama nueva `feature/NNN_descripcion` creada desde la rama actual, con el número común de la tarea (ver §1.1).
+1. **Rama.** Cambios pequeños y acotados: directamente en `main`. Tareas grandes (funcionalidad nueva, migraciones, muchos archivos o riesgo alto): rama nueva `feature/NNN_descripcion` creada desde `main` actualizado, con el número común de la tarea (ver §1.1).
 2. **Verificación.** Lint y typecheck, y después las suites completas: `cd backend && npm test` y `cd frontend && npm test`. Si algo falla, se corrige (aunque no lo haya causado la tarea) y se vuelve a ejecutar hasta que todo pase.
-3. **Commit y push.** Mensaje en castellano que resuma la tarea. Nunca `push --force`, `reset --hard` ni reescribir historia publicada. No se hace merge a `main`: lo decide el usuario.
-4. **Despliegue en producción** (EC2 Ubuntu, ver `documentation/despliegue_produccion.md`), solo con los tests en verde: copia de seguridad (`scripts/backup-prod-db.sh`), `git pull` de la rama de trabajo y reconstrucción con `docker-compose.prod.yml`; después, comprobar contenedores, migraciones y API. Si el despliegue falla, volver al commit anterior desplegado y avisar.
-5. El agente tiene permiso permanente para desplegar con `./scripts/deploy-prod.sh` sin pedir confirmación. En la fase actual del proyecto no importa cortar generaciones o traducciones en curso; solo hay que avisar antes si el despliegue implica migraciones de datos delicadas.
+3. **Commit y push.** Mensaje en castellano que resuma la tarea. Nunca `push --force`, `reset --hard` ni reescribir historia publicada. Tras el push de una rama `feature/`, el CI de GitHub Actions (`.github/workflows/ci.yml`) debe terminar en verde (`gh run watch`).
+4. **Integración en `main`.** Con los tests y el CI de la rama en verde, el agente integra la rama en `main` (`git merge --ff-only`, o un merge normal si `main` avanzó; nunca rebase de historia publicada) y hace push. **Integrar en `main` es desplegar**: si la tarea trae migraciones de datos delicadas, hay que avisar al usuario antes de integrar.
+5. **Despliegue en producción automático** (EC2 Ubuntu, ver `documentation/despliegue_produccion.md`). Cada commit de `main` con el CI en verde lo despliega `.github/workflows/deploy.yml`:
+   - imágenes construidas en GitHub y publicadas en GHCR;
+   - copia de seguridad de Mongo;
+   - el EC2 descarga y levanta las imágenes;
+   - verificación, con vuelta atrás automática si falla.
+
+   El agente sigue el workflow (`gh run watch`), comprueba la API al terminar y avisa si ha fallado. En la fase actual del proyecto no importa cortar generaciones o traducciones en curso. `./scripts/deploy-prod.sh` (construye en el EC2) es solo una vía de emergencia, cuando Actions no está disponible o el usuario lo pide.
 
 ### 1.1. Numeración común: plan, rama y tarea (obligatorio)
 

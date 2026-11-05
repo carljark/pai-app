@@ -55,8 +55,10 @@ verificar() {
 
 volver_atras() {
   echo "⚠️  La verificación falló: vuelvo a las imágenes anteriores (:previous)." >&2
-  if [ -n "$PREV_COMMIT" ]; then git checkout -q --detach "$PREV_COMMIT"; fi
+  # Se levantan con el docker-compose.prod.yml de este commit: el del commit anterior puede no usar
+  # las imágenes de GHCR (p. ej. uno anterior a la tarea 248). El código vuelve después.
   if levantar previous && verificar; then
+    if [ -n "$PREV_COMMIT" ]; then git checkout -q --detach "$PREV_COMMIT"; fi
     echo "↩️  Restaurada la versión anterior (${PREV_COMMIT:-desconocida}). La base de datos tiene copia en ~/backups/pai." >&2
   else
     echo "❌ La versión anterior tampoco responde. Revisa el EC2 a mano." >&2

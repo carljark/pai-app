@@ -14,18 +14,10 @@ SSH_HOST="${PAI_SSH_HOST:-ubuntu@51.92.83.118}"
 KEEP="${PAI_BACKUP_KEEP:-10}"
 LOCAL_DIR="$(cd "$(dirname "$0")/.." && pwd)/backups"
 
-remote_file=$(ssh -i "$SSH_KEY" -o ConnectTimeout=15 "$SSH_HOST" "KEEP=$KEEP bash -s" <<'REMOTE'
-set -euo pipefail
-dir="$HOME/backups/pai"
-mkdir -p "$dir"
-file="$dir/pai_db_$(date +%Y%m%d_%H%M%S).archive.gz"
-docker exec pai_mongodb_prod mongodump --db pai_db --archive --gzip > "$file" 2> /tmp/pai_dump.log
-gzip -t "$file"
-# Rotación: borra las copias más antiguas por encima de KEEP
-ls -1t "$dir"/pai_db_*.archive.gz | tail -n +"$((KEEP + 1))" | xargs -r rm -f
-echo "$file"
-REMOTE
-)
+# La parte remota es scripts/remote-backup.sh (la misma que usa el despliegue con GitHub Actions).
+# Se envía la copia local por la entrada estándar, así que no depende de la versión desplegada en el EC2.
+remote_file=$(ssh -i "$SSH_KEY" -o ConnectTimeout=15 "$SSH_HOST" "KEEP=$KEEP bash -s" \
+  < "$(dirname "$0")/remote-backup.sh")
 
 mkdir -p "$LOCAL_DIR"
 scp -i "$SSH_KEY" -q "$SSH_HOST:$remote_file" "$LOCAL_DIR/"

@@ -12,6 +12,9 @@ RUN npm run build -- --configuration production
 
 # Etapa 2: Servidor Nginx interno para los archivos estáticos
 FROM nginx:alpine
+# Enlaza el paquete de GHCR con el repositorio y permite limpiar las imágenes de la app en el EC2
+LABEL org.opencontainers.image.source=https://github.com/carljark/pai-app
+LABEL app=pai-app
 # Copiamos la build de Angular a la carpeta que sirve Nginx
 # NOTA: Cambia "frontend" si el angular.json de tu proyecto lo saca a otra ruta
 COPY --from=build /app/dist/frontend/browser /usr/share/nginx/html

@@ -1,0 +1,158 @@
+name: Deploy
+
+# Despliega en el EC2 cada commit de main que pasa el CI. También se puede lanzar a mano desde la
+# pestaña Actions o con `gh workflow run deploy.yml -f ref=<commit>`, p. ej. para volver a una versión
+# anterior. Ver documentation/despliegue_produccion.md.
+#
+# Las imágenes se construyen aquí (runner amd64, como el EC2) y se publican en GHCR; el EC2 solo las
+# descarga. Configuración del repo (Settings):
+#   - Secret   EC2_SSH_KEY      clave privada SSH dedicada a este workflow
+#   - Variable EC2_HOST         IP del EC2
+#   - Variable EC2_USER         usuario SSH (ubuntu)
+#   - Variable EC2_KNOWN_HOSTS  huella del host (ssh-keyscan), para no aceptar uno falso
+#   - Variable DOMAIN           dominio público, para comprobar que responde
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  # TEMPORAL (tarea 248): probar el despliegue desde la rama antes de integrar en main.
+  # workflow_dispatch solo está disponible cuando el workflow ya está en main. Se quita antes del merge.
+  push:
+    branches: [feature/248_despliegue_automatico_github_actions]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Commit, rama o etiqueta a desplegar
+        required: false
+        default: main
+
+# Un despliegue cada vez, sin cancelar el que está en marcha
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  REGISTRY: ghcr.io/carljark
+
+jobs:
+  build:
+    name: Construir y publicar ${{ matrix.svc }}
+    # Solo commits de main con el CI en verde (o lanzado a mano)
+    if: >-
+      github.event_name == 'workflow_dispatch' || github.event_name == 'push' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        include:
+          - svc: backend
+            context: backend
+            dockerfile: backend/Dockerfile
+          - svc: frontend
+            context: frontend
+            dockerfile: frontend/Dockerfile.prod
+    outputs:
+      sha: ${{ steps.sha.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || inputs.ref }}
+
+      - id: sha
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.context }}
+          file: ${{ matrix.dockerfile }}
+          platforms: linux/amd64
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/pai-app-${{ matrix.svc }}:sha-${{ steps.sha.outputs.sha }}
+            ${{ env.REGISTRY }}/pai-app-${{ matrix.svc }}:latest
+          labels: |
+            org.opencontainers.image.revision=${{ steps.sha.outputs.sha }}
+          # Caché de capas por servicio: si solo cambia el frontend, el backend no se reconstruye
+          cache-from: type=gha,scope=${{ matrix.svc }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.svc }}
+
+  deploy:
+    name: Desplegar en el EC2
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://${{ vars.DOMAIN }}
+    permissions:
+      contents: read
+      packages: read
+    env:
+      SHA: ${{ needs.build.outputs.sha }}
+    steps:
+      - name: Preparar SSH
+        env:
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+          EC2_KNOWN_HOSTS: ${{ vars.EC2_KNOWN_HOSTS }}
+          EC2_HOST: ${{ vars.EC2_HOST }}
+          EC2_USER: ${{ vars.EC2_USER }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$EC2_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          cat > ~/.ssh/config <<CONFIG
+          Host ec2
+            HostName $EC2_HOST
+            User $EC2_USER
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            StrictHostKeyChecking yes
+          CONFIG
+
+      # git checkout no toca lo que está ignorado: .env, mongo_data/ y backend/uploads/ siguen intactos.
+      # No se usa rsync --delete (como en trincaunt) porque aquí los datos viven dentro de ~/pai-app.
+      - name: Poner el código del EC2 en el commit
+        id: checkout
+        run: |
+          prev=$(ssh ec2 "cd ~/pai-app && git rev-parse HEAD")
+          echo "prev=$prev" >> "$GITHUB_OUTPUT"
+          ssh ec2 "cd ~/pai-app && git fetch -q origin && git checkout -q --detach '$SHA'"
+          echo "EC2: $prev → $SHA"
+
+      # El token de GitHub solo vale mientras dura este job; se borra del EC2 al terminar
+      - name: Descargar las imágenes y levantar la app
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PREV: ${{ steps.checkout.outputs.prev }}
+        run: |
+          printf '%s' "$GHCR_TOKEN" | ssh ec2 "docker login ghcr.io -u '${{ github.actor }}' --password-stdin"
+          ssh ec2 "PAI_TAG='sha-$SHA' PREV_COMMIT='$PREV' bash ~/pai-app/scripts/remote-deploy.sh"
+
+      - name: Cerrar sesión de GHCR en el EC2
+        if: always()
+        run: ssh ec2 'docker logout ghcr.io' || true
+
+      - name: Comprobar que responde desde fuera
+        env:
+          DOMAIN: ${{ vars.DOMAIN }}
+        run: |
+          for i in $(seq 1 12); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "https://$DOMAIN/" || true)
+            if [ "$code" = "200" ]; then echo "https://$DOMAIN responde 200"; exit 0; fi
+            echo "Intento $i: $code"; sleep 5
+          done
+          echo "::error::https://$DOMAIN responde '$code' tras el despliegue. Revisa: docker logs pai_backend_prod"
+          exit 1

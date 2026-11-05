@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-# Despliega en producción (EC2) la rama de trabajo actual. Ver documentation/despliegue_produccion.md.
+# VÍA DE EMERGENCIA. El despliegue normal lo hace GitHub Actions con cada commit de main
+# (.github/workflows/deploy.yml, tarea 248). Este script solo se usa si Actions o GHCR no están
+# disponibles, o si el usuario lo pide: construye las imágenes EN EL EC2 (memoria justa, usa swap).
+# Las etiqueta como ghcr.io/carljark/pai-app-*:latest (docker-compose.prod.yml), así que el siguiente
+# despliegue con Actions las reemplaza sin más. Ver documentation/despliegue_produccion.md.
+#
+# Despliega en producción (EC2) la rama de trabajo actual.
 #
 # 1. Comprueba que no hay cambios sin commit y que la rama está subida a origin.
 # 2. Hace una copia de seguridad de la base de datos (scripts/backup-prod-db.sh).

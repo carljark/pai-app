@@ -9,7 +9,11 @@ services:
     volumes:
       - ./mongo_data:/data/db
 
+  # Las imágenes se construyen en GitHub Actions y se publican en GHCR (deploy.yml): el EC2 solo
+  # las descarga (PAI_TAG=sha-<commit>). `build:` se conserva para la vía de emergencia
+  # (scripts/deploy-prod.sh), que construye en el EC2. Ver documentation/despliegue_produccion.md.
   backend:
+    image: ghcr.io/carljark/pai-app-backend:${PAI_TAG:-latest}
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -33,6 +37,7 @@ services:
       - mongodb
 
   frontend:
+    image: ghcr.io/carljark/pai-app-frontend:${PAI_TAG:-latest}
     build:
       context: ./frontend
       dockerfile: Dockerfile.prod

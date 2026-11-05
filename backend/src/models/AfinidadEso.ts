@@ -19,6 +19,26 @@ export interface FuenteAfinidad {
   ambito_ca: string;
 }
 
+/**
+ * Actividad conjunta de las materias de una ficha. Usa los mismos campos que las actividades del
+ * mapa de FP, más los criterios que trabaja de cada materia (`{ matematicas: ['7.1'] }`).
+ */
+export interface ActividadAfinidad {
+  /** Identificador estable (`ESO1-22-A1`). */
+  id: string;
+  title_es: string;
+  title_ca: string;
+  motivatingFactor_es: string;
+  motivatingFactor_ca: string;
+  description_es: string;
+  description_ca: string;
+  evidence_es: string;
+  evidence_ca: string;
+  diversitySupport_es: string;
+  diversitySupport_ca: string;
+  criterios: Record<string, string[]>;
+}
+
 /** Ficha de afinidad curricular de la ESO entre dos o tres materias de un curso. */
 export interface AfinidadEsoData {
   /** Identificador estable de la ficha (`ESO1-01`). */
@@ -33,11 +53,14 @@ export interface AfinidadEsoData {
   conceptos_es: string[];
   conceptos_ca: string[];
   fuentes: FuenteAfinidad[];
+  /** Actividades conjuntas de ejemplo (por ahora solo en 1.º). */
+  actividades?: ActividadAfinidad[];
 }
 
-export interface IAfinidadEso extends Document, Omit<AfinidadEsoData, 'id' | 'vinculos' | 'fuentes'> {
+export interface IAfinidadEso extends Document, Omit<AfinidadEsoData, 'id' | 'vinculos' | 'fuentes' | 'actividades'> {
   vinculos: unknown[];
   fuentes: unknown[];
+  actividades?: unknown[];
   tab: string;
   order: number;
   code: string;
@@ -56,7 +79,9 @@ const AfinidadEsoSchema = new Schema<IAfinidadEso>(
     saberes: { type: Schema.Types.Mixed, default: {} },
     conceptos_es: { type: [String], default: [] },
     conceptos_ca: { type: [String], default: [] },
-    fuentes: { type: [Schema.Types.Mixed], default: [] }
+    fuentes: { type: [Schema.Types.Mixed], default: [] },
+    // Sin valor por defecto: las fichas sin actividades (2.º-4.º) no guardan el campo.
+    actividades: { type: [Schema.Types.Mixed], default: undefined }
   },
   { timestamps: true }
 );

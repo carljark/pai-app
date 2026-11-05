@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[247 — Ampliación del mapa de afinidades de 1.º de ESO y actividades conjuntas](247_plan_mapa_eso_1_fichas_y_actividades_conjuntas.md)** · _Implementado (tarea 247)_  
+  Unas 20-25 fichas nuevas en 1.º de ESO (cada materia en al menos 6) y un campo nuevo de actividades conjuntas con al menos 3 por ficha en todo 1.º, redactadas con opencode y DeepSeek V4.1 Flash como en la tarea 245.
+
 - **[246 — Visita guiada y menú de Ayuda para docentes](246_plan_visita_guiada_y_ayuda.md)** · _Implementado (tarea 246)_  
   Bienvenida con elección de idioma para todos los usuarios, botón «Ayuda» con cuatro visitas guiadas cortas (driver.js), preguntas frecuentes y un proyecto de ejemplo bilingüe de solo lectura sobre el que se hace la visita del taller.
 

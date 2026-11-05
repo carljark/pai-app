@@ -61,6 +61,14 @@
     }
   </section>
 
+  @if (afinidad().actividades?.length) {
+    <app-afinidad-actividades
+      [actividades]="afinidad().actividades ?? []"
+      [materias]="materias()"
+      [vinculos]="afinidad().vinculos"
+    />
+  }
+
   <footer class="afinidad-card__conceptos">
     <span class="afinidad-card__subtitulo">{{
       isCa() ? 'Conceptes comuns:' : 'Conceptos comunes:'

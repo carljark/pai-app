@@ -124,14 +124,69 @@ describe('Datos de afinidades de la ESO: paridad ES/CA', () => {
 });
 
 describe('Datos de afinidades de la ESO: cobertura mínima', () => {
+  // 1.º se amplió en la tarea 247 hasta al menos 6 fichas por materia.
+  const minimo: Record<string, number> = { '1º': 6, '2º': 3, '3º': 3, '4º': 3 };
   for (const curso of ['1º', '2º', '3º', '4º']) {
-    it(`cada materia de ${curso} aparece en al menos 3 fichas del curso`, () => {
+    it(`cada materia de ${curso} aparece en al menos ${minimo[curso]} fichas del curso`, () => {
       const delCurso = fichas.filter(f => f.curso === curso);
       const insuficientes = materiasJson
         .filter(m => Object.keys(m.cursos).includes(curso))
         .map(m => ({ code: m.code, fichas: delCurso.filter(f => f.materias.includes(m.code)).length }))
-        .filter(x => x.fichas < 3);
+        .filter(x => x.fichas < minimo[curso]!);
       expect(insuficientes).toEqual([]);
     });
   }
+});
+
+describe('Datos de afinidades de la ESO: actividades conjuntas', () => {
+  const CAMPOS = ['title', 'motivatingFactor', 'description', 'evidence', 'diversitySupport'];
+  const deCurso1 = fichas.filter(f => f.curso === '1º');
+  const actividades = deCurso1.flatMap(f => (f.actividades ?? []).map(a => ({ f, a })));
+  const normal = (t: string) => t.toLowerCase().normalize('NFD').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+
+  it('cada ficha de 1.º tiene al menos 3 actividades con ids <ficha>-A<n> consecutivos', () => {
+    for (const f of deCurso1) {
+      const ids = (f.actividades ?? []).map(a => a.id);
+      expect(ids.length, f.id).toBeGreaterThanOrEqual(3);
+      expect(ids, f.id).toEqual(ids.map((_, i) => `${f.id}-A${i + 1}`));
+    }
+  });
+
+  it('todos los campos ES/CA están rellenos y son distintos entre idiomas', () => {
+    for (const { a } of actividades) {
+      for (const c of CAMPOS) {
+        const es = (a as any)[`${c}_es`], ca = (a as any)[`${c}_ca`];
+        expect(typeof es === 'string' && es.trim().length > 0, `${a.id} ${c}_es`).toBe(true);
+        expect(typeof ca === 'string' && ca.trim().length > 0, `${a.id} ${c}_ca`).toBe(true);
+        expect(ca, `${a.id} ${c}`).not.toBe(es);
+      }
+    }
+  });
+
+  it('cita criterios válidos del curso de al menos 2 materias de la ficha', () => {
+    for (const { f, a } of actividades) {
+      const citadas = Object.keys(a.criterios);
+      expect(citadas.length, a.id).toBeGreaterThanOrEqual(2);
+      for (const [m, ids] of Object.entries(a.criterios)) {
+        expect(f.materias, `${a.id}: ${m}`).toContain(m);
+        expect(ids.length, `${a.id} ${m}`).toBeGreaterThan(0);
+        const criterios = materia(m).competencias.flatMap((c: any) => c.criterios);
+        for (const id of ids) {
+          expect(criterios.some((c: any) => c.id === id && c.cursos.includes(f.curso)), `${a.id}: ${m} ${id}`).toBe(true);
+        }
+      }
+    }
+  });
+
+  it('los títulos no se repiten dentro del curso', () => {
+    for (const lang of ['es', 'ca']) {
+      const titulos = actividades.map(({ a }) => normal((a as any)[`title_${lang}`]));
+      const repetidos = titulos.filter((t, i) => titulos.indexOf(t) !== i);
+      expect(repetidos, lang).toEqual([]);
+    }
+  });
+
+  it('2.º, 3.º y 4.º no tienen actividades', () => {
+    expect(fichas.filter(f => f.curso !== '1º' && f.actividades !== undefined).map(f => f.id)).toEqual([]);
+  });
 });

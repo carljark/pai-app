@@ -1,4 +1,5 @@
 import {
+  ActividadAfinidad,
   AfinidadEso,
   AfinidadesCurso,
 } from '../features/mapa-intermodular/models/afinidad-eso.model';
@@ -27,6 +28,28 @@ export const FICHA_DOS: AfinidadEso = {
   conceptos_es: ['Energía', 'Medida'],
   conceptos_ca: ['Energia', 'Mesura'],
   fuentes: [{ materia: 'BYG', opcion: 2, ambito_es: 'Ámbito de BYG', ambito_ca: 'Àmbit de BYG' }],
+};
+
+/** Actividad conjunta de BYG y MAT; cita un criterio de MAT sin texto oficial en los vínculos. */
+export const ACTIVIDAD_BYG_MAT: ActividadAfinidad = {
+  id: 'f2-A1',
+  title_es: 'Muestreo del patio',
+  title_ca: 'Mostreig del pati',
+  motivatingFactor_es: '¿Cuántas plantas hay?',
+  motivatingFactor_ca: 'Quantes plantes hi ha?',
+  description_es: 'Se cuentan y se representan.',
+  description_ca: 'Es compten i es representen.',
+  evidence_es: 'Informe',
+  evidence_ca: 'Informe final',
+  diversitySupport_es: 'Plantilla guiada',
+  diversitySupport_ca: 'Plantilla guiada amb suports',
+  criterios: { MAT: ['2.1'], BYG: ['1.1'] },
+};
+
+/** La ficha de dos materias con una actividad conjunta. */
+export const FICHA_CON_ACTIVIDADES: AfinidadEso = {
+  ...FICHA_DOS,
+  actividades: [ACTIVIDAD_BYG_MAT],
 };
 
 /** Ficha de tres materias (ampliación) con dos fuentes de ámbito distinto. */

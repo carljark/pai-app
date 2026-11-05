@@ -1,0 +1,46 @@
+<section class="afinidad-actividades">
+  <h4 class="afinidad-actividades__titulo">
+    {{ isCa() ? 'Activitats conjuntes' : 'Actividades conjuntas' }}
+  </h4>
+
+  @for (a of actividades(); track a.id) {
+    <details class="afinidad-actividades__item">
+      <summary class="afinidad-actividades__nombre">{{ texto(a, 'title') }}</summary>
+
+      <div class="afinidad-actividades__cuerpo">
+        <p class="afinidad-actividades__idea">
+          <strong>Idea motivadora:</strong>
+          {{ texto(a, 'motivatingFactor') }}
+        </p>
+        <p class="afinidad-actividades__desarrollo">
+          <strong>{{ isCa() ? 'Desenvolupament:' : 'Desarrollo:' }}</strong>
+          {{ texto(a, 'description') }}
+        </p>
+
+        <div class="afinidad-actividades__meta">
+          <p class="afinidad-actividades__caja">
+            <strong>{{ isCa() ? 'Producte / Evidència:' : 'Producto / Evidencia:' }}</strong>
+            {{ texto(a, 'evidence') }}
+          </p>
+          <p class="afinidad-actividades__caja">
+            <strong>{{ isCa() ? 'Atenció a la diversitat:' : 'Atención a la diversidad:' }}</strong>
+            {{ texto(a, 'diversitySupport') }}
+          </p>
+        </div>
+
+        <ul class="afinidad-actividades__criterios">
+          @for (m of materiasDe(a); track m) {
+            <li class="afinidad-actividades__materia">
+              <strong>{{ nombre(m) }}:</strong>
+              @for (c of criterios(a, m); track c.id) {
+                <span class="afinidad-actividades__criterio" [attr.title]="c.texto || null">
+                  {{ sigla() }} {{ c.id }}
+                </span>
+              }
+            </li>
+          }
+        </ul>
+      </div>
+    </details>
+  }
+</section>

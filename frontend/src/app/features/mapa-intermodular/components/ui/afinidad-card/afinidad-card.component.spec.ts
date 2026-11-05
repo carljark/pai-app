@@ -6,7 +6,12 @@ import { AfinidadesEsoFacade } from '../../../services/afinidades-eso.facade';
 import { AfinidadesEsoService } from '../../../services/afinidades-eso.service';
 import { LayoutService } from '../../../../../services/layout.service';
 import { AfinidadEso } from '../../../models/afinidad-eso.model';
-import { AFINIDADES_1, FICHA_DOS, FICHA_TRES } from '../../../../../testing/afinidades.mock';
+import {
+  AFINIDADES_1,
+  FICHA_CON_ACTIVIDADES,
+  FICHA_DOS,
+  FICHA_TRES,
+} from '../../../../../testing/afinidades.mock';
 
 describe('AfinidadCardComponent', () => {
   let fixture: ComponentFixture<AfinidadCardComponent>;
@@ -145,6 +150,18 @@ describe('AfinidadCardComponent', () => {
       p.textContent?.replace(/\s+/g, ' ').trim(),
     );
     expect(sabers).toEqual(['Matemáticas: .', 'Biología y Geología: Saber A; Saber B.']);
+  });
+
+  it('muestra las actividades conjuntas solo si la ficha las tiene', () => {
+    render(FICHA_DOS, 'MAT');
+    expect(el.querySelector('app-afinidad-actividades')).toBeNull();
+    render(FICHA_CON_ACTIVIDADES, 'MAT');
+    expect(el.querySelector('app-afinidad-actividades')).not.toBeNull();
+    expect(text('.afinidad-actividades__nombre')).toBe('Muestreo del patio');
+    const materias = Array.from(el.querySelectorAll('.afinidad-actividades__materia')).map((e) =>
+      e.textContent?.replace(/\s+/g, ' ').trim(),
+    );
+    expect(materias).toEqual(['Matemáticas: CE 2.1', 'Biología y Geología: CE 1.1']);
   });
 
   it('emite crearProyecto al pulsar el botón, con el texto en ambos idiomas', () => {

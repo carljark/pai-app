@@ -9,6 +9,7 @@ import { CE } from '../models/CE';
 import { up as ingestEsoUp } from '../migrations/23_ingest_ces_eso_ordinaria';
 import { up as ingestAfinidadesUp, loadAfinidades, afinidadDocs } from '../migrations/25_ingest_afinidades_eso';
 import { up as quitarOrigenUp } from '../migrations/38_quitar_origen_afinidades_eso';
+import { up as reloadAfinidadesUp } from '../migrations/51_reload_afinidades_eso';
 
 const CURRICULO_DIR = path.resolve(__dirname, '../data/curriculo-eso');
 const materiasJson = fs.readdirSync(CURRICULO_DIR).filter(f => f.endsWith('.json'))
@@ -148,6 +149,16 @@ describe('GET /api/afinidades-eso', () => {
       expect(res.body.materias.every((m: any) => m.total === 0)).toBe(true);
     });
 
+    it('devuelve las actividades conjuntas de 1.º y ninguna en 2.º', async () => {
+      const uno = await request(app).get('/api/afinidades-eso?tab=ESO_1');
+      const esperadas = loadAfinidades().filter(f => f.curso === '1º');
+      expect(uno.body.afinidades.map((a: any) => a.actividades)).toEqual(esperadas.map(f => f.actividades));
+      expect(uno.body.afinidades.every((a: any) => a.actividades.length >= 3)).toBe(true);
+      const dos = await request(app).get('/api/afinidades-eso?tab=ESO_2');
+      expect(dos.body.afinidades.length).toBeGreaterThan(0);
+      expect(dos.body.afinidades.every((a: any) => a.actividades === undefined)).toBe(true);
+    });
+
     it('no mezcla materias ni fichas de otros cursos', async () => {
       const res = await request(app).get('/api/afinidades-eso?tab=ESO_3');
       expect(res.body.curso).toBe('3º');
@@ -188,6 +199,21 @@ describe('Migración 25: afinidades de la ESO', () => {
   it('el modelo rechaza una pestaña que no es de afinidades', async () => {
     const [ficha] = afinidadDocs([loadAfinidades()[0]!]);
     await expect(new AfinidadEso({ ...ficha, tab: 'FPB' }).validate()).rejects.toThrow(/tab/);
+  });
+});
+
+describe('Migración 51: recarga las afinidades con las fichas y actividades de 1.º', () => {
+  it('sustituye la colección por los JSON, sin duplicar al reejecutarse', async () => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    await AfinidadEso.create({ ...afinidadDocs([loadAfinidades()[0]!])[0], code: 'ESO1-VIEJA' });
+    await reloadAfinidadesUp();
+    await reloadAfinidadesUp();
+    expect(await AfinidadEso.countDocuments()).toBe(loadAfinidades().length);
+    expect(await AfinidadEso.exists({ code: 'ESO1-VIEJA' })).toBeNull();
+    const primero = await AfinidadEso.find({ tab: 'ESO_1' }).lean();
+    expect(primero.every(d => (d.actividades?.length ?? 0) >= 3)).toBe(true);
+    const otros = await AfinidadEso.collection.find({ tab: { $ne: 'ESO_1' } }).toArray();
+    expect(otros.some(d => 'actividades' in d)).toBe(false);
   });
 });
 

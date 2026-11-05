@@ -3,11 +3,13 @@ import { AfinidadEso, CriterioTexto, VinculoAfinidad } from '../../../models/afi
 import { AfinidadesEsoFacade } from '../../../services/afinidades-eso.facade';
 import { materiasEnOrden } from '../../../utils/afinidad-seleccion';
 import { LayoutService } from '../../../../../services/layout.service';
+import { AfinidadActividadesComponent } from '../afinidad-actividades/afinidad-actividades.component';
 
-/** Ficha de afinidad con el formato del documento de centro: ámbito, criterios, saberes y conceptos. */
+/** Ficha de afinidad con el formato del documento de centro: ámbito, criterios, saberes, actividades y conceptos. */
 @Component({
   selector: 'app-afinidad-card',
   standalone: true,
+  imports: [AfinidadActividadesComponent],
   templateUrl: './afinidad-card.component.html',
   styleUrl: './afinidad-card.component.scss',
 })

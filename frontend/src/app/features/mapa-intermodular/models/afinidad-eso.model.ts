@@ -23,6 +23,22 @@ export interface FuenteAfinidad {
   ambito_ca: string;
 }
 
+/** Actividad conjunta de las materias de una ficha, con los criterios que trabaja de cada una. */
+export interface ActividadAfinidad {
+  id: string;
+  title_es: string;
+  title_ca: string;
+  motivatingFactor_es: string;
+  motivatingFactor_ca: string;
+  description_es: string;
+  description_ca: string;
+  evidence_es: string;
+  evidence_ca: string;
+  diversitySupport_es: string;
+  diversitySupport_ca: string;
+  criterios: Record<string, string[]>;
+}
+
 /** Ficha de afinidad curricular entre dos o tres materias de un curso de la ESO. */
 export interface AfinidadEso {
   id: string;
@@ -35,6 +51,8 @@ export interface AfinidadEso {
   conceptos_es: string[];
   conceptos_ca: string[];
   fuentes: FuenteAfinidad[];
+  /** Actividades conjuntas de ejemplo (por ahora solo en 1.º). */
+  actividades?: ActividadAfinidad[];
 }
 
 /** Materia que se imparte en el curso, con el número de fichas en que aparece. */

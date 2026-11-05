@@ -83,6 +83,12 @@ El usuario decidió que el despliegue sea **solo desde `main`** y que **sea el a
   - segunda prueba, con el script corregido: levantó `:previous`, verificó, dejó el código en el commit anterior y terminó en error.
 - **Segundo despliegue con Actions** (commit `79d4d8b`), partiendo del estado tras la vuelta atrás: correcto. Las imágenes construidas antes en el EC2 ya no están; solo quedan la versión actual y `previous`.
 
+- **Integración en `main` y primer despliegue automático real** (5-11-2026):
+  - `main` avanzó con fast-forward de `ea1fec2` a `f9c004c`, sin reescribir historia;
+  - el CI de `main` pasó y disparó `deploy.yml` (`workflow_run`), que terminó en verde: copia `pai_db_20261105_204151.archive.gz`, migraciones al día y `https://plappin.duckdns.org` con 200;
+  - el EC2 queda en `f9c004c` con las imágenes `sha-f9c004c`, y la API devuelve las 43 fichas y 129 actividades de 1.º;
+  - disco al 83 %.
+
 ## Desviaciones respecto al plan
 - **Disparador temporal por push a la rama** en lugar de `workflow_dispatch` para la prueba previa a `main` (ver «Decisiones técnicas»).
 - **Corrección del orden de la vuelta atrás**, detectada en la prueba.

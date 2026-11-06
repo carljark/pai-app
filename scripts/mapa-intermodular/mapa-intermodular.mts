@@ -38,6 +38,13 @@ const COMUNES: Record<string, { tipo: string; relacion: string; icon: string }> 
   '1709': { tipo: 'comun', relacion: 'empleabilidad', icon: 'briefcase' },
   '1710': { tipo: 'comun', relacion: 'empleabilidad', icon: 'briefcase' },
   '1713': { tipo: 'transversal', relacion: 'tecnica', icon: 'folder-kanban' },
+  // FP Básica (grado básico, tarea 250): ámbitos con competencias específicas, itinerario y proyecto.
+  '3159': { tipo: 'comun', relacion: 'empleabilidad', icon: 'briefcase' },
+  '3160': { tipo: 'transversal', relacion: 'tecnica', icon: 'folder-kanban' },
+  '3161': { tipo: 'comun', relacion: 'comunicacion', icon: 'languages' },
+  '3162': { tipo: 'comun', relacion: 'comunicacion', icon: 'languages' },
+  '3163': { tipo: 'comun', relacion: 'ciencias', icon: 'atom' },
+  '3164': { tipo: 'comun', relacion: 'ciencias', icon: 'atom' },
 };
 
 type Lang = (typeof LANGS)[number];
@@ -83,11 +90,21 @@ async function loadRas(nivelId: string): Promise<Ra[]> {
   throw new Error(`No hay ningún backend/src/data/ras_*.data.ts con tipoNivel ${nivelId}`);
 }
 
-const raNum = (raId: string) => raId.replace(/^RA/, '');
-const letterOf = (criterio: string) => criterio.trim().charAt(0);
-/** Clave corta de un criterio («0011-1a»); sin prefijo si el código del módulo tiene letras («1a»). */
+/** Número de la unidad: «RA2» → «2»; también las competencias específicas de los ámbitos («CE2»). */
+const raNum = (raId: string) => raId.replace(/^(RA|CE)/, '');
+/** Clave de un criterio dentro de su unidad: su letra («a») o, en los ámbitos, su número («1.1»). */
+const letterOf = (criterio: string) => criterio.trim().match(/^(\d+\.\d+|\p{L})/u)?.[1] ?? criterio.trim().charAt(0);
+const esNumerico = (letra: string) => letra.includes('.');
+/**
+ * Clave corta de un criterio («0011-1a»); sin prefijo si el código del módulo tiene letras («1a»).
+ * Los criterios numerados de los ámbitos ya incluyen la competencia: «3161-1.1».
+ */
 const critKey = (modulo: string, ra: string, letra: string) =>
-  /[a-z]/i.test(modulo) ? `${raNum(ra)}${letra}` : `${modulo}-${raNum(ra)}${letra}`;
+  esNumerico(letra) ? `${modulo}-${letra}`
+    : /[a-z]/i.test(modulo) ? `${raNum(ra)}${letra}` : `${modulo}-${raNum(ra)}${letra}`;
+/** Clave completa con que el desarrollo de una actividad cita el criterio. */
+const citaDe = (modulo: string, ra: string, letra: string) =>
+  esNumerico(letra) ? `${modulo}-${letra}` : `${modulo}-${raNum(ra)}${letra}`;
 
 // ───────────────────────────── ficha ─────────────────────────────
 
@@ -179,7 +196,7 @@ function checkRelacion(rel: Relacion, byModule: Map<string, Ra[]>, where: string
   });
 }
 
-const CITA = /(?<![\p{L}\d])([A-Z]*\d+)-(\d+)([a-z])(?![\p{L}])/gu;
+const CITA = /(?<![\p{L}\d])[A-Z]*\d+-(?:\d+\.\d+(?!\d)|\d+[a-z](?![\p{L}]))/gu;
 const citas = (text: unknown) => (typeof text === 'string' ? [...text.matchAll(CITA)].map((m) => m[0]) : []);
 
 /** Las citas «0011-1a» del desarrollo coinciden en ES y CA y son criterios de la relación. */
@@ -187,7 +204,7 @@ function checkCitas(act: Actividad, rel: Relacion, where: string) {
   const es = citas(act.desarrollo_es);
   const ca = citas(act.desarrollo_ca);
   if (es.join() !== ca.join()) fail(`${where}: las citas de criterios difieren entre ES (${es}) y CA (${ca})`);
-  const propias = [rel.a, rel.b].flatMap((l) => (l?.criterios ?? []).map((c) => `${l.modulo}-${raNum(l.ra)}${c}`));
+  const propias = [rel.a, rel.b].flatMap((l) => (l?.criterios ?? []).map((c) => citaDe(l.modulo, l.ra, c)));
   const ajenas = es.filter((c) => !propias.includes(c));
   if (ajenas.length) fail(`${where}: cita criterios que no son de la relación (${ajenas.join(', ')})`);
   const sinCitar = propias.filter((c) => !es.includes(c));
@@ -277,7 +294,7 @@ function checkGrados(grado: Map<string, number>, byModule: Map<string, Ra[]>) {
 function checkCobertura(cubiertos: Set<string>, byModule: Map<string, Ra[]>) {
   const faltan = [...byModule].flatMap(([code, ras]) =>
     ras.flatMap((ra) => ra.criterios_es.map(letterOf).filter((l) => !cubiertos.has(`${code} ${ra.id}${l}`))
-      .map((l) => `${code}-${raNum(ra.id)}${l}`)));
+      .map((l) => citaDe(code, ra.id, l))));
   if (faltan.length) warnings.push(`Criterios sin ninguna conexión (${faltan.length}): ${faltan.join(', ')}`);
 }
 
@@ -322,12 +339,13 @@ function connection(rel: Relacion, src: Lado, dst: Lado, ctx: BuildCtx, n: numbe
     targetModuleCode: dst.modulo, targetModuleName_es: dstMod.nombre_es, targetModuleName_ca: dstMod.nombre_ca,
     targetRaCode: dst.ra, targetRaText_es: dstRa.description_es, targetRaText_ca: dstRa.description_ca,
     sourceCriteria: own.join(', '),
-    criteriaKeys: src.criterios.flatMap((l) => [...new Set([l, `${raNum(src.ra)}${l}`, `${src.modulo}-${raNum(src.ra)}${l}`])]),
+    criteriaKeys: src.criterios.flatMap((l) => esNumerico(l) ? [l, citaDe(src.modulo, src.ra, l)]
+      : [...new Set([l, `${raNum(src.ra)}${l}`, `${src.modulo}-${raNum(src.ra)}${l}`])]),
     relatedCriteria: relatedCriteria(dst, dstRa, dstMod),
     relationType: dstMod.relacion,
     justification_es: rel.justificacion_es.trim(), justification_ca: rel.justificacion_ca.trim(),
     activities: rel.actividades.map((a, k) =>
-      activity(a, `act_${src.modulo}_${raNum(src.ra)}${src.criterios[0]}_${n}_${k + 1}`)),
+      activity(a, `act_${src.modulo}_${raNum(src.ra)}${src.criterios[0]!.replace('.', '_')}_${n}_${k + 1}`)),
   };
 }
 
@@ -401,9 +419,57 @@ async function construir() {
   console.log(args.salida ? `Mapa escrito en ${args.salida}` : 'Validación correcta (sin --salida no se escribe nada).');
 }
 
-const commands: Record<string, () => Promise<void>> = { ficha, construir };
-if (!commands[args.cmd] || !args.nivel || !args.curso || !args.trabajo) {
-  console.error('Uso: mapa-intermodular.mts <ficha|construir> --nivel <ID> --curso <1º|2º> --trabajo <dir> [--salida <json>]');
+/** Escribe avisos y errores y termina con código 1 si hay errores. */
+function informar(resumen: string) {
+  warnings.forEach((w) => console.warn(`⚠️  ${w}`));
+  errors.forEach((e) => console.error(`❌ ${e}`));
+  console.log(errors.length ? `\n${errors.length} errores.` : `✅ ${resumen}: 0 errores.`);
+  if (errors.length) process.exit(1);
+}
+
+/**
+ * Valida `plan.json` (relaciones sin actividades) antes de redactar: lados, pares únicos,
+ * 6-15 relaciones por unidad, criterios cubiertos y justificaciones ES/CA (tarea 250).
+ */
+async function plan() {
+  const { byModule } = await loadCourse(args.nivel!, args.curso!);
+  const rels = JSON.parse(fs.readFileSync(path.join(args.trabajo!, 'plan.json'), 'utf-8')) as Relacion[];
+  rels.forEach((r, i) => {
+    const where = `plan.json #${i + 1}`;
+    Object.assign(r, { _origen: where, actividades: [] });
+    checkLado(r.a, byModule, where);
+    checkLado(r.b, byModule, where);
+    if (r.a?.modulo === r.b?.modulo) fail(`${where}: los dos lados son del mismo módulo (${r.a.modulo})`);
+    checkTextos(r, ['justificacion'], where);
+  });
+  const pares = checkGlobal(rels, byModule);
+  informar(`plan con ${pares} relaciones`);
+}
+
+/**
+ * Valida un archivo de relaciones redactado por tramos (`--archivo relaciones_NNN.json`): sus
+ * relaciones y actividades y los títulos repetidos con los demás archivos, sin exigir aún el mapa
+ * completo (grados y cobertura los comprueba `construir`).
+ */
+async function comprobar() {
+  const { byModule } = await loadCourse(args.nivel!, args.curso!);
+  const rels = readRelaciones(args.trabajo!);
+  rels.forEach((r) => checkRelacion(r, byModule, r._origen!));
+  const titulos = new Map<string, Set<string>>();
+  for (const rel of rels) {
+    for (const lado of [rel.a, rel.b]) checkTitulos(titulos, `${lado?.modulo} ${lado?.ra}`, rel);
+  }
+  const propio = (m: string) => m.includes(`${args.archivo} #`);
+  errors.splice(0, errors.length, ...errors.filter(propio));
+  warnings.splice(0, warnings.length, ...warnings.filter(propio));
+  const acts = rels.filter((r) => r._origen!.startsWith(`${args.archivo} #`)).reduce((s, r) => s + r.actividades.length, 0);
+  informar(`${args.archivo}: ${acts} actividades`);
+}
+
+const commands: Record<string, () => Promise<void>> = { ficha, construir, plan, comprobar };
+if (!commands[args.cmd] || !args.nivel || !args.curso || !args.trabajo || (args.cmd === 'comprobar' && !args.archivo)) {
+  console.error('Uso: mapa-intermodular.mts <ficha|plan|comprobar|construir> --nivel <ID> --curso <1º|2º> --trabajo <dir>'
+    + ' [--archivo <relaciones_NNN.json>] [--salida <json>]');
   process.exit(1);
 }
 await commands[args.cmd]!();

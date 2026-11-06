@@ -1,0 +1,54 @@
+{
+  "nivel": "FP_BASICA",
+  "curso": "2º",
+  "modulos": {
+    "3005": {
+      "nombre_es": "Atención al cliente",
+      "nombre_ca": "Atenció al client",
+      "tipo": "especifico",
+      "relacion": "cliente",
+      "color": "#f59e0b",
+      "icon": "users"
+    },
+    "3063": {
+      "nombre_es": "Maquillaje",
+      "nombre_ca": "Maquillatge",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#f43f5e",
+      "icon": "palette"
+    },
+    "3065": {
+      "nombre_es": "Cambio de color del cabello",
+      "nombre_ca": "Canvi de color del cabell",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#d946ef",
+      "icon": "brush"
+    },
+    "3160": {
+      "nombre_es": "Proyecto intermodular de aprendizaje colaborativo",
+      "nombre_ca": "Projecte intermodular d'aprenentatge col·laboratiu",
+      "tipo": "transversal",
+      "relacion": "tecnica",
+      "color": "#a78bfa",
+      "icon": "folder-kanban"
+    },
+    "3162": {
+      "nombre_es": "Comunicación y Ciencias Sociales II",
+      "nombre_ca": "Comunicació i Ciències Socials II",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#8b5cf6",
+      "icon": "message-circle"
+    },
+    "3164": {
+      "nombre_es": "Ciencias Aplicadas II",
+      "nombre_ca": "Ciències Aplicades II",
+      "tipo": "comun",
+      "relacion": "ciencias",
+      "color": "#10b981",
+      "icon": "flask"
+    }
+  }
+}

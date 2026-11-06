@@ -13,6 +13,12 @@ scripts/mapa-intermodular/tres-actividades/
 # Catálogo, tramos y herramientas de opencode/DeepSeek para las fichas y actividades de 1.º de ESO (tarea 247)
 scripts/afinidades-eso/actividades/
 
+# Tramos y herramientas de opencode/DeepSeek para rehacer el mapa de FP Básica (tarea 250); el plan y las
+# pistas son intermedios: la fuente del mapa son config.json y relaciones*.json
+scripts/mapa-intermodular/fpb-2026/
+scripts/mapa-intermodular/fuentes/*/pistas.md
+scripts/mapa-intermodular/fuentes/*/plan.json
+
 # Correcciones
 correcciones/
 # Dependencies

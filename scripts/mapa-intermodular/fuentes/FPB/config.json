@@ -1,0 +1,62 @@
+{
+  "nivel": "FP_BASICA",
+  "curso": "1º",
+  "modulos": {
+    "3060": {
+      "nombre_es": "Preparación del entorno profesional",
+      "nombre_ca": "Preparació de l'entorn professional",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#64748b",
+      "icon": "layout"
+    },
+    "3061": {
+      "nombre_es": "Cuidados estéticos básicos de uñas",
+      "nombre_ca": "Cures estètiques bàsiques d'ungles",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#ec4899",
+      "icon": "sparkles"
+    },
+    "3062": {
+      "nombre_es": "Depilación mecánica y decoloración del vello superfluo",
+      "nombre_ca": "Depilació mecànica i decoloració del borrissol",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#8b5cf6",
+      "icon": "scissors"
+    },
+    "3064": {
+      "nombre_es": "Lavado y cambios de forma del cabello",
+      "nombre_ca": "Rentada i canvis de forma dels cabells",
+      "tipo": "especifico",
+      "relacion": "tecnica",
+      "color": "#06b6d4",
+      "icon": "droplet"
+    },
+    "3159": {
+      "nombre_es": "Itinerario personal para la empleabilidad",
+      "nombre_ca": "Itinerari personal per a l'ocupabilitat",
+      "tipo": "comun",
+      "relacion": "empleabilidad",
+      "color": "#f59e0b",
+      "icon": "compass"
+    },
+    "3161": {
+      "nombre_es": "Comunicación y Ciencias Sociales I",
+      "nombre_ca": "Comunicació i Ciències Socials I",
+      "tipo": "comun",
+      "relacion": "comunicacion",
+      "color": "#3b82f6",
+      "icon": "message-circle"
+    },
+    "3163": {
+      "nombre_es": "Ciencias Aplicadas I",
+      "nombre_ca": "Ciències Aplicades I",
+      "tipo": "comun",
+      "relacion": "ciencias",
+      "color": "#059669",
+      "icon": "atom"
+    }
+  }
+}

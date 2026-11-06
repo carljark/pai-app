@@ -1,7 +1,7 @@
 # Copias de seguridad y traspaso de proyectos entre instalaciones
 
 ## Copia de seguridad de producción
-- Producción: EC2 Ubuntu `51.92.83.118` (`plappin.duckdns.org`). El contenedor de base de datos es `pai_mongodb_prod` (MongoDB 4.4) y la base, `pai_db`.
+- Producción: EC2 Ubuntu `51.92.83.118` (`plappin.org`). El contenedor de base de datos es `pai_mongodb_prod` (MongoDB 4.4) y la base, `pai_db`.
 - `./scripts/backup-prod-db.sh`, desde el Mac del proyecto:
   1. Ejecuta por SSH `mongodump --db pai_db --archive --gzip` dentro del contenedor. Es solo lectura.
   2. Guarda la copia en el EC2, en `~/backups/pai/pai_db_<fecha>.archive.gz`, y conserva las 10 últimas (`PAI_BACKUP_KEEP`).

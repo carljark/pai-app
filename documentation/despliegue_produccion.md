@@ -1,7 +1,10 @@
 # Despliegue en producción
 
 ## Entorno
-- **Servidor:** EC2 Ubuntu `51.92.83.118` (`plappin.duckdns.org`), con 908 MB de RAM y 2 GB de swap.
+- **Servidor:** EC2 Ubuntu `51.92.83.118`, con 908 MB de RAM y 2 GB de swap.
+- **Dominio:** `plappin.org` (también `www.plappin.org`). `plappin.duckdns.org` es el dominio antiguo: sigue funcionando, pero puede abandonarse, así que no se usa en documentación, scripts ni enlaces nuevos.
+  - El Nginx del host (`/etc/nginx/sites-available/default`) sirve los tres nombres con el mismo `server_name`.
+  - El certificado de Let's Encrypt se llama `plappin.duckdns.org` y cubre los tres dominios. **Antes de abandonar el de DuckDNS hay que reemitirlo sin él**: si el dominio deja de resolver al EC2, la renovación falla para el certificado entero, y con ella `plappin.org`. El comando sería `sudo certbot --nginx --cert-name plappin.duckdns.org -d plappin.org -d www.plappin.org`, que escribe en producción y necesita autorización del usuario.
   - Acceso: `ssh -i ~/UJI/co2univ/co2univ-key.pem ubuntu@51.92.83.118`.
   - Comparte la máquina con otras aplicaciones (trincaunt, contenedor `mi-mongo`): no se tocan.
 - **Código:** `~/pai-app`, un clon del repositorio puesto en el commit desplegado (`git checkout --detach`).
@@ -52,7 +55,7 @@ Solo hay un despliegue a la vez (`concurrency: deploy-production`).
    5. **si falla, vuelta atrás automática:** levanta `:previous` con el compose del commit nuevo (el del anterior puede no usar GHCR), lo verifica, deja el código en el commit anterior y termina en error;
    6. limpieza de las etiquetas `sha-*` antiguas y de las imágenes sin uso con `label=app=pai-app`.
 4. `docker logout ghcr.io` en el EC2, siempre.
-5. Comprobación de que `https://plappin.duckdns.org` responde 200 desde fuera.
+5. Comprobación de que `https://plappin.org` (variable `DOMAIN`) responde 200 desde fuera.
 
 Las migraciones las aplica el propio backend al arrancar (`prestart` → `npm run migrate`). La base de datos **no** se restaura automáticamente. Si una migración la dejó mal, se restaura la copia con `mongorestore --archive --gzip --drop` dentro de `pai_mongodb_prod`, siempre con confirmación del usuario.
 
@@ -63,7 +66,7 @@ Las migraciones las aplica el propio backend al arrancar (`prestart` → `npm ru
 | Variable | `EC2_HOST` | `51.92.83.118` |
 | Variable | `EC2_USER` | `ubuntu` |
 | Variable | `EC2_KNOWN_HOSTS` | Salida de `ssh-keyscan` del EC2, contrastada con el `known_hosts` local |
-| Variable | `DOMAIN` | `plappin.duckdns.org` |
+| Variable | `DOMAIN` | `plappin.org` (hasta el 6-11-2026, `plappin.duckdns.org`) |
 | Environment | `production` | Sin reglas de protección |
 
 Para **revocar** el acceso del workflow, se borra la línea `github-actions-pai-app` de `authorized_keys` en el EC2. Para **rotar** la clave, se genera otra, se autoriza y se actualiza el secreto con `gh secret set EC2_SSH_KEY`.

@@ -39,7 +39,21 @@ Si `plappin.duckdns.org` dejaba de resolver al EC2, la validación HTTP-01 falla
    - `certbot renew --dry-run` funciona;
    - `https://plappin.duckdns.org` ya da error de certificado.
 
-`plappin.duckdns.org` sigue en el `server_name` del Nginx, así que por HTTP aún responde y redirige a su propio HTTPS.
+## Redirección de `plappin.duckdns.org` a `plappin.org`
+A petición del usuario, el dominio antiguo redirige al nuevo:
+
+1. Nueva copia de seguridad: `/etc/nginx/sites-available/default.bak-252b`.
+2. Certificado propio solo para el dominio antiguo, `plappin-duckdns-redireccion`. Primero se hizo la prueba en seco y después la emisión real.
+   - El navegador valida el certificado antes de seguir una redirección HTTPS, así que hace falta.
+   - Va separado para que, si un día no se renueva, no afecte a `plappin.org`.
+3. En el Nginx del host:
+   - un bloque `server` 443 para `plappin.duckdns.org` con `return 301 https://plappin.org$request_uri`;
+   - el bloque de la aplicación ya solo tiene `plappin.org` y `www.plappin.org`;
+   - en el bloque del puerto 80, `plappin.duckdns.org` redirige directamente a `https://plappin.org`.
+4. `nginx -t`, recarga y comprobación:
+   - `http://` y `https://plappin.duckdns.org/...` responden con un 301 a `https://plappin.org/...`, con la ruta y los parámetros;
+   - `https://plappin.org` y `www` responden 200.
+5. `certbot renew --dry-run`: los dos certificados de Plappin se renuevan bien.
 
 ## Verificación
 - `gh variable list`: `DOMAIN = plappin.org`.
@@ -47,3 +61,4 @@ Si `plappin.duckdns.org` dejaba de resolver al EC2, la validación HTTP-01 falla
 - Antes de la reemisión, `curl` a `https://plappin.org`, `https://www.plappin.org` y `https://plappin.duckdns.org`: respondían 200, y `/api/afinidades-eso?tab=ESO_2` devolvía datos en los tres.
 - Tests: los que ejecuta el hook de `push`. No hay cambios de código.
 - Tras la reemisión: `https://plappin.org` y `https://www.plappin.org` responden 200 con el certificado nuevo.
+- Tras la redirección: `curl -L https://plappin.duckdns.org/proyectos` termina en `https://plappin.org/proyectos` con un 200.

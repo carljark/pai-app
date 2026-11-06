@@ -105,6 +105,11 @@ El 3160 tiene 6 conexiones en cada uno de sus 5 RA.
   - `tab=FPB_2` devuelve 6 módulos, 33 unidades y 228 conexiones, con el 3160 y sus 5 RA;
   - `GET /api/ras?lang=catalan` devuelve los nombres y criterios en catalán de 3159, 3160 y 3162.
 - Revisión de muestras de los planes y de las actividades de los dos cursos, hecha por Claude Code: actividades integradas (una sola tarea por actividad), metodologías variadas y catalán correcto.
+- **Producción** (6-11-2026):
+  - integración en `main` con `--ff-only` (`eac55b1`);
+  - CI en verde y workflow Deploy completado;
+  - `https://plappin.duckdns.org/api/mapa-intermodular?tab=FPB` devuelve 7 módulos y 254 conexiones;
+  - `tab=FPB_2` devuelve 6 módulos y 228 conexiones, con el 3160.
 - **Pendientes:**
   - la revisión visual en el navegador, porque el servidor de Playwright no conectó;
   - el coste de DeepSeek según OpenRouter, que no se ha consultado.

@@ -124,8 +124,8 @@ describe('Datos de afinidades de la ESO: paridad ES/CA', () => {
 });
 
 describe('Datos de afinidades de la ESO: cobertura mínima', () => {
-  // 1.º se amplió en la tarea 247 hasta al menos 6 fichas por materia.
-  const minimo: Record<string, number> = { '1º': 6, '2º': 3, '3º': 3, '4º': 3 };
+  // 1.º se amplió en la tarea 247, y 2.º y 3.º en la 251, hasta al menos 6 fichas por materia.
+  const minimo: Record<string, number> = { '1º': 6, '2º': 6, '3º': 6, '4º': 3 };
   for (const curso of ['1º', '2º', '3º', '4º']) {
     it(`cada materia de ${curso} aparece en al menos ${minimo[curso]} fichas del curso`, () => {
       const delCurso = fichas.filter(f => f.curso === curso);
@@ -140,12 +140,14 @@ describe('Datos de afinidades de la ESO: cobertura mínima', () => {
 
 describe('Datos de afinidades de la ESO: actividades conjuntas', () => {
   const CAMPOS = ['title', 'motivatingFactor', 'description', 'evidence', 'diversitySupport'];
-  const deCurso1 = fichas.filter(f => f.curso === '1º');
-  const actividades = deCurso1.flatMap(f => (f.actividades ?? []).map(a => ({ f, a })));
+  // 1.º tiene actividades desde la tarea 247, y 2.º y 3.º desde la 251.
+  const CON_ACTIVIDADES = ['1º', '2º', '3º'];
+  const conActividades = fichas.filter(f => CON_ACTIVIDADES.includes(f.curso));
+  const actividades = conActividades.flatMap(f => (f.actividades ?? []).map(a => ({ f, a })));
   const normal = (t: string) => t.toLowerCase().normalize('NFD').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 
-  it('cada ficha de 1.º tiene al menos 3 actividades con ids <ficha>-A<n> consecutivos', () => {
-    for (const f of deCurso1) {
+  it('cada ficha de 1.º, 2.º y 3.º tiene al menos 3 actividades con ids <ficha>-A<n> consecutivos', () => {
+    for (const f of conActividades) {
       const ids = (f.actividades ?? []).map(a => a.id);
       expect(ids.length, f.id).toBeGreaterThanOrEqual(3);
       expect(ids, f.id).toEqual(ids.map((_, i) => `${f.id}-A${i + 1}`));
@@ -179,14 +181,16 @@ describe('Datos de afinidades de la ESO: actividades conjuntas', () => {
   });
 
   it('los títulos no se repiten dentro del curso', () => {
-    for (const lang of ['es', 'ca']) {
-      const titulos = actividades.map(({ a }) => normal((a as any)[`title_${lang}`]));
-      const repetidos = titulos.filter((t, i) => titulos.indexOf(t) !== i);
-      expect(repetidos, lang).toEqual([]);
+    for (const curso of CON_ACTIVIDADES) {
+      for (const lang of ['es', 'ca']) {
+        const titulos = actividades.filter(({ f }) => f.curso === curso).map(({ a }) => normal((a as any)[`title_${lang}`]));
+        const repetidos = titulos.filter((t, i) => titulos.indexOf(t) !== i);
+        expect(repetidos, `${curso} ${lang}`).toEqual([]);
+      }
     }
   });
 
-  it('2.º, 3.º y 4.º no tienen actividades', () => {
-    expect(fichas.filter(f => f.curso !== '1º' && f.actividades !== undefined).map(f => f.id)).toEqual([]);
+  it('4.º no tiene actividades', () => {
+    expect(fichas.filter(f => !CON_ACTIVIDADES.includes(f.curso) && f.actividades !== undefined).map(f => f.id)).toEqual([]);
   });
 });

@@ -1,7 +1,7 @@
 # Plan 251: Ampliación de los mapas de afinidades de 2.º y 3.º de ESO y actividades conjuntas
 
 > **Fecha:** 6 de noviembre de 2026
-> **Estado:** Aprobado
+> **Estado:** Implementado (tarea 251)
 > **Partes afectadas:** backend (datos, tests) / migraciones / despliegue. El frontend ya muestra actividades desde la tarea 247.
 
 ---

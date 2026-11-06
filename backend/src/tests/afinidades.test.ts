@@ -10,6 +10,7 @@ import { up as ingestEsoUp } from '../migrations/23_ingest_ces_eso_ordinaria';
 import { up as ingestAfinidadesUp, loadAfinidades, afinidadDocs } from '../migrations/25_ingest_afinidades_eso';
 import { up as quitarOrigenUp } from '../migrations/38_quitar_origen_afinidades_eso';
 import { up as reloadAfinidadesUp } from '../migrations/51_reload_afinidades_eso';
+import { up as reloadAfinidades23Up } from '../migrations/53_reload_afinidades_eso_2_3';
 
 const CURRICULO_DIR = path.resolve(__dirname, '../data/curriculo-eso');
 const materiasJson = fs.readdirSync(CURRICULO_DIR).filter(f => f.endsWith('.json'))
@@ -149,14 +150,16 @@ describe('GET /api/afinidades-eso', () => {
       expect(res.body.materias.every((m: any) => m.total === 0)).toBe(true);
     });
 
-    it('devuelve las actividades conjuntas de 1.º y ninguna en 2.º', async () => {
-      const uno = await request(app).get('/api/afinidades-eso?tab=ESO_1');
-      const esperadas = loadAfinidades().filter(f => f.curso === '1º');
-      expect(uno.body.afinidades.map((a: any) => a.actividades)).toEqual(esperadas.map(f => f.actividades));
-      expect(uno.body.afinidades.every((a: any) => a.actividades.length >= 3)).toBe(true);
-      const dos = await request(app).get('/api/afinidades-eso?tab=ESO_2');
-      expect(dos.body.afinidades.length).toBeGreaterThan(0);
-      expect(dos.body.afinidades.every((a: any) => a.actividades === undefined)).toBe(true);
+    it('devuelve las actividades conjuntas de 1.º, 2.º y 3.º y ninguna en 4.º', async () => {
+      for (const [tab, curso] of [['ESO_1', '1º'], ['ESO_2', '2º'], ['ESO_3', '3º']] as const) {
+        const res = await request(app).get(`/api/afinidades-eso?tab=${tab}`);
+        const esperadas = loadAfinidades().filter(f => f.curso === curso);
+        expect(res.body.afinidades.map((a: any) => a.actividades), tab).toEqual(esperadas.map(f => f.actividades));
+        expect(res.body.afinidades.every((a: any) => a.actividades.length >= 3), tab).toBe(true);
+      }
+      const cuatro = await request(app).get('/api/afinidades-eso?tab=ESO_4');
+      expect(cuatro.body.afinidades.length).toBeGreaterThan(0);
+      expect(cuatro.body.afinidades.every((a: any) => a.actividades === undefined)).toBe(true);
     });
 
     it('no mezcla materias ni fichas de otros cursos', async () => {
@@ -212,8 +215,24 @@ describe('Migración 51: recarga las afinidades con las fichas y actividades de 
     expect(await AfinidadEso.exists({ code: 'ESO1-VIEJA' })).toBeNull();
     const primero = await AfinidadEso.find({ tab: 'ESO_1' }).lean();
     expect(primero.every(d => (d.actividades?.length ?? 0) >= 3)).toBe(true);
-    const otros = await AfinidadEso.collection.find({ tab: { $ne: 'ESO_1' } }).toArray();
-    expect(otros.some(d => 'actividades' in d)).toBe(false);
+    const cuarto = await AfinidadEso.collection.find({ tab: 'ESO_4' }).toArray();
+    expect(cuarto.some(d => 'actividades' in d)).toBe(false);
+  });
+});
+
+describe('Migración 53: recarga las afinidades con las fichas y actividades de 2.º y 3.º', () => {
+  it('carga las fichas nuevas con actividades, sin duplicar al reejecutarse', async () => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    await AfinidadEso.create({ ...afinidadDocs([loadAfinidades()[0]!])[0], code: 'ESO2-VIEJA', tab: 'ESO_2', curso: '2º' });
+    await reloadAfinidades23Up();
+    await reloadAfinidades23Up();
+    expect(await AfinidadEso.countDocuments()).toBe(loadAfinidades().length);
+    expect(await AfinidadEso.exists({ code: 'ESO2-VIEJA' })).toBeNull();
+    for (const [tab, nueva] of [['ESO_2', 'ESO2-48'], ['ESO_3', 'ESO3-53']] as const) {
+      const docs = await AfinidadEso.find({ tab }).lean();
+      expect(docs.every(d => (d.actividades?.length ?? 0) >= 3), tab).toBe(true);
+      expect(docs.some(d => d.code === nueva), tab).toBe(true);
+    }
   });
 });
 

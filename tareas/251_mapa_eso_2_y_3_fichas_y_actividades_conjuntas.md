@@ -63,7 +63,7 @@ No hay código nuevo de aplicación: el modelo, la API y el componente `Afinidad
   - la variedad de comienzos y de productos;
   - que no haya apóstrofos rectos en catalán.
 - **No medido:** el coste de DeepSeek en OpenRouter. La previsión era de unos 0,6 $.
-- Despliegue: ver el commit de integración y el seguimiento del workflow Deploy.
+- **Producción** (6-11-2026): integrado en `main` con `--ff-only` (`f80290f`), CI y Deploy en verde. `https://plappin.duckdns.org/api/afinidades-eso` devuelve 48 fichas y 144 actividades en `ESO_2`, 53 y 159 en `ESO_3`, al menos 6 fichas por materia en 1.º-3.º y ninguna actividad en `ESO_4`.
 
 ## Desviaciones respecto al plan
 - **ESO2-32:** el catálogo se corrigió durante la redacción (ver «Decisiones técnicas»).

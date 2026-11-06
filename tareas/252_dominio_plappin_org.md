@@ -21,17 +21,29 @@ El usuario quiere ir sustituyendo `plappin.duckdns.org` por `plappin.org`, y pue
 
 Los registros antiguos de `tareas/` y `planes/` conservan `plappin.duckdns.org`, porque describen lo que se hizo entonces.
 
-## Pendiente antes de abandonar `plappin.duckdns.org`
-Hay que reemitir el certificado sin ese dominio. Si deja de resolver al EC2, la validación HTTP-01 falla y certbot no renueva el certificado entero, así que también caería `plappin.org`:
+## Certificado reemitido sin DuckDNS
+Si `plappin.duckdns.org` dejaba de resolver al EC2, la validación HTTP-01 fallaría y certbot no renovaría el certificado entero, así que también caería `plappin.org`. Con autorización del usuario, el 6-11-2026 se reemitió así:
 
-```bash
-sudo certbot --nginx --cert-name plappin.duckdns.org -d plappin.org -d www.plappin.org
-```
+1. Copias de seguridad en el EC2:
+   - `/etc/nginx/sites-available/default.bak-252`;
+   - `/etc/letsencrypt` en `letsencrypt.bak-252`.
+2. Prueba en seco, que fue bien:
+   ```bash
+   sudo certbot certonly --nginx --cert-name plappin.duckdns.org -d plappin.org -d www.plappin.org --dry-run --non-interactive
+   ```
+3. Reemisión con el mismo comando, sin `--dry-run`.
+   - Se usó `certonly` y se mantuvo el nombre del certificado para que la ruta en `/etc/letsencrypt/live/` no cambiara.
+   - Así no hubo que tocar la configuración de Nginx: bastó con `nginx -t` y `systemctl reload nginx`.
+4. Resultado:
+   - el certificado cubre `plappin.org` y `www.plappin.org` y caduca el 4-2-2027;
+   - `certbot renew --dry-run` funciona;
+   - `https://plappin.duckdns.org` ya da error de certificado.
 
-Después se quita del `server_name` del Nginx del host y de `nginx_default.conf`. Son escrituras en producción: requieren autorización del usuario.
+`plappin.duckdns.org` sigue en el `server_name` del Nginx, así que por HTTP aún responde y redirige a su propio HTTPS.
 
 ## Verificación
 - `gh variable list`: `DOMAIN = plappin.org`.
 - `certbot certificates` (solo lectura por SSH): dominios y caducidad indicados arriba.
-- `curl` a `https://plappin.org`, `https://www.plappin.org` y `https://plappin.duckdns.org`: responden 200, y `/api/afinidades-eso?tab=ESO_2` devuelve datos en los tres.
+- Antes de la reemisión, `curl` a `https://plappin.org`, `https://www.plappin.org` y `https://plappin.duckdns.org`: respondían 200, y `/api/afinidades-eso?tab=ESO_2` devolvía datos en los tres.
 - Tests: los que ejecuta el hook de `push`. No hay cambios de código.
+- Tras la reemisión: `https://plappin.org` y `https://www.plappin.org` responden 200 con el certificado nuevo.

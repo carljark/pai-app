@@ -4,7 +4,7 @@
 - **Servidor:** EC2 Ubuntu `51.92.83.118`, con 908 MB de RAM y 2 GB de swap.
 - **Dominio:** `plappin.org` (también `www.plappin.org`). `plappin.duckdns.org` es el dominio antiguo: sigue funcionando, pero puede abandonarse, así que no se usa en documentación, scripts ni enlaces nuevos.
   - El Nginx del host (`/etc/nginx/sites-available/default`) sirve los tres nombres con el mismo `server_name`.
-  - El certificado de Let's Encrypt se llama `plappin.duckdns.org` y cubre los tres dominios. **Antes de abandonar el de DuckDNS hay que reemitirlo sin él**: si el dominio deja de resolver al EC2, la renovación falla para el certificado entero, y con ella `plappin.org`. El comando sería `sudo certbot --nginx --cert-name plappin.duckdns.org -d plappin.org -d www.plappin.org`, que escribe en producción y necesita autorización del usuario.
+  - Certificado de Let's Encrypt: se llama `plappin.duckdns.org` por razones históricas, pero desde el 6-11-2026 solo cubre `plappin.org` y `www.plappin.org`. Por eso `https://plappin.duckdns.org` da error de certificado. Lo renueva el temporizador de certbot.
   - Acceso: `ssh -i ~/UJI/co2univ/co2univ-key.pem ubuntu@51.92.83.118`.
   - Comparte la máquina con otras aplicaciones (trincaunt, contenedor `mi-mongo`): no se tocan.
 - **Código:** `~/pai-app`, un clon del repositorio puesto en el commit desplegado (`git checkout --detach`).

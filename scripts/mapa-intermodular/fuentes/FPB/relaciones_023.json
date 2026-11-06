@@ -1,0 +1,389 @@
+[
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE5",
+      "criterios": [
+        "5.1",
+        "5.2"
+      ]
+    },
+    "justificacion_es": "Los datos de existencias y de stock se organizan en tablas y se comunican con claridad al equipo del salón.",
+    "justificacion_ca": "Les dades d'existències i d'estoc s'organitzen en taules i es comuniquen amb claredat a l'equip del saló.",
+    "actividades": [
+      {
+        "titulo_es": "Inventario del almacén con tabla de datos",
+        "titulo_ca": "Inventari del magatzem amb taula de dades",
+        "contexto_es": "El centro de FP de Inca recibe un pedido mixto de productos de peluquería sin albarán claro y hay que ordenarlo antes del taller.",
+        "contexto_ca": "El centre de FP d'Inca rep una comanda mixta de productes de perruqueria sense albarà clar i cal ordenar-la abans del taller.",
+        "desarrollo_es": "El alumnado identifica tipos y aplicaciones de cada producto recibido (3060-3a) y elabora una tabla de existencias con cantidades mínimas (3060-3j). Después analiza si los datos del albarán cuadran con lo recibido (3163-5.2) y comunica los resultados al grupo con un gráfico sencillo (3163-5.1).",
+        "desarrollo_ca": "L'alumnat identifica tipus i aplicacions de cada producte rebut (3060-3a) i elabora una taula d'existències amb quantitats mínimes (3060-3j). Després analitza si les dades de l'albarà quadren amb el que s'ha rebut (3163-5.2) i comunica els resultats al grup amb un gràfic senzill (3163-5.1).",
+        "evidencia_es": "Tabla de existencias y gráfico de barras con el recuento real.",
+        "evidencia_ca": "Taula d'existències i gràfic de barres amb el recompte real.",
+        "dua_es": "Plantilla de tabla con las columnas ya rotuladas y calculadora para el alumnado que lo necesite.",
+        "dua_ca": "Plantilla de taula amb les columnes ja rotulades i calculadora per a l'alumnat que ho necessiti.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Estudio de caso del champú caducado",
+        "titulo_ca": "Estudi de cas del xampú caducat",
+        "contexto_es": "En un salón de Manacor aparece un lote de champú con la fecha vencida y hay que decidir qué hacer con él.",
+        "contexto_ca": "En un saló de Manacor apareix un lot de xampú amb la data vençuda i cal decidir què fer-ne.",
+        "desarrollo_es": "A partir de la ficha técnica del producto, el alumnado reconoce sus características y aplicaciones (3060-3a) y valora críticamente la información de la etiqueta (3163-5.2). Luego explica al equipo si el producto sigue siendo apto y cómo gestionar el stock restante (3060-3j), presentando su conclusión en una ficha resumen (3163-5.1).",
+        "desarrollo_ca": "A partir de la fitxa tècnica del producte, l'alumnat reconeix les seves característiques i aplicacions (3060-3a) i valora críticament la informació de l'etiqueta (3163-5.2). Després explica a l'equip si el producte encara és apte i com gestionar l'estoc restant (3060-3j), presentant la seva conclusió en una fitxa resum (3163-5.1).",
+        "evidencia_es": "Ficha resumen con la decisión razonada sobre el lote.",
+        "evidencia_ca": "Fitxa resum amb la decisió raonada sobre el lot.",
+        "dua_es": "Versión del caso en lectura fácil y posibilidad de responder con un audio.",
+        "dua_ca": "Versió del cas en lectura fàcil i possibilitat de respondre amb un àudio.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Simulación del recuento mensual de existencias",
+        "titulo_ca": "Simulació del recompte mensual d'existències",
+        "contexto_es": "Es el día del inventario en la peluquería escuela de Palma y el alumnado reparte los roles de almacén.",
+        "contexto_ca": "És el dia de l'inventari a la perruqueria escola de Palma i l'alumnat reparteix els rols de magatzem.",
+        "desarrollo_es": "Cada pareja revisa una familia de productos, describe para qué sirve cada uno (3060-3a) y anota las unidades que quedan frente al stock previsto (3060-3j). Con los datos recogidos comparan el pedido con la realidad y detectan diferencias (3163-5.2), y después exponen sus hallazgos en una puesta en común ordenada (3163-5.1).",
+        "desarrollo_ca": "Cada parella revisa una família de productes, descriu per a què serveix cadascun (3060-3a) i anota les unitats que queden davant l'estoc previst (3060-3j). Amb les dades recollides comparen la comanda amb la realitat i detecten diferències (3163-5.2), i després exposen les seves troballes en una posada en comú ordenada (3163-5.1).",
+        "evidencia_es": "Hoja de recuento por familias con las diferencias señaladas.",
+        "evidencia_ca": "Full de recompte per famílies amb les diferències assenyalades.",
+        "dua_es": "Reparto de roles según fortalezas y un compañero de apoyo en cada pareja.",
+        "dua_ca": "Repartiment de rols segons fortaleses i un company de suport a cada parella.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "i",
+        "k"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE6",
+      "criterios": [
+        "6.1"
+      ]
+    },
+    "justificacion_es": "Clasificar mercancías por condiciones de conservación y seguridad aplica procedimientos matemáticos y científicos en un contexto profesional real.",
+    "justificacion_ca": "Classificar mercaderies per condicions de conservació i seguretat aplica procediments matemàtics i científics en un context professional real.",
+    "actividades": [
+      {
+        "titulo_es": "Etiquetado por familias de conservación",
+        "titulo_ca": "Etiquetatge per famílies de conservació",
+        "contexto_es": "El almacén del centro de FP de Ibiza acumula productos sin señalizar y hay que reorganizarlo por criterios de conservación.",
+        "contexto_ca": "El magatzem del centre de FP d'Eivissa acumula productes sense senyalitzar i cal reorganitzar-lo per criteris de conservació.",
+        "desarrollo_es": "Las baldas se reparten según las condiciones de conservación de cada producto (3060-3i) y la zona se deja ordenada y limpia (3060-3e). Para decidirlo se aplican criterios científicos de temperatura y luz (3163-6.1) y se colocan las señalizaciones de seguridad y medioambiente que correspondan (3060-3k).",
+        "desarrollo_ca": "Les prestatgeries es reparteixen segons les condicions de conservació de cada producte (3060-3i) i la zona es deixa ordenada i neta (3060-3e). Per decidir-ho s'apliquen criteris científics de temperatura i llum (3163-6.1) i es col·loquen les senyalitzacions de seguretat i mediambient que corresponguin (3060-3k).",
+        "evidencia_es": "Plano del almacén reordenado con etiquetas de familia.",
+        "evidencia_ca": "Plànol del magatzem reordenat amb etiquetes de família.",
+        "dua_es": "Pictogramas en las estanterías para apoyar la clasificación.",
+        "dua_ca": "Pictogrames a les prestatgeries per donar suport a la classificació.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Investigación guiada de la caducidad",
+        "titulo_ca": "Recerca guiada de la caducitat",
+        "contexto_es": "Un salón de Ciutadella necesita saber cuánto dura cada producto y dónde debe guardarlo.",
+        "contexto_ca": "Un saló de Ciutadella necessita saber quant dura cada producte i on l'ha de guardar.",
+        "desarrollo_es": "Por equipos, el alumnado investiga la fecha de caducidad y las condiciones de conservación de varios productos (3060-3i). Mide la temperatura de la sala y la humedad (3163-6.1) y comprueba que el almacén sigue limpio y ordenado (3060-3e). Termina revisando las normas de seguridad y de residuos del local (3060-3k).",
+        "desarrollo_ca": "Per equips, l'alumnat investiga la data de caducitat i les condicions de conservació de diversos productes (3060-3i). Mesura la temperatura de la sala i la humitat (3163-6.1) i comprova que el magatzem continua net i ordenat (3060-3e). Acaba revisant les normes de seguretat i de residus del local (3060-3k).",
+        "evidencia_es": "Informe de mediciones con la ubicación recomendada.",
+        "evidencia_ca": "Informe de mesures amb la ubicació recomanada.",
+        "dua_es": "Instrumentos de medida con escala grande y guion de pasos numerados.",
+        "dua_ca": "Instruments de mesura amb escala gran i guió de passos numerats.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Gamificación de la inspección de seguridad",
+        "titulo_ca": "Gamificació de la inspecció de seguretat",
+        "contexto_es": "El centro de FP de Menorca propone un reto por puntos para dejar el almacén a punto para la inspección.",
+        "contexto_ca": "El centre de FP de Menorca proposa un repte per punts per deixar el magatzem a punt per a la inspecció.",
+        "desarrollo_es": "En grupos, el alumnado busca productos mal clasificados o fuera de su sitio (3060-3i) y suma puntos al dejar las baldas limpias y ordenadas (3060-3e). Cada equipo justifica sus cambios con un criterio matemático de capacidad o peso (3163-6.1) y revisa las señales de seguridad y medioambiente (3060-3k).",
+        "desarrollo_ca": "En grups, l'alumnat cerca productes mal classificats o fora del seu lloc (3060-3i) i suma punts en deixar les prestatgeries netes i ordenades (3060-3e). Cada equip justifica els seus canvis amb un criteri matemàtic de capacitat o pes (3163-6.1) i revisa les senyals de seguretat i mediambient (3060-3k).",
+        "evidencia_es": "Registro de puntos con las mejoras realizadas.",
+        "evidencia_ca": "Registre de punts amb les millores fetes.",
+        "dua_es": "Ayudas visuales de las normas y retos por niveles de dificultad.",
+        "dua_ca": "Ajudes visuals de les normes i reptes per nivells de dificultat.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3062",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "justificacion_es": "Registrar la cita y aplicar las normas de recepción se practica en la preparación del cliente para la depilación, con ropa y útiles ya dispuestos.",
+    "justificacion_ca": "Registrar la cita i aplicar les normes de recepció es practica en la preparació del client per a la depilació, amb roba i estris ja disposats.",
+    "actividades": [
+      {
+        "titulo_es": "Recepción de la clienta de depilación",
+        "titulo_ca": "Recepció de la clienta de depilació",
+        "contexto_es": "Una clienta llega al salón de Inca pidiendo una depilación de medias piernas y hay que recibirla correctamente.",
+        "contexto_ca": "Una clienta arriba al saló d'Inca demanant una depilació de mitges cames i cal rebre-la correctament.",
+        "desarrollo_es": "El alumnado analiza cómo saludar y acomodar a la clienta (3060-4a) y registra la cita y el servicio solicitado en la agenda (3060-4b). Antes de empezar, se prepara con la ropa de trabajo y la higiene de manos (3062-3a) y relaciona los cosméticos y aparatos de la depilación mecánica (3062-3d).",
+        "desarrollo_ca": "L'alumnat analitza com saludar i acomodar la clienta (3060-4a) i registra la cita i el servei sol·licitat a l'agenda (3060-4b). Abans de començar, es prepara amb la roba de treball i la higiene de mans (3062-3a) i relaciona els cosmètics i els aparells de la depilació mecànica (3062-3d).",
+        "evidencia_es": "Agenda con la cita anotada y mesa de trabajo preparada.",
+        "evidencia_ca": "Agenda amb la cita anotada i taula de treball preparada.",
+        "dua_es": "Guion de recepción con las palabras clave señaladas.",
+        "dua_ca": "Guió de recepció amb les paraules clau assenyalades.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Juego de rol de la cita olvidada",
+        "titulo_ca": "Joc de rol de la cita oblidada",
+        "contexto_es": "En el salón de Palma una clienta llega sin cita para depilarse y el alumnado debe atenderla sin perder las formas.",
+        "contexto_ca": "Al saló de Palma una clienta arriba sense cita per depilar-se i l'alumnat ha d'atendre-la sense perdre les formes.",
+        "desarrollo_es": "Se escenifican distintas maneras de recibir a la clienta (3060-4a) y de anotar una cita nueva con el vocabulario profesional de la agenda (3060-4b). Mientras espera, el profesional se prepara con ropa y manos limpias (3062-3a) y escoge los materiales de depilación que usará (3062-3d).",
+        "desarrollo_ca": "S'escenifiquen diferents maneres de rebre la clienta (3060-4a) i d'anotar una cita nova amb el vocabulari professional de l'agenda (3060-4b). Mentre espera, el professional es prepara amb roba i mans netes (3062-3a) i tria els materials de depilació que emprarà (3062-3d).",
+        "evidencia_es": "Grabación breve de la escena con la agenda cumplimentada.",
+        "evidencia_ca": "Enregistrament breu de l'escena amb l'agenda emplenada.",
+        "dua_es": "Tarjetas de apoyo con frases de cortesía para la improvisación.",
+        "dua_ca": "Targetes de suport amb frases de cortesia per a la improvisació.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Puesta en común del protocolo de recepción",
+        "titulo_ca": "Posada en comú del protocol d'acollida",
+        "contexto_es": "El centro de FP de Inca quiere fijar un protocolo de recepción común para todos los servicios del taller.",
+        "contexto_ca": "El centre de FP d'Inca vol fixar un protocol d'acollida comú per a tots els serveis del taller.",
+        "desarrollo_es": "Cada grupo propone y defiende normas de comportamiento para recibir al cliente (3060-4a) y un modelo de registro de citas claro y ordenado (3060-4b). Después acuerdan qué ropa e higiene de manos debe seguir el profesional (3062-3a) y qué cosméticos y aparatos debe tener preparados la mesa de depilación (3062-3d).",
+        "desarrollo_ca": "Cada grup proposa i defensa normes de comportament per rebre el client (3060-4a) i un model de registre de cites clar i ordenat (3060-4b). Després acorden quina roba i higiene de mans ha de seguir el professional (3062-3a) i quins cosmètics i aparells ha de tenir preparats la taula de depilació (3062-3d).",
+        "evidencia_es": "Protocolo de recepción consensuado por escrito.",
+        "evidencia_ca": "Protocol d'acollida consensuat per escrit.",
+        "dua_es": "Turnos de palabra guiados por una barra de tiempo visible.",
+        "dua_ca": "Torns de paraula guiats per una barra de temps visible.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA4",
+      "criterios": [
+        "d",
+        "e",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "3064",
+      "ra": "RA3",
+      "criterios": [
+        "d",
+        "h",
+        "i"
+      ]
+    },
+    "justificacion_es": "La ficha del cliente, la postura ergonómica y los equipos de protección se completan al acomodar y lavar el cabello, anotando los cosméticos usados.",
+    "justificacion_ca": "La fitxa del client, la postura ergonòmica i els equips de protecció es completen en acomodar i rentar el cabell, anotant els cosmètics emprats.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha y postura en el lavacabezas",
+        "titulo_ca": "Fitxa i postura al rentacaps",
+        "contexto_es": "En el salón de Palma una clienta va a lavarse el cabello y el alumnado debe preparar su ficha y su postura.",
+        "contexto_ca": "Al saló de Palma una clienta es rentarà el cabell i l'alumnat ha de preparar la seva fitxa i la seva postura.",
+        "desarrollo_es": "El alumnado pregunta a la clienta los datos que faltan y los anota en la ficha (3060-4d), y le indica la posición ergonómica correcta en el lavacabezas (3060-4e). Ajusta también su propia postura de trabajo (3064-3d), protege a la clienta con el capote y la toalla (3060-4g) y se pone los guantes (3064-3i). Al terminar, registra los cosméticos usados en las dos fichas (3064-3h).",
+        "desarrollo_ca": "L'alumnat pregunta a la clienta les dades que falten i les anota a la fitxa (3060-4d), i li indica la posició ergonòmica correcta al rentacaps (3060-4e). Ajusta també la seva pròpia postura de treball (3064-3d), protegeix la clienta amb el capot i la tovallola (3060-4g) i es posa els guants (3064-3i). En acabar, registra els cosmètics emprats a les dues fitxes (3064-3h).",
+        "evidencia_es": "Ficha de cliente y de servicio completas con la postura correcta.",
+        "evidencia_ca": "Fitxa de client i de servei completes amb la postura correcta.",
+        "dua_es": "Ficha con campos numerados y apoyo visual de las posturas correctas.",
+        "dua_ca": "Fitxa amb camps numerats i suport visual de les postures correctes.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Estudio de caso de la postura forzada",
+        "titulo_ca": "Estudi de cas de la postura forçada",
+        "contexto_es": "Una clienta con movilidad reducida acude al centro de FP de Ibiza y hay que adaptar el lavado y la ficha.",
+        "contexto_ca": "Una clienta amb mobilitat reduïda acudeix al centre de FP d'Eivissa i cal adaptar la rentada i la fitxa.",
+        "desarrollo_es": "A partir del caso, el alumnado decide qué información necesita recoger en la ficha según sus características (3060-4d) y elige la postura que más le conviene (3060-4e). Prepara los elementos de protección adecuados (3060-4g), ajusta su propia postura para no dañarse (3064-3d) y usa el equipo individual necesario (3064-3i), anotando luego los productos empleados (3064-3h).",
+        "desarrollo_ca": "A partir del cas, l'alumnat decideix quina informació ha de recollir en la fitxa segons les seves característiques (3060-4d) i tria la postura que més li convé (3060-4e). Prepara els elements de protecció adequats (3060-4g), ajusta la seva pròpia postura per no fer-se mal (3064-3d) i fa servir l'equip individual necessari (3064-3i), anotant després els productes emprats (3064-3h).",
+        "evidencia_es": "Ficha de caso con la adaptación ergonómica elegida.",
+        "evidencia_ca": "Fitxa de cas amb l'adaptació ergonòmica triada.",
+        "dua_es": "Material del caso con imágenes y opción de respuesta oral.",
+        "dua_ca": "Material del cas amb imatges i opció de resposta oral.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Clase invertida del equipo de protección",
+        "titulo_ca": "Classe invertida de l'equip de protecció",
+        "contexto_es": "El alumnado del centro de FP de Palma graba en casa una explicación de los equipos de protección y la aplica en el taller.",
+        "contexto_ca": "L'alumnat del centre de FP de Palma enregistra a casa una explicació dels equips de protecció i l'aplica al taller.",
+        "desarrollo_es": "Cada estudiante explica al grupo qué datos pide al cliente antes del lavado (3060-4d) y cómo se acomoda su cuerpo (3060-4e). Después, en el taller, demuestra la protección de la clienta que había preparado (3060-4g), su postura de trabajo al lavar (3064-3d) y el uso correcto de los equipos individuales (3064-3i), dejando anotado en la ficha el cosmético utilizado (3064-3h).",
+        "desarrollo_ca": "Cada estudiant explica al grup quines dades demana al client abans de la rentada (3060-4d) i com acomoda el seu cos (3060-4e). Després, al taller, demostra la protecció de la clienta que havia preparat (3060-4g), la seva postura de treball en rentar (3064-3d) i l'ús correcte dels equips individuals (3064-3i), deixant anotat a la fitxa el cosmètic emprat (3064-3h).",
+        "evidencia_es": "Vídeo casero y demostración práctica en el lavacabezas.",
+        "evidencia_ca": "Vídeo casolà i demostració pràctica al rentacaps.",
+        "dua_es": "Guion de rodaje con frases modelo y tiempo flexible para entregarlo.",
+        "dua_ca": "Guió de rodatge amb frases model i temps flexible per lliurar-lo.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "3061",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "e",
+        "h"
+      ]
+    },
+    "justificacion_es": "Acomodar al cliente con la posición correcta forma parte de la preparación y protección en la pedicura, junto con la higiene previa.",
+    "justificacion_ca": "Acomodar el client amb la posició correcta forma part de la preparació i protecció en la pedicura, juntament amb la higiene prèvia.",
+    "actividades": [
+      {
+        "titulo_es": "Acomodación del pie para la pedicura",
+        "titulo_ca": "Acomodació del peu per a la pedicura",
+        "contexto_es": "En el salón de Ciutadella una clienta mayor llega para una pedicura y hay que colocarla con comodidad y seguridad.",
+        "contexto_ca": "Al saló de Ciutadella una clienta gran arriba per a una pedicura i cal col·locar-la amb comoditat i seguretat.",
+        "desarrollo_es": "Antes de la pedicura, el alumnado identifica la posición ergonómica del cliente (3060-4e) y aplica la técnica de acomodación más cómoda (3060-4f). Antes de tocar el pie, realiza la higiene previa (3061-4a), protege a la clienta y a sí mismo (3061-4e) y ejecuta el masaje de pies en el orden correcto (3061-4h).",
+        "desarrollo_ca": "Abans de la pedicura, l'alumnat identifica la posició ergonòmica del client (3060-4e) i aplica la tècnica d'acomodació més còmoda (3060-4f). Abans de tocar el peu, fa la higiene prèvia (3061-4a), protegeix la clienta i ell mateix (3061-4e) i executa el massatge de peus en l'ordre correcte (3061-4h).",
+        "evidencia_es": "Secuencia de pedicura con el cliente colocado y protegido.",
+        "evidencia_ca": "Seqüència de pedicura amb el client col·locat i protegit.",
+        "dua_es": "Cojín y taburete de apoyo para la posición y el masaje.",
+        "dua_ca": "Coixí i tamboret de suport per a la posició i el massatge.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Rincones de higiene y masaje podal",
+        "titulo_ca": "Racons d'higiene i massatge podal",
+        "contexto_es": "El centro de FP de Ibiza organiza el aula en estaciones para practicar la preparación del pie antes de la pedicura.",
+        "contexto_ca": "El centre de FP d'Eivissa organitza l'aula en estacions per practicar la preparació del peu abans de la pedicura.",
+        "desarrollo_es": "La clase se organiza en estaciones: en la primera se elige cómo acomodar al cliente (3060-4f) y se revisa su postura (3060-4e); en la segunda se practica la higiene previa (3061-4a) y la protección del cliente y del profesional (3061-4e); en la tercera se repite el orden del masaje de pies (3061-4h).",
+        "desarrollo_ca": "La classe s'organitza en estacions: a la primera es tria com acomodar el client (3060-4f) i es revisa la seva postura (3060-4e); a la segona es practica la higiene prèvia (3061-4a) i la protecció del client i del professional (3061-4e); a la tercera es repeteix l'ordre del massatge de peus (3061-4h).",
+        "evidencia_es": "Lista de control de las tres estaciones completada.",
+        "evidencia_ca": "Llista de control de les tres estacions completada.",
+        "dua_es": "Instrucciones de cada estación con dibujos y tiempos ampliados.",
+        "dua_ca": "Instruccions de cada estació amb dibuixos i temps ampliats.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      },
+      {
+        "titulo_es": "Aprendizaje-servicio de pedicura en el casal",
+        "titulo_ca": "Aprenentatge-servei de pedicura al casal",
+        "contexto_es": "El alumnado del centro de FP de Palma ofrece una sesión de pedicura a las personas mayores del barrio dentro del aula.",
+        "contexto_ca": "L'alumnat del centre de FP de Palma ofereix una sessió de pedicura a les persones grans del barri dins l'aula.",
+        "desarrollo_es": "Se ofrece una sesión en la que el alumnado acoge a cada persona, elige su posición y técnica de acomodación (3060-4e) y la adapta a su comodidad (3060-4f). Realiza la higiene previa (3061-4a), prepara y protege a la persona y al profesional (3061-4e) y guía el masaje de pies en el orden previsto (3061-4h).",
+        "desarrollo_ca": "S'ofereix una sessió en què l'alumnat acull cada persona, tria la seva posició i tècnica d'acomodació (3060-4e) i l'adapta a la seva comoditat (3060-4f). Fa la higiene prèvia (3061-4a), prepara i protegeix la persona i el professional (3061-4e) i guia el massatge de peus en l'ordre previst (3061-4h).",
+        "evidencia_es": "Ficha de servicio solidario y valoración de la persona atendida.",
+        "evidencia_ca": "Fitxa de servei solidari i valoració de la persona atesa.",
+        "dua_es": "Guion de apoyo para la conversación con las personas mayores.",
+        "dua_ca": "Guió de suport per a la conversa amb les persones grans.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA4",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE5",
+      "criterios": [
+        "5.1",
+        "5.4"
+      ]
+    },
+    "justificacion_es": "Las preguntas de seguridad y los datos de la ficha se trabajan en una simulación de entrevista oral con escucha activa y cortesía.",
+    "justificacion_ca": "Les preguntes de seguretat i les dades de la fitxa es treballen en una simulació d'entrevista oral amb escolta activa i cortesia.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevista de recepción con preguntas clave",
+        "titulo_ca": "Entrevista d'acollida amb preguntes clau",
+        "contexto_es": "En el salón de Manacor surge una clienta nueva y el alumnado debe entrevistarla antes del servicio.",
+        "contexto_ca": "Al saló de Manacor apareix una clienta nova i l'alumnat ha d'entrevistar-la abans del servei.",
+        "desarrollo_es": "Por parejas, el alumnado prepara y formula las preguntas de seguridad y calidad (3060-4c), escucha con atención las respuestas (3161-5.4) y recoge los datos necesarios para la ficha (3060-4d). Después resume por escrito la información que ha comprendido (3161-5.1).",
+        "desarrollo_ca": "Per parelles, l'alumnat prepara i formula les preguntes de seguretat i qualitat (3060-4c), escolta amb atenció les respostes (3161-5.4) i recull les dades necessàries per a la fitxa (3060-4d). Després resumeix per escrit la informació que ha comprès (3161-5.1).",
+        "evidencia_es": "Guion de entrevista y ficha de cliente cubierta.",
+        "evidencia_ca": "Guió d'entrevista i fitxa de client emplenada.",
+        "dua_es": "Banco de preguntas de apoyo y turnos tranquilos de intervención.",
+        "dua_ca": "Banc de preguntes de suport i torns tranquils d'intervenció.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Análisis de noticias del sector belleza",
+        "titulo_ca": "Anàlisi de notícies del sector bellesa",
+        "contexto_es": "El centro de FP de Inca recopila noticias sobre salones de belleza para analizar cómo hablan con las clientas.",
+        "contexto_ca": "El centre de FP d'Inca recopila notícies sobre salons de bellesa per analitzar com parlen amb les clientes.",
+        "desarrollo_es": "Tras leer una noticia del sector, el alumnado extrae la idea principal (3161-5.1). A partir de ella identifica qué preguntas conviene hacer al cliente antes del servicio (3060-4c) y qué datos hay que pasar a la ficha (3060-4d). Finalmente debate con sus compañeros sobre la claridad del mensaje (3161-5.4).",
+        "desarrollo_ca": "Després de llegir una notícia del sector, l'alumnat n'extreu la idea principal (3161-5.1). A partir d'aquesta identifica quines preguntes convé fer al client abans del servei (3060-4c) i quines dades cal passar a la fitxa (3060-4d). Finalment debat amb els companys sobre la claredat del missatge (3161-5.4).",
+        "evidencia_es": "Ficha de lectura con las preguntas y datos propuestos.",
+        "evidencia_ca": "Fitxa de lectura amb les preguntes i dades proposades.",
+        "dua_es": "Lecturas de distinta longitud y glosario de términos del sector.",
+        "dua_ca": "Lectures de diferent llargada i glossari de termes del sector.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Debate sobre la ficha que incomoda",
+        "titulo_ca": "Debat sobre la fitxa que incomoda",
+        "contexto_es": "El alumnado del centro de FP de Palma discute qué datos de la ficha pueden resultar incómodos y cómo pedirlos con respeto.",
+        "contexto_ca": "L'alumnat del centre de FP de Palma discuteix quines dades de la fitxa poden resultar incòmodes i com demanar-les amb respecte.",
+        "desarrollo_es": "El grupo se divide en dos equipos y debate qué preguntas de calidad y seguridad son imprescindibles (3060-4c) y cuáles invaden la intimidad del cliente (3161-5.4). Cada equipo defiende qué información debe pedirse para completar la ficha (3060-4d) y cierra el debate resumiendo por escrito los acuerdos (3161-5.1).",
+        "desarrollo_ca": "El grup es divideix en dos equips i debat quines preguntes de qualitat i seguretat són imprescindibles (3060-4c) i quines envaeixen la intimitat del client (3161-5.4). Cada equip defensa quina informació s'ha de demanar per completar la fitxa (3060-4d) i tanca el debat resumint per escrit els acords (3161-5.1).",
+        "evidencia_es": "Resumen escrito de los acuerdos del debate.",
+        "evidencia_ca": "Resum escrit dels acords del debat.",
+        "dua_es": "Roles asignados y una pauta con las normas del debate.",
+        "dua_ca": "Rols assignats i una pauta amb les normes del debat.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  }
+]

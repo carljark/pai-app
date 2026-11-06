@@ -1,7 +1,7 @@
 # Plan 250: FP Básica al plan 2026/27 en el mapa y en el generador
 
 > **Fecha:** 6 de noviembre de 2026
-> **Estado:** Aprobado
+> **Estado:** Implementado (tarea 250)
 > **Partes afectadas:** backend (catálogo, datos, migraciones) / frontend (solo tests y, si hace falta, mapeos) / despliegue
 
 ---
@@ -57,7 +57,7 @@ El usuario fijó la prioridad de las fuentes: **CAIB, después BOE y después To
   - **Cuando** se pide `GET /api/mapa-intermodular?tab=FPB_2`
   - **Entonces** aparecen 3005, 3065, 3063, 3160, 3162 y 3164, y el 3160 tiene conexiones en todos sus RA.
 - **Escenario: cada pestaña solo contiene módulos de su curso**
-  - **Dado** los JSON `mapa_fpb.json` y `mapa_fpb_2.json`
+  - **Dado** los JSON `mapa_fp_basica.json` y `mapa_fp_basica_2.json`
   - **Cuando** se validan
   - **Entonces** ninguna conexión apunta a un módulo de otro curso.
   - **Y** cada conexión tiene al menos 3 actividades.
@@ -118,9 +118,9 @@ El usuario fijó la prioridad de las fuentes: **CAIB, después BOE y después To
 | Archivo | Cambio | Capa |
 |---|---|---|
 | `backend/src/data/niveles.ts` | `FP_BASICA.cursos` con `modulos` en orden oficial; `mapas` con `FPB` (1.º) y `FPB_2` (2.º) | config |
-| `backend/src/data/mapa-intermodular/mapa_fpb.json` | Solo 1.º; 3011→3161 y 3009→3163 (códigos, nombres, `id` de RA y referencias en las conexiones); sin conexiones hacia 2.º | infrastructure (datos) |
-| `backend/src/data/mapa-intermodular/mapa_fpb_2.json` | **Nuevo:** 3005, 3065, 3063, 3160, 3162 y 3164 (3042→3164), con conexiones nuevas para el 3160 y el 3162 | infrastructure (datos) |
-| `backend/src/data/ras_fpb_2026.data.ts` | **Nuevo:** `moduleCode` y nombres ES/CA de 2026/27 por módulo, RA del 3159 y, si cambian (B1), los RA nuevos de los módulos comunes | infrastructure (datos) |
+| `backend/src/data/mapa-intermodular/mapa_fp_basica.json` | **Nuevo** (al implementar se decidió no sobrescribir `mapa_fpb.json`, que leen las migraciones 08, 17, 18 y 29): 1.º rehecho con la herramienta, sin conexiones hacia 2.º | infrastructure (datos) |
+| `backend/src/data/mapa-intermodular/mapa_fp_basica_2.json` | **Nuevo:** 3005, 3065, 3063, 3160, 3162 y 3164 (3042→3164), con conexiones nuevas para el 3160 y el 3162 | infrastructure (datos) |
+| `backend/src/data/ras_fp_basica.data.ts` | **Nuevo:** `moduleCode` y nombres ES/CA de 2026/27 por módulo, RA del 3159 y, si cambian (B1), los RA nuevos de los módulos comunes | infrastructure (datos) |
 | `backend/src/migrations/52_fp_basica_plan_2026_27.ts` | **Nueva:** recarga `FPB` y `FPB_2` en `mapamodules`, actualiza los RA de FP Básica en `ras` (`tipoNivel`, `moduleCode`, nombres) e inserta el 3159. Reejecutable y limitada a FP Básica | infrastructure |
 | `backend/src/controllers/curriculum.controller.ts` | Mapeos `caToEsModules`/`esToCaModules` con los nombres nuevos (solo si siguen haciendo falta con `module_es`/`module_ca`) | presentation |
 | `scripts/mapa-intermodular/mapa-intermodular.mts` | `COMUNES` con 3159 y 3161–3164 (tipo `comun`), y el 3160 como `transversal` | herramienta |
@@ -136,7 +136,7 @@ El usuario fijó la prioridad de las fuentes: **CAIB, después BOE y después To
 - [ ] Crear la rama `feature/250_fp_basica_plan_2026_27`.
 - [ ] **Fuentes oficiales:** localizar en CAIB/BOIB y TodoFP/BOE el currículo 2026/27 del IMP11 y comparar los RA y criterios de 3161–3164 con los de 3011/3012/3009/3042, y los del 3159 con los del mapa. **Avisar al usuario del resultado (B1) antes de seguir.**
 - [ ] Catálogo: `modulos` por curso y los dos mapas en `niveles.ts`.
-- [ ] Datos del generador: `ras_fpb_2026.data.ts` con códigos, nombres ES/CA, el 3159 y, si procede, los RA nuevos.
+- [ ] Datos del generador: `ras_fp_basica.data.ts` con códigos, nombres ES/CA, el 3159 y, si procede, los RA nuevos.
 - [ ] Ajustar `COMUNES` de la herramienta y generar `ficha` de 1.º y 2.º, que necesitan el `moduleCode` de los RA (probar primero con la base local migrada).
 - [ ] Convertir las conexiones existentes de cada curso a `relaciones*.json` y descartar las que cruzan de curso.
 - [ ] Redactar las relaciones nuevas del 3160 y del 3162, y completar los RA que se queden por debajo de 6 conexiones al separar cursos (por ejemplo, los del 3009/3163), con ≥3 actividades bilingües por relación.

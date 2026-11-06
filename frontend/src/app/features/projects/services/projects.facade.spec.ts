@@ -216,7 +216,9 @@ describe('ProjectsFacade', () => {
     mockCurriculumFacade.tipoNivel.mockReturnValue('FP_BASICA');
     mockCurriculumFacade.curso.mockReturnValue('2º');
     mockCurriculumFacade.selectedRas.mockReturnValue(['RA1']);
-    mockCurriculumFacade.ras.mockReturnValue([{ description: 'RA1', module: 'ModA' }]);
+    mockCurriculumFacade.ras.mockReturnValue([
+      { description: 'RA1', module: 'ModA', moduleCode: '3005' },
+    ]);
 
     facade.methodology.set('ABP');
     facade.generateProject('castellano', 'Custom Title').subscribe();

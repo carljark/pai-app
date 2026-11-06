@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3005", "ra": "RA1", "criterios": ["d", "e"] },
+    "b": { "modulo": "3065", "ra": "RA2", "criterios": ["f", "h"] },
+    "justificacion_es": "Se mantiene la conversación con el cliente y se le acomoda y protege mientras se vigila el tiempo de exposición del decolorante.",
+    "justificacion_ca": "Es manté la conversa amb el client i se l'acomoda i protegeix mentre es vigila el temps d'exposició del decolorant.",
+    "actividades": [
+      {
+        "titulo_es": "Recepción y decoloración con guion de sala",
+        "titulo_ca": "Recepció i decoloració amb guió de sala",
+        "contexto_es": "Un salón de peluquería de Manacor abre las puertas a una clienta que quiere aclararse el cabello dos tonos antes de una boda.",
+        "contexto_ca": "Un saló de perruqueria de Manacor obre les portes a una clienta que vol aclarir-se el cabell dos tons abans d'un casament.",
+        "desarrollo_es": "Cada pareja atiende a una clienta que pide aclararse el cabello: se la saluda con cercanía, se mantiene el contacto visual y se deja hablar sin interrumpir para favorecer la comunicación (3005-1d). A continuación se conduce la conversación con las fórmulas de cortesía, el léxico comercial del salón y los nexos adecuados para confirmar el servicio pedido (3005-1e). Con el acuerdo cerrado, se prepara el puesto y se acomoda a la clienta colocando capote, toalla y protector de piel (3065-2f). Después se aplica el decolorante por secciones y se vigila el tiempo de exposición con el cronómetro a la vista (3065-2h).",
+        "desarrollo_ca": "Cada parella atén una clienta que demana aclarir-se el cabell: se la saluda amb proximitat, es manté el contacte visual i es deixa parlar sense interrompre per afavorir la comunicació (3005-1d). A continuació es condueix la conversa amb les fórmules de cortesia, el lèxic comercial del saló i els nexes adequats per confirmar el servei demanat (3005-1e). Amb l'acord tancat, es prepara el lloc i s'acomoda la clienta col·locant capa, tovallola i protector de pell (3065-2f). Després s'aplica el decolorant per seccions i es vigila el temps d'exposició amb el cronòmetre a la vista (3065-2h).",
+        "evidencia_es": "Grabación breve de la atención y ficha de puesto con el tiempo de exposición anotado.",
+        "evidencia_ca": "Enregistrament breu de l'atenció i fitxa de lloc amb el temps d'exposició anotat.",
+        "dua_es": "Guion con pictogramas y frases modelo plastificadas en el mostrador para quien necesita apoyo en la conversación.",
+        "dua_ca": "Guió amb pictogrames i frases model plastificades al mostrador per a qui necessita suport en la conversa.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Estudio de tres cabellos antes del decolorante",
+        "titulo_ca": "Estudi de tres cabells abans del decolorant",
+        "contexto_es": "El salón taller del centro de Inca recibe tres clientas con cabellos muy distintos: fino y teñido, grueso y virgen, y con restos de coloración.",
+        "contexto_ca": "El saló taller del centre d'Inca rep tres clientes amb cabells molt diferents: fi i tenyit, gruixut i verge, i amb restes de coloració.",
+        "desarrollo_es": "En grupos pequeños, el alumnado de cada mesa lee la ficha de las tres clientas y decide cómo adaptar el lenguaje y el tono a cada una para que se sientan escuchadas (3005-1d). Después prepara la explicación del servicio con las palabras técnicas y comerciales que usará delante de cada clienta (3005-1e). Antes de empezar, revisa la lista de comprobación de acomodo y protección de la piel y la completa en el puesto asignado (3065-2f). Por último, simula la aplicación del producto por zonas y anota el tiempo previsto de exposición junto a las señales que debe vigilar (3065-2h).",
+        "desarrollo_ca": "En grups petits, l'alumnat de cada taula llegeix la fitxa de les tres clientes i decideix com adaptar el llenguatge i el to a cadascuna perquè se sentin escoltades (3005-1d). Després prepara l'explicació del servei amb les paraules tècniques i comercials que farà servir davant de cada clienta (3005-1e). Abans de començar, repassa la llista de comprovació d'acomodament i protecció de la pell i la completa al lloc assignat (3065-2f). Finalment, simula l'aplicació del producte per zones i anota el temps previst d'exposició al costat dels senyals que ha de vigilar (3065-2h).",
+        "evidencia_es": "Dossier comparativo de los tres casos con el tiempo de exposición previsto para cada uno.",
+        "evidencia_ca": "Dossier comparatiu dels tres casos amb el temps d'exposició previst per a cadascun.",
+        "dua_es": "Fichas con letra ampliada y versión en audio de los casos para el alumnado con dificultades de lectura.",
+        "dua_ca": "Fitxes amb lletra ampliada i versió en àudio dels casos per a l'alumnat amb dificultats de lectura.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Rincón de aclarados seguros por estaciones",
+        "titulo_ca": "Racó d'aclarits segurs per estacions",
+        "contexto_es": "El centro colabora con una residencia de Manacor para ofrecer un aclarado suave a personas mayores.",
+        "contexto_ca": "El centre col·labora amb una residència de Manacor per oferir un aclarament suau a persones grans.",
+        "desarrollo_es": "El grupo organiza tres rincones por los que va pasando: en el primero se practica la bienvenida y la escucha atenta con personas que hablan despacio (3005-1d); en el segundo se ensayan las preguntas y las respuestas del servicio con el vocabulario del salón (3005-1e); en el tercero se aprende a colocar el protector de piel y el capote en una cabeza con el cabello muy fino (3065-2f). La sesión termina con la aplicación del aclarado sobre una peluca de práctica, controlando el reloj y comprobando el resultado zona por zona (3065-2h).",
+        "desarrollo_ca": "El grup organitza tres racons pels quals va passant: al primer es practica la benvinguda i l'escolta atenta amb persones que parlen a poc a poc (3005-1d); al segon s'assagen les preguntes i les respostes del servei amb el vocabulari del saló (3005-1e); al tercer s'aprèn a col·locar el protector de pell i la capa en un cap amb el cabell molt fi (3065-2f). La sessió acaba amb l'aplicació de l'aclarit sobre una perruca de pràctica, controlant el rellotge i comprovant el resultat zona per zona (3065-2h).",
+        "evidencia_es": "Folleto ilustrado con los pasos del aclarado protegido que se deja en la residencia.",
+        "evidencia_ca": "Fullet il·lustrat amb els passos de l'aclarit protegit que es deixa a la residència.",
+        "dua_es": "Cada rincón incluye una tarjeta con los pasos en imágenes y un compañero de apoyo asignado.",
+        "dua_ca": "Cada racó inclou una targeta amb els passos en imatges i un company de suport assignat.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3005", "ra": "RA2", "criterios": ["f", "g"] },
+    "b": { "modulo": "3065", "ra": "RA3", "criterios": ["a", "c"] },
+    "justificacion_es": "Se informa al cliente de las características del servicio y se le asesora al clasificar los productos colorantes y explicar las operaciones técnicas previas.",
+    "justificacion_ca": "S'informa el client de les característiques del servei i se l'assessora en classificar els productes colorants i explicar les operacions tècniques prèvies.",
+    "actividades": [
+      {
+        "titulo_es": "Catálogo de colorantes explicado a la clienta",
+        "titulo_ca": "Catàleg de colorants explicat a la clienta",
+        "contexto_es": "Una clienta de Palma llega con una foto de revista y no sabe qué tono pedir para cubrir sus canas.",
+        "contexto_ca": "Una clienta de Palma arriba amb una foto de revista i no sap quin to demanar per cobrir els cabells blancs.",
+        "desarrollo_es": "Cada estudiante llega a clase con un vídeo visto en casa y tres preguntas escritas sobre los tintes. En el salón, explica a la clienta las calidades que puede esperar del servicio, como la cobertura o el brillo (3005-2f). Después compara los tonos que ofrece la carta y le recomienda el más adecuado según su base y su estilo, comentando los acabados previsibles (3005-2g). Para justificar la elección, coloca las cajas de colorantes en una estantería ordenada por naturaleza, duración y composición (3065-3a). Antes de aplicar nada, enumera las operaciones previas que hará sobre el cabello, como la prueba de tolerancia o el aclarado inicial (3065-3c).",
+        "desarrollo_ca": "Cada estudiant arriba a classe amb un vídeo vist a casa i tres preguntes escrites sobre els tints. Al saló, explica a la clienta les qualitats que pot esperar del servei, com la cobertura o la brillantor (3005-2f). Després compara els tons que ofereix la carta i li recomana el més adequat segons la seva base i el seu estil, comentant els acabats previsibles (3005-2g). Per justificar l'elecció, col·loca les capses de colorants en un prestatge ordenat per naturalesa, durada i composició (3065-3a). Abans d'aplicar res, enumera les operacions prèvies que farà sobre el cabell, com la prova de tolerància o l'aclariment inicial (3065-3c).",
+        "evidencia_es": "Carta de tonos comentada con la recomendación firmada por la clienta.",
+        "evidencia_ca": "Carta de tons comentada amb la recomanació signada per la clienta.",
+        "dua_es": "El vídeo se puede ver con subtítulos y se acepta un resumen en dibujos en lugar de las tres preguntas.",
+        "dua_ca": "El vídeo es pot veure amb subtítols i s'accepta un resum en dibuixos en lloc de les tres preguntes.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Mesa redonda de tonos y operaciones previas",
+        "titulo_ca": "Taula rodona de tons i operacions prèvies",
+        "contexto_es": "El salón del centro de Felanitx organiza una jornada de puertas abiertas y varias personas preguntan por los cambios de color.",
+        "contexto_ca": "El saló del centre de Felanitx organitza una jornada de portes obertes i diverses persones pregunten pels canvis de color.",
+        "desarrollo_es": "El grupo se divide en dos equipos que preparan argumentos: uno defiende cubrir las canas con un tono natural y el otro apuesta por un cambio más atrevido. Cada equipo presenta su propuesta explicando al público las características del servicio y los resultados que se pueden esperar (3005-2f). A continuación responden a las preguntas y aconsejan la opción más conveniente para cada caso, describiendo los acabados de cada alternativa (3005-2g). Para cerrar, cada equipo clasifica una muestra de colorantes según su naturaleza y su duración (3065-3a) y explica al resto qué operaciones previas exige cada uno (3065-3c).",
+        "desarrollo_ca": "El grup es divideix en dos equips que preparen arguments: un defèn cobrir els cabells blancs amb un to natural i l'altre aposta per un canvi més agosarat. Cada equip presenta la seva proposta explicant al públic les característiques del servei i els resultats que es poden esperar (3005-2f). A continuació responen les preguntes i aconsellen l'opció més convenient per a cada cas, descrivint els acabats de cada alternativa (3005-2g). Per tancar, cada equip classifica una mostra de colorants segons la seva naturalesa i la seva durada (3065-3a) i explica a la resta quines operacions prèvies exigeix cadascun (3065-3c).",
+        "evidencia_es": "Acta de la mesa redonda con las recomendaciones y la clasificación de colorantes acordada.",
+        "evidencia_ca": "Acta de la taula rodona amb les recomanacions i la classificació de colorants acordada.",
+        "dua_es": "Se entrega a cada equipo un guion con las ideas clave y se permite leerlo durante la intervención.",
+        "dua_ca": "Es lliura a cada equip un guió amb les idees clau i es permet llegir-lo durant la intervenció.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Cartel del salón que enseña los tintes",
+        "titulo_ca": "Cartell del saló que ensenya els tints",
+        "contexto_es": "El salón de prácticas del instituto quiere renovar el expositor de colorantes con un cartel que ayude a entenderlos.",
+        "contexto_ca": "El saló de pràctiques de l'institut vol renovar l'expositor de colorants amb un cartell que ajudi a entendre'ls.",
+        "desarrollo_es": "Por parejas, el alumnado observa cómo las clientas dudan ante el expositor y anota qué información les falta. Con esas notas, redacta frases sencillas que describan el servicio y sus resultados esperados (3005-2f) y añade un consejo breve para elegir entre dos opciones (3005-2g). Para dar rigor al cartel, agrupa los productos por familia y duración con colores y pictogramas (3065-3a) y dibuja los pasos previos que hay que explicar antes de teñir (3065-3c). El cartel se coloca y se prueba con compañeras de otro curso, que valoran si se entiende.",
+        "desarrollo_ca": "Per parelles, l'alumnat observa com les clientes dubten davant l'expositor i anota quina informació els falta. Amb aquestes notes, redacta frases senzilles que descriguin el servei i els resultats esperats (3005-2f) i afegeix un consell breu per triar entre dues opcions (3005-2g). Per donar rigor al cartell, agrupa els productes per família i durada amb colors i pictogrames (3065-3a) i dibuixa els passos previs que cal explicar abans de tenyir (3065-3c). El cartell es col·loca i es prova amb companyes d'un altre curs, que valoren si s'entén.",
+        "evidencia_es": "Cartel expositor evaluado con la rúbrica de claridad y las fotos del antes y el después.",
+        "evidencia_ca": "Cartell expositor avaluat amb la rúbrica de claredat i les fotos d'abans i de després.",
+        "dua_es": "Se ofrecen plantillas de cartel con huecos y pegatinas para quien prefiere no dibujar.",
+        "dua_ca": "S'ofereixen plantilles de cartell amb buits i enganxines per a qui prefereix no dibuixar.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3005", "ra": "RA2", "criterios": ["c", "d"] },
+    "b": { "modulo": "3065", "ra": "RA4", "criterios": ["b", "c"] },
+    "justificacion_es": "Se usa la terminología comercial y se distingue la información de la publicidad al elegir la técnica de coloración parcial y proteger al profesional.",
+    "justificacion_ca": "S'utilitza la terminologia comercial i es distingeix la informació de la publicitat en triar la tècnica de coloració parcial i protegir el professional.",
+    "actividades": [
+      {
+        "titulo_es": "Juego de cartas para elegir la mecha",
+        "titulo_ca": "Joc de cartes per triar la metxa",
+        "contexto_es": "En el taller del centro de Alaior se prepara una sesión de mechas para una clienta que quiere un cambio discreto.",
+        "contexto_ca": "Al taller del centre d'Alaior es prepara una sessió de metxes per a una clienta que vol un canvi discret.",
+        "desarrollo_es": "El alumnado juega por turnos con una baraja que mezcla términos comerciales, imágenes de folletos y tipos de mechas. Cuando sale una carta de vocabulario, cada jugador define el término sin leerlo del reverso (3005-2c). Si la carta es un folleto, el grupo decide si lo que ve es información útil o pura publicidad (3005-2d). Con la puntuación ganada, cada pareja elige la técnica de mechas que mejor encaja con el efecto pedido (3065-4b) y se coloca el equipo de protección antes de tocar el producto (3065-4c).",
+        "desarrollo_ca": "L'alumnat juga per torns amb una baralla que barreja termes comercials, imatges de fullets i tipus de metxes. Quan surt una carta de vocabulari, cada jugador defineix el terme sense llegir-lo del revers (3005-2c). Si la carta és un fullet, el grup decideix si el que veu és informació útil o publicitat pura (3005-2d). Amb la puntuació guanyada, cada parella tria la tècnica de metxes que encaixa millor amb l'efecte demanat (3065-4b) i es col·loca l'equip de protecció abans de tocar el producte (3065-4c).",
+        "evidencia_es": "Marcador del juego con el vocabulario acertado y la técnica elegida por cada pareja.",
+        "evidencia_ca": "Marcador del joc amb el vocabulari encertat i la tècnica triada per cada parella.",
+        "dua_es": "En la baraja hay cartas con definición y dibujo para quien necesita apoyo léxico.",
+        "dua_ca": "A la baralla hi ha cartes amb definició i dibuix per a qui necessita suport lèxic.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      },
+      {
+        "titulo_es": "Simulacro de folleto engañoso en el mostrador",
+        "titulo_ca": "Simulacre de fullet enganyós al mostrador",
+        "contexto_es": "Una empresa ficticia del barrio de Santa Catalina, en Palma, reparte folletos con ofertas de coloración difíciles de entender.",
+        "contexto_ca": "Una empresa fictícia del barri de Santa Catalina, a Palma, reparteix fullets amb ofertes de coloració difícils d'entendre.",
+        "desarrollo_es": "Por parejas, una persona hace de clienta y la otra de profesional del mostrador. La profesional lee el folleto en voz alta y traduce los términos comerciales a palabras que la clienta entienda (3005-2c). Después separa lo que es información objetiva del servicio de lo que solo busca vender (3005-2d). Con las ideas claras, ambas deciden qué técnica de coloración parcial responde al efecto prometido (3065-4b) y revisan que la profesional lleve guantes, delantal y protección ocular antes de empezar (3065-4c). Al final, intercambian los papeles.",
+        "desarrollo_ca": "Per parelles, una persona fa de clienta i l'altra de professional del mostrador. La professional llegeix el fullet en veu alta i tradueix els termes comercials a paraules que la clienta entengui (3005-2c). Després separa el que és informació objectiva del servei del que només busca vendre (3005-2d). Amb les idees clares, totes dues decideixen quina tècnica de coloració parcial respon a l'efecte promès (3065-4b) i revisen que la professional porti guants, davantal i protecció ocular abans de començar (3065-4c). Al final, intercanvien els papers.",
+        "evidencia_es": "Folleto anotado en dos columnas: lo informativo y lo publicitario.",
+        "evidencia_ca": "Fullet anotat en dues columnes: el que és informatiu i el que és publicitari.",
+        "dua_es": "Se permite usar un diccionario de términos del salón en la mesa durante la simulación.",
+        "dua_ca": "Es permet fer servir un diccionari de termes del saló a la taula durant la simulació.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Inventario de protección en la coloración parcial",
+        "titulo_ca": "Inventari de protecció en la coloració parcial",
+        "contexto_es": "Dos alumnas detectan que cada compañera coloca los protectores de forma distinta en las prácticas de coloración parcial.",
+        "contexto_ca": "Dues alumnes detecten que cada companya col·loca els protectors de manera diferent a les pràctiques de coloració parcial.",
+        "desarrollo_es": "Con una lista de comprobación en mano, el alumnado recorre los puestos del salón y anota qué términos usa cada compañera al hablar de las mechas y los reflejos (3005-2c). En otra columna, marca qué frases del cartel informan de verdad y cuáles solo anuncian (3005-2d). Después revisan el paso a paso de una coloración parcial y comprueban si la técnica elegida corresponde al efecto buscado (3065-4b). Para terminar, fotografían el puesto con el material de protección colocado y explican por qué es imprescindible (3065-4c).",
+        "desarrollo_ca": "Amb una llista de comprovació a la mà, l'alumnat recorre els llocs del saló i anota quins termes fa servir cada companya quan parla de les metxes i els reflexos (3005-2c). En una altra columna, marca quines frases del cartell informen de veritat i quines només anuncien (3005-2d). Després repassen el pas a pas d'una coloració parcial i comproven si la tècnica triada correspon a l'efecte buscat (3065-4b). Per acabar, fotografien el lloc amb el material de protecció col·locat i expliquen per què és imprescindible (3065-4c).",
+        "evidencia_es": "Lista de comprobación completada con las fotos de los puestos.",
+        "evidencia_ca": "Llista de comprovació completada amb les fotos dels llocs.",
+        "dua_es": "La lista de comprobación se entrega ya medio rellenada para quien se pierde con muchos apartados.",
+        "dua_ca": "La llista de comprovació es lliura ja mig emplenada per a qui es perd amb molts d'apartats.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3005", "ra": "RA3", "criterios": ["a", "b"] },
+    "b": { "modulo": "3065", "ra": "RA3", "criterios": ["m", "n"] },
+    "justificacion_es": "Se entrega el trabajo terminado y se explican las operaciones y los tiempos, recogiendo el grado de satisfacción y aplicando las medidas de seguridad.",
+    "justificacion_ca": "Es lliura la feina acabada i s'expliquen les operacions i els temps, recollint el grau de satisfacció del client i aplicant les mesures de seguretat.",
+    "actividades": [
+      {
+        "titulo_es": "Entrega de trabajos en la residencia con encuesta",
+        "titulo_ca": "Lliurament de feines a la residència amb enquesta",
+        "contexto_es": "El centro lleva a una residencia de Ciutadella un servicio de coloración para las personas usuarias.",
+        "contexto_ca": "El centre porta a una residència de Ciutadella un servei de coloració per a les persones usuàries.",
+        "desarrollo_es": "El alumnado prepara una mesa de entrega donde devuelve a cada persona usuaria su pañuelo y su cofia ya lavados, explicando con calma qué servicio se ha hecho en cada prenda (3005-3a). A continuación indica las operaciones que aún quedan por hacer y el tiempo previsto para cada una (3005-3b). Antes de despedirse, recoge la opinión de cada persona con dos preguntas sencillas sobre el trato recibido y la apariencia del cabello, y anota las mejoras (3065-3m). Al finalizar, revisa que los productos sobrantes y los guantes usados vayan al contenedor correcto (3065-3n).",
+        "desarrollo_ca": "L'alumnat prepara una taula de lliurament on retorna a cada persona usuària el mocador i la còfia ja rentats, explicant amb calma quin servei s'ha fet en cada peça (3005-3a). A continuació indica les operacions que encara queden per fer i el temps previst per a cadascuna (3005-3b). Abans d'acomiadar-se, recull l'opinió de cada persona amb dues preguntes senzilles sobre el tracte rebut i l'aparença del cabell, i anota les millores (3065-3m). En acabar, revisa que els productes sobrants i els guants usats vagin al contenidor correcte (3065-3n).",
+        "evidencia_es": "Registro de entrega firmado y encuesta de satisfacción resumida en una gráfica.",
+        "evidencia_ca": "Registre de lliurament signat i enquesta de satisfacció resumida en un gràfic.",
+        "dua_es": "La encuesta se ofrece con caras de valoración para quien prefiere responder sin escribir.",
+        "dua_ca": "L'enquesta s'ofereix amb cares de valoració per a qui prefereix respondre sense escriure.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      },
+      {
+        "titulo_es": "Caso del tinte que quedó desigual en las puntas",
+        "titulo_ca": "El cas del tint que va quedar desigual a les puntes",
+        "contexto_es": "En el salón del centro de Sant Francesc se recibe la llamada de una clienta cuyo cabello quedó desigual tras una coloración.",
+        "contexto_ca": "Al saló del centre de Sant Francesc es rep la trucada d'una clienta a qui el cabell va quedar desigual després d'una coloració.",
+        "desarrollo_es": "El grupo lee el caso y reconstruye lo que pasó revisando la ficha y el tiempo de exposición. Después redacta la explicación que se dará a la clienta al devolverle el trabajo y al informarle de los arreglos necesarios (3005-3a). En esa misma explicación incluye las operaciones pendientes y los plazos previstos (3005-3b). A continuación lista las causas probables del resultado desigual y propone dos cambios en el proceso para la próxima vez, además de preguntar a la clienta cómo valora el trato (3065-3m). Cierra el análisis repasando el uso correcto de guantes y la retirada de residuos (3065-3n).",
+        "desarrollo_ca": "El grup llegeix el cas i reconstrueix què va passar repassant la fitxa i el temps d'exposició. Després redacta l'explicació que es donarà a la clienta en retornar-li la feina i en informar-la dels arranjaments necessaris (3005-3a). En aquesta mateixa explicació inclou les operacions pendents i els terminis previstos (3005-3b). A continuació llista les causes probables del resultat desigual i proposa dos canvis en el procés per a la propera vegada, a més de preguntar a la clienta com valora el tracte (3065-3m). Tanca l'anàlisi repassant l'ús correcte dels guants i la retirada de residus (3065-3n).",
+        "evidencia_es": "Informe del caso con las causas, los arreglos y la valoración recogida.",
+        "evidencia_ca": "Informe del cas amb les causes, els arranjaments i la valoració recollida.",
+        "dua_es": "El caso se reparte en tiras de cómic para reconstruir la secuencia paso a paso.",
+        "dua_ca": "El cas es reparteix en tires de còmic per reconstruir la seqüència pas a pas.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Turnos de entrega y control de residuos",
+        "titulo_ca": "Torns de lliurament i control de residus",
+        "contexto_es": "El salón taller acaba la semana con muchos trabajos por devolver y el almacén de productos desordenado.",
+        "contexto_ca": "El saló taller acaba la setmana amb moltes feines per tornar i el magatzem de productes desordenat.",
+        "desarrollo_es": "La clase se organiza en dos equipos cooperativos con roles: uno atiende el mostrador de entregas y el otro revisa el almacén. En el mostrador, cada responsable entrega el trabajo terminado y explica a la persona usuaria lo que se ha hecho (3005-3a). Luego concreta las operaciones que faltan y el tiempo que requerirán (3005-3b). En el almacén, otro equipo prepara una encuesta rápida de satisfacción y la pasa a quien acaba de salir (3065-3m). Los dos equipos revisan juntos el etiquetado de los productos y el reciclado de envases antes de guardar (3065-3n).",
+        "desarrollo_ca": "La classe s'organitza en dos equips cooperatius amb rols: un atén el mostrador de lliuraments i l'altre revisa el magatzem. Al mostrador, cada responsable lliura la feina acabada i explica a la persona usuària què s'ha fet (3005-3a). Després concreta les operacions que falten i el temps que requeriran (3005-3b). Al magatzem, un altre equip prepara una enquesta ràpida de satisfacció i la passa a qui acaba de sortir (3065-3m). Els dos equips revisen junts l'etiquetatge dels productes i el reciclatge d'envasos abans de guardar (3065-3n).",
+        "evidencia_es": "Cuaderno de roles con las entregas del día y el almacén revisado.",
+        "evidencia_ca": "Quadern de rols amb els lliuraments del dia i el magatzem revisat.",
+        "dua_es": "Los roles se reparten con tarjetas y se rota para que nadie haga siempre la misma tarea.",
+        "dua_ca": "Els rols es reparteixen amb targetes i es rota perquè ningú no faci sempre la mateixa tasca.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3005", "ra": "RA3", "criterios": ["c", "h"] },
+    "b": { "modulo": "3065", "ra": "RA2", "criterios": ["j", "k"] },
+    "justificacion_es": "Se identifican los documentos de entrega y el período de garantía y se reflejan en la ficha del cliente los cosméticos aplicados y el resultado de la decoloración.",
+    "justificacion_ca": "S'identifiquen els documents de lliurament i el període de garantia i es reflecteixen a la fitxa del client els cosmètics aplicats i el resultat de la decoloració.",
+    "actividades": [
+      {
+        "titulo_es": "Kit de entrega y garantía para la decoloración",
+        "titulo_ca": "Kit de lliurament i garantia per a la decoloració",
+        "contexto_es": "El salón del centro de Eivissa quiere entregar a cada clienta un sobre con los documentos del servicio de decoloración.",
+        "contexto_ca": "El saló del centre d'Eivissa vol lliurar a cada clienta un sobre amb els documents del servei de decoloració.",
+        "desarrollo_es": "El reto es montar un kit de entrega que reúna todo lo que el cliente debe llevarse tras una decoloración. Por parejas, seleccionan los documentos necesarios, como la ficha de servicio o el justificante de pago, y explican para qué sirve cada uno (3005-3c). Después redactan un apartado con el período de garantía del trabajo y las obligaciones legales que lo acompañan (3005-3h). Para completar el kit, anotan en la ficha de la clienta los cosméticos usados y cualquier observación del proceso (3065-2j). Cierran con tres preguntas tipo que harán al cliente para saber si el resultado ha sido el esperado (3065-2k).",
+        "desarrollo_ca": "El repte és muntar un kit de lliurament que aplegui tot el que el client s'ha d'endur després d'una decoloració. Per parelles, seleccionen els documents necessaris, com la fitxa de servei o el justificant de pagament, i expliquen per a què serveix cadascun (3005-3c). Després redacten un apartat amb el període de garantia de la feina i les obligacions legals que l'acompanyen (3005-3h). Per completar el kit, anoten a la fitxa de la clienta els cosmètics emprats i qualsevol observació del procés (3065-2j). Tanquen amb tres preguntes tipus que faran al client per saber si el resultat ha estat l'esperat (3065-2k).",
+        "evidencia_es": "Sobre kit montado con los documentos, la garantía y las preguntas de control.",
+        "evidencia_ca": "Sobre kit muntat amb els documents, la garantia i les preguntes de control.",
+        "dua_es": "Se entregan los documentos en dos versiones, una completa y otra con las casillas clave marcadas.",
+        "dua_ca": "Es lliuren els documents en dues versions, una de completa i una amb les caselles clau marcades.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Mostrador de garantías tras una decoloración",
+        "titulo_ca": "Mostrador de garanties després d'una decoloració",
+        "contexto_es": "Una clienta de Llucmajor vuelve al salón tres días después de su decoloración y pregunta qué cubre el servicio.",
+        "contexto_ca": "Una clienta de Llucmajor torna al saló tres dies després de la seva decoloració i pregunta què cobreix el servei.",
+        "desarrollo_es": "La escena se representa por parejas: una persona hace de clienta y la otra de profesional que atiende el mostrador. La profesional abre la carpeta de entrega y localiza el documento que se entregó con el servicio (3005-3c). A continuación explica con palabras sencillas qué cubre la garantía y qué obligaciones tiene el salón (3005-3h). Para responder a las dudas sobre el tono, la profesional lee en voz alta la ficha de la clienta con los cosméticos aplicados (3065-2j). Termina formulando las tres preguntas acordadas para valorar el resultado del aclarado y anota las respuestas (3065-2k).",
+        "desarrollo_ca": "L'escena es representa per parelles: una persona fa de clienta i l'altra de professional que atén el mostrador. La professional obre la carpeta de lliurament i localitza el document que es va donar amb el servei (3005-3c). A continuació explica amb paraules senzilles què cobreix la garantia i quines obligacions té el saló (3005-3h). Per respondre als dubtes sobre el to, la professional llegeix en veu alta la fitxa de la clienta amb els cosmètics aplicats (3065-2j). Acaba formulant les tres preguntes acordades per valorar el resultat de l'aclarit i anota les respostes (3065-2k).",
+        "evidencia_es": "Guion de la escena con la carpeta de entrega revisada y las respuestas anotadas.",
+        "evidencia_ca": "Guió de l'escena amb la carpeta de lliurament revisada i les respostes anotades.",
+        "dua_es": "La clienta dispone de una tarjeta con las preguntas habituales si le cuesta improvisar.",
+        "dua_ca": "La clienta disposa d'una targeta amb les preguntes habituals si li costa improvisar.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Ficha del cliente explicada en vídeo por equipos",
+        "titulo_ca": "Fitxa del client explicada en vídeo per equips",
+        "contexto_es": "El salón del centro de Maó graba vídeos cortos para explicar a las familias cómo se documenta una decoloración.",
+        "contexto_ca": "El saló del centre de Maó enregistra vídeos curts per explicar a les famílies com es documenta una decoloració.",
+        "desarrollo_es": "Con un vídeo corto visto en casa sobre documentación del servicio, cada equipo prepara la grabación del suyo. El equipo muestra los documentos que se entregan al cliente y comenta cuál de ellos protege sus derechos (3005-3c). También pone un ejemplo de garantía con su plazo y las obligaciones que se derivan (3005-3h). En la segunda parte del vídeo, cada miembro explica cómo se rellena la ficha con los cosméticos y las observaciones del proceso (3065-2j) y cómo se formulan las preguntas tipo para valorar el resultado (3065-2k). Los vídeos se visionan en clase y se comentan.",
+        "desarrollo_ca": "Amb un vídeo curt vist a casa sobre documentació del servei, cada equip prepara l'enregistrament del seu. L'equip mostra els documents que es lliuren al client i comenta quin d'ells protegeix els seus drets (3005-3c). També posa un exemple de garantia amb el seu termini i les obligacions que se'n deriven (3005-3h). A la segona part del vídeo, cada membre explica com s'emplena la fitxa amb els cosmètics i les observacions del procés (3065-2j) i com es formulen les preguntes tipus per valorar el resultat (3065-2k). Els vídeos es visionen a classe i es comenten.",
+        "evidencia_es": "Vídeo de dos minutos y ficha de coevaluación del visionado.",
+        "evidencia_ca": "Vídeo de dos minuts i fitxa de coavaluació del visionat.",
+        "dua_es": "Quien no quiera aparecer puede grabar solo las manos y locutar el texto.",
+        "dua_ca": "Qui no vulgui aparèixer pot gravar només les mans i locutar el text.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3005", "ra": "RA4", "criterios": ["a", "b"] },
+    "b": { "modulo": "3065", "ra": "RA4", "criterios": ["j", "k", "l"] },
+    "justificacion_es": "Ante reclamaciones se ofrecen alternativas y se cita la legislación vigente, tras valorar el proceso de coloración parcial y sus posibles deficiencias.",
+    "justificacion_ca": "Davant reclamacions s'ofereixen alternatives i es cita la legislació vigent, després de valorar el procés de coloració parcial i les seves possibles deficiències.",
+    "actividades": [
+      {
+        "titulo_es": "Reclamación por unas mechas mal repartidas",
+        "titulo_ca": "Reclamació per unes metxes mal repartides",
+        "contexto_es": "En el salón del centro de Son Servera, una clienta se queja de que las mechas le han quedado desiguales.",
+        "contexto_ca": "Al saló del centre de Son Servera, una clienta es queixa que les metxes li han quedat desiguals.",
+        "desarrollo_es": "El caso se representa en dos rondas: en la primera, la clienta expone su queja y el profesional escucha sin interrumpir. Después, el profesional propone refer el trabajo con una nueva pasada de mechas en otro momento, indicando día y duración (3005-4a). A continuación comenta qué norma de consumo ampara a la clienta y cuál es el plazo de reclamación (3005-4b). En la segunda ronda, el profesional revisa la coloración parcial paso a paso con orden y limpieza (3065-4j) y explica qué fallo pudo causar el resultado desigual y cómo evitarlo (3065-4k). Se cierra pasando una encuesta breve de satisfacción sobre el trato recibido (3065-4l).",
+        "desarrollo_ca": "El cas es representa en dues rondes: a la primera, la clienta exposa la seva queixa i el professional escolta sense interrompre. Després, el professional proposa refer la feina amb una nova passada de metxes en un altre moment, indicant dia i durada (3005-4a). A continuació comenta quina norma de consum empara la clienta i quin és el termini de reclamació (3005-4b). A la segona ronda, el professional revisa la coloració parcial pas a pas amb ordre i netedat (3065-4j) i explica quin error va poder causar el resultat desigual i com evitar-lo (3065-4k). Es tanca passant una enquesta breu de satisfacció sobre el tracte rebut (3065-4l).",
+        "evidencia_es": "Hoja de reclamación cumplimentada y plan de corrección del trabajo.",
+        "evidencia_ca": "Full de reclamació emplenat i pla de correcció de la feina.",
+        "dua_es": "Se entrega una hoja con el guion de la reclamación y los pasos a seguir.",
+        "dua_ca": "Es lliura un full amb el guió de la reclamació i els passos que cal seguir.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Debate de calidad sobre la coloración parcial",
+        "titulo_ca": "Debat de qualitat sobre la coloració parcial",
+        "contexto_es": "El centro de Petra recibe una carta de una clienta que pide explicaciones sobre un servicio de reflejos.",
+        "contexto_ca": "El centre de Petra rep una carta d'una clienta que demana explicacions sobre un servei de reflexos.",
+        "desarrollo_es": "La clase se reparte en dos grupos que preparan posturas: uno defiende compensar a la clienta con un servicio gratuito y el otro propone explicar primero qué falló. Cada grupo redacta la oferta de solución con los tiempos y las condiciones claras (3005-4a) y busca en la normativa de consumo los derechos que se pueden invocar (3005-4b). Después, cada grupo revisa la coloración parcial con la lista de orden, pulcritud y seguridad (3065-4j), enumera las causas posibles del fallo y las medidas para evitarlo (3065-4k) y recoge en una encuesta breve cómo se ha sentido la clienta con la atención (3065-4l). Se cierra con una votación razonada de la mejor solución.",
+        "desarrollo_ca": "La classe es reparteix en dos grups que preparen postures: un defèn compensar la clienta amb un servei gratuït i l'altre proposa explicar primer què va fallar. Cada grup redacta l'oferta de solució amb els temps i les condicions clares (3005-4a) i busca en la normativa de consum els drets que es poden invocar (3005-4b). Després, cada grup revisa la coloració parcial amb la llista d'ordre, pulcritud i seguretat (3065-4j), enumera les causes possibles de l'error i les mesures per evitar-lo (3065-4k) i recull en una enquesta breu com s'ha sentit la clienta amb l'atenció (3065-4l). Es tanca amb una votació raonada de la millor solució.",
+        "evidencia_es": "Acuerdo de solución votado con la normativa citada y el resumen de la encuesta.",
+        "evidencia_ca": "Acord de solució votat amb la normativa citada i el resum de l'enquesta.",
+        "dua_es": "Cada grupo recibe las ideas principales en un guion de colores y puede hablar desde su sitio.",
+        "dua_ca": "Cada grup rep les idees principals en un guió de colors i pot parlar des del seu lloc.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Expediente de la clienta con reflejos irregulares",
+        "titulo_ca": "Expedient de la clienta amb reflexos irregulars",
+        "contexto_es": "La empresa ficticia Estil Illes recibe tres reclamaciones iguales por reflejos irregulares en una sola semana.",
+        "contexto_ca": "L'empresa fictícia Estil Illes rep tres reclamacions iguals per reflexos irregulars en una sola setmana.",
+        "desarrollo_es": "Por equipos, se abre un expediente con las tres reclamaciones y se ordenan los documentos. El equipo redacta la respuesta a cada clienta con la alternativa ofrecida, el tiempo y las condiciones (3005-4a) y añade el artículo de consumo que la respalda (3005-4b). Después reconstruye cada coloración parcial siguiendo el orden de trabajo y comprobando la pulcritud y la seguridad del proceso (3065-4j). En el expediente anota las causas comunes de los tres casos y las medidas preventivas (3065-4k) y adjunta la valoración de la satisfacción de las tres clientas tras la atención recibida (3065-4l).",
+        "desarrollo_ca": "Per equips, s'obre un expedient amb les tres reclamacions i s'ordenen els documents. L'equip redacta la resposta a cada clienta amb l'alternativa oferida, el temps i les condicions (3005-4a) i hi afegeix l'article de consum que la dona suport (3005-4b). Després reconstrueix cada coloració parcial seguint l'ordre de feina i comprovant la pulcritud i la seguretat del procés (3065-4j). A l'expedient anota les causes comunes dels tres casos i les mesures preventives (3065-4k) i hi adjunta la valoració de la satisfacció de les tres clientes després de l'atenció rebuda (3065-4l).",
+        "evidencia_es": "Expediente completo con las respuestas, el plan preventivo y la valoración final.",
+        "evidencia_ca": "Expedient complet amb les respostes, el pla preventiu i la valoració final.",
+        "dua_es": "El expediente se monta en una plantilla con pestañas y apartados numerados.",
+        "dua_ca": "L'expedient es munta en una plantilla amb pestanyes i apartats numerats.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      }
+    ]
+  }
+]

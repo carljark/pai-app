@@ -11,6 +11,9 @@
  * `ficha` escribe en la carpeta de trabajo `ficha.md` (módulos, RA y criterios ES/CA) y `config.json`
  * (tipo, relación, color e icono de cada módulo). `construir` lee `config.json` y todos los
  * `relaciones*.json`, valida las reglas del mapa (AGENTS.md §8) y, sin errores, escribe el JSON.
+ * Para encargar el mapa por partes (tarea 250): `plan` valida `plan.json` (relaciones sin actividades)
+ * y `comprobar --archivo relaciones_NNN.json` valida un solo archivo sin exigir el mapa completo.
+ * Admite también las competencias específicas (`CE1`, criterios `1.1`) de los ámbitos de FP Básica.
  * Formato y reglas: documentation/procesamiento_actividades_mapa_intermodular.md (sección 8).
  */
 import fs from 'fs';

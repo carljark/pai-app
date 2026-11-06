@@ -1,0 +1,379 @@
+[
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE7",
+      "criterios": [
+        "7.3"
+      ]
+    },
+    "justificacion_es": "Se observa el rostro, se pregunta por el estilo personal y se depilan las cejas interactuando con empatía y respeto.",
+    "justificacion_ca": "S'observa la cara, es pregunta per l'estil personal i es depilen les celles tot interactuant amb empatia i respecte.",
+    "actividades": [
+      {
+        "titulo_es": "Consulta previa con una clienta británica",
+        "titulo_ca": "Consulta prèvia amb una clienta britànica",
+        "contexto_es": "En el salón didáctico del centro de Palma llega una clienta británica que quiere un maquillaje para una boda.",
+        "contexto_ca": "Al saló didàctic del centre de Palma arriba una clienta britànica que vol un maquillatge per a un casament.",
+        "desarrollo_es": "Por parejas, una persona hace de clienta y la otra la entrevista en inglés sencillo, con saludos y fórmulas de cortesía, para conocer su estilo y sus alergias (3162-7.3). Después observa el rostro con buena luz y anota rasgos, tipo de piel y zona de cejas (3063-3c). Por último limpia la zona y corrige la forma de la ceja con pinzas y material desinfectado (3063-3d).",
+        "desarrollo_ca": "Per parelles, una persona fa de clienta i l'altra l'entrevista en anglès senzill, amb salutacions i fórmules de cortesia, per conèixer-ne l'estil i les al·lèrgies (3162-7.3). Després observa el rostre amb bona llum i n'anota els trets, el tipus de pell i la zona de celles (3063-3c). Finalment neteja la zona i corregeix la forma de la cella amb pinces i material desinfectat (3063-3d).",
+        "evidencia_es": "Ficha de consulta bilingüe con las respuestas de la clienta y el dibujo de la ceja acordada.",
+        "evidencia_ca": "Fitxa bilingüe de la consulta amb les respostes recollides i el traç de la cella que s'ha pactat.",
+        "dua_es": "Tarjeta con pictogramas y las preguntas clave en inglés para quien necesite apoyo.",
+        "dua_ca": "Targeta amb pictogrames i les preguntes clau en anglès per a qui necessiti suport.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Puesto de estilos en la feria del centro",
+        "titulo_ca": "Parada d'estils a la fira del centre",
+        "contexto_es": "La feria de FP del instituto monta un puesto de maquillaje donde el público pide consejo sobre su ceja.",
+        "contexto_ca": "La fira de FP de l'institut munta una parada de maquillatge on el públic demana consell sobre la seva cella.",
+        "desarrollo_es": "Cada equipo atiende a tres personas voluntarias y reparte roles de recepción, observación y pinzas. En la recepción se usan preguntas guiadas en inglés para saber gustos y alergias (3162-7.3). Mientras tanto, otra persona del equipo estudia el rostro y decide la forma de ceja (3063-3c), y el trío ejecuta la corrección con material estéril y papel protector (3063-3d).",
+        "desarrollo_ca": "Cada equip atén tres persones voluntàries i es reparteixen els rols de recepció, observació i pinces. A la recepció es fan servir preguntes guiades en anglès per saber gusts i al·lèrgies (3162-7.3). Mentrestant, una altra persona de l'equip estudia el rostre i decideix la forma de la cella (3063-3c), i el trio executa la correcció amb material estèril i paper protector (3063-3d).",
+        "evidencia_es": "Panel con los tres perfiles, la ceja dibujada y las frases en inglés que funcionaron.",
+        "evidencia_ca": "Panell amb els tres perfils, la cella dibuixada i les frases en anglès que van funcionar.",
+        "dua_es": "Plantilla con huecos y banco de palabras en inglés para las preguntas.",
+        "dua_ca": "Plantilla amb buits i banc de paraules en anglès per a les preguntes.",
+        "metodologia_es": "Aprendizaje cooperativo con grupos de expertos.",
+        "metodologia_ca": "Aprenentatge cooperatiu amb grups d'experts."
+      },
+      {
+        "titulo_es": "Cartas de clientas para la cabina escolar",
+        "titulo_ca": "Cartes de clientes per a la cabina escolar",
+        "contexto_es": "El aula-taller se convierte en un juego de cartas con clientas ficticias que solo hablan inglés.",
+        "contexto_ca": "L'aula-taller es converteix en un joc de cartes amb clientes fictícies que només parlen anglès.",
+        "desarrollo_es": "Cada jugador roba una carta, lee en voz alta la petición y gana puntos si responde con dos preguntas adecuadas sobre estilo y alergias (3162-7.3). Luego pasa al espejo, donde marca la forma de ceja del maniquí según la ficha del personaje (3063-3c). El turno acaba con la depilación del maniquí y la revisión de la higiene del puesto (3063-3d).",
+        "desarrollo_ca": "Cada jugador roba una carta, llegeix en veu alta la petició i guanya punts si respon amb dues preguntes adequades sobre estil i al·lèrgies (3162-7.3). Després passa al mirall, on marca la forma de cella del maniquí segons la fitxa del personatge (3063-3c). El torn acaba amb la depilació del maniquí i la revisió de la higiene del lloc (3063-3d).",
+        "evidencia_es": "Cartilla de puntos con las preguntas acertadas y el maniquí con la ceja corregida.",
+        "evidencia_ca": "Cartilla de punts amb les preguntes encertades i el maniquí amb la cella corregida.",
+        "dua_es": "Cartas con letra grande y versión de audio en inglés.",
+        "dua_ca": "Cartes amb lletra gran i versió d'àudio en anglès.",
+        "metodologia_es": "Gamificación con cartas.",
+        "metodologia_ca": "Gamificació amb cartes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA3",
+      "criterios": [
+        "f",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE1",
+      "criterios": [
+        "1.3"
+      ]
+    },
+    "justificacion_es": "Se determina la armonía de colores y las correcciones claras valorando el patrimonio estético y cultural de la moda.",
+    "justificacion_ca": "Es determina l'harmonia de colors i les correccions clares tot valorant el patrimoni estètic i cultural de la moda.",
+    "actividades": [
+      {
+        "titulo_es": "Paleta inspirada en la cerámica del pueblo",
+        "titulo_ca": "Paleta inspirada en la ceràmica del poble",
+        "contexto_es": "Una exposición de cerámica popular en el centro cultural de Felanitx sirve de punto de partida para elegir colores.",
+        "contexto_ca": "Una exposició de ceràmica popular al centre cultural de Felanitx serveix de punt de partida per triar colors.",
+        "desarrollo_es": "Las parejas eligen una pieza de la muestra y anotan sus tonos en una hoja de color. Con esa información determinan la armonía que mejor encaja en un rostro concreto y el visagismo que hay que aplicar (3063-3f). En el maniquí corrigen rojeces y aplican el fondo adecuado al tipo de piel (3063-3g). Para terminar, redactan una medida sencilla que ayude a conservar y difundir esa cerámica local (3162-1.3).",
+        "desarrollo_ca": "Les parelles trien una peça de la mostra i n'anoten els tons en un full de color. Amb aquesta informació determinen l'harmonia que encaixa millor en un rostre concret i el visagisme que cal aplicar (3063-3f). Al maniquí corregeixen vermellors i apliquen el fons adequat al tipus de pell (3063-3g). Per acabar, redacten una mesura senzilla que ajudi a conservar i difondre aquesta ceràmica local (3162-1.3).",
+        "evidencia_es": "Ficha de la pieza con la paleta, la foto del maniquí y la propuesta de conservación.",
+        "evidencia_ca": "Fitxa de la peça amb la paleta, la foto del maniquí i la proposta de conservació.",
+        "dua_es": "Muestras de color en relieve y guion con pasos numerados.",
+        "dua_ca": "Mostres de color en relleu i guió amb passos numerats.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Laboratorio de color para la fiesta del barrio",
+        "titulo_ca": "Laboratori de color per a la festa del barri",
+        "contexto_es": "La comisión de fiestas de un barrio de Ciutadella pide dos looks para el desfile de carrozas.",
+        "contexto_ca": "La comissió de festes d'un barri de Ciutadella demana dos looks per a la desfilada de carrosses.",
+        "desarrollo_es": "Los equipos prueban tres armonías distintas sobre bocetos de rostro y eligen la más adecuada al tema de la carroza, explicando el visagismo previsto (3063-3f). Después llevan la propuesta al maniquí con correcciones y fondo ajustados a la piel (3063-3g). La última fase consiste en pactar con la comisión un gesto de cuidado del patrimonio festivo del barrio, como recuperar telas o fotos antiguas (3162-1.3).",
+        "desarrollo_ca": "Els equips proven tres harmonies diferents sobre esbossos de rostre i trien la més adequada al tema de la carrossa, tot explicant el visagisme previst (3063-3f). Després porten la proposta al maniquí amb correccions i fons ajustats a la pell (3063-3g). L'última fase consisteix a pactar amb la comissió un gest de cura del patrimoni festiu del barri, com recuperar teles o fotos antigues (3162-1.3).",
+        "evidencia_es": "Dosier del look con la paleta probada, el maniquí acabado y el gesto acordado.",
+        "evidencia_ca": "Dossier del look amb la paleta provada, el maniquí acabat i el gest acordat.",
+        "dua_es": "Roles asignados y lista de comprobación impresa para cada fase.",
+        "dua_ca": "Rols assignats i llista de comprovació impresa per a cada fase.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      },
+      {
+        "titulo_es": "Color y memoria en el centro de mayores",
+        "titulo_ca": "Color i memòria al casal de majors",
+        "contexto_es": "El centro de mayores de Alaior prepara un encuentro de fotos antiguas y pide una sesión de maquillaje.",
+        "contexto_ca": "El casal de majors d'Alaior prepara una trobada de fotos antigues i demana una sessió de maquillatge.",
+        "desarrollo_es": "El grupo visita el centro, escucha los relatos de las personas mayores y recoge copias de fotos antiguas. Con esa información elige una armonía discreta y un visagismo que respete los rasgos de cada cara (3063-3f). En la sesión aplica correcciones suaves y el fondo indicado para cada piel (3063-3g). Antes de irse, acuerda con el centro cómo custodiar y digitalizar las fotos prestadas (3162-1.3).",
+        "desarrollo_ca": "El grup visita el casal, escolta els relats de les persones majors i recull còpies de fotos antigues. Amb aquesta informació tria una harmonia discreta i un visagisme que respecti els trets de cada cara (3063-3f). A la sessió aplica correccions suaus i el fons indicat per a cada pell (3063-3g). Abans de marxar, pacta amb el casal com custodiar i digitalitzar les fotos prestades (3162-1.3).",
+        "evidencia_es": "Álbum de la sesión con un antes y un después y el compromiso de custodia firmado.",
+        "evidencia_ca": "Àlbum de la sessió amb un abans i un després i el compromís de custòdia signat.",
+        "dua_es": "Iluminación reforzada y turnos cortos con descanso entre clientas.",
+        "dua_ca": "Il·luminació reforçada i torns curts amb descans entre clientes.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "h",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE6",
+      "criterios": [
+        "6.2"
+      ]
+    },
+    "justificacion_es": "Se elabora el boceto, se usa un pincel por color y se fija el maquillaje relacionándolo con otras manifestaciones artísticas.",
+    "justificacion_ca": "S'elabora l'esbós, s'usa un pinzell per color i es fixa el maquillatge tot relacionant-lo amb altres manifestacions artístiques.",
+    "actividades": [
+      {
+        "titulo_es": "Del relato del carnaval al rostro pintado",
+        "titulo_ca": "Del relat del carnaval al rostre pintat",
+        "contexto_es": "La biblioteca del centro presta un relato breve sobre el carnaval de la isla para inspirar una fantasía facial.",
+        "contexto_ca": "La biblioteca del centre presta un relat breu sobre el carnaval de l'illa per inspirar una fantasia facial.",
+        "desarrollo_es": "En círculo, el grupo lee el relato y comenta qué imágenes y emociones le sugiere, relacionándolo con máscaras y carteles de otras culturas (3162-6.2). Cada alumno dibuja después el boceto de su fantasía inspirada en un personaje (3063-4e). Al pasar al maniquí reserva un pincel para cada color (3063-4h) y cierra con una capa de fijador (3063-4i).",
+        "desarrollo_ca": "En rotllana, el grup llegeix el relat i comenta quines imatges i emocions li suggereix, tot relacionant-lo amb màscares i cartells d'altres cultures (3162-6.2). Cada alumne dibuixa després l'esbós de la seva fantasia inspirada en un personatge (3063-4e). En passar al maniquí reserva un pinzell per a cada color (3063-4h) i acaba amb una capa de fixador (3063-4i).",
+        "evidencia_es": "Boceto anotado, maniquí fijado y ficha que une el relato con la fantasía.",
+        "evidencia_ca": "Esbós anotat, maniquí fixat i fitxa que uneix el relat amb la fantasia.",
+        "dua_es": "Relato en versión de audio y con letra ampliada.",
+        "dua_ca": "Relat en versió d'àudio i amb lletra ampliada.",
+        "metodologia_es": "Tertulia literaria.",
+        "metodologia_ca": "Tertúlia literària."
+      },
+      {
+        "titulo_es": "Exposición de fantasías inspiradas en la pintura",
+        "titulo_ca": "Exposició de fantasies inspirades en la pintura",
+        "contexto_es": "El vestíbulo del centro acoge reproducciones de cuadros y el grupo monta una muestra de fantasía facial.",
+        "contexto_ca": "El vestíbul del centre acull reproduccions de quadres i el grup munta una mostra de fantasia facial.",
+        "desarrollo_es": "Cada equipo escoge un cuadro y comparte con otro equipo la lectura de un texto sobre él, buscando vínculos con la música o el teatro de la época (3162-6.2). Sobre papel dibuja el boceto de la fantasía que llevará al maniquí (3063-4e). Durante el montaje usa un pincel por color para no ensuciar tonos (3063-4h) y fija cada pieza antes de abrir la sala (3063-4i).",
+        "desarrollo_ca": "Cada equip tria un quadre i comparteix amb un altre equip la lectura d'un text sobre l'obra, tot buscant vincles amb la música o el teatre de l'època (3162-6.2). Sobre paper dibuixa l'esbós de la fantasia que portarà al maniquí (3063-4e). Durant el muntatge fa servir un pinzell per color per no embrutar tons (3063-4h) i fixa cada peça abans d'obrir la sala (3063-4i).",
+        "evidencia_es": "Sala de la muestra con tres maniquíes y cartelas que explican la obra.",
+        "evidencia_ca": "Sala de la mostra amb tres maniquins i cartel·les que expliquen l'obra.",
+        "dua_es": "Cartela con lectura fácil y código de colores por equipo.",
+        "dua_ca": "Cartel·la amb lectura fàcil i codi de colors per equip.",
+        "metodologia_es": "Aprendizaje por proyecto.",
+        "metodologia_ca": "Aprenentatge per projectes."
+      },
+      {
+        "titulo_es": "Carrera de pinceles con una microhistoria",
+        "titulo_ca": "Cursa de pinzells amb una microhistòria",
+        "contexto_es": "En la jornada de puertas abiertas, el público vota la fantasía que mejor cuenta una historia.",
+        "contexto_ca": "A la jornada de portes obertes, el públic vota la fantasia que explica millor una història.",
+        "desarrollo_es": "Los equipos reciben una microhistoria y una canción y deben relacionarlas con la fantasía que van a pintar, compartiendo la idea con el resto de la clase (3162-6.2). Con el cronómetro en marcha, esbozan el diseño en cinco minutos (3063-4e). Pintan sin mezclar pinceles (3063-4h) y aplican el fijador justo antes de la votación (3063-4i).",
+        "desarrollo_ca": "Els equips reben una microhistòria i una cançó i han de relacionar-les amb la fantasia que pintaran, tot compartint la idea amb la resta de la classe (3162-6.2). Amb el cronòmetre en marxa, esbossen el disseny en cinc minuts (3063-4e). Pinten sense barrejar pinzells (3063-4h) i apliquen el fixador just abans de la votació (3063-4i).",
+        "evidencia_es": "Ficha de la carrera con la puntuación de limpieza, boceto y fijación.",
+        "evidencia_ca": "Fitxa de la cursa amb la puntuació de netedat, esbós i fixació.",
+        "dua_es": "Tiempo extra y plantilla de boceto semiterminada para quien lo necesite.",
+        "dua_ca": "Temps extra i plantilla d'esbós semiacabada per a qui ho necessiti.",
+        "metodologia_es": "Gamificación por equipos.",
+        "metodologia_ca": "Gamificació per equips."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "3164",
+      "ra": "CE4",
+      "criterios": [
+        "4.1"
+      ]
+    },
+    "justificacion_es": "Se describen las alteraciones dermatológicas y oculares por mala higiene y se aplican medidas preventivas evaluando sus efectos sobre la salud.",
+    "justificacion_ca": "Es descriuen les alteracions dermatològiques i oculars per mala higiene i s'apliquen mesures preventives tot avaluant-ne els efectes sobre la salut.",
+    "actividades": [
+      {
+        "titulo_es": "Caso de la brocha que pasó de cara en cara",
+        "titulo_ca": "El cas de la brotxa que va passar d'una cara a una altra",
+        "contexto_es": "Un salón de Inca comparte con el grupo el incidente de una brocha mal desinfectada.",
+        "contexto_ca": "Un saló d'Inca comparteix amb el grup l'incident d'una brotxa mal desinfectada.",
+        "desarrollo_es": "El grupo lee el relato del incidente y reconstruye qué pasó en la cabina. Después describe las alteraciones de piel y ojos que puede provocar una higiene deficiente (3063-1b). A continuación revisa las medidas de prevención laboral y de gestión de residuos que faltaron (3063-1i). El cierre es una valoración del efecto de esos descuidos sobre la salud de la clienta y sobre el entorno (3164-4.1).",
+        "desarrollo_ca": "El grup llegeix el relat de l'incident i reconstrueix què va passar a la cabina. Després descriu les alteracions de pell i ulls que pot provocar una higiene deficient (3063-1b). A continuació revisa les mesures de prevenció laboral i de gestió de residus que hi van faltar (3063-1i). El tancament és una valoració de l'efecte d'aquests descuits sobre la salut de la clienta i sobre l'entorn (3164-4.1).",
+        "evidencia_es": "Informe del caso con un protocolo de limpieza y tres hábitos sostenibles.",
+        "evidencia_ca": "Informe del cas amb un protocol de neteja i tres hàbits sostenibles.",
+        "dua_es": "Informe con apartados fijos y banco de palabras técnicas.",
+        "dua_ca": "Informe amb apartats fixos i banc de paraules tècniques.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Plan de residuos para la cabina del centro",
+        "titulo_ca": "Pla de residus per a la cabina del centre",
+        "contexto_es": "El equipo directivo quiere reducir los residuos del aula de maquillaje antes de fin de curso.",
+        "contexto_ca": "L'equip directiu vol reduir els residus de l'aula de maquillatge abans d'acabar el curs.",
+        "desarrollo_es": "Durante una semana el grupo pesa y separa los restos de la cabina. Con los datos sobre la mesa describe qué alteraciones puede causar la mala higiene de útiles (3063-1b) y fija medidas de prevención para las personas y para el agua (3063-1i). Luego calcula cuánto baja el residuo con cada cambio propuesto y valora su efecto en la salud y el entorno (3164-4.1).",
+        "desarrollo_ca": "Durant una setmana el grup pesa i separa les restes de la cabina. Amb les dades sobre la taula descriu quines alteracions pot causar la mala higiene dels estris (3063-1b) i fixa mesures de prevenció per a les persones i per a l'aigua (3063-1i). Després calcula quant baixa el residu amb cada canvi proposat i en valora l'efecte en la salut i l'entorn (3164-4.1).",
+        "evidencia_es": "Plan semanal de residuos con cantidades y compromisos del grupo.",
+        "evidencia_ca": "Pla setmanal de residus amb quantitats i compromisos del grup.",
+        "dua_es": "Báscula digital con lectura grande y tarjetas de pasos.",
+        "dua_ca": "Bàscula digital amb lectura gran i targetes de passos.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Simulacro de inspección en la cabina escolar",
+        "titulo_ca": "Simulacre d'inspecció a la cabina escolar",
+        "contexto_es": "Una técnica de prevención visita ficticiamente el taller y el grupo debe recibirla con todo en orden.",
+        "contexto_ca": "Una tècnica de prevenció visita fictíciament el taller i el grup l'ha de rebre amb tot en ordre.",
+        "desarrollo_es": "Se reparten los papeles de inspectora, alumnado y clienta y se revisa el puesto de trabajo. La inspectora señala los riesgos de una higiene deficiente y pide explicaciones sobre las lesiones posibles (3063-1b). El grupo corrige sobre la marcha las medidas de prevención que faltan (3063-1i) y justifica ante la visita qué gana la salud y el medio con cada cambio (3164-4.1).",
+        "desarrollo_ca": "Es reparteixen els papers d'inspectora, alumnat i clienta i es revisa el lloc de treball. La inspectora assenyala els riscs d'una higiene deficient i demana explicacions sobre les lesions possibles (3063-1b). El grup corregeix sobre la marxa les mesures de prevenció que falten (3063-1i) i justifica davant la visita què guanyen la salut i el medi amb cada canvi (3164-4.1).",
+        "evidencia_es": "Acta de inspección con las correcciones hechas y el sello final.",
+        "evidencia_ca": "Acta d'inspecció amb les correccions fetes i el segell final.",
+        "dua_es": "Acta con casillas y copia para registrar sin escribir mucho.",
+        "dua_ca": "Acta amb caselles i còpia per registrar sense escriure gaire.",
+        "metodologia_es": "Juego de rol con roles rotatorios.",
+        "metodologia_ca": "Joc de rol amb rols rotatoris."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA1",
+      "criterios": [
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "3164",
+      "ra": "CE1",
+      "criterios": [
+        "1.2"
+      ]
+    },
+    "justificacion_es": "Se reconocen las etiquetas y la composición de los productos entendiendo la contribución de la química y la ciencia a la cosmética.",
+    "justificacion_ca": "Es reconeixen les etiquetes i la composició dels productes tot entenent la contribució de la química i la ciència a la cosmètica.",
+    "actividades": [
+      {
+        "titulo_es": "De la etiqueta al laboratorio del cosmético",
+        "titulo_ca": "De l'etiqueta al laboratori del cosmètic",
+        "contexto_es": "Llega al taller una caja de productos donados sin prospecto y con etiquetas en varios idiomas.",
+        "contexto_ca": "Arriba al taller una caixa de productes donats sense prospecte i amb etiquetes en diversos idiomes.",
+        "desarrollo_es": "Cada pareja coge un envase y lee la lista de ingredientes, los pictogramas y las advertencias (3063-1h). Después busca quién descubrió o mejoró alguno de esos compuestos y cómo llegó su uso a los salones (3164-1.2). Con todo, prepara una ficha que explique el producto a una clienta curiosa.",
+        "desarrollo_ca": "Cada parella agafa un envàs i llegeix la llista d'ingredients, els pictogrames i les advertències (3063-1h). Després cerca qui va descobrir o millorar algun d'aquests compostos i com va arribar el seu ús als salons (3164-1.2). Amb tot això, prepara una fitxa que expliqui el producte a una clienta curiosa.",
+        "evidencia_es": "Línea del tiempo del ingrediente y ficha del producto para el expositor.",
+        "evidencia_ca": "Línia del temps de l'ingredient i fitxa del producte per a l'expositor.",
+        "dua_es": "Etiquetas ampliadas y glosario de pictogramas en la mesa.",
+        "dua_ca": "Etiquetes ampliades i glossari de pictogrames a la taula.",
+        "metodologia_es": "Indagación documental.",
+        "metodologia_ca": "Indagació documental."
+      },
+      {
+        "titulo_es": "Tres minutos para explicar un cosmético",
+        "titulo_ca": "Tres minuts per explicar un cosmètic",
+        "contexto_es": "El grupo graba microexplicaciones para el canal del centro sobre los productos que usa cada día.",
+        "contexto_ca": "El grup grava microexplicacions per al canal del centre sobre els productes que fa servir cada dia.",
+        "desarrollo_es": "En casa, cada alumno elige un cosmético, fotografía su etiqueta y prepara un guion de tres minutos (3063-1h). En clase lo expone al grupo pequeño y responde a dos preguntas. La intervención termina explicando qué aportaron las personas investigadoras al avance de ese producto (3164-1.2).",
+        "desarrollo_ca": "A casa, cada alumne tria un cosmètic, fotografia l'etiqueta i prepara un guió de tres minuts (3063-1h). A classe l'exposa al grup petit i respon dues preguntes. La intervenció acaba explicant què van aportar les persones investigadores a l'avanç d'aquell producte (3164-1.2).",
+        "evidencia_es": "Vídeo de tres minutos y rúbrica de coevaluación del grupo.",
+        "evidencia_ca": "Enregistrament de tres minuts i rúbrica que emplena el grup.",
+        "dua_es": "Guion con preguntas y opción de audio sin cámara.",
+        "dua_ca": "Guió amb preguntes i opció d'àudio sense càmera.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Trivial de etiquetas y científicos",
+        "titulo_ca": "Trivial d'etiquetes i científics",
+        "contexto_es": "Antes de la práctica de maquillaje, el grupo repasa con un tablero las etiquetas y sus protagonistas.",
+        "contexto_ca": "Abans de la pràctica de maquillatge, el grup repassa amb un tauler les etiquetes i els seus protagonistes.",
+        "desarrollo_es": "Los equipos avanzan por el tablero acertando preguntas sobre composición, conservación y símbolos del envase (3063-1h). Algunas casillas piden nombrar a la persona que impulsó un avance científico concreto y explicar su impacto social (3164-1.2). El equipo que duda puede gastar un comodín para consultar el envase real.",
+        "desarrollo_ca": "Els equips avancen pel tauler encertant preguntes sobre composició, conservació i símbols de l'envàs (3063-1h). Algunes caselles demanen nomenar la persona que va impulsar un avenç científic concret i explicar-ne l'impacte social (3164-1.2). L'equip que dubta pot gastar un comodí per consultar l'envàs real.",
+        "evidencia_es": "Tablero completado y lista de dudas resueltas con el envase en la mano.",
+        "evidencia_ca": "Tauler completat i llista de dubtes resolts amb l'envàs a la mà.",
+        "dua_es": "Preguntas en dos niveles y comodín de consulta al envase.",
+        "dua_ca": "Preguntes en dos nivells i comodí de consulta a l'envàs.",
+        "metodologia_es": "Gamificación tipo trivial.",
+        "metodologia_ca": "Gamificació tipus trivial."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA2",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "3164",
+      "ra": "CE6",
+      "criterios": [
+        "6.1"
+      ]
+    },
+    "justificacion_es": "Se valoran las causas que determinan la elección de los cosméticos de higiene aplicando criterios científicos y matemáticos del ámbito profesional.",
+    "justificacion_ca": "Es valoren les causes que determinen l'elecció dels cosmètics d'higiene tot aplicant criteris científics i matemàtics de l'àmbit professional.",
+    "actividades": [
+      {
+        "titulo_es": "Dosificación de higiene para tres servicios",
+        "titulo_ca": "Dosificació d'higiene per a tres serveis",
+        "contexto_es": "El economato del taller se queda con poca cantidad de limpiador y hay que ajustar cada servicio.",
+        "contexto_ca": "El magatzem del taller es queda amb poca quantitat de netejador i cal ajustar cada servei.",
+        "desarrollo_es": "Con probeta y jeringa, los equipos miden la cantidad de limpiador que necesita cada tipo de piel (3164-6.1). Después relacionan esa elección con la técnica de maquillaje prevista y justifican el cambio de producto (3063-2e). Los datos se anotan en una tabla común para comparar resultados.",
+        "desarrollo_ca": "Amb proveta i xeringa, els equips mesuren la quantitat de netejador que necessita cada tipus de pell (3164-6.1). Després relacionen aquesta elecció amb la tècnica de maquillatge prevista i justifiquen el canvi de producte (3063-2e). Les dades s'anoten en una taula comuna per comparar resultats.",
+        "evidencia_es": "Tabla de dosificación con medidas, medias y una conclusión por equipo.",
+        "evidencia_ca": "Taula de dosificació amb mesures, mitjanes i una conclusió per equip.",
+        "dua_es": "Probeta con marcas grandes y calculadora del aula disponible.",
+        "dua_ca": "Proveta amb marques grans i calculadora de l'aula disponible.",
+        "metodologia_es": "Simulación de economato.",
+        "metodologia_ca": "Simulació de magatzem."
+      },
+      {
+        "titulo_es": "Caso de dos pieles y dos limpiadores",
+        "titulo_ca": "El cas de dues pells i dos netejadors",
+        "contexto_es": "Dos clientas del salón didáctico reaccionan de forma distinta al mismo producto de higiene.",
+        "contexto_ca": "Dues clientes del saló didàctic reaccionen de manera diferent al mateix producte d'higiene.",
+        "desarrollo_es": "El grupo compara el pH y la composición de dos limpiadores con tiras reactivas y la etiqueta (3164-6.1). Luego estudia las dos pieles y decide qué producto conviene antes de cada técnica de maquillaje, explicando el porqué (3063-2e). La sesión termina con una guía breve para el mostrador.",
+        "desarrollo_ca": "El grup compara el pH i la composició de dos netejadors amb tires reactives i l'etiqueta (3164-6.1). Després estudia les dues pells i decideix quin producte convé abans de cada tècnica de maquillatge, tot explicant-ne el perquè (3063-2e). La sessió acaba amb una guia breu per al mostrador.",
+        "evidencia_es": "Guía de dos cosméticos de higiene con criterios y gráfico de pH.",
+        "evidencia_ca": "Guia de dos cosmètics d'higiene amb criteris i gràfic de pH.",
+        "dua_es": "Tiras de pH con escala de color y lectura acompañada.",
+        "dua_ca": "Tires de pH amb escala de color i lectura acompanyada.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Experimento del algodón que limpia",
+        "titulo_ca": "Experiment del cotó que neteja",
+        "contexto_es": "El grupo quiere saber cuánto producto y agua retira cada desmaquillante antes de la clase práctica.",
+        "contexto_ca": "El grup vol saber quant producte i aigua retira cada desmaquillant abans de la classe pràctica.",
+        "desarrollo_es": "Cada equipo empapa algodones con la misma cantidad de dos desmaquillantes y mide el agua y el producto gastados (3164-6.1). Con los resultados decide cuál conviene antes de una técnica de maquillaje concreta y argumenta la elección (3063-2e). Las conclusiones se exponen en una gráfica de barras.",
+        "desarrollo_ca": "Cada equip xopa cotons amb la mateixa quantitat de dos desmaquillants i mesura l'aigua i el producte gastats (3164-6.1). Amb els resultats decideix quin convé abans d'una tècnica de maquillatge concreta i n'argumenta l'elecció (3063-2e). Les conclusions s'exposen en un gràfic de barres.",
+        "evidencia_es": "Gráfica de resultados y recomendación razonada del desmaquillante.",
+        "evidencia_ca": "Gràfic de resultats i recomanació raonada del desmaquillant.",
+        "dua_es": "Registro con pegatinas de colores y plantilla de gráfica preparada.",
+        "dua_ca": "Registre amb enganxines de colors i plantilla de gràfic preparada.",
+        "metodologia_es": "Indagación experimental.",
+        "metodologia_ca": "Indagació experimental."
+      }
+    ]
+  }
+]

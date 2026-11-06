@@ -1,0 +1,380 @@
+[
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA1",
+      "criterios": [
+        "g",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Se exponen oralmente los resultados del proyecto con una estructura clara y ordenada al presentarlo al grupo.",
+    "justificacion_ca": "S'exposen oralment els resultats del projecte amb una estructura clara i ordenada en presentar-lo al grup.",
+    "actividades": [
+      {
+        "titulo_es": "Exposición del proyecto ante el grupo clase",
+        "titulo_ca": "Exposició del projecte davant el grup classe",
+        "contexto_es": "El proyecto intermodular llega a su recta final y cada equipo debe presentar sus conclusiones ante el resto de la clase en el aula-taller del centro.",
+        "contexto_ca": "El projecte intermodular arriba a la recta final i cada equip ha de presentar les seves conclusions davant la resta de la classe a l'aula-taller del centre.",
+        "desarrollo_es": "Cada equipo prepara un guion y comunica los resultados del proyecto apoyándose en una presentación digital (3160-5a). Un portavoz expone el tema acordado delante del grupo durante unos minutos (3005-1g). Después, el equipo revisa el orden y la precisión de las ideas para dejar la información bien estructurada (3005-1i).",
+        "desarrollo_ca": "Cada equip prepara un guió i comunica els resultats del projecte amb el suport d'una presentació digital (3160-5a). Un portaveu exposa el tema acordat davant el grup durant uns minuts (3005-1g). Després, l'equip revisa l'ordre i la precisió de les idees per deixar la informació ben estructurada (3005-1i).",
+        "evidencia_es": "Rúbrica de exposición oral y presentación digital entregada.",
+        "evidencia_ca": "Rúbrica d'exposició oral i presentació digital lliurada.",
+        "dua_es": "Guion visual con pictogramas y tiempo flexible para quien necesite ensayar antes.",
+        "dua_ca": "Guió visual amb pictogrames i temps flexible per a qui necessiti assajar abans.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Vídeo tutorial del proyecto para el salón",
+        "titulo_ca": "Vídeo tutorial del projecte per al saló",
+        "contexto_es": "Un salón de peluquería de Manacor pide a los equipos un vídeo breve para conocer cómo se organiza un proyecto del sector.",
+        "contexto_ca": "Un saló de perruqueria de Manacor demana als equips un vídeo breu per conèixer com s'organitza un projecte del sector.",
+        "desarrollo_es": "Antes de grabar, cada estudiante visiona en casa un ejemplo de presentación y anota su estructura. En clase, el equipo graba un vídeo donde explica el proyecto con mensajes claros (3160-5a) y lo presenta oralmente ante dos compañeros que hacen de entrevistadores (3005-1g). Después ordenan la escaleta para que el discurso siga un orden lógico (3005-1i).",
+        "desarrollo_ca": "Abans de gravar, cada alumne visiona a casa un exemple de presentació i n'anota l'estructura. A classe, l'equip grava un vídeo on explica el projecte amb missatges clars (3160-5a) i el presenta oralment davant dos companys que fan d'entrevistadors (3005-1g). Després ordenen l'escaleta perquè el discurs segueixi un ordre lògic (3005-1i).",
+        "evidencia_es": "Vídeo breve y escaleta revisada por el equipo.",
+        "evidencia_ca": "Vídeo breu i escaleta revisada per l'equip.",
+        "dua_es": "Opción de grabar solo audio o usar subtítulos para quien se ponga nervioso ante la cámara.",
+        "dua_ca": "Opció de gravar només àudio o fer servir subtítols per a qui es posi nerviós davant la càmera.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Feria de proyectos en el vestíbulo",
+        "titulo_ca": "Fira de projectes al vestíbul",
+        "contexto_es": "El centro celebra una jornada de puertas abiertas y los equipos montan pequeños stands para contar sus proyectos a las familias visitantes.",
+        "contexto_ca": "El centre celebra una jornada de portes obertes i els equips munten petits estands per explicar els seus projectes a les famílies visitants.",
+        "desarrollo_es": "Cada equipo diseña un stand y ensaya una explicación breve dirigida a las familias (3160-5a). En turnos, el alumnado expone el tema asignado ante los visitantes (3005-1g). Para acabar, el equipo comprueba que las ideas siguen un orden claro y preciso en los carteles del stand (3005-1i).",
+        "desarrollo_ca": "Cada equip dissenya un estand i assaja una explicació breu adreçada a les famílies (3160-5a). Per torns, l'alumnat exposa el tema assignat davant els visitants (3005-1g). Per acabar, l'equip comprova que les idees segueixen un ordre clar i precís en els cartells de l'estand (3005-1i).",
+        "evidencia_es": "Cartel del stand y registro de las explicaciones dadas.",
+        "evidencia_ca": "Cartell de l'estand i registre de les explicacions fetes.",
+        "dua_es": "Reparto de roles según las fortalezas de cada estudiante (quien dibuja, quien habla, quien anota).",
+        "dua_ca": "Repartiment de rols segons les fortaleses de cada alumne (qui dibuixa, qui parla, qui anota).",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA1",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Se analizan las tipologías de público, clientes y proveedores al definir las características de las empresas tipo del sector.",
+    "justificacion_ca": "S'analitzen les tipologies de públic, clients i proveïdors en definir les característiques de les empreses tipus del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Mapa de empresas y tipos de público",
+        "titulo_ca": "Mapa d'empreses i tipus de públic",
+        "contexto_es": "Una empresa de estética de Palma quiere conocer a qué públicos se dirige antes de abrir una nueva cabina.",
+        "contexto_ca": "Una empresa d'estètica de Palma vol conèixer a quins públics s'adreça abans d'obrir una cabina nova.",
+        "desarrollo_es": "Por parejas, el alumnado busca en internet empresas tipo del sector y define sus características principales (3160-1a). Después clasifican los públicos que atienden en un mural (3005-2a). Para terminar, separan con etiquetas de color a clientes, proveedores y público general (3005-2b).",
+        "desarrollo_ca": "Per parelles, l'alumnat cerca a internet empreses tipus del sector i en defineix les característiques principals (3160-1a). Després classifiquen els públics que atenen en un mural (3005-2a). Per acabar, separen amb etiquetes de color clients, proveïdors i públic general (3005-2b).",
+        "evidencia_es": "Mural clasificador con fotografías y etiquetas.",
+        "evidencia_ca": "Mural classificador amb fotografies i etiquetes.",
+        "dua_es": "Plantilla de mural con categorías ya marcadas para quien necesite apoyo.",
+        "dua_ca": "Plantilla de mural amb categories ja marcades per a qui necessiti suport.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de roles en el mostrador",
+        "titulo_ca": "Joc de rols al mostrador",
+        "contexto_es": "El salón del centro simula una mañana de trabajo con clientes, proveedores y visitantes que llegan a la vez.",
+        "contexto_ca": "El saló del centre simula un matí de feina amb clients, proveïdors i visitants que arriben alhora.",
+        "desarrollo_es": "Cada estudiante recibe una tarjeta con un papel (cliente, proveedor o curioso) y debe ser identificado por sus compañeros al llegar al mostrador (3005-2b). El equipo consulta previamente empresas tipo del sector para basar cada papel en casos reales (3160-1a). Después analizan qué tipo de público era cada tarjeta y lo justifican en voz alta (3005-2a).",
+        "desarrollo_ca": "Cada alumne rep una targeta amb un paper (client, proveïdor o curiós) i ha de ser identificat pels companys en arribar al mostrador (3005-2b). L'equip consulta prèviament empreses tipus del sector per basar cada paper en casos reals (3160-1a). Després analitzen quin tipus de públic era cada targeta i ho justifiquen en veu alta (3005-2a).",
+        "evidencia_es": "Registro de tarjetas clasificadas y justificación oral.",
+        "evidencia_ca": "Registre de targetes classificades i justificació oral.",
+        "dua_es": "Tarjetas con apoyos visuales y posibilidad de responder por escrito.",
+        "dua_ca": "Targetes amb suports visuals i possibilitat de respondre per escrit.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Radiografía de una empresa tipo",
+        "titulo_ca": "Radiografia d'una empresa tipus",
+        "contexto_es": "Un centro de formación de Inca invita al alumnado a analizar cómo se presenta una empresa del sector en su web.",
+        "contexto_ca": "Un centre de formació d'Inca convida l'alumnat a analitzar com es presenta una empresa del sector a la seva web.",
+        "desarrollo_es": "Cada grupo elige la web de una empresa tipo y anota sus características y servicios (3160-1a). Después identifican en la web a quién se dirige cada mensaje y completan una ficha de públicos (3005-2a). Finalmente, marcan qué mensajes van a clientes, cuáles a proveedores y cuáles al público general (3005-2b).",
+        "desarrollo_ca": "Cada grup tria la web d'una empresa tipus i n'anota les característiques i els serveis (3160-1a). Després identifiquen a la web a qui s'adreça cada missatge i completen una fitxa de públics (3005-2a). Finalment, marquen quins missatges van a clients, quins a proveïdors i quins al públic general (3005-2b).",
+        "evidencia_es": "Ficha de análisis de la web de la empresa.",
+        "evidencia_ca": "Fitxa d'anàlisi de la web de l'empresa.",
+        "dua_es": "Elección entre rellenar la ficha a mano o en formato digital.",
+        "dua_ca": "Elecció entre emplenar la fitxa a mà o en format digital.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Se distingue la información de la publicidad y se usa la terminología comercial al comparar la propuesta nueva con la empresa de referencia.",
+    "justificacion_ca": "Es distingeix la informació de la publicitat i s'usa la terminologia comercial en comparar la proposta nova amb l'empresa de referència.",
+    "actividades": [
+      {
+        "titulo_es": "Folletos: información o publicidad",
+        "titulo_ca": "Fullets: informació o publicitat",
+        "contexto_es": "Un salón de Santanyí quiere revisar sus folletos antes de repartirlos en la feria del pueblo.",
+        "contexto_ca": "Un saló de Santanyí vol revisar els seus fullets abans de repartir-los a la fira del poble.",
+        "desarrollo_es": "Cada equipo recorta folletos reales del sector y subraya las palabras propias de la comunicación comercial (3005-2c). Después separa lo que informa de lo que intenta vender (3005-2d). Con esas ideas, compara el folleto con el de la empresa de referencia y anota qué cambia en su propuesta (3160-3b).",
+        "desarrollo_ca": "Cada equip retalla fullets reals del sector i subratlla les paraules pròpies de la comunicació comercial (3005-2c). Després separa què informa de què intenta vendre (3005-2d). Amb aquestes idees, compara el fullet amb el de l'empresa de referència i anota què canvia en la seva proposta (3160-3b).",
+        "evidencia_es": "Folleto anotado y tabla comparativa de diferencias.",
+        "evidencia_ca": "Fullet anotat i taula comparativa de diferències.",
+        "dua_es": "Glosario ilustrado con los términos comerciales más frecuentes.",
+        "dua_ca": "Glossari il·lustrat amb els termes comercials més freqüents.",
+        "metodologia_es": "Pensamiento de diseño.",
+        "metodologia_ca": "Pensament de disseny."
+      },
+      {
+        "titulo_es": "Debate sobre un anuncio engañoso",
+        "titulo_ca": "Debat sobre un anunci enganyós",
+        "contexto_es": "Un anuncio de un producto capilar promete resultados imposibles y el grupo debe valorar si informa o solo vende.",
+        "contexto_ca": "Un anunci d'un producte capil·lar promet resultats impossibles i el grup ha de valorar si informa o només ven.",
+        "desarrollo_es": "El grupo lee el anuncio y marca las expresiones típicas de la comunicación comercial (3005-2c). Después debate en dos equipos qué parte es información y qué parte es publicidad (3005-2d). Para cerrar, cada equipo propone un anuncio alternativo y explica en qué se diferencia del original de referencia (3160-3b).",
+        "desarrollo_ca": "El grup llegeix l'anunci i marca les expressions típiques de la comunicació comercial (3005-2c). Després debat en dos equips quina part és informació i quina part és publicitat (3005-2d). Per tancar, cada equip proposa un anunci alternatiu i explica en què es diferencia de l'original de referència (3160-3b).",
+        "evidencia_es": "Acta del debate con el anuncio alternativo.",
+        "evidencia_ca": "Acta del debat amb l'anunci alternatiu.",
+        "dua_es": "Turnos de palabra con tarjetas para quien le cuesta intervenir.",
+        "dua_ca": "Torns de paraula amb targetes per a qui li costa intervenir.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Concurso de eslóganes del sector",
+        "titulo_ca": "Concurs d'eslògans del sector",
+        "contexto_es": "La semana cultural del centro propone un concurso para crear eslóganes de un nuevo servicio de belleza.",
+        "contexto_ca": "La setmana cultural del centre proposa un concurs per crear eslògans d'un servei de bellesa nou.",
+        "desarrollo_es": "Por equipos, revisan eslóganes reales y localizan los términos de comunicación comercial que usan (3005-2c). Antes de escribir, deciden qué parte del mensaje informará y qué parte será publicidad (3005-2d). Cada equipo presenta su eslogan y explica las diferencias con el eslogan de la empresa de referencia (3160-3b).",
+        "desarrollo_ca": "Per equips, revisen eslògans reals i localitzen els termes de comunicació comercial que fan servir (3005-2c). Abans d'escriure, decideixen quina part del missatge informarà i quina part serà publicitat (3005-2d). Cada equip presenta el seu eslògan i explica les diferències amb l'eslògan de l'empresa de referència (3160-3b).",
+        "evidencia_es": "Eslógan presentado y ficha de diferencias.",
+        "evidencia_ca": "Eslògan presentat i fitxa de diferències.",
+        "dua_es": "Banco de palabras y ejemplos de eslóganes para inspirarse.",
+        "dua_ca": "Banc de paraules i exemples d'eslògans per inspirar-se.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "d"
+      ]
+    },
+    "justificacion_es": "Se valora la imagen y la corrección del profesional y el respeto al cliente mientras se buscan empresas del sector y se elabora su mapa.",
+    "justificacion_ca": "Es valora la imatge i la correcció del professional i el respecte al client mentre es cerquen empreses del sector i s'elabora el seu mapa.",
+    "actividades": [
+      {
+        "titulo_es": "Visita guiada a empresas del sector",
+        "titulo_ca": "Visita guiada a empreses del sector",
+        "contexto_es": "El grupo prepara una visita a varias peluquerías de Eivissa para observar cómo cuidan la imagen y el trato.",
+        "contexto_ca": "El grup prepara una visita a diverses perruqueries d'Eivissa per observar com cuiden la imatge i el tracte.",
+        "desarrollo_es": "Cada equipo localiza en internet empresas del sector de la zona y prepara una ficha de observación (3160-1b). Durante la visita, anotan cómo viste el personal y cómo saluda a cada cliente (3005-3e) y revisan su propia imagen antes de entrar (3005-3f). Con los datos recogidos, montan un mapa de las empresas visitadas (3160-1d).",
+        "desarrollo_ca": "Cada equip localitza a internet empreses del sector de la zona i prepara una fitxa d'observació (3160-1b). Durant la visita, anoten com vesteix el personal i com saluda cada client (3005-3e) i revisen la seva pròpia imatge abans d'entrar (3005-3f). Amb les dades recollides, munten un mapa de les empreses visitades (3160-1d).",
+        "evidencia_es": "Ficha de observación y mapa de empresas.",
+        "evidencia_ca": "Fitxa d'observació i mapa d'empreses.",
+        "dua_es": "Ficha con apartados marcados y apoyo fotográfico para quien lo necesite.",
+        "dua_ca": "Fitxa amb apartats marcats i suport fotogràfic per a qui ho necessiti.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Reto: mejorar la imagen del mostrador",
+        "titulo_ca": "Repte: millorar la imatge del mostrador",
+        "contexto_es": "Un salón de Ciutadella nota que las clientas dudan al entrar y pide al grupo ideas para transmitir más confianza.",
+        "contexto_ca": "Un saló de Ciutadella nota que les clientes dubten en entrar i demana al grup idees per transmetre més confiança.",
+        "desarrollo_es": "El reto consiste en rediseñar la acogida del salón. Para inspirarse, el grupo busca empresas del sector con buena imagen (3160-1b) y acuerda cómo debe ir vestido el personal y qué lenguaje corporal usar (3005-3e). También pacta normas de respeto y trato cordial con cada cliente (3005-3f) y presenta un mapa visual con las empresas modelo (3160-1d).",
+        "desarrollo_ca": "El repte consisteix a redissenyar l'acollida del saló. Per inspirar-se, el grup cerca empreses del sector amb bona imatge (3160-1b) i acorda com ha d'anar vestit el personal i quin llenguatge corporal fer servir (3005-3e). També pacta normes de respecte i tracte cordial amb cada client (3005-3f) i presenta un mapa visual amb les empreses model (3160-1d).",
+        "evidencia_es": "Propuesta de acogida y mapa visual de buenas prácticas.",
+        "evidencia_ca": "Proposta d'acollida i mapa visual de bones pràctiques.",
+        "dua_es": "Roles rotativos para que todo el mundo aporte una idea al reto.",
+        "dua_ca": "Rols rotatius perquè tothom aporti una idea al repte.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Puzle de empresas y trato correcto",
+        "titulo_ca": "Puzle d'empreses i tracte correcte",
+        "contexto_es": "El aula se organiza como una pequeña agencia que asesora a un salón de Felanitx sobre imagen y trato al cliente.",
+        "contexto_ca": "L'aula s'organitza com una petita agència que assessora un saló de Felanitx sobre imatge i tracte al client.",
+        "desarrollo_es": "Cada grupo se especializa en una tarea: buscar empresas del sector (3160-1b), analizar la imagen del personal (3005-3e), revisar el trato al cliente (3005-3f) o dibujar el mapa (3160-1d). Después se mezclan los grupos y cada experto explica su parte al resto. El resultado se reúne en un único informe para la agencia.",
+        "desarrollo_ca": "Cada grup s'especialitza en una tasca: cercar empreses del sector (3160-1b), analitzar la imatge del personal (3005-3e), revisar el tracte al client (3005-3f) o dibuixar el mapa (3160-1d). Després es barregen els grups i cada expert explica la seva part a la resta. El resultat es reuneix en un únic informe per a l'agència.",
+        "evidencia_es": "Informe final consensuado por los grupos de expertos.",
+        "evidencia_ca": "Informe final consensuat pels grups d'experts.",
+        "dua_es": "Material de cada especialidad en versión resumida y con apoyos visuales.",
+        "dua_ca": "Material de cada especialitat en versió resumida i amb suports visuals.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Al reconocer la legislación de las reclamaciones y compartir la información con el equipo se identifican los riesgos profesionales de cada puesto.",
+    "justificacion_ca": "En reconèixer la legislació de les reclamacions i compartir la informació amb l'equip s'identifiquen els riscs professionals de cada lloc de feina.",
+    "actividades": [
+      {
+        "titulo_es": "Reclamación y riesgos del puesto",
+        "titulo_ca": "Reclamació i riscs del lloc de feina",
+        "contexto_es": "Una clienta de un salón de Llucmajor reclama por una reacción cutánea y el grupo investiga qué falló en la prevención.",
+        "contexto_ca": "Una clienta d'un saló de Llucmajor reclama per una reacció cutània i el grup investiga què va fallar en la prevenció.",
+        "desarrollo_es": "El grupo lee la reclamación y consulta qué dice la normativa sobre los derechos de la clienta (3005-4b). Después, por equipos, identifican los riesgos del puesto donde ocurrió el problema (3160-4a). Cada estudiante comparte con su equipo los hallazgos y entre todos completan el caso (3005-4f).",
+        "desarrollo_ca": "El grup llegeix la reclamació i consulta què diu la normativa sobre els drets de la clienta (3005-4b). Després, per equips, identifiquen els riscs del lloc on va ocórrer el problema (3160-4a). Cada alumne comparteix amb el seu equip les troballes i entre tots completen el cas (3005-4f).",
+        "evidencia_es": "Informe del caso con normativa y riesgos detectados.",
+        "evidencia_ca": "Informe del cas amb normativa i riscs detectats.",
+        "dua_es": "Normativa resumida en un esquema con palabras clave.",
+        "dua_ca": "Normativa resumida en un esquema amb paraules clau.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Simulacro de reclamación en el salón",
+        "titulo_ca": "Simulacre de reclamació al saló",
+        "contexto_es": "El salón del centro recibe a una clienta enfadada por un servicio y el grupo debe atenderla siguiendo el protocolo.",
+        "contexto_ca": "El saló del centre rep una clienta enfadada per un servei i el grup l'ha d'atendre seguint el protocol.",
+        "desarrollo_es": "Dos estudiantes representan a la clienta y al profesional mientras el resto observa. Al acabar, el equipo explica qué aspectos de la legislación se han tenido en cuenta en la atención (3005-4b). Después localizan el riesgo laboral que se esconde tras el incidente (3160-4a). Por último, cada grupo comparte sus conclusiones con los demás (3005-4f).",
+        "desarrollo_ca": "Dos alumnes representen la clienta i el professional mentre la resta observa. En acabar, l'equip explica quins aspectes de la legislació s'han tingut en compte en l'atenció (3005-4b). Després localitzen el risc laboral que s'amaga darrere l'incident (3160-4a). Finalment, cada grup comparteix les seves conclusions amb els altres (3005-4f).",
+        "evidencia_es": "Ficha de observación del simulacro y conclusiones compartidas.",
+        "evidencia_ca": "Fitxa d'observació del simulacre i conclusions compartides.",
+        "dua_es": "Guion de la escena con frases de apoyo para quien interprete.",
+        "dua_ca": "Guió de l'escena amb frases de suport per a qui interpreti.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Panel de riesgos y derechos del cliente",
+        "titulo_ca": "Panell de riscs i drets del client",
+        "contexto_es": "Una asociación de consumidores de Manacor pide al grupo material claro sobre reclamaciones y prevención en los salones.",
+        "contexto_ca": "Una associació de consumidors de Manacor demana al grup material clar sobre reclamacions i prevenció als salons.",
+        "desarrollo_es": "Por equipos, buscan en fuentes oficiales los derechos del cliente ante una reclamación (3005-4b). Después reparten los puestos del salón y anotan el riesgo principal de cada uno (3160-4a). Con toda la información, elaboran un panel conjunto y lo comparten con la asociación (3005-4f).",
+        "desarrollo_ca": "Per equips, cerquen en fonts oficials els drets del client davant una reclamació (3005-4b). Després reparteixen els llocs del saló i anoten el risc principal de cadascun (3160-4a). Amb tota la informació, elaboren un panell conjunt i el comparteixen amb l'associació (3005-4f).",
+        "evidencia_es": "Panel informativo y ficha de riesgos por puesto.",
+        "evidencia_ca": "Panell informatiu i fitxa de riscs per lloc.",
+        "dua_es": "Reparto de tareas por niveles de dificultad según el perfil del estudiante.",
+        "dua_ca": "Repartiment de tasques per nivells de dificultat segons el perfil de l'alumne.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA4",
+      "criterios": [
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Se cumplimenta la hoja de reclamación utilizando herramientas que estructuran la información de forma ordenada.",
+    "justificacion_ca": "S'emplena el full de reclamació emprant eines que estructuren la informació de manera ordenada.",
+    "actividades": [
+      {
+        "titulo_es": "Hoja de reclamación bien estructurada",
+        "titulo_ca": "Full de reclamació ben estructurat",
+        "contexto_es": "Una clienta de un salón de Alaior pide presentar una queja formal por un servicio y el grupo debe ayudarla.",
+        "contexto_ca": "Una clienta d'un saló d'Alaior demana presentar una queixa formal per un servei i el grup l'ha d'ajudar.",
+        "desarrollo_es": "Cada estudiante completa una hoja de reclamación con los datos reales del caso (3005-4e). Para redactar el motivo, usan una plantilla con apartados y conectores que ordenan la información (3160-5b). Después revisan en parejas que el texto siga un orden comprensible.",
+        "desarrollo_ca": "Cada alumne emplena un full de reclamació amb les dades reals del cas (3005-4e). Per redactar el motiu, fan servir una plantilla amb apartats i connectors que ordenen la informació (3160-5b). Després revisen per parelles que el text segueixi un ordre comprensible.",
+        "evidencia_es": "Hoja de reclamación cumplimentada y revisada.",
+        "evidencia_ca": "Full de reclamació emplenat i revisat.",
+        "dua_es": "Plantilla con campos numerados y ejemplos de redacción.",
+        "dua_ca": "Plantilla amb camps numerats i exemples de redacció.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Taller de redacción de quejas",
+        "titulo_ca": "Taller de redacció de queixes",
+        "contexto_es": "El centro prepara un taller para que el alumnado aprenda a redactar quejas claras antes de las prácticas.",
+        "contexto_ca": "El centre prepara un taller perquè l'alumnat aprengui a redactar queixes clares abans de les pràctiques.",
+        "desarrollo_es": "En casa, cada estudiante visiona un vídeo sobre cómo rellenar una hoja de reclamación (3005-4e). En clase, aplican lo aprendido usando organizadores gráficos que estructuran los hechos (3160-5b). Al final, intercambian las hojas y comprueban si se entienden a la primera.",
+        "desarrollo_ca": "A casa, cada alumne visiona un vídeo sobre com emplenar un full de reclamació (3005-4e). A classe, apliquen el que han après fent servir organitzadors gràfics que estructuren els fets (3160-5b). Al final, intercanvien els fulls i comproven si s'entenen a la primera.",
+        "evidencia_es": "Hoja de reclamación redactada tras el visionado.",
+        "evidencia_ca": "Full de reclamació redactat després del visionat.",
+        "dua_es": "Acceso al vídeo con subtítulos y posibilidad de verlo varias veces.",
+        "dua_ca": "Accés al vídeo amb subtítols i possibilitat de veure'l diverses vegades.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Dosier de reclamaciones modelo",
+        "titulo_ca": "Dossier de reclamacions model",
+        "contexto_es": "Un salón de Palma quiere disponer de varias hojas de reclamación bien redactadas como ejemplo para su personal.",
+        "contexto_ca": "Un saló de Palma vol disposar de diversos fulls de reclamació ben redactats com a exemple per al seu personal.",
+        "desarrollo_es": "Cada equipo inventa un caso verosímil y rellena su correspondiente hoja de reclamación (3005-4e). Después comparan las hojas creadas y eligen la estructura más clara para ordenar los datos (3160-5b). Con las mejores propuestas, montan un dosier que el salón podrá usar como modelo.",
+        "desarrollo_ca": "Cada equip inventa un cas versemblant i emplena el full de reclamació corresponent (3005-4e). Després comparen els fulls creats i trien l'estructura més clara per ordenar les dades (3160-5b). Amb les millors propostes, munten un dossier que el saló podrà fer servir com a model.",
+        "evidencia_es": "Dosier con tres hojas de reclamación modelo.",
+        "evidencia_ca": "Dossier amb tres fulls de reclamació model.",
+        "dua_es": "Modelo guía con las partes de la hoja señaladas con colores.",
+        "dua_ca": "Model guia amb les parts del full assenyalades amb colors.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      }
+    ]
+  }
+]

@@ -1,0 +1,381 @@
+[
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA4",
+      "criterios": [
+        "b"
+      ]
+    },
+    "justificacion_es": "Se aplican los procesos de higiene de los materiales y la elección correcta de útiles junto con los equipos de protección individual de cada actividad.",
+    "justificacion_ca": "S'apliquen els processos d'higiene dels materials i la tria correcta d'estris juntament amb els equips de protecció individual de cada activitat.",
+    "actividades": [
+      {
+        "titulo_es": "Kit de cabina con guantes y pinzas",
+        "titulo_ca": "Kit de cabina amb guants i pinces",
+        "contexto_es": "El salón didáctico del centro en Inca abre por la tarde y los útiles de maquillaje han quedado mezclados con los de coloración.",
+        "contexto_ca": "El saló didàctic del centre a Inca obre a la tarda i els estris de maquillatge han quedat barrejats amb els de coloració.",
+        "desarrollo_es": "Por parejas, se revisa el neceser completo y se ejecuta el protocolo de higiene, desinfección y esterilización de brochas y esponjas (3063-1a). Después cada pareja separa los útiles que sirven para cada tipo de trabajo y los coloca en su bandeja (3063-1c). Para cerrar, se decide qué protección individual necesita quien maquilla y quién recibe el servicio (3160-4b).",
+        "desarrollo_ca": "Per parelles es revisa el necesser sencer i s'executa el protocol d'higiene, desinfecció i esterilització de brotxes i esponjes (3063-1a). Després cada parella separa els estris que serveixen per a cada tipus de treball i els col·loca a la seva safata (3063-1c). Per acabar, es decideix quina protecció individual necessita qui maquilla i qui rep el servei (3160-4b).",
+        "evidencia_es": "Ficha de cabina con la foto del kit limpio y el equipo de protección asignado a cada tarea.",
+        "evidencia_ca": "Fitxa de cabina amb la foto del kit net i l'equip de protecció assignat a cada tasca.",
+        "dua_es": "Lista de comprobación plastificada con pictogramas de los pasos de higiene para quien necesita apoyo en la secuencia.",
+        "dua_ca": "Llista de comprovació plastificada amb pictogrames dels passos d'higiene per a qui necessita suport en la seqüència.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Caso del neceser que llegó sucio",
+        "titulo_ca": "El cas del necesser que va arribar brut",
+        "contexto_es": "Una compañera del módulo trae de su casa un neceser de maquillaje guardado en un cajón y pregunta qué se puede salvar.",
+        "contexto_ca": "Una companya del mòdul porta de casa seva un necesser de maquillatge guardat en un calaix i demana què es pot salvar.",
+        "desarrollo_es": "Se reparte el caso en tres escenas y cada grupo decide qué material se descarta, cuál se limpia y cuál se esteriliza (3063-1a). Luego el grupo justifica qué útil habría servido para cada tarea del neceser encontrado (3063-1c). El cierre compara el caso con la dotación de un puesto real y anota la protección individual que faltaba (3160-4b).",
+        "desarrollo_ca": "Es reparteix el cas en tres escenes i cada grup decideix quin material es descarta, quin es neteja i quin s'esterilitza (3063-1a). Després el grup justifica quin estri hauria servit per a cada tasca del necesser trobat (3063-1c). El tancament compara el cas amb la dotació d'un lloc real i anota la protecció individual que faltava (3160-4b).",
+        "evidencia_es": "Informe breve del caso con la tabla de descartar, limpiar o esterilizar.",
+        "evidencia_ca": "Informe breu del cas amb la taula de descartar, netejar o esterilitzar.",
+        "dua_es": "Versión del caso con las ideas clave subrayadas y un glosario de imágenes al margen.",
+        "dua_ca": "Versió del cas amb les idees clau subratllades i un glossari d'imatges al marge.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Cuatro rincones de higiene y protección",
+        "titulo_ca": "Quatre racons d'higiene i protecció",
+        "contexto_es": "La semana de puertas abiertas del centro obliga a dejar el aula-taller lista para que las familias la visiten.",
+        "contexto_ca": "La setmana de portes obertes del centre obliga a deixar l'aula-taller a punt perquè les famílies la visitin.",
+        "desarrollo_es": "El aula se divide en cuatro rincones y los equipos rotan cada diez minutos por limpieza, esterilización, clasificación de útiles y protección personal (3063-1a). En cada rincón se resuelve una tarjeta con un material concreto y su uso (3063-1c). Al final del circuito, cada equipo elige el equipo de protección que corresponde a la tarea del rincón visitado (3160-4b).",
+        "desarrollo_ca": "L'aula es divideix en quatre racons i els equips roten cada deu minuts per neteja, esterilització, classificació d'estris i protecció personal (3063-1a). A cada racó es resol una targeta amb un material concret i el seu ús (3063-1c). En acabar el circuit, cada equip tria l'equip de protecció que correspon a la tasca del racó visitat (3160-4b).",
+        "evidencia_es": "Cartel de rincón firmado por el equipo con los tres materiales resueltos.",
+        "evidencia_ca": "Cartell de racó signat per l'equip amb els tres materials resolts.",
+        "dua_es": "Rincón con material real ampliado y lupa para quien tiene baja visión.",
+        "dua_ca": "Racó amb material real ampliat i lupa per a qui té baixa visió.",
+        "metodologia_es": "Rincones de aprendizaje.",
+        "metodologia_ca": "Racons d'aprenentatge."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "c",
+        "m"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA4",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Se respetan las normas de seguridad y las posiciones ergonómicas del maquillaje de fantasía y se relacionan con los sistemas de protección general del centro.",
+    "justificacion_ca": "Es respecten les normes de seguretat i les posicions ergonòmiques del maquillatge de fantasia i es relacionen amb els sistemes de protecció general del centre.",
+    "actividades": [
+      {
+        "titulo_es": "Simulación de fantasía con puesto seguro",
+        "titulo_ca": "Simulacre de fantasia amb lloc segur",
+        "contexto_es": "El centro prepara un pasacalles de carnaval en Palma y el alumnado debe maquillar a un maniquí delante del público.",
+        "contexto_ca": "El centre prepara una desfilada de carnaval a Palma i l'alumnat ha de maquillar un maniquí davant del públic.",
+        "desarrollo_es": "Antes de empezar, el equipo coloca el maniquí y la silla de forma que la espalda quede recta y sin giros forzados (3063-4c). Durante la fantasía se aplican las normas de higiene del puesto y se retiran los productos que no se usan (3063-4b). Un compañero observa y comprueba las medidas de seguridad activadas en el aula (3063-4m). Por último se revisa qué sistemas de protección del centro están en marcha: ventilación, luz de emergencia y extintor (3160-4c).",
+        "desarrollo_ca": "Abans de començar, l'equip col·loca el maniquí i la cadira de manera que l'esquena quedi recta i sense girs forçats (3063-4c). Durant la fantasia s'apliquen les normes d'higiene del lloc i es retiren els productes que no s'utilitzen (3063-4b). Un company observa i comprova les mesures de seguretat activades a l'aula (3063-4m). Finalment es revisa quins sistemes de protecció del centre estan en marxa: ventilació, llum d'emergència i extintor (3160-4c).",
+        "evidencia_es": "Vídeo de treinta segundos con el maniquí maquillado y las medidas señaladas en voz alta.",
+        "evidencia_ca": "Vídeo de trenta segons amb el maniquí maquillat i les mesures assenyalades en veu alta.",
+        "dua_es": "Guion visual con las tres posturas correctas para ensayar antes de la simulación.",
+        "dua_ca": "Guió visual amb les tres postures correctes per assajar abans del simulacre.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Medir la altura del espejo y la silla",
+        "titulo_ca": "Mesurar l'altura del mirall i la cadira",
+        "contexto_es": "En el aula-taller hay tres taburetes distintos y nadie sabe cuál conviene para un maquillaje de fantasía largo.",
+        "contexto_ca": "A l'aula-taller hi ha tres tamborets diferents i ningú no sap quin convé per a un maquillatge de fantasia llarg.",
+        "desarrollo_es": "Cada grupo mide con cinta métrica la altura del asiento y del espejo y prueba la postura de trabajo (3063-4c). Después revisa la ficha de seguridad del maquillaje y anota qué pautas de higiene se incumplen con la postura elegida (3063-4b). El mural recoge los sistemas de protección general que ya están instalados en el aula (3160-4c). La investigación termina con una lista de medidas de seguridad que faltan antes de la próxima fantasía (3063-4m).",
+        "desarrollo_ca": "Cada grup mesura amb cinta mètrica l'altura del seient i del mirall i prova la postura de treball (3063-4c). Després revisa la fitxa de seguretat del maquillatge i anota quines pautes d'higiene s'incompleixen amb la postura triada (3063-4b). El mural recull els sistemes de protecció general que ja estan instal·lats a l'aula (3160-4c). La recerca acaba amb una llista de mesures de seguretat que falten abans de la propera fantasia (3063-4m).",
+        "evidencia_es": "Ficha de mediciones con la propuesta de taburete y espejo.",
+        "evidencia_ca": "Fitxa de mesuraments amb la proposta de tamboret i mirall.",
+        "dua_es": "Cinta métrica con marcas de colores y plantilla de registro empezada a medias.",
+        "dua_ca": "Cinta mètrica amb marques de colors i plantilla de registre començada a mitges.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Cartas de riesgo en la fantasía facial",
+        "titulo_ca": "Cartes de risc a la fantasia facial",
+        "contexto_es": "El grupo quiere repasar seguridad antes de la evaluación y propone un juego de cartas propio.",
+        "contexto_ca": "El grup vol repassar seguretat abans de l'avaluació i proposa un joc de cartes propi.",
+        "desarrollo_es": "Se reparten cartas con situaciones de fantasía y cada jugador coloca su carta en el montón de riesgo alto, medio o bajo (3063-4m). Cuando sale una carta de postura, el jugador corrige la posición del cliente y del profesional en un muñeco (3063-4c). Las cartas de higiene obligan a nombrar el producto implicado y la norma que se aplica (3063-4b). Si la carta es de aula, se señala el sistema de protección general que tocaría activar (3160-4c).",
+        "desarrollo_ca": "Es reparteixen cartes amb situacions de fantasia i cada jugador col·loca la seva carta al munt de risc alt, mitjà o baix (3063-4m). Quan surt una carta de postura, el jugador corregeix la posició del client i del professional en un ninot (3063-4c). Les cartes d'higiene obliguen a anomenar el producte implicat i la norma que s'aplica (3063-4b). Si la carta és d'aula, s'assenyala el sistema de protecció general que caldria activar (3160-4c).",
+        "evidencia_es": "Baraja revisada y hoja de puntuación del equipo.",
+        "evidencia_ca": "Baralla revisada i full de puntuació de l'equip.",
+        "dua_es": "Cartas con texto corto y pictograma grande para quien lee despacio.",
+        "dua_ca": "Cartes amb text curt i pictograma gran per a qui llegeix a poc a poc.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA2",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Se formulan preguntas tipo para conocer la piel del cliente y se describe después el producto o servicio de la empresa analizada.",
+    "justificacion_ca": "Es formulen preguntes tipus per conèixer la pell del client i es descriu després el producte o servei de l'empresa analitzada.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevista de piel en el mostrador",
+        "titulo_ca": "Entrevista de pell al mostrador",
+        "contexto_es": "Un centro de estética de Manacor recibe a una clienta que quiere un maquillaje para una boda y no sabe qué piel tiene.",
+        "contexto_ca": "Un centre d'estètica de Manacor rep una clienta que vol un maquillatge per a un casament i no sap quina pell té.",
+        "desarrollo_es": "En parejas se ensaya la entrevista con preguntas tipo sobre hábitos, sensibilidad y rutina (3063-2c). Con las respuestas, cada profesional elige dos cosméticos del expositor y explica por qué encajan con esa piel (3063-2d). La pareja cierra redactando la descripción del servicio que ofrecería el salón (3160-2a).",
+        "desarrollo_ca": "En parelles s'assaixa l'entrevista amb preguntes tipus sobre hàbits, sensibilitat i rutina (3063-2c). Amb les respostes, cada professional tria dos cosmètics de l'expositor i explica per què encaixen amb aquella pell (3063-2d). La parella acaba redactant la descripció del servei que oferiria el saló (3160-2a).",
+        "evidencia_es": "Guion de entrevista cumplimentado y servicio descrito en media página.",
+        "evidencia_ca": "Guió d'entrevista emplenat i servei descrit en mitja pàgina.",
+        "dua_es": "Guion con preguntas ya ordenadas y huecos para responder con palabras sueltas.",
+        "dua_ca": "Guió amb preguntes ja ordenades i espais per respondre amb paraules soltes.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Mapa de pieles y cosméticos del salón",
+        "titulo_ca": "Mapa de pells i cosmètics del saló",
+        "contexto_es": "El expositor del aula tiene veinte productos sin agrupar y el grupo necesita ordenarlo por tipo de piel.",
+        "contexto_ca": "L'expositor de l'aula té vint productes sense agrupar i el grup necessita ordenar-lo per tipus de pell.",
+        "desarrollo_es": "Los equipos clasifican los cosméticos del expositor y construyen un mural de pieles seca, grasa y mixta (3063-2d). Cada equipo prepara tres preguntas tipo que servirían para confirmar la clasificación con una clienta (3063-2c). Al final se elige un producto estrella del mural y se describe para el catálogo del salón (3160-2a).",
+        "desarrollo_ca": "Els equips classifiquen els cosmètics de l'expositor i construeixen un mural de pells seca, greixosa i mixta (3063-2d). Cada equip prepara tres preguntes tipus que servirien per confirmar la classificació amb una clienta (3063-2c). Al final es tria un producte estrella del mural i es descriu per al catàleg del saló (3160-2a).",
+        "evidencia_es": "Mural fotografiado con el producto estrella descrito en una etiqueta.",
+        "evidencia_ca": "Mural fotografiat amb el producte estrella descrit en una etiqueta.",
+        "dua_es": "Etiquetas con letra grande y un compañero escriba para quien tiene dificultades motoras.",
+        "dua_ca": "Etiquetes amb lletra gran i un company escriptor per a qui té dificultats motrius.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Vídeo casero del servicio de hidratación",
+        "titulo_ca": "Vídeo casolà del servei d'hidratació",
+        "contexto_es": "El centro quiere una pieza corta para su canal de redes que explique cómo se prepara una piel antes del maquillaje.",
+        "contexto_ca": "El centre vol una peça curta per al seu canal de xarxes que expliqui com es prepara una pell abans del maquillatge.",
+        "desarrollo_es": "En casa se visiona un vídeo breve sobre tipos de piel y se anotan dudas para la clase (3063-2d). En el aula, cada grupo graba una escena con las preguntas tipo que haría en recepción (3063-2c). El montaje final incluye una voz en off que describe el servicio y sus destinatarios (3160-2a).",
+        "desarrollo_ca": "A casa es visiona un vídeo breu sobre tipus de pell i s'anoten dubtes per a la classe (3063-2d). A l'aula, cada grup enregistra una escena amb les preguntes tipus que faria a recepció (3063-2c). El muntatge final inclou una veu en off que descriu el servei i els seus destinataris (3160-2a).",
+        "evidencia_es": "Clip de un minuto publicado en el aula virtual.",
+        "evidencia_ca": "Clip d'un minut publicat a l'aula virtual.",
+        "dua_es": "Opción de grabar solo audio o usar tarjetas con el texto para quien evita salir en cámara.",
+        "dua_ca": "Opció d'enregistrar només àudio o fer servir targetes amb el text per a qui evita sortir a càmera.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA2",
+      "criterios": [
+        "k",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Se cumplimenta la ficha técnica del servicio con el cosmético hidratante aplicado y se recoge todo en el dosier de la propuesta de empresa.",
+    "justificacion_ca": "S'emplena la fitxa tècnica del servei amb el cosmètic hidratant aplicat i es recull tot al dossier de la proposta d'empresa.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha técnica ilustrada del hidratante",
+        "titulo_ca": "Fitxa tècnica il·lustrada de l'hidratant",
+        "contexto_es": "El aula recibe un lote nuevo de cremas hidratantes y nadie ha probado todavía cómo se aplican.",
+        "contexto_ca": "L'aula rep un lot nou de cremes hidratants i ningú encara no ha provat com s'apliquen.",
+        "desarrollo_es": "Cada estudiante aplica una crema hidratante en el antebrazo siguiendo las indicaciones del envase (3063-2j). Después se rellena la ficha técnica del servicio con los datos del cosmético y las observaciones de la prueba (3063-2k). Las fichas se ordenan en un pequeño dosier que se comparte con el resto de la clase (3160-3c).",
+        "desarrollo_ca": "Cada estudiant aplica una crema hidratant a l'avantbraç seguint les indicacions de l'envàs (3063-2j). Després s'emplena la fitxa tècnica del servei amb les dades del cosmètic i les observacions de la prova (3063-2k). Les fitxes s'ordenen en un dossier petit que es comparteix amb la resta de la classe (3160-3c).",
+        "evidencia_es": "Ficha técnica completa y dosier encuadernado del lote probado.",
+        "evidencia_ca": "Fitxa tècnica completa i dossier enquadernat del lot provat.",
+        "dua_es": "Envase con etiqueta ampliada y ficha con campos de respuesta corta.",
+        "dua_ca": "Envàs amb etiqueta ampliada i fitxa amb camps de resposta curta.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Dosier de una spin-off de hidratación",
+        "titulo_ca": "Dossier d'una spin-off d'hidratació",
+        "contexto_es": "El grupo imagina un servicio extra de hidratación exprés para un gimnasio de Ibiza y necesita presentarlo.",
+        "contexto_ca": "El grup imagina un servei extra d'hidratació exprés per a un gimnàs d'Eivissa i necessita presentar-lo.",
+        "desarrollo_es": "Los equipos prueban el cosmético tensor con un maniquí y anotan la respuesta de la piel (3063-2j). Cada equipo traslada esa prueba a una ficha técnica de servicio con horarios y observaciones (3063-2k). El dosier final de la spin-off reúne la ficha, el precio y el argumento diferencial (3160-3c).",
+        "desarrollo_ca": "Els equips proven el cosmètic tensor amb un maniquí i anoten la resposta de la pell (3063-2j). Cada equip trasllada aquesta prova a una fitxa tècnica de servei amb horaris i observacions (3063-2k). El dossier final de l'empresa derivada recull la fitxa, el preu i l'argument diferencial (3160-3c).",
+        "evidencia_es": "Dosier de cuatro páginas con la prueba y el precio del servicio.",
+        "evidencia_ca": "Dossier de quatre pàgines amb la prova i el preu del servei.",
+        "dua_es": "Plantilla de dosier con apartados numerados y ejemplos al lado.",
+        "dua_ca": "Plantilla de dossier amb apartats numerats i exemples al costat.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      },
+      {
+        "titulo_es": "Auditoría de fichas en el archivador",
+        "titulo_ca": "Auditoria de fitxes a l'arxivador",
+        "contexto_es": "Al final de trimestre, el archivador del salón didáctico acumula fichas antiguas sin revisar.",
+        "contexto_ca": "Al final de trimestre, l'arxivador del saló didàctic acumula fitxes antigues sense revisar.",
+        "desarrollo_es": "En tríos se revisan diez fichas reales y se marcan los cosméticos aplicados que aparecen sin datos (3063-2k). La revisión comprueba también si el hidratante se aplicó según las indicaciones del fabricante (3063-2j). Con las correcciones se elabora un dosier de mejora que se entrega al responsable del aula (3160-3c).",
+        "desarrollo_ca": "En trios es revisen deu fitxes reals i es marquen els cosmètics aplicats que apareixen sense dades (3063-2k). La revisió comprova també si l'hidratant es va aplicar segons les indicacions del fabricant (3063-2j). Amb les correccions s'elabora un dossier de millora que es lliura al responsable de l'aula (3160-3c).",
+        "evidencia_es": "Informe de auditoría con las diez fichas corregidas.",
+        "evidencia_ca": "Informe d'auditoria amb les deu fitxes corregides.",
+        "dua_es": "Fichas seleccionadas con menos campos y rotulador de dos colores para marcar.",
+        "dua_ca": "Fitxes seleccionades amb menys camps i retolador de dos colors per marcar.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "l"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA4",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Se aplican las normas y las medidas de seguridad del maquillaje social para identificar los riesgos laborales del puesto de maquillador.",
+    "justificacion_ca": "S'apliquen les normes i les mesures de seguretat del maquillatge social per identificar els riscs laborals del lloc de maquillador.",
+    "actividades": [
+      {
+        "titulo_es": "Itinerario de riesgos del maquillaje social",
+        "titulo_ca": "Itinerari de riscs del maquillatge social",
+        "contexto_es": "Un salón de Ciutadella quiere abrir un rincón de maquillaje social y desconoce los riesgos del puesto.",
+        "contexto_ca": "Un saló de Ciutadella vol obrir un racó de maquillatge social i desconeix els riscs del lloc.",
+        "desarrollo_es": "El equipo recorre el salón con una lupa y anota los riesgos del puesto de maquillador (3160-4a). Con la lista, se redactan las normas de higiene y seguridad del nuevo rincón (3063-3e). La maqueta del rincón se prueba con una compañera y se comprueba que las medidas de seguridad se cumplen (3063-3l).",
+        "desarrollo_ca": "L'equip recorre el saló amb una lupa i anota els riscs del lloc de maquillador (3160-4a). Amb la llista, es redacten les normes d'higiene i seguretat del racó nou (3063-3e). La maqueta del racó es prova amb una companya i es comprova que les mesures de seguretat es compleixen (3063-3l).",
+        "evidencia_es": "Plano del rincón con los riesgos numerados y las normas asociadas.",
+        "evidencia_ca": "Plànol del racó amb els riscs numerats i les normes associades.",
+        "dua_es": "Plano del salón ya dibujado con colores por zona para orientar la exploración.",
+        "dua_ca": "Plànol del saló ja dibuixat amb colors per zona per orientar l'exploració.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Debate sobre las normas del espejo",
+        "titulo_ca": "Debat sobre les normes del mirall",
+        "contexto_es": "En el espejo del aula hay un cartel con normas de seguridad que el grupo considera anticuado.",
+        "contexto_ca": "Al mirall de l'aula hi ha un cartell amb normes de seguretat que el grup considera antiquat.",
+        "desarrollo_es": "Se leen en voz alta las normas del cartel y se contrastan con las medidas de seguridad que el grupo aplica de verdad (3063-3l). Cada portavoz defiende una norma y explica qué riesgo evita en el puesto (3160-4a). La sesión acaba con una lista consensuada de normas de higiene y seguridad para el maquillaje social (3063-3e).",
+        "desarrollo_ca": "Es llegeixen en veu alta les normes del cartell i es contrasten amb les mesures de seguretat que el grup aplica de veritat (3063-3l). Cada portaveu defensa una norma i explica quin risc evita al lloc de feina (3160-4a). La sessió acaba amb una llista consensuada de normes d'higiene i seguretat per al maquillatge social (3063-3e).",
+        "evidencia_es": "Normas consensuadas escritas en el cartel nuevo.",
+        "evidencia_ca": "Normes consensuades escrites al cartell nou.",
+        "dua_es": "Turnos de palabra con tarjetas y resumen previo de las normas en lectura fácil.",
+        "dua_ca": "Torns de paraula amb targetes i resum previ de les normes en lectura fàcil.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Maquillaje social para una entidad del barrio",
+        "titulo_ca": "Maquillatge social per a una entitat del barri",
+        "contexto_es": "Una asociación de personas mayores de Sant Antoni pide al centro una tarde de maquillaje para una fiesta.",
+        "contexto_ca": "Una associació de persones grans de Sant Antoni demana al centre una tarda de maquillatge per a una festa.",
+        "desarrollo_es": "El grupo prepara la tarde revisando riesgos del puesto y material de protección (3160-4a). Antes de empezar se explican a las participantes las normas de higiene que se seguirán (3063-3e). Durante el servicio se aplican las medidas de seguridad previstas y se comprueba la reacción de cada piel (3063-3l).",
+        "desarrollo_ca": "El grup prepara la tarda revisant riscs del lloc i material de protecció (3160-4a). Abans de començar s'expliquen a les participants les normes d'higiene que se seguiran (3063-3e). Durant el servei s'apliquen les mesures de seguretat previstes i es comprova la reacció de cada pell (3063-3l).",
+        "evidencia_es": "Diario del servicio con las fotos del antes y el después autorizadas.",
+        "evidencia_ca": "Diari del servei amb les fotos del abans i el després autoritzades.",
+        "dua_es": "Parejas de apoyo con un guion de frases fijas para quien se pone nervioso con el público.",
+        "dua_ca": "Parelles de suport amb un guió de frases fixes per a qui es posa nerviós amb el públic.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3063",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "3160",
+      "ra": "RA2",
+      "criterios": [
+        "a"
+      ]
+    },
+    "justificacion_es": "Se seleccionan los materiales de fantasía y se formulan preguntas tipo para describir con precisión el servicio ofrecido por la empresa.",
+    "justificacion_ca": "Es seleccionen els materials de fantasia i es formulen preguntes tipus per descriure amb precisió el servei ofert per l'empresa.",
+    "actividades": [
+      {
+        "titulo_es": "Muestrario de materiales para la fantasía",
+        "titulo_ca": "Mostrari de materials per a la fantasia",
+        "contexto_es": "El aula estrena un cajón de materiales de fantasía y el grupo debe decidir qué se queda.",
+        "contexto_ca": "L'aula estrena un calaix de materials de fantasia i el grup ha de decidir què es queda.",
+        "desarrollo_es": "Cada equipo selecciona y prepara purpurinas, sombras y pinceles para una fantasía concreta (3063-4a). Después se prueba el material en un maniquí y se anotan las preguntas que haría falta hacer al cliente (3063-4d). Con lo aprendido se describe el servicio de fantasía para la carta del salón (3160-2a).",
+        "desarrollo_ca": "Cada equip selecciona i prepara purpurines, ombres i pinzells per a una fantasia concreta (3063-4a). Després es prova el material en un maniquí i s'anoten les preguntes que caldria fer al client (3063-4d). Amb el que s'ha après es descriu el servei de fantasia per a la carta del saló (3160-2a).",
+        "evidencia_es": "Bandeja de muestras con etiqueta y ficha del servicio.",
+        "evidencia_ca": "Safata de mostres amb etiqueta i fitxa del servei.",
+        "dua_es": "Bandejas con el material ya separado por colores y pinzas de mango grueso.",
+        "dua_ca": "Safates amb el material ja separat per colors i pinces de mànec gruixut.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Preguntas a la modelo antes del desfile",
+        "titulo_ca": "Preguntes a la model abans de la desfilada",
+        "contexto_es": "El centro participa en un desfile escolar de Palma y cada maquillador recibe una modelo del instituto vecino.",
+        "contexto_ca": "El centre participa en una desfilada escolar a Palma i cada maquillador rep una model de l'institut veí.",
+        "desarrollo_es": "En la primera cita, cada maquillador formula preguntas tipo sobre alergias y expectativas de la modelo (3063-4d). Con las respuestas, se eligen los cosméticos y el material de fantasía adecuados (3063-4a). Las conclusiones de la entrevista se redactan como descripción del servicio para la organización del desfile (3160-2a).",
+        "desarrollo_ca": "A la primera cita, cada maquillador formula preguntes tipus sobre al·lèrgies i expectatives de la model (3063-4d). Amb les respostes, es trien els cosmètics i el material de fantasia adequats (3063-4a). Les conclusions de l'entrevista es redacten com a descripció del servei per a l'organització de la desfilada (3160-2a).",
+        "evidencia_es": "Ficha de entrevista firmada por la modelo y el servicio descrito.",
+        "evidencia_ca": "Fitxa d'entrevista signada per la model i el servei descrit.",
+        "dua_es": "Cuestionario con respuestas de sí o no e imágenes de referencia para elegir el estilo.",
+        "dua_ca": "Qüestionari amb respostes de sí o no i imatges de referència per triar l'estil.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Catálogo de fantasías para el centro",
+        "titulo_ca": "Catàleg de fantasies per al centre",
+        "contexto_es": "La fiesta de fin de curso necesita un menú de maquillajes de fantasía con precios y tiempos.",
+        "contexto_ca": "La festa de final de curs necessita un menú de maquillatges de fantasia amb preus i temps.",
+        "desarrollo_es": "Los grupos preparan una prueba de fantasía sobre maniquí con tres materiales distintos (3063-4a). Antes de la prueba, un compañero hace las preguntas tipo de la reserva y anota las necesidades (3063-4d). El catálogo final describe cada fantasía con su material y su público (3160-2a).",
+        "desarrollo_ca": "Els grups preparen una prova de fantasia sobre maniquí amb tres materials diferents (3063-4a). Abans de la prova, un company fa les preguntes tipus de la reserva i anota les necessitats (3063-4d). El catàleg final descriu cada fantasia amb el seu material i el seu públic (3160-2a).",
+        "evidencia_es": "Catálogo impreso de tres fantasías con precio y duración.",
+        "evidencia_ca": "Catàleg imprès de tres fantasies amb preu i durada.",
+        "dua_es": "Catálogo con plantilla de tres columnas y modelo de texto para quien necesita estructura.",
+        "dua_ca": "Catàleg amb plantilla de tres columnes i model de text per a qui necessita estructura.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      }
+    ]
+  }
+]

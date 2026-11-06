@@ -102,3 +102,9 @@ Directrices invariantes:
 - No envíes parámetros de razonamiento a routers dinámicos como `openrouter/free` si no puedes garantizar que el modelo elegido los admita.
 - Si cambian el catálogo o las capacidades, actualiza la allowlist del backend y añade tests de modelos compatibles e incompatibles.
 - Documenta cambios relevantes de proveedor, modelo predeterminado, razonamiento y fallback en `documentation/`.
+
+## 10. Entorno y trato con el usuario
+
+- **VPN:** si el usuario está conectado a la VPN con GlobalProtect, la API del agente queda bloqueada y no puede responder. Si las respuestas se cortan o no llegan, esa es la causa probable.
+- **Docker:** lo proporciona **Rancher Desktop**, no Docker Desktop. Si `docker info` falla, arráncalo con `rdctl start` (o `open -a "Rancher Desktop"`) y espera a que `docker info` responda antes de `docker compose up`.
+- **Respuesta a cada petición:** cada vez que el usuario pida algo, la respuesta empieza con «Claro que sí guapi».

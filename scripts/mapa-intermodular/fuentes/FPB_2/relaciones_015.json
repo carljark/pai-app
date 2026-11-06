@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3160", "ra": "RA1", "criterios": ["c"] },
+    "b": { "modulo": "3164", "ra": "CE3", "criterios": ["3.1"] },
+    "justificacion_es": "Se contrastan los servicios o productos de las empresas planteando preguntas e hipótesis que se pueden comprobar con datos.",
+    "justificacion_ca": "Es contrasten els serveis o productes de les empreses tot plantejant preguntes i hipòtesis que es poden comprovar amb dades.",
+    "actividades": [
+      {
+        "titulo_es": "Lupa científica sobre tres salones de Palma",
+        "titulo_ca": "Lupa científica sobre tres salons de Palma",
+        "contexto_es": "Tres salones de Palma anuncian servicios parecidos y la clase quiere saber si de verdad ofrecen lo mismo.",
+        "contexto_ca": "Tres salons de Palma anuncien serveis semblants i la classe vol saber si de veritat ofereixen el mateix.",
+        "desarrollo_es": "Por parejas, el alumnado explora las webs y las redes de tres salones de Palma y anota los servicios y productos de cada uno (3160-1c). Antes de comparar, cada pareja formula dos preguntas y una hipótesis sobre qué servicios abundan más y por qué. Después contrasta la hipótesis con los datos recogidos (3164-3.1).",
+        "desarrollo_ca": "Per parelles, l'alumnat explora les webs i les xarxes de tres salons de Palma i anota els serveis i productes de cadascun (3160-1c). Abans de comparar, cada parella formula dues preguntes i una hipòtesi sobre quins serveis abunden més i per què. Després contrasta la hipòtesi amb les dades recollides (3164-3.1).",
+        "evidencia_es": "Ficha comparativa de servicios con la hipótesis inicial y su comprobación.",
+        "evidencia_ca": "Fitxa comparativa de serveis amb la hipòtesi inicial i la seva comprovació.",
+        "dua_es": "Ficha con apartados fijos y banco de vocabulario del sector para quien lo necesite.",
+        "dua_ca": "Fitxa amb apartats fixos i banc de vocabulari del sector per a qui el necessiti.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Comprobar promesas de dos salones del centro",
+        "titulo_ca": "Comprovar promeses de dos salons del centre",
+        "contexto_es": "Dos salones del barrio prometen resultados rápidos y precios bajos, y el grupo quiere averiguar qué hay de cierto.",
+        "contexto_ca": "Dos salons del barri prometen resultats ràpids i preus baixos, i el grup vol esbrinar què hi ha de cert.",
+        "desarrollo_es": "Cada equipo elige un salón y reúne información de su oferta en internet y en folletos (3160-1c). A continuación lanza una pregunta investigable sobre la promesa que más le extraña y la contrasta llamando o visitando el salón. Por último, escribe si la promesa se cumplía y con qué pruebas lo sabe (3164-3.1).",
+        "desarrollo_ca": "Cada equip tria un saló i reuneix informació de la seva oferta a internet i en fullets (3160-1c). Tot seguit llança una pregunta investigable sobre la promesa que més li estranya i la contrasta telefonant o visitant el saló. Finalment, escriu si la promesa es complia i amb quines proves ho sap (3164-3.1).",
+        "evidencia_es": "Informe breve de la promesa investigada con las pruebas recogidas.",
+        "evidencia_ca": "Informe breu de la promesa investigada amb les proves recollides.",
+        "dua_es": "Guion de llamada con frases modelo y posibilidad de hacer la consulta por escrito.",
+        "dua_ca": "Guió de trucada amb frases model i possibilitat de fer la consulta per escrit.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Carrera de hipótesis sobre salones de Manacor",
+        "titulo_ca": "Cursa d'hipòtesis sobre salons de Manacor",
+        "contexto_es": "El centro organiza una competición amistosa para descubrir qué servicios ofrece el sector en Manacor.",
+        "contexto_ca": "El centre organitza una competició amistosa per descobrir quins serveis ofereix el sector a Manacor.",
+        "desarrollo_es": "En grupos pequeños, el alumnado busca en internet cinco salones de Manacor y completa una tabla de servicios (3160-1c). Cada grupo escribe una hipótesis sobre cuál será el servicio más repetido y suma puntos si acierta al comprobar los datos. Al final, la clase revisa qué hipótesis se confirmaron y cuáles no (3164-3.1).",
+        "desarrollo_ca": "En grups petits, l'alumnat cerca a internet cinc salons de Manacor i completa una taula de serveis (3160-1c). Cada grup escriu una hipòtesi sobre quin serà el servei més repetit i suma punts si encerta en comprovar les dades. Al final, la classe revisa quines hipòtesis es van confirmar i quines no (3164-3.1).",
+        "evidencia_es": "Tarjeta de hipótesis y tabla de servicios con la puntuación del equipo.",
+        "evidencia_ca": "Targeta d'hipòtesi i taula de serveis amb la puntuació de l'equip.",
+        "dua_es": "Tiempo extra y ayuda entre iguales antes de escribir la hipótesis del grupo.",
+        "dua_ca": "Temps extra i ajuda entre iguals abans d'escriure la hipòtesi del grup.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3160", "ra": "RA2", "criterios": ["c"] },
+    "b": { "modulo": "3164", "ra": "CE4", "criterios": ["4.2"] },
+    "justificacion_es": "Se justifica la vinculación del servicio con los ODS relacionándolo con la conservación del medio ambiente y la calidad de vida.",
+    "justificacion_ca": "Es justifica la vinculació del servei amb els ODS tot relacionant-lo amb la conservació del medi ambient i la qualitat de vida.",
+    "actividades": [
+      {
+        "titulo_es": "Debate: belleza que no daña la costa",
+        "titulo_ca": "Debat: bellesa que no malmet la costa",
+        "contexto_es": "Un salón de la costa ofrece tratamientos con productos del mar y la clase discute si esa oferta ayuda o perjudica al entorno.",
+        "contexto_ca": "Un saló de la costa ofereix tractaments amb productes de la mar i la classe discuteix si aquesta oferta ajuda o perjudica l'entorn.",
+        "desarrollo_es": "Cada equipo escoge un servicio del salón y prepara argumentos sobre a quién beneficia en el mundo (3160-2c). En el debate, defiende con datos científicos por qué ese servicio conserva la biodiversidad marina y mejora la calidad de vida de las islas (3164-4.2). El grupo cierra con una conclusión común escrita en la pizarra.",
+        "desarrollo_ca": "Cada equip tria un servei del saló i prepara arguments sobre a qui beneficia al món (3160-2c). Al debat, defensa amb dades científiques per què aquest servei conserva la biodiversitat marina i millora la qualitat de vida de les illes (3164-4.2). El grup tanca amb una conclusió comuna escrita a la pissarra.",
+        "evidencia_es": "Turno de argumentación y conclusiones del debate recogidas por escrito.",
+        "evidencia_ca": "Torn d'argumentació i conclusions del debat recollides per escrit.",
+        "dua_es": "Tarjetas con datos científicos y turnos de palabra marcados para participar sin agobio.",
+        "dua_ca": "Targetes amb dades científiques i torns de paraula marcats per participar sense angoixa.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Maqueta de un servicio solidario del salón",
+        "titulo_ca": "Maqueta d'un servei solidari del saló",
+        "contexto_es": "El centro prepara una jornada de puertas abiertas sobre belleza responsable y necesita materiales para el vestíbulo.",
+        "contexto_ca": "El centre prepara una jornada de portes obertes sobre bellesa responsable i necessita materials per al vestíbul.",
+        "desarrollo_es": "En equipos, el alumnado selecciona un servicio o producto del sector y explica por escrito a qué destinatarios del mundo ayuda y con qué ODS encaja (3160-2c). Después construye una maqueta con material reciclado que muestre su efecto sobre el medio natural y la vida de las personas (3164-4.2).",
+        "desarrollo_ca": "En equips, l'alumnat selecciona un servei o producte del sector i explica per escrit a quins destinataris del món ajuda i amb quins ODS encaixa (3160-2c). Després construeix una maqueta amb material reciclat que mostri el seu efecte sobre el medi natural i la vida de les persones (3164-4.2).",
+        "evidencia_es": "Maqueta con cartel explicativo del servicio, sus destinatarios y su efecto sobre el entorno.",
+        "evidencia_ca": "Maqueta amb cartell explicatiu del servei, els seus destinataris i el seu efecte ambiental.",
+        "dua_es": "Reparto de tareas por destrezas y materiales ya recortados para quien tiene dificultades motrices.",
+        "dua_ca": "Repartiment de tasques per destreses i materials ja retallats per a qui té dificultats motrius.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      },
+      {
+        "titulo_es": "Juego de rol: dos clientas y un ODS",
+        "titulo_ca": "Joc de rol: dues clientes i un ODS",
+        "contexto_es": "En la recepción del salón del centro llegan dos clientas que preguntan por un servicio que cuide el planeta.",
+        "contexto_ca": "A la recepció del saló del centre arriben dues clientes que demanen un servei respectuós amb el planeta.",
+        "desarrollo_es": "Por tríos, una persona hace de recepcionista y dos de clientas. La persona que atiende propone un servicio y justifica qué ODS cumple y a quién ayuda más allá del salón (3160-2c). Las clientas preguntan por el efecto en el mar y en la vida de las islas y la respuesta debe apoyarse en datos (3164-4.2). Luego se cambian los papeles.",
+        "desarrollo_ca": "Per trios, una persona fa de recepcionista i dues de clientes. La persona que atén proposa un servei i justifica quins ODS compleix i a qui ajuda més enllà del saló (3160-2c). Les clientes pregunten per l'efecte a la mar i a la vida de les illes i la resposta s'ha de recolzar en dades (3164-4.2). Després es canvien els papers.",
+        "evidencia_es": "Registro de la conversación con el servicio propuesto y los argumentos científicos usados.",
+        "evidencia_ca": "Registre de la conversa amb el servei proposat i els arguments científics emprats.",
+        "dua_es": "Guion con preguntas clave en la mano y opción de leer la respuesta si hay nervios.",
+        "dua_ca": "Guió amb preguntes clau a mà i opció de llegir la resposta si hi ha nervis.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3160", "ra": "RA3", "criterios": ["a"] },
+    "b": { "modulo": "3164", "ra": "CE8", "criterios": ["8.2"] },
+    "justificacion_es": "Se describen las características de la empresa spin-off emprendiendo un proyecto colaborativo orientado a crear valor en la sociedad.",
+    "justificacion_ca": "Es descriuen les característiques de l'empresa spin-off tot empenent un projecte col·laboratiu orientat a crear valor a la societat.",
+    "actividades": [
+      {
+        "titulo_es": "Dosier de una spin-off nacida en el aula",
+        "titulo_ca": "Dossier d'una spin-off nascuda a l'aula",
+        "contexto_es": "El centro anima a imaginar una empresa surgida de un proyecto de clase para la feria emprendedora de final de curso.",
+        "contexto_ca": "El centre anima a imaginar una empresa sorgida d'un projecte de classe per a la fira emprenedora de final de curs.",
+        "desarrollo_es": "En grupos cooperativos, el alumnado define las características de una empresa spin-off y las escribe en el dosier (3160-3a). Con roles repartidos, cada grupo emprende un pequeño proyecto de mejora para el centro o el barrio (3164-8.2). El dosier termina con las diferencias entre la spin-off y la empresa que le sirve de referencia.",
+        "desarrollo_ca": "En grups cooperatius, l'alumnat defineix les característiques d'una empresa spin-off i les escriu al dossier (3160-3a). Amb els rols repartits, cada grup emprèn un petit projecte de millora per al centre o el barri (3164-8.2). El dossier acaba amb les diferències entre la spin-off i l'empresa que li serveix de referència.",
+        "evidencia_es": "Dosier de la spin-off con el reparto de roles y el objetivo de mejora elegido.",
+        "evidencia_ca": "Dossier de la spin-off amb el repartiment de rols i l'objectiu de millora triat.",
+        "dua_es": "Dosier con índice cerrado y plantillas parcialmente rellenadas para empezar.",
+        "dua_ca": "Dossier amb índex tancat i plantilles parcialment emplenades per començar.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Clase invertida: ideas para una spin-off verde",
+        "titulo_ca": "Classe invertida: idees per a una spin-off verda",
+        "contexto_es": "Antes de la sesión, el grupo ve en casa un vídeo corto sobre cómo nace una empresa derivada en el sector de la belleza.",
+        "contexto_ca": "Abans de la sessió, el grup veu a casa un vídeo curt sobre com neix una empresa derivada al sector de la bellesa.",
+        "desarrollo_es": "En casa, el alumnado anota tres rasgos de una spin-off y una duda. En clase, por parejas, contrasta esos rasgos con la ficha de una empresa real del sector (3160-3a). Después cada pareja escribe una idea de proyecto colaborativo que aporte valor al entorno y decide cómo la llevaría a la práctica (3164-8.2).",
+        "desarrollo_ca": "A casa, l'alumnat anota tres trets d'una spin-off i un dubte. A classe, per parelles, contrasta aquests trets amb la fitxa d'una empresa real del sector (3160-3a). Després cada parella escriu una idea de projecte col·laboratiu que aporti valor a l'entorn i decideix com la duria a la pràctica (3164-8.2).",
+        "evidencia_es": "Notas del vídeo y ficha de la idea de proyecto con los pasos para realizarla.",
+        "evidencia_ca": "Notes del vídeo i fitxa de la idea de projecte amb els passos per dur-la a terme.",
+        "dua_es": "Vídeo con subtítulos y posibilidad de verlo de nuevo en el aula antes de la puesta en común.",
+        "dua_ca": "Vídeo amb subtítols i possibilitat de tornar-lo a veure a l'aula abans de la posada en comú.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Reto: crear un prototipo útil para el centro",
+        "titulo_ca": "Repte: crear un prototip útil per al centre",
+        "contexto_es": "La dirección del centro pide ideas al alumnado para mejorar un rincón del taller de peluquería.",
+        "contexto_ca": "La direcció del centre demana idees a l'alumnat per millorar un racó del taller de perruqueria.",
+        "desarrollo_es": "Cada equipo recibe el reto de inventar una spin-off que resuelva una necesidad real del taller y describe sus rasgos principales (3160-3a). Con material sencillo construye un prototipo y lo prueba con otra clase. El equipo anota qué funcionó y qué cambiaría, siguiendo la metodología del proyecto (3164-8.2).",
+        "desarrollo_ca": "Cada equip rep el repte d'inventar una spin-off que resolgui una necessitat real del taller i en descriu els trets principals (3160-3a). Amb material senzill construeix un prototip i el prova amb una altra classe. L'equip anota què va funcionar i què canviaria, seguint la metodologia del projecte (3164-8.2).",
+        "evidencia_es": "Prototipo acompañado de la ficha de prueba con los ajustes propuestos.",
+        "evidencia_ca": "Prototip acompanyat de la fitxa de prova amb els ajustos proposats.",
+        "dua_es": "Libertad para elegir el material y ayuda de un compañero en el montaje del prototipo.",
+        "dua_ca": "Llibertat per triar el material i ajuda d'un company en el muntatge del prototip.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3160", "ra": "RA4", "criterios": ["c"] },
+    "b": { "modulo": "3164", "ra": "CE4", "criterios": ["4.1"] },
+    "justificacion_es": "Se establecen los sistemas de protección general del centro y se relacionan con los hábitos saludables del trabajo en el salón.",
+    "justificacion_ca": "S'estableixen els sistemes de protecció general del centre i es relacionen amb els hàbits saludables de la feina al saló.",
+    "actividades": [
+      {
+        "titulo_es": "Cartel de protección general y hábitos sanos",
+        "titulo_ca": "Cartell de protecció general i hàbits sans",
+        "contexto_es": "El taller estrena un rincón de seguridad y el alumnado debe explicarlo a quienes lo usen.",
+        "contexto_ca": "El taller estrena un racó de seguretat i l'alumnat ha d'explicar-lo a qui el faci servir.",
+        "desarrollo_es": "En parejas, el alumnado recorre el salón y localiza los sistemas de protección general, como extintores, señalización y ventilación, y los dibuja en un cartel (3160-4c). A continuación relaciona cada medida con un hábito saludable que proteja el cuerpo y el entorno (3164-4.1). El cartel se coloca junto al material de seguridad.",
+        "desarrollo_ca": "En parelles, l'alumnat recorre el saló i localitza els sistemes de protecció general, com ara extintors, senyalització i ventilació, i els dibuixa en un cartell (3160-4c). Tot seguit relaciona cada mesura amb un hàbit saludable que protegeixi el cos i l'entorn (3164-4.1). El cartell es penja al costat del material de seguretat.",
+        "evidencia_es": "Cartel del rincón de seguridad con las medidas y los hábitos asociados.",
+        "evidencia_ca": "Cartell del racó de seguretat amb les mesures i els hàbits associats.",
+        "dua_es": "Plantilla del cartel con pictogramas para copiar o calcar según la destreza.",
+        "dua_ca": "Plantilla del cartell amb pictogrames per copiar o calcar segons la destresa.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Simulacro de derrame de producto químico",
+        "titulo_ca": "Simulacre d'abocament de producte químic",
+        "contexto_es": "En la mesa de color se vuelca un producto y hay que actuar con rapidez y sin riesgos.",
+        "contexto_ca": "A la taula de color s'aboca un producte i cal actuar de pressa i sense riscs.",
+        "desarrollo_es": "El grupo prepara por equipos un pequeño simulacro de derrame en la mesa de color y decide qué protección general se activa y quién avisa (3160-4c). Después de la práctica, cada equipo valora qué efectos tiene ese producto en la piel y en el medio natural y propone hábitos más seguros (3164-4.1). La sesión acaba con una lista común de mejoras.",
+        "desarrollo_ca": "El grup prepara per equips un petit simulacre d'abocament a la taula de color i decideix quina protecció general s'activa i qui avisa (3160-4c). Després de la pràctica, cada equip valora quins efectes té aquest producte a la pell i al medi natural i proposa hàbits més segurs (3164-4.1). La sessió acaba amb una llista comuna de millores.",
+        "evidencia_es": "Guion del simulacro y lista de hábitos seguros acordada por el grupo.",
+        "evidencia_ca": "Guió del simulacre i llista d'hàbits segurs acordada pel grup.",
+        "dua_es": "Rol asignado según las posibilidades de cada estudiante y apoyo visual con los pasos en la pared.",
+        "dua_ca": "Rol assignat segons les possibilitats de cada estudiant i suport visual amb els passos a la paret.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Gymkana de seguridad y salud en el taller",
+        "titulo_ca": "Gimcana de seguretat i salut al taller",
+        "contexto_es": "El taller del centro se convierte en un circuito por el que hay que pasar sin cometer errores de seguridad.",
+        "contexto_ca": "El taller del centre es converteix en un circuit pel qual cal passar sense cometre errors de seguretat.",
+        "desarrollo_es": "La clase se divide en equipos que giran por cinco estaciones de comprobación de la seguridad del salón (3160-4c). En cada estación deben encontrar un error y anotar un hábito saludable o sostenible que lo evite (3164-4.1). Gana el equipo que resuelve más estaciones en el tiempo acordado.",
+        "desarrollo_ca": "La classe es divideix en equips que giren per cinc estacions de comprovació de la seguretat del saló (3160-4c). A cada estació han de trobar un error i anotar un hàbit saludable o sostenible que el faci evitar (3164-4.1). Guanya l'equip que resol més estacions dins el temps acordat.",
+        "evidencia_es": "Hoja de ruta de la gymkana con los errores detectados y las propuestas.",
+        "evidencia_ca": "Full de ruta de la gimcana amb els errors detectats i les propostes.",
+        "dua_es": "Pistas graduadas en cada estación y equipos con un ayudante encargado de leer las instrucciones.",
+        "dua_ca": "Pistes graduades a cada estació i equips amb un ajudant encarregat de llegir les instruccions.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3160", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "3164", "ra": "CE5", "criterios": ["5.1"] },
+    "justificacion_es": "Se comunica la información de forma clara organizando y presentando los datos científicos del proyecto con el formato adecuado.",
+    "justificacion_ca": "Es comunica la informació de manera clara tot organitzant i presentant les dades científiques del projecte amb el format adequat.",
+    "actividades": [
+      {
+        "titulo_es": "Póster científico de la peluquería sostenible",
+        "titulo_ca": "Pòster científic de la perruqueria sostenible",
+        "contexto_es": "La biblioteca del centro acoge una muestra de trabajos del alumnado sobre el sector de la belleza.",
+        "contexto_ca": "La biblioteca del centre acull una mostra de treballs de l'alumnat sobre el sector de la bellesa.",
+        "desarrollo_es": "En grupos, el alumnado presenta los resultados de su proyecto en un póster con títulos, datos y gráficos ordenados (3164-5.1). Antes de colgarlo, cada grupo ensaya una explicación de dos minutos en la que la información se entienda a la primera (3160-5a). Después responden a las preguntas de los visitantes de la muestra.",
+        "desarrollo_ca": "En grups, l'alumnat presenta els resultats del seu projecte en un pòster amb títols, dades i gràfics ordenats (3164-5.1). Abans de penjar-lo, cada grup assaja una explicació de dos minuts en què la informació s'entengui a la primera (3160-5a). Després responen a les preguntes dels visitants de la mostra.",
+        "evidencia_es": "Póster expuesto y explicación oral breve ante los visitantes.",
+        "evidencia_ca": "Pòster exposat i explicació oral breu davant els visitants.",
+        "dua_es": "Plantilla del póster con espacios definidos y guion oral con las ideas clave.",
+        "dua_ca": "Plantilla del pòster amb espais definits i guió oral amb les idees clau.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Rueda de prensa de los aprendizajes del proyecto",
+        "titulo_ca": "Roda de premsa dels aprenentatges del projecte",
+        "contexto_es": "La revista del centro pide al grupo que cuente qué ha aprendido durante el proyecto intermodular.",
+        "contexto_ca": "La revista del centre demana al grup que expliqui què ha après durant el projecte intermodular.",
+        "desarrollo_es": "Cuatro estudiantes forman la mesa de portavoces y el resto prepara preguntas con antelación. Las respuestas deben ordenar y comunicar datos del proyecto de forma rigurosa, con gráficos o cifras en la mano (3164-5.1). Cada intervención se cuida para que el mensaje llegue claro y sin rodeos al público (3160-5a).",
+        "desarrollo_ca": "Quatre estudiants formen la taula de portaveus i la resta prepara preguntes amb antelació. Les respostes han d'ordenar i comunicar dades del projecte de manera rigorosa, amb gràfics o xifres a mà (3164-5.1). Cada intervenció es cuida perquè el missatge arribi clar i sense embuts al públic (3160-5a).",
+        "evidencia_es": "Grabación o resumen escrito de la rueda de prensa con los datos aportados.",
+        "evidencia_ca": "Enregistrament o resum escrit de la roda de premsa amb les dades aportades.",
+        "dua_es": "Preguntas escritas repartidas de antemano y tiempo de preparación en pareja antes de responder.",
+        "dua_ca": "Preguntes escrites repartides d'antuvi i temps de preparació en parella abans de respondre.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Podcast con datos claros del proyecto",
+        "titulo_ca": "Podcast amb dades clares del projecte",
+        "contexto_es": "El centro publica cada mes un audio breve para compartir lo que se hace en los talleres.",
+        "contexto_ca": "El centre publica cada mes un àudio breu per compartir què es fa als tallers.",
+        "desarrollo_es": "Por parejas, el alumnado graba un audio de tres minutos sobre su proyecto. El guion incluye datos y cifras organizados de manera atractiva (3164-5.1) y frases cortas que se entiendan sin apoyo visual (3160-5a). Antes de grabar, ensayan la dicción y el ritmo con el compañero.",
+        "desarrollo_ca": "Per parelles, l'alumnat enregistra un àudio de tres minuts sobre el seu projecte. El guió inclou dades i xifres organitzades de manera atractiva (3164-5.1) i frases curtes que s'entenguin sense suport visual (3160-5a). Abans d'enregistrar, assagen la dicció i el ritme amb el company.",
+        "evidencia_es": "Audio final y guion escrito con las cifras del proyecto.",
+        "evidencia_ca": "Àudio final i guió escrit amb les xifres del projecte.",
+        "dua_es": "Posibilidad de grabar por partes y permiso para ensayar en un aula tranquila.",
+        "dua_ca": "Possibilitat d'enregistrar per parts i permís per assajar en una aula tranquil·la.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3160", "ra": "RA5", "criterios": ["b"] },
+    "b": { "modulo": "3164", "ra": "CE2", "criterios": ["2.4"] },
+    "justificacion_es": "Se usan herramientas digitales para estructurar la información del proyecto, representando y comprobando los resultados obtenidos.",
+    "justificacion_ca": "S'empren eines digitals per estructurar la informació del projecte, tot representant i comprovant els resultats obtinguts.",
+    "actividades": [
+      {
+        "titulo_es": "Plantilla digital para ordenar los datos del proyecto",
+        "titulo_ca": "Plantilla digital per ordenar les dades del projecte",
+        "contexto_es": "El grupo acumula fotos, notas y medidas del proyecto y ya no encuentra nada cuando lo necesita.",
+        "contexto_ca": "El grup acumula fotos, notes i mesures del projecte i ja no troba res quan ho necessita.",
+        "desarrollo_es": "Por equipos, el alumnado crea una carpeta compartida con subcarpetas, nombres claros y una tabla índice (3160-5b). A continuación usa una hoja de cálculo sencilla para representar los datos recogidos y comprobar que las cuentas cuadran (3164-2.4). Cada equipo explica al resto cómo ha organizado su archivo.",
+        "desarrollo_ca": "Per equips, l'alumnat crea una carpeta compartida amb subcarpetes, noms clars i una taula índex (3160-5b). Tot seguit fa servir un full de càlcul senzill per representar les dades recollides i comprovar que els comptes quadren (3164-2.4). Cada equip explica a la resta com ha organitzat el seu arxiu.",
+        "evidencia_es": "Carpeta compartida organizada y hoja de cálculo con los datos comprobados.",
+        "evidencia_ca": "Carpeta compartida organitzada i full de càlcul amb les dades comprovades.",
+        "dua_es": "Ordenador con la plantilla ya abierta y pareja de apoyo para quien tenga menos soltura digital.",
+        "dua_ca": "Ordinador amb la plantilla ja oberta i parella de suport per a qui tingui menys soltesa digital.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Gráfico digital de tiempos y resultados",
+        "titulo_ca": "Gràfic digital de temps i resultats",
+        "contexto_es": "En el taller de color se anotan a mano los tiempos de exposición de cada prueba y nadie ve las diferencias.",
+        "contexto_ca": "Al taller de color s'anoten a mà els temps d'exposició de cada prova i ningú no veu les diferències.",
+        "desarrollo_es": "Cada estudiante introduce los tiempos y los resultados de sus pruebas en una hoja de cálculo y genera un gráfico de barras (3164-2.4). Con los gráficos reunidos, el grupo busca un formato de presentación que deje las conclusiones a la vista (3160-5b). Después comprueban si el gráfico elegido ayuda a decidir mejor el próximo tinte.",
+        "desarrollo_ca": "Cada estudiant introdueix els temps i els resultats de les seves proves en un full de càlcul i genera un gràfic de barres (3164-2.4). Amb els gràfics reunits, el grup busca un format de presentació que deixi les conclusions a la vista (3160-5b). Després comproven si el gràfic triat ajuda a decidir millor el proper tint.",
+        "evidencia_es": "Gráfico de barras terminado y conclusión escrita sobre el próximo servicio.",
+        "evidencia_ca": "Gràfic de barres acabat i conclusió escrita sobre el proper servei.",
+        "dua_es": "Plantilla de hoja de cálculo con las fórmulas preparadas y ayuda paso a paso proyectada.",
+        "dua_ca": "Plantilla de full de càlcul amb les fórmules preparades i ajuda pas a pas projectada.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Tablero digital con las tareas del proyecto",
+        "titulo_ca": "Tauler digital amb les tasques del projecte",
+        "contexto_es": "El equipo se pierde con las entregas del proyecto y decide organizarse con un tablero en la nube.",
+        "contexto_ca": "L'equip es perd amb els lliuraments del projecte i decideix organitzar-se amb un tauler al núvol.",
+        "desarrollo_es": "En grupos, el alumnado crea un tablero digital con columnas de pendientes, en curso y acabadas, y reparte las tarjetas de tareas (3160-5b). Cada semana mueve las tarjetas y usa la herramienta para comprobar si el plan avanza o se atasca (3164-2.4). Al final del proyecto, el grupo revisa qué columnas quedaron vacías.",
+        "desarrollo_ca": "En grups, l'alumnat crea un tauler digital amb columnes de pendents, en curs i acabades, i reparteix les targetes de tasques (3160-5b). Cada setmana mou les targetes i fa servir l'eina per comprovar si el pla avança o s'encalla (3164-2.4). Al final del projecte, el grup revisa quines columnes van quedar buides.",
+        "evidencia_es": "Tablero digital con el historial de tareas y la revisión final del equipo.",
+        "evidencia_ca": "Tauler digital amb l'historial de tasques i la revisió final de l'equip.",
+        "dua_es": "Colores y etiquetas para identificar tareas y un responsable de recordar los movimientos.",
+        "dua_ca": "Colors i etiquetes per identificar tasques i un responsable de recordar els moviments.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  }
+]

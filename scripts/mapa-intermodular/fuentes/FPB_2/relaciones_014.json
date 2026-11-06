@@ -1,0 +1,375 @@
+[
+  {
+    "a": {
+      "modulo": "3160",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE1",
+      "criterios": [
+        "1.1"
+      ]
+    },
+    "justificacion_es": "Se definen las características de las empresas tipo y se buscan con herramientas de internet al analizar el entorno económico y sostenible del sector.",
+    "justificacion_ca": "Es defineixen les característiques de les empreses tipus i es cerquen amb eines d'internet en analitzar l'entorn econòmic i sostenible del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Mapa sostenible de salones de Inca",
+        "titulo_ca": "Mapa sostenible de salons d'Inca",
+        "contexto_es": "El centro colabora con tres salones de Inca en una feria de FP Básica y hace falta saber qué hacen y cómo cuidan su entorno.",
+        "contexto_ca": "El centre col·labora amb tres salons d'Inca en una fira de FP Bàsica i cal saber què fan i com cuiden el seu entorn.",
+        "desarrollo_es": "Por parejas, buscan en internet salones y peluquerías de Inca y anotan los servicios que ofrecen (3160-1a); localizan sus datos y sus redes sociales con el navegador y una ficha guiada (3160-1b); después dibujan un mapa del barrio donde se ubican y señalan qué elementos del entorno comparten (3162-1.1).",
+        "desarrollo_ca": "Per parelles, cerquen a internet salons i perruqueries d'Inca i anoten els serveis que ofereixen (3160-1a); localitzen les dades i les xarxes socials amb el navegador i una fitxa guiada (3160-1b); després dibuixen un mapa del barri on es troben i assenyalen quins elements de l'entorn comparteixen (3162-1.1).",
+        "evidencia_es": "Mapa mural del barrio con las fichas de las empresas.",
+        "evidencia_ca": "Mapa mural del barri amb les fitxes de les empreses.",
+        "dua_es": "Ficha con pictogramas y campos ya rotulados para quien tiene dificultades de lectura.",
+        "dua_ca": "Fitxa amb pictogrames i camps ja rotulats per a qui té dificultats de lectura.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Caso de un salón en primera línea",
+        "titulo_ca": "Cas d'un saló en primera línia",
+        "contexto_es": "Un salón de Palma, muy cerca del paseo marítimo, atiende cada verano a clientela de toda Europa y quiere revisar su impacto en el entorno.",
+        "contexto_ca": "Un saló de Palma, molt a prop del passeig marítim, atén cada estiu clientela de tot Europa i vol revisar el seu impacte en l'entorn.",
+        "desarrollo_es": "Se reparte un dosier con datos del salón y cada grupo compara sus servicios con los de otras empresas del sector (3160-1a); completa una tabla con las webs y los perfiles encontrados (3160-1b); finalmente la clase debate qué decisiones del salón afectan a la sostenibilidad del barrio y propone mejoras (3162-1.1).",
+        "desarrollo_ca": "Es reparteix un dossier amb dades del saló i cada grup compara els seus serveis amb els d'altres empreses del sector (3160-1a); completa una taula amb les webs i els perfils trobats (3160-1b); finalment la classe debat quines decisions del saló afecten la sostenibilitat del barri i proposa millores (3162-1.1).",
+        "evidencia_es": "Informe de caso con la tabla comparativa y tres propuestas de mejora.",
+        "evidencia_ca": "Informe de cas amb la taula comparativa i tres propostes de millora.",
+        "dua_es": "Dosier en letra grande y con espacio para responder con dibujos o palabras clave.",
+        "dua_ca": "Dossier amb lletra gran i amb espai per respondre amb dibuixos o paraules clau.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Concurso de mapas del sector local",
+        "titulo_ca": "Concurs de mapes del sector local",
+        "contexto_es": "En el aula-taller se organiza un concurso por equipos para elegir el mejor mapa del sector de la comarca.",
+        "contexto_ca": "A l'aula-taller s'organitza un concurs per equips per triar el millor mapa del sector de la comarca.",
+        "desarrollo_es": "Cada equipo recibe un municipio distinto de Mallorca y fija con una rúbrica los rasgos que comparten las empresas tipo (3160-1a); rastrea en internet al menos cinco negocios reales y los coloca en el mapa (3160-1b); consigue más puntos quien justifica mejor la relación entre esos negocios y los recursos del entorno (3162-1.1).",
+        "desarrollo_ca": "Cada equip rep un municipi diferent de Mallorca i fixa amb una rúbrica els trets que comparteixen les empreses tipus (3160-1a); cerca a internet almenys cinc negocis reals i els col·loca al mapa (3160-1b); aconsegueix més punts qui justifica millor la relació entre aquests negocis i els recursos de l'entorn (3162-1.1).",
+        "evidencia_es": "Mapa de equipo con cinco empresas y la justificación del entorno.",
+        "evidencia_ca": "Mapa d'equip amb cinc empreses i la justificació de l'entorn.",
+        "dua_es": "Roles rotativos dentro del equipo para que cada persona aporte desde su punto fuerte.",
+        "dua_ca": "Rols rotatius dins l'equip perquè cada persona hi aporti des del seu punt fort.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3160",
+      "ra": "RA2",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE2",
+      "criterios": [
+        "2.3"
+      ]
+    },
+    "justificacion_es": "Se analizan los ODS a los que contribuye la empresa al interpretar los principales desafíos del mundo actual.",
+    "justificacion_ca": "S'analitzen els ODS als quals contribueix l'empresa en interpretar els principals reptes del món actual.",
+    "actividades": [
+      {
+        "titulo_es": "Reto: un servicio de belleza con ODS",
+        "titulo_ca": "Repte: un servei de bellesa amb ODS",
+        "contexto_es": "Una marca local de cosmética natural quiere averiguar a qué Objetivos de Desarrollo Sostenible contribuye su nuevo tratamiento capilar.",
+        "contexto_ca": "Una marca local de cosmètica natural vol esbrinar a quins Objectius de Desenvolupament Sostenible contribueix el seu nou tractament capil·lar.",
+        "desarrollo_es": "En grupos, analizan el servicio elegido y lo asocian con al menos dos ODS, anotando el motivo de cada elección (3160-2b); después relacionan esos objetivos con desafíos globales como el cambio climático o la igualdad y escriben qué puede hacer el salón desde su propia capacidad de acción (3162-2.3).",
+        "desarrollo_ca": "En grups, analitzen el servei triat i l'associen amb almenys dos ODS, anotant el motiu de cada elecció (3160-2b); després relacionen aquests objectius amb desafiaments globals com el canvi climàtic o la igualtat i escriuen què pot fer el saló des de la seva pròpia capacitat d'acció (3162-2.3).",
+        "evidencia_es": "Ficha del reto con los ODS asignados y dos acciones concretas del salón.",
+        "evidencia_ca": "Fitxa del repte amb els ODS assignats i dues accions concretes del saló.",
+        "dua_es": "Plantilla con los iconos de los ODS para trabajar la asociación de forma visual.",
+        "dua_ca": "Plantilla amb les icones dels ODS per treballar l'associació de manera visual.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Debate abierto sobre la imagen del taller",
+        "titulo_ca": "Debat obert sobre la imatge del taller",
+        "contexto_es": "El salón del centro prepara unas jornadas de puertas abiertas y el grupo tiene que decidir qué imagen de sostenibilidad quiere mostrar.",
+        "contexto_ca": "El saló del centre prepara unes jornades de portes obertes i el grup ha de decidir quina imatge de sostenibilitat vol mostrar.",
+        "desarrollo_es": "Preparan por parejas argumentos sobre los ODS que ya cumple el servicio de hidratación del taller (3160-2b); en un debate moderado defienden qué desafíos globales resultan más urgentes y cómo implicarse desde el centro (3162-2.3); una persona recoge por escrito los acuerdos alcanzados.",
+        "desarrollo_ca": "Preparen per parelles arguments sobre els ODS que ja compleix el servei d'hidratació del taller (3160-2b); en un debat moderat defensen quins desafiaments globals resulten més urgents i com implicar-s'hi des del centre (3162-2.3); una persona recull per escrit els acords assolits.",
+        "evidencia_es": "Acta del debate con los acuerdos y la lista de ODS priorizados.",
+        "evidencia_ca": "Acta del debat amb els acords i la llista d'ODS prioritzats.",
+        "dua_es": "Turnos de palabra con tarjetas de colores para ordenar la intervención y dar tiempo a pensar.",
+        "dua_ca": "Torns de paraula amb targetes de colors per ordenar la intervenció i donar temps a pensar.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Campaña solidaria en la residencia de mayores",
+        "titulo_ca": "Campanya solidària a la residència de majors",
+        "contexto_es": "Una residencia de mayores de Manacor pide al centro un servicio de manicura solidario para sus residentes.",
+        "contexto_ca": "Una residència de majors de Manacor demana al centre un servei de manicura solidari per a les persones residents.",
+        "desarrollo_es": "El alumnado detalla el servicio que va a ofrecer y busca qué ODS de salud y bienestar o de reducción de desigualdades guardan relación con él (3160-2b); planifica la visita y explica cómo esa acción responde a un desafío social real de su entorno (3162-2.3).",
+        "desarrollo_ca": "L'alumnat concreta el servei que oferirà i cerca quins ODS de salut i benestar o de reducció de desigualtats hi tenen relació (3160-2b); planifica la visita i explica com aquesta acció respon a un desafiament social real del seu entorn (3162-2.3).",
+        "evidencia_es": "Guion del servicio solidario con los ODS justificados y el plan de la visita.",
+        "evidencia_ca": "Guió del servei solidari amb els ODS justificats i el pla de la visita.",
+        "dua_es": "Guion de la visita secuenciado en pasos con tiempos marcados.",
+        "dua_ca": "Guió de la visita seqüenciat en passes amb els temps marcats.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3160",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE5",
+      "criterios": [
+        "5.3"
+      ]
+    },
+    "justificacion_es": "Se elabora el dosier de la propuesta planificando la redacción y revisando el texto final con el registro adecuado.",
+    "justificacion_ca": "S'elabora el dossier de la proposta tot planificant la redacció i revisant el text final amb el registre adequat.",
+    "actividades": [
+      {
+        "titulo_es": "Design thinking para un salón de barrio",
+        "titulo_ca": "Design thinking per a un saló de barri",
+        "contexto_es": "En el barrio de Santa Catalina, en Palma, abundan los salones pequeños y el grupo imagina uno nuevo que nace de otro que ya funciona.",
+        "contexto_ca": "Al barri de Santa Catalina, a Palma, hi ha molts salons petits i el grup n'imagina un de nou que neix d'un altre que ja funciona.",
+        "desarrollo_es": "Cada equipo elabora el dosier de su propuesta de salón, con portada, servicios y características diferenciales (3160-3c); antes de pasarlo a limpio, planifica la redacción pensando en el destinatario y el canal, escribe un borrador y lo revisa con una lista de comprobación (3162-5.3).",
+        "desarrollo_ca": "Cada equip elabora el dossier de la seva proposta de saló, amb portada, serveis i característiques diferencials (3160-3c); abans de passar-lo a net, planifica la redacció pensant en el destinatari i el canal, escriu un esborrany i el revisa amb una llista de comprovació (3162-5.3).",
+        "evidencia_es": "Dosier encuadernado con la propuesta y el borrador revisado.",
+        "evidencia_ca": "Dossier enquadernat amb la proposta i l'esborrany revisat.",
+        "dua_es": "Plantilla de dosier con apartados numerados y frases de inicio para quien se bloquea al escribir.",
+        "dua_ca": "Plantilla de dossier amb apartats numerats i frases d'inici per a qui es bloqueja en escriure.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      },
+      {
+        "titulo_es": "Vídeo previo y dosier en el aula",
+        "titulo_ca": "Vídeo previ i dossier a l'aula",
+        "contexto_es": "Antes de la sesión, el grupo visiona en casa un vídeo corto sobre cómo se documenta una idea de negocio del sector.",
+        "contexto_ca": "Abans de la sessió, el grup visiona a casa un vídeo curt sobre com es documenta una idea de negoci del sector.",
+        "desarrollo_es": "En clase resuelven las dudas que deja el vídeo y elaboran el dosier de la spin-off con los datos que ya traían preparados (3160-3c); mejoran después el texto atendiendo a la ortografía, la cohesión y el registro de cada apartado (3162-5.3).",
+        "desarrollo_ca": "A classe resolen els dubtes que deixa el vídeo i elaboren el dossier de la spin-off amb les dades que ja duien preparades (3160-3c); milloren després el text atenent l'ortografia, la cohesió i el registre de cada apartat (3162-5.3).",
+        "evidencia_es": "Dosier corregido por parejas con dos versiones del texto.",
+        "evidencia_ca": "Dossier corregit per parelles amb dues versions del text.",
+        "dua_es": "Vídeo con subtítulos y transcripción en papel para poder volver a consultarlo.",
+        "dua_ca": "Vídeo amb subtítols i transcripció en paper per poder-lo tornar a consultar.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe inversa."
+      },
+      {
+        "titulo_es": "Mercadillo de dosieres del sector",
+        "titulo_ca": "Mercadillo de dossiers del sector",
+        "contexto_es": "El aula se convierte en un mercadillo donde cada rincón muestra una propuesta distinta de negocio del sector.",
+        "contexto_ca": "L'aula es converteix en un mercadillo on cada racó mostra una proposta diferent de negoci del sector.",
+        "desarrollo_es": "Por rincones, los equipos completan y exponen el dosier de su spin-off con la información esencial bien ordenada (3160-3c); el resto del grupo revisa cada dosier con una rúbrica y sugiere mejoras de redacción y de vocabulario técnico (3162-5.3).",
+        "desarrollo_ca": "Per racons, els equips completen i exposen el dossier de la seva spin-off amb la informació essencial ben ordenada (3160-3c); la resta del grup revisa cada dossier amb una rúbrica i suggereix millores de redacció i de vocabulari tècnic (3162-5.3).",
+        "evidencia_es": "Dosier con las observaciones del grupo incorporadas.",
+        "evidencia_ca": "Dossier amb les observacions del grup incorporades.",
+        "dua_es": "Rúbrica de revisión con ejemplos de frases bien y mal redactadas.",
+        "dua_ca": "Rúbrica de revisió amb exemples de frases ben i malament redactades.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3160",
+      "ra": "RA3",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE1",
+      "criterios": [
+        "1.1"
+      ]
+    },
+    "justificacion_es": "Se identifican las diferencias con la empresa de referencia aplicando una mirada sistémica del entorno donde se ubica.",
+    "justificacion_ca": "S'identifiquen les diferències amb l'empresa de referència tot aplicant una mirada sistèmica de l'entorn on s'ubica.",
+    "actividades": [
+      {
+        "titulo_es": "Simulación de dos salones frente a frente",
+        "titulo_ca": "Simulació de dos salons cara a cara",
+        "contexto_es": "Dos salones de Alaior se disputan la misma clientela y el alumnado tiene que explicar en qué se diferencian.",
+        "contexto_ca": "Dos salons d'Alaior es disputen la mateixa clientela i l'alumnat ha d'explicar en què es diferencien.",
+        "desarrollo_es": "En dos equipos, cada uno representa un salón real y compara sus servicios, precios y trato con los del salón de referencia para señalar las diferencias (3160-3b); después sitúan esas diferencias en el mapa del municipio y explican qué recursos del entorno las explican (3162-1.1).",
+        "desarrollo_ca": "En dos equips, cadascun representa un saló real i compara els seus serveis, preus i tracte amb els del saló de referència per assenyalar-ne les diferències (3160-3b); després situen aquestes diferències al mapa del municipi i expliquen quins recursos de l'entorn les expliquen (3162-1.1).",
+        "evidencia_es": "Cartel comparativo de los dos salones con el entorno señalado.",
+        "evidencia_ca": "Cartell comparatiu dels dos salons amb l'entorn assenyalat.",
+        "dua_es": "Mapa del municipio impreso y ampliado para poder escribir encima.",
+        "dua_ca": "Mapa del municipi imprès i ampliat per poder-hi escriure a sobre.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Rincones de barrio para una spin-off",
+        "titulo_ca": "Racons de barri per a una spin-off",
+        "contexto_es": "El grupo reparte el aula en cuatro rincones, uno por cada zona del pueblo donde podría abrirse el negocio nuevo.",
+        "contexto_ca": "El grup reparteix l'aula en quatre racons, un per cada zona del poble on es podria obrir el negoci nou.",
+        "desarrollo_es": "En cada rincón comparan la propuesta con el salón de referencia y anotan las diferencias detectadas (3160-3b); después valoran si la zona elegida tiene los recursos y el equilibrio necesarios para sostener el negocio (3162-1.1) y rotan para conocer el trabajo de los demás.",
+        "desarrollo_ca": "A cada racó comparen la proposta amb el saló de referència i anoten les diferències detectades (3160-3b); després valoren si la zona triada té els recursos i l'equilibri necessaris per sostenir el negoci (3162-1.1) i roten per conèixer la feina dels altres.",
+        "evidencia_es": "Ficha de rincón con las diferencias y la valoración de la zona.",
+        "evidencia_ca": "Fitxa de racó amb les diferències i la valoració de la zona.",
+        "dua_es": "Fichas de rincón con una pregunta por apartado y espacio para responder en dos líneas.",
+        "dua_ca": "Fitxes de racó amb una pregunta per apartat i espai per respondre en dues línies.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      },
+      {
+        "titulo_es": "Proyecto de peluquería en un pueblo de interior",
+        "titulo_ca": "Projecte de perruqueria en un poble d'interior",
+        "contexto_es": "El ayuntamiento de un pueblo de interior busca ideas para reactivar el comercio y consulta al centro por un servicio de peluquería adaptado.",
+        "contexto_ca": "L'ajuntament d'un poble d'interior cerca idees per reactivar el comerç i consulta el centre per un servei de perruqueria adaptat.",
+        "desarrollo_es": "Los equipos diseñan la nueva peluquería indicando con precisión qué la hace distinta del salón en el que se han inspirado (3160-3b); estudian cuánta población hay, qué transporte llega y qué servicios rodean el local para decidir si la idea es viable en ese entorno (3162-1.1).",
+        "desarrollo_ca": "Els equips dissenyen la perruqueria nova i indiquen amb precisió què la fa diferent del saló en què s'han inspirat (3160-3b); estudien quina població hi ha, quin transport arriba i quins serveis envolten el local per decidir si la idea és viable en aquest entorn (3162-1.1).",
+        "evidencia_es": "Panel del proyecto con el plano del local y el análisis del entorno.",
+        "evidencia_ca": "Panell del projecte amb el plànol del local i l'anàlisi de l'entorn.",
+        "dua_es": "Plantilla de análisis con tres casillas y el apoyo de una compañera o un compañero de equipo.",
+        "dua_ca": "Plantilla d'anàlisi amb tres caselles i el suport d'una companya o un company d'equip.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3160",
+      "ra": "RA5",
+      "criterios": [
+        "a"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE5",
+      "criterios": [
+        "5.2"
+      ]
+    },
+    "justificacion_es": "Se comunica la información de forma clara realizando una exposición oral ajustada a las convenciones del género discursivo.",
+    "justificacion_ca": "Es comunica la informació de manera clara tot fent una exposició oral ajustada a les convencions del gènere discursiu.",
+    "actividades": [
+      {
+        "titulo_es": "Demostración del tratamiento ante clientela real",
+        "titulo_ca": "Demostració del tractament davant clientela real",
+        "contexto_es": "El centro celebra una jornada de puertas abiertas y el alumnado atiende a las familias que se acercan al aula-taller.",
+        "contexto_ca": "El centre celebra una jornada de portes obertes i l'alumnat atén les famílies que s'acosten a l'aula-taller.",
+        "desarrollo_es": "Cada estudiante explica a una familia el tratamiento capilar que ha preparado, ordenando las ideas y con un lenguaje claro y correcto (3160-5a); adapta la explicación al público que tiene delante, con apoyo de gestos y del producto real (3162-5.2); al terminar anota cómo se ha sentido.",
+        "desarrollo_ca": "Cada estudiant explica a una família el tractament capil·lar que ha preparat, ordenant les idees i amb un llenguatge clar i correcte (3160-5a); adapta l'explicació al públic que té davant, amb el suport de gestos i del producte real (3162-5.2); en acabar anota com s'ha sentit.",
+        "evidencia_es": "Registro de la demostración con una diana de autoevaluación.",
+        "evidencia_ca": "Registre de la demostració amb una diana d'autoavaluació.",
+        "dua_es": "Guion con las ideas clave en tarjetas para consultar durante la explicación.",
+        "dua_ca": "Guió amb les idees clau en targetes per consultar durant l'explicació.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Guía para explicar bien un servicio",
+        "titulo_ca": "Guia per explicar bé un servei",
+        "contexto_es": "Las clientas del salón del centro se quejan a veces de que no entienden bien lo que se les va a hacer.",
+        "contexto_ca": "Les clientes del saló del centre es queixen de vegades que no entenen bé què se'ls farà.",
+        "desarrollo_es": "El alumnado busca y compara tres maneras de explicar el mismo servicio y elige la más clara (3160-5a); prepara después una intervención oral breve con apoyo visual y la ensaya en parejas ajustándose al género discursivo y al soporte (3162-5.2).",
+        "desarrollo_ca": "L'alumnat cerca i compara tres maneres d'explicar el mateix servei i tria la més clara (3160-5a); prepara després una intervenció oral breu amb suport visual i l'assaig per parelles tot ajustant-se al gènere discursiu i al suport (3162-5.2).",
+        "evidencia_es": "Guion de la intervención con la versión elegida y las anotaciones del ensayo.",
+        "evidencia_ca": "Guió de la intervenció amb la versió triada i les anotacions de l'assaig.",
+        "dua_es": "Grabación de voz del ensayo para escucharse y mejorar sin la presión del directo.",
+        "dua_ca": "Enregistrament de veu de l'assaig per escoltar-se i millorar sense la pressió del directe.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Concurso rápido de explicaciones claras",
+        "titulo_ca": "Concurs ràpid d'explicacions clares",
+        "contexto_es": "El grupo organiza un concurso de un minuto para dilucidar quién explica mejor un servicio a alguien que no conoce el sector.",
+        "contexto_ca": "El grup organitza un concurs d'un minut per dilucidar qui explica millor un servei a algú que no coneix el sector.",
+        "desarrollo_es": "Cada estudiante prepara en cinco minutos la explicación de un servicio y la presenta al grupo (3160-5a); el público valora la fluidez, la coherencia y el uso de recursos no verbales (3162-5.2); las tres mejores explicaciones se graban como modelo.",
+        "desarrollo_ca": "Cada estudiant prepara en cinc minuts l'explicació d'un servei i la presenta al grup (3160-5a); el públic valora la fluïdesa, la coherència i l'ús de recursos no verbals (3162-5.2); les tres millors explicacions s'enregistren com a model.",
+        "evidencia_es": "Rúbrica de valoración del público y grabación de las mejores explicaciones.",
+        "evidencia_ca": "Rúbrica de valoració del públic i enregistrament de les millors explicacions.",
+        "dua_es": "Opción de exponer en pareja si hablar solo delante del grupo genera mucha ansiedad.",
+        "dua_ca": "Opció d'exposar en parella si parlar sol davant del grup genera molta ansietat.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3160",
+      "ra": "RA5",
+      "criterios": [
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3162",
+      "ra": "CE4",
+      "criterios": [
+        "4.2"
+      ]
+    },
+    "justificacion_es": "Se emplean herramientas para estructurar la información elaborando contenidos propios y citando las fuentes consultadas.",
+    "justificacion_ca": "S'empren eines per estructurar la informació tot elaborant continguts propis i esmentant les fonts consultades.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha técnica entre cuatro manos",
+        "titulo_ca": "Fitxa tècnica entre quatre mans",
+        "contexto_es": "En el taller se han acumulado fotos y notas sueltas de un tratamiento nuevo y ya nadie encuentra la información.",
+        "contexto_ca": "Al taller s'han acumulat fotos i notes soltes d'un tractament nou i ja ningú no troba la informació.",
+        "desarrollo_es": "El equipo ordena los datos en una ficha con apartados fijos, usando tablas y títulos claros (3160-5b); cada persona aporta la parte que ha investigado y se anotan las fuentes de donde sale cada dato (3162-4.2); el resultado se comparte con el resto del grupo.",
+        "desarrollo_ca": "L'equip ordena les dades en una fitxa amb apartats fixos, fent servir taules i títols clars (3160-5b); cada persona aporta la part que ha investigat i s'anoten les fonts d'on surt cada dada (3162-4.2); el resultat es comparteix amb la resta del grup.",
+        "evidencia_es": "Ficha técnica común con los apartados y las fuentes anotadas.",
+        "evidencia_ca": "Fitxa tècnica comuna amb els apartats i les fonts anotades.",
+        "dua_es": "Plantilla desmontable con apartados recortables para ordenarlos antes de escribir.",
+        "dua_ca": "Plantilla desmuntable amb apartats retallables per ordenar-los abans d'escriure.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Infografía con fuentes para el vestíbulo",
+        "titulo_ca": "Infografia amb fonts per al vestíbul",
+        "contexto_es": "El centro quiere colgar en el vestíbulo una infografía sobre cuidados del cabello que resista la mirada de cualquier visitante.",
+        "contexto_ca": "El centre vol penjar al vestíbul una infografia sobre cures del cabell que resisteixi la mirada de qualsevol visitant.",
+        "desarrollo_es": "En casa revisan un tutorial sobre cómo organizar la información en una infografía (3160-5b); en clase elaboran el contenido propio con datos de al menos dos fuentes citadas (3162-4.2) y montan la infografía final.",
+        "desarrollo_ca": "A casa revisen un tutorial sobre com organitzar la informació en una infografia (3160-5b); a classe elaboren el contingut propi amb dades d'almenys dues fonts esmentades (3162-4.2) i munten la infografia final.",
+        "evidencia_es": "Infografía montada con el listado de fuentes utilizadas.",
+        "evidencia_ca": "Infografia muntada amb el llistat de fonts utilitzades.",
+        "dua_es": "Plantillas de infografía semivacías y ejemplos de citas ya maquetadas.",
+        "dua_ca": "Plantilles d'infografia semibuidades i exemples de cites ja maquetades.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe inversa."
+      },
+      {
+        "titulo_es": "Guía de cuidados para la escuela de adultos",
+        "titulo_ca": "Guia de cures per a l'escola d'adults",
+        "contexto_es": "La escuela de adultos del municipio pide al taller una guía sencilla de cuidados capilares para su alumnado.",
+        "contexto_ca": "L'escola d'adults del municipi demana al taller una guia senzilla de cures capil·lars per al seu alumnat.",
+        "desarrollo_es": "Los grupos estructuran la guía con pasos numerados, dibujos y un glosario breve (3160-5b); redactan los consejos con palabras propias y citan los folletos y las webs consultadas (3162-4.2); entregan copias en la escuela.",
+        "desarrollo_ca": "Els grups estructuren la guia amb passes numerades, dibuixos i un glossari breu (3160-5b); redacten els consells amb paraules pròpies i esmenten els fullets i les webs consultades (3162-4.2); lliuren còpies a l'escola.",
+        "evidencia_es": "Guía impresa de cuidados con el glosario y las fuentes.",
+        "evidencia_ca": "Guia impresa de cures amb el glossari i les fonts.",
+        "dua_es": "Versión en lectura fácil con frases cortas y pictogramas al lado del texto.",
+        "dua_ca": "Versió en lectura fàcil amb frases curtes i pictogrames al costat del text.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  }
+]

@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import { AFINIDADES_TABS, DEFAULT_TIPO_NIVEL, MAPA_TABS, cursoDeTab, NIVELES, NIVEL_IDS, findNivel, nombrePrompt } from '../data/niveles';
+import { FP_BASICA_RAS_DATA } from '../data/ras_fp_basica.data';
 import { CFGM_ESTETICA_RAS_DATA } from '../data/ras_cfgm_estetica.data';
 import { CFGM_PELUQUERIA_RAS_DATA } from '../data/ras_cfgm_peluqueria.data';
 import { CFGS_EDUCACION_INFANTIL_RAS_DATA } from '../data/ras_cfgs_educacion_infantil.data';
@@ -31,7 +32,7 @@ const modulosDe = (id: string) => findNivel(id)?.cursos.flatMap(c => c.modulos ?
 describe('Catálogo de niveles: datos para el frontend', () => {
   it('declara las pestañas del mapa con los ids históricos y su orden', () => {
     expect(MAPA_TABS).toEqual([
-      'FPB', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_GUIA_MEDIO_NATURAL', 'CFGM_GUIA_MEDIO_NATURAL_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
+      'FPB', 'FPB_2', 'CFGM', 'CFGM_PELUQUERIA', 'CFGM_PELUQUERIA_2', 'CFGM_ATENCION_DEPENDENCIA', 'CFGM_ATENCION_DEPENDENCIA_2', 'CFGM_GUIA_MEDIO_NATURAL', 'CFGM_GUIA_MEDIO_NATURAL_2', 'CFGM_CUIDADOS_AUXILIARES_ENFERMERIA',
       'CFGS_EDUCACION_INFANTIL', 'CFGS_EDUCACION_INFANTIL_2', 'CFGS_ACONDICIONAMIENTO_FISICO', 'CFGS_ACONDICIONAMIENTO_FISICO_2', 'CFGS_ANIMACION_SOCIODEPORTIVA', 'CFGS_ANIMACION_SOCIODEPORTIVA_2', 'CFGS_INTEGRACION_SOCIAL', 'CFGS_INTEGRACION_SOCIAL_2', 'CFGS_LABORATORIO_CLINICO', 'CFGS_LABORATORIO_CLINICO_2'
     ]);
   });
@@ -39,7 +40,8 @@ describe('Catálogo de niveles: datos para el frontend', () => {
   it('conserva la selección inicial y el curso de cada mapa', () => {
     const mapas = NIVELES.flatMap(n => (n.mapas ?? []).map(m => ({ nivel: n.id, ...m })));
     expect(mapas).toEqual([
-      { nivel: 'FP_BASICA', tab: 'FPB', moduleCode: '3060', raId: '3060_RA1' },
+      { nivel: 'FP_BASICA', tab: 'FPB', curso: '1º', moduleCode: '3060', raId: '3060_RA1' },
+      { nivel: 'FP_BASICA', tab: 'FPB_2', curso: '2º', moduleCode: '3005', raId: '3005_RA1' },
       { nivel: 'CFGM_ESTETICA', tab: 'CFGM', moduleCode: '0633', raId: '0633_RA1' },
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA', curso: '1º', moduleCode: '0845', raId: '0845_RA1' },
       { nivel: 'CFGM_PELUQUERIA', tab: 'CFGM_PELUQUERIA_2', curso: '2º', moduleCode: '0640', raId: '0640_RA1' },
@@ -73,7 +75,8 @@ describe('Catálogo de niveles: datos para el frontend', () => {
   it('cursoDeTab devuelve el curso de la pestaña y undefined si no hay', () => {
     expect(cursoDeTab('ESO_3')).toBe('3º');
     expect(cursoDeTab('CFGM_PELUQUERIA_2')).toBe('2º');
-    expect(cursoDeTab('FPB')).toBeUndefined();
+    expect(cursoDeTab('FPB')).toBe('1º');
+    expect(cursoDeTab('CFGM')).toBeUndefined();
     expect(cursoDeTab('DESCONOCIDA')).toBeUndefined();
   });
 
@@ -87,6 +90,7 @@ describe('Catálogo de niveles: datos para el frontend', () => {
 
   it('los módulos de los cursos cubren exactamente los RA de cada ciclo, sin repetir', () => {
     const datasets = {
+      FP_BASICA: FP_BASICA_RAS_DATA,
       CFGM_ESTETICA: CFGM_ESTETICA_RAS_DATA,
       CFGM_PELUQUERIA: CFGM_PELUQUERIA_RAS_DATA,
       CFGS_EDUCACION_INFANTIL: CFGS_EDUCACION_INFANTIL_RAS_DATA,
@@ -107,7 +111,7 @@ describe('Catálogo de niveles: datos para el frontend', () => {
 
   it('todos los tipoNivel y tab que cargan los datos y migraciones están en el catálogo', () => {
     const datos = [
-      ...CFGM_ESTETICA_RAS_DATA, ...CFGM_PELUQUERIA_RAS_DATA, ...CFGS_EDUCACION_INFANTIL_RAS_DATA,
+      ...FP_BASICA_RAS_DATA, ...CFGM_ESTETICA_RAS_DATA, ...CFGM_PELUQUERIA_RAS_DATA, ...CFGS_EDUCACION_INFANTIL_RAS_DATA,
       ...CFGM_ATENCION_DEPENDENCIA_RAS_DATA, ...CFGM_GUIA_MEDIO_NATURAL_RAS_DATA,
       ...CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA, ...CFGS_ACONDICIONAMIENTO_FISICO_RAS_DATA,
       ...CFGS_ANIMACION_SOCIODEPORTIVA_RAS_DATA, ...CFGS_INTEGRACION_SOCIAL_RAS_DATA,

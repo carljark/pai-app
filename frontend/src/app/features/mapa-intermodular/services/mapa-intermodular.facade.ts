@@ -9,6 +9,7 @@ import {
 } from '../models/mapa-intermodular.model';
 import { MapaIntermodularService } from './mapa-intermodular.service';
 import { formatConnection } from '../utils/connection-summary';
+import { conexionDeCriterio } from '../utils/criterio-clave';
 import { MapaTab, mapaTabLabel } from '../utils/mapa-labels';
 import { NivelesService } from '../../../services/niveles.service';
 
@@ -102,26 +103,7 @@ export class MapaIntermodularFacade {
     if (!ra) return [];
     const crit = this.selectedCriterion();
     if (!crit) return ra.connections;
-
-    const targetCrit = crit.toLowerCase().trim();
-    const letterMatch =
-      targetCrit.match(/^[a-z0-9\-\s.]*?([a-z])[).\s]/) || targetCrit.match(/([a-z])/);
-    const letter = letterMatch ? letterMatch[1] : targetCrit;
-
-    const filtered = ra.connections.filter((c) => {
-      if (
-        c.criteriaKeys &&
-        (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))
-      ) {
-        return true;
-      }
-      if (c.sourceCriteria) {
-        const sc = c.sourceCriteria.toLowerCase();
-        if (sc.includes(letter)) return true;
-      }
-      return false;
-    });
-
+    const filtered = ra.connections.filter((c) => conexionDeCriterio(c, crit));
     return filtered.length > 0 ? filtered : ra.connections;
   });
 
@@ -217,20 +199,7 @@ export class MapaIntermodularFacade {
   getConnectionsCountForCriterion(critText: string): number {
     const ra = this.selectedRa();
     if (!ra || !ra.connections) return 0;
-    const targetCrit = critText.toLowerCase().trim();
-    const letterMatch =
-      targetCrit.match(/^[a-z0-9\-\s.]*?([a-z])[).\s]/) || targetCrit.match(/([a-z])/);
-    const letter = letterMatch ? letterMatch[1] : targetCrit;
-
-    return ra.connections.filter((c) => {
-      if (
-        c.criteriaKeys &&
-        (c.criteriaKeys.includes(targetCrit) || c.criteriaKeys.includes(letter))
-      )
-        return true;
-      if (c.sourceCriteria && c.sourceCriteria.toLowerCase().includes(letter)) return true;
-      return false;
-    }).length;
+    return ra.connections.filter((c) => conexionDeCriterio(c, critText)).length;
   }
 
   /** Acepta el texto o directamente el evento `input` del buscador. */

@@ -96,7 +96,8 @@ describe('MapaIntermodularViewComponent', () => {
       el.querySelectorAll('.mapa-tabs__curso') as NodeListOf<HTMLButtonElement>;
 
     expect(select.options.length).toBe(4);
-    expect(cursoBtns().length).toBe(0);
+    // FP Básica tiene un mapa por curso (tarea 250)
+    expect(cursoBtns().length).toBe(2);
 
     chooseCiclo('CFGS_EDUCACION_INFANTIL');
     expect(component.facade.activeTab()).toBe('CFGS_EDUCACION_INFANTIL');

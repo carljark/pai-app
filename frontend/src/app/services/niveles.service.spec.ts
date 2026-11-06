@@ -81,7 +81,14 @@ describe('NivelesService', () => {
         '1665',
         '1709',
       ]);
-      expect(service.modulos('FP_BASICA', '1º')).toBeNull();
+      expect(service.modulos('FP_BASICA', '2º')).toEqual([
+        '3005',
+        '3065',
+        '3063',
+        '3160',
+        '3162',
+        '3164',
+      ]);
       expect(service.modulos('CFGM_ESTETICA', '2º')).toBeNull();
       expect(service.modulos('NADA', '1º')).toBeNull();
     });
@@ -103,6 +110,7 @@ describe('NivelesService', () => {
     it('lists the map tabs of the catalog with their level and stage', () => {
       expect(service.mapaTabs().map((t) => t.tab)).toEqual([
         'FPB',
+        'FPB_2',
         'CFGM',
         'CFGM_PELUQUERIA',
         'CFGM_PELUQUERIA_2',

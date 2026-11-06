@@ -1,0 +1,385 @@
+[
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA1",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "b": {
+      "modulo": "3063",
+      "ra": "RA2",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Se atiende al cliente y se obtiene la información necesaria aplicando técnicas de comunicación durante la entrevista previa al maquillaje.",
+    "justificacion_ca": "S'atén el client i s'obté la informació necessària amb tècniques de comunicació durant l'entrevista prèvia al maquillatge.",
+    "actividades": [
+      {
+        "titulo_es": "Recepción en el salón con clienta sorpresa",
+        "titulo_ca": "Recepció al saló amb una clienta sorpresa",
+        "contexto_es": "En el salón de peluquería y estética del centro, una profesora o una alumna de otro grupo entra sin cita para pedir un maquillaje para una boda el sábado.",
+        "contexto_ca": "Al saló de perruqueria i estètica del centre, una professora o una alumna d'un altre grup hi entra sense cita per demanar un maquillatge per a un casament dissabte.",
+        "desarrollo_es": "Sentada la clienta frente al espejo, el alumnado mantiene una entrevista breve y anota los datos que necesita para el servicio (3005-1c). Cuida el saludo, el tono de voz y la escucha activa y ajusta su actitud a lo que va observando (3005-1d). Antes de pasar a la cabina le lanza preguntas tipo sobre la hora, el tipo de acto y sus gustos para saber qué debe cubrir el maquillaje (3063-2c).",
+        "desarrollo_ca": "Amb la clienta ja asseguda davant del mirall, l'alumnat fa una entrevista breu i anota les dades que necessita per al servei (3005-1c). Cuida la salutació, el to de veu i l'escolta activa i ajusta la seva actitud al que va observant (3005-1d). Abans de passar a la cabina li llança preguntes tipus sobre l'hora, el tipus d'acte i els seus gustos per saber què ha de cobrir el maquillatge (3063-2c).",
+        "evidencia_es": "Guion de entrevista con los datos recogidos y las preguntas tipo anotadas.",
+        "evidencia_ca": "Guió d'entrevista amb les dades recollides i les preguntes tipus anotades.",
+        "dua_es": "Se entrega una tarjeta con preguntas de apoyo y se admite responder por escrito si alguien se bloquea al hablar.",
+        "dua_ca": "Es lliura una targeta amb preguntes de suport i es permet respondre per escrit si algú es bloqueja en parlar.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Caso de la clienta que no sabe qué quiere",
+        "titulo_ca": "El cas de la clienta que no sap què vol",
+        "contexto_es": "Llega al salón una solicitud real de una vecina de Inca que pide 'algo bonito' para su cumpleaños sin concretar nada más.",
+        "contexto_ca": "Arriba al saló una sol·licitud real d'una veïna d'Inca que demana 'alguna cosa bonica' per al seu aniversari sense concretar res més.",
+        "desarrollo_es": "El alumnado lee el caso y subraya qué información falta para poder atender el servicio (3005-1c). Después redacta y ordena las preguntas tipo que usaría en el mostrador para descubrir la demanda real (3063-2c). Por último debate en parejas qué actitud y qué discurso encajarían con una clienta tan indecisa (3005-1d).",
+        "desarrollo_ca": "L'alumnat llegeix el cas i subratlla quina informació falta per poder atendre el servei (3005-1c). Després redacta i ordena les preguntes tipus que faria al mostrador per descobrir la demanda real (3063-2c). Finalment debat en parelles quina actitud i quin discurs encaixarien amb una clienta tan indecisa (3005-1d).",
+        "evidencia_es": "Ficha del caso con la información que falta y la lista de preguntas tipo ordenada.",
+        "evidencia_ca": "Fitxa del cas amb la informació que falta i la llista de preguntes tipus ordenada.",
+        "dua_es": "El caso se ofrece con pictogramas y vocabulario clave destacado para facilitar la comprensión.",
+        "dua_ca": "El cas s'ofereix amb pictogrames i vocabulari clau destacat per facilitar-ne la comprensió.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Bingo de la buena atención en el mostrador",
+        "titulo_ca": "Bingo de la bona atenció al mostrador",
+        "contexto_es": "Preparamos una jornada de puertas abiertas del centro y el mostrador no para de recibir visitas con peticiones muy distintas.",
+        "contexto_ca": "Preparem una jornada de portes obertes del centre i el mostrador no deixa de rebre visites amb peticions molt diverses.",
+        "desarrollo_es": "Cada pareja dispone de un cartón con retos de atención y, cuando suena la señal, atiende a la persona que llega anotando los datos que necesita (3005-1c). En cada turno debe elegir la técnica de comunicación más adecuada y justificarla en voz alta (3005-1d). Si la petición no está clara, gana el reto quien formule antes la pregunta tipo que desbloquee la demanda (3063-2c).",
+        "desarrollo_ca": "Cada parella té un cartró amb reptes d'atenció i, quan sona el senyal, atén la persona que arriba i anota les dades que li calen (3005-1c). A cada torn ha de triar la tècnica de comunicació més adequada i justificar-la en veu alta (3005-1d). Si la petició no és clara, guanya el repte qui formuli abans la pregunta tipus que desbloquegi la demanda (3063-2c).",
+        "evidencia_es": "Cartón de bingo completado con las técnicas elegidas y las preguntas ganadoras.",
+        "evidencia_ca": "Cartró de bingo completat amb les tècniques triades i les preguntes guanyadores.",
+        "dua_es": "Se permite que quien lo necesite use un guion visual con las técnicas de comunicación antes de responder.",
+        "dua_ca": "Es permet que qui ho necessiti faci servir un guió visual amb les tècniques de comunicació abans de respondre.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3063",
+      "ra": "RA3",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Se analiza el comportamiento del cliente y se adapta la actitud al observar su rostro y preguntar por su estilo personal y sus alergias.",
+    "justificacion_ca": "S'analitza el comportament del client i s'adapta l'actitud en observar la seva cara i preguntar pel seu estil personal i les seves al·lèrgies.",
+    "actividades": [
+      {
+        "titulo_es": "Observar la cara antes de decidir el maquillaje",
+        "titulo_ca": "Mirar la cara abans de decidir el maquillatge",
+        "contexto_es": "Una clienta nueva llega al salón del centro para un maquillaje de día y se muestra seria y con los brazos cruzados.",
+        "contexto_ca": "Una clienta nova arriba al saló del centre per a un maquillatge de dia i es mostra seriosa i amb els braços plegats.",
+        "desarrollo_es": "Antes de decir nada, el alumnado observa el lenguaje no verbal de la clienta y anota lo que percibe (3005-1a). Adapta después su discurso, más cercano y pausado, para rebajar la tensión del primer contacto (3005-1b). Durante la conversación examina su rostro, le pregunta por su estilo personal y comprueba si tiene alergias de contacto (3063-3c).",
+        "desarrollo_ca": "Abans de dir res, l'alumnat observa el llenguatge no verbal de la clienta i anota què percep (3005-1a). Adapta després el seu discurs, més proper i pausat, per rebaixar la tensió del primer contacte (3005-1b). Durant la conversa li mira la cara, li pregunta pel seu estil personal i comprova si té al·lèrgies de contacte (3063-3c).",
+        "evidencia_es": "Ficha de observación del cliente con sus rasgos, su estilo y las alergias anotadas.",
+        "evidencia_ca": "Fitxa d'observació del client amb els seus trets, el seu estil i les al·lèrgies anotades.",
+        "dua_es": "La ficha incluye un banco de adjetivos para describir el comportamiento y el estilo personal.",
+        "dua_ca": "La fitxa inclou un banc d'adjectius per descriure el comportament i l'estil personal.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Tres clientes, tres formas de saludar",
+        "titulo_ca": "Tres clients i tres maneres de saludar",
+        "contexto_es": "El centro organiza un taller para familiares y se apuntan personas muy distintas: una señora mayor, un joven tímido y una madre con prisa.",
+        "contexto_ca": "El centre organitza un taller per a familiars i s'hi apunten persones molt diverses: una senyora gran, un jove tímid i una mare amb pressa.",
+        "desarrollo_es": "En rincones repartidos por el aula, el alumnado analiza el comportamiento de cada perfil que le ha tocado observar (3005-1a). Después ensaya la actitud y el discurso adecuados para cada uno en un minuto de conversación (3005-1b). De cada persona debe recoger también su estilo y posibles alergias mirando su rostro y preguntando con naturalidad (3063-3c).",
+        "desarrollo_ca": "En racons repartits per l'aula, l'alumnat analitza el comportament de cada perfil que li ha tocat observar (3005-1a). Després assaja l'actitud i el discurs adequats per a cadascun en un minut de conversa (3005-1b). De cada persona ha de recollir també el seu estil i les possibles al·lèrgies mirant-li la cara i preguntant amb naturalitat (3063-3c).",
+        "evidencia_es": "Tarjeta del rincón con la actitud elegida y los datos de estilo y alergias de cada perfil.",
+        "evidencia_ca": "Targeta de racó amb l'actitud triada i les dades d'estil i al·lèrgies de cada perfil.",
+        "dua_es": "Cada rincón dispone de una chuleta con frases de inicio para quien tenga más dificultad en improvisar.",
+        "dua_ca": "Cada racó disposa d'un full d'ajuda amb frases d'inici per a qui tengui més dificultat a improvisar.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      },
+      {
+        "titulo_es": "Adaptar el discurso a cada estado de ánimo",
+        "titulo_ca": "Adaptar el discurs a cada estat d'ànim",
+        "contexto_es": "Un cliente llega enfadado porque su cita anterior se retrasó y descarga su malestar en la recepción del salón.",
+        "contexto_ca": "Un client arriba enfadat perquè la seva cita anterior es va endarrerir i descarrega el seu malestar a la recepció del saló.",
+        "desarrollo_es": "En parejas, una persona interpreta al cliente molesto y la otra analiza qué ha visto en su comportamiento antes de responder (3005-1a). Quien atiende improvisa un discurso calmado y adaptado para reconducir la situación (3005-1b). Cuando la persona se relaja, se aprovecha para mirarla y preguntar por su estilo y sus alergias (3063-3c).",
+        "desarrollo_ca": "Per parelles, una persona fa de client emprenyat i l'altra analitza què ha vist en el seu comportament abans de respondre (3005-1a). Qui atén improvisa un discurs calmat i adaptat per reconduir la situació (3005-1b). Quan la persona es relaxa, se n'aprofita per mirar-la i preguntar-li per l'estil i les al·lèrgies (3063-3c).",
+        "evidencia_es": "Dosier breve con el análisis del comportamiento y el discurso de reconducción escrito.",
+        "evidencia_ca": "Dossier breu amb l'anàlisi del comportament i el discurs de reconducció escrit.",
+        "dua_es": "Se facilita una lista de normas de cortesía para estructurar la respuesta sin improvisar del todo.",
+        "dua_ca": "Es facilita una llista de normes de cortesia per estructurar la resposta sense improvisar del tot.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA2",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "3063",
+      "ra": "RA3",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Se asesora sobre la opción más recomendable y se pide al cliente que elija mientras se selecciona el material según su piel y la posición ergonómica.",
+    "justificacion_ca": "S'assessora sobre l'opció més recomanable i es demana al client que triï mentre es selecciona el material segons la seva pell i la posició ergonòmica.",
+    "actividades": [
+      {
+        "titulo_es": "Asesorar a la clienta y dejar que elija",
+        "titulo_ca": "Assessorar la clienta i deixar que triï",
+        "contexto_es": "Una señora de Manacor quiere un maquillaje para la verbena del pueblo y duda entre un acabado natural o uno más intenso.",
+        "contexto_ca": "Una senyora de Manacor vol un maquillatge per a la revetla del poble i dubta entre un acabat natural o un de més intens.",
+        "desarrollo_es": "Delante del espejo, el alumnado explica a la clienta las dos opciones con sus características y acabados previsibles (3005-2g). Le pide que comunique en voz alta cuál elige antes de empezar (3005-2h). Con la decisión tomada, selecciona los cosméticos según su tono de piel, el color de ojos y la ropa (3063-3a) y le indica cómo colocarse en la silla para trabajar cómodas las dos (3063-3b).",
+        "desarrollo_ca": "Davant del mirall, l'alumnat explica a la clienta les dues opcions amb les seves característiques i acabats previsibles (3005-2g). Li demana que digui en veu alta quina tria abans de començar (3005-2h). Amb la decisió presa, selecciona els cosmètics segons el seu to de pell, el color dels ulls i la roba (3063-3a) i li indica com col·locar-se a la cadira per treballar còmodes totes dues (3063-3b).",
+        "evidencia_es": "Ficha de asesoramiento con las opciones presentadas y la elección firmada por la clienta.",
+        "evidencia_ca": "Fitxa d'assessorament amb les opcions presentades i l'elecció signada per la clienta.",
+        "dua_es": "Se acompaña cada opción con una foto de acabado para apoyar la comprensión de la propuesta.",
+        "dua_ca": "Cada opció va acompanyada d'una foto d'acabat per donar suport a la comprensió de la proposta.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Menú de maquillajes para elegir con criterio",
+        "titulo_ca": "Menú de maquillatges per triar amb criteri",
+        "contexto_es": "El salón del centro quiere renovar su carta de servicios y pide al grupo que diseñe un menú de maquillajes para distintos tipos de clientela.",
+        "contexto_ca": "El saló del centre vol renovar la seva carta de serveis i demana al grup que dissenyi un menú de maquillatges per a diferents tipus de clientela.",
+        "desarrollo_es": "Con la técnica del design thinking, el grupo investiga en el aula qué busca cada perfil de clienta y define opciones claras y bien descritas (3005-2g). Prepara una plantilla para que la clienta marque su elección (3005-2h). Además asocia a cada opción los cosméticos y el material que necesitará según piel, ojos y ropa (3063-3a) y anota la postura correcta para aplicarlo (3063-3b).",
+        "desarrollo_ca": "Amb la tècnica del design thinking, el grup investiga a l'aula què busca cada perfil de clienta i defineix opcions clares i ben descrites (3005-2g). Prepara una plantilla perquè la clienta marqui la seva elecció (3005-2h). A més, associa a cada opció els cosmètics i el material que caldrà segons la pell, els ulls i la roba (3063-3a) i anota la postura correcta per aplicar-los (3063-3b).",
+        "evidencia_es": "Menú ilustrado de maquillajes con la plantilla de elección y el material asociado.",
+        "evidencia_ca": "Menú il·lustrat de maquillatges amb la plantilla d'elecció i el material associat.",
+        "dua_es": "El menú admite texto e imágenes para que quien tenga dificultades de escritura pueda apoyarse en dibujos.",
+        "dua_ca": "El menú admet text i imatges perquè qui tengui dificultats d'escriptura pugui recolzar-se en dibuixos.",
+        "metodologia_es": "Pensamiento de diseño.",
+        "metodologia_ca": "Pensament de disseny."
+      },
+      {
+        "titulo_es": "Turnos de asesoría y cabina en pareja",
+        "titulo_ca": "Torns d'assessoria i cabina en parella",
+        "contexto_es": "Para el día de la madre, el centro monta un servicio real de maquillaje gratuito y cada dos alumnos atienden a una clienta.",
+        "contexto_ca": "Per al dia de la mare, el centre munta un servei real de maquillatge gratuït i cada dos alumnes atenen una clienta.",
+        "desarrollo_es": "Una persona del equipo presenta a la clienta las alternativas del servicio con sus acabados (3005-2g) y espera a que confirme la elegida (3005-2h). La otra prepara el material según su tipo de piel y su tono (3063-3a) y coloca a la clienta y a sí misma en la postura correcta (3063-3b). Después intercambian los papeles con una segunda clienta.",
+        "desarrollo_ca": "Una persona de l'equip presenta a la clienta les alternatives del servei amb els seus acabats (3005-2g) i espera que confirmi la triada (3005-2h). L'altra prepara el material segons el seu tipus de pell i el seu to (3063-3a) i col·loca la clienta i ella mateixa en la postura correcta (3063-3b). Després intercanvien els papers amb una segona clienta.",
+        "evidencia_es": "Registro de los dos turnos con la opción elegida, el material preparado y la postura indicada.",
+        "evidencia_ca": "Registre dels dos torns amb l'opció triada, el material preparat i la postura indicada.",
+        "dua_es": "Los equipos se forman con roles definidos y una lista de comprobación para no olvidar ningún paso.",
+        "dua_ca": "Els equips es formen amb rols definits i una llista de comprovació per no oblidar cap pas.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "b": {
+      "modulo": "3063",
+      "ra": "RA1",
+      "criterios": [
+        "f"
+      ]
+    },
+    "justificacion_es": "Se analizan las tipologías de público y se identifican los útiles y productos de maquillaje social y de fantasía que encajan con cada tipo de cliente.",
+    "justificacion_ca": "S'analitzen les tipologies de públic i s'identifiquen els estris i productes de maquillatge social i de fantasia que encaixen amb cada tipus de client.",
+    "actividades": [
+      {
+        "titulo_es": "Tres puertas para clasificar a quien llama",
+        "titulo_ca": "Tres portes per classificar qui truca",
+        "contexto_es": "La puerta del salón del centro no deja de moverse: entran clientas, un proveedor con productos nuevos y vecinos que solo preguntan el horario.",
+        "contexto_ca": "La porta del saló del centre no deixa de moure's: hi entren clientes, un proveïdor amb productes nous i veïns que només pregunten l'horari.",
+        "desarrollo_es": "Con un juego de tarjetas, el alumnado analiza las tipologías de público que aparecen en el día a día del salón (3005-2a). Después clasifica cada tarjeta y coloca en su puerta a quien es cliente, a quien es proveedor y a quien es público general (3005-2b). De cada perfil deduce además qué útiles y productos de maquillaje social o de fantasía podrían interesarle (3063-1f).",
+        "desarrollo_ca": "Amb un joc de targetes, l'alumnat analitza les tipologies de públic que apareixen en el dia a dia del saló (3005-2a). Després classifica cada targeta i posa a la seva porta qui és client, qui és proveïdor i qui és públic general (3005-2b). De cada perfil dedueix també quins estris i productes de maquillatge social o de fantasia li podrien interessar (3063-1f).",
+        "evidencia_es": "Tablero de las tres puertas con las tarjetas clasificadas y los productos anotados.",
+        "evidencia_ca": "Tauler de les tres portes amb les targetes classificades i els productes anotats.",
+        "dua_es": "Las tarjetas llevan una imagen y un color por categoría para apoyar la clasificación.",
+        "dua_ca": "Les targetes duen una imatge i un color per categoria per donar suport a la classificació.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      },
+      {
+        "titulo_es": "Caso del proveedor que trae novedades",
+        "titulo_ca": "El cas del proveïdor que porta novetats",
+        "contexto_es": "Un comercial visita el salón del centro para presentar una nueva línea de maquillaje de fantasía y coincide con la llegada de una clienta.",
+        "contexto_ca": "Un comercial visita el saló del centre per presentar una nova línia de maquillatge de fantasia i coincideix amb l'arribada d'una clienta.",
+        "desarrollo_es": "El alumnado lee la situación y distingue en ella quién es cliente, quién es proveedor y quién público general (3005-2b). A continuación estudia las características de los distintos tipos de público que se cruzan en el salón (3005-2a). Para terminar, revisa el catálogo del comercial y localiza los útiles y productos de maquillaje social y de fantasía que podrían incorporarse (3063-1f).",
+        "desarrollo_ca": "L'alumnat llegeix la situació i distingeix qui és client, qui és proveïdor i qui és públic general (3005-2b). Tot seguit estudia les característiques dels diferents tipus de públic que es creuen al saló (3005-2a). Per acabar, revisa el catàleg del comercial i localitza els estris i productes de maquillatge social i de fantasia que podrien incorporar-se (3063-1f).",
+        "evidencia_es": "Informe del caso con los roles identificados y la selección de productos nuevos.",
+        "evidencia_ca": "Informe del cas amb els rols identificats i la selecció de productes nous.",
+        "dua_es": "El catálogo se trabaja por parejas lingüísticas para que nadie se pierda entre tanta información.",
+        "dua_ca": "El catàleg es treballa per parelles lingüístiques perquè ningú no es perdi entre tanta informació.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Investigación de públicos y productos estrella",
+        "titulo_ca": "Recerca de públics i productes estrella",
+        "contexto_es": "El salón del centro prepara una campaña de maquillaje para el Día de la Mujer y necesita saber a qué públicos dirigirse.",
+        "contexto_ca": "El saló del centre prepara una campanya de maquillatge per al Dia de la Dona i necessita saber a quins públics adreçar-se.",
+        "desarrollo_es": "En grupos, el alumnado investiga en las redes y la publicidad del sector qué perfiles de público existen y qué buscan (3005-2a). Con los datos recogidos, separa a los clientes de los proveedores y del público general para orientar la campaña (3005-2b). Después elabora una lista de los útiles y productos de maquillaje social y de fantasía imprescindibles para atenderla (3063-1f).",
+        "desarrollo_ca": "En grups, l'alumnat investiga a les xarxes i a la publicitat del sector quins perfils de públic hi ha i què cerquen (3005-2a). Amb les dades recollides, separa els clients dels proveïdors i del públic general per orientar la campanya (3005-2b). Després elabora una llista dels estris i productes de maquillatge social i de fantasia imprescindibles per atendre-la (3063-1f).",
+        "evidencia_es": "Mural de la campaña con los públicos definidos y la lista de productos destacados.",
+        "evidencia_ca": "Mural de la campanya amb els públics definits i la llista de productes destacats.",
+        "dua_es": "Se ofrecen fuentes ya seleccionadas y una plantilla de mural para centrar la búsqueda.",
+        "dua_ca": "S'ofereixen fonts ja seleccionades i una plantilla de mural per centrar la recerca.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA3",
+      "criterios": [
+        "d",
+        "f",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "3063",
+      "ra": "RA4",
+      "criterios": [
+        "j",
+        "n"
+      ]
+    },
+    "justificacion_es": "Al entregar el maquillaje de fantasía se identifica el resultado, se pide la conformidad del cliente y se mantiene el respeto para fidelizarlo.",
+    "justificacion_ca": "En lliurar el maquillatge de fantasia s'identifica el resultat, es demana la conformitat del client i es manté el respecte per fidelitzar-lo.",
+    "actividades": [
+      {
+        "titulo_es": "Cierre del maquillaje fantástico con encuesta",
+        "titulo_ca": "Tancament del maquillatge fantàstic amb enquesta",
+        "contexto_es": "Durante la fiesta de disfraces del centro, el alumnado maquilla a varios participantes de fantasía facial y debe despedirlos.",
+        "contexto_ca": "Durant la festa de disfresses del centre, l'alumnat maquilla diversos participants de fantasia facial i els ha d'acomiadar.",
+        "desarrollo_es": "Al acabar cada maquillaje, el alumnado repasa con la persona las fases del trabajo y cómo ha quedado para detectar algún fallo (3063-4j). Le pregunta de forma clara si está satisfecha con el resultado (3063-4n). Recoge su conformidad con el acabado y anota las objeciones que aparezcan (3005-3d). Escucha las quejas con respeto (3005-3f) y cuida el trato para que la persona quiera volver (3005-3g).",
+        "desarrollo_ca": "En acabar cada maquillatge, l'alumnat repassa amb la persona les fases de la feina i com ha quedat per detectar alguna errada (3063-4j). Li demana ben clar si està satisfeta amb el resultat (3063-4n). Recull la seva conformitat amb l'acabat i anota les objeccions que apareguin (3005-3d). Escolta les queixes amb respecte (3005-3f) i cuida el tracte perquè la persona vulgui tornar (3005-3g).",
+        "evidencia_es": "Encuesta de satisfacción rellenada y registro de las objeciones de cada participante.",
+        "evidencia_ca": "Enquesta de satisfacció emplenada i registre de les objeccions de cada participant.",
+        "dua_es": "La encuesta se ofrece en versión con caras y opciones de respuesta cortas y claras.",
+        "dua_ca": "L'enquesta s'ofereix en versió amb cares i opcions de resposta curtes i clares.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      },
+      {
+        "titulo_es": "Debate sobre cómo fidelizar tras la fantasía",
+        "titulo_ca": "Debat sobre com fidelitzar després de la fantasia",
+        "contexto_es": "En el salón del centro, una clienta de fantasía sale del servicio sin apenas hablar y el grupo se pregunta qué pudo fallar.",
+        "contexto_ca": "Al saló del centre, una clienta de fantasia surt del servei sense gairebé parlar i el grup es demana què va poder fallar.",
+        "desarrollo_es": "El grupo se divide en dos y debate qué fases del proceso de maquillaje conviene repasar con la clienta y cómo hacerlo (3063-4j). Una parte defiende preguntar por su grado de satisfacción (3063-4n) y la otra propone cómo recoger su conformidad con el acabado (3005-3d). Al cerrar, acuerdan frases para mantener el respeto (3005-3f) y gestos que inviten a volver (3005-3g).",
+        "desarrollo_ca": "El grup es divideix en dos i debat quines fases del procés de maquillatge convé repassar amb la clienta i com fer-ho (3063-4j). Una part defensa preguntar-li pel seu grau de satisfacció (3063-4n) i l'altra proposa com recollir la seva conformitat amb l'acabat (3005-3d). En tancar, acorden frases per mantenir el respecte (3005-3f) i gestos que convidin a tornar (3005-3g).",
+        "evidencia_es": "Conclusiones del debate con las frases acordadas para despedir y fidelizar.",
+        "evidencia_ca": "Conclusions del debat amb les frases acordades per acomiadar i fidelitzar.",
+        "dua_es": "Se dan turnos de palabra con tarjetas y un moderador rota para que todas las voces participen.",
+        "dua_ca": "Es donen torns de paraula amb targetes i un moderador va rotant perquè totes les veus participin.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Escaparate de fantasía con valoración final",
+        "titulo_ca": "Aparador de fantasia amb valoració final",
+        "contexto_es": "El centro participa en una muestra de FP y monta un escaparate donde se maquilla de fantasía a voluntarios del público.",
+        "contexto_ca": "El centre participa en una mostra de FP i munta un aparador on es maquilla de fantasia voluntaris del públic.",
+        "desarrollo_es": "Antes de cada pase, el alumnado explica a la persona voluntaria las fases del maquillaje y cómo comprobará el resultado (3063-4j). Al terminar, le pide que valore su grado de satisfacción (3063-4n) y recoge su conformidad o sus objeciones (3005-3d). Durante todo el pase mantiene un trato respetuoso (3005-3f) y se despide invitando a repetir en el salón (3005-3g).",
+        "desarrollo_ca": "Abans de cada passada, l'alumnat explica a la persona voluntària les fases del maquillatge i com comprovarà el resultat (3063-4j). En acabar, li demana que valori el seu grau de satisfacció (3063-4n) i recull la seva conformitat o les seves objeccions (3005-3d). Durant tota la passada manté un tracte respectuós (3005-3f) i s'acomiada convidant a repetir al saló (3005-3g).",
+        "evidencia_es": "Panel de la muestra con las fotos de los pases y las valoraciones de los voluntarios.",
+        "evidencia_ca": "Panell de la mostra amb les fotos de les passades i les valoracions dels voluntaris.",
+        "dua_es": "Cada pase se cronometra y se apoya con una lista visual de pasos para reducir los nervios.",
+        "dua_ca": "Cada passada es cronometra i es recolza amb una llista visual de passos per reduir els nervis.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3005",
+      "ra": "RA4",
+      "criterios": [
+        "c",
+        "d",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "3063",
+      "ra": "RA2",
+      "criterios": [
+        "k",
+        "l"
+      ]
+    },
+    "justificacion_es": "Se informa y se recogen los formularios, incluida la hoja de reclamación, y se anotan en la ficha técnica los cosméticos y las medidas de seguridad aplicadas.",
+    "justificacion_ca": "S'informa i es recullen els formularis, inclòs el full de reclamació, i s'anoten a la fitxa tècnica els cosmètics i les mesures de seguretat aplicades.",
+    "actividades": [
+      {
+        "titulo_es": "Atender una reclamación con hoja oficial",
+        "titulo_ca": "Atendre una reclamació amb full oficial",
+        "contexto_es": "Una clienta de Palma sale del salón del centro con el maquillaje poco uniforme y pide explicaciones en recepción.",
+        "contexto_ca": "Una clienta de Palma surt del saló del centre amb el maquillatge poc uniforme i demana explicacions a la recepció.",
+        "desarrollo_es": "El alumnado entrega a la clienta la información y los documentos que necesita para poner una reclamación por escrito (3005-4c). Recoge después los formularios que ella rellena (3005-4d) y cumplimenta la hoja de reclamación con los datos del servicio (3005-4e). De forma paralela, revisa la ficha técnica para comprobar los cosméticos aplicados (3063-2k) y confirma que se siguieron las medidas de seguridad (3063-2l).",
+        "desarrollo_ca": "L'alumnat lliura a la clienta la informació i els documents que necessita per posar una reclamació per escrit (3005-4c). Recull després els formularis que ella emplena (3005-4d) i completa el full de reclamació amb les dades del servei (3005-4e). Alhora, revisa la fitxa tècnica per comprovar els cosmètics aplicats (3063-2k) i confirma que es van seguir les mesures de seguretat (3063-2l).",
+        "evidencia_es": "Hoja de reclamación cumplimentada y ficha técnica revisada del servicio.",
+        "evidencia_ca": "Full de reclamació emplenat i fitxa tècnica revisada del servei.",
+        "dua_es": "Se facilita un modelo de hoja de reclamación con los campos ya numerados y un ejemplo resuelto.",
+        "dua_ca": "Es facilita un model de full de reclamació amb els camps ja numerats i un exemple resolt.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Caso del maquillaje que provocó una alergia",
+        "titulo_ca": "El cas del maquillatge que va provocar una al·lèrgia",
+        "contexto_es": "Un cliente de Eivissa escribe al salón del centro explicando que días después del servicio tuvo una reacción en la piel.",
+        "contexto_ca": "Un client d'Eivissa escriu al saló del centre explicant que dies després del servei va tenir una reacció a la pell.",
+        "desarrollo_es": "El alumnado reconstruye lo ocurrido leyendo la ficha técnica y comprobando qué cosméticos se aplicaron (3063-2k). A continuación valora si se respetaron las medidas de seguridad durante la preparación de la piel (3063-2l). Después decide qué información y documentos debe enviar al cliente para que pueda reclamar por escrito (3005-4c). Recoge los formularios que él devuelve por correo (3005-4d) y cumplimenta la hoja de reclamación con los datos del caso (3005-4e).",
+        "desarrollo_ca": "L'alumnat reconstrueix el que va passar llegint la fitxa tècnica i comprovant quins cosmètics es van aplicar (3063-2k). Tot seguit valora si es van respectar les mesures de seguretat durant la preparació de la pell (3063-2l). Després decideix quina informació i quins documents ha d'enviar al client perquè pugui reclamar per escrit (3005-4c). Recull els formularis que ell retorna per correu (3005-4d) i completa el full de reclamació amb les dades del cas (3005-4e).",
+        "evidencia_es": "Informe del caso con la ficha técnica analizada y la reclamación redactada.",
+        "evidencia_ca": "Informe del cas amb la fitxa tècnica analitzada i la reclamació redactada.",
+        "dua_es": "El caso se reparte con preguntas guía al margen para orientar la lectura por pasos.",
+        "dua_ca": "El cas es reparteix amb preguntes guia al marge per orientar la lectura per passos.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de reclamaciones en el mostrador",
+        "titulo_ca": "Joc de reclamacions al mostrador",
+        "contexto_es": "El salón del centro abre un buzón de sugerencias y aprovecha para entrenar cómo atender reclamaciones reales en el mostrador.",
+        "contexto_ca": "El saló del centre obre una bústia de suggeriments i n'aprofita per entrenar com atendre reclamacions reals al mostrador.",
+        "desarrollo_es": "Por equipos, el alumnado atiende casos de reclamación y gana puntos si entrega correctamente la documentación necesaria (3005-4c). Debe recoger los formularios que se le entregan (3005-4d) y cerrar cada caso con una hoja de reclamación bien cumplimentada (3005-4e). Para resolver, cada equipo consulta la ficha técnica del servicio (3063-2k) y comprueba las medidas de seguridad aplicadas (3063-2l).",
+        "desarrollo_ca": "Per equips, l'alumnat atén casos de reclamació i guanya punts si lliura correctament la documentació necessària (3005-4c). Ha de recollir els formularis que se li entreguen (3005-4d) i tancar cada cas amb un full de reclamació ben emplenat (3005-4e). Per resoldre, cada equip consulta la fitxa tècnica del servei (3063-2k) i comprova les mesures de seguretat aplicades (3063-2l).",
+        "evidencia_es": "Tabla de puntuación de los equipos con los expedientes resueltos.",
+        "evidencia_ca": "Taula de puntuació dels equips amb els expedients resolts.",
+        "dua_es": "Cada caso incluye un modelo de expediente con apartados fijos que se puede seguir paso a paso.",
+        "dua_ca": "Cada cas inclou un model d'expedient amb apartats fixos que es pot seguir pas a pas.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  }
+]

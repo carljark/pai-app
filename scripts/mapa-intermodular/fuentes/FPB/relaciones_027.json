@@ -1,0 +1,384 @@
+[
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "3061",
+      "ra": "RA2",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "La limpieza de la zona y la prueba de sensibilidad se apoyan en el conocimiento de la estructura de la uña y de sus alteraciones.",
+    "justificacion_ca": "La neteja de la zona i la prova de sensibilitat es basen en el coneixement de l'estructura de l'ungla i de les seves alteracions.",
+    "actividades": [
+      {
+        "titulo_es": "Prueba de sensibilidad antes de decolorar el bigote",
+        "titulo_ca": "Prova de sensibilitat abans de decolorar el bigoti",
+        "contexto_es": "Una clienta del salón de Inca pide decolorarse el bigote y comenta que se le rompen las uñas con facilidad.",
+        "contexto_ca": "Una clienta del saló d'Inca vol decolorar-se el bigoti i comenta que se li rompen les ungles amb facilitat.",
+        "desarrollo_es": "Con el caso delante, el grupo repasa el protocolo del servicio y limpia y desinfecta la zona antes de tocar nada (3062-4e). Después aplica unas gotas de decolorante en la cara interna del brazo y espera el tiempo indicado para ver la reacción (3062-4f). En la misma ficha, dibuja las partes de una uña y las señala con su nombre (3061-2a) y anota las alteraciones que la clienta presenta en manos y pies (3061-2b).",
+        "desarrollo_ca": "Amb el cas davant, el grup repassa el protocol del servei i neteja i desinfecta la zona abans de tocar res (3062-4e). Després aplica unes gotes de decolorant a la cara interna del braç i espera el temps indicat per veure'n la reacció (3062-4f). A la mateixa fitxa, dibuixa les parts d'una ungla i les assenyala amb el nom corresponent (3061-2a) i anota les alteracions que la clienta presenta a mans i peus (3061-2b).",
+        "evidencia_es": "Ficha de caso con el protocolo de limpieza, la prueba de sensibilidad y el esquema de la uña.",
+        "evidencia_ca": "Fitxa de cas amb el protocol de neteja, la prova de sensibilitat i l'esquema de l'ungla.",
+        "dua_es": "Ficha con pictogramas de los pasos y el esquema de la uña ya perfilado para quien lo necesite.",
+        "dua_ca": "Fitxa amb pictogrames dels passos i l'esquema de l'ungla ja perfilat per a qui el necessiti.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Rincones de diagnóstico de vello y uñas en parejas",
+        "titulo_ca": "Racons de diagnòstic de borrissol i ungles per parelles",
+        "contexto_es": "El aula taller de Palma se organiza en cuatro rincones para revisar los protocolos antes de un servicio real de decoloración de brazos.",
+        "contexto_ca": "L'aula taller de Palma s'organitza en quatre racons per repassar els protocols abans d'un servei real de decoloració de braços.",
+        "desarrollo_es": "Cada pareja pasa por el rincón de preparación, donde deja la zona limpia y desinfectada con el material de un solo uso (3062-4e). En el rincón de seguridad prepara la prueba de sensibilidad y registra la hora y el resultado en la ficha (3062-4f). Los otros dos rincones sirven para repasar la estructura de la uña con una lupa (3061-2a) y para fotografiar y clasificar alteraciones de las uñas de manos y pies (3061-2b).",
+        "desarrollo_ca": "Cada parella passa pel racó de preparació, on deixa la zona neta i desinfectada amb el material d'un sol ús (3062-4e). Al racó de seguretat prepara la prova de sensibilitat i registra l'hora i el resultat a la fitxa (3062-4f). Els altres dos racons serveixen per repassar l'estructura de l'ungla amb una lupa (3061-2a) i per fotografiar i classificar alteracions de les ungles de mans i peus (3061-2b).",
+        "evidencia_es": "Cuaderno de rincones con las cuatro pruebas selladas por la pareja.",
+        "evidencia_ca": "Quadern de racons amb les quatre proves segellades per la parella.",
+        "dua_es": "Cada rincón lleva una tarjeta con el paso a paso y el tiempo máximo para no perderse.",
+        "dua_ca": "Cada racó duu una targeta amb el pas a pas i el temps màxim per no perdre's.",
+        "metodologia_es": "Rincones de aprendizaje.",
+        "metodologia_ca": "Racons d'aprenentatge."
+      },
+      {
+        "titulo_es": "Juego de rol con una invitada de puertas abiertas",
+        "titulo_ca": "Joc de rol amb una convidada de portes obertes",
+        "contexto_es": "Un centro de estética de Ibiza abre una mañana de puertas abiertas con servicios gratuitos para el profesorado.",
+        "contexto_ca": "Un centre d'estètica d'Eivissa obre un matí de portes obertes amb serveis gratuïts per al professorat.",
+        "desarrollo_es": "Quien hace de profesional recibe a la persona invitada, le explica lo que va a notar y desinfecta la zona delante de ella para dar confianza (3062-4e). A continuación comenta cómo hará la prueba de sensibilidad y qué haría si apareciera una reacción (3062-4f). Mientras tanto, la persona que observa dibuja en la ficha la estructura de la uña explicada (3061-2a) y señala en la mano de la invitada las alteraciones que ve (3061-2b).",
+        "desarrollo_ca": "Qui fa de professional rep la persona convidada, li explica què notarà i desinfecta la zona davant d'ella per donar confiança (3062-4e). Tot seguit comenta com farà la prova de sensibilitat i què faria si sortís una reacció (3062-4f). Mentrestant, la persona que observa dibuixa a la fitxa l'estructura de l'ungla explicada (3061-2a) i assenyala a la mà de la convidada les alteracions que veu (3061-2b).",
+        "evidencia_es": "Grabación corta del rol y ficha completada por la persona que observa.",
+        "evidencia_ca": "Enregistrament curt del rol i fitxa completada per la persona que observa.",
+        "dua_es": "Guion con las frases clave impresas para quien tenga más dificultad para improvisar.",
+        "dua_ca": "Guió amb les frases clau impreses per a qui tengui més dificultat per improvisar.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA4",
+      "criterios": [
+        "l"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE5",
+      "criterios": [
+        "5.4"
+      ]
+    },
+    "justificacion_es": "Preguntar por el resultado y la atención recibida se convierte en una interacción oral formal con el cliente al cerrar el servicio.",
+    "justificacion_ca": "Preguntar pel resultat i l'atenció rebuda es converteix en una interacció oral formal amb el client en tancar el servei.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevista final tras la decoloración del vello",
+        "titulo_ca": "Entrevista final després de la decoloració del borrissol",
+        "contexto_es": "Al acabar la sesión de decoloración en el taller del centro, cada cliente valora el servicio recibido.",
+        "contexto_ca": "En acabar la sessió de decoloració a l'aula taller del centre, cada client valora el servei rebut.",
+        "desarrollo_es": "Cada pareja prepara un guion corto de preguntas tipo sobre el resultado del servicio y sobre la atención personal recibida (3062-4l). Después lo pone en práctica con la persona que ha hecho de cliente, manteniendo escucha activa y turnos de palabra (3161-5.4). La conversación se cierra agradeciendo la respuesta y anotando por escrito lo que se puede mejorar.",
+        "desarrollo_ca": "Cada parella prepara un guió curt de preguntes tipus sobre el resultat del servei i sobre l'atenció personal rebuda (3062-4l). Després el posa en pràctica amb la persona que ha fet de client, mantenint escolta activa i torns de paraula (3161-5.4). La conversa es tanca agraint la resposta i anotant per escrit què es pot millorar.",
+        "evidencia_es": "Guion de preguntas y registro escrito de las respuestas de tres clientes.",
+        "evidencia_ca": "Guió de preguntes i registre escrit de les respostes de tres clients.",
+        "dua_es": "Preguntas impresas en tarjetas para escogerlas y ordenarlas antes de hablar.",
+        "dua_ca": "Preguntes impreses en targetes per triar-les i ordenar-les abans de parlar.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Debate sobre qué preguntar al cliente",
+        "titulo_ca": "Debat sobre què preguntar al client",
+        "contexto_es": "Una encuesta anónima del centro revela que el alumnado no se atreve a preguntar por el resultado a las personas adultas.",
+        "contexto_ca": "Una enquesta anònima del centre revela que l'alumnat no s'atreveix a preguntar pel resultat a les persones adultes.",
+        "desarrollo_es": "La clase se divide en dos grupos y debate sobre las preguntas tipo que sirven para conocer el grado de satisfacción con el resultado y con el trato recibido (3062-4l). Cada intervención debe respetar el turno, reformular lo dicho por la otra parte y usar fórmulas de cortesía (3161-5.4). El grupo cierra el debate con una lista común de seis preguntas.",
+        "desarrollo_ca": "La classe es divideix en dos grups i debat sobre les preguntes tipus que serveixen per conèixer el grau de satisfacció amb el resultat i amb el tracte rebut (3062-4l). Cada intervenció ha de respectar el torn, reformular el que ha dit l'altra part i fer servir fórmules de cortesia (3161-5.4). El grup tanca el debat amb una llista comuna de sis preguntes.",
+        "evidencia_es": "Lista consensuada de preguntas y acta con los acuerdos del debate.",
+        "evidencia_ca": "Llista consensuada de preguntes i acta amb els acords del debat.",
+        "dua_es": "Moderador rotatorio con una tarjeta de normas para quien le cueste esperar el turno.",
+        "dua_ca": "Moderador rotatori amb una targeta de normes per a qui li costi esperar el torn.",
+        "metodologia_es": "Debate guiado.",
+        "metodologia_ca": "Debat guiat."
+      },
+      {
+        "titulo_es": "Encuesta de salida grabada en el mostrador",
+        "titulo_ca": "Enquesta de sortida enregistrada al taulell",
+        "contexto_es": "El salón escuela de Mahón atiende a familiares y vecinos en su jornada de puertas abiertas.",
+        "contexto_ca": "El saló escola de Maó atén familiars i veïnats a la seva jornada de portes obertes.",
+        "desarrollo_es": "Antes de despedir a la persona invitada, cada alumna o alumno formula dos preguntas tipo sobre cómo ha quedado el servicio y cómo se ha sentido atendida (3062-4l). La conversación se graba en audio para revisar después si se ha escuchado con atención, si se han respetado los turnos y si el trato ha sido cortés (3161-5.4). En clase se escuchan los audios y se anotan tres mejoras concretas.",
+        "desarrollo_ca": "Abans d'acomiadar la persona convidada, cada alumna o alumne formula dues preguntes tipus sobre com ha quedat el servei i com s'ha sentit atesa (3062-4l). La conversa s'enregistra en àudio per revisar després si s'ha escoltat amb atenció, si s'han respectat els torns i si el tracte ha estat cortès (3161-5.4). A classe s'escolten els àudios i s'anoten tres millores concretes.",
+        "evidencia_es": "Audio de la despedida y hoja con las tres mejoras anotadas tras la escucha.",
+        "evidencia_ca": "Àudio del comiat i full amb les tres millores anotades després de l'escolta.",
+        "dua_es": "Se permite ensayar la despedida antes con una compañera o compañero de confianza.",
+        "dua_ca": "Es permet assajar el comiat abans amb una companya o company de confiança.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA4",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE1",
+      "criterios": [
+        "1.1"
+      ]
+    },
+    "justificacion_es": "El grosor del producto y los tiempos de exposición se explican por las reacciones químicas del decolorante sobre el vello y la piel.",
+    "justificacion_ca": "El gruix del producte i els temps d'exposició s'expliquen per les reaccions químiques del decolorant sobre el pèl i la pell.",
+    "actividades": [
+      {
+        "titulo_es": "Mechones de lana bajo la lupa científica",
+        "titulo_ca": "Metxes de llana sota la lupa científica",
+        "contexto_es": "El laboratorio del centro se convierte en un pequeño taller científico para estudiar cómo actúa un decolorante sobre el vello.",
+        "contexto_ca": "El laboratori del centre es converteix en un petit taller científic per estudiar com actua un decolorant sobre el borrissol.",
+        "desarrollo_es": "Con mechones de lana teñida, cada grupo aplica la mezcla con pincel, cuidando el grosor y evitando goteos sobre la mesa (3062-4g). Durante la espera anotan el minuto exacto en que empieza el cambio de color y retiran la pasta antes de que la fibra se estropee (3062-4h). Para terminar, explican lo ocurrido con la palabra oxidación y con la idea de que el producto rompe los pigmentos del pelo (3163-1.1).",
+        "desarrollo_ca": "Amb metxes de llana tenyida, cada grup aplica la barreja amb pinzell, cuidant el gruix i evitant degotejos sobre la taula (3062-4g). Durant l'espera anoten el minut exacte en què comença el canvi de color i retiren la pasta abans que la fibra es faci malbé (3062-4h). Per acabar, expliquen el que ha passat amb la paraula oxidació i amb la idea que el producte romp els pigments del pèl (3163-1.1).",
+        "evidencia_es": "Tabla de resultados con el grosor, el tiempo y la explicación científica del cambio de color.",
+        "evidencia_ca": "Taula de resultats amb el gruix, el temps i l'explicació científica del canvi de color.",
+        "dua_es": "Pinceles de dos tamaños y plantilla con la cantidad de mezcla ya medida.",
+        "dua_ca": "Pinzells de dues mides i plantilla amb la quantitat de barreja ja mesurada.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Ficha técnica del decolorante con reloj en mano",
+        "titulo_ca": "Fitxa tècnica del decolorant amb rellotge a la mà",
+        "contexto_es": "Una marca de cosméticos pide al alumnado una ficha explicativa para las personas que usan el producto por primera vez.",
+        "contexto_ca": "Una marca de cosmètics demana a l'alumnat una fitxa explicativa per a les persones que fan servir el producte per primera vegada.",
+        "desarrollo_es": "Cada grupo extiende la pasta en placas de piel sintética siguiendo las indicaciones de grosor y sin que gotee (3062-4g). Mientras corre el cronómetro, comprueban cada dos minutos el aspecto de la zona y apuntan cuándo conviene retirar los restos (3062-4h). La ficha acaba con un apartado que explica por qué un tiempo excesivo irrita la piel, con leyes y principios científicos sencillos (3163-1.1).",
+        "desarrollo_ca": "Cada grup estén la pasta en plaques de pell sintètica seguint les indicacions de gruix i sense que degoti (3062-4g). Mentre corre el cronòmetre, comproven cada dos minuts l'aspecte de la zona i apunten quan convé retirar les restes (3062-4h). La fitxa acaba amb un apartat que explica per què un temps excessiu irrita la pell, amb lleis i principis científics senzills (3163-1.1).",
+        "evidencia_es": "Ficha técnica ilustrada con los tiempos seguros y su explicación.",
+        "evidencia_ca": "Fitxa tècnica il·lustrada amb els temps segurs i la seva explicació.",
+        "dua_es": "Temporizador con alarma y texto con las ideas científicas clave ya subrayadas.",
+        "dua_ca": "Temporitzador amb alarma i text amb les idees científiques clau ja subratllades.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Explicar la química del vello a otro curso",
+        "titulo_ca": "Explicar la química del pèl a un altre curs",
+        "contexto_es": "El alumnado de primero visita el taller para conocer los servicios de belleza antes de elegir su itinerario.",
+        "contexto_ca": "L'alumnat de primer visita el taller per conèixer els serveis de bellesa abans de triar el seu itinerari.",
+        "desarrollo_es": "Cada pareja demuestra a las visitantes cómo se extiende el producto con un grosor uniforme y sin goteos sobre un mechón de práctica (3062-4g). Después explican con un reloj cómo controlan el tiempo y cómo retiran los restos sin dañar la piel (3062-4h). La demostración acaba con una explicación sencilla de la reacción química que cambia el color del vello (3163-1.1).",
+        "desarrollo_ca": "Cada parella demostra a les visitants com s'estén el producte amb un gruix uniforme i sense degotejos sobre una metxa de pràctica (3062-4g). Després expliquen amb un rellotge com controlen el temps i com retiren les restes sense fer malbé la pell (3062-4h). La demostració acaba amb una explicació senzilla de la reacció química que canvia el color del borrissol (3163-1.1).",
+        "evidencia_es": "Póster de la demostración con el dibujo de la reacción y los tiempos de trabajo.",
+        "evidencia_ca": "Pòster de la demostració amb el dibuix de la reacció i els temps de feina.",
+        "dua_es": "Guion de la demostración con los pasos numerados y frases cortas para memorizar.",
+        "dua_ca": "Guió de la demostració amb els passos numerats i frases curtes per memoritzar.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA4",
+      "criterios": [
+        "b",
+        "d",
+        "k"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE2",
+      "criterios": [
+        "2.2",
+        "2.3"
+      ]
+    },
+    "justificacion_es": "Preparar el decolorante con material exclusivo exige medir, comprobar la mezcla y valorar el resultado obtenido.",
+    "justificacion_ca": "Preparar el decolorant amb material exclusiu exigeix mesurar, comprovar la barreja i valorar el resultat obtingut.",
+    "actividades": [
+      {
+        "titulo_es": "Pesaje de mezclas para tres clientas del día",
+        "titulo_ca": "Pesatge de barreges per a tres clientes del dia",
+        "contexto_es": "El taller recibe un pedido nuevo de decolorante y hay que calcular la cantidad exacta para cada servicio de la mañana.",
+        "contexto_ca": "El taller rep una comanda nova de decolorant i cal calcular la quantitat exacta per a cada servei del matí.",
+        "desarrollo_es": "El grupo lee las instrucciones del producto y calcula cuánto polvo y cuánta crema necesita para tres servicios distintos (3163-2.2). Saca del armario el material de un solo uso y lo asigna a cada clienta (3062-4b). Antes de mezclar, pesa las cantidades en la balanza y comprueba si el resultado cuadra con lo que había calculado (3163-2.3). La pasta se prepara despacio, sin salpicar y con guantes (3062-4d), y los restos y los envases van al contenedor que toca (3062-4k).",
+        "desarrollo_ca": "El grup llegeix les instruccions del producte i calcula quanta pols i quanta crema necessita per a tres serveis diferents (3163-2.2). Treu de l'armari el material d'un sol ús i l'assigna a cada clienta (3062-4b). Abans de barrejar, pesa les quantitats a la balança i comprova si el resultat quadra amb el que havia calculat (3163-2.3). La pasta es prepara a poc a poc, sense esquitxar i amb guants (3062-4d), i les restes i els envasos van al contenidor que toca (3062-4k).",
+        "evidencia_es": "Hoja de cálculo de cantidades y muestra de mezcla con el registro de pesos.",
+        "evidencia_ca": "Full de càlcul de quantitats i mostra de barreja amb el registre de pesos.",
+        "dua_es": "Calculadora y tabla con las equivalencias ya escritas para quien tenga dificultades con las proporciones.",
+        "dua_ca": "Calculadora i taula amb les equivalències ja escrites per a qui tengui dificultats amb les proporcions.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Ruleta de riesgos del puesto de decoloración",
+        "titulo_ca": "Ruleta de riscs del lloc de decoloració",
+        "contexto_es": "El salón de prácticas de Ciutadella estrena un protocolo de residuos y el alumnado quiere comprobar si funciona.",
+        "contexto_ca": "El saló de pràctiques de Ciutadella estrena un protocol de residus i l'alumnat vol comprovar si funciona.",
+        "desarrollo_es": "Por turnos, cada persona gira la ruleta y resuelve con los datos de la etiqueta qué material exclusivo necesita cada servicio (3062-4b) y cuánto producto debe preparar (3062-4d). Cuando la tarjeta habla de residuos, el grupo propone una solución y elige el contenedor correcto (3163-2.2). Después aplica la medida ambiental del protocolo del centro (3062-4k). Las respuestas se contrastan por parejas y se comprueba si encajan con el protocolo antes de puntuar (3163-2.3).",
+        "desarrollo_ca": "Per torns, cada persona gira la ruleta i resol amb les dades de l'etiqueta quin material exclusiu necessita cada servei (3062-4b) i quant de producte ha de preparar (3062-4d). Quan la targeta parla de residus, el grup proposa una solució i tria el contenidor correcte (3163-2.2). Després aplica la mesura ambiental del protocol del centre (3062-4k). Les respostes es contrasten per parelles i es comprova si encaixen amb el protocol abans de puntuar (3163-2.3).",
+        "evidencia_es": "Registro de la ruleta con las respuestas y la puntuación por parejas.",
+        "evidencia_ca": "Registre de la ruleta amb les respostes i la puntuació per parelles.",
+        "dua_es": "Tarjetas con la respuesta correcta al dorso para autocorregirse sin miedo a fallar.",
+        "dua_ca": "Targetes amb la resposta correcta al dors per autocorregir-se sense por d'equivocar-se.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      },
+      {
+        "titulo_es": "Diseñar el carro de decoloración del taller",
+        "titulo_ca": "Dissenyar el carretó de decoloració del taller",
+        "contexto_es": "El alumnado se queja de que cada mañana pierde tiempo buscando el material de decoloración por todo el taller.",
+        "contexto_ca": "L'alumnat es queixa que cada matí perd temps buscant el material de decoloració per tot el taller.",
+        "desarrollo_es": "El reto es diseñar un carro de trabajo que tenga a mano todo el material de un solo uso, separado por cliente (3062-4b). Los grupos dibujan su propuesta, calculan cuántas bandejas necesitan y con qué medidas cabrán en el carro (3163-2.2). En una maqueta de cartón colocan los envases del producto y el lugar donde se mezclará con seguridad (3062-4d). Antes de presentarla, comprueban con una lista si el diseño cumple las normas de seguridad y de recogida de residuos (3062-4k) y si las medidas cuadran con el carro real (3163-2.3).",
+        "desarrollo_ca": "El repte és dissenyar un carretó de feina que tengui a mà tot el material d'un sol ús, separat per client (3062-4b). Els grups dibuixen la seva proposta, calculen quantes safates necessiten i amb quines mides cabran al carretó (3163-2.2). En una maqueta de cartó col·loquen els envasos del producte i el lloc on es barrejarà amb seguretat (3062-4d). Abans de presentar-la, comproven amb una llista si el disseny compleix les normes de seguretat i de recollida de residus (3062-4k) i si les mides quadren amb el carretó real (3163-2.3).",
+        "evidencia_es": "Maqueta del carro y memoria con los cálculos y la lista de comprobación.",
+        "evidencia_ca": "Maqueta del carretó i memòria amb els càlculs i la llista de comprovació.",
+        "dua_es": "Plantilla de maqueta recortable y calculadora para quien necesite apoyo con las medidas.",
+        "dua_ca": "Plantilla de maqueta retallable i calculadora per a qui necessiti suport amb les mides.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3064",
+      "ra": "RA1",
+      "criterios": [
+        "d",
+        "e"
+      ]
+    },
+    "b": {
+      "modulo": "3061",
+      "ra": "RA2",
+      "criterios": [
+        "h",
+        "i"
+      ]
+    },
+    "justificacion_es": "Las anomalías del cabello y la acomodación del cliente se estudian junto con la ergonomía y la morfología de manos y uñas.",
+    "justificacion_ca": "Les anomalies del cabell i l'acomodació del client s'estudien juntament amb l'ergonomia i la morfologia de mans i ungles.",
+    "actividades": [
+      {
+        "titulo_es": "Ajustar las dos zonas de trabajo a cada clienta",
+        "titulo_ca": "Ajustar les dues zones de feina a cada clienta",
+        "contexto_es": "En el aula taller de Santa Eulària se atienden dos servicios seguidos: un lavado de cabello y una pedicura.",
+        "contexto_ca": "A l'aula taller de Santa Eulària s'atenen dos serveis seguits: un rentat de cabell i una pedicura.",
+        "desarrollo_es": "En el aula taller, cada pareja monta una zona para el lavado y otra para la pedicura, con la altura y el respaldo ya ajustados (3064-1e). Antes de empezar, anotan en la ficha las anomalías que ven en el cuero cabelludo de una compañera que hace de clienta (3064-1d). En la otra zona describen también en qué postura se colocan la clienta y la profesional para no cargar la espalda (3061-2h). La sesión termina explicando por qué se ha elegido cada posición según la forma de las manos, los pies y las uñas (3061-2i).",
+        "desarrollo_ca": "A l'aula taller, cada parella munta una zona per al rentat i una altra per a la pedicura, amb l'alçada i el respatller ja ajustats (3064-1e). Abans de començar, anoten a la fitxa les anomalies que veuen al cuir cabellut d'una companya que fa de clienta (3064-1d). A l'altra zona descriuen també en quina postura es col·loquen la clienta i la professional per no carregar l'esquena (3061-2h). La sessió acaba explicant per què s'ha triat cada posició segons la forma de les mans, dels peus i de les ungles (3061-2i).",
+        "evidencia_es": "Plano del aula con las dos zonas ajustadas y la ficha de observación.",
+        "evidencia_ca": "Plànol de l'aula amb les dues zones ajustades i la fitxa d'observació.",
+        "dua_es": "Fotos de posturas correctas e incorrectas para comparar antes de decidir.",
+        "dua_ca": "Fotos de postures correctes i incorrectes per comparar abans de decidir.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      },
+      {
+        "titulo_es": "Parejas rotatorias entre el lavabo y la mesa de pedicura",
+        "titulo_ca": "Parelles rotatòries entre la pica i la taula de pedicura",
+        "contexto_es": "El alumnado ensaya una mañana de servicio doble como la de un salón real de Felanitx.",
+        "contexto_ca": "L'alumnat assaja un matí de servei doble com el d'un saló real de Felanitx.",
+        "desarrollo_es": "Mientras una pareja lava el cabello, la otra prepara la mesa de pedicura; al cambiar el turno, cada una coloca a su clienta en la postura adecuada del servicio (3064-1e). Antes de empezar el lavado, el grupo señala en una plantilla las anomalías del cabello y del cuero cabelludo que encuentra (3064-1d). En la mesa de pedicura, la pareja ajusta la postura de las dos personas y la describe en voz alta (3061-2h). Todas las parejas acaban comparando la forma de las uñas con la de los dedos para decidir el acabado (3061-2i).",
+        "desarrollo_ca": "Mentre una parella renta el cabell, l'altra prepara la taula de pedicura; en canviar el torn, cada una col·loca la seva clienta en la postura adequada del servei (3064-1e). Abans de començar el rentat, el grup assenyala en una plantilla les anomalies del cabell i del cuir cabellut que troba (3064-1d). A la taula de pedicura, la parella ajusta la postura de les dues persones i la descriu en veu alta (3061-2h). Totes les parelles acaben comparant la forma de les ungles amb la dels dits per decidir l'acabat (3061-2i).",
+        "evidencia_es": "Plantilla de rotación con las posturas y las observaciones de cada servicio.",
+        "evidencia_ca": "Plantilla de rotació amb les postures i les observacions de cada servei.",
+        "dua_es": "Tarjeta de roles con dibujos para recordar quién coloca a quién en cada turno.",
+        "dua_ca": "Targeta de rols amb dibuixos per recordar qui col·loca qui en cada torn.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Caso doble de una clienta con caspa y uñas débiles",
+        "titulo_ca": "Cas doble d'una clienta amb caspa i ungles febles",
+        "contexto_es": "Dos vecinas de Formentera llegan al taller con dudas sobre su caspa y sobre la forma de sus uñas.",
+        "contexto_ca": "Dues veïnes de Formentera arriben al taller amb dubtes sobre la seva caspa i sobre la forma de les seves ungles.",
+        "desarrollo_es": "Tras un repaso rápido en casa de los tipos de alteraciones, el grupo clasifica en clase las muestras de cabello y cuero cabelludo que trae el profesorado y las explica con sus palabras (3064-1d). Después coloca a la clienta voluntaria en la postura ergonómica que le corresponde y comprueba si está cómoda (3064-1e). En paralelo, otra parte del grupo describe la posición de manos y pies de la profesional (3061-2h) y propone la forma final de la uña según la morfología observada (3061-2i).",
+        "desarrollo_ca": "Després d'un repàs ràpid a casa dels tipus d'alteracions, el grup classifica a classe les mostres de cabell i cuir cabellut que porta el professorat i les explica amb les seves paraules (3064-1d). Després col·loca la clienta voluntària en la postura ergonòmica que li correspon i comprova si està còmoda (3064-1e). En paral·lel, una altra part del grup descriu la posició de mans i peus de la professional (3061-2h) i proposa la forma final de l'ungla segons la morfologia observada (3061-2i).",
+        "evidencia_es": "Informe del caso doble con la clasificación, las posturas y la propuesta de forma de uña.",
+        "evidencia_ca": "Informe del cas doble amb la classificació, les postures i la proposta de forma d'ungla.",
+        "dua_es": "Banco de imágenes de alteraciones para quien no pueda traer muestras reales.",
+        "dua_ca": "Banc d'imatges d'alteracions per a qui no pugui dur mostres reals.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3064",
+      "ra": "RA1",
+      "criterios": [
+        "g",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE5",
+      "criterios": [
+        "5.1",
+        "5.3"
+      ]
+    },
+    "justificacion_es": "El estudio del cabello exige exponer resultados con discreción y redactar la ficha respetando la confidencialidad.",
+    "justificacion_ca": "L'estudi del cabell exigeix exposar resultats amb discreció i redactar la fitxa respectant la confidencialitat.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha de estudio del cabello con datos protegidos",
+        "titulo_ca": "Fitxa d'estudi del cabell amb dades protegides",
+        "contexto_es": "El taller del centro guarda fichas de clientas reales y hay que aprender a tratarlas como información reservada.",
+        "contexto_ca": "El taller del centre guarda fitxes de clientes reals i cal aprendre a tractar-les com a informació reservada.",
+        "desarrollo_es": "Cada grupo lee una ficha de estudio ya hecha y localiza la información más relevante sobre el cabello y el cuero cabelludo (3161-5.1). Con esos datos, hace su propio estudio básico en una compañera y elige los cosméticos que le irían bien (3064-1g). El análisis se hace en voz baja y con la ficha tapada, para respetar la confidencialidad (3064-1i). Para terminar, redacta un informe siguiendo un guion, con lenguaje correcto y sin datos que identifiquen a nadie (3161-5.3).",
+        "desarrollo_ca": "Cada grup llegeix una fitxa d'estudi ja feta i localitza la informació més rellevant sobre el cabell i el cuir cabellut (3161-5.1). Amb aquestes dades, fa el seu propi estudi bàsic en una companya i tria els cosmètics que li anirien bé (3064-1g). L'anàlisi es fa en veu baixa i amb la fitxa tapada, per respectar la confidencialitat (3064-1i). Per acabar, redacta un informe seguint un guió, amb llenguatge correcte i sense dades que identifiquin ningú (3161-5.3).",
+        "evidencia_es": "Informe de estudio del cabello con los cosméticos elegidos y sin datos personales.",
+        "evidencia_ca": "Informe d'estudi del cabell amb els cosmètics triats i sense dades personals.",
+        "dua_es": "Guion del informe con los apartados y frases de inicio para quien necesite andamiaje.",
+        "dua_ca": "Guió de l'informe amb els apartats i frases d'inici per a qui necessiti bastides.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Anonimizar las fichas del archivador",
+        "titulo_ca": "Anonimitzar les fitxes de l'arxivador",
+        "contexto_es": "El salón de prácticas de Alaior hereda un archivador antiguo con nombres y fotografías de clientas.",
+        "contexto_ca": "El saló de pràctiques d'Alaior hereta un arxivador antic amb noms i fotografies de clientes.",
+        "desarrollo_es": "El grupo revisa el archivador y decide qué datos se pueden conservar y cuáles hay que borrar (3064-1i). También comprueba si falta el estudio básico del cabello y del cuero cabelludo en algunas fichas y lo completa con los cosméticos adecuados (3064-1g). Después lee el modelo oficial de consentimiento y adapta su vocabulario al del formulario (3161-5.1). La tarea acaba con la redacción de una nota para el centro que explica el procedimiento, revisada entre iguales (3161-5.3).",
+        "desarrollo_ca": "El grup revisa l'arxivador i decideix quines dades es poden conservar i quines cal esborrar (3064-1i). També comprova si falta l'estudi bàsic del cabell i del cuir cabellut en algunes fitxes i el completa amb els cosmètics adequats (3064-1g). Després llegeix el model oficial de consentiment i adapta el seu vocabulari al del formulari (3161-5.1). La tasca acaba amb la redacció d'una nota per al centre que explica el procediment, revisada entre iguals (3161-5.3).",
+        "evidencia_es": "Archivador anonimizado y nota de procedimiento firmada por el grupo.",
+        "evidencia_ca": "Arxivador anonimitzat i nota de procediment signada pel grup.",
+        "dua_es": "Lista de comprobación con los datos que hay que borrar y los que se quedan.",
+        "dua_ca": "Llista de comprovació amb les dades que cal esborrar i les que es queden.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Mesa redonda sobre la intimidad de una clienta",
+        "titulo_ca": "Taula rodona sobre la intimitat d'una clienta",
+        "contexto_es": "Un vídeo viral grabado en un salón de Mallorca muestra el cabello de una clienta sin su permiso.",
+        "contexto_ca": "Un vídeo viral enregistrat en un saló de Mallorca mostra el cabell d'una clienta sense el seu permís.",
+        "desarrollo_es": "El grupo analiza qué información del vídeo es relevante para el estudio del cabello y cuál sobra (3161-5.1). Después debate con turnos de palabra sobre cómo hacer un estudio básico sin exponer a la persona y qué cosméticos se podrían recomendar (3064-1g). Cada participante argumenta también por qué el análisis debe hacerse con discreción y bajo confidencialidad (3064-1i). La sesión se cierra escribiendo entre todos unas normas de trabajo y publicándolas en el aula (3161-5.3).",
+        "desarrollo_ca": "El grup analitza quina informació del vídeo és rellevant per a l'estudi del cabell i quina sobra (3161-5.1). Després debat amb torns de paraula sobre com fer un estudi bàsic sense exposar la persona i quins cosmètics es podrien recomanar (3064-1g). Cada participant argumenta també per què l'anàlisi s'ha de fer amb discreció i sota confidencialitat (3064-1i). La sessió es tanca escrivint entre tots unes normes de feina i publicant-les a l'aula (3161-5.3).",
+        "evidencia_es": "Normas de confidencialidad del aula firmadas y argumentos anotados del debate.",
+        "evidencia_ca": "Normes de confidencialitat de l'aula signades i arguments anotats del debat.",
+        "dua_es": "Se permite preparar los argumentos por escrito antes de intervenir.",
+        "dua_ca": "Es permet preparar els arguments per escrit abans d'intervenir.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  }
+]

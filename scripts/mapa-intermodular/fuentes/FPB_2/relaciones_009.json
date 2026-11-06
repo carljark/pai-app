@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3005", "ra": "RA3", "criterios": ["d"] },
+    "b": { "modulo": "3164", "ra": "CE7", "criterios": ["7.1"] },
+    "justificacion_es": "Se recoge la conformidad del cliente tomando nota de sus objeciones y asumiendo el error como una oportunidad de mejora.",
+    "justificacion_ca": "Es recull la conformitat del client prenent nota de les seves objeccions i assumint l'error com una oportunitat de millora.",
+    "actividades": [
+      {
+        "titulo_es": "Cierre del alisado ante la clienta",
+        "titulo_ca": "Tancament de l'alisat davant la clienta",
+        "contexto_es": "En el salón de prácticas del centro, una clienta sale de la cabina después de un alisado y hay que comprobar con ella el resultado antes de que pague.",
+        "contexto_ca": "Al saló de pràctiques del centre, una clienta surt de la cabina després d'un alisat i cal comprovar amb ella el resultat abans que pagui.",
+        "desarrollo_es": "Por parejas, una persona hace de profesional y otra de clienta; el profesional explica la labor realizada y recoge la conformidad o las objeciones con una ficha sencilla, anotando qué no ha quedado bien (3005-3d). Cuando la clienta plantea una objeción, la pareja la reformula como una mejora concreta y anota qué hará distinto la próxima vez, aceptando el fallo como parte del aprendizaje (3164-7.1). Al final, cada pareja cambia de rol y repite el cierre con una objeción diferente.",
+        "desarrollo_ca": "Per parelles, una persona fa de professional i l'altra de clienta; el professional explica la feina feta i recull la conformitat o les objeccions amb una fitxa senzilla, anotant què no ha quedat bé (3005-3d). Quan la clienta posa una objecció, la parella la reformula com una millora concreta i anota què farà diferent la propera vegada, acceptant l'error com a part de l'aprenentatge (3164-7.1). Al final, cada parella canvia de rol i repeteix el tancament amb una objecció diferent.",
+        "evidencia_es": "Ficha de cierre del alisado con la conformidad y la mejora anotada.",
+        "evidencia_ca": "Fitxa de tancament de l'alisat amb la conformitat i la millora anotada.",
+        "dua_es": "Ficha con pictogramas y frases de inicio para quien tiene dificultades de expresión oral.",
+        "dua_ca": "Fitxa amb pictogrames i frases d'inici per a qui té dificultats d'expressió oral.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Equipos de mejora tras el servicio",
+        "titulo_ca": "Equips de millora després del servei",
+        "contexto_es": "Tras una semana de servicios en el taller del centro, el grupo revisa los cierres en los que alguna clienta no quedó contenta.",
+        "contexto_ca": "Després d'una setmana de serveis al taller del centre, el grup revisa els tancaments en què alguna clienta no va quedar contenta.",
+        "desarrollo_es": "Los equipos analizan tres casos breves escritos y, con la técnica del folio giratorio, cada integrante aporta una acción para recoger mejor la opinión de la clienta al terminar el trabajo (3005-3d). Después contrastan las propuestas y eligen dos que ayuden a ver el fallo como una pista de mejora y no como un fracaso (3164-7.1). Cada equipo presenta su lista al resto y la cuelga en el tablón del aula.",
+        "desarrollo_ca": "Els equips analitzen tres casos breus escrits i, amb la tècnica del full giratori, cada membre aporta una acció per recollir millor l'opinió de la clienta en acabar la feina (3005-3d). Després contrasten les propostes i n'escullen dues que ajudin a veure l'error com una pista de millora i no com un fracàs (3164-7.1). Cada equip presenta la seva llista a la resta i la penja al tauler de l'aula.",
+        "evidencia_es": "Lista de equipo con dos acciones para cerrar el servicio y aprender del fallo.",
+        "evidencia_ca": "Llista d'equip amb dues accions per tancar el servei i aprendre de l'error.",
+        "dua_es": "Plantilla con espacios numerados para que cada estudiante escriba una sola idea.",
+        "dua_ca": "Plantilla amb espais numerats perquè cada alumne escrigui una sola idea.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Asamblea del error que enseña",
+        "titulo_ca": "Assemblea de l'error que ensenya",
+        "contexto_es": "En el aula-taller, el grupo conversa sobre los servicios en los que algo salió distinto de lo previsto y nadie quería hablar de ello.",
+        "contexto_ca": "A l'aula-taller, el grup parla dels serveis en què alguna cosa va sortir diferent de com estava previst i ningú no en volia parlar.",
+        "desarrollo_es": "Sentados en círculo, se leen tres situaciones anónimas del taller y se pregunta al grupo qué ocurrió y cómo se le contó a la clienta (3005-3d). Una persona modera cada turno, otra recoge las intervenciones y un tercer compañero anota las ideas que ayudan a vivir el fallo con calma y a mantener la confianza en uno mismo (3164-7.1). La sesión termina con un compromiso común escrito en la pizarra.",
+        "desarrollo_ca": "Asseguts en cercle, es llegeixen tres situacions anònimes del taller i es pregunta al grup què va passar i com es va explicar a la clienta (3005-3d). Una persona modera cada torn, una altra recull les intervencions i un tercer company anota les idees que ajuden a viure l'error amb calma i a mantenir la confiança en un mateix (3164-7.1). La sessió acaba amb un compromís comú escrit a la pissarra.",
+        "evidencia_es": "Acta del debate con el compromiso del grupo ante los fallos del taller.",
+        "evidencia_ca": "Acta del debat amb el compromís del grup davant els errors del taller.",
+        "dua_es": "Tarjetas con preguntas guía para quien necesita apoyo antes de intervenir.",
+        "dua_ca": "Targetes amb preguntes guia per a qui necessita suport abans d'intervenir.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3005", "ra": "RA4", "criterios": ["a"] },
+    "b": { "modulo": "3164", "ra": "CE4", "criterios": ["4.1"] },
+    "justificacion_es": "Se ofrecen alternativas ante reclamaciones fácilmente subsanables y se proponen hábitos sostenibles para evitar nuevos problemas.",
+    "justificacion_ca": "S'ofereixen alternatives davant reclamacions fàcilment esmenables i es proposen hàbits sostenibles per evitar nous problemes.",
+    "actividades": [
+      {
+        "titulo_es": "Alternativa verde para una clienta enfadada",
+        "titulo_ca": "Alternativa verda per a una clienta enfadada",
+        "contexto_es": "En el salón de prácticas de Ibiza llega una clienta molesta porque el color de su último tinte se fue a los pocos lavados.",
+        "contexto_ca": "Al saló de pràctiques d'Eivissa arriba una clienta molesta perquè el color del seu darrer tint se li va anar amb pocs rentats.",
+        "desarrollo_es": "El reto es doble: preparar una respuesta para esa clienta explicando con claridad los tiempos y las condiciones del arreglo (3005-4a) y revisar qué cuidados y qué gestión de los residuos del tinte conviene recomendar para que el problema no vuelva a repetirse (3164-4.1). Cada equipo presenta su propuesta en un folio y la defiende ante el grupo.",
+        "desarrollo_ca": "El repte és doble: preparar una resposta per a aquesta clienta explicant amb claredat els temps i les condicions de l'arranjament (3005-4a) i revisar quines cures i quina gestió dels residus del tint convé recomanar perquè el problema no torni a passar (3164-4.1). Cada equip presenta la seva proposta en un full i la defensa davant del grup.",
+        "evidencia_es": "Propuesta de arreglo con plazos, condiciones y recomendaciones ambientales.",
+        "evidencia_ca": "Proposta d'arranjament amb terminis, condicions i recomanacions ambientals.",
+        "dua_es": "Guion de conversación con las preguntas ya escritas para quien se bloquea al hablar.",
+        "dua_ca": "Guió de conversa amb les preguntes ja escrites per a qui es bloqueja en parlar.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Caso del tinte derramado en el lavabo",
+        "titulo_ca": "Cas del tint abocat a la pica",
+        "contexto_es": "En el aula-taller, un bote de tinte cae al lavabo durante un servicio y la clienta reclama por el retraso y por la mancha en su ropa.",
+        "contexto_ca": "A l'aula-taller, un pot de tint cau a la pica durant un servei i la clienta reclama pel retard i per la taca a la roba.",
+        "desarrollo_es": "Se reparte el expediente del servicio y cada equipo localiza qué alternativa se ofreció y con qué plazos y condiciones se le explicó a la clienta (3005-4a). Después valora los efectos de ese derrame sobre el agua y el entorno del centro y decide cómo separar los residuos y qué hábitos adoptar para reducir el impacto (3164-4.1). El trabajo termina completando una ficha de conclusiones para el archivo del taller.",
+        "desarrollo_ca": "Es reparteix l'expedient del servei i cada equip localitza quina alternativa es va oferir i amb quins terminis i condicions es va explicar a la clienta (3005-4a). Després valora els efectes d'aquell abocament sobre l'aigua i l'entorn del centre i decideix com separar els residus i quins hàbits adoptar per reduir l'impacte (3164-4.1). La feina acaba completant una fitxa de conclusions per a l'arxiu del taller.",
+        "evidencia_es": "Ficha de conclusiones del caso con la alternativa ofrecida y las medidas ambientales.",
+        "evidencia_ca": "Fitxa de conclusions del cas amb l'alternativa oferida i les mesures ambientals.",
+        "dua_es": "Expediente con letra grande y las palabras clave subrayadas.",
+        "dua_ca": "Expedient amb lletra gran i les paraules clau subratllades.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Concurso de reclamaciones sostenibles",
+        "titulo_ca": "Concurs de reclamacions sostenibles",
+        "contexto_es": "Durante la jornada de puertas abiertas del centro, el público plantea quejas sobre servicios de peluquería prestados la semana anterior.",
+        "contexto_ca": "Durant la jornada de portes obertes del centre, el públic planteja queixes sobre serveis de perruqueria fets la setmana anterior.",
+        "desarrollo_es": "Por equipos se reparten cartas con reclamaciones reales del sector y cada equipo debe resolver la suya ofreciendo alternativas claras con sus tiempos y condiciones (3005-4a). Si la respuesta incluye además un hábito saludable o una medida para reducir residuos bien justificada, el equipo suma puntos extra (3164-4.1). Al final se cuentan los puntos y el grupo comenta cuáles han sido las mejores respuestas.",
+        "desarrollo_ca": "Per equips es reparteixen cartes amb reclamacions reals del sector i cada equip ha de resoldre la seva oferint alternatives clares amb els temps i les condicions corresponents (3005-4a). Si la resposta inclou a més un hàbit saludable o una mesura per reduir residus ben justificada, l'equip suma punts extra (3164-4.1). Al final es conten els punts i el grup comenta quines han estat les millors respostes.",
+        "evidencia_es": "Tarjetas de respuesta con las alternativas y el marcador del concurso.",
+        "evidencia_ca": "Targetes de resposta amb les alternatives i el marcador del concurs.",
+        "dua_es": "Cartas con dos niveles de dificultad y una compañera tutora como apoyo.",
+        "dua_ca": "Cartes amb dos nivells de dificultat i una companya tutora com a suport.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3063", "ra": "RA1", "criterios": ["h"] },
+    "b": { "modulo": "3162", "ra": "CE4", "criterios": ["4.1"] },
+    "justificacion_es": "Se reconocen las etiquetas y la composición de los productos buscando información fiable sobre sus ingredientes.",
+    "justificacion_ca": "Es reconeixen les etiquetes i la composició dels productes tot cercant informació fiable sobre els seus ingredients.",
+    "actividades": [
+      {
+        "titulo_es": "Etiquetas a la lupa en el aula",
+        "titulo_ca": "Etiquetes a la lupa a l'aula",
+        "contexto_es": "El centro recibe un lote de productos de maquillaje con envases que apenas se leen y sin prospecto.",
+        "contexto_ca": "El centre rep un lot de productes de maquillatge amb envasos que gairebé no es llegeixen i sense prospecte.",
+        "desarrollo_es": "Cada equipo recibe tres envases y busca en la etiqueta la composición, el uso y la fecha de caducidad (3063-1h). Después consulta la web oficial de la marca y una guía de seguridad para comprobar si lo que dice el envase coincide con la información publicada y descarta los blogs sin autor conocido (3162-4.1). Las coincidencias y las dudas se recogen en un mural de clase.",
+        "desarrollo_ca": "Cada equip rep tres envasos i busca a l'etiqueta la composició, l'ús i la data de caducitat (3063-1h). Després consulta la web oficial de la marca i una guia de seguretat per comprovar si el que diu l'envàs coincideix amb la informació publicada i descarta els blogs sense autor conegut (3162-4.1). Les coincidències i els dubtes es recullen en un mural de classe.",
+        "evidencia_es": "Mural comparativo de etiquetas con las fuentes consultadas.",
+        "evidencia_ca": "Mural comparatiu d'etiquetes amb les fonts consultades.",
+        "dua_es": "Lupa y rotulador fluorescente para localizar mejor cada dato del envase.",
+        "dua_ca": "Lupa i retolador fluorescent per localitzar millor cada dada de l'envàs.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Rincones de etiquetas y dudas del maquillaje",
+        "titulo_ca": "Racons d'etiquetes i dubtes del maquillatge",
+        "contexto_es": "En la semana cultural del centro se abre el taller de maquillaje y el público pregunta por los productos expuestos.",
+        "contexto_ca": "A la setmana cultural del centre s'obre el taller de maquillatge i el públic pregunta pels productes exposats.",
+        "desarrollo_es": "Se montan tres espacios: uno de lectura de etiquetas, otro de búsqueda en el ordenador y otro de comprobación con la profesora. Cada equipo pasa por los tres y en cada uno anota un dato del etiquetado de un producto (3063-1h) y valora si la fuente que ha usado es fiable y adecuada para su objetivo (3162-4.1). Cada equipo cierra la vuelta explicando en un minuto qué producto elegiría.",
+        "desarrollo_ca": "Es munten tres espais: un de lectura d'etiquetes, un altre de cerca a l'ordinador i un altre de comprovació amb la professora. Cada equip passa pels tres i a cada un anota una dada de l'etiquetatge d'un producte (3063-1h) i valora si la font que ha fet servir és fiable i adequada per al seu objectiu (3162-4.1). Cada equip tanca la volta explicant en un minut quin producte triaria.",
+        "evidencia_es": "Hoja de ruta de los tres rincones con el dato y la valoración de la fuente.",
+        "evidencia_ca": "Full de ruta dels tres racons amb la dada i la valoració de la font.",
+        "dua_es": "Rincón de apoyo con envases vacíos y una guía de preguntas.",
+        "dua_ca": "Racó de suport amb envasos buits i una guia de preguntes.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      },
+      {
+        "titulo_es": "Ficha de producto para el salón del centro",
+        "titulo_ca": "Fitxa de producte per al saló del centre",
+        "contexto_es": "El salón del centro necesita fichas claras de los productos que usa a diario, porque el alumnado nuevo no sabe para qué sirve cada uno.",
+        "contexto_ca": "El saló del centre necessita fitxes clares dels productes que fa servir cada dia, perquè l'alumnat nou no sap per a què serveix cada un.",
+        "desarrollo_es": "Cada pareja elige un producto del mueble y copia de la etiqueta la composición y el modo de uso (3063-1h). Luego contrasta al menos dos fuentes digitales, anota de dónde toma cada dato y descarta la información que no puede comprobar (3162-4.1). Las fichas se plastifican y se colocan junto a los productos del taller.",
+        "desarrollo_ca": "Cada parella tria un producte del moble i copia de l'etiqueta la composició i la manera d'utilitzar-lo (3063-1h). Després contrasta com a mínim dues fonts digitals, anota d'on treu cada dada i descarta la informació que no pot comprovar (3162-4.1). Les fitxes es plastifiquen i es col·loquen al costat dels productes del taller.",
+        "evidencia_es": "Ficha de producto plastificada con la composición y las fuentes.",
+        "evidencia_ca": "Fitxa de producte plastificada amb la composició i les fonts.",
+        "dua_es": "Plantilla de ficha con apartados fijos y un ejemplo ya resuelto.",
+        "dua_ca": "Plantilla de fitxa amb apartats fixos i un exemple ja resolt.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3063", "ra": "RA1", "criterios": ["c", "d"] },
+    "b": { "modulo": "3162", "ra": "CE7", "criterios": ["7.1"] },
+    "justificacion_es": "Se identifican los útiles y el uso de cada pincel interpretando instrucciones breves escritas en lengua extranjera.",
+    "justificacion_ca": "S'identifiquen els estris i l'ús de cada pinzell tot interpretant instruccions breus escrites en llengua estrangera.",
+    "actividades": [
+      {
+        "titulo_es": "Instrucciones en inglés para cada brocha",
+        "titulo_ca": "Instruccions en anglès per a cada brotxa",
+        "contexto_es": "El aula-taller estrena un maletín de brochas de maquillaje con las indicaciones escritas solo en inglés.",
+        "contexto_ca": "L'aula-taller estrena un necesser de brotxes de maquillatge amb les indicacions escrites només en anglès.",
+        "desarrollo_es": "Cada pareja recibe un folleto breve en inglés sobre brochas y lo lee para averiguar qué útil sirve para cada trabajo del rostro (3063-1c). Después relaciona cada frase del folleto con la brocha correspondiente y explica en castellano para qué se usa (3063-1d), apoyándose en el sentido global del texto y en las palabras que reconoce (3162-7.1). El emparejamiento se corrige en la pizarra entre todos.",
+        "desarrollo_ca": "Cada parella rep un fullet breu en anglès sobre brotxes i el llegeix per esbrinar quin estri serveix per a cada feina de la cara (3063-1c). Després relaciona cada frase del fullet amb la brotxa corresponent i explica en català per a què serveix (3063-1d), donant-se suport en el sentit global del text i en les paraules que reconeix (3162-7.1). L'emparellament es corregeix a la pissarra entre tots.",
+        "evidencia_es": "Tabla de brochas con la frase en inglés y su uso en castellano.",
+        "evidencia_ca": "Taula de brotxes amb la frase en anglès i el seu ús en català.",
+        "dua_es": "Folleto con el vocabulario clave traducido al margen.",
+        "dua_ca": "Fullet amb el vocabulari clau traduït al marge.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Gincana de pinceles y palabras inglesas",
+        "titulo_ca": "Gimcana de pinzells i paraules angleses",
+        "contexto_es": "Para la feria de formación del centro, el departamento prepara una gincana sobre cosmética destinada al alumnado visitante.",
+        "contexto_ca": "Per a la fira de formació del centre, el departament prepara una gimcana sobre cosmètica destinada a l'alumnat visitant.",
+        "desarrollo_es": "Por estaciones, el grupo resuelve retos: en una lee una instrucción breve en inglés y elige el útil correcto (3063-1c); en otra describe en voz alta el uso de cada pincel del maletín (3063-1d); y en la última interpreta una ficha corta de producto en inglés y dice para qué zona del rostro sirve (3162-7.1). Cada estación entrega una pieza de un póster que se monta al final.",
+        "desarrollo_ca": "Per estacions, el grup resol reptes: en una llegeix una instrucció breu en anglès i tria l'estri correcte (3063-1c); en una altra descriu en veu alta l'ús de cada pinzell del necesser (3063-1d); i a la darrera interpreta una fitxa curta de producte en anglès i diu per a quina zona de la cara serveix (3162-7.1). Cada estació lliura una peça d'un pòster que es munta al final.",
+        "evidencia_es": "Póster final de la gincana con los pinceles y sus descripciones.",
+        "evidencia_ca": "Pòster final de la gimcana amb els pinzells i les seves descripcions.",
+        "dua_es": "Pistas con dibujos y un diccionario ilustrado de bolsillo.",
+        "dua_ca": "Pistes amb dibuixos i un diccionari il·lustrat de butxaca.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      },
+      {
+        "titulo_es": "Manual bilingüe de brochas del taller",
+        "titulo_ca": "Manual bilingüe de brotxes del taller",
+        "contexto_es": "El centro quiere un manual de maquillaje para el alumnado que empieza, con indicaciones que también entienda quien no domina el inglés.",
+        "contexto_ca": "El centre vol un manual de maquillatge per a l'alumnat que comença, amb indicacions que també entengui qui no domina l'anglès.",
+        "desarrollo_es": "En casa se ve un vídeo corto en inglés sobre tipos de brochas y se anotan tres palabras nuevas; en clase, cada estudiante reconoce el útil del que habla el vídeo y lo coge del maletín (3063-1c). Después, por parejas, describe el uso de ese pincel y lo compara con la explicación del vídeo (3063-1d), aclarando las partes que no se entendieron al escucharlo (3162-7.1). El resultado se guarda como página de un manual bilingüe ilustrado.",
+        "desarrollo_ca": "A casa es veu un vídeo curt en anglès sobre tipus de brotxes i s'anoten tres paraules noves; a classe, cada alumne reconeix l'estri del qual parla el vídeo i l'agafa del necesser (3063-1c). Després, per parelles, descriu l'ús d'aquell pinzell i el compara amb l'explicació del vídeo (3063-1d), aclarint les parts que no es van entendre en escoltar-lo (3162-7.1). El resultat es guarda com a pàgina d'un manual bilingüe il·lustrat.",
+        "evidencia_es": "Página del manual bilingüe con el dibujo del pincel y su uso.",
+        "evidencia_ca": "Pàgina del manual bilingüe amb el dibuix del pinzell i el seu ús.",
+        "dua_es": "Vídeo con subtítulos en inglés y opción de verlo dos veces.",
+        "dua_ca": "Vídeo amb subtítols en anglès i opció de veure'l dues vegades.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3063", "ra": "RA2", "criterios": ["f", "g"] },
+    "b": { "modulo": "3162", "ra": "CE5", "criterios": ["5.4"] },
+    "justificacion_es": "Se aplican los cosméticos de higiene por zonas y se retiran los restos con actitudes de escucha activa y cortesía durante la conversación.",
+    "justificacion_ca": "S'apliquen els cosmètics d'higiene per zones i es retiren les restes amb actituds d'escolta activa i cortesia durant la conversa.",
+    "actividades": [
+      {
+        "titulo_es": "Limpieza facial comentada con la clienta",
+        "titulo_ca": "Neteja facial comentada amb la clienta",
+        "contexto_es": "En el salón de estética del centro, una clienta nueva viene a una limpieza facial y pregunta qué se le aplica en cada momento.",
+        "contexto_ca": "Al saló d'estètica del centre, una clienta nova ve a fer-se una neteja facial i pregunta què se li aplica en cada moment.",
+        "desarrollo_es": "Mientras aplica el cosmético de limpieza, el alumnado explica a la clienta hacia dónde mueve los dedos en cada zona del rostro y por qué (3063-2f), y después retira los restos de producto y aplica el tónico esquivando el contorno de los ojos (3063-2g). Durante toda la conversación debe escuchar sin interrumpir, responder con cortesía y agradecer las preguntas de la clienta (3162-5.4). Al acabar se anota en la ficha la duda que más ha costado resolver.",
+        "desarrollo_ca": "Mentre aplica el cosmètic de neteja, l'alumnat explica a la clienta cap a on mou els dits a cada zona de la cara i per què (3063-2f), i després retira les restes de producte i aplica el tònic evitant el contorn dels ulls (3063-2g). Durant tota la conversa ha d'escoltar sense interrompre, respondre amb cortesia i agrair les preguntes de la clienta (3162-5.4). En acabar s'anota a la fitxa el dubte que ha costat més de resoldre.",
+        "evidencia_es": "Ficha de la limpieza facial con la duda anotada y la valoración del trato.",
+        "evidencia_ca": "Fitxa de la neteja facial amb el dubte anotat i la valoració del tracte.",
+        "dua_es": "Guion visual con los pasos y las frases clave para acompañar la conversación.",
+        "dua_ca": "Guió visual amb els passos i les frases clau per acompanyar la conversa.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Sesión de higiene facial en la residencia",
+        "titulo_ca": "Sessió d'higiene facial a la residència",
+        "contexto_es": "La residencia de personas mayores del barrio pide al centro una actividad sencilla de cuidado de la piel para sus usuarios.",
+        "contexto_ca": "La residència de persones grans del barri demana al centre una activitat senzilla de cura de la pell per als seus usuaris.",
+        "desarrollo_es": "Por parejas se prepara y se realiza una limpieza facial sencilla a una persona mayor, aplicando el producto de higiene zona por zona (3063-2f) y retirando los restos antes de poner el tónico, sin acercarse a los ojos (3063-2g). Se practica la escucha activa: se pregunta cómo se siente la persona, se respeta el turno de palabra y se usa un lenguaje amable y cercano (3162-5.4). Se termina entregando una tarjeta con recomendaciones.",
+        "desarrollo_ca": "Per parelles es prepara i es fa una neteja facial senzilla a una persona gran, aplicant el producte d'higiene zona per zona (3063-2f) i retirant les restes abans de posar el tònic, sense acostar-se als ulls (3063-2g). Es practica l'escolta activa: es pregunta com se sent la persona, es respecta el torn de paraula i es fa servir un llenguatge amable i proper (3162-5.4). S'acaba lliurant una targeta amb recomanacions.",
+        "evidencia_es": "Tarjeta de recomendaciones entregada y registro del servicio realizado.",
+        "evidencia_ca": "Targeta de recomanacions lliurada i registre del servei fet.",
+        "dua_es": "Ficha con los pasos dibujados y una compañera que recuerda el orden.",
+        "dua_ca": "Fitxa amb els passos dibuixats i una companya que recorda l'ordre.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      },
+      {
+        "titulo_es": "Protocolo amable de limpieza facial",
+        "titulo_ca": "Protocol de neteja facial amable",
+        "contexto_es": "En el taller se detecta que algunas clientas no entienden lo que se les aplica durante la limpieza facial porque apenas se les habla.",
+        "contexto_ca": "Al taller es detecta que algunes clientes no entenen què se'ls aplica durant la neteja facial perquè gairebé no se'ls parla.",
+        "desarrollo_es": "Los equipos observan cómo se siente una persona cuando se le explica un servicio de limpieza facial y anotan las frases que confunden o que suenan mal. Después preparan un guion corto para aplicar el cosmético zona por zona (3063-2f) y retirar el producto antes de poner el tónico (3063-2g), diciendo cada paso en voz alta. Ensayan el guion por parejas cuidando la escucha y la cortesía (3162-5.4) y corrigen lo que no funciona antes de mostrarlo al grupo.",
+        "desarrollo_ca": "Els equips observen com se sent una persona quan se li explica un servei de neteja facial i anoten les frases que confonen o que sonen malament. Després preparen un guió curt per aplicar el cosmètic zona per zona (3063-2f) i retirar el producte abans de posar el tònic (3063-2g), dient cada pas en veu alta. Assagen el guió per parelles cuidant l'escolta i la cortesia (3162-5.4) i corregeixen el que no funciona abans de mostrar-lo al grup.",
+        "evidencia_es": "Guion prototipo de limpieza facial con las mejoras anotadas.",
+        "evidencia_ca": "Guió prototip de neteja facial amb les millores anotades.",
+        "dua_es": "Tarjetas con frases hechas para quien no sabe cómo empezar la conversación.",
+        "dua_ca": "Targetes amb frases fetes per a qui no sap com començar la conversa.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3063", "ra": "RA2", "criterios": ["h", "i"] },
+    "b": { "modulo": "3162", "ra": "CE4", "criterios": ["4.2"] },
+    "justificacion_es": "Se valora el exfoliante y se aplica la mascarilla respetando el tiempo de exposición, anotando las fuentes consultadas en la ficha.",
+    "justificacion_ca": "Es valora l'exfoliant i s'aplica la mascareta respectant el temps d'exposició, anotant les fonts consultades a la fitxa.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha de mascarillas con fuentes citadas",
+        "titulo_ca": "Fitxa de mascaretes amb fonts citades",
+        "contexto_es": "El centro quiere tener fichas fiables de los tipos de mascarilla facial que se usan en el taller.",
+        "contexto_ca": "El centre vol tenir fitxes fiables dels tipus de mascareta facial que es fan servir al taller.",
+        "desarrollo_es": "Cada pareja recibe un tipo de piel y decide si conviene exfoliar antes de la mascarilla, probando el producto en el dorso de la mano (3063-2h). Después busca en webs de laboratorios y de centros sanitarios cuánto tiempo debe dejarse puesta y aplica la mascarilla respetando ese tiempo (3063-2i). Con los datos recogidos redacta una ficha propia en la que indica de dónde ha sacado cada dato (3162-4.2).",
+        "desarrollo_ca": "Cada parella rep un tipus de pell i decideix si convé exfoliar abans de la mascareta, provant el producte al dors de la mà (3063-2h). Després cerca en webs de laboratoris i de centres sanitaris quant de temps s'ha de deixar posada i aplica la mascareta respectant aquest temps (3063-2i). Amb les dades recollides redacta una fitxa pròpia on indica d'on ha tret cada dada (3162-4.2).",
+        "evidencia_es": "Ficha propia de mascarilla con los tiempos y las fuentes consultadas.",
+        "evidencia_ca": "Fitxa pròpia de mascareta amb els temps i les fonts consultades.",
+        "dua_es": "Ficha con apartados cortos y un ejemplo ya rellenado de otro producto.",
+        "dua_ca": "Fitxa amb apartats curts i un exemple ja emplenat d'un altre producte.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Cronómetro y mascarilla en el taller",
+        "titulo_ca": "Cronòmetre i mascareta al taller",
+        "contexto_es": "En el aula-taller se comprueba que algunas mascarillas se retiran tarde porque nadie controla el tiempo.",
+        "contexto_ca": "A l'aula-taller es comprova que algunes mascaretes es retiren tard perquè ningú no controla el temps.",
+        "desarrollo_es": "Se plantea un reto por equipos: aplicar exfoliante y mascarilla a una compañera dentro del tiempo marcado, sin dejar zonas sin cubrir. Cada equipo valora primero si el exfoliante es necesario para ese tipo de piel (3063-2h) y controla con un cronómetro el tiempo de la mascarilla antes de retirarla por completo (3063-2i). Al final elabora un cartel de avisos para el taller con los tiempos y cita las fuentes que ha usado (3162-4.2).",
+        "desarrollo_ca": "Es planteja un repte per equips: aplicar exfoliant i mascareta a una companya dins del temps marcat, sense deixar zones sense cobrir. Cada equip valora primer si l'exfoliant cal per a aquell tipus de pell (3063-2h) i controla amb un cronòmetre el temps de la mascareta abans de retirar-la del tot (3063-2i). Al final elabora un cartell d'avisos per al taller amb els temps i esmenta les fonts que ha fet servir (3162-4.2).",
+        "evidencia_es": "Cartel de avisos del taller con los tiempos y las fuentes citadas.",
+        "evidencia_ca": "Cartell d'avisos del taller amb els temps i les fonts esmentades.",
+        "dua_es": "Cronómetro con aviso sonoro y lista de comprobación paso a paso.",
+        "dua_ca": "Cronòmetre amb avís sonor i llista de comprovació pas a pas.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Díptico del cuidado de la piel joven",
+        "titulo_ca": "Díptic de la cura de la pell jove",
+        "contexto_es": "En el centro se reparten folletos sobre cuidado de la piel que copian párrafos enteros de internet sin decir de dónde salen.",
+        "contexto_ca": "Al centre es reparteixen fullets sobre cura de la pell que copien paràgrafs sencers d'internet sense dir d'on surten.",
+        "desarrollo_es": "Los equipos preparan un díptico para el alumnado del centro sobre cuándo conviene exfoliar la piel y cuándo no (3063-2h) y sobre cómo aplicar y retirar una mascarilla controlando el tiempo (3063-2i). Para redactarlo reúnen información de dos o tres fuentes, escriben los textos con palabras propias y ponen al pie la lista de dónde han tomado cada idea (3162-4.2). Los dípticos se imprimen y se reparten en la entrada del aula-taller.",
+        "desarrollo_ca": "Els equips preparen un díptic per a l'alumnat del centre sobre quan convé exfoliar la pell i quan no (3063-2h) i sobre com aplicar i retirar una mascareta controlant el temps (3063-2i). Per redactar-lo reuneixen informació de dues o tres fonts, escriuen els textos amb paraules pròpies i posen al peu la llista d'on han pres cada idea (3162-4.2). Els díptics s'imprimeixen i es reparteixen a l'entrada de l'aula-taller.",
+        "evidencia_es": "Díptico impreso con los textos propios y la lista de fuentes al pie.",
+        "evidencia_ca": "Díptic imprès amb els textos propis i la llista de fonts al peu.",
+        "dua_es": "Plantilla con huecos y un banco de imágenes libres para el diseño.",
+        "dua_ca": "Plantilla amb buits i un banc d'imatges lliures per al disseny.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      }
+    ]
+  }
+]

@@ -671,6 +671,22 @@ describe('Projects Endpoints', () => {
       expect(findSelectedRa([cfgm], 'Otro texto', 'CFGM_ESTETICA')).toBeUndefined();
     });
 
+    it('findSelectedRa debería preferir el ámbito del curso cuando I y II comparten la competencia', () => {
+      const ambitoI = { id: 'CE1', moduleCode: '3161', tipoNivel: 'FP_BASICA', description_es: 'Competencia común' };
+      const ambitoII = { id: 'CE1', moduleCode: '3162', tipoNivel: 'FP_BASICA', description_es: 'Competencia común' };
+      expect(findSelectedRa([ambitoI, ambitoII], 'Competencia común', 'FP_BASICA', '2º')).toBe(ambitoII);
+      expect(findSelectedRa([ambitoII, ambitoI], 'Competencia común', 'FP_BASICA', '1º')).toBe(ambitoI);
+      expect(findSelectedRa([ambitoII, ambitoI], 'Competencia común', 'FP_BASICA')).toBe(ambitoII);
+      expect(findSelectedRa([ambitoII, ambitoI], 'Competencia común', 'NIVEL_DESCONOCIDO', '1º')).toBe(ambitoII);
+    });
+
+    it('describeRaForPrompt debería nombrar como competencia específica las unidades de los ámbitos', () => {
+      const ce = { id: 'CE4', moduleCode: '3163', module_es: 'Ciencias Aplicadas I', module_ca: 'Ciències Aplicades I' };
+      expect(describeRaForPrompt(ce, 'Analizar los efectos', 'catalan')).toBe(
+        '- Módulo/Asignatura: 3163 Ciències Aplicades I\n  Competencia específica CE4 (numeración oficial, no la cambies): Analizar los efectos',
+      );
+    });
+
     it('describeRaForPrompt debería incluir el código del módulo y el número oficial del RA', () => {
       const ra = { id: 'RA5', moduleCode: '0843', module: 'Mòdul', module_es: 'Módulo', module_ca: 'Mòdul' };
       expect(describeRaForPrompt(ra, 'Descripción del RA')).toBe(

@@ -41,4 +41,9 @@ Los ciclos de dos cursos se hicieron con los dos cursos seguidos siempre que se 
 ## Notas
 
 - La pestaña de 1.º usa el `tipoNivel` como identificador y la de 2.º le añade `_2`, como en Peluquería y Educación Infantil. Cuidados Auxiliares tiene un solo curso, así que su entrada de `mapas` no lleva `curso`, como la de Estética.
+- **CFGB Peluquería y Estética:** desde la tarea 250 tiene un mapa por curso, `FPB` y `FPB_2`, rehecho con el plan 2026/27.
+  - 1.º: 127 relaciones y 254 conexiones.
+  - 2.º: 114 relaciones y 228 conexiones.
+  - Lo redactó DeepSeek V4.1 Flash por tramos.
+  - Detalles en [fp_basica_plan_2026_27.md](fp_basica_plan_2026_27.md).
 - Ciclos con mapa anteriores a esta lista: CFGB Peluquería y Estética, CFGM Estética y Belleza, CFGM Peluquería y Cosmética Capilar (1.º y 2.º) y CFGS Educación Infantil (1.º y 2.º).

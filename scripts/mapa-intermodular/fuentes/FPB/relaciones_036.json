@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3159", "ra": "RA5", "criterios": ["a", "b"] },
+    "b": { "modulo": "3161", "ra": "CE4", "criterios": ["4.1", "4.2"] },
+    "justificacion_es": "La búsqueda de empleo se organiza como un proceso con fuentes seleccionadas y contenidos propios citados.",
+    "justificacion_ca": "La cerca d'ocupació s'organitza com un procés amb fonts seleccionades i continguts propis citats.",
+    "actividades": [
+      {
+        "titulo_es": "Búsqueda guiada de ofertas de peluquería",
+        "titulo_ca": "Cerca guiada d'ofertes de perruqueria",
+        "contexto_es": "En el aula-taller del centro se abre un tablón de empleo del sector de la imagen personal en Palma y falta material actualizado.",
+        "contexto_ca": "A l'aula-taller del centre s'obre un tauler d'ocupació del sector de la imatge personal a Palma i hi falta material actualitzat.",
+        "desarrollo_es": "Cada equipo rastrea portales de empleo, prensa local y tablones del barrio para localizar ofertas de ayudante de peluquería y las ordena en el tablón (3159-5a). Antes de colgarlas, contrasta el anuncio con la web de la empresa y descarta los que parecen fraudulentos (3161-4.1). Con los datos verificados redacta una ficha resumen de cada oferta con requisitos y horarios (3159-5b) y anota al pie las fuentes consultadas (3161-4.2).",
+        "desarrollo_ca": "Cada equip rastreja portals d'ocupació, premsa local i taulers del barri per localitzar ofertes d'ajudant de perruqueria i les ordena al tauler (3159-5a). Abans de penjar-les, contrasta l'anunci amb la web de l'empresa i descarta els que semblen fraudulents (3161-4.1). Amb les dades verificades redacta una fitxa resum de cada oferta amb requisits i horaris (3159-5b) i anota a peu les fonts consultades (3161-4.2).",
+        "evidencia_es": "Ficha resumen de cada oferta con las fuentes citadas.",
+        "evidencia_ca": "Fitxa resum de cada oferta amb les fonts esmentades.",
+        "dua_es": "Plantilla de ficha con apartados fijos y banco de palabras para quien lo necesite.",
+        "dua_ca": "Plantilla de fitxa amb apartats fixos i banc de paraules per a qui el necessiti.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Anuncios trampa en la prensa del sector",
+        "titulo_ca": "Anuncis enganyosos a la premsa del sector",
+        "contexto_es": "Una empresa ficticia de Manacor publica tres anuncios muy parecidos y solo uno cumple la normativa laboral.",
+        "contexto_ca": "Una empresa fictícia de Manacor publica tres anuncis molt semblants i només un compleix la normativa laboral.",
+        "desarrollo_es": "Por parejas se reparte una carpeta con anuncios de trabajo de peluquería y se pide descubrir cuál esconde irregularidades (3159-5a). Para decidirlo, el alumnado compara el texto con guías oficiales y con la información del SEPE y decide qué fuentes merecen confianza (3161-4.1). Cada pareja escribe después un informe breve con su decisión y las condiciones que faltaban (3159-5b), y cierra el informe con la lista de enlaces usados (3161-4.2).",
+        "desarrollo_ca": "Per parelles es reparteix una carpeta amb anuncis de feina de perruqueria i es demana descobrir quin amaga irregularitats (3159-5a). Per decidir-ho, l'alumnat compara el text amb guies oficials i amb la informació del SEPE i decideix quines fonts mereixen confiança (3161-4.1). Cada parella escriu després un informe breu amb la seva decisió i les condicions que hi faltaven (3159-5b), i tanca l'informe amb la llista d'enllaços emprats (3161-4.2).",
+        "evidencia_es": "Informe de la pareja con la decisión argumentada.",
+        "evidencia_ca": "Informe de la parella amb la decisió argumentada.",
+        "dua_es": "Los anuncios se entregan también en audio para facilitar la relectura.",
+        "dua_ca": "Els anuncis es lliuren també en àudio per facilitar la relectura.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Simulación de una consulta de empleo joven",
+        "titulo_ca": "Simulació d'una consulta d'ocupació jove",
+        "contexto_es": "El punto de información juvenil de Ibiza recibe a chicos y chicas que buscan su primera ocupación en salones de belleza.",
+        "contexto_ca": "El punt d'informació juvenil d'Eivissa rep joves que cerquen la seva primera ocupació en salons de bellesa.",
+        "desarrollo_es": "Se montan tres mesas de atención y el alumnado rota entre el papel de orientador y el de usuario que busca su primer trabajo (3159-5a). Quien orienta debe explicar qué portales y oficinas son fiables y por qué, y descartar los bulos que llegan por redes (3161-4.1). Antes de acabar, cada usuario rellena su propio plan de búsqueda con los pasos que seguirá esa semana (3159-5b) y graba una nota de voz citando la fuente de cada paso (3161-4.2).",
+        "desarrollo_ca": "Es munten tres taules d'atenció i l'alumnat roda entre el paper d'orientador i el d'usuari que cerca la seva primera feina (3159-5a). Qui orienta ha d'explicar quins portals i oficines són fiables i per què, i descartar les notícies falses que arriben per xarxes (3161-4.1). Abans d'acabar, cada usuari emplena el seu pla de cerca amb els passos que seguirà aquesta setmana (3159-5b) i enregistra una nota de veu esmentant la font de cada pas (3161-4.2).",
+        "evidencia_es": "Plan de búsqueda personal y nota de voz con las fuentes.",
+        "evidencia_ca": "Pla de cerca personal i nota de veu amb les fonts.",
+        "dua_es": "Guion de la conversación con las preguntas clave ya escritas.",
+        "dua_ca": "Guió de la conversa amb les preguntes clau ja escrites.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3159", "ra": "RA5", "criterios": ["c"] },
+    "b": { "modulo": "3161", "ra": "CE5", "criterios": ["5.3"] },
+    "justificacion_es": "Redactar el currículum y la carta de presentación aplica la planificación de textos escritos.",
+    "justificacion_ca": "Redactar el currículum i la carta de presentació aplica la planificació de textos escrits.",
+    "actividades": [
+      {
+        "titulo_es": "Currículum y carta para una oferta real",
+        "titulo_ca": "Currículum i carta per a una oferta real",
+        "contexto_es": "Un salón de Inca busca ayudante y pide el currículum acompañado de una carta de presentación breve.",
+        "contexto_ca": "Un saló d'Inca cerca ajudant i demana el currículum acompanyat d'una carta de presentació breu.",
+        "desarrollo_es": "Cada alumno elige una oferta del tablón del aula y revisa qué técnicas de búsqueda se usan hoy para responderla (3159-5c). Después planifica en un esquema el destinatario, el propósito y el canal de su candidatura (3161-5.3). Redacta el currículum y la carta en dos borradores, los revisa con una lista de comprobación y entrega la versión final en formato digital.",
+        "desarrollo_ca": "Cada alumne tria una oferta del tauler de l'aula i revisa quines tècniques de cerca s'utilitzen avui per respondre-hi (3159-5c). Després planifica en un esquema el destinatari, el propòsit i el canal de la seva candidatura (3161-5.3). Redacta el currículum i la carta en dos esborranys, els revisa amb una llista de comprovació i lliura la versió final en format digital.",
+        "evidencia_es": "Currículum y carta finales de una candidatura.",
+        "evidencia_ca": "Currículum i carta finals d'una candidatura.",
+        "dua_es": "Model de currículum por bloques y corrector ortográfico en los borradores.",
+        "dua_ca": "Model de currículum per blocs i corrector ortogràfic als esborranys.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Taller de cartas que consiguen respuesta",
+        "titulo_ca": "Taller de cartes que aconsegueixen resposta",
+        "contexto_es": "El aula se convierte en un taller de escritura donde se mejora una carta de presentación que no obtuvo respuesta.",
+        "contexto_ca": "L'aula es converteix en un taller d'escriptura on es millora una carta de presentació que no va obtenir resposta.",
+        "desarrollo_es": "Antes de la sesión, cada alumno ve un vídeo corto sobre cómo se responde hoy a una oferta y anota dudas (3159-5c). En clase, por tríos, se analizan cartas rechazadas y se reescriben pensando en quién las leerá y para qué (3161-5.3). El taller termina con una lectura cruzada en la que cada trío propone dos mejoras concretas a otro.",
+        "desarrollo_ca": "Abans de la sessió, cada alumne veu un vídeo curt sobre com es respon avui a una oferta i anota dubtes (3159-5c). A classe, per trios, s'analitzen cartes rebutjades i es reescriuen pensant en qui les llegirà i per a què (3161-5.3). El taller acaba amb una lectura creuada en què cada trio proposa dues millores concretes a un altre.",
+        "evidencia_es": "Carta reescrita con las dos mejoras incorporadas.",
+        "evidencia_ca": "Carta reescrita amb les dues millores incorporades.",
+        "dua_es": "Vídeo con subtítulos y guion de reescritura con frases de inicio.",
+        "dua_ca": "Vídeo amb subtítols i guió de reescriptura amb frases d'inici.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Concurso de candidaturas bien escritas",
+        "titulo_ca": "Concurs de candidatures ben escrites",
+        "contexto_es": "Cuatro salones ficticios de Menorca publican ofertas y el aula organiza un concurso de candidaturas por equipos.",
+        "contexto_ca": "Quatre salons ficticis de Menorca publiquen ofertes i l'aula organitza un concurs de candidatures per equips.",
+        "desarrollo_es": "Los equipos eligen una de las ofertas y reparten las tareas de respuesta según las técnicas de búsqueda que conocen (3159-5c). Con el reparto hecho, cada miembro escribe una parte de la candidatura y el equipo revisa la coherencia, el registro y la ortografía antes de entregarla (3161-5.3). Un jurado formado por el resto de la clase puntúa claridad y adecuación con una rúbrica.",
+        "desarrollo_ca": "Els equips trien una de les ofertes i reparteixen les tasques de resposta segons les tècniques de cerca que coneixen (3159-5c). Amb el repartiment fet, cada membre escriu una part de la candidatura i l'equip revisa la coherència, el registre i l'ortografia abans de lliurar-la (3161-5.3). Un jurat format per la resta de la classe puntua claredat i adequació amb una rúbrica.",
+        "evidencia_es": "Candidatura del equipo puntuada con la rúbrica.",
+        "evidencia_ca": "Candidatura de l'equip puntuada amb la rúbrica.",
+        "dua_es": "Rúbrica con ejemplos y reparto de tareas según las fortalezas de cada miembro.",
+        "dua_ca": "Rúbrica amb exemples i repartiment de tasques segons els punts forts de cada membre.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3159", "ra": "RA5", "criterios": ["a"] },
+    "b": { "modulo": "3163", "ra": "CE2", "criterios": ["2.1"] },
+    "justificacion_es": "Buscar empleo es un problema que se resuelve con estrategias, datos y comprobación de resultados.",
+    "justificacion_ca": "Cercar feina és un problema que es resol amb estratègies, dades i comprovació de resultats.",
+    "actividades": [
+      {
+        "titulo_es": "Presupuesto de búsqueda de empleo en el barrio",
+        "titulo_ca": "Pressupost de cerca de feina al barri",
+        "contexto_es": "Una compañera necesita organizar su búsqueda de trabajo en Palma y no sabe cuánto tiempo ni dinero le costará.",
+        "contexto_ca": "Una companya necessita organitzar la seva cerca de feina a Palma i no sap quant temps ni diners li costarà.",
+        "desarrollo_es": "Se plantea el caso como un problema abierto: encontrar trabajo en un mes con dos desplazamientos semanales (3159-5a). Cada equipo organiza los datos en una tabla con distancias, horarios de oficinas y coste del transporte, y decide qué preguntas hay que responder primero (3163-2.1). Con la tabla hecha, el grupo compara resultados y comprueba si su plan es viable.",
+        "desarrollo_ca": "Es planteja el cas com un problema obert: trobar feina en un mes amb dos desplaçaments setmanals (3159-5a). Cada equip organitza les dades en una taula amb distàncies, horaris d'oficines i cost del transport, i decideix quines preguntes cal respondre primer (3163-2.1). Amb la taula feta, el grup compara resultats i comprova si el seu pla és viable.",
+        "evidencia_es": "Tabla de datos y plan de búsqueda comprobado.",
+        "evidencia_ca": "Taula de dades i pla de cerca comprovat.",
+        "dua_es": "Datos ya recogidos en tarjetas para quien tenga dificultades de búsqueda.",
+        "dua_ca": "Dades ja recollides en targetes per a qui tengui dificultats de cerca.",
+        "metodologia_es": "Aprendizaje basado en problemas.",
+        "metodologia_ca": "Aprenentatge basat en problemes."
+      },
+      {
+        "titulo_es": "Ruta de recursos de empleo del municipio",
+        "titulo_ca": "Ruta de recursos d'ocupació del municipi",
+        "contexto_es": "El ayuntamiento pide al aula un mapa de recursos de empleo para jóvenes del municipio.",
+        "contexto_ca": "L'ajuntament demana a l'aula un mapa de recursos d'ocupació per a joves del municipi.",
+        "desarrollo_es": "Por grupos se investigan las etapas de una búsqueda de empleo y se marcan en un plano los puntos de información del municipio (3159-5a). Para representar la información, el alumnado dibuja un diagrama con los datos recogidos y las preguntas que aún quedan abiertas (3163-2.1). El mapa se expone en el pasillo con códigos QR hacia cada recurso.",
+        "desarrollo_ca": "Per grups s'investiguen les etapes d'una cerca d'ocupació i es marquen en un plànol els punts d'informació del municipi (3159-5a). Per representar la informació, l'alumnat dibuixa un diagrama amb les dades recollides i les preguntes que encara queden obertes (3163-2.1). El mapa s'exposa al passadís amb codis QR cap a cada recurs.",
+        "evidencia_es": "Mapa del municipio con los recursos y su diagrama.",
+        "evidencia_ca": "Mapa del municipi amb els recursos i el seu diagrama.",
+        "dua_es": "Plano ya impreso y plantillas de diagrama con las casillas marcadas.",
+        "dua_ca": "Plànol ja imprès i plantilles de diagrama amb les caselles marcades.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Rincones de cálculo del tiempo de búsqueda",
+        "titulo_ca": "Racons de càlcul del temps de cerca",
+        "contexto_es": "En el aula se organizan cuatro rincones con tareas distintas para calcular cuánto se tarda en encontrar trabajo en el sector.",
+        "contexto_ca": "A l'aula s'organitzen quatre racons amb tasques diferents per calcular quant es tarda a trobar feina al sector.",
+        "desarrollo_es": "Cada rincón propone una parte del proceso: enviar candidaturas, preparar entrevistas, revisar perfiles y hacer seguimiento (3159-5a). En cada rincón el alumnado mide tiempos y organiza los datos en una gráfica para ver dónde se pierde más tiempo (3163-2.1). Al final se ponen en común las cuatro gráficas y se decide qué paso conviene mejorar.",
+        "desarrollo_ca": "Cada racó proposa una part del procés: enviar candidatures, preparar entrevistes, revisar perfils i fer seguiment (3159-5a). A cada racó l'alumnat mesura temps i organitza les dades en un gràfic per veure on es perd més temps (3163-2.1). Al final es posen en comú els quatre gràfics i es decideix quin pas convé millorar.",
+        "evidencia_es": "Gráfica de tiempos por rincón y propuesta de mejora.",
+        "evidencia_ca": "Gràfic de temps per racó i proposta de millora.",
+        "dua_es": "Cronómetros y tablas de registro con las columnas ya preparadas.",
+        "dua_ca": "Cronòmetres i taules de registre amb les columnes ja preparades.",
+        "metodologia_es": "Rincones de aprendizaje.",
+        "metodologia_ca": "Racons d'aprenentatge."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3159", "ra": "RA5", "criterios": ["d"] },
+    "b": { "modulo": "3163", "ra": "CE5", "criterios": ["5.3"] },
+    "justificacion_es": "Usar herramientas de búsqueda óptima exige citar fuentes fiables en los documentos que se presentan.",
+    "justificacion_ca": "Usar eines de cerca òptima exigeix citar fonts fiables en els documents que es presenten.",
+    "actividades": [
+      {
+        "titulo_es": "Feria de herramientas para buscar trabajo",
+        "titulo_ca": "Fira d'eines per cercar feina",
+        "contexto_es": "El centro celebra una jornada abierta a las familias sobre cómo buscar trabajo en el sector de la belleza.",
+        "contexto_ca": "El centre celebra una jornada oberta a les famílies sobre com cercar feina al sector de la bellesa.",
+        "desarrollo_es": "Los equipos practican con las herramientas reales de búsqueda: portales, alertas, perfiles profesionales y registros de demandante (3159-5d). Para preparar la jornada, buscan información científica y técnica sobre el sector y seleccionan solo la relevante (3163-5.3). En la feria cada equipo atiende un puesto y explica a las familias cómo usar cada herramienta.",
+        "desarrollo_ca": "Els equips practiquen amb les eines reals de cerca: portals, alertes, perfils professionals i registres de demandant (3159-5d). Per preparar la jornada, cerquen informació científica i tècnica sobre el sector i seleccionen només la rellevant (3163-5.3). A la fira cada equip atén un lloc i explica a les famílies com emprar cada eina.",
+        "evidencia_es": "Puesto de feria con la demostración de las herramientas.",
+        "evidencia_ca": "Lloc de fira amb la demostració de les eines.",
+        "dua_es": "Guion de demostración con los pasos numerados y apoyo de un compañero.",
+        "dua_ca": "Guió de demostració amb els passos numerats i suport d'un company.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      },
+      {
+        "titulo_es": "Mesa redonda sobre fuentes del sector",
+        "titulo_ca": "Taula rodona sobre fonts del sector",
+        "contexto_es": "Una revista local publica datos sobre el empleo en peluquería y el aula debate si son creíbles.",
+        "contexto_ca": "Una revista local publica dades sobre l'ocupació en perruqueria i l'aula debat si són creïbles.",
+        "desarrollo_es": "Antes del debate, cada grupo prueba dos herramientas de búsqueda de empleo y anota qué resultados da cada una (3159-5d). Con los datos en la mano, el alumnado revisa la fuente de la revista, comprueba si cita estudios y prepara argumentos (3163-5.3). En la mesa redonda se defiende con pruebas si los datos merecen confianza.",
+        "desarrollo_ca": "Abans del debat, cada grup prova dues eines de cerca de feina i anota quins resultats dona cada una (3159-5d). Amb les dades a la mà, l'alumnat revisa la font de la revista, comprova si cita estudis i prepara arguments (3163-5.3). A la taula rodona es defensa amb proves si les dades mereixen confiança.",
+        "evidencia_es": "Argumentario con las pruebas de cada fuente.",
+        "evidencia_ca": "Argumentari amb les proves de cada font.",
+        "dua_es": "Turnos de palabra con tarjetas y tiempo de preparación individual.",
+        "dua_ca": "Torns de paraula amb targetes i temps de preparació individual.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Gincana de portales de empleo fiables",
+        "titulo_ca": "Gimcana de portals d'ocupació fiables",
+        "contexto_es": "El aula se convierte en una gincana con cinco estaciones para dominar las herramientas de búsqueda.",
+        "contexto_ca": "L'aula es converteix en una gimcana amb cinc estacions per dominar les eines de cerca.",
+        "desarrollo_es": "En cada estación el alumnado resuelve una prueba práctica con una herramienta de empleo: activar una alerta, subir un perfil o registrar una demanda (3159-5d). Para superar la prueba debe citar una fuente fiable que justifique el dato que usa (3163-5.3). El equipo que completa las cinco estaciones con las fuentes bien citadas gana la gincana.",
+        "desarrollo_ca": "A cada estació l'alumnat resol una prova pràctica amb una eina d'ocupació: activar una alerta, pujar un perfil o registrar una demanda (3159-5d). Per superar la prova ha d'esmentar una font fiable que justifiqui la dada que empra (3163-5.3). L'equip que completa les cinc estacions amb les fonts ben esmentades guanya la gimcana.",
+        "evidencia_es": "Pasaporte de la gincana con las cinco pruebas y sus fuentes.",
+        "evidencia_ca": "Passaport de la gimcana amb les cinc proves i les seves fonts.",
+        "dua_es": "Instrucciones de cada estación en tarjeta y ayuda entre iguales.",
+        "dua_ca": "Instruccions de cada estació en targeta i ajuda entre iguals.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3161", "ra": "CE1", "criterios": ["1.1", "1.3"] },
+    "b": { "modulo": "3163", "ra": "CE4", "criterios": ["4.1", "4.2"] },
+    "justificacion_es": "El patrimonio natural de las Illes Balears se valora desde la geografía y desde la ciencia que explica su conservación.",
+    "justificacion_ca": "El patrimoni natural de les Illes Balears es valora des de la geografia i des de la ciència que n'explica la conservació.",
+    "actividades": [
+      {
+        "titulo_es": "Salida a un espacio natural cercano",
+        "titulo_ca": "Sortida a un espai natural proper",
+        "contexto_es": "El grupo visita una zona natural de la Serra de Tramuntana para estudiar cómo se cuida el entorno.",
+        "contexto_ca": "El grup visita una zona natural de la Serra de Tramuntana per estudiar com es cuida l'entorn.",
+        "desarrollo_es": "Durante la salida el alumnado observa y anota los elementos del paisaje y las relaciones entre ellos (3161-1.1). Después se fija en cómo se protege el lugar y qué normas lo preservan (3161-1.3). En el aula, cada equipo explica qué hábitos de su vida diaria cuidan el organismo y el medio natural (3163-4.1) y relaciona la conservación del lugar con la calidad de vida de las personas (3163-4.2).",
+        "desarrollo_ca": "Durant la sortida l'alumnat observa i anota els elements del paisatge i les relacions entre ells (3161-1.1). Després es fixa en com es protegeix el lloc i quines normes el preserven (3161-1.3). A l'aula, cada equip explica quins hàbits de la seva vida diària cuiden l'organisme i el medi natural (3163-4.1) i relaciona la conservació del lloc amb la qualitat de vida de les persones (3163-4.2).",
+        "evidencia_es": "Cuaderno de campo con los datos de la salida.",
+        "evidencia_ca": "Quadern de camp amb les dades de la sortida.",
+        "dua_es": "Cuaderno de campo con apartados y dibujos guiados por una plantilla.",
+        "dua_ca": "Quadern de camp amb apartats i dibuixos guiats per una plantilla.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Caso del torrente que pierde vida",
+        "titulo_ca": "Cas del torrent que perd vida",
+        "contexto_es": "Un torrente de Mallorca aparece con menos vegetación y el aula investiga qué está pasando.",
+        "contexto_ca": "Un torrent de Mallorca apareix amb menys vegetació i l'aula investiga què està passant.",
+        "desarrollo_es": "El caso se presenta con fotografías y datos de dos años distintos y el alumnado analiza el entorno como un sistema (3161-1.1). También valora qué patrimonio natural está en riesgo y qué propuestas ayudarían a conservarlo (3161-1.3). A continuación estudia los efectos de las acciones humanas sobre el medio y propone hábitos sostenibles (3163-4.1) y explica con argumentos científicos por qué proteger ese lugar mejora la calidad de vida (3163-4.2).",
+        "desarrollo_ca": "El cas es presenta amb fotografies i dades de dos anys diferents i l'alumnat analitza l'entorn com un sistema (3161-1.1). També valora quin patrimoni natural està en risc i quines propostes ajudarien a conservar-lo (3161-1.3). A continuació estudia els efectes de les accions humanes sobre el medi i proposa hàbits sostenibles (3163-4.1) i explica amb arguments científics per què protegir aquell lloc millora la qualitat de vida (3163-4.2).",
+        "evidencia_es": "Informe del caso con las propuestas de conservación.",
+        "evidencia_ca": "Informe del cas amb les propostes de conservació.",
+        "dua_es": "Fotografías ampliadas y glosario de términos científicos de apoyo.",
+        "dua_ca": "Fotografies ampliades i glossari de termes científics de suport.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Propuestas para cuidar una cala",
+        "titulo_ca": "Propostes per cuidar una cala",
+        "contexto_es": "Una cala de Menorca recibe muchas visitas en verano y el aula prepara medidas para protegerla.",
+        "contexto_ca": "Una cala de Menorca rep moltes visites a l'estiu i l'aula prepara mesures per protegir-la.",
+        "desarrollo_es": "El alumnado recorre la cala con una ficha y describe los elementos del espacio y sus interrelaciones (3161-1.1). Con la información recogida, propone acciones concretas para conservar el patrimonio del lugar (3161-1.3). Después calcula qué hábitos de los visitantes reducen el impacto sobre el entorno (3163-4.1) y explica qué relación tiene proteger la biodiversidad con la vida de las personas del municipio (3163-4.2).",
+        "desarrollo_ca": "L'alumnat recorre la cala amb una fitxa i descriu els elements de l'espai i les seves interrelacions (3161-1.1). Amb la informació recollida, proposa accions concretes per conservar el patrimoni del lloc (3161-1.3). Després calcula quins hàbits dels visitants redueixen l'impacte sobre l'entorn (3163-4.1) i explica quina relació té protegir la biodiversitat amb la vida de les persones del municipi (3163-4.2).",
+        "evidencia_es": "Cartel con las medidas propuestas para la cala.",
+        "evidencia_ca": "Cartell amb les mesures proposades per a la cala.",
+        "dua_es": "Ficha de campo con pictogramas y apoyo de un compañero para la redacción.",
+        "dua_ca": "Fitxa de camp amb pictogrames i suport d'un company per a la redacció.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3161", "ra": "CE1", "criterios": ["1.3"] },
+    "b": { "modulo": "3163", "ra": "CE6", "criterios": ["6.1"] },
+    "justificacion_es": "La conservación del patrimonio se apoya en procedimientos científicos aplicados a los bienes culturales.",
+    "justificacion_ca": "La conservació del patrimoni es basa en procediments científics aplicats als béns culturals.",
+    "actividades": [
+      {
+        "titulo_es": "Ficha científica de un bien del museo",
+        "titulo_ca": "Fitxa científica d'un bé del museu",
+        "contexto_es": "El museo de Mallorca pide al aula fichas divulgativas sobre objetos antiguos del oficio de peluquero.",
+        "contexto_ca": "El museu de Mallorca demana a l'aula fitxes divulgatives sobre objectes antics de l'ofici de perruquer.",
+        "desarrollo_es": "Cada equipo elige una pieza, como unas tijeras antiguas o un secador de casco, y explica por qué merece conservarse (3161-1.3). Para la ficha mide y describe la pieza con procedimientos propios de las ciencias y las matemáticas (3163-6.1). Las fichas se exponen junto a las piezas en una vitrina del centro.",
+        "desarrollo_ca": "Cada equip tria una peça, com unes tisores antigues o un assecador de casc, i explica per què mereix conservar-se (3161-1.3). Per a la fitxa mesura i descriu la peça amb procediments propis de les ciències i les matemàtiques (3163-6.1). Les fitxes s'exposen al costat de les peces en una vitrina del centre.",
+        "evidencia_es": "Ficha divulgativa de la pieza del museo.",
+        "evidencia_ca": "Fitxa divulgativa de la peça del museu.",
+        "dua_es": "Plantilla de ficha con los apartados y una regla y balanza adaptadas.",
+        "dua_ca": "Plantilla de fitxa amb els apartats i un regle i balança adaptats.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Caso del cartel antiguo que se degrada",
+        "titulo_ca": "Cas del cartell antic que es degrada",
+        "contexto_es": "Un cartel antiguo de una barbería de Ciutadella se está estropeando en la pared y el aula busca cómo salvarlo.",
+        "contexto_ca": "Un cartell antic d'una barberia de Ciutadella s'està fent malbé a la paret i l'aula cerca com salvar-lo.",
+        "desarrollo_es": "El grupo examina fotografías del cartel y decide qué valor cultural tiene y qué se puede hacer para protegerlo (3161-1.3). Para entender el deterioro, mide humedad y luz con instrumentos sencillos y aplica procedimientos científicos (3163-6.1). El caso se cierra con una propuesta razonada de conservación.",
+        "desarrollo_ca": "El grup examina fotografies del cartell i decideix quin valor cultural té i què es pot fer per protegir-lo (3161-1.3). Per entendre el deteriorament, mesura humitat i llum amb instruments senzills i aplica procediments científics (3163-6.1). El cas es tanca amb una proposta raonada de conservació.",
+        "evidencia_es": "Propuesta de conservación con las mediciones hechas.",
+        "evidencia_ca": "Proposta de conservació amb les mesures fetes.",
+        "dua_es": "Instrumentos de medida ya calibrados y registro con casillas.",
+        "dua_ca": "Instruments de mesura ja calibrats i registre amb caselles.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Rol de guías del patrimonio del oficio",
+        "titulo_ca": "Rol de guies del patrimoni de l'ofici",
+        "contexto_es": "El centro organiza una visita guiada al taller histórico y el alumnado hace de guía para las familias.",
+        "contexto_ca": "El centre organitza una visita guiada al taller històric i l'alumnat fa de guia per a les famílies.",
+        "desarrollo_es": "Cada guía prepara la explicación de una pieza y justifica por qué forma parte del patrimonio del oficio (3161-1.3). Para responder a las preguntas del público, calcula medidas y proporciones del objeto y las explica con lenguaje claro (3163-6.1). La visita se graba para revisar después cómo ha ido.",
+        "desarrollo_ca": "Cada guia prepara l'explicació d'una peça i justifica per què forma part del patrimoni de l'ofici (3161-1.3). Per respondre a les preguntes del públic, calcula mesures i proporcions de l'objecte i les explica amb llenguatge clar (3163-6.1). La visita s'enregistra per revisar després com ha anat.",
+        "evidencia_es": "Grabación de la visita guiada y guion de la pieza.",
+        "evidencia_ca": "Enregistrament de la visita guiada i guió de la peça.",
+        "dua_es": "Guion con las ideas clave subrayadas y ensayo previo con un compañero.",
+        "dua_ca": "Guió amb les idees clau subratllades i assaig previ amb un company.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  }
+]

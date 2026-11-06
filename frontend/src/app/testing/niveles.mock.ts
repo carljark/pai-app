@@ -9,8 +9,14 @@ export const NIVELES_MOCK: NivelEducativo[] = [
     nombre_es: 'CFGB Peluquería y Estética',
     nombre_ca: 'CFGB Perruqueria i Estètica',
     unidad: 'RA',
-    cursos: [{ curso: '1º' }, { curso: '2º' }],
-    mapas: [{ tab: 'FPB', moduleCode: '3060', raId: '3060_RA1' }],
+    cursos: [
+      { curso: '1º', modulos: ['3060', '3062', '3064', '3061', '3159', '3161', '3163'] },
+      { curso: '2º', modulos: ['3005', '3065', '3063', '3160', '3162', '3164'] },
+    ],
+    mapas: [
+      { tab: 'FPB', curso: '1º', moduleCode: '3060', raId: '3060_RA1' },
+      { tab: 'FPB_2', curso: '2º', moduleCode: '3005', raId: '3005_RA1' },
+    ],
   },
   {
     id: 'CFGM_ESTETICA',

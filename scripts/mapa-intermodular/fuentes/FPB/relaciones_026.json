@@ -1,0 +1,389 @@
+[
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA3",
+      "criterios": [
+        "c",
+        "f",
+        "m"
+      ]
+    },
+    "b": {
+      "modulo": "3064",
+      "ra": "RA4",
+      "criterios": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    "justificacion_es": "Preparar espátulas y bandas, revisar la cera y gestionar sus residuos forma parte del montaje del cambio temporal, que usa moldes y accesorios.",
+    "justificacion_ca": "Preparar espàtules i bandes, revisar la cera i gestionar-ne els residus forma part del muntatge del canvi temporal, que usa motlles i accessoris.",
+    "actividades": [
+      {
+        "titulo_es": "Reto del puesto listo para depilar",
+        "titulo_ca": "Repte del lloc a punt per depilar",
+        "contexto_es": "Una clienta del salón de prácticas del centro de Inca pide una depilación de piernas y, a la vez, un marcado de ondas para una boda.",
+        "contexto_ca": "Una clienta del saló de pràctiques del centre d'Inca demana una depilació de cames i, alhora, un marcat d'ones per a un casament.",
+        "desarrollo_es": "El alumnado coloca espátulas, bandas de papel y guantes en la bandeja (3062-3c), comprueba que la cera caliente está a la temperatura adecuada antes de aplicarla (3062-3f), elige la técnica de cambio de forma según el peinado pedido (3064-4e), selecciona el molde y el accesorio necesarios (3064-4f) y aplica el cosmético fijador (3064-4g). Al acabar, retira los residuos de cera siguiendo la normativa vigente (3062-3m).",
+        "desarrollo_ca": "L'alumnat col·loca espàtules, bandes de paper i guants a la safata (3062-3c), comprova que la cera calenta està a la temperatura adequada abans d'aplicar-la (3062-3f), tria la tècnica de canvi de forma segons el pentinat demanat (3064-4e), selecciona el motlle i l'accessori necessaris (3064-4f) i aplica el cosmètic fixador (3064-4g). En acabar, retira els residus de cera seguint la normativa vigent (3062-3m).",
+        "evidencia_es": "Foto de la estación montada junto a la lista de comprobación firmada.",
+        "evidencia_ca": "Fotografia de l'estació muntada amb la llista de comprovació signada.",
+        "dua_es": "Tarjetas con dibujos de cada paso del montaje para quien lee con dificultad.",
+        "dua_ca": "Targetes amb dibuixos de cada pas del muntatge per a qui llegeix amb dificultat.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Estudio de caso de la cera demasiado caliente",
+        "titulo_ca": "Estudi de cas de la cera massa calenta",
+        "contexto_es": "En un salón de Manacor, una cera se calentó de más y hubo que rehacer el protocolo antes de atender a la siguiente clienta.",
+        "contexto_ca": "En un saló de Manacor, una cera es va escalfar massa i es va haver de refer el protocol abans d'atendre la clienta següent.",
+        "desarrollo_es": "Ante el caso, el alumnado revisa el estado de los aparatos y de la cera antes de reutilizarla (3062-3f), vuelve a preparar los útiles y el material desechable (3062-3c), decide si mantiene el peinado previsto eligiendo otra técnica de cambio de forma (3064-4e) y ajusta el molde y el cosmético fijador a esa decisión (3064-4f) (3064-4g). Por último, recoge y elimina los residuos conforme a la normativa (3062-3m).",
+        "desarrollo_ca": "Davant el cas, l'alumnat revisa l'estat dels aparells i de la cera abans de tornar-la a utilitzar (3062-3f), torna a preparar els estris i el material d'un sol ús (3062-3c), decideix si manté el pentinat previst triant una altra tècnica de canvi de forma (3064-4e) i ajusta el motlle i el cosmètic fixador a aquesta decisió (3064-4f) (3064-4g). Finalment, recull i elimina els residus d'acord amb la normativa (3062-3m).",
+        "evidencia_es": "Informe escrito con las causas del incidente y las medidas correctoras.",
+        "evidencia_ca": "Informe escrit amb les causes de l'incident i les mesures correctores.",
+        "dua_es": "Se permite responder el informe con un guion de frases para empezar.",
+        "dua_ca": "Es permet respondre l'informe amb un guió de frases per començar.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Rincones de preparación y marcado simultáneos",
+        "titulo_ca": "Racons de preparació i marcat simultanis",
+        "contexto_es": "El aula se reparte como un salón real donde dos puestos atienden a la vez una depilación y un marcado para la fiesta del centro.",
+        "contexto_ca": "L'aula es reparteix com un saló real on dos llocs atenen alhora una depilació i un marcat per a la festa del centre.",
+        "desarrollo_es": "Cada rincón recibe una tarea: en uno se preparan los útiles y se revisa la cera (3062-3c) (3062-3f) y en el otro se escoge la técnica de cambio de forma (3064-4e), el molde (3064-4f) y el fijador (3064-4g). Al cambiar de rincón, se comprueba la limpieza y la retirada de residuos (3062-3m) del puesto anterior.",
+        "desarrollo_ca": "Cada racó rep una tasca: en un se preparen els estris i es revisa la cera (3062-3c) (3062-3f) i en l'altre es tria la tècnica de canvi de forma (3064-4e), el motlle (3064-4f) i el fixador (3064-4g). En canviar de racó, es comprova la neteja i la retirada de residus (3062-3m) del lloc anterior.",
+        "evidencia_es": "Cartel de rincón con el orden de pasos y la marca de revisión.",
+        "evidencia_ca": "Cartell de racó amb l'ordre de passos i la marca de revisió.",
+        "dua_es": "Cada rincón incluye un modelo ya resuelto para consultar en cualquier momento.",
+        "dua_ca": "Cada racó inclou un model ja resolt per consultar en qualsevol moment.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA3",
+      "criterios": [
+        "e",
+        "i",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "3061",
+      "ra": "RA3",
+      "criterios": [
+        "d",
+        "j"
+      ]
+    },
+    "justificacion_es": "Limpiar la zona, masajear y respetar los tiempos de la depilación se compara con la protección y el tiempo del proceso de manicura.",
+    "justificacion_ca": "Netejar la zona, fer massatge i respectar els temps de la depilació es compara amb la protecció i el temps del procés de manicura.",
+    "actividades": [
+      {
+        "titulo_es": "Manicura y depilación por turnos controlados",
+        "titulo_ca": "Manicura i depilació per torns controlats",
+        "contexto_es": "Una vecina de Palma quiere manos cuidadas y piernas depiladas antes de la exposición del centro, así que se organizan dos turnos seguidos.",
+        "contexto_ca": "Una veïna de Palma vol les mans cuidades i les cames depilades abans de l'exposició del centre, així que s'organitzen dos torns seguits.",
+        "desarrollo_es": "El alumnado prepara y protege tanto al cliente como a sí mismo antes de cada servicio (3061-3d), limpia y desinfecta la zona que va a depilar (3062-3e) y realiza el masaje calmante y descongestivo posterior (3062-3i). Cada proceso se cierra dentro del tiempo previsto, tanto en la manicura como en la depilación (3061-3j) (3062-3j).",
+        "desarrollo_ca": "L'alumnat prepara i protegeix tant el client com ell mateix abans de cada servei (3061-3d), neteja i desinfecta la zona que depilarà (3062-3e) i fa el massatge calmant i descongestiu posterior (3062-3i). Cada procés es tanca dins el temps previst, tant en la manicura com en la depilació (3061-3j) (3062-3j).",
+        "evidencia_es": "Hoja de tiempos con la hora de inicio y fin de cada servicio.",
+        "evidencia_ca": "Full de temps amb l'hora d'inici i fi de cada servei.",
+        "dua_es": "Un reloj temporizador visible en el puesto ayuda a quien se despista con el tiempo.",
+        "dua_ca": "Un rellotge temporitzador visible al lloc ajuda qui es despista amb el temps.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Juego de rol de la clienta con prisa",
+        "titulo_ca": "Joc de rol de la clienta amb presses",
+        "contexto_es": "En el salón del centro, una clienta llega justa de tiempo y pide acortar la preparación para salir antes.",
+        "contexto_ca": "Al saló del centre, una clienta arriba justa de temps i demana escurçar la preparació per sortir abans.",
+        "desarrollo_es": "El alumnado representa la escena y explica por qué no puede saltarse la protección ni la desinfección de la zona (3061-3d) (3062-3e), pero ofrece un masaje calmante más ágil (3062-3i). Después cada pareja compara el tiempo real de manicura y de depilación (3061-3j) (3062-3j) y propone un ajuste.",
+        "desarrollo_ca": "L'alumnat representa l'escena i explica per què no es pot saltar la protecció ni la desinfecció de la zona (3061-3d) (3062-3e), però ofereix un massatge calmant més àgil (3062-3i). Després cada parella compara el temps real de manicura i de depilació (3061-3j) (3062-3j) i proposa un ajust.",
+        "evidencia_es": "Vídeo corto de la escena con dos propuestas de ajuste del tiempo.",
+        "evidencia_ca": "Vídeo curt de l'escena amb dues propostes d'ajust del temps.",
+        "dua_es": "Guion con las frases clave para quien le cuesta improvisar en público.",
+        "dua_ca": "Guió amb les frases clau per a qui li costa improvisar en públic.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Debate sobre los tiempos que no se negocian",
+        "titulo_ca": "Debat sobre els temps que no es negocien",
+        "contexto_es": "El centro recibe quejas de que los servicios se alargan; el grupo debe acordar qué pasos son intocables y cuáles flexibles.",
+        "contexto_ca": "El centre rep queixes que els serveis s'allarguen; el grup ha d'acordar quins passos són intocables i quins flexibles.",
+        "desarrollo_es": "Por equipos, el alumnado ordena en tarjetas los pasos de protección (3061-3d), limpieza y desinfección (3062-3e) y masaje (3062-3i) y debate cuáles pueden acelerarse. Se cierra con un turno de palabra sobre el tiempo de cada proceso (3061-3j) (3062-3j) y se escriben las conclusiones.",
+        "desarrollo_ca": "Per equips, l'alumnat ordena en targetes els passos de protecció (3061-3d), neteja i desinfecció (3062-3e) i massatge (3062-3i) i debat quins es poden accelerar. Es tanca amb un torn de paraula sobre el temps de cada procés (3061-3j) (3062-3j) i s'escriuen les conclusions.",
+        "evidencia_es": "Acta del debate con la lista de pasos intocables y flexibles.",
+        "evidencia_ca": "Acta del debat amb la llista de passos intocables i flexibles.",
+        "dua_es": "Las tarjetas se entregan ya recortadas y con color para facilitar la ordenación.",
+        "dua_ca": "Les targetes es lliuren ja retallades i amb color per facilitar l'ordenació.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA3",
+      "criterios": [
+        "n"
+      ]
+    },
+    "b": {
+      "modulo": "3159",
+      "ra": "RA2",
+      "criterios": [
+        "b",
+        "e"
+      ]
+    },
+    "justificacion_es": "Preguntar por el grado de satisfacción permite practicar la asertividad y la gestión de conflictos ante un resultado mejorable.",
+    "justificacion_ca": "Preguntar pel grau de satisfacció permet practicar l'assertivitat i la gestió de conflictes davant un resultat millorable.",
+    "actividades": [
+      {
+        "titulo_es": "Encuesta de satisfacción tras la depilación",
+        "titulo_ca": "Enquesta de satisfacció després de la depilació",
+        "contexto_es": "Al terminar las prácticas de depilación, el centro quiere saber qué piensa cada persona atendida para mejorar el servicio.",
+        "contexto_ca": "En acabar les pràctiques de depilació, el centre vol saber què pensa cada persona atesa per millorar el servei.",
+        "desarrollo_es": "El alumnado elabora y formula preguntas breves para conocer el grado de satisfacción de la clienta (3062-3n), las plantea con tono asertivo sin dejarse llevar por la frustración (3159-2b) y anota las respuestas. Si aparece una queja, ensaya una reacción flexible y positiva (3159-2e).",
+        "desarrollo_ca": "L'alumnat elabora i formula preguntes breus per conèixer el grau de satisfacció de la clienta (3062-3n), les planteja amb to assertiu sense deixar-se portar per la frustració (3159-2b) i anota les respostes. Si apareix una queixa, assaja una reacció flexible i positiva (3159-2e).",
+        "evidencia_es": "Cuestionario cumplimentado con las respuestas recogidas.",
+        "evidencia_ca": "Qüestionari emplenat amb les respostes recollides.",
+        "dua_es": "Se ofrecen las preguntas en pictogramas para quien prefiere no leer.",
+        "dua_ca": "S'ofereixen les preguntes en pictogrames per a qui prefereix no llegir.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Estudio de caso de una clienta enfadada",
+        "titulo_ca": "Estudi de cas d'una clienta enfadada",
+        "contexto_es": "Una clienta de un salón de Eivissa sale de la depilación con una zona enrojecida y eleva la voz en recepción.",
+        "contexto_ca": "Una clienta d'un saló d'Eivissa surt de la depilació amb una zona envermellida i alça la veu a recepció.",
+        "desarrollo_es": "El alumnado lee el caso y prepara las preguntas con las que averiguaría la satisfacción real de la clienta (3062-3n). Después identifica en qué momento se pudo actuar con asertividad (3159-2b) y redacta una alternativa de respuesta positiva a la incertidumbre (3159-2e).",
+        "desarrollo_ca": "L'alumnat llegeix el cas i prepara les preguntes amb què esbrinaria la satisfacció real de la clienta (3062-3n). Després identifica en quin moment es podia actuar amb assertivitat (3159-2b) i redacta una alternativa de resposta positiva a la incertesa (3159-2e).",
+        "evidencia_es": "Ficha del caso resuelta con la secuencia de preguntas y la respuesta.",
+        "evidencia_ca": "Fitxa del cas resolta amb la seqüència de preguntes i la resposta.",
+        "dua_es": "El caso se presenta también en audio para quien comprende mejor escuchando.",
+        "dua_ca": "El cas es presenta també en àudio per a qui comprèn millor escoltant.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Gamificación de la escala de satisfacción",
+        "titulo_ca": "Gamificació de l'escala de satisfacció",
+        "contexto_es": "Para la jornada de puertas abiertas, el alumnado convierte el sondeo de satisfacción en un juego con puntos para toda la clase.",
+        "contexto_ca": "Per a la jornada de portes obertes, l'alumnat converteix el sondeig de satisfacció en un joc amb punts per a tota la classe.",
+        "desarrollo_es": "Divididos en parejas, unos formulan las preguntas de satisfacción (3062-3n) y otros puntúan según lo asertivo del tono empleado (3159-2b). Cada ronda añade una situación sorpresa que obliga a reaccionar de forma positiva y flexible (3159-2e), y el equipo con más puntos lo explica al resto.",
+        "desarrollo_ca": "Dividits en parelles, uns formulen les preguntes de satisfacció (3062-3n) i altres puntuen segons com d'assertiu és el to emprat (3159-2b). Cada ronda afegeix una situació sorpresa que obliga a reaccionar de manera positiva i flexible (3159-2e), i l'equip amb més punts ho explica a la resta.",
+        "evidencia_es": "Tabla de puntuación con las preguntas y las reacciones registradas.",
+        "evidencia_ca": "Taula de puntuació amb les preguntes i les reaccions registrades.",
+        "dua_es": "Las parejas se forman de manera heterogénea y cada rol tiene su plantilla.",
+        "dua_ca": "Les parelles es formen de manera heterogènia i cada rol té la seva plantilla.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA3",
+      "criterios": [
+        "b",
+        "l"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE3",
+      "criterios": [
+        "3.3"
+      ]
+    },
+    "justificacion_es": "Preparar al cliente con seguridad y respetar las normas medioambientales se relaciona con el trato igualitario y no discriminatorio.",
+    "justificacion_ca": "Preparar el client amb seguretat i respectar les normes mediambientals es relaciona amb el tracte igualitari i no discriminatori.",
+    "actividades": [
+      {
+        "titulo_es": "Protocolo de bienvenida sin discriminación",
+        "titulo_ca": "Protocol de benvinguda sense discriminació",
+        "contexto_es": "En la peluquería del centro se atiende a un grupo muy diverso de vecinos y vecinas de la barriada.",
+        "contexto_ca": "A la perruqueria del centre s'atén un grup molt divers de veïns i veïnes del barri.",
+        "desarrollo_es": "El alumnado recibe a cada persona preparándola para el servicio y garantizando su seguridad (3062-3b) y aplica las medidas de seguridad y medioambientales que corresponden (3062-3l). A la vez, revisa su propio comportamiento para que el trato sea igualitario y rechace cualquier discriminación (3161-3.3).",
+        "desarrollo_ca": "L'alumnat rep cada persona preparant-la per al servei i garantint-ne la seguretat (3062-3b) i aplica les mesures de seguretat i mediambientals que corresponen (3062-3l). Alhora, revisa el seu propi comportament perquè el tracte sigui igualitari i rebutgi qualsevol discriminació (3161-3.3).",
+        "evidencia_es": "Lista de acogida con las comprobaciones de seguridad y de trato.",
+        "evidencia_ca": "Llista d'acollida amb les comprovacions de seguretat i de tracte.",
+        "dua_es": "La lista se ofrece en versión con letra grande y apoyos visuales.",
+        "dua_ca": "La llista s'ofereix en versió amb lletra gran i suports visuals.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Teatro foro sobre el reparto de tareas",
+        "titulo_ca": "Teatre fòrum sobre el repartiment de tasques",
+        "contexto_es": "En el salón se decide quién atiende a cada persona y surge la duda de si se reparten los servicios con criterios justos.",
+        "contexto_ca": "Al saló es decideix qui atén cada persona i sorgeix el dubte de si es reparteixen els serveis amb criteris justos.",
+        "desarrollo_es": "El grupo prepara una escena en la que se asigna una tarea pesada siempre a la misma persona, y el público la detiene para cambiarla. En la nueva versión se prepara al cliente con seguridad (3062-3b), se respetan las medidas de seguridad y medioambientales (3062-3l) y se argumenta el trato igualitario (3161-3.3).",
+        "desarrollo_ca": "El grup prepara una escena en què s'assigna una tasca feixuga sempre a la mateixa persona, i el públic l'atura per canviar-la. En la nova versió es prepara el client amb seguretat (3062-3b), es respecten les mesures de seguretat i mediambientals (3062-3l) i s'argumenta el tracte igualitari (3161-3.3).",
+        "evidencia_es": "Guion de la segunda versión de la escena con los argumentos escritos.",
+        "evidencia_ca": "Guió de la segona versió de l'escena amb els arguments escrits.",
+        "dua_es": "Los papeles pueden leerse o improvisarse según la comodidad de cada estudiante.",
+        "dua_ca": "Els papers es poden llegir o improvisar segons la comoditat de cada estudiant.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Carta de compromiso del salón inclusivo",
+        "titulo_ca": "Carta de compromís del saló inclusiu",
+        "contexto_es": "La asociación de vecinos pide al salón del centro un documento visible que resuma cómo se atiende a todo el mundo por igual.",
+        "contexto_ca": "L'associació de veïns demana al saló del centre un document visible que resumeixi com s'atén tothom per igual.",
+        "desarrollo_es": "Por equipos, el alumnado redacta los compromisos del salón: cómo se prepara al cliente con seguridad (3062-3b), qué medidas de seguridad y medioambientales se aplican siempre (3062-3l) y con qué argumentos se rechaza la discriminación (3161-3.3). Después se diseña la carta y se coloca en la pared.",
+        "desarrollo_ca": "Per equips, l'alumnat redacta els compromisos del saló: com es prepara el client amb seguretat (3062-3b), quines mesures de seguretat i mediambientals s'apliquen sempre (3062-3l) i amb quins arguments es rebutja la discriminació (3161-3.3). Després es dissenya la carta i es col·loca a la paret.",
+        "evidencia_es": "Carta mural firmada por el grupo y expuesta en el aula.",
+        "evidencia_ca": "Carta mural signada pel grup i exposada a l'aula.",
+        "dua_es": "Se admiten aportaciones en forma de dibujo o frase corta para quien escribe con esfuerzo.",
+        "dua_ca": "S'admeten aportacions en forma de dibuix o frase curta per a qui escriu amb esforç.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA3",
+      "criterios": [
+        "g",
+        "h",
+        "k"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE7",
+      "criterios": [
+        "7.1"
+      ]
+    },
+    "justificacion_es": "Aplicar la cera en la dirección correcta y retirar restos enseña a corregir errores sin perder la confianza en uno mismo.",
+    "justificacion_ca": "Aplicar la cera en la direcció correcta i retirar restes ensenya a corregir errors sense perdre la confiança en un mateix.",
+    "actividades": [
+      {
+        "titulo_es": "Reto de la tira de cera perfecta",
+        "titulo_ca": "Repte de la tira de cera perfecta",
+        "contexto_es": "En el salón del centro se prepara una sesión de depilación de medias piernas con varias personas voluntarias.",
+        "contexto_ca": "Al saló del centre es prepara una sessió de depilació de mitges cames amb diverses persones voluntàries.",
+        "desarrollo_es": "El alumnado aplica las tiras de cera en la dirección del crecimiento del vello y las retira a contrapelo (3062-3g) y completa con pinzas los restos que quedan (3062-3h). Cuando una tira sale mal, se detiene, analiza el fallo como oportunidad de mejora y lo intenta de nuevo con confianza (3163-7.1). Al final limpia los aparatos con los productos indicados (3062-3k).",
+        "desarrollo_ca": "L'alumnat aplica les tires de cera en la direcció del creixement del pèl i les retira a contrapèl (3062-3g) i completa amb pinces les restes que queden (3062-3h). Quan una tira surt malament, s'atura, analitza la fallada com una oportunitat de millora i ho torna a provar amb confiança (3163-7.1). Al final neteja els aparells amb els productes indicats (3062-3k).",
+        "evidencia_es": "Ficha de autoevaluación de cada intento hasta lograr la tira correcta.",
+        "evidencia_ca": "Fitxa d'autoavaluació de cada intent a fi d'aconseguir la tira correcta.",
+        "dua_es": "Se permite repetir con tiras de práctica tantas veces como haga falta.",
+        "dua_ca": "Es permet repetir amb tires de pràctica tantes vegades com calgui.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Diario del error en el puesto de cera",
+        "titulo_ca": "Diari de l'error al lloc de cera",
+        "contexto_es": "A lo largo de varias sesiones, el alumnado anota los pequeños fallos que comete al depilar para ver su evolución.",
+        "contexto_ca": "Al llarg de diverses sessions, l'alumnat anota les petites fallades que comet en depilar per veure'n l'evolució.",
+        "desarrollo_es": "Cada sesión, el alumnado anota dónde colocó la tira y cómo la retiró (3062-3g), si hubo restos que retirar con pinzas (3062-3h) y cómo reaccionó ante el error sin perder la confianza (3163-7.1). Cierra el diario con la limpieza de los aparatos y el producto empleado (3062-3k).",
+        "desarrollo_ca": "Cada sessió, l'alumnat anota on va col·locar la tira i com la va retirar (3062-3g), si hi va haver restes per retirar amb pinces (3062-3h) i com va reaccionar davant l'error sense perdre la confiança (3163-7.1). Tanca el diari amb la neteja dels aparells i el producte emprat (3062-3k).",
+        "evidencia_es": "Cuaderno de sesiones con la evolución de los aciertos y los fallos.",
+        "evidencia_ca": "Quadern de sessions amb l'evolució dels encerts i les fallades.",
+        "dua_es": "El diario admite anotaciones con dibujos o audios cortos si escribir cansa.",
+        "dua_ca": "El diari admet anotacions amb dibuixos o àudios curts si escriure cansa.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      },
+      {
+        "titulo_es": "Concurso de limpieza y seguridad de aparatos",
+        "titulo_ca": "Concurs de neteja i seguretat d'aparells",
+        "contexto_es": "El aula organiza una competición amistosa para ver qué equipo deja los aparatos de cera impecables y seguros.",
+        "contexto_ca": "L'aula organitza una competició amistosa per veure quin equip deixa els aparells de cera impecables i segurs.",
+        "desarrollo_es": "Cada equipo demuestra cómo aplica y retira una tira correctamente (3062-3g) y cómo remata los restos con pinzas (3062-3h). Después limpia los aparatos con los productos específicos y las normas del fabricante (3062-3k); el equipo que corrige mejor sus fallos y mantiene la calma suma más puntos (3163-7.1).",
+        "desarrollo_ca": "Cada equip demostra com aplica i retira una tira correctament (3062-3g) i com remata les restes amb pinces (3062-3h). Després neteja els aparells amb els productes específics i les normes del fabricant (3062-3k); l'equip que corregeix millor les seves fallades i manté la calma suma més punts (3163-7.1).",
+        "evidencia_es": "Rúbrica de equipo con la puntuación de limpieza y de actitud ante el error.",
+        "evidencia_ca": "Rúbrica d'equip amb la puntuació de neteja i d'actitud davant l'error.",
+        "dua_es": "La rúbrica usa iconos y colores para que se entienda de un vistazo.",
+        "dua_ca": "La rúbrica fa servir icones i colors perquè s'entengui d'un cop d'ull.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "i",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "3064",
+      "ra": "RA5",
+      "criterios": [
+        "c",
+        "d",
+        "h"
+      ]
+    },
+    "justificacion_es": "La protección personal, los cuidados posteriores y la limpieza de utensilios se comparten con el cambio permanente, que también protege la piel.",
+    "justificacion_ca": "La protecció personal, les cures posteriors i la neteja d'estris es comparteixen amb el canvi permanent, que també protegeix la pell.",
+    "actividades": [
+      {
+        "titulo_es": "Montaje seguro del puesto de decoloración",
+        "titulo_ca": "Muntatge segur del lloc de decoloració",
+        "contexto_es": "Antes de decolorar el vello de una clienta del centro, el alumnado debe dejar el puesto protegido y ordenado para un cambio permanente posterior.",
+        "contexto_ca": "Abans de decolorar el borrissol d'una clienta del centre, l'alumnat ha de deixar el lloc protegit i ordenat per a un canvi permanent posterior.",
+        "desarrollo_es": "El alumnado se pone el equipo de protección personal antes de manipular el producto (3062-4a), protege al cliente con los productos necesarios para la piel (3064-5d) y comprueba que el profesional trabaja con las medidas de seguridad e higiene (3064-5c). Después dispone el área de trabajo con orden y limpieza (3064-5h), aplica los cuidados posteriores que restituyen la emulsión de la piel (3062-4i) y limpia los utensilios según las normas del fabricante (3062-4j).",
+        "desarrollo_ca": "L'alumnat es posa l'equip de protecció personal abans de manipular el producte (3062-4a), protegeix el client amb els productes necessaris per a la pell (3064-5d) i comprova que el professional treballa amb les mesures de seguretat i higiene (3064-5c). Després disposa l'àrea de treball amb ordre i neteja (3064-5h), aplica les cures posteriors que restitueixen l'emulsió de la pell (3062-4i) i neteja els estris segons les normes del fabricant (3062-4j).",
+        "evidencia_es": "Foto del puesto con la lista de protección y orden completada.",
+        "evidencia_ca": "Fotografia del lloc amb la llista de protecció i ordre completada.",
+        "dua_es": "La lista de comprobación se entrega plastificada para poder marcar con rotulador.",
+        "dua_ca": "La llista de comprovació es lliura plastificada per poder marcar amb retolador.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Investigación sobre un puesto desordenado",
+        "titulo_ca": "Recerca sobre un lloc desordenat",
+        "contexto_es": "Tras una jornada intensa, en el salón quedan restos de producto y utensilios fuera de sitio; hay que averiguar por qué.",
+        "contexto_ca": "Després d'una jornada intensa, al saló queden restes de producte i estris fora de lloc; cal esbrinar per què.",
+        "desarrollo_es": "Por parejas, el alumnado inspecciona el puesto y anota qué protección personal faltó (3062-4a), qué falló en la protección de la piel de la clienta (3064-5d) y qué medidas de seguridad e higiene del profesional se saltaron (3064-5c). También revisa el orden y la limpieza del área (3064-5h), la falta de cuidados posteriores (3062-4i) y el estado de los utensilios sin limpiar (3062-4j).",
+        "desarrollo_ca": "Per parelles, l'alumnat inspecciona el lloc i anota quina protecció personal va faltar (3062-4a), què va fallar en la protecció de la pell de la clienta (3064-5d) i quines mesures de seguretat i higiene del professional es van saltar (3064-5c). També revisa l'ordre i la neteja de l'àrea (3064-5h), la manca de cures posteriors (3062-4i) i l'estat dels estris sense netejar (3062-4j).",
+        "evidencia_es": "Informe de inspección con las causas y las correcciones propuestas.",
+        "evidencia_ca": "Informe d'inspecció amb les causes i les correccions proposades.",
+        "dua_es": "Se reparte una plantilla con casillas para quien necesita ordenar la información.",
+        "dua_ca": "Es reparteix una plantilla amb caselles per a qui necessita ordenar la informació.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Simulación de la despedida con cuidados posteriores",
+        "titulo_ca": "Simulació del comiat amb cures posteriors",
+        "contexto_es": "El alumnado ensaya el momento final del servicio, cuando explica a la clienta cómo cuidar la piel y cómo quedará el puesto.",
+        "contexto_ca": "L'alumnat assaja el moment final del servei, quan explica a la clienta com cuidar la pell i com quedarà el lloc.",
+        "desarrollo_es": "En parejas, una persona hace de clienta y la otra cierra la sesión: retira su protección personal (3062-4a), repasa con la clienta los productos que protegieron su piel (3064-5d) y recuerda las medidas de seguridad e higiene que se han mantenido (3064-5c). Después deja el área ordenada (3064-5h), explica los cuidados posteriores (3062-4i) y guarda los utensilios ya limpios (3062-4j).",
+        "desarrollo_ca": "En parelles, una persona fa de clienta i l'altra tanca la sessió: es treu la protecció personal (3062-4a), repassa amb la clienta els productes que van protegir la seva pell (3064-5d) i recorda les mesures de seguretat i higiene que s'han mantingut (3064-5c). Després deixa l'àrea ordenada (3064-5h), explica les cures posteriors (3062-4i) i guarda els estris ja nets (3062-4j).",
+        "evidencia_es": "Vídeo de la despedida con la pauta de cuidados explicada.",
+        "evidencia_ca": "Vídeo del comiat amb la pauta de cures explicada.",
+        "dua_es": "Se facilita un guion con viñetas para quien necesita apoyo al hablar.",
+        "dua_ca": "Es facilita un guió amb vinyetes per a qui necessita suport en parlar.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      }
+    ]
+  }
+]

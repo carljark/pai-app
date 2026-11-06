@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3061", "ra": "RA4", "criterios": ["g", "k"] },
+    "b": { "modulo": "3161", "ra": "CE7", "criterios": ["7.1"] },
+    "justificacion_es": "Atender a una clienta extranjera en la pedicura exige adaptar el limado y explicar el servicio con instrucciones sencillas.",
+    "justificacion_ca": "Atendre una clienta estrangera en la pedicura exigeix adaptar el llimat i explicar el servei amb instruccions senzilles.",
+    "actividades": [
+      {
+        "titulo_es": "Simulación de pedicura con clienta de habla inglesa",
+        "titulo_ca": "Simulació de pedicura amb clienta de parla anglesa",
+        "contexto_es": "El salón del barrio recibe a una turista británica que pide una pedicura y solo habla inglés.",
+        "contexto_ca": "El saló del barri rep una turista britànica que demana una pedicura i només parla anglès.",
+        "desarrollo_es": "El alumnado monta el puesto de pedicura y recibe a la clienta inglesa siguiendo un guion sencillo en lengua extranjera (3161-7.1). A continuación realiza el desmaquillado, el limado y el acondicionamiento de cutículas adaptados a las uñas de la clienta (3061-4g). Por último completa todo el servicio en el tiempo acordado con la tutora (3061-4k) y comprueba con la clienta si ha entendido sus indicaciones.",
+        "desarrollo_ca": "L'alumnat munta el lloc de pedicura i rep la clienta anglesa seguint un guió senzill en llengua estrangera (3161-7.1). Tot seguit fa el desmaquillatge, el llimat i el condicionament de cutícules adaptats a les ungles de la clienta (3061-4g). Per acabar, completa tot el servei dins el temps acordat amb la tutora (3061-4k) i comprova amb la clienta si ha entès les seves indicacions.",
+        "evidencia_es": "Guion en inglés y pedicura terminada dentro del tiempo marcado.",
+        "evidencia_ca": "Guió en anglès i pedicura acabada dins el temps marcat.",
+        "dua_es": "Guion en inglés con pictogramas y frases cortas para quien necesita apoyo.",
+        "dua_ca": "Guió en anglès amb pictogrames i frases curtes per a qui necessita suport.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Ficha bilingüe de limado a partir del folleto",
+        "titulo_ca": "Fitxa bilingüe de llimat a partir del fullet",
+        "contexto_es": "Llega al taller un folleto de pedicura en inglés de una marca que patrocina las prácticas del centro.",
+        "contexto_ca": "Arriba al taller un fullet de pedicura en anglès d'una marca que patrocina les pràctiques del centre.",
+        "desarrollo_es": "Con el folleto en inglés como fuente, cada pareja localiza los pasos del limado y los traduce al castellano en una ficha bilingüe (3161-7.1). Después prueba el desmaquillado y el limado en una mano de práctica siguiendo las indicaciones adaptadas a cada uña (3061-4g). Finalmente cronometra el proceso completo y anota en la ficha si el tiempo empleado es el adecuado para un servicio real (3061-4k).",
+        "desarrollo_ca": "Amb el fullet en anglès com a font, cada parella localitza els passos del llimat i els tradueix al castellà en una fitxa bilingüe (3161-7.1). Després prova el desmaquillatge i el llimat en una mà de pràctica seguint les indicacions adaptades a cada ungla (3061-4g). Finalment cronometra el procés complet i anota a la fitxa si el temps emprat és l'adequat per a un servei real (3061-4k).",
+        "evidencia_es": "Ficha bilingüe de pasos del limado con el tiempo anotado.",
+        "evidencia_ca": "Fitxa bilingüe dels passos del llimat amb el temps anotat.",
+        "dua_es": "Folleto ampliado en letra grande y glosario con dibujos para cada paso.",
+        "dua_ca": "Fullet ampliat amb lletra gran i glossari amb dibuixos per a cada pas.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Juego de tarjetas para limar contra reloj",
+        "titulo_ca": "Joc de targetes per llimar contra rellotge",
+        "contexto_es": "En la semana cultural del centro se monta un rincón de pedicura rápida para el profesorado.",
+        "contexto_ca": "A la setmana cultural del centre es munta un racó de pedicura ràpida per al professorat.",
+        "desarrollo_es": "Por equipos, el alumnado reparte tarjetas con vocabulario inglés del pie y las uñas y las usa para dar instrucciones breves a la clienta (3161-7.1). Cada componente realiza el desmaquillado, el limado y el condicionamiento de cutículas según el tipo de uña que le toca en la tarjeta (3061-4g). El equipo que termina correctamente en el tiempo marcado por el cronómetro suma puntos (3061-4k).",
+        "desarrollo_ca": "Per equips, l'alumnat reparteix targetes amb vocabulari anglès del peu i les ungles i les fa servir per donar instruccions breus a la clienta (3161-7.1). Cada component fa el desmaquillatge, el llimat i el condicionament de cutícules segons el tipus d'ungla que li toca a la targeta (3061-4g). L'equip que acaba correctament dins el temps marcat pel cronòmetre suma punts (3061-4k).",
+        "evidencia_es": "Tarjetas de vocabulario resueltas y marcador del cronómetro por equipos.",
+        "evidencia_ca": "Targetes de vocabulari resoltes i marcador del cronòmetre per equips.",
+        "dua_es": "Cada tarjeta lleva la palabra en inglés, el dibujo y su traducción al castellano.",
+        "dua_ca": "Cada targeta duu la paraula en anglès, el dibuix i la traducció al castellà.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3061", "ra": "RA4", "criterios": ["c", "n"] },
+    "b": { "modulo": "3163", "ra": "CE3", "criterios": ["3.1"] },
+    "justificacion_es": "La relación entre cosméticos y residuos del proceso de pedicura se estudia con observación sistemática y datos.",
+    "justificacion_ca": "La relació entre cosmètics i residus del procés de pedicura s'estudia amb observació sistemàtica i dades.",
+    "actividades": [
+      {
+        "titulo_es": "Hipótesis sobre los residuos del agua de pedicura",
+        "titulo_ca": "Hipòtesi sobre els residus de l'aigua de pedicura",
+        "contexto_es": "El desagüe del lavabo del taller se atasca y el centro quiere saber qué cosméticos de pedicura lo provocan.",
+        "contexto_ca": "El desguàs de la pica del taller es colga i el centre vol saber quins cosmètics de pedicura el provoquen.",
+        "desarrollo_es": "El alumnado observa los restos que quedan en la pila después de una pedicura y formula hipótesis sobre cuáles son los cosméticos que más residuo dejan (3163-3.1). Después asocia cada cosmético con la fase del proceso en la que se usa: desmaquillado, limado, tratamiento de durezas o pulido (3061-4c). Para cerrar, revisa que los envases y los restos se hayan gestionado según las normas de seguridad y medioambiente del taller (3061-4n).",
+        "desarrollo_ca": "L'alumnat observa les restes que queden a la pica després d'una pedicura i formula hipòtesis sobre quins són els cosmètics que deixen més residu (3163-3.1). Després associa cada cosmètic amb la fase del procés en què s'utilitza: desmaquillatge, llimat, tractament de duresses o polit (3061-4c). Per acabar, revisa que els envasos i les restes s'hagin gestionat segons les normes de seguretat i medi ambient del taller (3061-4n).",
+        "evidencia_es": "Cartel con las hipótesis del grupo y los residuos observados.",
+        "evidencia_ca": "Cartell amb les hipòtesis del grup i els residus observats.",
+        "dua_es": "Plantilla de hipótesis con dibujos y espacio para escribir en parejas.",
+        "dua_ca": "Plantilla d'hipòtesis amb dibuixos i espai per escriure en parelles.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Etiquetas y residuos de cada fase del proceso",
+        "titulo_ca": "Etiquetes i residus de cada fase del procés",
+        "contexto_es": "Una marca de cosméticos pide al alumnado revisar las etiquetas y los envases de los productos del salón.",
+        "contexto_ca": "Una marca de cosmètics demana a l'alumnat revisar les etiquetes i els envasos dels productes que es fan servir al saló.",
+        "desarrollo_es": "Cada pareja estudia un caso real de una pedicura con productos distintos y anota qué residuo genera cada cosmético (3061-4c). Compara los datos recogidos y lanza una predicción sobre cuál de ellos resulta más contaminante para el agua del centro (3163-3.1). Finalmente separa los envases en los contenedores correspondientes siguiendo las especificaciones de seguridad y medioambiente (3061-4n).",
+        "desarrollo_ca": "Cada parella estudia un cas real d'una pedicura amb productes diferents i anota quin residu genera cada cosmètic (3061-4c). Compara les dades recollides i llança una predicció sobre quin d'ells resulta més contaminant per a l'aigua del centre (3163-3.1). Finalment separa els envasos als contenidors corresponents seguint les especificacions de seguretat i medi ambient (3061-4n).",
+        "evidencia_es": "Ficha comparativa de cosméticos y contenedores correctos.",
+        "evidencia_ca": "Fitxa comparativa de cosmètics i contenidors correctes.",
+        "dua_es": "Etiquetas plastificadas con pictogramas de peligro para manipular con seguridad.",
+        "dua_ca": "Etiquetes plastificades amb pictogrames de perill per manipular amb seguretat.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de clasificación de residuos del taller",
+        "titulo_ca": "Joc de classificació de residus del taller",
+        "contexto_es": "El centro participa en una campaña de recogida selectiva y necesita ordenar los envases que genera el taller.",
+        "contexto_ca": "El centre participa en una campanya de recollida selectiva i necessita ordenar els envasos que genera el taller.",
+        "desarrollo_es": "Los equipos clasifican envases y restos del taller en un juego por puntos y justifican cada decisión con los datos recogidos en las sesiones anteriores (3163-3.1). Antes de tirar cada residuo, identifican en qué fase del proceso se ha utilizado ese cosmético (3061-4c). Cierran la partida revisando entre todos las normas de seguridad y de respeto al medio ambiente aplicadas (3061-4n).",
+        "desarrollo_ca": "Els equips classifiquen envasos i restes del taller en un joc per punts i justifiquen cada decisió amb les dades recollides a les sessions anteriors (3163-3.1). Abans de llençar cada residu, identifiquen en quina fase del procés s'ha utilitzat aquell cosmètic (3061-4c). Tanquen la partida revisant entre tots les normes de seguretat i de respecte al medi ambient aplicades (3061-4n).",
+        "evidencia_es": "Tabla de puntos con la clasificación de residuos por equipos.",
+        "evidencia_ca": "Taula de punts amb la classificació de residus per equips.",
+        "dua_es": "Tarjetas de residuos con código de color y apoyo del compañero tutor.",
+        "dua_ca": "Targetes de residus amb codi de color i suport del company tutor.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3061", "ra": "RA4", "criterios": ["f", "i"] },
+    "b": { "modulo": "3163", "ra": "CE5", "criterios": ["5.1"] },
+    "justificacion_es": "El tratamiento de durezas y el pulido se describen con vocabulario técnico y datos numéricos comprensibles.",
+    "justificacion_ca": "El tractament de duresses i el polit es descriuen amb vocabulari tècnic i dades numèriques comprensibles.",
+    "actividades": [
+      {
+        "titulo_es": "Póster técnico del tratamiento de durezas",
+        "titulo_ca": "Pòster tècnic del tractament de duresses",
+        "contexto_es": "En el salón del centro se atiende a un cliente con durezas en los pies y el alumnado prepara la explicación técnica antes de la práctica.",
+        "contexto_ca": "Al saló del centre s'atén un client amb duresses als peus i l'alumnat prepara l'explicació tècnica abans de la pràctica.",
+        "desarrollo_es": "Antes de la sesión, cada alumno revisa en casa un vídeo breve del centro sobre el tratamiento de durezas y anota tres ideas clave. En clase explica al grupo cómo se realiza el tratamiento de durezas superficiales paso a paso (3061-4f) y después lo demuestra en un pie de práctica. El grupo ordena todo en un póster técnico con dibujos, cifras de tiempos y vocabulario preciso que cualquiera pueda entender (3163-5.1). Por último, el alumnado aplica el pulido de uñas con los útiles y productos adecuados respetando la forma de cada uña (3061-4i).",
+        "desarrollo_ca": "Abans de la sessió, cada alumne revisa a casa un vídeo breu del centre sobre el tractament de duresses i anota tres idees clau. A classe explica al grup com es fa el tractament de duresses superficials pas a pas (3061-4f) i després el demostra en un peu de pràctica. El grup ho ordena tot en un pòster tècnic amb dibuixos, xifres de temps i vocabulari precís que tothom pugui entendre (3163-5.1). Finalment, l'alumnat aplica el polit d'ungles amb els estris i productes adequats respectant la forma de cada ungla (3061-4i).",
+        "evidencia_es": "Póster técnico con las fases de durezas y pulido.",
+        "evidencia_ca": "Pòster tècnic amb les fases de duresses i polit.",
+        "dua_es": "Vídeo con subtítulos y pausas para repasar en casa las veces necesarias.",
+        "dua_ca": "Vídeo amb subtítols i pauses per repassar a casa les vegades necessàries.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Tabla de tiempos del pulido por tipo de uña",
+        "titulo_ca": "Taula de temps del polit per tipus d'ungla",
+        "contexto_es": "El taller organiza una sesión de pulido para las uñas del alumnado y quieren registrar el tiempo de cada paso.",
+        "contexto_ca": "El taller organitza una sessió de polit per a les ungles de l'alumnat i volen registrar el temps de cada pas.",
+        "desarrollo_es": "La clase se organiza en tres rincones: uno de durezas, uno de pulido y uno de registro de datos. En el rincón de durezas se repite el tratamiento superficial de forma segura (3061-4f) y en el de pulido se eligen los útiles y productos según cada uña (3061-4i). Cada paso se cronometra y se anota en una tabla con tiempos medios y gráfico de barras para presentar los resultados al grupo (3163-5.1).",
+        "desarrollo_ca": "La classe s'organitza en tres racons: un de duresses, un de polit i un de registre de dades. Al racó de duresses es repeteix el tractament superficial de manera segura (3061-4f) i al de polit es trien els estris i productes segons cada ungla (3061-4i). Cada pas es cronometra i s'anota en una taula amb temps mitjans i gràfic de barres per presentar els resultats al grup (3163-5.1).",
+        "evidencia_es": "Tabla y gráfico de tiempos por rincón de práctica.",
+        "evidencia_ca": "Taula i gràfic de temps per racó de pràctica.",
+        "dua_es": "Cada rincón tiene una tarjeta con el paso a paso ilustrado y el tiempo previsto.",
+        "dua_ca": "Cada racó té una targeta amb el pas a pas il·lustrat i el temps previst.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      },
+      {
+        "titulo_es": "Exposición con gráficos del pulido realizado",
+        "titulo_ca": "Exposició amb gràfics del polit realitzat",
+        "contexto_es": "Una clienta habitual pregunta por qué sus uñas se astillan y pide una explicación clara del pulido.",
+        "contexto_ca": "Una clienta habitual demana per què les seves ungles es trenquen i vol una explicació clara del polit.",
+        "desarrollo_es": "Cada pareja toma una muestra de uñas del taller y prepara una explicación oral y visual para la clienta, con gráficos sencillos de tiempos y resultados (3163-5.1). Durante la demostración aplican el tratamiento de durezas superficiales siguiendo el protocolo del centro (3061-4f) y pulen las uñas con los útiles adecuados a la forma de cada una (3061-4i). La clienta valora si la explicación ha sido clara y si el acabado responde a lo que esperaba.",
+        "desarrollo_ca": "Cada parella pren una mostra d'ungles del taller i prepara una explicació oral i visual per a la clienta, amb gràfics senzills de temps i resultats (3163-5.1). Durant la demostració apliquen el tractament de duresses superficials seguint el protocol del centre (3061-4f) i polixen les ungles amb els estris adequats a la forma de cada una (3061-4i). La clienta valora si l'explicació ha estat clara i si l'acabat respon al que esperava.",
+        "evidencia_es": "Guion de la explicación oral entregado a la clienta.",
+        "evidencia_ca": "Guió de l'explicació oral lliurat a la clienta.",
+        "dua_es": "Plantilla de gráficos ya preparada para quien necesita centrarse en la explicación.",
+        "dua_ca": "Plantilla de gràfics ja preparada per a qui necessita centrar-se en l'explicació.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3159", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "3161", "ra": "CE6", "criterios": ["6.1"] },
+    "justificacion_es": "El itinerario lector permite descubrir intereses y gustos que orientan la elección de un campo profesional.",
+    "justificacion_ca": "L'itinerari lector permet descobrir interessos i gustos que orienten l'elecció d'un camp professional.",
+    "actividades": [
+      {
+        "titulo_es": "Mi estantería de oficios favoritos",
+        "titulo_ca": "La meva prestatgeria d'oficis preferits",
+        "contexto_es": "La biblioteca del centro prepara una mesa de libros sobre oficios y el alumnado del ciclo escoge el suyo.",
+        "contexto_ca": "La biblioteca del centre prepara una taula de llibres sobre oficis i l'alumnat del cicle tria el seu.",
+        "desarrollo_es": "Cada grupo lee un capítulo o un relato breve elegido libremente por sus gustos y explica al resto por qué lo ha escogido (3161-6.1). Después cada alumno anota en su cuaderno qué habilidades y motivaciones propias ha reconocido al leer la historia (3159-1a). El grupo termina contrastando esas anotaciones con una lista común de intereses y destrezas del aula.",
+        "desarrollo_ca": "Cada grup llegeix un capítol o un relat breu triat lliurement segons els seus gustos i explica a la resta per què l'ha escollit (3161-6.1). Després cada alumne anota al seu quadern quines habilitats i motivacions pròpies ha reconegut llegint la història (3159-1a). El grup acaba contrastant aquestes anotacions amb una llista comuna d'interessos i destreses de l'aula.",
+        "evidencia_es": "Cuaderno con las habilidades reconocidas tras la lectura.",
+        "evidencia_ca": "Quadern amb les habilitats reconegudes després de la lectura.",
+        "dua_es": "Libros en distintos formatos (cómic, audio y letra grande) para elegir libremente.",
+        "dua_ca": "Llibres en formats diversos (còmic, àudio i lletra gran) per triar lliurement.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Gincana de libros que hablan de tu talento",
+        "titulo_ca": "Gimcana de llibres que parlen del teu talent",
+        "contexto_es": "En la semana del libro, el instituto propone una gincana de lectura por las aulas del centro.",
+        "contexto_ca": "A la setmana del llibre, l'institut proposa una gimcana de lectura per les aules del centre.",
+        "desarrollo_es": "El alumnado recorre las estaciones de la gincana, donde encuentra fragmentos de libros y una prueba sobre el oficio que describen. En cada estación registra un interés o una destreza que reconoce en sí mismo (3159-1a) y deja anotado el texto elegido y el motivo de su elección (3161-6.1). Gana el equipo que completa antes el perfil lector y profesional con todas las estaciones resueltas.",
+        "desarrollo_ca": "L'alumnat recorre les estacions de la gimcana, on troba fragments de llibres i una prova sobre l'ofici que descriuen. A cada estació registra un interès o una destresa que reconeix en si mateix (3159-1a) i deixa anotat el text triat i el motiu de la seva elecció (3161-6.1). Guanya l'equip que completa abans el perfil lector i professional amb totes les estacions resoltes.",
+        "evidencia_es": "Perfil lector y profesional completado en la gincana.",
+        "evidencia_ca": "Perfil lector i professional completat a la gimcana.",
+        "dua_es": "Pruebas cortas con apoyo visual y posibilidad de responder por parejas.",
+        "dua_ca": "Proves curtes amb suport visual i possibilitat de respondre per parelles.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      },
+      {
+        "titulo_es": "Diario de lectura y mapa de mis intereses",
+        "titulo_ca": "Diari de lectura i mapa dels meus interessos",
+        "contexto_es": "Una editorial local cede al taller una caja de biografías de profesionales de la belleza.",
+        "contexto_ca": "Una editorial local cedeix al taller una capsa de biografies de professionals de la bellesa.",
+        "desarrollo_es": "Cada alumno escoge una lectura de la caja de biografías y lleva un diario donde anota el progreso de su itinerario lector y por qué ha elegido esos textos (3161-6.1). Con lo leído elabora un mapa visual de sus intereses, habilidades y destrezas personales (3159-1a). El mapa se comparte con las familias en la reunión de tutoría.",
+        "desarrollo_ca": "Cada alumne tria una lectura de la capsa de biografies i duu un diari on anota el progrés del seu itinerari lector i per què ha triat aquests textos (3161-6.1). Amb tot el que ha llegit elabora un mapa visual dels seus interessos, habilitats i destreses personals (3159-1a). El mapa es comparteix amb les famílies a la reunió de tutoria.",
+        "evidencia_es": "Mapa visual de intereses con el diario de lectura.",
+        "evidencia_ca": "Mapa visual d'interessos amb el diari de lectura.",
+        "dua_es": "Plantilla del mapa con apartados fijos y ejemplos ya resueltos.",
+        "dua_ca": "Plantilla del mapa amb apartats fixos i exemples ja resolts.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3159", "ra": "RA1", "criterios": ["b", "d"] },
+    "b": { "modulo": "3163", "ra": "CE7", "criterios": ["7.1"] },
+    "justificacion_es": "El análisis de fortalezas y debilidades se acompaña de un autoconcepto positivo que acepta el error como aprendizaje.",
+    "justificacion_ca": "L'anàlisi de fortaleses i febleses s'acompanya d'un autoconcepte positiu que accepta l'error com a aprenentatge.",
+    "actividades": [
+      {
+        "titulo_es": "DAFO personal tras un experimento fallido",
+        "titulo_ca": "DAFO personal després d'un experiment fallit",
+        "contexto_es": "Un grupo de alumnos estropea una mezcla en el taller y la tutora propone analizar el fallo sin buscar culpables.",
+        "contexto_ca": "Un grup d'alumnes espatlla una mescla al taller i la tutora proposa analitzar la fallada sense buscar culpables.",
+        "desarrollo_es": "Tras un experimento que no sale como se esperaba, cada alumno analiza el caso por escrito y señala qué competencia personal o social ha puesto en juego (3159-1b). Después completa un DAFO propio con las fortalezas, debilidades, amenazas y oportunidades que ha visto en la práctica y las estrategias para aprovecharlas (3159-1d). Para cerrar, el grupo comparte qué ha aprendido del error y qué hará distinto la próxima vez (3163-7.1).",
+        "desarrollo_ca": "Després d'un experiment que no surt com s'esperava, cada alumne analitza el cas per escrit i assenyala quina competència personal o social ha posat en joc (3159-1b). Després completa un DAFO propi amb les fortaleses, febleses, amenaces i oportunitats que ha vist a la pràctica i les estratègies per aprofitar-les (3159-1d). Per acabar, el grup comparteix què ha après de l'error i què farà diferent la propera vegada (3163-7.1).",
+        "evidencia_es": "DAFO personal con el análisis del experimento fallido.",
+        "evidencia_ca": "DAFO personal amb l'anàlisi de l'experiment fallit.",
+        "dua_es": "Plantilla de DAFO con ejemplos y opción de completarla con dibujos.",
+        "dua_ca": "Plantilla de DAFO amb exemples i opció de completar-la amb dibuixos.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de rol del fallo y la mejora",
+        "titulo_ca": "Joc de rol de la fallada i la millora",
+        "contexto_es": "En el salón del centro se simula la primera semana de prácticas, donde casi todo el mundo comete algún error.",
+        "contexto_ca": "Al saló del centre es simula la primera setmana de pràctiques, on gairebé tothom comet alguna fallada.",
+        "desarrollo_es": "Se reparten papeles de aprendiz, clienta y compañera veterana en una escena de prácticas donde algo sale mal. En el papel, cada aprendiz identifica las competencias personales y sociales que le hacen falta para resolver la escena (3159-1b) y propone una estrategia para mejorar su punto débil (3159-1d). Al acabar, quien ha hecho de clienta valora cómo el aprendiz ha aceptado el error y ha reaccionado (3163-7.1).",
+        "desarrollo_ca": "Es reparteixen papers d'aprenent, clienta i companya veterana en una escena de pràctiques on alguna cosa surt malament. En el paper, cada aprenent identifica les competències personals i socials que li calen per resoldre l'escena (3159-1b) i proposa una estratègia per millorar el seu punt feble (3159-1d). En acabar, qui ha fet de clienta valora com l'aprenent ha acceptat l'error i ha reaccionat (3163-7.1).",
+        "evidencia_es": "Escena representada y ficha de estrategias de mejora.",
+        "evidencia_ca": "Escena representada i fitxa d'estratègies de millora.",
+        "dua_es": "Tarjetas de rol con frases modelo y permiso para repetir la escena.",
+        "dua_ca": "Targetes de rol amb frases model i permís per repetir l'escena.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Mural de errores convertidos en fortalezas",
+        "titulo_ca": "Mural d'errors convertits en fortaleses",
+        "contexto_es": "El taller prepara un mural para animar a quienes empiezan las prácticas en peluquerías de Inca.",
+        "contexto_ca": "El taller prepara un mural per animar qui comença les pràctiques en perruqueries d'Inca.",
+        "desarrollo_es": "Cada alumno escribe en una tarjeta un error propio del taller y las competencias personales y sociales que ha necesitado para superarlo (3159-1b). Las tarjetas se agrupan por familias y cada grupo decide qué oportunidad de mejora esconde cada debilidad y cómo aprovecharla (3159-1d). El mural se cierra con los mensajes de ánimo que el grupo dedica a quien empieza las prácticas, reconociendo el error como parte del aprendizaje (3163-7.1).",
+        "desarrollo_ca": "Cada alumne escriu en una targeta un error propi del taller i les competències personals i socials que ha necessitat per superar-lo (3159-1b). Les targetes s'agrupen per famílies i cada grup decideix quina oportunitat de millora amaga cada feblesa i com aprofitar-la (3159-1d). El mural es tanca amb els missatges d'ànim que el grup dedica a qui comença les pràctiques, reconeixent l'error com a part de l'aprenentatge (3163-7.1).",
+        "evidencia_es": "Mural de tarjetas con errores y oportunidades.",
+        "evidencia_ca": "Mural de targetes amb errors i oportunitats.",
+        "dua_es": "Tarjetas de distintos colores y tamaños de letra para escribir con comodidad.",
+        "dua_ca": "Targetes de colors diversos i mides de lletra per escriure amb comoditat.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3159", "ra": "RA2", "criterios": ["a"] },
+    "b": { "modulo": "3161", "ra": "CE3", "criterios": ["3.3"] },
+    "justificacion_es": "Valorar las competencias sociales para el empleo incluye rechazar las discriminaciones que se dan en el acceso al trabajo.",
+    "justificacion_ca": "Valorar les competències socials per a l'ocupació inclou rebutjar les discriminacions que es donen en l'accés a la feina.",
+    "actividades": [
+      {
+        "titulo_es": "Pizarra de normas para atender a todo el mundo",
+        "titulo_ca": "Pissarra de normes per atendre tothom",
+        "contexto_es": "El salón del centro recibe grupos de estudiantes de otros ciclos y el alumnado quiere acordar cómo atenderlos bien.",
+        "contexto_ca": "El saló del centre rep grups d'estudiants d'altres cicles i l'alumnat vol acordar com atendre'ls bé.",
+        "desarrollo_es": "El grupo analiza tres escenas cotidianas del salón y decide qué competencias personales y sociales hacen falta para atender bien a cualquier persona (3159-2a). Después cada equipo redacta dos normas de trato respetuoso y las defiende ante la clase con argumentos, rechazando cualquier discriminación (3161-3.3). Las normas aceptadas se escriben en una pizarra que queda colocada en el taller.",
+        "desarrollo_ca": "El grup analitza tres escenes quotidianes del saló i decideix quines competències personals i socials calen per atendre bé qualsevol persona (3159-2a). Després cada equip redacta dues normes de tracte respectuós i les defensa davant la classe amb arguments, rebutjant qualsevol discriminació (3161-3.3). Les normes acceptades s'escriuen en una pissarra que queda col·locada al taller.",
+        "evidencia_es": "Pizarra de normas del trato respetuoso del taller.",
+        "evidencia_ca": "Pissarra de normes del tracte respectuós del taller.",
+        "dua_es": "Normas escritas también con pictogramas para leerlas con facilidad.",
+        "dua_ca": "Normes escrites també amb pictogrames per llegir-les amb facilitat.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Escena de acogida con una clienta con muletas",
+        "titulo_ca": "Escena d'acollida amb una clienta amb crosses",
+        "contexto_es": "Una vecina de Manacor llega al salón con muletas y pide un servicio de uñas.",
+        "contexto_ca": "Una veïna de Manacor arriba al saló amb crosses i demana un servei d'ungles.",
+        "desarrollo_es": "Dos alumnas representan la acogida de una clienta con muletas y el resto observa cómo se comportan. Al terminar, el grupo valora qué habilidades sociales han sido clave para que la clienta se sienta cómoda (3159-2a) y detecta los comentarios o gestos que podrían discriminar a alguien por su situación (3161-3.3). Después se repite la escena mejorada por otros compañeros.",
+        "desarrollo_ca": "Dues alumnes representen l'acollida d'una clienta amb crosses i la resta observa com es comporten. En acabar, el grup valora quines habilitats socials han estat clau perquè la clienta se senti còmoda (3159-2a) i detecta els comentaris o gestos que podrien discriminar algú per la seva situació (3161-3.3). Després es repeteix l'escena millorada per altres companys.",
+        "evidencia_es": "Ficha de observación de la escena repetida.",
+        "evidencia_ca": "Fitxa d'observació de l'escena repetida.",
+        "dua_es": "Guion flexible de la escena y opción de participar como observador.",
+        "dua_ca": "Guió flexible de l'escena i opció de participar com a observador.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Gincana de casos justos e injustos del salón",
+        "titulo_ca": "Gimcana de casos justos i injustos del saló",
+        "contexto_es": "El centro organiza una jornada sobre el empleo y el grupo prepara casos reales de trato injusto en peluquerías.",
+        "contexto_ca": "El centre organitza una jornada sobre l'ocupació i el grup prepara casos reals de tracte injust a perruqueries.",
+        "desarrollo_es": "Por estaciones, los equipos resuelven casos de salón donde se juzga a las personas por su aspecto, su origen o su dinero. En cada caso justifican qué competencia social se pone a prueba cuando se trabaja con público (3159-2a) y qué argumento usarían para rechazar esa discriminación (3161-3.3). El equipo que acumula más respuestas correctas explica su caso al grupo.",
+        "desarrollo_ca": "Per estacions, els equips resolen casos de saló on es jutja les persones pel seu aspecte, el seu origen o els seus diners. A cada cas justifiquen quina competència social es posa a prova quan es treballa amb públic (3159-2a) i quin argument farien servir per rebutjar aquesta discriminació (3161-3.3). L'equip que acumula més respostes correctes explica el seu cas al grup.",
+        "evidencia_es": "Carteles de los casos resueltos por estaciones.",
+        "evidencia_ca": "Cartells dels casos resolts per estacions.",
+        "dua_es": "Casos en audio y en papel para quien comprende mejor escuchando.",
+        "dua_ca": "Casos en àudio i en paper per a qui comprèn millor escoltant.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  }
+]

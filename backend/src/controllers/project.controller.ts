@@ -94,22 +94,31 @@ export const officialRaCode = (id?: string | null): string => (id || '').split('
 const sameLevel = (raLevel?: string | null, level?: string) =>
   (raLevel || DEFAULT_TIPO_NIVEL) === (level || DEFAULT_TIPO_NIVEL);
 
-/**
- * RA seleccionado (el frontend envía su descripción). Si la misma descripción existe en varios
- * ciclos, se prefiere la del nivel del proyecto para no tomar el número de RA de otro módulo.
- */
-export const findSelectedRa = (allRas: any[], selectedStr: string, tipoNivel?: string): any => {
-  const matches = allRas.filter(r =>
-    r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
-  return matches.find(r => sameLevel(r.tipoNivel, tipoNivel)) || matches[0];
+/** El módulo del RA es uno de los del curso en el catálogo de niveles. */
+const inCourse = (ra: any, tipoNivel?: string, curso?: string): boolean => {
+  const modulos = findNivel(tipoNivel || DEFAULT_TIPO_NIVEL)?.cursos.find(c => c.curso === curso)?.modulos;
+  return !!modulos && modulos.includes(ra.moduleCode);
 };
 
-/** Bloque del prompt que identifica un RA con su módulo y su número oficial. */
+/**
+ * RA seleccionado (el frontend envía su descripción). Si la misma descripción existe en varios
+ * ciclos, se prefiere la del nivel del proyecto para no tomar el número de RA de otro módulo, y
+ * dentro del nivel, la de un módulo del curso (los ámbitos I y II de FP Básica comparten textos).
+ */
+export const findSelectedRa = (allRas: any[], selectedStr: string, tipoNivel?: string, curso?: string): any => {
+  const matches = allRas.filter(r =>
+    r.description === selectedStr || r.description_es === selectedStr || r.description_ca === selectedStr);
+  const level = matches.filter(r => sameLevel(r.tipoNivel, tipoNivel));
+  return level.find(r => inCourse(r, tipoNivel, curso)) || level[0] || matches[0];
+};
+
+/** Bloque del prompt que identifica un RA (o una competencia específica de un ámbito) con su módulo. */
 export const describeRaForPrompt = (raDoc: any, selectedStr: string, language?: string): string => {
   const moduleName = (language === 'catalan' && raDoc.module_ca) ? raDoc.module_ca : (raDoc.module_es || raDoc.module);
   const moduleLabel = raDoc.moduleCode ? `${raDoc.moduleCode} ${moduleName}` : moduleName;
   const code = officialRaCode(raDoc.id);
-  return `- Módulo/Asignatura: ${moduleLabel}\n  Resultado de Aprendizaje ${code} (numeración oficial, no la cambies): ${selectedStr}`;
+  const unit = code.startsWith('CE') ? 'Competencia específica' : 'Resultado de Aprendizaje';
+  return `- Módulo/Asignatura: ${moduleLabel}\n  ${unit} ${code} (numeración oficial, no la cambies): ${selectedStr}`;
 };
 
 /** Curso y nivel destino del proyecto, con el nombre oficial del ciclo (catálogo) en el idioma del proyecto. */
@@ -186,7 +195,7 @@ const describeSelection = (ctx: SelectionContext): string => {
   const { selectedStr, allRas, allCes, tipoNivel, effectiveCourse, language, ids } = ctx;
   const esoCe = tipoNivel === ESO_ORDINARIA ? findEsoCe(allCes, selectedStr) : undefined;
   if (esoCe) return describeEsoCeForPrompt(esoCe, effectiveCourse, language, ids);
-  const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
+  const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel, effectiveCourse);
   if (raDoc) return describeRaSelection(raDoc, selectedStr, effectiveCourse, language);
   const ceDoc = findCeDoc(allCes, selectedStr, tipoNivel);
   if (ceDoc) return describePdcCeForPrompt(ceDoc, selectedStr, effectiveCourse, language, ids);
@@ -234,9 +243,9 @@ export const generateProject = async (req: any, res: Response) => {
     // Extraer códigos de los RAs seleccionados
     const selectedCodes = new Set<string>();
     for (const selectedStr of selectedRas || []) {
-      const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel);
+      const raDoc = findSelectedRa(allRas, selectedStr, tipoNivel, courseLevel);
       if (raDoc && raDoc.id) {
-        const code = raDoc.id.split('_')[0];
+        const code = raDoc.moduleCode || raDoc.id.split('_')[0];
         if (code) selectedCodes.add(code);
       }
     }

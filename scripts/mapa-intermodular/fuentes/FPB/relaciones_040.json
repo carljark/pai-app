@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3061", "ra": "RA4", "criterios": ["l", "m"] },
+    "b": { "modulo": "3159", "ra": "RA2", "criterios": ["b", "e"] },
+    "justificacion_es": "Preguntar por la satisfacción en la pedicura entrena la escucha y la respuesta serena ante una queja.",
+    "justificacion_ca": "Preguntar per la satisfacció en la pedicura entrena l'escolta i la resposta serena davant una queixa.",
+    "actividades": [
+      {
+        "titulo_es": "Encuesta oral tras una pedicura de prueba",
+        "titulo_ca": "Enquesta oral després d'una pedicura de prova",
+        "contexto_es": "Una clienta del salón del instituto sale de una pedicura con los talones agrietados y el alumnado debe saber qué ha fallado.",
+        "contexto_ca": "Una clienta del saló de l'institut surt d'una pedicura amb els talons agrietats i l'alumnat ha de saber què ha fallat.",
+        "desarrollo_es": "El alumnado recibe en el salón del centro a una clienta que ha terminado su pedicura y le hace preguntas abiertas para medir su grado de satisfacción (3061-4l), usando después un guion de preguntas tipo sobre el resultado y el trato recibido (3061-4m). Si aparece una queja, ensaya respuestas serenas y asertivas sin justificarse ni atacar (3159-2b), y reformula el servicio para reconducir la situación con calma (3159-2e).",
+        "desarrollo_ca": "L'alumnat rep al saló del centre una clienta que ha acabat la pedicura i li fa preguntes obertes per mesurar-ne el grau de satisfacció (3061-4l), i després fa servir un guió de preguntes tipus sobre el resultat i el tracte rebut (3061-4m). Si apareix una queixa, assaja respostes serenes i assertives sense justificar-se ni atacar (3159-2b), i reformula el servei per reconduir la situació amb calma (3159-2e).",
+        "evidencia_es": "Guion de preguntas y registro de la respuesta de la clienta.",
+        "evidencia_ca": "Guió de preguntes i registre de la resposta de la clienta.",
+        "dua_es": "Se entrega la escalera de preguntas con pictogramas y se permite responder por escrito si el alumnado se bloquea.",
+        "dua_ca": "S'entrega l'escala de preguntes amb pictogrames i es permet respondre per escrit si l'alumnat es bloqueja.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Panel de caras para medir la satisfacción",
+        "titulo_ca": "Panell de cares per mesurar la satisfacció",
+        "contexto_es": "El taller de estética del centro quiere saber si gustan sus pedicuras y nunca pregunta nada a las clientas.",
+        "contexto_ca": "El taller d'estètica del centre vol saber si agraden les seves pedicures i mai no pregunta res a les clientes.",
+        "desarrollo_es": "Por parejas, el alumnado diseña una escala de caras para recoger la opinión de las clientas del taller (3061-4l) y la completa con tres preguntas cerradas sobre el acabado y la atención (3061-4m). Cuando alguna respuesta es negativa, cada pareja decide qué emoción siente y cómo expresarla sin agresividad (3159-2b), y busca una salida positiva al malestar (3159-2e).",
+        "desarrollo_ca": "Per parelles, l'alumnat dissenya una escala de cares per recollir l'opinió de les clientes del taller (3061-4l) i la completa amb tres preguntes tancades sobre l'acabat i l'atenció (3061-4m). Quan alguna resposta és negativa, cada parella decideix quina emoció sent i com expressar-la sense agressivitat (3159-2b), i busca una sortida positiva al malestar (3159-2e).",
+        "evidencia_es": "Escala de caras y tres preguntas cerradas listas para el taller.",
+        "evidencia_ca": "Escala de cares i tres preguntes tancades a punt per al taller.",
+        "dua_es": "La escala admite respuestas con gomets de colores para quien no quiera escribir.",
+        "dua_ca": "L'escala admet respostes amb gomets de colors per a qui no vulgui escriure.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Buzón de sugerencias del salón escolar",
+        "titulo_ca": "Bústia de suggeriments del saló escolar",
+        "contexto_es": "En el casal de personas mayores de Palma piden una pedicura y nadie sabe cómo recoger su opinión después.",
+        "contexto_ca": "Al casal de persones grans de Palma demanen una pedicura i ningú no sap com recollir-ne l'opinió després.",
+        "desarrollo_es": "El alumnado prepara un buzón con preguntas sencillas para conocer el grado de satisfacción de las personas usuarias tras la pedicura (3061-4l) y redacta un formulario con preguntas tipo sobre el resultado y el trato (3061-4m). Después analiza las respuestas negativas y ensaya cómo canalizarlas de forma asertiva (3159-2b), aceptando los cambios de última hora con actitud flexible (3159-2e).",
+        "desarrollo_ca": "L'alumnat prepara una bústia amb preguntes senzilles per conèixer el grau de satisfacció de les persones usuàries després de la pedicura (3061-4l) i redacta un formulari amb preguntes tipus sobre el resultat i el tracte (3061-4m). Després analitza les respostes negatives i assaja com canalitzar-les de manera assertiva (3159-2b), acceptant els canvis d'última hora amb actitud flexible (3159-2e).",
+        "evidencia_es": "Buzón con formulario y resumen de las respuestas recogidas.",
+        "evidencia_ca": "Bústia amb formulari i resum de les respostes recollides.",
+        "dua_es": "Se permite grabar las respuestas en audio para el alumnado con dificultades de escritura.",
+        "dua_ca": "Es permet enregistrar les respostes en àudio per a l'alumnat amb dificultats d'escriptura.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3061", "ra": "RA1", "criterios": ["a"] },
+    "b": { "modulo": "3159", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "La imagen que debe presentar el ayudante de manicura se construye desde la autoestima y el autoconocimiento.",
+    "justificacion_ca": "La imatge que ha de presentar l'ajudant de manicura es construeix des de l'autoestima i l'autoconeixement.",
+    "actividades": [
+      {
+        "titulo_es": "Retrato profesional del ayudante de manicura",
+        "titulo_ca": "Retrat professional de l'ajudant de manicura",
+        "contexto_es": "En el taller del centro nadie quiere ponerse el delantal porque creen que la imagen del ayudante no importa.",
+        "contexto_ca": "Al taller del centre ningú no es vol posar el davantal perquè creu que la imatge de l'ajudant no importa.",
+        "desarrollo_es": "Tras ver en casa un vídeo corto sobre la imagen del ayudante de manicura, cada alumno y alumna dibuja cómo debe verse este profesional al empezar el servicio, con delantal limpio, uñas cortas y pelo recogido (3061-1a). En pequeño grupo compara su dibujo con sus propias cualidades y anota qué necesita mejorar para sentirse capaz en el oficio (3159-1c).",
+        "desarrollo_ca": "Després de veure a casa un vídeo curt sobre la imatge de l'ajudant de manicura, cada alumne i alumna dibuixa com ha de veure's aquest professional a l'inici del servei, amb davantal net, ungles curtes i cabell recollit (3061-1a). En grup petit compara el dibuix amb les seves pròpies qualitats i anota què necessita millorar per sentir-se capaç en l'ofici (3159-1c).",
+        "evidencia_es": "Dibujo anotado de la imagen profesional y lista de mejoras personales.",
+        "evidencia_ca": "Dibuix anotat de la imatge professional i llista de millores personals.",
+        "dua_es": "Se ofrecen plantillas de silueta para quien prefiera completar antes que dibujar.",
+        "dua_ca": "S'ofereixen plantilles de silueta per a qui prefereixi completar abans que dibuixar.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Carta a mi yo del futuro en el salón",
+        "titulo_ca": "Carta al meu jo del futur al saló",
+        "contexto_es": "Muchos alumnos de primero creen que no valen para atender público y quieren dejar el ciclo.",
+        "contexto_ca": "Molts alumnes de primer creuen que no valen per atendre públic i volen deixar el cicle.",
+        "desarrollo_es": "El alumnado escribe una carta a su yo de dentro de dos años describiendo la imagen que quiere ofrecer como ayudante de manicura (3061-1a). Después subraya en la carta las cualidades que ya tiene y las que debe entrenar para aumentar su autoestima de cara a buscar trabajo (3159-1c).",
+        "desarrollo_ca": "L'alumnat escriu una carta al seu jo de dins de dos anys descrivint la imatge que vol oferir com a ajudant de manicura (3061-1a). Després subratlla a la carta les qualitats que ja té i les que ha d'entrenar per augmentar la seva autoestima de cara a cercar feina (3159-1c).",
+        "evidencia_es": "Carta guardada en el portfolio con dos listas de cualidades.",
+        "evidencia_ca": "Carta guardada al portafoli amb dues llistes de qualitats.",
+        "dua_es": "Se admite dictar la carta a la grabadora si la escritura supone un bloqueo.",
+        "dua_ca": "Es permet dictar la carta a l'enregistradora si l'escriptura suposa un bloqueig.",
+        "metodologia_es": "Proyecto personal.",
+        "metodologia_ca": "Projecte personal."
+      },
+      {
+        "titulo_es": "Gincana de cualidades para la manicura",
+        "titulo_ca": "Gimcana de qualitats per a la manicura",
+        "contexto_es": "En el pasillo del instituto se organiza una feria de oficios y el puesto de manicura necesita voluntarios con buena imagen.",
+        "contexto_ca": "Al passadís de l'institut s'organitza una fira d'oficis i l'estand de manicura necessita voluntaris amb bona imatge.",
+        "desarrollo_es": "El alumnado recorre cuatro estaciones con fotos de ayudantes de manicura y marca en cada una qué elementos de la imagen profesional fallan (3061-1a). Al final, cada grupo coloca en un mural sus puntos fuertes y los retos personales que asume para ganar autoestima en la búsqueda de empleo (3159-1c).",
+        "desarrollo_ca": "L'alumnat recorre quatre estacions amb fotos d'ajudants de manicura i marca en cadascuna quins elements de la imatge professional fallen (3061-1a). Al final, cada grup col·loca en un mural els seus punts forts i els reptes personals que assumeix per guanyar autoestima en la cerca d'ocupació (3159-1c).",
+        "evidencia_es": "Mural de grupo con aciertos de imagen y retos personales.",
+        "evidencia_ca": "Mural de grup amb encerts d'imatge i reptes personals.",
+        "dua_es": "Las estaciones incluyen la opción de responder con pegatinas en lugar de escribir.",
+        "dua_ca": "Les estacions inclouen l'opció de respondre amb adhesius en lloc d'escriure.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3064", "ra": "RA2", "criterios": ["c", "e"] },
+    "b": { "modulo": "3163", "ra": "CE2", "criterios": ["2.1", "2.4"] },
+    "justificacion_es": "Clasificar los moldes y estimar el tiempo del montaje se resuelve con una tabla que organiza los datos del servicio.",
+    "justificacion_ca": "Classificar els motlles i estimar el temps del muntatge es resol amb una taula que organitza les dades del servei.",
+    "actividades": [
+      {
+        "titulo_es": "Tabla de moldes y tiempos del peinado",
+        "titulo_ca": "Taula de motlles i temps del pentinat",
+        "contexto_es": "En el salón del centro se acumulan los peinados de fin de curso y nadie calcula cuánto durará cada montaje.",
+        "contexto_ca": "Al saló del centre s'acumulen els pentinats de final de curs i ningú no calcula quant durarà cada muntatge.",
+        "desarrollo_es": "El alumnado clasifica los útiles y accesorios de un montaje según el tipo de cabello y el peinado previsto (3064-2c) y construye una tabla con moldes, dificultad y tiempo estimado (3064-2e). Después representa los datos en una hoja de cálculo sencilla que ordena la lista de clientas (3163-2.1) y comprueba con una calculadora o una aplicación los tiempos totales del día (3163-2.4).",
+        "desarrollo_ca": "L'alumnat classifica els estris i accessoris d'un muntatge segons el tipus de cabell i el pentinat previst (3064-2c) i construeix una taula amb motlles, dificultat i temps estimat (3064-2e). Després representa les dades en un full de càlcul senzill que ordena la llista de clientes (3163-2.1) i comprova amb una calculadora o una aplicació els temps totals del dia (3163-2.4).",
+        "evidencia_es": "Tabla y hoja de cálculo con los tiempos del día de peinados.",
+        "evidencia_ca": "Taula i full de càlcul amb els temps del dia de pentinats.",
+        "dua_es": "La tabla se entrega medio rellenada para quien necesite empezar con un modelo.",
+        "dua_ca": "La taula s'entrega mig emplenada per a qui necessiti començar amb un model.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Simulación de la agenda de una peluquería",
+        "titulo_ca": "Simulació de l'agenda d'una perruqueria",
+        "contexto_es": "La peluquería del barrio pide ayuda al centro para organizar los montajes de una boda.",
+        "contexto_ca": "La perruqueria del barri demana ajuda al centre per organitzar els muntatges d'una boda.",
+        "desarrollo_es": "Con un listado de clientas y peinados, el alumnado prepara un diagrama de tiempos que ordena los datos y responde a las preguntas del encargo (3163-2.1). Para cada montaje elige los útiles y accesorios adecuados (3064-2c), estima la dificultad y la duración (3064-2e) y verifica los totales con una hoja de cálculo (3163-2.4).",
+        "desarrollo_ca": "Amb un llistat de clientes i pentinats, l'alumnat prepara un diagrama de temps que ordena les dades i respon les preguntes de l'encàrrec (3163-2.1). Per a cada muntatge tria els estris i accessoris adequats (3064-2c), estima la dificultat i la durada (3064-2e) i verifica els totals amb un full de càlcul (3163-2.4).",
+        "evidencia_es": "Agenda-diagrama del día de boda con los tiempos validados.",
+        "evidencia_ca": "Agenda-diagrama del dia de boda amb els temps validats.",
+        "dua_es": "Se permite usar calculadora o plantilla digital a quien tenga dificultades con el cálculo mental.",
+        "dua_ca": "Es permet usar calculadora o plantilla digital a qui tingui dificultats amb el càlcul mental.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Rincones para preparar un cambio de forma",
+        "titulo_ca": "Racons per preparar un canvi de forma",
+        "contexto_es": "El aula se divide en tres rincones y cada uno debe resolver un montaje distinto con material limitado.",
+        "contexto_ca": "L'aula es divideix en tres racons i cada un ha de resoldre un muntatge diferent amb material limitat.",
+        "desarrollo_es": "En cada rincón el grupo clasifica los útiles y accesorios según el cabello y el peinado que le ha tocado (3064-2c) y anota en una plantilla el molde, la dificultad y el tiempo previsto (3064-2e). Luego organiza esos datos en una tabla comparativa de los tres rincones (3163-2.1) y los revisa con una hoja de cálculo compartida (3163-2.4).",
+        "desarrollo_ca": "A cada racó, el grup classifica els estris i accessoris segons el cabell i el pentinat que li ha tocat (3064-2c) i anota en una plantilla el motlle, la dificultat i el temps previst (3064-2e). Tot seguit organitza aquestes dades en una taula comparativa dels tres racons (3163-2.1) i les revisa amb un full de càlcul compartit (3163-2.4).",
+        "evidencia_es": "Tabla comparativa de los tres montajes con tiempos revisados.",
+        "evidencia_ca": "Taula comparativa dels tres muntatges amb temps revisats.",
+        "dua_es": "Cada rincón dispone de tarjetas con los pasos numerados para el alumnado que necesita pautas.",
+        "dua_ca": "Cada racó disposa de targetes amb els passos numerats per a l'alumnat que necessita pautes.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3062", "ra": "RA1", "criterios": ["b", "c"] },
+    "b": { "modulo": "3163", "ra": "CE6", "criterios": ["6.1"] },
+    "justificacion_es": "El ciclo piloso y el crecimiento del vello se describen con procedimientos propios de la biología aplicada.",
+    "justificacion_ca": "El cicle pilós i el creixement del pèl es descriuen amb procediments propis de la biologia aplicada.",
+    "actividades": [
+      {
+        "titulo_es": "Maqueta del ciclo piloso con plastilina",
+        "titulo_ca": "Maqueta del cicle pilós amb plastilina",
+        "contexto_es": "Una clienta del taller pregunta por qué el vello vuelve a salir tan rápido después de la cera.",
+        "contexto_ca": "Una clienta del taller pregunta per què el borrissol torna a sortir tan de pressa després de la cera.",
+        "desarrollo_es": "Por parejas, el alumnado modela con plastilina las tres fases del ciclo piloso y las rotula (3062-1b). Después compara fichas de varias clientas y explica qué factores de crecimiento explican su vello (3062-1c), apoyándose en el procedimiento científico de observación y registro (3163-6.1).",
+        "desarrollo_ca": "Per parelles, l'alumnat modela amb plastilina les tres fases del cicle pilós i les rotula (3062-1b). Després compara fitxes de diverses clientes i explica quins factors de creixement expliquen el seu borrissol (3062-1c), amb el suport del procediment científic d'observació i registre (3163-6.1).",
+        "evidencia_es": "Maqueta rotulada y ficha comparativa del vello de tres clientas.",
+        "evidencia_ca": "Maqueta rotulada i fitxa comparativa del borrissol de tres clientes.",
+        "dua_es": "Se permite etiquetar la maqueta con palabras clave en lugar de redactar.",
+        "dua_ca": "Es permet etiquetar la maqueta amb paraules clau en lloc de redactar.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Laboratorio de crecimiento del vello",
+        "titulo_ca": "Laboratori de creixement del pèl",
+        "contexto_es": "En el laboratorio del centro se mide el crecimiento del vello de varias personas durante un mes.",
+        "contexto_ca": "Al laboratori del centre es mesura el creixement del borrissol de diverses persones durant un mes.",
+        "desarrollo_es": "El alumnado mide con una regla el vello de distintas zonas y registra los datos en una tabla de seguimiento (3062-1b). Relaciona después los resultados con la edad, la zona y el tipo de vello (3062-1c), siguiendo el método científico de formular hipótesis y comprobarlas (3163-6.1).",
+        "desarrollo_ca": "L'alumnat mesura amb un regle el borrissol de diferents zones i registra les dades en una taula de seguiment (3062-1b). Relaciona després els resultats amb l'edat, la zona i el tipus de pèl (3062-1c), seguint el mètode científic de formular hipòtesis i comprovar-les (3163-6.1).",
+        "evidencia_es": "Tabla de seguimiento mensual con conclusiones sobre el crecimiento.",
+        "evidencia_ca": "Taula de seguiment mensual amb conclusions sobre el creixement.",
+        "dua_es": "Las medidas se pueden anotar en una tabla digital con lector de pantalla para quien lo necesite.",
+        "dua_ca": "Les mesures es poden anotar en una taula digital amb lector de pantalla per a qui ho necessiti.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Feria de mitos sobre el vello",
+        "titulo_ca": "Fira de mites sobre el borrissol",
+        "contexto_es": "En el recreo circulan rumores sobre si la cera hace salir más vello y el grupo quiere aclararlos.",
+        "contexto_ca": "Al pati circulen rumors sobre si la cera fa sortir més borrissol i el grup vol aclarir-los.",
+        "desarrollo_es": "Cada equipo elige un mito, indica en qué fase del ciclo piloso se apoya y lo representa con un esquema (3062-1b). Busca después la relación entre el mito y los factores que influyen en el crecimiento del vello (3062-1c) y defiende su conclusión con datos obtenidos con procedimientos científicos (3163-6.1).",
+        "desarrollo_ca": "Cada equip tria un mite, indica en quina fase del cicle pilós es basa i el representa amb un esquema (3062-1b). Després cerca la relació entre el mite i els factors que influeixen en el creixement del pèl (3062-1c) i defensa la seva conclusió amb dades obtingudes amb procediments científics (3163-6.1).",
+        "evidencia_es": "Póster del mito con esquema y datos que lo desmienten.",
+        "evidencia_ca": "Pòster del mite amb esquema i dades que el desmenteixen.",
+        "dua_es": "El póster puede montarse con imágenes y frases cortas para quien tenga dificultades de expresión escrita.",
+        "dua_ca": "El pòster es pot muntar amb imatges i frases curtes per a qui tingui dificultats d'expressió escrita.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3061", "ra": "RA3", "criterios": ["b", "c"] },
+    "b": { "modulo": "3163", "ra": "CE6", "criterios": ["6.1"] },
+    "justificacion_es": "Relacionar cosméticos con cada fase de la manicura y manipularlos aplica procedimientos técnicos con base científica.",
+    "justificacion_ca": "Relacionar cosmètics amb cada fase de la manicura i manipular-los aplica procediments tècnics amb base científica.",
+    "actividades": [
+      {
+        "titulo_es": "Guion de cosméticos para cada fase",
+        "titulo_ca": "Guió de cosmètics per a cada fase",
+        "contexto_es": "Una alumna nueva no sabe qué producto coger en cada paso de la manicura y pregunta al grupo.",
+        "contexto_ca": "Una alumna nova no sap quin producte agafar a cada pas de la manicura i pregunta al grup.",
+        "desarrollo_es": "El alumnado ordena las fases de la manicura y asigna a cada una el cosmético correspondiente (3061-3b). Después demuestra con una compañera cómo se aplica y manipula cada producto sin riesgos (3061-3c), justificando la elección con propiedades y procedimientos científicos sencillos (3163-6.1).",
+        "desarrollo_ca": "L'alumnat ordena les fases de la manicura i assigna a cadascuna el cosmètic corresponent (3061-3b). Després demostra amb una companya com s'aplica i es manipula cada producte sense riscs (3061-3c), justificant l'elecció amb propietats i procediments científics senzills (3163-6.1).",
+        "evidencia_es": "Guion ilustrado de fases y cosméticos con la técnica de aplicación.",
+        "evidencia_ca": "Guió il·lustrat de fases i cosmètics amb la tècnica d'aplicació.",
+        "dua_es": "El guion incluye fotos de cada envase para facilitar el reconocimiento del producto.",
+        "dua_ca": "El guió inclou fotos de cada envàs per facilitar el reconeixement del producte.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Análisis del bote de esmalte",
+        "titulo_ca": "Anàlisi del pot d'esmalt",
+        "contexto_es": "En el taller se acumulan botes de producto abiertos y nadie sabe si todavía sirven.",
+        "contexto_ca": "Al taller s'acumulen pots de producte oberts i ningú no sap si encara serveixen.",
+        "desarrollo_es": "Cada pareja lee la etiqueta de un cosmético de uñas y decide en qué fase de la manicura se usa (3061-3b). Comprueba con una lupa y una pequeña prueba la textura y el estado del producto y anota cómo manipularlo correctamente (3061-3c), aplicando el procedimiento científico de observación y comparación (3163-6.1).",
+        "desarrollo_ca": "Cada parella llegeix l'etiqueta d'un cosmètic d'ungles i decideix en quina fase de la manicura s'utilitza (3061-3b). Comprova amb una lupa i una petita prova la textura i l'estat del producte i anota com manipular-lo correctament (3061-3c), aplicant el procediment científic d'observació i comparació (3163-6.1).",
+        "evidencia_es": "Ficha técnica del producto con fase, estado y modo de uso.",
+        "evidencia_ca": "Fitxa tècnica del producte amb fase, estat i manera d'usar-lo.",
+        "dua_es": "La etiqueta se amplía en la pizarra digital para quien tenga dificultad de visión.",
+        "dua_ca": "L'etiqueta s'amplia a la pissarra digital per a qui tingui dificultat de visió.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Simulación del carrito de manicura",
+        "titulo_ca": "Simulació del carretó de manicura",
+        "contexto_es": "El carrito de manicura del aula aparece desordenado después de cada práctica.",
+        "contexto_ca": "El carretó de manicura de l'aula apareix desordenat després de cada pràctica.",
+        "desarrollo_es": "El alumnado organiza el carrito por fases del servicio y coloca cada cosmético en el compartimento que le toca (3061-3b). En parejas simulan una manicura completa y explican cómo manipulan cada bote para no contaminarlo (3061-3c), con una breve explicación científica de por qué ese orden evita riesgos (3163-6.1).",
+        "desarrollo_ca": "L'alumnat organitza el carretó per fases del servei i col·loca cada cosmètic al compartiment que li toca (3061-3b). En parelles simulen una manicura completa i expliquen com manipulen cada pot per no contaminar-lo (3061-3c), amb una breu explicació científica de per què aquest ordre evita riscs (3163-6.1).",
+        "evidencia_es": "Foto del carrito ordenado con la explicación de cada compartimento.",
+        "evidencia_ca": "Foto del carretó ordenat amb l'explicació de cada compartiment.",
+        "dua_es": "Se marcan los compartimentos con colores y pictogramas para el alumnado con más dificultad de organización.",
+        "dua_ca": "Es marquen els compartiments amb colors i pictogrames per a l'alumnat amb més dificultat d'organització.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3064", "ra": "RA3", "criterios": ["j", "l"] },
+    "b": { "modulo": "3062", "ra": "RA3", "criterios": ["l"] },
+    "justificacion_es": "Adaptar la higiene capilar a los cambios de forma y cumplir las medidas de seguridad se comparte con la depilación.",
+    "justificacion_ca": "Adaptar la higiene capil·lar als canvis de forma i complir les mesures de seguretat es comparteix amb la depilació.",
+    "actividades": [
+      {
+        "titulo_es": "Protocolo de higiene para cabellos teñidos",
+        "titulo_ca": "Protocol d'higiene per a cabells tenyits",
+        "contexto_es": "En el salón del centro llegan clientas con permanente y color y el lavado siempre es el mismo.",
+        "contexto_ca": "Al saló del centre arriben clientes amb permanent i color i el rentat sempre és el mateix.",
+        "desarrollo_es": "El alumnado adapta el lavado y el acondicionado según si el cabello lleva un cambio de forma temporal o permanente (3064-3j). Antes de empezar, revisa el equipo de protección y aplica las normas de seguridad del puesto (3064-3l), y al terminar recoge los residuos y limpia los aparatos siguiendo las medidas medioambientales (3062-3l).",
+        "desarrollo_ca": "L'alumnat adapta el rentat i l'acondicionament segons si el cabell duu un canvi de forma temporal o permanent (3064-3j). Abans de començar, revisa l'equip de protecció i aplica les normes de seguretat del lloc (3064-3l), i en acabar recull els residus i neteja els aparells seguint les mesures mediambientals (3062-3l).",
+        "evidencia_es": "Protocolo escrito del lavado adaptado y lista de comprobación de seguridad.",
+        "evidencia_ca": "Protocol escrit del rentat adaptat i llista de comprovació de seguretat.",
+        "dua_es": "La lista de comprobación se ofrece con casillas grandes para marcar paso a paso.",
+        "dua_ca": "La llista de comprovació s'ofereix amb caselles grans per marcar pas a pas.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      },
+      {
+        "titulo_es": "Reto del puesto de lavado seguro",
+        "titulo_ca": "Repte del lloc de rentat segur",
+        "contexto_es": "Una inspección inesperada del centro revisa el estado de la zona de lavado.",
+        "contexto_ca": "Una inspecció inesperada del centre revisa l'estat de la zona de rentat.",
+        "desarrollo_es": "Cada equipo prepara el puesto de lavado y decide cómo adaptar la higiene a un cabello con permanente (3064-3j). Comprueba las condiciones de seguridad antes de conectar el secador (3064-3l) y revisa que los restos de producto y los envases vayan al contenedor correcto (3062-3l).",
+        "desarrollo_ca": "Cada equip prepara el lloc de rentat i decideix com adaptar la higiene a un cabell amb permanent (3064-3j). Comprova les condicions de seguretat abans de connectar l'assecador (3064-3l) i revisa que les restes de producte i els envasos vagin al contenidor correcte (3062-3l).",
+        "evidencia_es": "Acta de inspección con los puntos de seguridad corregidos.",
+        "evidencia_ca": "Acta d'inspecció amb els punts de seguretat corregits.",
+        "dua_es": "El acta incluye una versión con pictogramas para quien prefiera no leer todo el texto.",
+        "dua_ca": "L'acta inclou una versió amb pictogrames per a qui prefereixi no llegir tot el text.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Gamificación del semáforo del lavado",
+        "titulo_ca": "Gamificació del semàfor del rentat",
+        "contexto_es": "El grupo quiere evitar los pequeños accidentes que ocurren cuando se lava el pelo con prisas.",
+        "contexto_ca": "El grup vol evitar els petits accidents que passen quan es renta el cabell amb presses.",
+        "desarrollo_es": "El alumnado clasifica tarjetas de situaciones reales de lavado según el semáforo de riesgo (3064-3l). Después elige la higiene adecuada para un cabello con cambio de forma permanente (3064-3j) y decide qué medidas medioambientales aplicar al desechar la cera y los envases del taller (3062-3l).",
+        "desarrollo_ca": "L'alumnat classifica targetes de situacions reals de rentat segons el semàfor de risc (3064-3l). Després tria la higiene adequada per a un cabell amb un canvi de forma permanent (3064-3j) i decideix quines mesures mediambientals aplicar en llençar la cera i els envasos del taller (3062-3l).",
+        "evidencia_es": "Tablero de semáforo con las tarjetas clasificadas y justificadas.",
+        "evidencia_ca": "Tauler de semàfor amb les targetes classificades i justificades.",
+        "dua_es": "Las tarjetas se leen en voz alta para el alumnado con dificultades de lectura.",
+        "dua_ca": "Les targetes es llegeixen en veu alta per a l'alumnat amb dificultats de lectura.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  }
+]

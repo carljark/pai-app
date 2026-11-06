@@ -1,0 +1,302 @@
+[
+  {
+    "a": { "modulo": "3065", "ra": "RA1", "criterios": ["c", "g"] },
+    "b": { "modulo": "3160", "ra": "RA4", "criterios": ["c"] },
+    "justificacion_es": "Se describe el mantenimiento de los equipos con criterios de higiene y seguridad y se relaciona con los sistemas de protección general del salón.",
+    "justificacion_ca": "Es descriu el manteniment dels equips amb criteris d'higiene i seguretat i es relaciona amb els sistemes de protecció general del saló.",
+    "actividades": [
+      {
+        "titulo_es": "Mantenimiento a fondo de los aparatos de tinte",
+        "titulo_ca": "Manteniment a fons dels aparells de tint",
+        "contexto_es": "El taller del ciclo de Peluquería del IES de Inca recibe un lote de aparatos de color donados y hay que comprobar si están listos para el aula.",
+        "contexto_ca": "El taller del cicle de Perruqueria de l'IES d'Inca rep un lot d'aparells de color donats i cal comprovar si estan llestos per a l'aula.",
+        "desarrollo_es": "El alumnado revisa cada aparato del cambio de color, anota su uso y su limpieza siguiendo las instrucciones del fabricante (3065-1c). Después aplica las normas de seguridad y de gestión de residuos del taller, con guantes y recipientes adecuados (3065-1g), y coloca en un panel los sistemas de protección general que protegen a todo el equipo (3160-4c).",
+        "desarrollo_ca": "L'alumnat revisa cada aparell del canvi de color, n'anota l'ús i la neteja seguint les instruccions del fabricant (3065-1c). Després aplica les normes de seguretat i de gestió de residus del taller, amb guants i recipients adequats (3065-1g), i col·loca en un panell els sistemes de protecció general que protegeixen tot l'equip (3160-4c).",
+        "evidencia_es": "Panel ilustrado con la ficha de mantenimiento de cada aparato y los sistemas de protección del taller.",
+        "evidencia_ca": "Panell il·lustrat amb la fitxa de manteniment de cada aparell i els sistemes de protecció del taller.",
+        "dua_es": "Cada aparato lleva una etiqueta con pictogramas y los pasos se entregan por escrito en una tarjeta plastificada.",
+        "dua_ca": "Cada aparell duu una etiqueta amb pictogrames i els passos es lliuren per escrit en una targeta plastificada.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Puzle de seguridad en la mesa de color",
+        "titulo_ca": "Puzle de seguretat a la taula de color",
+        "contexto_es": "Antes de la jornada de puertas abiertas del centro, el equipo debe comprobar que la mesa de color cumple todas las medidas de prevención.",
+        "contexto_ca": "Abans de la jornada de portes obertes del centre, l'equip ha de comprovar que la taula de color compleix totes les mesures de prevenció.",
+        "desarrollo_es": "Se reparten cuatro fichas: uso y mantenimiento de los aparatos (3065-1c), prevención de riesgos laborales y ambientales (3065-1g), protección general de la sala (3160-4c) y una lista de comprobación vacía. Cada grupo explica su ficha y entre todos completan la lista de la mesa de color.",
+        "desarrollo_ca": "Es reparteixen quatre fitxes: ús i manteniment dels aparells (3065-1c), prevenció de riscs laborals i ambientals (3065-1g), protecció general de la sala (3160-4c) i una llista de comprovació buida. Cada grup explica la seva fitxa i entre tots completen la llista de la taula de color.",
+        "evidencia_es": "Lista de comprobación firmada por los cuatro grupos con las medidas de la mesa de color.",
+        "evidencia_ca": "Llista de comprovació signada pels quatre grups amb les mesures de la taula de color.",
+        "dua_es": "Las fichas combinan texto breve con fotografías y quien lo necesite puede responder de forma oral.",
+        "dua_ca": "Les fitxes combinen text breu amb fotografies i qui ho necessiti pot respondre de manera oral.",
+        "metodologia_es": "Aprendizaje cooperativo (puzle).",
+        "metodologia_ca": "Aprenentatge cooperatiu (puzle)."
+      },
+      {
+        "titulo_es": "Revisión solidaria del taller de color",
+        "titulo_ca": "Revisió solidària del taller de color",
+        "contexto_es": "Una entidad del barrio que atiende a personas mayores pide consejo al centro para montar un pequeño espacio de color seguro.",
+        "contexto_ca": "Una entitat del barri que atén persones grans demana consell al centre per muntar un petit espai de color segur.",
+        "desarrollo_es": "En pequeños grupos, el alumnado redacta una guía sencilla sobre cómo usar y limpiar los aparatos del color (3065-1c) y sobre las precauciones que hay que tomar en cada servicio (3065-1g). Después propone los sistemas de protección general que la entidad debería instalar en su local (3160-4c) y se los presenta en una visita.",
+        "desarrollo_ca": "En grups petits, l'alumnat redacta una guia senzilla sobre com usar i netejar els aparells del color (3065-1c) i sobre les precaucions que cal prendre a cada servei (3065-1g). Després proposa els sistemes de protecció general que l'entitat hauria d'instal·lar al seu local (3160-4c) i els presenta en una visita.",
+        "evidencia_es": "Guía ilustrada entregada a la entidad con los sistemas de protección recomendados.",
+        "evidencia_ca": "Guia il·lustrada lliurada a l'entitat amb els sistemes de protecció recomanats.",
+        "dua_es": "La guía se maqueta con letra grande y apoyos visuales, y se ofrece un guion a quien deba explicarla en público.",
+        "dua_ca": "La guia es maqueta amb lletra gran i suports visuals, i s'ofereix un guió a qui l'hagi d'explicar en públic.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3065", "ra": "RA2", "criterios": ["c", "d"] },
+    "b": { "modulo": "3160", "ra": "RA2", "criterios": ["a"] },
+    "justificacion_es": "Se estudia la forma de actuar de los cosméticos decolorantes y sus normas de uso para describir el producto ofrecido por la empresa del sector.",
+    "justificacion_ca": "S'estudia la manera d'actuar dels cosmètics decolorants i les seves normes d'ús per descriure el producte ofert per l'empresa del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Etiquetas que explican el decolorante",
+        "titulo_ca": "Etiquetes que expliquen el decolorant",
+        "contexto_es": "Una clienta del salón de prácticas llega con dudas sobre un decolorante que se vende en el supermercado y su etiqueta.",
+        "contexto_ca": "Una clienta del saló de pràctiques arriba amb dubtes sobre un decolorant que es ven al supermercat i la seva etiqueta.",
+        "desarrollo_es": "Los equipos leen la etiqueta y averiguan cómo actúa el cosmético sobre el cabello, con el nombre de sus componentes (3065-2c). A continuación resumen las normas de uso del producto, el tiempo y las precauciones (3065-2d), y preparan un texto claro que describa el producto para el mostrador (3160-2a).",
+        "desarrollo_ca": "Els equips llegeixen l'etiqueta i esbrinen com actua el cosmètic sobre el cabell, amb el nom dels seus components (3065-2c). A continuació resumen les normes d'ús del producte, el temps i les precaucions (3065-2d), i preparen un text clar que descrigui el producte per al mostrador (3160-2a).",
+        "evidencia_es": "Ficha de producto del decolorante con su acción y sus normas de uso.",
+        "evidencia_ca": "Fitxa de producte del decolorant amb la seva acció i les seves normes d'ús.",
+        "dua_es": "Se permite consultar un glosario de términos del etiquetado y usar la lupa digital para leer letra pequeña.",
+        "dua_ca": "Es pot consultar un glossari de termes de l'etiquetatge i emprar la lupa digital per llegir lletra petita.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Mostrador de dudas sobre decolorantes",
+        "titulo_ca": "Mostrador de dubtes sobre decolorants",
+        "contexto_es": "La tienda del centro abre sus puertas en la semana cultural y el alumnado atiende a personas que preguntan por los decolorantes.",
+        "contexto_ca": "La botiga del centre obre les portes a la setmana cultural i l'alumnat atén persones que demanen pels decolorants.",
+        "desarrollo_es": "Un alumno hace de cliente indeciso y otro de profesional. El profesional explica cómo funciona el decolorante elegido (3065-2c), insiste en las normas de uso y los tiempos de aplicación (3065-2d) y termina describiendo el producto con sus palabras (3160-2a). Cada escena se graba en vídeo y se comenta en grupo.",
+        "desarrollo_ca": "Un alumne fa de client indecís i un altre de professional. El professional explica com funciona el decolorant triat (3065-2c), insisteix en les normes d'ús i els temps d'aplicació (3065-2d) i acaba descrivint el producte amb les seves paraules (3160-2a). Cada escena es grava en vídeo i es comenta en grup.",
+        "evidencia_es": "Vídeo de la escena en el mostrador y lista de consejos correctos apuntados por el público.",
+        "evidencia_ca": "Vídeo de l'escena al mostrador i llista de consells correctes apuntats pel públic.",
+        "dua_es": "Los papeles están escritos con un guion de apoyo y se permite repetir la escena tantas veces como haga falta.",
+        "dua_ca": "Els papers estan escrits amb un guió de suport i es pot repetir l'escena tantes vegades com calgui.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Cartas de acción del decolorante",
+        "titulo_ca": "Cartes d'acció del decolorant",
+        "contexto_es": "El aula-taller organiza un torneo por equipos para repasar, antes del examen práctico, los decolorantes que más se usan en el salón.",
+        "contexto_ca": "L'aula-taller organitza un torneig per equips per repassar, abans de l'examen pràctic, els decolorants que més s'empren al saló.",
+        "desarrollo_es": "Por turnos, un equipo roba una carta y explica cómo actúa el cosmético que le toca (3065-2c); si acierta, gana puntos. Otra carta pide recordar las normas de utilización del producto (3065-2d) y una tercera obliga a describir el decolorante con una frase para el mostrador (3160-2a).",
+        "desarrollo_ca": "Per torns, un equip roba una carta i explica com actua el cosmètic que li toca (3065-2c); si encerta, guanya punts. Una altra carta demana recordar les normes d'utilització del producte (3065-2d) i una tercera obliga a descriure el decolorant amb una frase per al mostrador (3160-2a).",
+        "evidencia_es": "Marcador del torneo y tarjetas de respuesta completadas por cada equipo.",
+        "evidencia_ca": "Marcador del torneig i targetes de resposta completades per cada equip.",
+        "dua_es": "Las cartas incluyen una ayuda con palabras clave y el tiempo de respuesta se adapta a cada equipo.",
+        "dua_ca": "Les cartes inclouen una ajuda amb paraules clau i el temps de resposta s'adapta a cada equip.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3065", "ra": "RA1", "criterios": ["g"] },
+    "b": { "modulo": "3160", "ra": "RA2", "criterios": ["c"] },
+    "justificacion_es": "Se aplican las medidas de prevención de riesgos laborales y medioambientales para justificar la vinculación del servicio con los ODS.",
+    "justificacion_ca": "S'apliquen les mesures de prevenció de riscs laborals i mediambientals per justificar la vinculació del servei amb els ODS.",
+    "actividades": [
+      {
+        "titulo_es": "Del taller al contenedor amarillo",
+        "titulo_ca": "Del taller al contenidor groc",
+        "contexto_es": "El centro participa en la feria de consumo responsable de Manacor y el taller de color quiere llevar un ejemplo real.",
+        "contexto_ca": "El centre participa en la fira de consum responsable de Manacor i el taller de color vol dur-hi un exemple real.",
+        "desarrollo_es": "Los grupos revisan qué residuos y productos genera un cambio de color y aplican medidas de prevención medioambiental para reducirlos (3065-1g). Después enlazan esas medidas con el ODS correspondiente y redactan la justificación del servicio responsable del salón (3160-2c).",
+        "desarrollo_ca": "Els grups revisen quins residus i quins productes genera un canvi de color i apliquen mesures de prevenció mediambiental per reduir-los (3065-1g). Després enllacen aquestes mesures amb l'ODS corresponent i redacten la justificació del servei responsable del saló (3160-2c).",
+        "evidencia_es": "Cartel de feria con las medidas ambientales del taller y su ODS correspondiente.",
+        "evidencia_ca": "Cartell de fira amb les mesures ambientals del taller i el seu ODS corresponent.",
+        "dua_es": "Se ofrece una plantilla con los ODS ilustrados y se admiten carteles hechos a mano o digitales.",
+        "dua_ca": "S'ofereix una plantilla amb els ODS il·lustrats i s'admeten cartells fets a mà o digitals.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Debate sobre químicos en la alcantarilla",
+        "titulo_ca": "Debat sobre químics a la claveguera",
+        "contexto_es": "Un vídeo sobre vertidos de productos de peluquería se ha hecho viral y el grupo quiere aclarar qué se puede hacer.",
+        "contexto_ca": "Un vídeo sobre abocaments de productes de perruqueria s'ha fet viral i el grup vol aclarir què es pot fer.",
+        "desarrollo_es": "Antes del debate, cada estudiante apunta tres medidas de prevención laboral y medioambiental del cambio de color (3065-1g). En el debate, unos defienden el uso de productos más suaves y otros el reciclaje de envases; al final se vota qué servicio del salón justifica mejor su aportación a los ODS (3160-2c).",
+        "desarrollo_ca": "Abans del debat, cada estudiant apunta tres mesures de prevenció laboral i mediambiental del canvi de color (3065-1g). Al debat, uns defensen l'ús de productes més suaus i altres el reciclatge d'envasos; al final es vota quin servei del saló justifica millor la seva aportació als ODS (3160-2c).",
+        "evidencia_es": "Acta del debate con la medida ambiental más votada y su relación con los ODS.",
+        "evidencia_ca": "Acta del debat amb la mesura ambiental més votada i la seva relació amb els ODS.",
+        "dua_es": "Los turnos de palabra se marcan con tarjetas de colores y hay un tiempo previo para escribir las ideas.",
+        "dua_ca": "Els torns de paraula es marquen amb targetes de colors i hi ha un temps previ per escriure les idees.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Tríptico verde del servicio de color",
+        "titulo_ca": "Tríptic verd del servei de color",
+        "contexto_es": "El salón del instituto quiere informar a su clientela de cómo cuida el medio ambiente en cada servicio de color.",
+        "contexto_ca": "El saló de l'institut vol informar la seva clientela de com cuida el medi ambient a cada servei de color.",
+        "desarrollo_es": "El alumnado prepara en casa, con una ficha guiada, las medidas de prevención que ya aplica el taller (3065-1g). En clase, por parejas, las ordena y escribe un tríptico que explique qué servicio ofrece el salón y por qué contribuye a los ODS (3160-2c).",
+        "desarrollo_ca": "L'alumnat prepara a casa, amb una fitxa guiada, les mesures de prevenció que ja aplica el taller (3065-1g). A classe, per parelles, les ordena i escriu un tríptic que expliqui quin servei ofereix el saló i per què contribueix als ODS (3160-2c).",
+        "evidencia_es": "Tríptico doblado con las medidas ambientales del taller y el ODS elegido.",
+        "evidencia_ca": "Tríptic doblegat amb les mesures ambientals del taller i l'ODS triat.",
+        "dua_es": "La ficha de casa puede rellenarse en el móvil y el tríptico se ofrece con texto ya maquetado para recortar.",
+        "dua_ca": "La fitxa de casa es pot emplenar al mòbil i el tríptic s'ofereix amb text ja maquetat per retallar.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3065", "ra": "RA3", "criterios": ["b", "c"] },
+    "b": { "modulo": "3160", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Se identifica la acción de los colorantes y las operaciones previas al contrastar los servicios o productos de las empresas tipo.",
+    "justificacion_ca": "S'identifica l'acció dels colorants i les operacions prèvies en contrastar els serveis o productes de les empreses tipus.",
+    "actividades": [
+      {
+        "titulo_es": "Comparar tintes de tres marcas",
+        "titulo_ca": "Comparar tints de tres marques",
+        "contexto_es": "El almacén del taller guarda colorantes de varias casas comerciales y hay que decidir cuál conviene más para cada servicio.",
+        "contexto_ca": "El magatzem del taller guarda colorants de diverses cases comercials i cal decidir quin convé més per a cada servei.",
+        "desarrollo_es": "Cada grupo analiza un colorante distinto y explica cómo actúa sobre el cabello según su etiqueta (3065-3b). Luego repasa qué operaciones hay que hacer antes de teñir, como la prueba de mechón o la preparación del cabello (3065-3c), y compara los servicios que ofrecen las tres empresas (3160-1c).",
+        "desarrollo_ca": "Cada grup analitza un colorant diferent i explica com actua sobre el cabell segons la seva etiqueta (3065-3b). Després repassa quines operacions cal fer abans de tenyir, com la prova de metxa o la preparació del cabell (3065-3c), i compara els serveis que ofereixen les tres empreses (3160-1c).",
+        "evidencia_es": "Tabla comparativa de los tres colorantes con sus operaciones previas y los servicios de cada marca.",
+        "evidencia_ca": "Taula comparativa dels tres colorants amb les operacions prèvies i els serveis de cada marca.",
+        "dua_es": "La tabla se entrega medio hecha con los títulos fijos y el alumnado completa con palabras clave.",
+        "dua_ca": "La taula es lliura mig feta amb els títols fixos i l'alumnat la completa amb paraules clau.",
+        "metodologia_es": "Indagación guiada.",
+        "metodologia_ca": "Indagació guiada."
+      },
+      {
+        "titulo_es": "El caso del rubio que salió naranja",
+        "titulo_ca": "El cas del ros que va sortir taronja",
+        "contexto_es": "Un salón de Palma comparte con el centro una queja por un tono que no se correspondía con el colorante elegido.",
+        "contexto_ca": "Un saló de Palma comparteix amb el centre una queixa per un to que no es corresponia amb el colorant triat.",
+        "desarrollo_es": "Con la información del caso, el alumnado explica por qué el colorante actuó de esa manera sobre el cabello (3065-3b). Después repasa las operaciones previas que se pudieron olvidar, como la prueba de tolerancia o el diagnóstico (3065-3c), y compara qué servicio anunciaba el salón con lo que realmente hizo (3160-1c).",
+        "desarrollo_ca": "Amb la informació del cas, l'alumnat explica per què el colorant va actuar d'aquella manera sobre el cabell (3065-3b). Després repassa les operacions prèvies que es podien haver oblidat, com la prova de tolerància o el diagnòstic (3065-3c), i compara quin servei anunciava el saló amb el que realment va fer (3160-1c).",
+        "evidencia_es": "Informe breve del caso con la causa del fallo y las operaciones previas que faltaron.",
+        "evidencia_ca": "Informe breu del cas amb la causa de la fallada i les operacions prèvies que van faltar.",
+        "dua_es": "El caso se entrega en cómic con viñetas y se permite responder con dibujos y etiquetas.",
+        "dua_ca": "El cas es lliura en còmic amb vinyetes i es permet respondre amb dibuixos i etiquetes.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Cuatro mesas de servicios del color",
+        "titulo_ca": "Quatre taules de serveis del color",
+        "contexto_es": "Para el día de las familias, el taller se divide en cuatro mesas donde se muestra un servicio de color diferente.",
+        "contexto_ca": "Per al dia de les famílies, el taller es divideix en quatre taules on es mostra un servei de color diferent.",
+        "desarrollo_es": "Cada mesa prueba un colorante y describe su acción sobre un mechón (3065-3b). Los visitantes preguntan por las operaciones previas de cada técnica y el equipo las explica en orden (3065-3c). Al final se comparan los servicios de las marcas que patrocinan el taller (3160-1c).",
+        "desarrollo_ca": "Cada taula prova un colorant i descriu la seva acció sobre una metxa (3065-3b). Els visitants pregunten per les operacions prèvies de cada tècnica i l'equip les explica en ordre (3065-3c). Al final es comparen els serveis de les marques que patrocinen el taller (3160-1c).",
+        "evidencia_es": "Mechones teñidos y tarjeta de cada mesa con las operaciones previas.",
+        "evidencia_ca": "Metxes tenyides i targeta de cada taula amb les operacions prèvies.",
+        "dua_es": "Cada mesa tiene una carpeta con los pasos numerados y una persona responsable de apoyo rotatorio.",
+        "dua_ca": "Cada taula té una carpeta amb els passos numerats i una persona responsable de suport rotatori.",
+        "metodologia_es": "Rincones de aprendizaje.",
+        "metodologia_ca": "Racons d'aprenentatge."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3065", "ra": "RA4", "criterios": ["d", "i"] },
+    "b": { "modulo": "3160", "ra": "RA1", "criterios": ["c"] },
+    "justificacion_es": "Se determina el tipo de cosmético de la coloración parcial y se anota en la ficha del cliente al comparar la oferta de las empresas del sector.",
+    "justificacion_ca": "Es determina el tipus de cosmètic de la coloració parcial i s'anota a la fitxa del client en comparar l'oferta de les empreses del sector.",
+    "actividades": [
+      {
+        "titulo_es": "Registro paso a paso de una mecha",
+        "titulo_ca": "Registre pas a pas d'una metxa",
+        "contexto_es": "El salón del centro quiere que cualquier profesional pueda repetir un servicio de mechas y pide que todo quede por escrito.",
+        "contexto_ca": "El saló del centre vol que qualsevol professional pugui repetir un servei de metxes i demana que tot quedi per escrit.",
+        "desarrollo_es": "Por parejas, una persona hace de técnico responsable y decide con la otra qué cosmético se aplica según el estado del cabello (3065-4d). A medida que trabajan en el maniquí, anotan en la ficha del cliente los productos y las observaciones y en la ficha de servicio la técnica empleada (3065-4i). Después comparan su registro con los servicios parecidos que ofrecen salones reales (3160-1c).",
+        "desarrollo_ca": "Per parelles, una persona fa de tècnic responsable i decideix amb l'altra quin cosmètic s'aplica segons l'estat del cabell (3065-4d). A mesura que treballen al maniquí, anoten a la fitxa del client els productes i les observacions i, a la fitxa de servei, la tècnica emprada (3065-4i). Després comparen el seu registre amb els serveis semblants que ofereixen salons reals (3160-1c).",
+        "evidencia_es": "Ficha del cliente y ficha de servicio de la práctica de mechas, comparadas con la oferta real.",
+        "evidencia_ca": "Fitxa del client i fitxa de servei de la pràctica de metxes, comparades amb l'oferta real.",
+        "dua_es": "Las fichas tienen casillas con ejemplos y se puede dictar al compañero si cuesta escribir.",
+        "dua_ca": "Les fitxes tenen caselles amb exemples i es pot dictar al company si costa escriure.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Reto de repetir el servicio exacto",
+        "titulo_ca": "Repte de repetir el servei exacte",
+        "contexto_es": "Una clienta habitual pide recuperar el mismo tono parcial que llevaba hace tres meses y el equipo debe poder hacerlo igual.",
+        "contexto_ca": "Una clienta habitual demana recuperar el mateix to parcial que duia fa tres mesos i l'equip ho ha de poder fer igual.",
+        "desarrollo_es": "El reto consiste en reconstruir el servicio con las fichas antiguas. El alumnado consulta el registro previo, confirma con el técnico el cosmético que toca (3065-4d) y comprueba si la ficha de servicio describe bien la técnica y la del cliente los productos (3065-4i). Si hay dudas, busca salones que documenten así sus servicios (3160-1c).",
+        "desarrollo_ca": "El repte consisteix a reconstruir el servei amb les fitxes antigues. L'alumnat consulta el registre previ, confirma amb el tècnic el cosmètic que toca (3065-4d) i comprova si la fitxa de servei descriu bé la tècnica i la del client els productes (3065-4i). Si hi ha dubtes, cerca salons que documentin així els seus serveis (3160-1c).",
+        "evidencia_es": "Reconstrucción del servicio en un guion con los cosméticos y la técnica documentados.",
+        "evidencia_ca": "Reconstrucció del servei en un guió amb els cosmètics i la tècnica documentats.",
+        "dua_es": "El reto se puede resolver de forma oral grabando la explicación con el móvil.",
+        "dua_ca": "El repte es pot resoldre de manera oral gravant l'explicació amb el mòbil.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Mejora del archivo del taller",
+        "titulo_ca": "Millora de l'arxiu del taller",
+        "contexto_es": "El archivador del taller se ha desordenado y el centro quiere que sirva de modelo para otros ciclos.",
+        "contexto_ca": "L'arxivador del taller s'ha desordenat i el centre vol que serveixi de model per a altres cicles.",
+        "desarrollo_es": "En grupos, el alumnado detecta qué falta en las fichas actuales: el cosmético elegido (3065-4d), los datos del cliente y la técnica de servicio (3065-4i). Diseñan una plantilla mejorada y comprueban si los salones del barrio publican servicios con ese nivel de detalle (3160-1c).",
+        "desarrollo_ca": "En grups, l'alumnat detecta què falta a les fitxes actuals: el cosmètic triat (3065-4d), les dades del client i la tècnica de servei (3065-4i). Dissenyen una plantilla millorada i comproven si els salons del barri publiquen serveis amb aquest nivell de detall (3160-1c).",
+        "evidencia_es": "Plantilla de ficha rediseñada y lista de mejoras encontradas en los salones comparados.",
+        "evidencia_ca": "Plantilla de fitxa redissenyada i llista de millores trobades als salons comparats.",
+        "dua_es": "Se ofrecen dos modelos de plantilla, uno con mucho espacio y otro con pictogramas.",
+        "dua_ca": "S'ofereixen dos models de plantilla, un amb molt espai i un altre amb pictogrames.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": { "modulo": "3065", "ra": "RA4", "criterios": ["a", "e", "f"] },
+    "b": { "modulo": "3160", "ra": "RA3", "criterios": ["a"] },
+    "justificacion_es": "Se describen las técnicas de coloración parcial, se informa al cliente con la prueba de tolerancia y se le acomoda al definir las características de la empresa spin-off.",
+    "justificacion_ca": "Es descriuen les tècniques de coloració parcial, s'informa el client amb la prova de tolerància i se l'acomoda en definir les característiques de l'empresa spin-off.",
+    "actividades": [
+      {
+        "titulo_es": "Ritual de acogida para un balayage",
+        "titulo_ca": "Ritual d'acollida per a un balayage",
+        "contexto_es": "Una clienta nueva pide un balayage en el salón del centro y el alumnado quiere que se sienta bien atendida desde que entra.",
+        "contexto_ca": "Una clienta nova demana un balayage al saló del centre i l'alumnat vol que se senti ben atesa des que entra.",
+        "desarrollo_es": "Delante de un maniquí, el alumnado explica en qué consiste el balayage y otras técnicas de coloración parcial (3065-4a). Después representa el protocolo completo: informa a la clienta y le hace la prueba de tolerancia respetando las indicaciones del fabricante (3065-4e), y la acomoda y la protege con toallas y protección de piel (3065-4f). Para cerrar, comparan su ritual con el de un salón especializado que se presenta como spin-off (3160-3a).",
+        "desarrollo_ca": "Davant d'un maniquí, l'alumnat explica en què consisteix el balayage i altres tècniques de coloració parcial (3065-4a). Després representa el protocol complet: informa la clienta i li fa la prova de tolerància respectant les indicacions del fabricant (3065-4e), i l'acomoda i la protegeix amb tovalloles i protecció de pell (3065-4f). Per acabar, comparen el seu ritual amb el d'un saló especialitzat que es presenta com a spin-off (3160-3a).",
+        "evidencia_es": "Lista de pasos del ritual de acogida ilustrada con fotos de la práctica.",
+        "evidencia_ca": "Llista de passos del ritual d'acollida il·lustrada amb fotos de la pràctica.",
+        "dua_es": "Se permiten apoyos de cartón para colocar la toalla y un cartel con los pasos en la pared.",
+        "dua_ca": "Es permeten suports de cartó per col·locar la tovallola i un cartell amb els passos a la paret.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Proyecto de salón especializado en mechas",
+        "titulo_ca": "Projecte de saló especialitzat en metxes",
+        "contexto_es": "El ciclo imagina un salón pequeño que solo trabaja coloración parcial y quiere presentarlo al concurso de ideas del centro.",
+        "contexto_ca": "El cicle imagina un saló petit que només treballa coloració parcial i el vol presentar al concurs d'idees del centre.",
+        "desarrollo_es": "Cada equipo elige una técnica de coloración parcial y describe cómo se aplica (3065-4a). Prepara el trato con la clienta, con la información previa, la prueba de tolerancia y los parámetros del laboratorio (3065-4e), y detalla cómo la acomodará y le protegerá la piel en cada servicio (3065-4f). Finalmente enmarca el salón como empresa spin-off y explica sus rasgos (3160-3a).",
+        "desarrollo_ca": "Cada equip tria una tècnica de coloració parcial i descriu com s'aplica (3065-4a). Prepara el tracte amb la clienta, amb la informació prèvia, la prova de tolerància i els paràmetres del laboratori (3065-4e), i detalla com l'acomodarà i li protegirà la pell a cada servei (3065-4f). Finalment emmarca el saló com a empresa spin-off i n'explica els trets (3160-3a).",
+        "evidencia_es": "Dosier del salón de mechas con su técnica estrella y los rasgos de spin-off.",
+        "evidencia_ca": "Dossier del saló de metxes amb la seva tècnica estrella i els trets de spin-off.",
+        "dua_es": "El dosier admite formato de cartulina o presentación digital y se da un índice orientativo.",
+        "dua_ca": "El dossier admet format de cartolina o presentació digital i es dona un índex orientatiu.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Taller por parejas de color parcial",
+        "titulo_ca": "Taller per parelles de color parcial",
+        "contexto_es": "El aula se convierte en un taller donde cada pareja atiende a un compañero que hace de clienta durante toda la sesión.",
+        "contexto_ca": "L'aula es converteix en un taller on cada parella atén un company que fa de clienta durant tota la sessió.",
+        "desarrollo_es": "Cada pareja prepara primero su técnica parcial sobre un maniquí y la explica al resto (3065-4a). En la segunda parte, informa a su clienta y le aplica la prueba de tolerancia según el fabricante (3065-4e) y la protege y acomoda antes de empezar (3065-4f). Para cerrar, cada pareja describe en tres líneas qué hace diferente a un salón especialista, como una spin-off (3160-3a).",
+        "desarrollo_ca": "Cada parella prepara primer la seva tècnica parcial sobre un maniquí i l'explica a la resta (3065-4a). A la segona part, informa la seva clienta i li aplica la prova de tolerància segons el fabricant (3065-4e) i la protegeix i l'acomoda abans de començar (3065-4f). Per acabar, cada parella descriu en tres línies què fa diferent un saló especialista, com una spin-off (3160-3a).",
+        "evidencia_es": "Registro fotográfico por parejas del protocolo y las tres líneas sobre la spin-off.",
+        "evidencia_ca": "Registre fotogràfic per parelles del protocol i les tres línies sobre la spin-off.",
+        "dua_es": "Las parejas se forman con roles rotativos y se permite consultar la lista de pasos en un póster.",
+        "dua_ca": "Les parelles es formen amb rols rotatius i es pot consultar la llista de passos en un pòster.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  }
+]

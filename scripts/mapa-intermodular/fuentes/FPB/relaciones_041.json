@@ -1,0 +1,65 @@
+[
+  {
+    "a": {
+      "modulo": "3064",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE1",
+      "criterios": [
+        "1.1"
+      ]
+    },
+    "justificacion_es": "Las fases del cambio permanente y el control del tiempo de exposición se explican por reacciones químicas del cabello.",
+    "justificacion_ca": "Les fases del canvi permanent i el control del temps d'exposició s'expliquen per reaccions químiques del cabell.",
+    "actividades": [
+      {
+        "titulo_es": "Investigación guiada de las fases con mechones",
+        "titulo_ca": "Recerca guiada de les fases amb metxes",
+        "contexto_es": "En el salón de peluquería del centro, en Inca, una clienta del barrio pide una permanente y pregunta por qué el pelo le quedará rizado.",
+        "contexto_ca": "Al saló de perruqueria del centre, a Inca, una clienta del barri demana una permanent i pregunta per què el cabell li quedarà arrissat.",
+        "desarrollo_es": "El alumnado trabaja por parejas con mechones de práctica y describe las fases del cambio permanente, relacionando cada paso con el aspecto del cabello (3064-5a). Después aplica el cosmético sobre un mechón siguiendo la ficha del fabricante y anota el tiempo de exposición (3064-5f). Para cerrar, explica con lenguaje científico qué ocurre en la fibra capilar durante el proceso y por qué se controla el tiempo (3163-1.1).",
+        "desarrollo_ca": "L'alumnat treballa per parelles amb metxes de pràctica i descriu les fases del canvi permanent, relacionant cada pas amb l'aspecte del cabell (3064-5a). Després aplica el cosmètic sobre una metxa seguint la fitxa del fabricant i anota el temps d'exposició (3064-5f). Per acabar, explica amb llenguatge científic què passa a la fibra capil·lar durant el procés i per què es controla el temps (3163-1.1).",
+        "evidencia_es": "Dossier de pareja con el esquema de fases, los tiempos anotados y la explicación científica.",
+        "evidencia_ca": "Dossier de parella amb l'esquema de fases, els temps anotats i l'explicació científica.",
+        "dua_es": "Ficha de observación con pictogramas y tiempos ya marcados para quien necesita apoyo en la lectura.",
+        "dua_ca": "Fitxa d'observació amb pictogrames i temps ja marcats per a qui necessita suport en la lectura.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Simulación de la clienta impaciente en el salón",
+        "titulo_ca": "Simulació de la clienta impacient al saló",
+        "contexto_es": "Un sábado por la mañana en un salón de Manacor, una clienta con prisa por una boda pide acortar el tiempo de la permanente.",
+        "contexto_ca": "Un dissabte dematí en un saló de Manacor, una clienta amb pressa per un casament demana escurçar el temps de la permanent.",
+        "desarrollo_es": "Por parejas, una persona hace de profesional y otra de clienta, y explican el proceso completo de la permanente con sus fases y modificaciones (3064-5a). La persona profesional aplica los cosméticos en un maniquí, cronometra el tiempo de exposición y justifica ante la clienta por qué no puede recortarlo (3064-5f). Después, en grupo, analizan qué reacción química explica ese límite de tiempo y lo relacionan con los fenómenos que estudia la ciencia (3163-1.1).",
+        "desarrollo_ca": "Per parelles, una persona fa de professional i l'altra de clienta, i expliquen el procés complet de la permanent amb les seves fases i modificacions (3064-5a). La persona professional aplica els cosmètics en un maniquí, cronometra el temps d'exposició i justifica davant la clienta per què no pot retallar-lo (3064-5f). Després, en grup, analitzen quina reacció química explica aquest límit de temps i ho relacionen amb els fenòmens que estudia la ciència (3163-1.1).",
+        "evidencia_es": "Registro de la simulación con el guion de la explicación y el tiempo final elegido.",
+        "evidencia_ca": "Registre de la simulació amb el guió de l'explicació i el temps final triat.",
+        "dua_es": "Guion de juego de rol con frases de inicio y tarjetas de vocabulario para quien se bloquea al hablar en público.",
+        "dua_ca": "Guió de joc de rol amb frases d'inici i targetes de vocabulari per a qui es bloqueja en parlar en públic.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Juego de cartas de cosméticos y tiempos",
+        "titulo_ca": "Joc de cartes de cosmètics i temps",
+        "contexto_es": "En el aula-taller del centro, el grupo prepara una feria de peluquería para las familias y necesita un juego para explicar la permanente.",
+        "contexto_ca": "A l'aula-taller del centre, el grup prepara una fira de perruqueria per a les famílies i necessita un joc per explicar la permanent.",
+        "desarrollo_es": "En equipos, el alumnado crea una baraja con cartas de fases, cosméticos y tiempos y la ordena para reconstruir el proceso completo del cambio permanente (3064-5a). Cada equipo aplica su secuencia en un mechón, ajusta la cantidad de producto y el tiempo de exposición, y comprueba el resultado (3064-5f). Al final, un portavoz explica al resto por qué esa combinación funciona según las leyes químicas del cabello (3163-1.1).",
+        "desarrollo_ca": "En equips, l'alumnat crea una baralla amb cartes de fases, cosmètics i temps i l'ordena per reconstruir el procés complet del canvi permanent (3064-5a). Cada equip aplica la seva seqüència en una metxa, ajusta la quantitat de producte i el temps d'exposició, i comprova el resultat (3064-5f). Al final, un portaveu explica a la resta per què aquesta combinació funciona segons les lleis químiques del cabell (3163-1.1).",
+        "evidencia_es": "Baraja terminada y ficha de equipo con la secuencia validada.",
+        "evidencia_ca": "Baralla acabada i fitxa d'equip amb la seqüència validada.",
+        "dua_es": "Cartas con un color por fase y un compañero tutor para quien necesita más apoyo con la secuencia.",
+        "dua_ca": "Cartes amb un color per fase i un company tutor per a qui necessita més suport amb la seqüència.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  }
+]

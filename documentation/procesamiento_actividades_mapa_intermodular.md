@@ -188,6 +188,11 @@ npx tsx ../scripts/mapa-intermodular/mapa-intermodular.mts construir \
   --salida src/data/mapa-intermodular/<archivo>.json
 ```
 
+Desde la tarea 250 hay otros dos comandos, pensados para encargar el mapa por partes:
+
+- **`plan`:** valida `plan.json`, el plan de relaciones sin actividades. Comprueba los lados, que no haya pares repetidos, que cada unidad tenga entre 6 y 15 relaciones, la cobertura de criterios y las justificaciones ES/CA.
+- **`comprobar --archivo relaciones_NNN.json`:** valida un solo archivo de relaciones con sus actividades, y los títulos repetidos con los demás archivos, sin exigir todavía el mapa completo.
+
 Las fuentes (`config.json` y `relaciones*.json`) se versionan en `scripts/mapa-intermodular/fuentes/<TAB>/`. Así, si se corrige el texto de un RA o un criterio en `ras_*.data.ts`, basta con volver a ejecutar `construir` y crear una migración que recargue la pestaña. La generación es determinista: las mismas fuentes producen el mismo JSON.
 
 ### 8.2. Formato de entrada
@@ -220,6 +225,7 @@ Son avisos, que no bloquean: criterios del curso sin ninguna conexión y criteri
 - Cada relación se publica en los dos RA. Los criterios propios de cada conexión son los de su lado, y `relatedCriteria` contiene solo criterios del módulo destino, con texto oficial ES/CA.
 - `sourceCriteria` usa la clave corta `0011-1a`. Si el código del módulo tiene letras (`CAE1`), se omite el prefijo y queda `1a`: el filtro por criterio del frontend (`MapaIntermodularFacade.filteredConnections`) busca la letra dentro de `sourceCriteria`, y la «a», la «c» y la «e» de «CAE» darían coincidencias falsas. `criteriaKeys` lleva siempre las tres formas (`a`, `1a`, `CAE1-1a`).
 - Las conexiones de cada RA se ordenan por módulo y RA de destino, en el orden del catálogo.
+- **Competencias específicas de los ámbitos de FP Básica** (3161-3164, tarea 250): las unidades son `CE1`…`CE8` y sus criterios van numerados (`1.1`). La cita y `sourceCriteria` son `3161-1.1`, y `criteriaKeys` contiene `1.1` y `3161-1.1`. El frontend extrae esa clave con `criterio-clave.ts`.
 
 ### 8.5. Encargarlo a otro modelo
 

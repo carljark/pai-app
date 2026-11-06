@@ -101,15 +101,17 @@ describe('CurriculumFacade', () => {
 
   it('should group items when tipoNivel is FP_BASICA', () => {
     facade.tipoNivel.set('FP_BASICA');
+    // FP Básica fija los módulos de cada curso: solo cuentan los RA de módulos de 1.º.
     facade.ras.set([
-      { _id: '1', description: 'Desc1', subject: 'SubjectA' },
-      { _id: '2', description: 'Desc1', subject: 'SubjectA' },
-      { _id: '3', description: 'Desc2', subject: 'SubjectB' },
+      { _id: '1', description: 'Desc1', subject: 'SubjectA', moduleCode: '3060' },
+      { _id: '2', description: 'Desc1', subject: 'SubjectA', moduleCode: '3060' },
+      { _id: '3', description: 'Desc2', subject: 'SubjectB', moduleCode: '3062' },
+      { _id: '4', description: 'Desc3', subject: 'De 2.º', moduleCode: '3005' },
     ]);
 
     const groups = facade.groupedItems();
     expect(groups.length).toBe(2);
-    const subjectA = groups.find((g) => g.category === 'SubjectA');
+    const subjectA = groups.find((g) => g.category === '3060. SubjectA');
     expect(subjectA?.items.length).toBe(1);
     expect(subjectA?.items[0].text).toBe('Desc1');
   });
@@ -128,12 +130,12 @@ describe('CurriculumFacade', () => {
 
   it('should compute selectedItemsDetails correctly', () => {
     facade.tipoNivel.set('FP_BASICA');
-    facade.ras.set([{ _id: '1', description: 'Desc1', subject: 'SubjectA' }]);
+    facade.ras.set([{ _id: '1', description: 'Desc1', subject: 'SubjectA', moduleCode: '3060' }]);
     facade.toggleRa('Desc1');
 
     const details = facade.selectedItemsDetails();
     expect(details.length).toBe(1);
-    expect(details[0].subject).toBe('SubjectA');
+    expect(details[0].subject).toBe('3060. SubjectA');
   });
 
   it('should truncate long descriptions in selectedItemsDetails', () => {
@@ -150,15 +152,15 @@ describe('CurriculumFacade', () => {
   it('should compute groupedSelectedItems correctly', () => {
     facade.tipoNivel.set('FP_BASICA');
     facade.ras.set([
-      { _id: '1', description: 'Desc1', subject: 'SubjectA' },
-      { _id: '2', description: 'Desc2', subject: 'SubjectA' },
+      { _id: '1', description: 'Desc1', subject: 'SubjectA', moduleCode: '3060' },
+      { _id: '2', description: 'Desc2', subject: 'SubjectA', moduleCode: '3060' },
     ]);
     facade.toggleRa('Desc1');
     facade.toggleRa('Desc2');
 
     const grouped = facade.groupedSelectedItems();
     expect(grouped.length).toBe(1);
-    expect(grouped[0].subject).toBe('SubjectA');
+    expect(grouped[0].subject).toBe('3060. SubjectA');
     expect(grouped[0].items.length).toBe(2);
   });
 
@@ -174,13 +176,14 @@ describe('CurriculumFacade', () => {
         _id: '1',
         description: 'Resuelve problemas cotidianos aplicando algebra elemental.',
         subject: 'Ciencias',
+        moduleCode: '3163',
       },
     ]);
 
     // Partial/normalized match
     facade.selectedRas.set(['Resuelve problemas cotidianos aplicando algebra elemental']);
     let details = facade.selectedItemsDetails();
-    expect(details[0].subject).toBe('Ciencias');
+    expect(details[0].subject).toBe('3163. Ciencias');
 
     // Complete mismatch fallback
     facade.selectedRas.set(['Algo totalmente desconocido']);

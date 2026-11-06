@@ -1,0 +1,381 @@
+[
+  {
+    "a": {
+      "modulo": "3064",
+      "ra": "RA5",
+      "criterios": [
+        "a",
+        "b",
+        "f"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE6",
+      "criterios": [
+        "6.1"
+      ]
+    },
+    "justificacion_es": "Las fases del cambio permanente, sus cosméticos y los tiempos de exposición se explican con procedimientos químicos medibles.",
+    "justificacion_ca": "Les fases del canvi permanent, els seus cosmètics i els temps d'exposició s'expliquen amb procediments químics mesurables.",
+    "actividades": [
+      {
+        "titulo_es": "Cronómetro y química del rizo permanente",
+        "titulo_ca": "Cronòmetre i química del rínxol permanent",
+        "contexto_es": "Un salón de peluquería de Inca quiere fijar un protocolo de tiempos para las permanentes que atiende cada semana.",
+        "contexto_ca": "Un saló de perruqueria d'Inca vol fixar un protocol de temps per a les permanents que atén cada setmana.",
+        "desarrollo_es": "Por equipos, se reparte la ficha de una permanente real y se ordenan sus fases con los cosméticos de cada una (3064-5a). A continuación se compara el producto con el tipo de cabello de tres clientas ficticias y se anota su forma de uso (3064-5b). Por último, se mide con cronómetro el tiempo de exposición de una práctica sobre mechones y se registra el control del proceso (3064-5f), relacionando la reacción química con la tabla de tiempos (3163-6.1).",
+        "desarrollo_ca": "Per equips, es reparteix la fitxa d'una permanent real i s'ordenen les seves fases amb els cosmètics de cadascuna (3064-5a). Tot seguit es compara el producte amb el tipus de cabell de tres clientes fictícies i s'anota la manera d'utilitzar-lo (3064-5b). Finalment, es mesura amb cronòmetre el temps d'exposició d'una pràctica sobre flocs i es registra el control del procés (3064-5f), relacionant la reacció química amb la taula de temps (3163-6.1).",
+        "evidencia_es": "Tabla de fases, cosméticos y tiempos medidos.",
+        "evidencia_ca": "Taula de fases, cosmètics i temps mesurats.",
+        "dua_es": "Ficha con pictogramas de cada fase para el alumnado que necesita apoyo lector.",
+        "dua_ca": "Fitxa amb pictogrames de cada fase per a l'alumnat que necessita suport lector.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Caso del rizo que perdió fuerza",
+        "titulo_ca": "Cas del rínxol que va perdre força",
+        "contexto_es": "La clienta de un centro de estética de Manacor vuelve a los quince días porque el rizo se ha deshinchado.",
+        "contexto_ca": "La clienta d'un centre d'estètica de Manacor torna al cap de quinze dies perquè el rínxol s'ha afluixat.",
+        "desarrollo_es": "Se entrega el relato del servicio y cada pareja reconstruye qué ocurrió en cada fase del cambio permanente (3064-5a). Después se revisan los cosméticos empleados y se discute si eran los adecuados para aquel cabello (3064-5b). La conclusión se apoya en el tiempo real de aplicación que consta en la ficha (3064-5f) y en una comparación de temperaturas y concentraciones (3163-6.1).",
+        "desarrollo_ca": "Es lliura el relat del servei i cada parella reconstrueix què va passar en cada fase del canvi permanent (3064-5a). Després es revisen els cosmètics emprats i es discuteix si eren els adequats per a aquell cabell (3064-5b). La conclusió es basa en el temps real d'aplicació que consta a la fitxa (3064-5f) i en una comparació de temperatures i concentracions (3163-6.1).",
+        "evidencia_es": "Informe breve con la causa probable del fallo.",
+        "evidencia_ca": "Informe breu amb la causa probable de la fallada.",
+        "dua_es": "El caso se ofrece también en audio para quien lee con dificultad.",
+        "dua_ca": "El cas s'ofereix també en àudio per a qui llegeix amb dificultat.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Juego de rol: la clienta quiere ondas duraderas",
+        "titulo_ca": "Joc de rol: la clienta vol ones duradores",
+        "contexto_es": "En el salón didáctico de un instituto de Ciutadella se cita a una clienta ficticia que pide un rizo duradero para una boda.",
+        "contexto_ca": "Al saló didàctic d'un institut de Ciutadella s'hi cita una clienta fictícia que demana un rínxol durador per a un casament.",
+        "desarrollo_es": "Quien hace de profesional explica a la clienta las fases del servicio antes de empezar (3064-5a) y le muestra los cosméticos elegidos según su cabello (3064-5b). Durante la aplicación anuncia el tiempo que queda y comprueba el reloj (3064-5f). Al acabar, ambos papeles comentan por qué el pH y el tiempo importan en el resultado (3163-6.1).",
+        "desarrollo_ca": "Qui fa de professional explica a la clienta les fases del servei abans de començar (3064-5a) i li mostra els cosmètics triats segons el cabell (3064-5b). Durant l'aplicació anuncia el temps que queda i comprova el rellotge (3064-5f). En acabar, tots dos papers comenten per què el pH i el temps importen en el resultat (3163-6.1).",
+        "evidencia_es": "Guion del juego de rol con tiempos anotados.",
+        "evidencia_ca": "Guió del joc de rol amb temps anotats.",
+        "dua_es": "Tarjetas con las réplicas clave para quien se bloquea al hablar en público.",
+        "dua_ca": "Targetes amb les rèpliques clau per a qui es bloqueja en parlar en públic.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3061",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "b": {
+      "modulo": "3159",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "b"
+      ]
+    },
+    "justificacion_es": "Elegir los útiles según el proceso es una decisión técnica que se compara con la elección razonada de un itinerario formativo.",
+    "justificacion_ca": "Triar els estris segons el procés és una decisió tècnica que es compara amb l'elecció raonada d'un itinerari formatiu.",
+    "actividades": [
+      {
+        "titulo_es": "Comparativa de útiles para dos servicios",
+        "titulo_ca": "Comparativa d'estris per a dos serveis",
+        "contexto_es": "El aula taller de un centro de Palma prepara dos prácticas seguidas: manicura rusa y pedicura completa.",
+        "contexto_ca": "L'aula taller d'un centre de Palma prepara dues pràctiques seguides: manicura russa i pedicura completa.",
+        "desarrollo_es": "Cada grupo recibe dos encargos de servicio y reparte los roles de documentalista, seleccionador y portavoz. Entre todos justifican qué útiles exige cada proceso y por qué factores los eligen (3061-1c). Luego anotan ventajas e inconvenientes de trabajar con los útiles disponibles en el aula (3159-4a) y eligen la combinación que mejor encaja con su perfil de estudiante (3159-4b).",
+        "desarrollo_ca": "Cada grup rep dos encàrrecs de servei i es reparteix els rols de documentalista, selector i portaveu. Entre tots justifiquen quins estris exigeix cada procés i per quins factors els trien (3061-1c). Després anoten avantatges i inconvenients de treballar amb els estris disponibles a l'aula (3159-4a) i trien la combinació que millor encaixa amb el seu perfil d'estudiant (3159-4b).",
+        "evidencia_es": "Cuadro comparativo de útiles y decisión final.",
+        "evidencia_ca": "Quadre comparatiu d'estris i decisió final.",
+        "dua_es": "Plantilla con columnas fijas para ordenar la comparación.",
+        "dua_ca": "Plantilla amb columnes fixes per ordenar la comparació.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Clienta indecisa en la mesa de uñas",
+        "titulo_ca": "Clienta indecisa a la taula d'ungles",
+        "contexto_es": "Una alumna representa a una clienta que no sabe si quiere esmaltado normal o semipermanente en un salón de Ibiza.",
+        "contexto_ca": "Una alumna representa una clienta que no sap si vol esmaltat normal o semipermanent en un saló d'Eivissa.",
+        "desarrollo_es": "En parejas se mantiene una conversación breve donde la profesional pregunta por el estado de la uña y el uso que dará al esmalte. Con las respuestas, se elige el material y los útiles de cada opción y se explica el motivo técnico (3061-1c). Después la pareja valora qué gana y qué pierde con cada alternativa (3159-4a) y acuerda la que más conviene a esa clienta (3159-4b).",
+        "desarrollo_ca": "En parelles es manté una conversa breu on la professional pregunta per l'estat de l'ungla i l'ús que donarà a l'esmalt. Amb les respostes, es tria el material i els estris de cada opció i s'explica el motiu tècnic (3061-1c). Després la parella valora què guanya i què perd amb cada alternativa (3159-4a) i acorda la que més convé a aquesta clienta (3159-4b).",
+        "evidencia_es": "Registro de la entrevista con la opción escogida.",
+        "evidencia_ca": "Registre de l'entrevista amb l'opció triada.",
+        "dua_es": "Lista de preguntas impresa para no perder el hilo del diálogo.",
+        "dua_ca": "Llista de preguntes impresa per no perdre el fil del diàleg.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "La caja de útiles llegó incompleta",
+        "titulo_ca": "La caixa d'estris va arribar incompleta",
+        "contexto_es": "El pedido de un centro de formación de Felanitx llega sin tijeras de cutícula y con limas de grano grueso.",
+        "contexto_ca": "La comanda d'un centre de formació de Felanitx arriba sense tisores de cutícula i amb llimes de gra gruixut.",
+        "desarrollo_es": "Sobre la mesa se coloca el pedido real y cada trío decide qué se puede hacer y qué no con ese material. Se argumenta la selección de útiles alternativa según el proceso previsto (3061-1c). El grupo escribe dos ventajas y dos inconvenientes de improvisar con lo recibido (3159-4a) y propone la opción formativa o profesional que asumiría el centro en esa situación (3159-4b).",
+        "desarrollo_ca": "Sobre la taula es col·loca la comanda real i cada trio decideix què es pot fer i què no amb aquest material. S'argumenta la selecció d'estris alternativa segons el procés previst (3061-1c). El grup escriu dos avantatges i dos inconvenients d'improvisar amb el que ha rebut (3159-4a) i proposa l'opció formativa o professional que assumiria el centre en aquesta situació (3159-4b).",
+        "evidencia_es": "Propuesta de reposición con argumentos.",
+        "evidencia_ca": "Proposta de reposició amb arguments.",
+        "dua_es": "Se permite consultar el catálogo del proveedor en papel o en pantalla.",
+        "dua_ca": "Es permet consultar el catàleg del proveïdor en paper o en pantalla.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3061",
+      "ra": "RA1",
+      "criterios": [
+        "m"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE2",
+      "criterios": [
+        "2.2"
+      ]
+    },
+    "justificacion_es": "La prevención de riesgos y el respeto medioambiental en la manicura se enmarcan en las normas europeas y en las instituciones que las impulsan.",
+    "justificacion_ca": "La prevenció de riscs i el respecte mediambiental en la manicura s'emmarquen en les normes europees i en les institucions que les impulsen.",
+    "actividades": [
+      {
+        "titulo_es": "Mapa europeo de los residuos del taller",
+        "titulo_ca": "Mapa europeu dels residus del taller",
+        "contexto_es": "El taller de estética de un instituto de Mahón acumula acetona, algodones y envases de esmalte al final de cada semana.",
+        "contexto_ca": "El taller d'estètica d'un institut de Maó acumula acetona, cotons i envasos d'esmalt al final de cada setmana.",
+        "desarrollo_es": "Cada equipo investiga en fuentes sencillas cómo se trata ese residuo y qué normas lo regulan. Con los datos, aplica las medidas de prevención de riesgos laborales y medioambientales del taller (3061-1m) y sitúa en un mapa las instituciones europeas que impulsan esas reglas, explicando sus funciones (3161-2.2).",
+        "desarrollo_ca": "Cada equip investiga en fonts senzilles com es tracta aquest residu i quines normes el regulen. Amb les dades, aplica les mesures de prevenció de riscs laborals i mediambientals del taller (3061-1m) i situa en un mapa les institucions europees que impulsen aquestes regles, explicant-ne les funcions (3161-2.2).",
+        "evidencia_es": "Mapa con residuos, normas y organismos.",
+        "evidencia_ca": "Mapa amb residus, normes i organismes.",
+        "dua_es": "Fuentes seleccionadas y resumidas para reducir la búsqueda autónoma.",
+        "dua_ca": "Fonts seleccionades i resumides per reduir la recerca autònoma.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Debate sobre el esmalte y las normas europeas",
+        "titulo_ca": "Debat sobre l'esmalt i les normes europees",
+        "contexto_es": "Una marca de un salón de Alaior anuncia esmaltes sin sustancias reguladas y el alumnado duda de la etiqueta.",
+        "contexto_ca": "Una marca d'un saló d'Alaior anuncia esmalts sense substàncies regulades i l'alumnat dubta de l'etiqueta.",
+        "desarrollo_es": "Se divide la clase en defensores de la marca, técnicos de prevención y público que decide. El primer grupo expone la etiqueta, el segundo revisa la ventilación, la protección y la gestión del residuo (3061-1m). Después se discute qué institución europea podría intervenir y con qué competencias (3161-2.2).",
+        "desarrollo_ca": "Es divideix la classe en defensors de la marca, tècnics de prevenció i públic que decideix. El primer grup exposa l'etiqueta, el segon revisa la ventilació, la protecció i la gestió del residu (3061-1m). Després es discuteix quina institució europea podria intervenir i amb quines competències (3161-2.2).",
+        "evidencia_es": "Acta del debate con argumentos y conclusión.",
+        "evidencia_ca": "Acta del debat amb arguments i conclusió.",
+        "dua_es": "Turnos de palabra marcados con tarjetas de colores.",
+        "dua_ca": "Torns de paraula marcats amb targetes de colors.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Design thinking para un rincón de uñas sostenible",
+        "titulo_ca": "Design thinking per a un racó d'ungles sostenible",
+        "contexto_es": "El aula de un centro de Sant Antoni necesita repensar el puesto de manicura para gastar menos material.",
+        "contexto_ca": "L'aula d'un centre de Sant Antoni necessita repensar el lloc de manicura per gastar menys material.",
+        "desarrollo_es": "Tras observar el puesto durante una sesión, se listan los puntos donde se generan residuos y se eligen dos para prototipar. El prototipo debe aplicar medidas de prevención y de reducción del impacto medioambiental (3061-1m). En la presentación, se justifica qué acuerdos europeos sostienen la propuesta (3161-2.2).",
+        "desarrollo_ca": "Després d'observar el lloc durant una sessió, s'enumeren els punts on es generen residus i se'n trien dos per prototipar. El prototip ha d'aplicar mesures de prevenció i de reducció de l'impacte mediambiental (3061-1m). A la presentació, es justifica quins acords europeus sostenen la proposta (3161-2.2).",
+        "evidencia_es": "Prototipo con boceto y lista de mejoras.",
+        "evidencia_ca": "Prototip amb esbós i llista de millores.",
+        "dua_es": "Materiales manipulables para construir el prototipo sin necesidad de dibujar.",
+        "dua_ca": "Materials manipulables per construir el prototip sense necessitat de dibuixar.",
+        "metodologia_es": "Design thinking.",
+        "metodologia_ca": "Pensament de disseny."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3061",
+      "ra": "RA1",
+      "criterios": [
+        "i",
+        "k"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE5",
+      "criterios": [
+        "5.1"
+      ]
+    },
+    "justificacion_es": "Identificar los cosméticos de uñas y comprobar su estado exige leer etiquetas y comunicar la información con rigor.",
+    "justificacion_ca": "Identificar els cosmètics d'ungles i comprovar-ne l'estat exigeix llegir etiquetes i comunicar la informació amb rigor.",
+    "actividades": [
+      {
+        "titulo_es": "Vídeo corto sobre cosméticos de uñas",
+        "titulo_ca": "Vídeo curt sobre cosmètics d'ungles",
+        "contexto_es": "El aula de un centro de Sóller graba cápsulas de dos minutos para repasar productos antes de la práctica.",
+        "contexto_ca": "L'aula d'un centre de Sóller enregistra càpsules de dos minuts per repassar productes abans de la pràctica.",
+        "desarrollo_es": "En casa se ve un vídeo del centro sobre cosméticos de manos y pies y se anotan dudas. En clase, cada alumno reconoce en la mesa los productos del vídeo y comprueba su etiqueta (3061-1i) y el estado del envase (3061-1k). Con esas observaciones, prepara una explicación de un minuto y la expone con apoyo gráfico (3163-5.1).",
+        "desarrollo_ca": "A casa es mira un vídeo del centre sobre cosmètics de mans i peus i s'anoten dubtes. A classe, cada alumne reconeix a la taula els productes del vídeo i en comprova l'etiqueta (3061-1i) i l'estat de l'envàs (3061-1k). Amb aquestes observacions, prepara una explicació d'un minut i l'exposa amb suport gràfic (3163-5.1).",
+        "evidencia_es": "Cápsula de vídeo propia con ficha de producto.",
+        "evidencia_ca": "Càpsula de vídeo pròpia amb fitxa de producte.",
+        "dua_es": "Guion en tres pasos para quien necesita pautas al grabarse.",
+        "dua_ca": "Guió en tres passos per a qui necessita pautes en gravar-se.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      },
+      {
+        "titulo_es": "Gincana de cosméticos en buen estado",
+        "titulo_ca": "Gimcana de cosmètics en bon estat",
+        "contexto_es": "Antes de abrir el taller de un centro de Andratx se revisa el cajón de cosméticos con pruebas rápidas.",
+        "contexto_ca": "Abans d'obrir el taller d'un centre d'Andratx es revisa el calaix de cosmètics amb proves ràpides.",
+        "desarrollo_es": "Se reparten seis estaciones con un producto distinto y una prueba de un minuto. En cada parada el equipo identifica el cosmético y su uso (3061-1i) y decide si está en condiciones mirando fecha, olor y textura (3061-1k). Las respuestas se anotan en una tabla común y el equipo que más aciertos consigue la explica al resto (3163-5.1).",
+        "desarrollo_ca": "Es reparteixen sis estacions amb un producte diferent i una prova d'un minut. A cada parada l'equip identifica el cosmètic i el seu ús (3061-1i) i decideix si és en condicions mirant la data, l'olor i la textura (3061-1k). Les respostes s'anoten en una taula comuna i l'equip que aconsegueix més encerts l'explica a la resta (3163-5.1).",
+        "evidencia_es": "Tabla de estaciones con veredictos.",
+        "evidencia_ca": "Taula d'estacions amb veredictes.",
+        "dua_es": "Cada estación incluye una imagen del producto para reconocerlo sin leer.",
+        "dua_ca": "Cada estació inclou una imatge del producte per reconèixer-lo sense llegir.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      },
+      {
+        "titulo_es": "Panel del estado de los cosméticos del aula",
+        "titulo_ca": "Panell de l'estat dels cosmètics de l'aula",
+        "contexto_es": "El taller de un centro de Formentera quiere saber de un vistazo qué productos caducan pronto.",
+        "contexto_ca": "El taller d'un centre de Formentera vol saber d'una ullada quins productes caduquen aviat.",
+        "desarrollo_es": "Se revisa todo el almacén de uñas por parejas y se anota cada cosmético con su nombre y función (3061-1i). La pareja comprueba el estado real del envase y marca en verde, ámbar o rojo (3061-1k). Con esos datos se construye un panel con colores y pictogramas que se explica a otro grupo (3163-5.1).",
+        "desarrollo_ca": "Es revisa tot el magatzem d'ungles per parelles i s'anota cada cosmètic amb el nom i la funció (3061-1i). La parella comprova l'estat real de l'envàs i marca en verd, àmbar o vermell (3061-1k). Amb aquestes dades es construeix un panell amb colors i pictogrames que s'explica a un altre grup (3163-5.1).",
+        "evidencia_es": "Panel mural con semáforo de caducidad.",
+        "evidencia_ca": "Panell mural amb semàfor de caducitat.",
+        "dua_es": "Roles rotativos para que nadie cargue con toda la lectura de etiquetas.",
+        "dua_ca": "Rols rotatius perquè ningú no carregui amb tota la lectura d'etiquetes.",
+        "metodologia_es": "Proyecto.",
+        "metodologia_ca": "Projecte."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3061",
+      "ra": "RA1",
+      "criterios": [
+        "f",
+        "j",
+        "l"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE6",
+      "criterios": [
+        "6.1"
+      ]
+    },
+    "justificacion_es": "Seleccionar material exclusivo, cosméticos y conservar los útiles de corte aplica procedimientos técnicos con criterios científicos.",
+    "justificacion_ca": "Seleccionar material exclusiu, cosmètics i conservar els estris de tall aplica procediments tècnics amb criteris científics.",
+    "actividades": [
+      {
+        "titulo_es": "Rincones de material exclusivo por clienta",
+        "titulo_ca": "Racons de material exclusiu per clienta",
+        "contexto_es": "En un centro de Llucmajor cada alumna atiende a dos clientas seguidas y debe cambiar de material entre ambas.",
+        "contexto_ca": "En un centre de Llucmajor cada alumna atén dues clientes seguides i ha de canviar de material entre totes dues.",
+        "desarrollo_es": "El aula se organiza en tres rincones: bandeja individual, cosméticos y conservación de útiles. En cada rincón se prepara lo necesario para una clienta y se justifica la elección del material de uso exclusivo (3061-1f). Después se escogen los cosméticos que pide la técnica asignada (3061-1j) y se revisa cómo se guardan las tijeras y las limas metálicas (3061-1l). Para cerrar, se mide con regla el tamaño de cada útil y se ordena por milímetros para comprobar que la bandeja cabe en el espacio asignado (3163-6.1).",
+        "desarrollo_ca": "L'aula s'organitza en tres racons: safata individual, cosmètics i conservació d'estris. A cada racó es prepara el que cal per a una clienta i es justifica l'elecció del material d'ús exclusiu (3061-1f). Després es trien els cosmètics que demana la tècnica assignada (3061-1j) i es revisa com es guarden les tisores i les llimes metàl·liques (3061-1l). Per acabar, es mesura amb regla la mida de cada estri i s'ordena per mil·límetres per comprovar que la safata cap en l'espai assignat (3163-6.1).",
+        "evidencia_es": "Tres bandejas montadas y rotuladas.",
+        "evidencia_ca": "Tres safates muntades i etiquetades.",
+        "dua_es": "Carteles numerados en cada rincón para seguir el orden sin ayuda.",
+        "dua_ca": "Cartells numerats a cada racó per seguir l'ordre sense ajuda.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      },
+      {
+        "titulo_es": "Caso del alicate que cortaba mal",
+        "titulo_ca": "Cas de l'alicate que tallava malament",
+        "contexto_es": "Una alumna de un centro de Santa Eulalia se queja de que el alicate arranca la cutícula en lugar de cortarla.",
+        "contexto_ca": "Una alumna d'un centre de Santa Eulària es queixa que l'alicate arrenca la cutícula en lloc de tallar-la.",
+        "desarrollo_es": "Se examina la herramienta y se repasa cuándo se afiló y cómo se guardó. El grupo escribe un diagnóstico y propone cómo conservar los útiles de corte a partir de ahora (3061-1l). También decide qué material desechable debe ser exclusivo de esa clienta (3061-1f) y qué cosméticos cambiaron por la técnica aplicada (3061-1j). Para cerrar, se compara el filo con una lupa y se describe el ángulo observado con lenguaje científico (3163-6.1).",
+        "desarrollo_ca": "S'examina l'eina i es repassa quan es va afilar i com es va guardar. El grup escriu un diagnòstic i proposa com conservar els estris de tall a partir d'ara (3061-1l). També decideix quin material d'un sol ús ha de ser exclusiu d'aquesta clienta (3061-1f) i quins cosmètics van canviar per la tècnica aplicada (3061-1j). Per acabar, es compara el tall amb una lupa i es descriu l'angle observat amb llenguatge científic (3163-6.1).",
+        "evidencia_es": "Diagnóstico con pauta de conservación.",
+        "evidencia_ca": "Diagnòstic amb pauta de conservació.",
+        "dua_es": "Lupa con mango grande y luz para quien tiene poca visión de cerca.",
+        "dua_ca": "Lupa amb mànec gran i llum per a qui té poca visió de prop.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Simulación de una bandeja por cada clienta",
+        "titulo_ca": "Simulació d'una safata per a cada clienta",
+        "contexto_es": "El taller de un centro de Es Castell recibe dos clientas seguidas con técnicas de uñas diferentes.",
+        "contexto_ca": "El taller d'un centre des Castell rep dues clientes seguides amb tècniques d'ungles diferents.",
+        "desarrollo_es": "Con un cronómetro y dos cajas preparadas, cada pareja monta la bandeja de la primera clienta y la retira al acabar. Mientras lo hace, nombra el material exclusivo que no se reutiliza (3061-1f), los cosméticos propios de la técnica (3061-1j) y el lugar donde deja los útiles de corte (3061-1l). Luego calcula el tiempo total de montaje y lo compara con el de la compañera (3163-6.1).",
+        "desarrollo_ca": "Amb un cronòmetre i dues caixes preparades, cada parella munta la safata de la primera clienta i la retira en acabar. Mentre ho fa, anomena el material exclusiu que no es reutilitza (3061-1f), els cosmètics propis de la tècnica (3061-1j) i el lloc on deixa els estris de tall (3061-1l). Després calcula el temps total de muntatge i el compara amb el de la companya (3163-6.1).",
+        "evidencia_es": "Registro de tiempos y bandeja final.",
+        "evidencia_ca": "Registre de temps i safata final.",
+        "dua_es": "Cajas con siluetas impresas para colocar cada útil en su sitio.",
+        "dua_ca": "Caixes amb siluetes impreses per col·locar cada estri al seu lloc.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3061",
+      "ra": "RA2",
+      "criterios": [
+        "d",
+        "g"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE3",
+      "criterios": [
+        "3.3"
+      ]
+    },
+    "justificacion_es": "Informar al técnico responsable y preparar al cliente con seguridad se vincula con el derecho a un trato digno e igualitario.",
+    "justificacion_ca": "Informar el tècnic responsable i preparar el client amb seguretat es vincula amb el dret a un tracte digne i igualitari.",
+    "actividades": [
+      {
+        "titulo_es": "Servicio de recepción segura en el taller",
+        "titulo_ca": "Servei de recepció segura al taller",
+        "contexto_es": "El aula taller de un centro de Palma ofrece una jornada abierta de manicura a personas mayores del barrio.",
+        "contexto_ca": "L'aula taller d'un centre de Palma ofereix una jornada oberta de manicura a persones grans del barri.",
+        "desarrollo_es": "Antes de la jornada, el grupo diseña la recepción: saludo, revisión de manos y preguntas de seguridad. En la acogida real, se prepara a cada persona para el servicio garantizando su comodidad y seguridad (3061-2g) y se anota cualquier alteración que convenga comentar con la responsable técnica (3061-2d). Si surge una duda sobre el trato recibido por alguna persona, se resuelve aplicando el principio de igualdad y rechazando cualquier discriminación (3161-3.3).",
+        "desarrollo_ca": "Abans de la jornada, el grup dissenya la recepció: salutació, revisió de mans i preguntes de seguretat. A l'acollida real, es prepara cada persona per al servei garantint-ne la comoditat i la seguretat (3061-2g) i s'anota qualsevol alteració que convingui comentar amb la responsable tècnica (3061-2d). Si sorgeix un dubte sobre el tracte rebut per alguna persona, es resol aplicant el principi d'igualtat i rebutjant qualsevol discriminació (3161-3.3).",
+        "evidencia_es": "Ficha de recepción cumplimentada por persona.",
+        "evidencia_ca": "Fitxa de recepció emplenada per persona.",
+        "dua_es": "Guion plastificado en la mesa con las preguntas imprescindibles.",
+        "dua_ca": "Guió plastificat a la taula amb les preguntes imprescindibles.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      },
+      {
+        "titulo_es": "Teatro foro sobre el trato en uñas",
+        "titulo_ca": "Teatre fòrum sobre el tracte a les ungles",
+        "contexto_es": "En un centro de Alaior se representa una escena donde se atiende con prisa a una clienta con las manos muy castigadas.",
+        "contexto_ca": "En un centre d'Alaior es representa una escena on s'atén amb pressa una clienta amb les mans molt castigades.",
+        "desarrollo_es": "Cuatro alumnas escenifican la llegada de la clienta y el resto observa en silencio. Cuando la escena se detiene, el público propone otra forma de recibirla y de prepararla con calma y seguridad (3061-2g). Después se discute qué información sobre las uñas debería llegar a la técnica responsable (3061-2d) y qué argumentos convierten la prisa en una falta de respeto a la dignidad de la persona (3161-3.3).",
+        "desarrollo_ca": "Quatre alumnes escenifiquen l'arribada de la clienta i la resta observa en silenci. Quan l'escena s'atura, el públic proposa una altra manera de rebre-la i de preparar-la amb calma i seguretat (3061-2g). Després es discuteix quina informació sobre les ungles hauria d'arribar a la tècnica responsable (3061-2d) i quins arguments converteixen la pressa en una falta de respecte a la dignitat de la persona (3161-3.3).",
+        "evidencia_es": "Escena alternativa grabada en vídeo.",
+        "evidencia_ca": "Escena alternativa enregistrada en vídeo.",
+        "dua_es": "Papel de observador con tres ítems concretos para quien no quiere actuar.",
+        "dua_ca": "Paper d'observador amb tres punts per a qui no vol actuar.",
+        "metodologia_es": "Teatro foro.",
+        "metodologia_ca": "Teatre fòrum."
+      },
+      {
+        "titulo_es": "Quién decide el servicio de uñas",
+        "titulo_ca": "Qui decideix el servei d'ungles",
+        "contexto_es": "Una clienta de un salón de Santanyí pide un esmaltado aunque la uña presenta una alteración visible.",
+        "contexto_ca": "Una clienta d'un saló de Santanyí demana un esmaltat tot i que l'ungla presenta una alteració visible.",
+        "desarrollo_es": "Se plantean tres posturas: atender igual, derivar siempre o decidir con la clienta. Cada grupo defiende una y aporta razones. En el turno de réplica se explica cómo se prepara a la clienta para el servicio sin poner en riesgo su seguridad (3061-2g) y en qué momento se avisa a la técnica responsable (3061-2d). El cierre exige justificar la decisión con el derecho a la igualdad y a no ser discriminada (3161-3.3).",
+        "desarrollo_ca": "Es plantegen tres postures: atendre igual, derivar sempre o decidir amb la clienta. Cada grup en defensa una i aporta raons. Al torn de rèplica s'explica com es prepara la clienta per al servei sense posar en risc la seva seguretat (3061-2g) i en quin moment s'avisa la tècnica responsable (3061-2d). El tancament exigeix justificar la decisió amb el dret a la igualtat i a no ser discriminada (3161-3.3).",
+        "evidencia_es": "Decisión razonada del grupo en una ficha.",
+        "evidencia_ca": "Decisió raonada del grup en una fitxa.",
+        "dua_es": "Argumentos de apoyo escritos en tarjetas para consultar durante el turno.",
+        "dua_ca": "Arguments de suport escrits en targetes per consultar durant el torn.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      }
+    ]
+  }
+]

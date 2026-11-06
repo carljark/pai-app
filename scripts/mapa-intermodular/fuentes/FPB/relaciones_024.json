@@ -1,0 +1,386 @@
+[
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA4",
+      "criterios": [
+        "a",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE8",
+      "criterios": [
+        "8.2"
+      ]
+    },
+    "justificacion_es": "Las normas de recepción y las causas de insatisfacción se revisan ante clientes de culturas distintas, valorando la diversidad como riqueza.",
+    "justificacion_ca": "Les normes de recepció i les causes d'insatisfacció es revisen davant clients de cultures diferents, valorant la diversitat com a riquesa.",
+    "actividades": [
+      {
+        "titulo_es": "Recibir clientas de tres culturas distintas",
+        "titulo_ca": "Rebre clientes de tres cultures diferents",
+        "contexto_es": "En el salón de prácticas del centro de Palma llegan clientas de orígenes muy diversos y el alumnado quiere que todas se sientan bien recibidas.",
+        "contexto_ca": "Al saló de pràctiques del centre de Palma arriben clientes d'orígens molt diversos i l'alumnat vol que totes se sentin ben rebudes.",
+        "desarrollo_es": "El alumnado elabora un guion de acogida y lo ensaya con tres perfiles de clienta de culturas distintas, revisando las normas de comportamiento y el saludo (3060-4a). Después comenta en grupo qué elementos culturales y lingüísticos de cada clienta se han tenido en cuenta y cuáles faltaban (3161-8.2). Antes de cerrar, cada trío señala qué gestos de la acogida podrían originar insatisfacción (3060-4h) y anota una mejora en su guion.",
+        "desarrollo_ca": "L'alumnat elabora un guió d'acollida i l'assaig amb tres perfils de clienta de cultures diferents, revisant les normes de comportament i la salutació (3060-4a). Després comenta en grup quins elements culturals i lingüístics de cada clienta s'han tingut en compte i quins faltaven (3161-8.2). Abans de tancar, cada trio assenyala quins gestos de l'acollida podrien originar insatisfacció (3060-4h) i anota una millora al seu guió.",
+        "evidencia_es": "Guion de acogida anotado con las mejoras interculturales del trío.",
+        "evidencia_ca": "Guió d'acollida anotat amb les millores interculturals del trio.",
+        "dua_es": "Guion con pictogramas y frases de apoyo para quien tiene menos soltura oral.",
+        "dua_ca": "Guió amb pictogrames i frases de suport per a qui té menys soltesa oral.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Estudio de caso de una queja intercultural",
+        "titulo_ca": "Estudi de cas d'una queixa intercultural",
+        "contexto_es": "Un salón de Manacor recibe la reclamación de una clienta que se sintió ignorada por no hablar ni catalán ni castellano.",
+        "contexto_ca": "Un saló de Manacor rep la reclamació d'una clienta que es va sentir ignorada per no parlar ni català ni castellà.",
+        "desarrollo_es": "El alumnado revisa las normas de comportamiento y de recepción del salón (3060-4a) y, por parejas, localiza en el caso las causas que originaron la insatisfacción de la clienta (3060-4h). Después propone frases y gestos de acogida que la hagan sentir respetada y explica por qué la diversidad lingüística enriquece el servicio (3161-8.2). Cada pareja cierra con un protocolo de tres pasos.",
+        "desarrollo_ca": "L'alumnat revisa les normes de comportament i de recepció del saló (3060-4a) i, per parelles, localitza en el cas les causes que van originar la insatisfacció de la clienta (3060-4h). Després proposa frases i gestos d'acollida que la facin sentir respectada i explica per què la diversitat lingüística enriqueix el servei (3161-8.2). Cada parella tanca amb un protocol de tres passos.",
+        "evidencia_es": "Protocolo de tres pasos ante una clienta que se siente ignorada.",
+        "evidencia_ca": "Protocol de tres passos davant una clienta que se sent ignorada.",
+        "dua_es": "El caso se entrega también en audio para quien comprende mejor escuchando.",
+        "dua_ca": "El cas es lliura també en àudio per a qui comprèn millor escoltant.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Cartel de bienvenida en cuatro lenguas",
+        "titulo_ca": "Cartell de benvinguda en quatre llengües",
+        "contexto_es": "En la semana cultural del centro se instala un punto de acogida para familias recién llegadas a Ibiza.",
+        "contexto_ca": "A la setmana cultural del centre s'instal·la un punt d'acollida per a famílies acabades d'arribar a Eivissa.",
+        "desarrollo_es": "Por equipos, el alumnado decide las normas de comportamiento y el saludo del punto de acogida y se reparte las tareas internas (3060-4a). Cada equipo busca cómo nombrar la bienvenida en las lenguas de las familias del centro y valora qué aporta esa diversidad (3161-8.2). Antes de colgar el cartel, el grupo repasa qué situaciones podrían generar una queja en una familia recién llegada (3060-4h).",
+        "desarrollo_ca": "Per equips, l'alumnat decideix les normes de comportament i la salutació del punt d'acollida i es reparteix les tasques internes (3060-4a). Cada equip cerca com anomenar la benvinguda en les llengües de les famílies del centre i valora què aporta aquesta diversitat (3161-8.2). Abans de penjar el cartell, el grup repassa quines situacions podrien generar una queixa en una família acabada d'arribar (3060-4h).",
+        "evidencia_es": "Cartel de bienvenida multilingüe con el reparto de tareas del equipo.",
+        "evidencia_ca": "Cartell de benvinguda multilingüe amb el repartiment de tasques de l'equip.",
+        "dua_es": "Plantilla de cartel con huecos y banco de palabras para quien necesita apoyo.",
+        "dua_ca": "Plantilla de cartell amb buits i banc de paraules per a qui necessita suport.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3060",
+      "ra": "RA4",
+      "criterios": [
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "3163",
+      "ra": "CE8",
+      "criterios": [
+        "8.1",
+        "8.2"
+      ]
+    },
+    "justificacion_es": "El reparto de tareas del salón incluye proteger al cliente y detectar su malestar, asumiendo un rol concreto dentro del equipo.",
+    "justificacion_ca": "El repartiment de tasques del saló inclou protegir el client i detectar-ne el malestar, assumint un rol concret dins l'equip.",
+    "actividades": [
+      {
+        "titulo_es": "Reparto de roles para proteger a cada clienta",
+        "titulo_ca": "Repartiment de rols per protegir cada clienta",
+        "contexto_es": "El taller del centro prepara una jornada de puertas abiertas con servicios reales de lavado y peinado.",
+        "contexto_ca": "El taller del centre prepara una jornada de portes obertes amb serveis reals de rentada i pentinat.",
+        "desarrollo_es": "El equipo se reparte los roles de recepción, lavado y control del material y cada persona asume el suyo con responsabilidad (3163-8.1). Antes de empezar, el grupo elige el protector y la toalla que necesita cada servicio según el tipo de cabello (3060-4g). Mientras atiende, cada aprendiz anota cualquier señal de molestia de la clienta (3060-4h). Con las notas, el equipo propone una mejora conjunta del servicio (3163-8.2).",
+        "desarrollo_ca": "L'equip es reparteix els rols de recepció, rentada i control del material i cada persona assumeix el seu amb responsabilitat (3163-8.1). Abans de començar, el grup tria el protector i la tovallola que necessita cada servei segons el tipus de cabell (3060-4g). Mentre atén, cada aprenent anota qualsevol senyal de molèstia de la clienta (3060-4h). Amb les notes, l'equip proposa una millora conjunta del servei (3163-8.2).",
+        "evidencia_es": "Registro de roles y de señales de molestia con la mejora acordada.",
+        "evidencia_ca": "Registre de rols i de senyals de molèstia amb la millora acordada.",
+        "dua_es": "Cada rol lleva una tarjeta con los pasos escritos para no depender de la memoria.",
+        "dua_ca": "Cada rol duu una targeta amb els passos escrits per no dependre de la memòria.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Reto de un protocolo de protección sin etiquetas",
+        "titulo_ca": "Repte d'un protocol de protecció sense etiquetes",
+        "contexto_es": "Una clienta mayor pide un servicio de color y su acompañante insiste en que lo haga una chica del equipo.",
+        "contexto_ca": "Una clienta gran demana un servei de color i la seva acompanyant insisteix que el faci una noia de l'equip.",
+        "desarrollo_es": "El equipo recibe el reto de decidir quién atiende el servicio sin dejarse llevar por estereotipos y reparte las tareas por competencias (3163-8.1). Después revisa qué equipos de protección corresponden al servicio de color previsto (3060-4g) y qué podría molestar a la clienta durante la espera (3060-4h). El reto acaba con una propuesta de mejora del reparto que se colgará en el aula (3163-8.2).",
+        "desarrollo_ca": "L'equip rep el repte de decidir qui atén el servei sense deixar-se portar per estereotips i reparteix les tasques per competències (3163-8.1). Després revisa quins equips de protecció corresponen al servei de color previst (3060-4g) i què podria molestar la clienta durant l'espera (3060-4h). El repte acaba amb una proposta de millora del repartiment que es penjarà a l'aula (3163-8.2).",
+        "evidencia_es": "Propuesta de reparto de tareas y protección del servicio de color.",
+        "evidencia_ca": "Proposta de repartiment de tasques i protecció del servei de color.",
+        "dua_es": "El reto se presenta por pasos numerados y con un ejemplo resuelto a la vista.",
+        "dua_ca": "El repte es presenta per passos numerats i amb un exemple resolt a la vista.",
+        "metodologia_es": "Aprendizaje basado en retos.",
+        "metodologia_ca": "Aprenentatge basat en reptes."
+      },
+      {
+        "titulo_es": "Clase invertida del puesto de peinado",
+        "titulo_ca": "Classe invertida del lloc de pentinat",
+        "contexto_es": "Antes de montar el puesto de peinado, el alumnado prepara en casa un vídeo corto sobre protección del cliente.",
+        "contexto_ca": "Abans de muntar el lloc de pentinat, l'alumnat prepara a casa un vídeo curt sobre la protecció del client.",
+        "desarrollo_es": "En casa, cada aprendiz visiona un vídeo breve sobre equipos de protección y anota qué protector usaría en dos servicios distintos (3060-4g). En clase, el grupo pone en común las notas y monta entre todos el puesto, turnándose los roles de montaje y atención (3163-8.1). Luego se prueba el puesto con una clienta voluntaria y se anotan las posibles causas de insatisfacción que aparezcan (3060-4h), para cerrar con una mejora del montaje (3163-8.2).",
+        "desarrollo_ca": "A casa, cada aprenent visiona un vídeo breu sobre equips de protecció i anota quin protector faria servir en dos serveis diferents (3060-4g). A classe, el grup posa en comú les notes i munta entre tots el lloc, tornant-se els rols de muntatge i atenció (3163-8.1). Després es prova el lloc amb una clienta voluntària i s'anoten les possibles causes d'insatisfacció que apareguin (3060-4h), per tancar amb una millora del muntatge (3163-8.2).",
+        "evidencia_es": "Puesto montado y listado de mejoras tras la prueba con la clienta.",
+        "evidencia_ca": "Lloc muntat i llistat de millores després de la prova amb la clienta.",
+        "dua_es": "El vídeo va subtitulado y se puede volver a ver cuantas veces haga falta.",
+        "dua_ca": "El vídeo va subtitulat i es pot tornar a veure tantes vegades com calgui.",
+        "metodologia_es": "Clase invertida.",
+        "metodologia_ca": "Classe invertida."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA1",
+      "criterios": [
+        "b",
+        "c",
+        "j"
+      ]
+    },
+    "b": {
+      "modulo": "3064",
+      "ra": "RA1",
+      "criterios": [
+        "c",
+        "d"
+      ]
+    },
+    "justificacion_es": "Las fases del ciclo piloso y las contraindicaciones se comparan con el tipo y las anomalías del cuero cabelludo en el diagnóstico previo.",
+    "justificacion_ca": "Les fases del cicle pilós i les contraindicacions es comparen amb el tipus i les anomalies del cuir cabellut en el diagnòstic previ.",
+    "actividades": [
+      {
+        "titulo_es": "Comparar vello y cuero cabelludo en fichas reales",
+        "titulo_ca": "Comparar borrissol i cuir cabellut en fitxes reals",
+        "contexto_es": "El aula taller recibe varias fichas anónimas de clientas del barrio con fotos de zonas que quieren depilarse.",
+        "contexto_ca": "L'aula taller rep diverses fitxes anònimes de clientes del barri amb fotos de zones que volen depilar-se.",
+        "desarrollo_es": "Por parejas, el alumnado ordena las fases del ciclo piloso y las relaciona con cada ficha (3062-1b), y anota qué factores de crecimiento explican el vello que ve (3062-1c). Después observa el cuero cabelludo de las mismas fichas y determina el tipo y el estado (3064-1c). El grupo compara si el vello descrito se corresponde con el cuero cabelludo y busca anomalías frecuentes (3064-1d). Se cierra revisando qué precauciones o contraindicaciones aparecen en cada caso (3062-1j).",
+        "desarrollo_ca": "Per parelles, l'alumnat ordena les fases del cicle pilós i les relaciona amb cada fitxa (3062-1b), i anota quins factors de creixement expliquen el borrissol que veu (3062-1c). Després observa el cuir cabellut de les mateixes fitxes i determina'n el tipus i l'estat (3064-1c). El grup compara si el borrissol descrit es correspon amb el cuir cabellut i cerca anomalies freqüents (3064-1d). Es tanca revisant quines precaucions o contraindicacions apareixen en cada cas (3062-1j).",
+        "evidencia_es": "Tabla comparativa de vello y cuero cabelludo de las fichas.",
+        "evidencia_ca": "Taula comparativa de borrissol i cuir cabellut de les fitxes.",
+        "dua_es": "Las fichas llevan una leyenda con los términos clave para poderla consultar.",
+        "dua_ca": "Les fitxes duen una llegenda amb els termes clau per poder-la consultar.",
+        "metodologia_es": "Investigación guiada.",
+        "metodologia_ca": "Recerca guiada."
+      },
+      {
+        "titulo_es": "Simulación de consulta de depilación y cabello",
+        "titulo_ca": "Simulació de consulta de depilació i cabell",
+        "contexto_es": "En el salón del centro se simula la consulta previa de una clienta que quiere depilarse las cejas y lavarse el pelo.",
+        "contexto_ca": "Al saló del centre se simula la consulta prèvia d'una clienta que vol depilar-se les celles i rentar-se els cabells.",
+        "desarrollo_es": "Dos aprendices atienden a la clienta y el resto observa con una lista de comprobación; quien atiende explica las fases del ciclo piloso para justificar el momento de la depilación (3062-1b). También pregunta por hábitos y factores que influyen en su vello (3062-1c). A continuación revisa el cuero cabelludo, determina su tipo y estado (3064-1c) y comenta las anomalías que encuentra (3064-1d). La consulta acaba explicando las precauciones y contraindicaciones que debe seguir la clienta (3062-1j).",
+        "desarrollo_ca": "Dos aprenents atenen la clienta i la resta observa amb una llista de comprovació; qui atén explica les fases del cicle pilós per justificar el moment de la depilació (3062-1b). També pregunta per hàbits i factors que influeixen en el seu borrissol (3062-1c). A continuació revisa el cuir cabellut, en determina el tipus i l'estat (3064-1c) i comenta les anomalies que hi troba (3064-1d). La consulta acaba explicant les precaucions i contraindicacions que ha de seguir la clienta (3062-1j).",
+        "evidencia_es": "Lista de comprobación de la consulta rellenada por quien observa.",
+        "evidencia_ca": "Llista de comprovació de la consulta emplenada per qui observa.",
+        "dua_es": "La lista de comprobación tiene tres columnas y casillas grandes para marcar.",
+        "dua_ca": "La llista de comprovació té tres columnes i caselles grans per marcar.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Rincones de diagnóstico de la piel y el vello",
+        "titulo_ca": "Racons de diagnòstic de la pell i el borrissol",
+        "contexto_es": "El aula se organiza en tres rincones con maquetas y muestras para entrenar el diagnóstico antes de las prácticas.",
+        "contexto_ca": "L'aula s'organitza en tres racons amb maquetes i mostres per entrenar el diagnòstic abans de les pràctiques.",
+        "desarrollo_es": "En el rincón del ciclo piloso, el alumnado coloca tarjetas de fases y las explica a sus compañeros (3062-1b). En el rincón del crecimiento, asocia hábitos y factores con tipos de vello (3062-1c). En el rincón del cuero cabelludo, clasifica muestras por tipo y estado (3064-1c) y marca las anomalías que reconoce (3064-1d). Todos pasan por los tres rincones y anotan en su hoja las precauciones y contraindicaciones de cada muestra (3062-1j).",
+        "desarrollo_ca": "Al racó del cicle pilós, l'alumnat col·loca targetes de fases i les explica als seus companys (3062-1b). Al racó del creixement, associa hàbits i factors amb tipus de borrissol (3062-1c). Al racó del cuir cabellut, classifica mostres per tipus i estat (3064-1c) i marca les anomalies que reconeix (3064-1d). Tots passen pels tres racons i anoten al seu full les precaucions i contraindicacions de cada mostra (3062-1j).",
+        "evidencia_es": "Hoja de ruta del alumnado con las anotaciones de los tres rincones.",
+        "evidencia_ca": "Full de ruta de l'alumnat amb les anotacions dels tres racons.",
+        "dua_es": "Cada rincón tiene un cartel con las instrucciones y un compañero guía si hace falta.",
+        "dua_ca": "Cada racó té un cartell amb les instruccions i un company guia si cal.",
+        "metodologia_es": "Rincones.",
+        "metodologia_ca": "Racons."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA1",
+      "criterios": [
+        "f",
+        "g",
+        "h"
+      ]
+    },
+    "b": {
+      "modulo": "3061",
+      "ra": "RA2",
+      "criterios": [
+        "f",
+        "j"
+      ]
+    },
+    "justificacion_es": "La elección de la técnica de depilación se justifica en la ficha técnica, igual que se registran las demandas y los datos de la uña.",
+    "justificacion_ca": "L'elecció de la tècnica de depilació es justifica en la fitxa tècnica, igual que es registren les demandes i les dades de l'ungla.",
+    "actividades": [
+      {
+        "titulo_es": "Entrevista doble para abrir la ficha técnica",
+        "titulo_ca": "Entrevista doble per obrir la fitxa tècnica",
+        "contexto_es": "Dos clientas del centro acuden a la vez: una quiere depilarse las piernas y otra arreglarse las uñas.",
+        "contexto_ca": "Dues clientes del centre acudeixen alhora: una vol depilar-se les cames i l'altra arreglar-se les ungles.",
+        "desarrollo_es": "El alumnado prepara y formula preguntas que descubran qué demanda cada clienta (3062-1h) y las repite adaptadas al servicio de uñas (3061-2f). Con las respuestas, justifica en voz alta qué técnica de depilación conviene (3062-1f). Cada aprendiz abre la ficha técnica con los datos personales y los del estudio de la zona (3062-1g) y anota en ella los datos más relevantes de las manos (3061-2j).",
+        "desarrollo_ca": "L'alumnat prepara i formula preguntes que descobreixin què demana cada clienta (3062-1h) i les repeteix adaptades al servei d'ungles (3061-2f). Amb les respostes, justifica en veu alta quina tècnica de depilació convé (3062-1f). Cada aprenent obre la fitxa tècnica amb les dades personals i les de l'estudi de la zona (3062-1g) i hi anota les dades més rellevants de les mans (3061-2j).",
+        "evidencia_es": "Ficha técnica abierta con las respuestas de las dos clientas.",
+        "evidencia_ca": "Fitxa tècnica oberta amb les respostes de les dues clientes.",
+        "dua_es": "Banco de preguntas en tarjetas para escoger las que mejor encajen.",
+        "dua_ca": "Banc de preguntes en targetes per triar les que millor encaixin.",
+        "metodologia_es": "Juego de rol.",
+        "metodologia_ca": "Joc de rol."
+      },
+      {
+        "titulo_es": "Ficha común de una pedicura y una depilación",
+        "titulo_ca": "Fitxa comuna d'una pedicura i una depilació",
+        "contexto_es": "Una clienta del casal pide depilación de labio y pedicura el mismo día, y el centro quiere unificar su ficha.",
+        "contexto_ca": "Una clienta del casal demana depilació de llavi i pedicura el mateix dia, i el centre vol unificar-ne la fitxa.",
+        "desarrollo_es": "Cada equipo redacta las preguntas que necesita para conocer las demandas de la clienta y se las reparte (3062-1h), adaptando tres de ellas al servicio de uñas (3061-2f). Después cada equipo decide qué técnica de depilación encaja con la zona (3062-1f). El grupo grande unifica todo en una sola ficha: los datos del estudio de la zona a depilar (3062-1g) y los datos relevantes del estado de las uñas (3061-2j).",
+        "desarrollo_ca": "Cada equip redacta les preguntes que necessita per conèixer les demandes de la clienta i se les reparteix (3062-1h), adaptant-ne tres al servei d'ungles (3061-2f). Després cada equip decideix quina tècnica de depilació encaixa amb la zona (3062-1f). El grup gran ho unifica tot en una sola fitxa: les dades de l'estudi de la zona que s'ha de depilar (3062-1g) i les dades rellevants de l'estat de les ungles (3061-2j).",
+        "evidencia_es": "Ficha única de la clienta consensuada por todo el grupo.",
+        "evidencia_ca": "Fitxa única de la clienta consensuada per tot el grup.",
+        "dua_es": "Plantilla de ficha con los apartados ya rotulados y espacio para escribir.",
+        "dua_ca": "Plantilla de fitxa amb els apartats ja rotulats i espai per escriure.",
+        "metodologia_es": "Aprendizaje cooperativo.",
+        "metodologia_ca": "Aprenentatge cooperatiu."
+      },
+      {
+        "titulo_es": "Gimcana de datos para dos servicios",
+        "titulo_ca": "Gimcana de dades per a dos serveis",
+        "contexto_es": "En la semana del centro se monta una gimcana por estaciones para ver qué equipo registra mejor los datos.",
+        "contexto_ca": "A la setmana del centre es munta una gimcana per estacions per veure quin equip registra millor les dades.",
+        "desarrollo_es": "Cada estación plantea una clienta diferente; el equipo formula allí las preguntas que detectan su necesidad concreta (3062-1h) y reformula dos para el servicio de uñas (3061-2f). Al superar la estación, debe justificar la técnica elegida (3062-1f). El equipo consigue el punto cuando completa la ficha con el estudio de la zona (3062-1g) y con los datos de las uñas (3061-2j). Gana quien sume más estaciones bien registradas.",
+        "desarrollo_ca": "Cada estació planteja una clienta diferent; l'equip formula allà les preguntes que detecten la seva necessitat concreta (3062-1h) i en reformula dues per al servei d'ungles (3061-2f). En superar l'estació, ha de justificar la tècnica elegida (3062-1f). L'equip aconsegueix el punt quan completa la fitxa amb l'estudi de la zona (3062-1g) i amb les dades de les ungles (3061-2j). Guanya qui suma més estacions ben registrades.",
+        "evidencia_es": "Fichas de las estaciones superadas y marcador del equipo.",
+        "evidencia_ca": "Fitxes de les estacions superades i marcador de l'equip.",
+        "dua_es": "Las estaciones tienen tiempos flexibles y se permite consultar el banco de preguntas.",
+        "dua_ca": "Les estacions tenen temps flexibles i es pot consultar el banc de preguntes.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA1",
+      "criterios": [
+        "a",
+        "k"
+      ]
+    },
+    "b": {
+      "modulo": "3159",
+      "ra": "RA1",
+      "criterios": [
+        "c"
+      ]
+    },
+    "justificacion_es": "Observar el vello y saber cuándo derivar a otro profesional refuerza la autoestima y la confianza en las propias decisiones.",
+    "justificacion_ca": "Observar el pèl i saber quan cal derivar a un altre professional reforça l'autoestima i la confiança en les pròpies decisions.",
+    "actividades": [
+      {
+        "titulo_es": "Dibujar el pelo y decidir cuándo derivar",
+        "titulo_ca": "Dibuixar el pèl i decidir quan cal derivar",
+        "contexto_es": "En el aula taller se estudia la morfología del pelo con el caso de una clienta que llega con una lesión en la piel.",
+        "contexto_ca": "A l'aula taller s'estudia la morfologia del pèl amb el cas d'una clienta que arriba amb una lesió a la pell.",
+        "desarrollo_es": "El alumnado dibuja y rotula las partes del pelo en una ficha (3062-1a) y explica para qué sirve cada una antes de depilar. Después lee el caso de la clienta con la piel irritada y decide si conviene derivarla y con qué argumentos (3062-1k). El grupo comenta cómo esa decisión protege la propia autoestima profesional y evita asumir riesgos (3159-1c).",
+        "desarrollo_ca": "L'alumnat dibuixa i rotula les parts del pèl en una fitxa (3062-1a) i explica per a què serveix cadascuna abans de depilar. Després llegeix el cas de la clienta amb la pell irritada i decideix si convé derivar-la i amb quins arguments (3062-1k). El grup comenta com aquesta decisió protegeix la pròpia autoestima professional i evita assumir riscos (3159-1c).",
+        "evidencia_es": "Esquema rotulado del pelo y decisión escrita de derivación.",
+        "evidencia_ca": "Esquema rotulat del pèl i decisió escrita de derivació.",
+        "dua_es": "El esquema se puede completar con una plantilla ya perfilada para quien dibuja con dificultad.",
+        "dua_ca": "L'esquema es pot completar amb una plantilla ja perfilada per a qui dibuixa amb dificultat.",
+        "metodologia_es": "Estudio de caso.",
+        "metodologia_ca": "Estudi de cas."
+      },
+      {
+        "titulo_es": "Debate sobre cuándo decir no a un servicio",
+        "titulo_ca": "Debat sobre quan cal dir no a un servei",
+        "contexto_es": "El centro organiza una mesa redonda con el alumnado sobre los límites del servicio en el salón.",
+        "contexto_ca": "El centre organitza una taula rodona amb l'alumnat sobre els límits del servei al saló.",
+        "desarrollo_es": "Antes del debate, cada aprendiz resume en una tarjeta la morfología del pelo y la muestra a su grupo (3062-1a). En el debate, dos equipos defienden cuándo hay que atender y cuándo conviene derivar a otro profesional (3062-1k). Al cerrar, cada participante escribe una cualidad propia que le ayudará a tomar esa decisión con seguridad (3159-1c).",
+        "desarrollo_ca": "Abans del debat, cada aprenent resumeix en una targeta la morfologia del pèl i la mostra al seu grup (3062-1a). Al debat, dos equips defensen quan cal atendre i quan convé derivar a un altre professional (3062-1k). En tancar, cada participant escriu una qualitat pròpia que l'ajudarà a prendre aquesta decisió amb seguretat (3159-1c).",
+        "evidencia_es": "Tarjeta de morfología y conclusión personal escrita del debate.",
+        "evidencia_ca": "Targeta de morfologia i conclusió personal escrita del debat.",
+        "dua_es": "Se ofrecen turnos de palabra cortos y una frase de inicio para quien se bloquea.",
+        "dua_ca": "S'oferixen torns de paraula curts i una frase d'inici per a qui es bloqueja.",
+        "metodologia_es": "Debate.",
+        "metodologia_ca": "Debat."
+      },
+      {
+        "titulo_es": "Servicio de orientación en la residencia",
+        "titulo_ca": "Servei d'orientació a la residència",
+        "contexto_es": "Una residencia de personas mayores de Inca pide al centro una charla sencilla sobre cuidados del vello.",
+        "contexto_ca": "Una residència de persones grans d'Inca demana al centre una xerrada senzilla sobre cures del borrissol.",
+        "desarrollo_es": "El alumnado prepara una maqueta del pelo con materiales reciclados para explicar su morfología a las personas mayores (3062-1a). Durante la visita responde a sus dudas y señala en qué casos conviene acudir a otro profesional (3062-1k). Al volver, cada aprendiz anota qué le ha aportado sentirse útil y cómo ha crecido su confianza (3159-1c).",
+        "desarrollo_ca": "L'alumnat prepara una maqueta del pèl amb materials reciclats per explicar-ne la morfologia a les persones grans (3062-1a). Durant la visita respon els seus dubtes i assenyala en quins casos convé acudir a un altre professional (3062-1k). En tornar, cada aprenent anota què li ha aportat sentir-se útil i com ha crescut la seva confiança (3159-1c).",
+        "evidencia_es": "Maqueta del pelo y diario de la visita a la residencia.",
+        "evidencia_ca": "Maqueta del pèl i diari de la visita a la residència.",
+        "dua_es": "La charla se apoya en la maqueta y en imágenes grandes para facilitar la explicación.",
+        "dua_ca": "La xerrada es recolza en la maqueta i en imatges grans per facilitar l'explicació.",
+        "metodologia_es": "Aprendizaje-servicio.",
+        "metodologia_ca": "Aprenentatge-servei."
+      }
+    ]
+  },
+  {
+    "a": {
+      "modulo": "3062",
+      "ra": "RA1",
+      "criterios": [
+        "e",
+        "i"
+      ]
+    },
+    "b": {
+      "modulo": "3161",
+      "ra": "CE7",
+      "criterios": [
+        "7.1",
+        "7.4"
+      ]
+    },
+    "justificacion_es": "Los productos depilatorios y sus temperaturas se explican a una clienta extranjera con vocabulario sencillo y peticiones de aclaración.",
+    "justificacion_ca": "Els productes depilatoris i les temperatures s'expliquen a una clienta estrangera amb vocabulari senzill i peticions d'aclariment.",
+    "actividades": [
+      {
+        "titulo_es": "Atender en inglés a una clienta del hotel",
+        "titulo_ca": "Atendre en anglès una clienta de l'hotel",
+        "contexto_es": "Una clienta británica alojada en Playa de Palma pide una depilación y no habla ni catalán ni castellano.",
+        "contexto_ca": "Una clienta britànica allotjada a Platja de Palma demana una depilació i no parla ni català ni castellà.",
+        "desarrollo_es": "El alumnado escucha una grabación breve de la clienta y anota qué zona quiere depilar y qué producto pide (3161-7.1). Después compara las características de su vello y de la zona para elegir la técnica adecuada (3062-1e). En la simulación, el aprendiz explica las ventajas e inconvenientes de los productos según su temperatura (3062-1i) y pide aclaraciones cuando no entiende algo (3161-7.4).",
+        "desarrollo_ca": "L'alumnat escolta una gravació breu de la clienta i anota quina zona vol depilar i quin producte demana (3161-7.1). Després compara les característiques del seu borrissol i de la zona per triar la tècnica adequada (3062-1e). A la simulació, l'aprenent explica els avantatges i els inconvenients dels productes segons la temperatura (3062-1i) i demana aclariments quan no entén alguna cosa (3161-7.4).",
+        "evidencia_es": "Ficha de la grabación y guion de la explicación en inglés.",
+        "evidencia_ca": "Fitxa de la gravació i guió de l'explicació en anglès.",
+        "dua_es": "El guion en inglés lleva pictogramas y las palabras clave subrayadas.",
+        "dua_ca": "El guió en anglès duu pictogrames i les paraules clau subratllades.",
+        "metodologia_es": "Simulación.",
+        "metodologia_ca": "Simulació."
+      },
+      {
+        "titulo_es": "Diseñar una guía de temperaturas en inglés",
+        "titulo_ca": "Dissenyar una guia de temperatures en anglès",
+        "contexto_es": "El salón del centro recibe cada verano clientas de crucero que no entienden el castellano.",
+        "contexto_ca": "El saló del centre rep cada estiu clientes de creuer que no entenen el castellà.",
+        "desarrollo_es": "En equipos, el alumnado detecta qué palabras les cuesta más entender a las clientas extranjeras al leer folletos breves de productos (3161-7.1). Con esas palabras y las ventajas e inconvenientes de cada producto según su temperatura (3062-1i), diseña una guía con iconos. Para validarla, relaciona antes las características del vello y de la zona con cada producto (3062-1e). Después ensaya la guía con una compañera que hace de clienta y practica cómo pedir aclaraciones (3161-7.4).",
+        "desarrollo_ca": "En equips, l'alumnat detecta quines paraules els costa més entendre a les clientes estrangeres en llegir fullets breus de productes (3161-7.1). Amb aquestes paraules i els avantatges i inconvenients de cada producte segons la temperatura (3062-1i), dissenya una guia amb icones. Per validar-la, relaciona abans les característiques del borrissol i de la zona amb cada producte (3062-1e). Després assaja la guia amb una companya que fa de clienta i practica com demanar aclariments (3161-7.4).",
+        "evidencia_es": "Guía ilustrada de productos y temperaturas para clientas extranjeras.",
+        "evidencia_ca": "Guia il·lustrada de productes i temperatures per a clientes estrangeres.",
+        "dua_es": "La guía admite dibujos, pegatinas o fotos en lugar de texto largo.",
+        "dua_ca": "La guia admet dibuixos, enganxines o fotos en lloc de text llarg.",
+        "metodologia_es": "Aprendizaje basado en proyectos.",
+        "metodologia_ca": "Aprenentatge basat en projectes."
+      },
+      {
+        "titulo_es": "Bingo de productos, vello y temperatura",
+        "titulo_ca": "Bingo de productes, borrissol i temperatura",
+        "contexto_es": "El aula se llena de cartones con fotos de vello y de productos depilatorios para repasar el tema en inglés.",
+        "contexto_ca": "L'aula s'omple de cartrons amb fotos de borrissol i de productes depilatoris per repassar el tema en anglès.",
+        "desarrollo_es": "Cada cartón presenta tipos de vello y de zona y el alumnado los empareja para elegir la técnica correcta (3062-1e). El docente canta en inglés pistas sobre la temperatura de los productos y el alumnado marca la ventaja o el inconveniente que corresponde (3062-1i). Para completar el bingo hay que leer bien la pista en voz alta (3161-7.1) y pedir aclaración cuando no se entiende (3161-7.4).",
+        "desarrollo_ca": "Cada cartró presenta tipus de borrissol i de zona i l'alumnat els emparella per triar la tècnica correcta (3062-1e). El docent canta en anglès pistes sobre la temperatura dels productes i l'alumnat marca l'avantatge o l'inconvenient que correspon (3062-1i). Per completar el bingo cal llegir bé la pista en veu alta (3161-7.1) i demanar aclariment quan no s'entén (3161-7.4).",
+        "evidencia_es": "Cartón de bingo completo con las anotaciones de cada producto.",
+        "evidencia_ca": "Cartró de bingo complet amb les anotacions de cada producte.",
+        "dua_es": "Las pistas van acompañadas de una imagen y se repiten por parejas si hace falta.",
+        "dua_ca": "Les pistes van acompanyades d'una imatge i es repeteixen per parelles si cal.",
+        "metodologia_es": "Gamificación.",
+        "metodologia_ca": "Gamificació."
+      }
+    ]
+  }
+]

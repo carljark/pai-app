@@ -4,7 +4,7 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
-- **[250 — FP Básica al plan 2026/27 en el mapa y en el generador](250_plan_fp_basica_plan_2026_27_mapa_y_curriculo.md)** · _Aprobado_  
+- **[250 — FP Básica al plan 2026/27 en el mapa y en el generador](250_plan_fp_basica_plan_2026_27_mapa_y_curriculo.md)** · _Implementado (tarea 250)_  
   Mapa de FP Básica en dos pestañas (1.º y 2.º) con el Proyecto intermodular 3160 y Comunicación y Ciencias Sociales II, módulos comunes con los códigos 3161–3164 del plan 2026/27 y RA del generador con código de módulo, filtro por curso y el 3159.
 
 - **[249 — Cesta de materias y módulos en los mapas (ESO y FP)](249_plan_cesta_de_materias_mapas.md)** · _Implementado (tarea 249)_  

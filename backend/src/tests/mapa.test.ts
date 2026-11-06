@@ -32,6 +32,11 @@ import { up as runMigration46 } from '../migrations/46_ingest_mapa_cfgs_laborato
 import { up as runMigration47 } from '../migrations/47_ingest_mapa_cfgm_guia_medio_natural_2';
 import { up as runMigration48 } from '../migrations/48_ingest_mapa_cfgm_guia_medio_natural';
 import { up as runMigration49, TABS_TRES_ACTIVIDADES } from '../migrations/49_reload_mapas_tres_actividades';
+import { up as runMigration52, TABS_FP_BASICA } from '../migrations/52_fp_basica_plan_2026_27';
+import { FP_BASICA_RAS_DATA as FPB_RAS } from '../data/ras_fp_basica.data';
+import { findNivel } from '../data/niveles';
+import fs from 'fs';
+import path from 'path';
 import { RA } from '../models/RA';
 import { CFGM_CUIDADOS_AUXILIARES_ENFERMERIA_RAS_DATA as CAE_RAS } from '../data/ras_cfgm_cuidados_auxiliares_enfermeria.data';
 import { CFGS_INTEGRACION_SOCIAL_RAS_DATA as IS_RAS } from '../data/ras_cfgs_integracion_social.data';
@@ -836,6 +841,53 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
       expect(res.body.map((m: any) => m.code)).toEqual(['1371', '1372', '1373', '1374', '1375', '1708', '1710']);
       expect(res.body[0].name_es).toBe('Análisis bioquímico');
       expect(res.body[0].name_ca).toBe('Anàlisi bioquímica');
+    });
+
+    it('debería pasar con la migración 52 FP Básica al plan 2026/27 sin tocar otros niveles ni pestañas', async () => {
+      await RA.create([
+        { id: 'RA1', module_es: 'Comunicación y sociedad I', description_es: 'RA antiguo sin nivel' },
+        { id: 'RA1', module_es: 'Ciencias aplicadas II', tipoNivel: 'FP_BASICA', description_es: 'RA antiguo' },
+        { id: 'RA1', moduleCode: '0633', tipoNivel: 'CFGM_ESTETICA', description_es: 'Ajeno' },
+      ]);
+      await MapaModule.create({ tab: 'CFGM', order: 0, code: '0633', name_es: 'X', name_ca: 'X',
+        type: 'especifico', color: '#000000', icon: 'book',
+      });
+      await runMigration52();
+      await runMigration52();
+
+      expect(await RA.countDocuments({ tipoNivel: 'CFGM_ESTETICA' })).toBe(1);
+      expect(await MapaModule.countDocuments({ tab: 'CFGM' })).toBe(1);
+      const fpb = await RA.find({ tipoNivel: { $in: [null, 'FP_BASICA'] } }).lean();
+      expect(fpb).toHaveLength(FPB_RAS.length);
+      expect(fpb.some((r: any) => /sociedad I$|Ciencias aplicadas II/.test(r.module_es))).toBe(false);
+      const ambitos = fpb.filter((r: any) => r.moduleCode === '3162');
+      expect(ambitos.map((r: any) => r.id)).toEqual(['CE1', 'CE2', 'CE3', 'CE4', 'CE5', 'CE6', 'CE7', 'CE8']);
+      expect(ambitos[0]!.criterios_es[0]).toMatch(/^1\.1 Analizar e interpretar el entorno/);
+      expect(ambitos[0]!.criterios_ca[0]).toMatch(/^1\.1 Analitzar i interpretar l'entorn/);
+
+      for (const [tab, file] of Object.entries(TABS_FP_BASICA)) {
+        const json = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/mapa-intermodular', file), 'utf-8'));
+        const conexiones = json.reduce((s: number, m: any) =>
+          s + m.learningOutcomes.reduce((t: number, lo: any) => t + lo.connections.length, 0), 0);
+        const curso = tab === 'FPB' ? '1º' : '2º';
+        const modulos = findNivel('FP_BASICA')!.cursos.find(c => c.curso === curso)!.modulos!;
+        await expectBidirectionalMap(tab, modulos.length, conexiones, 3);
+        for (const doc of await MapaModule.find({ tab })) {
+          for (const lo of doc.learningOutcomes) {
+            const ra = FPB_RAS.find(r => r.moduleCode === doc.code && r.id === lo.code)!;
+            expect(lo.text_ca).toBe(ra.description_ca);
+            expect(lo.criteria_es).toEqual(ra.criterios_es);
+            expect(lo.connections.length).toBeGreaterThanOrEqual(6);
+            expect(lo.connections.length).toBeLessThanOrEqual(15);
+            for (const c of lo.connections) expect(modulos).toContain(c.targetModuleCode);
+          }
+        }
+        const res = await request(app).get(`/api/mapa-intermodular?tab=${tab}`);
+        expect(res.status).toBe(200);
+        expect(res.body.map((m: any) => m.code)).toEqual(modulos);
+      }
+      const proyecto = await MapaModule.findOne({ tab: 'FPB_2', code: '3160' });
+      expect(proyecto?.name_ca).toBe("Projecte intermodular d'aprenentatge col·laboratiu");
     });
 
     it('debería recargar con la migración 49 los mapas con tres actividades por conexión sin tocar otras pestañas', async () => {

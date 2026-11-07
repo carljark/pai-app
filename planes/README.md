@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[253 — Ampliación del mapa de afinidades de 4.º de ESO y actividades conjuntas](253_plan_mapa_eso_4_fichas_y_actividades_conjuntas.md)** · _Aprobado_  
+  Repite en 4.º las tareas 247 y 251: 16 fichas nuevas hasta que cada materia aparezca en 6, y 3 actividades conjuntas por ficha redactadas con DeepSeek, con todos los tramos en paralelo.
+
 - **[251 — Ampliación de los mapas de afinidades de 2.º y 3.º de ESO y actividades conjuntas](251_plan_mapa_eso_2_y_3_fichas_y_actividades_conjuntas.md)** · _Implementado (tarea 251)_  
   Repite la tarea 247 en 2.º y 3.º: fichas nuevas hasta que cada materia aparezca en al menos 6, y 3 actividades conjuntas por ficha redactadas con DeepSeek, con todos los tramos en paralelo.
 

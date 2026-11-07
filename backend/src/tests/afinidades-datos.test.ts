@@ -124,8 +124,8 @@ describe('Datos de afinidades de la ESO: paridad ES/CA', () => {
 });
 
 describe('Datos de afinidades de la ESO: cobertura mínima', () => {
-  // 1.º se amplió en la tarea 247, y 2.º y 3.º en la 251, hasta al menos 6 fichas por materia.
-  const minimo: Record<string, number> = { '1º': 6, '2º': 6, '3º': 6, '4º': 3 };
+  // 1.º se amplió en la tarea 247, 2.º y 3.º en la 251 y 4.º en la 253, hasta al menos 6 fichas por materia.
+  const minimo: Record<string, number> = { '1º': 6, '2º': 6, '3º': 6, '4º': 6 };
   for (const curso of ['1º', '2º', '3º', '4º']) {
     it(`cada materia de ${curso} aparece en al menos ${minimo[curso]} fichas del curso`, () => {
       const delCurso = fichas.filter(f => f.curso === curso);
@@ -140,8 +140,8 @@ describe('Datos de afinidades de la ESO: cobertura mínima', () => {
 
 describe('Datos de afinidades de la ESO: actividades conjuntas', () => {
   const CAMPOS = ['title', 'motivatingFactor', 'description', 'evidence', 'diversitySupport'];
-  // 1.º tiene actividades desde la tarea 247, y 2.º y 3.º desde la 251.
-  const CON_ACTIVIDADES = ['1º', '2º', '3º'];
+  // 1.º tiene actividades desde la tarea 247, 2.º y 3.º desde la 251 y 4.º desde la 253.
+  const CON_ACTIVIDADES = ['1º', '2º', '3º', '4º'];
   const conActividades = fichas.filter(f => CON_ACTIVIDADES.includes(f.curso));
   const actividades = conActividades.flatMap(f => (f.actividades ?? []).map(a => ({ f, a })));
   const normal = (t: string) => t.toLowerCase().normalize('NFD').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
@@ -190,7 +190,7 @@ describe('Datos de afinidades de la ESO: actividades conjuntas', () => {
     }
   });
 
-  it('4.º no tiene actividades', () => {
-    expect(fichas.filter(f => !CON_ACTIVIDADES.includes(f.curso) && f.actividades !== undefined).map(f => f.id)).toEqual([]);
+  it('todas las fichas de la ESO son de un curso con actividades', () => {
+    expect(fichas.filter(f => !CON_ACTIVIDADES.includes(f.curso)).map(f => f.id)).toEqual([]);
   });
 });

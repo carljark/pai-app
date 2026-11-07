@@ -1,7 +1,7 @@
 # Plan 253: Ampliación del mapa de afinidades de 4.º de ESO y actividades conjuntas
 
 > **Fecha:** 7 de noviembre de 2026
-> **Estado:** Aprobado
+> **Estado:** Implementado (tarea 253)
 > **Partes afectadas:** backend (datos, tests) / migraciones / despliegue. El frontend ya muestra las actividades desde la tarea 247.
 
 ---

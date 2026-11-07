@@ -1,6 +1,6 @@
 # Mapa de afinidades curriculares de la ESO
 
-El mapa intermodular de la ESO no sigue el modelo de la FP (módulos → RA → conexiones → actividades). Reproduce el formato del documento del IES Cap de Llevant *Afinitats curriculars · ESO 2027-2028*: **fichas de afinidad entre materias**, pensadas para programar por ámbitos (Decreto 42/2025, Illes Balears). El documento no trae actividades; desde la tarea 247 las fichas de 1.º, y desde la 251 las de 2.º y 3.º, llevan además **actividades conjuntas** de ejemplo (ver más abajo).
+El mapa intermodular de la ESO no sigue el modelo de la FP (módulos → RA → conexiones → actividades). Reproduce el formato del documento del IES Cap de Llevant *Afinitats curriculars · ESO 2027-2028*: **fichas de afinidad entre materias**, pensadas para programar por ámbitos (Decreto 42/2025, Illes Balears). El documento no trae actividades; todas las fichas llevan además **actividades conjuntas** de ejemplo: las de 1.º desde la tarea 247, las de 2.º y 3.º desde la 251 y las de 4.º desde la 253 (ver más abajo).
 
 ## Formato de una ficha
 
@@ -22,7 +22,7 @@ Los textos oficiales de los criterios no se copian en las fichas. El endpoint lo
 | Datos | `backend/src/data/afinidades-eso/afinidades_eso_{1,2,3,4}.json` |
 | Catálogo | `backend/src/data/niveles.ts`: pestañas `ESO_1`…`ESO_4` con `formato: 'afinidades'`. `MAPA_TABS` solo incluye las de módulos; `AFINIDADES_TABS` y `cursoDeTab` son las nuevas |
 | Modelo | `backend/src/models/AfinidadEso.ts` (colección propia; el id de la ficha se guarda como `code`) |
-| Migración | `backend/src/migrations/25_ingest_afinidades_eso.ts` (borra y reinserta solo esta colección); `38_quitar_origen_afinidades_eso.ts` elimina el antiguo campo `origen` (documento del centro o ampliación), que ya no se guarda ni se muestra; `51_reload_afinidades_eso.ts` vuelve a ejecutar la ingesta con la ampliación y las actividades de 1.º (tarea 247); `53_reload_afinidades_eso_2_3.ts` hace lo mismo con las de 2.º y 3.º (tarea 251) |
+| Migración | `backend/src/migrations/25_ingest_afinidades_eso.ts` (borra y reinserta solo esta colección); `38_quitar_origen_afinidades_eso.ts` elimina el antiguo campo `origen` (documento del centro o ampliación), que ya no se guarda ni se muestra; `51_reload_afinidades_eso.ts` vuelve a ejecutar la ingesta con la ampliación y las actividades de 1.º (tarea 247); `53_reload_afinidades_eso_2_3.ts` hace lo mismo con las de 2.º y 3.º (tarea 251), y `54_reload_afinidades_eso_4.ts` con las de 4.º (tarea 253) |
 | API | `GET /api/afinidades-eso?tab=ESO_n` (pública, como el mapa de FP): `{ curso, materias, afinidades }`. `materias` son todas las del curso según `subjectTipos` de las CE, con el número de fichas de cada una |
 | Frontend | `features/mapa-intermodular/`: `AfinidadesEsoService`, `AfinidadesEsoFacade` (signals y caché por pestaña), `AfinidadesEsoViewComponent` (materias y fichas), `AfinidadCardComponent` (ficha) y `AfinidadActividadesComponent` (actividades conjuntas de la ficha) |
 
@@ -45,18 +45,18 @@ Cada ficha tiene el botón «Crear Proyecto con estos criterios» / «Crear Proj
   - Las parejas con propuestas distintas se mantienen como fichas separadas.
   - El documento solo está en catalán; el castellano es una traducción fiel.
 - **Ampliación de 1.º-3.º.** Fichas nuevas hasta que cada materia de cada curso aparezca en al menos 3 fichas.
-- **4.º de ESO.** Las 18 materias del curso, incluidas Digitalización, Economía y Emprendimiento, Valores Cívicos y Éticos, Expresión Artística, FOPP, Latín y Tecnología. Cada una aparece al menos en 4 fichas, todas con criterios del bloque de 4.º.
+- **4.º de ESO.** Las 18 materias del curso, incluidas Digitalización, Economía y Emprendimiento, Valores Cívicos y Éticos, Expresión Artística, FOPP, Latín y Tecnología. Todas las fichas usan criterios del bloque de 4.º. El documento del centro dejaba cada materia en al menos 4 fichas; desde la tarea 253 son 6.
 - Los saberes de las fichas nuevas se contrastan con los saberes básicos del decreto oficial (versiones castellana y catalana en `Proyecto_FPB_PAI/ESO/`, fuera de git).
 
 Los tests de datos (`backend/src/tests/afinidades-datos.test.ts`) impiden citar criterios inexistentes o de otro curso, y exigen la paridad ES/CA y la cobertura mínima por materia y curso.
 
 ## Actividades conjuntas (tarea 247)
 
-Campo opcional `actividades` de la ficha. Lo tienen todas las fichas de 1.º, 2.º y 3.º, con al menos 3 cada una; 4.º no lo guarda.
+Campo `actividades` de la ficha (opcional en el modelo). Desde la tarea 253 lo tienen todas las fichas de la ESO, con al menos 3 cada una.
 
 - **Formato.** Los mismos campos que las actividades del mapa de FP (`title`, `motivatingFactor`, `description`, `evidence` y `diversitySupport`, cada uno en `_es`/`_ca`), un `id` estable (`ESO1-22-A1`) y `criterios: { materia: ['x.y'] }` con los criterios que trabaja de cada materia.
 - **Reglas** (`afinidades-datos.test.ts`):
-  - al menos 3 actividades por ficha de 1.º, 2.º y 3.º, con ids consecutivos;
+  - al menos 3 actividades por ficha, en los cuatro cursos, con ids consecutivos;
   - todos los campos rellenos y distintos entre idiomas, con las mismas comprobaciones de idioma que el resto de la ficha;
   - al menos 2 materias citadas, todas de la ficha, con criterios que existen en el curso;
   - títulos únicos dentro del curso.
@@ -69,7 +69,7 @@ Campo opcional `actividades` de la ficha. Lo tienen todas las fichas de 1.º, 2.
 
 ### Ampliación de 2.º y 3.º (tarea 251)
 
-Mismo procedimiento que en 1.º, hasta que cada materia aparezca en al menos 6 fichas de su curso. En 4.º el mínimo sigue siendo 3.
+Mismo procedimiento que en 1.º, hasta que cada materia aparezca en al menos 6 fichas de su curso.
 
 | Curso | Fichas nuevas | Total de fichas | Actividades |
 |---|---|---|---|
@@ -78,6 +78,10 @@ Mismo procedimiento que en 1.º, hasta que cada materia aparezca en al menos 6 f
 
 - **Tríos:** cada vínculo cita criterios de las tres materias, como en las fichas que ya había. El test de datos lo exige.
 - **Optativas:** las fichas más justas son las que llevan a 6 a algunas optativas, como 2.º-44 (Cultura Clásica I y Plástica), 3.º-46 (Lengua Extranjera y Taller de Finanzas) y 3.º-47 (Música y Matemáticas). Se aprobaron sabiendo que eran las más débiles.
+
+### Ampliación de 4.º (tarea 253)
+
+16 fichas nuevas (`ESO4-39` a `ESO4-54`), todas parejas que aún no existían, hasta 54 fichas en 4.º. Cada una de las 18 materias aparece exactamente en 6 fichas. Matemáticas A y B no se emparejan entre sí, porque son alternativas. 4.º sigue sin tríos.
 
 ## Cesta (tarea 249)
 

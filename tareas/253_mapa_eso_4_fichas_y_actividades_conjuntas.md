@@ -63,6 +63,7 @@ No hay código nuevo de aplicación: el modelo, la API y el componente `Afinidad
   - la variedad de comienzos y de productos;
   - catalán sin apóstrofos rectos.
 - **No medido:** el coste de DeepSeek en OpenRouter. La previsión era de unos 0,3 $.
+- **Producción** (7-11-2026): integrado en `main` con `--ff-only` (`182117a`), con CI y Deploy en verde. `https://plappin.org/api/afinidades-eso?tab=ESO_4` devuelve 54 fichas y 162 actividades, con un mínimo de 6 fichas por materia, igual que 1.º, 2.º y 3.º.
 
 ## Desviaciones respecto al plan
 Ninguna relevante.

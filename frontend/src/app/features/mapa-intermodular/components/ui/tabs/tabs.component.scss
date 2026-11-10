@@ -37,10 +37,14 @@
     color: variables.$color-text-muted;
   }
 
+  /* Puede encogerse y saltar de línea: si desbordara, en el móvil ensancharía la página
+     y los elementos fijos (la cesta) quedarían fuera de la pantalla. */
   &__extra {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    flex-shrink: 0;
+    min-width: 0;
+    max-width: 100%;
     gap: variables.$spacing-2;
     margin-left: auto;
 

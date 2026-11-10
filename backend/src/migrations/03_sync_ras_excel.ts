@@ -2,6 +2,9 @@ import mongoose from 'mongoose';
 import { RA } from '../models/RA';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const up = async () => {
   console.log('Sincronizando todos los RAs desde el Excel oficial...');

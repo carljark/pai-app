@@ -1,28 +1,38 @@
 @use '../../../../../../styles/variables' as variables;
+@use '../../../../../../styles/mixins' as mixins;
 
+/* Mobile-first: control segmentado en una sola fila que ocupa todo el ancho.
+   Si falta sitio, cada opción parte su propio texto (la insignia baja de línea)
+   en vez de saltar opciones enteras a otra fila. */
 :host {
   display: flex;
+  flex: 1 1 100%;
   min-width: 0;
   max-width: 100%;
 }
 
 .vista-toggle {
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
   padding: 3px;
   gap: 2px;
   border: 1px solid variables.$color-border;
-  border-radius: variables.$border-radius-full;
+  border-radius: variables.$border-radius-lg;
   background: variables.$color-surface-alt;
 
   &__option {
-    display: inline-flex;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 6px;
-    padding: 5px 12px;
-    white-space: nowrap;
+    justify-content: center;
+    min-width: 0;
+    gap: 2px 6px;
+    padding: 5px 10px;
+    text-align: center;
     border: none;
-    border-radius: variables.$border-radius-full;
+    border-radius: variables.$border-radius-md;
     background: transparent;
     color: variables.$color-text-muted;
     font-size: variables.$font-size-sm;
@@ -53,5 +63,12 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+  }
+}
+
+/* En escritorio solo ocupa lo que necesita, alineado a la derecha de la cabecera. */
+@include mixins.mq(lg) {
+  :host {
+    flex: 0 1 auto;
   }
 }

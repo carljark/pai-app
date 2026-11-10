@@ -22,6 +22,11 @@
     flex: 1 1 100%;
   }
 
+  /* El selector de curso nunca se encoge: si no, lo taparía el de vista. */
+  &__field:not(:first-child) {
+    flex-shrink: 0;
+  }
+
   /* Dentro de la cabecera del mapa: sin caja propia. */
   &--inline {
     padding: 0;
@@ -41,7 +46,7 @@
      y los elementos fijos (la cesta) quedarían fuera de la pantalla. */
   &__extra {
     display: flex;
-    flex-wrap: wrap;
+    flex: 1 1 100%;
     align-items: center;
     min-width: 0;
     max-width: 100%;
@@ -102,13 +107,15 @@
     }
   }
 
+  /* En escritorio todo va en una fila si cabe; si no, el selector de vista baja a una
+     segunda fila alineado a la derecha en lugar de aplastarse junto al curso. */
   @include mixins.mq(lg) {
-    &--inline {
-      flex-wrap: nowrap;
+    &__extra {
+      flex: 0 1 auto;
     }
 
     &--inline &__field:first-child {
-      flex: 1 1 22rem;
+      flex: 1 1 14rem;
       max-width: 28rem;
     }
   }

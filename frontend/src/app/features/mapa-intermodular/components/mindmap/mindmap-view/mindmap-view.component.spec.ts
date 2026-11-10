@@ -20,6 +20,8 @@ describe('MindmapViewComponent', () => {
   let el: HTMLElement;
 
   beforeEach(async () => {
+    // La cesta se restaura de sessionStorage al crearse: otros specs no deben colarse.
+    sessionStorage.clear();
     language.set('castellano');
     await TestBed.configureTestingModule({
       imports: [MindmapViewComponent, HttpClientTestingModule],
@@ -61,7 +63,6 @@ describe('MindmapViewComponent', () => {
   });
 
   it('soltar la bola de un módulo en la cesta lo mete en ella', () => {
-    sessionStorage.clear();
     const canvas = fixture.debugElement.query(By.directive(MindmapCanvasComponent));
     expect(canvas.componentInstance.dropTarget()).toBe(TestBed.inject(CestaDropService));
     canvas.componentInstance.unitDrop.emit('0001');

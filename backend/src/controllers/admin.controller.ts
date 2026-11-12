@@ -3,6 +3,7 @@ import { User } from '../models/User';
 import { ActivityLog } from '../models/ActivityLog';
 import { UserSession } from '../models/UserSession';
 import { deleteUserTokens } from '../services/api-token.service';
+import { OAuthGrant } from '../models/OAuthGrant';
 
 export const getLogs = async (req: any, res: Response) => {
   try {
@@ -52,8 +53,9 @@ export const deleteUser = async (req: any, res: Response) => {
     }
     const user = await User.findByIdAndDelete(id);
     if (!user) return res.status(404).json({ error: 'Usuario no encontrado' });
-    // Sus tokens de conexión (MCP) dejan de servir con él
+    // Sus tokens de conexión y aplicaciones conectadas (MCP) dejan de servir con él
     await deleteUserTokens(user._id);
+    await OAuthGrant.deleteMany({ userId: user._id });
     res.json({ message: 'Usuario eliminado exitosamente' });
   } catch (err) {
     res.status(500).json({ error: 'Error al eliminar usuario' });

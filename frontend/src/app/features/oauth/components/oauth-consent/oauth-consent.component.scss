@@ -1,0 +1,49 @@
+@use '../../../../../styles/variables' as variables;
+
+.oauth-consent {
+  max-width: 560px;
+  margin: 40px auto;
+  padding: 24px 28px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-surface;
+  box-shadow: variables.$shadow-md;
+}
+
+.oauth-consent__title {
+  margin: 0 0 12px;
+  color: variables.$color-primary-dark;
+  font-size: variables.$font-size-xl;
+}
+
+.oauth-consent__host,
+.oauth-consent__text,
+.oauth-consent__note {
+  margin: 8px 0;
+}
+
+.oauth-consent__note {
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.oauth-consent__list {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.oauth-consent__item {
+  margin: 4px 0;
+}
+
+.oauth-consent__error {
+  color: variables.$color-danger;
+}
+
+.oauth-consent__actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}

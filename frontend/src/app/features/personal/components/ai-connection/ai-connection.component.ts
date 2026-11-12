@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { TranslationService } from '../../../../services/translation.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { ApiTokensService } from '../../services/api-tokens.service';
+import { ConnectedAppsComponent } from '../connected-apps/connected-apps.component';
 import {
   MCP_CLIENTS,
   McpClientId,
@@ -19,7 +20,7 @@ import {
 @Component({
   selector: 'app-ai-connection',
   standalone: true,
-  imports: [FormsModule, DatePipe],
+  imports: [FormsModule, DatePipe, ConnectedAppsComponent],
   templateUrl: './ai-connection.component.html',
   styleUrl: './ai-connection.component.scss',
 })

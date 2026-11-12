@@ -6,6 +6,7 @@ import { AiConnectionComponent } from './ai-connection.component';
 import { ApiTokensService } from '../../services/api-tokens.service';
 import { TranslationService } from '../../../../services/translation.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
+import { OAuthConsentService } from '../../../oauth/services/oauth-consent.service';
 import { TRANSLATIONS_ES } from '../../../../services/translations.es';
 
 const token = {
@@ -55,6 +56,7 @@ describe('AiConnectionComponent', () => {
         { provide: ApiTokensService, useValue: service },
         { provide: TranslationService, useValue: { t: signal(TRANSLATIONS_ES) } },
         { provide: AuthFacade, useValue: { currentUser } },
+        { provide: OAuthConsentService, useValue: { listGrants: () => of([]) } },
       ],
     }).compileComponents();
     fixture = TestBed.createComponent(AiConnectionComponent);

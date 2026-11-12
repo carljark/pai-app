@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[257 — OAuth en el servidor MCP para conectar Plappin a claude.ai](257_plan_oauth_servidor_mcp.md)** · _Implementado (tarea 257)_  
+  OAuth 2.1 con PKCE, registro dinámico y pantalla de consentimiento en Plappin, para añadir Plappin como conector personalizado en claude.ai (web, escritorio y móvil) con solo su URL. Los tokens personales siguen sirviendo para Claude Code y Gemini CLI.
+
 - **[256 — Servidor MCP para usar Plappin desde Claude o Gemini](256_plan_servidor_mcp.md)** · _Implementado (tarea 256)_  
   Servidor MCP remoto en `/api/mcp` con tokens personales revocables: los docentes trabajan con sus proyectos, el currículo y los mapas desde Claude o Gemini CLI con los mismos permisos que en la web, y los administradores tienen además herramientas de administración.
 

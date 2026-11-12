@@ -58,6 +58,18 @@ export interface ResolvedToken {
   tokenName: string;
 }
 
+/** Usuario con su rol y permiso de IA **actuales**, o `null` si se borró. */
+export const loadTokenUser = async (userId: unknown): Promise<ResolvedToken['user'] | null> => {
+  const user: any = await User.findById(userId).select('name email role canUseAi').lean();
+  return user
+    ? { _id: user._id, name: user.name, email: user.email, role: user.role, canUseAi: user.canUseAi !== false }
+    : null;
+};
+
+/** `true` si toca actualizar `lastUsedAt` (como mucho una vez por `LAST_USED_REFRESH_MS`). */
+export const shouldRefreshLastUsed = (lastUsedAt?: Date | null): boolean =>
+  !lastUsedAt || Date.now() - lastUsedAt.getTime() > LAST_USED_REFRESH_MS;
+
 /**
  * Usuario de un token, con su rol y permisos **actuales** (se leen en cada petición, no se guardan
  * en el token). `null` si el token no existe o su usuario se borró.
@@ -66,13 +78,8 @@ export const resolveApiToken = async (token: string): Promise<ResolvedToken | nu
   if (!token.startsWith(TOKEN_PREFIX)) return null;
   const doc = await ApiToken.findOne({ tokenHash: hashToken(token) });
   if (!doc) return null;
-  const user: any = await User.findById(doc.userId).select('name email role canUseAi').lean();
+  const user = await loadTokenUser(doc.userId);
   if (!user) return null;
-  if (!doc.lastUsedAt || Date.now() - doc.lastUsedAt.getTime() > LAST_USED_REFRESH_MS) {
-    await ApiToken.updateOne({ _id: doc._id }, { lastUsedAt: new Date() });
-  }
-  return {
-    user: { _id: user._id, name: user.name, email: user.email, role: user.role, canUseAi: user.canUseAi !== false },
-    tokenName: doc.name
-  };
+  if (shouldRefreshLastUsed(doc.lastUsedAt)) await ApiToken.updateOne({ _id: doc._id }, { lastUsedAt: new Date() });
+  return { user, tokenName: doc.name };
 };

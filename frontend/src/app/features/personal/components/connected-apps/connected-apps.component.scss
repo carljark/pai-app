@@ -1,0 +1,57 @@
+@use '../../../../../styles/variables' as variables;
+
+.connected-apps {
+  margin-top: 16px;
+}
+
+.connected-apps__title {
+  margin: 0;
+  font-weight: variables.$font-weight-medium;
+}
+
+.connected-apps__empty,
+.connected-apps__hint {
+  margin: 6px 0 0;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.connected-apps__list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.connected-apps__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid variables.$color-border;
+}
+
+.connected-apps__name {
+  font-weight: variables.$font-weight-semibold;
+}
+
+.connected-apps__meta {
+  flex: 1;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.connected-apps__error {
+  margin: 8px 0 0;
+  color: variables.$color-danger;
+}
+
+.connected-apps__url {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-surface-alt;
+  font-size: variables.$font-size-sm;
+  word-break: break-all;
+}

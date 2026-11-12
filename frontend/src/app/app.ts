@@ -21,6 +21,7 @@ import { MapaIntermodularViewComponent } from './features/mapa-intermodular/comp
 import { PersonalViewComponent } from './features/personal/components/personal-view/personal-view.component';
 import { FeedbackViewComponent } from './features/feedback/components/feedback-view/feedback-view.component';
 import { SolicitudesViewComponent } from './features/solicitudes/components/solicitudes-view/solicitudes-view.component';
+import { OAuthConsentComponent } from './features/oauth/components/oauth-consent/oauth-consent.component';
 import { WelcomeModalComponent } from './features/help/components/welcome-modal/welcome-modal.component';
 import { HelpPanelComponent } from './features/help/components/help-panel/help-panel.component';
 
@@ -43,6 +44,7 @@ import { HelpPanelComponent } from './features/help/components/help-panel/help-p
     PersonalViewComponent,
     FeedbackViewComponent,
     SolicitudesViewComponent,
+    OAuthConsentComponent,
     TallerViewComponent,
     MapaIntermodularViewComponent,
     WelcomeModalComponent,

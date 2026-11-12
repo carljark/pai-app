@@ -40,6 +40,21 @@ describe('LayoutService', () => {
     expect(service.language()).toBe('catalan');
   });
 
+  it('no recuerda el consentimiento OAuth como última vista, pero lo abre desde la URL con su petición', () => {
+    localStorage.setItem('pai_view', 'oauth-consent');
+    service = TestBed.inject(LayoutService);
+    expect(service.currentView()).toBe('home');
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [LayoutService, { provide: AuthFacade, useValue: authFacadeMock }],
+    });
+    window.history.replaceState(null, '', '/?view=oauth-consent&request=r1');
+    service = TestBed.inject(LayoutService);
+    expect(service.currentView()).toBe('oauth-consent');
+    expect(window.location.search).toBe('?view=oauth-consent&request=r1');
+  });
+
   it('should uncollapse sidebar when saved view is home', () => {
     localStorage.setItem('pai_view', 'home');
     service = TestBed.inject(LayoutService);

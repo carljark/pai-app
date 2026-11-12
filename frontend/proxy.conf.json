@@ -2,5 +2,29 @@
   "/api": {
     "target": "http://backend:3000",
     "secure": false
+  },
+  "/.well-known/oauth-authorization-server": {
+    "target": "http://backend:3000",
+    "secure": false
+  },
+  "/.well-known/oauth-protected-resource": {
+    "target": "http://backend:3000",
+    "secure": false
+  },
+  "/authorize": {
+    "target": "http://backend:3000",
+    "secure": false
+  },
+  "/token": {
+    "target": "http://backend:3000",
+    "secure": false
+  },
+  "/register": {
+    "target": "http://backend:3000",
+    "secure": false
+  },
+  "/revoke": {
+    "target": "http://backend:3000",
+    "secure": false
   }
 }

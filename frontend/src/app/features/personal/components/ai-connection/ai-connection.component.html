@@ -2,6 +2,8 @@
   <h3 class="ai-connection__title">🤖 {{ trans.t().aiConnectionTitle }}</h3>
   <p class="ai-connection__intro">{{ trans.t().aiConnectionIntro }}</p>
 
+  <app-connected-apps [serverUrl]="serverUrl"></app-connected-apps>
+
   @if (canCreate()) {
     <form class="ai-connection__form" (ngSubmit)="create()">
       <input

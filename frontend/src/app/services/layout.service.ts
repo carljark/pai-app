@@ -1,6 +1,6 @@
 import { Injectable, signal, effect, inject } from '@angular/core';
 import { AuthFacade } from '../features/auth/services/auth.facade';
-import { AppView, buildViewUrl, parseViewRoute } from './view-route';
+import { AppView, TRANSIENT_VIEWS, buildViewUrl, parseViewRoute } from './view-route';
 
 export type { AppView } from './view-route';
 
@@ -18,7 +18,7 @@ export class LayoutService {
   constructor() {
     // Se confía en el valor persistido por el propio servicio
     const savedView = localStorage.getItem('pai_view') as AppView | null;
-    if (savedView) {
+    if (savedView && !TRANSIENT_VIEWS.includes(savedView)) {
       this.currentView.set(savedView);
       this.isSidebarCollapsed.set(savedView !== 'home');
     }

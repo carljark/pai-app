@@ -18,6 +18,17 @@ describe('view-route', () => {
     expect(parseViewRoute('?view=inventada&project=p1')).toEqual({ view: 'taller', project: 'p1' });
   });
 
+  it('conserva la petición del consentimiento OAuth', () => {
+    expect(parseViewRoute('?view=oauth-consent&request=r1')).toEqual({
+      view: 'oauth-consent',
+      request: 'r1',
+    });
+    expect(parseViewRoute('?view=oauth-consent')).toEqual({ view: 'oauth-consent' });
+    expect(buildViewUrl({ view: 'oauth-consent', request: 'r1' }, '/')).toBe(
+      '/?view=oauth-consent&request=r1',
+    );
+  });
+
   it('construye la URL de una pantalla', () => {
     expect(buildViewUrl({ view: 'home' }, '/')).toBe('/?view=home');
     expect(buildViewUrl({ view: 'taller', project: 'p 1' }, '/app')).toBe(

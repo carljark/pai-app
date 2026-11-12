@@ -10,7 +10,28 @@ Plappin expone un servidor **MCP** (Model Context Protocol) en `https://plappin.
    - **Gemini CLI** (`~/.gemini/settings.json`): `{"mcpServers":{"plappin":{"httpUrl":"https://plappin.org/api/mcp","headers":{"Authorization":"Bearer plp_…"}}}}`
 3. Revocar un token en el mismo panel lo invalida al instante. Al borrar un usuario se borran sus tokens.
 
-**Pendiente:** los conectores de claude.ai (web y móvil) exigen **OAuth 2.1** y no admiten cabeceras propias. Añadirlo es una tarea aparte: el servidor y las herramientas no cambian, solo la forma de identificar al usuario.
+### claude.ai (web, escritorio y móvil): OAuth
+Los conectores personalizados de claude.ai no admiten cabeceras propias: usan **OAuth 2.1** (tarea 257).
+1. En claude.ai: Ajustes → Conectores → Añadir conector personalizado → URL `https://plappin.org/api/mcp`.
+2. Claude descubre el servidor de autorización, se registra, abre `https://plappin.org/authorize` y el navegador llega a la pantalla de consentimiento de Plappin (`?view=oauth-consent&request=…`). Si no hay sesión, primero aparece el login.
+3. Al pulsar «Autorizar», Plappin vuelve a claude.ai con un código, que Claude canjea por los tokens. Desde entonces usa las mismas herramientas con los permisos del docente.
+4. Las conexiones aparecen en «Área Personal → Conectar con IA → Aplicaciones conectadas», desde donde se pueden desconectar.
+
+## OAuth 2.1 (tarea 257)
+- **Servidor de autorización del SDK** (`mcpAuthRouter`, en `mcp/oauth/oauth-router.ts`), montado en la raíz del dominio:
+  - `/.well-known/oauth-authorization-server` y `/.well-known/oauth-protected-resource/api/mcp` (metadatos);
+  - `/authorize`, `/token`, `/register` (registro dinámico) y `/revoke`.
+
+  El SDK valida los parámetros, PKCE (`S256`) y las `redirect_uri`, y aplica límites de peticiones (registro: 200 por IP y hora, porque claude.ai registra un cliente por cada docente).
+- **Enrutado:** esas rutas las sirve el Nginx del **contenedor del frontend** (`frontend/nginx.conf`), que las reenvía a `backend:3000`; en desarrollo, `frontend/proxy.conf.json`. El Nginx del host no cambia. Express confía en `X-Forwarded-For` de direcciones privadas (`trust proxy`) para que los límites usen la IP real.
+- **Proveedor** (`mcp/oauth/oauth-provider.ts`), con datos en Mongo:
+  - `OAuthClient`: clientes registrados;
+  - `OAuthRequest`: peticiones pendientes de consentimiento (10 min, TTL);
+  - `OAuthGrant`: autorizaciones, con el hash del código (10 min, un solo uso), del token de acceso (`plpa_…`, 1 h) y del de refresco (`plpr_…`, 30 días, con rotación). Mongo las borra al caducar (TTL).
+- **Redirecciones permitidas:** el registro es abierto, así que solo se aceptan las URL de vuelta de claude.ai y claude.com (`/api/mcp/auth_callback`) y las de loopback `http://localhost|127.0.0.1|[::1]` (clientes de escritorio). Se puede cambiar con `MCP_OAUTH_REDIRECT_ALLOWLIST` (lista separada por comas).
+- **Consentimiento** (`mcp/oauth/oauth-consent.controller.ts`, con la sesión web): `GET/POST /api/oauth/requests/:id` (las cuentas pendientes no pueden autorizar) y `GET/DELETE /api/oauth/grants` (aplicaciones conectadas).
+- **Servidor MCP:** `mcpAuth` acepta tokens personales (`plp_…`) y tokens de acceso OAuth (`plpa_…`); con ambos lee el rol actual en cada petición. El 401 lleva `WWW-Authenticate: Bearer … resource_metadata="https://plappin.org/.well-known/oauth-protected-resource/api/mcp"` (y `error="invalid_token"` si llegó un token), que es lo que usa el cliente para descubrir OAuth o renovar el token.
+- **URL pública:** `PUBLIC_URL` (por defecto `https://plappin.org`) es el emisor OAuth y la base de la pantalla de consentimiento. En desarrollo: `PUBLIC_URL=http://localhost:4200`.
 
 ## Arquitectura
 - `routes/mcp.routes.ts`: `POST /api/mcp` con `StreamableHTTPServerTransport` de `@modelcontextprotocol/sdk` en modo **sin estado** (un servidor por petición) y `enableJsonResponse` (respuestas JSON, sin SSE, para no depender del búfer del Nginx). `GET` y `DELETE` → 405. Se monta antes del `authMiddleware` general porque usa su propia autenticación.

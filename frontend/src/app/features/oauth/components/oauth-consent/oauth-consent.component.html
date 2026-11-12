@@ -1,0 +1,52 @@
+<section class="oauth-consent">
+  @switch (status()) {
+    @case ('loading') {
+      <p class="oauth-consent__text">{{ trans.t().loadingData }}</p>
+    }
+    @case ('invalid') {
+      <h2 class="oauth-consent__title">{{ trans.t().oauthInvalidTitle }}</h2>
+      <p class="oauth-consent__text">{{ trans.t().oauthInvalidText }}</p>
+      <button type="button" class="btn-primary" (click)="goHome()">
+        {{ trans.t().oauthGoHome }}
+      </button>
+    }
+    @default {
+      @if (request(); as req) {
+        <h2 class="oauth-consent__title">
+          🤖 {{ trans.t().oauthTitle.replace('{client}', req.clientName) }}
+        </h2>
+        <p class="oauth-consent__host">
+          {{ trans.t().oauthReturnsTo }} <strong>{{ req.redirectHost }}</strong>
+        </p>
+        <p class="oauth-consent__text">{{ trans.t().oauthWillBeAble }}</p>
+        <ul class="oauth-consent__list">
+          @for (item of trans.t().oauthPermissions; track $index) {
+            <li class="oauth-consent__item">{{ item }}</li>
+          }
+        </ul>
+        <p class="oauth-consent__note">{{ trans.t().oauthRevokeNote }}</p>
+        @if (status() === 'error') {
+          <p class="oauth-consent__error" role="alert">{{ trans.t().oauthError }}</p>
+        }
+        <div class="oauth-consent__actions">
+          <button
+            type="button"
+            class="btn-secondary oauth-consent__deny"
+            [disabled]="status() === 'sending'"
+            (click)="answer(false)"
+          >
+            {{ trans.t().oauthDeny }}
+          </button>
+          <button
+            type="button"
+            class="btn-primary oauth-consent__approve"
+            [disabled]="status() === 'sending'"
+            (click)="answer(true)"
+          >
+            {{ trans.t().oauthApprove }}
+          </button>
+        </div>
+      }
+    }
+  }
+</section>

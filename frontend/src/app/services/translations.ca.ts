@@ -278,7 +278,7 @@ export const TRANSLATIONS_CA = {
   // CONNECTAR AMB IA (SERVIDOR MCP)
   aiConnectionTitle: 'Connectar amb IA',
   aiConnectionIntro:
-    'Fes servir Plappin des de Claude, Gemini o altres assistents compatibles amb MCP: consulta el currículum i els mapes, i genera, llegeix, edita, tradueix o revisa els teus projectes amb els mateixos permisos. Crea un token per a cada assistent o equip.',
+    'Fes servir Plappin des de Claude, Gemini o altres assistents compatibles amb MCP: consulta el currículum i els mapes, i genera, llegeix, edita, tradueix o revisa els teus projectes amb els mateixos permisos. A claude.ai basta afegir el connector i autoritzar-lo; a la resta, crea un token per a cada assistent o equip.',
   aiConnectionNamePlaceholder: 'Nom del token (p. ex. «Claude al portàtil»)',
   aiConnectionCreate: 'Crear token',
   aiConnectionShownOnce:
@@ -292,12 +292,39 @@ export const TRANSLATIONS_CA = {
   aiConnectionConfirmRevoke: 'Revocar? Prem una altra vegada',
   aiConnectionHowTo: 'Com connectar-lo',
   aiConnectionWebNote:
-    'Les versions web i mòbil de Claude encara no admeten aquest tipus de connexió; fes servir Claude Code, Claude Desktop o Gemini CLI.',
+    'Els tokens són per a Claude Code, Claude Desktop, Gemini CLI i altres clients que permeten configurar capçaleres. A claude.ai fes servir el connector personalitzat (més amunt).',
   aiConnectionClients: {
     claudeCode: 'Claude Code',
     claudeDesktop: 'Claude Desktop',
     geminiCli: 'Gemini CLI',
   } as Record<string, string>,
+
+  // CONSENTIMENT OAUTH (CONNECTORS DE CLAUDE.AI)
+  oauthTitle: 'Vols permetre que {client} faci servir el teu compte de Plappin?',
+  oauthReturnsTo: 'Després tornaràs a',
+  oauthWillBeAble: 'Podrà, amb els mateixos permisos que tu:',
+  oauthPermissions: [
+    'Consultar els nivells, el currículum i els mapes.',
+    'Veure, generar, editar, traduir, revisar, clonar i esborrar els teus projectes.',
+    'Enviar sol·licituds de centre i suggeriments en nom teu.',
+    "Si ets administrador, fer servir les funcions d'administració.",
+  ],
+  oauthRevokeNote:
+    'El pots desconnectar quan vulguis a «Àrea Personal → Connectar amb IA → Aplicacions connectades».',
+  oauthApprove: 'Autoritzar',
+  oauthDeny: 'Cancel·lar',
+  oauthError: "No s'ha pogut completar l'autorització. Torna a connectar des de l'assistent.",
+  oauthInvalidTitle: 'Autorització no disponible',
+  oauthInvalidText:
+    "La petició d'autorització no existeix o ha caducat. Torna a connectar Plappin des del teu assistent.",
+  oauthGoHome: "Anar a l'inici",
+  connectedAppsTitle: 'Aplicacions connectades',
+  connectedAppsEmpty:
+    "Cap. Per fer servir Plappin a claude.ai, afegeix un connector personalitzat amb l'URL de més avall i autoritza'l.",
+  connectedAppsDisconnect: 'Desconnectar',
+  connectedAppsConnectedOn: 'Connectada el',
+  claudeAiConnectorHint:
+    'claude.ai (web, escriptori i mòbil): Configuració → Connectors → Afegir connector personalitzat, amb aquesta URL:',
 
   // REVISIÓ AMB IA
   reviewTitle: 'Revisió amb IA',

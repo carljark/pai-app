@@ -1,0 +1,33 @@
+<div class="connected-apps">
+  <p class="connected-apps__title">{{ trans.t().connectedAppsTitle }}</p>
+  @if (grants().length === 0) {
+    <p class="connected-apps__empty">{{ trans.t().connectedAppsEmpty }}</p>
+  } @else {
+    <ul class="connected-apps__list">
+      @for (grant of grants(); track grant._id) {
+        <li class="connected-apps__item">
+          <span class="connected-apps__name">{{ grant.clientName }}</span>
+          <span class="connected-apps__meta">
+            {{ trans.t().connectedAppsConnectedOn }} {{ grant.createdAt | date: 'short' }} ·
+            {{ trans.t().aiConnectionLastUsed }}:
+            {{
+              grant.lastUsedAt ? (grant.lastUsedAt | date: 'short') : trans.t().aiConnectionNever
+            }}
+          </span>
+          <button
+            type="button"
+            class="btn-danger connected-apps__disconnect"
+            (click)="disconnect(grant._id)"
+          >
+            {{ trans.t().connectedAppsDisconnect }}
+          </button>
+        </li>
+      }
+    </ul>
+  }
+  @if (error()) {
+    <p class="connected-apps__error" role="alert">{{ trans.t().aiConnectionError }}</p>
+  }
+  <p class="connected-apps__hint">{{ trans.t().claudeAiConnectorHint }}</p>
+  <code class="connected-apps__url">{{ serverUrl() }}</code>
+</div>

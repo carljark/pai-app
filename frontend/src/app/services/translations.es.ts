@@ -278,7 +278,7 @@ export const TRANSLATIONS_ES = {
   // CONECTAR CON IA (SERVIDOR MCP)
   aiConnectionTitle: 'Conectar con IA',
   aiConnectionIntro:
-    'Usa Plappin desde Claude, Gemini u otros asistentes compatibles con MCP: consulta el currículo y los mapas, y genera, lee, edita, traduce o revisa tus proyectos con tus mismos permisos. Crea un token para cada asistente o equipo.',
+    'Usa Plappin desde Claude, Gemini u otros asistentes compatibles con MCP: consulta el currículo y los mapas, y genera, lee, edita, traduce o revisa tus proyectos con tus mismos permisos. En claude.ai basta con añadir el conector y autorizarlo; en el resto, crea un token para cada asistente o equipo.',
   aiConnectionNamePlaceholder: 'Nombre del token (p. ej. «Claude en el portátil»)',
   aiConnectionCreate: 'Crear token',
   aiConnectionShownOnce:
@@ -292,12 +292,39 @@ export const TRANSLATIONS_ES = {
   aiConnectionConfirmRevoke: '¿Revocar? Pulsa otra vez',
   aiConnectionHowTo: 'Cómo conectarlo',
   aiConnectionWebNote:
-    'Las versiones web y móvil de Claude todavía no admiten este tipo de conexión; usa Claude Code, Claude Desktop o Gemini CLI.',
+    'Los tokens son para Claude Code, Claude Desktop, Gemini CLI y otros clientes que permiten configurar cabeceras. En claude.ai usa el conector personalizado (arriba).',
   aiConnectionClients: {
     claudeCode: 'Claude Code',
     claudeDesktop: 'Claude Desktop',
     geminiCli: 'Gemini CLI',
   } as Record<string, string>,
+
+  // CONSENTIMIENTO OAUTH (CONECTORES DE CLAUDE.AI)
+  oauthTitle: '¿Permitir que {client} use tu cuenta de Plappin?',
+  oauthReturnsTo: 'Después volverás a',
+  oauthWillBeAble: 'Podrá, con tus mismos permisos:',
+  oauthPermissions: [
+    'Consultar los niveles, el currículo y los mapas.',
+    'Ver, generar, editar, traducir, revisar, clonar y borrar tus proyectos.',
+    'Enviar solicitudes de centro y sugerencias en tu nombre.',
+    'Si eres administrador, usar las funciones de administración.',
+  ],
+  oauthRevokeNote:
+    'Puedes desconectarlo cuando quieras en «Área Personal → Conectar con IA → Aplicaciones conectadas».',
+  oauthApprove: 'Autorizar',
+  oauthDeny: 'Cancelar',
+  oauthError: 'No se ha podido completar la autorización. Vuelve a conectar desde el asistente.',
+  oauthInvalidTitle: 'Autorización no disponible',
+  oauthInvalidText:
+    'La petición de autorización no existe o ha caducado. Vuelve a conectar Plappin desde tu asistente.',
+  oauthGoHome: 'Ir al inicio',
+  connectedAppsTitle: 'Aplicaciones conectadas',
+  connectedAppsEmpty:
+    'Ninguna. Para usar Plappin en claude.ai, añade un conector personalizado con la URL de abajo y autorízalo.',
+  connectedAppsDisconnect: 'Desconectar',
+  connectedAppsConnectedOn: 'Conectada el',
+  claudeAiConnectorHint:
+    'claude.ai (web, escritorio y móvil): Ajustes → Conectores → Añadir conector personalizado, con esta URL:',
 
   // REVISIÓN CON IA
   reviewTitle: 'Revisión con IA',

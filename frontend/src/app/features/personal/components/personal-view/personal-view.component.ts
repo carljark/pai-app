@@ -13,6 +13,7 @@ import {
 } from '../../../../components/app-select/app-select.component';
 import { HistoryTab, Project, normalizeTipoNivel } from '../../../projects/models/project.model';
 import { ProjectTitleComponent } from '../../../projects/components/project-title/project-title.component';
+import { AiConnectionComponent } from '../ai-connection/ai-connection.component';
 
 /** Coincidencia de la búsqueda con título, módulos o estado del proyecto. */
 function matchesSearch(p: Project, q: string): boolean {
@@ -29,7 +30,13 @@ function matchesSearch(p: Project, q: string): boolean {
 @Component({
   selector: 'app-personal-view',
   standalone: true,
-  imports: [CommonModule, FormsModule, AppSelectComponent, ProjectTitleComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    AppSelectComponent,
+    ProjectTitleComponent,
+    AiConnectionComponent,
+  ],
   styleUrl: './personal-view.component.scss',
   templateUrl: './personal-view.component.html',
 })

@@ -1,0 +1,124 @@
+@use '../../../../../styles/variables' as variables;
+
+.ai-connection {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-lg;
+  background: variables.$color-surface;
+}
+
+.ai-connection__title {
+  margin: 0;
+  color: variables.$color-primary-dark;
+}
+
+.ai-connection__intro,
+.ai-connection__note {
+  margin: 6px 0 0;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.ai-connection__form,
+.ai-connection__copy-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ai-connection__input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 10px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-md;
+}
+
+.ai-connection__created {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-left: 4px solid variables.$color-warning;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-warning-bg;
+}
+
+.ai-connection__warning,
+.ai-connection__label {
+  margin: 0;
+  font-weight: variables.$font-weight-medium;
+}
+
+.ai-connection__token,
+.ai-connection__config {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 8px 10px;
+  border-radius: variables.$border-radius-md;
+  background: variables.$color-surface-alt;
+  font-size: variables.$font-size-sm;
+  word-break: break-all;
+}
+
+.ai-connection__config {
+  margin: 8px 0;
+  white-space: pre-wrap;
+}
+
+.ai-connection__error {
+  margin: 12px 0 0;
+  color: variables.$color-danger;
+}
+
+.ai-connection__list {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-connection__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid variables.$color-border;
+}
+
+.ai-connection__name {
+  font-weight: variables.$font-weight-semibold;
+}
+
+.ai-connection__meta {
+  flex: 1;
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}
+
+.ai-connection__setup {
+  margin-top: 16px;
+}
+
+.ai-connection__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.ai-connection__tab {
+  padding: 6px 12px;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-full;
+  background: variables.$color-surface;
+  color: variables.$color-text-main;
+  cursor: pointer;
+}
+
+.ai-connection__tab--active {
+  border-color: variables.$color-primary;
+  background: variables.$color-primary-light;
+  color: variables.$color-primary-dark;
+}

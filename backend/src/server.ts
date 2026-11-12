@@ -14,6 +14,7 @@ import mapaRoutes from './routes/mapa.routes';
 import afinidadesRoutes from './routes/afinidades.routes';
 import aiRoutes from './routes/ai.routes';
 import userRoutes from './routes/user.routes';
+import mcpRoutes from './routes/mcp.routes';
 
 import { authMiddleware } from './middlewares/auth.middleware';
 
@@ -48,6 +49,8 @@ app.use('/api/mapa-intermodular', mapaRoutes);
 app.use('/api/afinidades-eso', afinidadesRoutes);
 app.use('/api/ai', authMiddleware, aiRoutes);
 app.use('/api/users', authMiddleware, userRoutes);
+// Servidor MCP para asistentes de IA: se autentica con tokens personales, no con la sesión web
+app.use('/api/mcp', mcpRoutes);
 
 // Rutas Protegidas
 app.use('/api', authMiddleware);

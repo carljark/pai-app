@@ -1,0 +1,81 @@
+<section class="ai-connection">
+  <h3 class="ai-connection__title">🤖 {{ trans.t().aiConnectionTitle }}</h3>
+  <p class="ai-connection__intro">{{ trans.t().aiConnectionIntro }}</p>
+
+  @if (canCreate()) {
+    <form class="ai-connection__form" (ngSubmit)="create()">
+      <input
+        class="ai-connection__input"
+        name="tokenName"
+        maxlength="60"
+        [placeholder]="trans.t().aiConnectionNamePlaceholder"
+        [ngModel]="newName()"
+        (ngModelChange)="newName.set($event)"
+      />
+      <button type="submit" class="btn-primary" [disabled]="!newName().trim()">
+        {{ trans.t().aiConnectionCreate }}
+      </button>
+    </form>
+  }
+
+  @if (createdToken(); as token) {
+    <div class="ai-connection__created" role="status">
+      <p class="ai-connection__warning">⚠️ {{ trans.t().aiConnectionShownOnce }}</p>
+      <div class="ai-connection__copy-row">
+        <code class="ai-connection__token">{{ token }}</code>
+        <button type="button" class="btn-secondary" (click)="copy(token)">
+          {{ copied() ? trans.t().aiConnectionCopied : trans.t().aiConnectionCopy }}
+        </button>
+      </div>
+    </div>
+  }
+
+  @if (error()) {
+    <p class="ai-connection__error" role="alert">{{ trans.t().aiConnectionError }}</p>
+  }
+
+  @if (tokens.tokens().length > 0) {
+    <ul class="ai-connection__list">
+      @for (item of tokens.tokens(); track item._id) {
+        <li class="ai-connection__item">
+          <span class="ai-connection__name">{{ item.name }}</span>
+          <code class="ai-connection__prefix">{{ item.prefix }}…</code>
+          <span class="ai-connection__meta">
+            {{ trans.t().aiConnectionLastUsed }}:
+            {{ item.lastUsedAt ? (item.lastUsedAt | date: 'short') : trans.t().aiConnectionNever }}
+          </span>
+          <button type="button" class="btn-danger ai-connection__revoke" (click)="revoke(item._id)">
+            {{
+              confirmingRevoke() === item._id
+                ? trans.t().aiConnectionConfirmRevoke
+                : trans.t().aiConnectionRevoke
+            }}
+          </button>
+        </li>
+      }
+    </ul>
+  }
+
+  <div class="ai-connection__setup">
+    <p class="ai-connection__label">{{ trans.t().aiConnectionHowTo }}</p>
+    <div class="ai-connection__tabs" role="tablist">
+      @for (client of clients; track client) {
+        <button
+          type="button"
+          role="tab"
+          class="ai-connection__tab"
+          [class.ai-connection__tab--active]="selectedClient() === client"
+          [attr.aria-selected]="selectedClient() === client"
+          (click)="selectedClient.set(client)"
+        >
+          {{ clientLabel(client) }}
+        </button>
+      }
+    </div>
+    <pre class="ai-connection__config">{{ config() }}</pre>
+    <button type="button" class="btn-secondary ai-connection__copy-config" (click)="copy(config())">
+      {{ trans.t().aiConnectionCopy }}
+    </button>
+    <p class="ai-connection__note">{{ trans.t().aiConnectionWebNote }}</p>
+  </div>
+</section>

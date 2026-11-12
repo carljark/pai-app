@@ -1,7 +1,7 @@
 # Plan 256: Servidor MCP para usar Plappin desde Claude o Gemini
 
 > **Fecha:** 12 de noviembre de 2026
-> **Estado:** Aprobado
+> **Estado:** Implementado (tarea 256)
 > **Partes afectadas:** backend / frontend / despliegue
 
 ---

@@ -4,7 +4,7 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
-- **[256 — Servidor MCP para usar Plappin desde Claude o Gemini](256_plan_servidor_mcp.md)** · _Aprobado_  
+- **[256 — Servidor MCP para usar Plappin desde Claude o Gemini](256_plan_servidor_mcp.md)** · _Implementado (tarea 256)_  
   Servidor MCP remoto en `/api/mcp` con tokens personales revocables: los docentes trabajan con sus proyectos, el currículo y los mapas desde Claude o Gemini CLI con los mismos permisos que en la web, y los administradores tienen además herramientas de administración.
 
 - **[255 — Revisión automática del proyecto con IA](255_plan_revision_automatica_proyecto.md)** · _Implementado (tarea 255)_  

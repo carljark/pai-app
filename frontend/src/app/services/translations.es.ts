@@ -275,6 +275,30 @@ export const TRANSLATIONS_ES = {
   translationFailedToast: 'No se ha podido traducir',
   translationError: 'No se ha podido traducir el proyecto. Inténtalo de nuevo.',
 
+  // CONECTAR CON IA (SERVIDOR MCP)
+  aiConnectionTitle: 'Conectar con IA',
+  aiConnectionIntro:
+    'Usa Plappin desde Claude, Gemini u otros asistentes compatibles con MCP: consulta el currículo y los mapas, y genera, lee, edita, traduce o revisa tus proyectos con tus mismos permisos. Crea un token para cada asistente o equipo.',
+  aiConnectionNamePlaceholder: 'Nombre del token (p. ej. «Claude en el portátil»)',
+  aiConnectionCreate: 'Crear token',
+  aiConnectionShownOnce:
+    'Copia el token ahora: no se volverá a mostrar. Quien lo tenga puede usar tu cuenta, así que no lo compartas.',
+  aiConnectionCopy: 'Copiar',
+  aiConnectionCopied: 'Copiado',
+  aiConnectionError: 'No se ha podido completar la operación. Inténtalo de nuevo.',
+  aiConnectionLastUsed: 'Último uso',
+  aiConnectionNever: 'nunca',
+  aiConnectionRevoke: 'Revocar',
+  aiConnectionConfirmRevoke: '¿Revocar? Pulsa otra vez',
+  aiConnectionHowTo: 'Cómo conectarlo',
+  aiConnectionWebNote:
+    'Las versiones web y móvil de Claude todavía no admiten este tipo de conexión; usa Claude Code, Claude Desktop o Gemini CLI.',
+  aiConnectionClients: {
+    claudeCode: 'Claude Code',
+    claudeDesktop: 'Claude Desktop',
+    geminiCli: 'Gemini CLI',
+  } as Record<string, string>,
+
   // REVISIÓN CON IA
   reviewTitle: 'Revisión con IA',
   reviewIntro:

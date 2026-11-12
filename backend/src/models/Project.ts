@@ -42,6 +42,8 @@ const ReviewSchema = new mongoose.Schema({
   overall: Number,
   summary: String,
   dimensions: [ReviewDimensionSchema],
+  /** Sugerencias ya aplicadas (`aspecto:índice`); una revisión nueva empieza sin ninguna. */
+  applied: { type: [String], default: undefined },
   error: String
 }, { _id: false });
 

@@ -4,6 +4,7 @@ import { AuthFacade } from '../../../auth/services/auth.facade';
 import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { ProjectReviewFacade } from '../../../projects/services/project-review.facade';
 import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
+import { ReviewSuggestionsComponent } from '../review-suggestions/review-suggestions.component';
 import {
   ProjectReviewDimension,
   REVIEW_DIMENSIONS,
@@ -20,6 +21,7 @@ const WEAK_SCORE = 2;
 @Component({
   selector: 'app-project-review',
   standalone: true,
+  imports: [ReviewSuggestionsComponent],
   templateUrl: './project-review.component.html',
   styleUrl: './project-review.component.scss',
 })
@@ -40,6 +42,12 @@ export class ProjectReviewComponent {
     const user = this.auth.currentUser();
     return Boolean(user?.canUseAi || user?.role === 'admin') && !this.editLock.readOnly();
   });
+
+  /** Aplicar sugerencias cambia el texto: además, hace falta el turno de edición. */
+  canApply = computed(() => this.canReview() && !this.editLock.blocked());
+
+  /** El modelo de IA usado solo lo ven los administradores. */
+  isAdmin = computed(() => this.auth.currentUser()?.role === 'admin');
 
   /** Aspectos de la revisión en el orden fijo de la interfaz. */
   dimensions = computed<ProjectReviewDimension[]>(() => {

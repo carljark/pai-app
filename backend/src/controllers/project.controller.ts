@@ -504,7 +504,8 @@ export const deleteProject = async (req: any, res: Response) => {
   }
 };
 
-function buildRewritePrompt(context: string, instruction: string): string {
+/** Prompt del asistente del taller: reescribe el documento completo aplicando la instrucción. */
+export function buildRewritePrompt(context: string, instruction: string): string {
   return `Eres el Motor Pedagógico PAI. El profesor está solicitando una modificación o refinamiento sobre el documento completo del proyecto intermodular.
 
 DOCUMENTO DEL PROYECTO ACTUAL (MARKDOWN COMPLETO):

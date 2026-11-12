@@ -353,6 +353,12 @@ export const TRANSLATIONS_CA = {
   reviewSuggestions: 'Suggeriments',
   reviewSection: 'Apartat',
   reviewModel: 'Model',
+  reviewApply: 'Aplicar',
+  reviewApplyAll: 'Aplicar-les totes',
+  reviewApplying: 'Aplicant…',
+  reviewApplied: 'Aplicada',
+  reviewApplyError:
+    "No s'ha pogut aplicar el suggeriment. Torna-ho a provar o demana-ho a l'assistent del taller.",
   reviewDimensions: {
     curricularAlignment: 'Alineació curricular',
     coherence: 'Coherència',

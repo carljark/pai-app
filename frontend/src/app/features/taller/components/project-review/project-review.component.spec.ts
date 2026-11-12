@@ -7,6 +7,7 @@ import { ProjectsFacade } from '../../../projects/services/projects.facade';
 import { TranslationService } from '../../../../services/translation.service';
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
+import { ReviewApplyFacade } from '../../../projects/services/review-apply.facade';
 import { TRANSLATIONS_ES } from '../../../../services/translations.es';
 import { TRANSLATIONS_CA } from '../../../../services/translations.ca';
 
@@ -35,6 +36,7 @@ describe('ProjectReviewComponent', () => {
   let currentProject: ReturnType<typeof signal<any>>;
   let currentUser: ReturnType<typeof signal<any>>;
   let readOnly: ReturnType<typeof signal<boolean>>;
+  let blocked: ReturnType<typeof signal<boolean>>;
   let t: ReturnType<typeof signal<any>>;
 
   const el = () => fixture.nativeElement as HTMLElement;
@@ -46,6 +48,7 @@ describe('ProjectReviewComponent', () => {
     currentProject = signal<any>({ _id: 'p1', generatedContent: { rawText: 'Texto' } });
     currentUser = signal<any>({ role: 'teacher', canUseAi: true });
     readOnly = signal(false);
+    blocked = signal(false);
     t = signal(TRANSLATIONS_ES);
     facade = {
       review: signal<any>(null),
@@ -59,10 +62,14 @@ describe('ProjectReviewComponent', () => {
       imports: [ProjectReviewComponent],
       providers: [
         { provide: ProjectReviewFacade, useValue: facade },
-        { provide: ProjectsFacade, useValue: { currentProject } },
+        { provide: ProjectsFacade, useValue: { currentProject, isThinking: signal(false) } },
         { provide: TranslationService, useValue: { t } },
         { provide: AuthFacade, useValue: { currentUser } },
-        { provide: EditLockFacade, useValue: { readOnly } },
+        { provide: EditLockFacade, useValue: { readOnly, blocked } },
+        {
+          provide: ReviewApplyFacade,
+          useValue: { applying: signal(null), failed: signal(null), apply: vi.fn() },
+        },
       ],
     }).compileComponents();
     fixture = TestBed.createComponent(ProjectReviewComponent);
@@ -141,9 +148,19 @@ describe('ProjectReviewComponent', () => {
     expect(names).toEqual(['Coherencia', 'Temporización', 'Claridad y formato']);
     expect(query('.project-review__score--good')?.textContent).toContain('5/5');
     expect(query('.project-review__score--weak')?.textContent).toContain('2/5');
-    expect(el().querySelectorAll('.project-review__suggestion')).toHaveLength(4);
+    expect(el().querySelectorAll('.review-suggestions__item')).toHaveLength(4);
+    expect(el().querySelectorAll('.review-suggestions__apply')).toHaveLength(4);
     expect(text()).toContain(`${TRANSLATIONS_ES.reviewSection}: Fase 2`);
+    // El modelo de IA solo lo ven los administradores
+    expect(text()).not.toContain('gemini-3.6-flash');
+    currentUser.set({ role: 'admin', canUseAi: true });
+    render();
     expect(text()).toContain('gemini-3.6-flash');
+
+    // Con el turno de otra persona no se pueden aplicar sugerencias
+    blocked.set(true);
+    render();
+    expect(el().querySelectorAll('.review-suggestions__apply')).toHaveLength(0);
 
     query('.project-review__toggle')!.click();
     render();

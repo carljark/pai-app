@@ -35,7 +35,17 @@ La **nota global** la calcula el backend como media de las nueve, con un decimal
 - `ProjectReviewFacade` sigue la revisión por sondeo cada 4 s (como `ProjectTranslationFacade`), reanuda el seguimiento tras recargar y avisa con un toast al terminar.
 - `app-project-review` (bajo el aviso de traducción del taller) muestra el botón, el estado en curso, los avisos de error y de revisión desactualizada (`review.contentVersion` distinto del actual) y, al desplegar, el resumen y una tarjeta por aspecto con la nota coloreada (≥ 4 bien, 3 media, ≤ 2 floja).
 - Quien puede ver el proyecto pero no editarlo ve la última revisión, sin botón.
+- El modelo de IA que hizo la revisión solo se muestra a los administradores.
+
+## Aplicar sugerencias (tarea 260)
+Cada sugerencia tiene **«Aplicar»** y cada aspecto con varias pendientes, **«Aplicar todas»** (`app-review-suggestions`).
+1. `ReviewApplyFacade` sigue el camino del asistente del taller: guarda el estado para «Deshacer», llama a `POST /api/projects/:id/review/apply` con el texto del editor (`context`, que puede ser la traducción o tener cambios sin guardar), pone el resultado en el editor y lo guarda como borrador.
+2. El endpoint (`review-apply.controller.ts`, con `requireApproved`, `requireAiAccess` y `projectEditGuards`) toma la sugerencia (o las pendientes del aspecto) de la **revisión guardada**, no del cliente, y aplica `review-apply.service.ts`:
+   - localiza el apartado que indicó la revisión (`section`) con `markdown-sections.ts`: coincidencia sin tildes, mayúsculas ni numeración, eligiendo la más exacta y, a igualdad, la más específica;
+   - pide a la IA **solo ese apartado** (sin razonamiento) y comprueba que vuelve con un encabezado del mismo nivel y contenido; si no, responde 502 y el texto no cambia;
+   - si no encuentra el apartado, reescribe el documento completo con el prompt del asistente y rechaza respuestas de menos de la mitad del original (cortadas).
+3. Las sugerencias aplicadas se guardan en `review.applied` (`aspecto:índice`) y se muestran tachadas con «✓ Aplicada». Una revisión nueva sustituye a la anterior y empieza sin marcas. Se registra `APPLY_REVIEW_SUGGESTION` en `ActivityLog`.
 
 ## Límites y siguientes pasos
 - Se guarda solo la última revisión, no un historial.
-- No hay «Aplicar sugerencia»: las sugerencias indican el apartado (`section`) para poder enlazarlas en el futuro con la reescritura de secciones (`/api/projects/rewrite`).
+- Aplicar una sugerencia cambia el proyecto, así que la revisión pasa a «desactualizada»; las demás sugerencias se pueden seguir aplicando.

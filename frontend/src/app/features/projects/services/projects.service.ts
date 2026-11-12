@@ -23,6 +23,7 @@ import {
   ContentLanguage,
   AIProvider,
 } from '../models/project.model';
+import type { ApplySuggestionResponse } from '../models/project-review.model';
 
 import {
   fromProjectDto,
@@ -191,6 +192,23 @@ export class ProjectsService {
     return this.http
       .post<ProjectDto>(`${this.apiUrl}/${projectId}/review`, { aiProvider, aiModel })
       .pipe(map(fromProjectDto));
+  }
+
+  /** Aplica con IA una sugerencia de la revisión (o, sin `index`, las pendientes del aspecto). */
+  applyReviewSuggestion(
+    projectId: string,
+    body: {
+      context: string;
+      dimension: string;
+      index?: number;
+      aiProvider: AIProvider;
+      aiModel: string;
+    },
+  ): Observable<ApplySuggestionResponse> {
+    return this.http.post<ApplySuggestionResponse>(
+      `${this.apiUrl}/${projectId}/review/apply`,
+      body,
+    );
   }
 
   importDocx(projectId: string, file: File): Observable<ImportDocxResponse> {

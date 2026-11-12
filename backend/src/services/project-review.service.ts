@@ -37,6 +37,9 @@ const DIMENSION_CRITERIA: Record<ReviewDimensionId, string> = {
   clarity: 'Claridad: redacción precisa, estructura ordenada y formato utilizable por otro docente.'
 };
 
+/** Qué valora un aspecto (texto para la IA); vacío si el id no existe. */
+export const dimensionCriterion = (id: string): string => DIMENSION_CRITERIA[id as ReviewDimensionId] ?? '';
+
 const LANGUAGE_NAMES: Record<ContentLanguage, string> = {
   castellano: 'castellano (español de España)',
   catalan: 'catalán (variante balear, normativa del IEC)'

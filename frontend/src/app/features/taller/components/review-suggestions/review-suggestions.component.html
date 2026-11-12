@@ -1,0 +1,38 @@
+<div class="review-suggestions">
+  <p class="review-suggestions__label">{{ trans.t().reviewSuggestions }}</p>
+  <ul class="review-suggestions__list">
+    @for (suggestion of dimension().suggestions; track $index) {
+      <li
+        class="review-suggestions__item"
+        [class.review-suggestions__item--applied]="isApplied($index)"
+      >
+        <span class="review-suggestions__text">{{ suggestion }}</span>
+        @if (isApplied($index)) {
+          <span class="review-suggestions__applied">✓ {{ trans.t().reviewApplied }}</span>
+        } @else if (canApply()) {
+          <button
+            type="button"
+            class="btn-secondary review-suggestions__apply"
+            [disabled]="busy()"
+            (click)="apply($index)"
+          >
+            {{ isApplying($index) ? trans.t().reviewApplying : trans.t().reviewApply }}
+          </button>
+        }
+      </li>
+    }
+  </ul>
+  @if (canApply() && pendingCount() > 1) {
+    <button
+      type="button"
+      class="btn-primary review-suggestions__apply-all"
+      [disabled]="busy()"
+      (click)="apply()"
+    >
+      {{ isApplying() ? trans.t().reviewApplying : trans.t().reviewApplyAll }}
+    </button>
+  }
+  @if (failedHere()) {
+    <p class="review-suggestions__error" role="alert">{{ trans.t().reviewApplyError }}</p>
+  }
+</div>

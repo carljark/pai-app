@@ -11,7 +11,7 @@ import { requestProjectReview, type ReviewAiChoice } from '../services/project-r
 export const REVIEW_LOCK_MS = 15 * 60 * 1000;
 
 /** Proveedor y modelo elegidos en el taller o, si no llegan, los de la generación. */
-const resolveAiChoice = (body: any, project: any): ReviewAiChoice => {
+export const resolveAiChoice = (body: any, project: any): ReviewAiChoice => {
   const provider = resolveProvider(body?.aiProvider || project.aiProvider);
   const model = body?.aiModel || project.aiModel;
   return model ? { provider, model: String(model) } : { provider };

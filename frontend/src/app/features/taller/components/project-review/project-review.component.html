@@ -54,12 +54,10 @@
                 >
               </div>
               <p class="project-review__justification">{{ dimension.justification }}</p>
-              <p class="project-review__label">{{ trans.t().reviewSuggestions }}</p>
-              <ul class="project-review__suggestions">
-                @for (suggestion of dimension.suggestions; track $index) {
-                  <li class="project-review__suggestion">{{ suggestion }}</li>
-                }
-              </ul>
+              <app-review-suggestions
+                [dimension]="dimension"
+                [canApply]="canApply()"
+              ></app-review-suggestions>
               @if (dimension.section) {
                 <p class="project-review__section">
                   {{ trans.t().reviewSection }}: {{ dimension.section }}
@@ -68,7 +66,7 @@
             </li>
           }
         </ul>
-        @if (facade.review()?.usedModel) {
+        @if (isAdmin() && facade.review()?.usedModel) {
           <p class="project-review__model">
             {{ trans.t().reviewModel }}: {{ facade.review()?.usedModel }}
           </p>

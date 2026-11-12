@@ -4,6 +4,9 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[260 — Aplicar las sugerencias de la revisión con IA](260_plan_aplicar_sugerencias_revision.md)** · _Implementado (tarea 260)_  
+  Botones «Aplicar» por sugerencia y «Aplicar todas» por aspecto: la IA reescribe solo el apartado afectado y el cambio entra en el editor del taller (se puede deshacer), con la sugerencia marcada como aplicada.
+
 - **[257 — OAuth en el servidor MCP para conectar Plappin a claude.ai](257_plan_oauth_servidor_mcp.md)** · _Implementado (tarea 257)_  
   OAuth 2.1 con PKCE, registro dinámico y pantalla de consentimiento en Plappin, para añadir Plappin como conector personalizado en claude.ai (web, escritorio y móvil) con solo su URL. Los tokens personales siguen sirviendo para Claude Code y Gemini CLI.
 

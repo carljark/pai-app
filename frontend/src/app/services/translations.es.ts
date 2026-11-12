@@ -353,6 +353,12 @@ export const TRANSLATIONS_ES = {
   reviewSuggestions: 'Sugerencias',
   reviewSection: 'Apartado',
   reviewModel: 'Modelo',
+  reviewApply: 'Aplicar',
+  reviewApplyAll: 'Aplicar todas',
+  reviewApplying: 'Aplicando…',
+  reviewApplied: 'Aplicada',
+  reviewApplyError:
+    'No se ha podido aplicar la sugerencia. Inténtalo de nuevo o pídelo al asistente del taller.',
   reviewDimensions: {
     curricularAlignment: 'Alineación curricular',
     coherence: 'Coherencia',

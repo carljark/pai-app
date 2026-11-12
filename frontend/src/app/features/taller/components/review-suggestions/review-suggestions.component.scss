@@ -1,0 +1,52 @@
+@use '../../../../../styles/variables' as variables;
+
+.review-suggestions__label {
+  margin: 6px 0 0;
+  font-weight: variables.$font-weight-medium;
+}
+
+.review-suggestions__list {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-suggestions__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 4px 0;
+}
+
+.review-suggestions__item--applied .review-suggestions__text {
+  color: variables.$color-text-muted;
+  text-decoration: line-through;
+}
+
+.review-suggestions__text {
+  flex: 1;
+  min-width: 160px;
+}
+
+.review-suggestions__apply,
+.review-suggestions__apply-all {
+  flex-shrink: 0;
+  font-size: variables.$font-size-sm;
+}
+
+.review-suggestions__apply-all {
+  margin-top: 6px;
+}
+
+.review-suggestions__applied {
+  color: variables.$color-success;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-medium;
+}
+
+.review-suggestions__error {
+  margin: 6px 0 0;
+  color: variables.$color-danger;
+  font-size: variables.$font-size-sm;
+}

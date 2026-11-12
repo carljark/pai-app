@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { apiResult, errorResult, jsonResult, type ToolDefinition } from '../tool-helpers';
+import { extractSection } from '../../services/markdown-sections';
 
 export const projectId = z.string().describe('Id del proyecto (ver list_projects).');
 export const aiProvider = z.enum(['gemini', 'openrouter']).optional().describe('Proveedor de IA (ver list_ai_models).');
@@ -37,15 +38,8 @@ export const projectText = (p: any, lang?: string): { language: string; text: st
   return translated ? { language: lang!, text: translated } : { language: p.language || 'castellano', text: p.generatedContent?.rawText || '' };
 };
 
-/** Apartado cuyo encabezado contiene `heading`, hasta el siguiente encabezado del mismo nivel o superior. */
-export const extractSection = (text: string, heading: string): string | null => {
-  const lines = text.split('\n');
-  const start = lines.findIndex((l) => /^#{1,6}\s/.test(l) && l.toLowerCase().includes(heading.toLowerCase()));
-  if (start < 0) return null;
-  const level = lines[start]!.match(/^#+/)![0].length;
-  const end = lines.findIndex((l, i) => i > start && /^#{1,6}\s/.test(l) && l.match(/^#+/)![0].length <= level);
-  return lines.slice(start, end < 0 ? undefined : end).join('\n');
-};
+/** Apartado por su encabezado (sin tildes, mayúsculas ni numeración); compartido con la revisión. */
+export { extractSection };
 
 /** Títulos de los apartados, para que el asistente pueda pedir solo uno. */
 const outline = (text: string): string[] => text.split('\n').filter((l) => /^#{1,3}\s/.test(l));

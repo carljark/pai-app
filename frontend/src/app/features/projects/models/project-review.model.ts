@@ -37,7 +37,28 @@ export interface ProjectReview {
   overall?: number;
   summary?: string;
   dimensions?: ProjectReviewDimension[];
+  /** Sugerencias ya aplicadas, como `aspecto:índice` (ver `suggestionKey`). */
+  applied?: string[];
   error?: string;
+}
+
+/** Respuesta al aplicar sugerencias: el documento nuevo (sin guardar) y las sugerencias marcadas. */
+export interface ApplySuggestionResponse {
+  newText: string;
+  section: string | null;
+  applied: string[];
+}
+
+/** Clave de una sugerencia (igual que en el backend); sin índice, todas las de un aspecto. */
+export const suggestionKey = (dimension: string, index?: number): string =>
+  `${dimension}:${index ?? '*'}`;
+
+export function isSuggestionApplied(
+  review: ProjectReview | null | undefined,
+  dimension: string,
+  index: number,
+): boolean {
+  return Boolean(review?.applied?.includes(suggestionKey(dimension, index)));
 }
 
 /** `true` si la revisión está en curso y su bloqueo no ha caducado. */

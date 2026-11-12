@@ -7,6 +7,7 @@ import { translateProject } from '../controllers/translation.controller';
 import { cloneProject } from '../controllers/project-clone.controller';
 import { renameProject } from '../controllers/project-title.controller';
 import { reviewProject, getProjectReview } from '../controllers/project-review.controller';
+import { applyReviewSuggestion } from '../controllers/review-apply.controller';
 import filesRoutes from './files.routes';
 import { requireApproved, requireAiAccess } from '../middlewares/auth.middleware';
 import { projectEditGuards, requireProjectEditor } from '../middlewares/project-access.middleware';
@@ -38,6 +39,7 @@ router.post('/:id/translate', requireApproved, requireAiAccess, ...projectEditGu
 router.patch('/:id/title', requireApproved, requireProjectEditor, renameProject);
 router.post('/:id/review', requireApproved, requireAiAccess, requireProjectEditor, reviewProject);
 router.get('/:id/review', getProjectReview);
+router.post('/:id/review/apply', requireApproved, requireAiAccess, ...projectEditGuards, applyReviewSuggestion);
 router.post('/:id/collaborators', requireApproved, addCollaborator);
 router.delete('/:id/collaborators/:userId', requireApproved, removeCollaborator);
 router.get('/', listProjects);

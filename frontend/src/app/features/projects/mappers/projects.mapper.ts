@@ -20,6 +20,7 @@ import {
   ProjectTranslation,
   normalizeTipoNivel,
 } from '../models/project.model';
+import type { ProjectReview } from '../models/project-review.model';
 
 // ============================================
 // API DTO Types (what backend sends/receives)
@@ -58,6 +59,7 @@ export interface ProjectDto {
   language?: ContentLanguage;
   contentVersion?: number;
   translations?: Partial<Record<ContentLanguage, ProjectTranslation>>;
+  review?: ProjectReview;
   isExample?: boolean;
 }
 
@@ -218,6 +220,7 @@ export function fromProjectDto(dto: ProjectDto): Project {
     language: dto.language,
     contentVersion: dto.contentVersion,
     translations: dto.translations,
+    ...(dto.review ? { review: dto.review } : {}),
     ...(dto.isExample ? { isExample: true } : {}),
   };
 }

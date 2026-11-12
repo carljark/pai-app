@@ -1,0 +1,134 @@
+@use '../../../../../styles/variables' as variables;
+
+.project-review {
+  margin-bottom: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border-left: 4px solid variables.$color-primary;
+  background: variables.$color-surface-alt;
+  color: variables.$color-text-main;
+  font-size: 0.9rem;
+}
+
+.project-review__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-review__title {
+  flex: 1;
+  min-width: 160px;
+  font-weight: variables.$font-weight-semibold;
+  color: variables.$color-primary-dark;
+}
+
+.project-review__overall,
+.project-review__score {
+  padding: 2px 10px;
+  border-radius: variables.$border-radius-full;
+  font-weight: variables.$font-weight-semibold;
+  white-space: nowrap;
+}
+
+.project-review__overall--good,
+.project-review__score--good {
+  background: variables.$color-success-bg;
+  color: variables.$color-success;
+}
+
+.project-review__overall--fair,
+.project-review__score--fair {
+  background: variables.$color-warning-bg;
+  color: variables.$color-warning;
+}
+
+.project-review__overall--weak,
+.project-review__score--weak {
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}
+
+.project-review__toggle,
+.project-review__action {
+  flex-shrink: 0;
+}
+
+.project-review__intro,
+.project-review__summary,
+.project-review__model {
+  margin: 8px 0 0;
+  color: variables.$color-text-muted;
+}
+
+.project-review__summary {
+  color: variables.$color-text-main;
+}
+
+.project-review__notice {
+  margin: 8px 0 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.project-review__notice--progress,
+.project-review__notice--warning {
+  background: variables.$color-warning-bg;
+}
+
+.project-review__notice--error {
+  background: variables.$color-danger-bg;
+  color: variables.$color-danger;
+}
+
+.project-review__body {
+  margin-top: 4px;
+}
+
+.project-review__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-review__card {
+  padding: 10px 12px;
+  border: 1px solid variables.$color-border;
+  border-radius: 8px;
+  background: variables.$color-surface;
+}
+
+.project-review__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.project-review__dimension {
+  font-weight: variables.$font-weight-semibold;
+}
+
+.project-review__justification,
+.project-review__label,
+.project-review__section {
+  margin: 6px 0 0;
+}
+
+.project-review__label {
+  font-weight: variables.$font-weight-medium;
+}
+
+.project-review__suggestions {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+.project-review__section {
+  color: variables.$color-text-muted;
+  font-size: variables.$font-size-sm;
+}

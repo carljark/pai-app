@@ -4,6 +4,12 @@ Planes escritos con la skill `proponer-cambio` antes de implementar una tarea gr
 
 ## Planes
 
+- **[256 — Servidor MCP para usar Plappin desde Claude o Gemini](256_plan_servidor_mcp.md)** · _Aprobado_  
+  Servidor MCP remoto en `/api/mcp` con tokens personales revocables: los docentes trabajan con sus proyectos, el currículo y los mapas desde Claude o Gemini CLI con los mismos permisos que en la web, y los administradores tienen además herramientas de administración.
+
+- **[255 — Revisión automática del proyecto con IA](255_plan_revision_automatica_proyecto.md)** · _Implementado (tarea 255)_  
+  Botón «Revisar con IA» en el taller: nota de 1 a 5, justificación y sugerencias en 9 dimensiones (alineación curricular, coherencia, actividades, evaluación, DUA…), asíncrono como la traducción y en el idioma del proyecto.
+
 - **[253 — Ampliación del mapa de afinidades de 4.º de ESO y actividades conjuntas](253_plan_mapa_eso_4_fichas_y_actividades_conjuntas.md)** · _Implementado (tarea 253)_  
   Repite en 4.º las tareas 247 y 251: 16 fichas nuevas hasta que cada materia aparezca en 6, y 3 actividades conjuntas por ficha redactadas con DeepSeek, con todos los tramos en paralelo.
 

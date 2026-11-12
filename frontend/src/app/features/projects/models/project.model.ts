@@ -3,6 +3,8 @@
  * Pure TypeScript interfaces, no Angular dependencies.
  */
 
+import type { ProjectReview } from './project-review.model';
+
 export type ProjectStatus = 'borrador' | 'generando' | 'en_cola' | 'publicado' | 'error';
 /** Nivel educativo (`tipoNivel`): un id del catálogo de niveles (`GET /api/niveles`). */
 export type ProjectType = string;
@@ -98,6 +100,8 @@ export interface Project {
   language?: ContentLanguage;
   contentVersion?: number;
   translations?: Partial<Record<ContentLanguage, ProjectTranslation>>;
+  /** Última revisión con IA del original. */
+  review?: ProjectReview;
   /** Proyecto de ejemplo de la visita guiada: de solo lectura salvo para administradores. */
   isExample?: boolean;
 }

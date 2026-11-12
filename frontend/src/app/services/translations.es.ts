@@ -275,6 +275,37 @@ export const TRANSLATIONS_ES = {
   translationFailedToast: 'No se ha podido traducir',
   translationError: 'No se ha podido traducir el proyecto. Inténtalo de nuevo.',
 
+  // REVISIÓN CON IA
+  reviewTitle: 'Revisión con IA',
+  reviewIntro:
+    'La IA valora el proyecto en nueve aspectos y propone mejoras concretas. No cambia el texto.',
+  reviewBtn: 'Revisar con IA',
+  reviewAgainBtn: 'Volver a revisar',
+  reviewShow: 'Ver revisión',
+  reviewHide: 'Ocultar revisión',
+  reviewInProgress:
+    'Revisando el proyecto… puede tardar unos minutos. Puedes seguir usando la aplicación: te avisaremos al terminar.',
+  reviewStale: 'El proyecto ha cambiado desde esta revisión.',
+  reviewError: 'No se ha podido revisar el proyecto. Inténtalo de nuevo.',
+  reviewCompletedToast: 'Revisión completada',
+  reviewFailedToast: 'No se ha podido revisar',
+  reviewOverall: 'Nota global',
+  reviewOutOf: 'sobre 5',
+  reviewSuggestions: 'Sugerencias',
+  reviewSection: 'Apartado',
+  reviewModel: 'Modelo',
+  reviewDimensions: {
+    curricularAlignment: 'Alineación curricular',
+    coherence: 'Coherencia',
+    drivingQuestion: 'Pregunta motriz y producto final',
+    activities: 'Actividades',
+    assessment: 'Evaluación',
+    integration: 'Integración entre módulos o materias',
+    inclusion: 'Inclusión y DUA',
+    timing: 'Temporización',
+    clarity: 'Claridad y formato',
+  } as Record<string, string>,
+
   // TRABAJO COLABORATIVO
   invitationsTitle: 'Invitaciones a colaborar',
   invitationInvitedYou: 'te ha invitado a colaborar en',

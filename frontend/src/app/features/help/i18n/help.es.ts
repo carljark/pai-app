@@ -164,6 +164,11 @@ export const HELP_ES: HelpTexts = {
         'Sí. En el taller puedes pedir cambios al asistente o descargar el proyecto en Word, editarlo y volver a subirlo.',
     },
     {
+      question: '¿Cómo sé si mi proyecto está bien planteado?',
+      answer:
+        'En el taller, pulsa «Revisar con IA»: valora el proyecto en nueve aspectos (alineación curricular, actividades, evaluación, DUA…) con una nota de 1 a 5 y sugerencias de mejora. No cambia el texto.',
+    },
+    {
       question: '¿Dónde están mis proyectos?',
       answer: 'En el Área Personal. El Archivo reúne los proyectos de todo el profesorado.',
     },

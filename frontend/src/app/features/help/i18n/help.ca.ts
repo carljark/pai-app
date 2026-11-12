@@ -164,6 +164,11 @@ export const HELP_CA: HelpTexts = {
         "Sí. Al taller pots demanar canvis a l'assistent o descarregar el projecte en Word, editar-lo i tornar-lo a pujar.",
     },
     {
+      question: 'Com sé si el meu projecte està ben plantejat?',
+      answer:
+        'Al taller, prem «Revisar amb IA»: valora el projecte en nou aspectes (alineació curricular, activitats, avaluació, DUA…) amb una nota de 1 a 5 i suggeriments de millora. No canvia el text.',
+    },
+    {
       question: 'On són els meus projectes?',
       answer: "A l'Àrea Personal. L'Arxiu aplega els projectes de tot el professorat.",
     },

@@ -34,6 +34,8 @@ if (process.env.NODE_ENV !== 'test') {
       await runMigrations();
       const { failInterruptedTranslations } = await import('./controllers/translation.controller');
       await failInterruptedTranslations();
+      const { failInterruptedReviews } = await import('./controllers/project-review.controller');
+      await failInterruptedReviews();
       const { initQueue } = await import('./services/queue.service');
       await initQueue();
     })

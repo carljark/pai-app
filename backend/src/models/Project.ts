@@ -19,6 +19,32 @@ const TranslationSchema = new mongoose.Schema({
   error: String
 }, { _id: false });
 
+/** Valoración de un aspecto del proyecto en la revisión con IA (ver documentation/revision_automatica_proyectos.md). */
+const ReviewDimensionSchema = new mongoose.Schema({
+  id: String,
+  score: Number,
+  justification: String,
+  suggestions: [String],
+  section: String
+}, { _id: false });
+
+/**
+ * Última revisión con IA del original. `contentVersion` es la versión revisada: si el proyecto
+ * cambia después, la revisión queda desactualizada. `revisando` actúa como bloqueo.
+ */
+const ReviewSchema = new mongoose.Schema({
+  status: { type: String, enum: ['revisando', 'completada', 'error'] },
+  startedAt: Date,
+  finishedAt: Date,
+  contentVersion: Number,
+  language: String,
+  usedModel: String,
+  overall: Number,
+  summary: String,
+  dimensions: [ReviewDimensionSchema],
+  error: String
+}, { _id: false });
+
 const ProjectSchema = new mongoose.Schema({
   title: String,
   modules: [String],
@@ -42,6 +68,7 @@ const ProjectSchema = new mongoose.Schema({
     castellano: TranslationSchema,
     catalan: TranslationSchema
   },
+  review: ReviewSchema,
   aiPrompt: String,
   aiInstruction: String,
   extraInstructions: String,

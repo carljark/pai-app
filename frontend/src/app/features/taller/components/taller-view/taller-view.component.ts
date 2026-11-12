@@ -16,6 +16,7 @@ import {
 import { AuthFacade } from '../../../auth/services/auth.facade';
 import { PaiService } from '../../../../services/pai.service';
 import { TranslationBannerComponent } from '../translation-banner/translation-banner.component';
+import { ProjectReviewComponent } from '../project-review/project-review.component';
 import { EditLockBannerComponent } from '../edit-lock-banner/edit-lock-banner.component';
 import { ProjectChangeLogComponent } from '../project-change-log/project-change-log.component';
 import { EditLockFacade } from '../../../projects/services/edit-lock.facade';
@@ -35,6 +36,7 @@ import { HelpButtonComponent } from '../../../help/components/help-button/help-b
     MarkdownComponent,
     AppSelectComponent,
     TranslationBannerComponent,
+    ProjectReviewComponent,
     EditLockBannerComponent,
     ProjectChangeLogComponent,
     HelpButtonComponent,

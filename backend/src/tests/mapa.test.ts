@@ -909,6 +909,7 @@ describe('Mapa Intermodular Endpoints & Migration', () => {
           }
         }
       }
-    });
+      // Recarga dos veces todos los mapas: con cobertura y en equipos lentos supera los 5 s por defecto
+    }, 30_000);
   });
 });

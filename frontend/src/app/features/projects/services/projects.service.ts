@@ -187,6 +187,12 @@ export class ProjectsService {
       .pipe(map(fromProjectDto));
   }
 
+  reviewProject(projectId: string, aiProvider: AIProvider, aiModel: string): Observable<Project> {
+    return this.http
+      .post<ProjectDto>(`${this.apiUrl}/${projectId}/review`, { aiProvider, aiModel })
+      .pipe(map(fromProjectDto));
+  }
+
   importDocx(projectId: string, file: File): Observable<ImportDocxResponse> {
     const formData = toImportDocxFormData(file, projectId);
     return this.http

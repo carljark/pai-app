@@ -1,0 +1,79 @@
+@if (hasContent() && (canReview() || facade.hasResults())) {
+  <section class="project-review" data-tour="taller-review">
+    <header class="project-review__header">
+      <span class="project-review__title">✨ {{ trans.t().reviewTitle }}</span>
+      @if (facade.hasResults()) {
+        <span
+          class="project-review__overall"
+          [class]="'project-review__overall--' + scoreLevel(facade.review()?.overall)"
+        >
+          {{ trans.t().reviewOverall }}: {{ facade.review()?.overall }} {{ trans.t().reviewOutOf }}
+        </span>
+        <button type="button" class="btn-secondary project-review__toggle" (click)="toggle()">
+          {{ expanded() ? trans.t().reviewHide : trans.t().reviewShow }}
+        </button>
+      }
+      @if (canReview() && !facade.isReviewing()) {
+        <button type="button" class="btn-primary project-review__action" (click)="review()">
+          {{ facade.hasResults() ? trans.t().reviewAgainBtn : trans.t().reviewBtn }}
+        </button>
+      }
+    </header>
+
+    @if (!facade.hasResults() && !facade.isReviewing()) {
+      <p class="project-review__intro">{{ trans.t().reviewIntro }}</p>
+    }
+    @if (facade.isReviewing()) {
+      <p class="project-review__notice project-review__notice--progress" role="status">
+        ⏳ {{ trans.t().reviewInProgress }}
+      </p>
+    }
+    @if (facade.reviewError()) {
+      <p class="project-review__notice project-review__notice--error" role="alert">
+        {{ trans.t().reviewError }}
+      </p>
+    }
+    @if (facade.hasResults() && facade.stale()) {
+      <p class="project-review__notice project-review__notice--warning">
+        ⚠️ {{ trans.t().reviewStale }}
+      </p>
+    }
+
+    @if (expanded() && facade.hasResults()) {
+      <div class="project-review__body">
+        <p class="project-review__summary">{{ facade.review()?.summary }}</p>
+        <ul class="project-review__list">
+          @for (dimension of dimensions(); track dimension.id) {
+            <li class="project-review__card">
+              <div class="project-review__card-header">
+                <span class="project-review__dimension">{{ dimensionLabel(dimension.id) }}</span>
+                <span
+                  class="project-review__score"
+                  [class]="'project-review__score--' + scoreLevel(dimension.score)"
+                  >{{ dimension.score }}/5</span
+                >
+              </div>
+              <p class="project-review__justification">{{ dimension.justification }}</p>
+              <p class="project-review__label">{{ trans.t().reviewSuggestions }}</p>
+              <ul class="project-review__suggestions">
+                @for (suggestion of dimension.suggestions; track $index) {
+                  <li class="project-review__suggestion">{{ suggestion }}</li>
+                }
+              </ul>
+              @if (dimension.section) {
+                <p class="project-review__section">
+                  {{ trans.t().reviewSection }}: {{ dimension.section }}
+                </p>
+              }
+            </li>
+          }
+        </ul>
+        @if (facade.review()?.usedModel) {
+          <p class="project-review__model">
+            {{ trans.t().reviewModel }}: {{ facade.review()?.usedModel }}
+          </p>
+        }
+      </div>
+    }
+  </section>
+}

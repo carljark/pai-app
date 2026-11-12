@@ -85,6 +85,12 @@ describe('Projects Mapper', () => {
       expect(result.userId).toBe('');
     });
 
+    it('conserva la revisión con IA solo si existe', () => {
+      const review = { status: 'completada' as const, overall: 4 };
+      expect(fromProjectDto({ ...baseDto, review } as any).review).toEqual(review);
+      expect(fromProjectDto(baseDto as any)).not.toHaveProperty('review');
+    });
+
     it('should keep the generation error and AI metadata for the history', () => {
       const result = fromProjectDto({
         ...baseDto,

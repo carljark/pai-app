@@ -275,6 +275,37 @@ export const TRANSLATIONS_CA = {
   translationFailedToast: "No s'ha pogut traduir",
   translationError: "No s'ha pogut traduir el projecte. Torna-ho a provar.",
 
+  // REVISIÓ AMB IA
+  reviewTitle: 'Revisió amb IA',
+  reviewIntro:
+    'La IA valora el projecte en nou aspectes i proposa millores concretes. No canvia el text.',
+  reviewBtn: 'Revisar amb IA',
+  reviewAgainBtn: 'Tornar a revisar',
+  reviewShow: 'Veure la revisió',
+  reviewHide: 'Amagar la revisió',
+  reviewInProgress:
+    "Revisant el projecte… pot tardar uns minuts. Pots continuar fent servir l'aplicació: t'avisarem quan acabi.",
+  reviewStale: "El projecte ha canviat des d'aquesta revisió.",
+  reviewError: "No s'ha pogut revisar el projecte. Torna-ho a provar.",
+  reviewCompletedToast: 'Revisió completada',
+  reviewFailedToast: "No s'ha pogut revisar",
+  reviewOverall: 'Nota global',
+  reviewOutOf: 'sobre 5',
+  reviewSuggestions: 'Suggeriments',
+  reviewSection: 'Apartat',
+  reviewModel: 'Model',
+  reviewDimensions: {
+    curricularAlignment: 'Alineació curricular',
+    coherence: 'Coherència',
+    drivingQuestion: 'Pregunta motriu i producte final',
+    activities: 'Activitats',
+    assessment: 'Avaluació',
+    integration: 'Integració entre mòduls o matèries',
+    inclusion: 'Inclusió i DUA',
+    timing: 'Temporització',
+    clarity: 'Claredat i format',
+  } as Record<string, string>,
+
   // TREBALL COL·LABORATIU
   invitationsTitle: 'Invitacions a col·laborar',
   invitationInvitedYou: "t'ha convidat a col·laborar en",
